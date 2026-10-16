@@ -14,7 +14,7 @@ scheduled · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 scheduled · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 
 ### Fri 16 Oct 21:00 · Why GTA 6 isn't coming to PC (yet) 🖥️
-scheduled · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
+private · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
 
 ### Fri 16 Oct 19:30 · The formula behind Zack D. Films' viral Shorts 📈
 private · [YouTube](https://youtube.com/shorts/yXycMniI-W8)

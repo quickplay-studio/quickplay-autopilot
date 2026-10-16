@@ -2,7 +2,7 @@
 
 Shot "src" forms (anything else is treated as a local path under pipeline/):
   commons:File:Some_image.jpg     a Wikimedia Commons file (free licence; credit read from Commons)
-  commons-search:<words>          best Commons image for the words (width >= 1600)
+  commons-search:<words>          best Commons image whose file name contains the name (capitalised words), no politicians
   pixabay:video:<words>           a Pixabay stock video (PIXABAY_API_KEY): best tag match, portrait preferred,
                                   near-black clips skipped unless the shot has "dark": true, no repeats within a Short
   pixabay:image:<words>           a Pixabay photo (fallback only: they are 1280 px wide)
@@ -44,14 +44,25 @@ def commons_file(title):
     lic = _strip(md.get("LicenseShortName", {}).get("value")) or "free licence"
     return ii.get("thumburl") or ii["url"], f"Photo: {artist}, {lic}, via Wikimedia Commons", ii["descriptionurl"]
 
+POLITICAL = re.compile(r"white house|president|senator|congress|parliament|minister|campaign|rally|election|"
+                       r"biden|harris|trump|obama|starmer|sunak|democrat|republican|labour party|conservative party", re.I)
+
+def _fold(s):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFKD", s or "") if not unicodedata.combining(c)).lower()
+
 def commons_search(words):
+    """Best Commons photo for the words. The file title must contain every capitalised word of the query (the name),
+    so a search for a person never returns a building or someone else; photos with politicians are skipped."""
     q = {"action": "query", "generator": "search", "gsrsearch": f"{words} filetype:bitmap", "gsrnamespace": 6,
-         "gsrlimit": 15, "prop": "imageinfo", "iiprop": "size", "format": "json"}
+         "gsrlimit": 30, "prop": "imageinfo", "iiprop": "size", "format": "json"}
     pages = sorted(_get(COMMONS, params=q).json().get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
-    for p in pages:
-        ii = (p.get("imageinfo") or [{}])[0]
-        if ii.get("width", 0) >= 1600: return commons_file(p["title"])
-    raise RuntimeError(f"no Commons image for '{words}'")
+    names = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)] or [_fold(w) for w in words.split()[:1]]
+    ok = [p for p in pages if all(n in _fold(p["title"]) for n in names) and not POLITICAL.search(p["title"])]
+    for min_w in (1600, 1000):
+        for p in ok:
+            if (p.get("imageinfo") or [{}])[0].get("width", 0) >= min_w: return commons_file(p["title"])
+    raise RuntimeError(f"no Commons image named '{words}'")
 
 def _brightness(url):
     """Mean brightness 0-255 of a small preview image; 128 if it can't be read."""

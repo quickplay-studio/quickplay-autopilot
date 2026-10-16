@@ -4,6 +4,7 @@ usage:
   python pipeline/social.py post             post every Short that is public on YouTube and not yet on TikTok/Instagram
   python pipeline/social.py tiktok-connect   swap the one-time TikTok code (env TIKTOK_CODE) for tokens
   python pipeline/social.py refresh          refresh the Instagram and TikTok tokens
+  python pipeline/social.py check            check both sign-ins, write status/social.json
 
 Sign-ins live in tokens/*.enc, encrypted with SOCIAL_KEY (a GitHub secret); IG_TOKEN and IG_USER_ID seed Instagram.
 The TikTok/Instagram version of each Short (platform-safe music) waits in a draft GitHub release named social-<id>.
@@ -173,10 +174,42 @@ def post():
         print(st["id"], "tiktok:", bool(st.get("tiktok")), "instagram:", bool(st.get("instagram")))
     if not done_any: print("nothing to post")
 
+def check():
+    """Confirm the sign-ins work without posting anything; writes status/social.json (no tokens in it)."""
+    out = {"checked": NOW().isoformat(timespec="seconds")}
+    ig = ig_tokens()
+    if not ig:
+        out["instagram"] = {"ok": False, "error": "not connected (IG_TOKEN secret missing)"}
+    else:
+        r = requests.get(f"{IG_API}/me", params={"fields": "user_id,username,account_type", "access_token": ig["token"]}, timeout=30)
+        if r.ok:
+            me = r.json()
+            out["instagram"] = {"ok": True, "username": me.get("username"), "account_type": me.get("account_type"),
+                                "user_id": me.get("user_id"), "secret_user_id_matches": str(me.get("user_id")) == str(ig.get("user"))}
+            if me.get("user_id") and not ig.get("user"):
+                ig["user"] = str(me["user_id"]); save("instagram", ig)
+            q = requests.get(f"{IG_API}/{ig.get('user') or me.get('user_id')}/content_publishing_limit",
+                             params={"fields": "config,quota_usage", "access_token": ig["token"]}, timeout=30)
+            out["instagram"]["publishing_limit"] = q.json().get("data") if q.ok else f"{q.status_code} {q.text[:200]}"
+        else:
+            out["instagram"] = {"ok": False, "error": f"{r.status_code} {r.text[:300]}"}
+    tt = load("tiktok")
+    if not tt.get("refresh_token"):
+        out["tiktok"] = {"ok": False, "error": "not connected yet"}
+    else:
+        h = {"Authorization": f"Bearer {tt['access_token']}"}
+        r = requests.get(f"{TT_API}/user/info/", params={"fields": "open_id,display_name,username"}, headers=h, timeout=30)
+        j = r.json() if r.content else {}
+        out["tiktok"] = {"ok": r.ok and j.get("error", {}).get("code") in (None, "ok"), "user": (j.get("data") or {}).get("user"),
+                         "scopes": tt.get("scope"), "mode": CFG.get("tiktok_mode", "inbox")}
+    (ROOT / "status").mkdir(exist_ok=True)
+    (ROOT / "status" / "social.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    print(json.dumps(out, indent=1))
+
 def refresh():
     ig, tt = ig_tokens(), load("tiktok")
     if ig: print(ig_refresh(ig))
     if tt.get("refresh_token"): print(tt_refresh(tt))
 
 if __name__ == "__main__":
-    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh}[sys.argv[1]]()
+    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check}[sys.argv[1]]()

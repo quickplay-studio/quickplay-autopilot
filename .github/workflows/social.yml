@@ -4,6 +4,9 @@ name: social
 on:
   schedule:
     - cron: '35 * * * *'      # hourly; does nothing until SOCIAL_KEY and an Instagram or TikTok sign-in exist
+  push:
+    branches: [main]
+    paths: ['requests/social*']     # push a file here to check the sign-ins (results in status/social.json)
   workflow_dispatch:
     inputs:
       tiktok_code:
@@ -35,6 +38,17 @@ jobs:
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
         run: python pipeline/social.py tiktok-connect
+      - name: Check sign-ins
+        if: ${{ github.event_name != 'schedule' }}
+        env:
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+        run: |
+          if [ -z "$SOCIAL_KEY" ]; then mkdir -p status; echo '{"error": "SOCIAL_KEY secret missing"}' > status/social.json; exit 0; fi
+          python pipeline/social.py check > /dev/null
       - name: Post
         env:
           GH_TOKEN: ${{ github.token }}

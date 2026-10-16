@@ -144,28 +144,38 @@ def post():
     if ig and _age_h(ig) > 24 * 7: print(ig_refresh(ig))            # long-lived Instagram token: refresh weekly
     if tt.get("refresh_token") and _age_h(tt) > 20: print(tt_refresh(tt))   # TikTok access tokens last 24 hours
     mode = CFG.get("tiktok_mode", "inbox")
+    tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
+    tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
     done_any = False
     for sp in sorted((ROOT / "status").glob("QD-*.json")):
         st = json.loads(sp.read_text())
         if not st.get("video") or not st.get("social_release") or not st.get("publish_at"): continue
-        if dt.datetime.fromisoformat(st["publish_at"].replace("Z", "+00:00")) > NOW(): continue   # not public on YouTube yet
+        public_at = dt.datetime.fromisoformat(st["publish_at"].replace("Z", "+00:00"))
+        if public_at > NOW(): continue   # not public on YouTube yet
+        fresh = (NOW() - public_at).total_seconds() / 3600 <= tt_max_age
         want_ig = bool(ig) and not st.get("instagram")
-        want_tt = bool(tt) and not st.get("tiktok")
+        want_tt = bool(tt) and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt): continue
         rel = st["social_release"]; work = ROOT / "social_tmp"; work.mkdir(exist_ok=True)
         if gh("release", "download", rel, "-p", "social.mp4", "-D", str(work), "--clobber", check=False).returncode:
-            st.setdefault("social_errors", []).append("release missing"); sp.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
+            st["social_error"] = "release missing"; sp.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
         mp4, cap, b = work / "social.mp4", caption(st, board_for(st)), board_for(st)
         if want_tt:
-            try: st["tiktok"] = {"publish_id": tt_post(tt, mp4, cap, mode), "mode": mode, "at": NOW().isoformat(timespec="seconds")}
-            except Exception as e: st.setdefault("social_errors", []).append(f"tiktok: {e}"[:300])
+            try:
+                st["tiktok"] = {"publish_id": tt_post(tt, mp4, cap, mode), "mode": mode, "at": NOW().isoformat(timespec="seconds")}
+                st.pop("tiktok_error", None)
+            except Exception as e:
+                st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
+                if "too_many_pending" in str(e) or "rate_limit" in str(e): tt_blocked = True
         if want_ig:
             try:
                 gh("release", "edit", rel, "--draft=false")
                 url = f"https://github.com/{REPO}/releases/download/{rel}/social.mp4"
                 st["instagram"] = {"media": ig_post(ig, url, cap), "at": NOW().isoformat(timespec="seconds")}
-            except Exception as e: st.setdefault("social_errors", []).append(f"instagram: {e}"[:300])
-        if (st.get("tiktok") or not tt) and (st.get("instagram") or not ig):
+                st.pop("instagram_error", None)
+            except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
+        if not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"public for over {tt_max_age:g} hours before TikTok could take it"
+        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or not ig):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:
             gh("release", "edit", rel, "--draft=true", check=False)
@@ -195,7 +205,12 @@ def check():
             out["instagram"] = {"ok": False, "error": f"{r.status_code} {r.text[:300]}"}
     tt = load("tiktok")
     if not tt.get("refresh_token"):
-        out["tiktok"] = {"ok": False, "error": "not connected yet"}
+        ck = os.environ.get("TIKTOK_CLIENT_KEY", "")
+        out["tiktok"] = {"ok": False, "error": "not connected yet" if ck else "not connected (TIKTOK_CLIENT_KEY secret missing)"}
+        if ck:   # the client key is public by design (it is part of every sign-in link)
+            q = {"client_key": ck, "scope": "user.info.basic,video.upload,video.publish", "response_type": "code",
+                 "redirect_uri": TT_REDIRECT, "state": hashlib.sha1(NOW().isoformat().encode()).hexdigest()[:12]}
+            out["tiktok"]["connect_url"] = "https://www.tiktok.com/v2/auth/authorize/?" + requests.compat.urlencode(q)
     else:
         h = {"Authorization": f"Bearer {tt['access_token']}"}
         r = requests.get(f"{TT_API}/user/info/", params={"fields": "open_id,display_name,username"}, headers=h, timeout=30)

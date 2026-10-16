@@ -31,15 +31,21 @@ def main():
         print("boards=[]"); return
     import youtube as Y, validate as V
     now = dt.datetime.now(dt.timezone.utc)
+    # Uploads in the last 24 hours: ours come from status files (exact upload time). YouTube only gives a reliable upload
+    # time for videos that are still private (once public, the playlist date becomes the publish time), so other
+    # private uploads are added from the channel; anything else is caught by YouTube's own limit error.
     taken, recent, online = set(), 0, Y.available()
+    statuses = [json.loads(s.read_text()) for s in (ROOT / "status").glob("*.json") if s.name != "channel.json"]
+    ours = {st.get("video") for st in statuses if st.get("video")}
+    for st in statuses:
+        if st.get("publish_at"): taken.add(Y.utc(st["publish_at"]))
+        up = Y.utc(st.get("uploaded_at"))
+        if up and now - up < dt.timedelta(hours=24): recent += 1
     if online:
         for v in Y.recent_videos(Y.client()):
             if v["publish_at"]: taken.add(Y.utc(v["publish_at"]))
             up = Y.utc(v["uploaded"])
-            if up and now - up < dt.timedelta(hours=24): recent += 1
-    for s in (ROOT / "status").glob("QD-*.json"):
-        st = json.loads(s.read_text())
-        if st.get("publish_at"): taken.add(Y.utc(st["publish_at"]))
+            if v["id"] not in ours and v["privacy"] != "public" and up and now - up < dt.timedelta(hours=24): recent += 1
     capacity = max(0, LIMIT - recent)
 
     def next_slot():

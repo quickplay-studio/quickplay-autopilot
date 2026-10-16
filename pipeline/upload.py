@@ -2,7 +2,7 @@
 
 usage: python upload.py <results dir>   (each subfolder: video.mp4, upload.json, status.json)
 """
-import json, pathlib, sys
+import datetime as dt, json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import youtube as Y
 
@@ -23,6 +23,7 @@ def main(root):
             try:
                 vid = Y.upload(yt, res / "video.mp4", u["title"], u["description"], u["tags"], u["category"],
                                u["slot"] if u["mode"] == "schedule" else None)
+                st["uploaded_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
                 st.update(state="scheduled" if u["mode"] == "schedule" else "uploaded (private)", video=vid,
                           url=f"https://youtube.com/shorts/{vid}", publish_at=u["slot"] or None)
                 try:

@@ -1,0 +1,10 @@
+# media, models and renders are fetched or produced at run time, never committed
+media/
+music/
+out/
+*.mp4
+*.wav
+*.mp3
+*.safetensors
+__pycache__/
+.cache/

@@ -1,11 +1,11 @@
 name: backlog
 # Uploads the Shorts made before this pipeline existed. They wait, encrypted, on the "backlog" branch.
-# Runs when that branch is pushed and every 3 hours until everything on it is on YouTube.
+# Runs when that branch is pushed and hourly until everything on it is on YouTube (then the branch is deleted).
 on:
   push:
     branches: [backlog]
   schedule:
-    - cron: '50 */3 * * *'
+    - cron: '5 * * * *'
   workflow_dispatch:
 
 permissions:

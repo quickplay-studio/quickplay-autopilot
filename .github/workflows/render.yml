@@ -74,7 +74,7 @@ jobs:
       - name: Unlock music
         if: matrix.job.mode != 'reject'
         env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }
-        run: for f in pipeline/music/*.mp3.enc; do openssl enc -d -aes-256-cbc -pbkdf2 -in "$f" -out "${f%.enc}" -pass env:MUSIC_KEY; done
+        run: for f in pipeline/music/*.mp3.enc pipeline/music_social/*.mp3.enc; do [ -f "$f" ] || continue; openssl enc -d -aes-256-cbc -pbkdf2 -in "$f" -out "${f%.enc}" -pass env:MUSIC_KEY; done
       - name: Render
         env:
           JOB_JSON: ${{ toJson(matrix.job) }}
@@ -121,6 +121,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { name: statuses, path: results }
       - name: Commit results
+        env: { GH_TOKEN: '${{ github.token }}' }
         run: |
           python pipeline/record.py results
           python pipeline/review_page.py

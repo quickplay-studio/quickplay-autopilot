@@ -42,6 +42,25 @@ def pick_music(sb):
     m.setdefault("gain_db", -15)
     return by[m["slug"]]
 
+def pick_social_music(sb):
+    """Same mood as the YouTube track, from the library licensed for every platform (pipeline/music_social). None if empty."""
+    cp = P / "music_social" / "catalog.json"
+    if not cp.exists(): return None
+    cat = [c for c in json.loads(cp.read_text()) if (P / "music_social" / f"{c['slug']}.mp3").exists()]
+    if not cat: return None
+    mood, category = (sb.get("music") or {}).get("mood"), sb.get("category")
+    pool = ([c for c in cat if mood and mood in c.get("moods", [])] or [c for c in cat if category in c.get("categories", [])] or cat)
+    rows = []
+    for f in (ROOT / "status").glob("*.json"):
+        try: st = json.loads(f.read_text())
+        except Exception: continue
+        if st.get("social_music"): rows.append((st.get("rendered", ""), st["social_music"]))
+    recent = [m for _, m in sorted(rows, reverse=True)]
+    age = lambda c: recent.index(c["slug"]) if c["slug"] in recent else 10 ** 6
+    pool.sort(key=lambda c: (-age(c), hashlib.sha1((sb["id"] + c["slug"]).encode()).hexdigest()))
+    sb["social_music"] = {"slug": pool[0]["slug"], "gain_db": (sb.get("music") or {}).get("gain_db", -15)}
+    return pool[0]
+
 def description(sb, credits, track):
     m = sb.get("meta", {})
     out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
@@ -91,6 +110,8 @@ def main():
         import fetch_media
         sb = fetch_media.resolve(sb)
         track = pick_music(sb); status["music"] = track["slug"]
+        social = pick_social_music(sb)
+        if social: status["social_music"] = social["slug"]
         sb.update(voice_engine="chatterbox", voice_dir=f"voice/{sid}", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
         resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
@@ -115,6 +136,8 @@ def main():
             "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"]},
             indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
+        smp4 = P / "out" / f"{sid}.social.mp4"
+        if smp4.exists(): smp4.replace(res / "social.mp4")
         status["state"] = "rendered"
     except Exception as e:
         status["state"] = "failed"; status["error"] = f"{type(e).__name__}: {e}"[:600]

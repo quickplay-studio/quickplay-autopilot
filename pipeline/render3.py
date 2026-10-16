@@ -54,10 +54,10 @@ def sfx_tick(seed):
     rng = np.random.default_rng(seed); n = int(0.05 * SR); t = np.arange(n) / SR
     return (R.bp(rng.standard_normal(n), 1800, 6000) * np.exp(-t * 120) * 0.22).astype(np.float32)
 
-def load_music(slug, start, dur):
-    cat = {c["slug"]: c for c in json.loads((HERE / "music" / "catalog.json").read_text())}
+def load_music(slug, start, dur, lib="music"):
+    cat = {c["slug"]: c for c in json.loads((HERE / lib / "catalog.json").read_text())}
     c = cat[slug]; st = c["start"] if start is None else start
-    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{st:.3f}", "-t", f"{dur + 1:.3f}", "-i", str(HERE / "music" / f"{slug}.mp3"),
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{st:.3f}", "-t", f"{dur + 1:.3f}", "-i", str(HERE / lib / f"{slug}.mp3"),
                           "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
     m = np.frombuffer(raw, np.float32).copy()
     beats = [b - st for b in c["beats"] if st <= b <= st + dur + 1]
@@ -226,7 +226,13 @@ def main():
     music, mbeats, mcat = load_music(mus.get("slug", "ten"), mus.get("start"), duration)
     items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir)
     wav = out_dir / f"{sid}.wav"
-    mix_audio3(segs, duration, music, sfx_events(sb, beats, items), str(wav), mus.get("gain_db", -16))
+    events = sfx_events(sb, beats, items)
+    mix_audio3(segs, duration, music, events, str(wav), mus.get("gain_db", -16))
+    soc = sb.get("social_music") or {}
+    swav = out_dir / f"{sid}.social.wav"
+    if soc.get("slug"):        # TikTok/Instagram version: same voice and effects, music licensed for every platform
+        smusic, _, _ = load_music(soc["slug"], soc.get("start"), duration, lib="music_social")
+        mix_audio3(segs, duration, smusic, events, str(swav), soc.get("gain_db", mus.get("gain_db", -16)))
     credits.append({"credit": f"Music: {mcat['title']} by {mcat['artist']} (YouTube Audio Library)", "source": "", "license": ""})
     icons = set([sb.get("chipIcon", "trending-up")])
     for b in sb["beats"]:
@@ -248,6 +254,10 @@ def main():
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent), "-i", str(wav),
                     "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
                     "-movflags", "+faststart", "-shortest", str(final)], check=True)
+    if soc.get("slug") and swav.exists():
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent), "-i", str(swav),
+                        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
+                        "-movflags", "+faststart", "-shortest", str(out_dir / f"{sid}.social.mp4")], check=True)
     silent.unlink(missing_ok=True)
     print(json.dumps({"id": sid, "duration": round(duration, 2), "size_mb": round(final.stat().st_size / 1e6, 2),
                       "shots": len(items), "secs": round(time.time() - t0, 1), "file": str(final)}))

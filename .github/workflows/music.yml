@@ -25,8 +25,12 @@ jobs:
       - run: pip install -q requests numpy librosa soundfile
       - name: Build
         env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }
-        run: python pipeline/music_social_build.py pipeline/music_social/picks.json
+        run: |
+          mkdir -p status
+          python pipeline/music_social_build.py pipeline/music_social/picks.json 2>&1 | tail -n 60 > status/music_build_log.txt
+          exit ${PIPESTATUS[0]}
       - name: Save
+        if: always()
         run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"

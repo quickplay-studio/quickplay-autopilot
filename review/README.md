@@ -2,10 +2,6 @@
 
 YouTube checked Sat 17 Oct 0:13 (UK): 2 scheduled, 8 public, 10 uploads in the last 24 hours.
 
-## In the queue
-
-- **TEST-O2B** Olivia Rodrigo just brought in Chappell Roan 🎤 (rendering next)
-
 ## On the channel (latest first)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤

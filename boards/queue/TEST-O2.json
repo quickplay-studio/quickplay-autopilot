@@ -1,0 +1,270 @@
+{
+ "id": "TEST-O2",
+ "created": "2026-10-16",
+ "format": "news_explained",
+ "category": "Music",
+ "chipIcon": "music",
+ "accent": "#F9A8D4",
+ "voice": "F2",
+ "gap": 0.1,
+ "tail": 0.6,
+ "mode": "none",
+ "music": {
+  "mood": "pop",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "Olivia Rodrigo just brought Chappell Roan onto her song expectations.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "kicker": "New remix",
+    "lines": [
+     "Olivia Rodrigo",
+     "+ Chappell Roan"
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Olivia Rodrigo",
+     "label": {
+      "t": "Olivia Rodrigo",
+      "s": "Singer"
+     },
+     "move": "in"
+    },
+    {
+     "src": "commons-search:Chappell Roan",
+     "label": {
+      "t": "Chappell Roan",
+      "s": "Singer"
+     },
+     "move": "in",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "say": "The remix and its music video landed on Thursday, 15 October.",
+   "visual": {
+    "type": "date",
+    "month": "Oct",
+    "day": 15,
+    "weekday": "Thursday",
+    "label": "expectations remix",
+    "sub": "With music video"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:music video camera set"
+    },
+    {
+     "src": "pixabay:video:stage lights concert",
+     "at": 6
+    }
+   ]
+  },
+  {
+   "say": "The original is on Rodrigo's third album, you seem pretty sad for a girl so in love.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Olivia Rodrigo concert",
+     "move": "left"
+    },
+    {
+     "src": "pixabay:video:vinyl record player",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "say": "So why does this pairing make sense?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Chappell Roan concert",
+     "move": "in",
+     "tin": true
+    }
+   ]
+  },
+  {
+   "say": "They share a producer, Daniel Nigro, and he produced this remix too.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "sliders-horizontal",
+      "t": "Daniel Nigro",
+      "s": "Producer"
+     },
+     {
+      "icon": "video",
+      "t": "Bardia Zeinali",
+      "s": "Video director"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:recording studio mixing desk"
+    },
+    {
+     "src": "pixabay:video:studio microphone singer",
+     "at": 7
+    }
+   ]
+  },
+  {
+   "say": "The video was directed by Bardia Zeinali.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:film camera crew"
+    }
+   ]
+  },
+  {
+   "say": "And both give back. Rodrigo's Daisy Chain Fields festival raised 20 million dollars for charity, and Roan hosts her own charity show in Los Angeles later this month.",
+   "visual": {
+    "type": "stat",
+    "value": "$20M",
+    "label": "raised for charity",
+    "sub": "Daisy Chain Fields",
+    "atWord": 11
+   },
+   "shots": [
+    {
+     "src": "commons-search:Olivia Rodrigo",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    {
+     "src": "pixabay:video:festival crowd stage",
+     "at": 6
+    },
+    {
+     "src": "commons-search:Chappell Roan",
+     "move": "out",
+     "at": 15
+    },
+    {
+     "src": "pixabay:video:los angeles skyline",
+     "at": 22
+    }
+   ]
+  },
+  {
+   "say": "Which duet should they do next? Tell us below.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "lines": [
+     "What's",
+     "next?"
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:concert crowd lights"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Olivia Rodrigo just brought in Chappell Roan 🎤",
+  "summary": "Chappell Roan joins Olivia Rodrigo on a remix of expectations, out with a music video on 15 October and produced by Daniel Nigro.",
+  "hashtags": [
+   "#OliviaRodrigo",
+   "#ChappellRoan",
+   "#Pop",
+   "#Shorts"
+  ],
+  "sources": [
+   [
+    "Clash: Olivia Rodrigo, Chappell Roan confirm expectations remix",
+    "https://www.clashmusic.com/news/olivia-rodrigo-chappell-roan-confirm-expectations-remix/"
+   ],
+   [
+    "SPIN: Olivia Rodrigo and Chappell Roan expectations",
+    "https://www.spinmagazine.com/2026/10/olivia-rodrigo-chappell-roan-expectations/"
+   ],
+   [
+    "NYLON: Olivia Rodrigo and Chappell Roan expectations remix",
+    "https://www.nylon.com/entertainment/olivia-rodrigo-chappell-roan-expectations-remix"
+   ],
+   [
+    "GMA: Olivia Rodrigo and Chappell Roan team up for expectations remix",
+    "https://www.gmanetwork.com/entertainment/showbiznews/olivia-rodrigo-and-chappell-roan-team-up-for-expectations-remix/139824/"
+   ]
+  ],
+  "facts": [
+   [
+    "The expectations remix and music video were released on Thursday 15 October",
+    [
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   [
+    "expectations is on Rodrigo's third album, you seem pretty sad for a girl so in love",
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    "Rodrigo and Roan share producer Daniel Nigro, who produced the remix",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "The video was directed by Bardia Zeinali",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Rodrigo's Daisy Chain Fields festival raised 20 million dollars for charity",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Roan hosts her own charity event in Los Angeles later in October",
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "signals": {
+   "youtube_charts": [
+    "GB and US: Olivia Rodrigo - expectations (feat. Chappell Roan) video, 4.5M views, about 301k views per hour"
+   ]
+  }
+ }
+}

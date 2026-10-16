@@ -23,7 +23,7 @@ def client():
     return build("youtube", "v3", credentials=creds(), cache_discovery=False)
 
 def recent_videos(yt, limit=100):
-    """[{id, title, uploaded (UTC), publish_at (UTC or None), privacy}] newest first."""
+    """[{id, title, uploaded (UTC), publish_at (UTC or None), privacy, views}] newest first."""
     pl = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
     items, tok = [], None
     while len(items) < limit:
@@ -34,9 +34,10 @@ def recent_videos(yt, limit=100):
     for i in range(0, len(items), 50):
         ids = [it["snippet"]["resourceId"]["videoId"] for it in items[i:i + 50]]
         up = {it["snippet"]["resourceId"]["videoId"]: it["snippet"]["publishedAt"] for it in items[i:i + 50]}
-        for v in yt.videos().list(part="status,snippet", id=",".join(ids)).execute()["items"]:
+        for v in yt.videos().list(part="status,snippet,statistics", id=",".join(ids)).execute()["items"]:
             out.append({"id": v["id"], "title": v["snippet"]["title"], "uploaded": up.get(v["id"]),
-                        "publish_at": v["status"].get("publishAt"), "privacy": v["status"]["privacyStatus"]})
+                        "publish_at": v["status"].get("publishAt"), "privacy": v["status"]["privacyStatus"],
+                        "views": int(v.get("statistics", {}).get("viewCount", 0))})
     return out
 
 def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None):
@@ -57,6 +58,12 @@ def upload(yt, path, title, description, tags, category="Entertainment", publish
                 tries += 1; time.sleep(5 * tries); continue
             raise
     return resp["id"]
+
+def video_status(yt, vid):
+    """What YouTube kept after an upload: privacy and scheduled time (a missing publishAt means it won't go public)."""
+    items = yt.videos().list(part="status", id=vid).execute().get("items", [])
+    st = items[0]["status"] if items else {}
+    return {"privacy": st.get("privacyStatus"), "publish_at": st.get("publishAt"), "upload_status": st.get("uploadStatus")}
 
 def utc(s):
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00")) if s else None

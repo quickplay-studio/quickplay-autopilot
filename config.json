@@ -1,0 +1,25 @@
+{
+ "daily_limit": 20,
+ "per_session": 10,
+ "slot_first": "08:00",
+ "slot_every_minutes": 45,
+ "slots_per_day": 20,
+ "lead_hours": 3,
+ "music_moods": {
+  "epic": "big cinematic reveals: film and TV news, trailers, major launches",
+  "tense": "mysteries, horror, creepy games, suspense, anything with a dark twist",
+  "space": "space, astronomy, nature wonders, calm science",
+  "tech": "gadgets, AI, apps, phones, engineering",
+  "action": "action games, fighting games, racing, high-energy sport",
+  "retro": "retro games, the 80s and 90s, nostalgia, synth-heavy worlds like Vice City",
+  "playful": "cosy and family games, animals, quirky facts, light-hearted stories",
+  "pop": "pop stars, K-pop, celebrities, bright entertainment news",
+  "hiphop": "rap and hip hop artists, streetwear, sport culture and swagger",
+  "country": "country and folk artists, Americana, rural stories",
+  "rock": "rock bands, festivals, motorsport, loud and gritty topics",
+  "latin": "Latin and Spanish-language artists, world football, summer energy",
+  "chill": "food, lifestyle, design, gentle explainers",
+  "orchestral": "history, royalty, classical music, documentary tone",
+  "inspiring": "records, comebacks, achievements, emotional wins"
+ }
+}

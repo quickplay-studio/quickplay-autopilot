@@ -25,6 +25,12 @@ def main(root):
                                u["slot"] if u["mode"] == "schedule" else None)
                 st.update(state="scheduled" if u["mode"] == "schedule" else "uploaded (private)", video=vid,
                           url=f"https://youtube.com/shorts/{vid}", publish_at=u["slot"] or None)
+                try:
+                    kept = Y.video_status(yt, vid); st["youtube"] = kept
+                    if u["mode"] == "schedule" and not kept.get("publish_at"):
+                        st["state"] = "uploaded but not scheduled (check Studio)"
+                except Exception as e:
+                    st["youtube"] = {"error": str(e)[:200]}
             except Y.LimitReached:
                 st["state"] = "waiting for YouTube's daily upload limit"
             except Exception as e:

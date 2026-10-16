@@ -48,30 +48,38 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.13', cache: pip, cache-dependency-path: pipeline/requirements.txt }
       - uses: actions/setup-node@v4
+        if: matrix.job.mode != 'reject'
         with: { node-version: 20 }
       - name: System packages
+        if: matrix.job.mode != 'reject'
         run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - name: Python packages
+        if: matrix.job.mode != 'reject'
         run: |
           pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           pip install -q -r pipeline/requirements.txt
           pip install -q --no-deps chatterbox-tts==0.1.7
           python -m playwright install --with-deps chromium
       - name: Fonts and icons
+        if: matrix.job.mode != 'reject'
         run: npm ci --prefix pipeline --silent
       - uses: actions/cache@v4
+        if: matrix.job.mode != 'reject'
         with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
       - name: Voice model
+        if: matrix.job.mode != 'reject'
         run: python pipeline/get_model.py models/chatterbox
       - name: Unlock music
+        if: matrix.job.mode != 'reject'
         env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }
         run: for f in pipeline/music/*.mp3.enc; do openssl enc -d -aes-256-cbc -pbkdf2 -in "$f" -out "${f%.enc}" -pass env:MUSIC_KEY; done
       - name: Render
         env:
+          JOB_JSON: ${{ toJson(matrix.job) }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           CB_CKPT: ${{ github.workspace }}/models/chatterbox
           TQDM_DISABLE: '1'
-        run: python pipeline/run_board.py "${{ matrix.job.board }}" --slot "${{ matrix.job.slot }}" --mode "${{ matrix.job.mode }}"
+        run: python pipeline/run_board.py
       - uses: actions/upload-artifact@v4
         if: always()
         with: { name: 'result-${{ matrix.job.id }}', path: 'result/${{ matrix.job.id }}', retention-days: 7, if-no-files-found: ignore }
@@ -111,6 +119,7 @@ jobs:
       - name: Commit results
         run: |
           python pipeline/record.py results
+          python pipeline/review_page.py
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           git add -A boards status review

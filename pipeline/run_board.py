@@ -1,6 +1,7 @@
 """Render one Short on a GitHub runner: media, voice, video, checks. No upload here.
 
-usage: python run_board.py boards/queue/<id>.json --slot <ISO UTC or ''> --mode schedule|private|none
+usage: python run_board.py boards/queue/<id>.json --slot <ISO UTC or ''> --mode schedule|private|none|reject
+       (on GitHub the job comes in the JOB_JSON environment variable instead, so no board text ever reaches a shell)
 Leaves in result/<id>/: the MP4, upload.json (title, description, tags, slot) and status.json, plus review.jpg.
 This job never sees the YouTube keys: uploading happens in a separate job with a much smaller set of code.
 """
@@ -15,14 +16,31 @@ def sh(*cmd, cwd=P):
     print("$", " ".join(map(str, cmd)), flush=True)
     subprocess.run([str(c) for c in cmd], check=True, cwd=cwd)
 
+def recent_tracks():
+    """Music slugs of the most recent Shorts, newest first, so the same track isn't used twice in a row."""
+    rows = []
+    for f in (ROOT / "status").glob("*.json"):
+        try: st = json.loads(f.read_text())
+        except Exception: continue
+        if st.get("music"): rows.append((st.get("rendered", ""), st["music"]))
+    return [m for _, m in sorted(rows, reverse=True)]
+
 def pick_music(sb):
+    """A board names a track ("slug") or a mood from config.json; otherwise the category decides.
+    Within the pool, the track used longest ago wins."""
     cat = json.loads((P / "music" / "catalog.json").read_text())
-    slugs = [c["slug"] for c in cat]
+    by = {c["slug"]: c for c in cat}
     m = sb.setdefault("music", {})
-    if m.get("slug") not in slugs:
-        m["slug"] = slugs[int(hashlib.sha1(sb["id"].encode()).hexdigest(), 16) % len(slugs)]
+    if m.get("slug") not in by:
+        mood, category = m.get("mood"), sb.get("category")
+        pool = ([c for c in cat if mood and mood in c.get("moods", [])]
+                or [c for c in cat if category in c.get("categories", [])] or cat)
+        recent = recent_tracks()
+        age = lambda c: recent.index(c["slug"]) if c["slug"] in recent else 10 ** 6
+        pool.sort(key=lambda c: (-age(c), hashlib.sha1((sb["id"] + c["slug"]).encode()).hexdigest()))
+        m["slug"] = pool[0]["slug"]
     m.setdefault("gain_db", -15)
-    return next(c for c in cat if c["slug"] == m["slug"])
+    return by[m["slug"]]
 
 def description(sb, credits, track):
     m = sb.get("meta", {})
@@ -33,7 +51,7 @@ def description(sb, credits, track):
         if not cr or cr.startswith("Music:") or (cr, src) in seen: continue
         seen.add((cr, src)); vis.append(f"{cr} ({src})" if src else cr)
     if vis: out += ["", "Visuals:"] + vis
-    out += ["", f"Music: {track['title']} by {track['artist']} (YouTube Audio Library)", "",
+    out += ["", f"Music: {track['title']} by {track['artist']} ({track.get('source', 'YouTube Audio Library')})", "",
             "Independent channel, not affiliated with the companies or people featured. Facts checked against the sources above.",
             "", " ".join(m.get("hashtags") or ["#Shorts"])]
     return "\n".join(out)
@@ -54,16 +72,25 @@ def contact_sheet(mp4, timeline, dest):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("board"); ap.add_argument("--slot", default=""); ap.add_argument("--mode", default="none")
+    ap.add_argument("board", nargs="?"); ap.add_argument("--slot", default=""); ap.add_argument("--mode", default="none")
     a = ap.parse_args()
-    sb = json.loads((ROOT / a.board).read_text()); sid = sb["id"]
+    job = json.loads(os.environ["JOB_JSON"]) if os.environ.get("JOB_JSON") else {"board": a.board, "slot": a.slot, "mode": a.mode}
+    board_path = ROOT / job["board"]
+    if not board_path.resolve().is_relative_to((ROOT / "boards").resolve()): sys.exit("board must be under boards/")
+    sid = job.get("id") or board_path.stem
     res = ROOT / "result" / sid; res.mkdir(parents=True, exist_ok=True)
-    status = {"id": sid, "board": a.board, "title": sb.get("meta", {}).get("title"), "mode": a.mode, "slot": a.slot,
+    status = {"id": sid, "board": job["board"], "mode": job["mode"], "slot": job.get("slot", ""),
               "rendered": dt.datetime.now(dt.timezone.utc).isoformat()}
+    if job["mode"] == "reject":
+        status.update(state="failed (board rejected)", error=job.get("errors", "failed validation"))
+        (res / "status.json").write_text(json.dumps(status, indent=1, ensure_ascii=False)); print(json.dumps(status, indent=1))
+        return
+    sb = json.loads(board_path.read_text()); sid = sb["id"]
+    status["title"] = sb.get("meta", {}).get("title")
     try:
         import fetch_media
         sb = fetch_media.resolve(sb)
-        track = pick_music(sb)
+        track = pick_music(sb); status["music"] = track["slug"]
         sb.update(voice_engine="chatterbox", voice_dir=f"voice/{sid}", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
         resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
@@ -85,7 +112,8 @@ def main():
         (res / "upload.json").write_text(json.dumps({
             "title": meta["title"], "description": description(sb, credits, track),
             "tags": [h.lstrip("#") for h in meta.get("hashtags", [])] + meta.get("tags", []),
-            "category": sb.get("category", "Entertainment"), "slot": a.slot, "mode": a.mode}, indent=1, ensure_ascii=False))
+            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"]},
+            indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
         status["state"] = "rendered"
     except Exception as e:

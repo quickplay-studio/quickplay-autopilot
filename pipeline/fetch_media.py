@@ -3,7 +3,8 @@
 Shot "src" forms (anything else is treated as a local path under pipeline/):
   commons:File:Some_image.jpg     a Wikimedia Commons file (free licence; credit read from Commons)
   commons-search:<words>          best Commons image for the words (width >= 1600)
-  pixabay:video:<words>           a Pixabay stock video (PIXABAY_API_KEY), no repeats within a Short
+  pixabay:video:<words>           a Pixabay stock video (PIXABAY_API_KEY): best tag match, portrait preferred,
+                                  near-black clips skipped unless the shot has "dark": true, no repeats within a Short
   pixabay:image:<words>           a Pixabay photo (fallback only: they are 1280 px wide)
   url:<https://...>               a direct file from an official press or media page; set "credit" and "source" on the shot
 
@@ -52,24 +53,50 @@ def commons_search(words):
         if ii.get("width", 0) >= 1600: return commons_file(p["title"])
     raise RuntimeError(f"no Commons image for '{words}'")
 
-def pixabay(kind, words, used):
+def _brightness(url):
+    """Mean brightness 0-255 of a small preview image; 128 if it can't be read."""
+    try:
+        import io
+        from PIL import Image, ImageStat
+        return ImageStat.Stat(Image.open(io.BytesIO(_get(url).content)).convert("L")).mean[0]
+    except Exception:
+        return 128
+
+def _match(tags, words):
+    """Share of the query words found in a stock item's tags (Pixabay ranks loosely; this keeps picks on topic)."""
+    have = set()
+    for t in (tags or "").lower().split(","):
+        have.add(t.strip()); have.update(t.split())
+    want = [w for w in re.findall(r"[a-z]+", words.lower()) if len(w) > 2]
+    return sum(w in have or w.rstrip("s") in have for w in want) / max(1, len(want))
+
+def pixabay(kind, words, used, dark_ok=False):
+    """Best on-topic Pixabay item: most query words in its tags, portrait preferred, never near-black, no repeats."""
     key = os.environ.get("PIXABAY_API_KEY")
     if not key: raise RuntimeError("PIXABAY_API_KEY not set")
     if kind == "video":
-        hits = _get("https://pixabay.com/api/videos/", params={"key": key, "q": words[:100], "safesearch": "true", "per_page": 30}).json()["hits"]
-        for h in hits:
+        hits = _get("https://pixabay.com/api/videos/", params={"key": key, "q": words[:100], "safesearch": "true", "per_page": 40}).json()["hits"]
+        cands = []
+        for rank, h in enumerate(hits):
             v = h["videos"].get("large") or {}
             if not v.get("url") or v.get("width", 0) < 1280: v = h["videos"].get("medium") or {}
             if h["id"] in used or not v.get("url") or h.get("duration", 0) < 4: continue
+            score = _match(h.get("tags"), words) + (0.15 if v.get("height", 0) > v.get("width", 1) else 0) - rank * 0.005
+            cands.append((score, h, v))
+        for score, h, v in sorted(cands, key=lambda c: -c[0])[:6]:
+            thumb = v.get("thumbnail") or (h["videos"].get("tiny") or {}).get("thumbnail")
+            if not dark_ok and thumb and _brightness(thumb) < 38: continue
             used.add(h["id"])
             return v["url"], f"Video: {h['user']} / Pixabay", h["pageURL"]
     else:
-        hits = _get("https://pixabay.com/api/", params={"key": key, "q": words[:100], "image_type": "photo", "safesearch": "true", "per_page": 30}).json()["hits"]
-        for h in hits:
-            if h["id"] in used: continue
+        hits = _get("https://pixabay.com/api/", params={"key": key, "q": words[:100], "image_type": "photo", "safesearch": "true", "per_page": 40}).json()["hits"]
+        cands = [(_match(h.get("tags"), words) + (0.15 if h.get("imageHeight", 0) > h.get("imageWidth", 1) else 0) - r * 0.005, h)
+                 for r, h in enumerate(hits) if h["id"] not in used]
+        for score, h in sorted(cands, key=lambda c: -c[0])[:6]:
+            if not dark_ok and _brightness(h["previewURL"]) < 38: continue
             used.add(h["id"])
             return h["largeImageURL"], f"Photo: {h['user']} / Pixabay", h["pageURL"]
-    raise RuntimeError(f"no Pixabay {kind} for '{words}'")
+    raise RuntimeError(f"no usable Pixabay {kind} for '{words}'")
 
 def scene_cuts(path):
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", "scale=320:-2,select='gt(scene,0.12)',showinfo",
@@ -90,7 +117,7 @@ def resolve(sb):
             try:
                 if kind == "commons": url, credit, source = commons_file(rest)
                 elif kind == "commons-search": url, credit, source = commons_search(rest)
-                elif kind == "pixabay": url, credit, source = pixabay(*rest.split(":", 1), used)
+                elif kind == "pixabay": url, credit, source = pixabay(*rest.split(":", 1), used, dark_ok=bool(shot.get("dark")))
                 elif kind == "url": url, credit, source = rest, shot.get("credit", sb.get("credit", "")), shot.get("source", rest)
                 else: continue   # already local
                 stem = f"{n:02d}_" + hashlib.sha1(url.encode()).hexdigest()[:8]; n += 1

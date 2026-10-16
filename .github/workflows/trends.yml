@@ -1,8 +1,14 @@
 name: trends
-# Daily trend shortlist for the script writer (trends/latest.json). Small dependency set; read-only use of the YouTube keys.
+# Trend shortlist for the morning sessions (trends/latest.json), the channel report (status/channel.json)
+# and the review page (review/README.md). Small dependency set; read-only use of the YouTube keys.
+# Runs before each morning session, and whenever a file under requests/ is pushed (an on-demand refresh).
 on:
   schedule:
-    - cron: '35 5 * * *'      # about 06:35 UK
+    - cron: '35 5 * * *'      # before the 06:50 UK session
+    - cron: '35 11 * * *'     # before the 12:50 UK session
+  push:
+    branches: [main]
+    paths: ['requests/**']
   workflow_dispatch:
 
 permissions:
@@ -20,11 +26,14 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python pipeline/trends.py
+        run: |
+          python pipeline/trends.py
+          python pipeline/report.py || echo "channel report failed"
+          python pipeline/review_page.py || echo "review page failed"
       - run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
-          git add trends
-          git commit -q -m "Trends $(date -u +%F)" || exit 0
+          git add -A trends status review
+          git commit -q -m "Trends and channel report $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3; do git pull -q --rebase && git push -q && exit 0; sleep 7; done
           exit 1

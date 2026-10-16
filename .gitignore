@@ -1,9 +1,15 @@
 # media, models and renders are fetched or produced at run time, never committed
-media/
-music/
-out/
+pipeline/media/
+pipeline/out/
+pipeline/voice/
+pipeline/node_modules/
+pipeline/music/*.mp3
+models/
+result/
+results/
 *.mp4
 *.wav
+!pipeline/voices/*.wav
 *.mp3
 *.safetensors
 __pycache__/

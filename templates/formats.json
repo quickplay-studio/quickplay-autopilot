@@ -1,0 +1,102 @@
+{
+ "about": "Formats modelled on clean Shorts that outperformed their channel's usual views (vidIQ outliers, Jul-Oct 2026). We copy structure and pacing only, never footage or scripts. Every Short picks one format; the writer fills the beats in order.",
+ "global_rules": {
+  "hook": "First spoken line states the stakes or the mystery in under 2.5 s and names the subject. No 'did you know', no greetings, no view counts or 'this went viral'.",
+  "pace": "Narration 2.4-2.8 words a second, with a real pause before the reveal and after any rhetorical question.",
+  "re_hook": "Around 45-60% of the runtime, one short pivot line ('But here's the strange part.', 'So why now?') to reset attention.",
+  "visuals": "New shot every 1.5-3 s. The first time a person appears, show their name label. Zoom or flash on the reveal word, with an impact sound. Real footage of the subject beats stock.",
+  "ending": "End on a payoff line that reframes the opening, or an open question that invites comments. 'Follow for more' only after the payoff, never instead of it.",
+  "length": "Single-reveal 20-35 s, lists 25-40 s, explainers 30-45 s, timelines up to 60 s. Cut anything that doesn't move the story."
+ },
+ "formats": [
+  {
+   "id": "one_detail",
+   "name": "One detail explains it",
+   "use_when": "A trailer, reveal, photo or clip contains one telling detail that changes how you read it.",
+   "length_s": [20, 35],
+   "beats": [
+    {"role": "hook", "say": "In [thing], [who] hides one detail that explains everything.", "visual": "title card over the best shot of the subject"},
+    {"role": "reveal", "say": "[The detail].", "visual": "tight zoom or flash cut onto the detail, impact sound"},
+    {"role": "context", "say": "Why it matters: what we already knew (1-2 beats).", "visual": "the person or place, with name label"},
+    {"role": "re_hook", "say": "But here's what makes it bigger.", "visual": "fast cut"},
+    {"role": "build", "say": "Supporting facts, each with its own shot (2-3 beats, can be a quick list).", "visual": "1-1.5 s cuts on each item"},
+    {"role": "payoff", "say": "One line that reframes the opening.", "visual": "title card, impact"},
+    {"role": "close", "say": "Date or what happens next. Follow for more.", "visual": "date card"}
+   ],
+   "examples": [
+    {"title": "The Trailer Had One Hidden Trick", "url": "https://www.youtube.com/shorts/Ba-pxrJWG-0", "views": 2099524, "secs": 22, "subs": 36400},
+    {"title": "This weird detail in the Fortnite trailer", "url": "https://www.youtube.com/shorts/swbBpPJpJWg", "views": 994314, "secs": 7, "subs": 678},
+    {"title": "GTA 6's launch trailer hides its whole story in one detail (ours, QD-027)", "url": "", "views": null, "secs": 47, "subs": null}
+   ]
+  },
+  {
+   "id": "three_details",
+   "name": "3 details you missed",
+   "use_when": "A new trailer, episode, game update or product launch with several small, checkable details.",
+   "length_s": [25, 40],
+   "beats": [
+    {"role": "hook", "say": "Three details in [thing] almost nobody noticed.", "visual": "fast montage of the subject"},
+    {"role": "detail_1", "say": "One: [detail], and what it means.", "visual": "zoom on the detail, big number 1"},
+    {"role": "detail_2", "say": "Two: [detail], and what it means.", "visual": "zoom, big number 2"},
+    {"role": "re_hook", "say": "But the third one is the best.", "visual": "flash cut"},
+    {"role": "detail_3", "say": "Three: the strongest detail, saved for last.", "visual": "slow push-in, impact"},
+    {"role": "close", "say": "Open question about which one matters most.", "visual": "the subject's best shot"}
+   ],
+   "examples": [
+    {"title": "Cloudy with a Chance of Meatballs Hidden Details You Missed!", "url": "https://www.youtube.com/shorts/Dl7bGmD8BNo", "views": 1743556, "secs": 29, "subs": 45200},
+    {"title": "Wolverine Details You Never Noticed", "url": "https://www.youtube.com/shorts/nNbg3qtKu0Y", "views": 1617166, "secs": 60, "subs": 47300},
+    {"title": "3 Hidden RDR2 Details You Definitely Missed", "url": "https://www.youtube.com/shorts/x1P2NSefzTs", "views": 303265, "secs": 28, "subs": 3130}
+   ]
+  },
+  {
+   "id": "news_explained",
+   "name": "Big news, explained",
+   "use_when": "A launch, leak, signing, record or announcement that people are searching for today.",
+   "length_s": [30, 45],
+   "beats": [
+    {"role": "hook", "say": "[Who] might be about to [big move], and [rival or surprising cause] could be the reason.", "visual": "close, tactile shot of the subject"},
+    {"role": "facts", "say": "What's new, fast: 2-4 facts, one per shot.", "visual": "cards or labels for numbers and dates"},
+    {"role": "re_hook", "say": "So why now?", "visual": "pause, then hard cut"},
+    {"role": "reason", "say": "The real reason, with the evidence.", "visual": "the rival, the document or the moment"},
+    {"role": "best_part", "say": "And here's the part that matters most: [consequence].", "visual": "best shot, impact"},
+    {"role": "close", "say": "Open question that invites a debate in the comments.", "visual": "two subjects side by side"}
+   ],
+   "examples": [
+    {"title": "Galaxy Z Tri-Fold 2 - All the Big Changes Explained!", "url": "https://www.youtube.com/shorts/TCEg_1pTXKM", "views": 3619060, "secs": 37, "subs": 10900,
+     "notes": "13 shots, average 2.8 s; about 2.4 words a second; rivalry hook (Samsung vs Apple); 'But why the sudden rush?' reset at 0:11; 'And here's the exciting part' at 0:20; ends on an open question."}
+   ]
+  },
+  {
+   "id": "timeline",
+   "name": "Everything in 60 seconds",
+   "use_when": "A franchise, rivalry or person with a clear history that a new event makes relevant again.",
+   "length_s": [40, 60],
+   "beats": [
+    {"role": "hook", "say": "Every [X], explained in 60 seconds.", "visual": "fast montage, year counter"},
+    {"role": "eras", "say": "One beat per era or entry, oldest first, year on screen.", "visual": "date card or label per beat, 1.5-2.5 s cuts"},
+    {"role": "re_hook", "say": "Then everything changed.", "visual": "flash"},
+    {"role": "now", "say": "Today's news and why it breaks the pattern.", "visual": "newest footage"},
+    {"role": "close", "say": "What comes next, with a date if known.", "visual": "date card"}
+   ],
+   "examples": [
+    {"title": "Every C8 Corvette Explained in 90 Seconds", "url": "https://www.youtube.com/shorts/mPH4hjs2uVE", "views": 338569, "secs": 108, "subs": 10300}
+   ]
+  },
+  {
+   "id": "real_reason",
+   "name": "The real reason",
+   "use_when": "Something surprising happened (a delay, a missing platform, a record, a rule) and the cause isn't obvious.",
+   "length_s": [25, 40],
+   "beats": [
+    {"role": "hook", "say": "[Surprising fact]. The reason isn't what you think.", "visual": "the subject, title card"},
+    {"role": "assumption", "say": "What most people assume.", "visual": "neutral shot"},
+    {"role": "re_hook", "say": "But look at [evidence].", "visual": "zoom on the evidence"},
+    {"role": "reason", "say": "The actual reason, in two beats, with sources on screen.", "visual": "cards with the key numbers"},
+    {"role": "close", "say": "What it means for the next thing people are waiting for.", "visual": "date or teaser"}
+   ],
+   "examples": [
+    {"title": "Why GTA 6 isn't coming to PC (yet) (ours, QD-008)", "url": "https://youtube.com/shorts/QpgFxDNcPKQ", "views": null, "secs": null, "subs": null}
+   ]
+  }
+ ]
+}

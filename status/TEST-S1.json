@@ -1,0 +1,9 @@
+{
+ "id": "TEST-S1",
+ "board": "boards/queue/TEST-S1.json",
+ "mode": "reject",
+ "slot": "",
+ "rendered": "2026-10-16T15:51:47.915432+00:00",
+ "state": "failed (board rejected)",
+ "error": "UK date style: write '20 October', not ['October 20']"
+}

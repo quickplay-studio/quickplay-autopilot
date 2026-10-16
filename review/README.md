@@ -2,12 +2,10 @@
 
 YouTube checked Fri 16 Oct 15:58 (UK): 7 scheduled, 3 public, 10 uploads in the last 24 hours.
 
-## In the queue
+## Needs a look
 
-- **TEST-O1** Cyberpunk: Edgerunners 2 finally has a date 📺 (rendering next)
-- **TEST-O2** Olivia Rodrigo just brought in Chappell Roan 🎤 (rendering next)
-- **TEST-S1** Cyberpunk: Edgerunners 2 has a date 🌃 (rendering next)
-- **TEST-S2** Street Fighter hits cinemas today 🥊 (rendering next)
+- **TEST-S1** : failed (board rejected). UK date style: write '20 October', not ['October 20']
+- **TEST-S2** : failed (board rejected). UK date style: write '20 October', not ['October 16']
 
 ## On the channel (latest first)
 

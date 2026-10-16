@@ -1,0 +1,16 @@
+{
+ "id": "TEST-O1",
+ "board": "boards/queue/TEST-O1.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-16T15:54:08.241260+00:00",
+ "title": "Cyberpunk: Edgerunners 2 finally has a date 📺",
+ "music": "once-upon-a-time",
+ "qa": {
+  "duration": 30.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.1
+ },
+ "state": "rendered (no upload)"
+}

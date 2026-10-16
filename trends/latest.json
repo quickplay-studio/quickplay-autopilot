@@ -3,117 +3,165 @@
  "google_trends": {
   "GB": [
    {
-    "q": "leonna mayor",
-    "traffic": "200+",
-    "news": [
-     "‘No reason to be ashamed’ - now find out what came next for the extraordinary Leonna Mayor",
-     "‘Riding in this race is another way of giving back to a sport that has given me so much’ says broadcaster and Racing to School Ambassador Leonna Mayor as she prepares for Autism in Racing’s fundraising race later this month. – Racing to School"
-    ]
-   },
-   {
-    "q": "manchester city case - charges outcome",
-    "traffic": "200+",
-    "news": [
-     "Do you agree with this punishment idea for Man City?",
-     "FSA statement: Manchester City"
-    ]
-   },
-   {
-    "q": "the troubles",
+    "q": "gaffe",
     "traffic": "500+",
     "news": [
-     "Attorney General approval required for serious Troubles prosecutions",
-     "Troubles bill ‘gives green light for continued prosecution of veterans’"
+     "Burnham invites Swinney to work together on 'deeper Scottish devolution'",
+     "Burnham just made the SNP an offer they can’t refuse"
     ]
    },
    {
-    "q": "fa youth cup",
+    "q": "jackie kennedy",
+    "traffic": "100+",
+    "news": [
+     "An Intimate Look at Ethel and Jackie Kennedy’s Special Bond",
+     "‘She made a Herculean effort to survive for the sake of the children.’ Kerry Kennedy’s biography of her mother Ethel, whose family was torn apart by political violence"
+    ]
+   },
+   {
+    "q": "kick",
     "traffic": "500+",
     "news": [
-     "FA Youth Cup First Round Draw",
-     "Chippenham Town to host Eastleigh in FA Youth Cup"
+     "Kick Events | Full Details On Kick's New Hub",
+     "Kick Launches Events Hub for Livestream Discovery and Multiview"
     ]
    },
    {
-    "q": "nico mantl",
+    "q": "gatwick flight portable charger burns",
     "traffic": "200+",
     "news": [
-     "Nico Mantl joins Killie",
-     "Kilmarnock sign German goalkeeper after Max Stryjek injury blow"
+     "A Passenger’s Laptop Burst Into Flames on a Flight—Here Are the Battery Warning Signs to Watch For",
+     "British Airways flight returns to Gatwick after reported power bank fire on board"
     ]
    },
    {
-    "q": "anthony foley",
+    "q": "richard osman",
     "traffic": "200+",
     "news": [
-     "Anthony Foley: Munster prepare to honour 'special' former captain and coach 10 years after his death",
-     "Statement | Racing 92 At Páirc Uí Chaoimh"
+     "Video: \"Beat Luke Littler\" - Official Trailer - Netflix",
+     "Richard Osman claims co-host Luke Littler will lose in reality TV darts show"
     ]
    },
    {
-    "q": "hyron andrews",
-    "traffic": "5000+",
+    "q": "anfieldwatch",
+    "traffic": "100+",
     "news": [
-     "Former Sale Shark lock Andrews dies at team hotel in La Rochelle",
-     "Member of South Africa's Lions rugby playing squad dies in France"
+     "Porro deal could set up Alexander-Arnold return to Liverpool - Paper Round",
+     "Trent Alexander-Arnold still playing role at Liverpool despite Real Madrid transfer anger"
     ]
    },
    {
-    "q": "zimbabwe vs india",
-    "traffic": "2000+",
+    "q": "norm macdonald",
+    "traffic": "100+",
     "news": [
-     "Smriti Mandhana - new captain, proven leader",
-     "India target fearless approach for Zimbabwe series"
+     "Norm Macdonald: The fearless comedian whose OJ Simpson jokes got him fired",
+     "'Norm: The Tale of Norm Macdonald' Review: Judd Apatow's Netflix Doc"
     ]
    },
    {
-    "q": "labour pension inheritance tax reforms",
+    "q": "quentin tarantino play",
+    "traffic": "200+",
+    "news": [
+     "Sacha Baron Cohen to star in Quentin Tarantino's West End play",
+     "Sacha Baron Cohen to star in 'The Popinjay Cavalier' in the West End"
+    ]
+   },
+   {
+    "q": "crazy rich asians",
+    "traffic": "200+",
+    "news": [
+     "Crazy Rich Asians: Harry Shum Jr. Addresses if He & Gemma Chan Are in HBO’s Sequel Show",
+     "The 'Crazy Rich Asians' Series Will Begin Filming in 2027"
+    ]
+   },
+   {
+    "q": "david fincher",
     "traffic": "500+",
     "news": [
-     "New inheritance tax rules will drastically change pension use",
-     "Who should we leave our pensions to?"
+     "Fincher Exit & \"Narnia\" Reshoot Reports Emerge",
+     "David Fincher and Netflix split reportedly due to budgetary beefs"
     ]
    }
   ],
   "US": [
    {
-    "q": "scratchcard",
+    "q": "jude law",
+    "traffic": "2000+",
+    "news": [
+     "Jude Law Set To Play Legendary Liverpool Manager Bill Shankly In Series From Jack Thorne",
+     "A24's Ted Lasso Meets The Crown Replacement Casts Oscar Nominee For Lead Role"
+    ]
+   },
+   {
+    "q": "mirassol - internacional",
     "traffic": "500+",
     "news": [
-     "From Under a Pillow to the Winners Room: Kildare Syndicate and Dublin Player Claim €400,000 in Scratch Card Prizes",
-     "Kildare lotto winner hid winning ticket under their pillow — ‘I was keeping it close so that I could dream about what we could do’"
+     "Mirassol x Internacional: onde assistir ao vivo, horário e escalações",
+     "Raio-X: Inter enfrenta o Mirassol pela 31ª rodada do Brasileirão"
     ]
    },
    {
-    "q": "laken snelling",
+    "q": "twitch tv",
+    "traffic": "1000+",
+    "news": [
+     "Your Pokémon Journey Continues: Evolutions and the Spooky Gengar Line Arrive Today",
+     "Get ready for the biggest weekend in livestreaming"
+    ]
+   },
+   {
+    "q": "ncaa football tonight",
+    "traffic": "2000+",
+    "news": [
+     "CFP reaches 'handshake agreement' with ESPN to air 24-team playoff, sources say",
+     "Report: ESPN expected to pay additional $345 million per year for 24-team College Football Playoff"
+    ]
+   },
+   {
+    "q": "kentucky basketball schedule",
+    "traffic": "200+",
+    "news": [
+     "10 key men's college basketball games to watch in November",
+     "Breaking down the 2026-27 Kentucky Basketball schedule"
+    ]
+   },
+   {
+    "q": "twitch",
+    "traffic": "5000+",
+    "news": [
+     "Cal Opens On-Campus Twitch Studio for Student-Athletes Through StreamU",
+     "Cal’s Twitch studio for student-athletes shows that creator content is the new recruiting hack"
+    ]
+   },
+   {
+    "q": "cliff hagan",
     "traffic": "500+",
     "news": [
-     "Ex-Kentucky Cheerleader Laken Snelling, Who Said ‘I Ended His Life’ After Baby Was Found in Closet, Is Sentenced",
-     "Cheerleader Laken Snelling learns her fate after killing newborn son found stuffed in trash bag"
+     "Report: Hall of famer, former UK player and athletic director Cliff Hagan has died",
+     "\"So Saddened\": HOF Journalist Mourns as 5x NBA All-Star Cliff Hagan Dies at 94"
     ]
    },
    {
-    "q": "sharon horgan",
-    "traffic": "200+",
+    "q": "mirassol vs internacional",
+    "traffic": "500+",
     "news": [
-     "'Sober Companion': Bel Powley & Rob Delaney Leading BBC Sounds Podcast",
-     "BBC Sounds announces new comedy drama Sober Companion starring Rob Delaney and Bel Powley"
+     "📋 Round #31: Inter and Mirassol line up to battle the drop",
+     "Mirassol v Internacional: Brasileirão R31, live TV, kick-off and line-ups"
     ]
    },
    {
-    "q": "qqqm",
-    "traffic": "200+",
+    "q": "baseball tonight",
+    "traffic": "100000+",
     "news": [
-     "What Invesco NASDAQ 100 ETF (QQQM) Bought: NVIDIA Leads on Oct. 14",
-     "QQQ Adds $6.35 Billion Across All 101: What to Know"
+     "Dodgers left to ponder state of team core as cracks emerge in NLCS sweep",
+     "Is the Dodgers losing to the Brewers good for MLB? + Rays vs. Guardians Game 4 | SportsCenter"
     ]
    },
    {
-    "q": "maría corina machado",
-    "traffic": "200+",
+    "q": "prince archie school math anecdote",
+    "traffic": "500+",
     "news": [
-     "La líder opositora de Venezuela califica de corrupto al nuevo socio petrolero de Trump",
-     "María Corina Machado reprocha haber sido excluida de las negociaciones entre el chavismo y la oposición en Caracas"
+     "Prince Archie had one request for his new school, but his first day brought a surprise",
+     "Prince Harry Shared a Funny Story About Prince Archie’s First Day at His New School"
     ]
    }
   ]
@@ -245,368 +293,368 @@
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 26103992,
-    "views_per_hour": 1005260
+    "views": 30168703,
+    "views_per_hour": 881521
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 2326006,
-    "views_per_hour": 333628
+    "views": 8969706,
+    "views_per_hour": 589031
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 4511649,
-    "views_per_hour": 301342
+    "views": 6292826,
+    "views_per_hour": 270917
    },
    {
     "title": "The Beekeeper 2 | Official Teaser Trailer",
     "channel": "Amazon MGM Studios",
-    "views": 6689383,
-    "views_per_hour": 276095
-   },
-   {
-    "title": "Save Hay Day from the Red Revenant!",
-    "channel": "Hay Day",
-    "views": 1545087,
-    "views_per_hour": 224489
+    "views": 8011798,
+    "views_per_hour": 246634
    },
    {
     "title": "RAMAYANA: RISE OF A LEGEND - NEW TRAILER IN HINDI | RANBIR KAPOOR | YASH | SAI PALLAVI | SUNNY DEOL",
     "channel": "T-Series",
-    "views": 3581465,
-    "views_per_hour": 175901
+    "views": 5163642,
+    "views_per_hour": 180441
+   },
+   {
+    "title": "Save Hay Day from the Red Revenant!",
+    "channel": "Hay Day",
+    "views": 2500370,
+    "views_per_hour": 165164
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 2919947,
-    "views_per_hour": 163185
+    "views": 3901423,
+    "views_per_hour": 149196
    },
    {
     "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
     "channel": "IShowSpeed",
-    "views": 2298283,
-    "views_per_hour": 123013
-   },
-   {
-    "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
-    "channel": "Jynxzi",
-    "views": 950903,
-    "views_per_hour": 107132
-   },
-   {
-    "title": "Our Worst Fishing Trip So Far...",
-    "channel": "SMii7Y",
-    "views": 1541247,
-    "views_per_hour": 78031
-   },
-   {
-    "title": "Zara Larsson - Blue Moon (Official Music Video)",
-    "channel": "ZaraLarssonMusicVEVO",
-    "views": 2446853,
-    "views_per_hour": 69966
+    "views": 2439578,
+    "views_per_hour": 90558
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 1603564,
-    "views_per_hour": 63324
+    "views": 2435072,
+    "views_per_hour": 72518
+   },
+   {
+    "title": "I Secretly Joined My Hater SMP",
+    "channel": "ManePear",
+    "views": 666939,
+    "views_per_hour": 47580
+   },
+   {
+    "title": "Shrek 2 Remastered - Announce Trailer",
+    "channel": "Mafialabs",
+    "views": 299569,
+    "views_per_hour": 46653
+   },
+   {
+    "title": "ROBLOX SELL FRIES..",
+    "channel": "Foltyn",
+    "views": 232879,
+    "views_per_hour": 44747
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1025128,
-    "views_per_hour": 47640
+    "views": 1204154,
+    "views_per_hour": 40443
    },
    {
-    "title": "iShowSpeed vs Cole Palmer EA FC 1v1!",
-    "channel": "Live Speedy",
-    "views": 695931,
-    "views_per_hour": 38942
+    "title": "Minecraft, But DAMAGE = OVERPOWERED!",
+    "channel": "Cash",
+    "views": 271743,
+    "views_per_hour": 33025
    },
    {
-    "title": "U2 - The Greatest Show On Earth",
-    "channel": "U2VEVO",
-    "views": 698526,
-    "views_per_hour": 30408
+    "title": "All Steal An Egg Pets Meet Their GIRL Versions..",
+    "channel": "Fuzz",
+    "views": 199954,
+    "views_per_hour": 25868
    }
   ],
   "GB-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 26103992,
-    "views_per_hour": 1005260
+    "views": 30168703,
+    "views_per_hour": 881521
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 1545087,
-    "views_per_hour": 224489
+    "views": 2500370,
+    "views_per_hour": 165164
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 2919947,
-    "views_per_hour": 163185
-   },
-   {
-    "title": "FUR vs MVK | WORLDS 2026 | Play Ins Day 1",
-    "channel": "LoL Esports",
-    "views": 1834011,
-    "views_per_hour": 142304
+    "views": 3901423,
+    "views_per_hour": 149196
    },
    {
     "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
     "channel": "IShowSpeed",
-    "views": 2298283,
-    "views_per_hour": 123013
-   },
-   {
-    "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
-    "channel": "Jynxzi",
-    "views": 950903,
-    "views_per_hour": 107132
-   },
-   {
-    "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
-    "channel": "TheBurntPeanut",
-    "views": 844870,
-    "views_per_hour": 106928
+    "views": 2439578,
+    "views_per_hour": 90558
    },
    {
     "title": "Our Worst Fishing Trip So Far...",
     "channel": "SMii7Y",
-    "views": 1541247,
-    "views_per_hour": 78031
-   },
-   {
-    "title": "Star Wars Galactic Racer",
-    "channel": "videogamedunkey",
-    "views": 1492790,
-    "views_per_hour": 76679
-   },
-   {
-    "title": "ROAM0120.exe",
-    "channel": "Markiplier",
-    "views": 1253129,
-    "views_per_hour": 62701
-   },
-   {
-    "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
-    "channel": "TGG",
-    "views": 1025128,
-    "views_per_hour": 47640
+    "views": 1885426,
+    "views_per_hour": 67318
    },
    {
     "title": "I Secretly Joined My Hater SMP",
     "channel": "ManePear",
-    "views": 251526,
-    "views_per_hour": 43658
+    "views": 666939,
+    "views_per_hour": 47580
+   },
+   {
+    "title": "ROBLOX SELL FRIES..",
+    "channel": "Foltyn",
+    "views": 232924,
+    "views_per_hour": 44756
+   },
+   {
+    "title": "ABSURD GUESSING RANKS (Rainbow Six Siege)",
+    "channel": "Jynxzi",
+    "views": 250208,
+    "views_per_hour": 44586
+   },
+   {
+    "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
+    "channel": "TGG",
+    "views": 1204154,
+    "views_per_hour": 40443
+   },
+   {
+    "title": "Check out Star Wars Galactic Racer, might change your life",
+    "channel": "zanny",
+    "views": 278178,
+    "views_per_hour": 38507
    },
    {
     "title": "iShowSpeed vs Cole Palmer EA FC 1v1!",
     "channel": "Live Speedy",
-    "views": 695931,
-    "views_per_hour": 38942
+    "views": 977326,
+    "views_per_hour": 37407
+   },
+   {
+    "title": "Call of Duty Modern Warfare 4 Campaign Gameplay Walkthrough Part 1 - INTRO (PS5 Pro)",
+    "channel": "GameRiot",
+    "views": 177687,
+    "views_per_hour": 33661
+   },
+   {
+    "title": "Minecraft, But DAMAGE = OVERPOWERED!",
+    "channel": "Cash",
+    "views": 271743,
+    "views_per_hour": 33025
    },
    {
     "title": "My PARENTS play he ate them..",
     "channel": "steak",
-    "views": 369655,
-    "views_per_hour": 35666
+    "views": 544709,
+    "views_per_hour": 29253
    },
    {
-    "title": "I Shouldn’t Have Opened This Chest…",
-    "channel": "CaseOh",
-    "views": 506464,
-    "views_per_hour": 29837
+    "title": "weirdest buff ever",
+    "channel": "Ken",
+    "views": 336090,
+    "views_per_hour": 27499
    }
   ],
   "US": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 26103992,
-    "views_per_hour": 1005260
+    "views": 30168703,
+    "views_per_hour": 881521
    },
    {
-    "title": "RAMAYANA: RISE OF A LEGEND - NEW TRAILER",
-    "channel": "Sony Pictures Entertainment",
-    "views": 8535319,
-    "views_per_hour": 341908
+    "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
+    "channel": "Sidhu Moose Wala",
+    "views": 8969706,
+    "views_per_hour": 589031
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 4511649,
-    "views_per_hour": 301342
+    "views": 6292826,
+    "views_per_hour": 270917
    },
    {
     "title": "The Beekeeper 2 | Official Teaser Trailer",
     "channel": "Amazon MGM Studios",
-    "views": 6689383,
-    "views_per_hour": 276095
+    "views": 8011798,
+    "views_per_hour": 246634
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 1545087,
-    "views_per_hour": 224489
+    "views": 2500370,
+    "views_per_hour": 165164
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 2919947,
-    "views_per_hour": 163185
-   },
-   {
-    "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
-    "channel": "Jynxzi",
-    "views": 950903,
-    "views_per_hour": 107132
-   },
-   {
-    "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
-    "channel": "TheBurntPeanut",
-    "views": 844870,
-    "views_per_hour": 106928
-   },
-   {
-    "title": "Our Worst Fishing Trip So Far...",
-    "channel": "SMii7Y",
-    "views": 1541247,
-    "views_per_hour": 78031
-   },
-   {
-    "title": "Zara Larsson - Blue Moon (Official Music Video)",
-    "channel": "ZaraLarssonMusicVEVO",
-    "views": 2446853,
-    "views_per_hour": 69966
-   },
-   {
-    "title": "Cyberpunk: Edgerunners 2 | Official Trailer",
-    "channel": "Cyberpunk 2077",
-    "views": 2805715,
-    "views_per_hour": 63946
+    "views": 3901423,
+    "views_per_hour": 149196
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 1603564,
-    "views_per_hour": 63324
+    "views": 2435072,
+    "views_per_hour": 72518
+   },
+   {
+    "title": "Our Worst Fishing Trip So Far...",
+    "channel": "SMii7Y",
+    "views": 1885426,
+    "views_per_hour": 67318
+   },
+   {
+    "title": "Tom MacDonald - \"What America Is\"",
+    "channel": "Tom MacDonald",
+    "views": 428573,
+    "views_per_hour": 59208
    },
    {
     "title": "ROAM0120.exe",
     "channel": "Markiplier",
-    "views": 1253129,
-    "views_per_hour": 62701
+    "views": 1601743,
+    "views_per_hour": 56715
+   },
+   {
+    "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
+    "channel": "TheBurntPeanut",
+    "views": 890445,
+    "views_per_hour": 55111
    },
    {
     "title": "The Chosen: Season 6 Official Trailer",
     "channel": "The Chosen",
-    "views": 1349160,
-    "views_per_hour": 54027
+    "views": 1774660,
+    "views_per_hour": 53409
+   },
+   {
+    "title": "Shrek 2 Remastered - Announce Trailer",
+    "channel": "Mafialabs",
+    "views": 299569,
+    "views_per_hour": 46653
+   },
+   {
+    "title": "ROBLOX SELL FRIES..",
+    "channel": "Foltyn",
+    "views": 232924,
+    "views_per_hour": 44756
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1025128,
-    "views_per_hour": 47640
+    "views": 1204154,
+    "views_per_hour": 40443
    }
   ],
   "US-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 26103992,
-    "views_per_hour": 1005260
+    "views": 30168703,
+    "views_per_hour": 881521
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 1545087,
-    "views_per_hour": 224489
+    "views": 2500370,
+    "views_per_hour": 165164
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 2919947,
-    "views_per_hour": 163185
-   },
-   {
-    "title": "FUR vs MVK | WORLDS 2026 | Play Ins Day 1",
-    "channel": "LoL Esports",
-    "views": 1834011,
-    "views_per_hour": 142304
-   },
-   {
-    "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
-    "channel": "IShowSpeed",
-    "views": 2298283,
-    "views_per_hour": 123013
-   },
-   {
-    "title": "Gravestone Griff or Melodie's Tattoo?! #Scarycoffins",
-    "channel": "Brawl Stars",
-    "views": 3471387,
-    "views_per_hour": 112581
-   },
-   {
-    "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
-    "channel": "Jynxzi",
-    "views": 950903,
-    "views_per_hour": 107132
-   },
-   {
-    "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
-    "channel": "TheBurntPeanut",
-    "views": 844870,
-    "views_per_hour": 106928
+    "views": 3901423,
+    "views_per_hour": 149196
    },
    {
     "title": "Our Worst Fishing Trip So Far...",
     "channel": "SMii7Y",
-    "views": 1541247,
-    "views_per_hour": 78031
+    "views": 1885426,
+    "views_per_hour": 67318
    },
    {
     "title": "Star Wars Galactic Racer",
     "channel": "videogamedunkey",
-    "views": 1492790,
-    "views_per_hour": 76679
+    "views": 1865711,
+    "views_per_hour": 67296
+   },
+   {
+    "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
+    "channel": "Jynxzi",
+    "views": 978639,
+    "views_per_hour": 57123
    },
    {
     "title": "ROAM0120.exe",
     "channel": "Markiplier",
-    "views": 1253129,
-    "views_per_hour": 62701
+    "views": 1601743,
+    "views_per_hour": 56715
+   },
+   {
+    "title": "They finally pushed people too far",
+    "channel": "Legendary Drops",
+    "views": 520752,
+    "views_per_hour": 56419
+   },
+   {
+    "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
+    "channel": "TheBurntPeanut",
+    "views": 890445,
+    "views_per_hour": 55111
+   },
+   {
+    "title": "I Secretly Joined My Hater SMP",
+    "channel": "ManePear",
+    "views": 666939,
+    "views_per_hour": 47580
+   },
+   {
+    "title": "ROBLOX SELL FRIES..",
+    "channel": "Foltyn",
+    "views": 232924,
+    "views_per_hour": 44756
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1025128,
-    "views_per_hour": 47640
+    "views": 1204154,
+    "views_per_hour": 40443
    },
    {
-    "title": "🔴 LIVE! - FORTNITE HALLOWEEN THEN SAN ANDREAS!",
-    "channel": "Typical Gamer",
-    "views": 187386,
-    "views_per_hour": 29848
+    "title": "Call of Duty Modern Warfare 4 Campaign Gameplay Walkthrough Part 1 - INTRO (PS5 Pro)",
+    "channel": "GameRiot",
+    "views": 177687,
+    "views_per_hour": 33661
    },
    {
-    "title": "I Shouldn’t Have Opened This Chest…",
-    "channel": "CaseOh",
-    "views": 506464,
-    "views_per_hour": 29837
+    "title": "Minecraft, But DAMAGE = OVERPOWERED!",
+    "channel": "Cash",
+    "views": 271743,
+    "views_per_hour": 33025
    },
    {
-    "title": "Hiding From A Monster Who Mimics Humans [Pale Mimic]",
-    "channel": "Joe Bart Games",
-    "views": 573532,
-    "views_per_hour": 28514
+    "title": "My PARENTS play he ate them..",
+    "channel": "steak",
+    "views": 544709,
+    "views_per_hour": 29253
    }
   ]
  },

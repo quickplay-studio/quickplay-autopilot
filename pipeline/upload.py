@@ -8,6 +8,10 @@ import youtube as Y
 
 def main(root):
     yt = Y.client() if Y.available() else None
+    on_channel = {}
+    if yt is not None:      # never upload the same Short twice (e.g. a re-run of an old commit)
+        try: on_channel = {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(yt, limit=100)}
+        except Exception as e: print("could not list channel videos:", e)
     for res in sorted(pathlib.Path(root).iterdir()):
         st_path = res / "status.json"
         if not st_path.exists(): continue
@@ -17,8 +21,11 @@ def main(root):
             if st.get("state") == "rendered": st["state"] = "rendered (no upload)"
             st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
         u = json.loads(up.read_text())
+        dup = on_channel.get(u["title"].strip().lower())
         if yt is None:
             st["state"] = "rendered (YouTube keys missing)"
+        elif dup:
+            st.update(state="already on YouTube (not uploaded again)", video=dup, url=f"https://youtube.com/shorts/{dup}")
         else:
             try:
                 vid = Y.upload(yt, res / "video.mp4", u["title"], u["description"], u["tags"], u["category"],

@@ -20,7 +20,7 @@ scheduled · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
 scheduled · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 
 ### Fri 16 Oct 18:00 · Why Godzilla Minus Zero is a big deal 🦖
-scheduled · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
+private · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
 
 ### Fri 16 Oct 16:30 · This game was cancelled. Now it's back 🎮
 private · [YouTube](https://youtube.com/shorts/YYAteEVllOs)

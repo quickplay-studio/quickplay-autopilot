@@ -10,13 +10,16 @@ no browsing beyond the sources you check, no recap messages.
 - Explore the subject itself. Never talk about views, virality or "why it went viral".
 - No em dashes or en dashes anywhere (titles, narration, captions, descriptions).
 - Copy formats from templates/formats.json only. Never reuse another creator's footage or script.
+- UK style everywhere: "Tuesday 20 October", "20 million pounds", colour, favourite.
 
 ## Facts (the part that matters most)
 - Every factual claim needs two reputable sources that you opened in this session and that state it.
   Cite the exact page that states it, never a homepage or a search page.
 - Good sources: the official source (publisher, studio, team, league, label, agency, NASA and the like) and
   established outlets (BBC, Guardian, Reuters, AP, The Verge, IGN, Eurogamer, Variety, Billboard, ESPN, Nature...).
+  Aim for three: the official source plus two outlets. Cite the outlet's own site, never a site that reposts it.
   Wikipedia can be one of the two, never both. Never use forums, fan wikis, social posts or AI-written sites alone.
+- Say what is new today. If the trending item repeats older news (a date announced weeks ago), lead with what changed.
 - List each claim in `meta.facts` with the numbers of the sources (from 1) that confirm it.
 - Dates, numbers and names: copy them exactly from the sources. If two sources disagree, leave the claim out.
 - Can't verify it? Drop the claim, or drop the topic.
@@ -29,12 +32,13 @@ no browsing beyond the sources you check, no recap messages.
 3. Pick topics: strongest signal first (Google Trends traffic, YouTube views per hour, Wikipedia views,
    and `our_last_7_days` for what our viewers watch). Skip anything covered in the last 14 days (titles in boards/done and queue).
 4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.
+   Hook: the most surprising true detail in the first line, not "X is back" or "X has a date".
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error (warnings: check, then decide).
 6. Commit all new boards in ONE commit to `boards/queue/`, push. Done. Reply with one line: how many and their titles.
 
-## Board schema (copy boards/done/QD-028.json for the shape)
-- `id`: next free QD-### across boards/queue, done and failed. `created`: today, YYYY-MM-DD.
-  `format`: a format id. `category`: Gaming, Film, Music, Sport, Tech, Science, Entertainment.
+## Board schema (copy boards/hold/QD-028.json for the shape)
+- `id`: next free QD-### across boards/queue, done, failed and hold, never below `first_id` in config.json. `created`: today, YYYY-MM-DD.
+  `format`: a format id. `category`: Gaming, Film, Music, Sport, Tech, Science, Entertainment (TV and anime go here).
 - `chipIcon` (a lucide icon name), `accent` (hex), `voice`: "F2" unless told otherwise, `gap`: 0.1, `tail`: 0.6.
 - `music`: {"mood": one of the `music_moods` in config.json, matching the topic's feel, "gain_db": -15}.
 - `beats`: one per sentence or two, 55 to 125 words in total (20 to 45 seconds).
@@ -50,7 +54,9 @@ no browsing beyond the sources you check, no recap messages.
     `dark`: true only if a dark image is intended (otherwise near-black stock is skipped).
 - `src` forms: `commons:File:Exact_name.jpg`, `commons-search:words`, `pixabay:video:words`, `pixabay:image:words`,
   `url:https://...` (official press or media files only, with `credit` and `source` on the shot).
-  Prefer real footage and photos of the actual subject over stock. Several shots of each person.
+  Real images of the subject come first: official press and media-kit images (`url:`) and Commons photos of the people
+  (`commons-search:Full Name`, with a `label` the first time each person appears). Several shots of each person.
+  Stock is for mood and b-roll only, never the whole Short.
   Stock queries: 2 to 4 concrete words that would be tags on the clip ("full moon night sky", not "mysterious feeling").
 - `meta`: {title (under 70 characters, one emoji at the end), summary (1 to 2 sentences), hashtags (3 to 4 plus #Shorts),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.

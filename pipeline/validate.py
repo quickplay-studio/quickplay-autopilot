@@ -19,6 +19,8 @@ BANNED = re.compile(r"\b(elections?|parliament\w*|politicians?|political|murder\
 # Words that are often fine but worth a second look: printed as warnings only.
 WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|court|cure[sd]?|vaccine\w*|president|minister|"
                    r"stocks?|shares|invest\w*|viral|views)\b", re.I)
+MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
+US_DATE = re.compile(rf"\b({MONTHS}) \d{{1,2}}(st|nd|rd|th)?\b")
 EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿⬀-⯿]")
 
 def _formats():
@@ -32,7 +34,7 @@ def _catalog():
 
 def _ids_elsewhere(path):
     out = {}
-    for d in ("queue", "done", "failed"):
+    for d in ("queue", "done", "failed", "hold"):
         for p in (ROOT / "boards" / d).glob("*.json"):
             if path and p.resolve() == pathlib.Path(path).resolve(): continue
             try: out[json.loads(p.read_text()).get("id")] = p
@@ -45,6 +47,7 @@ def check(b, path=None):
     sid = b.get("id", "")
     if not re.fullmatch(r"QD-\d{3,}|TEST-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")
     elif sid in _ids_elsewhere(path): e.append(f"id: {sid} is already used, take the next free number")
+    elif sid.startswith("QD-") and int(sid[3:]) < int(_config().get("first_id", 1)): e.append(f"id: numbers start at QD-{int(_config()['first_id']):03d}")
     if b.get("format") not in _formats(): e.append(f"format: one of {sorted(_formats())}")
     if b.get("category") not in CATS: e.append(f"category: one of {sorted(CATS)}")
     if b.get("mode", "schedule") not in MODES: e.append(f"mode: one of {sorted(MODES)}")
@@ -106,6 +109,8 @@ def check(b, path=None):
     blob = json.dumps(b, ensure_ascii=False)
     if DASH.search(blob): e.append("no em dashes or en dashes anywhere")
     text = " ".join([bt.get("say", "") for bt in beats] + [title, m.get("summary", "")])
+    us = sorted({m.group(0) for m in US_DATE.finditer(text)})
+    if us: e.append(f"UK date style: write '20 October', not {us}")
     hits = sorted({h.lower() for h in BANNED.findall(text)})
     if hits: e.append(f"excluded topic or virality words: {hits}")
     watch = sorted({h.lower() for h in WATCH.findall(text)})

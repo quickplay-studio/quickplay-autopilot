@@ -1,0 +1,69 @@
+name: backlog
+# Uploads the Shorts made before this pipeline existed. They wait, encrypted, on the "backlog" branch.
+# Runs when that branch is pushed and every 3 hours until everything on it is on YouTube.
+on:
+  push:
+    branches: [backlog]
+  schedule:
+    - cron: '50 */3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: backlog
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    outputs:
+      present: ${{ steps.check.outputs.present }}
+    steps:
+      - id: check
+        run: |
+          if git ls-remote --exit-code "https://github.com/${{ github.repository }}" refs/heads/backlog >/dev/null; then
+            echo "present=yes" >> "$GITHUB_OUTPUT"; else echo "present=no" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.present == 'yes'
+        with: { ref: backlog }
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.present == 'yes'
+        with: { python-version: '3.13' }
+      - if: steps.check.outputs.present == 'yes'
+        run: pip install -q google-api-python-client==2.* google-auth==2.* tzdata
+      - name: Upload
+        if: steps.check.outputs.present == 'yes'
+        env:
+          MUSIC_KEY: ${{ secrets.MUSIC_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python pipeline/backlog_upload.py backlog results
+      - uses: actions/upload-artifact@v4
+        if: steps.check.outputs.present == 'yes' && always()
+        with: { name: backlog-statuses, path: results, retention-days: 30, if-no-files-found: ignore }
+
+  record:
+    needs: upload
+    if: ${{ always() && needs.upload.outputs.present == 'yes' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/download-artifact@v4
+        with: { name: backlog-statuses, path: results }
+      - name: Commit statuses
+        run: |
+          mkdir -p status
+          for f in results/*/status.json; do id=$(basename "$(dirname "$f")"); cp "$f" "status/$id.json"; done
+          python pipeline/review_page.py || true
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A status review
+          git commit -q -m "Backlog uploads $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

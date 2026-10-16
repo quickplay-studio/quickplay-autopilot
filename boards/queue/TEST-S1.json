@@ -1,0 +1,220 @@
+{
+ "id": "TEST-S1",
+ "format": "news_explained",
+ "category": "Gaming",
+ "chipIcon": "clapperboard",
+ "accent": "#F5E642",
+ "music": {
+  "mood": "epic",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "Cyberpunk: Edgerunners is coming back, and the date is finally locked in.",
+   "visual": {
+    "type": "title",
+    "kicker": "Night City",
+    "lines": [
+     "Edgerunners",
+     "is back."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:neon city night",
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:futuristic city lights",
+     "w": 1.0
+    }
+   ],
+   "impact": true
+  },
+  {
+   "say": "The sequel premieres on October 20.",
+   "visual": {
+    "type": "date",
+    "month": "OCT",
+    "day": "20",
+    "label": "Edgerunners 2",
+    "sub": "Premiere"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:city night rain",
+     "w": 1.0
+    }
+   ],
+   "impact": true
+  },
+  {
+   "say": "It is a standalone story told in ten episodes, set in Night City.",
+   "visual": {
+    "type": "stat",
+    "value": "10",
+    "label": "episodes"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:skyscraper night neon",
+     "w": 1.0
+    },
+    {
+     "src": "pixabay:video:cyberpunk city street",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Studio Trigger is back, working with CD Projekt Red, the team behind Cyberpunk 2077.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "clapperboard",
+      "t": "Trigger",
+      "s": "Animation"
+     },
+     {
+      "icon": "gamepad-2",
+      "t": "CD Projekt Red",
+      "s": "Cyberpunk 2077"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:anime city night",
+     "w": 1.0
+    },
+    {
+     "src": "pixabay:video:neon lights street",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "But here's the part to know.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:dark alley neon",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "This time it follows a fresh cast of characters.",
+   "visual": {
+    "type": "title",
+    "lines": [
+     "Fresh cast.",
+     "New stories."
+    ],
+    "highlight": [
+     0
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:crowd neon night",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Their stories cross as each one fights a battle of their own.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:city traffic night",
+     "w": 1.0
+    },
+    {
+     "src": "pixabay:video:rain street neon",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Which character will you follow first? Follow for more.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:futuristic city night",
+     "w": 1.0
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Cyberpunk: Edgerunners 2 has a date 🌃",
+  "summary": "Cyberpunk: Edgerunners 2 premieres on October 20, 2026, as a standalone ten episode story from Trigger and CD Projekt Red.",
+  "hashtags": [
+   "#Cyberpunk",
+   "#Edgerunners",
+   "#Anime",
+   "#Shorts"
+  ],
+  "sources": [
+   [
+    "CD PROJEKT RED: Cyberpunk Edgerunners 2 premiere date announced alongside new trailer",
+    "https://press.cdprojektred.com/en/news/1837/cyberpunk-edgerunners-2-premiere-date-announced-alongside-new-trailer"
+   ],
+   [
+    "Game Informer: Cyberpunk Edgerunners 2 gets October premiere date and new trailer",
+    "https://gameinformer.com/2026/08/21/cyberpunk-edgerunners-2-gets-october-premiere-date-and-new-trailer"
+   ]
+  ],
+  "facts": [
+   [
+    "Edgerunners 2 premieres on October 20, 2026",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "It is a standalone series of 10 episodes",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Made by Trigger in collaboration with CD Projekt Red",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "It follows a fresh cast of characters with intertwining stories in Night City",
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "signals": {
+   "user_brief": [
+    "Requested topic: Edgerunners 2 official trailer"
+   ]
+  }
+ },
+ "voice": "F2",
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-16",
+ "mode": "none"
+}

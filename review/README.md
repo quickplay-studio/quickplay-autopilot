@@ -11,7 +11,7 @@ scheduled · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 scheduled · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Fri 16 Oct 22:30 · Why scientists made VR goggles for mice 🐭
-scheduled · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
+private · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 
 ### Fri 16 Oct 21:00 · Why GTA 6 isn't coming to PC (yet) 🖥️
 private · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)

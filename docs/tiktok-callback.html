@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok connected</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 20px;color:#1d1d1f}a{color:#0b57d0}code{background:#f2f2f2;padding:2px 6px;border-radius:4px;word-break:break-all}button{font:inherit;padding:10px 18px;border-radius:8px;border:0;background:#111;color:#fff;cursor:pointer}</style></head>
+<body>
+<h1>Almost done</h1>
+<p id="msg">Reading the reply from TikTok...</p>
+<p><code id="code"></code></p>
+<p><button id="copy" hidden>Copy code</button></p>
+<ol id="steps" hidden>
+<li>Copy the code above.</li>
+<li>Open <a href="https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml">GitHub, Actions, social</a>.</li>
+<li>Press <b>Run workflow</b>, paste the code into <b>TikTok code</b>, press <b>Run workflow</b>.</li>
+<li>Do it within 5 minutes: the code expires.</li>
+</ol>
+<script>
+const q = new URLSearchParams(location.search);
+const code = q.get('code'), err = q.get('error_description') || q.get('error');
+if (code) {
+  document.getElementById('msg').textContent = 'TikTok said yes. Your one-time code:';
+  document.getElementById('code').textContent = code;
+  document.getElementById('steps').hidden = false;
+  const b = document.getElementById('copy'); b.hidden = false;
+  b.onclick = () => navigator.clipboard.writeText(code).then(() => { b.textContent = 'Copied'; });
+} else {
+  document.getElementById('msg').textContent = 'TikTok did not send a code' + (err ? ': ' + err : '.');
+}
+</script>
+<p><a href="index.html">Home</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a></p>
+</body></html>

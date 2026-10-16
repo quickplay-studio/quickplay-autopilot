@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect TikTok</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 20px;color:#1d1d1f}a{color:#0b57d0}button{font:inherit;padding:10px 18px;border-radius:8px;border:0;background:#111;color:#fff;cursor:pointer}</style></head>
+<body>
+<h1>Connect TikTok</h1>
+<p>For the owner of Quickplay Daily only. This signs the Quickplay Daily TikTok account in to Quickplay Uploader, so it can send the channel's own Shorts to TikTok.</p>
+<p><button id="go">Connect TikTok</button></p>
+<p id="msg"></p>
+<script>
+const CLIENT_KEY = new URLSearchParams(location.search).get('ck') || 'SET_CLIENT_KEY';
+const REDIRECT = 'https://quickplay-studio.github.io/quickplay-autopilot/tiktok-callback.html';
+document.getElementById('go').onclick = () => {
+  if (CLIENT_KEY === 'SET_CLIENT_KEY') { document.getElementById('msg').textContent = 'The TikTok app key is not set on this page yet.'; return; }
+  const state = Math.random().toString(36).slice(2);
+  const u = new URL('https://www.tiktok.com/v2/auth/authorize/');
+  u.searchParams.set('client_key', CLIENT_KEY);
+  u.searchParams.set('scope', 'user.info.basic,video.upload,video.publish');
+  u.searchParams.set('response_type', 'code');
+  u.searchParams.set('redirect_uri', REDIRECT);
+  u.searchParams.set('state', state);
+  location.href = u.toString();
+};
+</script>
+<p><a href="index.html">Home</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a></p>
+</body></html>

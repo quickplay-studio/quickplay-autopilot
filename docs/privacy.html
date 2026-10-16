@@ -5,17 +5,22 @@
 <body>
 <h1>Privacy policy</h1>
 <p>Last updated: 16 October 2026</p>
-<p>Quickplay Uploader is used only by the owner of the Quickplay Daily YouTube channel, to manage that channel. It has no other users.</p>
+<p>Quickplay Uploader is used only by the owner of Quickplay Daily, to publish the channel's own videos to its own accounts. It has no other users.</p>
 <h2>What it accesses</h2>
 <ul>
-<li>Uploads and schedules videos on the owner's own YouTube channel (YouTube Data API, upload scope).</li>
-<li>Reads the owner's own channel and video details, such as scheduled videos and titles (read-only scope).</li>
-<li>Reads the owner's own YouTube Analytics reports, such as views and subscribers (read-only scope).</li>
+<li>YouTube: uploads and schedules videos on the owner's own channel (upload scope), reads the channel's own video details (read-only scope) and its own YouTube Analytics reports (read-only scope).</li>
+<li>TikTok: the owner's basic profile information (user.info.basic) and posting the channel's own videos to the owner's own TikTok account or its inbox (video.upload, video.publish).</li>
+<li>Instagram: the owner's basic professional account information (instagram_business_basic) and publishing the channel's own Reels (instagram_business_content_publish).</li>
 </ul>
 <h2>What it stores</h2>
-<p>The sign-in token is stored as an encrypted secret in the owner's private GitHub settings. Channel statistics used for planning may be saved in the owner's repository. No data about any other person is collected, sold or shared.</p>
-<h2>Google and YouTube</h2>
-<p>This app uses YouTube API Services. See the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access can be removed at any time from <a href="https://myaccount.google.com/permissions">Google account permissions</a>.</p>
+<p>Sign-in tokens are stored only as encrypted secrets, or as files encrypted with a key held in those secrets, in the owner's GitHub repository. Statistics about the owner's own channel may be saved there to plan videos. No data about any other person is collected, sold or shared.</p>
+<h2>Removing access</h2>
+<ul>
+<li>Google and YouTube: <a href="https://myaccount.google.com/permissions">Google account permissions</a>. This app uses YouTube API Services; see the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li>TikTok: in the TikTok app, Settings and privacy, Security, Apps and services.</li>
+<li>Instagram: in the Instagram app, Settings, Apps and websites.</li>
+</ul>
 <h2>Contact</h2>
 <p>Open an issue at <a href="https://github.com/quickplay-studio/quickplay-autopilot/issues">github.com/quickplay-studio/quickplay-autopilot</a>.</p>
+<p><a href="index.html">Home</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a></p>
 </body></html>

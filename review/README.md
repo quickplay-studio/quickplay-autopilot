@@ -17,7 +17,7 @@ scheduled · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 scheduled · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
 
 ### Fri 16 Oct 19:30 · The formula behind Zack D. Films' viral Shorts 📈
-scheduled · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
+private · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 
 ### Fri 16 Oct 18:00 · Why Godzilla Minus Zero is a big deal 🦖
 private · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)

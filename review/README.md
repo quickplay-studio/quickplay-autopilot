@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-YouTube checked Sat 17 Oct 0:35 (UK): 2 scheduled, 8 public, 10 uploads in the last 24 hours.
+YouTube checked Sat 17 Oct 0:42 (UK): 2 scheduled, 8 public, 10 uploads in the last 24 hours.
 
 ## On the channel (latest first)
 
@@ -11,22 +11,22 @@ scheduled · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 scheduled · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Fri 16 Oct 22:30 · Why scientists made VR goggles for mice 🐭
-public · 1 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
+public · 2 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 
 ### Fri 16 Oct 21:00 · Why GTA 6 isn't coming to PC (yet) 🖥️
 public · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
 
 ### Fri 16 Oct 19:30 · The formula behind Zack D. Films' viral Shorts 📈
-public · 8 views · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
+public · 7 views · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 
 ### Fri 16 Oct 18:00 · Why Godzilla Minus Zero is a big deal 🦖
-public · 69 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
+public · 63 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
 
 ### Fri 16 Oct 16:30 · This game was cancelled. Now it's back 🎮
-public · 8 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
+public · 6 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
 
 ### Fri 16 Oct 15:00 · Fontaines D.C.'s first ever guest is ROSALÍA 🎻
-public · 72 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
+public · 78 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
 
 ### Fri 16 Oct 13:30 · From lucky loser to beating the world No. 4 🎾
 public · 63 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)

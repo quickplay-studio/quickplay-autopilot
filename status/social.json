@@ -1,0 +1,23 @@
+{
+ "checked": "2026-10-16T23:35:50+00:00",
+ "instagram": {
+  "ok": true,
+  "username": "quickplaydaily",
+  "account_type": "MEDIA_CREATOR",
+  "user_id": "17841465022278792",
+  "secret_user_id_matches": true,
+  "publishing_limit": [
+   {
+    "config": {
+     "quota_total": 100,
+     "quota_duration": 86400
+    },
+    "quota_usage": 0
+   }
+  ]
+ },
+ "tiktok": {
+  "ok": false,
+  "error": "not connected yet"
+ }
+}

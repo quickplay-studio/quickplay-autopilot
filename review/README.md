@@ -4,7 +4,10 @@ YouTube checked Fri 16 Oct 15:58 (UK): 7 scheduled, 3 public, 10 uploads in the 
 
 ## In the queue
 
-- **QD-028** Why we only ever see one side of the Moon 🌕 (waiting for YouTube's daily limit)
+- **TEST-O1** Cyberpunk: Edgerunners 2 finally has a date 📺 (rendering next)
+- **TEST-O2** Olivia Rodrigo just brought in Chappell Roan 🎤 (rendering next)
+- **TEST-S1** Cyberpunk: Edgerunners 2 has a date 🌃 (rendering next)
+- **TEST-S2** Street Fighter hits cinemas today 🥊 (rendering next)
 
 ## On the channel (latest first)
 
@@ -27,7 +30,7 @@ scheduled · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 scheduled · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
 
 ### Fri 16 Oct 16:30 · This game was cancelled. Now it's back 🎮
-scheduled · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
+private · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
 
 ### Fri 16 Oct 15:00 · Fontaines D.C.'s first ever guest is ROSALÍA 🎻
 public · 1 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)

@@ -1,15 +1,16 @@
 {
  "id": "QD-028",
  "board": "boards/queue/QD-028.json",
+ "mode": "schedule",
+ "slot": "2026-10-16T16:30:00Z",
+ "rendered": "2026-10-16T15:17:19.396614+00:00",
  "title": "Why we only ever see one side of the Moon 🌕",
- "mode": "none",
- "slot": "",
- "rendered": "2026-10-16T12:46:52.168165+00:00",
+ "music": "horizons",
  "qa": {
-  "duration": 35.4,
+  "duration": 35.0,
   "wps": 3.0,
   "weak_beats": [],
-  "size_mb": 8.6
+  "size_mb": 9.0
  },
- "state": "rendered (no upload)"
+ "state": "waiting for YouTube's daily upload limit"
 }

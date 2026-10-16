@@ -2,6 +2,10 @@
 
 YouTube checked Fri 16 Oct 15:58 (UK): 7 scheduled, 3 public, 10 uploads in the last 24 hours.
 
+## In the queue
+
+- **QD-028** Why we only ever see one side of the Moon 🌕 (waiting for YouTube's daily limit)
+
 ## On the channel (latest first)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤

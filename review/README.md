@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 13:52 (UK): 9 scheduled, 11 public, 18 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"Ao7jNiIv1TIfK5rHRX0wP17"}} · TikTok: connected (checked Sat 17 Oct 16:58).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AJQzjCAEUfHMRYWfKj4UGXw"}} · TikTok: connected (checked Sat 17 Oct 17:58).
 
 ## Needs a look
 
@@ -31,7 +31,7 @@ scheduled · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
 
 ### Sat 17 Oct 18:00 · Disney's next film isn't a sequel ✨
-scheduled · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
+private · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
 
 ### Sat 17 Oct 16:30 · Why Riot brought back a band that isn't real 🎤
 private · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)

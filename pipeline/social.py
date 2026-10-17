@@ -173,7 +173,8 @@ def post():
         b = board_for(st)
         picked = (b or {}).get("tiktok", True)       # the writer marks the 5 Shorts a day most likely to do well on TikTok
         want_ig = bool(ig) and public and not st.get("instagram")
-        want_tt = bool(tt) and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
+        manual = mode == "manual"                    # Charlie uploads TikTok himself on desktop from the morning package
+        want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt): continue
         rel = st["social_release"]; work = ROOT / "social_tmp"; work.mkdir(exist_ok=True)
         if gh("release", "download", rel, "-p", "social.mp4", "-D", str(work), "--clobber", check=False).returncode:
@@ -197,6 +198,7 @@ def post():
             except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
         if tt and not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
         if tt and not picked and not st.get("tiktok"): st["tiktok_skipped"] = "not one of the day's 5 TikTok picks"
+        if tt and manual and not st.get("tiktok"): st["tiktok_skipped"] = "uploaded by hand on desktop" if picked else "not a TikTok pick"
         if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or not ig):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:

@@ -77,11 +77,13 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
    - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.
-   - Then the TikTok captions for today's 5 TikTok picks, ready to paste: title, blank line, summary, blank line, the
-     first 7 hashtags plus #fyp. The TikTok drafts reach his inbox once each Short is scheduled.
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
+   Then the TikTok package (Charlie uploads TikTok himself on desktop, config `tiktok_mode` "manual"): wait until the
+   approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes), run
+   `python pipeline/tiktok_files.py <scratch dir>`, send him the video files, and one message listing each Short's
+   caption and the time to schedule it in TikTok Studio (https://www.tiktok.com/tiktokstudio/upload) to match YouTube.
 9. Refresh the stats dashboard (see Stats dashboard). Finish with one line: how many Shorts and their titles.
 
 ## Stats dashboard

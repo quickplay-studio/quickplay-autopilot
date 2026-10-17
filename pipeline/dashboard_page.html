@@ -336,7 +336,11 @@ dash.calc('best', {
     if (!ok('yt_daily')) return failed(el, 'yt_daily');
     el.replaceChildren();
     const rows = rowsOf('yt_daily');
-    if (!rows.length) return;
+    if (!rows.length) {
+      const p = document.createElement('p'); p.className = 'qp-note';
+      p.textContent = 'No daily numbers yet: YouTube Analytics fills these in a day or two after a Short goes public.';
+      el.append(p); return;
+    }
     const W = Math.max(280, el.clientWidth), H = 200, m = { t: 10, r: 8, b: 24, l: 8 };
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'YouTube views per day');
     const maxY = d3.max(rows, (r) => r.views) || 1;

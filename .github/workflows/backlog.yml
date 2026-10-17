@@ -59,7 +59,16 @@ jobs:
       - name: Commit statuses
         run: |
           mkdir -p status
-          for f in results/*/status.json; do id=$(basename "$(dirname "$f")"); cp "$f" "status/$id.json"; done
+          python3 - <<'PY'
+          import json, pathlib
+          # keep what an earlier run recorded (upload time, YouTube status) when a later run only says it's already there
+          for f in pathlib.Path("results").glob("*/status.json"):
+              new = json.loads(f.read_text()); dest = pathlib.Path("status") / f"{new['id']}.json"
+              old = json.loads(dest.read_text()) if dest.exists() else {}
+              if new.get("state", "").startswith("already on YouTube") and old.get("video") == new.get("video"):
+                  new = {**old, **{k: v for k, v in new.items() if k not in ("state",)}}
+              dest.write_text(json.dumps(new, indent=1, ensure_ascii=False))
+          PY
           python pipeline/review_page.py || true
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"

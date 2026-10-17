@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 18:50 (UK): 6 scheduled, 14 public, 15 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AxfaREDL3jgjtnDfVD8XMMP"}} · TikTok: connected (checked Sat 17 Oct 21:58).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AqiWMmTYhqcBc2xuahdgejp"}} · TikTok: connected (checked Sat 17 Oct 22:57).
 
 ## Needs a look
 
@@ -22,7 +22,7 @@ scheduled · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
 
 ### Sat 17 Oct 22:30 · Apple's new smart home screen, explained 🏠
-scheduled · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
+private · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
 
 ### Sat 17 Oct 21:00 · Google's most powerful AI is now in the Gemini app 🤖
 private · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)

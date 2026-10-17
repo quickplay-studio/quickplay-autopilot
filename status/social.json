@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-17T13:05:11+00:00",
+ "checked": "2026-10-17T13:09:18+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -19,9 +19,9 @@
  "tiktok": {
   "ok": true,
   "user": {
-   "display_name": "Quickplay Daily",
    "open_id": "-000Kjw5zJFPKoniKaT4tzfISnGmzxUjL08k",
-   "username": "quickplaydaily"
+   "username": "quickplaydaily",
+   "display_name": "Quickplay Daily"
   },
   "scopes": "video.publish,video.upload,user.info.basic,user.info.profile,user.info.stats,video.list",
   "mode": "inbox"

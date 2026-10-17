@@ -13,6 +13,10 @@ on:
         description: 'TikTok code (from the connect page)'
         required: false
         default: ''
+      youtube_code:
+        description: 'YouTube address or code (from the address bar after allowing access)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -30,6 +34,14 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
       - run: pip install -q requests cryptography
+      - name: Connect YouTube (comments, playlists, titles)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.youtube_code != '' }}
+        env:
+          YT_CODE: ${{ inputs.youtube_code }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+        run: python pipeline/yt_connect.py exchange
       - name: Connect TikTok
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.tiktok_code != '' }}
         env:
@@ -46,9 +58,11 @@ jobs:
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           GH_TOKEN: ${{ github.token }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
         run: |
           if [ -z "$SOCIAL_KEY" ]; then mkdir -p status; echo '{"error": "SOCIAL_KEY secret missing"}' > status/social.json; exit 0; fi
           python pipeline/social.py check > /dev/null
+          YT_CLIENT_ID="$YT_CLIENT_ID" python pipeline/yt_connect.py link || true
           if grep -q "tiktok-test" requests/social-check.txt 2>/dev/null && [ "${{ github.event_name }}" = "push" ]; then
             TT_TEST_ID=$(grep -o 'tiktok-test [A-Za-z0-9-]*' requests/social-check.txt | cut -d' ' -f2) python pipeline/social.py tiktok-test > /dev/null
           fi

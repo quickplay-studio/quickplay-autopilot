@@ -122,5 +122,8 @@ Artifact `read` the dashboard; then for each of analytics/shorts.csv and analyti
   hashtags (8 to 15, most relevant first; #Shorts is added for YouTube), tags (5 to 15 search phrases),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.
 - `tiktok`: true for the day's 5 TikTok picks, false for the rest.
+- `meta.comment`: one short question viewers can answer (under 100 characters, no links), posted as the channel's
+  comment once the Short is public. `meta.alt_title`: a second title with a different angle (same rules as the title),
+  used if the Short gets under half the usual views an hour after 24 hours.
 - Optional: `flag` (see Approval), `publish_at` "YYYY-MM-DD HH:MM" (UK) for a fixed slot, `mode` "private" (test
   upload), "none" (render only) or "dry" (held for approval like a real Short, never uploaded).

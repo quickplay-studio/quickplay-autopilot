@@ -98,6 +98,10 @@ def check(b, path=None):
     elif len(kw) < 5: w.append("meta.tags: add 5 to 15 search phrases (YouTube's tags field)")
     if b.get("flag") is not None and not str(b.get("flag")).strip(): e.append("flag: one line saying why, or leave it out")
     if "tiktok" in b and not isinstance(b["tiktok"], bool): e.append("tiktok: true (one of the day's 5 TikTok picks) or false")
+    if m.get("comment") and (len(str(m["comment"])) > 100 or "http" in str(m["comment"])): e.append("meta.comment: under 100 characters, no links")
+    alt = str(m.get("alt_title") or "")
+    if alt and (len(alt) > 70 or not EMOJI.search(alt[-2:])): e.append("meta.alt_title: under 70 characters, one emoji at the end")
+    if not m.get("comment") or not alt: w.append("meta.comment and meta.alt_title: add both (comment question, backup title)")
     srcs = m.get("sources") or []
     bad = [s for s in srcs if not (isinstance(s, list) and len(s) == 2 and str(s[1]).startswith("https://"))]
     if bad: e.append("meta.sources: each one [title, https url]")

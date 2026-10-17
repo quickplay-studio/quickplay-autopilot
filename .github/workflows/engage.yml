@@ -1,0 +1,45 @@
+name: engage
+# Creator comments, category playlists and title fixes on our own public Shorts (pipeline/engage.py).
+# Needs the second YouTube sign-in (tokens/youtube.enc, from the "Connect YouTube" step of the social workflow).
+on:
+  schedule:
+    - cron: '50 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: engage
+  cancel-in-progress: false
+
+jobs:
+  engage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Signed in?
+        id: check
+        run: if [ -f tokens/youtube.enc ]; then echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.run == 'yes'
+        with: { python-version: '3.13' }
+      - if: steps.check.outputs.run == 'yes'
+        run: pip install -q requests cryptography tzdata google-api-python-client==2.* google-auth==2.*
+      - name: Engage
+        if: steps.check.outputs.run == 'yes'
+        env:
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+        run: python pipeline/engage.py
+      - name: Save
+        if: steps.check.outputs.run == 'yes'
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A status
+          git commit -q -m "Engagement $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 13:52 (UK): 9 scheduled, 11 public, 18 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AqtRuZw8sylx5xZ9_xXsPXV"}} · TikTok: connected (checked Sat 17 Oct 15:57).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"Ao7jNiIv1TIfK5rHRX0wP17"}} · TikTok: connected (checked Sat 17 Oct 16:58).
 
 ## Needs a look
 
@@ -34,7 +34,7 @@ scheduled · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
 
 ### Sat 17 Oct 16:30 · Why Riot brought back a band that isn't real 🎤
-scheduled · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
+private · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
 
 ### Sat 17 Oct 15:00 · Why KPop Demon Hunters 2 won't come until 2029 🎶
 private · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)

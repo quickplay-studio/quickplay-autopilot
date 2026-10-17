@@ -14,7 +14,8 @@ import social
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl", "https://www.googleapis.com/auth/youtube.upload",
           "https://www.googleapis.com/auth/youtube.readonly", "https://www.googleapis.com/auth/yt-analytics.readonly"]
-REDIRECT = "http://localhost"     # Desktop-app sign-in: the browser lands on an address that holds the code
+REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html"   # must be an authorised redirect URI
+# on the OAuth client (Google Cloud, Clients); the page shows the one-time code to paste into the social workflow
 OUT = ROOT / "status" / "youtube_connect.json"
 
 def write(d):
@@ -42,8 +43,14 @@ def exchange():
         OUT.parent.mkdir(exist_ok=True)
         OUT.write_text(json.dumps({"at": now, "ok": False, "error": r.get("error"),
                                    "description": str(r.get("error_description", ""))[:300]}, indent=1)); return
-    social.save("youtube", {"refresh_token": r["refresh_token"], "scope": r.get("scope"), "saved": now})
-    OUT.write_text(json.dumps({"at": now, "ok": True, "connected": True, "scopes": r.get("scope")}, indent=1))
+    tok = {"refresh_token": r["refresh_token"], "scope": r.get("scope"), "saved": now}
+    st = {"at": now, "ok": True, "connected": True, "scopes": r.get("scope")}
+    if r.get("refresh_token_expires_in"):      # only sent while the Google app is in Testing: the sign-in dies after 7 days
+        exp = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=int(r["refresh_token_expires_in"]))).isoformat(timespec="minutes")
+        tok["expires_at"] = st["expires_at"] = exp
+        st["warning"] = "Google app is in Testing, so this sign-in expires in 7 days: publish the app (Audience, Publish app) and sign in again"
+    social.save("youtube", tok)
+    OUT.write_text(json.dumps(st, indent=1))
 
 if __name__ == "__main__":
     {"link": link, "exchange": exchange}[sys.argv[1]]()

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YouTube connected</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 20px;color:#1d1d1f}a{color:#0b57d0}code{background:#f2f2f2;padding:2px 6px;border-radius:4px;word-break:break-all}button{font:inherit;padding:10px 18px;border-radius:8px;border:0;background:#111;color:#fff;cursor:pointer}</style></head>
+<body>
+<h1>Almost done</h1>
+<p id="msg">Reading the reply from Google...</p>
+<p><code id="code"></code></p>
+<p><button id="copy" hidden>Copy code</button></p>
+<ol id="steps" hidden>
+<li>Press <b>Copy code</b>.</li>
+<li>Open <a href="https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml" target="_blank" rel="noopener">GitHub, Actions, social</a>.</li>
+<li>Press <b>Run workflow</b>, paste the code into <b>YouTube address or code</b>, press the green <b>Run workflow</b>.</li>
+<li>Do it within 5 minutes: the code expires.</li>
+</ol>
+<p id="retry" hidden><a id="again" href="#">Sign in again</a></p>
+<script>
+const REDIRECT = 'https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html';
+const SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl', 'https://www.googleapis.com/auth/youtube.upload',
+  'https://www.googleapis.com/auth/youtube.readonly', 'https://www.googleapis.com/auth/yt-analytics.readonly'];
+const u = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+for (const [k, v] of Object.entries({client_id: '299670480964-bijjimd5va5a6rktampqnkgb6n7a8j41.apps.googleusercontent.com',
+  redirect_uri: REDIRECT, response_type: 'code', scope: SCOPES.join(' '), access_type: 'offline', prompt: 'consent',
+  include_granted_scopes: 'true', state: 'quickplay'})) u.searchParams.set(k, v);
+document.getElementById('again').href = u;
+const q = new URLSearchParams(location.search);
+const code = q.get('code'), err = q.get('error'), got = (q.get('scope') || '').split(' ');
+const missing = SCOPES.filter(s => !got.includes(s));
+const msg = document.getElementById('msg');
+if (code && !missing.length) {
+  msg.textContent = 'Google said yes. Your one-time code:';
+  document.getElementById('code').textContent = code;
+  document.getElementById('steps').hidden = false;
+  const b = document.getElementById('copy'); b.hidden = false;
+  b.onclick = () => navigator.clipboard.writeText(code).then(() => { b.textContent = 'Copied'; });
+} else if (code) {
+  msg.textContent = 'Google only gave some of the permissions. Press Sign in again and tick Select all on the permissions page.';
+  document.getElementById('retry').hidden = false;
+} else if (err) {
+  msg.textContent = 'Google did not send a code: ' + err + '.';
+  document.getElementById('retry').hidden = false;
+} else {
+  msg.textContent = 'Nothing to read yet.';
+  document.getElementById('again').textContent = 'Sign in to YouTube';
+  document.getElementById('retry').hidden = false;
+}
+</script>
+<p><a href="index.html">Home</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of service</a></p>
+</body></html>

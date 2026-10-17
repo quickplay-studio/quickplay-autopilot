@@ -2,11 +2,7 @@
 
 YouTube checked Sat 17 Oct 1:06 (UK): 2 scheduled, 8 public, 10 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · TikTok: not connected yet (checked Sat 17 Oct 0:35).
-
-## In the queue
-
-- **TEST-SOC1** Cyberpunk: Edgerunners 2 finally has a date 📺 (rendering next)
+Instagram: connected as quickplaydaily · TikTok: not connected (TIKTOK_CLIENT_KEY secret missing) (checked Sat 17 Oct 1:06).
 
 ## On the channel (latest first)
 

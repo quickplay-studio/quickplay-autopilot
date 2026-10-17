@@ -36,7 +36,7 @@ jobs:
         if: steps.check.outputs.run == 'yes'
         with: { python-version: '3.13' }
       - if: steps.check.outputs.run == 'yes'
-        run: pip install -q google-api-python-client==2.* google-auth==2.* tzdata
+        run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - name: Publish approved Shorts
         if: steps.check.outputs.run == 'yes'
         env:

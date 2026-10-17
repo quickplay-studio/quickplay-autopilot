@@ -32,7 +32,7 @@ jobs:
         if: steps.check.outputs.present == 'yes'
         with: { python-version: '3.13' }
       - if: steps.check.outputs.present == 'yes'
-        run: pip install -q google-api-python-client==2.* google-auth==2.* tzdata
+        run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - name: Upload
         if: steps.check.outputs.present == 'yes'
         env:

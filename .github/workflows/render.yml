@@ -26,7 +26,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q google-api-python-client==2.* google-auth==2.* tzdata
+      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - id: plan
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -96,7 +96,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q google-api-python-client==2.* google-auth==2.*
+      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.*
       - uses: actions/download-artifact@v4
         with: { pattern: 'result-*', path: results }
       - name: Upload to YouTube

@@ -39,7 +39,6 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
         run: python pipeline/social.py tiktok-connect
       - name: Check sign-ins
-        if: ${{ github.event_name != 'schedule' }}
         env:
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}

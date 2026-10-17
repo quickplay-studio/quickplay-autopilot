@@ -226,7 +226,7 @@ def check():
         out["tiktok"] = {"ok": False, "error": "not connected yet" if ck else "not connected (TIKTOK_CLIENT_KEY secret missing)"}
         if ck:   # the client key is public by design (it is part of every sign-in link)
             q = {"client_key": ck, "scope": "user.info.basic,user.info.profile,user.info.stats,video.list,video.upload,video.publish", "response_type": "code",
-                 "redirect_uri": TT_REDIRECT, "state": hashlib.sha1(NOW().isoformat().encode()).hexdigest()[:12]}
+                 "redirect_uri": TT_REDIRECT, "state": hashlib.sha1(ck.encode()).hexdigest()[:12]}
             out["tiktok"]["connect_url"] = "https://www.tiktok.com/v2/auth/authorize/?" + requests.compat.urlencode(q)
     else:
         h = {"Authorization": f"Bearer {tt['access_token']}"}
@@ -235,7 +235,14 @@ def check():
         out["tiktok"] = {"ok": r.ok and j.get("error", {}).get("code") in (None, "ok"), "user": (j.get("data") or {}).get("user"),
                          "scopes": tt.get("scope"), "mode": CFG.get("tiktok_mode", "inbox")}
     (ROOT / "status").mkdir(exist_ok=True)
-    (ROOT / "status" / "social.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    sj = ROOT / "status" / "social.json"
+    old = json.loads(sj.read_text()) if sj.exists() else {}
+    stable = lambda d: json.dumps({k: v for k, v in d.items() if k not in ("checked", "instagram_dry_run")}, sort_keys=True, default=str)
+    age = (NOW() - dt.datetime.fromisoformat(old["checked"])).total_seconds() / 3600 if old.get("checked") else 1e9
+    # hourly runs only rewrite the file when something changed (or once a day), so the repo doesn't fill with check commits
+    if stable(old) != stable(out) or age > 24 or os.environ.get("GITHUB_EVENT_NAME") != "schedule":
+        if old.get("instagram_dry_run"): out["instagram_dry_run"] = old["instagram_dry_run"]
+        sj.write_text(json.dumps(out, indent=1, ensure_ascii=False))
     print(json.dumps(out, indent=1))
 
 def ig_dry_run():

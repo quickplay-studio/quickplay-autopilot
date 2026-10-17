@@ -82,6 +82,12 @@ def main():
     now = dt.datetime.now(dt.timezone.utc)
     taken, recent, online = schedule_state(now)
     capacity = max(0, LIMIT - recent)
+    uk_today = now.astimezone(UK).date()
+    if uk_today.weekday() == 6:      # Sunday: keep one upload for the weekly long video (weekly.py) until it's up
+        wk = ROOT / "status" / f"weekly-{uk_today}.json"
+        try: done_wk = bool(json.loads(wk.read_text()).get("video"))
+        except Exception: done_wk = False
+        if not done_wk: capacity = max(0, capacity - 1)
     next_slot = slot_picker(now, taken)
 
     import looks as LK         # each new Short's look: caption style, voice, energy, grade (templates/looks.json)

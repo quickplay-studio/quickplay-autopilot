@@ -1,0 +1,56 @@
+name: weekly
+# Sunday's long video: the week's best Shorts in one landscape video with chapters (pipeline/weekly.py), scheduled for
+# 19:00 UK. Retries later if YouTube's upload limit is full. Push requests/weekly.txt containing "dry TEST-L1,TEST-L2"
+# to build a test copy from those Shorts as a draft release instead of uploading.
+on:
+  schedule:
+    - cron: '10 15 * * 0'     # Sunday afternoon
+    - cron: '10 21 * * 0'     # retry if the upload limit was full
+    - cron: '10 9 * * 1'      # last retry, Monday morning
+  push:
+    branches: [main]
+    paths: ['requests/weekly*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: weekly
+  cancel-in-progress: false
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - name: Install
+        run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          pip install -q requests cryptography pillow google-api-python-client==2.* google-auth==2.* tzdata
+      - name: Build and upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && grep -q "^dry" requests/weekly.txt 2>/dev/null; then
+            python pipeline/weekly.py --dry --ids "$(awk '/^dry/{print $2}' requests/weekly.txt)"
+          elif [ "${{ github.event_name }}" != "push" ]; then
+            python pipeline/weekly.py
+          fi
+      - name: Save
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add status/weekly-*.json 2>/dev/null || true
+          git commit -q -m "Weekly video $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

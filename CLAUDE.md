@@ -76,7 +76,8 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
 6. Commit all new boards in ONE commit to boards/queue/, push.
 7. Lineup. Wait for GitHub to render (in the background, `git pull` every 3 minutes, up to 45 minutes, until each new
    board has a status/<id>.json). Then send Charlie ONE message:
-   - approval "all": each Short in boards/ready as `QD-0xx · title · length` with its hook line and any flags, then
+   - approval "all": each Short in boards/ready as `QD-0xx · title · length · look` (status `look`: captions, voice,
+     energy, grade) with its hook line and any flags, then
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
    - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.
@@ -105,7 +106,9 @@ Artifact `read` the dashboard; then for each of analytics/shorts.csv and analyti
 - `id`: next free QD-### across boards/queue, ready, done, failed, hold and rejected, never below `first_id` in
   config.json. `created`: today, YYYY-MM-DD. `format`: a format id. `category`: Gaming, Film, Music, Sport, Tech,
   Science, Entertainment (TV and anime go here).
-- `chipIcon` (a lucide icon name), `accent` (hex), `voice`: "F2" unless told otherwise, `gap`: 0.1, `tail`: 0.6.
+- `chipIcon` (a lucide icon name), `accent` (hex), `gap`: 0.1, `tail`: 0.6. Don't set a voice or caption style: GitHub gives
+  every Short a look (caption style, voice and pace, camera energy, colour grade from templates/looks.json) and learns which
+  looks keep viewers watching. Set `look` (e.g. {"captions": "pop"}) only when Charlie asks for one.
 - `music`: {"mood": one of the `music_moods` in config.json, matching the topic's feel, "gain_db": -15}.
 - `beats`: one per sentence or two, 55 to 125 words in total (aim for 70 to 110).
   - `say`: the narration. `cap`: only if captions must differ in spelling, same word count as `say`.

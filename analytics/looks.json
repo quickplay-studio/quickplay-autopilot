@@ -1,0 +1,53 @@
+{
+ "updated": "2026-10-17T17:50+00:00",
+ "dimensions": {
+  "captions": {
+   "punch": {
+    "n": 0
+   },
+   "clean": {
+    "n": 0
+   },
+   "pop": {
+    "n": 0
+   },
+   "boxed": {
+    "n": 0
+   }
+  },
+  "voice": {
+   "george": {
+    "n": 0
+   },
+   "george_dramatic": {
+    "n": 0
+   },
+   "george_quick": {
+    "n": 0
+   },
+   "emma": {
+    "n": 0
+   }
+  },
+  "energy": {
+   "steady": {
+    "n": 0
+   },
+   "punchy": {
+    "n": 0
+   }
+  },
+  "grade": {
+   "natural": {
+    "n": 0
+   },
+   "cinematic": {
+    "n": 0
+   },
+   "vivid": {
+    "n": 0
+   }
+  }
+ },
+ "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. An option's score is the median of its Shorts."
+}

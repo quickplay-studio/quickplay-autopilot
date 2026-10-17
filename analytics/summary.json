@@ -1,18 +1,16 @@
 {
- "updated": "2026-10-17T12:52+00:00",
- "errors": {},
+ "updated": "2026-10-17T17:50+00:00",
+ "errors": {
+  "instagram": "RuntimeError: API access blocked."
+ },
  "youtube": {
   "subscribers": 1,
-  "public_shorts": 11,
-  "views_all_time": 731,
+  "public_shorts": 14,
+  "views_all_time": 1130,
   "views_last_90_days": 0,
   "views_measure": "engaged views"
  },
- "instagram": {
-  "followers": 0,
-  "posts": 0,
-  "insights_error": null
- },
+ "instagram": null,
  "tiktok": {
   "followers": 0,
   "videos": 0

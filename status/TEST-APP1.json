@@ -17,10 +17,19 @@
   "weak_beats": [],
   "size_mb": 9.0
  },
- "state": "awaiting approval",
+ "state": "approved (dry run, not uploaded)",
  "flags": [
   "approval is on for every Short (config.json)"
  ],
- "preview_release": "preview-TEST-APP1",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-b1bdccdba958082e5a06"
+ "approved": "2026-10-17T09:58:18+00:00",
+ "dry_run": {
+  "downloaded": [
+   "social.mp4",
+   "upload.json",
+   "video.mp4"
+  ],
+  "assets_left_after_cleanup": "[\"social.mp4\"]",
+  "would_upload_title": "Cyberpunk: Edgerunners 2 finally has a date 📺",
+  "tags": 15
+ }
 }

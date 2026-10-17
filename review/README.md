@@ -4,22 +4,6 @@ YouTube checked Sat 17 Oct 6:57 (UK): 2 scheduled, 8 public, 10 uploads in the l
 
 Instagram: connected as quickplaydaily · TikTok: not connected (TIKTOK_CLIENT_KEY secret missing) (checked Sat 17 Oct 1:26).
 
-## Waiting for your approval
-
-Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
-
-### TEST-APP1 · Cyberpunk: Edgerunners 2 finally has a date 📺
-awaiting approval · 30 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-b1bdccdba958082e5a06)
-- approval is on for every Short (config.json)
-
-![TEST-APP1](TEST-APP1.jpg)
-
-### TEST-APP2 · Olivia Rodrigo just brought in Chappell Roan 🎤
-awaiting approval · 35 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-81a0c6ca9c3b23bf4ea9)
-- approval is on for every Short (config.json)
-
-![TEST-APP2](TEST-APP2.jpg)
-
 ## On the channel (latest first)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤

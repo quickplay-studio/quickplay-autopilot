@@ -17,10 +17,9 @@
   "weak_beats": [],
   "size_mb": 9.2
  },
- "state": "awaiting approval",
+ "state": "rejected",
  "flags": [
   "approval is on for every Short (config.json)"
  ],
- "preview_release": "preview-TEST-APP2",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-81a0c6ca9c3b23bf4ea9"
+ "rejected": "2026-10-17T09:58:18+00:00"
 }

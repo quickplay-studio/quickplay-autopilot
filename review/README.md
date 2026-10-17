@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 18:50 (UK): 6 scheduled, 14 public, 15 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AJ0r-Xvpua6yeAw2JQKPKN_"}} · TikTok: connected (checked Sat 17 Oct 20:01).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AnLVwj5wCB3KBCIwzB-OPe6"}} · TikTok: connected (checked Sat 17 Oct 20:55).
 
 ## Needs a look
 
@@ -25,7 +25,7 @@ scheduled · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
 
 ### Sat 17 Oct 21:00 · Google's most powerful AI is now in the Gemini app 🤖
-scheduled · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
+private · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
 
 ### Sat 17 Oct 19:30 · Why this road closure has a 43-mile diversion 🚗
 private · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)

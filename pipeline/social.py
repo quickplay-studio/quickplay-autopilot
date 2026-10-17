@@ -287,10 +287,35 @@ def ig_dry_run():
     sj.write_text(json.dumps(out, indent=1, ensure_ascii=False))
     print(json.dumps(res))
 
+def tt_test():
+    """Sends one test Short to the TikTok inbox as a draft, only when Charlie has asked for it (requests/social-check.txt
+    says "tiktok-test <id>"). The Short comes from that id's private preview release, which is deleted afterwards."""
+    sid = os.environ.get("TT_TEST_ID", "").strip(); tt = load("tiktok")
+    out = {"at": NOW().isoformat(timespec="seconds"), "id": sid}
+    work = ROOT / "social_tmp"; work.mkdir(exist_ok=True); rel = f"preview-{sid}"
+    if not tt.get("access_token"): out["error"] = "TikTok not connected"
+    elif gh("release", "download", rel, "-p", "social.mp4", "-D", str(work), "--clobber", check=False).returncode:
+        out["error"] = f"no preview release {rel}"
+    else:
+        try:
+            pid = tt_post(tt, work / "social.mp4", "test", "inbox"); out.update(ok=True, publish_id_set=bool(pid))
+            h = {"Authorization": f"Bearer {tt['access_token']}", "Content-Type": "application/json; charset=UTF-8"}
+            for _ in range(12):
+                time.sleep(10)
+                r = requests.post(f"{TT_API}/post/publish/status/fetch/", headers=h, json={"publish_id": pid}, timeout=30).json()
+                out["status"] = (r.get("data") or {}).get("status"); out["fail_reason"] = (r.get("data") or {}).get("fail_reason")
+                if out["status"] and out["status"] not in ("PROCESSING_UPLOAD", "PROCESSING_DOWNLOAD"): break
+        except Exception as e:
+            out.update(ok=False, error=str(e)[:300])
+        gh("release", "delete", rel, "-y", check=False)
+    (work / "social.mp4").unlink(missing_ok=True)
+    (ROOT / "status" / "tiktok_test.json").write_text(json.dumps(out, indent=1))
+    print(json.dumps(out))
+
 def refresh():
     ig, tt = ig_tokens(), load("tiktok")
     if ig: print(ig_refresh(ig))
     if tt.get("refresh_token"): print(tt_refresh(tt))
 
 if __name__ == "__main__":
-    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check, "ig-dry-run": ig_dry_run}[sys.argv[1]]()
+    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check, "ig-dry-run": ig_dry_run, "tiktok-test": tt_test}[sys.argv[1]]()

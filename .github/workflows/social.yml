@@ -35,13 +35,20 @@ jobs:
         with: { python-version: '3.13' }
       - run: pip install -q requests cryptography
       - name: Connect YouTube (comments, playlists, titles)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.youtube_code != '' }}
+        # the code comes from the run form, or from requests/social-youtube.txt (pushed for Charlie; deleted straight away)
+        if: ${{ (github.event_name == 'workflow_dispatch' && inputs.youtube_code != '') || github.event_name == 'push' }}
         env:
-          YT_CODE: ${{ inputs.youtube_code }}
+          YT_INPUT: ${{ inputs.youtube_code }}
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
-        run: python pipeline/yt_connect.py exchange
+        run: |
+          code="$YT_INPUT"
+          if [ -z "$code" ] && [ -f requests/social-youtube.txt ]; then
+            code=$(tr -d '[:space:]' < requests/social-youtube.txt); git rm -q requests/social-youtube.txt
+          fi
+          [ -n "$code" ] || exit 0
+          YT_CODE="$code" python pipeline/yt_connect.py exchange
       - name: Connect TikTok
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.tiktok_code != '' }}
         env:

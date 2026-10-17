@@ -2,7 +2,7 @@
 
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
 posts them to Instagram (automatically) and TikTok (as drafts Charlie posts). One session a day at 06:50 UK (a second at
-12:50 once YouTube raises the API quota and the channel limit). Spend as few tokens as possible: no rendering, no browsing
+12:50 once the channel can upload more than 10 a day). Spend as few tokens as possible: no rendering, no browsing
 beyond the sources you check, no recap messages.
 
 ## The goal

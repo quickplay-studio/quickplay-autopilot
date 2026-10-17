@@ -1,9 +1,9 @@
 {
  "daily_limit": 10,
- "per_session": 6,
- "slot_first": "09:00",
- "slot_every_minutes": 150,
- "slots_per_day": 6,
+ "per_session": 10,
+ "slot_first": "08:30",
+ "slot_every_minutes": 90,
+ "slots_per_day": 10,
  "lead_hours": 1,
  "music_moods": {
   "epic": "big cinematic reveals: film and TV news, trailers, major launches",
@@ -25,7 +25,7 @@
  "first_id": 29,
  "approval": "all",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Two limits cap uploads. YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (daily_limit counts it). The YouTube Data API quota: 10,000 units a day (resets 08:00 UK), one upload costs 1,600, so 6 a day; per_session 6 matches it, and anything over waits for the reset. After the quota extension and Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20, and a second writer run at 12:50.",
+ "note": "Uploads are capped by YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (video selfie). The API quota let 10 uploads through on 17 October, so it isn't the binding limit at 10 a day; ask Google for more quota (support.google.com/youtube/contact/yt_api_form) before going to 20. After Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20, and a second writer run at 12:50.",
  "tiktok_mode": "inbox",
  "tiktok_max_age_hours": 24
 }

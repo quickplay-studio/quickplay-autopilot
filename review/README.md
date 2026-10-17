@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 13:29 (UK): 10 scheduled, 10 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 13:28).
+Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 13:29).
 
 ## On the channel (latest first)
 
@@ -34,7 +34,7 @@ scheduled · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
-scheduled · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
+private · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
 public · 8 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)

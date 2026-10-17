@@ -1,0 +1,75 @@
+{
+ "id": "TEST-L3",
+ "board": "boards/queue/TEST-L3.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-17T13:32:58.508381+00:00",
+ "title": "Street Fighter hits cinemas today 🥊",
+ "media": {
+  "real_shots": 0,
+  "planned_real": 0
+ },
+ "music": "ten",
+ "social_music": "sport-phonk-571905",
+ "look": {
+  "captions": "pop",
+  "voice": "george_quick",
+  "energy": "punchy",
+  "grade": "natural"
+ },
+ "qa": {
+  "duration": 21.1,
+  "wps": 3.3,
+  "weak_beats": [
+   2,
+   3
+  ],
+  "size_mb": 6.4
+ },
+ "timeline": [
+  [
+   0.06,
+   2.68,
+   "title",
+   1
+  ],
+  [
+   2.68,
+   6.9,
+   "stat",
+   1
+  ],
+  [
+   6.9,
+   10.47,
+   "versus",
+   2
+  ],
+  [
+   10.47,
+   12.25,
+   "cards",
+   1
+  ],
+  [
+   12.25,
+   14.85,
+   "none",
+   1
+  ],
+  [
+   14.85,
+   17.52,
+   "title",
+   1
+  ],
+  [
+   17.52,
+   21.05,
+   "none",
+   2
+  ]
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [2, 3]"
+}

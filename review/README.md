@@ -4,6 +4,12 @@ YouTube checked Sat 17 Oct 13:52 (UK): 9 scheduled, 11 public, 18 uploads in the
 
 Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 14:09).
 
+## Needs a look
+
+- **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+- **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+- **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+
 ## On the channel (latest first)
 
 ### Sun 18 Oct 15:00 · Planet Zoo 2 finally adds aquariums 🐠

@@ -1,8 +1,8 @@
 {
- "checked": "2026-10-17T22:54:56+00:00",
+ "checked": "2026-10-17T23:53:29+00:00",
  "instagram": {
   "ok": false,
-  "error": "400 {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AhtGXNBuyQq1pxBKyRozzAF\"}}"
+  "error": "400 {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"A6M7kJMC8aygrzfTcNsLJR7\"}}"
  },
  "tiktok": {
   "ok": true,

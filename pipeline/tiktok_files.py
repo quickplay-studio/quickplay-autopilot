@@ -1,7 +1,7 @@
 """Today's TikTok package for Charlie to upload on desktop (TikTok Studio): the 5 TikTok picks' videos (the version with
 platform-safe music), their captions and the time each goes public on YouTube, so he can schedule TikTok to match.
 Uses GitHub's REST API (GraphQL is blocked in Claude sessions).
-usage: python pipeline/tiktok_files.py <out dir> [YYYY-MM-DD]     prints one block per Short
+usage: python pipeline/tiktok_files.py <out dir> [YYYY-MM-DD] [--captions-only]     prints one block per Short
 """
 import datetime as dt, json, pathlib, subprocess, sys
 from zoneinfo import ZoneInfo
@@ -11,7 +11,7 @@ REPO = "quickplay-studio/quickplay-autopilot"
 sys.path.insert(0, str(ROOT / "pipeline"))
 from social import caption
 
-def main(out, day=None):
+def main(out, day=None, videos=True):
     out = pathlib.Path(out); out.mkdir(parents=True, exist_ok=True)
     day = day or dt.date.today().isoformat()
     rels = json.loads(subprocess.run(["gh", "api", f"repos/{REPO}/releases?per_page=100"], capture_output=True, text=True, check=True).stdout)
@@ -26,8 +26,8 @@ def main(out, day=None):
             asset = next((a for a in (rel or {}).get("assets", []) if a["name"] == "social.mp4"), None)
             when = st.get("publish_at")
             when = dt.datetime.fromisoformat(when.replace("Z", "+00:00")).astimezone(ZoneInfo("Europe/London")).strftime("%a %d %b %H:%M") if when else "not scheduled yet"
-            path = "no video found"
-            if asset:
+            path = "no video found" if videos else "in your TikTok inbox"
+            if asset and videos:
                 dest = out / f"{sid}-tiktok.mp4"
                 with open(dest, "wb") as f:
                     subprocess.run(["gh", "api", "-H", "Accept: application/octet-stream", f"repos/{REPO}/releases/assets/{asset['id']}"], stdout=f, check=True)
@@ -35,4 +35,5 @@ def main(out, day=None):
             print(f"=== {sid} · YouTube public {when}\nfile: {path}\ncaption:\n{caption(st, b, 'tiktok')}\n")
 
 if __name__ == "__main__":
-    main(*sys.argv[1:3])
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    main(args[0], args[1] if len(args) > 1 else None, videos="--captions-only" not in sys.argv)

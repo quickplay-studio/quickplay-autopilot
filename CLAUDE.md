@@ -80,10 +80,11 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
-   Then the TikTok package (Charlie uploads TikTok himself on desktop, config `tiktok_mode` "manual"): wait until the
-   approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes), run
-   `python pipeline/tiktok_files.py <scratch dir>`, send him the video files, and one message listing each Short's
-   caption and the time to schedule it in TikTok Studio (https://www.tiktok.com/tiktokstudio/upload) to match YouTube.
+   Then TikTok: wait until the approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes).
+   - `tiktok_mode` "inbox" (now): the drafts reach his TikTok phone app by themselves. Run
+     `python pipeline/tiktok_files.py <scratch dir> --captions-only` and send ONE message with each Short's caption and
+     its YouTube time, so he can paste the caption when he posts the draft (TikTok app: Inbox, System notifications).
+   - `tiktok_mode` "manual": run it without `--captions-only`, send the video files too, for TikTok Studio on desktop.
 9. Refresh the stats dashboard (see Stats dashboard). Finish with one line: how many Shorts and their titles.
 
 ## Stats dashboard

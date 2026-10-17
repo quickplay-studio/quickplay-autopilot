@@ -1,10 +1,19 @@
 {
- "checked": "2026-10-17T12:29Z",
+ "checked": "2026-10-17T12:52Z",
  "uploads_last_24h": 18,
- "scheduled": 10,
- "public": 10,
+ "scheduled": 9,
+ "public": 11,
  "flagged": [],
  "videos": [
+  {
+   "video": "Dtp4-CRcQAI",
+   "title": "The K-pop group from BLACKPINK's producer 🎤",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-17T12:30:18Z",
+   "views": 4,
+   "flag": ""
+  },
   {
    "video": "2efjp7_5qPY",
    "title": "Ayra Starr just made NFL history 🏈",
@@ -101,7 +110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T09:30:05Z",
-   "views": 82,
+   "views": 100,
    "flag": ""
   },
   {
@@ -110,7 +119,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T21:30:23Z",
-   "views": 11,
+   "views": 8,
    "flag": ""
   },
   {
@@ -119,7 +128,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T20:00:11Z",
-   "views": 5,
+   "views": 4,
    "flag": ""
   },
   {
@@ -137,7 +146,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T17:00:23Z",
-   "views": 234,
+   "views": 236,
    "flag": ""
   },
   {
@@ -155,7 +164,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 173,
+   "views": 184,
    "flag": ""
   },
   {
@@ -164,7 +173,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T12:30:20Z",
-   "views": 155,
+   "views": 150,
    "flag": ""
   },
   {
@@ -173,16 +182,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T11:00:38Z",
-   "views": 7,
-   "flag": ""
-  },
-  {
-   "video": "Dtp4-CRcQAI",
-   "title": "The K-pop group from BLACKPINK's producer 🎤",
-   "privacy": "private",
-   "publish_at": "2026-10-17T12:30:00Z",
-   "uploaded": "2026-10-16T07:57:34Z",
-   "views": 1,
+   "views": 6,
    "flag": ""
   }
  ]

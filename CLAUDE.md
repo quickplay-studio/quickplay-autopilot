@@ -2,8 +2,8 @@
 
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
 posts them to Instagram (automatically) and TikTok (as drafts Charlie posts). One session a day at 06:50 UK (a second at
-12:50 once `daily_limit` goes above 6). Spend as few tokens as possible: no rendering, no browsing beyond the sources you
-check, no recap messages.
+12:50 once YouTube raises the API quota and the channel limit). Spend as few tokens as possible: no rendering, no browsing
+beyond the sources you check, no recap messages.
 
 ## The goal
 Monetisation as soon as possible. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in

@@ -4,5 +4,14 @@
  "board": "backlog/QD-027",
  "mode": "schedule",
  "source": "backlog",
- "state": "waiting for YouTube's daily upload limit"
+ "state": "scheduled",
+ "video": "w_u0kQFo9g4",
+ "url": "https://youtube.com/shorts/w_u0kQFo9g4",
+ "publish_at": "2026-10-17T09:30:00Z",
+ "uploaded_at": "2026-10-17T08:29:15.426835Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-17T09:30:00Z",
+  "upload_status": "uploaded"
+ }
 }

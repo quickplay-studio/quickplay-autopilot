@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 13:52 (UK): 9 scheduled, 11 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 14:09).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AejBmiei5ZwJOtqr1H2NPSL"}} · TikTok: connected (checked Sat 17 Oct 14:58).
 
 ## Needs a look
 
@@ -37,7 +37,7 @@ scheduled · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
 
 ### Sat 17 Oct 15:00 · Why KPop Demon Hunters 2 won't come until 2029 🎶
-scheduled · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
+private · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
 public · 4 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)

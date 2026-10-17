@@ -1,17 +1,26 @@
 {
- "checked": "2026-10-17T05:57Z",
- "uploads_last_24h": 10,
+ "checked": "2026-10-17T10:21Z",
+ "uploads_last_24h": 9,
  "scheduled": 2,
- "public": 8,
+ "public": 9,
  "flagged": [],
  "videos": [
+  {
+   "video": "w_u0kQFo9g4",
+   "title": "GTA 6's launch trailer hides its whole story in one detail 🎮",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-17T09:30:05Z",
+   "views": 2,
+   "flag": ""
+  },
   {
    "video": "kcpp1Q-Xy0M",
    "title": "Why scientists made VR goggles for mice 🐭",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T21:30:23Z",
-   "views": 4,
+   "views": 8,
    "flag": ""
   },
   {
@@ -20,7 +29,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T20:00:11Z",
-   "views": 2,
+   "views": 4,
    "flag": ""
   },
   {
@@ -29,7 +38,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T18:30:27Z",
-   "views": 16,
+   "views": 18,
    "flag": ""
   },
   {
@@ -38,7 +47,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T17:00:23Z",
-   "views": 139,
+   "views": 182,
    "flag": ""
   },
   {
@@ -47,7 +56,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T15:30:10Z",
-   "views": 9,
+   "views": 11,
    "flag": ""
   },
   {
@@ -56,7 +65,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 142,
+   "views": 149,
    "flag": ""
   },
   {
@@ -65,7 +74,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T12:30:20Z",
-   "views": 89,
+   "views": 103,
    "flag": ""
   },
   {
@@ -74,7 +83,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T11:00:38Z",
-   "views": 5,
+   "views": 7,
    "flag": ""
   },
   {

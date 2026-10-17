@@ -5,6 +5,7 @@ usage:
   python pipeline/social.py tiktok-connect   swap the one-time TikTok code (env TIKTOK_CODE) for tokens
   python pipeline/social.py refresh          refresh the Instagram and TikTok tokens
   python pipeline/social.py check            check both sign-ins, write status/social.json
+  python pipeline/social.py ig-dry-run       prove Instagram can take a video from a release, without posting
 
 Sign-ins live in tokens/*.enc, encrypted with SOCIAL_KEY (a GitHub secret); IG_TOKEN and IG_USER_ID seed Instagram.
 The TikTok/Instagram version of each Short (platform-safe music) waits in a draft GitHub release named social-<id>.
@@ -221,10 +222,47 @@ def check():
     (ROOT / "status" / "social.json").write_text(json.dumps(out, indent=1, ensure_ascii=False))
     print(json.dumps(out, indent=1))
 
+def ig_dry_run():
+    """Proves Instagram can fetch and process a video from a GitHub release, without posting anything:
+    a 5-second blank test clip goes up as a release, Instagram builds a Reel container from it, the container is never
+    published (Instagram discards it after 24 hours) and the release is deleted straight away."""
+    ig = ig_tokens(); res = {"at": NOW().isoformat(timespec="seconds")}
+    work = ROOT / "social_tmp"; work.mkdir(exist_ok=True); mp4 = work / "social.mp4"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "color=c=0x1d1d1f:s=1080x1920:r=30:d=5",
+                    "-f", "lavfi", "-i", "sine=frequency=440:sample_rate=48000:duration=5", "-c:v", "libx264", "-pix_fmt", "yuv420p",
+                    "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", str(mp4)], check=True)
+    tag = f"ig-test-{NOW():%Y%m%d%H%M%S}"
+    r = gh("release", "create", tag, str(mp4), "--title", tag, "--notes", "Instagram test file, deleted straight after.", check=False)
+    if r.returncode: res["error"] = f"release: {r.stderr.strip()[:200]}"
+    else:
+        try:
+            url = f"https://github.com/{REPO}/releases/download/{tag}/social.mp4"
+            user = ig.get("user") or os.environ.get("IG_USER_ID")
+            c = requests.post(f"{IG_API}/{user}/media", data={"media_type": "REELS", "video_url": url, "caption": "test",
+                                                                "access_token": ig["token"]}, timeout=60)
+            if not c.ok: res["error"] = f"container: {c.status_code} {c.text[:300]}"
+            else:
+                cid = c.json()["id"]; res["container"] = "created"
+                for _ in range(36):
+                    st = requests.get(f"{IG_API}/{cid}", params={"fields": "status_code,status", "access_token": ig["token"]}, timeout=30).json()
+                    res["status_code"], res["status"] = st.get("status_code"), st.get("status")
+                    if st.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"): break
+                    time.sleep(5)
+                res["ok"] = res.get("status_code") == "FINISHED"
+                res["note"] = "never published; Instagram discards unpublished containers after 24 hours"
+        finally:
+            gh("release", "delete", tag, "--cleanup-tag", "-y", check=False)
+    mp4.unlink(missing_ok=True)
+    sj = ROOT / "status" / "social.json"
+    out = json.loads(sj.read_text()) if sj.exists() else {}
+    out["instagram_dry_run"] = res
+    sj.write_text(json.dumps(out, indent=1, ensure_ascii=False))
+    print(json.dumps(res))
+
 def refresh():
     ig, tt = ig_tokens(), load("tiktok")
     if ig: print(ig_refresh(ig))
     if tt.get("refresh_token"): print(tt_refresh(tt))
 
 if __name__ == "__main__":
-    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check}[sys.argv[1]]()
+    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check, "ig-dry-run": ig_dry_run}[sys.argv[1]]()

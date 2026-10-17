@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-17T12:10:47+00:00",
+ "checked": "2026-10-17T12:13:26+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -17,8 +17,13 @@
   ]
  },
  "tiktok": {
-  "ok": false,
-  "error": "not connected yet",
-  "connect_url": "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawqm0r1psyutf1c2&scope=user.info.basic%2Cuser.info.profile%2Cuser.info.stats%2Cvideo.list%2Cvideo.upload%2Cvideo.publish&response_type=code&redirect_uri=https%3A%2F%2Fquickplay-studio.github.io%2Fquickplay-autopilot%2Ftiktok-callback.html&state=6e58b2099ca1"
+  "ok": true,
+  "user": {
+   "display_name": "Quickplay Daily",
+   "open_id": "-000Kjw5zJFPKoniKaT4tzfISnGmzxUjL08k",
+   "username": "quickplaydaily"
+  },
+  "scopes": "video.publish,video.upload,user.info.basic,user.info.profile,user.info.stats,video.list",
+  "mode": "inbox"
  }
 }

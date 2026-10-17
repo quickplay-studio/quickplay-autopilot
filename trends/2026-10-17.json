@@ -3,71 +3,139 @@
  "google_trends": {
   "GB": [
    {
-    "q": "hbo max",
+    "q": "peter schmeichel",
     "traffic": "500+",
     "news": [
-     "The Best Modern Horror Movies on HBO Max Right Now",
-     "A Classic Stephen King Adaptation That the Author Hated Is Officially a Halloween Hit on HBO Max"
+     "'I am telling you the truth' - Carrick on Martinez fallout",
+     "Is Martínez's outburst a sign of chaos to come for Man United and Carrick?"
     ]
    },
    {
-    "q": "kasper schmeichel",
+    "q": "watford fc",
     "traffic": "200+",
     "news": [
-     "Premier League: Peter Schmeichel's one bit of advice for son Kasper",
-     "The Football Interview on BBC One Northern Ireland: full details and when it's on"
+     "Under-pressure Dionisi addresses sacking 'fake news'",
+     "Football Daily | Watford, a ‘fake news’ sacking and an apology to Elton John"
     ]
    },
    {
-    "q": "sale vs glasgow warriors",
+    "q": "owen hargreaves",
     "traffic": "200+",
     "news": [
-     "TEAM NEWS | SHARKS v GLASGOW WARRIORS",
-     "Internationals return as van der Merwe set for debut"
+     "'Everyone had his back' - What really happened when Mancini and Tevez clashed in 2011?"
     ]
    },
    {
-    "q": "bury fc",
+    "q": "everton f.c. vs chelsea f.c. stats",
     "traffic": "200+",
     "news": [
-     "Dom Telford joins Bury",
-     "Johnson relishing tough Harrogate Town test as Shakers dare to dream in FA Cup"
+     "【LIVESTREAMS】 Australia vs New Zealand Rugby Live Ｓｔｒｅａｍｓ Free Test Match Today",
+     "++[ＬＩＶＥＳｔｒｅａｍ]NOW!!] Australia v New Zealand Live Broadcast"
     ]
    },
    {
-    "q": "daniil medvedev",
+    "q": "black lion vs ospreys",
     "traffic": "200+",
     "news": [
-     "Sports News, Transfers, Scores | Watch Live Sport",
-     "Medvedev fends off Paul for Shanghai SF berth"
+     "Ospreys keep rotating for Challenge Cup opener at Black Lion",
+     "Black Lion v Ospreys Live: Kick-off time, stream details and score updates"
     ]
    },
    {
-    "q": "talksport",
-    "traffic": "500+",
-    "news": [
-     "Talksport is capitalising on decline of the BBC",
-     "Major broadcaster at risk of losing F1 rights after 32 years"
-    ]
-   },
-   {
-    "q": "fleetwood vs rotherham",
+    "q": "everton fixtures",
     "traffic": "200+",
+    "news": []
+   },
+   {
+    "q": "harrogate town",
+    "traffic": "1000+",
     "news": [
-     "Fleetwood Town vs Rotherham United: League Two stats & head-to-head",
-     "All 8 League Two predictions – Saturday, 17th October"
+     "Simon Weaver: Harrogate Town boss becomes co-owner of National League club",
+     "Harrogate Town AFC Announces New Ownership"
     ]
    },
    {
-    "q": "hbo",
-    "traffic": "500+",
+    "q": "iga swiatek",
+    "traffic": "100+",
     "news": [
-     "Steven Spielberg’s $604M Sci-Fi Sensation Is Officially Leaving HBO Max",
-     "Robin Hood, Amateur, Flores Massacre: What's New to Watch on HBO Max the Week of Oct. 16, 2026"
+     "Wuhan semifinals preview: An all-Polish reunion and a pair of surprises",
+     "Iga Swiatek, 25, completes circle and reaches semifinals in all 16 major tournaments"
+    ]
+   },
+   {
+    "q": "millwall fc",
+    "traffic": "100+",
+    "news": [
+     "Ji-sung Eom racist abuse: Millwall boss Alex Neil criticised for stoppage comments",
+     "Millwall’s Alex Neil criticised for his comments on stoppage for alleged racism"
+    ]
+   },
+   {
+    "q": "oil tanker",
+    "traffic": "100+",
+    "news": [
+     "Iran’s IRGC says supertanker hits mine in Strait of Hormuz, catches fire",
+     "Ship attack reports near Hormuz reach record high as oil exports slow"
     ]
    }
   ],
   "US": [
+   {
+    "q": "iga świątek",
+    "traffic": "500+",
+    "news": [
+     "Iga Świątek - Maja Chwalińska relacja na żywo",
+     "Oto co łączy Igę Świątek i Maję Chwalińską. Nie kryją się z tym"
+    ]
+   },
+   {
+    "q": "middlesbrough vs cardiff city",
+    "traffic": "200+",
+    "news": [
+     "Middlesbrough v Cardiff City: Championship stats & head-to-head",
+     "Saturday 12.30pm acca tips: Our 7-1 acca for the early action"
+    ]
+   },
+   {
+    "q": "undead walking",
+    "traffic": "200+",
+    "news": [
+     "The Walking Dead is finally doing something it should have done years ago",
+     "The Walking Dead: Daryl Dixon - Official Season 4 Clip | IGN Fall Fan Fest 2026"
+    ]
+   },
+   {
+    "q": "fare evasion",
+    "traffic": "100+",
+    "news": [
+     "MTA removes from duty fare checkers over Brooklyn fare evasion clash, launches investigation",
+     "MTA’s Lieber reiterates opposition to Mamdani's push for free buses after violent incident"
+    ]
+   },
+   {
+    "q": "austin weather",
+    "traffic": "100+",
+    "news": [
+     "Austin weather: Hot day and then cool down",
+     "We’ll go from 90°+ afternoons to mornings in the 50s by the weekend"
+    ]
+   },
+   {
+    "q": "bbc football",
+    "traffic": "100+",
+    "news": [
+     "Millwall v Lincoln City: Championship stats & head-to-head",
+     "Kitch’s disappointment, a first-ever national trophy, Graham’s siege mentality, narrative repeating – Millwall"
+    ]
+   },
+   {
+    "q": "weather orlando",
+    "traffic": "100+",
+    "news": [
+     "Cold front brings cooler weather to Central Florida",
+     "Windy weekend ahead as cold front arrives Saturday morning"
+    ]
+   },
    {
     "q": "arsenal vs birmingham city",
     "traffic": "200+",
@@ -78,58 +146,10 @@
    },
    {
     "q": "rafael jodar",
-    "traffic": "200+",
-    "news": [
-     "Rafa Jódar - Daniil Medvedev en directo, la semifinal del Masters Shanghái en vivo|Comienza el primer set",
-     "Medvedev cerró la jornada de Shanghai con un triunfazo, llegó a semifinales y lo espera la nueva estrella del tour"
-    ]
-   },
-   {
-    "q": "usa network",
-    "traffic": "200+",
-    "news": [
-     "Analyzing Bowman’s wreck with Wallace at Charlotte",
-     "How USA Network produces the most crucial races of the NASCAR Chase"
-    ]
-   },
-   {
-    "q": "daniil medvedev",
-    "traffic": "200+",
-    "news": [
-     "Medvedev sees off Paul to set up Shanghai semi with comeback king Jodar",
-     "Highlights: Medvedev fights past Paul in Shanghai 2026 for SF place"
-    ]
-   },
-   {
-    "q": "chase elliott",
-    "traffic": "100+",
-    "news": [
-     "Chase Elliott Publicly Abandons All Championship Hopes In One Sentence",
-     "2026 Phoenix Raceway Chase weekend pit stall assignments"
-    ]
-   },
-   {
-    "q": "billy joel motorcycle collection auction",
     "traffic": "500+",
     "news": [
-     "Billy Joel Offers Health Update in Rare Interview as He Prepares to Sell Prized Motorcycle Collection",
-     "'I can't do performances': Billy Joel gives health update after recent brain surgery"
-    ]
-   },
-   {
-    "q": "the white lotus season 4 hbo",
-    "traffic": "200+",
-    "news": [
-     "'The White Lotus' Season 4 Officially Gets First Look From HBO",
-     "'The White Lotus' Season 4 Filming In Cannes Enters The Final Stretch"
-    ]
-   },
-   {
-    "q": "star trek apollo actor passes",
-    "traffic": "100+",
-    "news": [
-     "Michael Forest, Actor in Roger Corman Movies and ‘Star Trek,’ Dies at 97",
-     "Michael Forest, Actor in Roger Corman Movies and ‘Star Trek,’ Dies at 97"
+     "Rafa Jódar - Daniil Medvedev en directo | Semifinales del Masters 1000 de Shanghái, en vivo",
+     "Medvedev cerró la jornada de Shanghai con un triunfazo, llegó a semifinales y lo espera la nueva estrella del tour"
     ]
    }
   ]
@@ -144,368 +164,368 @@
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 33410235,
-    "views_per_hour": 711505
+    "views": 33464874,
+    "views_per_hour": 709384
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 10701024,
-    "views_per_hour": 382705
+    "views": 10727732,
+    "views_per_hour": 380700
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 8112204,
-    "views_per_hour": 225580
+    "views": 8146279,
+    "views_per_hour": 225166
    },
    {
     "title": "Trailer 2 : Ramayana: Rise of a Legend | Ranbir Kapoor | Yash | Sai Pallavi | Sunny Deol",
     "channel": "T-Series",
-    "views": 4336469,
-    "views_per_hour": 160836
+    "views": 4356057,
+    "views_per_hour": 160270
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 2",
     "channel": "Jynxzi",
-    "views": 1188164,
-    "views_per_hour": 151672
+    "views": 1189357,
+    "views_per_hour": 147724
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 4574639,
-    "views_per_hour": 117651
+    "views": 4587582,
+    "views_per_hour": 117328
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2908956,
-    "views_per_hour": 104367
+    "views": 2915670,
+    "views_per_hour": 103798
    },
    {
     "title": "ROBLOX SELL FRIES!",
     "channel": "Foltyn",
-    "views": 825592,
-    "views_per_hour": 46025
+    "views": 831272,
+    "views_per_hour": 45787
    },
    {
     "title": "Shrek 2 Remastered - Announce Trailer",
     "channel": "Mafialabs",
-    "views": 692239,
-    "views_per_hour": 36139
+    "views": 695988,
+    "views_per_hour": 35927
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1293581,
-    "views_per_hour": 30432
+    "views": 1294919,
+    "views_per_hour": 30308
    },
    {
     "title": "All Steal An Egg Pets Meet Their GIRL Versions..",
     "channel": "Fuzz",
-    "views": 601366,
-    "views_per_hour": 29387
+    "views": 607872,
+    "views_per_hour": 29393
    },
    {
     "title": "Minecraft, But DAMAGE = OVERPOWERED!",
     "channel": "Cash",
-    "views": 578236,
-    "views_per_hour": 27585
+    "views": 582106,
+    "views_per_hour": 27484
    },
    {
     "title": "Deji Challenged Me To A Bro V Bro...",
     "channel": "Joe Bart Games",
-    "views": 439573,
-    "views_per_hour": 26669
+    "views": 443729,
+    "views_per_hour": 26570
    },
    {
     "title": "GTA 6: NEW THINGS FROM LAUNCH TRAILER & MORE",
     "channel": "gameranx",
-    "views": 323466,
-    "views_per_hour": 20228
+    "views": 325824,
+    "views_per_hour": 20102
    },
    {
     "title": "Tyla - THAT GIRL (Official Music Video)",
     "channel": "TylaVEVO",
-    "views": 262830,
-    "views_per_hour": 19526
+    "views": 265668,
+    "views_per_hour": 19423
    }
   ],
   "GB-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 33410235,
-    "views_per_hour": 711505
+    "views": 33464874,
+    "views_per_hour": 709384
    },
    {
     "title": "🔴LIVE | SCUMBAG RAIDERS | HUTCHMF X KONA | FRICK A FAN FRIDAY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 794488,
-    "views_per_hour": 170668
+    "views": 795991,
+    "views_per_hour": 163361
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 2",
     "channel": "Jynxzi",
-    "views": 1188164,
-    "views_per_hour": 151672
+    "views": 1189357,
+    "views_per_hour": 147724
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 4574639,
-    "views_per_hour": 117651
+    "views": 4587582,
+    "views_per_hour": 117328
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2908956,
-    "views_per_hour": 104367
+    "views": 2915670,
+    "views_per_hour": 103798
    },
    {
     "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
     "channel": "IShowSpeed",
-    "views": 2527515,
-    "views_per_hour": 63709
+    "views": 2528793,
+    "views_per_hour": 63394
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
     "channel": "MKIceAndFire",
-    "views": 650570,
-    "views_per_hour": 55909
+    "views": 667293,
+    "views_per_hour": 56294
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1 - INTRO (FULL GAME)",
     "channel": "theRadBrad",
-    "views": 507959,
-    "views_per_hour": 52206
+    "views": 521452,
+    "views_per_hour": 52421
    },
    {
     "title": "ROBLOX SELL FRIES!",
     "channel": "Foltyn",
-    "views": 825592,
-    "views_per_hour": 46025
+    "views": 831272,
+    "views_per_hour": 45787
    },
    {
     "title": "This GROCERY STORE is HIDING SOMETHING..",
     "channel": "Tyler & Snowi",
-    "views": 536530,
-    "views_per_hour": 45418
+    "views": 543758,
+    "views_per_hour": 45198
    },
    {
     "title": "Who Joined My Game…",
     "channel": "CaseOh",
-    "views": 557140,
-    "views_per_hour": 39908
+    "views": 561972,
+    "views_per_hour": 39637
    },
    {
     "title": "Queens of Mischief 💚👻 | Dandy's World Official Song",
     "channel": "BlushCrunch Studio",
-    "views": 327421,
-    "views_per_hour": 38728
+    "views": 333559,
+    "views_per_hour": 38465
    },
    {
     "title": "I Secretly Joined My Hater SMP",
     "channel": "ManePear",
-    "views": 1029878,
-    "views_per_hour": 38499
+    "views": 1036959,
+    "views_per_hour": 38451
    },
    {
     "title": "BioShock 2 Review",
     "channel": "MandaloreGaming",
-    "views": 489842,
-    "views_per_hour": 30690
+    "views": 495497,
+    "views_per_hour": 30628
    },
    {
     "title": "All Steal An Egg Pets Meet Their GIRL Versions..",
     "channel": "Fuzz",
-    "views": 601366,
-    "views_per_hour": 29387
+    "views": 607872,
+    "views_per_hour": 29393
    }
   ],
   "US": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 33410235,
-    "views_per_hour": 711505
+    "views": 33464874,
+    "views_per_hour": 709384
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 10701024,
-    "views_per_hour": 382705
+    "views": 10727732,
+    "views_per_hour": 380700
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 8112204,
-    "views_per_hour": 225580
+    "views": 8146279,
+    "views_per_hour": 225166
    },
    {
     "title": "The Beekeeper 2 | Official Teaser Trailer",
     "channel": "Amazon MGM Studios",
-    "views": 9208360,
-    "views_per_hour": 203643
+    "views": 9233847,
+    "views_per_hour": 203229
    },
    {
     "title": "🔴LIVE | SCUMBAG RAIDERS | HUTCHMF X KONA | FRICK A FAN FRIDAY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 794488,
-    "views_per_hour": 170668
+    "views": 795991,
+    "views_per_hour": 163361
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 2",
     "channel": "Jynxzi",
-    "views": 1188164,
-    "views_per_hour": 151672
+    "views": 1189357,
+    "views_per_hour": 147724
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 4574639,
-    "views_per_hour": 117651
+    "views": 4587582,
+    "views_per_hour": 117328
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2908956,
-    "views_per_hour": 104367
+    "views": 2915670,
+    "views_per_hour": 103798
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 2985926,
-    "views_per_hour": 64473
+    "views": 2995221,
+    "views_per_hour": 64372
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
     "channel": "MKIceAndFire",
-    "views": 650570,
-    "views_per_hour": 55909
+    "views": 667293,
+    "views_per_hour": 56294
    },
    {
     "title": "The Chosen: Season 6 Official Trailer",
     "channel": "The Chosen",
-    "views": 2119165,
-    "views_per_hour": 46107
+    "views": 2122134,
+    "views_per_hour": 45955
    },
    {
     "title": "ROBLOX SELL FRIES!",
     "channel": "Foltyn",
-    "views": 825592,
-    "views_per_hour": 46025
+    "views": 831272,
+    "views_per_hour": 45787
    },
    {
     "title": "Tom MacDonald - \"What America Is\"",
     "channel": "Tom MacDonald",
-    "views": 893801,
-    "views_per_hour": 44752
+    "views": 910680,
+    "views_per_hour": 45107
    },
    {
     "title": "Who Joined My Game…",
     "channel": "CaseOh",
-    "views": 557140,
-    "views_per_hour": 39908
+    "views": 561972,
+    "views_per_hour": 39637
    },
    {
     "title": "Shrek 2 Remastered - Announce Trailer",
     "channel": "Mafialabs",
-    "views": 692239,
-    "views_per_hour": 36139
+    "views": 695988,
+    "views_per_hour": 35927
    }
   ],
   "US-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 33410235,
-    "views_per_hour": 711505
+    "views": 33464874,
+    "views_per_hour": 709384
    },
    {
     "title": "🔴LIVE | SCUMBAG RAIDERS | HUTCHMF X KONA | FRICK A FAN FRIDAY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 794488,
-    "views_per_hour": 170668
+    "views": 795991,
+    "views_per_hour": 163361
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 2",
     "channel": "Jynxzi",
-    "views": 1188164,
-    "views_per_hour": 151672
-   },
-   {
-    "title": "C9 vs. FUR | WORLDS 2026 | Play-Ins Day 2",
-    "channel": "LoL Esports",
-    "views": 1316044,
-    "views_per_hour": 118052
+    "views": 1189357,
+    "views_per_hour": 147724
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 4574639,
-    "views_per_hour": 117651
+    "views": 4587582,
+    "views_per_hour": 117328
+   },
+   {
+    "title": "C9 vs. FUR | WORLDS 2026 | Play-Ins Day 2",
+    "channel": "LoL Esports",
+    "views": 1316686,
+    "views_per_hour": 115851
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2908956,
-    "views_per_hour": 104367
+    "views": 2915670,
+    "views_per_hour": 103798
    },
    {
     "title": "Saul Goodman 100% 🔴 MAINLIST (14/75)",
     "channel": "Doggie",
-    "views": 694583,
-    "views_per_hour": 84592
+    "views": 697361,
+    "views_per_hour": 82739
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
     "channel": "MKIceAndFire",
-    "views": 650570,
-    "views_per_hour": 55909
+    "views": 667293,
+    "views_per_hour": 56294
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1 - INTRO (FULL GAME)",
     "channel": "theRadBrad",
-    "views": 507959,
-    "views_per_hour": 52206
+    "views": 521452,
+    "views_per_hour": 52421
    },
    {
     "title": "ROBLOX SELL FRIES!",
     "channel": "Foltyn",
-    "views": 825592,
-    "views_per_hour": 46025
+    "views": 831272,
+    "views_per_hour": 45787
    },
    {
     "title": "This GROCERY STORE is HIDING SOMETHING..",
     "channel": "Tyler & Snowi",
-    "views": 536530,
-    "views_per_hour": 45418
+    "views": 543758,
+    "views_per_hour": 45198
    },
    {
     "title": "Who Joined My Game…",
     "channel": "CaseOh",
-    "views": 557140,
-    "views_per_hour": 39908
+    "views": 561972,
+    "views_per_hour": 39637
    },
    {
     "title": "BioShock 2 Review",
     "channel": "MandaloreGaming",
-    "views": 489842,
-    "views_per_hour": 30690
+    "views": 495497,
+    "views_per_hour": 30628
    },
    {
     "title": "Uno Funny Moments - Our Most Brain Dead Session Ever!",
     "channel": "VanossGaming",
-    "views": 192073,
-    "views_per_hour": 30468
+    "views": 198870,
+    "views_per_hour": 30495
    },
    {
     "title": "All Steal An Egg Pets Meet Their GIRL Versions..",
     "channel": "Fuzz",
-    "views": 601366,
-    "views_per_hour": 29387
+    "views": 607872,
+    "views_per_hour": 29393
    }
   ]
  },

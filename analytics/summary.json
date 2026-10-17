@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17T12:10+00:00",
+ "updated": "2026-10-17T12:28+00:00",
  "errors": {},
  "youtube": {
   "subscribers": 1,
   "public_shorts": 10,
-  "views_all_time": 613,
+  "views_all_time": 652,
   "views_last_90_days": 0,
   "views_measure": "engaged views"
  },
@@ -13,7 +13,10 @@
   "posts": 0,
   "insights_error": null
  },
- "tiktok": null,
+ "tiktok": {
+  "followers": 0,
+  "videos": 0
+ },
  "ypp": {
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,

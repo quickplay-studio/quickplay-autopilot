@@ -1,6 +1,6 @@
 {
  "daily_limit": 10,
- "per_session": 10,
+ "per_session": 7,
  "slot_first": "08:30",
  "slot_every_minutes": 90,
  "slots_per_day": 10,
@@ -25,7 +25,7 @@
  "first_id": 29,
  "approval": "all",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Uploads are capped by YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (video selfie). The YouTube Data API default quota is no constraint: 100 uploads a day in their own bucket plus 10,000 units for other calls, reset at midnight Pacific time (developers.google.com/youtube/v3/determine_quota_cost). After Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20, and a second writer run at 12:50.",
+ "note": "Two writer runs a day: 06:50 writes up to per_session (7); 12:50 writes the rest of daily_limit (3) from fresher trends. Uploads are capped by YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (video selfie, under review since 17 October). The YouTube Data API default quota is no constraint: 100 uploads a day plus 10,000 units for other calls. After Advanced features: daily_limit 20, per_session 14, slot_first 08:00, slot_every_minutes 45, slots_per_day 20.",
  "tiktok_mode": "inbox",
  "tiktok_max_age_hours": 24,
  "tiktok_note": "inbox: the day's 5 TikTok picks land in the TikTok phone app as drafts once scheduled, and Charlie posts them with the captions from the morning message; manual: he uploads them himself in TikTok Studio on desktop; direct: posts by itself (needs TikTok's review)."

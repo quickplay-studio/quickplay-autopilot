@@ -1,9 +1,9 @@
 # Quickplay daily script run
 
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
-posts them to Instagram (automatically) and TikTok (as drafts Charlie posts). One session a day at 06:50 UK (a second at
-12:50 once the channel can upload more than 10 a day). Spend as few tokens as possible: no rendering, no browsing
-beyond the sources you check, no recap messages.
+posts them to Instagram (automatically) and TikTok (as drafts Charlie posts). Two sessions a day: 06:50 UK writes most of
+the day's Shorts; 12:50 UK writes the rest from fresher trends (breaking stories, things that took off this morning).
+Spend as few tokens as possible: no rendering, no browsing beyond the sources you check, no recap messages.
 
 ## The goal
 Monetisation as soon as possible. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in
@@ -66,7 +66,8 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
 2. Capacity this session = the smallest of: `per_session`; `daily_limit` minus boards with today's `created` date
    (queue, ready, done and failed); `daily_limit` minus boards already in boards/queue/ and boards/ready/.
    If it is 0, go to step 7.
-3. Pick topics (see What gets views).
+3. Pick topics (see What gets views). The 12:50 run looks for what has broken or grown since the morning (trends refresh
+   at 11:35 UTC) and skips anything the morning run already covered.
 4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error. Warnings: fix them, or keep the
    board and add a `flag` saying why it is fine.

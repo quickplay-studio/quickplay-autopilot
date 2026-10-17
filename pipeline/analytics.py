@@ -52,7 +52,9 @@ def our_shorts():
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")),
-            "source": st.get("source", "pipeline"), "timeline": st.get("timeline")}
+            "source": st.get("source", "pipeline"), "timeline": st.get("timeline"),
+            "real_share": round((st.get("media") or {}).get("real_shots", 0) / max(1, sum(len(bt.get("shots") or []) for bt in beats)), 2)
+                          if st.get("media") and beats else ""}
     return out
 
 # ---------------- YouTube ----------------
@@ -215,6 +217,7 @@ def main():
         secs = o.get("seconds") or 0
         row["yt_held_3s_pct"] = at_point(curve, min(1.0, 3 / secs)) if curve and secs else ""      # still watching 3 seconds in
         row["yt_held_end_pct"] = at_point(curve, 0.95) if curve else ""                            # still watching at the end
+        row["real_share"] = o.get("real_share", "")            # share of shots that are real images of the subject
         dr = drops(curve, o.get("timeline"), secs) if curve and secs else []
         row["yt_worst_beat"] = (lambda w: f"beat {w[1] + 1} ({w[2]}), -{w[0]} pts/s")(max(dr)) if dr else ""
         row["_drops"] = dr
@@ -363,6 +366,15 @@ def insights(rows, s):
             L += ["## Hooks that lost them"] + [line(r) for r in by[-3:]] + [""]
         else:
             L += ["## Hooks, by share still watching 3 seconds in"] + [line(r) for r in by] + [""]
+    def med(rs, f):
+        v = [float(r[f]) for r in rs if r.get(f) not in ("", None)]
+        return f"{statistics.median(v):.0f}" if v else "?"
+    real = [r for r in aged if r.get("real_share") not in ("", None) and float(r["real_share"]) >= 0.5]
+    stock = [r for r in aged if r.get("real_share") not in ("", None) and float(r["real_share"]) < 0.5]
+    if len(real) >= 3 and len(stock) >= 3:
+        L += [f"Mostly real images of the subject ({len(real)} Shorts): {med(real, 'yt_held_3s_pct')}% still watching at 3s, "
+              f"{med(real, 'yt_avg_viewed_pct')}% viewed, {med(real, 'yt_views')} views. Mostly stock ({len(stock)}): "
+              f"{med(stock, 'yt_held_3s_pct')}%, {med(stock, 'yt_avg_viewed_pct')}%, {med(stock, 'yt_views')} views.", ""]
     by_vis = {}
     for r in aged:
         for loss, _i, vis in r.get("_drops") or []: by_vis.setdefault(vis, []).append(loss)

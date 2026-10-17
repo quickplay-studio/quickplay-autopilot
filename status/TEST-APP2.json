@@ -1,0 +1,26 @@
+{
+ "id": "TEST-APP2",
+ "board": "boards/queue/TEST-APP2.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-17T00:29:35.073115+00:00",
+ "title": "Olivia Rodrigo just brought in Chappell Roan 🎤",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "purple-desire",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "qa": {
+  "duration": 35.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.2
+ },
+ "state": "awaiting approval",
+ "flags": [
+  "approval is on for every Short (config.json)"
+ ],
+ "preview_release": "preview-TEST-APP2",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-81a0c6ca9c3b23bf4ea9"
+}

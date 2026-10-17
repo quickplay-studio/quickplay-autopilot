@@ -75,7 +75,8 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
    board and add a `flag` saying why it is fine.
 6. Commit all new boards in ONE commit to boards/queue/, push.
 7. Lineup. Wait for GitHub to render (in the background, `git pull` every 3 minutes, up to 45 minutes, until each new
-   board has a status/<id>.json). Then send Charlie ONE message:
+   board has a status/<id>.json). Then send Charlie ONE message, starting with the line `python pipeline/health.py`
+   prints (fix or explain anything it lists):
    - approval "all": each Short in boards/ready as `QD-0xx · title · length · look` (status `look`: captions, voice,
      energy, grade) with its hook line and any flags, then
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:

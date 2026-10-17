@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 18:50 (UK): 6 scheduled, 14 public, 15 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AcVLfn8FsBce6oKtkGBhoCQ"}} · TikTok: connected (checked Sat 17 Oct 18:55).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AJ0r-Xvpua6yeAw2JQKPKN_"}} · TikTok: connected (checked Sat 17 Oct 20:01).
 
 ## Needs a look
 
@@ -28,7 +28,7 @@ scheduled · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
 
 ### Sat 17 Oct 19:30 · Why this road closure has a 43-mile diversion 🚗
-scheduled · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
+private · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
 
 ### Sat 17 Oct 18:00 · Disney's next film isn't a sequel ✨
 public · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)

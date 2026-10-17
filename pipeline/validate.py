@@ -97,6 +97,7 @@ def check(b, path=None):
         e.append("meta.tags: a list of search phrases")
     elif len(kw) < 5: w.append("meta.tags: add 5 to 15 search phrases (YouTube's tags field)")
     if b.get("flag") is not None and not str(b.get("flag")).strip(): e.append("flag: one line saying why, or leave it out")
+    if "tiktok" in b and not isinstance(b["tiktok"], bool): e.append("tiktok: true (one of the day's 5 TikTok picks) or false")
     srcs = m.get("sources") or []
     bad = [s for s in srcs if not (isinstance(s, list) and len(s) == 2 and str(s[1]).startswith("https://"))]
     if bad: e.append("meta.sources: each one [title, https url]")

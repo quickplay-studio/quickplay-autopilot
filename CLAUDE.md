@@ -34,6 +34,8 @@ drop what isn't.
 - Variety: YouTube won't monetise templated, mass-produced content. Every Short needs its own angle and insight. Use at
   least 3 formats a day and never the same format twice in a row; vary hook styles and graphics; real images of the
   subject first.
+- TikTok takes only 5 drafts a day: set `"tiktok": true` on the 5 Shorts most likely to do well there (big fandoms,
+  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest.
 - Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram, the first 7 to
   TikTok): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
@@ -75,8 +77,8 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
    - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.
-   - Then the TikTok captions for today's Shorts, ready to paste: title, blank line, summary, blank line, the first 7
-     hashtags plus #fyp. The TikTok drafts reach his inbox once each Short is scheduled.
+   - Then the TikTok captions for today's 5 TikTok picks, ready to paste: title, blank line, summary, blank line, the
+     first 7 hashtags plus #fyp. The TikTok drafts reach his inbox once each Short is scheduled.
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
@@ -115,5 +117,6 @@ Artifact `read` the dashboard; then for each of analytics/shorts.csv and analyti
 - `meta`: {title (under 50 characters ideally, 70 at most, one emoji at the end), summary (1 to 2 sentences),
   hashtags (8 to 15, most relevant first; #Shorts is added for YouTube), tags (5 to 15 search phrases),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.
+- `tiktok`: true for the day's 5 TikTok picks, false for the rest.
 - Optional: `flag` (see Approval), `publish_at` "YYYY-MM-DD HH:MM" (UK) for a fixed slot, `mode` "private" (test
   upload), "none" (render only) or "dry" (held for approval like a real Short, never uploaded).

@@ -10,7 +10,7 @@ Instagram: connected as quickplaydaily · TikTok: not connected (TIKTOK_CLIENT_K
 scheduled · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
-scheduled · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
+private · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Sat 17 Oct 10:30 · GTA 6's launch trailer hides its whole story in one detail 🎮
 public · 2 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)

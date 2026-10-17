@@ -68,7 +68,8 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
    (queue, ready, done and failed); `daily_limit` minus boards already in boards/queue/ and boards/ready/.
    If it is 0, go to step 7.
 3. Pick topics (see What gets views). The 12:50 run looks for what has broken or grown since the morning (trends refresh
-   at 11:35 UTC) and skips anything the morning run already covered.
+   at 11:35 UTC) and skips anything the morning run already covered. trends/research.json lists recent articles from
+   reputable outlets and the Wikipedia page for each top trend: open those first and search only for what's missing.
 4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error. Warnings: fix them, or keep the
    board and add a `flag` saying why it is fine.

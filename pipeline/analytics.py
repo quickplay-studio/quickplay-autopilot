@@ -2,7 +2,8 @@
 
 Writes analytics/ (read by the daily writer, and uploaded to the stats dashboard each morning):
   shorts.csv     one row per Short: when, topic, format, and views, likes, comments, shares on each platform,
-                 YouTube average % viewed, engaged views and subscribers gained, views per hour since posting
+                 YouTube average % viewed, engaged views and subscribers gained, views per hour since posting,
+                 retention (share still watching 3 seconds in and at the end)
   daily.csv      one row per day and platform: views, followers, followers gained
   summary.json   totals, monetisation progress (YouTube Partner Program, TikTok Creator Rewards) and the latest numbers
   insights.md    what's working: best and worst Shorts, averages by category, format, hook length, posting slot
@@ -89,7 +90,23 @@ def youtube():
         "views,engagedViews,averageViewPercentage,averageViewDuration,likes,comments,shares,subscribersGained",
         dimensions="video", sort="-views", maxResults=200)}
     daily = query("views,engagedViews,subscribersGained,subscribersLost", dimensions="day", sort="day")
-    return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily}
+    # retention curve per Short (2 to 30 days old; YouTube Analytics lags a day or two): share of viewers still watching
+    # at each point, as {fraction of the video: ratio}. Ratios above 1 mean people rewatched that part (loops).
+    retention = {}
+    for vid, v in vids.items():
+        posted = utc(v.get("publish_at")) or utc(v.get("uploaded"))
+        if v.get("privacy") != "public" or not posted or not (dt.timedelta(days=2) <= NOW - posted <= dt.timedelta(days=30)):
+            continue
+        try: curve = query("audienceWatchRatio", dimensions="elapsedVideoTimeRatio", filters=f"video=={vid}")
+        except Exception: continue
+        if curve: retention[vid] = {float(r["elapsedVideoTimeRatio"]): float(r["audienceWatchRatio"]) for r in curve}
+    return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily, "retention": retention}
+
+def at_point(curve, frac):
+    """The retention ratio at a fraction of the video (the first measured point at or after it), as a percentage."""
+    if not curve: return ""
+    k = min((k for k in curve if k >= frac), default=max(curve))
+    return round(100 * curve[k])
 
 # ---------------- Instagram ----------------
 def instagram():
@@ -180,6 +197,12 @@ def main():
             "tt_views": tv.get("view_count", ""), "tt_likes": tv.get("like_count", ""), "tt_comments": tv.get("comment_count", ""),
             "tt_shares": tv.get("share_count", ""),
             "youtube_url": f"https://youtube.com/shorts/{vid}", "instagram_url": im.get("permalink", "")}
+        curve = (yt.get("retention") or {}).get(vid)
+        secs = o.get("seconds") or 0
+        row["yt_held_3s_pct"] = at_point(curve, min(1.0, 3 / secs)) if curve and secs else ""      # still watching 3 seconds in
+        row["yt_held_end_pct"] = at_point(curve, 0.95) if curve else ""                            # still watching at the end
+        av, ev = a.get("views"), a.get("engagedViews")
+        row["yt_engaged_pct"] = round(100 * ev / av) if av and ev is not None else ""             # stayed past the first seconds
         total = sum(int(row[k]) for k in ("yt_views", "ig_views", "tt_views") if str(row[k]).strip() not in ("", "None"))
         row["all_views"] = total
         row["views_per_hour"] = round(row["yt_views"] / hours, 1) if hours else ""
@@ -269,6 +292,17 @@ def insights(rows, s):
             out.append(f"- {g}: {statistics.median(v):,.0f} median, {len(v)} Shorts")
         return out + [""]
     L += table("category", "category") + table("format", "format") + table("posting slot (UK)", "slot_uk")
+    held = [r for r in aged if r.get("yt_held_3s_pct") not in ("", None) and r.get("hook")]
+    if held:
+        by = sorted(held, key=lambda r: r["yt_held_3s_pct"], reverse=True)
+        line = lambda r: f"- {r['yt_held_3s_pct']}% still watching at 3s, {r.get('yt_held_end_pct', '?')}% at the end · \"{r['hook']}\" ({r['title']})"
+        if len(by) >= 7:
+            L += ["## Hooks that held viewers (share still watching 3 seconds in)"] + [line(r) for r in by[:4]]
+            L += ["## Hooks that lost them"] + [line(r) for r in by[-3:]] + [""]
+        else:
+            L += ["## Hooks, by share still watching 3 seconds in"] + [line(r) for r in by] + [""]
+    eng = [r["yt_engaged_pct"] for r in aged if r.get("yt_engaged_pct") not in ("", None)]
+    if eng: L += [f"Engaged views (stayed past the first seconds): median {statistics.median(eng):.0f}% of views.", ""]
     hooks = [r for r in aged if str(r["hook_words"]).isdigit()]
     if hooks:
         short_h = [r["yt_views"] for r in hooks if int(r["hook_words"]) <= 10]

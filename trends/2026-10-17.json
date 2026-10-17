@@ -4,18 +4,10 @@
   "GB": [
    {
     "q": "red rising",
-    "traffic": "100+",
+    "traffic": "200+",
     "news": [
      "Francis Lawrence, Paramount Team for ‘Red Rising’ Movie Adaptation (Exclusive)",
      "‘Red Rising’ Movie in the Works at Paramount With ‘Hunger Games’ Director Francis Lawrence"
-    ]
-   },
-   {
-    "q": "gaffe",
-    "traffic": "2000+",
-    "news": [
-     "Burnham invites Swinney to work together on 'deeper Scottish devolution'",
-     "Burnham just made the SNP an offer they can’t refuse"
     ]
    },
    {
@@ -27,11 +19,11 @@
     ]
    },
    {
-    "q": "kick",
+    "q": "manchester city premier league",
     "traffic": "1000+",
     "news": [
-     "Kick Events | Full Details On Kick's New Hub",
-     "Kick Launches Events Hub for Livestream Discovery and Multiview"
+     "Maresca says Haaland and team-mates will need rest",
+     "Man City v Ipswich Town: Key stats and talking points"
     ]
    },
    {
@@ -71,89 +63,73 @@
     "traffic": "100+",
     "news": [
      "Norm Macdonald: The fearless comedian whose OJ Simpson jokes got him fired",
-     "'Norm: The Tale of Norm Macdonald' Review: Judd Apatow's Netflix Doc"
-    ]
-   },
-   {
-    "q": "david fincher",
-    "traffic": "500+",
-    "news": [
-     "Fincher Exit & \"Narnia\" Reshoot Reports Emerge",
-     "David Fincher Walked Away From Netflix After Clashing With Dan Lin Over ‘Cliff Booth’ [Report]"
+     "‘Norm: The Tale of Norm Macdonald’ Review: Judd Apatow’s Juicy and Haunting Portrait of a Comedy Star as Troubled as He Was Hilarious"
     ]
    }
   ],
   "US": [
    {
-    "q": "purdue football schedule",
-    "traffic": "500+",
-    "news": [
-     "Boilers Host Ball State in Exhibition Tipoff",
-     "Purdue to honor FW great Jordan with bobblehead"
-    ]
-   },
-   {
-    "q": "lidom",
-    "traffic": "200+",
-    "news": [
-     "Lidom inicia una campaña con novedades y jugadores a seguir",
-     "Los equipos Lidom y sus metas 2026-27"
-    ]
-   },
-   {
-    "q": "weather cleveland ohio",
-    "traffic": "200+",
-    "news": [
-     "19 First Alert Weather Day: Winds continue tonight, frost late",
-     "Cleveland Guardians Game 4 first pitch forecast"
-    ]
-   },
-   {
-    "q": "jayson tatum",
-    "traffic": "1000+",
-    "news": [
-     "Paul George News: Sitting out preseason finale",
-     "Celtics announce surprise starting lineup vs. 76ers"
-    ]
-   },
-   {
-    "q": "saildrone",
-    "traffic": "500+",
-    "news": [
-     "A 1,500-pound drone sailboat sailed straight into a Category 3 hurricane 150 miles off Pensacola, crossed the eye through 65-foot waves and 103-mph gusts with its pilots in a California control room, and came out floating, hours before the storm cut power to",
-     "Local scientists used Hurricane Isaias to test new storm surge technology"
-    ]
-   },
-   {
-    "q": "kamario taylor",
-    "traffic": "200+",
-    "news": [
-     "Mississippi State QB Kamario Taylor, RB Fluff Bothwell questionable vs. LSU",
-     "2 former Arizona State quarterbacks to meet in SEC matchup. Who wins?"
-    ]
-   },
-   {
-    "q": "mike malott",
-    "traffic": "1000+",
-    "news": [
-     "Official Weigh-In Results | UFC Edmonton",
-     "LIVE! Watch UFC Edmonton Ceremonial Weigh Ins Stream | Buckley Vs. Malott"
-    ]
-   },
-   {
-    "q": "nba season opener",
-    "traffic": "200+",
-    "news": [
-     "Courtside seats for Knicks vs. 76ers on opening night are still available",
-     "What do the cheapest tickets cost to see the Knicks at MSG in 2026-27?"
-    ]
-   },
-   {
-    "q": "jax love is blind",
+    "q": "when does the nba season start",
     "traffic": "2000+",
     "news": [
-     "Love Is Blind Season 11: Jax Reveals Why She Ghosted Stew After ‘Awkward’ Reveal",
-     "'Love Is Blind' Season 11 star Jax explains why she blindsided Stew"
+     "NBC SPORTS ANNOUNCES COMMENTATOR ASSIGNMENTS FOR FIRST TWO WEEKS OF NBA COVERAGE ON NBC, PEACOCK, AND NBCSN",
+     "Top stories for NBA Tip-Off tripleheader"
+    ]
+   },
+   {
+    "q": "boca juniors - talleres",
+    "traffic": "1000+",
+    "news": [
+     "Boca confirmó el equipo para enfrentar a Talleres: vuelve Rodrigo Battaglia tras diez meses",
+     "El 11 de Boca confirmado y las pruebas de Arruabarrena pensando en Vasco"
+    ]
+   },
+   {
+    "q": "pedro martinez",
+    "traffic": "1000+",
+    "news": [
+     "Pedro Martinez Has Hilarious Shot He Throws at Yankees Fans When They Talk Smack",
+     "Pedro Martinez’s Gavin Williams ‘deceiving’ truth bomb will catch Guardians fans’ attention"
+    ]
+   },
+   {
+    "q": "nba schedule",
+    "traffic": "2000+",
+    "news": [
+     "2026-27 NBA GM Survey: 48 questions before new season",
+     "Victor Wembanyama, Spurs dominate annual NBA GM survey"
+    ]
+   },
+   {
+    "q": "james mcavoy",
+    "traffic": "500+",
+    "news": [
+     "James McAvoy Pitched A Young Captain Picard Star Trek Show: “We Nearly Did It”",
+     "Watch Star Trek fan dish about his Picard pitch (and how 'logistical issues' got in the way)"
+    ]
+   },
+   {
+    "q": "bill maher donald trump dinner",
+    "traffic": "5000+",
+    "news": [
+     "Trump hosted a dinner with – wait for it – Stephen A Smith, Kid Rock and Bill Maher",
+     "Donald Trump On Dinner With Bill Maher: “He Likes Me A Lot More Than People Understand, And I Actually Like Him”"
+    ]
+   },
+   {
+    "q": "victor webster",
+    "traffic": "200+",
+    "news": [
+     "Is Victor Webster Single or Married? The Actor’s Ex-Wife Is Also a Hallmark Star",
+     "Is Victor Webster Single or Married? The Actor’s Ex-Wife Is Also a Hallmark Star"
+    ]
+   },
+   {
+    "q": "anna paulina luna",
+    "traffic": "200+",
+    "news": [
+     "Trump's diesel deal with Putin draws bipartisan criticism from a frustrated Congress",
+     "Trump Diesel Deal Faces Fresh Challenge in Congress"
     ]
    }
   ]
@@ -168,368 +144,368 @@
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 30360248,
-    "views_per_hour": 864846
+    "views": 30441677,
+    "views_per_hour": 859062
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 9013174,
-    "views_per_hour": 559503
+    "views": 9030398,
+    "views_per_hour": 549282
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 6420664,
-    "views_per_hour": 266315
+    "views": 6471251,
+    "views_per_hour": 264777
    },
    {
     "title": "The Beekeeper 2 | Official Teaser Trailer",
     "channel": "Amazon MGM Studios",
-    "views": 8093731,
-    "views_per_hour": 242575
+    "views": 8125629,
+    "views_per_hour": 241138
    },
    {
     "title": "RAMAYANA: RISE OF A LEGEND - NEW TRAILER IN HINDI | RANBIR KAPOOR | YASH | SAI PALLAVI | SUNNY DEOL",
     "channel": "T-Series",
-    "views": 5185262,
-    "views_per_hour": 175783
+    "views": 5191199,
+    "views_per_hour": 174030
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2538962,
-    "views_per_hour": 158486
+    "views": 2551075,
+    "views_per_hour": 156017
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 3957316,
-    "views_per_hour": 146400
+    "views": 3976997,
+    "views_per_hour": 145347
    },
    {
     "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
     "channel": "IShowSpeed",
-    "views": 2446285,
-    "views_per_hour": 87931
+    "views": 2449181,
+    "views_per_hour": 86999
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 2485503,
-    "views_per_hour": 72126
+    "views": 2501039,
+    "views_per_hour": 71887
    },
    {
     "title": "Shrek 2 Remastered - Announce Trailer",
     "channel": "Mafialabs",
-    "views": 356637,
-    "views_per_hour": 48837
+    "views": 375611,
+    "views_per_hour": 49204
    },
    {
     "title": "I Secretly Joined My Hater SMP",
     "channel": "ManePear",
-    "views": 699778,
-    "views_per_hour": 46969
+    "views": 710644,
+    "views_per_hour": 46661
    },
    {
     "title": "ROBLOX SELL FRIES..",
     "channel": "Foltyn",
-    "views": 273327,
-    "views_per_hour": 44913
+    "views": 288412,
+    "views_per_hour": 44947
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1214476,
-    "views_per_hour": 39617
+    "views": 1217373,
+    "views_per_hour": 39287
    },
    {
     "title": "Minecraft, But DAMAGE = OVERPOWERED!",
     "channel": "Cash",
-    "views": 293037,
-    "views_per_hour": 32167
+    "views": 302243,
+    "views_per_hour": 32014
    },
    {
     "title": "All Steal An Egg Pets Meet Their GIRL Versions..",
     "channel": "Fuzz",
-    "views": 224043,
-    "views_per_hour": 26018
+    "views": 233340,
+    "views_per_hour": 26094
    }
   ],
   "GB-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 30360248,
-    "views_per_hour": 864846
+    "views": 30441677,
+    "views_per_hour": 859062
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2538962,
-    "views_per_hour": 158486
+    "views": 2551075,
+    "views_per_hour": 156017
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 3957316,
-    "views_per_hour": 146400
+    "views": 3976997,
+    "views_per_hour": 145347
    },
    {
     "title": "LET'S HAVE FUN 🤩 + Speed Vs. Cole Palmer ⚽️🏴󠁧󠁢󠁥󠁮󠁧󠁿🥶",
     "channel": "IShowSpeed",
-    "views": 2446285,
-    "views_per_hour": 87931
+    "views": 2449181,
+    "views_per_hour": 86999
    },
    {
     "title": "Our Worst Fishing Trip So Far...",
     "channel": "SMii7Y",
-    "views": 1907293,
-    "views_per_hour": 66021
+    "views": 1917322,
+    "views_per_hour": 65616
    },
    {
     "title": "I Secretly Joined My Hater SMP",
     "channel": "ManePear",
-    "views": 699778,
-    "views_per_hour": 46969
+    "views": 710644,
+    "views_per_hour": 46661
    },
    {
     "title": "ROBLOX SELL FRIES..",
     "channel": "Foltyn",
-    "views": 273327,
-    "views_per_hour": 44913
+    "views": 288412,
+    "views_per_hour": 44947
    },
    {
     "title": "ABSURD GUESSING RANKS (Rainbow Six Siege)",
     "channel": "Jynxzi",
-    "views": 287043,
-    "views_per_hour": 44207
+    "views": 305053,
+    "views_per_hour": 44701
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1214476,
-    "views_per_hour": 39617
+    "views": 1217373,
+    "views_per_hour": 39287
    },
    {
     "title": "Check out Star Wars Galactic Racer, might change your life",
     "channel": "zanny",
-    "views": 306821,
-    "views_per_hour": 37854
-   },
-   {
-    "title": "iShowSpeed vs Cole Palmer EA FC 1v1!",
-    "channel": "Live Speedy",
-    "views": 991519,
-    "views_per_hour": 36711
+    "views": 316581,
+    "views_per_hour": 37525
    },
    {
     "title": "Call of Duty Modern Warfare 4 Campaign Gameplay Walkthrough Part 1 - INTRO (PS5 Pro)",
     "channel": "GameRiot",
-    "views": 218055,
-    "views_per_hour": 35398
+    "views": 238056,
+    "views_per_hour": 36674
+   },
+   {
+    "title": "iShowSpeed vs Cole Palmer EA FC 1v1!",
+    "channel": "Live Speedy",
+    "views": 995758,
+    "views_per_hour": 36422
    },
    {
     "title": "Minecraft, But DAMAGE = OVERPOWERED!",
     "channel": "Cash",
-    "views": 293037,
-    "views_per_hour": 32167
+    "views": 302243,
+    "views_per_hour": 32014
    },
    {
     "title": "My PARENTS play he ate them..",
     "channel": "steak",
-    "views": 557780,
-    "views_per_hour": 28602
+    "views": 562862,
+    "views_per_hour": 28380
    },
    {
     "title": "weirdest buff ever",
     "channel": "Ken",
-    "views": 352990,
-    "views_per_hour": 26939
+    "views": 358368,
+    "views_per_hour": 26675
    }
   ],
   "US": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 30360248,
-    "views_per_hour": 864846
+    "views": 30441677,
+    "views_per_hour": 859062
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 9013174,
-    "views_per_hour": 559503
+    "views": 9030398,
+    "views_per_hour": 549282
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 6420664,
-    "views_per_hour": 266315
+    "views": 6471251,
+    "views_per_hour": 264777
    },
    {
     "title": "The Beekeeper 2 | Official Teaser Trailer",
     "channel": "Amazon MGM Studios",
-    "views": 8093731,
-    "views_per_hour": 242575
+    "views": 8125629,
+    "views_per_hour": 241138
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2538962,
-    "views_per_hour": 158486
+    "views": 2551075,
+    "views_per_hour": 156017
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 3957316,
-    "views_per_hour": 146400
+    "views": 3976997,
+    "views_per_hour": 145347
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 2485503,
-    "views_per_hour": 72126
+    "views": 2501039,
+    "views_per_hour": 71887
    },
    {
     "title": "Our Worst Fishing Trip So Far...",
     "channel": "SMii7Y",
-    "views": 1907293,
-    "views_per_hour": 66021
+    "views": 1917322,
+    "views_per_hour": 65616
    },
    {
     "title": "ROAM0120.exe",
     "channel": "Markiplier",
-    "views": 1628992,
-    "views_per_hour": 55935
+    "views": 1636346,
+    "views_per_hour": 55555
    },
    {
     "title": "Tom MacDonald - \"What America Is\"",
     "channel": "Tom MacDonald",
-    "views": 446540,
-    "views_per_hour": 54994
+    "views": 452998,
+    "views_per_hour": 53603
    },
    {
     "title": "The Chosen: Season 6 Official Trailer",
     "channel": "The Chosen",
-    "views": 1805093,
-    "views_per_hour": 52921
+    "views": 1815221,
+    "views_per_hour": 52706
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 894773,
-    "views_per_hour": 52514
+    "views": 896815,
+    "views_per_hour": 51631
    },
    {
     "title": "Shrek 2 Remastered - Announce Trailer",
     "channel": "Mafialabs",
-    "views": 356637,
-    "views_per_hour": 48837
+    "views": 375611,
+    "views_per_hour": 49204
    },
    {
     "title": "ROBLOX SELL FRIES..",
     "channel": "Foltyn",
-    "views": 273327,
-    "views_per_hour": 44913
+    "views": 288412,
+    "views_per_hour": 44947
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1214476,
-    "views_per_hour": 39617
+    "views": 1217373,
+    "views_per_hour": 39287
    }
   ],
   "US-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 30360248,
-    "views_per_hour": 864846
+    "views": 30441677,
+    "views_per_hour": 859062
    },
    {
     "title": "Save Hay Day from the Red Revenant!",
     "channel": "Hay Day",
-    "views": 2538962,
-    "views_per_hour": 158486
+    "views": 2551075,
+    "views_per_hour": 156017
    },
    {
     "title": "1000 Players Simulate End Prison in Minecraft",
     "channel": "Parrot",
-    "views": 3957316,
-    "views_per_hour": 146400
+    "views": 3976997,
+    "views_per_hour": 145347
    },
    {
     "title": "Star Wars Galactic Racer",
     "channel": "videogamedunkey",
-    "views": 1893886,
-    "views_per_hour": 66207
+    "views": 1903822,
+    "views_per_hour": 65793
    },
    {
     "title": "Our Worst Fishing Trip So Far...",
     "channel": "SMii7Y",
-    "views": 1907293,
-    "views_per_hour": 66021
+    "views": 1917322,
+    "views_per_hour": 65616
    },
    {
     "title": "ROAM0120.exe",
     "channel": "Markiplier",
-    "views": 1628992,
-    "views_per_hour": 55935
+    "views": 1636346,
+    "views_per_hour": 55555
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 1",
     "channel": "Jynxzi",
-    "views": 980169,
-    "views_per_hour": 54413
+    "views": 980616,
+    "views_per_hour": 53455
    },
    {
     "title": "They finally pushed people too far",
     "channel": "Legendary Drops",
-    "views": 548540,
-    "views_per_hour": 54249
+    "views": 557422,
+    "views_per_hour": 53380
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | w/ CLOAKZY X DRAC | SUPER WEAPON FRIGATE RUN | THICC MEN THURSDAY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 894773,
-    "views_per_hour": 52514
+    "views": 896815,
+    "views_per_hour": 51631
    },
    {
     "title": "I Secretly Joined My Hater SMP",
     "channel": "ManePear",
-    "views": 699778,
-    "views_per_hour": 46969
+    "views": 710644,
+    "views_per_hour": 46661
    },
    {
     "title": "ROBLOX SELL FRIES..",
     "channel": "Foltyn",
-    "views": 273327,
-    "views_per_hour": 44913
+    "views": 288412,
+    "views_per_hour": 44947
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1214476,
-    "views_per_hour": 39617
+    "views": 1217373,
+    "views_per_hour": 39287
    },
    {
     "title": "Call of Duty Modern Warfare 4 Campaign Gameplay Walkthrough Part 1 - INTRO (PS5 Pro)",
     "channel": "GameRiot",
-    "views": 218055,
-    "views_per_hour": 35398
+    "views": 238056,
+    "views_per_hour": 36674
    },
    {
     "title": "Minecraft, But DAMAGE = OVERPOWERED!",
     "channel": "Cash",
-    "views": 293037,
-    "views_per_hour": 32167
+    "views": 302243,
+    "views_per_hour": 32014
    },
    {
     "title": "My PARENTS play he ate them..",
     "channel": "steak",
-    "views": 557780,
-    "views_per_hour": 28602
+    "views": 562862,
+    "views_per_hour": 28380
    }
   ]
  },

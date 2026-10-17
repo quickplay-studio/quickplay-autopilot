@@ -1,0 +1,31 @@
+{
+ "updated": "2026-10-17T00:26+00:00",
+ "errors": {},
+ "youtube": {
+  "subscribers": 0,
+  "public_shorts": 8,
+  "views_all_time": 260,
+  "views_last_90_days": 0,
+  "views_measure": "engaged views"
+ },
+ "instagram": {
+  "followers": 0,
+  "posts": 0,
+  "insights_error": null
+ },
+ "tiktok": null,
+ "ypp": {
+  "subscribers_needed": 1000,
+  "shorts_views_needed_90_days": 10000000,
+  "apply_before": "2027-02-01",
+  "days_left": 107,
+  "subscribers_pct": 0.0,
+  "views_pct": 0.0,
+  "views_needed_per_day": 111111
+ },
+ "tiktok_rewards": {
+  "followers_needed": 10000,
+  "views_needed_30_days": 100000,
+  "min_video_seconds": 61
+ }
+}

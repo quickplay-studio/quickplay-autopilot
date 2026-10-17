@@ -84,7 +84,12 @@ def tt_connect():
         "client_key": os.environ["TIKTOK_CLIENT_KEY"], "client_secret": os.environ["TIKTOK_CLIENT_SECRET"],
         "code": code, "grant_type": "authorization_code", "redirect_uri": TT_REDIRECT})
     j = r.json()
-    if "access_token" not in j: raise SystemExit(f"TikTok refused the code: {j.get('error')} {j.get('error_description', '')[:200]}")
+    note = ROOT / "status" / "tiktok_connect.json"; note.parent.mkdir(exist_ok=True)
+    if "access_token" not in j:   # keep TikTok's reason where Charlie and Claude can see it (no keys or codes in it)
+        note.write_text(json.dumps({"at": NOW().isoformat(timespec="seconds"), "ok": False, "error": j.get("error"),
+                                    "description": str(j.get("error_description", ""))[:300]}, indent=1))
+        print("TikTok refused the code:", j.get("error"), j.get("error_description", "")); return
+    note.write_text(json.dumps({"at": NOW().isoformat(timespec="seconds"), "ok": True, "scopes": j.get("scope")}, indent=1))
     save("tiktok", {k: j.get(k) for k in ("access_token", "refresh_token", "open_id", "scope", "expires_in", "refresh_expires_in")}
          | {"saved": NOW().isoformat()})
     print("tiktok connected, scopes:", j.get("scope"))

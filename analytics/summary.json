@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-17T10:21+00:00",
+ "updated": "2026-10-17T11:57+00:00",
  "errors": {},
  "youtube": {
-  "subscribers": 0,
-  "public_shorts": 9,
-  "views_all_time": 513,
+  "subscribers": 1,
+  "public_shorts": 10,
+  "views_all_time": 594,
   "views_last_90_days": 0,
   "views_measure": "engaged views"
  },
@@ -19,7 +19,7 @@
   "shorts_views_needed_90_days": 10000000,
   "apply_before": "2027-02-01",
   "days_left": 107,
-  "subscribers_pct": 0.0,
+  "subscribers_pct": 0.1,
   "views_pct": 0.0,
   "views_needed_per_day": 111111
  },

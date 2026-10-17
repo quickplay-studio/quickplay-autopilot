@@ -18,39 +18,50 @@ REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callb
 # on the OAuth client (Google Cloud, Clients); the page shows the one-time code to paste into the social workflow
 OUT = ROOT / "status" / "youtube_connect.json"
 
+def now(): return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+
 def write(d):
+    """Writes the status, keeping the last code swap's result (so an error isn't wiped by the hourly link refresh)."""
     OUT.parent.mkdir(exist_ok=True)
     old = json.loads(OUT.read_text()) if OUT.exists() else {}
-    if {k: v for k, v in old.items() if k != "at"} != {k: v for k, v in d.items() if k != "at"}:
-        OUT.write_text(json.dumps(d, indent=1, ensure_ascii=False))
+    if "last_exchange" not in d and old.get("last_exchange"): d["last_exchange"] = old["last_exchange"]
+    if {k: v for k, v in old.items() if k != "at"} != d:
+        OUT.write_text(json.dumps({"at": now(), **d}, indent=1, ensure_ascii=False))
+
+def connected(t):
+    d = {"ok": True, "connected": True, "scopes": t.get("scope"), "saved": t.get("saved")}
+    if t.get("expires_at"):         # Google only sets an expiry while the app is in Testing
+        d["expires_at"] = t["expires_at"]
+        d["warning"] = "Google app is in Testing, so this sign-in expires after 7 days: publish the app (Audience, Publish app) and sign in again"
+    return d
 
 def link():
-    if social.load("youtube").get("refresh_token"):
-        write({"at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "ok": True, "connected": True}); return
+    t = social.load("youtube")
+    if t.get("refresh_token"):
+        write(connected(t)); return
     q = {"client_id": os.environ["YT_CLIENT_ID"], "redirect_uri": REDIRECT, "response_type": "code", "scope": " ".join(SCOPES),
          "access_type": "offline", "prompt": "consent", "include_granted_scopes": "true", "state": "quickplay"}
-    write({"at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"), "ok": False, "connected": False,
-           "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)})
+    write({"ok": False, "connected": False, "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)})
 
 def exchange():
     raw = os.environ.get("YT_CODE", "").strip()
     code = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("code", [raw])[0] if "code=" in raw else raw
-    r = requests.post("https://oauth2.googleapis.com/token", timeout=30, data={
+    resp = requests.post("https://oauth2.googleapis.com/token", timeout=30, data={
         "code": code, "client_id": os.environ["YT_CLIENT_ID"], "client_secret": os.environ["YT_CLIENT_SECRET"],
-        "redirect_uri": REDIRECT, "grant_type": "authorization_code"}).json()
-    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        "redirect_uri": REDIRECT, "grant_type": "authorization_code"})
+    try: r = resp.json()
+    except ValueError: r = {"error": f"HTTP {resp.status_code}", "error_description": resp.text[:200]}
     if not r.get("refresh_token"):
-        OUT.parent.mkdir(exist_ok=True)
-        OUT.write_text(json.dumps({"at": now, "ok": False, "error": r.get("error"),
-                                   "description": str(r.get("error_description", ""))[:300]}, indent=1)); return
-    tok = {"refresh_token": r["refresh_token"], "scope": r.get("scope"), "saved": now}
-    st = {"at": now, "ok": True, "connected": True, "scopes": r.get("scope")}
-    if r.get("refresh_token_expires_in"):      # only sent while the Google app is in Testing: the sign-in dies after 7 days
-        exp = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=int(r["refresh_token_expires_in"]))).isoformat(timespec="minutes")
-        tok["expires_at"] = st["expires_at"] = exp
-        st["warning"] = "Google app is in Testing, so this sign-in expires in 7 days: publish the app (Audience, Publish app) and sign in again"
+        res = {"at": now(), "ok": False, "http": resp.status_code, "error": r.get("error") or "no refresh token in the reply",
+               "description": str(r.get("error_description", ""))[:300], "code_chars": len(code)}
+        print("YouTube sign-in failed:", json.dumps(res))
+        write({"ok": False, "connected": False, "last_exchange": res}); return
+    tok = {"refresh_token": r["refresh_token"], "scope": r.get("scope"), "saved": now()}
+    if r.get("refresh_token_expires_in"):
+        tok["expires_at"] = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=int(r["refresh_token_expires_in"]))).isoformat(timespec="minutes")
     social.save("youtube", tok)
-    OUT.write_text(json.dumps(st, indent=1))
+    print("YouTube sign-in saved; scopes:", r.get("scope"), "; expires:", tok.get("expires_at", "no"))
+    write({**connected(tok), "last_exchange": {"at": tok["saved"], "ok": True}})
 
 if __name__ == "__main__":
     {"link": link, "exchange": exchange}[sys.argv[1]]()

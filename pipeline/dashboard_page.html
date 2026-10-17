@@ -1,0 +1,479 @@
+<style>
+.qp { display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+.qp h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.qp h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+.qp-lede { color: var(--color-fg-muted); margin: var(--cds-gap-xs) 0 0; max-width: 72ch; }
+.qp-lede .qp-v { color: var(--color-fg); }
+.qp-section { display: grid; gap: var(--cds-gap-md); }
+.qp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--cds-gap-md); }
+.qp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
+.qp-card, .qp-panel { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; }
+.qp-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.qp-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.qp-of { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.qp-meter { height: 6px; border-radius: 3px; background: var(--cds-chart-grid); overflow: hidden; }
+.qp-meter span { display: block; height: 100%; width: 0; border-radius: 3px; }
+.qp-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; }
+.qp-chart { position: relative; min-height: 200px; }
+.qp-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+.qp-tip .qp-tip-head { color: var(--cds-text-secondary); }
+.qp-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.qp-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.qp-tools { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; justify-content: space-between; }
+.qp-search { font: inherit; font-size: var(--cds-font-size-body); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); min-width: 0; width: min(100%, 18rem); }
+.qp-table-wrap { max-height: 34rem; overflow: auto; }
+.qp-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+.qp-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; z-index: 1; }
+.qp-table th button { all: unset; cursor: pointer; font-weight: var(--cds-font-weight-medium); }
+.qp-table th button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.qp-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+.qp-table .num { text-align: right; }
+.qp-table td.qp-title { min-width: 14rem; }
+.qp-table a { color: inherit; }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+@media (max-width: 40rem) { .qp-narrow-hide { display: none; } }
+</style>
+
+<div class="qp">
+  <header id="top">
+    <h1>Quickplay Daily stats</h1>
+    <p class="qp-lede" id="takeaway">
+      Best Short so far: <span class="qp-v" data-source="best" data-field="title" data-row="0">—</span>
+      with <span class="qp-v" data-source="best" data-field="yt_views" data-row="0">—</span> YouTube views.
+      Monetisation needs 1,000 subscribers and 10 million Shorts views in 90 days, before 1 February 2027.
+    </p>
+  </header>
+
+  <section class="qp-section" id="monetisation" aria-labelledby="h-money">
+    <h2 id="h-money">Road to monetisation (YouTube Partner Program)</h2>
+    <div class="qp-cards">
+      <div class="qp-card" id="card-subs">
+        <div class="qp-label">YouTube subscribers</div>
+        <div class="qp-big" data-source="ypp" data-field="subscribers" data-row="0">—</div>
+        <div class="qp-meter"><span id="meter-subs"></span></div>
+        <div class="qp-of">of 1,000 needed</div>
+      </div>
+      <div class="qp-card" id="card-views">
+        <div class="qp-label">Shorts views, last 90 days</div>
+        <div class="qp-big" data-source="ypp" data-field="views_90d" data-row="0">—</div>
+        <div class="qp-meter"><span id="meter-views"></span></div>
+        <div class="qp-of">of 10,000,000 needed (engaged views)</div>
+      </div>
+      <div class="qp-card" id="card-pace">
+        <div class="qp-label">Views needed per day</div>
+        <div class="qp-big" data-source="ypp" data-field="needed_per_day" data-row="0">—</div>
+        <div class="qp-of">to reach 10 million within the time left</div>
+      </div>
+      <div class="qp-card" id="card-days">
+        <div class="qp-label">Days left to apply</div>
+        <div class="qp-big" data-source="ypp" data-field="days_left" data-row="0">—</div>
+        <div class="qp-of">After 1 February 2027 new channels need 20 million</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="qp-section" id="platforms" aria-labelledby="h-platforms">
+    <h2 id="h-platforms">Across platforms</h2>
+    <div class="qp-cards">
+      <div class="qp-card" id="card-youtube">
+        <div class="qp-label">YouTube followers</div>
+        <div class="qp-big" data-source="platforms" data-field="followers" data-where="platform=YouTube">—</div>
+        <div class="qp-of"><span data-source="platforms" data-field="views" data-where="platform=YouTube">—</span> views on public Shorts</div>
+      </div>
+      <div class="qp-card" id="card-instagram">
+        <div class="qp-label">Instagram followers</div>
+        <div class="qp-big" data-source="platforms" data-field="followers" data-where="platform=Instagram">—</div>
+        <div class="qp-of"><span data-source="platforms" data-field="views" data-where="platform=Instagram">—</span> Reel views</div>
+      </div>
+      <div class="qp-card" id="card-tiktok">
+        <div class="qp-label">TikTok followers</div>
+        <div class="qp-big" data-source="platforms" data-field="followers" data-where="platform=TikTok">—</div>
+        <div class="qp-of"><span data-source="platforms" data-field="views" data-where="platform=TikTok">—</span> video views</div>
+        <p class="qp-note" id="tiktok-note" hidden>Shows here once TikTok is connected.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="qp-grid" id="trends">
+    <div class="qp-panel" id="panel-daily">
+      <h2>YouTube views per day</h2>
+      <p class="qp-note">Views each day across the channel, from YouTube Analytics (a day or two behind).</p>
+      <div class="qp-chart" id="chart-daily" data-source="yt_daily"></div>
+    </div>
+    <div class="qp-panel" id="panel-followers">
+      <h2>Followers over time</h2>
+      <p class="qp-note">Followers on each platform, taken three times a day.</p>
+      <div class="qp-legend" id="legend-followers" data-source="followers"></div>
+      <div class="qp-chart" id="chart-followers" data-source="followers"></div>
+    </div>
+  </section>
+
+  <section class="qp-grid" id="what-works">
+    <div class="qp-panel" id="panel-category">
+      <h2>What's working: by category</h2>
+      <p class="qp-note">Median YouTube views per Short in each category.</p>
+      <div class="qp-chart" id="chart-category" data-source="by_category"></div>
+    </div>
+    <div class="qp-panel" id="panel-slot">
+      <h2>What's working: by posting time</h2>
+      <p class="qp-note">Median YouTube views per Short by the time it went public (UK).</p>
+      <div class="qp-chart" id="chart-slot" data-source="by_slot"></div>
+    </div>
+  </section>
+
+  <section class="qp-section" id="shorts-section" aria-labelledby="h-shorts">
+    <div class="qp-panel" id="panel-shorts">
+      <div class="qp-tools">
+        <h2 id="h-shorts">Every Short</h2>
+        <input class="qp-search" id="shorts-search" type="search" placeholder="Search titles, categories, formats" aria-label="Search Shorts">
+      </div>
+      <p class="qp-note">Public Shorts, newest first. Click a heading to sort. Empty cells: that platform isn't connected yet or has no numbers for it.</p>
+      <div class="qp-table-wrap">
+        <table class="qp-table" id="shorts-table" data-source="shorts" data-row-key="youtube_url">
+          <thead><tr>
+            <th data-field="title"><button type="button" data-sort="title">Short</button></th>
+            <th data-field="posted_day"><button type="button" data-sort="posted">Posted</button></th>
+            <th data-field="slot_uk" class="qp-narrow-hide"><button type="button" data-sort="slot_uk">Time (UK)</button></th>
+            <th data-field="category" class="qp-narrow-hide"><button type="button" data-sort="category">Category</button></th>
+            <th data-field="format" class="qp-narrow-hide"><button type="button" data-sort="format">Format</button></th>
+            <th data-field="yt_views" class="num"><button type="button" data-sort="yt_views">YouTube views</button></th>
+            <th data-field="views_per_hour" class="num qp-narrow-hide"><button type="button" data-sort="views_per_hour">Views an hour</button></th>
+            <th data-field="yt_avg_viewed_pct" class="num qp-narrow-hide"><button type="button" data-sort="yt_avg_viewed_pct">% viewed</button></th>
+            <th data-field="yt_subs_gained" class="num qp-narrow-hide"><button type="button" data-sort="yt_subs_gained">Subs gained</button></th>
+            <th data-field="ig_views" class="num"><button type="button" data-sort="ig_views">Instagram views</button></th>
+            <th data-field="tt_views" class="num"><button type="button" data-sort="tt_views">TikTok views</button></th>
+            <th data-field="all_views" class="num"><button type="button" data-sort="all_views">All views</button></th>
+          </tr></thead>
+          <tbody id="shorts-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+// Worked-out figures. Every input is one of the two GitHub files (shorts, daily); targets are the Partner Program's own.
+dash.calc('ypp', {
+  inputs: ['daily'],
+  title: 'Monetisation progress',
+  description: 'Latest YouTube subscribers, and engaged Shorts views in the 90 days to the latest day, against 1,000 and 10 million before 1 February 2027.',
+  fn: (daily) => {
+    const snaps = daily.filter((r) => r.source === 'snapshot').sort((a, b) => (a.day < b.day ? -1 : 1));
+    const last = snaps[snaps.length - 1];
+    if (!last) return [];
+    const end = Date.parse(last.day + 'T00:00:00Z');
+    const start = new Date(end - 89 * 86400000).toISOString().slice(0, 10);
+    const views = daily
+      .filter((r) => r.source === 'youtube_daily' && r.day >= start)
+      .reduce((s, r) => s + (Number(r.yt_engaged_views_day) || Number(r.yt_views_day) || 0), 0);
+    const days_left = Math.max(0, Math.round((Date.UTC(2027, 1, 1) - end) / 86400000));
+    return [{
+      as_of: last.day,
+      subscribers: Number(last.yt_followers) || 0,
+      views_90d: views,
+      days_left,
+      needed_per_day: Math.ceil(Math.max(0, 10000000 - views) / Math.max(1, Math.min(90, days_left))),
+    }];
+  },
+});
+
+dash.calc('platforms', {
+  inputs: ['daily'],
+  title: 'Followers and views by platform',
+  description: 'The latest snapshot of followers and total views on YouTube, Instagram and TikTok.',
+  fn: (daily) => {
+    const snaps = daily.filter((r) => r.source === 'snapshot').sort((a, b) => (a.day < b.day ? -1 : 1));
+    const last = snaps[snaps.length - 1] || {};
+    const pick = (v) => (v === '' || v === undefined || v === null ? null : Number(v));
+    return [
+      { platform: 'YouTube', followers: pick(last.yt_followers), views: pick(last.yt_views_total) },
+      { platform: 'Instagram', followers: pick(last.ig_followers), views: pick(last.ig_views_total) },
+      { platform: 'TikTok', followers: pick(last.tt_followers), views: pick(last.tt_views_total) },
+    ];
+  },
+});
+
+dash.calc('yt_daily', {
+  inputs: ['daily'],
+  title: 'YouTube views per day',
+  description: "YouTube Analytics' views, engaged views and net subscribers for each day.",
+  fn: (daily) => daily
+    .filter((r) => r.source === 'youtube_daily')
+    .map((r) => ({ day: r.day, views: Number(r.yt_views_day) || 0, engaged_views: Number(r.yt_engaged_views_day) || 0, subscribers_gained: Number(r.yt_subs_gained_day) || 0 }))
+    .sort((a, b) => (a.day < b.day ? -1 : 1)),
+});
+
+dash.calc('followers', {
+  inputs: ['daily'],
+  title: 'Followers over time',
+  description: 'Followers on each platform from each day’s last snapshot.',
+  fn: (daily) => {
+    const byDay = {};
+    daily.filter((r) => r.source === 'snapshot').forEach((r) => { byDay[r.day] = r; });
+    const num = (v) => (v === '' || v === undefined || v === null ? null : Number(v));
+    return Object.keys(byDay).sort().map((day) => ({
+      day, youtube: num(byDay[day].yt_followers), instagram: num(byDay[day].ig_followers), tiktok: num(byDay[day].tt_followers),
+    }));
+  },
+});
+
+dash.calc('by_category', {
+  inputs: ['shorts'],
+  title: 'Median views by category',
+  description: 'Median YouTube views per public Short, grouped by category.',
+  fn: (shorts) => {
+    const groups = {};
+    shorts.forEach((r) => { const k = r.category || 'Not recorded'; (groups[k] = groups[k] || []).push(Number(r.yt_views) || 0); });
+    return Object.keys(groups).map((k) => {
+      const v = groups[k].slice().sort((a, b) => a - b);
+      const m = v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
+      return { category: k, shorts: v.length, median_views: m };
+    }).sort((a, b) => b.median_views - a.median_views);
+  },
+});
+
+dash.calc('by_slot', {
+  inputs: ['shorts'],
+  title: 'Median views by posting time',
+  description: 'Median YouTube views per public Short, grouped by the UK time it went public.',
+  fn: (shorts) => {
+    const groups = {};
+    shorts.forEach((r) => { const k = r.slot_uk || 'Not recorded'; (groups[k] = groups[k] || []).push(Number(r.yt_views) || 0); });
+    return Object.keys(groups).map((k) => {
+      const v = groups[k].slice().sort((a, b) => a - b);
+      const m = v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
+      return { slot: k, shorts: v.length, median_views: m };
+    }).sort((a, b) => (a.slot < b.slot ? -1 : 1));
+  },
+});
+
+dash.calc('best', {
+  inputs: ['shorts'],
+  title: 'Best Short so far',
+  description: 'The public Short with the most YouTube views.',
+  fn: (shorts) => {
+    const top = shorts.slice().sort((a, b) => (Number(b.yt_views) || 0) - (Number(a.yt_views) || 0))[0];
+    return top ? [{ title: top.title, yt_views: Number(top.yt_views) || 0, category: top.category }] : [];
+  },
+});
+</script>
+
+<script>
+(() => {
+  const fmt = d3.format(',');
+  const compact = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
+  const big = (n) => (n === null || n === undefined || n === '' || !Number.isFinite(Number(n)) ? '' : (Number(n) >= 10000 ? compact.format(Number(n)) : fmt(Number(n))));
+  const plain = (n) => (n === null || n === undefined || n === '' || !Number.isFinite(Number(n)) ? '' : fmt(Number(n)));
+  const dayFmt = d3.utcFormat('%-d %b');
+  const parseDay = (s) => new Date(s + 'T00:00:00Z');
+  const ok = (id) => dash.data(id).status === 'ok';
+  const rowsOf = (id) => (ok(id) ? dash.data(id).data || [] : []);
+
+  // ---- single values ----
+  const fill = (sel, text) => document.querySelectorAll(sel).forEach((el) => { el.textContent = text; });
+  function drawValues() {
+    const y = rowsOf('ypp')[0];
+    fill('[data-source="ypp"][data-field="subscribers"]', y ? plain(y.subscribers) : '—');
+    fill('[data-source="ypp"][data-field="views_90d"]', y ? big(y.views_90d) : '—');
+    fill('[data-source="ypp"][data-field="needed_per_day"]', y ? big(y.needed_per_day) : '—');
+    fill('[data-source="ypp"][data-field="days_left"]', y ? plain(y.days_left) : '—');
+    const ms = document.getElementById('meter-subs'), mv = document.getElementById('meter-views');
+    ms.style.background = dash.colors[0]; mv.style.background = dash.colors[0];
+    ms.style.width = y ? Math.min(100, (100 * y.subscribers) / 1000) + '%' : '0';
+    mv.style.width = y ? Math.min(100, (100 * y.views_90d) / 10000000) + '%' : '0';
+
+    const p = rowsOf('platforms');
+    ['YouTube', 'Instagram', 'TikTok'].forEach((name) => {
+      const r = p.find((x) => x.platform === name);
+      fill(`[data-source="platforms"][data-field="followers"][data-where="platform=${name}"]`, r ? plain(r.followers) : '—');
+      fill(`[data-source="platforms"][data-field="views"][data-where="platform=${name}"]`, r ? plain(r.views) : '—');
+    });
+    const tt = p.find((x) => x.platform === 'TikTok');
+    document.getElementById('tiktok-note').hidden = !(ok('platforms') && (!tt || tt.followers === null));
+
+    const b = rowsOf('best')[0];
+    fill('[data-source="best"][data-field="title"]', b ? b.title : '—');
+    fill('[data-source="best"][data-field="yt_views"]', b ? plain(b.yt_views) : '—');
+  }
+
+  // ---- charts ----
+  function failed(el, id) {
+    el.replaceChildren();
+    if (dash.data(id).status === 'error') {
+      const d = document.createElement('div');
+      d.style.cssText = 'display:flex;align-items:center;justify-content:center;gap:8px;min-height:200px;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)';
+      const dot = document.createElement('span');
+      dot.style.cssText = 'width:.375rem;height:.375rem;border-radius:50%;background:var(--color-bad)';
+      d.append(dot, 'Failed to load');
+      el.append(d);
+    }
+  }
+  function tooltip(el) {
+    const t = document.createElement('div'); t.className = 'qp-tip'; t.hidden = true; el.append(t);
+    return {
+      show(x, y, head, lines) {
+        t.replaceChildren();
+        const h = document.createElement('div'); h.className = 'qp-tip-head'; h.textContent = head; t.append(h);
+        lines.forEach((l) => { const d = document.createElement('div'); d.textContent = l; t.append(d); });
+        t.hidden = false;
+        const w = t.offsetWidth, W = el.clientWidth;
+        t.style.left = Math.max(0, Math.min(W - w, x - w / 2)) + 'px';
+        t.style.top = Math.max(0, y - t.offsetHeight - 8) + 'px';
+      },
+      hide() { t.hidden = true; },
+    };
+  }
+  function axisText(sel) {
+    sel.attr('font-size', null).attr('font-family', null);
+    sel.selectAll('text').style('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)');
+    sel.selectAll('line').style('stroke', 'var(--cds-chart-grid)');
+    sel.select('.domain').remove();
+  }
+
+  function drawDaily() {
+    const el = document.getElementById('chart-daily');
+    if (!ok('yt_daily')) return failed(el, 'yt_daily');
+    el.replaceChildren();
+    const rows = rowsOf('yt_daily');
+    if (!rows.length) return;
+    const W = Math.max(280, el.clientWidth), H = 200, m = { t: 10, r: 8, b: 24, l: 8 };
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'YouTube views per day');
+    const maxY = d3.max(rows, (r) => r.views) || 1;
+    const y = d3.scaleLinear([0, maxY], [H - m.b, m.t]).nice();
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)').text(fmt(y.domain()[1]));
+    m.l = Math.ceil(probe.node().getComputedTextLength()) + 10; probe.remove();
+    const x = d3.scaleBand(rows.map((r) => r.day), [m.l, W - m.r]).padding(0.25);
+    const ga = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r)).tickFormat(fmt));
+    axisText(ga); ga.selectAll('text').attr('x', -6);
+    const every = Math.max(1, Math.ceil(rows.length / Math.max(2, Math.floor((W - m.l) / 70))));
+    const gx = svg.append('g').attr('transform', `translate(0,${H - m.b})`)
+      .call(d3.axisBottom(x).tickValues(rows.map((r) => r.day).filter((d, i) => i % every === 0)).tickFormat((d) => dayFmt(parseDay(d))).tickSize(0).tickPadding(8));
+    axisText(gx);
+    const tip = tooltip(el);
+    svg.append('g').selectAll('rect').data(rows).join('rect')
+      .attr('x', (r) => x(r.day)).attr('width', x.bandwidth()).attr('y', (r) => y(r.views)).attr('height', (r) => Math.max(0, y(0) - y(r.views)))
+      .attr('rx', Math.min(4, x.bandwidth() / 2)).style('fill', dash.colors[0])
+      .on('mousemove', (event, r) => {
+        const [px] = d3.pointer(event, el);
+        tip.show(px, y(r.views), dayFmt(parseDay(r.day)), [`${fmt(r.views)} views`, `${fmt(r.engaged_views)} engaged views`, `${r.subscribers_gained >= 0 ? '+' : ''}${fmt(r.subscribers_gained)} subscribers`]);
+      })
+      .on('mouseleave', () => tip.hide());
+  }
+
+  function drawFollowers() {
+    const el = document.getElementById('chart-followers'), legend = document.getElementById('legend-followers');
+    if (!ok('followers')) { legend.replaceChildren(); return failed(el, 'followers'); }
+    el.replaceChildren(); legend.replaceChildren();
+    const rows = rowsOf('followers');
+    if (!rows.length) return;
+    const series = [['youtube', 'YouTube'], ['instagram', 'Instagram'], ['tiktok', 'TikTok']]
+      .map(([k, name], i) => ({ k, name, color: dash.colors[i], pts: rows.filter((r) => r[k] !== null && r[k] !== undefined).map((r) => ({ d: parseDay(r.day), v: r[k], day: r.day })) }))
+      .filter((s) => s.pts.length);
+    if (!series.length) return;
+    series.forEach((s) => {
+      const item = document.createElement('span'); const sw = document.createElement('i'); sw.style.background = s.color;
+      const last = s.pts[s.pts.length - 1];
+      item.append(sw, `${s.name} ${fmt(last.v)}`); legend.append(item);
+    });
+    const W = Math.max(280, el.clientWidth), H = 200, m = { t: 10, r: 12, b: 24, l: 8 };
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Followers over time');
+    const all = series.flatMap((s) => s.pts);
+    const y = d3.scaleLinear([0, Math.max(10, d3.max(all, (p) => p.v) || 0)], [H - m.b, m.t]).nice();
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)').text(fmt(y.domain()[1]));
+    m.l = Math.ceil(probe.node().getComputedTextLength()) + 10; probe.remove();
+    const ext = d3.extent(all, (p) => p.d);
+    if (+ext[0] === +ext[1]) ext[1] = new Date(+ext[0] + 86400000);
+    const x = d3.scaleUtc(ext, [m.l, W - m.r]);
+    const ga = svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r)).tickFormat(fmt));
+    axisText(ga); ga.selectAll('text').attr('x', -6);
+    const gx = svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - m.l) / 80))).tickFormat(dayFmt).tickSize(0).tickPadding(8));
+    axisText(gx);
+    const line = d3.line().x((p) => x(p.d)).y((p) => y(p.v));
+    series.forEach((s) => {
+      svg.append('path').datum(s.pts).attr('d', line).style('fill', 'none').style('stroke', s.color).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+      const last = s.pts[s.pts.length - 1];
+      svg.append('circle').attr('cx', x(last.d)).attr('cy', y(last.v)).attr('r', 3).style('fill', s.color);
+    });
+  }
+
+  function hbars(elId, id, labelKey, valueLabel) {
+    const el = document.getElementById(elId);
+    if (!ok(id)) return failed(el, id);
+    el.replaceChildren();
+    const rows = rowsOf(id);
+    if (!rows.length) return;
+    const W = Math.max(280, el.clientWidth), rowH = 30, H = rows.length * rowH + 6;
+    el.style.minHeight = H + 'px';
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', valueLabel);
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { probe.text(r[labelKey]); lw = Math.max(lw, probe.node().getComputedTextLength()); });
+    probe.text('0,000,000'); const vw = probe.node().getComputedTextLength() + 12; probe.remove();
+    lw = Math.min(Math.ceil(lw) + 10, W * 0.42);
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => r.median_views) || 1], [0, Math.max(10, W - lw - vw)]);
+    const tip = tooltip(el);
+    const g = svg.selectAll('g.qp-row').data(rows).join('g').attr('class', 'qp-row').attr('transform', (d, i) => `translate(0,${i * rowH + 3})`);
+    g.append('text').attr('x', lw - 8).attr('y', 17).attr('text-anchor', 'end').style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg)').text((r) => r[labelKey]);
+    g.append('rect').attr('x', lw).attr('y', 6).attr('height', 16).attr('rx', 4).attr('width', (r) => Math.max(2, x(r.median_views))).style('fill', (r, i) => (i === 0 ? dash.colors[0] : 'var(--cds-chart-muted)'))
+      .on('mousemove', (event, r) => { const [px, py] = d3.pointer(event, el); tip.show(px, py, r[labelKey], [`${fmt(r.median_views)} median views`, `${r.shorts} Short${r.shorts === 1 ? '' : 's'}`]); })
+      .on('mouseleave', () => tip.hide());
+    g.append('text').attr('x', (r) => lw + Math.max(2, x(r.median_views)) + 6).attr('y', 17).style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg-muted)').text((r) => fmt(r.median_views));
+  }
+
+  // ---- table ----
+  const COLS = ['title', 'posted', 'slot_uk', 'category', 'format', 'yt_views', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views'];
+  const NUM = new Set(['yt_views', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views']);
+  const HIDE = new Set(['slot_uk', 'category', 'format', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained']);
+  let sortKey = 'posted', sortDir = -1, query = '';
+  const search = document.getElementById('shorts-search');
+  search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); drawTable(); });
+  document.querySelectorAll('#shorts-table th button').forEach((btn) => btn.addEventListener('click', () => {
+    const k = btn.dataset.sort;
+    if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = NUM.has(k) || k === 'posted' ? -1 : 1; }
+    drawTable();
+  }));
+  const val = (r, k) => (NUM.has(k) ? (r[k] === '' || r[k] === undefined ? -Infinity : Number(r[k])) : String(r[k] || ''));
+  function drawTable() {
+    const body = document.getElementById('shorts-body');
+    document.querySelectorAll('#shorts-table th').forEach((th) => {
+      const k = th.querySelector('button').dataset.sort;
+      th.setAttribute('aria-sort', k === sortKey ? (sortDir > 0 ? 'ascending' : 'descending') : 'none');
+    });
+    if (!ok('shorts')) { body.replaceChildren(); return; }
+    const rows = rowsOf('shorts')
+      .filter((r) => !query || [r.title, r.category, r.format].join(' ').toLowerCase().includes(query))
+      .sort((a, b) => { const A = val(a, sortKey), B = val(b, sortKey); return (A < B ? -1 : A > B ? 1 : 0) * sortDir; });
+    body.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.youtube_url;
+      COLS.forEach((k) => {
+        const td = document.createElement('td');
+        if (NUM.has(k)) td.className = 'num';
+        if (HIDE.has(k)) td.classList.add('qp-narrow-hide');
+        if (k === 'title') {
+          td.classList.add('qp-title');
+          const a = document.createElement('a'); a.href = r.youtube_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = r.title; td.append(a);
+        } else if (k === 'posted') {
+          td.textContent = r.posted_day ? dayFmt(parseDay(r.posted_day)) : '';
+        } else if (k === 'yt_avg_viewed_pct') {
+          td.textContent = r[k] === '' || r[k] === undefined ? '' : `${r[k]}%`;
+        } else if (NUM.has(k)) {
+          td.textContent = plain(r[k]);
+        } else {
+          td.textContent = r[k] || '';
+        }
+        tr.append(td);
+      });
+      return tr;
+    }));
+  }
+
+  dash.onData(() => {
+    drawValues();
+    drawDaily();
+    drawFollowers();
+    hbars('chart-category', 'by_category', 'category', 'Median views by category');
+    hbars('chart-slot', 'by_slot', 'slot', 'Median views by posting time');
+    drawTable();
+  });
+})();
+</script>

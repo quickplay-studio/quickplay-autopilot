@@ -1,5 +1,5 @@
 {
- "daily_limit": 6,
+ "daily_limit": 10,
  "per_session": 6,
  "slot_first": "09:00",
  "slot_every_minutes": 150,
@@ -25,7 +25,7 @@
  "first_id": 29,
  "approval": "all",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Uploads a day are capped by two limits: YouTube's channel limit (10 a day until the channel has Advanced features) and the YouTube Data API quota (10,000 units a day; one upload costs 1,600, so 6 uploads). After the quota extension and Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20.",
+ "note": "Two limits cap uploads. YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (daily_limit counts it). The YouTube Data API quota: 10,000 units a day (resets 08:00 UK), one upload costs 1,600, so 6 a day; per_session 6 matches it, and anything over waits for the reset. After the quota extension and Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20, and a second writer run at 12:50.",
  "tiktok_mode": "inbox",
  "tiktok_max_age_hours": 24
 }

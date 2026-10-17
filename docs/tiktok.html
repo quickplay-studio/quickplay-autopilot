@@ -15,7 +15,7 @@ document.getElementById('go').onclick = () => {
   const state = Math.random().toString(36).slice(2);
   const u = new URL('https://www.tiktok.com/v2/auth/authorize/');
   u.searchParams.set('client_key', CLIENT_KEY);
-  u.searchParams.set('scope', 'user.info.basic,video.upload,video.publish');
+  u.searchParams.set('scope', 'user.info.basic,user.info.profile,user.info.stats,video.list,video.upload,video.publish');
   u.searchParams.set('response_type', 'code');
   u.searchParams.set('redirect_uri', REDIRECT);
   u.searchParams.set('state', state);

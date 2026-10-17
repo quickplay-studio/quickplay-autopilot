@@ -45,6 +45,22 @@ def main():
             lines.append(f"- [{r['title']}](https://youtube.com/shorts/{r['video']}): {r['flag']}")
         lines.append("")
 
+    ready = sorted((ROOT / "boards" / "ready").glob("*.json"))
+    if ready:
+        lines += ["## Waiting for your approval", "",
+                  "Reply to the daily message (\"approve all\", \"approve all except QD-032\", \"reject QD-032\"), or on GitHub: "
+                  "Actions, publish, Run workflow, and type the same.", ""]
+        by_id = {s["id"]: s for s in statuses}
+        for p in ready:
+            b = load(p) or {}; s = by_id.get(b.get("id"), {})
+            bits = [s.get("state", "rendering")]
+            if s.get("qa", {}).get("duration"): bits.append(f"{s['qa']['duration']:.0f} s")
+            if s.get("preview_url"): bits.append(f"[watch preview]({s['preview_url']})")
+            lines += [f"### {b.get('id', p.stem)} · {b.get('meta', {}).get('title', '')}", " · ".join(bits)]
+            for f in s.get("flags", []): lines.append(f"- {f}")
+            lines.append("")
+            if (ROOT / "review" / f"{b.get('id')}.jpg").exists(): lines += [f"![{b.get('id')}]({b.get('id')}.jpg)", ""]
+
     queued = sorted((ROOT / "boards" / "queue").glob("*.json"))
     waiting = {s["id"]: s for s in statuses if s.get("state", "").startswith("waiting")}
     if queued:

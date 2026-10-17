@@ -6,8 +6,13 @@ Rules (numbers live in config.json)
 - Slots: slots_per_day a day, from slot_first, every slot_every_minutes (UK time). A slot already taken is never reused.
 - A Short goes to the first free slot at least lead_hours away (time to render and process).
 - A board may fix its slot with "publish_at": "YYYY-MM-DD HH:MM" (UK time), or set "mode": "private"
-  (test upload, not scheduled) or "mode": "none" (render only).
+  (test upload, not scheduled), "mode": "none" (render only) or "mode": "dry" (rendered and held for approval like a real
+  Short, but never uploaded: tests the approval path).
 - A board that fails pipeline/validate.py is not rendered: it goes to boards/failed with the reasons.
+- Approval (config "approval"): "all" = every Short waits for Charlie's OK after rendering; "flagged" = only Shorts with a
+  reason to look (the writer's "flag", validator warnings, or render checks) wait; "none" = nothing waits.
+  Waiting Shorts are rendered but not uploaded, so they don't use the daily upload limit; pipeline/publish.py uploads
+  them once approved.
 """
 import datetime as dt, json, os, pathlib, sys
 from zoneinfo import ZoneInfo
@@ -25,29 +30,31 @@ def day_slots(day):
     step = dt.timedelta(minutes=int(CFG.get("slot_every_minutes", 90)))
     return [(first + step * i).astimezone(dt.timezone.utc) for i in range(int(CFG.get("slots_per_day", 10)))]
 
-def main():
-    queue = sorted((ROOT / "boards" / "queue").glob("*.json"))
-    if not queue:
-        print("boards=[]"); return
-    import youtube as Y, validate as V
-    now = dt.datetime.now(dt.timezone.utc)
-    # Uploads in the last 24 hours: ours come from status files (exact upload time). YouTube only gives a reliable upload
-    # time for videos that are still private (once public, the playlist date becomes the publish time), so other
-    # private uploads are added from the channel; anything else is caught by YouTube's own limit error.
+def schedule_state(now, yt=None):
+    """(taken slots, uploads in the last 24 hours, YouTube reachable). Our uploads come from status files (exact upload
+    time). YouTube only gives a reliable upload time for videos that are still private (once public, the playlist date
+    becomes the publish time), so other private uploads are added from the channel; anything else is caught by YouTube's
+    own limit error."""
+    import youtube as Y
     taken, recent, online = set(), 0, Y.available()
-    statuses = [json.loads(s.read_text()) for s in (ROOT / "status").glob("*.json") if s.name != "channel.json"]
+    statuses = []
+    for f in (ROOT / "status").glob("*.json"):
+        if f.name == "channel.json": continue
+        try: statuses.append(json.loads(f.read_text()))
+        except Exception: pass
     ours = {st.get("video") for st in statuses if st.get("video")}
     for st in statuses:
         if st.get("publish_at"): taken.add(Y.utc(st["publish_at"]))
         up = Y.utc(st.get("uploaded_at"))
         if up and now - up < dt.timedelta(hours=24): recent += 1
     if online:
-        for v in Y.recent_videos(Y.client()):
+        for v in Y.recent_videos(yt or Y.client()):
             if v["publish_at"]: taken.add(Y.utc(v["publish_at"]))
             up = Y.utc(v["uploaded"])
             if v["id"] not in ours and v["privacy"] != "public" and up and now - up < dt.timedelta(hours=24): recent += 1
-    capacity = max(0, LIMIT - recent)
+    return taken, recent, online
 
+def slot_picker(now, taken):
     def next_slot():
         day = (now + LEAD).astimezone(UK).date()
         for _ in range(60):
@@ -56,30 +63,52 @@ def main():
                     taken.add(t); return t
             day += dt.timedelta(days=1)
         raise RuntimeError("no free slot in the next 60 days")
+    return next_slot
+
+def hold_reasons(b, warnings):
+    """Why this Short should wait for Charlie's approval (empty list: it can go out on its own)."""
+    mode = CFG.get("approval", "flagged")
+    if mode == "none": return []
+    out = ["approval is on for every Short (config.json)"] if mode == "all" else []
+    if b.get("flag"): out.append(f"writer: {b['flag']}")
+    out += [f"check: {w}" for w in warnings]
+    return out
+
+def main():
+    queue = sorted((ROOT / "boards" / "queue").glob("*.json"))
+    if not queue:
+        print("boards=[]"); return
+    import validate as V
+    now = dt.datetime.now(dt.timezone.utc)
+    taken, recent, online = schedule_state(now)
+    capacity = max(0, LIMIT - recent)
+    next_slot = slot_picker(now, taken)
 
     jobs, uploads = [], 0
     for p in queue:
         try: b = json.loads(p.read_text())
         except Exception: b = {"id": p.stem}
-        errs = V.check(b, p)[0] if "beats" in b else ["not a valid board"]
+        errs, warns = V.check(b, p) if "beats" in b else (["not a valid board"], [])
         if errs:
             jobs.append({"board": str(p.relative_to(ROOT)), "id": b.get("id", p.stem), "slot": "", "mode": "reject",
                          "errors": "; ".join(errs)[:900]})
             continue
         mode = b.get("mode", "schedule")
         if mode in ("schedule", "private") and not online: mode = "none"
-        if mode != "none":
+        hold = hold_reasons(b, warns) if mode != "none" else []
+        if mode == "dry" and not hold: hold = ["dry run: always waits for approval, never uploaded"]
+        if mode != "none" and not hold:
             if uploads >= capacity: continue
             uploads += 1
         slot = ""
-        if mode == "schedule":
+        if mode == "schedule" and not hold:
             t = None
             if b.get("publish_at"):
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
             slot = (t or next_slot()).isoformat().replace("+00:00", "Z")
-        jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode})
+        jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold})
     print(f"online={online} limit={LIMIT} capacity={capacity} recent_uploads={recent} queued={len(queue)} running={len(jobs)}",
           file=sys.stderr)
     print("boards=" + json.dumps(jobs, ensure_ascii=False))

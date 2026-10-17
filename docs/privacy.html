@@ -9,8 +9,8 @@
 <h2>What it accesses</h2>
 <ul>
 <li>YouTube: uploads and schedules videos on the owner's own channel (upload scope), reads the channel's own video details (read-only scope) and its own YouTube Analytics reports (read-only scope).</li>
-<li>TikTok: the owner's basic profile information (user.info.basic) and posting the channel's own videos to the owner's own TikTok account or its inbox (video.upload, video.publish).</li>
-<li>Instagram: the owner's basic professional account information (instagram_business_basic) and publishing the channel's own Reels (instagram_business_content_publish).</li>
+<li>TikTok: the owner's profile information and public statistics (user.info.basic, user.info.profile, user.info.stats), the list and view counts of the account's own videos (video.list), and posting the channel's own videos to the owner's own TikTok account or its inbox (video.upload, video.publish).</li>
+<li>Instagram: the owner's basic professional account information (instagram_business_basic), publishing the channel's own Reels (instagram_business_content_publish) and reading the statistics of its own posts (instagram_business_manage_insights).</li>
 </ul>
 <h2>What it stores</h2>
 <p>Sign-in tokens are stored only as encrypted secrets, or as files encrypted with a key held in those secrets, in the owner's GitHub repository. Statistics about the owner's own channel may be saved there to plan videos. No data about any other person is collected, sold or shared.</p>

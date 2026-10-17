@@ -9,7 +9,7 @@ import datetime as dt, json, pathlib, re, sys, urllib.parse
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"}
 VISUALS = {"none", "title", "stat", "cards", "quote", "date", "versus", "timeline", "bars"}
-MODES = {"schedule", "private", "none"}
+MODES = {"schedule", "private", "none", "dry"}
 SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+)$")
 DASH = re.compile("[—–]")
 # Clear signs of an excluded topic: the board is rejected.
@@ -34,7 +34,7 @@ def _catalog():
 
 def _ids_elsewhere(path):
     out = {}
-    for d in ("queue", "done", "failed", "hold"):
+    for d in ("queue", "ready", "done", "failed", "hold", "rejected"):
         for p in (ROOT / "boards" / d).glob("*.json"):
             if path and p.resolve() == pathlib.Path(path).resolve(): continue
             try: out[json.loads(p.read_text()).get("id")] = p
@@ -87,9 +87,16 @@ def check(b, path=None):
     if not 1 <= len(title) <= 70: e.append("meta.title: 1 to 70 characters")
     if not EMOJI.search(title[-2:]): e.append("meta.title: end with one emoji")
     if not (m.get("summary") or "").strip(): e.append("meta.summary: 1 to 2 sentences")
-    tags = m.get("hashtags") or []
-    if "#Shorts" not in tags or not 4 <= len(tags) <= 5 or any(not t.startswith("#") or " " in t for t in tags):
-        e.append("meta.hashtags: 3 to 4 hashtags plus #Shorts, no spaces")
+    tags = [t for t in (m.get("hashtags") or []) if str(t).lower() != "#shorts"]
+    bad_tags = [t for t in tags if not re.fullmatch(r"#\w{2,40}", str(t))]
+    if bad_tags: e.append(f"meta.hashtags: letters, numbers and _ only, after one #: {bad_tags[:3]}")
+    if len({str(t).lower() for t in tags}) != len(tags): e.append("meta.hashtags: duplicates")
+    if not 8 <= len(tags) <= 15: e.append(f"meta.hashtags: {len(tags)} given, needs 8 to 15 (most relevant first; #Shorts is added for YouTube)")
+    kw = m.get("tags") or []
+    if not isinstance(kw, list) or any(not isinstance(t, str) or not t.strip() for t in kw):
+        e.append("meta.tags: a list of search phrases")
+    elif len(kw) < 5: w.append("meta.tags: add 5 to 15 search phrases (YouTube's tags field)")
+    if b.get("flag") is not None and not str(b.get("flag")).strip(): e.append("flag: one line saying why, or leave it out")
     srcs = m.get("sources") or []
     bad = [s for s in srcs if not (isinstance(s, list) and len(s) == 2 and str(s[1]).startswith("https://"))]
     if bad: e.append("meta.sources: each one [title, https url]")

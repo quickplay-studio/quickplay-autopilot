@@ -122,13 +122,18 @@ def tt_post(t, path, caption, mode):
     return d["publish_id"]
 
 # ---------- what to post ----------
-def caption(st, board):
+def caption(st, board, platform="instagram"):
+    """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp."""
     m = (board or {}).get("meta", {})
-    tags = " ".join(h for h in m.get("hashtags", []) if h.lower() != "#shorts")
-    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), (tags + " #fyp").strip()) if x)
+    tags, seen = [], set()
+    for h in m.get("hashtags", []):
+        if h.lower() in seen or h.lower() == "#shorts": continue
+        seen.add(h.lower()); tags.append(h)
+    tags = tags[:5] if platform == "instagram" else tags[:7] + ["#fyp"]
+    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), " ".join(tags)) if x)
 
 def board_for(st):
-    for d in ("done", "queue", "hold"):
+    for d in ("done", "ready", "queue", "hold"):
         p = ROOT / "boards" / d / f"{st['id']}.json"
         if p.exists(): return json.loads(p.read_text())
     return None
@@ -152,18 +157,26 @@ def post():
         st = json.loads(sp.read_text())
         if not st.get("video") or not st.get("social_release") or not st.get("publish_at"): continue
         public_at = dt.datetime.fromisoformat(st["publish_at"].replace("Z", "+00:00"))
-        if public_at > NOW(): continue   # not public on YouTube yet
-        fresh = (NOW() - public_at).total_seconds() / 3600 <= tt_max_age
-        want_ig = bool(ig) and not st.get("instagram")
-        want_tt = bool(tt) and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
+        public = public_at <= NOW()
+        # TikTok drafts go out as soon as the Short is scheduled (config tiktok_when "uploaded"), so Charlie can post them
+        # in one go with the captions from the morning message; or when it goes public on YouTube ("public").
+        tt_now = public or CFG.get("tiktok_when", "uploaded") == "uploaded"
+        if not (public or tt_now): continue
+        since = public_at if CFG.get("tiktok_when", "uploaded") == "public" else \
+            dt.datetime.fromisoformat((st.get("uploaded_at") or st["publish_at"]).replace("Z", "+00:00"))
+        fresh = (NOW() - since).total_seconds() / 3600 <= tt_max_age
+        want_ig = bool(ig) and public and not st.get("instagram")
+        want_tt = bool(tt) and tt_now and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt): continue
         rel = st["social_release"]; work = ROOT / "social_tmp"; work.mkdir(exist_ok=True)
         if gh("release", "download", rel, "-p", "social.mp4", "-D", str(work), "--clobber", check=False).returncode:
             st["social_error"] = "release missing"; sp.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
-        mp4, cap, b = work / "social.mp4", caption(st, board_for(st)), board_for(st)
+        b = board_for(st); mp4 = work / "social.mp4"
         if want_tt:
             try:
+                cap = caption(st, b, "tiktok")
                 st["tiktok"] = {"publish_id": tt_post(tt, mp4, cap, mode), "mode": mode, "at": NOW().isoformat(timespec="seconds")}
+                if mode == "inbox": st["tiktok"]["caption"] = cap     # drafts can't carry a caption: Charlie pastes this one
                 st.pop("tiktok_error", None)
             except Exception as e:
                 st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
@@ -172,10 +185,10 @@ def post():
             try:
                 gh("release", "edit", rel, "--draft=false")
                 url = f"https://github.com/{REPO}/releases/download/{rel}/social.mp4"
-                st["instagram"] = {"media": ig_post(ig, url, cap), "at": NOW().isoformat(timespec="seconds")}
+                st["instagram"] = {"media": ig_post(ig, url, caption(st, b, "instagram")), "at": NOW().isoformat(timespec="seconds")}
                 st.pop("instagram_error", None)
             except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
-        if not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"public for over {tt_max_age:g} hours before TikTok could take it"
+        if tt and not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
         if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or not ig):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:
@@ -209,7 +222,7 @@ def check():
         ck = os.environ.get("TIKTOK_CLIENT_KEY", "")
         out["tiktok"] = {"ok": False, "error": "not connected yet" if ck else "not connected (TIKTOK_CLIENT_KEY secret missing)"}
         if ck:   # the client key is public by design (it is part of every sign-in link)
-            q = {"client_key": ck, "scope": "user.info.basic,video.upload,video.publish", "response_type": "code",
+            q = {"client_key": ck, "scope": "user.info.basic,user.info.profile,user.info.stats,video.list,video.upload,video.publish", "response_type": "code",
                  "redirect_uri": TT_REDIRECT, "state": hashlib.sha1(NOW().isoformat().encode()).hexdigest()[:12]}
             out["tiktok"]["connect_url"] = "https://www.tiktok.com/v2/auth/authorize/?" + requests.compat.urlencode(q)
     else:

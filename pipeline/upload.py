@@ -17,11 +17,17 @@ def main(root):
         if not st_path.exists(): continue
         st = json.loads(st_path.read_text())
         up = res / "upload.json"
-        if st.get("state") != "rendered" or not up.exists() or st.get("mode") not in ("schedule", "private"):
+        if st.get("state") != "rendered" or not up.exists() or st.get("mode") not in ("schedule", "private", "dry"):
             if st.get("state") == "rendered": st["state"] = "rendered (no upload)"
             st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
         u = json.loads(up.read_text())
         dup = on_channel.get(u["title"].strip().lower())
+        if u.get("flags") and not dup:
+            # Waits for Charlie: kept as a preview (record.py stores it as a draft release), uploaded by publish.py once approved.
+            (res / "video.mp4").replace(res / "preview.mp4")
+            st["state"] = "awaiting approval"
+            st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False))
+            print(st["id"], "awaiting approval:", "; ".join(u["flags"])); continue
         if yt is None:
             st["state"] = "rendered (YouTube keys missing)"
         elif dup:

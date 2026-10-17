@@ -1,0 +1,58 @@
+name: publish
+# Uploads Shorts that waited for approval once Charlie approves them, and drops the ones he turns down.
+# Decisions: a text file in approvals/ (the daily session writes it when Charlie replies), or the button:
+# Actions, publish, Run workflow, type e.g. "approve all" or "approve all except QD-032".
+# Runs hourly too, to upload approved Shorts that were waiting for YouTube's daily upload limit.
+on:
+  push:
+    branches: [main]
+    paths: ['approvals/**']
+  schedule:
+    - cron: '20 * * * *'
+  workflow_dispatch:
+    inputs:
+      decision:
+        description: 'For example: approve all / approve all except QD-032 / approve QD-031 QD-033 / reject QD-032'
+        required: true
+        default: 'approve all'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Anything waiting?
+        id: check
+        run: if ls boards/ready/*.json >/dev/null 2>&1; then echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/setup-python@v5
+        if: steps.check.outputs.run == 'yes'
+        with: { python-version: '3.13' }
+      - if: steps.check.outputs.run == 'yes'
+        run: pip install -q google-api-python-client==2.* google-auth==2.* tzdata
+      - name: Publish approved Shorts
+        if: steps.check.outputs.run == 'yes'
+        env:
+          DECISION: ${{ inputs.decision }}
+          GH_TOKEN: ${{ github.token }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python pipeline/publish.py
+      - name: Save
+        if: steps.check.outputs.run == 'yes'
+        run: |
+          python pipeline/review_page.py || true
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A boards status review approvals
+          git commit -q -m "Approvals and uploads $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

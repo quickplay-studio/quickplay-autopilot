@@ -1,10 +1,10 @@
 {
- "daily_limit": 10,
- "per_session": 10,
- "slot_first": "08:30",
- "slot_every_minutes": 90,
- "slots_per_day": 10,
- "lead_hours": 3,
+ "daily_limit": 6,
+ "per_session": 6,
+ "slot_first": "09:00",
+ "slot_every_minutes": 150,
+ "slots_per_day": 6,
+ "lead_hours": 1,
  "music_moods": {
   "epic": "big cinematic reveals: film and TV news, trailers, major launches",
   "tense": "mysteries, horror, creepy games, suspense, anything with a dark twist",
@@ -23,5 +23,9 @@
   "inspiring": "records, comebacks, achievements, emotional wins"
  },
  "first_id": 29,
- "note": "YouTube allows 10 uploads a day until the channel has Advanced features. Then: daily_limit 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20."
+ "approval": "all",
+ "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
+ "note": "Uploads a day are capped by two limits: YouTube's channel limit (10 a day until the channel has Advanced features) and the YouTube Data API quota (10,000 units a day; one upload costs 1,600, so 6 uploads). After the quota extension and Advanced features: daily_limit and per_session 20, slot_first 08:00, slot_every_minutes 45, slots_per_day 20.",
+ "tiktok_mode": "inbox",
+ "tiktok_max_age_hours": 24
 }

@@ -72,8 +72,31 @@ def description(sb, credits, track):
     if vis: out += ["", "Visuals:"] + vis
     out += ["", f"Music: {track['title']} by {track['artist']} ({track.get('source', 'YouTube Audio Library')})", "",
             "Independent channel, not affiliated with the companies or people featured. Facts checked against the sources above.",
-            "", " ".join(m.get("hashtags") or ["#Shorts"])]
+            "", " ".join(hashtags_for(m, "youtube"))]
     return "\n".join(out)
+
+def hashtags_for(meta, platform):
+    """YouTube: up to 15 (it shows 3 above the title and ignores every hashtag past 60) plus #Shorts.
+    Instagram allows 5 per Reel. TikTok: 7 plus #fyp. The board lists them most relevant first."""
+    tags, seen = [], set()
+    for h in meta.get("hashtags") or []:
+        k = h.lower()
+        if k in seen or k == "#shorts": continue
+        seen.add(k); tags.append(h)
+    if platform == "youtube": return tags[:15] + ["#Shorts"]
+    if platform == "instagram": return tags[:5]
+    return tags[:7] + ["#fyp"]
+
+def youtube_tags(meta):
+    """Keyword tags for YouTube's tags field: hashtags without # first, then meta.tags, within YouTube's 500 characters."""
+    out, seen, used = [], set(), 0
+    for t in [h.lstrip("#") for h in hashtags_for(meta, "youtube")] + list(meta.get("tags") or []):
+        t = str(t).strip(); k = t.lower()
+        if not t or k in seen: continue
+        cost = len(t) + (2 if " " in t else 0) + (1 if out else 0)
+        if used + cost > 480: break
+        seen.add(k); out.append(t); used += cost
+    return out
 
 def contact_sheet(mp4, timeline, dest):
     from PIL import Image
@@ -108,7 +131,15 @@ def main():
     status["title"] = sb.get("meta", {}).get("title")
     try:
         import fetch_media
+        planned_real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or [] if not str(sh.get("src", "")).startswith("pixabay:"))
         sb = fetch_media.resolve(sb)
+        real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or []
+                   if "pixabay" not in (str(sh.get("source", "")) + str(sh.get("credit", ""))).lower())
+        flags = list(job.get("hold") or [])
+        if job["mode"] != "none" and json.loads((ROOT / "config.json").read_text()).get("approval", "flagged") != "none":
+            if real == 0: flags.append("render: no real images of the subject (all stock footage)"
+                                       + (f"; {planned_real} planned real shots could not be fetched" if planned_real else ""))
+        status["media"] = {"real_shots": real, "planned_real": planned_real}
         track = pick_music(sb); status["music"] = track["slug"]
         social = pick_social_music(sb)
         if social: status["social_music"] = social["slug"]
@@ -132,13 +163,14 @@ def main():
         meta = sb.get("meta", {})
         (res / "upload.json").write_text(json.dumps({
             "title": meta["title"], "description": description(sb, credits, track),
-            "tags": [h.lstrip("#") for h in meta.get("hashtags", [])] + meta.get("tags", []),
-            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"]},
+            "tags": youtube_tags(meta),
+            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags},
             indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
         smp4 = P / "out" / f"{sid}.social.mp4"
         if smp4.exists(): smp4.replace(res / "social.mp4")
         status["state"] = "rendered"
+        if flags: status["flags"] = flags
     except Exception as e:
         status["state"] = "failed"; status["error"] = f"{type(e).__name__}: {e}"[:600]
         traceback.print_exc()

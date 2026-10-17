@@ -16,6 +16,13 @@ def iso(t):
 
 def main(src, out):
     src, out = pathlib.Path(src), pathlib.Path(out); out.mkdir(parents=True, exist_ok=True)
+    # Today's Shorts come first: while any are queued or waiting on main, the backlog waits (they share the upload limits).
+    if subprocess.run(["git", "fetch", "-q", "--depth", "1", "origin", "main"], capture_output=True).returncode == 0:
+        names = subprocess.run(["git", "ls-tree", "-r", "--name-only", "FETCH_HEAD", "boards/queue", "boards/ready"],
+                               capture_output=True, text=True).stdout.split()
+        daily = [n for n in names if n.endswith(".json") and "/TEST-" not in n]
+        if daily:
+            print("today's Shorts first:", len(daily), "queued or waiting on main; the backlog waits"); return
     man = json.loads((src / "manifest.json").read_text())
     items, gate = man["items"], man.get("gate")
     yt = Y.client()

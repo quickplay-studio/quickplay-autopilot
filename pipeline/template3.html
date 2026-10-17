@@ -69,9 +69,23 @@ body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); 
 .bart { height: 64px; border-radius: 32px; background: var(--ink3); overflow: hidden; }
 .barf { height: 100%; border-radius: 32px; background: var(--accent); width: 0; }
 .barf.alt { background: var(--muted); }
-#caps { position: absolute; left: 60px; right: 60px; top: 1290px; height: 260px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 0 24px; text-align: center; }
+#caps { position: absolute; left: 60px; right: 60px; top: 1290px; height: 260px; display: flex; justify-content: center; align-items: center; text-align: center; }
+.capbox { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 0 24px; max-width: 100%; }
 .cw { font-family: "Archivo Black"; font-size: 86px; line-height: 1.12; text-transform: uppercase; color: #FFFFFF; -webkit-text-stroke: 12px #0B1118; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.35); display: inline-block; }
 .cw.on { color: var(--amber); }
+/* caption looks (templates/looks.json); "punch" is the plain rules above */
+body.cap-clean #caps { top: 1350px; height: 300px; }
+body.cap-clean .capbox { background: rgba(9,13,19,.84); border: 2px solid rgba(255,255,255,.12); border-radius: 30px; padding: 16px 34px 22px; gap: 0 16px; max-width: 940px; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+body.cap-clean .cw { font: 700 68px/1.2 "Inter"; text-transform: none; -webkit-text-stroke: 0; text-shadow: none; color: #F5F8FA; letter-spacing: -0.5px; }
+body.cap-clean .cw.on { color: var(--accent); }
+body.cap-pop #caps { top: 1150px; height: 360px; }
+body.cap-pop .capbox { gap: 0 30px; }
+body.cap-pop .cw { font-size: 128px; line-height: 1.04; -webkit-text-stroke: 16px #0B1118; }
+body.cap-pop .cw.on { color: var(--accent); transform: scale(1.07); }
+body.cap-boxed .capbox { gap: 14px 14px; }
+body.cap-boxed .cw { font-size: 80px; padding: 2px 20px 8px; border-radius: 16px; -webkit-text-stroke: 10px #0B1118; }
+body.cap-boxed .cw.on { background: var(--accent); color: #0B1118; -webkit-text-stroke: 0; text-shadow: none; }
+#gvig { position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 48%, rgba(0,0,0,.85) 100%); }
 .statlabel, .statsub, .tlt, .card .ct, .card .cs, .vsub, .datelabel, .datesub, .qtext, .qby { text-wrap: balance; }
 #media { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
 .mi { position: absolute; inset: 0; opacity: 0; }
@@ -94,7 +108,7 @@ body.hasmedia .card, body.hasmedia .vcol:not(.hl) { background: rgba(23,34,48,.9
 </head>
 <body>
 <div id="bg"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div id="grid"></div><div id="vignette"></div></div>
-<div id="media"></div><div id="flash"></div><div id="mdim"></div><div id="mshade"></div><div id="credit"></div>
+<div id="media"></div><div id="gvig"></div><div id="flash"></div><div id="mdim"></div><div id="mshade"></div><div id="credit"></div>
 <div id="chip"></div>
 <div id="handle"></div>
 <div id="stage"></div>
@@ -121,6 +135,10 @@ async function build(data) {
   await Promise.all([document.fonts.load('400 100px "Archivo Black"'), document.fonts.load('700 50px "Inter"'), document.fonts.load('500 40px "Inter"')]);
   D = data;
   document.documentElement.style.setProperty('--accent', D.accent);
+  const LK = D.look || {};
+  document.body.classList.add('cap-' + (LK.captions || 'punch'));
+  if (LK.filter && LK.filter !== 'none') document.getElementById('media').style.filter = LK.filter;
+  document.getElementById('gvig').style.opacity = String(LK.vignette || 0);
   document.getElementById('b1').style.cssText = `width:900px;height:900px;background:${D.accent};left:-260px;top:120px;`;
   document.getElementById('b2').style.cssText = `width:800px;height:800px;background:#FFB23F;right:-300px;top:1150px;opacity:.12;`;
   document.getElementById('chip').innerHTML = (D.icons[D.chipIcon] || '') + esc(D.category);
@@ -233,7 +251,7 @@ function renderAt(t) {
     if (m.tin === 'zoom' && t < m.t0 + 0.24) { extra = 1.22 - 0.22 * easeOut((t - m.t0) / 0.24); }
     if (m.tin === 'flash' && t >= m.t0) { flash = Math.max(flash, 0.8 * clamp(1 - (t - m.t0) / 0.2, 0, 1)); }
     const p = clamp((t - m.t0) / Math.max(0.4, m.t1 - m.t0), 0, 1), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
-    const s = (m.s0 + (m.s1 - m.s0) * e) * extra * (1 + 0.045 * punch);
+    const s = (m.s0 + (m.s1 - m.s0) * e) * extra * (1 + ((D.look && D.look.punch) || 0.045) * punch);
     if (m.W) {
       const cx = m.cx0 + (m.cx1 - m.cx0) * e, cy = m.cy0 + (m.cy1 - m.cy0) * e;
       m.f.style.transform = `translate(${540 - cx * s + tx}px, ${960 - cy * s}px) scale(${s})`;
@@ -255,7 +273,7 @@ function renderAt(t) {
   const caps = document.getElementById('caps');
   let g = D.groups.find(g => t >= g.start && t < g.end);
   if (!g) { caps.innerHTML = ''; return; }
-  caps.innerHTML = g.words.map(wi => { const w = D.words[wi]; const on = t >= w.start && t < w.end + 0.02; return `<span class="cw ${on ? 'on' : ''}">${esc(w.cap)}</span>`; }).join('');
+  caps.innerHTML = '<div class="capbox">' + g.words.map(wi => { const w = D.words[wi]; const on = t >= w.start && t < w.end + 0.02; return `<span class="cw ${on ? 'on' : ''}">${esc(w.cap)}</span>`; }).join('') + '</div>';
   const gp = easeBack((t - g.start) / 0.18);
   caps.style.transform = `scale(${0.9 + 0.1 * gp})`;
 }

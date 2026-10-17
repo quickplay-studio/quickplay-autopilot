@@ -143,17 +143,32 @@ def main():
         track = pick_music(sb); status["music"] = track["slug"]
         social = pick_social_music(sb)
         if social: status["social_music"] = social["slug"]
+        # the look (caption style, voice and pace, camera energy, colour grade): chosen by plan.py, see templates/looks.json
+        import looks as LK
+        look = LK.resolve(job.get("look") or sb.get("look"))
+        sb.update(look=look["ids"], look_render=look["render"], group=look["render"]["group"])
+        status["look"] = dict(look["ids"])
+        voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_dir=f"voice/{sid}", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
         resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
-        sh(PY, "tts_cb.py", resolved, P / "voice" / sid, "--voice", sb.get("voice", os.environ.get("QP_VOICE", "F2")))
+        for v in [voice] + (["F2"] if voice != "F2" else []):      # an unclear read in a new voice falls back to the house voice
+            sh(PY, "tts_cb.py", resolved, P / "voice" / sid, "--voice", v, "--target-wps", str(look["voice"]["wps"]))
+            man = json.loads((P / "voice" / sid / "cb_manifest.json").read_text())
+            weak = [b["beat"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4]
+            if not weak or v == "F2": break
+            print(f"voice {v}: unclear in beats {weak}, retrying with F2", flush=True)
+            status["look"]["voice"] = "george"; status["look_note"] = f"voice {v} was unclear, used george"
         sh(PY, "render3.py", resolved, P / "out")
         mp4 = P / "out" / f"{sid}.mp4"
-        man = json.loads((P / "voice" / sid / "cb_manifest.json").read_text())
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp4)],
                                    capture_output=True, text=True, check=True).stdout)
-        weak = [b["beat"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4]
         status["qa"] = {"duration": round(dur, 1), "wps": man["wps"], "weak_beats": weak, "size_mb": round(mp4.stat().st_size / 1e6, 1)}
+        try:       # when each beat starts and what's on screen, so analytics can map where viewers leave
+            tl = json.loads((P / "out" / f"{sid}.timeline.json").read_text())
+            status["timeline"] = [[round(b["start"], 2), round(b["end"], 2), (b.get("visual") or {}).get("type", "none"),
+                                   sum(1 for s in tl.get("shots", []) if b["start"] - 0.01 <= s["t0"] < b["end"])] for b in tl["beats"]]
+        except Exception as e: print("timeline not recorded:", e)
         contact_sheet(mp4, P / "out" / f"{sid}.timeline.json", res / "review.jpg")
         problems = []
         if not 12 <= dur <= 75: problems.append(f"length {dur:.0f}s")

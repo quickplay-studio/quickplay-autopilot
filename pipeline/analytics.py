@@ -52,7 +52,7 @@ def our_shorts():
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")),
-            "source": st.get("source", "pipeline")}
+            "source": st.get("source", "pipeline"), "timeline": st.get("timeline")}
     return out
 
 # ---------------- YouTube ----------------
@@ -101,6 +101,20 @@ def youtube():
         except Exception: continue
         if curve: retention[vid] = {float(r["elapsedVideoTimeRatio"]): float(r["audienceWatchRatio"]) for r in curve}
     return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily, "retention": retention}
+
+def ratio_at(curve, frac):
+    return curve[min((k for k in curve if k >= frac), default=max(curve))]
+
+def drops(curve, timeline, secs):
+    """Viewers lost per second during each beat (percentage points), skipping the first 3 seconds (swipe-aways are
+    the hook's job) and beats under a second: [(loss per second, beat index, what was on screen)]."""
+    out = []
+    for i, (b0, b1, vis, _shots) in enumerate(timeline or []):
+        b0 = max(b0, 3.0)
+        if b1 - b0 < 1.0 or not secs: continue
+        r0, r1 = ratio_at(curve, b0 / secs), ratio_at(curve, min(1.0, b1 / secs))
+        out.append((round(100 * (r0 - r1) / (b1 - b0), 2), i, vis if vis and vis != "none" else "footage"))
+    return out
 
 def at_point(curve, frac):
     """The retention ratio at a fraction of the video (the first measured point at or after it), as a percentage."""
@@ -201,6 +215,9 @@ def main():
         secs = o.get("seconds") or 0
         row["yt_held_3s_pct"] = at_point(curve, min(1.0, 3 / secs)) if curve and secs else ""      # still watching 3 seconds in
         row["yt_held_end_pct"] = at_point(curve, 0.95) if curve else ""                            # still watching at the end
+        dr = drops(curve, o.get("timeline"), secs) if curve and secs else []
+        row["yt_worst_beat"] = (lambda w: f"beat {w[1] + 1} ({w[2]}), -{w[0]} pts/s")(max(dr)) if dr else ""
+        row["_drops"] = dr
         av, ev = a.get("views"), a.get("engagedViews")
         row["yt_engaged_pct"] = round(100 * ev / av) if av and ev is not None else ""             # stayed past the first seconds
         total = sum(int(row[k]) for k in ("yt_views", "ig_views", "tt_views") if str(row[k]).strip() not in ("", "None"))
@@ -208,6 +225,8 @@ def main():
         row["views_per_hour"] = round(row["yt_views"] / hours, 1) if hours else ""
         rows.append(row)
     rows.sort(key=lambda r: r["posted"], reverse=True)
+    looks_out = look_scores(rows)
+    (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
 
     # per-day history: today's totals are appended to analytics/history.csv, so growth shows over time
     hist_p = OUT / "daily.csv"
@@ -234,7 +253,7 @@ def main():
     fields = ["day", "source", "yt_followers", "yt_views_total", "ig_followers", "ig_views_total", "tt_followers",
               "tt_views_total", "yt_views_day", "yt_engaged_views_day", "yt_subs_gained_day"]
     write_csv(hist_p, hist, fields)
-    write_csv(OUT / "shorts.csv", rows, list(rows[0].keys()) if rows else ["short", "title"])
+    write_csv(OUT / "shorts.csv", rows, [k for k in rows[0] if not k.startswith("_")] if rows else ["short", "title"])
 
     # monetisation progress
     d90 = [d for d in (yt or {}).get("daily", []) if d["day"] >= str(TODAY - dt.timedelta(days=90))]
@@ -257,6 +276,49 @@ def main():
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
     (OUT / "insights.md").write_text(insights(rows, summary))
     print(json.dumps({"shorts": len(rows), "errors": errors}, indent=1))
+
+def look_scores(rows):
+    """How each look option (templates/looks.json) does. Every Short public for 24 hours gets a score against Shorts posted
+    within 3 days of it (1.0 = typical): 40% the share still watching 3 seconds in, 40% the average % viewed, 20% views an
+    hour, using whichever are available. Each option's score is the median over the Shorts that used it."""
+    import looks as LK
+    look_by_id = {}
+    for p in (ROOT / "status").glob("QD-*.json"):
+        st = load_json(p, {})
+        if st.get("look"): look_by_id[st.get("id")] = st["look"]
+    for r in rows:
+        lk = look_by_id.get(r["short"]) or {}
+        for d in ("captions", "voice", "energy", "grade"): r[f"look_{d}"] = lk.get(d, "")
+        r["look_score"] = ""
+    aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
+    def rel(r, field):
+        v = r.get(field)
+        if v in ("", None): return None
+        t = utc(r["posted"])
+        peers = [float(x[field]) for x in aged if x.get(field) not in ("", None) and abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
+        if len(peers) < 3: return None
+        med = statistics.median(peers)
+        return float(v) / med if med else None
+    for r in aged:
+        parts = [(w, x) for w, x in ((0.4, rel(r, "yt_held_3s_pct")), (0.4, rel(r, "yt_avg_viewed_pct")), (0.2, rel(r, "views_per_hour")))
+                 if x is not None]
+        if parts: r["look_score"] = round(sum(w * x for w, x in parts) / sum(w for w, _ in parts), 3)
+    out = {"updated": NOW.isoformat(timespec="minutes"), "dimensions": {},
+           "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, "
+                  "40% average % viewed, 20% views an hour. An option's score is the median of its Shorts."}
+    try: cat = LK.catalogue()
+    except Exception: return out
+    for dim, spec in cat["dimensions"].items():
+        for opt in spec["options"]:
+            used = [r for r in aged if r.get(f"look_{dim}") == opt and r.get("look_score") != ""]
+            e = {"n": len(used)}
+            if used:
+                e["score"] = round(statistics.median(r["look_score"] for r in used), 3)
+                for k, f in (("held_3s_pct", "yt_held_3s_pct"), ("avg_viewed_pct", "yt_avg_viewed_pct")):
+                    vals = [float(r[f]) for r in used if r.get(f) not in ("", None)]
+                    if vals: e[k] = round(statistics.median(vals), 1)
+            out["dimensions"].setdefault(dim, {})[opt] = e
+    return out
 
 def write_csv(path, rows, fields):
     with open(path, "w", newline="") as f:
@@ -301,6 +363,23 @@ def insights(rows, s):
             L += ["## Hooks that lost them"] + [line(r) for r in by[-3:]] + [""]
         else:
             L += ["## Hooks, by share still watching 3 seconds in"] + [line(r) for r in by] + [""]
+    by_vis = {}
+    for r in aged:
+        for loss, _i, vis in r.get("_drops") or []: by_vis.setdefault(vis, []).append(loss)
+    if by_vis:
+        L += ["## Where viewers leave (points of audience lost per second while each kind of beat is on screen; lower is better)"]
+        L += [f"- {vis}: {statistics.median(v):.2f} ({len(v)} beats)" for vis, v in sorted(by_vis.items(), key=lambda kv: statistics.median(kv[1]))]
+        L += [""]
+    try:
+        lk = json.loads((OUT / "looks.json").read_text()).get("dimensions", {})
+        lines = []
+        for dim, opts in lk.items():
+            got = sorted(((k, v) for k, v in opts.items() if v.get("n")), key=lambda kv: -kv[1].get("score", 0))
+            if got: lines.append(f"- {dim}: " + ", ".join(f"{k} {v['score']:.2f} ({v['n']})" for k, v in got))
+        if lines:
+            L += ["## Looks (1.00 = typical for Shorts posted around the same time; Shorts measured in brackets)",
+                  "GitHub picks each Short's look and leans towards the winners by itself."] + lines + [""]
+    except Exception: pass
     eng = [r["yt_engaged_pct"] for r in aged if r.get("yt_engaged_pct") not in ("", None)]
     if eng: L += [f"Engaged views (stayed past the first seconds): median {statistics.median(eng):.0f}% of views.", ""]
     hooks = [r for r in aged if str(r["hook_words"]).isdigit()]

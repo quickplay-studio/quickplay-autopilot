@@ -104,6 +104,8 @@ def scene_fit(src, start, vis, slow):
     note = "" if st + vis / slow <= b2 + 0.01 else f"still crosses the cut at {b:.2f}s"
     return round(st, 3), round(slow, 3), note
 
+LOOK, MOTION = {}, 1.0     # set in main() from the board's look (templates/looks.json, resolved by run_board.py)
+
 def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
     from PIL import Image
     work = out_dir / f"{sid}_shots"; work.mkdir(parents=True, exist_ok=True)
@@ -129,7 +131,7 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
             if q < n: cuts.append(max(cuts[-1] + 0.35, fixed[q]))
         cuts.append(end)
         has_graphic = beat["visual"].get("type") in GRAPHIC
-        if beat.get("impact"): punches.append(round(start + 0.02, 3))
+        if beat.get("impact") or (LOOK.get("beat_punches") and bi): punches.append(round(start + 0.02, 3))
         for j, shot in enumerate(shots):
             t0, t1 = cuts[j], cuts[j + 1]
             src = (HERE / shot["src"]).resolve()
@@ -159,7 +161,7 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 it["vsrc"] = [st, slow]
                 frames = sorted(fr.glob("*.jpg"))
                 it.update(kind="video", fill=os.path.relpath(frames[0], HERE), frames=os.path.relpath(fr, HERE), count=len(frames), fps=FPS,
-                          s0=1.0, s1=1.0 + (0.05 if move != "still" else 0.0))
+                          s0=1.0, s1=1.0 + (0.05 * MOTION if move != "still" else 0.0))
                 lum = _luma(Image.open(frames[min(len(frames) - 1, len(frames) // 2)]))
             else:
                 img = Image.open(src).convert("RGB"); w, h = img.size
@@ -169,10 +171,10 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 cx, cy = fx * W, fy * H
                 def clampc(cx, cy, s):
                     return min(max(cx, 540 / s + 2), W - 540 / s - 2), min(max(cy, 960 / s + 2), H - 960 / s - 2)
-                if move == "out": s0, s1 = 1.12, 1.0
+                if move == "out": s0, s1 = 1.0 + 0.12 * MOTION, 1.0
                 elif move == "still": s0 = s1 = 1.02
                 elif move in ("left", "right", "up", "down"): s0 = s1 = 1.02
-                else: s0, s1 = 1.0, 1.11
+                else: s0, s1 = 1.0, 1.0 + 0.11 * MOTION
                 dx = min(170, (W - 1080 / s0) / 2 - 4); dy = min(150, (H - 1920 / s0) / 2 - 4)
                 c0, c1 = (cx, cy), (cx, cy)
                 if move == "left": c0, c1 = (cx + dx, cy), (cx - dx, cy)
@@ -210,6 +212,8 @@ def main():
     sb_path = pathlib.Path(sys.argv[1]); out_dir = pathlib.Path(sys.argv[2]); out_dir.mkdir(parents=True, exist_ok=True)
     sb = json.loads(sb_path.read_text())
     sid = sb["id"]; t0 = time.time()
+    global LOOK, MOTION
+    LOOK = sb.get("look_render") or {}; MOTION = float(LOOK.get("motion", 1.0))
     if sb.get("voice_engine") == "chatterbox":       # narration pre-rendered by tts_cb.py (one WAV per beat)
         import voice as V
         segs, words, beats, groups, duration = V.build_timeline_cb(
@@ -240,7 +244,7 @@ def main():
             if isinstance(it, dict) and it.get("icon"): icons.add(it["icon"])
     data = {"accent": sb.get("accent", "#2EE6C5"), "category": sb["category"], "chipIcon": sb.get("chipIcon", "trending-up"),
             "icons": R.icon_svgs(icons), "beats": beats, "words": words, "groups": groups, "duration": duration,
-            "media": items, "punches": punches}
+            "media": items, "punches": punches, "look": LOOK}
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))
     (out_dir / f"{sid}.timeline.json").write_text(json.dumps({"beats": beats, "words": words, "groups": groups, "duration": duration,
                                                               "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc')} for it in items]}, indent=1))

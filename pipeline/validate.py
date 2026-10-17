@@ -98,6 +98,17 @@ def check(b, path=None):
     elif len(kw) < 5: w.append("meta.tags: add 5 to 15 search phrases (YouTube's tags field)")
     if b.get("flag") is not None and not str(b.get("flag")).strip(): e.append("flag: one line saying why, or leave it out")
     if "tiktok" in b and not isinstance(b["tiktok"], bool): e.append("tiktok: true (one of the day's 5 TikTok picks) or false")
+    if "look" in b:            # normally left out: GitHub picks the look (templates/looks.json)
+        try:
+            cat = json.loads((ROOT / "templates" / "looks.json").read_text())["dimensions"]
+            lk = b["look"]
+            if not isinstance(lk, dict): e.append("look: an object such as {\"captions\": \"pop\"}, or leave it out")
+            else:
+                for d, v in lk.items():
+                    if d not in cat: e.append(f"look.{d}: one of {sorted(cat)}")
+                    elif v not in cat[d]["options"] or cat[d]["options"][v].get("retired"):
+                        e.append(f"look.{d}: one of {sorted(k for k, o in cat[d]['options'].items() if not o.get('retired'))}")
+        except (OSError, ValueError, KeyError): pass
     if m.get("comment") and (len(str(m["comment"])) > 100 or "http" in str(m["comment"])): e.append("meta.comment: under 100 characters, no links")
     alt = str(m.get("alt_title") or "")
     if alt and (len(alt) > 70 or not EMOJI.search(alt[-2:])): e.append("meta.alt_title: under 70 characters, one emoji at the end")

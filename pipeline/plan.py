@@ -84,6 +84,14 @@ def main():
     capacity = max(0, LIMIT - recent)
     next_slot = slot_picker(now, taken)
 
+    import looks as LK         # each new Short's look: caption style, voice, energy, grade (templates/looks.json)
+    stats, seen = LK.load_stats(), []
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: st = json.loads(sp.read_text())
+        except Exception: continue
+        if st.get("look"): seen.append((st.get("rendered", ""), st["look"]))
+    recent_looks = [lk for _, lk in sorted(seen, key=lambda x: x[0])][-5:]
+
     jobs, uploads = [], 0
     for p in queue:
         try: b = json.loads(p.read_text())
@@ -108,7 +116,9 @@ def main():
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
             slot = (t or next_slot()).isoformat().replace("+00:00", "Z")
-        jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold})
+        look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
+        recent_looks.append(look)
+        jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look})
     print(f"online={online} limit={LIMIT} capacity={capacity} recent_uploads={recent} queued={len(queue)} running={len(jobs)}",
           file=sys.stderr)
     print("boards=" + json.dumps(jobs, ensure_ascii=False))

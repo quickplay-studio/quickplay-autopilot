@@ -1,0 +1,88 @@
+{
+ "about": "How each Short looks and sounds. plan.py gives every new Short one option per dimension: mostly the options that are keeping viewers watching (analytics/looks.json), sometimes the others, so the channel keeps learning and never looks templated. The weekly review adds new options and retires weak ones (set \"retired\": \"<why>\" rather than deleting, so old results still read).",
+ "dimensions": {
+  "captions": {
+   "about": "Caption layout and type",
+   "options": {
+    "punch": {
+     "desc": "bold capitals, white with a dark outline, the spoken word turns amber, 3 words at a time, lower middle",
+     "group": 3
+    },
+    "clean": {
+     "desc": "sentence case on a dark rounded panel, the spoken word in the accent colour, up to 4 words, lower third",
+     "group": 4
+    },
+    "pop": {
+     "desc": "one or two huge words at a time near the centre, the spoken word in the accent colour and slightly bigger",
+     "group": 2
+    },
+    "boxed": {
+     "desc": "bold capitals, the spoken word sits on an accent-coloured box, 3 words at a time",
+     "group": 3
+    }
+   }
+  },
+  "voice": {
+   "about": "Narrator and pace",
+   "options": {
+    "george": {
+     "desc": "British male, clear",
+     "voice": "F2",
+     "wps": 3.0
+    },
+    "george_dramatic": {
+     "desc": "British male, more dramatic delivery",
+     "voice": "H2",
+     "wps": 3.0
+    },
+    "george_quick": {
+     "desc": "British male, clear and quicker",
+     "voice": "F2",
+     "wps": 3.3
+    },
+    "emma": {
+     "desc": "British female",
+     "voice": "G",
+     "wps": 3.0
+    }
+   }
+  },
+  "energy": {
+   "about": "Camera movement and hits",
+   "options": {
+    "steady": {
+     "desc": "gentle zooms and pans, punch-ins only on impact beats",
+     "motion": 0.8,
+     "punch": 0.04,
+     "beat_punches": false
+    },
+    "punchy": {
+     "desc": "bigger zooms, a punch-in at every new beat and harder hits",
+     "motion": 1.35,
+     "punch": 0.08,
+     "beat_punches": true
+    }
+   }
+  },
+  "grade": {
+   "about": "Colour grade on photos and footage (graphics and captions are not affected)",
+   "options": {
+    "natural": {
+     "desc": "as shot",
+     "filter": "none",
+     "vignette": 0
+    },
+    "cinematic": {
+     "desc": "a little warmer and less saturated, darker edges",
+     "filter": "contrast(1.08) saturate(0.88) sepia(0.12)",
+     "vignette": 0.6
+    },
+    "vivid": {
+     "desc": "punchier colour and contrast",
+     "filter": "contrast(1.07) saturate(1.28)",
+     "vignette": 0.25
+    }
+   }
+  }
+ }
+}

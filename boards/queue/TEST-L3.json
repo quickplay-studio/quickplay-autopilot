@@ -1,0 +1,229 @@
+{
+ "id": "TEST-L3",
+ "format": "news_explained",
+ "category": "Film",
+ "chipIcon": "swords",
+ "accent": "#EF4444",
+ "music": {
+  "mood": "action",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "The new Street Fighter movie opens in cinemas today.",
+   "visual": {
+    "type": "title",
+    "kicker": "In cinemas",
+    "lines": [
+     "Street Fighter",
+     "starts today."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:martial arts fighter",
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:cinema screen",
+     "w": 1.0
+    }
+   ],
+   "impact": true
+  },
+  {
+   "say": "It is set in 1993, and the fighters are back on the big screen.",
+   "visual": {
+    "type": "stat",
+    "value": "1993",
+    "label": "the year it is set"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:boxing ring",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Andrew Koji plays Ryu, and Noah Centineo plays Ken.",
+   "visual": {
+    "type": "versus",
+    "items": [
+     {
+      "label": "Ryu",
+      "value": "Andrew Koji"
+     },
+     {
+      "label": "Ken",
+      "value": "Noah Centineo"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:karate training",
+     "w": 1.0
+    },
+    {
+     "src": "pixabay:video:martial arts punch",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Callina Liang plays Chun-Li.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "user",
+      "t": "Chun-Li",
+      "s": "Callina Liang"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:martial arts kick",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "But here's the question. Who is behind the camera?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:film camera set",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Kitao Sakurai directs it, and it is out now.",
+   "visual": {
+    "type": "title",
+    "kicker": "Director",
+    "lines": [
+     "Kitao",
+     "Sakurai"
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:movie director clapperboard",
+     "w": 1.0
+    }
+   ],
+   "impact": true
+  },
+  {
+   "say": "Which fighter are you hoping to see most? Follow for more.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:cinema popcorn",
+     "w": 1.0
+    },
+    {
+     "src": "pixabay:video:fighting silhouette",
+     "w": 1.0
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Street Fighter hits cinemas today 🥊",
+  "summary": "The new Street Fighter film opens on 16 October, set in 1993 and starring Andrew Koji as Ryu and Noah Centineo as Ken.",
+  "hashtags": [
+   "#StreetFighter",
+   "#StreetFighterMovie",
+   "#Film",
+   "#Movies",
+   "#Cinema",
+   "#Capcom",
+   "#FightingGames",
+   "#Trending"
+  ],
+  "sources": [
+   [
+    "ABC News: Street Fighter live-action film reveals cast, release date",
+    "https://ruralradio.com/ktic/abc_news/street-fighter-liveaction-film-reveals-cast-release-date-abcid221fbf0a/"
+   ],
+   [
+    "Irish News: Andrew Koji, we were conscious of doing Street Fighter the movie for fans",
+    "https://www.irishnews.com/entertainment/andrew-koji-we-were-conscious-of-doing-street-fighter-the-movie-for-fans-UWQ3UVQL6JIQJDUKV2K5IXJ72Y/"
+   ]
+  ],
+  "facts": [
+   [
+    "The film opens in cinemas on 16 October",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "It is set in 1993",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Andrew Koji plays Ryu and Noah Centineo plays Ken",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Callina Liang plays Chun-Li",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Kitao Sakurai directs",
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "signals": {
+   "wikipedia": [
+    "Street Fighter (2026 film): 113060 daily views"
+   ]
+  },
+  "tags": [
+   "street fighter movie",
+   "street fighter film 2026",
+   "street fighter cast",
+   "capcom movie",
+   "fighting game films"
+  ]
+ },
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-17",
+ "mode": "none",
+ "look": {
+  "captions": "pop",
+  "voice": "george_quick",
+  "energy": "punchy",
+  "grade": "natural"
+ }
+}

@@ -35,7 +35,8 @@ drop what isn't.
   least 3 formats a day and never the same format twice in a row; vary hook styles and graphics; real images of the
   subject first.
 - TikTok takes only 5 drafts a day: set `"tiktok": true` on the 5 Shorts most likely to do well there (big fandoms,
-  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest.
+  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 across
+  both runs: the 12:50 run counts today's boards already marked true (queue, ready, done) and marks only the rest.
 - Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram, the first 7 to
   TikTok): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
@@ -82,10 +83,14 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
    Then TikTok: wait until the approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes).
-   - `tiktok_mode` "inbox" (now): the drafts reach his TikTok phone app by themselves. Run
-     `python pipeline/tiktok_files.py <scratch dir> --captions-only` and send ONE message with each Short's caption and
-     its YouTube time, so he can paste the caption when he posts the draft (TikTok app: Inbox, System notifications).
-   - `tiktok_mode` "manual": run it without `--captions-only`, send the video files too, for TikTok Studio on desktop.
+   - `tiktok_mode` "inbox" (now): the drafts reach his TikTok phone app by themselves and the captions go on his TikTok
+     queue page, https://claude.ai/artifact/Tc5EXtcFG77EUqvcbFKV1X (never in chat). Run
+     `python pipeline/tiktok_files.py <scratch dir> --db`, ArtifactData `list` collection "tiktok" on that page, then ONE
+     ArtifactData `batch`: `set` each printed Short not already listed (doc_id = its id, file_path = the printed file)
+     and `delete` any doc with `"example": true` (if_version = its version). Then one line to Charlie, for example
+     "TikTok: 5 drafts on their way to your inbox, captions on your TikTok queue." Don't rewrite the page.
+   - `tiktok_mode` "manual", or Charlie asks for a video TikTok refused: run it without flags and send the video files
+     and captions (for posting by hand).
 9. Refresh the stats dashboard (see Stats dashboard). Finish with one line: how many Shorts and their titles.
 
 ## Stats dashboard

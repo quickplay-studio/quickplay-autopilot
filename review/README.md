@@ -2,17 +2,7 @@
 
 YouTube checked Sat 17 Oct 13:28 (UK): 10 scheduled, 10 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 13:13).
-
-## Waiting for your approval
-
-Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
-
-### TEST-TT1 · Cyberpunk: Edgerunners 2 finally has a date 📺
-awaiting approval · 30 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-e91355b4e1e5140858a7)
-- approval is on for every Short (config.json)
-
-![TEST-TT1](TEST-TT1.jpg)
+Instagram: connected as quickplaydaily · TikTok: connected (checked Sat 17 Oct 13:28).
 
 ## On the channel (latest first)
 

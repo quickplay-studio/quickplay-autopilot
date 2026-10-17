@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-17T00:26:37+00:00",
+ "checked": "2026-10-17T12:10:47+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -18,6 +18,7 @@
  },
  "tiktok": {
   "ok": false,
-  "error": "not connected (TIKTOK_CLIENT_KEY secret missing)"
+  "error": "not connected yet",
+  "connect_url": "https://www.tiktok.com/v2/auth/authorize/?client_key=sbawqm0r1psyutf1c2&scope=user.info.basic%2Cuser.info.profile%2Cuser.info.stats%2Cvideo.list%2Cvideo.upload%2Cvideo.publish&response_type=code&redirect_uri=https%3A%2F%2Fquickplay-studio.github.io%2Fquickplay-autopilot%2Ftiktok-callback.html&state=6e58b2099ca1"
  }
 }

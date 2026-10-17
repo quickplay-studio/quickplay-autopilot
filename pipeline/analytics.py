@@ -199,7 +199,9 @@ def main():
     snap["tt_views_total"] = sum(int(v.get("view_count") or 0) for v in (tt or {}).get("videos", []))
     hist.append(snap)
     # YouTube's own daily numbers (views and subscribers gained each day) replace earlier copies of the same days
-    yt_days = {d["day"]: d for d in (yt or {}).get("daily", [])}
+    first = min((r["posted_day"] for r in rows if r["posted_day"]), default=str(TODAY))   # the channel's first Short
+    yt_days = {d["day"]: d for d in (yt or {}).get("daily", []) if d["day"] >= first}
+    hist = [h for h in hist if h["day"] >= first or h["source"] == "snapshot"]
     hist = [h for h in hist if not (h["source"] == "youtube_daily" and h["day"] in yt_days)]
     for d in yt_days.values():
         hist.append({"day": d["day"], "source": "youtube_daily", "yt_views_day": d.get("views", ""),

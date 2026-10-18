@@ -1,0 +1,71 @@
+{
+ "id": "TEST-L6",
+ "board": "boards/queue/TEST-L6.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-18T11:26:44.013200+00:00",
+ "title": "Why we only ever see one side of the Moon 🌕",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "horizons",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "pop",
+  "voice": "george_quick",
+  "energy": "punchy",
+  "grade": "natural"
+ },
+ "qa": {
+  "duration": 31.7,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 9.1
+ },
+ "timeline": [
+  [
+   0.06,
+   3.81,
+   "title",
+   1
+  ],
+  [
+   3.81,
+   6.05,
+   "none",
+   1
+  ],
+  [
+   6.05,
+   11.62,
+   "cards",
+   2
+  ],
+  [
+   11.62,
+   17.42,
+   "none",
+   2
+  ],
+  [
+   17.42,
+   19.38,
+   "title",
+   1
+  ],
+  [
+   19.38,
+   26.27,
+   "none",
+   2
+  ],
+  [
+   26.27,
+   31.66,
+   "none",
+   1
+  ]
+ ],
+ "state": "rendered (no upload)"
+}

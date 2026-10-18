@@ -1,0 +1,71 @@
+{
+ "id": "TEST-L4",
+ "board": "boards/queue/TEST-L4.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-18T11:26:39.677804+00:00",
+ "title": "Why we only ever see one side of the Moon 🌕",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "horizons",
+ "social_music": "chillhop-jazz-coffee-shop-552792",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "punchy",
+  "grade": "cinematic"
+ },
+ "qa": {
+  "duration": 32.8,
+  "wps": 3.18,
+  "weak_beats": [],
+  "size_mb": 9.0
+ },
+ "timeline": [
+  [
+   0.06,
+   4.07,
+   "title",
+   1
+  ],
+  [
+   4.07,
+   6.08,
+   "none",
+   1
+  ],
+  [
+   6.08,
+   11.97,
+   "cards",
+   2
+  ],
+  [
+   11.97,
+   18.14,
+   "none",
+   2
+  ],
+  [
+   18.14,
+   20.43,
+   "title",
+   1
+  ],
+  [
+   20.43,
+   27.29,
+   "none",
+   2
+  ],
+  [
+   27.29,
+   32.79,
+   "none",
+   1
+  ]
+ ],
+ "state": "rendered (no upload)"
+}

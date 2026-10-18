@@ -2,7 +2,7 @@
 
 YouTube checked Sun 18 Oct 6:57 (UK): 10 scheduled, 17 public, 19 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"ArtVHKQih84cNVW8ngGQJhF"}} · TikTok: connected (checked Sun 18 Oct 10:58).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AgJfQPQicrxISHQWTy-t8sM"}} · TikTok: connected (checked Sun 18 Oct 11:57).
 
 ## Needs a look
 
@@ -40,7 +40,7 @@ scheduled · [script](../backlog/QD-015) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts/CMVRXkJYI5M)
 
 ### Sun 18 Oct 12:00 · How a smiley ball became Minecraft's creepiest monster 😳
-scheduled · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
+private · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
 
 ### Sat 17 Oct 22:30 · Apple's new smart home screen, explained 🏠
 public · 7 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)

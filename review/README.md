@@ -6,7 +6,6 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 ## Needs a look
 
-- **QD-031** Usain Bolt's 9.58: still unbeaten ⚡: failed. RuntimeError: no usable media for beat: A year earlier, at the Beijing Olympics,
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
@@ -15,7 +14,6 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 - **QD-029** Why we only ever see one side of the Moon 🌕 (rendering next)
 - **QD-030** Octopus: three hearts and blue blood 🐙 (rendering next)
-- **QD-031** Usain Bolt's 9.58: still unbeaten ⚡ (rendering next)
 - **QD-032** Bohemian Rhapsody: too long for radio? 🎸 (rendering next)
 
 ## On the channel (latest first)

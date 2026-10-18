@@ -160,7 +160,7 @@ async function build(data) {
       d.appendChild(lab);
     }
     mediaEl.appendChild(d);
-    if (lab) lab.querySelectorAll('.mname').forEach(n => fitEl(n, 940));
+    if (lab) lab.querySelectorAll('.mname').forEach(n => fitEl(n, 760));      // the label column stops short of the button column
     M.push(Object.assign({}, m, {el: d, f, c, lab, cur: -1}));
   });
   await Promise.all([...mediaEl.querySelectorAll('img')].map(i => i.decode().catch(() => {})));

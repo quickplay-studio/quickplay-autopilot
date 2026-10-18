@@ -1,0 +1,288 @@
+{
+ "id": "TEST-L5",
+ "format": "real_reason",
+ "category": "Science",
+ "chipIcon": "orbit",
+ "accent": "#7DD3FC",
+ "gap": 0.1,
+ "tail": 0.6,
+ "seed": 28,
+ "music": {
+  "slug": "horizons",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "The Moon is spinning right now. So why do we only ever see one side?",
+   "visual": {
+    "type": "title",
+    "kicker": "Space",
+    "lines": [
+     "One side.",
+     "Every night.",
+     "Forever."
+    ],
+    "highlight": [
+     2
+    ]
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "commons:File:FullMoon2010.jpg",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "move": "in",
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:full moon night sky",
+     "w": 1.0
+    }
+   ]
+  },
+  {
+   "say": "Most people think it doesn't rotate at all.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:moon telescope"
+    }
+   ]
+  },
+  {
+   "say": "But it does. It turns once every 27 days, exactly as long as one trip around Earth.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "rotate-cw",
+      "t": "1 spin",
+      "s": "27.3 days"
+     },
+     {
+      "icon": "orbit",
+      "t": "1 orbit",
+      "s": "27.3 days"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:moon close up"
+    },
+    {
+     "src": "commons:File:The_Earth_seen_from_Apollo_17.jpg",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "move": "out",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "say": "Long ago, Earth's gravity pulled the Moon slightly out of shape and slowed its spin until the two matched.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:earth from space"
+    },
+    {
+     "src": "pixabay:video:moon surface",
+     "at": 12
+    }
+   ]
+  },
+  {
+   "say": "Scientists call it tidal locking.",
+   "visual": {
+    "type": "title",
+    "lines": [
+     "Tidal",
+     "locking."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons:File:FullMoon2010.jpg",
+     "focus": [
+      0.35,
+      0.4
+     ],
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "And the far side isn't dark. It gets just as much sunlight. We first saw it in 1959, from a Soviet probe.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons:File:Moon_Farside_LRO.jpg",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "move": "in",
+     "label": {
+      "t": "The far side",
+      "s": "NASA LRO"
+     }
+    },
+    {
+     "src": "commons:File:Luna_3_moon.jpg",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "move": "in",
+     "at": 16,
+     "label": {
+      "t": "Luna 3",
+      "s": "First photo, 1959"
+     }
+    }
+   ]
+  },
+  {
+   "say": "It's also drifting away from us, about four centimetres every year. Follow for more.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:moon night clouds"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Why we only ever see one side of the Moon 🌕",
+  "summary": "The Moon does spin, once every 27.3 days, the same time it takes to orbit Earth. That's tidal locking.",
+  "hashtags": [
+   "#Moon",
+   "#TidalLocking",
+   "#Space",
+   "#Astronomy",
+   "#Science",
+   "#SpaceFacts",
+   "#DidYouKnow",
+   "#NASA",
+   "#Earth",
+   "#Physics",
+   "#ScienceFacts",
+   "#Trending"
+  ],
+  "sources": [
+   [
+    "NASA Science: Tidal locking",
+    "https://science.nasa.gov/moon/tidal-locking/"
+   ],
+   [
+    "NASA NSSDCA: Luna 3",
+    "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1959-008A"
+   ],
+   [
+    "Wikipedia: Lunar Laser Ranging experiments",
+    "https://en.wikipedia.org/wiki/Lunar_Laser_Ranging_experiments"
+   ],
+   [
+    "Space.com: Does the Moon rotate?",
+    "https://www.space.com/24871-does-the-moon-rotate.html"
+   ],
+   [
+    "Wikipedia: Far side of the Moon",
+    "https://en.wikipedia.org/wiki/Far_side_of_the_Moon"
+   ],
+   [
+    "BBC Sky at Night: There's no dark side of the Moon",
+    "https://www.skyatnightmagazine.com/space-science/dark-side-of-the-moon"
+   ],
+   [
+    "NASA Goddard: Measuring the Moon's distance",
+    "https://eclipse.gsfc.nasa.gov/help/ApolloLaser.html"
+   ]
+  ],
+  "signals": {
+   "note": [
+    "First API upload test, evergreen topic"
+   ]
+  },
+  "facts": [
+   [
+    "The Moon turns once on its axis in about 27 days, the same time as one orbit of Earth",
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    "Earth's gravity raised a bulge on the Moon and slowed its spin until it matched the orbit",
+    [
+     1,
+     4
+    ]
+   ],
+   [
+    "This is called tidal locking",
+    [
+     1,
+     5
+    ]
+   ],
+   [
+    "The far side gets about as much sunlight as the near side",
+    [
+     5,
+     6
+    ]
+   ],
+   [
+    "The far side was first photographed in 1959 by the Soviet probe Luna 3",
+    [
+     2,
+     5,
+     6
+    ]
+   ],
+   [
+    "The Moon is moving away from Earth by about 3.8 cm a year",
+    [
+     3,
+     7
+    ]
+   ]
+  ],
+  "tags": [
+   "why we only see one side of the moon",
+   "tidal locking",
+   "far side of the moon",
+   "does the moon rotate",
+   "moon facts",
+   "space facts",
+   "astronomy explained",
+   "moon rotation"
+  ]
+ },
+ "created": "2026-10-17",
+ "mode": "none",
+ "look": {
+  "captions": "boxed",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "vivid"
+ }
+}

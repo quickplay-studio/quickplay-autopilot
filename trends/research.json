@@ -3,46 +3,59 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "manchester city football",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Manchester_City_Football_Club",
+   "topic": "mongolia",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mongolia",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Wigan pine for FA Cup glory as not even victory can lift them off foot of League One",
-     "url": "https://www.theguardian.com/football/2026/oct/18/wigan-pine-for-fa-cup-glory-as-not-even-victory-can-lift-them-off-foot-of-league-one",
-     "published": "2026-10-18T07:00+00:00"
+     "title": "TV tonight: a very moreish drama about a hellish birthday party",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/18/tv-tonight-a-very-moreish-drama-about-a-hellish-birthday-party",
+     "published": "2026-10-18T05:15+00:00"
     }
    ]
   },
   {
-   "topic": "lyon fc",
+   "topic": "Prisoner Has a Crush On Me in Minecraft",
+   "signal": "YouTube GB-gaming 38,193/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "The moment I knew: For Valentine’s Day he gave me a heart covered in fake blood. I was appalled – and thrilled",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/18/the-moment-i-knew-for-valentines-day-he-gave-me-a-cows-heart",
+     "published": "2026-10-17T19:00+00:00"
+    }
+   ]
+  },
+  {
+   "topic": "reality television",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Lyon_FC",
+   "wikipedia": "https://en.wikipedia.org/wiki/Reality_television",
    "articles": []
   },
   {
-   "topic": "bukayo saka",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bukayo_Saka",
+   "topic": "this city is ours",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
    "articles": []
   },
   {
-   "topic": "ezri konsa",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ezri_Konsa",
+   "topic": "cleveland browns",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cleveland_Browns",
    "articles": []
   },
   {
-   "topic": "declan rice",
+   "topic": "manicure",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Declan_Rice",
+   "wikipedia": "https://en.wikipedia.org/wiki/Manicure",
    "articles": []
   },
   {
-   "topic": "dinghy",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dinghy",
+   "topic": "real madrid",
+   "signal": "Google Trends GB 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Real_Madrid_CF",
    "articles": []
   }
  ]

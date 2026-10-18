@@ -1,16 +1,18 @@
 {
- "updated": "2026-10-18T17:50+00:00",
- "errors": {
-  "instagram": "RuntimeError: API access blocked."
- },
+ "updated": "2026-10-18T20:26+00:00",
+ "errors": {},
  "youtube": {
-  "subscribers": 3,
-  "public_shorts": 22,
-  "views_all_time": 3482,
-  "views_last_90_days": 0,
+  "subscribers": 4,
+  "public_shorts": 24,
+  "views_all_time": 3730,
+  "views_last_90_days": 225,
   "views_measure": "engaged views"
  },
- "instagram": null,
+ "instagram": {
+  "followers": 0,
+  "posts": 0,
+  "insights_error": null
+ },
  "tiktok": {
   "followers": 0,
   "videos": 0
@@ -20,9 +22,9 @@
   "shorts_views_needed_90_days": 10000000,
   "apply_before": "2027-02-01",
   "days_left": 106,
-  "subscribers_pct": 0.3,
+  "subscribers_pct": 0.4,
   "views_pct": 0.0,
-  "views_needed_per_day": 111111
+  "views_needed_per_day": 111109
  },
  "tiktok_rewards": {
   "followers_needed": 10000,

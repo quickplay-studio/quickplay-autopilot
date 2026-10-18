@@ -1,0 +1,76 @@
+{
+ "id": "TEST-S1018",
+ "board": "boards/queue/TEST-S1018.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-18T21:58:39.871525+00:00",
+ "title": "Street Fighter hits cinemas today 🥊",
+ "media": {
+  "real_shots": 1,
+  "planned_real": 1
+ },
+ "music": "gta-type-beat",
+ "social_music": "speed-race-344521",
+ "look": {
+  "captions": "pop",
+  "voice": "george",
+  "energy": "punchy",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.0,
+  "wps": 3.0,
+  "weak_beats": [
+   2,
+   3
+  ],
+  "size_mb": 9.8
+ },
+ "timeline": [
+  [
+   0.06,
+   2.93,
+   "title",
+   1
+  ],
+  [
+   2.93,
+   7.57,
+   "stat",
+   1
+  ],
+  [
+   7.57,
+   11.49,
+   "versus",
+   2
+  ],
+  [
+   11.49,
+   13.44,
+   "cards",
+   1
+  ],
+  [
+   13.44,
+   16.29,
+   "none",
+   1
+  ],
+  [
+   16.29,
+   19.22,
+   "title",
+   1
+  ],
+  [
+   19.22,
+   23.04,
+   "none",
+   2
+  ]
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [2, 3]"
+}

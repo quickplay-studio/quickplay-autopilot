@@ -9,10 +9,7 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-
-## In the queue
-
-- **TEST-S1018** Street Fighter hits cinemas today 🥊 (rendering next)
+- **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 
 ## On the channel (latest first)
 

@@ -116,7 +116,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:athletics stadium"
+     "src": "commons-search:Olympiastadion Berlin",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ]
     }
    ]
   },

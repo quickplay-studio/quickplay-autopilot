@@ -1,17 +1,53 @@
 {
- "checked": "2026-10-18T11:57Z",
- "uploads_last_24h": 15,
- "scheduled": 9,
- "public": 18,
+ "checked": "2026-10-18T17:50Z",
+ "uploads_last_24h": 13,
+ "scheduled": 5,
+ "public": 22,
  "flagged": [],
  "videos": [
+  {
+   "video": "HUbPVioSEnQ",
+   "title": "Blade Runner is back, 50 years later 🌃",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T17:00:14Z",
+   "views": 1,
+   "flag": ""
+  },
+  {
+   "video": "LYmgGMDWMbg",
+   "title": "Burnout's developers made a Star Wars racing game 🏁",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T15:30:20Z",
+   "views": 1,
+   "flag": ""
+  },
+  {
+   "video": "1TybFV5ymho",
+   "title": "Planet Zoo 2 finally adds aquariums 🐠",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T14:00:35Z",
+   "views": 41,
+   "flag": ""
+  },
+  {
+   "video": "CMVRXkJYI5M",
+   "title": "How a YouTube video became A24's biggest film 🎬",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T12:30:26Z",
+   "views": 76,
+   "flag": ""
+  },
   {
    "video": "NIvLsurvEvk",
    "title": "How a smiley ball became Minecraft's creepiest monster 😳",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T11:00:12Z",
-   "views": 9,
+   "views": 67,
    "flag": ""
   },
   {
@@ -60,30 +96,12 @@
    "flag": ""
   },
   {
-   "video": "HUbPVioSEnQ",
-   "title": "Blade Runner is back, 50 years later 🌃",
-   "privacy": "private",
-   "publish_at": "2026-10-18T17:00:00Z",
-   "uploaded": "2026-10-18T02:29:35Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
-   "video": "LYmgGMDWMbg",
-   "title": "Burnout's developers made a Star Wars racing game 🏁",
-   "privacy": "private",
-   "publish_at": "2026-10-18T15:30:00Z",
-   "uploaded": "2026-10-18T02:29:33Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
    "video": "lJrQDP4e4TI",
    "title": "Apple's new smart home screen, explained 🏠",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T21:30:31Z",
-   "views": 17,
+   "views": 34,
    "flag": ""
   },
   {
@@ -92,7 +110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T20:00:19Z",
-   "views": 25,
+   "views": 29,
    "flag": ""
   },
   {
@@ -101,7 +119,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T18:30:02Z",
-   "views": 2,
+   "views": 4,
    "flag": ""
   },
   {
@@ -110,7 +128,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T17:00:36Z",
-   "views": 7,
+   "views": 10,
    "flag": ""
   },
   {
@@ -119,7 +137,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T15:30:30Z",
-   "views": 29,
+   "views": 45,
    "flag": ""
   },
   {
@@ -128,7 +146,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T14:00:14Z",
-   "views": 121,
+   "views": 197,
    "flag": ""
   },
   {
@@ -137,7 +155,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T12:30:18Z",
-   "views": 886,
+   "views": 1103,
    "flag": ""
   },
   {
@@ -146,25 +164,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T11:00:11Z",
-   "views": 204,
-   "flag": ""
-  },
-  {
-   "video": "1TybFV5ymho",
-   "title": "Planet Zoo 2 finally adds aquariums 🐠",
-   "privacy": "private",
-   "publish_at": "2026-10-18T14:00:00Z",
-   "uploaded": "2026-10-17T10:23:05Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
-   "video": "CMVRXkJYI5M",
-   "title": "How a YouTube video became A24's biggest film 🎬",
-   "privacy": "private",
-   "publish_at": "2026-10-18T12:30:00Z",
-   "uploaded": "2026-10-17T10:23:03Z",
-   "views": 0,
+   "views": 298,
    "flag": ""
   },
   {
@@ -173,7 +173,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T09:30:05Z",
-   "views": 228,
+   "views": 247,
    "flag": ""
   },
   {
@@ -182,7 +182,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T21:30:23Z",
-   "views": 25,
+   "views": 26,
    "flag": ""
   },
   {
@@ -191,7 +191,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T20:00:11Z",
-   "views": 8,
+   "views": 119,
    "flag": ""
   },
   {
@@ -200,7 +200,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T18:30:27Z",
-   "views": 28,
+   "views": 31,
    "flag": ""
   },
   {
@@ -209,7 +209,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T17:00:23Z",
-   "views": 359,
+   "views": 437,
    "flag": ""
   },
   {
@@ -218,7 +218,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T15:30:10Z",
-   "views": 17,
+   "views": 19,
    "flag": ""
   },
   {
@@ -227,7 +227,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 332,
+   "views": 370,
    "flag": ""
   },
   {
@@ -236,7 +236,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T12:30:20Z",
-   "views": 250,
+   "views": 259,
    "flag": ""
   },
   {
@@ -245,7 +245,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T11:00:38Z",
-   "views": 30,
+   "views": 32,
    "flag": ""
   }
  ]

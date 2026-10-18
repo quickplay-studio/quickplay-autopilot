@@ -3,162 +3,46 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "eva longoria",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Eva_Longoria",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Academy Museum Gala 2026 Red Carpet: Taylor Swift, Inde Navarrette, Kate Hudson and More",
-     "url": "https://variety.com/gallery/academy-museum-gala-2026-red-carpet-photos/",
-     "published": "2026-10-18T01:30+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "elif shafak",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elif_Shafak",
+   "topic": "manchester city football",
+   "signal": "Google Trends GB 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Manchester_City_Football_Club",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘Is there any value in writing a story in a time of chaos?’: novelist Elif Shafak on her creative crisis",
-     "url": "https://www.theguardian.com/books/2026/oct/17/is-there-any-value-in-writing-a-story-in-a-time-of-chaos-novelist-elif-shafak-on-her-creative-crisis",
-     "published": "2026-10-17T08:00+00:00"
+     "title": "Wigan pine for FA Cup glory as not even victory can lift them off foot of League One",
+     "url": "https://www.theguardian.com/football/2026/oct/18/wigan-pine-for-fa-cup-glory-as-not-even-victory-can-lift-them-off-foot-of-league-one",
+     "published": "2026-10-18T07:00+00:00"
     }
    ]
   },
   {
-   "topic": "crystal palace vs west ham",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "WSL LIVE! Spurs equalise at Chelsea with West Ham ahead vs Palace",
-     "url": "https://www.skysports.com/football/chelsea-women-vs-tottenham-hotspur-women/live/575793",
-     "published": "2026-10-18T10:59+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "kartal",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kartal",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "What a rally! Kartal-Chwalinska starts in style",
-     "url": "https://www.skysports.com/watch/video/13600557/what-a-rally-sonay-kartal-maja-chwalinska-starts-in-style",
-     "published": "2026-10-18T12:26+00:00"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Kartal battles past Ostapenko in Wuhan to secure spot in first WTA 1000 final",
-     "url": "https://www.theguardian.com/sport/2026/oct/17/sonay-kartal-wuhan-final-jelena-ostapenko-tennis-british-no-1",
-     "published": "2026-10-17T12:26+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "chacarra",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Eugenio_Chacarra",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Chacarra earns third win of year to move top of Race to Dubai standings",
-     "url": "https://www.skysports.com/golf/news/12040/13600531/dp-world-india-championship-eugenio-chacarra-wins-to-move-top-of-race-to-dubai-standings-with-rory-mcilroy-finishing-in-a-share-of-42nd-place",
-     "published": "2026-10-18T12:00+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "is caleb williams playing this week",
-   "signal": "Google Trends US 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Eurogamer",
-     "title": "What we've been playing -  \"I simply didn't know if a first-person shooter could work as a Soulslike\"",
-     "url": "https://www.eurogamer.net/what-weve-been-plaing-guns-of-eschaton-ftl-marvel-cosmic-invasion",
-     "published": "2026-10-17T07:00+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "rory mcilroy",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Rory_McIlroy",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Chacarra earns third win of year to move top of Race to Dubai standings",
-     "url": "https://www.skysports.com/golf/news/12040/13600531/dp-world-india-championship-eugenio-chacarra-wins-to-move-top-of-race-to-dubai-standings-with-rory-mcilroy-finishing-in-a-share-of-42nd-place",
-     "published": "2026-10-18T12:00+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 573,129/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "GTA 6 - all you need to know about Rockstar's blockbuster game",
-     "url": "https://www.bbc.co.uk/news/articles/c9q20djz4wno?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-15T14:25+00:00"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Grand Theft Auto 6 launch trailer suddenly drops, showing a saucy shower scene, a tense police chase, and high-flying heists",
-     "url": "https://www.eurogamer.net/grand-theft-auto-6-launch-trailer",
-     "published": "2026-10-15T13:24+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME",
-   "signal": "YouTube US-gaming 47,591/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Captain Price Actor Sends Message to Fans as Call of Duty: Modern Warfare 4 Campaign Praise Rolls in",
-     "url": "https://www.ign.com/articles/captain-price-actor-sends-message-to-fans-as-call-of-duty-modern-warfare-4-campaign-praise-rolls-in",
-     "published": "2026-10-17T15:52+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "tom hardy",
+   "topic": "lyon fc",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tom_Hardy",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lyon_FC",
    "articles": []
   },
   {
-   "topic": "ali g: who iz i?",
+   "topic": "bukayo saka",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bukayo_Saka",
+   "articles": []
+  },
+  {
+   "topic": "ezri konsa",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ali_G:_Who_Iz_I%3F",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ezri_Konsa",
    "articles": []
   },
   {
-   "topic": "maja chwalińska",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Maja_Chwali%C5%84ska",
+   "topic": "declan rice",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Declan_Rice",
    "articles": []
   },
   {
-   "topic": "grand rapids marathon",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Rapids_Marathon",
-   "articles": []
-  },
-  {
-   "topic": "maria bartiromo",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Maria_Bartiromo",
+   "topic": "dinghy",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dinghy",
    "articles": []
   }
  ]

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T11:57+00:00",
+ "updated": "2026-10-18T17:50+00:00",
  "dimensions": {
   "captions": {
    "punch": {
@@ -45,6 +45,14 @@
     "n": 0
    },
    "vivid": {
+    "n": 0
+   }
+  },
+  "opening": {
+   "graphic_first": {
+    "n": 0
+   },
+   "image_first": {
     "n": 0
    }
   }

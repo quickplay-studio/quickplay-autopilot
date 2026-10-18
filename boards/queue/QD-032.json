@@ -110,12 +110,16 @@
    },
    "shots": [
     {
-     "src": "commons-search:Queen band concert",
+     "src": "commons-search:Brian May guitarist",
      "move": "in",
      "focus": [
       0.5,
-      0.4
-     ]
+      0.35
+     ],
+     "label": {
+      "t": "Brian May",
+      "s": "Queen guitarist"
+     }
     }
    ]
   },

@@ -30,15 +30,20 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus underwater",
-     "w": 1.2
-    },
-    {
-     "src": "commons-search:common octopus Octopus vulgaris",
+     "src": "commons-search:Octopus vulgaris",
      "move": "in",
      "focus": [
       0.5,
-      0.5
+      0.45
+     ],
+     "w": 1.2
+    },
+    {
+     "src": "commons-search:Giant Pacific octopus",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.45
      ]
     }
    ]
@@ -62,7 +67,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus swimming"
+     "src": "commons-search:Octopus cyanea",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.45
+     ]
     }
    ]
   },
@@ -73,7 +83,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus coral reef"
+     "src": "commons-search:common octopus swimming",
+     "move": "left",
+     "focus": [
+      0.5,
+      0.45
+     ]
     }
    ]
   },
@@ -107,7 +122,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus hiding rock"
+     "src": "commons-search:coconut octopus shell",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ]
     }
    ]
   },
@@ -121,7 +141,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus arms"
+     "src": "commons-search:octopus arm suckers",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ]
     }
    ]
   },
@@ -132,7 +157,12 @@
    },
    "shots": [
     {
-     "src": "pixabay:video:octopus underwater ocean"
+     "src": "commons-search:octopus eye",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ]
     }
    ]
   }

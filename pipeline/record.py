@@ -15,6 +15,7 @@ def preview(res, sid, prev):
         for src, name in ((prev, "video.mp4"), (res / "social.mp4", "social.mp4"), (res / "upload.json", "upload.json")):
             if src.exists(): shutil.copy(src, tmp / name); files.append(str(tmp / name))
         tag = f"preview-{sid}"
+        subprocess.run(["gh", "release", "delete", tag, "-y"], capture_output=True)    # a re-render replaces its old preview
         r = subprocess.run(["gh", "release", "create", tag, *files, "--draft", "--title", f"{sid} preview",
                             "--notes", "Waiting for approval. Uploaded to YouTube, TikTok and Instagram once approved."],
                            capture_output=True, text=True)

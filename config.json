@@ -1,9 +1,9 @@
 {
- "daily_limit": 20,
- "per_session": 14,
- "slot_first": "08:00",
- "slot_every_minutes": 45,
- "slots_per_day": 20,
+ "daily_limit": 24,
+ "per_session": 12,
+ "slot_first": "07:30",
+ "slot_every_minutes": 40,
+ "slots_per_day": 24,
  "lead_hours": 1,
  "music_moods": {
   "epic": "big cinematic reveals: film and TV news, trailers, major launches",
@@ -25,14 +25,29 @@
  "first_id": 29,
  "approval": "flagged",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Two writer runs a day: 06:50 writes up to per_session (14); 12:50 writes the rest of daily_limit (6) from fresher trends; a 17:35 catch-up writes whatever a blocked run missed. The channel has YouTube's Advanced features (video verification approved 18 October), so the 10-a-day upload cap is gone; if YouTube still refuses an upload for the limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
+ "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (07:30 to 22:50 every 40 minutes until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "tiktok_mode": "inbox",
  "tiktok_max_age_hours": 24,
  "tiktok_note": "inbox: the day's 5 TikTok picks land in the TikTok phone app as drafts once scheduled, and Charlie posts them with the captions from his TikTok queue page; manual: he uploads them himself; direct: posts by itself (needs TikTok's review).",
- "instagram_mode": "picks",
+ "instagram_mode": "all",
  "instagram_per_day": 6,
- "instagram_note": "picks: only the day's picks (the Shorts marked tiktok: true) go to Instagram, at most instagram_per_day in 24 hours; all: every Short.",
+ "instagram_note": "all: every Short goes to Instagram once public on YouTube, the day's picks first, at most a ramped number in 24 hours: instagram_per_day to start, +instagram_ramp_per_day for each day since the first Reel, up to instagram_target (Meta allows 100 API posts a day; it blocked our API access once, so the ramp is gentle). Shorts public for more than crosspost_max_age_hours are skipped. picks: only the day's picks.",
  "reserve_per_day": 2,
  "reserve_after": "18:20",
- "reserve_note": "Evergreen Shorts in boards/reserve, approved in advance, upload only on a day nothing new was written by reserve_after (UK), at most reserve_per_day of them."
+ "reserve_note": "Evergreen Shorts in boards/reserve, approved in advance, upload only on a day nothing new was written by reserve_after (UK), at most reserve_per_day of them.",
+ "upload_limit_24h": 40,
+ "runs": {
+  "evening": 6,
+  "morning": 12,
+  "afternoon": 6
+ },
+ "runs_note": "Shorts each writer run makes. evening (20:50) writes the first part of TOMORROW (created = tomorrow, slots from 07:30) so flagged ones can be approved before bed; morning (06:50) and afternoon (12:50) write from that day's fresh trends.",
+ "instagram_target": 24,
+ "instagram_ramp_per_day": 2,
+ "facebook_per_day": 6,
+ "facebook_target": 24,
+ "facebook_ramp_per_day": 2,
+ "facebook_api_version": "v25.0",
+ "crosspost_max_age_hours": 48,
+ "facebook_note": "Facebook Page Reels (GitHub secrets FB_PAGE_TOKEN and FB_PAGE_ID): every Short once public on YouTube, picks first, ramped like Instagram (Meta allows 30 API Reels per Page per 24 hours)."
 }

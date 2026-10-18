@@ -66,6 +66,8 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           GH_TOKEN: ${{ github.token }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
           if [ -z "$SOCIAL_KEY" ]; then mkdir -p status; echo '{"error": "SOCIAL_KEY secret missing"}' > status/social.json; exit 0; fi
           python pipeline/social.py check > /dev/null
@@ -85,6 +87,8 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
           if [ -z "$SOCIAL_KEY" ]; then echo "SOCIAL_KEY not set yet"; exit 0; fi
           python pipeline/social.py post

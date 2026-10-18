@@ -1,9 +1,21 @@
 # Quickplay daily script run
 
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
-posts them to Instagram (automatically) and TikTok (as drafts Charlie posts). Two sessions a day: 06:50 UK writes most of
-the day's Shorts; 12:50 UK writes the rest from fresher trends (breaking stories, things that took off this morning).
-Spend as few tokens as possible: no rendering, no browsing beyond the sources you check, no recap messages.
+posts them to Instagram and Facebook (automatically) and TikTok (as drafts Charlie posts). Three sessions a day (numbers
+in config.json `runs`): 20:50 UK writes the first part of TOMORROW (its boards get `created` = tomorrow and tomorrow's
+first slots, from 07:30); 06:50 writes most of the day from fresh trends; 12:50 writes the rest from what broke since.
+Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batch lets him clear them before bed.
+
+## Spend as few tokens as possible
+- Work in as few turns as you can: send independent tool calls together (all the day's WebFetch calls for every topic in
+  one or two batches; all board Write calls in one message; validate every new board in one command).
+- Never open status files one by one: `python pipeline/digest.py` prints everything you need in one go.
+- Read only what you need: the Recipe and drivers at the top of analytics/insights.md, the topics you pick from
+  trends/research.json.
+- Two reputable sources per fact is the rule: stop fetching once two state it (official plus one outlet, or two outlets).
+- Write boards as compact JSON (no indentation). Leave out what has a default.
+- Wait for renders with ONE background command, `python pipeline/wait_renders.py <ids>`, never repeated polling.
+- No rendering, no browsing beyond the sources you check, no recap messages.
 
 ## The goal
 Monetisation as soon as possible. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in
@@ -37,9 +49,9 @@ from every Short against Shorts posted around the same time) and the drivers beh
   least 3 formats a day and never the same format twice in a row; vary hook styles and graphics; real images of the
   subject first.
 - TikTok takes only 5 drafts a day: set `"tiktok": true` on the 5 Shorts most likely to do well there (big fandoms,
-  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 across
-  both runs: the 12:50 run counts today's boards already marked true (queue, ready, done) and marks only the rest.
-  The same picks are the day's Instagram Reels (config instagram_mode "picks").
+  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 per
+  target day across all runs (digest.py counts the picks already made for today and tomorrow). Instagram and Facebook
+  take every Short (picks first), as many a day as their gentle ramp allows (config.json).
 - Follow up breakouts: analytics/breakouts.csv (hourly) lists Shorts running at 3x or more the views recent Shorts had at
   the same age. Each run writes one follow-up for the strongest one not yet followed up (a new angle, the next chapter, or
   the answer to its top comment), title tied to the original. Views come in lopsided bursts; a follow-up rides the demand
@@ -74,15 +86,18 @@ towards a day's capacity). Charlie approves them once ("reserve approve all", wr
 with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing new was written by 18:20.
 
 ## Steps
-1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md (the Recipe first),
-   analytics/breakouts.csv, status/channel.json and
-   status/ files changed in the last 2 days. Fix and re-queue anything in boards/failed/ worth saving (move it back to
-   boards/queue/).
-2. Capacity this session = the smallest of: `per_session`; `daily_limit` minus boards with today's `created` date
-   (queue, ready, done and failed); `daily_limit` minus boards already in boards/queue/ and boards/ready/.
+1. `git pull`. Run `python pipeline/digest.py` (health, what's made for today and tomorrow, failures, breakouts). Read
+   config.json, trends/latest.json (short on purpose) and the top of analytics/insights.md (the Recipe). Fix and re-queue
+   anything in boards/failed/ worth saving (move it back to boards/queue/).
+2. Target day: tomorrow for the 20:50 evening run (every board it writes has `created` = tomorrow), today otherwise.
+   Capacity this session = the smallest of: this run's number in config.json `runs` (evening, morning, afternoon);
+   `daily_limit` minus boards with the target day's `created` date (queue, ready, done and failed, as digest.py counts).
    On Sundays take one off (the weekly long video, pipeline/weekly.py, uses one upload). If it is 0, go to step 7.
+   The evening run also writes whatever today's runs missed (if a run was blocked), as long as today's slots remain.
 3. Pick topics (see What gets views), starting with trends/requests.md: Charlie's own requests come first, then the
-   trends; update that file in the same commit as the boards. Fill the rest of the day to match the Recipe in
+   trends; update that file in the same commit as the boards. The evening run picks what will still be fresh at
+   breakfast: stories that broke this evening (often in the US), things happening tomorrow (a release, a match, a launch,
+   an announcement), and the target day's 2 evergreen search Shorts. Fill the rest of the day to match the Recipe in
    analytics/insights.md: its category mix for about 80% of the day (the other 20% on whatever trends hardest), and lean
    towards the formats, hook styles, title styles and lengths it lists. Breaking news still beats the mix. The 12:50 run
    looks for what has broken or grown since the morning (trends refresh at 11:35 UTC) and skips anything the morning run
@@ -92,14 +107,15 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error. Warnings: fix them, or keep the
    board and add a `flag` saying why it is fine.
 6. Commit all new boards in ONE commit to boards/queue/, push.
-7. Lineup. Wait for GitHub to render (in the background, `git pull` every 3 minutes, up to 45 minutes, until each new
-   board has a status/<id>.json). Then send Charlie ONE message, starting with the line `python pipeline/health.py`
-   prints (fix or explain anything it lists):
+7. Lineup. Wait for GitHub to render with one background command: `python pipeline/wait_renders.py <new ids>` (it
+   returns when each new board has a status, up to 50 minutes). Then send Charlie ONE message, starting with the line
+   `python pipeline/health.py` prints (fix or explain anything it lists):
    - approval "all": each Short in boards/ready as `QD-0xx · title · length · look` (status `look`: captions, voice,
      energy, grade, opening) with its hook line and any flags, then
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
-   - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.
+   - approval "flagged" (now): the same for flagged Shorts only, with their previews; if nothing is flagged, one line:
+     how many Shorts went out and when the first and last go public.
    - If analytics/decisions.csv has lines dated since yesterday, end with one line per change (at most 3):
      "From the data: <change>, because <why>."
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
@@ -129,10 +145,11 @@ analytics/<id>.csv and `asset: true`; then ONE ArtifactData `batch` of `update` 
 - `id`: next free QD-### across boards/queue, ready, done, failed, hold, rejected and reserve, never below `first_id` in
   config.json. `created`: today, YYYY-MM-DD. `format`: a format id. `category`: Gaming, Film, Music, Sport, Tech,
   Science, Entertainment (TV and anime go here).
-- `chipIcon` (a lucide icon name), `accent` (hex), `gap`: 0.1, `tail`: 0.6. Don't set a voice or caption style: GitHub gives
+- Optional (GitHub fills them when left out): `chipIcon` (a lucide icon name; set one only when it fits the topic better
+  than the category's), `accent` (hex), `gap` (0.1), `tail` (0.6), `music.gain_db` (-15). Don't set a voice or caption style: GitHub gives
   every Short a look (caption style, voice and pace, camera energy, colour grade from templates/looks.json) and learns which
   looks keep viewers watching. Set `look` (e.g. {"captions": "pop"}) only when Charlie asks for one.
-- `music`: {"mood": one of the `music_moods` in config.json, matching the topic's feel, "gain_db": -15}.
+- `music`: {"mood": one of the `music_moods` in config.json, matching the topic's feel}.
 - `beats`: one per sentence or two, 55 to 125 words in total (aim for 70 to 110).
   - `say`: the narration. `cap`: only if captions must differ in spelling, same word count as `say`.
   - `visual`: {"type": "none"} or a graphic:

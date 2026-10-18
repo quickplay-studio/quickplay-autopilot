@@ -1,8 +1,11 @@
 """Pick queued boards for this run and give each a posting slot. Prints `boards=<json>` for the GitHub matrix.
 
 Rules (numbers live in config.json)
-- At most daily_limit uploads in any 24 hours, counting every upload on the channel (including ones made by hand).
-  YouTube may enforce a lower limit; then the extra boards wait in the queue and the next run tries again.
+- At most upload_limit_24h uploads in any 24 hours (default daily_limit), counting every upload on the channel
+  (including ones made by hand). YouTube may enforce a lower limit; then the extra boards wait in the queue and the next
+  run tries again. daily_limit is how many Shorts a day the writer makes; slots_per_day caps how many go public a day.
+- A board whose "created" date is a later day (the 20:50 evening run writes the first part of tomorrow) gets that day's
+  slots, never tonight's.
 - Slots: slots_per_day a day. Until 30 Shorts have results: from slot_first, every slot_every_minutes (UK time); then the
   times learned from results (analytics/slots.json, see learned_slots). A slot already taken is never reused.
 - A Short goes to the first free slot at least lead_hours away (time to render and process).
@@ -22,7 +25,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 UK = ZoneInfo("Europe/London")
 CFG = json.loads((ROOT / "config.json").read_text())
-LIMIT = int(os.environ.get("DAILY_LIMIT", CFG.get("daily_limit", 10)))
+LIMIT = int(os.environ.get("DAILY_LIMIT", CFG.get("upload_limit_24h", CFG.get("daily_limit", 10))))
 LEAD = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
 
 def _mins(hm):
@@ -89,8 +92,13 @@ def schedule_state(now, yt=None):
     return taken, recent, online
 
 def slot_picker(now, taken):
-    def next_slot():
+    def next_slot(created=None):
+        """The first free slot at least lead_hours away, on or after the board's "created" day (UK)."""
         day = (now + LEAD).astimezone(UK).date()
+        try:
+            want = dt.date.fromisoformat(str(created)[:10]) if created else None
+            if want and want > day: day = want
+        except ValueError: pass
         for _ in range(60):
             for t in day_slots(day):
                 if t >= now + LEAD and t not in taken:
@@ -158,7 +166,7 @@ def main():
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot = (t or next_slot()).isoformat().replace("+00:00", "Z")
+            slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
         recent_looks.append(look)
         jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look})

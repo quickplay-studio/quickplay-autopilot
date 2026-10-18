@@ -11,7 +11,7 @@ Sign-ins live in tokens/*.enc, encrypted with SOCIAL_KEY (a GitHub secret); IG_T
 The TikTok/Instagram version of each Short (platform-safe music) waits in a draft GitHub release named social-<id>.
 Nothing here prints a token.
 """
-import base64, datetime as dt, hashlib, json, os, pathlib, subprocess, sys, time
+import base64, datetime as dt, hashlib, json, os, pathlib, re, subprocess, sys, time
 import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -20,6 +20,7 @@ CFG = json.loads((ROOT / "config.json").read_text())
 REPO = os.environ.get("GITHUB_REPOSITORY", "quickplay-studio/quickplay-autopilot")
 IG_API = "https://graph.instagram.com/" + CFG.get("instagram_api_version", "v23.0")
 TT_API = "https://open.tiktokapis.com/v2"
+FB_API = "https://graph.facebook.com/" + CFG.get("facebook_api_version", "v25.0")
 TT_REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/tiktok-callback.html"
 NOW = lambda: dt.datetime.now(dt.timezone.utc)
 
@@ -126,6 +127,54 @@ def tt_post(t, path, caption, mode):
     if up.status_code not in (200, 201): raise RuntimeError(f"tiktok upload: {up.status_code} {up.text[:200]}")
     return d["publish_id"]
 
+# ---------- Facebook Page Reels ----------
+def fb_tokens():
+    """The Page token and Page id from GitHub secrets (FB_PAGE_TOKEN, FB_PAGE_ID): a Page token made from a long-lived
+    user token doesn't expire. None until both secrets exist."""
+    tok, page = os.environ.get("FB_PAGE_TOKEN", "").strip(), os.environ.get("FB_PAGE_ID", "").strip()
+    return {"token": tok, "page": page} if tok and page else None
+
+def fb_post(fb, path, cap):
+    """Publish a Reel on the Facebook Page (Meta's Reels Publishing API): open an upload session, send the file to
+    rupload.facebook.com, then publish it with the caption. Returns the video id."""
+    r = requests.post(f"{FB_API}/{fb['page']}/video_reels", data={"upload_phase": "start", "access_token": fb["token"]}, timeout=60).json()
+    if "video_id" not in r: raise RuntimeError(f"facebook start: {str(r.get('error', r))[:240]}")
+    vid, size = r["video_id"], path.stat().st_size
+    up = requests.post(f"https://rupload.facebook.com/video-upload/{FB_API.rsplit('/', 1)[-1]}/{vid}", data=path.read_bytes(), timeout=600,
+                       headers={"Authorization": f"OAuth {fb['token']}", "offset": "0", "file_size": str(size),
+                                "Content-Type": "application/octet-stream"})
+    if not up.ok or not (up.json() if up.content else {}).get("success"):
+        raise RuntimeError(f"facebook upload: {up.status_code} {up.text[:240]}")
+    last = None
+    for phase in ("finish", "complete"):          # Meta's docs show both names for the last phase
+        fin = requests.post(f"{FB_API}/{fb['page']}/video_reels", timeout=60, data={
+            "upload_phase": phase, "video_id": vid, "video_state": "PUBLISHED", "description": cap[:2200], "access_token": fb["token"]})
+        j = fin.json() if fin.content else {}
+        if fin.ok and j.get("success"): return vid
+        last = f"{fin.status_code} {str(j)[:240]}"
+        if "upload_phase" not in last: break
+    raise RuntimeError(f"facebook publish: {last}")
+
+def ramp_cap(platform):
+    """How many posts this platform may take in 24 hours today: <platform>_per_day to start, rising by
+    <platform>_ramp_per_day for each day since its first post, up to <platform>_target. Back to the starting number
+    for 3 days after an error that sounds like Meta pushing back (spam, block, restriction, limit)."""
+    start = int(CFG.get(f"{platform}_per_day", 6)); target = int(CFG.get(f"{platform}_target", start))
+    step = int(CFG.get(f"{platform}_ramp_per_day", 0)); firsts, trouble = [], False
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: st = json.loads(sp.read_text())
+        except Exception: continue
+        at = (st.get(platform) or {}).get("at") if isinstance(st.get(platform), dict) else None
+        if at: firsts.append(at)
+        err = str(st.get(f"{platform}_error") or "")
+        try:
+            when = dt.datetime.strptime(err[:16], "%Y-%m-%d %H:%M").replace(tzinfo=dt.timezone.utc)
+            if NOW() - when < dt.timedelta(hours=72) and re.search(r"spam|block|restrict|limit|temporar", err, re.I): trouble = True
+        except ValueError: pass
+    if trouble or not firsts: return start
+    days = (NOW() - dt.datetime.fromisoformat(min(firsts).replace("Z", "+00:00"))).days
+    return min(target, start + step * max(0, days))
+
 # ---------- what to post ----------
 def caption(st, board, platform="instagram"):
     """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp."""
@@ -157,12 +206,24 @@ def post():
     mode = CFG.get("tiktok_mode", "inbox")
     tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
     tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
-    done_any, ig_recent = False, 0
+    fb = fb_tokens()
+    done_any, ig_recent, fb_recent = False, 0, 0
     for sp in (ROOT / "status").glob("QD-*.json"):
-        try: at = dt.datetime.fromisoformat(((json.loads(sp.read_text()).get("instagram") or {}).get("at") or "").replace("Z", "+00:00"))
+        try: s0 = json.loads(sp.read_text())
         except Exception: continue
-        if NOW() - at <= dt.timedelta(hours=24): ig_recent += 1
-    for sp in sorted((ROOT / "status").glob("QD-*.json")):
+        for key in ("instagram", "facebook"):
+            try: at = dt.datetime.fromisoformat(((s0.get(key) or {}).get("at") or "").replace("Z", "+00:00"))
+            except Exception: continue
+            if NOW() - at <= dt.timedelta(hours=24):
+                if key == "instagram": ig_recent += 1
+                else: fb_recent += 1
+    ig_cap, fb_cap = ramp_cap("instagram"), ramp_cap("facebook")
+    fresh_h = float(CFG.get("crosspost_max_age_hours", 48))     # Instagram and Facebook never get a backlog of old Shorts
+    def order(sp):          # the day's picks first, then the rest by publish time
+        try: st0 = json.loads(sp.read_text())
+        except Exception: return (2, "")
+        return (0 if (board_for(st0) or {}).get("tiktok") else 1, st0.get("publish_at") or "") if st0.get("id") else (2, "")
+    for sp in sorted((ROOT / "status").glob("QD-*.json"), key=order):
         st = json.loads(sp.read_text())
         if not st.get("video") or not st.get("social_release") or not st.get("publish_at"): continue
         public_at = dt.datetime.fromisoformat(st["publish_at"].replace("Z", "+00:00"))
@@ -179,12 +240,20 @@ def post():
         # Instagram takes the day's picks only (config instagram_mode "picks"), at most instagram_per_day Reels in 24 hours:
         # 20 Reels a day from one account reads as spam to Meta
         ig_pick = picked if CFG.get("instagram_mode", "picks") == "picks" else True
+        recent_public = public and (NOW() - public_at).total_seconds() / 3600 <= fresh_h
         if ig and public and not st.get("instagram") and not ig_pick and not st.get("instagram_skipped"):
             st["instagram_skipped"] = "not one of the day's picks"
-        want_ig = bool(ig) and public and not st.get("instagram") and ig_pick and ig_recent < int(CFG.get("instagram_per_day", 6))
+        if ig and public and not recent_public and not st.get("instagram") and not st.get("instagram_skipped"):
+            st["instagram_skipped"] = f"public over {fresh_h:g} hours before Instagram had room"
+        want_ig = bool(ig) and recent_public and not st.get("instagram") and ig_pick and ig_recent < ig_cap and not st.get("instagram_skipped")
+        if fb and public and not recent_public and not st.get("facebook") and not st.get("facebook_skipped"):
+            st["facebook_skipped"] = f"public over {fresh_h:g} hours before Facebook had room"
+        want_fb = bool(fb) and recent_public and not st.get("facebook") and fb_recent < fb_cap and not st.get("facebook_skipped")
         manual = mode == "manual"                    # Charlie uploads TikTok himself on desktop from the morning package
         want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
-        if not (want_ig or want_tt): continue
+        if not (want_ig or want_tt or want_fb):
+            if st.get("instagram_skipped") or st.get("facebook_skipped"): sp.write_text(json.dumps(st, indent=1, ensure_ascii=False))
+            continue
         rel = st["social_release"]; work = ROOT / "social_tmp"; work.mkdir(exist_ok=True)
         if gh("release", "download", rel, "-p", "social.mp4", "-D", str(work), "--clobber", check=False).returncode:
             st["social_error"] = "release missing"; sp.write_text(json.dumps(st, indent=1, ensure_ascii=False)); continue
@@ -205,17 +274,23 @@ def post():
                 st["instagram"] = {"media": ig_post(ig, url, caption(st, b, "instagram")), "at": NOW().isoformat(timespec="seconds")}
                 st.pop("instagram_error", None)
             except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
+        if want_fb:
+            try:
+                st["facebook"] = {"video": fb_post(fb, mp4, caption(st, b, "instagram")), "at": NOW().isoformat(timespec="seconds")}
+                st.pop("facebook_error", None); fb_recent += 1
+            except Exception as e: st["facebook_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
         if tt and not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
         if tt and not picked and not st.get("tiktok"): st["tiktok_skipped"] = "not one of the day's 5 TikTok picks"
         if tt and manual and not st.get("tiktok"): st["tiktok_skipped"] = "uploaded by hand on desktop" if picked else "not a TikTok pick"
         if st.get("instagram") and want_ig: ig_recent += 1
-        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or st.get("instagram_skipped") or not ig):
+        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or st.get("instagram_skipped") or not ig) \
+                and (st.get("facebook") or st.get("facebook_skipped") or not fb):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:
             gh("release", "edit", rel, "--draft=true", check=False)
         mp4.unlink(missing_ok=True)
         sp.write_text(json.dumps(st, indent=1, ensure_ascii=False)); done_any = True
-        print(st["id"], "tiktok:", bool(st.get("tiktok")), "instagram:", bool(st.get("instagram")))
+        print(st["id"], "tiktok:", bool(st.get("tiktok")), "instagram:", bool(st.get("instagram")), "facebook:", bool(st.get("facebook")))
     if not done_any: print("nothing to post")
 
 def check():
@@ -244,6 +319,14 @@ def check():
             out["instagram"]["publishing_limit"] = q.json().get("data") if q.ok else f"{q.status_code} {q.text[:200]}"
         else:
             out["instagram"] = {"ok": False, "error": f"{r.status_code} {r.text[:300]}"}
+    fb = fb_tokens()
+    if not fb:
+        out["facebook"] = {"ok": False, "error": "not connected (FB_PAGE_TOKEN and FB_PAGE_ID secrets missing)"}
+    else:
+        r = requests.get(f"{FB_API}/{fb['page']}", params={"fields": "name,followers_count,fan_count", "access_token": fb["token"]}, timeout=30)
+        out["facebook"] = ({"ok": True, "page": r.json().get("name"), "followers": r.json().get("followers_count", r.json().get("fan_count")),
+                            "today_cap": ramp_cap("facebook")} if r.ok else {"ok": False, "error": f"{r.status_code} {r.text[:300]}"})
+    if ig: out.setdefault("instagram", {})["today_cap"] = ramp_cap("instagram")
     tt = load("tiktok")
     if not tt.get("refresh_token"):
         ck = os.environ.get("TIKTOK_CLIENT_KEY", "")

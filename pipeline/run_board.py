@@ -98,6 +98,18 @@ def youtube_tags(meta):
         seen.add(k); out.append(t); used += cost
     return out
 
+CATEGORY_LOOK = {"Gaming": ("#8B5CF6", "gamepad-2"), "Film": ("#EF4444", "clapperboard"), "Music": ("#C084FC", "music"),
+                 "Sport": ("#FFB23F", "trophy"), "Tech": ("#34D399", "cpu"), "Science": ("#7DD3FC", "atom"),
+                 "Entertainment": ("#F59E0B", "tv")}
+
+def fill_defaults(sb):
+    """The routine fields a writer may leave out (CLAUDE.md, Board schema): beat gap and tail, music level, and a colour
+    and icon for the category. Anything the board sets wins."""
+    accent, icon = CATEGORY_LOOK.get(sb.get("category"), ("#2EE6C5", "trending-up"))
+    sb.setdefault("gap", 0.1); sb.setdefault("tail", 0.6); sb.setdefault("accent", accent); sb.setdefault("chipIcon", icon)
+    (sb.setdefault("music", {})).setdefault("gain_db", -15)
+    return sb
+
 def contact_sheet(mp4, timeline, dest):
     from PIL import Image
     shots = json.loads(timeline.read_text()).get("shots", [])
@@ -127,7 +139,7 @@ def main():
         status.update(state="failed (board rejected)", error=job.get("errors", "failed validation"))
         (res / "status.json").write_text(json.dumps(status, indent=1, ensure_ascii=False)); print(json.dumps(status, indent=1))
         return
-    sb = json.loads(board_path.read_text()); sid = sb["id"]
+    sb = fill_defaults(json.loads(board_path.read_text())); sid = sb["id"]
     status["title"] = sb.get("meta", {}).get("title")
     try:
         import fetch_media

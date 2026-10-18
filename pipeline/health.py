@@ -40,7 +40,7 @@ def main():
     ypp = (f"YPP {y.get('subscribers') or 0:,}/1,000 subs, {y.get('views_last_90_days') or 0:,}/10M views"
            f" (about {p.get('views_needed_per_day', 0):,} a day needed)") if y else "YPP numbers not in yet"
     head = "Health: all good" if not problems else f"Health: {len(problems)} to look at: " + "; ".join(problems[:4])
-    print(f"{head} · {uploads}/{cfg.get('daily_limit', 10)} YouTube uploads in 24h · {ypp}")
+    print(f"{head} · {uploads}/{cfg.get('upload_limit_24h', cfg.get('daily_limit', 10))} YouTube uploads in 24h · {ypp}")
 
 if __name__ == "__main__":
     main()

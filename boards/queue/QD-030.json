@@ -1,0 +1,211 @@
+{
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-18",
+ "reserve": true,
+ "tiktok": false,
+ "id": "QD-030",
+ "format": "three_details",
+ "category": "Science",
+ "chipIcon": "fish",
+ "accent": "#38BDF8",
+ "music": {
+  "mood": "playful",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "An octopus has three hearts, and its blood is blue.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "kicker": "Nature",
+    "lines": [
+     "Three hearts.",
+     "Blue blood."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus underwater",
+     "w": 1.2
+    },
+    {
+     "src": "commons-search:common octopus Octopus vulgaris",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   ]
+  },
+  {
+   "say": "One: two of those hearts only pump blood through its gills.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "heart",
+      "t": "2 hearts",
+      "s": "the gills"
+     },
+     {
+      "icon": "heart",
+      "t": "1 heart",
+      "s": "the body"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus swimming"
+    }
+   ]
+  },
+  {
+   "say": "The third pushes it round the rest of the body.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus coral reef"
+    }
+   ]
+  },
+  {
+   "say": "Two: the blue comes from copper, in a protein called haemocyanin. Ours uses haemoglobin instead.",
+   "visual": {
+    "type": "stat",
+    "value": "Cu",
+    "label": "copper in its blood",
+    "sub": "that's what makes it blue"
+   },
+   "shots": [
+    {
+     "src": "commons-search:octopus close up",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.45
+     ]
+    },
+    {
+     "src": "pixabay:video:octopus tentacles",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "say": "But the third detail is the strangest.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus hiding rock"
+    }
+   ]
+  },
+  {
+   "say": "About two thirds of an octopus's neurons are in its arms, not its head.",
+   "impact": true,
+   "visual": {
+    "type": "stat",
+    "value": "2/3",
+    "label": "of its neurons are in its arms"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus arms"
+    }
+   ]
+  },
+  {
+   "say": "Hearts, blood or arms: which surprised you most?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:octopus underwater ocean"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Octopus: three hearts and blue blood 🐙",
+  "alt_title": "Why octopus blood is blue 🐙",
+  "summary": "An octopus has three hearts and blue, copper-based blood, and about two thirds of its neurons are in its arms.",
+  "comment": "Hearts, blood or arms: which surprised you most?",
+  "hashtags": [
+   "#Octopus",
+   "#OctopusFacts",
+   "#MarineLife",
+   "#Ocean",
+   "#AnimalFacts",
+   "#Science",
+   "#Nature",
+   "#DidYouKnow",
+   "#Wildlife",
+   "#ScienceFacts"
+  ],
+  "tags": [
+   "octopus facts",
+   "how many hearts does an octopus have",
+   "why is octopus blood blue",
+   "octopus three hearts",
+   "octopus neurons in arms",
+   "haemocyanin",
+   "marine biology facts"
+  ],
+  "sources": [
+   [
+    "Smithsonian Magazine: Ten wild facts about octopuses",
+    "https://www.smithsonianmag.com/science-nature/ten-wild-facts-about-octopuses-they-have-three-hearts-big-brains-and-blue-blood-7625828/"
+   ],
+   [
+    "BBC Science Focus: How many hearts does an octopus have?",
+    "https://www.sciencefocus.com/nature/why-does-an-octopus-have-more-than-one-heart"
+   ],
+   [
+    "PBS Nature: Octopus",
+    "https://www.pbs.org/wnet/nature/group/other-species/octopus/"
+   ]
+  ],
+  "facts": [
+   [
+    "An octopus has three hearts: two pump blood through the gills, one around the body",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "Its blood is blue because it carries oxygen with copper-based haemocyanin, where ours uses haemoglobin",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "About two thirds of an octopus's neurons are in its arms",
+    [
+     1,
+     3
+    ]
+   ]
+  ],
+  "signals": {
+   "note": [
+    "evergreen reserve Short"
+   ]
+  }
+ }
+}

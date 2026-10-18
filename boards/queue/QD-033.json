@@ -1,0 +1,207 @@
+{
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-18",
+ "reserve": true,
+ "tiktok": false,
+ "id": "QD-033",
+ "format": "real_reason",
+ "category": "Tech",
+ "chipIcon": "message-square",
+ "accent": "#34D399",
+ "music": {
+  "mood": "retro",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "The first text message ever sent was just two words.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "kicker": "3 December 1992",
+    "lines": [
+     "Two words."
+    ],
+    "highlight": [
+     0
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:old mobile phone",
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:christmas lights"
+    }
+   ]
+  },
+  {
+   "say": "On 3 December 1992, engineer Neil Papworth typed it on a computer.",
+   "visual": {
+    "type": "date",
+    "month": "Dec",
+    "day": 3,
+    "label": "1992",
+    "sub": "the first text"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:typing on old computer keyboard"
+    }
+   ]
+  },
+  {
+   "say": "He sent it to the phone of Richard Jarvis, a director at Vodafone.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:retro mobile phone"
+    }
+   ]
+  },
+  {
+   "say": "It said: Merry Christmas.",
+   "impact": true,
+   "visual": {
+    "type": "quote",
+    "text": "Merry Christmas",
+    "by": "The first text, 1992"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:christmas tree lights"
+    }
+   ]
+  },
+  {
+   "say": "But Richard couldn't text back.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:mobile phone screen"
+    }
+   ]
+  },
+  {
+   "say": "Phones back then could receive texts, but they couldn't send them yet. That came later.",
+   "visual": {
+    "type": "title",
+    "lines": [
+     "Receive",
+     "only."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:vintage phone"
+    }
+   ]
+  },
+  {
+   "say": "What was the first text you ever sent?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:texting smartphone"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "The first text message ever sent 📱",
+  "alt_title": "Merry Christmas: the first text ever 📱",
+  "summary": "On 3 December 1992 Neil Papworth sent the first text, Merry Christmas, from a computer to a Vodafone director's phone.",
+  "comment": "What was the first text you ever sent?",
+  "hashtags": [
+   "#TextMessage",
+   "#SMS",
+   "#Vodafone",
+   "#TechHistory",
+   "#MobilePhone",
+   "#Tech",
+   "#Christmas",
+   "#RetroTech",
+   "#DidYouKnow",
+   "#History"
+  ],
+  "tags": [
+   "first text message",
+   "first sms ever sent",
+   "neil papworth",
+   "merry christmas first text",
+   "history of texting",
+   "vodafone first text",
+   "1992 text message"
+  ],
+  "sources": [
+   [
+    "Wikipedia: Neil Papworth",
+    "https://en.wikipedia.org/wiki/Neil_Papworth"
+   ],
+   [
+    "History.com: First SMS text message is sent",
+    "https://www.history.com/this-day-in-history/december-3/first-sms-text-message-sent"
+   ],
+   [
+    "CBC News: The text message turns 25",
+    "https://www.cbc.ca/news/science/text-message-anniversary-1.4430659"
+   ]
+  ],
+  "facts": [
+   [
+    "The first text was sent on 3 December 1992",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "Neil Papworth typed it on a computer",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "It went to the phone of Richard Jarvis, a Vodafone director",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "It said Merry Christmas",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "Phones then could receive texts but not send them, so he couldn't reply",
+    [
+     2,
+     3
+    ]
+   ]
+  ],
+  "signals": {
+   "note": [
+    "evergreen reserve Short"
+   ]
+  }
+ }
+}

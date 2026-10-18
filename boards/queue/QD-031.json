@@ -1,0 +1,241 @@
+{
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-18",
+ "reserve": true,
+ "tiktok": false,
+ "id": "QD-031",
+ "format": "one_detail",
+ "category": "Sport",
+ "chipIcon": "timer",
+ "accent": "#FFB23F",
+ "music": {
+  "mood": "inspiring",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "Nobody has run 100 metres faster than this since 2009.",
+   "impact": true,
+   "visual": {
+    "type": "stat",
+    "value": "9.58",
+    "label": "seconds",
+    "sub": "100 metres"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Usain Bolt",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "label": {
+      "t": "Usain Bolt",
+      "s": "Jamaica"
+     },
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:sprinter running track"
+    }
+   ]
+  },
+  {
+   "say": "Usain Bolt ran it in Berlin, on 16 August 2009.",
+   "visual": {
+    "type": "date",
+    "month": "Aug",
+    "day": 16,
+    "label": "Berlin",
+    "sub": "2009"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Usain Bolt 2009",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   ]
+  },
+  {
+   "say": "A year earlier, at the Beijing Olympics, he'd set the record at 9.69.",
+   "visual": {
+    "type": "versus",
+    "items": [
+     {
+      "label": "Beijing 2008",
+      "value": "9.69"
+     },
+     {
+      "label": "Berlin 2009",
+      "value": "9.58"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Usain Bolt Beijing Olympics",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   ]
+  },
+  {
+   "say": "In Berlin he cut 0.11 of a second off it.",
+   "visual": {
+    "type": "stat",
+    "value": "0.11",
+    "label": "seconds off his own record"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:stopwatch"
+    },
+    {
+     "src": "pixabay:video:athletics stadium",
+     "at": 5
+    }
+   ]
+  },
+  {
+   "say": "Before that night, nobody had ever broken 9.6.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Usain Bolt sprint",
+     "move": "left",
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   ]
+  },
+  {
+   "say": "And it's still number one on the world all-time list.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "lines": [
+     "Still",
+     "number one."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Usain Bolt celebrating",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Will anyone ever run faster? Who do you think could do it?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:running track stadium lights"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Usain Bolt's 9.58: still unbeaten ⚡",
+  "alt_title": "The 100m record nobody can touch ⚡",
+  "summary": "Usain Bolt ran 100 metres in 9.58 seconds in Berlin on 16 August 2009, and it is still the fastest ever.",
+  "comment": "Who could ever break 9.58?",
+  "hashtags": [
+   "#UsainBolt",
+   "#WorldRecord",
+   "#100m",
+   "#Athletics",
+   "#Sprint",
+   "#TrackAndField",
+   "#Jamaica",
+   "#Olympics",
+   "#Sport",
+   "#Trending"
+  ],
+  "tags": [
+   "usain bolt 9.58",
+   "100m world record",
+   "fastest man ever",
+   "usain bolt berlin 2009",
+   "usain bolt world record",
+   "fastest 100m ever",
+   "athletics records"
+  ],
+  "sources": [
+   [
+    "World Athletics: Bolt again, 9.58 world record in Berlin",
+    "https://worldathletics.org/news/news/bolt-again-958-world-record-in-berlin-updat"
+   ],
+   [
+    "Guinness World Records: Fastest run 100 metres (male)",
+    "https://www.guinnessworldrecords.com/world-records/fastest-run-100-metres-(male)"
+   ],
+   [
+    "World Athletics: All-time top list, 100 metres men",
+    "https://worldathletics.org/records/all-time-toplists/sprints/100-metres/outdoor/men/senior"
+   ],
+   [
+    "CBS Sports: Usain Bolt 'not worried' about his world records falling",
+    "https://www.cbssports.com/general/news/usain-bolt-not-worried-about-his-world-records-falling-to-current-crop-of-tracks-biggest-stars"
+   ]
+  ],
+  "facts": [
+   [
+    "Usain Bolt ran 100 metres in 9.58 seconds in Berlin on 16 August 2009",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "His previous world record was 9.69, set at the Beijing Olympics a year earlier",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "9.58 took 0.11 of a second off 9.69, so nobody had run under 9.6 before",
+    [
+     1,
+     2
+    ]
+   ],
+   [
+    "9.58 is still number one on the all-time list",
+    [
+     3,
+     4
+    ]
+   ]
+  ],
+  "signals": {
+   "note": [
+    "evergreen reserve Short"
+   ]
+  }
+ }
+}

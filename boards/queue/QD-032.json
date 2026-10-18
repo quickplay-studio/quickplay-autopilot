@@ -1,0 +1,267 @@
+{
+ "gap": 0.1,
+ "tail": 0.6,
+ "created": "2026-10-18",
+ "reserve": true,
+ "tiktok": false,
+ "id": "QD-032",
+ "format": "timeline",
+ "category": "Music",
+ "chipIcon": "music",
+ "accent": "#C084FC",
+ "music": {
+  "mood": "rock",
+  "gain_db": -15
+ },
+ "beats": [
+  {
+   "say": "Queen's own label said this song was too long for radio.",
+   "impact": true,
+   "visual": {
+    "type": "title",
+    "kicker": "Queen, 1975",
+    "lines": [
+     "Too long",
+     "for radio."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Freddie Mercury",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ],
+     "label": {
+      "t": "Freddie Mercury",
+      "s": "Queen"
+     },
+     "w": 1.2
+    },
+    {
+     "src": "pixabay:video:vinyl record spinning"
+    }
+   ]
+  },
+  {
+   "say": "Bohemian Rhapsody runs for nearly six minutes.",
+   "visual": {
+    "type": "title",
+    "lines": [
+     "Nearly",
+     "six minutes."
+    ],
+    "highlight": [
+     1
+    ]
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:vinyl record player"
+    }
+   ]
+  },
+  {
+   "say": "Then the DJ Kenny Everett got hold of a tape and played it 14 times in one weekend.",
+   "visual": {
+    "type": "stat",
+    "value": "14",
+    "label": "plays in one weekend",
+    "sub": "Capital Radio"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:radio studio microphone"
+    },
+    {
+     "src": "pixabay:video:reel to reel tape",
+     "at": 9
+    }
+   ]
+  },
+  {
+   "say": "It spent nine weeks at Number 1 in the UK.",
+   "impact": true,
+   "visual": {
+    "type": "stat",
+    "value": "9",
+    "label": "weeks at Number 1",
+    "sub": "1975 to 1976"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Freddie Mercury 1977",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Then, in 1991, it happened again.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Queen band concert",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   ]
+  },
+  {
+   "say": "After Freddie Mercury died that year, it went back to Number 1 for five more weeks.",
+   "visual": {
+    "type": "timeline",
+    "items": [
+     {
+      "y": "1975",
+      "t": "9 weeks at No 1"
+     },
+     {
+      "y": "1991",
+      "t": "5 more weeks"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Freddie Mercury live",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   ]
+  },
+  {
+   "say": "It's since been certified Diamond, for 10 million sales.",
+   "visual": {
+    "type": "stat",
+    "value": "10M",
+    "label": "sales",
+    "sub": "Diamond"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:concert crowd lights"
+    }
+   ]
+  },
+  {
+   "say": "Too long for radio, or perfect as it is?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "pixabay:video:vinyl record spinning"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Bohemian Rhapsody: too long for radio? 🎸",
+  "alt_title": "Queen's song radio said was too long 🎸",
+  "summary": "Bohemian Rhapsody was thought too long for radio, yet it spent nine weeks at Number 1 in 1975 and five more in 1991.",
+  "comment": "Too long for radio, or perfect as it is?",
+  "hashtags": [
+   "#Queen",
+   "#BohemianRhapsody",
+   "#FreddieMercury",
+   "#ClassicRock",
+   "#Music",
+   "#MusicHistory",
+   "#Rock",
+   "#UKCharts",
+   "#70s",
+   "#DidYouKnow"
+  ],
+  "tags": [
+   "bohemian rhapsody",
+   "queen bohemian rhapsody facts",
+   "freddie mercury",
+   "kenny everett bohemian rhapsody",
+   "bohemian rhapsody number 1",
+   "queen 1975",
+   "classic rock history"
+  ],
+  "sources": [
+   [
+    "Official Charts: Celebrating 50 years of Queen's Bohemian Rhapsody",
+    "https://officialcharts.com/chart-news/queen-bohemian-rhapsody-50-years/"
+   ],
+   [
+    "Billboard: Queen's Bohemian Rhapsody, things to know",
+    "https://billboard.com/lists/queen-bohemian-rhapsody-anniversary-things-to-know"
+   ],
+   [
+    "Brian May: 30 fascinating facts about Bohemian Rhapsody",
+    "https://brianmay.com/queen-news/2015/10/on-40th-anniversary-of-queens-bohemian-rhapsody-enjoy-30-fascinating-facts-about-freddie-mercury-hit/"
+   ]
+  ],
+  "facts": [
+   [
+    "Its length was thought too long for radio (EMI and the band's manager said so)",
+    [
+     1,
+     3
+    ]
+   ],
+   [
+    "It runs for nearly six minutes",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "Kenny Everett played it 14 times in one weekend on Capital Radio",
+    [
+     1,
+     3
+    ]
+   ],
+   [
+    "It spent nine weeks at Number 1 in the UK in 1975 and 1976",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "After Freddie Mercury died in 1991 it was Number 1 again for five weeks",
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   [
+    "It has been certified Diamond for 10 million sales",
+    [
+     1,
+     2
+    ]
+   ]
+  ],
+  "signals": {
+   "note": [
+    "evergreen reserve Short"
+   ]
+  }
+ }
+}

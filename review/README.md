@@ -2,21 +2,14 @@
 
 YouTube checked Sun 18 Oct 21:26 (UK): 3 scheduled, 24 public, 11 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AkV7heAuri9bmr4HJYDilFQ"}} · TikTok: connected (checked Sun 18 Oct 20:55).
+Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 21:26).
 
 ## Needs a look
 
+- **QD-031** Usain Bolt's 9.58: still unbeaten ⚡: failed. RuntimeError: no usable media for beat: A year earlier, at the Beijing Olympics,
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-
-## In the queue
-
-- **QD-029** Why we only ever see one side of the Moon 🌕 (rendering next)
-- **QD-030** Octopus: three hearts and blue blood 🐙 (rendering next)
-- **QD-031** Usain Bolt's 9.58: still unbeaten ⚡ (rendering next)
-- **QD-032** Bohemian Rhapsody: too long for radio? 🎸 (rendering next)
-- **QD-033** The first text message ever sent 📱 (rendering next)
 
 ## On the channel (latest first)
 

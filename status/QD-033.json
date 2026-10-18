@@ -1,0 +1,79 @@
+{
+ "id": "QD-033",
+ "board": "boards/queue/QD-033.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-18T20:19:22.013434+00:00",
+ "title": "The first text message ever sent 📱",
+ "media": {
+  "real_shots": 0,
+  "planned_real": 0
+ },
+ "music": "death-duel",
+ "social_music": "no-copyright-synthwave-music-478345",
+ "look": {
+  "captions": "boxed",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice H2 was less clear, used george",
+ "qa": {
+  "duration": 23.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 7.2
+ },
+ "timeline": [
+  [
+   0.06,
+   3.26,
+   "title",
+   1
+  ],
+  [
+   3.26,
+   8.61,
+   "date",
+   1
+  ],
+  [
+   8.61,
+   12.26,
+   "none",
+   1
+  ],
+  [
+   12.26,
+   13.96,
+   "quote",
+   1
+  ],
+  [
+   13.96,
+   15.84,
+   "none",
+   1
+  ],
+  [
+   15.84,
+   20.97,
+   "title",
+   1
+  ],
+  [
+   20.97,
+   23.74,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: approved in advance, posted only on a day nothing new was written",
+  "render: no real images of the subject (all stock footage)"
+ ],
+ "preview_release": "preview-QD-033",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-c4624d94891c63082d44"
+}

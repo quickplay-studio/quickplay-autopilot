@@ -1,0 +1,83 @@
+{
+ "id": "QD-029",
+ "board": "boards/queue/QD-029.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-18T20:19:14.964628+00:00",
+ "title": "Why we only ever see one side of the Moon 🌕",
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8
+ },
+ "music": "horizons",
+ "social_music": "technology-tech-technology-499582",
+ "look": {
+  "captions": "boxed",
+  "voice": "george",
+  "energy": "punchy",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 35.8,
+  "wps": 3.06,
+  "weak_beats": [],
+  "size_mb": 7.7
+ },
+ "timeline": [
+  [
+   0.06,
+   4.21,
+   "title",
+   1
+  ],
+  [
+   4.21,
+   6.69,
+   "none",
+   1
+  ],
+  [
+   6.69,
+   12.87,
+   "cards",
+   2
+  ],
+  [
+   12.87,
+   19.3,
+   "none",
+   2
+  ],
+  [
+   19.3,
+   21.47,
+   "title",
+   1
+  ],
+  [
+   21.47,
+   29.11,
+   "none",
+   2
+  ],
+  [
+   29.11,
+   33.22,
+   "none",
+   1
+  ],
+  [
+   33.22,
+   35.79,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: approved in advance, posted only on a day nothing new was written"
+ ],
+ "preview_release": "preview-QD-029",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-50b0a065955ded200be9"
+}

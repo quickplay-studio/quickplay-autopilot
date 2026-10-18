@@ -1,0 +1,83 @@
+{
+ "id": "QD-032",
+ "board": "boards/queue/QD-032.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-18T20:19:25.941928+00:00",
+ "title": "Bohemian Rhapsody: too long for radio? 🎸",
+ "media": {
+  "real_shots": 4,
+  "planned_real": 4
+ },
+ "music": "rise-of-the-machines",
+ "social_music": "indie-rock-204846",
+ "look": {
+  "captions": "pop",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 27.5,
+  "wps": 3.31,
+  "weak_beats": [],
+  "size_mb": 8.0
+ },
+ "timeline": [
+  [
+   0.06,
+   2.72,
+   "title",
+   1
+  ],
+  [
+   2.72,
+   5.29,
+   "title",
+   1
+  ],
+  [
+   5.29,
+   10.84,
+   "stat",
+   2
+  ],
+  [
+   10.84,
+   13.3,
+   "stat",
+   1
+  ],
+  [
+   13.3,
+   16.39,
+   "none",
+   1
+  ],
+  [
+   16.39,
+   20.89,
+   "timeline",
+   1
+  ],
+  [
+   20.89,
+   24.47,
+   "stat",
+   1
+  ],
+  [
+   24.47,
+   27.48,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: approved in advance, posted only on a day nothing new was written"
+ ],
+ "preview_release": "preview-QD-032",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-274a25d7f234935b2d09"
+}

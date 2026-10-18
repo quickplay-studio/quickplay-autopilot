@@ -101,7 +101,8 @@ def analyse(rows):
         for v, grp in groups.items():
             logs = [math.log(max(0.05, float(r["rel"]))) for r in grp]
             n = len(logs); lift = math.exp(sum(logs) / (n + SHRINK))
-            verdict = ("too few to tell" if n < 3 else "early sign" if n < MIN_N else
+            days = len({r.get("posted_day") for r in grp})        # one day's luck (or one weekday seen once) proves little
+            verdict = ("too few to tell" if n < 3 else "early sign" if n < MIN_N or days < 2 else
                        "push" if lift >= PUSH else "cut back" if lift <= CUT else "about typical")
             sup = _support(grp)
             table.append({"feature": feat, "feature_label": label, "value": v, "n": n, "lift": round(lift, 2),

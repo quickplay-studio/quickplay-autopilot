@@ -550,7 +550,7 @@ def main():
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table)
-        (OUT / "insights.md").write_text(insights(rows, summary, table, DRV.recipe(table, rows), aud))
+        (OUT / "insights.md").write_text(insights(rows, summary, table, DRV.recipe(table, rows) + audience_recipe(aud), aud))
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
 def look_scores(rows):
@@ -662,6 +662,28 @@ def audience_lines(aud):
     if ch.get("demographics"):
         d = sorted(ch["demographics"], key=lambda r: -float(r.get("viewerPercentage") or 0))[:3]
         out.append("Biggest groups: " + ", ".join(f"{(r.get('ageGroup') or '').replace('age', '')} {r.get('gender')} {float(r.get('viewerPercentage') or 0):.0f}%" for r in d) + ".")
+    return out
+
+def audience_recipe(aud):
+    """Writer guidance from how viewers find us and where they are (needs 300 or more views to say anything)."""
+    ch = (aud or {}).get("channel") or {}
+    tr = {r.get("insightTrafficSourceType"): float(r.get("views") or 0) for r in ch.get("traffic") or []}
+    tot = sum(tr.values())
+    if tot < 300: return []
+    out, search, feed = [], tr.get("YT_SEARCH", 0) / tot, tr.get("SHORTS", 0) / tot
+    if search >= 0.35:
+        out.append(f"YouTube search brings {round(100 * search)}% of views (the Shorts feed {round(100 * feed)}%): titles must open "
+                   "with the exact name people type (person, game, film, team), the first hashtag and first tag repeat it, and topics "
+                   "people are actively searching today beat clever angles on quiet ones.")
+    elif feed >= 0.7:
+        out.append(f"The Shorts feed brings {round(100 * feed)}% of views: the first second decides everything, so lead with the "
+                   "strongest real image and a hook of 8 words or fewer.")
+    cc = {r.get("country"): float(r.get("views") or 0) for r in ch.get("countries") or []}
+    ctot = sum(cc.values()) or 1
+    us, gb = cc.get("US", 0) / ctot, cc.get("GB", 0) / ctot
+    if us >= gb + 0.15:
+        out.append(f"US viewers are {round(100 * us)}% (UK {round(100 * gb)}%): pick stories that matter in both, explain UK-only "
+                   "references in a few words, and keep UK spelling.")
     return out
 
 def insights(rows, s, table=None, recipe=None, aud=None):

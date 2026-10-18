@@ -8,8 +8,10 @@ Spend as few tokens as possible: no rendering, no browsing beyond the sources yo
 ## The goal
 Monetisation as soon as possible. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in
 90 days, and the channel must get in before 1 February 2027 (after that, new channels need 20 million). That is roughly
-110,000 views a day, so every Short has to earn its place. `analytics/insights.md` shows what is working: repeat it,
-drop what isn't.
+110,000 views a day, so every Short has to earn its place. Choices follow the data: `analytics/insights.md` opens with
+the Recipe from the data (category mix, and the formats, hooks, titles, lengths and times that beat typical, worked out
+from every Short against Shorts posted around the same time) and the drivers behind it. Follow the Recipe; the reviews
+(REVIEW.md) change the rules themselves, and every change and its reason is in `analytics/decisions.csv`.
 
 ## Channel rules (non-negotiable)
 - Quickplay Daily: anonymous, family-friendly, UK English. Topics people are searching for now.
@@ -65,15 +67,18 @@ towards a day's capacity). Charlie approves them once ("reserve approve all", wr
 with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing new was written by 18:20.
 
 ## Steps
-1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md, status/channel.json and
+1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md (the Recipe first), status/channel.json and
    status/ files changed in the last 2 days. Fix and re-queue anything in boards/failed/ worth saving (move it back to
    boards/queue/).
 2. Capacity this session = the smallest of: `per_session`; `daily_limit` minus boards with today's `created` date
    (queue, ready, done and failed); `daily_limit` minus boards already in boards/queue/ and boards/ready/.
    On Sundays take one off (the weekly long video, pipeline/weekly.py, uses one upload). If it is 0, go to step 7.
 3. Pick topics (see What gets views), starting with trends/requests.md: Charlie's own requests come first, then the
-   trends; update that file in the same commit as the boards. The 12:50 run looks for what has broken or grown since the morning (trends refresh
-   at 11:35 UTC) and skips anything the morning run already covered. trends/research.json lists recent articles from
+   trends; update that file in the same commit as the boards. Fill the rest of the day to match the Recipe in
+   analytics/insights.md: its category mix for about 80% of the day (the other 20% on whatever trends hardest), and lean
+   towards the formats, hook styles, title styles and lengths it lists. Breaking news still beats the mix. The 12:50 run
+   looks for what has broken or grown since the morning (trends refresh at 11:35 UTC) and skips anything the morning run
+   already covered. trends/research.json lists recent articles from
    reputable outlets and the Wikipedia page for each top trend: open those first and search only for what's missing.
 4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error. Warnings: fix them, or keep the
@@ -87,6 +92,8 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
    - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.
+   - If analytics/decisions.csv has lines dated since yesterday, end with one line per change (at most 3):
+     "From the data: <change>, because <why>."
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
@@ -102,11 +109,13 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
 9. Refresh the stats dashboard (see Stats dashboard). Finish with one line: how many Shorts and their titles.
 
 ## Stats dashboard
-https://claude.ai/artifact/CErUUqubbPYWbVrN5XyhDy (private). GitHub refreshes analytics/ three times a day. Once a day:
-Artifact `read` the dashboard; then for each of analytics/shorts.csv and analytics/daily.csv, Artifact publish with
-`url` (the dashboard), `file_path` and `asset: true`; then ArtifactData `update` collection "datasets", doc_id
-"shorts" (or "daily"), data `{"source": {"kind": "file", "url": <returned url>, "name": <file name>},
-"updated": {"at": <ISO time>, "by": "Quickplay daily run"}}`. Don't rewrite the page.
+https://claude.ai/artifact/CErUUqubbPYWbVrN5XyhDy (private). GitHub refreshes analytics/ every hour (the full read three
+times a day). Refresh the dashboard at the end of each run: Artifact `read` the dashboard; ArtifactData `list` collection
+"datasets" (for each document's version); then for each dataset id that has a file, in order shorts, daily, progress,
+hourly, drivers, decisions, geo, traffic, audience: Artifact publish with `url` (the dashboard), `file_path`
+analytics/<id>.csv and `asset: true`; then ONE ArtifactData `batch` of `update` writes (collection "datasets", doc_id
+<id>, if_version from the list) with data `{"source": {"kind": "file", "url": <returned url>, "name": "<id>.csv"},
+"updated": {"at": <ISO time>, "by": "Quickplay run"}}`. Don't rewrite the page.
 
 ## Board schema (copy boards/hold/QD-028.json for the shape)
 - `id`: next free QD-### across boards/queue, ready, done, failed, hold, rejected and reserve, never below `first_id` in

@@ -1,5 +1,3 @@
 date,area,change,why,evidence,check_on,by
 2026-10-18,Category,"Lean towards category ""Music""","1.57x typical views over 5 Shorts (likes per 1,000 views 13 vs 4 typical; engaged views 41% vs 37% typical)","drivers.csv: category = Music, n 5, lift 1.57, median 2.84",2026-10-25,analytics (automatic)
 2026-10-18,Title,"Lean towards title ""number in title""","1.3x typical views over 5 Shorts (likes per 1,000 views 14 vs 4 typical; average viewed 76% vs 51% typical)","drivers.csv: title_style = number in title, n 5, lift 1.3, median 1.8",2026-10-25,analytics (automatic)
-2026-10-18,Day posted,"Lean towards day posted ""Saturday""","1.35x typical views over 9 Shorts (likes per 1,000 views 13 vs 4 typical; engaged views 100% vs 37% typical)","drivers.csv: weekday = Saturday, n 9, lift 1.35, median 1.0",2026-10-25,analytics (automatic)
-2026-10-18,Day posted,"Use less day posted ""Friday""","0.76x typical views over 8 Shorts (likes per 1,000 views 3 vs 4 typical)","drivers.csv: weekday = Friday, n 8, lift 0.76, median 0.68",2026-10-25,analytics (automatic)

@@ -3,19 +3,35 @@
  "google_trends": {
   "GB": [
    {
+    "q": "tom hardy",
+    "traffic": "200+",
+    "news": [
+     "'Tom Hardy and Joel Edgerton are brilliant': This 'powerful' drama is your next weekend watch",
+     "Pathé Unveils Sofia Coppola’s ‘Marie Antoinette’ 4K Restoration as Sophie and Jérôme Seydoux Are Feted in Lyon"
+    ]
+   },
+   {
+    "q": "eva longoria",
+    "traffic": "1000+",
+    "news": [
+     "Eva Longoria, actress (51): “I’d rather win a soccer title than an Oscar”",
+     "Eva Longoria would 'rather win a title than an Oscar' after Ryan Reynolds inspiration"
+    ]
+   },
+   {
+    "q": "elif shafak",
+    "traffic": "200+",
+    "news": [
+     "‘Is there any value in writing a story in a time of chaos?’: novelist Elif Shafak on her creative crisis",
+     "ELIF SHAFAK turns the tables on Gustave Flaubert for an inventive biofiction"
+    ]
+   },
+   {
     "q": "sonay kartal partner",
     "traffic": "200+",
     "news": [
      "Sonay Kartal vs Maja Chwalinska, Wuhan Open final LIVE! British player looks to win first WTA 1000 title",
      "Advantage Kartal or Chwalinska? Making the case for the Wuhan finalists"
-    ]
-   },
-   {
-    "q": "elif shafak",
-    "traffic": "100+",
-    "news": [
-     "‘Is there any value in writing a story in a time of chaos?’: novelist Elif Shafak on her creative crisis",
-     "ELIF SHAFAK turns the tables on Gustave Flaubert for an inventive biofiction"
     ]
    },
    {
@@ -28,7 +44,7 @@
    },
    {
     "q": "crystal palace vs west ham",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "Crystal Palace vs West Ham United: Women's Super League stats & head-to-head",
      "Training Gallery | Hammers get set for Eagles test"
@@ -54,90 +70,82 @@
     "q": "chacarra",
     "traffic": "1000+",
     "news": [
-     "DP World India Championship: Eugenio Chacarra leads but Rory McIlroy fades before play halted",
-     "Reed on India cut line as darkness halts McIlroy, Chacarra rounds"
-    ]
-   },
-   {
-    "q": "chwalinska",
-    "traffic": "2000+",
-    "news": [
-     "Injured Swiatek goes down fighting in Wuhan Open semi-final",
-     "Chwalinska beats Swiatek in all-Polish semifinal to reach Wuhan final"
-    ]
-   },
-   {
-    "q": "lando norris",
-    "traffic": "500+",
-    "news": [
-     "Does Norris-Piastri crash show 'papaya rules' failing? - F1 Q&A",
-     "Lando Norris denied unofficial F1 championship after breaking major rule"
+     "Eugenio Chacarra wins DP World India Championship, now No. 1 in Race to Dubai",
+     "DP World India Championship: Eugenio Chacarra wins to move top of Race to Dubai standings with Rory McIlroy finishing in a share of 42nd place"
     ]
    }
   ],
   "US": [
    {
-    "q": "kyle larson",
+    "q": "guardians score yesterday",
+    "traffic": "20000+",
+    "news": [
+     "Cesena 2026-27 Italian Serie B Squad",
+     "Pistons' Jalen Duren: Tallies 14 points vs. Toronto"
+    ]
+   },
+   {
+    "q": "grand rapids marathon",
     "traffic": "100+",
     "news": [
-     "Blaney wins Busch Light Pole Award at Phoenix; points leader Larson starts 22nd",
-     "NASCAR race at Phoenix: Start time, TV, streaming, lineup, weather"
+     "Athletes prepare for 23rd annual Grand Rapids Marathon",
+     "Road closures for 23rd annual Grand Rapids marathon on Sunday, Oct. 18, 2026"
     ]
    },
    {
-    "q": "osasuna - racing de santander",
+    "q": "is caleb williams playing this week",
+    "traffic": "200+",
+    "news": [
+     "Sources: Bears plan to start QB Caleb Williams in Week 6 vs. Falcons",
+     "Caleb Williams Injury Update: Bears QB’s Week 6 Status Revealed"
+    ]
+   },
+   {
+    "q": "marshals episode 3",
+    "traffic": "100+",
+    "news": [
+     "Luke Grimes on the “Dutton Family Curse” & Kayce’s Guilt | Marshals Season 2",
+     "‘Marshals’ Season 2 Episode 4: High-Stakes Standoff After Drone Crash in Broken Rock"
+    ]
+   },
+   {
+    "q": "ciclón tropical",
+    "traffic": "100+",
+    "news": [
+     "El huracán Isaias arranca el techo de un hotel en Florida",
+     "Reportan cuatro fallecidos por el huracán Isaías a su paso por Estados Unidos"
+    ]
+   },
+   {
+    "q": "maria bartiromo",
+    "traffic": "100+",
+    "news": [
+     "Trump Had His Eye on Maria Bartiromo for Press Secretary Before Katie Zacharia: Report",
+     "Donald Trump’s First Pick for Press Sec Revealed After 5-Day Fiasco"
+    ]
+   },
+   {
+    "q": "el sayed",
+    "traffic": "100+",
+    "news": [
+     "Michigan Democrat confirms sister-in-law's terror watchlist lawsuit days before Obama campaign appearance",
+     "Watch El-Sayed confirms sister-in-law's reported terror watchlist history ahead of Obama visit - FNC"
+    ]
+   },
+   {
+    "q": "kartal tennis",
     "traffic": "500+",
     "news": [
-     "Osasuna - Racing : horario, dónde ver hoy en TV y canal del partido de LaLiga EA Sports",
-     "!+[DIRETTA/streaming] Osasuna contra Racing de Santander in diretta live gratis in 18 ottobre 2026"
+     "How to watch the women’s Dongfeng Voyah Wuhan Open: Streaming options for the Final",
+     "Wuhan Open final brings Chwalinska and Kartal together after semifinal breakthroughs"
     ]
    },
    {
-    "q": "chelsea vs tottenham",
+    "q": "rory mcilroy",
     "traffic": "200+",
     "news": [
-     "WSL LIVE: Build-up to six games - team news, radio commentary, text & score updates & match stats",
-     "(2) Chelsea v Tottenham: Women’s Super League – live"
-    ]
-   },
-   {
-    "q": "us-iran",
-    "traffic": "200+",
-    "news": [
-     "Iran says 'global economy will improve' if US removes forces from the Middle East",
-     "Iran urges US to accept proposal to reopen Strait of Hormuz"
-    ]
-   },
-   {
-    "q": "detroit marathon 2026",
-    "traffic": "200+",
-    "news": [
-     "49th Detroit Free Press Marathon is underway",
-     "Thousands of runners ready for Detroit Free Press Marathon weekend"
-    ]
-   },
-   {
-    "q": "supermarket news",
-    "traffic": "200+",
-    "news": [
-     "Candy unit sales plummet",
-     "Discount grocery chain closing all stores as bargain grocers struggle"
-    ]
-   },
-   {
-    "q": "tyler warren",
-    "traffic": "200+",
-    "news": [
-     "Colts activate tight end Will Mallory from injured reserve",
-     "Will Colts TE Tyler Warren play vs. Titans in Week 6?"
-    ]
-   },
-   {
-    "q": "alina habba",
-    "traffic": "500+",
-    "news": [
-     "A Bitter White House Feud, Even by Trump-Era Standards: Alina Mildon and Richard Grenell",
-     "\"MAGA blood feud\": White House probes claims of missing Kennedy Center money"
+     "Patrick Reed isn’t the only obstacle Rory McIlroy faces in chase for his next big goal",
+     "Patrick Reed: American reassures former LIV Golf colleagues - 'DP World Tour welcomed me in after I left breakaway league'"
     ]
    }
   ]
@@ -152,368 +160,368 @@
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 40603437,
-    "views_per_hour": 574177
+    "views": 40665099,
+    "views_per_hour": 573129
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | GINGY X CLOAKZY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1023863,
-    "views_per_hour": 484773
+    "views": 1026339,
+    "views_per_hour": 436945
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 13142268,
-    "views_per_hour": 254102
+    "views": 13159721,
+    "views_per_hour": 253280
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 10987228,
-    "views_per_hour": 183978
+    "views": 11000935,
+    "views_per_hour": 183480
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 3",
     "channel": "Jynxzi",
-    "views": 1199751,
-    "views_per_hour": 160637
+    "views": 1201034,
+    "views_per_hour": 155866
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 760853,
-    "views_per_hour": 132949
+    "views": 785859,
+    "views_per_hour": 131862
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1074444,
-    "views_per_hour": 84174
+    "views": 1086016,
+    "views_per_hour": 83531
    },
    {
     "title": "ITHINNO AADAME | DISCO | Ullas Chemban | Manikandan Ayyappa | Chemban Vinod | Dev | Lukman",
     "channel": "Chembosky Motion Pictures",
-    "views": 1735070,
-    "views_per_hour": 81636
+    "views": 1742608,
+    "views_per_hour": 81087
    },
    {
     "title": "SIDEMEN REACT TO BEHZINGA'S MINECRAFT SERIES",
     "channel": "SidemenReacts",
-    "views": 613945,
-    "views_per_hour": 31131
+    "views": 620536,
+    "views_per_hour": 31092
    },
    {
     "title": "JAILER 2 - Promo 16 | Industry Blockbuster | Superstar Rajinikanth | Sun Pictures",
     "channel": "Sun TV",
-    "views": 160752,
-    "views_per_hour": 30852
+    "views": 168691,
+    "views_per_hour": 30968
    },
    {
     "title": "What’s Inside Bloodbath in Minecraft?",
     "channel": "EYstreem",
-    "views": 302442,
-    "views_per_hour": 28209
+    "views": 307727,
+    "views_per_hour": 28082
    },
    {
     "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
     "channel": "Cash",
-    "views": 512876,
-    "views_per_hour": 24759
+    "views": 516861,
+    "views_per_hour": 24669
    },
    {
     "title": "I Hosted the Biggest Pokemon Competition Ever",
     "channel": "PM7",
-    "views": 524353,
-    "views_per_hour": 24145
+    "views": 526918,
+    "views_per_hour": 24002
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1405682,
-    "views_per_hour": 21212
+    "views": 1406663,
+    "views_per_hour": 21152
    },
    {
     "title": "Tyla - THAT GIRL (Official Music Video)",
     "channel": "TylaVEVO",
-    "views": 568655,
-    "views_per_hour": 15279
+    "views": 570040,
+    "views_per_hour": 15219
    }
   ],
   "GB-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 40603437,
-    "views_per_hour": 574177
+    "views": 40665099,
+    "views_per_hour": 573129
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 3",
     "channel": "Jynxzi",
-    "views": 1199751,
-    "views_per_hour": 160637
+    "views": 1201034,
+    "views_per_hour": 155866
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1074444,
-    "views_per_hour": 84174
+    "views": 1086016,
+    "views_per_hour": 83531
    },
    {
     "title": "100 Hackers vs Minecraft's Spear Master",
     "channel": "Karl",
-    "views": 1428031,
-    "views_per_hour": 76284
+    "views": 1444680,
+    "views_per_hour": 76210
    },
    {
     "title": "The (Objectively) Best Video Game Sunsets",
     "channel": "Any Austin",
-    "views": 785537,
-    "views_per_hour": 47215
+    "views": 792468,
+    "views_per_hour": 46963
    },
    {
     "title": "Supermarket Simulator - Part 8",
     "channel": "Markiplier",
-    "views": 873972,
-    "views_per_hour": 44336
+    "views": 878269,
+    "views_per_hour": 44025
    },
    {
     "title": "ROBLOX TOTAL DRAMA ISLAND is mean…",
     "channel": "Flamingo",
-    "views": 406578,
-    "views_per_hour": 41052
+    "views": 410605,
+    "views_per_hour": 40490
    },
    {
     "title": "Something Appeared In The Sky…",
     "channel": "CaseOh",
-    "views": 467653,
-    "views_per_hour": 34096
+    "views": 471094,
+    "views_per_hour": 33764
    },
    {
     "title": "SIDEMEN REACT TO BEHZINGA'S MINECRAFT SERIES",
     "channel": "SidemenReacts",
-    "views": 613945,
-    "views_per_hour": 31131
+    "views": 620536,
+    "views_per_hour": 31092
    },
    {
     "title": "Everyone is BREAKING UP!",
     "channel": "Aphmau",
-    "views": 502428,
-    "views_per_hour": 30506
+    "views": 507229,
+    "views_per_hour": 30361
    },
    {
     "title": "What’s Inside Bloodbath in Minecraft?",
     "channel": "EYstreem",
-    "views": 302442,
-    "views_per_hour": 28209
+    "views": 307727,
+    "views_per_hour": 28082
    },
    {
     "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
     "channel": "Cash",
-    "views": 512876,
-    "views_per_hour": 24759
+    "views": 516861,
+    "views_per_hour": 24669
    },
    {
     "title": "I Hosted the Biggest Pokemon Competition Ever",
     "channel": "PM7",
-    "views": 524353,
-    "views_per_hour": 24145
+    "views": 526918,
+    "views_per_hour": 24002
    },
    {
     "title": "THE BEST CAMPAIGN IN YEARS (MODERN WARFARE 4 CAMPAIGN PART 2)",
     "channel": "JEV",
-    "views": 225853,
-    "views_per_hour": 20402
+    "views": 228853,
+    "views_per_hour": 20240
    },
    {
     "title": "Working The Laundromat Nightshift... [Dirty Laundry]",
     "channel": "Joe Bart Games",
-    "views": 401268,
-    "views_per_hour": 19589
+    "views": 403961,
+    "views_per_hour": 19495
    }
   ],
   "US": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 40603437,
-    "views_per_hour": 574177
+    "views": 40665099,
+    "views_per_hour": 573129
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | GINGY X CLOAKZY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1023863,
-    "views_per_hour": 484773
+    "views": 1026339,
+    "views_per_hour": 436945
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 10987560,
-    "views_per_hour": 183983
+    "views": 11000935,
+    "views_per_hour": 183480
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 3",
     "channel": "Jynxzi",
-    "views": 1199751,
-    "views_per_hour": 160637
+    "views": 1201034,
+    "views_per_hour": 155866
    },
    {
     "title": "Aakasamlo Oka Tara - Teaser | Dulquer Salmaan | Satvika | Shruti Haasan |GV Prakash | Pavan Sadineni",
     "channel": "Geetha Arts ",
-    "views": 4063476,
-    "views_per_hour": 134453
+    "views": 4099871,
+    "views_per_hour": 134602
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 760853,
-    "views_per_hour": 132949
+    "views": 785859,
+    "views_per_hour": 131862
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1074444,
-    "views_per_hour": 84174
+    "views": 1086016,
+    "views_per_hour": 83531
    },
    {
     "title": "Supermarket Simulator - Part 8",
     "channel": "Markiplier",
-    "views": 873972,
-    "views_per_hour": 44336
+    "views": 878269,
+    "views_per_hour": 44025
    },
    {
     "title": "ROBLOX TOTAL DRAMA ISLAND is mean…",
     "channel": "Flamingo",
-    "views": 406578,
-    "views_per_hour": 41052
+    "views": 410605,
+    "views_per_hour": 40490
    },
    {
     "title": "Tom MacDonald - \"What America Is\"",
     "channel": "Tom MacDonald",
-    "views": 1549446,
-    "views_per_hour": 35431
+    "views": 1557060,
+    "views_per_hour": 35414
    },
    {
     "title": "Something Appeared In The Sky…",
     "channel": "CaseOh",
-    "views": 467653,
-    "views_per_hour": 34096
+    "views": 471094,
+    "views_per_hour": 33764
    },
    {
     "title": "Everyone is BREAKING UP!",
     "channel": "Aphmau",
-    "views": 502428,
-    "views_per_hour": 30506
+    "views": 507229,
+    "views_per_hour": 30361
    },
    {
     "title": "Shrek 2 Remastered - Announce Trailer",
     "channel": "Mafialabs",
-    "views": 1251065,
-    "views_per_hour": 29153
+    "views": 1253336,
+    "views_per_hour": 29046
    },
    {
     "title": "ROCHY RD - EL TEMBLOR 1 | RIP ARCÁNGEL & ALFA",
     "channel": "Rochy RD",
-    "views": 304551,
-    "views_per_hour": 22138
+    "views": 306170,
+    "views_per_hour": 21879
    },
    {
     "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
     "channel": "TGG",
-    "views": 1405682,
-    "views_per_hour": 21212
+    "views": 1406663,
+    "views_per_hour": 21152
    }
   ],
   "US-gaming": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 40603437,
-    "views_per_hour": 574177
+    "views": 40665099,
+    "views_per_hour": 573129
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL IM UNREAL DAY 3",
     "channel": "Jynxzi",
-    "views": 1199751,
-    "views_per_hour": 160637
+    "views": 1201034,
+    "views_per_hour": 155866
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1074444,
-    "views_per_hour": 84174
+    "views": 1086016,
+    "views_per_hour": 83531
    },
    {
     "title": "100 Hackers vs Minecraft's Spear Master",
     "channel": "Karl",
-    "views": 1428031,
-    "views_per_hour": 76284
+    "views": 1444680,
+    "views_per_hour": 76210
    },
    {
     "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
     "channel": "MKIceAndFire",
-    "views": 1688581,
-    "views_per_hour": 47707
+    "views": 1695756,
+    "views_per_hour": 47591
    },
    {
     "title": "The (Objectively) Best Video Game Sunsets",
     "channel": "Any Austin",
-    "views": 785537,
-    "views_per_hour": 47215
+    "views": 792468,
+    "views_per_hour": 46963
    },
    {
     "title": "Supermarket Simulator - Part 8",
     "channel": "Markiplier",
-    "views": 873972,
-    "views_per_hour": 44336
+    "views": 878269,
+    "views_per_hour": 44025
    },
    {
     "title": "ROBLOX TOTAL DRAMA ISLAND is mean…",
     "channel": "Flamingo",
-    "views": 406578,
-    "views_per_hour": 41052
+    "views": 410605,
+    "views_per_hour": 40490
    },
    {
     "title": "$100k Duel Tournament Day 1 | The Forever Open !rules !bracket !merch",
     "channel": "Xaryu",
-    "views": 339993,
-    "views_per_hour": 35666
+    "views": 340957,
+    "views_per_hour": 34900
    },
    {
     "title": "Something Appeared In The Sky…",
     "channel": "CaseOh",
-    "views": 467653,
-    "views_per_hour": 34096
+    "views": 471094,
+    "views_per_hour": 33764
    },
    {
     "title": "How a Route 1 Bug Pokémon Became a Champion",
     "channel": "WolfeyVGC",
-    "views": 671933,
-    "views_per_hour": 32432
+    "views": 675099,
+    "views_per_hour": 32217
    },
    {
     "title": "This DOLL has a DARK SECRET..",
     "channel": "Tyler & Snowi",
-    "views": 413237,
-    "views_per_hour": 32361
+    "views": 418504,
+    "views_per_hour": 32177
    },
    {
     "title": "Everyone is BREAKING UP!",
     "channel": "Aphmau",
-    "views": 502428,
-    "views_per_hour": 30506
+    "views": 507229,
+    "views_per_hour": 30361
    },
    {
     "title": "ROBLOX THROW AN EGG!",
     "channel": "Foltyn",
-    "views": 349731,
-    "views_per_hour": 26401
+    "views": 354935,
+    "views_per_hour": 26323
    },
    {
     "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
     "channel": "Cash",
-    "views": 512876,
-    "views_per_hour": 24759
+    "views": 516861,
+    "views_per_hour": 24669
    }
   ]
  },

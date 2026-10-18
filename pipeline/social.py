@@ -157,7 +157,11 @@ def post():
     mode = CFG.get("tiktok_mode", "inbox")
     tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
     tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
-    done_any = False
+    done_any, ig_recent = False, 0
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: at = dt.datetime.fromisoformat(((json.loads(sp.read_text()).get("instagram") or {}).get("at") or "").replace("Z", "+00:00"))
+        except Exception: continue
+        if NOW() - at <= dt.timedelta(hours=24): ig_recent += 1
     for sp in sorted((ROOT / "status").glob("QD-*.json")):
         st = json.loads(sp.read_text())
         if not st.get("video") or not st.get("social_release") or not st.get("publish_at"): continue
@@ -172,7 +176,12 @@ def post():
         fresh = (NOW() - since).total_seconds() / 3600 <= tt_max_age
         b = board_for(st)
         picked = (b or {}).get("tiktok", True)       # the writer marks the 5 Shorts a day most likely to do well on TikTok
-        want_ig = bool(ig) and public and not st.get("instagram")
+        # Instagram takes the day's picks only (config instagram_mode "picks"), at most instagram_per_day Reels in 24 hours:
+        # 20 Reels a day from one account reads as spam to Meta
+        ig_pick = picked if CFG.get("instagram_mode", "picks") == "picks" else True
+        if ig and public and not st.get("instagram") and not ig_pick and not st.get("instagram_skipped"):
+            st["instagram_skipped"] = "not one of the day's picks"
+        want_ig = bool(ig) and public and not st.get("instagram") and ig_pick and ig_recent < int(CFG.get("instagram_per_day", 6))
         manual = mode == "manual"                    # Charlie uploads TikTok himself on desktop from the morning package
         want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt): continue
@@ -199,7 +208,8 @@ def post():
         if tt and not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
         if tt and not picked and not st.get("tiktok"): st["tiktok_skipped"] = "not one of the day's 5 TikTok picks"
         if tt and manual and not st.get("tiktok"): st["tiktok_skipped"] = "uploaded by hand on desktop" if picked else "not a TikTok pick"
-        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or not ig):
+        if st.get("instagram") and want_ig: ig_recent += 1
+        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or st.get("instagram_skipped") or not ig):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:
             gh("release", "edit", rel, "--draft=true", check=False)
@@ -212,9 +222,16 @@ def check():
     """Confirm the sign-ins work without posting anything; writes status/social.json (no tokens in it)."""
     out = {"checked": NOW().isoformat(timespec="seconds")}
     ig = ig_tokens()
+    sj0 = ROOT / "status" / "social.json"
+    prev = json.loads(sj0.read_text()) if sj0.exists() else {}
+    try: prev_age = (NOW() - dt.datetime.fromisoformat(prev["instagram_checked"])).total_seconds() / 3600
+    except Exception: prev_age = 1e9
     if not ig:
         out["instagram"] = {"ok": False, "error": "not connected (IG_TOKEN secret missing)"}
+    elif os.environ.get("GITHUB_EVENT_NAME") == "schedule" and prev_age < 3 and prev.get("instagram"):
+        out["instagram"] = prev["instagram"]; out["instagram_checked"] = prev["instagram_checked"]   # gentle on Meta: every 3 hours
     else:
+        out["instagram_checked"] = NOW().isoformat(timespec="seconds")
         r = requests.get(f"{IG_API}/me", params={"fields": "user_id,username,account_type", "access_token": ig["token"]}, timeout=30)
         if r.ok:
             me = r.json()
@@ -244,7 +261,7 @@ def check():
     (ROOT / "status").mkdir(exist_ok=True)
     sj = ROOT / "status" / "social.json"
     old = json.loads(sj.read_text()) if sj.exists() else {}
-    stable = lambda d: json.dumps({k: v for k, v in d.items() if k not in ("checked", "instagram_dry_run")}, sort_keys=True, default=str)
+    stable = lambda d: json.dumps({k: v for k, v in d.items() if k not in ("checked", "instagram_dry_run", "instagram_checked")}, sort_keys=True, default=str)
     age = (NOW() - dt.datetime.fromisoformat(old["checked"])).total_seconds() / 3600 if old.get("checked") else 1e9
     # hourly runs only rewrite the file when something changed (or once a day), so the repo doesn't fill with check commits
     if stable(old) != stable(out) or age > 24 or os.environ.get("GITHUB_EVENT_NAME") != "schedule":

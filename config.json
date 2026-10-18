@@ -1,9 +1,9 @@
 {
- "daily_limit": 10,
- "per_session": 7,
- "slot_first": "08:30",
- "slot_every_minutes": 90,
- "slots_per_day": 10,
+ "daily_limit": 20,
+ "per_session": 14,
+ "slot_first": "08:00",
+ "slot_every_minutes": 45,
+ "slots_per_day": 20,
  "lead_hours": 1,
  "music_moods": {
   "epic": "big cinematic reveals: film and TV news, trailers, major launches",
@@ -25,8 +25,14 @@
  "first_id": 29,
  "approval": "all",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Two writer runs a day: 06:50 writes up to per_session (7); 12:50 writes the rest of daily_limit (3) from fresher trends. Uploads are capped by YouTube's channel limit: 10 in any 24 hours until the channel has Advanced features (video selfie, under review since 17 October). The YouTube Data API default quota is no constraint: 100 uploads a day plus 10,000 units for other calls. After Advanced features: daily_limit 20, per_session 14, slot_first 08:00, slot_every_minutes 45, slots_per_day 20.",
+ "note": "Two writer runs a day: 06:50 writes up to per_session (14); 12:50 writes the rest of daily_limit (6) from fresher trends; a 17:35 catch-up writes whatever a blocked run missed. The channel has YouTube's Advanced features (video verification approved 18 October), so the 10-a-day upload cap is gone; if YouTube still refuses an upload for the limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "tiktok_mode": "inbox",
  "tiktok_max_age_hours": 24,
- "tiktok_note": "inbox: the day's 5 TikTok picks land in the TikTok phone app as drafts once scheduled, and Charlie posts them with the captions from the morning message; manual: he uploads them himself in TikTok Studio on desktop; direct: posts by itself (needs TikTok's review)."
+ "tiktok_note": "inbox: the day's 5 TikTok picks land in the TikTok phone app as drafts once scheduled, and Charlie posts them with the captions from his TikTok queue page; manual: he uploads them himself; direct: posts by itself (needs TikTok's review).",
+ "instagram_mode": "picks",
+ "instagram_per_day": 6,
+ "instagram_note": "picks: only the day's picks (the Shorts marked tiktok: true) go to Instagram, at most instagram_per_day in 24 hours; all: every Short.",
+ "reserve_per_day": 2,
+ "reserve_after": "18:20",
+ "reserve_note": "Evergreen Shorts in boards/reserve, approved in advance, upload only on a day nothing new was written by reserve_after (UK), at most reserve_per_day of them."
 }

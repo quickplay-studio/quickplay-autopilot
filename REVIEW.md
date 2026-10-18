@@ -24,5 +24,9 @@ judgement, not browsing. Channel rules in CLAUDE.md still apply (no dashes, UK s
 4. **Formats**: retire a format whose Shorts got under 0.6 of the channel's median views over 5 or more Shorts (move it
    to "retired" in templates/formats.json with the reason). Add at most one new format modelled on a vidIQ outlier in
    our categories (structure and pacing only). Change CLAUDE.md's "What gets views" only for lessons the numbers show.
-5. One commit ("Weekly review <date>: ..."), push. Then send Charlie ONE message of at most 6 lines: what changed and
+5. **Reserve**: keep 5 approved evergreen Shorts in boards/reserve (status "in reserve (approved)"). If there are fewer,
+   write the missing ones (CLAUDE.md rules, `"reserve": true`, topics that stay true for months: science, nature,
+   records, music and film history), push them, and once they render add their previews to the message below with
+   "Reply: reserve approve all, or reserve reject QD-0xx."
+6. One commit ("Weekly review <date>: ..."), push. Then send Charlie ONE message of at most 6 lines: what changed and
    why (with the numbers), and what's being tried next week. Finish with that.

@@ -46,7 +46,7 @@ def learned_slots(n):
         sc = (num + 3.0) / (den + 3.0)
         return max(sc, 1.03) if den < 2 else sc
     ranked = sorted((f"{h:02d}:{m:02d}" for h in range(7, 23) for m in (0, 30)), key=lambda c: (-score(c), c))
-    for gap in (75, 60, 45):
+    for gap in (75, 60, 45, 30):          # 20 a day needs half-hour spacing
         picked = []
         for c in ranked:
             if all(abs(_mins(c) - _mins(q)) >= gap for q in picked): picked.append(c)
@@ -102,6 +102,9 @@ def slot_picker(now, taken):
 def hold_reasons(b, warnings):
     """Why this Short should wait for Charlie's approval (empty list: it can go out on its own)."""
     mode = CFG.get("approval", "flagged")
+    if b.get("reserve"):            # evergreen spare: waits in boards/reserve (publish.py), however approval is set
+        return ["reserve: approved in advance, posted only on a day nothing new was written"] + \
+               ([f"writer: {b['flag']}"] if b.get("flag") else []) + [f"check: {w}" for w in warnings]
     if mode == "none": return []
     out = ["approval is on for every Short (config.json)"] if mode == "all" else []
     if b.get("flag"): out.append(f"writer: {b['flag']}")

@@ -8,6 +8,11 @@ the "decision" box of the publish workflow on GitHub (Actions, publish, Run work
   reject QD-032                      dropped: preview deleted, board moved to boards/rejected
 Approved Shorts upload from their preview render (draft release preview-<id>) into the next free slot, within the daily
 upload limit. Ones that don't fit wait, and the hourly run tries again. Applied decision files move to approvals/applied.
+
+Reserve: evergreen Shorts written with "reserve": true render like any other but wait in boards/reserve. Charlie approves
+them in advance ("reserve approve all", "reserve approve QD-030", "reserve reject QD-031"). On a day when nothing new was
+written by the evening (config reserve_after, UK time; for example every writer run was blocked by a usage limit), the
+oldest approved ones (config reserve_per_day) are released and upload like approved Shorts.
 usage: python pipeline/publish.py
 """
 import datetime as dt, json, os, pathlib, re, shutil, subprocess, sys, tempfile
@@ -17,7 +22,7 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 import plan
 
 NOW = dt.datetime.now(dt.timezone.utc)
-READY, STATUS = ROOT / "boards" / "ready", ROOT / "status"
+READY, STATUS, RESERVE = ROOT / "boards" / "ready", ROOT / "status", ROOT / "boards" / "reserve"
 
 def gh(*args, check=True):
     return subprocess.run(["gh", *args], capture_output=True, text=True, check=check)
@@ -52,7 +57,57 @@ def move(board, folder):
     dest = ROOT / "boards" / folder; dest.mkdir(exist_ok=True)
     shutil.move(str(board), str(dest / board.name))
 
+def is_reserve_line(l):
+    return l.strip().lower().startswith("reserve")
+
+def reserve_step(lines):
+    """Apply reserve decisions; on a day nothing new was written, move the oldest approved reserve Shorts to ready."""
+    boards = {}
+    for p in sorted(RESERVE.glob("*.json")):
+        try: boards[json.loads(p.read_text())["id"]] = p
+        except Exception: pass
+    if not boards: return
+    status = {i: load_status(i) for i in boards}
+    waiting = {i for i in boards if not status[i].get("reserve_approved")}
+    for l in lines:
+        a, r = parse(re.sub(r"^\s*reserve\s*", "", l, flags=re.I), set(boards))
+        for i in sorted(a & waiting):
+            status[i].update(reserve_approved=NOW.isoformat(timespec="seconds"), state="in reserve (approved)"); save_status(status[i])
+            print(i, "approved into the reserve")
+        for i in sorted(r):
+            st = status[i]
+            if st.get("preview_release"): gh("release", "delete", st["preview_release"], "-y", check=False)
+            st.pop("preview_release", None); st.pop("preview_url", None)
+            st.update(state="rejected", rejected=NOW.isoformat(timespec="seconds")); save_status(st)
+            move(boards.pop(i), "rejected"); print(i, "rejected from the reserve")
+    uk = NOW.astimezone(plan.UK); today = str(uk.date())
+    after = dt.datetime.strptime(plan.CFG.get("reserve_after", "18:20"), "%H:%M").time()
+    if uk.time() < after: return
+    for d in ("queue", "ready", "done", "failed"):          # anything written today means a writer run worked
+        for p in (ROOT / "boards" / d).glob("QD-*.json"):
+            try: b = json.loads(p.read_text())
+            except Exception: continue
+            if b.get("created") == today and not b.get("reserve"): return
+    if any(load_status(p.stem).get("from_reserve") == today for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json")):
+        return
+    approved = sorted((i for i in boards if status[i].get("reserve_approved") and status[i].get("preview_release")),
+                      key=lambda i: status[i]["reserve_approved"])
+    for i in approved[:int(plan.CFG.get("reserve_per_day", 3))]:
+        st = status[i]
+        st.update(approved=NOW.isoformat(timespec="seconds"), from_reserve=today, state="approved, uploading (from the reserve)")
+        save_status(st); move(boards[i], "ready"); print(i, "released from the reserve: nothing new was written today")
+
 def main():
+    files = sorted((ROOT / "approvals").glob("*.txt")) if (ROOT / "approvals").exists() else []
+    lines = [l for f in files for l in f.read_text().splitlines()]
+    if os.environ.get("DECISION", "").strip(): lines.append(os.environ["DECISION"])
+    reserve_step([l for l in lines if is_reserve_line(l)])
+    done_files = [f for f in files if all(is_reserve_line(l) for l in f.read_text().splitlines() if l.strip())]
+    if done_files:                    # files holding only reserve decisions are finished with
+        applied = ROOT / "approvals" / "applied"; applied.mkdir(parents=True, exist_ok=True)
+        for f in done_files: f.replace(applied / f"{NOW:%Y%m%d-%H%M%S}-{f.name}")
+        files = [f for f in files if f not in done_files]
+    lines = [l for l in lines if not is_reserve_line(l)]
     ready = {}
     for p in sorted(READY.glob("*.json")):
         try: ready[json.loads(p.read_text())["id"]] = p
@@ -62,9 +117,6 @@ def main():
     status = {i: load_status(i) for i in ready}
 
     # 1. Charlie's decisions
-    files = sorted((ROOT / "approvals").glob("*.txt")) if (ROOT / "approvals").exists() else []
-    lines = [l for f in files for l in f.read_text().splitlines()]
-    if os.environ.get("DECISION", "").strip(): lines.append(os.environ["DECISION"])
     approve, reject = set(), set()
     for l in lines:
         a, r = parse(l, set(ready)); approve |= a; reject |= r

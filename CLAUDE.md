@@ -37,6 +37,7 @@ drop what isn't.
 - TikTok takes only 5 drafts a day: set `"tiktok": true` on the 5 Shorts most likely to do well there (big fandoms,
   music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 across
   both runs: the 12:50 run counts today's boards already marked true (queue, ready, done) and marks only the rest.
+  The same picks are the day's Instagram Reels (config instagram_mode "picks").
 - Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram, the first 7 to
   TikTok): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
@@ -59,6 +60,9 @@ rest upload straight away); "none" means nothing waits. Add `"flag": "<one line 
 look first: a topic close to the excluded list, a person under 18 at the centre, heavy use of a brand's or someone's
 footage, a claim you're less than sure about. Validator warnings and render checks (such as no real images) flag
 automatically. Waiting Shorts sit in boards/ready with a private preview (draft release `preview-<id>`).
+Reserve: evergreen Shorts written with `"reserve": true` render like any other but wait in boards/reserve (they never count
+towards a day's capacity). Charlie approves them once ("reserve approve all", written to approvals/ as a line starting
+with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing new was written by 18:20.
 
 ## Steps
 1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md, status/channel.json and
@@ -104,7 +108,7 @@ Artifact `read` the dashboard; then for each of analytics/shorts.csv and analyti
 "updated": {"at": <ISO time>, "by": "Quickplay daily run"}}`. Don't rewrite the page.
 
 ## Board schema (copy boards/hold/QD-028.json for the shape)
-- `id`: next free QD-### across boards/queue, ready, done, failed, hold and rejected, never below `first_id` in
+- `id`: next free QD-### across boards/queue, ready, done, failed, hold, rejected and reserve, never below `first_id` in
   config.json. `created`: today, YYYY-MM-DD. `format`: a format id. `category`: Gaming, Film, Music, Sport, Tech,
   Science, Entertainment (TV and anime go here).
 - `chipIcon` (a lucide icon name), `accent` (hex), `gap`: 0.1, `tail`: 0.6. Don't set a voice or caption style: GitHub gives

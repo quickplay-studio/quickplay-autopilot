@@ -1,6 +1,6 @@
 """Download the preview video of every Short waiting in boards/ready, for the lineup message.
 Uses GitHub's REST API (GraphQL, which `gh release download` needs for drafts, is blocked in Claude sessions).
-usage: python pipeline/previews.py <out dir>      prints one file path per Short
+usage: python pipeline/previews.py <out dir> [--reserve]      prints one file path per Short
 """
 import json, pathlib, subprocess, sys
 
@@ -11,7 +11,8 @@ def main(out):
     out = pathlib.Path(out); out.mkdir(parents=True, exist_ok=True)
     rels = json.loads(subprocess.run(["gh", "api", f"repos/{REPO}/releases?per_page=100"], capture_output=True, text=True, check=True).stdout)
     by_tag = {r["tag_name"]: r for r in rels}
-    for p in sorted((ROOT / "boards" / "ready").glob("*.json")):
+    folder = "reserve" if "--reserve" in sys.argv else "ready"       # --reserve: the evergreen spares awaiting approval
+    for p in sorted((ROOT / "boards" / folder).glob("*.json")):
         sid = json.loads(p.read_text())["id"]
         asset = next((a for a in (by_tag.get(f"preview-{sid}") or {}).get("assets", []) if a["name"] == "video.mp4"), None)
         if not asset:
@@ -22,4 +23,4 @@ def main(out):
         print(dest)
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main([a for a in sys.argv[1:] if not a.startswith("--")][0])

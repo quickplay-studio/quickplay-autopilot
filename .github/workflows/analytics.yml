@@ -1,0 +1,41 @@
+name: analytics
+# Fresh numbers every hour (pipeline/analytics.py --fast): view counts on every platform, views gained this hour by
+# category (analytics/hourly.csv) and each new Short's hour-by-hour curve (analytics/curves/). The slower full read
+# (YouTube Analytics retention, countries and traffic, drivers, insights.md) runs with trends three times a day.
+on:
+  schedule:
+    - cron: '12 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analytics
+  cancel-in-progress: false
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - run: pip install -q requests cryptography tzdata google-api-python-client==2.* google-auth==2.*
+      - env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+        run: python pipeline/analytics.py --fast
+      - run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A analytics
+          git commit -q -m "Hourly numbers $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

@@ -1,0 +1,12 @@
+{
+ "note": "Categories for the Shorts made before the pipeline kept boards (QD-027 and earlier), so the drivers can compare them. Format 'legacy' marks the first renderer.",
+ "by_id": {
+  "QD-003": "Film", "QD-004": "Music", "QD-005": "Film", "QD-007": "Entertainment", "QD-011": "Tech", "QD-012": "Tech",
+  "QD-013": "Gaming", "QD-014": "Film", "QD-015": "Gaming", "QD-017": "Gaming", "QD-020": "Film", "QD-022": "Gaming",
+  "QD-023": "Entertainment", "QD-024": "Music", "QD-025": "Film", "QD-026": "Film", "QD-027": "Gaming"
+ },
+ "by_video": {
+  "Dtp4-CRcQAI": "Music", "2efjp7_5qPY": "Music", "kcpp1Q-Xy0M": "Science", "QpgFxDNcPKQ": "Gaming", "yXycMniI-W8": "Entertainment",
+  "oQMMFN0TmvA": "Film", "YYAteEVllOs": "Gaming", "h9qlBjDr2uA": "Music", "hAYaCpI7v5A": "Sport", "MNXzQl1V0d8": "Music"
+ }
+}

@@ -44,6 +44,7 @@ def main(root):
         board = ROOT / st["board"]
         if not board.exists() or st["state"].startswith("waiting"): continue
         folder = "ready" if st["state"] == "awaiting approval" else ("failed" if "fail" in st["state"] else "done")
+        if sid.startswith("TEST-") and folder != "ready": folder = "test"     # test boards never mix with real ones
         dest = ROOT / "boards" / folder; dest.mkdir(exist_ok=True)
         shutil.move(str(board), str(dest / board.name))
         print(sid, "->", dest.name, "|", st["state"])

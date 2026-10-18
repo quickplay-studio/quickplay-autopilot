@@ -288,6 +288,26 @@ def views_at(curve, hours):
         prev = (h, v)
     return None
 
+def breakouts(rows, curves):
+    """analytics/breakouts.csv: Shorts 2 to 48 hours old running at 3x or more the views recent Shorts had at the same
+    age (from the hourly curves, 5 or more peers, at least 300 views). Views come in lopsided bursts, so the writer
+    follows these up while the topic is hot (CLAUDE.md, What gets views)."""
+    out, recent = [], [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() <= 7 * 86400]
+    for r in recent:
+        age = (NOW - utc(r["posted"])).total_seconds() / 3600
+        if not 2 <= age <= 48: continue
+        peers = [p for p in (views_at(curves.get(rkey(x)), age) for x in recent if x is not r) if p is not None]
+        if len(peers) < 5: continue
+        typ = max(1.0, statistics.median(peers)); ratio = r["yt_views"] / typ
+        if ratio >= 3 and r["yt_views"] >= 300:
+            out.append({"short": r["short"], "title": r["title"], "category": r["category"], "hours_public": round(age, 1),
+                        "views": r["yt_views"], "typical_at_this_age": round(typ), "times_typical": round(ratio, 1),
+                        "youtube_url": r["youtube_url"]})
+    out.sort(key=lambda b: -b["times_typical"])
+    write_csv(OUT / "breakouts.csv", out, ["short", "title", "category", "hours_public", "views", "typical_at_this_age",
+                                            "times_typical", "youtube_url"])
+    return out
+
 def relative(rows, field, out_field, min_age_h=24):
     """Each Short's `field` against the median of Shorts posted within 3 days of it (1.0 = typical); needs 3 peers."""
     aged = [r for r in rows if r["posted"] and r.get(field) not in ("", None) and (NOW - utc(r["posted"])).total_seconds() >= min_age_h * 3600]
@@ -455,6 +475,7 @@ def main():
         rows.append(row)
     rows.sort(key=lambda r: r["posted"], reverse=True)
     curves = update_curves(rows)
+    hot = breakouts(rows, curves)
     for r in rows:
         c = curves.get(rkey(r))
         for h in VEL_HOURS:
@@ -550,7 +571,10 @@ def main():
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table)
-        (OUT / "insights.md").write_text(insights(rows, summary, table, DRV.recipe(table, rows) + audience_recipe(aud), aud))
+        follow = [f"Follow up {b['short'] or b['title']} (\"{b['title']}\"): {b['times_typical']}x the views recent Shorts had "
+                  f"{b['hours_public']} hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer "
+                  "to its top comment), title tied to it." for b in hot[:2]]
+        (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + audience_recipe(aud), aud))
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
 def look_scores(rows):

@@ -40,6 +40,13 @@ from every Short against Shorts posted around the same time) and the drivers beh
   music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 across
   both runs: the 12:50 run counts today's boards already marked true (queue, ready, done) and marks only the rest.
   The same picks are the day's Instagram Reels (config instagram_mode "picks").
+- Follow up breakouts: analytics/breakouts.csv (hourly) lists Shorts running at 3x or more the views recent Shorts had at
+  the same age. Each run writes one follow-up for the strongest one not yet followed up (a new angle, the next chapter, or
+  the answer to its top comment), title tied to the original. Views come in lopsided bursts; a follow-up rides the demand
+  while it is hot.
+- Evergreen search test (from Monday 19 October, checked 26 October): 2 Shorts a day answer a question people search all
+  year in our categories (why, how, what, first, biggest), titled as the question people type. Reason: 63% of our views
+  come from YouTube search (analytics/traffic.csv).
 - Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram, the first 7 to
   TikTok): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
@@ -67,7 +74,8 @@ towards a day's capacity). Charlie approves them once ("reserve approve all", wr
 with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing new was written by 18:20.
 
 ## Steps
-1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md (the Recipe first), status/channel.json and
+1. `git pull`. Read config.json, trends/latest.json (short on purpose), analytics/insights.md (the Recipe first),
+   analytics/breakouts.csv, status/channel.json and
    status/ files changed in the last 2 days. Fix and re-queue anything in boards/failed/ worth saving (move it back to
    boards/queue/).
 2. Capacity this session = the smallest of: `per_session`; `daily_limit` minus boards with today's `created` date

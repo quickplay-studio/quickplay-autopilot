@@ -1,0 +1,497 @@
+{
+ "date": "2026-10-18",
+ "google_trends": {
+  "GB": [
+   {
+    "q": "dp world tour",
+    "traffic": "100+",
+    "news": [
+     "DP World India Championship: Eugenio Chacarra leads but Rory McIlroy fades before play halted",
+     "Hidalgo, Luiten and Meronk top stacked leaderboard in India"
+    ]
+   },
+   {
+    "q": "bbcnews",
+    "traffic": "100+",
+    "news": [
+     "Social media algorithms: What if you could turn them off?",
+     "Australia proposes new laws to let people turn off social media algorithms"
+    ]
+   },
+   {
+    "q": "guy ritchie",
+    "traffic": "100+",
+    "news": [
+     "Meghan ‘used’ by Netflix to promote The Gentlemen, friends claim",
+     "Inside Meghan Markle’s failed Gentlemen bid - and Guy Ritchie’s blunt response"
+    ]
+   },
+   {
+    "q": "cfb wainwright",
+    "traffic": "200+",
+    "news": [
+     "Deadly fire breaks out at Canada military base",
+     "‘Serious incident’ at Alberta military base causes deaths and injuries, Canada officials say"
+    ]
+   },
+   {
+    "q": "amsterdam marathon 2026",
+    "traffic": "100+",
+    "news": [
+     "Kipchumba and Desta to defend Amsterdam Marathon titles",
+     "Geoffrey Toroitich faces tough Ethiopian challenge in Amsterdam Marathon title defence"
+    ]
+   }
+  ],
+  "US": [
+   {
+    "q": "nebraska football schedule",
+    "traffic": "2000+",
+    "news": [
+     "No. 1 Nebraska volleyball team stays unbeaten with four-set win over No. 13 Purdue",
+     "#13 Purdue Steals Set From #1 Nebraska"
+    ]
+   },
+   {
+    "q": "cara delevingne",
+    "traffic": "200+",
+    "news": [
+     "Kendall Jenner Says Dating Would Be ‘Easier’ If She Was Lesbian: ‘Men Suck’",
+     "Kendall Jenner Addresses Rumors She Dated Cara Delevingne and Speculation That She’s a Lesbian"
+    ]
+   },
+   {
+    "q": "u of u football",
+    "traffic": "200+",
+    "news": [
+     "‘Those are the guys that you cheer for’: Utah LB never gave up — or transferred. Now he’s starting for No. 11 Utes",
+     "Trey Reynolds on What It's Like to Be a Linebacker at the U"
+    ]
+   },
+   {
+    "q": "lg vs kia",
+    "traffic": "500+",
+    "news": [
+     "Do-yeong Kim and James Naile Lead KIA Tigers to Game 1 Win",
+     "Kia Tigers rally to trounce LG Twins 5-1 in first game of playoff round"
+    ]
+   },
+   {
+    "q": "st petersburg",
+    "traffic": "200+",
+    "news": [
+     "Massive Ukrainian drone attack hit oil facility, bridge, and data centers in St. Petersburg",
+     "St Petersburg under attack from Ukrainian drone swarm"
+    ]
+   },
+   {
+    "q": "ai bubble",
+    "traffic": "200+",
+    "news": [
+     "The dress rehearsal for an AI reckoning",
+     "The AI bubble is about to burst — and a big market correction is coming"
+    ]
+   },
+   {
+    "q": "cyberpunk edgerunners season 2",
+    "traffic": "200+",
+    "news": [
+     "Everything We Know So Far About 'Cyberpunk: Edgerunners 2'",
+     "Cyberpunk: Edgerunners 2 Anime Deploys New Characters in Latest Visual"
+    ]
+   },
+   {
+    "q": "san diego fc vs la galaxy standings",
+    "traffic": "500+",
+    "news": [
+     "Starting XI presented by Modelo: LA Galaxy vs San Diego FC | October 17, 2026",
+     "Licensable picture: MLS: Portland Timbers at LA Galaxy"
+    ]
+   },
+   {
+    "q": "noah centineo",
+    "traffic": "500+",
+    "news": [
+     "Box Office: 'Street Fighter' $31M, 'You Can See Everything' $12M+ Milestone",
+     "'Street Fighter' Cast Guide: Video Game vs. Live-Action Fighters"
+    ]
+   }
+  ]
+ },
+ "wikipedia_top": [
+  {
+   "error": "'items'"
+  }
+ ],
+ "youtube_charts": {
+  "GB": [
+   {
+    "title": "Grand Theft Auto VI Launch Trailer",
+    "channel": "Rockstar Games",
+    "views": 39404793,
+    "views_per_hour": 606708
+   },
+   {
+    "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
+    "channel": "Sidhu Moose Wala",
+    "views": 12475567,
+    "views_per_hour": 271485
+   },
+   {
+    "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
+    "channel": "OliviaRodrigoVEVO",
+    "views": 10503006,
+    "views_per_hour": 194670
+   },
+   {
+    "title": "Aakasamlo Oka Tara - Teaser | Dulquer Salmaan | Satvika | Shruti Haasan |GV Prakash | Pavan Sadineni",
+    "channel": "Geetha Arts ",
+    "views": 3102609,
+    "views_per_hour": 126871
+   },
+   {
+    "title": "100 Hackers vs Minecraft's Spear Master",
+    "channel": "Karl",
+    "views": 991163,
+    "views_per_hour": 76523
+   },
+   {
+    "title": "The (Objectively) Best Video Game Sunsets",
+    "channel": "Any Austin",
+    "views": 582774,
+    "views_per_hour": 53613
+   },
+   {
+    "title": "SIDEMEN REACT TO BEHZINGA'S MINECRAFT SERIES",
+    "channel": "SidemenReacts",
+    "views": 475538,
+    "views_per_hour": 34079
+   },
+   {
+    "title": "Shrek 2 Remastered - Announce Trailer",
+    "channel": "Mafialabs",
+    "views": 1195776,
+    "views_per_hour": 32191
+   },
+   {
+    "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
+    "channel": "Cash",
+    "views": 412676,
+    "views_per_hour": 27608
+   },
+   {
+    "title": "I Hosted the Biggest Pokemon Competition Ever",
+    "channel": "PM7",
+    "views": 429626,
+    "views_per_hour": 26937
+   },
+   {
+    "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
+    "channel": "TGG",
+    "views": 1386286,
+    "views_per_hour": 22914
+   },
+   {
+    "title": "Tyla - THAT GIRL (Official Music Video)",
+    "channel": "TylaVEVO",
+    "views": 524484,
+    "views_per_hour": 16676
+   },
+   {
+    "title": "Every UCL Win = Add 1 Ballon d'Or Winner",
+    "channel": "Even More Chuff",
+    "views": 303866,
+    "views_per_hour": 13843
+   },
+   {
+    "title": "The Cranberries — Zombie (Sub. Español & Lyrics)",
+    "channel": "Richie Classics",
+    "views": 545700,
+    "views_per_hour": 9476
+   },
+   {
+    "title": "Heal My Faith (Lyric Video) Kid Rock and Eminem'",
+    "channel": "Kid Rock",
+    "views": 249586,
+    "views_per_hour": 8031
+   }
+  ],
+  "GB-gaming": [
+   {
+    "title": "Grand Theft Auto VI Launch Trailer",
+    "channel": "Rockstar Games",
+    "views": 39404793,
+    "views_per_hour": 606708
+   },
+   {
+    "title": "100 Hackers vs Minecraft's Spear Master",
+    "channel": "Karl",
+    "views": 991163,
+    "views_per_hour": 76523
+   },
+   {
+    "title": "The (Objectively) Best Video Game Sunsets",
+    "channel": "Any Austin",
+    "views": 582774,
+    "views_per_hour": 53613
+   },
+   {
+    "title": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1 - INTRO (FULL GAME)",
+    "channel": "theRadBrad",
+    "views": 1391483,
+    "views_per_hour": 50195
+   },
+   {
+    "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
+    "channel": "MKIceAndFire",
+    "views": 1480087,
+    "views_per_hour": 49956
+   },
+   {
+    "title": "Supermarket Simulator - Part 8",
+    "channel": "Markiplier",
+    "views": 690775,
+    "views_per_hour": 49535
+   },
+   {
+    "title": "SIDEMEN REACT TO BEHZINGA'S MINECRAFT SERIES",
+    "channel": "SidemenReacts",
+    "views": 475538,
+    "views_per_hour": 34079
+   },
+   {
+    "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
+    "channel": "Cash",
+    "views": 412676,
+    "views_per_hour": 27608
+   },
+   {
+    "title": "I Hosted the Biggest Pokemon Competition Ever",
+    "channel": "PM7",
+    "views": 429626,
+    "views_per_hour": 26937
+   },
+   {
+    "title": "I Spent 10,000,000 Robux in 1 Hour...",
+    "channel": "Techys",
+    "views": 335120,
+    "views_per_hour": 22417
+   },
+   {
+    "title": "Can I Make ARMOR from ANY MOB in Minecraft!",
+    "channel": "PrestonPlayz",
+    "views": 334625,
+    "views_per_hour": 21312
+   },
+   {
+    "title": "Working The Laundromat Nightshift... [Dirty Laundry]",
+    "channel": "Joe Bart Games",
+    "views": 302661,
+    "views_per_hour": 20565
+   },
+   {
+    "title": "Call of Duty Modern Warfare 4 - FULL GAME",
+    "channel": "Hollow",
+    "views": 495912,
+    "views_per_hour": 20030
+   },
+   {
+    "title": "You Can Beat DARK SOULS 2 Without Aggroing Enemies",
+    "channel": "The Backlogs",
+    "views": 277861,
+    "views_per_hour": 19919
+   },
+   {
+    "title": "CALL OF DUTY: MODERN WARFARE 4 Full Gameplay Walkthrough / No Commentary【FULL GAME】4K Ultra HD",
+    "channel": "Gamer's Little Playground",
+    "views": 540597,
+    "views_per_hour": 18777
+   }
+  ],
+  "US": [
+   {
+    "title": "Grand Theft Auto VI Launch Trailer",
+    "channel": "Rockstar Games",
+    "views": 39404793,
+    "views_per_hour": 606708
+   },
+   {
+    "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
+    "channel": "OliviaRodrigoVEVO",
+    "views": 10503006,
+    "views_per_hour": 194670
+   },
+   {
+    "title": "The Beekeeper 2 | Official Teaser Trailer",
+    "channel": "Amazon MGM Studios",
+    "views": 11745924,
+    "views_per_hour": 185825
+   },
+   {
+    "title": "Aakasamlo Oka Tara - Teaser | Dulquer Salmaan | Satvika | Shruti Haasan |GV Prakash | Pavan Sadineni",
+    "channel": "Geetha Arts ",
+    "views": 3102609,
+    "views_per_hour": 126871
+   },
+   {
+    "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
+    "channel": "MKIceAndFire",
+    "views": 1480087,
+    "views_per_hour": 49956
+   },
+   {
+    "title": "Supermarket Simulator - Part 8",
+    "channel": "Markiplier",
+    "views": 690775,
+    "views_per_hour": 49535
+   },
+   {
+    "title": "The Chosen: Season 6 Official Trailer",
+    "channel": "The Chosen",
+    "views": 2604697,
+    "views_per_hour": 40728
+   },
+   {
+    "title": "Everyone is BREAKING UP!",
+    "channel": "Aphmau",
+    "views": 368641,
+    "views_per_hour": 34445
+   },
+   {
+    "title": "Tom MacDonald - \"What America Is\"",
+    "channel": "Tom MacDonald",
+    "views": 1263739,
+    "views_per_hour": 33288
+   },
+   {
+    "title": "Shrek 2 Remastered - Announce Trailer",
+    "channel": "Mafialabs",
+    "views": 1195776,
+    "views_per_hour": 32191
+   },
+   {
+    "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
+    "channel": "Cash",
+    "views": 412676,
+    "views_per_hour": 27608
+   },
+   {
+    "title": "I Hosted the Biggest Pokemon Competition Ever",
+    "channel": "PM7",
+    "views": 429626,
+    "views_per_hour": 26937
+   },
+   {
+    "title": "WE'RE THE NEW GORILLA TAG MONSTERS...",
+    "channel": "Techy Plays",
+    "views": 400977,
+    "views_per_hour": 25145
+   },
+   {
+    "title": "GTA 6 Launch Trailer: Everything New YOU MISSED",
+    "channel": "TGG",
+    "views": 1386286,
+    "views_per_hour": 22914
+   },
+   {
+    "title": "Can I Make ARMOR from ANY MOB in Minecraft!",
+    "channel": "PrestonPlayz",
+    "views": 334625,
+    "views_per_hour": 21312
+   }
+  ],
+  "US-gaming": [
+   {
+    "title": "Grand Theft Auto VI Launch Trailer",
+    "channel": "Rockstar Games",
+    "views": 39404793,
+    "views_per_hour": 606708
+   },
+   {
+    "title": "100 Hackers vs Minecraft's Spear Master",
+    "channel": "Karl",
+    "views": 991163,
+    "views_per_hour": 76523
+   },
+   {
+    "title": "Save Hay Day from the Red Revenant!",
+    "channel": "Hay Day",
+    "views": 3296403,
+    "views_per_hour": 71874
+   },
+   {
+    "title": "The (Objectively) Best Video Game Sunsets",
+    "channel": "Any Austin",
+    "views": 582774,
+    "views_per_hour": 53613
+   },
+   {
+    "title": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1 - INTRO (FULL GAME)",
+    "channel": "theRadBrad",
+    "views": 1391483,
+    "views_per_hour": 50195
+   },
+   {
+    "title": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME [4K 60FPS PS5] - No Commentary",
+    "channel": "MKIceAndFire",
+    "views": 1480087,
+    "views_per_hour": 49956
+   },
+   {
+    "title": "Supermarket Simulator - Part 8",
+    "channel": "Markiplier",
+    "views": 690775,
+    "views_per_hour": 49535
+   },
+   {
+    "title": "🔴LIVE | SCUMBAG RAIDERS | HUTCHMF X KONA | FRICK A FAN FRIDAY | #BUNGULATE",
+    "channel": "TheBurntPeanut",
+    "views": 876576,
+    "views_per_hour": 38707
+   },
+   {
+    "title": "How a Route 1 Bug Pokémon Became a Champion",
+    "channel": "WolfeyVGC",
+    "views": 567093,
+    "views_per_hour": 37931
+   },
+   {
+    "title": "ROBLOX SELL FRIES!",
+    "channel": "Foltyn",
+    "views": 1300977,
+    "views_per_hour": 36209
+   },
+   {
+    "title": "Everyone is BREAKING UP!",
+    "channel": "Aphmau",
+    "views": 368641,
+    "views_per_hour": 34445
+   },
+   {
+    "title": "This GROCERY STORE is HIDING SOMETHING..",
+    "channel": "Tyler & Snowi",
+    "views": 935089,
+    "views_per_hour": 31374
+   },
+   {
+    "title": "VERITY SPEEDRUNNER vs HUNTERS in Minecraft!",
+    "channel": "Cash",
+    "views": 412676,
+    "views_per_hour": 27608
+   },
+   {
+    "title": "Who Joined My Game…",
+    "channel": "CaseOh",
+    "views": 876200,
+    "views_per_hour": 27422
+   },
+   {
+    "title": "I Hosted the Biggest Pokemon Competition Ever",
+    "channel": "PM7",
+    "views": 429626,
+    "views_per_hour": 26937
+   }
+  ]
+ },
+ "our_last_7_days": []
+}

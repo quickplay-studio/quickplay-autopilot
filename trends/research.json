@@ -1,138 +1,42 @@
 {
- "date": "2026-10-17",
+ "date": "2026-10-18",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "china",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/China",
+   "topic": "u of u football",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/U_of_T_Football",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Why Britain should reject the lure of cheap – and  scary – Chinese AI",
-     "url": "https://www.theguardian.com/business/2026/oct/17/why-britain-should-reject-the-lure-of-cheap-and-scary-chinese-ai",
-     "published": "2026-10-17T15:00+00:00"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Gameplay footage emerges of reportedly cancelled Assassin's Creed game Destiny",
-     "url": "https://www.eurogamer.net/assassins-creed-destiny-cancelled-gameplay-footage-timi-tencent",
-     "published": "2026-10-17T12:39+00:00"
-    },
-    {
-     "outlet": "BBC",
-     "title": "India and China aren't friends - but Nepal wants to unite them against climate threats",
-     "url": "https://www.bbc.co.uk/news/articles/cvy0rd1j2kzlo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-14T23:32+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "tenzing film",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tenzing_(film)",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The Welsh mountain inn that helped conquer Everest",
-     "url": "https://www.theguardian.com/travel/2026/oct/15/pen-y-gwryd-hotel-snowdonia-wales-everest-mountaineering",
-     "published": "2026-10-15T06:00+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "nottingham",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nottingham",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "More NHS staff sacked over attacks victims' records",
-     "url": "https://www.bbc.co.uk/news/articles/cmd7q8ld3dd3o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-17T16:34+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "barcelona vs",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Barcelona_S.C.",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "European football: Baena late strike for Atlético puts pressure on Barcelona",
+     "title": "European football: Barcelona thrash Real Betis to maintain 100% record",
      "url": "https://www.theguardian.com/football/2026/oct/17/european-football-bayern-munich-barcelona-psg-inter",
-     "published": "2026-10-17T14:44+00:00"
+     "published": "2026-10-17T21:33+00:00"
     },
     {
      "outlet": "BBC",
-     "title": "Guardiola receives standing ovation on return to Barcelona",
-     "url": "https://www.bbc.co.uk/sport/videos/cm9dzg38n6j7o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-17T10:00+00:00"
+     "title": "Does Scott's Disney+ exit unmask wider issue in coverage of women's game?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cm3wv4ej7lv2o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-16T15:49+00:00"
     }
    ]
   },
   {
-   "topic": "la liga",
-   "signal": "Google Trends US 10000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/La_Liga",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "European football: Baena late strike for Atlético puts pressure on Barcelona",
-     "url": "https://www.theguardian.com/football/2026/oct/17/european-football-bayern-munich-barcelona-psg-inter",
-     "published": "2026-10-17T14:44+00:00"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Bellingham agrees new Real deal - Saturday's gossip",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ck7vprzqmr56o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-16T21:57+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "Katie Zacharia",
-   "signal": "Wikipedia 428,191 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
-     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
-     "published": "2026-10-16T13:04+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "VisionQuest",
-   "signal": "Wikipedia 122,179 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/VisionQuest",
+   "topic": "noah centineo",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Noah_Centineo",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Marvel fans to meet Welsh superhero - complete with Cardiff accent",
-     "url": "https://www.bbc.co.uk/news/articles/c6zxj47vwrdno?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-15T17:30+00:00"
-    }
-   ]
-  },
-  {
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 113,060 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Box Office: ‘Street Fighter’ Scores $13 Million Debut as ‘You Can See Everything’ Opens at No. 2 With $5.5 Million on Friday",
-     "url": "https://variety.com/2026/film/box-office/box-office-street-fighter-you-can-see-everything-whalefall-1236914827/",
-     "published": "2026-10-17T15:43+00:00"
+     "title": "Street Fighter movie is 'made by fans for fans' - but can it KO the critics?",
+     "url": "https://www.bbc.co.uk/news/articles/cj040z4ngnz1o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-16T12:06+00:00"
     }
    ]
   },
   {
    "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 675,461/h",
+   "signal": "YouTube GB 606,708/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
    "articles": [
     {
@@ -150,58 +54,46 @@
    ]
   },
   {
-   "topic": "Trailer 2",
-   "signal": "YouTube GB 151,883/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Trailer_Park_Boys",
+   "topic": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1",
+   "signal": "YouTube GB-gaming 50,195/h",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "The hill I will die on: Cinemas have been getting away with lies. Films should begin on time | Jeffrey Ingold",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/17/the-hill-i-will-die-on-cinemas-have-been-getting-away-with-lies-films-should-begin-on-time",
-     "published": "2026-10-17T09:00+00:00"
-    },
-    {
-     "outlet": "BBC",
-     "title": "GTA 6 - all you need to know about Rockstar's blockbuster game",
-     "url": "https://www.bbc.co.uk/news/articles/c9q20djz4wno?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-15T14:25+00:00"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Grand Theft Auto 6 launch trailer suddenly drops, showing a saucy shower scene, a tense police chase, and high-flying heists",
-     "url": "https://www.eurogamer.net/grand-theft-auto-6-launch-trailer",
-     "published": "2026-10-15T13:24+00:00"
+     "outlet": "IGN",
+     "title": "Captain Price Actor Sends Message to Fans as Call of Duty: Modern Warfare 4 Campaign Praise Rolls in",
+     "url": "https://www.ign.com/articles/captain-price-actor-sends-message-to-fans-as-call-of-duty-modern-warfare-4-campaign-praise-rolls-in",
+     "published": "2026-10-17T15:52+00:00"
     }
    ]
   },
   {
-   "topic": "danny dyer",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Danny_Dyer",
-   "articles": []
-  },
-  {
-   "topic": "laliga",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/LaLiga%2B",
-   "articles": []
-  },
-  {
-   "topic": "strategic petroleum reserve",
+   "topic": "dp world tour",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Strategic_Petroleum_Reserve_(United_States)",
+   "wikipedia": "https://en.wikipedia.org/wiki/DP_World_Tour_Championship",
    "articles": []
   },
   {
-   "topic": "nicolas jackson",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nicolas_Jackson",
+   "topic": "bbcnews",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bbcnews.com",
    "articles": []
   },
   {
-   "topic": "newcastle manager",
+   "topic": "guy ritchie",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Guy_Ritchie",
+   "articles": []
+  },
+  {
+   "topic": "cfb wainwright",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Newcastle_Rangers_F.C.",
+   "wikipedia": "https://en.wikipedia.org/wiki/CFB_Wainwright",
+   "articles": []
+  },
+  {
+   "topic": "cara delevingne",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cara_Delevingne",
    "articles": []
   }
  ]

@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-17T17:50+00:00",
+ "updated": "2026-10-18T05:57+00:00",
  "errors": {
   "instagram": "RuntimeError: API access blocked."
  },
  "youtube": {
-  "subscribers": 1,
-  "public_shorts": 14,
-  "views_all_time": 1130,
+  "subscribers": 3,
+  "public_shorts": 17,
+  "views_all_time": 2040,
   "views_last_90_days": 0,
   "views_measure": "engaged views"
  },
@@ -19,8 +19,8 @@
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,
   "apply_before": "2027-02-01",
-  "days_left": 107,
-  "subscribers_pct": 0.1,
+  "days_left": 106,
+  "subscribers_pct": 0.3,
   "views_pct": 0.0,
   "views_needed_per_day": 111111
  },

@@ -122,13 +122,28 @@
     </div>
   </section>
 
+  <section class="qp-grid" id="looks-section">
+    <div class="qp-panel" id="panel-looks">
+      <h2 id="h-looks">What's working: the look</h2>
+      <p class="qp-note">Each caption style, voice, camera energy, colour grade and opening, scored by how long people kept watching (1.00 is typical for Shorts posted around the same time). GitHub gives more Shorts the winners.</p>
+      <p class="qp-note" id="looks-empty" hidden>Fills in once Shorts with the new looks have been public for a day.</p>
+      <div class="qp-chart" id="chart-looks" data-source="looks"></div>
+    </div>
+    <div class="qp-panel" id="panel-leave">
+      <h2 id="h-leave">Where viewers leave</h2>
+      <p class="qp-note">What was on screen at each Short's steepest drop-off, and how fast viewers left there (points of the audience lost per second). Lower is better.</p>
+      <p class="qp-note" id="leave-empty" hidden>Fills in once YouTube has two days of watch data for the new Shorts.</p>
+      <div class="qp-chart" id="chart-leave" data-source="leave"></div>
+    </div>
+  </section>
+
   <section class="qp-section" id="shorts-section" aria-labelledby="h-shorts">
     <div class="qp-panel" id="panel-shorts">
       <div class="qp-tools">
         <h2 id="h-shorts">Every Short</h2>
-        <input class="qp-search" id="shorts-search" type="search" placeholder="Search titles, categories, formats" aria-label="Search Shorts">
+        <input class="qp-search" id="shorts-search" type="search" placeholder="Search titles, categories, formats, looks" aria-label="Search Shorts">
       </div>
-      <p class="qp-note">Public Shorts, newest first. Click a heading to sort. Empty cells: that platform isn't connected yet or has no numbers for it.</p>
+      <p class="qp-note">Public Shorts, newest first. Click a heading to sort. Empty cells: that platform isn't connected yet, or the numbers aren't in yet.</p>
       <div class="qp-table-wrap">
         <table class="qp-table" id="shorts-table" data-source="shorts" data-row-key="youtube_url">
           <thead><tr>
@@ -137,8 +152,11 @@
             <th data-field="slot_uk" class="qp-narrow-hide"><button type="button" data-sort="slot_uk">Time (UK)</button></th>
             <th data-field="category" class="qp-narrow-hide"><button type="button" data-sort="category">Category</button></th>
             <th data-field="format" class="qp-narrow-hide"><button type="button" data-sort="format">Format</button></th>
+            <th data-field="look_captions" class="qp-narrow-hide"><button type="button" data-sort="look_captions">Captions</button></th>
+            <th data-field="look_voice" class="qp-narrow-hide"><button type="button" data-sort="look_voice">Voice</button></th>
             <th data-field="yt_views" class="num"><button type="button" data-sort="yt_views">YouTube views</button></th>
             <th data-field="views_per_hour" class="num qp-narrow-hide"><button type="button" data-sort="views_per_hour">Views an hour</button></th>
+            <th data-field="yt_held_3s_pct" class="num qp-narrow-hide"><button type="button" data-sort="yt_held_3s_pct">Held at 3s</button></th>
             <th data-field="yt_avg_viewed_pct" class="num qp-narrow-hide"><button type="button" data-sort="yt_avg_viewed_pct">% viewed</button></th>
             <th data-field="yt_subs_gained" class="num qp-narrow-hide"><button type="button" data-sort="yt_subs_gained">Subs gained</button></th>
             <th data-field="ig_views" class="num"><button type="button" data-sort="ig_views">Instagram views</button></th>
@@ -245,6 +263,47 @@ dash.calc('by_slot', {
       const m = v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
       return { slot: k, shorts: v.length, median_views: m };
     }).sort((a, b) => (a.slot < b.slot ? -1 : 1));
+  },
+});
+
+dash.calc('looks', {
+  inputs: ['shorts'],
+  title: 'Look scores',
+  description: 'Median look score of the Shorts that used each caption style, voice, energy, grade and opening (1 = typical for Shorts posted around the same time).',
+  fn: (shorts) => {
+    const dims = [['captions', 'Captions'], ['voice', 'Voice'], ['energy', 'Energy'], ['grade', 'Grade'], ['opening', 'Opening']];
+    const out = [];
+    dims.forEach(([d, name]) => {
+      const groups = {};
+      shorts.forEach((r) => {
+        const o = r['look_' + d], s = Number(r.look_score);
+        if (o && r.look_score !== '' && r.look_score !== undefined && Number.isFinite(s)) (groups[o] = groups[o] || []).push(s);
+      });
+      Object.keys(groups).sort().forEach((o) => {
+        const v = groups[o].slice().sort((a, b) => a - b);
+        const m = v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
+        out.push({ look: name + ': ' + o.replace(/_/g, ' '), dimension: name, shorts: v.length, score: Math.round(m * 100) / 100 });
+      });
+    });
+    return out;
+  },
+});
+
+dash.calc('leave', {
+  inputs: ['shorts'],
+  title: 'Steepest drop-off by what was on screen',
+  description: "From each Short's worst beat: what was on screen there, and the median points of the audience lost per second.",
+  fn: (shorts) => {
+    const groups = {};
+    shorts.forEach((r) => {
+      const m = /\(([^)]+)\), -([\d.]+)/.exec(r.yt_worst_beat || '');
+      if (m) (groups[m[1]] = groups[m[1]] || []).push(Number(m[2]));
+    });
+    return Object.keys(groups).map((k) => {
+      const v = groups[k].slice().sort((a, b) => a - b);
+      const med = v.length % 2 ? v[(v.length - 1) / 2] : (v[v.length / 2 - 1] + v[v.length / 2]) / 2;
+      return { on_screen: k, shorts: v.length, loss_per_second: Math.round(med * 100) / 100 };
+    }).sort((a, b) => a.loss_per_second - b.loss_per_second);
   },
 });
 
@@ -424,10 +483,41 @@ dash.calc('best', {
     g.append('text').attr('x', (r) => lw + Math.max(2, x(r.median_views)) + 6).attr('y', 17).style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg-muted)').text((r) => fmt(r.median_views));
   }
 
+  function bars(elId, id, labelKey, valueKey, show, tipLines, emptyId, ref) {
+    const el = document.getElementById(elId), empty = document.getElementById(emptyId);
+    if (!ok(id)) { if (empty) empty.hidden = true; return failed(el, id); }
+    el.replaceChildren();
+    const rows = rowsOf(id);
+    if (empty) empty.hidden = rows.length > 0;
+    if (!rows.length) { el.style.minHeight = ''; return; }
+    const W = Math.max(280, el.clientWidth), rowH = 30, H = rows.length * rowH + (ref ? 22 : 6);
+    el.style.minHeight = H + 'px';
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', labelKey);
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { probe.text(r[labelKey]); lw = Math.max(lw, probe.node().getComputedTextLength()); });
+    probe.text('0.00 pts/s'); const vw = probe.node().getComputedTextLength() + 12; probe.remove();
+    lw = Math.min(Math.ceil(lw) + 10, W * 0.48);
+    const top = Math.max(d3.max(rows, (r) => r[valueKey]) || 1, ref || 0);
+    const x = d3.scaleLinear([0, top], [0, Math.max(10, W - lw - vw)]);
+    const tip = tooltip(el);
+    const g = svg.selectAll('g.qp-row').data(rows).join('g').attr('class', 'qp-row').attr('transform', (d, i) => `translate(0,${i * rowH + 3})`);
+    g.append('text').attr('x', lw - 8).attr('y', 17).attr('text-anchor', 'end').style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg)').text((r) => r[labelKey]);
+    g.append('rect').attr('x', lw).attr('y', 6).attr('height', 16).attr('rx', 4).attr('width', (r) => Math.max(2, x(r[valueKey])))
+      .style('fill', (r) => (ref ? (r[valueKey] >= ref ? dash.colors[0] : 'var(--cds-chart-muted)') : 'var(--cds-chart-muted)'))
+      .on('mousemove', (event, r) => { const [px, py] = d3.pointer(event, el); tip.show(px, py, r[labelKey], tipLines(r)); })
+      .on('mouseleave', () => tip.hide());
+    g.append('text').attr('x', (r) => lw + Math.max(2, x(r[valueKey])) + 6).attr('y', 17).style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg-muted)').text((r) => show(r[valueKey]));
+    if (ref) {
+      const rx = lw + x(ref), y1 = rows.length * rowH + 4;
+      svg.append('line').attr('x1', rx).attr('x2', rx).attr('y1', 2).attr('y2', y1).style('stroke', 'var(--color-fg-muted)').style('stroke-dasharray', '3 3');
+      svg.append('text').attr('x', rx).attr('y', y1 + 14).attr('text-anchor', 'middle').style('font-size', 'var(--cds-font-size-caption)').style('fill', 'var(--color-fg-muted)').text('typical');
+    }
+  }
+
   // ---- table ----
-  const COLS = ['title', 'posted', 'slot_uk', 'category', 'format', 'yt_views', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views'];
-  const NUM = new Set(['yt_views', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views']);
-  const HIDE = new Set(['slot_uk', 'category', 'format', 'views_per_hour', 'yt_avg_viewed_pct', 'yt_subs_gained']);
+  const COLS = ['title', 'posted', 'slot_uk', 'category', 'format', 'look_captions', 'look_voice', 'yt_views', 'views_per_hour', 'yt_held_3s_pct', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views'];
+  const NUM = new Set(['yt_views', 'views_per_hour', 'yt_held_3s_pct', 'yt_avg_viewed_pct', 'yt_subs_gained', 'ig_views', 'tt_views', 'all_views']);
+  const HIDE = new Set(['slot_uk', 'category', 'format', 'look_captions', 'look_voice', 'views_per_hour', 'yt_held_3s_pct', 'yt_avg_viewed_pct', 'yt_subs_gained']);
   let sortKey = 'posted', sortDir = -1, query = '';
   const search = document.getElementById('shorts-search');
   search.addEventListener('input', () => { query = search.value.trim().toLowerCase(); drawTable(); });
@@ -445,7 +535,7 @@ dash.calc('best', {
     });
     if (!ok('shorts')) { body.replaceChildren(); return; }
     const rows = rowsOf('shorts')
-      .filter((r) => !query || [r.title, r.category, r.format].join(' ').toLowerCase().includes(query))
+      .filter((r) => !query || [r.title, r.category, r.format, r.look_captions, r.look_voice].join(' ').toLowerCase().includes(query))
       .sort((a, b) => { const A = val(a, sortKey), B = val(b, sortKey); return (A < B ? -1 : A > B ? 1 : 0) * sortDir; });
     body.replaceChildren(...rows.map((r) => {
       const tr = document.createElement('tr'); tr.dataset.key = r.youtube_url;
@@ -458,10 +548,12 @@ dash.calc('best', {
           const a = document.createElement('a'); a.href = r.youtube_url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = r.title; td.append(a);
         } else if (k === 'posted') {
           td.textContent = r.posted_day ? dayFmt(parseDay(r.posted_day)) : '';
-        } else if (k === 'yt_avg_viewed_pct') {
+        } else if (k === 'yt_avg_viewed_pct' || k === 'yt_held_3s_pct') {
           td.textContent = r[k] === '' || r[k] === undefined ? '' : `${r[k]}%`;
         } else if (NUM.has(k)) {
           td.textContent = plain(r[k]);
+        } else if (k === 'look_captions' || k === 'look_voice') {
+          td.textContent = (r[k] || '').replace(/_/g, ' ');
         } else {
           td.textContent = r[k] || '';
         }
@@ -477,6 +569,10 @@ dash.calc('best', {
     drawFollowers();
     hbars('chart-category', 'by_category', 'category', 'Median views by category');
     hbars('chart-slot', 'by_slot', 'slot', 'Median views by posting time');
+    bars('chart-looks', 'looks', 'look', 'score', (v) => v.toFixed(2),
+      (r) => [`${r.score.toFixed(2)} look score`, `${r.shorts} Short${r.shorts === 1 ? '' : 's'}`], 'looks-empty', 1);
+    bars('chart-leave', 'leave', 'on_screen', 'loss_per_second', (v) => `${v.toFixed(2)} pts/s`,
+      (r) => [`${r.loss_per_second.toFixed(2)} points lost a second`, `worst moment in ${r.shorts} Short${r.shorts === 1 ? '' : 's'}`], 'leave-empty', 0);
     drawTable();
   });
 })();

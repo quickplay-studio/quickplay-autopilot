@@ -3,14 +3,14 @@
  "board": "boards/queue/QD-029.json",
  "mode": "schedule",
  "slot": "",
- "rendered": "2026-10-18T20:19:14.964628+00:00",
+ "rendered": "2026-10-18T20:49:54.896738+00:00",
  "title": "Why we only ever see one side of the Moon 🌕",
  "media": {
-  "real_shots": 8,
-  "planned_real": 8
+  "real_shots": 10,
+  "planned_real": 10
  },
  "music": "horizons",
- "social_music": "technology-tech-technology-499582",
+ "social_music": "ambient-space-background-350710",
  "look": {
   "captions": "boxed",
   "voice": "george",
@@ -22,7 +22,7 @@
   "duration": 35.8,
   "wps": 3.06,
   "weak_beats": [],
-  "size_mb": 7.7
+  "size_mb": 7.6
  },
  "timeline": [
   [
@@ -79,5 +79,5 @@
   "reserve: approved in advance, posted only on a day nothing new was written"
  ],
  "preview_release": "preview-QD-029",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-50b0a065955ded200be9"
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-4626ff3a5fb87771d250"
 }

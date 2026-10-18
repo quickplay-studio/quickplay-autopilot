@@ -3,14 +3,14 @@
  "board": "boards/queue/QD-032.json",
  "mode": "schedule",
  "slot": "",
- "rendered": "2026-10-18T20:19:25.941928+00:00",
+ "rendered": "2026-10-18T20:50:32.864109+00:00",
  "title": "Bohemian Rhapsody: too long for radio? 🎸",
  "media": {
   "real_shots": 4,
   "planned_real": 4
  },
- "music": "rise-of-the-machines",
- "social_music": "indie-rock-204846",
+ "music": "walking-the-wire",
+ "social_music": "train-country-blues-rock-131593",
  "look": {
   "captions": "pop",
   "voice": "emma",
@@ -22,7 +22,7 @@
   "duration": 27.5,
   "wps": 3.31,
   "weak_beats": [],
-  "size_mb": 8.0
+  "size_mb": 8.3
  },
  "timeline": [
   [
@@ -79,5 +79,5 @@
   "reserve: approved in advance, posted only on a day nothing new was written"
  ],
  "preview_release": "preview-QD-032",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-274a25d7f234935b2d09"
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-b5ba2373a352d443f0a9"
 }

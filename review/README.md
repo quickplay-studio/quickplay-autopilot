@@ -6,15 +6,10 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 ## Needs a look
 
+- **QD-030** Octopus: three hearts and blue blood 🐙: failed. RuntimeError: no usable media for beat: The third pushes it round the rest of th
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-
-## In the queue
-
-- **QD-029** Why we only ever see one side of the Moon 🌕 (rendering next)
-- **QD-030** Octopus: three hearts and blue blood 🐙 (rendering next)
-- **QD-032** Bohemian Rhapsody: too long for radio? 🎸 (rendering next)
 
 ## On the channel (latest first)
 

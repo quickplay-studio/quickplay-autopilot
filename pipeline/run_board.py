@@ -183,6 +183,8 @@ def main():
                                    sum(1 for s in tl.get("shots", []) if b["start"] - 0.01 <= s["t0"] < b["end"])] for b in tl["beats"]]
         except Exception as e: print("timeline not recorded:", e)
         contact_sheet(mp4, P / "out" / f"{sid}.timeline.json", res / "review.jpg")
+        if sid.startswith("TEST-") and (P / "out" / f"{sid}.social.mp4").exists():      # template tests show both layouts
+            contact_sheet(P / "out" / f"{sid}.social.mp4", P / "out" / f"{sid}.timeline.json", res / "review_social.jpg")
         problems = []
         if not 12 <= dur <= 75: problems.append(f"length {dur:.0f}s")
         if weak: problems.append(f"unclear narration in beats {weak}")

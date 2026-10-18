@@ -30,6 +30,7 @@ def main(root):
         (ROOT / "status").mkdir(exist_ok=True); (ROOT / "review").mkdir(exist_ok=True)
         (ROOT / "status" / f"{sid}.json").write_text(json.dumps(st, indent=1, ensure_ascii=False))
         if (res / "review.jpg").exists(): shutil.copy(res / "review.jpg", ROOT / "review" / f"{sid}.jpg")
+        if (res / "review_social.jpg").exists(): shutil.copy(res / "review_social.jpg", ROOT / "review" / f"{sid}.social.jpg")
         soc = res / "social.mp4"
         if soc.exists() and st.get("video") and not st.get("social_release"):
             tag = f"social-{sid}"

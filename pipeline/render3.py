@@ -248,21 +248,27 @@ def main():
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))
     (out_dir / f"{sid}.timeline.json").write_text(json.dumps({"beats": beats, "words": words, "groups": groups, "duration": duration,
                                                               "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc')} for it in items]}, indent=1))
+    # Up to about 30 MB a file (uploads all go through APIs now; TikTok takes up to 64 MB in one piece) and at most
+    # 10 Mbps: the old 9.4 MB cap held a 35-second Short to under 2 Mbps, which softened caption edges and fast cuts.
+    vmax = int(min(10_000_000, 0.95 * (30e6 * 8 / duration - 128_000)) / 1000)
+    enc = lambda path: ["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-i", "-",
+                        "-c:v", "libx264", "-preset", "medium", "-crf", str(sb.get("crf", 20)), "-maxrate", f"{vmax}k",
+                        "-bufsize", f"{2 * vmax}k", "-pix_fmt", "yuv420p", "-profile:v", "high", "-r", str(FPS), str(path)]
+    mux = lambda video, audio, dest: subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error", "-i", str(video), "-i", str(audio), "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",
+         "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-movflags", "+faststart", "-shortest", str(dest)], check=True)
     silent = out_dir / f"{sid}.video.mp4"
-    vmax = int(min(8_000_000, 0.95 * (9.4e6 * 8 / duration - 128_000)) / 1000)
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(FPS), "-i", "-",
-           "-c:v", "libx264", "-preset", "medium", "-crf", str(sb.get("crf", 21)), "-maxrate", f"{vmax}k", "-bufsize", f"{2 * vmax}k",
-           "-pix_fmt", "yuv420p", "-profile:v", "high", "-r", str(FPS), str(silent)]
-    asyncio.run(R.capture(HERE / "template3.html", data, duration, cmd, out_dir / f"{sid}.poster.jpg", sb.get("posterT", 0.6)))
+    asyncio.run(R.capture(HERE / "template3.html", data, duration, enc(silent), out_dir / f"{sid}.poster.jpg", sb.get("posterT", 0.6)))
     final = out_dir / f"{sid}.mp4"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent), "-i", str(wav),
-                    "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
-                    "-movflags", "+faststart", "-shortest", str(final)], check=True)
-    if soc.get("slug") and swav.exists():
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent), "-i", str(swav),
-                        "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-ar", "48000",
-                        "-movflags", "+faststart", "-shortest", str(out_dir / f"{sid}.social.mp4")], check=True)
+    mux(silent, wav, final)
     silent.unlink(missing_ok=True)
+    if soc.get("slug") and swav.exists():
+        # TikTok and Instagram get their own pass with the "social" layout (template3.html, body.lay-social): their
+        # caption rows and button columns sit in different places from YouTube's
+        ssilent = out_dir / f"{sid}.social.video.mp4"
+        asyncio.run(R.capture(HERE / "template3.html", dict(data, layout="social"), duration, enc(ssilent), None, 0))
+        mux(ssilent, swav, out_dir / f"{sid}.social.mp4")
+        ssilent.unlink(missing_ok=True)
     print(json.dumps({"id": sid, "duration": round(duration, 2), "size_mb": round(final.stat().st_size / 1e6, 2),
                       "shots": len(items), "secs": round(time.time() - t0, 1), "file": str(final)}))
 

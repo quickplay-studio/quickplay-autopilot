@@ -3,7 +3,8 @@
 Rules (numbers live in config.json)
 - At most daily_limit uploads in any 24 hours, counting every upload on the channel (including ones made by hand).
   YouTube may enforce a lower limit; then the extra boards wait in the queue and the next run tries again.
-- Slots: slots_per_day a day, from slot_first, every slot_every_minutes (UK time). A slot already taken is never reused.
+- Slots: slots_per_day a day. Until 30 Shorts have results: from slot_first, every slot_every_minutes (UK time); then the
+  times learned from results (analytics/slots.json, see learned_slots). A slot already taken is never reused.
 - A Short goes to the first free slot at least lead_hours away (time to render and process).
 - A board may fix its slot with "publish_at": "YYYY-MM-DD HH:MM" (UK time), or set "mode": "private"
   (test upload, not scheduled), "mode": "none" (render only) or "mode": "dry" (rendered and held for approval like a real
@@ -24,11 +25,44 @@ CFG = json.loads((ROOT / "config.json").read_text())
 LIMIT = int(os.environ.get("DAILY_LIMIT", CFG.get("daily_limit", 10)))
 LEAD = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
 
+def _mins(hm):
+    h, m = map(int, hm.split(":")); return h * 60 + m
+
+def learned_slots(n):
+    """The day's posting times learned from results (analytics/slots.json, refreshed once a day so a day's times stay
+    fixed): each half hour from 07:00 to 22:30 scores by how Shorts posted at or near it did against Shorts posted
+    around the same days; the best n are kept at least 75 minutes apart. Times with little data get a small bonus so
+    they're still tried. None until 30 Shorts have results."""
+    try: stats = json.loads((ROOT / "analytics" / "slots.json").read_text()).get("slots") or {}
+    except Exception: return None
+    if sum(v.get("n", 0) for v in stats.values()) < 30: return None
+    def score(c):
+        num = den = 0.0
+        for k, v in stats.items():
+            d = abs(_mins(k) - _mins(c))
+            if d <= 60:
+                w = v.get("n", 0) * (1.0 if d == 0 else 0.5 if d <= 30 else 0.25)
+                num += w * v.get("score", 1.0); den += w
+        sc = (num + 3.0) / (den + 3.0)
+        return max(sc, 1.03) if den < 2 else sc
+    ranked = sorted((f"{h:02d}:{m:02d}" for h in range(7, 23) for m in (0, 30)), key=lambda c: (-score(c), c))
+    for gap in (75, 60, 45):
+        picked = []
+        for c in ranked:
+            if all(abs(_mins(c) - _mins(q)) >= gap for q in picked): picked.append(c)
+            if len(picked) == n: return sorted(picked)
+    return None
+
 def day_slots(day):
+    n = int(CFG.get("slots_per_day", 10))
+    times = learned_slots(n)
+    if times:
+        return [dt.datetime(day.year, day.month, day.day, *map(int, t.split(":")), tzinfo=UK).astimezone(dt.timezone.utc)
+                for t in times]
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
     step = dt.timedelta(minutes=int(CFG.get("slot_every_minutes", 90)))
-    return [(first + step * i).astimezone(dt.timezone.utc) for i in range(int(CFG.get("slots_per_day", 10)))]
+    return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
 
 def schedule_state(now, yt=None):
     """(taken slots, uploads in the last 24 hours, YouTube reachable). Our uploads come from status files (exact upload

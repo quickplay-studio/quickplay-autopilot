@@ -230,6 +230,7 @@ def main():
     rows.sort(key=lambda r: r["posted"], reverse=True)
     looks_out = look_scores(rows)
     (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
+    slot_scores(rows)
 
     # per-day history: today's totals are appended to analytics/history.csv, so growth shows over time
     hist_p = OUT / "daily.csv"
@@ -322,6 +323,29 @@ def look_scores(rows):
                     if vals: e[k] = round(statistics.median(vals), 1)
             out["dimensions"].setdefault(dim, {})[opt] = e
     return out
+
+def slot_scores(rows):
+    """Posting times (UK, to the half hour) scored by views an hour against Shorts posted within 3 days (1.0 = typical).
+    plan.py picks each day's slots from this. Written once per UK day so a day's slots stay fixed."""
+    p = OUT / "slots.json"
+    today = str(NOW.astimezone(ZoneInfo("Europe/London")).date())
+    try:
+        if json.loads(p.read_text()).get("day") == today: return
+    except Exception: pass
+    aged = [r for r in rows if r["posted"] and r.get("slot_uk") and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
+    by = {}
+    for r in aged:
+        t = utc(r["posted"])
+        peers = [x["views_per_hour"] for x in aged if x["views_per_hour"] not in ("", None) and abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
+        if len(peers) < 3 or r["views_per_hour"] in ("", None): continue
+        med = statistics.median(peers)
+        if not med: continue
+        h, m = map(int, r["slot_uk"].split(":"))
+        q = int(round((h * 60 + m) / 30)) * 30 % 1440          # to the nearest half hour
+        key = f"{q // 60:02d}:{q % 60:02d}"
+        by.setdefault(key, []).append(float(r["views_per_hour"]) / med)
+    p.write_text(json.dumps({"day": today, "updated": NOW.isoformat(timespec="minutes"),
+                             "slots": {k: {"n": len(v), "score": round(statistics.median(v), 3)} for k, v in sorted(by.items())}}, indent=1))
 
 def write_csv(path, rows, fields):
     with open(path, "w", newline="") as f:

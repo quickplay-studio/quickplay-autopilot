@@ -2,7 +2,7 @@
 
 YouTube checked Sat 17 Oct 18:50 (UK): 6 scheduled, 14 public, 15 uploads in the last 24 hours.
 
-Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AWqMR5bbM9GOpgGstuvfvpx"}} · TikTok: connected (checked Sun 18 Oct 2:12).
+Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"Au7u7acl_ULY-QksTpeVAhA"}} · TikTok: connected (checked Sun 18 Oct 3:03).
 
 ## Needs a look
 

@@ -4,5 +4,14 @@
  "board": "backlog/QD-017",
  "mode": "schedule",
  "source": "backlog",
- "state": "waiting for YouTube's daily upload limit"
+ "state": "scheduled",
+ "video": "LYmgGMDWMbg",
+ "url": "https://youtube.com/shorts/LYmgGMDWMbg",
+ "publish_at": "2026-10-18T15:30:00Z",
+ "uploaded_at": "2026-10-18T02:29:35.339837Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-18T15:30:00Z",
+  "upload_status": "uploaded"
+ }
 }

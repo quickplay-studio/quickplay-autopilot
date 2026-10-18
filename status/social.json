@@ -1,15 +1,15 @@
 {
- "checked": "2026-10-18T13:59:28+00:00",
+ "checked": "2026-10-18T14:57:31+00:00",
  "instagram": {
   "ok": false,
-  "error": "400 {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"ArmNsaKa8-4LOZJx54nd5CT\"}}"
+  "error": "400 {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"ACksIHK7titGBkfEMZM_e62\"}}"
  },
  "tiktok": {
   "ok": true,
   "user": {
+   "display_name": "Quickplay Daily",
    "open_id": "-000Kjw5zJFPKoniKaT4tzfISnGmzxUjL08k",
-   "username": "quickplaydaily",
-   "display_name": "Quickplay Daily"
+   "username": "quickplaydaily"
   },
   "scopes": "video.publish,video.upload,user.info.basic,user.info.profile,user.info.stats,video.list",
   "mode": "inbox"

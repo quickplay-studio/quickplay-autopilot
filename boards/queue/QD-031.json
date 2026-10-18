@@ -79,12 +79,16 @@
    },
    "shots": [
     {
-     "src": "commons-search:Usain Bolt Beijing Olympics",
-     "move": "in",
+     "src": "pixabay:video:sprint race start"
+    },
+    {
+     "src": "commons-search:Usain Bolt",
+     "move": "right",
      "focus": [
       0.5,
       0.35
-     ]
+     ],
+     "at": 7
     }
    ]
   },
@@ -112,12 +116,7 @@
    },
    "shots": [
     {
-     "src": "commons-search:Usain Bolt sprint",
-     "move": "left",
-     "focus": [
-      0.5,
-      0.4
-     ]
+     "src": "pixabay:video:athletics stadium"
     }
    ]
   },
@@ -136,11 +135,11 @@
    },
    "shots": [
     {
-     "src": "commons-search:Usain Bolt celebrating",
+     "src": "commons-search:Usain Bolt",
      "move": "in",
      "focus": [
       0.5,
-      0.35
+      0.3
      ]
     }
    ]

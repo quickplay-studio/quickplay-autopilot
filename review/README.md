@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-YouTube checked Sun 18 Oct 6:57 (UK): 10 scheduled, 17 public, 19 uploads in the last 24 hours.
+YouTube checked Sun 18 Oct 12:43 (UK): 9 scheduled, 18 public, 15 uploads in the last 24 hours.
 
 Instagram: 400 {"error":{"message":"API access blocked.","type":"OAuthException","code":200,"fbtrace_id":"AgJfQPQicrxISHQWTy-t8sM"}} · TikTok: connected (checked Sun 18 Oct 11:57).
 
@@ -40,37 +40,37 @@ scheduled · [script](../backlog/QD-015) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts/CMVRXkJYI5M)
 
 ### Sun 18 Oct 12:00 · How a smiley ball became Minecraft's creepiest monster 😳
-private · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
+public · 9 views · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
 
 ### Sat 17 Oct 22:30 · Apple's new smart home screen, explained 🏠
-public · 7 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
+public · 17 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
 
 ### Sat 17 Oct 21:00 · Google's most powerful AI is now in the Gemini app 🤖
-public · 13 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
+public · 25 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
 
 ### Sat 17 Oct 19:30 · Why this road closure has a 43-mile diversion 🚗
 public · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
 
 ### Sat 17 Oct 18:00 · Disney's next film isn't a sequel ✨
-public · 5 views · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
+public · 7 views · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
 
 ### Sat 17 Oct 16:30 · Why Riot brought back a band that isn't real 🎤
-public · 24 views · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
+public · 27 views · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
 
 ### Sat 17 Oct 15:00 · Why KPop Demon Hunters 2 won't come until 2029 🎶
-public · 93 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
+public · 121 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
-public · 537 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
+public · 882 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
-public · 155 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
+public · 198 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Sat 17 Oct 10:30 · GTA 6's launch trailer hides its whole story in one detail 🎮
-public · 211 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)
+public · 231 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)
 
 ### Fri 16 Oct 22:30 · Why scientists made VR goggles for mice 🐭
-public · 22 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
+public · 24 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 
 ### Fri 16 Oct 21:00 · Why GTA 6 isn't coming to PC (yet) 🖥️
 public · 8 views · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
@@ -79,16 +79,16 @@ public · 8 views · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
 public · 28 views · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 
 ### Fri 16 Oct 18:00 · Why Godzilla Minus Zero is a big deal 🦖
-public · 351 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
+public · 357 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
 
 ### Fri 16 Oct 16:30 · This game was cancelled. Now it's back 🎮
-public · 15 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
+public · 18 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
 
 ### Fri 16 Oct 15:00 · Fontaines D.C.'s first ever guest is ROSALÍA 🎻
-public · 309 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
+public · 331 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
 
 ### Fri 16 Oct 13:30 · From lucky loser to beating the world No. 4 🎾
-public · 221 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)
+public · 248 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)
 
 ### Fri 16 Oct 12:00 · Peyton Manning just made a country song 🏈
-public · 27 views · [YouTube](https://youtube.com/shorts/MNXzQl1V0d8)
+public · 30 views · [YouTube](https://youtube.com/shorts/MNXzQl1V0d8)

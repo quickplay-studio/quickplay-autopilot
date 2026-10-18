@@ -1,10 +1,19 @@
 {
- "checked": "2026-10-18T05:57Z",
- "uploads_last_24h": 19,
- "scheduled": 10,
- "public": 17,
+ "checked": "2026-10-18T11:43Z",
+ "uploads_last_24h": 15,
+ "scheduled": 9,
+ "public": 18,
  "flagged": [],
  "videos": [
+  {
+   "video": "NIvLsurvEvk",
+   "title": "How a smiley ball became Minecraft's creepiest monster 😳",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T11:00:12Z",
+   "views": 9,
+   "flag": ""
+  },
   {
    "video": "OCURp8xQxHE",
    "title": "Why Star Wars fans love Biddy Blas 🛸",
@@ -74,7 +83,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T21:30:31Z",
-   "views": 7,
+   "views": 17,
    "flag": ""
   },
   {
@@ -83,7 +92,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T20:00:19Z",
-   "views": 13,
+   "views": 25,
    "flag": ""
   },
   {
@@ -101,7 +110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T17:00:36Z",
-   "views": 5,
+   "views": 7,
    "flag": ""
   },
   {
@@ -110,7 +119,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T15:30:30Z",
-   "views": 24,
+   "views": 27,
    "flag": ""
   },
   {
@@ -119,7 +128,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T14:00:14Z",
-   "views": 93,
+   "views": 121,
    "flag": ""
   },
   {
@@ -128,7 +137,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T12:30:18Z",
-   "views": 537,
+   "views": 882,
    "flag": ""
   },
   {
@@ -137,7 +146,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T11:00:11Z",
-   "views": 155,
+   "views": 198,
    "flag": ""
   },
   {
@@ -159,21 +168,12 @@
    "flag": ""
   },
   {
-   "video": "NIvLsurvEvk",
-   "title": "How a smiley ball became Minecraft's creepiest monster 😳",
-   "privacy": "private",
-   "publish_at": "2026-10-18T11:00:00Z",
-   "uploaded": "2026-10-17T10:23:01Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
    "video": "w_u0kQFo9g4",
    "title": "GTA 6's launch trailer hides its whole story in one detail 🎮",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T09:30:05Z",
-   "views": 211,
+   "views": 231,
    "flag": ""
   },
   {
@@ -182,7 +182,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T21:30:23Z",
-   "views": 22,
+   "views": 24,
    "flag": ""
   },
   {
@@ -209,7 +209,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T17:00:23Z",
-   "views": 351,
+   "views": 357,
    "flag": ""
   },
   {
@@ -218,7 +218,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T15:30:10Z",
-   "views": 15,
+   "views": 18,
    "flag": ""
   },
   {
@@ -227,7 +227,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 309,
+   "views": 331,
    "flag": ""
   },
   {
@@ -236,7 +236,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T12:30:20Z",
-   "views": 221,
+   "views": 248,
    "flag": ""
   },
   {
@@ -245,7 +245,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T11:00:38Z",
-   "views": 27,
+   "views": 30,
    "flag": ""
   }
  ]

@@ -3,40 +3,79 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "u of u football",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/U_of_T_Football",
+   "topic": "elif shafak",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Elif_Shafak",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "European football: Barcelona thrash Real Betis to maintain 100% record",
-     "url": "https://www.theguardian.com/football/2026/oct/17/european-football-bayern-munich-barcelona-psg-inter",
-     "published": "2026-10-17T21:33+00:00"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Does Scott's Disney+ exit unmask wider issue in coverage of women's game?",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm3wv4ej7lv2o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-16T15:49+00:00"
+     "title": "‘Is there any value in writing a story in a time of chaos?’: novelist Elif Shafak on her creative crisis",
+     "url": "https://www.theguardian.com/books/2026/oct/17/is-there-any-value-in-writing-a-story-in-a-time-of-chaos-novelist-elif-shafak-on-her-creative-crisis",
+     "published": "2026-10-17T08:00+00:00"
     }
    ]
   },
   {
-   "topic": "noah centineo",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Noah_Centineo",
+   "topic": "crystal palace vs west ham",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "Street Fighter movie is 'made by fans for fans' - but can it KO the critics?",
-     "url": "https://www.bbc.co.uk/news/articles/cj040z4ngnz1o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-16T12:06+00:00"
+     "outlet": "Sky Sports",
+     "title": "WSL LIVE! Chelsea lead Spurs with West Ham ahead at Palace",
+     "url": "https://www.skysports.com/football/chelsea-women-vs-tottenham-hotspur-women/live/575793",
+     "published": "2026-10-18T10:59+00:00"
+    }
+   ]
+  },
+  {
+   "topic": "kartal",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kartal",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Britain's Kartal wins first set as she targets maiden WTA 1000 title LIVE!",
+     "url": "https://www.skysports.com/tennis/live-blog/12040/13600539/sonay-kartal-vs-maja-chwalinska-wuhan-open-final-live-british-player-looks-to-win-first-wta-1000-title",
+     "published": "2026-10-18T11:02+00:00"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Kartal battles past Ostapenko in Wuhan to secure spot in first WTA 1000 final",
+     "url": "https://www.theguardian.com/sport/2026/oct/17/sonay-kartal-wuhan-final-jelena-ostapenko-tennis-british-no-1",
+     "published": "2026-10-17T12:26+00:00"
+    }
+   ]
+  },
+  {
+   "topic": "chacarra",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Eugenio_Chacarra",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Chacarra earns third win of year to move top of Race to Dubai standings",
+     "url": "https://www.skysports.com/golf/news/12040/13600531/dp-world-india-championship-eugenio-chacarra-wins-to-move-top-of-race-to-dubai-standings-with-rory-mcilroy-finishing-in-a-share-of-42nd-place",
+     "published": "2026-10-18T12:00+00:00"
+    }
+   ]
+  },
+  {
+   "topic": "chelsea vs tottenham",
+   "signal": "Google Trends US 200+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Chelsea v Tottenham: Women’s Super League – live",
+     "url": "https://www.theguardian.com/football/live/2026/oct/18/chelsea-v-tottenham-womens-super-league-live",
+     "published": "2026-10-18T11:33+00:00"
     }
    ]
   },
   {
    "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 606,708/h",
+   "signal": "YouTube GB 574,177/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
    "articles": [
     {
@@ -54,8 +93,8 @@
    ]
   },
   {
-   "topic": "CALL OF DUTY MODERN WARFARE 4 Campaign Walkthrough Gameplay Part 1",
-   "signal": "YouTube GB-gaming 50,195/h",
+   "topic": "CALL OF DUTY MODERN WARFARE 4 Gameplay Walkthrough Campaign FULL GAME",
+   "signal": "YouTube US-gaming 47,707/h",
    "wikipedia": null,
    "articles": [
     {
@@ -67,33 +106,33 @@
    ]
   },
   {
-   "topic": "dp world tour",
+   "topic": "ali g: who iz i?",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/DP_World_Tour_Championship",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ali_G:_Who_Iz_I%3F",
    "articles": []
   },
   {
-   "topic": "bbcnews",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bbcnews.com",
+   "topic": "maja chwalińska",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Maja_Chwali%C5%84ska",
    "articles": []
   },
   {
-   "topic": "guy ritchie",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Guy_Ritchie",
+   "topic": "chwalinska",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Maja_Chwali%C5%84ska",
    "articles": []
   },
   {
-   "topic": "cfb wainwright",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/CFB_Wainwright",
+   "topic": "lando norris",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lando_Norris",
    "articles": []
   },
   {
-   "topic": "cara delevingne",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Cara_Delevingne",
+   "topic": "kyle larson",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Larson",
    "articles": []
   }
  ]

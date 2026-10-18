@@ -12,7 +12,8 @@ judgement, not browsing. Channel rules in CLAUDE.md still apply (no dashes, UK s
      Note what the best share (caption size and position, framing, movement, colour, how busy the screen is) and what
      the worst share.
    - Add at most ONE new option, in one dimension, from what the best share or from a standout Short in our niches
-     (vidIQ outliers: copy the style, never footage). Caption styles: `body.cap-<id>` rules in pipeline/template3.html
+     (vidIQ outliers if the vidIQ account has credits, otherwise the YouTube charts in trends/latest.json: copy the
+     style, never footage). Caption styles: `body.cap-<id>` rules in pipeline/template3.html
      plus the option in templates/looks.json. Grades: a CSS filter and vignette. Energy: motion, punch, beat_punches.
      New voices need a reference recording: ask Charlie instead.
    - Test every template change before keeping it: copy boards/test/TEST-L1.json to boards/queue/TEST-W<MMDD>.json
@@ -23,7 +24,7 @@ judgement, not browsing. Channel rules in CLAUDE.md still apply (no dashes, UK s
    tested the same way.
 4. **Formats**: retire a format whose Shorts got under 0.6 of the channel's median views over 5 or more Shorts (move it
    to "retired" in templates/formats.json with the reason). Add at most one new format modelled on a vidIQ outlier in
-   our categories (structure and pacing only). Change CLAUDE.md's "What gets views" only for lessons the numbers show.
+   our categories, or on the YouTube charts when vidIQ has no credits (structure and pacing only). Change CLAUDE.md's "What gets views" only for lessons the numbers show.
 5. **Reserve**: keep 5 approved evergreen Shorts in boards/reserve (status "in reserve (approved)"). If there are fewer,
    write the missing ones (CLAUDE.md rules, `"reserve": true`, topics that stay true for months: science, nature,
    records, music and film history), push them, and once they render add their previews to the message below with

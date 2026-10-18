@@ -122,13 +122,25 @@ def recipe(table, rows):
         return ["Not enough measured Shorts yet (15 needed, each public for 24 hours): keep the variety rules and spread "
                 "categories, formats and hook styles evenly so the comparison fills in fast."]
     L = []
+    n_scored = len([r for r in rows if r.get("rel") not in (None, "")])
     cats = [t for t in table if t["feature"] == "category" and t["n"] >= 3]
-    if cats:
-        w = {t["value"]: max(0.3, t["lift"]) ** 2 for t in cats}
-        tot = sum(w.values()); share = {k: 0.8 * x / tot for k, x in w.items()}      # 20% stays exploratory
+    if cats and n_scored >= 40:
+        # a daily mix in proportion to each category's lift, at least 10% for any category we have measured, and 20% kept
+        # for whatever trends hardest so new categories keep getting tested
+        w = {t["value"]: max(0.5, t["lift"]) for t in cats}
+        tot = sum(w.values()); share = {k: max(0.1, 0.8 * x / tot) for k, x in w.items()}
+        scale = 0.8 / sum(share.values()); share = {k: s * scale for k, s in share.items()}
         L.append("Category mix for the day (80% from results, 20% exploring): " +
                  ", ".join(f"{k} {round(100 * s)}%" for k, s in sorted(share.items(), key=lambda kv: -kv[1])) +
                  "; the remaining 20% on whatever trends hardest, any category.")
+    elif cats:
+        up = [t for t in sorted(cats, key=lambda t: -t["lift"]) if t["lift"] >= 1.1]
+        down = [t for t in sorted(cats, key=lambda t: t["lift"]) if t["lift"] <= 0.9]
+        if up or down:
+            L.append(f"Category (early, {n_scored} Shorts measured; a full mix from 40): " +
+                     "; ".join(([("lean towards " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in up))] if up else []) +
+                               ([("ease off " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in down))] if down else [])) +
+                     ", while still covering at least 3 categories a day.")
     for feat, label in FEATURES[1:]:
         push = [t for t in solid if t["feature"] == feat and t["verdict"] == "push"]
         cut = [t for t in solid if t["feature"] == feat and t["verdict"] == "cut back"]

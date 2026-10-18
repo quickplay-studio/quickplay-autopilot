@@ -78,7 +78,7 @@ automatically. Waiting Shorts sit in boards/ready with a private preview (draft 
    board has a status/<id>.json). Then send Charlie ONE message, starting with the line `python pipeline/health.py`
    prints (fix or explain anything it lists):
    - approval "all": each Short in boards/ready as `QD-0xx · title · length · look` (status `look`: captions, voice,
-     energy, grade) with its hook line and any flags, then
+     energy, grade, opening) with its hook line and any flags, then
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
    - approval "flagged": the same for flagged Shorts only; if nothing is flagged, one line naming what went out.

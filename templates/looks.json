@@ -83,6 +83,19 @@
      "vignette": 0.25
     }
    }
+  },
+  "opening": {
+   "about": "The first second, which decides whether people swipe away",
+   "options": {
+    "graphic_first": {
+     "desc": "the hook's title or stat card is on screen from the first frame, over the subject",
+     "reveal_word": 0
+    },
+    "image_first": {
+     "desc": "the subject's picture alone for the first words, then the hook's card appears on the fourth word",
+     "reveal_word": 4
+    }
+   }
   }
  }
 }

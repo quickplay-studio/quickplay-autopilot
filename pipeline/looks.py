@@ -64,13 +64,15 @@ def resolve(ids=None, cat=None):
     render = {"captions": ids["captions"], "group": o["captions"].get("group", 3),
               "filter": o["grade"].get("filter", "none"), "vignette": o["grade"].get("vignette", 0),
               "motion": o["energy"].get("motion", 1.0), "punch": o["energy"].get("punch", 0.045),
-              "beat_punches": bool(o["energy"].get("beat_punches"))}
+              "beat_punches": bool(o["energy"].get("beat_punches")),
+              "reveal_word": int((o.get("opening") or {}).get("reveal_word", 0))}
     return {"ids": ids, "render": render, "voice": {"voice": o["voice"].get("voice", "F2"), "wps": o["voice"].get("wps", 3.0)}}
 
 def describe(ids, cat=None):
-    """One short line for the lineup message, e.g. 'pop captions, emma, punchy, vivid'."""
+    """One short line for the lineup message, e.g. 'pop captions, emma, punchy, vivid, image first'."""
     cat = cat or catalogue(); ids = resolve(ids, cat)["ids"]
-    return f"{ids['captions']} captions, {ids['voice'].replace('_', ' ')}, {ids['energy']}, {ids['grade']}"
+    rest = [ids[d].replace("_", " ") for d in cat["dimensions"] if d not in ("captions",)]
+    return ", ".join([f"{ids['captions']} captions"] + rest)
 
 if __name__ == "__main__":
     print(json.dumps(choose(sys.argv[1] if len(sys.argv) > 1 else "QD-999")))

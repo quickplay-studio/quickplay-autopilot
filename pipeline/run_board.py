@@ -147,6 +147,10 @@ def main():
         import looks as LK
         look = LK.resolve(job.get("look") or sb.get("look"))
         sb.update(look=look["ids"], look_render=look["render"], group=look["render"]["group"])
+        rw, b0 = look["render"].get("reveal_word", 0), (sb["beats"] or [{}])[0]
+        if rw and (b0.get("visual") or {}).get("type", "none") != "none" and "atWord" not in b0["visual"]:
+            n0 = len((b0.get("say") or "").split())          # image first: the hook's card waits for the fourth word
+            if n0 > rw: b0["visual"] = dict(b0["visual"], atWord=rw)
         status["look"] = dict(look["ids"])
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_tag="cb")

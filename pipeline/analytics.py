@@ -290,9 +290,11 @@ def look_scores(rows):
     for p in (ROOT / "status").glob("QD-*.json"):
         st = load_json(p, {})
         if st.get("look"): look_by_id[st.get("id")] = st["look"]
+    try: dims = list(LK.catalogue()["dimensions"])
+    except Exception: dims = ["captions", "voice", "energy", "grade"]
     for r in rows:
         lk = look_by_id.get(r["short"]) or {}
-        for d in ("captions", "voice", "energy", "grade"): r[f"look_{d}"] = lk.get(d, "")
+        for d in dims: r[f"look_{d}"] = lk.get(d, "")
         r["look_score"] = ""
     aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
     def rel(r, field):

@@ -1,6 +1,5 @@
 {
- "checked": "2026-10-18T20:26:08+00:00",
- "instagram_checked": "2026-10-18T20:26:08+00:00",
+ "checked": "2026-10-18T22:56:41+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -15,7 +14,13 @@
     },
     "quota_usage": 0
    }
-  ]
+  ],
+  "today_cap": 6
+ },
+ "instagram_checked": "2026-10-18T20:26:08+00:00",
+ "facebook": {
+  "ok": false,
+  "error": "not connected (FB_PAGE_TOKEN and FB_PAGE_ID secrets missing)"
  },
  "tiktok": {
   "ok": true,

@@ -19,6 +19,7 @@ REPO = os.environ.get("GITHUB_REPOSITORY", "quickplay-studio/quickplay-autopilot
 UK = ZoneInfo("Europe/London")
 NOW = dt.datetime.now(dt.timezone.utc)
 W, H, FPS = 1920, 1080, 25
+FIRST = dt.date(2026, 10, 25)          # the first Sunday after a full week of daily Shorts
 INK, ACCENT, WHITE, MUTED = (15, 23, 32), (46, 230, 197), (245, 248, 250), (159, 176, 194)
 FONTS = {"display": "https://raw.githubusercontent.com/google/fonts/main/ofl/archivoblack/ArchivoBlack-Regular.ttf",
          "body": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf"}
@@ -166,6 +167,8 @@ def main():
     st = json.loads(sp.read_text()) if sp.exists() else {}
     if st.get("video") and not a.dry:
         print("already uploaded:", st["video"]); return
+    if today < FIRST and not a.dry:
+        print(f"the first weekly video is on {FIRST:%A %d %B}, after a full week of daily Shorts"); return
     chosen = picks([x for x in a.ids.split(",") if x] or None)
     if len(chosen) < (1 if a.dry else 6):
         st.update(state="skipped", reason=f"only {len(chosen)} Shorts public in the last 6 days", at=NOW.isoformat(timespec="minutes"))

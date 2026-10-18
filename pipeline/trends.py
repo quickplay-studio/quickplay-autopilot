@@ -2,7 +2,7 @@
 
 Sources: Google Trends daily searches (GB, US, AU, CA, IE), YouTube's most-popular charts (GB, US: all, gaming, music,
 sport, entertainment, science and tech), Google News top stories (UK: entertainment, sport, technology, science),
-Reddit's most popular posts of the day, English Wikipedia's most-read pages, and this channel's own last 7 days.
+English Wikipedia's most-read pages, and this channel's own last 7 days. (Reddit refuses GitHub's servers, so it isn't used.)
 Every source is optional: one that fails is noted and the rest still run. Kept small on purpose: titles and numbers
 only, so reading it costs Claude very little. research() adds trends/research.json: reputable articles per topic.
 """
@@ -45,7 +45,7 @@ def youtube_charts(yt):
                 t = v["snippet"]["title"]
                 if SKIP.search(t): continue
                 rows.append({"title": t, "channel": v["snippet"]["channelTitle"], "views": views, "views_per_hour": round(views / hrs)})
-            out[f"{region}{suffix}"] = sorted(rows, key=lambda r: -r["views_per_hour"])[:15 if not cat else 10]
+            out[f"{region}{suffix}"] = sorted(rows, key=lambda r: -r["views_per_hour"])[:15 if not cat else 6]
     return out
 
 def wikipedia_top():
@@ -61,7 +61,7 @@ def wikipedia_top():
     if arts is None: return [{"error": err}]
     junk = ("Main_Page", "Special:", "Wikipedia:", "Portal:", "File:", "Help:")
     return [{"page": a["article"].replace("_", " "), "views": a["views"]} for a in arts
-            if not a["article"].startswith(junk) and not SKIP.search(a["article"].replace("_", " "))][:30]
+            if not a["article"].startswith(junk) and not SKIP.search(a["article"].replace("_", " "))][:20]
 
 def google_news():
     """Top stories in the UK edition of Google News, per section: 'headline (outlet)'."""
@@ -74,7 +74,7 @@ def google_news():
             for it in x.iter("item"):
                 t = (it.findtext("title") or "").strip()
                 if t and not SKIP.search(t): rows.append(t[:140])
-            out[sec.lower()] = rows[:10]
+            out[sec.lower()] = rows[:8]
         except Exception as e:
             out[sec.lower()] = [f"error: {str(e)[:150]}"]
     return out
@@ -114,7 +114,7 @@ def main():
     import youtube as Y
     data = {"date": str(dt.date.today()),
             "google_trends": {**{g: google_trends(g, 20) for g in ("GB", "US")}, **{g: google_trends(g, 8) for g in ("AU", "CA", "IE")}},
-            "google_news_uk": google_news(), "reddit_popular": reddit_popular(), "wikipedia_top": wikipedia_top()}
+            "google_news_uk": google_news(), "wikipedia_top": wikipedia_top()}
     if Y.available():
         data["youtube_charts"] = youtube_charts(Y.client())
         data["our_last_7_days"] = own_channel()
@@ -224,7 +224,10 @@ def requested_topics():
     out, on = [], False
     for ln in p.read_text().splitlines():
         if ln.startswith("## "): on = ln.lower().startswith("## requested"); continue
-        if on and ln.startswith("- "): out.append(re.sub(r"\s*\([^)]*\)", "", ln[2:]).replace(":", " ").replace('"', "").strip()[:80])
+        if on and ln.startswith("- "):
+            t = re.sub(r"\s*\([^)]*\)", "", ln[2:]).replace('"', "").strip()
+            head, _, tail = t.partition(":")
+            out.append((head if len(head.split()) >= 4 or not tail else f"{head} {tail}").strip()[:80])
     return [t for t in out if t]
 
 def _feed_items(url):

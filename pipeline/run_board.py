@@ -149,16 +149,22 @@ def main():
         sb.update(look=look["ids"], look_render=look["render"], group=look["render"]["group"])
         status["look"] = dict(look["ids"])
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
-        sb.update(voice_engine="chatterbox", voice_dir=f"voice/{sid}", voice_tag="cb")
+        sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
-        resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
-        for v in [voice] + (["F2"] if voice != "F2" else []):      # an unclear read in a new voice falls back to the house voice
-            sh(PY, "tts_cb.py", resolved, P / "voice" / sid, "--voice", v, "--target-wps", str(look["voice"]["wps"]))
-            man = json.loads((P / "voice" / sid / "cb_manifest.json").read_text())
+        tried = []      # an unclear read in a new voice is tried again in the house voice; the clearer read wins (ties: the look's)
+        for v in [voice] + (["F2"] if voice != "F2" else []):
+            vdir = f"voice/{sid}-{v}"
+            sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
+            sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(look["voice"]["wps"]))
+            man = json.loads((P / vdir / "cb_manifest.json").read_text())
             weak = [b["beat"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4]
-            if not weak or v == "F2": break
-            print(f"voice {v}: unclear in beats {weak}, retrying with F2", flush=True)
-            status["look"]["voice"] = "george"; status["look_note"] = f"voice {v} was unclear, used george"
+            tried.append((len(weak), v != voice, v, vdir, man, weak))
+            if not weak: break
+            print(f"voice {v}: unclear in beats {weak}", flush=True)
+        _, _, v, vdir, man, weak = min(tried, key=lambda x: x[:2])
+        if v != voice:
+            status["look"]["voice"] = "george"; status["look_note"] = f"voice {voice} was less clear, used george"
+        sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
         sh(PY, "render3.py", resolved, P / "out")
         mp4 = P / "out" / f"{sid}.mp4"
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp4)],

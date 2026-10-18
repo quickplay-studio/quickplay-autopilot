@@ -1,10 +1,19 @@
 {
- "checked": "2026-10-18T20:35Z",
- "uploads_last_24h": 11,
- "scheduled": 3,
- "public": 24,
+ "checked": "2026-10-18T22:01Z",
+ "uploads_last_24h": 10,
+ "scheduled": 2,
+ "public": 25,
  "flagged": [],
  "videos": [
+  {
+   "video": "-8hCE6x5JBM",
+   "title": "Tekken 8's next fighter is a manga legend 💪",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-18T21:30:13Z",
+   "views": 20,
+   "flag": ""
+  },
   {
    "video": "qLRXY5tuj8A",
    "title": "The formula behind a 14 million view Roblox Short 📈",
@@ -20,7 +29,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T18:30:11Z",
-   "views": 14,
+   "views": 13,
    "flag": ""
   },
   {
@@ -29,7 +38,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T17:00:14Z",
-   "views": 1,
+   "views": 18,
    "flag": ""
   },
   {
@@ -56,7 +65,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T12:30:26Z",
-   "views": 97,
+   "views": 103,
    "flag": ""
   },
   {
@@ -65,7 +74,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T11:00:12Z",
-   "views": 82,
+   "views": 91,
    "flag": ""
   },
   {
@@ -87,21 +96,12 @@
    "flag": ""
   },
   {
-   "video": "-8hCE6x5JBM",
-   "title": "Tekken 8's next fighter is a manga legend 💪",
-   "privacy": "private",
-   "publish_at": "2026-10-18T21:30:00Z",
-   "uploaded": "2026-10-18T02:29:41Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
    "video": "lJrQDP4e4TI",
    "title": "Apple's new smart home screen, explained 🏠",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T21:30:31Z",
-   "views": 34,
+   "views": 43,
    "flag": ""
   },
   {
@@ -110,7 +110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T20:00:19Z",
-   "views": 39,
+   "views": 41,
    "flag": ""
   },
   {
@@ -128,7 +128,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T17:00:36Z",
-   "views": 25,
+   "views": 28,
    "flag": ""
   },
   {
@@ -137,7 +137,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T15:30:30Z",
-   "views": 66,
+   "views": 67,
    "flag": ""
   },
   {
@@ -146,7 +146,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T14:00:14Z",
-   "views": 197,
+   "views": 245,
    "flag": ""
   },
   {
@@ -164,7 +164,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T11:00:11Z",
-   "views": 329,
+   "views": 353,
    "flag": ""
   },
   {
@@ -191,7 +191,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T20:00:11Z",
-   "views": 119,
+   "views": 136,
    "flag": ""
   },
   {
@@ -209,7 +209,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T17:00:23Z",
-   "views": 437,
+   "views": 533,
    "flag": ""
   },
   {
@@ -227,7 +227,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 370,
+   "views": 386,
    "flag": ""
   },
   {
@@ -245,7 +245,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T11:00:38Z",
-   "views": 34,
+   "views": 36,
    "flag": ""
   }
  ]

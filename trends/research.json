@@ -3,15 +3,15 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "GTA 6 launch trailer  a fresh angle, not a recap",
+   "topic": "GTA 6 launch trailer",
    "signal": "Charlie's request",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Polygon",
-     "title": "Every big reveal from the GTA 6 Netflix trailer",
-     "url": "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
-     "published": "2026-08-27"
+     "outlet": "GameSpot",
+     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
+     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
+     "published": "2026-10-16"
     }
    ]
   },
@@ -91,6 +91,38 @@
    ]
   },
   {
+   "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
+     "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "I'm a Celebrity 2026",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Miranda's tears, joy and dance moves steal show as deadly boredom sets in on The Celebrity Traitors",
+     "url": "https://www.bbc.co.uk/news/articles/cq70pre80gwko?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Game, set and tache: Carlos Alcaraz joins growing trend for a stylish top lip",
+     "url": "https://www.theguardian.com/fashion/2026/oct/16/game-set-tache-carlos-alcarez-growing-trend-stylish-top-lip",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
    "topic": "The latest SpaceX launch",
    "signal": "Charlie's request",
    "wikipedia": null,
@@ -110,21 +142,27 @@
    ]
   },
   {
-   "topic": "Apple HomeView",
+   "topic": "Apple HomeView, Apple's new smart home display",
    "signal": "Charlie's request",
-   "wikipedia": "https://en.wikipedia.org/wiki/Apple_HomeView",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "MacRumors",
-     "title": "Apple Planning 'HomeView Max' With 9-Inch, 360-Degree Screen",
-     "url": "https://www.macrumors.com/2026/10/18/apple-rumored-to-launch-homeview-max/",
-     "published": "2026-10-18"
+     "outlet": "The Verge",
+     "title": "Apple’s new HomeView smart display is $10 cheaper at Amazon",
+     "url": "https://www.theverge.com/gadgets/1011227/apple-homeview-smart-display-deal-sale",
+     "published": "2026-10-14"
     },
     {
-     "outlet": "The Verge",
-     "title": "Apple’s HomeView is just the latest threat to online recipe writers",
-     "url": "https://www.theverge.com/tech/1012820/apple-homeview-recipe-formatting",
-     "published": "2026-10-17"
+     "outlet": "CNN",
+     "title": "Apple’s HomeView display is the company’s biggest new release in years, and we saw it",
+     "url": "https://www.cnn.com/cnn-underscored/electronics/apple-homeview-hands-on",
+     "published": "2026-10-13"
+    },
+    {
+     "outlet": "Wired",
+     "title": "We Tried Out Apple's New HomeView Smart Display",
+     "url": "https://www.wired.com/video/watch/we-tried-out-apples-new-homeview-smart-display",
+     "published": "2026-10-12"
     }
    ]
   },
@@ -155,23 +193,16 @@
    ]
   },
   {
-   "topic": "bill nighy",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bill_Nighy",
+   "topic": "jesse eisenberg",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jesse_Eisenberg",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "‘Star Trek: Starfleet Academy: Season 2 Release Date & Photos; Bill Nighy & Rosemarie DeWitt To Guest Star",
-     "url": "https://deadline.com/2026/10/star-trek-starfleet-academy-season-2-release-date-photos-1237153757/",
-     "published": "2026-10-10"
-    }
-   ]
-  },
-  {
-   "topic": "reality television",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Reality_television",
-   "articles": [
+     "outlet": "Variety",
+     "title": "Julianne Moore Says ‘The Debut’ Is ‘One of the Best Scripts I’ve Ever Read’ as Jesse Eisenberg’s Musical Comedy Closes London Film Festival ",
+     "url": "https://variety.com/2026/film/festivals/julianne-moore-jesse-eisenberg-the-debut-london-premiere-1236915637/",
+     "published": "2026-10-18"
+    },
     {
      "outlet": "Deadline",
      "title": "Jesse Eisenberg TV Series Produced By Peter Rice To Be Taken Out By A24",
@@ -179,237 +210,163 @@
      "published": "2026-10-18"
     },
     {
-     "outlet": "Variety",
-     "title": "Betty McGuire, ‘Growing Pains’ Actress, Dies at 100",
-     "url": "https://variety.com/2026/tv/people-news/betty-mcguire-dead-growing-pains-1236915890/",
+     "outlet": "The Hollywood Reporter",
+     "title": "Jesse Eisenberg Relives Kieran Culkin Woes Making ‘A Real Pain’ and Says His Next Project Is a TV Show",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/jesse-eisenberg-kieran-culkin-real-pain-debut-film-london-1236734749/",
      "published": "2026-10-18"
-    },
+    }
+   ]
+  },
+  {
+   "topic": "pierre sage",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Pierre_Sage",
+   "articles": [
     {
-     "outlet": "Polygon",
-     "title": "CBS's Definitive '80s Action Thriller Series Is Officially Free to Watch on Streaming",
-     "url": "https://www.polygon.com/airwolf-coolest-helicopter-80s-tv/",
+     "outlet": "BBC",
+     "title": "Sage feels 'shame' at Palace thrashing with future in doubt",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cq1kdzp093jwo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-18"
     },
     {
      "outlet": "BBC Sport",
-     "title": "Film star Law to play Shankly in TV series - gossip",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ckz7x1v7rqv1o?at_medium=RSS&at_campaign=rss",
+     "title": "My one feeling is shame - Sage on bruising Palace defeat",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cq3dj1ddn83xo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "mongolia",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mongolia",
-   "articles": [
+    },
     {
      "outlet": "Guardian",
-     "title": "TV tonight: a very moreish drama about a hellish birthday party",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/18/tv-tonight-a-very-moreish-drama-about-a-hellish-birthday-party",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "National Geographic",
-     "title": "What I Learnt About Mongolia by Eating With its Nomadic Families",
-     "url": "https://www.nationalgeographic.com/travel/article/what-i-learnt-about-mongolia-by-eating-with-its-nomadic-families",
-     "published": "2026-10-15"
-    },
-    {
-     "outlet": "CNN",
-     "title": "Mongolia’s new snow and ice festival sets Guinness World Record",
-     "url": "https://www.cnn.com/travel/mongolias-snow-and-ice-festival-world-record",
-     "published": "2024-01-18"
-    }
-   ]
-  },
-  {
-   "topic": "cleveland browns",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Cleveland_Browns",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "After six weeks, Browns lead AFC North following another late comeback win over Ravens",
-     "url": "https://www.nytimes.com/athletic/7701595/2026/10/18/ravens-browns-nfl-week-6-result-takeaways/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "CBS News",
-     "title": "Baltimore Ravens stunned by Cleveland Browns 13-10",
-     "url": "https://www.cbsnews.com/baltimore/news/baltimore-ravens-stunned-by-cleveland-browns-13-10/",
+     "title": "Gómez halfway-line wondergoal sparks Brighton’s 5-0 thrashing of sorry Crystal Palace",
+     "url": "https://www.theguardian.com/football/2026/oct/18/brighton-crystal-palace-premier-league-match-report",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "this city is ours",
+   "topic": "siobhan finneran",
    "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
+   "wikipedia": "https://en.wikipedia.org/wiki/Siobhan_Finneran",
    "articles": [
     {
+     "outlet": "BBC",
+     "title": "David Tennant, Siobhan Finneran and Time series 3 cast and creatives discuss the powerful new story - \"You’re not going be disappointed watc",
+     "url": "https://www.bbc.com/mediacentre/mediapacks/time-series-three",
+     "published": "2026-10-10"
+    }
+   ]
+  },
+  {
+   "topic": "trey mcbride",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Trey_McBride",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "CBS reporter revealed what Trey McBride said to NFL official who swore at him",
+     "url": "https://ftw.usatoday.com/story/sports/nfl/2026/10/05/trey-mcbride-ref-swearing-cbs-reporter-what-he-said/92107058007/",
+     "published": "2026-10-05"
+    },
+    {
+     "outlet": "AP",
+     "title": "NFL says it is looking into an official cursing at Cardinals tight end Trey McBride",
+     "url": "https://apnews.com/article/trey-mcbride-nfl-official-c72017d5e4ed2da6e9d3f9c35c5da861",
+     "published": "2026-10-04"
+    }
+   ]
+  },
+  {
+   "topic": "cj gardner johnson",
+   "signal": "Google Trends US 10000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/CJ_Gardner-Johnson",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Watch: Bills' CJ Gardner-Johnson ejected from game vs. Raiders",
+     "url": "https://billswire.usatoday.com/story/sports/nfl/bills/2026/10/18/buffalo-bills-cj-gardner-johnson-ejected-raiders-spit-nfl/92322406007/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "unc basketball",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Unc_basketball",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Guardiola receives standing ovation on return to Barcelona",
+     "url": "https://www.bbc.co.uk/sport/videos/cm9dzg38n6j7o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    },
+    {
      "outlet": "Guardian",
-     "title": "Elite-level incompetence is Manchester United’s problem – not Michael Carrick | Barney Ronay",
-     "url": "https://www.theguardian.com/football/2026/oct/18/manchester-united-michael-carrick-omar-berrada-leeds-premier-league",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Liquid Swords, developer of open-city crime sim Samson, has gone bankrupt following staff claims that they haven't been paid in two months",
-     "url": "https://www.pcgamer.com/gaming-industry/liquid-swords-developer-of-open-city-crime-sim-samson-has-gone-bankrupt-following-staff-claims-that-they-havent-been-paid-in-two-months/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever Just Changed The Math On What Race To Play In A Big Way",
-     "url": "https://www.gamespot.com/articles/wow-forever-just-changed-the-math-on-what-race-to-play-in-a-big-way/",
+     "title": "Sports quiz of the week: love, songs, speedy skating and celebrations",
+     "url": "https://www.theguardian.com/sport/2026/oct/16/sports-quiz-week-football-rugby-tennis-boxing-basketball-skateboarding-f1-nfl",
      "published": "2026-10-16"
     }
    ]
   },
   {
-   "topic": "real madrid",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Real_Madrid_CF",
+   "topic": "rays - guardians",
+   "signal": "Google Trends US 10000+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "Ramos could make La Liga return - Monday's gossip",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ckjrw11dv5xjo?at_medium=RSS&at_campaign=rss",
+     "outlet": "New York Times",
+     "title": "Rays vs. Guardians score, live updates: Tampa Bay takes early lead in MLB playoffs ALCS Game 5",
+     "url": "https://www.nytimes.com/athletic/live-blogs/rays-vs-guardians-live-updates-mlb-playoffs-game-5-score-result/91kYGY4RvnjQ/",
      "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "chiefs vs chargers",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Chiefs-Chargers_rivalry",
-   "articles": [
+    },
     {
      "outlet": "USA Today",
-     "title": "What channel is Chiefs-Chargers game today live? Streaming, NFL TV schedule",
-     "url": "https://www.usatoday.com/story/sports/nfl/2026/10/18/chiefs-chargers-channel-today-nfl-game-live-tonight-watch-time-tv-streaming-sunday-football-week-6/92318508007/",
+     "title": "Guardians-Rays LIVE updates: Must-win game in Cleveland, where to watch ALCS",
+     "url": "https://www.usatoday.com/story/sports/mlb/playoffs/2026/10/18/guardians-rays-watch-score-highlights-alcs-playoffs-channel--live/92315050007/",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "blake grupe",
+   "topic": "andrew armstrong",
    "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Blake_Grupe",
+   "wikipedia": "https://en.wikipedia.org/wiki/Andrew_Armstrong_(American_football)",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "New Rams K Blake Grupe injured on tackle attempt in 1st quarter",
-     "url": "https://theramswire.usatoday.com/story/sports/nfl/rams/2026/10/18/rams-blake-grupe-injury-tackle-kickoff-kicker/92321172007/",
+     "outlet": "Guardian",
+     "title": "Margaret Hamilton obituary",
+     "url": "https://www.theguardian.com/science/2026/oct/18/margaret-hamilton-obituary",
      "published": "2026-10-18"
     },
     {
      "outlet": "NFL",
-     "title": "Blake Grupe knocks through season-long 55-yard FG to break tie",
-     "url": "https://www.nfl.com/videos/blake-grupe-knocks-through-season-long-55-yard-fg-to-break-tie",
-     "published": "2023-11-05"
+     "title": "Justin Fields finds Andrew Armstrong along sideline for 17-yard gain",
+     "url": "https://www.nfl.com/videos/justin-fields-finds-andrew-armstrong-along-sideline-for-17-yard-gain",
+     "published": "2026-08-15"
     }
    ]
   },
   {
-   "topic": "nfc south",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/NFC_South",
+   "topic": "tyler higbee",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tyler_Higbee",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Australia’s Boland damages South Africa in brief respite from rain",
-     "url": "https://www.theguardian.com/sport/2026/oct/18/australias-boland-damages-south-africa-in-brief-respite-from-rain",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "South Africa stutter on rain-hit day one against Australia",
-     "url": "https://www.skysports.com/cricket/news/12040/13600672/south-africa-stutter-on-rain-wrecked-day-against-australia-in-second-test-as-scott-boland-takes-two-wickets-in-two-balls",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Seal pups spotted at nature reserve for 12th year",
-     "url": "https://www.bbc.co.uk/news/articles/c6jrwnzyv528o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "What we've been playing -  \"I simply didn't know if a first-person shooter could work as a Soulslike\"",
-     "url": "https://www.eurogamer.net/what-weve-been-plaing-guns-of-eschaton-ftl-marvel-cosmic-invasion",
-     "published": "2026-10-17"
+     "outlet": "NFL",
+     "title": "Tyler Higbee takes third-down screen for 17-yard ride to move chains",
+     "url": "https://www.nfl.com/videos/tyler-higbee-takes-third-down-screen-for-17-yard-ride-to-move-chains",
+     "published": "2023-01-08"
     }
    ]
   },
   {
-   "topic": "jaxson dart injury",
+   "topic": "jack cochrane",
    "signal": "Google Trends US 200+",
-   "wikipedia": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Jack_Cochrane",
    "articles": [
     {
-     "outlet": "New York Times",
-     "title": "Jaxson Dart injury doesn’t just doom Giants’ season, it clouds their future, too",
-     "url": "https://www.nytimes.com/athletic/7621149/2026/09/22/new-york-giants-jaxson-dart-knee-injury-lost-season/",
-     "published": "2026-09-22"
-    }
-   ]
-  },
-  {
-   "topic": "street fighter box office",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Street Fighter Tops the Box Office With $51 Million Opening Weekend Amid Lackluster Reviews",
-     "url": "https://www.ign.com/articles/street-fighter-tops-the-box-office-with-51-million-opening-weekend-amid-lackluster-reviews",
+     "outlet": "NFL",
+     "title": "Jack Cochrane picks Herbert's pass and ends up in Bolts' territory",
+     "url": "https://www.nfl.com/videos/jack-cochrane-picks-herbert-s-pass-and-ends-up-in-bolts-territory",
      "published": "2026-10-18"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Street Fighter’ Rings Up No. 1 $51M+ WW Opening, Largely Driven By Fans – Global Box Office Update",
-     "url": "https://deadline.com/2026/10/box-office-global-street-fighter-1237167021/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Street Fighter Fails To Match Resident Evil's Opening Weekend Box Office Success",
-     "url": "https://www.polygon.com/street-fighter-opening-weekend-box-office/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "afc standings",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Chacarra wins in India to take Race to Dubai lead",
-     "url": "https://www.bbc.co.uk/sport/golf/articles/cw98zlldrpj0o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Are the Bengals playing today? NFL Week 6 schedule, next game, AFC North standings",
-     "url": "https://www.usatoday.com/story/sports/nfl/bengals/2026/10/18/bengals-playing-today-nfl-week-6/92254046007/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "xavier worthy",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Xavier_Worthy",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Fantasy football Week 4 recap, early waivers speed run: Xavier Worthy, Keon Coleman",
-     "url": "https://www.nytimes.com/athletic/7662941/2026/10/05/fantasy-football-early-waivers-speed-run-worthy-coleman/",
-     "published": "2026-10-05"
     }
    ]
   },
@@ -444,10 +401,10 @@
      "published": "2026-10-18"
     },
     {
-     "outlet": "Rolling Stone",
-     "title": "Aaron Paul Remembers Last Time He Saw ‘Breaking Bad’ Co-Star RJ Mitte: ‘I Kept Calling You Superman’",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/aaron-paul-breaking-bad-rj-mitte-tribute-1235642999/",
-     "published": "2026-10-13"
+     "outlet": "USA Today",
+     "title": "RJ Mitte's mom opens up about 'red flag' before finding her son dead",
+     "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/18/rj-mitte-mom-suicide-warning-signs/92320591007/",
+     "published": "2026-10-18"
     }
    ]
   },
@@ -491,19 +448,6 @@
    ]
   },
   {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 130,252 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
-   "articles": [
-    {
-     "outlet": "Reuters",
-     "title": "Human cases of West Nile virus rise in Europe, with 141 dead in 2026, report says",
-     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/human-cases-west-nile-virus-rise-europe-with-141-dead-2026-report-says-2026-10-15/",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
    "topic": "Street Fighter (2026 film)",
    "signal": "Wikipedia 113,060 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
@@ -517,21 +461,8 @@
    ]
   },
   {
-   "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 548,600/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
-     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 267,726/h",
+   "signal": "YouTube GB 266,502/h",
    "wikipedia": null,
    "articles": [
     {
@@ -543,39 +474,78 @@
    ]
   },
   {
-   "topic": "jj mccarthy",
+   "topic": "KAALI HOODIE",
+   "signal": "YouTube GB 225,984/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "How to dress a tech oligarch: The Social Reckoning’s costume designer on Zuckerberg’s style evolution",
+     "url": "https://www.theguardian.com/fashion/2026/oct/16/social-reckoning-zuckerberg-fashion-costume-design",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 82,212/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "articles": [
+    {
+     "outlet": "Billboard",
+     "title": "Fans Choose Tate McRae’s ‘Housewife’ as This Week’s Favorite New Music",
+     "url": "https://www.billboard.com/music/pop/tate-mcrae-housewife-best-new-music-poll-results-1236362476/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "Justice",
+   "signal": "YouTube GB-music 52,636/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Justice",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Jesse Eisenberg Says He ‘Couldn’t Get Movie Studio Parts Anymore’ After Winning a Razzie for ‘Batman v Superman’: ‘The Industry Did Not Want",
+     "url": "https://variety.com/2026/film/global/jesse-eisenberg-razzie-batman-v-superman-1236915876/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Guardian reporter filmed masked militants seconds before West Bank attack on French mayor",
+     "url": "https://www.theguardian.com/world/2026/oct/18/guardian-reporter-filmed-masked-militants-seconds-before-west-bank-attack-on-french-mayor",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "NME",
+     "title": "Watch Metallica share pro-shot footage of ‘…And Justice For All’ and ‘The Call Of Ktulu’ at Las Vegas Sphere residency",
+     "url": "https://www.nme.com/news/music/watch-metallica-share-pro-shot-footage-of-and-justice-for-all-and-the-call-of-ktulu-at-las-vegas-sphere-residency-3973419?utm_source=rss&utm_medium=rss&utm_campaign=watch-metallica-share-pro-shot-footage-of-and-justice-for-all-and-the-call-of-ktulu-at-las-vegas-sphere-residency",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "theft",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Theft",
+   "articles": []
+  },
+  {
+   "topic": "yan diomandé",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/JJ_Mccarthy",
+   "wikipedia": "https://en.wikipedia.org/wiki/Yan_Diomande",
    "articles": []
   },
   {
-   "topic": "manicure",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Manicure",
+   "topic": "klint kubiak",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Klint_Kubiak",
    "articles": []
   },
   {
-   "topic": "uganda",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Uganda",
-   "articles": []
-  },
-  {
-   "topic": "columbus vs cincinnati",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Columbus-Cincinnati_Road",
-   "articles": []
-  },
-  {
-   "topic": "tampa bay",
-   "signal": "Google Trends US 50000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tampa_Bay_Buccaneers",
-   "articles": []
-  },
-  {
-   "topic": "kyle pitts",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Pitts",
+   "topic": "parker messick",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Parker_Messick",
    "articles": []
   },
   {
@@ -588,6 +558,18 @@
    "topic": "Jailer 2",
    "signal": "Wikipedia 341,702 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "articles": []
+  },
+  {
+   "topic": "Bigg Boss (Hindi TV series) season 20",
+   "signal": "Wikipedia 234,663 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bigg_Boss_(Hindi_TV_series)_season_20",
+   "articles": []
+  },
+  {
+   "topic": "List of equations",
+   "signal": "Wikipedia 156,839 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/List_of_equations",
    "articles": []
   }
  ]

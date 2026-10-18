@@ -3,14 +3,14 @@
  "board": "boards/queue/QD-031.json",
  "mode": "schedule",
  "slot": "",
- "rendered": "2026-10-18T20:35:26.636355+00:00",
+ "rendered": "2026-10-18T22:16:30.241931+00:00",
  "title": "Usain Bolt's 9.58: still unbeaten ⚡",
  "media": {
-  "real_shots": 4,
-  "planned_real": 4
+  "real_shots": 5,
+  "planned_real": 5
  },
- "music": "defying-gravity",
- "social_music": "heroic-epic-cinematic-421894",
+ "music": "cued-for-liftoff",
+ "social_music": "uplifting-friend-605770",
  "look": {
   "captions": "pop",
   "voice": "emma",
@@ -22,7 +22,7 @@
   "duration": 25.7,
   "wps": 3.0,
   "weak_beats": [],
-  "size_mb": 8.6
+  "size_mb": 13.0
  },
  "timeline": [
   [
@@ -73,5 +73,5 @@
   "reserve: approved in advance, posted only on a day nothing new was written"
  ],
  "preview_release": "preview-QD-031",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-bd6239a063ac9a4b09e6"
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-e52b10468519f41703cf"
 }

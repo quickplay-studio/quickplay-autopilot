@@ -124,7 +124,7 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
    Then TikTok: wait until the approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes).
    - `tiktok_mode` "inbox" (now): the drafts reach his TikTok phone app by themselves and the captions go on his TikTok
      queue page, https://claude.ai/artifact/Tc5EXtcFG77EUqvcbFKV1X (never in chat). Run
-     `python pipeline/tiktok_files.py <scratch dir> --db`, ArtifactData `list` collection "tiktok" on that page, then ONE
+     `python pipeline/tiktok_files.py <scratch dir> <target day YYYY-MM-DD> --db`, ArtifactData `list` collection "tiktok" on that page, then ONE
      ArtifactData `batch`: `set` each printed Short not already listed (doc_id = its id, file_path = the printed file)
      and `delete` any doc with `"example": true` (if_version = its version). Then one line to Charlie, for example
      "TikTok: 5 drafts on their way to your inbox, captions on your TikTok queue." Don't rewrite the page.

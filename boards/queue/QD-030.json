@@ -73,6 +73,15 @@
       0.5,
       0.45
      ]
+    },
+    {
+     "src": "commons-search:Octopus gills",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "at": 7
     }
    ]
   },
@@ -83,12 +92,22 @@
    },
    "shots": [
     {
-     "src": "commons-search:common octopus swimming",
+     "src": "commons-search:Octopus swimming",
      "move": "left",
      "focus": [
       0.5,
       0.45
-     ]
+     ],
+     "w": 1
+    },
+    {
+     "src": "commons-search:Octopus vulgaris swimming",
+     "move": "in",
+     "focus": [
+      0.5,
+      0.45
+     ],
+     "at": 5
     }
    ]
   },
@@ -147,6 +166,15 @@
       0.5,
       0.5
      ]
+    },
+    {
+     "src": "commons-search:Octopus arm",
+     "move": "left",
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "at": 9
     }
    ]
   },

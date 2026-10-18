@@ -136,9 +136,12 @@ def main():
         real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or []
                    if "pixabay" not in (str(sh.get("source", "")) + str(sh.get("credit", ""))).lower())
         flags = list(job.get("hold") or [])
+        notes = sb.pop("_media_notes", [])
+        if notes: status["media_notes"] = notes
         if job["mode"] != "none" and json.loads((ROOT / "config.json").read_text()).get("approval", "flagged") != "none":
             if real == 0: flags.append("render: no real images of the subject (all stock footage)"
                                        + (f"; {planned_real} planned real shots could not be fetched" if planned_real else ""))
+            flags += [f"render: {n}" for n in notes]
         status["media"] = {"real_shots": real, "planned_real": planned_real}
         track = pick_music(sb); status["music"] = track["slug"]
         social = pick_social_music(sb)

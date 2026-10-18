@@ -51,17 +51,29 @@ def _fold(s):
     import unicodedata
     return "".join(c for c in unicodedata.normalize("NFKD", s or "") if not unicodedata.combining(c)).lower()
 
+def _stem(w):
+    w = _fold(w)
+    return w[:-1] if len(w) > 4 and w.endswith("s") else w
+
 def commons_search(words):
     """Best Commons photo for the words. The file title must contain every capitalised word of the query (the name),
-    so a search for a person never returns a building or someone else; photos with politicians are skipped."""
+    so a search for a person never returns a building or someone else; photos with politicians are skipped.
+    A query with no capitalised words ("octopus arm suckers") needs all its longer words in the title, or failing
+    that any two of them, so a loose description still finds the subject without matching something unrelated."""
     q = {"action": "query", "generator": "search", "gsrsearch": f"{words} filetype:bitmap", "gsrnamespace": 6,
          "gsrlimit": 30, "prop": "imageinfo", "iiprop": "size", "format": "json"}
     pages = sorted(_get(COMMONS, params=q).json().get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
-    names = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)] or [_fold(w) for w in words.split()[:1]]
-    ok = [p for p in pages if all(n in _fold(p["title"]) for n in names) and not POLITICAL.search(p["title"])]
-    for min_w in (1600, 1000):
-        for p in ok:
-            if (p.get("imageinfo") or [{}])[0].get("width", 0) >= min_w: return commons_file(p["title"])
+    pages = [p for p in pages if not POLITICAL.search(p["title"])]
+    caps = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)]
+    if caps: tiers = [(caps, len(caps))]
+    else:
+        ws = [_stem(w) for w in words.split() if len(w) > 3] or [_stem(w) for w in words.split()]
+        tiers = [(ws, len(ws))] + ([(ws, 2)] if len(ws) >= 3 else [])
+    for names, need in tiers:
+        ok = [p for p in pages if sum(n in _fold(p["title"]) for n in names) >= need]
+        for min_w in (1600, 1000):
+            for p in ok:
+                if (p.get("imageinfo") or [{}])[0].get("width", 0) >= min_w: return commons_file(p["title"])
     raise RuntimeError(f"no Commons image named '{words}'")
 
 def _brightness(url):
@@ -149,10 +161,27 @@ def resolve(sb):
             except Exception as e:
                 print(f"  media: {src} failed: {e}", file=sys.stderr)
                 shot["_failed"] = str(e)
-    for beat in sb["beats"]:       # drop shots that could not be fetched; a beat keeps at least its first good shot
-        good = [s for s in beat.get("shots") or [] if "_failed" not in s]
-        if beat.get("shots") and not good: raise RuntimeError(f"no usable media for beat: {beat['say'][:40]}")
-        if beat.get("shots"): beat["shots"] = good
+    # drop shots that could not be fetched. A beat left with none borrows the nearest beat's picture (with a different
+    # move, so it doesn't look frozen) instead of failing the whole Short; run_board flags it so a person checks it.
+    goods = [[s for s in beat.get("shots") or [] if "_failed" not in s] for beat in sb["beats"]]
+    if not any(goods): raise RuntimeError("no usable media for any beat")
+    notes = []
+    for bi, beat in enumerate(sb["beats"]):
+        if not beat.get("shots"): continue
+        if goods[bi]: beat["shots"] = goods[bi]; continue
+        order = sorted((j for j in range(len(goods)) if goods[j] and j != bi), key=lambda j: (abs(j - bi), j > bi))
+        donor = dict(goods[order[0]][-1 if order[0] < bi else 0])
+        mine = beat["shots"][0]
+        flip = {"in": "out", "out": "in", "left": "right", "right": "left", "up": "down", "down": "up"}
+        donor.update(move=flip.get(donor.get("move"), "in"), focus=[0.42, 0.48] if (donor.get("focus") or [0.5])[0] >= 0.5 else [0.58, 0.48])
+        for k in ("w", "at", "tin"):
+            if k in mine: donor[k] = mine[k]
+            else: donor.pop(k, None)
+        donor.pop("label", None)
+        if donor.get("start") is not None: donor["start"] = float(donor["start"]) + 2.0
+        beat["shots"] = [donor]
+        notes.append(f"beat {bi + 1} reused a nearby picture ({mine.get('src', '?')}: {mine.get('_failed', 'not found')[:80]})")
+    if notes: sb["_media_notes"] = notes
     return sb
 
 if __name__ == "__main__":

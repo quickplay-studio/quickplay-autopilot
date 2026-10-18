@@ -71,7 +71,8 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
 2. Capacity this session = the smallest of: `per_session`; `daily_limit` minus boards with today's `created` date
    (queue, ready, done and failed); `daily_limit` minus boards already in boards/queue/ and boards/ready/.
    On Sundays take one off (the weekly long video, pipeline/weekly.py, uses one upload). If it is 0, go to step 7.
-3. Pick topics (see What gets views). The 12:50 run looks for what has broken or grown since the morning (trends refresh
+3. Pick topics (see What gets views), starting with trends/requests.md: Charlie's own requests come first, then the
+   trends; update that file in the same commit as the boards. The 12:50 run looks for what has broken or grown since the morning (trends refresh
    at 11:35 UTC) and skips anything the morning run already covered. trends/research.json lists recent articles from
    reputable outlets and the Wikipedia page for each top trend: open those first and search only for what's missing.
 4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.

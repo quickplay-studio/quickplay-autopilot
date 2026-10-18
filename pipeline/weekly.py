@@ -127,7 +127,7 @@ def card(path, big, small, fp, lines=()):
 
 def segment(src, overlay, out):
     run("ffmpeg", "-y", "-v", "error", "-i", src, "-i", overlay, "-filter_complex",
-        "[0:v]split=2[a][b];[a]scale=1920:-2,crop=1920:1080,boxblur=28:2,eq=brightness=-0.22:saturation=0.75[bg];"
+        "[0:v]split=2[a][b];[a]scale=1920:-2,crop=1920:1080,boxblur=28:2,eq=brightness=-0.14:saturation=0.85[bg];"
         "[b]scale=-2:1080[fg];[bg][fg]overlay=(W-w)/2:0[m];[m][1:v]overlay=0:0,fps=25,format=yuv420p[v];"
         "[0:a]aresample=48000,aformat=channel_layouts=stereo[aa]",
         "-map", "[v]", "-map", "[aa]", "-c:v", "libx264", "-preset", "veryfast", "-crf", "20",
@@ -208,7 +208,8 @@ def main():
     desc = [f"The {len(got)} stories people searched for most this week, in one video. Every fact in these Shorts was checked "
             "against at least two reputable sources (listed under each Short).", "", "Chapters"]
     desc += [f"{stamp(c)} {n}" for c, n in chapters]
-    desc += ["", "The Shorts"] + [f"{clean_title(g[1])}: https://youtube.com/shorts/{g[2]}" for g in got if g[2]]
+    links = [f"{clean_title(g[1])}: https://youtube.com/shorts/{g[2]}" for g in got if g[2]]
+    if links: desc += ["", "The Shorts"] + links
     if vis_all: desc += ["", "Visuals"] + vis_all
     if music_all: desc += [""] + music_all
     desc += ["", "Independent channel, not affiliated with the companies or people featured.", "", "#QuickplayDaily #Trending"]

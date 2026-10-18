@@ -23,7 +23,7 @@
   "inspiring": "records, comebacks, achievements, emotional wins"
  },
  "first_id": 29,
- "approval": "all",
+ "approval": "flagged",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
  "note": "Two writer runs a day: 06:50 writes up to per_session (14); 12:50 writes the rest of daily_limit (6) from fresher trends; a 17:35 catch-up writes whatever a blocked run missed. The channel has YouTube's Advanced features (video verification approved 18 October), so the 10-a-day upload cap is gone; if YouTube still refuses an upload for the limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "tiktok_mode": "inbox",

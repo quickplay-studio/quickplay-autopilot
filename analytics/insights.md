@@ -1,15 +1,15 @@
-# What's working (updated 2026-10-18 20:26 UTC)
+# What's working (updated 2026-10-18 20:35 UTC)
 
 YouTube Partner Program: 4 of 1,000 subscribers, 225 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (106 days): after that new channels need 20M. Needed from now: about 111,109 views a day.
 
 ## Best Shorts (public 24 hours or more)
-- 1,108 views (34.7/h), 86.7% viewed · The K-pop group from BLACKPINK's producer 🎤 [?, ?, 13:30]
-- 445 views (8.7/h), 43.2% viewed · Why Godzilla Minus Zero is a big deal 🦖 [?, ?, 18:00]
+- 1,108 views (34.5/h), 86.7% viewed · The K-pop group from BLACKPINK's producer 🎤 [?, ?, 13:30]
+- 445 views (8.6/h), 43.2% viewed · Why Godzilla Minus Zero is a big deal 🦖 [?, ?, 18:00]
 - 386 views (7.1/h), 51.1% viewed · Fontaines D.C.'s first ever guest is ROSALÍA 🎻 [?, ?, 15:00]
-- 327 views (9.8/h) · Ayra Starr just made NFL history 🏈 [?, ?, 12:00]
+- 327 views (9.7/h) · Ayra Starr just made NFL history 🏈 [?, ?, 12:00]
 - 259 views (4.6/h), 54.4% viewed · From lucky loser to beating the world No. 4 🎾 [?, ?, 13:30]
 - 253 views (7.2/h) · GTA 6's launch trailer hides its whole story in one detail 🎮 [?, ?, 10:30]
-- 200 views (6.6/h) · Why KPop Demon Hunters 2 won't come until 2029 🎶 [?, ?, 15:00]
+- 200 views (6.5/h) · Why KPop Demon Hunters 2 won't come until 2029 🎶 [?, ?, 15:00]
 - 136 views (2.8/h), 98.6% viewed · Why GTA 6 isn't coming to PC (yet) 🖥️ [?, ?, 21:00]
 
 ## Weakest

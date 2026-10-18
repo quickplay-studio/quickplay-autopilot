@@ -3,28 +3,167 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "mongolia",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mongolia",
+   "topic": "GTA 6 launch trailer  a fresh angle, not a recap",
+   "signal": "Charlie's request",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "TV tonight: a very moreish drama about a hellish birthday party",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/18/tv-tonight-a-very-moreish-drama-about-a-hellish-birthday-party",
-     "published": "2026-10-18T05:15+00:00"
+     "outlet": "Polygon",
+     "title": "Every big reveal from the GTA 6 Netflix trailer",
+     "url": "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
+     "published": "2026-08-27"
     }
    ]
   },
   {
-   "topic": "Prisoner Has a Crush On Me in Minecraft",
-   "signal": "YouTube GB-gaming 38,193/h",
+   "topic": "Olivia Rodrigo, expectations featuring Chappell Roan",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Olivia Rodrigo Announces “Expectations” Remix With Chappell Roan",
+     "url": "https://www.hollywoodreporter.com/music/music-news/olivia-rodrigo-expectations-remix-chappell-roan-1236728859/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "Manchester City's perfect start to the season",
+   "signal": "Charlie's request",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "The moment I knew: For Valentine’s Day he gave me a heart covered in fake blood. I was appalled – and thrilled",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/18/the-moment-i-knew-for-valentines-day-he-gave-me-a-cows-heart",
-     "published": "2026-10-17T19:00+00:00"
+     "title": "Elite-level incompetence is Manchester United’s problem – not Michael Carrick | Barney Ronay",
+     "url": "https://www.theguardian.com/football/2026/oct/18/manchester-united-michael-carrick-omar-berrada-leeds-premier-league",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Arsenal win with one shot on target as Forest sink into bottom three",
+     "url": "https://www.skysports.com/football/nottingham-forest-vs-arsenal/report/559512",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Do Manchester City have any grounds to win their appeal?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c6je5lwxk5l0o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Guardiola receives standing ovation on return to Barcelona",
+     "url": "https://www.bbc.co.uk/sport/videos/cm9dzg38n6j7o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "Arsenal at Nottingham Forest",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Madueke's 'anger and conviction' shows he's more than a 'finisher'",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c3qjnyw8qe4do?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Madueke's strike enough as Arsenal pick up narrow win over Forest",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cm70px0l7p7no?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Arsenal win with one shot on target as Forest sink into bottom three",
+     "url": "https://www.skysports.com/football/nottingham-forest-vs-arsenal/report/559512",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Madueke breaks Nottingham Forest’s resistance as dogged Arsenal edge to victory",
+     "url": "https://www.theguardian.com/football/2026/oct/18/nottingham-forest-arsenal-premier-league-match-report",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "The latest SpaceX launch",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "All The Records GTA 6 Will Break, We Think",
+     "url": "https://www.gamespot.com/articles/all-the-records-gta-6-will-break-we-think/",
+     "published": "2026-10-16"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Elon Musk reveals ‘world’s first flying car’ at Tesla event",
+     "url": "https://www.theguardian.com/technology/2026/oct/16/elon-musk-reveals-worlds-first-flying-car-spacex",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "Apple HomeView",
+   "signal": "Charlie's request",
+   "wikipedia": "https://en.wikipedia.org/wiki/Apple_HomeView",
+   "articles": [
+    {
+     "outlet": "MacRumors",
+     "title": "Apple Planning 'HomeView Max' With 9-Inch, 360-Degree Screen",
+     "url": "https://www.macrumors.com/2026/10/18/apple-rumored-to-launch-homeview-max/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Apple’s HomeView is just the latest threat to online recipe writers",
+     "url": "https://www.theverge.com/tech/1012820/apple-homeview-recipe-formatting",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "Gen Alpha slang  the French fries emoji",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "I spent a weekend with Gen Alpha. I needed a translator",
+     "url": "https://www.usatoday.com/story/life/health-wellness/2026/09/30/gen-alpha-slang-words-explained-huzz-unc-fries-and-larping/91989583007/",
+     "published": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "topic": "The Call the Police trend on TikTok and Instagram",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "NBC News",
+     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
+     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
+     "published": "2026-07-28"
+    }
+   ]
+  },
+  {
+   "topic": "bill nighy",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bill_Nighy",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "‘Star Trek: Starfleet Academy: Season 2 Release Date & Photos; Bill Nighy & Rosemarie DeWitt To Guest Star",
+     "url": "https://deadline.com/2026/10/star-trek-starfleet-academy-season-2-release-date-photos-1237153757/",
+     "published": "2026-10-10"
     }
    ]
   },
@@ -32,18 +171,381 @@
    "topic": "reality television",
    "signal": "Google Trends GB 200+",
    "wikipedia": "https://en.wikipedia.org/wiki/Reality_television",
-   "articles": []
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "Jesse Eisenberg TV Series Produced By Peter Rice To Be Taken Out By A24",
+     "url": "https://deadline.com/2026/10/jesse-eisenberg-tv-series-peter-rice-a24-1237167146/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Variety",
+     "title": "Betty McGuire, ‘Growing Pains’ Actress, Dies at 100",
+     "url": "https://variety.com/2026/tv/people-news/betty-mcguire-dead-growing-pains-1236915890/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "CBS's Definitive '80s Action Thriller Series Is Officially Free to Watch on Streaming",
+     "url": "https://www.polygon.com/airwolf-coolest-helicopter-80s-tv/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Film star Law to play Shankly in TV series - gossip",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ckz7x1v7rqv1o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
   },
   {
-   "topic": "this city is ours",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
-   "articles": []
+   "topic": "mongolia",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mongolia",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "TV tonight: a very moreish drama about a hellish birthday party",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/18/tv-tonight-a-very-moreish-drama-about-a-hellish-birthday-party",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "National Geographic",
+     "title": "What I Learnt About Mongolia by Eating With its Nomadic Families",
+     "url": "https://www.nationalgeographic.com/travel/article/what-i-learnt-about-mongolia-by-eating-with-its-nomadic-families",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "CNN",
+     "title": "Mongolia’s new snow and ice festival sets Guinness World Record",
+     "url": "https://www.cnn.com/travel/mongolias-snow-and-ice-festival-world-record",
+     "published": "2024-01-18"
+    }
+   ]
   },
   {
    "topic": "cleveland browns",
    "signal": "Google Trends GB 200+",
    "wikipedia": "https://en.wikipedia.org/wiki/Cleveland_Browns",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "After six weeks, Browns lead AFC North following another late comeback win over Ravens",
+     "url": "https://www.nytimes.com/athletic/7701595/2026/10/18/ravens-browns-nfl-week-6-result-takeaways/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "CBS News",
+     "title": "Baltimore Ravens stunned by Cleveland Browns 13-10",
+     "url": "https://www.cbsnews.com/baltimore/news/baltimore-ravens-stunned-by-cleveland-browns-13-10/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "this city is ours",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Elite-level incompetence is Manchester United’s problem – not Michael Carrick | Barney Ronay",
+     "url": "https://www.theguardian.com/football/2026/oct/18/manchester-united-michael-carrick-omar-berrada-leeds-premier-league",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Liquid Swords, developer of open-city crime sim Samson, has gone bankrupt following staff claims that they haven't been paid in two months",
+     "url": "https://www.pcgamer.com/gaming-industry/liquid-swords-developer-of-open-city-crime-sim-samson-has-gone-bankrupt-following-staff-claims-that-they-havent-been-paid-in-two-months/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "WoW: Forever Just Changed The Math On What Race To Play In A Big Way",
+     "url": "https://www.gamespot.com/articles/wow-forever-just-changed-the-math-on-what-race-to-play-in-a-big-way/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "real madrid",
+   "signal": "Google Trends GB 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Real_Madrid_CF",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Ramos could make La Liga return - Monday's gossip",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ckjrw11dv5xjo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "chiefs vs chargers",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chiefs-Chargers_rivalry",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "What channel is Chiefs-Chargers game today live? Streaming, NFL TV schedule",
+     "url": "https://www.usatoday.com/story/sports/nfl/2026/10/18/chiefs-chargers-channel-today-nfl-game-live-tonight-watch-time-tv-streaming-sunday-football-week-6/92318508007/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "blake grupe",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Blake_Grupe",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "New Rams K Blake Grupe injured on tackle attempt in 1st quarter",
+     "url": "https://theramswire.usatoday.com/story/sports/nfl/rams/2026/10/18/rams-blake-grupe-injury-tackle-kickoff-kicker/92321172007/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "NFL",
+     "title": "Blake Grupe knocks through season-long 55-yard FG to break tie",
+     "url": "https://www.nfl.com/videos/blake-grupe-knocks-through-season-long-55-yard-fg-to-break-tie",
+     "published": "2023-11-05"
+    }
+   ]
+  },
+  {
+   "topic": "nfc south",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/NFC_South",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Australia’s Boland damages South Africa in brief respite from rain",
+     "url": "https://www.theguardian.com/sport/2026/oct/18/australias-boland-damages-south-africa-in-brief-respite-from-rain",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "South Africa stutter on rain-hit day one against Australia",
+     "url": "https://www.skysports.com/cricket/news/12040/13600672/south-africa-stutter-on-rain-wrecked-day-against-australia-in-second-test-as-scott-boland-takes-two-wickets-in-two-balls",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Seal pups spotted at nature reserve for 12th year",
+     "url": "https://www.bbc.co.uk/news/articles/c6jrwnzyv528o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "What we've been playing -  \"I simply didn't know if a first-person shooter could work as a Soulslike\"",
+     "url": "https://www.eurogamer.net/what-weve-been-plaing-guns-of-eschaton-ftl-marvel-cosmic-invasion",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "jaxson dart injury",
+   "signal": "Google Trends US 200+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "Jaxson Dart injury doesn’t just doom Giants’ season, it clouds their future, too",
+     "url": "https://www.nytimes.com/athletic/7621149/2026/09/22/new-york-giants-jaxson-dart-knee-injury-lost-season/",
+     "published": "2026-09-22"
+    }
+   ]
+  },
+  {
+   "topic": "street fighter box office",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Street Fighter Tops the Box Office With $51 Million Opening Weekend Amid Lackluster Reviews",
+     "url": "https://www.ign.com/articles/street-fighter-tops-the-box-office-with-51-million-opening-weekend-amid-lackluster-reviews",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Street Fighter’ Rings Up No. 1 $51M+ WW Opening, Largely Driven By Fans – Global Box Office Update",
+     "url": "https://deadline.com/2026/10/box-office-global-street-fighter-1237167021/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "Street Fighter Fails To Match Resident Evil's Opening Weekend Box Office Success",
+     "url": "https://www.polygon.com/street-fighter-opening-weekend-box-office/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "afc standings",
+   "signal": "Google Trends US 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Chacarra wins in India to take Race to Dubai lead",
+     "url": "https://www.bbc.co.uk/sport/golf/articles/cw98zlldrpj0o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Are the Bengals playing today? NFL Week 6 schedule, next game, AFC North standings",
+     "url": "https://www.usatoday.com/story/sports/nfl/bengals/2026/10/18/bengals-playing-today-nfl-week-6/92254046007/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "xavier worthy",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Xavier_Worthy",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "Fantasy football Week 4 recap, early waivers speed run: Xavier Worthy, Keon Coleman",
+     "url": "https://www.nytimes.com/athletic/7662941/2026/10/05/fantasy-football-early-waivers-speed-run-worthy-coleman/",
+     "published": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "topic": "Katie Zacharia",
+   "signal": "Wikipedia 428,191 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
+     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "RJ Mitte",
+   "signal": "Wikipedia 185,306 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/RJ_Mitte",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "RJ Mitte’s story offers insight into life with cerebral palsy and mental health issues | Letters",
+     "url": "https://www.theguardian.com/culture/2026/oct/18/rj-mitte-story-offers-insight-into-life-with-cerebral-palsy-and-mental-health-issues",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "R.J. Mitte’s Mother Opens Up About His Tragic Passing to Help Other Families (While Clarifying Speculation About His Finances, Career and Fi",
+     "url": "https://www.hollywoodreporter.com/news/general-news/r-j-mitte-mother-family-interview-death-suicide-prevention-1236734202/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Aaron Paul Remembers Last Time He Saw ‘Breaking Bad’ Co-Star RJ Mitte: ‘I Kept Calling You Superman’",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/aaron-paul-breaking-bad-rj-mitte-tribute-1235642999/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "Mathematics",
+   "signal": "Wikipedia 160,732 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mathematics",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
+     "url": "https://www.nytimes.com/2026/10/08/science/mathematicians-respond-openai-release.html",
+     "published": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "topic": "Imran Khan (film actor)",
+   "signal": "Wikipedia 143,474 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Imran_Khan_(film_actor)",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Actor Imran Khan ordered to leave India after participating in protest",
+     "url": "https://www.bbc.com/news/articles/ck3r5pv5j1g1o",
+     "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "Nidal Hasan",
+   "signal": "Wikipedia 137,761 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nidal_Hasan",
+   "articles": [
+    {
+     "outlet": "CBS News",
+     "title": "She met Nidal Hasan's family after her brother died at Fort Hood. Now she's speaking out about the planned execution.",
+     "url": "https://www.cbsnews.com/texas/news/lost-brother-fort-hood-shooting-nidal-hasan-planned-execution-10-12-26/",
+     "published": "2026-10-12"
+    }
+   ]
+  },
+  {
+   "topic": "Deaths in 2026",
+   "signal": "Wikipedia 130,252 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "articles": [
+    {
+     "outlet": "Reuters",
+     "title": "Human cases of West Nile virus rise in Europe, with 141 dead in 2026, report says",
+     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/human-cases-west-nile-virus-rise-europe-with-141-dead-2026-report-says-2026-10-15/",
+     "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 113,060 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Street Fighter (2026 Movie) Guide",
+     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
+     "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "Grand Theft Auto VI Launch Trailer",
+   "signal": "YouTube GB 548,600/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
+     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "#CULT Official Trailer",
+   "signal": "YouTube GB 267,726/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
+     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "jj mccarthy",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/JJ_Mccarthy",
    "articles": []
   },
   {
@@ -53,9 +555,39 @@
    "articles": []
   },
   {
-   "topic": "real madrid",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Real_Madrid_CF",
+   "topic": "uganda",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Uganda",
+   "articles": []
+  },
+  {
+   "topic": "columbus vs cincinnati",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Columbus-Cincinnati_Road",
+   "articles": []
+  },
+  {
+   "topic": "tampa bay",
+   "signal": "Google Trends US 50000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tampa_Bay_Buccaneers",
+   "articles": []
+  },
+  {
+   "topic": "kyle pitts",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Pitts",
+   "articles": []
+  },
+  {
+   "topic": "GBU-43/B MOAB",
+   "signal": "Wikipedia 453,110 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/GBU-43/B_MOAB",
+   "articles": []
+  },
+  {
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 341,702 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": []
   }
  ]

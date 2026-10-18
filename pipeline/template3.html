@@ -16,9 +16,9 @@ body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); 
 .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .22; }
 #grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,.035) 2px, transparent 2px); background-size: 90px 90px; }
 #vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(15,23,32,0) 45%, rgba(8,12,18,.75) 100%); }
-#chip { display: none; position: absolute; left: 70px; top: 180px; display: flex; align-items: center; gap: 14px; padding: 14px 26px 14px 20px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 18%, transparent); border: 3px solid var(--accent); color: var(--accent); font: 700 34px "Inter"; letter-spacing: 3px; text-transform: uppercase; }
+#chip { display: none; position: absolute; left: 70px; top: 248px; display: flex; align-items: center; gap: 14px; padding: 14px 26px 14px 20px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 18%, transparent); border: 3px solid var(--accent); color: var(--accent); font: 700 34px "Inter"; letter-spacing: 3px; text-transform: uppercase; }
 #chip svg { width: 40px; height: 40px; stroke-width: 2.5; }
-#handle { position: absolute; left: 70px; top: 196px; display: flex; align-items: center; gap: 10px; font: 700 26px "Inter"; color: rgba(245,248,250,.78); text-shadow: 0 2px 10px rgba(0,0,0,.8); }
+#handle { position: absolute; right: 70px; top: 262px; display: flex; align-items: center; gap: 10px; font: 700 26px "Inter"; color: rgba(245,248,250,.78); text-shadow: 0 2px 10px rgba(0,0,0,.8); }
 #handle svg { width: 34px; height: 34px; }
 .beat { position: absolute; left: 60px; right: 60px; top: 330px; height: 900px; display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0; will-change: transform, opacity; }
 .kicker { font: 700 40px "Inter"; letter-spacing: 6px; text-transform: uppercase; color: var(--accent); margin-bottom: 26px; }
@@ -69,16 +69,18 @@ body { width: 1080px; height: 1920px; overflow: hidden; background: var(--ink); 
 .bart { height: 64px; border-radius: 32px; background: var(--ink3); overflow: hidden; }
 .barf { height: 100%; border-radius: 32px; background: var(--accent); width: 0; }
 .barf.alt { background: var(--muted); }
-#caps { position: absolute; left: 60px; right: 60px; top: 1290px; height: 260px; display: flex; justify-content: center; align-items: center; text-align: center; }
+/* safe zones: YouTube covers the top ~220px (search, camera), the bottom ~400px (channel, title, audio) and a
+   ~180px column of buttons on the right from about halfway down, so text stays clear of all three */
+#caps { position: absolute; left: 70px; right: 240px; top: 1230px; height: 270px; display: flex; justify-content: center; align-items: center; text-align: center; }
 .capbox { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 0 24px; max-width: 100%; }
 .cw { font-family: "Archivo Black"; font-size: 86px; line-height: 1.12; text-transform: uppercase; color: #FFFFFF; -webkit-text-stroke: 12px #0B1118; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.35); display: inline-block; }
 .cw.on { color: var(--amber); }
 /* caption looks (templates/looks.json); "punch" is the plain rules above */
-body.cap-clean #caps { top: 1350px; height: 300px; }
+body.cap-clean #caps { top: 1270px; height: 230px; }
 body.cap-clean .capbox { background: rgba(9,13,19,.84); border: 2px solid rgba(255,255,255,.12); border-radius: 30px; padding: 16px 34px 22px; gap: 0 16px; max-width: 940px; box-shadow: 0 18px 50px rgba(0,0,0,.45); }
 body.cap-clean .cw { font: 700 76px/1.18 "Inter"; text-transform: none; -webkit-text-stroke: 0; text-shadow: none; color: #F5F8FA; letter-spacing: -0.5px; }
 body.cap-clean .cw.on { color: var(--accent); }
-body.cap-pop #caps { top: 1150px; height: 360px; }
+body.cap-pop #caps { top: 1130px; height: 360px; }
 body.cap-pop .capbox { gap: 0 48px; }
 body.cap-pop .cw { font-size: 128px; line-height: 1.04; -webkit-text-stroke: 16px #0B1118; }
 body.cap-pop .cw.on { color: var(--accent); transform: scale(1.04); }
@@ -95,14 +97,14 @@ body.cap-boxed .cw.on { background: var(--accent); color: #0B1118; -webkit-text-
 #flash { position: absolute; inset: 0; background: #FFFFFF; opacity: 0; pointer-events: none; }
 #mdim { position: absolute; inset: 0; background: #0B1118; opacity: 0; }
 #mshade { position: absolute; inset: 0; opacity: 0; background: linear-gradient(180deg, rgba(8,12,18,.86) 0%, rgba(8,12,18,.35) 13%, rgba(8,12,18,0) 24%, rgba(8,12,18,0) 52%, rgba(8,12,18,.78) 66%, rgba(8,12,18,.9) 100%); }
-#credit { position: absolute; left: 74px; top: 246px; font: 500 24px "Inter"; color: rgba(245,248,250,.82); text-shadow: 0 2px 10px rgba(0,0,0,.9); opacity: 0; white-space: nowrap; }
+#credit { position: absolute; left: 74px; top: 322px; font: 500 24px "Inter"; color: rgba(245,248,250,.82); text-shadow: 0 2px 10px rgba(0,0,0,.9); opacity: 0; white-space: nowrap; }
 body.hasmedia .tline, body.hasmedia .statnum, body.hasmedia .kicker, body.hasmedia .statlabel, body.hasmedia .statsub, body.hasmedia .datelabel, body.hasmedia .datesub, body.hasmedia .qtext, body.hasmedia .qby, body.hasmedia .ctat, body.hasmedia .ctah, body.hasmedia .vmid { text-shadow: 0 6px 30px rgba(0,0,0,.8), 0 2px 6px rgba(0,0,0,.7); }
 body.hasmedia .card, body.hasmedia .vcol, body.hasmedia .tly { box-shadow: 0 20px 60px rgba(0,0,0,.55); }
 body.hasmedia .card, body.hasmedia .vcol:not(.hl) { background: rgba(23,34,48,.92); }
 .beat.media { justify-content: flex-end; }
 .mlabel { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .mname { font: 400 78px "Archivo Black"; text-transform: uppercase; text-align: center; line-height: 1.02; white-space: nowrap; text-shadow: 0 6px 30px rgba(0,0,0,.85), 0 2px 6px rgba(0,0,0,.7); }
-.mi .mlab { position: absolute; left: 60px; right: 60px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.mi .mlab { position: absolute; left: 70px; right: 240px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .mrole { font: 700 34px "Inter"; letter-spacing: 4px; text-transform: uppercase; color: #0B1118; background: var(--accent); padding: 10px 24px; border-radius: 999px; }
 </style>
 </head>

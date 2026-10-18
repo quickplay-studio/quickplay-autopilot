@@ -31,7 +31,10 @@ jobs:
         with: { ref: main }
       - name: Anything waiting?
         id: check
-        run: if ls boards/ready/*.json >/dev/null 2>&1; then echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
+        # Shorts waiting for approval, evergreen spares in the reserve (decisions and evening releases), or a decision file
+        run: |
+          if compgen -G "boards/ready/*.json" > /dev/null || compgen -G "boards/reserve/*.json" > /dev/null || compgen -G "approvals/*.txt" > /dev/null; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-python@v5
         if: steps.check.outputs.run == 'yes'
         with: { python-version: '3.13' }

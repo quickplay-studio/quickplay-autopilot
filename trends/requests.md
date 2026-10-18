@@ -14,7 +14,7 @@ When a request is covered, move it to Done with the Short's id; when it can't be
 - Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United
 - I'm a Celebrity 2026: who is confirmed (confirmed names only, never rumours)
 - The latest SpaceX launch
-- Apple HomeView (only if two reputable sources confirm it exists)
+- Apple HomeView, Apple's new smart home display (TechCrunch, The Verge and MacRumors have covered it; research.json has the links)
 - Gen Alpha slang: the French fries emoji
 - The "Call the Police" trend on TikTok and Instagram
 

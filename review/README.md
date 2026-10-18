@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-YouTube checked Sun 18 Oct 23:01 (UK): 2 scheduled, 25 public, 10 uploads in the last 24 hours.
+YouTube checked Sun 18 Oct 23:10 (UK): 2 scheduled, 25 public, 10 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 21:26).
 
@@ -23,7 +23,7 @@ scheduled · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Sun 18 Oct 22:30 · Tekken 8's next fighter is a manga legend 💪
-public · 20 views · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
+public · 23 views · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
 
 ### Sun 18 Oct 21:00 · The formula behind a 14 million view Roblox Short 📈
 public · 12 views · [script](../backlog/QD-023) · [YouTube](https://youtube.com/shorts/qLRXY5tuj8A)

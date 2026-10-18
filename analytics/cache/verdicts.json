@@ -1,1 +1,1 @@
-{"category|Music": {"verdict": "push", "lift": 1.57, "n": 5}, "title_style|number in title": {"verdict": "push", "lift": 1.3, "n": 5}, "title_style|statement": {"verdict": "about typical", "lift": 0.91, "n": 12}}
+{"category|Music": {"verdict": "push", "lift": 1.56, "n": 5}, "title_style|number in title": {"verdict": "push", "lift": 1.3, "n": 5}, "title_style|statement": {"verdict": "about typical", "lift": 0.9, "n": 12}, "weekday|Saturday": {"verdict": "early sign", "lift": 1.34, "n": 9}, "weekday|Friday": {"verdict": "early sign", "lift": 0.76, "n": 8}}

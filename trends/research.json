@@ -193,6 +193,19 @@
    ]
   },
   {
+   "topic": "justin herbert",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Justin_Herbert",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Five Great Reads: cocaine nation, a 28-year walk home, and Americans give their verdict on Trump",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/16/cocaine-nation-a-28-year-walk-home-and-americans-give-their-verdict-on-trump",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
    "topic": "jesse eisenberg",
    "signal": "Google Trends GB 100+",
    "wikipedia": "https://en.wikipedia.org/wiki/Jesse_Eisenberg",
@@ -243,15 +256,27 @@
    ]
   },
   {
-   "topic": "siobhan finneran",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Siobhan_Finneran",
+   "topic": "rebel wilson",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Rebel_Wilson",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "David Tennant, Siobhan Finneran and Time series 3 cast and creatives discuss the powerful new story - \"You’re not going be disappointed watc",
-     "url": "https://www.bbc.com/mediacentre/mediapacks/time-series-three",
-     "published": "2026-10-10"
+     "outlet": "Billboard",
+     "title": "Harry Styles’ MSG Residency Documentary in the Works From John Wilson",
+     "url": "https://www.billboard.com/culture/tv-film/harry-styles-msg-residency-documentary-film-john-wilson-1236362472/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Another unremarkable win shows Arsenal’s strength is in depth rather than creativity | Jonathan Wilson",
+     "url": "https://www.theguardian.com/football/2026/oct/18/arsenal-strength-in-depth-nottingham-forest-premier-league",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Harry Styles Enlists John Wilson for Documentary About Madison Square Garden Residency",
+     "url": "https://www.rollingstone.com/music/music-news/harry-styles-john-wilson-documentary-msg-residency-1235644404/",
+     "published": "2026-10-18"
     }
    ]
   },
@@ -275,8 +300,34 @@
    ]
   },
   {
+   "topic": "nieve",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nieve",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Nieve visual: \"La rara condición que me hace ver con 'interferencias'\"",
+     "url": "https://www.bbc.com/mundo/noticias-61180080",
+     "published": "2022-04-26"
+    }
+   ]
+  },
+  {
+   "topic": "emmett johnson",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Emmett_Johnson",
+   "articles": [
+    {
+     "outlet": "NFL",
+     "title": "Emmett Johnson absorbs significant hit-stick tackle from Troy Dye after the catch",
+     "url": "https://www.nfl.com/videos/emmett-johnson-absorbs-significant-hit-stick-tackle-from-troy-dye-after-the-catch",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
    "topic": "cj gardner johnson",
-   "signal": "Google Trends US 10000+",
+   "signal": "Google Trends US 20000+",
    "wikipedia": "https://en.wikipedia.org/wiki/CJ_Gardner-Johnson",
    "articles": [
     {
@@ -303,70 +354,6 @@
      "title": "Sports quiz of the week: love, songs, speedy skating and celebrations",
      "url": "https://www.theguardian.com/sport/2026/oct/16/sports-quiz-week-football-rugby-tennis-boxing-basketball-skateboarding-f1-nfl",
      "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "rays - guardians",
-   "signal": "Google Trends US 10000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Rays vs. Guardians score, live updates: Tampa Bay takes early lead in MLB playoffs ALCS Game 5",
-     "url": "https://www.nytimes.com/athletic/live-blogs/rays-vs-guardians-live-updates-mlb-playoffs-game-5-score-result/91kYGY4RvnjQ/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Guardians-Rays LIVE updates: Must-win game in Cleveland, where to watch ALCS",
-     "url": "https://www.usatoday.com/story/sports/mlb/playoffs/2026/10/18/guardians-rays-watch-score-highlights-alcs-playoffs-channel--live/92315050007/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "andrew armstrong",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Andrew_Armstrong_(American_football)",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Margaret Hamilton obituary",
-     "url": "https://www.theguardian.com/science/2026/oct/18/margaret-hamilton-obituary",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "NFL",
-     "title": "Justin Fields finds Andrew Armstrong along sideline for 17-yard gain",
-     "url": "https://www.nfl.com/videos/justin-fields-finds-andrew-armstrong-along-sideline-for-17-yard-gain",
-     "published": "2026-08-15"
-    }
-   ]
-  },
-  {
-   "topic": "tyler higbee",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tyler_Higbee",
-   "articles": [
-    {
-     "outlet": "NFL",
-     "title": "Tyler Higbee takes third-down screen for 17-yard ride to move chains",
-     "url": "https://www.nfl.com/videos/tyler-higbee-takes-third-down-screen-for-17-yard-ride-to-move-chains",
-     "published": "2023-01-08"
-    }
-   ]
-  },
-  {
-   "topic": "jack cochrane",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jack_Cochrane",
-   "articles": [
-    {
-     "outlet": "NFL",
-     "title": "Jack Cochrane picks Herbert's pass and ends up in Bolts' territory",
-     "url": "https://www.nfl.com/videos/jack-cochrane-picks-herbert-s-pass-and-ends-up-in-bolts-territory",
-     "published": "2026-10-18"
     }
    ]
   },
@@ -405,6 +392,12 @@
      "title": "RJ Mitte's mom opens up about 'red flag' before finding her son dead",
      "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/18/rj-mitte-mom-suicide-warning-signs/92320591007/",
      "published": "2026-10-18"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Aaron Paul Remembers Last Time He Saw ‘Breaking Bad’ Co-Star RJ Mitte: ‘I Kept Calling You Superman’",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/aaron-paul-breaking-bad-rj-mitte-tribute-1235642999/",
+     "published": "2026-10-13"
     }
    ]
   },
@@ -462,7 +455,7 @@
   },
   {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 266,502/h",
+   "signal": "YouTube GB 266,496/h",
    "wikipedia": null,
    "articles": [
     {
@@ -475,7 +468,7 @@
   },
   {
    "topic": "KAALI HOODIE",
-   "signal": "YouTube GB 225,984/h",
+   "signal": "YouTube GB 225,586/h",
    "wikipedia": null,
    "articles": [
     {
@@ -488,7 +481,7 @@
   },
   {
    "topic": "Tate McRae",
-   "signal": "YouTube GB-music 82,212/h",
+   "signal": "YouTube GB-music 82,234/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
    "articles": [
     {
@@ -501,7 +494,7 @@
   },
   {
    "topic": "Justice",
-   "signal": "YouTube GB-music 52,636/h",
+   "signal": "YouTube GB-music 52,591/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Justice",
    "articles": [
     {
@@ -525,26 +518,57 @@
    ]
   },
   {
+   "topic": "How is This Even Possible? 😳🥌",
+   "signal": "YouTube GB-sport 155,475/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Australia’s Boland damages South Africa in brief respite from rain",
+     "url": "https://www.theguardian.com/sport/2026/oct/18/australias-boland-damages-south-africa-in-brief-respite-from-rain",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "All The Records GTA 6 Will Break, We Think",
+     "url": "https://www.gamespot.com/articles/all-the-records-gta-6-will-break-we-think/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "keanu reeves",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Keanu_Reeves",
+   "articles": []
+  },
+  {
    "topic": "theft",
    "signal": "Google Trends GB 100+",
    "wikipedia": "https://en.wikipedia.org/wiki/Theft",
    "articles": []
   },
   {
-   "topic": "yan diomandé",
+   "topic": "kansas city chiefs",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Yan_Diomande",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kansas_City_Chiefs",
+   "articles": []
+  },
+  {
+   "topic": "sharks",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Shark",
    "articles": []
   },
   {
    "topic": "klint kubiak",
-   "signal": "Google Trends US 500+",
+   "signal": "Google Trends US 2000+",
    "wikipedia": "https://en.wikipedia.org/wiki/Klint_Kubiak",
    "articles": []
   },
   {
    "topic": "parker messick",
-   "signal": "Google Trends US 2000+",
+   "signal": "Google Trends US 5000+",
    "wikipedia": "https://en.wikipedia.org/wiki/Parker_Messick",
    "articles": []
   },
@@ -558,18 +582,6 @@
    "topic": "Jailer 2",
    "signal": "Wikipedia 341,702 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
-   "articles": []
-  },
-  {
-   "topic": "Bigg Boss (Hindi TV series) season 20",
-   "signal": "Wikipedia 234,663 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bigg_Boss_(Hindi_TV_series)_season_20",
-   "articles": []
-  },
-  {
-   "topic": "List of equations",
-   "signal": "Wikipedia 156,839 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/List_of_equations",
    "articles": []
   }
  ]

@@ -3,11 +3,27 @@
  "google_trends": {
   "GB": [
    {
+    "q": "keanu reeves",
+    "traffic": "200+",
+    "news": [
+     "Every Upcoming Keanu Reeves Movie",
+     "The Matrix's Original Cast Is Almost Impossible To Replace, But These Actors Could Pull It Off"
+    ]
+   },
+   {
+    "q": "justin herbert",
+    "traffic": "100+",
+    "news": [
+     "Justin Herbert takes flying knee to head during QB slide",
+     "Chiefs vs. Chargers Refs Already Under Fire For Questionable Calls Sunday"
+    ]
+   },
+   {
     "q": "jesse eisenberg",
     "traffic": "100+",
     "news": [
-     "Jesse Eisenberg Relives Kieran Culkin Woes Making ‘A Real Pain’ and Says His Next Project Is a TV Show",
-     "Jesse Eisenberg TV Series Produced By Peter Rice To Be Taken Out By A24"
+     "Jesse Eisenberg Breaks Down His Process Writing Songs For ‘The Debut,’ Fueled by His Love of “Musical Theater Cliches”",
+     "Jesse Eisenberg's process: Write it, offer role to Daniel Radcliffe, play it himself"
     ]
    },
    {
@@ -28,7 +44,7 @@
    },
    {
     "q": "john healey budget tax plans",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "Healey plans Budget raid on family businesses",
      "Why AI Chatbots Just Advised Britain to Overhaul Its Inheritance Tax"
@@ -51,23 +67,31 @@
     ]
    },
    {
-    "q": "siobhan finneran",
-    "traffic": "500+",
-    "news": [
-     "Siobhan Finneran's brutally honest remark on time away from Death in Paradise star partner",
-     "Siobhan Finneran has famous EastEnders star boyfriend and fans will be floored"
-    ]
-   },
-   {
-    "q": "yan diomandé",
+    "q": "kansas city chiefs",
     "traffic": "200+",
     "news": [
-     "Victoire spectaculaire du Real Madrid face à Séville, doublé de Kylian Mbappé",
-     "Suivez Real Madrid - Séville FC En direct - Liga - 9e journée"
+     "~⚡️【𝕊𝕋ℝ𝔼𝔸𝕄𝕊-𝕋𝕍】 KC CHIEFS - LA CHARGERS STREAMING: LIVE Free NFL Week 6 STREAMS ON TV CHANNEL 18 October 2026",
+     "Chiefs vs. Chargers: RB Kenneth Walker III scores opening TD in Week 6"
     ]
    }
   ],
   "US": [
+   {
+    "q": "sharks",
+    "traffic": "1000+",
+    "news": [
+     "Sharks’ Ivar Stenberg reflects on NHL draft: ‘I didn’t have good meetings with Toronto’",
+     "Former Sharks Forward Leaves Coaching Job"
+    ]
+   },
+   {
+    "q": "rebel wilson",
+    "traffic": "500+",
+    "news": [
+     "Rebel Wilson to Taron Egerton: Hollywood stars reveal the films that mean most to them",
+     "Licensable video: Rebel Wilson felt like the most junior person on the set of Bridesmaids"
+    ]
+   },
    {
     "q": "trey mcbride",
     "traffic": "1000+",
@@ -78,10 +102,18 @@
    },
    {
     "q": "klint kubiak",
+    "traffic": "2000+",
+    "news": [
+     "Las Vegas Raiders-Buffalo Bills FEED topic: How will offensive line respond?",
+     "Raiders’ Running Game Won’t Stay Broken, Derek Carr Says"
+    ]
+   },
+   {
+    "q": "nieve",
     "traffic": "500+",
     "news": [
-     "Klint Kubiak’s pregame hug with dad Gary adds a family touch to Raiders-Bills",
-     "Buffalo Bills at Las Vegas Raiders | Where to watch, stream and listen | Week 6"
+     "Pronostican un invierno más lluvioso de lo normal en el Sur y más seco en el Norte",
+     "La NOAA predice que el área de NYC experimentará un invierno más cálido y húmedo"
     ]
    },
    {
@@ -93,11 +125,19 @@
     ]
    },
    {
-    "q": "cj gardner johnson",
-    "traffic": "10000+",
+    "q": "emmett johnson",
+    "traffic": "500+",
     "news": [
-     "Buffalo Bills Predicted to Make Surprising Move Involving Damar Hamlin",
-     "Buffalo Bills Analyst Calls for 8-Year Veteran to be Benched Amid Slow Start"
+     "The story behind Chiefs rookie’s hot start? A Patrick Mahomes DM — and question to the GM - The Athletic",
+     "Chiefs Like What They’ve Seen From Rookie Running Back So Far"
+    ]
+   },
+   {
+    "q": "cj gardner johnson",
+    "traffic": "20000+",
+    "news": [
+     "Bills’ CJ Gardner-Johnson spits on Raiders’ Brock Bowers, gets ejected",
+     "Keenan Allen leads Colts in receiving vs. Titans"
     ]
    },
    {
@@ -110,41 +150,10 @@
    },
    {
     "q": "parker messick",
-    "traffic": "2000+",
+    "traffic": "5000+",
     "news": [
      "Guardians pair Messick with Bailey to keep catcher's hot bat in Game 5 lineup",
      "Guardians vs. Rays live updates: With ALCS tied again, Parker Messick, Drew Rasmussen start in pivotal Game 5"
-    ]
-   },
-   {
-    "q": "rays - guardians",
-    "traffic": "10000+",
-    "news": [
-     "Lineups, live updates for Rays-Guardians ALCS Game 5",
-     "3 storylines to watch in pivotal ALCS Game 5"
-    ]
-   },
-   {
-    "q": "andrew armstrong",
-    "traffic": "1000+",
-    "news": [
-     "Chiefs elevate practice squad WRs Justin Watson and Andrew Armstrong for Sunday’s game",
-     "Chiefs elevate Justin Watson, Andrew Armstrong ahead of Chargers game"
-    ]
-   },
-   {
-    "q": "tyler higbee",
-    "traffic": "500+",
-    "news": [
-     "Tyler Higbee Receptions Pick for Rams vs. Bills",
-     "Tyler Higbee Season-high yardage total in OT loss"
-    ]
-   },
-   {
-    "q": "jack cochrane",
-    "traffic": "200+",
-    "news": [
-     "Chiefs vs. Chargers: Underrated LB intercepts Justin Herbert"
     ]
    }
   ],
@@ -153,16 +162,16 @@
     "q": "melbourne cup",
     "traffic": "200+",
     "news": [
-     "Risks unavoidable, says Racing Victoria, amid fallout from Caulfield Cup death",
-     "Why all the details of the inquiry into Caulfield Cup horse death must be made public"
+     "Why all the details of the inquiry into Caulfield Cup horse death must be made public",
+     "Half Yours escapes serious injury, but Cup now unlikely"
     ]
    },
    {
     "q": "brock bowers",
     "traffic": "200+",
     "news": [
-     "How to watch, listen to and livestream Raiders vs. Bills",
-     "Bass nails 44-yard FG to draw first blood: Bills 3, Raiders 0"
+     "Bills Urged to Cut Ties With C.J. Gardner-Johnson Amid Potential Suspension",
+     "Keenan Allen leads Colts in receiving vs. Titans"
     ]
    },
    {
@@ -207,7 +216,7 @@
    },
    {
     "q": "david hearn",
-    "traffic": "100+",
+    "traffic": "200+",
     "news": [
      "Olympic canoeist at center of Reflecting Pool scandal becomes a Trump foil",
      "Olympic canoeist at center of Reflecting Pool controversy becomes Trump foil | CNN Politics"
@@ -216,11 +225,19 @@
   ],
   "CA": [
    {
-    "q": "neymar",
+    "q": "blue jackets vs wild",
     "traffic": "200+",
     "news": [
-     "Neymar lo tiene claro: \"Lamine es el mejor del mundo\"",
-     "¿Yamal o Messi? Neymar sorprendió al elegir a su candidato para ganar el Balón de Oro"
+     "Wild's Kirill Kaprizov, Quinn Hughes Not On The Ice For Saturday's Practice",
+     "Minnesota Wild Stars Missing at Practice"
+    ]
+   },
+   {
+    "q": "jesse eisenberg",
+    "traffic": "200+",
+    "news": [
+     "Jesse Eisenberg Says He ‘Couldn’t Get Movie Studio Parts Anymore’ After Winning A Razzie For ‘Batman v Superman’: ‘The Industry Did Not Want Me to Be in a Superhero Movie’",
+     "Jesse Eisenberg Relives Kieran Culkin Woes Making ‘A Real Pain’ and Says His Next Project Is a TV Show"
     ]
    },
    {
@@ -232,19 +249,19 @@
     ]
    },
    {
+    "q": "neymar",
+    "traffic": "200+",
+    "news": [
+     "Neymar lo tiene claro: \"Lamine es el mejor del mundo\"",
+     "¿Yamal o Messi? Neymar sorprendió al elegir a su candidato para ganar el Balón de Oro"
+    ]
+   },
+   {
     "q": "josh hokit",
     "traffic": "100+",
     "news": [
      "UFC 334 Fight Cancellation: Adrian Yanez Withdraws From Juan Diaz Bout As UFC Has Yet To Name Replacement",
      "UFC 334 takes a hit as fighter withdraws from Gane vs. Hokit undercard"
-    ]
-   },
-   {
-    "q": "cj gardner johnson",
-    "traffic": "500+",
-    "news": [
-     "Bills' CJGJ Ejected for Spitting in Direction of Brock Bowers, Raiders Players in Trending Video",
-     "C.J. Gardner-Johnson ejected in Q2 vs. Raiders"
     ]
    },
    {
@@ -270,14 +287,6 @@
      "Justin Herbert takes flying knee to head during QB slide",
      "Chiefs vs. Chargers Refs Already Under Fire For Questionable Calls Sunday"
     ]
-   },
-   {
-    "q": "nikita zadorov",
-    "traffic": "100+",
-    "news": [
-     "Bruins’ Nikita Zadorov benched for game against the Kings because of penalty",
-     "Bruins' Fifth Straight Win Came With A Strong Message From Marco Sturm"
-    ]
    }
   ],
   "IE": [
@@ -301,8 +310,8 @@
     "q": "chiefs vs chargers",
     "traffic": "100+",
     "news": [
-     "Emmitt Smith Talks ‘Dancing with the Stars,’ Taylor Swift’s Impact on the NFL and the State of the Dallas Cowboys Under Dak Prescott: ‘He’s the Best We’ve Got’",
-     "Inside Taylor Swift's Suite at Chiefs-Chargers Game: the Famous Faces She's Sitting With on October 18!"
+     "Instant analysis from the Ravens’ 30-23 overtime win vs. Falcons in Week 5",
+     "Gamebook: Jets at Patriots Week 6"
     ]
    },
    {
@@ -315,7 +324,7 @@
    },
    {
     "q": "paudie murray glen rovers match analysis",
-    "traffic": "100+",
+    "traffic": "200+",
     "news": [
      "Paudie Murray left puzzled by second half Barrs fade against Glen Rovers",
      "Paudie Murray left puzzled by second half Barrs fade against Glen Rovers"
@@ -351,20 +360,20 @@
   "entertainment": [
    "Cindy Crawford 'beyond heartbroken' after death of son Presley at 27 - BBC",
    "Strictly Come Dancing fans \"gutted\" after \"unfair\" elimination - Digital Spy",
-   "Jeff Brazier breaks silence on desperate fight to save son Freddy from addiction - Daily Mirror",
    "Nick Knowles: How the DIY SOS presenter survived Strictly, singing, and Shreddies scandals - The Independent",
    "Will Best opens up about his 'hot dad' era and motivation for Strictly glory - The Sun",
    "'SNL UK': Donald Trump Features In Cold Open With Burnham, Zelenskyy - Deadline",
    "Body of singer & composer found ‘tied up’ at bottom of pool at Florida home as cops probe ‘suspicious’ death - The Sun",
-   "Georgina Cates Dead: BBC Star & ‘Clay Pigeons’ Actress Was 51 - Deadline"
+   "Georgina Cates Dead: BBC Star & ‘Clay Pigeons’ Actress Was 51 - Deadline",
+   "Harry and Meghan hate phrase ‘working members of royal family’ - The Times"
   ],
   "sports": [
    "‘Like a fresh start’: Michael Carrick relieved by Manchester United’s draw at Leeds - The Guardian",
    "Nottingham Forest v Arsenal ratings: Which Arsenal player failed to make the grade at the City Ground? - BBC",
-   "Bournemouth vs Sunderland predictions: Chris Sutton on Premier League game - BBC",
    "WEC Barcelona: Toyota scores dominant 1-2 to clinch manufacturers’ title - Autosport",
    "Sonay Kartal misses out on maiden WTA 1000 title in Wuhan Open final defeat to Maja Chwalinska - Sky Sports",
    "Celtic 7-1 Hearts: Hoops move four clear at top of Scottish Premiership with ruthless display against Jambos - Sky Sports",
+   "New footage of Yarmoliuk headbutt vs Liverpool reveals red card theory - London Evening Standard",
    "Gómez halfway-line wondergoal sparks Brighton’s 5-0 thrashing of sorry Crystal Palace - The Guardian",
    "Jordan Henderson not giving up on England after Chelsea revitalisation - ESPN"
   ],
@@ -476,564 +485,564 @@
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 44028065,
-    "views_per_hour": 543465
+    "views": 44075540,
+    "views_per_hour": 543109
    },
    {
     "title": "#CULT Official Trailer | Vishwak Sen | Ravi Basrur | Sandeep Kakarala | Gayatri Bharadwaj",
     "channel": "Aditya Music",
-    "views": 2135345,
-    "views_per_hour": 266502
+    "views": 2172728,
+    "views_per_hour": 266496
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 14015104,
-    "views_per_hour": 225984
+    "views": 14022118,
+    "views_per_hour": 225586
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL I'M UNREAL DAY 4",
     "channel": "Jynxzi",
-    "views": 618704,
-    "views_per_hour": 219443
+    "views": 620246,
+    "views_per_hour": 209550
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 12178589,
-    "views_per_hour": 173935
+    "views": 12201886,
+    "views_per_hour": 173919
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 1712609,
-    "views_per_hour": 106901
+    "views": 1720091,
+    "views_per_hour": 106435
    },
    {
     "title": "A2O MAY ‘BAD HABITS TONITE’ Official Video",
     "channel": "A2O WORLD",
-    "views": 944550,
-    "views_per_hour": 78592
+    "views": 948663,
+    "views_per_hour": 78023
    },
    {
     "title": "ITHINNO AADAME | DISCO | Ullas Chemban | Manikandan Ayyappa | Chemban Vinod | Dev | Lukman",
     "channel": "Chembosky Motion Pictures",
-    "views": 2384837,
-    "views_per_hour": 75586
+    "views": 2390387,
+    "views_per_hour": 75426
    },
    {
     "title": "Steal An Egg OWNER Gave Me ADMIN COMMANDS..",
     "channel": "Foltyn",
-    "views": 962780,
-    "views_per_hour": 68669
+    "views": 965602,
+    "views_per_hour": 68187
    },
    {
     "title": "\"We\" Got Crazy Armor...? - Sky Factory Season 7 EP 6",
     "channel": "SSundeePlus",
-    "views": 179122,
-    "views_per_hour": 39687
+    "views": 187675,
+    "views_per_hour": 40327
    },
    {
     "title": "CHAERYEONG SOLO DEBUT | 'Lovesick' OFFICIAL TRAILER",
     "channel": "JYP Entertainment",
-    "views": 265786,
-    "views_per_hour": 37857
+    "views": 267928,
+    "views_per_hour": 37413
    },
    {
     "title": "Prisoner Has a Crush On Me in Minecraft",
     "channel": "Cash",
-    "views": 247863,
-    "views_per_hour": 35311
+    "views": 251228,
+    "views_per_hour": 35088
    },
    {
     "title": "Using New TESLA ROADSTER To Troll My Friends In GTA 5...",
     "channel": "TechyCrew",
-    "views": 286584,
-    "views_per_hour": 31782
+    "views": 288113,
+    "views_per_hour": 31461
    },
    {
     "title": "LEVEL 1 vs. LEVEL 100 WATERPARK! (Minecraft)",
     "channel": "TechyCraft",
-    "views": 241321,
-    "views_per_hour": 24103
+    "views": 243284,
+    "views_per_hour": 23963
    },
    {
     "title": "I Went TRICK-OR-TREATING in 99 Nights in the Forest!",
     "channel": "Lana's Life",
-    "views": 123709,
-    "views_per_hour": 20809
+    "views": 125155,
+    "views_per_hour": 20566
    }
   ],
   "GB-gaming": [
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1584155,
-    "views_per_hour": 68691
+    "views": 1589114,
+    "views_per_hour": 68488
    },
    {
     "title": "Steal An Egg OWNER Gave Me ADMIN COMMANDS..",
     "channel": "Foltyn",
-    "views": 962780,
-    "views_per_hour": 68669
+    "views": 965602,
+    "views_per_hour": 68187
    },
    {
     "title": "I Played Every Roblox Knockoff To Answer This Question",
     "channel": "Ludwig",
-    "views": 704607,
-    "views_per_hour": 45621
+    "views": 708686,
+    "views_per_hour": 45472
    },
    {
     "title": "\"We\" Got Crazy Armor...? - Sky Factory Season 7 EP 6",
     "channel": "SSundeePlus",
-    "views": 179122,
-    "views_per_hour": 39687
+    "views": 187675,
+    "views_per_hour": 40327
    },
    {
     "title": "ROBLOX TOTAL DRAMA ISLAND is mean…",
     "channel": "Flamingo",
-    "views": 732524,
-    "views_per_hour": 36261
+    "views": 737687,
+    "views_per_hour": 36264
    },
    {
     "title": "Prisoner Has a Crush On Me in Minecraft",
     "channel": "Cash",
-    "views": 247863,
-    "views_per_hour": 35311
+    "views": 251228,
+    "views_per_hour": 35088
    }
   ],
   "GB-music": [
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 14015104,
-    "views_per_hour": 225984
+    "views": 14022118,
+    "views_per_hour": 225586
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 12178589,
-    "views_per_hour": 173935
+    "views": 12201886,
+    "views_per_hour": 173919
    },
    {
     "title": "A2O LITE 'NEON' Official Video",
     "channel": "A2O WORLD",
-    "views": 15706481,
-    "views_per_hour": 102314
+    "views": 15713758,
+    "views_per_hour": 102267
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 5756385,
-    "views_per_hour": 82212
+    "views": 5769520,
+    "views_per_hour": 82234
    },
    {
     "title": "Zara Larsson - Blue Moon (Official Music Video)",
     "channel": "ZaraLarssonMusicVEVO",
-    "views": 4858541,
-    "views_per_hour": 53973
+    "views": 4862585,
+    "views_per_hour": 53934
    },
    {
     "title": "Justice - Flower In A Hurricane (ft Tame Impala, SZA, King Gizzard & the Lizard Wizard) [from GTAVI]",
     "channel": "Justice",
-    "views": 4230317,
-    "views_per_hour": 52636
+    "views": 4234044,
+    "views_per_hour": 52591
    }
   ],
   "GB-sport": [
    {
     "title": "SAVE THE FOOTBALLER BY STOPPING THE DISCS FROM FALLING | WHO WON?😱🙏",
     "channel": "DuoWave ",
-    "views": 74942060,
-    "views_per_hour": 995111
+    "views": 75056682,
+    "views_per_hour": 994777
    },
    {
     "title": "Goal celebration goes HORRIBLY wrong 😭",
     "channel": "John Casterline",
-    "views": 4311270,
-    "views_per_hour": 227962
+    "views": 4325118,
+    "views_per_hour": 227008
    },
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 20210301,
-    "views_per_hour": 213829
+    "views": 20235833,
+    "views_per_hour": 213782
    },
    {
     "title": "Speed got humbled by the kids in backflip 😳 #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 38678449,
-    "views_per_hour": 176925
+    "views": 38683884,
+    "views_per_hour": 176836
    },
    {
     "title": "Champions League Matchday 2 was absolute chaos! 😂🏆",
     "channel": "God Ares AI",
-    "views": 12335857,
-    "views_per_hour": 156126
+    "views": 12342292,
+    "views_per_hour": 155930
    },
    {
     "title": "How is This Even Possible? 😳🥌",
     "channel": "The Ranking Bros",
-    "views": 29404669,
-    "views_per_hour": 155570
+    "views": 29408496,
+    "views_per_hour": 155475
    }
   ],
   "GB-entertainment": [
    {
     "title": "SUBSCRIBE FOR 7 YEARS OF GOOD LUCK! 🍀😅 - #dance #funny #couple #shorts",
     "channel": "Jasmin and James",
-    "views": 32144808,
-    "views_per_hour": 880305
+    "views": 32212799,
+    "views_per_hour": 878786
    },
    {
     "title": "Last To Fall Wins",
     "channel": "MrBeast",
-    "views": 38463406,
-    "views_per_hour": 712018
+    "views": 38669398,
+    "views_per_hour": 713975
    },
    {
     "title": "try this at your own risk #sofimanassyan #relatable #funny",
     "channel": "Sofi Manassyan",
-    "views": 9303452,
-    "views_per_hour": 546851
+    "views": 9417677,
+    "views_per_hour": 549032
    },
    {
     "title": "Never say never 😭",
     "channel": "Smirk",
-    "views": 10506075,
-    "views_per_hour": 538528
+    "views": 10584133,
+    "views_per_hour": 538651
    },
    {
     "title": "How Mr. Potato Head Was Invented 🤔",
     "channel": "Zack D. Films",
-    "views": 14365787,
-    "views_per_hour": 503871
+    "views": 14389618,
+    "views_per_hour": 502233
    },
    {
     "title": "the rules are the rules 💀🙏✌️",
     "channel": "SuperCaliver",
-    "views": 7295458,
-    "views_per_hour": 317045
+    "views": 7371457,
+    "views_per_hour": 318404
    }
   ],
   "GB-tech": [
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 10251691,
-    "views_per_hour": 305917
+    "views": 10264058,
+    "views_per_hour": 305007
    },
    {
     "title": "I thought the “Intel inside” sticker WAS the chip..",
     "channel": "CarterPCs",
-    "views": 3963637,
-    "views_per_hour": 256957
+    "views": 4018483,
+    "views_per_hour": 258162
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 10309397,
-    "views_per_hour": 191338
+    "views": 10318844,
+    "views_per_hour": 191015
    },
    {
     "title": "Samsung Galaxy S27 Ultra Cobalt Violet📱🔥#noads #tiktok #usa",
     "channel": "MR Limbo Green",
-    "views": 4787062,
-    "views_per_hour": 99695
+    "views": 4808079,
+    "views_per_hour": 99840
    },
    {
     "title": "Apple Homeview Impressions: Not Convinced!",
     "channel": "Marques Brownlee",
-    "views": 9871629,
-    "views_per_hour": 82739
+    "views": 9874695,
+    "views_per_hour": 82668
    },
    {
     "title": "What is the BEST app?!📱🤔",
     "channel": "Cam2r",
-    "views": 5682016,
-    "views_per_hour": 79009
+    "views": 5694754,
+    "views_per_hour": 79032
    }
   ],
   "US": [
    {
     "title": "Grand Theft Auto VI Launch Trailer",
     "channel": "Rockstar Games",
-    "views": 44028065,
-    "views_per_hour": 543465
+    "views": 44075540,
+    "views_per_hour": 543109
    },
    {
     "title": "#CULT Official Trailer | Vishwak Sen | Ravi Basrur | Sandeep Kakarala | Gayatri Bharadwaj",
     "channel": "Aditya Music",
-    "views": 2135345,
-    "views_per_hour": 266502
+    "views": 2172728,
+    "views_per_hour": 266496
    },
    {
     "title": "PLAYING FORTNITE RANKED UNTIL I'M UNREAL DAY 4",
     "channel": "Jynxzi",
-    "views": 618704,
-    "views_per_hour": 219443
+    "views": 620246,
+    "views_per_hour": 209550
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 12178589,
-    "views_per_hour": 173935
+    "views": 12201886,
+    "views_per_hour": 173919
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 1712609,
-    "views_per_hour": 106901
+    "views": 1720091,
+    "views_per_hour": 106435
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | GINGY X CLOAKZY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1105722,
-    "views_per_hour": 89101
+    "views": 1106235,
+    "views_per_hour": 88145
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1584155,
-    "views_per_hour": 68691
+    "views": 1589114,
+    "views_per_hour": 68488
    },
    {
     "title": "Steal An Egg OWNER Gave Me ADMIN COMMANDS..",
     "channel": "Foltyn",
-    "views": 962780,
-    "views_per_hour": 68669
+    "views": 965602,
+    "views_per_hour": 68187
    },
    {
     "title": "\"We\" Got Crazy Armor...? - Sky Factory Season 7 EP 6",
     "channel": "SSundeePlus",
-    "views": 179122,
-    "views_per_hour": 39687
+    "views": 187675,
+    "views_per_hour": 40327
    },
    {
     "title": "CHAERYEONG SOLO DEBUT | 'Lovesick' OFFICIAL TRAILER",
     "channel": "JYP Entertainment",
-    "views": 265786,
-    "views_per_hour": 37857
+    "views": 267928,
+    "views_per_hour": 37413
    },
    {
     "title": "ROBLOX TOTAL DRAMA ISLAND is mean…",
     "channel": "Flamingo",
-    "views": 732524,
-    "views_per_hour": 36261
+    "views": 737687,
+    "views_per_hour": 36264
    },
    {
     "title": "ROBLOX MONOCHROME...",
     "channel": "Techys",
-    "views": 213488,
-    "views_per_hour": 30444
+    "views": 215213,
+    "views_per_hour": 30087
    },
    {
     "title": "Something Appeared In The Sky…",
     "channel": "CaseOh",
-    "views": 643716,
-    "views_per_hour": 26807
+    "views": 646685,
+    "views_per_hour": 26774
    },
    {
     "title": "LEVEL 1 vs. LEVEL 100 WATERPARK! (Minecraft)",
     "channel": "TechyCraft",
-    "views": 241321,
-    "views_per_hour": 24103
+    "views": 243284,
+    "views_per_hour": 23963
    },
    {
     "title": "ROCHY RD - EL TEMBLOR 1 | RIP ARCÁNGEL & ALFA",
     "channel": "Rochy RD",
-    "views": 497816,
-    "views_per_hour": 20695
+    "views": 501650,
+    "views_per_hour": 20734
    }
   ],
   "US-gaming": [
    {
     "title": "LOUD vs. VIT — VALORANT Champions Shanghai — Grand Final",
     "channel": "VALORANT Champions Tour",
-    "views": 2754215,
-    "views_per_hour": 258767
+    "views": 2755085,
+    "views_per_hour": 255477
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 1712609,
-    "views_per_hour": 106901
+    "views": 1720091,
+    "views_per_hour": 106435
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | GINGY X CLOAKZY | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1105722,
-    "views_per_hour": 89101
+    "views": 1106235,
+    "views_per_hour": 88145
    },
    {
     "title": "he ate them NEW CHAPTER..",
     "channel": "steak",
-    "views": 1584155,
-    "views_per_hour": 68691
+    "views": 1589114,
+    "views_per_hour": 68488
    },
    {
     "title": "Steal An Egg OWNER Gave Me ADMIN COMMANDS..",
     "channel": "Foltyn",
-    "views": 962780,
-    "views_per_hour": 68669
+    "views": 965602,
+    "views_per_hour": 68187
    },
    {
     "title": "I Played Every Roblox Knockoff To Answer This Question",
     "channel": "Ludwig",
-    "views": 704607,
-    "views_per_hour": 45621
+    "views": 708686,
+    "views_per_hour": 45472
    }
   ],
   "US-music": [
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 12178589,
-    "views_per_hour": 173935
+    "views": 12201886,
+    "views_per_hour": 173919
    },
    {
     "title": "A2O LITE 'NEON' Official Video",
     "channel": "A2O WORLD",
-    "views": 15706481,
-    "views_per_hour": 102314
+    "views": 15713758,
+    "views_per_hour": 102267
    },
    {
     "title": "Anuel AA - Vuelve (Video Oficial)",
     "channel": "Anuel AA",
-    "views": 20484921,
-    "views_per_hour": 93562
+    "views": 20487325,
+    "views_per_hour": 93513
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 5756385,
-    "views_per_hour": 82212
+    "views": 5769520,
+    "views_per_hour": 82234
    },
    {
     "title": "Bulin 47 X Kevin Wai - Dame Hombro (Video Oficial)",
     "channel": "Bulin 47 Oficial",
-    "views": 13981066,
-    "views_per_hour": 56829
+    "views": 13991256,
+    "views_per_hour": 56838
    },
    {
     "title": "Zara Larsson - Blue Moon (Official Music Video)",
     "channel": "ZaraLarssonMusicVEVO",
-    "views": 4858541,
-    "views_per_hour": 53973
+    "views": 4862585,
+    "views_per_hour": 53934
    }
   ],
   "US-sport": [
    {
     "title": "SAVE THE FOOTBALLER BY STOPPING THE DISCS FROM FALLING | WHO WON?😱🙏",
     "channel": "DuoWave ",
-    "views": 74942060,
-    "views_per_hour": 995111
+    "views": 75056682,
+    "views_per_hour": 994777
    },
    {
     "title": "Goal celebration goes HORRIBLY wrong 😭",
     "channel": "John Casterline",
-    "views": 4311270,
-    "views_per_hour": 227962
+    "views": 4325118,
+    "views_per_hour": 227008
    },
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 20210301,
-    "views_per_hour": 213829
+    "views": 20235833,
+    "views_per_hour": 213782
    },
    {
     "title": "Speed got humbled by the kids in backflip 😳 #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 38678449,
-    "views_per_hour": 176925
+    "views": 38683884,
+    "views_per_hour": 176836
    },
    {
     "title": "How is This Even Possible? 😳🥌",
     "channel": "The Ranking Bros",
-    "views": 29404669,
-    "views_per_hour": 155570
+    "views": 29408496,
+    "views_per_hour": 155475
    },
    {
     "title": "The Identical Twins Who Cheated A Race 😬",
     "channel": "Zack D. Films",
-    "views": 22707245,
-    "views_per_hour": 129374
+    "views": 22716061,
+    "views_per_hour": 129321
    }
   ],
   "US-entertainment": [
    {
     "title": "Never say never 😭",
     "channel": "Smirk",
-    "views": 10506075,
-    "views_per_hour": 538528
+    "views": 10584133,
+    "views_per_hour": 538651
    },
    {
     "title": "How Mr. Potato Head Was Invented 🤔",
     "channel": "Zack D. Films",
-    "views": 14365787,
-    "views_per_hour": 503871
+    "views": 14389618,
+    "views_per_hour": 502233
    },
    {
     "title": "the rules are the rules 💀🙏✌️",
     "channel": "SuperCaliver",
-    "views": 7295458,
-    "views_per_hour": 317045
-   },
-   {
-    "title": "WHOS MY CRUSH? 🤫❤️ #roblox #funny #memes #gaming #comedy #challenge",
-    "channel": "nobrainjames",
-    "views": 6021996,
-    "views_per_hour": 256280
+    "views": 7371457,
+    "views_per_hour": 318404
    },
    {
     "title": "Tomorrow is the day!! #shorts",
     "channel": "Katie Feeney",
-    "views": 7773481,
-    "views_per_hour": 252833
+    "views": 7971330,
+    "views_per_hour": 258089
    },
    {
-    "title": "Who sent me this charger💀",
-    "channel": "Nick Wilkins",
-    "views": 4615067,
-    "views_per_hour": 235971
+    "title": "WHOS MY CRUSH? 🤫❤️ #roblox #funny #memes #gaming #comedy #challenge",
+    "channel": "nobrainjames",
+    "views": 6046934,
+    "views_per_hour": 255812
+   },
+   {
+    "title": "Who Can Escape Without getting Crushed 💀",
+    "channel": "Hero DW",
+    "views": 5716490,
+    "views_per_hour": 243700
    }
   ],
   "US-tech": [
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 10251691,
-    "views_per_hour": 305917
+    "views": 10264058,
+    "views_per_hour": 305007
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 10309397,
-    "views_per_hour": 191338
+    "views": 10318844,
+    "views_per_hour": 191015
    },
    {
     "title": "Samsung Galaxy S27 Ultra Cobalt Violet📱🔥#noads #tiktok #usa",
     "channel": "MR Limbo Green",
-    "views": 4787062,
-    "views_per_hour": 99695
+    "views": 4808079,
+    "views_per_hour": 99840
    },
    {
     "title": "I’m running out of Rasberry Pi’s..",
     "channel": "CarterPCs",
-    "views": 10848749,
-    "views_per_hour": 94858
+    "views": 10857530,
+    "views_per_hour": 94818
    },
    {
     "title": "Apple Homeview Impressions: Not Convinced!",
     "channel": "Marques Brownlee",
-    "views": 9871629,
-    "views_per_hour": 82739
+    "views": 9874695,
+    "views_per_hour": 82668
    },
    {
     "title": "What is the BEST app?!📱🤔",
     "channel": "Cam2r",
-    "views": 5682016,
-    "views_per_hour": 79009
+    "views": 5694754,
+    "views_per_hour": 79032
    }
   ]
  },

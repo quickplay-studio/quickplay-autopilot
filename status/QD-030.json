@@ -3,8 +3,75 @@
  "board": "boards/queue/QD-030.json",
  "mode": "schedule",
  "slot": "",
- "rendered": "2026-10-18T20:50:11.200338+00:00",
+ "rendered": "2026-10-18T21:48:44.328546+00:00",
  "title": "Octopus: three hearts and blue blood 🐙",
- "state": "failed",
- "error": "RuntimeError: no usable media for beat: The third pushes it round the rest of th"
+ "media": {
+  "real_shots": 9,
+  "planned_real": 11
+ },
+ "music": "try-to-catch-me",
+ "social_music": "alexrockbeat-playful-560960",
+ "look": {
+  "captions": "punch",
+  "voice": "george_dramatic",
+  "energy": "punchy",
+  "grade": "vivid",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 26.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.28,
+   "title",
+   1
+  ],
+  [
+   3.28,
+   7.46,
+   "cards",
+   1
+  ],
+  [
+   7.46,
+   9.75,
+   "none",
+   1
+  ],
+  [
+   9.75,
+   16.16,
+   "stat",
+   2
+  ],
+  [
+   16.16,
+   18.82,
+   "none",
+   1
+  ],
+  [
+   18.82,
+   22.73,
+   "stat",
+   2
+  ],
+  [
+   22.73,
+   26.37,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: approved in advance, posted only on a day nothing new was written"
+ ],
+ "preview_release": "preview-QD-030",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-93bc7abd379d7d93d72a"
 }

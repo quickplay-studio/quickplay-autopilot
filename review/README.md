@@ -6,10 +6,13 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 ## Needs a look
 
-- **QD-030** Octopus: three hearts and blue blood 🐙: failed. RuntimeError: no usable media for beat: The third pushes it round the rest of th
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+
+## In the queue
+
+- **TEST-S1018** Street Fighter hits cinemas today 🥊 (rendering next)
 
 ## On the channel (latest first)
 
@@ -20,7 +23,7 @@ scheduled · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts
 scheduled · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Sun 18 Oct 22:30 · Tekken 8's next fighter is a manga legend 💪
-scheduled · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
+private · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
 
 ### Sun 18 Oct 21:00 · The formula behind a 14 million view Roblox Short 📈
 public · 12 views · [script](../backlog/QD-023) · [YouTube](https://youtube.com/shorts/qLRXY5tuj8A)

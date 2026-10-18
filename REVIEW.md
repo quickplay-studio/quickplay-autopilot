@@ -38,6 +38,10 @@ explained in plain words with the numbers, logged, and checked a week later. Spe
    - Where viewers leave: one fix (shorter holds on stat cards, quicker reveals, fewer words on screen) in the template
      or in CLAUDE.md's guidance.
    - TikTok and Instagram picks: the rules in CLAUDE.md, from ig_views and tt_views by category.
+   - Volume (Charlie wants the most uploads the data supports): raise daily_limit, slots_per_day and config `runs` by 4
+     when the last week's median views per Short held within 10% as volume rose and YouTube refused no uploads; lower
+     them if views per Short fell 20% or more. Instagram and Facebook targets (`*_target`) follow their own views per
+     Reel the same way; their daily ramp stays as it is.
    Test every template change before keeping it: copy boards/test/TEST-L1.json to boards/queue/TEST-W<MMDD>.json (mode
    "none", `look` set to show the change), push, wait for status/TEST-W<MMDD>.json (about 20 minutes), and open
    review/TEST-W<MMDD>.jpg and review/TEST-W<MMDD>.social.jpg (the TikTok and Instagram layout). If it failed or looks

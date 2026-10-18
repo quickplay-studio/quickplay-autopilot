@@ -1,8 +1,21 @@
 {
- "checked": "2026-10-18T19:55:16+00:00",
+ "checked": "2026-10-18T20:26:08+00:00",
+ "instagram_checked": "2026-10-18T20:26:08+00:00",
  "instagram": {
-  "ok": false,
-  "error": "400 {\"error\":{\"message\":\"API access blocked.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AkV7heAuri9bmr4HJYDilFQ\"}}"
+  "ok": true,
+  "username": "quickplaydaily",
+  "account_type": "MEDIA_CREATOR",
+  "user_id": "17841465022278792",
+  "secret_user_id_matches": true,
+  "publishing_limit": [
+   {
+    "config": {
+     "quota_total": 100,
+     "quota_duration": 86400
+    },
+    "quota_usage": 0
+   }
+  ]
  },
  "tiktok": {
   "ok": true,

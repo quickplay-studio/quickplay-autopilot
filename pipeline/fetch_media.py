@@ -81,6 +81,15 @@ def _match(tags, words):
     want = [w for w in re.findall(r"[a-z]+", words.lower()) if len(w) > 2]
     return sum(w in have or w.rstrip("s") in have for w in want) / max(1, len(want))
 
+JUNK = ("green screen", "greenscreen", "chroma", "blue screen", "alpha channel", "ai generated", "ai-generated",
+        "generated", "transparent background")
+
+def _junk(h, words):
+    """Green-screen plates, AI-generated pictures and (unless asked for) animations look fake on screen."""
+    tags = (h.get("tags") or "").lower()
+    if any(j in tags for j in JUNK): return True
+    return h.get("type") == "animation" and "animat" not in words.lower()
+
 def pixabay(kind, words, used, dark_ok=False):
     """Best on-topic Pixabay item: most query words in its tags, portrait preferred, never near-black, no repeats."""
     key = os.environ.get("PIXABAY_API_KEY")
@@ -91,7 +100,7 @@ def pixabay(kind, words, used, dark_ok=False):
         for rank, h in enumerate(hits):
             v = h["videos"].get("large") or {}
             if not v.get("url") or v.get("width", 0) < 1280: v = h["videos"].get("medium") or {}
-            if h["id"] in used or not v.get("url") or h.get("duration", 0) < 4: continue
+            if h["id"] in used or not v.get("url") or h.get("duration", 0) < 4 or _junk(h, words): continue
             score = _match(h.get("tags"), words) + (0.15 if v.get("height", 0) > v.get("width", 1) else 0) - rank * 0.005
             cands.append((score, h, v))
         for score, h, v in sorted(cands, key=lambda c: -c[0])[:6]:
@@ -102,7 +111,7 @@ def pixabay(kind, words, used, dark_ok=False):
     else:
         hits = _get("https://pixabay.com/api/", params={"key": key, "q": words[:100], "image_type": "photo", "safesearch": "true", "per_page": 40}).json()["hits"]
         cands = [(_match(h.get("tags"), words) + (0.15 if h.get("imageHeight", 0) > h.get("imageWidth", 1) else 0) - r * 0.005, h)
-                 for r, h in enumerate(hits) if h["id"] not in used]
+                 for r, h in enumerate(hits) if h["id"] not in used and not _junk(h, words)]
         for score, h in sorted(cands, key=lambda c: -c[0])[:6]:
             if not dark_ok and _brightness(h["previewURL"]) < 38: continue
             used.add(h["id"])

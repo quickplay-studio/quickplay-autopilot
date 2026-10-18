@@ -74,10 +74,11 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "in reserve (approved)",
  "flags": [
   "reserve: approved in advance, posted only on a day nothing new was written"
  ],
  "preview_release": "preview-QD-032",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-b5ba2373a352d443f0a9"
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-b5ba2373a352d443f0a9",
+ "reserve_approved": "2026-10-18T23:11:48+00:00"
 }

@@ -2,7 +2,7 @@
 
 YouTube checked Sun 18 Oct 23:10 (UK): 2 scheduled, 25 public, 10 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 21:26).
+Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 23:56).
 
 ## Needs a look
 

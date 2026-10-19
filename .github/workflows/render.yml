@@ -131,5 +131,5 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git add -A boards status review
           git commit -q -m "Results from run ${{ github.run_number }}" || exit 0
-          for i in 1 2 3 4 5; do git pull -q --rebase && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

@@ -193,7 +193,8 @@ def caption(st, board, platform="instagram"):
         if h.lower() in seen or h.lower() == "#shorts": continue
         seen.add(h.lower()); tags.append(h)
     tags = tags[:5] if platform == "instagram" else tags[:7] + ["#fyp"]
-    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), " ".join(tags)) if x)
+    yt = CFG.get("crosspost_youtube_line", "") if platform == "instagram" else ""     # YouTube first: point viewers there
+    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags)) if x)
 
 def board_for(st):
     for d in ("done", "ready", "queue", "hold"):

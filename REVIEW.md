@@ -2,7 +2,9 @@
 
 Charlie has given full discretion: change anything the numbers support (what we cover, formats, hooks, titles, length,
 posting times, captions, voice and its speed, camera energy, colour, music, graphics, Instagram and Facebook volume) to
-get the most views and subscribers, as long as the channel rules in CLAUDE.md hold. Every change is data-driven,
+get the most YouTube views and subscribers, as long as the channel rules in CLAUDE.md hold. YouTube comes first (it is the
+platform most likely to pay): judge every change by YouTube numbers; Instagram and Facebook numbers only decide their own
+volume. Every change is data-driven,
 explained in plain words with the numbers, logged, and checked a week later. Spend tokens on judgement, not browsing.
 
 1. `git pull`. Read analytics/insights.md (recipe, drivers, timing, regions, traffic), analytics/drivers.csv,

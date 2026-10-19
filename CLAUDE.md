@@ -18,7 +18,9 @@ Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batc
 - No rendering, no browsing beyond the sources you check, no recap messages.
 
 ## The goal
-Monetisation as soon as possible. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in
+Monetisation as soon as possible, and YouTube comes first (Charlie, 19 October): it is the platform most likely to pay, so
+every choice is made for YouTube views and subscribers; Instagram and Facebook get the same Shorts afterwards and never
+shape what we make or when. The YouTube Partner Program needs 1,000 subscribers and 10 million Shorts views in
 90 days, and the channel must get in before 1 February 2027 (after that, new channels need 20 million). That is roughly
 110,000 views a day, so every Short has to earn its place. Choices follow the data: `analytics/insights.md` opens with
 the Recipe from the data (category mix, and the formats, hooks, titles, lengths and times that beat typical, worked out

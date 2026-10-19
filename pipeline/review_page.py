@@ -18,42 +18,39 @@ def load(p):
     except Exception: return None
 
 def posts_by_day(statuses, now):
-    """One row a day (tomorrow back to 6 days ago, UK dates): Shorts written for it, on YouTube (public and still
-    scheduled, by the time they go public), posted to Instagram and Facebook, failed, and whether all went out."""
+    """One row a day (tomorrow back to 6 days ago, UK dates): Shorts going public on YouTube that day, Reels posted to
+    Instagram and Facebook, against the day's target (daily_limit as it stood that morning, kept in status/targets.json,
+    one fewer on Sundays for the weekly video)."""
     cfg = load(ROOT / "config.json") or {}
     today = now.astimezone(UK).date()
+    aim = lambda d: int(cfg.get("daily_limit", 24)) - (1 if d.weekday() == 6 else 0)
+    tp = ROOT / "status" / "targets.json"
+    targets = load(tp) or {}
+    if str(today) not in targets:
+        targets[str(today)] = aim(today)
+        tp.write_text(json.dumps(dict(sorted(targets.items())[-60:]), indent=0))
     def ukday(ts):
         try: return dt.datetime.fromisoformat(str(ts).replace("Z", "+00:00")).astimezone(UK).date()
         except ValueError: return None
-    written, failed, pub, sch, ig, fb = {}, {}, {}, {}, {}, {}
+    pub, sch, ig, fb = {}, {}, {}, {}
     add = lambda d, k: d.__setitem__(k, d.get(k, 0) + 1)
-    for folder in ("queue", "ready", "done", "failed"):
-        for p in (ROOT / "boards" / folder).glob("QD-*.json"):
-            b = load(p) or {}
-            if b.get("mode") in ("dry", "none", "private"): continue
-            try: day = dt.date.fromisoformat(str(b.get("created")))
-            except ValueError: continue
-            add(written, day)
-            if folder == "failed": add(failed, day)
     for s in statuses:
         if s.get("video") and s.get("publish_at"):
             live = dt.datetime.fromisoformat(s["publish_at"].replace("Z", "+00:00")) <= now
             add(pub if live else sch, ukday(s["publish_at"]))
         for k, d in (("instagram", ig), ("facebook", fb)):
             if isinstance(s.get(k), dict) and s[k].get("at"): add(d, ukday(s[k]["at"]))
-    want = int(cfg.get("daily_limit", 24))
-    rows = ["## Posts by day", "", f"Target: {want} Shorts a day on YouTube (one fewer on Sundays). Instagram and Facebook "
-            "build up to the same over time.", "", "| Day | Written | YouTube | Instagram | Facebook | All out? |",
-            "|---|---|---|---|---|---|"]
+    rows = ["## Posts by day", "", "YouTube counts Shorts by the day they go public. Instagram and Facebook build up to the "
+            "same number over time.", "", "| Day | YouTube | Instagram | Facebook | Target met? |", "|---|---|---|---|---|"]
     for day in [today + dt.timedelta(days=k) for k in range(1, -7, -1)]:
-        w, f, p, s = written.get(day, 0), failed.get(day, 0), pub.get(day, 0), sch.get(day, 0)
-        left = max(w - f - p - s, 0)
-        if day > today: note = f"⏳ {s} scheduled" if s else "⏳ not written yet"
-        elif day == today: note = "✅ all out" if w and not s and not left else f"⏳ {s + left} still to go"
-        else: note = "✅ all out" if w and not left else (f"⚠️ {left} never went out" if left else "⚠️ nothing written")
-        if f: note += f" ({f} failed)"
+        p, s = pub.get(day, 0), sch.get(day, 0)
+        t = targets.get(str(day)) or (aim(day) if day > today else None)
+        if not t: note = "no target then"
+        elif day > today: note = f"⏳ {s} of {t} scheduled"
+        elif day == today: note = "✅ done" if p >= t else f"⏳ {p} of {t} so far" + (f", {s} more scheduled" if s else "")
+        else: note = "✅ all out" if p >= t else f"⚠️ {p} of {t}"
         yt = f"{p} public" + (f", {s} scheduled" if s else "")
-        rows.append(f"| {day:%a} {day.day} {day:%b} | {w} | {yt} | {ig.get(day, 0)} | {fb.get(day, 0)} | {note} |")
+        rows.append(f"| {day:%a} {day.day} {day:%b} | {yt} | {ig.get(day, 0)} | {fb.get(day, 0)} | {note} |")
     return rows + [""]
 
 

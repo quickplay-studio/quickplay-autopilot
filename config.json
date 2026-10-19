@@ -24,6 +24,8 @@
  },
  "first_id": 29,
  "approval": "none",
+ "angle_searches_per_run": 2,
+ "comment_replies_per_day": 10,
  "languages": {"es": {"channel": "Quickplay Daily Español", "voice": "default"}, "pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
  "languages_note": "Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",

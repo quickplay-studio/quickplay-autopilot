@@ -33,7 +33,9 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-        run: python pipeline/analytics.py --fast
+        run: |
+          python pipeline/analytics.py --fast
+          python pipeline/dropoff.py || echo "drop-off analysis failed"
       - run: python pipeline/lab.py || echo "look lab failed"     # new looks to test, once a day
       - run: |
           git config user.name "quickplay-bot"

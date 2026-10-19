@@ -9,6 +9,7 @@ past board. pipeline/validate.py checks it; Gemini fixes what fails (twice at mo
 Boards go to boards/queue for render.yml.
 """
 import csv, datetime as dt, json, os, pathlib, re, sys, urllib.parse
+import requests
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -137,7 +138,7 @@ def plan(breaking=False):
             except Exception: continue
             if b.get("created") == str(day) and not b.get("reserve"): made += 1
     limit = int(CFG.get("daily_limit", 24)) - (1 if day.weekday() == 6 else 0)
-    cap = min(2 if breaking else int((CFG.get("runs") or {}).get(run, 6)), max(0, limit - made))
+    cap = min(share("breaking", 2, 4) if breaking else int((CFG.get("runs") or {}).get(run, 6)), max(0, limit - made))
     if os.environ.get("WRITE_COUNT", "").strip().isdigit(): cap = int(os.environ["WRITE_COUNT"])
     return run, day, cap
 
@@ -318,35 +319,59 @@ def evergreen_packs(n, seen):
     return packs
 
 
-TESTS = {   # each Short tries one of these in turn, until the data names a winner (analytics/drivers.csv, verdict "push")
+TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides, and keeps deciding as it grows
     "hook_type": {"question": "Open with a question (ending in a question mark) that the Short then answers.",
                   "number": "Open with the most surprising number in the facts.",
                   "superlative": "Open with a first, biggest, only or record detail from the facts.",
                   "twist": "Open with a twist: what people would expect, then the surprising truth."},
     "length": {"under 25 s": "Keep it short: 60 to 72 words in total.",
                "35 to 44 s": "Take a little longer: 105 to 120 words in total."},
-    "follow_line": {"with follow line": "End the last beat with one short spoken line asking viewers to subscribe for one "
-                                        "of these every day.",
-                    "no follow line": "No subscribe or follow line."},
+    "ending": {"loop": "End with a line that flows straight back into the first line so the Short loops, and end on the "
+                       "same picture as the first shot. No question and no subscribe line at the end.",
+               "question": "End with a short question viewers can answer in the comments.",
+               "follow line": "End the last beat with one short spoken line asking viewers to subscribe for one of these "
+                              "every day."},
+    "title_search": {"search phrase": "Open the title with one of the search phrases listed below, word for word, if one "
+                                      "fits the story; otherwise with the name people search.",
+                     "curiosity": "Open the title with the name, then the most curious detail; don't copy a search phrase."},
+    "first_frame": {"cover": "Beat 1 shows a title card from the first frame (\"atWord\": 0): 2 to 4 big words naming the "
+                             "subject and the hook, over the subject's photo.",
+                    "photo": "Beat 1 has no graphic: the subject's photo alone fills the first frame."},
+    "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
 }
+NOT_FOR = {"evergreen": {"title_search", "angles"}}     # an evergreen title is the question people search
+RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
 
 
-def test_plan(k):
-    """The style notes for Short number k: every winner the data has found, plus one open test in turn.
-    Returns (the note for the prompt, {test: arm} to record on the board)."""
-    picks, p = {}, ROOT / "analytics" / "drivers.csv"
-    if p.exists():
-        for r in csv.DictReader(p.open()):
-            try: lift = float(r.get("lift") or 0)
-            except ValueError: continue
-            f, v = r.get("feature"), r.get("value")
-            if f in TESTS and v in TESTS[f] and r.get("verdict") == "push" and lift > 1: picks.setdefault(f, v)
-    still = [t for t in TESTS if t not in picks]
-    if still:
+def winners():
+    """{test: arm} for each test where the data has a clear winner (verdict "push", above typical)."""
+    out, p = {}, ROOT / "analytics" / "drivers.csv"
+    if not p.exists(): return out
+    for r in csv.DictReader(p.open()):
+        try: lift = float(r.get("lift") or 0)
+        except ValueError: continue
+        f, v = r.get("feature"), r.get("value")
+        if f in TESTS and v in TESTS[f] and r.get("verdict") == "push" and lift > 1: out.setdefault(f, v)
+    return out
+
+
+def test_plan(k, kind="news"):
+    """The style for Short number k: every winner the data has found, plus one test in turn (an open test, or on every
+    RETEST-th Short a challenger to a winner), plus the comment-replies test on alternate Shorts.
+    Returns (the note for the prompt, {test: arm} recorded on the board for analytics)."""
+    dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
+    won = {t: a for t, a in winners().items() if t in dims}
+    picks, still = dict(won), [t for t in dims if t not in won]
+    if won and k % RETEST == 0:
+        t = list(won)[(k // RETEST) % len(won)]
+        rivals = [a for a in TESTS[t] if a != won[t]]
+        picks[t] = rivals[(k // (RETEST * len(won))) % len(rivals)]
+    elif still:
         t = still[k % len(still)]
         arms = list(TESTS[t])
         picks[t] = arms[(k // len(still)) % len(arms)]
-    note = " ".join(TESTS[t][a] for t, a in picks.items())
+    picks["replies"] = "on" if k % 2 == 0 else "off"
+    note = " ".join(TESTS[t][a] for t, a in picks.items() if t in TESTS and TESTS[t].get(a))
     return (f"STYLE FOR THIS SHORT: {note}" if note else ""), picks
 
 
@@ -373,6 +398,78 @@ def translations(b):
         if isinstance(t, dict) and t.get("title") and t.get("summary"):
             out[lang] = {k: re.sub(r"[<>]", "", clean(str(t[k])))[:100 if k == "title" else 1000] for k in ("title", "summary")}
     return out
+
+
+def suggestions(topic):
+    """What people type into YouTube search about the topic (Google's search suggestions for GB and US)."""
+    out = []
+    for q in dict.fromkeys([topic, " ".join(topic.split()[:2])]):
+        for gl in ("GB", "US"):
+            try:
+                r = requests.get("https://suggestqueries.google.com/complete/search", timeout=10,
+                                 params={"client": "firefox", "ds": "yt", "hl": "en", "gl": gl, "q": q})
+                out += [s for s in r.json()[1] if isinstance(s, str)]
+            except Exception: pass
+        if out: break
+    return list(dict.fromkeys(out))[:8]
+
+
+def angles(topic):
+    """What already works on YouTube for this topic: the most-viewed Shorts of the last 3 days (title, views, hours since
+    posted), so the writer can find a better angle. About 101 units of the YouTube allowance, so a few a run."""
+    try:
+        import youtube as Y
+        yt = Y.client()
+        since = (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        r = yt.search().list(part="snippet", q=topic, type="video", videoDuration="short", order="viewCount",
+                             publishedAfter=since, maxResults=5, relevanceLanguage="en").execute()
+        ids = [it["id"]["videoId"] for it in r.get("items", []) if (it.get("id") or {}).get("videoId")]
+        out = []
+        for it in (yt.videos().list(part="statistics,snippet", id=",".join(ids)).execute().get("items", []) if ids else []):
+            hrs = max(1, (NOW - dt.datetime.fromisoformat(it["snippet"]["publishedAt"].replace("Z", "+00:00"))).total_seconds() / 3600)
+            out.append(f'"{it["snippet"]["title"]}" ({int(it["statistics"].get("viewCount", 0)):,} views in {hrs:.0f} hours)')
+        return out
+    except Exception as e:
+        print("angles:", str(e)[:150]); return []
+
+
+def lift_of(feature, value):
+    """The data's lift for one feature value (analytics/drivers.csv), or None while there are too few Shorts to tell."""
+    p = ROOT / "analytics" / "drivers.csv"
+    if not p.exists(): return None
+    for r in csv.DictReader(p.open()):
+        if r.get("feature") == feature and r.get("value") == value and r.get("verdict") not in (None, "", "too few to tell"):
+            try: return float(r.get("lift") or 0)
+            except ValueError: return None
+    return None
+
+
+def share(kind, base, top):
+    """How many Shorts of a kind to write: more when the data says that kind beats typical, fewer when it trails (never
+    none, so it keeps being measured)."""
+    lift = lift_of("kind", kind)
+    return base if lift is None else max(1, min(top, round(base * min(2.0, max(0.5, lift)))))
+
+
+def dropoff_notes():
+    """Where viewers swipe away (analytics/dropoff.json from dropoff.py): guidance once enough Shorts are measured, which
+    changes as the data does."""
+    try: return json.loads((ROOT / "analytics" / "dropoff.json").read_text()).get("guidance") or []
+    except Exception: return []
+
+
+def shape(b, picks):
+    """Makes the board follow its first-frame test."""
+    beats = b.get("beats") or []
+    if not beats: return
+    v = beats[0].get("visual") or {"type": "none"}
+    if picks.get("first_frame") == "cover":
+        if v.get("type", "none") == "none":
+            words = re.sub(r"[^\w\s'&:]", " ", str((b.get("meta") or {}).get("title", ""))).split(":")[0].split()[:4]
+            if words: beats[0]["visual"] = {"type": "title", "lines": [" ".join(words)], "highlight": [], "atWord": 0}
+        else: beats[0]["visual"]["atWord"] = 0
+    elif picks.get("first_frame") == "photo":
+        beats[0]["visual"] = {"type": "none"}
 
 
 def write_one(p, sid, day, prompt_head, extra=""):
@@ -406,32 +503,44 @@ def main():
     facts = factpack.OUT
     if not facts.exists(): print("no fact packs"); return
     d = json.loads(facts.read_text())
-    breaking = d.get("mode") == "breaking"          # a check between the main runs: only what is spiking, at most 2
+    breaking = d.get("mode") == "breaking"          # a check between the main runs: only what is spiking
     run, day, cap = plan(breaking)
     print(f"{run} run for {day}: {cap} to write")
     if cap <= 0 and (breaking or reserve_count() >= 6): return
     seen, used, follow, up = recent(), day_formats(day), hot(), boosts()
-    moods = list(CFG.get("music_moods") or [])
+    moods, notes = list(CFG.get("music_moods") or []), dropoff_notes()
     head = (RULES % {"moods": moods} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe()
+            + ("\n\nWHERE VIEWERS SWIPE AWAY (from the data)\n- " + "\n- ".join(notes) if notes else "")
             + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + example())
-    out, written, state = ROOT / "boards" / "queue", [], {"n": next_id()}
+    out, written = ROOT / "boards" / "queue", []
+    state = {"n": next_id(), "angles": int(CFG.get("angle_searches_per_run", 2))}
     out.mkdir(parents=True, exist_ok=True)
 
-    def emit(p, note="", reserve=False, fol=None):
+    def emit(p, note="", kind="news", reserve=False, fol=None):
         sid = f"QD-{state['n']:03d}"
-        style, tests = test_plan(state["n"])
-        extra = "\n\n".join(x for x in (
-            (f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the last "
-             f"one ({used[-1]}), and prefer the ones used least.") if used else "", style, note) if x)
+        style, tests = test_plan(state["n"], kind)
+        extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
+                  f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
+        if tests.get("title_search") == "search phrase":
+            sug = suggestions(p["topic"])
+            if sug: extra.append("WHAT PEOPLE TYPE INTO YOUTUBE SEARCH ABOUT THIS: " + "; ".join(sug))
+        if tests.get("angles") == "shown" and state["angles"] > 0 and not breaking:
+            state["angles"] -= 1
+            ang = angles(p["topic"])
+            if ang: extra.append("SHORTS ALREADY GETTING VIEWS ON THIS SUBJECT (learn which angle or question works, then "
+                                 "find a fresher or better one; never copy their wording, footage or script): " + "; ".join(ang))
         try:
-            b, why = write_one(p, sid, day, head, extra)
+            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x))
         except Exception as e:
             b, why = None, f"error: {e}"[:200]
         print(f"{p['topic']}: {why}")
         if not b: return None
+        before = json.dumps(b)
+        shape(b, tests)
+        if validate.check(b)[0]: b = json.loads(before)
+        b.update(kind=kind, test=tests)
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
-        if tests: b["test"] = tests
         tr = translations(b)
         if tr: b["meta"]["translations"] = tr
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
@@ -448,10 +557,10 @@ def main():
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
-        if emit(p, note, fol=fol) and fol: follow.remove(fol)
+        if emit(p, note, "follow-up" if fol else "breaking" if breaking else "news", fol=fol) and fol: follow.remove(fol)
     if not breaking and not factpack.STATE.get("spent"):    # evergreen search Shorts fill spare places and stock the reserve
         spare = max(0, cap - len(written))
-        want = min(3, spare + min(2, max(0, 6 - reserve_count())))
+        want = min(share("evergreen", 3, 6), spare + (2 if reserve_count() < 6 else 0))
         if want:
             try:
                 ever = evergreen_packs(want, seen + [about(b) for b in written])
@@ -459,7 +568,7 @@ def main():
                 ever = []; print("evergreen:", str(e)[:200])
             for p in ever:
                 if factpack.STATE.get("spent"): break
-                if emit(p, EVERGREEN_NOTE, reserve=spare <= 0) and spare > 0: spare -= 1
+                if emit(p, EVERGREEN_NOTE, "evergreen", reserve=spare <= 0) and spare > 0: spare -= 1
     print(f"wrote {len(written)}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
                                          for b in written))
 

@@ -1,23 +1,28 @@
 {
- "updated": "2026-10-19T07:53+00:00",
- "mode": "hourly",
+ "updated": "2026-10-19T08:43+00:00",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-19T06:04+00:00",
+ "full_updated": "2026-10-19T08:43+00:00",
  "youtube": {
   "subscribers": 4,
-  "public_shorts": 27,
-  "views_all_time": 4440,
+  "public_shorts": 28,
+  "views_all_time": 4501,
   "views_last_90_days": 225,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 1940,
+  "views_last_90_days_estimate": 1966,
   "analytics_last_day": "2026-10-16"
  },
  "instagram": {
   "followers": 0,
-  "posts": 1,
+  "posts": 3,
   "insights_error": null
  },
- "tiktok": null,
+ "facebook": {
+  "followers": 0,
+  "page": "Quickplay Daily",
+  "reels": 0,
+  "insights_error": null
+ },
  "ypp": {
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,
@@ -25,15 +30,7 @@
   "days_left": 105,
   "subscribers_pct": 0.4,
   "views_pct": 0.02,
-  "views_needed_per_day": 111090,
+  "views_needed_per_day": 111089,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
- },
- "tiktok_rewards": {
-  "followers_needed": 10000,
-  "views_needed_30_days": 100000,
-  "min_video_seconds": 61
- },
- "audience_errors": [
-  "traffic: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
- ]
+ }
 }

@@ -9,8 +9,8 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Premier League: 10 talking points from the weekend’s action",
-     "url": "https://www.theguardian.com/football/2026/oct/19/premier-league-10-talking-points-from-the-weekends-action",
+     "title": "WSL talking points: pressure mounts on Slegers as Hemp closes on record",
+     "url": "https://www.theguardian.com/football/2026/oct/19/wsl-talking-points-pressure-slegers-arsenal-hemp-assists-record-manchester-city",
      "published": "2026-10-19"
     },
     {
@@ -40,6 +40,12 @@
    "wikipedia": null,
    "articles": [
     {
+     "outlet": "The Hollywood Reporter",
+     "title": "BBC Says James Acaster Complaint Over “Macho Banter” on ‘Celebrity Traitors’ Is “Categorically Untrue”",
+     "url": "https://www.hollywoodreporter.com/tv/tv-news/bbc-james-acaster-romesh-rob-celebrity-traitors-complaint-1236735199/",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "Variety",
      "title": "BBC Denies ‘Celebrity Traitors’ Contender James Acaster Complained Over Competitors’ ‘Macho Banter’: ‘Categorically Untrue’",
      "url": "https://variety.com/2026/tv/global/bbc-celebrity-traitors-james-acaster-complaint-1236916280/",
@@ -56,12 +62,6 @@
      "title": "Miranda's tears, joy and dance moves steal show as deadly boredom sets in on The Celebrity Traitors",
      "url": "https://www.bbc.co.uk/news/articles/cq70pre80gwko?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-17"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Game, set and tache: Carlos Alcaraz joins growing trend for a stylish top lip",
-     "url": "https://www.theguardian.com/fashion/2026/oct/16/game-set-tache-carlos-alcarez-growing-trend-stylish-top-lip",
-     "published": "2026-10-16"
     }
    ]
   },
@@ -111,14 +111,115 @@
    ]
   },
   {
-   "topic": "british royal family",
+   "topic": "sarina wiegman",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sarina_Wiegman",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "England Women boss Wiegman signs new deal through to Euro 2029",
+     "url": "https://www.skysports.com/football/news/12040/13600890/sarina-wiegman-england-women-boss-signs-new-two-year-contract-extension-through-to-end-of-euro-2029",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "England manager Wiegman signs contract extension",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c679plpvellgo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Sarina Wiegman signs contract extension to stay as England women head coach until 2029",
+     "url": "https://www.theguardian.com/football/2026/oct/19/sarina-wiegman-signs-contract-extension-england-women-euro-2029",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "selena gomez",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Selena_Gomez",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Selena Gomez Reveals Vaping Nicotine Changed Her Voice: ‘It’s Not Worth It’",
+     "url": "https://variety.com/2026/tv/news/elena-gomez-vaping-nicotine-changed-voice-1236916270/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Selena Gomez says vaping has affected her voice",
+     "url": "https://www.bbc.co.uk/news/articles/cxly435ym787o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "property",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Property",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Revealed: African island fights offshore gambling network linked to UK family",
+     "url": "https://www.theguardian.com/society/2026/oct/19/revealed-britons-using-an-african-islands-name-to-aid-underground-gambling",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Home sellers cut asking prices on 3,000 properties a day",
+     "url": "https://www.bbc.co.uk/news/articles/c84g13z6xx4eo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "glentoran fc",
    "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Glentoran_F.C.",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Everton legend Ferguson returns to management in Irish League",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cq62yd157rjeo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "What awaits Everton hero Ferguson in shock Glens role?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cwdd832e7gqmo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "british royal family",
+   "signal": "Google Trends GB 2000+",
    "wikipedia": "https://en.wikipedia.org/wiki/British_royal_family",
    "articles": [
     {
      "outlet": "Guardian",
      "title": "Blue for poor, yellow for posh: the London maps exposing centuries of terrible housing",
      "url": "https://www.theguardian.com/artanddesign/2026/oct/19/a-place-to-call-home-senate-house-london-charles-booth-maps-london-housing",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "elina svitolina gael monfils separation",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘What the war has done to me inside’: Ukraine’s Svitolina announces separation from Monfils",
+     "url": "https://www.theguardian.com/sport/2026/oct/19/what-the-war-has-done-to-me-inside-ukraines-svitolina-announces-separation-from-monfils",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Svitolina announces 'difficult' separation from husband Monfils",
+     "url": "https://www.skysports.com/tennis/news/12040/13600883/elina-svitolina-announces-difficult-separation-from-husband-gael-monfils-after-five-years-of-marriage",
      "published": "2026-10-19"
     }
    ]
@@ -149,110 +250,27 @@
    ]
   },
   {
-   "topic": "simpsons apu",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons/Apu_Nahasapeemapetilon",
+   "topic": "julia louis-dreyfus",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Julia_Louis-Dreyfus",
    "articles": [
     {
-     "outlet": "NME",
-     "title": "Apu speaks again on ‘The Simpsons’ after nine years of silence, new voice actor replaces Hank Azaria",
-     "url": "https://www.nme.com/news/tv/apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra-3973488?utm_source=rss&utm_medium=rss&utm_campaign=apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra",
+     "outlet": "Guardian",
+     "title": "Other Desert Cities review – Julia Louis-Dreyfus and Ed Harris shine in timely Broadway revival",
+     "url": "https://www.theguardian.com/stage/2026/oct/19/other-desert-cities-review-julia-louis-dreyfus-ed-harris-broadway",
      "published": "2026-10-19"
     },
     {
      "outlet": "The Hollywood Reporter",
-     "title": "Apu is Back! Veteran Voice Actor Sunil Malhotra Revives ‘The Simpsons’ Character After Nearly 10 Years",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/apu-sunil-malhotra-rthe-simpsons-hank-azaria-1236735125/",
+     "title": "‘Other Desert Cities’ Theater Review: Julia Louis-Dreyfus, Ed Harris and Allison Janney Fail to Make a Once-Timely Play Relevant Again",
+     "url": "https://www.hollywoodreporter.com/lifestyle/arts/other-desert-cities-theater-review-julia-louis-dreyfus-1236734079/",
      "published": "2026-10-19"
     },
     {
-     "outlet": "Polygon",
-     "title": "9 Years Later, The Simpsons' Controversial Character Officially Returns",
-     "url": "https://www.polygon.com/the-simpsons-apu-returns-sunil-malhotra-hank-azaria/",
+     "outlet": "Deadline",
+     "title": "‘Other Desert Cities’ Review: Julia Louis-Dreyfus Gets Seriously Funny For Broadway Debut",
+     "url": "https://deadline.com/2026/10/other-desert-cities-broadway-review-julia-louis-dreyfus-1237165682/",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "‘The Simpsons’ Debuts New Voice for Apu After Nine Years of Silence",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/the-simpsons-apu-sunil-malhotra-new-voice-hank-azaria-1235644520/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "amanda bland",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Amanda_Bland",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Reform MSP quits party to sit as independent",
-     "url": "https://www.bbc.co.uk/news/articles/cq398dgkdg8xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "apple iphone duo sold out",
-   "signal": "Google Trends US 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Engadget",
-     "title": "From the Royole FlexPai to the iPhone Duo: How the modern foldable phone has evolved",
-     "url": "https://www.engadget.com/2286505/how-modern-foldable-phone-evolved-from-royole-flexpai-to-iphone-duo/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "MacRumors",
-     "title": "iPhone Duo is Sold Out for Christmas as Shipping Estimates Slip to 2027",
-     "url": "https://www.macrumors.com/2026/10/16/iphone-duo-sold-out-for-christmas/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "houston weather",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Houston_Weathervane",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "‘I drunkenly sing Wonderwall off-key and awfully’: Rebecca Ferguson’s honest playlist",
-     "url": "https://www.theguardian.com/music/2026/oct/18/rebecca-ferguson-honest-playlist-whitney-houston-the-corrs",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "strands hint today",
-   "signal": "Google Trends US 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Strands Sidekick No. 961",
-     "url": "https://www.nytimes.com/2026/10/19/crosswords/strands-sidekick-961.html",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "meta",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Meta",
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "Meta removes language that raised scraping and AI training concerns",
-     "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
-     "published": "2026-10-17"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "How to dress a tech oligarch: The Social Reckoning’s costume designer on Zuckerberg’s style evolution",
-     "url": "https://www.theguardian.com/fashion/2026/oct/16/social-reckoning-zuckerberg-fashion-costume-design",
-     "published": "2026-10-16"
     }
    ]
   },
@@ -337,12 +355,6 @@
      "published": "2026-10-19"
     },
     {
-     "outlet": "Polygon",
-     "title": "Street Fighter’s best live-action movie yet is now free on streaming",
-     "url": "https://www.polygon.com/street-fighter-1994-streaming-free-tubi-pluto-tv/",
-     "published": "2026-10-15"
-    },
-    {
      "outlet": "IGN",
      "title": "Street Fighter (2026 Movie) Guide",
      "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
@@ -394,6 +406,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Crystal_Lake_(TV_series)",
    "articles": [
     {
+     "outlet": "NME",
+     "title": "‘Crystal Lake’ review: ‘Friday The 13th’ prequel gives Jason’s mum a twisted origin story",
+     "url": "https://www.nme.com/reviews/tv-reviews/crystal-lake-review-linda-cardellini-3973387?utm_source=rss&utm_medium=rss&utm_campaign=crystal-lake-review-linda-cardellini",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "Deadline",
      "title": "‘Crystal Lake’s Gwendolyn Sundstrom On Grace’s Friendship With Jason, “Learning A Lot” From Linda Cardellini & That Killer Twist",
      "url": "https://deadline.com/2026/10/crystal-lake-gwendolyn-sundstrom-killer-twist-1237158527/",
@@ -434,7 +452,7 @@
   },
   {
    "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 497,968/h",
+   "signal": "YouTube GB 495,716/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
    "articles": [
     {
@@ -447,7 +465,7 @@
   },
   {
    "topic": "K/DA",
-   "signal": "YouTube GB 439,317/h",
+   "signal": "YouTube GB 439,569/h",
    "wikipedia": "https://en.wikipedia.org/wiki/K/DA",
    "articles": [
     {
@@ -466,9 +484,15 @@
   },
   {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 317,978/h",
+   "signal": "YouTube GB 312,169/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘Up Again’ Lets Us Peek Behind the Curtain of Elite Figure Skating (Exclusive Trailer)",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/up-again-figure-skating-doc-film-trailer-jihlava-hbo-max-1236735161/",
+     "published": "2026-10-19"
+    },
     {
      "outlet": "Guardian",
      "title": "NAZA directors: 'It's a film about systems of mass killing' – video",
@@ -485,7 +509,7 @@
   },
   {
    "topic": "KAALI HOODIE",
-   "signal": "YouTube GB 196,647/h",
+   "signal": "YouTube GB 195,795/h",
    "wikipedia": null,
    "articles": [
     {
@@ -498,7 +522,7 @@
   },
   {
    "topic": "Something Is Hunting My Dogs...",
-   "signal": "YouTube GB-gaming 98,846/h",
+   "signal": "YouTube GB-gaming 98,205/h",
    "wikipedia": null,
    "articles": [
     {
@@ -517,7 +541,7 @@
   },
   {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 160,778/h",
+   "signal": "YouTube GB-music 160,102/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -536,7 +560,7 @@
   },
   {
    "topic": "Tate McRae",
-   "signal": "YouTube GB-music 77,927/h",
+   "signal": "YouTube GB-music 77,807/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
    "articles": [
     {
@@ -549,7 +573,7 @@
   },
   {
    "topic": "Zara Larsson",
-   "signal": "YouTube GB-music 50,916/h",
+   "signal": "YouTube GB-music 50,787/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": [
     {
@@ -567,21 +591,27 @@
    ]
   },
   {
-   "topic": "little stonham",
+   "topic": "cutremur",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Little_Stonham",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cutie_mark",
    "articles": []
   },
   {
-   "topic": "nuggets",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nuggets",
-   "articles": []
-  },
-  {
-   "topic": "day light savings",
+   "topic": "j. t. realmuto",
    "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Daylight_saving_time",
+   "wikipedia": "https://en.wikipedia.org/wiki/J._T._Realmuto",
+   "articles": []
+  },
+  {
+   "topic": "s&p 500 futures",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/S%26P_500_futures",
+   "articles": []
+  },
+  {
+   "topic": "tiempo de hoy",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tiempo_de_hoy",
    "articles": []
   },
   {
@@ -606,12 +636,6 @@
    "topic": "Abdul El-Sayed",
    "signal": "Wikipedia 97,773 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
-   "articles": []
-  },
-  {
-   "topic": "Anuel AA",
-   "signal": "YouTube US-music 89,601/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }
  ]

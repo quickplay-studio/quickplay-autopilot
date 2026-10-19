@@ -1,9 +1,9 @@
 {
  "date": "2026-10-19",
- "built": "2026-10-19T10:58+00:00",
- "model": "gemini-flash-latest",
+ "built": "2026-10-19T11:41+00:00",
+ "model": "gemini-3.6-flash",
  "errors": [
-  "Street Fighter (2026 film): gemini-flash-latest: 429 {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information o"
+  "sarina wiegman: gemini-2.5-flash: 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use"
  ],
  "topics": [
   {
@@ -11,12 +11,15 @@
    "topic": "Manchester City's perfect start to the season",
    "signal": "Charlie's request",
    "category": "Sport",
-   "what_is_new": "",
-   "hooks": [],
+   "what_is_new": "Lauren Hemp set up two goals in Sunday's 3-2 win against Brighton, bringing her to 51 career WSL assists.",
+   "hooks": [
+    "Lauren Hemp is just three assists away from the WSL all-time record.",
+    "Two assists in 16 minutes pushed Lauren Hemp past 50 WSL assists."
+   ],
    "sources": [
     [
-     "Premier League: 10 talking points from the weekend’s action",
-     "https://www.theguardian.com/football/2026/oct/19/premier-league-10-talking-points-from-the-weekends-action",
+     "WSL talking points: pressure mounts on Slegers as Hemp closes on record",
+     "https://www.theguardian.com/football/2026/oct/19/wsl-talking-points-pressure-slegers-arsenal-hemp-assists-record-manchester-city",
      "Guardian",
      "2026-10-19"
     ],
@@ -28,16 +31,60 @@
     ]
    ],
    "verified": [],
-   "one_source": []
+   "one_source": [
+    {
+     "claim": "Lauren Hemp set up two goals in Sunday's 3-2 win against Brighton to close in on the WSL all time assist record.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Lauren Hemp closed in on the WSL all-time assist record after setting up two goals in Sunday’s 3-2 win against Brighton."
+     }
+    },
+    {
+     "claim": "The 26 year old recorded assists numbers 50 and 51 within the opening 16 minutes of the game by setting up Khadija Shaw twice.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 26-year-old recorded numbers 50 and 51 within the opening 16 minutes of the game by setting up Khadija Shaw twice."
+     }
+    },
+    {
+     "claim": "Lauren Hemp now sits just three assists behind record holder and teammate Beth Mead, who has 54 in total.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "She now sits just three assists behind record holder and teammate Beth Mead, who has 54 in total."
+     }
+    },
+    {
+     "claim": "Lauren Hemp has eight goal contributions for the season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Hemp, who has eight goal contributions for the season, said: “I want to keep improving and I want my whole performance across the game to"
+     }
+    }
+   ],
+   "images": []
   },
   {
    "n": 3,
    "topic": "I'm a Celebrity 2026",
    "signal": "Charlie's request",
-   "category": "Film",
-   "what_is_new": "",
+   "category": "Entertainment",
+   "what_is_new": "The BBC has denied reports that James Acaster made a complaint regarding teasing and macho banter from Romesh Ranganathan and Rob Beckett on The Celebrity Traitors.",
    "hooks": [],
    "sources": [
+    [
+     "BBC Says James Acaster Complaint Over “Macho Banter” on ‘Celebrity Traitors’ Is “Categorically Untrue”",
+     "https://www.hollywoodreporter.com/tv/tv-news/bbc-james-acaster-romesh-rob-celebrity-traitors-complaint-1236735199/",
+     "The Hollywood Reporter",
+     "2026-10-19"
+    ],
     [
      "BBC Denies ‘Celebrity Traitors’ Contender James Acaster Complained Over Competitors’ ‘Macho Banter’: ‘Categorically Untrue’",
      "https://variety.com/2026/tv/global/bbc-celebrity-traitors-james-acaster-complaint-1236916280/",
@@ -55,26 +102,59 @@
      "https://www.bbc.co.uk/news/articles/cq70pre80gwko?at_medium=RSS&at_campaign=rss",
      "BBC",
      "2026-10-17"
-    ],
-    [
-     "Game, set and tache: Carlos Alcaraz joins growing trend for a stylish top lip",
-     "https://www.theguardian.com/fashion/2026/oct/16/game-set-tache-carlos-alcarez-growing-trend-stylish-top-lip",
-     "Guardian",
-     "2026-10-16"
     ]
    ],
-   "verified": [],
-   "one_source": []
+   "verified": [
+    {
+     "claim": "The BBC denied that James Acaster complained about teasing or banter from Romesh Ranganathan and Rob Beckett on the show.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "The BBC has denied that its Celebrity Traitors star James Acaster clashed with fellow comedians Romesh Ranganathan and Rob Beckett during the making of the",
+      "2": "The BBC has denied that “Celebrity Traitors” contestant James Acaster made a complaint about fellow competitors’ teasing and “macho banter,” saying the claims are “categorically",
+      "3": "The BBC has firmly denied that James Acaster complained about the behavior of fellow comedians, Rob Beckett and Romesh Ranganathan, during The Celebrity Traitors."
+     }
+    },
+    {
+     "claim": "The BBC stated that claims of teasing amongst the cast on the show and claims of complaints about teasing are categorically untrue.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "“Claims of teasing amongst the cast on the show and claims of complaints about teasing are categorically untrue.",
+      "2": "“Claims of teasing amongst the cast on the show and claims of complaints about teasing are categorically untrue.",
+      "3": "“Claims of teasing amongst the cast on the show and claims of complaints about teasing are categorically untrue."
+     }
+    },
+    {
+     "claim": "The BBC stated that there were no incidents of that nature and there is no evidence to support the allegations.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "There were no incidents of this nature and there is no evidence to support these allegations.”",
+      "2": "There were no incidents of this nature and there is no evidence to support these allegations.”"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
   },
   {
    "n": 24,
    "topic": "K/DA",
-   "signal": "YouTube GB 439,317/h",
-   "category": "Music",
+   "signal": "YouTube GB 439,569/h",
+   "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Pop/Stars reached 643 million views as of September 2025.",
-    "Logitech released official gaming gear inspired by the band K/DA."
+    "K/DA made history with a platinum certification from the RIAA.",
+    "Logitech teamed up with Riot to release official K/DA gaming gear."
    ],
    "sources": [
     [
@@ -93,16 +173,34 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Logitech announced a line of official gaming accessories in partnership with Riot inspired by the League of Legends band K/DA.",
+     "claim": "Logitech announced a line of gaming gear inspired by the aesthetic of the virtual League of Legends band K/DA.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Logitech made official gaming gear for 'League of Legends' band K/DA"
+      "1": "After the virtual League of Legends K-pop band K/DA announced its comeback and upcoming EP this year, Logitech shared today that it's making a line"
      }
     },
     {
-     "claim": "In 2022 Pop/Stars received a platinum certification from the Recording Industry Association of America.",
+     "claim": "The initial Logitech K/DA lineup includes branded versions of the G733 Lightspeed Wireless RGB headset, G304/305 gaming mouse, and G840 mousepad.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The initial lineup includes branded versions of Logitech's most popular devices, like the G733 Lightspeed Wireless RGB headset, G304/305 gaming mouse and G840 mousepad."
+     }
+    },
+    {
+     "claim": "K/DA is a virtual K-pop girl group consisting of four themed versions of League of Legends characters Ahri, Akali, Evelynn, and Kai'Sa.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "K/DA (/ / kay dee ay)[1] is a virtual K-pop girl group consisting of four themed versions of League of Legends characters Ahri, Akali, Evelynn,"
+     }
+    },
+    {
+     "claim": "In 2022, Pop/Stars was certified platinum by the Recording Industry Association of America, making K/DA and I-dle the first K-pop girl groups in history to achieve this milestone.",
      "sources": [
       2
      ],
@@ -110,18 +208,178 @@
       "2": "In 2022, \"Pop/Stars\" was certified platinum by the Recording Industry Association of America (RIAA), making K/DA and I-dle the first K-pop girl groups in history"
      }
     }
-   ]
+   ],
+   "images": []
+  },
+  {
+   "n": 18,
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 181,850 views",
+   "category": "Film",
+   "what_is_new": "Paramount's Street Fighter led the global box office over the weekend of 16 to 18 October 2026 with 51.1 million dollars.",
+   "hooks": [
+    "Street Fighter led the global box office with 51.1 million dollars!",
+    "Callina Liang ate 12 eggs daily to prepare for Street Fighter!"
+   ],
+   "sources": [
+    [
+     "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "Variety",
+     "2026-10-19"
+    ],
+    [
+     "Street Fighter (2026 Movie) Guide",
+     "https://www.ign.com/wikis/street-fighter-2026-movie",
+     "IGN",
+     "2026-10-15"
+    ],
+    [
+     "Street Fighter (2026 film)",
+     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Street Fighter is directed by Kitao Sakurai.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+      "3": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
+     }
+    },
+    {
+     "claim": "The film is the third live action feature length adaptation based on the Street Fighter video game series by Capcom.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
+      "3": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+     }
+    },
+    {
+     "claim": "Andrew Koji stars as Ryu.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Andrew Koji as Ryu",
+      "3": "- Andrew Koji as Ryu / Dark Ryu"
+     }
+    },
+    {
+     "claim": "Noah Centineo plays Ken Masters.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Noah Centineo as Ken Masters",
+      "3": "- Noah Centineo as Ken Masters"
+     }
+    },
+    {
+     "claim": "Callina Liang features as Chun Li.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Callina Liang as Chun-Li",
+      "3": "- Callina Liang as Chun-Li[5]"
+     }
+    },
+    {
+     "claim": "David Dastmalchian plays M. Bison.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- David Dastmalchian as M. Bison",
+      "3": "- David Dastmalchian as M. Bison"
+     }
+    },
+    {
+     "claim": "Jason Momoa plays Blanka.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Jason Momoa as Blanka",
+      "3": "- Jason Momoa as Blanka"
+     }
+    },
+    {
+     "claim": "Curtis 50 Cent Jackson plays Balrog.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Curtis \"50 Cent\" Jackson as Balrog",
+      "3": "- Curtis \"50 Cent\" Jackson as Balrog"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Street Fighter earned 51.1 million dollars at the global box office to lead the chart.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Only Paramount’s “Street Fighter,” with $51.1 million, earned more."
+     }
+    },
+    {
+     "claim": "Callina Liang ate 12 eggs per day while training for her role as Chun Li.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "She adopted a rigorous bulking diet that involved consuming 12 eggs per day and eating every two hours, which she said made her nauseated."
+     }
+    },
+    {
+     "claim": "Principal photography for the movie began in Australia on 18 August 2025.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Principal photography began in Australia on August 18, 2025, under the working title Punch, w"
+     }
+    },
+    {
+     "claim": "Legendary Entertainment acquired the live action rights to Street Fighter in April 2023.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Legendary Entertainment acquired the live-action film and television rights to Street Fighter in April 2023, by which point the film had entered active development, with"
+     }
+    }
+   ],
+   "images": []
   },
   {
    "n": 28,
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 160,778/h",
+   "signal": "YouTube GB-music 160,102/h",
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Olivia Rodrigo joined forces with Chappell Roan on an Expectations remix.",
-    "Olivia Rodrigo's third studio album reached number 1 on the Billboard 200.",
-    "David Byrne makes a surprise cameo in Olivia Rodrigo's new music video."
+    "Did you know Olivia Rodrigo released a remix with Chappell Roan?",
+    "Olivia Rodrigo signed her record deal back in 2020."
    ],
    "sources": [
     [
@@ -145,7 +403,7 @@
    ],
    "verified": [
     {
-     "claim": "Olivia Rodrigo collaborated with Chappell Roan on a remix of the song Expectations.",
+     "claim": "Olivia Rodrigo collaborated with Chappell Roan on a remix of her song Expectations.",
      "sources": [
       1,
       2
@@ -156,18 +414,7 @@
      }
     },
     {
-     "claim": "Dan Nigro has worked with Olivia Rodrigo as a producer.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Olivia Rodrigo’s new music video for her “Expectations” remix with Chappell Roan is full of fun cameos, including David Byrne as a game-show host and",
-      "3": "On January 8, 2021, she released her debut single, \"Drivers License\", which she co-wrote with producer Dan Nigro."
-     }
-    },
-    {
-     "claim": "Olivia Rodrigo's third studio album is titled You Seem Pretty Sad for a Girl So in Love.",
+     "claim": "The album You Seem Pretty Sad for a Girl So in Love is the third studio album by Olivia Rodrigo.",
      "sources": [
       2,
       3
@@ -180,16 +427,16 @@
    ],
    "one_source": [
     {
-     "claim": "The music video for the Expectations remix features cameos by David Byrne and producer Dan Nigro.",
+     "claim": "Olivia Rodrigo signed with Geffen Records in 2020.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "Olivia Rodrigo’s new music video for her “Expectations” remix with Chappell Roan is full of fun cameos, including David Byrne as a game-show host and"
+      "3": "Rodrigo shifted her focus to music and signed with Geffen Records in 2020."
      }
     },
     {
-     "claim": "Expectations debuted at number 20 on the Billboard Hot 100 in June 2026.",
+     "claim": "The single Expectations debuted at number 20 on the Billboard Hot 100 in June 2026.",
      "sources": [
       2
      ],
@@ -197,197 +444,423 @@
       "2": "“Expectations” has already had its individual moment on the charts, debuting at No. 20 on the Billboard Hot 100 in June 2026."
      }
     }
+   ],
+   "images": [
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
    ]
   },
   {
-   "n": 9,
-   "topic": "simpsons apu",
-   "signal": "Google Trends GB 500+",
+   "n": 15,
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 340,362 views",
    "category": "Film",
-   "what_is_new": "Apu Nahasapeemapetilon spoke on The Simpsons for the first time in nearly a decade on Sunday 18 October 2026, with Sunil Malhotra taking over the voice role.",
+   "what_is_new": "Rajinikanth’s Tamil action comedy sequel Jailer 2 was the second biggest film globally over the 16 to 18 October weekend.",
    "hooks": [
-    "Apu has finally returned to The Simpsons after nine silent years.",
-    "Sunil Malhotra is the brand new voice of Springfield icon Apu.",
-    "Apu makes an unexpected Halloween comeback with a brand new voice actor."
+    "Jailer 2 grossed 31.2 million dollars globally in its opening weekend.",
+    "Rajinikanth is back as Tiger Muthuvel Pandian in Jailer 2.",
+    "Hrithik Roshan joins Rajinikanth in Jailer 2 as Roddy."
    ],
    "sources": [
     [
-     "Apu speaks again on ‘The Simpsons’ after nine years of silence, new voice actor replaces Hank Azaria",
-     "https://www.nme.com/news/tv/apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra-3973488?utm_source=rss&utm_medium=rss&utm_campaign=apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra",
-     "NME",
+     "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "Variety",
      "2026-10-19"
     ],
     [
-     "Apu is Back! Veteran Voice Actor Sunil Malhotra Revives ‘The Simpsons’ Character After Nearly 10 Years",
-     "https://www.hollywoodreporter.com/tv/tv-news/apu-sunil-malhotra-rthe-simpsons-hank-azaria-1236735125/",
-     "The Hollywood Reporter",
-     "2026-10-19"
-    ],
-    [
-     "9 Years Later, The Simpsons' Controversial Character Officially Returns",
-     "https://www.polygon.com/the-simpsons-apu-returns-sunil-malhotra-hank-azaria/",
-     "Polygon",
-     "2026-10-19"
-    ],
-    [
-     "‘The Simpsons’ Debuts New Voice for Apu After Nine Years of Silence",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/the-simpsons-apu-sunil-malhotra-new-voice-hank-azaria-1235644520/",
-     "Rolling Stone",
-     "2026-10-19"
-    ],
-    [
-     "simpsons apu",
-     "https://en.wikipedia.org/wiki/The_Simpsons/Apu_Nahasapeemapetilon",
+     "Jailer 2",
+     "https://en.wikipedia.org/wiki/Jailer_2",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Sunil Malhotra has taken over the role of voicing Apu Nahasapeemapetilon from Hank Azaria.",
+     "claim": "Jailer 2 was written and directed by Nelson Dilipkumar.",
      "sources": [
       1,
-      2,
-      3,
-      4,
-      5
+      2
      ],
      "evidence": {
-      "1": "Apu is now voiced by Sunil Malhotra while Apu’s wife Manjula is played by Janina Gavankar.",
-      "2": "Malhotra takes over the role from Hank Azaria, the legendary Simpsons voice actor who voices many of the show’s characters including Moe Szyslak, Chief Wiggum,",
-      "3": "Sunil Malhotra (The Legend of Vox Machina, Grey's Anatomy) is the new voice of Apu.",
-      "4": "Apu appeared in “The Revengening” with Sunil Malhotra taking over for Hank Azaria, who voiced Apu in the past.",
-      "5": "After his departure, the character would appear occasionally in the show in non-speaking appearances until 2026, when Apu had dialogue in the \"Treehouse of Horror"
+      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
+      "2": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar."
      }
     },
     {
-     "claim": "Apu made his speaking return in the episode The Revengening.",
+     "claim": "Ramya Krishnan, Yogi Babu and Mirnaa reprise their roles in Jailer 2 alongside Rajinikanth.",
      "sources": [
       1,
-      2,
-      3,
-      4,
-      5
+      2
      ],
      "evidence": {
-      "1": "The Halloween special The Revengening sees a masked figure take revenge on the people of Springfield before revealing himself as Apu.",
-      "2": "Apu made his comeback in the season 38 episode, “Treehouse of Horror Presents: The Revengening” that aired on Sunday.",
-      "3": "On Oct. 18, 2026, in the season 38 episode \"The Revengening,\" Apu officially returned to The Simpsons with a new voice actor.",
-      "4": "Apu appeared in “The Revengening” with Sunil Malhotra taking over for Hank Azaria, who voiced Apu in the past.",
-      "5": "After his departure, the character would appear occasionally in the show in non-speaking appearances until 2026, when Apu had dialogue in the \"Treehouse of Horror"
+      "1": "He returns as “Tiger” Muthuvel Pandian, with Ramya Krishnan, Yogi Babu and Mirnaa also reprising their roles.",
+      "2": "A sequel to Jailer (2023), the film stars Rajinikanth, Ramya Krishnan, Yogi Babu, Mirnaa and Rithvik reprising their roles from the predecessor, with S. J."
      }
     },
     {
-     "claim": "Hank Azaria previously decided to stop voicing Apu following Hari Kondabolu's 2017 documentary The Problem with Apu.",
+     "claim": "Actors S. J. Suryah, Mithun Chakraborty, Suraj Venjaramoodu and Vidya Balan joined the cast of Jailer 2.",
      "sources": [
       1,
-      2,
-      3,
-      4,
-      5
+      2
      ],
      "evidence": {
-      "1": "He went on to play the character for 29 seasons until 2017 documentary The Problem With Apu explored the racist stereotypes behind the portrayal.",
-      "2": "The long-simmering controversy culiminated in Hari Kondabolu’s one-hour documentary The Problem With Apu in 2017.",
-      "3": "The Apu controversy began in 2017 with Indian American comedian Hari Kondabolu's documentary The Problem With Apu, which argued that the character's stereotypical portrayal had",
-      "4": "Apu was the subject of 2017 documentary The Problem With Apu, in which comedian Hari Kondabolu discussed the impact the character on people of South",
-      "5": "Hari Kondabolu's documentary The Problem with Apu, released in 2017, criticized the character as a South Asian stereotype."
+      "1": "New to the franchise are Tamil actor S.J. Suryah as Bodhi Kalpak and Bollywood star Vidya Balan as Kaantha. Veteran Bollywood actor Mithun Chakraborty and",
+      "2": "A sequel to Jailer (2023), the film stars Rajinikanth, Ramya Krishnan, Yogi Babu, Mirnaa and Rithvik reprising their roles from the predecessor, with S. J."
      }
     },
     {
-     "claim": "Apu made his last speaking appearance before the hiatus in the 2017 episode The Serfsons.",
+     "claim": "Actors Mohanlal, Shiva Rajkumar and Jackie Shroff make appearances as Mathew, Narasimha and Kamdev.",
      "sources": [
       1,
-      2,
-      4
+      2
      ],
      "evidence": {
-      "1": "During last night’s episode of The Simpsons, Apu returned in a speaking role for the first time since 2017’s The Serfsons.",
-      "2": "Apu made his last speaking appearance in The Simpsons in the season 29 episode “The Serfsons,” which aired in October 2017.",
-      "4": "The character has been but not heard on since the October 2017 episode “The Serfsons” and his new voice was a surprise for fans as"
+      "1": "Malayalam cinema icon Mohanlal and Kannada star Shiva Rajkumar, both of whom made cameos in the first film, return as Mathew and Narasimha, and Bollywood",
+      "2": "Cameo appearances - Mohanlal as Mathew - Shiva Rajkumar as Narasimha - Hrithik Roshan as Roddy - Jackie Shroff as Kamdev"
      }
     },
     {
-     "claim": "Hank Azaria officially confirmed in 2020 that he would no longer voice the character.",
+     "claim": "Jailer 2 was released worldwide on 15 October 2026.",
      "sources": [
       1,
-      2,
-      3,
-      4,
-      5
+      2
      ],
      "evidence": {
-      "1": "Apu disappeared into the background after that and in 2020, Azaria confirmed he’d no longer be voicing the character.",
-      "2": "Though he hadn’t voiced Apu since 2017, Azaria officially confirmed he had withdrawn himself from the role in February 2020.",
-      "3": "In January 2020, Hank Azaria stepped down from voicing one of the most iconic characters on The Simpsons, Kwik-E-Mart owner Apu Nahasapeemapetilon.",
-      "4": "In 2020, Azaria announced he would no longer voice Apu.",
-      "5": "In response to this, Azaria announced in early 2020 that he and the series' producers had agreed that he would resign from the role as"
+      "1": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
+      "2": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
      }
     },
     {
-     "claim": "Janina Gavankar now voices Apu's wife Manjula.",
+     "claim": "Rajinikanth plays the character Tiger Muthuvel Pandian.",
      "sources": [
       1,
-      3,
-      4
+      2
      ],
      "evidence": {
-      "1": "Apu is now voiced by Sunil Malhotra while Apu’s wife Manjula is played by Janina Gavankar.",
-      "3": "At the end of the episode, Apu wakes up in the Kwik-E-Mart next to his wife, Manjula, now voiced by Janina Gavankar (The Morning Show),",
-      "4": "The episode also revealed Janina Gavankar as a new voice for Apu’s wife Majula."
+      "1": "He returns as “Tiger” Muthuvel Pandian, with Ramya Krishnan, Yogi Babu and Mirnaa also reprising their roles.",
+      "2": "Rajinikanth as \"Tiger\" Muthuvel Pandian IPS, a retired jailer"
      }
     },
     {
-     "claim": "Apu first appeared in the episode The Telltale Head.",
+     "claim": "S. J. Suryah plays the character Bodhi Kalpak.",
      "sources": [
       1,
-      5
+      2
      ],
      "evidence": {
-      "1": "Apu was first introduced in 1997 during the episode The Telltale Head, where the Kwik-E-Mart was voiced by Hank Azaria.",
-      "5": "He was voiced by Hank Azaria from 1990 to 2017, and first appeared in the episode \"The Telltale Head\"."
+      "1": "New to the franchise are Tamil actor S.J. Suryah as Bodhi Kalpak and Bollywood star Vidya Balan as Kaantha.",
+      "2": "S. J. Suryah as Bodhi Kalpak"
      }
     },
     {
-     "claim": "Sunil Malhotra stated he would only consider the offer if he could meet showrunner Matt Selman and co executive producer Cesar Mazariegos.",
+     "claim": "Hrithik Roshan plays the character Roddy in a cameo appearance.",
      "sources": [
       1,
-      4
+      2
      ],
      "evidence": {
-      "1": "“I told casting that I’d only consider an offer if I could meet showrunner Matt Selman and co-executive producer Cesar Mazariegos, both of whom gladly",
-      "4": "He added that he didn’t want “to be the butt of the joke” and said he would only consider the role if he could meet"
+      "1": "Hrithik Roshan turns up as Roddy.",
+      "2": "Hrithik Roshan as Roddy"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "In the comeback episode, a mysterious character called Daft Monk reveals himself as Apu after being accidentally nearly killed repeatedly by Springfield residents.",
+     "claim": "Jailer 2 ranked second at the global box office over the 16 to 18 October weekend with 31.2 million dollars.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Indian superstar Rajinikanth’s Tamil-language action comedy “Jailer 2” was the second-biggest film in the world over the Oct. 16–18 weekend, grossing $31.2 million, according to"
+     }
+    },
+    {
+     "claim": "Street Fighter topped the global box office chart with 51.1 million dollars.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Only Paramount’s “Street Fighter,” with $51.1 million, earned more."
+     }
+    },
+    {
+     "claim": "Sun Pictures officially announced the sequel to Jailer in January 2025.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sun Pictures officially announced the sequel to Jailer in January 2025."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 10,
+   "topic": "glentoran fc",
+   "signal": "Google Trends GB 500+",
+   "category": "Sport",
+   "what_is_new": "On 19 October 2026, former Everton striker Duncan Ferguson was named as the new manager of Glentoran on a multi-year contract.",
+   "hooks": [
+    "Duncan Ferguson is the new manager of Glentoran!",
+    "Did you know Glentoran was founded back in 1882?",
+    "Glentoran were the first UK team to win a European trophy!"
+   ],
+   "sources": [
+    [
+     "Everton legend Ferguson returns to management in Irish League",
+     "https://www.bbc.co.uk/sport/football/articles/cq62yd157rjeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "What awaits Everton hero Ferguson in shock Glens role?",
+     "https://www.bbc.co.uk/sport/football/articles/cwdd832e7gqmo?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-18"
+    ],
+    [
+     "glentoran fc",
+     "https://en.wikipedia.org/wiki/Glentoran_F.C.",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Duncan Ferguson has managed Forest Green Rovers and Inverness Caledonian Thistle.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "In recent years, he has managed Forest Green Rovers and Inverness Caledonian Thistle.",
+      "2": "After leaving Merseyside following the departure of Frank Lampard in 2022, managerial roles at Forest Green Rovers and Inverness Caledonian Thistle were hardly considered a"
+     }
+    },
+    {
+     "claim": "Duncan Ferguson served as assistant manager at Everton under Carlo Ancelotti and Rafael Benitez.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Ferguson's coaching career to date includes being assistant manager at Everton under renowned managers Carlo Ancelotti and Rafael Benitez, and also two spells as caretaker",
+      "2": "Ferguson, after all, will have been the only applicant with spells as an assistant to the likes of Carlo Ancelotti, Rafa Benitez and Ronald Koeman"
+     }
+    },
+    {
+     "claim": "Glentoran have won 23 league titles.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Owner Ali Shams Pour arrived a decade after the late Alan McDonald delivered the most recent of the side's 23 Gibson Cups.",
+      "3": "In 1894, Glentoran won the first of its 23 league titles."
+     }
+    },
+    {
+     "claim": "Duncan Ferguson played for Dundee United, Newcastle United, Rangers and Everton, and won seven caps for Scotland.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The 54-year-old, who also played for Dundee United and Newcastle United and won seven caps for Scotland, will take up the reins at the east",
+      "2": "A pivot towards Everton legend Ferguson, who also had spells with Rangers and Newcastle United, was not, as they say, on anyone's bingo card."
+     }
+    },
+    {
+     "claim": "Declan Devine parted company with Glentoran in September.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Ferguson's surprise appointment follows the departure of Declan Devine as manager of the Irish League outfit in September.",
+      "2": "When the east Belfast outfit parted company with Declan Devine on 14 September, the simple solution to the early-season vacancy appeared to be a reunion"
+     }
+    },
+    {
+     "claim": "Glentoran won the County Antrim Shield in the 2024-25 season.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The former Derry City and Bohemians boss guided the club to a County Antrim Shield success in the 2024-25 season, their first trophy triumph since",
+      "2": "That brought about Devine's appointment with the County Antrim Shield triumph of January 2025 a high the club could not build upon."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Glentoran won their most recent league title in 2009.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Some Oval regulars may well suggest that the club have tried just about everything else in their quest for a first league title since 2009."
+     }
+    },
+    {
+     "claim": "Gary Bollan has been named as Glentoran's assistant manager.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "His former Dundee United team-mate Gary Bollan, with whom he worked at Inverness, has been named as assistant manager."
+     }
+    },
+    {
+     "claim": "Glentoran was founded in 1882 by workers from the Harland & Wolff shipyard.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "A mysterious character called Daft Monk is accidentally nearly killed repeatedly by the citizens of Springfield."
+      "3": "Glentoran was founded in 1882 by the workers of the Protestant-dominated Harland & Wolff shipyard, and draws much of its identity from its industrial roots"
      }
     },
     {
-     "claim": "Apu holds a doctorate from the Springfield Heights Institute of Technology after graduating first in his class at the Calcutta Technical Institute.",
+     "claim": "Roy Coyle won 16 trophies with Glentoran as manager.",
      "sources": [
-      5
+      3
      ],
      "evidence": {
-      "5": "He graduated first in his class of seven million at 'Caltech' – Calcutta Technical Institute – going on to earn his doctorate at the Springfield"
-     }
-    },
-    {
-     "claim": "In 1985, Apu joined Homer Simpson, Barney Gumble and Principal Seymour Skinner in the barbershop quartet The Be Sharps.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "In 1985, Apu was a member of the barbershop quartet The Be Sharps, along with Homer Simpson, Barney Gumble, and Principal Seymour Skinner."
+      "3": "Roy Coyle won 16 trophies with Glentoran and is the club's most successful manager in the club's history."
      }
     }
+   ],
+   "images": []
+  },
+  {
+   "n": 29,
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 77,807/h",
+   "category": "Music",
+   "what_is_new": "Tate McRae attended the Victoria’s Secret Fashion Show at Sony Pictures Studios in Culver City, Calif. on Oct. 18, 2026.",
+   "hooks": [
+    "Tate McRae attended the Victoria’s Secret Fashion Show in California.",
+    "Tate McRae topped the US Billboard 200 album chart in 2025."
+   ],
+   "sources": [
+    [
+     "Victoria’s Secret Fashion Show: See Red Carpet and Backstage Photos of Models, Megan Thee Stallion and Kobe Bryant’s Daughter",
+     "https://www.hollywoodreporter.com/gallery/victorias-secret-fashion-show-2026-red-carpet-backstage-photos-models-1236735003/",
+     "The Hollywood Reporter",
+     "2026-10-19"
+    ],
+    [
+     "Tate McRae",
+     "https://en.wikipedia.org/wiki/Tate_McRae",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Tate McRae attended the Victoria’s Secret Fashion Show at Sony Pictures Studios in Culver City, Calif. on Oct. 18, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Tate McRae Tate McRae attends the Victoria’s Secret Fashion Show at Sony Pictures Studios in Culver City, Calif. on Oct. 18, 2026."
+     }
+    },
+    {
+     "claim": "Tate Rosner McRae was born in Calgary, Alberta, on Canada Day, 2003.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Tate Rosner McRae was born in Calgary, Alberta, on Canada Day, 2003, the daughter of Tanja Rosner, a German dance instructor, and Todd McRae, a"
+     }
+    },
+    {
+     "claim": "In 2025, Tate McRae topped the US Billboard 200 with her third studio album, So Close to What.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 2025, she topped the US Billboard 200 with her third studio album, So Close to What, and scored her first US Billboard Hot 100"
+     }
+    },
+    {
+     "claim": "Tate McRae took part in the thirteenth season of American television show So You Think You Can Dance in June 2016.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In June 2016, she took part in the thirteenth season of American television show So You Think You Can Dance."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Tate_McRae_in_Manila_01_(cropped)_2.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail_unscaled"
+   ]
+  },
+  {
+   "n": 30,
+   "topic": "Zara Larsson",
+   "signal": "YouTube GB-music 50,787/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Zara Larsson topped the Billboard Global 200 with PinkPantheress in 2026.",
+    "Zara Larsson released her fifth studio album Midnight Sun in 2025.",
+    "Zara Larsson won the Swedish talent competition Talang at age 10."
+   ],
+   "sources": [
+    [
+     "Zara Larsson Transforms Into a Fairy, a Mermaid, and More in ‘Blue Moon’ Video",
+     "https://www.rollingstone.com/music/music-news/zara-larsson-blue-moon-video-1235643152/",
+     "Rolling Stone",
+     "2026-10-15"
+    ],
+    [
+     "Zara Larsson",
+     "https://en.wikipedia.org/wiki/Zara_Larsson",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Zara Larsson released her fifth studio album named Midnight Sun.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "“Blue Moon” is the fourth single from her fifth album, last year’s Midnight Sun, following “Pretty Ugly,” “Crush,” and the title track.",
+      "2": "In 2025, she released her fifth studio album, Midnight Sun, to widespread critical acclaim."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Zara Larsson sprouts wings to become a fairy in her Blue Moon music video.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "She later sprouts wings to become a fairy and transforms into a mermaid."
+     }
+    },
+    {
+     "claim": "Zara Larsson made her acting debut in the 2024 Swedish Netflix drama A Part of You.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "She also made her acting debut in the Swedish Netflix drama A Part of You (2024)."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Zara_Larsson_Midnight_Sun_European_Tour_(cropped)_(cropped).jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail_unscaled"
    ]
   }
  ]

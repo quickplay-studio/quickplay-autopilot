@@ -19,11 +19,23 @@ def hear(path):
 def words(s):
     return [w for w in re.sub(r"[^a-z' ]", " ", s.lower()).split() if w]
 
+_DICT = None
+def known(w):
+    """Whether the recogniser's dictionary has the word. Names it doesn't know (Momoa, Akuma, Centineo) can never be
+    heard, so counting them made name-heavy beats fail the check however clearly they were spoken."""
+    global _DICT
+    try:
+        if _DICT is None: _DICT = Decoder(samprate=16000)
+        return _DICT.lookup_word(w) is not None
+    except Exception:
+        return True
+
 def recall(script, heard):
-    want = [w for w in words(script) if w not in STOP and len(w) > 2]
+    want = [w for w in words(script) if w not in STOP and len(w) > 2 and known(w)]
+    if not want: return 1.0, []
     got = set(words(heard))
     hit = [w for w in want if w in got or w.rstrip("s") in got or (w + "s") in got]
-    return round(len(hit) / max(1, len(want)), 2), [w for w in want if w not in hit]
+    return round(len(hit) / len(want), 2), [w for w in want if w not in hit]
 
 if __name__ == "__main__":
     # usage: qa_asr.py file.wav "script text" [file.wav "script" ...]

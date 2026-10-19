@@ -1,0 +1,9 @@
+{
+ "id": "TEST-W1019",
+ "board": "boards/queue/TEST-W1019.json",
+ "mode": "reject",
+ "slot": "",
+ "rendered": "2026-10-19T11:01:52.894629+00:00",
+ "state": "failed (board rejected)",
+ "error": "look.captions: one of ['clean']; look.energy: one of ['steady']"
+}

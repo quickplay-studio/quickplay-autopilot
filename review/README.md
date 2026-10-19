@@ -10,6 +10,7 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+- **TEST-W1019** : failed (board rejected). look.captions: one of ['clean']; look.energy: one of ['steady']
 
 ## On the channel (latest first)
 
@@ -32,7 +33,7 @@ scheduled · 24 s · music: after-sunset · [script](../boards/done/QD-038.json)
 ![QD-038](QD-038.jpg)
 
 ### Mon 19 Oct 12:00 · Lindsay Lohan is reuniting with her Mean Girls director 🎬
-scheduled · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
+private · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Mon 19 Oct 11:30 · Why is a marathon 26.2 miles? 🏃
 public · 9 views · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)

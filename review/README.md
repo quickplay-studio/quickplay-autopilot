@@ -24,7 +24,7 @@ scheduled · 23 s · music: in-battery · [script](../boards/done/QD-041.json) �
 scheduled · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
-scheduled · 30 s · music: f16 · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
+private · 30 s · music: f16 · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
 
 ![QD-042](QD-042.jpg)
 

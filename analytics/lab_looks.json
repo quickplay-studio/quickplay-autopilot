@@ -1,0 +1,96 @@
+{
+ "options": {
+  "captions": {
+   "lab-captions-1019": {
+    "desc": "68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel",
+    "class": "lab",
+    "group": 4,
+    "cap": {
+     "size": "68px",
+     "top": "1290px",
+     "weight": "600",
+     "on": "#FFFFFF",
+     "box": "transparent",
+     "pad": "0"
+    },
+    "lab": true,
+    "parent": "clean",
+    "born": "2026-10-19"
+   }
+  },
+  "voice": {
+   "lab-voice-1019": {
+    "desc": "British male, 3.15 words a second",
+    "voice": "F2",
+    "wps": 3.15,
+    "lab": true,
+    "parent": "george",
+    "born": "2026-10-19"
+   }
+  },
+  "energy": {
+   "lab-energy-1019": {
+    "desc": "camera motion 0.7, punch-ins 0.05",
+    "motion": 0.7,
+    "punch": 0.05,
+    "beat_punches": false,
+    "lab": true,
+    "parent": "steady",
+    "born": "2026-10-19"
+   }
+  },
+  "grade": {
+   "lab-grade-1019": {
+    "desc": "contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0",
+    "filter": "contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0)",
+    "vignette": 0.0,
+    "lab": true,
+    "parent": "natural",
+    "born": "2026-10-19"
+   }
+  },
+  "opening": {
+   "lab-opening-1019": {
+    "desc": "the picture alone for 1 word, then the hook's card",
+    "reveal_word": 1,
+    "lab": true,
+    "parent": "graphic_first",
+    "born": "2026-10-19"
+   }
+  }
+ },
+ "retired": {},
+ "log": [
+  {
+   "day": "2026-10-19",
+   "dimension": "captions",
+   "change": "testing lab-captions-1019: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel",
+   "why": "one or two settings changed from the best so far, clean"
+  },
+  {
+   "day": "2026-10-19",
+   "dimension": "voice",
+   "change": "testing lab-voice-1019: British male, 3.15 words a second",
+   "why": "one or two settings changed from the best so far, george"
+  },
+  {
+   "day": "2026-10-19",
+   "dimension": "energy",
+   "change": "testing lab-energy-1019: camera motion 0.7, punch-ins 0.05",
+   "why": "one or two settings changed from the best so far, steady"
+  },
+  {
+   "day": "2026-10-19",
+   "dimension": "grade",
+   "change": "testing lab-grade-1019: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0",
+   "why": "one or two settings changed from the best so far, natural"
+  },
+  {
+   "day": "2026-10-19",
+   "dimension": "opening",
+   "change": "testing lab-opening-1019: the picture alone for 1 word, then the hook's card",
+   "why": "one or two settings changed from the best so far, graphic_first"
+  }
+ ],
+ "day": "2026-10-19"
+}

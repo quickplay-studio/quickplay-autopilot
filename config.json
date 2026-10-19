@@ -35,7 +35,7 @@
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
  "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (07:30 to 22:50 every 40 minutes until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "background": {
-  "enabled": false,
+  "enabled": true,
   "reuse_days": 7,
   "clip_seconds": [8, 15],
   "min_px": 720,
@@ -43,6 +43,7 @@
   "target_luma": 0.27,
   "min_luma": 0.05,
   "max_gain": 2.0,
+  "knee": 105,
   "fade": 0.6,
   "frame_w": 540,
   "frame_h": 960,
@@ -50,7 +51,7 @@
   "pixabay": true,
   "nasa": true
  },
- "background_note": "The video behind every Short (pipeline/background.py), 19 October. A board lists 2 to 4 stock searches in \"background\"; plan.py picks one clip per search (Pexels first, then Pixabay, NASA for a nasa: search; never a clip used in the last reuse_days days), render3 blurs (blur) and darkens (target_luma is the average brightness 0 to 1; a clip darker than min_luma is refused, a dim one is lifted at most max_gain times), cross-fades (fade seconds) and plays them under everything, about 8 to 15 seconds each (clip_seconds). Photos then sit on top as cards; real video of the subject still plays full screen. enabled false: only boards with \"bgvideo\": true get it (test boards). A board with \"bgvideo\": false never does. Needs the PEXELS_API_KEY and PIXABAY_API_KEY secrets; with neither, or no clip found, a Short renders the old full-screen way.",
+ "background_note": "The video behind every Short (pipeline/background.py), 19 October. A board lists 2 to 4 stock searches in \"background\"; plan.py picks one clip per search (Pexels first, then Pixabay, NASA for a nasa: search; never a clip used in the last reuse_days days), render3 blurs (blur) and darkens (target_luma is the average brightness 0 to 1; a clip darker than min_luma is refused, a dim one is lifted at most max_gain times; brightness above knee, 0 to 255, is squeezed so bright spots never wash out the captions), cross-fades (fade seconds) and plays them under everything, about 8 to 15 seconds each (clip_seconds). Photos then sit on top as cards; real video of the subject still plays full screen. enabled true (since the 19 October test renders): every Short gets it unless its board says \"bgvideo\": false; with false, only boards with \"bgvideo\": true do (test boards). Needs the PEXELS_API_KEY and PIXABAY_API_KEY secrets; with neither, or no clip found, a Short renders the old full-screen way.",
  "tiktok_mode": "off",
  "tiktok_max_age_hours": 24,
  "tiktok_note": "off (Charlie, 19 Oct 2026): TikTok blocked every post as spam and its Creator Rewards only pay for videos over a minute, so nothing goes there. inbox: the day's 5 TikTok picks land in the TikTok phone app as drafts once scheduled, and Charlie posts them with the captions from his TikTok queue page; manual: he uploads them himself; direct: posts by itself (needs TikTok's review).",

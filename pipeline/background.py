@@ -26,7 +26,7 @@ WORD = re.compile(r"[^\W_][\w'-]*")
 SEARCH = re.compile(r"(?:nasa:)?[^\W_][\w'-]*(?: [^\W_][\w'-]*){1,3}")      # what validate.py accepts: 2 to 4 plain words
 
 DEFAULTS = {"enabled": False, "reuse_days": 7, "clip_seconds": [8, 15], "min_px": 720, "blur": 13, "target_luma": 0.27,
-            "min_luma": 0.05, "max_gain": 2.0, "fade": 0.6, "frame_w": 540, "frame_h": 960, "pexels": True, "pixabay": True, "nasa": True}
+            "min_luma": 0.05, "max_gain": 2.0, "knee": 105, "fade": 0.6, "frame_w": 540, "frame_h": 960, "pexels": True, "pixabay": True, "nasa": True}
 
 # used when a board lists fewer than 2 usable searches: the world of its category
 FALLBACK = {
@@ -396,6 +396,8 @@ def build(clips, T, dest, st, fps=25):
     dest = pathlib.Path(dest); dest.mkdir(parents=True, exist_ok=True)
     for old in dest.glob("*.jpg"): old.unlink()
     cmd, parts = ["ffmpeg", "-y", "-v", "error"], []
+    k = int(st.get("knee") or 0)       # highlights above the knee are squeezed to 40%: a white moon or a lamp must not wash out the badge and captions
+    knee = f"lutyuv=y='if(lt(val,{k}),val,{k}+(val-{k})*0.4)'," if k else ""
     for i, c in enumerate(clips):
         path = HERE / c["file"]
         gain = max(0.35, min(float(st.get("max_gain", 2.0)), float(st["target_luma"]) / max(0.03, float(c.get("luma") or 0.4))))
@@ -403,7 +405,7 @@ def build(clips, T, dest, st, fps=25):
         if (c.get("d") or 0) - ss < L + 0.3: cmd += ["-stream_loop", "-1"]
         cmd += ["-ss", f"{ss:.2f}", "-t", f"{L + 0.3:.3f}", "-i", str(path)]
         parts.append(f"[{i}:v]fps={fps},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
-                     f"gblur=sigma={float(st['blur'])},lutyuv=y='clip(val*{gain:.3f},16,235)',eq=saturation=0.9,"
+                     f"gblur=sigma={float(st['blur'])},lutyuv=y='clip(val*{gain:.3f},16,235)',{knee}eq=saturation=0.9,"
                      f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[v{i}]")
     last = "v0"
     for i in range(1, n):

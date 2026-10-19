@@ -176,6 +176,8 @@ in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.
   not shots: they never count towards the stock limit below. Photos then sit on top of the video as cards (rounded
   corners, soft shadow, slow push-in); real video of the subject (`nasa:`, Commons video, trailer moments) still plays
   full screen. `bgvideo`: false leaves the video off for one board (config.json `background.enabled` is the switch for all).
+  When a Short has no video behind it, or a provider was skipped, `status/<id>.json` `background_notes` says why (a missing
+  PEXELS_API_KEY secret, nothing matched, a clip refused as too dark or too small).
 - `beats`: one per sentence or two, 55 to 125 words in total (aim for 70 to 110).
   - `say`: the narration. `cap`: only if captions must differ in spelling, same word count as `say`.
   - `visual`: {"type": "none"} or a graphic:

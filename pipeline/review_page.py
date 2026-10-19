@@ -89,10 +89,13 @@ def main():
                           "and paste it into the FB_PAGE_TOKEN secret.", ""]
 
     lines += posts_by_day(statuses, now)
-    problems = [s for s in statuses if "fail" in s.get("state", "") or "not scheduled" in s.get("state", "")]
+    problems = [s for s in statuses if ("fail" in s.get("state", "") or "not scheduled" in s.get("state", ""))
+                and not s["id"].startswith("TEST-") and s.get("mode") not in ("dry", "none")]     # test renders never need a look
     flagged = channel.get("flagged", [])
     if problems or flagged or any(s.get(k) for s in statuses for k in ("instagram_error", "facebook_error", "social_error")):
-        lines += ["## Needs a look", ""]
+        lines += ["## Needs a look", "", "Nothing here needs approving (approval is off): a failed Short is skipped and the next one "
+                  "takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the "
+                  "quickplay skill.", ""]
         for s in problems:
             lines.append(f"- **{s['id']}** {s.get('title') or ''}: {s['state']}. {s.get('error', '')}".rstrip())
         for s in statuses:

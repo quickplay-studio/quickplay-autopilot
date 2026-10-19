@@ -132,7 +132,7 @@ def models(key):
     return STATE["models"]
 
 
-def gemini(prompt, schema, timeout=100):
+def gemini(prompt, schema=None, timeout=100, temperature=0.1):
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
@@ -141,8 +141,9 @@ def gemini(prompt, schema, timeout=100):
     if not todo: STATE["spent"] = True; raise RuntimeError("every Gemini model's free quota is used up for now")
     for model in todo:
         for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
-            body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
-                    "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json", "responseSchema": schema, **think}}
+            gen = {"temperature": temperature, "responseMimeType": "application/json", **think}
+            if schema: gen["responseSchema"] = schema
+            body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": gen}
             for attempt in range(3):
                 try:
                     r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},

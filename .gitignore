@@ -11,6 +11,7 @@ results/
 *.wav
 !pipeline/voices/*.wav
 *.mp3
+!review/voices/*.mp3
 *.safetensors
 __pycache__/
 .cache/

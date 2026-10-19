@@ -1,5 +1,10 @@
 # Quickplay daily script run
 
+Since 19 October GitHub writes the Shorts itself (Charlie, to save his Claude allowance): pipeline/writer.py has Gemini
+write boards from the fact packs after every trends run (.github/workflows/write.yml), validates them and starts the
+render. The Claude runs are off; this file is for a session Charlie starts by hand, and writer.py's prompt follows the
+same rules (change both together).
+
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
 posts them to Instagram and Facebook automatically (TikTok is off since 19 October). Three sessions a day (numbers
 in config.json `runs`): 20:50 UK writes the first part of TOMORROW (its boards get `created` = tomorrow and tomorrow's

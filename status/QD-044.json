@@ -72,11 +72,20 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "scheduled",
  "flags": [
   "render: beat 1 reused a nearby picture (commons-search:Hrithik Roshan: no Commons image named 'Hrithik Roshan')",
   "render: beat 4 reused a nearby picture (commons-search:Ramya Krishnan: no Commons image named 'Ramya Krishnan')"
  ],
- "preview_release": "preview-QD-044",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-8cefbf0b78566488b092"
+ "approved": "2026-10-19T12:44:33+00:00",
+ "uploaded_at": "2026-10-19T12:44:33Z",
+ "video": "r99IfJk-afM",
+ "url": "https://youtube.com/shorts/r99IfJk-afM",
+ "publish_at": "2026-10-19T14:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T14:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "preview-QD-044"
 }

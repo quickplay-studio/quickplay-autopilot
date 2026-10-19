@@ -72,11 +72,20 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "scheduled",
  "flags": [
   "render: beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')",
   "render: beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')"
  ],
- "preview_release": "preview-QD-043",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-a8db34a4c3c1550b7a9a"
+ "approved": "2026-10-19T12:44:33+00:00",
+ "uploaded_at": "2026-10-19T12:44:33Z",
+ "video": "n6j8dxF9M7o",
+ "url": "https://youtube.com/shorts/n6j8dxF9M7o",
+ "publish_at": "2026-10-19T13:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T13:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "preview-QD-043"
 }

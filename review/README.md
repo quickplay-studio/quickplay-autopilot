@@ -15,24 +15,6 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-W1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 
-## Waiting for your approval
-
-Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
-
-### QD-043 · K/DA tease a comeback for 20 October 💜
-awaiting approval · 31 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-a8db34a4c3c1550b7a9a)
-- render: beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')
-- render: beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')
-
-![QD-043](QD-043.jpg)
-
-### QD-044 · Jailer 2's cameos: Hrithik Roshan and more 🎬
-awaiting approval · 30 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-8cefbf0b78566488b092)
-- render: beat 1 reused a nearby picture (commons-search:Hrithik Roshan: no Commons image named 'Hrithik Roshan')
-- render: beat 4 reused a nearby picture (commons-search:Ramya Krishnan: no Commons image named 'Ramya Krishnan')
-
-![QD-044](QD-044.jpg)
-
 ## In the queue
 
 - **QD-048** Lauren Hemp chases all-time WSL record ⚽ (rendering next)

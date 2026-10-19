@@ -3,14 +3,14 @@
  "board": "boards/queue/QD-037.json",
  "mode": "schedule",
  "slot": "2026-10-19T09:10:00Z",
- "rendered": "2026-10-19T06:07:37.533389+00:00",
+ "rendered": "2026-10-19T06:41:38.604855+00:00",
  "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
  "media": {
   "real_shots": 6,
   "planned_real": 8
  },
- "music": "paradigm",
- "social_music": "cool-powerful-hard-rock-243776",
+ "music": "rise-of-the-machines",
+ "social_music": "sport-mortals-566578",
  "look": {
   "captions": "pop",
   "voice": "george_dramatic",
@@ -19,12 +19,10 @@
   "opening": "image_first"
  },
  "qa": {
-  "duration": 30.0,
+  "duration": 30.4,
   "wps": 3.0,
-  "weak_beats": [
-   2
-  ],
-  "size_mb": 20.8
+  "weak_beats": [],
+  "size_mb": 21.1
  },
  "timeline": [
   [
@@ -41,35 +39,44 @@
   ],
   [
    10.24,
-   14.63,
+   14.96,
    "none",
    2
   ],
   [
-   14.63,
-   16.95,
+   14.96,
+   17.29,
    "none",
    1
   ],
   [
-   16.95,
-   21.21,
+   17.29,
+   21.54,
    "versus",
    1
   ],
   [
-   21.21,
-   27.39,
+   21.54,
+   27.72,
    "bars",
    2
   ],
   [
-   27.39,
-   30.03,
+   27.72,
+   30.36,
    "none",
    1
   ]
  ],
- "state": "failed",
- "error": "RuntimeError: checks failed: unclear narration in beats [2]"
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T06:54:48Z",
+ "video": "qd2DA8vMbGI",
+ "url": "https://youtube.com/shorts/qd2DA8vMbGI",
+ "publish_at": "2026-10-19T09:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T09:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-037"
 }

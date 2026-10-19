@@ -9,7 +9,7 @@ You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads
 posts them to Instagram and Facebook automatically (TikTok is off since 19 October). Three sessions a day (numbers
 in config.json `runs`): 20:50 UK writes the first part of TOMORROW (its boards get `created` = tomorrow and tomorrow's
 first slots, from 07:30); 06:50 writes most of the day from fresh trends; 12:50 writes the rest from what broke since.
-Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batch lets him clear them before bed.
+Approval is "none" (Charlie, 19 October): nothing waits for him; the writer skips topics it would have flagged.
 
 ## Spend as few tokens as possible
 - Work in as few turns as you can: send independent tool calls together (all the day's WebFetch calls for every topic in
@@ -139,7 +139,7 @@ one waits for Charlie's "reserve approve all" (a line starting with "reserve" in
      energy, grade, opening) with its hook line and any flags, then
      "Reply: approve all, approve all except QD-0xx, or reject QD-0xx." Attach the preview videos:
      `python pipeline/previews.py <scratch dir>` downloads them, then send the files.
-   - approval "flagged" (now): the same for flagged Shorts only, with their previews; if nothing is flagged, one line:
+   - approval "flagged": the same for flagged Shorts only, with their previews; if nothing is flagged, one line:
      how many Shorts went out and when the first and last go public.
    - If analytics/decisions.csv has lines dated since yesterday, end with one line per change (at most 3):
      "From the data: <change>, because <why>."

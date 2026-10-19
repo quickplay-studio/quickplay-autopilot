@@ -144,6 +144,7 @@ def audience(query, vids, ours):
         try: return query(*a, **kw)
         except Exception as e: errs.append(f"{label}: {type(e).__name__}: {str(e)[:120]}"); return []
     out["channel"]["countries"] = q("countries", "views,averageViewPercentage", dimensions="country", sort="-views", maxResults=25)
+    out["channel"]["country_subs"] = q("country subscribers", "subscribersGained", dimensions="country", sort="-subscribersGained", maxResults=25)
     out["channel"]["traffic"] = q("traffic", "views", dimensions="insightTrafficSourceType", sort="-views")
     out["channel"]["demographics"] = q("demographics", "viewerPercentage", dimensions="ageGroup,gender")
     cats = {}
@@ -156,7 +157,7 @@ def audience(query, vids, ours):
             "countries": q(f"{cat} countries", "views", dimensions="country", filters=f, sort="-views", maxResults=10),
             "traffic": q(f"{cat} traffic", "views", dimensions="insightTrafficSourceType", filters=f, sort="-views"),
             "demographics": q(f"{cat} demographics", "viewerPercentage", dimensions="ageGroup,gender", filters=f)}
-    for row in out["channel"]["countries"][:5]:
+    for row in out["channel"]["countries"][:8]:
         cc = row.get("country")
         for r in q(f"videos in {cc}", "views", dimensions="video", filters=f"country=={cc}", sort="-views", maxResults=200):
             out["short_countries"].setdefault(r["video"], {})[cc] = r.get("views", 0)
@@ -389,6 +390,63 @@ TRAFFIC = {"SHORTS": "Shorts feed", "YT_SEARCH": "YouTube search", "SUBSCRIBER":
            "PLAYLIST": "Playlists", "NOTIFICATION": "Notifications", "YT_OTHER_PAGE": "Other YouTube pages",
            "BROWSE": "Browse features", "HASHTAGS": "Hashtag pages", "SOUND_PAGE": "Sound pages", "END_SCREEN": "End screens"}
 
+REGION_DIMS = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook"), ("length", "Length")]
+EARLY_REGION_VIEWS = 1000
+
+def regions(rows, aud):
+    """What works where: for each of our 8 biggest countries, its share of views, how much of each Short its viewers watch,
+    the subscribers it brought, and the category, format, hook style and length that get it the most views per Short
+    against that country's own average (shrunk towards 1x for small samples, so one lucky Short can't decide it).
+    From each Short's views per country (YouTube lists the top 8 countries' Shorts). Returns csv rows and insight lines."""
+    ch = (aud or {}).get("channel") or {}
+    countries = ch.get("countries") or []
+    if not countries: return [], []
+    tot = sum(float(r.get("views") or 0) for r in countries) or 1
+    subs = {r.get("country"): int(float(r.get("subscribersGained") or 0)) for r in ch.get("country_subs") or []}
+    per = (aud or {}).get("short_countries") or {}
+    measured = [r for r in rows if utc(r.get("posted")) and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
+    def length(r):
+        x = num(r.get("seconds"))
+        return "" if x is None else ("under 30 s" if x < 30 else "30 to 40 s" if x <= 40 else "over 40 s")
+    out, lines = [], []
+    for c in countries[:8]:
+        cc, views = c.get("country"), float(c.get("views") or 0)
+        vals = [(r, float((per.get(r["youtube_url"].rsplit("/", 1)[-1]) or {}).get(cc, 0))) for r in measured]
+        base = sum(v for _, v in vals) / len(vals) if vals else 0
+        best = {}
+        for dim, label in REGION_DIMS:
+            groups = {}
+            for r, v in vals:
+                key = length(r) if dim == "length" else str(r.get(dim) or "")
+                if key and key != "legacy": groups.setdefault(key, []).append(v)
+            scored = []
+            for key, vs in sorted(groups.items()):
+                lift = round(((sum(vs) + 3 * base) / (len(vs) + 3)) / base, 2) if base else 1.0
+                out.append({"kind": "fit", "country": cc, "dimension": label, "value": key, "shorts": len(vs),
+                            "views": int(sum(vs)), "views_per_short": round(sum(vs) / len(vs), 1), "lift": lift})
+                scored.append((lift, len(vs), key))
+            top = max((x for x in scored if x[1] >= 2), default=None)
+            best[dim] = f"{top[2]} ({top[0]:.1f}x, {top[1]} Shorts)" if top and top[0] >= 1.1 else ""
+        r_top, v_top = max(vals, key=lambda x: x[1], default=(None, 0))
+        avg = c.get("averageViewPercentage")
+        row = {"kind": "country", "country": cc, "views": int(views), "share_pct": round(100 * views / tot, 1),
+               "avg_viewed_pct": round(float(avg), 1) if avg is not None else "", "subs_gained": subs.get(cc, ""),
+               "shorts_seen": sum(1 for _, v in vals if v > 0), "best_category": best["category"], "best_format": best["format"],
+               "best_hook": best["hook_type"], "best_length": best["length"],
+               "top_short": f"{r_top['title']} ({int(v_top)} views)" if r_top and v_top > 0 else ""}
+        out.append(row)
+        bits = [b for b in (f"category {best['category']}" if best["category"] else "", f"format {best['format']}" if best["format"] else "",
+                            f"hook {best['hook_type']}" if best["hook_type"] else "") if b]
+        lines.append(f"- {cc}: {row['share_pct']:g}% of views" + (f", {row['avg_viewed_pct']:g}% watched on average" if avg is not None else "")
+                     + (f", {row['subs_gained']} subscribers" if row["subs_gained"] != "" else "")
+                     + (". Does best with " + "; ".join(bits) if bits else ". No clear winner yet")
+                     + (f". Top Short: {row['top_short']}." if row["top_short"] else "."))
+    head = [f"## Regions: who watches and what works for them ({int(tot):,} views with a country; YouTube only names countries with enough viewers)"]
+    if tot < EARLY_REGION_VIEWS:
+        head.append(f"Early: under {EARLY_REGION_VIEWS:,} views with a country, so these are hints, not rules. A country's viewers "
+                    "often come for one Short about their own star; check the top Short before reading it as a taste.")
+    return out, head + lines + [""]
+
 def write_audience(aud):
     if not aud: return
     def shares(rows, key, val):
@@ -590,6 +648,10 @@ def main():
         (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
         slot_scores(rows)
         write_audience(aud)
+        reg_rows, aud["_regions"] = regions(rows, aud)
+        write_csv(OUT / "regions.csv", reg_rows, ["kind", "country", "views", "share_pct", "avg_viewed_pct", "subs_gained", "shorts_seen",
+                                                  "best_category", "best_format", "best_hook", "best_length", "top_short",
+                                                  "dimension", "value", "shorts", "views_per_short", "lift"])
         table, _base = DRV.analyse(rows)
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
@@ -754,6 +816,7 @@ def insights(rows, s, table=None, recipe=None, aud=None):
         L += [""]
     L += ["## When people watch"] + timing_lines() + [""]
     L += ["## Where viewers are and how they find us"] + audience_lines(aud) + [""]
+    L += (aud or {}).get("_regions") or []
     aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() > 24 * 3600]
     if not aged:
         L += ["Not enough history yet: no Short has been public for 24 hours."]

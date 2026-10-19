@@ -31,10 +31,6 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
 
-## In the queue
-
-- **TEST-BG1** Why we only ever see one side of the Moon 🌕 (rendering next)
-
 ## On the channel (latest first)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃

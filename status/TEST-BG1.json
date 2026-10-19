@@ -1,0 +1,98 @@
+{
+ "id": "TEST-BG1",
+ "board": "boards/queue/TEST-BG1.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-19T16:54:20.582707+00:00",
+ "title": "Why we only ever see one side of the Moon 🌕",
+ "background_notes": [
+  "pixabay:7093 skipped: nearly black"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "horizons",
+ "social_music": "technology-tech-technology-499582",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 35.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.0
+ },
+ "timeline": [
+  [
+   0.06,
+   4.21,
+   "title",
+   1
+  ],
+  [
+   4.21,
+   6.69,
+   "none",
+   1
+  ],
+  [
+   6.69,
+   12.87,
+   "cards",
+   1
+  ],
+  [
+   12.87,
+   19.3,
+   "none",
+   1
+  ],
+  [
+   19.3,
+   21.47,
+   "title",
+   1
+  ],
+  [
+   21.47,
+   29.11,
+   "none",
+   2
+  ],
+  [
+   29.11,
+   35.02,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "ARC-20201026-AAV3272-SOFIA-MoonWater-Shareable-NASAWeb",
+   "q": "moon surface",
+   "t0": 0.0,
+   "t1": 12.07
+  },
+  {
+   "p": "pixabay",
+   "id": "55990",
+   "q": "galaxy stars space",
+   "t0": 11.47,
+   "t1": 23.55
+  },
+  {
+   "p": "nasa",
+   "id": "Looking to Power Surface Exploration on the Moon on This Week @NASA – June 24, 2022",
+   "q": "moon surface",
+   "t0": 22.95,
+   "t1": 35.02
+  }
+ ],
+ "state": "rendered (no upload)"
+}

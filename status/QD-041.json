@@ -65,10 +65,19 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "scheduled",
  "flags": [
   "render: beat 6 reused a nearby picture (pixabay:video:cyberpunk city night: no usable Pixabay video for 'cyberpunk city night')"
  ],
- "preview_release": "preview-QD-041",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5a28f127e3cec32354c5"
+ "approved": "2026-10-19T07:11:47+00:00",
+ "uploaded_at": "2026-10-19T07:11:47Z",
+ "video": "f0oVI53kIwA",
+ "url": "https://youtube.com/shorts/f0oVI53kIwA",
+ "publish_at": "2026-10-19T13:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T13:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "preview-QD-041"
 }

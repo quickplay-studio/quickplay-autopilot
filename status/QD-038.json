@@ -62,11 +62,20 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "scheduled",
  "flags": [
   "writer: Validator flagged 'killed': it is only the song title Video Killed the Radio Star, fine in context",
   "check: check these words are fine in context: ['killed']"
  ],
- "preview_release": "preview-QD-038",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-301700b007dbc9b39a73"
+ "approved": "2026-10-19T07:11:47+00:00",
+ "uploaded_at": "2026-10-19T07:11:47Z",
+ "video": "OG2eR87ZGL8",
+ "url": "https://youtube.com/shorts/OG2eR87ZGL8",
+ "publish_at": "2026-10-19T11:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T11:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "preview-QD-038"
 }

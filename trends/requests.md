@@ -5,22 +5,22 @@ sources confirm them (a request is a lead, not a source). Then fill the rest of 
 When a request is covered, move it to Done with the Short's id; when it can't be, move it to Skipped with the reason.
 
 ## Requested Sunday 18 October (for Monday 19 October)
-- GTA 6 launch trailer (Rockstar; about 550,000 views an hour on YouTube): a fresh angle, not a recap
-- VALORANT Champions Shanghai grand final, LOUD vs VIT, and the new agent Hush
-- Olivia Rodrigo, "expectations" featuring Chappell Roan (new official video)
 - A2O MAY, "Bad Habits Tonite" (new K-pop video)
 - Manchester City's perfect start to the season
-- Arsenal at Nottingham Forest (Saka, Rice)
 - Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United
 - I'm a Celebrity 2026: who is confirmed (confirmed names only, never rumours)
 - The latest SpaceX launch
-- Apple HomeView, Apple's new smart home display (TechCrunch, The Verge and MacRumors have covered it; research.json has the links)
 - Gen Alpha slang: the French fries emoji
 - The "Call the Police" trend on TikTok and Instagram
 
 ## Done
+- GTA 6 launch trailer: QD-036 (Justice's Flower In A Hurricane and the GTA VI album)
+- VALORANT Champions grand final, LOUD vs VIT: QD-035 (no two sources on Hush yet)
+- Olivia Rodrigo, expectations featuring Chappell Roan: QD-034
+- Arsenal at Nottingham Forest: QD-037
 
 ## Skipped
+- Apple HomeView: covered in the last 14 days (QD-012)
 - Barbara Thornhill, new press secretary: politics
 - Pope Leo XIV's lung surgery: health
 - Fandom templates casting characters in religious roles: religion

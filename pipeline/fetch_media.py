@@ -7,6 +7,12 @@ Shot "src" forms (anything else is treated as a local path under pipeline/):
                                   near-black clips skipped unless the shot has "dark": true, no repeats within a Short
   pixabay:image:<words>           a Pixabay photo (fallback only: they are 1280 px wide)
   url:<https://...>               a direct file from an official press or media page; set "credit" and "source" on the shot
+  page:<https://...>              the share picture (og:image) of an official page: a publisher, studio, label, team or
+                                  agency's own press image (news outlets' pages are refused: their photos are licensed)
+  openverse:<words>               a Creative Commons photo via Openverse (Flickr and others) for people and events Commons
+                                  lacks: only licences that allow commercial use and changes, the name must be in the title
+  nasa:video:<words>              NASA's image and video library (public domain), for space: real launches, missions, crews
+  nasa:image:<words>
 
 A video shot with "cuts": "auto" gets scene-cut detection, so trailer clips never cross a cut (render3 scene_fit).
 usage: python fetch_media.py <board.json> <resolved.json>
@@ -130,6 +136,68 @@ def pixabay(kind, words, used, dark_ok=False):
             return h["largeImageURL"], f"Photo: {h['user']} / Pixabay", h["pageURL"]
     raise RuntimeError(f"no usable Pixabay {kind} for '{words}'")
 
+NASA = "https://images-api.nasa.gov"
+NOT_NASA = re.compile(r"©|copyright|getty|reuters|ap photo|afp|spacex", re.I)
+
+def nasa(kind, words, used):
+    """NASA's image and video library (public domain): the best match whose title and keywords hold the query's longer
+    words; anything credited to an agency or company outside NASA is skipped (it may be copyrighted)."""
+    media = "video" if kind == "video" else "image"
+    items = _get(f"{NASA}/search", params={"q": words, "media_type": media}).json().get("collection", {}).get("items", [])
+    want = [_stem(w) for w in words.split() if len(w) > 3]
+    for it in items[:30]:
+        d = (it.get("data") or [{}])[0]; nid = d.get("nasa_id")
+        text = _fold(" ".join([d.get("title", "")] + list(d.get("keywords") or [])))
+        if not nid or nid in used or NOT_NASA.search(" ".join(str(d.get(k, "")) for k in ("description", "photographer", "secondary_creator"))):
+            continue
+        if want and sum(w in text for w in want) < min(2, len(want)): continue
+        hrefs = [h.replace("http://", "https://") for h in _get(it["href"]).json() if isinstance(h, str)]
+        prefs = ("~large.mp4", "~medium.mp4", "~orig.mp4") if media == "video" else ("~large.jpg", "~orig.jpg", "~medium.jpg")
+        pick = next((h for suf in prefs for h in hrefs if h.endswith(suf)), None)
+        if not pick: continue
+        used.add(nid)
+        return pick, f"{'Video' if media == 'video' else 'Photo'}: NASA ({d.get('center') or 'NASA'})", f"https://images.nasa.gov/details/{urllib.parse.quote(nid)}"
+    raise RuntimeError(f"no NASA {media} for '{words}'")
+
+def openverse(words, used):
+    """A Creative Commons photo via Openverse for people and events Commons lacks. Only CC0, public domain, BY and BY-SA
+    (commercial use and changes allowed); the title or tags must hold every capitalised word (the name); no politicians."""
+    res = _get("https://api.openverse.org/v1/images/", params={"q": words, "license_type": "commercial,modification",
+               "page_size": 30, "mature": "false"}).json().get("results", [])
+    caps = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)]
+    for it in res:
+        text = _fold(it.get("title", "")) + " " + " ".join(_fold(t.get("name", "")) for t in it.get("tags") or [])
+        if it.get("id") in used or POLITICAL.search(text) or (it.get("width") or 0) < 1000: continue
+        if caps and not all(c in text for c in caps): continue
+        used.add(it["id"])
+        lic = {"cc0": "CC0", "pdm": "public domain"}.get(it.get("license"), f"CC {str(it.get('license', '')).upper()} {it.get('license_version', '')}".strip())
+        return it["url"], f"Photo: {it.get('creator') or 'Unknown'}, {lic}, via {str(it.get('source') or 'Openverse').title()}", \
+            it.get("foreign_landing_url") or it["url"]
+    raise RuntimeError(f"no Openverse photo named '{words}'")
+
+# news and media outlets: their pictures are agency or staff photos licensed to them, never ours to reuse
+OUTLETS = ("bbc.co.uk", "bbc.com", "theguardian.com", "reuters.com", "apnews.com", "theverge.com", "ign.com", "eurogamer.net",
+           "variety.com", "billboard.com", "espn.com", "espn.co.uk", "skysports.com", "sky.com", "techcrunch.com", "engadget.com",
+           "arstechnica.com", "wired.com", "polygon.com", "pcgamer.com", "gamespot.com", "nme.com", "rollingstone.com",
+           "hollywoodreporter.com", "deadline.com", "space.com", "independent.co.uk", "telegraph.co.uk", "standard.co.uk",
+           "nytimes.com", "washingtonpost.com", "cnn.com", "nbcnews.com", "cbsnews.com", "abcnews.go.com", "usatoday.com",
+           "nature.com", "newscientist.com", "nationalgeographic.com", "premierleague.com", "uefa.com", "nfl.com", "spacex.com",
+           "dailymail.co.uk", "mirror.co.uk", "thesun.co.uk", "metro.co.uk", "people.com", "tmz.com", "kotaku.com")
+
+def page_image(url):
+    """The share picture (og:image) of an official page, with the site's name as credit."""
+    host = urllib.parse.urlparse(url).netloc.lower().removeprefix("www.")
+    if any(host == o or host.endswith("." + o) for o in OUTLETS):
+        raise RuntimeError(f"{host} is a news outlet: its pictures are licensed, not ours to use")
+    page = requests.get(url, headers={**UA, "User-Agent": "Mozilla/5.0 (compatible; QuickplayAutopilot/1.0)"}, timeout=60).text
+    meta = dict((k.lower(), html.unescape(v)) for k, v in re.findall(
+        r'<meta[^>]+?(?:property|name)=["\'](og:image|twitter:image|og:site_name)["\'][^>]+?content=["\']([^"\']+)', page, re.I))
+    meta.update((k.lower(), html.unescape(v)) for v, k in re.findall(
+        r'<meta[^>]+?content=["\']([^"\']+)["\'][^>]+?(?:property|name)=["\'](og:image|twitter:image|og:site_name)', page, re.I) if k.lower() not in meta)
+    img = meta.get("og:image") or meta.get("twitter:image")
+    if not img: raise RuntimeError("no share picture on the page")
+    return urllib.parse.urljoin(url, img), f"Image: {meta.get('og:site_name') or host}", url
+
 def scene_cuts(path):
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", str(path), "-vf", "scale=320:-2,select='gt(scene,0.12)',showinfo",
                         "-an", "-f", "null", "-"], capture_output=True, text=True)
@@ -151,6 +219,9 @@ def resolve(sb):
                 elif kind == "commons-search": url, credit, source = commons_search(rest)
                 elif kind == "pixabay": url, credit, source = pixabay(*rest.split(":", 1), used, dark_ok=bool(shot.get("dark")))
                 elif kind == "url": url, credit, source = rest, shot.get("credit", sb.get("credit", "")), shot.get("source", rest)
+                elif kind == "page": url, credit, source = page_image(rest)
+                elif kind == "openverse": url, credit, source = openverse(rest, used)
+                elif kind == "nasa": url, credit, source = nasa(*rest.split(":", 1), used)
                 else: continue   # already local
                 stem = f"{n:02d}_" + hashlib.sha1(url.encode()).hexdigest()[:8]; n += 1
                 f = download(url, d, stem)

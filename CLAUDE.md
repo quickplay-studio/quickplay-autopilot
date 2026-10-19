@@ -72,7 +72,7 @@ from every Short against Shorts posted around the same time) and the drivers beh
   in this session. Cite the exact page that states it, never a homepage or a search page.
 - Fact packs (GitHub, about an hour before each run): `python pipeline/factpack.py show` lists the day's topics (numbers
   match trends/research.json) with how many facts are verified; `python pipeline/factpack.py show <n> <n>` prints the
-  packs you pick. A verified fact was found word for word in two of the day's reputable pages (one Wikipedia page at
+  packs you pick, with real pictures of the subject found on its pages. A verified fact was found word for word in two of the day's reputable pages (one Wikipedia page at
   most) with its numbers matching, so it counts as checked: copy the pack's sources into `meta.sources` in the same
   order (add any you open yourself after them) and cite each fact by those numbers. One-source facts, and anything not
   in a pack, still need two sources you open yourself.
@@ -166,12 +166,18 @@ in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.
     `focus` [x, y], `move` in|out|left|right|up|down|still, `label` {t, s} on a person's first appearance, `tin` flash for a reveal,
     `start` (seconds into a video), `cuts`: "auto" for trailers, `zoom`, `eq` ("gamma=1.5" to lift dark footage),
     `dark`: true only if a dark image is intended (otherwise near-black stock is skipped).
-- `src` forms: `commons:File:Exact_name.jpg`, `commons-search:words`, `pixabay:video:words`, `pixabay:image:words`,
-  `url:https://...` (official press or media files only, with `credit` and `source` on the shot).
-  Real images of the subject come first: official press and media-kit images (`url:`) and Commons photos of the people
-  (`commons-search:Full Name`, with a `label` the first time each person appears). Several shots of each person.
-  Stock is for mood and b-roll only, never the whole Short.
-  Stock queries: 2 to 4 concrete words that would be tags on the clip ("full moon night sky", not "mysterious feeling").
+- `src` forms: `commons:File:Exact_name.jpg`, `commons-search:words`, `openverse:Full Name` (Creative Commons photos
+  Commons lacks), `page:https://...` (an official page's own share picture; news outlets' pages are refused),
+  `nasa:video:words`, `nasa:image:words` (NASA's public-domain library), `url:https://...` (official press or media
+  files only, with `credit` and `source` on the shot), and stock: `pixabay:video:words`, `pixabay:image:words`.
+- Real footage first (Charlie, 19 October): at least 4 in 5 shots show the actual subject, and always the hook. In order:
+  the fact pack's real pictures, Commons photos of the people (`commons-search:Full Name`, with a `label` the first
+  time each person appears; several shots of each person), `openverse:Full Name` when Commons has none, official press
+  images and trailer files (`url:`) or an official page's picture (`page:`), and NASA photos and footage for space.
+  Film and TV: official stills and short trailer moments under our narration, never long clips (a studio can claim the
+  Short). Sport: photos of the players, managers and grounds, never match footage. Stock only when nothing real exists
+  for that beat, at most 1 in 5 shots (the validator warns past that); stock queries are 2 to 4 concrete words that would
+  be tags on the clip ("full moon night sky", not "mysterious feeling").
 - `meta`: {title (under 50 characters ideally, 70 at most, one emoji at the end), summary (1 to 2 sentences),
   hashtags (8 to 15, most relevant first; #Shorts is added for YouTube), tags (5 to 15 search phrases),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.

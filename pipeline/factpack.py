@@ -14,7 +14,7 @@ says it. A fact counts as verified only when those sentences are found word for 
 Wikipedia page at most) and every number in the fact appears in them; a fact found in one page only is listed apart.
 Evidence is kept to 25 words a page, with the outlet and link.
 """
-import datetime as dt, json, os, pathlib, re, sys, time, unicodedata
+import datetime as dt, json, os, pathlib, re, sys, time, unicodedata, urllib.parse
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config.json").read_text())
@@ -79,13 +79,33 @@ def digits(s):
 
 
 def page_text(url, wiki=False):
+    """The page's readable text, and its share picture (og:image) for the image ideas."""
     import requests, trafilatura
     try:
         r = requests.get(url, headers=WIKI_UA if wiki else BROWSER, timeout=20)
-        if not r.ok: return ""
-        return (trafilatura.extract(r.text, include_comments=False, include_tables=False, favor_precision=True) or "")[:PAGE_CHARS]
+        if not r.ok: return "", ""
+        m = re.search(r'<meta[^>]+?property=["\']og:image["\'][^>]+?content=["\']([^"\']+)', r.text, re.I) or \
+            re.search(r'<meta[^>]+?content=["\']([^"\']+)["\'][^>]+?property=["\']og:image["\']', r.text, re.I)
+        txt = (trafilatura.extract(r.text, include_comments=False, include_tables=False, favor_precision=True) or "")[:PAGE_CHARS]
+        return txt, (m.group(1) if m else "")
     except Exception:
-        return ""
+        return "", ""
+
+
+def image_ideas(got):
+    """Real pictures of the subject found on the pages: a Wikipedia page's lead photo when it lives on Commons (free
+    licence), and an official page's own share picture. News outlets' pictures are licensed, so never offered."""
+    import fetch_media
+    ideas = []
+    for s, txt, img in got:
+        if not img: continue
+        host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*", r"\1", s["url"].lower()))
+        if s["kind"] == "wikipedia":
+            m = re.search(r"/wikipedia/commons/(?:thumb/)?[0-9a-f]/[0-9a-f]{2}/([^/]+)", img)
+            if m: ideas.append(f"commons:File:{urllib.parse.unquote(m.group(1))}")
+        elif not any(host == o or host.endswith("." + o) for o in fetch_media.OUTLETS):
+            ideas.append(f"page:{s['url']}")
+    return list(dict.fromkeys(ideas))
 
 
 def models(key):
@@ -193,8 +213,10 @@ def build():
         if t.get("wikipedia"): srcs.append({"outlet": "Wikipedia", "title": t["topic"], "url": t["wikipedia"], "published": "", "kind": "wikipedia"})
         got = []
         for s in srcs:
-            txt = page_text(s["url"], wiki=s["kind"] == "wikipedia")
-            if len(txt) >= 400: got.append((s, txt))
+            txt, img = page_text(s["url"], wiki=s["kind"] == "wikipedia")
+            if len(txt) >= 400: got.append((s, txt, img))
+        images = image_ideas(got)
+        got = [(s, txt) for s, txt, img in got]
         if len(got) < 2: continue                     # two pages are the least a fact can be checked against
         pages = "\n\n".join(f"[{k}] {s['outlet']} · {s['title']} · {s.get('published') or 'undated'} · {s['url']}\n{txt}"
                             for k, (s, txt) in enumerate(got, 1))
@@ -209,7 +231,7 @@ def build():
         packs.append({"n": i, "topic": t["topic"], "signal": t.get("signal", ""), "category": cat,
                       "what_is_new": ans.get("what_is_new", ""), "hooks": hooks,
                       "sources": [[s["title"], s["url"], s["outlet"], s.get("published", "")] for s, _ in got],
-                      "verified": verified, "one_source": single})
+                      "verified": verified, "one_source": single, "images": images})
         print(f"{t['topic']}: {len(verified)} verified, {len(single)} one-source, {len(got)} pages")
         time.sleep(float(CFG.get("gemini_gap_seconds", 7)))     # inside the free tier's requests a minute
     if not packs:
@@ -237,6 +259,8 @@ def show(nums):
         for f in p["verified"]:
             print(f"  - {f['claim']} {f['sources']}")
             for k, q in f["evidence"].items(): print(f"      [{k}] \"{q}\"")
+        if p.get("images"):
+            print("real pictures to use as shots:", " · ".join(p["images"]))
         if p["one_source"]:
             print("one source only (needs a second before use):")
             for f in p["one_source"]: print(f"  - {f['claim']} {f['sources']}")

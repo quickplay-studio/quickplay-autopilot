@@ -105,6 +105,18 @@ def scene_fit(src, start, vis, slow):
     return round(st, 3), round(slow, 3), note
 
 LOOK, MOTION = {}, 1.0     # set in main() from the board's look (templates/looks.json, resolved by run_board.py)
+CARDS = False              # set in main(): True when a video plays behind the Short; photos then sit on top of it as cards
+
+def card_move(move):
+    """How the photo moves inside its card: (scale from, scale to, x from, x to, y from, y to). x and y are shares of the
+    card's size; a drift needs room, so it runs a little zoomed in. The default is a slow push-in."""
+    if move == "out": return 1.0 + 0.10 * MOTION, 1.0, 0, 0, 0, 0
+    if move == "still": return 1.02, 1.02, 0, 0, 0, 0
+    if move in ("left", "right", "up", "down"):
+        a = min(0.035, 0.03 * MOTION)
+        x0, x1, y0, y1 = {"left": (-a, a, 0, 0), "right": (a, -a, 0, 0), "up": (0, 0, -a, a), "down": (0, 0, a, -a)}[move]
+        return 1.08, 1.08, x0, x1, y0, y1
+    return 1.0, 1.0 + 0.10 * MOTION, 0, 0, 0, 0
 
 def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
     from PIL import Image
@@ -163,6 +175,16 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 it.update(kind="video", fill=os.path.relpath(frames[0], HERE), frames=os.path.relpath(fr, HERE), count=len(frames), fps=FPS,
                           s0=1.0, s1=1.0 + (0.05 * MOTION if move != "still" else 0.0))
                 lum = _luma(Image.open(frames[min(len(frames) - 1, len(frames) // 2)]))
+            elif CARDS:
+                # a card on top of the background video: the whole picture (template3.html cardBox sizes the frame), pushing
+                # in slowly inside it. Real video of the subject, above, still plays full screen.
+                img = Image.open(src).convert("RGB"); w, h = img.size
+                rs = min(1.0, 1500 / max(w, h))              # no point keeping more pixels than a card can show
+                (img.resize((max(2, round(w * rs)), max(2, round(h * rs))), Image.LANCZOS) if rs < 1 else img).save(d / "img.jpg", quality=90)
+                s0, s1, px0, px1, py0, py1 = card_move(move)
+                it.update(kind="image", cardmode=True, fill=os.path.relpath(d / "img.jpg", HERE), ar=round(w / h, 4), fx=fx, fy=fy,
+                          s0=s0, s1=s1, px0=px0, px1=px1, py0=py0, py1=py1)
+                lum = _luma(img)
             else:
                 img = Image.open(src).convert("RGB"); w, h = img.size
                 m = 1.14 if move in ("left", "right", "up", "down") else 1.04
@@ -185,8 +207,9 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 it.update(kind="image", fill=os.path.relpath(d / "img.jpg", HERE), W=W, H=H, s0=s0, s1=s1,
                           cx0=round(cx0, 1), cy0=round(cy0, 1), cx1=round(cx1, 1), cy1=round(cy1, 1))
                 lum = _luma(img.crop((int(cx0 - 540 / s0), int(cy0 - 960 / s0), int(cx0 + 540 / s0), int(cy0 + 960 / s0))))
-            # legibility: darken more behind graphics, and more on bright footage
-            it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else round(min(0.3, max(0.06, (lum - 0.45) * 0.8)), 2)
+            # legibility: darken more behind graphics, and more on bright footage. A card dims only itself, and only under a graphic
+            if it.get("cardmode"): it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else 0.0
+            else: it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else round(min(0.3, max(0.06, (lum - 0.45) * 0.8)), 2)
             if shot.get("label"):
                 it["label"] = shot["label"]; it["labelTop"] = shot.get("labelTop", 1020)
             items.append(it)
@@ -212,7 +235,7 @@ def main():
     sb_path = pathlib.Path(sys.argv[1]); out_dir = pathlib.Path(sys.argv[2]); out_dir.mkdir(parents=True, exist_ok=True)
     sb = json.loads(sb_path.read_text())
     sid = sb["id"]; t0 = time.time()
-    global LOOK, MOTION
+    global LOOK, MOTION, CARDS
     LOOK = sb.get("look_render") or {}; MOTION = float(LOOK.get("motion", 1.0))
     if sb.get("voice_engine") == "chatterbox":       # narration pre-rendered by tts_cb.py (one WAV per beat)
         import voice as V
@@ -228,6 +251,15 @@ def main():
             b["visual"] = dict(b["visual"], at=[rel, rel + 0.05, rel + 0.15, rel + 0.2])
     mus = sb.get("music", {})
     music, mbeats, mcat = load_music(mus.get("slug", "ten"), mus.get("start"), duration)
+    # the video behind the Short (pipeline/background.py), built to the narration's length; with it, photos become cards on top
+    bginfo, bgused = None, []
+    if sb.get("bg_clips"):
+        try:
+            import background as BG
+            bginfo, bgused = BG.build(sb["bg_clips"], duration, out_dir / f"{sid}_bg", sb.get("bg_cfg") or BG.DEFAULTS, fps=FPS)
+        except Exception as e:
+            print(f"  warning: background video failed, rendering without it: {e}", file=sys.stderr)
+    CARDS = bool(bginfo)
     items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir)
     wav = out_dir / f"{sid}.wav"
     events = sfx_events(sb, beats, items)
@@ -238,13 +270,15 @@ def main():
         smusic, _, _ = load_music(soc["slug"], soc.get("start"), duration, lib="music_social")
         mix_audio3(segs, duration, smusic, events, str(swav), soc.get("gain_db", mus.get("gain_db", -16)))
     credits.append({"credit": f"Music: {mcat['title']} by {mcat['artist']} (YouTube Audio Library)", "source": "", "license": ""})
+    for u in bgused: credits.append({"credit": u["credit"], "source": u["source"], "license": ""})     # Pexels and the others are credited in the description
+    (out_dir / f"{sid}.bg.json").write_text(json.dumps(bgused, indent=1, ensure_ascii=False))
     icons = set([sb.get("chipIcon", "trending-up")])
     for b in sb["beats"]:
         for it in b["visual"].get("items", []):
             if isinstance(it, dict) and it.get("icon"): icons.add(it["icon"])
     data = {"accent": sb.get("accent", "#2EE6C5"), "category": sb["category"], "chipIcon": sb.get("chipIcon", "trending-up"),
             "icons": R.icon_svgs(icons), "beats": beats, "words": words, "groups": groups, "duration": duration,
-            "media": items, "punches": punches, "look": LOOK}
+            "media": items, "punches": punches, "look": LOOK, "bg": bginfo}
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))
     (out_dir / f"{sid}.timeline.json").write_text(json.dumps({"beats": beats, "words": words, "groups": groups, "duration": duration,
                                                               "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc')} for it in items]}, indent=1))

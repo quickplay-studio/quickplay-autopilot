@@ -5,6 +5,8 @@ usage: python pipeline/validate.py boards/queue/QD-101.json [more.json ...]     
 Standard library only.
 """
 import datetime as dt, json, pathlib, re, sys, urllib.parse
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import background as BG        # the search format for the video behind a Short (standard library at import)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"}
@@ -87,6 +89,21 @@ def check(b, path=None):
         w.append("beat 0: the hook needs a real picture of the subject, not stock")
     if not 50 <= total <= 135: e.append(f"narration: {total} words, needs 55 to 125 (20 to 45 seconds)")
     elif not 55 <= total <= 125: w.append(f"narration: {total} words, best between 55 and 125")
+
+    # the video behind the Short (pipeline/background.py): 2 to 4 stock searches, not shots, so never counted as stock above
+    bgq = b.get("background")
+    if bgq is None: w.append("background: add 2 to 4 stock video searches (2 to 4 concrete words each) for the video behind the Short")
+    elif not isinstance(bgq, list) or not 2 <= len(bgq) <= 4: e.append("background: a list of 2 to 4 stock video searches")
+    else:
+        seen = set()
+        for q in bgq:
+            if not isinstance(q, str) or not BG.SEARCH.fullmatch(q):
+                e.append(f"background: {str(q)[:40]!r} must be 2 to 4 plain words, single spaces, no punctuation (nasa: first for NASA footage)")
+                continue
+            key = q.lower().removeprefix("nasa:")
+            if key in seen: e.append(f"background: {q!r} is listed twice")
+            seen.add(key)
+    if "bgvideo" in b and not isinstance(b["bgvideo"], bool): e.append("bgvideo: true or false, or leave it out (config.json background.enabled decides)")
 
     m = b.get("meta") or {}
     title = m.get("title") or ""

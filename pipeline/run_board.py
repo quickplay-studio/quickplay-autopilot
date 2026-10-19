@@ -120,19 +120,24 @@ def fill_defaults(sb):
     (sb.setdefault("music", {})).setdefault("gain_db", -15)
     return sb
 
-def contact_sheet(mp4, timeline, dest):
+def contact_sheet(mp4, timeline, dest, big=False):
+    """One frame from the middle of every shot. A test board (big) gets larger tiles, then a second block with a frame
+    every 3 seconds, so the video behind the shots can be judged as it changes."""
     from PIL import Image
-    shots = json.loads(timeline.read_text()).get("shots", [])
-    tiles = []
-    for i, s in enumerate(shots):
-        f = dest.with_suffix(f".{i}.jpg")
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{(s['t0'] + s['t1']) / 2:.2f}", "-i", str(mp4),
-                        "-frames:v", "1", "-vf", "scale=108:192", str(f)], check=True)
-        tiles.append(Image.open(f).copy()); f.unlink()
-    cols = 10; rows = max(1, (len(tiles) + cols - 1) // cols)
-    sheet = Image.new("RGB", (cols * 108, rows * 192), (16, 16, 16))
-    for i, t in enumerate(tiles): sheet.paste(t, ((i % cols) * 108, (i // cols) * 192))
-    sheet.save(dest, quality=70)
+    tl = json.loads(timeline.read_text())
+    tw, th, cols = (216, 384, 6) if big else (108, 192, 10)
+    times = [(s["t0"] + s["t1"]) / 2 for s in tl.get("shots", [])]
+    blocks = [times]
+    if big: blocks.append([x for x in (1.5 + 3.0 * k for k in range(40)) if x < tl.get("duration", 0) - 0.2])
+    rows = sum(max(0, (len(b) + cols - 1) // cols) for b in blocks) or 1
+    sheet, y = Image.new("RGB", (cols * tw, rows * th), (16, 16, 16)), 0
+    for block in blocks:
+        for i, t in enumerate(block):
+            f = dest.with_suffix(f".{i}.jpg")
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{t:.2f}", "-i", str(mp4), "-frames:v", "1", "-vf", f"scale={tw}:{th}", str(f)], check=True)
+            sheet.paste(Image.open(f), ((i % cols) * tw, y + (i // cols) * th)); f.unlink()
+        y += ((len(block) + cols - 1) // cols) * th
+    sheet.save(dest, quality=75 if big else 70)
 
 def main():
     ap = argparse.ArgumentParser()
@@ -152,9 +157,17 @@ def main():
     sb = fill_defaults(json.loads(board_path.read_text())); sid = sb["id"]
     status["title"] = sb.get("meta", {}).get("title")
     try:
-        import fetch_media
+        import fetch_media, background as BG
         planned_real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or [] if not str(sh.get("src", "")).startswith("pixabay:"))
         sb = fetch_media.resolve(sb)
+        # the video behind the Short: clips picked by plan.py (background.py), downloaded here. With none, the Short renders as before.
+        cfg = json.loads((ROOT / "config.json").read_text())
+        if job.get("bg"):
+            clips, bnotes = BG.fetch(job["bg"], sid, cfg)
+            if clips: sb["bg_clips"], sb["bg_cfg"] = clips, BG.settings(cfg)
+            if bnotes: status["background_notes"] = bnotes
+        if BG.wanted(sb, cfg) and not sb.get("bg_clips"):
+            status["background_note"] = "no background video (no clip found or downloaded): rendered with full-screen pictures"
         real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or []
                    if "pixabay" not in (str(sh.get("source", "")) + str(sh.get("credit", ""))).lower())
         flags = list(job.get("hold") or [])
@@ -204,9 +217,14 @@ def main():
             status["timeline"] = [[round(b["start"], 2), round(b["end"], 2), (b.get("visual") or {}).get("type", "none"),
                                    sum(1 for s in tl.get("shots", []) if b["start"] - 0.01 <= s["t0"] < b["end"])] for b in tl["beats"]]
         except Exception as e: print("timeline not recorded:", e)
-        contact_sheet(mp4, P / "out" / f"{sid}.timeline.json", res / "review.jpg")
-        if sid.startswith("TEST-") and (P / "out" / f"{sid}.social.mp4").exists():      # template tests show both layouts
-            contact_sheet(P / "out" / f"{sid}.social.mp4", P / "out" / f"{sid}.timeline.json", res / "review_social.jpg")
+        try:       # the background clips this Short really used (status/*.json): plan.py never reuses them within reuse_days
+            status["background"] = [{k: u.get(k) for k in ("p", "id", "q", "t0", "t1")} for u in json.loads((P / "out" / f"{sid}.bg.json").read_text())]
+            if sb.get("bg_clips") and not status["background"]: status["background_note"] = "the background video could not be built: rendered without"
+        except Exception as e: print("background not recorded:", e)
+        big = sid.startswith("TEST-")      # a test board gets a bigger sheet
+        contact_sheet(mp4, P / "out" / f"{sid}.timeline.json", res / "review.jpg", big=big)
+        if big and (P / "out" / f"{sid}.social.mp4").exists():      # template tests show both layouts
+            contact_sheet(P / "out" / f"{sid}.social.mp4", P / "out" / f"{sid}.timeline.json", res / "review_social.jpg", big=True)
         problems = []
         if not 12 <= dur <= 75: problems.append(f"length {dur:.0f}s")
         if weak: problems.append(f"unclear narration in beats {weak}")

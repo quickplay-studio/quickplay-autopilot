@@ -33,6 +33,8 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}      # plan.py picks each Short's background clips (pipeline/background.py)
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
         run: python pipeline/plan.py >> "$GITHUB_OUTPUT"
 
   render:

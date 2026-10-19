@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
-import factpack, validate
+import background as BG, factpack, validate
 
 CFG = json.loads((ROOT / "config.json").read_text())
 UK = ZoneInfo("Europe/London")
@@ -41,6 +41,12 @@ gaming, film and TV, music, sport, celebrities, streamers and creators, tech lau
   concrete words") only when nothing real exists, at most 1 in 5 shots, never on beat 1.
 - Shots: 1 to 3 per beat, a new shot every 2 to 3 seconds (about every 6 to 8 words): later shots in a beat take "at"
   (the word number the cut lands on); "move" is one of in, out, left, right, up, down, still.
+- "background": 3 stock video searches (2 to 4 are allowed), each 2 to 4 concrete lower case words, for the clips that play
+  softly blurred and darkened behind the whole Short, one after another. Describe the WORLD of the story as a camera would
+  film it: "football stadium night", "concert stage lights", "neon gaming setup", "cinema auditorium screen", "galaxy stars
+  nebula", "server room lights". Never a person's name, a team, a brand, a game or film title, or an event. For a space story
+  start one with "nasa:" ("nasa:earth from orbit") to use NASA's own footage. They are not shots: they never count towards
+  the 1 in 5 stock limit and are never mentioned in the narration.
 - Graphics: {"type": "none"} or one of: title {kicker, lines[], highlight[indexes]}, stat {value, label, sub},
   cards {items[{icon, t, s}]}, quote {text, by}, date {month, day, weekday, label, sub},
   versus {items: [2 x {label, value, sub}]}, timeline {items[{y, t}]}, bars {items[{label, value, w 0 to 1}]}.
@@ -143,8 +149,9 @@ def example():
     for p in done[:20]:
         try: b = json.loads(p.read_text())
         except Exception: continue
-        for k in ("id", "created", "tiktok", "look", "flag"): b.pop(k, None)
+        for k in ("id", "created", "tiktok", "look", "flag", "bgvideo"): b.pop(k, None)
         if b.get("mode") or b.get("reserve"): continue
+        if not b.get("background"): b["background"] = BG.fallback(b)[:3]       # older boards predate the field: show its shape
         errs, warns = validate.check({"id": free, "created": str(NOW.date()), **b})
         stock = sum(str(s.get("src", "")).startswith("pixabay:") for bt in b.get("beats", []) for s in bt.get("shots") or [])
         if best is None or (len(errs), len(warns), stock) < best[0]: best = ((len(errs), len(warns), stock), b)
@@ -375,13 +382,14 @@ def write_one(p, sid, day, prompt_head, extra=""):
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
     for attempt in range(3):
         b = clean(ans)
-        for k in ("tiktok", "look", "mode", "flag"): b.pop(k, None)
+        for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created")}}
+        added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
         errs = errs + media_problems(b)
         if not errs: errs = ["facts: " + x for x in fact_check(b, p)]     # only a clean board is worth a fact check
-        note = f"{model}, {len(warns)} warnings" + (f" ({'; '.join(warns)[:200]})" if warns else "")
+        note = f"{model}, {len(warns)} warnings" + (f" ({'; '.join(warns)[:200]})" if warns else "") + (f", background: {added} from the category" if added else "")
         if not errs:
             if not warns or best: return b, note     # a warning flags the Short for a person, so it gets one fixing round
             best = (b, note)

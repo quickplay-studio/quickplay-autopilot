@@ -304,7 +304,7 @@ async def capture(html, data, duration, frames_cmd, poster_path, poster_t):
         await pg.wait_for_timeout(150)
         proc = subprocess.Popen(frames_cmd, stdin=subprocess.PIPE, stderr=subprocess.DEVNULL)
         nframes = int(math.ceil(duration * FPS))
-        has_video = any(m.get("kind") == "video" for m in data.get("media", []))
+        has_video = any(m.get("kind") == "video" for m in data.get("media", [])) or bool(data.get("bg"))   # frames to swap in (prepMedia)
         for i in range(nframes):
             t = i / FPS
             if has_video:

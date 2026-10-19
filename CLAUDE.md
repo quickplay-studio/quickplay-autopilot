@@ -167,6 +167,15 @@ in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.
   every Short a look (caption style, voice and pace, camera energy, colour grade from templates/looks.json) and learns which
   looks keep viewers watching. Set `look` (e.g. {"captions": "pop"}) only when Charlie asks for one.
 - `music`: {"mood": one of the `music_moods` in config.json, matching the topic's feel}.
+- `background` (Charlie, 19 October): 3 searches (2 to 4 allowed) for the video that plays softly blurred and darkened
+  behind the whole Short, one clip after another, each 2 to 4 concrete lower case words: the world of the story as a
+  camera would film it ("football stadium night", "concert stage lights", "neon gaming setup", "cinema auditorium
+  screen", "galaxy stars nebula"), never a name, team, brand or title. Start one with `nasa:` on a space story
+  ("nasa:earth from orbit") for NASA's own footage. GitHub finds the clips (Pexels first, then Pixabay, vertical or
+  cropped to 9:16, at least 720p, never the same clip twice in a week; Pexels is credited in the description). They are
+  not shots: they never count towards the stock limit below. Photos then sit on top of the video as cards (rounded
+  corners, soft shadow, slow push-in); real video of the subject (`nasa:`, Commons video, trailer moments) still plays
+  full screen. `bgvideo`: false leaves the video off for one board (config.json `background.enabled` is the switch for all).
 - `beats`: one per sentence or two, 55 to 125 words in total (aim for 70 to 110).
   - `say`: the narration. `cap`: only if captions must differ in spelling, same word count as `say`.
   - `visual`: {"type": "none"} or a graphic:
@@ -188,8 +197,9 @@ in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.
   images and trailer files (`url:`) or an official page's picture (`page:`), and NASA photos and footage for space.
   Film and TV: official stills and short trailer moments under our narration, never long clips (a studio can claim the
   Short). Sport: photos of the players, managers and grounds, never match footage. Stock only when nothing real exists
-  for that beat, at most 1 in 5 shots (the validator warns past that); stock queries are 2 to 4 concrete words that would
-  be tags on the clip ("full moon night sky", not "mysterious feeling").
+  for that beat, at most 1 in 5 shots (the validator warns past that; the `background` searches are not shots and don't
+  count); stock queries are 2 to 4 concrete words that would be tags on the clip ("full moon night sky", not
+  "mysterious feeling").
 - `meta`: {title (under 50 characters ideally, 70 at most, one emoji at the end), summary (1 to 2 sentences),
   hashtags (8 to 15, most relevant first; #Shorts is added for YouTube), tags (5 to 15 search phrases),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.

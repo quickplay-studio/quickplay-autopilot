@@ -1,0 +1,365 @@
+"""The video behind every Short (Charlie, 19 October): 2 to 4 stock clips matched to the topic, softly blurred and darkened,
+cross-fading under everything, with the photos of the subject sitting on top as cards (render3.py, template3.html).
+
+How it flows
+  board "background"   2 to 4 searches of 2 to 4 concrete words each, written by Gemini and checked by validate.py.
+                       "nasa:earth from orbit" asks NASA's public-domain library instead. They are not shots, so they
+                       never count towards the 1-in-5 stock limit.
+  plan.py   -> pick()  one clip per search, chosen once per run with a shared `used` set, so no two Shorts in a run share
+                       a clip and none came back within reuse_days (status/*.json "background"); handed to the render job.
+  run_board -> fetch() downloads them (https, known hosts only), refuses anything under 720p or nearly black.
+  render3   -> build() crops each to 9:16, blurs, darkens, cross-fades and writes JPEG frames the template plays.
+
+Clips come from Pexels first (PEXELS_API_KEY), Pixabay second (PIXABAY_API_KEY). A vertical clip is used as it is, any
+other is cropped to the middle 9:16. With no key, or no clip found, the Short simply renders without a background (the
+classic full-bleed look), so nothing waits on this layer.
+Standard library at import time; requests, numpy and PIL load only inside the functions that need them.
+"""
+import datetime as dt, json, math, os, pathlib, re, subprocess, sys, urllib.parse
+
+HERE = pathlib.Path(__file__).resolve().parent
+ROOT = HERE.parent
+UA = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}
+HOSTS = ("videos.pexels.com", "player.vimeo.com", "cdn.pixabay.com", "images-assets.nasa.gov")   # where a clip may come from
+DASH = re.compile("[–—]")
+WORD = re.compile(r"[^\W_][\w'-]*")
+SEARCH = re.compile(r"(?:nasa:)?[^\W_][\w'-]*(?: [^\W_][\w'-]*){1,3}")      # what validate.py accepts: 2 to 4 plain words
+
+DEFAULTS = {"enabled": False, "reuse_days": 7, "clip_seconds": [8, 15], "min_px": 720, "blur": 9, "target_luma": 0.27,
+            "fade": 0.6, "frame_w": 540, "frame_h": 960, "pexels": True, "pixabay": True, "nasa": True}
+
+# used when a board lists fewer than 2 usable searches: the world of its category
+FALLBACK = {
+    "Gaming": ["neon gaming setup", "esports arena lights", "keyboard rgb glow"],
+    "Film": ["cinema auditorium screen", "movie theatre seats", "film projector light"],
+    "Music": ["concert stage lights", "crowd concert night", "dj mixer lights"],
+    "Sport": ["football stadium night", "stadium crowd floodlights", "running track sunrise"],
+    "Tech": ["circuit board closeup", "server room lights", "futuristic city night"],
+    "Science": ["galaxy stars space", "nebula space clouds", "earth from orbit"],
+    "Entertainment": ["red carpet lights", "city lights night", "theatre stage curtain"],
+}
+
+# ---------------- the board's searches ----------------
+def settings(cfg):
+    d = dict(DEFAULTS); d.update((cfg or {}).get("background") or {}); return d
+
+def wanted(b, cfg):
+    """A board's own bgvideo (true or false) wins; otherwise config.json background.enabled decides."""
+    if isinstance(b.get("bgvideo"), bool): return b["bgvideo"]
+    return bool(settings(cfg).get("enabled"))
+
+def parse(q):
+    """('nasa' or '', 'the words') for one search, or None when it is not a usable search (2 to 4 plain words)."""
+    if not isinstance(q, str): return None
+    s = DASH.sub(" ", q).strip()
+    prov = ""
+    if s.lower().startswith("nasa:"): prov, s = "nasa", s[5:].strip()
+    if ":" in s: return None
+    words = WORD.findall(s)
+    if not 2 <= len(words) <= 4 or len(" ".join(words)) > 60: return None
+    return prov, " ".join(words).lower()
+
+def tidy(lst, keep=4):
+    """The usable searches of a list as they are written back to a board: 'words' or 'nasa:words', no repeats, at most 4."""
+    out, seen = [], set()
+    for q in lst if isinstance(lst, list) else []:
+        p = parse(q)
+        if p is None or p[1] in seen: continue
+        seen.add(p[1]); out.append(("nasa:" if p[0] else "") + p[1])
+        if len(out) >= keep: break
+    return out
+
+def fallback(b):
+    return list(FALLBACK.get((b or {}).get("category"), FALLBACK["Entertainment"]))
+
+def fill(b):
+    """Leave the board with 2 to 4 usable searches: its own, topped up from its category when it gave fewer than 2.
+    Returns how many came from the category."""
+    have = tidy(b.get("background")); added = 0
+    if len(have) < 2:
+        seen = {parse(q)[1] for q in have}
+        for q in fallback(b):
+            if len(have) >= 3: break
+            if q not in seen: have.append(q); seen.add(q); added += 1
+    b["background"] = have
+    return added
+
+# ---------------- what was used lately ----------------
+def recent_used(root, days):
+    """provider:id of every background clip rendered in the last `days` days (status/*.json "background")."""
+    cut = dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=days)
+    out = set()
+    for f in pathlib.Path(root, "status").glob("*.json"):
+        try:
+            st = json.loads(f.read_text())
+            when = dt.datetime.fromisoformat(str(st.get("rendered")).replace("Z", "+00:00"))
+            if when.tzinfo is None: when = when.replace(tzinfo=dt.timezone.utc)
+        except Exception:
+            continue
+        if when < cut: continue
+        for c in st.get("background") or []:
+            if isinstance(c, dict) and c.get("p") and c.get("id"): out.add(f"{c['p']}:{c['id']}")
+    return out
+
+# ---------------- searching ----------------
+_cache = {}
+
+def _words(s):
+    return {w for w in re.findall(r"[a-z0-9]+", str(s).lower()) if len(w) > 2}
+
+def _share(query, text):
+    """Share of the query's words found in a clip's page name or tags."""
+    want, have = _words(query), _words(text)
+    have |= {h.rstrip("s") for h in have}
+    return sum(w in have or w.rstrip("s") in have for w in want) / max(1, len(want))
+
+def _score(c, query):
+    share = _share(query, c.get("text", ""))
+    d = c.get("d") or 0
+    dur = 0.12 if 10 <= d <= 45 else 0.06 if d >= 8 else 0.0 if d >= 5 else -0.4
+    return share + (0.2 if (c.get("h") or 0) > (c.get("w") or 1) else 0) + dur - c.get("rank", 0) * 0.01, share
+
+def _strong(cands, query, min_share):
+    """Clips whose name or tags hold enough of the query's words, best first."""
+    keep = [(_score(c, query)[0], c) for c in cands if _score(c, query)[1] >= min_share]
+    return [c for _, c in sorted(keep, key=lambda t: -t[0])]
+
+def _weak(cands, query, min_share, top):
+    """The provider's own first few results that fall short on words: a last resort when nothing matches better."""
+    keep = [(_score(c, query)[0], c) for c in cands if _score(c, query)[1] < min_share and c.get("rank", 99) < top]
+    return [c for _, c in sorted(keep, key=lambda t: -t[0])]
+
+DEADLINE = 0        # plan.py sets a time (time.time() + seconds) after which no more searches are made
+_dead = set()       # providers that refused us this run (a wrong key, or the rate limit): not asked again until the next run
+
+def _late():
+    import time
+    return bool(DEADLINE) and time.time() > DEADLINE
+
+def _get(url, **kw):
+    import requests
+    if _late(): raise TimeoutError("the time allowed for background searches is used up")
+    return requests.get(url, headers={**UA, **(kw.pop("headers", None) or {})}, timeout=20, **kw)
+
+def pexels_search(words, st, orientation="portrait", page=1):
+    key = os.environ.get("PEXELS_API_KEY", "").strip()
+    if not key or not st.get("pexels", True) or "pexels" in _dead: return []
+    ck = ("pexels", words, orientation, page)
+    if ck not in _cache:
+        out = []
+        try:
+            r = _get("https://api.pexels.com/videos/search", headers={"Authorization": key},
+                     params={"query": words, "orientation": orientation, "size": "small", "per_page": 40, "page": page})
+            if r.status_code != 200:
+                print(f"  background: Pexels answered {r.status_code} for '{words}'" + (" (not asking again this run)" if r.status_code in (401, 403, 429) else ""), file=sys.stderr)
+                if r.status_code in (401, 403, 429): _dead.add("pexels")
+            else:
+                for rank, v in enumerate(r.json().get("videos") or []):
+                    files = [f for f in v.get("video_files") or [] if f.get("file_type") == "video/mp4" and f.get("link")
+                             and min(f.get("width") or 0, f.get("height") or 0) >= st["min_px"]]
+                    if not files: continue
+                    f = min(files, key=lambda f: (f["width"] * f["height"], -(f.get("fps") or 0)))   # the smallest that is still 720p
+                    page = v.get("url") or ""
+                    out.append({"p": "pexels", "id": str(v["id"]), "url": f["link"], "w": f["width"], "h": f["height"],
+                                "d": v.get("duration") or 0, "by": (v.get("user") or {}).get("name") or "", "page": page,
+                                "text": page.rstrip("/").rsplit("/", 1)[-1].replace("-", " "), "rank": rank})
+        except Exception as e:
+            print(f"  background: Pexels search '{words}' failed: {e}", file=sys.stderr)
+        _cache[ck] = out
+    return _cache[ck]
+
+def pixabay_search(words, st):
+    key = os.environ.get("PIXABAY_API_KEY", "").strip()
+    if not key or not st.get("pixabay", True) or "pixabay" in _dead: return []
+    ck = ("pixabay", words)
+    if ck not in _cache:
+        out = []
+        try:
+            from fetch_media import _junk           # green screens, AI pictures and animations look fake
+            r = _get("https://pixabay.com/api/videos/", params={"key": key, "q": words[:100], "safesearch": "true", "per_page": 40})
+            if r.status_code != 200:
+                print(f"  background: Pixabay answered {r.status_code} for '{words}'" + (" (not asking again this run)" if r.status_code in (400, 401, 403, 429) else ""), file=sys.stderr)
+                if r.status_code in (400, 401, 403, 429): _dead.add("pixabay")
+            else:
+                for rank, h in enumerate(r.json().get("hits") or []):
+                    vids = h.get("videos") or {}
+                    files = [vids[k] for k in ("tiny", "small", "medium", "large") if (vids.get(k) or {}).get("url")
+                             and min(vids[k].get("width") or 0, vids[k].get("height") or 0) >= st["min_px"]]
+                    if not files or _junk(h, words): continue
+                    f = min(files, key=lambda f: f["width"] * f["height"])
+                    out.append({"p": "pixabay", "id": str(h["id"]), "url": f["url"], "w": f["width"], "h": f["height"],
+                                "d": h.get("duration") or 0, "by": h.get("user") or "", "page": h.get("pageURL") or "",
+                                "text": (h.get("tags") or "").replace(",", " "), "rank": rank})
+        except Exception as e:
+            print(f"  background: Pixabay search '{words}' failed: {e}", file=sys.stderr)
+        _cache[ck] = out
+    return _cache[ck]
+
+def nasa_search(words, used, want=2):
+    """Up to `want` NASA clips for the words (public domain). Their size is checked when they are downloaded."""
+    from fetch_media import nasa
+    ids = {k[5:] for k in used if k.startswith("nasa:")}
+    out = []
+    for _ in range(want):
+        if _late(): break
+        try: url, credit, page = nasa("video", words, ids)
+        except Exception as e:
+            if not out: print(f"  background: NASA '{words}': {e}", file=sys.stderr)
+            break
+        nid = urllib.parse.unquote(page.rstrip("/").rsplit("/", 1)[-1])
+        out.append({"p": "nasa", "id": nid, "url": url, "w": 0, "h": 0, "d": 0, "by": "NASA", "page": page, "credit": credit,
+                    "text": words, "rank": len(out)})
+    return out
+
+def candidates(prov, words, st, used):
+    """Clips for one search, best first, none already in `used`: a "nasa:" search asks NASA; otherwise Pexels (vertical
+    first, then wider ones to crop), then Pixabay when Pexels has fewer than 2 good matches, and last of all the first
+    results Pexels ranked highest even though their names share no words with the search."""
+    free = lambda c: f"{c['p']}:{c['id']}" not in used
+    if prov == "nasa" and st.get("nasa", True):
+        out = [c for c in nasa_search(words, used) if free(c)]
+        if out: return out
+    pex = [c for c in pexels_search(words, st, "portrait") if free(c)]
+    if len(_strong(pex, words, 0.3)) < 3:                    # wider clips are cropped to 9:16, so they widen the choice
+        seen = {c["id"] for c in pex}
+        pex += [c for c in pexels_search(words, st, "landscape") if free(c) and c["id"] not in seen]
+    out = _strong(pex, words, 0.3)
+    if len(out) < 2: out += [c for c in _strong(pixabay_search(words, st), words, 0.5) if free(c)]
+    if len(out) < 2:                                          # a popular search can run out of fresh clips in a week: look one page deeper
+        seen = {c["id"] for c in pex}
+        deeper = [c for o in ("portrait", "landscape") for c in pexels_search(words, st, o, 2) if free(c) and c["id"] not in seen]
+        out += _strong(deeper, words, 0.3)
+    return out + _weak(pex, words, 0.3, 2)
+
+def pick(b, used, cfg):
+    """The clips for one board: a first choice for each of its searches (the best Pexels match, else Pixabay, else NASA
+    for a "nasa:" search) and up to 4 spares in case a download is refused. Everything taken is added to `used`
+    (provider:id), which plan.py shares across the whole run. [] when no key works or nothing matches."""
+    st = settings(cfg)
+    for env, name in (("PEXELS_API_KEY", "Pexels"), ("PIXABAY_API_KEY", "Pixabay")):
+        if not os.environ.get(env, "").strip() and env not in _dead:
+            _dead.add(env); print(f"  background: {env} is not set, so {name} is skipped", file=sys.stderr)
+    have = [parse(q) for q in tidy(b.get("background"))]
+    extra = [p for p in (parse(q) for q in fallback(b)) if p and p[1] not in {h[1] for h in have}]
+    first, spares = [], []
+
+    def take(prov, words, n=2):
+        cs = candidates(prov, words, st, used)[:n]
+        for c in cs: used.add(f"{c['p']}:{c['id']}")
+        return [dict(c, q=words) for c in cs]
+
+    for prov, words in have:
+        cs = take(prov, words)
+        if cs: first.append(cs[0]); spares += cs[1:]
+    for prov, words in extra:                       # a search that found nothing is replaced by one from the category
+        if len(first) >= max(2, len(have)): break
+        cs = take(prov, words)
+        if cs: first.append(cs[0]); spares += cs[1:]
+    for prov, words in extra:
+        if len(spares) >= 3: break
+        spares += take(prov, words, 1)
+    return [dict(c, spare=False) for c in first[:4]] + [dict(c, spare=True) for c in spares[:4]]
+
+# ---------------- downloading ----------------
+def _probe(path):
+    out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                          "stream=width,height:stream_tags=rotate:stream_side_data=rotation:format=duration", "-of", "json", str(path)],
+                         capture_output=True, text=True, check=True).stdout
+    j = json.loads(out); s = j["streams"][0]; w, h = s["width"], s["height"]
+    rot = (s.get("tags") or {}).get("rotate") or next((x.get("rotation") for x in s.get("side_data_list") or [] if "rotation" in x), 0)
+    if abs(int(float(rot or 0))) % 180 == 90: w, h = h, w
+    return w, h, float((j.get("format") or {}).get("duration") or 0)
+
+def measure_luma(path, secs, ss=0.0):
+    """Mean brightness 0 to 1 of `secs` seconds from `ss` (two frames a second)."""
+    import numpy as np
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{ss:.2f}", "-t", f"{secs:.2f}", "-i", str(path), "-vf", "fps=2,scale=48:-2,format=gray",
+                          "-f", "rawvideo", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(raw, np.uint8)
+    return float(a.mean()) / 255 if a.size else 0.5
+
+def _download(c, d, st):
+    import requests
+    url = c.get("url") or ""
+    u = urllib.parse.urlparse(url)
+    if u.scheme != "https" or not any((u.hostname or "") == h or (u.hostname or "").endswith("." + h) for h in HOSTS):
+        raise RuntimeError("not an allowed video host")
+    dest = d / (re.sub(r"[^\w.-]", "_", f"{c['p']}_{c['id']}")[:60] + ".mp4")
+    if not dest.exists():
+        got = 0
+        with requests.get(url, headers=UA, timeout=120, stream=True) as r:
+            r.raise_for_status()
+            with open(dest, "wb") as f:
+                for chunk in r.iter_content(1 << 20):
+                    got += len(chunk)
+                    if got > 150_000_000: raise RuntimeError("file too large")
+                    f.write(chunk)
+    w, h, dur = _probe(dest)
+    if min(w, h) < st["min_px"]: raise RuntimeError(f"only {w}x{h}, needs 720p")
+    if dur < 4: raise RuntimeError(f"only {dur:.1f}s long")
+    ss = min(6.0, dur - 20) if c.get("p") == "nasa" and dur > 40 else 0.0
+    luma = measure_luma(dest, min(dur - ss, 15), ss)
+    if luma < 0.03: raise RuntimeError("nearly black")
+    return dict(c, file=os.path.relpath(dest, HERE), w=w, h=h, d=round(dur, 2), ss=round(ss, 2), luma=round(luma, 3))
+
+def fetch(clips, sid, cfg):
+    """Download the planned clips: the first choices, and spares in place of any that fail. Returns (usable clips, notes)."""
+    st = settings(cfg)
+    d = HERE / "media" / sid / "bg"; d.mkdir(parents=True, exist_ok=True)
+    first = [c for c in clips or [] if not c.get("spare")]; spare = [c for c in clips or [] if c.get("spare")]
+    want = max(1, min(4, len(first))); got, notes = [], []
+    for c in first + spare:
+        if len(got) >= want: break
+        try: got.append(_download(c, d, st))
+        except Exception as e:
+            notes.append(f"{c.get('p')}:{c.get('id')} skipped: {str(e)[:90]}")
+            print(f"  background: {c.get('p')}:{c.get('id')} skipped: {e}", file=sys.stderr)
+    return got, notes
+
+# ---------------- building the layer ----------------
+def clean_credit(s):
+    return DASH.sub("-", re.sub(r"[\x00-\x1f]", " ", str(s or ""))).strip()[:120]
+
+def credit_for(c):
+    if c.get("credit"): return clean_credit(c["credit"])
+    by = clean_credit(c.get("by")) or "unknown"
+    return f"Video: {by} / {'Pexels' if c['p'] == 'pexels' else 'Pixabay' if c['p'] == 'pixabay' else c['p'].title()}"
+
+def build(clips, T, dest, st, fps=25):
+    """Blurred, darkened, cross-fading frames that cover T seconds, written as JPEGs to `dest`. Each clip plays 8 to 15
+    seconds when there are enough of them (as many as there are, up to 4); a clip shorter than its turn loops.
+    Returns (what the template plays, the clips used with their times) or (None, [])."""
+    if not clips: return None, []
+    W, H = int(st["frame_w"]), int(st["frame_h"])
+    lo, hi = float(st["clip_seconds"][0]), float(st["clip_seconds"][1])
+    # aim for about 12 seconds a clip (calm, not busy), never under `lo` or over `hi` while there are clips to share the time
+    n = max(1, min(len(clips), 4, max(math.ceil(T / hi), min(int(T // lo), int(T / 12 + 0.5)))))
+    clips = clips[:n]
+    f = min(float(st["fade"]), T / (3 * n)) if n > 1 else 0.0
+    L = (T + (n - 1) * f) / n                  # each clip's turn, overlapping its neighbour by the fade
+    dest = pathlib.Path(dest); dest.mkdir(parents=True, exist_ok=True)
+    for old in dest.glob("*.jpg"): old.unlink()
+    cmd, parts = ["ffmpeg", "-y", "-v", "error"], []
+    for i, c in enumerate(clips):
+        path = HERE / c["file"]
+        gain = max(0.35, min(1.0, float(st["target_luma"]) / max(0.05, float(c.get("luma") or 0.4))))
+        ss = float(c.get("ss") or 0)
+        if (c.get("d") or 0) - ss < L + 0.3: cmd += ["-stream_loop", "-1"]
+        cmd += ["-ss", f"{ss:.2f}", "-t", f"{L + 0.3:.3f}", "-i", str(path)]
+        parts.append(f"[{i}:v]fps={fps},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},"
+                     f"gblur=sigma={float(st['blur'])},lutyuv=y='clip(val*{gain:.3f},16,235)',eq=saturation=0.9,"
+                     f"setsar=1,format=yuv420p,setpts=PTS-STARTPTS[v{i}]")
+    last = "v0"
+    for i in range(1, n):
+        parts.append(f"[{last}][v{i}]xfade=transition=fade:duration={f:.3f}:offset={i * (L - f):.3f}[x{i}]"); last = f"x{i}"
+    frames = int(T * fps) + 3
+    cmd += ["-filter_complex", ";".join(parts), "-map", f"[{last}]", "-frames:v", str(frames), "-q:v", "3", "-pix_fmt", "yuvj420p",
+            str(dest / "%05d.jpg")]
+    subprocess.run(cmd, check=True)
+    count = len(list(dest.glob("*.jpg")))
+    if count < fps: raise RuntimeError(f"background video came out with {count} frames")
+    used = []
+    for i, c in enumerate(clips):
+        used.append({"p": c["p"], "id": c["id"], "q": c.get("q", ""), "t0": round(i * (L - f), 2), "t1": round(min(T, i * (L - f) + L), 2),
+                     "credit": credit_for(c), "source": c.get("page", "")})
+    return {"dir": os.path.relpath(dest, HERE), "count": count, "fps": fps, "w": W, "h": H}, used

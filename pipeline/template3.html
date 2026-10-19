@@ -114,11 +114,20 @@ body.lay-social .tl { width: 840px; }
 body.lay-social .statlabel, body.lay-social .statsub, body.lay-social .datelabel, body.lay-social .qtext { max-width: 840px; }
 #gvig { position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 48%, rgba(0,0,0,.85) 100%); }
 .statlabel, .statsub, .tlt, .card .ct, .card .cs, .vsub, .datelabel, .datesub, .qtext, .qby { text-wrap: balance; }
+/* the video behind the Short (data.bg, pipeline/background.py): blurred, darkened clips under everything; photos then
+   sit on top of it as cards (.cwrap) instead of filling the screen. Real video of the subject still plays full screen. */
+#bgv { position: absolute; inset: 0; overflow: hidden; display: none; background: #0B1118; }
+#bgv img { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; display: block; }
+#bgshade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,18,.5) 0%, rgba(8,12,18,.12) 16%, rgba(8,12,18,0) 30%, rgba(8,12,18,0) 50%, rgba(8,12,18,.5) 68%, rgba(8,12,18,.72) 100%); }
+body.hasbg #bg { display: none; }
+body.hasbg #bgv { display: block; }
 #media { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
 .mi { position: absolute; inset: 0; opacity: 0; }
 .mi img { position: absolute; display: block; }
 .mi .fill { left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; transform-origin: 0 0; will-change: transform; }
-.mi .mcard { left: 60px; width: 960px; border-radius: 30px; object-fit: cover; box-shadow: 0 30px 90px rgba(0,0,0,.6); outline: 3px solid rgba(255,255,255,.14); outline-offset: -3px; transform-origin: 50% 50%; }
+.cwrap { position: absolute; overflow: hidden; border-radius: 38px; background: #0B1118; box-shadow: 0 34px 90px rgba(0,0,0,.6), 0 10px 26px rgba(0,0,0,.4); outline: 3px solid rgba(255,255,255,.16); outline-offset: -3px; transform-origin: 50% 50%; will-change: transform; }
+.cwrap .cimg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+.cwrap .cdim { position: absolute; inset: 0; background: #0B1118; opacity: 0; }
 #flash { position: absolute; inset: 0; background: #FFFFFF; opacity: 0; pointer-events: none; }
 #mdim { position: absolute; inset: 0; background: #0B1118; opacity: 0; }
 #mshade { position: absolute; inset: 0; opacity: 0; background: linear-gradient(180deg, rgba(8,12,18,.86) 0%, rgba(8,12,18,.35) 13%, rgba(8,12,18,0) 24%, rgba(8,12,18,0) 52%, rgba(8,12,18,.78) 66%, rgba(8,12,18,.9) 100%); }
@@ -130,11 +139,13 @@ body.hasmedia .card, body.hasmedia .vcol:not(.hl) { background: rgba(23,34,48,.9
 .mlabel { display: flex; flex-direction: column; align-items: center; gap: 16px; }
 .mname { font: 400 78px "Archivo Black"; text-transform: uppercase; text-align: center; line-height: 1.02; white-space: nowrap; text-shadow: 0 6px 30px rgba(0,0,0,.85), 0 2px 6px rgba(0,0,0,.7); }
 .mi .mlab { position: absolute; left: 70px; right: 240px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+body.lay-social .mi .mlab.clab, .mi .mlab.clab { margin-top: 0; }      /* a card's name label sits just under the card, in either layout */
 .mrole { font: 700 34px "Inter"; letter-spacing: 4px; text-transform: uppercase; color: #0B1118; background: var(--accent); padding: 10px 24px; border-radius: 999px; }
 </style>
 </head>
 <body>
 <div id="bg"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div id="grid"></div><div id="vignette"></div></div>
+<div id="bgv"><img id="bgvi" alt=""><div id="bgshade"></div></div>
 <div id="media"></div><div id="gvig"></div><div id="flash"></div><div id="mdim"></div><div id="mshade"></div><div id="credit"></div>
 <div id="chip"></div>
 <div id="handle"></div>
@@ -146,8 +157,19 @@ const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 const easeOut = x => 1 - Math.pow(1 - clamp(x, 0, 1), 3);
 const easeBack = x => { x = clamp(x, 0, 1); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-let D = null; const EL = []; const M = [];
+let D = null, BG = null; const EL = []; const M = [];
 
+// A photo card: as large as its picture allows inside the area that stays clear of the chip and credit line at the top,
+// the captions below and (social layout) the button column on the right; a name label sits just under it.
+function cardBox(m, hasLabel) {
+  const soc = D.layout === 'social';
+  const R = soc ? {x: 60, y: 380, w: 870, h: hasLabel ? 500 : 680} : {x: 60, y: 380, w: 960, h: hasLabel ? 620 : 790};
+  const ar = m.ar || 1.5;
+  let w = R.w, h = w / ar;
+  if (h > R.h) { h = R.h; w = h * ar; }
+  w = Math.max(w, Math.min(R.w, 560)); h = Math.max(h, Math.min(R.h, 440));      // very tall or very wide pictures are cropped a little
+  return {x: R.x + (R.w - w) / 2, y: R.y + (R.h - h) / 2, w, h};
+}
 
 function fitEl(node, maxW) {
   let fs = parseFloat(getComputedStyle(node).fontSize), g = 0;
@@ -166,7 +188,12 @@ async function build(data) {
   document.body.classList.add('cap-' + (LK.captions || 'punch'));
   for (const [k, v] of Object.entries(LK.cap || {})) document.body.style.setProperty('--cap-' + k, String(v));
   if (D.layout === 'social') document.body.classList.add('lay-social');
-  if (LK.filter && LK.filter !== 'none') document.getElementById('media').style.filter = LK.filter;
+  if (LK.filter && LK.filter !== 'none') { document.getElementById('media').style.filter = LK.filter; document.getElementById('bgv').style.filter = LK.filter; }
+  if (D.bg && D.bg.count) {                       // the video behind the Short: frames are swapped in prepMedia
+    document.body.classList.add('hasbg');
+    BG = {img: document.getElementById('bgvi'), cur: 0};
+    BG.img.src = D.bg.dir + '/00001.jpg';
+  }
   document.getElementById('gvig').style.opacity = String(LK.vignette || 0);
   document.getElementById('b1').style.cssText = `width:900px;height:900px;background:${D.accent};left:-260px;top:120px;`;
   document.getElementById('b2').style.cssText = `width:800px;height:800px;background:#FFB23F;right:-300px;top:1150px;opacity:.12;`;
@@ -175,22 +202,37 @@ async function build(data) {
   const mediaEl = document.getElementById('media');
   (D.media || []).forEach((m, idx) => {
     const d = document.createElement('div'); d.className = 'mi'; d.style.zIndex = String(idx + 1);
-    const f = document.createElement('img'); f.className = 'fill'; f.src = m.fill;
-    if (m.W) { f.style.width = m.W + 'px'; f.style.height = m.H + 'px'; f.style.objectFit = 'fill'; }
-    d.appendChild(f);
-    let c = null;
-    if (m.card) { c = document.createElement('img'); c.className = 'mcard'; c.src = m.card; c.style.top = m.cardTop + 'px'; c.style.height = m.cardH + 'px'; d.appendChild(c); }
+    const hasLab = !!(m.label && (m.label.t || m.label.s));
+    let f = null, wrap = null, ci = null, cdim = null, box = null;
+    if (m.cardmode) {                      // a photo on top of the background video, with rounded corners and a soft shadow
+      box = cardBox(m, hasLab);
+      wrap = document.createElement('div'); wrap.className = 'cwrap';
+      wrap.style.cssText = `left:${box.x}px;top:${box.y}px;width:${box.w}px;height:${box.h}px;`;
+      ci = document.createElement('img'); ci.className = 'cimg'; ci.src = m.fill;
+      const fx = (m.fx ?? 0.5) * 100, fy = (m.fy ?? 0.45) * 100;
+      ci.style.objectPosition = `${fx}% ${fy}%`; ci.style.transformOrigin = `${fx}% ${fy}%`;
+      cdim = document.createElement('div'); cdim.className = 'cdim';
+      wrap.appendChild(ci); wrap.appendChild(cdim); d.appendChild(wrap);
+    } else {                               // full screen: video of the subject, or any picture when there is no background video
+      f = document.createElement('img'); f.className = 'fill'; f.src = m.fill;
+      if (m.W) { f.style.width = m.W + 'px'; f.style.height = m.H + 'px'; f.style.objectFit = 'fill'; }
+      d.appendChild(f);
+    }
     let lab = null;
-    if (m.label && (m.label.t || m.label.s)) {
-      lab = document.createElement('div'); lab.className = 'mlab'; lab.style.top = (m.labelTop || 1080) + 'px';
+    if (hasLab) {
+      lab = document.createElement('div'); lab.className = 'mlab' + (box ? ' clab' : '');
+      if (box) {                 // centred under its card, and narrow enough to stay clear of the button column on the right
+        const cx = box.x + box.w / 2;
+        lab.style.top = (box.y + box.h + 22) + 'px'; lab.style.left = (cx - 360) + 'px'; lab.style.right = (1080 - cx - 360) + 'px';
+      } else lab.style.top = (m.labelTop || 1080) + 'px';
       lab.innerHTML = (m.label.t ? `<div class="mname">${esc(m.label.t)}</div>` : '') + (m.label.s ? `<div class="mrole">${esc(m.label.s)}</div>` : '');
       d.appendChild(lab);
     }
     mediaEl.appendChild(d);
-    if (lab) lab.querySelectorAll('.mname').forEach(n => fitEl(n, 760));      // the label column stops short of the button column
-    M.push(Object.assign({}, m, {el: d, f, c, lab, cur: -1}));
+    if (lab) lab.querySelectorAll('.mname').forEach(n => fitEl(n, box ? 720 : 760));      // the label column stops short of the button column
+    M.push(Object.assign({}, m, {el: d, f, wrap, ci, cdim, box, lab, cur: -1}));
   });
-  await Promise.all([...mediaEl.querySelectorAll('img')].map(i => i.decode().catch(() => {})));
+  await Promise.all([...mediaEl.querySelectorAll('img'), ...(BG ? [BG.img] : [])].map(i => i.decode().catch(() => {})));
   const stage = document.getElementById('stage');
   D.beats.forEach((b, i) => {
     const v = b.visual; const el = document.createElement('div'); el.className = 'beat ' + v.type; let h = '';
@@ -280,22 +322,39 @@ function renderAt(t) {
     if (m.tin === 'zoom' && t < m.t0 + 0.24) { extra = 1.22 - 0.22 * easeOut((t - m.t0) / 0.24); }
     if (m.tin === 'flash' && t >= m.t0) { flash = Math.max(flash, 0.8 * clamp(1 - (t - m.t0) / 0.2, 0, 1)); }
     const p = clamp((t - m.t0) / Math.max(0.4, m.t1 - m.t0), 0, 1), e = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
-    const s = (m.s0 + (m.s1 - m.s0) * e) * extra * (1 + ((D.look && D.look.punch) || 0.045) * punch);
-    if (m.W) {
-      const cx = m.cx0 + (m.cx1 - m.cx0) * e, cy = m.cy0 + (m.cy1 - m.cy0) * e;
-      m.f.style.transform = `translate(${540 - cx * s + tx}px, ${960 - cy * s}px) scale(${s})`;
+    const pk = (D.look && D.look.punch) || 0.045;
+    if (m.wrap) {
+      // photo card: the card itself pops in (cut), slides in (whip) or settles (zoom); the photo inside pushes in slowly
+      let k = 1;
+      if (m.tin === 'zoom' && t < m.t0 + 0.24) k = 1.11 - 0.11 * easeOut((t - m.t0) / 0.24);
+      else if (m.tin === 'cut' && t < m.t0 + 0.18) k = 0.965 + 0.035 * easeOut((t - m.t0) / 0.18);
+      k *= 1 + pk * 0.6 * punch;
+      m.wrap.style.transform = `translateX(${tx.toFixed(1)}px) scale(${k.toFixed(4)})`;
+      m.wrap.style.filter = blur > 0.5 ? `blur(${blur.toFixed(1)}px)` : 'none';
+      const s2 = m.s0 + (m.s1 - m.s0) * e;
+      const dx = ((m.px0 || 0) + ((m.px1 || 0) - (m.px0 || 0)) * e) * m.box.w, dy = ((m.py0 || 0) + ((m.py1 || 0) - (m.py0 || 0)) * e) * m.box.h;
+      m.ci.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px) scale(${s2.toFixed(4)})`;
+      m.cdim.style.opacity = String(m.dim || 0);
     } else {
-      m.f.style.transformOrigin = '50% 50%';
-      m.f.style.transform = `translateX(${tx}px) scale(${s})`;
+      const s = (m.s0 + (m.s1 - m.s0) * e) * extra * (1 + pk * punch);
+      if (m.W) {
+        const cx = m.cx0 + (m.cx1 - m.cx0) * e, cy = m.cy0 + (m.cy1 - m.cy0) * e;
+        m.f.style.transform = `translate(${540 - cx * s + tx}px, ${960 - cy * s}px) scale(${s})`;
+      } else {
+        m.f.style.transformOrigin = '50% 50%';
+        m.f.style.transform = `translateX(${tx}px) scale(${s})`;
+      }
+      m.f.style.filter = blur > 0.5 ? `blur(${blur.toFixed(1)}px)` : 'none';
     }
-    m.f.style.filter = blur > 0.5 ? `blur(${blur.toFixed(1)}px)` : 'none';
     if (m.lab) { const q = easeBack((t - m.t0 - 0.1) / 0.35); m.lab.style.opacity = easeOut((t - m.t0 - 0.1) / 0.25) * clamp((m.t1 - t) / 0.15, 0, 1); m.lab.style.transform = `translateY(${(1 - q) * 40}px)`; }
   });
   document.getElementById('flash').style.opacity = flash;
-  document.body.classList.toggle('hasmedia', vis > 0.02);
-  const dim = top ? (top.dim ?? 0.1) : 0;
+  document.body.classList.toggle('hasmedia', vis > 0.02 || !!BG);
+  // a card dims itself (.cdim) and needs no gradient across it; full-screen pictures and video keep the old dim and shade
+  const card = !!(top && top.wrap);
+  const dim = top && !card ? (top.dim ?? 0.1) : 0;
   document.getElementById('mdim').style.opacity = dim * vis;
-  document.getElementById('mshade').style.opacity = vis;
+  document.getElementById('mshade').style.opacity = card ? 0 : vis;
   const cr = document.getElementById('credit');
   if (top && top.credit) { if (cr.textContent !== top.credit) cr.textContent = top.credit; cr.style.opacity = vis * 0.95; } else cr.style.opacity = 0;
   // captions
@@ -310,14 +369,21 @@ function renderAt(t) {
 }
 async function prepMedia(t) {
   const waits = [];
+  if (BG) {                                  // the background video: one frame at a time, like the video shots
+    const bi = clamp(Math.floor(Math.max(0, t) * D.bg.fps), 0, D.bg.count - 1);
+    if (bi !== BG.cur) {
+      BG.cur = bi;
+      BG.img.src = D.bg.dir + '/' + String(bi + 1).padStart(5, '0') + '.jpg';
+      waits.push(BG.img.decode().catch(() => {}));
+    }
+  }
   M.forEach(m => {
     if (m.kind !== 'video' || t < m.t0 - 0.3 || t > m.t1 + 0.3) return;
     const idx = clamp(Math.floor(Math.max(0, t - m.t0) * m.fps), 0, m.count - 1);
     if (idx === m.cur) return;
     m.cur = idx;
-    const img = m.card ? m.c : m.f;
-    img.src = m.frames + '/' + String(idx + 1).padStart(5, '0') + '.jpg';
-    waits.push(img.decode().catch(() => {}));
+    m.f.src = m.frames + '/' + String(idx + 1).padStart(5, '0') + '.jpg';
+    waits.push(m.f.decode().catch(() => {}));
   });
   await Promise.all(waits);
 }

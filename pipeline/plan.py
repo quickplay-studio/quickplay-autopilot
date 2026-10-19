@@ -18,7 +18,7 @@ Rules (numbers live in config.json)
   Waiting Shorts are rendered but not uploaded, so they don't use the daily upload limit; pipeline/publish.py uploads
   them once approved.
 """
-import datetime as dt, json, os, pathlib, sys
+import datetime as dt, json, os, pathlib, sys, time
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -144,6 +144,10 @@ def main():
         if st.get("look"): seen.append((st.get("rendered", ""), st["look"]))
     recent_looks = [lk for _, lk in sorted(seen, key=lambda x: x[0])][-5:]
 
+    import background as BG    # the video behind each Short: one clip per search, never one used in the last reuse_days
+    bg_used, bg_cfg = None, BG.settings(CFG)
+    BG.DEADLINE = time.time() + 240        # searching must never hold the run up: past this, Shorts render without a background
+
     jobs, uploads = [], 0
     for p in queue:
         try: b = json.loads(p.read_text())
@@ -155,6 +159,7 @@ def main():
             continue
         mode = b.get("mode", "schedule")
         if mode in ("schedule", "private") and not online: mode = "none"
+        warns = [x for x in warns if not x.startswith("background:")]     # a board without searches gets its category's: never held for it
         hold = hold_reasons(b, warns) if mode != "none" else []
         if mode == "dry" and not hold: hold = ["dry run: always waits for approval, never uploaded"]
         if mode != "none" and not hold:
@@ -170,7 +175,16 @@ def main():
             slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
         recent_looks.append(look)
-        jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look})
+        job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
+        if BG.wanted(b, CFG):
+            try:
+                if bg_used is None: bg_used = BG.recent_used(ROOT, int(bg_cfg["reuse_days"]))
+                clips = BG.pick(b, bg_used, CFG)
+                if clips: job["bg"] = clips
+                else: print(f"background: no clips for {b['id']} (no key, or nothing matched): it renders without", file=sys.stderr)
+            except Exception as e:
+                print(f"background: {b['id']}: {type(e).__name__}: {e}", file=sys.stderr)
+        jobs.append(job)
     print(f"online={online} limit={LIMIT} capacity={capacity} recent_uploads={recent} queued={len(queue)} running={len(jobs)}",
           file=sys.stderr)
     print("boards=" + json.dumps(jobs, ensure_ascii=False))

@@ -138,7 +138,7 @@ https://claude.ai/artifact/CErUUqubbPYWbVrN5XyhDy (private). GitHub refreshes an
 times a day). Refresh the dashboard at the end of each run, and never `read` the dashboard or its page (large, never
 needed): ArtifactData `list` collection "datasets" (for each document's version); then Artifact publish with `url` (the
 dashboard), `file_path` analytics/<id>.csv and `asset: true` for shorts, daily, progress and hourly in every run, plus
-drivers, decisions, geo, traffic and audience in the evening run only (they change slowly); then ONE ArtifactData
+drivers, decisions, geo, traffic, audience and regions in the evening run only (they change slowly); then ONE ArtifactData
 `batch` of `update` writes for the files just uploaded (collection "datasets", doc_id <id>, if_version from the list)
 with data `{"source": {"kind": "file", "url": <returned url>, "name": "<id>.csv"}, "updated": {"at": <UTC time ending
 in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.

@@ -113,17 +113,18 @@ def plan():
 
 
 def example():
-    """The newest finished board with no validator warnings (real footage first, few graphics), as the shape to copy."""
+    """The newest finished board closest to the rules (fewest validator warnings, least stock), as the shape to copy."""
+    best, free = None, f"QD-{next_id():03d}"
     done = sorted((ROOT / "boards" / "done").glob("QD-*.json"), key=lambda p: int(re.sub(r"\D", "", p.stem) or 0), reverse=True)
-    for p in done[:40]:
+    for p in done[:20]:
         try: b = json.loads(p.read_text())
         except Exception: continue
         for k in ("id", "created", "tiktok", "look", "flag"): b.pop(k, None)
         if b.get("mode") or b.get("reserve"): continue
-        errs, warns = validate.check({"id": p.stem, "created": str(NOW.date()), **b})
-        if errs or warns: continue
-        return json.dumps(b, ensure_ascii=False, separators=(",", ":"))
-    return "{}"
+        errs, warns = validate.check({"id": free, "created": str(NOW.date()), **b})
+        stock = sum(str(s.get("src", "")).startswith("pixabay:") for bt in b.get("beats", []) for s in bt.get("shots") or [])
+        if best is None or (len(errs), len(warns), stock) < best[0]: best = ((len(errs), len(warns), stock), b)
+    return json.dumps(best[1], ensure_ascii=False, separators=(",", ":")) if best else "{}"
 
 
 def formats():

@@ -66,7 +66,8 @@ def exchange(ch="main"):
         tok["channel"] = {"id": c["id"], "title": c["snippet"]["title"]}
     except Exception as e:
         tok["channel"] = {"error": str(e)[:150]}
-    if (tok["channel"].get("id") == MAIN) != (ch == "main"):     # one channel's sign-in never replaces another's
+    is_main = tok["channel"].get("id") == MAIN or tok["channel"].get("title") == "Quickplay Daily"
+    if is_main != (ch == "main"):     # one channel's sign-in never replaces another's
         res = {"at": now(), "ok": False, "error": f"this sign-in is for {tok['channel'].get('title') or 'an unknown channel'}, not the "
                f"{ch} channel: sign in again and pick the right channel"}
         print("YouTube sign-in refused:", json.dumps(res, ensure_ascii=False))

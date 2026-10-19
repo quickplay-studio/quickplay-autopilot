@@ -162,8 +162,11 @@ def nasa(kind, words, used):
 def openverse(words, used):
     """A Creative Commons photo via Openverse for people and events Commons lacks. Only CC0, public domain, BY and BY-SA
     (commercial use and changes allowed); the title or tags must hold every capitalised word (the name); no politicians."""
-    res = _get("https://api.openverse.org/v1/images/", params={"q": words, "license_type": "commercial,modification",
-               "page_size": 30, "mature": "false"}).json().get("results", [])
+    try:
+        res = _get("https://api.openverse.org/v1/images/", params={"q": words, "license_type": "commercial,modification",
+                   "page_size": 30, "mature": "false"}).json().get("results", [])
+    except requests.HTTPError:          # Openverse now asks for a sign-in: Commons still covers most people
+        return commons_search(words)
     caps = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)]
     for it in res:
         text = _fold(it.get("title", "")) + " " + " ".join(_fold(t.get("name", "")) for t in it.get("tags") or [])
@@ -173,7 +176,7 @@ def openverse(words, used):
         lic = {"cc0": "CC0", "pdm": "public domain"}.get(it.get("license"), f"CC {str(it.get('license', '')).upper()} {it.get('license_version', '')}".strip())
         return it["url"], f"Photo: {it.get('creator') or 'Unknown'}, {lic}, via {str(it.get('source') or 'Openverse').title()}", \
             it.get("foreign_landing_url") or it["url"]
-    raise RuntimeError(f"no Openverse photo named '{words}'")
+    return commons_search(words)
 
 # news and media outlets: their pictures are agency or staff photos licensed to them, never ours to reuse
 OUTLETS = ("bbc.co.uk", "bbc.com", "theguardian.com", "reuters.com", "apnews.com", "theverge.com", "ign.com", "eurogamer.net",

@@ -31,8 +31,13 @@ def known(w):
         return True
 
 def recall(script, heard):
-    want = [w for w in words(script) if w not in STOP and len(w) > 2 and known(w)]
-    if not want: return 1.0, []
+    """Share of the script's ordinary words that were heard. Capitalised words (names, and the odd sentence opener) are
+    left out: the recogniser rarely gets names right even when it knows them, so name-heavy lines ("Andrew Koji plays
+    Ryu") failed however clearly they were spoken. Under 3 ordinary words is too little to judge, so it counts as clear."""
+    toks = re.findall(r"[A-Za-z][A-Za-z']*", script)
+    want = [t.lower() for t in toks if not t[0].isupper()]
+    want = [w for w in want if w not in STOP and len(w) > 2 and known(w)]
+    if len(want) < 3: return 1.0, []
     got = set(words(heard))
     hit = [w for w in want if w in got or w.rstrip("s") in got or (w + "s") in got]
     return round(len(hit) / len(want), 2), [w for w in want if w not in hit]

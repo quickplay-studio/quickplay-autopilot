@@ -12,8 +12,8 @@ Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batc
 - Never open status files one by one: `python pipeline/digest.py` prints everything you need in one go.
 - Read only what you need: the Recipe and drivers at the top of analytics/insights.md, the topics you pick from
   trends/research.json.
-- Fact packs first (see Facts): a verified fact needs no fetching. Otherwise two reputable sources per fact is the rule:
-  stop fetching once two state it (official plus one outlet, or two outlets).
+- Fact packs first (see Facts): their facts need no fetching. Otherwise one reputable source is enough: stop fetching once
+  one states it.
 - Write boards as compact JSON (no indentation). Leave out what has a default.
 - Wait for renders with ONE background command, `python pipeline/wait_renders.py <ids>`, never repeated polling.
 - No rendering, no browsing beyond the sources you check, no recap messages.

@@ -1,9 +1,76 @@
 {
  "id": "TEST-W1019",
  "board": "boards/queue/TEST-W1019.json",
- "mode": "reject",
+ "mode": "none",
  "slot": "",
- "rendered": "2026-10-19T11:01:52.894629+00:00",
- "state": "failed (board rejected)",
- "error": "look.captions: one of ['clean']; look.energy: one of ['steady']"
+ "rendered": "2026-10-19T11:06:55.792682+00:00",
+ "title": "Street Fighter hits cinemas today 🥊",
+ "media": {
+  "real_shots": 0,
+  "planned_real": 0
+ },
+ "music": "paradigm",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.0,
+  "wps": 3.0,
+  "weak_beats": [
+   2,
+   3
+  ],
+  "size_mb": 8.0
+ },
+ "timeline": [
+  [
+   0.06,
+   2.72,
+   "title",
+   1
+  ],
+  [
+   2.72,
+   7.01,
+   "stat",
+   1
+  ],
+  [
+   7.01,
+   11.34,
+   "versus",
+   2
+  ],
+  [
+   11.34,
+   13.14,
+   "cards",
+   1
+  ],
+  [
+   13.14,
+   15.78,
+   "none",
+   1
+  ],
+  [
+   15.78,
+   19.45,
+   "title",
+   1
+  ],
+  [
+   19.45,
+   23.03,
+   "none",
+   2
+  ]
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [2, 3]"
 }

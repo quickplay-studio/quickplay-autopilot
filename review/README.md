@@ -10,7 +10,7 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-W1019** : failed (board rejected). look.captions: one of ['clean']; look.energy: one of ['steady']
+- **TEST-W1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 
 ## On the channel (latest first)
 
@@ -28,7 +28,7 @@ scheduled · 30 s · music: f16 · [script](../boards/done/QD-042.json) · [YouT
 ![QD-042](QD-042.jpg)
 
 ### Mon 19 Oct 12:10 · What was the first music video on MTV? 📺
-scheduled · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
+private · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
 
 ![QD-038](QD-038.jpg)
 
@@ -36,7 +36,7 @@ scheduled · 24 s · music: after-sunset · [script](../boards/done/QD-038.json)
 private · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Mon 19 Oct 11:30 · Why is a marathon 26.2 miles? 🏃
-public · 9 views · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)
+public · 9 views · 29 s · music: scale-the-mountain · on Instagram · on Facebook · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)
 
 ![QD-040](QD-040.jpg)
 

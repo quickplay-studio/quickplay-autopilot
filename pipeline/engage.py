@@ -5,7 +5,7 @@
   title (meta.alt_title), once
 Everything is recorded in status/<id>.json under "engage". usage: python pipeline/engage.py
 """
-import datetime as dt, json, os, pathlib, statistics, sys
+import datetime as dt, json, os, pathlib, re, statistics, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
@@ -26,6 +26,16 @@ def client():
     creds = Credentials(None, refresh_token=t["refresh_token"], token_uri="https://oauth2.googleapis.com/token",
                         client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"], scopes=yt_connect.SCOPES)
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+TRANSIENT = re.compile(r"HttpError (409|500|502|503|504) |aborted|backendError|[Tt]imeout|timed out|[Cc]onnection")
+
+def tries(e, key):
+    """Tries so far, or None when no more should be made: a passing YouTube error (409 "The operation was aborted.",
+    a 5xx, a timeout) gets up to 3 tries, one per run; any other error is final."""
+    err = str(e.get(f"{key}_error") or "")
+    if not err: return 0
+    n = e.get(f"{key}_tries", 1)
+    return n if n < 3 and TRANSIENT.search(err) else None
 
 def my_playlists(yt):
     out, tok = {}, None
@@ -66,8 +76,8 @@ def main():
                 e["comment"] = r["id"]
             except Exception as ex: e["comment_error"] = f"{type(ex).__name__}: {ex}"[:200]
             changed = True
-        cat = b.get("category")
-        if cat and not e.get("playlist") and not e.get("playlist_error"):
+        cat, n = b.get("category"), tries(e, "playlist")
+        if cat and not e.get("playlist") and n is not None:
             try:
                 if playlists is None: playlists = my_playlists(yt)
                 title = PLAYLIST.format(cat)
@@ -75,10 +85,12 @@ def main():
                     p = yt.playlists().insert(part="snippet,status", body={"snippet": {"title": title, "description": ABOUT.get(cat, ""),
                         "defaultLanguage": "en-GB"}, "status": {"privacyStatus": "public"}}).execute()
                     playlists[title] = p["id"]
-                yt.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": playlists[title],
-                    "resourceId": {"kind": "youtube#video", "videoId": st["video"]}}}).execute()
-                e["playlist"] = title
-            except Exception as ex: e["playlist_error"] = f"{type(ex).__name__}: {ex}"[:200]
+                # on a retry, an "aborted" insert may have gone through after all: never add the Short twice
+                if not (n and yt.playlistItems().list(part="id", playlistId=playlists[title], videoId=st["video"]).execute().get("items")):
+                    yt.playlistItems().insert(part="snippet", body={"snippet": {"playlistId": playlists[title],
+                        "resourceId": {"kind": "youtube#video", "videoId": st["video"]}}}).execute()
+                e["playlist"] = title; e.pop("playlist_error", None); e.pop("playlist_tries", None)
+            except Exception as ex: e["playlist_error"], e["playlist_tries"] = f"{type(ex).__name__}: {ex}"[:200], n + 1
             changed = True
         age = now - pub
         if m.get("alt_title") and typical and not e.get("title") and dt.timedelta(hours=24) <= age <= dt.timedelta(hours=72):

@@ -5,6 +5,9 @@ sport, entertainment, science and tech), Google News top stories (UK: entertainm
 English Wikipedia's most-read pages, and this channel's own last 7 days. (Reddit refuses GitHub's servers, so it isn't used.)
 Every source is optional: one that fails is noted and the rest still run. Kept small on purpose: titles and numbers
 only, so reading it costs Claude very little. research() adds trends/research.json: reputable articles per topic.
+Scheduled events too: rocket launches in the next 48 hours (Launch Library 2, no key), yesterday's football results
+and the next two days' big matches (football-data.org, FOOTBALL_DATA_TOKEN), and Apple Music's most-played songs
+in GB, US, ES, BR and MX with the songs new to each top 25 since the day before (Apple's free charts, no key).
 """
 import datetime as dt, json, os, pathlib, re, sys, xml.etree.ElementTree as ET
 import requests
@@ -115,6 +118,10 @@ def main():
     data = {"date": str(dt.date.today()),
             "google_trends": {**{g: google_trends(g, 20) for g in ("GB", "US")}, **{g: google_trends(g, 8) for g in ("AU", "CA", "IE")}},
             "google_news_uk": google_news(), "wikipedia_top": wikipedia_top()}
+    data["launches"] = launches()
+    fb = football()
+    if fb: data["football"] = fb
+    data["music_charts"] = music_charts()
     if Y.available():
         data["youtube_charts"] = youtube_charts(Y.client())
         data["our_last_7_days"] = own_channel()
@@ -128,6 +135,75 @@ def main():
         print("research pack:", len(pack["topics"]), "topics")
     except Exception as e:
         print("research pack failed:", e)
+
+# ---------------- scheduled events: launches, matches, music charts ----------------
+def launches(hours=48):
+    """Rocket launches in the next `hours` (Launch Library 2, free, no key): when, who, what, and an official page."""
+    try:
+        now = dt.datetime.now(dt.timezone.utc)
+        r = requests.get("https://ll.thespacedevs.com/2.3.0/launches/upcoming/", headers=UA, timeout=30,
+                         params={"limit": 8, "mode": "normal", "net__lte": (now + dt.timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")}).json()
+        out = []
+        for l in r.get("results") or []:
+            urls = l.get("info_urls") or l.get("infoURLs") or []
+            info = next((u.get("url") if isinstance(u, dict) else u for u in urls), "")
+            out.append({"name": l.get("name"), "net_utc": l.get("net"), "status": (l.get("status") or {}).get("abbrev"),
+                        "provider": (l.get("launch_service_provider") or {}).get("name"),
+                        "mission": ((l.get("mission") or {}).get("description") or "")[:200],
+                        "pad": ((l.get("pad") or {}).get("location") or {}).get("name"), "info": info})
+        return out
+    except Exception as e:
+        return [{"error": str(e)[:120]}]
+
+FOOTBALL = {"PL": "Premier League", "CL": "Champions League", "PD": "La Liga", "SA": "Serie A", "BL1": "Bundesliga",
+            "FL1": "Ligue 1", "ELC": "Championship", "BSA": "Brasileirao"}
+
+def football():
+    """Yesterday's results and the next two days' matches in the big competitions (football-data.org)."""
+    tok = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
+    if not tok: return None
+    today = dt.date.today()
+    try:
+        r = requests.get("https://api.football-data.org/v4/matches", headers={"X-Auth-Token": tok}, timeout=30,
+                         params={"dateFrom": str(today - dt.timedelta(days=1)), "dateTo": str(today + dt.timedelta(days=2)),
+                                 "competitions": ",".join(FOOTBALL)}).json()
+        res, fix = [], []
+        for m in r.get("matches") or []:
+            team = lambda t: (t or {}).get("shortName") or (t or {}).get("name") or "?"
+            row = {"competition": FOOTBALL.get((m.get("competition") or {}).get("code"), (m.get("competition") or {}).get("name")),
+                   "home": team(m.get("homeTeam")), "away": team(m.get("awayTeam")), "kickoff_utc": m.get("utcDate")}
+            if m.get("status") == "FINISHED":
+                ft = (m.get("score") or {}).get("fullTime") or {}
+                row["score"] = f"{ft.get('home')}-{ft.get('away')}"; res.append(row)
+            elif m.get("status") in ("SCHEDULED", "TIMED"): fix.append(row)
+        return {"results": res[:20], "fixtures": fix[:20]} if (res or fix) else {"note": r.get("message", "no matches")}
+    except Exception as e:
+        return {"error": str(e)[:120]}
+
+CHART_COUNTRIES = ("gb", "us", "es", "br", "mx")
+
+def music_charts():
+    """Apple Music's most-played songs per country (free charts, no key): the top 5, and songs new to the top 25 since
+    the day before (trends/charts.json keeps the last day's lists)."""
+    p = ROOT / "trends" / "charts.json"
+    try: saved = json.loads(p.read_text())
+    except Exception: saved = {}
+    today = str(dt.date.today())
+    if saved.get("date") != today: saved = {"date": today, "previous": saved.get("charts") or {}, "charts": {}}
+    out = {}
+    for cc in CHART_COUNTRIES:
+        try:
+            feed = requests.get(f"https://rss.marketingtools.apple.com/api/v2/{cc}/music/most-played/25/songs.json",
+                                headers=UA, timeout=30).json()["feed"]["results"]
+            songs = [f"{x['name']} by {x['artistName']}" for x in feed]
+        except Exception as e:
+            out[cc] = {"error": str(e)[:80]}; continue
+        saved["charts"][cc] = songs
+        before = saved["previous"].get(cc) or []
+        out[cc] = {"top5": songs[:5], "new_in_top25": [x for x in songs if before and x not in before][:5]}
+    try: p.write_text(json.dumps(saved, ensure_ascii=False, indent=1))
+    except Exception: pass
+    return out
 
 # ---------------- research pack ----------------
 # Recent articles from reputable outlets (their own RSS feeds, so the links are the outlets' own pages) matched to the
@@ -297,6 +373,13 @@ def research(data):
                                          "published": a["when"].strftime("%Y-%m-%d") if a["when"] else ""} for a in arts]})
     for q in requested_topics():                  # Charlie's own requests first
         add(q, "Charlie's request", vetted=True)
+    for l in [x for x in data.get("launches") or [] if x.get("name")][:2]:      # then what is happening on a schedule
+        add(l["name"], f"rocket launch {str(l.get('net_utc', ''))[:16].replace('T', ' ')} UTC ({l.get('status') or '?'})")
+    for m in ((data.get("football") or {}).get("fixtures") or [])[:3]:
+        add(f"{m['home']} vs {m['away']}", f"{m['competition']}, {str(m.get('kickoff_utc', ''))[:16].replace('T', ' ')} UTC")
+    for cc in ("gb", "us"):
+        for song in (((data.get("music_charts") or {}).get(cc) or {}).get("new_in_top25") or [])[:2]:
+            add(song, f"Apple Music {cc.upper()}: new in the top 25")
     for geo in ("GB", "US"):
         for t in (data.get("google_trends") or {}).get(geo, [])[:12]:
             if t.get("q"): add(t["q"], f"Google Trends {geo} {t.get('traffic', '')}".strip())

@@ -41,6 +41,9 @@ from every Short against Shorts posted around the same time) and the drivers beh
   Strongest signal first (Google Trends traffic, YouTube views per hour, Wikipedia views), weighted by what our own
   analytics say works. Early beats late: a fresh angle on today's story beats a recap. Skip niche topics and anything
   covered in the last 14 days (titles in boards/done, ready and queue).
+- Scheduled events (trends/latest.json): rocket launches in the next 48 hours, yesterday's football results and the
+  next two days' big matches, and songs new to Apple Music's top 25 in GB, US, ES, BR and MX. A Short timed to the
+  event (out before kick-off or lift-off, or the morning after a result) beats a recap.
 - Hook (first beat): the most surprising true detail in 12 words or fewer, with the strongest real image on screen from
   the first frame. Never "X is back", "X has a date" or a slow intro.
 - Length: 25 to 40 seconds (70 to 110 words) unless the story truly needs more. Cut background and throat-clearing.

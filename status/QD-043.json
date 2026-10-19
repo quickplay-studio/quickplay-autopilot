@@ -1,0 +1,82 @@
+{
+ "id": "QD-043",
+ "board": "boards/queue/QD-043.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T13:50:00Z",
+ "rendered": "2026-10-19T12:15:46.199924+00:00",
+ "title": "K/DA tease a comeback for 20 October 💜",
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')",
+  "beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 12
+ },
+ "music": "mirror-mirror",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 31.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.7
+ },
+ "timeline": [
+  [
+   0.06,
+   5.48,
+   "title",
+   0
+  ],
+  [
+   5.48,
+   11.25,
+   "date",
+   2
+  ],
+  [
+   11.25,
+   15.03,
+   "none",
+   1
+  ],
+  [
+   15.03,
+   19.56,
+   "none",
+   2
+  ],
+  [
+   19.56,
+   23.25,
+   "none",
+   1
+  ],
+  [
+   23.25,
+   28.94,
+   "versus",
+   1
+  ],
+  [
+   28.94,
+   31.37,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "render: beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')",
+  "render: beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')"
+ ],
+ "preview_release": "preview-QD-043",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-a8db34a4c3c1550b7a9a"
+}

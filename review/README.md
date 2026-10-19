@@ -1,8 +1,10 @@
 # Quickplay Daily review
 
+**Progress** (Mon 19 Oct, 12:41): 5 of 1,000 subscribers · 2,103 of 10 million Shorts views in 90 days · 870 views in the last 24 hours (about 111,088 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
+
 YouTube checked Mon 19 Oct 12:41 (UK): 3 scheduled, 33 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 9:45).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 13:08).
 
 ## Needs a look
 
@@ -13,6 +15,31 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-W1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 
+## Waiting for your approval
+
+Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
+
+### QD-043 · K/DA tease a comeback for 20 October 💜
+awaiting approval · 31 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-a8db34a4c3c1550b7a9a)
+- render: beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')
+- render: beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')
+
+![QD-043](QD-043.jpg)
+
+### QD-044 · Jailer 2's cameos: Hrithik Roshan and more 🎬
+awaiting approval · 30 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-8cefbf0b78566488b092)
+- render: beat 1 reused a nearby picture (commons-search:Hrithik Roshan: no Commons image named 'Hrithik Roshan')
+- render: beat 4 reused a nearby picture (commons-search:Ramya Krishnan: no Commons image named 'Ramya Krishnan')
+
+![QD-044](QD-044.jpg)
+
+## In the queue
+
+- **QD-048** Lauren Hemp chases all-time WSL record ⚽ (rendering next)
+- **QD-049** James Acaster Traitors rumour addressed 🤫 (rendering next)
+- **QD-050** The Celebrity Traitors: BBC denies cast complaint 🏰 (rendering next)
+- **QD-051** K/DA makes K-pop history in League of Legends 🎤 (rendering next)
+
 ## On the channel (latest first)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
@@ -21,10 +48,10 @@ scheduled · 23 s · music: in-battery · [script](../boards/done/QD-041.json) �
 ![QD-041](QD-041.jpg)
 
 ### Mon 19 Oct 13:30 · Why Star Wars fans love Biddy Blas 🛸
-scheduled · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
+private · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
-private · 30 s · music: f16 · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
+private · 30 s · music: f16 · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
 
 ![QD-042](QD-042.jpg)
 

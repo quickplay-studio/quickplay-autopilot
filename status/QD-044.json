@@ -1,0 +1,82 @@
+{
+ "id": "QD-044",
+ "board": "boards/queue/QD-044.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T14:30:00Z",
+ "rendered": "2026-10-19T12:15:44.863791+00:00",
+ "title": "Jailer 2's cameos: Hrithik Roshan and more 🎬",
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Hrithik Roshan: no Commons image named 'Hrithik Roshan')",
+  "beat 4 reused a nearby picture (commons-search:Ramya Krishnan: no Commons image named 'Ramya Krishnan')"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 14
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 29.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.3
+ },
+ "timeline": [
+  [
+   0.06,
+   3.21,
+   "title",
+   0
+  ],
+  [
+   3.21,
+   9.95,
+   "cards",
+   3
+  ],
+  [
+   9.95,
+   13.83,
+   "none",
+   2
+  ],
+  [
+   13.83,
+   19.89,
+   "none",
+   1
+  ],
+  [
+   19.89,
+   22.99,
+   "none",
+   2
+  ],
+  [
+   22.99,
+   27.43,
+   "date",
+   1
+  ],
+  [
+   27.43,
+   29.72,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "render: beat 1 reused a nearby picture (commons-search:Hrithik Roshan: no Commons image named 'Hrithik Roshan')",
+  "render: beat 4 reused a nearby picture (commons-search:Ramya Krishnan: no Commons image named 'Ramya Krishnan')"
+ ],
+ "preview_release": "preview-QD-044",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-8cefbf0b78566488b092"
+}

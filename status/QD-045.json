@@ -1,0 +1,76 @@
+{
+ "id": "QD-045",
+ "board": "boards/queue/QD-045.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T15:10:00Z",
+ "rendered": "2026-10-19T12:15:18.151574+00:00",
+ "title": "Duncan Ferguson is Glentoran's new manager ⚽",
+ "media": {
+  "real_shots": 8,
+  "planned_real": 11
+ },
+ "music": "never-coming-down",
+ "social_music": "indie-rock-204846",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 32.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.74,
+   "title",
+   0
+  ],
+  [
+   3.74,
+   9.27,
+   "none",
+   2
+  ],
+  [
+   9.27,
+   14.97,
+   "none",
+   1
+  ],
+  [
+   14.97,
+   20.87,
+   "none",
+   2
+  ],
+  [
+   20.87,
+   28.54,
+   "timeline",
+   1
+  ],
+  [
+   28.54,
+   31.94,
+   "none",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T12:35:52Z",
+ "video": "-InuBVWX0uA",
+ "url": "https://youtube.com/shorts/-InuBVWX0uA",
+ "publish_at": "2026-10-19T15:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T15:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-045"
+}

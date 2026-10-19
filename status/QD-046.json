@@ -1,0 +1,70 @@
+{
+ "id": "QD-046",
+ "board": "boards/queue/QD-046.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T15:50:00Z",
+ "rendered": "2026-10-19T12:15:18.371015+00:00",
+ "title": "Zara Larsson's Blue Moon: fairy or mermaid? 🌙",
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "purple-desire",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 24.4,
+  "wps": 3.05,
+  "weak_beats": [],
+  "size_mb": 9.4
+ },
+ "timeline": [
+  [
+   0.06,
+   4.11,
+   "title",
+   1
+  ],
+  [
+   4.11,
+   10.52,
+   "none",
+   2
+  ],
+  [
+   10.52,
+   15.21,
+   "stat",
+   2
+  ],
+  [
+   15.21,
+   20.91,
+   "none",
+   2
+  ],
+  [
+   20.91,
+   24.41,
+   "title",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T12:35:54Z",
+ "video": "Etw1Y5mu2qI",
+ "url": "https://youtube.com/shorts/Etw1Y5mu2qI",
+ "publish_at": "2026-10-19T15:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T15:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-046"
+}

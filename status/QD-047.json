@@ -1,0 +1,77 @@
+{
+ "id": "QD-047",
+ "board": "boards/queue/QD-047.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T16:30:00Z",
+ "rendered": "2026-10-19T12:16:01.546495+00:00",
+ "title": "The Beekeeper 2 teaser: who's new, who's back 🐝",
+ "media": {
+  "real_shots": 10,
+  "planned_real": 10
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 25.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.98,
+   "title",
+   1
+  ],
+  [
+   3.98,
+   9.26,
+   "none",
+   2
+  ],
+  [
+   9.26,
+   14.42,
+   "none",
+   2
+  ],
+  [
+   14.42,
+   16.74,
+   "none",
+   2
+  ],
+  [
+   16.74,
+   20.21,
+   "stat",
+   2
+  ],
+  [
+   20.21,
+   24.93,
+   "date",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T12:35:57Z",
+ "video": "96105PmWfi4",
+ "url": "https://youtube.com/shorts/96105PmWfi4",
+ "publish_at": "2026-10-19T16:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T16:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-047"
+}

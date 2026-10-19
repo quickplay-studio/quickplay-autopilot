@@ -162,10 +162,12 @@ def main():
         sb = fetch_media.resolve(sb)
         # the video behind the Short: clips picked by plan.py (background.py), downloaded here. With none, the Short renders as before.
         cfg = json.loads((ROOT / "config.json").read_text())
+        bnotes = []
         if job.get("bg"):
             clips, bnotes = BG.fetch(job["bg"], sid, cfg)
             if clips: sb["bg_clips"], sb["bg_cfg"] = clips, BG.settings(cfg)
-            if bnotes: status["background_notes"] = bnotes
+        if job.get("bg_notes") or bnotes:       # why a provider was skipped or a clip refused (plan.py's notes, then the downloads')
+            status["background_notes"] = (list(job.get("bg_notes") or []) + bnotes)[:24]
         if BG.wanted(sb, cfg) and not sb.get("bg_clips"):
             status["background_note"] = "no background video (no clip found or downloaded): rendered with full-screen pictures"
         real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or []

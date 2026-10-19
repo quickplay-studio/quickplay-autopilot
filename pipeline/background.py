@@ -25,8 +25,8 @@ DASH = re.compile("[–—]")
 WORD = re.compile(r"[^\W_][\w'-]*")
 SEARCH = re.compile(r"(?:nasa:)?[^\W_][\w'-]*(?: [^\W_][\w'-]*){1,3}")      # what validate.py accepts: 2 to 4 plain words
 
-DEFAULTS = {"enabled": False, "reuse_days": 7, "clip_seconds": [8, 15], "min_px": 720, "blur": 9, "target_luma": 0.27,
-            "fade": 0.6, "frame_w": 540, "frame_h": 960, "pexels": True, "pixabay": True, "nasa": True}
+DEFAULTS = {"enabled": False, "reuse_days": 7, "clip_seconds": [8, 15], "min_px": 720, "blur": 13, "target_luma": 0.27,
+            "min_luma": 0.05, "max_gain": 2.0, "fade": 0.6, "frame_w": 540, "frame_h": 960, "pexels": True, "pixabay": True, "nasa": True}
 
 # used when a board lists fewer than 2 usable searches: the world of its category
 FALLBACK = {
@@ -131,6 +131,18 @@ def _weak(cands, query, min_share, top):
 
 DEADLINE = 0        # plan.py sets a time (time.time() + seconds) after which no more searches are made
 _dead = set()       # providers that refused us this run (a wrong key, or the rate limit): not asked again until the next run
+NOTES = []          # what happened while one board's clips were picked: plan.py hands it to the render job, which writes it to
+                    # status/<id>.json (the Actions logs cannot be read from outside, the status files can)
+
+def note(msg):
+    """Print a line about the search and keep it in NOTES. Never a key: any secret or key= in it is blanked first."""
+    msg = re.sub(r"\s+", " ", str(msg)).strip()
+    for env in ("PEXELS_API_KEY", "PIXABAY_API_KEY"):
+        v = os.environ.get(env, "").strip()
+        if len(v) > 6: msg = msg.replace(v, "***")
+    msg = re.sub(r"(?i)\b(key|authorization)=[^&\s'\")]+", r"\1=***", msg)[:130]
+    print(f"  background: {msg}", file=sys.stderr)
+    if len(NOTES) < 16 and msg not in NOTES: NOTES.append(msg)
 
 def _late():
     import time
@@ -141,6 +153,8 @@ def _get(url, **kw):
     if _late(): raise TimeoutError("the time allowed for background searches is used up")
     return requests.get(url, headers={**UA, **(kw.pop("headers", None) or {})}, timeout=20, **kw)
 
+PEXELS_URLS = ("https://api.pexels.com/v1/videos/search", "https://api.pexels.com/videos/search")   # the documented path, then the older one
+
 def pexels_search(words, st, orientation="portrait", page=1):
     key = os.environ.get("PEXELS_API_KEY", "").strip()
     if not key or not st.get("pexels", True) or "pexels" in _dead: return []
@@ -148,23 +162,28 @@ def pexels_search(words, st, orientation="portrait", page=1):
     if ck not in _cache:
         out = []
         try:
-            r = _get("https://api.pexels.com/videos/search", headers={"Authorization": key},
-                     params={"query": words, "orientation": orientation, "size": "small", "per_page": 40, "page": page})
+            params = {"query": words, "orientation": orientation, "size": "small", "per_page": 40, "page": page}
+            for url in PEXELS_URLS:
+                r = _get(url, headers={"Authorization": key}, params=params)
+                if r.status_code != 404: break
             if r.status_code != 200:
-                print(f"  background: Pexels answered {r.status_code} for '{words}'" + (" (not asking again this run)" if r.status_code in (401, 403, 429) else ""), file=sys.stderr)
-                if r.status_code in (401, 403, 429): _dead.add("pexels")
+                bad = r.status_code in (401, 403, 429)
+                note(f"Pexels answered {r.status_code} for '{words}'" + (" (not asking again this run" + ("; check the PEXELS_API_KEY secret)" if r.status_code != 429 else ")") if bad else ""))
+                if bad: _dead.add("pexels")
             else:
-                for rank, v in enumerate(r.json().get("videos") or []):
+                vids = r.json().get("videos") or []
+                for rank, v in enumerate(vids):
                     files = [f for f in v.get("video_files") or [] if f.get("file_type") == "video/mp4" and f.get("link")
                              and min(f.get("width") or 0, f.get("height") or 0) >= st["min_px"]]
                     if not files: continue
                     f = min(files, key=lambda f: (f["width"] * f["height"], -(f.get("fps") or 0)))   # the smallest that is still 720p
-                    page = v.get("url") or ""
+                    pg = v.get("url") or ""
                     out.append({"p": "pexels", "id": str(v["id"]), "url": f["link"], "w": f["width"], "h": f["height"],
-                                "d": v.get("duration") or 0, "by": (v.get("user") or {}).get("name") or "", "page": page,
-                                "text": page.rstrip("/").rsplit("/", 1)[-1].replace("-", " "), "rank": rank})
+                                "d": v.get("duration") or 0, "by": (v.get("user") or {}).get("name") or "", "page": pg,
+                                "text": pg.rstrip("/").rsplit("/", 1)[-1].replace("-", " "), "rank": rank})
+                if not out: note(f"Pexels {orientation} '{words}': {len(vids)} results, none at 720p or better")
         except Exception as e:
-            print(f"  background: Pexels search '{words}' failed: {e}", file=sys.stderr)
+            note(f"Pexels search '{words}' failed: {type(e).__name__}: {e}")
         _cache[ck] = out
     return _cache[ck]
 
@@ -178,10 +197,12 @@ def pixabay_search(words, st):
             from fetch_media import _junk           # green screens, AI pictures and animations look fake
             r = _get("https://pixabay.com/api/videos/", params={"key": key, "q": words[:100], "safesearch": "true", "per_page": 40})
             if r.status_code != 200:
-                print(f"  background: Pixabay answered {r.status_code} for '{words}'" + (" (not asking again this run)" if r.status_code in (400, 401, 403, 429) else ""), file=sys.stderr)
-                if r.status_code in (400, 401, 403, 429): _dead.add("pixabay")
+                bad = r.status_code in (400, 401, 403, 429)
+                note(f"Pixabay answered {r.status_code} for '{words}'" + (" (not asking again this run)" if bad else ""))
+                if bad: _dead.add("pixabay")
             else:
-                for rank, h in enumerate(r.json().get("hits") or []):
+                hits = r.json().get("hits") or []
+                for rank, h in enumerate(hits):
                     vids = h.get("videos") or {}
                     files = [vids[k] for k in ("tiny", "small", "medium", "large") if (vids.get(k) or {}).get("url")
                              and min(vids[k].get("width") or 0, vids[k].get("height") or 0) >= st["min_px"]]
@@ -190,25 +211,53 @@ def pixabay_search(words, st):
                     out.append({"p": "pixabay", "id": str(h["id"]), "url": f["url"], "w": f["width"], "h": f["height"],
                                 "d": h.get("duration") or 0, "by": h.get("user") or "", "page": h.get("pageURL") or "",
                                 "text": (h.get("tags") or "").replace(",", " "), "rank": rank})
+                if not out: note(f"Pixabay '{words}': {len(hits)} results, none at 720p or better")
         except Exception as e:
-            print(f"  background: Pixabay search '{words}' failed: {e}", file=sys.stderr)
+            note(f"Pixabay search '{words}' failed: {type(e).__name__}: {e}")
         _cache[ck] = out
     return _cache[ck]
 
-def nasa_search(words, used, want=2):
-    """Up to `want` NASA clips for the words (public domain). Their size is checked when they are downloaded."""
-    from fetch_media import nasa
+# NASA's library is full of news shows and produced packages (captions, lower thirds, titles). Blurred, their letters turn into
+# smears behind a Short, so those are skipped by name and plain b-roll, animations and launch footage are ranked first.
+NASA_SKIP = re.compile(r"this week|nasa edge|explorers|briefing|conference|interview|\blive\b|update|q ?& ?a|hangout|podcast|episode|"
+                       r"webcast|panel|town hall|science casual|nasa now|\bpsa\b|highlights|weekly|recap|explain|lecture|speech|remarks|"
+                       r"ceremony|award|promo|teaser|trailer|shareable|social|caption|subtitle|nasaweb|infographic|\bnews\b|report|"
+                       r"\btv\b|\bshow\b|series|special|message|greeting|countdown|commentary|narrat|documentary|feature|story|"
+                       r"\bpart \d|\bpsa|screen ?cast|presentation|tutorial|how to|what is", re.I)
+NASA_BROLL = re.compile(r"b-?roll|footage|animation|visuali[sz]ation|flyover|fly-?over|time-?lapse|simulation|views? (?:of|from)|"
+                        r"from (?:orbit|space|the iss|the space station)|launch|lift-?off|roll-?out|landing|rotating|spinning|"
+                        r"orbit|flight|surface|hd video", re.I)
+
+def nasa_search(words, used, want=3):
+    """Up to `want` NASA clips (public domain) for the words, b-roll first. Their size is checked when they are downloaded."""
+    from fetch_media import NASA, NOT_NASA, _fold, _stem
     ids = {k[5:] for k in used if k.startswith("nasa:")}
+    r = _get(f"{NASA}/search", params={"q": words, "media_type": "video"})
+    r.raise_for_status()
+    items = ((r.json().get("collection") or {}).get("items") or [])[:40]
+    wants = [_stem(w) for w in words.split() if len(w) > 3]
+    ranked, skipped = [], 0
+    for rank, it in enumerate(items):
+        d = (it.get("data") or [{}])[0]; nid = d.get("nasa_id"); title = d.get("title") or ""
+        if not nid or nid in ids or not it.get("href"): continue
+        if NASA_SKIP.search(title + " " + nid) or NOT_NASA.search(" ".join(str(d.get(k, "")) for k in ("description", "photographer", "secondary_creator"))):
+            skipped += 1; continue
+        text = _fold(" ".join([title] + list(d.get("keywords") or [])))
+        hit = sum(w in text for w in wants)
+        if wants and hit < min(2, len(wants)): continue
+        broll = bool(NASA_BROLL.search(title + " " + str(d.get("description", ""))[:300]))
+        ranked.append((hit / max(1, len(wants)) + (0.4 if broll else 0) - rank * 0.01, it, d))
     out = []
-    for _ in range(want):
-        if _late(): break
-        try: url, credit, page = nasa("video", words, ids)
-        except Exception as e:
-            if not out: print(f"  background: NASA '{words}': {e}", file=sys.stderr)
-            break
-        nid = urllib.parse.unquote(page.rstrip("/").rsplit("/", 1)[-1])
-        out.append({"p": "nasa", "id": nid, "url": url, "w": 0, "h": 0, "d": 0, "by": "NASA", "page": page, "credit": credit,
-                    "text": words, "rank": len(out)})
+    for _, it, d in sorted(ranked, key=lambda t: -t[0])[:want + 3]:
+        if len(out) >= want or _late(): break
+        try: hrefs = [h.replace("http://", "https://") for h in _get(it["href"]).json() if isinstance(h, str)]
+        except Exception: continue
+        url = next((h for suf in ("~large.mp4", "~orig.mp4") for h in hrefs if h.endswith(suf)), None)
+        if not url: continue
+        out.append({"p": "nasa", "id": d["nasa_id"], "url": url, "w": 0, "h": 0, "d": 0, "by": "NASA",
+                    "page": f"https://images.nasa.gov/details/{urllib.parse.quote(d['nasa_id'])}",
+                    "credit": f"Video: NASA ({d.get('center') or 'NASA'})", "text": words, "rank": len(out)})
+    if not out: note(f"NASA '{words}': nothing usable ({len(items)} results, {skipped} news or captioned)")
     return out
 
 def candidates(prov, words, st, used):
@@ -217,7 +266,9 @@ def candidates(prov, words, st, used):
     results Pexels ranked highest even though their names share no words with the search."""
     free = lambda c: f"{c['p']}:{c['id']}" not in used
     if prov == "nasa" and st.get("nasa", True):
-        out = [c for c in nasa_search(words, used) if free(c)]
+        try: out = [c for c in nasa_search(words, used) if free(c)]
+        except Exception as e:
+            out = []; note(f"NASA '{words}' failed: {type(e).__name__}: {e}")
         if out: return out
     pex = [c for c in pexels_search(words, st, "portrait") if free(c)]
     if len(_strong(pex, words, 0.3)) < 3:                    # wider clips are cropped to 9:16, so they widen the choice
@@ -237,8 +288,7 @@ def pick(b, used, cfg):
     (provider:id), which plan.py shares across the whole run. [] when no key works or nothing matches."""
     st = settings(cfg)
     for env, name in (("PEXELS_API_KEY", "Pexels"), ("PIXABAY_API_KEY", "Pixabay")):
-        if not os.environ.get(env, "").strip() and env not in _dead:
-            _dead.add(env); print(f"  background: {env} is not set, so {name} is skipped", file=sys.stderr)
+        if not os.environ.get(env, "").strip(): note(f"{env} is not set, so {name} is skipped")
     have = [parse(q) for q in tidy(b.get("background"))]
     extra = [p for p in (parse(q) for q in fallback(b)) if p and p[1] not in {h[1] for h in have}]
     first, spares = [], []
@@ -258,7 +308,12 @@ def pick(b, used, cfg):
     for prov, words in extra:
         if len(spares) >= 3: break
         spares += take(prov, words, 1)
-    return [dict(c, spare=False) for c in first[:4]] + [dict(c, spare=True) for c in spares[:4]]
+    out = [dict(c, spare=False) for c in first[:4]] + [dict(c, spare=True) for c in spares[:4]]
+    got = {}
+    for c in out:
+        if not c["spare"]: got[c["p"]] = got.get(c["p"], 0) + 1
+    note("picked " + (", ".join(f"{p} {n}" for p, n in got.items()) or "nothing") + f" (+{sum(1 for c in out if c['spare'])} spares)")
+    return out
 
 # ---------------- downloading ----------------
 def _probe(path):
@@ -289,6 +344,7 @@ def _download(c, d, st):
         got = 0
         with requests.get(url, headers=UA, timeout=120, stream=True) as r:
             r.raise_for_status()
+            if int(r.headers.get("Content-Length") or 0) > 150_000_000: raise RuntimeError("file too large")
             with open(dest, "wb") as f:
                 for chunk in r.iter_content(1 << 20):
                     got += len(chunk)
@@ -299,7 +355,7 @@ def _download(c, d, st):
     if dur < 4: raise RuntimeError(f"only {dur:.1f}s long")
     ss = min(6.0, dur - 20) if c.get("p") == "nasa" and dur > 40 else 0.0
     luma = measure_luma(dest, min(dur - ss, 15), ss)
-    if luma < 0.03: raise RuntimeError("nearly black")
+    if luma < float(st.get("min_luma", 0.05)): raise RuntimeError(f"nearly black (brightness {luma:.2f})")
     return dict(c, file=os.path.relpath(dest, HERE), w=w, h=h, d=round(dur, 2), ss=round(ss, 2), luma=round(luma, 3))
 
 def fetch(clips, sid, cfg):
@@ -342,7 +398,7 @@ def build(clips, T, dest, st, fps=25):
     cmd, parts = ["ffmpeg", "-y", "-v", "error"], []
     for i, c in enumerate(clips):
         path = HERE / c["file"]
-        gain = max(0.35, min(1.0, float(st["target_luma"]) / max(0.05, float(c.get("luma") or 0.4))))
+        gain = max(0.35, min(float(st.get("max_gain", 2.0)), float(st["target_luma"]) / max(0.03, float(c.get("luma") or 0.4))))
         ss = float(c.get("ss") or 0)
         if (c.get("d") or 0) - ss < L + 0.3: cmd += ["-stream_loop", "-1"]
         cmd += ["-ss", f"{ss:.2f}", "-t", f"{L + 0.3:.3f}", "-i", str(path)]

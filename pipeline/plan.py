@@ -177,13 +177,15 @@ def main():
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
         if BG.wanted(b, CFG):
+            BG.NOTES.clear()
             try:
                 if bg_used is None: bg_used = BG.recent_used(ROOT, int(bg_cfg["reuse_days"]))
                 clips = BG.pick(b, bg_used, CFG)
                 if clips: job["bg"] = clips
                 else: print(f"background: no clips for {b['id']} (no key, or nothing matched): it renders without", file=sys.stderr)
             except Exception as e:
-                print(f"background: {b['id']}: {type(e).__name__}: {e}", file=sys.stderr)
+                BG.note(f"picking clips failed: {type(e).__name__}: {e}")
+            if BG.NOTES: job["bg_notes"] = list(BG.NOTES)      # lands in status/<id>.json: the Actions logs are not readable from outside
         jobs.append(job)
     print(f"online={online} limit={LIMIT} capacity={capacity} recent_uploads={recent} queued={len(queue)} running={len(jobs)}",
           file=sys.stderr)

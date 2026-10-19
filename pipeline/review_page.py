@@ -24,6 +24,19 @@ def main():
     by_video = {s.get("video"): s for s in statuses if s.get("video")}
     now = dt.datetime.now(dt.timezone.utc)
     lines = ["# Quickplay Daily review", ""]
+    prog = ROOT / "analytics" / "progress.csv"      # the stats, so Charlie needs no Claude run to see them
+    if prog.exists():
+        import csv
+        rows = list(csv.DictReader(prog.open()))
+        if rows:
+            p = rows[-1]
+            def n(k):
+                try: return f"{int(float(p.get(k) or '')):,}"
+                except ValueError: return "?"
+            lines += [f"**Progress** ({p.get('as_of_uk', '')}): {n('subscribers')} of 1,000 subscribers · {n('engaged_views_90d')} of "
+                      f"10 million Shorts views in 90 days · {n('views_last_24h')} views in the last 24 hours (about "
+                      f"{n('needed_per_day')} a day needed, {p.get('days_left', '?')} days left) · Instagram {n('ig_followers')} and "
+                      f"Facebook {n('fb_followers')} followers.", ""]
     if channel:
         lines += [f"YouTube checked {uk(channel['checked'])} (UK): {channel['scheduled']} scheduled, {channel['public']} public, "
                   f"{channel['uploads_last_24h']} uploads in the last 24 hours.", ""]

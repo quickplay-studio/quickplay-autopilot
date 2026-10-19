@@ -6,7 +6,6 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 ## Needs a look
 
-- **QD-039** Street Fighter movie: Roman Reigns is Akuma 🥋: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]

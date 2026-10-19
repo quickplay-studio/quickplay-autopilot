@@ -3,73 +3,80 @@
  "board": "boards/queue/QD-039.json",
  "mode": "schedule",
  "slot": "2026-10-19T09:50:00Z",
- "rendered": "2026-10-19T06:42:16.158721+00:00",
+ "rendered": "2026-10-19T06:58:33.384009+00:00",
  "title": "Street Fighter movie: Roman Reigns is Akuma 🥋",
  "media": {
   "real_shots": 7,
   "planned_real": 8
  },
- "music": "rise-of-the-machines",
- "social_music": "epic-action-512484",
+ "music": "stake-out",
+ "social_music": "action-chase-adrenaline-soundtrack-364888",
  "look": {
-  "captions": "pop",
+  "captions": "punch",
   "voice": "george",
   "energy": "punchy",
   "grade": "cinematic",
   "opening": "graphic_first"
  },
  "qa": {
-  "duration": 26.7,
+  "duration": 27.0,
   "wps": 3.0,
-  "weak_beats": [
-   4
-  ],
-  "size_mb": 14.6
+  "weak_beats": [],
+  "size_mb": 14.7
  },
  "timeline": [
   [
    0.06,
-   3.12,
+   3.24,
    "title",
    1
   ],
   [
-   3.12,
-   9.59,
+   3.24,
+   9.98,
    "date",
    2
   ],
   [
-   9.59,
-   14.81,
+   9.98,
+   15.42,
    "cards",
    1
   ],
   [
-   14.81,
-   16.65,
+   15.42,
+   17.34,
    "none",
    1
   ],
   [
-   16.65,
-   19.86,
+   17.34,
+   19.93,
    "cards",
    2
   ],
   [
-   19.86,
-   24.54,
+   19.93,
+   24.8,
    "none",
    2
   ],
   [
-   24.54,
-   26.69,
+   24.8,
+   27.02,
    "none",
    1
   ]
  ],
- "state": "failed",
- "error": "RuntimeError: checks failed: unclear narration in beats [4]"
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T07:08:56Z",
+ "video": "K-ale_3rhyU",
+ "url": "https://youtube.com/shorts/K-ale_3rhyU",
+ "publish_at": "2026-10-19T09:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T09:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-039"
 }

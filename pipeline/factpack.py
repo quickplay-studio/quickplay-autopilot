@@ -99,12 +99,12 @@ def models(key):
             for m in r.json().get("models", []):
                 n = m.get("name", "").split("/")[-1]
                 if "generateContent" in (m.get("supportedGenerationMethods") or []) and "flash" in n \
-                        and not re.search(r"image|tts|live|audio|embed|exp|lite", n):
+                        and not re.search(r"image|tts|live|audio|embed|exp", n):
                     names.append(n)
         except Exception: pass
         want = CFG.get("gemini_model", "gemini-flash-latest")
         ver = lambda n: max([float(v) for v in re.findall(r"\d+(?:\.\d+)?", n)] or [0])
-        ordered = sorted(set(names) - {want}, key=lambda n: ("preview" in n, -ver(n)))
+        ordered = sorted(set(names) - {want}, key=lambda n: ("lite" in n, "preview" in n, -ver(n)))   # Lite last: a bigger free quota
         STATE["models"] = [want] + ordered
         print("Gemini models:", STATE["models"][:5])
     return STATE["models"]
@@ -113,9 +113,11 @@ def models(key):
 def gemini(prompt, schema, timeout=100):
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if STATE.get("spent"): raise RuntimeError("Gemini quota spent for today")
+    spent = STATE.setdefault("spent_models", set())
     last = "no Gemini model answered"
-    for model in models(key)[:4]:
+    todo = [m for m in models(key) if m not in spent][:4]
+    if not todo: STATE["spent"] = True; raise RuntimeError("every Gemini model's free quota is used up for now")
+    for model in todo:
         for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
             body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
                     "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json", "responseSchema": schema, **think}}
@@ -125,8 +127,9 @@ def gemini(prompt, schema, timeout=100):
                                       json=body, timeout=timeout)
                 except requests.exceptions.RequestException as e:
                     raise RuntimeError(f"{model}: {type(e).__name__}")       # too slow: give up on this topic
-                if r.status_code == 429 and re.search(r"per day|PerDay|daily", r.text): STATE["spent"] = True
-                if r.status_code in (429, 500, 502, 503, 504) and not STATE.get("spent"):
+                if r.status_code == 429 and ("quota" in r.text.lower() or attempt == 2):
+                    spent.add(model); last = f"{model}: free quota used up"; break      # the next model has its own quota
+                if r.status_code in (429, 500, 502, 503, 504):
                     last = f"{model}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
                 if r.ok:
                     parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
@@ -134,8 +137,7 @@ def gemini(prompt, schema, timeout=100):
                     return json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")) or "{}"), model
                 last = f"{model}: {r.status_code} {r.text[:150]}"
                 break
-            if STATE.get("spent"): raise RuntimeError(last)
-            if not ("think" in last.lower() and " 400 " in f" {last} "): break    # only a refused thinking setting tries the next
+            if model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
     raise RuntimeError(last)
 
 

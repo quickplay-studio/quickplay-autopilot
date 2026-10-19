@@ -32,7 +32,7 @@
  "instagram_mode": "all",
  "instagram_per_day": 6,
  "instagram_note": "all: every Short goes to Instagram once public on YouTube, the day's picks first, at most a ramped number in 24 hours: instagram_per_day to start, +instagram_ramp_per_day for each day since the first Reel, up to instagram_target (Meta allows 100 API posts a day; it blocked our API access once, so the ramp is gentle). Shorts public for more than crosspost_max_age_hours are skipped. picks: only the day's picks.",
- "factpack_topics": 20,
+ "factpack_topics": 14,
  "gemini_model": "gemini-flash-latest",
  "gemini_gap_seconds": 7,
  "factpack_note": "trends.yml builds trends/facts.json after trends.py: Gemini (GEMINI_API_KEY) lists each top topic's facts with the exact sentences, and a fact counts as verified only when those sentences are found word for word in two of the day's reputable pages and its numbers match.",

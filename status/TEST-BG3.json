@@ -1,0 +1,99 @@
+{
+ "id": "TEST-BG3",
+ "board": "boards/queue/TEST-BG3.json",
+ "mode": "none",
+ "slot": "",
+ "rendered": "2026-10-19T17:18:15.757099+00:00",
+ "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 8
+ },
+ "music": "glitcher",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 30.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.25,
+   "stat",
+   0
+  ],
+  [
+   4.25,
+   9.96,
+   "none",
+   2
+  ],
+  [
+   9.96,
+   14.49,
+   "none",
+   2
+  ],
+  [
+   14.49,
+   16.79,
+   "none",
+   1
+  ],
+  [
+   16.79,
+   21.21,
+   "versus",
+   1
+  ],
+  [
+   21.21,
+   27.6,
+   "bars",
+   2
+  ],
+  [
+   27.6,
+   30.36,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "208387",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 10.52
+  },
+  {
+   "p": "pixabay",
+   "id": "10783",
+   "q": "football pitch grass closeup",
+   "t0": 9.92,
+   "t1": 20.44
+  },
+  {
+   "p": "pixabay",
+   "id": "163784",
+   "q": "running track sunrise",
+   "t0": 19.84,
+   "t1": 30.36
+  }
+ ],
+ "state": "rendered (no upload)"
+}

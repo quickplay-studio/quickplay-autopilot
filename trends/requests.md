@@ -6,10 +6,7 @@ When a request is covered, move it to Done with the Short's id; when it can't be
 
 ## Requested Sunday 18 October (for Monday 19 October)
 - A2O MAY, "Bad Habits Tonite" (new K-pop video)
-- Manchester City's perfect start to the season
 - Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United
-- I'm a Celebrity 2026: who is confirmed (confirmed names only, never rumours)
-- The latest SpaceX launch
 - Gen Alpha slang: the French fries emoji
 - The "Call the Police" trend on TikTok and Instagram
 
@@ -20,6 +17,9 @@ When a request is covered, move it to Done with the Short's id; when it can't be
 - Arsenal at Nottingham Forest: QD-037
 
 ## Skipped
+- Manchester City's perfect start: today's sources cover the charges appeal (excluded) and Lauren Hemp's assist run, which had only one source today
+- I'm a Celebrity 2026: only rumoured names so far, no confirmed line-up
+- The latest SpaceX launch: USSF-481 (15 October) carried a classified Space Force payload, close to the excluded list
 - Apple HomeView: covered in the last 14 days (QD-012)
 - Barbara Thornhill, new press secretary: politics
 - Pope Leo XIV's lung surgery: health

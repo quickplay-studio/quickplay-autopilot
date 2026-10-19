@@ -1,5 +1,6 @@
 {
- "checked": "2026-10-18T22:56:41+00:00",
+ "checked": "2026-10-19T08:16:44+00:00",
+ "instagram_checked": "2026-10-19T08:16:44+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -12,24 +13,17 @@
      "quota_total": 100,
      "quota_duration": 86400
     },
-    "quota_usage": 0
+    "quota_usage": 1
    }
   ],
   "today_cap": 6
  },
- "instagram_checked": "2026-10-18T20:26:08+00:00",
  "facebook": {
   "ok": false,
   "error": "not connected (FB_PAGE_TOKEN and FB_PAGE_ID secrets missing)"
  },
  "tiktok": {
   "ok": true,
-  "user": {
-   "display_name": "Quickplay Daily",
-   "open_id": "-000Kjw5zJFPKoniKaT4tzfISnGmzxUjL08k",
-   "username": "quickplaydaily"
-  },
-  "scopes": "video.publish,video.upload,user.info.basic,user.info.profile,user.info.stats,video.list",
-  "mode": "inbox"
+  "mode": "off"
  }
 }

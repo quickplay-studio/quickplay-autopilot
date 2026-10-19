@@ -219,28 +219,51 @@ def instagram():
     CACHE.mkdir(parents=True, exist_ok=True); cache_p.write_text(json.dumps(cache))
     return {"followers": me.get("followers_count"), "username": me.get("username"), "media": media, "insights_error": insights_error}
 
-# ---------------- TikTok ----------------
-def tiktok():
-    if json.loads((ROOT / "config.json").read_text()).get("tiktok_mode") == "off": return None     # dropped 19 Oct 2026
-    if len(os.environ.get("SOCIAL_KEY", "")) < 20: return None
+# ---------------- Facebook ----------------
+FB_METRICS = ("fb_reels_total_plays", "blue_reels_play_count", "post_video_avg_time_watched")
+
+def facebook():
+    """The Page's followers and each of our Reels' plays and average watch time, read with the Page key used for posting
+    (GitHub secrets FB_PAGE_TOKEN and FB_PAGE_ID); None until those exist. Hourly runs refresh a Reel at most every 3 hours
+    in its first 3 days, full runs every Reel up to 30 days old, so a new Page stays well inside Meta's call limits."""
     import requests, social
-    t = social.load("tiktok")
-    if not t.get("access_token"): return None
-    h = {"Authorization": f"Bearer {t['access_token']}"}
-    u = requests.get(f"{social.TT_API}/user/info/", headers=h, timeout=30,
-                     params={"fields": "display_name,follower_count,likes_count,video_count"}).json()
-    if (u.get("error") or {}).get("code") not in (None, "ok"): raise RuntimeError(u["error"].get("message", "tiktok error"))
-    vids, cursor = [], None
-    for _ in range(10):
-        body = {"max_count": 20, **({"cursor": cursor} if cursor else {})}
-        r = requests.post(f"{social.TT_API}/video/list/", headers=h, json=body, timeout=30,
-                          params={"fields": "id,title,video_description,create_time,view_count,like_count,comment_count,share_count,duration"}).json()
-        if (r.get("error") or {}).get("code") not in (None, "ok"): raise RuntimeError(r["error"].get("message", "tiktok list error"))
-        d = r.get("data") or {}
-        vids += d.get("videos") or []
-        if not d.get("has_more"): break
-        cursor = d.get("cursor")
-    return {"followers": ((u.get("data") or {}).get("user") or {}).get("follower_count"), "videos": vids}
+    fb = social.fb_tokens()
+    if not fb: return None
+    api, tok = social.FB_API, fb["token"]
+    page = requests.get(f"{api}/{fb['page']}", params={"fields": "name,followers_count,fan_count", "access_token": tok}, timeout=30).json()
+    if "error" in page: raise RuntimeError(page["error"].get("message", "facebook error"))
+    cache_p = CACHE / "facebook.json"; cache = load_json(cache_p, {}) or {}
+    metrics, reels, insights_error, blocked = cache.get("_metrics") or list(FB_METRICS), {}, None, False
+    def ask(vid, names):
+        return requests.get(f"{api}/{vid}/video_insights", params={"metric": ",".join(names), "access_token": tok}, timeout=30).json()
+    for sp in sorted((ROOT / "status").glob("QD-*.json")):
+        st = load_json(sp, {}) or {}
+        f = st.get("facebook") or {}
+        vid = f.get("video")
+        if not vid: continue
+        seen, posted = cache.get(vid) or {}, utc(f.get("at"))
+        age = NOW - posted if posted else dt.timedelta(0)
+        recent = bool(seen.get("at")) and NOW - utc(seen["at"]) < dt.timedelta(hours=3)
+        if seen and (blocked or age > dt.timedelta(days=30) or (FAST and (age > dt.timedelta(days=3) or recent))):
+            reels[st["id"]] = seen; continue
+        if blocked: continue
+        r = ask(vid, metrics)
+        if "error" in r:            # one retired metric fails the whole ask: find the ones that still work, once
+            r, ok = {"data": []}, []
+            for m in FB_METRICS:
+                q = ask(vid, [m])
+                if "error" in q: insights_error = q["error"].get("message", "")[:200]; continue
+                ok.append(m); r["data"] += q.get("data", [])
+            if not ok: blocked = True; continue          # no insights at all (e.g. read_insights not granted): stop asking
+            cache["_metrics"] = metrics = ok
+        got = {d["name"]: (d.get("values") or [{}])[0].get("value") for d in r.get("data", [])}
+        plays, w = got.get("fb_reels_total_plays", got.get("blue_reels_play_count")), got.get("post_video_avg_time_watched")
+        reels[st["id"]] = cache[vid] = {"views": plays if plays is not None else "",
+                                        "avg_watch_s": round(w / 1000, 1) if isinstance(w, (int, float)) else "",
+                                        "at": NOW.isoformat(timespec="minutes")}
+    CACHE.mkdir(parents=True, exist_ok=True); cache_p.write_text(json.dumps(cache))
+    return {"followers": page.get("followers_count", page.get("fan_count")), "name": page.get("name"), "reels": reels,
+            "insights_error": insights_error}
 
 # ---------------- put it together ----------------
 def norm(s):
@@ -259,7 +282,7 @@ VEL_HOURS = (1, 3, 6, 12, 24, 48, 72)
 
 def update_curves(rows):
     """analytics/curves/<day posted>.json: {short: {video, posted, points: [[hours since posting, YouTube, Instagram,
-    TikTok views]]}}. A point every run (hourly) for a Short's first 7 days, then one every 6 hours up to 30 days."""
+    Facebook views]]}}. A point every run (hourly) for a Short's first 7 days, then one every 6 hours up to 30 days."""
     d = OUT / "curves"; d.mkdir(exist_ok=True)
     files = {f.stem: load_json(f, {}) or {} for f in d.glob("*.json")}
     changed = set()
@@ -272,7 +295,7 @@ def update_curves(rows):
         if age > 30 * 24 or (FAST and age > 7 * 24): continue
         pts, h = c["points"], round(age, 1)
         if not pts or h - pts[-1][0] >= (0.5 if age <= 7 * 24 else 6):
-            pts.append([h, r["yt_views"], num(r["ig_views"]), num(r["tt_views"])]); changed.add(day)
+            pts.append([h, r["yt_views"], num(r["ig_views"]), num(r["fb_views"])]); changed.add(day)
     for day in changed:
         (d / f"{day}.json").write_text(json.dumps(files[day], separators=(",", ":")))
     return {k: c for f in files.values() for k, c in f.items()}
@@ -321,7 +344,7 @@ def relative(rows, field, out_field, min_age_h=24):
 
 CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"]
 
-def update_hourly(rows, ig, tt):
+def update_hourly(rows, ig, fb):
     """analytics/hourly.csv: one row per hour (UTC, with UK day, hour and weekday) with the views gained since the last
     run on each platform and, for YouTube, in each category. 60 days kept."""
     p = OUT / "hourly.csv"
@@ -329,10 +352,10 @@ def update_hourly(rows, ig, tt):
     last = load_json(CACHE / "last.json", {}) or {}
     prev_at, prev = utc(last.get("at")), last.get("yt") or {}
     hour = NOW.replace(minute=0, second=0, microsecond=0); ukh = hour.astimezone(UK)
-    ig_total = sum(num(r["ig_views"]) or 0 for r in rows); tt_total = sum(int(v.get("view_count") or 0) for v in (tt or {}).get("videos", []))
+    ig_total = sum(num(r["ig_views"]) or 0 for r in rows); fb_total = sum(num(r["fb_views"]) or 0 for r in rows)
     row = {"hour_utc": hour.strftime("%Y-%m-%dT%H:00Z"), "uk_day": ukh.strftime("%Y-%m-%d"), "uk_hour": ukh.strftime("%H"),
            "uk_weekday": ukh.strftime("%a"), "yt_total": sum(r["yt_views"] for r in rows),
-           "ig_total": ig_total if ig else "", "tt_total": tt_total if tt else ""}
+           "ig_total": ig_total if ig else "", "fb_total": fb_total if fb else ""}
     if prev_at:
         row["hours"] = round((NOW - prev_at).total_seconds() / 3600, 2)
         gained = {c: 0 for c in CATS + ["Other"]}
@@ -344,20 +367,20 @@ def update_hourly(rows, ig, tt):
         row["yt_gained"] = sum(gained.values())
         for c, g in gained.items(): row[f"yt_{c.lower()}"] = g
         row["ig_gained"] = max(0, ig_total - last["ig_total"]) if ig and last.get("ig_total") is not None else ""
-        row["tt_gained"] = max(0, tt_total - last["tt_total"]) if tt and last.get("tt_total") is not None else ""
+        row["fb_gained"] = max(0, fb_total - last["fb_total"]) if fb and last.get("fb_total") is not None else ""
     if hist and hist[-1]["hour_utc"] == row["hour_utc"] and "hours" in row:     # a second run within the same hour adds to it
         old = hist.pop()
-        for k in ["hours", "yt_gained", "ig_gained", "tt_gained"] + [f"yt_{c.lower()}" for c in CATS + ["Other"]]:
+        for k in ["hours", "yt_gained", "ig_gained", "fb_gained"] + [f"yt_{c.lower()}" for c in CATS + ["Other"]]:
             a, b = old.get(k), row.get(k)
             if a not in ("", None) and b not in ("", None): row[k] = round(float(a) + float(b), 2) if k == "hours" else int(float(a)) + int(b)
     hist.append(row)
     cutoff = (NOW - dt.timedelta(days=60)).strftime("%Y-%m-%dT%H")
     hist = [h for h in hist if h["hour_utc"] >= cutoff]
     write_csv(p, hist, ["hour_utc", "uk_day", "uk_hour", "uk_weekday", "hours", "yt_total", "yt_gained", "ig_total", "ig_gained",
-                        "tt_total", "tt_gained"] + [f"yt_{c.lower()}" for c in CATS + ["Other"]])
+                        "fb_total", "fb_gained"] + [f"yt_{c.lower()}" for c in CATS + ["Other"]])
     CACHE.mkdir(parents=True, exist_ok=True)
     (CACHE / "last.json").write_text(json.dumps({"at": NOW.isoformat(timespec="seconds"), "yt": {rkey(r): r["yt_views"] for r in rows},
-                                                 "ig_total": ig_total if ig else None, "tt_total": tt_total if tt else None}))
+                                                 "ig_total": ig_total if ig else None, "fb_total": fb_total if fb else None}))
     return hist
 
 # ---------------- where, how found, who: from the full run's YouTube Analytics ----------------
@@ -414,13 +437,13 @@ def main():
     import drivers as DRV
     OUT.mkdir(exist_ok=True); CACHE.mkdir(exist_ok=True)
     errors, ours = {}, our_shorts()
-    yt = ig = tt = None
+    yt = ig = fb = None
     try: yt = youtube(ours)
     except Exception as e: errors["youtube"] = f"{type(e).__name__}: {e}"[:300]
     try: ig = instagram()
     except Exception as e: errors["instagram"] = f"{type(e).__name__}: {e}"[:300]
-    try: tt = tiktok()
-    except Exception as e: errors["tiktok"] = f"{type(e).__name__}: {e}"[:300]
+    try: fb = facebook()
+    except Exception as e: errors["facebook"] = f"{type(e).__name__}: {e}"[:300]
     if not yt and FAST:
         print(json.dumps({"errors": errors})); return          # nothing fresh to write: keep the last good files
 
@@ -429,7 +452,7 @@ def main():
     short_cc = aud.get("short_countries") or {}
     ig_by_id = {m["id"]: m for m in (ig or {}).get("media", [])}
     ig_by_title = {norm((m.get("caption") or "").split("\n")[0]): m for m in (ig or {}).get("media", [])}
-    tt_by_title = {norm((v.get("video_description") or v.get("title") or "").split("\n")[0]): v for v in (tt or {}).get("videos", [])}
+    fb_reels = (fb or {}).get("reels") or {}
     for vid, v in ((yt or {}).get("videos") or {}).items():
         if v.get("privacy") != "public": continue
         o = ours.get(vid, {})
@@ -438,7 +461,7 @@ def main():
         s, a = yt["stats"].get(vid, {}), yt["analytics"].get(vid, {})
         key = norm(v["title"])
         im = ig_by_id.get(o.get("instagram_media")) or ig_by_title.get(key) or {}
-        tv = tt_by_title.get(key) or {}
+        fv = fb_reels.get(o.get("id")) or {}
         uk = posted.astimezone(UK) if posted else None
         row = {
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
@@ -450,8 +473,7 @@ def main():
             "yt_shares": a.get("shares", ""), "yt_subs_gained": a.get("subscribersGained", ""),
             "ig_views": im.get("views", ""), "ig_reach": im.get("reach", ""), "ig_likes": im.get("like_count", ""),
             "ig_comments": im.get("comments_count", ""), "ig_shares": im.get("shares", ""), "ig_saves": im.get("saved", ""),
-            "tt_views": tv.get("view_count", ""), "tt_likes": tv.get("like_count", ""), "tt_comments": tv.get("comment_count", ""),
-            "tt_shares": tv.get("share_count", ""),
+            "fb_views": fv.get("views", ""), "fb_avg_watch_s": fv.get("avg_watch_s", ""),
             "youtube_url": f"https://youtube.com/shorts/{vid}", "instagram_url": im.get("permalink", "")}
         curve = (yt.get("retention") or {}).get(vid)
         secs = o.get("seconds") or 0
@@ -463,7 +485,7 @@ def main():
         row["_drops"] = dr
         av, ev = a.get("views"), a.get("engagedViews")
         row["yt_engaged_pct"] = round(100 * ev / av) if av and ev is not None else ""             # stayed past the first seconds
-        total = sum(int(row[k]) for k in ("yt_views", "ig_views", "tt_views") if str(row[k]).strip() not in ("", "None"))
+        total = sum(int(row[k]) for k in ("yt_views", "ig_views", "fb_views") if str(row[k]).strip() not in ("", "None"))
         row["all_views"] = total
         row["views_per_hour"] = round(row["yt_views"] / hours, 1) if hours else ""
         row["hook_type"] = DRV.hook_type(row["hook"])
@@ -487,7 +509,7 @@ def main():
         r["views_vs_typical"] = r["_rel24"] if r["_rel24"] != "" else r["_relvph"]
         r["rel"] = r["views_vs_typical"]
     looks_out = look_scores(rows)
-    hourly = update_hourly(rows, ig, tt)
+    hourly = update_hourly(rows, ig, fb)
 
     # per-day history: today's totals are appended to analytics/history.csv, so growth shows over time
     hist_p = OUT / "daily.csv"
@@ -498,8 +520,8 @@ def main():
     snap["yt_views_total"] = sum(r["yt_views"] for r in rows)
     snap["ig_followers"] = (ig or {}).get("followers", "")
     snap["ig_views_total"] = sum(int(r["ig_views"]) for r in rows if str(r["ig_views"]).strip() not in ("", "None"))
-    snap["tt_followers"] = (tt or {}).get("followers", "")
-    snap["tt_views_total"] = sum(int(v.get("view_count") or 0) for v in (tt or {}).get("videos", []))
+    snap["fb_followers"] = (fb or {}).get("followers", "")
+    snap["fb_views_total"] = sum(int(r["fb_views"]) for r in rows if str(r["fb_views"]).strip() not in ("", "None")) if fb else ""
     hist.append(snap)
     # YouTube's own daily numbers (views and subscribers gained each day) replace earlier copies of the same days
     first = min((r["posted_day"] for r in rows if r["posted_day"]), default=str(TODAY))   # the channel's first Short
@@ -511,8 +533,8 @@ def main():
                      "yt_engaged_views_day": d.get("engagedViews", ""),
                      "yt_subs_gained_day": (d.get("subscribersGained") or 0) - (d.get("subscribersLost") or 0)})
     hist.sort(key=lambda h: (h["day"], h["source"]))
-    fields = ["day", "source", "yt_followers", "yt_views_total", "ig_followers", "ig_views_total", "tt_followers",
-              "tt_views_total", "yt_views_day", "yt_engaged_views_day", "yt_subs_gained_day"]
+    fields = ["day", "source", "yt_followers", "yt_views_total", "ig_followers", "ig_views_total", "fb_followers",
+              "fb_views_total", "yt_views_day", "yt_engaged_views_day", "yt_subs_gained_day"]
     write_csv(hist_p, hist, fields)
     write_csv(OUT / "shorts.csv", rows, [k for k in rows[0] if not k.startswith("_") and k != "rel"] if rows else ["short", "title"])
 
@@ -537,7 +559,8 @@ def main():
                     "views_last_90_days_estimate": est, "analytics_last_day": last_day},
         "instagram": {"followers": (ig or {}).get("followers"), "posts": len((ig or {}).get("media", [])),
                       "insights_error": (ig or {}).get("insights_error")} if ig else None,
-        "tiktok": {"followers": (tt or {}).get("followers"), "videos": len((tt or {}).get("videos", []))} if tt else None,
+        "facebook": {"followers": (fb or {}).get("followers"), "page": (fb or {}).get("name"), "reels": len((fb or {}).get("reels") or {}),
+                     "insights_error": (fb or {}).get("insights_error")} if fb else None,
         "ypp": {"subscribers_needed": 1000, "shorts_views_needed_90_days": 10_000_000, "apply_before": str(YPP_DEADLINE),
                 "days_left": (YPP_DEADLINE - TODAY).days,
                 "subscribers_pct": round(100 * ((yt or {}).get("subs") or 0) / 1000, 1),
@@ -545,7 +568,6 @@ def main():
                 "views_needed_per_day": round(max(0, 10_000_000 - est) / max(1, min(90, (YPP_DEADLINE - TODAY).days))),
                 "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent "
                         "engaged share (YouTube's own figure lags a day or two)."},
-        "tiktok_rewards": {"followers_needed": 10000, "views_needed_30_days": 100000, "min_video_seconds": 61},
     }
     if aud.get("errors"): summary["audience_errors"] = aud["errors"]
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
@@ -561,9 +583,9 @@ def main():
         "views_last_24h": sum(int(float(h["yt_gained"])) for h in hourly if h.get("yt_gained") not in ("", None)
                               and h["hour_utc"] >= (NOW - dt.timedelta(hours=24)).strftime("%Y-%m-%dT%H")),
         "ig_followers": summary["instagram"]["followers"] if summary.get("instagram") else "",
-        "tt_followers": summary["tiktok"]["followers"] if summary.get("tiktok") else ""}],
+        "fb_followers": summary["facebook"]["followers"] if summary.get("facebook") else ""}],
         ["as_of", "as_of_uk", "full_as_of_uk", "subscribers", "engaged_views_90d", "engaged_views_90d_youtube", "youtube_last_day",
-         "views_all_time", "public_shorts", "needed_per_day", "days_left", "views_last_hour", "views_last_24h", "ig_followers", "tt_followers"])
+         "views_all_time", "public_shorts", "needed_per_day", "days_left", "views_last_hour", "views_last_24h", "ig_followers", "fb_followers"])
     if not FAST:            # the slower reads: looks, posting times, audience, drivers and the writer's notes
         (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
         slot_scores(rows)

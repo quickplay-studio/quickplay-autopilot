@@ -22,15 +22,17 @@ def main():
         st = load(p.relative_to(ROOT), {}) or {}
         t = when(st.get("uploaded_at"))
         if t and NOW - t <= dt.timedelta(hours=24): uploads += 1
-        for k, label in (("instagram_error", "Instagram post"), ("tiktok_error", "TikTok draft"), ("social_error", "cross-post")):
+        for k, label in (("instagram_error", "Instagram post"), ("facebook_error", "Facebook post"), ("social_error", "cross-post")):
             v = str(st.get(k) or "")
             t = when(v[:16].replace(" ", "T") + ":00+00:00") if v else None
             if v and t and NOW - t <= dt.timedelta(hours=48): problems.append(f"{st['id']} {label} failed")
     failed = sorted(p.stem for p in (ROOT / "boards" / "failed").glob("*.json"))
     if failed: problems.append(f"{len(failed)} in failed ({', '.join(failed[:3])})")
     soc = load("status/social.json", {}) or {}
-    for k, label in (("instagram", "Instagram"), ("tiktok", "TikTok")):
-        if soc and not (soc.get(k) or {}).get("ok"): problems.append(f"{label} sign-in not working")
+    for k, label in (("instagram", "Instagram"), ("facebook", "Facebook")):
+        v = soc.get(k) or {}
+        if k == "facebook" and (not v or "not connected" in str(v.get("error", ""))): continue    # not set up yet
+        if soc and not v.get("ok"): problems.append(f"{label} sign-in not working")
     if not (load("status/youtube_connect.json", {}) or {}).get("connected"): problems.append("YouTube engagement sign-in missing")
     tr = load("trends/latest.json", {}) or {}
     if tr.get("date") != str(dt.datetime.now(ZoneInfo("Europe/London")).date()): problems.append(f"trends last refreshed {tr.get('date', 'never')}")

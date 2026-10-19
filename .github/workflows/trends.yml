@@ -30,6 +30,8 @@ jobs:
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
           python pipeline/trends.py
           python pipeline/report.py || echo "channel report failed"

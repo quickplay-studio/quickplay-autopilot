@@ -28,18 +28,18 @@ def main():
         lines += [f"YouTube checked {uk(channel['checked'])} (UK): {channel['scheduled']} scheduled, {channel['public']} public, "
                   f"{channel['uploads_last_24h']} uploads in the last 24 hours.", ""]
     if social:
-        ig, tt = social.get("instagram") or {}, social.get("tiktok") or {}
+        ig, fb = social.get("instagram") or {}, social.get("facebook") or {}
         lines += [f"Instagram: {'connected as ' + str(ig.get('username')) if ig.get('ok') else ig.get('error', 'not connected')} · "
-                  f"TikTok: {'connected' if tt.get('ok') else tt.get('error', 'not connected')} (checked {uk(social['checked'])}).", ""]
+                  f"Facebook: {'connected to ' + str(fb.get('page')) if fb.get('ok') else fb.get('error', 'not connected')} (checked {uk(social['checked'])}).", ""]
 
     problems = [s for s in statuses if "fail" in s.get("state", "") or "not scheduled" in s.get("state", "")]
     flagged = channel.get("flagged", [])
-    if problems or flagged or any(s.get(k) for s in statuses for k in ("instagram_error", "tiktok_error", "social_error")):
+    if problems or flagged or any(s.get(k) for s in statuses for k in ("instagram_error", "facebook_error", "social_error")):
         lines += ["## Needs a look", ""]
         for s in problems:
             lines.append(f"- **{s['id']}** {s.get('title') or ''}: {s['state']}. {s.get('error', '')}".rstrip())
         for s in statuses:
-            for k in ("instagram_error", "tiktok_error", "social_error"):
+            for k in ("instagram_error", "facebook_error", "social_error"):
                 if s.get(k): lines.append(f"- **{s['id']}** {s.get('title') or ''}: {k.split('_')[0]} {s[k]}")
         for r in flagged:
             lines.append(f"- [{r['title']}](https://youtube.com/shorts/{r['video']}): {r['flag']}")
@@ -84,8 +84,7 @@ def main():
             if s.get("qa", {}).get("duration"): bits.append(f"{s['qa']['duration']:.0f} s")
             if s.get("music"): bits.append(f"music: {s['music']}")
             if s.get("instagram"): bits.append("on Instagram")
-            if s.get("tiktok"): bits.append("on TikTok" if s["tiktok"].get("mode") == "direct" else "in TikTok drafts")
-            elif s.get("tiktok_skipped"): bits.append("not sent to TikTok (too old)")
+            if s.get("facebook"): bits.append("on Facebook")
             if s.get("board"): bits.append(f"[script](../{s['board'].replace('queue/', 'done/')})")
             lines += [f"### {uk(when)} · {r['title']}", " · ".join(bits) + f" · [YouTube](https://youtube.com/shorts/{r['video']})", ""]
             if s.get("id") and (ROOT / "review" / f"{s['id']}.jpg").exists():

@@ -34,17 +34,31 @@ SCHEMA = {"type": "OBJECT", "properties": {
         "required": ["claim", "evidence"]}}},
     "required": ["what_is_new", "facts"]}
 PROMPT = """You check facts for a family-friendly news Shorts channel. Topic: "{topic}". Today is {today}.
-Below are {n} pages, numbered. Using ONLY these pages, list up to 12 facts about the topic that a viewer would find
+Below are {n} pages, numbered. Using ONLY these pages, list up to 14 facts about the topic that a viewer would find
 interesting, newest and most surprising first: what happened, dates, numbers, names, records, release details, results.
+First give the facts that TWO OR MORE pages state (each page in its own words), then at most 4 that only one page states.
 For each fact:
 - "claim": one plain sentence in UK English. Copy names, numbers and dates exactly as the pages write them. No dashes.
-- "evidence": for EVERY page that states the fact, the page number and the exact sentence from that page that states it,
-  copied character for character (do not change, shorten or join sentences), at most 40 words.
+- "evidence": one entry for EVERY page that states the fact (check every page, a Wikipedia page counts too): the page
+  number and the exact sentence from that page that states it, copied character for character (do not change, shorten
+  or join sentences), at most 40 words.
 Leave out opinions, rumours, predictions, and anything about politics, crime, health or money advice.
 "what_is_new": one sentence on what changed in the last two days, or "" if nothing did.
 "hooks": up to 3 openings of 12 words or fewer, each built only on facts above.
 
 {pages}"""
+TRIAGE_PROMPT = """You pick topics for a family-friendly UK Shorts channel about gaming, film and TV, music, sport, celebrities,
+streamers and creators, tech launches and space. Never: politics, crime, health, money or investing, adult content,
+gambling, deaths, or a website people only want to visit (a news site, an email service, an app store).
+Below are today's trending topics with their headlines. Return the numbers of the topics worth a Short, best first
+(biggest audience and freshest story first), at most {limit}, each with its category: Gaming, Film, Music, Sport, Tech,
+Science or Entertainment. Topics marked REQUEST were asked for by the channel owner: keep them unless they break a rule.
+
+{lines}"""
+TRIAGE_SCHEMA = {"type": "OBJECT", "properties": {"picks": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
+    "n": {"type": "INTEGER"}, "category": {"type": "STRING"}}, "required": ["n", "category"]}}}, "required": ["picks"]}
+THINKING = [{"thinkingConfig": {"thinkingLevel": "low"}}, {"thinkingConfig": {"thinkingBudget": 512}}, {}]
+STATE = {}
 
 
 def norm(s):
@@ -74,24 +88,72 @@ def page_text(url, wiki=False):
         return ""
 
 
-def gemini(prompt):
+def models(key):
+    """Flash models this key can use: the configured one first, then stable before preview, newest first."""
+    import requests
+    if "models" not in STATE:
+        names = []
+        try:
+            r = requests.get("https://generativelanguage.googleapis.com/v1beta/models", params={"pageSize": 200},
+                             headers={"x-goog-api-key": key}, timeout=30)
+            for m in r.json().get("models", []):
+                n = m.get("name", "").split("/")[-1]
+                if "generateContent" in (m.get("supportedGenerationMethods") or []) and "flash" in n \
+                        and not re.search(r"image|tts|live|audio|embed|exp|lite", n):
+                    names.append(n)
+        except Exception: pass
+        want = CFG.get("gemini_model", "gemini-flash-latest")
+        ver = lambda n: max([float(v) for v in re.findall(r"\d+(?:\.\d+)?", n)] or [0])
+        ordered = sorted(set(names) - {want}, key=lambda n: ("preview" in n, -ver(n)))
+        STATE["models"] = [want] + ordered
+        print("Gemini models:", STATE["models"][:5])
+    return STATE["models"]
+
+
+def gemini(prompt, schema, timeout=100):
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
-    models = [CFG.get("gemini_model", "gemini-flash-latest"), "gemini-2.5-flash"]
-    body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json", "responseSchema": SCHEMA}}
-    last = ""
-    for model in dict.fromkeys(models):
-        for attempt in range(4):
-            r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-                              json=body, timeout=180)
-            if r.status_code == 404: last = f"{model}: not found"; break
-            if r.status_code in (429, 500, 502, 503, 504):
-                last = f"{model}: {r.status_code}"; time.sleep(15 * (attempt + 1)); continue
-            if not r.ok: raise RuntimeError(f"{model}: {r.status_code} {r.text[:200]}")
-            parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
-            return json.loads("".join(p.get("text", "") for p in parts) or "{}"), model
-    raise RuntimeError(last or "no Gemini model answered")
+    if STATE.get("spent"): raise RuntimeError("Gemini quota spent for today")
+    last = "no Gemini model answered"
+    for model in models(key)[:4]:
+        for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
+            body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                    "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json", "responseSchema": schema, **think}}
+            for attempt in range(3):
+                try:
+                    r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
+                                      json=body, timeout=timeout)
+                except requests.exceptions.RequestException as e:
+                    raise RuntimeError(f"{model}: {type(e).__name__}")       # too slow: give up on this topic
+                if r.status_code == 429 and re.search(r"per day|PerDay|daily", r.text): STATE["spent"] = True
+                if r.status_code in (429, 500, 502, 503, 504) and not STATE.get("spent"):
+                    last = f"{model}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
+                if r.ok:
+                    parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
+                    STATE.setdefault("think", {})[model] = think
+                    return json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")) or "{}"), model
+                last = f"{model}: {r.status_code} {r.text[:150]}"
+                break
+            if STATE.get("spent"): raise RuntimeError(last)
+            if not ("think" in last.lower() and " 400 " in f" {last} "): break    # only a refused thinking setting tries the next
+    raise RuntimeError(last)
+
+
+def triage(topics, limit):
+    """One short Gemini call picks the topics worth a pack (skips news sites, mail services and banned subjects)."""
+    def line(i, t):
+        req = "REQUEST " if t.get("signal") == "Charlie's request" else ""
+        heads = " | ".join(a["title"] for a in (t.get("articles") or [])[:3])
+        return f"{i}. {req}{t['topic']} ({t.get('signal', '')}): {heads}"
+    lines = "\n".join(line(i, t) for i, t in enumerate(topics, 1))
+    try:
+        ans, _ = gemini(TRIAGE_PROMPT.format(limit=limit, lines=lines), TRIAGE_SCHEMA, timeout=90)
+        picks = [(p["n"], p.get("category", "")) for p in ans.get("picks") or [] if isinstance(p.get("n"), int) and 1 <= p["n"] <= len(topics)]
+        if picks: return list(dict.fromkeys(picks))[:limit]
+    except Exception as e:
+        print("triage failed:", e)
+    skip = re.compile(r"\b(bbc|news|live|mail|login|weather|deaths|google play|app store|election|police|court|murder)\b", re.I)
+    return [(i, "") for i, t in enumerate(topics, 1) if not skip.search(t["topic"])][:limit]
 
 
 def verify(facts, texts, kinds):
@@ -121,8 +183,10 @@ def build():
     today = str(dt.date.today())
     limit, start = int(CFG.get("factpack_topics", 20)), time.time()
     packs, model, errors = [], None, []
-    for i, t in enumerate(research.get("topics") or []):
-        if len(packs) >= limit or time.time() - start > 14 * 60: break
+    topics = research.get("topics") or []
+    for i, cat in triage(topics, limit):
+        t = topics[i - 1]
+        if time.time() - start > 14 * 60 or STATE.get("spent"): break
         srcs = [dict(a, kind="article") for a in t.get("articles") or []]
         if t.get("wikipedia"): srcs.append({"outlet": "Wikipedia", "title": t["topic"], "url": t["wikipedia"], "published": "", "kind": "wikipedia"})
         got = []
@@ -133,14 +197,14 @@ def build():
         pages = "\n\n".join(f"[{k}] {s['outlet']} · {s['title']} · {s.get('published') or 'undated'} · {s['url']}\n{txt}"
                             for k, (s, txt) in enumerate(got, 1))
         try:
-            ans, model = gemini(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages))
+            ans, model = gemini(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages), SCHEMA)
         except Exception as e:
             errors.append(f"{t['topic']}: {e}"[:200]); continue
         texts = {k: norm(txt) for k, (s, txt) in enumerate(got, 1)}
         kinds = {k: s["kind"] for k, (s, txt) in enumerate(got, 1)}
         verified, single = verify(ans.get("facts"), texts, kinds)
         hooks = [undash(h) for h in ans.get("hooks") or []][:3]
-        packs.append({"n": i + 1, "topic": t["topic"], "signal": t.get("signal", ""),
+        packs.append({"n": i, "topic": t["topic"], "signal": t.get("signal", ""), "category": cat,
                       "what_is_new": ans.get("what_is_new", ""), "hooks": hooks,
                       "sources": [[s["title"], s["url"], s["outlet"], s.get("published", "")] for s, _ in got],
                       "verified": verified, "one_source": single})

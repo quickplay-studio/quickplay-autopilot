@@ -44,6 +44,12 @@ def main():
         ig, fb = social.get("instagram") or {}, social.get("facebook") or {}
         lines += [f"Instagram: {'connected as ' + str(ig.get('username')) if ig.get('ok') else ig.get('error', 'not connected')} · "
                   f"Facebook: {'connected to ' + str(fb.get('page')) if fb.get('ok') else fb.get('error', 'not connected')} (checked {uk(social['checked'])}).", ""]
+        exp = fb.get("data_access_expires")         # Meta wants the key renewed about every 90 days
+        if exp and str(exp).isdigit():
+            left = (dt.datetime.fromtimestamp(int(exp), dt.timezone.utc) - now).days
+            if left < 15:
+                lines += [f"**Facebook's key runs out in {max(left, 0)} days**: make a new one in the Graph API Explorer as before "
+                          "and paste it into the FB_PAGE_TOKEN secret.", ""]
 
     problems = [s for s in statuses if "fail" in s.get("state", "") or "not scheduled" in s.get("state", "")]
     flagged = channel.get("flagged", [])

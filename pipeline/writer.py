@@ -8,7 +8,7 @@ the last 14 days and anything Gemini would flag, and has Gemini write a board fr
 past board. pipeline/validate.py checks it; Gemini fixes what fails (twice at most); a board that still fails is dropped.
 Boards go to boards/queue for render.yml.
 """
-import datetime as dt, json, os, pathlib, re, sys
+import csv, datetime as dt, json, os, pathlib, re, sys
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -55,24 +55,48 @@ gaming, film and TV, music, sport, celebrities, streamers and creators, tech lau
   [claim, [source numbers from the pack]].
 - "format": one of the format ids below. "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment.
   "music": {"mood": one of %(moods)s}.
+- Lead with what is new today (the pack's "What is new"). If the pack has nothing new from the last few days, return
+  {"skip": "nothing new"}.
+- Say only what the facts say. Never add details, motives, quotes or loaded words ("clashed", "slammed", "macho") the
+  pack doesn't state, and never name Wikipedia in the narration.
+- Pictures: each page: address gives one picture, so use it at most twice. At least half the beats need a
+  "commons-search:" shot (a person, team, venue or event), because page: pictures often can't be fetched.
 - If a person under 18 is at the centre of the story, or it comes close to the banned subjects, return {"skip": "why"}.
 Return only the JSON board, shaped exactly like the example (leave out "id" and "created")."""
 
 
-def recent_titles(days=14):
-    out = []
-    cut = str((NOW - dt.timedelta(days=days)).date())
-    for d in ("queue", "ready", "done", "reserve"):
-        for p in (ROOT / "boards" / d).glob("QD-*.json"):
-            try: b = json.loads(p.read_text())
-            except Exception: continue
-            if str(b.get("created", "")) >= cut: out.append((b.get("meta") or {}).get("title", ""))
+def board(f):
+    try: return json.loads(f.read_text())
+    except Exception: return {}
+
+
+def about(b):
+    """What a board covered: its title, its title with tags and hashtags, and its source pages."""
+    m = b.get("meta") or {}
+    title = str(m.get("title", ""))
+    text = " ".join([title] + [str(t) for t in (m.get("tags") or []) + (m.get("hashtags") or [])])
+    return title, text, {s[1] for s in m.get("sources") or [] if isinstance(s, list) and len(s) > 1}
+
+
+def recent(days=14):
+    """What the last 14 days of boards covered (queue, ready, done, reserve and failed)."""
+    cut, out = str((NOW - dt.timedelta(days=days)).date()), []
+    for d in ("queue", "ready", "done", "reserve", "failed"):
+        for f in (ROOT / "boards" / d).glob("QD-*.json"):
+            b = board(f)
+            if str(b.get("created", "")) >= cut: out.append(about(b))
     return out
 
 
-def covered(topic, titles):
-    words = {w for w in re.findall(r"[a-z0-9]+", topic.lower()) if len(w) > 3}
-    return any(len(words & set(re.findall(r"[a-z0-9]+", t.lower()))) >= min(2, len(words)) for t in titles if words)
+def covered(p, seen):
+    """Covered: a recent board cites one of the pack's articles (Wikipedia pages don't count: many stories share one), or
+    its title shares two of the topic's longer words."""
+    words = {w for w in re.findall(r"[a-z0-9]+", p["topic"].lower()) if len(w) > 3}
+    urls = {s[1] for s in p.get("sources") or [] if len(s) > 1 and "wikipedia.org" not in str(s[1])}
+    for title, _, srcs in seen:
+        if urls & srcs: return True
+        if words and len(words & set(re.findall(r"[a-z0-9]+", title.lower()))) >= min(2, len(words)): return True
+    return False
 
 
 def day_formats(day):
@@ -168,6 +192,61 @@ def clean(x):
     return x
 
 
+CHECK = """You check a YouTube Short script against its fact pack before it is published. For the title and each beat,
+decide whether everything it states is in the pack's facts: the same meaning, with every number, date and record attached
+to the same person or thing, and nothing added (no extra details, motives, quotes or loaded words such as "clashed").
+Questions, the hook's framing and claims clearly marked as unconfirmed are fine. Return {"ok": true} when everything is
+supported, otherwise {"ok": false, "problems": [{"beat": <number from 1, or 0 for the title>, "issue": "<what is wrong,
+and what the pack says>"}]}."""
+
+
+def fact_check(b, p):
+    """Gemini reads the title and narration against the pack: the problems it finds (none when all is supported)."""
+    beats = "\n".join(f"{k}. {x.get('say', '')}" for k, x in enumerate(b.get("beats") or [], 1))
+    ans, _ = factpack.gemini(CHECK + "\n\nTHE PACK\n" + pack_text(p) + f"\n\nTHE SCRIPT\n0. {(b.get('meta') or {}).get('title', '')}\n"
+                             + beats, None, timeout=100, temperature=0.0)
+    if not isinstance(ans, dict) or ans.get("ok") is not False: return []
+    return [f"beat {x.get('beat')}: {x.get('issue')}" for x in ans.get("problems") or [] if isinstance(x, dict)][:6]
+
+
+def media_problems(b):
+    """page: pictures are often refused, so at least half the beats need a shot that reliably resolves."""
+    beats = b.get("beats") or []
+    sure = sum(any(str(s.get("src", "")).startswith(("commons", "nasa:", "openverse:")) for s in x.get("shots") or []) for x in beats)
+    if sure * 2 >= len(beats): return []
+    return [f"media: only {sure} of {len(beats)} beats have a commons-search:, commons:, openverse: or nasa: shot; add "
+            "commons-search shots of the people, teams, venues or events to at least half the beats (page: pictures often fail)"]
+
+
+def boosts():
+    """Categories the data says beat typical (analytics/drivers.csv): "push" moves their packs up 2 places, "early sign" 1."""
+    p, out = ROOT / "analytics" / "drivers.csv", {}
+    if not p.exists(): return out
+    for r in csv.DictReader(p.open()):
+        try: lift = float(r.get("lift") or 0)
+        except ValueError: continue
+        if r.get("feature") == "category" and lift > 1 and r.get("verdict") in ("push", "early sign"):
+            out[r.get("value")] = 2 if r["verdict"] == "push" else 1
+    return out
+
+
+def hot():
+    """Our Shorts at 3x or more the usual views for their age in their first 3 days (analytics/breakouts.csv), strongest
+    first, with no follow-up yet: a fresh pack on the same subject is written first, as a follow-up."""
+    p = ROOT / "analytics" / "breakouts.csv"
+    if not p.exists(): return []
+    done = {board(f).get("follows") for f in (ROOT / "boards").glob("*/QD-*.json")}
+    rows = []
+    for r in csv.DictReader(p.open()):
+        try: x, h = float(r.get("times_typical") or 0), float(r.get("hours_public") or 999)
+        except ValueError: continue
+        if x < 3 or h > 72 or r.get("short") in done: continue
+        f = next((ROOT / "boards").glob(f"*/{r.get('short')}.json"), None)
+        r["_about"] = about(board(f)) if f else (r.get("title", ""), r.get("title", ""), set())
+        rows.append((x, r))
+    return [r for _, r in sorted(rows, key=lambda t: -t[0])]
+
+
 def write_one(p, sid, day, prompt_head, extra=""):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6)
@@ -179,6 +258,8 @@ def write_one(p, sid, day, prompt_head, extra=""):
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created")}}
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
+        errs = errs + media_problems(b)
+        if not errs: errs = ["facts: " + x for x in fact_check(b, p)]     # only a clean board is worth a fact check
         note = f"{model}, {len(warns)} warnings" + (f" ({'; '.join(warns)[:200]})" if warns else "")
         if not errs:
             if not warns or best: return b, note     # a warning flags the Short for a person, so it gets one fixing round
@@ -199,26 +280,34 @@ def main():
     facts = factpack.OUT
     if not facts.exists(): print("no fact packs"); return
     d = json.loads(facts.read_text())
-    titles, used = recent_titles(), day_formats(day)
+    seen, used, follow, up = recent(), day_formats(day), hot(), boosts()
     moods = list(CFG.get("music_moods") or [])
     head = (RULES % {"moods": moods} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe()
             + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + example())
     out, n = ROOT / "boards" / "queue", next_id()
     out.mkdir(parents=True, exist_ok=True)
     written = []
-    for p in d.get("topics") or []:
+    topics = list(enumerate(d.get("topics") or []))     # best first; categories the data favours move up, breakouts first
+    rank = lambda kp: kp[0] - up.get(kp[1].get("category"), 0) - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0)
+    for _, p in sorted(topics, key=rank):
         if len(written) >= cap or factpack.STATE.get("spent"): break
         if not p.get("verified") and not p.get("one_source"): continue
-        if covered(p["topic"], titles + [b["meta"]["title"] for b in written]): print("covered already:", p["topic"]); continue
+        fol = next((r for r in follow if covered(p, [r["_about"]])), None)
+        if not fol and covered(p, seen + [about(b) for b in written]): print("covered already:", p["topic"]); continue
         sid = f"QD-{n:03d}"
         extra = (f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the last one "
                  f"({used[-1]}), and prefer the ones used least." if used else "")
+        if fol:
+            extra += (f'\n\nFOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
+                      "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
+                      "repeat, with a title tied to the original.")
         try:
             b, note = write_one(p, sid, day, head, extra)
         except Exception as e:
             b, note = None, f"error: {e}"[:200]
         print(f"{p['topic']}: {note}")
         if not b: continue
+        if fol: b["follows"] = fol["short"]; follow.remove(fol)
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
         written.append(b); used.append(b.get("format", "")); n += 1
     print(f"wrote {len(written)}: " + "; ".join(f"{b['id']} {b['meta']['title']}" for b in written))

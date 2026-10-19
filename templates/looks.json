@@ -6,7 +6,8 @@
    "options": {
     "punch": {
      "desc": "bold capitals, white with a dark outline, the spoken word turns amber, 3 words at a time, lower middle",
-     "group": 3
+     "group": 3,
+     "retired": "2026-10-19: Charlie wants neat, minimal Shorts (no data yet: every look had 0 measured Shorts)"
     },
     "clean": {
      "desc": "sentence case on a dark rounded panel, the spoken word in the accent colour, up to 4 words, lower third",
@@ -14,11 +15,18 @@
     },
     "pop": {
      "desc": "one or two huge words at a time near the centre, the spoken word in the accent colour and slightly bigger",
-     "group": 2
+     "group": 2,
+     "retired": "2026-10-19: Charlie wants neat, minimal Shorts (no data yet: every look had 0 measured Shorts)"
     },
     "boxed": {
      "desc": "bold capitals, the spoken word sits on an accent-coloured box, 3 words at a time",
-     "group": 3
+     "group": 3,
+     "retired": "2026-10-19: Charlie wants neat, minimal Shorts (no data yet: every look had 0 measured Shorts)"
+    },
+    "minimal": {
+     "desc": "sentence case, white with a soft shadow and no outline or panel, the spoken word full white and the rest dimmed, up to 4 words, lower third",
+     "group": 4,
+     "retired": "pending test render TEST-W1019 (2026-10-19)"
     }
    }
   },
@@ -60,7 +68,15 @@
      "desc": "bigger zooms, a punch-in at every new beat and harder hits",
      "motion": 1.35,
      "punch": 0.08,
-     "beat_punches": true
+     "beat_punches": true,
+     "retired": "2026-10-19: Charlie wants neat, minimal Shorts (no data yet: every look had 0 measured Shorts)"
+    },
+    "calm": {
+     "desc": "slow drifts, the lightest punch-in only on the hook and payoff",
+     "motion": 0.55,
+     "punch": 0.02,
+     "beat_punches": false,
+     "retired": "pending test render TEST-W1019 (2026-10-19)"
     }
    }
   },
@@ -80,7 +96,8 @@
     "vivid": {
      "desc": "punchier colour and contrast",
      "filter": "contrast(1.07) saturate(1.28)",
-     "vignette": 0.25
+     "vignette": 0.25,
+     "retired": "2026-10-19: Charlie wants neat, minimal Shorts (no data yet: every look had 0 measured Shorts)"
     }
    }
   },

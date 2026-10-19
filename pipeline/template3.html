@@ -87,6 +87,11 @@ body.cap-pop .cw.on { color: var(--accent); transform: scale(1.04); }
 body.cap-boxed .capbox { gap: 14px 14px; }
 body.cap-boxed .cw { font-size: 80px; padding: 2px 20px 8px; border-radius: 16px; -webkit-text-stroke: 10px #0B1118; }
 body.cap-boxed .cw.on { background: var(--accent); color: #0B1118; -webkit-text-stroke: 0; text-shadow: none; }
+body.cap-minimal #caps { top: 1290px; height: 210px; }      /* neat and minimal: no outline or panel, a soft shadow */
+body.cap-minimal .capbox { gap: 0 18px; max-width: 900px; }
+body.cap-minimal .cw { font: 700 68px/1.2 "Inter"; text-transform: none; -webkit-text-stroke: 0; letter-spacing: -0.4px;
+  color: rgba(245,248,250,.66); text-shadow: 0 2px 22px rgba(0,0,0,.7), 0 1px 3px rgba(0,0,0,.85); }
+body.cap-minimal .cw.on { color: #FFFFFF; }
 /* TikTok and Instagram version (rendered separately, data.layout "social"): their username, caption and audio rows
    start higher than YouTube's (about 1450 on TikTok with a two-line caption) and TikTok's button column starts about
    halfway down (avatar near 860, x 940 to 1060), so captions and name labels sit 120px higher and graphics keep 150px
@@ -94,6 +99,7 @@ body.cap-boxed .cw.on { background: var(--accent); color: #0B1118; -webkit-text-
 body.lay-social #caps { top: 1110px; }
 body.lay-social.cap-clean #caps { top: 1150px; }
 body.lay-social.cap-pop #caps { top: 1060px; }
+body.lay-social.cap-minimal #caps { top: 1170px; }
 body.lay-social .mi .mlab { margin-top: -120px; }
 body.lay-social .beat { right: 150px; top: 320px; height: 790px; }
 body.lay-social .cards, body.lay-social .bars { width: 860px; }

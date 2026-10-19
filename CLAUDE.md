@@ -51,6 +51,9 @@ from every Short against Shorts posted around the same time) and the drivers beh
 - Variety: YouTube won't monetise templated, mass-produced content. Every Short needs its own angle and insight. Use at
   least 3 formats a day and never the same format twice in a row; vary hook styles and graphics; real images of the
   subject first.
+- Neat and minimal (Charlie, 19 October): one thing on screen at a time. At most 3 graphic cards a Short (the hook, one
+  figure, the payoff) with few words on each, and real images carry the rest; hold each image 2 to 3 seconds; no `tin`
+  flash except one reveal; a name label only on a person's first appearance.
 - Instagram and Facebook take every Short, as many a day as their gentle ramp allows (config.json). TikTok is off since
   19 October (it blocked every post as spam, and its Creator Rewards pay only for videos over a minute): leave out `tiktok`.
 - Follow up breakouts: analytics/breakouts.csv (hourly) lists Shorts running at 3x or more the views recent Shorts had at

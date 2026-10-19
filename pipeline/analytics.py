@@ -221,6 +221,7 @@ def instagram():
 
 # ---------------- TikTok ----------------
 def tiktok():
+    if json.loads((ROOT / "config.json").read_text()).get("tiktok_mode") == "off": return None     # dropped 19 Oct 2026
     if len(os.environ.get("SOCIAL_KEY", "")) < 20: return None
     import requests, social
     t = social.load("tiktok")

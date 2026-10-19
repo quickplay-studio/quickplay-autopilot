@@ -1,7 +1,7 @@
 # Quickplay review (Wednesdays and Sundays, 17:50 UK)
 
 Charlie has given full discretion: change anything the numbers support (what we cover, formats, hooks, titles, length,
-posting times, captions, voice and its speed, camera energy, colour, music, graphics, the TikTok and Instagram picks) to
+posting times, captions, voice and its speed, camera energy, colour, music, graphics, Instagram and Facebook volume) to
 get the most views and subscribers, as long as the channel rules in CLAUDE.md hold. Every change is data-driven,
 explained in plain words with the numbers, logged, and checked a week later. Spend tokens on judgement, not browsing.
 
@@ -31,20 +31,19 @@ explained in plain words with the numbers, logged, and checked a week later. Spe
      re-weight options in templates/looks.json (plan.py samples them and leans towards winners). Retire an option under
      0.85 over 8 or more Shorts with `"retired": "<date>: <why, with numbers>"`; never the last of a dimension. Caption
      styles are `body.cap-<id>` rules in pipeline/template3.html; grades are a CSS filter and vignette; energy is motion,
-     punch and beat_punches. The TikTok and Instagram safe-zone rules (`body.lay-social`) stay. New voices need a
+     punch and beat_punches. The Instagram and Facebook safe-zone rules (`body.lay-social`) stay. New voices need a
      reference recording: ask Charlie instead.
    - Posting times: config.json slot_first and slot_every_minutes, or analytics/slots.json's learned slots, when
      hourly.csv shows UK hours whose views an hour run 30% or more above the day's average for a week.
    - Where viewers leave: one fix (shorter holds on stat cards, quicker reveals, fewer words on screen) in the template
      or in CLAUDE.md's guidance.
-   - TikTok and Instagram picks: the rules in CLAUDE.md, from ig_views and tt_views by category.
    - Volume (Charlie wants the most uploads the data supports): raise daily_limit, slots_per_day and config `runs` by 4
      when the last week's median views per Short held within 10% as volume rose and YouTube refused no uploads; lower
      them if views per Short fell 20% or more. Instagram and Facebook targets (`*_target`) follow their own views per
      Reel the same way; their daily ramp stays as it is.
    Test every template change before keeping it: copy boards/test/TEST-L1.json to boards/queue/TEST-W<MMDD>.json (mode
    "none", `look` set to show the change), push, wait for status/TEST-W<MMDD>.json (about 20 minutes), and open
-   review/TEST-W<MMDD>.jpg and review/TEST-W<MMDD>.social.jpg (the TikTok and Instagram layout). If it failed or looks
+   review/TEST-W<MMDD>.jpg and review/TEST-W<MMDD>.social.jpg (the Instagram and Facebook layout). If it failed or looks
    wrong, revert the change. Move the test board to boards/test/.
 4. **Log** every change and every revert as a new line at the top of analytics/decisions.csv: date, area, change, why
    (the numbers in plain words), evidence (file and figures), check_on (7 days later), by "review".

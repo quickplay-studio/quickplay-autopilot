@@ -1,7 +1,7 @@
 # Quickplay daily script run
 
 You write Shorts as JSON "boards" and push them. GitHub renders, checks, uploads and schedules them on YouTube, then
-posts them to Instagram and Facebook (automatically) and TikTok (as drafts Charlie posts). Three sessions a day (numbers
+posts them to Instagram and Facebook automatically (TikTok is off since 19 October). Three sessions a day (numbers
 in config.json `runs`): 20:50 UK writes the first part of TOMORROW (its boards get `created` = tomorrow and tomorrow's
 first slots, from 07:30); 06:50 writes most of the day from fresh trends; 12:50 writes the rest from what broke since.
 Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batch lets him clear them before bed.
@@ -48,10 +48,8 @@ from every Short against Shorts posted around the same time) and the drivers beh
 - Variety: YouTube won't monetise templated, mass-produced content. Every Short needs its own angle and insight. Use at
   least 3 formats a day and never the same format twice in a row; vary hook styles and graphics; real images of the
   subject first.
-- TikTok takes only 5 drafts a day: set `"tiktok": true` on the 5 Shorts most likely to do well there (big fandoms,
-  music, gaming, strong visuals, a surprise people want to share) and `"tiktok": false` on the rest. That is 5 per
-  target day across all runs (digest.py counts the picks already made for today and tomorrow). Instagram and Facebook
-  take every Short (picks first), as many a day as their gentle ramp allows (config.json).
+- Instagram and Facebook take every Short, as many a day as their gentle ramp allows (config.json). TikTok is off since
+  19 October (it blocked every post as spam, and its Creator Rewards pay only for videos over a minute): leave out `tiktok`.
 - Follow up breakouts: analytics/breakouts.csv (hourly) lists Shorts running at 3x or more the views recent Shorts had at
   the same age. Each run writes one follow-up for the strongest one not yet followed up (a new angle, the next chapter, or
   the answer to its top comment), title tied to the original. Views come in lopsided bursts; a follow-up rides the demand
@@ -59,8 +57,8 @@ from every Short against Shorts posted around the same time) and the drivers beh
 - Evergreen search test (from Monday 19 October, checked 26 October): 2 Shorts a day answer a question people search all
   year in our categories (why, how, what, first, biggest), titled as the question people type. Reason: 63% of our views
   come from YouTube search (analytics/traffic.csv).
-- Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram, the first 7 to
-  TikTok): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
+- Hashtags: 8 to 15, most relevant first (the first 3 show on YouTube, the first 5 go to Instagram and
+  Facebook): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
 
 ## Facts (the part that matters most)
@@ -121,15 +119,6 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
 8. When Charlie replies, put his decision on one line in approvals/<YYYYMMDD-HHMM>.txt (for example
    "approve all except QD-034"), commit and push. GitHub uploads approved Shorts within the daily limit and drops
    rejected ones. Reply in one line.
-   Then TikTok: wait until the approved TikTok picks have a YouTube time (status publish_at, usually within 30 minutes).
-   - `tiktok_mode` "inbox" (now): the drafts reach his TikTok phone app by themselves and the captions go on his TikTok
-     queue page, https://claude.ai/artifact/Tc5EXtcFG77EUqvcbFKV1X (never in chat). Run
-     `python pipeline/tiktok_files.py <scratch dir> <target day YYYY-MM-DD> --db`, ArtifactData `list` collection "tiktok" on that page, then ONE
-     ArtifactData `batch`: `set` each printed Short not already listed (doc_id = its id, file_path = the printed file)
-     and `delete` any doc with `"example": true` (if_version = its version). Then one line to Charlie, for example
-     "TikTok: 5 drafts on their way to your inbox, captions on your TikTok queue." Don't rewrite the page.
-   - `tiktok_mode` "manual", or Charlie asks for a video TikTok refused: run it without flags and send the video files
-     and captions (for posting by hand).
 9. Refresh the stats dashboard (see Stats dashboard). Finish with one line: how many Shorts and their titles.
 
 ## Stats dashboard
@@ -170,7 +159,6 @@ analytics/<id>.csv and `asset: true`; then ONE ArtifactData `batch` of `update` 
 - `meta`: {title (under 50 characters ideally, 70 at most, one emoji at the end), summary (1 to 2 sentences),
   hashtags (8 to 15, most relevant first; #Shorts is added for YouTube), tags (5 to 15 search phrases),
   sources [[title, url], ...], facts [[claim, [source numbers]], ...], signals {source: [what the trend data showed]}}.
-- `tiktok`: true for the day's 5 TikTok picks, false for the rest.
 - `meta.comment`: one short question viewers can answer (under 100 characters, no links), posted as the channel's
   comment once the Short is public. `meta.alt_title`: a second title with a different angle (same rules as the title),
   used if the Short gets under half the usual views an hour after 24 hours.

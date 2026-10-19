@@ -1,6 +1,6 @@
 """One compact read of where things stand, so a writer run never has to open status files one by one.
 usage: python pipeline/digest.py
-Prints: the health line, boards per folder, Shorts made for today and tomorrow (and TikTok picks among them), anything
+Prints: the health line, boards per folder, Shorts made for today and tomorrow, anything
 failed or waiting with its reason, the last two days' Shorts one line each, and the current breakouts.
 """
 import csv, datetime as dt, io, json, pathlib, subprocess, sys
@@ -30,8 +30,7 @@ def main():
             if b.get("created") in made and d != "rejected" and not b.get("reserve"):
                 made[b["created"]][0] += 1; made[b["created"]][1] += 1 if b.get("tiktok") else 0
     print("boards: " + ", ".join(f"{k} {v}" for k, v in folders.items()))
-    print(f"made for today ({today}): {made[str(today)][0]} Shorts, {made[str(today)][1]} TikTok picks; "
-          f"for tomorrow ({tomorrow}): {made[str(tomorrow)][0]} Shorts, {made[str(tomorrow)][1]} TikTok picks")
+    print(f"made for today ({today}): {made[str(today)][0]} Shorts; for tomorrow ({tomorrow}): {made[str(tomorrow)][0]} Shorts")
     rows = []
     for p in (ROOT / "status").glob("QD-*.json"):
         st = load(p)

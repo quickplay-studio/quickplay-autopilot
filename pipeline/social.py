@@ -200,10 +200,10 @@ def _age_h(t):
     except Exception: return 1e9
 
 def post():
-    ig, tt = ig_tokens(), load("tiktok")
+    mode = CFG.get("tiktok_mode", "inbox")                       # "off" since 19 Oct 2026: TikTok blocked every post as spam
+    ig, tt = ig_tokens(), ({} if mode == "off" else load("tiktok"))
     if ig and _age_h(ig) > 24 * 7: print(ig_refresh(ig))            # long-lived Instagram token: refresh weekly
     if tt.get("refresh_token") and _age_h(tt) > 20: print(tt_refresh(tt))   # TikTok access tokens last 24 hours
-    mode = CFG.get("tiktok_mode", "inbox")
     tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
     tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
     fb = fb_tokens()
@@ -328,7 +328,9 @@ def check():
                             "today_cap": ramp_cap("facebook")} if r.ok else {"ok": False, "error": f"{r.status_code} {r.text[:300]}"})
     if ig: out.setdefault("instagram", {})["today_cap"] = ramp_cap("instagram")
     tt = load("tiktok")
-    if not tt.get("refresh_token"):
+    if CFG.get("tiktok_mode") == "off":
+        out["tiktok"] = {"ok": True, "mode": "off"}
+    elif not tt.get("refresh_token"):
         ck = os.environ.get("TIKTOK_CLIENT_KEY", "")
         out["tiktok"] = {"ok": False, "error": "not connected yet" if ck else "not connected (TIKTOK_CLIENT_KEY secret missing)"}
         if ck:   # the client key is public by design (it is part of every sign-in link)

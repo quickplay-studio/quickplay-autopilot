@@ -48,6 +48,7 @@
  "facebook_target": 24,
  "facebook_ramp_per_day": 2,
  "facebook_api_version": "v25.0",
+ "facebook_min_gap_minutes": 30,
  "crosspost_max_age_hours": 48,
  "facebook_note": "Facebook Page Reels (GitHub secrets FB_PAGE_TOKEN and FB_PAGE_ID): every Short once public on YouTube, picks first, ramped like Instagram (Meta allows 30 API Reels per Page per 24 hours)."
 }

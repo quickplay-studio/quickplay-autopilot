@@ -207,18 +207,32 @@ def post():
     tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
     tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
     fb = fb_tokens()
-    done_any, ig_recent, fb_recent = False, 0, 0
+    done_any, ig_recent, fb_recent, fb_last = False, 0, 0, None
     for sp in (ROOT / "status").glob("QD-*.json"):
         try: s0 = json.loads(sp.read_text())
         except Exception: continue
         for key in ("instagram", "facebook"):
             try: at = dt.datetime.fromisoformat(((s0.get(key) or {}).get("at") or "").replace("Z", "+00:00"))
             except Exception: continue
+            if key == "facebook": fb_last = max(fb_last or at, at)
             if NOW() - at <= dt.timedelta(hours=24):
                 if key == "instagram": ig_recent += 1
                 else: fb_recent += 1
     ig_cap, fb_cap = ramp_cap("instagram"), ramp_cap("facebook")
     fresh_h = float(CFG.get("crosspost_max_age_hours", 48))     # Instagram and Facebook never get a backlog of old Shorts
+    # Facebook takes one Reel a run at most, at least facebook_min_gap_minutes after the last, newest Short first: a burst of
+    # posts from a new Page is what Meta's spam checks look for, and the newest Short is the most timely
+    fb_gap = dt.timedelta(minutes=float(CFG.get("facebook_min_gap_minutes", 30)))
+    fb_pick = None
+    if fb and fb_recent < fb_cap and (fb_last is None or NOW() - fb_last >= fb_gap):
+        cands = []
+        for sp in (ROOT / "status").glob("QD-*.json"):
+            try: s1 = json.loads(sp.read_text())
+            except Exception: continue
+            if not (s1.get("video") and s1.get("social_release") and s1.get("publish_at")) or s1.get("facebook") or s1.get("facebook_skipped"): continue
+            pa = dt.datetime.fromisoformat(s1["publish_at"].replace("Z", "+00:00"))
+            if pa <= NOW() and (NOW() - pa).total_seconds() / 3600 <= fresh_h: cands.append((pa, s1.get("id")))
+        fb_pick = max(cands)[1] if cands else None
     def order(sp):          # the day's picks first, then the rest by publish time
         try: st0 = json.loads(sp.read_text())
         except Exception: return (2, "")
@@ -248,7 +262,8 @@ def post():
         want_ig = bool(ig) and recent_public and not st.get("instagram") and ig_pick and ig_recent < ig_cap and not st.get("instagram_skipped")
         if fb and public and not recent_public and not st.get("facebook") and not st.get("facebook_skipped"):
             st["facebook_skipped"] = f"public over {fresh_h:g} hours before Facebook had room"
-        want_fb = bool(fb) and recent_public and not st.get("facebook") and fb_recent < fb_cap and not st.get("facebook_skipped")
+        want_fb = bool(fb) and recent_public and not st.get("facebook") and fb_recent < fb_cap and not st.get("facebook_skipped") \
+            and st.get("id") == fb_pick
         manual = mode == "manual"                    # Charlie uploads TikTok himself on desktop from the morning package
         want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt or want_fb):
@@ -326,6 +341,14 @@ def check():
         r = requests.get(f"{FB_API}/{fb['page']}", params={"fields": "name,followers_count,fan_count", "access_token": fb["token"]}, timeout=30)
         out["facebook"] = ({"ok": True, "page": r.json().get("name"), "followers": r.json().get("followers_count", r.json().get("fan_count")),
                             "today_cap": ramp_cap("facebook")} if r.ok else {"ok": False, "error": f"{r.status_code} {r.text[:300]}"})
+        if r.ok:            # what the key is (a Page key that never expires) and what it may do; never the key itself
+            try:
+                d = requests.get(f"{FB_API}/debug_token", params={"input_token": fb["token"], "access_token": fb["token"]}, timeout=30).json()
+                d = d.get("data") or {}
+                if d: out["facebook"].update(key_type=d.get("type"), key_expires="never" if d.get("expires_at") == 0 else d.get("expires_at"),
+                                             key_valid=d.get("is_valid"), scopes=sorted(d.get("scopes") or []),
+                                             data_access_expires=d.get("data_access_expires_at"))
+            except Exception: pass
     if ig: out.setdefault("instagram", {})["today_cap"] = ramp_cap("instagram")
     tt = load("tiktok")
     if CFG.get("tiktok_mode") == "off":

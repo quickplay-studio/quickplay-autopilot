@@ -1,17 +1,35 @@
 {
- "checked": "2026-10-19T08:45Z",
+ "checked": "2026-10-19T10:20Z",
  "uploads_last_24h": 17,
- "scheduled": 8,
- "public": 28,
+ "scheduled": 6,
+ "public": 30,
  "flagged": [],
  "videos": [
+  {
+   "video": "K-ale_3rhyU",
+   "title": "Street Fighter movie: Roman Reigns is Akuma 🥋",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-19T09:50:26Z",
+   "views": 28,
+   "flag": ""
+  },
+  {
+   "video": "qd2DA8vMbGI",
+   "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-19T09:10:40Z",
+   "views": 0,
+   "flag": ""
+  },
   {
    "video": "qdViT_b3UHA",
    "title": "GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T08:30:19Z",
-   "views": 4,
+   "views": 12,
    "flag": ""
   },
   {
@@ -20,7 +38,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T07:50:11Z",
-   "views": 2,
+   "views": 8,
    "flag": ""
   },
   {
@@ -47,25 +65,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T07:10:28Z",
-   "views": 46,
-   "flag": ""
-  },
-  {
-   "video": "K-ale_3rhyU",
-   "title": "Street Fighter movie: Roman Reigns is Akuma 🥋",
-   "privacy": "private",
-   "publish_at": "2026-10-19T09:50:00Z",
-   "uploaded": "2026-10-19T07:08:54Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
-   "video": "qd2DA8vMbGI",
-   "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
-   "privacy": "private",
-   "publish_at": "2026-10-19T09:10:00Z",
-   "uploaded": "2026-10-19T06:54:45Z",
-   "views": 0,
+   "views": 77,
    "flag": ""
   },
   {
@@ -110,7 +110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-18T18:30:11Z",
-   "views": 66,
+   "views": 69,
    "flag": ""
   },
   {
@@ -182,7 +182,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T21:30:31Z",
-   "views": 59,
+   "views": 63,
    "flag": ""
   },
   {
@@ -209,7 +209,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T17:00:36Z",
-   "views": 56,
+   "views": 58,
    "flag": ""
   },
   {
@@ -236,7 +236,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T12:30:18Z",
-   "views": 1109,
+   "views": 1141,
    "flag": ""
   },
   {
@@ -245,7 +245,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T11:00:11Z",
-   "views": 404,
+   "views": 411,
    "flag": ""
   },
   {
@@ -254,7 +254,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-17T09:30:05Z",
-   "views": 273,
+   "views": 274,
    "flag": ""
   },
   {
@@ -308,7 +308,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T14:00:01Z",
-   "views": 421,
+   "views": 422,
    "flag": ""
   },
   {
@@ -317,7 +317,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-16T12:30:20Z",
-   "views": 260,
+   "views": 261,
    "flag": ""
   },
   {

@@ -1,0 +1,367 @@
+{
+ "date": "2026-10-19",
+ "built": "2026-10-19T10:20+00:00",
+ "model": "gemini-flash-latest",
+ "errors": [
+  "Manchester City's perfect start to the season: gemini-2.5-flash: not found",
+  "I'm a Celebrity 2026: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)",
+  "betty mcguire: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)",
+  "bbc ni news: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)"
+ ],
+ "topics": [
+  {
+   "n": 9,
+   "topic": "gael monfils",
+   "signal": "Google Trends GB 200+",
+   "what_is_new": "Elina Svitolina and Gael Monfils have announced their separation after five years of marriage.",
+   "hooks": [
+    "Gael Monfils and Elina Svitolina have announced their separation.",
+    "Gael Monfils retired from professional tennis in 2026.",
+    "In 2025 Gael Monfils became the oldest ATP Tour champion."
+   ],
+   "sources": [
+    [
+     "Svitolina announces 'difficult' separation from husband Monfils",
+     "https://www.skysports.com/tennis/news/12040/13600883/elina-svitolina-announces-difficult-separation-from-husband-gael-monfils-after-five-years-of-marriage",
+     "Sky Sports",
+     "2026-10-19"
+    ],
+    [
+     "Tennis power couple Elina Svitolina and Gael Monfils to divorce",
+     "https://www.telegraph.co.uk/tennis/2026/10/19/tennis-power-couple-svitolina-and-monfils-to-divorce/",
+     "The Telegraph",
+     "2026-10-18"
+    ],
+    [
+     "gael monfils",
+     "https://en.wikipedia.org/wiki/Gael_Monfils",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Elina Svitolina and Gael Monfils announced their separation after five years of marriage.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Elina Svitolina and Gael Monfils have announced their separation; The tennis players married in 2021 and have a four-year-old daughter; Watch the Japan Open all"
+     }
+    },
+    {
+     "claim": "Gael Monfils and Elina Svitolina married in 2021 and share a four year old daughter named Skai.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Svitolina - a four-time grand slam semi-finalist - and French former world No 6 Monfils, 40, married in 2021 and have a four-year-old daughter, Skai."
+     }
+    },
+    {
+     "claim": "A few months ago Svitolina and Monfils reached the semi finals of the US Open Mixed Doubles Championship.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Only a few months ago Svitolina and Monfils had joined forces to reach the semi-finals of the US Open Mixed Doubles Championship."
+     }
+    },
+    {
+     "claim": "In 2025 Monfils became the oldest ATP Tour champion since the founding of the Tour in 1990.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In 2025, Monfils became the oldest ATP Tour champion since the Tour's establishment in 1990.[7][8]"
+     }
+    },
+    {
+     "claim": "Monfils retired from professional tennis in 2026.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He retired from the sport in 2026."
+     }
+    },
+    {
+     "claim": "Monfils attained a career high singles ranking of world No 6 in November 2016.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He was ranked as high as world No. 6 by the Association of Tennis Professionals (ATP), achieved in November 2016."
+     }
+    },
+    {
+     "claim": "Monfils secured 13 ATP Tour singles titles from 35 contested finals.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Monfils won 13 ATP Tour singles titles, out of 35 finals contested."
+     }
+    },
+    {
+     "claim": "Monfils reached at least one ATP Tour singles final each year for 19 consecutive seasons from 2005 to 2023.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He reached at least one ATP Tour singles final every year for 19 consecutive seasons from 2005 to 2023,[6] and is one of five players"
+     }
+    },
+    {
+     "claim": "Monfils was named the ATP Newcomer of the Year in 2005.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Monfils was named the ATP Newcomer of the Year in 2005."
+     }
+    },
+    {
+     "claim": "Monfils was born on 1 September 1986 in Paris.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Gaël Sébastien Monfils[9] was born on 1 September 1986[10] in Paris, where he was raised.[11]"
+     }
+    },
+    {
+     "claim": "Monfils officially turned professional in 2004 at 17 years of age.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Monfils officially turned pro in 2004 at the age of 17."
+     }
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "topic": "bbc ni",
+   "signal": "Google Trends GB 200+",
+   "what_is_new": "",
+   "hooks": [
+    "The BBC Nine O'Clock News ran for thirty years until October 2000.",
+    "The final BBC Nine O'Clock News bulletin was broadcast on 13 October 2000.",
+    "The Nine O'Clock News was the first bulletin with closing music."
+   ],
+   "sources": [
+    [
+     "Tourists are avoiding York, my home town – but I know how to get them back",
+     "https://www.theguardian.com/commentisfree/2026/oct/19/tourists-york",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "‘Tall Tales & Murder’ Scores New International Deals As Season 2 Takes Shape",
+     "https://deadline.com/2026/10/tall-tales-and-murder-international-season-2-chris-addison-1237167375/",
+     "Deadline",
+     "2026-10-19"
+    ],
+    [
+     "Beer & Blackpool beach was how British players bonded - Pulis",
+     "https://www.bbc.co.uk/sport/football/articles/cjr4yndrz1kro?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "bbc ni",
+     "https://en.wikipedia.org/wiki/BBC_Nine_O%27Clock_News",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Following a relaunch on 10 May 1999, the programme shared a common theme and set with its daytime counterparts.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "A more comprehensive relaunch of all the BBC News output came on 10 May 1999, after which this programme shared a common theme and set"
+     }
+    },
+    {
+     "claim": "Martyn Lewis and Peter Sissons swapped jobs in 1994, with Lewis becoming a main presenter of the Six O'Clock News while Sissons joined Buerk on rotation for the Nine O'Clock News.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Lewis and Peter Sissons swapped jobs in 1994, Lewis becoming a main presenter of the Six O'Clock News while Sissons joined Buerk on rotation for"
+     }
+    },
+    {
+     "claim": "In September 1981, the Nine O'Clock News had a wooden effect while other bulletins used a plain blue background instead.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The set used by the bulletin was designed to differentiate from the day's bulletins; an example of this was in September 1981, where the Nine"
+     }
+    },
+    {
+     "claim": "Between 13 November 1972 to 5 March 1976 the programme had two presenters.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Between 13 November 1972 to 5 March 1976 the programme had two presenters."
+     }
+    },
+    {
+     "claim": "The first week of the television bulletin was presented by Robert Dougall, followed by Richard Baker and Kenneth Kendall, each presenting five consecutive nightly bulletins.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The first week of the TV bulletin was presented by Robert Dougall, followed by Richard Baker and Kenneth Kendall, each presenting five consecutive nightly bulletins."
+     }
+    },
+    {
+     "claim": "The Nine O'Clock News was the first bulletin to have a closing set of music.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The Nine O'Clock News was the first bulletin to have a closing set of music; other bulletins would show weather forecasts at the end instead."
+     }
+    },
+    {
+     "claim": "The BBC Nine O'Clock News was first broadcast on 14 September 1970 and ran until 13 October 2000.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "It was first broadcast on 14 September 1970 and ran until 13 October 2000, when it was replaced by the BBC Ten O'Clock News (later"
+     }
+    },
+    {
+     "claim": "The programme was broadcast on BBC One and inspired the BBC Two comedy show Not the Nine O'Clock News.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The programme was broadcast on BBC One and inspired a BBC Two comedy show running in the same time slot, Not the Nine O'Clock News."
+     }
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "topic": "belfast live",
+   "signal": "Google Trends GB 1000+",
+   "what_is_new": "Reigning champion Jack Lisowski progressed in the Northern Ireland Open in Belfast while Mark Selby suffered a shock exit.",
+   "hooks": [
+    "Jack Lisowski launched his Northern Ireland Open title defence in Belfast.",
+    "Mark Selby crashed out of the Northern Ireland Open in Belfast.",
+    "Did you know Belfast Live was launched by Trinity Mirror?"
+   ],
+   "sources": [
+    [
+     "Selby out but Lisowski advances in NI Open defence",
+     "https://www.bbc.co.uk/sport/snooker/articles/c9e8l765gdmyo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-18"
+    ],
+    [
+     "belfast live",
+     "https://en.wikipedia.org/wiki/Belfast_Live",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Jack Lisowski began his defence of the Northern Ireland Open with a win over Huang Jiahao in Belfast while Mark Selby made a surprise exit.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Reigning champion Jack Lisowski began his defence of the Northern Ireland Open with a 4-1 victory over Huang Jiahao in Belfast, but Mark Selby made"
+     }
+    },
+    {
+     "claim": "Lisowski won his first ranking title at the tournament last year and raced into a lead at the Waterfront Hall at age 35.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Lisowski, 35, won his first ranking title at the tournament last year and raced into a three-frame lead over his Chinese opponent at the Waterfront"
+     }
+    },
+    {
+     "claim": "Mark Selby has already won the China Open this year but dropped four straight frames to exit.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The world number five, who has already won the China Open this year, led 2-0 but dropped four straight frames to exit."
+     }
+    },
+    {
+     "claim": "Anthony McGill will face Jack Lisowski in round two after enjoying a victory over Stephen Maguire.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He will now face Scotland's Anthony McGill, who enjoyed a 4-1 victory of his own over Stephen Maguire, in round two."
+     }
+    },
+    {
+     "claim": "Trinity Mirror launched two new websites named Dublin Live and Belfast Live.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It also recently launched two new websites, Dublin Live and Belfast Live."
+     }
+    },
+    {
+     "claim": "Reach plc was known as Trinity Mirror plc before 2018.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Before 2018, Reach plc was known as Trinity Mirror plc.[1]"
+     }
+    },
+    {
+     "claim": "Trinity Mirror employed just under 100 people between its offices in Dublin and Belfast.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "UK-based Trinity Mirror publishes the Irish Daily Mirror, Sunday Mirror and People newspapers and employs just under 100 people between its offices in Dublin and"
+     }
+    },
+    {
+     "claim": "Reach previously owned a 43% share of The Independent.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It used to own a 43% share of The Independent."
+     }
+    },
+    {
+     "claim": "Reach owned the News Letter, Donegal Democrat and Derry Journal until late 2003.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It owned the News Letter, Donegal Democrat and Derry Journal until late 2003 when they were sold to the newly formed Local Press Ltd which"
+     }
+    }
+   ]
+  }
+ ]
+}

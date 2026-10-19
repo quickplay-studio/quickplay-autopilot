@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-YouTube checked Mon 19 Oct 9:45 (UK): 8 scheduled, 28 public, 17 uploads in the last 24 hours.
+YouTube checked Mon 19 Oct 11:20 (UK): 6 scheduled, 30 public, 17 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 9:45).
 
@@ -40,27 +40,27 @@ scheduled · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040
 ![QD-040](QD-040.jpg)
 
 ### Mon 19 Oct 10:50 · Street Fighter movie: Roman Reigns is Akuma 🥋
-private · 27 s · music: stake-out · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
+public · 28 views · 27 s · music: stake-out · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
 
 ![QD-039](QD-039.jpg)
 
 ### Mon 19 Oct 10:10 · Arsenal's 1st shot on target came in minute 80 ⚽
-private · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
+public · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
 
 ![QD-037](QD-037.jpg)
 
 ### Mon 19 Oct 9:30 · GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵
-public · 4 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
+public · 12 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
 
 ![QD-036](QD-036.jpg)
 
 ### Mon 19 Oct 8:50 · LOUD: first team to win VALORANT Champions 2x 🏆
-public · 2 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
+public · 8 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
 
 ![QD-035](QD-035.jpg)
 
 ### Mon 19 Oct 8:10 · Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤
-public · 46 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
+public · 77 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
 
 ![QD-034](QD-034.jpg)
 
@@ -71,7 +71,7 @@ public · 50 views · [script](../backlog/QD-022) · [YouTube](https://youtube.c
 public · 12 views · [script](../backlog/QD-023) · [YouTube](https://youtube.com/shorts/qLRXY5tuj8A)
 
 ### Sun 18 Oct 19:30 · NCT WISH: from debut to a dome 🎤
-public · 66 views · [script](../backlog/QD-024) · [YouTube](https://youtube.com/shorts/pnbFnJfq3ws)
+public · 69 views · [script](../backlog/QD-024) · [YouTube](https://youtube.com/shorts/pnbFnJfq3ws)
 
 ### Sun 18 Oct 18:00 · Blade Runner is back, 50 years later 🌃
 public · 40 views · [script](../backlog/QD-020) · [YouTube](https://youtube.com/shorts/HUbPVioSEnQ)
@@ -89,7 +89,7 @@ public · 117 views · [script](../backlog/QD-014) · [YouTube](https://youtube.
 public · 98 views · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
 
 ### Sat 17 Oct 22:30 · Apple's new smart home screen, explained 🏠
-public · 59 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
+public · 63 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
 
 ### Sat 17 Oct 21:00 · Google's most powerful AI is now in the Gemini app 🤖
 public · 54 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
@@ -98,7 +98,7 @@ public · 54 views · [script](../backlog/QD-011) · [YouTube](https://youtube.c
 public · 39 views · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
 
 ### Sat 17 Oct 18:00 · Disney's next film isn't a sequel ✨
-public · 56 views · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
+public · 58 views · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
 
 ### Sat 17 Oct 16:30 · Why Riot brought back a band that isn't real 🎤
 public · 92 views · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
@@ -107,13 +107,13 @@ public · 92 views · [script](../backlog/QD-004) · [YouTube](https://youtube.c
 public · 257 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
-public · 1,109 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
+public · 1,141 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
-public · 404 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
+public · 411 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Sat 17 Oct 10:30 · GTA 6's launch trailer hides its whole story in one detail 🎮
-public · 273 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)
+public · 274 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)
 
 ### Fri 16 Oct 22:30 · Why scientists made VR goggles for mice 🐭
 public · 30 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
@@ -131,10 +131,10 @@ public · 542 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
 public · 23 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
 
 ### Fri 16 Oct 15:00 · Fontaines D.C.'s first ever guest is ROSALÍA 🎻
-public · 421 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
+public · 422 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
 
 ### Fri 16 Oct 13:30 · From lucky loser to beating the world No. 4 🎾
-public · 260 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)
+public · 261 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)
 
 ### Fri 16 Oct 12:00 · Peyton Manning just made a country song 🏈
 public · 45 views · [YouTube](https://youtube.com/shorts/MNXzQl1V0d8)

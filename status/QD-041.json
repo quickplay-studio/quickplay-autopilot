@@ -79,5 +79,10 @@
   "publish_at": "2026-10-19T13:10:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "preview-QD-041"
+ "social_release": "preview-QD-041",
+ "engage": {
+  "comment": "UgzYaFdkbjbENDcffPp4AaABAg",
+  "playlist_error": "HttpError: <HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned \"The operation was aborted.\". Details: \"[{'domain': 'youtube.CoreErrorD",
+  "playlist_tries": 1
+ }
 }

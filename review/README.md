@@ -2,7 +2,7 @@
 
 YouTube checked Mon 19 Oct 9:45 (UK): 8 scheduled, 28 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 9:43).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 9:45).
 
 ## Needs a look
 
@@ -50,7 +50,7 @@ scheduled · 30 s · music: rise-of-the-machines · [script](../boards/done/QD-0
 ![QD-037](QD-037.jpg)
 
 ### Mon 19 Oct 9:30 · GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵
-public · 4 views · 24 s · music: after-sunset · on Instagram · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
+public · 4 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
 
 ![QD-036](QD-036.jpg)
 

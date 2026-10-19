@@ -1,6 +1,6 @@
 {
- "checked": "2026-10-19T08:16:44+00:00",
- "instagram_checked": "2026-10-19T08:16:44+00:00",
+ "checked": "2026-10-19T08:43:18+00:00",
+ "instagram_checked": "2026-10-19T08:43:18+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -13,14 +13,29 @@
      "quota_total": 100,
      "quota_duration": 86400
     },
-    "quota_usage": 1
+    "quota_usage": 2
    }
   ],
   "today_cap": 6
  },
  "facebook": {
-  "ok": false,
-  "error": "not connected (FB_PAGE_TOKEN and FB_PAGE_ID secrets missing)"
+  "ok": true,
+  "page": "Quickplay Daily",
+  "followers": 0,
+  "today_cap": 6,
+  "key_type": "USER",
+  "key_expires": "never",
+  "key_valid": true,
+  "scopes": [
+   "pages_manage_engagement",
+   "pages_manage_posts",
+   "pages_read_engagement",
+   "pages_read_user_content",
+   "pages_show_list",
+   "public_profile",
+   "read_insights"
+  ],
+  "data_access_expires": 1800174972
  },
  "tiktok": {
   "ok": true,

@@ -82,6 +82,5 @@
  "instagram": {
   "media": "17983205216900621",
   "at": "2026-10-19T08:43:48+00:00"
- },
- "facebook_error": "2026-10-19 08:43 facebook start: {'message': '(#200) Subject does not have permission to post videos on this target', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AWcvo6ecvUfj9S1XYHqMLA9'}"
+ }
 }

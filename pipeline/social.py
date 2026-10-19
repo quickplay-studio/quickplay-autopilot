@@ -128,11 +128,20 @@ def tt_post(t, path, caption, mode):
     return d["publish_id"]
 
 # ---------- Facebook Page Reels ----------
+_FB = {}
 def fb_tokens():
-    """The Page token and Page id from GitHub secrets (FB_PAGE_TOKEN, FB_PAGE_ID): a Page token made from a long-lived
-    user token doesn't expire. None until both secrets exist."""
+    """The Page key and Page id from GitHub secrets (FB_PAGE_TOKEN, FB_PAGE_ID); None until both exist. Posting needs the
+    Page's own key: given a user key instead (Meta's Explorer hands out both), it is swapped here for the Page key, which
+    lasts as long as the user key does. Asked once per run."""
     tok, page = os.environ.get("FB_PAGE_TOKEN", "").strip(), os.environ.get("FB_PAGE_ID", "").strip()
-    return {"token": tok, "page": page} if tok and page else None
+    if not (tok and page): return None
+    if not _FB:
+        _FB.update(token=tok, page=page, swapped=False)
+        try:
+            r = requests.get(f"{FB_API}/{page}", params={"fields": "access_token", "access_token": tok}, timeout=30).json()
+            if r.get("access_token") and r["access_token"] != tok: _FB.update(token=r["access_token"], swapped=True)
+        except Exception: pass
+    return dict(_FB)
 
 def fb_post(fb, path, cap):
     """Publish a Reel on the Facebook Page (Meta's Reels Publishing API): open an upload session, send the file to
@@ -345,7 +354,8 @@ def check():
             try:
                 d = requests.get(f"{FB_API}/debug_token", params={"input_token": fb["token"], "access_token": fb["token"]}, timeout=30).json()
                 d = d.get("data") or {}
-                if d: out["facebook"].update(key_type=d.get("type"), key_expires="never" if d.get("expires_at") == 0 else d.get("expires_at"),
+                if d: out["facebook"].update(key_type=d.get("type"), key_from_user_key=fb.get("swapped"),
+                                             key_expires="never" if d.get("expires_at") == 0 else d.get("expires_at"),
                                              key_valid=d.get("is_valid"), scopes=sorted(d.get("scopes") or []),
                                              data_access_expires=d.get("data_access_expires_at"))
             except Exception: pass

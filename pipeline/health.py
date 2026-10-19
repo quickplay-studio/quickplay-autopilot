@@ -33,6 +33,9 @@ def main():
         v = soc.get(k) or {}
         if k == "facebook" and (not v or "not connected" in str(v.get("error", ""))): continue    # not set up yet
         if soc and not v.get("ok"): problems.append(f"{label} sign-in not working")
+        if k == "facebook" and v.get("data_access_expires"):       # Meta wants the key renewed every 90 days or so
+            left = (dt.datetime.fromtimestamp(int(v["data_access_expires"]), dt.timezone.utc) - NOW).days
+            if left <= 14: problems.append(f"Facebook key needs renewing within {max(0, left)} days (redo the Facebook key steps)")
     if not (load("status/youtube_connect.json", {}) or {}).get("connected"): problems.append("YouTube engagement sign-in missing")
     tr = load("trends/latest.json", {}) or {}
     if tr.get("date") != str(dt.datetime.now(ZoneInfo("Europe/London")).date()): problems.append(f"trends last refreshed {tr.get('date', 'never')}")

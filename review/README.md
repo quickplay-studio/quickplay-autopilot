@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 19 Oct, 20:40): 5 of 1,000 subscribers · 2,155 of 10 million Shorts views in 90 days · 2,363 views in the last 24 hours (about 111,087 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Mon 19 Oct, 21:39): 5 of 1,000 subscribers · 2,203 of 10 million Shorts views in 90 days · 2,524 views in the last 24 hours (about 111,087 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Mon 19 Oct 20:09 (UK): 3 scheduled, 41 public, 21 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 20 Oct | 0 public, 1 scheduled | 0 | 0 | ⏳ 1 of 24 scheduled |
-| Mon 19 Oct | 18 public, 1 scheduled | 6 | 6 | ⏳ 18 of 24 so far, 1 more scheduled |
+| Mon 19 Oct | 19 public | 6 | 6 | ⏳ 19 of 24 so far |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
 | Fri 16 Oct | 0 public | 0 | 0 | no target then |
@@ -34,7 +34,7 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 ## On the channel (latest first)
 
 ### Mon 19 Oct 21:30 · Usain Bolt's 9.58: still unbeaten ⚡
-scheduled · 26 s · music: cued-for-liftoff · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
+private · 26 s · music: cued-for-liftoff · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
 
 ![QD-031](QD-031.jpg)
 

@@ -3,25 +3,6 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "Manchester City's perfect start to the season",
-   "signal": "Charlie's request",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "WSL talking points: pressure mounts on Slegers as Hemp closes on record",
-     "url": "https://www.theguardian.com/football/2026/oct/19/wsl-talking-points-pressure-slegers-arsenal-hemp-assists-record-manchester-city",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Do Manchester City have any grounds to win their appeal?",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c6je5lwxk5l0o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
    "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
    "signal": "Charlie's request",
    "wikipedia": null,
@@ -31,56 +12,12 @@
      "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
      "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
      "published": "2026-10-13"
-    }
-   ]
-  },
-  {
-   "topic": "I'm a Celebrity 2026",
-   "signal": "Charlie's request",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "BBC Says James Acaster Complaint Over “Macho Banter” on ‘Celebrity Traitors’ Is “Categorically Untrue”",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/bbc-james-acaster-romesh-rob-celebrity-traitors-complaint-1236735199/",
-     "published": "2026-10-19"
     },
     {
-     "outlet": "Variety",
-     "title": "BBC Denies ‘Celebrity Traitors’ Contender James Acaster Complained Over Competitors’ ‘Macho Banter’: ‘Categorically Untrue’",
-     "url": "https://variety.com/2026/tv/global/bbc-celebrity-traitors-james-acaster-complaint-1236916280/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘The Celebrity Traitors’: BBC Says It’s “Categorically Untrue” James Acaster Made Complaint About Co-Stars’ “Macho Banter”",
-     "url": "https://deadline.com/2026/10/the-celebrity-traitors-bbc-denies-james-acaster-complaint-1237167366/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Miranda's tears, joy and dance moves steal show as deadly boredom sets in on The Celebrity Traitors",
-     "url": "https://www.bbc.co.uk/news/articles/cq70pre80gwko?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-17"
-    }
-   ]
-  },
-  {
-   "topic": "The latest SpaceX launch",
-   "signal": "Charlie's request",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "All The Records GTA 6 Will Break, We Think",
-     "url": "https://www.gamespot.com/articles/all-the-records-gta-6-will-break-we-think/",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Elon Musk reveals ‘world’s first flying car’ at Tesla event",
-     "url": "https://www.theguardian.com/technology/2026/oct/16/elon-musk-reveals-worlds-first-flying-car-spacex",
-     "published": "2026-10-16"
+     "outlet": "UEFA",
+     "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
+     "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
+     "published": "2026-10-06"
     }
    ]
   },
@@ -98,178 +35,268 @@
    ]
   },
   {
-   "topic": "The Call the Police trend on TikTok and Instagram",
-   "signal": "Charlie's request",
+   "topic": "jakarta",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jakarta",
+   "articles": [
+    {
+     "outlet": "CNN",
+     "title": "It was long known as the nation’s capital. Now, Jakarta is redefining itself through global vision",
+     "url": "https://www.cnn.com/sponsor/edition/jakarta-city/a-global-vision",
+     "published": "2025-08-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "$40bn to save Jakarta: the story of the Great Garuda",
+     "url": "https://www.theguardian.com/cities/2016/nov/22/jakarta-great-garuda-seawall-sinking",
+     "published": "2016-11-22"
+    }
+   ]
+  },
+  {
+   "topic": "lou sanders",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lou_Sanders",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘We tried to levitate the Pentagon’: the almost unbelievable life of Ed Sanders, trickster god of the US counterculture",
+     "url": "https://www.theguardian.com/music/2026/oct/19/ed-sanders-interview-the-fugs-film-counterculture",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "minior pokemon go",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Minior_(Pok%C3%A9mon)",
+   "articles": [
+    {
+     "outlet": "Eurogamer",
+     "title": "Pokémon Go Minior Showers schedule",
+     "url": "https://www.eurogamer.net/pokemon-go-minior-showers-schedule",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "Pokémon Go Minior Shower schedule",
+     "url": "https://www.polygon.com/pokemon-go-minior-shower-schedule-how-to-find-shiny/",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "queen mette-marit of norway",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Queen_Mette-Marit_of_Norway",
+   "articles": [
+    {
+     "outlet": "Reuters",
+     "title": "Mette-Marit, Norway's embattled new queen",
+     "url": "https://www.reuters.com/world/newsmaker-mette-marit-norways-embattled-new-queen-2026-08-28/",
+     "published": "2026-08-28"
+    }
+   ]
+  },
+  {
+   "topic": "gta 6",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Gta_6",
+   "articles": [
+    {
+     "outlet": "PC Gamer",
+     "title": "I have added completely realistic Uber driving to Grand Theft Auto 5",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/i-have-added-completely-realistic-uber-driving-to-grand-theft-auto-5/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "IGN",
+     "title": "With GTA 6's Dating System Incoming, a Surprising Percentage of Adults Think Investing in a Video Game Relationship Is Cheating",
+     "url": "https://www.ign.com/articles/gta-6-dating-system-cheating",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "All The Records GTA 6 Will Break, We Think",
+     "url": "https://www.gamespot.com/articles/all-the-records-gta-6-will-break-we-think/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "newcastle united f.c.",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Newcastle_United_F.C.",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "Dan Burn up front? ‘Hail Mary’ ploys cannot excuse Newcastle’s lack of clear offensive strategy",
+     "url": "https://www.nytimes.com/athletic/7698102/2026/10/19/newcastle-attack-aston-villa-analysis/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Villa's Manzambi shows Newcastle what they missed out on",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ck054652mv07o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "gta vi xbox series x performance",
+   "signal": "Google Trends GB 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "NBC News",
-     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
-     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
-     "published": "2026-07-28"
+     "outlet": "GameSpot",
+     "title": "After 16 Years, Chill Sci-Fi Game Faraway Has A Release Date",
+     "url": "https://www.gamespot.com/articles/after-16-years-chill-sci-fi-game-faraway-has-a-release-date/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "sarina wiegman",
+   "topic": "snooker scores",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Sarina_Wiegman",
+   "wikipedia": "https://en.wikipedia.org/wiki/Snooker_scoreboard",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Snooker",
+     "url": "https://www.bbc.com/sport/snooker?pag=1",
+     "published": "2017-09-16"
+    }
+   ]
+  },
+  {
+   "topic": "leeds united f.c.",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Leeds_United_F.C.",
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "England Women boss Wiegman signs new deal through to Euro 2029",
-     "url": "https://www.skysports.com/football/news/12040/13600890/sarina-wiegman-england-women-boss-signs-new-two-year-contract-extension-through-to-end-of-euro-2029",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "England manager Wiegman signs contract extension",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c679plpvellgo?at_medium=RSS&at_campaign=rss",
+     "title": "Arsenal vs Man Utd, NLD and Man City vs Chelsea live on Sky in December",
+     "url": "https://www.skysports.com/football/news/12040/13600880/premier-league-fixtures-on-sky-sports-arsenal-vs-man-utd-north-london-derby-and-man-city-vs-chelsea-live-in-december",
      "published": "2026-10-19"
     },
     {
      "outlet": "Guardian",
-     "title": "Sarina Wiegman signs contract extension to stay as England women head coach until 2029",
-     "url": "https://www.theguardian.com/football/2026/oct/19/sarina-wiegman-signs-contract-extension-england-women-euro-2029",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "selena gomez",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Selena_Gomez",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Selena Gomez Reveals Vaping Nicotine Changed Her Voice: ‘It’s Not Worth It’",
-     "url": "https://variety.com/2026/tv/news/elena-gomez-vaping-nicotine-changed-voice-1236916270/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Selena Gomez says vaping has affected her voice",
-     "url": "https://www.bbc.co.uk/news/articles/cxly435ym787o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "property",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Property",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Revealed: African island fights offshore gambling network linked to UK family",
-     "url": "https://www.theguardian.com/society/2026/oct/19/revealed-britons-using-an-african-islands-name-to-aid-underground-gambling",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Home sellers cut asking prices on 3,000 properties a day",
-     "url": "https://www.bbc.co.uk/news/articles/c84g13z6xx4eo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "glentoran fc",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Glentoran_F.C.",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Everton legend Ferguson returns to management in Irish League",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cq62yd157rjeo?at_medium=RSS&at_campaign=rss",
+     "title": "After the ITV exposé, see Reform’s fixation with ‘hate preachers’ as the stinking hypocrisy it really is | Owen Jones",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/19/reform-itv-hate-preachers-far-right-extremism-nigel-farage",
      "published": "2026-10-19"
     },
     {
      "outlet": "BBC Sport",
-     "title": "What awaits Everton hero Ferguson in shock Glens role?",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cwdd832e7gqmo?at_medium=RSS&at_campaign=rss",
+     "title": "Free-scoring Brighton & Man Utd settle for a point",
+     "url": "https://www.bbc.co.uk/sounds/play/p0phbswc?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Mbeumo offers Carrick solace as Man Utd winless run goes on",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c699zmgmx9vzo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "british royal family",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/British_royal_family",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Blue for poor, yellow for posh: the London maps exposing centuries of terrible housing",
-     "url": "https://www.theguardian.com/artanddesign/2026/oct/19/a-place-to-call-home-senate-house-london-charles-booth-maps-london-housing",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "elina svitolina gael monfils separation",
-   "signal": "Google Trends GB 500+",
+   "topic": "gian van veen andrew gilding match",
+   "signal": "Google Trends GB 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "‘What the war has done to me inside’: Ukraine’s Svitolina announces separation from Monfils",
-     "url": "https://www.theguardian.com/sport/2026/oct/19/what-the-war-has-done-to-me-inside-ukraines-svitolina-announces-separation-from-monfils",
-     "published": "2026-10-19"
-    },
-    {
      "outlet": "Sky Sports",
-     "title": "Svitolina announces 'difficult' separation from husband Monfils",
-     "url": "https://www.skysports.com/tennis/news/12040/13600883/elina-svitolina-announces-difficult-separation-from-husband-gael-monfils-after-five-years-of-marriage",
+     "title": "Littler to face O'Connor in European Championship Darts opener",
+     "url": "https://www.skysports.com/darts/news/12040/13600917/european-championship-darts-luke-littler-to-face-william-oconnor-in-opener-as-gian-van-veen-starts-defence-vs-andrew-gilding",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "kyiv",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kyiv",
+   "topic": "richard riehle",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Richard_Riehle",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "US gave us no warning of Russian strikes on Kyiv power plants, Zelenskyy says",
-     "url": "https://www.theguardian.com/world/2026/oct/19/no-us-warning-russian-strikes-kyiv-power-plants-zelenskyy-ukraine-trump",
+     "title": "Masts removed from bomb-laden WWII ship in Thames in bid to avoid explosion",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/19/us-wwii-ship-richard-montgomery-thames-bombs-prevent-explosion",
      "published": "2026-10-19"
     },
+    {
+     "outlet": "GameSpot",
+     "title": "Saros Gets Boss Rush And Tons Of Difficulty Options With Zenith Update",
+     "url": "https://www.gamespot.com/articles/saros-gets-boss-rush-and-tons-of-difficulty-options-with-zenith-update/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "NME",
+     "title": "The National joined by Richard Reed Parry and play ’90-Mile Water Wall’ for first time since 2014 at first full gig in two years",
+     "url": "https://www.nme.com/news/music/the-national-richard-reed-parry-play-90-mile-water-wall-first-time-2014-setlist-footage-3973522?utm_source=rss&utm_medium=rss&utm_campaign=the-national-richard-reed-parry-play-90-mile-water-wall-first-time-2014-setlist-footage",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "ap top 25 basketball",
+   "signal": "Google Trends US 500+",
+   "wikipedia": null,
+   "articles": [
     {
      "outlet": "New York Times",
-     "title": "What Life Is Like in Kyiv as Russia Tries to Make It Unlivable",
-     "url": "https://www.nytimes.com/2026/10/16/world/europe/ukraine-war-life-in-kyiv.html",
-     "published": "2026-10-15"
-    },
-    {
-     "outlet": "Washington Post",
-     "title": "Air raid alert shatters first day of school in Kyiv after overnight Russian missile strikes",
-     "url": "https://www.washingtonpost.com/world/2026/09/02/war-russia-ukraine-schools-missile-education/65c64fc2-a69b-11f1-9e38-f705d048bd5a_story.html",
-     "published": "2026-09-02"
+     "title": "Preseason AP men’s basketball Top 25: Florida opens at No. 1, with Duke and Illinois next",
+     "url": "https://www.nytimes.com/athletic/7704699/2026/10/19/ap-top-25-basketball-preseason-poll-florida/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "julia louis-dreyfus",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Julia_Louis-Dreyfus",
+   "topic": "social security october 21 checks",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "October 2026 Social Security and SSI payment schedule",
+     "url": "https://touchdownwire.usatoday.com/story/news/2026/09/29/when-will-next-ssi-checks-be-paid-see-full-october-payment-schedule/91992490007/",
+     "published": "2026-09-29"
+    }
+   ]
+  },
+  {
+   "topic": "noah wyle",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Noah_Wyle",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Noah Wyle to speak at Memphis Jewish Home and Rehab celebration",
+     "url": "https://okcthunderwire.usatoday.com/story/news/local/2026/10/13/noah-wyle-coming-to-memphis/92222285007/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "richard grenell",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Richard_Grenell",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Other Desert Cities review – Julia Louis-Dreyfus and Ed Harris shine in timely Broadway revival",
-     "url": "https://www.theguardian.com/stage/2026/oct/19/other-desert-cities-review-julia-louis-dreyfus-ed-harris-broadway",
+     "title": "Masts removed from bomb-laden WWII ship in Thames in bid to avoid explosion",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/19/us-wwii-ship-richard-montgomery-thames-bombs-prevent-explosion",
      "published": "2026-10-19"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘Other Desert Cities’ Theater Review: Julia Louis-Dreyfus, Ed Harris and Allison Janney Fail to Make a Once-Timely Play Relevant Again",
-     "url": "https://www.hollywoodreporter.com/lifestyle/arts/other-desert-cities-theater-review-julia-louis-dreyfus-1236734079/",
+     "outlet": "GameSpot",
+     "title": "Saros Gets Boss Rush And Tons Of Difficulty Options With Zenith Update",
+     "url": "https://www.gamespot.com/articles/saros-gets-boss-rush-and-tons-of-difficulty-options-with-zenith-update/",
      "published": "2026-10-19"
     },
     {
-     "outlet": "Deadline",
-     "title": "‘Other Desert Cities’ Review: Julia Louis-Dreyfus Gets Seriously Funny For Broadway Debut",
-     "url": "https://deadline.com/2026/10/other-desert-cities-broadway-review-julia-louis-dreyfus-1237165682/",
+     "outlet": "NME",
+     "title": "The National joined by Richard Reed Parry and play ’90-Mile Water Wall’ for first time since 2014 at first full gig in two years",
+     "url": "https://www.nme.com/news/music/the-national-richard-reed-parry-play-90-mile-water-wall-first-time-2014-setlist-footage-3973522?utm_source=rss&utm_medium=rss&utm_campaign=the-national-richard-reed-parry-play-90-mile-water-wall-first-time-2014-setlist-footage",
      "published": "2026-10-19"
     }
    ]
@@ -293,22 +320,28 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "You Can See Everything documentary stuns with huge box office debut",
-     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "outlet": "The Hollywood Reporter",
+     "title": "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
      "published": "2026-10-19"
     },
     {
      "outlet": "Guardian",
-     "title": "Elizabeth Holmes documentary You Can See Everything debuts with huge $15m opening weekend",
-     "url": "https://www.theguardian.com/film/2026/oct/19/elizabeth-holmes-documentary-debuts-with-huge-opening-weekend",
-     "published": "2026-10-18"
+     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "published": "2026-10-19"
     },
     {
-     "outlet": "TechCrunch",
-     "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
-     "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
-     "published": "2026-10-18"
+     "outlet": "Deadline",
+     "title": "Sony Wins Rights In Host Of International Territories To A24’s ‘You Can See Everything’ & ‘Primetime’",
+     "url": "https://deadline.com/2026/10/sony-wins-rights-to-a24s-you-can-see-everything-primetime-1237167448/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "You Can See Everything documentary stuns with huge box office debut",
+     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
     }
    ]
   },
@@ -318,47 +351,28 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "You Can See Everything documentary stuns with huge box office debut",
-     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "outlet": "The Hollywood Reporter",
+     "title": "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
      "published": "2026-10-19"
     },
     {
      "outlet": "Guardian",
-     "title": "Can countries deliver on a deal to save the world’s plants and animals?",
-     "url": "https://www.theguardian.com/environment/2026/oct/19/can-countries-deliver-on-a-deal-to-save-the-worlds-plants-and-animals",
+     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
      "published": "2026-10-19"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "The Six Things You Don’t See In ‘You Can See Everything’",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/you-can-see-everything-what-happens-holmes-billy-showtimes-1236735112/",
+     "outlet": "Deadline",
+     "title": "Sony Wins Rights In Host Of International Territories To A24’s ‘You Can See Everything’ & ‘Primetime’",
+     "url": "https://deadline.com/2026/10/sony-wins-rights-to-a24s-you-can-see-everything-primetime-1237167448/",
      "published": "2026-10-19"
     },
     {
-     "outlet": "TechCrunch",
-     "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
-     "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 181,850 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
-     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "outlet": "BBC",
+     "title": "You Can See Everything documentary stuns with huge box office debut",
+     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Street Fighter (2026 Movie) Guide",
-     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "published": "2026-10-15"
     }
    ]
   },
@@ -368,16 +382,23 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
-     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
-     "published": "2026-10-16"
-    },
-    {
      "outlet": "AP",
      "title": "Embattled White House press secretary Katie Zacharia is leaving the job after less than a week",
      "url": "https://apnews.com/article/trump-katie-zacharia-press-secretary-c40a8c276f5e2a9d71685a5daba94731",
      "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "Bear Bachmeier",
+   "signal": "Wikipedia 124,883 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bear_Bachmeier",
+   "articles": [
+    {
+     "outlet": "AP",
+     "title": "AP Player of the Week: BYU’s Bear Bachmeier scored as runner, passer, receiver against Notre Dame",
+     "url": "https://apnews.com/article/bear-bachmeier-byu-player-of-week-d932ea711d5c797eefe9bea667f72138",
+     "published": "2026-10-19"
     }
    ]
   },
@@ -388,14 +409,20 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Three deaths from float crushes raise safety concerns over Japanese festivals",
-     "url": "https://www.theguardian.com/world/2026/oct/19/safety-concerns-japan-traditional-festivals-fatal-accidents",
+     "title": "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
+     "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
      "published": "2026-10-19"
     },
     {
      "outlet": "USA Today",
      "title": "CDC confirms two measles-related deaths in 2026",
      "url": "https://www.usatoday.com/story/news/nation/2026/09/29/cdc-confirms-two-measles-related-us-deaths-in-2026/92001587007/",
+     "published": "2026-09-29"
+    },
+    {
+     "outlet": "Reuters",
+     "title": "US CDC confirms two measles-related deaths in 2026",
+     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-confirms-two-measles-related-deaths-2026-2026-09-29/",
      "published": "2026-09-29"
     }
    ]
@@ -422,6 +449,31 @@
      "title": "Jason Voorhees' origin revealed after 46 years in 'Crystal Lake' – Twist explained",
      "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/16/crystal-lake-explainer-friday-the-13th-jason-voorhees-origin/92240505007/",
      "published": "2026-10-16"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Crystal Lake Review",
+     "url": "https://www.ign.com/articles/crystal-lake-review",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "Abdul El-Sayed",
+   "signal": "Wikipedia 97,773 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "CBS News Correspondent Jan Crawford Apologizes For X Comment On Michigan U.S. Senate Candidate Abdul El-Sayed",
+     "url": "https://deadline.com/2026/10/jan-crawford-cbs-news-abdul-el-sayed-muslim-brotherhood-1237167428/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "CNN",
+     "title": "Abdul El-Sayed disavows Muslim Brotherhood and criticizes implications that he has ‘dual loyalty’",
+     "url": "https://www.cnn.com/2026/10/17/politics/abdul-el-sayed-muslim-brotherhood",
+     "published": "2026-10-16"
     }
    ]
   },
@@ -431,98 +483,48 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Love_of_Your_Life_(film)",
    "articles": [
     {
+     "outlet": "GameSpot",
+     "title": "Star Wars: Galactic Racer’s Biddy Blas Is Voiced By A Sinister Circus Ringmaster Pro Wrestler, And This Makes Sense",
+     "url": "https://www.gamespot.com/articles/star-wars-galactic-racers-biddy-blas-is-voiced-by-a-sinister-circus-ringmaster-pro-wrestler-and-this-makes-sense/",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "Guardian",
-     "title": "Vampire Carnival review – it’s Twilight at the fairground as abs run wild in pointy-toothed tug of war",
-     "url": "https://www.theguardian.com/film/2026/oct/19/vampire-carnival-review-twilight-fairground",
+     "title": "Life Out of Order by Audrey Niffenegger review – does this sequel measure up to The Time Traveler’s Wife?",
+     "url": "https://www.theguardian.com/books/2026/oct/19/life-out-of-order-by-audrey-niffenegger-review-does-this-sequel-measure-up-to-the-time-travelers-wife",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "“Less Red Carpet, More Love of Cinema”: The Warsaw Int’l Film Festival Wants to Be a Destination for Discovery",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/warsaw-film-festival-wiff-focus-on-cinema-love-discovery-1236733189/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
-     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 495,716/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
-     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "K/DA",
-   "signal": "YouTube GB 439,569/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/K/DA",
-   "articles": [
-    {
-     "outlet": "Engadget",
-     "title": "Logitech made official gaming gear for 'League of Legends' band K/DA",
-     "url": "https://www.engadget.com/logitech-g-k-da-league-of-legends-k-pop-152556467.html",
-     "published": "2020-10-30"
-    },
-    {
-     "outlet": "ESPN",
-     "title": "Riot Games announces K/DA's comeback",
-     "url": "https://www.espn.com/gaming/story/_/id/29747458/riot-games-announces-k-da-comeback",
-     "published": "2020-08-27"
     }
    ]
   },
   {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 312,169/h",
+   "signal": "YouTube GB 322,214/h",
    "wikipedia": null,
    "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘Up Again’ Lets Us Peek Behind the Curtain of Elite Figure Skating (Exclusive Trailer)",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/up-again-figure-skating-doc-film-trailer-jihlava-hbo-max-1236735161/",
-     "published": "2026-10-19"
-    },
     {
      "outlet": "Guardian",
      "title": "NAZA directors: 'It's a film about systems of mass killing' – video",
      "url": "https://www.theguardian.com/film/video/2026/oct/17/naza-directors-its-a-film-about-systems-of-mass-killings-video",
      "published": "2026-10-17"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
-     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
-     "published": "2026-10-16"
     }
    ]
   },
   {
-   "topic": "KAALI HOODIE",
-   "signal": "YouTube GB 195,795/h",
+   "topic": "Meet Vince and his family!",
+   "signal": "YouTube GB 314,329/h",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "How to dress a tech oligarch: The Social Reckoning’s costume designer on Zuckerberg’s style evolution",
-     "url": "https://www.theguardian.com/fashion/2026/oct/16/social-reckoning-zuckerberg-fashion-costume-design",
-     "published": "2026-10-16"
+     "outlet": "Deadline",
+     "title": "Patrick Schwarzenegger & Leslie Grace To Star In AGC Crime-Thriller ‘The Journeyman’",
+     "url": "https://deadline.com/2026/10/patrick-schwarzenegger-leslie-grace-cast-in-the-journeyman-1237167554/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
    "topic": "Something Is Hunting My Dogs...",
-   "signal": "YouTube GB-gaming 98,205/h",
+   "signal": "YouTube GB-gaming 93,925/h",
    "wikipedia": null,
    "articles": [
     {
@@ -530,88 +532,32 @@
      "title": "The pet I’ll never forget: Orlando was paralysed and almost died – then became the perfect guide dog",
      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/19/the-pet-ill-never-forget-orlando-was-paralysed-and-almost-died-then-became-the-perfect-guide-dog",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "A Comically On-The-Nose New Title Has Me Even More Excited For This Upcoming Tactics Game",
-     "url": "https://www.gamespot.com/articles/a-comically-on-the-nose-new-title-has-me-even-more-excited-for-this-upcoming-tactics-game/",
-     "published": "2026-10-16"
     }
    ]
   },
   {
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 160,102/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+   "topic": "Making NEW FRIENDS at School..",
+   "signal": "YouTube GB-gaming 38,494/h",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Rolling Stone",
-     "title": "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
-     "url": "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "published": "2026-10-14"
-    }
-   ]
-  },
-  {
-   "topic": "Tate McRae",
-   "signal": "YouTube GB-music 77,807/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Victoria’s Secret Fashion Show: See Red Carpet and Backstage Photos of Models, Megan Thee Stallion and Kobe Bryant’s Daughter",
-     "url": "https://www.hollywoodreporter.com/gallery/victorias-secret-fashion-show-2026-red-carpet-backstage-photos-models-1236735003/",
+     "outlet": "Guardian",
+     "title": "Emperor of Nothing by Blake J Harris review – the definitive portrait of Larry David",
+     "url": "https://www.theguardian.com/books/2026/oct/19/emperor-of-nothing-blake-j-harris-review-larry-david-biography",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "Zara Larsson",
-   "signal": "YouTube GB-music 50,787/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "The Year Zara Larsson Unlocked Pop Superstardom",
-     "url": "https://www.nytimes.com/2026/10/16/arts/music/zara-larsson-popcast-interview.html",
-     "published": "2026-10-15"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Zara Larsson Transforms Into a Fairy, a Mermaid, and More in ‘Blue Moon’ Video",
-     "url": "https://www.rollingstone.com/music/music-news/zara-larsson-blue-moon-video-1235643152/",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
-   "topic": "cutremur",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Cutie_mark",
+   "topic": "measles",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Measles",
    "articles": []
   },
   {
-   "topic": "j. t. realmuto",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/J._T._Realmuto",
-   "articles": []
-  },
-  {
-   "topic": "s&p 500 futures",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/S%26P_500_futures",
-   "articles": []
-  },
-  {
-   "topic": "tiempo de hoy",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tiempo_de_hoy",
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 181,850 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
    "articles": []
   },
   {
@@ -621,21 +567,27 @@
    "articles": []
   },
   {
-   "topic": "Bear Bachmeier",
-   "signal": "Wikipedia 124,883 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bear_Bachmeier",
-   "articles": []
-  },
-  {
    "topic": "Kaviya Maran",
    "signal": "Wikipedia 114,477 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Kaviya_Maran",
    "articles": []
   },
   {
-   "topic": "Abdul El-Sayed",
-   "signal": "Wikipedia 97,773 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
+   "topic": "Zara Larsson",
+   "signal": "YouTube GB-music 49,750/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
+   "articles": []
+  },
+  {
+   "topic": "Grand Theft Auto VI Launch Trailer",
+   "signal": "YouTube US 475,441/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
+   "articles": []
+  },
+  {
+   "topic": "Anuel AA",
+   "signal": "YouTube US-music 87,650/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }
  ]

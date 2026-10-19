@@ -162,7 +162,7 @@ def replies():
     import quota
     if not quota.allow(50 * len(todo), "comment replies"): return
     ans, _ = factpack.gemini(REPLY + json.dumps([{k: t[k] for k in ("id", "short", "summary", "comment")} for t in todo],
-                                                ensure_ascii=False), None, timeout=60, temperature=0.5)
+                                                ensure_ascii=False), None, timeout=60, temperature=0.5, lite=True)
     by_id, posted = {t["id"]: t for t in todo}, 0
     for x in ((ans or {}).get("replies") or []) if isinstance(ans, dict) else []:
         t = by_id.get(x.get("id"))

@@ -132,12 +132,16 @@ def models(key):
     return STATE["models"]
 
 
-def gemini(prompt, schema=None, timeout=100, temperature=0.1):
+def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
+    """JSON from the first Gemini model that answers. A model out of free quota, or retired (404), is skipped for the rest
+    of the run, so every other model gets its turn (each has its own quota). lite: simple jobs (translations, replies) try
+    the Lite models first, which have the biggest free quota, and save the others for writing and checking."""
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
     last = "no Gemini model answered"
-    todo = [m for m in models(key) if m not in spent][:4]
+    todo = [m for m in models(key) if m not in spent]
+    if lite: todo.sort(key=lambda m: "lite" not in m)
     if not todo: STATE["spent"] = True; raise RuntimeError("every Gemini model's free quota is used up for now")
     for model in todo:
         for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
@@ -159,6 +163,7 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1):
                     STATE.setdefault("think", {})[model] = think
                     return json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")) or "{}"), model
                 last = f"{model}: {r.status_code} {r.text[:150]}"
+                if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
                 break
             if model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
     raise RuntimeError(last)

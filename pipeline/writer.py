@@ -138,7 +138,9 @@ def plan(breaking=False):
             except Exception: continue
             if b.get("created") == str(day) and not b.get("reserve"): made += 1
     limit = int(CFG.get("daily_limit", 24)) - (1 if day.weekday() == 6 else 0)
-    cap = min(share("breaking", 2, 4) if breaking else int((CFG.get("runs") or {}).get(run, 6)), max(0, limit - made))
+    per_run = share("breaking", 2, 4) if breaking else int((CFG.get("runs") or {}).get(run, 6))
+    if run == "afternoon": per_run = min(20, max(per_run, limit - made))     # the day's last run makes up anything the morning missed
+    cap = min(per_run, max(0, limit - made))
     if os.environ.get("WRITE_COUNT", "").strip().isdigit(): cap = int(os.environ["WRITE_COUNT"])
     return run, day, cap
 
@@ -404,7 +406,7 @@ def translations(b):
     m = b.get("meta") or {}
     try:
         ans, _ = factpack.gemini(TRANSLATE.format(title=m.get("title", ""), summary=m.get("summary", "")), None, timeout=60,
-                                 temperature=0.2)
+                                 temperature=0.2, lite=True)
     except Exception as e:
         print("translations:", str(e)[:120]); return {}
     out = {}

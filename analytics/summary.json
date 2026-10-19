@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-19T16:42+00:00",
+ "updated": "2026-10-19T17:38+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-19T11:41+00:00",
  "youtube": {
   "subscribers": 5,
-  "public_shorts": 40,
-  "views_all_time": 5766,
+  "public_shorts": 41,
+  "views_all_time": 5910,
   "views_last_90_days": 225,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 2519,
+  "views_last_90_days_estimate": 2582,
   "analytics_last_day": "2026-10-16"
  },
  "instagram": {
@@ -30,7 +30,7 @@
   "days_left": 105,
   "subscribers_pct": 0.5,
   "views_pct": 0.03,
-  "views_needed_per_day": 111083,
+  "views_needed_per_day": 111082,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
  }
 }

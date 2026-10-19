@@ -1,6 +1,6 @@
-# What's working (updated 2026-10-19 10:20 UTC)
+# What's working (updated 2026-10-19 10:58 UTC)
 
-YouTube Partner Program: 5 of 1,000 subscribers, about 2,046 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (105 days): after that new channels need 20M. Needed from now: about 111,088 views a day.
+YouTube Partner Program: 5 of 1,000 subscribers, about 2,063 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (105 days): after that new channels need 20M. Needed from now: about 111,088 views a day.
 
 ## Recipe from the data (the writer follows this; Charlie's requests and breaking news still come first)
 - Category (early, 17 Shorts measured; a full mix from 40): lean towards Music (1.59x, 5 Shorts), Film (1.38x, 3 Shorts); ease off Gaming (0.84x, 3 Shorts), while still covering at least 3 categories a day.
@@ -12,7 +12,7 @@ YouTube Partner Program: 5 of 1,000 subscribers, about 2,046 of 10,000,000 Short
 - Early sign: category "Film" 1.38x over 3 Shorts
 - Early sign: posting time (uk) "11:00 to 13:59" 1.58x over 4 Shorts
 - Early sign: posting time (uk) "20:00 to 22:59" 0.74x over 4 Shorts
-- Early sign: day posted "Saturday" 1.39x over 9 Shorts
+- Early sign: day posted "Saturday" 1.38x over 9 Shorts
 - Early sign: day posted "Friday" 0.75x over 8 Shorts
 
 ## When people watch
@@ -26,13 +26,13 @@ How viewers found us: YouTube search 63%, Shorts feed 35%, Channel page 2%, Othe
 Biggest groups: 35-44 male 56%, 45-54 male 25%, 45-54 female 19%.
 
 ## Best Shorts (public 24 hours or more)
-- 1,141 views (24.9/h), 86.7% viewed · The K-pop group from BLACKPINK's producer 🎤 [Music, legacy, 13:30]
+- 1,167 views (25.1/h), 86.7% viewed · The K-pop group from BLACKPINK's producer 🎤 [Music, legacy, 13:30]
 - 545 views (8.3/h), 43.2% viewed · Why Godzilla Minus Zero is a big deal 🦖 [Film, legacy, 18:00]
-- 429 views (6.3/h), 51.1% viewed · Fontaines D.C.'s first ever guest is ROSALÍA 🎻 [Music, legacy, 15:00]
-- 418 views (8.8/h) · Ayra Starr just made NFL history 🏈 [Music, legacy, 12:00]
+- 429 views (6.2/h), 51.1% viewed · Fontaines D.C.'s first ever guest is ROSALÍA 🎻 [Music, legacy, 15:00]
+- 418 views (8.7/h) · Ayra Starr just made NFL history 🏈 [Music, legacy, 12:00]
 - 275 views (5.6/h) · GTA 6's launch trailer hides its whole story in one detail 🎮 [Gaming, legacy, 10:30]
 - 261 views (3.7/h), 54.4% viewed · From lucky loser to beating the world No. 4 🎾 [Sport, legacy, 13:30]
-- 260 views (5.9/h) · Why KPop Demon Hunters 2 won't come until 2029 🎶 [Film, legacy, 15:00]
+- 260 views (5.8/h) · Why KPop Demon Hunters 2 won't come until 2029 🎶 [Film, legacy, 15:00]
 - 142 views (2.3/h), 98.6% viewed · Why GTA 6 isn't coming to PC (yet) 🖥️ [Gaming, legacy, 21:00]
 
 ## Weakest
@@ -55,7 +55,7 @@ Biggest groups: 35-44 male 56%, 45-54 male 25%, 45-54 female 19%.
 - legacy: 95 median, 17 Shorts
 
 ## By posting slot (UK) (median views; overall median 95)
-- 13:30: 701 median, 2 Shorts
+- 13:30: 714 median, 2 Shorts
 - 15:00: 344 median, 2 Shorts
 - 18:00: 304 median, 2 Shorts
 - 10:30: 275 median, 1 Shorts

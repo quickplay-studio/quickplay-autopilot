@@ -40,6 +40,12 @@
    "wikipedia": null,
    "articles": [
     {
+     "outlet": "Variety",
+     "title": "BBC Denies ‘Celebrity Traitors’ Contender James Acaster Complained Over Competitors’ ‘Macho Banter’: ‘Categorically Untrue’",
+     "url": "https://variety.com/2026/tv/global/bbc-celebrity-traitors-james-acaster-complaint-1236916280/",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "Deadline",
      "title": "‘The Celebrity Traitors’: BBC Says It’s “Categorically Untrue” James Acaster Made Complaint About Co-Stars’ “Macho Banter”",
      "url": "https://deadline.com/2026/10/the-celebrity-traitors-bbc-denies-james-acaster-complaint-1237167366/",
@@ -105,205 +111,154 @@
    ]
   },
   {
-   "topic": "betty mcguire",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Betty_McGuire",
+   "topic": "british royal family",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/British_royal_family",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "Betty McGuire Dies: Broadway Actress & ‘Growing Pains’ Guest Star Was 100",
-     "url": "https://deadline.com/2026/10/betty-mcguire-dead-1237167173/",
-     "published": "2026-10-18"
+     "outlet": "Guardian",
+     "title": "Blue for poor, yellow for posh: the London maps exposing centuries of terrible housing",
+     "url": "https://www.theguardian.com/artanddesign/2026/oct/19/a-place-to-call-home-senate-house-london-charles-booth-maps-london-housing",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "kyiv",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kyiv",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "US gave us no warning of Russian strikes on Kyiv power plants, Zelenskyy says",
+     "url": "https://www.theguardian.com/world/2026/oct/19/no-us-warning-russian-strikes-kyiv-power-plants-zelenskyy-ukraine-trump",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "What Life Is Like in Kyiv as Russia Tries to Make It Unlivable",
+     "url": "https://www.nytimes.com/2026/10/16/world/europe/ukraine-war-life-in-kyiv.html",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "Washington Post",
+     "title": "Air raid alert shatters first day of school in Kyiv after overnight Russian missile strikes",
+     "url": "https://www.washingtonpost.com/world/2026/09/02/war-russia-ukraine-schools-missile-education/65c64fc2-a69b-11f1-9e38-f705d048bd5a_story.html",
+     "published": "2026-09-02"
+    }
+   ]
+  },
+  {
+   "topic": "simpsons apu",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Simpsons/Apu_Nahasapeemapetilon",
+   "articles": [
+    {
+     "outlet": "NME",
+     "title": "Apu speaks again on ‘The Simpsons’ after nine years of silence, new voice actor replaces Hank Azaria",
+     "url": "https://www.nme.com/news/tv/apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra-3973488?utm_source=rss&utm_medium=rss&utm_campaign=apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra",
+     "published": "2026-10-19"
     },
     {
      "outlet": "The Hollywood Reporter",
-     "title": "Betty McGuire, Actress on Broadway and ‘Growing Pains,’ Dies at 100",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/betty-mcguire-dead-growing-pains-broadway-1236734856/",
-     "published": "2026-10-18"
+     "title": "Apu is Back! Veteran Voice Actor Sunil Malhotra Revives ‘The Simpsons’ Character After Nearly 10 Years",
+     "url": "https://www.hollywoodreporter.com/tv/tv-news/apu-sunil-malhotra-rthe-simpsons-hank-azaria-1236735125/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "9 Years Later, The Simpsons' Controversial Character Officially Returns",
+     "url": "https://www.polygon.com/the-simpsons-apu-returns-sunil-malhotra-hank-azaria/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "‘The Simpsons’ Debuts New Voice for Apu After Nine Years of Silence",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/the-simpsons-apu-sunil-malhotra-new-voice-hank-azaria-1235644520/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "bbc ni news",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/BBC_News",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "2027/28 Savings Update – BBC Northern Ireland",
-     "url": "https://www.bbc.co.uk/mediacentre/articles/2026/bbc-ni-savings-update",
-     "published": "2026-10-14"
-    }
-   ]
-  },
-  {
-   "topic": "gael monfils",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Gael_Monfils",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Svitolina announces 'difficult' separation from husband Monfils",
-     "url": "https://www.skysports.com/tennis/news/12040/13600883/elina-svitolina-announces-difficult-separation-from-husband-gael-monfils-after-five-years-of-marriage",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Telegraph",
-     "title": "Tennis power couple Elina Svitolina and Gael Monfils to divorce",
-     "url": "https://www.telegraph.co.uk/tennis/2026/10/19/tennis-power-couple-svitolina-and-monfils-to-divorce/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "bbc ni",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/BBC_Nine_O%27Clock_News",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Tourists are avoiding York, my home town – but I know how to get them back",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/19/tourists-york",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Tall Tales & Murder’ Scores New International Deals As Season 2 Takes Shape",
-     "url": "https://deadline.com/2026/10/tall-tales-and-murder-international-season-2-chris-addison-1237167375/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Beer & Blackpool beach was how British players bonded - Pulis",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cjr4yndrz1kro?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Long-range goals from further and further out",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c6jdmy04ryjgo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "belfast live",
+   "topic": "amanda bland",
    "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Belfast_Live",
+   "wikipedia": "https://en.wikipedia.org/wiki/Amanda_Bland",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Selby out but Lisowski advances in NI Open defence",
-     "url": "https://www.bbc.co.uk/sport/snooker/articles/c9e8l765gdmyo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "gang suppression force",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Gang_Suppression_Force",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Can This International Force Stop Haiti’s Gangs?",
-     "url": "https://www.nytimes.com/video/world/americas/100000011168846/un-military-haiti-gangs.html",
+     "title": "Reform MSP quits party to sit as independent",
+     "url": "https://www.bbc.co.uk/news/articles/cq398dgkdg8xo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "spacex launch",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/SpaceX_launch_vehicles",
-   "articles": [
-    {
-     "outlet": "Space.com",
-     "title": "'It really does change you': SpaceX Crew-12 commander wishes we could all see our fragile Earth from space",
-     "url": "https://www.space.com/space-exploration/international-space-station/it-really-does-change-you-spacex-crew-12-commander-wishes-we-could-all-see-our-fragile-earth-from-space",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Watch: Did Tesla really just unveil a flying car?",
-     "url": "https://www.bbc.co.uk/news/videos/ckly4mj1g3n9o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Elon Musk reveals ‘world’s first flying car’ at Tesla event",
-     "url": "https://www.theguardian.com/technology/2026/oct/16/elon-musk-reveals-worlds-first-flying-car-spacex",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "jim nantz jj watt football punch",
-   "signal": "Google Trends US 2000+",
+   "topic": "apple iphone duo sold out",
+   "signal": "Google Trends US 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "J.J. Watt goaded Jim Nantz into hurting himself during Bills-Raiders",
-     "url": "https://ftw.usatoday.com/story/sports/nfl/2026/10/18/j-j-watt-goaded-jim-nantz-into-hurting-himself-bills-raiders-punch/92322273007/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "faizon brandon",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Faizon_Brandon",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Tennessee quarterback Faizon Brandon available; Alabama key players out",
-     "url": "https://www.usatoday.com/story/sports/college/university-of-tennessee/football/2026/10/17/faizon-brandon-injury-update-tennessee-football-vs-alabama/92146597007/",
-     "published": "2026-10-17"
-    }
-   ]
-  },
-  {
-   "topic": "google play",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Google_Play",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "US teens can access ‘nudify’ apps despite Apple and Google’s parental controls, report finds",
-     "url": "https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls",
-     "published": "2026-10-19"
-    },
-    {
      "outlet": "Engadget",
-     "title": "Google Gemini 4 agents just beat Minecraft with no human intervention",
-     "url": "https://www.engadget.com/2289944/google-gemini-4-agents-just-beat-minecraft-with-no-human-intervention/",
-     "published": "2026-10-19"
+     "title": "From the Royole FlexPai to the iPhone Duo: How the modern foldable phone has evolved",
+     "url": "https://www.engadget.com/2286505/how-modern-foldable-phone-evolved-from-royole-flexpai-to-iphone-duo/",
+     "published": "2026-10-18"
     },
     {
-     "outlet": "The Verge",
-     "title": "Trump says Google kisses his ass",
-     "url": "https://www.theverge.com/policy/1013485/trump-google-kiss-my-ass",
+     "outlet": "MacRumors",
+     "title": "iPhone Duo is Sold Out for Christmas as Shipping Estimates Slip to 2027",
+     "url": "https://www.macrumors.com/2026/10/16/iphone-duo-sold-out-for-christmas/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "houston weather",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Houston_Weathervane",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘I drunkenly sing Wonderwall off-key and awfully’: Rebecca Ferguson’s honest playlist",
+     "url": "https://www.theguardian.com/music/2026/oct/18/rebecca-ferguson-honest-playlist-whitney-houston-the-corrs",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "Katie Zacharia",
-   "signal": "Wikipedia 539,932 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
+   "topic": "strands hint today",
+   "signal": "Google Trends US 200+",
+   "wikipedia": null,
    "articles": [
     {
+     "outlet": "New York Times",
+     "title": "Strands Sidekick No. 961",
+     "url": "https://www.nytimes.com/2026/10/19/crosswords/strands-sidekick-961.html",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "meta",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Meta",
+   "articles": [
+    {
+     "outlet": "TechCrunch",
+     "title": "Meta removes language that raised scraping and AI training concerns",
+     "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+     "published": "2026-10-17"
+    },
+    {
      "outlet": "Guardian",
-     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
-     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
+     "title": "How to dress a tech oligarch: The Social Reckoning’s costume designer on Zuckerberg’s style evolution",
+     "url": "https://www.theguardian.com/fashion/2026/oct/16/social-reckoning-zuckerberg-fashion-costume-design",
      "published": "2026-10-16"
     }
    ]
   },
   {
    "topic": "Jailer 2",
-   "signal": "Wikipedia 341,183 views",
+   "signal": "Wikipedia 340,362 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": [
     {
@@ -315,41 +270,16 @@
    ]
   },
   {
-   "topic": "You Can See Everything",
-   "signal": "Wikipedia 221,438 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The pet I’ll never forget: Orlando was paralysed and almost died – then became the perfect guide dog",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/19/the-pet-ill-never-forget-orlando-was-paralysed-and-almost-died-then-became-the-perfect-guide-dog",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "The Six Things You Don’t See In ‘You Can See Everything’",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/you-can-see-everything-what-happens-holmes-billy-showtimes-1236735112/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
-     "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "A Comically On-The-Nose New Title Has Me Even More Excited For This Upcoming Tactics Game",
-     "url": "https://www.gamespot.com/articles/a-comically-on-the-nose-new-title-has-me-even-more-excited-for-this-upcoming-tactics-game/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
    "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 220,338 views",
+   "signal": "Wikipedia 258,023 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": [
+    {
+     "outlet": "BBC",
+     "title": "You Can See Everything documentary stuns with huge box office debut",
+     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
     {
      "outlet": "Guardian",
      "title": "Elizabeth Holmes documentary You Can See Everything debuts with huge $15m opening weekend",
@@ -365,8 +295,39 @@
    ]
   },
   {
+   "topic": "You Can See Everything",
+   "signal": "Wikipedia 239,333 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "You Can See Everything documentary stuns with huge box office debut",
+     "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Can countries deliver on a deal to save the world’s plants and animals?",
+     "url": "https://www.theguardian.com/environment/2026/oct/19/can-countries-deliver-on-a-deal-to-save-the-worlds-plants-and-animals",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "The Six Things You Don’t See In ‘You Can See Everything’",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/you-can-see-everything-what-happens-holmes-billy-showtimes-1236735112/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "TechCrunch",
+     "title": "Everyone’s watching the Elizabeth Holmes documentary ‘You Can See Everything’",
+     "url": "https://techcrunch.com/2026/10/18/everyones-watching-the-elizabeth-holmes-documentary-you-can-see-everything/",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
    "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 192,150 views",
+   "signal": "Wikipedia 181,850 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
    "articles": [
     {
@@ -374,6 +335,12 @@
      "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
      "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
      "published": "2026-10-19"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "Street Fighter’s best live-action movie yet is now free on streaming",
+     "url": "https://www.polygon.com/street-fighter-1994-streaming-free-tubi-pluto-tv/",
+     "published": "2026-10-15"
     },
     {
      "outlet": "IGN",
@@ -384,21 +351,27 @@
    ]
   },
   {
-   "topic": "Deva (composer)",
-   "signal": "Wikipedia 185,478 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deva_(composer)",
+   "topic": "Katie Zacharia",
+   "signal": "Wikipedia 136,231 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "RLPO/Hickox review – a made-to-measure clarinet collaboration two decades in the pipeline",
-     "url": "https://www.theguardian.com/music/2026/oct/18/royal-liverpool-philharmonic-orchestra-rlpo-adam-hickox-review-philharmonic-hall-liverpool-mark-simpson-gavin-higgins-britten-stravinsky",
-     "published": "2026-10-18"
+     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
+     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
+     "published": "2026-10-16"
+    },
+    {
+     "outlet": "AP",
+     "title": "Embattled White House press secretary Katie Zacharia is leaving the job after less than a week",
+     "url": "https://apnews.com/article/trump-katie-zacharia-press-secretary-c40a8c276f5e2a9d71685a5daba94731",
+     "published": "2026-10-16"
     }
    ]
   },
   {
    "topic": "Deaths in 2026",
-   "signal": "Wikipedia 119,712 views",
+   "signal": "Wikipedia 123,878 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
    "articles": [
     {
@@ -417,7 +390,7 @@
   },
   {
    "topic": "Crystal Lake (TV series)",
-   "signal": "Wikipedia 119,548 views",
+   "signal": "Wikipedia 103,624 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Crystal_Lake_(TV_series)",
    "articles": [
     {
@@ -431,18 +404,37 @@
      "title": "Jason Voorhees' origin revealed after 46 years in 'Crystal Lake' – Twist explained",
      "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/16/crystal-lake-explainer-friday-the-13th-jason-voorhees-origin/92240505007/",
      "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "Love of Your Life (film)",
+   "signal": "Wikipedia 97,766 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Love_of_Your_Life_(film)",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Vampire Carnival review – it’s Twilight at the fairground as abs run wild in pointy-toothed tug of war",
+     "url": "https://www.theguardian.com/film/2026/oct/19/vampire-carnival-review-twilight-fairground",
+     "published": "2026-10-19"
     },
     {
-     "outlet": "IGN",
-     "title": "Crystal Lake Review",
-     "url": "https://www.ign.com/articles/crystal-lake-review",
-     "published": "2026-10-13"
+     "outlet": "The Hollywood Reporter",
+     "title": "“Less Red Carpet, More Love of Cinema”: The Warsaw Int’l Film Festival Wants to Be a Destination for Discovery",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/warsaw-film-festival-wiff-focus-on-cinema-love-discovery-1236733189/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
+     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
+     "published": "2026-10-16"
     }
    ]
   },
   {
    "topic": "Grand Theft Auto VI Launch Trailer",
-   "signal": "YouTube GB 501,560/h",
+   "signal": "YouTube GB 497,968/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
    "articles": [
     {
@@ -455,7 +447,7 @@
   },
   {
    "topic": "K/DA",
-   "signal": "YouTube GB 451,293/h",
+   "signal": "YouTube GB 439,317/h",
    "wikipedia": "https://en.wikipedia.org/wiki/K/DA",
    "articles": [
     {
@@ -474,7 +466,7 @@
   },
   {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 328,190/h",
+   "signal": "YouTube GB 317,978/h",
    "wikipedia": null,
    "articles": [
     {
@@ -493,7 +485,7 @@
   },
   {
    "topic": "KAALI HOODIE",
-   "signal": "YouTube GB 198,262/h",
+   "signal": "YouTube GB 196,647/h",
    "wikipedia": null,
    "articles": [
     {
@@ -505,27 +497,8 @@
    ]
   },
   {
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB 162,006/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
-     "url": "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "published": "2026-10-14"
-    }
-   ]
-  },
-  {
    "topic": "Something Is Hunting My Dogs...",
-   "signal": "YouTube GB-gaming 101,630/h",
+   "signal": "YouTube GB-gaming 98,846/h",
    "wikipedia": null,
    "articles": [
     {
@@ -543,44 +516,101 @@
    ]
   },
   {
-   "topic": "samie elishi",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Samie_Elishi",
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 160,778/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "url": "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "published": "2026-10-16"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 77,927/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Victoria’s Secret Fashion Show: See Red Carpet and Backstage Photos of Models, Megan Thee Stallion and Kobe Bryant’s Daughter",
+     "url": "https://www.hollywoodreporter.com/gallery/victorias-secret-fashion-show-2026-red-carpet-backstage-photos-models-1236735003/",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "Zara Larsson",
+   "signal": "YouTube GB-music 50,916/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "The Year Zara Larsson Unlocked Pop Superstardom",
+     "url": "https://www.nytimes.com/2026/10/16/arts/music/zara-larsson-popcast-interview.html",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Zara Larsson Transforms Into a Fairy, a Mermaid, and More in ‘Blue Moon’ Video",
+     "url": "https://www.rollingstone.com/music/music-news/zara-larsson-blue-moon-video-1235643152/",
+     "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "little stonham",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Little_Stonham",
    "articles": []
   },
   {
-   "topic": "yahoo mail uk",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Yahoo_mail_beta",
+   "topic": "nuggets",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nuggets",
    "articles": []
   },
   {
-   "topic": "Ying",
-   "signal": "Wikipedia 886,855 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ying",
+   "topic": "day light savings",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Daylight_saving_time",
+   "articles": []
+  },
+  {
+   "topic": "WrestleDream (2026)",
+   "signal": "Wikipedia 140,072 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/WrestleDream_(2026)",
+   "articles": []
+  },
+  {
+   "topic": "Bear Bachmeier",
+   "signal": "Wikipedia 124,883 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bear_Bachmeier",
    "articles": []
   },
   {
    "topic": "Kaviya Maran",
-   "signal": "Wikipedia 179,926 views",
+   "signal": "Wikipedia 114,477 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Kaviya_Maran",
    "articles": []
   },
   {
-   "topic": "Karoline Leavitt",
-   "signal": "Wikipedia 122,749 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Karoline_Leavitt",
-   "articles": []
-  },
-  {
-   "topic": "Anirudh Ravichander",
-   "signal": "Wikipedia 120,021 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Anirudh_Ravichander",
+   "topic": "Abdul El-Sayed",
+   "signal": "Wikipedia 97,773 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
    "articles": []
   },
   {
    "topic": "Anuel AA",
-   "signal": "YouTube US-music 89,924/h",
+   "signal": "YouTube US-music 89,601/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }

@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-19T10:39+00:00",
- "mode": "hourly",
+ "updated": "2026-10-19T10:58+00:00",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-19T10:20+00:00",
+ "full_updated": "2026-10-19T10:58+00:00",
  "youtube": {
   "subscribers": 5,
   "public_shorts": 31,
-  "views_all_time": 4707,
+  "views_all_time": 4723,
   "views_last_90_days": 225,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 2056,
+  "views_last_90_days_estimate": 2063,
   "analytics_last_day": "2026-10-16"
  },
  "instagram": {
@@ -32,5 +32,8 @@
   "views_pct": 0.02,
   "views_needed_per_day": 111088,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
- }
+ },
+ "audience_errors": [
+  "videos in ES: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
+ ]
 }

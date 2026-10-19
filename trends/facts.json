@@ -1,179 +1,91 @@
 {
  "date": "2026-10-19",
- "built": "2026-10-19T10:20+00:00",
+ "built": "2026-10-19T10:58+00:00",
  "model": "gemini-flash-latest",
  "errors": [
-  "Manchester City's perfect start to the season: gemini-2.5-flash: not found",
-  "I'm a Celebrity 2026: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)",
-  "betty mcguire: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)",
-  "bbc ni news: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=180)"
+  "Street Fighter (2026 film): gemini-flash-latest: 429 {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information o"
  ],
  "topics": [
   {
-   "n": 9,
-   "topic": "gael monfils",
-   "signal": "Google Trends GB 200+",
-   "what_is_new": "Elina Svitolina and Gael Monfils have announced their separation after five years of marriage.",
-   "hooks": [
-    "Gael Monfils and Elina Svitolina have announced their separation.",
-    "Gael Monfils retired from professional tennis in 2026.",
-    "In 2025 Gael Monfils became the oldest ATP Tour champion."
-   ],
-   "sources": [
-    [
-     "Svitolina announces 'difficult' separation from husband Monfils",
-     "https://www.skysports.com/tennis/news/12040/13600883/elina-svitolina-announces-difficult-separation-from-husband-gael-monfils-after-five-years-of-marriage",
-     "Sky Sports",
-     "2026-10-19"
-    ],
-    [
-     "Tennis power couple Elina Svitolina and Gael Monfils to divorce",
-     "https://www.telegraph.co.uk/tennis/2026/10/19/tennis-power-couple-svitolina-and-monfils-to-divorce/",
-     "The Telegraph",
-     "2026-10-18"
-    ],
-    [
-     "gael monfils",
-     "https://en.wikipedia.org/wiki/Gael_Monfils",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Elina Svitolina and Gael Monfils announced their separation after five years of marriage.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Elina Svitolina and Gael Monfils have announced their separation; The tennis players married in 2021 and have a four-year-old daughter; Watch the Japan Open all"
-     }
-    },
-    {
-     "claim": "Gael Monfils and Elina Svitolina married in 2021 and share a four year old daughter named Skai.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Svitolina - a four-time grand slam semi-finalist - and French former world No 6 Monfils, 40, married in 2021 and have a four-year-old daughter, Skai."
-     }
-    },
-    {
-     "claim": "A few months ago Svitolina and Monfils reached the semi finals of the US Open Mixed Doubles Championship.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Only a few months ago Svitolina and Monfils had joined forces to reach the semi-finals of the US Open Mixed Doubles Championship."
-     }
-    },
-    {
-     "claim": "In 2025 Monfils became the oldest ATP Tour champion since the founding of the Tour in 1990.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In 2025, Monfils became the oldest ATP Tour champion since the Tour's establishment in 1990.[7][8]"
-     }
-    },
-    {
-     "claim": "Monfils retired from professional tennis in 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He retired from the sport in 2026."
-     }
-    },
-    {
-     "claim": "Monfils attained a career high singles ranking of world No 6 in November 2016.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He was ranked as high as world No. 6 by the Association of Tennis Professionals (ATP), achieved in November 2016."
-     }
-    },
-    {
-     "claim": "Monfils secured 13 ATP Tour singles titles from 35 contested finals.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Monfils won 13 ATP Tour singles titles, out of 35 finals contested."
-     }
-    },
-    {
-     "claim": "Monfils reached at least one ATP Tour singles final each year for 19 consecutive seasons from 2005 to 2023.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He reached at least one ATP Tour singles final every year for 19 consecutive seasons from 2005 to 2023,[6] and is one of five players"
-     }
-    },
-    {
-     "claim": "Monfils was named the ATP Newcomer of the Year in 2005.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Monfils was named the ATP Newcomer of the Year in 2005."
-     }
-    },
-    {
-     "claim": "Monfils was born on 1 September 1986 in Paris.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Gaël Sébastien Monfils[9] was born on 1 September 1986[10] in Paris, where he was raised.[11]"
-     }
-    },
-    {
-     "claim": "Monfils officially turned professional in 2004 at 17 years of age.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Monfils officially turned pro in 2004 at the age of 17."
-     }
-    }
-   ]
-  },
-  {
-   "n": 10,
-   "topic": "bbc ni",
-   "signal": "Google Trends GB 200+",
+   "n": 1,
+   "topic": "Manchester City's perfect start to the season",
+   "signal": "Charlie's request",
+   "category": "Sport",
    "what_is_new": "",
-   "hooks": [
-    "The BBC Nine O'Clock News ran for thirty years until October 2000.",
-    "The final BBC Nine O'Clock News bulletin was broadcast on 13 October 2000.",
-    "The Nine O'Clock News was the first bulletin with closing music."
-   ],
+   "hooks": [],
    "sources": [
     [
-     "Tourists are avoiding York, my home town – but I know how to get them back",
-     "https://www.theguardian.com/commentisfree/2026/oct/19/tourists-york",
+     "Premier League: 10 talking points from the weekend’s action",
+     "https://www.theguardian.com/football/2026/oct/19/premier-league-10-talking-points-from-the-weekends-action",
      "Guardian",
      "2026-10-19"
     ],
     [
-     "‘Tall Tales & Murder’ Scores New International Deals As Season 2 Takes Shape",
-     "https://deadline.com/2026/10/tall-tales-and-murder-international-season-2-chris-addison-1237167375/",
+     "Do Manchester City have any grounds to win their appeal?",
+     "https://www.bbc.co.uk/sport/football/articles/c6je5lwxk5l0o?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-18"
+    ]
+   ],
+   "verified": [],
+   "one_source": []
+  },
+  {
+   "n": 3,
+   "topic": "I'm a Celebrity 2026",
+   "signal": "Charlie's request",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "BBC Denies ‘Celebrity Traitors’ Contender James Acaster Complained Over Competitors’ ‘Macho Banter’: ‘Categorically Untrue’",
+     "https://variety.com/2026/tv/global/bbc-celebrity-traitors-james-acaster-complaint-1236916280/",
+     "Variety",
+     "2026-10-19"
+    ],
+    [
+     "‘The Celebrity Traitors’: BBC Says It’s “Categorically Untrue” James Acaster Made Complaint About Co-Stars’ “Macho Banter”",
+     "https://deadline.com/2026/10/the-celebrity-traitors-bbc-denies-james-acaster-complaint-1237167366/",
      "Deadline",
      "2026-10-19"
     ],
     [
-     "Beer & Blackpool beach was how British players bonded - Pulis",
-     "https://www.bbc.co.uk/sport/football/articles/cjr4yndrz1kro?at_medium=RSS&at_campaign=rss",
+     "Miranda's tears, joy and dance moves steal show as deadly boredom sets in on The Celebrity Traitors",
+     "https://www.bbc.co.uk/news/articles/cq70pre80gwko?at_medium=RSS&at_campaign=rss",
      "BBC",
-     "2026-10-19"
+     "2026-10-17"
     ],
     [
-     "bbc ni",
-     "https://en.wikipedia.org/wiki/BBC_Nine_O%27Clock_News",
+     "Game, set and tache: Carlos Alcaraz joins growing trend for a stylish top lip",
+     "https://www.theguardian.com/fashion/2026/oct/16/game-set-tache-carlos-alcarez-growing-trend-stylish-top-lip",
+     "Guardian",
+     "2026-10-16"
+    ]
+   ],
+   "verified": [],
+   "one_source": []
+  },
+  {
+   "n": 24,
+   "topic": "K/DA",
+   "signal": "YouTube GB 439,317/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Pop/Stars reached 643 million views as of September 2025.",
+    "Logitech released official gaming gear inspired by the band K/DA."
+   ],
+   "sources": [
+    [
+     "Logitech made official gaming gear for 'League of Legends' band K/DA",
+     "https://www.engadget.com/logitech-g-k-da-league-of-legends-k-pop-152556467.html",
+     "Engadget",
+     "2020-10-30"
+    ],
+    [
+     "K/DA",
+     "https://en.wikipedia.org/wiki/K/DA",
      "Wikipedia",
      ""
     ]
@@ -181,184 +93,299 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Following a relaunch on 10 May 1999, the programme shared a common theme and set with its daytime counterparts.",
+     "claim": "Logitech announced a line of official gaming accessories in partnership with Riot inspired by the League of Legends band K/DA.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "A more comprehensive relaunch of all the BBC News output came on 10 May 1999, after which this programme shared a common theme and set"
+      "1": "Logitech made official gaming gear for 'League of Legends' band K/DA"
      }
     },
     {
-     "claim": "Martyn Lewis and Peter Sissons swapped jobs in 1994, with Lewis becoming a main presenter of the Six O'Clock News while Sissons joined Buerk on rotation for the Nine O'Clock News.",
+     "claim": "In 2022 Pop/Stars received a platinum certification from the Recording Industry Association of America.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "Lewis and Peter Sissons swapped jobs in 1994, Lewis becoming a main presenter of the Six O'Clock News while Sissons joined Buerk on rotation for"
-     }
-    },
-    {
-     "claim": "In September 1981, the Nine O'Clock News had a wooden effect while other bulletins used a plain blue background instead.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The set used by the bulletin was designed to differentiate from the day's bulletins; an example of this was in September 1981, where the Nine"
-     }
-    },
-    {
-     "claim": "Between 13 November 1972 to 5 March 1976 the programme had two presenters.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Between 13 November 1972 to 5 March 1976 the programme had two presenters."
-     }
-    },
-    {
-     "claim": "The first week of the television bulletin was presented by Robert Dougall, followed by Richard Baker and Kenneth Kendall, each presenting five consecutive nightly bulletins.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The first week of the TV bulletin was presented by Robert Dougall, followed by Richard Baker and Kenneth Kendall, each presenting five consecutive nightly bulletins."
-     }
-    },
-    {
-     "claim": "The Nine O'Clock News was the first bulletin to have a closing set of music.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The Nine O'Clock News was the first bulletin to have a closing set of music; other bulletins would show weather forecasts at the end instead."
-     }
-    },
-    {
-     "claim": "The BBC Nine O'Clock News was first broadcast on 14 September 1970 and ran until 13 October 2000.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "It was first broadcast on 14 September 1970 and ran until 13 October 2000, when it was replaced by the BBC Ten O'Clock News (later"
-     }
-    },
-    {
-     "claim": "The programme was broadcast on BBC One and inspired the BBC Two comedy show Not the Nine O'Clock News.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The programme was broadcast on BBC One and inspired a BBC Two comedy show running in the same time slot, Not the Nine O'Clock News."
+      "2": "In 2022, \"Pop/Stars\" was certified platinum by the Recording Industry Association of America (RIAA), making K/DA and I-dle the first K-pop girl groups in history"
      }
     }
    ]
   },
   {
-   "n": 11,
-   "topic": "belfast live",
-   "signal": "Google Trends GB 1000+",
-   "what_is_new": "Reigning champion Jack Lisowski progressed in the Northern Ireland Open in Belfast while Mark Selby suffered a shock exit.",
+   "n": 28,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 160,778/h",
+   "category": "Music",
+   "what_is_new": "",
    "hooks": [
-    "Jack Lisowski launched his Northern Ireland Open title defence in Belfast.",
-    "Mark Selby crashed out of the Northern Ireland Open in Belfast.",
-    "Did you know Belfast Live was launched by Trinity Mirror?"
+    "Olivia Rodrigo joined forces with Chappell Roan on an Expectations remix.",
+    "Olivia Rodrigo's third studio album reached number 1 on the Billboard 200.",
+    "David Byrne makes a surprise cameo in Olivia Rodrigo's new music video."
    ],
    "sources": [
     [
-     "Selby out but Lisowski advances in NI Open defence",
-     "https://www.bbc.co.uk/sport/snooker/articles/c9e8l765gdmyo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-18"
+     "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "Rolling Stone",
+     "2026-10-16"
     ],
     [
-     "belfast live",
-     "https://en.wikipedia.org/wiki/Belfast_Live",
+     "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "Billboard",
+     "2026-10-14"
+    ],
+    [
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Olivia Rodrigo collaborated with Chappell Roan on a remix of the song Expectations.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Olivia Rodrigo’s new music video for her “Expectations” remix with Chappell Roan is full of fun cameos, including David Byrne as a game-show host and",
+      "2": "Chappell Roan seemingly had one goal when joining forces with Olivia Rodrigo for an “Expectations” remix, and that was to spice things up in her"
+     }
+    },
+    {
+     "claim": "Dan Nigro has worked with Olivia Rodrigo as a producer.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Olivia Rodrigo’s new music video for her “Expectations” remix with Chappell Roan is full of fun cameos, including David Byrne as a game-show host and",
+      "3": "On January 8, 2021, she released her debut single, \"Drivers License\", which she co-wrote with producer Dan Nigro."
+     }
+    },
+    {
+     "claim": "Olivia Rodrigo's third studio album is titled You Seem Pretty Sad for a Girl So in Love.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The track is part of Rodrigo’s third studio album, You Seem Pretty Sad for a Girl So in Love, which debuted at No. 1 on",
+      "3": "Her next two studio albums, Guts (2023) and You Seem Pretty Sad for a Girl So in Love (2026), produced the US number-one singles \"Vampire\""
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Jack Lisowski began his defence of the Northern Ireland Open with a win over Huang Jiahao in Belfast while Mark Selby made a surprise exit.",
+     "claim": "The music video for the Expectations remix features cameos by David Byrne and producer Dan Nigro.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Reigning champion Jack Lisowski began his defence of the Northern Ireland Open with a 4-1 victory over Huang Jiahao in Belfast, but Mark Selby made"
+      "1": "Olivia Rodrigo’s new music video for her “Expectations” remix with Chappell Roan is full of fun cameos, including David Byrne as a game-show host and"
      }
     },
     {
-     "claim": "Lisowski won his first ranking title at the tournament last year and raced into a lead at the Waterfront Hall at age 35.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Lisowski, 35, won his first ranking title at the tournament last year and raced into a three-frame lead over his Chinese opponent at the Waterfront"
-     }
-    },
-    {
-     "claim": "Mark Selby has already won the China Open this year but dropped four straight frames to exit.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The world number five, who has already won the China Open this year, led 2-0 but dropped four straight frames to exit."
-     }
-    },
-    {
-     "claim": "Anthony McGill will face Jack Lisowski in round two after enjoying a victory over Stephen Maguire.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He will now face Scotland's Anthony McGill, who enjoyed a 4-1 victory of his own over Stephen Maguire, in round two."
-     }
-    },
-    {
-     "claim": "Trinity Mirror launched two new websites named Dublin Live and Belfast Live.",
+     "claim": "Expectations debuted at number 20 on the Billboard Hot 100 in June 2026.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "It also recently launched two new websites, Dublin Live and Belfast Live."
+      "2": "“Expectations” has already had its individual moment on the charts, debuting at No. 20 on the Billboard Hot 100 in June 2026."
+     }
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "simpsons apu",
+   "signal": "Google Trends GB 500+",
+   "category": "Film",
+   "what_is_new": "Apu Nahasapeemapetilon spoke on The Simpsons for the first time in nearly a decade on Sunday 18 October 2026, with Sunil Malhotra taking over the voice role.",
+   "hooks": [
+    "Apu has finally returned to The Simpsons after nine silent years.",
+    "Sunil Malhotra is the brand new voice of Springfield icon Apu.",
+    "Apu makes an unexpected Halloween comeback with a brand new voice actor."
+   ],
+   "sources": [
+    [
+     "Apu speaks again on ‘The Simpsons’ after nine years of silence, new voice actor replaces Hank Azaria",
+     "https://www.nme.com/news/tv/apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra-3973488?utm_source=rss&utm_medium=rss&utm_campaign=apu-the-simpsons-new-voice-actor-hank-azaria-sunil-malhotra",
+     "NME",
+     "2026-10-19"
+    ],
+    [
+     "Apu is Back! Veteran Voice Actor Sunil Malhotra Revives ‘The Simpsons’ Character After Nearly 10 Years",
+     "https://www.hollywoodreporter.com/tv/tv-news/apu-sunil-malhotra-rthe-simpsons-hank-azaria-1236735125/",
+     "The Hollywood Reporter",
+     "2026-10-19"
+    ],
+    [
+     "9 Years Later, The Simpsons' Controversial Character Officially Returns",
+     "https://www.polygon.com/the-simpsons-apu-returns-sunil-malhotra-hank-azaria/",
+     "Polygon",
+     "2026-10-19"
+    ],
+    [
+     "‘The Simpsons’ Debuts New Voice for Apu After Nine Years of Silence",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/the-simpsons-apu-sunil-malhotra-new-voice-hank-azaria-1235644520/",
+     "Rolling Stone",
+     "2026-10-19"
+    ],
+    [
+     "simpsons apu",
+     "https://en.wikipedia.org/wiki/The_Simpsons/Apu_Nahasapeemapetilon",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sunil Malhotra has taken over the role of voicing Apu Nahasapeemapetilon from Hank Azaria.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Apu is now voiced by Sunil Malhotra while Apu’s wife Manjula is played by Janina Gavankar.",
+      "2": "Malhotra takes over the role from Hank Azaria, the legendary Simpsons voice actor who voices many of the show’s characters including Moe Szyslak, Chief Wiggum,",
+      "3": "Sunil Malhotra (The Legend of Vox Machina, Grey's Anatomy) is the new voice of Apu.",
+      "4": "Apu appeared in “The Revengening” with Sunil Malhotra taking over for Hank Azaria, who voiced Apu in the past.",
+      "5": "After his departure, the character would appear occasionally in the show in non-speaking appearances until 2026, when Apu had dialogue in the \"Treehouse of Horror"
      }
     },
     {
-     "claim": "Reach plc was known as Trinity Mirror plc before 2018.",
+     "claim": "Apu made his speaking return in the episode The Revengening.",
      "sources": [
-      2
+      1,
+      2,
+      3,
+      4,
+      5
      ],
      "evidence": {
-      "2": "Before 2018, Reach plc was known as Trinity Mirror plc.[1]"
+      "1": "The Halloween special The Revengening sees a masked figure take revenge on the people of Springfield before revealing himself as Apu.",
+      "2": "Apu made his comeback in the season 38 episode, “Treehouse of Horror Presents: The Revengening” that aired on Sunday.",
+      "3": "On Oct. 18, 2026, in the season 38 episode \"The Revengening,\" Apu officially returned to The Simpsons with a new voice actor.",
+      "4": "Apu appeared in “The Revengening” with Sunil Malhotra taking over for Hank Azaria, who voiced Apu in the past.",
+      "5": "After his departure, the character would appear occasionally in the show in non-speaking appearances until 2026, when Apu had dialogue in the \"Treehouse of Horror"
      }
     },
     {
-     "claim": "Trinity Mirror employed just under 100 people between its offices in Dublin and Belfast.",
+     "claim": "Hank Azaria previously decided to stop voicing Apu following Hari Kondabolu's 2017 documentary The Problem with Apu.",
      "sources": [
-      2
+      1,
+      2,
+      3,
+      4,
+      5
      ],
      "evidence": {
-      "2": "UK-based Trinity Mirror publishes the Irish Daily Mirror, Sunday Mirror and People newspapers and employs just under 100 people between its offices in Dublin and"
+      "1": "He went on to play the character for 29 seasons until 2017 documentary The Problem With Apu explored the racist stereotypes behind the portrayal.",
+      "2": "The long-simmering controversy culiminated in Hari Kondabolu’s one-hour documentary The Problem With Apu in 2017.",
+      "3": "The Apu controversy began in 2017 with Indian American comedian Hari Kondabolu's documentary The Problem With Apu, which argued that the character's stereotypical portrayal had",
+      "4": "Apu was the subject of 2017 documentary The Problem With Apu, in which comedian Hari Kondabolu discussed the impact the character on people of South",
+      "5": "Hari Kondabolu's documentary The Problem with Apu, released in 2017, criticized the character as a South Asian stereotype."
      }
     },
     {
-     "claim": "Reach previously owned a 43% share of The Independent.",
+     "claim": "Apu made his last speaking appearance before the hiatus in the 2017 episode The Serfsons.",
      "sources": [
-      2
+      1,
+      2,
+      4
      ],
      "evidence": {
-      "2": "It used to own a 43% share of The Independent."
+      "1": "During last night’s episode of The Simpsons, Apu returned in a speaking role for the first time since 2017’s The Serfsons.",
+      "2": "Apu made his last speaking appearance in The Simpsons in the season 29 episode “The Serfsons,” which aired in October 2017.",
+      "4": "The character has been but not heard on since the October 2017 episode “The Serfsons” and his new voice was a surprise for fans as"
      }
     },
     {
-     "claim": "Reach owned the News Letter, Donegal Democrat and Derry Journal until late 2003.",
+     "claim": "Hank Azaria officially confirmed in 2020 that he would no longer voice the character.",
      "sources": [
-      2
+      1,
+      2,
+      3,
+      4,
+      5
      ],
      "evidence": {
-      "2": "It owned the News Letter, Donegal Democrat and Derry Journal until late 2003 when they were sold to the newly formed Local Press Ltd which"
+      "1": "Apu disappeared into the background after that and in 2020, Azaria confirmed he’d no longer be voicing the character.",
+      "2": "Though he hadn’t voiced Apu since 2017, Azaria officially confirmed he had withdrawn himself from the role in February 2020.",
+      "3": "In January 2020, Hank Azaria stepped down from voicing one of the most iconic characters on The Simpsons, Kwik-E-Mart owner Apu Nahasapeemapetilon.",
+      "4": "In 2020, Azaria announced he would no longer voice Apu.",
+      "5": "In response to this, Azaria announced in early 2020 that he and the series' producers had agreed that he would resign from the role as"
+     }
+    },
+    {
+     "claim": "Janina Gavankar now voices Apu's wife Manjula.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "Apu is now voiced by Sunil Malhotra while Apu’s wife Manjula is played by Janina Gavankar.",
+      "3": "At the end of the episode, Apu wakes up in the Kwik-E-Mart next to his wife, Manjula, now voiced by Janina Gavankar (The Morning Show),",
+      "4": "The episode also revealed Janina Gavankar as a new voice for Apu’s wife Majula."
+     }
+    },
+    {
+     "claim": "Apu first appeared in the episode The Telltale Head.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "Apu was first introduced in 1997 during the episode The Telltale Head, where the Kwik-E-Mart was voiced by Hank Azaria.",
+      "5": "He was voiced by Hank Azaria from 1990 to 2017, and first appeared in the episode \"The Telltale Head\"."
+     }
+    },
+    {
+     "claim": "Sunil Malhotra stated he would only consider the offer if he could meet showrunner Matt Selman and co executive producer Cesar Mazariegos.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "“I told casting that I’d only consider an offer if I could meet showrunner Matt Selman and co-executive producer Cesar Mazariegos, both of whom gladly",
+      "4": "He added that he didn’t want “to be the butt of the joke” and said he would only consider the role if he could meet"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "In the comeback episode, a mysterious character called Daft Monk reveals himself as Apu after being accidentally nearly killed repeatedly by Springfield residents.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "A mysterious character called Daft Monk is accidentally nearly killed repeatedly by the citizens of Springfield."
+     }
+    },
+    {
+     "claim": "Apu holds a doctorate from the Springfield Heights Institute of Technology after graduating first in his class at the Calcutta Technical Institute.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "He graduated first in his class of seven million at 'Caltech' – Calcutta Technical Institute – going on to earn his doctorate at the Springfield"
+     }
+    },
+    {
+     "claim": "In 1985, Apu joined Homer Simpson, Barney Gumble and Principal Seymour Skinner in the barbershop quartet The Be Sharps.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "In 1985, Apu was a member of the barbershop quartet The Be Sharps, along with Homer Simpson, Barney Gumble, and Principal Seymour Skinner."
      }
     }
    ]

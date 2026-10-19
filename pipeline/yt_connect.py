@@ -2,7 +2,7 @@
 Uploads keep using the original sign-in (the YT_REFRESH_TOKEN secret); this one is stored encrypted in tokens/youtube.enc.
 
   python pipeline/yt_connect.py link       writes the sign-in link to status/youtube_connect.json (the client id is public)
-  python pipeline/yt_connect.py exchange   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
+  python pipeline/yt_connect.py exchange [main|es|pt]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
                                            refresh token and saves it; the result goes to status/youtube_connect.json
 """
 import datetime as dt, json, os, pathlib, sys, urllib.parse
@@ -17,16 +17,17 @@ SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl", "https://www.goog
 REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html"   # must be an authorised redirect URI
 # on the OAuth client (Google Cloud, Clients); the page shows the one-time code to paste into the social workflow
 OUT = ROOT / "status" / "youtube_connect.json"
+MAIN = "UC-75vkMtOxgFFkXwBNfBOeg"     # Quickplay Daily, the original channel
 
 def now(): return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
-def write(d):
+def write(d, out=OUT):
     """Writes the status, keeping the last code swap's result (so an error isn't wiped by the hourly link refresh)."""
-    OUT.parent.mkdir(exist_ok=True)
-    old = json.loads(OUT.read_text()) if OUT.exists() else {}
+    out.parent.mkdir(exist_ok=True)
+    old = json.loads(out.read_text()) if out.exists() else {}
     if "last_exchange" not in d and old.get("last_exchange"): d["last_exchange"] = old["last_exchange"]
     if {k: v for k, v in old.items() if k != "at"} != d:
-        OUT.write_text(json.dumps({"at": now(), **d}, indent=1, ensure_ascii=False))
+        out.write_text(json.dumps({"at": now(), **d}, indent=1, ensure_ascii=False))
 
 def connected(t):
     d = {"ok": True, "connected": True, "scopes": t.get("scope"), "saved": t.get("saved")}
@@ -43,7 +44,9 @@ def link():
          "access_type": "offline", "prompt": "consent", "include_granted_scopes": "true", "state": "quickplay"}
     write({"ok": False, "connected": False, "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)})
 
-def exchange():
+def exchange(ch="main"):
+    """ch: main, or a language channel (es, pt), whose sign-in is saved as tokens/youtube_<ch>.enc."""
+    name, out = ("youtube", OUT) if ch == "main" else (f"youtube_{ch}", OUT.with_name(f"youtube_connect_{ch}.json"))
     raw = os.environ.get("YT_CODE", "").strip()
     code = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("code", [raw])[0] if "code=" in raw else raw
     resp = requests.post("https://oauth2.googleapis.com/token", timeout=30, data={
@@ -55,13 +58,24 @@ def exchange():
         res = {"at": now(), "ok": False, "http": resp.status_code, "error": r.get("error") or "no refresh token in the reply",
                "description": str(r.get("error_description", ""))[:300], "code_chars": len(code)}
         print("YouTube sign-in failed:", json.dumps(res))
-        write({"ok": False, "connected": False, "last_exchange": res}); return
+        write({"ok": False, "connected": False, "last_exchange": res}, out); return
     tok = {"refresh_token": r["refresh_token"], "scope": r.get("scope"), "saved": now()}
+    try:        # the channel Charlie picked (Google asks which one when the account has several)
+        c = requests.get("https://www.googleapis.com/youtube/v3/channels", params={"part": "snippet", "mine": "true"}, timeout=30,
+                         headers={"Authorization": f"Bearer {r.get('access_token')}"}).json()["items"][0]
+        tok["channel"] = {"id": c["id"], "title": c["snippet"]["title"]}
+    except Exception as e:
+        tok["channel"] = {"error": str(e)[:150]}
+    if (tok["channel"].get("id") == MAIN) != (ch == "main"):     # one channel's sign-in never replaces another's
+        res = {"at": now(), "ok": False, "error": f"this sign-in is for {tok['channel'].get('title') or 'an unknown channel'}, not the "
+               f"{ch} channel: sign in again and pick the right channel"}
+        print("YouTube sign-in refused:", json.dumps(res, ensure_ascii=False))
+        write({"ok": False, "connected": False, "last_exchange": res}, out); return
     if r.get("refresh_token_expires_in"):
         tok["expires_at"] = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(seconds=int(r["refresh_token_expires_in"]))).isoformat(timespec="minutes")
-    social.save("youtube", tok)
+    social.save(name, tok)
     print("YouTube sign-in saved; scopes:", r.get("scope"), "; expires:", tok.get("expires_at", "no"))
-    write({**connected(tok), "last_exchange": {"at": tok["saved"], "ok": True}})
+    write({**connected(tok), "channel": tok["channel"], "last_exchange": {"at": tok["saved"], "ok": True}}, out)
 
 if __name__ == "__main__":
-    {"link": link, "exchange": exchange}[sys.argv[1]]()
+    {"link": link, "exchange": exchange}[sys.argv[1]](*sys.argv[2:3])

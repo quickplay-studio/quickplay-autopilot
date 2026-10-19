@@ -24,6 +24,8 @@
  },
  "first_id": 29,
  "approval": "none",
+ "languages": {"es": {"channel": "Quickplay Daily Español", "voice": "default"}, "pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
+ "languages_note": "Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
  "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (07:30 to 22:50 every 40 minutes until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "tiktok_mode": "off",

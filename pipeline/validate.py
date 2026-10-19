@@ -106,7 +106,8 @@ def check(b, path=None):
             else:
                 for d, v in lk.items():
                     if d not in cat: e.append(f"look.{d}: one of {sorted(cat)}")
-                    elif v not in cat[d]["options"] or cat[d]["options"][v].get("retired"):
+                    elif v not in cat[d]["options"] or (cat[d]["options"][v].get("retired") and b.get("mode") != "none"):
+                        # a render-only test board may try an option that is held back until its test passes
                         e.append(f"look.{d}: one of {sorted(k for k, o in cat[d]['options'].items() if not o.get('retired'))}")
         except (OSError, ValueError, KeyError): pass
     if m.get("comment") and (len(str(m["comment"])) > 100 or "http" in str(m["comment"])): e.append("meta.comment: under 100 characters, no links")

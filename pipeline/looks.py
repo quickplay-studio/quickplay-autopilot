@@ -10,11 +10,24 @@ import json, math, pathlib, random, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CAT = ROOT / "templates" / "looks.json"
 STATS = ROOT / "analytics" / "looks.json"
+LAB = ROOT / "analytics" / "lab_looks.json"     # the look lab's new options and retirements (lab.py)
 EXPLORE = 0.12          # chance per dimension of a pure random pick, so nothing is written off on a few unlucky Shorts
 SPREAD = 0.35           # uncertainty of an option's score with no data; shrinks with every Short measured
 
-def catalogue():
-    return json.loads(CAT.read_text())
+def catalogue(lab=None):
+    """templates/looks.json plus the look lab's new options and retirements (analytics/lab_looks.json, see lab.py)."""
+    cat = json.loads(CAT.read_text())
+    if lab is None:
+        try: lab = json.loads(LAB.read_text())
+        except Exception: lab = {}
+    for dim, opts in (lab.get("options") or {}).items():
+        if dim in cat["dimensions"]:
+            for k, o in opts.items(): cat["dimensions"][dim]["options"].setdefault(k, dict(o))
+    for dim, gone in (lab.get("retired") or {}).items():
+        for k, why in gone.items():
+            o = cat["dimensions"].get(dim, {}).get("options", {}).get(k)
+            if o is not None and not o.get("retired"): o["retired"] = why
+    return cat
 
 def load_stats():
     try: return json.loads(STATS.read_text())
@@ -42,6 +55,7 @@ def choose(sid, recent=(), stats=None, cat=None):
             n = int(s.get("n") or 0)
             mean = float(s.get("score") or 1.0) if n else 1.0
             if n < 3: mean = max(mean, 1.08)         # try new options early
+            if cat["dimensions"][dim]["options"][k].get("lab") and n < 8: mean = max(mean, 1.12)   # the lab's new option, until it can be judged
             v = rng.gauss(mean, SPREAD / math.sqrt(n + 1))
             if v > top: best, top = k, v
         look[dim] = best
@@ -61,7 +75,7 @@ def resolve(ids=None, cat=None):
     for d in cat["dimensions"]:
         if ids.get(d) not in cat["dimensions"][d]["options"]: ids[d] = default(cat)[d]
     o = {d: cat["dimensions"][d]["options"][ids[d]] for d in cat["dimensions"]}
-    render = {"captions": ids["captions"], "group": o["captions"].get("group", 3),
+    render = {"captions": o["captions"].get("class", ids["captions"]), "cap": o["captions"].get("cap") or {}, "group": o["captions"].get("group", 3),
               "filter": o["grade"].get("filter", "none"), "vignette": o["grade"].get("vignette", 0),
               "motion": o["energy"].get("motion", 1.0), "punch": o["energy"].get("punch", 0.045),
               "beat_punches": bool(o["energy"].get("beat_punches")),

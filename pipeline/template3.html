@@ -100,6 +100,12 @@ body.lay-social #caps { top: 1110px; }
 body.lay-social.cap-clean #caps { top: 1150px; }
 body.lay-social.cap-pop #caps { top: 1060px; }
 body.lay-social.cap-minimal #caps { top: 1170px; }
+body.cap-lab #caps { top: var(--cap-top, 1290px); height: 230px; }      /* look lab (lab.py): settings come from the look */
+body.cap-lab .capbox { gap: 0 18px; max-width: 920px; background: var(--cap-box, transparent); border-radius: 28px; padding: var(--cap-pad, 0); }
+body.cap-lab .cw { font: var(--cap-weight, 700) var(--cap-size, 68px)/1.2 "Inter"; text-transform: none; -webkit-text-stroke: 0; letter-spacing: -0.4px;
+  color: #F5F8FA; text-shadow: 0 3px 14px rgba(0,0,0,.55); }
+body.cap-lab .cw.on { color: var(--cap-on, #FFFFFF); }
+body.lay-social.cap-lab #caps { top: calc(var(--cap-top, 1290px) - 120px); }
 body.lay-social .mi .mlab { margin-top: -120px; }
 body.lay-social .beat { right: 150px; top: 320px; height: 790px; }
 body.lay-social .cards, body.lay-social .bars { width: 860px; }
@@ -158,6 +164,7 @@ async function build(data) {
   document.documentElement.style.setProperty('--accent', D.accent);
   const LK = D.look || {};
   document.body.classList.add('cap-' + (LK.captions || 'punch'));
+  for (const [k, v] of Object.entries(LK.cap || {})) document.body.style.setProperty('--cap-' + k, String(v));
   if (D.layout === 'social') document.body.classList.add('lay-social');
   if (LK.filter && LK.filter !== 'none') document.getElementById('media').style.filter = LK.filter;
   document.getElementById('gvig').style.opacity = String(LK.vignette || 0);

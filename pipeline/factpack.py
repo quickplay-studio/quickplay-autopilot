@@ -97,7 +97,9 @@ def image_ideas(got):
     licence), and an official page's own share picture. News outlets' pictures are licensed, so never offered."""
     import fetch_media
     ideas = []
+    import html
     for s, txt, img in got:
+        img = html.unescape(img or "").split("?")[0]
         if not img: continue
         host = re.sub(r"^www\.", "", re.sub(r"^https?://([^/]+).*", r"\1", s["url"].lower()))
         if s["kind"] == "wikipedia":

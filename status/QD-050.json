@@ -72,10 +72,9 @@
    1
   ]
  ],
- "state": "awaiting approval",
+ "state": "rejected",
  "flags": [
   "dry run: always waits for approval, never uploaded"
  ],
- "preview_release": "preview-QD-050",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5535237f111c445cd9da"
+ "rejected": "2026-10-19T13:00:39+00:00"
 }

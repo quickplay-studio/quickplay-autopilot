@@ -16,28 +16,6 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-W1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 
-## Waiting for your approval
-
-Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
-
-### QD-048 · Lauren Hemp chases all-time WSL record ⚽
-awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-f7810e2ba50c67d2356c)
-- dry run: always waits for approval, never uploaded
-
-![QD-048](QD-048.jpg)
-
-### QD-049 · James Acaster Traitors rumour addressed 🤫
-awaiting approval · 23 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-65b5b3d6459115d7afa9)
-- dry run: always waits for approval, never uploaded
-
-![QD-049](QD-049.jpg)
-
-### QD-050 · The Celebrity Traitors: BBC denies cast complaint 🏰
-awaiting approval · 28 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5535237f111c445cd9da)
-- dry run: always waits for approval, never uploaded
-
-![QD-050](QD-050.jpg)
-
 ## On the channel (latest first)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃

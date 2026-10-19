@@ -1,0 +1,65 @@
+{
+ "id": "QD-049",
+ "board": "boards/queue/QD-049.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-19T12:39:30.965986+00:00",
+ "title": "James Acaster Traitors rumour addressed 🤫",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 7
+ },
+ "music": "city-of-the-wolf",
+ "social_music": "soulsweeper-252499",
+ "look": {
+  "captions": "minimal",
+  "voice": "george_quick",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.4,
+  "wps": 3.28,
+  "weak_beats": [],
+  "size_mb": 19.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.26,
+   "none",
+   0
+  ],
+  [
+   3.26,
+   8.18,
+   "none",
+   1
+  ],
+  [
+   8.18,
+   11.42,
+   "none",
+   1
+  ],
+  [
+   11.42,
+   17.11,
+   "quote",
+   1
+  ],
+  [
+   17.11,
+   23.41,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-049",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-65b5b3d6459115d7afa9"
+}

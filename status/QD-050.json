@@ -1,0 +1,81 @@
+{
+ "id": "QD-050",
+ "board": "boards/queue/QD-050.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-19T12:39:21.125256+00:00",
+ "title": "The Celebrity Traitors: BBC denies cast complaint 🏰",
+ "media_notes": [
+  "beat 1 reused a nearby picture (page:https://www.bbc.co.uk/programmes/m001m4p1: bbc.co.uk is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 7 reused a nearby picture (page:https://www.bbc.co.uk/programmes/m001m4p1: bbc.co.uk is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 8
+ },
+ "music": "house-on-the-hill",
+ "social_music": "soulsweeper-252499",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 28.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 21.4
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "title",
+   0
+  ],
+  [
+   4.0,
+   9.98,
+   "none",
+   2
+  ],
+  [
+   9.98,
+   14.18,
+   "none",
+   1
+  ],
+  [
+   14.18,
+   17.15,
+   "quote",
+   1
+  ],
+  [
+   17.15,
+   20.14,
+   "none",
+   1
+  ],
+  [
+   20.14,
+   24.26,
+   "none",
+   1
+  ],
+  [
+   24.26,
+   28.36,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-050",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5535237f111c445cd9da"
+}

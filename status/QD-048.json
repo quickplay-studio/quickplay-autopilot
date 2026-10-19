@@ -1,0 +1,74 @@
+{
+ "id": "QD-048",
+ "board": "boards/queue/QD-048.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-19T12:38:55.769760+00:00",
+ "title": "Lauren Hemp chases all-time WSL record ⚽",
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Lauren Hemp England: no Commons image named 'Lauren Hemp England')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 10
+ },
+ "music": "risen",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 26.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.9
+ },
+ "timeline": [
+  [
+   0.06,
+   3.81,
+   "stat",
+   0
+  ],
+  [
+   3.81,
+   9.26,
+   "none",
+   2
+  ],
+  [
+   9.26,
+   15.03,
+   "none",
+   1
+  ],
+  [
+   15.03,
+   18.23,
+   "none",
+   1
+  ],
+  [
+   18.23,
+   22.84,
+   "versus",
+   1
+  ],
+  [
+   22.84,
+   26.92,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-048",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-f7810e2ba50c67d2356c"
+}

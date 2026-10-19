@@ -67,23 +67,27 @@ from every Short against Shorts posted around the same time) and the drivers beh
   Facebook): exact names (person, title, team), then the franchise or show, the category, and 1 or 2 broad ones such as
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
 
-## Facts (the part that matters most)
-- Every factual claim needs two reputable sources that state it: a verified fact from a fact pack, or pages you opened
-  in this session. Cite the exact page that states it, never a homepage or a search page.
+## Facts: fast, honest, never made up
+- Speed beats a second source (Charlie, 19 October): ride a trend while it is hot. A claim stated as fact needs one
+  reputable source; for breaking news name it in the narration ("Variety says", "according to the BBC"). A fact pack's
+  verified facts (two sources) need no naming. Cite the exact page, never a homepage or a search page.
+- The viral claim can be the story: a rumour, a leak or what fans think, when the trend itself is the news. Say plainly
+  that it is unconfirmed and who is saying it ("fans think", "a viral clip claims", "reportedly"), in the narration and on
+  screen; never present it as fact, including in the title (a question title works: "Is X joining Y? 👀").
+- Never invent anything, never say a source states what it doesn't, and nothing that could harm a real person's
+  reputation (crime, illness, relationships, deaths), even as a rumour. These are what get channels struck, demonetised
+  or sued.
 - Fact packs (GitHub, about an hour before each run): `python pipeline/factpack.py show` lists the day's topics (numbers
   match trends/research.json) with how many facts are verified; `python pipeline/factpack.py show <n> <n>` prints the
-  packs you pick, with real pictures of the subject found on its pages. A verified fact was found word for word in two of the day's reputable pages (one Wikipedia page at
-  most) with its numbers matching, so it counts as checked: copy the pack's sources into `meta.sources` in the same
-  order (add any you open yourself after them) and cite each fact by those numbers. One-source facts, and anything not
-  in a pack, still need two sources you open yourself.
+  packs you pick, with real pictures of the subject found on its pages. Copy a pack's sources into `meta.sources` in the
+  same order (add any you open yourself after them) and cite each fact by those numbers. Its one-source facts are fine
+  to use with the source named.
 - Good sources: the official source (publisher, studio, team, league, label, agency, NASA and the like) and
   established outlets (BBC, Guardian, Reuters, AP, The Verge, IGN, Eurogamer, Variety, Billboard, ESPN, Nature...).
-  Aim for three: the official source plus two outlets. Cite the outlet's own site, never a site that reposts it.
-  Wikipedia can be one of the two, never both. Never use forums, fan wikis, social posts or AI-written sites alone.
+  Cite the outlet's own site, never a site that reposts it. For a rumour, the source is whoever reports it.
 - Say what is new today. If the trending item repeats older news (a date announced weeks ago), lead with what changed.
-- List each claim in `meta.facts` with the numbers of the sources (from 1) that confirm it.
-- Dates, numbers and names: copy them exactly from the sources. If two sources disagree, leave the claim out.
-- Can't verify it? Drop the claim, or drop the topic.
+- List each claim in `meta.facts` with the numbers of the sources (from 1) that state it.
+- Dates, numbers and names: copy them exactly from the sources. If sources disagree, say so or leave the claim out.
 
 ## Approval
 `approval` in config.json: "all" means every Short waits for Charlie's OK; "flagged" means only flagged Shorts wait (the

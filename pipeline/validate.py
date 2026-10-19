@@ -124,7 +124,8 @@ def check(b, path=None):
     bad = [s for s in srcs if not (isinstance(s, list) and len(s) == 2 and str(s[1]).startswith("https://"))]
     if bad: e.append("meta.sources: each one [title, https url]")
     sites = {urllib.parse.urlparse(s[1]).netloc.lower().removeprefix("www.") for s in srcs if s not in bad}
-    if len(srcs) < 2 or len(sites) < 2: e.append("meta.sources: at least 2 sources from 2 different sites")
+    if len(srcs) < 1: e.append("meta.sources: at least 1 source (the exact page)")
+    elif len(sites) < 2: w.append("meta.sources: one site only; name it in the narration for breaking news")
     facts = m.get("facts") or []
     if not facts: e.append("meta.facts: list every factual claim as [claim, [source numbers]]")
     for f in facts:

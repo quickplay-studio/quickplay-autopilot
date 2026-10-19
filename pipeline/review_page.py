@@ -54,6 +54,23 @@ def posts_by_day(statuses, now):
     return rows + [""]
 
 
+def lab_section():
+    """What the look lab (lab.py) is testing now, and its latest decisions."""
+    lab = load(ROOT / "analytics" / "lab_looks.json") or {}
+    stats = (load(ROOT / "analytics" / "looks.json") or {}).get("dimensions") or {}
+    rows = []
+    for dim, opts in (lab.get("options") or {}).items():
+        for k, o in opts.items():
+            if o.get("lab") and not o.get("retired"):
+                n = int(((stats.get(dim) or {}).get(k) or {}).get("n") or 0)
+                rows.append(f"- Testing {dim}: {o.get('desc')} ({n} of 8 Shorts measured)")
+    rows += [f"- {e['day']}: {e['dimension']} {e['change']} ({e['why']})" for e in (lab.get("log") or [])[::-1]
+             if not str(e.get("change", "")).startswith("testing")][:6]
+    if not rows: return []
+    return ["## Look lab", "", "New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. "
+            "A version that beats the one it came from stays, and the next change builds on it.", ""] + rows + [""]
+
+
 def main():
     statuses = [s for s in (load(p) for p in sorted((ROOT / "status").glob("*.json")) if p.name != "channel.json") if s and s.get("id")]
     social = load(ROOT / "status" / "social.json") or {}
@@ -88,7 +105,7 @@ def main():
                 lines += [f"**Facebook's key runs out in {max(left, 0)} days**: make a new one in the Graph API Explorer as before "
                           "and paste it into the FB_PAGE_TOKEN secret.", ""]
 
-    lines += posts_by_day(statuses, now)
+    lines += posts_by_day(statuses, now) + lab_section()
     problems = [s for s in statuses if ("fail" in s.get("state", "") or "not scheduled" in s.get("state", ""))
                 and not s["id"].startswith("TEST-") and s.get("mode") not in ("dry", "none")]     # test renders never need a look
     flagged = channel.get("flagged", [])

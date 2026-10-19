@@ -6,10 +6,29 @@ Instagram: connected as quickplaydaily · TikTok: connected (checked Sun 18 Oct 
 
 ## Needs a look
 
+- **QD-037** Arsenal's 1st shot on target came in minute 80 ⚽: failed. RuntimeError: checks failed: unclear narration in beats [2]
+- **QD-039** Street Fighter movie: Roman Reigns is Akuma 🥋: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
 - **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+
+## Waiting for your approval
+
+Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
+
+### QD-038 · What was the first music video on MTV? 📺
+awaiting approval · 24 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-301700b007dbc9b39a73)
+- writer: Validator flagged 'killed': it is only the song title Video Killed the Radio Star, fine in context
+- check: check these words are fine in context: ['killed']
+
+![QD-038](QD-038.jpg)
+
+### QD-041 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
+awaiting approval · 23 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5a28f127e3cec32354c5)
+- render: beat 6 reused a nearby picture (pixabay:video:cyberpunk city night: no usable Pixabay video for 'cyberpunk city night')
+
+![QD-041](QD-041.jpg)
 
 ## On the channel (latest first)
 

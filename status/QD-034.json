@@ -1,0 +1,83 @@
+{
+ "id": "QD-034",
+ "board": "boards/queue/QD-034.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T07:10:00Z",
+ "rendered": "2026-10-19T06:07:38.351206+00:00",
+ "title": "Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤",
+ "media": {
+  "real_shots": 8,
+  "planned_real": 10
+ },
+ "music": "f16",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 29.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.6
+ },
+ "timeline": [
+  [
+   0.06,
+   4.68,
+   "title",
+   1
+  ],
+  [
+   4.68,
+   8.41,
+   "quote",
+   1
+  ],
+  [
+   8.41,
+   13.4,
+   "none",
+   2
+  ],
+  [
+   13.4,
+   14.54,
+   "none",
+   1
+  ],
+  [
+   14.54,
+   21.11,
+   "versus",
+   2
+  ],
+  [
+   21.11,
+   25.38,
+   "none",
+   1
+  ],
+  [
+   25.38,
+   29.04,
+   "none",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T06:37:11Z",
+ "video": "LxgDeNfXCOQ",
+ "url": "https://youtube.com/shorts/LxgDeNfXCOQ",
+ "publish_at": "2026-10-19T07:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T07:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-034"
+}

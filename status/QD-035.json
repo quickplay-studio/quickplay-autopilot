@@ -1,0 +1,76 @@
+{
+ "id": "QD-035",
+ "board": "boards/queue/QD-035.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T07:50:00Z",
+ "rendered": "2026-10-19T06:07:39.647675+00:00",
+ "title": "LOUD: first team to win VALORANT Champions 2x 🏆",
+ "media": {
+  "real_shots": 3,
+  "planned_real": 4
+ },
+ "music": "the-bombs",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "pop",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 27.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.4
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "stat",
+   0
+  ],
+  [
+   4.0,
+   9.97,
+   "versus",
+   2
+  ],
+  [
+   9.97,
+   11.99,
+   "none",
+   1
+  ],
+  [
+   11.99,
+   17.85,
+   "timeline",
+   2
+  ],
+  [
+   17.85,
+   22.97,
+   "title",
+   2
+  ],
+  [
+   22.97,
+   27.59,
+   "none",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T06:37:15Z",
+ "video": "m2IREZZ2D_4",
+ "url": "https://youtube.com/shorts/m2IREZZ2D_4",
+ "publish_at": "2026-10-19T07:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T07:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-035"
+}

@@ -1,0 +1,74 @@
+{
+ "id": "QD-041",
+ "board": "boards/queue/QD-041.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T11:10:00Z",
+ "rendered": "2026-10-19T06:21:22.304578+00:00",
+ "title": "Cyberpunk: Edgerunners 2 is out tomorrow 🌃",
+ "media_notes": [
+  "beat 6 reused a nearby picture (pixabay:video:cyberpunk city night: no usable Pixabay video for 'cyberpunk city night')"
+ ],
+ "media": {
+  "real_shots": 1,
+  "planned_real": 1
+ },
+ "music": "in-battery",
+ "social_music": "dark-suspense-trailer-488322",
+ "look": {
+  "captions": "pop",
+  "voice": "george_dramatic",
+  "energy": "punchy",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.7
+ },
+ "timeline": [
+  [
+   0.06,
+   4.44,
+   "date",
+   1
+  ],
+  [
+   4.44,
+   8.96,
+   "stat",
+   2
+  ],
+  [
+   8.96,
+   12.88,
+   "none",
+   2
+  ],
+  [
+   12.88,
+   13.96,
+   "none",
+   1
+  ],
+  [
+   13.96,
+   18.42,
+   "title",
+   2
+  ],
+  [
+   18.42,
+   23.25,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "render: beat 6 reused a nearby picture (pixabay:video:cyberpunk city night: no usable Pixabay video for 'cyberpunk city night')"
+ ],
+ "preview_release": "preview-QD-041",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-5a28f127e3cec32354c5"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "QD-037",
+ "board": "boards/queue/QD-037.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T09:10:00Z",
+ "rendered": "2026-10-19T06:07:37.533389+00:00",
+ "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 8
+ },
+ "music": "paradigm",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "pop",
+  "voice": "george_dramatic",
+  "energy": "punchy",
+  "grade": "vivid",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 30.0,
+  "wps": 3.0,
+  "weak_beats": [
+   2
+  ],
+  "size_mb": 20.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.42,
+   "stat",
+   0
+  ],
+  [
+   4.42,
+   10.24,
+   "none",
+   2
+  ],
+  [
+   10.24,
+   14.63,
+   "none",
+   2
+  ],
+  [
+   14.63,
+   16.95,
+   "none",
+   1
+  ],
+  [
+   16.95,
+   21.21,
+   "versus",
+   1
+  ],
+  [
+   21.21,
+   27.39,
+   "bars",
+   2
+  ],
+  [
+   27.39,
+   30.03,
+   "none",
+   1
+  ]
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [2]"
+}

@@ -1,0 +1,76 @@
+{
+ "id": "QD-036",
+ "board": "boards/queue/QD-036.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T08:30:00Z",
+ "rendered": "2026-10-19T06:07:41.098068+00:00",
+ "title": "GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "after-sunset",
+ "social_music": "synthwave-526520",
+ "look": {
+  "captions": "boxed",
+  "voice": "george",
+  "energy": "punchy",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 24.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.3
+ },
+ "timeline": [
+  [
+   0.06,
+   5.25,
+   "cards",
+   1
+  ],
+  [
+   5.25,
+   11.96,
+   "title",
+   2
+  ],
+  [
+   11.96,
+   15.67,
+   "stat",
+   2
+  ],
+  [
+   15.67,
+   17.08,
+   "none",
+   1
+  ],
+  [
+   17.08,
+   20.85,
+   "date",
+   2
+  ],
+  [
+   20.85,
+   24.26,
+   "none",
+   1
+  ]
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-19T06:37:18Z",
+ "video": "qdViT_b3UHA",
+ "url": "https://youtube.com/shorts/qdViT_b3UHA",
+ "publish_at": "2026-10-19T08:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-19T08:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-036"
+}

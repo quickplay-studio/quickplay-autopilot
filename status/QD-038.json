@@ -1,0 +1,72 @@
+{
+ "id": "QD-038",
+ "board": "boards/queue/QD-038.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-19T06:07:50.845952+00:00",
+ "title": "What was the first music video on MTV? 📺",
+ "media": {
+  "real_shots": 3,
+  "planned_real": 5
+ },
+ "music": "after-sunset",
+ "social_music": "synthwave-emotions-580875",
+ "look": {
+  "captions": "pop",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 23.8,
+  "wps": 3.02,
+  "weak_beats": [],
+  "size_mb": 16.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.14,
+   "title",
+   0
+  ],
+  [
+   4.14,
+   10.62,
+   "date",
+   2
+  ],
+  [
+   10.62,
+   13.78,
+   "versus",
+   2
+  ],
+  [
+   13.78,
+   15.22,
+   "none",
+   1
+  ],
+  [
+   15.22,
+   20.2,
+   "cards",
+   2
+  ],
+  [
+   20.2,
+   23.77,
+   "none",
+   1
+  ]
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "writer: Validator flagged 'killed': it is only the song title Video Killed the Radio Star, fine in context",
+  "check: check these words are fine in context: ['killed']"
+ ],
+ "preview_release": "preview-QD-038",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-301700b007dbc9b39a73"
+}

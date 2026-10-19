@@ -1,0 +1,75 @@
+{
+ "id": "QD-039",
+ "board": "boards/queue/QD-039.json",
+ "mode": "schedule",
+ "slot": "2026-10-19T09:50:00Z",
+ "rendered": "2026-10-19T06:07:38.671134+00:00",
+ "title": "Street Fighter movie: Roman Reigns is Akuma 🥋",
+ "media": {
+  "real_shots": 8,
+  "planned_real": 9
+ },
+ "music": "stake-out",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "punch",
+  "voice": "george",
+  "energy": "punchy",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 28.0,
+  "wps": 3.0,
+  "weak_beats": [
+   4
+  ],
+  "size_mb": 15.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.09,
+   "title",
+   1
+  ],
+  [
+   3.09,
+   9.52,
+   "date",
+   2
+  ],
+  [
+   9.52,
+   14.7,
+   "cards",
+   1
+  ],
+  [
+   14.7,
+   16.52,
+   "none",
+   1
+  ],
+  [
+   16.52,
+   21.24,
+   "cards",
+   3
+  ],
+  [
+   21.24,
+   25.88,
+   "none",
+   2
+  ],
+  [
+   25.88,
+   28.02,
+   "none",
+   1
+  ]
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [4]"
+}

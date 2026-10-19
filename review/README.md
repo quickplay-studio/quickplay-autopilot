@@ -1,20 +1,39 @@
 # Quickplay Daily review
 
-**Progress** (Mon 19 Oct, 16:49): 5 of 1,000 subscribers · 2,481 of 10 million Shorts views in 90 days · 1,810 views in the last 24 hours (about 111,084 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Mon 19 Oct, 17:42): 5 of 1,000 subscribers · 2,519 of 10 million Shorts views in 90 days · 1,906 views in the last 24 hours (about 111,083 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Mon 19 Oct 12:41 (UK): 3 scheduled, 33 public, 17 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 13:08).
 
-## Needs a look
+## Posts by day
 
-- **QD-051** K/DA makes K-pop history in League of Legends 🎤: failed. RuntimeError: no usable media for any beat
-- **TEST-L1** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-L2** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-L3** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-M1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-S1018** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
-- **TEST-W1019** Street Fighter hits cinemas today 🥊: failed. RuntimeError: checks failed: unclear narration in beats [2, 3]
+YouTube counts Shorts by the day they go public. Instagram and Facebook build up to the same number over time.
+
+| Day | YouTube | Instagram | Facebook | Target met? |
+|---|---|---|---|---|
+| Tue 20 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
+| Mon 19 Oct | 16 public | 6 | 6 | ⏳ 16 of 24 so far |
+| Sun 18 Oct | 8 public | 0 | 0 | no target then |
+| Sat 17 Oct | 0 public | 0 | 0 | no target then |
+| Fri 16 Oct | 0 public | 0 | 0 | no target then |
+| Thu 15 Oct | 0 public | 0 | 0 | no target then |
+| Wed 14 Oct | 0 public | 0 | 0 | no target then |
+| Tue 13 Oct | 0 public | 0 | 0 | no target then |
+
+## Look lab
+
+New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
+
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (0 of 8 Shorts measured)
+- Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
+- Testing energy: camera motion 0.7, punch-ins 0.05 (0 of 8 Shorts measured)
+- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
+- Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
+
+## In the queue
+
+- **TEST-BG1** Why we only ever see one side of the Moon 🌕 (rendering next)
 
 ## On the channel (latest first)
 

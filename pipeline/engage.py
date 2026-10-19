@@ -159,6 +159,8 @@ def replies():
                          "summary": (b.get("meta") or {}).get("summary", ""), "comment": c.get("textDisplay", "")[:400]})
             room -= 1
     if not todo: return
+    import quota
+    if not quota.allow(50 * len(todo), "comment replies"): return
     ans, _ = factpack.gemini(REPLY + json.dumps([{k: t[k] for k in ("id", "short", "summary", "comment")} for t in todo],
                                                 ensure_ascii=False), None, timeout=60, temperature=0.5)
     by_id, posted = {t["id"]: t for t in todo}, 0
@@ -171,12 +173,27 @@ def replies():
         yt.comments().insert(part="snippet", body={"snippet": {"parentId": t["id"], "textOriginal": text[:300]}}).execute()
         per[t["video"]] = per.get(t["video"], 0) + 1; posted += 1
     days[today] = days.get(today, 0) + posted
+    quota.spend(50 * posted + 3, "comment replies")
     rec["done"] = dict(list(done.items())[-3000:])
     path.write_text(json.dumps(rec, indent=1))
     print("comment replies posted:", posted)
 
 
+def engaged():
+    """Creator comments, playlist adds and title swaps recorded in the status files (to count what a run spent)."""
+    c = p = t = 0
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: e = json.loads(sp.read_text()).get("engage") or {}
+        except Exception: continue
+        c += bool(e.get("comment")); p += bool(e.get("playlist")); t += bool((e.get("title") or {}).get("swapped_from"))
+    return c, p, t
+
+
 if __name__ == "__main__":
-    main()
+    import quota
+    if quota.allow(300, "engagement"):
+        before = engaged()
+        main()
+        quota.spend(50 * sum(max(0, a - b) for a, b in zip(engaged(), before)) + 5, "engagement")
     try: replies()
     except Exception as e: print("comment replies:", str(e)[:200])

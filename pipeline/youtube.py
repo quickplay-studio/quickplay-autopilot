@@ -74,12 +74,23 @@ def upload(yt, path, title, description, tags, category="Entertainment", publish
             "status": status}
     if localizations: body["localizations"] = localizations
     try:
-        return _send(yt, path, body)
+        vid = _send(yt, path, body)
     except HttpError as e:
         if not localizations or e.resp.status != 400: raise
         print("upload: YouTube refused the translated titles, uploading without them:", str(e)[:200])
         body.pop("localizations", None)
-        return _send(yt, path, body)
+        vid = _send(yt, path, body)
+    _quota("upload")
+    return vid
+
+
+def _quota(event):
+    """Tells the allowance guard (quota.py) about an upload, or a refusal for quota."""
+    try:
+        import quota
+        quota.exhausted() if event == "exhausted" else quota.spend(quota.COST["upload"], "upload")
+    except Exception as e:
+        print("quota record:", str(e)[:120])
 
 
 def _send(yt, path, body):
@@ -91,6 +102,7 @@ def _send(yt, path, body):
             _, resp = req.next_chunk()
         except HttpError as e:
             reason = str(e)
+            if "quotaExceeded" in reason: _quota("exhausted")
             if "uploadLimitExceeded" in reason or "quotaExceeded" in reason: raise LimitReached(reason)
             if e.resp.status in (500, 502, 503, 504) and tries < 5:
                 tries += 1; time.sleep(5 * tries); continue

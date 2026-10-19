@@ -1,0 +1,34 @@
+name: alerts
+# A GitHub issue when something needs a look (pipeline/alerts.py): a job failing twice in a row, a day short of its
+# Shorts, or the Facebook key about to run out. The GitHub app on Charlie's phone notifies him; issues close themselves
+# once things work again.
+on:
+  workflow_run:
+    workflows: [trends, write, render, publish, social, engage, analytics, weekly]
+    types: [completed]
+  schedule:
+    - cron: '30 21 * * *'      # the evening check: did the day's Shorts go out?
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  actions: read
+
+concurrency:
+  group: alerts
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          RUN_NAME: ${{ github.event.workflow_run.name }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: python3 pipeline/alerts.py

@@ -226,16 +226,31 @@ def media_problems(b):
             "commons-search shots of the people, teams, venues or events to at least half the beats (page: pictures often fail)"]
 
 
-def boosts():
-    """Categories the data says beat typical (analytics/drivers.csv): "push" moves their packs up 2 places, "early sign" 1."""
+def boosts(feature="category"):
+    """How far the data moves a pack up (or down) the list for one feature (its category, or where the topic came from,
+    analytics/drivers.csv): "push" 2 places up, an early sign 1; below typical the same way down ("cut back" 2)."""
     p, out = ROOT / "analytics" / "drivers.csv", {}
     if not p.exists(): return out
     for r in csv.DictReader(p.open()):
+        if r.get("feature") != feature: continue
         try: lift = float(r.get("lift") or 0)
         except ValueError: continue
-        if r.get("feature") == "category" and lift > 1 and r.get("verdict") in ("push", "early sign"):
-            out[r.get("value")] = 2 if r["verdict"] == "push" else 1
+        v = r.get("verdict")
+        if v == "push" and lift > 1: out[r.get("value")] = 2
+        elif v == "cut back": out[r.get("value")] = -2
+        elif v == "early sign": out[r.get("value")] = 1 if lift > 1.15 else -1 if lift < 0.85 else 0
     return out
+
+
+def source_of(signal):
+    """Where a topic came from, from its pack's trend signal, so the data can learn which sources find winners."""
+    s = str(signal or "").lower()
+    for key, name in (("request", "Requests"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
+                      ("wikipedia", "Wikipedia"), ("google trends", "Google Trends"), ("launch", "Rocket launches"),
+                      ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"), ("apple", "Apple Music"),
+                      ("chart", "Apple Music"), ("news", "News")):
+        if key in s: return name
+    return "Other"
 
 
 def hot():
@@ -418,8 +433,10 @@ def angles(topic):
     """What already works on YouTube for this topic: the most-viewed Shorts of the last 3 days (title, views, hours since
     posted), so the writer can find a better angle. About 101 units of the YouTube allowance, so a few a run."""
     try:
-        import youtube as Y
+        import youtube as Y, quota
+        if not quota.allow(101, "angle search"): return []
         yt = Y.client()
+        quota.spend(101, "angle search")
         since = (NOW - dt.timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%SZ")
         r = yt.search().list(part="snippet", q=topic, type="video", videoDuration="short", order="viewCount",
                              publishedAfter=since, maxResults=5, relevanceLanguage="en").execute()
@@ -507,7 +524,7 @@ def main():
     run, day, cap = plan(breaking)
     print(f"{run} run for {day}: {cap} to write")
     if cap <= 0 and (breaking or reserve_count() >= 6): return
-    seen, used, follow, up = recent(), day_formats(day), hot(), boosts()
+    seen, used, follow, up, src_up = recent(), day_formats(day), hot(), boosts(), boosts("source")
     moods, notes = list(CFG.get("music_moods") or []), dropoff_notes()
     head = (RULES % {"moods": moods} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe()
             + ("\n\nWHERE VIEWERS SWIPE AWAY (from the data)\n- " + "\n- ".join(notes) if notes else "")
@@ -538,7 +555,7 @@ def main():
         before = json.dumps(b)
         shape(b, tests)
         if validate.check(b)[0]: b = json.loads(before)
-        b.update(kind=kind, test=tests)
+        b.update(kind=kind, test=tests, source=source_of(p.get("signal")))
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
         tr = translations(b)
@@ -548,7 +565,8 @@ def main():
         return b
 
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
-    rank = lambda kp: kp[0] - up.get(kp[1].get("category"), 0) - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0)
+    rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
+                       - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     for _, p in sorted(topics, key=rank):
         if len(written) >= cap or factpack.STATE.get("spent"): break
         if not p.get("verified") and not p.get("one_source"): continue

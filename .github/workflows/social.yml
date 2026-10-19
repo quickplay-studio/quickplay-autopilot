@@ -3,7 +3,7 @@ name: social
 # Run it by hand with a TikTok code to connect TikTok (from the connect page). Tokens never appear in the logs.
 on:
   schedule:
-    - cron: '35 * * * *'      # hourly; does nothing until SOCIAL_KEY and an Instagram or TikTok sign-in exist
+    - cron: '5,35 * * * *'      # every half hour (Facebook posts one Reel a run, up to Meta's 30 a day); does nothing until SOCIAL_KEY and an Instagram or TikTok sign-in exist
   push:
     branches: [main]
     paths: ['requests/social*']     # push a file here to check the sign-ins (results in status/social.json)

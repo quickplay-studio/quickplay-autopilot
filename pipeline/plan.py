@@ -48,8 +48,9 @@ def learned_slots(n):
                 num += w * v.get("score", 1.0); den += w
         sc = (num + 3.0) / (den + 3.0)
         return max(sc, 1.03) if den < 2 else sc
-    ranked = sorted((f"{h:02d}:{m:02d}" for h in range(7, 23) for m in (0, 30)), key=lambda c: (-score(c), c))
-    for gap in (75, 60, 45, 30):          # 20 a day needs half-hour spacing
+    mins = (0, 30) if n <= 32 else (0, 15, 30, 45)     # more than 32 a day needs quarter hours
+    ranked = sorted((f"{h:02d}:{m:02d}" for h in range(7, 23) for m in mins), key=lambda c: (-score(c), c))
+    for gap in (75, 60, 45, 30, 20, 15):      # 20 a day needs half-hour spacing, 36 twenty minutes
         picked = []
         for c in ranked:
             if all(abs(_mins(c) - _mins(q)) >= gap for q in picked): picked.append(c)

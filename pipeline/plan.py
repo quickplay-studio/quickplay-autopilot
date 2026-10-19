@@ -111,7 +111,7 @@ def hold_reasons(b, warnings):
     """Why this Short should wait for Charlie's approval (empty list: it can go out on its own)."""
     mode = CFG.get("approval", "flagged")
     if b.get("reserve"):            # evergreen spare: waits in boards/reserve (publish.py), however approval is set
-        return ["reserve: approved in advance, posted only on a day nothing new was written"] + \
+        return ["reserve: waits in boards/reserve to fill slots the day's writer runs leave empty"] + \
                ([f"writer: {b['flag']}"] if b.get("flag") else []) + [f"check: {w}" for w in warnings]
     if mode == "none": return []
     out = ["approval is on for every Short (config.json)"] if mode == "all" else []

@@ -49,10 +49,11 @@ explained in plain words with the numbers, logged, and checked a week later. Spe
    wrong, revert the change. Move the test board to boards/test/.
 4. **Log** every change and every revert as a new line at the top of analytics/decisions.csv: date, area, change, why
    (the numbers in plain words), evidence (file and figures), check_on (7 days later), by "review".
-5. **Reserve**: keep 5 approved evergreen Shorts in boards/reserve (status "in reserve (approved)"). If there are fewer,
-   write the missing ones (CLAUDE.md rules, `"reserve": true`, topics that stay true for months: science, nature,
-   records, music and film history), push them, and once they render add their previews to the message below with
-   "Reply: reserve approve all, or reserve reject QD-0xx." (`python pipeline/previews.py <dir> --reserve`).
+5. **Reserve**: keep 8 evergreen Shorts in boards/reserve: GitHub uses them to fill any of the day's slots the writer
+   runs left empty. If there are fewer, write the missing ones (CLAUDE.md rules, `"reserve": true`, topics that stay
+   true for months: science, nature, records, music and film history) and push them. Unflagged ones need no approval;
+   once they render, add the previews of any flagged ones to the message below with "Reply: reserve approve all, or
+   reserve reject QD-0xx." (`python pipeline/previews.py <dir> --reserve`).
 6. One commit ("Review <date>: ..."), push. Then send Charlie ONE message of at most 10 lines: each change on one line
    with its reason and the numbers ("Music Shorts got 1.6x typical views over 9 Shorts, so the daily mix moves to 35%
    Music"), what the checks of earlier changes showed, what is being tested next, and anything he could do to help (only

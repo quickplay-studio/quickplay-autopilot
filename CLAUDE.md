@@ -36,7 +36,7 @@ from every Short against Shorts posted around the same time) and the drivers beh
 - UK style everywhere: "Tuesday 20 October", "20 million pounds", colour, favourite.
 
 ## What gets views
-- Topics with big audiences searching right now: gaming, film and TV, music, sport, celebrities, tech launches, space.
+- Topics with big audiences searching right now: gaming, film and TV, music, sport, celebrities, streamers and creators, tech launches, space.
   Strongest signal first (Google Trends traffic, YouTube views per hour, Wikipedia views), weighted by what our own
   analytics say works. Early beats late: a fresh angle on today's story beats a recap. Skip niche topics and anything
   covered in the last 14 days (titles in boards/done, ready and queue).
@@ -82,8 +82,9 @@ look first: a topic close to the excluded list, a person under 18 at the centre,
 footage, a claim you're less than sure about. Validator warnings and render checks (such as no real images) flag
 automatically. Waiting Shorts sit in boards/ready with a private preview (draft release `preview-<id>`).
 Reserve: evergreen Shorts written with `"reserve": true` render like any other but wait in boards/reserve (they never count
-towards a day's capacity). Charlie approves them once ("reserve approve all", written to approvals/ as a line starting
-with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing new was written by 18:20.
+towards a day's capacity). GitHub uses them to fill any of the day's slots the writer runs left
+empty (after 18:20, up to 3 a day). In "flagged" mode a reserve Short with nothing flagged needs no approval; a flagged
+one waits for Charlie's "reserve approve all" (a line starting with "reserve" in approvals/).
 
 ## Steps
 1. `git pull`. Run `python pipeline/digest.py` (health, what's made for today and tomorrow, failures, breakouts). Read
@@ -95,8 +96,9 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
    On Sundays take one off (the weekly long video, pipeline/weekly.py, uses one upload). If it is 0, go to step 7.
    The evening run also writes whatever today's runs missed (if a run was blocked), as long as today's slots remain.
 3. Pick topics (see What gets views), starting with trends/requests.md: Charlie's own requests come first, then the
-   trends; update that file in the same commit as the boards. The evening run picks what will still be fresh at
-   breakfast: stories that broke this evening (often in the US), things happening tomorrow (a release, a match, a launch,
+   trends; update that file in the same commit as the boards. Always write the run's full capacity: when strong trends
+   run out, fill it with evergreen search Shorts (they never go stale, and most of our views come from search). The
+   evening run picks what will still be fresh at breakfast: stories that broke this evening (often in the US), things happening tomorrow (a release, a match, a launch,
    an announcement), and the target day's 2 evergreen search Shorts. Fill the rest of the day to match the Recipe in
    analytics/insights.md: its category mix for about 80% of the day (the other 20% on whatever trends hardest), and lean
    towards the formats, hook styles, title styles and lengths it lists. Breaking news still beats the mix. The 12:50 run
@@ -125,12 +127,13 @@ with "reserve"), and GitHub uploads up to 2 of them only on a day when nothing n
 
 ## Stats dashboard
 https://claude.ai/artifact/CErUUqubbPYWbVrN5XyhDy (private). GitHub refreshes analytics/ every hour (the full read three
-times a day). Refresh the dashboard at the end of each run: Artifact `read` the dashboard; ArtifactData `list` collection
-"datasets" (for each document's version); then for each dataset id that has a file, in order shorts, daily, progress,
-hourly, drivers, decisions, geo, traffic, audience: Artifact publish with `url` (the dashboard), `file_path`
-analytics/<id>.csv and `asset: true`; then ONE ArtifactData `batch` of `update` writes (collection "datasets", doc_id
-<id>, if_version from the list) with data `{"source": {"kind": "file", "url": <returned url>, "name": "<id>.csv"},
-"updated": {"at": <ISO time>, "by": "Quickplay run"}}`. Don't rewrite the page.
+times a day). Refresh the dashboard at the end of each run, and never `read` the dashboard or its page (large, never
+needed): ArtifactData `list` collection "datasets" (for each document's version); then Artifact publish with `url` (the
+dashboard), `file_path` analytics/<id>.csv and `asset: true` for shorts, daily, progress and hourly in every run, plus
+drivers, decisions, geo, traffic and audience in the evening run only (they change slowly); then ONE ArtifactData
+`batch` of `update` writes for the files just uploaded (collection "datasets", doc_id <id>, if_version from the list)
+with data `{"source": {"kind": "file", "url": <returned url>, "name": "<id>.csv"}, "updated": {"at": <UTC time ending
+in Z>, "by": "Quickplay run"}}`. Don't rewrite the page.
 
 ## Board schema (copy boards/hold/QD-028.json for the shape)
 - `id`: next free QD-### across boards/queue, ready, done, failed, hold, rejected and reserve, never below `first_id` in

@@ -61,7 +61,8 @@ def is_reserve_line(l):
     return l.strip().lower().startswith("reserve")
 
 def reserve_step(lines):
-    """Apply reserve decisions; on a day nothing new was written, move the oldest approved reserve Shorts to ready."""
+    """Apply reserve decisions; in the evening, fill the slots the day's writer runs left empty with the oldest cleared
+    reserve Shorts (approved by Charlie, or in "flagged" mode simply not flagged), at most reserve_per_day a day."""
     boards = {}
     for p in sorted(RESERVE.glob("*.json")):
         try: boards[json.loads(p.read_text())["id"]] = p
@@ -83,19 +84,25 @@ def reserve_step(lines):
     uk = NOW.astimezone(plan.UK); today = str(uk.date())
     after = dt.datetime.strptime(plan.CFG.get("reserve_after", "18:20"), "%H:%M").time()
     if uk.time() < after: return
-    for d in ("queue", "ready", "done", "failed"):          # anything written today means a writer run worked
+    made = 0                                                 # today's Shorts from the writer runs
+    for d in ("queue", "ready", "done"):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == today and not b.get("reserve"): return
-    if any(load_status(p.stem).get("from_reserve") == today for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json")):
-        return
-    approved = sorted((i for i in boards if status[i].get("reserve_approved") and status[i].get("preview_release")),
-                      key=lambda i: status[i]["reserve_approved"])
-    for i in approved[:int(plan.CFG.get("reserve_per_day", 3))]:
+            if b.get("created") == today and not b.get("reserve"): made += 1
+    used = sum(1 for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json") if load_status(p.stem).get("from_reserve") == today)
+    want = int(plan.CFG.get("daily_limit", 24)) - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
+    gap = min(int(plan.CFG.get("reserve_per_day", 3)) - used, want - made - used)
+    if gap <= 0: return
+    auto = plan.CFG.get("approval", "flagged") in ("flagged", "none")
+    def cleared(i):         # approved by Charlie, or (flagged mode) nothing flagged, like any other Short
+        return status[i].get("reserve_approved") or (auto and not [f for f in status[i].get("flags") or [] if not f.startswith("reserve")])
+    ready = sorted((i for i in boards if cleared(i) and status[i].get("preview_release")),
+                   key=lambda i: status[i].get("reserve_approved") or status[i].get("rendered") or "")
+    for i in ready[:gap]:
         st = status[i]
         st.update(approved=NOW.isoformat(timespec="seconds"), from_reserve=today, state="approved, uploading (from the reserve)")
-        save_status(st); move(boards[i], "ready"); print(i, "released from the reserve: nothing new was written today")
+        save_status(st); move(boards[i], "ready"); print(i, f"released from the reserve: today had {made} of {want} Shorts")
 
 def main():
     files = sorted((ROOT / "approvals").glob("*.txt")) if (ROOT / "approvals").exists() else []

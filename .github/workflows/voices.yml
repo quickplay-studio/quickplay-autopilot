@@ -1,0 +1,33 @@
+name: voices
+# Voice samples for the language channels: push requests/voices.txt (languages on its first line, e.g. "es pt").
+# The MP3s land in review/voices/ for Charlie to pick a voice per language.
+on:
+  push:
+    branches: [main]
+    paths: ['requests/voices*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q chatterbox-tts==0.1.7
+      - env: { TQDM_DISABLE: '1' }
+        run: python pipeline/voice_samples.py review/voices $(head -1 requests/voices.txt 2>/dev/null || echo "es pt")
+      - run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A review/voices
+          git commit -q -m "Voice samples $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

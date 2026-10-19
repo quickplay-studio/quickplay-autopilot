@@ -9,7 +9,7 @@ on:
     - cron: '23 18 * * *'     # before the 20:50 UK session, and evening numbers for the stats dashboard
   push:
     branches: [main]
-    paths: ['requests/**']
+    paths: ['requests/refresh*']     # only a refresh request: other request files belong to other jobs
   workflow_dispatch:
 
 permissions:

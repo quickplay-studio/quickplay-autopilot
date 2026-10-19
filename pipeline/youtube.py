@@ -64,13 +64,27 @@ def recent_videos(yt, limit=100):
                         "views": int(v.get("statistics", {}).get("viewCount", 0))})
     return out
 
-def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None):
+def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None, localizations=None):
+    """Uploads as private (scheduled when publish_at is given). localizations ({lang: {title, description}}) let the Short
+    be found in searches in other languages; if YouTube refuses them, the upload is retried without."""
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False}
     if publish_at: status["publishAt"] = publish_at
     body = {"snippet": {"title": title[:100], "description": description[:4900], "tags": tags[:15],
                         "categoryId": CATEGORY.get(category, "24"), "defaultLanguage": "en-GB", "defaultAudioLanguage": "en-GB"},
             "status": status}
-    req = yt.videos().insert(part="snippet,status", body=body, media_body=MediaFileUpload(str(path), chunksize=8 << 20, resumable=True))
+    if localizations: body["localizations"] = localizations
+    try:
+        return _send(yt, path, body)
+    except HttpError as e:
+        if not localizations or e.resp.status != 400: raise
+        print("upload: YouTube refused the translated titles, uploading without them:", str(e)[:200])
+        body.pop("localizations", None)
+        return _send(yt, path, body)
+
+
+def _send(yt, path, body):
+    part = "snippet,status" + (",localizations" if body.get("localizations") else "")
+    req = yt.videos().insert(part=part, body=body, media_body=MediaFileUpload(str(path), chunksize=8 << 20, resumable=True))
     resp, tries = None, 0
     while resp is None:
         try:

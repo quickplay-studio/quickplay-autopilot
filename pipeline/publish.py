@@ -192,7 +192,7 @@ def main():
                     else: taken.add(t)
                 slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
             try:
-                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot)
+                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
             except Y.LimitReached:
                 st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); capacity = 0; continue
             except Exception as e:

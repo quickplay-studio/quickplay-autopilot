@@ -61,6 +61,16 @@ def pick_social_music(sb):
     sb["social_music"] = {"slug": pool[0]["slug"], "gain_db": (sb.get("music") or {}).get("gain_db", -15)}
     return pool[0]
 
+def localize(meta, desc):
+    """YouTube localisations from the writer's translations: the translated title, and the translated summary above the
+    English description."""
+    out = {}
+    for lang, t in ((meta or {}).get("translations") or {}).items():
+        if isinstance(t, dict) and t.get("title"):
+            out[lang] = {"title": str(t["title"])[:100], "description": (str(t.get("summary") or "") + "\n\n" + desc)[:4900]}
+    return out
+
+
 def description(sb, credits, track):
     m = sb.get("meta", {})
     out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
@@ -204,7 +214,7 @@ def main():
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())
         meta = sb.get("meta", {})
         (res / "upload.json").write_text(json.dumps({
-            "title": meta["title"], "description": description(sb, credits, track),
+            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": localize(meta, desc),
             "tags": youtube_tags(meta),
             "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags},
             indent=1, ensure_ascii=False))

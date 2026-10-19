@@ -14,7 +14,7 @@ SHRINK, MIN_N, PUSH, CUT = 3, 5, 1.25, 0.8
 FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook style"), ("hook_len", "Hook length"),
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
-            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening")]
+            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line")]
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 
 def hook_type(h):
@@ -54,6 +54,7 @@ def features(r):
     out["pictures"] = "" if rs is None else ("mostly real pictures" if rs >= 0.5 else "mostly stock footage")
     t = r.get("title") or ""
     out["title_style"] = "question" if "?" in t else ("number in title" if re.search(r"\d", t) else "statement") if t else ""
+    out["follow_line"] = r.get("follow_line") or ""
     return out
 
 def _med(vals):

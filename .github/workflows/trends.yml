@@ -7,6 +7,7 @@ on:
     - cron: '23 4 * * *'      # trends and fact packs ready well before the 06:50 UK session
     - cron: '47 10 * * *'     # before the 12:50 UK session
     - cron: '23 18 * * *'     # before the 20:50 UK session, and evening numbers for the stats dashboard
+    - cron: '47 6,8,12,14,16 * * *'   # breaking-news checks between them: 6 topics, at most 2 Shorts (write.yml)
   push:
     branches: [main]
     paths: ['requests/refresh*']     # only a refresh request: other request files belong to other jobs
@@ -34,11 +35,13 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          BREAKING: ${{ github.event.schedule == '47 6,8,12,14,16 * * *' && '1' || '' }}
+          FACTPACK_TOPICS: ${{ github.event.schedule == '47 6,8,12,14,16 * * *' && '6' || '' }}
         run: |
           python pipeline/trends.py
           python pipeline/factpack.py build || echo "fact packs failed"
           python pipeline/report.py || echo "channel report failed"
-          python pipeline/analytics.py || echo "analytics failed"
+          [ -n "$BREAKING" ] || python pipeline/analytics.py || echo "analytics failed"
           python pipeline/review_page.py || echo "review page failed"
       - run: |
           git config user.name "quickplay-bot"

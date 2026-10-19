@@ -206,7 +206,7 @@ def build():
         print("GEMINI_API_KEY not set: no fact packs"); return
     research = json.loads((ROOT / "trends" / "research.json").read_text())
     today = str(dt.date.today())
-    limit, start = int(CFG.get("factpack_topics", 20)), time.time()
+    limit, start = int(os.environ.get("FACTPACK_TOPICS") or CFG.get("factpack_topics", 20)), time.time()
     packs, model, errors = [], None, []
     topics = research.get("topics") or []
     for i, cat in triage(topics, limit):
@@ -240,7 +240,7 @@ def build():
     if not packs:
         print("no packs built", errors[:3]); return
     OUT.write_text(json.dumps({"date": today, "built": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"),
-                               "model": model, "errors": errors[:10], "topics": packs}, ensure_ascii=False, indent=1))
+                               "model": model, "mode": "breaking" if os.environ.get("BREAKING") else "full", "errors": errors[:10], "topics": packs}, ensure_ascii=False, indent=1))
     print(f"{len(packs)} packs, {sum(len(p['verified']) for p in packs)} verified facts")
 
 

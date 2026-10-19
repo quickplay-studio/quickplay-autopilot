@@ -4,6 +4,8 @@ The 06:50 and 12:50 runs cover these first, newest request first, when they pass
 sources confirm them (a request is a lead, not a source). Then fill the rest of the day from trends/latest.json.
 When a request is covered, move it to Done with the Short's id; when it can't be, move it to Skipped with the reason.
 
+Standing note (Charlie, Monday 19 October): don't skip viral content; cover every big trend, including rumours and viral claims (said plainly to be unconfirmed). Skip only what the channel rules exclude (politics, crime, health claims, money advice, adult content, gambling, anything that could harm a real person).
+
 ## Requested Sunday 18 October (for Monday 19 October)
 - A2O MAY, "Bad Habits Tonite" (new K-pop video)
 - Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United

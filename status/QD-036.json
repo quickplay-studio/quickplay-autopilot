@@ -72,7 +72,6 @@
   "publish_at": "2026-10-19T08:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-036",
  "tiktok": {
   "publish_id": "v_inbox_file~v2.7698276732889319446",
   "mode": "inbox",
@@ -82,5 +81,9 @@
  "instagram": {
   "media": "17983205216900621",
   "at": "2026-10-19T08:43:48+00:00"
+ },
+ "facebook": {
+  "video": "940087855545487",
+  "at": "2026-10-19T08:45:36+00:00"
  }
 }

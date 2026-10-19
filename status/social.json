@@ -1,6 +1,6 @@
 {
- "checked": "2026-10-19T08:43:18+00:00",
- "instagram_checked": "2026-10-19T08:43:18+00:00",
+ "checked": "2026-10-19T08:45:20+00:00",
+ "instagram_checked": "2026-10-19T08:45:20+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -13,7 +13,7 @@
      "quota_total": 100,
      "quota_duration": 86400
     },
-    "quota_usage": 2
+    "quota_usage": 3
    }
   ],
   "today_cap": 6
@@ -23,7 +23,8 @@
   "page": "Quickplay Daily",
   "followers": 0,
   "today_cap": 6,
-  "key_type": "USER",
+  "key_type": "PAGE",
+  "key_from_user_key": true,
   "key_expires": "never",
   "key_valid": true,
   "scopes": [

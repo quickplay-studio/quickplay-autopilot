@@ -1,26 +1,23 @@
 {
- "updated": "2026-10-19T06:51+00:00",
+ "updated": "2026-10-19T07:53+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-19T06:04+00:00",
  "youtube": {
   "subscribers": 4,
-  "public_shorts": 25,
-  "views_all_time": 4374,
+  "public_shorts": 27,
+  "views_all_time": 4440,
   "views_last_90_days": 225,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 1911,
+  "views_last_90_days_estimate": 1940,
   "analytics_last_day": "2026-10-16"
  },
  "instagram": {
   "followers": 0,
-  "posts": 0,
+  "posts": 1,
   "insights_error": null
  },
- "tiktok": {
-  "followers": 0,
-  "videos": 0
- },
+ "tiktok": null,
  "ypp": {
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,

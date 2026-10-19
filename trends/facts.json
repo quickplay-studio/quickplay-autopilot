@@ -1,303 +1,289 @@
 {
  "date": "2026-10-19",
- "built": "2026-10-19T17:20+00:00",
- "model": "gemini-3-flash-preview",
- "mode": "breaking",
+ "built": "2026-10-19T19:09+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
  "errors": [
-  "jakarta: gemini-2.5-flash: 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use"
+  "Street Fighter (2026 film): gemini-2.5-flash: 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use"
  ],
  "topics": [
   {
-   "n": 4,
-   "topic": "lou sanders",
-   "signal": "Google Trends GB 500+",
-   "category": "",
+   "n": 28,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 153,028/h",
+   "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Did you know Lou Sanders was once an Ofcom complaints handler?",
-    "Lou Sanders won Taskmaster in 2019 and Dancing on Ice in 2024.",
-    "Comedian Lou Sanders moved out of her home at just 15."
+    "Olivia Rodrigo released a game-show parody video for her Expectations remix.",
+    "David Byrne makes a surprise cameo as a game-show host."
    ],
    "sources": [
     [
-     "‘We tried to levitate the Pentagon’: the almost unbelievable life of Ed Sanders, trickster god of the US counterculture",
-     "https://www.theguardian.com/music/2026/oct/19/ed-sanders-interview-the-fugs-film-counterculture",
-     "Guardian",
+     "Artists Behind Olivia Rodrigo ‘Expectations’ Music Video Debunk AI Accusations",
+     "https://www.rollingstone.com/music/music-news/olivia-rodrigo-expectations-ai-debunk-1235644671/",
+     "Rolling Stone",
      "2026-10-19"
     ],
     [
-     "lou sanders",
-     "https://en.wikipedia.org/wiki/Lou_Sanders",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Lou Sanders was a contestant on the sixteenth series of Dancing on Ice in 2024.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "she was a contestant on the sixteenth series of Dancing on Ice in 2024."
-     }
-    },
-    {
-     "claim": "Lou Sanders released her autobiography titled What's That Lady Doing? in August 2023.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In August 2023, Sanders released her autobiography What's That Lady Doing?."
-     }
-    },
-    {
-     "claim": "Lou Sanders hosted Taskmaster: The People's Podcast from April 2022 until September 2023.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "From April 2022 until September 2023, Sanders hosted Taskmaster: The People's Podcast."
-     }
-    },
-    {
-     "claim": "Lou Sanders has appeared as the sidekick to Mel Giedroyc on the comedy series Mel Giedroyc: Unforgivable since 2021.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Since 2021 she has appeared as Mel Giedroyc's sidekick on the Dave comedy series Mel Giedroyc: Unforgivable"
-     }
-    },
-    {
-     "claim": "Lou Sanders started hosting a podcast called Cuddle Club in February 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In February 2020, Sanders started hosting a podcast called Cuddle Club."
-     }
-    },
-    {
-     "claim": "Lou Sanders was declared the winner of the eighth series of Taskmaster in 2019.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Sanders was declared the winner of the eighth series of Taskmaster in 2019"
-     }
-    },
-    {
-     "claim": "Lou Sanders performed on series 15 episode 2 of Live at the Apollo in 2019.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2019, Sanders appeared on BBC Two's Live at the Apollo (series 15, episode 2)."
-     }
-    },
-    {
-     "claim": "Lou Sanders took her show Say Hello to Your New Step Mummy to the Edinburgh Festival Fringe in 2019.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "she returned to the Festival in 2019 with her show Say Hello to Your New Step Mummy."
-     }
-    },
-    {
-     "claim": "Lou Sanders won the Comedians' Choice Award for Best Show in 2018 for her show Shame Pig.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2018, her show Shame Pig was the joint winner of the Comedians' Choice Award for Best Show at the Edinburgh Festival Fringe"
-     }
-    },
-    {
-     "claim": "Lou Sanders wrote and starred in the short film Elderflower alongside Mike Wozniak and Tom Rosenthal.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Sanders wrote and starred in the short film Elderflower, which co-starred Sheila Reid, Tom Rosenthal and Mike Wozniak."
-     }
-    },
-    {
-     "claim": "Lou Sanders worked as a complaints handler at Ofcom before starting her comedy career.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Before beginning her career in comedy, Sanders worked in administrative roles, including executive PA and complaints-handler at Ofcom."
-     }
-    },
-    {
-     "claim": "Lou Sanders moved out of her family home at the age of 15.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Sanders moved out at the age of 15"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Lou_Sanders_at_BAFTA_2026_02.jpg"
-   ]
-  },
-  {
-   "n": 5,
-   "topic": "minior pokemon go",
-   "signal": "Google Trends GB 100+",
-   "category": "",
-   "what_is_new": "Minior made its debut in Pokémon Go on 19 October 2026 to coincide with the Orionids meteor shower.",
-   "hooks": [
-    "Minior has finally fallen into Pokémon Go during real world meteor showers!",
-    "You can earn one million Stardust during the new Minior Shower event!",
-    "Catch the Green Core Minior before the Orionids shower ends this Saturday!"
-   ],
-   "sources": [
-    [
-     "Pokémon Go Minior Showers schedule",
-     "https://www.eurogamer.net/pokemon-go-minior-showers-schedule",
-     "Eurogamer",
-     "2026-10-19"
+     "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "Billboard",
+     "2026-10-14"
     ],
     [
-     "Pokémon Go Minior Shower schedule",
-     "https://www.polygon.com/pokemon-go-minior-shower-schedule-how-to-find-shiny/",
-     "Polygon",
-     "2026-10-17"
-    ],
-    [
-     "minior pokemon go",
-     "https://en.wikipedia.org/wiki/Minior_(Pok%C3%A9mon)",
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Minior has two different forms in Pokémon Go known as Meteor and Core.",
+     "claim": "You Seem Pretty Sad for a Girl So in Love is the third studio album by Olivia Rodrigo.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "Minior has two forms: Meteor and Core.",
-      "2": "Minior also has two forms to use in battle."
-     }
-    },
-    {
-     "claim": "Minior will only be available in Pokémon Go during real world meteor showers.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "this Pokémon will only be available during specific Minior Showers which match up with real world meteor showers.",
-      "2": "it'll only be available during real-life meteor showers."
-     }
-    },
-    {
-     "claim": "The Orionids Minior Shower takes place from 19 October to 24 October.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Orionids Shower (Green Minior) Ends: Saturday 24th October at 11:59pm (local time)",
-      "2": "The next Minior Shower in Pokémon Go is from Oct. 19-24."
-     }
-    },
-    {
-     "claim": "Minior appears more frequently in the wild between 5pm and 9pm local time during these events.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Minior has increased spawn rates between 5pm to 9pm (local time) on every day during each meteor shower.",
-      "2": "During these meteor shower events, you'll be able to find Minior more often from 5-9 p.m. in your local time on the listed days."
-     }
-    },
-    {
-     "claim": "Minior changes from Meteor Form to Core Form when its HP drops below 50 percent.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Minior will remain in its Meteor form until its HP drops beneath 50% when it's coloured Core will be exposed.",
-      "2": "After losing 50% of its HP, the shell will break off and you'll be able to see its core."
-     }
-    },
-    {
-     "claim": "Minior can currently only change forms during Team Rocket battles and the Go Battle League.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Upon its initial release, Minior can only change forms when battling Team Rocket, including the leaders, and in the Go Battle League.",
-      "2": "As of writing this, Minior will only be able to change forms in PvP, against Team Go Rocket members, and against team leaders."
-     }
-    },
-    {
-     "claim": "Shiny Minior is not yet available in Pokémon Go.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "No, shiny Minior is not in Pokémon Go.",
-      "2": "Minior is not available shiny yet."
+      "2": "The track is part of Rodrigo’s third studio album, You Seem Pretty Sad for a Girl So in Love, which debuted at No. 1 on",
+      "3": "Her next two studio albums, Guts (2023) and You Seem Pretty Sad for a Girl So in Love (2026), produced the US number-one singles \"Vampire\""
      }
     }
    ],
    "one_source": [
     {
-     "claim": "The Gemininds shower is the only event where two different Minior colours will be released.",
+     "claim": "Olivia Rodrigo unveiled a music video for the Chappell Roan assisted remix of Expectations on Friday.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The exception to this is the Gemininds shower where two colours will be released - one for the Northern hemisphere and for the Southern."
+      "1": "On Friday, Olivia Rodrigo unveiled a music video for the Chappell Roan-assisted remix of “Expectations,” though some viewers believed AI may have been involved in"
      }
     },
     {
-     "claim": "Players can earn 1,000,000 Stardust by completing a bonus Timed Research quest.",
+     "claim": "Jack Harrison led the analog treatment for Expectations.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Reward: 1,000,000 Stardust"
+      "1": "Jack Harrison led the analog treatment for “Expectations,” which gives the video its retro, low-fi flair."
      }
     },
     {
-     "claim": "The Leonids Minior Shower is scheduled to occur from 14 November to 19 November.",
+     "claim": "David Byrne appears as a game show host in the Expectations music video.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It also features a wealth of cameos: David Byrne appears as a game-show host, while drag queen Aquaria and punk duo the Venus Twins appear"
+     }
+    },
+    {
+     "claim": "Expectations debuted at No. 20 on the Billboard Hot 100 in June 2026.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Leonids: Nov. 14-19"
-     }
-    },
-    {
-     "claim": "Shooting stars will appear in the game to indicate when the Minior spawn bonus is active.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "There will even be shooting stars in-game, so you know exactly when this bonus is active!"
+      "2": "“Expectations” has already had its individual moment on the charts, debuting at No. 20 on the Billboard Hot 100 in June 2026."
      }
     }
    ],
    "images": [
-    "commons:File:International_Pokémon_logo.svg"
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
    ]
+  },
+  {
+   "n": 12,
+   "topic": "spurs vs coventry",
+   "signal": "Google Trends US 20000+",
+   "category": "Sport",
+   "what_is_new": "Tottenham Hotspur faced Coventry City in the Premier League on Monday 19 October 2026.",
+   "hooks": [
+    "James Maddison makes his first start in 536 days for Spurs.",
+    "Dejan Kulusevski returns to the Spurs matchday squad after 526 days.",
+    "Tottenham host Coventry City in the Premier League."
+   ],
+   "sources": [
+    [
+     "Tottenham v Coventry: Premier League – live",
+     "https://www.theguardian.com/football/live/2026/oct/19/tottenham-v-coventry-premier-league-live",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "Tottenham host Coventry as search for first league win continues LIVE!",
+     "https://www.skysports.com/football/tottenham-hotspur-vs-coventry-city/live/559513",
+     "Sky Sports",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "James Maddison made his first start in 536 days for Spurs.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Taking a closer look, the headline news for Spurs is that James Maddison makes his first start in 536 days, while Dejan Kulusevski is in"
+     }
+    },
+    {
+     "claim": "Tatsuhiro Sakamoto came into the Coventry side for his first Premier League start.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Just the one change for Coventry, meanwhile: Ephron Mason-Clark drops to the bench, with Tatsuhiro Sakamoto coming in for his first Premier League start."
+     }
+    },
+    {
+     "claim": "Tosin Adarabioyo came in to make his first Premier League start for Tottenham.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Otherwise, by the looks of things, Roberto De Zerbi has to three at the back, with Tosin Adarabioyo coming in for his first Premier League"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "jason sudeikis",
+   "signal": "Google Trends US 5000+",
+   "category": "Film",
+   "what_is_new": "Jason Sudeikis recently gave an update on the potential for fifth and sixth seasons of Ted Lasso during a podcast interview.",
+   "hooks": [
+    "Could Ted Lasso return for Season 6? Jason Sudeikis gives an update.",
+    "Did you know Jason Sudeikis was born with no sense of smell?",
+    "Jason Sudeikis went to college on a basketball scholarship before finding fame."
+   ],
+   "sources": [
+    [
+     "Jason Sudeikis Gives Update On Potential ‘Ted Lasso’ Seasons 5 & 6",
+     "https://deadline.com/2026/10/ted-lasso-seasons-5-6-jason-sudeikis-comments-1237167324/",
+     "Deadline",
+     "2026-10-18"
+    ],
+    [
+     "jason sudeikis",
+     "https://en.wikipedia.org/wiki/Jason_Sudeikis",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Jason Sudeikis co-created and starred in the title role of the sports comedy series Ted Lasso.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "After all, show co-creator Jason Sudeikis thought the series would end with Season 3.",
+      "2": "in addition to co-creating and starring as the title role in the Apple TV sports comedy series Ted Lasso"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Jason Sudeikis stated on the Talk Easy with Sam Fragoso podcast that a writers room has not yet been started for more Ted Lasso seasons.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "We haven’t started a writers’ room or anything like that."
+     }
+    },
+    {
+     "claim": "Jason Sudeikis was born with anosmia which means he has no sense of smell.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sudeikis was born with anosmia, leaving him with no sense of smell."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Jason_Sudeikis_-_How_to_Start.jpg"
+   ]
+  },
+  {
+   "n": 15,
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 340,362 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Discover how Jailer 2 became a global box office hit!",
+    "Find out all about the record-breaking release of Jailer 2!",
+    "Everything you need to know about the new hit film Jailer 2!"
+   ],
+   "sources": [
+    [
+     "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "Variety",
+     "2026-10-19"
+    ],
+    [
+     "Jailer 2",
+     "https://en.wikipedia.org/wiki/Jailer_2",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Indian superstar Rajinikanth’s Tamil-language action comedy “Jailer 2” was the second-biggest film in the world over the Oct. 16–18 weekend, grossing $31.2 million, according to",
+      "2": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar."
+     }
+    },
+    {
+     "claim": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
+      "2": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
+     }
+    },
+    {
+     "claim": "The film has music composed by Anirudh Ravichander, cinematography by Vijay Kartik Kannan and editing by R. Nirmal.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
+      "2": "The film has music composed by Anirudh Ravichander, cinematography by Vijay Kartik Kannan and editing by R. Nirmal."
+     }
+    },
+    {
+     "claim": "Sun Pictures officially announced the sequel to Jailer in January 2025.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
+      "2": "Sun Pictures officially announced the sequel to Jailer in January 2025."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
   }
  ]
 }

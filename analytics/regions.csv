@@ -1,49 +1,65 @@
 kind,country,views,share_pct,avg_viewed_pct,subs_gained,shorts_seen,best_category,best_format,best_hook,best_length,top_short,dimension,value,shorts,views_per_short,lift
 fit,US,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
-fit,US,73,,,,,,,,,,Category,Film,3,24.3,3.5
-fit,US,0,,,,,,,,,,Category,Gaming,4,0.0,0.43
-fit,US,0,,,,,,,,,,Category,Music,5,0.0,0.38
+fit,US,148,,,,,,,,,,Category,Film,5,29.6,1.66
+fit,US,66,,,,,,,,,,Category,Gaming,6,11.0,0.84
+fit,US,116,,,,,,,,,,Category,Music,6,19.3,1.23
 fit,US,0,,,,,,,,,,Category,Science,1,0.0,0.75
 fit,US,0,,,,,,,,,,Category,Sport,1,0.0,0.75
 fit,US,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-country,US,109,35.6,46.6,0,1,"Film (3.5x, 3 Shorts)",,,,Why Godzilla Minus Zero is a big deal 🦖 (73 views),,,,,
+country,US,480,30.9,63.5,0,4,"Film (1.7x, 5 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (116 views),,,,,
 fit,GB,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
-fit,GB,0,,,,,,,,,,Category,Film,3,0.0,0.5
-fit,GB,0,,,,,,,,,,Category,Gaming,4,0.0,0.43
-fit,GB,32,,,,,,,,,,Category,Music,5,6.4,2.63
+fit,GB,0,,,,,,,,,,Category,Film,5,0.0,0.38
+fit,GB,0,,,,,,,,,,Category,Gaming,6,0.0,0.33
+fit,GB,69,,,,,,,,,,Category,Music,6,11.5,2.89
 fit,GB,0,,,,,,,,,,Category,Science,1,0.0,0.75
 fit,GB,0,,,,,,,,,,Category,Sport,1,0.0,0.75
 fit,GB,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-country,GB,63,20.6,46.1,0,1,"Music (2.6x, 5 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (32 views),,,,,
-fit,ES,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
-fit,ES,0,,,,,,,,,,Category,Film,3,0.0,0.5
-fit,ES,0,,,,,,,,,,Category,Gaming,4,0.0,0.43
-fit,ES,43,,,,,,,,,,Category,Music,5,8.6,2.62
-fit,ES,0,,,,,,,,,,Category,Science,1,0.0,0.75
-fit,ES,0,,,,,,,,,,Category,Sport,1,0.0,0.75
-fit,ES,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-country,ES,46,15.0,49.7,0,1,"Music (2.6x, 5 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (43 views),,,,,
+country,GB,171,11.0,46.4,0,2,"Music (2.9x, 6 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
 fit,IN,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
-fit,IN,32,,,,,,,,,,Category,Film,3,10.7,3.5
-fit,IN,0,,,,,,,,,,Category,Gaming,4,0.0,0.43
-fit,IN,0,,,,,,,,,,Category,Music,5,0.0,0.38
+fit,IN,73,,,,,,,,,,Category,Film,5,14.6,2.18
+fit,IN,0,,,,,,,,,,Category,Gaming,6,0.0,0.33
+fit,IN,43,,,,,,,,,,Category,Music,6,7.2,1.28
 fit,IN,0,,,,,,,,,,Category,Science,1,0.0,0.75
 fit,IN,0,,,,,,,,,,Category,Sport,1,0.0,0.75
 fit,IN,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-country,IN,44,14.4,49.0,0,1,"Film (3.5x, 3 Shorts)",,,,Why Godzilla Minus Zero is a big deal 🦖 (32 views),,,,,
+country,IN,165,10.6,49.1,0,2,"Film (2.2x, 5 Shorts)",,,,Why Godzilla Minus Zero is a big deal 🦖 (73 views),,,,,
+fit,KR,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
+fit,KR,0,,,,,,,,,,Category,Film,5,0.0,0.38
+fit,KR,0,,,,,,,,,,Category,Gaming,6,0.0,0.33
+fit,KR,121,,,,,,,,,,Category,Music,6,20.2,2.89
+fit,KR,0,,,,,,,,,,Category,Science,1,0.0,0.75
+fit,KR,0,,,,,,,,,,Category,Sport,1,0.0,0.75
+fit,KR,0,,,,,,,,,,Category,Tech,2,0.0,0.6
+country,KR,132,8.5,54.3,0,1,"Music (2.9x, 6 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (121 views),,,,,
+fit,ES,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
+fit,ES,0,,,,,,,,,,Category,Film,5,0.0,0.38
+fit,ES,0,,,,,,,,,,Category,Gaming,6,0.0,0.33
+fit,ES,106,,,,,,,,,,Category,Music,6,17.7,2.89
+fit,ES,0,,,,,,,,,,Category,Science,1,0.0,0.75
+fit,ES,0,,,,,,,,,,Category,Sport,1,0.0,0.75
+fit,ES,0,,,,,,,,,,Category,Tech,2,0.0,0.6
+country,ES,130,8.4,58.3,0,1,"Music (2.9x, 6 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (106 views),,,,,
 fit,PH,0,,,,,,,,,,Category,Entertainment,2,0.0,1.0
-fit,PH,0,,,,,,,,,,Category,Film,3,0.0,1.0
-fit,PH,0,,,,,,,,,,Category,Gaming,4,0.0,1.0
-fit,PH,0,,,,,,,,,,Category,Music,5,0.0,1.0
+fit,PH,0,,,,,,,,,,Category,Film,5,0.0,1.0
+fit,PH,0,,,,,,,,,,Category,Gaming,6,0.0,1.0
+fit,PH,0,,,,,,,,,,Category,Music,6,0.0,1.0
 fit,PH,0,,,,,,,,,,Category,Science,1,0.0,1.0
 fit,PH,0,,,,,,,,,,Category,Sport,1,0.0,1.0
 fit,PH,0,,,,,,,,,,Category,Tech,2,0.0,1.0
-country,PH,23,7.5,65.3,0,0,,,,,,,,,,
-fit,IE,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
-fit,IE,0,,,,,,,,,,Category,Film,3,0.0,0.5
-fit,IE,0,,,,,,,,,,Category,Gaming,4,0.0,0.43
-fit,IE,19,,,,,,,,,,Category,Music,5,3.8,2.62
-fit,IE,0,,,,,,,,,,Category,Science,1,0.0,0.75
-fit,IE,0,,,,,,,,,,Category,Sport,1,0.0,0.75
-fit,IE,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-country,IE,21,6.9,47.5,0,1,"Music (2.6x, 5 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (19 views),,,,,
+country,PH,96,6.2,55.0,0,0,,,,,,,,,,
+fit,DE,0,,,,,,,,,,Category,Entertainment,2,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Film,5,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Gaming,6,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Music,6,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Science,1,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Sport,1,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Tech,2,0.0,1.0
+country,DE,73,4.7,47.6,0,0,,,,,,,,,,
+fit,NG,0,,,,,,,,,,Category,Entertainment,2,0.0,0.6
+fit,NG,0,,,,,,,,,,Category,Film,5,0.0,0.38
+fit,NG,0,,,,,,,,,,Category,Gaming,6,0.0,0.33
+fit,NG,42,,,,,,,,,,Category,Music,6,7.0,2.89
+fit,NG,0,,,,,,,,,,Category,Science,1,0.0,0.75
+fit,NG,0,,,,,,,,,,Category,Sport,1,0.0,0.75
+fit,NG,0,,,,,,,,,,Category,Tech,2,0.0,0.6
+country,NG,51,3.3,50.2,0,1,"Music (2.9x, 6 Shorts)",,,,Ayra Starr just made NFL history 🏈 (42 views),,,,,

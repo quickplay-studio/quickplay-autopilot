@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Mon 19 Oct, 19:47): 5 of 1,000 subscribers · 2,648 of 10 million Shorts views in 90 days · 2,206 views in the last 24 hours (about 111,082 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Mon 19 Oct, 20:09): 5 of 1,000 subscribers · 2,149 of 10 million Shorts views in 90 days · 2,302 views in the last 24 hours (about 111,087 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Mon 19 Oct 18:20 (UK): 0 scheduled, 41 public, 19 uploads in the last 24 hours.
+YouTube checked Mon 19 Oct 20:09 (UK): 3 scheduled, 41 public, 21 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 13:08).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 20 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Mon 19 Oct | 16 public, 3 scheduled | 6 | 6 | ⏳ 16 of 24 so far, 3 more scheduled |
+| Mon 19 Oct | 17 public, 2 scheduled | 6 | 6 | ⏳ 17 of 24 so far, 2 more scheduled |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
 | Fri 16 Oct | 0 public | 0 | 0 | no target then |
@@ -32,6 +32,21 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
 
 ## On the channel (latest first)
+
+### Mon 19 Oct 21:30 · Usain Bolt's 9.58: still unbeaten ⚡
+scheduled · 26 s · music: cued-for-liftoff · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
+
+![QD-031](QD-031.jpg)
+
+### Mon 19 Oct 20:50 · Octopus: three hearts and blue blood 🐙
+scheduled · 26 s · music: try-to-catch-me · [script](../boards/done/QD-030.json) · [YouTube](https://youtube.com/shorts/gc3iMpgf_QY)
+
+![QD-030](QD-030.jpg)
+
+### Mon 19 Oct 20:10 · Why we only ever see one side of the Moon 🌕
+private · 36 s · music: horizons · [script](../boards/done/QD-029.json) · [YouTube](https://youtube.com/shorts/qqNeX2xpKl8)
+
+![QD-029](QD-029.jpg)
 
 ### Mon 19 Oct 17:30 · The Beekeeper 2 teaser: who's new, who's back 🐝
 public · 3 views · 25 s · music: once-upon-a-time · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
@@ -64,15 +79,15 @@ public · 9 views · 23 s · music: in-battery · [script](../boards/done/QD-041
 ![QD-041](QD-041.jpg)
 
 ### Mon 19 Oct 13:30 · Why Star Wars fans love Biddy Blas 🛸
-public · 65 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
+public · 88 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
-public · 31 views · 30 s · music: f16 · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
+public · 41 views · 30 s · music: f16 · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
 
 ![QD-042](QD-042.jpg)
 
 ### Mon 19 Oct 12:10 · What was the first music video on MTV? 📺
-public · 45 views · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
+public · 71 views · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
 
 ![QD-038](QD-038.jpg)
 
@@ -90,22 +105,22 @@ public · 148 views · 27 s · music: stake-out · on Instagram · on Facebook �
 ![QD-039](QD-039.jpg)
 
 ### Mon 19 Oct 10:10 · Arsenal's 1st shot on target came in minute 80 ⚽
-public · 254 views · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
+public · 261 views · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
 
 ![QD-037](QD-037.jpg)
 
 ### Mon 19 Oct 9:30 · GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵
-public · 72 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
+public · 98 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
 
 ![QD-036](QD-036.jpg)
 
 ### Mon 19 Oct 8:50 · LOUD: first team to win VALORANT Champions 2x 🏆
-public · 98 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
+public · 157 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
 
 ![QD-035](QD-035.jpg)
 
 ### Mon 19 Oct 8:10 · Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤
-public · 240 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
+public · 300 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
 
 ![QD-034](QD-034.jpg)
 
@@ -128,7 +143,7 @@ public · 38 views · [script](../backlog/QD-017) · [YouTube](https://youtube.c
 public · 208 views · [script](../backlog/QD-015) · [YouTube](https://youtube.com/shorts/1TybFV5ymho)
 
 ### Sun 18 Oct 13:30 · How a YouTube video became A24's biggest film 🎬
-public · 123 views · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts/CMVRXkJYI5M)
+public · 126 views · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts/CMVRXkJYI5M)
 
 ### Sun 18 Oct 12:00 · How a smiley ball became Minecraft's creepiest monster 😳
 public · 106 views · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
@@ -140,7 +155,7 @@ public · 73 views · [script](../backlog/QD-012) · [YouTube](https://youtube.c
 public · 68 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
 
 ### Sat 17 Oct 19:30 · Why this road closure has a 43-mile diversion 🚗
-public · 44 views · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
+public · 46 views · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
 
 ### Sat 17 Oct 18:00 · Disney's next film isn't a sequel ✨
 public · 68 views · [script](../backlog/QD-003) · [YouTube](https://youtube.com/shorts/gRwexd3oTMY)
@@ -149,10 +164,10 @@ public · 68 views · [script](../backlog/QD-003) · [YouTube](https://youtube.c
 public · 107 views · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
 
 ### Sat 17 Oct 15:00 · Why KPop Demon Hunters 2 won't come until 2029 🎶
-public · 261 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
+public · 263 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
-public · 1,175 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
+public · 1,177 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
 public · 452 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
@@ -171,12 +186,3 @@ public · 33 views · [YouTube](https://youtube.com/shorts/yXycMniI-W8)
 
 ### Fri 16 Oct 18:00 · Why Godzilla Minus Zero is a big deal 🦖
 public · 548 views · [YouTube](https://youtube.com/shorts/oQMMFN0TmvA)
-
-### Fri 16 Oct 16:30 · This game was cancelled. Now it's back 🎮
-public · 23 views · [YouTube](https://youtube.com/shorts/YYAteEVllOs)
-
-### Fri 16 Oct 15:00 · Fontaines D.C.'s first ever guest is ROSALÍA 🎻
-public · 437 views · [YouTube](https://youtube.com/shorts/h9qlBjDr2uA)
-
-### Fri 16 Oct 13:30 · From lucky loser to beating the world No. 4 🎾
-public · 261 views · [YouTube](https://youtube.com/shorts/hAYaCpI7v5A)

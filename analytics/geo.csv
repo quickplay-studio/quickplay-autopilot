@@ -1,12 +1,27 @@
 scope,country,views,share_pct
-channel,US,109,35.6
-channel,GB,63,20.6
-channel,ES,46,15.0
-channel,IN,44,14.4
-channel,PH,23,7.5
-channel,IE,21,6.9
-category: Film,US,73,69.5
-category: Film,IN,32,30.5
-category: Music,ES,43,45.7
-category: Music,GB,32,34.0
-category: Music,IE,19,20.2
+channel,US,480,30.9
+channel,GB,171,11.0
+channel,IN,165,10.6
+channel,KR,132,8.5
+channel,ES,130,8.4
+channel,PH,96,6.2
+channel,DE,73,4.7
+channel,NG,51,3.3
+channel,CA,44,2.8
+channel,JP,44,2.8
+channel,ID,41,2.6
+channel,AU,36,2.3
+channel,MY,35,2.3
+channel,ZA,34,2.2
+channel,IE,21,1.4
+category: Film,US,148,67.0
+category: Film,IN,73,33.0
+category: Gaming,US,66,100.0
+category: Music,KR,121,21.9
+category: Music,US,116,21.0
+category: Music,ES,106,19.2
+category: Music,GB,69,12.5
+category: Music,IN,43,7.8
+category: Music,NG,42,7.6
+category: Music,ID,37,6.7
+category: Music,IE,19,3.4

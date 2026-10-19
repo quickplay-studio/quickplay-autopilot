@@ -161,12 +161,6 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Hull_City_A.F.C.",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "Residents' concerns after Hull City car crashes",
-     "url": "https://www.bbc.com/news/articles/ckgelg0ql34xo",
-     "published": "2026-10-18"
-    },
-    {
      "outlet": "Guardian",
      "title": "Police investigate Reform mayor for allegedly sharing ‘naked and sexualised’ images of himself",
      "url": "https://www.theguardian.com/politics/2026/oct/18/police-investigate-reform-mayor-allegedly-sharing-naked-sexualised-images-of-himself",
@@ -254,12 +248,6 @@
      "title": "Zelda: Ocarina of Time remake returns with a brand-new feature: Hall of Fallen Foes",
      "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-new-feature/",
      "published": "2026-10-14"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "The Ocarina of Time remake feels remarkably modern — and surprisingly terrifying",
-     "url": "https://www.theverge.com/games/1010101/zelda-ocarina-of-time-remake-switch-2-preview-hands-on",
-     "published": "2026-10-14"
     }
    ]
   },
@@ -273,19 +261,6 @@
      "title": "How Katie Boulter and Alex de Minaur live their tennis lives, together and apart",
      "url": "https://www.nytimes.com/athletic/7512448/2026/08/27/tennis-katie-boulter-alex-de-minaur-couple-ritual-performance/",
      "published": "2026-08-27"
-    }
-   ]
-  },
-  {
-   "topic": "italy",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Italy",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The fascinating tale of a heart that died twice: best podcasts of the week",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/19/the-fascinating-tale-of-a-heart-that-died-twice-best-podcasts-of-the-week",
-     "published": "2026-10-19"
     }
    ]
   },
@@ -427,6 +402,12 @@
      "published": "2026-10-19"
     },
     {
+     "outlet": "Polygon",
+     "title": "Street Fighter’s best live-action movie yet is now free on streaming",
+     "url": "https://www.polygon.com/street-fighter-1994-streaming-free-tubi-pluto-tv/",
+     "published": "2026-10-15"
+    },
+    {
      "outlet": "IGN",
      "title": "Street Fighter (2026 Movie) Guide",
      "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
@@ -519,12 +500,6 @@
      "title": "RJ Mitte's mom opens up about 'red flag' before finding her son dead",
      "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/18/rj-mitte-mom-suicide-warning-signs/92320591007/",
      "published": "2026-10-18"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Aaron Paul Remembers Last Time He Saw ‘Breaking Bad’ Co-Star RJ Mitte: ‘I Kept Calling You Superman’",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/aaron-paul-breaking-bad-rj-mitte-tribute-1235642999/",
-     "published": "2026-10-13"
     }
    ]
   },
@@ -533,12 +508,6 @@
    "signal": "Wikipedia 91,434 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Milwaukee_Brewers",
    "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Get the Milwaukee Journal Sentinel's historic Brewers front page",
-     "url": "https://www.usatoday.com/story/news/local/2026/10/16/milwaukee-brewers-world-series-2026-journal-sentinel-front-page/92289034007/",
-     "published": "2026-10-16"
-    },
     {
      "outlet": "CNN",
      "title": "Milwaukee Brewers end the Dodgers’ quest for a third straight title, sweeping LA to earn a trip to the World Series",
@@ -565,10 +534,29 @@
      "published": "2026-10-16"
     },
     {
+     "outlet": "Deadline",
+     "title": "‘Whalefall’ Review: Austin Abrams Wrestles With Grief, Toxic Masculinity & Grotesque Whale Innards In Emotionally Gutsy Body Horror",
+     "url": "https://deadline.com/2026/10/whalefall-review-austin-abrams-josh-brolin-emotional-body-horror-1237166094/",
+     "published": "2026-10-16"
+    },
+    {
      "outlet": "New York Times",
      "title": "‘Whalefall’ Review: In the Belly of the Beast",
      "url": "https://www.nytimes.com/2026/10/15/movies/whalefall-review.html",
      "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "Grand Theft Auto VI Launch Trailer",
+   "signal": "YouTube GB 506,106/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI_Launch_Trailer",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
+     "url": "https://www.gamespot.com/articles/gta-6-is-taking-over-miami-amid-pushback-from-officials-were-depicting-miami-like-a-murder-capital/",
+     "published": "2026-10-16"
     }
    ]
   },
@@ -598,13 +586,13 @@
   },
   {
    "topic": "Zara Larsson",
-   "signal": "YouTube GB-music 51,489/h",
+   "signal": "YouTube GB-music 51,472/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   },
   {
    "topic": "Anuel AA",
-   "signal": "YouTube US-music 90,412/h",
+   "signal": "YouTube US-music 90,402/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }

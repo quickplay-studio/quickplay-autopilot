@@ -1,17 +1,17 @@
 feature,feature_label,value,n,lift,median_rel,verdict,held_3s_pct,avg_viewed_pct,subs_per_1k,shares_per_1k,why
-category,Category,Music,5,1.56,2.78,push,,51,0.0,0.0,"likes per 1,000 views 14 vs 4 typical; engaged views 41% vs 37% typical"
-category,Category,Film,3,1.36,2.61,early sign,,43,0.0,0.0,"likes per 1,000 views 19 vs 4 typical; engaged views 56% vs 37% typical"
-category,Category,Sport,1,1.13,1.65,too few to tell,,54,0.0,0.0,
-category,Category,Gaming,3,0.87,1.0,early sign,,69,0.0,0.0,
-category,Category,Tech,2,0.86,0.7,too few to tell,,,,,
-category,Category,Science,1,0.68,0.22,too few to tell,,37,0.0,0.0,
-category,Category,Entertainment,2,0.62,0.33,too few to tell,,55,0.0,0.0,
-slot,Posting time (UK),11:00 to 13:59,4,1.54,2.74,early sign,,54,0.0,0.0,"likes per 1,000 views 18 vs 4 typical"
-slot,Posting time (UK),08:00 to 10:59,1,1.26,2.52,too few to tell,,,,,
-slot,Posting time (UK),14:00 to 16:59,4,1.03,1.8,early sign,,46,0.0,1.2,
-slot,Posting time (UK),17:00 to 19:59,4,0.81,0.54,early sign,,49,0.0,0.0,
-slot,Posting time (UK),20:00 to 22:59,4,0.72,0.7,early sign,,68,0.0,0.0,"likes per 1,000 views 0 vs 4 typical"
-title_style,Title,number in title,5,1.21,1.65,about typical,,76,0.0,0.0,"likes per 1,000 views 19 vs 4 typical; average viewed 76% vs 51% typical"
-title_style,Title,statement,12,0.93,0.7,about typical,,43,0.0,0.0,
-weekday,Day posted,Saturday,9,1.35,1.0,early sign,,87,0.0,0.0,"likes per 1,000 views 14 vs 4 typical; engaged views 100% vs 37% typical"
-weekday,Day posted,Friday,8,0.75,0.65,early sign,,47,0.0,0.0,"likes per 1,000 views 3 vs 4 typical"
+category,Category,Music,5,1.56,2.86,push,,51,0.0,0.0,"likes per 1,000 views 14 vs 4 typical; engaged views 41% vs 37% typical"
+category,Category,Film,3,1.37,2.73,early sign,,43,0.0,0.0,"likes per 1,000 views 19 vs 4 typical; engaged views 56% vs 37% typical"
+category,Category,Sport,1,1.15,1.73,too few to tell,,54,0.0,0.0,
+category,Category,Gaming,3,0.89,1.04,early sign,,69,0.0,0.0,
+category,Category,Tech,2,0.88,0.73,too few to tell,,,,,
+category,Category,Science,1,0.69,0.23,too few to tell,,37,0.0,0.0,
+category,Category,Entertainment,2,0.64,0.34,too few to tell,,55,0.0,0.0,
+slot,Posting time (UK),11:00 to 13:59,4,1.55,2.86,early sign,,54,0.0,0.0,"likes per 1,000 views 18 vs 4 typical"
+slot,Posting time (UK),08:00 to 10:59,1,1.27,2.64,too few to tell,,,,,
+slot,Posting time (UK),14:00 to 16:59,4,1.05,1.86,early sign,,46,0.0,1.2,
+slot,Posting time (UK),17:00 to 19:59,4,0.82,0.55,early sign,,49,0.0,0.0,
+slot,Posting time (UK),20:00 to 22:59,4,0.74,0.73,early sign,,68,0.0,0.0,"likes per 1,000 views 0 vs 4 typical"
+title_style,Title,number in title,5,1.25,1.73,about typical,,76,0.0,0.0,"likes per 1,000 views 19 vs 4 typical; average viewed 76% vs 51% typical"
+title_style,Title,statement,12,0.95,0.73,about typical,,43,0.0,0.0,
+weekday,Day posted,Saturday,9,1.39,1.0,early sign,,87,0.0,0.0,"likes per 1,000 views 14 vs 4 typical; engaged views 100% vs 37% typical"
+weekday,Day posted,Friday,8,0.76,0.66,early sign,,47,0.0,0.0,"likes per 1,000 views 3 vs 4 typical"

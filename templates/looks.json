@@ -26,7 +26,7 @@
     "minimal": {
      "desc": "sentence case, white with a soft shadow and no outline or panel, the spoken word full white and the rest dimmed, up to 4 words, lower third",
      "group": 4,
-     "retired": "pending test render TEST-W1019 (2026-10-19)"
+     "tested": "TEST-W1019, 2026-10-19: clean and legible on dark and bright frames, YouTube and social layouts"
     }
    }
   },
@@ -75,8 +75,7 @@
      "desc": "slow drifts, the lightest punch-in only on the hook and payoff",
      "motion": 0.55,
      "punch": 0.02,
-     "beat_punches": false,
-     "retired": "pending test render TEST-W1019 (2026-10-19)"
+     "beat_punches": false
     }
    }
   },

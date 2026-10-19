@@ -40,12 +40,12 @@ scheduled · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040
 ![QD-040](QD-040.jpg)
 
 ### Mon 19 Oct 10:50 · Street Fighter movie: Roman Reigns is Akuma 🥋
-scheduled · 27 s · music: stake-out · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
+private · 27 s · music: stake-out · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
 
 ![QD-039](QD-039.jpg)
 
 ### Mon 19 Oct 10:10 · Arsenal's 1st shot on target came in minute 80 ⚽
-scheduled · 30 s · music: rise-of-the-machines · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
+private · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
 
 ![QD-037](QD-037.jpg)
 

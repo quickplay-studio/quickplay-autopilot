@@ -12,7 +12,8 @@ Approval is "flagged": only flagged Shorts wait for Charlie, so the evening batc
 - Never open status files one by one: `python pipeline/digest.py` prints everything you need in one go.
 - Read only what you need: the Recipe and drivers at the top of analytics/insights.md, the topics you pick from
   trends/research.json.
-- Two reputable sources per fact is the rule: stop fetching once two state it (official plus one outlet, or two outlets).
+- Fact packs first (see Facts): a verified fact needs no fetching. Otherwise two reputable sources per fact is the rule:
+  stop fetching once two state it (official plus one outlet, or two outlets).
 - Write boards as compact JSON (no indentation). Leave out what has a default.
 - Wait for renders with ONE background command, `python pipeline/wait_renders.py <ids>`, never repeated polling.
 - No rendering, no browsing beyond the sources you check, no recap messages.
@@ -64,7 +65,14 @@ from every Short against Shorts posted around the same time) and the drivers beh
   #Trending, #Gaming or #KPop. Never #viral, never anything unrelated. `meta.tags`: 5 to 15 phrases people would search.
 
 ## Facts (the part that matters most)
-- Every factual claim needs two reputable sources that you opened in this session and that state it.
+- Every factual claim needs two reputable sources that state it: a verified fact from a fact pack, or pages you opened
+  in this session.
+- Fact packs (GitHub, about an hour before each run): `python pipeline/factpack.py show` lists the day's topics (numbers
+  match trends/research.json) with how many facts are verified; `python pipeline/factpack.py show <n> <n>` prints the
+  packs you pick. A verified fact was found word for word in two of the day's reputable pages (one Wikipedia page at
+  most) with its numbers matching, so it counts as checked: copy the pack's sources into `meta.sources` in the same
+  order (add any you open yourself after them) and cite each fact by those numbers. One-source facts, and anything not
+  in a pack, still need two sources you open yourself.
   Cite the exact page that states it, never a homepage or a search page.
 - Good sources: the official source (publisher, studio, team, league, label, agency, NASA and the like) and
   established outlets (BBC, Guardian, Reuters, AP, The Verge, IGN, Eurogamer, Variety, Billboard, ESPN, Nature...).
@@ -102,10 +110,11 @@ one waits for Charlie's "reserve approve all" (a line starting with "reserve" in
    an announcement), and the target day's 2 evergreen search Shorts. Fill the rest of the day to match the Recipe in
    analytics/insights.md: its category mix for about 80% of the day (the other 20% on whatever trends hardest), and lean
    towards the formats, hook styles, title styles and lengths it lists. Breaking news still beats the mix. The 12:50 run
-   looks for what has broken or grown since the morning (trends refresh at 11:35 UTC) and skips anything the morning run
-   already covered. trends/research.json lists recent articles from
-   reputable outlets and the Wikipedia page for each top trend: open those first and search only for what's missing.
-4. For each topic: open the sources, choose a format, write the board, add hard names to `pipeline/pronounce.json`.
+   looks for what has broken or grown since the morning (trends and fact packs refresh about an hour before each run) and
+   skips anything the morning run already covered. Start from the fact packs (see Facts): they cover the top topics'
+   articles and Wikipedia pages from trends/research.json; open pages yourself only for what a pack lacks.
+4. For each topic: read its fact pack (open sources only for what it lacks), choose a format, write the board, add hard
+   names to `pipeline/pronounce.json`.
 5. Run `python pipeline/validate.py boards/queue/<new files>` and fix every error. Warnings: fix them, or keep the
    board and add a `flag` saying why it is fine.
 6. Commit all new boards in ONE commit to boards/queue/, push.

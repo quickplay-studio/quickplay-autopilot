@@ -66,14 +66,13 @@ from every Short against Shorts posted around the same time) and the drivers beh
 
 ## Facts (the part that matters most)
 - Every factual claim needs two reputable sources that state it: a verified fact from a fact pack, or pages you opened
-  in this session.
+  in this session. Cite the exact page that states it, never a homepage or a search page.
 - Fact packs (GitHub, about an hour before each run): `python pipeline/factpack.py show` lists the day's topics (numbers
   match trends/research.json) with how many facts are verified; `python pipeline/factpack.py show <n> <n>` prints the
   packs you pick. A verified fact was found word for word in two of the day's reputable pages (one Wikipedia page at
   most) with its numbers matching, so it counts as checked: copy the pack's sources into `meta.sources` in the same
   order (add any you open yourself after them) and cite each fact by those numbers. One-source facts, and anything not
   in a pack, still need two sources you open yourself.
-  Cite the exact page that states it, never a homepage or a search page.
 - Good sources: the official source (publisher, studio, team, league, label, agency, NASA and the like) and
   established outlets (BBC, Guardian, Reuters, AP, The Verge, IGN, Eurogamer, Variety, Billboard, ESPN, Nature...).
   Aim for three: the official source plus two outlets. Cite the outlet's own site, never a site that reposts it.

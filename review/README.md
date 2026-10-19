@@ -35,12 +35,12 @@ scheduled · 24 s · music: after-sunset · [script](../boards/done/QD-038.json)
 scheduled · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Mon 19 Oct 11:30 · Why is a marathon 26.2 miles? 🏃
-scheduled · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)
+private · 29 s · music: scale-the-mountain · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)
 
 ![QD-040](QD-040.jpg)
 
 ### Mon 19 Oct 10:50 · Street Fighter movie: Roman Reigns is Akuma 🥋
-public · 28 views · 27 s · music: stake-out · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
+public · 28 views · 27 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
 
 ![QD-039](QD-039.jpg)
 

@@ -1,5 +1,5 @@
 {
- "date": "2026-10-18",
+ "date": "2026-10-19",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
@@ -193,271 +193,275 @@
    ]
   },
   {
-   "topic": "justin herbert",
+   "topic": "clocks change",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Justin_Herbert",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Five Great Reads: cocaine nation, a 28-year walk home, and Americans give their verdict on Trump",
-     "url": "https://www.theguardian.com/australia-news/2026/oct/16/cocaine-nation-a-28-year-walk-home-and-americans-give-their-verdict-on-trump",
+     "title": "Fake Linda and me: the Agatha Christie-worthy mystery of the fraudster who stole my byline",
+     "url": "https://www.theguardian.com/technology/2026/oct/17/fake-linda-and-me-mystery-fraudster-stole-my-byline",
+     "published": "2026-10-17"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Will the clocks change this year? The latest on daylight saving bill",
+     "url": "https://www.usatoday.com/story/news/politics/2026/10/05/will-the-clocks-change-this-year-trump-doesnt-want-them-to/92101977007/",
+     "published": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "topic": "aberfan disaster",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Aberfan_disaster",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘It’s miserable’: London tower residents fear disaster with post-Grenfell scaffolding still up",
+     "url": "https://www.theguardian.com/society/2026/oct/19/london-tower-residents-fear-disaster-post-grenfell-scaffolding",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Aberfan: 60 years on from the disaster, a survivor shares his story",
+     "url": "https://www.bbc.co.uk/newsround/videos/cm040dny6362o",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "The Telegraph",
+     "title": "What’s on TV tonight: Aberfan: The Village That Fought Back, and more",
+     "url": "https://www.telegraph.co.uk/tv/0/whats-on-tv-guide-strictly-kevin-mccloud/",
      "published": "2026-10-16"
     }
    ]
   },
   {
-   "topic": "jesse eisenberg",
+   "topic": "birmingham weather",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jesse_Eisenberg",
+   "wikipedia": "https://en.wikipedia.org/wiki/Birmingham_Water_Act_1826",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "Julianne Moore Says ‘The Debut’ Is ‘One of the Best Scripts I’ve Ever Read’ as Jesse Eisenberg’s Musical Comedy Closes London Film Festival ",
-     "url": "https://variety.com/2026/film/festivals/julianne-moore-jesse-eisenberg-the-debut-london-premiere-1236915637/",
-     "published": "2026-10-18"
-    },
+     "outlet": "BBC",
+     "title": "Arsenal held at home by Birmingham",
+     "url": "https://www.bbc.co.uk/sport/football/videos/c680zp4djprgo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "george",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/George",
+   "articles": [
     {
-     "outlet": "Deadline",
-     "title": "Jesse Eisenberg TV Series Produced By Peter Rice To Be Taken Out By A24",
-     "url": "https://deadline.com/2026/10/jesse-eisenberg-tv-series-peter-rice-a24-1237167146/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Jesse Eisenberg Relives Kieran Culkin Woes Making ‘A Real Pain’ and Says His Next Project Is a TV Show",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/jesse-eisenberg-kieran-culkin-real-pain-debut-film-london-1236734749/",
+     "outlet": "Guardian",
+     "title": "Northampton break England’s duck in Champions Cup with victory over Cardiff",
+     "url": "https://www.theguardian.com/sport/2026/oct/18/northampton-cardiff-champions-cup-rugby-union-match-report",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "pierre sage",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Pierre_Sage",
+   "topic": "nyt connections hints",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "NME",
+     "title": "‘Connections’ answers and hints for today, October 19",
+     "url": "https://www.nme.com/guides/gaming-guides/connections-answers-hints-groups-today-3557066?utm_source=rss&utm_medium=rss&utm_campaign=connections-answers-hints-groups-today",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "itv news",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/ITV_News",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Sage feels 'shame' at Palace thrashing with future in doubt",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cq1kdzp093jwo?at_medium=RSS&at_campaign=rss",
+     "title": "Bollywood actor Tiger Shroff survives shooting in Mumbai",
+     "url": "https://www.bbc.co.uk/news/articles/c6jdmy872r7vo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Variety",
+     "title": "Katseye Says They’re ‘So Proud’ of Sophia Ahead of Her Return to the Group: ‘She’s Our Sister’",
+     "url": "https://variety.com/2026/music/news/katseye-sophia-return-1236916064/",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Guardian reporter filmed masked militants seconds before West Bank attack on French mayor",
+     "url": "https://www.theguardian.com/world/2026/oct/18/guardian-reporter-filmed-masked-militants-seconds-before-west-bank-attack-on-french-mayor",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "A Comically On-The-Nose New Title Has Me Even More Excited For This Upcoming Tactics Game",
+     "url": "https://www.gamespot.com/articles/a-comically-on-the-nose-new-title-has-me-even-more-excited-for-this-upcoming-tactics-game/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "liverpool echo",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Liverpool_Echo",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Ramos could make La Liga return - Monday's gossip",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ckjrw11dv5xjo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "RLPO/Hickox review – a made-to-measure clarinet collaboration two decades in the pipeline",
+     "url": "https://www.theguardian.com/music/2026/oct/18/royal-liverpool-philharmonic-orchestra-rlpo-adam-hickox-review-philharmonic-hall-liverpool-mark-simpson-gavin-higgins-britten-stravinsky",
      "published": "2026-10-18"
     },
     {
      "outlet": "BBC Sport",
-     "title": "My one feeling is shame - Sage on bruising Palace defeat",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cq3dj1ddn83xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Gómez halfway-line wondergoal sparks Brighton’s 5-0 thrashing of sorry Crystal Palace",
-     "url": "https://www.theguardian.com/football/2026/oct/18/brighton-crystal-palace-premier-league-match-report",
-     "published": "2026-10-18"
+     "title": "Why Liverpool are still 'too easy' to play against",
+     "url": "https://www.bbc.co.uk/sport/football/videos/c65ynpkjydemo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
     }
    ]
   },
   {
-   "topic": "rebel wilson",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Rebel_Wilson",
+   "topic": "emma raducanu",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Emma_Raducanu",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Harry Styles’ MSG Residency Documentary in the Works From John Wilson",
-     "url": "https://www.billboard.com/culture/tv-film/harry-styles-msg-residency-documentary-film-john-wilson-1236362472/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Another unremarkable win shows Arsenal’s strength is in depth rather than creativity | Jonathan Wilson",
-     "url": "https://www.theguardian.com/football/2026/oct/18/arsenal-strength-in-depth-nottingham-forest-premier-league",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Harry Styles Enlists John Wilson for Documentary About Madison Square Garden Residency",
-     "url": "https://www.rollingstone.com/music/music-news/harry-styles-john-wilson-documentary-msg-residency-1235644404/",
-     "published": "2026-10-18"
+     "outlet": "Sky Sports",
+     "title": "Emma Raducanu: Retired Brit Dan Evans predicts former US Open champion 'will win Wimbledon' despite injuries and fitness issues",
+     "url": "https://www.skysports.com/tennis/news/13600119/emma-raducanu-retired-brit-dan-evans-predicts-former-us-open-champion-will-win-wimbledon-despite-injuries-and-fitness-issues",
+     "published": "2026-10-17"
     }
    ]
   },
   {
-   "topic": "trey mcbride",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Trey_McBride",
+   "topic": "dallas cowboys",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dallas_Cowboys",
    "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "CBS reporter revealed what Trey McBride said to NFL official who swore at him",
-     "url": "https://ftw.usatoday.com/story/sports/nfl/2026/10/05/trey-mcbride-ref-swearing-cbs-reporter-what-he-said/92107058007/",
-     "published": "2026-10-05"
-    },
     {
      "outlet": "AP",
-     "title": "NFL says it is looking into an official cursing at Cardinals tight end Trey McBride",
-     "url": "https://apnews.com/article/trey-mcbride-nfl-official-c72017d5e4ed2da6e9d3f9c35c5da861",
-     "published": "2026-10-04"
-    }
-   ]
-  },
-  {
-   "topic": "nieve",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nieve",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Nieve visual: \"La rara condición que me hace ver con 'interferencias'\"",
-     "url": "https://www.bbc.com/mundo/noticias-61180080",
-     "published": "2022-04-26"
-    }
-   ]
-  },
-  {
-   "topic": "emmett johnson",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Emmett_Johnson",
-   "articles": [
-    {
-     "outlet": "NFL",
-     "title": "Emmett Johnson absorbs significant hit-stick tackle from Troy Dye after the catch",
-     "url": "https://www.nfl.com/videos/emmett-johnson-absorbs-significant-hit-stick-tackle-from-troy-dye-after-the-catch",
+     "title": "Struggling Cowboys suffer letdown on offense as their defense shows signs of progress",
+     "url": "https://apnews.com/article/cowboys-packers-ee0b9fc6c9f1ba32592a0a10322d2cab",
      "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "cj gardner johnson",
-   "signal": "Google Trends US 20000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/CJ_Gardner-Johnson",
-   "articles": [
+    },
     {
      "outlet": "USA Today",
-     "title": "Watch: Bills' CJ Gardner-Johnson ejected from game vs. Raiders",
-     "url": "https://billswire.usatoday.com/story/sports/nfl/bills/2026/10/18/buffalo-bills-cj-gardner-johnson-ejected-raiders-spit-nfl/92322406007/",
+     "title": "Cowboys defense still dismal, RIP GOTI after 23-13 loss at Lambeau",
+     "url": "https://cowboyswire.usatoday.com/story/sports/nfl/cowboys/2026/10/19/cowboys-instant-analysis-week-6-packers-defense-dismal-rip-goti/92324293007/",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "unc basketball",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Unc_basketball",
+   "topic": "better call saul",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Better_Call_Saul",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "WoW: Forever Just Changed The Math On What Race To Play In A Big Way",
+     "url": "https://www.gamespot.com/articles/wow-forever-just-changed-the-math-on-what-race-to-play-in-a-big-way/",
+     "published": "2026-10-16"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Better Call Saul’ Star Rhea Seehorn Boards Independent TV Series That Made Headlines After Creator Said She Was Asked To Make Female Lead “",
+     "url": "https://deadline.com/2025/09/rhea-seehorn-better-call-saul-katja-meier-share-1236528499/",
+     "published": "2025-09-10"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Bob Odenkirk Says More Better Call Saul Would Have to be Set in Prison: 'He's Not Getting Out'",
+     "url": "https://www.ign.com/articles/bob-odenkirk-says-more-better-call-saul-would-have-to-be-set-in-prison-hes-not-getting-out",
+     "published": "2025-08-18"
+    }
+   ]
+  },
+  {
+   "topic": "evan stewart",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Evan_Stewart_(American_football)",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "World leaders must wise up to threat of cyber-attacks or rogue fridges will be least of their worries | Heather Stewart",
+     "url": "https://www.theguardian.com/business/2026/oct/18/world-leaders-threat-cyber-attacks-rogue-fridges-financial-system",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "'Lanterns' shocking finale left us with a lot of unanswered questions for a potential season 2",
+     "url": "https://www.space.com/entertainment/space-movies-shows/lanterns-shocking-finale-left-us-with-a-lot-of-unanswered-questions-for-a-potential-season-2",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "fuel",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Fuel",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Guardiola receives standing ovation on return to Barcelona",
-     "url": "https://www.bbc.co.uk/sport/videos/cm9dzg38n6j7o?at_medium=RSS&at_campaign=rss",
+     "title": "Fuel leak spreads more than two miles along River Taff",
+     "url": "https://www.bbc.co.uk/news/articles/c8vgxnp5w6vzo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Swansea must use West Ham defeat as fuel - Matos",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cr5ynge8jnnyo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-17"
     },
     {
-     "outlet": "Guardian",
-     "title": "Sports quiz of the week: love, songs, speedy skating and celebrations",
-     "url": "https://www.theguardian.com/sport/2026/oct/16/sports-quiz-week-football-rugby-tennis-boxing-basketball-skateboarding-f1-nfl",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "Katie Zacharia",
-   "signal": "Wikipedia 428,191 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Jimmy Kimmel on Trump’s new press secretary: ‘attorney in the way George Santos was volleyball champion’",
-     "url": "https://www.theguardian.com/culture/2026/oct/16/jimmy-kimmel-katie-zacharia-trump-press-secretary",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "RJ Mitte",
-   "signal": "Wikipedia 185,306 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/RJ_Mitte",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "RJ Mitte’s story offers insight into life with cerebral palsy and mental health issues | Letters",
-     "url": "https://www.theguardian.com/culture/2026/oct/18/rj-mitte-story-offers-insight-into-life-with-cerebral-palsy-and-mental-health-issues",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "R.J. Mitte’s Mother Opens Up About His Tragic Passing to Help Other Families (While Clarifying Speculation About His Finances, Career and Fi",
-     "url": "https://www.hollywoodreporter.com/news/general-news/r-j-mitte-mother-family-interview-death-suicide-prevention-1236734202/",
-     "published": "2026-10-18"
+     "outlet": "CNN",
+     "title": "You’re paying for the jet fuel shortage when you fill your car with gas",
+     "url": "https://www.cnn.com/2026/05/05/economy/gas-prices-jet-fuel-shortage",
+     "published": "2026-05-05"
     },
     {
      "outlet": "USA Today",
-     "title": "RJ Mitte's mom opens up about 'red flag' before finding her son dead",
-     "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/18/rj-mitte-mom-suicide-warning-signs/92320591007/",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Aaron Paul Remembers Last Time He Saw ‘Breaking Bad’ Co-Star RJ Mitte: ‘I Kept Calling You Superman’",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/aaron-paul-breaking-bad-rj-mitte-tribute-1235642999/",
-     "published": "2026-10-13"
+     "title": "How to clean a dirty fuel system and save money on repairs",
+     "url": "https://www.usatoday.com/story/cars/maintenance/diy/2026/02/27/what-are-fuel-additives/88898964007/",
+     "published": "2026-02-27"
     }
    ]
   },
   {
-   "topic": "Mathematics",
-   "signal": "Wikipedia 160,732 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mathematics",
+   "topic": "spacex launch jellyfish",
+   "signal": "Google Trends US 200+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "New York Times",
-     "title": "‘Breathtaking,’ ‘Devastating’: Mathematics Reels After New OpenAI Release",
-     "url": "https://www.nytimes.com/2026/10/08/science/mathematicians-respond-openai-release.html",
-     "published": "2026-10-08"
-    }
-   ]
-  },
-  {
-   "topic": "Imran Khan (film actor)",
-   "signal": "Wikipedia 143,474 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Imran_Khan_(film_actor)",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Actor Imran Khan ordered to leave India after participating in protest",
-     "url": "https://www.bbc.com/news/articles/ck3r5pv5j1g1o",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
-   "topic": "Nidal Hasan",
-   "signal": "Wikipedia 137,761 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nidal_Hasan",
-   "articles": [
-    {
-     "outlet": "CBS News",
-     "title": "She met Nidal Hasan's family after her brother died at Fort Hood. Now she's speaking out about the planned execution.",
-     "url": "https://www.cbsnews.com/texas/news/lost-brother-fort-hood-shooting-nidal-hasan-planned-execution-10-12-26/",
+     "outlet": "USA Today",
+     "title": "Early morning SpaceX launch in Florida. Chance to see space jellyfish?",
+     "url": "https://www.usatoday.com/story/tech/science/space/2026/10/12/spacex-florida-rocket-launch-what-time-canaveral-kennedy-how-watch/92214939007/",
      "published": "2026-10-12"
     }
    ]
   },
   {
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 113,060 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Street Fighter (2026 Movie) Guide",
-     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
    "topic": "#CULT Official Trailer",
-   "signal": "YouTube GB 266,496/h",
+   "signal": "YouTube GB 379,117/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "NAZA directors: 'It's a film about systems of mass killing' – video",
+     "url": "https://www.theguardian.com/film/video/2026/oct/17/naza-directors-its-a-film-about-systems-of-mass-killings-video",
+     "published": "2026-10-17"
+    },
     {
      "outlet": "GameSpot",
      "title": "GTA 6 Is Taking Over Miami Amid Pushback From Officials: “We’re Depicting Miami Like A Murder Capital”",
@@ -468,7 +472,7 @@
   },
   {
    "topic": "KAALI HOODIE",
-   "signal": "YouTube GB 225,586/h",
+   "signal": "YouTube GB 204,531/h",
    "wikipedia": null,
    "articles": [
     {
@@ -480,29 +484,86 @@
    ]
   },
   {
-   "topic": "Tate McRae",
-   "signal": "YouTube GB-music 82,234/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB 166,961/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
+     "outlet": "Rolling Stone",
+     "title": "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "url": "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "published": "2026-10-16"
+    },
+    {
      "outlet": "Billboard",
-     "title": "Fans Choose Tate McRae’s ‘Housewife’ as This Week’s Favorite New Music",
-     "url": "https://www.billboard.com/music/pop/tate-mcrae-housewife-best-new-music-poll-results-1236362476/",
+     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "Returning To Japan",
+   "signal": "YouTube GB 83,660/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Returning_Japanese",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "Ju Ji-hoon & Choo Young-woo Return To ‘The Trauma Code: Heroes On Call’ With Seasons 2 & 3 In Production At Netflix",
+     "url": "https://deadline.com/2026/10/trauma-code-heroes-on-call-netflix-seasons-2-3-confirmed-1237165650/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "Returning the first samples from a Martian moon: Inside the science of Japan's bold MMX mission to Mars",
+     "url": "https://www.space.com/space-exploration/missions/returning-samples-from-a-mars-moon-inside-the-science-of-japans-bold-mmx-mission",
+     "published": "2026-10-18"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Kartal denied biggest win of career after Chwalinska fightback in Wuhan Open final",
+     "url": "https://www.theguardian.com/sport/2026/oct/18/kartal-denied-biggest-win-of-career-after-chwalinska-fightback-in-wuhan-open-final",
      "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "Justice",
-   "signal": "YouTube GB-music 52,591/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Justice",
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 79,679/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "Jesse Eisenberg Says He ‘Couldn’t Get Movie Studio Parts Anymore’ After Winning a Razzie for ‘Batman v Superman’: ‘The Industry Did Not Want",
-     "url": "https://variety.com/2026/film/global/jesse-eisenberg-razzie-batman-v-superman-1236915876/",
-     "published": "2026-10-18"
+     "outlet": "The Hollywood Reporter",
+     "title": "Victoria’s Secret Fashion Show: See Red Carpet and Backstage Photos of Models, Megan Thee Stallion and Kobe Bryant’s Daughter",
+     "url": "https://www.hollywoodreporter.com/gallery/victorias-secret-fashion-show-2026-red-carpet-backstage-photos-models-1236735003/",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "Zara Larsson",
+   "signal": "YouTube GB-music 52,177/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "The Year Zara Larsson Unlocked Pop Superstardom",
+     "url": "https://www.nytimes.com/2026/10/16/arts/music/zara-larsson-popcast-interview.html",
+     "published": "2026-10-15"
     },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Zara Larsson Transforms Into a Fairy, a Mermaid, and More in ‘Blue Moon’ Video",
+     "url": "https://www.rollingstone.com/music/music-news/zara-larsson-blue-moon-video-1235643152/",
+     "published": "2026-10-15"
+    }
+   ]
+  },
+  {
+   "topic": "Justice",
+   "signal": "YouTube GB-music 50,113/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Justice",
+   "articles": [
     {
      "outlet": "Guardian",
      "title": "Guardian reporter filmed masked militants seconds before West Bank attack on French mayor",
@@ -518,70 +579,33 @@
    ]
   },
   {
-   "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 155,475/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Australia’s Boland damages South Africa in brief respite from rain",
-     "url": "https://www.theguardian.com/sport/2026/oct/18/australias-boland-damages-south-africa-in-brief-respite-from-rain",
-     "published": "2026-10-18"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "All The Records GTA 6 Will Break, We Think",
-     "url": "https://www.gamespot.com/articles/all-the-records-gta-6-will-break-we-think/",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "keanu reeves",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Keanu_Reeves",
-   "articles": []
-  },
-  {
-   "topic": "theft",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Theft",
-   "articles": []
-  },
-  {
-   "topic": "kansas city chiefs",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kansas_City_Chiefs",
-   "articles": []
-  },
-  {
-   "topic": "sharks",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Shark",
-   "articles": []
-  },
-  {
-   "topic": "klint kubiak",
+   "topic": "diesel fuel",
    "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Klint_Kubiak",
+   "wikipedia": "https://en.wikipedia.org/wiki/Diesel_fuel",
    "articles": []
   },
   {
-   "topic": "parker messick",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Parker_Messick",
+   "topic": "lisa rinna",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lisa_Rinna",
    "articles": []
   },
   {
-   "topic": "GBU-43/B MOAB",
-   "signal": "Wikipedia 453,110 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/GBU-43/B_MOAB",
+   "topic": "ufc 333",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/UFC_333",
    "articles": []
   },
   {
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 341,702 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "topic": "fume",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Fume",
+   "articles": []
+  },
+  {
+   "topic": "Anuel AA",
+   "signal": "YouTube US-music 91,327/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }
  ]

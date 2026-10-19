@@ -93,7 +93,6 @@
  "social_release": "preview-QD-029",
  "engage": {
   "comment": "Ugyzqz013Ri-pij53Wl4AaABAg",
-  "playlist_error": "HttpError: <HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned \"The operation was aborted.\". Details: \"[{'domain': 'youtube.CoreErrorD",
-  "playlist_tries": 1
+  "playlist": "Quickplay Daily: Science"
  }
 }

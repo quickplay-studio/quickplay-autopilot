@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 19 Oct, 13:48): 5 of 1,000 subscribers · 2,165 of 10 million Shorts views in 90 days · 1,026 views in the last 24 hours (about 111,087 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Mon 19 Oct, 14:53): 6 of 1,000 subscribers · 2,294 of 10 million Shorts views in 90 days · 1,336 views in the last 24 hours (about 111,086 a day needed, 105 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Mon 19 Oct 12:41 (UK): 3 scheduled, 33 public, 17 uploads in the last 24 hours.
 
@@ -19,7 +19,7 @@ Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily
 ## On the channel (latest first)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
-scheduled · 23 s · music: in-battery · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
+private · 23 s · music: in-battery · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
 
 ![QD-041](QD-041.jpg)
 

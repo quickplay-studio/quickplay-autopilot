@@ -37,12 +37,20 @@ def connected(t):
     return d
 
 def link():
-    t = social.load("youtube")
-    if t.get("refresh_token"):
-        write(connected(t)); return
+    """The sign-in link is always published (the client id is public): the same link signs in any channel of the account
+    (main, es, pt, clips); Google asks which channel when the account has several. Each channel's status file says whether
+    its own sign-in exists."""
     q = {"client_id": os.environ["YT_CLIENT_ID"], "redirect_uri": REDIRECT, "response_type": "code", "scope": " ".join(SCOPES),
          "access_type": "offline", "prompt": "consent", "include_granted_scopes": "true", "state": "quickplay"}
-    write({"ok": False, "connected": False, "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)})
+    url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)
+    t = social.load("youtube")
+    write({**(connected(t) if t.get("refresh_token") else {"ok": False, "connected": False}), "connect_url": url})
+    for ch in ("clips", "es", "pt"):
+        out = OUT.with_name(f"youtube_connect_{ch}.json")
+        tc = social.load(f"youtube_{ch}")
+        if tc.get("refresh_token"): write({**connected(tc), "connect_url": url}, out)
+        elif not out.exists(): write({"ok": False, "connected": False, "connect_url": url, "how": f"open connect_url while using the {ch} channel, "
+                                     "copy the code, run the social workflow with it and channel " + ch}, out)
 
 def exchange(ch="main"):
     """ch: main, a language channel (es, pt) or the clips channel, whose sign-in is saved as tokens/youtube_<ch>.enc."""

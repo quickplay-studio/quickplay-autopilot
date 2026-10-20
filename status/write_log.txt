@@ -1,4 +1,4 @@
-evening run for 2026-10-21: 2 to write from 15 fact packs
+evening run for 2026-10-22: 2 to write from 15 fact packs
 covered already: The Legend of Zelda: Ocarina of Time – Art thou ready?
 covered already: Patient Zero by Taylor Swift
 covered already: Street Fighter (2026 film)
@@ -9,14 +9,12 @@ too few facts: IVE 아이브 'Looks Can Kill' MV
 covered already: Olivia Rodrigo
 covered already: Jailer 2
 too few facts: raphinha
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-hbo max: gemini-flash-latest, 0 warnings
+covered already: hbo max
 too few facts: north west
 too few facts: Tate McRae
 covered already: larne vs linfield
 too few facts: nba league pass
-evergreen: Top 5 best-selling video games of all time: only 4 checked facts
-How Tetris was smuggled out of the Soviet Union: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How the Apollo 13 crew used duct tape to survive: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 3 of 2: QD-064 The Gilded Age season 4 episode count confirmed 📺; QD-065 How Tetris was smuggled out of the Soviet Union 🕹️; QD-066 Apollo 13 crew: the real survival story 🚀 (reserve)
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"gemini-flash-latest": 1, "gemini-3.5-flash-lite": 14, "gemini-3.7-flash": 1, "gemini-3-flash-preview": 1, "gemini-3.1-flash-lite": 1}, "providers": [], "local": true, "claude calls": 0, "late": false}
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+What was the first music video on MTV? 📺: error: list index out of range
+wrote 0 of 2: 
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:openai/gpt-oss-120b": 1, "gemini-flash-latest": 1, "gemini-3.7-flash": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

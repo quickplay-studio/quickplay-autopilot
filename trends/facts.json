@@ -1,231 +1,85 @@
 {
  "date": "2026-10-20",
- "built": "2026-10-20T07:29+00:00",
+ "built": "2026-10-20T09:25+00:00",
  "model": "gemini-flash-latest",
  "mode": "breaking",
- "errors": [],
+ "errors": [
+  "Patient Zero by Taylor Swift: gemini-flash-latest: ReadTimeout",
+  "battlefront 3: gemini-flash-latest: ReadTimeout"
+ ],
  "topics": [
   {
-   "n": 20,
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 153,073 views",
-   "category": "Film",
-   "what_is_new": "Street Fighter opened in cinemas on 16 October 2026, earning $31 million domestically over its debut weekend.",
+   "n": 6,
+   "topic": "erik ten hag",
+   "signal": "Google Trends GB 100+",
+   "category": "",
+   "what_is_new": "Erik ten Hag has given a new interview detailing his departure from Manchester United, broken promises, and his current role.",
    "hooks": [
-    "Street Fighter broke franchise box office records in its opening weekend!",
-    "The brand new Street Fighter film stars Jason Momoa as Blanka!"
+    "Erik ten Hag is now technical director of FC Twente.",
+    "Ten Hag won two trophies before his Manchester United exit.",
+    "Manchester United once sold Scott McTominay for over 30 million euros."
    ],
    "sources": [
     [
-     "Street Fighter Officially Sets a New Franchise Box Office Record",
-     "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
-     "Polygon",
-     "2026-10-19"
+     "Ten Hag on Man Utd's broken 'promises', wanting Kane and Ronaldo tension",
+     "https://www.skysports.com/football/news/12040/13601227/erik-ten-hag-interview-man-utds-broken-promises-wanting-kane-ronaldo-tension-fa-cup-glory",
+     "Sky Sports",
+     "2026-10-20"
     ],
     [
-     "Street Fighter (2026 film)",
-     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+     "erik ten hag",
+     "https://en.wikipedia.org/wiki/Erik_ten_Hag",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Street Fighter is the third live action feature length film adaptation of the Capcom video game franchise.",
+     "claim": "Erik ten Hag serves as the technical director of FC Twente.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Capcom and Legendary's highly anticipated new Street Fighter movie made its debut in movie theaters this weekend, giving fans of the fighting game franchise their",
-      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+      "1": "The Athletic spent two evenings with Ten Hag in his hometown of Enschede, in the east of the Netherlands, to peel back the curtain on",
+      "2": "He is the technical director of Eredivisie club Twente."
      }
     },
     {
-     "claim": "The film was directed by Kitao Sakurai.",
+     "claim": "Erik ten Hag was sacked by Manchester United in 2024 after winning two trophies.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Street Fighter was directed and co-written by Kitao Sakurai.",
-      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
-     }
-    },
-    {
-     "claim": "The film was released in cinemas on 16 October 2026.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Street Fighter opened on Oct. 16, and the film's first weekend is being viewed as a success.",
-      "2": "Street Fighter was released in the United States by Paramount Pictures on October 16, 2026."
-     }
-    },
-    {
-     "claim": "Noah Centineo stars as Ken Masters.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Noah Centineo as Ken Masters"
-     }
-    },
-    {
-     "claim": "Andrew Koji plays Ryu in the film.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Andrew Koji as Ryu / Dark Ryu"
-     }
-    },
-    {
-     "claim": "Callina Liang portrays the character Chun Li.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Callina Liang as Chun-Li[4]"
-     }
-    },
-    {
-     "claim": "David Dastmalchian plays M. Bison.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- David Dastmalchian as M. Bison"
-     }
-    },
-    {
-     "claim": "Jason Momoa stars as Blanka.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Jason Momoa as Blanka"
-     }
-    },
-    {
-     "claim": "Legendary acquired rights to the property with Capcom co producing.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Capcom and Legendary's highly anticipated new Street Fighter movie made its debut in movie theaters this weekend, giving fans of the fighting game franchise their",
-      "2": "Legendary Entertainment acquired the live-action film and television rights to Street Fighter in April 2023, by which point the film had entered active development, with"
+      "1": "Erik ten Hag has kept his counsel on Manchester United for two years since his sacking in October 2024, but the affection he built up",
+      "2": "During his tenure at the club, United won the EFL Cup and FA Cup in successive seasons, but failed to make significant progress in the"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Street Fighter made $31 million domestically during its opening weekend.",
+     "claim": "Manchester United parted ways with Erik ten Hag on 28 October 2024 when the team sat 14th in the Premier League.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "According to data from BoxOfficeMojo, Street Fighter earned $31 million domestically during its opening weekend."
+      "1": "United were 14th in the Premier League on 11 points from nine games when Ten Hag was dismissed on October 28, 2024, the day after"
      }
     },
     {
-     "claim": "The new Street Fighter film had an $82 million budget.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The new Street Fighter still has a long way to go to meet its $82 million budget."
-     }
-    },
-    {
-     "claim": "Street Fighter has grossed $51 million worldwide.",
+     "claim": "On 24 October 2020, Erik ten Hag led Ajax to a record 13-0 victory against VVV-Venlo.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "It received mixed reviews and has grossed $51 million worldwide."
-     }
-    },
-    {
-     "claim": "Principal photography for the film began on 18 August 2025.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Principal photography began in Australia on August 18, 2025, under t"
+      "2": "On 24 October 2020, Ten Hag led Ajax to a historic 13–0 victory over VVV-Venlo, breaking the Eredivisie record of the biggest recorded victory in"
      }
     }
    ],
-   "images": []
-  },
-  {
-   "n": 15,
-   "topic": "ps6",
-   "signal": "Google Trends US 100+",
-   "category": "Tech",
-   "what_is_new": "Leaker Kepler_L2 claimed on 18 October 2026 that the PS6 memory and storage alone cost more than $680.",
-   "hooks": [
-    "Sony intends not to sell future hardware at significant losses.",
-    "Sony remains committed to completely scrapping discs by 2028.",
-    "PlayStation was the first console ever to ship 100 million units."
-   ],
-   "sources": [
-    [
-     "The PS6's memory and storage alone reportedly cost more than $680",
-     "https://www.eurogamer.net/ps6-ram-nand-costs-over-680-keplerl2",
-     "Eurogamer",
-     "2026-10-18"
-    ],
-    [
-     "ps6",
-     "https://en.wikipedia.org/wiki/PS6",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Sony Interactive Entertainment boss Hideaki Nishino told investors in June that as a principle the company does not intend to sell hardware at significant losses.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It follows Sony Interactive Entertainment boss Hideaki Nishino telling investors in June that \"as a principle, we do not intend to sell hardware at significant"
-     }
-    },
-    {
-     "claim": "Sony has committed to scrapping discs by 2028.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Despite plenty of consumer outcry, the company has remained bullish in its commitment to scrapping discs by 2028 (the earliest, at this point, we're realistically"
-     }
-    },
-    {
-     "claim": "The first PlayStation home console was released in Japan in 1994 and worldwide the following year.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The brainchild of Sony executive Ken Kutaragi, the brand began with the first PlayStation home console released in Japan in 1994 and worldwide the following"
-     }
-    }
-   ],
-   "images": []
+   "images": [
+    "commons:File:Открытая_тренировка_«Аякса»_перед_матчем_с_«Динамо»._27_августа_2018_года_—_900304_(Erik_ten_Hag).jpg"
+   ]
   }
  ]
 }

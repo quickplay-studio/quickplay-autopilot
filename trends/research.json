@@ -3,6 +3,25 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
+   "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
+     "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
+     "published": "2026-10-13"
+    },
+    {
+     "outlet": "UEFA",
+     "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
+     "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
+     "published": "2026-10-06"
+    }
+   ]
+  },
+  {
    "topic": "Gen Alpha slang  the French fries emoji",
    "signal": "Charlie's request",
    "wikipedia": null,
@@ -42,260 +61,199 @@
    ]
   },
   {
-   "topic": "england cricket",
+   "topic": "Patient Zero by Taylor Swift",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
+   "articles": [
+    {
+     "outlet": "Billboard",
+     "title": "Taylor Swift’s ‘Patient Zero’ Adds Third Week at No. 1 on Billboard Hot 100",
+     "url": "https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-three-weeks/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Taylor Swift Named Her New Song ‘Patient Zero.’ Where Does the Term Originate?",
+     "url": "https://www.nytimes.com/2026/09/24/arts/music/taylor-swift-patient-zero-origin.html",
+     "published": "2026-09-24"
+    }
+   ]
+  },
+  {
+   "topic": "erik ten hag",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/England_cricket_team",
+   "wikipedia": "https://en.wikipedia.org/wiki/Erik_ten_Hag",
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "England unchanged for World Cup clash vs France with Lewis absent again",
-     "url": "https://www.skysports.com/rugby-league/news/12040/13601200/rugby-league-world-cup-mikey-lewis-absent-again-as-england-unchanged-for-clash-vs-france-despite-opening-defeat",
+     "title": "Ten Hag on Man Utd's broken 'promises', wanting Kane and Ronaldo tension",
+     "url": "https://www.skysports.com/football/news/12040/13601227/erik-ten-hag-interview-man-utds-broken-promises-wanting-kane-ronaldo-tension-fa-cup-glory",
      "published": "2026-10-20"
     },
     {
-     "outlet": "BBC",
-     "title": "England unchanged to face France after Tonga defeat",
-     "url": "https://www.bbc.co.uk/sport/rugby-league/articles/cmd6d3gj2znxo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Surprise dip in jobless rate supports interest rate hike",
-     "url": "https://news.sky.com/story/surprise-dip-in-jobless-rate-supports-interest-rate-hike-13601180",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Andy Burnham outlines new rules to outlaw ‘rip-off’ private parking fines",
-     "url": "https://www.theguardian.com/money/2026/oct/19/andy-burnham-new-rules-private-parking-fines-code-of-practice",
+     "outlet": "New York Times",
+     "title": "Erik ten Hag interview: Man United’s broken ‘promises’, wanting Kane, Ronaldo tension, FA Cup glory",
+     "url": "https://www.nytimes.com/athletic/7701054/2026/10/20/ten-hag-ronaldo-man-utd/",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "serhii beskrestnov",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
-     "url": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "barcelona vs psg",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Will that do? Lamine Yamal conjures another magical spell as Barça pass first test | Sid Lowe",
-     "url": "https://www.theguardian.com/football/2026/oct/19/lamine-yamal-wonder-goal-barcelona-real-betis-la-liga",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Araujo the stopgap solution fixing Liverpool's problems",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ck8dz7pp4089o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Mbappe scores twice as Real Madrid beat Sevilla",
-     "url": "https://www.bbc.co.uk/sport/football/videos/crp3g7z9x215o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "kylie cosmetics",
+   "topic": "battlefront 3",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kylie_Cosmetics",
+   "wikipedia": "https://en.wikipedia.org/wiki/Battlefront_3",
    "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "Star Wars Battlefront 3: Bungie Rumored as New Developer",
+     "url": "https://www.polygon.com/star-wars-battlefront-3-rumor-bungie-dice-disney/",
+     "published": "2026-10-19"
+    },
     {
      "outlet": "GameSpot",
-     "title": "Battlefield 6 Dev Owns Up To Mistakes With Strange-Looking Cosmetics, But Stays Silent On Possible AI Use",
-     "url": "https://www.gamespot.com/articles/battlefield-6-dev-owns-up-to-mistakes-with-strange-looking-cosmetics-but-stays-silent-on-possible-ai-use/",
+     "title": "Star Wars Games Could Get More Interesting As Lucasfilm Looks Beyond The Big Studios",
+     "url": "https://www.gamespot.com/articles/star-wars-games-could-get-more-interesting-as-lucasfilm-looks-beyond-the-big-studios/",
      "published": "2026-10-19"
     },
     {
      "outlet": "Eurogamer",
-     "title": "Battlefield 6 devs to fix \"Secuty\" skin typo, but five-pistol outfit was intentional",
-     "url": "https://www.eurogamer.net/battlefield-6-secuty-typo-five-pistol-skin-devs-respond",
-     "published": "2026-10-18"
+     "title": "We've had two great Star Wars games this year, probably because Lucasfilm Games says it's now \"more flexible\" about who it takes pitches fro",
+     "url": "https://www.eurogamer.net/star-wars-games-small-developers-lucasfilm-games-plan",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "black friday",
+   "topic": "cumbria",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cumbria",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Why have countries been pushing for a vital global climate report to be delayed?",
-     "url": "https://www.theguardian.com/environment/2026/oct/20/countries-pushing-vital-global-climate-report-delayed",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "NASA",
-     "title": "Curiosity Blog, Sols 5036-5042: Watching the Clouds Go By",
-     "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5036-5042-watching-the-clouds-go-by/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Friday Night Lights’ Stars Hit The Field To Aid James Talarico’s Smashmouth Attempt To Score A Texas Senate Race Win",
-     "url": "https://deadline.com/2026/10/james-talaricos-friday-night-lights-ad-midterms-1237168179/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Save $150 Off the 2026 MacBook Air With New Apple M5 Chip Ahead of Black Friday",
-     "url": "https://www.ign.com/articles/2026-apple-macbook-air-laptop-deal-october-2026",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "this city is ours",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The CO2-absorbing building made of old sinks, windscreens and toilets: Ghent’s £17m design museum is a green marvel",
-     "url": "https://www.theguardian.com/artanddesign/2026/oct/20/ghent-design-museum-co2-absorbing-recycling",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘This City Is Ours’ Renewed For Season 3 At BBC",
-     "url": "https://deadline.com/2026/10/this-city-is-ours-renewed-season-3-bbc-1237167718/",
-     "published": "2026-10-20"
+     "title": "UK taxpayers on hook as failed Cumbria coalmine investors sue government",
+     "url": "https://www.theguardian.com/environment/2025/aug/11/uk-taxpayers-on-hook-failed-cumbria-coalmine-investors-sue-government",
+     "published": "2025-08-11"
     },
     {
      "outlet": "BBC",
-     "title": "Lampard 'proud' of Coventry performance in defeat by Spurs",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c32l4x1k28ero?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
+     "title": "Labour wins five seats in Cumbria and Lib Dems one",
+     "url": "https://www.bbc.com/news/live/cmj2ejend11t",
+     "published": "2024-07-04"
+    }
+   ]
+  },
+  {
+   "topic": "bbc cricket",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bye_(cricket)",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "South Africa v Australia: second men’s cricket Test, day three – live",
+     "url": "https://www.theguardian.com/sport/live/2026/oct/20/south-africa-v-australia-second-test-day-three-cricket-st-georges-park-gqeberha-live-updates",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "south wales argus",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/South_Wales_Argus",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘How green are our valleys?’: in the footsteps of miners on south Wales’s new forest trail",
+     "url": "https://www.theguardian.com/travel/2026/oct/20/south-wales-new-forest-trail-old-mining-villages",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "bfi",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bfi",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "‘Pillion,’ ‘Santosh’ Directors Among Winners of BFI and Chanel Filmmaker Awards",
+     "url": "https://variety.com/2025/film/global/bfi-chanel-filmmaker-awards-pillion-santosh-stimming-pool-1236554355/",
+     "published": "2025-10-16"
     },
     {
-     "outlet": "BBC Sport",
-     "title": "Sarina stays, the Golden Goggles & Van de Donk's flying form",
-     "url": "https://www.bbc.co.uk/sounds/play/p0phjkhz?at_medium=RSS&at_campaign=rss",
+     "outlet": "Deadline",
+     "title": "Tom Cruise To Receive BFI Fellowship",
+     "url": "https://deadline.com/2025/03/tom-cruise-bfi-fellowship-2025-1236342034/",
+     "published": "2025-03-20"
+    }
+   ]
+  },
+  {
+   "topic": "revolut",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Revolut",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Revolut outage hits 'multiple services' as thousands of users report app issues",
+     "url": "https://www.bbc.co.uk/news/articles/cxdd8mm6qy4mo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "tesla cybertruck",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tesla_Cybertruck",
+   "articles": [
+    {
+     "outlet": "Ars Technica",
+     "title": "Cybertruck sales in free fall as Tesla reports mediocre sales for Q3",
+     "url": "https://arstechnica.com/cars/2026/10/tesla-sales-drop-2-percent-in-underwhelming-q3-2026/",
+     "published": "2026-10-02"
+    }
+   ]
+  },
+  {
+   "topic": "emma watson",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Emma_Watson",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "How the attack on an Australian MP unfolded",
+     "url": "https://www.bbc.co.uk/news/videos/cqkglz3ljedyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "new york times",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_New_York_Times",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Gilgamesh by Simon Armitage review – an ancient epic is brilliantly translated for our times",
+     "url": "https://www.theguardian.com/books/2026/oct/20/gilgamesh-by-simon-armitage-review-an-ancient-epic-is-brilliantly-translated-for-our-times",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "This LA Noire Spinoff Idea Sounds Incredible",
+     "url": "https://www.gamespot.com/articles/this-la-noire-spinoff-idea-sounds-incredible/",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "today wordle hints",
-   "signal": "Google Trends GB 100+",
+   "topic": "nyt connections hints",
+   "signal": "Google Trends US 500+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "NME",
-     "title": "Today’s Wordle answer and hints for #1939 on October 20",
-     "url": "https://www.nme.com/guides/gaming-guides/heres-the-wordle-answer-for-today-3171240?utm_source=rss&utm_medium=rss&utm_campaign=heres-the-wordle-answer-for-today",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "crystal lake season 2",
-   "signal": "Google Trends US 100+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "‘They pulled a guy’s face off. It’s my favourite bit!’ Linda Cardellini on Freaks and Geeks, Mad Men and slasher horror Crystal Lake",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/19/linda-cardellini-freaks-and-geeks-mad-men-crystal-lake-friday-13th-dtf-st-louis",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "midterms",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Midterms",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "How is the US economy really doing under President Trump?",
-     "url": "https://www.bbc.co.uk/news/articles/cv98ze40jz18o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Trump's approval rating hits new record low as US midterms loom",
-     "url": "https://news.sky.com/story/trumps-approval-rating-hits-new-record-low-as-us-midterms-loom-13601177",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes",
-     "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "jd",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jd",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "Jon Stewart Criticizes JD Vance for Constantly Demonizing Immigrants",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/jon-stewart-jd-vance-immigrants-criticism-daily-show-1235645320/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Variety",
-     "title": "Jon Stewart Jokes Skydance Has ‘Pulled Our Renewal’ Before Slamming JD Vance, Trump and Emmanuel Macron",
-     "url": "https://variety.com/2026/tv/news/jon-stewart-jokes-skydance-has-pulled-our-renewal-j-d-vance-1236917177/",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "weather forecast",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Weather_forecasting",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Hiding in plane sight: the invisible turbulence that can strike out of a clear blue sky",
-     "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/18/invisible-clear-air-turbulence-airline-safety-climate-crisis",
-     "published": "2026-10-17"
-    }
-   ]
-  },
-  {
-   "topic": "ps6",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/PS6",
-   "articles": [
-    {
-     "outlet": "Eurogamer",
-     "title": "The PS6's memory and storage alone reportedly cost more than $680",
-     "url": "https://www.eurogamer.net/ps6-ram-nand-costs-over-680-keplerl2",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 321,853 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
-     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "title": "‘Connections’ answers and hints for today, October 20",
+     "url": "https://www.nme.com/guides/gaming-guides/connections-answers-hints-groups-today-3557066?utm_source=rss&utm_medium=rss&utm_campaign=connections-answers-hints-groups-today",
      "published": "2026-10-19"
     }
    ]
@@ -361,6 +319,12 @@
      "title": "Street Fighter Officially Sets a New Franchise Box Office Record",
      "url": "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
      "published": "2026-10-19"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Street Fighter (2026 Movie) Guide",
+     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
+     "published": "2026-10-15"
     }
    ]
   },
@@ -369,12 +333,6 @@
    "signal": "Wikipedia 146,026 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Palvin",
    "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Dylan Sprouse cheers on wife Barbara Palvin at Victoria's Secret Fashion Show",
-     "url": "https://www.usatoday.com/story/entertainment/style/2026/10/19/kylie-jenner-barbara-palvin-victorias-secret-fashion-show-timothee-chalamet-dylan-sprouse/92327083007/",
-     "published": "2026-10-19"
-    },
     {
      "outlet": "Guardian",
      "title": "‘Keep away from the doctor’: a visit to an influencer’s wellness event, where the advice could kill",
@@ -390,9 +348,9 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Emperor of Nothing by Blake J Harris review – the definitive portrait of Larry David",
-     "url": "https://www.theguardian.com/books/2026/oct/19/emperor-of-nothing-blake-j-harris-review-larry-david-biography",
-     "published": "2026-10-19"
+     "title": "‘It speaks very poorly of us as a society’: Lawrence Wright on his book on death row and redemption",
+     "url": "https://www.theguardian.com/books/2026/oct/20/lawrence-wright-book-death-row",
+     "published": "2026-10-20"
     }
    ]
   },
@@ -406,12 +364,6 @@
      "title": "NHS trust prosecuted over children's sepsis deaths",
      "url": "https://www.bbc.co.uk/news/articles/c6jrw1xx419xo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-20"
-    },
-    {
-     "outlet": "Reuters",
-     "title": "Human cases of West Nile virus rise in Europe, with 141 dead in 2026, report says",
-     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/human-cases-west-nile-virus-rise-europe-with-141-dead-2026-report-says-2026-10-15/",
-     "published": "2026-10-15"
     },
     {
      "outlet": "USA Today",
@@ -441,6 +393,19 @@
    ]
   },
   {
+   "topic": "Dylan Sprouse",
+   "signal": "Wikipedia 103,687 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dylan_Sprouse",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Dylan Sprouse cheers on wife Barbara Palvin at Victoria's Secret Fashion Show",
+     "url": "https://www.usatoday.com/story/entertainment/style/2026/10/19/kylie-jenner-barbara-palvin-victorias-secret-fashion-show-timothee-chalamet-dylan-sprouse/92327083007/",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
    "topic": "2026 French student protests",
    "signal": "Wikipedia 101,742 views",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_French_student_protests",
@@ -455,7 +420,7 @@
   },
   {
    "topic": "If You Escape, You Win $1,000,000",
-   "signal": "YouTube GB 717,192/h",
+   "signal": "YouTube GB 688,581/h",
    "wikipedia": null,
    "articles": [
     {
@@ -473,14 +438,46 @@
    ]
   },
   {
-   "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 137,197/h",
+   "topic": "IVE 아이브 'Looks Can Kill' MV",
+   "signal": "YouTube GB 224,357/h",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "What’s the future for the Green Party? Should it be socialism? | Joe Todd",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/20/future-green-party-socialism-labour-radical-reform",
+     "title": "Houseplant hacks: will trimming brown leaf tips do any harm?",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/20/houseplant-hacks-will-trimming-brown-leaf-tips-do-any-harm",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 143,001/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "url": "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "published": "2026-10-16"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "How is This Even Possible? 😳🥌",
+   "signal": "YouTube GB-sport 136,663/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Ex-Greens co-leader urges council groups to reject Zionism policy",
+     "url": "https://www.theguardian.com/politics/2026/oct/20/greens-adrian-ramsay-council-groups-reject-zionism-racism-policy",
      "published": "2026-10-20"
     },
     {
@@ -498,114 +495,33 @@
    ]
   },
   {
-   "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 803,973/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Kylie Jenner's debut at Victoria's Secret Fashion Show in $50m bra sparks mixed reaction",
-     "url": "https://www.bbc.co.uk/news/articles/cmx2wqwxvyxlo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Never say never 😭",
-   "signal": "YouTube GB-entertainment 288,045/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Never_Say_Never_Again",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The pest I’ll never forget: the maggots that rained down like hail",
-     "url": "https://www.theguardian.com/environment/2026/oct/20/the-pest-ill-never-forget-maggots-rained-down-like-hail",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Call of Duty: Modern Warfare 4 Pop-Up: The DMZ Has Never Been This Much Fun",
-     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-pop-up-the-dmz-has-never-been-this-much-fun",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Stupid Never Dies Is Easily the Worst Game of 2026",
-     "url": "https://www.polygon.com/stupid-never-dies-review/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever Is Soaring, But Midnight Is Struggling",
-     "url": "https://www.gamespot.com/articles/wow-forever-is-soaring-but-midnight-is-struggling/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "What is the BEST app?!📱🤔",
-   "signal": "YouTube GB-tech 66,766/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Googlebook review: Google’s new laptops are woefully underbaked",
-     "url": "https://www.theguardian.com/technology/2026/oct/20/googlebook-review-google-laptops-chromeos-android",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
-     "url": "https://www.polygon.com/mw4-modern-warfare-4-call-duty-campaign-review/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "You Don’t Need An Expensive Console Or High-End PC To Play Call Of Duty: Modern Warfare 4",
-     "url": "https://www.gamespot.com/articles/you-dont-need-an-expensive-console-or-high-end-pc-to-play-call-of-duty-modern-warfare-4/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "Sony’s best noise-canceling earbuds are nearly $100 off today only",
-     "url": "https://www.theverge.com/gadgets/1013911/sonys-best-noise-canceling-earbuds-are-nearly-100-off-today-only",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Patient Zero by Taylor Swift",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
-   "articles": []
-  },
-  {
-   "topic": "I Can't Love You Anymore by Ella Langley & Morgan Wallen",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": "https://en.wikipedia.org/wiki/I_Can%27t_Love_You_Anymore_(Ella_Langley_and_Morgan_Wallen_song)",
-   "articles": []
-  },
-  {
-   "topic": "angela rayner",
+   "topic": "stefanos tsitsipas",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Angela_Rayner",
+   "wikipedia": "https://en.wikipedia.org/wiki/Stefanos_Tsitsipas",
    "articles": []
   },
   {
-   "topic": "pak vs eng",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Passenger_pigeon",
+   "topic": "lloyds",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lloyds",
    "articles": []
   },
   {
-   "topic": "coastal flooding",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Coastal_flooding",
+   "topic": "daycare",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Daycare",
    "articles": []
   },
   {
-   "topic": "lexie hull",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Lexie_Hull",
+   "topic": "flood watch",
+   "signal": "Google Trends US 20000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Flood_watch",
+   "articles": []
+  },
+  {
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 321,853 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": []
   },
   {
@@ -615,9 +531,15 @@
    "articles": []
   },
   {
-   "topic": "Dylan Sprouse",
-   "signal": "Wikipedia 103,687 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dylan_Sprouse",
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 74,033/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "articles": []
+  },
+  {
+   "topic": "Zara Larsson",
+   "signal": "YouTube GB-music 46,955/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   }
  ]

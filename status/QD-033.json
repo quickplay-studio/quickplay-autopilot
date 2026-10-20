@@ -69,12 +69,22 @@
    1
   ]
  ],
- "state": "in reserve (approved)",
+ "state": "scheduled",
  "flags": [
   "reserve: approved in advance, posted only on a day nothing new was written",
   "render: no real images of the subject (all stock footage)"
  ],
- "preview_release": "preview-QD-033",
- "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-c4624d94891c63082d44",
- "reserve_approved": "2026-10-18T23:11:48+00:00"
+ "reserve_approved": "2026-10-18T23:11:48+00:00",
+ "approved": "2026-10-20T17:47:19+00:00",
+ "from_reserve": "2026-10-20",
+ "uploaded_at": "2026-10-20T17:47:19Z",
+ "video": "SFiu3zE5KHs",
+ "url": "https://youtube.com/shorts/SFiu3zE5KHs",
+ "publish_at": "2026-10-20T20:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-20T20:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "preview-QD-033"
 }

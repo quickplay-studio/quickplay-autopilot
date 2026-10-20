@@ -1,264 +1,129 @@
 {
  "date": "2026-10-20",
- "built": "2026-10-20T13:36+00:00",
- "model": "gemini-3.5-flash",
+ "built": "2026-10-20T15:25+00:00",
+ "model": "gemini-3.6-flash",
  "mode": "breaking",
- "errors": [],
+ "errors": [
+  "will jacks: gemini-flash-latest: ReadTimeout"
+ ],
  "topics": [
   {
-   "n": 18,
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 153,073 views",
-   "category": "Film",
-   "what_is_new": "",
+   "n": 5,
+   "topic": "mark allen",
+   "signal": "Google Trends GB 200+",
+   "category": "",
+   "what_is_new": "Mark Allen returned to action on 20 October 2026 and lost 4-2 to Jordan Brown in the first round of the Northern Ireland Open.",
    "hooks": [
-    "The new Street Fighter movie features Jason Momoa and Roman Reigns!",
-    "Chun-Li actress Callina Liang ate 12 eggs daily to bulk up.",
-    "Street Fighter 2026 is the third live-action film for the franchise."
+    "Mark Allen lost to Jordan Brown upon returning to snooker action.",
+    "Former world number one Mark Allen suffered an early Northern Ireland exit."
    ],
    "sources": [
     [
-     "Street Fighter (2026 Movie) Guide",
-     "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "IGN",
-     "2026-10-15"
-    ],
-    [
-     "Street Fighter (2026 film)",
-     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Kitao Sakurai directed the 2026 Street Fighter movie.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
-      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
-     }
-    },
-    {
-     "claim": "The film is the third live action feature length adaptation of the Street Fighter video game series.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "the movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
-      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
-     }
-    },
-    {
-     "claim": "Noah Centineo stars in the film as Ken Masters.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Noah Centineo as Ken Masters",
-      "2": "- Noah Centineo as Ken Masters"
-     }
-    },
-    {
-     "claim": "Andrew Koji portrays the character Ryu.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Andrew Koji as Ryu",
-      "2": "- Andrew Koji as Ryu / Dark Ryu"
-     }
-    },
-    {
-     "claim": "Callina Liang plays the role of Chun Li.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Callina Liang as Chun-Li",
-      "2": "- Callina Liang as Chun-Li[4]"
-     }
-    },
-    {
-     "claim": "David Dastmalchian appears in the movie as M. Bison.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- David Dastmalchian as M. Bison",
-      "2": "- David Dastmalchian as M. Bison"
-     }
-    },
-    {
-     "claim": "Joe Anoa'i also known as Roman Reigns plays Akuma.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Joe Anoa'i (Roman Reigns) as Akuma",
-      "2": "- Joe \"Roman Reigns\" Anoa'i as Akuma"
-     }
-    },
-    {
-     "claim": "Cody Rhodes is cast as Guile.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Cody Rhodes as Guile",
-      "2": "- Cody Rhodes as Guile"
-     }
-    },
-    {
-     "claim": "Jason Momoa portrays the character Blanka.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Jason Momoa as Blanka",
-      "2": "- Jason Momoa as Blanka"
-     }
-    },
-    {
-     "claim": "Curtis 50 Cent Jackson appears as Balrog.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Curtis \"50 Cent\" Jackson as Balrog",
-      "2": "- Curtis \"50 Cent\" Jackson as Balrog"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The film has grossed 51 million dollars worldwide against a production budget of 81 million dollars.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "It received mixed reviews from critics and has grossed $51 million worldwide against an $81 million production budget."
-     }
-    },
-    {
-     "claim": "Callina Liang increased the size of each of her thighs by 6.5 centimetres to prepare for her role.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "By the end of filming, each of her thighs had increased in size by 6.5 centimeters (2.6 in)."
-     }
-    },
-    {
-     "claim": "Principal photography for the movie began in August 2025 and concluded in November.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Principal photography began in August 2025 and ended in November."
-     }
-    },
-    {
-     "claim": "The actress playing Chun Li consumed 12 eggs per day as part of a rigorous bulking diet.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "She adopted a rigorous bulking diet that involved consuming 12 eggs per day and eating every two hours, which she said made her nauseated."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "anton du beke",
-   "signal": "Google Trends GB 2000+",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Discover the facts about Strictly Come Dancing judge Anton Du Beke.",
-    "Did you know Anton Du Beke released his debut studio album?"
-   ],
-   "sources": [
-    [
-     "Strictly Come Dancing's Shirley Ballas and Anton Du Beke go head-to-head in first look at Ballroom vs Latin group routine",
-     "https://www.bbc.com/mediacentre/2026/strictly-come-dancing-shirley-ballas-vs-anton-du-beke",
+     "Allen exits NI Open with Brown loss on return",
+     "https://www.bbc.co.uk/sport/snooker/articles/ck3r5v7l5xy2o?at_medium=RSS&at_campaign=rss",
      "BBC",
-     "2026-10-09"
+     "2026-10-20"
     ],
     [
-     "anton du beke",
-     "https://en.wikipedia.org/wiki/Anton_Du_Beke",
+     "Lily Allen’s polka dot butt plug is now for sale in her new line of sex toys",
+     "https://www.nme.com/news/music/lily-allens-polka-dot-butt-plug-is-now-for-sale-in-her-new-line-of-sex-toys-3973581?utm_source=rss&utm_medium=rss&utm_campaign=lily-allens-polka-dot-butt-plug-is-now-for-sale-in-her-new-line-of-sex-toys",
+     "NME",
+     "2026-10-20"
+    ],
+    [
+     "mark allen",
+     "https://en.wikipedia.org/wiki/Mark_Allen_(snooker_player)",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [
-    {
-     "claim": "Anton Du Beke is a professional dancer and a judge on the BBC show Strictly Come Dancing.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Strictly Come Dancing's Shirley Ballas and Anton Du Beke go head-to-head in first look at Ballroom vs Latin group routine",
-      "2": "Anton Du Beke (/ /), is a British ballroom and Latin dancer, author, singer and television presenter, best known for being a professional dancer and"
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Anton Du Beke was born as Anthony Paul Beke on 20 July 1966.",
+     "claim": "Mark Allen had not played since his World Championship semi-final loss to Wu Yize.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Anthony Paul Beke (born 20 July 1966), known professionally as Anton Du Beke (/ /), is a British ballroom and Latin dancer, author, singer and"
+      "1": "Allen, who had not played since his agonising World Championship semi-final loss to Wu Yize in early May, lost 4-2 to Brown in the all-Northern"
      }
     },
     {
-     "claim": "Anton Du Beke married Hannah Summers on 20 April 2017.",
+     "claim": "Mark Allen was ranked world number one from May to August 2024.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "Du Beke married Hannah Summers on 20 April 2017 at Cliveden in Taplow, Buckinghamshire.[7]"
-     }
-    },
-    {
-     "claim": "Anton Du Beke released his debut studio album From the Top in November 2017.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In November 2017 he released his debut studio album, From the Top, on Polydor Records."
-     }
-    },
-    {
-     "claim": "Anton Du Beke became a permanent judge on Strictly Come Dancing starting in September 2021.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 24 June 2021, it was announced that Du Beke would become a permanent judge on Strictly Come Dancing from series nineteen, starting in September"
+      "3": "He was ranked world number one from May to August 2024."
      }
     }
    ],
    "images": [
-    "commons:File:Anton_Du_Beke_in_2019.png"
+    "commons:File:Mark_Allen_with_English_Open_trophy_2025.jpg"
+   ]
+  },
+  {
+   "n": 7,
+   "topic": "south africa vs australia",
+   "signal": "Google Trends GB 2000+",
+   "category": "",
+   "what_is_new": "Former batter David Warner criticized Test match crowd sizes in South Africa on 2026-10-20.",
+   "hooks": [
+    "Temba Bavuma scored 179 runs in the second Test match.",
+    "Australia and South Africa established formal diplomatic relations in 1947."
+   ],
+   "sources": [
+    [
+     "South Africa v Australia: second men’s cricket Test, day three – live",
+     "https://www.theguardian.com/sport/live/2026/oct/20/south-africa-v-australia-second-test-day-three-cricket-st-georges-park-gqeberha-live-updates",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "Warner slams 'pathetic' Test crowds in South Africa",
+     "https://www.skysports.com/cricket/news/12040/13601291/david-warner-slams-pathetic-crowds-for-south-africa-vs-australia-test-matches",
+     "Sky Sports",
+     "2026-10-20"
+    ],
+    [
+     "south africa vs australia",
+     "https://en.wikipedia.org/wiki/South_Africa_-_Australia_relations",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "South Africa lost the first Test match against Australia by 214 runs in Durban.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "South Africa lost the first Test match by 214 runs in Durban, with large sections of the Kingsmead ground empty, and the crowds haven't really"
+     }
+    },
+    {
+     "claim": "Temba Bavuma scored 179 runs before being caught by Carey off the bowling of Starc.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "WICKET! Bavuma c Carey b Starc 179 (South Africa 425-9)"
+     }
+    },
+    {
+     "claim": "Simon Harmer was bowled by Marnus Labuschagne for 82 runs.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "WICKET! Harmer b Labuschagne 82 (South Africa 425-8)"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:South_Africa_Australia_Locator.png"
    ]
   }
  ]

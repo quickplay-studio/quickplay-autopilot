@@ -1,0 +1,96 @@
+{
+ "id": "QD-054",
+ "board": "boards/queue/QD-054.json",
+ "mode": "schedule",
+ "slot": "2026-10-20T17:10:00Z",
+ "rendered": "2026-10-20T15:37:33.809327+00:00",
+ "title": "Mark Allen knocked out of Northern Ireland Open 🎱",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 8
+ },
+ "music": "majestic-12",
+ "social_music": "tension-documentary-519912",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 27.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.9
+ },
+ "timeline": [
+  [
+   0.06,
+   3.65,
+   "title",
+   0
+  ],
+  [
+   3.65,
+   9.48,
+   "date",
+   1
+  ],
+  [
+   9.48,
+   11.74,
+   "none",
+   1
+  ],
+  [
+   11.74,
+   18.51,
+   "none",
+   1
+  ],
+  [
+   18.51,
+   23.71,
+   "none",
+   1
+  ],
+  [
+   23.71,
+   27.6,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "8389",
+   "q": "snooker table lights",
+   "t0": 0.0,
+   "t1": 14.1
+  },
+  {
+   "p": "pixabay",
+   "id": "24166",
+   "q": "sports arena crowd",
+   "t0": 13.5,
+   "t1": 27.6
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T15:49:36Z",
+ "video": "Pzfz3Nu7p8s",
+ "url": "https://youtube.com/shorts/Pzfz3Nu7p8s",
+ "publish_at": "2026-10-20T17:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-20T17:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-054"
+}

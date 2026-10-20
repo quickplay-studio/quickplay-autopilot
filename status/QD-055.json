@@ -1,0 +1,113 @@
+{
+ "id": "QD-055",
+ "board": "boards/queue/QD-055.json",
+ "mode": "schedule",
+ "slot": "2026-10-20T17:50:00Z",
+ "rendered": "2026-10-20T15:37:19.280235+00:00",
+ "title": "David Warner slams South Africa Test crowds 🏏",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Kingsmead Cricket Ground Durban: no Commons image named 'Kingsmead Cricket Ground Durban')",
+  "beat 7 reused a nearby picture (commons-search:Cricket stadium empty seats: no Commons image named 'Cricket stadium empty seats')"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 12
+ },
+ "music": "dead-wrong",
+ "social_music": "tension-documentary-519912",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 34.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.37,
+   "title",
+   0
+  ],
+  [
+   4.37,
+   9.47,
+   "date",
+   2
+  ],
+  [
+   9.47,
+   15.62,
+   "none",
+   2
+  ],
+  [
+   15.62,
+   20.25,
+   "stat",
+   1
+  ],
+  [
+   20.25,
+   25.37,
+   "none",
+   2
+  ],
+  [
+   25.37,
+   30.44,
+   "none",
+   2
+  ],
+  [
+   30.44,
+   34.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "189845",
+   "q": "cricket stadium pitch",
+   "t0": 0.0,
+   "t1": 11.96
+  },
+  {
+   "p": "pixabay",
+   "id": "161493",
+   "q": "green grass field",
+   "t0": 11.36,
+   "t1": 23.33
+  },
+  {
+   "p": "pixabay",
+   "id": "122965",
+   "q": "football stadium night",
+   "t0": 22.73,
+   "t1": 34.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T15:49:39Z",
+ "video": "t5D-3LRMRbk",
+ "url": "https://youtube.com/shorts/t5D-3LRMRbk",
+ "publish_at": "2026-10-20T17:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-20T17:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-055"
+}

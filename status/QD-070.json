@@ -1,0 +1,95 @@
+{
+ "id": "QD-070",
+ "board": "boards/queue/QD-070.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T02:18:00Z",
+ "rendered": "2026-10-20T23:29:26.738939+00:00",
+ "title": "Why do golf balls have dimples? ⛳",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "hopping-trains",
+ "social_music": "playful-jazz-swing-580495",
+ "look": {
+  "captions": "minimal",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 23.1,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 13.5
+ },
+ "timeline": [
+  [
+   0.06,
+   1.74,
+   "none",
+   0
+  ],
+  [
+   1.74,
+   5.58,
+   "none",
+   1
+  ],
+  [
+   5.58,
+   10.42,
+   "date",
+   1
+  ],
+  [
+   10.42,
+   16.46,
+   "none",
+   1
+  ],
+  [
+   16.46,
+   20.72,
+   "none",
+   1
+  ],
+  [
+   20.72,
+   23.08,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "45301",
+   "q": "golf course grass",
+   "t0": 0.0,
+   "t1": 11.84
+  },
+  {
+   "p": "pixabay",
+   "id": "157990",
+   "q": "green fairway lawn",
+   "t0": 11.24,
+   "t1": 23.08
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:26Z",
+ "video": "Y9sfjXFS4Z0",
+ "url": "https://youtube.com/shorts/Y9sfjXFS4Z0",
+ "publish_at": "2026-10-21T02:18:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T02:18:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-070"
+}

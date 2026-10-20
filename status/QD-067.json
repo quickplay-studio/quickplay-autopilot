@@ -1,0 +1,108 @@
+{
+ "id": "QD-067",
+ "board": "boards/queue/QD-067.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T00:30:00Z",
+ "rendered": "2026-10-20T23:29:09.216743+00:00",
+ "title": "Rod Stewart’s MTV launch record 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 8
+ },
+ "music": "death-duel",
+ "social_music": "synthwave-526520",
+ "look": {
+  "captions": "clean",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 38.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.29,
+   "none",
+   0
+  ],
+  [
+   4.29,
+   10.21,
+   "date",
+   1
+  ],
+  [
+   10.21,
+   14.64,
+   "none",
+   1
+  ],
+  [
+   14.64,
+   20.62,
+   "none",
+   1
+  ],
+  [
+   20.62,
+   29.94,
+   "stat",
+   1
+  ],
+  [
+   29.94,
+   35.04,
+   "none",
+   1
+  ],
+  [
+   35.04,
+   38.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "33517",
+   "q": "neon music studio",
+   "t0": 0.0,
+   "t1": 13.3
+  },
+  {
+   "p": "pixabay",
+   "id": "29483",
+   "q": "retro tv glow",
+   "t0": 12.7,
+   "t1": 25.99
+  },
+  {
+   "p": "pixabay",
+   "id": "212404",
+   "q": "city night lights",
+   "t0": 25.39,
+   "t1": 38.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:16Z",
+ "video": "NEAi42kpMIE",
+ "url": "https://youtube.com/shorts/NEAi42kpMIE",
+ "publish_at": "2026-10-21T00:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T00:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-067"
+}

@@ -1,0 +1,101 @@
+{
+ "id": "QD-068",
+ "board": "boards/queue/QD-068.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T01:06:00Z",
+ "rendered": "2026-10-20T23:29:03.692921+00:00",
+ "title": "The day Ready Player One began 🕹️",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "death-duel",
+ "social_music": "synthwave-526520",
+ "look": {
+  "captions": "minimal",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 25.1,
+  "wps": 3.2,
+  "weak_beats": [],
+  "size_mb": 12.2
+ },
+ "timeline": [
+  [
+   0.06,
+   3.14,
+   "none",
+   0
+  ],
+  [
+   3.14,
+   6.26,
+   "none",
+   1
+  ],
+  [
+   6.26,
+   10.49,
+   "date",
+   1
+  ],
+  [
+   10.49,
+   14.58,
+   "none",
+   1
+  ],
+  [
+   14.58,
+   17.85,
+   "none",
+   1
+  ],
+  [
+   17.85,
+   22.04,
+   "none",
+   1
+  ],
+  [
+   22.04,
+   25.12,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "62825",
+   "q": "movie theatre seats",
+   "t0": 0.0,
+   "t1": 12.86
+  },
+  {
+   "p": "pixabay",
+   "id": "9597",
+   "q": "film projector light",
+   "t0": 12.26,
+   "t1": 25.12
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:18Z",
+ "video": "non50TmKEto",
+ "url": "https://youtube.com/shorts/non50TmKEto",
+ "publish_at": "2026-10-21T01:06:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T01:06:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-068"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "QD-071",
+ "board": "boards/queue/QD-071.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T02:54:00Z",
+ "rendered": "2026-10-20T23:29:18.737482+00:00",
+ "title": "How does GPS actually pinpoint your location? 🛰️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "event-horizon",
+ "social_music": "space-ambient-cinematic-442834",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 27.4,
+  "wps": 2.8,
+  "weak_beats": [],
+  "size_mb": 7.6
+ },
+ "timeline": [
+  [
+   0.06,
+   4.02,
+   "none",
+   0
+  ],
+  [
+   4.02,
+   8.37,
+   "stat",
+   1
+  ],
+  [
+   8.37,
+   12.87,
+   "date",
+   1
+  ],
+  [
+   12.87,
+   17.18,
+   "none",
+   1
+  ],
+  [
+   17.18,
+   22.06,
+   "stat",
+   1
+  ],
+  [
+   22.06,
+   27.34,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "4504",
+   "q": "server room lights",
+   "t0": 0.0,
+   "t1": 13.97
+  },
+  {
+   "p": "pixabay",
+   "id": "732",
+   "q": "earth from orbit",
+   "t0": 13.37,
+   "t1": 27.34
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:28Z",
+ "video": "PbSOlBJC74U",
+ "url": "https://youtube.com/shorts/PbSOlBJC74U",
+ "publish_at": "2026-10-21T02:54:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T02:54:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-071"
+}

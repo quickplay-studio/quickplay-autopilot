@@ -1,0 +1,114 @@
+{
+ "id": "QD-069",
+ "board": "boards/queue/QD-069.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T01:42:00Z",
+ "rendered": "2026-10-20T23:28:57.100427+00:00",
+ "title": "The Beatles debut album recorded in 12 hours 🎸",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 10
+ },
+ "music": "death-duel",
+ "social_music": "synthwave-526520",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 32.9,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 18.2
+ },
+ "timeline": [
+  [
+   0.06,
+   3.48,
+   "none",
+   0
+  ],
+  [
+   3.48,
+   8.64,
+   "none",
+   1
+  ],
+  [
+   8.64,
+   12.44,
+   "none",
+   1
+  ],
+  [
+   12.44,
+   17.14,
+   "date",
+   1
+  ],
+  [
+   17.14,
+   20.48,
+   "none",
+   2
+  ],
+  [
+   20.48,
+   24.95,
+   "none",
+   1
+  ],
+  [
+   24.95,
+   29.75,
+   "none",
+   1
+  ],
+  [
+   29.75,
+   32.88,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "236098",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 11.36
+  },
+  {
+   "p": "pixabay",
+   "id": "38388",
+   "q": "vinyl record player",
+   "t0": 10.76,
+   "t1": 22.12
+  },
+  {
+   "p": "pixabay",
+   "id": "122750",
+   "q": "recording studio microphone",
+   "t0": 21.52,
+   "t1": 32.88
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:21Z",
+ "video": "FM2COeZ6Oi4",
+ "url": "https://youtube.com/shorts/FM2COeZ6Oi4",
+ "publish_at": "2026-10-21T01:42:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T01:42:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-069"
+}

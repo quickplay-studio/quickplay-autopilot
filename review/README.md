@@ -4,7 +4,7 @@
 
 YouTube checked Tue 20 Oct 20:14 (UK): 2 scheduled, 49 public, 9 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 0:36).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 0:48).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 0 of 40 so far, 6 more scheduled |
+| Wed 21 Oct | 0 public, 12 scheduled | 0 | 0 | ⏳ 0 of 40 so far, 12 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -52,15 +52,6 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
-
-## In the queue
-
-- **QD-067** Rod Stewart’s MTV launch record 🎤 (rendering next)
-- **QD-068** The day Ready Player One began 🕹️ (rendering next)
-- **QD-069** The Beatles debut album recorded in 12 hours 🎸 (rendering next)
-- **QD-070** Why do golf balls have dimples? ⛳ (rendering next)
-- **QD-071** How does GPS actually pinpoint your location? 🛰️ (rendering next)
-- **QD-072** Who was the first person to win an EGOT? 🏆 (rendering next)
 
 ## On the channel (latest first)
 

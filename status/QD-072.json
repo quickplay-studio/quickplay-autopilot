@@ -1,0 +1,109 @@
+{
+ "id": "QD-072",
+ "board": "boards/queue/QD-072.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T03:30:00Z",
+ "rendered": "2026-10-20T23:29:11.872159+00:00",
+ "title": "Who was the first person to win an EGOT? 🏆",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 31.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.8,
+   "none",
+   0
+  ],
+  [
+   3.8,
+   7.57,
+   "date",
+   1
+  ],
+  [
+   7.57,
+   11.13,
+   "none",
+   1
+  ],
+  [
+   11.13,
+   17.01,
+   "none",
+   1
+  ],
+  [
+   17.01,
+   21.25,
+   "stat",
+   1
+  ],
+  [
+   21.25,
+   26.61,
+   "none",
+   1
+  ],
+  [
+   26.61,
+   31.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380219",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 10.97
+  },
+  {
+   "p": "pixabay",
+   "id": "2531",
+   "q": "award ceremony lights",
+   "t0": 10.37,
+   "t1": 21.33
+  },
+  {
+   "p": "pixabay",
+   "id": "247208",
+   "q": "red carpet lights",
+   "t0": 20.73,
+   "t1": 31.7
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T23:49:32Z",
+ "video": "t3SSjxjQzqU",
+ "url": "https://youtube.com/shorts/t3SSjxjQzqU",
+ "publish_at": "2026-10-21T03:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T03:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-072"
+}

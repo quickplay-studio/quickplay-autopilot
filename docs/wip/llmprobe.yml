@@ -1,0 +1,42 @@
+name: llmprobe
+# Tries the writer's fallback models (Gemma on the Gemini API, Flash-Lite, the open model on this runner) on one real
+# fact pack and saves each board in status/llm_probe/ (never queued or uploaded). Run it by pushing requests/llmprobe.txt
+# (its first line may name models to try; otherwise the defaults).
+on:
+  push:
+    branches: [main]
+    paths: ['requests/llmprobe*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - run: pip install -q requests tzdata trafilatura
+      - name: Open model on this runner (llama.cpp)
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: bash pipeline/get_llama.sh
+      - name: Probe
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python pipeline/llm_probe.py $(head -1 requests/llmprobe.txt 2>/dev/null) 2>&1 | tee /tmp/probe.log
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          mkdir -p status/llm_probe
+          cp /tmp/probe.log status/llm_probe/probe.log 2>/dev/null || true
+          tail -c 20000 /tmp/llama-server.log > status/llm_probe/llama-server.log 2>/dev/null || true
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A status/llm_probe
+          git commit -q -m "LLM probe $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

@@ -52,6 +52,14 @@ tests/ run offline with stubbed HTTP (test_model_chain.py covers Gemma, the prov
 lite rule, the writer's choice, writer scores and the remake pick). A real run: push requests/write.txt with "dry 2"
 and read status/write_log.txt.
 
+## What the real runs showed (20 October, 22:20 to 22:40 UTC)
+- write.yml "dry 2" (status/write_log.txt): 3 boards (2 plus a reserve), each tagged with its writer
+  (gemini:gemini-flash-latest, gemini:gemini-3.5-flash-lite); llama.cpp fetched in a second ("local": true), no keyed
+  providers, 0 Claude calls. 5 Flash models were already out of their 20 a day; the Lite models carried the run.
+- llmprobe.yml (status/llm_probe/): gemma-4-31b-it wrote a clean board in 192 s; gemini-3.5-flash-lite in 2 s; the open
+  model (Qwen2.5-7B Q4 on the 4-CPU runner) in 456 s (prompt 14 tokens/s, answer 5 tokens/s) but short (44 words), so
+  it only ever writes as the last free resort and its boards go through the usual fixing round.
+
 ## Still open
 - Charlie's optional secrets: GROQ_API_KEY, CEREBRAS_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, CLAUDE_CODE_OAUTH_TOKEN
   (https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new).

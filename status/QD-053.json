@@ -1,0 +1,113 @@
+{
+ "id": "QD-053",
+ "board": "boards/queue/QD-053.json",
+ "mode": "schedule",
+ "slot": "2026-10-20T07:10:00Z",
+ "rendered": "2026-10-20T05:06:30.914712+00:00",
+ "title": "Angel Reese makes WNBA finals history 🏀",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 7 reused a nearby picture (commons-search:WNBA trophy: no Commons image named 'WNBA trophy')"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "duty-calls",
+ "social_music": "speed-race-344521",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 33.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.89,
+   "title",
+   1
+  ],
+  [
+   5.89,
+   11.8,
+   "none",
+   2
+  ],
+  [
+   11.8,
+   15.77,
+   "date",
+   1
+  ],
+  [
+   15.77,
+   19.05,
+   "none",
+   1
+  ],
+  [
+   19.05,
+   24.56,
+   "stat",
+   1
+  ],
+  [
+   24.56,
+   29.33,
+   "none",
+   1
+  ],
+  [
+   29.33,
+   33.02,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "30940",
+   "q": "basketball arena court",
+   "t0": 0.0,
+   "t1": 11.41
+  },
+  {
+   "p": "pixabay",
+   "id": "133206",
+   "q": "sports stadium lights",
+   "t0": 10.81,
+   "t1": 22.21
+  },
+  {
+   "p": "pixabay",
+   "id": "208442",
+   "q": "basketball hoop net",
+   "t0": 21.61,
+   "t1": 33.02
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T05:26:56Z",
+ "video": "Yp_GPimJRMQ",
+ "url": "https://youtube.com/shorts/Yp_GPimJRMQ",
+ "publish_at": "2026-10-20T07:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-20T07:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-053"
+}

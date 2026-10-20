@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 10:39): 6 of 1,000 subscribers · 2,783 of 10 million Shorts views in 90 days · 3,770 views in the last 24 hours (about 111,080 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 11:38): 6 of 1,000 subscribers · 2,821 of 10 million Shorts views in 90 days · 3,845 views in the last 24 hours (about 111,080 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 10:25 (UK): 0 scheduled, 46 public, 17 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 8 | 1 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 8 | 2 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -39,7 +39,7 @@ public · 46 views · 33 s · music: duty-calls · on Facebook · [script](../bo
 ![QD-053](QD-053.jpg)
 
 ### Tue 20 Oct 7:30 · Olivia Rodrigo and David Byrne's game show video 📺
-public · 11 views · 20 s · music: dance-with-you · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
+public · 11 views · 20 s · music: dance-with-you · on Facebook · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
 
 ![QD-052](QD-052.jpg)
 

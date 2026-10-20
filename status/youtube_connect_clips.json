@@ -1,7 +1,12 @@
 {
- "at": "2026-10-20T23:36:50+00:00",
- "ok": false,
- "connected": false,
+ "at": "2026-10-20T23:48:40+00:00",
+ "ok": true,
+ "connected": true,
+ "scopes": "https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/yt-analytics.readonly https://www.googleapis.com/auth/youtube.force-ssl",
+ "saved": "2026-10-20T23:48:37+00:00",
  "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?client_id=299670480964-bijjimd5va5a6rktampqnkgb6n7a8j41.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fquickplay-studio.github.io%2Fquickplay-autopilot%2Fyoutube-callback.html&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube.force-ssl+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube.upload+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyoutube.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fyt-analytics.readonly&access_type=offline&prompt=consent&include_granted_scopes=true&state=quickplay",
- "how": "open connect_url while using the clips channel, copy the code, run the social workflow with it and channel clips"
+ "last_exchange": {
+  "at": "2026-10-20T23:48:37+00:00",
+  "ok": true
+ }
 }

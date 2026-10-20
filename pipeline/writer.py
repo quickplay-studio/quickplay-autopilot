@@ -8,7 +8,7 @@ the last 14 days and anything Gemini would flag, and has Gemini write a board fr
 past board. pipeline/validate.py checks it; Gemini fixes what fails (twice at most); a board that still fails is dropped.
 Boards go to boards/queue for render.yml.
 """
-import csv, datetime as dt, json, os, pathlib, random, re, sys, urllib.parse, time
+import csv, datetime as dt, json, math, os, pathlib, random, re, sys, urllib.parse, time
 import requests
 from zoneinfo import ZoneInfo
 
@@ -141,7 +141,7 @@ def plan(breaking=False, hint=""):
             if b.get("created") == str(day) and not b.get("reserve"): made += 1
     limit = int(CFG.get("daily_limit", 24)) - (1 if day.weekday() == 6 else 0)
     per_run = share("breaking", 2, 4) if breaking else int((CFG.get("runs") or {}).get(run, 6))
-    if run == "afternoon": per_run = min(20, max(per_run, limit - made))     # the day's last run makes up anything the morning missed
+    if run == "afternoon": per_run = min(30, max(per_run, limit - made))     # the day's last run makes up anything the morning missed
     cap = min(per_run, max(0, limit - made))
     if os.environ.get("WRITE_COUNT", "").strip().isdigit(): cap = int(os.environ["WRITE_COUNT"])
     return run, day, cap
@@ -277,6 +277,30 @@ def hot():
         rows.append((x, r))
     return [r for _, r in sorted(rows, key=lambda t: -t[0])]
 
+
+def weak():
+    """Our Shorts that scored under half of typical after 48 hours (analytics/shorts.csv) with no remake yet, weakest first.
+    Deleting a weak Short gives no upload back and loses its slow search views, so it stays up; a remake on the same
+    subject, while it still trends, is the second try (one a day)."""
+    p = ROOT / "analytics" / "shorts.csv"
+    if not p.exists(): return []
+    done = {board(f).get("remakes") for f in (ROOT / "boards").glob("*/QD-*.json")}
+    rows = []
+    for r in csv.DictReader(p.open()):
+        try:
+            x = float(r.get("views_vs_typical") or "")
+            age = (NOW - dt.datetime.fromisoformat(r["posted"])).total_seconds() / 3600 if r.get("posted") else 0
+        except ValueError: continue
+        if x >= 0.5 or age < 48 or age > 14 * 24 or r.get("short") in done or not r.get("short"): continue
+        f = next((ROOT / "boards").glob(f"*/{r['short']}.json"), None)
+        r["_about"] = about(board(f)) if f else (r.get("title", ""), r.get("title", ""), set())
+        rows.append((x, r))
+    return [r for _, r in sorted(rows, key=lambda t: t[0])]
+
+
+REMAKE_NOTE = ("REMAKE: our Short \"{title}\" on this subject got under half our usual views. Write a second try on the same "
+               "subject from this pack: a different angle, a different hook and a different title (never a repeat of that "
+               "title's wording), opening on the most surprising fact the first Short didn't lead with.")
 
 EVERGREEN_PLAN = """You plan evergreen YouTube Shorts for Quickplay Daily (family-friendly, UK English): things people search for
 and watch all year, not news, in these categories (strongest first): {cats}. Suggest {n} ideas, best first: {kinds}.
@@ -435,7 +459,7 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
     "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
     "series": {"single": "", "two parts": ""},  # two Shorts with a cliffhanger between them (main(), emit_kind())
 }
-NOT_FOR = {"news": {"series"}, "breaking": {"series"}, "follow-up": {"series"}, "evergreen": {"title_search", "angles", "series"},
+NOT_FOR = {"news": {"series"}, "breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
            "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
 RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
 
@@ -575,15 +599,44 @@ def shape(b, picks):
         beats[0]["visual"] = {"type": "none"}
 
 
+def writer_name(model):
+    return model if ":" in model else f"gemini:{model}"
+
+
+def choose_writer(sid):
+    """The first-choice model for one board, by Thompson sampling over the writers that still have quota, scored by
+    analytics/models.json (each Short against Shorts posted around the same time); a writer with under 3 measured Shorts
+    gets an early-try boost, so every company's model is tested on real Shorts and the data decides. None: the chain's
+    own order."""
+    try: stats = json.loads((ROOT / "analytics" / "models.json").read_text()).get("writers") or {}
+    except Exception: stats = {}
+    spent, slow = factpack.STATE.get("spent_models") or set(), factpack.STATE.get("slow_models") or {}
+    try: cands = [writer_name(m) for m in (factpack.STATE.get("models") or [])] + factpack.chain()
+    except Exception: cands = []
+    cands = [m for m in cands if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
+             and slow.get(m, 0) < 2 and not m.startswith("claude:")]       # Claude only when every free model is spent
+    if len(cands) < 2: return None
+    rng, best, top = random.Random(f"writer:{sid}"), None, -1e9
+    for m in cands:
+        s = stats.get(m) or {}
+        n = int(s.get("n") or 0)
+        mean = float(s.get("score") or 1.0) if n else 1.0
+        if n < 3: mean = max(mean, 1.08)
+        v = rng.gauss(mean, 0.35 / math.sqrt(n + 1))
+        if v > top: best, top = m, v
+    return best
+
+
 def write_one(p, sid, day, prompt_head, extra="", kind="news"):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
-    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6)
+    pick = choose_writer(sid)
+    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, **({"prefer": pick} if pick else {}))
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
     for attempt in range(3):
         b = clean(ans)
         for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
-        b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created")}}
+        b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
@@ -685,6 +738,13 @@ def main():
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
         if emit(p, note, "follow-up" if fol else "breaking" if breaking else "news", fol=fol) and fol: follow.remove(fol)
+    if run == "morning" and len(written) < cap and not factpack.STATE.get("spent") and not late():   # one remake a day
+        for w in weak():
+            p = next((p for _, p in sorted(topics, key=rank) if covered(p, [w["_about"]])), None)      # still trending
+            if not p or len(p.get("verified") or []) + len(p.get("one_source") or []) < 2: continue
+            b = emit(p, REMAKE_NOTE.format(title=w.get("title", "")), "remake")
+            if b: b["remakes"] = w["short"]; (out / f"{b['id']}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
+            break
     if not breaking and not factpack.STATE.get("spent"):    # evergreen kinds fill spare places and stock the reserve
         spare = max(0, cap - len(written))
         if run == "morning":                                  # the fiction test: a few original stories a day, as the data allows

@@ -1,9 +1,9 @@
 {
- "daily_limit": 24,
+ "daily_limit": 40,
  "per_session": 12,
  "slot_first": "07:30",
- "slot_every_minutes": 40,
- "slots_per_day": 24,
+ "slot_every_minutes": 24,
+ "slots_per_day": 40,
  "lead_hours": 1,
  "music_moods": {
   "epic": "big cinematic reveals: film and TV news, trailers, major launches",
@@ -33,7 +33,7 @@
  "languages": {"es": {"channel": "Quickplay Daily Español", "voice": "default"}, "pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
  "languages_note": "Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
- "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (07:30 to 22:50 every 40 minutes until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
+ "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (07:30 to 23:06 every 24 minutes until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "background": {
   "enabled": true,
   "reuse_days": 7,
@@ -67,10 +67,14 @@
  "reserve_note": "Evergreen Shorts in boards/reserve fill any of the day's slots the writer runs left empty: after reserve_after (UK), up to reserve_per_day a day. In flagged approval mode a reserve Short with nothing flagged needs no approval; a flagged one waits for a 'reserve approve' line.",
  "upload_limit_24h": 40,
  "runs": {
-  "evening": 6,
-  "morning": 12,
-  "afternoon": 6
+  "evening": 10,
+  "morning": 18,
+  "afternoon": 12
  },
+ "claude_model": "sonnet",
+ "claude_max_per_run": 12,
+ "local_model": "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf",
+ "models_note": "Writer models, in order (pipeline/factpack.py gemini): Gemini Flash, Gemma (same key), the keyed free providers (GROQ_API_KEY, CEREBRAS_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY secrets; 'providers' here can pin model lists), the open model on the runner (local_model, llama.cpp), and Claude last (CLAUDE_CODE_OAUTH_TOKEN secret, claude_model, at most claude_max_per_run calls a run). Each board records its writer; analytics/models.json scores them and the writer picks the next first choice from that.",
  "runs_note": "Shorts each writer run makes. evening (20:50) writes the first part of TOMORROW (created = tomorrow, slots from 07:30) so flagged ones can be approved before bed; morning (06:50) and afternoon (12:50) write from that day's fresh trends.",
  "instagram_target": 36,
  "instagram_ramp_per_day": 4,

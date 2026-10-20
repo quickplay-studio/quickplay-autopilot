@@ -111,56 +111,73 @@ def image_ideas(got):
 
 
 def models(key):
-    """Flash models this key can use: the configured one first, then stable before preview, newest first."""
+    """Gemini API models this key can use: the configured one first, then Flash models (stable before preview, newest
+    first, Lite last), then the biggest Gemma instruction models (open models with their own, much bigger free limits)."""
     import requests
     if "models" not in STATE:
-        names = []
+        names, gemma = [], []
         try:
             r = requests.get("https://generativelanguage.googleapis.com/v1beta/models", params={"pageSize": 200},
                              headers={"x-goog-api-key": key}, timeout=30)
             for m in r.json().get("models", []):
                 n = m.get("name", "").split("/")[-1]
-                if "generateContent" in (m.get("supportedGenerationMethods") or []) and "flash" in n \
-                        and not re.search(r"image|tts|live|audio|embed|exp", n):
-                    names.append(n)
+                if "generateContent" not in (m.get("supportedGenerationMethods") or []) or re.search(r"image|tts|live|audio|embed|exp", n):
+                    continue
+                if "flash" in n: names.append(n)
+                elif n.startswith("gemma") and n.endswith("-it"): gemma.append(n)
         except Exception: pass
         want = CFG.get("gemini_model", "gemini-flash-latest")
         ver = lambda n: max([float(v) for v in re.findall(r"\d+(?:\.\d+)?", n)] or [0])
         ordered = sorted(set(names) - {want}, key=lambda n: ("lite" in n, "preview" in n, -ver(n)))   # Lite last: a bigger free quota
-        STATE["models"] = [want] + ordered
-        print("Gemini models:", STATE["models"][:5])
+        size = lambda n: (-ver(n.split("-")[1]) if "-" in n else 0, -max([float(v) for v in re.findall(r"(\d+)b", n)] or [0]))
+        STATE["models"] = [want] + ordered + sorted(set(gemma), key=size)[:3]
+        print("Gemini models:", STATE["models"][:5], "+", len(STATE["models"]) - 5 if len(STATE["models"]) > 5 else 0)
     return STATE["models"]
 
 
 def loads_loose(text):
-    """Gemini's JSON, forgiving the slips it sometimes makes: a code fence around it, a trailing comma."""
-    s = re.sub(r"^\s*```(?:json)?\s*|\s*```\s*$", "", text or "")
-    try: return json.loads(s or "{}")
-    except ValueError: return json.loads(re.sub(r",\s*([}\]])", r"\1", s))
+    """A model's JSON, forgiving the slips models make: a code fence or a thinking block around it, a trailing comma,
+    words before or after it."""
+    s = re.sub(r"(?s)<think>.*?</think>", "", text or "").strip()
+    s = re.sub(r"^\s*```(?:json)?\s*|\s*```\s*$", "", s)
+    for t in (s, s[s.find("{"):s.rfind("}") + 1] if "{" in s and "}" in s else None):
+        if t is None: continue
+        try: return json.loads(t or "{}")
+        except ValueError:
+            try: return json.loads(re.sub(r",\s*([}\]])", r"\1", t))
+            except ValueError: pass
+    raise ValueError("no readable JSON")
 
 
-def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
-    """JSON from the first Gemini model that answers. A model out of its free daily quota, or retired (404), is skipped for
-    the rest of the run, so every other model gets its turn (each has its own quota); a per-minute limit waits and tries
-    again, and so does an answer that isn't readable JSON. lite: simple jobs (triage, fact extraction, translations,
-    replies) try the Lite models first, which have the biggest free quota, and save the others for writing and checking."""
+def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer=None):
+    """JSON from the first model that answers, and that model's name. Gemini first: a model out of its free daily quota, or
+    retired (404), is skipped for the rest of the run, so every other model gets its turn (each has its own quota); a
+    per-minute limit waits and tries again, and so does an answer that isn't readable JSON. lite: simple jobs (triage,
+    fact extraction, translations, replies) try the Lite models first, which have the biggest free quota, and save the
+    others for writing and checking. When every Gemini API model (Flash, then Gemma) is spent or failing, the chain goes
+    on (others()): the keyed free providers, the open model on this runner, and Claude last. prefer: a model name (as
+    returned) to try first, so the writer can test models against each other."""
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
     notes = STATE.setdefault("quota_notes", {})         # which limit each spent model hit, for the run's log
     last = "no Gemini model answered"
     slow = STATE.setdefault("slow_models", {})          # timeouts this run: after 2, the model is passed over
-    todo = [m for m in models(key) if m not in spent and slow.get(m, 0) < 2]
+    if prefer and ":" in prefer and not prefer.startswith("gemini:"):
+        got = others(prompt, timeout, temperature, lite, only=prefer)
+        if got: return got
+    prefer = (prefer or "").removeprefix("gemini:")
+    todo = [m for m in (models(key) if key else []) if m not in spent and slow.get(m, 0) < 2]
     if lite: todo.sort(key=lambda m: "lite" not in m)
-    if not todo:
-        if all(m in spent for m in models(key)): STATE["spent"] = True
-        raise RuntimeError("no Gemini model is answering (free quota used up or too slow)")
+    if prefer in todo: todo.remove(prefer); todo.insert(0, prefer)
     for model in todo:
         timed_out = False
-        for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
-            gen = {"temperature": temperature, "responseMimeType": "application/json", **think}
-            if schema: gen["responseSchema"] = schema
-            body = {"contents": [{"role": "user", "parts": [{"text": prompt}]}], "generationConfig": gen}
+        gemma = model.startswith("gemma")              # no JSON mode, no thinking settings: plain text, read loosely
+        for think in ([{}] if gemma else [STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
+            gen = {"temperature": temperature} if gemma else {"temperature": temperature, "responseMimeType": "application/json", **think}
+            if schema and not gemma: gen["responseSchema"] = schema
+            text = prompt + ("\n\nReply with the JSON only, no other text." if gemma else "")
+            body = {"contents": [{"role": "user", "parts": [{"text": text}]}], "generationConfig": gen}
             for attempt in range(3):
                 try:
                     r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
@@ -181,19 +198,216 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
                 if r.ok:
                     parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
                     STATE.setdefault("think", {})[model] = think
-                    try: return loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
+                    try:
+                        ans = loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought")))
+                        count(model); return ans, model
                     except ValueError as e: last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
                 last = f"{model}: {r.status_code} {r.text[:150]}"
                 if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
                 break
             if timed_out or model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
+    got = others(prompt, timeout, temperature, lite)
+    if got: return got
+    if not todo: last = "no Gemini model is answering (free quota used up or too slow)"
+    if STATE.get("last_other"): last += "; " + STATE["last_other"]
+    if all(m in spent for m in models(key) if key) and STATE.get("others_spent"): STATE["spent"] = True
     raise RuntimeError(last)
 
 
+def count(model):
+    c = STATE.setdefault("calls", {}); c[model] = c.get(model, 0) + 1
+
+
+# Other companies' free tiers, all OpenAI-style, used only when Charlie has added the key as a repository secret. The model
+# lists are preferences: each provider's own /models list decides what is offered today (config.json "providers" overrides).
+PROVIDERS = {
+    "groq": ("GROQ_API_KEY", "https://api.groq.com/openai/v1",
+             ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "moonshotai/kimi-k2-instruct", "qwen/qwen3-32b"]),
+    "cerebras": ("CEREBRAS_API_KEY", "https://api.cerebras.ai/v1",
+                 ["gpt-oss-120b", "qwen-3-235b-a22b-instruct-2507", "llama-3.3-70b"]),
+    "mistral": ("MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-large-latest", "mistral-medium-latest", "mistral-small-latest"]),
+    "openrouter": ("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1", []),       # its ":free" models, biggest context first
+}
+NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound", re.I)
+JSON_ONLY = "Reply with one JSON value only, no other text."
+LOCAL_PORT = 8089
+
+
+def provider_models(name):
+    """The models of one keyed provider to try, in order: configured ones, else its preferences it still offers, else
+    the first few chat models it lists."""
+    cache = STATE.setdefault("provider_models", {})
+    if name in cache: return cache[name]
+    env, base, pref = PROVIDERS[name]
+    key = os.environ.get(env, "").strip()
+    got = []
+    if key:
+        cfg = (CFG.get("providers") or {}).get(name)
+        if cfg: got = list(cfg)
+        else:
+            import requests
+            ids, meta = [], {}
+            try:
+                r = requests.get(base + "/models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
+                for m in (r.json().get("data") or []) if r.ok else []:
+                    if m.get("id") and not NOT_TEXT.search(m["id"]): ids.append(m["id"]); meta[m["id"]] = m
+            except Exception: pass
+            if name == "openrouter":
+                free = [i for i in ids if i.endswith(":free")]
+                got = sorted(free, key=lambda i: -int(meta[i].get("context_length") or 0))[:4]
+            elif ids:
+                got = [m for m in pref if m in ids] or ids[:3]
+            else: got = pref
+    cache[name] = [f"{name}:{m}" for m in got]
+    return cache[name]
+
+
+def chain():
+    """Every model after the Gemini API ones, in the order they are tried."""
+    out = [m for n in PROVIDERS for m in provider_models(n)]
+    if os.environ.get("LLAMA_SERVER"): out.append("local:" + local_name())
+    if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip(): out.append("claude:" + CFG.get("claude_model", "sonnet"))
+    return out
+
+
+def local_name():
+    return re.sub(r"(?i)\.gguf$", "", (CFG.get("local_model") or LOCAL_MODEL).rsplit("/", 1)[-1]).lower()
+
+
+LOCAL_MODEL = "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf"
+
+
+def local_start():
+    """Starts llama-server with the open model (downloaded once per run) and waits until it answers. False if it can't."""
+    if "local_ok" in STATE: return STATE["local_ok"]
+    import requests, subprocess
+    STATE["local_ok"] = False
+    url = CFG.get("local_model") or LOCAL_MODEL
+    path = pathlib.Path("/tmp") / url.rsplit("/", 1)[-1]
+    try:
+        if not path.exists():
+            print("local model: downloading", url, flush=True)
+            with requests.get(url, stream=True, timeout=60) as r:
+                r.raise_for_status()
+                with open(str(path) + ".part", "wb") as f:
+                    for chunk in r.iter_content(1 << 20): f.write(chunk)
+            os.replace(str(path) + ".part", path)
+        log = open("/tmp/llama-server.log", "ab")
+        subprocess.Popen([os.environ["LLAMA_SERVER"], "-m", str(path), "--port", str(LOCAL_PORT), "-c", "16384",
+                          "-t", str(os.cpu_count() or 4)], stdout=log, stderr=log)
+        for _ in range(120):
+            try:
+                if requests.get(f"http://127.0.0.1:{LOCAL_PORT}/health", timeout=5).ok: STATE["local_ok"] = True; break
+            except Exception: pass
+            time.sleep(5)
+    except Exception as e:
+        print("local model:", str(e)[:200])
+    print("local model ready" if STATE["local_ok"] else "local model: not running")
+    return STATE["local_ok"]
+
+
+def openai_chat(label, base, key, model, prompt, timeout, temperature):
+    """One OpenAI-style model. Returns (json, None), or (None, why). Marks the model spent on a daily limit, a refused key
+    or a retired model; waits on a per-minute limit; asks again when the answer isn't readable JSON."""
+    import requests
+    spent, notes = STATE.setdefault("spent_models", set()), STATE.setdefault("quota_notes", {})
+    slow = STATE.setdefault("slow_models", {})
+    nojson = STATE.setdefault("no_json_mode", set())
+    why = f"{label}: no answer"
+    for attempt in range(3):
+        body = {"model": model, "temperature": temperature, "max_tokens": 6000,
+                "messages": [{"role": "system", "content": JSON_ONLY}, {"role": "user", "content": prompt}]}
+        if label not in nojson: body["response_format"] = {"type": "json_object"}
+        try:
+            r = requests.post(base + "/chat/completions", json=body, timeout=timeout,
+                              headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        except requests.exceptions.RequestException as e:
+            slow[label] = slow.get(label, 0) + 1; return None, f"{label}: {type(e).__name__}"
+        t = r.text.lower()
+        if r.status_code == 429:
+            ra = r.headers.get("retry-after") or ""
+            ra = float(ra) if re.fullmatch(r"\d+(\.\d+)?", ra) else None
+            per_day = bool(re.search(r"per day|daily|\brpd\b|\btpd\b|requests_per_day|tokens_per_day|quota|credits", t)) or (ra or 0) > 120
+            if per_day or attempt == 2:
+                spent.add(label); notes[label] = "daily limit" if per_day else "per-minute limit, 3 tries"
+                return None, f"{label}: free quota used up"
+            time.sleep(min(65, ra + 2) if ra else 20 * (attempt + 1)); why = f"{label}: per-minute limit"; continue
+        if r.status_code in (401, 403):
+            spent.add(label); notes[label] = f"key refused ({r.status_code})"; return None, f"{label}: key refused"
+        if r.status_code == 404:
+            spent.add(label); return None, f"{label}: not offered (404)"
+        if r.status_code == 413 or "context" in t and "length" in t or "too large" in t:
+            return None, f"{label}: prompt too large"
+        if r.status_code == 400 and label not in nojson and ("response_format" in t or "json" in t):
+            nojson.add(label); continue
+        if r.status_code >= 500:
+            why = f"{label}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
+        if not r.ok: return None, f"{label}: {r.status_code} {r.text[:150]}"
+        try:
+            msg = ((r.json().get("choices") or [{}])[0].get("message") or {}).get("content") or ""
+            ans = loads_loose(msg); count(label); return ans, None
+        except ValueError as e: why = f"{label}: unreadable JSON ({str(e)[:60]})"
+    return None, why
+
+
+def claude_call(label, prompt, timeout):
+    """Claude Code in print mode with Charlie's subscription token (CLAUDE_CODE_OAUTH_TOKEN), no tools, in an empty folder
+    so no project files load. At most claude_max_per_run calls a run (config.json), so his Claude allowance lasts."""
+    import shutil, subprocess, tempfile
+    spent, notes = STATE.setdefault("spent_models", set()), STATE.setdefault("quota_notes", {})
+    if STATE.get("claude_calls", 0) >= int(CFG.get("claude_max_per_run", 12)):
+        spent.add(label); notes[label] = "run cap"; return None, f"{label}: run cap reached"
+    exe = shutil.which("claude")
+    if not exe: spent.add(label); return None, f"{label}: CLI not installed"
+    STATE["claude_calls"] = STATE.get("claude_calls", 0) + 1
+    try:
+        r = subprocess.run([exe, "-p", "--output-format", "json", "--model", label.split(":", 1)[1], "--tools", "",
+                            "--system-prompt", JSON_ONLY, "--no-session-persistence", "--max-turns", "2"],
+                           input=prompt, capture_output=True, text=True, timeout=max(timeout, 300), cwd=tempfile.mkdtemp())
+        out = json.loads(r.stdout or "{}")
+    except subprocess.TimeoutExpired: return None, f"{label}: timeout"
+    except ValueError: return None, f"{label}: {(r.stderr or r.stdout)[:150]}"
+    res = str(out.get("result") or "")
+    if out.get("is_error") or r.returncode:
+        if re.search(r"limit|quota|credit|auth|login|token", res, re.I):
+            spent.add(label); notes[label] = res[:80]
+        return None, f"{label}: {res[:150]}"
+    try:
+        ans = loads_loose(res); count(label); return ans, None
+    except ValueError as e: return None, f"{label}: unreadable JSON ({str(e)[:60]})"
+
+
+def others(prompt, timeout=100, temperature=0.1, lite=False, only=None):
+    """The rest of the chain after the Gemini API: keyed free providers, the open model on this runner, then Claude (never
+    for lite jobs: Charlie's allowance goes on writing and checking Shorts, not fact extraction). Returns (json, model)
+    from the first that answers, else None (and marks the chain spent when nothing is left)."""
+    spent, slow = STATE.setdefault("spent_models", set()), STATE.setdefault("slow_models", {})
+    todo = [m for m in chain() if m not in spent and slow.get(m, 0) < 2 and not (lite and m.startswith("claude:"))]
+    if only: todo = [m for m in todo if m == only]
+    for label in todo:
+        prov, model = label.split(":", 1)
+        if prov in PROVIDERS:
+            ans, why = openai_chat(label, PROVIDERS[prov][1], os.environ.get(PROVIDERS[prov][0], "").strip(), model, prompt,
+                                   timeout, temperature)
+        elif prov == "local":
+            if not local_start(): spent.add(label); continue
+            ans, why = openai_chat(label, f"http://127.0.0.1:{LOCAL_PORT}/v1", "none", local_name(), prompt, max(timeout, 900), temperature)
+        elif prov == "claude":
+            ans, why = claude_call(label, prompt, timeout)
+        else: continue
+        if ans is not None: return ans, label
+        STATE["last_other"] = why
+    if not only and all(m in spent for m in chain()): STATE["others_spent"] = True
+    return None
+
+
 def gemini_state():
-    """How the run's Gemini calls went, for the logs: models out of quota (and which limit), and timeouts."""
+    """How the run's model calls went, for the logs: models out of quota (and which limit), timeouts, answers per model,
+    the keyed providers in use and how many Claude calls the run made."""
     return {"out of quota": STATE.get("quota_notes") or {}, "retired": sorted(set(STATE.get("spent_models") or []) - set(STATE.get("quota_notes") or {})),
-            "timeouts": STATE.get("slow_models") or {}}
+            "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {},
+            "providers": [n for n in PROVIDERS if os.environ.get(PROVIDERS[n][0], "").strip()],
+            "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0)}
 
 
 def triage(topics, limit):

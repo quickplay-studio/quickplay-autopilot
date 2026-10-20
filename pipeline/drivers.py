@@ -15,8 +15,8 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
-            ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series")]
-TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series")     # recorded on the board by the writer (writer.py tests)
+            ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("writer", "Writer model")]
+TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "writer")     # recorded on the board by the writer (writer.py tests)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 
 def hook_type(h):

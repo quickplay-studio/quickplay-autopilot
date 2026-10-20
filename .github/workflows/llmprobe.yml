@@ -27,6 +27,10 @@ jobs:
       - name: Probe
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: python pipeline/llm_probe.py $(head -1 requests/llmprobe.txt 2>/dev/null) 2>&1 | tee /tmp/probe.log
       - name: Save
         if: ${{ always() }}

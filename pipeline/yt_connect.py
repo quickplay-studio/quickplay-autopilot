@@ -75,6 +75,12 @@ def exchange(ch="main"):
     except Exception as e:
         tok["channel"] = {"error": str(e)[:150]}
     is_main = tok["channel"].get("id") == MAIN or tok["channel"].get("title") == "Quickplay Daily"
+    title = str(tok["channel"].get("title") or "").lower()
+    found = "main" if is_main else "clips" if "clips" in title else "es" if "espa" in title else "pt" if "portugu" in title else None
+    if found and found != ch:         # the sign-in says which channel it is: saved under that name, whatever the dropdown said
+        print(f"YouTube sign-in is for the {found} channel ({tok['channel'].get('title')}), not {ch}: saving it as {found}")
+        ch = found
+        name, out = ("youtube", OUT) if ch == "main" else (f"youtube_{ch}", OUT.with_name(f"youtube_connect_{ch}.json"))
     if is_main != (ch == "main"):     # one channel's sign-in never replaces another's
         res = {"at": now(), "ok": False, "error": f"this sign-in is for {tok['channel'].get('title') or 'an unknown channel'}, not the "
                f"{ch} channel: sign in again and pick the right channel"}

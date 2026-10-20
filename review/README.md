@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 21 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 40 scheduled |
-| Tue 20 Oct | 7 public | 10 | 10 | ⏳ 7 of 24 so far |
+| Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
+| Wed 21 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 0 of 40 so far, 6 more scheduled |
+| Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
 | Fri 16 Oct | 0 public | 0 | 0 | no target then |
 | Thu 15 Oct | 0 public | 0 | 0 | no target then |
-| Wed 14 Oct | 0 public | 0 | 0 | no target then |
 
 ## Voice test
 
@@ -52,22 +52,6 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
-
-## Waiting for your approval
-
-Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
-
-### QD-064 · The Gilded Age season 4 episode count confirmed 📺
-awaiting approval · 24 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-9397de579f951ec1e479)
-- dry run: always waits for approval, never uploaded
-
-![QD-064](QD-064.jpg)
-
-### QD-065 · How Tetris was smuggled out of the Soviet Union 🕹️
-awaiting approval · 33 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-02f048d9fec043e6b7e0)
-- dry run: always waits for approval, never uploaded
-
-![QD-065](QD-065.jpg)
 
 ## On the channel (latest first)
 

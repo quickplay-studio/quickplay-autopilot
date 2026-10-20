@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "",
  "rendered": "2026-10-18T21:48:44.328546+00:00",
- "title": "Octopus: three hearts and blue blood 🐙",
+ "title": "Why octopus blood is blue 🐙",
  "media": {
   "real_shots": 9,
   "planned_real": 11
@@ -86,7 +86,14 @@
  },
  "engage": {
   "comment": "UgxTVjVDycrphrwPQxJ4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "Octopus: three hearts and blue blood 🐙",
+   "to": "Why octopus blood is blue 🐙",
+   "at": "2026-10-20T20:11+00:00",
+   "views_an_hour": 0.0,
+   "typical": 2.4
+  }
  },
  "instagram": {
   "media": "18136242550629891",

@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 07:46): 6 of 1,000 subscribers · 2,621 of 10 million Shorts views in 90 days · 3,482 views in the last 24 hours (about 111,082 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 08:47): 6 of 1,000 subscribers · 2,680 of 10 million Shorts views in 90 days · 3,621 views in the last 24 hours (about 111,081 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 8:29 (UK): 0 scheduled, 46 public, 20 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 13:08).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 8:42).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 0 | 0 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 5 | 0 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -74,17 +74,17 @@ public · 52 views · 32 s · music: never-coming-down · on Facebook · [script
 ![QD-045](QD-045.jpg)
 
 ### Mon 19 Oct 15:30 · Jailer 2's cameos: Hrithik Roshan and more 🎬
-public · 107 views · 30 s · music: once-upon-a-time · [script](../boards/done/QD-044.json) · [YouTube](https://youtube.com/shorts/r99IfJk-afM)
+public · 107 views · 30 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-044.json) · [YouTube](https://youtube.com/shorts/r99IfJk-afM)
 
 ![QD-044](QD-044.jpg)
 
 ### Mon 19 Oct 14:50 · K/DA tease a comeback for 20 October 💜
-public · 4 views · 31 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-043.json) · [YouTube](https://youtube.com/shorts/n6j8dxF9M7o)
+public · 4 views · 31 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-043.json) · [YouTube](https://youtube.com/shorts/n6j8dxF9M7o)
 
 ![QD-043](QD-043.jpg)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
-public · 43 views · 23 s · music: in-battery · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
+public · 43 views · 23 s · music: in-battery · on Instagram · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
 
 ![QD-041](QD-041.jpg)
 
@@ -92,12 +92,12 @@ public · 43 views · 23 s · music: in-battery · [script](../boards/done/QD-04
 public · 137 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
-public · 147 views · 30 s · music: f16 · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
+public · 147 views · 30 s · music: f16 · on Instagram · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
 
 ![QD-042](QD-042.jpg)
 
 ### Mon 19 Oct 12:10 · What was the first music video on MTV? 📺
-public · 181 views · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
+public · 181 views · 24 s · music: after-sunset · on Instagram · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
 
 ![QD-038](QD-038.jpg)
 

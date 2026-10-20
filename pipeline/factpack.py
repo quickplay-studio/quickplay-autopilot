@@ -220,7 +220,7 @@ def build():
     topics = research.get("topics") or []
     for i, cat in triage(topics, limit):
         t = topics[i - 1]
-        if time.time() - start > 14 * 60 or STATE.get("spent"): break
+        if time.time() - start > 22 * 60 or STATE.get("spent"): break
         srcs = [dict(a, kind="article") for a in t.get("articles") or []]
         if t.get("wikipedia"): srcs.append({"outlet": "Wikipedia", "title": t["topic"], "url": t["wikipedia"], "published": "", "kind": "wikipedia"})
         got = []
@@ -229,7 +229,7 @@ def build():
             if len(txt) >= 400: got.append((s, txt, img))
         images = image_ideas(got)
         got = [(s, txt) for s, txt, img in got]
-        if len(got) < 2: continue                     # two pages are the least a fact can be checked against
+        if not got: continue                          # one page will do: a one-source fact is used with its source named
         pages = "\n\n".join(f"[{k}] {s['outlet']} · {s['title']} · {s.get('published') or 'undated'} · {s['url']}\n{txt}"
                             for k, (s, txt) in enumerate(got, 1))
         try:

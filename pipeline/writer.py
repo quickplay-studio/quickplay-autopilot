@@ -8,7 +8,7 @@ the last 14 days and anything Gemini would flag, and has Gemini write a board fr
 past board. pipeline/validate.py checks it; Gemini fixes what fails (twice at most); a board that still fails is dropped.
 Boards go to boards/queue for render.yml.
 """
-import csv, datetime as dt, json, os, pathlib, random, re, sys, urllib.parse
+import csv, datetime as dt, json, os, pathlib, random, re, sys, urllib.parse, time
 import requests
 from zoneinfo import ZoneInfo
 
@@ -603,7 +603,7 @@ def main():
     d = json.loads(facts.read_text())
     breaking = d.get("mode") == "breaking"          # a check between the main runs: only what is spiking
     run, day, cap = plan(breaking)
-    print(f"{run} run for {day}: {cap} to write")
+    print(f"{run} run for {day}: {cap} to write from {len(d.get('topics') or [])} fact packs")
     if cap <= 0 and (breaking or reserve_count() >= 6): return
     seen, used, follow, up, src_up = recent(), day_formats(day), hot(), boosts(), boosts("source")
     moods, notes = list(CFG.get("music_moods") or []), dropoff_notes()
@@ -611,6 +611,8 @@ def main():
             + ("\n\nWHERE VIEWERS SWIPE AWAY (from the data)\n- " + "\n- ".join(notes) if notes else "")
             + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + example())
     out, written = ROOT / "boards" / "queue", []
+    deadline = time.time() + 60 * float(os.environ.get("WRITE_MINUTES") or 55)   # the job stops at 90: save what is written
+    late = lambda: time.time() > deadline
     state = {"n": next_id(), "angles": int(CFG.get("angle_searches_per_run", 2))}
     out.mkdir(parents=True, exist_ok=True)
 
@@ -668,7 +670,7 @@ def main():
     rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     for _, p in sorted(topics, key=rank):
-        if len(written) >= cap or factpack.STATE.get("spent"): break
+        if len(written) >= cap or factpack.STATE.get("spent") or late(): break
         if not p.get("verified") and not p.get("one_source"): continue
         fol = next((r for r in follow if covered(p, [r["_about"]])), None)
         if not fol and covered(p, seen + [about(b) for b in written]): print("covered already:", p["topic"]); continue
@@ -680,22 +682,25 @@ def main():
         spare = max(0, cap - len(written))
         if run == "morning":                                  # the fiction test: a few original stories a day, as the data allows
             for _ in range(min(spare, share("fiction", 1, 3))):
+                if late(): break
                 fp = fiction_pack(seen + [about(b) for b in written])
                 if not fp or factpack.STATE.get("spent"): break
                 before = len(written); emit_kind(fp, "fiction"); spare = max(0, spare - (len(written) - before))
-        want = min(share("evergreen", 3, 6), spare + (2 if reserve_count() < 6 else 0))
-        if want:
+        want = min(20, spare + (2 if reserve_count() < 6 else 0))      # every place the news left, so each run writes its full number
+        if want and not late():
             try:
                 ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written])
             except Exception as e:
                 ever = []; print("evergreen:", str(e)[:200])
             for p in ever:
-                if factpack.STATE.get("spent"): break
+                if factpack.STATE.get("spent") or late(): break
                 before = len(written)
                 emit_kind(p, p.get("kind", "evergreen"), reserve=spare <= 0)
                 if spare > 0: spare = max(0, spare - (len(written) - before))
-    print(f"wrote {len(written)}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
-                                         for b in written))
+    print(f"wrote {len(written)} of {cap}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
+                                               for b in written))
+    print("gemini:", json.dumps({"order": factpack.STATE.get("models", [])[:6], "out of quota": sorted(factpack.STATE.get("spent_models") or []),
+                                 "timeouts": factpack.STATE.get("slow_models") or {}, "late": late()}))
 
 
 if __name__ == "__main__":

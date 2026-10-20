@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 12:23): 6 of 1,000 subscribers · 2,855 of 10 million Shorts views in 90 days · 3,778 views in the last 24 hours (about 111,079 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 12:39): 6 of 1,000 subscribers · 2,838 of 10 million Shorts views in 90 days · 3,830 views in the last 24 hours (about 111,080 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 12:23 (UK): 0 scheduled, 46 public, 13 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 9 | 3 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 10 | 4 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -49,7 +49,7 @@ public · 62 views · 26 s · music: cued-for-liftoff · on Facebook · [script]
 ![QD-031](QD-031.jpg)
 
 ### Mon 19 Oct 20:50 · Octopus: three hearts and blue blood 🐙
-public · 26 s · music: try-to-catch-me · [script](../boards/done/QD-030.json) · [YouTube](https://youtube.com/shorts/gc3iMpgf_QY)
+public · 26 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-030.json) · [YouTube](https://youtube.com/shorts/gc3iMpgf_QY)
 
 ![QD-030](QD-030.jpg)
 

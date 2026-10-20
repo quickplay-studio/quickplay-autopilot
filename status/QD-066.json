@@ -1,0 +1,94 @@
+{
+ "id": "QD-066",
+ "board": "boards/queue/QD-066.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-20T22:25:46.600254+00:00",
+ "title": "Apollo 13 crew: the real survival story 🚀",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "sci-fi-ambient-587603",
+ "look": {
+  "captions": "minimal",
+  "voice": "daniel",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 35.5,
+  "wps": 3.06,
+  "weak_beats": [],
+  "size_mb": 14.8
+ },
+ "timeline": [
+  [
+   0.06,
+   3.75,
+   "none",
+   0
+  ],
+  [
+   3.75,
+   11.34,
+   "none",
+   2
+  ],
+  [
+   11.34,
+   18.38,
+   "none",
+   1
+  ],
+  [
+   18.38,
+   25.61,
+   "none",
+   1
+  ],
+  [
+   25.61,
+   35.52,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "213804",
+   "q": "galaxy stars nebula",
+   "t0": 0.0,
+   "t1": 12.24
+  },
+  {
+   "p": "pixabay",
+   "id": "246618",
+   "q": "space station view",
+   "t0": 11.64,
+   "t1": 23.88
+  },
+  {
+   "p": "pixabay",
+   "id": "109821",
+   "q": "stars moving fast",
+   "t0": 23.28,
+   "t1": 35.52
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: waits in boards/reserve to fill slots the day's writer runs leave empty",
+  "check: meta.sources: one site only; name it in the narration for breaking news"
+ ],
+ "preview_release": "preview-QD-066",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-e5225694eec347d3aaa8"
+}

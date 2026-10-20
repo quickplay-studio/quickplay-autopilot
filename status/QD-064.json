@@ -1,0 +1,101 @@
+{
+ "id": "QD-064",
+ "board": "boards/queue/QD-064.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-20T22:25:38.765241+00:00",
+ "title": "The Gilded Age season 4 episode count confirmed 📺",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 6 reused a nearby picture (commons-search:Period drama filming: no Commons image named 'Period drama filming')",
+  "beat 7 reused a nearby picture (commons-search:Home cinema sofa: no Commons image named 'Home cinema sofa')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "purple-desire",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "clean",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 24.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.88,
+   "title",
+   0
+  ],
+  [
+   3.88,
+   6.73,
+   "date",
+   1
+  ],
+  [
+   6.73,
+   9.91,
+   "none",
+   1
+  ],
+  [
+   9.91,
+   12.6,
+   "none",
+   1
+  ],
+  [
+   12.6,
+   17.44,
+   "none",
+   1
+  ],
+  [
+   17.44,
+   21.42,
+   "stat",
+   1
+  ],
+  [
+   21.42,
+   24.35,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "233390",
+   "q": "living room television night",
+   "t0": 0.0,
+   "t1": 12.48
+  },
+  {
+   "p": "pixabay",
+   "id": "62821",
+   "q": "movie theatre seats",
+   "t0": 11.88,
+   "t1": 24.35
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-064",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-9397de579f951ec1e479"
+}

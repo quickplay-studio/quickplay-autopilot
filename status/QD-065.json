@@ -1,0 +1,106 @@
+{
+ "id": "QD-065",
+ "board": "boards/queue/QD-065.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-20T22:25:21.263673+00:00",
+ "title": "How Tetris was smuggled out of the Soviet Union 🕹️",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 5 reused a nearby picture (commons-search:Robert Stein Andromeda Software: no Commons image named 'Robert Stein Andromeda Software')"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 10
+ },
+ "music": "after-sunset",
+ "social_music": "no-copyright-synthwave-music-478345",
+ "look": {
+  "captions": "clean",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 33.1,
+  "wps": 3.2,
+  "weak_beats": [],
+  "size_mb": 18.3
+ },
+ "timeline": [
+  [
+   0.06,
+   3.51,
+   "none",
+   0
+  ],
+  [
+   3.51,
+   8.71,
+   "none",
+   1
+  ],
+  [
+   8.71,
+   12.57,
+   "cards",
+   2
+  ],
+  [
+   12.57,
+   17.07,
+   "none",
+   1
+  ],
+  [
+   17.07,
+   21.63,
+   "none",
+   1
+  ],
+  [
+   21.63,
+   25.66,
+   "none",
+   1
+  ],
+  [
+   25.66,
+   30.84,
+   "date",
+   2
+  ],
+  [
+   30.84,
+   33.05,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "223892",
+   "q": "old computer monitor",
+   "t0": 0.0,
+   "t1": 16.83
+  },
+  {
+   "p": "pixabay",
+   "id": "4936",
+   "q": "keyboard rgb glow",
+   "t0": 16.23,
+   "t1": 33.06
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-065",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-02f048d9fec043e6b7e0"
+}

@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public, 2 scheduled | 10 | 8 | ⏳ 2 of 24 so far, 2 more scheduled |
+| Tue 20 Oct | 2 public, 3 scheduled | 10 | 9 | ⏳ 2 of 24 so far, 3 more scheduled |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -31,18 +31,23 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
 
-## In the queue
+## Needs a look
 
-- **QD-054** Mark Allen knocked out of Northern Ireland Open 🎱 (rendering next)
-- **QD-055** David Warner slams South Africa Test crowds 🏏 (rendering next)
+Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
+
+- **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
 
 ## On the channel (latest first)
 
 ### Tue 20 Oct 18:50 · David Warner slams South Africa Test crowds 🏏
-scheduled · [YouTube](https://youtube.com/shorts/t5D-3LRMRbk)
+scheduled · 35 s · music: dead-wrong · [script](../boards/done/QD-055.json) · [YouTube](https://youtube.com/shorts/t5D-3LRMRbk)
+
+![QD-055](QD-055.jpg)
 
 ### Tue 20 Oct 18:10 · Mark Allen knocked out of Northern Ireland Open 🎱
-scheduled · [YouTube](https://youtube.com/shorts/Pzfz3Nu7p8s)
+scheduled · 28 s · music: majestic-12 · [script](../boards/done/QD-054.json) · [YouTube](https://youtube.com/shorts/Pzfz3Nu7p8s)
+
+![QD-054](QD-054.jpg)
 
 ### Tue 20 Oct 8:10 · Angel Reese makes WNBA finals history 🏀
 public · 215 views · 33 s · music: duty-calls · on Facebook · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
@@ -95,7 +100,7 @@ public · 4 views · 31 s · music: mirror-mirror · on Instagram · on Facebook
 ![QD-043](QD-043.jpg)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
-public · 59 views · 23 s · music: in-battery · on Instagram · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
+public · 59 views · 23 s · music: in-battery · on Instagram · on Facebook · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
 
 ![QD-041](QD-041.jpg)
 

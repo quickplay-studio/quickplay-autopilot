@@ -1,0 +1,106 @@
+{
+ "id": "QD-057",
+ "board": "boards/queue/QD-057.json",
+ "mode": "schedule",
+ "slot": "2026-10-20T19:10:00Z",
+ "rendered": "2026-10-20T16:11:31.150435+00:00",
+ "title": "You Can See Everything rakes in $15 million 🎬",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 6 reused a nearby picture (commons-search:Cinema audience seats: no Commons image named 'Cinema audience seats')"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 10
+ },
+ "music": "false-vacuum-decay",
+ "social_music": "mystery-suspect-199367",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 30.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.2
+ },
+ "timeline": [
+  [
+   0.06,
+   5.04,
+   "title",
+   1
+  ],
+  [
+   5.04,
+   9.88,
+   "none",
+   2
+  ],
+  [
+   9.88,
+   14.29,
+   "none",
+   2
+  ],
+  [
+   14.29,
+   20.63,
+   "date",
+   1
+  ],
+  [
+   20.63,
+   25.53,
+   "none",
+   2
+  ],
+  [
+   25.53,
+   30.61,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "275417",
+   "q": "film production studio lights",
+   "t0": 0.0,
+   "t1": 10.6
+  },
+  {
+   "p": "pixabay",
+   "id": "296780",
+   "q": "movie theatre seats",
+   "t0": 10.0,
+   "t1": 20.6
+  },
+  {
+   "p": "pixabay",
+   "id": "4050",
+   "q": "film projector light",
+   "t0": 20.0,
+   "t1": 30.61
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T16:25:13Z",
+ "video": "yYgTurhtD3E",
+ "url": "https://youtube.com/shorts/yYgTurhtD3E",
+ "publish_at": "2026-10-20T19:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-20T19:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-057"
+}

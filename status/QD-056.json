@@ -1,0 +1,98 @@
+{
+ "id": "QD-056",
+ "board": "boards/queue/QD-056.json",
+ "mode": "schedule",
+ "slot": "2026-10-20T18:30:00Z",
+ "rendered": "2026-10-20T16:11:58.119906+00:00",
+ "title": "Street Fighter movie: Chun-Li's 12-egg diet 🥚",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Kitao Sakurai: no Commons image named 'Kitao Sakurai')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 8
+ },
+ "music": "ten",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "minimal",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 29.6,
+  "wps": 3.3,
+  "weak_beats": [
+   3
+  ],
+  "size_mb": 14.4
+ },
+ "timeline": [
+  [
+   0.06,
+   3.9,
+   "title",
+   0
+  ],
+  [
+   3.9,
+   8.24,
+   "stat",
+   2
+  ],
+  [
+   8.24,
+   13.25,
+   "none",
+   1
+  ],
+  [
+   13.25,
+   16.99,
+   "none",
+   1
+  ],
+  [
+   16.99,
+   21.23,
+   "none",
+   1
+  ],
+  [
+   21.23,
+   25.46,
+   "none",
+   1
+  ],
+  [
+   25.46,
+   29.54,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "26537",
+   "q": "cinema auditorium screen",
+   "t0": 0.0,
+   "t1": 15.07
+  },
+  {
+   "p": "pixabay",
+   "id": "148196",
+   "q": "gym weight training",
+   "t0": 14.47,
+   "t1": 29.54
+  }
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [3]"
+}

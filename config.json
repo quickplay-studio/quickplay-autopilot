@@ -30,8 +30,8 @@
  "youtube_upload_units": 100,
  "youtube_quota_margin": 1000,
  "youtube_quota_note": "quota.py keeps optional extras (comments, playlists, title swaps, replies, angle searches) inside the daily YouTube allowance so uploads always fit; set youtube_upload_units to what the Google Cloud console shows for an upload.",
- "languages": {"es": {"channel": "Quickplay Daily Español", "voice": "default"}, "pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
- "languages_note": "Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
+ "languages": {"pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
+ "languages_note": "The Spanish channel is dropped (Charlie, 21 October). Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
  "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (all 24 hours from 07:30, every 36 minutes, until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "background": {

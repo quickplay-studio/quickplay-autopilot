@@ -2,7 +2,7 @@
 Uploads keep using the original sign-in (the YT_REFRESH_TOKEN secret); this one is stored encrypted in tokens/youtube.enc.
 
   python pipeline/yt_connect.py link       writes the sign-in link to status/youtube_connect.json (the client id is public)
-  python pipeline/yt_connect.py exchange [main|es|pt|clips]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
+  python pipeline/yt_connect.py exchange [main|pt|clips]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
                                            refresh token and saves it; the result goes to status/youtube_connect.json
 """
 import datetime as dt, json, os, pathlib, sys, urllib.parse
@@ -38,14 +38,14 @@ def connected(t):
 
 def link():
     """The sign-in link is always published (the client id is public): the same link signs in any channel of the account
-    (main, es, pt, clips); Google asks which channel when the account has several. Each channel's status file says whether
+    (main, pt, clips); Google asks which channel when the account has several. Each channel's status file says whether
     its own sign-in exists."""
     q = {"client_id": os.environ["YT_CLIENT_ID"], "redirect_uri": REDIRECT, "response_type": "code", "scope": " ".join(SCOPES),
          "access_type": "offline", "prompt": "consent", "include_granted_scopes": "true", "state": "quickplay"}
     url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)
     t = social.load("youtube")
     write({**(connected(t) if t.get("refresh_token") else {"ok": False, "connected": False}), "connect_url": url})
-    for ch in ("clips", "es", "pt"):
+    for ch in ("clips", "pt"):
         out = OUT.with_name(f"youtube_connect_{ch}.json")
         tc = social.load(f"youtube_{ch}")
         if tc.get("refresh_token"): write({**connected(tc), "connect_url": url}, out)
@@ -53,7 +53,7 @@ def link():
                                      "copy the code, run the social workflow with it and channel " + ch}, out)
 
 def exchange(ch="main"):
-    """ch: main, a language channel (es, pt) or the clips channel, whose sign-in is saved as tokens/youtube_<ch>.enc."""
+    """ch: main, the Portuguese channel (pt) or the clips channel, whose sign-in is saved as tokens/youtube_<ch>.enc."""
     name, out = ("youtube", OUT) if ch == "main" else (f"youtube_{ch}", OUT.with_name(f"youtube_connect_{ch}.json"))
     raw = os.environ.get("YT_CODE", "").strip()
     code = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("code", [raw])[0] if "code=" in raw else raw
@@ -76,7 +76,7 @@ def exchange(ch="main"):
         tok["channel"] = {"error": str(e)[:150]}
     is_main = tok["channel"].get("id") == MAIN or tok["channel"].get("title") == "Quickplay Daily"
     title = str(tok["channel"].get("title") or "").lower()
-    found = "main" if is_main else "clips" if "clips" in title else "es" if "espa" in title else "pt" if "portugu" in title else None
+    found = "main" if is_main else "clips" if "clips" in title else "pt" if "portugu" in title else None
     if found and found != ch:         # the sign-in says which channel it is: saved under that name, whatever the dropdown said
         print(f"YouTube sign-in is for the {found} channel ({tok['channel'].get('title')}), not {ch}: saving it as {found}")
         ch = found

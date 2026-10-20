@@ -18,9 +18,9 @@ on:
         required: false
         default: ''
       youtube_channel:
-        description: 'Which channel that YouTube code is for: main (Quickplay Daily), es (Español), pt (Português) or clips (Quickplay Clips)'
+        description: 'Which channel that YouTube code is for: main (Quickplay Daily), clips (Quickplay Clips) or pt (Português)'
         type: choice
-        options: [main, es, pt, clips]
+        options: [main, clips, pt]
         default: main
 
 permissions:

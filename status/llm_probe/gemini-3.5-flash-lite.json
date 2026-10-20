@@ -1,0 +1,188 @@
+{
+ "id": "TEST-PROBE",
+ "created": "2026-10-20",
+ "format": "news_explained",
+ "category": "Gaming",
+ "music": {
+  "mood": "retro"
+ },
+ "beats": [
+  {
+   "say": "Polygon says the new Zelda remake takes up 27 GB of storage.",
+   "visual": {
+    "type": "none"
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "page:https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/",
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "That makes this version larger than Tears of the Kingdom.",
+   "visual": {
+    "type": "stat",
+    "value": "27 GB",
+    "label": "Remake Size",
+    "sub": "Polygon"
+   },
+   "shots": [
+    {
+     "src": "commons-search:The Legend of Zelda",
+     "move": "out"
+    }
+   ]
+  },
+  {
+   "say": "Polygon notes that Tears of the Kingdom takes up 24 GB on Switch 2.",
+   "visual": {
+    "type": "versus",
+    "items": [
+     {
+      "label": "Remake",
+      "value": "27 GB",
+      "sub": "Polygon"
+     },
+     {
+      "label": "Tears",
+      "value": "24 GB",
+      "sub": "Kingdom"
+     }
+    ]
+   },
+   "shots": [
+    {
+     "src": "commons-search:Nintendo Switch 2",
+     "move": "left"
+    }
+   ]
+  },
+  {
+   "say": "IGN reports that the visuals in this remake have received a vast upgrade.",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Video game controller",
+     "move": "right"
+    }
+   ]
+  },
+  {
+   "say": "Polygon says the original Nintendo 64 game was released in 1998.",
+   "visual": {
+    "type": "date",
+    "month": "November",
+    "day": "21",
+    "weekday": "Saturday",
+    "label": "Original Launch",
+    "sub": "1998"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Nintendo 64 console",
+     "move": "up"
+    }
+   ]
+  },
+  {
+   "say": "The new remake will launch exclusively on Tuesday 5 November.",
+   "visual": {
+    "type": "none"
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "commons-search:Nintendo logo",
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "Will you be playing this remake on 5 November?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Gaming setup neon",
+     "move": "still"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Zelda Ocarina of Time remake file size confirmed 🗡️",
+  "alt_title": "Zelda Ocarina of Time remake takes up 27 GB 🎮",
+  "summary": "Polygon reveals that the upcoming The Legend of Zelda: Ocarina of Time remake for Nintendo Switch 2 requires 27 GB of storage.",
+  "hashtags": [
+   "#TheLegendOfZelda",
+   "#OcarinaOfTime",
+   "#NintendoSwitch2",
+   "#Nintendo",
+   "#Zelda",
+   "#Gaming",
+   "#GamingNews",
+   "#Trending"
+  ],
+  "tags": [
+   "zelda ocarina of time remake",
+   "ocarina of time switch 2",
+   "ocarina of time file size",
+   "zelda remake 27gb",
+   "nintendo switch 2 zelda",
+   "tears of the kingdom file size"
+  ],
+  "comment": "Will you be playing this remake on 5 November?",
+  "sources": [
+   [
+    "Polygon, Zelda: Ocarina of Time Remake File Size Officially Confirmed",
+    "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/"
+   ],
+   [
+    "IGN, 'It Definitely Was a Shock': The Legend of Zelda: Ocarina of Time Artwork Splits Fans Following Trailer Reveal",
+    "https://www.ign.com/articles/it-definitely-was-a-shock-the-legend-of-zelda-ocarina-of-time-artwork-splits-fans-following-trailer-reveal"
+   ]
+  ],
+  "facts": [
+   [
+    "The Legend of Zelda: Ocarina of Time remake on Nintendo Switch 2 will take up 27 GB of storage",
+    [
+     1
+    ]
+   ],
+   [
+    "The Legend of Zelda: Tears of the Kingdom takes up 24 GB on Switch 2",
+    [
+     1
+    ]
+   ],
+   [
+    "The visuals in this ground up Ocarina remake have been given a vast upgrade",
+    [
+     2
+    ]
+   ],
+   [
+    "The original Nintendo 64 version of The Legend of Zelda: Ocarina of Time was released in 1998",
+    [
+     1
+    ]
+   ],
+   [
+    "The Ocarina of Time remake will be released exclusively for Nintendo Switch 2 on Nov. 5",
+    [
+     1
+    ]
+   ]
+  ]
+ },
+ "background": [
+  "neon gaming setup",
+  "video game screen glow",
+  "console glowing lights"
+ ]
+}

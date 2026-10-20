@@ -1,0 +1,144 @@
+{
+ "id": "TEST-PROBE",
+ "created": "2026-10-20",
+ "format": "one_detail",
+ "category": "Gaming",
+ "music": {
+  "mood": "retro"
+ },
+ "beats": [
+  {
+   "say": "The new Zelda remake takes up a whopping 27 GB of storage!",
+   "visual": {
+    "type": "none"
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "page:https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/",
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "That's 800 times larger than the original Ocarina of Time.",
+   "visual": {
+    "type": "stat",
+    "value": "800",
+    "label": "Storage Increase",
+    "sub": "Ocarina of Time vs Remake"
+   },
+   "shots": [
+    {
+     "src": "commons-search:The Legend of Zelda",
+     "move": "out"
+    }
+   ]
+  },
+  {
+   "say": "Polygon confirms the remake will launch on Nintendo Switch 2 on Nov. 5.",
+   "visual": {
+    "type": "date",
+    "month": "November",
+    "day": "5",
+    "weekday": "Tuesday",
+    "label": "Launch Date",
+    "sub": "Nintendo Switch 2"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Nintendo logo",
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "Are you ready to clear space on your console?",
+   "visual": {
+    "type": "none"
+   },
+   "shots": [
+    {
+     "src": "commons-search:Gaming setup neon",
+     "move": "still"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Zelda Ocarina of Time remake 27 GB 🗡️",
+  "alt_title": "Ocarina of Time remake takes 800 times more space 🎮",
+  "summary": "The upcoming The Legend of Zelda: Ocarina of Time remake on Nintendo Switch 2 requires 27 GB of storage, 800 times more than the original.",
+  "hashtags": [
+   "#TheLegendOfZelda",
+   "#OcarinaOfTime",
+   "#NintendoSwitch2",
+   "#Nintendo",
+   "#Zelda",
+   "#Gaming",
+   "#GamingNews",
+   "#Trending"
+  ],
+  "tags": [
+   "zelda ocarina of time remake",
+   "ocarina of time switch 2",
+   "ocarina of time file size",
+   "zelda remake 27gb",
+   "nintendo switch 2 zelda"
+  ],
+  "comment": "Are you ready to clear space on your console?",
+  "sources": [
+   [
+    "Polygon, Zelda: Ocarina of Time Remake File Size Officially Confirmed",
+    "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/"
+   ],
+   [
+    "IGN, 'It Definitely Was a Shock': The Legend of Zelda: Ocarina of Time Artwork Splits Fans Following Trailer Reveal",
+    "https://www.ign.com/articles/it-definitely-was-a-shock-the-legend-of-zelda-ocarina-of-time-artwork-splits-fans-following-trailer-reveal"
+   ]
+  ],
+  "facts": [
+   [
+    "The Legend of Zelda: Ocarina of Time remake on Nintendo Switch 2 will take up 27 GB of storage",
+    [
+     1
+    ]
+   ],
+   [
+    "The original Nintendo 64 version of The Legend of Zelda: Ocarina of Time was released in 1998",
+    [
+     1
+    ]
+   ],
+   [
+    "The Legend of Zelda: Tears of the Kingdom takes up 24 GB on Switch 2",
+    [
+     1
+    ]
+   ],
+   [
+    "The Ocarina of Time remake will be released exclusively for Nintendo Switch 2 on Nov. 5",
+    [
+     1
+    ]
+   ],
+   [
+    "The visuals in this ground up Ocarina remake have been given a vast upgrade",
+    [
+     2
+    ]
+   ]
+  ]
+ },
+ "background": [
+  "neon gaming setup",
+  "video game screen glow",
+  "console glowing lights"
+ ],
+ "kind": "news",
+ "test": {
+  "first_frame": "photo",
+  "replies": "on"
+ },
+ "source": "YouTube"
+}

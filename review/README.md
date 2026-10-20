@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 14:48): 6 of 1,000 subscribers · 2,942 of 10 million Shorts views in 90 days · 3,882 views in the last 24 hours (about 111,078 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 15:41): 6 of 1,000 subscribers · 2,990 of 10 million Shorts views in 90 days · 3,725 views in the last 24 hours (about 111,078 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 14:36 (UK): 0 scheduled, 46 public, 10 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 12:04).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 15:34).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 10 | 6 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 10 | 7 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -64,7 +64,7 @@ public · 49 views · 25 s · music: once-upon-a-time · on Instagram · on Face
 ![QD-047](QD-047.jpg)
 
 ### Mon 19 Oct 16:50 · Zara Larsson's Blue Moon: fairy or mermaid? 🌙
-public · 53 views · 24 s · music: purple-desire · on Instagram · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
+public · 53 views · 24 s · music: purple-desire · on Instagram · on Facebook · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
 
 ![QD-046](QD-046.jpg)
 

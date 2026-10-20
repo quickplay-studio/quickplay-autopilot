@@ -1,0 +1,107 @@
+{
+ "id": "QD-058",
+ "board": "boards/queue/QD-058.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T06:30:00Z",
+ "rendered": "2026-10-20T19:30:28.050442+00:00",
+ "title": "Zelda Ocarina of Time remake file size confirmed 🗡️",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (page:https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/: polygon.com is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 3 reused a nearby picture (commons-search:Nintendo Switch 2: no Commons image named 'Nintendo Switch 2')",
+  "beat 7 reused a nearby picture (commons-search:Gaming setup neon: no Commons image named 'Gaming setup neon')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "death-duel",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 28.7,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 12.7
+ },
+ "timeline": [
+  [
+   0.06,
+   4.95,
+   "none",
+   0
+  ],
+  [
+   4.95,
+   8.15,
+   "stat",
+   1
+  ],
+  [
+   8.15,
+   12.8,
+   "versus",
+   1
+  ],
+  [
+   12.8,
+   16.79,
+   "none",
+   1
+  ],
+  [
+   16.79,
+   21.39,
+   "date",
+   1
+  ],
+  [
+   21.39,
+   25.18,
+   "none",
+   1
+  ],
+  [
+   25.18,
+   28.66,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "26533",
+   "q": "video game screen glow",
+   "t0": 0.0,
+   "t1": 14.63
+  },
+  {
+   "p": "pixabay",
+   "id": "122",
+   "q": "console glowing lights",
+   "t0": 14.03,
+   "t1": 28.66
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:40:22Z",
+ "video": "2PEgNuzSy0Y",
+ "url": "https://youtube.com/shorts/2PEgNuzSy0Y",
+ "publish_at": "2026-10-21T06:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T06:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-058"
+}

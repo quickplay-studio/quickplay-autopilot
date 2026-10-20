@@ -1,0 +1,94 @@
+{
+ "id": "QD-059",
+ "board": "boards/queue/QD-059.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T07:10:00Z",
+ "rendered": "2026-10-20T19:30:49.629513+00:00",
+ "title": "Japan launches historic mission to Mars's moon Phobos 🚀",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked nasa 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (nasa:video:h3 rocket launch: no NASA video for 'h3 rocket launch')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "pulsar",
+ "social_music": "futuristic-sci-fi-174819",
+ "look": {
+  "captions": "clean",
+  "voice": "lily",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 25.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 7.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.23,
+   "title",
+   1
+  ],
+  [
+   5.23,
+   10.81,
+   "none",
+   1
+  ],
+  [
+   10.81,
+   18.3,
+   "none",
+   1
+  ],
+  [
+   18.3,
+   23.11,
+   "none",
+   1
+  ],
+  [
+   23.11,
+   25.82,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "JPL-20231222-SOLSYSf-0001-NASA Telescopes Reveal Hidden Universe",
+   "q": "galaxy stars nebula",
+   "t0": 0.0,
+   "t1": 13.21
+  },
+  {
+   "p": "nasa",
+   "id": "GSFC_20150420_Orbit_m11858_2014",
+   "q": "earth from orbit",
+   "t0": 12.61,
+   "t1": 25.82
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:40:24Z",
+ "video": "jzxZdvaKr2E",
+ "url": "https://youtube.com/shorts/jzxZdvaKr2E",
+ "publish_at": "2026-10-21T07:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T07:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-059"
+}

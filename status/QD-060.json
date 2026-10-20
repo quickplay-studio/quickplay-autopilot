@@ -1,0 +1,100 @@
+{
+ "id": "QD-060",
+ "board": "boards/queue/QD-060.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T07:50:00Z",
+ "rendered": "2026-10-20T19:30:14.130628+00:00",
+ "title": "Larne face Linfield in Irish Premiership match ⚽",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Gary Haveron: no Commons image named 'Gary Haveron')",
+  "beat 3 reused a nearby picture (commons-search:Football league table: no Commons image named 'Football league table')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 12
+ },
+ "music": "ego-chall",
+ "social_music": "sport-mortals-566578",
+ "look": {
+  "captions": "clean",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 22.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.14,
+   "title",
+   0
+  ],
+  [
+   4.14,
+   8.32,
+   "none",
+   1
+  ],
+  [
+   8.32,
+   11.69,
+   "none",
+   1
+  ],
+  [
+   11.69,
+   15.41,
+   "none",
+   1
+  ],
+  [
+   15.41,
+   18.63,
+   "none",
+   1
+  ],
+  [
+   18.63,
+   21.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "239973",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 11.26
+  },
+  {
+   "p": "pixabay",
+   "id": "66810",
+   "q": "green grass pitch floodlights",
+   "t0": 10.66,
+   "t1": 21.92
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:40:26Z",
+ "video": "b3dV8eVWOpE",
+ "url": "https://youtube.com/shorts/b3dV8eVWOpE",
+ "publish_at": "2026-10-21T07:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T07:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-060"
+}

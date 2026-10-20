@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 08:47): 6 of 1,000 subscribers · 2,680 of 10 million Shorts views in 90 days · 3,621 views in the last 24 hours (about 111,081 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 09:41): 6 of 1,000 subscribers · 2,712 of 10 million Shorts views in 90 days · 3,651 views in the last 24 hours (about 111,081 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 8:29 (UK): 0 scheduled, 46 public, 20 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 5 | 0 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 6 | 0 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -69,7 +69,7 @@ public · 40 views · 24 s · music: purple-desire · [script](../boards/done/QD
 ![QD-046](QD-046.jpg)
 
 ### Mon 19 Oct 16:10 · Duncan Ferguson is Glentoran's new manager ⚽
-public · 52 views · 32 s · music: never-coming-down · on Facebook · [script](../boards/done/QD-045.json) · [YouTube](https://youtube.com/shorts/-InuBVWX0uA)
+public · 52 views · 32 s · music: never-coming-down · on Instagram · on Facebook · [script](../boards/done/QD-045.json) · [YouTube](https://youtube.com/shorts/-InuBVWX0uA)
 
 ![QD-045](QD-045.jpg)
 

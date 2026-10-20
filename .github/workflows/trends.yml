@@ -4,10 +4,10 @@ name: trends
 # Runs before each morning session, and whenever a file under requests/ is pushed (an on-demand refresh).
 on:
   schedule:
-    - cron: '23 4 * * *'      # trends and fact packs ready well before the 06:50 UK session
-    - cron: '47 10 * * *'     # before the 12:50 UK session
-    - cron: '23 18 * * *'     # before the 20:50 UK session, and evening numbers for the stats dashboard
-    - cron: '47 6,8,12,14,16 * * *'   # breaking-news checks between them: 6 topics, at most 2 Shorts (write.yml)
+    - cron: '10 8 * * *'      # morning: just after Gemini's daily quota resets (midnight Pacific), so the biggest run gets it
+    - cron: '47 12 * * *'     # afternoon: fills whatever the day still needs
+    - cron: '23 18 * * *'     # evening: tomorrow's first Shorts (07:30 UK on), and evening numbers for the stats dashboard
+    - cron: '47 6,10,15 * * *'   # breaking-news checks between them: 6 topics, a few Shorts at most (write.yml)
   push:
     branches: [main]
     paths: ['requests/refresh*']     # only a refresh request: other request files belong to other jobs
@@ -35,8 +35,9 @@ jobs:
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
-          BREAKING: ${{ github.event.schedule == '47 6,8,12,14,16 * * *' && '1' || '' }}
-          FACTPACK_TOPICS: ${{ github.event.schedule == '47 6,8,12,14,16 * * *' && '6' || '' }}
+          BREAKING: ${{ github.event.schedule == '47 6,10,15 * * *' && '1' || '' }}
+          FACTPACK_TOPICS: ${{ github.event.schedule == '47 6,10,15 * * *' && '6' || '' }}
+          RUN: ${{ github.event.schedule == '10 8 * * *' && 'morning' || github.event.schedule == '47 12 * * *' && 'afternoon' || github.event.schedule == '23 18 * * *' && 'evening' || '' }}
         run: |
           python pipeline/trends.py
           python pipeline/factpack.py build 2>&1 | tee status/factpack_log.txt || echo "fact packs failed"

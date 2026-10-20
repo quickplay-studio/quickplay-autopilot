@@ -126,10 +126,12 @@ def next_id():
     return n
 
 
-def plan(breaking=False):
-    """Target day and how many to write (a breaking-news check: today, at most 2)."""
+def plan(breaking=False, hint=""):
+    """Target day and how many to write. The run is the trends schedule that built the packs (facts.json "run"), else the
+    clock (UTC); a breaking-news check writes today, at most a few."""
     uk = NOW.astimezone(UK)
-    run = "breaking" if breaking else "morning" if NOW.hour < 9 else "afternoon" if NOW.hour < 16 else "evening"
+    run = "breaking" if breaking else hint if hint in ("morning", "afternoon", "evening") else \
+        "morning" if NOW.hour < 11 else "afternoon" if NOW.hour < 17 else "evening"
     day = uk.date() + dt.timedelta(days=1 if run == "evening" else 0)
     made = 0
     for d in ("queue", "ready", "done", "failed"):
@@ -202,12 +204,16 @@ def clean(x):
     return x
 
 
-CHECK = """You check a YouTube Short script against its fact pack before it is published. For the title and each beat,
-decide whether everything it states is in the pack's facts: the same meaning, with every number, date and record attached
-to the same person or thing, and nothing added (no extra details, motives, quotes or loaded words such as "clashed").
-Questions, the hook's framing and claims clearly marked as unconfirmed are fine. Return {"ok": true} when everything is
-supported, otherwise {"ok": false, "problems": [{"beat": <number from 1, or 0 for the title>, "issue": "<what is wrong,
-and what the pack says>"}]}."""
+CHECK = """You check a YouTube Short script against its fact pack before it is published. Report a problem only when the
+title or a beat states something WRONG:
+- a specific fact the pack doesn't support or that contradicts it: a number, date, name, place, event, record, ranking,
+  result or quote (rounding that keeps the meaning is fine, such as "more than 140 million" said as "140 million");
+- something negative or loaded about a real person that the pack doesn't support (such as "clashed" or "furious"), or
+  anything about crime, illness, relationships or deaths that isn't in the pack;
+- a rumour, leak or report presented as confirmed when the pack says it isn't.
+Never report enthusiastic or descriptive words (incredible, talented, iconic, huge), the hook's framing, questions, a fair
+paraphrase, or details left out. Return {"ok": true} when nothing is wrong, otherwise {"ok": false, "problems": [{"beat":
+<number from 1, or 0 for the title>, "issue": "<what is wrong, and what the pack says>"}]}."""
 
 
 def fact_check(b, p):
@@ -378,7 +384,7 @@ def evergreen_packs(kinds, seen):
             txt, img = factpack.page_text(url, wiki=True)
             if len(txt) < 800: continue
             got, _ = factpack.gemini(EVERGREEN_FACTS.format(q=q, how=HOW[kind], title=title, url=url, text=txt), factpack.SCHEMA,
-                                     timeout=100)
+                                     timeout=100, lite=True)
         except Exception as e:
             print("evergreen:", title, str(e)[:120]); continue
         _, single = factpack.verify((got or {}).get("facts"), {1: factpack.norm(txt)}, {1: "wikipedia"})
@@ -602,7 +608,7 @@ def main():
     if not facts.exists(): print("no fact packs"); return
     d = json.loads(facts.read_text())
     breaking = d.get("mode") == "breaking"          # a check between the main runs: only what is spiking
-    run, day, cap = plan(breaking)
+    run, day, cap = plan(breaking, d.get("run", ""))
     print(f"{run} run for {day}: {cap} to write from {len(d.get('topics') or [])} fact packs")
     if cap <= 0 and (breaking or reserve_count() >= 6): return
     seen, used, follow, up, src_up = recent(), day_formats(day), hot(), boosts(), boosts("source")
@@ -699,8 +705,7 @@ def main():
                 if spare > 0: spare = max(0, spare - (len(written) - before))
     print(f"wrote {len(written)} of {cap}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
                                                for b in written))
-    print("gemini:", json.dumps({"order": factpack.STATE.get("models", [])[:6], "out of quota": sorted(factpack.STATE.get("spent_models") or []),
-                                 "timeouts": factpack.STATE.get("slow_models") or {}, "late": late()}))
+    print("gemini:", json.dumps({"order": factpack.STATE.get("models", [])[:6], **factpack.gemini_state(), "late": late()}))
 
 
 if __name__ == "__main__":

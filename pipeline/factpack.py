@@ -132,13 +132,22 @@ def models(key):
     return STATE["models"]
 
 
+def loads_loose(text):
+    """Gemini's JSON, forgiving the slips it sometimes makes: a code fence around it, a trailing comma."""
+    s = re.sub(r"^\s*```(?:json)?\s*|\s*```\s*$", "", text or "")
+    try: return json.loads(s or "{}")
+    except ValueError: return json.loads(re.sub(r",\s*([}\]])", r"\1", s))
+
+
 def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
-    """JSON from the first Gemini model that answers. A model out of free quota, or retired (404), is skipped for the rest
-    of the run, so every other model gets its turn (each has its own quota). lite: simple jobs (translations, replies) try
-    the Lite models first, which have the biggest free quota, and save the others for writing and checking."""
+    """JSON from the first Gemini model that answers. A model out of its free daily quota, or retired (404), is skipped for
+    the rest of the run, so every other model gets its turn (each has its own quota); a per-minute limit waits and tries
+    again, and so does an answer that isn't readable JSON. lite: simple jobs (triage, fact extraction, translations,
+    replies) try the Lite models first, which have the biggest free quota, and save the others for writing and checking."""
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
+    notes = STATE.setdefault("quota_notes", {})         # which limit each spent model hit, for the run's log
     last = "no Gemini model answered"
     slow = STATE.setdefault("slow_models", {})          # timeouts this run: after 2, the model is passed over
     todo = [m for m in models(key) if m not in spent and slow.get(m, 0) < 2]
@@ -158,19 +167,33 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
                                       json=body, timeout=timeout)
                 except requests.exceptions.RequestException as e:      # too slow or unreachable: the next model tries
                     slow[model] = slow.get(model, 0) + 1; last = f"{model}: {type(e).__name__}"; timed_out = True; break
-                if r.status_code == 429 and ("quota" in r.text.lower() or attempt == 2):
-                    spent.add(model); last = f"{model}: free quota used up"; break      # the next model has its own quota
-                if r.status_code in (429, 500, 502, 503, 504):
+                if r.status_code == 429:
+                    per_day = "perday" in r.text.lower().replace("_", "")
+                    wait = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+                    cap = re.search(r'"quotaValue":\s*"(\d+)', r.text)
+                    if per_day or attempt == 2:                         # the next model has its own quota
+                        spent.add(model); last = f"{model}: free quota used up"
+                        notes[model] = ("daily limit" if per_day else "per-minute limit, 3 tries") + (f" {cap.group(1)}" if cap else "")
+                        break
+                    last = f"{model}: per-minute limit"; time.sleep(min(65, int(wait.group(1)) + 2) if wait else 20 * (attempt + 1)); continue
+                if r.status_code in (500, 502, 503, 504):
                     last = f"{model}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
                 if r.ok:
                     parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
                     STATE.setdefault("think", {})[model] = think
-                    return json.loads("".join(p.get("text", "") for p in parts if not p.get("thought")) or "{}"), model
+                    try: return loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought"))), model
+                    except ValueError as e: last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
                 last = f"{model}: {r.status_code} {r.text[:150]}"
                 if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
                 break
             if timed_out or model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
     raise RuntimeError(last)
+
+
+def gemini_state():
+    """How the run's Gemini calls went, for the logs: models out of quota (and which limit), and timeouts."""
+    return {"out of quota": STATE.get("quota_notes") or {}, "retired": sorted(set(STATE.get("spent_models") or []) - set(STATE.get("quota_notes") or {})),
+            "timeouts": STATE.get("slow_models") or {}}
 
 
 def triage(topics, limit):
@@ -181,7 +204,7 @@ def triage(topics, limit):
         return f"{i}. {req}{t['topic']} ({t.get('signal', '')}): {heads}"
     lines = "\n".join(line(i, t) for i, t in enumerate(topics, 1))
     try:
-        ans, _ = gemini(TRIAGE_PROMPT.format(limit=limit, lines=lines), TRIAGE_SCHEMA, timeout=90)
+        ans, _ = gemini(TRIAGE_PROMPT.format(limit=limit, lines=lines), TRIAGE_SCHEMA, timeout=90, lite=True)
         picks = [(p["n"], p.get("category", "")) for p in ans.get("picks") or [] if isinstance(p.get("n"), int) and 1 <= p["n"] <= len(topics)]
         if picks: return list(dict.fromkeys(picks))[:limit]
     except Exception as e:
@@ -233,7 +256,7 @@ def build():
         pages = "\n\n".join(f"[{k}] {s['outlet']} · {s['title']} · {s.get('published') or 'undated'} · {s['url']}\n{txt}"
                             for k, (s, txt) in enumerate(got, 1))
         try:
-            ans, model = gemini(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages), SCHEMA)
+            ans, model = gemini(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages), SCHEMA, lite=True)
         except Exception as e:
             errors.append(f"{t['topic']}: {e}"[:200]); continue
         texts = {k: norm(txt) for k, (s, txt) in enumerate(got, 1)}
@@ -249,8 +272,10 @@ def build():
     if not packs:
         print("no packs built", errors[:3]); return
     OUT.write_text(json.dumps({"date": today, "built": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"),
-                               "model": model, "mode": "breaking" if os.environ.get("BREAKING") else "full", "errors": errors[:10], "topics": packs}, ensure_ascii=False, indent=1))
+                               "model": model, "mode": "breaking" if os.environ.get("BREAKING") else "full",
+                               "run": os.environ.get("RUN", ""), "errors": errors[:10], "topics": packs}, ensure_ascii=False, indent=1))
     print(f"{len(packs)} packs, {sum(len(p['verified']) for p in packs)} verified facts")
+    print("gemini:", json.dumps(gemini_state()))
 
 
 def show(nums):

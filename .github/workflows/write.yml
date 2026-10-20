@@ -1,5 +1,5 @@
 name: write
-# The script writer (pipeline/writer.py, Gemini): runs after every trends run (04:23, 10:47 and 18:23 UTC), so the fact
+# The script writer (pipeline/writer.py, Gemini): runs after every trends run (08:10, 12:47 and 18:23 UTC), so the fact
 # packs are fresh, then starts the render. Test by pushing requests/write.txt with e.g. "dry 2" (2 boards, never uploaded).
 on:
   workflow_run:
@@ -31,7 +31,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q requests tzdata cryptography google-api-python-client==2.* google-auth==2.*
+      - run: pip install -q requests tzdata cryptography trafilatura google-api-python-client==2.* google-auth==2.*
       - name: Write
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

@@ -60,6 +60,37 @@ def move(board, folder):
 def is_reserve_line(l):
     return l.strip().lower().startswith("reserve")
 
+def is_pull_line(l):
+    return bool(re.match(r"\s*(pull|unschedule)\b", l, re.I))
+
+def pull_ids(l):
+    return set(ids_in(re.sub(r"^\s*\w+", " ", l)))
+
+def pull_step(lines):
+    """"pull QD-063": a Short scheduled on YouTube but not public yet stays private instead (nothing is deleted; it can be
+    scheduled again by hand in YouTube Studio) and is never cross-posted. Returns the ids not on YouTube yet (tried again
+    next run)."""
+    ids = sorted({i for l in lines for i in pull_ids(l)})
+    if not ids: return set()
+    import youtube as Y
+    if not Y.available(): print("pull: YouTube keys missing"); return set(ids)
+    yt, later = Y.client(), set()
+    for i in ids:
+        st = load_status(i); vid = st.get("video")
+        if st.get("pulled"): continue
+        if not vid: later.add(i); print(i, "pull: not on YouTube yet, trying again next run"); continue
+        if Y.video_status(yt, vid).get("privacy") != "private": print(i, "pull: already public, left as it is"); continue
+        yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
+                                                                      "containsSyntheticMedia": False}}).execute()
+        st.update(state="pulled (private on YouTube)", pulled=NOW.isoformat(timespec="seconds"), instagram_skipped="pulled",
+                  facebook_skipped="pulled")
+        save_status(st)
+        for d in ("done", "queue", "ready"):
+            p = ROOT / "boards" / d / f"{i}.json"
+            if p.exists(): move(p, "rejected")
+        print(i, "pulled: private on YouTube, not cross-posted")
+    return later
+
 def reserve_step(lines):
     """Apply reserve decisions; in the evening, fill the slots the day's writer runs left empty with the oldest cleared
     reserve Shorts (approved by Charlie, or in "flagged" mode simply not flagged), at most reserve_per_day a day."""
@@ -109,12 +140,14 @@ def main():
     lines = [l for f in files for l in f.read_text().splitlines()]
     if os.environ.get("DECISION", "").strip(): lines.append(os.environ["DECISION"])
     reserve_step([l for l in lines if is_reserve_line(l)])
-    done_files = [f for f in files if all(is_reserve_line(l) for l in f.read_text().splitlines() if l.strip())]
-    if done_files:                    # files holding only reserve decisions are finished with
+    later = pull_step([l for l in lines if is_pull_line(l)])
+    finished = lambda l: is_reserve_line(l) or (is_pull_line(l) and not pull_ids(l) & later)
+    done_files = [f for f in files if all(finished(l) for l in f.read_text().splitlines() if l.strip())]
+    if done_files:                    # files holding only reserve decisions and finished pulls are done with
         applied = ROOT / "approvals" / "applied"; applied.mkdir(parents=True, exist_ok=True)
         for f in done_files: f.replace(applied / f"{NOW:%Y%m%d-%H%M%S}-{f.name}")
         files = [f for f in files if f not in done_files]
-    lines = [l for l in lines if not is_reserve_line(l)]
+    lines = [l for l in lines if not is_reserve_line(l) and not is_pull_line(l)]
     ready = {}
     for p in sorted(READY.glob("*.json")):
         try: ready[json.loads(p.read_text())["id"]] = p

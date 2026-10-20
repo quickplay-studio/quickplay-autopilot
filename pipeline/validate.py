@@ -156,6 +156,9 @@ def check(b, path=None):
 
     blob = json.dumps(b, ensure_ascii=False)
     if DASH.search(blob): e.append("no em dashes or en dashes anywhere")
+    said = " ".join(bt.get("say", "") for bt in beats) + " " + title
+    if re.search(r"according to wikipedia|wikipedia (says|shows|states|lists|notes|reports)", said, re.I):
+        e.append("say: never cite Wikipedia; state the fact, or name the outlet that reported it")
     text = " ".join([bt.get("say", "") for bt in beats] + [title, m.get("summary", "")])
     us = sorted({m.group(0) for m in US_DATE.finditer(text)})
     if us: e.append(f"UK date style: write '20 October', not {us}")

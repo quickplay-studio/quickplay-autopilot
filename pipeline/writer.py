@@ -220,7 +220,7 @@ def fact_check(b, p):
     """Gemini reads the title and narration against the pack: the problems it finds (none when all is supported)."""
     beats = "\n".join(f"{k}. {x.get('say', '')}" for k, x in enumerate(b.get("beats") or [], 1))
     ans, _ = factpack.gemini(CHECK + "\n\nTHE PACK\n" + pack_text(p) + f"\n\nTHE SCRIPT\n0. {(b.get('meta') or {}).get('title', '')}\n"
-                             + beats, None, timeout=100, temperature=0.0)
+                             + beats, None, timeout=100, temperature=0.0, lite=True)
     if not isinstance(ans, dict) or ans.get("ok") is not False: return []
     return [f"beat {x.get('beat')}: {x.get('issue')}" for x in ans.get("problems") or [] if isinstance(x, dict)][:6]
 
@@ -677,7 +677,8 @@ def main():
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     for _, p in sorted(topics, key=rank):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
-        if not p.get("verified") and not p.get("one_source"): continue
+        if len(p.get("verified") or []) + len(p.get("one_source") or []) < 2:      # one fact makes a thin Short
+            print("too few facts:", p["topic"]); continue
         fol = next((r for r in follow if covered(p, [r["_about"]])), None)
         if not fol and covered(p, seen + [about(b) for b in written]): print("covered already:", p["topic"]); continue
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 13:48): 6 of 1,000 subscribers · 2,931 of 10 million Shorts views in 90 days · 4,005 views in the last 24 hours (about 111,079 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 14:48): 6 of 1,000 subscribers · 2,942 of 10 million Shorts views in 90 days · 3,882 views in the last 24 hours (about 111,078 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 14:36 (UK): 0 scheduled, 46 public, 10 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 10 | 5 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 10 | 6 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -59,7 +59,7 @@ public · 1 views · 36 s · music: horizons · on Instagram · on Facebook · [
 ![QD-029](QD-029.jpg)
 
 ### Mon 19 Oct 17:30 · The Beekeeper 2 teaser: who's new, who's back 🐝
-public · 49 views · 25 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
+public · 49 views · 25 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
 
 ![QD-047](QD-047.jpg)
 

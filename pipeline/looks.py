@@ -1,7 +1,7 @@
 """Looks: how each Short looks and sounds (caption style, voice and pace, camera energy, colour grade).
 
-The options live in templates/looks.json. analytics.py scores every option from how long viewers keep watching
-(analytics/looks.json); choose() gives each new Short one option per dimension, mostly the best scorers and sometimes
+The options live in templates/looks.json. analytics.py scores every option from how long viewers keep watching, and
+voices from how many viewers don't swipe away (analytics/looks.json); choose() gives each new Short one option per dimension, mostly the best scorers and sometimes
 the others (Thompson-style sampling plus a little pure exploration), and never the same look twice running.
   python pipeline/looks.py QD-031     prints the look that Short would get now
 """

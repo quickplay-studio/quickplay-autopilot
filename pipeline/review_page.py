@@ -71,6 +71,24 @@ def lab_section():
             "A version that beats the one it came from stays, and the next change builds on it.", ""] + rows + [""]
 
 
+def voice_section():
+    """The voice test (Charlie, 20 October): every narrator on real Shorts, judged on viewers not swiping away."""
+    try:
+        import looks as LK
+        opts = LK.active(LK.catalogue(), "voice")
+    except Exception: return []
+    stats = ((load(ROOT / "analytics" / "looks.json") or {}).get("dimensions") or {}).get("voice") or {}
+    got = sorted(opts, key=lambda k: (int((stats.get(k) or {}).get("n") or 0) < 3, -float((stats.get(k) or {}).get("score") or 0)))   # judged first
+    rows = []
+    for k in got:
+        s = stats.get(k) or {}; n = int(s.get("n") or 0)
+        rows.append(f"- {k} ({opts[k].get('desc', '')}): " + (f"{s['score']:.2f} x typical, {s['stayed_pct']:.0f}% stayed past the first "
+                    f"seconds, {n} Short{'s' * (n != 1)}" if n and s.get("stayed_pct") is not None
+                    else f"{n} Short{'s' * (n != 1)} measured so far"))
+    return ["## Voice test", "", "Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical "
+            "for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.", ""] + rows + [""]
+
+
 def main():
     statuses = [s for s in (load(p) for p in sorted((ROOT / "status").glob("*.json")) if p.name != "channel.json") if s and s.get("id")]
     social = load(ROOT / "status" / "social.json") or {}
@@ -105,7 +123,7 @@ def main():
                 lines += [f"**Facebook's key runs out in {max(left, 0)} days**: make a new one in the Graph API Explorer as before "
                           "and paste it into the FB_PAGE_TOKEN secret.", ""]
 
-    lines += posts_by_day(statuses, now) + lab_section()
+    lines += posts_by_day(statuses, now) + voice_section() + lab_section()
     problems = [s for s in statuses if ("fail" in s.get("state", "") or "not scheduled" in s.get("state", ""))
                 and not s["id"].startswith("TEST-") and s.get("mode") not in ("dry", "none")]     # test renders never need a look
     flagged = channel.get("flagged", [])

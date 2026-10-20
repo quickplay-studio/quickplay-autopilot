@@ -662,10 +662,14 @@ def main():
         (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + audience_recipe(aud), aud))
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
+STAY_DIMS = ("voice",)     # Charlie, 20 October: narrators are judged on viewers not swiping away
+
 def look_scores(rows):
     """How each look option (templates/looks.json) does. Every Short public for 24 hours gets a score against Shorts posted
     within 3 days of it (1.0 = typical): 40% the share still watching 3 seconds in, 40% the average % viewed, 20% views an
-    hour, using whichever are available. Each option's score is the median over the Shorts that used it."""
+    hour, using whichever are available. Voices (STAY_DIMS) are scored on viewers not swiping away instead: YouTube's
+    engaged views as a share of views, and the share still watching 3 seconds in, among Shorts with 30 or more views.
+    Each option's score is the median over the Shorts that used it."""
     import looks as LK
     look_by_id = {}
     for p in (ROOT / "status").glob("QD-*.json"):
@@ -678,11 +682,12 @@ def look_scores(rows):
         for d in dims: r[f"look_{d}"] = lk.get(d, "")
         r["look_score"] = ""
     aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
-    def rel(r, field):
+    def rel(r, field, min_views=0):
         v = r.get(field)
-        if v in ("", None): return None
+        if v in ("", None) or float(r.get("yt_views") or 0) < min_views: return None
         t = utc(r["posted"])
-        peers = [float(x[field]) for x in aged if x.get(field) not in ("", None) and abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
+        peers = [float(x[field]) for x in aged if x.get(field) not in ("", None) and float(x.get("yt_views") or 0) >= min_views
+                 and abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
         if len(peers) < 3: return None
         med = statistics.median(peers)
         return float(v) / med if med else None
@@ -690,18 +695,23 @@ def look_scores(rows):
         parts = [(w, x) for w, x in ((0.4, rel(r, "yt_held_3s_pct")), (0.4, rel(r, "yt_avg_viewed_pct")), (0.2, rel(r, "views_per_hour")))
                  if x is not None]
         if parts: r["look_score"] = round(sum(w * x for w, x in parts) / sum(w for w, _ in parts), 3)
+        stay = [x for x in (rel(r, "yt_engaged_pct", 30), rel(r, "yt_held_3s_pct", 30)) if x is not None]
+        r["stay_score"] = round(sum(stay) / len(stay), 3) if stay else ""
     out = {"updated": NOW.isoformat(timespec="minutes"), "dimensions": {},
            "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, "
-                  "40% average % viewed, 20% views an hour. An option's score is the median of its Shorts."}
+                  "40% average % viewed, 20% views an hour. Voices: viewers not swiping away instead (engaged views as a share of "
+                  "views, and still watching at 3 seconds; Shorts with 30 or more views). An option's score is the median of its Shorts.",
+           "measure": {d: "not swiping away" for d in STAY_DIMS}}
     try: cat = LK.catalogue()
     except Exception: return out
     for dim, spec in cat["dimensions"].items():
+        field = "stay_score" if dim in STAY_DIMS else "look_score"
         for opt in spec["options"]:
-            used = [r for r in aged if r.get(f"look_{dim}") == opt and r.get("look_score") != ""]
+            used = [r for r in aged if r.get(f"look_{dim}") == opt and r.get(field) not in ("", None)]
             e = {"n": len(used)}
             if used:
-                e["score"] = round(statistics.median(r["look_score"] for r in used), 3)
-                for k, f in (("held_3s_pct", "yt_held_3s_pct"), ("avg_viewed_pct", "yt_avg_viewed_pct")):
+                e["score"] = round(statistics.median(r[field] for r in used), 3)
+                for k, f in (("held_3s_pct", "yt_held_3s_pct"), ("avg_viewed_pct", "yt_avg_viewed_pct"), ("stayed_pct", "yt_engaged_pct")):
                     vals = [float(r[f]) for r in used if r.get(f) not in ("", None)]
                     if vals: e[k] = round(statistics.median(vals), 1)
             out["dimensions"].setdefault(dim, {})[opt] = e
@@ -868,7 +878,8 @@ def insights(rows, s, table=None, recipe=None, aud=None):
         lines = []
         for dim, opts in lk.items():
             got = sorted(((k, v) for k, v in opts.items() if v.get("n")), key=lambda kv: -kv[1].get("score", 0))
-            if got: lines.append(f"- {dim}: " + ", ".join(f"{k} {v['score']:.2f} ({v['n']})" for k, v in got))
+            if got: lines.append(f"- {dim}" + (" (on viewers not swiping away)" if dim in STAY_DIMS else "") + ": "
+                                 + ", ".join(f"{k} {v['score']:.2f} ({v['n']})" for k, v in got))
         if lines:
             L += ["## Looks (1.00 = typical for Shorts posted around the same time; Shorts measured in brackets)",
                   "GitHub picks each Short's look and leans towards the winners by itself."] + lines + [""]

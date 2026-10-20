@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 23:37): 7 of 1,000 subscribers · 3,319 of 10 million Shorts views in 90 days · 3,804 views in the last 24 hours (about 111,074 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 00:35): 7 of 1,000 subscribers · 3,336 of 10 million Shorts views in 90 days · 3,827 views in the last 24 hours (about 111,074 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 20:14 (UK): 2 scheduled, 49 public, 9 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 15:34).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 0:36).
 
 ## Posts by day
 
@@ -52,6 +52,15 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
+
+## In the queue
+
+- **QD-067** Rod Stewart’s MTV launch record 🎤 (rendering next)
+- **QD-068** The day Ready Player One began 🕹️ (rendering next)
+- **QD-069** The Beatles debut album recorded in 12 hours 🎸 (rendering next)
+- **QD-070** Why do golf balls have dimples? ⛳ (rendering next)
+- **QD-071** How does GPS actually pinpoint your location? 🛰️ (rendering next)
+- **QD-072** Who was the first person to win an EGOT? 🏆 (rendering next)
 
 ## On the channel (latest first)
 

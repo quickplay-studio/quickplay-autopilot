@@ -125,10 +125,10 @@ reset()
 import writer as W
 stats = {"writers": {"gemini:gemini-flash-latest": {"n": 40, "score": 0.7}, "groq:llama-3.3-70b-versatile": {"n": 40, "score": 1.3}}}
 saved = (W.ROOT / "analytics" / "models.json")
-backup = saved.read_text() if saved.exists() else None
+backup = saved.read_bytes() if saved.exists() else None
 saved.write_text(json.dumps(stats))
 picks = {W.choose_writer(f"QD-{i:03d}") for i in range(30)}
-saved.write_text(backup) if backup is not None else saved.unlink()
+saved.write_bytes(backup) if backup is not None else saved.unlink()
 assert "claude:sonnet" not in picks and "groq:llama-3.3-70b-versatile" in picks, picks
 assert picks - {"groq:llama-3.3-70b-versatile", "gemini:gemini-flash-latest", "gemini:gemini-3.5-flash-lite", "gemini:gemma-3-27b-it"} == set()
 print("7 choice ok", picks)
@@ -146,11 +146,11 @@ print("8 scores ok")
 
 # 9. weak Shorts for a remake: under half of typical after 48 hours, none remade yet
 import csv, datetime as dt
-p = W.ROOT / "analytics" / "shorts.csv"; backup = p.read_text() if p.exists() else None
+p = W.ROOT / "analytics" / "shorts.csv"; backup = p.read_bytes() if p.exists() else None
 old = (W.NOW - dt.timedelta(hours=60)).isoformat(timespec="minutes"); new = (W.NOW - dt.timedelta(hours=10)).isoformat(timespec="minutes")
 p.write_text("short,title,posted,views_vs_typical\nQD-001,Weak one,%s,0.3\nQD-002,Fresh one,%s,0.2\nQD-003,Fine one,%s,1.4\n" % (old, new, old))
 w = W.weak()
-if backup is not None: p.write_text(backup)
+if backup is not None: p.write_bytes(backup)
 else: p.unlink()
 assert [r["short"] for r in w] == ["QD-001"], w
 print("9 weak ok")

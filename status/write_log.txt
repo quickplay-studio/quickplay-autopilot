@@ -1,21 +1,12 @@
-evening run for 2026-10-21: 6 to write from 15 fact packs
+evening run for 2026-10-21: 3 to write from 15 fact packs
+covered already: The Legend of Zelda: Ocarina of Time – Art thou ready?
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash']
-The Legend of Zelda: Ocarina of Time – Art thou ready?: gemini-3.5-flash-lite, 0 warnings
-Patient Zero by Taylor Swift: still failing: facts: beat 0: Title states Taylor Swift hits number one with Patient Zero, but the pack only states it adds a third week at No. 1 on the Billboard Hot 100 (Source 1) and was released on September 25, 2026 (Sources 1, 2).; facts: beat 1: Adds the word 'consecutive' which is not in the pack (Source 1
+Patient Zero by Taylor Swift: gemini-3.5-flash-lite, 0 warnings
 covered already: Street Fighter (2026 film)
-H3-24 | Martian Moons eXploration (MMX): gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-barcelona vs real madrid: still failing: facts: beat 0: The title states Lamine Yamal scores a 'wonder goal', but the fact pack only mentions a brilliant goal in hook ideas and a wonder goal in source 1 title (which is not a verified fact).; facts: beat 1: Beat 1 states Lamine Yamal conjured a 'magical wonder goal', which is not in the ver
+covered already: H3-24 | Martian Moons eXploration (MMX)
+barcelona vs real madrid: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
 covered already: Olivia Rodrigo
 covered already: Jailer 2
-raphinha: still failing: facts: beat 2: Added the word 'talented', which is not in the pack's facts.; facts: beat 3: Added details about his journey starting locally and playing for major clubs and his national team, which are not supported by the pack's facts.; facts: beat 4: Added the loaded word 'incredible', which is no
-hbo max: still failing: facts: beat 0: The title states 'HBO Max reaches 140 million paid memberships', but the pack says 'more than 140 million paid membership worldwide' [2].; facts: beat 5: Beat 5 states 'in the 9pm slot', but the pack says 'in the 9p.m. ET and PT slot' [1], omitting the time zones.
-Tate McRae: still failing: narration: 44 words, needs 55 to 125 (20 to 45 seconds)
-larne vs linfield: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-nba league pass: error: Expecting property name enclosed in double quotes: line 68 column 5 (char 1525)
-evergreen: List of highest-grossing films No module named 'trafilatura'
-evergreen: Voyager Golden Record No module named 'trafilatura'
-evergreen: Nadia Comăneci No module named 'trafilatura'
-evergreen: Minecraft No module named 'trafilatura'
-evergreen: Rubik's Cube No module named 'trafilatura'
-wrote 3 of 6: QD-058 Zelda Ocarina of Time remake file size confirmed 🗡️; QD-059 Japan launches historic mission to Mars's moon Phobos 🚀; QD-060 Larne face Linfield in Irish Premiership match ⚽
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": ["gemini-2.5-flash", "gemini-3-flash-preview", "gemini-3.5-flash", "gemini-3.6-flash", "gemini-3.7-flash", "gemini-3.8-flash", "gemini-flash-latest", "gemini-omni-1.1-flash", "gemini-omni-flash-preview"], "timeouts": {}, "late": false}
+raphinha: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 3 of 3: QD-061 Taylor Swift's Patient Zero hits three weeks at number one 🎵; QD-062 Lamine Yamal ends Real Betis 15 game unbeaten run ⚽; QD-063 raphinha birth date in Porto Alegre ⚽
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "late": false}

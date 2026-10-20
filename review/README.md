@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 09:41): 6 of 1,000 subscribers · 2,712 of 10 million Shorts views in 90 days · 3,651 views in the last 24 hours (about 111,081 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 10:39): 6 of 1,000 subscribers · 2,783 of 10 million Shorts views in 90 days · 3,770 views in the last 24 hours (about 111,080 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 10:25 (UK): 0 scheduled, 46 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 8:42).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 20 Oct 10:34).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 2 public | 6 | 0 | ⏳ 2 of 24 so far |
+| Tue 20 Oct | 2 public | 8 | 1 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -34,7 +34,7 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 ## On the channel (latest first)
 
 ### Tue 20 Oct 8:10 · Angel Reese makes WNBA finals history 🏀
-public · 46 views · 33 s · music: duty-calls · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
+public · 46 views · 33 s · music: duty-calls · on Facebook · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
 
 ![QD-053](QD-053.jpg)
 
@@ -59,12 +59,12 @@ public · 1 views · 36 s · music: horizons · [script](../boards/done/QD-029.j
 ![QD-029](QD-029.jpg)
 
 ### Mon 19 Oct 17:30 · The Beekeeper 2 teaser: who's new, who's back 🐝
-public · 46 views · 25 s · music: once-upon-a-time · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
+public · 46 views · 25 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
 
 ![QD-047](QD-047.jpg)
 
 ### Mon 19 Oct 16:50 · Zara Larsson's Blue Moon: fairy or mermaid? 🌙
-public · 42 views · 24 s · music: purple-desire · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
+public · 42 views · 24 s · music: purple-desire · on Instagram · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
 
 ![QD-046](QD-046.jpg)
 

@@ -140,10 +140,14 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
     last = "no Gemini model answered"
-    todo = [m for m in models(key) if m not in spent]
+    slow = STATE.setdefault("slow_models", {})          # timeouts this run: after 2, the model is passed over
+    todo = [m for m in models(key) if m not in spent and slow.get(m, 0) < 2]
     if lite: todo.sort(key=lambda m: "lite" not in m)
-    if not todo: STATE["spent"] = True; raise RuntimeError("every Gemini model's free quota is used up for now")
+    if not todo:
+        if all(m in spent for m in models(key)): STATE["spent"] = True
+        raise RuntimeError("no Gemini model is answering (free quota used up or too slow)")
     for model in todo:
+        timed_out = False
         for think in ([STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
             gen = {"temperature": temperature, "responseMimeType": "application/json", **think}
             if schema: gen["responseSchema"] = schema
@@ -152,8 +156,8 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
                 try:
                     r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
                                       json=body, timeout=timeout)
-                except requests.exceptions.RequestException as e:
-                    raise RuntimeError(f"{model}: {type(e).__name__}")       # too slow: give up on this topic
+                except requests.exceptions.RequestException as e:      # too slow or unreachable: the next model tries
+                    slow[model] = slow.get(model, 0) + 1; last = f"{model}: {type(e).__name__}"; timed_out = True; break
                 if r.status_code == 429 and ("quota" in r.text.lower() or attempt == 2):
                     spent.add(model); last = f"{model}: free quota used up"; break      # the next model has its own quota
                 if r.status_code in (429, 500, 502, 503, 504):
@@ -165,7 +169,7 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
                 last = f"{model}: {r.status_code} {r.text[:150]}"
                 if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
                 break
-            if model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
+            if timed_out or model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
     raise RuntimeError(last)
 
 

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-19T13:50:00Z",
  "rendered": "2026-10-19T12:15:46.199924+00:00",
- "title": "K/DA tease a comeback for 20 October 💜",
+ "title": "K/DA's new song: Start a Fire or Watch Me? 💜",
  "media_notes": [
   "beat 3 reused a nearby picture (commons-search:K/DA League of Legends: no Commons image named 'K/DA League of Legends')",
   "beat 5 reused a nearby picture (commons-search:League of Legends World Championship 2018 Incheon: no Commons image named 'League of Legends World Championship 2018 Incheon')"
@@ -93,7 +93,14 @@
  },
  "engage": {
   "comment": "Ugw9w0wLJXOGbT_yrXx4AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "K/DA tease a comeback for 20 October 💜",
+   "to": "K/DA's new song: Start a Fire or Watch Me? 💜",
+   "at": "2026-10-20T14:19+00:00",
+   "views_an_hour": 0.2,
+   "typical": 3.8
+  }
  },
  "instagram": {
   "media": "18116644814116806",

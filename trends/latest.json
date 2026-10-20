@@ -3,11 +3,51 @@
  "google_trends": {
   "GB": [
    {
-    "q": "mark allen",
+    "q": "migrant crisis",
     "traffic": "200+",
     "news": [
-     "Northern Ireland Open LIVE – Mark Allen trails Jordan Brown before Zhao Xintong meets Gao Yang",
-     "Snooker star set to end six-month hiatus with immediate return to action"
+     "Zelensky says Ukraine has right to defend itself after Trump calls latest strikes a 'disgrace'",
+     "Millions could be forced to flee their homeland, sparking a UK migration crisis"
+    ]
+   },
+   {
+    "q": "kyle kennedy",
+    "traffic": "200+",
+    "news": [
+     "Kyle Kennedy, Granddaughter of Bobby and Ethel Kennedy, Dies at 42",
+     "Kyle Kennedy, granddaughter of Robert F. Kennedy, dies at 42"
+    ]
+   },
+   {
+    "q": "liverpool vs villarreal",
+    "traffic": "200+",
+    "news": [
+     "Liverpool v Villarreal: Team news",
+     "Villarreal’s Iñigo Pérez ready to meet Iraola again in test of old bond"
+    ]
+   },
+   {
+    "q": "everton f.c.",
+    "traffic": "200+",
+    "news": [
+     "Emi Martinez injury mars first Chelsea clean sheet in nine months",
+     "Mike Penders breaks 21-year Chelsea record after Premier League debut | News | Official Site"
+    ]
+   },
+   {
+    "q": "iceye",
+    "traffic": "100+",
+    "news": [
+     "Russian Satellite Makes a Menacing Approach to Another Craft in Orbit",
+     "Russian satellite makes possibly unprecedented approach of another spacecraft without permission"
+    ]
+   },
+   {
+    "q": "mark allen",
+    "traffic": "500+",
+    "news": [
+     "Northern Ireland Open: Mark Allen loses to Jordan Brown on return to action",
+     "Northern Ireland Open LIVE – Mark Allen trails Jordan Brown before Zhao Xintong meets Gao Yang"
     ]
    },
    {
@@ -15,7 +55,7 @@
     "traffic": "500+",
     "news": [
      "Overs Comparison - Pakistan vs England 2nd Match 2026/27 - Cricket Insights",
-     "Tri-Nation Series Equation, How Bangladesh Can Reach the Final"
+     "Afghanistan stand in Bangladesh's way for spot in final"
     ]
    },
    {
@@ -31,56 +71,24 @@
     "traffic": "200+",
     "news": [
      "Ready for Launch: Modern Warfare 4 Progression and Prestige",
-     "CoD MW4 missions: Full list of campaign missions and how many to expect"
-    ]
-   },
-   {
-    "q": "ballon d'or",
-    "traffic": "500+",
-    "news": [
-     "Ballon d’Or 2026 contenders ranked: Can Kane or Olise fend off Yamal surge? - The Athletic",
-     "Ballon d'Or power rankings: Kane, Yamal and Messi in tight battle for top spot"
-    ]
-   },
-   {
-    "q": "andy burnham",
-    "traffic": "5000+",
-    "news": [
-     "Burnham vows end to 'rip-off parking charges' under new rules",
-     "Drivers set to get new rights to challenge 'rip-off' private parking fines"
-    ]
-   },
-   {
-    "q": "jean-philippe mateta",
-    "traffic": "500+",
-    "news": [
-     "Transfer Notebook: Man United striker target keen on January move from rival Premier League club",
-     "Man Utd on alert as EPL club ‘forced’ to sell 62-goal star at a discount in January"
-    ]
-   },
-   {
-    "q": "jordan cox",
-    "traffic": "1000+",
-    "news": [
-     "Brook and Jacks lead resurgent England into tri-series with World Cup in sight",
-     "How to watch and follow the England Men v Pakistan and Sri Lanka"
-    ]
-   },
-   {
-    "q": "prince harry, duke of sussex",
-    "traffic": "1000+",
-    "news": [
-     "Sentebale pauses defamation claim against founder Prince Harry",
-     "The Charity Prince Harry Co-Founded Is Struggling to Afford the Lawsuit It Filed Against Him"
+     "Modern Warfare 4 Rescues The Reboot Series By Replicating Call of Duty’s Greatest Era"
     ]
    }
   ],
   "US": [
    {
-    "q": "najee harris",
-    "traffic": "2000+",
+    "q": "ticket master",
+    "traffic": "500+",
     "news": [
-     "Why didn't Giants RB Cam Skattebo tally a carry vs. Saints? 'I got punished for what I did'",
+     "Ticketmaster Goes All-In on AI, Names Ex-Amazon Exec as Chief Technology Officer",
+     "Jim Freeman, ex-Amazon Prime Video VP, joins Ticketmaster as CTO to lead ‘AI-first’ push"
+    ]
+   },
+   {
+    "q": "najee harris",
+    "traffic": "5000+",
+    "news": [
+     "Giants cut Najee Harris after complaining about role",
      "Can fantasy managers still trust Cam Skattebo? Omar Cooper taking off for Jets?"
     ]
    },
@@ -88,8 +96,8 @@
     "q": "dengue fever",
     "traffic": "500+",
     "news": [
-     "Dengue Test Results Took One to Two Months in the Virgin Islands Until a Local Lab Began Testing",
-     "CDC Reveals 263 Dengue Cases, First USVI Death Since 2005 and Testing Delays of Up to Two Months"
+     "2 cases of dengue fever confirmed in Citrus County",
+     "Mosquito Control Efforts Planned for Parts of Apopka, Pine Hills"
     ]
    },
    {
@@ -102,15 +110,15 @@
    },
    {
     "q": "trump administration cnn press ban",
-    "traffic": "1000+",
+    "traffic": "2000+",
     "news": [
      "CNN warns Trump White House: Restore Air Force One access or face further legal action",
-     "CNN Threatens New Legal Action Against Trump White House Over Air Force One Access"
+     "Opinion | The White House has a workaround when networks refuse to replace CNN"
     ]
    },
    {
     "q": "jordan elliott",
-    "traffic": "1000+",
+    "traffic": "2000+",
     "news": [
      "Titans release DT Jordan Elliott after 'incident' at team facility",
      "Tennessee Titans release DL Jordan Elliott after reviewing 'incident' at team facility"
@@ -118,17 +126,17 @@
    },
    {
     "q": "prince harry uk return interview",
-    "traffic": "500+",
+    "traffic": "1000+",
     "news": [
-     "Prince Harry Sums Up Why He and Meghan Markle Moved to the U.K. in One Simple Word",
-     "Harry Takes Pointed Swipe at William Over Vicious Feud"
+     "Prince Harry says he wants to reconcile with family",
+     "Prince Harry’s Comment Was ‘Not Intended as a Swipe’ at Prince William"
     ]
    },
    {
     "q": "kyle kennedy",
     "traffic": "5000+",
     "news": [
-     "Kyle Kennedy, Granddaughter of Bobby and Ethel Kennedy, Dies at 42",
+     "Kyle Kennedy’s Cause of Death Is Pending After Granddaughter of Bobby and Ethel Kennedy Dies at 42",
      "Kyle Kennedy, granddaughter of Bobby and Ethel Kennedy, dead at 42"
     ]
    },
@@ -136,42 +144,42 @@
     "q": "boardwalk rock 2027",
     "traffic": "1000+",
     "news": [
-     "Iron Maiden announced as first headliner for 2027 Boardwalk Rock in Ocean City",
-     "Boardwalk Rock Festival Returns for 2027 With Iron Maiden, Korn, Bad Omens + More"
-    ]
-   },
-   {
-    "q": "trump $8 billion agricultural aid",
-    "traffic": "1000+",
-    "news": [
-     "Trump Announces $8 Billion Plan to Cover Farm Losses",
-     "Trump announces $8 billion plan to give economic aid to farmers"
+     "KORN, BAD OMENS and IRON MAIDEN headline BOARDWALK ROCK 2027",
+     "Iron Maiden, Korn and Bad Omens are headlining Boardwalk Rock 2027"
     ]
    }
   ],
   "AU": [
    {
+    "q": "indw vs zimw",
+    "traffic": "200+",
+    "news": [
+     "Shafali receives demerit point for breaching Level 1 of ICC code of conduct",
+     "India batter reprimanded for ICC Code of Conduct breach"
+    ]
+   },
+   {
     "q": "india vs zimbabwe",
     "traffic": "200+",
     "news": [
-     "IND W vs ZIM W Live Score: Smriti Mandhana wins toss; India to bowl first in final T20I against Zimbabwe",
-     "\"I Was Dreaming Of This Day\": Niki Prasad Reflects On Memorable India Debut"
+     "IND-W vs ZIM-W 2026, 3rd T20I: Harmanpreet Kaur Six",
+     "IND W vs ZIM W Live Score: Smriti Mandhana wins toss; India to bowl first in final T20I against Zimbabwe"
     ]
    },
    {
     "q": "alex pearce",
     "traffic": "200+",
     "news": [
-     "Freo captain backs fans in opposition to Woodside deal",
-     "‘Uncomfortable’: Fremantle captain Alex Pearce speaks out on Woodside sponsorship"
+     "‘Uncomfortable’: Fremantle captain Alex Pearce speaks out on Woodside sponsorship",
+     "Freo captain backs fans in opposition to Woodside deal"
     ]
    },
    {
     "q": "christina applegate",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "Actor Christina Applegate reveals she was misdiagnosed with multiple sclerosis",
-     "Christina Applegate Breaks Down in Tears Revealing She Was Misdiagnosed with MS: ‘I’m Back at Square One’"
+     "Christina Applegate says she was wrongfully diagnosed with MS"
     ]
    },
    {
@@ -201,16 +209,8 @@
     "q": "bali",
     "traffic": "500+",
     "news": [
-     "WA woman's 'harrowing' ordeal stranded in Bali hospital after fall",
-     "Aussie gran facing $100k bill after Bali fall"
-    ]
-   },
-   {
-    "q": "elizabeth ii",
-    "traffic": "1000+",
-    "news": [
-     "Rare sketch of young Queen Elizabeth goes up for auction",
-     "Elizabeth II sketch from 1933 to fetch £2,000 at auction"
+     "New Bali travel option for Aussies in one capital city",
+     "TransNusa Melbourne-Bali Flights Start, Daily From Nov 16"
     ]
    }
   ],
@@ -227,16 +227,16 @@
     "q": "call of duty",
     "traffic": "200+",
     "news": [
-     "COD Black Ops 1 and 2 dev says it’s ‘hard to watch’ the new ports selling well while ‘the actual creators don’t see a dime’",
-     "\"The Suits\" Made All The Money From Call Of Duty: Black Ops 1 And 2 Ports, OG Dev Says"
+     "Ready for Launch: Modern Warfare 4 Progression and Prestige",
+     "You Don't Need An Expensive Console Or High-End PC To Play Call Of Duty: Modern Warfare 4"
     ]
    },
    {
     "q": "kyle kennedy",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "Kyle Kennedy, Granddaughter of Bobby and Ethel Kennedy, Dies at 42",
-     "Kyle Francis Kennedy Obituary (2026) - West Newton, MA - Burke & Blackington Funeral Home - West Newton"
+     "Kyle Kennedy, granddaughter of Bobby and Ethel Kennedy, dead at 42"
     ]
    },
    {
@@ -252,7 +252,7 @@
     "traffic": "200+",
     "news": [
      "Christine the History Queen: Queen Elizabeth II to Christine the History Queen",
-     "Rare sketch of young Queen Elizabeth goes up for auction"
+     "Queen Elizabeth Knew She Made One Huge Mistake During Her Reign"
     ]
    },
    {
@@ -272,18 +272,26 @@
     ]
    },
    {
-    "q": "rich butler",
-    "traffic": "200+",
+    "q": "haiti",
+    "traffic": "100+",
     "news": [
-     "Former Toronto Blue Jay, wife accused in $60K youth baseball fraud",
-     "Former MLB player, wife charged after alleged $60K youth baseball program fraud"
+     "Haitian gangs target foreign troops in first major attack since arrival of international force",
+     "Five Salvadoran Soldiers Missing in Haiti After Ambush"
     ]
    }
   ],
   "IE": [
    {
+    "q": "anton du beke",
+    "traffic": "200+",
+    "news": [
+     "Anton Du Beke in career move away from Strictly Come Dancing",
+     "Anton Du Beke Releases Christmas Single on November 6"
+    ]
+   },
+   {
     "q": "everton f.c.",
-    "traffic": "100+",
+    "traffic": "200+",
     "news": [
      "Will Kevin Malone revive bid to buy Everton after TFG sale development?",
      "Everton's £800m Question, English Football's Financial Crisis and Netflix's World Cup Gamble"
@@ -295,14 +303,6 @@
     "news": [
      "Christina Applegate reveals she was misdiagnosed with MS: 'I'm back at square one'",
      "Actor Christina Applegate reveals she was misdiagnosed with multiple sclerosis"
-    ]
-   },
-   {
-    "q": "donald trump",
-    "traffic": "500+",
-    "news": [
-     "Kid Rock details sit-down with Trump, Stephen A Smith and Bill Maher",
-     "Trump has ‘great dinner’ and tours White House ballroom with ‘smart people’ Bill Maher and Stephen A. Smith"
     ]
    },
    {
@@ -318,7 +318,7 @@
     "traffic": "100+",
     "news": [
      "Ten Hag: Ronaldo didn't prepare right and let team down",
-     "Ronaldo let Manchester United down - Ten Hag"
+     "Cristiano Ronaldo let Manchester United down, says Erik ten Hag"
     ]
    },
    {
@@ -333,16 +333,8 @@
     "q": "innishannon fire",
     "traffic": "10000+",
     "news": [
-     "Elderly couple die in fire at Co Cork house",
-     "West Cork house fire: Couple in their 70s found dead after one raised alarm"
-    ]
-   },
-   {
-    "q": "storm",
-    "traffic": "5000+",
-    "news": [
-     "Rain warnings issued as Storm Austen to hit Ireland",
-     "Storm Austen to hit Ireland as Met Éireann issues weather warnings for Wednesday and Thursday"
+     "Man and woman die following house fire in Co Cork",
+     "Elderly couple die in fire at Co Cork house"
     ]
    }
   ]
@@ -352,31 +344,31 @@
    "BBC Three, BBC Scotland and Radio 4 Extra broadcast channels to close - BBC",
    "MTV Worker Feared Being \"Seen As Trouble\" After Russell Brand Incident - Deadline",
    "Christina Applegate reveals she was misdiagnosed with MS in heartbreaking health update - The Independent",
+   "Australian model Sahara Ray dies aged 34 - Euronews.com",
    "Strictly, EastEnders and Love Island stars look ready for bed as they leave boozy awards party in taxi - The Sun",
-   "Celeb Traitors’ James Acaster makes rare remarks on girlfriend amid fans' crush - The Sun",
    "Exclusive: Coronation Street plans special Debbie Webster episode - Digital Spy",
-   "Exclusive | Jennifer Lopez and Brett Goldstein are ‘casually’ dating - Page Six",
-   "Australian model Sahara Ray dies aged 34 - Euronews.com"
+   "Celeb Traitors’ James Acaster makes rare remarks on girlfriend amid fans' crush - The Sun",
+   "WWE Raw Winners, Live Grades, Reaction and Highlights From October 19 - Bleacher Report"
   ],
   "sports": [
    "Pakistan vs England, live: Latest score and updates from ODI tri-series - The Telegraph",
-   "Cristiano Ronaldo let Manchester United down, says Erik ten Hag - BBC",
    "Villarreal’s Iñigo Pérez ready to meet Iraola again in test of old bond - The Guardian",
-   "Man City punishment 'revealed' after guilty verdict as appeal ongoing - London Evening Standard",
-   "Manchester United 23-man training squad vs Como revealed with eight absent - Manchester Evening News",
+   "Man Utd XI vs Como: Confirmed team news and predicted lineup - London Evening Standard",
+   "Man City charges LIVE: Premier League clubs 'get punishment wish' as expulsion decision made - Manchester Evening News",
    "Dejan Kulusevski explains why he is 'different' after Tottenham injury hell - ESPN",
+   "Erik ten Hag interview: Man United’s broken ‘promises’, wanting Kane, Ronaldo tension, FA Cup glory - The Athletic - The New York Times",
    "Chelsea: What games Emi Martinez will miss after injury timeline is 'revealed' - London Evening Standard",
    "San Francisco 49ers beat Washington Commanders to stay unbeaten as Brock Purdy becomes highest-rated passer in NFL history - Sky Sports"
   ],
   "technology": [
    "Spotify is cracking down on Family plans again, and the penalty can lock you out for a year - Digital Trends",
+   "Rumored Steam Deck 2 APU Appears in Leaked Benchmarks with 50% More CPU Cores - TechPowerUp",
    "Three Important MacBook Pro Touch Release Dates - Forbes",
    "On Warhammer TV this week – Devastation and drybrushing - Warhammer Community",
-   "Rumored Steam Deck 2 APU Appears in Leaked Benchmarks with 50% More CPU Cores - TechPowerUp",
+   "‘It was so satisfying when I threw a rock through the screen’: the people sick of being spied on by their smart TV - The Guardian",
    "Man who said Baileys slip left him disabled ‘is training to sail’ - The Times",
-   "Wii Sports is back on the Switch 2, and it rules - The Verge",
-   "Final Fantasy dips back into the SNES golden era with Resonance - The Verge",
-   "‘It was so satisfying when I threw a rock through the screen’: the people sick of being spied on by their smart TV - The Guardian"
+   "Review: Final Fantasy Resonance (PS5) - Square's Series Returns to Its Roots to Fantastic Effect - Push Square",
+   "Wii Sports is back on the Switch 2, and it rules - The Verge"
   ],
   "science": [
    "‘Once-in-a-lifetime chance’: Japan launches historic mission to collect rocks from Mars’s moon Phobos - The Guardian",
@@ -520,7 +512,14 @@
  ],
  "music_charts": {
   "gb": {
-   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
+   "top5": [
+    "Housewife by Tate McRae",
+    "Babydoll by Jamie Miller",
+    "Great Expectation by SIENNA SPIRO",
+    "Stop The Wedding! by Ashe",
+    "Rein Me In by Sam Fender & Olivia Dean"
+   ],
+   "new_in_top25": []
   },
   "us": {
    "top5": [
@@ -538,17 +537,7 @@
    "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
   },
   "br": {
-   "top5": [
-    "Housewife by Tate McRae",
-    "Pós (Ao Vivo) by Felipe e Rodrigo",
-    "Nicole Kidman by ADÉLA",
-    "Ain't In LA by ADÉLA",
-    "expectations by Olivia Rodrigo & Chappell Roan"
-   ],
-   "new_in_top25": [
-    "FIRESTARTER (feat. Sophie Powers, MIYEON & JEON SOYEON) by K/DA, League of Legends Music, i-dle & Mimi Webb",
-    "hate that i made you love me by Ariana Grande"
-   ]
+   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
   },
   "mx": {
    "top5": [
@@ -566,564 +555,564 @@
    {
     "title": "If You Escape, You Win $1,000,000",
     "channel": "MrBeast Gaming",
-    "views": 14669707,
-    "views_per_hour": 628765
+    "views": 14840031,
+    "views_per_hour": 625286
    },
    {
     "title": "Veezha Veera Lyrical (Tamil) | OM | Dhanush | Mammootty | Sai Pallavi | Rajkumar | Sai Abhyankkar",
     "channel": "Divo Music",
-    "views": 6745435,
-    "views_per_hour": 261199
+    "views": 6812465,
+    "views_per_hour": 259749
    },
    {
     "title": "IVE 아이브 'Looks Can Kill' MV",
     "channel": "STARSHIP",
-    "views": 7628961,
-    "views_per_hour": 251535
+    "views": 7782578,
+    "views_per_hour": 253242
    },
    {
     "title": "NMIXX(엔믹스) “긴 소원(Birthday Wish)” M/V",
     "channel": "JYP Entertainment",
-    "views": 7002872,
-    "views_per_hour": 230890
+    "views": 7088799,
+    "views_per_hour": 230665
    },
    {
     "title": "정한X조슈아 (SEVENTEEN) '12 o'clock' Official MV",
     "channel": "HYBE LABELS",
-    "views": 5938477,
-    "views_per_hour": 195589
+    "views": 5988455,
+    "views_per_hour": 194656
    },
    {
     "title": "SURYAA: Ant Se Aarambh Tak - Official Teaser | Sunny Deol, Ravi Kishan | M Padmakumar| 20th Nov 2026",
     "channel": "Zee Music Company",
-    "views": 5974884,
-    "views_per_hour": 177578
+    "views": 6006425,
+    "views_per_hour": 176407
    },
    {
     "title": "Aeroplane Lyric Video | SCENE | Suriya | Nazriya Nazim | Naslen | Sushin Shyam | JithuMadhavan",
     "channel": "Sony Music South",
-    "views": 3371465,
-    "views_per_hour": 125664
+    "views": 3386841,
+    "views_per_hour": 124372
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | HUTCH X DRAC | HALF & HALF STREAM | HUNGER LATER | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1018777,
-    "views_per_hour": 118794
+    "views": 1020705,
+    "views_per_hour": 113687
    },
    {
     "title": "Dhanda Nyoliwala - No Favours (Official Music Video)",
     "channel": "Dhanda Nyoliwala",
-    "views": 1123132,
-    "views_per_hour": 114277
+    "views": 1152981,
+    "views_per_hour": 112701
    },
    {
     "title": "CRYO is Truly Horrifying",
     "channel": "SMii7Yplus",
-    "views": 1179513,
-    "views_per_hour": 58662
+    "views": 1187521,
+    "views_per_hour": 57902
    },
    {
     "title": "New Doomsday Trailer Coming? Batman 2 in Trouble? - Roastverse 186",
     "channel": "ComicVerse",
-    "views": 289836,
-    "views_per_hour": 48593
+    "views": 307852,
+    "views_per_hour": 48353
    },
    {
     "title": "WE LET YOUTUBERS CONTROL SIDEMEN GEOGUESSR",
     "channel": "MoreSidemen",
-    "views": 1047787,
-    "views_per_hour": 47490
+    "views": 1056177,
+    "views_per_hour": 47013
    },
    {
     "title": "The Scariest Roblox Horror Game...",
     "channel": "Joe Bart Games",
-    "views": 1093916,
-    "views_per_hour": 44941
+    "views": 1102843,
+    "views_per_hour": 44572
    },
    {
     "title": "Donga Naa Koduku - Teaser Promo | Mouli, Sushmita Shetty | Sreenu Kambala",
     "channel": "Mythri Movie Makers",
-    "views": 325990,
-    "views_per_hour": 33565
+    "views": 342101,
+    "views_per_hour": 33824
    },
    {
     "title": "It’s Outside My Window…",
     "channel": "CaseOh",
-    "views": 523603,
-    "views_per_hour": 30215
+    "views": 529104,
+    "views_per_hour": 29840
    }
   ],
   "GB-gaming": [
    {
     "title": "If You Escape, You Win $1,000,000",
     "channel": "MrBeast Gaming",
-    "views": 14669707,
-    "views_per_hour": 628765
+    "views": 14840031,
+    "views_per_hour": 625286
    },
    {
     "title": "Meet Vince and his family! (Brawl Stars Animation)",
     "channel": "Brawl Stars",
-    "views": 5146309,
-    "views_per_hour": 164248
+    "views": 5150659,
+    "views_per_hour": 162303
    },
    {
     "title": "CRYO is Truly Horrifying",
     "channel": "SMii7Yplus",
-    "views": 1179513,
-    "views_per_hour": 58662
+    "views": 1187521,
+    "views_per_hour": 57902
    },
    {
     "title": "WE LET YOUTUBERS CONTROL SIDEMEN GEOGUESSR",
     "channel": "MoreSidemen",
-    "views": 1047787,
-    "views_per_hour": 47490
+    "views": 1056177,
+    "views_per_hour": 47013
    },
    {
     "title": "The Scariest Roblox Horror Game...",
     "channel": "Joe Bart Games",
-    "views": 1093916,
-    "views_per_hour": 44941
+    "views": 1102843,
+    "views_per_hour": 44572
    },
    {
     "title": "@ldshadowlady created Shadowcraft as a teen. 15 years later, she's a Minecraft legend.",
     "channel": "YouTube",
-    "views": 693607,
-    "views_per_hour": 29738
+    "views": 699220,
+    "views_per_hour": 29471
    }
   ],
   "GB-music": [
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 16612406,
-    "views_per_hour": 160773
+    "views": 16645489,
+    "views_per_hour": 160469
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 15641100,
-    "views_per_hour": 140495
+    "views": 15680054,
+    "views_per_hour": 140338
    },
    {
     "title": "A2O LITE 'NEON' Official Video",
     "channel": "A2O WORLD",
-    "views": 18837390,
-    "views_per_hour": 96690
+    "views": 18873431,
+    "views_per_hour": 96675
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 8346362,
+    "views": 8376530,
     "views_per_hour": 74970
    },
    {
     "title": "ITHINNO AADAME | DISCO | Ullas Chemban | Manikandan Ayyappa | Chemban Vinod | Dev | Lukman",
     "channel": "Chembosky Motion Pictures",
-    "views": 4371232,
-    "views_per_hour": 59994
+    "views": 4391123,
+    "views_per_hour": 59936
    },
    {
     "title": "Zara Larsson - Blue Moon (Official Music Video)",
     "channel": "ZaraLarssonMusicVEVO",
-    "views": 6108599,
-    "views_per_hour": 46514
+    "views": 6118714,
+    "views_per_hour": 46449
    }
   ],
   "GB-sport": [
    {
     "title": "SAVE THE FOOTBALLER BY STOPPING THE DISCS FROM FALLING | WHO WON?😱🙏",
     "channel": "DuoWave ",
-    "views": 105860243,
-    "views_per_hour": 907733
+    "views": 106060685,
+    "views_per_hour": 906326
    },
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 26011713,
-    "views_per_hour": 191507
+    "views": 26039823,
+    "views_per_hour": 191148
    },
    {
     "title": "Speed got humbled by the kids in backflip 😳 #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 39853710,
-    "views_per_hour": 153327
+    "views": 39868447,
+    "views_per_hour": 153147
    },
    {
     "title": "How is This Even Possible? 😳🥌",
     "channel": "The Ranking Bros",
-    "views": 31110837,
-    "views_per_hour": 135075
+    "views": 31130747,
+    "views_per_hour": 134926
    },
    {
     "title": "Why This Rider Started Ahead of Everyone Else 😳🏍️",
     "channel": "FitVision",
-    "views": 7200714,
-    "views_per_hour": 118067
+    "views": 7231605,
+    "views_per_hour": 117796
    },
    {
     "title": "Champions League Matchday 2 was absolute chaos! 😂🏆",
     "channel": "God Ares AI",
-    "views": 14153804,
-    "views_per_hour": 117632
+    "views": 14174228,
+    "views_per_hour": 117410
    }
   ],
   "GB-entertainment": [
    {
     "title": "Last To Fall Wins",
     "channel": "MrBeast",
-    "views": 72402729,
-    "views_per_hour": 759492
+    "views": 72645514,
+    "views_per_hour": 758838
    },
    {
     "title": "try this at your own risk #sofimanassyan #relatable #funny",
     "channel": "Sofi Manassyan",
-    "views": 43045983,
-    "views_per_hour": 738063
+    "views": 43208450,
+    "views_per_hour": 735774
    },
    {
     "title": "The Victoria’s Secret Fashion Show 2026",
     "channel": "Victoria's Secret",
-    "views": 25748748,
-    "views_per_hour": 666910
+    "views": 25803253,
+    "views_per_hour": 661431
    },
    {
     "title": "Who Can Escape Without getting Crushed 💀",
     "channel": "Hero DW",
-    "views": 36052552,
-    "views_per_hour": 557858
+    "views": 36212065,
+    "views_per_hour": 556860
    },
    {
     "title": "How Mr. Potato Head Was Invented 🤔",
     "channel": "Zack D. Films",
-    "views": 19225511,
-    "views_per_hour": 275354
+    "views": 19252578,
+    "views_per_hour": 274163
    },
    {
     "title": "\"Apart from my dignity, I think I'm fine.\" 😳",
     "channel": "Dreamy Talker",
-    "views": 6468372,
-    "views_per_hour": 269804
+    "views": 6577364,
+    "views_per_hour": 269824
    }
   ],
   "GB-tech": [
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 11881476,
-    "views_per_hour": 158798
+    "views": 11892638,
+    "views_per_hour": 158097
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 14631836,
-    "views_per_hour": 153711
+    "views": 14682538,
+    "views_per_hour": 153594
    },
    {
     "title": "I thought the “Intel inside” sticker WAS the chip..",
     "channel": "CarterPCs",
-    "views": 8602469,
-    "views_per_hour": 151624
+    "views": 8628039,
+    "views_per_hour": 151004
    },
    {
     "title": "Samsung Galaxy S27 Ultra Cobalt Violet📱🔥#noads #tiktok #usa",
     "channel": "MR Limbo Green",
-    "views": 7138214,
-    "views_per_hour": 79911
+    "views": 7145018,
+    "views_per_hour": 79628
    },
    {
     "title": "Apple Homeview Impressions: Not Convinced!",
     "channel": "Marques Brownlee",
-    "views": 10360748,
-    "views_per_hour": 64505
+    "views": 10363179,
+    "views_per_hour": 64359
    },
    {
     "title": "What is the BEST app?!📱🤔",
     "channel": "Cam2r",
-    "views": 7198033,
-    "views_per_hour": 63572
+    "views": 7207001,
+    "views_per_hour": 63426
    }
   ],
   "US": [
    {
     "title": "If You Escape, You Win $1,000,000",
     "channel": "MrBeast Gaming",
-    "views": 14669707,
-    "views_per_hour": 628765
+    "views": 14840031,
+    "views_per_hour": 625286
    },
    {
     "title": "IVE 아이브 'Looks Can Kill' MV",
     "channel": "STARSHIP",
-    "views": 7628961,
-    "views_per_hour": 251535
+    "views": 7782578,
+    "views_per_hour": 253242
    },
    {
     "title": "NMIXX(엔믹스) “긴 소원(Birthday Wish)” M/V",
     "channel": "JYP Entertainment",
-    "views": 7002872,
-    "views_per_hour": 230890
+    "views": 7088799,
+    "views_per_hour": 230665
    },
    {
     "title": "Meet Vince and his family! (Brawl Stars Animation)",
     "channel": "Brawl Stars",
-    "views": 5146309,
-    "views_per_hour": 164248
+    "views": 5150659,
+    "views_per_hour": 162303
    },
    {
     "title": "🔴LIVE | ARC RAIDERS | HUTCH X DRAC | HALF & HALF STREAM | HUNGER LATER | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1018777,
-    "views_per_hour": 118794
+    "views": 1020705,
+    "views_per_hour": 113687
    },
    {
     "title": "CRYO is Truly Horrifying",
     "channel": "SMii7Yplus",
-    "views": 1179513,
-    "views_per_hour": 58662
+    "views": 1187521,
+    "views_per_hour": 57902
    },
    {
     "title": "Snowbound 🔴 52-100 🔴 MAIN LIST (14/75)",
     "channel": "Doggie",
-    "views": 457008,
-    "views_per_hour": 47651
+    "views": 458248,
+    "views_per_hour": 45857
    },
    {
     "title": "RISE AND FALL // Hush Agent Trailer - VALORANT",
     "channel": "VALORANT",
-    "views": 2637195,
-    "views_per_hour": 46000
+    "views": 2641163,
+    "views_per_hour": 45748
    },
    {
     "title": "The Scariest Roblox Horror Game...",
     "channel": "Joe Bart Games",
-    "views": 1093916,
-    "views_per_hour": 44941
+    "views": 1102843,
+    "views_per_hour": 44572
    },
    {
     "title": "Returning To Japan | Official Trailer",
     "channel": "Kai Cenat Live",
-    "views": 1488421,
-    "views_per_hour": 35254
+    "views": 1492385,
+    "views_per_hour": 35014
    },
    {
     "title": "It’s Outside My Window…",
     "channel": "CaseOh",
-    "views": 523603,
-    "views_per_hour": 30215
+    "views": 529104,
+    "views_per_hour": 29840
    },
    {
     "title": "A$AP ROCKY - SHROOM CLOUDS (Official Video)",
     "channel": "ASAPROCKYUPTOWN",
-    "views": 538658,
-    "views_per_hour": 21272
+    "views": 543726,
+    "views_per_hour": 21136
    },
    {
     "title": "FIRESTARTER",
     "channel": "K/DA - Topic",
-    "views": 227683,
-    "views_per_hour": 20683
+    "views": 237574,
+    "views_per_hour": 20820
    },
    {
     "title": "❌Ángel Caído (R.I.P. Santa Fe Klan)❌ 🐀",
     "channel": "TornillO Oficial",
-    "views": 240962,
-    "views_per_hour": 20371
+    "views": 248198,
+    "views_per_hour": 20293
    },
    {
     "title": "Industrializing Minecraft with Create",
     "channel": "RagePlaysGames",
-    "views": 400939,
-    "views_per_hour": 19972
+    "views": 405780,
+    "views_per_hour": 19817
    }
   ],
   "US-gaming": [
    {
     "title": "If You Escape, You Win $1,000,000",
     "channel": "MrBeast Gaming",
-    "views": 14669707,
-    "views_per_hour": 628765
+    "views": 14840031,
+    "views_per_hour": 625286
    },
    {
     "title": "Meet Vince and his family! (Brawl Stars Animation)",
     "channel": "Brawl Stars",
-    "views": 5146309,
-    "views_per_hour": 164248
+    "views": 5150659,
+    "views_per_hour": 162303
    },
    {
     "title": "Something Is Hunting My Dogs...",
     "channel": "LookOut2DD",
-    "views": 2363639,
-    "views_per_hour": 60873
+    "views": 2372225,
+    "views_per_hour": 60468
    },
    {
     "title": "CRYO is Truly Horrifying",
     "channel": "SMii7Yplus",
-    "views": 1179513,
-    "views_per_hour": 58662
+    "views": 1187521,
+    "views_per_hour": 57902
    },
    {
     "title": "WE LET YOUTUBERS CONTROL SIDEMEN GEOGUESSR",
     "channel": "MoreSidemen",
-    "views": 1047787,
-    "views_per_hour": 47490
+    "views": 1056177,
+    "views_per_hour": 47013
    },
    {
     "title": "The Scariest Roblox Horror Game...",
     "channel": "Joe Bart Games",
-    "views": 1093916,
-    "views_per_hour": 44941
+    "views": 1102843,
+    "views_per_hour": 44572
    }
   ],
   "US-music": [
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 15641100,
-    "views_per_hour": 140495
+    "views": 15680054,
+    "views_per_hour": 140338
    },
    {
     "title": "A2O LITE 'NEON' Official Video",
     "channel": "A2O WORLD",
-    "views": 18837390,
-    "views_per_hour": 96690
+    "views": 18873431,
+    "views_per_hour": 96675
    },
    {
     "title": "Anuel AA - Vuelve (Video Oficial)",
     "channel": "Anuel AA",
-    "views": 22615470,
-    "views_per_hour": 86897
+    "views": 22621476,
+    "views_per_hour": 86786
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 8346362,
+    "views": 8376530,
     "views_per_hour": 74970
    },
    {
     "title": "Bulin 47 X Kevin Wai - Dame Hombro (Video Oficial)",
     "channel": "Bulin 47 Oficial",
-    "views": 15977137,
-    "views_per_hour": 55606
+    "views": 15987173,
+    "views_per_hour": 55563
    },
    {
     "title": "Zara Larsson - Blue Moon (Official Music Video)",
     "channel": "ZaraLarssonMusicVEVO",
-    "views": 6108599,
-    "views_per_hour": 46514
+    "views": 6118714,
+    "views_per_hour": 46449
    }
   ],
   "US-sport": [
    {
     "title": "SAVE THE FOOTBALLER BY STOPPING THE DISCS FROM FALLING | WHO WON?😱🙏",
     "channel": "DuoWave ",
-    "views": 105860243,
-    "views_per_hour": 907733
+    "views": 106062466,
+    "views_per_hour": 906342
    },
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 26011713,
-    "views_per_hour": 191507
+    "views": 26039823,
+    "views_per_hour": 191148
    },
    {
     "title": "How is This Even Possible? 😳🥌",
     "channel": "The Ranking Bros",
-    "views": 31110837,
-    "views_per_hour": 135075
+    "views": 31130747,
+    "views_per_hour": 134926
    },
    {
     "title": "Why This Rider Started Ahead of Everyone Else 😳🏍️",
     "channel": "FitVision",
-    "views": 7200714,
-    "views_per_hour": 118067
+    "views": 7231605,
+    "views_per_hour": 117796
    },
    {
     "title": "Goal celebration goes HORRIBLY wrong 😭",
     "channel": "John Casterline",
-    "views": 6190095,
-    "views_per_hour": 102787
+    "views": 6194371,
+    "views_per_hour": 102176
    },
    {
     "title": "Top 5 Chunkz Football Moments!",
     "channel": "Chunkz Ripz",
-    "views": 6177353,
-    "views_per_hour": 96950
+    "views": 6209133,
+    "views_per_hour": 96838
    }
   ],
   "US-entertainment": [
    {
     "title": "The Victoria’s Secret Fashion Show 2026",
     "channel": "Victoria's Secret",
-    "views": 25748748,
-    "views_per_hour": 666910
+    "views": 25803253,
+    "views_per_hour": 661431
    },
    {
     "title": "Who Can Escape Without getting Crushed 💀",
     "channel": "Hero DW",
-    "views": 36052552,
-    "views_per_hour": 557858
+    "views": 36212065,
+    "views_per_hour": 556860
    },
    {
     "title": "How Mr. Potato Head Was Invented 🤔",
     "channel": "Zack D. Films",
-    "views": 19225511,
-    "views_per_hour": 275354
+    "views": 19252578,
+    "views_per_hour": 274163
    },
    {
     "title": "\"Apart from my dignity, I think I'm fine.\" 😳",
     "channel": "Dreamy Talker",
-    "views": 6468372,
-    "views_per_hour": 269804
+    "views": 6577364,
+    "views_per_hour": 269824
    },
    {
     "title": "Never say never 😭",
     "channel": "Smirk",
-    "views": 15671145,
-    "views_per_hour": 257668
+    "views": 15685397,
+    "views_per_hour": 256208
    },
    {
     "title": "That Acting Was GENIOUS 🤣",
     "channel": "Hood Shop Moments",
-    "views": 9558622,
-    "views_per_hour": 233690
+    "views": 9620561,
+    "views_per_hour": 232914
    }
   ],
   "US-tech": [
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 11881476,
-    "views_per_hour": 158798
+    "views": 11892638,
+    "views_per_hour": 158097
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 14631836,
-    "views_per_hour": 153711
+    "views": 14682538,
+    "views_per_hour": 153594
    },
    {
     "title": "I thought the “Intel inside” sticker WAS the chip..",
     "channel": "CarterPCs",
-    "views": 8602469,
-    "views_per_hour": 151624
+    "views": 8628039,
+    "views_per_hour": 151004
    },
    {
     "title": "Samsung Galaxy S27 Ultra Cobalt Violet📱🔥#noads #tiktok #usa",
     "channel": "MR Limbo Green",
-    "views": 7138214,
-    "views_per_hour": 79911
+    "views": 7145018,
+    "views_per_hour": 79628
    },
    {
     "title": "Apple Homeview Impressions: Not Convinced!",
     "channel": "Marques Brownlee",
-    "views": 10360748,
-    "views_per_hour": 64505
+    "views": 10363179,
+    "views_per_hour": 64359
    },
    {
     "title": "What is the BEST app?!📱🤔",
     "channel": "Cam2r",
-    "views": 7198033,
-    "views_per_hour": 63572
+    "views": 7207001,
+    "views_per_hour": 63426
    }
   ]
  },

@@ -8,6 +8,12 @@
    "wikipedia": null,
    "articles": [
     {
+     "outlet": "New York Times",
+     "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
+     "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
+     "published": "2026-10-13"
+    },
+    {
      "outlet": "UEFA",
      "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
      "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
@@ -55,8 +61,85 @@
    ]
   },
   {
-   "topic": "mark allen",
+   "topic": "migrant crisis",
    "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Migrant_crisis",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "With Harrowing Migrant Crisis Doc ‘Rescue,’ Director Sine Plambech Has Never Received So Much Hate",
+     "url": "https://www.hollywoodreporter.com/movies/movie-features/sine-plambech-rescue-film-documentary-zurich-migrant-crisis-1236714244/",
+     "published": "2026-09-29"
+    }
+   ]
+  },
+  {
+   "topic": "kyle kennedy",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Kennedy",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Kyle Kennedy, granddaughter of Robert F. Kennedy, dies at 42",
+     "url": "https://www.usatoday.com/story/entertainment/celebrities/2026/10/20/kyle-kennedy-death-robert-f-kennedy-granddaughter-spinal-cord-injury/92344522007/",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "liverpool vs villarreal",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Villarreal’s Iñigo Pérez ready to meet Iraola again in test of old bond",
+     "url": "https://www.theguardian.com/football/2026/oct/20/liverpool-villarreal-inigo-perez-iraola-test-of-old-bond",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Liverpool lineup prediction vs. Villarreal: Who replaces Szoboszlai?",
+     "url": "https://www.usatoday.com/story/sports/soccer/ucl/2026/10/20/liverpool-lineup-villarreal-szoboszlai-frimpong-champions-league/92335225007/",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "everton f.c.",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Everton_F.C.",
+   "articles": [
+    {
+     "outlet": "BBC Sport",
+     "title": "Moyes insider doubts potential Celtic move - gossip",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cq74p0d8wm4ro?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Impressive London City extend winning run against Everton",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cjx23n23wd05o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "iceye",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/ICEYE",
+   "articles": [
+    {
+     "outlet": "Ars Technica",
+     "title": "Four Russian satellites are now within striking distance of an ICEYE radarsat",
+     "url": "https://arstechnica.com/space/2026/05/a-satellite-company-supporting-ukraine-appears-to-be-in-russias-crosshairs/",
+     "published": "2026-05-22"
+    }
+   ]
+  },
+  {
+   "topic": "mark allen",
+   "signal": "Google Trends GB 500+",
    "wikipedia": "https://en.wikipedia.org/wiki/Mark_Allen_(snooker_player)",
    "articles": [
     {
@@ -80,7 +163,7 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "England chasing 303 to beat Pakistan in men’s tri-series cricket ODI – live",
+     "title": "England collapse to 87-run defeat by Pakistan in men’s tri-series cricket ODI – live",
      "url": "https://www.theguardian.com/sport/live/2026/oct/20/pakistan-v-england-mens-tri-series-cricket-odi-live",
      "published": "2026-10-20"
     },
@@ -89,6 +172,12 @@
      "title": "England vs Sri Lanka: Harry Brook hails 'outstanding' Will Jacks for thriving in new role after five-for",
      "url": "https://www.skysports.com/cricket/news/13590865/england-vs-sri-lanka-harry-brook-hails-outstanding-will-jacks-for-growing-in-new-role-after-spinner-takes-five-for-in-first-odi",
      "published": "2026-09-23"
+    },
+    {
+     "outlet": "ESPN",
+     "title": "Will Jacks: 'Perfect game? No one really cares'",
+     "url": "https://www.espn.com/cricket/story/_/id/48056556/will-jacks-perfect-game-really-cares",
+     "published": "2026-02-26"
     }
    ]
   },
@@ -143,120 +232,6 @@
    ]
   },
   {
-   "topic": "ballon d'or",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Golden bat or ball: does cricket need an equivalent to the Ballon d’Or? | Taha Hashim",
-     "url": "https://www.theguardian.com/sport/2026/oct/20/golden-bat-or-ball-does-cricket-need-an-equivalent-to-the-ballon-dor",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "A goalkeeper hasn’t won the men’s Ballon d’Or in 63 years. This is why they’re overlooked",
-     "url": "https://www.nytimes.com/athletic/7696627/2026/10/19/goalkeepers-ballon-dor-2026-award/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "andy burnham",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Andy_Burnham",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Vast Beatles museum, hailed as ‘extraordinary’ by Paul McCartney, to open in Liverpool in 2028",
-     "url": "https://www.theguardian.com/music/2026/oct/20/vast-beatles-museum-hailed-as-extraordinary-by-paul-mccartney-to-open-in-liverpool-in-2028",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "jean-philippe mateta",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jean-Philippe_Mateta",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Jean-Philippe Mateta out for up to four weeks in blow to Crystal Palace striker’s transfer hopes",
-     "url": "https://www.nytimes.com/athletic/7545796/2026/08/28/jean-philippe-mateta-injury-palace-transfer/",
-     "published": "2026-08-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Mateta’s Palace dispute deepens after losing appeals to end contract early",
-     "url": "https://www.theguardian.com/football/2026/aug/23/jean-philippe-mateta-dispute-crystal-palace-contract-transfer-window",
-     "published": "2026-08-23"
-    }
-   ]
-  },
-  {
-   "topic": "jordan cox",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jordan_Cox_(cricketer)",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Allen exits NI Open with Brown loss on return",
-     "url": "https://www.bbc.co.uk/sport/snooker/articles/ck3r5v7l5xy2o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Unsolved Mysteries’ Returns As Video Podcast",
-     "url": "https://deadline.com/2026/10/unsolved-mysteries-video-podcast-1237168157/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "England cricket central contracts: Shoaib Bashir, Ollie Pope deals renewed as Henry Crocombe, Jordan Cox sign for two years",
-     "url": "https://www.skysports.com/cricket/news/13592978/england-cricket-central-contracts-shoaib-bashir-ollie-pope-deals-renewed-as-henry-crocombe-jordan-cox-sign-for-two-years",
-     "published": "2026-10-12"
-    },
-    {
-     "outlet": "ESPN",
-     "title": "Opportunity knocks for Jordan Cox after Jos Buttler injury",
-     "url": "https://www.espn.com/cricket/story/_/id/50033176/england-opportunity-knocks-jordan-cox-jos-buttler-injury",
-     "published": "2026-09-26"
-    }
-   ]
-  },
-  {
-   "topic": "prince harry, duke of sussex",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Prince_Harry,_Duke_of_Sussex",
-   "articles": [
-    {
-     "outlet": "Sky News",
-     "title": "Prince Harry says he would like to 'reconcile' with his family",
-     "url": "https://news.sky.com/story/prince-harry-says-he-would-like-to-reconcile-with-his-family-13601384",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "najee harris",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Najee_Harris",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Meet Kate DePetro, Fox News’ Social-Media Ambassador to Younger Viewers",
-     "url": "https://variety.com/2026/tv/news/kate-depetro-fox-news-social-media-ambassador-young-viewers-1236916991/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Report: New York Giants releasing RB Najee Harris",
-     "url": "https://giantswire.usatoday.com/story/sports/nfl/giants/2026/10/20/new-york-giants-releasing-najee-harris/92345099007/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
    "topic": "dengue fever",
    "signal": "Google Trends US 500+",
    "wikipedia": "https://en.wikipedia.org/wiki/Dengue_fever",
@@ -271,9 +246,15 @@
   },
   {
    "topic": "jordan elliott",
-   "signal": "Google Trends US 1000+",
+   "signal": "Google Trends US 2000+",
    "wikipedia": "https://en.wikipedia.org/wiki/Jordan_Elliott",
    "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Titans abruptly release DT Jordan Elliott for undisclosed reasons",
+     "url": "https://www.espn.com/nfl/story/_/id/50228692/titans-abruptly-release-dt-jordan-elliott-undisclosed-reasons",
+     "published": "2026-10-19"
+    },
     {
      "outlet": "Guardian",
      "title": "The cinema, punk music and swimming helped me through grief | Letters",
@@ -284,45 +265,13 @@
   },
   {
    "topic": "prince harry uk return interview",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Harry says he wants it 'to work out' with his family",
-     "url": "https://www.bbc.co.uk/news/articles/cry4xj79zxd1o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "kyle kennedy",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Kennedy",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Kyle Kennedy, granddaughter of Robert F. Kennedy, dies at 42",
-     "url": "https://www.usatoday.com/story/entertainment/celebrities/2026/10/20/kyle-kennedy-death-robert-f-kennedy-granddaughter-spinal-cord-injury/92344522007/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "trump $8 billion agricultural aid",
    "signal": "Google Trends US 1000+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "New York Times",
-     "title": "Trump Announces $8 Billion Plan to Cover Farm Losses",
-     "url": "https://www.nytimes.com/2026/10/20/business/trump-farmer-bailout.html",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "CNN",
-     "title": "Trump administration announces $8 billion farm relief plan as fuel, fertilizer costs bite",
-     "url": "https://www.cnn.com/2026/10/20/economy/trump-farm-relief-fuel-prices",
+     "outlet": "BBC",
+     "title": "Harry says he wants to 'reconcile' with his family",
+     "url": "https://www.bbc.co.uk/news/articles/cry4xj79zxd1o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-20"
     }
    ]
@@ -352,6 +301,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "GameSpot",
+     "title": "GTA 5 And Red Dead Redemption 2 Are Leaving PS Plus, But You Still Have Time",
+     "url": "https://www.gamespot.com/articles/gta-5-and-red-dead-redemption-2-are-leaving-ps-plus-but-you-still-have-time/",
+     "published": "2026-10-20"
+    },
+    {
      "outlet": "Guardian",
      "title": "Fridge or not? What’s the best way to store bread?",
      "url": "https://www.theguardian.com/food/2026/oct/20/fridge-or-not-whats-the-best-way-to-store-bread",
@@ -361,12 +316,6 @@
      "outlet": "TechCrunch",
      "title": "Yelp can now call on your behalf to check wait times at a restaurant",
      "url": "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Cyberpunk: Edgerunners Season 2 Mirrors The First Season, But With One Major Difference",
-     "url": "https://www.gamespot.com/articles/cyberpunk-edgerunners-season-2-mirrors-the-first-season-but-with-one-major-difference/",
      "published": "2026-10-20"
     },
     {
@@ -449,6 +398,19 @@
    ]
   },
   {
+   "topic": "Deaths in 2026",
+   "signal": "Wikipedia 134,323 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Ban ‘intrusive’ cameras on mental health wards in England, say bereaved families",
+     "url": "https://www.theguardian.com/society/2026/oct/20/ban-intrusive-cameras-mental-health-wards-england-bereaved-families",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
    "topic": "Nathan Fielder",
    "signal": "Wikipedia 115,086 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Nathan_Fielder",
@@ -495,7 +457,7 @@
   },
   {
    "topic": "If You Escape, You Win $1,000,000",
-   "signal": "YouTube GB 628,765/h",
+   "signal": "YouTube GB 625,286/h",
    "wikipedia": null,
    "articles": [
     {
@@ -519,6 +481,56 @@
    ]
   },
   {
+   "topic": "IVE 아이브 'Looks Can Kill' MV",
+   "signal": "YouTube GB 253,242/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Houseplant hacks: will trimming brown leaf tips do any harm?",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/20/houseplant-hacks-will-trimming-brown-leaf-tips-do-any-harm",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "How is This Even Possible? 😳🥌",
+   "signal": "YouTube GB-sport 134,926/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "TechCrunch",
+     "title": "Figma co-founder Dylan Field thinks MCP is not a perfect protocol",
+     "url": "https://techcrunch.com/2026/10/20/figma-co-founder-dylan-field-thinks-mcp-is-not-a-perfect-protocol/",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Ex-Greens co-leader urges council groups to reject Zionism policy",
+     "url": "https://www.theguardian.com/politics/2026/oct/20/greens-adrian-ramsay-council-groups-reject-zionism-racism-policy",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Battlefield 6 Dev Owns Up To Mistakes With Strange-Looking Cosmetics, But Stays Silent On Possible AI Use",
+     "url": "https://www.gamespot.com/articles/battlefield-6-dev-owns-up-to-mistakes-with-strange-looking-cosmetics-but-stays-silent-on-possible-ai-use/",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "ticket master",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ticketmaster",
+   "articles": []
+  },
+  {
+   "topic": "najee harris",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Najee_Harris",
+   "articles": []
+  },
+  {
    "topic": "deportación",
    "signal": "Google Trends US 2000+",
    "wikipedia": "https://en.wikipedia.org/wiki/Deportation_of_Kilmar_Abrego_Garcia",
@@ -531,14 +543,8 @@
    "articles": []
   },
   {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 134,323 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
-   "articles": []
-  },
-  {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 140,495/h",
+   "signal": "YouTube GB-music 140,338/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": []
   },
@@ -550,13 +556,13 @@
   },
   {
    "topic": "Zara Larsson",
-   "signal": "YouTube GB-music 46,514/h",
+   "signal": "YouTube GB-music 46,449/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   },
   {
    "topic": "Anuel AA",
-   "signal": "YouTube US-music 86,897/h",
+   "signal": "YouTube US-music 86,786/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
    "articles": []
   }

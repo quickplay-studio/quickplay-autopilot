@@ -1,76 +1,20 @@
 {
  "date": "2026-10-20",
- "built": "2026-10-20T15:25+00:00",
- "model": "gemini-3.6-flash",
- "mode": "breaking",
- "errors": [
-  "will jacks: gemini-flash-latest: ReadTimeout"
- ],
+ "built": "2026-10-20T15:51+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "errors": [],
  "topics": [
   {
-   "n": 5,
-   "topic": "mark allen",
-   "signal": "Google Trends GB 200+",
-   "category": "",
-   "what_is_new": "Mark Allen returned to action on 20 October 2026 and lost 4-2 to Jordan Brown in the first round of the Northern Ireland Open.",
-   "hooks": [
-    "Mark Allen lost to Jordan Brown upon returning to snooker action.",
-    "Former world number one Mark Allen suffered an early Northern Ireland exit."
-   ],
-   "sources": [
-    [
-     "Allen exits NI Open with Brown loss on return",
-     "https://www.bbc.co.uk/sport/snooker/articles/ck3r5v7l5xy2o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-20"
-    ],
-    [
-     "Lily Allen’s polka dot butt plug is now for sale in her new line of sex toys",
-     "https://www.nme.com/news/music/lily-allens-polka-dot-butt-plug-is-now-for-sale-in-her-new-line-of-sex-toys-3973581?utm_source=rss&utm_medium=rss&utm_campaign=lily-allens-polka-dot-butt-plug-is-now-for-sale-in-her-new-line-of-sex-toys",
-     "NME",
-     "2026-10-20"
-    ],
-    [
-     "mark allen",
-     "https://en.wikipedia.org/wiki/Mark_Allen_(snooker_player)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Mark Allen had not played since his World Championship semi-final loss to Wu Yize.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Allen, who had not played since his agonising World Championship semi-final loss to Wu Yize in early May, lost 4-2 to Brown in the all-Northern"
-     }
-    },
-    {
-     "claim": "Mark Allen was ranked world number one from May to August 2024.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He was ranked world number one from May to August 2024."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Mark_Allen_with_English_Open_trophy_2025.jpg"
-   ]
-  },
-  {
-   "n": 7,
+   "n": 12,
    "topic": "south africa vs australia",
    "signal": "Google Trends GB 2000+",
-   "category": "",
-   "what_is_new": "Former batter David Warner criticized Test match crowd sizes in South Africa on 2026-10-20.",
+   "category": "Sport",
+   "what_is_new": "South Africa declared their first innings at 425-9 on day three of the second Test, before Rabada took a wicket with his fourth ball to leave Australia 3-1 at the close.",
    "hooks": [
-    "Temba Bavuma scored 179 runs in the second Test match.",
-    "Australia and South Africa established formal diplomatic relations in 1947."
+    "Temba Bavuma just smashed his highest ever Test score against Australia!",
+    "South Africa set a new record eighth wicket partnership in Gqeberha!",
+    "Why are the stands empty for the world's top two cricket teams?"
    ],
    "sources": [
     [
@@ -95,16 +39,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "South Africa lost the first Test match against Australia by 214 runs in Durban.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "South Africa lost the first Test match by 214 runs in Durban, with large sections of the Kingsmead ground empty, and the crowds haven't really"
-     }
-    },
-    {
-     "claim": "Temba Bavuma scored 179 runs before being caught by Carey off the bowling of Starc.",
+     "claim": "Temba Bavuma achieved his highest ever Test score by reaching 179 runs in the second Test against Australia.",
      "sources": [
       1
      ],
@@ -113,18 +48,636 @@
      }
     },
     {
-     "claim": "Simon Harmer was bowled by Marnus Labuschagne for 82 runs.",
+     "claim": "South Africa and Australia have a strong sporting rivalry in both cricket and rugby union.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Australia and South Africa have a strong sporting rivalry particularly in rugby union and cricket."
+     }
+    },
+    {
+     "claim": "Simon Harmer and Temba Bavuma shared a 157 run partnership which is the highest eighth wicket stand for South Africa.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "This is now the highest eighth-wicket partnership for South Africa. A tremendous effort from these two worth 157."
+     }
+    },
+    {
+     "claim": "South Africa declared their first innings at 425-9 after Bavuma was caught by Carey off the bowling of Starc.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "When Bavuma nicked off Starc, the light was fading rapdily which prompted the declaration on 425-9."
+     }
+    },
+    {
+     "claim": "Simon Harmer scored 82 runs before being bowled by Marnus Labuschagne.",
      "sources": [
       1
      ],
      "evidence": {
       "1": "WICKET! Harmer b Labuschagne 82 (South Africa 425-8)"
      }
+    },
+    {
+     "claim": "The first Test in Durban was attended by just under 20,000 fans across the five days of play.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "A total of just under 20,000 fans attended the game across the five days, amounting to less than a fifth of Kingsmead's capacity."
+     }
+    },
+    {
+     "claim": "Australia won the first Test match in Durban by 214 runs.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "South Africa lost the first Test match by 214 runs in Durban, with large sections of the Kingsmead ground empty"
+     }
+    },
+    {
+     "claim": "The Kwa Zulu Natal Cricket Union is launching an internal review into the poor attendance at the first Test.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "the Kwa-Zulu Natal Cricket Union (KZNCU) have said they will launch a \"thorough internal review\" into the poorly-attended match at Kingsmead"
+     }
+    },
+    {
+     "claim": "Australia and South Africa compete for the Mandela Challenge Plate in rugby union.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Through the annual The Rugby Championship rugby union competition, Australia and South Africa compete for the Mandela Challenge Plate."
+     }
+    },
+    {
+     "claim": "There are approximately 193,860 South African born people living in Australia as of June 2019.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In June 2019, Australia was home to approximately 193,860 South African born population living in the country"
+     }
     }
    ],
    "images": [
     "commons:File:South_Africa_Australia_Locator.png"
    ]
+  },
+  {
+   "n": 11,
+   "topic": "will jacks",
+   "signal": "Google Trends GB 500+",
+   "category": "Sport",
+   "what_is_new": "Will Jacks was caught out for 19 runs as England suffered an 87-run defeat against Pakistan in a men’s tri-series ODI on 20 October 2026.",
+   "hooks": [
+    "Will Jacks just matched a legendary T20 World Cup record!",
+    "Did you see Will Jacks hook a massive six against Pakistan?",
+    "From 25-ball centuries to record-breaking spells, Will Jacks is on fire."
+   ],
+   "sources": [
+    [
+     "England collapse to 87-run defeat by Pakistan in men’s tri-series cricket ODI – live",
+     "https://www.theguardian.com/sport/live/2026/oct/20/pakistan-v-england-mens-tri-series-cricket-odi-live",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "England vs Sri Lanka: Harry Brook hails 'outstanding' Will Jacks for thriving in new role after five-for",
+     "https://www.skysports.com/cricket/news/13590865/england-vs-sri-lanka-harry-brook-hails-outstanding-will-jacks-for-growing-in-new-role-after-spinner-takes-five-for-in-first-odi",
+     "Sky Sports",
+     "2026-09-23"
+    ],
+    [
+     "will jacks",
+     "https://en.wikipedia.org/wiki/Will_Jacks",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Will Jacks recorded the highest score in the history of The Hundred by scoring 108 runs from 48 balls in August 2022.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In August 2022, he scored the highest score in the history of The Hundred at 108 runs in 48 balls."
+     }
+    },
+    {
+     "claim": "Will Jacks scored a century in 25 balls during a pre-season T10 match against Lancashire which included six sixes in one over.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In a pre-season T10 match against Lancashire, Jacks scored a century in 25 balls, believed to be the fastest hundred in a match between two"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:4_20_Will_Jacks.jpg"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 153,073 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "The new Street Fighter movie features Jason Momoa as Blanka!",
+    "Chun-Li actress Callina Liang ate 12 eggs daily to bulk up.",
+    "Roman Reigns and 50 Cent join the massive Street Fighter ensemble cast."
+   ],
+   "sources": [
+    [
+     "Street Fighter (2026 Movie) Guide",
+     "https://www.ign.com/wikis/street-fighter-2026-movie",
+     "IGN",
+     "2026-10-15"
+    ],
+    [
+     "Street Fighter (2026 film)",
+     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Kitao Sakurai directed the 2026 Street Fighter movie.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
+     }
+    },
+    {
+     "claim": "The film is the third live action feature length adaptation of the Street Fighter video game series.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "the movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
+      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+     }
+    },
+    {
+     "claim": "Noah Centineo stars in the film as Ken Masters.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Noah Centineo as Ken Masters",
+      "2": "Noah Centineo as Ken Masters"
+     }
+    },
+    {
+     "claim": "Andrew Koji portrays the character Ryu.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Andrew Koji as Ryu",
+      "2": "Andrew Koji as Ryu / Dark Ryu"
+     }
+    },
+    {
+     "claim": "Callina Liang plays the role of Chun Li.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Callina Liang as Chun-Li",
+      "2": "Callina Liang as Chun-Li[4]"
+     }
+    },
+    {
+     "claim": "David Dastmalchian appears in the movie as M. Bison.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "David Dastmalchian as M. Bison",
+      "2": "David Dastmalchian as M. Bison"
+     }
+    },
+    {
+     "claim": "Joe Anoa'i also known as Roman Reigns plays Akuma.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Joe Anoa'i (Roman Reigns) as Akuma",
+      "2": "Joe \"Roman Reigns\" Anoa'i as Akuma"
+     }
+    },
+    {
+     "claim": "Cody Rhodes portrays the character Guile.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Cody Rhodes as Guile",
+      "2": "Cody Rhodes as Guile"
+     }
+    },
+    {
+     "claim": "Jason Momoa plays the character Blanka.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Jason Momoa as Blanka",
+      "2": "Jason Momoa as Blanka"
+     }
+    },
+    {
+     "claim": "Curtis 50 Cent Jackson appears as Balrog.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Curtis \"50 Cent\" Jackson as Balrog",
+      "2": "Curtis \"50 Cent\" Jackson as Balrog"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The film has grossed 51 million dollars worldwide against a production budget of 81 million dollars.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It received mixed reviews from critics and has grossed $51 million worldwide against an $81 million production budget."
+     }
+    },
+    {
+     "claim": "Callina Liang ate 12 eggs per day to prepare for her role as Chun Li.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "She adopted a rigorous bulking diet that involved consuming 12 eggs per day and eating every two hours, which she said made her nauseated."
+     }
+    },
+    {
+     "claim": "The thighs of Callina Liang increased in size by 6.5 centimetres by the end of filming.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "By the end of filming, each of her thighs had increased in size by 6.5 centimeters (2.6 in)."
+     }
+    },
+    {
+     "claim": "Principal photography for the movie began in August 2025 and concluded in November.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Principal photography began in August 2025 and ended in November."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "call of duty",
+   "signal": "Google Trends GB 200+",
+   "category": "Gaming",
+   "what_is_new": "Modern Warfare 4 campaign early access began and DMZ early access started on October 20, 2026.",
+   "hooks": [
+    "Modern Warfare 4 arrives on October 23, 2026!",
+    "Are you ready for the new Modern Warfare 4?"
+   ],
+   "sources": [
+    [
+     "Tommy Robinson threatened to publish details about journalist’s family, court told",
+     "https://www.theguardian.com/uk-news/2026/oct/20/tommy-robinson-phoned-journalist-threat-publish-details-family-court",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "Former Call of Duty Dev Says 'It's Hard to Watch' Xbox Make Money From Black Ops PlayStation Ports",
+     "https://www.ign.com/articles/former-black-ops-dev-wants-royalties",
+     "IGN",
+     "2026-10-20"
+    ],
+    [
+     "People who've finished Call of Duty: Modern Warfare 4 on the new YOLO, single-life difficulty share experiences and tips for doing so",
+     "https://www.eurogamer.net/call-of-duty-modern-warfare-4-finish-yolo-campaign-difficulty",
+     "Eurogamer",
+     "2026-10-20"
+    ],
+    [
+     "call of duty",
+     "https://en.wikipedia.org/wiki/Call_of_Duty",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The next game, Call of Duty: Modern Warfare 4, is scheduled for release on October 23, 2026.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "In the shorter term, Modern Warfare 4, which closes out the rebooted Modern Warfare saga, comes out October 23.",
+      "4": "The next game, Call of Duty: Modern Warfare 4, is scheduled for release on October 23, 2026."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 18,
+   "topic": "You Can See Everything",
+   "signal": "Wikipedia 268,900 views",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Elizabeth Holmes invited a film crew into her home just days before prison.",
+    "A surprising new documentary about Elizabeth Holmes raked in fifteen million dollars.",
+    "Nathan Fielder co-directed a new documentary about Theranos founder Elizabeth Holmes."
+   ],
+   "sources": [
+    [
+     "Fridge or not? What’s the best way to store bread?",
+     "https://www.theguardian.com/food/2026/oct/20/fridge-or-not-whats-the-best-way-to-store-bread",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "Yelp can now call on your behalf to check wait times at a restaurant",
+     "https://techcrunch.com/2026/10/20/yelp-can-now-call-on-your-behalf-to-check-wait-times-at-a-restaurant/",
+     "TechCrunch",
+     "2026-10-20"
+    ],
+    [
+     "You Can See Everything seen by many on huge box office debut",
+     "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "You Can See Everything",
+     "https://en.wikipedia.org/wiki/You_Can_See_Everything",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The documentary film You Can See Everything raked in $15 million on its box office debut.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "A three-hour documentary featuring the convicted tech fraudster Elizabeth Holmes has raked in a whopping $15 million (Â£11.25m) on its box office debut, despite a",
+      "4": "It received widespread praise from critics and has grossed $15.6 million against a $7 million production budget."
+     }
+    },
+    {
+     "claim": "You Can See Everything was co-directed by Nathan Fielder and Lance Oppenheim.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "It was co-directed by comedian Nathan Fielder and Lance Oppenheim who find themselves embroiled in the story, growing suspicious that Holmes and her partner are",
+      "4": "You Can See Everything is a 2026 American documentary film directed by Nathan Fielder (in his feature directorial debut) and Lance Oppenheim."
+     }
+    },
+    {
+     "claim": "Actress Amanda Seyfried appears in the hybrid documentary to re-enact events.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "Seyfried appears in the hybrid documentary to re-enact events and scenes that the documentary crew could not film or needed to reconstruct.",
+      "4": "Fielder meets with Seyfried and asks her to reprise her role as Holmes in dramatic reconstructions of encounters with Holmes and Evans that he was"
+     }
+    },
+    {
+     "claim": "The film premiered as a secret screening at the 53rd Telluride Film Festival on September 6, 2026.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "The first teaser trailer, external dropped last month, right after the film's surprise premiere at the Telluride Film Festival in Colorado.",
+      "4": "The film premiered as a secret screening at the 53rd Telluride Film Festival on September 6, 2026,[4][5] and was theatrically released by A24 on October"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "You Can See Everything will be released in UK cinemas from 20 November.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It will be released in UK cinemas from 20 November."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 25,
+   "topic": "Nathan Fielder",
+   "signal": "Wikipedia 115,086 views",
+   "category": "Entertainment",
+   "what_is_new": "Nothing changed in the last two days.",
+   "hooks": [
+    "Did you know Nathan Fielder nearly stayed behind the camera?",
+    "Nathan Fielder just broke documentary box office records!",
+    "How Nathan Fielder secretly filmed Elizabeth Holmes."
+   ],
+   "sources": [
+    [
+     "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
+     "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
+     "The Hollywood Reporter",
+     "2026-10-19"
+    ],
+    [
+     "Elizabeth Holmes documentary You Can See Everything debuts with huge $15m opening weekend",
+     "https://www.theguardian.com/film/2026/oct/19/elizabeth-holmes-documentary-debuts-with-huge-opening-weekend",
+     "Guardian",
+     "2026-10-18"
+    ],
+    [
+     "Nathan Fielder",
+     "https://en.wikipedia.org/wiki/Nathan_Fielder",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Nathan Fielder co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything, which follows the disgraced entrepreneur Elizabeth Holmes.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "The co-director and very much on-camera participant in the buzzy A24 film says when he showed up at the beach house rented by Holmes and",
+      "2": "You Can See Everything, directed by Nathan Fielder and Lance Oppenheim, made $15m (A$21.5m, £11.2m) from only 855 screens, and had more than 2,000 sold-out",
+      "3": "Fielder then co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything (2026), which follows the disgraced entrepreneur Elizabeth Holmes."
+     }
+    },
+    {
+     "claim": "You Can See Everything opened to $15 million from just 855 North American theaters.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "You Can See Everything opened on Friday to $15 million from just 855 North American theaters, blowing away expectations and marking the biggest nonconcert documentary",
+      "2": "Nathan Fielder’s nearly three-hour Elizabeth Holmes documentary, You Can See Everything, has opened to an extraordinary $15m domestic box office, the biggest opening weekend for"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Nathan Joseph Fielder was born on May 12, 1983, in Vancouver.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Nathan Joseph Fielder (born May 12, 1983) is a Canadian filmmaker, actor, and comedian."
+     }
+    },
+    {
+     "claim": "On the morning of February 7, 2014, a coffee shop called Dumb Starbucks Coffee opened in the Los Feliz neighborhood of Los Angeles.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "On the morning of February 7, 2014, a coffee shop called Dumb Starbucks Coffee opened in the Los Feliz neighborhood of Los Angeles.[21]"
+     }
+    },
+    {
+     "claim": "On February 10, 2014, the shop was closed by the Los Angeles County Department of Public Health for not having the permits required to operate a coffee shop.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "On February 10, 2014, the shop was closed by the Los Angeles County Department of Public Health for not having the permits required to operate"
+     }
+    },
+    {
+     "claim": "In 2023, he was featured on Time100 most influential people in the world.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In 2023, he was featured on Time100 most influential people in the world.[1]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Nathan_Fielder.jpg"
+   ]
+  },
+  {
+   "n": 8,
+   "topic": "everton f.c.",
+   "signal": "Google Trends GB 200+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Everton play at the Hill Dickinson Stadium?",
+    "Everton was founded as St. Domingo's FC in 1878.",
+    "Dixie Dean scored a record 60 goals in 1927."
+   ],
+   "sources": [
+    [
+     "Moyes insider doubts potential Celtic move - gossip",
+     "https://www.bbc.co.uk/sport/football/articles/cq74p0d8wm4ro?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-20"
+    ],
+    [
+     "everton f.c.",
+     "https://en.wikipedia.org/wiki/Everton_F.C.",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Everton play at the Hill Dickinson Stadium as of the 2026-27 season.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Everton play at the Hill Dickinson Stadium as of the 2026-27 season."
+     }
+    },
+    {
+     "claim": "Everton won their first League Championship during the 1890-91 season.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Everton won their first League Championship during the 1890–91 season."
+     }
+    },
+    {
+     "claim": "In 1927-28, Dean set the record for top-flight league goals in a single season with 60 goals in 39 league games, which is a record that still stands.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 1927–28, Dean set the record for top-flight league goals in a single season with 60 goals in 39 league games, which is a record"
+     }
+    },
+    {
+     "claim": "The club's most recent major trophy was the 1995 FA Cup.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The club's most recent major trophy was the 1995 FA Cup."
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

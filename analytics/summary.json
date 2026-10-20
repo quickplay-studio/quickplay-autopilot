@@ -1,26 +1,26 @@
 {
- "updated": "2026-10-20T11:23+00:00",
- "mode": "full",
+ "updated": "2026-10-20T11:39+00:00",
+ "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-20T11:23+00:00",
  "youtube": {
   "subscribers": 6,
   "public_shorts": 46,
-  "views_all_time": 8204,
+  "views_all_time": 8154,
   "views_last_90_days": 822,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 2855,
+  "views_last_90_days_estimate": 2838,
   "analytics_last_day": "2026-10-17"
  },
  "instagram": {
   "followers": 0,
-  "posts": 15,
+  "posts": 16,
   "insights_error": null
  },
  "facebook": {
   "followers": 0,
   "page": "Quickplay Daily",
-  "reels": 9,
+  "reels": 10,
   "insights_error": null
  },
  "ypp": {
@@ -30,7 +30,7 @@
   "days_left": 104,
   "subscribers_pct": 0.6,
   "views_pct": 0.03,
-  "views_needed_per_day": 111079,
+  "views_needed_per_day": 111080,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
  }
 }

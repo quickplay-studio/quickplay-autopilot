@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 21 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 24 scheduled |
+| Wed 21 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 24 scheduled |
 | Tue 20 Oct | 6 public, 1 scheduled | 10 | 10 | ⏳ 6 of 24 so far, 1 more scheduled |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -52,12 +52,6 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
-
-## In the queue
-
-- **QD-061** Taylor Swift's Patient Zero hits three weeks at number one 🎵 (rendering next)
-- **QD-062** Lamine Yamal ends Real Betis 15 game unbeaten run ⚽ (rendering next)
-- **QD-063** raphinha birth date in Porto Alegre ⚽ (rendering next)
 
 ## On the channel (latest first)
 

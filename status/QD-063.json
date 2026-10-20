@@ -1,0 +1,84 @@
+{
+ "id": "QD-063",
+ "board": "boards/queue/QD-063.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T09:50:00Z",
+ "rendered": "2026-10-20T19:43:55.925421+00:00",
+ "title": "raphinha birth date in Porto Alegre ⚽",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "gta-type-beat",
+ "social_music": "action-chase-adrenaline-soundtrack-364888",
+ "look": {
+  "captions": "clean",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 20.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.04,
+   "title",
+   0
+  ],
+  [
+   5.04,
+   11.03,
+   "none",
+   2
+  ],
+  [
+   11.03,
+   16.23,
+   "none",
+   2
+  ],
+  [
+   16.23,
+   20.39,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "238746",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 10.5
+  },
+  {
+   "p": "pixabay",
+   "id": "57647",
+   "q": "green grass pitch",
+   "t0": 9.9,
+   "t1": 20.39
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:50:55Z",
+ "video": "ApvkxPKexGc",
+ "url": "https://youtube.com/shorts/ApvkxPKexGc",
+ "publish_at": "2026-10-21T09:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T09:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-063"
+}

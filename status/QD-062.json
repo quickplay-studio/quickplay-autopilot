@@ -1,0 +1,90 @@
+{
+ "id": "QD-062",
+ "board": "boards/queue/QD-062.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T09:10:00Z",
+ "rendered": "2026-10-20T19:43:38.782615+00:00",
+ "title": "Lamine Yamal ends Real Betis 15 game unbeaten run ⚽",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 10
+ },
+ "music": "gta-type-beat",
+ "social_music": "action-chase-adrenaline-soundtrack-364888",
+ "look": {
+  "captions": "clean",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 25.7,
+  "wps": 3.01,
+  "weak_beats": [],
+  "size_mb": 11.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.36,
+   "title",
+   1
+  ],
+  [
+   5.36,
+   11.15,
+   "none",
+   2
+  ],
+  [
+   11.15,
+   16.6,
+   "none",
+   1
+  ],
+  [
+   16.6,
+   20.79,
+   "none",
+   2
+  ],
+  [
+   20.79,
+   25.72,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "239964",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 13.16
+  },
+  {
+   "p": "pixabay",
+   "id": "8691",
+   "q": "green grass pitch lights",
+   "t0": 12.56,
+   "t1": 25.72
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:50:53Z",
+ "video": "QnO9Y09ThbE",
+ "url": "https://youtube.com/shorts/QnO9Y09ThbE",
+ "publish_at": "2026-10-21T09:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T09:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-062"
+}

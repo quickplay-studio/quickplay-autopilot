@@ -1,0 +1,85 @@
+{
+ "id": "QD-061",
+ "board": "boards/queue/QD-061.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T08:30:00Z",
+ "rendered": "2026-10-20T19:44:08.234124+00:00",
+ "title": "Taylor Swift's Patient Zero hits three weeks at number one 🎵",
+ "background_notes": [
+  "PEXELS_API_KEY is not set, so Pexels is skipped",
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "f16",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 19.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.22,
+   "title",
+   1
+  ],
+  [
+   4.22,
+   9.82,
+   "none",
+   2
+  ],
+  [
+   9.82,
+   14.65,
+   "date",
+   1
+  ],
+  [
+   14.65,
+   19.39,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "172",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 9.99
+  },
+  {
+   "p": "pixabay",
+   "id": "81185",
+   "q": "pop music neon lights",
+   "t0": 9.39,
+   "t1": 19.39
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-20T19:50:52Z",
+ "video": "FQ27dGO66hk",
+ "url": "https://youtube.com/shorts/FQ27dGO66hk",
+ "publish_at": "2026-10-21T08:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T08:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-061"
+}

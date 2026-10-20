@@ -2,7 +2,7 @@
 Uploads keep using the original sign-in (the YT_REFRESH_TOKEN secret); this one is stored encrypted in tokens/youtube.enc.
 
   python pipeline/yt_connect.py link       writes the sign-in link to status/youtube_connect.json (the client id is public)
-  python pipeline/yt_connect.py exchange [main|es|pt]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
+  python pipeline/yt_connect.py exchange [main|es|pt|clips]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
                                            refresh token and saves it; the result goes to status/youtube_connect.json
 """
 import datetime as dt, json, os, pathlib, sys, urllib.parse
@@ -45,7 +45,7 @@ def link():
     write({"ok": False, "connected": False, "connect_url": "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)})
 
 def exchange(ch="main"):
-    """ch: main, or a language channel (es, pt), whose sign-in is saved as tokens/youtube_<ch>.enc."""
+    """ch: main, a language channel (es, pt) or the clips channel, whose sign-in is saved as tokens/youtube_<ch>.enc."""
     name, out = ("youtube", OUT) if ch == "main" else (f"youtube_{ch}", OUT.with_name(f"youtube_connect_{ch}.json"))
     raw = os.environ.get("YT_CODE", "").strip()
     code = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("code", [raw])[0] if "code=" in raw else raw

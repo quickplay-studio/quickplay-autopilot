@@ -80,8 +80,13 @@ def pull_step(lines):
         if st.get("pulled"): continue
         if not vid: later.add(i); print(i, "pull: not on YouTube yet, trying again next run"); continue
         if Y.video_status(yt, vid).get("privacy") != "private": print(i, "pull: already public, left as it is"); continue
-        yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
-                                                                      "containsSyntheticMedia": False}}).execute()
+        try:
+            yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
+                                                                          "containsSyntheticMedia": False}}).execute()
+        except Exception as e:
+            st["pull_tries"] = int(st.get("pull_tries") or 0) + 1; st["pull_error"] = str(e)[:300]; save_status(st)
+            if st["pull_tries"] < 3: later.add(i)
+            print(i, "pull refused:", str(e)[:200]); continue
         st.update(state="pulled (private on YouTube)", pulled=NOW.isoformat(timespec="seconds"), instagram_skipped="pulled",
                   facebook_skipped="pulled")
         save_status(st)

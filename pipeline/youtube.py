@@ -13,7 +13,9 @@ CATEGORY = {"Gaming": "20", "Film": "1", "Music": "10", "Sport": "17", "Tech": "
 
 class LimitReached(Exception): pass
 
-def _newer_signin():
+MANAGE = "https://www.googleapis.com/auth/youtube.force-ssl"     # change videos, comment: in the second sign-in
+
+def _newer_signin(full=False):
     """The refresh token from the second sign-in (yt_connect.py, tokens/youtube.enc) when it covers SCOPES and isn't about
     to expire. It replaces the original YT_REFRESH_TOKEN, which dies after 7 days if it was made while the app was in Testing."""
     try:
@@ -24,18 +26,19 @@ def _newer_signin():
     if not t.get("refresh_token") or not all(s in (t.get("scope") or "").split() for s in SCOPES): return None
     if t.get("expires_at") and dt.datetime.fromisoformat(t["expires_at"]) < dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=2):
         return None
-    return t["refresh_token"]
+    return t if full else t["refresh_token"]
 
 def available():
     return bool(os.environ.get("YT_CLIENT_ID") and os.environ.get("YT_CLIENT_SECRET")
                 and (os.environ.get("YT_REFRESH_TOKEN") or _newer_signin()))
 
 def creds():
-    make = lambda rt: Credentials(None, refresh_token=rt, token_uri="https://oauth2.googleapis.com/token", scopes=SCOPES,
-                                  client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
-    newer, original = _newer_signin(), os.environ.get("YT_REFRESH_TOKEN")
+    make = lambda rt, sc=SCOPES: Credentials(None, refresh_token=rt, token_uri="https://oauth2.googleapis.com/token", scopes=sc,
+                                             client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"])
+    t = _newer_signin(full=True) or {}
+    newer, original = t.get("refresh_token"), os.environ.get("YT_REFRESH_TOKEN")
     if newer and newer != original:
-        c = make(newer)
+        c = make(newer, SCOPES + ([MANAGE] if MANAGE in (t.get("scope") or "").split() else []))
         try:
             from google.auth.transport.requests import Request
             c.refresh(Request()); return c

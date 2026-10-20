@@ -2,7 +2,7 @@
 
 **Progress** (Tue 20 Oct, 07:46): 6 of 1,000 subscribers · 2,621 of 10 million Shorts views in 90 days · 3,482 views in the last 24 hours (about 111,082 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Tue 20 Oct 5:58 (UK): 1 scheduled, 44 public, 20 uploads in the last 24 hours.
+YouTube checked Tue 20 Oct 8:29 (UK): 0 scheduled, 46 public, 20 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 19 Oct 13:08).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public | 0 | 0 | ⏳ 0 of 24 scheduled |
-| Tue 20 Oct | 1 public, 1 scheduled | 0 | 0 | ⏳ 1 of 24 so far, 1 more scheduled |
+| Tue 20 Oct | 2 public | 0 | 0 | ⏳ 2 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -33,13 +33,18 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 
 ## On the channel (latest first)
 
+### Tue 20 Oct 8:10 · Angel Reese makes WNBA finals history 🏀
+public · 23 views · 33 s · music: duty-calls · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
+
+![QD-053](QD-053.jpg)
+
 ### Tue 20 Oct 7:30 · Olivia Rodrigo and David Byrne's game show video 📺
-private · 20 s · music: dance-with-you · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
+public · 10 views · 20 s · music: dance-with-you · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
 
 ![QD-052](QD-052.jpg)
 
 ### Mon 19 Oct 21:30 · Usain Bolt's 9.58: still unbeaten ⚡
-public · 24 views · 26 s · music: cued-for-liftoff · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
+public · 47 views · 26 s · music: cued-for-liftoff · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
 
 ![QD-031](QD-031.jpg)
 
@@ -54,12 +59,12 @@ public · 1 views · 36 s · music: horizons · [script](../boards/done/QD-029.j
 ![QD-029](QD-029.jpg)
 
 ### Mon 19 Oct 17:30 · The Beekeeper 2 teaser: who's new, who's back 🐝
-public · 35 views · 25 s · music: once-upon-a-time · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
+public · 41 views · 25 s · music: once-upon-a-time · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
 
 ![QD-047](QD-047.jpg)
 
 ### Mon 19 Oct 16:50 · Zara Larsson's Blue Moon: fairy or mermaid? 🌙
-public · 39 views · 24 s · music: purple-desire · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
+public · 40 views · 24 s · music: purple-desire · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
 
 ![QD-046](QD-046.jpg)
 
@@ -69,7 +74,7 @@ public · 52 views · 32 s · music: never-coming-down · on Facebook · [script
 ![QD-045](QD-045.jpg)
 
 ### Mon 19 Oct 15:30 · Jailer 2's cameos: Hrithik Roshan and more 🎬
-public · 106 views · 30 s · music: once-upon-a-time · [script](../boards/done/QD-044.json) · [YouTube](https://youtube.com/shorts/r99IfJk-afM)
+public · 107 views · 30 s · music: once-upon-a-time · [script](../boards/done/QD-044.json) · [YouTube](https://youtube.com/shorts/r99IfJk-afM)
 
 ![QD-044](QD-044.jpg)
 
@@ -79,12 +84,12 @@ public · 4 views · 31 s · music: mirror-mirror · on Facebook · [script](../
 ![QD-043](QD-043.jpg)
 
 ### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
-public · 34 views · 23 s · music: in-battery · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
+public · 43 views · 23 s · music: in-battery · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
 
 ![QD-041](QD-041.jpg)
 
 ### Mon 19 Oct 13:30 · Why Star Wars fans love Biddy Blas 🛸
-public · 127 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
+public · 137 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
 public · 147 views · 30 s · music: f16 · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
@@ -92,12 +97,12 @@ public · 147 views · 30 s · music: f16 · on Facebook · [script](../boards/d
 ![QD-042](QD-042.jpg)
 
 ### Mon 19 Oct 12:10 · What was the first music video on MTV? 📺
-public · 149 views · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
+public · 181 views · 24 s · music: after-sunset · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
 
 ![QD-038](QD-038.jpg)
 
 ### Mon 19 Oct 12:00 · Lindsay Lohan is reuniting with her Mean Girls director 🎬
-public · 30 views · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
+public · 32 views · [script](../backlog/QD-026) · [YouTube](https://youtube.com/shorts/8AshrRUmQ1Y)
 
 ### Mon 19 Oct 11:30 · Why is a marathon 26.2 miles? 🏃
 public · 85 views · 29 s · music: scale-the-mountain · on Instagram · on Facebook · [script](../boards/done/QD-040.json) · [YouTube](https://youtube.com/shorts/YaNIKqoY2cQ)
@@ -105,38 +110,38 @@ public · 85 views · 29 s · music: scale-the-mountain · on Instagram · on Fa
 ![QD-040](QD-040.jpg)
 
 ### Mon 19 Oct 10:50 · Street Fighter movie: Roman Reigns is Akuma 🥋
-public · 262 views · 27 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
+public · 296 views · 27 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
 
 ![QD-039](QD-039.jpg)
 
 ### Mon 19 Oct 10:10 · Arsenal's 1st shot on target came in minute 80 ⚽
-public · 420 views · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
+public · 458 views · 30 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-037.json) · [YouTube](https://youtube.com/shorts/qd2DA8vMbGI)
 
 ![QD-037](QD-037.jpg)
 
 ### Mon 19 Oct 9:30 · GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵
-public · 162 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
+public · 171 views · 24 s · music: after-sunset · on Instagram · on Facebook · [script](../boards/done/QD-036.json) · [YouTube](https://youtube.com/shorts/qdViT_b3UHA)
 
 ![QD-036](QD-036.jpg)
 
 ### Mon 19 Oct 8:50 · LOUD: first team to win VALORANT Champions 2x 🏆
-public · 201 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
+public · 217 views · 28 s · music: the-bombs · on Instagram · [script](../boards/done/QD-035.json) · [YouTube](https://youtube.com/shorts/m2IREZZ2D_4)
 
 ![QD-035](QD-035.jpg)
 
 ### Mon 19 Oct 8:10 · Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤
-public · 556 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
+public · 614 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
 
 ![QD-034](QD-034.jpg)
 
 ### Sun 18 Oct 22:30 · Tekken 8's next fighter is a manga legend 💪
-public · 67 views · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
+public · 68 views · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
 
 ### Sun 18 Oct 21:00 · The formula behind a 14 million view Roblox Short 📈
 public · 11 views · [script](../backlog/QD-023) · [YouTube](https://youtube.com/shorts/qLRXY5tuj8A)
 
 ### Sun 18 Oct 19:30 · NCT WISH: from debut to a dome 🎤
-public · 162 views · [script](../backlog/QD-024) · [YouTube](https://youtube.com/shorts/pnbFnJfq3ws)
+public · 167 views · [script](../backlog/QD-024) · [YouTube](https://youtube.com/shorts/pnbFnJfq3ws)
 
 ### Sun 18 Oct 18:00 · Blade Runner is back, 50 years later 🌃
 public · 54 views · [script](../backlog/QD-020) · [YouTube](https://youtube.com/shorts/HUbPVioSEnQ)
@@ -145,19 +150,19 @@ public · 54 views · [script](../backlog/QD-020) · [YouTube](https://youtube.c
 public · 38 views · [script](../backlog/QD-017) · [YouTube](https://youtube.com/shorts/LYmgGMDWMbg)
 
 ### Sun 18 Oct 15:00 · Planet Zoo 2 finally adds aquariums 🐠
-public · 223 views · [script](../backlog/QD-015) · [YouTube](https://youtube.com/shorts/1TybFV5ymho)
+public · 230 views · [script](../backlog/QD-015) · [YouTube](https://youtube.com/shorts/1TybFV5ymho)
 
 ### Sun 18 Oct 13:30 · How a YouTube video became A24's biggest film 🎬
 public · 124 views · [script](../backlog/QD-014) · [YouTube](https://youtube.com/shorts/CMVRXkJYI5M)
 
 ### Sun 18 Oct 12:00 · How a smiley ball became Minecraft's creepiest monster 😳
-public · 107 views · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
+public · 108 views · [script](../backlog/QD-013) · [YouTube](https://youtube.com/shorts/NIvLsurvEvk)
 
 ### Sat 17 Oct 22:30 · Apple's new smart home screen, explained 🏠
-public · 83 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
+public · 85 views · [script](../backlog/QD-012) · [YouTube](https://youtube.com/shorts/lJrQDP4e4TI)
 
 ### Sat 17 Oct 21:00 · Google's most powerful AI is now in the Gemini app 🤖
-public · 67 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
+public · 70 views · [script](../backlog/QD-011) · [YouTube](https://youtube.com/shorts/UQDDZYN0Ukg)
 
 ### Sat 17 Oct 19:30 · Why this road closure has a 43-mile diversion 🚗
 public · 48 views · [script](../backlog/QD-007) · [YouTube](https://youtube.com/shorts/IKJHTVYquU0)
@@ -169,13 +174,13 @@ public · 71 views · [script](../backlog/QD-003) · [YouTube](https://youtube.c
 public · 115 views · [script](../backlog/QD-004) · [YouTube](https://youtube.com/shorts/Tce28GOMdv8)
 
 ### Sat 17 Oct 15:00 · Why KPop Demon Hunters 2 won't come until 2029 🎶
-public · 276 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
+public · 279 views · [script](../backlog/QD-005) · [YouTube](https://youtube.com/shorts/ScoKez93cQY)
 
 ### Sat 17 Oct 13:30 · The K-pop group from BLACKPINK's producer 🎤
 public · 1,179 views · [YouTube](https://youtube.com/shorts/Dtp4-CRcQAI)
 
 ### Sat 17 Oct 12:00 · Ayra Starr just made NFL history 🏈
-public · 462 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
+public · 463 views · [YouTube](https://youtube.com/shorts/2efjp7_5qPY)
 
 ### Sat 17 Oct 10:30 · GTA 6's launch trailer hides its whole story in one detail 🎮
 public · 278 views · [script](../backlog/QD-027) · [YouTube](https://youtube.com/shorts/w_u0kQFo9g4)
@@ -185,6 +190,3 @@ public · 33 views · [YouTube](https://youtube.com/shorts/kcpp1Q-Xy0M)
 
 ### Fri 16 Oct 21:00 · Why GTA 6 isn't coming to PC (yet) 🖥️
 public · 145 views · [YouTube](https://youtube.com/shorts/QpgFxDNcPKQ)
-
-### Fri 16 Oct 19:30 · The formula behind Zack D. Films' viral Shorts 📈
-public · 33 views · [YouTube](https://youtube.com/shorts/yXycMniI-W8)

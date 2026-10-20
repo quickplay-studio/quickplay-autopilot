@@ -3,6 +3,32 @@
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
+   "topic": "Gen Alpha slang  the French fries emoji",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "I spent a weekend with Gen Alpha. I needed a translator",
+     "url": "https://www.usatoday.com/story/life/health-wellness/2026/09/30/gen-alpha-slang-words-explained-huzz-unc-fries-and-larping/91989583007/",
+     "published": "2026-09-30"
+    }
+   ]
+  },
+  {
+   "topic": "The Call the Police trend on TikTok and Instagram",
+   "signal": "Charlie's request",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "NBC News",
+     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
+     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
+     "published": "2026-07-28"
+    }
+   ]
+  },
+  {
    "topic": "H3-24 | Martian Moons eXploration (MMX)",
    "signal": "rocket launch 2026-10-19 19:41 UTC (Success)",
    "wikipedia": null,
@@ -16,122 +42,261 @@
    ]
   },
   {
-   "topic": "weather birmingham",
+   "topic": "england cricket",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_weather_in_Birmingham",
+   "wikipedia": "https://en.wikipedia.org/wiki/England_cricket_team",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "England unchanged for World Cup clash vs France with Lewis absent again",
+     "url": "https://www.skysports.com/rugby-league/news/12040/13601200/rugby-league-world-cup-mikey-lewis-absent-again-as-england-unchanged-for-clash-vs-france-despite-opening-defeat",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "BBC",
+     "title": "England unchanged to face France after Tonga defeat",
+     "url": "https://www.bbc.co.uk/sport/rugby-league/articles/cmd6d3gj2znxo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Surprise dip in jobless rate supports interest rate hike",
+     "url": "https://news.sky.com/story/surprise-dip-in-jobless-rate-supports-interest-rate-hike-13601180",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Andy Burnham outlines new rules to outlaw ‘rip-off’ private parking fines",
+     "url": "https://www.theguardian.com/money/2026/oct/19/andy-burnham-new-rules-private-parking-fines-code-of-practice",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "serhii beskrestnov",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
+     "url": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "barcelona vs psg",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Birmingham was a BBC radio powerhouse. Now even The Archers is leaving | Letter",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/19/birmingham-was-a-bbc-radio-powerhouse-now-even-the-archers-is-leaving",
+     "title": "Will that do? Lamine Yamal conjures another magical spell as Barça pass first test | Sid Lowe",
+     "url": "https://www.theguardian.com/football/2026/oct/19/lamine-yamal-wonder-goal-barcelona-real-betis-la-liga",
      "published": "2026-10-19"
     },
     {
      "outlet": "BBC",
-     "title": "Arsenal held at home by Birmingham",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c680zp4djprgo?at_medium=RSS&at_campaign=rss",
+     "title": "Araujo the stopgap solution fixing Liverpool's problems",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ck8dz7pp4089o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Mbappe scores twice as Real Madrid beat Sevilla",
+     "url": "https://www.bbc.co.uk/sport/football/videos/crp3g7z9x215o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "kylie cosmetics",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kylie_Cosmetics",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Battlefield 6 Dev Owns Up To Mistakes With Strange-Looking Cosmetics, But Stays Silent On Possible AI Use",
+     "url": "https://www.gamespot.com/articles/battlefield-6-dev-owns-up-to-mistakes-with-strange-looking-cosmetics-but-stays-silent-on-possible-ai-use/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Battlefield 6 devs to fix \"Secuty\" skin typo, but five-pistol outfit was intentional",
+     "url": "https://www.eurogamer.net/battlefield-6-secuty-typo-five-pistol-skin-devs-respond",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "black friday",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Why have countries been pushing for a vital global climate report to be delayed?",
+     "url": "https://www.theguardian.com/environment/2026/oct/20/countries-pushing-vital-global-climate-report-delayed",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "NASA",
+     "title": "Curiosity Blog, Sols 5036-5042: Watching the Clouds Go By",
+     "url": "https://science.nasa.gov/blog/curiosity-blog-sols-5036-5042-watching-the-clouds-go-by/",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Friday Night Lights’ Stars Hit The Field To Aid James Talarico’s Smashmouth Attempt To Score A Texas Senate Race Win",
+     "url": "https://deadline.com/2026/10/james-talaricos-friday-night-lights-ad-midterms-1237168179/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Save $150 Off the 2026 MacBook Air With New Apple M5 Chip Ahead of Black Friday",
+     "url": "https://www.ign.com/articles/2026-apple-macbook-air-laptop-deal-october-2026",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "this city is ours",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/This_City_Is_Ours",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "The CO2-absorbing building made of old sinks, windscreens and toilets: Ghent’s £17m design museum is a green marvel",
+     "url": "https://www.theguardian.com/artanddesign/2026/oct/20/ghent-design-museum-co2-absorbing-recycling",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘This City Is Ours’ Renewed For Season 3 At BBC",
+     "url": "https://deadline.com/2026/10/this-city-is-ours-renewed-season-3-bbc-1237167718/",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Lampard 'proud' of Coventry performance in defeat by Spurs",
+     "url": "https://www.bbc.co.uk/sport/football/videos/c32l4x1k28ero?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Sarina stays, the Golden Goggles & Van de Donk's flying form",
+     "url": "https://www.bbc.co.uk/sounds/play/p0phjkhz?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "today wordle hints",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "NME",
+     "title": "Today’s Wordle answer and hints for #1939 on October 20",
+     "url": "https://www.nme.com/guides/gaming-guides/heres-the-wordle-answer-for-today-3171240?utm_source=rss&utm_medium=rss&utm_campaign=heres-the-wordle-answer-for-today",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "crystal lake season 2",
+   "signal": "Google Trends US 100+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘They pulled a guy’s face off. It’s my favourite bit!’ Linda Cardellini on Freaks and Geeks, Mad Men and slasher horror Crystal Lake",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/19/linda-cardellini-freaks-and-geeks-mad-men-crystal-lake-friday-13th-dtf-st-louis",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "midterms",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Midterms",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "How is the US economy really doing under President Trump?",
+     "url": "https://www.bbc.co.uk/news/articles/cv98ze40jz18o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Trump's approval rating hits new record low as US midterms loom",
+     "url": "https://news.sky.com/story/trumps-approval-rating-hits-new-record-low-as-us-midterms-loom-13601177",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "JB Pritzker thinks AI could help us live to 100 — or threaten us like nukes",
+     "url": "https://www.theverge.com/podcast/1012839/pritzker-ai-privacy-data-centers-flock-congress-laws",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "jd",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jd",
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "Jon Stewart Criticizes JD Vance for Constantly Demonizing Immigrants",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/jon-stewart-jd-vance-immigrants-criticism-daily-show-1235645320/",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Variety",
+     "title": "Jon Stewart Jokes Skydance Has ‘Pulled Our Renewal’ Before Slamming JD Vance, Trump and Emmanuel Macron",
+     "url": "https://variety.com/2026/tv/news/jon-stewart-jokes-skydance-has-pulled-our-renewal-j-d-vance-1236917177/",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "weather forecast",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Weather_forecasting",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Hiding in plane sight: the invisible turbulence that can strike out of a clear blue sky",
+     "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/18/invisible-clear-air-turbulence-airline-safety-climate-crisis",
      "published": "2026-10-17"
     }
    ]
   },
   {
-   "topic": "cnn",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/CNN",
+   "topic": "ps6",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/PS6",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Christiane Amanpour announces she’s leaving CNN after 43 years",
-     "url": "https://www.theguardian.com/media/2026/oct/19/christiane-amanpour-leaving-cnn",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "CNN anchor Christiane Amanpour to leave network after 43 years",
-     "url": "https://www.bbc.co.uk/news/articles/c83vqzkrr9zeo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
+     "outlet": "Eurogamer",
+     "title": "The PS6's memory and storage alone reportedly cost more than $680",
+     "url": "https://www.eurogamer.net/ps6-ram-nand-costs-over-680-keplerl2",
+     "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "rays vs guardians",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": null,
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 321,853 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "World Series will have first-time champion as Rays set up showdown with Brewers",
-     "url": "https://www.theguardian.com/sport/2026/oct/19/rays-guardians-mlb-playoffs-world-series-alcs",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Rays advance to 2026 World Series after ALCS Game 6 win vs Guardians",
-     "url": "https://www.usatoday.com/story/sports/mlb/playoffs/2026/10/19/guardians-rays-watch-score-highlights-odds-game-6-alcs-channel--live/92324291007/",
+     "outlet": "Variety",
+     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "AP",
-     "title": "Yandy Díaz’s guarantee the Rays will win Game 6 doesn’t rile up the Guardians",
-     "url": "https://apnews.com/article/rays-yandy-diaz-victory-guarantee-guardians-d067fd76b19c77de0d6c90c78ef75293",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Rays advance to World Series after beating Guardians in ALCS Game 6: Live updates, reaction",
-     "url": "https://www.nytimes.com/athletic/live-blogs/guardians-vs-rays-live-updates-mlb-playoffs-game-6-score-result/vTJRVqOY5yh4/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "wnba",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wnba",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Angel Reese’s superb 30-point double-double helps Dream even WNBA finals",
-     "url": "https://www.theguardian.com/sport/2026/oct/19/angel-reese-double-double-dream-valkyries-wnba-finals-game-2",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "mike evans",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mike_evans",
-   "articles": [
-    {
-     "outlet": "ESPN",
-     "title": "49ers rule out Mike Evans due to lingering Achilles issue",
-     "url": "https://www.espn.com/nfl/story/_/id/50223535/49ers-rule-mike-evans-due-achilles-injury",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Wales great Evans to leave role as Lions chairman",
-     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwnv074l4nvyo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "phony hulu",
-   "signal": "Google Trends US 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘Phony’ Review: Connie Britton and Sam Nivola Lead Hulu’s Likably Quirky and Beguiling Paranoid Mystery Series",
-     "url": "https://www.hollywoodreporter.com/tv/tv-reviews/phony-review-connie-britton-sam-nivola-hulu-1236735722/",
-     "published": "2026-10-20"
     }
    ]
   },
@@ -142,9 +307,9 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
-     "published": "2026-10-19"
+     "title": "Gilgamesh by Simon Armitage review – an ancient epic is brilliantly translated for our times",
+     "url": "https://www.theguardian.com/books/2026/oct/20/gilgamesh-by-simon-armitage-review-an-ancient-epic-is-brilliantly-translated-for-our-times",
+     "published": "2026-10-20"
     },
     {
      "outlet": "BBC",
@@ -160,15 +325,9 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
-     "url": "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
-     "published": "2026-10-19"
-    },
-    {
      "outlet": "Guardian",
-     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "title": "The reviews are in! Is You Can See Everything the greatest film ever?",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
      "published": "2026-10-19"
     },
     {
@@ -185,14 +344,8 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "'Our worst nightmare': Threats to Australian politicians were rising before MP hit by car",
-     "url": "https://www.bbc.co.uk/news/articles/cq398rk4p3exo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    },
-    {
      "outlet": "Guardian",
-     "title": "Helen Haines loses leg after car allegedly did U-turn and struck her twice in Wangaratta",
+     "title": "Helen Haines loses leg as surgeons fight to save the other after alleged attack in Wangaratta",
      "url": "https://www.theguardian.com/australia-news/2026/oct/20/helen-haines-mp-alleged-attack-wangaratta-surgery-ntwnfb",
      "published": "2026-10-20"
     }
@@ -249,10 +402,22 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
-     "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
-     "published": "2026-10-19"
+     "outlet": "BBC",
+     "title": "NHS trust prosecuted over children's sepsis deaths",
+     "url": "https://www.bbc.co.uk/news/articles/c6jrw1xx419xo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Reuters",
+     "title": "Human cases of West Nile virus rise in Europe, with 141 dead in 2026, report says",
+     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/human-cases-west-nile-virus-rise-europe-with-141-dead-2026-report-says-2026-10-15/",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "CDC confirms two measles-related deaths in 2026",
+     "url": "https://www.usatoday.com/story/news/nation/2026/09/29/cdc-confirms-two-measles-related-us-deaths-in-2026/92001587007/",
+     "published": "2026-09-29"
     }
    ]
   },
@@ -262,22 +427,35 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Nathan_Fielder",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
-     "url": "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
+     "outlet": "Guardian",
+     "title": "The reviews are in! Is You Can See Everything the greatest film ever?",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
      "published": "2026-10-19"
     },
     {
-     "outlet": "Guardian",
-     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "outlet": "The Hollywood Reporter",
+     "title": "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
      "published": "2026-10-19"
     }
    ]
   },
   {
+   "topic": "2026 French student protests",
+   "signal": "Wikipedia 101,742 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_French_student_protests",
+   "articles": [
+    {
+     "outlet": "AP",
+     "title": "Greta Thunberg backs French high school protests over run-down schools",
+     "url": "https://apnews.com/article/france-school-protests-greta-thunberg-2d0ccdc00fc275f9ce2fb9bb1e6a83a6",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
    "topic": "If You Escape, You Win $1,000,000",
-   "signal": "YouTube GB 663,456/h",
+   "signal": "YouTube GB 717,192/h",
    "wikipedia": null,
    "articles": [
     {
@@ -296,9 +474,15 @@
   },
   {
    "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 138,196/h",
+   "signal": "YouTube GB-sport 137,197/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "What’s the future for the Green Party? Should it be socialism? | Joe Todd",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/20/future-green-party-socialism-labour-radical-reform",
+     "published": "2026-10-20"
+    },
     {
      "outlet": "IGN",
      "title": "Save $110 for Your First Year With McAfee+ Scam Detector, Including a VPN, Antivirus and Online Protection in the Age of AI",
@@ -310,18 +494,12 @@
      "title": "Battlefield 6 Dev Owns Up To Mistakes With Strange-Looking Cosmetics, But Stays Silent On Possible AI Use",
      "url": "https://www.gamespot.com/articles/battlefield-6-dev-owns-up-to-mistakes-with-strange-looking-cosmetics-but-stays-silent-on-possible-ai-use/",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Emperor of Nothing by Blake J Harris review – the definitive portrait of Larry David",
-     "url": "https://www.theguardian.com/books/2026/oct/19/emperor-of-nothing-blake-j-harris-review-larry-david-biography",
-     "published": "2026-10-19"
     }
    ]
   },
   {
    "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 859,663/h",
+   "signal": "YouTube GB-entertainment 803,973/h",
    "wikipedia": null,
    "articles": [
     {
@@ -334,9 +512,15 @@
   },
   {
    "topic": "Never say never 😭",
-   "signal": "YouTube GB-entertainment 300,020/h",
+   "signal": "YouTube GB-entertainment 288,045/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Never_Say_Never_Again",
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "The pest I’ll never forget: the maggots that rained down like hail",
+     "url": "https://www.theguardian.com/environment/2026/oct/20/the-pest-ill-never-forget-maggots-rained-down-like-hail",
+     "published": "2026-10-20"
+    },
     {
      "outlet": "IGN",
      "title": "Call of Duty: Modern Warfare 4 Pop-Up: The DMZ Has Never Been This Much Fun",
@@ -354,20 +538,20 @@
      "title": "WoW: Forever Is Soaring, But Midnight Is Struggling",
      "url": "https://www.gamespot.com/articles/wow-forever-is-soaring-but-midnight-is-struggling/",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
-     "published": "2026-10-19"
     }
    ]
   },
   {
    "topic": "What is the BEST app?!📱🤔",
-   "signal": "YouTube GB-tech 67,592/h",
+   "signal": "YouTube GB-tech 66,766/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Googlebook review: Google’s new laptops are woefully underbaked",
+     "url": "https://www.theguardian.com/technology/2026/oct/20/googlebook-review-google-laptops-chromeos-android",
+     "published": "2026-10-20"
+    },
     {
      "outlet": "Polygon",
      "title": "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
@@ -385,44 +569,6 @@
      "title": "Sony’s best noise-canceling earbuds are nearly $100 off today only",
      "url": "https://www.theverge.com/gadgets/1013911/sonys-best-noise-canceling-earbuds-are-nearly-100-off-today-only",
      "published": "2026-10-19"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "The reviews are in! Is You Can See Everything the greatest film ever?",
-     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "#CULT Official Trailer",
-   "signal": "YouTube US 238,854/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Space.com",
-     "title": "New 'Blade Runner 2099' trailer is a space fan's dream with sinister starships and strange exoplanets (video)",
-     "url": "https://www.space.com/entertainment/space-movies-shows/new-blade-runner-2099-trailer-is-a-space-fans-dream-with-sinister-starships-and-strange-exoplanets-video",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "NAZA directors: 'It's a film about systems of mass killing' – video",
-     "url": "https://www.theguardian.com/film/video/2026/oct/17/naza-directors-its-a-film-about-systems-of-mass-killings-video",
-     "published": "2026-10-17"
-    }
-   ]
-  },
-  {
-   "topic": "Something Is Hunting My Dogs...",
-   "signal": "YouTube US-gaming 74,167/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The pet I’ll never forget: Orlando was paralysed and almost died – then became the perfect guide dog",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/19/the-pet-ill-never-forget-orlando-was-paralysed-and-almost-died-then-became-the-perfect-guide-dog",
-     "published": "2026-10-19"
     }
    ]
   },
@@ -439,39 +585,39 @@
    "articles": []
   },
   {
-   "topic": "weather warnings uk",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Weather_warnings",
+   "topic": "angela rayner",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Angela_Rayner",
    "articles": []
   },
   {
-   "topic": "brest",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Brest",
+   "topic": "pak vs eng",
+   "signal": "Google Trends GB 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Passenger_pigeon",
    "articles": []
   },
   {
-   "topic": "nhl",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nhl",
-   "articles": []
-  },
-  {
-   "topic": "irina shayk",
+   "topic": "coastal flooding",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Irina_Shayk",
+   "wikipedia": "https://en.wikipedia.org/wiki/Coastal_flooding",
    "articles": []
   },
   {
-   "topic": "blueface",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Blueface",
+   "topic": "lexie hull",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lexie_Hull",
    "articles": []
   },
   {
-   "topic": "chandler riggs",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Chandler_Riggs",
+   "topic": "Kim Jong Un",
+   "signal": "Wikipedia 191,702 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+   "articles": []
+  },
+  {
+   "topic": "Dylan Sprouse",
+   "signal": "Wikipedia 103,687 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dylan_Sprouse",
    "articles": []
   }
  ]

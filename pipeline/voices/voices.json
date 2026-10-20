@@ -1,0 +1,32 @@
+{
+ "LW": {
+  "ref": "voices/lewis_ref.wav",
+  "exag": 0.5,
+  "cfg": 0.5
+ },
+ "DN": {
+  "ref": "voices/daniel_ref.wav",
+  "exag": 0.6,
+  "cfg": 0.5
+ },
+ "IS": {
+  "ref": "voices/isabella_ref.wav",
+  "exag": 0.55,
+  "cfg": 0.45
+ },
+ "LY": {
+  "ref": "voices/lily_ref.wav",
+  "exag": 0.65,
+  "cfg": 0.45
+ },
+ "MI": {
+  "ref": "voices/michael_ref.wav",
+  "exag": 0.6,
+  "cfg": 0.5
+ },
+ "HT": {
+  "ref": "voices/heart_ref.wav",
+  "exag": 0.7,
+  "cfg": 0.45
+ }
+}

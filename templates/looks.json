@@ -52,6 +52,36 @@
      "desc": "British female",
      "voice": "G",
      "wps": 3.0
+    },
+    "lewis": {
+     "desc": "British male, deeper and calm",
+     "voice": "LW",
+     "wps": 3.0
+    },
+    "daniel": {
+     "desc": "British male, brisk",
+     "voice": "DN",
+     "wps": 3.0
+    },
+    "isabella": {
+     "desc": "British female, warm",
+     "voice": "IS",
+     "wps": 3.0
+    },
+    "lily": {
+     "desc": "British female, bright",
+     "voice": "LY",
+     "wps": 3.0
+    },
+    "michael": {
+     "desc": "American male, friendly",
+     "voice": "MI",
+     "wps": 3.0
+    },
+    "heart": {
+     "desc": "American female, expressive",
+     "voice": "HT",
+     "wps": 3.0
     }
    }
   },

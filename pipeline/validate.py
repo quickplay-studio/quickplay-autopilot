@@ -85,7 +85,7 @@ def check(b, path=None):
     stock = [x for x in allshots if x.startswith(("pixabay:", "gameplay:"))]
     if allshots and len(stock) > max(1, len(allshots) // 5):
         w.append(f"shots: {len(stock)} of {len(allshots)} are stock; real pictures of the subject first (stock at most 1 in 5)")
-    if any(str(s.get("src", "")).startswith(("pixabay:", "gameplay:")) for s in (beats[0].get("shots") or []) if beats):
+    if beats and any(str(s.get("src", "")).startswith(("pixabay:", "gameplay:")) for s in (beats[0].get("shots") or [])):
         w.append("beat 0: the hook needs a real picture of the subject, not stock")
     if not 50 <= total <= 135: e.append(f"narration: {total} words, needs 55 to 125 (20 to 45 seconds)")
     elif not 55 <= total <= 125: w.append(f"narration: {total} words, best between 55 and 125")

@@ -6,8 +6,10 @@ Rules (numbers live in config.json)
   run tries again. daily_limit is how many Shorts a day the writer makes; slots_per_day caps how many go public a day.
 - A board whose "created" date is a later day (the 20:50 evening run writes the first part of tomorrow) gets that day's
   slots, never tonight's.
-- Slots: slots_per_day a day. Until 30 Shorts have results: from slot_first, every slot_every_minutes (UK time); then the
-  times learned from results (analytics/slots.json, see learned_slots). A slot already taken is never reused.
+- Slots: slots_per_day a day (or the learned ceiling, quota.daily_limit), covering all 24 hours from slot_first (UK): a
+  third of the audience is American and a fifth Asian, so the UK night counts. Until 30 Shorts have results: every
+  slot_every_minutes (at most 1440 / n); then the times learned from results (analytics/slots.json, learned_slots, any
+  hour of the day). A slot already taken is never reused.
 - A Short goes to the first free slot at least lead_hours away (time to render and process).
 - A board may fix its slot with "publish_at": "YYYY-MM-DD HH:MM" (UK time), or set "mode": "private"
   (test upload, not scheduled), "mode": "none" (render only) or "mode": "dry" (rendered and held for approval like a real
@@ -32,6 +34,11 @@ LEAD = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
 def _mins(hm):
     h, m = map(int, hm.split(":")); return h * 60 + m
 
+
+def _apart(a, b):
+    """Minutes between two times of day, the short way round midnight."""
+    d = abs(_mins(a) - _mins(b)); return min(d, 1440 - d)
+
 def learned_slots(n):
     """The day's posting times learned from results (analytics/slots.json, refreshed once a day so a day's times stay
     fixed): each half hour from 07:00 to 22:30 scores by how Shorts posted at or near it did against Shorts posted
@@ -43,18 +50,18 @@ def learned_slots(n):
     def score(c):
         num = den = 0.0
         for k, v in stats.items():
-            d = abs(_mins(k) - _mins(c))
+            d = _apart(k, c)
             if d <= 60:
                 w = v.get("n", 0) * (1.0 if d == 0 else 0.5 if d <= 30 else 0.25)
                 num += w * v.get("score", 1.0); den += w
         sc = (num + 3.0) / (den + 3.0)
         return max(sc, 1.03) if den < 2 else sc
-    mins = (0, 30) if n <= 32 else (0, 15, 30, 45)     # more than 32 a day needs quarter hours
-    ranked = sorted((f"{h:02d}:{m:02d}" for h in range(7, 23) for m in mins), key=lambda c: (-score(c), c))
-    for gap in (75, 60, 45, 30, 20, 15):      # 20 a day needs half-hour spacing, 36 twenty minutes
+    mins = (0, 30) if n <= 40 else (0, 15, 30, 45)     # more than 40 a day needs quarter hours
+    ranked = sorted((f"{h:02d}:{m:02d}" for h in range(24) for m in mins), key=lambda c: (-score(c), c))   # all 24 hours: the
+    for gap in (75, 60, 45, 30, 20, 15):      # audience is a third American and a fifth Asian, so the UK night counts
         picked = []
         for c in ranked:
-            if all(abs(_mins(c) - _mins(q)) >= gap for q in picked): picked.append(c)
+            if all(_apart(c, q) >= gap for q in picked): picked.append(c)
             if len(picked) == n: return sorted(picked)
     return None
 
@@ -66,8 +73,8 @@ def day_slots(day):
                 for t in times]
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
-    every = int(CFG.get("slot_every_minutes", 90)) if n <= int(CFG.get("slots_per_day", 10)) else max(8, (16 * 60) // n)
-    step = dt.timedelta(minutes=every)              # more than the configured slots: spread over the same 16 hours
+    every = min(int(CFG.get("slot_every_minutes", 90)), max(8, 1440 // n))     # the day's slots cover all 24 hours from slot_first
+    step = dt.timedelta(minutes=every)
     return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
 
 def schedule_state(now, yt=None):
@@ -97,7 +104,7 @@ def schedule_state(now, yt=None):
 def slot_picker(now, taken):
     def next_slot(created=None):
         """The first free slot at least lead_hours away, on or after the board's "created" day (UK)."""
-        day = (now + LEAD).astimezone(UK).date()
+        day = (now + LEAD).astimezone(UK).date() - dt.timedelta(days=1)      # yesterday's list runs on past midnight
         try:
             want = dt.date.fromisoformat(str(created)[:10]) if created else None
             if want and want > day: day = want

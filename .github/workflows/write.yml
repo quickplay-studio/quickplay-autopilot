@@ -60,6 +60,7 @@ jobs:
           req=""; [ "${{ github.event_name }}" = "push" ] && req=$(head -1 requests/write.txt 2>/dev/null)
           export WRITE_COUNT="${IN_COUNT:-$(echo "$req" | grep -o '[0-9]\+' | head -1)}"
           case "$IN_DRY $req" in *dry*) export WRITE_DRY=1;; esac
+          for r in morning afternoon evening; do case " $req " in *" $r "*|*" $r"*|"$r "*) export WRITE_RUN=$r;; esac; done   # "afternoon 8": today's slots
           set -o pipefail
           python pipeline/writer.py 2>&1 | tee status/write_log.txt
       - name: Save and render

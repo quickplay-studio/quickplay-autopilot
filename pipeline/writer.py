@@ -127,12 +127,17 @@ def next_id():
 
 
 def plan(breaking=False, hint=""):
-    """Target day and how many to write. The run is the trends schedule that built the packs (facts.json "run"), else the
-    clock (UTC); a breaking-news check writes today, at most a few."""
+    """Target day and how many to write. The run is WRITE_RUN (a request line such as "afternoon 8"), else the trends
+    schedule that built the packs (facts.json "run"), else the clock (UTC); a breaking-news check writes today, at most a
+    few. A day runs from slot_first to slot_first (its slots cover 24 hours), so a run after midnight UK still fills
+    tonight; the evening run writes the day that starts next morning."""
     uk = NOW.astimezone(UK)
+    hint = os.environ.get("WRITE_RUN", "").strip().lower() or hint
     run = "breaking" if breaking else hint if hint in ("morning", "afternoon", "evening") else \
         "morning" if NOW.hour < 11 else "afternoon" if NOW.hour < 17 else "evening"
-    day = uk.date() + dt.timedelta(days=1 if run == "evening" else 0)
+    h, m = map(int, str(CFG.get("slot_first", "07:30")).split(":"))
+    base = (uk - dt.timedelta(hours=h, minutes=m)).date()      # a posting day runs from slot_first to slot_first (all 24 hours)
+    day = base + dt.timedelta(days=1 if run == "evening" else 0)
     made = 0
     for d in ("queue", "ready", "done", "failed"):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
@@ -709,7 +714,9 @@ def write_one(p, sid, day, prompt_head, extra="", kind="news"):
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
     for attempt in range(3):
+        if isinstance(ans, dict) and isinstance(ans.get("board"), dict): ans = ans["board"]     # a model that wrapped it
         b = clean(ans)
+        if not isinstance(b.get("beats"), list) or not b["beats"]: b["beats"] = []
         for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2

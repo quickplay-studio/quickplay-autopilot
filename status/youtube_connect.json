@@ -1,11 +1,15 @@
 {
- "at": "2026-10-17T13:09:18+00:00",
+ "at": "2026-10-20T23:30:57+00:00",
  "ok": true,
  "connected": true,
  "scopes": "https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/yt-analytics.readonly https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/youtube.upload",
  "saved": "2026-10-17T13:09:17+00:00",
  "last_exchange": {
-  "at": "2026-10-17T13:09:17+00:00",
-  "ok": true
+  "at": "2026-10-20T23:30:56+00:00",
+  "ok": false,
+  "http": 400,
+  "error": "invalid_grant",
+  "description": "Malformed auth code.",
+  "code_chars": 43
  }
 }

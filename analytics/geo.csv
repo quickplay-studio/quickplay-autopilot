@@ -1,27 +1,35 @@
 scope,country,views,share_pct
-channel,US,480,30.9
-channel,GB,171,11.0
-channel,IN,165,10.6
-channel,KR,132,8.5
-channel,ES,130,8.4
-channel,PH,96,6.2
-channel,DE,73,4.7
-channel,NG,51,3.3
-channel,CA,44,2.8
-channel,JP,44,2.8
-channel,ID,41,2.6
-channel,AU,36,2.3
-channel,MY,35,2.3
-channel,ZA,34,2.2
-channel,IE,21,1.4
-category: Film,US,148,67.0
-category: Film,IN,73,33.0
-category: Gaming,US,66,100.0
-category: Music,KR,121,21.9
-category: Music,US,116,21.0
-category: Music,ES,106,19.2
-category: Music,GB,69,12.5
-category: Music,IN,43,7.8
-category: Music,NG,42,7.6
-category: Music,ID,37,6.7
-category: Music,IE,19,3.4
+channel,US,976,34.0
+channel,GB,339,11.8
+channel,IN,256,8.9
+channel,PH,180,6.3
+channel,ES,180,6.3
+channel,KR,132,4.6
+channel,DE,120,4.2
+channel,ID,105,3.7
+channel,CA,94,3.3
+channel,NG,84,2.9
+channel,JP,80,2.8
+channel,MY,80,2.8
+channel,ZA,72,2.5
+channel,AU,72,2.5
+channel,NL,49,1.7
+channel,SE,31,1.1
+channel,IE,21,0.7
+channel,PK,0,0.0
+category: Entertainment,GB,23,100.0
+category: Film,US,266,69.8
+category: Film,IN,73,19.2
+category: Film,PH,23,6.0
+category: Film,MY,19,5.0
+category: Gaming,US,213,87.7
+category: Gaming,GB,30,12.3
+category: Music,US,171,23.9
+category: Music,ES,143,20.0
+category: Music,KR,121,16.9
+category: Music,IN,85,11.9
+category: Music,NG,70,9.8
+category: Music,GB,69,9.7
+category: Music,ID,37,5.2
+category: Music,IE,19,2.7
+category: Music,MY,0,0.0

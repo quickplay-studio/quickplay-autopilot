@@ -1,22 +1,152 @@
 {
  "date": "2026-10-20",
- "built": "2026-10-20T17:23+00:00",
+ "built": "2026-10-20T19:14+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
+ "mode": "full",
  "errors": [],
  "topics": [
   {
-   "n": 19,
+   "n": 30,
+   "topic": "The Legend of Zelda: Ocarina of Time – Art thou ready?",
+   "signal": "YouTube GB-gaming 64,595/h",
+   "category": "Gaming",
+   "what_is_new": "The file size for the upcoming The Legend of Zelda: Ocarina of Time remake was officially confirmed to be 27 GB.",
+   "hooks": [
+    "Did you know the Ocarina of Time remake is 800 times larger than the original?",
+    "The new Zelda remake takes up a whopping 27 GB of storage!",
+    "Get ready for the Ocarina of Time remake coming November 5!"
+   ],
+   "sources": [
+    [
+     "Zelda: Ocarina of Time Remake File Size Officially Confirmed",
+     "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/",
+     "Polygon",
+     "2026-10-20"
+    ],
+    [
+     "'It Definitely Was a Shock': The Legend of Zelda: Ocarina of Time Artwork Splits Fans Following Trailer Reveal",
+     "https://www.ign.com/articles/it-definitely-was-a-shock-the-legend-of-zelda-ocarina-of-time-artwork-splits-fans-following-trailer-reveal",
+     "IGN",
+     "2026-09-08"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The Legend of Zelda: Ocarina of Time remake on Nintendo Switch 2 will take up 27 GB of storage.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "We now know that the Ocarina of Time remake on Nintendo Switch 2 will take up 27 GB of storage."
+     }
+    },
+    {
+     "claim": "The original Nintendo 64 version of The Legend of Zelda: Ocarina of Time was released in 1998.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "When the original Nintendo 64 version of The Legend of Zelda: Ocarina of Time was released in 1998, the entire game fit on a 32"
+     }
+    },
+    {
+     "claim": "The Legend of Zelda: Tears of the Kingdom takes up 24 GB on Switch 2.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Legend of Zelda: Tears of the Kingdom, the most recent mainline entry in the series, takes up 24 GB on Switch 2."
+     }
+    },
+    {
+     "claim": "The Ocarina of Time remake will be released exclusively for Nintendo Switch 2 on Nov. 5.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It will be released exclusively for Nintendo Switch 2 on Nov. 5, as Nintendo is one of the only companies willing to get anywhere near"
+     }
+    },
+    {
+     "claim": "The visuals in this ground up Ocarina remake have been given a vast upgrade.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Of course, the visuals in this ground-up Ocarina remake have been given a vast upgrade."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 5,
+   "topic": "Patient Zero by Taylor Swift",
+   "signal": "Apple Music US: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Taylor Swift's Patient Zero was released on September 25, 2026?",
+    "Taylor Swift wrote and produced Patient Zero with Max Martin and Shellback."
+   ],
+   "sources": [
+    [
+     "Taylor Swift’s ‘Patient Zero’ Adds Third Week at No. 1 on Billboard Hot 100",
+     "https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-three-weeks/",
+     "Billboard",
+     "2026-10-19"
+    ],
+    [
+     "Patient Zero by Taylor Swift",
+     "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Taylor Swift's single Patient Zero was released on September 25, 2026, through Republic Records.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The single is one of four new cuts on the deluxe version, released Sept. 25, of Swift’s 2025 album, The Life of a Showgirl.",
+      "2": "It was released on September 25, 2026, through Republic Records, as the lead single from The Encore."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Taylor Swift wrote and produced Patient Zero alongside Max Martin and Shellback.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "She wrote and produced the song alongside Max Martin and Shellback."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 22,
    "topic": "Street Fighter (2026 film)",
    "signal": "Wikipedia 153,073 views",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know Street Fighter is the third live action film based on Capcom's game?",
-    "Kitao Sakurai directs the new 2026 Street Fighter action comedy movie.",
-    "Noah Centineo and Andrew Koji star as Ken and Ryu in Street Fighter."
+    "Discover facts about the 2026 film Street Fighter.",
+    "Street Fighter is directed by Kitao Sakurai."
    ],
    "sources": [
+    [
+     "‘Street Fighter’ Punches to Summit as Rajinikanth’s ‘Jailer 2’ Bows in Third at U.K., Ireland Box Office",
+     "https://variety.com/2026/film/global/street-fighter-rajinikanth-jailer-2-uk-ireland-box-office-1236916622/",
+     "Variety",
+     "2026-10-20"
+    ],
     [
      "Street Fighter (2026 Movie) Guide",
      "https://www.ign.com/wikis/street-fighter-2026-movie",
@@ -30,141 +160,695 @@
      ""
     ]
    ],
-   "verified": [
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Street Fighter is the third live action feature length film based on the Street Fighter video game series by Capcom.",
+     "claim": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
      "sources": [
-      1,
       2
      ],
      "evidence": {
-      "1": "The movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
-      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+      "2": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai."
      }
     },
     {
-     "claim": "Street Fighter is directed by Kitao Sakurai.",
+     "claim": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by Dalan Musson and Gary Dauberman.",
      "sources": [
-      1,
-      2
+      3
      ],
      "evidence": {
-      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
-      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
-     }
-    },
-    {
-     "claim": "Noah Centineo plays Ken Masters in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Noah Centineo as Ken Masters",
-      "2": "- Noah Centineo as Ken Masters"
-     }
-    },
-    {
-     "claim": "Andrew Koji plays Ryu in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Andrew Koji as Ryu",
-      "2": "- Andrew Koji as Ryu / Dark Ryu"
-     }
-    },
-    {
-     "claim": "Callina Liang plays Chun Li in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Callina Liang as Chun-Li",
-      "2": "- Callina Liang as Chun-Li[4]"
-     }
-    },
-    {
-     "claim": "David Dastmalchian plays M Bison in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- David Dastmalchian as M. Bison",
-      "2": "- David Dastmalchian as M. Bison"
-     }
-    },
-    {
-     "claim": "Joe Anoa i Roman Reigns plays Akuma in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Joe Anoa'i (Roman Reigns) as Akuma",
-      "2": "- Joe \"Roman Reigns\" Anoa'i as Akuma"
-     }
-    },
-    {
-     "claim": "Cody Rhodes plays Guile in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Cody Rhodes as Guile",
-      "2": "- Cody Rhodes as Guile"
-     }
-    },
-    {
-     "claim": "Jason Momoa plays Blanka in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Jason Momoa as Blanka",
-      "2": "- Jason Momoa as Blanka"
-     }
-    },
-    {
-     "claim": "Curtis 50 Cent Jackson plays Balrog in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Curtis \"50 Cent\" Jackson as Balrog",
-      "2": "- Curtis \"50 Cent\" Jackson as Balrog"
-     }
-    },
-    {
-     "claim": "Orville Peck plays Vega in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Orville Peck as Vega",
-      "2": "- Orville Peck as Vega"
-     }
-    },
-    {
-     "claim": "Vidyut Jammwal plays Dhalsim in Street Fighter.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "- Vidyut Jammwal as Dhalsim",
-      "2": "- Vidyut Jammwal as Dhalsim"
+      "3": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
      }
     }
    ],
+   "images": []
+  },
+  {
+   "n": 4,
+   "topic": "H3-24 | Martian Moons eXploration (MMX)",
+   "signal": "rocket launch 2026-10-19 19:41 UTC (Success)",
+   "category": "Science",
+   "what_is_new": "Japan successfully launched the Martian Moons Exploration spacecraft on an unprecedented mission to collect rocks from Mars’s moon Phobos.",
+   "hooks": [
+    "Japan just launched a historic mission to Mars!",
+    "Can a spacecraft collect rocks from Phobos?",
+    "A new mission is heading to Mars's moons."
+   ],
+   "sources": [
+    [
+     "‘Once-in-a-lifetime chance’: Japan launches historic mission to collect rocks from Mars’s moon Phobos",
+     "https://www.theguardian.com/world/2026/oct/20/japan-mars-moon-mission-phobos-collect-rocks",
+     "Guardian",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Japan has successfully launched a spacecraft on an unprecedented mission to bring back samples from one of Mars’s moons.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Japan has successfully launched a spacecraft on an unprecedented mission to bring back samples from one of Mars’s moons that scientists hope will shed light"
+     }
+    },
+    {
+     "claim": "The Martian Moons Exploration spacecraft was propelled by Japan’s flagship H3 rocket.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Martian Moons Exploration (MMX) spacecraft, propelled by Japan’s flagship H3 rocket, lifted off before dawn from Tanegashima island in the country’s far south-west, the"
+     }
+    },
+    {
+     "claim": "The spacecraft is expected to reach Mars’s orbit in August next year and collect at least 10g of soil and rock from the surface of Phobos.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The spacecraft is expected to reach Mars’s orbit in August next year and collect at least 10g of soil and rock from the surface of"
+     }
+    },
+    {
+     "claim": "The mission is scheduled to return in 2031.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It is scheduled to return in 2031, Jaxa said."
+     }
+    },
+    {
+     "claim": "Phobos has a diameter measuring 14 miles and orbits Mars three times a day about 6,000km above its surface.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The pock-marked moon, which has a diameter measuring 14 miles (22.5km), orbits Mars three times a day about 6,000km above its surface."
+     }
+    },
+    {
+     "claim": "The flagship H3 rocket carrying the unmanned probe blasted off from Tanegashima Space Centre at 4:41am.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The flagship H3 rocket carrying the unmanned probe blasted off into a pitch black sky from Tanegashima Space Centre at 4:41am, witnessed by thousands of"
+     }
+    },
+    {
+     "claim": "Jaxa scientists declared the launch a success an hour later when the spacecraft separated from the rocket’s upper stage.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "An hour later, Jaxa scientists declared the launch a success when the spacecraft separated from the rocket’s upper stage, prompting scenes of celebration in the"
+     }
+    },
+    {
+     "claim": "Five space agencies are collaborating on the five-year mission.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Five space agencies are collaborating on the five-year mission, which will attempt to land a robotic prospector and a rover on Phobos, the larger and"
+     }
+    },
+    {
+     "claim": "The French-German rover was named Idefix after the white terrier in the Asterix comics.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It will then eject a small French-German rover, named Idefix after the white terrier in the Asterix comics."
+     }
+    },
+    {
+     "claim": "The four-wheeled rover will bounce for several minutes on Mars’s surface before coming to a halt.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "If all goes according to plan, the four-wheeled rover will bounce (due to gravity on Phobos being 1/1,000th as strong as Earth) for several minutes"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 7,
+   "topic": "champions league games",
+   "signal": "Google Trends GB 1000+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "PSG v Barcelona, Manchester City v AEK Athens, and more: Champions League – live",
+     "https://www.theguardian.com/football/live/2026/oct/20/psg-v-barcelona-manchester-city-v-aek-athens-and-more-champions-league-live",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "What are the yellow card suspension rules in Champions League?",
+     "https://www.bbc.co.uk/sport/football/articles/c54g1vpypgw3o?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-20"
+    ],
+    [
+     "champions league games",
+     "https://en.wikipedia.org/wiki/Champions_League_Game",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
    "one_source": [],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "barcelona vs real madrid",
+   "signal": "Google Trends US 200+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Lamine Yamal scored a brilliant goal in Barcelona's 5-2 win.",
+    "Real Betis were previously unbeaten in 15 home games."
+   ],
+   "sources": [
+    [
+     "Will that do? Lamine Yamal conjures another magical spell as Barça pass first test | Sid Lowe",
+     "https://www.theguardian.com/football/2026/oct/19/lamine-yamal-wonder-goal-barcelona-real-betis-la-liga",
+     "Guardian",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Barcelona defeated Real Betis with a score of 5-2.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "scoring another brilliant goal to set Barcelona on the way to a 5-2 win over Betis in a game that made history."
+     }
+    },
+    {
+     "claim": "Lamine Yamal is 19 years old.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "When at last it was time for Lamine Yamal to leave, the 19-year-old’s number going up before the 90th minute for only the second time"
+     }
+    },
+    {
+     "claim": "Real Betis were unbeaten in 15 home games prior to this match.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Always watch Betis, especially when they’re playing Barcelona: unbeaten in 15 home games, the last time anyone beat them here was Barça too."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 29,
+   "topic": "IVE 아이브 'Looks Can Kill' MV",
+   "signal": "YouTube GB 246,494/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "Houseplant hacks: will trimming brown leaf tips do any harm?",
+     "https://www.theguardian.com/lifeandstyle/2026/oct/20/houseplant-hacks-will-trimming-brown-leaf-tips-do-any-harm",
+     "Guardian",
+     "2026-10-20"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 33,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 139,038/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Olivia Rodrigo was born half-deaf in her left ear?",
+    "Olivia Rodrigo made her onscreen debut in an Old Navy commercial at age seven.",
+    "Olivia Rodrigo released her debut single Drivers License on January 8, 2021."
+   ],
+   "sources": [
+    [
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Olivia Isabel Rodrigo was born on February 20, 2003, at the Rancho Springs Medical Center in Murrieta, California.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Olivia Isabel Rodrigo[1] was born on February 20, 2003,[2] at the Rancho Springs Medical Center in Murrieta, California, to Jennifer (née Lee), a schoolteacher, and"
+     }
+    },
+    {
+     "claim": "She was born half-deaf in her left ear.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Rodrigo was born half-deaf in her left ear.[7]"
+     }
+    },
+    {
+     "claim": "In May 2010, at age seven, she first appeared onscreen in an Old Navy commercial.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In May 2010, at age seven, she first appeared onscreen in an Old Navy commercial.[18][19]"
+     }
+    },
+    {
+     "claim": "In 2015, at age 12, Rodrigo made her acting debut, in the lead role of Grace Thomas in the direct-to-video film An American Girl: Grace Stirs Up Success.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 2015, at age 12, Rodrigo made her acting debut, in the lead role of Grace Thomas in the direct-to-video film An American Girl: Grace"
+     }
+    },
+    {
+     "claim": "On January 8, 2021, she released her debut single, Drivers License, which she co-wrote with producer Dan Nigro.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "On January 8, 2021, she released her debut single, \"Drivers License\", which she co-wrote with producer Dan Nigro.[34][35]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
+   ]
+  },
+  {
+   "n": 17,
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 321,853 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Discover how Jailer 2 became a global box office hit!",
+    "Everything you need to know about the new Rajinikanth blockbuster!"
+   ],
+   "sources": [
+    [
+     "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "https://variety.com/2026/global/news/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "Variety",
+     "2026-10-19"
+    ],
+    [
+     "Jailer 2",
+     "https://en.wikipedia.org/wiki/Jailer_2",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The film was produced by Kalanithi Maran through Sun Pictures.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
+      "2": "It was produced by Kalanithi Maran through Sun Pictures."
+     }
+    },
+    {
+     "claim": "S. J. Suryah, Mithun Chakraborty, Suraj Venjaramoodu and Vidya Balan joined the cast.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "New to the franchise are Tamil actor S.J. Suryah as Bodhi Kalpak and Bollywood star Vidya Balan as Kaantha. Veteran Bollywood actor Mithun Chakraborty and",
+      "2": "A sequel to Jailer (2023), the film stars Rajinikanth, Ramya Krishnan, Yogi Babu, Mirnaa and Rithvik reprising their roles from the predecessor, with S. J."
+     }
+    },
+    {
+     "claim": "The film has music composed by Anirudh Ravichander.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
+      "2": "The film has music composed by Anirudh Ravichander, cinematography by Vijay Kartik Kannan and editing by R. Nirmal."
+     }
+    },
+    {
+     "claim": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
+      "2": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Jailer 2 is a 2026 Indian Tamil language action comedy film written and directed by Nelson Dilipkumar.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar."
+     }
+    },
+    {
+     "claim": "The film stars Rajinikanth, Ramya Krishnan, Yogi Babu, Mirnaa and Rithvik reprising their roles from the predecessor.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "A sequel to Jailer (2023), the film stars Rajinikanth, Ramya Krishnan, Yogi Babu, Mirnaa and Rithvik reprising their roles from the predecessor, with S. J."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "raphinha",
+   "signal": "Google Trends US 500+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Raphinha was born on 14 December 1996 in Porto Alegre?"
+   ],
+   "sources": [
+    [
+     "raphinha",
+     "https://en.wikipedia.org/wiki/Raphinha",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Raphinha was born on 14 December 1996 in Porto Alegre, Brazil.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Raphael Dias Belloli (Portuguese pronunciation: [ʁɐˈfiɲɐ]; born 14 December 1996), known as Raphinha, is a Brazilian professional footballer who plays as a forward for La"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Raphinha_Brazil_V_Morocco_13_June_2026-133_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 6,
+   "topic": "hbo max",
+   "signal": "Google Trends GB 1000+",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know HBO Max launched on May 27, 2020?",
+    "The Gilded Age Season 4 is coming with 8 episodes!",
+    "HBO Max is the fifth most subscribed streaming service worldwide."
+   ],
+   "sources": [
+    [
+     "Everything We Know About ‘The Gilded Age’ Season 4 So Far",
+     "https://deadline.com/feature/the-gilded-age-season-4-news-updates-everything-we-know-1236748421/",
+     "Deadline",
+     "2026-10-20"
+    ],
+    [
+     "hbo max",
+     "https://en.wikipedia.org/wiki/HBO_Max",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "HBO Max first launched in the United States on May 27, 2020.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "HBO Max first launched in the United States on May 27, 2020."
+     }
+    },
+    {
+     "claim": "The Gilded Age fourth season will have a total of 8 episodes.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Gilded Age‘s fourth season will have a total of 8 episodes."
+     }
+    },
+    {
+     "claim": "The fourth season will premiere Sunday, November 1 in the 9p.m. ET and PT slot on HBO Max.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The fourth season will premiere Sunday, November 1 in the 9p.m. ET and PT slot on HBO Max."
+     }
+    },
+    {
+     "claim": "HBO Max is the fifth most-subscribed video on demand streaming media service, after Disney+, JioHotstar, Amazon Prime Video, and Netflix, with more than 140 million paid membership worldwide.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "HBO Max is the fifth most-subscribed video on demand streaming media service, after Disney+, JioHotstar, Amazon Prime Video, and Netflix, with more than 140 million"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:HBO_Max_(2025).svg"
+   ]
+  },
+  {
+   "n": 14,
+   "topic": "north west",
+   "signal": "Google Trends US 1000+",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Kim Kardashian dressed up as North West?",
+    "Discover how compass points are named in English."
+   ],
+   "sources": [
+    [
+     "Kim Kardashian Dressing Up as Daughter North West Is an Early Contender for Best Halloween Costume",
+     "https://www.billboard.com/music/rb-hip-hop/kim-kardashian-north-west-halloween-costume-2026-1236363913/",
+     "Billboard",
+     "2026-10-20"
+    ],
+    [
+     "Jackdaw North Sea gasfield to get go-ahead in blow to climate campaigners",
+     "https://www.theguardian.com/environment/2026/oct/20/jackdaw-north-sea-gas-field-to-get-go-ahead-in-blow-to-climate-campaigners",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "North Korea publishes photos of Kim Jong Un - why do rumours of his death keep coming back?",
+     "https://www.bbc.co.uk/news/articles/cmvg6qv1jdydo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-20"
+    ],
+    [
+     "Leicester to visit Oxford City in FA Cup first round - full draw",
+     "https://www.bbc.co.uk/sport/football/articles/ckwyqdvedj32o?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-19"
+    ],
+    [
+     "north west",
+     "https://en.wikipedia.org/wiki/North_west",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": [
+    "commons:File:Compass-rose-32-pt.svg"
+   ]
+  },
+  {
+   "n": 34,
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 75,179/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Tate McRae was born on July 1, 2003?"
+   ],
+   "sources": [
+    [
+     "Tate McRae",
+     "https://en.wikipedia.org/wiki/Tate_McRae",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Tate Rosner McRae was born on July 1, 2003, in Calgary, Alberta.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Tate Rosner McRae (born July 1, 2003) is a Canadian singer, songwriter, and dancer."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Tate_McRae_in_Manila_01_(cropped)_2.jpg"
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "larne vs linfield",
+   "signal": "Google Trends GB 200+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Larne face Linfield with Gary Haveron as manager?",
+    "Linfield sit in second place with twenty seven points.",
+    "Steven Gregg is named as the referee for the fixture."
+   ],
+   "sources": [
+    [
+     "Irish Premiership: Larne welcome Linfield to Inver Park",
+     "https://www.bbc.com/sport/football/live/crd9301y8g2xt",
+     "BBC",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Gary Haveron manages the home team Larne.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "home team, Larne Manager: Gary Haveron"
+     }
+    },
+    {
+     "claim": "David Healy manages the away team Linfield.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "away team, Linfield Manager: David Healy"
+     }
+    },
+    {
+     "claim": "Steven Gregg is the referee for the match.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "- Referee: - Steven Gregg"
+     }
+    },
+    {
+     "claim": "Larne are in 3rd place with 20 points in the league table.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "League position, Larne 3rd, Linfield 2ndTotal points, Larne 20, Linfield 27"
+     }
+    },
+    {
+     "claim": "Linfield are in 2nd place with 27 points in the league table.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "League position, Larne 3rd, Linfield 2ndTotal points, Larne 20, Linfield 27"
+     }
+    },
+    {
+     "claim": "Linfield defeated Larne 2 to 0 on the 11th of April 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Linfield 0 , Larne 2 on the 11th of April 2026LinfieldLarne11th of April 2026"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 31,
+   "topic": "nba league pass",
+   "signal": "Google Trends US 500+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know NBA League Pass saw a 30 percent increase in global subscribers?"
+   ],
+   "sources": [
+    [
+     "nba league pass",
+     "https://en.wikipedia.org/wiki/NBA_League_Pass",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "During the 2021 22 regular season, NBA League Pass saw a 30 percent increase in global subscribers.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "During the 2021–22 regular season, NBA League Pass saw a 30 percent increase in global subscribers.[2]"
+     }
+    }
+   ],
    "images": []
   }
  ]

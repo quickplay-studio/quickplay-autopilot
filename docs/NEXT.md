@@ -60,6 +60,35 @@ and read status/write_log.txt.
   model (Qwen2.5-7B Q4 on the 4-CPU runner) in 456 s (prompt 14 tokens/s, answer 5 tokens/s) but short (44 words), so
   it only ever writes as the last free resort and its boards go through the usual fixing round.
 
+## 21 October: every Short a test, more of what works, the ceiling learns
+Charlie (23:00 UK): make the money back; every Short a data test; more of the same when a Short performs; try every
+multi-part form and top 10s from the trending data; only free keys; Pexels issues no new keys; any legitimate source.
+- Series: the "series" test now has three arms (single, two parts, three parts) and applies to news too, on any pack
+  with 3 facts a part or more; parts link each other in the comments (engage.series_links) whatever their number.
+- Top 10s and true stories that ride the day's trending subjects: evergreen_packs() gets the top 12 trending topics
+  and asks for about half its ideas on them (trend_share(): the share follows drivers.csv, source "Trend-tied" against
+  "Evergreen"). Searches that already bring viewers (analytics/search_terms.csv, from YouTube Analytics' YT_SEARCH
+  detail) go into the same plan, so the writer makes more of what people type.
+- More of what performs: a breakout is now 2x typical with 150 views or more (config breakout_times, breakout_min_views);
+  when no fresh pack covers a breakout, followup_pack() builds one from the Short's own pages (Wikipedia first). Kinds,
+  categories, formats, looks, slots and writer models already weight themselves by their measured lift.
+- The upload ceiling learns (quota.py, status/upload_limit.json; config upload_limit_step 6, max 72, min 10): +6 after
+  each filled day with no refusal, down to what YouTube accepted when it refuses one (uploadLimitExceeded). The writer's
+  runs scale with it (runs are shares of the day), slots spread over 07:30 to 23:30, publish.py uploads up to it.
+- factpack_topics 30 (news supply for a bigger day). Pexels off in config (Pixabay and NASA carry the background video).
+- Not done, on purpose: reuploading other creators' viral clips. YouTube's reused-content rule rejects a Partner
+  Program application for exactly that, and Content ID claims or strikes follow; our own Shorts on the viral moments,
+  official press and trailer files, Commons and NASA footage, his own gameplay, and (on a separate channel) an official
+  clipping programme are the legitimate routes.
+
+What every Short tests (recorded on the board and scored in analytics/drivers.csv, models.json, looks.json, slots.json):
+writer model; kind (news, breaking, follow-up, remake, evergreen question, top list, true story, fiction); topic source
+(Google Trends, YouTube, Wikipedia, Apple Music, Football, Launches, Trend-tied, Evergreen, Follow-up, Requests);
+category and format mix; hook type and length; ending (loop, question, follow line); title wording (search phrase or
+curiosity); first frame (cover or photo); angle research shown or hidden; series (1, 2 or 3 parts); look (captions,
+voice, camera energy, colour grade, opening); music mood; posting slot; the alternative title swap after 24 hours;
+the channel's comment question and replies.
+
 ## Still open
 - Charlie's optional secrets: GROQ_API_KEY, CEREBRAS_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, CLAUDE_CODE_OAUTH_TOKEN
   (https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new).

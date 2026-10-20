@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 24 scheduled |
-| Tue 20 Oct | 5 public, 2 scheduled | 10 | 10 | ⏳ 5 of 24 so far, 2 more scheduled |
+| Tue 20 Oct | 6 public, 1 scheduled | 10 | 10 | ⏳ 6 of 24 so far, 1 more scheduled |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -67,7 +67,7 @@ scheduled · 24 s · music: death-duel · [script](../boards/done/QD-033.json) �
 ![QD-033](QD-033.jpg)
 
 ### Tue 20 Oct 20:50 · Bohemian Rhapsody: too long for radio? 🎸
-scheduled · 28 s · music: walking-the-wire · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
+private · 28 s · music: walking-the-wire · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
 
 ![QD-032](QD-032.jpg)
 

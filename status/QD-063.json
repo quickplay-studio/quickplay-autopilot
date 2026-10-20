@@ -70,7 +70,7 @@
    "t1": 20.39
   }
  ],
- "state": "scheduled",
+ "state": "pulled (private on YouTube)",
  "uploaded_at": "2026-10-20T19:50:55Z",
  "video": "ApvkxPKexGc",
  "url": "https://youtube.com/shorts/ApvkxPKexGc",
@@ -80,5 +80,8 @@
   "publish_at": "2026-10-21T09:50:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-063"
+ "social_release": "social-QD-063",
+ "pulled": "2026-10-20T21:50:15+00:00",
+ "instagram_skipped": "pulled",
+ "facebook_skipped": "pulled"
 }

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 20 Oct, 20:41): 6 of 1,000 subscribers · 3,115 of 10 million Shorts views in 90 days · 3,658 views in the last 24 hours (about 111,076 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Tue 20 Oct, 22:39): 6 of 1,000 subscribers · 3,209 of 10 million Shorts views in 90 days · 3,654 views in the last 24 hours (about 111,075 a day needed, 104 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Tue 20 Oct 20:14 (UK): 2 scheduled, 49 public, 9 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 21 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 24 scheduled |
-| Tue 20 Oct | 6 public, 1 scheduled | 10 | 10 | ⏳ 6 of 24 so far, 1 more scheduled |
+| Tue 20 Oct | 7 public | 10 | 10 | ⏳ 7 of 24 so far |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
@@ -56,7 +56,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 ## On the channel (latest first)
 
 ### Tue 20 Oct 21:30 · The first text message ever sent 📱
-scheduled · 24 s · music: death-duel · [script](../boards/done/QD-033.json) · [YouTube](https://youtube.com/shorts/SFiu3zE5KHs)
+private · 24 s · music: death-duel · [script](../boards/done/QD-033.json) · [YouTube](https://youtube.com/shorts/SFiu3zE5KHs)
 
 ![QD-033](QD-033.jpg)
 

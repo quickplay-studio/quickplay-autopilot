@@ -323,11 +323,11 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
                               headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
         except requests.exceptions.RequestException as e:
             slow[label] = slow.get(label, 0) + 1; return None, f"{label}: {type(e).__name__}"
-        t = r.text.lower()
+        t = r.text.lower() if not r.ok else ""
         if r.status_code == 429:
             ra = r.headers.get("retry-after") or ""
             ra = float(ra) if re.fullmatch(r"\d+(\.\d+)?", ra) else None
-            per_day = bool(re.search(r"per day|daily|\brpd\b|\btpd\b|requests_per_day|tokens_per_day|quota|credits", t)) or (ra or 0) > 120
+            per_day = bool(re.search(r"per[ _-]day|daily|\brpd\b|\btpd\b|quota|credits", t)) or (ra or 0) > 120
             if per_day or attempt == 2:
                 spent.add(label); notes[label] = "daily limit" if per_day else "per-minute limit, 3 tries"
                 return None, f"{label}: free quota used up"
@@ -336,8 +336,8 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
             spent.add(label); notes[label] = f"key refused ({r.status_code})"; return None, f"{label}: key refused"
         if r.status_code == 404:
             spent.add(label); return None, f"{label}: not offered (404)"
-        if r.status_code == 413 or "context" in t and "length" in t or "too large" in t:
-            return None, f"{label}: prompt too large"
+        if r.status_code == 413 or ("context" in t and "length" in t) or "too large" in t:
+            spent.add(label); notes[label] = "prompt too large"; return None, f"{label}: prompt too large"
         if r.status_code == 400 and label not in nojson and ("response_format" in t or "json" in t):
             nojson.add(label); continue
         if r.status_code >= 500:

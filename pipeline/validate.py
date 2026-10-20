@@ -151,8 +151,8 @@ def check(b, path=None):
         nums = set(f[1])
         if any(not isinstance(k, int) or not 1 <= k <= len(srcs) for k in nums):
             e.append(f"meta.facts: source numbers run from 1 to {len(srcs)} ({str(f[0])[:40]})")
-        elif len(nums) < 2:
-            e.append(f"meta.facts: needs 2 sources: {str(f[0])[:60]}")
+        elif not nums:
+            e.append(f"meta.facts: needs a source: {str(f[0])[:60]}")
 
     blob = json.dumps(b, ensure_ascii=False)
     if DASH.search(blob): e.append("no em dashes or en dashes anywhere")

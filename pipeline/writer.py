@@ -8,7 +8,7 @@ the last 14 days and anything Gemini would flag, and has Gemini write a board fr
 past board. pipeline/validate.py checks it; Gemini fixes what fails (twice at most); a board that still fails is dropped.
 Boards go to boards/queue for render.yml.
 """
-import csv, datetime as dt, json, os, pathlib, re, sys, urllib.parse
+import csv, datetime as dt, json, os, pathlib, random, re, sys, urllib.parse
 import requests
 from zoneinfo import ZoneInfo
 
@@ -272,19 +272,23 @@ def hot():
     return [r for _, r in sorted(rows, key=lambda t: -t[0])]
 
 
-EVERGREEN_PLAN = """You plan evergreen YouTube Shorts for Quickplay Daily (family-friendly, UK English): questions people
-type into YouTube search all year, not news. Suggest {n} questions, best first, in these categories (strongest first):
-{cats}. Each starts with Why, How, What, Who or Which, or asks for the first or the biggest; is about something famous (a
-game, film, show, song, artist, band, team, player, record or space mission); and is answered by one English Wikipedia
-article. Never politics, crime, health, money, adult themes or a person under 18. Nothing on these recent Shorts: {recent}.
-Return {{"items": [{{"question": "...", "category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment",
-"wikipedia": "the exact article title"}}]}}"""
+EVERGREEN_PLAN = """You plan evergreen YouTube Shorts for Quickplay Daily (family-friendly, UK English): things people search for
+and watch all year, not news, in these categories (strongest first): {cats}. Suggest {n} ideas, best first: {kinds}.
+- "question": a question people type into YouTube (Why, How, What, Who or Which, or the first or the biggest).
+- "top list": a top 10 (or top 5) ranking people search for ("Top 10 best-selling video games"), from a Wikipedia list
+  article that ranks them with figures.
+- "true story": a remarkable true story (an unlikely record, a famous mix-up, a comeback, a mystery solved), told from one
+  Wikipedia article about the event or the person.
+Each is about something famous (a game, film, show, song, artist, band, team, player, record or space mission) and comes
+from one English Wikipedia article. Never politics, crime, health, money, adult themes, deaths or a person under 18.
+Nothing on these recent Shorts: {recent}.
+Return {{"items": [{{"kind": "question, top list or true story", "idea": "the question, list or story in a few words",
+"category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment", "wikipedia": "the exact article title"}}]}}"""
 
-EVERGREEN_FACTS = """You check facts for a family-friendly Shorts channel. The Short answers a question people search on
-YouTube: "{q}". Below is one encyclopedia article. Using ONLY this article, list up to 10 facts that answer the question
-or make the answer more surprising: names, dates, numbers, records, firsts. For each fact:
+EVERGREEN_FACTS = """You check facts for a family-friendly Shorts channel. The Short is about: "{q}". Below is one
+encyclopedia article. Using ONLY this article, {how} For each fact:
 - "claim": one plain sentence in UK English. Copy names, numbers and dates exactly as the article writes them. No dashes.
-- "evidence": [{{"source": 1, "quote": the exact sentence from the article that states it, copied character for
+- "evidence": [{{"source": 1, "quote": the exact text from the article that states it, copied character for
   character, at most 40 words}}].
 Leave out opinions, rumours, and anything about politics, crime, health or money advice.
 "what_is_new": "". "hooks": up to 3 openings of 12 words or fewer, each built only on facts above.
@@ -292,10 +296,45 @@ Leave out opinions, rumours, and anything about politics, crime, health or money
 [1] Wikipedia · {title} · {url}
 {text}"""
 
+HOW = {"evergreen": "list up to 10 facts that answer the question or make the answer more surprising: names, dates, "
+                    "numbers, records, firsts.",
+       "top list": "list the ranked entries from the top down (number 1 first, up to number 10), one fact each with its "
+                   "rank, name and figure, as the article gives them.",
+       "true story": "list up to 12 facts that tell the story in order: who, where and when, what happened, the turn, and "
+                     "how it ended."}
+MIN_FACTS = {"evergreen": 3, "top list": 5, "true story": 5}
+
 EVERGREEN_NOTE = ("EVERGREEN: this Short answers the question in the topic for people searching it at any time of year. It "
                   "is not news: ignore the rule about what is new, and never say today, this week or recently. Title it as "
                   "the question people type, with the searchable name early. Its facts come from one encyclopedia article: "
                   "state them plainly and never name the source.")
+COUNTDOWN_NOTE = ("COUNTDOWN: count down the ranked list in the pack, from the lowest entry it gives (number 10, or as many as "
+                  "there are) to number 1, one or two entries a beat, each with its figure; tease number 1 in the hook without "
+                  "naming it and save it for the last beat. Use the \"countdown\" format and at most one bars graphic, for the "
+                  "top three. Title it as people search the list (\"Top 10 best-selling games ever\"). Its facts come from one "
+                  "encyclopedia article: state them plainly and never name the source.")
+STORY_NOTE = ("TRUE STORY: tell it in order like a storyteller: a gripping first line, the set-up, what happened, the turn and "
+              "how it ended. Use the \"story\" format. Real photos of the people and places in every beat (commons-search with "
+              "full names), never stock for people. Title it as the story (\"The day ...\", \"How ...\"). Its facts come from one "
+              "encyclopedia article: state them plainly and never name the source.")
+FICTION_NOTE = ("FICTION: this Short is an ORIGINAL short story (the topic is its premise), not news and not about real people, so "
+                "the facts rule and the real pictures rule don't apply. Tell it in the \"story\" format with a twist ending, 90 to "
+                "120 words, family-friendly. The title says it is a story (\"... | a short story\" before the emoji) and the "
+                "summary starts \"An original short story.\" Every beat's shots are stock video of satisfying, game-like motion, "
+                "the same kind all the way through (\"pixabay:video:parkour rooftop run\", \"pixabay:video:racing track onboard\", "
+                "\"pixabay:video:marble run\", \"pixabay:video:skateboard street ride\"), and \"background\" uses the same kind. "
+                "Copy meta.sources and meta.facts from the pack exactly.")
+FICTION_PLAN = """You write premises for original, family-friendly short stories told in 30 seconds on YouTube Shorts:
+gripping, a little eerie or funny, with a twist ending, set in worlds our viewers love (games, films, music, sport, space,
+the internet). No real people, brands or crimes, nothing too scary for children. Not like these recent ones: {recent}.
+Return {{"premise": "one sentence", "category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment"}}"""
+PART1_NOTE = ("SERIES: this is Part 1 of 2. Cover the first half (for a countdown, the lower half of the list; for a story, up "
+              "to the turning point) and end on a cliffhanger line that makes viewers want Part 2, such as \"Number 1 is in Part "
+              "2\" or \"What happened next is in Part 2\". End the title with \"(Part 1)\" before the emoji.")
+PART2_NOTE = ("SERIES: this is Part 2 of 2, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
+              "recap that makes sense on its own, then finish it (the top of the list, or what happened next) and land the "
+              "payoff. Don't repeat Part 1. End the title with \"(Part 2)\" before the emoji.")
+KIND_NOTE = {"evergreen": EVERGREEN_NOTE, "top list": COUNTDOWN_NOTE, "true story": STORY_NOTE, "fiction": FICTION_NOTE}
 
 
 def reserve_count():
@@ -304,36 +343,67 @@ def reserve_count():
         1 for f in (ROOT / "boards" / "queue").glob("QD-*.json") if board(f).get("reserve"))
 
 
-def evergreen_packs(n, seen):
-    """Up to n evergreen questions in the best categories, each as a fact pack from one Wikipedia article whose quotes
-    are checked word for word (factpack.verify), like the news packs."""
+def pick_kinds(n):
+    """Which evergreen kinds to write: questions, top lists and true stories, each in proportion to how its Shorts do
+    against typical (equal until the data can tell)."""
+    w = {k: min(2.0, max(0.5, lift_of("kind", k) or 1.0)) for k in ("evergreen", "top list", "true story")}
+    pool = [k for k, x in w.items() for _ in range(round(4 * x))]
+    random.Random(f"{NOW.date()}:{n}").shuffle(pool)
+    return pool[:n]
+
+
+def evergreen_packs(kinds, seen):
+    """Fact packs for evergreen Shorts of the given kinds in the best categories, each from one Wikipedia article whose
+    quotes are checked word for word (factpack.verify), like the news packs."""
     up = boosts()
     cats = sorted(CATS, key=lambda c: -up.get(c, 0))
     recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
-    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=n + 2, cats=", ".join(cats), recent=recent), None, timeout=100,
-                             temperature=0.8)
+    want = {k: kinds.count(k) for k in set(kinds)}
+    names = {"evergreen": "question", "top list": "top list", "true story": "true story"}
+    ask = ", ".join(f'{v} "{names[k]}"' for k, v in want.items())
+    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=", ".join(cats), recent=recent), None,
+                             timeout=100, temperature=0.8)
     items = ans.get("items") if isinstance(ans, dict) else None
     packs = []
     for it in items or []:
-        if len(packs) >= n or factpack.STATE.get("spent"): break
-        q, title = str(it.get("question") or "").strip(), str(it.get("wikipedia") or "").strip()
+        if not any(v > 0 for v in want.values()) or factpack.STATE.get("spent"): break
+        kind = {v: k for k, v in names.items()}.get(str(it.get("kind") or "").lower().strip(), "")
+        if want.get(kind, 0) <= 0: continue
+        q, title = str(it.get("idea") or it.get("question") or "").strip(), str(it.get("wikipedia") or "").strip()
         if not q or not title: continue
         url = "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"))
         try:
             txt, img = factpack.page_text(url, wiki=True)
             if len(txt) < 800: continue
-            got, _ = factpack.gemini(EVERGREEN_FACTS.format(q=q, title=title, url=url, text=txt), factpack.SCHEMA, timeout=100)
+            got, _ = factpack.gemini(EVERGREEN_FACTS.format(q=q, how=HOW[kind], title=title, url=url, text=txt), factpack.SCHEMA,
+                                     timeout=100)
         except Exception as e:
             print("evergreen:", title, str(e)[:120]); continue
         _, single = factpack.verify((got or {}).get("facts"), {1: factpack.norm(txt)}, {1: "wikipedia"})
-        if len(single) < 3: continue
+        if len(single) < MIN_FACTS[kind]: print(f"evergreen: {q}: only {len(single)} checked facts"); continue
         src = {"outlet": "Wikipedia", "title": title, "url": url, "published": "", "kind": "wikipedia"}
-        p = {"topic": q, "signal": "evergreen search question", "category": it.get("category", ""), "what_is_new": "",
-             "hooks": [factpack.undash(h) for h in (got or {}).get("hooks") or []][:3],
+        p = {"topic": q, "kind": kind, "signal": f"evergreen {names[kind]}", "category": it.get("category", ""),
+             "what_is_new": "", "hooks": [factpack.undash(h) for h in (got or {}).get("hooks") or []][:3],
              "sources": [[title, url, "Wikipedia", ""]], "verified": [], "one_source": single,
              "images": factpack.image_ideas([(src, txt, img)])}
-        if not covered(p, seen): packs.append(p)
+        if not covered(p, seen): packs.append(p); want[kind] -= 1
     return packs
+
+
+def fiction_pack(seen):
+    """A premise for an original short story (the fiction test), as a pack the writer can use: no facts to check, one
+    line saying it is fiction, and the channel as its source."""
+    try:
+        ans, _ = factpack.gemini(FICTION_PLAN.format(recent="; ".join(t for t, _, _ in seen[-30:])[:800]), None, timeout=60,
+                                 temperature=1.0, lite=True)
+    except Exception as e:
+        print("fiction:", str(e)[:120]); return None
+    premise = str(ans.get("premise") or "").strip() if isinstance(ans, dict) else ""
+    if not premise: return None
+    return {"topic": premise, "kind": "fiction", "signal": "fiction test", "category": ans.get("category") or "Entertainment",
+            "what_is_new": "", "hooks": [], "verified": [{"claim": "This is an original fictional story.", "sources": [1]}],
+            "sources": [["Quickplay Daily original story", "https://www.youtube.com/@quickplaydaily", "Quickplay Daily", ""]],
+            "one_source": [], "images": []}
 
 
 TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides, and keeps deciding as it grows
@@ -355,8 +425,10 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
                              "subject and the hook, over the subject's photo.",
                     "photo": "Beat 1 has no graphic: the subject's photo alone fills the first frame."},
     "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
+    "series": {"single": "", "two parts": ""},  # two Shorts with a cliffhanger between them (main(), emit_kind())
 }
-NOT_FOR = {"evergreen": {"title_search", "angles"}}     # an evergreen title is the question people search
+NOT_FOR = {"news": {"series"}, "breaking": {"series"}, "follow-up": {"series"}, "evergreen": {"title_search", "angles", "series"},
+           "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
 RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
 
 
@@ -388,8 +460,12 @@ def test_plan(k, kind="news"):
         arms = list(TESTS[t])
         picks[t] = arms[(k // len(still)) % len(arms)]
     picks["replies"] = "on" if k % 2 == 0 else "off"
+    return style_note(picks), picks
+
+
+def style_note(picks):
     note = " ".join(TESTS[t][a] for t, a in picks.items() if t in TESTS and TESTS[t].get(a))
-    return (f"STYLE FOR THIS SHORT: {note}" if note else ""), picks
+    return f"STYLE FOR THIS SHORT: {note}" if note else ""
 
 
 TRANSLATE = """Translate this YouTube Short's title and summary for viewers searching in Spanish ("es", Spain), Portuguese
@@ -491,7 +567,7 @@ def shape(b, picks):
         beats[0]["visual"] = {"type": "none"}
 
 
-def write_one(p, sid, day, prompt_head, extra=""):
+def write_one(p, sid, day, prompt_head, extra="", kind="news"):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6)
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
@@ -503,15 +579,16 @@ def write_one(p, sid, day, prompt_head, extra=""):
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
-        errs = errs + media_problems(b)
-        if not errs: errs = ["facts: " + x for x in fact_check(b, p)]     # only a clean board is worth a fact check
+        if kind == "fiction": warns = [w for w in warns if "stock" not in w and "real picture" not in w]   # stock is the point
+        else: errs = errs + media_problems(b)
+        if not errs and kind != "fiction": errs = ["facts: " + x for x in fact_check(b, p)]     # only a clean board is worth a fact check
         note = f"{model}, {len(warns)} warnings" + (f" ({'; '.join(warns)[:200]})" if warns else "") + (f", background: {added} from the category" if added else "")
         if not errs:
             if not warns or best: return b, note     # a warning flags the Short for a person, so it gets one fixing round
             best = (b, note)
         elif best: return best
         if attempt == 2: break
-        fix = (prompt_head + "\n\nTHE PACK\n" + pack_text(p) + "\n\nYOUR BOARD\n" + json.dumps(ans, ensure_ascii=False)
+        fix = (prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p) + "\n\nYOUR BOARD\n" + json.dumps(ans, ensure_ascii=False)
                + "\n\nIt fails these checks. Fix every one and return the whole corrected board as JSON:\n- " + "\n- ".join(errs + warns))
         ans, model = factpack.gemini(fix, None, timeout=150, temperature=0.3)
         if not isinstance(ans, dict): break
@@ -535,9 +612,10 @@ def main():
     state = {"n": next_id(), "angles": int(CFG.get("angle_searches_per_run", 2))}
     out.mkdir(parents=True, exist_ok=True)
 
-    def emit(p, note="", kind="news", reserve=False, fol=None):
+    def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None):
         sid = f"QD-{state['n']:03d}"
-        style, tests = test_plan(state["n"], kind)
+        if tests is None: style, tests = test_plan(state["n"], kind)
+        else: style = style_note(tests)
         extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
                   f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
         if tests.get("title_search") == "search phrase":
@@ -549,7 +627,7 @@ def main():
             if ang: extra.append("SHORTS ALREADY GETTING VIEWS ON THIS SUBJECT (learn which angle or question works, then "
                                  "find a fresher or better one; never copy their wording, footage or script): " + "; ".join(ang))
         try:
-            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x))
+            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind)
         except Exception as e:
             b, why = None, f"error: {e}"[:200]
         print(f"{p['topic']}: {why}")
@@ -560,11 +638,29 @@ def main():
         b.update(kind=kind, test=tests, source=source_of(p.get("signal")))
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
+        if series: b["series"] = series
         tr = translations(b)
         if tr: b["meta"]["translations"] = tr
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
         written.append(b); used.append(b.get("format", "")); state["n"] += 1
         return b
+
+    def emit_kind(p, kind, reserve=False):
+        """A Short of an evergreen kind, or two parts with a cliffhanger between them when its series test says so (never
+        from the reserve, which could release them out of order)."""
+        style, tests = test_plan(state["n"], kind)
+        if tests.get("series") != "two parts" or reserve:
+            if "series" in tests: tests["series"] = "single"
+            return emit(p, KIND_NOTE[kind], kind, reserve, tests=tests)
+        first = f"QD-{state['n']:03d}"
+        b1 = emit(p, KIND_NOTE[kind] + "\n\n" + PART1_NOTE, kind, tests=tests, series={"id": first, "part": 1, "of": 2})
+        if not b1: return None
+        said = " ".join(x.get("say", "") for x in b1.get("beats") or [])
+        b2 = emit(p, KIND_NOTE[kind] + "\n\n" + PART2_NOTE.format(title=b1["meta"]["title"], said=said), kind, tests=tests,
+                  series={"id": first, "part": 2, "of": 2})
+        if b2: return b1
+        (out / f"{first}.json").unlink(missing_ok=True); written.remove(b1); used.pop()      # no Part 2: no cliffhanger either
+        return emit(p, KIND_NOTE[kind], kind, tests={**tests, "series": "single"})
 
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
     rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
@@ -578,17 +674,24 @@ def main():
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
         if emit(p, note, "follow-up" if fol else "breaking" if breaking else "news", fol=fol) and fol: follow.remove(fol)
-    if not breaking and not factpack.STATE.get("spent"):    # evergreen search Shorts fill spare places and stock the reserve
+    if not breaking and not factpack.STATE.get("spent"):    # evergreen kinds fill spare places and stock the reserve
         spare = max(0, cap - len(written))
+        if run == "morning":                                  # the fiction test: a few original stories a day, as the data allows
+            for _ in range(min(spare, share("fiction", 1, 3))):
+                fp = fiction_pack(seen + [about(b) for b in written])
+                if not fp or factpack.STATE.get("spent"): break
+                before = len(written); emit_kind(fp, "fiction"); spare = max(0, spare - (len(written) - before))
         want = min(share("evergreen", 3, 6), spare + (2 if reserve_count() < 6 else 0))
         if want:
             try:
-                ever = evergreen_packs(want, seen + [about(b) for b in written])
+                ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written])
             except Exception as e:
                 ever = []; print("evergreen:", str(e)[:200])
             for p in ever:
                 if factpack.STATE.get("spent"): break
-                if emit(p, EVERGREEN_NOTE, "evergreen", reserve=spare <= 0) and spare > 0: spare -= 1
+                before = len(written)
+                emit_kind(p, p.get("kind", "evergreen"), reserve=spare <= 0)
+                if spare > 0: spare = max(0, spare - (len(written) - before))
     print(f"wrote {len(written)}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
                                          for b in written))
 

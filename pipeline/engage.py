@@ -179,6 +179,39 @@ def replies():
     print("comment replies posted:", posted)
 
 
+def series_links():
+    """Once both parts of a series are public, each gets a comment from the channel linking the other, so viewers of Part 1
+    find Part 2 and the other way round (50 units each, after the allowance guard)."""
+    import quota
+    yt = client()
+    if yt is None: return
+    now, sts, parts = dt.datetime.now(dt.timezone.utc), {}, []
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: st = json.loads(sp.read_text())
+        except Exception: continue
+        sts[st.get("id")] = (sp, st)
+    for f in (ROOT / "boards").glob("*/QD-*.json"):
+        try: b = json.loads(f.read_text())
+        except Exception: continue
+        s = b.get("series") or {}
+        if s.get("part") == 2 and s.get("id") in sts and b.get("id") in sts: parts.append((sts[s["id"]], sts[b["id"]]))
+    for (p1, st1), (p2, st2) in parts:
+        live = lambda st: st.get("video") and Y.utc(st.get("publish_at")) and Y.utc(st.get("publish_at")) <= now
+        if not (live(st1) and live(st2)): continue
+        for path, st, text in ((p1, st1, f"Part 2 is out now: https://youtube.com/shorts/{st2['video']}"),
+                               (p2, st2, f"Missed Part 1? https://youtube.com/shorts/{st1['video']}")):
+            e = st.setdefault("engage", {})
+            if e.get("series_link"): continue
+            if not quota.allow(50, "series link"): return
+            try:
+                r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": st["video"], "topLevelComment": {
+                    "snippet": {"textOriginal": text}}}}).execute()
+                e["series_link"] = r["id"]; quota.spend(50, "series link")
+            except Exception as ex:
+                e["series_link"] = f"error: {type(ex).__name__}"[:100]
+            path.write_text(json.dumps(st, indent=1, ensure_ascii=False)); print(st.get("id"), "series link:", e["series_link"])
+
+
 def engaged():
     """Creator comments, playlist adds and title swaps recorded in the status files (to count what a run spent)."""
     c = p = t = 0
@@ -197,3 +230,5 @@ if __name__ == "__main__":
         quota.spend(50 * sum(max(0, a - b) for a, b in zip(engaged(), before)) + 5, "engagement")
     try: replies()
     except Exception as e: print("comment replies:", str(e)[:200])
+    try: series_links()
+    except Exception as e: print("series links:", str(e)[:200])

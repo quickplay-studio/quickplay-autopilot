@@ -10,7 +10,8 @@ How it flows
   run_board -> fetch() downloads them (https, known hosts only), refuses anything under 720p or nearly black.
   render3   -> build() crops each to 9:16, blurs, darkens, cross-fades and writes JPEG frames the template plays.
 
-Clips come from Pexels first (PEXELS_API_KEY), Pixabay second (PIXABAY_API_KEY). A vertical clip is used as it is, any
+Clips come from Pixabay (PIXABAY_API_KEY, a free key) and NASA; Pexels (PEXELS_API_KEY) is off in config.json since it
+issues no new keys (Charlie, 21 October). A vertical clip is used as it is, any
 other is cropped to the middle 9:16. With no key, or no clip found, the Short simply renders without a background (the
 classic full-bleed look), so nothing waits on this layer.
 Standard library at import time; requests, numpy and PIL load only inside the functions that need them.
@@ -287,8 +288,8 @@ def pick(b, used, cfg):
     for a "nasa:" search) and up to 4 spares in case a download is refused. Everything taken is added to `used`
     (provider:id), which plan.py shares across the whole run. [] when no key works or nothing matches."""
     st = settings(cfg)
-    for env, name in (("PEXELS_API_KEY", "Pexels"), ("PIXABAY_API_KEY", "Pixabay")):
-        if not os.environ.get(env, "").strip(): note(f"{env} is not set, so {name} is skipped")
+    for env, name, on in (("PEXELS_API_KEY", "Pexels", st.get("pexels", True)), ("PIXABAY_API_KEY", "Pixabay", st.get("pixabay", True))):
+        if on and not os.environ.get(env, "").strip(): note(f"{env} is not set, so {name} is skipped")
     have = [parse(q) for q in tidy(b.get("background"))]
     extra = [p for p in (parse(q) for q in fallback(b)) if p and p[1] not in {h[1] for h in have}]
     first, spares = [], []

@@ -19,7 +19,7 @@ import datetime as dt, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
-import plan
+import plan, quota
 
 NOW = dt.datetime.now(dt.timezone.utc)
 READY, STATUS, RESERVE = ROOT / "boards" / "ready", ROOT / "status", ROOT / "boards" / "reserve"
@@ -127,7 +127,7 @@ def reserve_step(lines):
             except Exception: continue
             if b.get("created") == today and not b.get("reserve"): made += 1
     used = sum(1 for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json") if load_status(p.stem).get("from_reserve") == today)
-    want = int(plan.CFG.get("daily_limit", 24)) - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
+    want = quota.daily_limit() - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
     gap = min(int(plan.CFG.get("reserve_per_day", 3)) - used, want - made - used)
     if gap <= 0: return
     auto = plan.CFG.get("approval", "flagged") in ("flagged", "none")
@@ -189,7 +189,8 @@ def main():
         print("YouTube keys missing"); return
     yt = Y.client()
     taken, recent, _ = plan.schedule_state(NOW, yt)
-    capacity = max(0, plan.LIMIT - recent)
+    limit = max(plan.LIMIT, quota.learn(recent))      # the upload ceiling rises while YouTube accepts everything
+    capacity = max(0, limit - recent)
     next_slot = plan.slot_picker(NOW, taken)
     on_channel = {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(yt, limit=100)}
     print(f"approved: {len(todo)}, room today: {capacity}")
@@ -231,7 +232,8 @@ def main():
                 slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
             try:
                 vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
-            except Y.LimitReached:
+            except Y.LimitReached as e:
+                if "uploadLimitExceeded" in str(e): print("upload ceiling:", quota.refused(recent))
                 st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); capacity = 0; continue
             except Exception as e:
                 st["upload_attempts"] = st.get("upload_attempts", 0) + 1

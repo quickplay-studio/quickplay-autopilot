@@ -9,6 +9,7 @@ Writes analytics/ (read by the daily writer and the reviews, and uploaded to the
   hourly.csv     views gained each hour (UK time), by platform and by category: when the audience watches
   curves/        each Short's views hour by hour for its first week (then every few hours to 30 days)
   geo.csv, traffic.csv, audience.csv   where viewers are, how they found us, age and gender (channel and category)
+  search_terms.csv  what people typed into YouTube search to find our Shorts (the writer plans more of these)
   drivers.csv    what drives views: every choice (category, format, hook, length, time, look) against typical
   decisions.csv  every change made from the data, with the reason (written here when a result turns, and by reviews)
   summary.json   totals, monetisation progress (YouTube Partner Program, TikTok Creator Rewards) and the latest numbers
@@ -25,6 +26,7 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 OUT = ROOT / "analytics"
+CFG = json.loads((ROOT / "config.json").read_text())
 CACHE = OUT / "cache"          # the last full run's YouTube Analytics and Instagram insights, reused by fast runs
 FAST = "--fast" in sys.argv
 UK = ZoneInfo("Europe/London")
@@ -146,6 +148,8 @@ def audience(query, vids, ours):
     out["channel"]["countries"] = q("countries", "views,averageViewPercentage", dimensions="country", sort="-views", maxResults=25)
     out["channel"]["country_subs"] = q("country subscribers", "subscribersGained", dimensions="country", sort="-subscribersGained", maxResults=25)
     out["channel"]["traffic"] = q("traffic", "views", dimensions="insightTrafficSourceType", sort="-views")
+    out["channel"]["search_terms"] = q("search terms", "views", dimensions="insightTrafficSourceDetail",
+                                       filters="insightTrafficSourceType==YT_SEARCH", sort="-views", maxResults=25)
     out["channel"]["demographics"] = q("demographics", "viewerPercentage", dimensions="ageGroup,gender")
     cats = {}
     for vid, o in ours.items():
@@ -314,8 +318,8 @@ def views_at(curve, hours):
     return None
 
 def breakouts(rows, curves):
-    """analytics/breakouts.csv: Shorts 2 to 48 hours old running at 3x or more the views recent Shorts had at the same
-    age (from the hourly curves, 5 or more peers, at least 300 views). Views come in lopsided bursts, so the writer
+    """analytics/breakouts.csv: Shorts 2 to 48 hours old running at breakout_times (config.json, 2) or more the views
+    recent Shorts had at the same age (from the hourly curves, 5 or more peers, at least breakout_min_views, 150). Views come in lopsided bursts, so the writer
     follows these up while the topic is hot (CLAUDE.md, What gets views)."""
     out, recent = [], [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() <= 7 * 86400]
     for r in recent:
@@ -324,7 +328,7 @@ def breakouts(rows, curves):
         peers = [p for p in (views_at(curves.get(rkey(x)), age) for x in recent if x is not r) if p is not None]
         if len(peers) < 5: continue
         typ = max(1.0, statistics.median(peers)); ratio = r["yt_views"] / typ
-        if ratio >= 3 and r["yt_views"] >= 300:
+        if ratio >= float(CFG.get("breakout_times", 2)) and r["yt_views"] >= int(CFG.get("breakout_min_views", 150)):
             out.append({"short": r["short"], "title": r["title"], "category": r["category"], "hours_public": round(age, 1),
                         "views": r["yt_views"], "typical_at_this_age": round(typ), "times_typical": round(ratio, 1),
                         "youtube_url": r["youtube_url"]})
@@ -463,6 +467,9 @@ def write_audience(aud):
                  for r in a.get("demographics") or []]
     write_csv(OUT / "geo.csv", geo, ["scope", "country", "views", "share_pct"])
     write_csv(OUT / "traffic.csv", trf, ["scope", "source", "views", "share_pct"])
+    terms = [{"term": r.get("insightTrafficSourceDetail", ""), "views": int(float(r.get("views") or 0))}
+             for r in (aud.get("channel") or {}).get("search_terms") or [] if r.get("insightTrafficSourceDetail")]
+    if terms: write_csv(OUT / "search_terms.csv", terms, ["term", "views"])     # what people typed into YouTube to find us
     write_csv(OUT / "audience.csv", demo, ["scope", "age", "gender", "viewer_pct"])
 
 # ---------------- decisions: every change made from the data, with its reason ----------------

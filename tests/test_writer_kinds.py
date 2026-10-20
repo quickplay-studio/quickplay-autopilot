@@ -51,6 +51,7 @@ d = json.loads(F.OUT.read_text()); d["mode"] = "full"; d["topics"] = []     # no
 F.OUT = pathlib.Path(SCRATCH + "/facts_full.json"); F.OUT.write_text(json.dumps(d))
 F.page_text = lambda url, wiki=False: (TEXT, "")
 W.reserve_count = lambda: 9
+W.recent = lambda days=14: []      # the real queue must not count as "covered already"
 W.plan = lambda breaking=False, hint="": ("morning", __import__("datetime").date(2026, 10, 21), 6)
 orig = W.test_plan
 W.test_plan = lambda k, kind="news": (lambda st, t: (st, {**t, "series": "two parts"} if kind in ("top list", "true story", "fiction") else t))(*orig(k, kind))

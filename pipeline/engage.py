@@ -180,8 +180,8 @@ def replies():
 
 
 def series_links():
-    """Once both parts of a series are public, each gets a comment from the channel linking the other, so viewers of Part 1
-    find Part 2 and the other way round (50 units each, after the allowance guard)."""
+    """Once two neighbouring parts of a series are public, each gets a comment from the channel linking the other, so
+    viewers of Part 1 find Part 2 and the other way round (50 units each, after the allowance guard)."""
     import quota
     yt = client()
     if yt is None: return
@@ -194,12 +194,13 @@ def series_links():
         try: b = json.loads(f.read_text())
         except Exception: continue
         s = b.get("series") or {}
-        if s.get("part") == 2 and s.get("id") in sts and b.get("id") in sts: parts.append((sts[s["id"]], sts[b["id"]]))
-    for (p1, st1), (p2, st2) in parts:
+        n, prev = int(s.get("part") or 1), s.get("prev") or s.get("id")
+        if n > 1 and prev in sts and b.get("id") in sts: parts.append((n, sts[prev], sts[b["id"]]))
+    for n, (p1, st1), (p2, st2) in parts:
         live = lambda st: st.get("video") and Y.utc(st.get("publish_at")) and Y.utc(st.get("publish_at")) <= now
         if not (live(st1) and live(st2)): continue
-        for path, st, text in ((p1, st1, f"Part 2 is out now: https://youtube.com/shorts/{st2['video']}"),
-                               (p2, st2, f"Missed Part 1? https://youtube.com/shorts/{st1['video']}")):
+        for path, st, text in ((p1, st1, f"Part {n} is out now: https://youtube.com/shorts/{st2['video']}"),
+                               (p2, st2, f"Missed Part {n - 1}? https://youtube.com/shorts/{st1['video']}")):
             e = st.setdefault("engage", {})
             if e.get("series_link"): continue
             if not quota.allow(50, "series link"): return

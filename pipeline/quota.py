@@ -22,6 +22,66 @@ def today():
     return str(dt.datetime.now(PT).date())
 
 
+# The upload ceiling (Charlie, 21 October: as many Shorts a day as YouTube allows). YouTube publishes no number, so the
+# limit learns: it starts at config daily_limit, rises by upload_limit_step after each day YouTube accepted every upload
+# and the day was filled, up to upload_limit_max (what the API allowance leaves room for), and settles where YouTube
+# first refuses an upload (uploadLimitExceeded: the limit becomes what it accepted in those 24 hours).
+LIMIT_P = ROOT / "status" / "upload_limit.json"
+
+
+def _limit_state():
+    try: return json.loads(LIMIT_P.read_text())
+    except Exception: return {}
+
+
+def daily_limit():
+    """Shorts a day: the ceiling learned from YouTube when there is one (status/upload_limit.json), else config daily_limit."""
+    base = int(CFG.get("daily_limit", 24))
+    try: return max(1, int(_limit_state().get("limit") or base))
+    except (TypeError, ValueError): return base
+
+
+def _decide(change, why, evidence):
+    p = ROOT / "analytics" / "decisions.csv"
+    import csv
+    new = not p.exists()
+    with p.open("a", newline="") as f:
+        w = csv.writer(f)
+        if new: w.writerow(["date", "area", "change", "why", "evidence", "check_on", "by"])
+        d = dt.date.today()
+        w.writerow([str(d), "Uploads a day", change, why, evidence, str(d + dt.timedelta(days=7)), "quota.py (automatic)"])
+
+
+def refused(uploads_24h):
+    """YouTube refused an upload for its daily limit: the ceiling becomes what it accepted in the last 24 hours."""
+    st, now = _limit_state(), dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
+    new = max(int(CFG.get("upload_limit_min", 10)), int(uploads_24h))
+    old = daily_limit()
+    st.update(limit=new, refused_at=now, refused_with=int(uploads_24h))
+    LIMIT_P.parent.mkdir(parents=True, exist_ok=True); LIMIT_P.write_text(json.dumps(st, indent=1))
+    if new != old:
+        _decide(f"Upload ceiling {old} to {new}", f"YouTube refused an upload with {uploads_24h} uploads in the last 24 hours",
+                "uploadLimitExceeded from the YouTube Data API")
+    return new
+
+
+def learn(uploads_24h):
+    """Called every hour by publish.py: a day after the last change, if the day was filled and YouTube refused nothing in
+    the last 48 hours, the ceiling rises by upload_limit_step (up to upload_limit_max). Returns the limit."""
+    st, now = _limit_state(), dt.datetime.now(dt.timezone.utc)
+    limit, top, step = daily_limit(), int(CFG.get("upload_limit_max", 72)), int(CFG.get("upload_limit_step", 6))
+    def age(k):
+        try: return (now - dt.datetime.fromisoformat(st[k])).total_seconds() / 3600
+        except (KeyError, ValueError, TypeError): return 1e9
+    if limit >= top or age("refused_at") < 48 or age("raised_at") < 24 or int(uploads_24h) < limit - 1: return limit
+    new = min(top, limit + step)
+    st.update(limit=new, raised_at=now.isoformat(timespec="minutes"), raised_with=int(uploads_24h))
+    LIMIT_P.parent.mkdir(parents=True, exist_ok=True); LIMIT_P.write_text(json.dumps(st, indent=1))
+    _decide(f"Upload ceiling {limit} to {new}", f"YouTube accepted every upload with {uploads_24h} in 24 hours and no refusal in 48 hours",
+            "status/upload_limit.json")
+    return new
+
+
 def _mine():
     name = re.sub(r"[^a-z0-9]+", "-", os.environ.get("GITHUB_WORKFLOW", "local").lower()).strip("-") or "local"
     return DIR / f"{name}.json"
@@ -68,7 +128,7 @@ def uploads_left():
         try:
             if up and dt.datetime.fromisoformat(up.replace("Z", "+00:00")) >= start: done += 1
         except ValueError: pass
-    return max(0, int(CFG.get("daily_limit", 24)) + 1 - done)
+    return max(0, daily_limit() + 1 - done)
 
 
 def allow(units, what="extra"):

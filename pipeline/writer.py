@@ -139,9 +139,11 @@ def plan(breaking=False, hint=""):
             try: b = json.loads(p.read_text())
             except Exception: continue
             if b.get("created") == str(day) and not b.get("reserve"): made += 1
-    limit = int(CFG.get("daily_limit", 24)) - (1 if day.weekday() == 6 else 0)
-    per_run = share("breaking", 2, 4) if breaking else int((CFG.get("runs") or {}).get(run, 6))
-    if run == "afternoon": per_run = min(30, max(per_run, limit - made))     # the day's last run makes up anything the morning missed
+    import quota
+    limit = quota.daily_limit() - (1 if day.weekday() == 6 else 0)
+    runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
+    per_run = share("breaking", 2, 4) if breaking else max(1, -(-runs.get(run, 6) * quota.daily_limit() // max(1, sum(runs.values()))))
+    if run == "afternoon": per_run = min(max(30, limit * 3 // 4), max(per_run, limit - made))     # the day's last run makes up anything the morning missed
     cap = min(per_run, max(0, limit - made))
     if os.environ.get("WRITE_COUNT", "").strip().isdigit(): cap = int(os.environ["WRITE_COUNT"])
     return run, day, cap
@@ -253,7 +255,7 @@ def boosts(feature="category"):
 def source_of(signal):
     """Where a topic came from, from its pack's trend signal, so the data can learn which sources find winners."""
     s = str(signal or "").lower()
-    for key, name in (("request", "Requests"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
+    for key, name in (("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
                       ("wikipedia", "Wikipedia"), ("google trends", "Google Trends"), ("launch", "Rocket launches"),
                       ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"), ("apple", "Apple Music"),
                       ("chart", "Apple Music"), ("news", "News")):
@@ -268,12 +270,14 @@ def hot():
     if not p.exists(): return []
     done = {board(f).get("follows") for f in (ROOT / "boards").glob("*/QD-*.json")}
     rows = []
+    times = float(CFG.get("breakout_times", 2))
     for r in csv.DictReader(p.open()):
         try: x, h = float(r.get("times_typical") or 0), float(r.get("hours_public") or 999)
         except ValueError: continue
-        if x < 3 or h > 72 or r.get("short") in done: continue
+        if x < times or h > 72 or r.get("short") in done: continue
         f = next((ROOT / "boards").glob(f"*/{r.get('short')}.json"), None)
         r["_about"] = about(board(f)) if f else (r.get("title", ""), r.get("title", ""), set())
+        r["_board"] = f
         rows.append((x, r))
     return [r for _, r in sorted(rows, key=lambda t: -t[0])]
 
@@ -302,6 +306,35 @@ REMAKE_NOTE = ("REMAKE: our Short \"{title}\" on this subject got under half our
                "subject from this pack: a different angle, a different hook and a different title (never a repeat of that "
                "title's wording), opening on the most surprising fact the first Short didn't lead with.")
 
+def followup_pack(r, seen):
+    """A pack for a follow-up when no fresh pack covers the breakout's subject: the next chapter from the original Short's
+    own pages (its sources, Wikipedia first), checked word for word like an evergreen pack."""
+    b = board(r["_board"]) if r.get("_board") else {}
+    m = b.get("meta") or {}
+    urls = [u for _, u in [x[:2] for x in m.get("sources") or [] if isinstance(x, list) and len(x) > 1]]
+    urls = sorted(dict.fromkeys(urls), key=lambda u: "wikipedia.org" not in u)[:2]
+    q = f"More about {m.get('title', r.get('title', ''))}: the next chapter, the detail viewers ask about, or the history behind it"
+    facts, srcs, texts, img = [], [], {}, ""
+    for u in urls:
+        try:
+            txt, im = factpack.page_text(u, wiki="wikipedia.org" in u)
+            if len(txt) < 800: continue
+            got, _ = factpack.gemini(EVERGREEN_FACTS.format(q=q, how=HOW["evergreen"], title=m.get("title", ""), url=u, text=txt),
+                                     factpack.SCHEMA, timeout=100, lite=True)
+        except Exception as e:
+            print("follow-up pack:", u, str(e)[:120]); continue
+        n = len(srcs) + 1
+        _, single = factpack.verify((got or {}).get("facts"), {1: factpack.norm(txt)}, {1: "wikipedia" if "wikipedia.org" in u else "article"})
+        for f in single: f["sources"] = [n]
+        facts += single; srcs.append([m.get("title", ""), u, "Wikipedia" if "wikipedia.org" in u else "", ""]); img = img or im
+        if not img and im: img = im
+        if len(facts) >= 6: break
+    if len(facts) < 3: return None
+    return {"topic": str(m.get("title", r.get("title", ""))), "kind": "news", "signal": f"follow-up of {r.get('short')} ({r.get('times_typical')}x)",
+            "category": b.get("category") or r.get("category", ""), "what_is_new": "", "hooks": [], "sources": srcs,
+            "verified": [], "one_source": facts, "images": [f"commons:File:{img.rsplit('/', 1)[-1]}"] if img and "commons" in img else []}
+
+
 EVERGREEN_PLAN = """You plan evergreen YouTube Shorts for Quickplay Daily (family-friendly, UK English): things people search for
 and watch all year, not news, in these categories (strongest first): {cats}. Suggest {n} ideas, best first: {kinds}.
 - "question": a question people type into YouTube (Why, How, What, Who or Which, or the first or the biggest).
@@ -311,9 +344,16 @@ and watch all year, not news, in these categories (strongest first): {cats}. Sug
   Wikipedia article about the event or the person.
 Each is about something famous (a game, film, show, song, artist, band, team, player, record or space mission) and comes
 from one English Wikipedia article. Never politics, crime, health, money, adult themes, deaths or a person under 18.
-Nothing on these recent Shorts: {recent}.
+{trending}Nothing on these recent Shorts: {recent}.
 Return {{"items": [{{"kind": "question, top list or true story", "idea": "the question, list or story in a few words",
-"category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment", "wikipedia": "the exact article title"}}]}}"""
+"category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment", "wikipedia": "the exact article title",
+"trending": "the trending subject it rides, or empty"}}]}}"""
+SEARCH_ASK = ("Searches that already bring us viewers (people type these into YouTube; plan more Shorts those searches would "
+              "find, on the next question or the next entry of the same subject): {terms}. ")
+TRENDING_ASK = ("Subjects trending today: {subjects}. Make about {n} of the ideas ride these subjects (people are searching them "
+                "now): a top 10 ranking from a Wikipedia list about the subject, its series, franchise, team, artist or sport "
+                "(\"Top 10 best-selling Zelda games\", \"Top 10 highest-grossing video game films\"), or a remarkable true "
+                "story from its history; the rest on anything famous. ")
 
 EVERGREEN_FACTS = """You check facts for a family-friendly Shorts channel. The Short is about: "{q}". Below is one
 encyclopedia article. Using ONLY this article, {how} For each fact:
@@ -360,12 +400,25 @@ FICTION_PLAN = """You write premises for original, family-friendly short stories
 gripping, a little eerie or funny, with a twist ending, set in worlds our viewers love (games, films, music, sport, space,
 the internet). No real people, brands or crimes, nothing too scary for children. Not like these recent ones: {recent}.
 Return {{"premise": "one sentence", "category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment"}}"""
-PART1_NOTE = ("SERIES: this is Part 1 of 2. Cover the first half (for a countdown, the lower half of the list; for a story, up "
-              "to the turning point) and end on a cliffhanger line that makes viewers want Part 2, such as \"Number 1 is in Part "
-              "2\" or \"What happened next is in Part 2\". End the title with \"(Part 1)\" before the emoji.")
-PART2_NOTE = ("SERIES: this is Part 2 of 2, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
-              "recap that makes sense on its own, then finish it (the top of the list, or what happened next) and land the "
-              "payoff. Don't repeat Part 1. End the title with \"(Part 2)\" before the emoji.")
+PART_FIRST = ("SERIES: this is Part 1 of {of}. Cover the first part only (for a countdown, the lowest entries of the list; for "
+              "a story, up to the first turning point; for news, what happened first) and end on a cliffhanger line that makes "
+              "viewers want Part 2, such as \"Number 1 is in Part 2\" or \"What happened next is in Part 2\". End the title "
+              "with \"(Part 1)\" before the emoji.")
+PART_MID = ("SERIES: this is Part {n} of {of}, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
+            "recap that makes sense on its own, carry on (the middle of the list, or what happened next) without repeating "
+            "earlier parts, and end on a cliffhanger for Part {next}. End the title with \"(Part {n})\" before the emoji.")
+PART_LAST = ("SERIES: this is Part {n} of {of}, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
+             "recap that makes sense on its own, then finish it (the top of the list, or what happened next) and land the "
+             "payoff. Don't repeat the earlier parts. End the title with \"(Part {n})\" before the emoji.")
+PART1_NOTE, PART2_NOTE = PART_FIRST.format(of=2), PART_LAST.replace("{n}", "2").replace("{of}", "2")     # kept for tests
+
+
+def part_note(n, of, title="", said=""):
+    if n == 1: return PART_FIRST.format(of=of)
+    t = PART_LAST if n == of else PART_MID
+    return t.replace("{n}", str(n)).replace("{of}", str(of)).replace("{next}", str(n + 1)).replace("{title}", title).replace("{said}", said)
+
+
 KIND_NOTE = {"evergreen": EVERGREEN_NOTE, "top list": COUNTDOWN_NOTE, "true story": STORY_NOTE, "fiction": FICTION_NOTE}
 
 
@@ -384,16 +437,37 @@ def pick_kinds(n):
     return pool[:n]
 
 
-def evergreen_packs(kinds, seen):
+def search_terms(n=15):
+    """What people typed into YouTube search to find our Shorts (analytics/search_terms.csv), most views first."""
+    p = ROOT / "analytics" / "search_terms.csv"
+    if not p.exists(): return []
+    try: rows = sorted(csv.DictReader(p.open()), key=lambda r: -float(r.get("views") or 0))
+    except Exception: return []
+    return [r["term"].strip()[:50] for r in rows if r.get("term", "").strip()][:n]
+
+
+def trend_share():
+    """What share of the evergreen ideas ride the day's trending subjects: half until the data can tell (drivers.csv,
+    source "Trend-tied" against "Evergreen"), then between a quarter and three quarters."""
+    lift = lift_of("source", "Trend-tied")
+    return 0.5 if lift is None else min(0.75, max(0.25, 0.5 * lift))
+
+
+def evergreen_packs(kinds, seen, trending=()):
     """Fact packs for evergreen Shorts of the given kinds in the best categories, each from one Wikipedia article whose
-    quotes are checked word for word (factpack.verify), like the news packs."""
+    quotes are checked word for word (factpack.verify), like the news packs. `trending`: the day's trending subjects
+    (topic names): a share of the ideas (trend_share) are top 10s and true stories that ride them."""
     up = boosts()
     cats = sorted(CATS, key=lambda c: -up.get(c, 0))
     recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
     want = {k: kinds.count(k) for k in set(kinds)}
     names = {"evergreen": "question", "top list": "top list", "true story": "true story"}
     ask = ", ".join(f'{v} "{names[k]}"' for k, v in want.items())
-    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=", ".join(cats), recent=recent), None,
+    subjects = [re.sub(r"\s+", " ", str(t)).strip()[:60] for t in trending if str(t).strip()][:12]
+    tr = TRENDING_ASK.format(subjects="; ".join(subjects), n=max(1, round(trend_share() * len(kinds)))) if subjects else ""
+    terms = search_terms()
+    if terms: tr += SEARCH_ASK.format(terms="; ".join(terms))
+    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=", ".join(cats), recent=recent, trending=tr), None,
                              timeout=100, temperature=0.8)
     items = ans.get("items") if isinstance(ans, dict) else None
     packs = []
@@ -414,7 +488,8 @@ def evergreen_packs(kinds, seen):
         _, single = factpack.verify((got or {}).get("facts"), {1: factpack.norm(txt)}, {1: "wikipedia"})
         if len(single) < MIN_FACTS[kind]: print(f"evergreen: {q}: only {len(single)} checked facts"); continue
         src = {"outlet": "Wikipedia", "title": title, "url": url, "published": "", "kind": "wikipedia"}
-        p = {"topic": q, "kind": kind, "signal": f"evergreen {names[kind]}", "category": it.get("category", ""),
+        rides = str(it.get("trending") or "").strip()[:80]
+        p = {"topic": q, "kind": kind, "signal": f"evergreen {names[kind]}" + (f" (trending: {rides})" if rides else ""), "category": it.get("category", ""),
              "what_is_new": "", "hooks": [factpack.undash(h) for h in (got or {}).get("hooks") or []][:3],
              "sources": [[title, url, "Wikipedia", ""]], "verified": [], "one_source": single,
              "images": factpack.image_ideas([(src, txt, img)])}
@@ -457,9 +532,9 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
                              "subject and the hook, over the subject's photo.",
                     "photo": "Beat 1 has no graphic: the subject's photo alone fills the first frame."},
     "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
-    "series": {"single": "", "two parts": ""},  # two Shorts with a cliffhanger between them (main(), emit_kind())
+    "series": {"single": "", "two parts": "", "three parts": ""},  # Shorts with a cliffhanger between them (emit_kind()); a rich pack only
 }
-NOT_FOR = {"news": {"series"}, "breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
+NOT_FOR = {"breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
            "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
 RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
 
@@ -708,22 +783,29 @@ def main():
         written.append(b); used.append(b.get("format", "")); state["n"] += 1
         return b
 
-    def emit_kind(p, kind, reserve=False):
-        """A Short of an evergreen kind, or two parts with a cliffhanger between them when its series test says so (never
-        from the reserve, which could release them out of order)."""
+    def emit_kind(p, kind, reserve=False, note="", fol=None):
+        """A Short of any kind, or two or three parts with a cliffhanger between them when its series test says so and the
+        pack has 3 facts or more a part (never from the reserve, which could release them out of order, and never a
+        follow-up or breaking news)."""
         style, tests = test_plan(state["n"], kind)
-        if tests.get("series") != "two parts" or reserve:
+        base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
+        facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
+        parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
+        if parts < 2 or reserve or fol:
             if "series" in tests: tests["series"] = "single"
-            return emit(p, KIND_NOTE[kind], kind, reserve, tests=tests)
-        first = f"QD-{state['n']:03d}"
-        b1 = emit(p, KIND_NOTE[kind] + "\n\n" + PART1_NOTE, kind, tests=tests, series={"id": first, "part": 1, "of": 2})
-        if not b1: return None
-        said = " ".join(x.get("say", "") for x in b1.get("beats") or [])
-        b2 = emit(p, KIND_NOTE[kind] + "\n\n" + PART2_NOTE.format(title=b1["meta"]["title"], said=said), kind, tests=tests,
-                  series={"id": first, "part": 2, "of": 2})
-        if b2: return b1
-        (out / f"{first}.json").unlink(missing_ok=True); written.remove(b1); used.pop()      # no Part 2: no cliffhanger either
-        return emit(p, KIND_NOTE[kind], kind, tests={**tests, "series": "single"})
+            return emit(p, base, kind, reserve, fol=fol, tests=tests)
+        first, made = f"QD-{state['n']:03d}", []
+        for n in range(1, parts + 1):
+            prev = made[-1] if made else None
+            said = " ".join(x.get("say", "") for x in prev.get("beats") or []) if prev else ""
+            b = emit(p, (base + "\n\n" if base else "") + part_note(n, parts, prev["meta"]["title"] if prev else "", said), kind,
+                     tests=tests, series={"id": first, "part": n, "of": parts, **({"prev": prev["id"]} if prev else {})})
+            if not b: break
+            made.append(b)
+        if len(made) == parts: return made[0]
+        for b in made:                                             # a part missing: no cliffhangers either
+            (out / f"{b['id']}.json").unlink(missing_ok=True); written.remove(b); used.pop()
+        return emit(p, base, kind, tests={**tests, "series": "single"})
 
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
     rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
@@ -737,7 +819,17 @@ def main():
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
-        if emit(p, note, "follow-up" if fol else "breaking" if breaking else "news", fol=fol) and fol: follow.remove(fol)
+        if fol or breaking: got = emit(p, note, "follow-up" if fol else "breaking", fol=fol)
+        else: got = emit_kind(p, "news")
+        if got and fol: follow.remove(fol)
+    for fol in follow[:1]:                                    # the strongest breakout with no pack today: one from its own pages
+        if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        p = followup_pack(fol, seen)
+        if not p: print("follow-up: no pack for", fol.get("short")); continue
+        note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
+                "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
+                "repeat, with a title tied to the original.")
+        if emit(p, note, "follow-up", fol=fol): follow.remove(fol)
     if run == "morning" and len(written) < cap and not factpack.STATE.get("spent") and not late():   # one remake a day
         for w in weak():
             p = next((p for _, p in sorted(topics, key=rank) if covered(p, [w["_about"]])), None)      # still trending
@@ -756,7 +848,7 @@ def main():
         want = min(20, spare + (2 if reserve_count() < 6 else 0))      # every place the news left, so each run writes its full number
         if want and not late():
             try:
-                ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written])
+                ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written], [p["topic"] for _, p in topics[:12]])
             except Exception as e:
                 ever = []; print("evergreen:", str(e)[:200])
             for p in ever:

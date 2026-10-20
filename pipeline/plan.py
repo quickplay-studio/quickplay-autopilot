@@ -25,7 +25,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 UK = ZoneInfo("Europe/London")
 CFG = json.loads((ROOT / "config.json").read_text())
-LIMIT = int(os.environ.get("DAILY_LIMIT", CFG.get("upload_limit_24h", CFG.get("daily_limit", 10))))
+import quota
+LIMIT = int(os.environ.get("DAILY_LIMIT") or max(quota.daily_limit(), int(CFG.get("upload_limit_24h", CFG.get("daily_limit", 10)))))
 LEAD = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
 
 def _mins(hm):
@@ -58,14 +59,15 @@ def learned_slots(n):
     return None
 
 def day_slots(day):
-    n = int(CFG.get("slots_per_day", 10))
+    n = max(int(CFG.get("slots_per_day", 10)), quota.daily_limit())      # the learned ceiling needs a slot for every Short
     times = learned_slots(n)
     if times:
         return [dt.datetime(day.year, day.month, day.day, *map(int, t.split(":")), tzinfo=UK).astimezone(dt.timezone.utc)
                 for t in times]
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
-    step = dt.timedelta(minutes=int(CFG.get("slot_every_minutes", 90)))
+    every = int(CFG.get("slot_every_minutes", 90)) if n <= int(CFG.get("slots_per_day", 10)) else max(8, (16 * 60) // n)
+    step = dt.timedelta(minutes=every)              # more than the configured slots: spread over the same 16 hours
     return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
 
 def schedule_state(now, yt=None):

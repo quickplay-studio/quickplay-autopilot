@@ -320,9 +320,11 @@ STORY_NOTE = ("TRUE STORY: tell it in order like a storyteller: a gripping first
 FICTION_NOTE = ("FICTION: this Short is an ORIGINAL short story (the topic is its premise), not news and not about real people, so "
                 "the facts rule and the real pictures rule don't apply. Tell it in the \"story\" format with a twist ending, 90 to "
                 "120 words, family-friendly. The title says it is a story (\"... | a short story\" before the emoji) and the "
-                "summary starts \"An original short story.\" Every beat's shots are stock video of satisfying, game-like motion, "
-                "the same kind all the way through (\"pixabay:video:parkour rooftop run\", \"pixabay:video:racing track onboard\", "
-                "\"pixabay:video:marble run\", \"pixabay:video:skateboard street ride\"), and \"background\" uses the same kind. "
+                "summary starts \"An original short story.\" Every beat's shots are game footage: write each src as \"gameplay:\" plus 2 to 4 words of "
+                "satisfying, game-like motion (our own gameplay recordings play when we have them, otherwise stock video of those "
+                "words), the same kind all the way through (\"gameplay:parkour rooftop run\", \"gameplay:racing track onboard\", "
+                "\"gameplay:marble run\", \"gameplay:skateboard street ride\"), and \"background\" searches the same kind in plain "
+                "words (no prefix). "
                 "Copy meta.sources and meta.facts from the pack exactly.")
 FICTION_PLAN = """You write premises for original, family-friendly short stories told in 30 seconds on YouTube Shorts:
 gripping, a little eerie or funny, with a twist ending, set in worlds our viewers love (games, films, music, sport, space,

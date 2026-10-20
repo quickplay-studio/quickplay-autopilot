@@ -18,6 +18,8 @@ VOICES = {
     "H2": {"ref": "voices/george_ref.wav", "exag": 0.85, "cfg": 0.4},   # British male, more dramatic
     "G": {"ref": "voices/emma_ref.wav", "exag": 0.6, "cfg": 0.4},       # British female
 }
+try: VOICES.update(json.loads((HERE / "voices" / "voices.json").read_text()))    # the voice bank (make_voices.py)
+except (OSError, ValueError): pass
 PRONOUNCE = json.loads((HERE / "pronounce.json").read_text())
 
 def speakable(text):

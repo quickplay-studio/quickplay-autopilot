@@ -208,6 +208,41 @@ def scene_cuts(path):
     path.with_suffix(".cuts.json").write_text(json.dumps(cuts))
     return cuts
 
+GAMEPLAY, _CLIPS = HERE / "media" / "gameplay", []
+CLIP_EXT = (".mp4", ".mov", ".m4v", ".webm", ".mkv")
+
+
+def gameplay_clip(sid, k):
+    """Charlie's own gameplay recordings (video files attached to the repo's "gameplay" release: Minecraft parkour and the
+    like, which Minecraft's rules allow in monetised videos): a clip chosen by the Short and the shot, and a start point
+    in it. None while there are none, so the shot falls back to stock video of the same words."""
+    if not _CLIPS:
+        _CLIPS.append([])
+        try:
+            repo = os.environ.get("GITHUB_REPOSITORY") or "quickplay-studio/quickplay-autopilot"
+            tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+            r = requests.get(f"https://api.github.com/repos/{repo}/releases/tags/gameplay", timeout=30,
+                             headers={"Authorization": f"Bearer {tok}"} if tok else {})
+            if r.ok: _CLIPS[0] = sorted((a["name"], a["browser_download_url"]) for a in r.json().get("assets", [])
+                                        if a["name"].lower().endswith(CLIP_EXT))
+        except Exception as e:
+            print(f"  gameplay list: {e}", file=sys.stderr)
+    if not _CLIPS[0]: return None
+    h = int(hashlib.sha1(f"{sid}:{k}".encode()).hexdigest(), 16)
+    name, url = _CLIPS[0][h % len(_CLIPS[0])]
+    GAMEPLAY.mkdir(parents=True, exist_ok=True)
+    f = GAMEPLAY / name
+    if not f.exists():
+        with requests.get(url, stream=True, timeout=300) as r:
+            r.raise_for_status()
+            with open(f, "wb") as out:
+                for chunk in r.iter_content(1 << 20): out.write(chunk)
+    try: dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)],
+                                    capture_output=True, text=True).stdout.strip())
+    except ValueError: dur = 60.0
+    return f, (h // 7) % max(1, int(dur) - 20)
+
+
 def resolve(sb):
     sid = sb["id"]; d = HERE / "media" / sid; d.mkdir(parents=True, exist_ok=True)
     used, cache, n = set(), {}, 0
@@ -225,12 +260,18 @@ def resolve(sb):
                 elif kind == "page": url, credit, source = page_image(rest)
                 elif kind == "openverse": url, credit, source = openverse(rest, used)
                 elif kind == "nasa": url, credit, source = nasa(*rest.split(":", 1), used)
+                elif kind == "gameplay":     # our own recordings when there are any, else stock video of the words
+                    g = gameplay_clip(sid, n)
+                    if g:
+                        n += 1; shot.update(src=os.path.relpath(g[0], HERE), credit="Quickplay Daily", source="own gameplay recording", start=g[1])
+                        continue
+                    url, credit, source = pixabay("video", rest or "parkour rooftop run", used)
                 else: continue   # already local
                 stem = f"{n:02d}_" + hashlib.sha1(url.encode()).hexdigest()[:8]; n += 1
                 f = download(url, d, stem)
                 if shot.get("cuts") == "auto" and f.suffix in {".mp4", ".mov", ".webm", ".m4v"}: scene_cuts(f)
                 res = {"src": os.path.relpath(f, HERE), "credit": credit, "source": source}
-                if not src.startswith("pixabay:"): cache[src] = res   # same image reused on purpose; stock never repeats
+                if kind not in ("pixabay", "gameplay"): cache[src] = res   # same image reused on purpose; stock never repeats
                 shot.update(res)
             except Exception as e:
                 print(f"  media: {src} failed: {e}", file=sys.stderr)

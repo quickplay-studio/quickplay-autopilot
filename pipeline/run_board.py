@@ -158,7 +158,7 @@ def main():
     status["title"] = sb.get("meta", {}).get("title")
     try:
         import fetch_media, background as BG
-        planned_real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or [] if not str(sh.get("src", "")).startswith("pixabay:"))
+        planned_real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or [] if not str(sh.get("src", "")).startswith(("pixabay:", "gameplay:")))
         sb = fetch_media.resolve(sb)
         # the video behind the Short: clips picked by plan.py (background.py), downloaded here. With none, the Short renders as before.
         cfg = json.loads((ROOT / "config.json").read_text())
@@ -171,7 +171,7 @@ def main():
         if BG.wanted(sb, cfg) and not sb.get("bg_clips"):
             status["background_note"] = "no background video (no clip found or downloaded): rendered with full-screen pictures"
         real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or []
-                   if "pixabay" not in (str(sh.get("source", "")) + str(sh.get("credit", ""))).lower())
+                   if not any(w in (str(sh.get("source", "")) + str(sh.get("credit", ""))).lower() for w in ("pixabay", "gameplay")))
         flags = list(job.get("hold") or [])
         notes = sb.pop("_media_notes", [])
         if notes: status["media_notes"] = notes

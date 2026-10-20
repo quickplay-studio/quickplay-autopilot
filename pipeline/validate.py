@@ -12,7 +12,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"}
 VISUALS = {"none", "title", "stat", "cards", "quote", "date", "versus", "timeline", "bars"}
 MODES = {"schedule", "private", "none", "dry"}
-SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+|page:https://.+|openverse:.+|nasa:(video|image):.+)$")
+SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+|page:https://.+|openverse:.+|nasa:(video|image):.+|gameplay:.*)$")
 DASH = re.compile("[—–]")
 # Clear signs of an excluded topic: the board is rejected.
 BANNED = re.compile(r"\b(elections?|parliament\w*|politicians?|political|murder\w*|terroris\w*|porn\w*|onlyfans|nsfw|casinos?|"
@@ -82,10 +82,10 @@ def check(b, path=None):
             if not SRC.match(src): e.append(f"beat {i}: src {src!r} is not a supported form")
             if src.startswith("url:") and not (s.get("credit") and s.get("source")): e.append(f"beat {i}: url shots need credit and source")
     allshots = [str(s.get("src", "")) for bt in beats for s in bt.get("shots") or []]
-    stock = [x for x in allshots if x.startswith("pixabay:")]
+    stock = [x for x in allshots if x.startswith(("pixabay:", "gameplay:"))]
     if allshots and len(stock) > max(1, len(allshots) // 5):
         w.append(f"shots: {len(stock)} of {len(allshots)} are stock; real pictures of the subject first (stock at most 1 in 5)")
-    if any(str(s.get("src", "")).startswith("pixabay:") for s in (beats[0].get("shots") or []) if beats):
+    if any(str(s.get("src", "")).startswith(("pixabay:", "gameplay:")) for s in (beats[0].get("shots") or []) if beats):
         w.append("beat 0: the hook needs a real picture of the subject, not stock")
     if not 50 <= total <= 135: e.append(f"narration: {total} words, needs 55 to 125 (20 to 45 seconds)")
     elif not 55 <= total <= 125: w.append(f"narration: {total} words, best between 55 and 125")

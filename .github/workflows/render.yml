@@ -81,6 +81,7 @@ jobs:
       - name: Render
         env:
           JOB_JSON: ${{ toJson(matrix.job) }}
+          GITHUB_TOKEN: ${{ github.token }}      # lists our own gameplay recordings (release "gameplay")
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           CB_CKPT: ${{ github.workspace }}/models/chatterbox
           TQDM_DISABLE: '1'

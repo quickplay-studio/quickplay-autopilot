@@ -1,0 +1,61 @@
+name: voicebank
+# New narrators to test (pipeline/make_voices.py). Kokoro speaks a reference clip in each new voice; Chatterbox, the engine
+# every Short uses, reads a sample in every voice for Charlie to hear (review/voices/en_*.mp3); each new voice that reads
+# clearly joins the voice options in templates/looks.json, and the looks system tests it on real Shorts.
+# Run it by pushing requests/voicebank.txt.
+on:
+  push:
+    branches: [main]
+    paths: ['requests/voicebank*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }        # Kokoro needs Python 3.12 or older
+      - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
+      - run: |
+          pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q kokoro==0.9.4 soundfile
+      - run: python pipeline/make_voices.py refs
+      - uses: actions/upload-artifact@v4
+        with: { name: voice-refs, path: pipeline/voices/, retention-days: 3 }
+
+  samples:
+    needs: refs
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/download-artifact@v4
+        with: { name: voice-refs, path: pipeline/voices }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13', cache: pip, cache-dependency-path: pipeline/requirements.txt }
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: |
+          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -q -r pipeline/requirements.txt
+          pip install -q --no-deps chatterbox-tts==0.1.7
+      - uses: actions/cache@v4
+        with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
+      - run: python pipeline/get_model.py models/chatterbox
+      - env:
+          CB_CKPT: ${{ github.workspace }}/models/chatterbox
+          TQDM_DISABLE: '1'
+        run: python pipeline/make_voices.py samples
+      - run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add -A pipeline/voices templates/looks.json review/voices
+          git commit -q -m "Voice bank $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

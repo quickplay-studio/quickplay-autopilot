@@ -1,287 +1,1190 @@
 {
- "date": "2026-10-19",
- "built": "2026-10-19T19:09+00:00",
+ "date": "2026-10-20",
+ "built": "2026-10-20T04:58+00:00",
  "model": "gemini-3.5-flash-lite",
  "mode": "full",
- "errors": [
-  "Street Fighter (2026 film): gemini-2.5-flash: 404 {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use"
- ],
+ "errors": [],
  "topics": [
   {
-   "n": 28,
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 153,028/h",
-   "category": "Music",
-   "what_is_new": "",
+   "n": 3,
+   "topic": "cnn",
+   "signal": "Google Trends GB 200+",
+   "category": "",
+   "what_is_new": "Christiane Amanpour announced on 19 October 2026 that she is leaving CNN after 43 years.",
    "hooks": [
-    "Olivia Rodrigo released a game-show parody video for her Expectations remix.",
-    "David Byrne makes a surprise cameo as a game-show host."
+    "Christiane Amanpour is leaving CNN after 43 years.",
+    "CNN launched as the first 24-hour all-news television channel.",
+    "After joining in 1983, Christiane Amanpour will leave CNN in June."
    ],
    "sources": [
     [
-     "Artists Behind Olivia Rodrigo ‘Expectations’ Music Video Debunk AI Accusations",
-     "https://www.rollingstone.com/music/music-news/olivia-rodrigo-expectations-ai-debunk-1235644671/",
-     "Rolling Stone",
+     "Christiane Amanpour announces she’s leaving CNN after 43 years",
+     "https://www.theguardian.com/media/2026/oct/19/christiane-amanpour-leaving-cnn",
+     "Guardian",
      "2026-10-19"
     ],
     [
-     "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "Billboard",
-     "2026-10-14"
+     "CNN anchor Christiane Amanpour to leave network after 43 years",
+     "https://www.bbc.co.uk/news/articles/c83vqzkrr9zeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
     ],
     [
-     "Olivia Rodrigo",
-     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "cnn",
+     "https://en.wikipedia.org/wiki/CNN",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "You Seem Pretty Sad for a Girl So in Love is the third studio album by Olivia Rodrigo.",
+     "claim": "Christiane Amanpour is leaving CNN after 43 years.",
      "sources": [
-      2,
-      3
+      1,
+      2
      ],
      "evidence": {
-      "2": "The track is part of Rodrigo’s third studio album, You Seem Pretty Sad for a Girl So in Love, which debuted at No. 1 on",
-      "3": "Her next two studio albums, Guts (2023) and You Seem Pretty Sad for a Girl So in Love (2026), produced the US number-one singles \"Vampire\""
+      "1": "Christiane Amanpour, one of CNN’s most decorated and venerated journalists, is leaving the network after 43 years, she said in a statement on Monday.",
+      "2": "\"After many months of thought and a few sleepless nights, I have decided to separate from CNN, my partner of 43 fantastic years!\" Amanpour said"
+     }
+    },
+    {
+     "claim": "Amanpour is CNN's chief international anchor.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Amanpour, who began working for the then-fledging network as an assistant on the international assignment desk in 1983 and is now its chief international anchor,",
+      "2": "CNN's chief international anchor, Christiane Amanpour, has announced she will leave the organisation next year after more than four decades."
+     }
+    },
+    {
+     "claim": "Amanpour began working for CNN in 1983 as an assistant on the international assignment desk.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Amanpour, who began working for the then-fledging network as an assistant on the international assignment desk in 1983 and is now its chief international anchor,",
+      "2": "Amanpour began working for CNN in 1983 as an assistant on the international news desk, and went on to become one of the network's best-known"
+     }
+    },
+    {
+     "claim": "Amanpour is 68 years old.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Amanpour, 68, has been open about her ongoing treatment for ovarian cancer, which she was diagnosed with in 2021.",
+      "2": "The 68-year-old said she \"looks forward to interesting new projects down the line, and will always be rooting for CNN and maintaining its history of"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Olivia Rodrigo unveiled a music video for the Chappell Roan assisted remix of Expectations on Friday.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On Friday, Olivia Rodrigo unveiled a music video for the Chappell Roan-assisted remix of “Expectations,” though some viewers believed AI may have been involved in"
-     }
-    },
-    {
-     "claim": "Jack Harrison led the analog treatment for Expectations.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Jack Harrison led the analog treatment for “Expectations,” which gives the video its retro, low-fi flair."
-     }
-    },
-    {
-     "claim": "David Byrne appears as a game show host in the Expectations music video.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It also features a wealth of cameos: David Byrne appears as a game-show host, while drag queen Aquaria and punk duo the Venus Twins appear"
-     }
-    },
-    {
-     "claim": "Expectations debuted at No. 20 on the Billboard Hot 100 in June 2026.",
+     "claim": "Amanpour has presented her own nightly interview program on CNN International since 2009.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "“Expectations” has already had its individual moment on the charts, debuting at No. 20 on the Billboard Hot 100 in June 2026."
+      "2": "She has presented her own nightly interview program on CNN International since 2009."
+     }
+    },
+    {
+     "claim": "Amanpour will end her show Amanpour in May and leave CNN at the end of June.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Amanpour, who began working for the then-fledging network as an assistant on the international assignment desk in 1983 and is now its chief international anchor,"
+     }
+    },
+    {
+     "claim": "Cable News Network launched at 6:00 p.m. Eastern Time on June 1, 1980.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The Cable News Network launched at 6:00 p.m. Eastern Time on June 1, 1980."
+     }
+    },
+    {
+     "claim": "CNN is the first television channel to provide 24 hour news coverage and the first all news television channel in the United States.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "CNN is the first television channel to provide 24-hour news coverage and the first all-news television channel in the United States.[4][5][6][7][8]"
      }
     }
    ],
    "images": [
-    "commons:File:Glasto2025-546_(cropped)_2.jpg"
+    "commons:File:CNN_Logo_(2014).svg"
    ]
   },
   {
-   "n": 12,
-   "topic": "spurs vs coventry",
-   "signal": "Google Trends US 20000+",
-   "category": "Sport",
-   "what_is_new": "Tottenham Hotspur faced Coventry City in the Premier League on Monday 19 October 2026.",
+   "n": 5,
+   "topic": "wnba",
+   "signal": "Google Trends GB 500+",
+   "category": "",
+   "what_is_new": "The Atlanta Dream beat the Golden State Valkyries 79-65 on Monday night to even the WNBA finals at one game apiece.",
    "hooks": [
-    "James Maddison makes his first start in 536 days for Spurs.",
-    "Dejan Kulusevski returns to the Spurs matchday squad after 526 days.",
-    "Tottenham host Coventry City in the Premier League."
+    "Angel Reese just made WNBA history with a massive 30-point double-double.",
+    "The Atlanta Dream finally secured their first-ever WNBA finals victory.",
+    "Rhyne Howard set a new WNBA finals record with six steals."
    ],
    "sources": [
     [
-     "Tottenham v Coventry: Premier League – live",
-     "https://www.theguardian.com/football/live/2026/oct/19/tottenham-v-coventry-premier-league-live",
+     "Angel Reese’s superb 30-point double-double helps Dream even WNBA finals",
+     "https://www.theguardian.com/sport/2026/oct/19/angel-reese-double-double-dream-valkyries-wnba-finals-game-2",
      "Guardian",
-     "2026-10-19"
+     "2026-10-20"
     ],
     [
-     "Tottenham host Coventry as search for first league win continues LIVE!",
-     "https://www.skysports.com/football/tottenham-hotspur-vs-coventry-city/live/559513",
-     "Sky Sports",
-     "2026-10-19"
+     "wnba",
+     "https://en.wikipedia.org/wiki/Wnba",
+     "Wikipedia",
+     ""
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "James Maddison made his first start in 536 days for Spurs.",
+     "claim": "The Atlanta Dream beat the Golden State Valkyries 79-65 on Monday night to even the best of seven WNBA finals series.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Taking a closer look, the headline news for Spurs is that James Maddison makes his first start in 536 days, while Dejan Kulusevski is in"
+      "1": "the Dream stymied Golden State on both ends in the second half to beat the Valkyries 79-65 on Monday night and even the best-of-seven series"
      }
     },
     {
-     "claim": "Tatsuhiro Sakamoto came into the Coventry side for his first Premier League start.",
+     "claim": "Angel Reese recorded 30 points and 16 rebounds in Game 2 of the WNBA finals.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Just the one change for Coventry, meanwhile: Ephron Mason-Clark drops to the bench, with Tatsuhiro Sakamoto coming in for his first Premier League start."
+      "1": "She delivered with 30 points and 16 rebounds in Game 2 of the WNBA finals after struggling down the stretch in the series opener"
      }
     },
     {
-     "claim": "Tosin Adarabioyo came in to make his first Premier League start for Tottenham.",
+     "claim": "Rhyne Howard set a WNBA finals record by recording six steals.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Otherwise, by the looks of things, Roberto De Zerbi has to three at the back, with Tosin Adarabioyo coming in for his first Premier League"
+      "1": "Rhyne Howard set a WNBA finals record with six steals, Allisha Gray added 18 points, and Jordin Canada contributed 13 points, 10 assists and seven"
+     }
+    },
+    {
+     "claim": "The Atlanta Dream victory on Monday was the first finals win in the history of the franchise.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "the Dream earned the franchise’s first finals victory after going winless in three previous trips – 0-10 overall."
+     }
+    },
+    {
+     "claim": "Angel Reese is the third player to record at least 30 points and 15 rebounds in a WNBA finals game.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Reese became the third player with at least 30 points and 15 rebounds in a WNBA finals game, joining Jonquel Jones for Connecticut in 2019"
+     }
+    },
+    {
+     "claim": "The WNBA was founded on 24 April 1996 and began league play in 1997.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The WNBA was founded on April 24, 1996, as the women's counterpart to the National Basketball Association (NBA); league play began in 1997."
+     }
+    },
+    {
+     "claim": "The WNBA regular season consists of 44 games per team and runs from May to September.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The regular season runs from May to September, with each team playing 44 games."
+     }
+    },
+    {
+     "claim": "Penny Toler scored the first point in the history of the WNBA.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Penny Toler scored the league's first point."
+     }
+    },
+    {
+     "claim": "The Houston Comets won the first four WNBA championships.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "At the end of the 2000 season, the Comets won their fourth championship, capturing every title since the league's inception."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 13,
-   "topic": "jason sudeikis",
-   "signal": "Google Trends US 5000+",
-   "category": "Film",
-   "what_is_new": "Jason Sudeikis recently gave an update on the potential for fifth and sixth seasons of Ted Lasso during a podcast interview.",
+   "n": 6,
+   "topic": "mike evans",
+   "signal": "Google Trends GB 200+",
+   "category": "",
+   "what_is_new": "Ieuan Evans announced on 19 October 2026 that he will stand down as chair of the British and Irish Lions this Wednesday.",
    "hooks": [
-    "Could Ted Lasso return for Season 6? Jason Sudeikis gives an update.",
-    "Did you know Jason Sudeikis was born with no sense of smell?",
-    "Jason Sudeikis went to college on a basketball scholarship before finding fame."
+    "Meet the man behind the LASERS license plate in a new documentary.",
+    "A rugby legend is stepping down after four years in charge.",
+    "From presidential photographers to sci-fi villains, meet the many Mike Evanses."
    ],
    "sources": [
     [
-     "Jason Sudeikis Gives Update On Potential ‘Ted Lasso’ Seasons 5 & 6",
-     "https://deadline.com/2026/10/ted-lasso-seasons-5-6-jason-sudeikis-comments-1237167324/",
-     "Deadline",
-     "2026-10-18"
+     "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "Guardian",
+     "2026-10-19"
     ],
     [
-     "jason sudeikis",
-     "https://en.wikipedia.org/wiki/Jason_Sudeikis",
+     "Wales great Evans to leave role as Lions chairman",
+     "https://www.bbc.co.uk/sport/rugby-union/articles/cwnv074l4nvyo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "mike evans",
+     "https://en.wikipedia.org/wiki/Mike_evans",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Billy Evans is the husband of Elizabeth Holmes.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "We watch as Fielder, over a few surreal weeks in a beachfront rental, attempts to puncture Holmes’s indomitable facade of faultlessness. It’s not exactly comedic,"
+     }
+    },
+    {
+     "claim": "Billy Evans is a fan of Charlie Kirk.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "By being neither bound to representation nor straightforward journalism, You Can See Everything gets to what we might call the “emotional truth” of this era"
+     }
+    },
+    {
+     "claim": "Ieuan Evans is 62 years old.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The 62-year-old, who scored the Lions' pivotal series-winning try in the third Test against Australia in 1989, oversaw governance changes with the recruitment of independent"
+     }
+    },
+    {
+     "claim": "Mike Evans is the name of a character in the 2012 film Snow Shark.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Mike Evans, in the 2012 film Snow Shark"
+     }
+    },
+    {
+     "claim": "Mike Evans co-founded the Earth-Trisolaris Organization in the Three-Body trilogy.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Mike Evans, co-founder of the Earth-Trisolaris Organization in the Three-Body trilogy"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 8,
+   "topic": "Elizabeth Holmes",
+   "signal": "Wikipedia 301,284 views",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Elizabeth Holmes let filmmakers into her home before prison?",
+    "How did a documentary about Elizabeth Holmes rake in 15 million dollars?",
+    "Watch how Nathan Fielder and Elizabeth Holmes crossed paths in a new film."
+   ],
+   "sources": [
+    [
+     "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "You Can See Everything seen by many on huge box office debut",
+     "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "Elizabeth Holmes",
+     "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Jason Sudeikis co-created and starred in the title role of the sports comedy series Ted Lasso.",
+     "claim": "You Can See Everything was co-directed by comedian Nathan Fielder and Lance Oppenheim.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "After all, show co-creator Jason Sudeikis thought the series would end with Season 3.",
-      "2": "in addition to co-creating and starring as the title role in the Apple TV sports comedy series Ted Lasso"
+      "1": "co-director Nathan Fielder, the droll comedian known for deadpanning subjects into submission, sitting eye to eye with Holmes, the unblinking fabulist of Theranos infamy.",
+      "2": "It was co-directed by comedian Nathan Fielder and Lance Oppenheim who find themselves embroiled in the story, growing suspicious that Holmes and her partner are"
+     }
+    },
+    {
+     "claim": "Amanda Seyfried appears in You Can See Everything to re-enact events and scenes.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Fielder recruits a shockingly game (and possibly awards-worthy) Amanda Seyfried, star of The Dropout, the 2022 Hulu series on the Theranos debacle.",
+      "2": "Seyfried appears in the hybrid documentary to re-enact events and scenes that the documentary crew could not film or needed to reconstruct."
+     }
+    },
+    {
+     "claim": "Elizabeth Holmes was convicted of defrauding investors in her medical testing company Theranos.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Holmes was convicted of defrauding investors in her medical testing company Theranos, fuelling a media circus that has been chronicled in books, podcasts and the",
+      "3": "Elizabeth Anne Holmes (born February 3, 1984) is an American businesswoman convicted of fraud in connection with her health technology company Theranos."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Jason Sudeikis stated on the Talk Easy with Sam Fragoso podcast that a writers room has not yet been started for more Ted Lasso seasons.",
+     "claim": "Elizabeth Anne Holmes was born on February 3, 1984.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "We haven’t started a writers’ room or anything like that."
+      "3": "Elizabeth Anne Holmes (born February 3, 1984) is an American businesswoman convicted of fraud in connection with her health technology company Theranos.[2]"
      }
     },
     {
-     "claim": "Jason Sudeikis was born with anosmia which means he has no sense of smell.",
+     "claim": "Holmes founded Theranos in 2003.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "Sudeikis was born with anosmia, leaving him with no sense of smell."
+      "3": "Holmes founded Theranos in 2003, and its valuation soared in the early 2010s after it claimed to have revolutionized blood testing by developing methods that"
+     }
+    },
+    {
+     "claim": "In 2015, Forbes named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9 billion valuation of Theranos.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In 2015, Forbes named Holmes the youngest and wealthiest self-made female billionaire in the United States on the basis of a $9 billion valuation of"
+     }
+    },
+    {
+     "claim": "Holmes dropped out of Stanford's School of Engineering in March 2004 and used her tuition money as seed funding for a consumer healthcare technology company.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In March 2004, she dropped out of Stanford's School of Engineering and used her tuition money as seed funding for a consumer healthcare technology company.[14][27]"
      }
     }
    ],
    "images": [
-    "commons:File:Jason_Sudeikis_-_How_to_Start.jpg"
+    "commons:File:Elizabeth_Holmes_2014_(cropped_2).jpg"
    ]
   },
   {
-   "n": 15,
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 340,362 views",
-   "category": "Film",
+   "n": 9,
+   "topic": "You Can See Everything",
+   "signal": "Wikipedia 268,900 views",
+   "category": "",
    "what_is_new": "",
    "hooks": [
-    "Discover how Jailer 2 became a global box office hit!",
-    "Find out all about the record-breaking release of Jailer 2!",
-    "Everything you need to know about the new hit film Jailer 2!"
+    "Discover how You Can See Everything made box office history.",
+    "Why is Amanda Seyfried playing Elizabeth Holmes again?",
+    "Can a documentary really win the Oscar for Best Picture?"
    ],
    "sources": [
     [
-     "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
-     "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
+     "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
      "Variety",
      "2026-10-19"
     ],
     [
-     "Jailer 2",
-     "https://en.wikipedia.org/wiki/Jailer_2",
+     "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "You Can See Everything seen by many on huge box office debut",
+     "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-19"
+    ],
+    [
+     "You Can See Everything",
+     "https://en.wikipedia.org/wiki/You_Can_See_Everything",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar.",
+     "claim": "The documentary film You Can See Everything opened to a staggering $15 million over the weekend.",
      "sources": [
       1,
-      2
+      3
      ],
      "evidence": {
-      "1": "Indian superstar Rajinikanth’s Tamil-language action comedy “Jailer 2” was the second-biggest film in the world over the Oct. 16–18 weekend, grossing $31.2 million, according to",
-      "2": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar."
+      "1": "opened to a staggering $15 million over the weekend, a number most nonfiction films never see in a full run.",
+      "3": "A three-hour documentary featuring the convicted tech fraudster Elizabeth Holmes has raked in a whopping $15 million (Â£11.25m) on its box office debut, despite a"
      }
     },
     {
-     "claim": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
+     "claim": "The film follows Elizabeth Holmes and her partner Billy Evans who invited a film crew to document them beginning in the weeks before Holmes began serving a United States federal prison sentence for defrauding investors.",
      "sources": [
-      1,
-      2
+      3,
+      4
      ],
      "evidence": {
-      "1": "The Nelson Dilipkumar-directed sequel opened in India on, Oct. 15, and grossed an estimated INR224 crore ($23.5 million) across its four-day extended opening.",
-      "2": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
+      "3": "The eagerly anticipated film, You Can See Everything, finds Holmes letting filmmakers into her California home in 2023, during the month before she began an",
+      "4": "It follows Elizabeth Holmes, the founder of the defunct health technology company Theranos, and her partner Billy Evans, who invited a film crew to document"
      }
     },
     {
-     "claim": "The film has music composed by Anirudh Ravichander, cinematography by Vijay Kartik Kannan and editing by R. Nirmal.",
+     "claim": "You Can See Everything was co-directed by Nathan Fielder and Lance Oppenheim.",
      "sources": [
       1,
-      2
+      3,
+      4
      ],
      "evidence": {
-      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
-      "2": "The film has music composed by Anirudh Ravichander, cinematography by Vijay Kartik Kannan and editing by R. Nirmal."
+      "1": "Nathan Fielder and Lance Oppenheim’s A24 documentary, which follows the Theranos founder through the 34 days before she reported to prison and keeps rolling afterward",
+      "3": "It was co-directed by comedian Nathan Fielder and Lance Oppenheim who find themselves embroiled in the story, growing suspicious that Holmes and her partner are",
+      "4": "You Can See Everything is a 2026 American documentary film directed by Nathan Fielder (in his feature directorial debut) and Lance Oppenheim."
      }
     },
     {
-     "claim": "Sun Pictures officially announced the sequel to Jailer in January 2025.",
+     "claim": "Amanda Seyfried is credited in the film as Elizabeth Holmes and reprises her Emmy-winning turn as Holmes from The Dropout.",
      "sources": [
       1,
-      2
+      2,
+      3,
+      4
      ],
      "evidence": {
-      "1": "Dilipkumar wrote and directed both films for Kalanithi Maran’s Sun Pictures, and Anirudh Ravichander again composed the music.",
-      "2": "Sun Pictures officially announced the sequel to Jailer in January 2025."
+      "1": "Variety confirmed exclusively after the film made its surprise world premiere (and general existence became known) at the Telluride Film Festival that Amanda Seyfried, credited",
+      "2": "In the second half of the movie – stop now if you haven’t seen – Fielder recruits a shockingly game (and possibly awards-worthy) Amanda Seyfried,",
+      "3": "Seyfried appears in the hybrid documentary to re-enact events and scenes that the documentary crew could not film or needed to reconstruct.",
+      "4": "Fielder meets with Seyfried and asks her to reprise her role as Holmes in dramatic reconstructions of encounters with Holmes and Evans that he was"
+     }
+    },
+    {
+     "claim": "The film premiered as a secret screening at the 53rd Telluride Film Festival on September 6, 2026.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "The first teaser trailer, external dropped last month, right after the film's surprise premiere at the Telluride Film Festival in Colorado.",
+      "4": "The film premiered as a secret screening at the 53rd Telluride Film Festival on September 6, 2026,"
+     }
+    },
+    {
+     "claim": "The film was theatrically released by A24 on October 16.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "SPOILER ALERT: This article contains major spoilers for “You Can See Everything,” now playing in theaters.",
+      "4": "and was theatrically released by A24 on October 16."
+     }
+    },
+    {
+     "claim": "No documentary has ever been nominated for best picture in 98 ceremonies.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "No documentary has ever been nominated for best picture in 98 ceremonies.",
+      "3": "though no documentary has ever been nominated for the main prize of best picture."
+     }
+    },
+    {
+     "claim": "Christopher Abbott appears in the film as Holmes’ spouse, Billy Evans, in recreated scenes.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Christopher Abbott, who also appears in the film as Holmes’ spouse, Billy Evans, in recreated scenes, is also eligible for acting consideration in the supporting",
+      "4": "with actor Christopher Abbott portraying Evans."
      }
     }
    ],
+   "one_source": [
+    {
+     "claim": "It has grossed $15.6 million against a $7 million production budget.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "and has grossed $15.6 million against a $7 million production budget."
+     }
+    },
+    {
+     "claim": "You Can See Everything will be released in UK cinemas from 20 November.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It will be released in UK cinemas from 20 November."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 10,
+   "topic": "Helen Haines",
+   "signal": "Wikipedia 220,295 views",
+   "category": "",
+   "what_is_new": "Independent MP Helen Haines was struck by a car and severely injured outside her office in Wangaratta.",
+   "hooks": [
+    "Independent MP Helen Haines was struck by a car in a deliberate attack outside her Wangaratta office.",
+    "A 43-year-old man was arrested after allegedly ramming MP Helen Haines twice with a car.",
+    "Australia's political community is reeling after independent MP Helen Haines was struck by a vehicle."
+   ],
+   "sources": [
+    [
+     "'Our worst nightmare': Threats to Australian politicians were rising before MP hit by car",
+     "https://www.bbc.co.uk/news/articles/cq398rk4p3exo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-20"
+    ],
+    [
+     "Helen Haines loses leg after car allegedly did U-turn and struck her twice in Wangaratta",
+     "https://www.theguardian.com/australia-news/2026/oct/20/helen-haines-mp-alleged-attack-wangaratta-surgery-ntwnfb",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "Helen Haines",
+     "https://en.wikipedia.org/wiki/Helen_Haines",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Independent MP Helen Haines was struck by a car outside her electorate office in Wangaratta on 19 October 2026.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Independent MP Helen Haines was struck by a car and severely injured outside her office in the regional Victorian town of Wangaratta.",
+      "2": "The member for Indi was airlifted from Wangaratta in northern Victoria to Melbourne’s Alfred hospital for emergency surgery on Monday night.",
+      "3": "On 19 October 2026, Haines was struck by a vehicle outside her electorate office in Wangaratta in a deliberate attack, and was taken to hospital"
+     }
+    },
+    {
+     "claim": "A 43-year-old man named Brendan Nugent from Tarrawingee was arrested at the scene after allegedly driving the Toyota LandCruiser.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Police say a 43-year-old man was arrested at the scene, and a knife seized, but they have not said Haines was hit deliberately.",
+      "2": "A 43-year-old Tarrawingee man alleged to have driven the Toyota LandCruiser was arrested at the scene. The alleged attacker has been named as Tarrawingee man"
+     }
+    },
+    {
+     "claim": "Witnesses saw the suspect perform a U-turn before striking the MP and then reversing to ram her a second time.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Witnesses saw the suspect do a U-turn before striking the MP and then reversing to ram her again, Home Affairs Minister Tony Burke has said.",
+      "2": "The man accused of attacking Helen Haines allegedly made a U-turn before ramming the independent MP twice in an alleged targeted attack near her electorate"
+     }
+    },
+    {
+     "claim": "In the year to June, government statistics recorded 1,067 reports of harassing and threatening behaviour against high office holders.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "According to government statistics, there were 1,067 reports of \"harassing and threatening behaviour\" against \"high office holders\" in the year to June: an increase on",
+      "2": "On Monday, Burke reported that there had been 1,067 reports of harassment or threats against high office holders in Australia in the last financial year,"
+     }
+    },
+    {
+     "claim": "Haines has served as the member of Parliament for the Victorian division of Indi since winning the seat in the 2019 federal election.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The member for Indi was airlifted from Wangaratta in northern Victoria to Melbourne’s Alfred hospital for emergency surgery on Monday night.",
+      "3": "In the 2019 federal election, Haines won Indi, winning 32.4% of the primary vote and 51.4% of the two-party preferred vote."
+     }
+    },
+    {
+     "claim": "Prime Minister Anthony Albanese confirmed that authorities believed the incident was a deliberate attack.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Prime Minister Anthony Albanese, however, swiftly described the incident as an apparent attack.",
+      "2": "Anthony Albanese confirmed authorities believed the attack was deliberate."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Helen Mary Haines was born on 21 September 1961 and grew up on a dairy farm in Eurack near Colac in southwestern Victoria.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Helen Mary Haines (born 21 September 1961) is an Australian politician and health researcher who has served as the member of Parliament (MP) for Victorian"
+     }
+    },
+    {
+     "claim": "A bystander and local barber named Ricky Jefferies ran from his shop to pull the driver from the vehicle and hold him until police arrived.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "“A bystander ran towards the scene, got the driver out of the vehicle and held the driver until police arrived.”"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Helen_Haines.png"
+   ]
+  },
+  {
+   "n": 11,
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 153,073 views",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "Street Fighter opened in movie theaters on Oct. 16.",
+    "Street Fighter is the third live action feature length film."
+   ],
+   "sources": [
+    [
+     "Street Fighter Officially Sets a New Franchise Box Office Record",
+     "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
+     "Polygon",
+     "2026-10-19"
+    ],
+    [
+     "Street Fighter (2026 film)",
+     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Street Fighter opened in movie theaters on Oct. 16.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Street Fighter opened on Oct. 16, and the film's first weekend is being viewed as a success.",
+      "2": "Street Fighter was released in the United States by Paramount Pictures on October 16, 2026."
+     }
+    },
+    {
+     "claim": "Street Fighter is the third live action feature length film based on the Street Fighter video game series by Capcom.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "giving fans of the fighting game franchise their third live-action adaptation.",
+      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+     }
+    },
+    {
+     "claim": "Legendary Entertainment acquired the live action film and television rights to Street Fighter in April 2023.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Capcom and Legendary's highly anticipated new Street Fighter movie made its debut in movie theaters this weekend",
+      "2": "Legendary Entertainment acquired the live-action film and television rights to Street Fighter in April 2023, by which point the film had entered active development, with"
+     }
+    },
+    {
+     "claim": "Kitao Sakurai directed and co-written the film.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Street Fighter was directed and co-written by Kitao Sakurai.",
+      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Danny and Michael Philippou were announced as directors before dropping out in June 2024.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Danny and Michael Philippou were announced as directors before dropping out in June 2024, with Sakurai joining the following February."
+     }
+    },
+    {
+     "claim": "Principal photography began in August 2025 and ended in November.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Principal photography began in August 2025 and ended in November."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "Barbara Palvin",
+   "signal": "Wikipedia 146,026 views",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Barbara Palvin became the first Hungarian Victoria's Secret Angel in 2019?",
+    "Barbara Palvin married Dylan Sprouse in the same church her parents married in."
+   ],
+   "sources": [
+    [
+     "‘Keep away from the doctor’: a visit to an influencer’s wellness event, where the advice could kill",
+     "https://www.theguardian.com/society/2026/oct/18/influencers-wellness-event-cheshire-barbara-oneill-australian",
+     "Guardian",
+     "2026-10-18"
+    ],
+    [
+     "Barbara Palvin",
+     "https://en.wikipedia.org/wiki/Barbara_Palvin",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary."
+     }
+    },
+    {
+     "claim": "On July 15, 2023, the couple married in the town of Albertirsa, Hungary, in the same church that Palvin's parents married.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "On July 15, 2023, the couple married in the town of Albertirsa, Hungary, in the same church that Palvin's parents married."
+     }
+    },
+    {
+     "claim": "In August 2025, Palvin revealed that she had endometriosis and underwent surgery to ease its symptoms.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In August 2025, Palvin revealed that she had endometriosis and underwent surgery to ease its symptoms."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:MKr382323_Barbara_Palvin_(Cannes_2025).jpg"
+   ]
+  },
+  {
+   "n": 13,
+   "topic": "Lawrence Bishnoi",
+   "signal": "Wikipedia 135,745 views",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "Emperor of Nothing by Blake J Harris review – the definitive portrait of Larry David",
+     "https://www.theguardian.com/books/2026/oct/19/emperor-of-nothing-blake-j-harris-review-larry-david-biography",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "Lawrence Bishnoi",
+     "https://en.wikipedia.org/wiki/Lawrence_Bishnoi",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "Nathan Fielder",
+   "signal": "Wikipedia 115,086 views",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Nathan Fielder co-directed a record-breaking documentary?",
+    "Nathan Fielder was born in Vancouver on May 12, 1983.",
+    "Fielder studied business before starting his comedy career."
+   ],
+   "sources": [
+    [
+     "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
+     "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
+     "Variety",
+     "2026-10-19"
+    ],
+    [
+     "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "Nathan Fielder",
+     "https://en.wikipedia.org/wiki/Nathan_Fielder",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Nathan Fielder co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Nathan Fielder and Lance Oppenheim’s A24 documentary, which follows the Theranos founder through the 34 days before she reported to prison and keeps rolling afterward,",
+      "2": "co-director Nathan Fielder, the droll comedian known for deadpanning subjects into submission, sitting eye to eye with Holmes",
+      "3": "Fielder then co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything (2026), which follows the disgraced entrepreneur Elizabeth Holmes."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Nathan Joseph Fielder was born on May 12, 1983, in Vancouver.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Nathan Joseph Fielder (born May 12, 1983) is a Canadian filmmaker, actor, and comedian."
+     }
+    },
+    {
+     "claim": "Fielder studied business at the University of Victoria, where he graduated with a Bachelor of Commerce degree in 2005.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He studied business at the University of Victoria, where he graduated with a Bachelor of Commerce degree in 2005."
+     }
+    },
+    {
+     "claim": "After university, he moved to Toronto and enrolled in Humber College's Comedy Program in 2006.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "After university, he moved to Toronto and enrolled in Humber College's Comedy Program in 2006."
+     }
+    },
+    {
+     "claim": "In 2013, Fielder co-created his own show on Comedy Central, Nathan for You.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In 2013, Fielder co-created his own show on Comedy Central, Nathan for You."
+     }
+    },
+    {
+     "claim": "The show finished its fourth and last season in November 2017.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The show finished its fourth and last season in November 2017."
+     }
+    },
+    {
+     "claim": "On the morning of February 7, 2014, a coffee shop called Dumb Starbucks Coffee opened in the Los Feliz neighborhood of Los Angeles.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "On the morning of February 7, 2014, a coffee shop called Dumb Starbucks Coffee opened in the Los Feliz neighborhood of Los Angeles."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Nathan_Fielder.jpg"
+   ]
+  },
+  {
+   "n": 17,
+   "topic": "How is This Even Possible? 😳🥌",
+   "signal": "YouTube GB-sport 138,196/h",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "How is this even possible for Larry David?",
+    "Would you spend a year in prison instead of this?"
+   ],
+   "sources": [
+    [
+     "Save $110 for Your First Year With McAfee+ Scam Detector, Including a VPN, Antivirus and Online Protection in the Age of AI",
+     "https://www.ign.com/articles/mcafee-plus-advanced-online-protection-plan-deal-october-2026",
+     "IGN",
+     "2026-10-19"
+    ],
+    [
+     "Emperor of Nothing by Blake J Harris review – the definitive portrait of Larry David",
+     "https://www.theguardian.com/books/2026/oct/19/emperor-of-nothing-blake-j-harris-review-larry-david-biography",
+     "Guardian",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Larry David agreed to an authorised biography with a five-word email stating Oh Jesus. If we must.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Larry David agreed to this authorised biography with a five-word email: “Oh Jesus. If we must.”"
+     }
+    },
+    {
+     "claim": "In 1992, Larry David told friends he would rather spend a year in prison than do another season of Seinfeld.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 1992, just before it became the biggest show in America, he told friends, “Honestly, I would rather spend a year in prison than do"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 19,
+   "topic": "Never say never 😭",
+   "signal": "YouTube GB-entertainment 300,020/h",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [
+    "Sean Connery returned as James Bond in 1983!",
+    "Never Say Never Again grossed 160 million dollars at the box office."
+   ],
+   "sources": [
+    [
+     "Call of Duty: Modern Warfare 4 Pop-Up: The DMZ Has Never Been This Much Fun",
+     "https://www.ign.com/articles/call-of-duty-modern-warfare-4-pop-up-the-dmz-has-never-been-this-much-fun",
+     "IGN",
+     "2026-10-20"
+    ],
+    [
+     "Stupid Never Dies Is Easily the Worst Game of 2026",
+     "https://www.polygon.com/stupid-never-dies-review/",
+     "Polygon",
+     "2026-10-19"
+    ],
+    [
+     "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "Guardian",
+     "2026-10-19"
+    ],
+    [
+     "Never say never 😭",
+     "https://en.wikipedia.org/wiki/Never_Say_Never_Again",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Never Say Never Again is a 1983 spy film directed by Irvin Kershner.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Never Say Never Again is a 1983 spy film directed by Irvin Kershner."
+     }
+    },
+    {
+     "claim": "Never Say Never Again was released by Warner Bros. on 7 October 1983.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Never Say Never Again was released by Warner Bros. on 7 October 1983, and opened to positive reviews, with critics praising the cast's performances and"
+     }
+    },
+    {
+     "claim": "Never Say Never Again grossed $160 million at the box office.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The film grossed $160 million at the box office, making it a commercial success, although it earned less overall than the Eon-produced Octopussy, released earlier"
+     }
+    },
+    {
+     "claim": "Sean Connery played the role of Bond for the seventh and final time.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Sean Connery played the role of Bond for the seventh and final time, making his return to the character twelve years after Diamonds Are Forever"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 20,
+   "topic": "What is the BEST app?!📱🤔",
+   "signal": "YouTube GB-tech 67,592/h",
+   "category": "",
+   "what_is_new": "Nothing changed in the last two days.",
+   "hooks": [
+    "Did you know Sony's latest earbuds are currently on sale?",
+    "Find out why this new documentary is breaking records!",
+    "Modern Warfare 4 offers an eight hour campaign."
+   ],
+   "sources": [
+    [
+     "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
+     "https://www.polygon.com/mw4-modern-warfare-4-call-duty-campaign-review/",
+     "Polygon",
+     "2026-10-19"
+    ],
+    [
+     "Sony’s best noise-canceling earbuds are nearly $100 off today only",
+     "https://www.theverge.com/gadgets/1013911/sonys-best-noise-canceling-earbuds-are-nearly-100-off-today-only",
+     "The Verge",
+     "2026-10-19"
+    ],
+    [
+     "The reviews are in! Is You Can See Everything the greatest film ever?",
+     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
+     "Guardian",
+     "2026-10-19"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "B&H Photo is selling Sony's latest WF-1000XM6 in black for an all-time low of $238 ($92 off) at checkout.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "B&H Photo is selling Sony’s latest WF-1000XM6 in black for an all-time low of $238 ($92 off) at checkout."
+     }
+    },
+    {
+     "claim": "The documentary You Can See Everything earned an unprecedented Metacritic score of 99/100.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Meh. And the film has earned an unprecedented Metacritic score of 99/100."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 21,
+   "topic": "#CULT Official Trailer",
+   "signal": "YouTube US 238,854/h",
+   "category": "",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "New 'Blade Runner 2099' trailer is a space fan's dream with sinister starships and strange exoplanets (video)",
+     "https://www.space.com/entertainment/space-movies-shows/new-blade-runner-2099-trailer-is-a-space-fans-dream-with-sinister-starships-and-strange-exoplanets-video",
+     "Space.com",
+     "2026-10-19"
+    ],
+    [
+     "NAZA directors: 'It's a film about systems of mass killing' – video",
+     "https://www.theguardian.com/film/video/2026/oct/17/naza-directors-its-a-film-about-systems-of-mass-killings-video",
+     "Guardian",
+     "2026-10-17"
+    ]
+   ],
+   "verified": [],
    "one_source": [],
    "images": []
   }

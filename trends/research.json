@@ -1,265 +1,111 @@
 {
- "date": "2026-10-19",
+ "date": "2026-10-20",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
-   "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
-   "signal": "Charlie's request",
+   "topic": "H3-24 | Martian Moons eXploration (MMX)",
+   "signal": "rocket launch 2026-10-19 19:41 UTC (Success)",
    "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
-     "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
-     "published": "2026-10-13"
-    },
-    {
-     "outlet": "UEFA",
-     "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
-     "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
-     "published": "2026-10-06"
-    }
-   ]
-  },
-  {
-   "topic": "Gen Alpha slang  the French fries emoji",
-   "signal": "Charlie's request",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "I spent a weekend with Gen Alpha. I needed a translator",
-     "url": "https://www.usatoday.com/story/life/health-wellness/2026/09/30/gen-alpha-slang-words-explained-huzz-unc-fries-and-larping/91989583007/",
-     "published": "2026-09-30"
-    }
-   ]
-  },
-  {
-   "topic": "The Call the Police trend on TikTok and Instagram",
-   "signal": "Charlie's request",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "NBC News",
-     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
-     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
-     "published": "2026-07-28"
-    }
-   ]
-  },
-  {
-   "topic": "friday the 13th",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Friday_the_13th",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Israeli police detain 10 people in rare raid against West Bank settlers",
-     "url": "https://www.theguardian.com/world/2026/oct/19/israeli-police-detain-10-people-in-rare-raid-against-west-bank-settlers",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Miley Cyrus on Hollywood Bowl Show Criticism: “Will Not Stand Any Question About Where My Heart Is”",
-     "url": "https://www.hollywoodreporter.com/music/music-news/miley-cyrus-hollywood-bowl-concert-criticism-1236735335/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Amazon Discounts Final Fantasy 7 Rebirth and More to Record Lows in Early Black Friday Sale",
-     "url": "https://www.ign.com/articles/square-enix-early-black-friday-sales",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "NME",
-     "title": "‘Crystal Lake’ review: ‘Friday The 13th’ prequel gives Jason’s mum a twisted origin story",
-     "url": "https://www.nme.com/reviews/tv-reviews/crystal-lake-review-linda-cardellini-3973387?utm_source=rss&utm_medium=rss&utm_campaign=crystal-lake-review-linda-cardellini",
+     "title": "‘Once-in-a-lifetime chance’: Japan launches historic mission to collect rocks from Mars’s moon Phobos",
+     "url": "https://www.theguardian.com/world/2026/oct/20/japan-mars-moon-mission-phobos-collect-rocks",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "trevor dietz",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Trevor_Fitzroy",
+   "topic": "weather birmingham",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_weather_in_Birmingham",
    "articles": [
     {
-     "outlet": "NME",
-     "title": "Fontaines D.C. pay tribute after death of manager and “the sixth member of the band” Trevor Dietz",
-     "url": "https://www.nme.com/news/music/fontaines-dc-pay-tribute-after-death-of-manager-and-sixth-member-trevor-dietz-3949887",
-     "published": "2026-06-09"
-    }
-   ]
-  },
-  {
-   "topic": "ronnie o'sullivan northern ireland open",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "O'Sullivan suffers one of most embarrassing defeats of his career at NI Open",
-     "url": "https://www.skysports.com/snooker/news/12040/13601071/ronnie-osullivan-the-rocket-stunned-by-qualifier-and-world-no-110-cheung-ka-wai-at-northern-ireland-open",
+     "outlet": "Guardian",
+     "title": "Birmingham was a BBC radio powerhouse. Now even The Archers is leaving | Letter",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/19/birmingham-was-a-bbc-radio-powerhouse-now-even-the-archers-is-leaving",
      "published": "2026-10-19"
     },
     {
      "outlet": "BBC",
-     "title": "O'Sullivan loses to Cheung in NI Open return",
-     "url": "https://www.bbc.co.uk/sport/snooker/articles/cm87ze97eq2wo?at_medium=RSS&at_campaign=rss",
+     "title": "Arsenal held at home by Birmingham",
+     "url": "https://www.bbc.co.uk/sport/football/videos/c680zp4djprgo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "cnn",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/CNN",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Christiane Amanpour announces she’s leaving CNN after 43 years",
+     "url": "https://www.theguardian.com/media/2026/oct/19/christiane-amanpour-leaving-cnn",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "CNN anchor Christiane Amanpour to leave network after 43 years",
+     "url": "https://www.bbc.co.uk/news/articles/c83vqzkrr9zeo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "slow horses season 6 finale release",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Slow Horses Season 6, Episode 5 Review — 'Sayonara'",
-     "url": "https://www.ign.com/articles/slow-horses-season-6-episode-5-review-sayonara",
-     "published": "2026-10-14"
-    }
-   ]
-  },
-  {
-   "topic": "2026 ballon d'or power rankings",
-   "signal": "Google Trends GB 200+",
+   "topic": "rays vs guardians",
+   "signal": "Google Trends GB 100+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Women’s Ballon d’Or 2026 power rankings: will a new winner be crowned?",
-     "url": "https://www.theguardian.com/football/2026/oct/01/womens-ballon-dor-2026-power-rankings-will-a-new-winner-be-crowned",
-     "published": "2026-10-01"
+     "title": "World Series will have first-time champion as Rays set up showdown with Brewers",
+     "url": "https://www.theguardian.com/sport/2026/oct/19/rays-guardians-mlb-playoffs-world-series-alcs",
+     "published": "2026-10-20"
     },
-    {
-     "outlet": "New York Times",
-     "title": "Ranking the 2026 Ballon d’Or contenders: Do Harry Kane’s astonishing numbers give him the edge?",
-     "url": "https://www.nytimes.com/athletic/7574501/2026/09/09/ballon-dor-contenders-2026-kane-yamal-olise-mbappe-haaland/",
-     "published": "2026-09-08"
-    }
-   ]
-  },
-  {
-   "topic": "james maddison",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/James_Maddison",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Tottenham v Coventry: Premier League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/19/tottenham-v-coventry-premier-league-live",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Tottenham midfielder James Maddison could return from injury this season, Igor Tudor says",
-     "url": "https://www.nytimes.com/athletic/7134039/2026/03/20/james-maddison-tottenham-injury-latest/",
-     "published": "2026-03-20"
-    }
-   ]
-  },
-  {
-   "topic": "charles oliveira",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Charles_Oliveira",
-   "articles": [
     {
      "outlet": "USA Today",
-     "title": "UFC 335: Charles Oliveira vs. Diego Lopes odds, what to know for BMF title bout",
-     "url": "https://mmajunkie.usatoday.com/story/sports/ufc/2026/10/06/ufc-335-charles-oliveira-vs-diego-lopes-betting-odds-bmf-title-fight/92089950007/",
-     "published": "2026-10-06"
-    }
-   ]
-  },
-  {
-   "topic": "gluten free ritz crackers",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
+     "title": "Rays advance to 2026 World Series after ALCS Game 6 win vs Guardians",
+     "url": "https://www.usatoday.com/story/sports/mlb/playoffs/2026/10/19/guardians-rays-watch-score-highlights-odds-game-6-alcs-channel--live/92324291007/",
+     "published": "2026-10-19"
+    },
     {
-     "outlet": "USA Today",
-     "title": "5 gluten-free crackers: Which are worthy of a cheeseboard and which to leave on the shelf",
-     "url": "https://www.usatoday.com/story/life/food-dining/2022/08/23/gluten-free-cracker-taste-test/10047124002/",
-     "published": "2022-08-23"
+     "outlet": "AP",
+     "title": "Yandy Díaz’s guarantee the Rays will win Game 6 doesn’t rile up the Guardians",
+     "url": "https://apnews.com/article/rays-yandy-diaz-victory-guarantee-guardians-d067fd76b19c77de0d6c90c78ef75293",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Rays advance to World Series after beating Guardians in ALCS Game 6: Live updates, reaction",
+     "url": "https://www.nytimes.com/athletic/live-blogs/guardians-vs-rays-live-updates-mlb-playoffs-game-6-score-result/vTJRVqOY5yh4/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "spurs vs coventry",
-   "signal": "Google Trends US 20000+",
-   "wikipedia": null,
+   "topic": "wnba",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wnba",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Tottenham v Coventry: Premier League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/19/tottenham-v-coventry-premier-league-live",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Tottenham host Coventry as search for first league win continues LIVE!",
-     "url": "https://www.skysports.com/football/tottenham-hotspur-vs-coventry-city/live/559513",
-     "published": "2026-10-19"
+     "title": "Angel Reese’s superb 30-point double-double helps Dream even WNBA finals",
+     "url": "https://www.theguardian.com/sport/2026/oct/19/angel-reese-double-double-dream-valkyries-wnba-finals-game-2",
+     "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "jason sudeikis",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jason_Sudeikis",
+   "topic": "mike evans",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mike_evans",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "Jason Sudeikis Gives Update On Potential ‘Ted Lasso’ Seasons 5 & 6",
-     "url": "https://deadline.com/2026/10/ted-lasso-seasons-5-6-jason-sudeikis-comments-1237167324/",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "jesse marsch",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jesse_Marsch",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Jesse Marsch turns on the critique of Canada after defeat to U.S. follows familiar pattern",
-     "url": "https://www.nytimes.com/athletic/7667747/2026/10/07/jesse-marsch-canada-usmnt-critical-comments/",
-     "published": "2026-10-07"
-    }
-   ]
-  },
-  {
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 340,362 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
-     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 258,023 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Nathan Fielder and Elizabeth Holmes Are This Year’s Ultimate Deep-Cut Halloween Costume Duo",
-     "url": "https://variety.com/2026/shopping/news/nathan-fielder-elizabeth-holmes-halloween-costume-shop-1236916602/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
+     "outlet": "ESPN",
+     "title": "49ers rule out Mike Evans due to lingering Achilles issue",
+     "url": "https://www.espn.com/nfl/story/_/id/50223535/49ers-rule-mike-evans-due-achilles-injury",
      "published": "2026-10-19"
     },
     {
@@ -270,7 +116,39 @@
     },
     {
      "outlet": "BBC",
-     "title": "You Can See Everything documentary seen by many on huge box office debut",
+     "title": "Wales great Evans to leave role as Lions chairman",
+     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cwnv074l4nvyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "phony hulu",
+   "signal": "Google Trends US 200+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘Phony’ Review: Connie Britton and Sam Nivola Lead Hulu’s Likably Quirky and Beguiling Paranoid Mystery Series",
+     "url": "https://www.hollywoodreporter.com/tv/tv-reviews/phony-review-connie-britton-sam-nivola-hulu-1236735722/",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "Elizabeth Holmes",
+   "signal": "Wikipedia 301,284 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "BBC",
+     "title": "You Can See Everything seen by many on huge box office debut",
      "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-19"
     }
@@ -278,19 +156,13 @@
   },
   {
    "topic": "You Can See Everything",
-   "signal": "Wikipedia 239,333 views",
+   "signal": "Wikipedia 268,900 views",
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
      "outlet": "Variety",
-     "title": "Nathan Fielder and Elizabeth Holmes Are This Year’s Ultimate Deep-Cut Halloween Costume Duo",
-     "url": "https://variety.com/2026/shopping/news/nathan-fielder-elizabeth-holmes-halloween-costume-shop-1236916602/",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
+     "title": "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
+     "url": "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
      "published": "2026-10-19"
     },
     {
@@ -301,156 +173,67 @@
     },
     {
      "outlet": "BBC",
-     "title": "You Can See Everything documentary seen by many on huge box office debut",
+     "title": "You Can See Everything seen by many on huge box office debut",
      "url": "https://www.bbc.co.uk/news/articles/cm8xz5kxkkkqo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-19"
     }
    ]
   },
   {
+   "topic": "Helen Haines",
+   "signal": "Wikipedia 220,295 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "'Our worst nightmare': Threats to Australian politicians were rising before MP hit by car",
+     "url": "https://www.bbc.co.uk/news/articles/cq398rk4p3exo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Helen Haines loses leg after car allegedly did U-turn and struck her twice in Wangaratta",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/20/helen-haines-mp-alleged-attack-wangaratta-surgery-ntwnfb",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
    "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 181,850 views",
+   "signal": "Wikipedia 153,073 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
    "articles": [
     {
-     "outlet": "IGN",
-     "title": "Street Fighter (2026 Movie) Guide",
-     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
-   "topic": "Bear Bachmeier",
-   "signal": "Wikipedia 124,883 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bear_Bachmeier",
-   "articles": [
-    {
-     "outlet": "AP",
-     "title": "AP Player of the Week: BYU’s Bear Bachmeier scored as runner, passer, receiver against Notre Dame",
-     "url": "https://apnews.com/article/bear-bachmeier-byu-player-of-week-d932ea711d5c797eefe9bea667f72138",
+     "outlet": "Polygon",
+     "title": "Street Fighter Officially Sets a New Franchise Box Office Record",
+     "url": "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
      "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 123,878 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "topic": "Barbara Palvin",
+   "signal": "Wikipedia 146,026 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Palvin",
    "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
-     "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
-     "published": "2026-10-19"
-    },
     {
      "outlet": "USA Today",
-     "title": "CDC confirms two measles-related deaths in 2026",
-     "url": "https://www.usatoday.com/story/news/nation/2026/09/29/cdc-confirms-two-measles-related-us-deaths-in-2026/92001587007/",
-     "published": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "topic": "Crystal Lake (TV series)",
-   "signal": "Wikipedia 103,624 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Crystal_Lake_(TV_series)",
-   "articles": [
-    {
-     "outlet": "NME",
-     "title": "‘Crystal Lake’ review: ‘Friday The 13th’ prequel gives Jason’s mum a twisted origin story",
-     "url": "https://www.nme.com/reviews/tv-reviews/crystal-lake-review-linda-cardellini-3973387?utm_source=rss&utm_medium=rss&utm_campaign=crystal-lake-review-linda-cardellini",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Crystal Lake’s Gwendolyn Sundstrom On Grace’s Friendship With Jason, “Learning A Lot” From Linda Cardellini & That Killer Twist",
-     "url": "https://deadline.com/2026/10/crystal-lake-gwendolyn-sundstrom-killer-twist-1237158527/",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Jason Voorhees' origin revealed after 46 years in 'Crystal Lake' – Twist explained",
-     "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/16/crystal-lake-explainer-friday-the-13th-jason-voorhees-origin/92240505007/",
-     "published": "2026-10-16"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Crystal Lake Review",
-     "url": "https://www.ign.com/articles/crystal-lake-review",
-     "published": "2026-10-13"
-    }
-   ]
-  },
-  {
-   "topic": "Abdul El-Sayed",
-   "signal": "Wikipedia 97,773 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Abdul_El-Sayed",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Republicans Attack El-Sayed’s Faith. The Candidate’s New Ad Highlights It.",
-     "url": "https://www.nytimes.com/2026/10/19/us/el-sayed-faith-ad.html",
-     "published": "2026-10-19"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "CBS News Correspondent Jan Crawford Apologizes For X Comment On Michigan U.S. Senate Candidate Abdul El-Sayed",
-     "url": "https://deadline.com/2026/10/jan-crawford-cbs-news-abdul-el-sayed-muslim-brotherhood-1237167428/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Love of Your Life (film)",
-   "signal": "Wikipedia 97,766 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Love_of_Your_Life_(film)",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Star Wars: Galactic Racer’s Biddy Blas Is Voiced By A Sinister Circus Ringmaster Pro Wrestler, And This Makes Sense",
-     "url": "https://www.gamespot.com/articles/star-wars-galactic-racers-biddy-blas-is-voiced-by-a-sinister-circus-ringmaster-pro-wrestler-and-this-makes-sense/",
+     "title": "Dylan Sprouse cheers on wife Barbara Palvin at Victoria's Secret Fashion Show",
+     "url": "https://www.usatoday.com/story/entertainment/style/2026/10/19/kylie-jenner-barbara-palvin-victorias-secret-fashion-show-timothee-chalamet-dylan-sprouse/92327083007/",
      "published": "2026-10-19"
     },
     {
      "outlet": "Guardian",
-     "title": "Life Out of Order by Audrey Niffenegger review – does this sequel measure up to The Time Traveler’s Wife?",
-     "url": "https://www.theguardian.com/books/2026/oct/19/life-out-of-order-by-audrey-niffenegger-review-does-this-sequel-measure-up-to-the-time-travelers-wife",
-     "published": "2026-10-19"
+     "title": "‘Keep away from the doctor’: a visit to an influencer’s wellness event, where the advice could kill",
+     "url": "https://www.theguardian.com/society/2026/oct/18/influencers-wellness-event-cheshire-barbara-oneill-australian",
+     "published": "2026-10-18"
     }
    ]
   },
   {
-   "topic": "If You Escape, You Win $1,000,000",
-   "signal": "YouTube GB 455,098/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Mr. Beast’s Call Of Duty: MW4 DMZ Video Pays $1 Million To The Winner, Watch It Here",
-     "url": "https://www.gamespot.com/articles/mr-beast-teases-a-huge-call-of-duty-video-focused-on-dmz-with-real-life-content-creators/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Something Is Hunting My Dogs...",
-   "signal": "YouTube GB-gaming 91,073/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The pet I’ll never forget: Orlando was paralysed and almost died – then became the perfect guide dog",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/19/the-pet-ill-never-forget-orlando-was-paralysed-and-almost-died-then-became-the-perfect-guide-dog",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Making NEW FRIENDS at School..",
-   "signal": "YouTube GB-gaming 37,637/h",
-   "wikipedia": null,
+   "topic": "Lawrence Bishnoi",
+   "signal": "Wikipedia 135,745 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lawrence_Bishnoi",
    "articles": [
     {
      "outlet": "Guardian",
@@ -461,42 +244,67 @@
    ]
   },
   {
-   "topic": "ROBLOX STEAL A CAR..",
-   "signal": "YouTube GB-gaming 30,792/h",
-   "wikipedia": null,
+   "topic": "Deaths in 2026",
+   "signal": "Wikipedia 134,323 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
    "articles": [
     {
-     "outlet": "Polygon",
-     "title": "The Black Mirror of Roblox games mysteriously pulled after hitting No. 1",
-     "url": "https://www.polygon.com/steal-an-egg-roblox-what-happened-discord-black-mirror-netflix/",
-     "published": "2026-08-24"
+     "outlet": "Guardian",
+     "title": "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
+     "url": "https://www.theguardian.com/world/2026/oct/19/kenya-starvation-cult-leader-guilty-murder-190-children",
+     "published": "2026-10-19"
     }
    ]
   },
   {
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 153,028/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+   "topic": "Nathan Fielder",
+   "signal": "Wikipedia 115,086 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nathan_Fielder",
    "articles": [
     {
-     "outlet": "Rolling Stone",
-     "title": "Artists Behind Olivia Rodrigo ‘Expectations’ Music Video Debunk AI Accusations",
-     "url": "https://www.rollingstone.com/music/music-news/olivia-rodrigo-expectations-ai-debunk-1235644671/",
+     "outlet": "Variety",
+     "title": "‘You Can See Everything’ Sets Oscar Campaigns for Best Picture, Supporting Actress and More Categories",
+     "url": "https://variety.com/2026/film/awards/you-can-see-everything-oscars-eligibility-awards-1236916699/",
      "published": "2026-10-19"
     },
     {
-     "outlet": "Billboard",
-     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "published": "2026-10-14"
+     "outlet": "Guardian",
+     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "If You Escape, You Win $1,000,000",
+   "signal": "YouTube GB 663,456/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Houdini act in Venice leaves Massimiliano Allegri searching for an escape at Napoli | Nicky Bandini",
+     "url": "https://www.theguardian.com/football/2026/oct/19/massimiliano-allegri-napoli-davide-nicola-venezia-serie-a",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Mr. Beast’s Call Of Duty: MW4 DMZ Video Pays $1 Million To The Winner, Watch It Here",
+     "url": "https://www.gamespot.com/articles/mr-beast-teases-a-huge-call-of-duty-video-focused-on-dmz-with-real-life-content-creators/",
+     "published": "2026-10-19"
     }
    ]
   },
   {
    "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 143,616/h",
+   "signal": "YouTube GB-sport 138,196/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Save $110 for Your First Year With McAfee+ Scam Detector, Including a VPN, Antivirus and Online Protection in the Age of AI",
+     "url": "https://www.ign.com/articles/mcafee-plus-advanced-online-protection-plan-deal-october-2026",
+     "published": "2026-10-19"
+    },
     {
      "outlet": "GameSpot",
      "title": "Battlefield 6 Dev Owns Up To Mistakes With Strange-Looking Cosmetics, But Stays Silent On Possible AI Use",
@@ -513,7 +321,7 @@
   },
   {
    "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 1,134,912/h",
+   "signal": "YouTube GB-entertainment 859,663/h",
    "wikipedia": null,
    "articles": [
     {
@@ -525,51 +333,145 @@
    ]
   },
   {
-   "topic": "paul ferris",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Paul_Ferris_(Scottish_writer)",
+   "topic": "Never say never 😭",
+   "signal": "YouTube GB-entertainment 300,020/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Never_Say_Never_Again",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Call of Duty: Modern Warfare 4 Pop-Up: The DMZ Has Never Been This Much Fun",
+     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-pop-up-the-dmz-has-never-been-this-much-fun",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "Stupid Never Dies Is Easily the Worst Game of 2026",
+     "url": "https://www.polygon.com/stupid-never-dies-review/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "WoW: Forever Is Soaring, But Midnight Is Struggling",
+     "url": "https://www.gamespot.com/articles/wow-forever-is-soaring-but-midnight-is-struggling/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Secrets, lies and a shock A-list cameo: how You Can See Everything became the film of the year",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-movie-spoilers-success",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "What is the BEST app?!📱🤔",
+   "signal": "YouTube GB-tech 67,592/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
+     "url": "https://www.polygon.com/mw4-modern-warfare-4-call-duty-campaign-review/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "You Don’t Need An Expensive Console Or High-End PC To Play Call Of Duty: Modern Warfare 4",
+     "url": "https://www.gamespot.com/articles/you-dont-need-an-expensive-console-or-high-end-pc-to-play-call-of-duty-modern-warfare-4/",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Sony’s best noise-canceling earbuds are nearly $100 off today only",
+     "url": "https://www.theverge.com/gadgets/1013911/sonys-best-noise-canceling-earbuds-are-nearly-100-off-today-only",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "The reviews are in! Is You Can See Everything the greatest film ever?",
+     "url": "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "#CULT Official Trailer",
+   "signal": "YouTube US 238,854/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Space.com",
+     "title": "New 'Blade Runner 2099' trailer is a space fan's dream with sinister starships and strange exoplanets (video)",
+     "url": "https://www.space.com/entertainment/space-movies-shows/new-blade-runner-2099-trailer-is-a-space-fans-dream-with-sinister-starships-and-strange-exoplanets-video",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "NAZA directors: 'It's a film about systems of mass killing' – video",
+     "url": "https://www.theguardian.com/film/video/2026/oct/17/naza-directors-its-a-film-about-systems-of-mass-killings-video",
+     "published": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "topic": "Something Is Hunting My Dogs...",
+   "signal": "YouTube US-gaming 74,167/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "The pet I’ll never forget: Orlando was paralysed and almost died – then became the perfect guide dog",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/19/the-pet-ill-never-forget-orlando-was-paralysed-and-almost-died-then-became-the-perfect-guide-dog",
+     "published": "2026-10-19"
+    }
+   ]
+  },
+  {
+   "topic": "Patient Zero by Taylor Swift",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
    "articles": []
   },
   {
-   "topic": "harry and meghan",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Harry_and_meghan",
+   "topic": "I Can't Love You Anymore by Ella Langley & Morgan Wallen",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/I_Can%27t_Love_You_Anymore_(Ella_Langley_and_Morgan_Wallen_song)",
    "articles": []
   },
   {
-   "topic": "natalie nakase",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Natalie_Nakase",
+   "topic": "weather warnings uk",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Weather_warnings",
    "articles": []
   },
   {
-   "topic": "WrestleDream (2026)",
-   "signal": "Wikipedia 140,072 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/WrestleDream_(2026)",
+   "topic": "brest",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Brest",
    "articles": []
   },
   {
-   "topic": "Katie Zacharia",
-   "signal": "Wikipedia 136,231 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Zacharia",
+   "topic": "nhl",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nhl",
    "articles": []
   },
   {
-   "topic": "Kaviya Maran",
-   "signal": "Wikipedia 114,477 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kaviya_Maran",
+   "topic": "irina shayk",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Irina_Shayk",
    "articles": []
   },
   {
-   "topic": "Tate McRae",
-   "signal": "YouTube GB-music 76,404/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "topic": "blueface",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Blueface",
    "articles": []
   },
   {
-   "topic": "Zara Larsson",
-   "signal": "YouTube GB-music 49,500/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
+   "topic": "chandler riggs",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chandler_Riggs",
    "articles": []
   }
  ]

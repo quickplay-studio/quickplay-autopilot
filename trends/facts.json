@@ -1,31 +1,22 @@
 {
  "date": "2026-10-20",
- "built": "2026-10-20T11:23+00:00",
- "model": "gemini-3.6-flash",
- "mode": "full",
- "errors": [
-  "You Can See Everything: gemini-flash-latest: ReadTimeout",
-  "Jailer 2: gemini-flash-latest: ReadTimeout"
- ],
+ "built": "2026-10-20T13:36+00:00",
+ "model": "gemini-3.5-flash",
+ "mode": "breaking",
+ "errors": [],
  "topics": [
   {
-   "n": 20,
+   "n": 18,
    "topic": "Street Fighter (2026 film)",
    "signal": "Wikipedia 153,073 views",
    "category": "Film",
-   "what_is_new": "Street Fighter set a new box office record for the franchise after earning $31 million domestically over its opening weekend following its release on Oct. 16.",
+   "what_is_new": "",
    "hooks": [
-    "Street Fighter earned $31 million domestically during its opening weekend.",
-    "Street Fighter is Capcom's third live action adaptation for cinemas.",
-    "The new Street Fighter film holds a 79% audience score."
+    "The new Street Fighter movie features Jason Momoa and Roman Reigns!",
+    "Chun-Li actress Callina Liang ate 12 eggs daily to bulk up.",
+    "Street Fighter 2026 is the third live-action film for the franchise."
    ],
    "sources": [
-    [
-     "Street Fighter Officially Sets a New Franchise Box Office Record",
-     "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
-     "Polygon",
-     "2026-10-19"
-    ],
     [
      "Street Fighter (2026 Movie) Guide",
      "https://www.ign.com/wikis/street-fighter-2026-movie",
@@ -41,384 +32,233 @@
    ],
    "verified": [
     {
-     "claim": "Street Fighter is the third live action adaptation based on the Capcom fighting game franchise.",
+     "claim": "Kitao Sakurai directed the 2026 Street Fighter movie.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Capcom and Legendary's highly anticipated new Street Fighter movie made its debut in movie theaters this weekend, giving fans of the fighting game franchise their",
-      "2": "The movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
-      "3": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
      }
     },
     {
-     "claim": "The movie was directed by Kitao Sakurai.",
+     "claim": "The film is the third live action feature length adaptation of the Street Fighter video game series.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Street Fighter was directed and co-written by Kitao Sakurai.",
-      "2": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
-      "3": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
+      "1": "the movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
+      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
      }
     },
     {
-     "claim": "Andrew Koji stars as Ryu and Noah Centineo plays Ken Masters.",
+     "claim": "Noah Centineo stars in the film as Ken Masters.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Andrew Koji as Ryu - Noah Centineo as Ken Masters - Callina Liang as Chun-Li - David Dastmalchian as M.",
-      "3": "- Noah Centineo as Ken Masters - Andrew Koji as Ryu / Dark Ryu - Callina Liang as Chun-Li[4] - Joe \"Roman Reigns\" Anoa'i as"
+      "1": "- Noah Centineo as Ken Masters",
+      "2": "- Noah Centineo as Ken Masters"
      }
     },
     {
-     "claim": "Callina Liang stars as Chun Li while David Dastmalchian plays M. Bison.",
+     "claim": "Andrew Koji portrays the character Ryu.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "The movie stars Andrew Koji as Ryu, Noah Centineo as Ken Masters, and Callina Liang as Chun-Li, with Joe “Roman Reigns” Anoa'i as Akuma, David",
-      "2": "- Callina Liang as Chun-Li - David Dastmalchian as M. Bison - Joe Anoa'i (Roman Reigns) as Akuma - Cody Rhodes as Guile - Jason",
-      "3": "- Callina Liang as Chun-Li[4] - Joe \"Roman Reigns\" Anoa'i as Akuma - David Dastmalchian as M. Bison - Cody Rhodes as Guile - Andrew"
+      "1": "- Andrew Koji as Ryu",
+      "2": "- Andrew Koji as Ryu / Dark Ryu"
      }
     },
     {
-     "claim": "Cody Rhodes plays Guile and Jason Momoa portrays Blanka.",
+     "claim": "Callina Liang plays the role of Chun Li.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Bison, Cody Rhodes as Guile, Curtis “50 Cent” Jackson as Balrog, Jason Momoa as Blanka, Vidyut Jammwal as Dhalsim, Mel Jarnson as Cammy, Orville Peck",
-      "2": "- Cody Rhodes as Guile - Jason Momoa as Blanka - Curtis \"50 Cent\" Jackson as Balrog - Mel Jarnson as Cammy - Orville Peck",
-      "3": "- Cody Rhodes as Guile - Andrew Schulz as Dan Hibiki - Eric André as Don Sauvage - Vidyut Jammwal as Dhalsim - Orville Peck"
+      "1": "- Callina Liang as Chun-Li",
+      "2": "- Callina Liang as Chun-Li[4]"
      }
     },
     {
-     "claim": "Curtis 50 Cent Jackson features as Balrog alongside Vidyut Jammwal as Dhalsim.",
+     "claim": "David Dastmalchian appears in the movie as M. Bison.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Bison, Cody Rhodes as Guile, Curtis “50 Cent” Jackson as Balrog, Jason Momoa as Blanka, Vidyut Jammwal as Dhalsim, Mel Jarnson as Cammy, Orville Peck",
-      "2": "- Curtis \"50 Cent\" Jackson as Balrog - Mel Jarnson as Cammy - Orville Peck as Vega - Vidyut Jammwal as Dhalsim - Olivier Richters",
-      "3": "- Vidyut Jammwal as Dhalsim - Orville Peck as Vega - Don Lee as Gouken - Curtis \"50 Cent\" Jackson as Balrog - Jason Momoa"
+      "1": "- David Dastmalchian as M. Bison",
+      "2": "- David Dastmalchian as M. Bison"
      }
     },
     {
-     "claim": "Orville Peck portrays Vega while Mel Jarnson plays Cammy.",
+     "claim": "Joe Anoa'i also known as Roman Reigns plays Akuma.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Jackson as Balrog, Jason Momoa as Blanka, Vidyut Jammwal as Dhalsim, Mel Jarnson as Cammy, Orville Peck as Vega, Olivier Richters as Zangief, Hirooki Goto",
-      "2": "- Mel Jarnson as Cammy - Orville Peck as Vega - Vidyut Jammwal as Dhalsim - Olivier Richters as Zangief - Hirooki Goto as E.",
-      "3": "- Orville Peck as Vega - Don Lee as Gouken - Curtis \"50 Cent\" Jackson as Balrog - Jason Momoa as Blanka - Olivier Richters"
+      "1": "- Joe Anoa'i (Roman Reigns) as Akuma",
+      "2": "- Joe \"Roman Reigns\" Anoa'i as Akuma"
      }
     },
     {
-     "claim": "Olivier Richters plays Zangief and Hirooki Goto appears as E. Honda.",
+     "claim": "Cody Rhodes is cast as Guile.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Vidyut Jammwal as Dhalsim, Mel Jarnson as Cammy, Orville Peck as Vega, Olivier Richters as Zangief, Hirooki Goto as E. Honda, Andrew Schulz as Dan",
-      "2": "- Olivier Richters as Zangief - Hirooki Goto as E. Honda - Andrew Schulz as Dan Hibiki - Eric André as Don Sauvage - Rayna",
-      "3": "- Olivier Richters as Zangief - Hirooki Goto as E. Honda - Mel Jarnson as Cammy - Rayna Vallandingham as Juli - Kyle Mooney as"
+      "1": "- Cody Rhodes as Guile",
+      "2": "- Cody Rhodes as Guile"
      }
     },
     {
-     "claim": "Andrew Schulz portrays Dan Hibiki and Eric André appears as Don Sauvage.",
+     "claim": "Jason Momoa portrays the character Blanka.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Olivier Richters as Zangief, Hirooki Goto as E. Honda, Andrew Schulz as Dan Hibiki, Eric André as Don Sauvage, Rayna Vallandingham as Juli, Alexander Volkanovski",
-      "2": "- Andrew Schulz as Dan Hibiki - Eric André as Don Sauvage - Rayna Vallandingham as Juli - Alexander Volkanovski as Joe - Kyle Mooney",
-      "3": "- Andrew Schulz as Dan Hibiki - Eric André as Don Sauvage - Vidyut Jammwal as Dhalsim - Orville Peck as Vega - Don Lee"
+      "1": "- Jason Momoa as Blanka",
+      "2": "- Jason Momoa as Blanka"
      }
     },
     {
-     "claim": "Rayna Vallandingham plays Juli, Alexander Volkanovski appears as Joe, and Kyle Mooney stars as Marvin.",
+     "claim": "Curtis 50 Cent Jackson appears as Balrog.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "Honda, Andrew Schulz as Dan Hibiki, Eric André as Don Sauvage, Rayna Vallandingham as Juli, Alexander Volkanovski as Joe, and Kyle Mooney as Marvin.",
-      "2": "- Rayna Vallandingham as Juli - Alexander Volkanovski as Joe - Kyle Mooney as Marvin - Don Lee as Gouken",
-      "3": "- Rayna Vallandingham as Juli - Kyle Mooney as Marvin - Alexander Volkanovski as Joe The character El Fuerte appears portrayed by Christian Valle."
+      "1": "- Curtis \"50 Cent\" Jackson as Balrog",
+      "2": "- Curtis \"50 Cent\" Jackson as Balrog"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Street Fighter earned $31 million domestically during its opening weekend.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "According to data from BoxOfficeMojo, Street Fighter earned $31 million domestically during its opening weekend."
-     }
-    },
-    {
-     "claim": "The Rotten Tomatoes audience score for Street Fighter is at 79% after opening weekend.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Street Fighter (2026)'s Rotten Tomatoes audience score (aka the Popcornmeter) is at 79% after opening weekend."
-     }
-    },
-    {
-     "claim": "Street Fighter will eventually stream on Paramount+ as Paramount distributes the film.",
+     "claim": "The film has grossed 51 million dollars worldwide against a production budget of 81 million dollars.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "As the movie is being distributed by Paramount, it will eventually stream on Paramount+, which may be merged with HBO Max under the new Skydance"
+      "2": "It received mixed reviews from critics and has grossed $51 million worldwide against an $81 million production budget."
      }
     },
     {
-     "claim": "By the end of filming, each of Callina Liang's thighs had increased in size by 6.5 centimetres.",
+     "claim": "Callina Liang increased the size of each of her thighs by 6.5 centimetres to prepare for her role.",
      "sources": [
-      3
+      2
      ],
      "evidence": {
-      "3": "By the end of filming, each of her thighs had increased in size by 6.5 centimeters (2.6 in).[22] Principal phot"
+      "2": "By the end of filming, each of her thighs had increased in size by 6.5 centimeters (2.6 in)."
+     }
+    },
+    {
+     "claim": "Principal photography for the movie began in August 2025 and concluded in November.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Principal photography began in August 2025 and ended in November."
+     }
+    },
+    {
+     "claim": "The actress playing Chun Li consumed 12 eggs per day as part of a rigorous bulking diet.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "She adopted a rigorous bulking diet that involved consuming 12 eggs per day and eating every two hours, which she said made her nauseated."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 5,
-   "topic": "keira knightley",
-   "signal": "Google Trends GB 1000+",
+   "n": 9,
+   "topic": "anton du beke",
+   "signal": "Google Trends GB 2000+",
    "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Keira Knightley was meant to be named Kiera after a figure skater.",
-    "Keira Knightley stars as theatre actor Christa Maria in a new play."
+    "Discover the facts about Strictly Come Dancing judge Anton Du Beke.",
+    "Did you know Anton Du Beke released his debut studio album?"
    ],
    "sources": [
     [
-     "The 10 Best Jane Austen Adaptations, Ranked",
-     "https://www.rollingstone.com/tv-movies/tv-movie-lists/best-jane-austen-adaptations-ranked-1235643491/",
-     "Rolling Stone",
-     "2026-10-19"
+     "Strictly Come Dancing's Shirley Ballas and Anton Du Beke go head-to-head in first look at Ballroom vs Latin group routine",
+     "https://www.bbc.com/mediacentre/2026/strictly-come-dancing-shirley-ballas-vs-anton-du-beke",
+     "BBC",
+     "2026-10-09"
     ],
     [
-     "‘I knew I was being followed’: Keira Knightley on her hacking nightmare – and new Stasi spy play The Lives of Others",
-     "https://www.theguardian.com/stage/2026/oct/13/keira-knightley-luke-thompson-hacking-stasi-spy-play-the-lives-of-others",
-     "Guardian",
-     "2026-10-12"
-    ],
-    [
-     "keira knightley",
-     "https://en.wikipedia.org/wiki/Keira_Knightley",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Keira Knightley stars as theatre actor Christa Maria in the stage production of The Lives of Others alongside Luke Thompson.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Based on the Oscar-winning 2006 film and set in East Berlin in 1984, the play stars Knightley as Christa-Maria, a theatre actor in a relationship"
-     }
-    },
-    {
-     "claim": "Keira Knightley was nominated for the Academy Award for Best Actress for her portrayal of Elizabeth Bennet in the 2005 film Pride & Prejudice.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "For her portrayal of Elizabeth Bennet in Pride & Prejudice (2005), Knightley was nominated for the Academy Award for Best Actress."
-     }
-    },
-    {
-     "claim": "Keira Knightley was intended to be named Kiera after Soviet figure skater Kira Ivanova, but her mother misspelt the name on the birth certificate.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "She was meant to be named \"Kiera\", the anglicised form of \"Kira\", after the Soviet figure skater Kira Ivanova, whom her father admired; however, Macdonald,"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Knightley_Bafta_2015_07.png"
-   ]
-  },
-  {
-   "n": 11,
-   "topic": "ny knicks",
-   "signal": "Google Trends US 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "The New York Knicks won the 2026 NBA championship!"
-   ],
-   "sources": [
-    [
-     "NBA 2026-27 season predictions: A Knicks repeat and LeBron’s villain arc",
-     "https://www.theguardian.com/sport/2026/oct/20/nba-2026-27-season-predictions-a-knicks-repeat-and-lebrons-villain-arc",
-     "Guardian",
-     "2026-10-20"
-    ],
-    [
-     "ny knicks",
-     "https://en.wikipedia.org/wiki/NY_Knicks",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The Knicks won their first NBA championships in 1970 and 1973 under head coach Red Holzman.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The Knicks returned to prominence in the late 1960s under head coach Red Holzman, winning their first NBA championships in 1970 and 1973."
-     }
-    },
-    {
-     "claim": "The New York Knicks were established in 1946 by Ned Irish.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Established in 1946 by Ned Irish, the New York Knicks were among the founding members of the Basketball Association of America (BAA), which merged with"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 24,
-   "topic": "Nathan Fielder",
-   "signal": "Wikipedia 115,086 views",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Nathan Fielder's new documentary earned 15 million dollars opening weekend.",
-    "Did you know Nathan Fielder's new film achieved a 99 Metacritic score?"
-   ],
-   "sources": [
-    [
-     "The reviews are in! Is You Can See Everything the greatest film ever?",
-     "https://www.theguardian.com/film/2026/oct/19/you-can-see-everything-elizabeth-holmes-nathan-fielder-lance-oppenheim",
-     "Guardian",
-     "2026-10-19"
-    ],
-    [
-     "Nathan Fielder Didn’t Want to Be on Camera Until Elizabeth Holmes, Billy Evans Changed His Mind",
-     "https://www.hollywoodreporter.com/movies/movie-news/nathan-fielder-elizabeth-holmes-you-can-see-everything-1236735363/",
-     "The Hollywood Reporter",
-     "2026-10-19"
-    ],
-    [
-     "Nathan Fielder",
-     "https://en.wikipedia.org/wiki/Nathan_Fielder",
+     "anton du beke",
+     "https://en.wikipedia.org/wiki/Anton_Du_Beke",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Nathan Fielder co-directed the documentary film You Can See Everything alongside Lance Oppenheim.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Critics have been unstinting in their praise for Nathan Fielder and Lance Oppenheim’s unflinching three-hour examination of the Theranos scandal’s architect and …",
-      "3": "Fielder then co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything (2026), which follows the disgraced entrepreneur Elizabeth Holmes."
-     }
-    },
-    {
-     "claim": "The documentary film You Can See Everything focuses on the disgraced entrepreneur Elizabeth Holmes.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "The subject of the documentary is Elizabeth Holmes, the disgraced founder of …",
-      "2": "Nathan Fielder says he “definitely” didn’t want to be on camera in his groundbreaking Elizabeth Holmes documentary You Can See Everything.",
-      "3": "Fielder then co-directed his first feature film alongside Lance Oppenheim, the documentary You Can See Everything (2026), which follows the disgraced entrepreneur Elizabeth Holmes."
-     }
-    },
-    {
-     "claim": "You Can See Everything logged 15 million dollars at the box office in its opening weekend.",
+     "claim": "Anton Du Beke is a professional dancer and a judge on the BBC show Strictly Come Dancing.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "And audiences have so far been undaunted by the long run time – it logged a phenomenal $15m at the box office in its opening",
-      "2": "You Can See Everything opened on Friday to $15 million from just 855 North American theaters, blowing away expectations and marking the biggest nonconcert documentary"
+      "1": "Strictly Come Dancing's Shirley Ballas and Anton Du Beke go head-to-head in first look at Ballroom vs Latin group routine",
+      "2": "Anton Du Beke (/ /), is a British ballroom and Latin dancer, author, singer and television presenter, best known for being a professional dancer and"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "On Metacritic, You Can See Everything received a score of 99/100.",
+     "claim": "Anton Du Beke was born as Anthony Paul Beke on 20 July 1966.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "And the film has earned an unprecedented Metacritic score of 99/100."
+      "2": "Anthony Paul Beke (born 20 July 1966), known professionally as Anton Du Beke (/ /), is a British ballroom and Latin dancer, author, singer and"
      }
     },
     {
-     "claim": "You Can See Everything has a 99% rating on Rotten Tomatoes from 117 reviews.",
+     "claim": "Anton Du Beke married Hannah Summers on 20 April 2017.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "On Rotten Tomatoes, You Can See Everything has a 99% rating from 117 reviews so far, putting it in contention for the site’s best-rated film"
+      "2": "Du Beke married Hannah Summers on 20 April 2017 at Cliveden in Taplow, Buckinghamshire.[7]"
      }
     },
     {
-     "claim": "Nathan Fielder was born on May 12, 1983 in Vancouver.",
+     "claim": "Anton Du Beke released his debut studio album From the Top in November 2017.",
      "sources": [
-      3
+      2
      ],
      "evidence": {
-      "3": "Nathan Joseph Fielder was born on May 12, 1983,[5][6][7] in Vancouver.[8]"
+      "2": "In November 2017 he released his debut studio album, From the Top, on Polydor Records."
+     }
+    },
+    {
+     "claim": "Anton Du Beke became a permanent judge on Strictly Come Dancing starting in September 2021.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "On 24 June 2021, it was announced that Du Beke would become a permanent judge on Strictly Come Dancing from series nineteen, starting in September"
      }
     }
    ],
    "images": [
-    "commons:File:Nathan_Fielder.jpg"
+    "commons:File:Anton_Du_Beke_in_2019.png"
    ]
   }
  ]

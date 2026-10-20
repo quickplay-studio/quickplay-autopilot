@@ -89,6 +89,17 @@ curiosity); first frame (cover or photo); angle research shown or hidden; series
 voice, camera energy, colour grade, opening); music mood; posting slot; the alternative title swap after 24 hours;
 the channel's comment question and replies.
 
+## 21 October, 00:20 to 01:00 UK: posting round the clock, the clips channel
+- Slots cover all 24 hours from slot_first (a third of viewers are American, a fifth Asian); a posting day runs 07:30
+  to 07:30, so a run after midnight still fills the night ("afternoon 8" pushed to requests/write.txt wrote 6 for the
+  night of 20 October: a follow-up from a breakout's own pages, written by Groq, and five evergreen Shorts).
+- A request line may name the run: "afternoon 8", "evening 10", "morning 18" (WRITE_RUN).
+- validate.check no longer crashes on a board with no beats (a Groq board did; the writer now asks again).
+- No gameplay uploads from Charlie (fiction Shorts use stock video of game-like motion).
+- Quickplay Clips (@QuickplayClips-x9b) exists: docs/CLIPS.md has the plan and his steps; the social workflow can sign
+  it in (channel "clips"); the YouTube sign-in link is now always in status/youtube_connect*.json. Waiting on: the
+  channel's sign-in, the campaigns he joins (clips/campaigns.json), TWITCH_CLIENT_ID and TWITCH_CLIENT_SECRET.
+
 ## Still open
 - Charlie's optional secrets: GROQ_API_KEY, CEREBRAS_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, CLAUDE_CODE_OAUTH_TOKEN
   (https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new).

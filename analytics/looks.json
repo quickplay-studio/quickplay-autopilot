@@ -1,18 +1,22 @@
 {
- "updated": "2026-10-20T04:58+00:00",
+ "updated": "2026-10-20T11:23+00:00",
  "dimensions": {
   "captions": {
    "punch": {
-    "n": 0
+    "n": 1,
+    "score": 4.667
    },
    "clean": {
-    "n": 0
+    "n": 2,
+    "score": 4.944
    },
    "pop": {
-    "n": 0
+    "n": 3,
+    "score": 3.709
    },
    "boxed": {
-    "n": 0
+    "n": 1,
+    "score": 2.519
    },
    "minimal": {
     "n": 0
@@ -23,13 +27,16 @@
   },
   "voice": {
    "george": {
-    "n": 0
+    "n": 5,
+    "score": 3.709
    },
    "george_dramatic": {
-    "n": 0
+    "n": 1,
+    "score": 7.444
    },
    "george_quick": {
-    "n": 0
+    "n": 1,
+    "score": 1.333
    },
    "emma": {
     "n": 0
@@ -40,10 +47,12 @@
   },
   "energy": {
    "steady": {
-    "n": 0
+    "n": 4,
+    "score": 3.447
    },
    "punchy": {
-    "n": 0
+    "n": 3,
+    "score": 4.667
    },
    "calm": {
     "n": 0
@@ -54,13 +63,16 @@
   },
   "grade": {
    "natural": {
-    "n": 0
+    "n": 4,
+    "score": 3.447
    },
    "cinematic": {
-    "n": 0
+    "n": 2,
+    "score": 3.593
    },
    "vivid": {
-    "n": 0
+    "n": 1,
+    "score": 7.444
    },
    "lab-grade-1019": {
     "n": 0
@@ -68,10 +80,12 @@
   },
   "opening": {
    "graphic_first": {
-    "n": 0
+    "n": 3,
+    "score": 3.709
    },
    "image_first": {
-    "n": 0
+    "n": 4,
+    "score": 4.982
    },
    "lab-opening-1019": {
     "n": 0

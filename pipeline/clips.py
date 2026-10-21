@@ -494,6 +494,45 @@ def probe(url):
             log(f"  {key} at {m.start()}: {re.sub(chr(10), ' ', r.text[max(0, m.start() - 120): m.start() + 240])}")
 
 
+def median_views(cid):
+    """Median views of the campaign's public clips so far (clips/stats.csv), None until it has 3."""
+    p = ROOT / "clips" / "stats.csv"
+    if not p.exists(): return None
+    vals = [float(r["views"] or 0) for r in csv.DictReader(p.open()) if r.get("campaign") == cid and r.get("privacy") == "public"
+            and float(r.get("hours_public") or 0) >= 24]
+    if len(vals) < 3: return None
+    vals.sort(); return vals[len(vals) // 2]
+
+
+def allocate(remaining, count=None):
+    """How many clips each active campaign gets today: the day's remaining number shared by expected money (pay per
+    1,000 times the campaign's median views, a 1,000-view prior until it has 3 measured clips, with a little noise so
+    every campaign keeps being tried), each capped by its per_day. The data decides, like the main channel."""
+    import random
+    cs = campaigns()
+    if not cs or remaining <= 0: return {}
+    rng = random.Random(str(NOW.date()))
+    score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * rng.uniform(0.8, 1.25) for cid, c in cs.items()}
+    order = sorted(cs, key=lambda cid: -score[cid])
+    out, left = {}, remaining
+    for cid in order:                                   # one each first, strongest first, then up to per_day
+        cap = count if count is not None else int(cs[cid].get("per_day", 3))
+        if left > 0 and cap > 0: out[cid] = 1; left -= 1
+    for cid in order:
+        cap = count if count is not None else int(cs[cid].get("per_day", 3))
+        while left > 0 and out.get(cid, 0) < cap: out[cid] = out.get(cid, 0) + 1; left -= 1
+    return out
+
+
+def scheduled_today():
+    """Clips already uploaded for the next batch (so two runs in a day share the daily number)."""
+    iso, _ = batch_time(); n = 0
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        n += sum(1 for m in json.loads(p.read_text()).get("moments") or [] if m.get("publish_at") == iso)
+    return n
+
+
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
@@ -502,12 +541,24 @@ def main(argv):
         for u in ids: probe(u)
         return
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
-    for cid in (ids or list(campaigns())):
-        if cid not in campaigns(): log(f"{cid}: not an active campaign"); continue
-        if cmd in ("run", "source"): source(cid)
-        if cmd == "plan" or (cmd == "run" and unmade(cid) < (count or campaigns()[cid].get("per_day", 3))): plan(cid)
-        if cmd in ("run", "make"): make(cid, count)
-        if cmd in ("run", "upload"): upload(cid)
+    deadline = time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110)      # the job stops at 150: save what is made
+    cs = campaigns()
+    if cmd == "run":
+        want = allocate(max(0, int(CFG.get("daily_clips", 10)) - scheduled_today()), count)
+        log("today's shares:", json.dumps(want))
+        if not want: log("the day's number is already scheduled"); return
+    for cid in (ids or list(cs)):
+        if cid not in cs: log(f"{cid}: not an active campaign"); continue
+        if cmd == "run" and not want.get(cid): continue
+        if time.time() > deadline: log(f"{cid}: out of time this run, next run continues"); break
+        try:
+            if cmd in ("run", "prepare", "source"): source(cid)
+            n = want.get(cid, count or cs[cid].get("per_day", 3)) if cmd == "run" else (count or cs[cid].get("per_day", 3))
+            if cmd in ("plan", "prepare") or (cmd == "run" and unmade(cid) < n): plan(cid)
+            if cmd in ("run", "make"): make(cid, n)
+            if cmd in ("run", "upload"): upload(cid)
+        except Exception as e:
+            log(f"{cid}: {type(e).__name__}: {str(e)[:300]}")
     if cmd == "run":
         try: stats()
         except Exception as e: log("stats:", str(e)[:200])

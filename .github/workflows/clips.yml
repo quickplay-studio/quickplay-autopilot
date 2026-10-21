@@ -5,7 +5,8 @@ name: clips
 # publish time); "stats" refreshes clips/stats.csv only.
 on:
   schedule:
-    - cron: '0 12 * * *'       # 13:00 UK (12:00 in summer): the day's clips, scheduled for 18:00 UK
+    - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
+    - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
     - cron: '30 22 * * *'      # views per clip for the learning data
   push:
     branches: [main]
@@ -25,7 +26,7 @@ concurrency:
 jobs:
   clips:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 170
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
@@ -57,6 +58,8 @@ jobs:
           set -o pipefail
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
+          elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
+            python pipeline/clips.py prepare 2>&1 | tee status/clips_log.txt
           elif echo "$req" | grep -qi probe; then
             python pipeline/clips.py probe $(echo "$req" | grep -o 'https://[^ ]*') 2>&1 | tee status/clips_log.txt
           else

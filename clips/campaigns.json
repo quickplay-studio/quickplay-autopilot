@@ -255,7 +255,7 @@
    },
    "name": "VALORANT Microdrama series",
    "url": "https://app.vyro.com/campaigns",
-   "active": true,
+   "active": false,
    "per_day": 3,
    "pay_per_1k": 1.5,
    "subject": "VALORANT",
@@ -281,7 +281,8 @@
     "max_s": 55,
     "language": "English",
     "series": "Split an episode into Part 1, Part 2, Part 3 in order, each a clip of its own, titled with the part number."
-   }
+   },
+   "why_off": "Its footage link is a folder of episodes and its rule is whole episodes in order (Part 1, 2, 3) or memes; the line downloads single files and picks moments. Switches on once the folder download and the in-order split are built."
   },
   "valorant-champs": {
    "platform": "Vyro",

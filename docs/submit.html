@@ -19,7 +19,7 @@ button{background:#2d7ff9;color:#fff}a.btn{background:#2a2f3a;color:#fff}
 <h1>Quickplay Clips: links to submit</h1>
 <p id="status">Loading today's clips…</p>
 <div id="list"></div>
-<p>Each card: press <b>Copy link</b>, press <b>Open campaign</b>, press <b>Submit clip</b> (Content Rewards) or <b>Submit post</b> (Vyro), paste, confirm. Reach campaigns want it within 30 minutes of the clip going public. Press <b>Done</b> to grey a card out (remembered on this phone only).</p>
+<p>GitHub submits every link itself at the batch time. A card here is one it could not do (the reason is under the title): press <b>Copy link</b>, press <b>Open campaign</b>, press <b>Submit clip</b> (Content Rewards) or <b>Submit post</b> (Vyro), paste, confirm. Press <b>Done</b> to grey a card out (remembered on this phone only).</p>
 <script>
 const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/clips/submit.csv?t=" + Date.now();
 function parse(text){
@@ -38,11 +38,12 @@ fetch(RAW).then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
   const today=new Date().toISOString().slice(0,10);
   const list=document.getElementById("list");
   const since=new Date(Date.now()-3*86400000).toISOString().slice(0,10);
-  const show=rows.filter(r=>r.public_at_uk && !r.public_at_uk.startsWith("private") && r.submitted!=="pulled" && r.public_at_uk.slice(0,10)>=since);
-  document.getElementById("status").textContent = show.length ? show.length+" clips from the last 3 days, newest first (today's are dated "+today+")." : "No clips to submit yet.";
+  const show=rows.filter(r=>r.public_at_uk && !r.public_at_uk.startsWith("private") && (!r.submitted || r.submitted.startsWith("failed")) && r.public_at_uk.slice(0,10)>=since);
+  const did=rows.filter(r=>r.submitted && !r.submitted.startsWith("failed") && r.submitted!=="pulled" && r.public_at_uk.slice(0,10)>=since).length;
+  document.getElementById("status").textContent = (show.length ? show.length+" clips GitHub has not submitted yet, newest first (today is "+today+")." : "Nothing to submit by hand.") + (did ? " GitHub submitted "+did+" in the last 3 days." : "");
   for(const r of show){
     const d=document.createElement("div"); d.className="card"+(done[r.clip]?" done":"");
-    d.innerHTML=`<b>${r.title}</b><small><span class="tag">${r.campaign}</span><span class="tag">${r.platform||"youtube"}</span>public ${r.public_at_uk} UK · ${r.hashtags}</small>
+    d.innerHTML=`<b>${r.title}</b><small><span class="tag">${r.campaign}</span><span class="tag">${r.platform||"youtube"}</span>public ${r.public_at_uk} UK · ${r.hashtags}${r.submitted?" · "+r.submitted:""}</small>
       <button data-copy="${r.video}">Copy link</button><a class="btn" href="${r.campaign_url}" target="_blank" rel="noopener">Open campaign</a><button data-done="${r.clip}" style="background:#3a3f4a">Done</button>
       <small style="margin-top:8px">${r.video}</small>`;
     list.appendChild(d);

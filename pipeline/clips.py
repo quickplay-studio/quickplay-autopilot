@@ -1093,6 +1093,14 @@ def check_campaigns():
     return changed
 
 
+def submissions(dry=False):
+    """Every public link into its campaign by GitHub (pipeline/submit.py), after the posts and comments of a batch run."""
+    try:
+        import submit
+        submit.run(dry=dry)
+    except Exception as e: log("submit:", f"{type(e).__name__}: {str(e)[:200]}")
+
+
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
@@ -1100,11 +1108,16 @@ def main(argv):
         stats()
         try: engage()
         except Exception as e: log("engage:", str(e)[:200])
+        submissions()
         return
     if cmd == "social":
         social_posts(force=bool(os.environ.get("CLIPS_SOCIAL_NOW")))
         try: engage()
         except Exception as e: log("engage:", str(e)[:200])
+        submissions()
+        return
+    if cmd == "submit":
+        submissions(dry=bool(os.environ.get("SUBMIT_DRY")))
         return
     if cmd == "probe":
         for u in ids: probe(u)

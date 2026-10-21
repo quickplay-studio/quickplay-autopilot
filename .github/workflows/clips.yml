@@ -1,13 +1,15 @@
 name: clips
 # Quickplay Clips (pipeline/clips.py): clips from campaign-permitted footage (clips/campaigns.json), made at 13:00 UK and
-# public together at 18:00 UK, when Charlie pastes the links from clips/submit.csv into each campaign (Reach wants a
-# submission within 30 minutes of posting). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no
-# publish time); "stats" refreshes clips/stats.csv only.
+# public together at 18:00 UK; the batch run then posts them to Instagram and Facebook, comments, and submits every link
+# to its campaign itself (pipeline/submit.py, with the saved logins WHOP_COOKIES and VYRO_COOKIES; what it cannot submit
+# stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
+# "stats" refreshes clips/stats.csv only; "submit" puts the public links into their campaigns now ("submit probe" only
+# checks the saved logins work).
 on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
     - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
-    - cron: '0 17,18,21,22 * * *'   # the batch times (18:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts and comments
+    - cron: '1 17,18,21,22 * * *'   # the batch times (18:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts, comments, submissions
     - cron: '30 22 * * *'      # views per clip for the learning data
   push:
     branches: [main]
@@ -55,6 +57,8 @@ jobs:
           FB_CLIPS_PAGE_ID: ${{ secrets.FB_CLIPS_PAGE_ID }}
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
+          VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
           CLIPS_WORK: /mnt/clips
           IN_COUNT: ${{ inputs.count }}
           IN_MODE: ${{ inputs.mode }}
@@ -66,7 +70,10 @@ jobs:
           set -o pipefail
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
-          elif [ "${{ github.event.schedule }}" = "0 17,18,21,22 * * *" ] || echo "$req" | grep -qi social; then
+          elif echo "$req" | grep -qi submit; then
+            case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
+            python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt
+          elif [ "${{ github.event.schedule }}" = "1 17,18,21,22 * * *" ] || echo "$req" | grep -qi social; then
             case "$req" in *social*) export CLIPS_SOCIAL_NOW=1;; esac
             python pipeline/clips.py social 2>&1 | tee status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
@@ -83,7 +90,7 @@ jobs:
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           mkdir -p clips/plans status/quota
-          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png; do git add $f 2>/dev/null || true; done
+          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

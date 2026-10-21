@@ -120,3 +120,15 @@ forbids it for that creator's content.
 - A clip planned before the planner asked for a comment question gets one at comment time (question_for: the model
   reads what was said in the clip; a plain question when no model answers). hours_public counts from the publish time,
   not the upload, so the 24-hour insight reads true.
+
+## 21 October, 19:00 UK: GitHub submits the links itself
+- Charlie: "automated with submitting the clips" (he cannot always be at his phone within 30 minutes). Neither platform
+  has a clipper API, so pipeline/submit.py is a headless browser with the studio account's saved logins (secrets
+  WHOP_COOKIES for contentrewards.com and whop.com, VYRO_COOKIES for app.vyro.com: the cookies.txt that the "Get
+  cookies.txt LOCALLY" extension exports). It runs at the end of every batch and stats run and on "submit" in
+  requests/clips.txt ("submit probe": a login check only): the campaign page, Submit clip (Content Rewards) or the
+  add-clips page, the campaign, Submit post (Vyro), the link, confirm, the page's answer. Rows get the time submitted or
+  "failed: why" (tried again next run, screenshot status/submit_<site>.png, the page's buttons in the log). An expired
+  login raises a GitHub issue with the export steps and closes itself when a submission works. The phone page now lists
+  only what GitHub could not do. Batch crons moved to minute 1 (GitHub starts the hour's runs late).
+- Content Rewards' clipper terms count views from the submission, so a late link loses views; that is why this matters.

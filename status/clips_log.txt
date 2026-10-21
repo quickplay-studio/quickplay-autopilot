@@ -1,13 +1,5 @@
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-speed-expedia: 0 of 8 moments planned (gemini-flash-latest), 13 in all; dropped {"bad time": 0, "length": 0, "overlap": 8, "no hook": 0}; first: {"start": 866, "end": 901, "hook": "NUMBER ONE DESTINATION REVEALED", "label": "South Lake Tahoe, USA", "title": "IShowSpeed Reacts to #1 Travel Destination", "why": "Speed's disbelief and excitement 
-mrbeast-cod: 6 of 8 moments planned (gemini-3-flash-preview), 19 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0}
-tdr-stinkyasher: the model gave no moments: [{"start": 50, "end": 98, "hook": "SADIE IS READY TO WIN", "label": "Sadie", "title": "StinkyAsher Tries Total Drama Roblox", "why": "StinkyAsher shows off the cute outfit and starts the first challenge with high hopes."}, {"start": 212, "end": 255, "hook": "DUNCAN IS BEING WAY TOO MESSY", "label": 
-tdr-stinkyasher: 0 of 0 moments planned (gemini-3.5-flash-lite), 13 in all
-tdr-mitch: 1 of 4 moments planned (gemini-3.5-flash-lite), 4 in all; dropped {"bad time": 0, "length": 0, "overlap": 3, "no hook": 0}
-tdr-flamingo: the model gave no moments: [{"moments": [{"start": 562, "end": 585, "hook": "YOU'RE NOTHING AND YOU'RE FAT", "label": "", "title": "Flamingo plays Roblox Total Drama Island", "why": "Hilarious outburst of mean comments in the game's chat."}, {"start": 1009, "end": 1043, "skipped": true, "hook": "WHY CAN YOU VOTE YOURSELF", "l
-tdr-flamingo: 0 of 0 moments planned (gemini-3.5-flash-lite), 9 in all
-tdr-jenny: the model gave no moments: [{"start": 1478, "end": 1513, "hook": "JENNY GETS RUTHLESS IN VOICE CHAT", "label": "Voice Chat", "title": "Jenny Hoyos roasts players in Total Drama Roblox", "why": "Jenny gets brutally honest about another player and immediately regrets getting caught."}, {"start": 4147, "end": 4171, "hook": "SHE 
-tdr-jenny: 0 of 0 moments planned (gemini-3.5-flash-lite), 7 in all
+  buttons: ['Back', 'Download All', 'Show Asset Information', 'Collapse 2 Assets', 'Epi1 - Micro Drama.mov Download Asset', 'Epi 2 - Micro Drama (generic description']
+  downloaded Epi 2 - Micro Drama (generic descriptions).mp4 (181 MB)
+valorant-microdrama: 1 files in the folder: valorant-microdrama.raw
+valorant-microdrama: 1 episodes joined and saved as release asset valorant-microdrama.mp4 (25 MB)
 valorant-microdrama: 0 parts planned, 4 in all
-valorant-champs: the model gave no moments: [{"start": 1917, "end": 1954, "hook": "SACY RANTS ABOUT THE NEON META", "label": "Sacy", "title": "VALORANT Champs Sacy rants about Neon and the meta", "why": "Sacy's passionate rant about Neon and the game's meta is one of the requested highlights."}, {"start": 2181, "end": 2211, "hook": "CHINESE R
-valorant-champs: 0 of 0 moments planned (gemini-3.5-flash-lite), 8 in all

@@ -1,11 +1,20 @@
 {
- "updated": "2026-10-21T18:45+00:00",
- "shorts": 0,
+ "updated": "2026-10-21T19:40+00:00",
+ "shorts": 12,
  "lost_per_second": {
-  "graphic cards": null,
-  "photos": null,
-  "first 3 seconds": null,
-  "after 3 seconds": null
+  "graphic cards": 4.57,
+  "photos": 3.89,
+  "first 3 seconds": 2.79,
+  "after 3 seconds": 3.18,
+  "beat 1": 3.72,
+  "beat 2": 8.31,
+  "beat 3": 4.65,
+  "beat 4": 3.91,
+  "beat 5": 2.4,
+  "beat 6": 2.78,
+  "beat 7": 6.78
  },
- "guidance": []
+ "guidance": [
+  "Beat 2 loses the most viewers after the hook (8.3% a second): keep it short and get to the point."
+ ]
 }

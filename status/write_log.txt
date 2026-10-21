@@ -1,28 +1,6 @@
-afternoon run for 2026-10-20: 8 to write from 15 fact packs
-covered already: The Legend of Zelda: Ocarina of Time – Art thou ready?
-covered already: Patient Zero by Taylor Swift
-covered already: Street Fighter (2026 film)
-covered already: H3-24 | Martian Moons eXploration (MMX)
-too few facts: champions league games
-covered already: barcelona vs real madrid
-too few facts: IVE 아이브 'Looks Can Kill' MV
-covered already: Olivia Rodrigo
-covered already: Jailer 2
-too few facts: raphinha
-covered already: hbo max
-too few facts: north west
-too few facts: Tate McRae
-covered already: larne vs linfield
-too few facts: nba league pass
+breaking run for 2026-10-21: 2 to write from 5 fact packs
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-What was the first music video on MTV? 📺: groq:openai/gpt-oss-120b, 2 warnings (meta.sources: one site only; name it in the narration for breaking news; check these words are fine in context: ['killed'])
-evergreen: Top 10 highest-grossing concert tours of all time: only 1 checked facts
-evergreen: How El Clásico became the world's most-watched club football match: only 2 checked facts
-evergreen: How the Hubble Space Telescope's blurry mirror was fixed in orbit: only 4 checked facts
-How Steven Spielberg got the rights to use classic video games in Ready Player One: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How the Beatles recorded their debut album Please Please Me in just 12 hours: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Why do golf balls have dimples?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How does GPS actually pinpoint your location?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Who was the first person to win an Emmy, Grammy, Oscar, and Tony (EGOT)?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 6 of 8: QD-067 Rod Stewart’s MTV launch record 🎤; QD-068 The day Ready Player One began 🕹️; QD-069 The Beatles debut album recorded in 12 hours 🎸; QD-070 Why do golf balls have dimples? ⛳; QD-071 How does GPS actually pinpoint your location? 🛰️; QD-072 Who was the first person to win an EGOT? 🏆
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "openrouter:thinkingmachines/inkling-small:free": "key refused (403)", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash", "gemini-2.5-flash-lite"], "timeouts": {"gemma-4-31b-it": 2}, "answers": {"gemini-3.5-flash-lite": 37, "groq:openai/gpt-oss-120b": 1, "gemini-3.7-flash": 1, "gemini-3.6-flash": 1, "gemini-3-flash-preview": 4, "openrouter:minimax/minimax-m3.1-flash:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+The Victoria’s Secret Fashion Show 2026: gemini-flash-latest, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+K/DA: gemini-flash-latest, 0 warnings
+wrote 2 of 2: QD-073 Kylie Jenner makes Victoria's Secret show debut ✨; QD-074 K/DA returns with a brand new line-up 🎶
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"openrouter:thinkingmachines/inkling-small:free": "key refused (403)"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.8-flash": 1, "gemini-3.5-flash-lite": 5, "gemini-flash-latest": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

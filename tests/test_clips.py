@@ -60,8 +60,8 @@ print("5 planning ok")
 # 6. one synthetic render, when ffmpeg is installed here
 if shutil.which("ffmpeg") and C.FONT:
     C.WORK = pathlib.Path(SCRATCH); C.OUT = pathlib.Path(SCRATCH) / "out"
-    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=size=1280x720:rate=30:duration=8",
-                    "-f", "lavfi", "-i", "sine=frequency=440:duration=8", "-c:v", "libx264", "-preset", "veryfast", "-c:a", "aac", "-shortest",
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=size=1280x720:rate=30:duration=12",
+                    "-f", "lavfi", "-i", "sine=frequency=440:duration=12", "-c:v", "libx264", "-preset", "veryfast", "-c:a", "aac", "-shortest",
                     str(C.WORK / "speed-expedia.mp4")], check=True)
     C.transcribe = lambda cid: words
     m = {"id": "speed-expedia-01", "start": 1.0, "end": 7.0, "hook": "SPEED OPENS THE SUITCASE: it's Tokyo", "label": "Tokyo, Japan", "title": "t"}

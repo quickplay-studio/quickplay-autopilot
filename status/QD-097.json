@@ -1,0 +1,89 @@
+{
+ "id": "QD-097",
+ "board": "boards/queue/QD-097.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T01:00:00Z",
+ "rendered": "2026-10-21T16:34:53.153003+00:00",
+ "title": "The Beatles Please Please Me secret history revealed 🎸",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "death-duel",
+ "social_music": "no-copyright-synthwave-music-478345",
+ "look": {
+  "captions": "clean",
+  "voice": "lab-voice-1019",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 20.9,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 8.2
+ },
+ "timeline": [
+  [
+   0.06,
+   3.83,
+   "none",
+   0
+  ],
+  [
+   3.83,
+   8.75,
+   "none",
+   2
+  ],
+  [
+   8.75,
+   13.18,
+   "title",
+   1
+  ],
+  [
+   13.18,
+   17.51,
+   "none",
+   1
+  ],
+  [
+   17.51,
+   20.84,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "121114",
+   "q": "recording studio mixing desk",
+   "t0": 0.0,
+   "t1": 10.72
+  },
+  {
+   "p": "pixabay",
+   "id": "38389",
+   "q": "vinyl record spinning",
+   "t0": 10.12,
+   "t1": 20.84
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T16:45:43Z",
+ "video": "oERciIImqJI",
+ "url": "https://youtube.com/shorts/oERciIImqJI",
+ "publish_at": "2026-10-22T01:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T01:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-097"
+}

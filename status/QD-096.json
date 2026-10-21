@@ -1,0 +1,95 @@
+{
+ "id": "QD-096",
+ "board": "boards/queue/QD-096.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T00:30:00Z",
+ "rendered": "2026-10-21T16:35:32.393076+00:00",
+ "title": "Dave Raindance hits number one 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "good-energy",
+ "social_music": "hip-hop-hip-hop-beat-525029",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 26.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.4,
+   "none",
+   0
+  ],
+  [
+   4.4,
+   9.4,
+   "title",
+   2
+  ],
+  [
+   9.4,
+   14.39,
+   "date",
+   1
+  ],
+  [
+   14.39,
+   18.45,
+   "none",
+   1
+  ],
+  [
+   18.45,
+   23.09,
+   "none",
+   1
+  ],
+  [
+   23.09,
+   26.6,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380221",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 13.6
+  },
+  {
+   "p": "pixabay",
+   "id": "28525",
+   "q": "recording studio room",
+   "t0": 13.0,
+   "t1": 26.6
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T16:45:40Z",
+ "video": "CA8JNcmMZoc",
+ "url": "https://youtube.com/shorts/CA8JNcmMZoc",
+ "publish_at": "2026-10-22T00:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T00:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-096"
+}

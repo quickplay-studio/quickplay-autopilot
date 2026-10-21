@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 16:42): 7 of 1,000 subscribers · 4,435 of 10 million Shorts views in 90 days · 5,962 views in the last 24 hours (about 111,062 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 17:40): 7 of 1,000 subscribers · 4,531 of 10 million Shorts views in 90 days · 6,055 views in the last 24 hours (about 111,061 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 17:19 (UK): 8 scheduled, 74 public, 37 uploads in the last 24 hours.
 
@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Wed 21 Oct | 24 public, 5 scheduled | 14 | 8 | ⏳ 24 of 40 so far, 5 more scheduled |
+| Thu 22 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 40 scheduled |
+| Wed 21 Oct | 25 public, 4 scheduled | 14 | 8 | ⏳ 25 of 40 so far, 4 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -94,7 +94,7 @@ scheduled · 22 s · music: level · [script](../boards/done/QD-089.json) · [Yo
 ![QD-089](QD-089.jpg)
 
 ### Wed 21 Oct 17:30 · Glee reboot officially confirmed 🎵
-scheduled · 27 s · music: dance-with-you · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
+private · 27 s · music: dance-with-you · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
 
 ![QD-088](QD-088.jpg)
 

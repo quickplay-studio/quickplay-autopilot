@@ -1,0 +1,44 @@
+{
+ "moments": [
+  {
+   "id": "tdr-mitch-01",
+   "start": 591.7,
+   "end": 609.4,
+   "hook": "WHY ARE YOU STILL HERE?",
+   "label": "Total Drama Roblox",
+   "title": "Mitch Gaming plays Total Drama Roblox",
+   "why": "Mitch calls out players for still being in the game after getting eliminated.",
+   "planned": "2026-10-21T01:06+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "made": "2026-10-21T01:06+00:00",
+   "file": "tdr-mitch-01.mp4",
+   "video": "O1myWN7Prus",
+   "url": "https://youtube.com/shorts/O1myWN7Prus",
+   "uploaded": "2026-10-21T01:06+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-mitch-02",
+   "start": 1431.7,
+   "end": 1450.4,
+   "hook": "AND THAT'S WHAT YOU GET!",
+   "label": "Revenge Vote",
+   "title": "Mitch Gaming gets revenge in Roblox",
+   "why": "Hilarious confrontation over who voted for whom in the previous round.",
+   "planned": "2026-10-21T01:06+00:00",
+   "model": "gemini-3.5-flash-lite"
+  },
+  {
+   "id": "tdr-mitch-03",
+   "start": 1813.7,
+   "end": 1832.4,
+   "hook": "I WON THE TOURNAMENT!",
+   "label": "Tournament Winner",
+   "title": "Mitch Gaming wins Total Drama Roblox",
+   "why": "Mitch celebrates winning the entire Total Drama Roblox tournament.",
+   "planned": "2026-10-21T01:06+00:00",
+   "model": "gemini-3.5-flash-lite"
+  }
+ ]
+}

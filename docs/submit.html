@@ -37,7 +37,7 @@ fetch(RAW).then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
   const rows=parse(t).reverse();
   const today=new Date().toISOString().slice(0,10);
   const list=document.getElementById("list");
-  const show=rows.filter(r=>r.public_at_uk && !r.public_at_uk.startsWith("private"));
+  const show=rows.filter(r=>r.public_at_uk && !r.public_at_uk.startsWith("private") && r.submitted!=="pulled");
   document.getElementById("status").textContent = show.length ? show.length+" clips in the list, newest first (today's are dated "+today+")." : "No clips to submit yet.";
   for(const r of show){
     const d=document.createElement("div"); d.className="card"+(done[r.clip]?" done":"");

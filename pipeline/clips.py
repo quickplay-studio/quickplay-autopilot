@@ -46,6 +46,15 @@ makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show 
 def log(*a): print(*a, flush=True)
 
 
+PROFANE = re.compile(r"\b(f+u+c+k+\w*|f\*+\w*|s+h+i+t+\w*|s\*+t\w*|b+i+t+c+h+\w*|a+s+s+h+o+l+e+\w*|d+i+c+k+s?|p+u+s+s+y|wtf|stfu|"
+                     r"n+i+g+g+\w*|r+e+t+a+r+d+\w*|w+h+o+r+e+\w*|s+l+u+t+\w*|c+u+n+t+\w*|f+a+g+\w*)\b", re.I)
+
+
+def profane(words, a, b):
+    """The strong words heard between a and b (the channel is family-friendly and every campaign wants brand-safe)."""
+    return PROFANE.findall(" ".join(w["w"] for w in words if a <= w["s"] <= b))
+
+
 def secs(t):
     p = [float(x) for x in str(t).split(":")]
     return sum(v * 60 ** i for i, v in enumerate(reversed(p)))
@@ -255,6 +264,7 @@ def plan(cid, n=8):
         if any(a < y and b > x for x, y in done): why["overlap"] += 1; continue
         hook = re.sub(r"[–—]", "-", str(m.get("hook") or "")).strip()[:60]
         if not hook: why["no hook"] += 1; continue
+        if profane(words, a, b) or PROFANE.search(hook): why["profanity"] = why.get("profanity", 0) + 1; continue
         plan_["moments"].append({"id": f"{cid}-{len(plan_['moments']) + 1:02d}", "start": round(a, 2), "end": round(b, 2),
                                  "hook": hook, "label": str(m.get("label") or "").strip()[:40],
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
@@ -528,12 +538,47 @@ def allocate(remaining, count=None):
     return out
 
 
+def review():
+    """Before a run: any clip still waiting for its publish time whose words fail the profanity check is pulled (made
+    private with no publish time) and marked, so a rule that tightened after the upload still holds."""
+    pulled = 0
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        cid = p.stem; plan_ = json.loads(p.read_text()); changed = False
+        wp = PLANS / f"{cid}.words.json"
+        words = json.loads(wp.read_text()) if wp.exists() else []
+        for m in plan_.get("moments") or []:
+            if not m.get("video") or m.get("pulled") or not m.get("publish_at") or m["publish_at"] == "private": continue
+            try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
+            except ValueError: continue
+            bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
+            if due > NOW and bad:
+                try:
+                    clips_client().videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute()
+                    m["pulled"] = f"profanity: {', '.join(bad[:3])}"; changed = True; pulled += 1
+                    log(f"{m['id']}: pulled before publishing ({m['pulled']})")
+                except Exception as e:
+                    log(f"{m['id']}: could not pull: {type(e).__name__}: {str(e)[:150]}")
+        if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    if pulled:
+        sp = ROOT / "clips" / "submit.csv"
+        if sp.exists():
+            rows = list(csv.DictReader(sp.open()))
+            ids = {m["id"] for p in PLANS.glob("*.json") if not p.name.endswith(".words.json")
+                   for m in json.loads(p.read_text()).get("moments") or [] if m.get("pulled")}
+            for r in rows:
+                if r["clip"] in ids: r["submitted"] = "pulled"
+            with sp.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+    return pulled
+
+
 def scheduled_today():
     """Clips already uploaded for the next batch (so two runs in a day share the daily number)."""
     iso, _ = batch_time(); n = 0
     for p in PLANS.glob("*.json"):
         if p.name.endswith(".words.json"): continue
-        n += sum(1 for m in json.loads(p.read_text()).get("moments") or [] if m.get("publish_at") == iso)
+        n += sum(1 for m in json.loads(p.read_text()).get("moments") or [] if m.get("publish_at") == iso and not m.get("pulled"))
     return n
 
 
@@ -548,6 +593,8 @@ def main(argv):
     deadline = time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110)      # the job stops at 150: save what is made
     cs = campaigns()
     if cmd == "run":
+        try: review()
+        except Exception as e: log("review:", str(e)[:200])
         want = allocate(max(0, int(CFG.get("daily_clips", 10)) - scheduled_today()), count)
         log("today's shares:", json.dumps(want))
         if not want: log("the day's number is already scheduled"); return

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 14:28): 7 of 1,000 subscribers · 4,585 of 10 million Shorts views in 90 days · 5,574 views in the last 24 hours (about 111,060 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 14:47): 7 of 1,000 subscribers · 4,633 of 10 million Shorts views in 90 days · 5,736 views in the last 24 hours (about 111,060 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 14:28 (UK): 6 scheduled, 68 public, 29 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 18 public, 6 scheduled | 14 | 5 | ⏳ 18 of 40 so far, 6 more scheduled |
+| Wed 21 Oct | 19 public, 5 scheduled | 14 | 5 | ⏳ 19 of 40 so far, 5 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -84,7 +84,7 @@ scheduled · 28 s · music: defying-gravity · [script](../boards/done/QD-081.js
 ![QD-081](QD-081.jpg)
 
 ### Wed 21 Oct 14:30 · Who invented the World Wide Web? 🌐
-scheduled · 28 s · music: circuit-rush · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
+private · 28 s · music: circuit-rush · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
 
 ![QD-080](QD-080.jpg)
 

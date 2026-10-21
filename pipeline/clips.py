@@ -1072,7 +1072,8 @@ def main(argv):
         except Exception as e: log("review:", str(e)[:200])
         done_today = scheduled_today()
         ceiling_learn(done_today)
-        want = allocate(max(0, daily_limit() - done_today), count)
+        private = os.environ.get("CLIPS_MODE", "").strip() == "private"       # a test never counts against the day
+        want = allocate((count or 1) * len(cs) if private else max(0, daily_limit() - done_today), count)
         log("today's shares:", json.dumps(want))
         if not want: log("the day's number is already scheduled"); return
     for cid in (ids or list(cs)):

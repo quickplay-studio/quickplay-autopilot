@@ -510,7 +510,17 @@ def layout_filters(layout, face):
     return (f"[0:v]split=2[bg][fg];{blur}[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];", "letterbox")
 
 
-TESTS = {"layout": ["letterbox", "face", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"]}
+TESTS = {"layout": ["letterbox", "face", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
+         "length": ["as planned", "short"], "title": ["subject first", "hook first"]}
+
+
+def short_end(words, a, b, peak, min_s=15, max_s=28.0):
+    """For the "short" length arm: the last sentence end inside max_s of the start (after the peak, past min_s), when it
+    cuts more than 4 seconds; None when the moment is short already or no sentence ends there."""
+    if b - a <= max_s + 4: return None
+    ends = [w["e"] for w in words if a < w["e"] <= a + max_s and str(w["w"]).strip().endswith((".", "?", "!"))
+            and w["e"] - a >= max(min_s, 12) and (peak is None or w["e"] > float(peak) + 1.0)]
+    return round(ends[-1] + 0.4, 2) if ends and b - ends[-1] > 4 else None
 
 
 def test_plan(mid):
@@ -543,6 +553,16 @@ def make_clip(cid, m, words):
     if layout != tests["layout"]: log(f"{m['id']}: {tests['layout']} layout asked, no steady face, letterbox instead")
     elif face: log(f"{m['id']}: {layout} layout, face at x {face[0]:.2f} y {face[1]:.2f} size {face[3]:.2f}")
     tests["layout"] = layout
+    r = c.get("rules") or {}
+    if tests.get("length") == "short" and not m.get("episode"):           # the same moment, cut to its first payoff
+        nb = short_end(words, a, b, m.get("peak"), r.get("min_s", 15))
+        if nb: m["end_planned"], b = b, nb; m["end"] = nb; log(f"{m['id']}: short arm, {b - a:.0f}s instead of {m['end_planned'] - a:.0f}s")
+        else: tests["length"] = "as planned"
+    else: tests["length"] = "as planned"
+    if tests.get("title") == "hook first" and not m.get("episode"):       # the hook as the title, the subject after
+        h = m["hook"].capitalize() if m["hook"].isupper() else m["hook"]
+        m.setdefault("title_planned", m["title"]); m["title"] = f"{h} | {c['subject']}"[:70]
+    else: tests["title"] = "subject first"
     cap_y = {"letterbox": 430, "face": 520, "split": 140}[layout]        # ASS margin from the bottom
     ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass, tests["captions"], cap_y)
     credit = f"Clip from {c['subject']}, posted with permission"
@@ -997,6 +1017,13 @@ def allocate(remaining, count=None):
     for cid in order:
         cap = count if count is not None else int(cs[cid].get("per_day", 3))
         while left > 0 and out.get(cid, 0) < cap: out[cid] = out.get(cid, 0) + 1; left -= 1
+    if count is None:                                   # the day's number is the point: past per_day, one more each round, strongest first
+        more = [cid for cid in order if not (cs[cid].get("rules") or {}).get("series")]
+        while left > 0 and more:
+            grew = False
+            for cid in more:
+                if left > 0 and out.get(cid, 0) < int(cs[cid].get("per_day_max", 8)): out[cid] = out.get(cid, 0) + 1; left -= 1; grew = True
+            if not grew: break
     return out
 
 

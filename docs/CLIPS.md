@@ -132,3 +132,14 @@ forbids it for that creator's content.
   login raises a GitHub issue with the export steps and closes itself when a submission works. The phone page now lists
   only what GitHub could not do. Batch crons moved to minute 1 (GitHub starts the hour's runs late).
 - Content Rewards' clipper terms count views from the submission, so a late link loses views; that is why this matters.
+
+## 21 October, 19:30 UK: the dashboard, two more form tests, the day's number filled
+- Charlie: maximum uploads to maximum campaigns; a campaign dashboard of all money and all views; the footage is fixed,
+  so the Shorts change in their form. docs/clips.html (https://quickplay-studio.github.io/quickplay-autopilot/clips.html):
+  money estimated per campaign (views over its minimum times its rate, capped), views, clips, submissions, budget and
+  end dates, which form wins per test, and every clip; read from clips/stats.csv, campaigns.json and submit.csv.
+- Two more tests on every clip: length ("short": the same moment cut at its first sentence end after the peak, inside
+  28 seconds, when that saves over 4 seconds) and title ("hook first": the hook as the title, the subject after).
+  Stats and insights pick them up as test_length and test_title; the dashboard adds length and hook-word bands.
+- The day's number is filled: after per_day each, campaigns take one more in turn up to per_day_max (8) until the
+  limit is met (series campaigns stay at per_day). The ceiling rises 4 a day (clips_limit_step) up to 60.

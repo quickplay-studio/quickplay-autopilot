@@ -436,9 +436,9 @@
   }
  },
  "daily_clips": 10,
- "daily_note": "Clips a day across every active campaign (the clips channel's own upload ceiling learns like the main one); each campaign gets a share by pay times its measured views (clips/insights.json), capped by per_day.",
- "clips_limit_step": 2,
- "clips_limit_max": 30,
+ "daily_note": "Clips a day across every active campaign (the clips channel's own upload ceiling learns like the main one); each campaign gets a share by pay times its measured views (clips/insights.json), per_day each first, then up to per_day_max (8) each until the day's number is filled (series campaigns stay at per_day).",
+ "clips_limit_step": 4,
+ "clips_limit_max": 60,
  "clips_limit_min": 4,
  "clips_budget_floor": 50,
  "ceiling_note": "The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips, +clips_limit_step after each full day with no refusal, settles where YouTube refuses (uploadLimitExceeded). Campaigns switch off on their end date or when their public page says full, ended or under clips_budget_floor dollars left.",

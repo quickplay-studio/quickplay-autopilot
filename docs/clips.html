@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quickplay Clips: campaigns, views and money</title>
+<style>
+body{font:16px/1.5 system-ui,-apple-system,sans-serif;margin:0;padding:16px;background:#0f1115;color:#eee}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:17px;margin:22px 0 8px;color:#cde}p{margin:6px 0 10px;color:#aab}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:#1a1d24;border-radius:12px;padding:12px}.tile b{display:block;font-size:22px}.tile small{color:#9ab}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:6px 6px;border-bottom:1px solid #262a33;vertical-align:top}
+th{color:#9ab;font-weight:600}td.n,th.n{text-align:right;white-space:nowrap}
+.card{background:#1a1d24;border-radius:12px;padding:12px;margin:0 0 10px}.card b{font-size:16px}
+.tag{display:inline-block;background:#2a2f3a;border-radius:6px;padding:1px 8px;font-size:13px;margin:0 6px 4px 0}
+.good{color:#7fd48a}.bad{color:#f28b82}.dim{color:#778}
+a{color:#8ab4f8;text-decoration:none}#status{color:#9ab}
+.wrap{overflow-x:auto}
+</style>
+</head>
+<body>
+<h1>Quickplay Clips: campaigns, views and money</h1>
+<p id="status">Loading…</p>
+<div class="tiles" id="tiles"></div>
+<h2>By campaign</h2>
+<p>Money is an estimate: views over the campaign's minimum times its rate per 1,000, capped at its maximum, until the platform's own figure is read. Views are YouTube's; Instagram and Facebook join when those accounts exist.</p>
+<div id="campaigns"></div>
+<h2>Which form wins</h2>
+<p>The footage is fixed, so every clip tests its form. Median views per arm (public clips a day old or more). The best arm leads the next day's picks 70% of the time; the rest keeps testing.</p>
+<div id="tests"></div>
+<h2>Every clip</h2>
+<div class="wrap"><table id="clips"><thead><tr><th>Clip</th><th>Campaign</th><th class="n">Hours</th><th class="n">Views</th><th class="n">Likes</th><th>Form</th><th>Submitted</th></tr></thead><tbody></tbody></table></div>
+<script>
+const BASE="https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/clips/", T="?t="+Date.now();
+function parse(text){
+  const rows=[];let row=[],cell="",q=false;
+  for(let i=0;i<text.length;i++){const ch=text[i];
+    if(q){ if(ch=='"'){ if(text[i+1]=='"'){cell+='"';i++;} else q=false; } else cell+=ch; }
+    else if(ch=='"') q=true; else if(ch==','){row.push(cell);cell="";}
+    else if(ch=='\n'){row.push(cell);rows.push(row);row=[];cell="";} else if(ch!='\r') cell+=ch; }
+  if(cell||row.length){row.push(cell);rows.push(row);}
+  const head=rows.shift()||[]; return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]||""])));
+}
+const num=x=>+(x||0), fmt=x=>Math.round(x).toLocaleString("en-GB"), money=x=>"$"+(Math.round(x*100)/100).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
+const med=a=>{a=a.slice().sort((x,y)=>x-y);return a.length?a[Math.floor(a.length/2)]:null};
+Promise.all([fetch(BASE+"stats.csv"+T).then(r=>r.text()),fetch(BASE+"campaigns.json"+T).then(r=>r.json()),fetch(BASE+"submit.csv"+T).then(r=>r.ok?r.text():"")]).then(([st,cj,sb])=>{
+  const stats=parse(st), subs=parse(sb), C=cj.campaigns||{};
+  const pub=stats.filter(r=>r.privacy==="public");
+  const asOf=stats.length?stats[0].as_of.replace("T"," ").slice(0,16)+" UTC":"";
+  const bySub={}; for(const s of subs){ if(s.submitted && !s.submitted.startsWith("failed") && s.submitted!=="pulled") bySub[s.clip+"|"+(s.platform||"youtube")]=s.submitted; }
+  // campaigns
+  let totalViews=0,totalMoney=0,active=0; const cards=[];
+  const ids=Object.keys(C).sort((a,b)=>(C[b].active?1:0)-(C[a].active?1:0));
+  for(const id of ids){
+    const c=C[id], rows=pub.filter(r=>r.campaign===id); const views=rows.reduce((s,r)=>s+num(r.views),0);
+    const rate=num(c.pay_per_1k), min=num(c.min_views), cap=num(c.max_payout);
+    let earned=0,paying=0,building=0; for(const r of rows){ const v=num(r.views); if(v>=min){paying++; earned+=v/1000*rate;} else building+=v; }
+    if(cap) earned=Math.min(earned,cap);
+    const submitted=subs.filter(s=>s.campaign===id && s.submitted && !s.submitted.startsWith("failed") && s.submitted!=="pulled").length;
+    if(c.active){active++; totalViews+=views; totalMoney+=earned;} else if(rows.length){totalViews+=views; totalMoney+=earned;}
+    if(!rows.length && !c.active) continue;
+    cards.push(`<div class="card"><b>${c.subject||id}</b> <span class="dim">${c.name||""}</span><br>
+      <span class="tag">${c.platform||""}</span><span class="tag">$${rate}/1k after ${fmt(min)} views</span><span class="tag">${c.active?"active":"off: "+(c.why_off||"")}</span>${c.ends?`<span class="tag">ends ${c.ends}</span>`:""}${c.budget_left!=null?`<span class="tag">budget left $${fmt(c.budget_left)}</span>`:""}<br>
+      <span class="good">${money(earned)}</span> estimated from ${paying} clip${paying==1?"":"s"} over the minimum · ${rows.length} public clips · ${fmt(views)} views (${fmt(building)} still under the minimum) · ${submitted} submissions</div>`);
+  }
+  document.getElementById("campaigns").innerHTML=cards.join("")||"<p>No clips yet.</p>";
+  document.getElementById("tiles").innerHTML=[["Estimated money",money(totalMoney)],["Views",fmt(totalViews)],["Public clips",pub.length],["Active campaigns",active]].map(([k,v])=>`<div class="tile"><b>${v}</b><small>${k}</small></div>`).join("");
+  document.getElementById("status").textContent="Updated "+asOf+" (the 23:30 UK stats run and every batch run refresh it).";
+  // form tests
+  const aged=pub.filter(r=>num(r.hours_public)>=24);
+  const tests={}; for(const k of Object.keys(pub[0]||{})) if(k.startsWith("test_")) tests[k.slice(5)]=r=>r[k];
+  tests["length"]=r=>{const s=num(r.seconds);return s?(s<=25?"up to 25 s":s<=40?"26 to 40 s":"over 40 s"):""};
+  tests["hook words"]=r=>{const h=num(r.hook_words);return h?(h<=5?"5 words or fewer":"6 words or more"):""};
+  let html="";
+  for(const [name,f] of Object.entries(tests)){
+    const arms={}; for(const r of aged){const a=f(r); if(a) (arms[a]=arms[a]||[]).push(num(r.views));}
+    const rows=Object.entries(arms).map(([a,v])=>({a,n:v.length,m:med(v)})).sort((x,y)=>y.m-x.m);
+    if(!rows.length) continue;
+    const best=rows.length>1&&rows[0].n>=3&&rows[0].m>=1.1*(rows[1].m||0)?rows[0].a:null;
+    html+=`<div class="card"><b>${name}</b> ${best?`<span class="good">best: ${best}</span>`:`<span class="dim">no clear winner yet</span>`}<br>`+rows.map(r=>`<span class="tag">${r.a}: ${fmt(r.m)} median views, ${r.n} clip${r.n==1?"":"s"}</span>`).join("")+`</div>`;
+  }
+  document.getElementById("tests").innerHTML=html||"<p>The first clips need a day of views first.</p>";
+  // every clip
+  const tb=document.querySelector("#clips tbody");
+  for(const r of pub.sort((a,b)=>num(b.views)-num(a.views))){
+    const form=Object.keys(r).filter(k=>k.startsWith("test_")&&r[k]).map(k=>r[k]).concat([Math.round(num(r.seconds))+" s"]).join(" · ");
+    const sub=["youtube","instagram","facebook"].filter(p=>bySub[r.clip+"|"+p]).join(", ")||"not yet";
+    tb.insertAdjacentHTML("beforeend",`<tr><td><a href="https://youtube.com/shorts/${r.video}" target="_blank" rel="noopener">${r.clip}</a></td><td>${(C[r.campaign]||{}).subject||r.campaign}</td><td class="n">${Math.round(num(r.hours_public))}</td><td class="n">${fmt(num(r.views))}</td><td class="n">${fmt(num(r.likes))}</td><td>${form}</td><td>${sub}</td></tr>`);
+  }
+}).catch(e=>{document.getElementById("status").textContent="Could not load the data ("+e+").";});
+</script>
+</body>
+</html>

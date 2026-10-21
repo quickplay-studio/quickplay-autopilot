@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 07:48): 7 of 1,000 subscribers · 4,014 of 10 million Shorts views in 90 days · 4,928 views in the last 24 hours (about 111,067 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 08:48): 7 of 1,000 subscribers · 4,117 of 10 million Shorts views in 90 days · 5,128 views in the last 24 hours (about 111,065 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 8:30 (UK): 3 scheduled, 59 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 0:48).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 8:44).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 8 public, 4 scheduled | 0 | 0 | ⏳ 8 of 40 so far, 4 more scheduled |
+| Wed 21 Oct | 9 public, 3 scheduled | 6 | 0 | ⏳ 9 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -54,6 +54,11 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
+## In the queue
+
+- **QD-073** Kylie Jenner makes Victoria's Secret show debut ✨ (rendering next)
+- **QD-074** K/DA returns with a brand new line-up 🎶 (rendering next)
+
 ## On the channel (latest first)
 
 ### Wed 21 Oct 10:10 · Lamine Yamal ends Real Betis 15 game unbeaten run ⚽
@@ -67,7 +72,7 @@ scheduled · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouT
 ![QD-061](QD-061.jpg)
 
 ### Wed 21 Oct 8:50 · Larne face Linfield in Irish Premiership match ⚽
-scheduled · 22 s · music: ego-chall · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
+private · 22 s · music: ego-chall · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
 
 ![QD-060](QD-060.jpg)
 
@@ -127,32 +132,32 @@ public · 483 views · 28 s · music: walking-the-wire · [script](../boards/don
 ![QD-032](QD-032.jpg)
 
 ### Tue 20 Oct 20:10 · You Can See Everything rakes in $15 million 🎬
-public · 27 views · 31 s · music: false-vacuum-decay · [script](../boards/done/QD-057.json) · [YouTube](https://youtube.com/shorts/yYgTurhtD3E)
+public · 27 views · 31 s · music: false-vacuum-decay · on Instagram · [script](../boards/done/QD-057.json) · [YouTube](https://youtube.com/shorts/yYgTurhtD3E)
 
 ![QD-057](QD-057.jpg)
 
 ### Tue 20 Oct 18:50 · David Warner slams South Africa Test crowds 🏏
-public · 57 views · 35 s · music: dead-wrong · [script](../boards/done/QD-055.json) · [YouTube](https://youtube.com/shorts/t5D-3LRMRbk)
+public · 57 views · 35 s · music: dead-wrong · on Instagram · [script](../boards/done/QD-055.json) · [YouTube](https://youtube.com/shorts/t5D-3LRMRbk)
 
 ![QD-055](QD-055.jpg)
 
 ### Tue 20 Oct 18:10 · Mark Allen knocked out of Northern Ireland Open 🎱
-public · 289 views · 28 s · music: majestic-12 · on Facebook · [script](../boards/done/QD-054.json) · [YouTube](https://youtube.com/shorts/Pzfz3Nu7p8s)
+public · 289 views · 28 s · music: majestic-12 · on Instagram · on Facebook · [script](../boards/done/QD-054.json) · [YouTube](https://youtube.com/shorts/Pzfz3Nu7p8s)
 
 ![QD-054](QD-054.jpg)
 
 ### Tue 20 Oct 8:10 · Angel Reese makes WNBA finals history 🏀
-public · 338 views · 33 s · music: duty-calls · on Facebook · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
+public · 338 views · 33 s · music: duty-calls · on Instagram · on Facebook · [script](../boards/done/QD-053.json) · [YouTube](https://youtube.com/shorts/Yp_GPimJRMQ)
 
 ![QD-053](QD-053.jpg)
 
 ### Tue 20 Oct 7:30 · Olivia Rodrigo and David Byrne's game show video 📺
-public · 52 views · 20 s · music: dance-with-you · on Facebook · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
+public · 52 views · 20 s · music: dance-with-you · on Instagram · on Facebook · [script](../boards/done/QD-052.json) · [YouTube](https://youtube.com/shorts/KKm93qUZLcw)
 
 ![QD-052](QD-052.jpg)
 
 ### Mon 19 Oct 21:30 · Usain Bolt's 9.58: still unbeaten ⚡
-public · 149 views · 26 s · music: cued-for-liftoff · on Facebook · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
+public · 149 views · 26 s · music: cued-for-liftoff · on Instagram · on Facebook · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
 
 ![QD-031](QD-031.jpg)
 

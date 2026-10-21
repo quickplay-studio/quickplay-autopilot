@@ -45,7 +45,20 @@
    "title": "Mitch Gaming wins Total Drama Roblox",
    "why": "Mitch celebrates winning the entire Total Drama Roblox tournament.",
    "planned": "2026-10-21T01:06+00:00",
-   "model": "gemini-3.5-flash-lite"
+   "model": "gemini-3.5-flash-lite",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "tdr-mitch-03.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-03.mp4",
+   "video": "M9fsRySxk1Y",
+   "url": "https://youtube.com/shorts/M9fsRySxk1Y",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-mitch-04",

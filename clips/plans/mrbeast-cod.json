@@ -45,7 +45,20 @@
    "title": "MrBeast Gaming: Secret Language Strategy",
    "why": "A funny and unique tactical moment using proximity chat to confuse other players.",
    "planned": "2026-10-21T01:06+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "mrbeast-cod-03.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-03.mp4",
+   "video": "RzylwZV2JpU",
+   "url": "https://youtube.com/shorts/RzylwZV2JpU",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "mrbeast-cod-04",

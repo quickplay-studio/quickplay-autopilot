@@ -81,7 +81,20 @@
    "title": "IShowSpeed Unpacks the Number 2 Destination",
    "why": "Chat and Speed correctly anticipate Japan from the item and get hyped over Hyogo.",
    "planned": "2026-10-21T00:36+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "face",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "speed-expedia-05.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-05.mp4",
+   "video": "qihgOcOG4jo",
+   "url": "https://youtube.com/shorts/qihgOcOG4jo",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "speed-expedia-06",

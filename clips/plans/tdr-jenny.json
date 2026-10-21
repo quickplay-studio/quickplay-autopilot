@@ -46,7 +46,20 @@
    "title": "Jenny Hoyos Tries to Gaslight Her Roblox Team",
    "why": "A hilarious reaction where Jenny realizes she's in last place and considers gaslighting her team.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "tdr-jenny-03.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-03.mp4",
+   "video": "UwmIqsW_N-U",
+   "url": "https://youtube.com/shorts/UwmIqsW_N-U",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-jenny-04",

@@ -28,7 +28,20 @@
    "title": "VALORANT Champs Shanghai Bren Overhears Roster Leaks",
    "why": "A hilarious anecdote about Bren overhearing massive roster rumors while in a public mall bathroom.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "valorant-champs-02.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-02.mp4",
+   "video": "-AF3A5DEHTg",
+   "url": "https://youtube.com/shorts/-AF3A5DEHTg",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "valorant-champs-03",

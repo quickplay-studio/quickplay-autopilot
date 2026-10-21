@@ -27,7 +27,20 @@
    "title": "StinkyAsher Battles Heather In Roblox Total Drama",
    "why": "StinkyAsher throws a ball directly at Heather's head and responds with iconic sarcastic hair comments.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "tests": {
+    "layout": "split",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "tdr-stinkyasher-02.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-02.mp4",
+   "video": "BpHc7lS7CtM",
+   "url": "https://youtube.com/shorts/BpHc7lS7CtM",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-stinkyasher-03",

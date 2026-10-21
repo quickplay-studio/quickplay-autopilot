@@ -11,7 +11,20 @@
    "label": "",
    "title": "VALORANT Episode 1 Part 1",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "parts"
+   "model": "parts",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "valorant-microdrama-e01p1.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-microdrama-e01p1.mp4",
+   "video": "L0V07PfNJhU",
+   "url": "https://youtube.com/shorts/L0V07PfNJhU",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "valorant-microdrama-e01p2",
@@ -24,7 +37,8 @@
    "label": "",
    "title": "VALORANT Episode 1 Part 2",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "parts"
+   "model": "parts",
+   "skipped": "RuntimeError: ffmpeg failed: [Parsed_crop_1 @ 0x5571e8979740] Invalid too big or non positive size for width '450' or height '450'\n[Parsed_crop_1 @ 0x5571e8979740] Failed to configure input pad on Par"
   },
   {
    "id": "valorant-microdrama-e01p3",
@@ -37,7 +51,20 @@
    "label": "",
    "title": "VALORANT Episode 1 Part 3",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "parts"
+   "model": "parts",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "valorant-microdrama-e01p3.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-microdrama-e01p3.mp4",
+   "video": "nn2-p270xfs",
+   "url": "https://youtube.com/shorts/nn2-p270xfs",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "valorant-microdrama-e01p4",
@@ -50,7 +77,20 @@
    "label": "",
    "title": "VALORANT Episode 1 Part 4",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "parts"
+   "model": "parts",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "valorant-microdrama-e01p4.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-microdrama-e01p4.mp4",
+   "video": "thSJU0Dg6Q4",
+   "url": "https://youtube.com/shorts/thSJU0Dg6Q4",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   }
  ],
  "episodes": [

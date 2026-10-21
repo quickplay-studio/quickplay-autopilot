@@ -89,7 +89,20 @@
    "title": "Flamingo Begs Heather for Mercy",
    "why": "A funny moment of desperation where he tries to suck up to the meanest player to survive.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:30+00:00",
+   "file": "tdr-flamingo-05.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-05.mp4",
+   "video": "TMCuUebrWGQ",
+   "url": "https://youtube.com/shorts/TMCuUebrWGQ",
+   "uploaded": "2026-10-21T10:30+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-flamingo-06",

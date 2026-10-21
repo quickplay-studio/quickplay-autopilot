@@ -94,3 +94,22 @@ forbids it for that creator's content.
   figure read is kept as budget_left (Speed: $1,539 on 21 October). Vyro pages need a login, so Vyro goes by end date.
 - Model answers wrapped in a list are read; "prepare <campaign>" and "prepare redo <campaign>" in requests/clips.txt
   target one campaign or rebuild its source.
+
+## 21 October, 12:00 to 14:00 UK: the tactics of the big clipping channels, built in
+- Layouts as a test on every clip: letterbox (the picture over its blurred copy), face (a 9:16 window following the
+  face), split (the cam on top, the whole picture below). OpenCV finds faces every 2 seconds; the group of detections
+  present in half the frames that changes most over time wins (a wall never talks). A campaign rule full_frame (Speed:
+  the suitcase must stay in frame) and vertical sources keep the whole picture.
+- Captions as a test: lines (four words at a time) or karaoke (each word lights up yellow as it is said).
+- Punch-in as a test: a 1.5-second 1.12x zoom of the picture on the peak the planner names.
+- clips/insights.json (from stats): each test's median views per arm (24 hours old, 3 clips an arm) and the best arm,
+  which test_plan() then picks 70% of the time; the campaigns' medians feed the daily shares.
+- Instagram Reels, Facebook Reels and TikTok for every public clip at the batch time (social_posts: IG_CLIPS_TOKEN,
+  IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID, tokens/tiktok_clips.enc; social_per_day a platform), each
+  post its own row on the submit page (campaigns pay per platform). The clip files are kept as release assets
+  (clips-out) so the later run can post them.
+- Comments: the planner's question as the channel's comment on every public clip, and part links between the parts
+  of an episode (engage(), in the social and stats runs).
+- A campaign may name its channel ("channel": "clips" by default, tokens/youtube_<channel>.enc); batch_times can give
+  a platform its own batch time (Vyro at 22:00 UK, say).
+- Requests: "test 1 layout=split tdr-mitch" forces an arm on named campaigns, privately.

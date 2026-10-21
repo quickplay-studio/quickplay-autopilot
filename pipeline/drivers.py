@@ -4,13 +4,38 @@ then grouped by each thing we choose (category, format, hook, length, posting ti
 Outcome per Short ("rel"): YouTube views 24 hours after posting divided by the median of Shorts posted within 3 days of
 it (1.0 = typical). Shorts measured before hourly snapshots began use views an hour against the same peers instead.
 Per group: lift = exp(shrunken mean of log rel), shrunk towards 1.0 with weight 3, so two lucky Shorts can't look
-like a trend. Verdicts need 5 or more Shorts: "push" at 1.25 or more, "cut back" at 0.8 or less.
+like a trend. Verdicts need 5 or more Shorts: "push" at 1.25 or more, "cut back" at 0.8 or less. "stop" (Charlie, 21 October):
+3 or more of a choice's Shorts are a week old and their median views sit under the dead floor (a fifth of the typical
+week-old Short's views, at least 20): the writer never makes that choice again, and a dead Short is never followed up or
+remade (dead()).
 """
 import datetime as dt, math, re, statistics
 from zoneinfo import ZoneInfo
 
 UK = ZoneInfo("Europe/London")
 SHRINK, MIN_N, PUSH, CUT = 3, 5, 1.25, 0.8
+DEAD_MIN, DEAD_SHARE, DEAD_N = 20, 0.2, 3      # "stop": a choice whose Shorts, a week on, have little to no views (Charlie, 21 October)
+NOW = dt.datetime.now(dt.timezone.utc)
+
+
+def age_days(r):
+    try: return (NOW - dt.datetime.fromisoformat(r["posted"])).total_seconds() / 86400
+    except (KeyError, ValueError, TypeError): return 0.0
+
+
+def dead_floor(rows):
+    """Views a Short must have a week after posting not to count as dead: DEAD_SHARE of the typical week-old Short's
+    views, never under DEAD_MIN; None until 5 Shorts are a week old."""
+    aged = [_f(r.get("yt_views")) for r in rows if age_days(r) >= 7 and r.get("yt_views") not in (None, "")]
+    aged = [v for v in aged if v is not None]
+    return max(DEAD_MIN, DEAD_SHARE * statistics.median(aged)) if len(aged) >= 5 else None
+
+
+def dead(rows):
+    """The Shorts a week old or more with views under the floor: never followed up, remade or posted about again."""
+    floor = dead_floor(rows)
+    if floor is None: return []
+    return [r for r in rows if age_days(r) >= 7 and (_f(r.get("yt_views")) or 0) < floor]
 FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook style"), ("hook_len", "Hook length"),
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
@@ -95,6 +120,7 @@ def analyse(rows):
     """rows: shorts.csv rows with 'rel' set (or None). Returns (table rows for drivers.csv, base support measures)."""
     scored = [r for r in rows if r.get("rel") not in (None, "")]
     base = _support(scored)
+    floor = dead_floor(rows)
     table = []
     for feat, label in FEATURES:
         groups = {}
@@ -108,6 +134,10 @@ def analyse(rows):
             days = len({r.get("posted_day") for r in grp})        # one day's luck (or one weekday seen once) proves little
             verdict = ("too few to tell" if n < 3 else "early sign" if n < MIN_N or days < 2 else
                        "push" if lift >= PUSH else "cut back" if lift <= CUT else "about typical")
+            week = [r for r in grp if age_days(r) >= 7 and r.get("yt_views") not in (None, "")]
+            if floor is not None and len(week) >= DEAD_N and len({r.get("posted_day") for r in week}) >= 2 \
+                    and statistics.median(_f(r["yt_views"]) or 0 for r in week) < floor:
+                verdict = "stop"                       # a week on, little to no views: that choice is not made again
             sup = _support(grp)
             table.append({"feature": feat, "feature_label": label, "value": v, "n": n, "lift": round(lift, 2),
                           "median_rel": round(statistics.median(float(r["rel"]) for r in grp), 2), "verdict": verdict,
@@ -115,7 +145,8 @@ def analyse(rows):
                           "avg_viewed_pct": round(sup["yt_avg_viewed_pct"]) if sup["yt_avg_viewed_pct"] is not None else "",
                           "subs_per_1k": round(sup["subs_per_1k"], 1) if sup["subs_per_1k"] is not None else "",
                           "shares_per_1k": round(sup["shares_per_1k"], 1) if sup["shares_per_1k"] is not None else "",
-                          "why": _why(sup, base, lift >= 1) if n >= 3 and abs(math.log(lift)) >= math.log(1.1) else ""})
+                          "why": (f"{len(week)} Shorts a week old with a median of {statistics.median(_f(r['yt_views']) or 0 for r in week):.0f} views, under the floor of {floor:.0f}"
+                                  if verdict == "stop" else _why(sup, base, lift >= 1) if n >= 3 and abs(math.log(lift)) >= math.log(1.1) else "")})
     table.sort(key=lambda t: (t["feature"], -t["lift"]))
     return table, base
 
@@ -153,4 +184,7 @@ def recipe(table, rows):
             if push: parts.append("lean towards " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in push))
             if cut: parts.append("use less " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in cut))
             L.append(f"{label}: " + "; ".join(parts) + ".")
+    stops = [t for t in table if t["verdict"] == "stop"]
+    if stops:
+        L.append("Never again (a week on, little to no views): " + "; ".join(f"{t['feature_label'].lower()} \"{t['value']}\" ({t['why']})" for t in stops) + ".")
     return L or ["Nothing stands clearly above or below typical yet: keep the variety rules and the spread of categories."]

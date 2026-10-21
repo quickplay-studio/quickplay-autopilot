@@ -104,3 +104,19 @@ the channel's comment question and replies.
 - Charlie's optional secrets: GROQ_API_KEY, CEREBRAS_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, CLAUDE_CODE_OAUTH_TOKEN
   (https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new).
 - CLAUDE.md is the old guide for Claude writing runs; replace it with a short current one once Charlie says yes.
+
+## 21 October, 19:00 to 21:00 UK: the stop rule, the Monday report
+- Charlie: "posts with little to no views after a week should not be posted about again as clearly that strategy
+  doesn't work". drivers.py: a dead floor (a fifth of the typical week-old Short's views, at least 20, once 5 Shorts are
+  a week old); a choice with 3 or more week-old Shorts under it, on 2 days, gets verdict "stop": the writer leaves that
+  category, format, hook style, kind or test arm out for good (boosts STOP, arms(), share() 0, the recipe's "Never again"
+  line), and a dead Short is never followed up or remade (weak() skips drivers.dead()).
+- Charlie: a weekly analytics update of what changed, what is measured, and whether the optimisation works as more is
+  posted. pipeline/weekly_report.py and report.yml (Monday 08:27 UTC, or a push of requests/report.txt): the week in
+  numbers against the week before (Shorts, views gained from hourly.csv, median views a day after posting, subscribers,
+  YPP pace), Shorts that followed the data's rulings against the rest, every ruling that moved, what was built (the
+  dated headings here and in CLIPS.md), what was stopped, what is measured, the clips channel's money. analytics/weekly.md
+  and a GitHub issue labelled "weekly" (the GitHub app on his phone).
+- His concern that the testing shows no improvement yet: the first rulings only landed on 21 October (5 Shorts per
+  choice and 2 days of views needed), median views per Short rose from about 100 (16 to 18 October) to about 200 (19 to
+  20 October), and the last 24 hours brought 5,974 views against 14,497 all time. The report makes this visible weekly.

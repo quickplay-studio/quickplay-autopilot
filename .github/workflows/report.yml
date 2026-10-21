@@ -1,0 +1,42 @@
+name: report
+# The Monday report (pipeline/weekly_report.py): the week in numbers, whether the optimisation is working, what changed,
+# what was stopped, the clips channel's money. analytics/weekly.md, and a GitHub issue labelled "weekly" for Charlie's
+# phone. Push requests/report.txt with anything in it to run it now.
+on:
+  schedule:
+    - cron: '27 8 * * 1'       # Monday 08:27 UTC (08:27 UK in winter, 09:27 in summer)
+  push:
+    branches: [main]
+    paths: ['requests/report*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Report
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python pipeline/weekly_report.py 2>&1 | tee status/report_log.txt
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add analytics/weekly.md status/report_log.txt 2>/dev/null || true
+          git commit -q -m "Weekly report $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

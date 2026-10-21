@@ -241,6 +241,18 @@ def media_problems(b):
             "commons-search shots of the people, teams, venues or events to at least half the beats (page: pictures often fail)"]
 
 
+STOP = -99        # the weight of a "stop" verdict (drivers.py): the choice is left out, not just moved down
+
+
+def stopped():
+    """{feature: {values}} the data has stopped (verdict "stop" in analytics/drivers.csv)."""
+    p, out = ROOT / "analytics" / "drivers.csv", {}
+    if not p.exists(): return out
+    for r in csv.DictReader(p.open()):
+        if r.get("verdict") == "stop": out.setdefault(r.get("feature"), set()).add(r.get("value"))
+    return out
+
+
 def boosts(feature="category"):
     """How far the data moves a pack up (or down) the list for one feature (its category, or where the topic came from,
     analytics/drivers.csv): "push" 2 places up, an early sign 1; below typical the same way down ("cut back" 2)."""
@@ -252,6 +264,7 @@ def boosts(feature="category"):
         except ValueError: continue
         v = r.get("verdict")
         if v == "push" and lift > 1: out[r.get("value")] = 2
+        elif v == "stop": out[r.get("value")] = STOP           # a week on, little to no views: never chosen again
         elif v == "cut back": out[r.get("value")] = -2
         elif v == "early sign": out[r.get("value")] = 1 if lift > 1.15 else -1 if lift < 0.85 else 0
     return out
@@ -294,13 +307,17 @@ def weak():
     p = ROOT / "analytics" / "shorts.csv"
     if not p.exists(): return []
     done = {board(f).get("remakes") for f in (ROOT / "boards").glob("*/QD-*.json")}
+    import drivers
+    allrows = list(csv.DictReader(p.open()))
+    dead_ids = {r.get("short") for r in drivers.dead(allrows)}
     rows = []
-    for r in csv.DictReader(p.open()):
+    for r in allrows:
         try:
             x = float(r.get("views_vs_typical") or "")
             age = (NOW - dt.datetime.fromisoformat(r["posted"])).total_seconds() / 3600 if r.get("posted") else 0
         except ValueError: continue
         if x >= 0.5 or age < 48 or age > 14 * 24 or r.get("short") in done or not r.get("short"): continue
+        if r.get("short") in dead_ids: continue                   # a week on with little to no views: not posted about again
         f = next((ROOT / "boards").glob(f"*/{r['short']}.json"), None)
         r["_about"] = about(board(f)) if f else (r.get("title", ""), r.get("title", ""), set())
         rows.append((x, r))
@@ -463,7 +480,7 @@ def evergreen_packs(kinds, seen, trending=()):
     quotes are checked word for word (factpack.verify), like the news packs. `trending`: the day's trending subjects
     (topic names): a share of the ideas (trend_share) are top 10s and true stories that ride them."""
     up = boosts()
-    cats = sorted(CATS, key=lambda c: -up.get(c, 0))
+    cats = [c for c in sorted(CATS, key=lambda c: -up.get(c, 0)) if up.get(c, 0) > STOP] or list(CATS)
     recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
     want = {k: kinds.count(k) for k in set(kinds)}
     names = {"evergreen": "question", "top list": "top list", "true story": "true story"}
@@ -556,6 +573,11 @@ def winners():
     return out
 
 
+def arms(t):
+    """The arms of a test still worth making: a "stop" arm (drivers.py) is left out for good."""
+    return [a for a in TESTS[t] if a not in stopped().get(t, ())] or list(TESTS[t])
+
+
 def test_plan(k, kind="news"):
     """The style for Short number k: every winner the data has found, plus one test in turn (an open test, or on every
     RETEST-th Short a challenger to a winner), plus the comment-replies test on alternate Shorts.
@@ -565,12 +587,12 @@ def test_plan(k, kind="news"):
     picks, still = dict(won), [t for t in dims if t not in won]
     if won and k % RETEST == 0:
         t = list(won)[(k // RETEST) % len(won)]
-        rivals = [a for a in TESTS[t] if a != won[t]]
-        picks[t] = rivals[(k // (RETEST * len(won))) % len(rivals)]
+        rivals = [a for a in arms(t) if a != won[t]]
+        if rivals: picks[t] = rivals[(k // (RETEST * len(won))) % len(rivals)]
     elif still:
         t = still[k % len(still)]
-        arms = list(TESTS[t])
-        picks[t] = arms[(k // len(still)) % len(arms)]
+        options = arms(t)
+        picks[t] = options[(k // len(still)) % len(options)]
     picks["replies"] = "on" if k % 2 == 0 else "off"
     return style_note(picks), picks
 
@@ -654,6 +676,7 @@ def lift_of(feature, value):
 def share(kind, base, top):
     """How many Shorts of a kind to write: more when the data says that kind beats typical, fewer when it trails (never
     none, so it keeps being measured)."""
+    if kind in stopped().get("kind", ()): return 0        # a week on, little to no views: not made again
     lift = lift_of("kind", kind)
     return base if lift is None else max(1, min(top, round(base * min(2.0, max(0.5, lift)))))
 
@@ -819,6 +842,8 @@ def main():
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     for _, p in sorted(topics, key=rank):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:
+            print("stopped choice, skipped:", p["topic"], p.get("category")); continue
         if len(p.get("verified") or []) + len(p.get("one_source") or []) < 2:      # one fact makes a thin Short
             print("too few facts:", p["topic"]); continue
         fol = next((r for r in follow if covered(p, [r["_about"]])), None)

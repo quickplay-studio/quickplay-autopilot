@@ -16,12 +16,16 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
   social.yml posts to Instagram and Facebook; engage.yml comments and replies; alerts.yml, weekly.yml, voices.yml.
 - Every Short is a test (kind, source, format, hook, length, ending, title, first frame, series, look, slot, writer
   model); analytics/drivers.csv, models.json, looks.json and slots.json score them and the next choices follow the data.
+  A choice whose Shorts have little to no views a week on is stopped for good (verdict "stop"); a dead Short is never
+  followed up or remade.
 
 ## Where to look
 - status/write_log.txt and status/factpack_log.txt: the last writer and fact pack runs (models, quota, what was written).
 - `python pipeline/digest.py` and `python pipeline/health.py`: one-screen state. status/<id>.json: one Short's life.
 - docs/NEXT.md: what was built and why, newest at the bottom; docs/CLIPS.md: the clips channel plan.
-- analytics/insights.md: the Recipe from the data; analytics/decisions.csv: every change made from it.
+- analytics/insights.md: the Recipe from the data; analytics/decisions.csv: every change made from it; analytics/weekly.md:
+  the Monday report (report.yml, a GitHub issue labelled weekly). Clips: docs/clips.html (money and views per campaign),
+  clips/submit.csv (GitHub submits the links itself, submit.py), docs/CLIPS.md.
 - tests/: offline tests with stubbed HTTP. Run them all before every push.
 
 ## Channel rules (non-negotiable)

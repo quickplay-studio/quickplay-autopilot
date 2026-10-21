@@ -156,6 +156,72 @@
    "why": "Jimmy warns the teams about the million-dollar stakes right as the climactic sniper shootout begins.",
    "planned": "2026-10-21T09:19+00:00",
    "model": "gemini-flash-latest"
+  },
+  {
+   "id": "mrbeast-cod-14",
+   "start": 101.7,
+   "end": 130.4,
+   "hook": "THE FIRST TEAM ENCOUNTER",
+   "label": "",
+   "title": "MrBeast Gaming: First Team Fight in DMZ",
+   "why": "High energy combat and a narrow escape that sets the tone for the rest of the match.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-15",
+   "start": 273.7,
+   "end": 302.4,
+   "hook": "WE HAVE $300,000 ON US",
+   "label": "",
+   "title": "MrBeast Gaming: How to Win $1,000,000",
+   "why": "Explains the core mechanic of the challenge (collecting tags) and the high stakes involved.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-16",
+   "start": 434.7,
+   "end": 488.4,
+   "hook": "THEY ARE SPEAKING ANOTHER LANGUAGE",
+   "label": "",
+   "title": "MrBeast Gaming: Secret Team Strategies",
+   "why": "Shows a unique and funny strategy of using different languages to confuse opponents via proximity chat.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-17",
+   "start": 600.7,
+   "end": 642.4,
+   "hook": "MRBEAST GETS AMBUSHED",
+   "label": "MrBeast",
+   "title": "MrBeast Gaming: MrBeast vs Pro Players",
+   "why": "A high-intensity moment where MrBeast himself is under fire and barely escapes.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-18",
+   "start": 844.7,
+   "end": 896.4,
+   "hook": "THE MOST INTENSE SNIPER BATTLE",
+   "label": "",
+   "title": "MrBeast Gaming: Insane Sniper Clutch",
+   "why": "Features high-skill gameplay and trash talk that is very popular in gaming clips.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-19",
+   "start": 1400.7,
+   "end": 1442.4,
+   "hook": "THE FINAL HELICOPTER ESCAPE",
+   "label": "",
+   "title": "MrBeast Gaming: The $1,000,000 Extraction",
+   "why": "The ultimate payoff of the video where the final chaos leads to the big win.",
+   "planned": "2026-10-21T09:30+00:00",
+   "model": "gemini-3-flash-preview"
   }
  ]
 }

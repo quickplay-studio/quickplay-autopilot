@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 20:08): 7 of 1,000 subscribers · 4,899 of 10 million Shorts views in 90 days · 6,150 views in the last 24 hours (about 111,057 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 20:40): 7 of 1,000 subscribers · 4,937 of 10 million Shorts views in 90 days · 6,263 views in the last 24 hours (about 111,056 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 40 scheduled |
-| Wed 21 Oct | 26 public, 3 scheduled | 14 | 11 | ⏳ 26 of 40 so far, 3 more scheduled |
+| Wed 21 Oct | 26 public, 3 scheduled | 14 | 12 | ⏳ 26 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -55,6 +55,17 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
+
+## In the queue
+
+- **QD-099** Above the Below release date revealed 🎬 (rendering next)
+- **QD-100** Best Buy launches Pokemon TCG sale 📱 (rendering next)
+- **QD-101** Ella Langley and Morgan Wallen released new duet 🎶 (rendering next)
+- **QD-102** Club Brugge 20 league titles history ⚽ (rendering next)
+- **QD-103** Taylor Swift's haunted video twist 🎬 (rendering next)
+- **QD-105** Alphonso Davies: From refugee to Bayern star 🏆 (rendering next)
+- **QD-106** Scottish Premiership biggest stadium and history ⚽ (rendering next)
+- **QD-107** How does ChatGPT process natural language queries? 🤖 (rendering next)
 
 ## On the channel (latest first)
 
@@ -129,7 +140,7 @@ public · 1 views · 25 s · music: f16 · on Facebook · [script](../boards/don
 ![QD-083](QD-083.jpg)
 
 ### Wed 21 Oct 15:30 · How Manchester United won the 1999 Champions League 🏆
-public · 1 views · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
+public · 1 views · 24 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
 
 ![QD-082](QD-082.jpg)
 

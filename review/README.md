@@ -2,7 +2,7 @@
 
 **Progress** (Wed 21 Oct, 16:42): 7 of 1,000 subscribers · 4,435 of 10 million Shorts views in 90 days · 5,962 views in the last 24 hours (about 111,062 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Wed 21 Oct 14:28 (UK): 6 scheduled, 68 public, 29 uploads in the last 24 hours.
+YouTube checked Wed 21 Oct 17:19 (UK): 8 scheduled, 74 public, 37 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 15:13).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Wed 21 Oct | 23 public, 6 scheduled | 14 | 7 | ⏳ 23 of 40 so far, 6 more scheduled |
+| Wed 21 Oct | 24 public, 5 scheduled | 14 | 8 | ⏳ 24 of 40 so far, 5 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -58,33 +58,73 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## On the channel (latest first)
 
+### Thu 22 Oct 1:00 · Which artist has won the most Grammy Awards? 🏆
+scheduled · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
+
+![QD-095](QD-095.jpg)
+
+### Thu 22 Oct 0:30 · What is the loudest sound ever recorded on Earth? 🌋
+scheduled · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
+
+![QD-094](QD-094.jpg)
+
+### Thu 22 Oct 0:00 · How Tetris became a global video game phenomenon 🧩
+scheduled · 38 s · music: after-sunset · [script](../boards/done/QD-093.json) · [YouTube](https://youtube.com/shorts/_X6RQIMVXAw)
+
+![QD-093](QD-093.jpg)
+
+### Wed 21 Oct 23:30 · The day Godzilla was almost an octopus 🐙
+scheduled · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
+
+![QD-092](QD-092.jpg)
+
+### Wed 21 Oct 23:00 · Japan's Phobos rover Idefix's two hour drill 🚀
+scheduled · 36 s · music: horizons · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
+
+![QD-091](QD-091.jpg)
+
+### Wed 21 Oct 21:30 · Shrek 2 Remastered revealed with GTA parody 🧅
+scheduled · 23 s · music: treasure-hunt · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
+
+![QD-090](QD-090.jpg)
+
+### Wed 21 Oct 18:00 · Bob Iger announces new book One Last Time 📖
+scheduled · 22 s · music: level · [script](../boards/done/QD-089.json) · [YouTube](https://youtube.com/shorts/ipEPjlNKVxk)
+
+![QD-089](QD-089.jpg)
+
+### Wed 21 Oct 17:30 · Glee reboot officially confirmed 🎵
+scheduled · 27 s · music: dance-with-you · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
+
+![QD-088](QD-088.jpg)
+
 ### Wed 21 Oct 17:00 · Zelda Ocarina of Time different versions size 🗡️
-scheduled · 27 s · music: scale-the-mountain · [script](../boards/done/QD-087.json) · [YouTube](https://youtube.com/shorts/oA9hiDV3JXY)
+public · 27 s · music: scale-the-mountain · on Facebook · [script](../boards/done/QD-087.json) · [YouTube](https://youtube.com/shorts/oA9hiDV3JXY)
 
 ![QD-087](QD-087.jpg)
 
 ### Wed 21 Oct 16:30 · The day Apollo 13 became a rescue mission 🚀
-private · 26 s · music: across-seas-and-lands · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
+public · 26 s · music: across-seas-and-lands · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
 
 ![QD-085](QD-085.jpg)
 
 ### Wed 21 Oct 16:00 · Pac-Man: The pizza origin story 🍕
-private · 25 s · music: f16 · on Facebook · [script](../boards/done/QD-083.json) · [YouTube](https://youtube.com/shorts/5qb7XUBcYY8)
+public · 25 s · music: f16 · on Facebook · [script](../boards/done/QD-083.json) · [YouTube](https://youtube.com/shorts/5qb7XUBcYY8)
 
 ![QD-083](QD-083.jpg)
 
 ### Wed 21 Oct 15:30 · How Manchester United won the 1999 Champions League 🏆
-private · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
+public · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
 
 ![QD-082](QD-082.jpg)
 
 ### Wed 21 Oct 15:00 · Jupiter: Which is the largest planet? 🪐
-private · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
+public · 4 views · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
 
 ![QD-081](QD-081.jpg)
 
 ### Wed 21 Oct 14:30 · Who invented the World Wide Web? 🌐
-private · 28 s · music: circuit-rush · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
+public · 1 views · 28 s · music: circuit-rush · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
 
 ![QD-080](QD-080.jpg)
 
@@ -94,12 +134,12 @@ public · 26 s · music: defying-gravity · on Facebook · [script](../boards/do
 ![QD-079](QD-079.jpg)
 
 ### Wed 21 Oct 13:30 · Bohemian Rhapsody: the 5.55 minute record 🎸
-public · 1 views · 34 s · music: walking-the-wire · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
+public · 2 views · 34 s · music: walking-the-wire · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
 
 ![QD-078](QD-078.jpg)
 
 ### Wed 21 Oct 13:00 · Anuel AA’s birth name and album timeline 🎤
-public · 28 s · music: rubberband · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
+public · 5 views · 28 s · music: rubberband · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
 
 ![QD-077](QD-077.jpg)
 
@@ -124,7 +164,7 @@ public · 24 s · music: mirror-mirror · [script](../boards/done/QD-073.json) �
 ![QD-073](QD-073.jpg)
 
 ### Wed 21 Oct 9:30 · Taylor Swift's Patient Zero hits three weeks at number one 🎵
-public · 128 views · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
+public · 188 views · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
 
 ![QD-061](QD-061.jpg)
 
@@ -134,17 +174,17 @@ public · 59 views · 22 s · music: ego-chall · [script](../boards/done/QD-060
 ![QD-060](QD-060.jpg)
 
 ### Wed 21 Oct 8:10 · Japan launches historic mission to Mars's moon Phobos 🚀
-public · 203 views · 26 s · music: pulsar · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
+public · 220 views · 26 s · music: pulsar · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
 
 ![QD-059](QD-059.jpg)
 
 ### Wed 21 Oct 7:30 · Zelda Ocarina of Time remake file size confirmed 🗡️
-public · 262 views · 29 s · music: death-duel · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
+public · 348 views · 29 s · music: death-duel · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
 
 ![QD-058](QD-058.jpg)
 
 ### Wed 21 Oct 4:30 · Who was the first person to win an EGOT? 🏆
-public · 134 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
+public · 138 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
 
 ![QD-072](QD-072.jpg)
 
@@ -154,12 +194,12 @@ public · 18 views · 27 s · music: event-horizon · on Instagram · [script](.
 ![QD-071](QD-071.jpg)
 
 ### Wed 21 Oct 3:18 · Why do golf balls have dimples? ⛳
-public · 70 views · 23 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-070.json) · [YouTube](https://youtube.com/shorts/Y9sfjXFS4Z0)
+public · 84 views · 23 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-070.json) · [YouTube](https://youtube.com/shorts/Y9sfjXFS4Z0)
 
 ![QD-070](QD-070.jpg)
 
 ### Wed 21 Oct 2:42 · The Beatles debut album recorded in 12 hours 🎸
-public · 309 views · 33 s · music: death-duel · on Instagram · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
+public · 430 views · 33 s · music: death-duel · on Instagram · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
 
 ![QD-069](QD-069.jpg)
 
@@ -169,7 +209,7 @@ public · 60 views · 25 s · music: death-duel · on Instagram · [script](../b
 ![QD-068](QD-068.jpg)
 
 ### Wed 21 Oct 1:30 · Rod Stewart’s MTV launch record 🎤
-public · 137 views · 39 s · music: death-duel · on Instagram · [script](../boards/done/QD-067.json) · [YouTube](https://youtube.com/shorts/NEAi42kpMIE)
+public · 173 views · 39 s · music: death-duel · on Instagram · [script](../boards/done/QD-067.json) · [YouTube](https://youtube.com/shorts/NEAi42kpMIE)
 
 ![QD-067](QD-067.jpg)
 
@@ -184,7 +224,7 @@ private · 20 s · music: gta-type-beat · [script](../boards/done/QD-063.json) 
 ![QD-063](QD-063.jpg)
 
 ### Tue 20 Oct 20:50 · Bohemian Rhapsody: too long for radio? 🎸
-public · 743 views · 28 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
+public · 867 views · 28 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
 
 ![QD-032](QD-032.jpg)
 
@@ -217,43 +257,3 @@ public · 54 views · 20 s · music: dance-with-you · on Instagram · on Facebo
 public · 153 views · 26 s · music: cued-for-liftoff · on Instagram · on Facebook · [script](../boards/done/QD-031.json) · [YouTube](https://youtube.com/shorts/mvbX2e_1St0)
 
 ![QD-031](QD-031.jpg)
-
-### Mon 19 Oct 20:50 · Why octopus blood is blue 🐙
-public · 26 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-030.json) · [YouTube](https://youtube.com/shorts/gc3iMpgf_QY)
-
-![QD-030](QD-030.jpg)
-
-### Mon 19 Oct 20:10 · The Moon spins. So why one side? 🌕
-public · 2 views · 36 s · music: horizons · on Instagram · on Facebook · [script](../boards/done/QD-029.json) · [YouTube](https://youtube.com/shorts/qqNeX2xpKl8)
-
-![QD-029](QD-029.jpg)
-
-### Mon 19 Oct 17:30 · The Beekeeper 2 teaser: who's new, who's back 🐝
-public · 94 views · 25 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-047.json) · [YouTube](https://youtube.com/shorts/96105PmWfi4)
-
-![QD-047](QD-047.jpg)
-
-### Mon 19 Oct 16:50 · Zara Larsson's Blue Moon: fairy or mermaid? 🌙
-public · 264 views · 24 s · music: purple-desire · on Instagram · on Facebook · [script](../boards/done/QD-046.json) · [YouTube](https://youtube.com/shorts/Etw1Y5mu2qI)
-
-![QD-046](QD-046.jpg)
-
-### Mon 19 Oct 16:10 · Duncan Ferguson is Glentoran's new manager ⚽
-public · 123 views · 32 s · music: never-coming-down · on Instagram · on Facebook · [script](../boards/done/QD-045.json) · [YouTube](https://youtube.com/shorts/-InuBVWX0uA)
-
-![QD-045](QD-045.jpg)
-
-### Mon 19 Oct 15:30 · Jailer 2's cameos: Hrithik Roshan and more 🎬
-public · 725 views · 30 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-044.json) · [YouTube](https://youtube.com/shorts/r99IfJk-afM)
-
-![QD-044](QD-044.jpg)
-
-### Mon 19 Oct 14:50 · K/DA's new song: Start a Fire or Watch Me? 💜
-public · 83 views · 31 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-043.json) · [YouTube](https://youtube.com/shorts/n6j8dxF9M7o)
-
-![QD-043](QD-043.jpg)
-
-### Mon 19 Oct 14:10 · Cyberpunk: Edgerunners 2 is out tomorrow 🌃
-public · 100 views · 23 s · music: in-battery · on Instagram · on Facebook · [script](../boards/done/QD-041.json) · [YouTube](https://youtube.com/shorts/f0oVI53kIwA)
-
-![QD-041](QD-041.jpg)

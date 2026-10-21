@@ -1,148 +1,101 @@
 {
  "date": "2026-10-21",
- "built": "2026-10-21T13:28+00:00",
+ "built": "2026-10-21T16:19+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 7,
-   "topic": "glee",
-   "signal": "Google Trends GB 1000+",
-   "category": "Film",
-   "what_is_new": "Disney+ and Hulu officially greenlit a reboot of the musical series Glee produced by 20th Television.",
+   "n": 1,
+   "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
+   "signal": "Charlie's request",
+   "category": "Sport",
+   "what_is_new": "",
    "hooks": [
-    "Glee is officially returning with a brand new reboot on Disney+ and Hulu!",
-    "Get ready for more musical numbers because Glee is coming back!",
-    "Ryan Murphy has written a script for the new Glee reboot!"
+    "Michael Carrick leads Manchester United to face Atletico Madrid.",
+    "Manchester United sit 12th in the English top flight.",
+    "Atletico Madrid arrive second in the Spanish league."
    ],
    "sources": [
     [
-     "‘Glee’ Reboot Officially Set at Disney+ and Hulu",
-     "https://variety.com/2026/tv/news/glee-reboot-disney-hulu-1236918160/",
-     "Variety",
-     "2026-10-21"
-    ],
-    [
-     "Don’t Stop Believin’: ‘Glee’ Revival a Go at Disney+ and Hulu",
-     "https://www.hollywoodreporter.com/tv/tv-news/glee-revival-series-disney-plus-hulu-1236736950/",
-     "The Hollywood Reporter",
-     "2026-10-21"
-    ],
-    [
-     "‘Glee’ Reboot Lands Series Order At Disney+ & Hulu",
-     "https://deadline.com/2026/10/glee-reboot-series-order-disney-hulu-1237169231/",
-     "Deadline",
-     "2026-10-21"
-    ],
-    [
-     "glee",
-     "https://en.wikipedia.org/wiki/Glee",
-     "Wikipedia",
-     ""
+     "Why is Atletico Madrid vs Manchester United not on TNT Sports?",
+     "https://www.standard.co.uk/sport/football/why-atletico-madrid-vs-manchester-united-not-on-tnt-sports-b1300537.html",
+     "Evening Standard",
+     "2026-10-13"
     ]
    ],
-   "verified": [
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Disney+ and Hulu have greenlit a reboot of Glee.",
+     "claim": "Michael Carrick is the permanent head coach of Manchester United.",
      "sources": [
-      1,
-      2,
-      3
+      1
      ],
      "evidence": {
-      "1": "Disney+ and Hulu have greenlit a reboot of Ryan Murphy‘s famous (and infamous) musical dramedy series.",
-      "2": "Disney+ and Hulu have ordered a revival of the high school musical, which ran from 2009-15 on Fox.",
-      "3": "Glee is officially coming back after Disney+ and Hulu handed the reboot a series order."
+      "1": "The Red Devils come into this fixture off a stuttering start to their Premier League campaign, Michael Carrick’s first as the club’s permanent head coach."
      }
     },
     {
-     "claim": "The original Glee series ran for six seasons on Fox.",
+     "claim": "Manchester United sit 12th in the English top flight.",
      "sources": [
-      1,
-      2,
-      3
+      1
      ],
      "evidence": {
-      "1": "“Glee” premiered on Fox in 2009 concluded in 2015 after six seasons of following a group of show choir members from Lima, Ohio as they",
-      "2": "Glee ran for six seasons on Fox, becoming a cultural phenomenon almost from the moment its pilot debuted.",
-      "3": "Less than two months later, Murphy revealed that he had just finished a reboot script for the musical comedy series, which originally ran for six"
+      "1": "His side sit 12th in the English top flight, and they were pegged back late on last time out by Tottenham, who stole a 1-1"
      }
     },
     {
-     "claim": "The new Glee series is being produced by 20th Television.",
+     "claim": "Dominic Solanke netted a stoppage-time equaliser for Tottenham against Manchester United.",
      "sources": [
-      1,
-      2,
-      3
+      1
      ],
      "evidence": {
-      "1": "Details about the new “Glee” are scant; Disney shared nothing aside from the fact that the series is being produced by 20th Television and will",
-      "2": "20th Television, which produced the original series, is also behind the new show.",
-      "3": "The reboot comes from 20th Television, which produced the original."
+      "1": "Dominic Solanke netted a stoppge-time equaliser in the second half to salvage a share of the spoils for Roberto De Zerbi’s 10-man Spurs, who had"
      }
     },
     {
-     "claim": "Ryan Murphy co created Glee with Ian Brennan and Brad Falchuk.",
+     "claim": "Bryan Mbeumo gave Manchester United the lead on 73 minutes.",
      "sources": [
-      1,
-      2,
-      3
+      1
      ],
      "evidence": {
-      "1": "“It’s very sweet, and they all had a lot of questions, but they all were very enthusiastic about the idea.”",
-      "2": "In late September, Murphy took the idea further, telling Entertainment Tonight that he had finished a script for a new version with co-creators Brad Falchuk",
-      "3": "Murphy co-created the series with Ian Brennan and Brad Falchuk."
+      "1": "Bryan Mbeumo had given Carrick’s hosts the lead on 73 minutes with an arrowed finish into the corner, but they were denied all three points"
      }
     },
     {
-     "claim": "Glee won six Emmys.",
+     "claim": "Atletico Madrid arrive second in the Spanish league with six wins, a draw and a defeat from their first eight games.",
      "sources": [
-      2,
-      3
+      1
      ],
      "evidence": {
-      "2": "Glee won six Emmys, including a directing win for Murphy for the pilot episode and best supporting actress in a comedy series for Lynch in",
-      "3": "The show, which won six Emmys including for Murphy and Lynch as well as guest stars such as Neil Patrick Harris and Gwyneth Paltrow, currently"
-     }
-    },
-    {
-     "claim": "Songs from Glee draw about 4 million monthly listeners on Spotify.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The series remains popular today, as does its music, which averages 4.1 million monthly listeners on Spotify.",
-      "2": "The original series streams on Hulu, and songs from Glee draw about 4 million monthly listeners on Spotify."
+      "1": "Now, they travel to the Spanish capital to face Diego Simeone’s Atleti, and the La Liga outfit arrive second in the Spanish league, with six"
      }
     }
    ],
-   "one_source": [],
    "images": []
   },
   {
-   "n": 11,
-   "topic": "bob iger",
-   "signal": "Google Trends US 500+",
-   "category": "Film",
-   "what_is_new": "Bob Iger officially announced his second book titled One Last Time, scheduled for release on March 2, 2027.",
+   "n": 4,
+   "topic": "Raindance by Dave & Tems",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Bob Iger led Disney twice?",
-    "Bob Iger just announced a brand new book!",
-    "Meet the man who shaped modern Disney."
+    "Did you know Raindance is Dave's fourth number one single in the UK?",
+    "Raindance was released on October twenty third, 2025 as part of a new album.",
+    "The romantic music video for Raindance was filmed in Lagos, Nigeria."
    ],
    "sources": [
     [
-     "Bob Iger’s New Book to Chronicle “Sometimes Bumpy, Never Boring” Second Stint as Disney CEO",
-     "https://www.hollywoodreporter.com/business/business-news/new-bob-iger-book-one-last-time-second-ceo-stint-disney-1236736366/",
-     "The Hollywood Reporter",
-     "2026-10-20"
+     "Dave & Tems’ ‘Raindance’ Hits No. 1 on Mainstream R&B/Hip-Hop Airplay Chart",
+     "https://www.billboard.com/music/chart-beat/dave-tems-raindance-number-1-mainstream-hip-hop-radio-chart-1236326343/",
+     "Billboard",
+     "2026-08-27"
     ],
     [
-     "bob iger",
-     "https://en.wikipedia.org/wiki/Bob_Iger",
+     "Raindance by Dave & Tems",
+     "https://en.wikipedia.org/wiki/Raindance_(Dave_and_Tems_song)",
      "Wikipedia",
      ""
     ]
@@ -150,49 +103,71 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Josh D'Amaro succeeded Bob Iger as CEO of Disney on March 18, 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He was succeeded as CEO of Disney by Josh D'Amaro on March 18, 2026."
-     }
-    },
-    {
-     "claim": "Bob Iger bought the Los Angeles Lakers of the National Basketball Association for a record $12 billion in 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2026, Iger bought the Los Angeles Lakers of the National Basketball Association (NBA) for a record $12 billion, alongside businessman Joshua Kushner."
-     }
-    },
-    {
-     "claim": "Bob Iger announced his second book titled One Last Time, which will be released on March 2, 2027.",
+     "claim": "Raindance became Dave's fourth number one single on the Official U.K. Singles chart.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The book, One Last Time, will be released on March 2, 2027, with Dan Schwerin helping to write it."
+      "1": "In his native U.K., the single became the rapper’s fourth champ on the Official U.K. Singles chart and 15th top 10 overall."
+     }
+    },
+    {
+     "claim": "Raindance was released on 23 October 2025 through Neighbourhood Recordings as the fifth track from Dave's third studio album, The Boy Who Played the Harp.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It was released on 23 October 2025 through Neighbourhood Recordings as the fifth track from Dave's third studio album, The Boy Who Played the Harp.[1][2][3]"
+     }
+    },
+    {
+     "claim": "Dave released the Nathan James Tettey-directed and Martha Nakintu-produced music video on 9 January 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Dave released the Nathan James Tettey-directed and Martha Nakintu-produced music video on 9 January 2026."
+     }
+    },
+    {
+     "claim": "The music video for Raindance was filmed in Lagos, Nigeria.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Filmed in Lagos, Nigeria, critics, feeding into dating rumours between the two artists, have stated that the music video \"might as well be leaked wedding"
+     }
+    },
+    {
+     "claim": "In the United Kingdom, Raindance debuted at number five on the UK Singles Chart, moving 34,935 single units in its first week.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In the United Kingdom, \"Raindance\" debuted at number five on the UK Singles Chart, moving 34,935 single units in its first week.[11][12]"
      }
     }
    ],
-   "images": [
-    "commons:File:Bob_Iger_2019_Disney_Legends_Awards_Ceremony_D23_EXPO_2019_(51441457900)_(cropped).jpg"
-   ]
+   "images": []
   },
   {
-   "n": 20,
+   "n": 18,
    "topic": "Street Fighter (2026 film)",
    "signal": "Wikipedia 110,411 views",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai?",
-    "Noah Centineo stars as Ken Masters in the new Street Fighter movie!",
-    "Andrew Koji takes on the role of Ryu in the 2026 film."
+    "Did you know Street Fighter is directed by Kitao Sakurai?",
+    "Noah Centineo stars as Ken Masters in the new movie.",
+    "Street Fighter topped the UK and Ireland box office."
    ],
    "sources": [
+    [
+     "‘Street Fighter’ Punches to Summit as Rajinikanth’s ‘Jailer 2’ Bows in Third at U.K., Ireland Box Office",
+     "https://variety.com/2026/film/global/street-fighter-rajinikanth-jailer-2-uk-ireland-box-office-1236916622/",
+     "Variety",
+     "2026-10-20"
+    ],
     [
      "Street Fighter (2026 Movie) Guide",
      "https://www.ign.com/wikis/street-fighter-2026-movie",
@@ -208,476 +183,159 @@
    ],
    "verified": [
     {
-     "claim": "Street Fighter is the third live-action adaptation of Capcom's fighting game franchise.",
+     "claim": "Street Fighter is directed by Kitao Sakurai.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "Street Fighter features a large ensemble cast, which has already inspired new in-game skins and merchandise.",
-      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+      "2": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+      "3": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
      }
     },
     {
-     "claim": "Noah Centineo stars as Ken Masters in the movie.",
+     "claim": "It is the third live action adaptation of the video game franchise.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "Noah Centineo as Ken Masters",
-      "2": "- Noah Centineo as Ken Masters"
+      "2": "The movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
+      "3": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
      }
     },
     {
-     "claim": "Andrew Koji plays the role of Ryu.",
+     "claim": "Noah Centineo stars as Ken Masters.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Andrew Koji as Ryu",
-      "2": "- Andrew Koji as Ryu / Dark Ryu"
+      "2": "- Noah Centineo as Ken Masters",
+      "3": "- Noah Centineo as Ken Masters"
      }
     },
     {
-     "claim": "Callina Liang stars as Chun-Li.",
+     "claim": "Andrew Koji stars as Ryu.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Callina Liang as Chun-Li",
-      "2": "- Callina Liang as Chun-Li[4]"
+      "2": "- Andrew Koji as Ryu",
+      "3": "- Andrew Koji as Ryu / Dark Ryu"
      }
     },
     {
-     "claim": "David Dastmalchian appears as M. Bison.",
+     "claim": "Callina Liang stars as Chun Li.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- David Dastmalchian as M. Bison",
-      "2": "- David Dastmalchian as M. Bison"
+      "2": "- Callina Liang as Chun-Li",
+      "3": "- Callina Liang as Chun-Li[4]"
      }
     },
     {
-     "claim": "Joe Anoa'i portrays Akuma.",
+     "claim": "David Dastmalchian plays M Bison.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Joe Anoa'i (Roman Reigns) as Akuma",
-      "2": "- Joe \"Roman Reigns\" Anoa'i as Akuma"
+      "2": "- David Dastmalchian as M. Bison",
+      "3": "- David Dastmalchian as M. Bison"
      }
     },
     {
-     "claim": "Cody Rhodes plays the character Guile.",
+     "claim": "Joe Anoa i plays Akuma.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Cody Rhodes as Guile",
-      "2": "- Cody Rhodes as Guile"
+      "2": "- Joe Anoa'i (Roman Reigns) as Akuma",
+      "3": "- Joe \"Roman Reigns\" Anoa'i as Akuma"
      }
     },
     {
-     "claim": "Jason Momoa is cast as Blanka.",
+     "claim": "Cody Rhodes plays Guile.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Jason Momoa as Blanka",
-      "2": "- Jason Momoa as Blanka"
+      "2": "- Cody Rhodes as Guile",
+      "3": "- Cody Rhodes as Guile"
      }
     },
     {
-     "claim": "Curtis 50 Cent Jackson plays Balrog.",
+     "claim": "Jason Momoa plays Blanka.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "- Curtis \"50 Cent\" Jackson as Balrog",
-      "2": "- Curtis \"50 Cent\" Jackson as Balrog"
+      "2": "- Jason Momoa as Blanka",
+      "3": "- Jason Momoa as Blanka"
+     }
+    },
+    {
+     "claim": "Curtis Jackson plays Balrog.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "- Curtis \"50 Cent\" Jackson as Balrog",
+      "3": "- Curtis \"50 Cent\" Jackson as Balrog"
+     }
+    },
+    {
+     "claim": "Paramount is distributing the film.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Paramount’s “Street Fighter” delivered a knockout blow to top the U.K. and Ireland box office, debuting in first place with £2.3 million ($3.1 million).",
+      "2": "As the movie is being distributed by Paramount, it will eventually stream on Paramount+, which may be merged with HBO Max under the new Skydance",
+      "3": "Street Fighter was released in the United States by Paramount Pictures on October 16, 2026."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+     "claim": "Legendary Entertainment acquired the rights in April 2023.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai."
+      "3": "Legendary Entertainment acquired the live-action film and television rights to Street Fighter in April 2023, by which point the film had entered active development, with"
+     }
+    },
+    {
+     "claim": "Danny and Michael Philippou dropped out as directors in June 2024.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Danny and Michael Philippou were announced as directors before dropping out in June 2024, with Sakurai joining the following February."
+     }
+    },
+    {
+     "claim": "The film has grossed $52.8 million worldwide against an $81 million production budget.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It received mixed reviews from critics and has grossed $52.8 million worldwide against an $81 million production budget."
      }
     }
    ],
    "images": []
-  },
-  {
-   "n": 21,
-   "topic": "Barbara Palvin",
-   "signal": "Wikipedia 104,012 views",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Barbara Palvin became the first Hungarian Victoria's Secret Angel?",
-    "Barbara Palvin married Dylan Sprouse in Hungary in 2023!"
-   ],
-   "sources": [
-    [
-     "Barbara Palvin",
-     "https://en.wikipedia.org/wiki/Barbara_Palvin",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary."
-     }
-    },
-    {
-     "claim": "She married American actor Dylan Sprouse on July 15, 2023, in the town of Albertirsa, Hungary.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On July 15, 2023, the couple married in the town of Albertirsa, Hungary, in the same church that Palvin's parents married."
-     }
-    },
-    {
-     "claim": "In May 2026, the couple announced that they were expecting their first child.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In May 2026, the couple announced that they were expecting their first child,"
-     }
-    },
-    {
-     "claim": "Their daughter was born in September 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "their daughter was born in September 2026."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:MKr382323_Barbara_Palvin_(Cannes_2025).jpg"
-   ]
-  },
-  {
-   "n": 25,
-   "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 475,992/h",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Kylie Jenner debuted a fifty million dollar bra at the Victoria's Secret Fashion Show.",
-    "The stunning Fantasy Bra was made of 18-carat gold and 4,410 diamonds.",
-    "Victoria's Secret brought back its famous catwalk show in 2024."
-   ],
-   "sources": [
-    [
-     "Kylie Jenner's debut at Victoria's Secret Fashion Show in $50m bra sparks mixed reaction",
-     "https://www.bbc.co.uk/news/articles/cmx2wqwxvyxlo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-19"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Reality TV star Kylie Jenner made her Victoria's Secret Fashion Show debut in a $50m bra.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Reality TV star Kylie Jenner has sparked mixed reaction after making her Victoria's Secret Fashion Show debut in a $50m (Â£37m) bra."
-     }
-    },
-    {
-     "claim": "Kylie Jenner is 29 years old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Kardashians star, 29, being selected to wear the piece delighted some fans, while many others criticised the brand for not giving the opportunity to"
-     }
-    },
-    {
-     "claim": "Adam Selman is the chief creative officer at Victoria's Secret.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Chief creative officer at Victoria's Secret, Adam Selman, told Vogue, external that Jenner was picked for being a \"cultural powerhouse\"."
-     }
-    },
-    {
-     "claim": "The lingerie brand's catwalk show was scrapped after its 2018 edition drew low ratings.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The lingerie brand's catwalk show was scrapped after its 2018 edition drew low ratings, as well as criticism that it was sexist, outdated and lacked"
-     }
-    },
-    {
-     "claim": "The Victoria's Secret catwalk show returned in 2024.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It returned in 2024, with a promise to \"celebrate all women\" and featured more a diverse range of talent, including Ashley Graham's appearance as a"
-     }
-    },
-    {
-     "claim": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob & Co.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob & Co, who said it was the \"most valuable\" one ever created"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 28,
-   "topic": "Shrek 2 Remastered",
-   "signal": "YouTube US 54,871/h",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Shrek 2 Remastered needs an RTX 4060?",
-    "Shrek 2 Remastered launches on November 10.",
-    "Aspyr is developing Shrek 2 Remastered."
-   ],
-   "sources": [
-    [
-     "Fans React to Shrek 2 Remastered's Surprising PC Requirements",
-     "https://www.ign.com/articles/shrek-2-remastered-surprising-pc-requirements",
-     "IGN",
-     "2026-10-21"
-    ],
-    [
-     "Witcher 3 Switch 2 patch rolls out today with a number of changes, including alterations to resolution and \"visual clarity\"",
-     "https://www.eurogamer.net/witcher-3-switch-2-patch-update-resolution-brightness",
-     "Eurogamer",
-     "2026-10-19"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Shrek 2 Remastered was revealed alongside a trailer that parodied GTA 6.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Shrek 2 Remastered was revealed alongside a trailer that parodied GTA 6, and is set to launch just over a week before Rockstar’s behemoth, on"
-     }
-    },
-    {
-     "claim": "Shrek 2 was originally released in 2004.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Originally released in 2004, this remaster boasts better textures, enhanced UI, 4K resolution — and, it seems, a beefy PC."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 30,
-   "topic": "K/DA",
-   "signal": "YouTube US-gaming 261,583/h",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know K/DA received platinum certification?",
-    "Discover the new line-up for K/DA in 2026!"
-   ],
-   "sources": [
-    [
-     "Battle over Meta’s alleged Bolsonaro bias intensifies days before Brazil presidential runoff",
-     "https://www.theguardian.com/world/2026/oct/21/battle-meta-alleged-bolsonaro-bias-intensifies-days-before-brazil-presidential-runoff",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "K/DA",
-     "https://en.wikipedia.org/wiki/K/DA",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "In 2026, Sophie Powers and Mimi Webb replaced Beer and Burns, respectively, to form a new line-up for K/DA.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2026, Sophie Powers and Mimi Webb replaced Beer and Burns, respectively, to form a new line-up for K/DA."
-     }
-    },
-    {
-     "claim": "A second extended play, Firestarter, is set to be released in 2026, led by the title track as lead single.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "A second extended play, Firestarter, is set to be released in 2026, led by the title track as lead single."
-     }
-    },
-    {
-     "claim": "In 2022, \"Pop/Stars\" was certified platinum by the Recording Industry Association of America (RIAA), making K/DA and I-dle the first K-pop girl groups in history to achieve this milestone.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2022, \"Pop/Stars\" was certified platinum by the Recording Industry Association of America (RIAA), making K/DA and I-dle the first K-pop girl groups in history"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 38,
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 128,293/h",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Olivia Rodrigo was born half deaf in her left ear?",
-    "Olivia Rodrigo made her acting debut at age 12 in an American Girl film.",
-    "Olivia Rodrigo released her smash debut single Drivers License on January 8, 2021."
-   ],
-   "sources": [
-    [
-     "Olivia Rodrigo",
-     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Olivia Isabel Rodrigo was born on February 20, 2003, at the Rancho Springs Medical Center in Murrieta, California.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Olivia Isabel Rodrigo[1] was born on February 20, 2003,[2] at the Rancho Springs Medical Center in Murrieta, California, to Jennifer (née Lee), a schoolteacher, and"
-     }
-    },
-    {
-     "claim": "She was born half-deaf in her left ear.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Rodrigo was born half-deaf in her left ear.[7]"
-     }
-    },
-    {
-     "claim": "At age five, her parents signed her up for vocal lessons with Jennifer Dustman.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "At age five, her parents signed her up for vocal lessons with Jennifer Dustman, who enrolled Rodrigo in various local singing competitions.[15]"
-     }
-    },
-    {
-     "claim": "In May 2010, at age seven, she first appeared onscreen in an Old Navy commercial.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In May 2010, at age seven, she first appeared onscreen in an Old Navy commercial.[18][19]"
-     }
-    },
-    {
-     "claim": "In 2015, at age 12, Rodrigo made her acting debut, in the lead role of Grace Thomas in the direct-to-video film An American Girl: Grace Stirs Up Success.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2015, at age 12, Rodrigo made her acting debut, in the lead role of Grace Thomas in the direct-to-video film An American Girl: Grace"
-     }
-    },
-    {
-     "claim": "She began taking piano lessons at age nine.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She began taking piano lessons at age nine.[15]"
-     }
-    },
-    {
-     "claim": "She was playing guitar by age 12.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "and she was playing guitar by age 12.[17]"
-     }
-    },
-    {
-     "claim": "In February 2019, she was cast in the starring role of Nini Salazar-Roberts on the Disney+ series High School Musical: The Musical: The Series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In February 2019, she was cast in the starring role of Nini Salazar-Roberts on the Disney+ series High School Musical: The Musical: The Series, which"
-     }
-    },
-    {
-     "claim": "On January 8, 2021, she released her debut single, Drivers License, which she co-wrote with producer Dan Nigro.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On January 8, 2021, she released her debut single, \"Drivers License\", which she co-wrote with producer Dan Nigro.[34][35]"
-     }
-    },
-    {
-     "claim": "On April 1, 2021, Rodrigo released her follow-up single, Deja Vu.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On April 1, 2021, Rodrigo released her follow-up single, \"Deja Vu\", which debuted at number eight on the Billboard Hot 100,[43]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Glasto2025-546_(cropped)_2.jpg"
-   ]
   }
  ]
 }

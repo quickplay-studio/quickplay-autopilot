@@ -69,3 +69,16 @@ forbids it for that creator's content.
 - Test by pushing requests/clips.txt with "test 2"; the daily run is 13:00 UK; "stats" refreshes the numbers.
 - Still to do: a Whop API or scraper for submissions does not exist, so submission stays manual; Vyro campaigns once
   Charlie sends them; a second source kind for Twitch (TWITCH_CLIENT_ID and secret) when a campaign needs it.
+
+## Live from 21 October
+- Footage: Google Drive (gdown) and Frame.io share links (a headless browser presses Download, Download in Browser,
+  Original); each source is cut to 720p once and kept as a release asset (clips-src). Sources cached: speed-expedia,
+  mrbeast-cod, tdr-stinkyasher, tdr-mitch, tdr-flamingo, tdr-jenny, valorant-champs.
+- Day: 10:00 UK prepare (sources, transcripts, moments), 13:00 UK make and upload (daily_clips 10, shared by expected
+  money, per_day 3 a campaign), public together at 18:00 UK, stats 23:30 UK. Charlie pastes the links at 18:00 from
+  https://quickplay-studio.github.io/quickplay-autopilot/submit.html (Content Rewards: Submit clip; Vyro: Add Posts).
+- Guards: no strong language (the planner drops the moment; a scheduled clip that fails is pulled to private before
+  it publishes), no black pictures (same), long picks cut to the limit, a frame of every clip in clips/frames.
+- First day: 10 clips across 7 campaigns scheduled for 18:00 UK (2 pulled for swearing, 1 for a black screen,
+  replaced).
+- Off and why: clips/campaigns.json (why_off). SEGA Metaphor waits for Charlie's audience screen recording.

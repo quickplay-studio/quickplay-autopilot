@@ -1,4 +1,4 @@
-probe: https://f.io/_a1-OEVL -> https://next.frame.io/share/414896b3-6fe0-44d3-8a75-e89302d13cde/view/53f27375-a7e4-4036-8fc0-0708eb817186 200 253548 bytes
+probe: https://f.io/_a1-OEVL -> https://next.frame.io/share/414896b3-6fe0-44d3-8a75-e89302d13cde/view/53f27375-a7e4-4036-8fc0-0708eb817186 200 253553 bytes
   via 302 https://next.frame.io/share/414896b3-6fe0-44d3-8a75-e89302d13cde
   via 307 https://next.frame.io/share/414896b3-6fe0-44d3-8a75-e89302d13cde/view/53f27375-a7e4-4036-8fc0-0708eb817186
   url: https://api.frame.io
@@ -13,7 +13,5 @@ probe: https://f.io/_a1-OEVL -> https://next.frame.io/share/414896b3-6fe0-44d3-8
   api https://api.frame.io/v2/shares/414896b3-6fe0-44d3-8a75-e89302d13cde: 404 {"code":404,"message":"Not found","errors":[{"code":404,"status":404,"title":"Not found","detail":"Could not find the requested resource"}]}
   html saved to probe_https_f_io_a1_OEVL.html
   buttons: ['Back', 'Download', 'Hide Asset Information', 'Play button', 'clear-range', 'Play', 'Loop video', 'Customize playback speed: 1', 'Volume mute control', 'Time format: Timecode', 'Viewer Settings', 'Open Fullscreen', 'All Fields (1)', 'Search fields']
-  download button (download): TimeoutError: Timeout 20000ms exceeded while waiting for event "download"
-=========================== logs ===========================
-  media seen: ['https://sahls.frame.io/encode-hls/53f27375-a7e4-4036-8fc0-0708eb817186/token/eyJhbGciOiJIUzI1NiIsInR', 'https://assets.frame.io/encode/53f27375-a7e4-4036-8fc0-0708eb817186/video_h264_180.mp4?x-amz-meta-re', 'https://sahls.frame.io/encode-hls/53f27375-a7e4-4036-8fc0-0708eb817186/token/eyJhbGciOiJIUzI1NiIsInR', 'https://sahls.frame.io/encode-hls/53f27375-a7e4-4036-8fc0-0708eb817186/token/eyJhbGciOiJIUzI1NiIsInR', 'https://sahls.frame.io/encode-hls/53f27375-a7e4-4036-8fc0-0708eb817186/token/eyJhbGciOiJIUzI1NiIsInR', 'https://sahls.frame.io/encode-hls/53f27375-a7e4-4036-8fc0-0708eb817186/token/eyJhbGciOiJIUzI1NiIsInR']
-  browser download worked: 89 MB, 1512 s of media
+  downloaded Escape Abandoned City.mp4 (7524 MB)
+  browser download worked: 7524 MB, 1512 s of media

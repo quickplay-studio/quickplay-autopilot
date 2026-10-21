@@ -94,7 +94,7 @@ print("7 parts ok")
 # 8. the clips channel's ceiling: rises after a full day, settles on a refusal
 C.STATE = pathlib.Path(SCRATCH) / "state"; C.CEILING = C.STATE / "ceiling.json"
 base = int(C.CFG.get("daily_clips", 10))
-assert C.daily_limit() == base and C.ceiling_learn(base - 1) == base and C.ceiling_learn(base) == base + 2
+assert C.daily_limit() == base and C.ceiling_learn(base - 1) == base and C.ceiling_learn(base) == base + int(C.CFG.get("clips_limit_step", 2))
 assert C.ceiling_learn(base + 2) == base + 2                           # raised today: waits
 assert C.ceiling_learn(7, refused=True) == 7 and C.daily_limit() == 7
 print("8 ceiling ok")

@@ -1,16 +1,16 @@
 {
- "updated": "2026-10-21T18:44+00:00",
- "mode": "hourly",
+ "updated": "2026-10-21T19:08+00:00",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-21T13:28+00:00",
+ "full_updated": "2026-10-21T19:08+00:00",
  "youtube": {
   "subscribers": 7,
   "public_shorts": 76,
-  "views_all_time": 14821,
-  "views_last_90_days": 1518,
+  "views_all_time": 14824,
+  "views_last_90_days": 2636,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 5001,
-  "analytics_last_day": "2026-10-18"
+  "views_last_90_days_estimate": 4899,
+  "analytics_last_day": "2026-10-19"
  },
  "instagram": {
   "followers": 0,
@@ -30,10 +30,7 @@
   "days_left": 103,
   "subscribers_pct": 0.7,
   "views_pct": 0.05,
-  "views_needed_per_day": 111056,
+  "views_needed_per_day": 111057,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
- },
- "audience_errors": [
-  "Film traffic: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
- ]
+ }
 }

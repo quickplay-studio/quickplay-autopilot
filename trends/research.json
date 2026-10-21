@@ -14,12 +14,6 @@
      "published": "2026-10-13"
     },
     {
-     "outlet": "Evening Standard",
-     "title": "Why is Atletico Madrid vs Manchester United not on TNT Sports?",
-     "url": "https://www.standard.co.uk/sport/football/why-atletico-madrid-vs-manchester-united-not-on-tnt-sports-b1300537.html",
-     "published": "2026-10-13"
-    },
-    {
      "outlet": "UEFA",
      "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
      "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
@@ -67,44 +61,30 @@
    ]
   },
   {
-   "topic": "nico paz",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Nico_Paz",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Explaining Real Madrid’s new €60m Nico Paz deal with Como – and what it means for transfers",
-     "url": "https://www.nytimes.com/athletic/7397727/2026/06/26/real-madrid-nico-paz-como-transfer-enzo-fernandez/",
-     "published": "2026-06-26"
-    }
-   ]
-  },
-  {
-   "topic": "hyron andrews aorta tear",
-   "signal": "Google Trends GB 200+",
+   "topic": "champions league fixtures",
+   "signal": "Google Trends GB 100000+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "Tear in artery around heart cause of rugby player Andrews' death",
-     "url": "https://www.skysports.com/rugby-union/news/12040/13601963/hyron-andrews-south-african-rugby-player-died-of-natural-causes-team-statement-says",
+     "title": "Miserable Man Utd ripped apart by Como",
+     "url": "https://www.skysports.com/football/como-vs-manchester-united/report/577645",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Como 4-1 Manchester United: Champions League – live reaction",
+     "url": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
      "published": "2026-10-21"
     },
     {
      "outlet": "BBC",
-     "title": "Andrews died of tear in artery around heart - autopsy",
-     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmx234p2xwpzo?at_medium=RSS&at_campaign=rss",
+     "title": "Why do Man City fans boo pre-match anthems?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cvx28yk1j6z0o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "barcelona psg tifo complaint uefa",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": null,
-   "articles": [
+    },
     {
-     "outlet": "BBC",
+     "outlet": "BBC Sport",
      "title": "Barca condemn PSG tifo inciting 'violence and hatred'",
      "url": "https://www.bbc.co.uk/sport/football/articles/cm4g1jwp9827o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-21"
@@ -112,90 +92,124 @@
    ]
   },
   {
-   "topic": "arsenal vs bayern",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": null,
+   "topic": "manuel neuer",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Manuel_Neuer",
    "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "‘We can go all the way’: Jonas Eidevall on life at San Diego Wave and lessons learned from Arsenal",
-     "url": "https://www.theguardian.com/football/2026/oct/21/jonas-eidevall-interview-san-diego-wave-nwsl-arsenal",
-     "published": "2026-10-21"
-    },
     {
      "outlet": "BBC",
-     "title": "Why Eze is struggling to find his form at Arsenal",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cqgm0ze7vepmo?at_medium=RSS&at_campaign=rss",
+     "title": "'I like every single thing about Manuel Neuer' - Raya",
+     "url": "https://www.bbc.com/sport/football/videos/cr93z12928n4o",
      "published": "2026-10-21"
     },
     {
-     "outlet": "BBC Sport",
-     "title": "Arsenal criticism comes from very small minority - Arteta",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm8xzrwv5zpko?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Why have set-piece kings Arsenal stopped scoring from set-pieces?",
-     "url": "https://www.skysports.com/football/news/12040/13601338/arsenal-were-set-piece-kings-last-season-so-why-have-they-stopped-scoring-from-set-pieces-between-the-lines-explains",
-     "published": "2026-10-20"
+     "outlet": "USA Today",
+     "title": "Bayern Munich's Manuel Neuer's error led to Augsburg scoring the fastest goal in Bundesliga history",
+     "url": "https://www.usatoday.com/story/sports/soccer/2026/10/10/neuers-error-fastest-goal-bundesliga-history/92190461007/",
+     "published": "2026-10-10"
     }
    ]
   },
   {
-   "topic": "royal news",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/1st_Royal_New_South_Wales_Lancers",
+   "topic": "alphonso davies",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Alphonso_Davies",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Alphonso Davies: From refugee fleeing war and starvation to Bayern Munich star",
+     "url": "https://www.skysports.com/football/news/11971669/alphonso-davies-from-refugee-fleeing-war-and-starvation-to-bayern-munich-star",
+     "published": "2020-06-12"
+    }
+   ]
+  },
+  {
+   "topic": "rb leipzig",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/RB_Leipzig",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Our Friends in the North: The Thatcher Years review – old pals back on the toon as TV series gets squished",
-     "url": "https://www.theguardian.com/stage/2026/oct/21/our-friends-in-the-north-the-thatcher-years-review-theatre-royal-newcastle",
+     "title": "Aston Villa v Viking, Real Madrid v RB Leipzig and more: Champions League – live",
+     "url": "https://www.theguardian.com/football/live/2026/oct/21/real-madrid-v-rb-leipzig-aston-villa-v-viking-and-more-champions-league-live",
      "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "ticket master",
+   "topic": "steve wilks",
    "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ticketmaster",
+   "wikipedia": "https://en.wikipedia.org/wiki/Steve_Wilks",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "‘You are a humanitarian also, sir’: the US feeds Putin with lies as Ukraine’s children take cover and die | Andrew Roth",
+     "url": "https://www.theguardian.com/world/2026/oct/21/you-are-a-humanitarian-also-sir-us-putin-lies-ukraine-children-take-cover-and-die-witkoff",
+     "published": "2026-10-21"
+    },
+    {
      "outlet": "BBC",
-     "title": "MNEK cancels tour over lack of ticket sales and high production costs",
-     "url": "https://www.bbc.co.uk/news/articles/cwe8lz018pe1o?at_medium=RSS&at_campaign=rss",
+     "title": "Russia says it is ready to resume talks with Ukraine and US to end war",
+     "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "como vs man utd",
-   "signal": "Google Trends US 10000+",
+   "topic": "sham marriage",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sham_marriage",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "US charges six people in alleged Massachusetts marriage fraud ring",
+     "url": "https://www.theguardian.com/us-news/2026/oct/21/massachusetts-marriage-fraud-ring-bust",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "NBC News",
+     "title": "‘The American dream is not for sale’: Feds bust Mass. marriage fraud ring",
+     "url": "https://www.nbcnews.com/news/us-news/-american-dream-not-sale-feds-bust-mass-marriage-fraud-ring-rcna604814",
+     "published": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "topic": "ucl schedule",
+   "signal": "Google Trends US 20000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/ULE_scheduler",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Xbox Game Pass’s Newest Wave Is Headlined By A Huge Final Fantasy Adventure",
+     "url": "https://www.gamespot.com/articles/xbox-game-pass-newest-wave-is-headlined-by-a-huge-final-fantasy-adventure/",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "kristaps porzingis",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kristaps_Porzingis",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Kristaps Porzingis, Warriors address growing concern over health issues",
+     "url": "https://www.usatoday.com/story/sports/nba/warriors/2026/10/14/kristaps-porzingis-illness-injury-update-warriors/92255399007/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "sporting vs lask",
+   "signal": "Google Trends US 1000+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Como v Manchester United: Champions League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
+     "title": "Ex-tennis pro Megan Rose appointed to lead 2031 men’s Rugby World Cup in US",
+     "url": "https://www.theguardian.com/sport/2026/oct/21/ex-tennis-pro-megan-rose-appointed-to-lead-2031-mens-rugby-world-cup-in-us",
      "published": "2026-10-21"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "VAR who wrongly awarded Haaland winner vs Man Utd set for PL return",
-     "url": "https://www.skysports.com/football/news/12040/13601893/var-official-matt-donohue-set-for-premier-league-return-after-wrongly-awarding-erling-haaland-winner-vs-man-utd",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Fabregas and Como prepare for historic Man Utd tie",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cmpwg17ev9xxo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Man Utd revisit deal for Hall - Wednesday gossip",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ck62yq0rd0vvo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-20"
     }
    ]
   },
@@ -205,9 +219,15 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "Amazon MGM & Sophia Stallone Developing K. L. Walther’s ‘The Summer Of Broken Rules’ For Film",
-     "url": "https://deadline.com/2026/10/sophia-stallone-developing-the-summer-of-broken-rules-1237168915/",
+     "outlet": "The Hollywood Reporter",
+     "title": "Tanner Buchanan, Peyton Elizabeth Lee to Star in ‘Gasoline’ From ‘SLC Punk!’ Director James Merendino (Exclusive)",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/tanner-buchanan-peyton-elizabeth-lee-to-star-in-gasoline-1236736936/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Haven’t Seen Enough? The Books and Shows to Read and Watch After ‘You Can See Everything’",
+     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/best-shows-and-books-about-elizabeth-holmes-theranos-1235645790/",
      "published": "2026-10-21"
     },
     {
@@ -224,6 +244,18 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "Variety",
+     "title": "Will ‘You Can See Everything’ Beat DC’s ‘Clayface’ at the Box Office?",
+     "url": "https://variety.com/2026/film/box-office/you-can-see-everything-could-beat-clayface-box-office-1236917465/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Haven’t Seen Enough? The Books and Shows to Read and Watch After ‘You Can See Everything’",
+     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/best-shows-and-books-about-elizabeth-holmes-theranos-1235645790/",
+     "published": "2026-10-21"
+    },
+    {
      "outlet": "Guardian",
      "title": "‘I’m always being real’: what on earth persuades disgraced people like Elizabeth Holmes to let the cameras in?",
      "url": "https://www.theguardian.com/film/2026/oct/21/elizabeth-holmes-you-can-see-everything-disgrace-documentary",
@@ -233,19 +265,6 @@
      "outlet": "GameSpot",
      "title": "Everything New In Cyberpunk 2077 Update 2.5",
      "url": "https://www.gamespot.com/articles/everything-new-in-cyberpunk-2077-update-2-5/",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "Helen Haines",
-   "signal": "Wikipedia 158,924 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Helen Haines has lost both legs after alleged attack but ‘her heart and mind are in good shape’, husband says",
-     "url": "https://www.theguardian.com/australia-news/2026/oct/21/helen-haines-loses-both-legs-after-mondays-alleged-attack-ntwnfb",
      "published": "2026-10-21"
     }
    ]
@@ -277,19 +296,6 @@
    ]
   },
   {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 134,021 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The Guardian view on Covid-19 and care homes: the inquiry’s scathing verdict must be heeded | Editorial",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/20/the-guardian-view-on-covid-19-and-care-homes-the-inquirys-scathing-verdict-must-be-heeded",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
    "topic": "Street Fighter (2026 film)",
    "signal": "Wikipedia 110,411 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
@@ -309,10 +315,29 @@
    ]
   },
   {
+   "topic": "Barbara Palvin",
+   "signal": "Wikipedia 104,012 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Palvin",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Rayman Legends Retold’s New Baguette Costumes Are A Tip Of The Beret To Expedition 33",
+     "url": "https://www.gamespot.com/articles/rayman-legends-retold-new-baguette-costumes-are-a-tip-of-the-beret-to-expedition-33/",
+     "published": "2026-10-21"
+    }
+   ]
+  },
+  {
    "topic": "Richard Riehle",
    "signal": "Wikipedia 101,727 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Richard_Riehle",
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Epstein’s attorney and accountant accused of ‘facilitating and concealing’ his crimes in lawsuit",
+     "url": "https://www.theguardian.com/us-news/2026/oct/21/epstein-attorney-accountant-lawsuit",
+     "published": "2026-10-21"
+    },
     {
      "outlet": "GameSpot",
      "title": "Everything New In Cyberpunk 2077 Update 2.5",
@@ -328,21 +353,27 @@
    ]
   },
   {
-   "topic": "IVE 아이브 'Looks Can Kill' PERFORMANCE VIDEO",
-   "signal": "YouTube GB 68,843/h",
-   "wikipedia": null,
+   "topic": "Above the Below",
+   "signal": "YouTube GB 64,363/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Above_the_Below",
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Everything New In Cyberpunk 2077 Update 2.5",
-     "url": "https://www.gamespot.com/articles/everything-new-in-cyberpunk-2077-update-2-5/",
+     "outlet": "Guardian",
+     "title": "Jess Cartner-Morley on fashion: don’t want to get your Big Winter Coat out just yet? Try ‘onion dressing’",
+     "url": "https://www.theguardian.com/fashion/2026/oct/21/jess-cartner-morley-fashion-onion-dressing",
      "published": "2026-10-21"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "Elephant Island is an icy sight from orbit | Space photo of the day for Oct. 19, 2026",
+     "url": "https://www.space.com/astronomy/earth/elephant-island-is-an-icy-sight-from-orbit-space-photo-of-the-day-for-oct-19-2026",
+     "published": "2026-10-19"
     }
    ]
   },
   {
    "topic": "Steal An Egg, But It's MODDED..",
-   "signal": "YouTube GB-gaming 41,021/h",
+   "signal": "YouTube GB-gaming 40,488/h",
    "wikipedia": null,
    "articles": [
     {
@@ -355,13 +386,13 @@
   },
   {
    "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 125,054/h",
+   "signal": "YouTube GB-sport 124,009/h",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "I’ve booked my first proper holiday – and it’s pulled me out of winter grimness like a magic spell",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/21/ive-booked-my-first-proper-holiday-and-its-pulled-me-out-of-winter-grimness-like-a-magic-spell",
+     "title": "Getting into the swing of playing golf | Letters",
+     "url": "https://www.theguardian.com/sport/2026/oct/21/getting-into-the-swing-of-playing-golf",
      "published": "2026-10-21"
     },
     {
@@ -375,31 +406,12 @@
      "title": "Elon Musk confirms he is considering merging Tesla and SpaceX",
      "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-21"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Counter-Strike 2 Pro Aleksib Faces Four-Month Suspended Prison Sentence Over Charges of Aggravated Tax Fraud",
-     "url": "https://www.ign.com/articles/counter-strike-2-pro-aleksib-faces-four-month-suspended-prison-sentence-over-charges-of-aggravated-tax-fraud",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "Who Can Escape Without getting Crushed 💀",
-   "signal": "YouTube GB-entertainment 560,199/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "​Europe stands by Ukraine – but how long can that last?",
-     "url": "https://www.theguardian.com/world/2026/oct/21/europe-stands-by-ukraine-but-how-long-can-that-last",
-     "published": "2026-10-21"
     }
    ]
   },
   {
    "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 459,385/h",
+   "signal": "YouTube GB-entertainment 445,271/h",
    "wikipedia": null,
    "articles": [
     {
@@ -411,34 +423,8 @@
    ]
   },
   {
-   "topic": "If You Escape, You Win $1,000,000",
-   "signal": "YouTube US-gaming 628,391/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Mr. Beast’s Call Of Duty: MW4 DMZ Video Pays $1 Million To The Winner, Watch It Here",
-     "url": "https://www.gamespot.com/articles/mr-beast-teases-a-huge-call-of-duty-video-focused-on-dmz-with-real-life-content-creators/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Anuel AA",
-   "signal": "YouTube US-music 81,493/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Anuel_AA",
-   "articles": [
-    {
-     "outlet": "Billboard",
-     "title": "Fuerza Regida Brings Anuel AA, Yung Beef & More to Its Billboard En Vivo Show at Latin Music Week",
-     "url": "https://www.billboard.com/music/latin/fuerza-regida-anuel-aa-yung-beef-billboard-en-vivo-show-1236364374/",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
    "topic": "Ranking Best Flag Football Moments 🏈",
-   "signal": "YouTube US-sport 88,569/h",
+   "signal": "YouTube US-sport 88,194/h",
    "wikipedia": null,
    "articles": [
     {
@@ -457,31 +443,31 @@
   },
   {
    "topic": "What is the BEST app?!📱🤔",
-   "signal": "YouTube US-tech 58,280/h",
+   "signal": "YouTube US-tech 57,554/h",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "WoW: Forever Is Continuing A Long-Running Questing Tradition",
+     "url": "https://www.gamespot.com/articles/wow-forever-is-continuing-a-long-running-questing-tradition/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "The 15 Best Steam Next Fest Demos to Play Right Now",
+     "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Best Buy Is Selling Pokémon TCG: Prismatic Evolutions ETBs at MSRP — But You'll Need An Invite",
+     "url": "https://www.ign.com/articles/pokemon-tcg-prismatic-evolutions-etb-best-buy-invite",
+     "published": "2026-10-21"
+    },
     {
      "outlet": "PC Gamer",
      "title": "US government leaks the best GTA 6 promo yet: Pißwasser is real",
      "url": "https://www.pcgamer.com/games/grand-theft-auto/us-government-leaks-the-best-gta-6-promo-yet-pisswasser-is-real/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Diablo Is Getting A New Board Game, And You Can Play It Solo",
-     "url": "https://www.gamespot.com/articles/diablo-is-getting-a-new-board-game-and-you-can-play-it-solo/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Perle Noire: Meditations for Joséphine review – turgid tribute to pioneering star",
-     "url": "https://www.theguardian.com/music/2026/oct/21/perle-noire-meditations-for-josephine-review-turgid-tribute-to-pioneering-star",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "Blink brings 4K to its low-cost security camera lineup",
-     "url": "https://www.theverge.com/tech/1015238/amazon-blink-4k-trail-security-camera-launch",
      "published": "2026-10-21"
     }
    ]
@@ -493,21 +479,27 @@
    "articles": []
   },
   {
-   "topic": "tommy lee jones",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tommy_Lee_Jones",
-   "articles": []
-  },
-  {
-   "topic": "north wales crusaders",
+   "topic": "serge gnabry",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/North_Wales_Crusaders",
+   "wikipedia": "https://en.wikipedia.org/wiki/Serge_Gnabry",
    "articles": []
   },
   {
-   "topic": "rayo",
+   "topic": "tom bischof",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tom_Bischof",
+   "articles": []
+  },
+  {
+   "topic": "5g",
    "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Rayo_Vallecano",
+   "wikipedia": "https://en.wikipedia.org/wiki/5G",
+   "articles": []
+  },
+  {
+   "topic": "club brugge",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Club_Brugge_KV",
    "articles": []
   },
   {
@@ -523,15 +515,9 @@
    "articles": []
   },
   {
-   "topic": "Hunter Schafer",
-   "signal": "Wikipedia 117,851 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Hunter_Schafer",
-   "articles": []
-  },
-  {
-   "topic": "Barbara Palvin",
-   "signal": "Wikipedia 104,012 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Palvin",
+   "topic": "Helen Haines",
+   "signal": "Wikipedia 158,924 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
    "articles": []
   }
  ]

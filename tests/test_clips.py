@@ -50,11 +50,12 @@ factpack.gemini = lambda prompt, schema=None, timeout=100, temperature=0.1, lite
     {"start": 400, "end": 440, "hook": "the second reveal", "label": "Paris, France", "title": "IShowSpeed and Paris"}]}, "stub")
 plan = C.plan("speed-expedia")
 ids = [m["id"] for m in plan["moments"]]
-assert ids == ["speed-expedia-01", "speed-expedia-02"], ids
-assert plan["moments"][0]["start"] == 9.7 and plan["moments"][0]["end"] == 40.4 and plan["moments"][1]["label"] == "Paris, France"
-assert C.unmade("speed-expedia") == 2
+assert ids == ["speed-expedia-01", "speed-expedia-02", "speed-expedia-03"], ids
+assert plan["moments"][0]["start"] == 9.7 and plan["moments"][0]["end"] == 40.4 and plan["moments"][2]["label"] == "Paris, France"
+assert plan["moments"][1]["end"] - plan["moments"][1]["start"] == 55      # a long pick is cut to the limit
+assert C.unmade("speed-expedia") == 3
 plan2 = C.plan("speed-expedia")                       # the same answer again: everything overlaps what is planned
-assert len(plan2["moments"]) == 2
+assert len(plan2["moments"]) == 3
 print("5 planning ok")
 
 # 6. one synthetic render, when ffmpeg is installed here

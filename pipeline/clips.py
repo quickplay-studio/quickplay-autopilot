@@ -39,8 +39,7 @@ across the segment; no two may overlap. Already made (skip anything that overlap
 The transcript is a list of lines with their start and end seconds:
 {lines}
 Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line, 8 words or fewer, in capitals OK, what
-makes someone stop (no spoilers of the payoff)", "label": "the destination or thing on screen, 1 to 4 words, exact and
-accurate, or empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
+makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "why": "one line"}}]}}"""
 
 
@@ -243,22 +242,27 @@ def plan(cid, n=8):
                                 lines="\n".join(lines_of(words)))
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.4)
     total = words[-1]["e"]
-    added = 0
-    for m in (ans.get("moments") if isinstance(ans, dict) else None) or []:
-        try: a, b = float(m["start"]), float(m["end"])
-        except (KeyError, TypeError, ValueError): continue
+    added, why = 0, {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0}
+    raw = (ans.get("moments") if isinstance(ans, dict) else None) or []
+    if not raw: log(f"{cid}: the model gave no moments: {json.dumps(ans)[:300]}")
+    for m in raw:
+        try:
+            a, b = (secs(m["start"]) if ":" in str(m["start"]) else float(m["start"])), (secs(m["end"]) if ":" in str(m["end"]) else float(m["end"]))
+        except (KeyError, TypeError, ValueError): why["bad time"] += 1; continue
         a, b = max(0.0, a - 0.3), min(total, b + 0.4)      # a breath before, the reaction after
-        if not r.get("min_s", 15) <= b - a <= r.get("max_s", 55) + 1: continue
-        if any(a < y and b > x for x, y in done): continue
+        if b - a > r.get("max_s", 55) + 1: b = a + r.get("max_s", 55)      # a long pick is cut to the limit, the payoff is usually early
+        if not r.get("min_s", 15) <= b - a: why["length"] += 1; continue
+        if any(a < y and b > x for x, y in done): why["overlap"] += 1; continue
         hook = re.sub(r"[–—]", "-", str(m.get("hook") or "")).strip()[:60]
-        if not hook: continue
+        if not hook: why["no hook"] += 1; continue
         plan_["moments"].append({"id": f"{cid}-{len(plan_['moments']) + 1:02d}", "start": round(a, 2), "end": round(b, 2),
                                  "hook": hook, "label": str(m.get("label") or "").strip()[:40],
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
                                  "why": str(m.get("why") or "")[:200], "planned": NOW.isoformat(timespec="minutes"), "model": model})
         done.append((a, b)); added += 1
     PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
-    log(f"{cid}: {added} moments planned ({model}), {len(plan_['moments'])} in all")
+    log(f"{cid}: {added} of {len(raw)} moments planned ({model}), {len(plan_['moments'])} in all" + (f"; dropped {json.dumps(why)}" if len(raw) > added else "")
+        + (f"; first: {json.dumps(raw[0])[:200]}" if raw and not added else ""))
     return plan_
 
 
@@ -321,7 +325,7 @@ def make_clip(cid, m, words):
     seg, out = segment(cid), OUT / f"{m['id']}.mp4"
     a, b = m["start"], m["end"]
     ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass)
-    credit = f"Clip from {c['source'].get('label', c['subject'])}"
+    credit = f"Clip from {c['subject']}, posted with permission"
     vf = ("[0:v]split=2[bg][fg];"
           "[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:3,eq=brightness=-0.15[bgb];"
           "[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];"

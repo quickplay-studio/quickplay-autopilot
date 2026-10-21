@@ -1,0 +1,88 @@
+{
+ "id": "QD-087",
+ "board": "boards/queue/QD-087.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T16:00:00Z",
+ "rendered": "2026-10-21T11:21:42.744264+00:00",
+ "title": "Zelda Ocarina of Time different versions size 🗡️",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "scale-the-mountain",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "minimal",
+  "voice": "lily",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 27.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.0
+ },
+ "timeline": [
+  [
+   0.06,
+   4.79,
+   "none",
+   0
+  ],
+  [
+   4.79,
+   9.24,
+   "stat",
+   1
+  ],
+  [
+   9.24,
+   13.65,
+   "versus",
+   1
+  ],
+  [
+   13.65,
+   18.36,
+   "title",
+   1
+  ],
+  [
+   18.36,
+   23.52,
+   "date",
+   1
+  ],
+  [
+   23.52,
+   27.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47215",
+   "q": "electronics repair workshop",
+   "t0": 0.0,
+   "t1": 27.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T11:29:22Z",
+ "video": "oA9hiDV3JXY",
+ "url": "https://youtube.com/shorts/oA9hiDV3JXY",
+ "publish_at": "2026-10-21T16:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T16:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-087"
+}

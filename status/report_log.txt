@@ -1,0 +1,65 @@
+# Quickplay weekly: Wednesday 14 October to Wednesday 21 October
+
+## The week in numbers
+- Shorts posted: 76 (the week before: 0).
+- YouTube views gained: 10,433.
+- Median views per Short, 24 hours after posting: 112.
+- Subscribers: 7 of 1,000. YPP: 1,518 of 10,000,000 Shorts views in 90 days, about 111,057 a day needed from now, apply before 2027-02-01 (103 days).
+- Best this week: Short "The K-pop group from BLACKPINK's producer 🎤" 1,176 views (Music, legacy,  hook); QD-034 "Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤" 927 views (Music, one_detail, statement hook); QD-032 "Bohemian Rhapsody: too long for radio? 🎸" 867 views (Music, timeline, statement hook).
+
+## Is the optimisation working
+- Shorts that followed the data's rulings: 3 of 76 this week (0 of 0 the week before); their median views 209 against 110 for the rest (1.9x).
+- Rulings in force: 4 push, 7 cut back, 0 stopped (analytics/drivers.csv).
+
+## What changed this week
+- 2026-10-21: Lean towards category "Sport" (1.37x typical views over 6 Shorts (average viewed 51% vs 42% typical)).
+- 2026-10-21: Lean towards format "one_detail" (1.71x typical views over 7 Shorts (likes per 1,000 views 15 vs 10 typical)).
+- 2026-10-21: Use less format "news_explained" (0.73x typical views over 6 Shorts (likes per 1,000 views 7 vs 10 typical)).
+- 2026-10-21: Lean towards hook style "statement" (1.3x typical views over 6 Shorts (likes per 1,000 views 17 vs 10 typical)).
+- 2026-10-21: Use less hook style "number" (0.77x typical views over 10 Shorts).
+- 2026-10-20: Lean towards category "Film" (1.27x typical views over 5 Shorts (likes per 1,000 views 18 vs 9 typical; engaged views 50% vs 32% typical)).
+- 2026-10-20: Use less posting time (uk) "20:00 to 22:59" (0.63x typical views over 6 Shorts (likes per 1,000 views 0 vs 9 typical)).
+- 2026-10-20: Use less category "Gaming" (0.75x typical views over 8 Shorts (likes per 1,000 views 4 vs 13 typical; engaged views 25% vs 32% typical)).
+- 2026-10-20: Use less format "legacy" (0.62x typical views over 26 Shorts (likes per 1,000 views 8 vs 13 typical)).
+- 2026-10-20: Lean towards posting time (uk) "08:00 to 10:59" (1.8x typical views over 6 Shorts (likes per 1,000 views 18 vs 13 typical; average viewed 58% vs 51% typical)).
+- 2026-10-20: Use less posting time (uk) "14:00 to 16:59" (0.78x typical views over 6 Shorts (likes per 1,000 views 1 vs 13 typical; engaged views 26% vs 32% typical)).
+- 2026-10-20: Use less posting time (uk) "17:00 to 19:59" (0.62x typical views over 6 Shorts (average viewed 45% vs 51% typical)).
+- 2026-10-20: Use less title "statement" (0.73x typical views over 18 Shorts (likes per 1,000 views 1 vs 13 typical)).
+- 2026-10-19: Back to 24 Shorts a day (writer runs: morning 12, evening 6, afternoon 6; a slot every 40 minutes from 07:30 UK) (Charlie asked for 24 a day again).
+- 2026-10-19: A video plays softly blurred and darkened behind every Short (2 to 4 stock clips matched to the topic; Pexels first, then Pixabay, NASA for space); photos sit on top as cards, real video of the subject still plays full screen (Charlie asked for moving video behind the Shorts so they look far better).
+- 2026-10-19: Lean towards posting time (uk) "11:00 to 13:59" (1.61x typical views over 5 Shorts (likes per 1,000 views 13 vs 6 typical)).
+- 2026-10-19: Use less posting time (uk) "17:00 to 19:59" (0.8x typical views over 6 Shorts (average viewed 45% vs 51% typical)).
+- 2026-10-18: Follow up breakouts within hours (analytics/breakouts.csv, one follow-up per run) (Shorts views are lopsided: a few breakouts carry the total, and the goal needs about 111,000 engaged views a day against about 1,300 views a day now. A follow-up while a topic is hot reuses demand that already exists.).
+- 2026-10-18: Test 2 evergreen search Shorts a day (questions people search all year) (63% of YouTube views come from search, 35% from the Shorts feed (Film 96% search), so searchable questions may bring steady views while the feed is still small.).
+- 2026-10-18: Lean towards category "Music" (1.57x typical views over 5 Shorts (likes per 1,000 views 13 vs 4 typical; engaged views 41% vs 37% typical)).
+- and 1 more in analytics/decisions.csv.
+- 34 earlier rulings went back to normal as more Shorts came in (a choice is only kept while the data still says so).
+- Built: 20 October: 22:20 to 22:40 UTC)
+- Built: 21 October: every Short a test, more of what works, the ceiling learns
+- Built: 21 October: 00:20 to 01:00 UK: posting round the clock, the clips channel
+- Built: 21 October: 19:00 to 21:00 UK: the stop rule, the Monday report
+- Built: 21 October: (01:00 to 02:30 UK)
+- Built: 21 October: Live from 21 October
+- Built: 21 October: 10:00 to 12:30 UK
+- Built: 21 October: 12:00 to 14:00 UK: the tactics of the big clipping channels, built in
+- Built: 21 October: 18:00 UK: the first batch is live
+- Built: 21 October: 19:00 UK: GitHub submits the links itself
+- Built: 21 October: 19:30 UK: the dashboard, two more form tests, the day's number filled
+
+## Stopped (little to no views a week on: never again)
+- No choice has failed outright yet.
+- The floor is set once 5 Shorts are a week old.
+
+## What every Short is measured on
+- Choices recorded per Short: category, format, hook style, hook length, length, posting time (uk), day posted, music mood, pictures, title, captions, voice, camera energy, colour grade, opening, follow line, ending, title wording, first frame, angle research, comment replies, kind of short, topic source, series, writer model.
+- Results: views at 1, 3, 6, 12, 24, 48 and 72 hours, views against the Shorts posted around the same time, still watching at 3 seconds, average viewed, engaged views, likes, shares and subscribers per 1,000 views, traffic sources and search terms, countries, the retention curve's worst beat.
+- Clips: layout, captions, punch-in, length, title, campaign; views, likes and comments per clip, estimated money per campaign.
+
+## Quickplay Clips
+- 11 clips public, 0 views, about $0.00 earned so far (estimate), 0 submissions made, 8 campaigns active.
+- By campaign: IShowSpeed 2 clips, 0 views, $0.00; MrBeast 2 clips, 0 views, $0.00; StinkyAsher 1 clips, 0 views, $0.00; Mitch Gaming 2 clips, 0 views, $0.00; Flamingo 2 clips, 0 views, $0.00; Jenny Hoyos 2 clips, 0 views, $0.00.
+- No form has won yet (3 clips an arm, a day old, 10% ahead).
+
+Pages: [clips dashboard](https://quickplay-studio.github.io/quickplay-autopilot/clips.html), [what's working](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/insights.md), [every ruling](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/decisions.csv), [what drives views](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/drivers.csv).
+
+opened: 📊 Weekly: Wednesday 14 October to Wednesday 21 October https://github.com/quickplay-studio/quickplay-autopilot/issues/2

@@ -70,7 +70,20 @@
    "title": "Jenny Hoyos Uses Girl Code in Roblox Voting",
    "why": "Jenny uses 'girl code' as a dramatic reason to target Heather for elimination.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T12:20+00:00",
+   "file": "tdr-jenny-04.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-04.mp4",
+   "video": "bUTkf2fOQ84",
+   "url": "https://youtube.com/shorts/bUTkf2fOQ84",
+   "uploaded": "2026-10-21T12:20+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-jenny-05",

@@ -51,7 +51,20 @@
    "title": "StinkyAsher Makes An Alliance In Roblox Total Drama",
    "why": "StinkyAsher pretends to make amends and team up with enemy Duncan while secretly planning his downfall.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:51+00:00",
+   "file": "tdr-stinkyasher-03.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-03.mp4",
+   "video": "5tQjWQXIWYU",
+   "url": "https://youtube.com/shorts/5tQjWQXIWYU",
+   "uploaded": "2026-10-21T10:51+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-stinkyasher-04",

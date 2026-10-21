@@ -113,7 +113,20 @@
    "title": "Flamingo Accuses Beth in Total Drama",
    "why": "Showcases the strategic and dramatic 'safe chat' manipulation Flamingo uses to stay in the game.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none"
+   },
+   "made": "2026-10-21T10:51+00:00",
+   "file": "tdr-flamingo-06.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-06.mp4",
+   "video": "sVU3NPbQcec",
+   "url": "https://youtube.com/shorts/sVU3NPbQcec",
+   "uploaded": "2026-10-21T10:51+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-flamingo-07",

@@ -393,10 +393,37 @@ def stats():
     log(f"stats: {len(rows)} clips")
 
 
+def probe(url):
+    """What a footage share link resolves to (printed to the log, so the right downloader can be written): the final
+    URL after redirects, the page's size, the API-looking URLs and JSON blobs in it, and what Frame.io's public review
+    API says about it."""
+    import requests
+    ua = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36"}
+    r = requests.get(url, headers=ua, timeout=60, allow_redirects=True)
+    log("probe:", url, "->", r.url, r.status_code, len(r.text), "bytes")
+    for h in r.history: log("  via", h.status_code, h.headers.get("location", "")[:200])
+    found = sorted(set(re.findall(r"https://[a-z0-9.-]*frame\.io[^\s\"'<>]{0,200}", r.text)))
+    for u in found[:40]: log("  url:", u)
+    for m in re.finditer(r"(review_link|share|asset|project)[\w_]*\"?\s*[:=]\s*\"?([a-f0-9-]{20,40})", r.text):
+        log("  id:", m.group(0)[:120])
+    ids = re.findall(r"/reviews/([a-f0-9-]{36})", r.url) + re.findall(r"/share/([A-Za-z0-9_-]{6,40})", r.url)
+    for rid in ids:
+        for api in (f"https://api.frame.io/v2/review_links/{rid}/items", f"https://api.frame.io/v2/review_links/{rid}",
+                    f"https://api.frame.io/v4/shares/{rid}", f"https://api.frame.io/v2/shares/{rid}"):
+            try:
+                a = requests.get(api, headers={**ua, "Accept": "application/json"}, timeout=30)
+                log(f"  api {api}: {a.status_code} {a.text[:1500]}")
+            except Exception as e: log(f"  api {api}: {e}")
+    log("  head:", re.sub(r"\s+", " ", r.text[:3000]))
+
+
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
     if cmd == "stats": stats(); return
+    if cmd == "probe":
+        for u in ids: probe(u)
+        return
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
     for cid in (ids or list(campaigns())):
         if cid not in campaigns(): log(f"{cid}: not an active campaign"); continue

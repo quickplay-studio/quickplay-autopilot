@@ -98,7 +98,7 @@ def source(cid):
     """The campaign's footage segment as a release asset (made once): the source file is downloaded to the work disk,
     the segment between start and end is cut and shrunk to 720p, and the whole download is deleted."""
     c, name = campaigns([cid])[cid], f"{cid}.mp4"
-    if asset_sizes().get(name, 0) > 1_000_000: return name       # a tiny asset is a failed cut: made again
+    if asset_sizes().get(name, 0) > 1_000_000 and not os.environ.get("CLIPS_REDO"): return name       # a tiny asset is a failed cut: made again
     s = c["source"]; WORK.mkdir(parents=True, exist_ok=True)
     raw = WORK / f"{cid}.raw"
     if s.get("multi"):
@@ -218,18 +218,31 @@ def frameio_assets(url):
 def episodes_source(cid, c, s):
     """A folder of episodes (source "multi": true): each file downloaded, shrunk to 720p and joined in order into one
     segment; the episode boundaries go into the plan file so the parts planner keeps every episode whole."""
-    links = frameio_assets(s["url"]) if s["kind"] == "frameio" else [s["url"]]
-    log(f"{cid}: {len(links)} files in the folder")
+    import zipfile
+    files = []
+    raw = WORK / f"{cid}.raw"
+    if s["kind"] == "frameio":
+        frameio_download(s["url"], raw)                    # a folder's Download button gives a zip of every file
+        if zipfile.is_zipfile(raw):
+            folder = WORK / f"{cid}-files"; folder.mkdir(exist_ok=True)
+            with zipfile.ZipFile(raw) as z:
+                for info in z.infolist():
+                    if info.filename.lower().endswith((".mp4", ".mov", ".m4v", ".mkv")) and not info.filename.startswith("__MACOSX"):
+                        z.extract(info, folder); files.append(folder / info.filename)
+            raw.unlink(missing_ok=True)
+        else: files = [raw]
+    else: files = [raw]
+    natural = lambda p: [int(x) if x.isdigit() else x.lower() for x in re.split(r"(\d+)", p.name)]
+    files.sort(key=natural)
+    log(f"{cid}: {len(files)} files in the folder: " + ", ".join(f.name[:40] for f in files[:8]))
     parts, bounds, t = [], [], 0.0
-    for n, link in enumerate(links, 1):
-        raw, small = WORK / f"{cid}-{n}.raw", WORK / f"{cid}-{n}.mp4"
-        frameio_download(link, raw)
-        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(raw), "-vf", "scale=-2:720", "-r", "30", "-c:v", "libx264",
+    for n, src in enumerate(files, 1):
+        small = WORK / f"{cid}-{n}.mp4"
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(src), "-vf", "scale=-2:720", "-r", "30", "-c:v", "libx264",
              "-preset", "veryfast", "-crf", "22", "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", str(small)])
-        raw.unlink(missing_ok=True)
         d = duration(small)
         if d < 5: log(f"{cid}: file {n} is empty, skipped"); continue
-        bounds.append({"n": len(bounds) + 1, "start": round(t, 2), "end": round(t + d, 2), "link": link}); t += d; parts.append(small)
+        bounds.append({"n": len(bounds) + 1, "start": round(t, 2), "end": round(t + d, 2), "file": src.name}); t += d; parts.append(small)
     if not parts: raise RuntimeError(f"{cid}: no usable files in the folder")
     lst = WORK / f"{cid}.txt"; lst.write_text("".join(f"file '{p}'\n" for p in parts))
     seg = WORK / f"{cid}.mp4"
@@ -303,6 +316,7 @@ def plan(cid, n=8):
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.4)
     total = words[-1]["e"]
     added, why = 0, {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0}
+    if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict) and x.get("moments")), {"moments": [x for x in ans if isinstance(x, dict) and "start" in x]})
     raw = (ans.get("moments") if isinstance(ans, dict) else None) or []
     if not raw: log(f"{cid}: the model gave no moments: {json.dumps(ans)[:300]}")
     for m in raw:

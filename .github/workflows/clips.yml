@@ -59,7 +59,8 @@ jobs:
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
-            python pipeline/clips.py prepare 2>&1 | tee status/clips_log.txt
+            case "$req" in *redo*) export CLIPS_REDO=1;; esac
+            python pipeline/clips.py prepare $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt
           elif echo "$req" | grep -qi probe; then
             python pipeline/clips.py probe $(echo "$req" | grep -o 'https://[^ ]*') 2>&1 | tee status/clips_log.txt
           else

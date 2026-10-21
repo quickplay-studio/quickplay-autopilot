@@ -573,7 +573,12 @@ def review():
             if not bad and dark(ROOT / "clips" / "frames" / f"{m['id']}.jpg"): bad = ["dark picture"]
             if due > NOW and bad:
                 try:
-                    clips_client().videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute()
+                    for attempt in range(4):        # YouTube answers 503 now and then
+                        try:
+                            clips_client().videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute(); break
+                        except Exception as e:
+                            if attempt == 3 or "503" not in str(e): raise
+                            time.sleep(15 * (attempt + 1))
                     m["pulled"] = ("dark picture" if bad == ["dark picture"] else f"profanity: {', '.join(bad[:3])}"); changed = True; pulled += 1
                     log(f"{m['id']}: pulled before publishing ({m['pulled']})")
                 except Exception as e:

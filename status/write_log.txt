@@ -1,6 +1,34 @@
-breaking run for 2026-10-21: 2 to write from 5 fact packs
+morning run for 2026-10-21: 18 to write from 13 fact packs
+too few facts: south africa vs australia
+too few facts: Raindance by Dave & Tems
+too few facts: orionids meteor shower
+too few facts: the rolling stones who you callin' crazy
+too few facts: alexander skarsgård
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-The Victoria’s Secret Fashion Show 2026: gemini-flash-latest, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-K/DA: gemini-flash-latest, 0 warnings
-wrote 2 of 2: QD-073 Kylie Jenner makes Victoria's Secret show debut ✨; QD-074 K/DA returns with a brand new line-up 🎶
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"openrouter:thinkingmachines/inkling-small:free": "key refused (403)"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.8-flash": 1, "gemini-3.5-flash-lite": 5, "gemini-flash-latest": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+ChatGPT: gemini-3.5-flash, 0 warnings
+covered already: Street Fighter (2026 film)
+Barbara Palvin: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
+Barbara Palvin: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+too few facts: IVE 아이브 'Looks Can Kill' MV
+too few facts: Olivia Rodrigo
+Tate McRae: still failing: facts: beat 4: The script states she was 13 years old, but the pack only supports her birth date (July 1, 2003) and that she placed third on So You Think You Can Dance in 2016 (making her roughly 12 or 13, but the exact age is not in the pack).
+Anuel AA: groq:openai/gpt-oss-120b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+too few facts: Zara Larsson
+Bohemian Rhapsody: too long for radio? 🎸: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+evergreen: Top 10 highest-grossing video game film adaptations: only 0 checked facts
+evergreen: Top 10 highest-grossing concert tours of all time: only 0 checked facts
+evergreen: Top 10 best-selling music artists from the United Kingdom: only 0 checked facts
+evergreen: Top 10 best-selling albums of all time: only 1 checked facts
+How often do the Orionids meteor showers occur?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Who invented the World Wide Web?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Which is the largest planet in our solar system?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+The miracle of the 1999 Champions League Final: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+How Pac-Man was inspired by a pizza with a slice missing: gemini-3.1-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+The day the Apollo 13 mission became a rescue operation: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
+local model ready
+The day the Apollo 13 mission became a rescue operation: still failing: meta.hashtags: 7 given, needs 8 to 15 (most relevant first; #Shorts is added for YouTube)
+The day the Apollo 13 mission became a rescue operation: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+What is the fastest land animal in the world?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 11 of 18: QD-075 ChatGPT adds new PIN lock for private chats 🔒; QD-076 How Barbara Palvin was discovered at age 13 ✨; QD-077 Anuel AA’s birth name and album timeline 🎤; QD-078 Bohemian Rhapsody: the 5.55 minute record 🎸; QD-079 How often do the Orionids meteor showers occur? 🌠; QD-080 Who invented the World Wide Web? 🌐; QD-081 Jupiter: Which is the largest planet? 🪐; QD-082 How Manchester United won the 1999 Champions League 🏆; QD-083 Pac-Man: The pizza origin story 🍕; QD-085 The day Apollo 13 became a rescue mission 🚀; QD-086 What is the fastest land animal in the world? 🐆
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"openrouter:thinkingmachines/inkling-small:free": "key refused (403)", "gemini-omni-1.1-flash": "daily limit", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-3-flash-preview": "daily limit 20"}, "retired": ["gemini-2.5-flash", "gemini-2.5-flash-lite"], "timeouts": {"gemini-flash-latest": 2, "gemini-3.8-flash": 2, "gemini-3.7-flash": 2, "gemma-4-31b-it": 2}, "answers": {"gemini-3-flash-preview": 15, "gemini-3.5-flash-lite": 61, "gemini-3.5-flash": 2, "gemini-3.6-flash": 2, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3.5-super-vl:free": 2, "gemini-3.1-flash-lite": 1, "local:qwen2.5-7b-instruct-q4_k_m": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

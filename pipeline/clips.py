@@ -100,6 +100,9 @@ def source(cid):
         if not got or not raw.exists() or raw.stat().st_size < 1e6: raise RuntimeError(f"{cid}: the Drive download failed or is empty")
     elif s["kind"] == "url":
         run(["curl", "-sSL", "--retry", "3", "-o", str(raw), s["url"]])
+    elif s["kind"] == "frameio":
+        log(f"{cid}: downloading from Frame.io")
+        frameio_download(s["url"], raw)
     elif s["kind"] == "release":        # footage Charlie attached to a release of this repo
         gh("release", "download", s["tag"], "-p", s["file"], "-O", str(raw), "--clobber")
     else: raise RuntimeError(f"{cid}: unknown source kind {s['kind']}")
@@ -120,6 +123,55 @@ def source(cid):
     gh("release", "upload", RELEASE, str(seg), "--clobber")
     log(f"{cid}: segment saved as release asset {name} ({seg.stat().st_size / 1e6:.0f} MB)")
     return name
+
+
+def frameio_download(url, out, shot=None):
+    """Downloads the file behind a Frame.io share link with a headless browser (the share must allow downloads, which
+    the campaigns' do): opens the page, presses Download (then Original or the largest option if a menu opens) and
+    saves the file. Falls back to the first mp4 the page streams. `shot`: where to save a screenshot of the page."""
+    from playwright.sync_api import sync_playwright
+    out = pathlib.Path(out); media = []
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        ctx = browser.new_context(accept_downloads=True, viewport={"width": 1400, "height": 900},
+                                  user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130 Safari/537.36")
+        page = ctx.new_page()
+        page.on("response", lambda r: media.append(r.url) if re.search(r"\.(mp4|m3u8)(\?|$)", r.url) or "video" in (r.headers.get("content-type") or "") else None)
+        page.goto(url, wait_until="domcontentloaded", timeout=120000)
+        page.wait_for_timeout(8000)
+        names = [(b.get_attribute("aria-label") or b.inner_text() or "").strip()[:40] for b in page.locator("button").all()[:60]]
+        log("  buttons:", [n for n in names if n])
+        if shot: page.screenshot(path=str(shot), full_page=False)
+        got = None
+        for pattern in ("download", "télécharger"):
+            btn = page.get_by_role("button", name=re.compile(pattern, re.I))
+            if btn.count() == 0: btn = page.locator(f"[aria-label*='{pattern}' i], [data-testid*='{pattern}' i]")
+            if btn.count() == 0: continue
+            try:
+                with page.expect_download(timeout=20000) as dl:
+                    btn.first.click()
+                    page.wait_for_timeout(1500)
+                    for opt in ("Original", "original", "1080", "720", "Download"):
+                        item = page.get_by_role("menuitem", name=re.compile(opt, re.I))
+                        if item.count(): item.first.click(); break
+                got = dl.value
+            except Exception as e:
+                log(f"  download button ({pattern}): {type(e).__name__}: {str(e)[:120]}")
+                if shot: page.screenshot(path=str(shot).replace(".png", "_after.png"))
+            if got: break
+        if got:
+            got.save_as(str(out)); log(f"  downloaded {got.suggested_filename} ({out.stat().st_size / 1e6:.0f} MB)")
+        browser.close()
+    if not got:
+        mp4 = next((u for u in media if ".mp4" in u), None)
+        log("  media seen:", [u[:100] for u in media[:6]])
+        if not mp4: raise RuntimeError("Frame.io: no download button worked and no mp4 was streamed")
+        import requests
+        with requests.get(mp4, stream=True, timeout=120) as r:
+            r.raise_for_status()
+            with open(out, "wb") as f:
+                for chunk in r.iter_content(1 << 20): f.write(chunk)
+    return out
 
 
 def segment(cid):
@@ -421,6 +473,14 @@ def probe(url):
     dump = ROOT / "status" / ("probe_" + re.sub(r"[^A-Za-z0-9]+", "_", url)[-40:] + ".html")
     dump.write_text(r.text)
     log("  html saved to", dump.name)
+    if "frame.io" in r.url:
+        try:
+            out = WORK / "probe.bin"; WORK.mkdir(parents=True, exist_ok=True)
+            frameio_download(url, out, shot=dump.with_suffix(".png"))
+            log(f"  browser download worked: {out.stat().st_size / 1e6:.0f} MB, {duration(out):.0f} s of media")
+        except Exception as e:
+            log(f"  browser download: {type(e).__name__}: {str(e)[:300]}")
+        return
     for key in ("download", "original", "media_links", "h264", "mp4", "stream", "token"):
         for m in list(re.finditer(key, r.text))[:3]:
             log(f"  {key} at {m.start()}: {re.sub(chr(10), ' ', r.text[max(0, m.start() - 120): m.start() + 240])}")

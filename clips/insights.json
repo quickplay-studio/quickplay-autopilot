@@ -1,0 +1,50 @@
+{
+ "updated": "2026-10-21T10:28+00:00",
+ "clips": 0,
+ "tests": {
+  "layout": {
+   "arms": {
+    "letterbox": {
+     "n": 0,
+     "median_views": null
+    },
+    "face": {
+     "n": 0,
+     "median_views": null
+    },
+    "split": {
+     "n": 0,
+     "median_views": null
+    }
+   },
+   "best": null
+  },
+  "captions": {
+   "arms": {
+    "lines": {
+     "n": 0,
+     "median_views": null
+    },
+    "karaoke": {
+     "n": 0,
+     "median_views": null
+    }
+   },
+   "best": null
+  },
+  "punch": {
+   "arms": {
+    "none": {
+     "n": 0,
+     "median_views": null
+    },
+    "zoom": {
+     "n": 0,
+     "median_views": null
+    }
+   },
+   "best": null
+  }
+ },
+ "campaigns": {}
+}

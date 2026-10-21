@@ -1,26 +1,26 @@
 {
- "updated": "2026-10-20T19:14+00:00",
+ "updated": "2026-10-21T08:45+00:00",
  "dimensions": {
   "captions": {
    "punch": {
-    "n": 1,
-    "score": 4.87
+    "n": 2,
+    "score": 2.093
    },
    "clean": {
-    "n": 5,
-    "score": 1.261
+    "n": 6,
+    "score": 2.575
    },
    "pop": {
-    "n": 4,
-    "score": 4.087
+    "n": 5,
+    "score": 2.605
    },
    "boxed": {
     "n": 2,
-    "score": 1.304
+    "score": 1.233
    },
    "minimal": {
-    "n": 3,
-    "score": 1.0
+    "n": 4,
+    "score": 1.768
    },
    "lab-captions-1019": {
     "n": 0
@@ -64,15 +64,15 @@
   "energy": {
    "steady": {
     "n": 6,
-    "score": 2.261
+    "score": 1.969
    },
    "punchy": {
-    "n": 6,
-    "score": 3.196
+    "n": 8,
+    "score": 2.142
    },
    "calm": {
-    "n": 3,
-    "score": 1.0
+    "n": 5,
+    "score": 2.512
    },
    "lab-energy-1019": {
     "n": 0
@@ -80,29 +80,30 @@
   },
   "grade": {
    "natural": {
-    "n": 7,
-    "score": 1.261
+    "n": 8,
+    "score": 1.444
    },
    "cinematic": {
-    "n": 6,
-    "score": 1.413
+    "n": 7,
+    "score": 2.419
    },
    "vivid": {
-    "n": 2,
-    "score": 5.63
+    "n": 3,
+    "score": 3.818
    },
    "lab-grade-1019": {
-    "n": 0
+    "n": 1,
+    "score": 5.28
    }
   },
   "opening": {
    "graphic_first": {
-    "n": 7,
-    "score": 3.261
+    "n": 9,
+    "score": 2.605
    },
    "image_first": {
-    "n": 8,
-    "score": 1.478
+    "n": 10,
+    "score": 1.599
    },
    "lab-opening-1019": {
     "n": 0

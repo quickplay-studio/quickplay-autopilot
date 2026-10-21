@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 08:48): 7 of 1,000 subscribers · 4,117 of 10 million Shorts views in 90 days · 5,128 views in the last 24 hours (about 111,065 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 09:45): 7 of 1,000 subscribers · 4,186 of 10 million Shorts views in 90 days · 5,186 views in the last 24 hours (about 111,065 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Wed 21 Oct 8:30 (UK): 3 scheduled, 59 public, 17 uploads in the last 24 hours.
+YouTube checked Wed 21 Oct 9:45 (UK): 3 scheduled, 61 public, 19 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 8:44).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 9 public, 5 scheduled | 6 | 0 | ⏳ 9 of 40 so far, 5 more scheduled |
+| Wed 21 Oct | 10 public, 4 scheduled | 10 | 0 | ⏳ 10 of 40 so far, 4 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -44,7 +44,7 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (0 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
 - Testing energy: camera motion 0.7, punch-ins 0.05 (0 of 8 Shorts measured)
-- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
+- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
 
 ## Needs a look
@@ -56,28 +56,38 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## On the channel (latest first)
 
+### Wed 21 Oct 10:30 · K/DA returns with a brand new line-up 🎶
+scheduled · 31 s · music: mirror-mirror · [script](../boards/done/QD-074.json) · [YouTube](https://youtube.com/shorts/P3r8h3msA7c)
+
+![QD-074](QD-074.jpg)
+
 ### Wed 21 Oct 10:10 · Lamine Yamal ends Real Betis 15 game unbeaten run ⚽
 scheduled · 26 s · music: gta-type-beat · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
 
 ![QD-062](QD-062.jpg)
 
+### Wed 21 Oct 9:54 · Kylie Jenner makes Victoria's Secret show debut ✨
+scheduled · 24 s · music: mirror-mirror · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
+
+![QD-073](QD-073.jpg)
+
 ### Wed 21 Oct 9:30 · Taylor Swift's Patient Zero hits three weeks at number one 🎵
-scheduled · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
+public · 3 views · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
 
 ![QD-061](QD-061.jpg)
 
 ### Wed 21 Oct 8:50 · Larne face Linfield in Irish Premiership match ⚽
-private · 22 s · music: ego-chall · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
+public · 4 views · 22 s · music: ego-chall · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
 
 ![QD-060](QD-060.jpg)
 
 ### Wed 21 Oct 8:10 · Japan launches historic mission to Mars's moon Phobos 🚀
-public · 67 views · 26 s · music: pulsar · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
+public · 115 views · 26 s · music: pulsar · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
 
 ![QD-059](QD-059.jpg)
 
 ### Wed 21 Oct 7:30 · Zelda Ocarina of Time remake file size confirmed 🗡️
-public · 96 views · 29 s · music: death-duel · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
+public · 136 views · 29 s · music: death-duel · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
 
 ![QD-058](QD-058.jpg)
 
@@ -97,22 +107,22 @@ public · 55 views · 23 s · music: hopping-trains · [script](../boards/done/Q
 ![QD-070](QD-070.jpg)
 
 ### Wed 21 Oct 2:42 · The Beatles debut album recorded in 12 hours 🎸
-public · 182 views · 33 s · music: death-duel · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
+public · 210 views · 33 s · music: death-duel · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
 
 ![QD-069](QD-069.jpg)
 
 ### Wed 21 Oct 2:06 · The day Ready Player One began 🕹️
-public · 53 views · 25 s · music: death-duel · [script](../boards/done/QD-068.json) · [YouTube](https://youtube.com/shorts/non50TmKEto)
+public · 53 views · 25 s · music: death-duel · on Instagram · [script](../boards/done/QD-068.json) · [YouTube](https://youtube.com/shorts/non50TmKEto)
 
 ![QD-068](QD-068.jpg)
 
 ### Wed 21 Oct 1:30 · Rod Stewart’s MTV launch record 🎤
-public · 86 views · 39 s · music: death-duel · [script](../boards/done/QD-067.json) · [YouTube](https://youtube.com/shorts/NEAi42kpMIE)
+public · 107 views · 39 s · music: death-duel · on Instagram · [script](../boards/done/QD-067.json) · [YouTube](https://youtube.com/shorts/NEAi42kpMIE)
 
 ![QD-067](QD-067.jpg)
 
 ### Tue 20 Oct 21:30 · The first text message ever sent 📱
-public · 15 views · 24 s · music: death-duel · [script](../boards/done/QD-033.json) · [YouTube](https://youtube.com/shorts/SFiu3zE5KHs)
+public · 15 views · 24 s · music: death-duel · on Instagram · [script](../boards/done/QD-033.json) · [YouTube](https://youtube.com/shorts/SFiu3zE5KHs)
 
 ![QD-033](QD-033.jpg)
 
@@ -122,7 +132,7 @@ private · 20 s · music: gta-type-beat · [script](../boards/done/QD-063.json) 
 ![QD-063](QD-063.jpg)
 
 ### Tue 20 Oct 20:50 · Bohemian Rhapsody: too long for radio? 🎸
-public · 483 views · 28 s · music: walking-the-wire · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
+public · 580 views · 28 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-032.json) · [YouTube](https://youtube.com/shorts/BEgBb9Ny1QA)
 
 ![QD-032](QD-032.jpg)
 
@@ -187,7 +197,7 @@ public · 694 views · 30 s · music: once-upon-a-time · on Instagram · on Fac
 ![QD-044](QD-044.jpg)
 
 ### Mon 19 Oct 14:50 · K/DA's new song: Start a Fire or Watch Me? 💜
-public · 37 views · 31 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-043.json) · [YouTube](https://youtube.com/shorts/n6j8dxF9M7o)
+public · 60 views · 31 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-043.json) · [YouTube](https://youtube.com/shorts/n6j8dxF9M7o)
 
 ![QD-043](QD-043.jpg)
 
@@ -197,7 +207,7 @@ public · 88 views · 23 s · music: in-battery · on Instagram · on Facebook �
 ![QD-041](QD-041.jpg)
 
 ### Mon 19 Oct 13:30 · Why Star Wars fans love Biddy Blas 🛸
-public · 195 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
+public · 205 views · [script](../backlog/QD-025) · [YouTube](https://youtube.com/shorts/OCURp8xQxHE)
 
 ### Mon 19 Oct 12:50 · Harry Styles' 30 nights at MSG are becoming a film 🎬
 public · 376 views · 30 s · music: f16 · on Instagram · on Facebook · [script](../boards/done/QD-042.json) · [YouTube](https://youtube.com/shorts/Ag_XhZbBTwg)
@@ -205,7 +215,7 @@ public · 376 views · 30 s · music: f16 · on Instagram · on Facebook · [scr
 ![QD-042](QD-042.jpg)
 
 ### Mon 19 Oct 12:10 · What was the first music video on MTV? 📺
-public · 470 views · 24 s · music: after-sunset · on Instagram · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
+public · 505 views · 24 s · music: after-sunset · on Instagram · [script](../boards/done/QD-038.json) · [YouTube](https://youtube.com/shorts/OG2eR87ZGL8)
 
 ![QD-038](QD-038.jpg)
 
@@ -218,7 +228,7 @@ public · 97 views · 29 s · music: scale-the-mountain · on Instagram · on Fa
 ![QD-040](QD-040.jpg)
 
 ### Mon 19 Oct 10:50 · Street Fighter movie: Roman Reigns is Akuma 🥋
-public · 419 views · 27 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
+public · 422 views · 27 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-039.json) · [YouTube](https://youtube.com/shorts/K-ale_3rhyU)
 
 ![QD-039](QD-039.jpg)
 
@@ -241,9 +251,3 @@ public · 276 views · 28 s · music: the-bombs · on Instagram · [script](../b
 public · 909 views · 29 s · music: f16 · on Instagram · [script](../boards/done/QD-034.json) · [YouTube](https://youtube.com/shorts/LxgDeNfXCOQ)
 
 ![QD-034](QD-034.jpg)
-
-### Sun 18 Oct 22:30 · Tekken 8's next fighter is a manga legend 💪
-public · 79 views · [script](../backlog/QD-022) · [YouTube](https://youtube.com/shorts/-8hCE6x5JBM)
-
-### Sun 18 Oct 21:00 · The formula behind a 14 million view Roblox Short 📈
-public · 11 views · [script](../backlog/QD-023) · [YouTube](https://youtube.com/shorts/qLRXY5tuj8A)

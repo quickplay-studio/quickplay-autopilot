@@ -1,313 +1,11 @@
 {
  "date": "2026-10-21",
- "built": "2026-10-21T07:30+00:00",
+ "built": "2026-10-21T08:45+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
-  {
-   "n": 25,
-   "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 519,441/h",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Kylie Jenner debuted at the Victoria's Secret Fashion Show in a sparkling bra.",
-    "The 2026 Fantasy Bra was crafted from 18-carat gold and thousands of diamonds.",
-    "Victoria's Secret brought back its famous fashion show in 2024."
-   ],
-   "sources": [
-    [
-     "Kylie Jenner's debut at Victoria's Secret Fashion Show in $50m bra sparks mixed reaction",
-     "https://www.bbc.co.uk/news/articles/cmx2wqwxvyxlo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-19"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Kylie Jenner made her Victoria's Secret Fashion Show debut wearing the Fantasy Bra.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Reality TV star Kylie Jenner has sparked mixed reaction after making her Victoria's Secret Fashion Show debut in a $50m (Â£37m) bra."
-     }
-    },
-    {
-     "claim": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob and Co.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob & Co, who said it was the \"most valuable\" one ever created"
-     }
-    },
-    {
-     "claim": "The Victoria's Secret catwalk show was scrapped after its 2018 edition drew low ratings and criticism.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The lingerie brand's catwalk show was scrapped after its 2018 edition drew low ratings, as well as criticism that it was sexist, outdated and lacked"
-     }
-    },
-    {
-     "claim": "The Victoria's Secret fashion show returned in 2024 with a promise to celebrate all women.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It returned in 2024, with a promise to \"celebrate all women\" and featured more a diverse range of talent, including Ashley Graham's appearance as a"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 30,
-   "topic": "K/DA",
-   "signal": "YouTube US-gaming 276,517/h",
-   "category": "Gaming",
-   "what_is_new": "K/DA returned after six years without releasing music with their comeback single 'Firestarter' and a new line-up.",
-   "hooks": [
-    "K/DA is back after six years with a brand new line-up!",
-    "Sophie Powers and Mimi Webb join K/DA for their 2026 return."
-   ],
-   "sources": [
-    [
-     "Battle over Meta’s alleged Bolsonaro bias intensifies days before Brazil presidential runoff",
-     "https://www.theguardian.com/world/2026/oct/21/battle-meta-alleged-bolsonaro-bias-intensifies-days-before-brazil-presidential-runoff",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "‘League Of Legends’ K-pop virtual group K/DA returns without Madison Beer",
-     "https://www.nme.com/news/gaming-news/league-of-legends-k-pop-virtual-group-k-da-members-madison-beer-3973607?utm_source=rss&utm_medium=rss&utm_campaign=league-of-legends-k-pop-virtual-group-k-da-members-madison-beer",
-     "NME",
-     "2026-10-20"
-    ],
-    [
-     "K/DA",
-     "https://en.wikipedia.org/wiki/K/DA",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "League Of Legends’ K-pop group K/DA released their first song in six years but Madison Beer is no longer involved in the project.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "League Of Legends’ K-pop group K/DA released their first song in six years but Madison Beer is no longer involved in the project.",
-      "3": "In 2026, Sophie Powers and Mimi Webb replaced Beer and Burns, respectively, to form a new line-up for K/DA."
-     }
-    },
-    {
-     "claim": "Miyeon and Soyeon of i-dle have returned as Ahri and Akali while Sophie Powers replaces Beer as Evelynn and Mimi Webb takes over from Burns as Kai’Sa.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Miyeon and Soyeon of i-dle have returned as Ahri and Akali while Sophie Powers replaces Beer as Evelynn and Mimi Webb takes over from Burns",
-      "3": "Miyeon and Soyeon reprise their singing roles and are joined by newcomers Sophie Powers and Mimi Webb as Evelynn and Kai’Sa, respectively."
-     }
-    },
-    {
-     "claim": "A second extended play, Firestarter, is set to be released in 2026, led by the title track as lead single.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "After six years without releasing music, K/DA returned yesterday (Monday October 19) with comeback single ‘Firestarter’ and a new line-up.",
-      "3": "A second extended play, Firestarter, is set to be released in 2026, led by the title track as lead single."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 27,
-   "topic": "Shrek 2 Remastered",
-   "signal": "YouTube US 62,079/h",
-   "category": "Gaming",
-   "what_is_new": "CD Projekt Red rolled out a Switch 2 patch for The Witcher 3 Wild Hunt Remastered addressing resolution and visual clarity issues.",
-   "hooks": [
-    "Shrek 2 Remastered arrives on November 10 with brand new online co-op!",
-    "Aspyr is bringing Shrek 2 Remastered to modern platforms this November!"
-   ],
-   "sources": [
-    [
-     "In this age of pervasive slop maybe we should be grateful for Shrek 2 Remastered",
-     "https://www.pcgamer.com/games/action/in-this-age-of-pervasive-slop-maybe-we-should-be-grateful-for-shrek-2-remastered/",
-     "PC Gamer",
-     "2026-10-21"
-    ],
-    [
-     "Shrek 2 Remastered Officially Announced With Must-See GTA 6-inspired Trailer",
-     "https://www.polygon.com/shrek-2-remastered-release-date-trailer-online-co-op/",
-     "Polygon",
-     "2026-10-20"
-    ],
-    [
-     "Witcher 3 Switch 2 patch rolls out today with a number of changes, including alterations to resolution and \"visual clarity\"",
-     "https://www.eurogamer.net/witcher-3-switch-2-patch-update-resolution-brightness",
-     "Eurogamer",
-     "2026-10-19"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Shrek 2 Remastered releases on November 10.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The elephant in the news is that Shrek 2 Remastered releases on November 10, which is nine days before GTA 6.",
-      "2": "Developed by Aspyr, Shrek 2 Remastered will launch on Nov. 10 for Nintendo Switch, Nintendo Switch 2, PlayStation 5, Windows PC, and Xbox Series X."
-     }
-    },
-    {
-     "claim": "Aspyr Media is handling the development of Shrek 2 Remastered.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Aspyr Media is handling the port, whose recent work includes the Lord of the Rings: War in the North re-release, and the Neverwinter Nights 2",
-      "2": "Developed by Aspyr, Shrek 2 Remastered will launch on Nov. 10 for Nintendo Switch, Nintendo Switch 2, PlayStation 5, Windows PC, and Xbox Series X."
-     }
-    },
-    {
-     "claim": "The original Shrek 2 game was released in 2004.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Jokes aside: that Shrek 2 was released in 2004 does at least guarantee that humans made it.",
-      "2": "Shrek 2 is an action-adventure platformer based on DreamWorks Animation's hit 2004 film."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Shrek 5 is expected to arrive in 2027.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Shrek 5 is expected to arrive in 2027, giving fans a chance to revisit the series' early-2000s heyday before the ogre returns to theaters."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 5,
-   "topic": "expectations by Olivia Rodrigo & Chappell Roan",
-   "signal": "Apple Music US: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Olivia Rodrigo and Chappell Roan just surprised fans with a brand new remix!",
-    "Did you know Chappell Roan and Olivia Rodrigo share the same producer?",
-    "Expectations are soaring for Olivia Rodrigo and Chappell Roan's new collaboration."
-   ],
-   "sources": [
-    [
-     "Olivia Rodrigo & Chappell Roan Exceed ‘Expectations’ on New Remix: Watch the David Byrne-Starring Video",
-     "https://www.billboard.com/music/music-news/olivia-rodrigo-chappell-roan-expectations-remix-video-watch-1236361458/",
-     "Billboard",
-     "2026-10-14"
-    ],
-    [
-     "Olivia Rodrigo Announces “Expectations” Remix With Chappell Roan",
-     "https://www.hollywoodreporter.com/music/music-news/olivia-rodrigo-expectations-remix-chappell-roan-1236728859/",
-     "The Hollywood Reporter",
-     "2026-10-13"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Olivia Rodrigo and Chappell Roan released a remix of Expectations.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The singers joined forces Thursday (Oct. 15) to release the song and video for their joint version of “Expectations,” a remix of the track that",
-      "2": "Olivia Rodrigo is teaming up with fellow pop superstar Chappell Roan for a remix of You Seem Pretty Sad for a Girl so in Love"
-     }
-    },
-    {
-     "claim": "The remix is a track from Rodrigo’s third album You Seem Pretty Sad for a Girl So in Love.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The singers joined forces Thursday (Oct. 15) to release the song and video for their joint version of “Expectations,” a remix of the track that",
-      "2": "Olivia Rodrigo is teaming up with fellow pop superstar Chappell Roan for a remix of You Seem Pretty Sad for a Girl so in Love"
-     }
-    },
-    {
-     "claim": "The two stars share producer Dan Nigro as a musical partner.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The remix comes after years of friendship between the two stars, who both work with producer Dan Nigro on their music.",
-      "2": "That Rodrigo and Roan are collaborating on a recording isn’t particularly surprising; the two are close friends and share prolific super-producer Dan Nigro as a"
-     }
-    },
-    {
-     "claim": "Chappell Roan previously opened for Olivia Rodrigo on tour.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Roan opened for Rodrigo on both her Sour Tour and Guts World Tour — and after the Midwest Princess skyrocketed to stardom while the latter",
-      "2": "Roan, who had served as an opening act for Rodrigo, played at Rodrigo’s Daisy Chain Fields festival back in August too."
-     }
-    },
-    {
-     "claim": "Chappell Roan performed at Rodrigo’s Daisy Chain Fields festival in August.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In August, the duo reunited again for Daisy Chain Fields, the festival Rodrigo founded this year to raise funds for charities supporting women and girls.",
-      "2": "Roan, who had served as an opening act for Rodrigo, played at Rodrigo’s Daisy Chain Fields festival back in August too."
-     }
-    },
-    {
-     "claim": "The music video for the Expectations remix features a retro game show theme.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The video comes a few hours after Rodrigo shared a teaser, revealing a campy game-show theme with the two stars appearing to compete on “The",
-      "2": "The remix will drop at 5 p.m. Thursday and will also get an accompanying video with Rodrigo and Roan, directed by Bardia Zeinali."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
   {
    "n": 4,
    "topic": "Raindance by Dave & Tems",
@@ -315,9 +13,7 @@
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Did you know Raindance became Dave's fourth number one single in the UK?",
-    "Raindance dropped on October 23, 2025, as part of The Boy Who Played the Harp.",
-    "Dave and Tems headed to Lagos, Nigeria, to film the music video for Raindance."
+    "Discover how Raindance became Dave and Tems' biggest chart success."
    ],
    "sources": [
     [
@@ -336,34 +32,680 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Raindance became Dave's fourth number one single on the Official UK Singles chart.",
+     "claim": "In the United Kingdom, the single became the rappers fourth champ on the Official U.K. Singles chart.",
      "sources": [
       1
      ],
      "evidence": {
       "1": "In his native U.K., the single became the rapper’s fourth champ on the Official U.K. Singles chart and 15th top 10 overall."
      }
-    },
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 8,
+   "topic": "south africa vs australia",
+   "signal": "Google Trends GB 5000+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Discover how Australia and South Africa's history began in 1947!"
+   ],
+   "sources": [
+    [
+     "South Africa v Australia: second men’s cricket Test, day four – live",
+     "https://www.theguardian.com/sport/live/2026/oct/21/south-africa-v-australia-second-test-day-four-cricket-st-georges-park-gqeberha-live-updates",
+     "Guardian",
+     "2026-10-21"
+    ],
+    [
+     "south africa vs australia",
+     "https://en.wikipedia.org/wiki/South_Africa_-_Australia_relations",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": [
+    "commons:File:South_Africa_Australia_Locator.png"
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "orionids meteor shower",
+   "signal": "Google Trends GB 1000+",
+   "category": "Science",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know the Orionids come from Halley's Comet?"
+   ],
+   "sources": [
+    [
+     "orionids meteor shower",
+     "https://en.wikipedia.org/wiki/Orionid_meteor_shower",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": [
+    "commons:File:Orioniden.png"
+   ]
+  },
+  {
+   "n": 12,
+   "topic": "the rolling stones who you callin' crazy",
+   "signal": "Google Trends GB 100+",
+   "category": "Music",
+   "what_is_new": "The Rolling Stones surprise released a new single titled Who You Callin Crazy on October 20.",
+   "hooks": [
+    "Did you hear the new Rolling Stones song?"
+   ],
+   "sources": [
+    [
+     "The Rolling Stones surprise release breezy new single ‘Who You Callin’ Crazy’",
+     "https://www.nme.com/news/music/the-rolling-stones-surprise-release-breezy-new-single-who-you-callin-crazy-3973619?utm_source=rss&utm_medium=rss&utm_campaign=the-rolling-stones-surprise-release-breezy-new-single-who-you-callin-crazy",
+     "NME",
+     "2026-10-20"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Raindance was released on 23 October 2025 through Neighbourhood Recordings as the fifth track from Dave's third studio album, The Boy Who Played the Harp.",
+     "claim": "The Rolling Stones released a new single titled Who You Callin Crazy on October 20.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "It was released on 23 October 2025 through Neighbourhood Recordings as the fifth track from Dave's third studio album, The Boy Who Played the Harp.[1][2][3]"
-     }
-    },
-    {
-     "claim": "The music video for Raindance was filmed in Lagos, Nigeria.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Filmed in Lagos, Nigeria, critics, feeding into dating rumours between the two artists, have stated that the music video \"might as well be leaked wedding"
+      "1": "Today (Tuesday October 20), they surprise released the latest of the five new songs, ‘Who You Callin’ Crazy’, which sees them embrace an uplifting, feel-good"
      }
     }
    ],
    "images": []
+  },
+  {
+   "n": 15,
+   "topic": "alexander skarsgård",
+   "signal": "Google Trends US 500+",
+   "category": "Film",
+   "what_is_new": "Alexander Skarsgard attended the Los Angeles premiere of his film Wicker at the DGA Theater on October 20, 2026.",
+   "hooks": [
+    "Did you know Alexander Skarsgard stars in Wicker?",
+    "Alexander Skarsgard walked the red carpet in Los Angeles!"
+   ],
+   "sources": [
+    [
+     "‘Wicker’ Red Carpet Premiere Photos: Olivia Colman, Alexander Skarsgård, Elizabeth Debicki & More",
+     "https://deadline.com/gallery/wicker-red-carpet-premiere-photos-black-bear-pictures/",
+     "Deadline",
+     "2026-10-20"
+    ],
+    [
+     "alexander skarsgård",
+     "https://en.wikipedia.org/wiki/Alexander_Skarsg%C3%A5rd",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Alexander Skarsgard attended the Los Angeles premiere of Wicker at the DGA Theater on October 20, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“Wicker” Los Angeles Premiere Alexander Skarsgard at the “Wicker” Los Angeles Premiere held at DGA Theater on October 20, 2026 in Los Angeles, California."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Alexander_Skarsgård_at_NYFF_2025_04_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 24,
+   "topic": "ChatGPT",
+   "signal": "Wikipedia 140,548 views",
+   "category": "Tech",
+   "what_is_new": "OpenAI introduced a new locked chats feature allowing users to secure private conversations with a PIN or biometric authentication.",
+   "hooks": [
+    "Lock your private ChatGPT conversations with a new PIN feature!",
+    "Did you know ChatGPT reached 100 million users in two months?",
+    "OpenAI just made your sensitive chats much easier to secure."
+   ],
+   "sources": [
+    [
+     "ChatGPT now lets you lock sensitive chats behind a PIN",
+     "https://www.engadget.com/2292365/chatgpt-now-lets-you-lock-sensitive-chats-behind-a-pin/",
+     "Engadget",
+     "2026-10-20"
+    ],
+    [
+     "ChatGPT now lets you lock your chats",
+     "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+     "TechCrunch",
+     "2026-10-20"
+    ],
+    [
+     "ChatGPT",
+     "https://en.wikipedia.org/wiki/ChatGPT",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "ChatGPT now lets you lock sensitive chats behind a PIN.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "ChatGPT now lets you lock sensitive chats behind a PIN",
+      "2": "OpenAI announced on Tuesday that users can now lock ChatGPT conversations to keep sensitive chats private when others may have access to their screen or"
+     }
+    },
+    {
+     "claim": "Locked chats aren't a form of end-to-end encryption.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Locked chats aren't a form of end-to-end encryption, however.",
+      "2": "OpenAI notes that locking a chat doesn’t create end-to-end encryption or a separate encrypted vault, change how long it retains the chat, remove information that"
+     }
+    },
+    {
+     "claim": "Resetting your account PIN will delete all of your locked chats.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "That said, if you need to reset your account PIN for any reason, doing so will delete all of your locked chats, alongside any files",
+      "2": "OpenAI says resetting a PIN permanently deletes all locked chats, files, and other content protected by the previous PIN."
+     }
+    },
+    {
+     "claim": "Locked chats will be available to users on ChatGPT Free, Go, Plus, and Pro subscriptions.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Availability will extend to free accounts, as well as to those with Go, Plus and Pro subscriptions.",
+      "2": "Locked Chats will be available to users on ChatGPT Free, Go, Plus, Pro, Business, Enterprise, and Edu plans."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "ChatGPT is a generative AI chatbot developed by OpenAI.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "ChatGPT is a generative AI chatbot developed by OpenAI."
+     }
+    },
+    {
+     "claim": "Originally released on November 30, 2022, the product uses large language models to generate text, speech, and images in response to user prompts.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Originally released on November 30, 2022, the product uses large language models—specifically generative pre-trained transformers (GPTs)—to generate text, speech, and images in response to user"
+     }
+    },
+    {
+     "claim": "ChatGPT reached 100 million monthly active users two months after its release.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "ChatGPT was quickly adopted, reaching 100 million monthly active users two months after its release and 900 million weekly active users in February 2026."
+     }
+    },
+    {
+     "claim": "In March 2023, OpenAI added support for plugins for ChatGPT.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In March 2023, OpenAI added support for plugins for ChatGPT."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:OpenAI_logo_2025_(symbol).svg"
+   ]
+  },
+  {
+   "n": 26,
+   "topic": "Street Fighter (2026 film)",
+   "signal": "Wikipedia 110,411 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Street Fighter is the third live action film in the franchise?",
+    "Street Fighter features Andrew Koji as Ryu and Noah Centineo as Ken Masters.",
+    "Kitao Sakurai directed the new 2026 Street Fighter movie."
+   ],
+   "sources": [
+    [
+     "Street Fighter (2026 Movie) Guide",
+     "https://www.ign.com/wikis/street-fighter-2026-movie",
+     "IGN",
+     "2026-10-15"
+    ],
+    [
+     "Street Fighter (2026 film)",
+     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Street Fighter is the third live action feature length film based on the Street Fighter video game series by Capcom.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Street Fighter features a large ensemble cast, which has already inspired new in-game skins and merchandise.",
+      "2": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
+     }
+    },
+    {
+     "claim": "Kitao Sakurai directed Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
+      "2": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T."
+     }
+    },
+    {
+     "claim": "Noah Centineo plays Ken Masters in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Noah Centineo as Ken Masters",
+      "2": "Noah Centineo as Ken Masters"
+     }
+    },
+    {
+     "claim": "Andrew Koji plays Ryu in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Andrew Koji as Ryu",
+      "2": "Andrew Koji as Ryu / Dark Ryu"
+     }
+    },
+    {
+     "claim": "Callina Liang plays Chun Li in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Callina Liang as Chun-Li",
+      "2": "Callina Liang as Chun-Li[4]"
+     }
+    },
+    {
+     "claim": "David Dastmalchian plays M Bison in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "David Dastmalchian as M. Bison",
+      "2": "David Dastmalchian as M. Bison"
+     }
+    },
+    {
+     "claim": "Joe Anoa i plays Akuma in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Joe Anoa'i (Roman Reigns) as Akuma",
+      "2": "Joe \"Roman Reigns\" Anoa'i as Akuma"
+     }
+    },
+    {
+     "claim": "Cody Rhodes plays Guile in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Cody Rhodes as Guile",
+      "2": "Cody Rhodes as Guile"
+     }
+    },
+    {
+     "claim": "Jason Momoa plays Blanka in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Jason Momoa as Blanka",
+      "2": "Jason Momoa as Blanka"
+     }
+    },
+    {
+     "claim": "Curtis Jackson plays Balrog in Street Fighter.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Curtis \"50 Cent\" Jackson as Balrog",
+      "2": "Curtis \"50 Cent\" Jackson as Balrog"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 27,
+   "topic": "Barbara Palvin",
+   "signal": "Wikipedia 104,012 views",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Barbara Palvin was discovered at age 13?",
+    "Barbara Palvin made history as the first Hungarian Victoria's Secret Angel.",
+    "See how Barbara Palvin started her incredible modeling career."
+   ],
+   "sources": [
+    [
+     "Barbara Palvin",
+     "https://en.wikipedia.org/wiki/Barbara_Palvin",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barbara Palvin was born on October 8, 1993, in Budapest, Hungary."
+     }
+    },
+    {
+     "claim": "She was discovered on the streets of Budapest at age 13 while walking with her mother.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "When she was 13, she was discovered on the streets of Budapest by a modeling scout while walking with her mother."
+     }
+    },
+    {
+     "claim": "Her runway debut was for Prada during Milan Fashion Week in February 2010.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Her runway debut was for Prada during Milan Fashion Week in February 2010."
+     }
+    },
+    {
+     "claim": "In 2012, she became an ambassador for L'Oreal Paris.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In February 2012, she became an ambassador for L'Oréal Paris."
+     }
+    },
+    {
+     "claim": "She made her acting debut in the 2014 film Hercules as mythological queen Antimache.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Palvin began branching out into acting, after she appeared in the 2014 film Hercules as mythological queen Antimache."
+     }
+    },
+    {
+     "claim": "In 2016, she was ranked 4th in Maxim Hot 100.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 2016, she was ranked 4th in Maxim Hot 100."
+     }
+    },
+    {
+     "claim": "She married American actor Dylan Sprouse on July 15, 2023, in Albertirsa, Hungary.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "On July 15, 2023, the couple married in the town of Albertirsa, Hungary, in the same church that Palvin's parents married."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:MKr382323_Barbara_Palvin_(Cannes_2025).jpg"
+   ]
+  },
+  {
+   "n": 29,
+   "topic": "IVE 아이브 'Looks Can Kill' MV",
+   "signal": "YouTube GB-music 186,526/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "Houseplant hacks: will trimming brown leaf tips do any harm?",
+     "https://www.theguardian.com/lifeandstyle/2026/oct/20/houseplant-hacks-will-trimming-brown-leaf-tips-do-any-harm",
+     "Guardian",
+     "2026-10-20"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 30,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 131,030/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Olivia Rodrigo made chart history?",
+    "Check out these surprising facts about Olivia Rodrigo!"
+   ],
+   "sources": [
+    [
+     "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "Rolling Stone",
+     "2026-10-16"
+    ],
+    [
+     "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "Billboard",
+     "2026-10-14"
+    ],
+    [
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": [
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
+   ]
+  },
+  {
+   "n": 34,
+   "topic": "Tate McRae",
+   "signal": "YouTube GB-music 72,870/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Tate McRae was born on July 1, 2003?",
+    "Discover how Tate McRae started her incredible journey in dance!"
+   ],
+   "sources": [
+    [
+     "Tate McRae",
+     "https://en.wikipedia.org/wiki/Tate_McRae",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Tate Rosner McRae was born on July 1, 2003.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Tate Rosner McRae (born July 1, 2003) is a Canadian singer, songwriter, and dancer."
+     }
+    },
+    {
+     "claim": "She placed third on the thirteenth season of So You Think You Can Dance in 2016.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In June 2016, she took part in the thirteenth season of American television show So You Think You Can Dance."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Tate_McRae_in_Manila_01_(cropped)_2.jpg"
+   ]
+  },
+  {
+   "n": 35,
+   "topic": "Anuel AA",
+   "signal": "YouTube US-music 83,335/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Anuel AA was born on November 26, 1992?",
+    "Anuel AA released his debut album on July 17, 2018."
+   ],
+   "sources": [
+    [
+     "Anuel AA",
+     "https://en.wikipedia.org/wiki/Anuel_AA",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Emmanuel Gazmey Santiago was born on November 26, 1992.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Emmanuel Gazmey Santiago (born November 26, 1992), known professionally as Anuel AA,[a] is a Puerto Rican rapper and singer."
+     }
+    },
+    {
+     "claim": "Anuel AA released his debut album Real Hasta la Muerte on July 17, 2018.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Anuel AA released his debut album, also titled Real Hasta la Muerte, on July 17, 2018, the day he was released from prison."
+     }
+    },
+    {
+     "claim": "His third studio album Las Leyendas Nunca Mueren was released on November 26, 2021, including 16 tracks.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "His third studio album Las Leyendas Nunca Mueren was released on November 26, 2021, including 16 tracks."
+     }
+    },
+    {
+     "claim": "His fourth studio album LLNM2 was released on December 9, 2022.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "His fourth studio album LLNM2 was the second part of \"Las leyendas nunca mueren\" and It was released on December 9, 2022."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Anuel_AA_in_2022.png"
+   ]
+  },
+  {
+   "n": 36,
+   "topic": "Zara Larsson",
+   "signal": "YouTube US-music 44,733/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Zara Larsson was born on 16 December 1997?",
+    "Zara Larsson was born in Solna, Stockholm."
+   ],
+   "sources": [
+    [
+     "Zara Larsson",
+     "https://en.wikipedia.org/wiki/Zara_Larsson",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Zara Maria Larsson was born on 16 December 1997 in Solna, Stockholm, to Agnetha and Anders Larsson.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Zara Maria Larsson (Swedish: [ˈsɑ̂ːra ˈlɑ̌ːʂɔn] ⓘ; born 16 December 1997) is a Swedish singer and songwriter."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Zara_Larsson_Midnight_Sun_European_Tour_(cropped)_(cropped).jpg"
+   ]
   }
  ]
 }

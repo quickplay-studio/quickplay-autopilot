@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 21:39): 7 of 1,000 subscribers · 4,971 of 10 million Shorts views in 90 days · 6,175 views in the last 24 hours (about 111,056 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 22:40): 7 of 1,000 subscribers · 5,042 of 10 million Shorts views in 90 days · 6,179 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 40 scheduled |
-| Wed 21 Oct | 27 public, 2 scheduled | 14 | 13 | ⏳ 27 of 40 so far, 2 more scheduled |
+| Wed 21 Oct | 27 public, 2 scheduled | 14 | 14 | ⏳ 27 of 40 so far, 2 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -105,7 +105,7 @@ scheduled · 36 s · music: horizons · [script](../boards/done/QD-091.json) · 
 ![QD-091](QD-091.jpg)
 
 ### Wed 21 Oct 21:30 · Shrek 2 Remastered revealed with GTA parody 🧅
-private · 23 s · music: treasure-hunt · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
+private · 23 s · music: treasure-hunt · on Facebook · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
 
 ![QD-090](QD-090.jpg)
 

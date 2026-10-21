@@ -87,7 +87,7 @@ def source(cid):
     if s["kind"] == "gdrive":
         import gdown
         log(f"{cid}: downloading the source file from Google Drive")
-        got = gdown.download(id=s["id"], output=str(raw), quiet=True, fuzzy=True)
+        got = gdown.download(id=s["id"], output=str(raw), quiet=True, resume=True, retries=3)
         if not got or not raw.exists() or raw.stat().st_size < 1e6: raise RuntimeError(f"{cid}: the Drive download failed or is empty")
     elif s["kind"] == "url":
         run(["curl", "-sSL", "--retry", "3", "-o", str(raw), s["url"]])

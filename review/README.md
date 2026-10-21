@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 10 public, 4 scheduled | 10 | 0 | ⏳ 10 of 40 so far, 4 more scheduled |
+| Wed 21 Oct | 11 public, 3 scheduled | 10 | 0 | ⏳ 11 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -67,7 +67,7 @@ scheduled · 26 s · music: gta-type-beat · [script](../boards/done/QD-062.json
 ![QD-062](QD-062.jpg)
 
 ### Wed 21 Oct 9:54 · Kylie Jenner makes Victoria's Secret show debut ✨
-scheduled · 24 s · music: mirror-mirror · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
+private · 24 s · music: mirror-mirror · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
 
 ![QD-073](QD-073.jpg)
 

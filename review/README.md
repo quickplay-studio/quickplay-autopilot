@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 17:40): 7 of 1,000 subscribers · 4,531 of 10 million Shorts views in 90 days · 6,055 views in the last 24 hours (about 111,061 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 18:37): 7 of 1,000 subscribers · 4,891 of 10 million Shorts views in 90 days · 5,974 views in the last 24 hours (about 111,057 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 17:19 (UK): 8 scheduled, 74 public, 37 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 40 scheduled |
-| Wed 21 Oct | 25 public, 4 scheduled | 14 | 8 | ⏳ 25 of 40 so far, 4 more scheduled |
+| Wed 21 Oct | 26 public, 3 scheduled | 14 | 9 | ⏳ 26 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -89,7 +89,7 @@ scheduled · 23 s · music: treasure-hunt · [script](../boards/done/QD-090.json
 ![QD-090](QD-090.jpg)
 
 ### Wed 21 Oct 18:00 · Bob Iger announces new book One Last Time 📖
-scheduled · 22 s · music: level · [script](../boards/done/QD-089.json) · [YouTube](https://youtube.com/shorts/ipEPjlNKVxk)
+private · 22 s · music: level · on Facebook · [script](../boards/done/QD-089.json) · [YouTube](https://youtube.com/shorts/ipEPjlNKVxk)
 
 ![QD-089](QD-089.jpg)
 

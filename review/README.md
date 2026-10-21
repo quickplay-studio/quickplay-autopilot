@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 23:38): 7 of 1,000 subscribers · 5,052 of 10 million Shorts views in 90 days · 6,136 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 00:37): 8 of 1,000 subscribers · 5,084 of 10 million Shorts views in 90 days · 5,905 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public, 14 scheduled | 0 | 0 | ⏳ 14 of 40 scheduled |
-| Wed 21 Oct | 29 public | 14 | 14 | ⏳ 29 of 40 so far |
+| Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
+| Thu 22 Oct | 2 public, 12 scheduled | 0 | 0 | ⏳ 2 of 40 so far, 12 more scheduled |
+| Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
 | Sat 17 Oct | 0 public | 0 | 0 | no target then |
 | Fri 16 Oct | 0 public | 0 | 0 | no target then |
-| Thu 15 Oct | 0 public | 0 | 0 | no target then |
 
 ## Voice test
 
@@ -79,12 +79,12 @@ scheduled · 20 s · music: dance-with-you · [script](../boards/done/QD-095.jso
 ![QD-095](QD-095.jpg)
 
 ### Thu 22 Oct 0:30 · What is the loudest sound ever recorded on Earth? 🌋
-scheduled · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
+private · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
 
 ![QD-094](QD-094.jpg)
 
 ### Thu 22 Oct 0:00 · How Tetris became a global video game phenomenon 🧩
-scheduled · 38 s · music: after-sunset · [script](../boards/done/QD-093.json) · [YouTube](https://youtube.com/shorts/_X6RQIMVXAw)
+private · 38 s · music: after-sunset · [script](../boards/done/QD-093.json) · [YouTube](https://youtube.com/shorts/_X6RQIMVXAw)
 
 ![QD-093](QD-093.jpg)
 

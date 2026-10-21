@@ -749,7 +749,7 @@ def page_text(url):
             browser = pw.chromium.launch(); page = browser.new_page()
             page.goto(url, wait_until="domcontentloaded", timeout=90000); page.wait_for_timeout(6000)
             text = page.inner_text("body"); browser.close()
-            return re.sub(r"\s+", " ", text)
+            return re.sub(r"\s+", " ", re.sub(r"[\u2066-\u2069\u200b-\u200f\u202a-\u202e]", "", text))     # bidi isolates around the figures
     except Exception as e:
         log(f"  rendered read failed ({type(e).__name__}), raw page instead")
         import requests

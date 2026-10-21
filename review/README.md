@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 15:41): 7 of 1,000 subscribers · 4,371 of 10 million Shorts views in 90 days · 5,927 views in the last 24 hours (about 111,063 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 16:42): 7 of 1,000 subscribers · 4,435 of 10 million Shorts views in 90 days · 5,962 views in the last 24 hours (about 111,062 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 14:28 (UK): 6 scheduled, 68 public, 29 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Wed 21 Oct | 21 public, 8 scheduled | 14 | 6 | ⏳ 21 of 40 so far, 8 more scheduled |
+| Wed 21 Oct | 23 public, 6 scheduled | 14 | 7 | ⏳ 23 of 40 so far, 6 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -64,12 +64,12 @@ scheduled · 27 s · music: scale-the-mountain · [script](../boards/done/QD-087
 ![QD-087](QD-087.jpg)
 
 ### Wed 21 Oct 16:30 · The day Apollo 13 became a rescue mission 🚀
-scheduled · 26 s · music: across-seas-and-lands · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
+private · 26 s · music: across-seas-and-lands · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
 
 ![QD-085](QD-085.jpg)
 
 ### Wed 21 Oct 16:00 · Pac-Man: The pizza origin story 🍕
-scheduled · 25 s · music: f16 · [script](../boards/done/QD-083.json) · [YouTube](https://youtube.com/shorts/5qb7XUBcYY8)
+private · 25 s · music: f16 · on Facebook · [script](../boards/done/QD-083.json) · [YouTube](https://youtube.com/shorts/5qb7XUBcYY8)
 
 ![QD-083](QD-083.jpg)
 

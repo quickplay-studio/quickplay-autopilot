@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 09:45): 7 of 1,000 subscribers · 4,186 of 10 million Shorts views in 90 days · 5,186 views in the last 24 hours (about 111,065 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 10:40): 7 of 1,000 subscribers · 4,288 of 10 million Shorts views in 90 days · 5,413 views in the last 24 hours (about 111,063 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 9:45 (UK): 3 scheduled, 61 public, 19 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 8:44).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 10:34).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 11 public, 3 scheduled | 10 | 0 | ⏳ 11 of 40 so far, 3 more scheduled |
+| Wed 21 Oct | 14 public | 10 | 1 | ⏳ 14 of 40 so far |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -54,15 +54,29 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
+## In the queue
+
+- **QD-075** ChatGPT adds new PIN lock for private chats 🔒 (rendering next)
+- **QD-076** How Barbara Palvin was discovered at age 13 ✨ (rendering next)
+- **QD-077** Anuel AA’s birth name and album timeline 🎤 (rendering next)
+- **QD-078** Bohemian Rhapsody: the 5.55 minute record 🎸 (rendering next)
+- **QD-079** How often do the Orionids meteor showers occur? 🌠 (rendering next)
+- **QD-080** Who invented the World Wide Web? 🌐 (rendering next)
+- **QD-081** Jupiter: Which is the largest planet? 🪐 (rendering next)
+- **QD-082** How Manchester United won the 1999 Champions League 🏆 (rendering next)
+- **QD-083** Pac-Man: The pizza origin story 🍕 (rendering next)
+- **QD-085** The day Apollo 13 became a rescue mission 🚀 (rendering next)
+- **QD-086** What is the fastest land animal in the world? 🐆 (rendering next)
+
 ## On the channel (latest first)
 
 ### Wed 21 Oct 10:30 · K/DA returns with a brand new line-up 🎶
-scheduled · 31 s · music: mirror-mirror · [script](../boards/done/QD-074.json) · [YouTube](https://youtube.com/shorts/P3r8h3msA7c)
+private · 31 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-074.json) · [YouTube](https://youtube.com/shorts/P3r8h3msA7c)
 
 ![QD-074](QD-074.jpg)
 
 ### Wed 21 Oct 10:10 · Lamine Yamal ends Real Betis 15 game unbeaten run ⚽
-scheduled · 26 s · music: gta-type-beat · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
+private · 26 s · music: gta-type-beat · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
 
 ![QD-062](QD-062.jpg)
 

@@ -1,0 +1,21 @@
+speed-expedia: downloading the source file from Google Drive
+speed-expedia: cutting 3:56:30 to 4:12:22 (0.8 GB source)
+speed-expedia: segment saved as release asset speed-expedia.mp4 (0 MB)
+Traceback (most recent call last):
+  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 395, in <module>
+    main(sys.argv[1:])
+  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 386, in main
+    if cmd == "plan" or (cmd == "run" and unmade(cid) < (count or campaigns()[cid].get("per_day", 3))): plan(cid)
+                                                                                                        ^^^^^^^^^
+  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 157, in plan
+    words = transcribe(cid)
+            ^^^^^^^^^^^^^^^
+  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 129, in transcribe
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(seg), "-ac", "1", "-ar", "16000", str(wav)])
+  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 57, in run
+    if r.returncode: raise RuntimeError(f"{cmd[0]} failed: {(r.stderr or r.stdout)[-800:]}")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ffmpeg failed: [out#0/wav @ 0x55d42832f900] Output file does not contain any stream
+Error opening output file /mnt/clips/speed-expedia.wav.
+Error opening output files: Invalid argument
+

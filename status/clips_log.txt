@@ -1,25 +1,10 @@
-speed-expedia: downloading the source file from Google Drive
-speed-expedia: the source runs 18 minutes, so it is the segment itself; keeping all of it
-speed-expedia: cutting 0s to 1096s of 1096s (0.8 GB source)
-speed-expedia: segment saved as release asset speed-expedia.mp4 (206 MB)
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Traceback (most recent call last):
-  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 409, in <module>
-    main(sys.argv[1:])
-  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 400, in main
-    if cmd == "plan" or (cmd == "run" and unmade(cid) < (count or campaigns()[cid].get("per_day", 3))): plan(cid)
-                                                                                                        ^^^^^^^^^
-  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 171, in plan
-    words = transcribe(cid)
-            ^^^^^^^^^^^^^^^
-  File "/home/runner/work/quickplay-autopilot/quickplay-autopilot/pipeline/clips.py", line 146, in transcribe
-    segs, _ = model.transcribe(str(wav), word_timestamps=True, language="en", vad_filter=True)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/transcribe.py", line 876, in transcribe
-    audio = decode_audio(audio, sampling_rate=sampling_rate)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/faster_whisper/audio.py", line 46, in decode_audio
-    with av.open(input_file, mode="r", metadata_errors="ignore") as container:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "av/container/core.py", line 479, in av.container.core.open
-TypeError: open() got an unexpected keyword argument 'metadata_errors'
+[0;93m2026-10-21 00:36:31.830002960 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+speed-expedia: 2430 words transcribed
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+speed-expedia: 8 moments planned (gemini-flash-latest), 8 in all
+speed-expedia-01: made (47 s) IShowSpeed Finds Out the Number 1 Destination
+speed-expedia-02: made (38 s) IShowSpeed Guesses Destination Number 10
+speed-expedia-01: uploaded https://youtube.com/shorts/OwGQfSmk7CQ (private)
+speed-expedia-02: uploaded https://youtube.com/shorts/188AAcvrO8Y (private)
+stats: 2 clips

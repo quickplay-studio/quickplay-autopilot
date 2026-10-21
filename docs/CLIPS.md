@@ -148,3 +148,8 @@ forbids it for that creator's content.
   vertical sources fill the screen as they are), and the text goes where the person is not: person high in the picture,
   hook and captions in the lower third; person low, hook and captions at the top; person in the middle, hook at the top
   and captions at the foot. Campaigns with full_frame rules (Speed's suitcase) keep letterbox.
+- The scout ("scout" in requests/clips.txt, once WHOP_COOKIES exists): reads the Content Rewards discover pages signed
+  in, judges every campaign page with the model against the channel's rules (clipping not UGC, YouTube allowed, footage
+  provided, family friendly, open), ranks by rate times budget, writes status/scout.md and clips/scout.json; with
+  VYRO_COOKIES it also saves Vyro's campaign list (status/scout_vyro.txt). Charlie joins the shortlist from his Mac;
+  joining by GitHub comes after the first shortlist is reviewed.

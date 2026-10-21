@@ -346,5 +346,82 @@ def alerts(stale, by_site):
         elif site in by_site: A.clear(title, "The login works again.")
 
 
+
+
+# ---- the scout: campaigns worth joining (Charlie, 21 October: the maximum number of campaigns the upload limit allows) ----
+DISCOVER = ["https://contentrewards.com/c/discover", "https://contentrewards.com/discover", "https://contentrewards.com/c/campaigns"]
+JUDGE = """You judge a clipping campaign page for a family-friendly YouTube Shorts clipping channel (UK, anonymous, no politics,
+crime, health claims, money or investing advice, adult content or gambling). The channel can only use footage the campaign
+itself provides or points to (a Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator); it
+makes its own 9:16 clips with captions and a hook; it posts on YouTube Shorts (Instagram and Facebook later).
+Page text:
+{text}
+Return JSON: {{"name": "", "subject": "the creator or brand the clips show", "type": "clipping or ugc or other",
+"platforms": ["YouTube", ...], "youtube_allowed": true, "rate_per_1k": 0.0, "budget_remaining": 0.0, "min_views": 0,
+"max_payout": 0.0, "footage": "where the footage comes from, or none", "needs_application": false, "status": "open, full, ended or application",
+"family_friendly": true, "fits": true, "why": "one line: why it fits or not", "hashtags": ["#..."], "ends": "YYYY-MM-DD or empty",
+"rules": {{"focus": "what the clips must show", "on_screen": "any on-screen text rule", "avoid": ["..."], "min_s": 15, "max_s": 60}}}}
+fits is true only when: clipping (not UGC you must film), YouTube allowed, footage provided or named, family friendly, status open."""
+
+
+def scout(limit=40):
+    """Reads the Content Rewards discover pages (and Vyro's campaign list) with the saved logins, judges every campaign
+    page with the model, and writes status/scout.md (a ranked shortlist with reasons) and clips/scout.json."""
+    import clips as C, factpack
+    known = {str(c.get("url", "")).rstrip("/").split("/")[-1] for c in C.CFG["campaigns"].values()}
+    from playwright.sync_api import sync_playwright
+    found, rows = {}, []
+    with sync_playwright() as play:
+        try: b, ctx = context(play, "Content Rewards")
+        except Exception as e: log(f"scout: {e}"); return []
+        page = ctx.new_page()
+        for u in DISCOVER:
+            try:
+                page.goto(u, wait_until="domcontentloaded", timeout=60000); settle(page)
+                if logged_out(page): log(f"scout: {u}: not logged in"); continue
+                for _ in range(12):
+                    page.mouse.wheel(0, 2400); page.wait_for_timeout(700)
+                for a in page.locator("a[href*='/c/campaigns/']").all():
+                    href = a.get_attribute("href") or ""
+                    m = re.search(r"/c/campaigns/([0-9a-f-]{20,})", href)
+                    if m: found[m.group(1)] = "https://contentrewards.com" + href if href.startswith("/") else href
+                log(f"scout: {u}: {len(found)} campaign links so far")
+            except Exception as e: log(f"scout: {u}: {type(e).__name__}: {str(e)[:120]}")
+        for cid, url in list(found.items())[:limit]:
+            if cid in known: continue
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=60000); settle(page, 1000)
+                text = re.sub(r"[⁦-⁩​-‏‪-‮]", "", page.locator("body").inner_text())
+                text = re.sub(r"\n{2,}", "\n", text)[:7000]
+                ans, model = factpack.gemini(JUDGE.format(text=text), None, timeout=90, temperature=0.1, lite=True)
+                if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
+                if not isinstance(ans, dict) or not ans.get("name"): log(f"scout: {url}: no answer"); continue
+                ans.update(url=url, id=cid, platform="Content Rewards", judged=NOW.isoformat(timespec="minutes"), model=model)
+                rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}: {str(ans.get('why'))[:90]}")
+            except Exception as e: log(f"scout: {url}: {type(e).__name__}: {str(e)[:120]}")
+        try: b.close()
+        except Exception: pass
+        if os.environ.get("VYRO_COOKIES", "").strip():
+            try:
+                b, ctx = context(play, "Vyro"); page = ctx.new_page()
+                page.goto("https://app.vyro.com/campaigns", wait_until="domcontentloaded", timeout=60000); settle(page, 1500)
+                if logged_out(page): log("scout: Vyro: not logged in")
+                else:
+                    for _ in range(8): page.mouse.wheel(0, 2400); page.wait_for_timeout(600)
+                    text = re.sub(r"\n{2,}", "\n", page.locator("body").inner_text())[:12000]
+                    (ROOT / "status" / "scout_vyro.txt").write_text(text)
+                    log(f"scout: Vyro's campaign list saved to status/scout_vyro.txt ({len(text)} characters)")
+                b.close()
+            except Exception as e: log(f"scout: Vyro: {type(e).__name__}: {str(e)[:120]}")
+    rows.sort(key=lambda r: -(float(r.get("rate_per_1k") or 0) * min(float(r.get("budget_remaining") or 500), 3000) * (1 if r.get("fits") else 0.1)))
+    (ROOT / "clips" / "scout.json").write_text(json.dumps({"updated": NOW.isoformat(timespec="minutes"), "campaigns": rows}, indent=1, ensure_ascii=False))
+    L = [f"# Campaigns worth joining ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "", "| Fits | Campaign | Rate | Budget left | Min views | Footage | Why |", "|---|---|---|---|---|---|---|"]
+    for r in rows:
+        L.append(f"| {'yes' if r.get('fits') else 'no'} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | {str(r.get('footage'))[:50]} | {str(r.get('why'))[:120]} |")
+    (ROOT / "status" / "scout.md").write_text("\n".join(L) + "\n")
+    log(f"scout: {sum(1 for r in rows if r.get('fits'))} of {len(rows)} new campaigns fit")
+    return rows
+
+
 if __name__ == "__main__":
-    run(dry=bool(os.environ.get("SUBMIT_DRY")))
+    scout() if "scout" in sys.argv[1:] else run(dry=bool(os.environ.get("SUBMIT_DRY")))

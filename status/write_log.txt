@@ -1,10 +1,8 @@
 breaking run for 2026-10-21: 2 to write from 3 fact packs
 covered already: Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United
-local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
-local model ready
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Raindance by Dave & Tems: gemini-3.5-flash-lite, 0 warnings
+covered already: Raindance by Dave & Tems
 covered already: Street Fighter (2026 film)
-The Beatles debut album recorded in 12 hours 🎸: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 2 of 2: QD-096 Dave Raindance hits number one 🎶; QD-097 The Beatles Please Please Me secret history revealed 🎸
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-flash-latest": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3-flash-preview": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 1, "gemini-3.5-flash": 1, "gemini-3.5-flash-lite": 9}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+Mark Allen knocked out of Northern Ireland Open 🎱: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 1 of 2: QD-098 Mark Allen snooker career highlights 🎱
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"openrouter:thinkingmachines/inkling-small:free": "key refused (403)", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

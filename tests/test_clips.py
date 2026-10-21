@@ -74,3 +74,44 @@ if shutil.which("ffmpeg") and C.FONT:
 else:
     print("6 render skipped (no ffmpeg or font here)")
 print("clips ok")
+
+# 7. parts planner: whole episodes in order, split at sentence ends, never past max_s
+C.PLANS = pathlib.Path(SCRATCH) / "plans2"; C.PLANS.mkdir()
+ep_words = []
+for i in range(0, 130):      # 130 seconds of speech, a sentence end every 10 s
+    ep_words.append({"w": "word" + ("." if i % 10 == 9 else ""), "s": float(i), "e": i + 0.8})
+C.transcribe = lambda cid: ep_words
+C.CFG["campaigns"]["series-test"] = {"active": True, "subject": "Drama", "name": "t", "url": "x", "source": {"kind": "url", "url": "x", "multi": True, "label": "l"},
+                                     "rules": {"focus": "f", "on_screen": "o", "hashtags": ["#a"], "min_s": 15, "max_s": 55, "series": "parts"}}
+(C.PLANS / "series-test.json").write_text(json.dumps({"moments": [], "episodes": [{"n": 1, "start": 0.0, "end": 70.0}, {"n": 2, "start": 70.0, "end": 130.0}]}))
+pl = C.plan_parts("series-test")
+ms = pl["moments"]
+assert [m["id"] for m in ms] == ["series-test-e01p1", "series-test-e01p2", "series-test-e02p1", "series-test-e02p2"], [m["id"] for m in ms]
+assert all(m["end"] - m["start"] <= 56 for m in ms) and ms[0]["end"] == ms[1]["start"] and ms[1]["end"] == 70.0 and ms[3]["end"] == 130.0
+assert ms[0]["hook"] == "EPISODE 1, PART 1 OF 2" and ms[2]["of"] == 2
+print("7 parts ok")
+
+# 8. the clips channel's ceiling: rises after a full day, settles on a refusal
+C.STATE = pathlib.Path(SCRATCH) / "state"; C.CEILING = C.STATE / "ceiling.json"
+base = int(C.CFG.get("daily_clips", 10))
+assert C.daily_limit() == base and C.ceiling_learn(base - 1) == base and C.ceiling_learn(base) == base + 2
+assert C.ceiling_learn(base + 2) == base + 2                           # raised today: waits
+assert C.ceiling_learn(7, refused=True) == 7 and C.daily_limit() == 7
+print("8 ceiling ok")
+
+# 9. campaigns switch off on their end date or a spent page
+C.NOW = dt.datetime(2026, 11, 3, 12, 0, tzinfo=dt.timezone.utc)
+import requests as RQ
+class Resp:
+    def __init__(self, text): self.text = text
+RQ.get = lambda url, **kw: Resp("<div>Budget</div><span>$9,331 / $9,750</span><span>$41</span> remaining <p>Accepting clips</p>")
+C.CFG["campaigns"] = {"a": {"active": True, "ends": "2026-11-02", "url": "x"}, "b": {"active": True, "url": "https://contentrewards.com/c/campaigns/zz"},
+                      "c": {"active": True, "ends": "2026-12-01", "url": "x"}}
+orig_write = pathlib.Path.write_text
+C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir()
+assert C.check_campaigns() is True
+assert not C.CFG["campaigns"]["a"]["active"] and "ended" in C.CFG["campaigns"]["a"]["why_off"]
+assert not C.CFG["campaigns"]["b"]["active"] and "budget" in C.CFG["campaigns"]["b"]["why_off"] and C.CFG["campaigns"]["b"]["budget_left"] == 41
+assert C.CFG["campaigns"]["c"]["active"]
+print("9 switch-off ok")
+print("clips extras ok")

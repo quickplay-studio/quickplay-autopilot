@@ -101,6 +101,13 @@ def source(cid):
     if asset_sizes().get(name, 0) > 1_000_000: return name       # a tiny asset is a failed cut: made again
     s = c["source"]; WORK.mkdir(parents=True, exist_ok=True)
     raw = WORK / f"{cid}.raw"
+    if s.get("multi"):
+        seg = episodes_source(cid, c, s)
+        if gh("release", "view", RELEASE, check=False).returncode:
+            gh("release", "create", RELEASE, "--title", "Clips source segments", "--notes", "Campaign footage segments the clips line cuts from (permitted footage only).", "--prerelease")
+        gh("release", "upload", RELEASE, str(seg), "--clobber")
+        log(f"{cid}: {len(json.loads((PLANS / f'{cid}.json').read_text()).get('episodes') or [])} episodes joined and saved as release asset {name} ({seg.stat().st_size / 1e6:.0f} MB)")
+        return name
     if s["kind"] == "gdrive":
         import gdown
         log(f"{cid}: downloading the source file from Google Drive")
@@ -190,6 +197,50 @@ def frameio_download(url, out, shot=None):
     return out
 
 
+def frameio_assets(url):
+    """The asset view links inside a Frame.io share: one (the link itself) for a single file, else every file the
+    folder lists, in the page's order."""
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(); page = browser.new_page(viewport={"width": 1400, "height": 900})
+        page.goto(url, wait_until="domcontentloaded", timeout=120000); page.wait_for_timeout(6000)
+        final = page.url
+        links = []
+        for a in page.locator("a[href*='/view/']").all():
+            h = a.get_attribute("href") or ""
+            if h.startswith("/"): h = "https://next.frame.io" + h
+            if h and h not in links: links.append(h.split("?")[0])
+        browser.close()
+    if "/view/" in final and not links: return [final]
+    return links or [final]
+
+
+def episodes_source(cid, c, s):
+    """A folder of episodes (source "multi": true): each file downloaded, shrunk to 720p and joined in order into one
+    segment; the episode boundaries go into the plan file so the parts planner keeps every episode whole."""
+    links = frameio_assets(s["url"]) if s["kind"] == "frameio" else [s["url"]]
+    log(f"{cid}: {len(links)} files in the folder")
+    parts, bounds, t = [], [], 0.0
+    for n, link in enumerate(links, 1):
+        raw, small = WORK / f"{cid}-{n}.raw", WORK / f"{cid}-{n}.mp4"
+        frameio_download(link, raw)
+        run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(raw), "-vf", "scale=-2:720", "-r", "30", "-c:v", "libx264",
+             "-preset", "veryfast", "-crf", "22", "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-ac", "2", "-movflags", "+faststart", str(small)])
+        raw.unlink(missing_ok=True)
+        d = duration(small)
+        if d < 5: log(f"{cid}: file {n} is empty, skipped"); continue
+        bounds.append({"n": len(bounds) + 1, "start": round(t, 2), "end": round(t + d, 2), "link": link}); t += d; parts.append(small)
+    if not parts: raise RuntimeError(f"{cid}: no usable files in the folder")
+    lst = WORK / f"{cid}.txt"; lst.write_text("".join(f"file '{p}'\n" for p in parts))
+    seg = WORK / f"{cid}.mp4"
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", "-movflags", "+faststart", str(seg)])
+    PLANS.mkdir(parents=True, exist_ok=True)
+    pp = PLANS / f"{cid}.json"
+    plan_ = json.loads(pp.read_text()) if pp.exists() else {"moments": []}
+    plan_["episodes"] = bounds; pp.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    return seg
+
+
 def segment(cid):
     """The segment file on the work disk (downloaded from the release when missing)."""
     p = WORK / f"{cid}.mp4"
@@ -277,6 +328,41 @@ def plan(cid, n=8):
 
 
 # ----- making the clip --------------------------------------------------------------------------------------------------
+def plan_parts(cid):
+    """Series campaigns (rules "series"): every episode in order, split into consecutive parts of at most max_s seconds
+    at sentence ends, each part a moment titled with its episode and part number. Already planned episodes are kept."""
+    c = campaigns([cid])[cid]; r = c["rules"]
+    words = transcribe(cid)
+    p = PLANS / f"{cid}.json"
+    plan_ = json.loads(p.read_text()) if p.exists() else {"moments": []}
+    eps = plan_.get("episodes") or [{"n": 1, "start": 0.0, "end": words[-1]["e"] if words else duration(segment(cid))}]
+    have = {m.get("episode") for m in plan_["moments"]}
+    max_s, min_s = float(r.get("max_s", 55)), float(r.get("min_s", 15))
+    added = 0
+    for e in eps:
+        if e["n"] in have: continue
+        a, end = float(e["start"]), float(e["end"])
+        ends = [w["e"] for w in words if a < w["e"] < end and w["w"].endswith((".", "?", "!"))]
+        cuts = []
+        while end - a > max_s + 1:
+            hi = min(a + max_s, end - min_s)                    # the part after this one must still be long enough
+            cands = [x for x in ends if a + min_s <= x <= hi]
+            cut = max(cands) if cands else hi
+            cuts.append(cut); a = cut
+        cuts.append(end)
+        a = float(e["start"]); n = len(cuts)
+        for k, b in enumerate(cuts, 1):
+            if profane(words, a, b):
+                log(f"{cid}: episode {e['n']} part {k} has strong language, the episode is skipped"); break
+            plan_["moments"].append({"id": f"{cid}-e{e['n']:02d}p{k}", "episode": e["n"], "part": k, "of": n, "start": round(a, 2), "end": round(b, 2),
+                                     "hook": f"EPISODE {e['n']}, PART {k} OF {n}", "label": "", "title": f"{c['subject']} Episode {e['n']} Part {k}"[:70],
+                                     "planned": NOW.isoformat(timespec="minutes"), "model": "parts"})
+            a = b; added += 1
+    PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    log(f"{cid}: {added} parts planned, {len(plan_['moments'])} in all")
+    return plan_
+
+
 def ass_time(t):
     h, rem = divmod(max(0.0, t), 3600); m, s = divmod(rem, 60)
     return f"{int(h)}:{int(m):02d}:{s:05.2f}"
@@ -377,9 +463,11 @@ def make(cid, count=None):
     c = campaigns([cid])[cid]
     plan_p = PLANS / f"{cid}.json"
     plan_ = json.loads(plan_p.read_text()) if plan_p.exists() else {"moments": []}
+    series = bool((c.get("rules") or {}).get("series"))
     todo = [m for m in plan_["moments"] if not m.get("made") and not m.get("skipped")]
-    if not todo: plan_ = plan(cid); todo = [m for m in plan_["moments"] if not m.get("made") and not m.get("skipped")]
+    if not todo: plan_ = plan_parts(cid) if series else plan(cid); todo = [m for m in plan_["moments"] if not m.get("made") and not m.get("skipped")]
     want = int(count if count is not None else c.get("per_day", 3))
+    if series: want = sum(1 for m in todo if m.get("episode") in sorted({m.get("episode") for m in todo})[:want])   # whole episodes
     words = transcribe(cid)
     made = []
     for m in todo:
@@ -440,7 +528,9 @@ def upload(cid, mode=None):
         try:
             vid = Y.upload(yt, OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
         except Exception as e:
-            log(f"{m['id']}: upload failed: {type(e).__name__}: {str(e)[:200]}"); continue
+            log(f"{m['id']}: upload failed: {type(e).__name__}: {str(e)[:200]}")
+            if "uploadLimitExceeded" in str(e): ceiling_learn(scheduled_today(), refused=True); break
+            continue
         m.update(video=vid, url=f"https://youtube.com/shorts/{vid}", uploaded=NOW.isoformat(timespec="minutes"),
                  publish_at=publish_at or "private", mode=mode)
         where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))
@@ -526,6 +616,37 @@ def probe(url):
             log(f"  {key} at {m.start()}: {re.sub(chr(10), ' ', r.text[max(0, m.start() - 120): m.start() + 240])}")
 
 
+CEILING = STATE / "ceiling.json"
+
+
+def daily_limit():
+    """Clips a day: the learned ceiling (clips/state/ceiling.json) when there is one, else campaigns.json daily_clips."""
+    base = int(CFG.get("daily_clips", 10))
+    try: return max(1, int(json.loads(CEILING.read_text()).get("limit") or base))
+    except Exception: return base
+
+
+def ceiling_learn(scheduled, refused=False):
+    """Like the main channel's quota.learn: a refusal (uploadLimitExceeded) settles the ceiling at what YouTube took;
+    a filled day with no refusal in 48 hours and no rise in 24 hours lifts it by clips_limit_step, up to clips_limit_max."""
+    try: st = json.loads(CEILING.read_text())
+    except Exception: st = {}
+    limit, now = daily_limit(), NOW.isoformat(timespec="minutes")
+    def age(k):
+        try: return (NOW - dt.datetime.fromisoformat(st[k])).total_seconds() / 3600
+        except (KeyError, ValueError, TypeError): return 1e9
+    STATE.mkdir(parents=True, exist_ok=True)
+    if refused:
+        new = max(int(CFG.get("clips_limit_min", 4)), int(scheduled))
+        st.update(limit=new, refused_at=now, refused_with=int(scheduled)); CEILING.write_text(json.dumps(st, indent=1))
+        log(f"ceiling: YouTube refused an upload with {scheduled} today, the clips channel's limit is now {new}"); return new
+    top, step = int(CFG.get("clips_limit_max", 30)), int(CFG.get("clips_limit_step", 2))
+    if limit >= top or age("refused_at") < 48 or age("raised_at") < 24 or int(scheduled) < limit: return limit
+    new = min(top, limit + step)
+    st.update(limit=new, raised_at=now, raised_with=int(scheduled)); CEILING.write_text(json.dumps(st, indent=1))
+    log(f"ceiling: a full day with no refusal, the clips channel's limit rises {limit} to {new}"); return new
+
+
 def median_views(cid):
     """Median views of the campaign's public clips so far (clips/stats.csv), None until it has 3."""
     p = ROOT / "clips" / "stats.csv"
@@ -606,6 +727,34 @@ def scheduled_today():
     return n
 
 
+def check_campaigns():
+    """Every active campaign: off when its end date has passed, or (Content Rewards, public pages) when the page says it
+    is full or ended or has under clips_budget_floor dollars left. Writes clips/campaigns.json; the reason stays in why_off."""
+    import requests
+    changed = False
+    for cid, c in CFG["campaigns"].items():
+        if not c.get("active"): continue
+        why = ""
+        if c.get("ends") and str(NOW.date()) > str(c["ends"]): why = f"ended {c['ends']}"
+        url = c.get("url") or ""
+        if not why and "contentrewards.com/c/campaigns/" in url:
+            try:
+                html = requests.get(url, timeout=60, headers={"User-Agent": "Mozilla/5.0"}).text
+                text = re.sub(r"<[^>]+>", " ", html)
+                left = re.search(r"\$\s*([\d,]+)\s*(?:<[^>]*>\s*)*remaining", html) or re.search(r"\$\s*([\d,]+)\s*remaining", text)
+                if re.search(r"no longer accepting|campaign (has )?ended|campaign is full|not accepting (clips|submissions)", text, re.I): why = "the page says it is full or ended"
+                elif left and int(left.group(1).replace(",", "")) < int(CFG.get("clips_budget_floor", 50)): why = f"budget nearly spent (${left.group(1)} left)"
+                if left: c["budget_left"] = int(left.group(1).replace(",", "")); changed = True
+            except Exception as e:
+                log(f"{cid}: page check failed: {type(e).__name__}: {str(e)[:120]}")
+        if why:
+            c["active"] = False; c["why_off"] = f"Switched off {NOW.date()}: {why}."; c["off_since"] = str(NOW.date()); changed = True
+            log(f"{cid}: switched off ({why})")
+    if changed:
+        (ROOT / "clips" / "campaigns.json").write_text(json.dumps(CFG, indent=1, ensure_ascii=False) + "\n")
+    return changed
+
+
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
@@ -616,10 +765,16 @@ def main(argv):
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
     deadline = time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110)      # the job stops at 150: save what is made
     cs = campaigns()
+    if cmd in ("run", "prepare"):
+        try: check_campaigns()
+        except Exception as e: log("campaign check:", str(e)[:200])
+        cs = campaigns()
     if cmd == "run":
         try: review()
         except Exception as e: log("review:", str(e)[:200])
-        want = allocate(max(0, int(CFG.get("daily_clips", 10)) - scheduled_today()), count)
+        done_today = scheduled_today()
+        ceiling_learn(done_today)
+        want = allocate(max(0, daily_limit() - done_today), count)
         log("today's shares:", json.dumps(want))
         if not want: log("the day's number is already scheduled"); return
     for cid in (ids or list(cs)):
@@ -629,7 +784,8 @@ def main(argv):
         try:
             if cmd in ("run", "prepare", "source"): source(cid)
             n = want.get(cid, count or cs[cid].get("per_day", 3)) if cmd == "run" else (count or cs[cid].get("per_day", 3))
-            if cmd in ("plan", "prepare") or (cmd == "run" and unmade(cid) < n): plan(cid)
+            planner = plan_parts if (cs[cid].get("rules") or {}).get("series") else plan
+            if cmd in ("plan", "prepare") or (cmd == "run" and unmade(cid) < n): planner(cid)
             if cmd in ("run", "make"): make(cid, n)
             if cmd in ("run", "upload"): upload(cid)
         except Exception as e:

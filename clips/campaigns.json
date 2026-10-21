@@ -90,7 +90,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-11-06"
   },
   "tdr-stinkyasher": {
    "platform": "Vyro",
@@ -128,7 +129,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-11-02"
   },
   "tdr-mitch": {
    "platform": "Vyro",
@@ -166,7 +168,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-11-02"
   },
   "tdr-flamingo": {
    "platform": "Vyro",
@@ -204,7 +207,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-11-02"
   },
   "tdr-jenny": {
    "platform": "Vyro",
@@ -242,7 +246,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-10-29"
   },
   "valorant-microdrama": {
    "platform": "Vyro",
@@ -255,14 +260,15 @@
    },
    "name": "VALORANT Microdrama series",
    "url": "https://app.vyro.com/campaigns",
-   "active": false,
-   "per_day": 3,
+   "active": true,
+   "per_day": 1,
    "pay_per_1k": 1.5,
    "subject": "VALORANT",
    "source": {
     "kind": "frameio",
     "url": "https://f.io/ySICjlo0",
-    "label": "VALORANT's microdrama series"
+    "label": "VALORANT's microdrama series",
+    "multi": true
    },
    "rules": {
     "focus": "Each episode in sequence as Part 1, Part 2, Part 3 (the story must stay in order), or playful brand-safe memes from it; never trash VALORANT or its characters.",
@@ -280,9 +286,10 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English",
-    "series": "Split an episode into Part 1, Part 2, Part 3 in order, each a clip of its own, titled with the part number."
+    "series": "Each episode in order as Part 1, Part 2, Part 3 (whole episodes, nothing left out, nothing reordered)."
    },
-   "why_off": "Its footage link is a folder of episodes and its rule is whole episodes in order (Part 1, 2, 3) or memes; the line downloads single files and picks moments. Switches on once the folder download and the in-order split are built."
+   "ends": "2026-11-02",
+   "per_day_note": "per_day counts whole episodes for a series campaign (each is 2 or 3 parts)"
   },
   "valorant-champs": {
    "platform": "Vyro",
@@ -319,7 +326,8 @@
     "min_s": 15,
     "max_s": 55,
     "language": "English"
-   }
+   },
+   "ends": "2026-10-30"
   },
   "sega-metaphor": {
    "name": "SEGA Metaphor: ReFantazio Switch 2 Demo Clipping (Clipping Culture)",
@@ -425,5 +433,10 @@
   }
  },
  "daily_clips": 10,
- "daily_note": "Clips a day across every active campaign (the clips channel's own upload ceiling learns like the main one); each campaign gets a share by pay times its measured views (clips/insights.json), capped by per_day."
+ "daily_note": "Clips a day across every active campaign (the clips channel's own upload ceiling learns like the main one); each campaign gets a share by pay times its measured views (clips/insights.json), capped by per_day.",
+ "clips_limit_step": 2,
+ "clips_limit_max": 30,
+ "clips_limit_min": 4,
+ "clips_budget_floor": 50,
+ "ceiling_note": "The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips, +clips_limit_step after each full day with no refusal, settles where YouTube refuses (uploadLimitExceeded). Campaigns switch off on their end date or when their public page says full, ended or under clips_budget_floor dollars left."
 }

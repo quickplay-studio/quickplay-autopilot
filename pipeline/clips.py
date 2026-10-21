@@ -580,6 +580,8 @@ def make(cid, count=None):
     made = []
     for m in todo:
         if len(made) >= want: break
+        bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
+        if bad: m["skipped"] = f"profanity: {', '.join(bad[:3])}"; log(f"{m['id']}: skipped: {m['skipped']}"); continue
         try:
             out = make_clip(cid, m, words)
             f = frame_of(out, m)

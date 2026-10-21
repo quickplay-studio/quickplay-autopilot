@@ -34,7 +34,7 @@ jobs:
         with: { python-version: '3.12' }
       - run: |
           sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
-          pip install -q requests cryptography gdown faster-whisper playwright google-api-python-client==2.* google-auth==2.* tzdata
+          pip install -q requests cryptography gdown faster-whisper playwright Pillow google-api-python-client==2.* google-auth==2.* tzdata
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || python -m playwright install chromium
           sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
       - name: Clips

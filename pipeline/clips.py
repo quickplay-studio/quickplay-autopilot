@@ -356,6 +356,23 @@ def unmade(cid):
     return sum(1 for m in json.loads(p.read_text()).get("moments") or [] if not m.get("made") and not m.get("skipped"))
 
 
+def dark(frame):
+    """True when the picture band of a frame (the middle third) is nearly black: a stream outage, a loading screen."""
+    try:
+        from PIL import Image, ImageStat
+        im = Image.open(frame).convert("L"); w, h = im.size
+        return ImageStat.Stat(im.crop((0, int(h * 0.34), w, int(h * 0.66)))).mean[0] < 22
+    except Exception: return False
+
+
+def frame_of(out, m):
+    frames = ROOT / "clips" / "frames"; frames.mkdir(parents=True, exist_ok=True)
+    f = frames / f"{m['id']}.jpg"
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{(m['end'] - m['start']) * 0.3:.2f}", "-i", str(out),
+                    "-frames:v", "1", "-vf", "scale=540:960", "-q:v", "6", str(f)])
+    return f
+
+
 def make(cid, count=None):
     c = campaigns([cid])[cid]
     plan_p = PLANS / f"{cid}.json"
@@ -365,13 +382,14 @@ def make(cid, count=None):
     want = int(count if count is not None else c.get("per_day", 3))
     words = transcribe(cid)
     made = []
-    for m in todo[:want]:
+    for m in todo:
+        if len(made) >= want: break
         try:
             out = make_clip(cid, m, words)
+            f = frame_of(out, m)
+            if dark(f):             # a black screen (an outage, a loading screen): not a clip
+                m["skipped"] = "dark picture"; out.unlink(missing_ok=True); log(f"{m['id']}: skipped: dark picture"); continue
             m["made"] = NOW.isoformat(timespec="minutes"); m["file"] = out.name; made.append(m)
-            frames = ROOT / "clips" / "frames"; frames.mkdir(parents=True, exist_ok=True)
-            subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{(m['end'] - m['start']) * 0.3:.2f}", "-i", str(out),
-                            "-frames:v", "1", "-vf", "scale=540:960", "-q:v", "6", str(frames / f"{m['id']}.jpg")])
             log(f"{m['id']}: made ({m['end'] - m['start']:.0f} s) {m['title']}")
         except Exception as e:
             m["skipped"] = f"{type(e).__name__}: {e}"[:200]; log(f"{m['id']}: skipped: {m['skipped']}")
@@ -552,10 +570,11 @@ def review():
             try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
             except ValueError: continue
             bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
+            if not bad and dark(ROOT / "clips" / "frames" / f"{m['id']}.jpg"): bad = ["dark picture"]
             if due > NOW and bad:
                 try:
                     clips_client().videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute()
-                    m["pulled"] = f"profanity: {', '.join(bad[:3])}"; changed = True; pulled += 1
+                    m["pulled"] = ("dark picture" if bad == ["dark picture"] else f"profanity: {', '.join(bad[:3])}"); changed = True; pulled += 1
                     log(f"{m['id']}: pulled before publishing ({m['pulled']})")
                 except Exception as e:
                     log(f"{m['id']}: could not pull: {type(e).__name__}: {str(e)[:150]}")

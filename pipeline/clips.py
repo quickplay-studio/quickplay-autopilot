@@ -418,7 +418,12 @@ def probe(url):
                 a = requests.get(api, headers={**ua, "Accept": "application/json"}, timeout=30)
                 log(f"  api {api}: {a.status_code} {a.text[:1500]}")
             except Exception as e: log(f"  api {api}: {e}")
-    log("  head:", re.sub(r"\s+", " ", r.text[:3000]))
+    dump = ROOT / "status" / ("probe_" + re.sub(r"[^A-Za-z0-9]+", "_", url)[-40:] + ".html")
+    dump.write_text(r.text)
+    log("  html saved to", dump.name)
+    for key in ("download", "original", "media_links", "h264", "mp4", "stream", "token"):
+        for m in list(re.finditer(key, r.text))[:3]:
+            log(f"  {key} at {m.start()}: {re.sub(chr(10), ' ', r.text[max(0, m.start() - 120): m.start() + 240])}")
 
 
 def main(argv):

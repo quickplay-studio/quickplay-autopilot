@@ -41,7 +41,7 @@ The transcript is a list of lines with their start and end seconds:
 Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line, 8 words or fewer, in capitals OK, what
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
-comments that viewers can answer, under 90 characters", "why": "one line"}}]}}"""
+comments that viewers can answer, under 90 characters, UK English spelling (favourite, colour)", "why": "one line"}}]}}"""
 
 
 def log(*a): print(*a, flush=True)
@@ -826,7 +826,7 @@ def question_for(cid, c, m):
         said = " ".join(w["w"] for w in words if m["start"] <= w["s"] <= m["end"])[:1500]
         ans, _ = factpack.gemini(f"A YouTube Short of {c['subject']} shows this moment (on-screen hook: {m.get('hook', '')}). What was said: {said}\n"
                                  "Write one short question for the comments that viewers can answer: under 90 characters, family friendly, "
-                                 'no spoilers, no strong language. Return {"question": "..."}', None, timeout=60, temperature=0.4, lite=True)
+                                 'no spoilers, no strong language, UK English spelling (favourite, colour). Return {"question": "..."}', None, timeout=60, temperature=0.4, lite=True)
         if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
         q = re.sub(r"[–—]", "-", str((ans or {}).get("question") or "")).strip()[:90]
         if PROFANE.search(q): q = ""

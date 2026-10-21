@@ -394,16 +394,16 @@ def ass_time(t):
 def ass_escape(s): return s.replace("\\", "\\\\").replace("{", "(").replace("}", ")")
 
 
-def captions(words, a, b, path, style="lines", y=430):
+def captions(words, a, b, path, style="lines", y=430, top=False):
     """Captions as an ASS file. "lines": three or four words at a time below the picture. "karaoke": the same groups
     with each word lighting up yellow as it is spoken (the style every big clipping channel uses), placed at `y`
-    pixels from the bottom of the 1920-pixel frame."""
+    pixels from the bottom of the 1920-pixel frame (from the top with `top`, when the person is low in the picture)."""
     sel = [w for w in words if w["s"] >= a - 0.2 and w["e"] <= b + 0.2]
     size = 64 if style == "lines" else 70
     head = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, "
             "StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            f"Style: Cap,DejaVu Sans,{size},&H0000FFFF,&H00FFFFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5,2,2,60,60,{y},1\n\n"
+            f"Style: Cap,DejaVu Sans,{size},&H0000FFFF,&H00FFFFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5,2,{8 if top else 2},60,60,{y},1\n\n"
             "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
     if style == "lines":      # plain white: PrimaryColour is what shows when nothing is sung
         head = head.replace("&H0000FFFF,&H00FFFFFF", "&H00FFFFFF,&H0000FFFF")
@@ -493,10 +493,14 @@ def portrait(seg):
 
 def layout_filters(layout, face):
     """The ffmpeg graph that turns the landscape picture [0:v] into the 1080x1920 canvas [v1]: "letterbox" (the picture
-    centred over its own blurred copy), "face" (a 9:16 window of the picture following the face), "split" (the face
-    on top, the whole picture below). face: (x, y, w, h) fractions, or None (then letterbox)."""
+    centred over its own blurred copy), "full" (the picture fills the screen: a 9:16 window on the person, or the middle,
+    the text placed clear of the person), "face" (the window on the face, text in fixed places), "split" (the face on
+    top, the whole picture below). face: (x, y, w, h) fractions, or None (then letterbox for face and split)."""
     if layout in ("face", "split") and not face: layout = "letterbox"
     blur = "[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:3,eq=brightness=-0.15[bgb];"
+    if layout == "full":                                    # the picture fills the screen, the window on the person (or the middle)
+        cx = min(max(face[0] + face[2] / 2, 0.2), 0.8) if face else 0.5
+        return (f"[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920:x=min(max(iw*{cx:.3f}-540\\,0)\\,iw-1080):y=0[v1];", layout)
     if layout == "face":
         cx = min(max(face[0] + face[2] / 2, 0.2), 0.8)          # the window stays inside the picture
         return (f"[0:v]crop=w=ih*9/16:h=ih:x=min(max(iw*{cx:.3f}-ih*9/32\\,0)\\,iw-ih*9/16):y=0,scale=1080:1920[v1];", layout)
@@ -510,7 +514,7 @@ def layout_filters(layout, face):
     return (f"[0:v]split=2[bg][fg];{blur}[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];", "letterbox")
 
 
-TESTS = {"layout": ["letterbox", "face", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
+TESTS = {"layout": ["letterbox", "full", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
          "length": ["as planned", "short"], "title": ["subject first", "hook first"]}
 
 
@@ -547,8 +551,9 @@ def make_clip(cid, m, words):
     tests = m.get("tests") or test_plan(m["id"])
     for t in TESTS:                                     # CLIPS_LAYOUT, CLIPS_CAPTIONS, CLIPS_PUNCH force an arm (tests)
         if os.environ.get(f"CLIPS_{t.upper()}") in TESTS[t]: tests[t] = os.environ[f"CLIPS_{t.upper()}"]
-    if (c.get("rules") or {}).get("full_frame") or portrait(seg): tests["layout"] = "letterbox"    # the whole picture must stay (a rule, or a vertical source)
-    face = face_box(seg, a, b) if tests["layout"] in ("face", "split") else None
+    if (c.get("rules") or {}).get("full_frame"): tests["layout"] = "letterbox"       # the whole picture must stay (a rule)
+    elif portrait(seg) and tests["layout"] != "full": tests["layout"] = "letterbox"   # a vertical source: whole, or filling the screen
+    face = face_box(seg, a, b) if tests["layout"] in ("face", "split", "full") else None
     graph, layout = layout_filters(tests["layout"], face)
     if layout != tests["layout"]: log(f"{m['id']}: {tests['layout']} layout asked, no steady face, letterbox instead")
     elif face: log(f"{m['id']}: {layout} layout, face at x {face[0]:.2f} y {face[1]:.2f} size {face[3]:.2f}")
@@ -563,10 +568,16 @@ def make_clip(cid, m, words):
         h = m["hook"].capitalize() if m["hook"].isupper() else m["hook"]
         m.setdefault("title_planned", m["title"]); m["title"] = f"{h} | {c['subject']}"[:70]
     else: tests["title"] = "subject first"
-    cap_y = {"letterbox": 430, "face": 520, "split": 140}[layout]        # ASS margin from the bottom
-    ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass, tests["captions"], cap_y)
-    credit = f"Clip from {c['subject']}, posted with permission"
+    cap_y, cap_top = {"letterbox": 430, "face": 520, "split": 140, "full": 300}[layout], False     # ASS margin from the bottom
     hook_y = 250 if layout != "split" else 60
+    if layout == "full":                                    # the text goes where the person is not
+        fy = face[1] + face[3] / 2 if face else 0.5
+        if fy < 0.42: hook_y = 1200                         # person high: hook and captions in the lower third
+        elif fy > 0.62: hook_y, cap_y, cap_top = 120, 330, True      # person low: everything at the top
+        else: hook_y = 120                                  # person in the middle: hook at the top, captions at the foot
+        log(f"{m['id']}: full layout, person at y {fy:.2f}, hook at {hook_y}, captions {'top' if cap_top else 'bottom'}")
+    ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass, tests["captions"], cap_y, cap_top)
+    credit = f"Clip from {c['subject']}, posted with permission"
     label_y = hook_y + 190
     peak = m.get("peak")
     if tests["punch"] == "zoom" and peak and a < float(peak) < b - 1.5:    # 1.5 seconds at 1.12x on the peak moment, picture only

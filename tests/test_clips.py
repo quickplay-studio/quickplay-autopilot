@@ -122,6 +122,9 @@ C.CFG["campaigns"] = json.loads(pathlib.Path(REPO_DIR + "/clips/campaigns.json")
 g, lay = C.layout_filters("face", (0.5, 0.3, 0.1, 0.15)); assert lay == "face" and "crop=w=ih*9/16" in g
 g, lay = C.layout_filters("split", (0.5, 0.3, 0.1, 0.15)); assert lay == "split" and "overlay=0:1080" in g
 g, lay = C.layout_filters("split", None); assert lay == "letterbox"
+g, lay = C.layout_filters("full", None); assert lay == "full" and "force_original_aspect_ratio=increase,crop=1080:1920:x=min(max(iw*0.500-540" in g
+g, lay = C.layout_filters("full", (0.7, 0.1, 0.1, 0.15)); assert "iw*0.750-540" in g
+C.captions(words, 9.0, 18.0, ass, "lines", 330, True); assert ",8,60,60,330,1" in ass.read_text()
 tp = C.test_plan("x-01"); assert set(tp) == set(C.TESTS) and all(tp[t] in C.TESTS[t] for t in tp)
 C.captions(words, 9.0, 18.0, ass, "karaoke", 500)
 k = ass.read_text(); assert "\\k" in k and "MarginV" in k and ",500,1" in k
@@ -132,9 +135,9 @@ C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir(exist_ok=True)
 C.add_rows([rw]); rows = list(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))
 assert rows[0]["platform"] == "youtube" and rows[1]["platform"] == "instagram" and rows[1]["video"] == "https://instagram.com/p/x", rows
 stat_rows = [{"campaign": "a", "privacy": "public", "hours_public": 30, "views": v, "test_layout": l, "test_captions": "lines", "test_punch": "none"}
-             for v, l in ((100, "face"), (120, "face"), (140, "face"), (50, "letterbox"), (60, "letterbox"), (40, "letterbox"))]
+             for v, l in ((100, "full"), (120, "full"), (140, "full"), (50, "letterbox"), (60, "letterbox"), (40, "letterbox"))]
 ins = C.insights(stat_rows)
-assert ins["tests"]["layout"]["best"] == "face" and ins["tests"]["captions"]["best"] == "lines" and ins["campaigns"]["a"]["n"] == 6, ins["tests"]
+assert ins["tests"]["layout"]["best"] == "full" and ins["tests"]["captions"]["best"] == "lines" and ins["campaigns"]["a"]["n"] == 6, ins["tests"]
 print("10 layouts, captions, rows, insights ok")
 print("clips extras 2 ok")
 

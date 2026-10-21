@@ -143,3 +143,8 @@ forbids it for that creator's content.
   Stats and insights pick them up as test_length and test_title; the dashboard adds length and hook-word bands.
 - The day's number is filled: after per_day each, campaigns take one more in turn up to per_day_max (8) until the
   limit is met (series campaigns stay at per_day). The ceiling rises 4 a day (clips_limit_step) up to 60.
+- Charlie: full portrait videos with the text over the video, clear of the main feature. Layout "full" (replacing "face"
+  in the test arms): the picture fills the screen, the 9:16 window on the person (the middle when no face is steady,
+  vertical sources fill the screen as they are), and the text goes where the person is not: person high in the picture,
+  hook and captions in the lower third; person low, hook and captions at the top; person in the middle, hook at the top
+  and captions at the foot. Campaigns with full_frame rules (Speed's suitcase) keep letterbox.

@@ -1,3 +1,99 @@
 {
- "moments": []
+ "moments": [
+  {
+   "id": "valorant-champs-01",
+   "start": 1929.7,
+   "end": 1954.4,
+   "hook": "SACY RANTS ABOUT NEON AND THE META",
+   "label": "Sacy",
+   "title": "VALORANT Champs Shanghai Sacy Rants About Neon Meta",
+   "why": "Sacy gives a blunt, unfiltered take on why Neon's mechanics break the FPS concept, providing a strong debate point.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview",
+   "made": "2026-10-21T06:30+00:00",
+   "file": "valorant-champs-01.mp4",
+   "video": "U3L9eqnfgNk",
+   "url": "https://youtube.com/shorts/U3L9eqnfgNk",
+   "uploaded": "2026-10-21T06:30+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "valorant-champs-02",
+   "start": 2181.7,
+   "end": 2211.4,
+   "hook": "CHINESE ROSTER LEAKS IN THE BATHROOM",
+   "label": "Bren",
+   "title": "VALORANT Champs Shanghai Bren Overhears Roster Leaks",
+   "why": "A hilarious anecdote about Bren overhearing massive roster rumors while in a public mall bathroom.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-03",
+   "start": 3880.7,
+   "end": 3906.4,
+   "hook": "BABYBAY'S SPIRIT BOMB SPEECH",
+   "label": "Babybay",
+   "title": "VALORANT Champs Shanghai Babybay Spirit Bomb Speech",
+   "why": "A high-energy, quoteable moment where Babybay describes his plan to gather the crowd's energy like a Dragon Ball Z character.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-04",
+   "start": 3339.7,
+   "end": 3360.4,
+   "hook": "PLAYING WITHOUT A CONTRACT",
+   "label": "Babybay",
+   "title": "VALORANT Champs Shanghai Babybay on Playing Under Pressure",
+   "why": "A raw and honest moment about the reality of 'no pressure' when you are playing for your career future.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-05",
+   "start": 7715.7,
+   "end": 7751.4,
+   "hook": "BREN'S DEFENSE OF JAWGEMO",
+   "label": "Bren",
+   "title": "VALORANT Champs Shanghai Bren Defends Jawgemo",
+   "why": "A passionate rant defending a player's selflessness and utility usage over their individual stats.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-06",
+   "start": 1300.7,
+   "end": 1323.4,
+   "hook": "THE 300,000 BATS OF AUSTIN",
+   "label": "Bren",
+   "title": "VALORANT Champs Shanghai Bren's Austin Bat Idea",
+   "why": "A funny, weird suggestion for a podcast backdrop involving hundreds of thousands of bats in Texas.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-07",
+   "start": 1768.7,
+   "end": 1792.4,
+   "hook": "SACY CARRIES RIOT'S HEAD OF ESPORTS",
+   "label": "Sacy",
+   "title": "VALORANT Champs Shanghai Sacy Carries Leo Faria",
+   "why": "A funny reveal that Sacy had to use an Odin to carry the Head of VALORANT Esports in a ranked game.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-08",
+   "start": 8480.7,
+   "end": 8514.4,
+   "hook": "THE LEAST ETHICAL AWARD EVER",
+   "label": "Wyatt",
+   "title": "VALORANT Champs Shanghai Wyatt's Weekly Award",
+   "why": "Wyatt jokingly admits to being 'bought off' for his weekly award, ending the segment on a funny, cynical note.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  }
+ ]
 }

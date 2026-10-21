@@ -1,3 +1,99 @@
 {
- "moments": []
+ "moments": [
+  {
+   "id": "tdr-stinkyasher-01",
+   "start": 80.7,
+   "end": 118.4,
+   "hook": "WHY WOULD THEY VOTE ME OUT",
+   "label": "",
+   "title": "StinkyAsher Competes In Roblox Total Drama",
+   "why": "StinkyAsher gives a hilarious confident speech about being too cute to vote out before placing second in the rock climb.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash",
+   "made": "2026-10-21T06:30+00:00",
+   "file": "tdr-stinkyasher-01.mp4",
+   "video": "JxTV6XNDKBI",
+   "url": "https://youtube.com/shorts/JxTV6XNDKBI",
+   "uploaded": "2026-10-21T06:30+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-stinkyasher-02",
+   "start": 373.7,
+   "end": 412.4,
+   "hook": "ACCIDENTALLY HITTING HEATHER IN THE FACE",
+   "label": "",
+   "title": "StinkyAsher Battles Heather In Roblox Total Drama",
+   "why": "StinkyAsher throws a ball directly at Heather's head and responds with iconic sarcastic hair comments.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-03",
+   "start": 620.7,
+   "end": 658.4,
+   "hook": "MAKING A SECRET FAKE ALLIANCE",
+   "label": "",
+   "title": "StinkyAsher Makes An Alliance In Roblox Total Drama",
+   "why": "StinkyAsher pretends to make amends and team up with enemy Duncan while secretly planning his downfall.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-04",
+   "start": 803.7,
+   "end": 836.4,
+   "hook": "GETTING BLINDSIDED AT VOTE OUT",
+   "label": "DUNCAN",
+   "title": "StinkyAsher Gets Blindsided In Roblox Total Drama",
+   "why": "StinkyAsher gets unexpectedly eliminated by Duncan and delivers an immediate passionate reaction.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-05",
+   "start": 844.7,
+   "end": 888.4,
+   "hook": "HAUNTING MY ENEMIES AS A GHOST",
+   "label": "",
+   "title": "StinkyAsher Haunts Duncan In Roblox Total Drama",
+   "why": "StinkyAsher argues with Duncan as a ghost and promises to haunt him for the rest of the game.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-06",
+   "start": 1234.7,
+   "end": 1272.4,
+   "hook": "EXPOSING THE BIGGEST SNAKE IN THE GAME",
+   "label": "EVA",
+   "title": "StinkyAsher Exposes Eva In Roblox Total Drama",
+   "why": "StinkyAsher hilariously calls out Eva's constant whispering and gameplay backstabbing to the entire group.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-07",
+   "start": 1034.7,
+   "end": 1066.4,
+   "hook": "TRYING NOT TO GET BETRAYED AGAIN",
+   "label": "",
+   "title": "StinkyAsher Hides In Roblox Total Drama",
+   "why": "StinkyAsher bonds with another player while hiding from hunters in a chaotic minigame.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-08",
+   "start": 1365.7,
+   "end": 1413.4,
+   "hook": "SHOCKING SECOND ROUND ELIMINATION REACTION",
+   "label": "",
+   "title": "StinkyAsher Reacts To Elimination In Roblox",
+   "why": "StinkyAsher gets voted out in round two and delivers a dramatic final rant blaming haters and jealousy.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3.6-flash"
+  }
+ ]
 }

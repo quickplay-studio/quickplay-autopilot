@@ -1,3 +1,99 @@
 {
- "moments": []
+ "moments": [
+  {
+   "id": "tdr-flamingo-01",
+   "start": 1008.7,
+   "end": 1043.4,
+   "hook": "WHY CAN YOU VOTE FOR YOURSELF?",
+   "label": "Trent",
+   "title": "Flamingo Votes Himself Out of Total Drama",
+   "why": "This is the biggest comedic payoff where Flamingo accidentally eliminates himself due to name confusion.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview",
+   "made": "2026-10-21T06:30+00:00",
+   "file": "tdr-flamingo-01.mp4",
+   "video": "YBRW196n2JU",
+   "url": "https://youtube.com/shorts/YBRW196n2JU",
+   "uploaded": "2026-10-21T06:30+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-flamingo-02",
+   "start": 225.7,
+   "end": 255.4,
+   "hook": "WHY ARE THEY GOING AGAINST ME?",
+   "label": "Sadie",
+   "title": "Flamingo Gets Eliminated as Sadie",
+   "why": "A dramatic and funny reaction to being voted out early while being insulted by the other players.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-03",
+   "start": 59.7,
+   "end": 89.4,
+   "hook": "IS THAT FORESHADOWING A MUTINY?",
+   "label": "Katie & Sadie",
+   "title": "Flamingo Tries to Team Up in Roblox Total Drama",
+   "why": "Funny interaction where he realizes his 'best friend' Katie is actually on the opposing team.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-04",
+   "start": 1312.7,
+   "end": 1341.4,
+   "hook": "DIE HEATHER DIE!",
+   "label": "Heather",
+   "title": "Flamingo Celebrates Heather's Loss",
+   "why": "High energy reaction and dramatic celebration when his main rival in the game finally fails.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-05",
+   "start": 331.7,
+   "end": 368.4,
+   "hook": "I COULD BE YOUR MINION",
+   "label": "Heather",
+   "title": "Flamingo Begs Heather for Mercy",
+   "why": "A funny moment of desperation where he tries to suck up to the meanest player to survive.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-06",
+   "start": 1160.7,
+   "end": 1190.4,
+   "hook": "I'M DOING A PUBLIC ACCUSAL",
+   "label": "Beth",
+   "title": "Flamingo Accuses Beth in Total Drama",
+   "why": "Showcases the strategic and dramatic 'safe chat' manipulation Flamingo uses to stay in the game.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-07",
+   "start": 615.7,
+   "end": 642.4,
+   "hook": "OWEN IS ABOUT TO GIVE BIRTH",
+   "label": "Owen",
+   "title": "Flamingo Reacts to Giant Owen in Roblox",
+   "why": "A classic weird Flamingo observation about the character scaling in the Roblox game.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-08",
+   "start": 1884.7,
+   "end": 1912.4,
+   "hook": "I HATE HEATHER!",
+   "label": "Heather",
+   "title": "Flamingo's Final Message to Heather",
+   "why": "The final dramatic payoff of his rivalry with the character Heather at the end of the tournament.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  }
+ ]
 }

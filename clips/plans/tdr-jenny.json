@@ -1,3 +1,88 @@
 {
- "moments": []
+ "moments": [
+  {
+   "id": "tdr-jenny-01",
+   "start": 4146.7,
+   "end": 4171.4,
+   "hook": "JENNY HOYOS WINS THE TOURNAMENT",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Wins the Total Drama Roblox Tournament",
+   "why": "The ultimate payoff of the stream where Jenny is officially crowned the winner by the show's creator.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview",
+   "made": "2026-10-21T06:30+00:00",
+   "file": "tdr-jenny-01.mp4",
+   "video": "Y_gJbShVkoM",
+   "url": "https://youtube.com/shorts/Y_gJbShVkoM",
+   "uploaded": "2026-10-21T06:30+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-jenny-02",
+   "start": 109.7,
+   "end": 138.4,
+   "hook": "TECHNICAL DIFFICULTIES ALREADY?",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Struggles with Her Stream Setup",
+   "why": "A funny and relatable moment of Jenny struggling with her camera and mic right at the start.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-03",
+   "start": 753.7,
+   "end": 787.4,
+   "hook": "JENNY'S GASLIGHTING STRATEGY",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Tries to Gaslight Her Roblox Team",
+   "why": "A hilarious reaction where Jenny realizes she's in last place and considers gaslighting her team.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-04",
+   "start": 2646.7,
+   "end": 2684.4,
+   "hook": "GIRL CODE ELIMINATION",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Uses Girl Code in Roblox Voting",
+   "why": "Jenny uses 'girl code' as a dramatic reason to target Heather for elimination.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-05",
+   "start": 1088.7,
+   "end": 1113.4,
+   "hook": "BETTER THAN HER PARENTS?",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Reacts to a Wild Fan Comment",
+   "why": "A funny fan interaction where a viewer claims to love Jenny more than their own parents.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-06",
+   "start": 3172.7,
+   "end": 3201.4,
+   "hook": "CODY IS SPEEDRUNNING",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Reacts to a Pro Roblox Player",
+   "why": "Jenny's shocked reaction to an opponent's intense focus and skill during a challenge.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-07",
+   "start": 4464.7,
+   "end": 4512.4,
+   "hook": "THE BIGGEST RAID EVER",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Gets a Massive Stream Raid",
+   "why": "A genuine and wholesome reaction to receiving a massive raid from another streamer.",
+   "planned": "2026-10-21T06:30+00:00",
+   "model": "gemini-3-flash-preview"
+  }
+ ]
 }

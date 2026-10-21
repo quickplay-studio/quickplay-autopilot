@@ -161,7 +161,8 @@
    "title": "Flamingo's Final Message to Heather",
    "why": "The final dramatic payoff of his rivalry with the character Heather at the end of the tournament.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "skipped": "profanity: Fuck"
   },
   {
    "id": "tdr-flamingo-09",
@@ -172,7 +173,20 @@
    "title": "Flamingo Hates His New Roblox Character",
    "why": "A high-energy reaction to being assigned a character he dislikes right at the start.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T11:11+00:00",
+   "file": "tdr-flamingo-09.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-09.mp4",
+   "video": "qCwn5Lb6yrY",
+   "url": "https://youtube.com/shorts/qCwn5Lb6yrY",
+   "uploaded": "2026-10-21T11:11+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
   }
  ]
 }

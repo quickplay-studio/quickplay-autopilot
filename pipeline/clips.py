@@ -502,7 +502,7 @@ def layout_filters(layout, face):
         return (f"[0:v]crop=w=ih*9/16:h=ih:x=min(max(iw*{cx:.3f}-ih*9/32\\,0)\\,iw-ih*9/16):y=0,scale=1080:1920[v1];", layout)
     if layout == "split":
         cx, cy = face[0] + face[2] / 2, face[1] + face[3] / 2
-        side = min(max(face[3] * 3.2, 0.45), 1.0)              # a square around the head, with room for the shoulders
+        side = min(max(face[3] * 2.8, 0.3), 1.0)               # a square around the head, with room for the shoulders
         return (f"[0:v]split=2[cam][game];"
                 f"[cam]crop=w=min(ih*{side:.3f}\\,iw):h=min(ih*{side:.3f}\\,iw):x=min(max(iw*{cx:.3f}-ih*{side / 2:.3f}\\,0)\\,iw-min(ih*{side:.3f}\\,iw)):"
                 f"y=min(max(ih*{cy:.3f}-ih*{side / 2:.3f}\\,0)\\,ih-min(ih*{side:.3f}\\,iw)),scale=1080:1080[camS];"

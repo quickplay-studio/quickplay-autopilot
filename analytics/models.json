@@ -1,7 +1,11 @@
 {
- "updated": "2026-10-21T08:45+00:00",
+ "updated": "2026-10-21T13:28+00:00",
  "writers": {
   "gemini:gemini-3-flash-preview": {
+   "n": 0,
+   "shorts": 3
+  },
+  "gemini:gemini-3.5-flash": {
    "n": 0,
    "shorts": 1
   },
@@ -9,9 +13,13 @@
    "n": 0,
    "shorts": 4
   },
+  "gemini:gemini-flash-latest": {
+   "n": 0,
+   "shorts": 2
+  },
   "groq:openai/gpt-oss-120b": {
    "n": 0,
-   "shorts": 1
+   "shorts": 2
   }
  },
  "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts."

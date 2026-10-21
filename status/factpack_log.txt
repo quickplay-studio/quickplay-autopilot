@@ -1,9 +1,11 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Raindance by Dave & Tems: 0 verified, 1 one-source, 2 pages
-ChatGPT: 4 verified, 1 one-source, 3 pages
-Street Fighter (2026 film): 3 verified, 5 one-source, 3 pages
+glee: 6 verified, 0 one-source, 4 pages
+bob iger: 0 verified, 3 one-source, 2 pages
+Street Fighter (2026 film): 9 verified, 1 one-source, 2 pages
+Barbara Palvin: 0 verified, 4 one-source, 1 pages
 The Victoria’s Secret Fashion Show 2026: 0 verified, 6 one-source, 1 pages
-Above the Below: 0 verified, 0 one-source, 3 pages
-Olivia Rodrigo: 0 verified, 5 one-source, 1 pages
-6 packs, 7 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 7}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+Shrek 2 Remastered: 0 verified, 2 one-source, 2 pages
+K/DA: 0 verified, 3 one-source, 2 pages
+Olivia Rodrigo: 0 verified, 10 one-source, 1 pages
+8 packs, 15 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 9}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

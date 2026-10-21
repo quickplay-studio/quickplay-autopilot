@@ -52,6 +52,14 @@ def secs(t):
     return sum(v * 60 ** i for i, v in enumerate(reversed(p)))
 
 
+def duration(path):
+    """Seconds of media in a file (ffprobe), 0 when unreadable."""
+    try:
+        return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                                    capture_output=True, text=True).stdout.strip() or 0)
+    except ValueError: return 0.0
+
+
 def run(cmd, **kw):
     r = subprocess.run(cmd, capture_output=True, text=True, **kw)
     if r.returncode: raise RuntimeError(f"{cmd[0]} failed: {(r.stderr or r.stdout)[-800:]}")
@@ -95,13 +103,17 @@ def source(cid):
         gh("release", "download", s["tag"], "-p", s["file"], "-O", str(raw), "--clobber")
     else: raise RuntimeError(f"{cid}: unknown source kind {s['kind']}")
     seg = WORK / name
-    log(f"{cid}: cutting {s.get('start', '0')} to {s.get('end', 'end')} ({raw.stat().st_size / 1e9:.1f} GB source)")
-    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error"]
-    if s.get("start"): cmd += ["-ss", str(s["start"])]
-    if s.get("end"): cmd += ["-to", str(s["end"])]
-    cmd += ["-i", str(raw), "-vf", "scale=-2:720", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
-            "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(seg)]
+    total = duration(raw)
+    start, end = secs(s["start"]) if s.get("start") else 0.0, secs(s["end"]) if s.get("end") else total
+    if start >= total - 5:          # the file is already the segment (the timestamps were for the whole stream)
+        log(f"{cid}: the source runs {total / 60:.0f} minutes, so it is the segment itself; keeping all of it")
+        start, end = 0.0, total
+    log(f"{cid}: cutting {start:.0f}s to {end:.0f}s of {total:.0f}s ({raw.stat().st_size / 1e9:.1f} GB source)")
+    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{start:.2f}", "-to", f"{min(end, total):.2f}", "-i", str(raw),
+           "-vf", "scale=-2:720", "-r", "30", "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+           "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(seg)]
     run(cmd); raw.unlink(missing_ok=True)
+    if duration(seg) < 10: raise RuntimeError(f"{cid}: the cut segment is empty ({duration(seg):.0f} s)")
     if gh("release", "view", RELEASE, check=False).returncode:
         gh("release", "create", RELEASE, "--title", "Clips source segments", "--notes", "Campaign footage segments the clips line cuts from (permitted footage only).", "--prerelease")
     gh("release", "upload", RELEASE, str(seg), "--clobber")

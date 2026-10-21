@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 12:40): 7 of 1,000 subscribers · 4,448 of 10 million Shorts views in 90 days · 5,606 views in the last 24 hours (about 111,062 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 13:48): 7 of 1,000 subscribers · 4,555 of 10 million Shorts views in 90 days · 5,757 views in the last 24 hours (about 111,060 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 12:17 (UK): 8 scheduled, 65 public, 28 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 15 public, 9 scheduled | 13 | 3 | ⏳ 15 of 40 so far, 9 more scheduled |
+| Wed 21 Oct | 18 public, 6 scheduled | 14 | 4 | ⏳ 18 of 40 so far, 6 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -84,17 +84,17 @@ scheduled · 28 s · music: circuit-rush · [script](../boards/done/QD-080.json)
 ![QD-080](QD-080.jpg)
 
 ### Wed 21 Oct 14:00 · How often do the Orionids meteor showers occur? 🌠
-scheduled · 26 s · music: defying-gravity · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
+private · 26 s · music: defying-gravity · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
 
 ![QD-079](QD-079.jpg)
 
 ### Wed 21 Oct 13:30 · Bohemian Rhapsody: the 5.55 minute record 🎸
-scheduled · 34 s · music: walking-the-wire · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
+private · 34 s · music: walking-the-wire · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
 
 ![QD-078](QD-078.jpg)
 
 ### Wed 21 Oct 13:00 · Anuel AA’s birth name and album timeline 🎤
-scheduled · 28 s · music: rubberband · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
+private · 28 s · music: rubberband · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
 
 ![QD-077](QD-077.jpg)
 
@@ -139,7 +139,7 @@ public · 231 views · 29 s · music: death-duel · [script](../boards/done/QD-0
 ![QD-058](QD-058.jpg)
 
 ### Wed 21 Oct 4:30 · Who was the first person to win an EGOT? 🏆
-public · 116 views · 32 s · music: impossible-sacrifice · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
+public · 116 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
 
 ![QD-072](QD-072.jpg)
 

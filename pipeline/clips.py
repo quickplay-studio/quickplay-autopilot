@@ -148,12 +148,19 @@ def frameio_download(url, out, shot=None):
             if btn.count() == 0: btn = page.locator(f"[aria-label*='{pattern}' i], [data-testid*='{pattern}' i]")
             if btn.count() == 0: continue
             try:
-                with page.expect_download(timeout=20000) as dl:
+                with page.expect_download(timeout=45000) as dl:
                     btn.first.click()
                     page.wait_for_timeout(1500)
-                    for opt in ("Original", "original", "1080", "720", "Download"):
-                        item = page.get_by_role("menuitem", name=re.compile(opt, re.I))
-                        if item.count(): item.first.click(); break
+                    for _ in range(3):          # the dialog: "Download in Browser", then a quality if it asks (Original first)
+                        clicked = False
+                        for opt in ("Download in Browser", "Original", "1080", "720", "Download"):
+                            for role in ("button", "menuitem", "radio", "option"):
+                                item = page.get_by_role(role, name=re.compile(opt, re.I))
+                                if item.count() and item.first.is_visible():
+                                    item.first.click(); clicked = True; break
+                            if clicked: break
+                        page.wait_for_timeout(1500)
+                        if not clicked: break
                 got = dl.value
             except Exception as e:
                 log(f"  download button ({pattern}): {type(e).__name__}: {str(e)[:120]}")
@@ -163,9 +170,10 @@ def frameio_download(url, out, shot=None):
             got.save_as(str(out)); log(f"  downloaded {got.suggested_filename} ({out.stat().st_size / 1e6:.0f} MB)")
         browser.close()
     if not got:
-        mp4 = next((u for u in media if ".mp4" in u), None)
+        best = sorted((u for u in media if ".mp4" in u), key=lambda u: -max([int(x) for x in re.findall(r"h264_(\d+)", u)] or [0]))
+        mp4 = next((u for u in best if max([int(x) for x in re.findall(r"h264_(\d+)", u)] or [0]) >= 720), None)
         log("  media seen:", [u[:100] for u in media[:6]])
-        if not mp4: raise RuntimeError("Frame.io: no download button worked and no mp4 was streamed")
+        if not mp4: raise RuntimeError("Frame.io: the download dialog did not start a download and no 720p+ mp4 was streamed")
         import requests
         with requests.get(mp4, stream=True, timeout=120) as r:
             r.raise_for_status()

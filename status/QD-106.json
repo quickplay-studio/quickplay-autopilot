@@ -1,0 +1,94 @@
+{
+ "id": "QD-106",
+ "board": "boards/queue/QD-106.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T05:00:00Z",
+ "rendered": "2026-10-21T21:54:26.017909+00:00",
+ "title": "Scottish Premiership biggest stadium and history ⚽",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Scottish Premiership: no Commons image named 'Scottish Premiership')",
+  "beat 2 reused a nearby picture (commons-search:Scottish football stadium: no Commons image named 'Scottish football stadium')",
+  "beat 4 reused a nearby picture (commons-search:Scottish Professional Football League: no Commons image named 'Scottish Professional Football League')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 20.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.7
+ },
+ "timeline": [
+  [
+   0.06,
+   4.23,
+   "none",
+   0
+  ],
+  [
+   4.23,
+   6.69,
+   "none",
+   1
+  ],
+  [
+   6.69,
+   12.43,
+   "none",
+   1
+  ],
+  [
+   12.43,
+   17.76,
+   "none",
+   1
+  ],
+  [
+   17.76,
+   20.49,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "99548",
+   "q": "football pitch grass",
+   "t0": 0.0,
+   "t1": 10.54
+  },
+  {
+   "p": "pixabay",
+   "id": "139356",
+   "q": "running track sunrise",
+   "t0": 9.94,
+   "t1": 20.49
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T22:04:50Z",
+ "video": "e3ia6uzfmVg",
+ "url": "https://youtube.com/shorts/e3ia6uzfmVg",
+ "publish_at": "2026-10-22T05:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T05:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-106"
+}

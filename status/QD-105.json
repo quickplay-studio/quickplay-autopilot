@@ -1,0 +1,101 @@
+{
+ "id": "QD-105",
+ "board": "boards/queue/QD-105.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T04:30:00Z",
+ "rendered": "2026-10-21T21:54:03.657821+00:00",
+ "title": "Alphonso Davies: From refugee to Bayern star 🏆",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 32.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.1,
+   "title",
+   0
+  ],
+  [
+   3.1,
+   10.0,
+   "none",
+   1
+  ],
+  [
+   10.0,
+   14.11,
+   "none",
+   1
+  ],
+  [
+   14.11,
+   19.75,
+   "none",
+   1
+  ],
+  [
+   19.75,
+   23.09,
+   "date",
+   1
+  ],
+  [
+   23.09,
+   29.7,
+   "none",
+   1
+  ],
+  [
+   29.7,
+   32.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "19627",
+   "q": "city street night",
+   "t0": 0.0,
+   "t1": 16.65
+  },
+  {
+   "p": "pixabay",
+   "id": "195",
+   "q": "running track sunrise",
+   "t0": 16.05,
+   "t1": 32.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T22:04:48Z",
+ "video": "PVkVdBiGf5s",
+ "url": "https://youtube.com/shorts/PVkVdBiGf5s",
+ "publish_at": "2026-10-22T04:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T04:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-105"
+}

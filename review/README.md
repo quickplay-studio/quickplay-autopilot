@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 40 scheduled |
-| Wed 21 Oct | 27 public, 2 scheduled | 14 | 14 | ⏳ 27 of 40 so far, 2 more scheduled |
+| Thu 22 Oct | 0 public, 14 scheduled | 0 | 0 | ⏳ 14 of 40 scheduled |
+| Wed 21 Oct | 28 public, 1 scheduled | 14 | 14 | ⏳ 28 of 40 so far, 1 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -56,12 +56,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
-## In the queue
-
-- **QD-105** Alphonso Davies: From refugee to Bayern star 🏆 (rendering next)
-- **QD-106** Scottish Premiership biggest stadium and history ⚽ (rendering next)
-- **QD-107** How does ChatGPT process natural language queries? 🤖 (rendering next)
-
 ## On the channel (latest first)
 
 ### Thu 22 Oct 2:30 · Mark Allen snooker career highlights 🎱
@@ -100,7 +94,7 @@ scheduled · 29 s · music: after-sunset · [script](../boards/done/QD-092.json)
 ![QD-092](QD-092.jpg)
 
 ### Wed 21 Oct 23:00 · Japan's Phobos rover Idefix's two hour drill 🚀
-scheduled · 36 s · music: horizons · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
+private · 36 s · music: horizons · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
 
 ![QD-091](QD-091.jpg)
 

@@ -1,0 +1,77 @@
+{
+ "id": "QD-107",
+ "board": "boards/queue/QD-107.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T05:30:00Z",
+ "rendered": "2026-10-21T21:54:27.478799+00:00",
+ "title": "How does ChatGPT process natural language queries? 🤖",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 4,
+  "planned_real": 4
+ },
+ "music": "glitcher",
+ "social_music": "sci-fi-ambient-587603",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 20.1,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.7
+ },
+ "timeline": [
+  [
+   0.06,
+   4.5,
+   "title",
+   0
+  ],
+  [
+   4.5,
+   10.61,
+   "none",
+   1
+  ],
+  [
+   10.61,
+   16.46,
+   "none",
+   1
+  ],
+  [
+   16.46,
+   20.06,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47221",
+   "q": "circuit board closeup",
+   "t0": 0.0,
+   "t1": 20.06
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T22:04:53Z",
+ "video": "fCu432D5mgw",
+ "url": "https://youtube.com/shorts/fCu432D5mgw",
+ "publish_at": "2026-10-22T05:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T05:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-107"
+}

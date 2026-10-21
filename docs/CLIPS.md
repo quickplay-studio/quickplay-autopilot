@@ -82,3 +82,15 @@ forbids it for that creator's content.
 - First day: 10 clips across 7 campaigns scheduled for 18:00 UK (2 pulled for swearing, 1 for a black screen,
   replaced).
 - Off and why: clips/campaigns.json (why_off). SEGA Metaphor waits for Charlie's audience screen recording.
+
+## 21 October, 10:00 to 12:30 UK
+- Series campaigns (rules "series"): a folder share downloads as a zip (or one file), every file is shrunk and joined in
+  order, and plan_parts() posts each episode whole as Part 1, 2, 3 (cut at sentence ends, never over max_s, never a
+  short tail). VALORANT microdrama is on (its share holds Episode 2 only).
+- The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips 10, +2 after each full day
+  with no refusal, settles where YouTube refuses; upload() reports uploadLimitExceeded to it.
+- Campaigns switch themselves off (check_campaigns, every prepare and run): past their end date (ends, from the
+  capture), or when their Content Rewards page, read rendered, says full or ended or shows under $50 remaining; the
+  figure read is kept as budget_left (Speed: $1,539 on 21 October). Vyro pages need a login, so Vyro goes by end date.
+- Model answers wrapped in a list are read; "prepare <campaign>" and "prepare redo <campaign>" in requests/clips.txt
+  target one campaign or rebuild its source.

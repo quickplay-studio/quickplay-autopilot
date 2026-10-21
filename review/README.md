@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 22:40): 7 of 1,000 subscribers · 5,042 of 10 million Shorts views in 90 days · 6,179 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 23:38): 7 of 1,000 subscribers · 5,052 of 10 million Shorts views in 90 days · 6,136 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 14 scheduled | 0 | 0 | ⏳ 14 of 40 scheduled |
-| Wed 21 Oct | 28 public, 1 scheduled | 14 | 14 | ⏳ 28 of 40 so far, 1 more scheduled |
+| Wed 21 Oct | 29 public | 14 | 14 | ⏳ 29 of 40 so far |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -89,7 +89,7 @@ scheduled · 38 s · music: after-sunset · [script](../boards/done/QD-093.json)
 ![QD-093](QD-093.jpg)
 
 ### Wed 21 Oct 23:30 · The day Godzilla was almost an octopus 🐙
-scheduled · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
+private · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
 
 ![QD-092](QD-092.jpg)
 

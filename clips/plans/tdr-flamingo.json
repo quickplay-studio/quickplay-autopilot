@@ -137,7 +137,20 @@
    "title": "Flamingo Reacts to Giant Owen in Roblox",
    "why": "A classic weird Flamingo observation about the character scaling in the Roblox game.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T11:01+00:00",
+   "file": "tdr-flamingo-07.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-07.mp4",
+   "video": "V09Jcu-xN-I",
+   "url": "https://youtube.com/shorts/V09Jcu-xN-I",
+   "uploaded": "2026-10-21T11:01+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-flamingo-08",

@@ -75,7 +75,20 @@
    "title": "StinkyAsher Gets Blindsided In Roblox Total Drama",
    "why": "StinkyAsher gets unexpectedly eliminated by Duncan and delivers an immediate passionate reaction.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none"
+   },
+   "made": "2026-10-21T11:01+00:00",
+   "file": "tdr-stinkyasher-04.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-04.mp4",
+   "video": "SCgzJEdL-nA",
+   "url": "https://youtube.com/shorts/SCgzJEdL-nA",
+   "uploaded": "2026-10-21T11:01+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-stinkyasher-05",

@@ -357,8 +357,9 @@ function renderAt(t) {
   document.getElementById('mshade').style.opacity = card ? 0 : vis;
   const cr = document.getElementById('credit');
   if (top && top.credit) { if (cr.textContent !== top.credit) cr.textContent = top.credit; cr.style.opacity = vis * 0.95; } else cr.style.opacity = 0;
-  // captions
+  // captions (at the top of the frame while a full-screen picture has its person low down: the text never covers the person)
   const caps = document.getElementById('caps');
+  caps.style.top = (top && top.capTop && vis > 0.5) ? '400px' : '';
   let g = D.groups.find(g => t >= g.start && t < g.end);
   if (!g) { caps.innerHTML = ''; return; }
   caps.innerHTML = '<div class="capbox">' + g.words.map(wi => { const w = D.words[wi]; const on = t >= w.start && t < w.end + 0.02; return `<span class="cw ${on ? 'on' : ''}">${esc(w.cap)}</span>`; }).join('') + '</div>';

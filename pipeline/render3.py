@@ -107,6 +107,24 @@ def scene_fit(src, start, vis, slow):
 LOOK, MOTION = {}, 1.0     # set in main() from the board's look (templates/looks.json, resolved by run_board.py)
 CARDS = False              # set in main(): True when a video plays behind the Short; photos then sit on top of it as cards
 
+
+def face_focus(path):
+    """The largest face in a picture as (x, y) fractions of its size, or None (OpenCV's frontal detector; without OpenCV
+    or a face, None). The full-screen window and a card's framing follow it, and captions move off it (template3.html)."""
+    try:
+        import cv2
+        img = cv2.imread(str(path))
+        if img is None: return None
+        h, w = img.shape[:2]; sc = min(1.0, 800 / max(w, h))
+        small = cv2.resize(img, (int(w * sc), int(h * sc))) if sc < 1 else img
+        grey = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
+        det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        faces = det.detectMultiScale(grey, 1.1, 5, minSize=(max(24, int(min(small.shape[:2]) * 0.06)),) * 2)
+        if len(faces) == 0: return None
+        x, y, fw, fh = max(faces, key=lambda f: f[2] * f[3])
+        return (round(float(x + fw / 2) / small.shape[1], 3), round(float(y + fh / 2) / small.shape[0], 3))
+    except Exception: return None
+
 def card_move(move):
     """How the photo moves inside its card: (scale from, scale to, x from, x to, y from, y to). x and y are shares of the
     card's size; a drift needs room, so it runs a little zoomed in. The default is a slow push-in."""
@@ -150,6 +168,10 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
             if not src.exists():
                 print(f"  warning: missing {src}", file=sys.stderr); continue
             fx, fy = (shot.get("focus") or [0.5, 0.45])[:2]
+            face = None
+            if not shot.get("focus") and src.suffix.lower() not in R.VIDEO_EXT:      # the window follows the person (Charlie, 21 October)
+                face = face_focus(src)
+                if face: fx, fy = face[0], min(face[1] + 0.06, 0.9)
             move = shot.get("move", "in")
             tin = shot.get("tin") or ("cut" if j else ("zoom" if bi == 0 else "whip"))
             if tin == "whip": dirn = -dirn
@@ -212,6 +234,7 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
             else: it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else round(min(0.3, max(0.06, (lum - 0.45) * 0.8)), 2)
             if shot.get("label"):
                 it["label"] = shot["label"]; it["labelTop"] = shot.get("labelTop", 1020)
+            if face and face[1] > 0.6 and not has_graphic and not it.get("cardmode"): it["capTop"] = True   # person low in the picture: captions go to the top
             items.append(it)
             if it["credit"]:
                 credits.append({"credit": it["credit"], "source": shot.get("source", sb.get("source", "")), "license": shot.get("license", "")})

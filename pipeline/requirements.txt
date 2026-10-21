@@ -22,3 +22,4 @@ pocketsphinx
 google-api-python-client
 google-auth
 tzdata
+opencv-python-headless<5

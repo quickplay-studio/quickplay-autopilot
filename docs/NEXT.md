@@ -120,3 +120,8 @@ the channel's comment question and replies.
 - His concern that the testing shows no improvement yet: the first rulings only landed on 21 October (5 Shorts per
   choice and 2 days of views needed), median views per Short rose from about 100 (16 to 18 October) to about 200 (19 to
   20 October), and the last 24 hours brought 5,974 views against 14,497 all time. The report makes this visible weekly.
+- Charlie: full portrait visuals with the text over the picture, clear of its main feature. render3.py face_focus()
+  (OpenCV, now in requirements.txt): a picture's window follows the largest face (fx, fy) when the board gives no focus,
+  for full-screen pictures and cards alike; when the person sits low in a full-screen picture and the beat has no
+  graphic, that shot's captions move to the top band (template3.html, capTop). The clips channel got the same rule in
+  its "full" layout. Untested on a real render until the next write run; the change is guarded (no face, no change).

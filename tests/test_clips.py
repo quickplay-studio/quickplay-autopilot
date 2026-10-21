@@ -136,3 +136,20 @@ ins = C.insights(stat_rows)
 assert ins["tests"]["layout"]["best"] == "face" and ins["tests"]["captions"]["best"] == "lines" and ins["campaigns"]["a"]["n"] == 6, ins["tests"]
 print("10 layouts, captions, rows, insights ok")
 print("clips extras 2 ok")
+
+# 11. a comment question for a clip planned before questions existed: the model's, else a plain one; never strong language
+import factpack as F
+C.PLANS = pathlib.Path(SCRATCH) / "plans"; C.PLANS.mkdir(exist_ok=True)
+(C.PLANS / "speed-expedia.words.json").write_text(json.dumps(words))
+F.gemini = lambda prompt, schema=None, **kw: ({"question": "Where would you fly for free?"}, "stub")
+m = {"id": "speed-expedia-09", "start": 9.0, "end": 18.0, "hook": "SPEED OPENS THE SUITCASE"}
+assert C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m) == "Where would you fly for free?" and m["question"]
+F.gemini = lambda prompt, schema=None, **kw: ({"question": "What the f**k would you do?"}, "stub")
+m = {"id": "speed-expedia-10", "start": 9.0, "end": 18.0, "hook": "x"}
+assert C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m).startswith("What would you have done here?"), m
+F.gemini = lambda *a, **kw: (_ for _ in ()).throw(RuntimeError("down"))
+m = {"id": "speed-expedia-11", "start": 9.0, "end": 18.0, "hook": "x", "question": "Kept?"}
+assert C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m) == "Kept?"
+m = {"id": "speed-expedia-12", "start": 9.0, "end": 18.0, "hook": "x"}
+assert "IShowSpeed" in C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m)
+print("11 comment questions ok")

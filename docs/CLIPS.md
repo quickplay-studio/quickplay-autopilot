@@ -113,3 +113,10 @@ forbids it for that creator's content.
 - A campaign may name its channel ("channel": "clips" by default, tokens/youtube_<channel>.enc); batch_times can give
   a platform its own batch time (Vyro at 22:00 UK, say).
 - Requests: "test 1 layout=split tdr-mitch" forces an arm on named campaigns, privately.
+
+## 21 October, 18:00 UK: the first batch is live
+- 11 clips public at 18:00 UK across 6 campaigns (4 of the day's uploads pulled to private by the guards), the clips
+  channel's limit now 12 a day. The submit page lists the last 3 days only.
+- A clip planned before the planner asked for a comment question gets one at comment time (question_for: the model
+  reads what was said in the clip; a plain question when no model answers). hours_public counts from the publish time,
+  not the upload, so the 24-hour insight reads true.

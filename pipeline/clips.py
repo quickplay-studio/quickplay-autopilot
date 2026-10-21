@@ -783,6 +783,28 @@ def social_posts(force=False):
     return sum(posted.values())
 
 
+def question_for(cid, c, m):
+    """The planner's question for the comments; a clip planned before questions existed gets one asked now from what
+    was said in it (a plain question when no model answers)."""
+    if m.get("question"): return m["question"]
+    q = ""
+    try:
+        import factpack
+        wp = PLANS / f"{cid}.words.json"
+        words = json.loads(wp.read_text()) if wp.exists() else []
+        said = " ".join(w["w"] for w in words if m["start"] <= w["s"] <= m["end"])[:1500]
+        ans, _ = factpack.gemini(f"A YouTube Short of {c['subject']} shows this moment (on-screen hook: {m.get('hook', '')}). What was said: {said}\n"
+                                 "Write one short question for the comments that viewers can answer: under 90 characters, family friendly, "
+                                 'no spoilers, no strong language. Return {"question": "..."}', None, timeout=60, temperature=0.4, lite=True)
+        if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
+        q = re.sub(r"[–—]", "-", str((ans or {}).get("question") or "")).strip()[:90]
+        if PROFANE.search(q): q = ""
+    except Exception as e:
+        log(f"{m['id']}: no question from the model: {str(e)[:100]}")
+    m["question"] = q or f"What would you have done here? More {c['subject']} clips every day."
+    return m["question"]
+
+
 def engage():
     """On every public clip without one: the channel's own comment (the planner's question, pinned by position as the
     first comment), and for series parts a link to the part before and after. 50 units each, inside the allowance."""
@@ -800,7 +822,9 @@ def engage():
             except ValueError: continue
             if due > NOW: continue
             texts = []
-            if not m.get("comment") and m.get("question"): texts.append(("comment", m["question"]))
+            if not m.get("comment"):
+                had = bool(m.get("question")); q = question_for(cid, c, m); changed = changed or not had
+                if q: texts.append(("comment", q))
             if m.get("episode") and not m.get("part_links"):
                 prev, nxt = by_part.get((m["episode"], m["part"] - 1)), by_part.get((m["episode"], m["part"] + 1))
                 lines = [f"Part {m['part'] + 1} is here: {nxt['url']}" for _ in [0] if nxt and nxt.get("url")] + \
@@ -859,7 +883,7 @@ def stats():
         for i in range(0, len(ids), 50):
             for v in yt.videos().list(part="statistics,status", id=",".join(ids[i:i + 50])).execute().get("items", []):
                 cid, m = vids[v["id"]]; st = v.get("statistics", {})
-                pub = v["status"].get("publishAt") or m.get("uploaded")
+                pub = v["status"].get("publishAt") or (m.get("publish_at") if m.get("publish_at") not in (None, "private") else None) or m.get("uploaded")
                 try: hours = round((NOW - dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))).total_seconds() / 3600, 1)
                 except Exception: hours = ""
                 tests = m.get("tests") or {}

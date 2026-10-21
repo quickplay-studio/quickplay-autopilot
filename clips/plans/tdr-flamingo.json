@@ -109,6 +109,17 @@
    "why": "The final dramatic payoff of his rivalry with the character Heather at the end of the tournament.",
    "planned": "2026-10-21T06:30+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-flamingo-09",
+   "start": 26.7,
+   "end": 53.4,
+   "hook": "I HATE HER! I HATE HER!",
+   "label": "Sadie",
+   "title": "Flamingo Hates His New Roblox Character",
+   "why": "A high-energy reaction to being assigned a character he dislikes right at the start.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
   }
  ]
 }

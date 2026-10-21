@@ -1,5 +1,18 @@
-tdr-jenny-02: pulled before publishing (dark picture)
-today's shares: {"tdr-flamingo": 1}
-tdr-flamingo-03: made (30 s) Flamingo Tries to Team Up in Roblox Total Drama
-tdr-flamingo-03: uploaded https://youtube.com/shorts/EAaWrS91nnM (batch)
-stats: 15 clips
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+speed-expedia: 5 of 6 moments planned (gemini-flash-latest), 13 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0}
+mrbeast-cod: 5 of 7 moments planned (gemini-flash-latest), 13 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0}
+tdr-stinkyasher: 5 of 8 moments planned (gemini-3-flash-preview), 13 in all; dropped {"bad time": 0, "length": 3, "overlap": 0, "no hook": 0}
+tdr-mitch: the model gave no moments: [{"moments": [{"start": 592, "end": 616, "hook": "WHY ARE YOU STILL HERE?", "label": "SADIE ELIMINATED", "title": "Mitch Gaming pulls off a massive blindside", "why": "This captures the peak drama of Mitch and Katelyn eliminating Sadie, followed by Mitch's hilarious trash-talking of the eliminated p
+tdr-mitch: 0 of 0 moments planned (gemini-3-flash-preview), 3 in all
+tdr-flamingo: 1 of 8 moments planned (gemini-3-flash-preview), 9 in all; dropped {"bad time": 0, "length": 0, "overlap": 6, "no hook": 0, "profanity": 1}
+tdr-jenny: the model gave no moments: [{"moments": [{"start": 300, "end": 313, "hook": "A STATUE IN THE GAME?", "label": "", "title": "Jenny Hoyos on the Roblox Total Drama Prize", "why": "Jenny reveals the high stakes of the tournament and her excitement about potentially getting an in-game statue."}, {"start": 564, "end": 578, "hook":
+tdr-jenny: 0 of 0 moments planned (gemini-3-flash-preview), 7 in all
+valorant-microdrama: 1 files in the folder
+  buttons: ['Back', 'Download All', 'Show Asset Information', 'Collapse 2 Assets', 'Epi1 - Micro Drama.mov Download Asset', 'Epi 2 - Micro Drama (generic description']
+  downloaded Epi 2 - Micro Drama (generic descriptions).mp4 (181 MB)
+valorant-microdrama: 1 episodes joined and saved as release asset valorant-microdrama.mp4 (25 MB)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[0;93m2026-10-21 09:24:55.373157558 [W:onnxruntime:Default, device_discovery.cc:95 GetPciBusId] Skipping pci_bus_id for PCI path at "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/5620e0c7-8062-4dce-aeb7-520c7ef76171" because filename "5620e0c7-8062-4dce-aeb7-520c7ef76171" did not match expected pattern of [0-9a-f]+:[0-9a-f]+:[0-9a-f]+[.][0-9a-f]+[m
+valorant-microdrama: 850 words transcribed
+valorant-microdrama: 4 parts planned, 4 in all
+valorant-champs: 0 of 5 moments planned (gemini-3.5-flash-lite), 8 in all; dropped {"bad time": 0, "length": 0, "overlap": 5, "no hook": 0}; first: {"start": 1919, "end": 1954, "hook": "SACY RANTS ABOUT NEON IN THE META", "label": "Sacy", "title": "VALORANT Champs Sacy Rants About Neon and the Meta", "why": "Sacy goes on a hilarious rant about Ne

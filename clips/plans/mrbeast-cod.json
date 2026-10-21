@@ -101,6 +101,61 @@
    "why": "A pivotal moment where the location of the final goal is revealed to all players.",
    "planned": "2026-10-21T01:06+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-09",
+   "start": 61.7,
+   "end": 93.4,
+   "hook": "EACH TEAM STARTS WITH $100,000",
+   "label": "",
+   "title": "MrBeast $1,000,000 DMZ Extraction Match",
+   "why": "Sets up the high stakes of the $1,000,000 tournament and highlights creators sharing what they would do with the prize money.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "mrbeast-cod-10",
+   "start": 302.7,
+   "end": 330.4,
+   "hook": "THE LIEUTENANT DROPS SECRET LOOT",
+   "label": "",
+   "title": "MrBeast Lieutenant Tag Challenge in DMZ",
+   "why": "Explains the key requirement to extract with the money, adding high tension around taking down the lieutenant.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "mrbeast-cod-11",
+   "start": 1198.7,
+   "end": 1219.4,
+   "hook": "FINAL EXTRACTION HELICOPTER IN SIGHT",
+   "label": "",
+   "title": "MrBeast CoD DMZ Final Extraction Rush",
+   "why": "High adrenaline push to the extraction rooftop as the final countdown approaches.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "mrbeast-cod-12",
+   "start": 1261.7,
+   "end": 1297.4,
+   "hook": "ALONE AT THE FINAL EXFIL",
+   "label": "",
+   "title": "MrBeast Final Exfil Ambush in DMZ",
+   "why": "A solo survivor attempts a last-second squad plea right before the final chaos erupts.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "mrbeast-cod-13",
+   "start": 1300.7,
+   "end": 1339.4,
+   "hook": "ONE MILLION DOLLARS ON THE LINE",
+   "label": "",
+   "title": "MrBeast $1,000,000 DMZ Final Showdown",
+   "why": "Jimmy warns the teams about the million-dollar stakes right as the climactic sniper shootout begins.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
   }
  ]
 }

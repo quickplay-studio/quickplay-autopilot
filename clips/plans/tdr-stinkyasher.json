@@ -94,6 +94,61 @@
    "why": "StinkyAsher gets voted out in round two and delivers a dramatic final rant blaming haters and jealousy.",
    "planned": "2026-10-21T06:30+00:00",
    "model": "gemini-3.6-flash"
+  },
+  {
+   "id": "tdr-stinkyasher-09",
+   "start": 211.7,
+   "end": 228.4,
+   "hook": "I FEAR I TALK TOO MUCH",
+   "label": "SADIE",
+   "title": "StinkyAsher Gets Caught Whispering",
+   "why": "Captures a dramatic confrontation and a humorous self-aware realization about their gameplay.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-stinkyasher-10",
+   "start": 307.7,
+   "end": 327.4,
+   "hook": "YOU LOOK LIKE A LEPRECHAUN",
+   "label": "DUNCAN",
+   "title": "StinkyAsher vs Duncan Roast Battle",
+   "why": "A high-energy comedic insult exchange which is highly quotable for a short.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-stinkyasher-11",
+   "start": 508.7,
+   "end": 528.4,
+   "hook": "DROP IF I'M CUTE",
+   "label": "DUNCAN",
+   "title": "StinkyAsher Wins the Survival Challenge",
+   "why": "A dramatic win sequence featuring a funny taunt toward an opponent.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-stinkyasher-12",
+   "start": 577.7,
+   "end": 593.4,
+   "hook": "I DEMAND A RECOUNT",
+   "label": "COURTNEY",
+   "title": "StinkyAsher Reacts to Courtney's Elimination",
+   "why": "Captures a dramatic elimination and a sassy response from Asher.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-stinkyasher-13",
+   "start": 714.7,
+   "end": 730.4,
+   "hook": "HOW ARE YOU IN A TOURNAMENT?",
+   "label": "GWEN",
+   "title": "StinkyAsher Votes Out the Mute Players",
+   "why": "A humorous take on the social strategy of the tournament and YouTuber tropes.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-3-flash-preview"
   }
  ]
 }

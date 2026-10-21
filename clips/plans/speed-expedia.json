@@ -115,6 +115,61 @@
    "why": "Speed guesses New Orleans for the saxophone before the reveal of Perugia, Italy.",
    "planned": "2026-10-21T00:36+00:00",
    "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-09",
+   "start": 451.7,
+   "end": 476.4,
+   "hook": "SPEED GUESSES NUMBER 6 DESTINATION",
+   "label": "Holbox Island, Mexico",
+   "title": "IShowSpeed Guesses Destination Number 6",
+   "why": "Speed wildly guesses the North Pole and Finland before revealing Mexico.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-10",
+   "start": 689.7,
+   "end": 732.4,
+   "hook": "WHAT IS NUMBER 3 DESTINATION?",
+   "label": "Punta del Este, Uruguay",
+   "title": "IShowSpeed Unpacks Top 3 Destination",
+   "why": "Speed pulls out a strange hand statue item and reacts to the Uruguay reveal.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-11",
+   "start": 108.7,
+   "end": 145.4,
+   "hook": "EXPEDIA REVEALS TOP 10 DESTINATIONS",
+   "label": "",
+   "title": "IShowSpeed Announces Expedia Top 10",
+   "why": "Energetic launch of the Unpack segment with high hype and chat engagement.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-12",
+   "start": 576.7,
+   "end": 605.4,
+   "hook": "EXPEDIA DROPS A MASSIVE SURPRISE",
+   "label": "",
+   "title": "IShowSpeed Thanks Expedia on Stream",
+   "why": "Spontaneous positive brand moment with Speed thanking Expedia for subs.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-13",
+   "start": 930.7,
+   "end": 976.4,
+   "hook": "SPEED SEES HIS EXPEDIA MAP",
+   "label": "",
+   "title": "IShowSpeed Checks His Expedia World Map",
+   "why": "Speed reacts in genuine awe to his custom Expedia world travel site.",
+   "planned": "2026-10-21T09:19+00:00",
+   "model": "gemini-flash-latest"
   }
  ]
 }

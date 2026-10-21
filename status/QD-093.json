@@ -1,0 +1,100 @@
+{
+ "id": "QD-093",
+ "board": "boards/queue/QD-093.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T23:00:00Z",
+ "rendered": "2026-10-21T13:59:58.964062+00:00",
+ "title": "How Tetris became a global video game phenomenon 🧩",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8
+ },
+ "music": "after-sunset",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 38.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.2
+ },
+ "timeline": [
+  [
+   0.06,
+   2.94,
+   "title",
+   0
+  ],
+  [
+   2.94,
+   7.68,
+   "none",
+   1
+  ],
+  [
+   7.68,
+   12.2,
+   "none",
+   1
+  ],
+  [
+   12.2,
+   16.51,
+   "none",
+   1
+  ],
+  [
+   16.51,
+   21.52,
+   "none",
+   1
+  ],
+  [
+   21.52,
+   25.28,
+   "none",
+   1
+  ],
+  [
+   25.28,
+   29.98,
+   "none",
+   1
+  ],
+  [
+   29.98,
+   38.47,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "21116",
+   "q": "neon arcade lights",
+   "t0": 0.0,
+   "t1": 38.46
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:19:20Z",
+ "video": "_X6RQIMVXAw",
+ "url": "https://youtube.com/shorts/_X6RQIMVXAw",
+ "publish_at": "2026-10-21T23:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T23:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-093"
+}

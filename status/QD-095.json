@@ -1,0 +1,90 @@
+{
+ "id": "QD-095",
+ "board": "boards/queue/QD-095.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T00:00:00Z",
+ "rendered": "2026-10-21T14:08:25.763044+00:00",
+ "title": "Which artist has won the most Grammy Awards? 🏆",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "dance-with-you",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "calm",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 20.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 5.4
+ },
+ "timeline": [
+  [
+   0.06,
+   3.45,
+   "none",
+   0
+  ],
+  [
+   3.45,
+   6.6,
+   "cards",
+   1
+  ],
+  [
+   6.6,
+   9.34,
+   "none",
+   1
+  ],
+  [
+   9.34,
+   13.35,
+   "none",
+   1
+  ],
+  [
+   13.35,
+   20.16,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "377339",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 10.38
+  },
+  {
+   "p": "pixabay",
+   "id": "130646",
+   "q": "studio mixing desk",
+   "t0": 9.78,
+   "t1": 20.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:19:32Z",
+ "video": "Ulv7gqbpKuM",
+ "url": "https://youtube.com/shorts/Ulv7gqbpKuM",
+ "publish_at": "2026-10-22T00:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T00:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-095"
+}

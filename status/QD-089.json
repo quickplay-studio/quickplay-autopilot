@@ -1,0 +1,89 @@
+{
+ "id": "QD-089",
+ "board": "boards/queue/QD-089.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T17:00:00Z",
+ "rendered": "2026-10-21T13:59:49.946502+00:00",
+ "title": "Bob Iger announces new book One Last Time 📖",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "level",
+ "social_music": "epic-orchestral-inspiration-572059",
+ "look": {
+  "captions": "clean",
+  "voice": "michael",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 22.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.81,
+   "none",
+   0
+  ],
+  [
+   3.81,
+   8.43,
+   "date",
+   1
+  ],
+  [
+   8.43,
+   13.16,
+   "none",
+   2
+  ],
+  [
+   13.16,
+   18.08,
+   "title",
+   1
+  ],
+  [
+   18.08,
+   22.17,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "137265",
+   "q": "office desk executive",
+   "t0": 0.0,
+   "t1": 11.39
+  },
+  {
+   "p": "pixabay",
+   "id": "1644",
+   "q": "broadcast studio stage",
+   "t0": 10.79,
+   "t1": 22.17
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:18:33Z",
+ "video": "ipEPjlNKVxk",
+ "url": "https://youtube.com/shorts/ipEPjlNKVxk",
+ "publish_at": "2026-10-21T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-089"
+}

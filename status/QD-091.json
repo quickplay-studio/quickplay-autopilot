@@ -1,0 +1,101 @@
+{
+ "id": "QD-091",
+ "board": "boards/queue/QD-091.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T22:00:00Z",
+ "rendered": "2026-10-21T14:00:01.963920+00:00",
+ "title": "Japan's Phobos rover Idefix's two hour drill 🚀",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked nasa 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "horizons",
+ "social_music": "futuristic-sci-fi-174819",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 35.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.85,
+   "none",
+   0
+  ],
+  [
+   4.85,
+   9.73,
+   "none",
+   1
+  ],
+  [
+   9.73,
+   13.91,
+   "title",
+   1
+  ],
+  [
+   13.91,
+   18.79,
+   "none",
+   1
+  ],
+  [
+   18.79,
+   23.09,
+   "stat",
+   1
+  ],
+  [
+   23.09,
+   26.66,
+   "none",
+   1
+  ],
+  [
+   26.66,
+   32.26,
+   "none",
+   1
+  ],
+  [
+   32.26,
+   35.78,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "GSFC_20140211_LDCM_m11481_Orbit",
+   "q": "earth from orbit",
+   "t0": 0.0,
+   "t1": 35.78
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:18:59Z",
+ "video": "YTxtjZbLxdg",
+ "url": "https://youtube.com/shorts/YTxtjZbLxdg",
+ "publish_at": "2026-10-21T22:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T22:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-091"
+}

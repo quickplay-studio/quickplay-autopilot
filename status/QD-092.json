@@ -1,0 +1,89 @@
+{
+ "id": "QD-092",
+ "board": "boards/queue/QD-092.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T22:30:00Z",
+ "rendered": "2026-10-21T13:59:43.677035+00:00",
+ "title": "The day Godzilla was almost an octopus 🐙",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "after-sunset",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "clean",
+  "voice": "heart",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 28.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.86,
+   "none",
+   0
+  ],
+  [
+   3.86,
+   9.49,
+   "none",
+   1
+  ],
+  [
+   9.49,
+   15.79,
+   "title",
+   1
+  ],
+  [
+   15.79,
+   21.6,
+   "none",
+   1
+  ],
+  [
+   21.6,
+   28.84,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "12866",
+   "q": "film studio lights",
+   "t0": 0.0,
+   "t1": 14.72
+  },
+  {
+   "p": "pixabay",
+   "id": "28014",
+   "q": "vintage film projector",
+   "t0": 14.12,
+   "t1": 28.84
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:19:10Z",
+ "video": "6_uQBelVyo0",
+ "url": "https://youtube.com/shorts/6_uQBelVyo0",
+ "publish_at": "2026-10-21T22:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T22:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-092"
+}

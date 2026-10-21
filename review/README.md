@@ -4,7 +4,7 @@
 
 YouTube checked Wed 21 Oct 14:28 (UK): 6 scheduled, 68 public, 29 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 12:06).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 15:13).
 
 ## Posts by day
 
@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 19 public, 5 scheduled | 14 | 5 | ⏳ 19 of 40 so far, 5 more scheduled |
+| Thu 22 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
+| Wed 21 Oct | 20 public, 9 scheduled | 14 | 6 | ⏳ 20 of 40 so far, 9 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -79,7 +79,7 @@ scheduled · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-
 ![QD-082](QD-082.jpg)
 
 ### Wed 21 Oct 15:00 · Jupiter: Which is the largest planet? 🪐
-scheduled · 28 s · music: defying-gravity · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
+private · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
 
 ![QD-081](QD-081.jpg)
 

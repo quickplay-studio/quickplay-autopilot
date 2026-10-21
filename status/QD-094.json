@@ -1,0 +1,97 @@
+{
+ "id": "QD-094",
+ "board": "boards/queue/QD-094.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T23:30:00Z",
+ "rendered": "2026-10-21T14:07:58.574701+00:00",
+ "title": "What is the loudest sound ever recorded on Earth? 🌋",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Perth Western Australia: no Commons image named 'Perth Western Australia')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "horizons",
+ "social_music": "futuristic-sci-fi-174819",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 26.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.46,
+   "none",
+   0
+  ],
+  [
+   3.46,
+   9.26,
+   "title",
+   1
+  ],
+  [
+   9.26,
+   12.64,
+   "none",
+   1
+  ],
+  [
+   12.64,
+   17.36,
+   "none",
+   1
+  ],
+  [
+   17.36,
+   20.35,
+   "none",
+   1
+  ],
+  [
+   20.35,
+   24.2,
+   "none",
+   1
+  ],
+  [
+   24.2,
+   26.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "24072",
+   "q": "earth from orbit",
+   "t0": 0.0,
+   "t1": 26.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:19:26Z",
+ "video": "L8Hzj6oXI1Y",
+ "url": "https://youtube.com/shorts/L8Hzj6oXI1Y",
+ "publish_at": "2026-10-21T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T23:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-094"
+}

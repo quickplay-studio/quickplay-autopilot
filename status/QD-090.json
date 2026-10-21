@@ -1,0 +1,82 @@
+{
+ "id": "QD-090",
+ "board": "boards/queue/QD-090.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T20:30:00Z",
+ "rendered": "2026-10-21T14:00:01.246645+00:00",
+ "title": "Shrek 2 Remastered revealed with GTA parody 🧅",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "treasure-hunt",
+ "social_music": "playful-days-291189",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 23.2,
+  "wps": 2.97,
+  "weak_beats": [],
+  "size_mb": 10.0
+ },
+ "timeline": [
+  [
+   0.06,
+   4.12,
+   "none",
+   0
+  ],
+  [
+   4.12,
+   8.46,
+   "title",
+   1
+  ],
+  [
+   8.46,
+   11.22,
+   "date",
+   1
+  ],
+  [
+   11.22,
+   15.78,
+   "none",
+   2
+  ],
+  [
+   15.78,
+   19.74,
+   "none",
+   1
+  ],
+  [
+   19.74,
+   23.14,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:18:46Z",
+ "video": "_DiyJaLv6YY",
+ "url": "https://youtube.com/shorts/_DiyJaLv6YY",
+ "publish_at": "2026-10-21T20:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T20:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-090"
+}

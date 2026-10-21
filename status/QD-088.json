@@ -1,0 +1,96 @@
+{
+ "id": "QD-088",
+ "board": "boards/queue/QD-088.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T16:30:00Z",
+ "rendered": "2026-10-21T14:00:11.446368+00:00",
+ "title": "Glee reboot officially confirmed 🎵",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "dance-with-you",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 26.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.4
+ },
+ "timeline": [
+  [
+   0.06,
+   4.64,
+   "title",
+   0
+  ],
+  [
+   4.64,
+   10.56,
+   "none",
+   2
+  ],
+  [
+   10.56,
+   14.08,
+   "stat",
+   1
+  ],
+  [
+   14.08,
+   18.74,
+   "stat",
+   1
+  ],
+  [
+   18.74,
+   23.36,
+   "none",
+   1
+  ],
+  [
+   23.36,
+   26.59,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380218",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 13.59
+  },
+  {
+   "p": "pixabay",
+   "id": "3134",
+   "q": "city lights night",
+   "t0": 12.99,
+   "t1": 26.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T14:18:28Z",
+ "video": "h9hs4IovByM",
+ "url": "https://youtube.com/shorts/h9hs4IovByM",
+ "publish_at": "2026-10-21T16:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T16:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-088"
+}

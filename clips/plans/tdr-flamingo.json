@@ -16,7 +16,8 @@
    "url": "https://youtube.com/shorts/YBRW196n2JU",
    "uploaded": "2026-10-21T06:30+00:00",
    "publish_at": "2026-10-21T17:00:00Z",
-   "mode": "batch"
+   "mode": "batch",
+   "pulled": "profanity: f***ing, f***ing"
   },
   {
    "id": "tdr-flamingo-02",
@@ -27,7 +28,14 @@
    "title": "Flamingo Gets Eliminated as Sadie",
    "why": "A dramatic and funny reaction to being voted out early while being insulted by the other players.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "made": "2026-10-21T06:49+00:00",
+   "file": "tdr-flamingo-02.mp4",
+   "video": "x-kZ0zQq_Ig",
+   "url": "https://youtube.com/shorts/x-kZ0zQq_Ig",
+   "uploaded": "2026-10-21T06:49+00:00",
+   "publish_at": "2026-10-21T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-03",

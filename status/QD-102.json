@@ -1,0 +1,98 @@
+{
+ "id": "QD-102",
+ "board": "boards/queue/QD-102.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T03:30:00Z",
+ "rendered": "2026-10-21T19:37:40.928809+00:00",
+ "title": "Club Brugge 20 league titles history ⚽",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Club Brugge fans: no Commons image named 'Club Brugge fans')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7
+ },
+ "music": "cued-for-liftoff",
+ "social_music": "uplifting-uplifting-music-513147",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 27.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 17.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.44,
+   "title",
+   0
+  ],
+  [
+   3.44,
+   7.36,
+   "date",
+   1
+  ],
+  [
+   7.36,
+   13.58,
+   "none",
+   1
+  ],
+  [
+   13.58,
+   19.73,
+   "none",
+   1
+  ],
+  [
+   19.73,
+   22.94,
+   "none",
+   1
+  ],
+  [
+   22.94,
+   26.93,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "212453",
+   "q": "grass pitch close",
+   "t0": 0.0,
+   "t1": 13.76
+  },
+  {
+   "p": "pixabay",
+   "id": "139364",
+   "q": "running track sunrise",
+   "t0": 13.16,
+   "t1": 26.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T20:03:23Z",
+ "video": "o9CH_gaz12Q",
+ "url": "https://youtube.com/shorts/o9CH_gaz12Q",
+ "publish_at": "2026-10-22T03:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T03:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-102"
+}

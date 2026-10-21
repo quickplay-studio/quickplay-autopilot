@@ -1,0 +1,97 @@
+{
+ "id": "QD-103",
+ "board": "boards/queue/QD-103.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T04:00:00Z",
+ "rendered": "2026-10-21T19:37:50.506610+00:00",
+ "title": "Taylor Swift's haunted video twist 🎬",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "purple-desire",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 32.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.5
+ },
+ "timeline": [
+  [
+   0.06,
+   3.99,
+   "none",
+   2
+  ],
+  [
+   3.99,
+   11.28,
+   "title",
+   1
+  ],
+  [
+   11.28,
+   15.57,
+   "none",
+   1
+  ],
+  [
+   15.57,
+   24.23,
+   "date",
+   1
+  ],
+  [
+   24.23,
+   32.17,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "136708",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 11.12
+  },
+  {
+   "p": "pixabay",
+   "id": "23258",
+   "q": "city street night",
+   "t0": 10.52,
+   "t1": 21.65
+  },
+  {
+   "p": "pixabay",
+   "id": "123072",
+   "q": "crowd concert night",
+   "t0": 21.05,
+   "t1": 32.17
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T20:03:25Z",
+ "video": "wKmX0n-LEUk",
+ "url": "https://youtube.com/shorts/wKmX0n-LEUk",
+ "publish_at": "2026-10-22T04:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T04:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-103"
+}

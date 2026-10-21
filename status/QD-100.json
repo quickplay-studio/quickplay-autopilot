@@ -1,0 +1,83 @@
+{
+ "id": "QD-100",
+ "board": "boards/queue/QD-100.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T02:30:00Z",
+ "rendered": "2026-10-21T19:37:58.630235+00:00",
+ "title": "Best Buy launches Pokemon TCG sale 📱",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "cued-for-liftoff",
+ "social_music": "technology-tech-technology-499582",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "isabella",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 21.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.1
+ },
+ "timeline": [
+  [
+   0.06,
+   5.3,
+   "none",
+   0
+  ],
+  [
+   5.3,
+   10.95,
+   "title",
+   2
+  ],
+  [
+   10.95,
+   15.74,
+   "date",
+   1
+  ],
+  [
+   15.74,
+   18.93,
+   "none",
+   1
+  ],
+  [
+   18.93,
+   21.16,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47218",
+   "q": "circuit board closeup",
+   "t0": 0.0,
+   "t1": 21.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T20:03:18Z",
+ "video": "u9PklpxhW4s",
+ "url": "https://youtube.com/shorts/u9PklpxhW4s",
+ "publish_at": "2026-10-22T02:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T02:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-100"
+}

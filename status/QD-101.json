@@ -1,0 +1,100 @@
+{
+ "id": "QD-101",
+ "board": "boards/queue/QD-101.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T03:00:00Z",
+ "rendered": "2026-10-21T19:37:47.080043+00:00",
+ "title": "Ella Langley and Morgan Wallen released new duet 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Ella Langley portrait: no Commons image named 'Ella Langley portrait')",
+  "beat 6 reused a nearby picture (commons-search:Ella Langley and Morgan Wallen: no Commons image named 'Ella Langley and Morgan Wallen')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "purple-desire",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "look_note": "voice LY was less clear, used george",
+ "qa": {
+  "duration": 22.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.6
+ },
+ "timeline": [
+  [
+   0.06,
+   5.55,
+   "none",
+   1
+  ],
+  [
+   5.55,
+   7.84,
+   "title",
+   1
+  ],
+  [
+   7.84,
+   10.06,
+   "none",
+   1
+  ],
+  [
+   10.06,
+   13.9,
+   "none",
+   1
+  ],
+  [
+   13.9,
+   18.94,
+   "none",
+   1
+  ],
+  [
+   18.94,
+   21.93,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "136710",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 11.27
+  },
+  {
+   "p": "pixabay",
+   "id": "122740",
+   "q": "recording studio room",
+   "t0": 10.67,
+   "t1": 21.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T20:03:21Z",
+ "video": "GFJ00EZuhRQ",
+ "url": "https://youtube.com/shorts/GFJ00EZuhRQ",
+ "publish_at": "2026-10-22T03:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T03:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-101"
+}

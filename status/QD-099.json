@@ -1,0 +1,91 @@
+{
+ "id": "QD-099",
+ "board": "boards/queue/QD-099.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T02:00:00Z",
+ "rendered": "2026-10-21T19:37:36.153012+00:00",
+ "title": "Above the Below release date revealed 🎬",
+ "background_notes": [
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Martin Owen film director: no Commons image named 'Martin Owen film director')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "in-battery",
+ "social_music": "soulsweeper-252499",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.78,
+   "none",
+   0
+  ],
+  [
+   3.78,
+   9.56,
+   "title",
+   2
+  ],
+  [
+   9.56,
+   13.68,
+   "none",
+   1
+  ],
+  [
+   13.68,
+   18.81,
+   "none",
+   1
+  ],
+  [
+   18.81,
+   22.36,
+   "date",
+   1
+  ],
+  [
+   22.36,
+   25.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "62822",
+   "q": "movie theatre seats",
+   "t0": 0.0,
+   "t1": 25.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T20:03:16Z",
+ "video": "BwVWTok1z5E",
+ "url": "https://youtube.com/shorts/BwVWTok1z5E",
+ "publish_at": "2026-10-22T02:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T02:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-099"
+}

@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 40 scheduled |
+| Thu 22 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 40 scheduled |
 | Wed 21 Oct | 26 public, 3 scheduled | 14 | 12 | ⏳ 26 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -58,11 +58,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## In the queue
 
-- **QD-099** Above the Below release date revealed 🎬 (rendering next)
-- **QD-100** Best Buy launches Pokemon TCG sale 📱 (rendering next)
-- **QD-101** Ella Langley and Morgan Wallen released new duet 🎶 (rendering next)
-- **QD-102** Club Brugge 20 league titles history ⚽ (rendering next)
-- **QD-103** Taylor Swift's haunted video twist 🎬 (rendering next)
 - **QD-105** Alphonso Davies: From refugee to Bayern star 🏆 (rendering next)
 - **QD-106** Scottish Premiership biggest stadium and history ⚽ (rendering next)
 - **QD-107** How does ChatGPT process natural language queries? 🤖 (rendering next)

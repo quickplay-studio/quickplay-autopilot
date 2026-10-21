@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 14:47): 7 of 1,000 subscribers · 4,633 of 10 million Shorts views in 90 days · 5,736 views in the last 24 hours (about 111,060 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 15:41): 7 of 1,000 subscribers · 4,371 of 10 million Shorts views in 90 days · 5,927 views in the last 24 hours (about 111,063 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 14:28 (UK): 6 scheduled, 68 public, 29 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Wed 21 Oct | 20 public, 9 scheduled | 14 | 6 | ⏳ 20 of 40 so far, 9 more scheduled |
+| Wed 21 Oct | 21 public, 8 scheduled | 14 | 6 | ⏳ 21 of 40 so far, 8 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -74,7 +74,7 @@ scheduled · 25 s · music: f16 · [script](../boards/done/QD-083.json) · [YouT
 ![QD-083](QD-083.jpg)
 
 ### Wed 21 Oct 15:30 · How Manchester United won the 1999 Champions League 🏆
-scheduled · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
+private · 24 s · music: across-seas-and-lands · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
 
 ![QD-082](QD-082.jpg)
 

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 21 Oct, 18:37): 7 of 1,000 subscribers · 4,891 of 10 million Shorts views in 90 days · 5,974 views in the last 24 hours (about 111,057 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Wed 21 Oct, 19:44): 7 of 1,000 subscribers · 5,001 of 10 million Shorts views in 90 days · 6,223 views in the last 24 hours (about 111,056 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 17:19 (UK): 8 scheduled, 74 public, 37 uploads in the last 24 hours.
 
@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 22 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 40 scheduled |
-| Wed 21 Oct | 26 public, 3 scheduled | 14 | 9 | ⏳ 26 of 40 so far, 3 more scheduled |
+| Thu 22 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 40 scheduled |
+| Wed 21 Oct | 26 public, 3 scheduled | 14 | 11 | ⏳ 26 of 40 so far, 3 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -94,7 +94,7 @@ private · 22 s · music: level · on Facebook · [script](../boards/done/QD-089
 ![QD-089](QD-089.jpg)
 
 ### Wed 21 Oct 17:30 · Glee reboot officially confirmed 🎵
-private · 27 s · music: dance-with-you · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
+private · 27 s · music: dance-with-you · on Facebook · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
 
 ![QD-088](QD-088.jpg)
 
@@ -104,7 +104,7 @@ public · 27 s · music: scale-the-mountain · on Facebook · [script](../boards
 ![QD-087](QD-087.jpg)
 
 ### Wed 21 Oct 16:30 · The day Apollo 13 became a rescue mission 🚀
-public · 26 s · music: across-seas-and-lands · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
+public · 26 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
 
 ![QD-085](QD-085.jpg)
 

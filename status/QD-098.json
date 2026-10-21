@@ -1,0 +1,99 @@
+{
+ "id": "QD-098",
+ "board": "boards/queue/QD-098.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T01:30:00Z",
+ "rendered": "2026-10-21T18:39:03.021337+00:00",
+ "title": "Mark Allen snooker career highlights 🎱",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:960px-Mark_Allen_with_English_Open_trophy_2025.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail: 'imageinfo')",
+  "beat 6 reused a nearby picture (commons:File:960px-Mark_Allen_with_English_Open_trophy_2025.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "twin-lynches",
+ "social_music": "dark-suspense-trailer-488322",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 29.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.3
+ },
+ "timeline": [
+  [
+   0.06,
+   5.03,
+   "none",
+   0
+  ],
+  [
+   5.03,
+   10.41,
+   "date",
+   1
+  ],
+  [
+   10.41,
+   15.41,
+   "none",
+   1
+  ],
+  [
+   15.41,
+   21.29,
+   "none",
+   1
+  ],
+  [
+   21.29,
+   26.24,
+   "none",
+   1
+  ],
+  [
+   26.24,
+   29.6,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "131058",
+   "q": "snooker club table",
+   "t0": 0.0,
+   "t1": 15.1
+  },
+  {
+   "p": "pixabay",
+   "id": "242620",
+   "q": "sports arena lights",
+   "t0": 14.5,
+   "t1": 29.6
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T18:51:50Z",
+ "video": "29ehu4f0dRI",
+ "url": "https://youtube.com/shorts/29ehu4f0dRI",
+ "publish_at": "2026-10-22T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-098"
+}

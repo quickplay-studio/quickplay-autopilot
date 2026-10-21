@@ -476,6 +476,7 @@ def face_box(seg, a, b, every=2.0):
         if len(items) < max(2, n / 2): continue
         change = float(np.mean(np.std(np.stack([pt for _, pt in items]), axis=0)))     # how much the patch moves and talks
         if change > score: best, score = items, change
+    log(f"  faces: {n} frames, groups " + ", ".join(f"{k}:{len(v)}" for k, v in groups.items()) + f", best change {score:.1f}")
     if not best or score < 4.0: return None
     med = lambda k: sorted(v[0][k] for v in best)[len(best) // 2]
     return (med(0), med(1), med(2), med(3))
@@ -534,9 +535,13 @@ def make_clip(cid, m, words):
     seg, out = segment(cid), OUT / f"{m['id']}.mp4"
     a, b = m["start"], m["end"]
     tests = m.get("tests") or test_plan(m["id"])
+    for t in TESTS:                                     # CLIPS_LAYOUT, CLIPS_CAPTIONS, CLIPS_PUNCH force an arm (tests)
+        if os.environ.get(f"CLIPS_{t.upper()}") in TESTS[t]: tests[t] = os.environ[f"CLIPS_{t.upper()}"]
     if (c.get("rules") or {}).get("full_frame") or portrait(seg): tests["layout"] = "letterbox"    # the whole picture must stay (a rule, or a vertical source)
     face = face_box(seg, a, b) if tests["layout"] in ("face", "split") else None
     graph, layout = layout_filters(tests["layout"], face)
+    if layout != tests["layout"]: log(f"{m['id']}: {tests['layout']} layout asked, no steady face, letterbox instead")
+    elif face: log(f"{m['id']}: {layout} layout, face at x {face[0]:.2f} y {face[1]:.2f} size {face[3]:.2f}")
     tests["layout"] = layout
     cap_y = {"letterbox": 430, "face": 520, "split": 140}[layout]        # ASS margin from the bottom
     ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass, tests["captions"], cap_y)

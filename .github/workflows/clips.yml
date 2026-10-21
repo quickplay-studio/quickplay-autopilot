@@ -62,6 +62,7 @@ jobs:
           req=""; [ "${{ github.event_name }}" = "push" ] && req=$(head -1 requests/clips.txt 2>/dev/null)
           export CLIPS_COUNT="${IN_COUNT:-$(echo "$req" | grep -o '[0-9]\+' | head -1)}"
           case "$IN_MODE $req" in *private*|*test*) export CLIPS_MODE=private;; esac
+          for kv in $(echo "$req" | grep -oE '(layout|captions|punch)=[a-z]+'); do export CLIPS_$(echo "${kv%%=*}" | tr a-z A-Z)="${kv#*=}"; done
           set -o pipefail
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt

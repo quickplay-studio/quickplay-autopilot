@@ -1,8 +1,3 @@
-valorant-champs-01: pulled before publishing (profanity: shit, fucking)
-tdr-flamingo-01: pulled before publishing (profanity: f***ing, f***ing)
-today's shares: {"tdr-flamingo": 1, "tdr-jenny": 1}
-tdr-flamingo-02: made (30 s) Flamingo Gets Eliminated as Sadie
-tdr-flamingo-02: uploaded https://youtube.com/shorts/x-kZ0zQq_Ig (batch)
-tdr-jenny-02: made (29 s) Jenny Hoyos Struggles with Her Stream Setup
-tdr-jenny-02: uploaded https://youtube.com/shorts/2AzOmoug5fk (batch)
-stats: 14 clips
+tdr-jenny-02: could not pull: HttpError: <HttpError 503 when requesting https://youtube.googleapis.com/youtube/v3/videos?part=status&alt=json returned "The service is currently unavailable.".
+today's shares: {}
+the day's number is already scheduled

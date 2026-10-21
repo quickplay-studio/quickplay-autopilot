@@ -1,0 +1,46 @@
+{
+ "note": "Quickplay Clips (@QuickplayClips-x9b): one entry per clipping campaign Charlie joined. A campaign is used only while active is true and its rules are here; permission is the campaign itself. Times are UK. No secrets in this file.",
+ "batch_time": "18:00",
+ "batch_note": "Reach wants every clip submitted within 30 minutes of posting, so the day's clips go public together at batch_time and clips/submit.csv lists the links Charlie pastes into each campaign then.",
+ "campaigns": {
+  "speed-expedia": {
+   "name": "$8,000 IShowSpeed x Expedia Clipping Campaign",
+   "platform": "Content Rewards (Reach)",
+   "url": "https://contentrewards.com/c/campaigns/03bda4fd-3474-4b1e-a914-88aaf3ac8372",
+   "rules_url": "https://reachclipping.com/Expedia-Speed",
+   "joined": "2026-10-21",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 1.0,
+   "min_views": 10000,
+   "max_payout": 500,
+   "subject": "IShowSpeed",
+   "source": {
+    "kind": "gdrive",
+    "id": "1pcUMz8ZpbIcku3ylk6dhOi6xjWAT3juc",
+    "start": "3:56:30",
+    "end": "4:12:22",
+    "label": "IShowSpeed's Twitch stream, 14 October 2026 (the Expedia Unpack segment)"
+   },
+   "rules": {
+    "focus": "IShowSpeed is the main person on screen in every clip, and the yellow suitcase stays in frame.",
+    "on_screen": "Name the destination accurately on screen whenever a destination is revealed or discussed.",
+    "hashtags": ["#IShowSpeed", "#Expedia"],
+    "description": "IShowSpeed unpacks the Expedia suitcase.",
+    "avoid": ["any brand logo other than Expedia", "anything that shows IShowSpeed or Expedia negatively", "AI-generated video", "slang from outside the US and UK"],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English captions and on-screen text"
+   },
+   "submit": {"kind": "link_form", "within_minutes": 30, "where": "the campaign page, Submit clip"}
+  },
+  "forgegui-roblox": {
+   "name": "ForgeGUI Clipping [Roblox] (BloxClips)",
+   "platform": "Content Rewards (BloxClips)",
+   "url": "https://contentrewards.com/c/campaigns/1db63081-715e-4e04-9b11-fbc1d4e8e700",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "An advert for a software tool, not clips: it needs a dedicated Roblox account with the ForgeGUI line in its bio, a product demo with logo and call to action in every video, and pays $0.50 on YouTube. Would taint Quickplay Clips for every other campaign; its own channel if ever."
+  }
+ }
+}

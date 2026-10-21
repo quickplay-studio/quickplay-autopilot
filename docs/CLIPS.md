@@ -56,3 +56,16 @@ forbids it for that creator's content.
 - Submit: clips/submit.csv lists each new clip's link and campaign for the ones that need a form; campaigns that track
   a connected account need nothing.
 - First week on private uploads for one campaign, then public.
+
+## Built 21 October (01:00 to 02:30 UK)
+- clips/campaigns.json: speed-expedia active (Reach, $1 per 1,000 on YouTube, 10,000 views before pay, footage = the
+  Expedia Unpack segment 3:56:30 to 4:12:22 of the 14 October stream, Google Drive file in the rules), forgegui-roblox
+  joined but off (an advert for a tool that wants its own Roblox account).
+- pipeline/clips.py + clips.yml: source (gdown the Drive file to /mnt/clips, cut and shrink the segment once, keep it as
+  release asset clips-src), plan (faster-whisper small on the CPU, Gemini picks moments that keep the rules), make
+  (ffmpeg: picture centred over its blurred copy, hook and destination label on top, captions below, credit at the foot,
+  loudness normalised), upload (private, public together at 18:00 UK; CLIPS_MODE=private for a watchable test), stats
+  (clips/stats.csv). Charlie's part: at 18:00 paste each link from clips/submit.csv into its campaign.
+- Test by pushing requests/clips.txt with "test 2"; the daily run is 13:00 UK; "stats" refreshes the numbers.
+- Still to do: a Whop API or scraper for submissions does not exist, so submission stays manual; Vyro campaigns once
+  Charlie sends them; a second source kind for Twitch (TWITCH_CLIENT_ID and secret) when a campaign needs it.

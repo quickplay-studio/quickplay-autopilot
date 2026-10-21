@@ -1,0 +1,71 @@
+name: clips
+# Quickplay Clips (pipeline/clips.py): clips from campaign-permitted footage (clips/campaigns.json), made at 13:00 UK and
+# public together at 18:00 UK, when Charlie pastes the links from clips/submit.csv into each campaign (Reach wants a
+# submission within 30 minutes of posting). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no
+# publish time); "stats" refreshes clips/stats.csv only.
+on:
+  schedule:
+    - cron: '0 12 * * *'       # 13:00 UK (12:00 in summer): the day's clips, scheduled for 18:00 UK
+    - cron: '30 22 * * *'      # views per clip for the learning data
+  push:
+    branches: [main]
+    paths: ['requests/clips*']
+  workflow_dispatch:
+    inputs:
+      count: { description: 'How many clips per campaign (blank: per_day)', required: false, default: '' }
+      mode: { description: 'private for a test upload with no publish time', required: false, default: '' }
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clips
+  cancel-in-progress: false
+
+jobs:
+  clips:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: |
+          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          pip install -q requests cryptography gdown faster-whisper google-api-python-client==2.* google-auth==2.* tzdata
+          sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
+      - name: Clips
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CLIPS_WORK: /mnt/clips
+          IN_COUNT: ${{ inputs.count }}
+          IN_MODE: ${{ inputs.mode }}
+        run: |
+          req=""; [ "${{ github.event_name }}" = "push" ] && req=$(head -1 requests/clips.txt 2>/dev/null)
+          export CLIPS_COUNT="${IN_COUNT:-$(echo "$req" | grep -o '[0-9]\+' | head -1)}"
+          case "$IN_MODE $req" in *private*|*test*) export CLIPS_MODE=private;; esac
+          set -o pipefail
+          if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
+            python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
+          else
+            python pipeline/clips.py run 2>&1 | tee status/clips_log.txt
+          fi
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          mkdir -p clips/plans status/quota
+          git add clips/plans clips/submit.csv clips/stats.csv status/clips_log.txt status/quota 2>/dev/null || true
+          git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

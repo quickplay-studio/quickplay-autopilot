@@ -142,8 +142,12 @@ def transcribe(cid):
     wav = WORK / f"{cid}.wav"
     run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-i", str(seg), "-ac", "1", "-ar", "16000", str(wav)])
     model = WhisperModel(os.environ.get("WHISPER_MODEL", "small"), device="cpu", compute_type="int8")
+    import wave
+    import numpy as np
+    with wave.open(str(wav), "rb") as f:            # the samples go in as an array, so no PyAV version can get in the way
+        audio = np.frombuffer(f.readframes(f.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
     out = []
-    segs, _ = model.transcribe(str(wav), word_timestamps=True, language="en", vad_filter=True)
+    segs, _ = model.transcribe(audio, word_timestamps=True, language="en", vad_filter=True)
     for s in segs:
         for w in s.words or []:
             out.append({"w": w.word.strip(), "s": round(w.start, 2), "e": round(w.end, 2)})

@@ -449,28 +449,45 @@ def drawtext(text, size, y, colour="white", box=True):
 
 
 def face_box(seg, a, b, every=2.0):
-    """Where the face is between a and b, as (x, y, w, h) fractions of the picture: the median of the faces OpenCV finds
-    in a frame every `every` seconds; None when faces show in under half the frames (no steady face to follow)."""
+    """Where the person is between a and b, as (x, y, w, h) fractions of the picture: OpenCV's face detector on a frame
+    every `every` seconds, detections grouped by position, and the group that is present in at least half the frames
+    AND changes most over time wins (a real face talks and moves; a face-like patch of wall does not). None when no
+    group qualifies."""
     try:
         import cv2, numpy as np
     except ImportError: return None
     casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-    found, n = [], 0
+    groups, n = {}, 0          # (round x, round y) -> [(box, 32x32 grey patch)]
     t = a + 0.5
     while t < b:
         f = WORK / "face.jpg"
         subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", str(seg), "-frames:v", "1", "-q:v", "4", str(f)])
         img = cv2.imread(str(f)) if f.exists() else None
         if img is not None:
-            n += 1; h, w = img.shape[:2]
-            faces = casc.detectMultiScale(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 1.2, 5, minSize=(int(h * 0.08), int(h * 0.08)))
-            if len(faces):
-                x, y, fw, fh = max(faces, key=lambda r: r[2] * r[3])
-                found.append((x / w, y / h, fw / w, fh / h))
+            n += 1; h, w = img.shape[:2]; grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            for (x, y, fw, fh) in casc.detectMultiScale(grey, 1.2, 6, minSize=(int(h * 0.08), int(h * 0.08))):
+                key = (round(x / w, 1), round(y / h, 1))
+                patch = cv2.resize(grey[y:y + fh, x:x + fw], (32, 32)).astype("float32")
+                groups.setdefault(key, []).append(((x / w, y / h, fw / w, fh / h), patch))
         t += every
-    if n == 0 or len(found) < max(2, n / 2): return None
-    med = lambda k: sorted(v[k] for v in found)[len(found) // 2]
+    if n == 0: return None
+    best, score = None, -1.0
+    for key, items in groups.items():
+        if len(items) < max(2, n / 2): continue
+        change = float(np.mean(np.std(np.stack([pt for _, pt in items]), axis=0)))     # how much the patch moves and talks
+        if change > score: best, score = items, change
+    if not best or score < 4.0: return None
+    med = lambda k: sorted(v[0][k] for v in best)[len(best) // 2]
     return (med(0), med(1), med(2), med(3))
+
+
+def portrait(seg):
+    """True when the source picture is taller than wide (a vertical video needs no layout, it fills the frame)."""
+    try:
+        w, h = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", str(seg)],
+                              capture_output=True, text=True).stdout.strip().split(",")[:2]
+        return int(h) > int(w)
+    except Exception: return False
 
 
 def layout_filters(layout, face):
@@ -486,8 +503,8 @@ def layout_filters(layout, face):
         cx, cy = face[0] + face[2] / 2, face[1] + face[3] / 2
         side = min(max(face[3] * 3.2, 0.45), 1.0)              # a square around the head, with room for the shoulders
         return (f"[0:v]split=2[cam][game];"
-                f"[cam]crop=w=ih*{side:.3f}:h=ih*{side:.3f}:x=min(max(iw*{cx:.3f}-ih*{side / 2:.3f}\\,0)\\,iw-ih*{side:.3f}):"
-                f"y=min(max(ih*{cy:.3f}-ih*{side / 2:.3f}\\,0)\\,ih-ih*{side:.3f}),scale=1080:1080[camS];"
+                f"[cam]crop=w=min(ih*{side:.3f}\\,iw):h=min(ih*{side:.3f}\\,iw):x=min(max(iw*{cx:.3f}-ih*{side / 2:.3f}\\,0)\\,iw-min(ih*{side:.3f}\\,iw)):"
+                f"y=min(max(ih*{cy:.3f}-ih*{side / 2:.3f}\\,0)\\,ih-min(ih*{side:.3f}\\,iw)),scale=1080:1080[camS];"
                 f"[game]scale=1080:-2[gameS];[camS]pad=1080:1920:0:0:black[canvas];[canvas][gameS]overlay=0:1080[v1];", layout)
     return (f"[0:v]split=2[bg][fg];{blur}[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];", "letterbox")
 
@@ -517,6 +534,7 @@ def make_clip(cid, m, words):
     seg, out = segment(cid), OUT / f"{m['id']}.mp4"
     a, b = m["start"], m["end"]
     tests = m.get("tests") or test_plan(m["id"])
+    if (c.get("rules") or {}).get("full_frame") or portrait(seg): tests["layout"] = "letterbox"    # the whole picture must stay (a rule, or a vertical source)
     face = face_box(seg, a, b) if tests["layout"] in ("face", "split") else None
     graph, layout = layout_filters(tests["layout"], face)
     tests["layout"] = layout

@@ -38,7 +38,9 @@
     ],
     "min_s": 15,
     "max_s": 55,
-    "language": "English captions and on-screen text"
+    "language": "English captions and on-screen text",
+    "full_frame": true,
+    "full_frame_note": "the yellow suitcase and Speed must both stay in frame, so no face crop"
    },
    "submit": {
     "kind": "link_form",

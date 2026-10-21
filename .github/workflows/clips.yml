@@ -74,7 +74,7 @@ jobs:
           elif echo "$req" | grep -qi probe; then
             python pipeline/clips.py probe $(echo "$req" | grep -o 'https://[^ ]*') 2>&1 | tee status/clips_log.txt
           else
-            python pipeline/clips.py run 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py run $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt
           fi
       - name: Save
         if: ${{ always() }}

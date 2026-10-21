@@ -1,16 +1,9 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
 Raindance by Dave & Tems: 0 verified, 1 one-source, 2 pages
-south africa vs australia: 0 verified, 0 one-source, 2 pages
-orionids meteor shower: 0 verified, 0 one-source, 1 pages
-the rolling stones who you callin' crazy: 0 verified, 1 one-source, 1 pages
-alexander skarsgård: 0 verified, 1 one-source, 2 pages
-ChatGPT: 4 verified, 4 one-source, 3 pages
-Street Fighter (2026 film): 10 verified, 0 one-source, 2 pages
-Barbara Palvin: 0 verified, 7 one-source, 1 pages
-IVE 아이브 'Looks Can Kill' MV: 0 verified, 0 one-source, 1 pages
-Olivia Rodrigo: 0 verified, 0 one-source, 3 pages
-Tate McRae: 0 verified, 2 one-source, 1 pages
-Anuel AA: 0 verified, 4 one-source, 1 pages
-Zara Larsson: 0 verified, 1 one-source, 1 pages
-13 packs, 14 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 14}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+ChatGPT: 4 verified, 1 one-source, 3 pages
+Street Fighter (2026 film): 3 verified, 5 one-source, 3 pages
+The Victoria’s Secret Fashion Show 2026: 0 verified, 6 one-source, 1 pages
+Above the Below: 0 verified, 0 one-source, 3 pages
+Olivia Rodrigo: 0 verified, 5 one-source, 1 pages
+6 packs, 7 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 7}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

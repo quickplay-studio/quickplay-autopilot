@@ -741,6 +741,21 @@ def scheduled_today():
     return n
 
 
+def page_text(url):
+    """The visible text of a page, rendered (the campaign pages are built by scripts), else the raw page."""
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as pw:
+            browser = pw.chromium.launch(); page = browser.new_page()
+            page.goto(url, wait_until="domcontentloaded", timeout=90000); page.wait_for_timeout(6000)
+            text = page.inner_text("body"); browser.close()
+            return re.sub(r"\s+", " ", text)
+    except Exception as e:
+        log(f"  rendered read failed ({type(e).__name__}), raw page instead")
+        import requests
+        return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", requests.get(url, timeout=60, headers={"User-Agent": "Mozilla/5.0"}).text))
+
+
 def check_campaigns():
     """Every active campaign: off when its end date has passed, or (Content Rewards, public pages) when the page says it
     is full or ended or has under clips_budget_floor dollars left. Writes clips/campaigns.json; the reason stays in why_off."""
@@ -753,9 +768,9 @@ def check_campaigns():
         url = c.get("url") or ""
         if not why and "contentrewards.com/c/campaigns/" in url:
             try:
-                html = requests.get(url, timeout=60, headers={"User-Agent": "Mozilla/5.0"}).text
-                text = re.sub(r"<[^>]+>", " ", html)
-                left = re.search(r"\$\s*([\d,]+)\s*(?:<[^>]*>\s*)*remaining", html) or re.search(r"\$\s*([\d,]+)\s*remaining", text)
+                text = page_text(url)
+                left = re.search(r"\$\s*([\d,]+)\s*remaining", text)
+                log(f"{cid}: page: " + (f"${left.group(1)} remaining" if left else "no budget figure found") + f"; {text[:90]}")
                 if re.search(r"no longer accepting|campaign (has )?ended|campaign is full|not accepting (clips|submissions)", text, re.I): why = "the page says it is full or ended"
                 elif left and int(left.group(1).replace(",", "")) < int(CFG.get("clips_budget_floor", 50)): why = f"budget nearly spent (${left.group(1)} left)"
                 if left: c["budget_left"] = int(left.group(1).replace(",", "")); changed = True

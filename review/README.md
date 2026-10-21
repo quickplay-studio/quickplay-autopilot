@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 9 public, 3 scheduled | 6 | 0 | ⏳ 9 of 40 so far, 3 more scheduled |
+| Wed 21 Oct | 9 public, 5 scheduled | 6 | 0 | ⏳ 9 of 40 so far, 5 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -53,11 +53,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
-
-## In the queue
-
-- **QD-073** Kylie Jenner makes Victoria's Secret show debut ✨ (rendering next)
-- **QD-074** K/DA returns with a brand new line-up 🎶 (rendering next)
 
 ## On the channel (latest first)
 

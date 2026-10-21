@@ -1,0 +1,100 @@
+{
+ "id": "QD-073",
+ "board": "boards/queue/QD-073.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T08:54:00Z",
+ "rendered": "2026-10-21T07:40:38.198881+00:00",
+ "title": "Kylie Jenner makes Victoria's Secret show debut ✨",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Jacob and Co jewellery: no Commons image named 'Jacob and Co jewellery')",
+  "beat 5 reused a nearby picture (commons-search:Kylie Jenner red carpet: no Commons image named 'Kylie Jenner red carpet')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "mirror-mirror",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 24.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.1
+ },
+ "timeline": [
+  [
+   0.06,
+   4.25,
+   "none",
+   0
+  ],
+  [
+   4.25,
+   8.83,
+   "title",
+   1
+  ],
+  [
+   8.83,
+   13.63,
+   "none",
+   1
+  ],
+  [
+   13.63,
+   18.05,
+   "none",
+   1
+  ],
+  [
+   18.05,
+   21.69,
+   "none",
+   1
+  ],
+  [
+   21.69,
+   24.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "185790",
+   "q": "fashion runway lights",
+   "t0": 0.0,
+   "t1": 12.43
+  },
+  {
+   "p": "pixabay",
+   "id": "184146",
+   "q": "flash cameras catwalk",
+   "t0": 11.83,
+   "t1": 24.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T07:59:38Z",
+ "video": "80enLT-H0Zo",
+ "url": "https://youtube.com/shorts/80enLT-H0Zo",
+ "publish_at": "2026-10-21T08:54:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T08:54:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-073"
+}

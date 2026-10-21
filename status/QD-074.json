@@ -1,0 +1,107 @@
+{
+ "id": "QD-074",
+ "board": "boards/queue/QD-074.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T09:30:00Z",
+ "rendered": "2026-10-21T07:40:32.822961+00:00",
+ "title": "K/DA returns with a brand new line-up 🎶",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "mirror-mirror",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "clean",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 30.7,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 13.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.1,
+   "none",
+   0
+  ],
+  [
+   4.1,
+   9.36,
+   "title",
+   1
+  ],
+  [
+   9.36,
+   13.34,
+   "none",
+   2
+  ],
+  [
+   13.34,
+   16.81,
+   "none",
+   1
+  ],
+  [
+   16.81,
+   19.55,
+   "cards",
+   1
+  ],
+  [
+   19.55,
+   23.61,
+   "none",
+   1
+  ],
+  [
+   23.61,
+   27.19,
+   "versus",
+   1
+  ],
+  [
+   27.19,
+   30.67,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380220",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 15.63
+  },
+  {
+   "p": "pixabay",
+   "id": "10024",
+   "q": "video game screen glow",
+   "t0": 15.03,
+   "t1": 30.67
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T07:59:40Z",
+ "video": "P3r8h3msA7c",
+ "url": "https://youtube.com/shorts/P3r8h3msA7c",
+ "publish_at": "2026-10-21T09:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T09:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-074"
+}

@@ -1,23 +1,10 @@
-afternoon run for 2026-10-21: 21 to write from 8 fact packs
+breaking run for 2026-10-21: 2 to write from 3 fact packs
+covered already: Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United
 local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
 local model ready
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-glee: gemini-flash-latest, 0 warnings
-bob iger: gemini-flash-latest, 0 warnings
+Raindance by Dave & Tems: gemini-3.5-flash-lite, 0 warnings
 covered already: Street Fighter (2026 film)
-covered already: Barbara Palvin
-covered already: The Victoria’s Secret Fashion Show 2026
-Shrek 2 Remastered: gemini-3.8-flash, 0 warnings
-covered already: K/DA
-covered already: Olivia Rodrigo
-Japan launches historic mission to Mars's moon Phobos 🚀: gemini-3-flash-preview, 3 warnings (shots: 3 of 8 are stock; real pictures of the subject first (stock at most 1 in 5); beat 0: the hook needs a real picture of the subject, not stock; meta.sources: one site only; name it in the narrati)
-evergreen: Top 10 highest-grossing video game film adaptations: only 0 checked facts
-evergreen: Top 10 best-selling Shrek franchise films: only 0 checked facts
-evergreen: Top 10 most-viewed K/DA music videos: only 0 checked facts
-evergreen: Top 10 highest-grossing concert tours by female artists: only 0 checked facts
-The creation of the first Godzilla suit: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How the Tetris theme became a global hit: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-What is the loudest sound ever recorded on Earth?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Which artist has won the most Grammy Awards?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 8 of 21: QD-088 Glee reboot officially confirmed 🎵; QD-089 Bob Iger announces new book One Last Time 📖; QD-090 Shrek 2 Remastered revealed with GTA parody 🧅; QD-091 Japan's Phobos rover Idefix's two hour drill 🚀; QD-092 The day Godzilla was almost an octopus 🐙; QD-093 How Tetris became a global video game phenomenon 🧩; QD-094 What is the loudest sound ever recorded on Earth? 🌋; QD-095 Which artist has won the most Grammy Awards? 🏆
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling-small:free": "key refused (403)"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-3.1-flash-lite-preview": 1}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 2, "gemini-flash-latest": 2, "gemini-3.5-flash-lite": 46, "gemini-3.8-flash": 1, "groq:openai/gpt-oss-120b": 1, "gemini-3-flash-preview": 3, "gemini-3.1-flash-lite-preview": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+The Beatles debut album recorded in 12 hours 🎸: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 2 of 2: QD-096 Dave Raindance hits number one 🎶; QD-097 The Beatles Please Please Me secret history revealed 🎸
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-flash-latest": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3-flash-preview": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 1, "gemini-3.5-flash": 1, "gemini-3.5-flash-lite": 9}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

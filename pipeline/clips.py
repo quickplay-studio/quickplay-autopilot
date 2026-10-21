@@ -295,6 +295,9 @@ def make(cid, count=None):
         try:
             out = make_clip(cid, m, words)
             m["made"] = NOW.isoformat(timespec="minutes"); m["file"] = out.name; made.append(m)
+            frames = ROOT / "clips" / "frames"; frames.mkdir(parents=True, exist_ok=True)
+            subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{(m['end'] - m['start']) * 0.3:.2f}", "-i", str(out),
+                            "-frames:v", "1", "-vf", "scale=540:960", "-q:v", "6", str(frames / f"{m['id']}.jpg")])
             log(f"{m['id']}: made ({m['end'] - m['start']:.0f} s) {m['title']}")
         except Exception as e:
             m["skipped"] = f"{type(e).__name__}: {e}"[:200]; log(f"{m['id']}: skipped: {m['skipped']}")
@@ -339,16 +342,17 @@ def upload(cid, mode=None):
     publish_at, when = (None, None) if mode == "private" else batch_time()
     rows, p = [], ROOT / "clips" / "submit.csv"
     for m in todo:
-        tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"], "clips", "shorts"]
-        desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}\n\n" + " ".join(r.get("hashtags") or []) + "\n\n"
-                f"{c['source'].get('label', '')}. Posted with permission under the {c['name']}.")
+        tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
+        desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
+                f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}).")
         try:
             vid = Y.upload(yt, OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
         except Exception as e:
             log(f"{m['id']}: upload failed: {type(e).__name__}: {str(e)[:200]}"); continue
         m.update(video=vid, url=f"https://youtube.com/shorts/{vid}", uploaded=NOW.isoformat(timespec="minutes"),
                  publish_at=publish_at or "private", mode=mode)
-        rows.append({"clip": m["id"], "campaign": cid, "campaign_url": c["url"], "video": m["url"],
+        where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))
+        rows.append({"clip": m["id"], "campaign": cid, "campaign_url": where.group(0) if where else c["url"], "video": m["url"],
                      "public_at_uk": when.strftime("%Y-%m-%d %H:%M") if when else "private (test)", "title": m["title"],
                      "hashtags": " ".join(r.get("hashtags") or []), "submitted": ""})
         log(f"{m['id']}: uploaded {m['url']} ({mode})")

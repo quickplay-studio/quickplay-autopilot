@@ -25,14 +25,26 @@
    "rules": {
     "focus": "IShowSpeed is the main person on screen in every clip, and the yellow suitcase stays in frame.",
     "on_screen": "Name the destination accurately on screen whenever a destination is revealed or discussed.",
-    "hashtags": ["#IShowSpeed", "#Expedia"],
+    "hashtags": [
+     "#IShowSpeed",
+     "#Expedia"
+    ],
     "description": "IShowSpeed unpacks the Expedia suitcase.",
-    "avoid": ["any brand logo other than Expedia", "anything that shows IShowSpeed or Expedia negatively", "AI-generated video", "slang from outside the US and UK"],
+    "avoid": [
+     "any brand logo other than Expedia",
+     "anything that shows IShowSpeed or Expedia negatively",
+     "AI-generated video",
+     "slang from outside the US and UK"
+    ],
     "min_s": 15,
     "max_s": 55,
     "language": "English captions and on-screen text"
    },
-   "submit": {"kind": "link_form", "within_minutes": 30, "where": "the campaign page, Submit clip"}
+   "submit": {
+    "kind": "link_form",
+    "within_minutes": 30,
+    "where": "the campaign page, Submit clip"
+   }
   },
   "forgegui-roblox": {
    "name": "ForgeGUI Clipping [Roblox] (BloxClips)",
@@ -41,6 +53,376 @@
    "joined": "2026-10-21",
    "active": false,
    "why_off": "An advert for a software tool, not clips: it needs a dedicated Roblox account with the ForgeGUI line in its bio, a product demo with logo and call to action in every video, and pays $0.50 on YouTube. Would taint Quickplay Clips for every other campaign; its own channel if ever."
+  },
+  "mrbeast-cod": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "MrBeast Gaming: Escape Call of Duty's DMZ, Win $1,000,000 (Call of Duty MW4)",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 1.5,
+   "subject": "MrBeast",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/_a1-OEVL",
+    "label": "MrBeast Gaming's video Escape Call of Duty's DMZ, Win $1,000,000, with Call of Duty MW4"
+   },
+   "rules": {
+    "focus": "The best moments of MrBeast's video: the escapes, the eliminations, the reactions, the money moments. Entertaining first; never misrepresent MrBeast or Call of Duty.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#MW4partner",
+     "#MW4"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "tdr-stinkyasher": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "Total Drama Roblox: StinkyAsher",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 2.5,
+   "subject": "StinkyAsher",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/7acN1ASv",
+    "label": "StinkyAsher's video I Played In The First Ever Total Drama Roblox Tournament"
+   },
+   "rules": {
+    "focus": "The funniest and most dramatic moments of StinkyAsher in the Total Drama Roblox tournament: eliminations, betrayals, reactions, wins. Never misrepresent the creators, Total Drama or Roblox.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#paidpartnership",
+     "#TotalDramaRoblox"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "tdr-mitch": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "Total Drama Roblox: Mitch Gaming",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 2.5,
+   "subject": "Mitch Gaming",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/cn710FBZ",
+    "label": "Mitch Gaming's video i competed in a Total Drama Roblox Tournament"
+   },
+   "rules": {
+    "focus": "The funniest and most dramatic moments of Mitch Gaming in the Total Drama Roblox tournament: eliminations, betrayals, reactions, wins. Never misrepresent the creators, Total Drama or Roblox.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#paidpartnership",
+     "#TotalDramaRoblox"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "tdr-flamingo": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "Total Drama Roblox: Flamingo",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 2.5,
+   "subject": "Flamingo",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/k1aKSCNp",
+    "label": "Flamingo's video Roblox Total Drama Island is mean"
+   },
+   "rules": {
+    "focus": "The funniest and most dramatic moments of Flamingo in the Total Drama Roblox tournament: eliminations, betrayals, reactions, wins. Never misrepresent the creators, Total Drama or Roblox.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#paidpartnership",
+     "#TotalDramaRoblox"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "tdr-jenny": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "Total Drama Roblox: Jenny Hoyos",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 2.5,
+   "subject": "Jenny Hoyos",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/bxcDZy3B",
+    "label": "Total Drama Roblox Streamer Tournament on Jenny Hoyos' channel"
+   },
+   "rules": {
+    "focus": "The funniest and most dramatic moments of Jenny Hoyos in the Total Drama Roblox tournament: eliminations, betrayals, reactions, wins. Never misrepresent the creators, Total Drama or Roblox.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#paidpartnership",
+     "#TotalDramaRoblox"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "valorant-microdrama": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "VALORANT Microdrama series",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 1.5,
+   "subject": "VALORANT",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/ySICjlo0",
+    "label": "VALORANT's microdrama series"
+   },
+   "rules": {
+    "focus": "Each episode in sequence as Part 1, Part 2, Part 3 (the story must stay in order), or playful brand-safe memes from it; never trash VALORANT or its characters.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#ValorantPartner",
+     "#valorant"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English",
+    "series": "Split an episode into Part 1, Part 2, Part 3 in order, each a clip of its own, titled with the part number."
+   }
+  },
+  "valorant-champs": {
+   "platform": "Vyro",
+   "joined": "2026-10-21",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "VALORANT Champs Shanghai Podcast",
+   "url": "https://app.vyro.com/campaigns",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 1.5,
+   "subject": "VALORANT Champs",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/1XI8aRT3",
+    "label": "the VALORANT Champs Shanghai podcast (Only Four Teams Remain, live in Shanghai)"
+   },
+   "rules": {
+    "focus": "The funniest moments, biggest reactions and best debates. Their own picks: 31:59 Sacy's rant about Neon and the meta; 36:14 Chinese roster rumours in a bathroom; 55:09 Babybay on playing under pressure without a contract; 1:04:34 Babybay's spirit bomb speech; 2:07:00 Bren's defence of Jawgemo.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#valorantchamps"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   }
+  },
+  "sega-metaphor": {
+   "name": "SEGA Metaphor: ReFantazio Switch 2 Demo Clipping (Clipping Culture)",
+   "platform": "Content Rewards (Clipping Culture)",
+   "url": "https://contentrewards.com/c/campaigns/ac498f72-60d3-4753-a703-44895b8b9678",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Needs a screen recording of the channel's audience analytics showing 50% USA (https://tally.so/r/rjZE5R) before clips count; Charlie submits it once the channel has views, then this switches on.",
+   "per_day": 2,
+   "pay_per_1k": 2.0,
+   "min_views": 1000,
+   "max_payout": 1500,
+   "subject": "Metaphor: ReFantazio",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/R7KYdYyW",
+    "label": "the official Metaphor: ReFantazio Switch 2 demo footage"
+   },
+   "rules": {
+    "focus": "Fun moments, battles and intense moments from the official demo footage only; a trailer is never called gameplay.",
+    "on_screen": "Genuine and true; no made-up facts.",
+    "hashtags": [
+     "#Ad",
+     "#MetaphorReFantazio"
+    ],
+    "description": "",
+    "avoid": [
+     "music that drowns the game audio",
+     "AI voices",
+     "exaggerated hooks or rage bait",
+     "political or controversial content"
+    ],
+    "min_s": 15,
+    "max_s": 55,
+    "language": "English"
+   },
+   "submit": {
+    "kind": "link_form",
+    "where": "the campaign page, Submit clip; the post stays up 30 days"
+   }
+  },
+  "sunshine-valley": {
+   "name": "Sunshine Valley [ROBLOX GAME] (BloxClips)",
+   "platform": "Content Rewards (BloxClips)",
+   "url": "https://contentrewards.com/c/campaigns/86feeffa-1373-4ade-b37d-e8356f9e35fe",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Last in line ($1 per 1,000, $917 left, a game advert); footage links still to be added from the capture.",
+   "per_day": 1,
+   "pay_per_1k": 1.0,
+   "min_views": 1000,
+   "max_payout": 300,
+   "subject": "Sunshine Valley"
+  },
+  "roblox-gsn": {
+   "name": "roblox-gsn",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Its guide tells clippers to push a 'free Robux' link and post fake comments from alt accounts: a scam pattern that gets channels terminated. Never used."
+  },
+  "kizik-mrbeast": {
+   "name": "kizik-mrbeast",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Ends 23 October with 82% paid out, and every caption must carry US-only sweepstakes legal text (next to the gambling line). Skipped."
+  },
+  "boxabl": {
+   "name": "boxabl",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "$0.50 per 1,000 and footage only as YouTube downloads (unreliable from GitHub's servers). Off for now."
+  },
+  "digger": {
+   "name": "digger",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Pays on TikTok only."
+  },
+  "mini-brand": {
+   "name": "mini-brand",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Pays on TikTok and Instagram only."
+  },
+  "bill-pay": {
+   "name": "bill-pay",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Budget gone ($412 left)."
+  },
+  "double-coverage": {
+   "name": "double-coverage",
+   "platform": "Content Rewards",
+   "joined": "2026-10-21",
+   "active": false,
+   "why_off": "Brez ended; the weekly pool needs 250,000 views to qualify and footage is YouTube-only; Henry Cejudo episode is YouTube-only footage. Off."
   }
- }
+ },
+ "daily_clips": 10,
+ "daily_note": "Clips a day across every active campaign (the clips channel's own upload ceiling learns like the main one); each campaign gets a share by pay times its measured views (clips/insights.json), capped by per_day."
 }

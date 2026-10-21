@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quickplay Clips: links to submit</title>
+<style>
+body{font:17px/1.5 system-ui,-apple-system,sans-serif;margin:0;padding:16px;background:#0f1115;color:#eee}
+h1{font-size:20px;margin:0 0 4px}p{margin:6px 0 14px;color:#aab}
+.card{background:#1a1d24;border-radius:12px;padding:14px;margin:0 0 12px}
+.card b{display:block;font-size:16px;margin-bottom:4px}.card small{color:#9ab;display:block;margin-bottom:10px}
+button,a.btn{display:inline-block;font:inherit;font-weight:600;padding:12px 16px;border-radius:10px;border:0;margin:0 8px 8px 0;text-decoration:none;cursor:pointer}
+button{background:#2d7ff9;color:#fff}a.btn{background:#2a2f3a;color:#fff}
+.done{opacity:.45}.tag{display:inline-block;background:#2a2f3a;border-radius:6px;padding:2px 8px;font-size:13px;margin-right:6px}
+#status{color:#9ab}
+</style>
+</head>
+<body>
+<h1>Quickplay Clips: links to submit</h1>
+<p id="status">Loading today's clips…</p>
+<div id="list"></div>
+<p>Each card: press <b>Copy link</b>, press <b>Open campaign</b>, press <b>Submit clip</b> (Content Rewards) or <b>Submit post</b> (Vyro), paste, confirm. Reach campaigns want it within 30 minutes of the clip going public. Press <b>Done</b> to grey a card out (remembered on this phone only).</p>
+<script>
+const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/clips/submit.csv?t=" + Date.now();
+function parse(text){
+  const rows=[];let row=[],cell="",q=false;
+  for(let i=0;i<text.length;i++){const ch=text[i];
+    if(q){ if(ch=='"'){ if(text[i+1]=='"'){cell+='"';i++;} else q=false; } else cell+=ch; }
+    else if(ch=='"') q=true; else if(ch==','){row.push(cell);cell="";}
+    else if(ch=='\n'){row.push(cell);rows.push(row);row=[];cell="";} else if(ch!='\r') cell+=ch; }
+  if(cell||row.length){row.push(cell);rows.push(row);}
+  const head=rows.shift()||[]; return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]||""])));
+}
+let done={}; try{done=JSON.parse(localStorage.getItem("qp-done")||"{}")}catch(e){}
+function save(){try{localStorage.setItem("qp-done",JSON.stringify(done))}catch(e){}}
+fetch(RAW).then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
+  const rows=parse(t).reverse();
+  const today=new Date().toISOString().slice(0,10);
+  const list=document.getElementById("list");
+  const show=rows.filter(r=>r.public_at_uk && !r.public_at_uk.startsWith("private"));
+  document.getElementById("status").textContent = show.length ? show.length+" clips in the list, newest first (today's are dated "+today+")." : "No clips to submit yet.";
+  for(const r of show){
+    const d=document.createElement("div"); d.className="card"+(done[r.clip]?" done":"");
+    d.innerHTML=`<b>${r.title}</b><small><span class="tag">${r.campaign}</span>public ${r.public_at_uk} UK · ${r.hashtags}</small>
+      <button data-copy="${r.video}">Copy link</button><a class="btn" href="${r.campaign_url}" target="_blank" rel="noopener">Open campaign</a><button data-done="${r.clip}" style="background:#3a3f4a">Done</button>
+      <small style="margin-top:8px">${r.video}</small>`;
+    list.appendChild(d);
+  }
+  list.addEventListener("click",e=>{
+    const b=e.target.closest("button"); if(!b) return;
+    if(b.dataset.copy){ navigator.clipboard.writeText(b.dataset.copy).then(()=>{b.textContent="Copied";setTimeout(()=>b.textContent="Copy link",1500)}); }
+    if(b.dataset.done){ done[b.dataset.done]=!done[b.dataset.done]; save(); b.closest(".card").classList.toggle("done"); }
+  });
+}).catch(e=>{document.getElementById("status").textContent="Could not load the list ("+e+"). Open https://github.com/quickplay-studio/quickplay-autopilot/blob/main/clips/submit.csv instead."});
+</script>
+</body>
+</html>

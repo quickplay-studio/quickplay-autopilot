@@ -41,7 +41,7 @@ fetch(RAW).then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
   document.getElementById("status").textContent = show.length ? show.length+" clips in the list, newest first (today's are dated "+today+")." : "No clips to submit yet.";
   for(const r of show){
     const d=document.createElement("div"); d.className="card"+(done[r.clip]?" done":"");
-    d.innerHTML=`<b>${r.title}</b><small><span class="tag">${r.campaign}</span>public ${r.public_at_uk} UK · ${r.hashtags}</small>
+    d.innerHTML=`<b>${r.title}</b><small><span class="tag">${r.campaign}</span><span class="tag">${r.platform||"youtube"}</span>public ${r.public_at_uk} UK · ${r.hashtags}</small>
       <button data-copy="${r.video}">Copy link</button><a class="btn" href="${r.campaign_url}" target="_blank" rel="noopener">Open campaign</a><button data-done="${r.clip}" style="background:#3a3f4a">Done</button>
       <small style="margin-top:8px">${r.video}</small>`;
     list.appendChild(d);

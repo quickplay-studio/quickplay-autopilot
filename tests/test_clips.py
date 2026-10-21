@@ -3,7 +3,7 @@ planning with a stubbed model, and (when ffmpeg is here) one synthetic render.""
 import pathlib as _p, sys as _s, tempfile as _t
 REPO_DIR = str(_p.Path(__file__).resolve().parent.parent)
 SCRATCH = _t.mkdtemp(prefix="qp-test-")
-import datetime as dt, json, os, pathlib, shutil, subprocess, sys
+import csv, datetime as dt, json, os, pathlib, shutil, subprocess, sys
 os.chdir(REPO_DIR)
 sys.path.insert(0, REPO_DIR + "/pipeline")
 import clips as C
@@ -115,3 +115,24 @@ assert not C.CFG["campaigns"]["b"]["active"] and "budget" in C.CFG["campaigns"][
 assert C.CFG["campaigns"]["c"]["active"]
 print("9 switch-off ok")
 print("clips extras ok")
+
+# 10. layouts, karaoke captions, tests, submit rows, insights
+C.CFG["campaigns"] = json.loads(pathlib.Path(REPO_DIR + "/clips/campaigns.json").read_text())["campaigns"]
+g, lay = C.layout_filters("face", (0.5, 0.3, 0.1, 0.15)); assert lay == "face" and "crop=w=ih*9/16" in g
+g, lay = C.layout_filters("split", (0.5, 0.3, 0.1, 0.15)); assert lay == "split" and "overlay=0:1080" in g
+g, lay = C.layout_filters("split", None); assert lay == "letterbox"
+tp = C.test_plan("x-01"); assert set(tp) == set(C.TESTS) and all(tp[t] in C.TESTS[t] for t in tp)
+C.captions(words, 9.0, 18.0, ass, "karaoke", 500)
+k = ass.read_text(); assert "\\k" in k and "MarginV" in k and ",500,1" in k
+rw = C.submit_row("speed-expedia", C.CFG["campaigns"]["speed-expedia"], {"id": "s-1", "title": "t"}, "instagram", "https://instagram.com/p/x", "2026-10-22")
+assert rw["platform"] == "instagram" and rw["campaign_url"].startswith("https://contentrewards.com") and rw["hashtags"] == "#IShowSpeed #Expedia"
+C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir(exist_ok=True)
+(C.ROOT / "clips" / "submit.csv").write_text("clip,campaign,campaign_url,video,public_at_uk,title,hashtags,submitted\na,c,u,v,2026-10-21 18:00,t,#h,\n")
+C.add_rows([rw]); rows = list(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))
+assert rows[0]["platform"] == "youtube" and rows[1]["platform"] == "instagram" and rows[1]["video"] == "https://instagram.com/p/x", rows
+stat_rows = [{"campaign": "a", "privacy": "public", "hours_public": 30, "views": v, "test_layout": l, "test_captions": "lines", "test_punch": "none"}
+             for v, l in ((100, "face"), (120, "face"), (140, "face"), (50, "letterbox"), (60, "letterbox"), (40, "letterbox"))]
+ins = C.insights(stat_rows)
+assert ins["tests"]["layout"]["best"] == "face" and ins["tests"]["captions"]["best"] == "lines" and ins["campaigns"]["a"]["n"] == 6, ins["tests"]
+print("10 layouts, captions, rows, insights ok")
+print("clips extras 2 ok")

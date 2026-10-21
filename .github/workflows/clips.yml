@@ -7,6 +7,7 @@ on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
     - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
+    - cron: '0 17,18,21,22 * * *'   # the batch times (18:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts and comments
     - cron: '30 22 * * *'      # views per clip for the learning data
   push:
     branches: [main]
@@ -34,7 +35,7 @@ jobs:
         with: { python-version: '3.12' }
       - run: |
           sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
-          pip install -q requests cryptography gdown faster-whisper playwright Pillow google-api-python-client==2.* google-auth==2.* tzdata
+          pip install -q requests cryptography gdown faster-whisper playwright Pillow "opencv-python-headless<5" google-api-python-client==2.* google-auth==2.* tzdata
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || python -m playwright install chromium
           sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
       - name: Clips
@@ -48,6 +49,12 @@ jobs:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          IG_CLIPS_TOKEN: ${{ secrets.IG_CLIPS_TOKEN }}
+          IG_CLIPS_USER_ID: ${{ secrets.IG_CLIPS_USER_ID }}
+          FB_CLIPS_PAGE_TOKEN: ${{ secrets.FB_CLIPS_PAGE_TOKEN }}
+          FB_CLIPS_PAGE_ID: ${{ secrets.FB_CLIPS_PAGE_ID }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           CLIPS_WORK: /mnt/clips
           IN_COUNT: ${{ inputs.count }}
           IN_MODE: ${{ inputs.mode }}
@@ -58,6 +65,9 @@ jobs:
           set -o pipefail
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
+          elif [ "${{ github.event.schedule }}" = "0 17,18,21,22 * * *" ] || echo "$req" | grep -qi social; then
+            case "$req" in *social*) export CLIPS_SOCIAL_NOW=1;; esac
+            python pipeline/clips.py social 2>&1 | tee status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
             case "$req" in *redo*) export CLIPS_REDO=1;; esac
             python pipeline/clips.py prepare $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt
@@ -72,7 +82,7 @@ jobs:
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           mkdir -p clips/plans status/quota
-          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv status/clips_log.txt status/quota status/probe_*.html status/probe_*.png; do git add $f 2>/dev/null || true; done
+          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

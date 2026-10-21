@@ -439,5 +439,10 @@
  "clips_limit_max": 30,
  "clips_limit_min": 4,
  "clips_budget_floor": 50,
- "ceiling_note": "The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips, +clips_limit_step after each full day with no refusal, settles where YouTube refuses (uploadLimitExceeded). Campaigns switch off on their end date or when their public page says full, ended or under clips_budget_floor dollars left."
+ "ceiling_note": "The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips, +clips_limit_step after each full day with no refusal, settles where YouTube refuses (uploadLimitExceeded). Campaigns switch off on their end date or when their public page says full, ended or under clips_budget_floor dollars left.",
+ "social_per_day": 6,
+ "tiktok": false,
+ "tiktok_mode": "direct",
+ "social_note": "Every public clip is also posted as an Instagram Reel (IG_CLIPS_TOKEN, IG_CLIPS_USER_ID), a Facebook Reel (FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID) and, when tiktok is true, on TikTok (tokens/tiktok_clips.enc), at the batch time, at most social_per_day a platform a day; each post gets its own row on the submit page because campaigns pay per platform. batch_times can give a platform its own time, e.g. {\"Vyro\": \"22:00\"}.",
+ "channels_note": "A campaign may name its YouTube channel (\"channel\": \"clips\" by default): tokens/youtube_<channel>.enc from the social workflow. More channels keep each on its niche for the audience checks."
 }

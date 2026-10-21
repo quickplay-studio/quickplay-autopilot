@@ -40,7 +40,8 @@ The transcript is a list of lines with their start and end seconds:
 {lines}
 Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line, 8 words or fewer, in capitals OK, what
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
-"why": "one line"}}]}}"""
+"peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
+comments that viewers can answer, under 90 characters", "why": "one line"}}]}}"""
 
 
 def log(*a): print(*a, flush=True)
@@ -53,6 +54,12 @@ PROFANE = re.compile(r"\b(f+u+c+k+\w*|f\*+\w*|s+h+i+t+\w*|s\*+t\w*|b+i+t+c+h+\w*
 def profane(words, a, b):
     """The strong words heard between a and b (the channel is family-friendly and every campaign wants brand-safe)."""
     return PROFANE.findall(" ".join(w["w"] for w in words if a <= w["s"] <= b))
+
+
+def num(x):
+    """A number of seconds from a model's field: 83, "83", "1:23"; None when it is nothing of the kind."""
+    try: return secs(x) if ":" in str(x) else float(x)
+    except (TypeError, ValueError): return None
 
 
 def secs(t):
@@ -333,7 +340,9 @@ def plan(cid, n=8):
         plan_["moments"].append({"id": f"{cid}-{len(plan_['moments']) + 1:02d}", "start": round(a, 2), "end": round(b, 2),
                                  "hook": hook, "label": str(m.get("label") or "").strip()[:40],
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
-                                 "why": str(m.get("why") or "")[:200], "planned": NOW.isoformat(timespec="minutes"), "model": model})
+                                 "why": str(m.get("why") or "")[:200], "planned": NOW.isoformat(timespec="minutes"), "model": model,
+                                 "peak": num(m.get("peak")),
+                                 "question": re.sub(r"[–—]", "-", str(m.get("question") or "")).strip()[:90]})
         done.append((a, b)); added += 1
     PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
     log(f"{cid}: {added} of {len(raw)} moments planned ({model}), {len(plan_['moments'])} in all" + (f"; dropped {json.dumps(why)}" if len(raw) > added else "")
@@ -385,25 +394,37 @@ def ass_time(t):
 def ass_escape(s): return s.replace("\\", "\\\\").replace("{", "(").replace("}", ")")
 
 
-def captions(words, a, b, path):
-    """Captions as an ASS file: three or four words at a time, big and bold, below the picture."""
+def captions(words, a, b, path, style="lines", y=430):
+    """Captions as an ASS file. "lines": three or four words at a time below the picture. "karaoke": the same groups
+    with each word lighting up yellow as it is spoken (the style every big clipping channel uses), placed at `y`
+    pixels from the bottom of the 1920-pixel frame."""
     sel = [w for w in words if w["s"] >= a - 0.2 and w["e"] <= b + 0.2]
+    size = 64 if style == "lines" else 70
     head = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n\n[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, "
             "StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            "Style: Cap,DejaVu Sans,64,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5,2,2,60,60,430,1\n\n"
+            f"Style: Cap,DejaVu Sans,{size},&H0000FFFF,&H00FFFFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,5,2,2,60,60,{y},1\n\n"
             "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
+    if style == "lines":      # plain white: PrimaryColour is what shows when nothing is sung
+        head = head.replace("&H0000FFFF,&H00FFFFFF", "&H00FFFFFF,&H0000FFFF")
     ev, group = [], []
     for w in sel:
         group.append(w)
-        if len(group) >= 4 or w["w"].endswith((".", "?", "!", ",")) and len(group) >= 2:
+        if len(group) >= (4 if style == "lines" else 3) or w["w"].endswith((".", "?", "!", ",")) and len(group) >= 2:
             ev.append(group); group = []
     if group: ev.append(group)
     lines = []
     for i, g in enumerate(ev):
-        s = g[0]["s"] - a; e = (ev[i + 1][0]["s"] if i + 1 < len(ev) else g[-1]["e"] + 0.6) - a
-        text = ass_escape(" ".join(x["w"] for x in g).upper())
-        lines.append(f"Dialogue: 0,{ass_time(s)},{ass_time(min(e, b - a))},Cap,,0,0,0,,{text}")
+        s0 = g[0]["s"] - a; e0 = (ev[i + 1][0]["s"] if i + 1 < len(ev) else g[-1]["e"] + 0.6) - a
+        if style == "karaoke":   # \k times in centiseconds: each word turns from white to yellow as it is said
+            parts, t = [], g[0]["s"]
+            for x in g:
+                gap = max(0, int(round((x["s"] - t) * 100))); dur = max(5, int(round((x["e"] - x["s"]) * 100)))
+                parts.append((f"{{\\k{gap}}}" if gap else "") + f"{{\\k{dur}}}" + ass_escape(x["w"].upper())); t = x["e"]
+            text = " ".join(parts)
+        else:
+            text = ass_escape(" ".join(x["w"] for x in g).upper())
+        lines.append(f"Dialogue: 0,{ass_time(s0)},{ass_time(min(e0, b - a))},Cap,,0,0,0,,{text}")
     pathlib.Path(path).write_text(head + "\n".join(lines) + "\n")
 
 
@@ -427,26 +448,99 @@ def drawtext(text, size, y, colour="white", box=True):
             f":borderw=3:bordercolor=black{extra}")
 
 
+def face_box(seg, a, b, every=2.0):
+    """Where the face is between a and b, as (x, y, w, h) fractions of the picture: the median of the faces OpenCV finds
+    in a frame every `every` seconds; None when faces show in under half the frames (no steady face to follow)."""
+    try:
+        import cv2, numpy as np
+    except ImportError: return None
+    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    found, n = [], 0
+    t = a + 0.5
+    while t < b:
+        f = WORK / "face.jpg"
+        subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", str(seg), "-frames:v", "1", "-q:v", "4", str(f)])
+        img = cv2.imread(str(f)) if f.exists() else None
+        if img is not None:
+            n += 1; h, w = img.shape[:2]
+            faces = casc.detectMultiScale(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 1.2, 5, minSize=(int(h * 0.08), int(h * 0.08)))
+            if len(faces):
+                x, y, fw, fh = max(faces, key=lambda r: r[2] * r[3])
+                found.append((x / w, y / h, fw / w, fh / h))
+        t += every
+    if n == 0 or len(found) < max(2, n / 2): return None
+    med = lambda k: sorted(v[k] for v in found)[len(found) // 2]
+    return (med(0), med(1), med(2), med(3))
+
+
+def layout_filters(layout, face):
+    """The ffmpeg graph that turns the landscape picture [0:v] into the 1080x1920 canvas [v1]: "letterbox" (the picture
+    centred over its own blurred copy), "face" (a 9:16 window of the picture following the face), "split" (the face
+    on top, the whole picture below). face: (x, y, w, h) fractions, or None (then letterbox)."""
+    if layout in ("face", "split") and not face: layout = "letterbox"
+    blur = "[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:3,eq=brightness=-0.15[bgb];"
+    if layout == "face":
+        cx = min(max(face[0] + face[2] / 2, 0.2), 0.8)          # the window stays inside the picture
+        return (f"[0:v]crop=w=ih*9/16:h=ih:x=min(max(iw*{cx:.3f}-ih*9/32\\,0)\\,iw-ih*9/16):y=0,scale=1080:1920[v1];", layout)
+    if layout == "split":
+        cx, cy = face[0] + face[2] / 2, face[1] + face[3] / 2
+        side = min(max(face[3] * 3.2, 0.45), 1.0)              # a square around the head, with room for the shoulders
+        return (f"[0:v]split=2[cam][game];"
+                f"[cam]crop=w=ih*{side:.3f}:h=ih*{side:.3f}:x=min(max(iw*{cx:.3f}-ih*{side / 2:.3f}\\,0)\\,iw-ih*{side:.3f}):"
+                f"y=min(max(ih*{cy:.3f}-ih*{side / 2:.3f}\\,0)\\,ih-ih*{side:.3f}),scale=1080:1080[camS];"
+                f"[game]scale=1080:-2[gameS];[camS]pad=1080:1920:0:0:black[canvas];[canvas][gameS]overlay=0:1080[v1];", layout)
+    return (f"[0:v]split=2[bg][fg];{blur}[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];", "letterbox")
+
+
+TESTS = {"layout": ["letterbox", "face", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"]}
+
+
+def test_plan(mid):
+    """One arm per test for a clip, by its id (repeatable), weighted by clips/insights.json when it has a verdict."""
+    import random
+    rng = random.Random(f"clip:{mid}")
+    try: ins = json.loads((ROOT / "clips" / "insights.json").read_text()).get("tests") or {}
+    except Exception: ins = {}
+    out = {}
+    for t, arms in TESTS.items():
+        best = (ins.get(t) or {}).get("best")
+        out[t] = best if best in arms and rng.random() < 0.7 else rng.choice(arms)
+    return out
+
+
 def make_clip(cid, m, words):
-    """One 1080x1920 clip: the landscape picture in the middle over its own blurred copy, the hook at the top, the
-    destination label under it, captions below the picture, the credit at the bottom, loudness normalised."""
+    """One 1080x1920 clip: the picture laid out by the clip's layout test (letterbox, face, split), the hook at the top,
+    the label under it, captions in the clip's caption style, an optional zoom punch-in on the peak moment, the credit
+    at the bottom, loudness normalised. The tests used are written on the moment."""
     c = campaigns([cid])[cid]
     OUT.mkdir(parents=True, exist_ok=True)
     seg, out = segment(cid), OUT / f"{m['id']}.mp4"
     a, b = m["start"], m["end"]
-    ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass)
+    tests = m.get("tests") or test_plan(m["id"])
+    face = face_box(seg, a, b) if tests["layout"] in ("face", "split") else None
+    graph, layout = layout_filters(tests["layout"], face)
+    tests["layout"] = layout
+    cap_y = {"letterbox": 430, "face": 520, "split": 140}[layout]        # ASS margin from the bottom
+    ass = WORK / f"{m['id']}.ass"; captions(words, a, b, ass, tests["captions"], cap_y)
     credit = f"Clip from {c['subject']}, posted with permission"
-    vf = ("[0:v]split=2[bg][fg];"
-          "[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=24:3,eq=brightness=-0.15[bgb];"
-          "[fg]scale=1080:-2[fgs];[bgb][fgs]overlay=0:(H-h)/2[v1];"
-          f"[v1]{drawtext(m['hook'].upper(), 62, 250)}[v2];"
-          + (f"[v2]{drawtext(m['label'], 44, 440, 'yellow')}[v3];" if m.get("label") else "[v2]null[v3];")
-          + f"[v3]subtitles='{ass}'[v4];[v4]{drawtext(credit, 30, 1800, 'white', False)}[v]")
+    hook_y = 250 if layout != "split" else 60
+    label_y = hook_y + 190
+    peak = m.get("peak")
+    if tests["punch"] == "zoom" and peak and a < float(peak) < b - 1.5:    # 1.5 seconds at 1.12x on the peak moment, picture only
+        t0 = float(peak) - a
+        graph += (f"[v1]split=2[va][vb];[vb]scale=1210:2150,crop=w=1080:h=1920:x=(iw-1080)/2:y=(ih-1920)/2[big];"
+                  f"[va][big]overlay=0:0:enable='between(t,{t0:.2f},{t0 + 1.5:.2f})'[v1z];")
+    else:
+        graph += "[v1]null[v1z];"; tests["punch"] = "none"
+    vf = (graph + f"[v1z]{drawtext(m['hook'].upper(), 62, hook_y)}[v2];"
+          + (f"[v2]{drawtext(m['label'], 44, label_y, 'yellow')}[v3];" if m.get("label") else "[v2]null[v3];")
+          + f"[v3]subtitles='{ass}'[v4];[v4]{drawtext(credit, 30, 1800 if layout != 'split' else 1862, 'white', False)}[v]")
     cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.2f}", "-to", f"{b:.2f}", "-i", str(seg),
            "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-r", "30",
            "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
            "-movflags", "+faststart", str(out)]
     run(cmd)
+    m["tests"] = tests
     return out
 
 
@@ -500,22 +594,30 @@ def make(cid, count=None):
 
 
 # ----- uploading ------------------------------------------------------------------------------------------------------------
-def clips_client():
-    """A YouTube client for Quickplay Clips (tokens/youtube_clips.enc, the social workflow's sign-in)."""
+def channel_of(cid):
+    """Which YouTube channel a campaign posts on (campaigns.json "channel", default clips): its sign-in is
+    tokens/youtube_<channel>.enc, made with the social workflow. More channels keep each one on its niche."""
+    return str((CFG["campaigns"].get(cid) or {}).get("channel") or "clips")
+
+
+def clips_client(channel="clips"):
+    """A YouTube client for a clips channel (tokens/youtube_<channel>.enc, the social workflow's sign-in)."""
     import social
     from google.oauth2.credentials import Credentials
     from googleapiclient.discovery import build
-    t = social.load("youtube_clips")
-    if not t.get("refresh_token"): raise RuntimeError("the clips channel is not signed in (social workflow, channel clips)")
+    t = social.load(f"youtube_{channel}")
+    if not t.get("refresh_token"): raise RuntimeError(f"the {channel} channel is not signed in (social workflow, channel {channel})")
     creds = Credentials(None, refresh_token=t["refresh_token"], token_uri="https://oauth2.googleapis.com/token",
                         client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"],
                         scopes=(t.get("scope") or "").split())
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 
-def batch_time():
-    """The next batch publish time (UK batch_time today, or tomorrow once it is under an hour away) as RFC3339 UTC."""
-    h, mi = map(int, str(CFG.get("batch_time", "18:00")).split(":"))
+def batch_time(platform=None):
+    """The next batch publish time (UK batch_time today, or tomorrow once it is under an hour away) as RFC3339 UTC.
+    batch_times in campaigns.json can give a platform its own time ("Vyro": "22:00")."""
+    t_str = (CFG.get("batch_times") or {}).get(str(platform or "").split(" ")[0], CFG.get("batch_time", "18:00"))
+    h, mi = map(int, str(t_str).split(":"))
     uk = NOW.astimezone(UK)
     t = uk.replace(hour=h, minute=mi, second=0, microsecond=0)
     if t < uk + dt.timedelta(hours=1): t += dt.timedelta(days=1)
@@ -531,11 +633,18 @@ def upload(cid, mode=None):
     plan_ = json.loads(plan_p.read_text())
     todo = [m for m in plan_["moments"] if m.get("made") and not m.get("video") and (OUT / m.get("file", "")).exists()]
     if not todo: log(f"{cid}: nothing to upload"); return []
-    yt = clips_client()
+    yt = clips_client(channel_of(cid))
     mode = mode or os.environ.get("CLIPS_MODE", "").strip() or "batch"
-    publish_at, when = (None, None) if mode == "private" else batch_time()
+    publish_at, when = (None, None) if mode == "private" else batch_time(c.get("platform"))
     rows, p = [], ROOT / "clips" / "submit.csv"
     for m in todo:
+        try:
+            if gh("release", "view", OUTREL, check=False).returncode:
+                gh("release", "create", OUTREL, "--title", "Clips made", "--notes", "The clips as posted (for Instagram, Facebook and TikTok posting).", "--prerelease")
+            gh("release", "upload", OUTREL, str(OUT / m["file"]), "--clobber")
+            m["asset_url"] = f"https://github.com/{REPO}/releases/download/{OUTREL}/{m['file']}"
+        except Exception as e:
+            log(f"{m['id']}: clip asset not kept: {str(e)[:120]}")
         tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
         desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
                 f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}).")
@@ -548,18 +657,162 @@ def upload(cid, mode=None):
         m.update(video=vid, url=f"https://youtube.com/shorts/{vid}", uploaded=NOW.isoformat(timespec="minutes"),
                  publish_at=publish_at or "private", mode=mode)
         where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))
-        rows.append({"clip": m["id"], "campaign": cid, "campaign_url": where.group(0) if where else c["url"], "video": m["url"],
-                     "public_at_uk": when.strftime("%Y-%m-%d %H:%M") if when else "private (test)", "title": m["title"],
-                     "hashtags": " ".join(r.get("hashtags") or []), "submitted": ""})
+        rows.append(submit_row(cid, c, m, "youtube", m["url"], when.strftime("%Y-%m-%d %H:%M") if when else "private (test)"))
         log(f"{m['id']}: uploaded {m['url']} ({mode})")
     plan_p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
-    if rows:
-        new = not p.exists()
-        with p.open("a", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=list(rows[0]))
-            if new: w.writeheader()
-            w.writerows(rows)
+    add_rows(rows)
     return rows
+
+
+OUTREL = "clips-out"
+REPO = os.environ.get("GITHUB_REPOSITORY", "quickplay-studio/quickplay-autopilot")
+SUBMIT_FIELDS = ["clip", "campaign", "campaign_url", "platform", "video", "public_at_uk", "title", "hashtags", "submitted"]
+
+
+def submit_row(cid, c, m, platform, link, when):
+    where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))
+    return {"clip": m["id"], "campaign": cid, "campaign_url": where.group(0) if where else c["url"], "platform": platform, "video": link,
+            "public_at_uk": when, "title": m["title"], "hashtags": " ".join((c.get("rules") or {}).get("hashtags") or []), "submitted": ""}
+
+
+def add_rows(rows):
+    """Appends rows to clips/submit.csv, rewriting older rows into the current columns when they are short of one."""
+    if not rows: return
+    p = ROOT / "clips" / "submit.csv"
+    old = list(csv.DictReader(p.open())) if p.exists() else []
+    for r in old: r.setdefault("platform", "youtube")
+    with p.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=SUBMIT_FIELDS, extrasaction="ignore"); w.writeheader()
+        w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in old + rows])
+
+
+def social_caption(c, m):
+    r = c.get("rules") or {}
+    return (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
+            + f"\n\nClip from {c['subject']}, posted with the creator's permission.")
+
+
+def social_posts(force=False):
+    """Instagram Reels, Facebook Reels and TikTok for every clip public on YouTube today and not posted yet, at the UK
+    batch time (within 25 minutes after it, or any time with force): campaigns pay per platform, so one clip earns
+    three times. Accounts: IG_CLIPS_TOKEN and IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN and FB_CLIPS_PAGE_ID (repository
+    secrets), tokens/tiktok_clips.enc (the social workflow's TikTok connect for the clips account). Each post gets its
+    own row in clips/submit.csv. At most social_per_day posts a platform a day (a new account is ramped gently)."""
+    import social as S
+    uk = NOW.astimezone(UK)
+    windows = {str(CFG.get("batch_time", "18:00"))} | set((CFG.get("batch_times") or {}).values())
+    inside = any(0 <= (uk - uk.replace(hour=int(t.split(":")[0]), minute=int(t.split(":")[1]), second=0, microsecond=0)).total_seconds() <= 25 * 60 for t in windows)
+    if not inside and not force: log("social: not a batch time"); return 0
+    ig = {"token": os.environ.get("IG_CLIPS_TOKEN", "").strip(), "user": os.environ.get("IG_CLIPS_USER_ID", "").strip()}
+    fb = None
+    if os.environ.get("FB_CLIPS_PAGE_TOKEN", "").strip() and os.environ.get("FB_CLIPS_PAGE_ID", "").strip():
+        os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ["FB_CLIPS_PAGE_TOKEN"], os.environ["FB_CLIPS_PAGE_ID"]
+        S._FB.clear(); fb = S.fb_tokens()
+    tt = S.load("tiktok_clips") if os.environ.get("SOCIAL_KEY") else {}
+    if not (ig["token"] and ig["user"]) and not fb and not tt.get("access_token"):
+        log("social: no Instagram, Facebook or TikTok account for the clips channel yet"); return 0
+    cap, posted, rows = int(CFG.get("social_per_day", 6)), {"instagram": 0, "facebook": 0, "tiktok": 0}, []
+    today = str(uk.date())
+    for p in sorted(PLANS.glob("*.json")):
+        if p.name.endswith(".words.json"): continue
+        cid = p.stem; c = CFG["campaigns"].get(cid) or {}
+        if not c.get("rules"): continue
+        plan_ = json.loads(p.read_text()); changed = False
+        for m in plan_.get("moments") or []:
+            if not m.get("video") or m.get("pulled") or not m.get("asset_url") or m.get("publish_at") in (None, "private"): continue
+            try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
+            except ValueError: continue
+            if due > NOW + dt.timedelta(minutes=3) or (NOW - due) > dt.timedelta(hours=36): continue
+            caption = social_caption(c, m)
+            if ig["token"] and ig["user"] and not m.get("instagram") and posted["instagram"] < cap:
+                try:
+                    media = S.ig_post(ig, m["asset_url"], caption)
+                    import requests
+                    link = requests.get(f"{S.IG_API}/{media}", params={"fields": "permalink", "access_token": ig["token"]}, timeout=30).json().get("permalink", "")
+                    m["instagram"] = {"media": media, "url": link, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["instagram"] += 1
+                    rows.append(submit_row(cid, c, m, "instagram", link or media, today)); log(f"{m['id']}: Instagram {link}")
+                except Exception as e:
+                    m["instagram_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: Instagram failed: {str(e)[:160]}")
+            if fb and not m.get("facebook") and posted["facebook"] < cap:
+                try:
+                    f = WORK / m["file"]; WORK.mkdir(parents=True, exist_ok=True)
+                    if not f.exists(): gh("release", "download", OUTREL, "-p", m["file"], "-D", str(WORK), "--clobber")
+                    vid = S.fb_post(fb, f, caption)
+                    link = f"https://www.facebook.com/reel/{vid}"
+                    m["facebook"] = {"video": vid, "url": link, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["facebook"] += 1
+                    rows.append(submit_row(cid, c, m, "facebook", link, today)); log(f"{m['id']}: Facebook {link}")
+                except Exception as e:
+                    m["facebook_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: Facebook failed: {str(e)[:160]}")
+            if tt.get("access_token") and CFG.get("tiktok") and not m.get("tiktok") and posted["tiktok"] < cap:
+                try:
+                    f = WORK / m["file"]; WORK.mkdir(parents=True, exist_ok=True)
+                    if not f.exists(): gh("release", "download", OUTREL, "-p", m["file"], "-D", str(WORK), "--clobber")
+                    pid = S.tt_post(tt, f, caption, CFG.get("tiktok_mode", "direct"))
+                    m["tiktok"] = {"publish": pid, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["tiktok"] += 1
+                    rows.append(submit_row(cid, c, m, "tiktok", "TikTok: open the app, the post is in your profile", today)); log(f"{m['id']}: TikTok {pid}")
+                except Exception as e:
+                    m["tiktok_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: TikTok failed: {str(e)[:160]}")
+        if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    add_rows(rows)
+    log(f"social: {posted}")
+    return sum(posted.values())
+
+
+def engage():
+    """On every public clip without one: the channel's own comment (the planner's question, pinned by position as the
+    first comment), and for series parts a link to the part before and after. 50 units each, inside the allowance."""
+    import quota
+    done = 0
+    for p in sorted(PLANS.glob("*.json")):
+        if p.name.endswith(".words.json"): continue
+        cid = p.stem; c = CFG["campaigns"].get(cid) or {}
+        if not c.get("rules"): continue
+        plan_ = json.loads(p.read_text()); changed = False
+        by_part = {(m.get("episode"), m.get("part")): m for m in plan_.get("moments") or [] if m.get("episode")}
+        for m in plan_.get("moments") or []:
+            if not m.get("video") or m.get("pulled") or m.get("publish_at") in (None, "private"): continue
+            try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
+            except ValueError: continue
+            if due > NOW: continue
+            texts = []
+            if not m.get("comment") and m.get("question"): texts.append(("comment", m["question"]))
+            if m.get("episode") and not m.get("part_links"):
+                prev, nxt = by_part.get((m["episode"], m["part"] - 1)), by_part.get((m["episode"], m["part"] + 1))
+                lines = [f"Part {m['part'] + 1} is here: {nxt['url']}" for _ in [0] if nxt and nxt.get("url")] + \
+                        [f"Missed Part {m['part'] - 1}? {prev['url']}" for _ in [0] if prev and prev.get("url")]
+                if lines and (not nxt or nxt.get("url")): texts.append(("part_links", "\n".join(lines)))
+            for key, text in texts:
+                if not quota.allow(50, "clip comment"): log("engage: no allowance left today"); return done
+                try:
+                    r = clips_client(channel_of(cid)).commentThreads().insert(part="snippet", body={"snippet": {"videoId": m["video"], "topLevelComment": {
+                        "snippet": {"textOriginal": text[:900]}}}}).execute()
+                    m[key] = r["id"]; quota.spend(50, "clip comment"); changed = True; done += 1
+                except Exception as e:
+                    m[key + "_error"] = str(e)[:160]; changed = True; log(f"{m['id']}: comment failed: {str(e)[:120]}")
+        if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    log(f"engage: {done} comments")
+    return done
+
+
+def insights(rows):
+    """clips/insights.json: for each test (layout, captions, punch) and each campaign, the median views of public clips
+    24 hours old or more, and the best arm when it has 3 clips and beats the rest by 10%. test_plan() leans on it."""
+    aged = [r for r in rows if r.get("privacy") == "public" and float(r.get("hours_public") or 0) >= 24]
+    out = {"updated": NOW.isoformat(timespec="minutes"), "clips": len(aged), "tests": {}, "campaigns": {}}
+    def med(vals): vals = sorted(vals); return vals[len(vals) // 2] if vals else None
+    for t in TESTS:
+        arms = {}
+        for arm in TESTS[t]:
+            vals = [float(r["views"] or 0) for r in aged if r.get(f"test_{t}") == arm]
+            arms[arm] = {"n": len(vals), "median_views": med(vals)}
+        ranked = sorted((a for a in arms if arms[a]["n"] >= 3), key=lambda a: -arms[a]["median_views"])
+        best = ranked[0] if ranked and (len(ranked) == 1 or arms[ranked[0]]["median_views"] >= 1.1 * (arms[ranked[1]]["median_views"] or 0)) else None
+        out["tests"][t] = {"arms": arms, "best": best}
+    for cid in {r["campaign"] for r in aged}:
+        vals = [float(r["views"] or 0) for r in aged if r["campaign"] == cid]
+        out["campaigns"][cid] = {"n": len(vals), "median_views": med(vals)}
+    (ROOT / "clips" / "insights.json").write_text(json.dumps(out, indent=1))
+    return out
 
 
 def stats():
@@ -573,24 +826,31 @@ def stats():
         for m in json.loads(p.read_text()).get("moments") or []:
             if m.get("video"): vids[m["video"]] = (cid, m)
     if not vids: return
-    yt = clips_client()
     rows = []
-    ids = list(vids)
-    for i in range(0, len(ids), 50):
-        for v in yt.videos().list(part="statistics,status", id=",".join(ids[i:i + 50])).execute().get("items", []):
-            cid, m = vids[v["id"]]; st = v.get("statistics", {})
-            pub = v["status"].get("publishAt") or m.get("uploaded")
-            try: hours = round((NOW - dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))).total_seconds() / 3600, 1)
-            except Exception: hours = ""
-            rows.append({"clip": m["id"], "campaign": cid, "video": v["id"], "seconds": round(m["end"] - m["start"]),
-                         "hook_words": len(m["hook"].split()), "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
-                         "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
-                         "as_of": NOW.isoformat(timespec="minutes")})
+    by_channel = {}
+    for v, (cid, m) in vids.items(): by_channel.setdefault(channel_of(cid), []).append(v)
+    for channel, ids in by_channel.items():
+        yt = clips_client(channel)
+        for i in range(0, len(ids), 50):
+            for v in yt.videos().list(part="statistics,status", id=",".join(ids[i:i + 50])).execute().get("items", []):
+                cid, m = vids[v["id"]]; st = v.get("statistics", {})
+                pub = v["status"].get("publishAt") or m.get("uploaded")
+                try: hours = round((NOW - dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))).total_seconds() / 3600, 1)
+                except Exception: hours = ""
+                tests = m.get("tests") or {}
+                rows.append({"clip": m["id"], "campaign": cid, "channel": channel, "video": v["id"], "seconds": round(m["end"] - m["start"]),
+                             "hook_words": len(m["hook"].split()), "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
+                             "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
+                             **{f"test_{t}": tests.get(t, "") for t in TESTS},
+                             "instagram": (m.get("instagram") or {}).get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""),
+                             "as_of": NOW.isoformat(timespec="minutes")})
     p = ROOT / "clips" / "stats.csv"
     if not rows: return
     with p.open("w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
     log(f"stats: {len(rows)} clips")
+    try: ins = insights(rows); log("insights:", json.dumps({t: v["best"] for t, v in ins["tests"].items()}))
+    except Exception as e: log("insights:", str(e)[:200])
 
 
 def probe(url):
@@ -710,7 +970,7 @@ def review():
                 try:
                     for attempt in range(4):        # YouTube answers 503 now and then
                         try:
-                            clips_client().videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute(); break
+                            clips_client(channel_of(cid)).videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute(); break
                         except Exception as e:
                             if attempt == 3 or "503" not in str(e): raise
                             time.sleep(15 * (attempt + 1))
@@ -787,7 +1047,16 @@ def check_campaigns():
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
-    if cmd == "stats": stats(); return
+    if cmd == "stats":
+        stats()
+        try: engage()
+        except Exception as e: log("engage:", str(e)[:200])
+        return
+    if cmd == "social":
+        social_posts(force=bool(os.environ.get("CLIPS_SOCIAL_NOW")))
+        try: engage()
+        except Exception as e: log("engage:", str(e)[:200])
+        return
     if cmd == "probe":
         for u in ids: probe(u)
         return

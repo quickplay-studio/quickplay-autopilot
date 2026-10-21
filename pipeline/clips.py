@@ -79,17 +79,18 @@ def gh(*args, check=True):
     return r
 
 
-def asset_names():
-    r = gh("release", "view", RELEASE, "--json", "assets", "-q", "[.assets[].name]", check=False)
-    try: return set(json.loads(r.stdout or "[]"))
-    except ValueError: return set()
+def asset_sizes():
+    """{asset name: bytes} of the clips-src release (empty when it does not exist yet)."""
+    r = gh("release", "view", RELEASE, "--json", "assets", "-q", "[.assets[] | {name, size}]", check=False)
+    try: return {a["name"]: int(a.get("size") or 0) for a in json.loads(r.stdout or "[]")}
+    except (ValueError, TypeError): return {}
 
 
 def source(cid):
     """The campaign's footage segment as a release asset (made once): the source file is downloaded to the work disk,
     the segment between start and end is cut and shrunk to 720p, and the whole download is deleted."""
     c, name = campaigns([cid])[cid], f"{cid}.mp4"
-    if name in asset_names(): return name
+    if asset_sizes().get(name, 0) > 1_000_000: return name       # a tiny asset is a failed cut: made again
     s = c["source"]; WORK.mkdir(parents=True, exist_ok=True)
     raw = WORK / f"{cid}.raw"
     if s["kind"] == "gdrive":
@@ -124,9 +125,10 @@ def source(cid):
 def segment(cid):
     """The segment file on the work disk (downloaded from the release when missing)."""
     p = WORK / f"{cid}.mp4"
-    if not p.exists():
+    if not p.exists() or p.stat().st_size < 1_000_000:
         WORK.mkdir(parents=True, exist_ok=True)
         gh("release", "download", RELEASE, "-p", f"{cid}.mp4", "-D", str(WORK), "--clobber")
+    if duration(p) < 10: raise RuntimeError(f"{cid}: the segment asset is empty; delete it from the clips-src release and run again")
     return p
 
 

@@ -1,0 +1,99 @@
+{
+ "id": "QD-079",
+ "board": "boards/queue/QD-079.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T13:00:00Z",
+ "rendered": "2026-10-21T09:39:34.449336+00:00",
+ "title": "How often do the Orionids meteor showers occur? 🌠",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked nasa 1, pixabay 1 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (nasa:image:meteor shower night sky: no NASA image for 'meteor shower night sky')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "defying-gravity",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 26.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.3
+ },
+ "timeline": [
+  [
+   0.06,
+   5.02,
+   "none",
+   0
+  ],
+  [
+   5.02,
+   9.67,
+   "date",
+   1
+  ],
+  [
+   9.67,
+   13.8,
+   "stat",
+   1
+  ],
+  [
+   13.8,
+   17.15,
+   "none",
+   1
+  ],
+  [
+   17.15,
+   22.65,
+   "timeline",
+   1
+  ],
+  [
+   22.65,
+   25.93,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "GSFC_20190419_Earth_m13188_Orbit",
+   "q": "earth from orbit",
+   "t0": 0.0,
+   "t1": 13.26
+  },
+  {
+   "p": "pixabay",
+   "id": "10339",
+   "q": "space night sky stars",
+   "t0": 12.66,
+   "t1": 25.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:17:59Z",
+ "video": "YzkUYea_37E",
+ "url": "https://youtube.com/shorts/YzkUYea_37E",
+ "publish_at": "2026-10-21T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-079"
+}

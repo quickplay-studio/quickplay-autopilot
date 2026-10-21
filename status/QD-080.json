@@ -1,0 +1,107 @@
+{
+ "id": "QD-080",
+ "board": "boards/queue/QD-080.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T13:30:00Z",
+ "rendered": "2026-10-21T09:39:46.002783+00:00",
+ "title": "Who invented the World Wide Web? 🌐",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "circuit-rush",
+ "social_music": "creative-technology-showreel-241274",
+ "look": {
+  "captions": "minimal",
+  "voice": "lily",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 28.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 7.5
+ },
+ "timeline": [
+  [
+   0.06,
+   2.16,
+   "none",
+   0
+  ],
+  [
+   2.16,
+   5.5,
+   "date",
+   1
+  ],
+  [
+   5.5,
+   9.55,
+   "none",
+   1
+  ],
+  [
+   9.55,
+   12.43,
+   "none",
+   1
+  ],
+  [
+   12.43,
+   16.43,
+   "title",
+   1
+  ],
+  [
+   16.43,
+   20.16,
+   "none",
+   1
+  ],
+  [
+   20.16,
+   25.06,
+   "none",
+   1
+  ],
+  [
+   25.06,
+   28.13,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "171",
+   "q": "digital code scrolling",
+   "t0": 0.0,
+   "t1": 14.36
+  },
+  {
+   "p": "pixabay",
+   "id": "19454",
+   "q": "office computer desk",
+   "t0": 13.76,
+   "t1": 28.13
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:18:01Z",
+ "video": "n9u_lNVm3eA",
+ "url": "https://youtube.com/shorts/n9u_lNVm3eA",
+ "publish_at": "2026-10-21T13:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T13:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-080"
+}

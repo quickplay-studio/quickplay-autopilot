@@ -1,0 +1,98 @@
+{
+ "id": "QD-082",
+ "board": "boards/queue/QD-082.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T14:30:00Z",
+ "rendered": "2026-10-21T09:51:13.241030+00:00",
+ "title": "How Manchester United won the 1999 Champions League 🏆",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 5 reused a nearby picture (commons-search:Ole Gunnar Solskjær: no Commons image named 'Ole Gunnar Solskjær')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1019",
+  "energy": "calm",
+  "grade": "natural",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 24.1,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 7.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "none",
+   0
+  ],
+  [
+   4.0,
+   7.23,
+   "none",
+   1
+  ],
+  [
+   7.23,
+   10.46,
+   "none",
+   1
+  ],
+  [
+   10.46,
+   13.9,
+   "none",
+   1
+  ],
+  [
+   13.9,
+   18.04,
+   "none",
+   1
+  ],
+  [
+   18.04,
+   24.11,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "10827",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 12.36
+  },
+  {
+   "p": "pixabay",
+   "id": "139365",
+   "q": "running track sunrise",
+   "t0": 11.76,
+   "t1": 24.11
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:18:11Z",
+ "video": "xU_YzAN_0x4",
+ "url": "https://youtube.com/shorts/xU_YzAN_0x4",
+ "publish_at": "2026-10-21T14:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T14:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-082"
+}

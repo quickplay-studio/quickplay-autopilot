@@ -1,0 +1,115 @@
+{
+ "id": "QD-078",
+ "board": "boards/queue/QD-078.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T12:30:00Z",
+ "rendered": "2026-10-21T09:40:01.771801+00:00",
+ "title": "Bohemian Rhapsody: the 5.55 minute record 🎸",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "walking-the-wire",
+ "social_music": "train-country-blues-rock-131593",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 34.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.56,
+   "none",
+   0
+  ],
+  [
+   3.56,
+   9.29,
+   "title",
+   1
+  ],
+  [
+   9.29,
+   14.56,
+   "none",
+   1
+  ],
+  [
+   14.56,
+   17.83,
+   "none",
+   1
+  ],
+  [
+   17.83,
+   22.46,
+   "versus",
+   1
+  ],
+  [
+   22.46,
+   26.45,
+   "none",
+   1
+  ],
+  [
+   26.45,
+   30.56,
+   "none",
+   1
+  ],
+  [
+   30.56,
+   34.45,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "5994",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 11.88
+  },
+  {
+   "p": "pixabay",
+   "id": "121113",
+   "q": "recording studio mixing desk",
+   "t0": 11.28,
+   "t1": 23.17
+  },
+  {
+   "p": "pixabay",
+   "id": "65390",
+   "q": "vinyl record spinning",
+   "t0": 22.57,
+   "t1": 34.45
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:17:57Z",
+ "video": "v4laO9KMtP4",
+ "url": "https://youtube.com/shorts/v4laO9KMtP4",
+ "publish_at": "2026-10-21T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-078"
+}

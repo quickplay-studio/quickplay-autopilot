@@ -1,0 +1,85 @@
+{
+ "id": "QD-083",
+ "board": "boards/queue/QD-083.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T15:00:00Z",
+ "rendered": "2026-10-21T09:54:31.066621+00:00",
+ "title": "Pac-Man: The pizza origin story 🍕",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Pac-Man gameplay: no Commons image named 'Pac-Man gameplay')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "f16",
+ "social_music": "synthwave-emotions-580875",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "calm",
+  "grade": "cinematic",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 25.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.6
+ },
+ "timeline": [
+  [
+   0.06,
+   4.58,
+   "title",
+   0
+  ],
+  [
+   4.58,
+   9.62,
+   "none",
+   1
+  ],
+  [
+   9.62,
+   12.62,
+   "none",
+   1
+  ],
+  [
+   12.62,
+   16.79,
+   "stat",
+   1
+  ],
+  [
+   16.79,
+   25.16,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "113561",
+   "q": "pixel art maze",
+   "t0": 0.0,
+   "t1": 25.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:18:14Z",
+ "video": "5qb7XUBcYY8",
+ "url": "https://youtube.com/shorts/5qb7XUBcYY8",
+ "publish_at": "2026-10-21T15:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T15:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-083"
+}

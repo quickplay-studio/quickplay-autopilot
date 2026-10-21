@@ -1,0 +1,83 @@
+{
+ "id": "QD-085",
+ "board": "boards/queue/QD-085.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T15:30:00Z",
+ "rendered": "2026-10-21T09:55:30.467545+00:00",
+ "title": "The day Apollo 13 became a rescue mission 🚀",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "clean",
+  "voice": "lab-voice-1019",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 26.2,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 7.7
+ },
+ "timeline": [
+  [
+   0.06,
+   7.81,
+   "none",
+   2
+  ],
+  [
+   7.81,
+   12.73,
+   "none",
+   1
+  ],
+  [
+   12.73,
+   18.31,
+   "none",
+   1
+  ],
+  [
+   18.31,
+   26.13,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "8",
+   "q": "space shuttle launch",
+   "t0": 0.0,
+   "t1": 13.37
+  },
+  {
+   "p": "pixabay",
+   "id": "228",
+   "q": "space shuttle in orbit",
+   "t0": 12.77,
+   "t1": 26.13
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:18:16Z",
+ "video": "iQh-V6RdPMM",
+ "url": "https://youtube.com/shorts/iQh-V6RdPMM",
+ "publish_at": "2026-10-21T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-085"
+}

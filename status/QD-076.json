@@ -1,0 +1,95 @@
+{
+ "id": "QD-076",
+ "board": "boards/queue/QD-076.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T11:30:00Z",
+ "rendered": "2026-10-21T09:39:51.783330+00:00",
+ "title": "How Barbara Palvin was discovered at age 13 ✨",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "paradise",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "look": {
+  "captions": "clean",
+  "voice": "lab-voice-1019",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 28.0,
+  "wps": 3.0,
+  "weak_beats": [
+   4
+  ],
+  "size_mb": 8.9
+ },
+ "timeline": [
+  [
+   0.06,
+   3.63,
+   "none",
+   0
+  ],
+  [
+   3.63,
+   7.14,
+   "timeline",
+   1
+  ],
+  [
+   7.14,
+   10.75,
+   "none",
+   1
+  ],
+  [
+   10.75,
+   15.78,
+   "none",
+   1
+  ],
+  [
+   15.78,
+   19.52,
+   "none",
+   1
+  ],
+  [
+   19.52,
+   24.62,
+   "none",
+   1
+  ],
+  [
+   24.62,
+   27.98,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "180894",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 14.29
+  },
+  {
+   "p": "pixabay",
+   "id": "233983",
+   "q": "city lights night",
+   "t0": 13.69,
+   "t1": 27.98
+  }
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [4]"
+}

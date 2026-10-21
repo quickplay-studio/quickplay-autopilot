@@ -1,0 +1,106 @@
+{
+ "id": "QD-081",
+ "board": "boards/queue/QD-081.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T14:00:00Z",
+ "rendered": "2026-10-21T09:47:51.453546+00:00",
+ "title": "Jupiter: Which is the largest planet? 🪐",
+ "background_notes": [
+  "NASA 'galaxy stars nebula': nothing usable (4 results, 2 news or captioned)",
+  "picked nasa 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (nasa:image:jupiter earth size comparison: no NASA image for 'jupiter earth size comparison')",
+  "beat 7 reused a nearby picture (nasa:video:jupiter rotation: no NASA video for 'jupiter rotation')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "defying-gravity",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "clean",
+  "voice": "michael",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 27.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.28,
+   "none",
+   0
+  ],
+  [
+   4.28,
+   9.13,
+   "stat",
+   1
+  ],
+  [
+   9.13,
+   14.08,
+   "none",
+   1
+  ],
+  [
+   14.08,
+   17.52,
+   "none",
+   1
+  ],
+  [
+   17.52,
+   21.35,
+   "none",
+   1
+  ],
+  [
+   21.35,
+   24.17,
+   "versus",
+   1
+  ],
+  [
+   24.17,
+   27.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "GSFC_20170419_EarthFleet_m12586_2017",
+   "q": "earth from orbit",
+   "t0": 0.0,
+   "t1": 14.15
+  },
+  {
+   "p": "nasa",
+   "id": "JPL-20230822-PSYCHEf-0001-Behind the Spacecraft Christina Hernandez Psyche.mp4",
+   "q": "solar system planets",
+   "t0": 13.55,
+   "t1": 27.7
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:18:03Z",
+ "video": "1Qtndl8rCuY",
+ "url": "https://youtube.com/shorts/1Qtndl8rCuY",
+ "publish_at": "2026-10-21T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-081"
+}

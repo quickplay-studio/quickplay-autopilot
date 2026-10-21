@@ -1,0 +1,97 @@
+{
+ "id": "QD-077",
+ "board": "boards/queue/QD-077.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T12:00:00Z",
+ "rendered": "2026-10-21T09:39:42.972328+00:00",
+ "title": "Anuel AA’s birth name and album timeline 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "rubberband",
+ "social_music": "hip-hop-hip-hop-beat-547254",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 28.2,
+  "wps": 2.72,
+  "weak_beats": [],
+  "size_mb": 6.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.72,
+   "none",
+   0
+  ],
+  [
+   3.72,
+   8.15,
+   "none",
+   1
+  ],
+  [
+   8.15,
+   12.91,
+   "title",
+   1
+  ],
+  [
+   12.91,
+   19.91,
+   "none",
+   1
+  ],
+  [
+   19.91,
+   25.01,
+   "none",
+   1
+  ],
+  [
+   25.01,
+   28.12,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380217",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 14.36
+  },
+  {
+   "p": "pixabay",
+   "id": "204326",
+   "q": "city night skyline",
+   "t0": 13.76,
+   "t1": 28.12
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:17:54Z",
+ "video": "AEzAI1mguKg",
+ "url": "https://youtube.com/shorts/AEzAI1mguKg",
+ "publish_at": "2026-10-21T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-077"
+}

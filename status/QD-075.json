@@ -1,0 +1,102 @@
+{
+ "id": "QD-075",
+ "board": "boards/queue/QD-075.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T11:00:00Z",
+ "rendered": "2026-10-21T09:40:07.844798+00:00",
+ "title": "ChatGPT adds new PIN lock for private chats 🔒",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "circuit-rush",
+ "social_music": "creative-technology-showreel-241274",
+ "look": {
+  "captions": "clean",
+  "voice": "george_dramatic",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 27.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.1
+ },
+ "timeline": [
+  [
+   0.06,
+   4.22,
+   "none",
+   0
+  ],
+  [
+   4.22,
+   8.42,
+   "title",
+   1
+  ],
+  [
+   8.42,
+   13.23,
+   "none",
+   1
+  ],
+  [
+   13.23,
+   16.73,
+   "none",
+   1
+  ],
+  [
+   16.73,
+   19.96,
+   "none",
+   1
+  ],
+  [
+   19.96,
+   24.44,
+   "none",
+   1
+  ],
+  [
+   24.44,
+   27.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "735",
+   "q": "digital code scrolling",
+   "t0": 0.0,
+   "t1": 14.15
+  },
+  {
+   "p": "pixabay",
+   "id": "47217",
+   "q": "circuit board closeup",
+   "t0": 13.55,
+   "t1": 27.7
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-21T10:17:53Z",
+ "video": "HPGQwI0SHBI",
+ "url": "https://youtube.com/shorts/HPGQwI0SHBI",
+ "publish_at": "2026-10-21T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-21T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-075"
+}

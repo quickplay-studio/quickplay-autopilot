@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 22 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Wed 21 Oct | 14 public | 10 | 1 | ⏳ 14 of 40 so far |
+| Wed 21 Oct | 14 public, 9 scheduled | 12 | 2 | ⏳ 14 of 40 so far, 9 more scheduled |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
 | Sun 18 Oct | 8 public | 0 | 0 | no target then |
@@ -52,21 +52,9 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 Nothing here needs approving (approval is off): a failed Short is skipped and the next one takes its slot. Only Instagram or Facebook errors that keep coming back need fixing, in a Claude chat with the quickplay skill.
 
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
+- **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
+- **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
-
-## In the queue
-
-- **QD-075** ChatGPT adds new PIN lock for private chats 🔒 (rendering next)
-- **QD-076** How Barbara Palvin was discovered at age 13 ✨ (rendering next)
-- **QD-077** Anuel AA’s birth name and album timeline 🎤 (rendering next)
-- **QD-078** Bohemian Rhapsody: the 5.55 minute record 🎸 (rendering next)
-- **QD-079** How often do the Orionids meteor showers occur? 🌠 (rendering next)
-- **QD-080** Who invented the World Wide Web? 🌐 (rendering next)
-- **QD-081** Jupiter: Which is the largest planet? 🪐 (rendering next)
-- **QD-082** How Manchester United won the 1999 Champions League 🏆 (rendering next)
-- **QD-083** Pac-Man: The pizza origin story 🍕 (rendering next)
-- **QD-085** The day Apollo 13 became a rescue mission 🚀 (rendering next)
-- **QD-086** What is the fastest land animal in the world? 🐆 (rendering next)
 
 ## On the channel (latest first)
 
@@ -76,7 +64,7 @@ private · 31 s · music: mirror-mirror · on Facebook · [script](../boards/don
 ![QD-074](QD-074.jpg)
 
 ### Wed 21 Oct 10:10 · Lamine Yamal ends Real Betis 15 game unbeaten run ⚽
-private · 26 s · music: gta-type-beat · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
+private · 26 s · music: gta-type-beat · on Facebook · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
 
 ![QD-062](QD-062.jpg)
 
@@ -116,12 +104,12 @@ public · 11 views · 27 s · music: event-horizon · [script](../boards/done/QD
 ![QD-071](QD-071.jpg)
 
 ### Wed 21 Oct 3:18 · Why do golf balls have dimples? ⛳
-public · 55 views · 23 s · music: hopping-trains · [script](../boards/done/QD-070.json) · [YouTube](https://youtube.com/shorts/Y9sfjXFS4Z0)
+public · 55 views · 23 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-070.json) · [YouTube](https://youtube.com/shorts/Y9sfjXFS4Z0)
 
 ![QD-070](QD-070.jpg)
 
 ### Wed 21 Oct 2:42 · The Beatles debut album recorded in 12 hours 🎸
-public · 210 views · 33 s · music: death-duel · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
+public · 210 views · 33 s · music: death-duel · on Instagram · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
 
 ![QD-069](QD-069.jpg)
 

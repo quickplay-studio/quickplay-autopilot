@@ -1,0 +1,88 @@
+{
+ "id": "QD-086",
+ "board": "boards/queue/QD-086.json",
+ "mode": "schedule",
+ "slot": "2026-10-21T16:00:00Z",
+ "rendered": "2026-10-21T09:58:37.779389+00:00",
+ "title": "What is the fastest land animal in the world? 🐆",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "defying-gravity",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "clean",
+  "voice": "heart",
+  "energy": "calm",
+  "grade": "lab-grade-1019",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 21.0,
+  "wps": 3.0,
+  "weak_beats": [
+   2,
+   5
+  ],
+  "size_mb": 11.1
+ },
+ "timeline": [
+  [
+   0.06,
+   3.07,
+   "none",
+   0
+  ],
+  [
+   3.07,
+   6.12,
+   "stat",
+   1
+  ],
+  [
+   6.12,
+   8.38,
+   "none",
+   1
+  ],
+  [
+   8.38,
+   11.71,
+   "date",
+   1
+  ],
+  [
+   11.71,
+   15.84,
+   "stat",
+   1
+  ],
+  [
+   15.84,
+   19.32,
+   "none",
+   1
+  ],
+  [
+   19.32,
+   21.03,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "147800",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 21.03
+  }
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [2, 5]"
+}

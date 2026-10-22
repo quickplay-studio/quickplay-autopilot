@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T20:30:00Z",
  "rendered": "2026-10-21T14:00:01.246645+00:00",
- "title": "Shrek 2 Remastered revealed with GTA parody 🧅",
+ "title": "Shrek 2 Remastered gets surprising PC requirements 🎮",
  "background_notes": [
   "picked nothing (+0 spares)"
  ],
@@ -85,6 +85,13 @@
  },
  "engage": {
   "comment": "Ugwp1Mdk-tWoIJ6mFOB4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Shrek 2 Remastered revealed with GTA parody 🧅",
+   "to": "Shrek 2 Remastered gets surprising PC requirements 🎮",
+   "at": "2026-10-22T21:16+00:00",
+   "views_an_hour": 0.2,
+   "typical": 1.4
+  }
  }
 }

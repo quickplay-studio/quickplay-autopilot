@@ -1,5 +1,6 @@
 {
- "checked": "2026-10-22T09:12:03+00:00",
+ "checked": "2026-10-22T12:06:20+00:00",
+ "instagram_checked": "2026-10-22T12:06:20+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -12,12 +13,11 @@
      "quota_total": 100,
      "quota_duration": 86400
     },
-    "quota_usage": 8
+    "quota_usage": 17
    }
   ],
   "today_cap": 18
  },
- "instagram_checked": "2026-10-22T08:14:18+00:00",
  "facebook": {
   "ok": true,
   "page": "Quickplay Daily",

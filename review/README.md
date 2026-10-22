@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 16:41): 8 of 1,000 subscribers · 5,049 of 10 million Shorts views in 90 days · 2,886 views in the last 24 hours (about 111,055 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 17:41): 8 of 1,000 subscribers · 5,366 of 10 million Shorts views in 90 days · 2,941 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 17:31 (UK): 5 scheduled, 103 public, 33 uploads in the last 24 hours.
 
@@ -55,6 +55,10 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
+
+## In the queue
+
+- **QD-125** Eden Sessions: Ben Howard headlines this summer 🎤 (rendering next)
 
 ## On the channel (latest first)
 

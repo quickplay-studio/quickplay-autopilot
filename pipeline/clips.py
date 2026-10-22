@@ -828,6 +828,12 @@ def social_posts(force=False):
             if not (ig["token"] and ig["user"]): ig = ig0
             if fb is None: fb = fb0
             if not tt.get("access_token"): tt = tt0
+        if not (ig["token"] and ig["user"]) and os.environ.get("SOCIAL_KEY"):
+            # Charlie (22 October): the main channel's Instagram (quickplaydaily, tokens/instagram.enc) takes the clips too
+            try:
+                main = S.ig_tokens()
+                if main.get("token") and main.get("user"): ig = {"token": main["token"], "user": str(main["user"])}
+            except Exception as e: log(f"social: Instagram ({channel}): {str(e)[:100]}")
         return ig, fb, tt
     have = {ch: accounts(ch) for ch in channels()}
     if not any((ig["token"] and ig["user"]) or fb or tt.get("access_token") for ig, fb, tt in have.values()):

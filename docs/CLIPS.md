@@ -237,4 +237,8 @@ forbids it for that creator's content.
   Google account first. A new secret goes on the allowlist by hand, on purpose.
 - Charlie says yes to approving held runs: they are his own workflow, read line by line; nothing leaves except to the
   campaign sites, YouTube, Meta and the repo.
+- Charlie (22 October, 22:50 UK): the Instagram account for the clips is quickplaydaily itself, the main channel's,
+  already signed in (tokens/instagram.enc); no new account, no new token. clips.py accounts() falls back to that sign-in
+  when no IG_CLIPS_* or IG_<CHANNEL>_* secrets exist. The Daily Shorts and the clips share its daily Reels number
+  (Instagram allows 100 API posts a day; the ramps keep it far below). He connects quickplaydaily on Content Rewards and Vyro.
 

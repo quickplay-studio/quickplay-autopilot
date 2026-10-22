@@ -20,10 +20,8 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 UK = ZoneInfo("Europe/London")
 NOW = dt.datetime.now(dt.timezone.utc)
 CFG = json.loads((ROOT / "clips" / "campaigns.json").read_text())
-try:        # the workflow passes every secret as JSON so a new channel's IG_<CHANNEL>_* and FB_<CHANNEL>_* need no workflow edit
-    for _k, _v in (json.loads(os.environ.get("ALL_SECRETS") or "{}") or {}).items():
-        if _k.startswith(("IG_", "FB_")) and _k not in os.environ and isinstance(_v, str): os.environ[_k] = _v
-except Exception: pass
+# A new channel's IG_<CHANNEL>_* and FB_<CHANNEL>_* secrets are named one by one in clips.yml (GitHub's scanner refuses a
+# workflow that passes toJSON(secrets) as "possibly malicious", 22 October), so adding a channel means adding its four lines there.
 PLANS, OUT, STATE = ROOT / "clips" / "plans", ROOT / "clips" / "out", ROOT / "clips" / "state"
 WORK = pathlib.Path(os.environ.get("CLIPS_WORK") or ("/mnt/clips" if os.access("/mnt", os.W_OK) else "/tmp/clips"))
 RELEASE = "clips-src"

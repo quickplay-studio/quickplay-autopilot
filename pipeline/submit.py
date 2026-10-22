@@ -21,7 +21,9 @@ SITES = {"Content Rewards": {"secret": "WHOP_COOKIES", "hosts": ("contentrewards
 VYRO_ADD = "https://app.vyro.com/campaigns/add-clips"
 SUCCESS = re.compile(r"\b(submitted|pending|under review|in review|success|received|thank you|thanks|added|tracking)\b", re.I)
 DUP = re.compile(r"already (been )?(submitted|added|exists|tracked)|duplicate", re.I)
-ERROR = re.compile(r"\b(invalid|not (allowed|eligible|valid|found|public)|must be|private|could not|couldn't|cannot|can't|error|unsupported|does not match|doesn't match)\b", re.I)
+ERROR = re.compile(r"\b(invalid|not (allowed|eligible|valid|found|public|submitted)|must be|private|could not|couldn't|cannot|can't|error|unsupported|does not match|doesn't match|past that window|has to be|have to be|rejected|failed)\b", re.I)
+WINDOW = re.compile(r"within (the last )?\d+ minutes|past that window|freshly posted", re.I)
+VYRO_LEFT = re.compile(r"can submit (\d+) posts? today", re.I)
 LOGIN = re.compile(r"^\s*(log ?in|sign ?in|continue with (google|email)|get started)\s*$", re.I)
 OPEN = re.compile(r"^\s*(submit( a| your)?( clip| post| content| video)?|add (a )?(clip|post|video)|new submission)\s*$", re.I)
 CONFIRM = re.compile(r"^\s*(submit( clip| post| link| now)?|confirm|continue|done|add( clip| post)?|save|send|next)\s*$", re.I)
@@ -203,55 +205,176 @@ def outcome(page, link, wait_s=25):
     return "failed: no answer from the page in %ds (buttons: %s)" % (wait_s, ", ".join(names(page)[:12]))
 
 
+def tick(page, pattern=None):
+    """Ticks the dialog's consent checkbox (the one whose label matches, else the only one) when it is not ticked yet."""
+    d = dialog(page)
+    for role_name in ((pattern,) if pattern else ()) + (None,):
+        try: loc = d.get_by_role("checkbox", name=role_name) if role_name else d.get_by_role("checkbox")
+        except Exception: continue
+        for i in range(min(loc.count(), 6)):
+            el = loc.nth(i)
+            try:
+                if not el.is_visible(): continue
+                if el.get_attribute("aria-checked") in ("true",) or (el.get_attribute("type") == "checkbox" and el.is_checked()): return True
+                el.click(); page.wait_for_timeout(500); return True
+            except Exception: pass
+    return False
+
+
+def failed_check(page):
+    """Content Rewards marks the check that failed with a 'Failed' icon; the sentence next to it is the reason."""
+    try:
+        d = dialog(page)
+        img = d.locator("img[alt='Failed'], [aria-label='Failed']")
+        if not img.count() or not img.first.is_visible(): return None
+        for k in range(1, 6):
+            txt = re.sub(r"\s+", " ", img.first.locator(f"xpath=ancestor::*[{k}]").inner_text()).strip()
+            if len(txt) > 40: return txt[:200]
+        return "a check failed"
+    except Exception: return None
+
+
+def dialog_open(page):
+    return dialog(page) is not page
+
+
+def dialogs(page):
+    """Every visible dialog on the page (Vyro opens the review step as a second one)."""
+    out = []
+    try:
+        loc = page.get_by_role("dialog")
+        for i in range(min(loc.count(), 6)):
+            if loc.nth(i).is_visible(): out.append(loc.nth(i))
+    except Exception: pass
+    return out
+
+
 def submit_cr(page, row, c, dry=False):
+    """Content Rewards (22 October): the campaign page's Submit clip button opens a dialog with one url box, three checks
+    (posted from a linked account, not already submitted, posted within 30 minutes), a consent checkbox and Submit clip.
+    A failed check shows a Failed icon beside its reason and the dialog stays open; success closes it."""
     page.goto(row["campaign_url"], wait_until="domcontentloaded", timeout=60000); settle(page)
     if logged_out(page): raise Stale("Content Rewards")
     if dry: return "dry: logged in; buttons: " + ", ".join(names(page)[:15])
     if not click(page, OPEN): return "failed: no Submit button (buttons: %s)" % ", ".join(names(page)[:12])
     settle(page, 800)
     if logged_out(page): raise Stale("Content Rewards")
-    pick_platform(page, row.get("platform") or "youtube")
+    if not dialog_open(page): return "failed: no dialog after Submit clip (buttons: %s)" % ", ".join(names(page)[:12])
     box = link_box(page)
     if box is None: return "failed: no link box after Submit (buttons: %s)" % ", ".join(names(page)[:12])
-    box.fill(row["video"]); page.wait_for_timeout(800)
-    pick_platform(page, row.get("platform") or "youtube")
+    box.fill(row["video"]); page.wait_for_timeout(1200)
+    tick(page, re.compile(r"requirements|accept|agree|rules", re.I))
     if not click(page, CONFIRM, roles=("button",)): box.press("Enter")
-    return outcome(page, row["video"])
+    end = time.time() + 25
+    while time.time() < end:
+        why = failed_check(page)
+        if why:
+            if DUP.search(why): return "already"
+            if WINDOW.search(why): return "failed: past the 30-minute window: " + why[:120]
+            return "failed: " + why[:140]
+        if not dialog_open(page): return "submitted"
+        for role, text in texts(page):
+            if role in ("alert", "status") and SUCCESS.search(text) and not ERROR.search(text): return "submitted"
+        page.wait_for_timeout(1000)
+    return "failed: no answer from the page in 25s (buttons: %s)" % ", ".join(names(page)[:12])
+
+
+def vyro_card(page, c):
+    """The campaign's card on the Add Posts page, found by its card text (campaigns.json 'card'), then its name, then its
+    subject; the card's own Submit post button is what opens the right dialog."""
+    keys = [k for k in dict.fromkeys([c.get("card", ""), re.sub(r"\s*\(.*\)\s*$", "", c.get("name", "")), c.get("subject", "")]) if k]
+    for key in keys:
+        try: el = page.get_by_text(key[:60], exact=False).first
+        except Exception: continue
+        try:
+            if not el.is_visible(): continue
+        except Exception: continue
+        for k in range(1, 9):
+            card = el.locator(f"xpath=ancestor::*[{k}]")
+            try:
+                btn = card.get_by_role("button", name=re.compile(r"^\s*Submit post\s*$", re.I))
+                if btn.count(): return card, btn.first
+            except Exception: break
+    return None, None
+
+
+def vyro_option(page, pattern):
+    """Picks the open listbox's option whose text matches (Radix: options are role option or plain rows)."""
+    for role in ("option", "menuitem", "button"):
+        els = [e for e in visible(page, role, pattern)]
+        if els: els[0].click(); page.wait_for_timeout(700); return True
+    try:
+        el = page.get_by_text(pattern).last
+        if el.is_visible(): el.click(); page.wait_for_timeout(700); return True
+    except Exception: pass
+    return False
 
 
 def submit_vyro(page, row, c, dry=False):
+    """Vyro (22 October): the Add Posts page lists the joined campaigns as cards, each with its own Submit post button.
+    The dialog: Campaign (preselected), Social account (a YouTube channel), recent posts or 'Use a link instead' (a Paste
+    link box), 'This account can submit N posts today', the checkbox 'My post follows campaign rules', Continue; then
+    'Review your post' with the checks and a final Submit post. 'Post not submitted: You have already submitted this post
+    to a campaign' is the duplicate answer. An account may submit 5 posts a day."""
     page.goto(VYRO_ADD, wait_until="domcontentloaded", timeout=60000); settle(page)
     if logged_out(page): raise Stale("Vyro")
     if dry: return "dry: logged in; buttons: " + ", ".join(names(page)[:15])
-    keys = [re.compile(re.escape(k), re.I) for k in dict.fromkeys([c.get("name", ""), c.get("name", "")[:24], c.get("subject", "")]) if k]
-    chosen = False
-    for key in keys:
-        for role in ("combobox", "button", "option", "radio", "link"):
-            els = visible(page, role, key)
-            if els: els[0].click(); page.wait_for_timeout(800); chosen = True; break
-        if chosen: break
-    if not chosen:
-        boxes = visible(page, "combobox", re.compile(".*"))
-        if boxes:
-            boxes[0].click(); page.wait_for_timeout(800)
-            for key in keys:
-                opts = visible(page, "option", key)
-                if opts: opts[0].click(); page.wait_for_timeout(800); chosen = True; break
-    if not chosen:
-        for key in keys:
-            try:
-                el = page.get_by_text(key).first
-                if el.is_visible(): el.click(); page.wait_for_timeout(800); chosen = True; break
-            except Exception: pass
-    if not chosen: return "failed: campaign '%s' not found on the page (buttons: %s)" % (c.get("subject"), ", ".join(names(page)[:12]))
-    click(page, OPEN)
-    pick_platform(page, row.get("platform") or "youtube")
+    for _ in range(6): page.mouse.wheel(0, 1800); page.wait_for_timeout(300)
+    page.mouse.wheel(0, -20000); page.wait_for_timeout(500)
+    card, btn = vyro_card(page, c)
+    if btn is None: return "failed: campaign '%s' not found on the Add Posts page (cards: %s)" % (c.get("card") or c.get("subject"), ", ".join(names(page, "heading")[:12]))
+    try:
+        if re.search(r"locked for new posts", card.inner_text(), re.I): return "failed: campaign locked for new posts"
+    except Exception: pass
+    btn.scroll_into_view_if_needed(); btn.click(); page.wait_for_timeout(1500)
+    if not dialog_open(page): return "failed: no dialog after Submit post"
+    click(page, re.compile(r"use a link instead", re.I), roles=("button", "link"))
     box = link_box(page)
     if box is None: return "failed: no link box (buttons: %s)" % ", ".join(names(page)[:12])
-    box.fill(row["video"]); page.wait_for_timeout(800)
-    pick_platform(page, row.get("platform") or "youtube")
-    if not click(page, CONFIRM, roles=("button",)): box.press("Enter")
-    return outcome(page, row["video"])
+    box.fill(row["video"]); page.wait_for_timeout(1500)
+    d = dialog(page)
+    try: dtext = re.sub(r"\s+", " ", d.inner_text())
+    except Exception: dtext = ""
+    if re.search(r"select social account", dtext, re.I):
+        boxes = visible(page, "combobox", re.compile(r"select social account", re.I)) or visible(page, "combobox", re.compile(".*"))
+        if boxes:
+            boxes[-1].click(); page.wait_for_timeout(800)
+            ch = (row.get("channel") or "clips").lower()
+            want = {"gaming": r"gaming", "irl": r"irl", "clips": r"^(?!.*(gaming|irl)).*clips"}.get(ch, ch)
+            if not vyro_option(page, re.compile(want + r".*youtube|youtube.*" + want, re.I | re.S)):
+                vyro_option(page, re.compile(r"youtube", re.I))
+            page.wait_for_timeout(800)
+        try: dtext = re.sub(r"\s+", " ", dialog(page).inner_text())
+        except Exception: pass
+    m = VYRO_LEFT.search(dtext)
+    if m and int(m.group(1)) == 0: return "failed: Vyro's daily limit for this account (5 posts a day): tomorrow"
+    tick(page, re.compile(r"follows campaign rules", re.I))
+    if not click(page, re.compile(r"^\s*continue\s*$", re.I), roles=("button",)): return "failed: Continue not clickable (dialog: %s)" % dtext[:160]
+    page.wait_for_timeout(2500)
+    end = time.time() + 20
+    while time.time() < end:
+        review = [v for v in dialogs(page) if re.search(r"review your post", v.inner_text(), re.I)]
+        if review:
+            fin = review[0].get_by_role("button", name=re.compile(r"^\s*Submit post\s*$", re.I))
+            if fin.count() and fin.first.is_visible():
+                if not fin.first.is_enabled():
+                    page.wait_for_timeout(1000)
+                    if not fin.first.is_enabled(): return "failed: review checks: " + re.sub(r"\s+", " ", review[0].inner_text())[:160]
+                fin.first.click(); page.wait_for_timeout(2500); break
+        page.wait_for_timeout(800)
+    else:
+        return "failed: no Review your post step (dialog: %s)" % re.sub(r"\s+", " ", dialog(page).inner_text() if dialog_open(page) else "")[:160]
+    end = time.time() + 25
+    while time.time() < end:
+        for role, text in texts(page):
+            if role == "body": continue
+            if DUP.search(text): click(page, re.compile(r"^\s*ok\s*$", re.I), roles=("button",)); return "already"
+            if re.search(r"post not submitted", text, re.I): click(page, re.compile(r"^\s*ok\s*$", re.I), roles=("button",)); return "failed: " + text[:140]
+            if re.search(r"\b(submitted|pending|under review|success)\b", text, re.I) and not ERROR.search(text):
+                click(page, re.compile(r"^\s*(ok|done|close)\s*$", re.I), roles=("button",)); return "submitted"
+        if not dialog_open(page): return "submitted"
+        page.wait_for_timeout(1000)
+    return "failed: no answer after Submit post in 25s (buttons: %s)" % ", ".join(names(page)[:12])
 
 
 SUBMITTERS = {"Content Rewards": submit_cr, "Vyro": submit_vyro}
@@ -264,6 +387,7 @@ def due(rows, public_ok=None):
         when = r.get("public_at_uk", "")
         if when.startswith("private") or not r.get("video", "").startswith("http"): continue
         if r.get("submitted") and not r["submitted"].startswith("failed"): continue
+        if r.get("submitted", "").startswith("failed: past the"): continue      # Content Rewards' 30-minute window: over for good
         try: t = dt.datetime.strptime(when, "%Y-%m-%d %H:%M").replace(tzinfo=UK)
         except ValueError: continue
         if t > NOW or NOW - t > dt.timedelta(days=3): continue
@@ -304,16 +428,19 @@ def run(dry=False):
             try: b, ctx = context(play, site)
             except Exception as e: log(f"submit: {site}: {e}"); continue
             page = ctx.new_page()
+            limited = set()
             for r in rs:
                 c = C.CFG["campaigns"].get(r["campaign"]) or {}
                 try:
-                    res = SUBMITTERS[site](page, r, c, dry)
+                    if (site, r.get("channel") or "clips") in limited: res = "failed: Vyro's daily limit for this account (5 posts a day): tomorrow"
+                    else: res = SUBMITTERS[site](page, r, c, dry)
+                    if "daily limit" in res: limited.add((site, r.get("channel") or "clips"))
                 except Stale:
                     res = "failed: login expired"; stale.add(site)
                     log(f"{r['clip']}: {site}: the login has expired"); break
                 except Exception as e:
                     res = f"failed: {type(e).__name__}: {str(e)[:100]}"
-                if res.startswith("failed"):
+                if res.startswith("failed") and "daily limit" not in res:
                     try: page.screenshot(path=str(ROOT / "status" / f"submit_{site.split()[0].lower()}.png"), full_page=False)
                     except Exception: pass
                 if res in ("submitted", "already"): done += 1; r["submitted"] = f"{NOW.astimezone(UK):%Y-%m-%d %H:%M}" + (" (already)" if res == "already" else "")

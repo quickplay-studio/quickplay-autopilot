@@ -60,7 +60,14 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
           VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
-          ALL_SECRETS: ${{ toJSON(secrets) }}      # IG_<CHANNEL>_* and FB_<CHANNEL>_* for every clips channel (clips.py reads only those)
+          IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}        # one line per clips channel (GitHub refuses a workflow that passes toJSON(secrets), 22 October)
+          IG_GAMING_USER_ID: ${{ secrets.IG_GAMING_USER_ID }}
+          FB_GAMING_PAGE_TOKEN: ${{ secrets.FB_GAMING_PAGE_TOKEN }}
+          FB_GAMING_PAGE_ID: ${{ secrets.FB_GAMING_PAGE_ID }}
+          IG_IRL_TOKEN: ${{ secrets.IG_IRL_TOKEN }}
+          IG_IRL_USER_ID: ${{ secrets.IG_IRL_USER_ID }}
+          FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
+          FB_IRL_PAGE_ID: ${{ secrets.FB_IRL_PAGE_ID }}
           CLIPS_WORK: /mnt/clips
           IN_COUNT: ${{ inputs.count }}
           IN_MODE: ${{ inputs.mode }}

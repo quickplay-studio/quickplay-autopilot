@@ -32,18 +32,12 @@ read the downloaded file and add its text as the GitHub secret WHOP_COOKIES at
 https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new. The same for
 https://app.vyro.com/campaigns into VYRO_COOKIES. If a site asks to sign in, ask Charlie to sign in, then continue.
 
-### open: Prove the automatic submissions (22 October)
-The real forms were read in Chrome and submit.py rewritten to them (commit 01eb3ef): Content Rewards' Submit clip dialog
-(url box, three checks, consent box, Submit clip; a Failed icon beside the refused check; clips must be submitted within 30
-minutes of going public, so only the 18:01 batch run can submit that day's clips) and Vyro's Add Posts cards (card text in
-campaigns.json "card", Use a link instead, the social account, the rules box, Continue, Review your post, Submit post; 5 posts
-per connected account a day). GitHub then held every clips run as "possibly malicious" (the workflow passed toJSON(secrets));
-fixed in the same commit, run #41 approved by Charlie. Next: read status/clips_log.txt of run #41 and the 22:01 batch.
-Set requests/clips.txt to "submit probe", commit and push, wait for the clips workflow run, read status/clips_log.txt and
-status/submit_*.png. If a site's form differs from what pipeline/submit.py expects (submit_cr and submit_vyro: the Submit
-clip or Submit post button, the platform choice, the link box, the confirm button, the answer text), fix those steps,
-run python tests/test_submit.py, commit and push, then set requests/clips.txt to "submit" and repeat until the run reports
-every due row of clips/submit.csv submitted.
+### done: Prove the automatic submissions (22 October)
+Content Rewards: automatic from GitHub at 18:01 UK (the real dialog read in Chrome, submit.py rewritten to it, the consent
+box, a Failed icon beside a refused check, the 30-minute window, a 2 to 5 minute gap before each submission); the sign-in
+lives encrypted in tokens/login_whop.enc (logins.yml). Vyro: drops a session that arrives from GitHub's servers, so its
+clips go public at 19:00 UK and this run submits them (standing job below). The 21 October links were past Content
+Rewards' window and are marked so. First real automatic batch: 23 October 18:01 UK; read status/clips_log.txt after it.
 
 ### open: Join the campaigns the scout ranks (22 October)
 The scout has not run yet (its runs were held with the rest; the 09:35 UK run tomorrow is the next). Done by hand on 22

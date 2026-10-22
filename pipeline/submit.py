@@ -567,6 +567,7 @@ def run(dry=False):
 
 
 def alerts(stale, by_site):
+    import clips as C
     import alerts as A
     for site in SITES:
         title = f"⚠️ Clips: the {site} login has expired"
@@ -579,6 +580,7 @@ def alerts(stale, by_site):
                                  f"then run the logins workflow (Run workflow): https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml. "
                                  f"Until then the links are on the phone page: https://quickplay-studio.github.io/quickplay-autopilot/submit.html")
         elif site in by_site: A.clear(title, "The login works again.")
+        elif (C.CFG.get("submit_by") or {}).get(site) == "mac": A.clear(title, f"{site} links are submitted by the Mac Chrome run now (docs/CHROME_JOBS.md), not from GitHub.")
 
 
 

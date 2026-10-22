@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quickplay Hub</title>
+<meta name="description" content="Every Quickplay number in one place: channels, money, what the data is changing, campaigns and account health. Reads the live repository files.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f4f4f2; --surface-1:#fcfcfb; --surface-2:#f0efec; --line:#e2e1dc;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7974;
+  --accent:#2a78d6; --accent-track:#cde2fb; --bar:#2a78d6; --bar-hover:#1c5cab;
+  --good:#0ca30c; --good-text:#006300; --warning:#fab219; --critical:#d03b3b;
+  --pill-bg:#eceae5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111110; --surface-1:#1a1a19; --surface-2:#232321; --line:#2f2f2c;
+    --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+    --accent:#3987e5; --accent-track:#184f95; --bar:#3987e5; --bar-hover:#86b6ef;
+    --good:#0ca30c; --good-text:#4cc24c; --warning:#fab219; --critical:#e66767;
+    --pill-bg:#2a2a27;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111110; --surface-1:#1a1a19; --surface-2:#232321; --line:#2f2f2c;
+  --text-primary:#f0efec; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+  --accent:#3987e5; --accent-track:#184f95; --bar:#3987e5; --bar-hover:#86b6ef;
+  --good:#0ca30c; --good-text:#4cc24c; --warning:#fab219; --critical:#e66767;
+  --pill-bg:#2a2a27;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text-primary);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.top{max-width:1100px;margin:0 auto;padding:14px 16px 8px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.top h1{font-size:19px;margin:0;font-weight:650;letter-spacing:-.01em}
+.top .when{color:var(--text-muted);font-size:13px;margin-left:auto}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--surface-1);color:var(--text-primary);border-radius:8px;padding:5px 12px}
+button:hover{border-color:var(--accent)}
+nav{max-width:1100px;margin:0 auto;padding:0 16px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{border:0;border-bottom:2px solid transparent;border-radius:0;background:none;padding:8px 10px;color:var(--text-secondary);white-space:nowrap}
+nav button[aria-selected="true"]{color:var(--text-primary);border-bottom-color:var(--accent);font-weight:600}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 60px}
+section[hidden]{display:none}
+h2{font-size:16px;margin:26px 0 10px;font-weight:650}
+h2:first-child{margin-top:4px}
+.sub{color:var(--text-secondary);font-size:13px;margin:-6px 0 12px}
+.card{background:var(--surface-1);border:1px solid var(--line);border-radius:12px;padding:16px}
+.hero{display:flex;flex-wrap:wrap;gap:8px 28px;align-items:baseline}
+.hero .big{font-size:48px;font-weight:650;line-height:1.05;letter-spacing:-.02em}
+.hero .lab{color:var(--text-secondary)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:12px}
+.tile{background:var(--surface-1);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.tile .v{font-size:22px;font-weight:620}
+.tile .l{color:var(--text-secondary);font-size:13px}
+.tile .d{color:var(--text-muted);font-size:12px}
+.meter{margin:12px 0 4px}
+.meter .row{display:flex;justify-content:space-between;font-size:13px;color:var(--text-secondary);margin-bottom:4px;gap:10px}
+.meter .track{height:10px;background:var(--accent-track);border-radius:5px;overflow:hidden}
+.meter .fill{height:100%;background:var(--accent);border-radius:5px;min-width:3px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface-1)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--text-secondary);font-weight:600;white-space:nowrap;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.nw{white-space:nowrap}
+.pill{display:inline-flex;align-items:center;gap:4px;padding:1px 8px;border-radius:999px;background:var(--pill-bg);font-size:12px;white-space:nowrap;color:var(--text-primary)}
+.pill i{font-style:normal;font-weight:700}
+.pill.good i{color:var(--good)} .pill.bad i{color:var(--critical)} .pill.wait i{color:var(--warning)}
+.md{background:var(--surface-1);border:1px solid var(--line);border-radius:12px;padding:6px 18px;overflow-x:auto}
+.md table{font-size:13px}
+.md h1{font-size:18px} .md h2{font-size:15px;margin-top:18px} .md h3{font-size:14px}
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto}
+.chart .tip{position:absolute;pointer-events:none;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12.5px;white-space:nowrap;transform:translate(-50%,-110%);display:none}
+.muted{color:var(--text-muted)}
+.two{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:860px){.two{grid-template-columns:1fr 1fr}}
+details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin-top:8px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.toolbar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.err{color:var(--critical);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <h1>Quickplay hub</h1>
+    <button id="refresh" type="button">Refresh</button>
+    <span class="when" id="when">Loading</span>
+  </div>
+  <nav role="tablist" id="tabs">
+    <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="shorts">Daily Shorts</button>
+    <button role="tab" data-tab="learning">What the data changed</button>
+    <button role="tab" data-tab="clips">Clips and money</button>
+    <button role="tab" data-tab="scout">Campaigns to join</button>
+    <button role="tab" data-tab="accounts">Accounts and runs</button>
+  </nav>
+</header>
+<main>
+  <section id="overview" role="tabpanel"></section>
+  <section id="shorts" role="tabpanel" hidden></section>
+  <section id="learning" role="tabpanel" hidden></section>
+  <section id="clips" role="tabpanel" hidden></section>
+  <section id="scout" role="tabpanel" hidden></section>
+  <section id="accounts" role="tabpanel" hidden></section>
+</main>
+<script>
+const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/";
+const REPO = "https://github.com/quickplay-studio/quickplay-autopilot";
+const API = "https://api.github.com/repos/quickplay-studio/quickplay-autopilot";
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const num = x => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return isFinite(v) ? v : 0; };
+const fmt = x => Math.round(num(x)).toLocaleString("en-GB");
+const compact = x => { x = num(x); return x >= 1e6 ? (x/1e6).toFixed(x >= 1e7 ? 0 : 1) + "M" : x >= 1e4 ? (x/1e3).toFixed(x >= 1e5 ? 0 : 1) + "K" : fmt(x); };
+const money = x => "$" + num(x).toLocaleString("en-GB", {minimumFractionDigits:2, maximumFractionDigits:2});
+const ukTime = s => { if (!s) return ""; const d = new Date(s); if (isNaN(d)) return esc(s); return d.toLocaleString("en-GB", {weekday:"short", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}); };
+const pill = (kind, icon, text) => `<span class="pill ${kind}"><i aria-hidden="true">${icon}</i>${esc(text)}</span>`;
+try { const t = localStorage.getItem("qp-hub-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+
+function csv(text){
+  const rows = []; let row = [], f = "", q = false;
+  for (let i = 0; i < text.length; i++){
+    const c = text[i];
+    if (q){ if (c === '"'){ if (text[i+1] === '"'){ f += '"'; i++; } else q = false; } else f += c; }
+    else if (c === '"') q = true;
+    else if (c === ","){ row.push(f); f = ""; }
+    else if (c === "\n" || c === "\r"){ if (c === "\r" && text[i+1] === "\n") i++; row.push(f); rows.push(row); row = []; f = ""; }
+    else f += c;
+  }
+  if (f !== "" || row.length){ row.push(f); rows.push(row); }
+  const head = rows.shift() || [];
+  return rows.filter(r => r.length > 1 || r[0]).map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
+}
+async function get(path, kind){
+  try {
+    const r = await fetch(RAW + path + "?t=" + Math.floor(Date.now() / 60000), {cache: "no-store"});
+    if (!r.ok) return null;
+    const t = await r.text();
+    return kind === "json" ? JSON.parse(t) : kind === "csv" ? csv(t) : t;
+  } catch (e) { return null; }
+}
+async function issues(){
+  try { const r = await fetch(API + "/issues?state=open&per_page=30"); return r.ok ? (await r.json()).filter(i => !i.pull_request) : null; }
+  catch (e) { return null; }
+}
+const md = t => (window.marked ? marked.parse(t || "") : "<pre>" + esc(t) + "</pre>");
+
+function meter(label, have, need, unit){
+  const pct = Math.max(0, Math.min(100, need ? have / need * 100 : 0));
+  return `<div class="meter"><div class="row"><span>${esc(label)}</span><span>${fmt(have)} of ${compact(need)}${unit ? " " + unit : ""} (${pct < 1 ? pct.toFixed(2) : pct.toFixed(1)}%)</span></div>
+    <div class="track" role="meter" aria-valuemin="0" aria-valuemax="${need}" aria-valuenow="${have}" aria-label="${esc(label)}"><div class="fill" style="width:${pct}%"></div></div></div>`;
+}
+function tile(label, value, detail){ return `<div class="tile"><div class="v">${value}</div><div class="l">${esc(label)}</div>${detail ? `<div class="d">${detail}</div>` : ""}</div>`; }
+function table(cols, rows, empty){
+  if (!rows.length) return `<p class="muted">${esc(empty || "Nothing yet.")}</p>`;
+  return `<div class="tablewrap"><table><thead><tr>${cols.map(c => `<th class="${c.n ? "n" : ""}">${esc(c.h)}</th>`).join("")}</tr></thead>
+    <tbody>${rows.map(r => `<tr>${cols.map(c => `<td class="${c.n ? "n" : c.nw ? "nw" : ""}">${c.f(r)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+function barChart(id, points, label){
+  // single series: daily values, 2px gaps, 4px rounded tops anchored to the baseline, hover tooltip, table view below
+  if (!points.length) return `<p class="muted">No daily numbers yet.</p>`;
+  const W = 720, H = 200, pl = 44, pr = 8, pt = 10, pb = 26;
+  const max = Math.max(...points.map(p => p.v), 1);
+  const step = Math.pow(10, Math.floor(Math.log10(max)));
+  const top = Math.ceil(max / step) * step;
+  const bw = (W - pl - pr) / points.length;
+  const y = v => pt + (H - pt - pb) * (1 - v / top);
+  let g = "";
+  for (let k = 0; k <= 4; k++){ const v = top * k / 4, yy = y(v);
+    g += `<line x1="${pl}" x2="${W - pr}" y1="${yy}" y2="${yy}" stroke="var(--line)" stroke-width="1"/>`;
+    g += `<text x="${pl - 6}" y="${yy + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${compact(v)}</text>`; }
+  let bars = "";
+  points.forEach((p, i) => {
+    const x = pl + i * bw + 1, w = Math.max(2, bw - 2), yy = y(p.v), h = Math.max(0, H - pb - yy), r = Math.min(4, w / 2, h);
+    const path = h > 0 ? `M${x},${H - pb} V${yy + r} Q${x},${yy} ${x + r},${yy} H${x + w - r} Q${x + w},${yy} ${x + w},${yy + r} V${H - pb} Z` : "";
+    bars += `<path d="${path}" fill="var(--bar)" data-i="${i}"/>`;
+    bars += `<rect x="${pl + i * bw}" y="${pt}" width="${bw}" height="${H - pt - pb}" fill="transparent" data-i="${i}"/>`;
+    if (points.length <= 16 || i % Math.ceil(points.length / 12) === 0)
+      bars += `<text x="${x + w / 2}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${esc(p.short)}</text>`;
+  });
+  setTimeout(() => {
+    const root = $(id); if (!root) return;
+    const tip = root.querySelector(".tip"), svg = root.querySelector("svg");
+    svg.addEventListener("mousemove", e => {
+      const i = e.target.dataset.i; if (i === undefined){ tip.style.display = "none"; return; }
+      const p = points[+i], box = root.getBoundingClientRect();
+      tip.innerHTML = `<b>${esc(p.label)}</b><br>${fmt(p.v)} ${esc(label)}`;
+      tip.style.left = (e.clientX - box.left) + "px"; tip.style.top = (e.clientY - box.top) + "px"; tip.style.display = "block";
+      svg.querySelectorAll("path[data-i]").forEach(b => b.setAttribute("fill", b.dataset.i === i ? "var(--bar-hover)" : "var(--bar)"));
+    });
+    svg.addEventListener("mouseleave", () => { tip.style.display = "none"; svg.querySelectorAll("path[data-i]").forEach(b => b.setAttribute("fill", "var(--bar)")); });
+  });
+  return `<div class="chart" id="${id}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)} by day">${g}${bars}</svg><div class="tip"></div></div>
+    <details><summary>Show as a table</summary>${table([{h:"Day", f:p => esc(p.label)}, {h:label, n:1, f:p => fmt(p.v)}], points.slice().reverse())}</details>`;
+}
+
+function clipMoney(campaigns, stats){
+  const latest = {};
+  for (const r of stats){ if (r.privacy && r.privacy !== "public") continue; const k = r.clip + "|" + r.video; if (!latest[k] || (latest[k].as_of || "") < (r.as_of || "")) latest[k] = r; }
+  const by = {};
+  for (const r of Object.values(latest)){
+    const c = campaigns[r.campaign] || {}; const id = r.campaign;
+    by[id] = by[id] || {clips: 0, views: 0, earned: 0, channels: {}};
+    const v = num(r.views); by[id].clips++; by[id].views += v; by[id].channels[r.channel || "clips"] = (by[id].channels[r.channel || "clips"] || 0) + 1;
+    const rate = num(c.pay_per_1k), min = num(c.min_views), cap = num(c.max_payout);
+    if (rate && v >= min){ let e = v / 1000 * rate; if (cap) e = Math.min(e, cap); by[id].earned += e; }
+  }
+  return by;
+}
+
+let D = {};
+async function load(){
+  $("when").textContent = "Loading";
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review] = await Promise.all([
+    get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
+    get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
+    get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review};
+  render();
+  $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+}
+
+function render(){
+  const s = D.summary || {}, y = s.youtube || {}, ypp = s.ypp || {};
+  const prog = (D.progress || []).slice(-1)[0] || {};
+  const camps = (D.camps || {}).campaigns || {};
+  const by = clipMoney(camps, D.stats || []);
+  const earned = Object.values(by).reduce((a, b) => a + b.earned, 0);
+  const active = Object.entries(camps).filter(([k, c]) => c.active);
+  const pubClips = Object.values(by).reduce((a, b) => a + b.clips, 0);
+  const clipViews = Object.values(by).reduce((a, b) => a + b.views, 0);
+
+  // daily YouTube views (last value per day)
+  const perDay = {};
+  for (const r of D.daily || []) if (r.yt_views_day !== "" && r.yt_views_day !== undefined) perDay[r.day] = num(r.yt_views_day);
+  const days = Object.keys(perDay).sort().slice(-30).map(d => { const dt = new Date(d + "T12:00:00Z");
+    return {label: dt.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"}), short: dt.toLocaleDateString("en-GB", {day:"numeric", month:"short"}), v: perDay[d]}; });
+
+  const alerts = (D.iss || []);
+  const alertList = D.iss === null ? `<p class="err">Could not read the issues list just now.</p>` :
+    alerts.length ? table([{h:"Issue", f:i => `<a href="${i.html_url}" target="_blank" rel="noopener">${esc(i.title)}</a>`}, {h:"Updated", f:i => ukTime(i.updated_at)}], alerts) :
+    `<p>${pill("good", "✓", "Nothing needs you")}</p>`;
+
+  $("overview").innerHTML = `
+    <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum)</div></div></div>
+      ${meter("Quickplay Daily subscribers (Partner Programme needs 1,000)", num(prog.subscribers || y.subscribers), num(ypp.subscribers_needed) || 1000)}
+      ${meter("Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
+      <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}</div>
+    </div>
+    <div class="tiles">
+      ${tile("Views in the last 24 hours", compact(prog.views_last_24h), "Quickplay Daily, YouTube")}
+      ${tile("Public Shorts", fmt(prog.public_shorts || y.public_shorts), D.channel ? `${fmt(D.channel.scheduled)} scheduled` : "")}
+      ${tile("Instagram followers", fmt(prog.ig_followers ?? (s.instagram || {}).followers), "quickplaydaily")}
+      ${tile("Public clips", fmt(pubClips), `${compact(clipViews)} views across the clips channels`)}
+      ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
+      ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
+    </div>
+    <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>
+    <h2>Needs you or worth knowing</h2>${alertList}
+    <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them). Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;
+
+  // Daily Shorts
+  const sh = (D.shorts || []).slice().sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
+  const mode = window.__shortsMode || "newest";
+  const list = mode === "best" ? sh.slice().sort((a, b) => num(b.all_views || b.yt_views) - num(a.all_views || a.yt_views)).slice(0, 40) : sh.slice(0, 40);
+  $("shorts").innerHTML = `
+    <h2>Every Short, ${mode === "best" ? "most watched first" : "newest first"}</h2>
+    <p class="sub">${fmt(sh.length)} Shorts measured. Views add YouTube, Instagram and Facebook. "Held at 3 s" is the share still watching after the hook.</p>
+    <div class="toolbar"><button type="button" aria-pressed="${mode === "newest"}" data-shorts="newest">Newest</button><button type="button" aria-pressed="${mode === "best"}" data-shorts="best">Most watched</button>
+      <a href="${REPO}/blob/main/review/README.md" target="_blank" rel="noopener" style="align-self:center;font-size:13px">Full review page</a></div>
+    ${table([
+      {h:"Posted", f:r => ukTime(r.posted)},
+      {h:"Short", f:r => r.youtube_url ? `<a href="${esc(r.youtube_url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title)},
+      {h:"Kind", f:r => esc([r.category, r.format].filter(Boolean).join(", "))},
+      {h:"Views", n:1, f:r => fmt(r.all_views || r.yt_views)},
+      {h:"Per hour", n:1, f:r => num(r.views_per_hour).toFixed(1)},
+      {h:"Held at 3 s", n:1, f:r => r.yt_held_3s_pct ? num(r.yt_held_3s_pct).toFixed(0) + "%" : ""},
+      {h:"Watched", n:1, f:r => r.yt_avg_viewed_pct ? num(r.yt_avg_viewed_pct).toFixed(0) + "%" : ""},
+      {h:"Writer", f:r => esc(String(r.writer || "").split(":").pop())}
+    ], list, "No Shorts measured yet.")}`;
+  $("shorts").querySelectorAll("[data-shorts]").forEach(b => b.onclick = () => { window.__shortsMode = b.dataset.shorts; render(); });
+
+  // What the data changed
+  const dec = (D.decisions || []).slice().reverse().slice(0, 30);
+  $("learning").innerHTML = `
+    <h2>Changes the system made from the numbers</h2>
+    <p class="sub">Newest first. Each one is checked again on its "check on" date and kept or undone.</p>
+    ${table([{h:"Date", nw:1, f:r => esc(r.date)}, {h:"Area", f:r => esc(r.area)}, {h:"Change", f:r => esc(r.change)}, {h:"Why", f:r => esc(r.why)}, {h:"Check on", nw:1, f:r => esc(r.check_on)}], dec, "No changes logged yet.")}
+    <h2>The current recipe</h2><p class="sub">What the data says works right now; the writer follows it.</p>
+    <div class="md">${D.insights ? md(D.insights) : "<p class='muted'>Not written yet.</p>"}</div>
+    <h2>Latest weekly report</h2><div class="md">${D.weekly ? md(D.weekly) : "<p class='muted'>The first one arrives on Monday.</p>"}</div>`;
+
+  // Clips and money
+  const campRows = Object.entries(camps).filter(([k, c]) => c.rules || c.active || by[k]).map(([k, c]) => ({k, c, b: by[k] || {clips: 0, views: 0, earned: 0, channels: {}}}))
+    .sort((a, b) => (b.c.active ? 1 : 0) - (a.c.active ? 1 : 0) || b.b.earned - a.b.earned || b.b.views - a.b.views);
+  const chan = {};
+  for (const b of Object.values(by)) for (const [ch, n] of Object.entries(b.channels)) chan[ch] = (chan[ch] || 0) + n;
+  const subs = (D.submit || []).slice().sort((a, b) => (b.public_at_uk || "").localeCompare(a.public_at_uk || "")).slice(0, 30);
+  const status = r => { const t = r.submitted || "";
+    if (!t) return r.public_at_uk && r.public_at_uk.startsWith("private") ? pill("", "·", "private test") : pill("wait", "…", "waiting");
+    if (t === "pulled") return pill("", "·", "pulled");
+    if (t.startsWith("failed")) return pill("bad", "✕", t.replace(/^failed:\s*/, "").slice(0, 60));
+    return pill("good", "✓", "submitted " + t.replace(/^\d{4}-/, "")); };
+  $("clips").innerHTML = `
+    <div class="tiles" style="margin-top:0">
+      ${tile("Estimated earnings", money(earned), "the platforms' own pages are the truth")}
+      ${tile("Public clips", fmt(pubClips), Object.entries(chan).map(([c, n]) => `${esc(c)} ${n}`).join(" · "))}
+      ${tile("Clip views", compact(clipViews), "")}
+      ${tile("Active campaigns", fmt(active.length), "")}
+    </div>
+    <p class="sub" style="margin-top:10px">Earnings pages: <a href="https://contentrewards.com/c/earnings" target="_blank" rel="noopener">Content Rewards</a> · <a href="https://app.vyro.com/earnings" target="_blank" rel="noopener">Vyro</a></p>
+    <h2>Campaigns</h2>
+    ${table([
+      {h:"Campaign", f:r => `${esc(r.c.name || r.k)}${r.c.url ? ` <a href="${esc(r.c.url)}" target="_blank" rel="noopener">open</a>` : ""}`},
+      {h:"Site", f:r => esc(String(r.c.platform || "").split(" (")[0])},
+      {h:"Status", f:r => r.c.active ? pill("good", "✓", "live") : pill("", "·", (r.c.why_off || "off").replace(/^Switched off [\d-]+: /, "").replace(/\.$/, "").slice(0, 40))},
+      {h:"Rate per 1K", n:1, f:r => r.c.pay_per_1k ? money(r.c.pay_per_1k) : ""},
+      {h:"Min views", n:1, f:r => r.c.min_views ? compact(r.c.min_views) : ""},
+      {h:"Ends", nw:1, f:r => esc(r.c.ends || "")},
+      {h:"Channels", f:r => esc((r.c.channels || [r.c.channel || "clips"]).join(", "))},
+      {h:"Clips", n:1, f:r => fmt(r.b.clips)},
+      {h:"Views", n:1, f:r => fmt(r.b.views)},
+      {h:"Earned", n:1, f:r => money(r.b.earned)}
+    ], campRows, "No campaigns yet.")}
+    <h2>Latest submissions</h2>
+    <p class="sub">Content Rewards from GitHub at 19:01 UK; Vyro from the Mac run at 19:07 UK.</p>
+    ${table([
+      {h:"Public", f:r => esc(r.public_at_uk)},
+      {h:"Clip", f:r => r.video && r.video.startsWith("http") ? `<a href="${esc(r.video)}" target="_blank" rel="noopener">${esc(r.title || r.clip)}</a>` : esc(r.title || r.clip)},
+      {h:"Campaign", f:r => esc(r.campaign)},
+      {h:"Where", f:r => esc([r.platform, r.channel].filter(Boolean).join(", "))},
+      {h:"Status", f:status}
+    ], subs, "No clips yet.")}`;
+
+  // Campaigns to join
+  $("scout").innerHTML = `
+    <h2>Campaigns worth joining</h2><p class="sub">Ranked every morning at 09:35 UK by rate, budget left and how hot the subject is. The 19:07 Mac run joins the best fitting ones whenever fewer than ${fmt((D.camps || {}).min_active || 6)} are live.</p>
+    <div class="md">${D.scout ? md(D.scout) : "<p class='muted'>The first list is being made now; it appears here after the scout run, then refreshes every morning.</p>"}</div>
+    <h2>Viral streamers right now</h2>
+    <div class="md">${D.streamers ? md(D.streamers) : "<p class='muted'>Not made yet.</p>"}</div>`;
+
+  // Accounts and runs
+  const id = D.identity || {};
+  const checks = (id.checks || []).slice().sort((a, b) => (a.ok ? 1 : 0) - (b.ok ? 1 : 0));
+  const so = D.social || {};
+  const jobsText = D.jobs || "";
+  const jobHeads = [...jobsText.matchAll(/^### (open|done|blocked): (.+)$/gm)].map(m => ({s: m[1], t: m[2]}));
+  const logPart = jobsText.split(/^## Log\s*$/m)[1] || "";
+  const logLines = logPart.split(/\n(?=- )/).map(x => x.trim()).filter(x => x.startsWith("- ")).slice(-8).reverse();
+  $("accounts").innerHTML = `
+    <h2>Account check</h2>
+    <p class="sub">Every 6 hours GitHub signs in with every key it holds and checks each one is the studio's own Quickplay account. Anything else stops all posting and opens an issue.</p>
+    <p>${id.checked ? (id.ok ? pill("good", "✓", `Clean: ${checks.length} checks, ${ukTime(id.checked)}`) : pill("bad", "✕", `${(id.problems || []).length} problem(s), ${ukTime(id.checked)}`)) : pill("wait", "…", "No audit yet")}</p>
+    ${table([{h:"What", f:c => esc(c.what)}, {h:"Signed in as", f:c => esc(c.found)}, {h:"Result", f:c => c.ok ? pill("good", "✓", "ok") : pill("bad", "✕", c.note || "problem")}],
+      checks.filter(c => !String(c.what).startsWith("workflow ") && !String(c.what).startsWith("tokens/")), "No checks yet.")}
+    <details><summary>Workflow and key-file checks (${checks.filter(c => String(c.what).startsWith("workflow ") || String(c.what).startsWith("tokens/")).length})</summary>
+      ${table([{h:"What", f:c => esc(c.what)}, {h:"Found", f:c => esc(c.found)}, {h:"Result", f:c => c.ok ? pill("good", "✓", "ok") : pill("bad", "✕", c.note || "problem")}],
+        checks.filter(c => String(c.what).startsWith("workflow ") || String(c.what).startsWith("tokens/")))}</details>
+    <div class="two" style="margin-top:6px">
+      <div><h2>Platforms</h2>${table([{h:"Platform", f:r => esc(r[0])}, {h:"State", f:r => r[1]}], [
+        ["YouTube (Quickplay Daily)", D.channel ? esc(`${fmt(D.channel.public)} public, ${fmt(D.channel.scheduled)} scheduled, ${fmt(D.channel.uploads_last_24h)} uploads in 24 h`) : "unknown"],
+        ["Instagram", so.instagram ? (so.instagram.ok ? pill("good", "✓", "@" + (so.instagram.username || "")) : pill("bad", "✕", so.instagram.error || "problem")) : "unknown"],
+        ["Facebook", so.facebook ? (so.facebook.ok ? pill("good", "✓", so.facebook.page || "") : pill("bad", "✕", so.facebook.error || "problem")) : "unknown"],
+        ["TikTok", so.tiktok ? esc(so.tiktok.mode === "off" ? "off" : (so.tiktok.ok ? "connected" : "not connected")) : "unknown"]])}</div>
+      <div><h2>Mac Chrome jobs (19:07 UK daily)</h2>${table([{h:"Job", f:j => esc(j.t)}, {h:"State", f:j => j.s === "done" ? pill("good", "✓", "done") : j.s === "blocked" ? pill("bad", "✕", "needs you") : pill("wait", "…", "open")}], jobHeads, "No jobs listed.")}</div>
+    </div>
+    <h2>Mac run log, newest first</h2>
+    <div class="md">${logLines.length ? md(logLines.join("\n")) : "<p class='muted'>No runs logged yet.</p>"}</div>`;
+}
+
+document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#tabs [role=tab]").forEach(x => x.setAttribute("aria-selected", x === b));
+  document.querySelectorAll("main section").forEach(s => s.hidden = s.id !== b.dataset.tab);
+  try { localStorage.setItem("qp-hub-tab", b.dataset.tab); } catch (e) {}
+  history.replaceState(null, "", "#" + b.dataset.tab);
+});
+(() => { let t = location.hash.slice(1); try { t = t || localStorage.getItem("qp-hub-tab") || ""; } catch (e) {}
+  const b = document.querySelector(`#tabs [data-tab="${t}"]`); if (b) b.click(); })();
+$("refresh").onclick = load;
+load();
+setInterval(load, 10 * 60 * 1000);
+</script>
+</body>
+</html>

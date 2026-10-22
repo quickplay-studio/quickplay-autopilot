@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-22T14:25+00:00",
- "clips": 0,
+ "updated": "2026-10-22T22:58+00:00",
+ "clips": 11,
  "tests": {
   "layout": {
    "arms": {
     "letterbox": {
-     "n": 0,
-     "median_views": null
+     "n": 2,
+     "median_views": 0.0
     },
     "full": {
      "n": 0,
@@ -22,12 +22,12 @@
   "captions": {
    "arms": {
     "lines": {
-     "n": 0,
-     "median_views": null
+     "n": 1,
+     "median_views": 0.0
     },
     "karaoke": {
-     "n": 0,
-     "median_views": null
+     "n": 1,
+     "median_views": 0.0
     }
    },
    "best": null
@@ -35,8 +35,8 @@
   "punch": {
    "arms": {
     "none": {
-     "n": 0,
-     "median_views": null
+     "n": 2,
+     "median_views": 0.0
     },
     "zoom": {
      "n": 0,
@@ -72,5 +72,30 @@
    "best": null
   }
  },
- "campaigns": {}
+ "campaigns": {
+  "tdr-mitch": {
+   "n": 2,
+   "median_views": 1.0
+  },
+  "speed-expedia": {
+   "n": 2,
+   "median_views": 0.0
+  },
+  "tdr-stinkyasher": {
+   "n": 1,
+   "median_views": 2.0
+  },
+  "mrbeast-cod": {
+   "n": 2,
+   "median_views": 4.0
+  },
+  "tdr-jenny": {
+   "n": 2,
+   "median_views": 0.0
+  },
+  "tdr-flamingo": {
+   "n": 2,
+   "median_views": 0.0
+  }
+ }
 }

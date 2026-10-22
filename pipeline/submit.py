@@ -364,6 +364,46 @@ Return JSON: {{"name": "", "subject": "the creator or brand the clips show", "ty
 fits is true only when: clipping (not UGC you must film), YouTube allowed, footage provided or named, family friendly, status open."""
 
 
+def heat(subject):
+    """How hot a subject is right now, 0 to about 3, from free signals: Wikipedia page views of its article over the last
+    7 days (Wikimedia REST, no key), its presence in today's Google Trends, Wikipedia top pages and YouTube charts
+    (trends/latest.json), the searches that already bring the clips channel viewers (analytics/search_terms.csv), and how
+    many YouTube search suggestions it has. The scout multiplies a campaign's money by (1 + heat)."""
+    import requests, urllib.parse
+    subject = (subject or "").strip()
+    if not subject: return 0.0, []
+    low, score, why = subject.lower(), 0.0, []
+    try:
+        end = (NOW - dt.timedelta(days=1)).strftime("%Y%m%d"); start = (NOW - dt.timedelta(days=8)).strftime("%Y%m%d")
+        u = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/"
+             f"{urllib.parse.quote(subject.replace(' ', '_'))}/daily/{start}/{end}")
+        r = requests.get(u, headers={"User-Agent": "QuickplayClips/1.0 (quickplay-studio@users.noreply.github.com)"}, timeout=15)
+        if r.ok:
+            views = [x.get("views", 0) for x in r.json().get("items", [])]
+            avg = sum(views) / max(1, len(views))
+            pts = min(1.5, max(0.0, (avg ** 0.5) / 100))          # 10,000 a day: 1.0; 22,500: 1.5
+            if pts: score += pts; why.append(f"Wikipedia {avg:,.0f} views a day")
+    except Exception: pass
+    try:
+        t = json.loads((ROOT / "trends" / "latest.json").read_text())
+        gt = " ".join(str(x.get("q", "")) + " " + " ".join(x.get("news") or []) for g in (t.get("google_trends") or {}).values() for x in (g if isinstance(g, list) else []))
+        if low in gt.lower(): score += 0.7; why.append("in Google Trends today")
+        if any(low in str(x.get("page", "")).lower() for x in t.get("wikipedia_top") or []): score += 0.5; why.append("a Wikipedia top page today")
+        yc = json.dumps(t.get("youtube_charts") or {}).lower()
+        if low in yc: score += 0.5; why.append("in the YouTube charts")
+    except Exception: pass
+    try:
+        for r in csv.DictReader((ROOT / "analytics" / "search_terms.csv").open()):
+            if low in str(r.get("term", "")).lower(): score += 0.4; why.append(f"our viewers search \"{r['term']}\""); break
+    except Exception: pass
+    try:
+        import clips as C
+        terms = C.searches(subject)
+        if len(terms) >= 6: score += 0.3; why.append(f"{len(terms)} YouTube search suggestions")
+    except Exception: pass
+    return round(score, 2), why
+
+
 def scout(limit=40):
     """Reads the Content Rewards discover pages (and Vyro's campaign list) with the saved logins, judges every campaign
     page with the model, and writes status/scout.md (a ranked shortlist with reasons) and clips/scout.json."""
@@ -397,7 +437,8 @@ def scout(limit=40):
                 if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
                 if not isinstance(ans, dict) or not ans.get("name"): log(f"scout: {url}: no answer"); continue
                 ans.update(url=url, id=cid, platform="Content Rewards", judged=NOW.isoformat(timespec="minutes"), model=model)
-                rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}: {str(ans.get('why'))[:90]}")
+                ans["heat"], ans["heat_why"] = heat(str(ans.get("subject") or ""))
+                rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}, heat {ans['heat']}: {str(ans.get('why'))[:90]}")
             except Exception as e: log(f"scout: {url}: {type(e).__name__}: {str(e)[:120]}")
         try: b.close()
         except Exception: pass
@@ -413,11 +454,14 @@ def scout(limit=40):
                     log(f"scout: Vyro's campaign list saved to status/scout_vyro.txt ({len(text)} characters)")
                 b.close()
             except Exception as e: log(f"scout: Vyro: {type(e).__name__}: {str(e)[:120]}")
-    rows.sort(key=lambda r: -(float(r.get("rate_per_1k") or 0) * min(float(r.get("budget_remaining") or 500), 3000) * (1 if r.get("fits") else 0.1)))
+    rows.sort(key=lambda r: -(float(r.get("rate_per_1k") or 0) * min(float(r.get("budget_remaining") or 500), 3000) * (1 + float(r.get("heat") or 0)) * (1 if r.get("fits") else 0.1)))
     (ROOT / "clips" / "scout.json").write_text(json.dumps({"updated": NOW.isoformat(timespec="minutes"), "campaigns": rows}, indent=1, ensure_ascii=False))
-    L = [f"# Campaigns worth joining ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "", "| Fits | Campaign | Rate | Budget left | Min views | Footage | Why |", "|---|---|---|---|---|---|---|"]
+    L = [f"# Campaigns worth joining ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "",
+         "Ranked by rate times budget times how hot the subject is right now (Wikipedia views, Google Trends, YouTube charts, our viewers' searches).", "",
+         "| Fits | Campaign | Rate | Budget left | Min views | Heat | Footage | Why |", "|---|---|---|---|---|---|---|---|"]
     for r in rows:
-        L.append(f"| {'yes' if r.get('fits') else 'no'} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | {str(r.get('footage'))[:50]} | {str(r.get('why'))[:120]} |")
+        L.append(f"| {'yes' if r.get('fits') else 'no'} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | "
+                 f"{r.get('heat')} ({'; '.join(r.get('heat_why') or [])[:80]}) | {str(r.get('footage'))[:50]} | {str(r.get('why'))[:120]} |")
     (ROOT / "status" / "scout.md").write_text("\n".join(L) + "\n")
     log(f"scout: {sum(1 for r in rows if r.get('fits'))} of {len(rows)} new campaigns fit")
     return rows

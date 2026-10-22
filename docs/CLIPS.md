@@ -157,3 +157,17 @@ forbids it for that creator's content.
   fine). Two Flamingo hooks ("full psychological destruction", "generations of trauma") were legal but not family
   friendly: the planner now has a brand-safety rule, UNSAFE drops such hooks and titles at planning, and review() pulls
   a scheduled clip that carries one ("not brand safe"); a "go" run refilled the day.
+
+## 22 October, 18:00 UK: better programmes, aligned with what people search
+- Charlie: sign up to much better clipper programmes (N3on, the viral streamers of the moment) and align the choice with
+  what people search on YouTube. Found: N3on's programme recruits on stream and Discord at $0.40 to $0.50 per 1,000
+  (Nysos, Dexerto); the big streamer "clipper networks" (Adin Ross, Kai Cenat, xQc and others) are Discord invites with
+  no public rates; several of the loudest networks (political and adult-adjacent creators) are off limits for this
+  channel. Brand and creator campaigns on Content Rewards pay $1 to $6 per 1,000 for brand-safe footage, so they stay
+  first; a streamer's own programme is joined when YouTube Shorts counts and the footage passes the profanity filter.
+- The scout now ranks by rate times budget times (1 + heat), heat being the subject's Wikipedia page views over 7 days
+  (Wikimedia REST, no key), presence in today's Google Trends, Wikipedia top pages and YouTube charts
+  (trends/latest.json), the searches that already bring our viewers (analytics/search_terms.csv) and the count of
+  YouTube search suggestions; status/scout.md shows the heat and why.
+- The planner reads the subject's live YouTube search suggestions (clips.searches) and prefers the moments those
+  searches want, using their words in hooks and titles.

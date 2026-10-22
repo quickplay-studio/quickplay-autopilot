@@ -36,7 +36,7 @@ clipping channel under a campaign with these rules, which every clip must keep:
   the payoff (the reaction, the punchline, the reveal), never mid-sentence.
 Pick up to {n} moments, best first: the funniest reactions, the biggest reveals, the lines people quote. Spread them
 across the segment; no two may overlap. Already made (skip anything that overlaps these): {done}.
-The transcript is a list of lines with their start and end seconds:
+{searches}The transcript is a list of lines with their start and end seconds:
 {lines}
 Hooks and titles stay family friendly and brand safe: fun, drama, chaos and wins are fine; never trauma, abuse, mental
 illness, self-harm, cruelty, slurs or threats, even as a joke, and never a word the campaign's brand would not want.
@@ -299,6 +299,20 @@ def transcribe(cid):
     return out
 
 
+def searches(subject, n=8):
+    """What people type into YouTube search about the subject (Google's suggestions for GB and US, free, no key): the
+    planner aligns hooks and titles with it, and the scout reads it as demand."""
+    import requests
+    out = []
+    for gl in ("GB", "US"):
+        try:
+            r = requests.get("https://suggestqueries.google.com/complete/search", timeout=10,
+                             params={"client": "firefox", "ds": "yt", "hl": "en", "gl": gl, "q": subject})
+            out += [x for x in r.json()[1] if isinstance(x, str)]
+        except Exception: pass
+    return list(dict.fromkeys(out))[:n]
+
+
 def lines_of(words, every=6.0):
     """The transcript as lines of about `every` seconds for the planner."""
     lines, cur, t0 = [], [], None
@@ -320,7 +334,10 @@ def plan(cid, n=8):
     p = PLANS / f"{cid}.json"
     plan_ = json.loads(p.read_text()) if p.exists() else {"moments": []}
     done = [(m["start"], m["end"]) for m in plan_["moments"]]
+    terms = searches(c["subject"])
     prompt = PLAN_PROMPT.format(label=c["source"].get("label", cid), focus=r["focus"], on_screen=r["on_screen"],
+                                searches=(f"What people type into YouTube search about {c['subject']} right now: {'; '.join(terms)}. Prefer the "
+                                          "moments those searches would want, and use their words in a hook or title when they fit.\n") if terms else "",
                                 avoid="; ".join(r.get("avoid") or []), min_s=r.get("min_s", 15), max_s=r.get("max_s", 55), n=n,
                                 subject=c["subject"], done=", ".join(f"{a:.0f}-{b:.0f}s" for a, b in done) or "none",
                                 lines="\n".join(lines_of(words)))

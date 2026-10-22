@@ -61,3 +61,17 @@ try:
 except ImportError:
     print("3 browser steps skipped (no playwright)")
 print("submit ok")
+
+# 4. the scout's heat: today's trend data and our viewers' searches, no network needed for those two signals
+import json as _json, pathlib as _pl
+root = _pl.Path(SCRATCH) / "root"; (root / "trends").mkdir(parents=True); (root / "analytics").mkdir()
+(root / "trends" / "latest.json").write_text(_json.dumps({"google_trends": {"GB": [{"q": "Test Subject tour", "news": ["Test Subject announces dates"]}]},
+                                                          "wikipedia_top": [{"page": "Other"}], "youtube_charts": {}}))
+(root / "analytics" / "search_terms.csv").write_text("term,views\ntest subject live,40\n")
+S.ROOT = root
+import clips as _C; _C.searches = lambda subject, n=8: []
+import requests as _rq; _rq.get = lambda *a, **k: (_ for _ in ()).throw(RuntimeError("offline"))
+score, why = S.heat("Test Subject")
+assert score == 1.1 and "in Google Trends today" in why and any("our viewers search" in w for w in why), (score, why)
+assert S.heat("")[0] == 0.0
+print("4 heat ok")

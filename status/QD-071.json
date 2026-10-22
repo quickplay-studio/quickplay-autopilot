@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T02:54:00Z",
  "rendered": "2026-10-20T23:29:18.737482+00:00",
- "title": "How does GPS actually pinpoint your location? 🛰️",
+ "title": "How GPS satellite clocks run faster every day 🌍",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -94,7 +94,14 @@
  "social_release": "social-QD-071",
  "engage": {
   "comment": "Ugya3UtWRrQqMG2RIyB4AaABAg",
-  "playlist": "Quickplay Daily: Tech"
+  "playlist": "Quickplay Daily: Tech",
+  "title": {
+   "swapped_from": "How does GPS actually pinpoint your location? 🛰️",
+   "to": "How GPS satellite clocks run faster every day 🌍",
+   "at": "2026-10-22T03:16+00:00",
+   "views_an_hour": 1.0,
+   "typical": 2.6
+  }
  },
  "instagram": {
   "media": "17934710226143026",

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 00:37): 8 of 1,000 subscribers · 5,084 of 10 million Shorts views in 90 days · 5,905 views in the last 24 hours (about 111,055 a day needed, 103 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 01:50): 8 of 1,000 subscribers · 5,115 of 10 million Shorts views in 90 days · 5,930 views in the last 24 hours (about 111,054 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 2 public, 12 scheduled | 0 | 0 | ⏳ 2 of 40 so far, 12 more scheduled |
+| Thu 22 Oct | 5 public, 9 scheduled | 0 | 0 | ⏳ 5 of 40 so far, 9 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -64,17 +64,17 @@ scheduled · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json)
 ![QD-098](QD-098.jpg)
 
 ### Thu 22 Oct 2:00 · The Beatles Please Please Me secret history revealed 🎸
-scheduled · 21 s · music: death-duel · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
+private · 21 s · music: death-duel · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
 
 ![QD-097](QD-097.jpg)
 
 ### Thu 22 Oct 1:30 · Dave Raindance hits number one 🎶
-scheduled · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
+private · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
 
 ![QD-096](QD-096.jpg)
 
 ### Thu 22 Oct 1:00 · Which artist has won the most Grammy Awards? 🏆
-scheduled · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
+private · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
 
 ![QD-095](QD-095.jpg)
 

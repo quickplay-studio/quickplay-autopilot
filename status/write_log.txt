@@ -1,11 +1,27 @@
-breaking run for 2026-10-22: 2 to write from 3 fact packs
-QD-109: about 60 s needs 9 facts, the pack has 4: 35 to 44 s instead
-local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
-local model ready
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-wrexham: still failing: format: one of ['countdown', 'news_explained', 'one_detail', 'real_reason', 'story', 'three_details', 'timeline']; category: one of ['Entertainment', 'Film', 'Gaming', 'Music', 'Science', 'Sport', 'Tech']; beats: 3 to 14; narration: 0 words, needs 55 to 125 (20 to 45 seconds); meta.title: 1 to 70 ch
+morning run for 2026-10-22: 18 to write from 10 fact packs
 covered already: Patient Zero by Taylor Swift
-too few facts: playstation plus
+too few facts: bbc cricket
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+it gets worse: groq:openai/gpt-oss-120b, 0 warnings
+sims: groq:openai/gpt-oss-120b, 0 warnings
+nobody wants this: groq:openai/gpt-oss-120b, 0 warnings
+BioWare: still failing: facts: beat 0: BioWare's age of '31 years' is unsupported. The pack states BioWare was founded in 1995 (Source 4) and shut down on October 21, 2026 (Sources 1, 2, 4), making it roughly 31 years depending on the exact month in 1995, but the exact duration is not verified as a 31-year span in the veri
+too few facts: Olivia Rodrigo
+Cyberpunk 2077: gemini-3.7-flash, 0 warnings
+too few facts: Ranking Best Flag Football Moments 🏈
+Dancing with the Stars (American TV series) season 35: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
 follow-up: no pack for QD-067
-wrote 0 of 2: 
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 1, "gemini-flash-latest": 1, "gemini-3.8-flash": 1, "gemini-3.5-flash-lite": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+evergreen: How Olivia Rodrigo wrote Driver's License in her bedroom and broke Spotify records: only 4 checked facts
+evergreen: How the Apollo 11 guidance computer recovered from a system overload during landing: only 2 checked facts
+evergreen: Top 10 best-selling video games of all time: only 3 checked facts
+evergreen: Top 10 highest-grossing films of all time: only 2 checked facts
+evergreen: Top 10 most-streamed songs on Spotify of all time: only 0 checked facts
+evergreen: How Leicester City won the Premier League at 5000-to-1 odds: only 4 checked facts
+How BioWare created Star Wars: Knights of the Old Republic in just three years: gemini-3.6-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+How BioWare created Star Wars: Knights of the Old Republic in just three years: still failing: facts: beat 0: The title states this is '(Part 2)', but the fact pack does not mention parts or a multi-part series.
+How BioWare created Star Wars: Knights of the Old Republic in just three years: gemini-3.1-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+QD-116: about 2 min needs 16 facts, the pack has 7: 35 to 44 s instead
+The day American football flag football was officially added to the 2028 Olympic Games: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Top 10 highest-grossing media franchises of all time: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
+wrote 7 of 18: QD-109 It Gets Worse: Leo Reich’s triple‑threat comedy 📺; QD-110 EA pauses Project Lotus 🛑; QD-111 Nobody Wants This S3 romance twist 🎬; QD-112 Cyberpunk 2077 gets massive new update 🎮; QD-113 Dancing with the Stars makes history 💃; QD-115 How BioWare built Knights of the Old Republic 🌌; QD-116 American football joins the 2028 Olympics 🏈
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"groq:openai/gpt-oss-120b": "prompt too large", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 4, "gemini-3.5-flash-lite": 40, "gemini-flash-latest": 2, "gemini-3.7-flash": 1, "gemma-4-31b-it": 1, "gemini-3.5-flash": 2, "gemini-3.6-flash": 7, "openrouter:minimax/minimax-m3.1-flash:free": 1, "gemini-3.1-flash-lite": 2, "gemini-flash-lite-latest": 1, "gemini-3-flash-preview": 3}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

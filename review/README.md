@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 10:41): 8 of 1,000 subscribers · 5,379 of 10 million Shorts views in 90 days · 4,174 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 11:39): 8 of 1,000 subscribers · 5,384 of 10 million Shorts views in 90 days · 3,887 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 9:47 (UK): 1 scheduled, 93 public, 33 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 15 public, 7 scheduled | 14 | 1 | ⏳ 15 of 40 so far, 7 more scheduled |
+| Thu 22 Oct | 16 public, 6 scheduled | 14 | 2 | ⏳ 16 of 40 so far, 6 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -64,7 +64,7 @@ private · 24 s · music: back-in-the-saddle · on Facebook · [script](../board
 ![QD-108](QD-108.jpg)
 
 ### Thu 22 Oct 6:30 · How does ChatGPT process natural language queries? 🤖
-public · 20 s · music: glitcher · [script](../boards/done/QD-107.json) · [YouTube](https://youtube.com/shorts/fCu432D5mgw)
+public · 20 s · music: glitcher · on Facebook · [script](../boards/done/QD-107.json) · [YouTube](https://youtube.com/shorts/fCu432D5mgw)
 
 ![QD-107](QD-107.jpg)
 

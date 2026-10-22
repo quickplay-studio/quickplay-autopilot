@@ -241,4 +241,10 @@ forbids it for that creator's content.
   already signed in (tokens/instagram.enc); no new account, no new token. clips.py accounts() falls back to that sign-in
   when no IG_CLIPS_* or IG_<CHANNEL>_* secrets exist. The Daily Shorts and the clips share its daily Reels number
   (Instagram allows 100 API posts a day; the ramps keep it far below). He connects quickplaydaily on Content Rewards and Vyro.
+- Charlie (22 October, 22:55 UK): "update me when any money is made". alerts.py money() runs with the evening check
+  (21:30 UTC): the clips' estimated earnings (the money page's sum: views over each campaign's minimum at its rate,
+  capped per clip) are noted in one GitHub issue, "💰 Money: the clips have earned about $X so far (estimate)", updated
+  whenever the figure has risen by a dollar or more (status/money.json remembers the last note); the Partner Programme
+  thresholds (1,000 subscribers; then both) get their own issue once. The GitHub app on his phone shows them. The
+  platforms' own earnings pages are the truth; payouts need a payout method set on Whop and on Vyro, his to do.
 

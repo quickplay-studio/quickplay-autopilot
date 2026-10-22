@@ -1,6 +1,5 @@
 {
- "checked": "2026-10-22T08:14:18+00:00",
- "instagram_checked": "2026-10-22T08:14:18+00:00",
+ "checked": "2026-10-22T09:12:03+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -18,11 +17,12 @@
   ],
   "today_cap": 18
  },
+ "instagram_checked": "2026-10-22T08:14:18+00:00",
  "facebook": {
   "ok": true,
   "page": "Quickplay Daily",
   "followers": 0,
-  "today_cap": 14,
+  "today_cap": 18,
   "key_type": "PAGE",
   "key_from_user_key": true,
   "key_expires": "never",

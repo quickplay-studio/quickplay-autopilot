@@ -1,6 +1,12 @@
-social: no Instagram, Facebook or TikTok account for the clips channel yet
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-engage: 12 comments
-submit: Content Rewards: no WHOP_COOKIES secret: export the Content Rewards cookies first
-submit: Vyro: no VYRO_COOKIES secret: export the Vyro cookies first
+speed-expedia-03 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("dialog").first.get_b
+speed-expedia-04 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("dialog").first.get_b
+speed-expedia-06 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_role("dialog").first.get_b
+mrbeast-cod-01: Vyro: the login has expired
+opened: ⚠️ Clips: the Vyro login has expired GraphQL: Resource not accessible by integration (createIssue)
 submit: 0 of 23 submitted

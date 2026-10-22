@@ -24,19 +24,21 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q cryptography tzdata
+      - run: pip install -q requests cryptography tzdata
       - name: Save the sign-ins
         env:
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
           WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
           VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
-        run: python pipeline/submit.py import-logins 2>&1 | tee status/logins_log.txt
+        run: |
+          set -o pipefail
+          python pipeline/submit.py import-logins 2>&1 | tee status/logins_log.txt
       - name: Save
         if: ${{ always() }}
         run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
-          git add tokens/login_whop.enc tokens/login_vyro.enc status/logins_log.txt 2>/dev/null || true
+          for f in tokens/login_whop.enc tokens/login_vyro.enc status/logins_log.txt; do git add $f 2>/dev/null || true; done
           git commit -q -m "Logins $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

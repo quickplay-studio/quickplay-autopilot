@@ -1,0 +1,101 @@
+{
+ "id": "QD-116",
+ "board": "boards/queue/QD-116.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T14:00:00Z",
+ "rendered": "2026-10-22T09:19:43.972299+00:00",
+ "title": "American football joins the 2028 Olympics 🏈",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 10
+ },
+ "music": "risen",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 41.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 19.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.9,
+   "none",
+   0
+  ],
+  [
+   4.9,
+   9.37,
+   "none",
+   2
+  ],
+  [
+   9.37,
+   16.39,
+   "none",
+   1
+  ],
+  [
+   16.39,
+   20.55,
+   "none",
+   1
+  ],
+  [
+   20.55,
+   28.95,
+   "none",
+   2
+  ],
+  [
+   28.95,
+   33.47,
+   "none",
+   1
+  ],
+  [
+   33.47,
+   41.36,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "227567",
+   "q": "stadium lights",
+   "t0": 0.0,
+   "t1": 20.98
+  },
+  {
+   "p": "pixabay",
+   "id": "23014",
+   "q": "running track sunrise",
+   "t0": 20.38,
+   "t1": 41.36
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T09:31:21Z",
+ "video": "99w92L65OLg",
+ "url": "https://youtube.com/shorts/99w92L65OLg",
+ "publish_at": "2026-10-22T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-116"
+}

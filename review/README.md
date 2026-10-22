@@ -4,7 +4,7 @@
 
 YouTube checked Thu 22 Oct 9:47 (UK): 1 scheduled, 93 public, 33 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 9:14).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 10:12).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 14 public, 1 scheduled | 10 | 0 | ⏳ 14 of 40 so far, 1 more scheduled |
+| Thu 22 Oct | 15 public, 7 scheduled | 14 | 1 | ⏳ 15 of 40 so far, 7 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -59,7 +59,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 ## On the channel (latest first)
 
 ### Thu 22 Oct 10:00 · Morgan Wallen and Ella Langley duet details 🎶
-scheduled · 24 s · music: back-in-the-saddle · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
+private · 24 s · music: back-in-the-saddle · on Facebook · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
 
 ![QD-108](QD-108.jpg)
 
@@ -174,22 +174,22 @@ public · 2 views · 25 s · music: f16 · on Facebook · [script](../boards/don
 ![QD-083](QD-083.jpg)
 
 ### Wed 21 Oct 15:30 · How Manchester United won the 1999 Champions League 🏆
-public · 14 views · 24 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
+public · 14 views · 24 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
 
 ![QD-082](QD-082.jpg)
 
 ### Wed 21 Oct 15:00 · Jupiter: Which is the largest planet? 🪐
-public · 15 views · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
+public · 15 views · 28 s · music: defying-gravity · on Instagram · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
 
 ![QD-081](QD-081.jpg)
 
 ### Wed 21 Oct 14:30 · Who invented the World Wide Web? 🌐
-public · 3 views · 28 s · music: circuit-rush · on Facebook · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
+public · 3 views · 28 s · music: circuit-rush · on Instagram · on Facebook · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
 
 ![QD-080](QD-080.jpg)
 
 ### Wed 21 Oct 14:00 · How often do the Orionids meteor showers occur? 🌠
-public · 3 views · 26 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
+public · 3 views · 26 s · music: defying-gravity · on Instagram · on Facebook · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
 
 ![QD-079](QD-079.jpg)
 

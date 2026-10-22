@@ -1,0 +1,96 @@
+{
+ "id": "QD-109",
+ "board": "boards/queue/QD-109.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T10:30:00Z",
+ "rendered": "2026-10-22T09:08:30.892056+00:00",
+ "title": "It Gets Worse: Leo Reich’s triple‑threat comedy 📺",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8
+ },
+ "music": "sneaky-spelunking",
+ "social_music": "gentle-bluegrass-country-folk-daisy-203460",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 28.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.75,
+   "none",
+   0
+  ],
+  [
+   4.75,
+   9.95,
+   "title",
+   2
+  ],
+  [
+   9.95,
+   14.46,
+   "none",
+   1
+  ],
+  [
+   14.46,
+   18.93,
+   "none",
+   2
+  ],
+  [
+   18.93,
+   23.11,
+   "none",
+   1
+  ],
+  [
+   23.11,
+   28.25,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "28860",
+   "q": "city night lights",
+   "t0": 0.0,
+   "t1": 14.43
+  },
+  {
+   "p": "pixabay",
+   "id": "62823",
+   "q": "movie theatre seats",
+   "t0": 13.83,
+   "t1": 28.25
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T09:31:04Z",
+ "video": "-2yWBGmmkrg",
+ "url": "https://youtube.com/shorts/-2yWBGmmkrg",
+ "publish_at": "2026-10-22T10:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T10:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-109"
+}

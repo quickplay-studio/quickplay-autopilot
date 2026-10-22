@@ -1,0 +1,79 @@
+{
+ "id": "QD-112",
+ "board": "boards/queue/QD-112.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T12:30:00Z",
+ "rendered": "2026-10-22T09:13:09.264610+00:00",
+ "title": "Cyberpunk 2077 gets massive new update 🎮",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Cyberpunk 2077 Night City: no Commons image named 'Cyberpunk 2077 Night City')",
+  "beat 5 reused a nearby picture (commons-search:Night City Cyberpunk: no Commons image named 'Night City Cyberpunk')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "the-bombs",
+ "social_music": "sport-phonk-571905",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 20.8,
+  "wps": 3.26,
+  "weak_beats": [],
+  "size_mb": 8.4
+ },
+ "timeline": [
+  [
+   0.06,
+   3.71,
+   "stat",
+   0
+  ],
+  [
+   3.71,
+   7.09,
+   "none",
+   2
+  ],
+  [
+   7.09,
+   12.44,
+   "cards",
+   2
+  ],
+  [
+   12.44,
+   17.47,
+   "none",
+   1
+  ],
+  [
+   17.47,
+   20.77,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T09:31:11Z",
+ "video": "yJxpg-kbZXw",
+ "url": "https://youtube.com/shorts/yJxpg-kbZXw",
+ "publish_at": "2026-10-22T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-112"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "QD-111",
+ "board": "boards/queue/QD-111.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T12:00:00Z",
+ "rendered": "2026-10-22T09:13:10.003809+00:00",
+ "title": "Nobody Wants This S3 romance twist 🎬",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "mirror-mirror",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.8
+ },
+ "timeline": [
+  [
+   0.06,
+   3.52,
+   "none",
+   1
+  ],
+  [
+   3.52,
+   8.61,
+   "none",
+   1
+  ],
+  [
+   8.61,
+   15.02,
+   "title",
+   2
+  ],
+  [
+   15.02,
+   20.02,
+   "none",
+   1
+  ],
+  [
+   20.02,
+   23.82,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "141853",
+   "q": "candlelit dinner",
+   "t0": 0.0,
+   "t1": 12.21
+  },
+  {
+   "p": "pixabay",
+   "id": "3138",
+   "q": "city skyline night",
+   "t0": 11.61,
+   "t1": 23.82
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T09:31:09Z",
+ "video": "GpqVx0L_zaE",
+ "url": "https://youtube.com/shorts/GpqVx0L_zaE",
+ "publish_at": "2026-10-22T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-111"
+}

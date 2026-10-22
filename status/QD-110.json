@@ -1,0 +1,94 @@
+{
+ "id": "QD-110",
+ "board": "boards/queue/QD-110.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T11:30:00Z",
+ "rendered": "2026-10-22T09:14:14.300860+00:00",
+ "title": "EA pauses Project Lotus 🛑",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Project Lotus mobile game: no Commons image named 'Project Lotus mobile game')",
+  "beat 3 reused a nearby picture (commons-search:Project Evergreen concept: no Commons image named 'Project Evergreen concept')",
+  "beat 4 reused a nearby picture (commons-search:Project Evergreen teaser: no Commons image named 'Project Evergreen teaser')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "mirror-mirror",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "clean",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "lab-grade-1019",
+  "opening": "graphic_first"
+ },
+ "qa": {
+  "duration": 25.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 4.0
+ },
+ "timeline": [
+  [
+   0.06,
+   4.15,
+   "none",
+   0
+  ],
+  [
+   4.15,
+   6.64,
+   "none",
+   1
+  ],
+  [
+   6.64,
+   10.0,
+   "none",
+   1
+  ],
+  [
+   10.0,
+   19.33,
+   "title",
+   1
+  ],
+  [
+   19.33,
+   25.0,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "190482",
+   "q": "city night lights",
+   "t0": 0.0,
+   "t1": 12.8
+  },
+  {
+   "p": "pixabay",
+   "id": "123441",
+   "q": "living room couch",
+   "t0": 12.2,
+   "t1": 25.0
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T09:31:06Z",
+ "video": "eEteEeLQ8Mg",
+ "url": "https://youtube.com/shorts/eEteEeLQ8Mg",
+ "publish_at": "2026-10-22T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T11:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-110"
+}

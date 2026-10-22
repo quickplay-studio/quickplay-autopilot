@@ -2,6 +2,13 @@
  "note": "Quickplay Clips (@QuickplayClips-x9b): one entry per clipping campaign Charlie joined. A campaign is used only while active is true and its rules are here; permission is the campaign itself. Times are UK. No secrets in this file.",
  "batch_time": "18:00",
  "batch_note": "Reach wants every clip submitted within 30 minutes of posting, so the day's clips go public together at batch_time and clips/submit.csv lists the links Charlie pastes into each campaign then.",
+ "batch_times": {
+  "Vyro": "19:00"
+ },
+ "submit_by": {
+  "Vyro": "mac"
+ },
+ "submit_note": "Vyro drops a session that arrives from GitHub's servers (22 October), so its clips go public at 19:00 UK and the Mac Chrome run (19:07 UK, docs/CHROME_JOBS.md) submits them in Charlie's own browser minutes later; GitHub leaves Vyro rows alone (submit_by mac) and submits Content Rewards itself at 18:01.",
  "campaigns": {
   "speed-expedia": {
    "name": "$8,000 IShowSpeed x Expedia Clipping Campaign",

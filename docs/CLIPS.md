@@ -215,3 +215,26 @@ forbids it for that creator's content.
   they run at the lower daily number until their history earns advanced features.
 - Campaigns: joined Kevin Langue's Vyro campaign (clips and irl). Not joined, with reasons, in docs/CHROME_JOBS.md.
 
+## 22 October, 20:10 to 21:00 UK: Vyro from the Mac, one Instagram, the identity guard
+- Vyro drops the saved session the moment it arrives from GitHub's servers (the probe showed vyro_sid given and gone;
+  Content Rewards accepts its own), and disguising the headless browser would be working against Vyro's clipper terms,
+  which count automated posting as spam. So Vyro clips go public at 19:00 UK (campaigns.json batch_times) and the Mac
+  Chrome run at 19:07 UK submits them in Charlie's own browser (docs/CHROME_JOBS.md standing job); GitHub leaves Vyro rows
+  alone (submit_by mac) and submits Content Rewards itself at 18:01, inside its 30-minute window, with a random 2 to 5
+  minute gap before each submission (Charlie: never a burst the second the batch goes live).
+- The two campaign-site sign-ins live encrypted in tokens/login_whop.enc and tokens/login_vyro.enc (logins.yml writes
+  them from the pasted secrets WHOP_COOKIES and VYRO_COOKIES); the clips workflow no longer reads the secrets, which was
+  what GitHub held as "possibly malicious" (every clips run needed Charlie's Approve and run until then).
+- Charlie: one Instagram account, his existing clipping one, takes every kind of clip; no more Instagram accounts. A
+  channel without its own IG_<CHANNEL>_* secrets uses the clips channel's (clips.py accounts). Caps: Vyro 5 submissions
+  a day per connected account, social_per_day Reels a day. He adds IG_CLIPS_TOKEN and IG_CLIPS_USER_ID from the studio
+  Meta app (Instagram Login); the clips line skips Facebook.
+- Charlie: nothing outside the studio Google account, ever, and a flag if anything else is touched. The identity guard
+  (pipeline/identity.py, audit.yml every 6 hours) resolves every sign-in live against config.json "accounts" (listed ids,
+  the Quickplay name rule, the secrets allowlist, own-site cookies only, expected token files); first audit clean, 30
+  checks. A mismatch opens the issue "🔒 Security: a sign-in outside the studio account" and the gate step at the top of
+  clips, social, publish and engage stops posting until the next clean audit. The Mac run checks the Chrome profile's
+  Google account first. A new secret goes on the allowlist by hand, on purpose.
+- Charlie says yes to approving held runs: they are his own workflow, read line by line; nothing leaves except to the
+  campaign sites, YouTube, Meta and the repo.
+

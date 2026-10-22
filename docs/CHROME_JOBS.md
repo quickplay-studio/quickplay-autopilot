@@ -93,6 +93,16 @@ With the studio account make free API keys at https://cloud.cerebras.ai/ and htt
 the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 
 ## Standing jobs (every run)
+- Vyro submissions (every run, right after the identity guard; Vyro clips go public at 19:00 UK and Vyro drops any session
+  that arrives from GitHub's servers, so this is the only route): for every row of clips/submit.csv whose campaign is on
+  Vyro, whose public_at_uk has passed within the last 3 days and whose submitted column is empty or starts with "failed":
+  on https://app.vyro.com/campaigns/add-clips find the campaign's card (the "card" text in clips/campaigns.json), press
+  its Submit post, then "Use a link instead", paste the row's video link, make sure the social account is the row's
+  channel (quickplayclips-x9b for clips, the gaming or irl handle otherwise), tick "My post follows campaign rules",
+  Continue, and on "Review your post" press Submit post. "Post not submitted: You have already submitted this post"
+  counts as done. Write the UK time (or the time plus " (already)") into the row's submitted column; a refusal goes in
+  as "failed: <reason>". Stop for the day when the dialog says the account can submit 0 posts today (5 per connected
+  account a day). Commit as "Quickplay Studio" and push. Leave a random 2 to 5 minutes between submissions.
 - First, the identity guard (Charlie, 22 October: nothing outside the studio Google account, ever): open
   https://myaccount.google.com/ in the run's own tab and read the account shown. It must be studiosocialmedia123@gmail.com;
   any other account (or none) means the wrong Chrome profile: stop every browser step, touch nothing, and tell Charlie in
@@ -121,3 +131,6 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 - 22 October 20:40 UK: identity guard added (pipeline/identity.py, audit.yml every 6 hours, a gate step in every posting workflow, the
   Chrome-profile check above); the campaign-site sign-ins moved out of the clips workflow into tokens/ (logins.yml) after GitHub held
   every clips run that read the cookie secrets.
+- 22 October 21:00 UK: Vyro rejects the saved session on GitHub (the vyro_sid cookie is dropped on arrival); Content Rewards works. Vyro
+  submissions are now a standing job of this run (above) with Vyro clips public at 19:00 UK; GitHub leaves Vyro rows alone. Three
+  Content Rewards rows of 21 October had been marked "already" by mistake (the dialog's standing label); corrected, the reading fixed.

@@ -522,6 +522,9 @@ def run(dry=False):
     done, stale, by_site = 0, set(), {"Content Rewards": [], "Vyro": []}
     for r in todo: by_site.setdefault(site_of(C.CFG["campaigns"].get(r["campaign"]) or {}), []).append(r)
     by_site = {s: sorted(rs, key=lambda r: r.get("public_at_uk", "")) for s, rs in by_site.items() if rs}
+    by_mac = {s: rs for s, rs in by_site.items() if (C.CFG.get("submit_by") or {}).get(s) == "mac"}
+    for s, rs in by_mac.items(): log(f"submit: {s}: {len(rs)} row(s) left for the Mac Chrome run (submit_by mac)")
+    by_site = {s: rs for s, rs in by_site.items() if s not in by_mac}
     with sync_playwright() as play:
         for site, rs in by_site.items():
             try: b, ctx = context(play, site)

@@ -47,7 +47,11 @@
     "within_minutes": 30,
     "where": "the campaign page, Submit clip"
    },
-   "budget_left": 1728
+   "budget_left": 1728,
+   "channels": [
+    "clips",
+    "irl"
+   ]
   },
   "forgegui-roblox": {
    "name": "ForgeGUI Clipping [Roblox] (BloxClips)",
@@ -94,7 +98,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-11-06"
+   "ends": "2026-11-06",
+   "channels": [
+    "clips",
+    "irl"
+   ]
   },
   "tdr-stinkyasher": {
    "platform": "Vyro",
@@ -133,7 +141,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-11-02"
+   "ends": "2026-11-02",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "tdr-mitch": {
    "platform": "Vyro",
@@ -172,7 +184,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-11-02"
+   "ends": "2026-11-02",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "tdr-flamingo": {
    "platform": "Vyro",
@@ -211,7 +227,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-11-02"
+   "ends": "2026-11-02",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "tdr-jenny": {
    "platform": "Vyro",
@@ -250,7 +270,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-10-29"
+   "ends": "2026-10-29",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "valorant-microdrama": {
    "platform": "Vyro",
@@ -292,7 +316,11 @@
     "series": "Each episode in order as Part 1, Part 2, Part 3 (whole episodes, nothing left out, nothing reordered)."
    },
    "ends": "2026-11-02",
-   "per_day_note": "per_day counts whole episodes for a series campaign (each is 2 or 3 parts)"
+   "per_day_note": "per_day counts whole episodes for a series campaign (each is 2 or 3 parts)",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "valorant-champs": {
    "platform": "Vyro",
@@ -330,7 +358,11 @@
     "max_s": 55,
     "language": "English"
    },
-   "ends": "2026-10-30"
+   "ends": "2026-10-30",
+   "channels": [
+    "clips",
+    "gaming"
+   ]
   },
   "sega-metaphor": {
    "name": "SEGA Metaphor: ReFantazio Switch 2 Demo Clipping (Clipping Culture)",
@@ -446,5 +478,5 @@
  "tiktok": false,
  "tiktok_mode": "direct",
  "social_note": "Every public clip is also posted as an Instagram Reel (IG_CLIPS_TOKEN, IG_CLIPS_USER_ID), a Facebook Reel (FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID) and, when tiktok is true, on TikTok (tokens/tiktok_clips.enc), at the batch time, at most social_per_day a platform a day; each post gets its own row on the submit page because campaigns pay per platform. batch_times can give a platform its own time, e.g. {\"Vyro\": \"22:00\"}.",
- "channels_note": "A campaign may name its YouTube channel (\"channel\": \"clips\" by default): tokens/youtube_<channel>.enc from the social workflow. More channels keep each on its niche for the audience checks."
+ "channels_note": "Every active campaign lists its YouTube channels (\"channels\"): clips (the first channel, everything), gaming (Roblox, VALORANT, Call of Duty footage) and irl (creators and challenges: IShowSpeed, MrBeast). Each channel gets different moments of the same footage, its own daily number and ceiling (clips/state/ceiling_<name>.json), its own sign-in (tokens/youtube_<name>.enc from the social workflow) and its own IG_<NAME>_* and FB_<NAME>_* secrets. A channel without a sign-in is skipped until it has one. All channels live under the studio Google account."
 }

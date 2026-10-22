@@ -404,10 +404,35 @@ def heat(subject):
     return round(score, 2), why
 
 
+def radar():
+    """The viral streamers right now: every name in clips/streamers.json scored by heat(), written to status/streamers.md
+    with whether we clip them already and where their programme lives. The hottest unjoined ones become Chrome jobs."""
+    try: data = json.loads((ROOT / "clips" / "streamers.json").read_text())
+    except Exception as e: log(f"radar: {e}"); return []
+    rows = []
+    for st in data.get("streamers") or []:
+        h, why = heat(st.get("wikipedia") or st.get("name"))
+        rows.append({**st, "heat": h, "heat_why": why})
+    rows.sort(key=lambda r: -r["heat"])
+    L = [f"# Viral streamers right now ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "",
+         "Heat: Wikipedia page views over 7 days, Google Trends today, YouTube charts, our viewers' searches. Joined: the campaigns we already clip.", "",
+         "| Heat | Streamer | Why | Programme | Joined | Off limits |", "|---|---|---|---|---|---|"]
+    for r in rows:
+        L.append(f"| {r['heat']} | {r['name']} | {'; '.join(r.get('heat_why') or [])[:90]} | {r.get('programme') or ''} | {', '.join(r.get('campaigns') or [])} | {r.get('off') or ''} |")
+    hot = [r for r in rows if not r.get("off") and not r.get("campaigns") and r["heat"] >= 0.8][:6]
+    if hot:
+        L += ["", "## Programmes to join next (hot, not clipped yet)"] + [f"- {r['name']} (heat {r['heat']}): {r.get('programme') or 'find the official programme'}" for r in hot]
+    (ROOT / "status" / "streamers.md").write_text("\n".join(L) + "\n")
+    log(f"radar: {len(rows)} streamers scored, hottest: " + ", ".join(f"{r['name']} {r['heat']}" for r in rows[:5]))
+    return rows
+
+
 def scout(limit=40):
     """Reads the Content Rewards discover pages (and Vyro's campaign list) with the saved logins, judges every campaign
     page with the model, and writes status/scout.md (a ranked shortlist with reasons) and clips/scout.json."""
     import clips as C, factpack
+    try: radar()
+    except Exception as e: log(f"radar: {type(e).__name__}: {str(e)[:120]}")
     known = {str(c.get("url", "")).rstrip("/").split("/")[-1] for c in C.CFG["campaigns"].values()}
     from playwright.sync_api import sync_playwright
     found, rows = {}, []

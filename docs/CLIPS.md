@@ -171,3 +171,24 @@ forbids it for that creator's content.
   YouTube search suggestions; status/scout.md shows the heat and why.
 - The planner reads the subject's live YouTube search suggestions (clips.searches) and prefers the moments those
   searches want, using their words in hooks and titles.
+
+## 22 October, 19:00 UK: the Mac worker, the streamer radar, channels per niche
+- Charlie: "set it up so that you can run within Chrome and do different things on different websites". The cloud
+  sessions have no browser; the scheduled task "Quickplay: Chrome jobs (on the Mac)" runs on his Mac with Claude in
+  Chrome every day at 19:07 UK and whenever a cloud session fires it: it works through docs/CHROME_JOBS.md (cookies,
+  joins, account keys, new channels) and asks him only for passwords, codes and accounts he must create. One approval
+  from him binds it to the Mac ("Require this computer").
+- The streamer radar: clips/streamers.json (the viral streamers and creators, with their programme and any reason they
+  are off limits) is scored by heat() in every scout run and written to status/streamers.md with "Programmes to join
+  next"; the scout runs on GitHub every morning at 09:35 UK, so the evening's Chrome jobs always have a fresh list.
+- More YouTube channels for more niches: each campaign names its channel ("channel", default "clips"); each channel
+  has its own learned ceiling (clips/state/ceiling_<name>.json), its own daily number and shares (allocate per
+  channel), its own sign-in (tokens/youtube_<name>.enc) and its own Instagram and Facebook secrets
+  (IG_<NAME>_*, FB_<NAME>_*, read from the workflow's secrets without a workflow edit). Adding a channel is a Chrome job.
+- Charlie: every YouTube channel under the studio Google account, each signed up to every campaign, each with automatic
+  clips and submissions. Done in the code: a campaign lists its channels ("channels": clips, gaming, irl), each channel
+  gets different moments of the same footage (a moment carries its channel), its own number, ceiling, sign-in
+  (tokens/youtube_<name>.enc; the sign-in recognises the channel by its title: Gaming, IRL, Clips), social accounts and
+  submit rows (a "channel" column). Channels without a sign-in are skipped. One Content Rewards account and one Vyro
+  account hold all the channels as connected accounts (a second clipper account would count as linked accounts and be
+  banned). Creating the channels is Charlie's (a Chrome job asks him); signing them in and connecting them is the worker's.

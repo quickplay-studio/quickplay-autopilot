@@ -1,0 +1,165 @@
+{
+ "note": "The viral streamers and creators the clips channel watches (Charlie, 22 October). The scout scores each one's heat every run (Wikipedia page views, Google Trends, YouTube charts, our viewers' searches) and lists the hottest with whether we clip them; the Chrome jobs task joins the official programme of each hot one that allows YouTube Shorts and brand-safe footage. wikipedia: the English article title. programme: where the official clipping programme lives, or empty; off: why we never clip them.",
+ "streamers": [
+  {
+   "name": "IShowSpeed",
+   "wikipedia": "IShowSpeed",
+   "programme": "Content Rewards (Reach) campaigns",
+   "campaigns": [
+    "speed-expedia"
+   ]
+  },
+  {
+   "name": "Kai Cenat",
+   "wikipedia": "Kai Cenat",
+   "programme": "Discord clipper network (invite)"
+  },
+  {
+   "name": "N3on",
+   "wikipedia": "N3on",
+   "programme": "Discord, announced on stream ($0.40 to $0.50 per 1,000)"
+  },
+  {
+   "name": "MrBeast",
+   "wikipedia": "MrBeast",
+   "programme": "Vyro campaigns",
+   "campaigns": [
+    "mrbeast-cod"
+   ]
+  },
+  {
+   "name": "xQc",
+   "wikipedia": "XQc",
+   "programme": "Discord fan-page network"
+  },
+  {
+   "name": "Jynxzi",
+   "wikipedia": "Jynxzi",
+   "programme": "Discord"
+  },
+  {
+   "name": "Clix",
+   "wikipedia": "Clix (gamer)",
+   "programme": "Discord"
+  },
+  {
+   "name": "Adin Ross",
+   "wikipedia": "Adin Ross",
+   "programme": "Discord (invited after posting)"
+  },
+  {
+   "name": "Sketch",
+   "wikipedia": "Sketch (streamer)",
+   "programme": ""
+  },
+  {
+   "name": "Ludwig",
+   "wikipedia": "Ludwig Ahgren",
+   "programme": ""
+  },
+  {
+   "name": "Asmongold",
+   "wikipedia": "Asmongold",
+   "programme": "Discord clipper server"
+  },
+  {
+   "name": "Fanum",
+   "wikipedia": "Fanum",
+   "programme": ""
+  },
+  {
+   "name": "Duke Dennis",
+   "wikipedia": "Duke Dennis",
+   "programme": ""
+  },
+  {
+   "name": "Agent 00",
+   "wikipedia": "Agent 00",
+   "programme": ""
+  },
+  {
+   "name": "CaseOh",
+   "wikipedia": "CaseOh",
+   "programme": ""
+  },
+  {
+   "name": "Pokimane",
+   "wikipedia": "Pokimane",
+   "programme": ""
+  },
+  {
+   "name": "Valkyrae",
+   "wikipedia": "Valkyrae",
+   "programme": ""
+  },
+  {
+   "name": "Ninja",
+   "wikipedia": "Ninja (gamer)",
+   "programme": ""
+  },
+  {
+   "name": "TimTheTatman",
+   "wikipedia": "TimTheTatman",
+   "programme": ""
+  },
+  {
+   "name": "KSI",
+   "wikipedia": "KSI",
+   "programme": ""
+  },
+  {
+   "name": "Sidemen",
+   "wikipedia": "Sidemen",
+   "programme": ""
+  },
+  {
+   "name": "Ryan Trahan",
+   "wikipedia": "Ryan Trahan",
+   "programme": ""
+  },
+  {
+   "name": "Marques Brownlee",
+   "wikipedia": "Marques Brownlee",
+   "programme": ""
+  },
+  {
+   "name": "Dude Perfect",
+   "wikipedia": "Dude Perfect",
+   "programme": ""
+  },
+  {
+   "name": "Flamingo",
+   "wikipedia": "Flamingo (YouTuber)",
+   "programme": "Vyro (Total Drama Roblox)",
+   "campaigns": [
+    "tdr-flamingo"
+   ]
+  },
+  {
+   "name": "Jenny Hoyos",
+   "wikipedia": "Jenny Hoyos",
+   "programme": "Vyro (Total Drama Roblox)",
+   "campaigns": [
+    "tdr-jenny"
+   ]
+  },
+  {
+   "name": "HasanAbi",
+   "wikipedia": "Hasan Piker",
+   "programme": "",
+   "off": "politics"
+  },
+  {
+   "name": "Amouranth",
+   "wikipedia": "Amouranth",
+   "programme": "",
+   "off": "adult content"
+  },
+  {
+   "name": "Andrew Tate",
+   "wikipedia": "Andrew Tate",
+   "programme": "",
+   "off": "not family friendly"
+  }
+ ]
+}

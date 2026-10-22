@@ -11,6 +11,7 @@ on:
     - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
     - cron: '1 17,18,21,22 * * *'   # the batch times (18:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts, comments, submissions
     - cron: '30 22 * * *'      # views per clip for the learning data
+    - cron: '35 8 * * *'       # 09:35 UK: the scout (campaigns ranked by money and heat, the viral streamers), for the evening's Chrome jobs
   push:
     branches: [main]
     paths: ['requests/clips*']
@@ -59,6 +60,7 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
           VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
+          ALL_SECRETS: ${{ toJSON(secrets) }}      # IG_<CHANNEL>_* and FB_<CHANNEL>_* for every clips channel (clips.py reads only those)
           CLIPS_WORK: /mnt/clips
           IN_COUNT: ${{ inputs.count }}
           IN_MODE: ${{ inputs.mode }}
@@ -70,7 +72,7 @@ jobs:
           set -o pipefail
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
-          elif echo "$req" | grep -qi scout; then
+          elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qi scout; then
             python pipeline/submit.py scout 2>&1 | tee status/clips_log.txt
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
@@ -93,7 +95,7 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           mkdir -p clips/plans status/quota
-          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt clips/scout.json; do git add $f 2>/dev/null || true; done
+          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

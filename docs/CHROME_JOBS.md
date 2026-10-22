@@ -43,6 +43,18 @@ for the Page, read its Page ID and the Instagram Business account ID, and add th
 IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN and FB_CLIPS_PAGE_ID. Connect the Instagram account on
 https://contentrewards.com/c/settings and https://app.vyro.com/settings.
 
+### open: Two more YouTube channels for the niches (22 October)
+Charlie creates them himself under the studio Google account (https://www.youtube.com/channel_switcher, Create a channel):
+"Quickplay Gaming Clips" (the word Gaming in the title) and "Quickplay IRL Clips" (the word IRL in the title); then
+https://www.youtube.com/features on each for the phone verification. Ask him for that, wait. Then for each new channel:
+open the sign-in link in status/youtube_connect_clips.json (connect_url) while using that channel, copy the code from
+the address bar, run the social workflow (https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml,
+Run workflow) with the code and the channel name (gaming or irl); check tokens/youtube_gaming.enc and
+tokens/youtube_irl.enc appear. Connect both channels as accounts on https://contentrewards.com/c/settings and
+https://app.vyro.com/settings (one Content Rewards account and one Vyro account hold every channel: never a second clipper
+account, the platforms ban linked accounts). The campaigns already list their channels in clips/campaigns.json
+("channels"); the next 13:00 UK run fills each channel with different moments of the same footage.
+
 ### open: Two more free model keys (22 October)
 With the studio account make free API keys at https://cloud.cerebras.ai/ and https://console.mistral.ai/api-keys and add
 the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
@@ -50,7 +62,15 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 ## Standing jobs (every run)
 - If a GitHub issue titled "Clips: the Content Rewards login has expired" or "... the Vyro login has expired" is open,
   export that site's cookies again into its secret and close the issue.
-- If status/scout.md is older than 7 days, run "scout" again and join the new yes rows as above.
+- status/scout.md is refreshed by GitHub every morning (09:35 UK): join any new yes row as above, and add it to
+  clips/campaigns.json. If the file is older than 2 days, run "scout" yourself first.
+- status/streamers.md lists the viral streamers right now and "Programmes to join next": for each one, find the official
+  clipping programme (Content Rewards, Vyro, the streamer's Discord), join it if YouTube Shorts counts and the footage is
+  family friendly, and add it to clips/campaigns.json; note in clips/streamers.json "programme" what you found.
+- A new YouTube channel for a niche (Charlie creates it under the studio Google account): sign it in with the social
+  workflow's connect link (status/youtube_connect.json, channel name e.g. "gaming"), set "channel": "<name>" on its
+  campaigns in clips/campaigns.json, and when he has made its Instagram and Facebook Page add the secrets
+  IG_<NAME>_TOKEN, IG_<NAME>_USER_ID, FB_<NAME>_PAGE_TOKEN, FB_<NAME>_PAGE_ID (upper case name).
 - Finish by appending one dated line per job to the end of this file's log below, committing and pushing.
 
 ## Log

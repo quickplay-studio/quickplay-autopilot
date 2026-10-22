@@ -20,6 +20,10 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 UK = ZoneInfo("Europe/London")
 NOW = dt.datetime.now(dt.timezone.utc)
 CFG = json.loads((ROOT / "clips" / "campaigns.json").read_text())
+try:        # the workflow passes every secret as JSON so a new channel's IG_<CHANNEL>_* and FB_<CHANNEL>_* need no workflow edit
+    for _k, _v in (json.loads(os.environ.get("ALL_SECRETS") or "{}") or {}).items():
+        if _k.startswith(("IG_", "FB_")) and _k not in os.environ and isinstance(_v, str): os.environ[_k] = _v
+except Exception: pass
 PLANS, OUT, STATE = ROOT / "clips" / "plans", ROOT / "clips" / "out", ROOT / "clips" / "state"
 WORK = pathlib.Path(os.environ.get("CLIPS_WORK") or ("/mnt/clips" if os.access("/mnt", os.W_OK) else "/tmp/clips"))
 RELEASE = "clips-src"
@@ -643,7 +647,9 @@ def frame_of(out, m):
     return f
 
 
-def make(cid, count=None):
+def make(cid, count=None, channel=None):
+    """Makes up to `count` clips of the campaign's next moments (the day's share), marking each with the channel it is
+    for (the campaign's first channel when none is given)."""
     c = campaigns([cid])[cid]
     plan_p = PLANS / f"{cid}.json"
     plan_ = json.loads(plan_p.read_text()) if plan_p.exists() else {"moments": []}
@@ -665,8 +671,8 @@ def make(cid, count=None):
             f = frame_of(out, m)
             if dark(f):             # a black screen (an outage, a loading screen): not a clip
                 m["skipped"] = "dark picture"; out.unlink(missing_ok=True); log(f"{m['id']}: skipped: dark picture"); continue
-            m["made"] = NOW.isoformat(timespec="minutes"); m["file"] = out.name; made.append(m)
-            log(f"{m['id']}: made ({m['end'] - m['start']:.0f} s) {m['title']}")
+            m["made"] = NOW.isoformat(timespec="minutes"); m["file"] = out.name; m["channel"] = channel or channel_of(cid); made.append(m)
+            log(f"{m['id']}: made ({m['end'] - m['start']:.0f} s) {m['title']}" + (f" [{m['channel']}]" if m["channel"] != "clips" else ""))
         except Exception as e:
             m["skipped"] = f"{type(e).__name__}: {e}"[:200]; log(f"{m['id']}: skipped: {m['skipped']}")
     plan_p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -675,9 +681,24 @@ def make(cid, count=None):
 
 # ----- uploading ------------------------------------------------------------------------------------------------------------
 def channel_of(cid):
-    """Which YouTube channel a campaign posts on (campaigns.json "channel", default clips): its sign-in is
-    tokens/youtube_<channel>.enc, made with the social workflow. More channels keep each one on its niche."""
-    return str((CFG["campaigns"].get(cid) or {}).get("channel") or "clips")
+    """A campaign's first YouTube channel (campaigns.json "channel", or the first of "channels", default clips): its
+    sign-in is tokens/youtube_<channel>.enc, made with the social workflow."""
+    c = CFG["campaigns"].get(cid) or {}
+    chans = c.get("channels") or []
+    return str(chans[0] if chans else c.get("channel") or "clips")
+
+
+def campaign_channels(cid):
+    """Every channel a campaign posts on (Charlie, 22 October: each channel signed up to every campaign). With several,
+    each channel gets different moments of the same footage: a moment is made once and carries its "channel"."""
+    c = CFG["campaigns"].get(cid) or {}
+    chans = [str(x) for x in (c.get("channels") or []) if x]
+    return list(dict.fromkeys(chans or [channel_of(cid)]))
+
+
+def mchannel(cid, m):
+    """The channel a moment posts on: its own mark, else the campaign's first channel."""
+    return str((m or {}).get("channel") or channel_of(cid))
 
 
 def clips_client(channel="clips"):
@@ -713,7 +734,7 @@ def upload(cid, mode=None):
     plan_ = json.loads(plan_p.read_text())
     todo = [m for m in plan_["moments"] if m.get("made") and not m.get("video") and (OUT / m.get("file", "")).exists()]
     if not todo: log(f"{cid}: nothing to upload"); return []
-    yt = clips_client(channel_of(cid))
+    clients, refused = {}, set()
     mode = mode or os.environ.get("CLIPS_MODE", "").strip() or "batch"
     publish_at, when = (None, None) if mode == "private" else batch_time(c.get("platform"))
     rows, p = [], ROOT / "clips" / "submit.csv"
@@ -728,11 +749,14 @@ def upload(cid, mode=None):
         tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
         desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
                 f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}).")
+        ch = mchannel(cid, m)
+        if ch in refused: continue
         try:
-            vid = Y.upload(yt, OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
+            if ch not in clients: clients[ch] = clips_client(ch)
+            vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
         except Exception as e:
-            log(f"{m['id']}: upload failed: {type(e).__name__}: {str(e)[:200]}")
-            if "uploadLimitExceeded" in str(e): ceiling_learn(scheduled_today(), refused=True); break
+            log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
+            if "uploadLimitExceeded" in str(e): ceiling_learn(scheduled_today(ch), refused=True, channel=ch); refused.add(ch)
             continue
         m.update(video=vid, url=f"https://youtube.com/shorts/{vid}", uploaded=NOW.isoformat(timespec="minutes"),
                  publish_at=publish_at or "private", mode=mode)
@@ -746,13 +770,14 @@ def upload(cid, mode=None):
 
 OUTREL = "clips-out"
 REPO = os.environ.get("GITHUB_REPOSITORY", "quickplay-studio/quickplay-autopilot")
-SUBMIT_FIELDS = ["clip", "campaign", "campaign_url", "platform", "video", "public_at_uk", "title", "hashtags", "submitted"]
+SUBMIT_FIELDS = ["clip", "campaign", "campaign_url", "platform", "video", "public_at_uk", "title", "hashtags", "submitted", "channel"]
 
 
 def submit_row(cid, c, m, platform, link, when):
     where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))
     return {"clip": m["id"], "campaign": cid, "campaign_url": where.group(0) if where else c["url"], "platform": platform, "video": link,
-            "public_at_uk": when, "title": m["title"], "hashtags": " ".join((c.get("rules") or {}).get("hashtags") or []), "submitted": ""}
+            "public_at_uk": when, "title": m["title"], "hashtags": " ".join((c.get("rules") or {}).get("hashtags") or []), "submitted": "",
+            "channel": mchannel(cid, m)}
 
 
 def add_rows(rows):
@@ -783,13 +808,21 @@ def social_posts(force=False):
     windows = {str(CFG.get("batch_time", "18:00"))} | set((CFG.get("batch_times") or {}).values())
     inside = any(0 <= (uk - uk.replace(hour=int(t.split(":")[0]), minute=int(t.split(":")[1]), second=0, microsecond=0)).total_seconds() <= 25 * 60 for t in windows)
     if not inside and not force: log("social: not a batch time"); return 0
-    ig = {"token": os.environ.get("IG_CLIPS_TOKEN", "").strip(), "user": os.environ.get("IG_CLIPS_USER_ID", "").strip()}
-    fb = None
-    if os.environ.get("FB_CLIPS_PAGE_TOKEN", "").strip() and os.environ.get("FB_CLIPS_PAGE_ID", "").strip():
-        os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ["FB_CLIPS_PAGE_TOKEN"], os.environ["FB_CLIPS_PAGE_ID"]
-        S._FB.clear(); fb = S.fb_tokens()
-    tt = S.load("tiktok_clips") if os.environ.get("SOCIAL_KEY") else {}
-    if not (ig["token"] and ig["user"]) and not fb and not tt.get("access_token"):
+    def accounts(channel):
+        """The channel's Instagram, Facebook and TikTok sign-ins: IG_<CHANNEL>_TOKEN, IG_<CHANNEL>_USER_ID,
+        FB_<CHANNEL>_PAGE_TOKEN, FB_<CHANNEL>_PAGE_ID (CLIPS for the first channel) and tokens/tiktok_<channel>.enc."""
+        up = channel.upper()
+        ig = {"token": os.environ.get(f"IG_{up}_TOKEN", "").strip(), "user": os.environ.get(f"IG_{up}_USER_ID", "").strip()}
+        fb = None
+        if os.environ.get(f"FB_{up}_PAGE_TOKEN", "").strip() and os.environ.get(f"FB_{up}_PAGE_ID", "").strip():
+            os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ[f"FB_{up}_PAGE_TOKEN"], os.environ[f"FB_{up}_PAGE_ID"]
+            S._FB.clear()
+            try: fb = S.fb_tokens()
+            except Exception as e: log(f"social: Facebook ({channel}): {str(e)[:100]}")
+        tt = S.load(f"tiktok_{channel}") if os.environ.get("SOCIAL_KEY") else {}
+        return ig, fb, tt
+    have = {ch: accounts(ch) for ch in channels()}
+    if not any((ig["token"] and ig["user"]) or fb or tt.get("access_token") for ig, fb, tt in have.values()):
         log("social: no Instagram, Facebook or TikTok account for the clips channel yet"); return 0
     cap, posted, rows = int(CFG.get("social_per_day", 6)), {"instagram": 0, "facebook": 0, "tiktok": 0}, []
     today = str(uk.date())
@@ -800,6 +833,9 @@ def social_posts(force=False):
         plan_ = json.loads(p.read_text()); changed = False
         for m in plan_.get("moments") or []:
             if not m.get("video") or m.get("pulled") or not m.get("asset_url") or m.get("publish_at") in (None, "private"): continue
+            ch = mchannel(cid, m)
+            ig, fb, tt = have.get(ch) or ({"token": "", "user": ""}, None, {})
+            if fb: os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ[f"FB_{ch.upper()}_PAGE_TOKEN"], os.environ[f"FB_{ch.upper()}_PAGE_ID"]; S._FB.clear()
             try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
             except ValueError: continue
             if due > NOW + dt.timedelta(minutes=3) or (NOW - due) > dt.timedelta(hours=36): continue
@@ -888,7 +924,7 @@ def engage():
             for key, text in texts:
                 if not quota.allow(50, "clip comment"): log("engage: no allowance left today"); return done
                 try:
-                    r = clips_client(channel_of(cid)).commentThreads().insert(part="snippet", body={"snippet": {"videoId": m["video"], "topLevelComment": {
+                    r = clips_client(mchannel(cid, m)).commentThreads().insert(part="snippet", body={"snippet": {"videoId": m["video"], "topLevelComment": {
                         "snippet": {"textOriginal": text[:900]}}}}).execute()
                     m[key] = r["id"]; quota.spend(50, "clip comment"); changed = True; done += 1
                 except Exception as e:
@@ -932,7 +968,7 @@ def stats():
     if not vids: return
     rows = []
     by_channel = {}
-    for v, (cid, m) in vids.items(): by_channel.setdefault(channel_of(cid), []).append(v)
+    for v, (cid, m) in vids.items(): by_channel.setdefault(mchannel(cid, m), []).append(v)
     for channel, ids in by_channel.items():
         yt = clips_client(channel)
         for i in range(0, len(ids), 50):
@@ -997,19 +1033,37 @@ def probe(url):
 CEILING = STATE / "ceiling.json"
 
 
-def daily_limit():
-    """Clips a day: the learned ceiling (clips/state/ceiling.json) when there is one, else campaigns.json daily_clips."""
+def ceiling_file(channel="clips"):
+    """Each YouTube channel learns its own ceiling: clips/state/ceiling.json for the first channel, ceiling_<channel>.json
+    for the others (Charlie, 22 October: more channels for more niches)."""
+    return CEILING if channel == "clips" else STATE / f"ceiling_{channel}.json"
+
+
+def channels():
+    """The YouTube channels the active campaigns post on, with their campaign ids."""
+    out, missing = {}, set()
+    for cid in campaigns():
+        for ch in campaign_channels(cid):
+            if not (ROOT / "tokens" / f"youtube_{ch}.enc").exists(): missing.add(ch); continue     # not signed in yet: nothing is made for it
+            out.setdefault(ch, []).append(cid)
+    for ch in sorted(missing): log(f"channel {ch}: not signed in yet (tokens/youtube_{ch}.enc), skipped")
+    return out
+
+
+def daily_limit(channel="clips"):
+    """Clips a day on a channel: its learned ceiling when there is one, else campaigns.json daily_clips."""
     base = int(CFG.get("daily_clips", 10))
-    try: return max(1, int(json.loads(CEILING.read_text()).get("limit") or base))
+    try: return max(1, int(json.loads(ceiling_file(channel).read_text()).get("limit") or base))
     except Exception: return base
 
 
-def ceiling_learn(scheduled, refused=False):
+def ceiling_learn(scheduled, refused=False, channel="clips"):
     """Like the main channel's quota.learn: a refusal (uploadLimitExceeded) settles the ceiling at what YouTube took;
     a filled day with no refusal in 48 hours and no rise in 24 hours lifts it by clips_limit_step, up to clips_limit_max."""
+    CEILING = ceiling_file(channel)
     try: st = json.loads(CEILING.read_text())
     except Exception: st = {}
-    limit, now = daily_limit(), NOW.isoformat(timespec="minutes")
+    limit, now = daily_limit(channel), NOW.isoformat(timespec="minutes")
     def age(k):
         try: return (NOW - dt.datetime.fromisoformat(st[k])).total_seconds() / 3600
         except (KeyError, ValueError, TypeError): return 1e9
@@ -1017,12 +1071,12 @@ def ceiling_learn(scheduled, refused=False):
     if refused:
         new = max(int(CFG.get("clips_limit_min", 4)), int(scheduled))
         st.update(limit=new, refused_at=now, refused_with=int(scheduled)); CEILING.write_text(json.dumps(st, indent=1))
-        log(f"ceiling: YouTube refused an upload with {scheduled} today, the clips channel's limit is now {new}"); return new
+        log(f"ceiling: YouTube refused an upload with {scheduled} today, the {channel} channel's limit is now {new}"); return new
     top, step = int(CFG.get("clips_limit_max", 30)), int(CFG.get("clips_limit_step", 2))
     if limit >= top or age("refused_at") < 48 or age("raised_at") < 24 or int(scheduled) < limit: return limit
     new = min(top, limit + step)
     st.update(limit=new, raised_at=now, raised_with=int(scheduled)); CEILING.write_text(json.dumps(st, indent=1))
-    log(f"ceiling: a full day with no refusal, the clips channel's limit rises {limit} to {new}"); return new
+    log(f"ceiling: a full day with no refusal, the {channel} channel's limit rises {limit} to {new}"); return new
 
 
 def median_views(cid):
@@ -1035,12 +1089,13 @@ def median_views(cid):
     vals.sort(); return vals[len(vals) // 2]
 
 
-def allocate(remaining, count=None):
+def allocate(remaining, count=None, channel=None):
     """How many clips each active campaign gets today: the day's remaining number shared by expected money (pay per
     1,000 times the campaign's median views, a 1,000-view prior until it has 3 measured clips, with a little noise so
-    every campaign keeps being tried), each capped by its per_day. The data decides, like the main channel."""
+    every campaign keeps being tried), each capped by its per_day. The data decides, like the main channel. With a
+    channel, only that channel's campaigns share the number."""
     import random
-    cs = campaigns()
+    cs = {cid: c for cid, c in campaigns().items() if channel is None or channel in campaign_channels(cid)}
     if not cs or remaining <= 0: return {}
     rng = random.Random(str(NOW.date()))
     score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * rng.uniform(0.8, 1.25) for cid, c in cs.items()}
@@ -1082,7 +1137,7 @@ def review():
                 try:
                     for attempt in range(4):        # YouTube answers 503 now and then
                         try:
-                            clips_client(channel_of(cid)).videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute(); break
+                            clips_client(mchannel(cid, m)).videos().update(part="status", body={"id": m["video"], "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False}}).execute(); break
                         except Exception as e:
                             if attempt == 3 or "503" not in str(e): raise
                             time.sleep(15 * (attempt + 1))
@@ -1104,12 +1159,13 @@ def review():
     return pulled
 
 
-def scheduled_today():
-    """Clips already uploaded for the next batch (so two runs in a day share the daily number)."""
+def scheduled_today(channel=None):
+    """Clips already uploaded for the next batch (so two runs in a day share the daily number), on one channel or all."""
     iso, _ = batch_time(); n = 0
     for p in PLANS.glob("*.json"):
         if p.name.endswith(".words.json"): continue
-        n += sum(1 for m in json.loads(p.read_text()).get("moments") or [] if m.get("publish_at") == iso and not m.get("pulled"))
+        n += sum(1 for m in json.loads(p.read_text()).get("moments") or [] if m.get("publish_at") == iso and not m.get("pulled")
+                 and (channel is None or mchannel(p.stem, m) == channel))
     return n
 
 
@@ -1195,11 +1251,17 @@ def main(argv):
     if cmd == "run":
         try: review()
         except Exception as e: log("review:", str(e)[:200])
-        done_today = scheduled_today()
-        ceiling_learn(done_today)
         private = os.environ.get("CLIPS_MODE", "").strip() == "private"       # a test never counts against the day
-        want = allocate((count or 1) * len(cs) if private else max(0, daily_limit() - done_today), count)
-        log("today's shares:", json.dumps(want))
+        shares = {}                                                            # {channel: {campaign: n}}: each channel has its own number and ceiling
+        for channel, ids_on in channels().items():
+            done_today = scheduled_today(channel)
+            ceiling_learn(done_today, channel=channel)
+            got = allocate((count or 1) * len(ids_on) if private else max(0, daily_limit(channel) - done_today), count, channel)
+            if got: shares[channel] = got
+        want = {}
+        for channel, got in shares.items():
+            for cid, n in got.items(): want[cid] = want.get(cid, 0) + n
+        log("today's shares:", json.dumps(shares if len(shares) > 1 else want))
         if not want: log("the day's number is already scheduled"); return
     for cid in (ids or list(cs)):
         if cid not in cs: log(f"{cid}: not an active campaign"); continue
@@ -1210,7 +1272,10 @@ def main(argv):
             n = want.get(cid, count or cs[cid].get("per_day", 3)) if cmd == "run" else (count or cs[cid].get("per_day", 3))
             planner = plan_parts if (cs[cid].get("rules") or {}).get("series") else plan
             if cmd in ("plan", "prepare") or (cmd == "run" and unmade(cid) < n): planner(cid)
-            if cmd in ("run", "make"): make(cid, n)
+            if cmd == "run":
+                for channel, got in shares.items():                              # the campaign's moments, shared out by channel
+                    if got.get(cid): make(cid, got[cid], channel)
+            elif cmd == "make": make(cid, n)
             if cmd in ("run", "upload"): upload(cid)
         except Exception as e:
             log(f"{cid}: {type(e).__name__}: {str(e)[:300]}")

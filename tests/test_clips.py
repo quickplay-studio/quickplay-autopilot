@@ -76,7 +76,7 @@ else:
 print("clips ok")
 
 # 7. parts planner: whole episodes in order, split at sentence ends, never past max_s
-C.PLANS = pathlib.Path(SCRATCH) / "plans2"; C.PLANS.mkdir()
+C.PLANS = pathlib.Path(SCRATCH) / "plans2"; C.PLANS.mkdir(exist_ok=True)
 ep_words = []
 for i in range(0, 130):      # 130 seconds of speech, a sentence end every 10 s
     ep_words.append({"w": "word" + ("." if i % 10 == 9 else ""), "s": float(i), "e": i + 0.8})
@@ -157,3 +157,20 @@ assert C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m) =
 m = {"id": "speed-expedia-12", "start": 9.0, "end": 18.0, "hook": "x"}
 assert "IShowSpeed" in C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m)
 print("11 comment questions ok")
+
+# 12. several YouTube channels per campaign: each channel has its own number, ceiling and moments
+C.CFG["campaigns"] = json.loads(pathlib.Path(REPO_DIR + "/clips/campaigns.json").read_text())["campaigns"]
+C.CFG["campaigns"]["tdr-mitch"]["channels"] = ["clips", "gaming"]
+assert C.campaign_channels("tdr-mitch") == ["clips", "gaming"] and C.channel_of("tdr-mitch") == "clips" and C.campaign_channels("tdr-jenny") == ["clips"]
+assert C.channels()["gaming"] == ["tdr-mitch"] and "tdr-jenny" in C.channels()["clips"]
+assert C.allocate(5, None, "gaming") == {"tdr-mitch": 5} and sum(C.allocate(12, None, "clips").values()) == 12
+C.PLANS = pathlib.Path(SCRATCH) / "plans2"; C.PLANS.mkdir(exist_ok=True)
+iso, _ = C.batch_time()
+(C.PLANS / "tdr-mitch.json").write_text(json.dumps({"moments": [{"id": "tdr-mitch-01", "publish_at": iso, "channel": "gaming"}, {"id": "tdr-mitch-02", "publish_at": iso},
+                                                                 {"id": "tdr-mitch-03", "publish_at": iso, "channel": "gaming", "pulled": "x"}]}))
+assert C.scheduled_today("gaming") == 1 and C.scheduled_today("clips") == 1 and C.scheduled_today() == 2
+assert C.mchannel("tdr-mitch", {"channel": "gaming"}) == "gaming" and C.mchannel("tdr-mitch", {}) == "clips"
+assert C.ceiling_file("gaming").name == "ceiling_gaming.json" and C.ceiling_file("clips").name == "ceiling.json"
+rw = C.submit_row("tdr-mitch", C.CFG["campaigns"]["tdr-mitch"], {"id": "tdr-mitch-01", "title": "t", "channel": "gaming"}, "youtube", "https://youtube.com/shorts/x", "2026-10-23 18:00")
+assert rw["channel"] == "gaming"
+print("12 channels ok")

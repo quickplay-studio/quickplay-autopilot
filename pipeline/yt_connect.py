@@ -18,6 +18,10 @@ REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callb
 # on the OAuth client (Google Cloud, Clients); the page shows the one-time code to paste into the social workflow
 OUT = ROOT / "status" / "youtube_connect.json"
 MAIN = "UC-75vkMtOxgFFkXwBNfBOeg"     # Quickplay Daily, the original channel
+# The other channels, by the words in their YouTube titles (most specific first): the sign-in is saved under the matching
+# name as tokens/youtube_<name>.enc. New niche channels (Charlie, 22 October) just need a title with their word in it.
+TITLES = {"gaming": ("gaming",), "irl": ("irl", "creators"), "pt": ("portugu",), "clips": ("clips",)}
+CHANNELS = ("main",) + tuple(TITLES)
 
 def now(): return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
@@ -45,7 +49,7 @@ def link():
     url = "https://accounts.google.com/o/oauth2/v2/auth?" + urllib.parse.urlencode(q)
     t = social.load("youtube")
     write({**(connected(t) if t.get("refresh_token") else {"ok": False, "connected": False}), "connect_url": url})
-    for ch in ("clips", "pt"):
+    for ch in [c for c in CHANNELS if c != "main"]:
         out = OUT.with_name(f"youtube_connect_{ch}.json")
         tc = social.load(f"youtube_{ch}")
         if tc.get("refresh_token"): write({**connected(tc), "connect_url": url}, out)
@@ -76,7 +80,7 @@ def exchange(ch="main"):
         tok["channel"] = {"error": str(e)[:150]}
     is_main = tok["channel"].get("id") == MAIN or tok["channel"].get("title") == "Quickplay Daily"
     title = str(tok["channel"].get("title") or "").lower()
-    found = "main" if is_main else "clips" if "clips" in title else "pt" if "portugu" in title else None
+    found = "main" if is_main else next((c for c, words in TITLES.items() if any(w in title for w in words)), None)
     if found and found != ch:         # the sign-in says which channel it is: saved under that name, whatever the dropdown said
         print(f"YouTube sign-in is for the {found} channel ({tok['channel'].get('title')}), not {ch}: saving it as {found}")
         ch = found

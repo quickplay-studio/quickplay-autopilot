@@ -26,7 +26,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - id: plan
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
@@ -61,9 +61,9 @@ jobs:
       - name: Python packages
         if: matrix.job.mode != 'reject'
         run: |
-          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q -r pipeline/requirements.txt
-          pip install -q --no-deps chatterbox-tts==0.1.7
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
           python -m playwright install --with-deps chromium
       - name: Fonts and icons
         if: matrix.job.mode != 'reject'
@@ -99,7 +99,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.*
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.*
       - uses: actions/download-artifact@v4
         with: { pattern: 'result-*', path: results }
       - name: Upload to YouTube

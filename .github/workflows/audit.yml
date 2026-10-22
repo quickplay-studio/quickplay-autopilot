@@ -30,7 +30,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - name: Audit
         env:
           GH_TOKEN: ${{ github.token }}

@@ -20,8 +20,8 @@ jobs:
         with: { python-version: '3.11' }
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: |
-          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q chatterbox-tts==0.1.7
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D chatterbox-tts==0.1.7
       - env: { TQDM_DISABLE: '1' }
         run: python pipeline/voice_samples.py review/voices $(head -1 requests/voices.txt 2>/dev/null || echo "es pt")
       - run: |

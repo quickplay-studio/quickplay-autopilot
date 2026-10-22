@@ -20,7 +20,7 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q requests tzdata trafilatura
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests tzdata trafilatura
       - name: Open model on this runner (llama.cpp)
         env: { GH_TOKEN: '${{ github.token }}' }
         run: bash pipeline/get_llama.sh

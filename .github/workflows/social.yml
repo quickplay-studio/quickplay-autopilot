@@ -39,7 +39,7 @@ jobs:
         run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: pip install -q requests cryptography
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography
       - name: Connect YouTube (comments, playlists, titles)
         # the code comes from the run form, or from requests/social-youtube.txt (pushed for Charlie; deleted straight away)
         if: ${{ (github.event_name == 'workflow_dispatch' && inputs.youtube_code != '') || github.event_name == 'push' }}

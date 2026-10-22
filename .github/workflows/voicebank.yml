@@ -23,8 +23,8 @@ jobs:
         with: { python-version: '3.11' }        # Kokoro needs Python 3.12 or older
       - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
       - run: |
-          pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q kokoro==0.9.4 soundfile
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D kokoro==0.9.4 soundfile
       - run: python pipeline/make_voices.py refs
       - uses: actions/upload-artifact@v4
         with: { name: voice-refs, path: pipeline/voices/, retention-days: 3 }
@@ -42,9 +42,9 @@ jobs:
         with: { python-version: '3.13', cache: pip, cache-dependency-path: pipeline/requirements.txt }
       - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
       - run: |
-          pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
-          pip install -q -r pipeline/requirements.txt
-          pip install -q --no-deps chatterbox-tts==0.1.7
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
       - uses: actions/cache@v4
         with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
       - run: python pipeline/get_model.py models/chatterbox

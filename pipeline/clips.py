@@ -38,6 +38,8 @@ Pick up to {n} moments, best first: the funniest reactions, the biggest reveals,
 across the segment; no two may overlap. Already made (skip anything that overlaps these): {done}.
 The transcript is a list of lines with their start and end seconds:
 {lines}
+Hooks and titles stay family friendly and brand safe: fun, drama, chaos and wins are fine; never trauma, abuse, mental
+illness, self-harm, cruelty, slurs or threats, even as a joke, and never a word the campaign's brand would not want.
 Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line, 8 words or fewer, in capitals OK, what
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
@@ -47,6 +49,8 @@ comments that viewers can answer, under 90 characters, UK English spelling (favo
 def log(*a): print(*a, flush=True)
 
 
+UNSAFE = re.compile(r"\b(trauma\w*|abus\w+|psycholog\w+ (destruction|damage|torture|warfare)|self[ -]harm|suicid\w*|overdos\w*|tortur\w+|"
+                    r"mental(ly)? (ill\w*|breakdown)|rap(e|ed|ist)|molest\w*|nazi\w*|terror\w*)\b", re.I)      # not for a hook or title, even as a joke
 PROFANE = re.compile(r"\b(f+u+c+k+\w*|f\*+\w*|s+h+i+t+\w*|s\*+t\w*|b+i+t+c+h+\w*|a+s+s+h+o+l+e+\w*|d+i+c+k+s?|p+u+s+s+y|wtf|stfu|"
                      r"n+i+g+g+\w*|r+e+t+a+r+d+\w*|w+h+o+r+e+\w*|s+l+u+t+\w*|c+u+n+t+\w*|f+a+g+\w*)\b", re.I)
 
@@ -337,6 +341,7 @@ def plan(cid, n=8):
         hook = re.sub(r"[–—]", "-", str(m.get("hook") or "")).strip()[:60]
         if not hook: why["no hook"] += 1; continue
         if profane(words, a, b) or PROFANE.search(hook): why["profanity"] = why.get("profanity", 0) + 1; continue
+        if UNSAFE.search(hook) or UNSAFE.search(str(m.get("title") or "")): why["not brand safe"] = why.get("not brand safe", 0) + 1; continue
         plan_["moments"].append({"id": f"{cid}-{len(plan_['moments']) + 1:02d}", "start": round(a, 2), "end": round(b, 2),
                                  "hook": hook, "label": str(m.get("label") or "").strip()[:40],
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
@@ -1052,6 +1057,7 @@ def review():
             try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
             except ValueError: continue
             bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
+            if not bad and UNSAFE.search(f"{m.get('hook', '')} {m.get('title', '')}"): bad = ["not brand safe"]
             if not bad and dark(ROOT / "clips" / "frames" / f"{m['id']}.jpg"): bad = ["dark picture"]
             if due > NOW and bad:
                 try:
@@ -1061,7 +1067,7 @@ def review():
                         except Exception as e:
                             if attempt == 3 or "503" not in str(e): raise
                             time.sleep(15 * (attempt + 1))
-                    m["pulled"] = ("dark picture" if bad == ["dark picture"] else f"profanity: {', '.join(bad[:3])}"); changed = True; pulled += 1
+                    m["pulled"] = (bad[0] if bad in (["dark picture"], ["not brand safe"]) else f"profanity: {', '.join(bad[:3])}"); changed = True; pulled += 1
                     log(f"{m['id']}: pulled before publishing ({m['pulled']})")
                 except Exception as e:
                     log(f"{m['id']}: could not pull: {type(e).__name__}: {str(e)[:150]}")

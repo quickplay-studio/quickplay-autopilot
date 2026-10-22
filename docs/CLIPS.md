@@ -153,3 +153,7 @@ forbids it for that creator's content.
   provided, family friendly, open), ranks by rate times budget, writes status/scout.md and clips/scout.json; with
   VYRO_COOKIES it also saves Vyro's campaign list (status/scout_vyro.txt). Charlie joins the shortlist from his Mac;
   joining by GitHub comes after the first shortlist is reviewed.
+- 22 October: the first run with the new arms made 11 clips (short arm, hook-first titles, one full layout, all
+  fine). Two Flamingo hooks ("full psychological destruction", "generations of trauma") were legal but not family
+  friendly: the planner now has a brand-safety rule, UNSAFE drops such hooks and titles at planning, and review() pulls
+  a scheduled clip that carries one ("not brand safe"); a "go" run refilled the day.

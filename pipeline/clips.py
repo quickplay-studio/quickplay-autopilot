@@ -808,16 +808,26 @@ def social_posts(force=False):
     if not inside and not force: log("social: not a batch time"); return 0
     def accounts(channel):
         """The channel's Instagram, Facebook and TikTok sign-ins: IG_<CHANNEL>_TOKEN, IG_<CHANNEL>_USER_ID,
-        FB_<CHANNEL>_PAGE_TOKEN, FB_<CHANNEL>_PAGE_ID (CLIPS for the first channel) and tokens/tiktok_<channel>.enc."""
-        up = channel.upper()
-        ig = {"token": os.environ.get(f"IG_{up}_TOKEN", "").strip(), "user": os.environ.get(f"IG_{up}_USER_ID", "").strip()}
-        fb = None
-        if os.environ.get(f"FB_{up}_PAGE_TOKEN", "").strip() and os.environ.get(f"FB_{up}_PAGE_ID", "").strip():
-            os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ[f"FB_{up}_PAGE_TOKEN"], os.environ[f"FB_{up}_PAGE_ID"]
-            S._FB.clear()
-            try: fb = S.fb_tokens()
-            except Exception as e: log(f"social: Facebook ({channel}): {str(e)[:100]}")
-        tt = S.load(f"tiktok_{channel}") if os.environ.get("SOCIAL_KEY") else {}
+        FB_<CHANNEL>_PAGE_TOKEN, FB_<CHANNEL>_PAGE_ID (CLIPS for the first channel) and tokens/tiktok_<channel>.enc.
+        Charlie (22 October): one Instagram (and TikTok, Facebook) account takes every kind of clip, so a channel without
+        its own sign-in uses the clips channel's; a channel gets its own only when its secrets exist."""
+        def one(ch):
+            up = ch.upper()
+            ig = {"token": os.environ.get(f"IG_{up}_TOKEN", "").strip(), "user": os.environ.get(f"IG_{up}_USER_ID", "").strip()}
+            fb = None
+            if os.environ.get(f"FB_{up}_PAGE_TOKEN", "").strip() and os.environ.get(f"FB_{up}_PAGE_ID", "").strip():
+                os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ[f"FB_{up}_PAGE_TOKEN"], os.environ[f"FB_{up}_PAGE_ID"]
+                S._FB.clear()
+                try: fb = S.fb_tokens()
+                except Exception as e: log(f"social: Facebook ({ch}): {str(e)[:100]}")
+            tt = S.load(f"tiktok_{ch}") if os.environ.get("SOCIAL_KEY") else {}
+            return ig, fb, tt
+        ig, fb, tt = one(channel)
+        if channel != "clips":
+            ig0, fb0, tt0 = one("clips")
+            if not (ig["token"] and ig["user"]): ig = ig0
+            if fb is None: fb = fb0
+            if not tt.get("access_token"): tt = tt0
         return ig, fb, tt
     have = {ch: accounts(ch) for ch in channels()}
     if not any((ig["token"] and ig["user"]) or fb or tt.get("access_token") for ig, fb, tt in have.values()):

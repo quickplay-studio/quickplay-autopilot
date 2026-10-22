@@ -178,3 +178,17 @@ assert C.ceiling_file("gaming").name == "ceiling_gaming.json" and C.ceiling_file
 rw = C.submit_row("tdr-mitch", C.CFG["campaigns"]["tdr-mitch"], {"id": "tdr-mitch-01", "title": "t", "channel": "gaming"}, "youtube", "https://youtube.com/shorts/x", "2026-10-23 18:00")
 assert rw["channel"] == "gaming"
 print("12 channels ok")
+
+# reach_share: a campaign whose minimum our clips rarely reach is weighed down; no minimum counts in full
+import pathlib as _pl, tempfile as _tf
+_r = _pl.Path(_tf.mkdtemp(prefix="qp-test-")); (_r / "clips").mkdir()
+(_r / "clips" / "stats.csv").write_text("clip,campaign,video,privacy,hours_public,views,as_of\n"
+    + "".join(f"c{i},x,v{i},public,30,{v},2026-10-22T10:00\n" for i, v in enumerate([0, 3, 40, 120, 900, 6000]))
+    + "c9,x,v9,public,5,99999,2026-10-22T10:00\n")          # under 24 hours: not counted
+_old = C.ROOT; C.ROOT = _r
+assert C.reach_share(0) == 1.0
+assert abs(C.reach_share(5000) - (1 + 1) / (6 + 4)) < 1e-9, C.reach_share(5000)
+assert C.reach_share(10**9) == 0.1                            # (0 + 1) / (6 + 4)
+C.ROOT = _old
+print("reach share ok")
+

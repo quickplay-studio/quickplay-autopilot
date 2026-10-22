@@ -601,6 +601,26 @@ Return JSON: {{"name": "", "subject": "the creator or brand the clips show", "ty
 fits is true only when: clipping (not UGC you must film), YouTube allowed, footage provided or named, family friendly, status open."""
 
 
+def cr_terms(text):
+    """The money terms Content Rewards prints on a campaign page, read directly rather than by the model (which guessed
+    "no minimum" for everything, 22 October): per platform the rate per 1,000 views, the minimum payout and the cap, plus
+    any per-platform budget line ("YouTube $2,000 / $2,000" means YouTube's share is spent). The minimum views a clip
+    needs is minimum payout / rate x 1,000."""
+    t = re.sub(r"[\u2066-\u2069\u200b-\u200f\u202a-\u202e]", "", text or "")
+    out = {}
+    for plat in ("YouTube", "TikTok", "Instagram"):
+        m = re.search(plat + r"\s+Per 1K views\s+\$([\d.,]+)\s+Min payout\s+\$([\d.,]+)\s+Max payout\s+\$([\d.,]+)", t)
+        if m:
+            rate, minp, cap = (float(x.replace(",", "")) for x in m.groups())
+            out[plat] = {"rate_per_1k": rate, "min_payout": minp, "max_payout": cap,
+                         "min_views": int(round(minp / rate * 1000)) if rate else None}
+        b = re.search(r"(?m)^\s*" + plat + r"\s*\n\s*\$([\d,]+)\s*\n\s*/\s*\n\s*\$([\d,]+)", t)
+        if b:
+            used, total = (float(x.replace(",", "")) for x in b.groups())
+            out.setdefault(plat, {})["budget_left"] = max(0.0, total - used)
+    return out
+
+
 def heat(subject):
     """How hot a subject is right now, 0 to about 3, from free signals: Wikipedia page views of its article over the last
     7 days (Wikimedia REST, no key), its presence in today's Google Trends, Wikipedia top pages and YouTube charts
@@ -699,6 +719,13 @@ def scout(limit=40):
                 if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
                 if not isinstance(ans, dict) or not ans.get("name"): log(f"scout: {url}: no answer"); continue
                 ans.update(url=url, id=cid, platform="Content Rewards", judged=NOW.isoformat(timespec="minutes"), model=model)
+                terms = cr_terms(text); yt = terms.get("YouTube") or {}
+                ans["terms"] = terms
+                if yt.get("rate_per_1k"): ans.update(rate_per_1k=yt["rate_per_1k"], min_views=yt.get("min_views"), max_payout=yt.get("max_payout"))
+                if terms and not yt.get("rate_per_1k"):
+                    ans["fits"] = False; ans["why"] = "YouTube Shorts are not paid on this campaign. " + str(ans.get("why") or "")
+                if yt.get("budget_left") == 0:
+                    ans["fits"] = False; ans["why"] = "Its YouTube budget is spent. " + str(ans.get("why") or "")
                 ans["heat"], ans["heat_why"] = heat(str(ans.get("subject") or ""))
                 rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}, heat {ans['heat']}: {str(ans.get('why'))[:90]}")
             except Exception as e: log(f"scout: {url}: {type(e).__name__}: {str(e)[:120]}")
@@ -720,6 +747,7 @@ def scout(limit=40):
     (ROOT / "clips" / "scout.json").write_text(json.dumps({"updated": NOW.isoformat(timespec="minutes"), "campaigns": rows}, indent=1, ensure_ascii=False))
     L = [f"# Campaigns worth joining ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "",
          "Ranked by rate times budget times how hot the subject is right now (Wikipedia views, Google Trends, YouTube charts, our viewers' searches).", "",
+         "Rate and minimum views are YouTube's, read from the page (minimum payout / rate). Footage and briefs are only visible after joining: the Mac run joins, reads the brief, and keeps a campaign only when it supplies footage and needs no manual proof per clip.", "",
          "| Fits | Campaign | Rate | Budget left | Min views | Heat | Footage | Why |", "|---|---|---|---|---|---|---|---|"]
     for r in rows:
         L.append(f"| {'yes' if r.get('fits') else 'no'} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | "

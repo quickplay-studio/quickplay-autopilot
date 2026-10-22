@@ -121,6 +121,14 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   game footage, irl for creators and challenges, always clips); commit and push. Skip anything political, adult, gambling,
   supplements or health claims, "edgy" or "unfiltered" shows, and anything without provided footage. GitHub switches a
   campaign off itself when it ends or its budget runs out, and shares the day's clips among the rest.
+  Prefer low minimums (Charlie, 22 October: a clip under the minimum earns nothing; the planner already weighs how often
+  our clips reach each minimum): status/scout.md now shows YouTube's minimum views read from the page. After joining,
+  open the brief (the campaign's Google Doc or reference file) and add the campaign only when ALL hold: it supplies
+  footage or names exact videos to clip; it does not ask for original commentary, drama or "bold claims" (Pet Simulator
+  99, 22 October); it needs no proof per clip (a support ticket, analytics screenshots or screen recordings: CLASH x HOH,
+  22 October); YouTube's budget share is not spent (YoungLA, 22 October); any audience-country rule ("40% from US, UK,
+  CA, AU") goes into the entry's rules so the planner can weigh it. Otherwise leave it joined but unused and note why in
+  the log.
 - status/streamers.md lists the viral streamers right now and "Programmes to join next": for each one, find the official
   clipping programme (Content Rewards, Vyro, the streamer's Discord), join it if YouTube Shorts counts and the footage is
   family friendly, and add it to clips/campaigns.json; note in clips/streamers.json "programme" what you found.
@@ -149,3 +157,6 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 - 22 October 21:30 UK: the daily task is on (19:07 UK, Vyro submissions first). Vyro signed the Chrome profile out when GitHub presented
   the saved session (hijack protection): Charlie signs back in with Google; nothing on GitHub reads tokens/login_vyro.enc any more.
   developers.facebook.com is logged out in the studio profile; the Instagram token and the Cerebras and Mistral keys are his, links sent.
+- 22 October 23:55 UK: "do 1": the planner now weighs each campaign by how often our clips reach its minimum views; the scout reads YouTube's rate,
+  minimum and budget from the page. Joined Pet Simulator 99 and CLASH x HOH to check them: neither is usable (original drama content with no
+  footage; a support ticket with analytics per clip), so neither was added. Skipped YoungLA (YouTube budget spent) and Stranger Than Heaven (crime theme).

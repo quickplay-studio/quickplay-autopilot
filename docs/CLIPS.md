@@ -248,3 +248,15 @@ forbids it for that creator's content.
   thresholds (1,000 subscribers; then both) get their own issue once. The GitHub app on his phone shows them. The
   platforms' own earnings pages are the truth; payouts need a payout method set on Whop and on Vyro, his to do.
 
+## 22 October, 23:55 UK: minimums that our clips can reach
+- Charlie: favour campaigns our clips can actually earn from. clips.reach_share(min_views) is the smoothed share of our
+  measured public clips (24 hours or more) at or over a minimum, (reached + 1) / (measured + 4), floor 0.05, 1.0 with no
+  minimum; allocate() multiplies each campaign's expected money by it.
+- The scout's model wrote "min views 0" for every campaign; submit.cr_terms() now reads each platform's rate, minimum
+  payout and cap from the page (minimum views = minimum payout / rate x 1,000) and any spent per-platform budget, and a
+  campaign whose YouTube share is unpaid or spent no longer fits. Briefs and footage are only visible after joining, so
+  the Mac run checks those after it joins (docs/CHROME_JOBS.md).
+- Checked tonight and not used: Pet Simulator 99 (wants original drama commentary, no footage), CLASH x HOH (a support
+  ticket with analytics for every clip; 40% of views from US, UK, CA, AU), YoungLA (YouTube budget spent), Stranger Than
+  Heaven (crime theme).
+

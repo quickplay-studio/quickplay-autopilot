@@ -122,3 +122,14 @@ score, why = S.heat("Test Subject")
 assert score == 1.1 and "in Google Trends today" in why and any("our viewers search" in w for w in why), (score, why)
 assert S.heat("")[0] == 0.0
 print("4 heat ok")
+
+# 5. Content Rewards money terms read from the page (the scout no longer trusts the model for these)
+page = ("TikTok\n\nPer 1K views\n\n$1.25\n\nMin payout\n\n$1.25\n\nMax payout\n\n$250.00\n\n"
+        "YouTube\n\nPer 1K views\n\n$1.25\n\nMin payout\n\n$6.25\n\nMax payout\n\n$250.00\n\n"
+        "Budget\n$5,293 / $8,000\nTikTok\n$2,000\n/\n$2,000\nYouTube\n$1,500\n/\n$2,000\n")
+T = S.cr_terms(page)
+assert T["YouTube"]["min_views"] == 5000 and T["TikTok"]["min_views"] == 1000 and T["YouTube"]["rate_per_1k"] == 1.25, T
+assert T["TikTok"]["budget_left"] == 0 and T["YouTube"]["budget_left"] == 500, T
+assert S.cr_terms("nothing here") == {}
+print("5 campaign terms ok")
+

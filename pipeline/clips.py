@@ -1103,16 +1103,35 @@ def median_views(cid):
     vals.sort(); return vals[len(vals) // 2]
 
 
+def reach_share(min_views):
+    """Charlie (22 October): a clip under its campaign's minimum earns nothing, so the planner weighs how often our clips
+    actually reach a minimum: the smoothed share of our measured public clips (24 hours or more) with at least that many
+    views, (reached + 1) / (measured + 4), never under 0.05 so a campaign keeps being tried; 1.0 with no minimum."""
+    if not min_views: return 1.0
+    p = ROOT / "clips" / "stats.csv"
+    vals = []
+    if p.exists():
+        latest = {}
+        for r in csv.DictReader(p.open()):
+            if r.get("privacy") != "public" or float(r.get("hours_public") or 0) < 24: continue
+            k = (r.get("clip"), r.get("video"))
+            if k not in latest or (r.get("as_of") or "") >= (latest[k].get("as_of") or ""): latest[k] = r
+        vals = [float(r.get("views") or 0) for r in latest.values()]
+    return max(0.05, (sum(1 for v in vals if v >= float(min_views)) + 1) / (len(vals) + 4))
+
+
 def allocate(remaining, count=None, channel=None):
     """How many clips each active campaign gets today: the day's remaining number shared by expected money (pay per
-    1,000 times the campaign's median views, a 1,000-view prior until it has 3 measured clips, with a little noise so
-    every campaign keeps being tried), each capped by its per_day. The data decides, like the main channel. With a
-    channel, only that channel's campaigns share the number."""
+    1,000 times the campaign's median views, a 1,000-view prior until it has 3 measured clips, times how often our clips
+    reach the campaign's minimum views (reach_share), with a little noise so every campaign keeps being tried), each
+    capped by its per_day. The data decides, like the main channel. With a channel, only that channel's campaigns share
+    the number."""
     import random
     cs = {cid: c for cid, c in campaigns().items() if channel is None or channel in campaign_channels(cid)}
     if not cs or remaining <= 0: return {}
     rng = random.Random(str(NOW.date()))
-    score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * rng.uniform(0.8, 1.25) for cid, c in cs.items()}
+    score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * reach_share(c.get("min_views") or 0) * rng.uniform(0.8, 1.25)
+             for cid, c in cs.items()}
     order = sorted(cs, key=lambda cid: -score[cid])
     out, left = {}, remaining
     for cid in order:                                   # one each first, strongest first, then up to per_day

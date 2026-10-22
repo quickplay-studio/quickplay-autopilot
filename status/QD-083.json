@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T15:00:00Z",
  "rendered": "2026-10-21T09:54:31.066621+00:00",
- "title": "Pac-Man: The pizza origin story 🍕",
+ "title": "How Toru Iwatani created Pac-Man 🕹️",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -87,7 +87,14 @@
  },
  "engage": {
   "comment": "Ugxa6Rnl_OTA9AaHDh54AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Pac-Man: The pizza origin story 🍕",
+   "to": "How Toru Iwatani created Pac-Man 🕹️",
+   "at": "2026-10-22T15:20+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.5
+  }
  },
  "instagram": {
   "media": "18130156867837738",

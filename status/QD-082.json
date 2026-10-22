@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T14:30:00Z",
  "rendered": "2026-10-21T09:51:13.241030+00:00",
- "title": "How Manchester United won the 1999 Champions League 🏆",
+ "title": "The miracle of the 1999 Champions League final ⚽",
  "background_notes": [
   "picked pixabay 2 (+2 spares)"
  ],
@@ -96,7 +96,14 @@
  },
  "engage": {
   "comment": "UgyGeFkLw0Fz9QLB8ip4AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "How Manchester United won the 1999 Champions League 🏆",
+   "to": "The miracle of the 1999 Champions League final ⚽",
+   "at": "2026-10-22T15:20+00:00",
+   "views_an_hour": 0.6,
+   "typical": 1.5
+  }
  },
  "facebook": {
   "video": "1738757134332734",

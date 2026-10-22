@@ -1,36 +1,10 @@
-evening run for 2026-10-22: 10 to write from 21 fact packs
-covered already: champions league fixtures
-too few facts: Raindance by Dave & Tems
-manuel neuer: skipped: nothing new
-alphonso davies: skipped: nothing new
-too few facts: rb leipzig
-Luke McCaffrey: skipped: nothing new
-covered already: You Can See Everything
-too few facts: ucl schedule
-too few facts: ChatGPT
-covered already: Street Fighter (2026 film)
-too few facts: How is This Even Possible? 😳🥌
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Above the Below: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-too few facts: Ranking Best Flag Football Moments 🏈
-covered already: The Victoria’s Secret Fashion Show 2026
-What is the BEST app?!📱🤔: gemini-3.5-flash-lite, 0 warnings
-serge gnabry: skipped: nothing new
-I Can't Love You Anymore by Ella Langley & Morgan Wallen: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-too few facts: tom bischof
-club brugge: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-5g: skipped: nothing new
-covered already: Jailer 2
-Taylor Swift's Patient Zero hits three weeks at number one 🎵: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-evergreen: Top 10 highest-scoring matches in UEFA Champions League history: only 0 checked facts
-evergreen: Top 10 best-selling Godzilla films of all time: only 0 checked facts
-evergreen: Top 10 highest-grossing cyberpunk films at the box office: only 0 checked facts
-Alphonso Davies' historic journey from a refugee camp to Bayern Munich star: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+breaking run for 2026-10-22: 2 to write from 3 fact packs
 local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
 local model ready
-Alphonso Davies' historic journey from a refugee camp to Bayern Munich star: still failing: facts: beat 0: Title states "(Part 2)", which is not supported by the pack as this is an evergreen story without parts.
-Alphonso Davies' historic journey from a refugee camp to Bayern Munich star: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-What is the biggest stadium in the Scottish Premiership?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How does ChatGPT process natural language queries?: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 8 of 10: QD-099 Above the Below release date revealed 🎬; QD-100 Best Buy launches Pokemon TCG sale 📱; QD-101 Ella Langley and Morgan Wallen released new duet 🎶; QD-102 Club Brugge 20 league titles history ⚽; QD-103 Taylor Swift's haunted video twist 🎬; QD-105 Alphonso Davies: From refugee to Bayern star 🏆; QD-106 Scottish Premiership biggest stadium and history ⚽; QD-107 How does ChatGPT process natural language queries? 🤖
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-flash-latest": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)"}, "retired": ["gemini-2.5-flash", "gemini-2.5-flash-lite"], "timeouts": {}, "answers": {"openrouter:nvidia/nemotron-3.5-super-vl:free": 7, "gemini-3.5-flash-lite": 53, "gemini-3.1-flash-lite": 1, "groq:openai/gpt-oss-120b": 2, "gemini-3.1-flash-lite-preview": 1, "local:qwen2.5-7b-instruct-q4_k_m": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+wrexham: still failing: meta.alt_title: under 70 characters, one emoji at the end
+covered already: Patient Zero by Taylor Swift
+too few facts: playstation plus
+Ella Langley and Morgan Wallen released new duet 🎶: gemini-flash-latest, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 1 of 2: QD-108 Morgan Wallen and Ella Langley duet details 🎶
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"openrouter:thinkingmachines/inkling:free": "key refused (403)"}, "retired": [], "timeouts": {}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 1, "gemini-flash-latest": 5, "gemini-3.5-flash-lite": 4}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

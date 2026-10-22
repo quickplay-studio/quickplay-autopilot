@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 20:40): 8 of 1,000 subscribers · 5,525 of 10 million Shorts views in 90 days · 2,463 views in the last 24 hours (about 111,050 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 21:38): 8 of 1,000 subscribers · 5,547 of 10 million Shorts views in 90 days · 2,376 views in the last 24 hours (about 111,049 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 20:06 (UK): 4 scheduled, 106 public, 34 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Thu 22 Oct | 27 public, 2 scheduled | 18 | 12 | ⏳ 27 of 40 so far, 2 more scheduled |
+| Thu 22 Oct | 27 public, 2 scheduled | 18 | 13 | ⏳ 27 of 40 so far, 2 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -120,7 +120,7 @@ public · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done
 ![QD-113](QD-113.jpg)
 
 ### Thu 22 Oct 13:30 · Cyberpunk 2077 gets massive new update 🎮
-public · 4 views · 21 s · music: the-bombs · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
+public · 4 views · 21 s · music: the-bombs · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 

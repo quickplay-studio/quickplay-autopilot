@@ -1,405 +1,21 @@
 {
  "date": "2026-10-22",
- "built": "2026-10-22T13:37+00:00",
+ "built": "2026-10-22T16:31+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 4,
-   "topic": "Angel Of My Dreams by JADE",
-   "signal": "Apple Music GB: new in the top 25",
-   "category": "Music",
-   "what_is_new": "On Wednesday October 21 JADE debuted on the Spotify US Daily Top Songs USA chart at No. 197 with Angel of My Dreams.",
-   "hooks": [
-    "Did you know JADE just debuted on the Spotify chart years after release?",
-    "How a Kylie Jenner runway moment gave JADE a massive streaming surge."
-   ],
-   "sources": [
-    [
-     "Will Kylie Jenner’s Victoria’s Secret Moment Finally Turn JADE’s ‘Angel of My Dreams’ Into a Viral Hit?",
-     "https://www.billboard.com/music/chart-beat/jade-angel-of-my-dreams-kylie-jenner-victorias-secret-hit-1236364667/",
-     "Billboard",
-     "2026-10-21"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "On Wednesday October 21 JADE debuted on the Spotify US Daily Top Songs USA chart at No. 197 two and a half years postrelease.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On Wednesday (Oct. 21), “Angel” debuted on the Spotify US Daily Top Songs USA chart at No. 197, two and a half years post-release."
-     }
-    },
-    {
-     "claim": "Brit Awardwinning pop sensation JADE did not take the stage but her beloved debut solo single Angel of My Dreams soundtracked Kylie Jenners sultry Fantasy Braporting catwalk.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Brit Award-winning pop sensation JADE did not take the stage, but her beloved debut solo single, “Angel of My Dreams” soundtracked Kylie Jenner’s sultry, $50"
-     }
-    },
-    {
-     "claim": "On the day of the show Angel scored just 18000 official streams.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On the day of the show, “Angel” scored just 18,000 official streams."
-     }
-    },
-    {
-     "claim": "After Kylie hit the runway on Oct. 18 Angel ballooned by a jawdropping 1434% to over 284000 official streams.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "After Kylie hit the runway (Oct. 18), “Angel” ballooned by a jaw-dropping 1,434% to over 284,000 official streams."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "ronnie o'sullivan",
-   "signal": "Google Trends GB 500+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Ronnie O'Sullivan is a seven time world champion?",
-    "Ronnie O'Sullivan is currently ranked number 13 in the world.",
-    "The 50 year old snooker legend suffered a shocking defeat."
-   ],
-   "sources": [
-    [
-     "Christiane Amanpour’s parting advice to journalists is right on the mark | Margaret Sullivan",
-     "https://www.theguardian.com/commentisfree/2026/oct/22/christiane-amanpour-cnn-journalism-neutrality",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "Why O'Sullivan faces a battle to stay in world's top 16",
-     "https://www.bbc.com/sport/snooker/articles/c6rey5xxy3vqo",
-     "BBC",
-     "2026-10-20"
-    ],
-    [
-     "Ronnie O'Sullivan: 'The Rocket' stunned by qualifier and world No 110 Cheung Ka Wai at Northern Ireland Open",
-     "https://www.skysports.com/more-sports/snooker/news/13601071/ronnie-osullivan-the-rocket-stunned-by-qualifier-and-world-no-110-cheung-ka-wai-at-northern-ireland-open",
-     "Sky Sports",
-     "2026-10-20"
-    ],
-    [
-     "ronnie o'sullivan",
-     "https://en.wikipedia.org/wiki/Ronnie_O%27Sullivan",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Ronnie O'Sullivan has won the World Snooker Championship seven times.",
-     "sources": [
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "2": "However, the seven-time winner at the Crucible now faces a battle to maintain his place within the 16-man group guaranteed automatic entry to the World",
-      "3": "Seven-time world champion Ronnie O'Sullivan stunned by world No 110 Cheung Ka Wai as 'The Rocket' crashes out in the opening round at the Northern",
-      "4": "He has won the World Snooker Championship seven times, a modern-era record he shares with Stephen Hendry."
-     }
-    },
-    {
-     "claim": "Ronnie O'Sullivan is 50 years old.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The prospect seems almost unthinkable, with the 50-year-old a near ever present in the top 16 of the world rankings since he became a professional",
-      "3": "Playing in only his third tournament of the season, O'Sullivan, 50, lost the opening frame, but showed few signs of rust as he hit back"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Ronnie O'Sullivan's current world ranking is 13.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Already down at number 13 in the world rankings, O'Sullivan fell in the first round of the Northern Ireland Open on Monday and is in"
-     }
-    },
-    {
-     "claim": "Ronnie O'Sullivan was defeated by world No 110 Cheung Ka Wai in the opening round of the Northern Ireland Open in Belfast.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Seven-time world champion Ronnie O'Sullivan stunned by world No 110 Cheung Ka Wai as 'The Rocket' crashes out in the opening round at the Northern"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Ronnie_O’Sullivan_at_Snooker_German_Masters_(DerHexer)_2015-02-06_07.jpg"
-   ]
-  },
-  {
-   "n": 14,
-   "topic": "Heath Ledger",
-   "signal": "Wikipedia 177,482 views",
-   "category": "Film",
-   "what_is_new": "Julia Stiles recently reached out to Michelle Williams for her blessing before performing a Dancing With the Stars tribute to Heath Ledger.",
-   "hooks": [
-    "Did you know Heath Ledger was born on 4 April 1979?",
-    "Julia Stiles recently sought Michelle Williams' blessing for a DWTS tribute to Heath Ledger.",
-    "Heath Ledger and Michelle Williams shared a daughter named Matilda."
-   ],
-   "sources": [
-    [
-     "Julia Stiles Asked Michelle Williams for Permission to Do Heath Ledger ‘DWTS’ Tribute; David Krumholtz Explains Why He Missed Reunion",
-     "https://variety.com/2026/tv/news/julia-stiles-michelle-williams-heath-ledger-dwts-tribute-1236919624/",
-     "Variety",
-     "2026-10-22"
-    ],
-    [
-     "Julia Stiles Reached Out to Michelle Williams to Get Her Blessing For ‘DWTS’ Routine Dedicated to Heath Ledger",
-     "https://www.billboard.com/culture/lifestyle/julia-stiles-reached-out-michelle-williams-blessing-dwts-ledger-1236365619/",
-     "Billboard",
-     "2026-10-22"
-    ],
-    [
-     "Julia Stiles Reunites With ’10 Things I Hate About You’ Cast to Honor Heath Ledger on ‘DWTS’",
-     "https://www.hollywoodreporter.com/movies/movie-news/julia-stiles-reunites-10-things-i-hate-about-you-cast-heath-ledger-dwts-1236737039/",
-     "The Hollywood Reporter",
-     "2026-10-20"
-    ],
-    [
-     "Heath Ledger",
-     "https://en.wikipedia.org/wiki/Heath_Ledger",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Heath Ledger died on 22 January 2008 at the age of 28 from an accidental drug overdose.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Ledger died in 2008 at the age of 28 from an accidental overdose.",
-      "4": "22 January 2008 (aged 28)"
-     }
-    },
-    {
-     "claim": "Julia Stiles reached out to Heath Ledger’s former partner Michelle Williams to get her blessing for a Dancing With the Stars routine dedicated to Ledger.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Ahead of her emotional “Dancing With the Stars” tribute, Julia Stiles reached out to Heath Ledger‘s former partner Michelle Williams.",
-      "3": "Ahead of Tuesday’s episode, which was Dedication Night, it was revealed that Julia Stiles and her pro partner Ezra Sosa would be dedicating their dance"
-     }
-    },
-    {
-     "claim": "Michelle Williams and Heath Ledger dated from 2004 to 2007 and share a daughter named Matilda.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Williams and Ledger dated from 2004 to 2007 and share a daughter, Matilda.",
-      "2": "Williams is the mother of Ledger’s 20-year-old daughter, Matilda."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Heath Andrew Ledger was born on 4 April 1979.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Heath Andrew Ledger 4 April 1979"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Heath_Ledger_(2).jpg"
-   ]
-  },
-  {
-   "n": 15,
-   "topic": "BioWare",
-   "signal": "Wikipedia 170,992 views",
-   "category": "Gaming",
-   "what_is_new": "BioWare was shut down on 21 October 2026.",
-   "hooks": [
-    "BioWare has closed its doors after more than 30 years.",
-    "The next Mass Effect game is officially cancelled.",
-    "Electronic Arts is laying off 400 staff members."
-   ],
-   "sources": [
-    [
-     "‘Mass Effect’ sequel cancelled as acclaimed developer BioWare closes",
-     "https://www.nme.com/news/mass-effect-sequel-cancelled-bioware-shut-down-lay-offs-3973846?utm_source=rss&utm_medium=rss&utm_campaign=mass-effect-sequel-cancelled-bioware-shut-down-lay-offs",
-     "NME",
-     "2026-10-22"
-    ],
-    [
-     "Games industry mourns sudden BioWare closure - \"Anyone who participated in this travesty should be ashamed\"",
-     "https://www.eurogamer.net/video-game-industry-reacts-to-bioware-closure",
-     "Eurogamer",
-     "2026-10-22"
-    ],
-    [
-     "Next Mass Effect game cancelled as EA shuts down legendary sci-fi RPG studio BioWare",
-     "https://www.space.com/entertainment/space-games/next-mass-effect-game-cancelled-as-ea-shuts-down-developer-bioware",
-     "Space.com",
-     "2026-10-22"
-    ],
-    [
-     "BioWare",
-     "https://en.wikipedia.org/wiki/BioWare",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Electronic Arts is laying off 400 staff members.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Yesterday (October 21) it was reported that 400 members of staff (around 3 per cent of EA’s workforce) would be laid off due to “changes”",
-      "2": "Following news of BioWare's closure, EA confirmed other sweeping changes across the company, which will result in a total of 400 job cuts.",
-      "3": "Variety reported, backed by EA’s own statement and BioWare’s goodbye on socials, that EA is laying off 3% of its global workforce and closing down"
-     }
-    },
-    {
-     "claim": "The next Mass Effect game has been cancelled.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "BioWare is closing and early development on the next Mass Effect project is ending.",
-      "3": "Development on the next Mass Effect has stopped, but EA might not be entirely done with the IP."
-     }
-    },
-    {
-     "claim": "BioWare developed the Mass Effect and Dragon Age series.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "It has been a home for storytellers, developers, and the players who brought our worlds to life,” read a statement from the team behind Baldur’s",
-      "3": "BioWare, the iconic RPG studio behind the Mass Effect and Dragon Age series, is no more.",
-      "4": "They proceeded to make several other successful games based on original intellectual property: Jade Empire, the Mass Effect series, and the Dragon Age series."
-     }
-    },
-    {
-     "claim": "A live action Mass Effect adaptation is still in development at Amazon.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "A live-action adaptation of Mass Effect is still in the works at Amazon and will continue the story that started in the games.",
-      "3": "The first post-shutdown shocker arrived a bit later, with IGN exclusively revealing that Mass Effect isn't entirely dead, as the upcoming live-action TV show based"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "BioWare was based in Edmonton Alberta.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "BioWare was a Canadian video game developer based in Edmonton, Alberta."
-     }
-    },
-    {
-     "claim": "BioWare launched Star Wars The Old Republic in 2011.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In 2011, BioWare launched their first massively multiplayer online role-playing game (MMORPG), Star Wars: The Old Republic."
-     }
-    },
-    {
-     "claim": "Electronic Arts bought BioWare for US$775 million in 2007.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "On 11 October 2007, it was announced that VG Holding Corp. had been bought by Electronic Arts for US$775 million"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Epcor_Tower.JPG"
-   ]
-  },
-  {
-   "n": 17,
-   "topic": "Dancing with the Stars (American TV series) season 35",
-   "signal": "Wikipedia 151,353 views",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know season thirty-five premiered on September 15, 2026?"
-   ],
-   "sources": [
-    [
-     "Dancing with the Stars (American TV series) season 35",
-     "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Season thirty-five of Dancing with the Stars premiered on ABC and Disney+ on September 15, 2026, and is scheduled to conclude on November 24, 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Season thirty-five of Dancing with the Stars premiered on ABC and Disney+ on September 15, 2026,[1] and is scheduled to conclude on November 24, 2026.[2]"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 19,
+   "n": 18,
    "topic": "Cyberpunk 2077",
-   "signal": "YouTube GB 116,800/h",
+   "signal": "YouTube GB 108,528/h",
    "category": "Gaming",
-   "what_is_new": "The free Edgerunners 2 Update for Cyberpunk 2077 was released on October 22, 2026, bringing new quests, dual-wielding, and cross-platform mod support.",
+   "what_is_new": "The Edgerunners 2 Update for Cyberpunk 2077 was released today on October 22 2026.",
    "hooks": [
-    "Did you know Cyberpunk 2077 just dropped a massive free update?",
-    "Dual wielding is finally here in Cyberpunk 2077!",
-    "Cyberpunk 2077 has officially sold over 40 million copies!"
+    "The massive Edgerunners 2 update for Cyberpunk 2077 is out now.",
+    "Dual wielding and new story quests arrive in Night City today.",
+    "Customize your cyberware and explore new quests in the latest update."
    ],
    "sources": [
     [
@@ -415,12 +31,6 @@
      "2026-10-21"
     ],
     [
-     "Of course a new Edgerunners series means a new Cyberpunk 2077 patch",
-     "https://www.pcgamer.com/games/rpg/of-course-a-new-edgerunners-series-means-a-new-cyberpunk-2077-patch/",
-     "PC Gamer",
-     "2026-10-20"
-    ],
-    [
      "Cyberpunk 2077",
      "https://en.wikipedia.org/wiki/Cyberpunk_2077",
      "Wikipedia",
@@ -429,18 +39,40 @@
    ],
    "verified": [
     {
-     "claim": "The free Edgerunners 2 Update to Cyberpunk 2077 is available now.",
+     "claim": "The free Edgerunners 2 Update for Cyberpunk 2077 is available now.",
      "sources": [
       1,
       2
      ],
      "evidence": {
       "1": "The free Edgerunners 2 Update to Cyberpunk 2077 is available now.",
-      "2": "The update arrives 22nd October on PC, PS5, and Xbox Series S/X, with the Switch 2 version following \"in a couple of days\", CDPR media"
+      "2": "The update arrives 22nd October on PC, PS5, and Xbox Series S/X"
      }
     },
     {
-     "claim": "The update adds a new radio station, HKGN 102.FM, featuring official tracks from both Cyberpunk: Edgerunners and Edgerunners 2.",
+     "claim": "Players can now use dual wielding for pistols and revolvers in the game.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "That’s right — dual wielding is here!",
+      "2": "CD Projekt Red has detailed the substantial update coming to Cyberpunk 2077, revealing a new dual-wielding skill for pistols and revolvers"
+     }
+    },
+    {
+     "claim": "Cross platform mod support is now available through mod.io integration.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "We’re introducing cross-platform mod support through mod.io integration.",
+      "2": "It's also a partnership with mod platform Mod.io, and there's a panel in the game where you can browse mods"
+     }
+    },
+    {
+     "claim": "A new radio station called HKGN 102.FM has been added to the game.",
      "sources": [
       1,
       2
@@ -451,57 +83,340 @@
      }
     },
     {
-     "claim": "Cross-platform mod support is introduced through mod.io integration.",
+     "claim": "Players can now customise the appearance of their cyberware using new glam docs.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "That’s why we’re introducing cross-platform mod support through mod.io integration.",
-      "2": "Cross-platform mod support in Cyberpunk 2077 comes hot on the heels of cross-platform mod support being added to the Remastered update for The Witcher 3,"
+      "1": "These new vendors let you customize the appearance of your cyberware, with 40 styles in different colors to choose from.",
+      "2": "Implantable cyberware is becoming customisable via new \"glam docs\" being added to the game alongside - sometimes literally - the ripper docs you already find"
+     }
+    },
+    {
+     "claim": "A new side quest called Clampdown has been added to the game.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "What begins as just another gig from Wakako turns into an action-packed, high-stakes mission that sees V cross paths with Weak Kingsley",
+      "2": "Added a new side quest, Clampdown, set before the events of Cyberpunk: Edgerunners 2."
+     }
+    },
+    {
+     "claim": "There are 12 new minor arcana tarot cards to discover in Night City.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "There are 12 new minor arcana tarot cards to track down",
+      "2": "There are also minor tarot arcana being added to the game for you to find"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "As of July 2026, Cyberpunk 2077 had sold over 40 million copies, making it one of the best-selling video games of all time.",
+     "claim": "Cyberpunk 2077 now supports XBOX Play Anywhere for console and PC.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "As of July 2026, Cyberpunk 2077 had sold over 40 million copies, making it one of the best-selling video games of all time."
+      "1": "Cyberpunk 2077 now supports XBOX Play Anywhere, with one purchase enabling play on both XBOX Series X|S and XBOX on PC"
      }
     },
     {
-     "claim": "Cyberpunk 2077 was released for PlayStation 4, Stadia, Windows, and Xbox One in December 2020.",
+     "claim": "A new quest type called Night City Tours allows players to explore city lore.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "After years of anticipation, Cyberpunk 2077 was released for PlayStation 4, Stadia, Windows, and Xbox One in December 2020, followed by the PlayStation 5 and"
+      "2": "Another new type of quest coming in the update is Night City Tours, which is a less action-focused pursuit"
      }
     },
     {
-     "claim": "A DLC expansion, Phantom Liberty, was released for PlayStation 5, Windows, and Xbox Series X/S in September 2023.",
+     "claim": "The game now includes support for DLSS 4.5 technology.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "A DLC expansion, Phantom Liberty, was released for PlayStation 5, Windows, and Xbox Series X/S in September 2023, and paired with the Nintendo Switch 2"
+      "2": "Added support for DLSS 4.5, including up to 6X Multi Frame Generation or Dynamic Multi Frame Generation, and the 2nd Generation Transformer Model."
      }
     },
     {
-     "claim": "Cyberpunk 2077 is a 2020 action role-playing game developed by CD Projekt Red and published by CD Projekt.",
+     "claim": "Cyberpunk 2077 has sold over 40 million copies as of July 2026.",
      "sources": [
-      4
+      3
      ],
      "evidence": {
-      "4": "Cyberpunk 2077 is a 2020 action role-playing game developed by CD Projekt Red and published by CD Projekt."
+      "3": "As of July 2026, Cyberpunk 2077 had sold over 40 million copies, making it one of the best-selling video games of all time."
      }
     }
    ],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/22/cyberpunk-2077-edgerunners-2-update/"
+   ]
+  },
+  {
+   "n": 3,
+   "topic": "eden sessions",
+   "signal": "Google Trends GB 200+",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Ben Howard is headlining the Eden Sessions this summer!",
+    "Catch Ben Howard live at the Eden Project on 10 July!"
+   ],
+   "sources": [
+    [
+     "10 nightime attractions around the UK this autumn",
+     "https://www.theguardian.com/travel/2026/oct/22/best-after-dark-attractions-light-festivals-uk-autumn",
+     "Guardian",
+     "2026-10-22"
+    ],
+    [
+     "Ben Howard announced for summer's Eden Sessions",
+     "https://www.bbc.com/news/articles/cy8pzm4k211o",
+     "BBC",
+     "2026-02-02"
+    ],
+    [
+     "eden sessions",
+     "https://en.wikipedia.org/wiki/Eden_Sessions",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Singer-songwriter Ben Howard has been announced as one of the headline acts at this summer's Eden Sessions in Cornwall.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Singer-songwriter Ben Howard has been announced as one of the headline acts at this summer's Eden Sessions in Cornwall."
+     }
+    },
+    {
+     "claim": "Howard will perform at the live show at the Eden Project on 10 July.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Howard, who was raised in Devon and studied in Falmouth, Cornwall, will perform at the live show at the Eden Project on 10 July."
+     }
+    },
+    {
+     "claim": "Other headline acts on various dates this summer include Snow Patrol, Wolf Alice, Mika, the Pixies and Neil Young.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Other headline acts on various dates this summer include Snow Patrol, Wolf Alice, Mika, the Pixies and Neil Young."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Eden_project.JPG"
+   ]
+  },
+  {
+   "n": 4,
+   "topic": "harrison ford",
+   "signal": "Google Trends GB 100+",
+   "category": "Film",
+   "what_is_new": "Harrison Ford and Calista Flockhart were selected to receive their first joint award as a couple at the Stardust Ball.",
+   "hooks": [
+    "Did you know Harrison Ford and Calista Flockhart are getting their first joint award?",
+    "Harrison Ford has served as vice chair of Conservation International since 1991."
+   ],
+   "sources": [
+    [
+     "Zach Braff: ‘You can be talented and good-looking, but acting success is still like winning the lottery’",
+     "https://www.theguardian.com/film/2026/oct/22/zach-braff-reader-interview",
+     "Guardian",
+     "2026-10-22"
+    ],
+    [
+     "Harrison Ford and Calista Flockhart to Receive First Joint Award as Couple Is Selected for Icon Honors",
+     "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/harrison-ford-calista-flockhart-couple-award-stardust-ball-1236736736/",
+     "The Hollywood Reporter",
+     "2026-10-20"
+    ],
+    [
+     "harrison ford",
+     "https://en.wikipedia.org/wiki/Harrison_Ford",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Harrison Ford joined Conservation International board of directors in 1991 and currently serves as a vice chair.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "He joined Conservation International’s board of directors in 1991, and has since become the org’s longest-serving member. He currently serves as a vice chair there.",
+      "3": "Ford is also an environmental activist, having served as the inaugural vice chair of Conservation International since 1991."
+     }
+    },
+    {
+     "claim": "Harrison Ford currently stars in Shrinking on Apple TV.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Ford currently stars in Shrinking on Apple TV",
+      "3": "Ford has also starred in the Paramount+ western series 1923 (2022–2025) and the Apple TV+ comedy series Shrinking (since 2023), earning two nominations at the"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Harrison Ford and Calista Flockhart will receive their first joint award at the Stardust Ball.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Harrison Ford and Calista Flockhart will take a spin in the spotlight at the Stardust Ball, a fundraiser presented by Women’s Guild Cedars-Sinai at the"
+     }
+    },
+    {
+     "claim": "Harrison Ford was born on July 13, 1942.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Harrison Ford (born July 13, 1942) is an American actor."
+     }
+    },
+    {
+     "claim": "Harrison Ford is married to actress Calista Flockhart.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He is married to actress Calista Flockhart."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harrison_Ford_-_Televerse_2025-03.jpg"
+   ]
+  },
+  {
+   "n": 13,
+   "topic": "BioWare",
+   "signal": "Wikipedia 170,992 views",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "BioWare faces closure after decades of legendary gaming history.",
+    "EA announces the closure of legendary developer BioWare in October 2026."
+   ],
+   "sources": [
+    [
+     "Game industry legend Warren Spector blows up over BioWare's closure: 'it's utter bulls**t'",
+     "https://www.pcgamer.com/gaming-industry/game-industry-legend-warren-spector-blows-up-over-biowares-closure-its-utter-bulls-t/",
+     "PC Gamer",
+     "2026-10-22"
+    ],
+    [
+     "BioWare's cancelled Mass Effect game would've learned from Baldur's Gate 3 and The Witcher to deliver \"a level of autonomy and choice that n",
+     "https://www.eurogamer.net/cancelled-mass-effect-bioware-unprecedented-levels-of-autonomy",
+     "Eurogamer",
+     "2026-10-22"
+    ],
+    [
+     "Mass Effect 5 Trailer Reportedly Ready to Go Before BioWare Closure",
+     "https://www.ign.com/articles/mass-effect-5-trailer-reportedly-ready-to-go-before-bioware-closure",
+     "IGN",
+     "2026-10-22"
+    ],
+    [
+     "BioWare",
+     "https://en.wikipedia.org/wiki/BioWare",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "EA announced it intended to close the studio in October 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "EA announced it intended to close the studio in October 2026."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Epcor_Tower.JPG"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 116,522/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Olivia Rodrigo was born in California?",
+    "When did Olivia Rodrigo release her first album?"
+   ],
+   "sources": [
+    [
+     "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
+     "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
+     "Rolling Stone",
+     "2026-10-16"
+    ],
+    [
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Olivia Rodrigo was born on February 20, 2003, at the Rancho Springs Medical Center in Murrieta, California.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Olivia Isabel Rodrigo (born February 20, 2003) is an American singer-songwriter and actress."
+     }
+    },
+    {
+     "claim": "Her debut studio album, Sour, was released on May 21, 2021.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sour, her debut studio album, was released on May 21, 2021, to critical acclaim."
+     }
+    },
+    {
+     "claim": "She signed with Geffen Records in 2020.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Rodrigo shifted her focus to music and signed with Geffen Records in 2020."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
    ]
   }
  ]

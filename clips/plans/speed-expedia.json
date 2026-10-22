@@ -103,13 +103,30 @@
   {
    "id": "speed-expedia-06",
    "start": 505.7,
-   "end": 548.4,
+   "end": 531.88,
    "hook": "WHAT DESTINATION USES A BASEBALL BAT?",
    "label": "Busan, South Korea",
-   "title": "IShowSpeed Reacts to Busan South Korea",
+   "title": "What destination uses a baseball bat? | IShowSpeed",
    "why": "Fun physical comedy swinging the bat and guessing Dominican Republic before the South Korea reveal.",
    "planned": "2026-10-21T00:36+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "end_planned": 548.4,
+   "title_planned": "IShowSpeed Reacts to Busan South Korea",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "short",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "speed-expedia-06.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-06.mp4",
+   "video": "V1R9FTof6tw",
+   "url": "https://youtube.com/shorts/V1R9FTof6tw",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "speed-expedia-07",

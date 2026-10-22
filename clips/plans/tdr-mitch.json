@@ -125,7 +125,22 @@
    "planned": "2026-10-21T11:01+00:00",
    "model": "gemini-flash-latest",
    "peak": 1560.0,
-   "question": "Did you think Sadie actually had the immunity statue?"
+   "question": "Did you think Sadie actually had the immunity statue?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "tdr-mitch-06.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-06.mp4",
+   "video": "dRWlECPyA4g",
+   "url": "https://youtube.com/shorts/dRWlECPyA4g",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-07",

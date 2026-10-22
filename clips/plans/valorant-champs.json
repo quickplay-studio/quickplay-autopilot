@@ -49,10 +49,26 @@
    "end": 3906.4,
    "hook": "BABYBAY'S SPIRIT BOMB SPEECH",
    "label": "Babybay",
-   "title": "VALORANT Champs Shanghai Babybay Spirit Bomb Speech",
+   "title": "Babybay's spirit bomb speech | VALORANT Champs",
    "why": "A high-energy, quoteable moment where Babybay describes his plan to gather the crowd's energy like a Dragon Ball Z character.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "VALORANT Champs Shanghai Babybay Spirit Bomb Speech",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "valorant-champs-03.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-03.mp4",
+   "video": "rppeRTTF19s",
+   "url": "https://youtube.com/shorts/rppeRTTF19s",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-04",

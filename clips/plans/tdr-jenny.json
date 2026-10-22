@@ -98,7 +98,22 @@
    "title": "Jenny Hoyos Reacts to a Wild Fan Comment",
    "why": "A funny fan interaction where a viewer claims to love Jenny more than their own parents.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "tdr-jenny-05.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-05.mp4",
+   "video": "TYa_-NdWatc",
+   "url": "https://youtube.com/shorts/TYa_-NdWatc",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-jenny-06",
@@ -106,21 +121,54 @@
    "end": 3201.4,
    "hook": "CODY IS SPEEDRUNNING",
    "label": "Jenny Hoyos",
-   "title": "Jenny Hoyos Reacts to a Pro Roblox Player",
+   "title": "Cody is speedrunning | Jenny Hoyos",
    "why": "Jenny's shocked reaction to an opponent's intense focus and skill during a challenge.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "Jenny Hoyos Reacts to a Pro Roblox Player",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "tdr-jenny-06.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-06.mp4",
+   "video": "PLOJT7mqU_4",
+   "url": "https://youtube.com/shorts/PLOJT7mqU_4",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-jenny-07",
    "start": 4464.7,
-   "end": 4512.4,
+   "end": 4489.93,
    "hook": "THE BIGGEST RAID EVER",
    "label": "Jenny Hoyos",
-   "title": "Jenny Hoyos Gets a Massive Stream Raid",
+   "title": "The biggest raid ever | Jenny Hoyos",
    "why": "A genuine and wholesome reaction to receiving a massive raid from another streamer.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "end_planned": 4512.4,
+   "title_planned": "Jenny Hoyos Gets a Massive Stream Raid",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "short",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T12:21+00:00",
+   "file": "tdr-jenny-07.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-07.mp4",
+   "video": "fp2ZXaRRiSY",
+   "url": "https://youtube.com/shorts/fp2ZXaRRiSY",
+   "uploaded": "2026-10-22T12:21+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-jenny-08",

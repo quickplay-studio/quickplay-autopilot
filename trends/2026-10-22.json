@@ -3,373 +3,389 @@
  "google_trends": {
   "GB": [
    {
-    "q": "eden sessions",
+    "q": "nick woltemade",
     "traffic": "200+",
     "news": [
-     "Jack Johnson Tickets For Eden Sessions Shows Of SURFILMUSIC Tour On Sale 5pm Today",
-     "First artist announced for the 2027 Eden Sessions with two shows"
+     "Nick Woltemade: Tor-Erlösung in der Europa League",
+     "Yoel Lago: „Ich fühle mich immer besser“"
     ]
    },
    {
-    "q": "inter club d'escaldes - universitatea craiova",
+    "q": "casio g shock gmc 2500",
     "traffic": "200+",
     "news": [
-     "Inter Club d'Escaldes vs Universitatea Craiova: UEFA Conference League stats & head-to-head",
-     "Inter Escaldes v Univ. Craiova (22/10/2026)"
+     "The new G-Shocks finally just dropped. There's 9, which is your favourite?",
+     "Casio’s new 2500 is the brand’s first all-analogue watch in decades"
     ]
    },
    {
-    "q": "lindsey graham",
-    "traffic": "100+",
+    "q": "what channel is the celtic game on",
+    "traffic": "200+",
     "news": [
-     "‘Man, I loved that’: Trump cheers South Carolina rally attender who hit protester",
-     "As Trump celebrates violence against protesters, it’s like 2016 all over again"
+     "Some NBC viewers had trouble finding the Pistons-Celtics opening day afternoon tip-off game",
+     "Adam Silver Facing Blowback For Bizarre NBA Opening Day Schedule"
     ]
    },
    {
-    "q": "harrison ford",
-    "traffic": "100+",
+    "q": "lillestrøm vs real sociedad",
+    "traffic": "200+",
     "news": [
-     "Quote Of The Day By Harrison Ford: 'I Can Tell You This: If I'd Been Less Successful, I'd...'",
-     "Quote Of The Day By Harrison Ford: 'I Can Tell You This: If I'd Been Less Successful, I'd...'"
+     "Lillestrøm vs Real Sociedad: UEFA Europa League stats & head-to-head",
+     "Real Sociedad fans brave Oslo deluge as 430 head for Lillestrom"
     ]
    },
    {
-    "q": "colin kazim-richards",
+    "q": "kate middleton praises king charles art",
+    "traffic": "200+",
+    "news": [
+     "The Princess of Wales puts elegant twist on 80s power shoulder with new autumn dress: shop the style",
+     "Kate Middleton Gives King Charles This Unexpected Compliment During State Visit"
+    ]
+   },
+   {
+    "q": "world gymnastics championships 2026",
+    "traffic": "200+",
+    "news": [
+     "Figure skating Grand Prix de France 2026: Olympic champs Shaidorov, Fournier Beaudry/Cizeron in action as new season begins – How to watch live",
+     "Figure skating Grand Prix opens new Olympic cycle with reshaped field"
+    ]
+   },
+   {
+    "q": "lyon fc",
+    "traffic": "200+",
+    "news": [
+     "Des cadres reposés, Rémi Himbert et Steeve Kango titulaires : la composition de l'OL contre Hoffenheim",
+     "Suivez Hoffenheim - Olympique Lyonnais EN DIRECT - 3e journée - Ligue Europa"
+    ]
+   },
+   {
+    "q": "monaco vs freiburg",
+    "traffic": "200+",
+    "news": [
+     "Monaco vs Freiburg: UEFA Conference League stats & head-to-head",
+     "Conference League Matchday 2 briefing: Ajax, Atalanta, Brighton chase victories"
+    ]
+   },
+   {
+    "q": "moderna",
+    "traffic": "200+",
+    "news": [
+     "¿Por qué caen hoy las acciones de Merck?",
+     "La líder del año en el S&P 500 se hunde: Moderna sufre en Wall Street al filtrarse datos de su vacuna contra el melanoma"
+    ]
+   },
+   {
+    "q": "marseille fc",
+    "traffic": "200+",
+    "news": [
+     "Mercato OM : Mauvais comportement, ce jeune talent poussé vers la sortie !",
+     "OM Mercato : une recrue estivale a dérapé !"
+    ]
+   }
+  ],
+  "US": [
+   {
+    "q": "mohamed salah",
     "traffic": "500+",
     "news": [
-     "Crawley Town: Ex-Leeds United boss Kevin Blackwell named interim head coach",
-     "EFL strugglers hire ex-Leeds United, Sheffield United and Rotherham United man in shock move"
+     "Liverpool 4-3 Villarreal (Oct 20, 2026) Game Analysis",
+     "Rio Ngumoha rips up Liverpool’s Champions League record books and overwhelms Villarreal - The Athletic"
+    ]
+   },
+   {
+    "q": "joe strange",
+    "traffic": "500+",
+    "news": [
+     "Former Eminem employee pleads guilty to leaking unreleased tracks",
+     "Former Eminem Employee Pleads Guilty to Stealing and Selling Unreleased Music"
+    ]
+   },
+   {
+    "q": "omonia - benfica",
+    "traffic": "200+",
+    "news": [
+     "Preview: Omonia vs Benfica - prediction, team news, lineups",
+     "After a long journey... ready to go!"
+    ]
+   },
+   {
+    "q": "ac milan",
+    "traffic": "1000+",
+    "news": [
+     "Bournemouth vs. AC Milan: Live updates and commentary from the Europa League clash",
+     "~[TOTAL SPORTEK]^^ Soccer Ｓｔｒｅａｍｓ AFC Bournemouth vs AC Milan Ｌｉｖｅ Totalsportek Football Ｓｔｒｅａｍｓ"
+    ]
+   },
+   {
+    "q": "corey lewandowski",
+    "traffic": "500+",
+    "news": [
+     "Exclusive | Justice Department Reviewing Allegations Against Corey Lewandowski",
+     "Justice Department investigating Republican operative Corey Lewandowski over alleged contract misconduct at DHS"
+    ]
+   },
+   {
+    "q": "artemis ii orion cabin warning",
+    "traffic": "500+",
+    "news": [
+     "'Cabin leak suspected': Artemis II astronaut reveals how a warning nearly derailed NASA's epic moon mission",
+     "Astronaut Victor Glover recounts false alarm on Artemis II — Space.com"
+    ]
+   },
+   {
+    "q": "millennium force",
+    "traffic": "500+",
+    "news": [
+     "Millennium Force coaster at Cedar Point closes after part falls off",
+     "Cedar Point’s Millennium Force shut down after bracket lets loose from ride"
+    ]
+   },
+   {
+    "q": "ella langley choosin texas success",
+    "traffic": "500+",
+    "news": [
+     "How Ella Langley two-stepped to the top of the charts",
+     "Ella Langley’s ‘Choosin’ Texas’ Ties Mariah Carey for Most Weeks Atop Streaming Songs Chart"
+    ]
+   },
+   {
+    "q": "dancing with the stars",
+    "traffic": "5000+",
+    "news": [
+     "What the ‘Dancing With the Stars’ suspension says about the show",
+     "Val Chmerkovskiy’s Dancing with the Stars Suspension Was Not Result of HR Complaint from Carrie Ann Inaba"
+    ]
+   }
+  ],
+  "AU": [
+   {
+    "q": "bournemouth vs milan",
+    "traffic": "200+",
+    "news": [
+     "Bournemouth vs. AC Milan LIVE: Europa League updates as European heavyweights head to south coast",
+     "‘I love Modric!’ – Rose and Bournemouth get set for AC Milan visit"
+    ]
+   },
+   {
+    "q": "trabzonspor vs hearts",
+    "traffic": "100+",
+    "news": [
+     "Hearts rocked by Harry Milne injury blow",
+     "Trabzonspor vs Hearts LIVE: European action as response needed after Celtic"
     ]
    },
    {
     "q": "lech poznań vs sunderland",
-    "traffic": "5000+",
+    "traffic": "200+",
     "news": [
      "Lech Poznan vs Sunderland: UEFA Europa League stats & head-to-head",
      "Lech Poznan v Sunderland, Juventus v Rennes, and more: Europa League – live"
     ]
    },
    {
-    "q": "jablonec vs brighton",
-    "traffic": "5000+",
-    "news": [
-     "Jablonec vs Brighton & Hove Albion: UEFA Conference League stats & head-to-head",
-     "Thursday best bets: Europa League and Conference League tips for October 22 2026"
-    ]
-   },
-   {
-    "q": "parkrun",
-    "traffic": "200+",
-    "news": [
-     "Inyoni Creek’s Neil Munro completes parkrun alphabet challenge at 82",
-     "Parkrun event cancelled after route blocked by new bollards ‘without warning’"
-    ]
-   },
-   {
-    "q": "amd ryzen 7 5800x3d",
-    "traffic": "200+",
-    "news": [
-     "Ryzen 5800X3D Revival was Lisa Su's Initiative, and Other Interesting Details in AMD Interview with MyNavi Tech+",
-     "Lisa Su Wanted Ryzen 7 5800X3D As The “Final Gift” For AM4 Owners, Reveals AMD’s Travis Kirsch"
-    ]
-   }
-  ],
-  "US": [
-   {
-    "q": "ticketmaster",
-    "traffic": "5000+",
-    "news": [
-     "NFL retains Ticketmaster as top secondary marketplace, but changes model",
-     "Ticketmaster Keeps Top NFL Resale Role as League Expands Access for Competitors"
-    ]
-   },
-   {
-    "q": "lech poznań vs sunderland",
+    "q": "europa league",
     "traffic": "500+",
     "news": [
-     "Lech Poznan vs Sunderland: UEFA Europa League stats & head-to-head",
-     "Starting XI: Will Le Bris Make These Seven Changes For Sunderland’s Game In Poznan?"
-    ]
-   },
-   {
-    "q": "juventus - rennes",
-    "traffic": "500+",
-    "news": [
-     "Europa League Liveblog: Juventus-Rennes, Bournemouth-Milan, Ajax-Atalanta",
-     "UEFA Europa League: Besiktas to face Crystal Palace, Juventus to take on Rennes"
-    ]
-   },
-   {
-    "q": "trabzonspor vs hearts",
-    "traffic": "500+",
-    "news": [
-     "Trabzonspor v Heart of Midlothian LIVE: Uefa Conference League - radio, text & report",
-     "James Wilson speaks on his Hearts contract situation - plus Man Utd and Liverpool chat as he faces Mo Salah"
+     "Finales Training: Juventus rüstet sich für Rennes",
+     "Europa League Game Time Thread: Juventus vs. Stade Rennais"
     ]
    },
    {
     "q": "jablonec vs brighton",
-    "traffic": "1000+",
+    "traffic": "200+",
     "news": [
      "Jablonec vs Brighton & Hove Albion: UEFA Conference League stats & head-to-head",
-     "Hurzeler issues warning to Brighton players ahead of Conference League clash"
+     "FK Jablonec vs Brighton - Prediction, where to watch, kick-off time and line-ups 22-10-2026"
     ]
    },
-   {
-    "q": "getafe vs lugano",
-    "traffic": "1000+",
-    "news": [
-     "Getafe vs Lugano: UEFA Conference League stats & head-to-head",
-     "🚨XIs confirmed: Finishing put to the test on Coliseum's European return"
-    ]
-   },
-   {
-    "q": "inde navarrette interview kyle buchanan",
-    "traffic": "500+",
-    "news": [
-     "‘Obsession’ Star Inde Navarrette Says Gen Z Wants Films ‘Where We’re Not Being Sold. We Are Tired of Ads in Movies and Product Placement’",
-     "‘Obsession’ Star Inde Navarrette Says Gen Z Wants Films ‘Where We’re Not Being Sold. We Are Tired of Ads in Movies and Product Placement’"
-    ]
-   },
-   {
-    "q": "todd benzinger",
-    "traffic": "1000+",
-    "news": [
-     "Former Reds first baseman Todd Benzinger dies at 63",
-     "Todd Benzinger, World Series champ with Reds, dies at 63"
-    ]
-   }
-  ],
-  "AU": [
    {
     "q": "jack lowden",
-    "traffic": "100+",
+    "traffic": "200+",
     "news": [
-     "Olivia Cooke on Returning to ‘Slow Horses,’ On-Set Injuries and That Shocking Finale Cliffhanger: ‘I Want a Showdown!’",
-     "“Slow Horses,” Apple TV’s Best Show, Retains Its Pungent Relevance"
+     "“Slow Horses,” Apple TV’s Best Show, Retains Its Pungent Relevance",
+     "Olivia Cooke on Returning to ‘Slow Horses,’ On-Set Injuries and That Shocking Finale Cliffhanger: ‘I Want a Showdown!’"
     ]
    },
    {
     "q": "ufc 333",
     "traffic": "200+",
     "news": [
-     "UFC 333 preview and picks for featherweight, men's bantamweight titles",
-     "‘It doesn’t matter’: Volk sends blunt warning to critics, unbeaten rival"
+     "‘It doesn’t matter’: Volk sends blunt warning to critics, unbeaten rival",
+     "UFC 333 preview and picks for featherweight, men's bantamweight titles"
     ]
    },
    {
     "q": "restaurants near me",
     "traffic": "100+",
     "news": [
-     "Twin Cities businesses helping the community",
-     "Modern Times Cafe closing at end of year after providing 30,000 free meals in wake of ICE surge"
-    ]
-   },
-   {
-    "q": "anthony joshua",
-    "traffic": "200+",
-    "news": [
-     "Fury vs Joshua: Your questions answered ahead of Tyson Fury's Principality Stadium showdown with Anthony Joshua",
-     "Cardiff clash Will trains run late for boxing bout? | Bristol Post - newspaper"
-    ]
-   },
-   {
-    "q": "sister",
-    "traffic": "2000+",
-    "news": [
-     "Sahara Ray’s ex Mod Sun remembers Aussie model after tragic death at 34",
-     "Father of Sahara Ray’s baby revealed after model’s death"
-    ]
-   },
-   {
-    "q": "nab job cuts",
-    "traffic": "1000+",
-    "news": [
-     "NAB staff speak out after mass job cuts revealed",
-     "Restructuring at big four bank"
-    ]
-   },
-   {
-    "q": "samuela fainu wests tigers contract",
-    "traffic": "200+",
-    "news": [
-     "Samuela Fainu re-signs for two years at Wests Tigers",
-     "Benji factor behind big Tigers coup; Warriors star confirms contract call: NRL Daily"
-    ]
-   },
-   {
-    "q": "valtteri bottas",
-    "traffic": "500+",
-    "news": [
-     "Valtteri Bottas is auctioning off his unique 'Nigel the Badger' helmet",
-     "Schumacher delivers brutal Bottas verdict with Cadillac urged to change drivers"
+     "Minneapolis restaurant that offered free meals to protest ICE raids announces closure",
+     "Twin Cities businesses helping the community"
     ]
    }
   ],
   "CA": [
    {
-    "q": "jablonec vs brighton",
-    "traffic": "200+",
+    "q": "europa league games",
+    "traffic": "100+",
     "news": [
-     "Jablonec vs Brighton & Hove Albion: UEFA Conference League stats & head-to-head",
-     "Thursday best bets: Europa League and Conference League tips for October 22 2026"
+     "Union Saint-Gilloise vs Hapoel Be'er Sheva: UEFA Europa League stats & head-to-head",
+     "Europa League match to be played in empty 55,000 stadium tonight as safety concerns raised"
     ]
    },
    {
-    "q": "crime stoppers data breach",
+    "q": "molly carlson",
+    "traffic": "100+",
+    "news": [
+     "Molly Carlson welcomed fear during her historic dive off Newfoundland iceberg",
+     "New documentary follows Canadian Molly Carlson as she becomes first woman to dive off iceberg"
+    ]
+   },
+   {
+    "q": "bournemouth vs milan",
     "traffic": "1000+",
     "news": [
-     "Toronto Crime Stoppers suspends accepting tips following massive data breach",
-     "Toronto Crime Stoppers pauses tips after cyber breach affects 176K submissions"
+     "Bournemouth vs AC Milan: UEFA Europa League stats & head-to-head",
+     "Bournemouth owner Bill Foley vows to bring Champions League football to Vitality Stadium"
     ]
    },
    {
-    "q": "influenza",
-    "traffic": "100+",
+    "q": "beşiktaş vs palace",
+    "traffic": "500+",
     "news": [
-     "COMMENTARY: Sometimes it’s not ‘just the flu’—a plea for vaccination from a father’s heart",
-     "My sister died of flu. No family should have to endure this. | Opinion"
+     "Avrupa Ligi’nde bu hafta kimin maçı var? Avrupa Ligi 3. hafta maçları ne zaman, saat kaçta oynanacak? İşte haftanın fikstürü...",
+     "Vlahovic ve Cerny neden yok, Beşiktaş-Crystal Palace maçında yedek mi?"
     ]
    },
    {
-    "q": "lindsey graham",
-    "traffic": "100+",
-    "news": [
-     "‘Man, I loved that’: Trump cheers South Carolina rally attender who hit protester",
-     "As Trump celebrates violence against protesters, it’s like 2016 all over again"
-    ]
-   },
-   {
-    "q": "toronto blue jays alejandro kirk offseason",
-    "traffic": "100+",
-    "news": [
-     "Rays’ Aranda leaning on advice from Blue Jays’ Kirk during post-season",
-     "Blue Jays’ Alejandro Kirk’s Personal Decision Turns Heads Amid Offseason"
-    ]
-   },
-   {
-    "q": "bus",
-    "traffic": "100+",
-    "news": [
-     "Man hops onto moving school bus when he sees driver in distress",
-     "Minnesota man who jumped onto runaway school bus credits \"Grey's Anatomy\" for inspiring his actions"
-    ]
-   },
-   {
-    "q": "nick suzuki",
-    "traffic": "2000+",
-    "news": [
-     "Canadiens captain Nick Suzuki out multiple weeks with upper-body injury",
-     "Habs captain Nick Suzuki's iron man streak ends, will miss 2 to 4 weeks due to injury"
-    ]
-   },
-   {
-    "q": "aéroport",
+    "q": "trabzonspor",
     "traffic": "200+",
     "news": [
-     "Arabie saoudite | Le personnel d’Aramco appelé à évacuer, des drones interceptés",
-     "Arabie saoudite: un 2e mort dans l'attaque contre l'aéroport de Dammam"
+     "Trabzonspor, Hearts ile Karşılaşacak: Thomas Reis'in Açıklamaları",
+     "Trabzon'da 13. dakikada çılgına çeviren karar: Salah'ın pozisyonunda penaltı beklenirken ofsayt verdi!"
+    ]
+   },
+   {
+    "q": "moderna",
+    "traffic": "100+",
+    "news": [
+     "¿Por qué caen hoy las acciones de Merck?",
+     "La líder del año en el S&P 500 se hunde: Moderna sufre en Wall Street al filtrarse datos de su vacuna contra el melanoma"
+    ]
+   },
+   {
+    "q": "amd ryzen 7 5800x3d",
+    "traffic": "100+",
+    "news": [
+     "Ryzen 5800X3D Revival was Lisa Su's Initiative, and Other Interesting Details in AMD Interview with MyNavi Tech+",
+     "Lisa Su Wanted Ryzen 7 5800X3D As The “Final Gift” For AM4 Owners, Reveals AMD’s Travis Kirsch"
+    ]
+   },
+   {
+    "q": "druski",
+    "traffic": "100+",
+    "news": [
+     "‘SNL’ Sets Druski as First Online Content Creator to Host",
+     "Druski, Inde Navarrette & John Mulaney Set As ‘SNL’ Hosts For Season 52"
     ]
    }
   ],
   "IE": [
    {
-    "q": "jablonec vs brighton",
+    "q": "theft",
     "traffic": "200+",
     "news": [
-     "Jablonec vs Brighton & Hove Albion: UEFA Conference League stats & head-to-head",
-     "Thursday best bets: Europa League and Conference League tips for October 22 2026"
+     "Franklin Man Arrested, Charged with Theft and Forgery",
+     "TBI: Tennessee man faces multiple charges in Bible distribution company fraud case"
     ]
    },
    {
-    "q": "jack lowden",
-    "traffic": "100+",
+    "q": "beşiktaş vs palace",
+    "traffic": "200+",
     "news": [
-     "Final James Bond Screen Tests Set: Who's On List?",
-     "A reminder of the Bond shortlist as casting 'narrowed down' to two main contenders"
+     "Vlahovic ve Cerny neden yok, Beşiktaş-Crystal Palace maçında yedek mi?",
+     "Vincenzo Italiano'dan sürpriz kadrosu için açıklama!"
     ]
    },
    {
-    "q": "patrick kielty late late show guests",
+    "q": "bournemouth vs milan",
+    "traffic": "500+",
+    "news": [
+     "Bournemouth vs AC Milan: UEFA Europa League stats & head-to-head",
+     "Ruben Amorim with 'nothing to say' about Man United on return to England"
+    ]
+   },
+   {
+    "q": "met eireann canceled weather alerts",
+    "traffic": "10000+",
+    "news": [
+     "'Intense' rain, flooding as Storm Austen to hit Ireland",
+     "Storm Austen set to hit Devon and Cornwall"
+    ]
+   },
+   {
+    "q": "revenue",
     "traffic": "1000+",
     "news": [
-     "Irish Derry Girls and Amandaland star to make Late Late Show debut",
-     "Late Late Show reveals this week's guests"
+     "Meta Falls After Boosting Spending Plans for AI Bet",
+     "Meta, AI Stocks Tumble As AI Spending Fears Reignite"
     ]
    },
    {
-    "q": "rté",
+    "q": "south africa",
+    "traffic": "500+",
+    "news": [
+     "Jones hits 50 caps as Ireland make two changes for SA",
+     "Erin King hoping to cap memorable week with victory in inaugural away Test against South Africa"
+    ]
+   },
+   {
+    "q": "the connaught telegraph",
+    "traffic": "500+",
+    "news": [
+     "‘Massive disappointment’ in Mayo town centre over speed limits shock",
+     "Public consultation on reduction of speed limits in towns"
+    ]
+   },
+   {
+    "q": "lachie manzelmann guaranteed winner mackay",
     "traffic": "200+",
     "news": [
-     "'It starts fun': Four women on cocaine's impact on their lives",
-     "Video | Irish women share impact of cocaine use on their lives | RTÉ"
-    ]
-   },
-   {
-    "q": "joey carbery",
-    "traffic": "200+",
-    "news": [
-     "Carbery starts for Leinster while Sheehan in back row",
-     "Team News | Munster Side To Face Leinster In Dublin"
-    ]
-   },
-   {
-    "q": "playstation plus",
-    "traffic": "100+",
-    "news": [
-     "First PS Plus Extra Game Removal for November 2026 Confirmed",
-     "GTA 5 Among 10 Games Leaving PlayStation Plus in November"
-    ]
-   },
-   {
-    "q": "consent",
-    "traffic": "1000+",
-    "news": [
-     "DRCC video on hugging consent taken down after criticism",
-     "Dublin Rape Crisis Centre video blasted as ‘ill-thought-out’ and offensive to older people"
-    ]
-   },
-   {
-    "q": "callum robinson",
-    "traffic": "200+",
-    "news": [
-     "Investigation into charity sees seizure of cars and high-value items worth nearly €300k",
-     "Harney retires from Roscommon duty"
+     "Trainer can’t lose with all 11 runners in Mackay race",
+     "Trainer guarantees himself a win by saddling all 11 runners in same horse race"
     ]
    }
   ]
  },
  "google_news_uk": {
   "entertainment": [
-   "Judi Dench says sight loss means she can no longer perform but she is still ‘besotted by’ Shakespeare’s sonnets - The Guardian",
-   "Katie Price's ex-husband Kieran Hayler cleared of raping girl, 13 - BBC",
-   "Recap after Princess of Wales visited Ipswich - Ipswich Star",
+   "Dame Judi Dench: 'I can't do a play, a film or read anymore' - BBC",
+   "Ali G’s crude comeback is one long, strained stunt - The Telegraph",
    "Final James Bond Screen Tests Set: Who's On List? - Deadline",
-   "Republican leader embarrassed by Ali G film says he plans to sue Sacha Baron Cohen: ‘A liar and a pervert’ - The Guardian",
-   "Swerve Strickland Shoots Down Potential AEW vs. WWE Supershow (WWE News) - WhatCulture.com",
-   "Buckingham Palace to display over 300 royal jewels next year - BBC",
-   "Milton Keynes makes 2029 City of Culture shortlist - BBC"
+   "Katie Price's ex-husband found not guilty of raping teenage girl - The Independent",
+   "Watching Nigella made me question leaving Bake Off, Prue Leith admits - The Telegraph",
+   "WWE's Biggest Booking DISASTER Every Year (1986-2026) – Page 2 - WhatCulture.com",
+   "Big Brother fans still not happy as housemate called out on behaviour - BBC",
+   "Blackpool, Sheffield, Milton Keynes and Wrexham shortlisted for UK city of culture 2029 - The Guardian"
   ],
   "sports": [
-   "Manchester United: Jamie Carragher calls out Bruno Fernandes for questioning Michael Carrick's tactics in 4-1 Como defeat - Sky Sports",
-   "Harry Brook hits fastest 200 in ODI history - The Times",
-   "Emery and Nagelsmann are top targets if Manchester United sack Carrick - The Guardian",
-   "Welcome to the trap: swaggering Atlanta Dream turn WNBA finals into a hometown spectacle | Andrew Lawrence - The Guardian",
-   "Four Liverpool Stars Miss Training Ahead of Brighton Match - The Liverpool Offside",
+   "Man Utd boss Michael Carrick and captain Bruno Fernandes clash over tactics in Como defeat - but who was right? - Sky Sports",
+   "Lech Poznan v Sunderland, Juventus v Rennes, and more: Europa League – live - The Guardian",
+   "Harry Brook hits record double-century but Sri Lanka chase down 429 - The Times",
+   "Manchester United will consider Julian Nagelsmann if Michael Carrick sacked - The Telegraph",
+   "Luke Littler: Fallon Sherrock one of 24 'amateurs' to face world champion in Netflix show - BBC",
    "Arsenal manager Mikel Arteta issues Bukayo Saka injury update - FourFourTwo",
-   "Jurgen Klopp reveals how he broke his transfer method to sign Diogo Jota - This Is Anfield",
-   "South Africa vs Australia: Hosts win by an innings and 31 runs to level series - BBC"
+   "Bruno Fernandes has home burgled while in Italy with Man Utd - BBC",
+   "Jurgen Klopp reveals how he broke his transfer method to sign Diogo Jota - This Is Anfield"
   ],
   "technology": [
-   "Sony Exits UHD Blu-ray Player Market as Pull Back from Physical Media Continues - Push Square",
+   "Following shock BioWare closure, scope of EA job cuts becomes clear as layoffs hit Respawn, Maxis, Full Circle, EA Motive, and more - Euroga",
+   "Insta360 Mic Review: A Midrange Mic Kit That's Anything But Boring - Engadget",
+   "Sony reportedly exits UHD Blu-ray player market - FlatpanelsHD",
    "Warhammer Tone Pro: Superb coverage and vibrant colours - Warhammer Community",
-   "Oppo Find X10 Pro Max Hands-On: Triple 200-Megapixel Cameras But Few Surprises - Engadget",
-   "Football Manager 27 will be free to play for five days before its full release, in \"industry first\" for a game of its kind - Eurogamer.net",
-   "Tzeentch Daemons return via Made to Order - Warhammer Community",
-   "BioWare: Mass Effect and Dragon Age video game studio to close - BBC",
    "Sony's latest PS5 firmware got cracked, just in time for GTA 6's November release - TechSpot",
-   "Class Of '63: 63 Years On Novices' Hurdle (GBB Race) - Carlisle Results - Sporting Life"
+   "‘Football Manager 27’ To Be Free For First Five Days - Forbes",
+   "Tzeentch Daemons return via Made to Order - Warhammer Community",
+   "New Coros Dura 2 Solar features ultra-modern design and huge battery life, but it's the smaller bevel I love - BikeRadar"
   ],
   "science": [
    "The Orionid Meteor Shower Peaks Tonight — Here’s When To Look - Forbes",
@@ -504,10 +520,29 @@
  ],
  "music_charts": {
   "gb": {
-   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
+   "top5": [
+    "Housewife by Tate McRae",
+    "Babydoll by Jamie Miller",
+    "Great Expectation by SIENNA SPIRO",
+    "Rein Me In by Sam Fender & Olivia Dean",
+    "Stop The Wedding! by Ashe"
+   ],
+   "new_in_top25": [
+    "Angel Of My Dreams by JADE"
+   ]
   },
   "us": {
-   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
+   "top5": [
+    "Housewife by Tate McRae",
+    "Lies (feat. Lana Del Rey) by Zach Bryan & Lana Del Rey",
+    "BbY WOW by KAROL G, Judeline & rusowsky",
+    "Choosin' Texas by Ella Langley",
+    "Solar Eclipse by Drake & Don Toliver"
+   ],
+   "new_in_top25": [
+    "March Madness by Future",
+    "Frozen by Lil Baby"
+   ]
   },
   "es": {
    "top5": [
@@ -547,578 +582,596 @@
    {
     "title": "Ramayana: Ravana Tandav (Song) | Namit M, Nitesh T | Ranbir, Yash | AR Rahman, Vishal D, Kumar V",
     "channel": "T-Series",
-    "views": 15655204,
-    "views_per_hour": 321232
+    "views": 16882813,
+    "views_per_hour": 327812
    },
    {
     "title": "Minecraft Speedrunner VS 6 Hunters FINALE",
     "channel": "Dream",
-    "views": 6511100,
-    "views_per_hour": 145338
-   },
-   {
-    "title": "🔴LIVE | COD DMZ | Cloakzy X Kona | WACKADOODLE WEDENSDAY | #Bungulate",
-    "channel": "TheBurntPeanut",
-    "views": 1064919,
-    "views_per_hour": 113086
+    "views": 6784738,
+    "views_per_hour": 142638
    },
    {
     "title": "Cyberpunk 2077 - Official Edgerunners 2 Update Overview Trailer",
     "channel": "IGN",
-    "views": 2653704,
-    "views_per_hour": 108528
+    "views": 2804345,
+    "views_per_hour": 103031
+   },
+   {
+    "title": "🔴LIVE | COD DMZ | Cloakzy X Kona | WACKADOODLE WEDENSDAY | #Bungulate",
+    "channel": "TheBurntPeanut",
+    "views": 1073920,
+    "views_per_hour": 88146
    },
    {
     "title": "GAMERS WON..",
     "channel": "Asmongold TV  ",
-    "views": 1239854,
-    "views_per_hour": 93001
+    "views": 1393345,
+    "views_per_hour": 86553
    },
    {
     "title": "LNGSHOT - 'Masterpiece' Official Music Video",
     "channel": "MORE VISION",
-    "views": 2602775,
-    "views_per_hour": 83154
-   },
-   {
-    "title": "The Halloween Update (Trailer)",
-    "channel": "Tze",
-    "views": 832715,
-    "views_per_hour": 43148
+    "views": 2742176,
+    "views_per_hour": 80494
    },
    {
     "title": "Phantom Blade Zero - Official Launch Trailer",
     "channel": "Phantom Blade Zero",
-    "views": 602984,
-    "views_per_hour": 42178
+    "views": 978045,
+    "views_per_hour": 57321
+   },
+   {
+    "title": "The Halloween Update (Trailer)",
+    "channel": "Tze",
+    "views": 887524,
+    "views_per_hour": 40222
    },
    {
     "title": "The Rings of Power - Season 3 Official Trailer | Prime Video",
     "channel": "Prime Video",
-    "views": 868787,
-    "views_per_hour": 36509
+    "views": 1004712,
+    "views_per_hour": 37824
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (wheel of misfortune)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 637210,
-    "views_per_hour": 33292
-   },
-   {
-    "title": "I Didn’t Think Someone Would Be In Here…",
-    "channel": "CaseOh",
-    "views": 485213,
-    "views_per_hour": 26527
+    "views": 689815,
+    "views_per_hour": 31489
    },
    {
     "title": "WATCH ME",
     "channel": "K/DA - Topic",
-    "views": 371617,
-    "views_per_hour": 24608
+    "views": 445432,
+    "views_per_hour": 24929
+   },
+   {
+    "title": "I Didn’t Think Someone Would Be In Here…",
+    "channel": "CaseOh",
+    "views": 524935,
+    "views_per_hour": 24928
    },
    {
     "title": "A$AP ROCKY - SWAT TEAM (Official Video)",
     "channel": "ASAPROCKYUPTOWN",
-    "views": 567121,
-    "views_per_hour": 21571
-   },
-   {
-    "title": "Poppy Playtime Chapter 6 Trailer",
-    "channel": "KreekCraft",
-    "views": 333880,
-    "views_per_hour": 16647
+    "views": 606196,
+    "views_per_hour": 20862
    },
    {
     "title": "Metallica: Welcome Home (Sanitarium) (Live at Sphere, October 3, 2026)",
     "channel": "Metallica",
-    "views": 400527,
-    "views_per_hour": 16487
+    "views": 438106,
+    "views_per_hour": 16190
+   },
+   {
+    "title": "Poppy Playtime Chapter 6 Trailer",
+    "channel": "KreekCraft",
+    "views": 348814,
+    "views_per_hour": 15283
    }
   ],
   "GB-gaming": [
    {
     "title": "Minecraft Speedrunner VS 6 Hunters FINALE",
     "channel": "Dream",
-    "views": 6511100,
-    "views_per_hour": 145338
+    "views": 6784738,
+    "views_per_hour": 142638
    },
    {
     "title": "Cyberpunk 2077 - Official Edgerunners 2 Update Overview Trailer",
     "channel": "IGN",
-    "views": 2653704,
-    "views_per_hour": 108528
+    "views": 2804345,
+    "views_per_hour": 103031
    },
    {
     "title": "PLAYING ELDEN RING DLC UNTIL I BEAT IT DAY 2",
     "channel": "Jynxzi",
-    "views": 1024622,
-    "views_per_hour": 79732
+    "views": 1030199,
+    "views_per_hour": 65965
    },
    {
     "title": "Call of Duty is F***ED.. Gamers voted with their wallets.",
     "channel": "Asmongold TV  ",
-    "views": 1880337,
-    "views_per_hour": 66448
+    "views": 1915984,
+    "views_per_hour": 61678
    },
    {
     "title": "Becoming the MONSTER in HE ATE THEM..",
     "channel": "steak",
-    "views": 957805,
-    "views_per_hour": 48581
+    "views": 1028411,
+    "views_per_hour": 45743
    },
    {
     "title": "The Halloween Update (Trailer)",
     "channel": "Tze",
-    "views": 832715,
-    "views_per_hour": 43148
+    "views": 887524,
+    "views_per_hour": 40222
    }
   ],
   "GB-music": [
    {
     "title": "Ramayana: Ravana Tandav (Song) | Namit M, Nitesh T | Ranbir, Yash | AR Rahman, Vishal D, Kumar V",
     "channel": "T-Series",
-    "views": 15655204,
-    "views_per_hour": 321232
+    "views": 16882813,
+    "views_per_hour": 327812
    },
    {
     "title": "IVE 아이브 'Looks Can Kill' MV",
     "channel": "STARSHIP",
-    "views": 15656478,
-    "views_per_hour": 197432
+    "views": 15846475,
+    "views_per_hour": 193092
    },
    {
     "title": "Veezha Veera Lyrical (Tamil) | OM | Dhanush | Mammootty | Sai Pallavi | Rajkumar | Sai Abhyankkar",
     "channel": "Divo Music",
-    "views": 12160912,
-    "views_per_hour": 162588
+    "views": 12415575,
+    "views_per_hour": 160072
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 19671840,
-    "views_per_hour": 129166
+    "views": 19857615,
+    "views_per_hour": 128059
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 18678437,
-    "views_per_hour": 116522
+    "views": 18838053,
+    "views_per_hour": 115524
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 11231389,
-    "views_per_hour": 70065
+    "views": 11428106,
+    "views_per_hour": 70082
    }
   ],
   "GB-sport": [
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 31905514,
-    "views_per_hour": 172652
+    "views": 31948109,
+    "views_per_hour": 170332
    },
    {
     "title": "BACKFLIPS, BUT THE CEILING GETS LOWERED..",
     "channel": "IShowSpeed",
-    "views": 6676073,
-    "views_per_hour": 132724
+    "views": 6782128,
+    "views_per_hour": 127803
    },
    {
     "title": "Bro Was Not Leaving Empty Handed ☠️🔥 #nba #basketball #shorts",
     "channel": "BZ clips",
-    "views": 10932315,
-    "views_per_hour": 101940
+    "views": 11224234,
+    "views_per_hour": 102030
    },
    {
     "title": "Why This Rider Started Ahead of Everyone Else 😳🏍️",
     "channel": "FitVision",
-    "views": 10701832,
-    "views_per_hour": 97325
+    "views": 10808486,
+    "views_per_hour": 95883
    },
    {
     "title": "Top 5 Chunkz Football Moments!",
     "channel": "Chunkz Ripz",
-    "views": 10000075,
-    "views_per_hour": 88741
+    "views": 10073356,
+    "views_per_hour": 87250
    },
    {
     "title": "Ranking Best Flag Football Moments 🏈",
     "channel": "ZedBall",
-    "views": 13963121,
-    "views_per_hour": 82966
+    "views": 14046297,
+    "views_per_hour": 82110
    }
   ],
   "GB-entertainment": [
    {
     "title": "Who Can Escape Without getting Crushed 💀",
     "channel": "Hero DW",
-    "views": 67004568,
-    "views_per_hour": 589841
+    "views": 68610409,
+    "views_per_hour": 589618
    },
    {
     "title": "What if this snake is actually poisonous ☠️ #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 20533463,
-    "views_per_hour": 398167
+    "views": 21472171,
+    "views_per_hour": 395171
    },
    {
     "title": "The Victoria’s Secret Fashion Show 2026",
     "channel": "Victoria's Secret",
-    "views": 31215901,
-    "views_per_hour": 356428
+    "views": 31437532,
+    "views_per_hour": 347966
    },
    {
     "title": "That guy is traumatised for life 😂",
     "channel": "Videos that make your day better ",
-    "views": 24028859,
-    "views_per_hour": 246980
+    "views": 24561061,
+    "views_per_hour": 245470
    },
    {
     "title": "\"Apart from my dignity, I think I'm fine.\" 😳",
     "channel": "Dreamy Talker",
-    "views": 16987848,
-    "views_per_hour": 232885
+    "views": 17214548,
+    "views_per_hour": 227370
    },
    {
     "title": "Who wore the bouncy dress better?😂",
     "channel": "Nick Wilkins",
-    "views": 18580738,
-    "views_per_hour": 208493
+    "views": 18806851,
+    "views_per_hour": 204677
    }
   ],
   "GB-tech": [
    {
     "title": "iPhone Duo Review: First Generation Fun!",
     "channel": "Marques Brownlee",
-    "views": 7630050,
-    "views_per_hour": 269733
+    "views": 7980877,
+    "views_per_hour": 257001
    },
    {
     "title": "6 ways iPhone Duo beats Samsung",
     "channel": "Mrwhosetheboss",
-    "views": 5482460,
-    "views_per_hour": 193946
+    "views": 5826092,
+    "views_per_hour": 187730
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 19927508,
-    "views_per_hour": 138230
+    "views": 20226690,
+    "views_per_hour": 137664
    },
    {
     "title": "I thought the “Intel inside” sticker WAS the chip..",
     "channel": "CarterPCs",
-    "views": 11594510,
-    "views_per_hour": 109686
+    "views": 11692818,
+    "views_per_hour": 107795
    },
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 13239721,
-    "views_per_hour": 106951
+    "views": 13323215,
+    "views_per_hour": 105273
    },
    {
     "title": "Samsung Galaxy S27 Ultra Cobalt Violet📱🔥#noads #tiktok #usa",
     "channel": "MR Limbo Green",
-    "views": 8139361,
-    "views_per_hour": 58854
+    "views": 8161833,
+    "views_per_hour": 57859
    }
   ],
   "US": [
    {
     "title": "Minecraft Speedrunner VS 6 Hunters FINALE",
     "channel": "Dream",
-    "views": 6511100,
-    "views_per_hour": 145338
+    "views": 6784738,
+    "views_per_hour": 142638
    },
    {
     "title": "🔴LIVE | COD DMZ | Cloakzy X Kona | WACKADOODLE WEDENSDAY | #Bungulate",
     "channel": "TheBurntPeanut",
-    "views": 1064919,
-    "views_per_hour": 113086
+    "views": 1073920,
+    "views_per_hour": 88146
    },
    {
     "title": "GAMERS WON..",
     "channel": "Asmongold TV  ",
-    "views": 1239854,
-    "views_per_hour": 93001
+    "views": 1393345,
+    "views_per_hour": 86553
    },
    {
     "title": "LNGSHOT - 'Masterpiece' Official Music Video",
     "channel": "MORE VISION",
-    "views": 2602775,
-    "views_per_hour": 83154
+    "views": 2742176,
+    "views_per_hour": 80494
    },
    {
     "title": "PLAYING ELDEN RING DLC UNTIL I BEAT IT DAY 2",
     "channel": "Jynxzi",
-    "views": 1024622,
-    "views_per_hour": 79732
-   },
-   {
-    "title": "Becoming the MONSTER in HE ATE THEM..",
-    "channel": "steak",
-    "views": 957805,
-    "views_per_hour": 48581
-   },
-   {
-    "title": "The Halloween Update (Trailer)",
-    "channel": "Tze",
-    "views": 832715,
-    "views_per_hour": 43148
+    "views": 1030199,
+    "views_per_hour": 65965
    },
    {
     "title": "Phantom Blade Zero - Official Launch Trailer",
     "channel": "Phantom Blade Zero",
-    "views": 602984,
-    "views_per_hour": 42178
+    "views": 978045,
+    "views_per_hour": 57321
+   },
+   {
+    "title": "Becoming the MONSTER in HE ATE THEM..",
+    "channel": "steak",
+    "views": 1028411,
+    "views_per_hour": 45743
+   },
+   {
+    "title": "The Halloween Update (Trailer)",
+    "channel": "Tze",
+    "views": 887524,
+    "views_per_hour": 40222
    },
    {
     "title": "The Rings of Power - Season 3 Official Trailer | Prime Video",
     "channel": "Prime Video",
-    "views": 868787,
-    "views_per_hour": 36509
+    "views": 1004712,
+    "views_per_hour": 37824
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (wheel of misfortune)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 637210,
-    "views_per_hour": 33292
+    "views": 689815,
+    "views_per_hour": 31489
    },
    {
     "title": "❌Ángel Caído (R.I.P. Santa Fe Klan)❌ 🐀",
     "channel": "TornillO Oficial",
-    "views": 1915402,
-    "views_per_hour": 31504
+    "views": 1986179,
+    "views_per_hour": 31246
    },
    {
     "title": "W Sound 10 “HAPPY MONDAY” - Hades66, Westcol, Ovy On The Drums",
     "channel": "W Sound",
-    "views": 513328,
-    "views_per_hour": 31494
-   },
-   {
-    "title": "I Didn’t Think Someone Would Be In Here…",
-    "channel": "CaseOh",
-    "views": 485213,
-    "views_per_hour": 26527
+    "views": 585051,
+    "views_per_hour": 30686
    },
    {
     "title": "WATCH ME",
     "channel": "K/DA - Topic",
-    "views": 371617,
-    "views_per_hour": 24608
+    "views": 445432,
+    "views_per_hour": 24929
+   },
+   {
+    "title": "I Didn’t Think Someone Would Be In Here…",
+    "channel": "CaseOh",
+    "views": 524935,
+    "views_per_hour": 24928
    },
    {
     "title": "BUNKER | Starring Javier Bardem & Penélope Cruz | Official US Trailer (2027)",
     "channel": "Sony Pictures Classics",
-    "views": 443647,
-    "views_per_hour": 22009
+    "views": 541344,
+    "views_per_hour": 23615
    }
   ],
   "US-gaming": [
    {
     "title": "Minecraft Speedrunner VS 6 Hunters FINALE",
     "channel": "Dream",
-    "views": 6511100,
-    "views_per_hour": 145338
+    "views": 6784738,
+    "views_per_hour": 142638
    },
    {
     "title": "GAMERS WON..",
     "channel": "Asmongold TV  ",
-    "views": 1239854,
-    "views_per_hour": 93001
+    "views": 1393345,
+    "views_per_hour": 86553
    },
    {
     "title": "PLAYING ELDEN RING DLC UNTIL I BEAT IT DAY 2",
     "channel": "Jynxzi",
-    "views": 1024622,
-    "views_per_hour": 79732
+    "views": 1030199,
+    "views_per_hour": 65965
    },
    {
     "title": "🔴LIVE | CALL OF DUTY MW4 DMZ | CLOAKZY X DRAC | ALL DAY/NIGHT MARATHON | #BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 2093437,
-    "views_per_hour": 63671
+    "views": 2095952,
+    "views_per_hour": 58800
    },
    {
     "title": "Becoming the MONSTER in HE ATE THEM..",
     "channel": "steak",
-    "views": 957805,
-    "views_per_hour": 48581
+    "views": 1028411,
+    "views_per_hour": 45743
    },
    {
     "title": "The Halloween Update (Trailer)",
     "channel": "Tze",
-    "views": 832715,
-    "views_per_hour": 43148
+    "views": 887524,
+    "views_per_hour": 40222
    }
   ],
   "US-music": [
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 18678437,
-    "views_per_hour": 116522
+    "views": 18838053,
+    "views_per_hour": 115524
    },
    {
     "title": "Anuel AA - Vuelve (Video Oficial)",
     "channel": "Anuel AA",
-    "views": 26262134,
-    "views_per_hour": 84928
+    "views": 26346026,
+    "views_per_hour": 84444
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 11231389,
-    "views_per_hour": 70065
+    "views": 11428106,
+    "views_per_hour": 70082
    },
    {
     "title": "Bulin 47 X Kevin Wai - Dame Hombro (Video Oficial)",
     "channel": "Bulin 47 Oficial",
-    "views": 18771857,
-    "views_per_hour": 55819
+    "views": 18982948,
+    "views_per_hour": 55986
    },
    {
     "title": "Zara Larsson - Blue Moon (Official Music Video)",
     "channel": "ZaraLarssonMusicVEVO",
-    "views": 7502887,
-    "views_per_hour": 41614
+    "views": 7591701,
+    "views_per_hour": 41470
    },
    {
     "title": "KAROL G, Judeline, rusowsky - BbY WOW (Live From New York)",
     "channel": "KarolGVEVO",
-    "views": 5284520,
-    "views_per_hour": 32561
+    "views": 5398978,
+    "views_per_hour": 32708
    }
   ],
   "US-sport": [
    {
     "title": "Bro Ran Too Fast 😭 (@NBCSports)",
     "channel": "HiddenDepths",
-    "views": 31905514,
-    "views_per_hour": 172652
+    "views": 31948109,
+    "views_per_hour": 170332
    },
    {
     "title": "Bro Was Not Leaving Empty Handed ☠️🔥 #nba #basketball #shorts",
     "channel": "BZ clips",
-    "views": 10932315,
-    "views_per_hour": 101940
+    "views": 11224234,
+    "views_per_hour": 102030
    },
    {
     "title": "Why This Rider Started Ahead of Everyone Else 😳🏍️",
     "channel": "FitVision",
-    "views": 10706658,
-    "views_per_hour": 97369
+    "views": 10808486,
+    "views_per_hour": 95883
    },
    {
     "title": "Top 5 Chunkz Football Moments!",
     "channel": "Chunkz Ripz",
-    "views": 10000075,
-    "views_per_hour": 88741
+    "views": 10073356,
+    "views_per_hour": 87250
    },
    {
     "title": "Ranking Best Flag Football Moments 🏈",
     "channel": "ZedBall",
-    "views": 13966853,
-    "views_per_hour": 82988
+    "views": 14046297,
+    "views_per_hour": 82110
    },
    {
     "title": "When Little Bro Tries Older Brother In Basketball",
     "channel": "DunkCity",
-    "views": 14368966,
-    "views_per_hour": 76424
+    "views": 14410204,
+    "views_per_hour": 75532
    }
   ],
   "US-entertainment": [
    {
     "title": "Who Can Escape Without getting Crushed 💀",
     "channel": "Hero DW",
-    "views": 67004568,
-    "views_per_hour": 589841
+    "views": 68610409,
+    "views_per_hour": 589618
    },
    {
     "title": "What if this snake is actually poisonous ☠️ #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 20533463,
-    "views_per_hour": 398167
+    "views": 21472171,
+    "views_per_hour": 395171
    },
    {
     "title": "The Victoria’s Secret Fashion Show 2026",
     "channel": "Victoria's Secret",
-    "views": 31215901,
-    "views_per_hour": 356428
+    "views": 31437532,
+    "views_per_hour": 347966
    },
    {
     "title": "That guy is traumatised for life 😂",
     "channel": "Videos that make your day better ",
-    "views": 24028859,
-    "views_per_hour": 246980
+    "views": 24561061,
+    "views_per_hour": 245470
    },
    {
     "title": "\"Apart from my dignity, I think I'm fine.\" 😳",
     "channel": "Dreamy Talker",
-    "views": 16987848,
-    "views_per_hour": 232885
+    "views": 17214548,
+    "views_per_hour": 227370
    },
    {
     "title": "Who wore the bouncy dress better?😂",
     "channel": "Nick Wilkins",
-    "views": 18580738,
-    "views_per_hour": 208493
+    "views": 18806851,
+    "views_per_hour": 204677
    }
   ],
   "US-tech": [
    {
     "title": "iPhone Duo Review: First Generation Fun!",
     "channel": "Marques Brownlee",
-    "views": 7630050,
-    "views_per_hour": 269733
+    "views": 7980877,
+    "views_per_hour": 257001
    },
    {
     "title": "6 ways iPhone Duo beats Samsung",
     "channel": "Mrwhosetheboss",
-    "views": 5482460,
-    "views_per_hour": 193946
+    "views": 5826092,
+    "views_per_hour": 187730
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 19927508,
-    "views_per_hour": 138230
+    "views": 20226690,
+    "views_per_hour": 137664
    },
    {
     "title": "I thought the “Intel inside” sticker WAS the chip..",
     "channel": "CarterPCs",
-    "views": 11594510,
-    "views_per_hour": 109686
+    "views": 11692818,
+    "views_per_hour": 107795
    },
    {
     "title": "Why Cats Rub Against Your Laptop 🤔",
     "channel": "Zack D. Films",
-    "views": 13239721,
-    "views_per_hour": 106951
+    "views": 13323215,
+    "views_per_hour": 105273
    },
    {
     "title": "Amazon Products You Should Never See 😳",
     "channel": "RumiRumiR",
-    "views": 1125494,
-    "views_per_hour": 52345
+    "views": 1320125,
+    "views_per_hour": 54398
    }
   ]
  },
  "our_last_7_days": [
   {
    "title": "The K-pop group from BLACKPINK's producer 🎤",
-   "views": 1175,
+   "views": 1176,
    "avg_viewed_pct": 59,
    "subs": 0
   },
   {
    "title": "Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤",
-   "views": 668,
-   "avg_viewed_pct": 39,
+   "views": 918,
+   "avg_viewed_pct": 38,
+   "subs": 0
+  },
+  {
+   "title": "Jailer 2's cameos: Hrithik Roshan and more 🎬",
+   "views": 722,
+   "avg_viewed_pct": 41,
+   "subs": 0
+  },
+  {
+   "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
+   "views": 619,
+   "avg_viewed_pct": 56,
+   "subs": 1
+  },
+  {
+   "title": "Bohemian Rhapsody: too long for radio? 🎸",
+   "views": 604,
+   "avg_viewed_pct": 210,
    "subs": 0
   },
   {
@@ -1128,32 +1181,50 @@
    "subs": 0
   },
   {
-   "title": "Arsenal's 1st shot on target came in minute 80 ⚽",
-   "views": 503,
-   "avg_viewed_pct": 55,
-   "subs": 1
+   "title": "What was the first music video on MTV? 📺",
+   "views": 516,
+   "avg_viewed_pct": 65,
+   "subs": 0
   },
   {
    "title": "Fontaines D.C.'s first ever guest is ROSALÍA 🎻",
-   "views": 486,
-   "avg_viewed_pct": 52,
+   "views": 510,
+   "avg_viewed_pct": 51,
    "subs": 0
   },
   {
    "title": "Ayra Starr just made NFL history 🏈",
-   "views": 464,
-   "avg_viewed_pct": 58,
+   "views": 470,
+   "avg_viewed_pct": 59,
    "subs": 1
   },
   {
    "title": "Street Fighter movie: Roman Reigns is Akuma 🥋",
-   "views": 310,
-   "avg_viewed_pct": 54,
+   "views": 430,
+   "avg_viewed_pct": 55,
+   "subs": 1
+  },
+  {
+   "title": "Harry Styles' 30 nights at MSG are becoming a film 🎬",
+   "views": 389,
+   "avg_viewed_pct": 47,
+   "subs": 0
+  },
+  {
+   "title": "Angel Reese makes WNBA finals history 🏀",
+   "views": 347,
+   "avg_viewed_pct": 185,
+   "subs": 0
+  },
+  {
+   "title": "Mark Allen knocked out of Northern Ireland Open 🎱",
+   "views": 312,
+   "avg_viewed_pct": 65,
    "subs": 1
   },
   {
    "title": "Why KPop Demon Hunters 2 won't come until 2029 🎶",
-   "views": 280,
+   "views": 284,
    "avg_viewed_pct": 50,
    "subs": 1
   },
@@ -1164,6 +1235,18 @@
    "subs": 0
   },
   {
+   "title": "LOUD: first team to win VALORANT Champions 2x 🏆",
+   "views": 276,
+   "avg_viewed_pct": 60,
+   "subs": 1
+  },
+  {
+   "title": "GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵",
+   "views": 264,
+   "avg_viewed_pct": 49,
+   "subs": 0
+  },
+  {
    "title": "From lucky loser to beating the world No. 4 🎾",
    "views": 261,
    "avg_viewed_pct": 51,
@@ -1171,38 +1254,38 @@
   },
   {
    "title": "Planet Zoo 2 finally adds aquariums 🐠",
+   "views": 245,
+   "avg_viewed_pct": 39,
+   "subs": 0
+  },
+  {
+   "title": "Zara Larsson's Blue Moon: fairy or mermaid? 🌙",
    "views": 232,
-   "avg_viewed_pct": 40,
-   "subs": 0
-  },
-  {
-   "title": "What was the first music video on MTV? 📺",
-   "views": 225,
-   "avg_viewed_pct": 59,
-   "subs": 0
-  },
-  {
-   "title": "LOUD: first team to win VALORANT Champions 2x 🏆",
-   "views": 224,
-   "avg_viewed_pct": 54,
-   "subs": 1
-  },
-  {
-   "title": "Harry Styles' 30 nights at MSG are becoming a film 🎬",
-   "views": 185,
    "avg_viewed_pct": 54,
    "subs": 0
   },
   {
-   "title": "GTA 6 song: Justice, SZA, Tame Impala and 1 more 🎵",
-   "views": 180,
-   "avg_viewed_pct": 49,
+   "title": "Why Star Wars fans love Biddy Blas 🛸",
+   "views": 215,
+   "avg_viewed_pct": 36,
+   "subs": 0
+  },
+  {
+   "title": "The Beatles debut album recorded in 12 hours 🎸",
+   "views": 209,
+   "avg_viewed_pct": 80,
    "subs": 0
   },
   {
    "title": "NCT WISH: from debut to a dome 🎤",
-   "views": 173,
-   "avg_viewed_pct": 47,
+   "views": 192,
+   "avg_viewed_pct": 45,
+   "subs": 0
+  },
+  {
+   "title": "Usain Bolt's 9.58: still unbeaten ⚡",
+   "views": 152,
+   "avg_viewed_pct": 273,
    "subs": 0
   },
   {
@@ -1210,54 +1293,6 @@
    "views": 148,
    "avg_viewed_pct": 39,
    "subs": 0
-  },
-  {
-   "title": "Why Star Wars fans love Biddy Blas 🛸",
-   "views": 142,
-   "avg_viewed_pct": 35,
-   "subs": 0
-  },
-  {
-   "title": "How a YouTube video became A24's biggest film 🎬",
-   "views": 129,
-   "avg_viewed_pct": 40,
-   "subs": 0
-  },
-  {
-   "title": "Why Riot brought back a band that isn't real 🎤",
-   "views": 118,
-   "avg_viewed_pct": 23,
-   "subs": 0
-  },
-  {
-   "title": "How a smiley ball became Minecraft's creepiest monster 😳",
-   "views": 111,
-   "avg_viewed_pct": 28,
-   "subs": 0
-  },
-  {
-   "title": "Jailer 2's cameos: Hrithik Roshan and more 🎬",
-   "views": 109,
-   "avg_viewed_pct": 41,
-   "subs": 0
-  },
-  {
-   "title": "Why is a marathon 26.2 miles? 🏃",
-   "views": 91,
-   "avg_viewed_pct": 57,
-   "subs": 0
-  },
-  {
-   "title": "Apple's new smart home screen, explained 🏠",
-   "views": 88,
-   "avg_viewed_pct": 48,
-   "subs": 0
-  },
-  {
-   "title": "Disney's next film isn't a sequel ✨",
-   "views": 74,
-   "avg_viewed_pct": 29,
-   "subs": 1
   }
  ]
 }

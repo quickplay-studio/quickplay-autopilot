@@ -1,8 +1,9 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Cyberpunk 2077: 7 verified, 4 one-source, 3 pages
-eden sessions: 0 verified, 3 one-source, 3 pages
-harrison ford: 2 verified, 3 one-source, 3 pages
-BioWare: 0 verified, 1 one-source, 4 pages
-Olivia Rodrigo: 0 verified, 3 one-source, 2 pages
-5 packs, 9 verified facts
-gemini: {"out of quota": {}, "retired": ["gemini-2.5-flash-lite"], "timeouts": {"gemini-3.1-flash-lite": 1, "gemini-3.5-flash-lite": 1}, "answers": {"gemini-3.5-flash-lite": 3, "gemini-3.1-flash-lite": 1, "gemini-flash-lite-latest": 2}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+Angel Of My Dreams by JADE: 0 verified, 4 one-source, 1 pages
+mohamed salah: 0 verified, 1 one-source, 1 pages
+artemis ii orion cabin warning: 1 verified, 0 one-source, 2 pages
+Heath Ledger: 2 verified, 2 one-source, 2 pages
+BioWare: 0 verified, 11 one-source, 4 pages
+Cyberpunk 2077: 0 verified, 1 one-source, 3 pages
+6 packs, 3 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 7}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

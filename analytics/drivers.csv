@@ -1,99 +1,103 @@
 feature,feature_label,value,n,lift,median_rel,verdict,held_3s_pct,avg_viewed_pct,subs_per_1k,shares_per_1k,why
-angles,Angle research,hidden,1,1.3,2.86,too few to tell,,,,,
-angles,Angle research,shown,2,0.88,1.89,too few to tell,,,,,
-category,Category,Music,19,1.33,2.22,push,110,52,0.0,0.0,"likes per 1,000 views 14 vs 5 typical; average viewed 52% vs 46% typical"
-category,Category,Sport,11,1.26,1.26,push,109,56,0.0,0.0,average viewed 56% vs 46% typical; engaged views 37% vs 31% typical
-category,Category,Film,12,0.96,0.98,about typical,112,41,0.0,0.0,
-category,Category,Gaming,10,0.88,0.9,about typical,105,34,0.0,0.0,average viewed 34% vs 46% typical; engaged views 26% vs 31% typical
-category,Category,Entertainment,6,0.39,0.19,cut back,182,49,0.0,0.0,"likes per 1,000 views 3 vs 5 typical"
-category,Category,Tech,6,0.37,0.34,cut back,,41,6.5,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 21% vs 31% typical"
-category,Category,Science,5,0.29,0.04,cut back,,19,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 19% vs 46% typical"
-ending,Ending,follow line,1,1.0,1.01,too few to tell,,,,,
-ending,Ending,loop,1,0.63,0.15,too few to tell,,,,,
-ending,Ending,question,1,0.58,0.11,too few to tell,,,,,
-first_frame,First frame,cover,1,0.87,0.56,too few to tell,,30,0.0,0.0,
-first_frame,First frame,photo,4,0.67,0.51,early sign,,,,,"likes per 1,000 views 3 vs 5 typical"
-format,Format,story,2,1.4,3.94,too few to tell,,,,,
-format,Format,one_detail,14,1.2,1.98,about typical,110,54,0.0,0.0,"likes per 1,000 views 7 vs 5 typical; engaged views 37% vs 31% typical"
-format,Format,timeline,3,0.85,0.77,early sign,104,64,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
-format,Format,news_explained,9,0.82,0.58,about typical,120,47,0.0,0.0,"likes per 1,000 views 3 vs 5 typical; engaged views 23% vs 31% typical"
-format,Format,legacy,27,0.74,0.73,cut back,,41,0.0,0.0,average viewed 41% vs 46% typical
-format,Format,real_reason,6,0.63,0.71,cut back,108,28,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 28% vs 46% typical"
-format,Format,three_details,8,0.48,0.35,cut back,108,54,0.0,1.8,"likes per 1,000 views 0 vs 5 typical"
-hook_len,Hook length,9 to 12 words,30,0.9,1.0,about typical,110,54,0.0,0.0,
-hook_len,Hook length,13 words or more,10,0.71,1.14,cut back,,20,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 13% vs 31% typical"
-hook_len,Hook length,8 words or fewer,2,0.55,0.53,too few to tell,,,,,
-hook_type,Hook style,statement,10,1.67,2.17,push,110,54,0.0,0.0,"likes per 1,000 views 15 vs 5 typical; average viewed 54% vs 46% typical"
-hook_type,Hook style,superlative,3,1.49,2.38,early sign,106,57,1.7,0.0,"average viewed 57% vs 46% typical; likes per 1,000 views 6 vs 5 typical"
-hook_type,Hook style,number,23,0.75,0.76,cut back,110,52,0.0,0.0,
-hook_type,Hook style,you,1,0.61,0.14,too few to tell,,,,,
-hook_type,Hook style,twist,1,0.47,0.03,too few to tell,,,,,
-hook_type,Hook style,question,4,0.34,0.12,early sign,,0,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 0% vs 46% typical"
-kind,Kind of Short,true story,2,1.4,3.94,too few to tell,,,,,
-kind,Kind of Short,news,9,0.9,1.0,about typical,,,,,"likes per 1,000 views 0 vs 5 typical"
-kind,Kind of Short,follow-up,3,0.85,0.56,early sign,,30,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 12% vs 31% typical"
-kind,Kind of Short,breaking,4,0.69,1.1,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
-kind,Kind of Short,evergreen,5,0.43,0.26,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
-length,Length,25 to 34 s,30,0.83,1.1,about typical,108,54,0.0,0.0,"likes per 1,000 views 3 vs 5 typical"
-length,Length,under 25 s,10,0.82,0.81,about typical,110,56,0.0,0.0,
-length,Length,35 to 44 s,2,0.64,1.12,too few to tell,,0,0.0,0.0,
-look_captions,Captions,pop,6,1.85,2.52,push,110,59,0.0,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 59% vs 46% typical"
-look_captions,Captions,lab-captions-1019,6,1.43,2.74,push,,,,,
-look_captions,Captions,clean,17,0.71,1.0,cut back,106,54,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
-look_captions,Captions,punch,2,0.7,1.7,too few to tell,120,54,2.3,0.0,
-look_captions,Captions,boxed,3,0.58,0.42,early sign,111,24,0.0,1.8,average viewed 24% vs 46% typical
-look_captions,Captions,minimal,8,0.5,0.59,cut back,106,41,0.0,0.0,"likes per 1,000 views 1 vs 5 typical; engaged views 24% vs 31% typical"
-look_energy,Camera energy,steady,23,1.12,1.74,about typical,105,55,0.0,0.0,average viewed 55% vs 46% typical; engaged views 35% vs 31% typical
-look_energy,Camera energy,punchy,8,0.84,1.58,early sign,112,54,0.0,0.0,
-look_energy,Camera energy,calm,11,0.43,0.43,cut back,106,41,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 24% vs 31% typical"
-look_grade,Colour grade,cinematic,19,0.95,0.77,about typical,110,54,0.0,0.0,
-look_grade,Colour grade,vivid,3,0.92,2.3,early sign,112,54,0.8,0.0,
-look_grade,Colour grade,natural,13,0.75,1.26,cut back,106,47,0.0,0.0,"likes per 1,000 views 3 vs 5 typical"
-look_grade,Colour grade,lab-grade-1019,7,0.63,0.3,cut back,,,,,"likes per 1,000 views 0 vs 5 typical"
-look_opening,Opening,image_first,12,1.0,1.24,about typical,109,54,0.0,0.0,
-look_opening,Opening,graphic_first,29,0.74,0.76,cut back,110,54,0.0,0.0,engaged views 25% vs 31% typical
-look_opening,Opening,lab-opening-1019,1,0.72,0.26,too few to tell,,,,,
-look_voice,Voice,lab-voice-1019,3,1.37,5.93,early sign,,,,,
-look_voice,Voice,lewis,1,1.0,1.0,too few to tell,,,,,
-look_voice,Voice,george_quick,3,0.96,1.0,early sign,108,56,0.0,0.0,
-look_voice,Voice,george,18,0.94,1.47,about typical,106,54,0.0,0.0,
-look_voice,Voice,emma,3,0.93,1.26,early sign,110,49,0.0,0.0,
-look_voice,Voice,heart,2,0.75,1.17,too few to tell,,,,,
-look_voice,Voice,lily,2,0.68,1.45,too few to tell,,,,,
-look_voice,Voice,george_dramatic,10,0.57,0.49,cut back,147,54,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 22% vs 31% typical"
-mood,Music mood,retro,7,1.65,2.22,push,108,54,0.0,1.8,"likes per 1,000 views 14 vs 5 typical; average viewed 54% vs 46% typical"
-mood,Music mood,action,6,1.38,2.9,push,112,54,2.3,0.0,"average viewed 54% vs 46% typical; likes per 1,000 views 6 vs 5 typical"
-mood,Music mood,rock,3,1.15,0.77,early sign,104,64,0.0,0.0,engaged views 47% vs 31% typical; average viewed 64% vs 46% typical
-mood,Music mood,orchestral,1,1.15,1.74,too few to tell,,,,,
-mood,Music mood,tense,4,1.13,1.31,early sign,182,131,0.0,0.0,average viewed 131% vs 46% typical; still watching at 3 seconds 182% vs 110% typical
-mood,Music mood,inspiring,2,1.05,1.13,too few to tell,109,65,0.0,0.0,
-mood,Music mood,epic,2,0.92,0.88,too few to tell,103,41,0.0,0.0,
-mood,Music mood,hiphop,1,0.67,0.2,too few to tell,,,,,
-mood,Music mood,pop,8,0.64,0.59,cut back,110,39,0.0,0.0,average viewed 39% vs 46% typical
-mood,Music mood,space,3,0.58,0.26,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
-mood,Music mood,playful,2,0.55,0.51,too few to tell,,,,,
-mood,Music mood,tech,2,0.37,0.1,too few to tell,,,,,
-pictures,Pictures,mostly stock footage,5,1.41,2.38,push,106,59,0.0,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 59% vs 46% typical"
-pictures,Pictures,mostly real pictures,37,0.71,1.0,cut back,110,52,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
-replies,Comment replies,off,12,0.73,1.24,cut back,,,,,"likes per 1,000 views 0 vs 5 typical"
-replies,Comment replies,on,11,0.69,0.76,cut back,,30,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 12% vs 31% typical"
-slot,Posting time (UK),other times,8,1.3,1.37,push,,30,0.0,0.0,
-slot,Posting time (UK),08:00 to 10:59,13,1.22,2.38,about typical,111,54,0.8,0.0,"likes per 1,000 views 14 vs 5 typical; average viewed 54% vs 46% typical"
-slot,Posting time (UK),11:00 to 13:59,14,0.94,1.18,about typical,108,54,0.0,0.0,
-slot,Posting time (UK),17:00 to 19:59,9,0.83,0.55,about typical,,41,0.0,0.0,average viewed 41% vs 46% typical
-slot,Posting time (UK),14:00 to 16:59,13,0.5,0.61,cut back,107,41,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 41% vs 46% typical"
-slot,Posting time (UK),20:00 to 22:59,12,0.46,0.43,cut back,110,38,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 38% vs 46% typical"
-title_style,Title,number in title,23,0.88,1.21,about typical,111,47,0.0,0.0,
-title_style,Title,statement,37,0.76,0.76,cut back,104,41,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 41% vs 46% typical"
-title_style,Title,question,9,0.63,1.0,cut back,108,56,0.0,0.0,
-weekday,Day posted,Tuesday,7,1.43,2.04,early sign,,30,0.0,0.0,
-weekday,Day posted,Saturday,9,0.94,0.73,early sign,,48,0.0,0.0,
-weekday,Day posted,Monday,19,0.89,1.21,early sign,110,54,0.0,0.0,
-weekday,Day posted,Sunday,8,0.78,0.88,early sign,,35,0.0,0.0,average viewed 35% vs 46% typical; engaged views 28% vs 31% typical
-weekday,Day posted,Friday,8,0.62,0.53,early sign,,46,0.0,0.0,"likes per 1,000 views 3 vs 5 typical"
-weekday,Day posted,Wednesday,18,0.56,0.53,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
-writer,Writer model,gemini:gemini-3.5-flash-lite,4,1.19,1.37,early sign,,,,,
-writer,Writer model,groq:openai/gpt-oss-120b,2,0.85,1.21,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3.5-flash,1,0.61,0.14,too few to tell,,,,,
-writer,Writer model,gemini:gemini-flash-latest,2,0.38,0.09,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3-flash-preview,4,0.34,0.17,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
+angles,Angle research,hidden,1,1.43,4.13,too few to tell,,,,,
+angles,Angle research,shown,3,0.66,0.21,early sign,241,184,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+category,Category,Music,19,1.68,2.69,push,108,53,0.0,0.0,"likes per 1,000 views 14 vs 5 typical"
+category,Category,Sport,12,1.46,1.45,push,112,59,0.0,0.0,average viewed 59% vs 49% typical; engaged views 35% vs 31% typical
+category,Category,Film,12,1.18,1.2,about typical,103,40,0.0,0.0,"likes per 1,000 views 15 vs 5 typical"
+category,Category,Gaming,12,0.72,0.86,cut back,111,39,0.0,0.0,"likes per 1,000 views 2 vs 5 typical; engaged views 24% vs 31% typical"
+category,Category,Tech,5,0.44,0.39,cut back,,50,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+category,Category,Entertainment,7,0.34,0.19,cut back,150,49,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+category,Category,Science,7,0.25,0.05,cut back,,19,0.0,0.0,engaged views 10% vs 31% typical; average viewed 19% vs 49% typical
+ending,Ending,follow line,1,1.1,1.46,too few to tell,,57,0.0,0.0,
+ending,Ending,loop,1,0.69,0.22,too few to tell,,,,,
+ending,Ending,question,2,0.53,0.21,too few to tell,,,,,
+first_frame,First frame,photo,3,0.88,1.09,early sign,,41,0.0,0.0,average viewed 41% vs 49% typical
+first_frame,First frame,cover,3,0.59,0.81,early sign,,46,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 9% vs 31% typical"
+format,Format,one_detail,15,1.14,1.82,about typical,107,51,0.0,0.0,engaged views 35% vs 31% typical
+format,Format,timeline,4,0.97,1.06,early sign,102,135,0.0,0.0,
+format,Format,news_explained,10,0.96,0.83,about typical,121,58,0.0,0.0,
+format,Format,legacy,27,0.82,0.71,about typical,,40,0.0,0.0,average viewed 40% vs 49% typical
+format,Format,real_reason,6,0.77,1.02,cut back,106,57,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 28% vs 31% typical"
+format,Format,three_details,7,0.61,0.62,cut back,110,49,0.0,0.0,"engaged views 28% vs 31% typical; likes per 1,000 views 5 vs 5 typical"
+format,Format,story,5,0.54,0.27,early sign,,60,0.0,0.0,
+hook_len,Hook length,9 to 12 words,34,0.96,1.1,about typical,110,55,0.0,0.0,
+hook_len,Hook length,13 words or more,11,0.62,0.62,cut back,115,61,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 26% vs 31% typical"
+hook_len,Hook length,8 words or fewer,2,0.62,0.76,too few to tell,,57,0.0,0.0,
+hook_type,Hook style,statement,12,1.63,2.2,push,107,54,0.0,0.0,"likes per 1,000 views 7 vs 5 typical; average viewed 54% vs 49% typical"
+hook_type,Hook style,superlative,3,1.24,3.44,early sign,112,63,1.7,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 63% vs 49% typical"
+hook_type,Hook style,number,26,0.76,0.82,cut back,110,56,0.0,0.0,
+hook_type,Hook style,you,1,0.67,0.21,too few to tell,,,,,
+hook_type,Hook style,twist,1,0.47,0.05,too few to tell,,,,,
+hook_type,Hook style,question,4,0.39,0.17,early sign,,28,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 12% vs 31% typical"
+kind,Kind of Short,news,11,0.97,1.0,about typical,241,42,0.0,0.0,
+kind,Kind of Short,breaking,4,0.8,1.59,early sign,115,71,0.9,0.0,"likes per 1,000 views 0 vs 5 typical"
+kind,Kind of Short,follow-up,4,0.73,0.62,early sign,,46,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 24% vs 31% typical"
+kind,Kind of Short,true story,5,0.54,0.27,early sign,,60,0.0,0.0,
+kind,Kind of Short,evergreen,4,0.38,0.17,early sign,,57,0.0,0.0,engaged views 25% vs 31% typical
+length,Length,25 to 34 s,33,0.86,1.09,about typical,109,57,0.0,0.0,"likes per 1,000 views 1 vs 5 typical"
+length,Length,under 25 s,12,0.81,0.86,about typical,110,57,0.0,0.0,engaged views 26% vs 31% typical
+length,Length,35 to 44 s,2,0.69,1.61,too few to tell,,23,0.0,0.0,
+look_captions,Captions,pop,6,2.37,3.64,push,112,81,0.0,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 81% vs 49% typical"
+look_captions,Captions,lab-captions-1019,7,1.51,2.95,push,124,59,0.0,0.0,average viewed 59% vs 49% typical; engaged views 36% vs 31% typical
+look_captions,Captions,punch,2,0.76,2.46,too few to tell,118,55,2.3,0.0,
+look_captions,Captions,clean,19,0.7,1.0,cut back,107,57,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+look_captions,Captions,boxed,3,0.66,0.6,early sign,109,49,0.0,0.0,engaged views 28% vs 31% typical
+look_captions,Captions,minimal,10,0.44,0.8,cut back,103,50,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 25% vs 31% typical"
+look_energy,Camera energy,steady,21,1.57,2.95,push,109,60,0.0,0.0,average viewed 60% vs 49% typical; engaged views 34% vs 31% typical
+look_energy,Camera energy,punchy,8,1.03,2.28,early sign,115,55,0.0,0.0,
+look_energy,Camera energy,lab-energy-1019,1,0.56,0.1,too few to tell,,,,,
+look_energy,Camera energy,calm,17,0.38,0.29,cut back,105,50,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 22% vs 31% typical"
+look_grade,Colour grade,cinematic,19,1.17,1.11,about typical,109,54,0.0,0.0,average viewed 54% vs 49% typical
+look_grade,Colour grade,vivid,3,1.04,3.32,early sign,110,52,0.8,0.0,
+look_grade,Colour grade,natural,13,0.84,1.44,about typical,109,60,0.0,0.0,
+look_grade,Colour grade,lab-grade-1019,12,0.47,0.28,cut back,241,57,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+look_opening,Opening,image_first,12,1.3,1.79,push,109,59,0.0,0.0,average viewed 59% vs 49% typical; engaged views 34% vs 31% typical
+look_opening,Opening,graphic_first,35,0.68,0.79,cut back,111,55,0.0,0.0,"likes per 1,000 views 3 vs 5 typical; engaged views 26% vs 31% typical"
+look_voice,Voice,george,17,1.2,1.75,about typical,107,55,0.0,0.0,"likes per 1,000 views 10 vs 5 typical; average viewed 55% vs 49% typical"
+look_voice,Voice,george_quick,3,1.15,1.44,early sign,107,55,0.0,0.0,"likes per 1,000 views 28 vs 5 typical; average viewed 55% vs 49% typical"
+look_voice,Voice,lewis,1,1.1,1.44,too few to tell,,,,,
+look_voice,Voice,heart,2,0.87,1.68,too few to tell,,47,0.0,0.0,
+look_voice,Voice,lab-voice-1019,5,0.85,0.27,early sign,,61,0.0,0.0,
+look_voice,Voice,george_dramatic,10,0.77,0.83,cut back,118,61,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+look_voice,Voice,emma,4,0.7,0.94,early sign,311,217,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+look_voice,Voice,lily,3,0.54,0.1,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"
+look_voice,Voice,michael,2,0.46,0.17,too few to tell,,,,,
+mood,Music mood,action,6,1.76,4.18,push,115,58,2.0,0.0,"average viewed 58% vs 49% typical; likes per 1,000 views 6 vs 5 typical"
+mood,Music mood,retro,8,1.52,2.97,push,110,49,0.0,0.0,"likes per 1,000 views 12 vs 5 typical; engaged views 38% vs 31% typical"
+mood,Music mood,tense,4,1.39,1.9,early sign,124,71,0.0,0.0,average viewed 71% vs 49% typical; still watching at 3 seconds 124% vs 110% typical
+mood,Music mood,rock,3,1.38,1.11,early sign,102,135,0.0,0.0,average viewed 135% vs 49% typical; engaged views 36% vs 31% typical
+mood,Music mood,pop,9,0.81,0.89,about typical,107,47,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+mood,Music mood,inspiring,3,0.77,1.44,early sign,217,164,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+mood,Music mood,hiphop,1,0.73,0.29,too few to tell,,,,,
+mood,Music mood,space,3,0.62,0.27,early sign,,,,,
+mood,Music mood,playful,2,0.59,0.73,too few to tell,,57,0.0,0.0,
+mood,Music mood,epic,5,0.45,0.27,cut back,98,49,0.0,0.0,"likes per 1,000 views 3 vs 5 typical; engaged views 27% vs 31% typical"
+mood,Music mood,tech,2,0.42,0.13,too few to tell,,,,,
+pictures,Pictures,mostly stock footage,5,1.77,3.44,push,112,80,0.0,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 80% vs 49% typical"
+pictures,Pictures,mostly real pictures,42,0.71,0.94,cut back,107,55,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+replies,Comment replies,on,13,0.66,0.81,cut back,106,46,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; engaged views 25% vs 31% typical"
+replies,Comment replies,off,15,0.6,0.29,cut back,182,76,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+slot,Posting time (UK),other times,6,1.93,2.33,push,,46,0.0,0.0,
+slot,Posting time (UK),08:00 to 10:59,13,1.57,3.44,push,112,56,0.0,0.0,"likes per 1,000 views 14 vs 5 typical; average viewed 56% vs 49% typical"
+slot,Posting time (UK),11:00 to 13:59,14,1.12,1.31,about typical,107,51,0.0,0.0,"likes per 1,000 views 11 vs 5 typical"
+slot,Posting time (UK),17:00 to 19:59,12,0.71,0.74,cut back,106,45,0.0,0.0,"likes per 1,000 views 4 vs 5 typical; average viewed 45% vs 49% typical"
+slot,Posting time (UK),20:00 to 22:59,12,0.53,0.52,cut back,327,39,0.0,0.0,"likes per 1,000 views 0 vs 5 typical; average viewed 39% vs 49% typical"
+slot,Posting time (UK),14:00 to 16:59,17,0.42,0.54,cut back,107,50,0.0,0.0,"likes per 1,000 views 2 vs 5 typical"
+title_search,Title wording,curiosity,1,0.89,0.62,too few to tell,,21,0.0,0.0,
+title_search,Title wording,search phrase,1,0.56,0.1,too few to tell,,,,,
+title_style,Title,number in title,25,0.95,1.0,about typical,110,48,0.0,0.0,
+title_style,Title,statement,40,0.8,0.91,cut back,112,45,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+title_style,Title,question,9,0.64,0.89,cut back,110,57,0.0,0.0,engaged views 27% vs 31% typical
+weekday,Day posted,Tuesday,7,1.84,2.95,early sign,124,76,0.0,0.0,average viewed 76% vs 49% typical; still watching at 3 seconds 124% vs 110% typical
+weekday,Day posted,Monday,19,1.17,1.75,early sign,109,55,0.0,0.0,"likes per 1,000 views 9 vs 5 typical; average viewed 55% vs 49% typical"
+weekday,Day posted,Saturday,9,0.95,0.71,early sign,,50,0.0,0.0,
+weekday,Day posted,Sunday,8,0.93,1.03,early sign,,34,0.0,0.0,
+weekday,Day posted,Friday,8,0.63,0.52,early sign,,46,0.0,0.0,"likes per 1,000 views 3 vs 5 typical"
+weekday,Day posted,Wednesday,23,0.47,0.27,early sign,,47,0.0,0.0,"likes per 1,000 views 0 vs 5 typical"
+writer,Writer model,groq:openai/gpt-oss-120b,2,0.98,1.75,too few to tell,,47,0.0,0.0,
+writer,Writer model,gemini:gemini-3.5-flash-lite,4,0.8,0.86,early sign,,68,0.0,0.0,"likes per 1,000 views 4 vs 5 typical"
+writer,Writer model,gemini:gemini-3.5-flash,1,0.67,0.21,too few to tell,,,,,
+writer,Writer model,gemini:gemini-3.6-flash,1,0.56,0.1,too few to tell,,,,,
+writer,Writer model,gemini:gemini-3.1-flash-lite,1,0.47,0.03,too few to tell,,,,,
+writer,Writer model,gemini:gemini-3-flash-preview,5,0.38,0.27,early sign,,40,0.0,0.0,engaged views 25% vs 31% typical; average viewed 40% vs 49% typical
+writer,Writer model,gemini:gemini-flash-latest,4,0.37,0.15,early sign,,,,,"likes per 1,000 views 0 vs 5 typical"

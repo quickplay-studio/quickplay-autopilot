@@ -1,15 +1,21 @@
 scope,age,gender,viewer_pct
-channel,13 to 17,female,6.1
-channel,13 to 17,male,6.9
-channel,18 to 24,female,4.2
-channel,18 to 24,male,7.3
-channel,25 to 34,female,8.8
-channel,25 to 34,male,17.1
-channel,35 to 44,female,7.2
-channel,35 to 44,male,15.5
-channel,45 to 54,female,4.3
-channel,45 to 54,male,10.2
-channel,55 to 64,female,1.5
-channel,55 to 64,male,5.7
-channel,65 to ,female,1.7
-channel,65 to ,male,3.7
+channel,13 to 17,female,4.8
+channel,13 to 17,male,6.2
+channel,18 to 24,female,3.3
+channel,18 to 24,male,6.5
+channel,25 to 34,female,7.3
+channel,25 to 34,male,15.4
+channel,35 to 44,female,6.1
+channel,35 to 44,male,14.8
+channel,45 to 54,female,3.8
+channel,45 to 54,male,11.0
+channel,55 to 64,female,2.2
+channel,55 to 64,male,8.5
+channel,65 to ,female,2.8
+channel,65 to ,male,7.2
+category: Film,35 to 44,male,62.3
+category: Film,45 to 54,male,37.7
+category: Music,65 to ,female,27.9
+category: Music,65 to ,male,72.1
+category: Sport,55 to 64,male,51.4
+category: Sport,65 to ,male,48.6

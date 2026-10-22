@@ -1,21 +1,368 @@
 {
  "date": "2026-10-22",
- "built": "2026-10-22T16:31+00:00",
+ "built": "2026-10-22T19:06+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
   {
-   "n": 18,
-   "topic": "Cyberpunk 2077",
-   "signal": "YouTube GB 108,528/h",
-   "category": "Gaming",
-   "what_is_new": "The Edgerunners 2 Update for Cyberpunk 2077 was released today on October 22 2026.",
+   "n": 4,
+   "topic": "Angel Of My Dreams by JADE",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "On Wednesday, Oct. 21, JADE debuted on the Spotify US Daily Top Songs USA chart at No. 197 with Angel of My Dreams.",
    "hooks": [
-    "The massive Edgerunners 2 update for Cyberpunk 2077 is out now.",
-    "Dual wielding and new story quests arrive in Night City today.",
-    "Customize your cyberware and explore new quests in the latest update."
+    "How did JADE suddenly score a viral hit two and a half years later?",
+    "Kylie Jenner just turned this debut solo single into a massive streaming chart success."
+   ],
+   "sources": [
+    [
+     "Will Kylie Jenner’s Victoria’s Secret Moment Finally Turn JADE’s ‘Angel of My Dreams’ Into a Viral Hit?",
+     "https://www.billboard.com/music/chart-beat/jade-angel-of-my-dreams-kylie-jenner-victorias-secret-hit-1236364667/",
+     "Billboard",
+     "2026-10-21"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Brit Award-winning pop sensation JADE did not take the stage, but her beloved debut solo single, Angel of My Dreams soundtracked Kylie Jenners sultry, $50 million Fantasy Bra-sporting catwalk.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Brit Award-winning pop sensation JADE did not take the stage, but her beloved debut solo single, “Angel of My Dreams” soundtracked Kylie Jenner’s sultry, $50"
+     }
+    },
+    {
+     "claim": "On the day of the show, Angel scored just 18,000 official streams.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "On the day of the show, “Angel” scored just 18,000 official streams."
+     }
+    },
+    {
+     "claim": "After Kylie hit the runway (Oct. 18), Angel ballooned by a jaw-dropping 1,434% to over 284,000 official streams.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "After Kylie hit the runway (Oct. 18), “Angel” ballooned by a jaw-dropping 1,434% to over 284,000 official streams."
+     }
+    },
+    {
+     "claim": "On Wednesday (Oct. 21), Angel debuted on the Spotify US Daily Top Songs USA chart at No. 197, two and a half years post-release.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "On Wednesday (Oct. 21), “Angel” debuted on the Spotify US Daily Top Songs USA chart at No. 197, two and a half years post-release."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 11,
+   "topic": "mohamed salah",
+   "signal": "Google Trends US 500+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Mohamed Salah announced he would leave Liverpool in March 2026?"
+   ],
+   "sources": [
+    [
+     "mohamed salah",
+     "https://en.wikipedia.org/wiki/Mohamed_Salah",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "In March 2026, Mohamed Salah announced that he would leave Liverpool at the end of the 2025 to 26 season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In March 2026, Salah announced that he would leave Liverpool at the end of the 2025–26 season."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Mohamed_Salah_Argentina_v_Egypt_7_July_2026-163_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 14,
+   "topic": "artemis ii orion cabin warning",
+   "signal": "Google Trends US 500+",
+   "category": "Science",
+   "what_is_new": "NASA shared iPhone footage capturing Earthshine from the Orion spacecraft during the Artemis II mission.",
+   "hooks": [
+    "Did a cabin leak warning almost ruin Artemis II?"
+   ],
+   "sources": [
+    [
+     "'Cabin leak suspected': Artemis II astronaut reveals how a warning nearly derailed NASA's epic moon mission",
+     "https://www.space.com/space-exploration/artemis/cabin-leak-suspected-artemis-ii-astronaut-reveals-how-a-warning-nearly-derailed-moon-mission",
+     "Space.com",
+     "2026-10-22"
+    ],
+    [
+     "NASA shares iPhone video capturing Earthshine from Orion during Artemis II",
+     "https://9to5mac.com/2026/04/22/nasa-shares-iphone-video-capturing-earthshine-from-orion-during-artemis-ii/",
+     "9to5Mac",
+     "2026-04-22"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The incident unfolded on April 2, the second day of the Artemis II mission.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The incident unfolded on April 2, the second day of the Artemis II mission, as the astronauts' Orion spacecraft swooped back toward Earth after traveling",
+      "2": "The iPhone footage, captured on the mission’s second day, shows Earth’s reflected light illuminating the Orion cabin."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "page:https://9to5mac.com/2026/04/22/nasa-shares-iphone-video-capturing-earthshine-from-orion-during-artemis-ii/"
+   ]
+  },
+  {
+   "n": 18,
+   "topic": "Heath Ledger",
+   "signal": "Wikipedia 177,482 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Heath Ledger starred in 10 Things I Hate About You?",
+    "The cast of 10 Things I Hate About You reunited recently to honour Heath Ledger.",
+    "Heath Ledger was born in Perth, Western Australia in 1979."
+   ],
+   "sources": [
+    [
+     "Julia Stiles Reunites With ’10 Things I Hate About You’ Cast to Honor Heath Ledger on ‘DWTS’",
+     "https://www.hollywoodreporter.com/movies/movie-news/julia-stiles-reunites-10-things-i-hate-about-you-cast-heath-ledger-dwts-1236737039/",
+     "The Hollywood Reporter",
+     "2026-10-20"
+    ],
+    [
+     "Heath Ledger",
+     "https://en.wikipedia.org/wiki/Heath_Ledger",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Heath Ledger died in 2008 from an accidental overdose.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Ledger died in 2008 at the age of 28 from an accidental overdose.",
+      "2": "In January 2008, Ledger died from an accidental overdose of prescription drugs."
+     }
+    },
+    {
+     "claim": "Heath Ledger starred in the 1999 rom com 10 Things I Hate About You.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Ahead of Tuesday’s episode, which was Dedication Night, it was revealed that Julia Stiles and her pro partner Ezra Sosa would be dedicating their dance",
+      "2": "His film breakthrough came as the lead in the romantic comedy 10 Things I Hate About You (1999)."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Julia Stiles and the cast of 10 Things I Hate About You reunited on Dancing With the Stars to pay tribute to Heath Ledger.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It was a night to remember on Dancing With the Stars, as the 10 Things I Hate About You cast reunited on the ABC dance"
+     }
+    },
+    {
+     "claim": "Heath Andrew Ledger was born on 4 April 1979 in Perth, Western Australia.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Heath Andrew Ledger (4 April 1979 – 22 January 2008) was an Australian actor."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Heath_Ledger_(2).jpg"
+   ]
+  },
+  {
+   "n": 19,
+   "topic": "BioWare",
+   "signal": "Wikipedia 170,992 views",
+   "category": "Gaming",
+   "what_is_new": "EA shut down BioWare and canceled its new Mass Effect game.",
+   "hooks": [
+    "EA just shut down BioWare after thirty years.",
+    "A leaked trailer reveals the canceled Mass Effect game.",
+    "Discover the incredible history behind BioWare."
+   ],
+   "sources": [
+    [
+     "Mass Effect 5 trailer leaks following BioWare shutdown",
+     "https://www.theverge.com/games/1016932/mass-effect-5-universe-trailer-leak-bioware-ea",
+     "The Verge",
+     "2026-10-22"
+    ],
+    [
+     "'No other studio in the world did it better' than BioWare at its peak, says former Dragon Age lead writer David Gaider",
+     "https://www.pcgamer.com/games/dragon-age/no-other-studio-in-the-world-did-it-better-than-bioware-at-its-peak-says-former-dragon-age-lead-writer-david-gaider/",
+     "PC Gamer",
+     "2026-10-22"
+    ],
+    [
+     "Can We Finally Agree That Dragon Age: The Veilguard Was Actually Terrific?",
+     "https://www.polygon.com/dragon-age-the-veilguard-bioware-rpg-retrospective/",
+     "Polygon",
+     "2026-10-22"
+    ],
+    [
+     "BioWare",
+     "https://en.wikipedia.org/wiki/BioWare",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "BioWare was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
+     }
+    },
+    {
+     "claim": "The company was acquired by American publisher Electronic Arts in 2007.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The company was acquired by American publisher Electronic Arts in 2007."
+     }
+    },
+    {
+     "claim": "EA announced it intended to close the studio in October 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "EA announced it intended to close the studio in October 2026."
+     }
+    },
+    {
+     "claim": "In 2011, BioWare launched their first massively multiplayer online role-playing game, Star Wars: The Old Republic.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "In 2011, BioWare launched their first massively multiplayer online role-playing game (MMORPG), Star Wars: The Old Republic."
+     }
+    },
+    {
+     "claim": "BioWare was incorporated on 1 February 1995, though formally launched on 22 May 1995.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The company was incorporated on 1 February 1995, though formally launched on 22 May 1995."
+     }
+    },
+    {
+     "claim": "Baldur's Gate sold more than two million copies after its release, nearly matching the sales of Diablo.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Baldur's Gate sold more than two million copies after its release, nearly matching the sales of Diablo."
+     }
+    },
+    {
+     "claim": "Baldur's Gate II sold two million copies, matching the sales of the first game in the series.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Baldur's Gate II sold two million copies, matching the sales of the first game in the series."
+     }
+    },
+    {
+     "claim": "Yesterday, EA shut down BioWare and canceled the studio’s new Mass Effect game in development.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Yesterday, EA shut down BioWare and canceled the studio’s new Mass Effect game in development, but a trailer apparently representing the game was published on"
+     }
+    },
+    {
+     "claim": "Amazon is reportedly still working on its Mass Effect TV show for Prime Video.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Even though this new game has been canceled, Amazon is reportedly still working on its Mass Effect TV show for Prime Video, so there may"
+     }
+    },
+    {
+     "claim": "David Gaider joined BioWare in 1999 to work on Baldur's Gate 2: Shadows of Amn and went on to be lead writer on the early Dragon Age games.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Gaider joined BioWare in 1999 to work on Baldur's Gate 2: Shadows of Amn and went on to be lead writer on the early Dragon"
+     }
+    },
+    {
+     "claim": "BioWare internally cancelled an early prototype for the fourth Dragon Age game in 2017, before restarting development again in the following year.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "As reported by Kotaku, BioWare internally cancelled an early prototype for the fourth Dragon Age game in 2017, before restarting development again in the following"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Epcor_Tower.JPG"
+   ]
+  },
+  {
+   "n": 25,
+   "topic": "Cyberpunk 2077",
+   "signal": "YouTube GB 103,031/h",
+   "category": "Gaming",
+   "what_is_new": "A new free update for Cyberpunk 2077 has been released, adding dual-wielding, cross-platform mod support, and Edgerunners-inspired quests.",
+   "hooks": [
+    "Did you know Cyberpunk 2077 has sold over 40 million copies?"
    ],
    "sources": [
     [
@@ -37,113 +384,8 @@
      ""
     ]
    ],
-   "verified": [
-    {
-     "claim": "The free Edgerunners 2 Update for Cyberpunk 2077 is available now.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The free Edgerunners 2 Update to Cyberpunk 2077 is available now.",
-      "2": "The update arrives 22nd October on PC, PS5, and Xbox Series S/X"
-     }
-    },
-    {
-     "claim": "Players can now use dual wielding for pistols and revolvers in the game.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "That’s right — dual wielding is here!",
-      "2": "CD Projekt Red has detailed the substantial update coming to Cyberpunk 2077, revealing a new dual-wielding skill for pistols and revolvers"
-     }
-    },
-    {
-     "claim": "Cross platform mod support is now available through mod.io integration.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "We’re introducing cross-platform mod support through mod.io integration.",
-      "2": "It's also a partnership with mod platform Mod.io, and there's a panel in the game where you can browse mods"
-     }
-    },
-    {
-     "claim": "A new radio station called HKGN 102.FM has been added to the game.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "We’ve also added a new radio station, HKGN 102.FM, featuring official tracks from both “Cyberpunk: Edgerunners” and “Edgerunners 2.”",
-      "2": "There'll also be a new Edgerunners radio station added to Cyberpunk 2077 to listen to, which has 16 tracks comprised of songs from both Edgerunners"
-     }
-    },
-    {
-     "claim": "Players can now customise the appearance of their cyberware using new glam docs.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "These new vendors let you customize the appearance of your cyberware, with 40 styles in different colors to choose from.",
-      "2": "Implantable cyberware is becoming customisable via new \"glam docs\" being added to the game alongside - sometimes literally - the ripper docs you already find"
-     }
-    },
-    {
-     "claim": "A new side quest called Clampdown has been added to the game.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "What begins as just another gig from Wakako turns into an action-packed, high-stakes mission that sees V cross paths with Weak Kingsley",
-      "2": "Added a new side quest, Clampdown, set before the events of Cyberpunk: Edgerunners 2."
-     }
-    },
-    {
-     "claim": "There are 12 new minor arcana tarot cards to discover in Night City.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "There are 12 new minor arcana tarot cards to track down",
-      "2": "There are also minor tarot arcana being added to the game for you to find"
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
-    {
-     "claim": "Cyberpunk 2077 now supports XBOX Play Anywhere for console and PC.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Cyberpunk 2077 now supports XBOX Play Anywhere, with one purchase enabling play on both XBOX Series X|S and XBOX on PC"
-     }
-    },
-    {
-     "claim": "A new quest type called Night City Tours allows players to explore city lore.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Another new type of quest coming in the update is Night City Tours, which is a less action-focused pursuit"
-     }
-    },
-    {
-     "claim": "The game now includes support for DLSS 4.5 technology.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Added support for DLSS 4.5, including up to 6X Multi Frame Generation or Dynamic Multi Frame Generation, and the 2nd Generation Transformer Model."
-     }
-    },
     {
      "claim": "Cyberpunk 2077 has sold over 40 million copies as of July 2026.",
      "sources": [
@@ -156,267 +398,6 @@
    ],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/22/cyberpunk-2077-edgerunners-2-update/"
-   ]
-  },
-  {
-   "n": 3,
-   "topic": "eden sessions",
-   "signal": "Google Trends GB 200+",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Ben Howard is headlining the Eden Sessions this summer!",
-    "Catch Ben Howard live at the Eden Project on 10 July!"
-   ],
-   "sources": [
-    [
-     "10 nightime attractions around the UK this autumn",
-     "https://www.theguardian.com/travel/2026/oct/22/best-after-dark-attractions-light-festivals-uk-autumn",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "Ben Howard announced for summer's Eden Sessions",
-     "https://www.bbc.com/news/articles/cy8pzm4k211o",
-     "BBC",
-     "2026-02-02"
-    ],
-    [
-     "eden sessions",
-     "https://en.wikipedia.org/wiki/Eden_Sessions",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Singer-songwriter Ben Howard has been announced as one of the headline acts at this summer's Eden Sessions in Cornwall.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Singer-songwriter Ben Howard has been announced as one of the headline acts at this summer's Eden Sessions in Cornwall."
-     }
-    },
-    {
-     "claim": "Howard will perform at the live show at the Eden Project on 10 July.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Howard, who was raised in Devon and studied in Falmouth, Cornwall, will perform at the live show at the Eden Project on 10 July."
-     }
-    },
-    {
-     "claim": "Other headline acts on various dates this summer include Snow Patrol, Wolf Alice, Mika, the Pixies and Neil Young.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Other headline acts on various dates this summer include Snow Patrol, Wolf Alice, Mika, the Pixies and Neil Young."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Eden_project.JPG"
-   ]
-  },
-  {
-   "n": 4,
-   "topic": "harrison ford",
-   "signal": "Google Trends GB 100+",
-   "category": "Film",
-   "what_is_new": "Harrison Ford and Calista Flockhart were selected to receive their first joint award as a couple at the Stardust Ball.",
-   "hooks": [
-    "Did you know Harrison Ford and Calista Flockhart are getting their first joint award?",
-    "Harrison Ford has served as vice chair of Conservation International since 1991."
-   ],
-   "sources": [
-    [
-     "Zach Braff: ‘You can be talented and good-looking, but acting success is still like winning the lottery’",
-     "https://www.theguardian.com/film/2026/oct/22/zach-braff-reader-interview",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "Harrison Ford and Calista Flockhart to Receive First Joint Award as Couple Is Selected for Icon Honors",
-     "https://www.hollywoodreporter.com/lifestyle/lifestyle-news/harrison-ford-calista-flockhart-couple-award-stardust-ball-1236736736/",
-     "The Hollywood Reporter",
-     "2026-10-20"
-    ],
-    [
-     "harrison ford",
-     "https://en.wikipedia.org/wiki/Harrison_Ford",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Harrison Ford joined Conservation International board of directors in 1991 and currently serves as a vice chair.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "He joined Conservation International’s board of directors in 1991, and has since become the org’s longest-serving member. He currently serves as a vice chair there.",
-      "3": "Ford is also an environmental activist, having served as the inaugural vice chair of Conservation International since 1991."
-     }
-    },
-    {
-     "claim": "Harrison Ford currently stars in Shrinking on Apple TV.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Ford currently stars in Shrinking on Apple TV",
-      "3": "Ford has also starred in the Paramount+ western series 1923 (2022–2025) and the Apple TV+ comedy series Shrinking (since 2023), earning two nominations at the"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Harrison Ford and Calista Flockhart will receive their first joint award at the Stardust Ball.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Harrison Ford and Calista Flockhart will take a spin in the spotlight at the Stardust Ball, a fundraiser presented by Women’s Guild Cedars-Sinai at the"
-     }
-    },
-    {
-     "claim": "Harrison Ford was born on July 13, 1942.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Harrison Ford (born July 13, 1942) is an American actor."
-     }
-    },
-    {
-     "claim": "Harrison Ford is married to actress Calista Flockhart.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He is married to actress Calista Flockhart."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harrison_Ford_-_Televerse_2025-03.jpg"
-   ]
-  },
-  {
-   "n": 13,
-   "topic": "BioWare",
-   "signal": "Wikipedia 170,992 views",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "BioWare faces closure after decades of legendary gaming history.",
-    "EA announces the closure of legendary developer BioWare in October 2026."
-   ],
-   "sources": [
-    [
-     "Game industry legend Warren Spector blows up over BioWare's closure: 'it's utter bulls**t'",
-     "https://www.pcgamer.com/gaming-industry/game-industry-legend-warren-spector-blows-up-over-biowares-closure-its-utter-bulls-t/",
-     "PC Gamer",
-     "2026-10-22"
-    ],
-    [
-     "BioWare's cancelled Mass Effect game would've learned from Baldur's Gate 3 and The Witcher to deliver \"a level of autonomy and choice that n",
-     "https://www.eurogamer.net/cancelled-mass-effect-bioware-unprecedented-levels-of-autonomy",
-     "Eurogamer",
-     "2026-10-22"
-    ],
-    [
-     "Mass Effect 5 Trailer Reportedly Ready to Go Before BioWare Closure",
-     "https://www.ign.com/articles/mass-effect-5-trailer-reportedly-ready-to-go-before-bioware-closure",
-     "IGN",
-     "2026-10-22"
-    ],
-    [
-     "BioWare",
-     "https://en.wikipedia.org/wiki/BioWare",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "EA announced it intended to close the studio in October 2026.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "EA announced it intended to close the studio in October 2026."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Epcor_Tower.JPG"
-   ]
-  },
-  {
-   "n": 21,
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 116,522/h",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Olivia Rodrigo was born in California?",
-    "When did Olivia Rodrigo release her first album?"
-   ],
-   "sources": [
-    [
-     "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
-     "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
-     "Rolling Stone",
-     "2026-10-16"
-    ],
-    [
-     "Olivia Rodrigo",
-     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Olivia Rodrigo was born on February 20, 2003, at the Rancho Springs Medical Center in Murrieta, California.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Olivia Isabel Rodrigo (born February 20, 2003) is an American singer-songwriter and actress."
-     }
-    },
-    {
-     "claim": "Her debut studio album, Sour, was released on May 21, 2021.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Sour, her debut studio album, was released on May 21, 2021, to critical acclaim."
-     }
-    },
-    {
-     "claim": "She signed with Geffen Records in 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Rodrigo shifted her focus to music and signed with Geffen Records in 2020."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Glasto2025-546_(cropped)_2.jpg"
    ]
   }
  ]

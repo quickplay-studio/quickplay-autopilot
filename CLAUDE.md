@@ -26,6 +26,8 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
 - analytics/insights.md: the Recipe from the data; analytics/decisions.csv: every change made from it; analytics/weekly.md:
   the Monday report (report.yml, a GitHub issue labelled weekly). Clips: docs/clips.html (money and views per campaign),
   clips/submit.csv (GitHub submits the links itself, submit.py), docs/CLIPS.md.
+- docs/CHROME_JOBS.md: the jobs the Mac task does in Charlie's Chrome (cookies, joins, account keys); a cloud session
+  adds a job there (or fires the task with the job text) instead of trying to use a browser itself.
 - tests/: offline tests with stubbed HTTP. Run them all before every push.
 
 ## Channel rules (non-negotiable)

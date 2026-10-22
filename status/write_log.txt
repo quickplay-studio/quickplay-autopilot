@@ -1,11 +1,5 @@
-evening run for 2026-10-23: 1 to write from 6 fact packs
+breaking run for 2026-10-22: 1 to write from 5 fact packs
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Angel Of My Dreams by JADE: still failing: UK date style: write '20 October', not ['October 21']
-covered already: ronnie o'sullivan
-covered already: Heath Ledger
-covered already: BioWare
-covered already: Cyberpunk 2077
-too few facts: Dancing with the Stars (American TV series) season 35
-David Warner slams South Africa Test crowds 🏏: gemini-3.5-flash-lite, 0 warnings
-wrote 1 of 1: QD-124 Bavuma scores majestic 179 against Australia 🏏
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash-lite": 9, "gemini-flash-latest": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+eden sessions: gemini-3.5-flash-lite, 0 warnings
+wrote 1 of 1: QD-125 Eden Sessions: Ben Howard headlines this summer 🎤
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash-lite": 4}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

@@ -40,7 +40,8 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
-            ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("writer", "Writer model")]
+            ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("writer", "Writer model"),
+            ("appeal", "Appeal")]
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "writer")     # recorded on the board by the writer (writer.py tests)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 
@@ -68,7 +69,8 @@ def features(r):
     hw = _f(r.get("hook_words"))
     out["hook_len"] = "" if not hw else ("8 words or fewer" if hw <= 8 else "9 to 12 words" if hw <= 12 else "13 words or more")
     s = _f(r.get("seconds"))
-    out["length"] = "" if not s else ("under 25 s" if s < 25 else "25 to 34 s" if s < 35 else "35 to 44 s" if s < 45 else "45 s or more")
+    out["length"] = "" if not s else ("under 25 s" if s < 25 else "25 to 34 s" if s < 35 else "35 to 44 s" if s < 45 else "45 to 89 s" if s < 90 else "90 s or more")
+    out["appeal"] = r.get("appeal") or ""
     slot = r.get("slot_uk") or ""
     if slot:
         h = int(slot[:2])

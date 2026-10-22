@@ -52,6 +52,7 @@ F.OUT = pathlib.Path(SCRATCH + "/facts_full.json"); F.OUT.write_text(json.dumps(
 F.page_text = lambda url, wiki=False: (TEXT, "")
 W.reserve_count = lambda: 9
 W.recent = lambda days=14: []      # the real queue must not count as "covered already"
+W.pick_kinds = lambda n: (["top list", "true story", "evergreen"] * 4)[:n]     # every kind, whatever the day's shuffle
 W.plan = lambda breaking=False, hint="": ("morning", __import__("datetime").date(2026, 10, 21), 6)
 orig = W.test_plan
 W.test_plan = lambda k, kind="news": (lambda st, t: (st, {**t, "series": "two parts"} if kind in ("top list", "true story", "fiction") else t))(*orig(k, kind))

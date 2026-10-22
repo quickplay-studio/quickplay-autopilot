@@ -30,9 +30,17 @@ gaming, film and TV, music, sport, celebrities, streamers and creators, tech lau
 - Facts: use ONLY the facts in the pack below. A "verified" fact can be stated plainly. A "one source" fact must name its
   source in the narration ("Variety says", "according to the BBC"). Anything unconfirmed must be said to be unconfirmed and
   who is saying it. Never invent anything. Copy names, numbers and dates exactly as the pack writes them.
-- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, never "X is back" or a slow intro. Put
-  "impact": true on the hook and on the payoff beat.
-- 5 to 9 beats, 70 to 110 words of narration in total, one or two sentences per beat.
+- Relatable, for everyone: the Short is for the millions who know the subject from their own life (the game on every
+  phone, the film everyone has seen, the song at every party, the team, the gadget in their pocket), never for the fans
+  who know the lore. Tell it through what it means for the viewer ("you", "your", "everyone who..."), and skip business
+  history, licensing, corporate timelines, dates for their own sake and records only fans care about. If the subject is
+  known only to fans, find the angle an ordinary person would care about, or return {"skip": "niche"}. Set "appeal":
+  "everyone" when most people in the UK and US know the subject, "fans" when only followers do.
+- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, speaking to the viewer's own experience, never
+  "X is back", never "Discover", "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put "impact": true on
+  the hook and on the payoff beat.
+- 5 to 9 beats, 70 to 110 words of narration in total, one or two sentences per beat (a longer Short, when the style
+  note below asks for one, keeps every beat a new surprise and saves the wildest for last).
 - Ending: land the payoff, then either a line that loops back into the hook or a short question viewers can answer.
 - Neat and minimal: at most 3 beats with a graphic ("visual" not {"type": "none"}), few words on each graphic.
 - Real footage first: at least 4 in 5 shots show the actual subject, and beat 1's shots always do. In order: the pack's
@@ -61,7 +69,7 @@ gaming, film and TV, music, sport, celebrities, streamers and creators, tech lau
 - meta.sources: the pack's sources as [title, url] in the same order. meta.facts: every claim you used as
   [claim, [source numbers from the pack]].
 - "format": one of the format ids below. "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment.
-  "music": {"mood": one of %(moods)s}.
+  "appeal": "everyone" or "fans" (see above). "music": {"mood": one of %(moods)s}.
 - Lead with what is new today (the pack's "What is new"). If the pack has nothing new from the last few days, return
   {"skip": "nothing new"}.
 - Say only what the facts say. Never add details, motives, quotes or loaded words ("clashed", "slammed", "macho") the
@@ -365,11 +373,15 @@ and watch all year, not news, in these categories (strongest first): {cats}. Sug
 - "true story": a remarkable true story (an unlikely record, a famous mix-up, a comeback, a mystery solved), told from one
   Wikipedia article about the event or the person.
 Each is about something famous (a game, film, show, song, artist, band, team, player, record or space mission) and comes
-from one English Wikipedia article. Never politics, crime, health, money, adult themes, deaths or a person under 18.
+from one English Wikipedia article. Relatable first: subjects most people in the UK and US know from their own lives
+(the biggest games, films, songs, shows, teams and gadgets), angles an ordinary person feels ("the thing everyone got
+wrong", "what you never noticed", "why it is still everywhere"), never business history, licensing deals or lore only
+fans know; give each idea "appeal": 1 to 5 (5: nearly everyone knows and cares) and offer only 4s and 5s.
+Never politics, crime, health, money, adult themes, deaths or a person under 18.
 {trending}Nothing on these recent Shorts: {recent}.
 Return {{"items": [{{"kind": "question, top list or true story", "idea": "the question, list or story in a few words",
 "category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment", "wikipedia": "the exact article title",
-"trending": "the trending subject it rides, or empty"}}]}}"""
+"appeal": 5, "trending": "the trending subject it rides, or empty"}}]}}"""
 SEARCH_ASK = ("Searches that already bring us viewers (people type these into YouTube; plan more Shorts those searches would "
               "find, on the next question or the next entry of the same subject): {terms}. ")
 TRENDING_ASK = ("Subjects trending today: {subjects}. Make about {n} of the ideas ride these subjects (people are searching them "
@@ -541,7 +553,12 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
                   "superlative": "Open with a first, biggest, only or record detail from the facts.",
                   "twist": "Open with a twist: what people would expect, then the surprising truth."},
     "length": {"under 25 s": "Keep it short: 60 to 72 words in total.",
-               "35 to 44 s": "Take a little longer: 105 to 120 words in total."},
+               "35 to 44 s": "Take a little longer: 105 to 120 words in total.",
+               "about 60 s": "A full minute: 150 to 180 words over 10 to 14 beats. Every beat lands a new surprise or turn, the "
+                             "wildest fact comes last, and the hook promises it ('the last one changes everything').",
+               "about 2 min": "Two minutes: 280 to 340 words over 18 to 26 beats. Escalate: each beat tops the last, a fresh "
+                              "twist every 10 seconds, a running count or countdown so viewers stay, the wildest fact last, "
+                              "and a reason to keep watching said out loud at the hook and at the halfway point."},
     "ending": {"loop": "End with a line that flows straight back into the first line so the Short loops, and end on the "
                        "same picture as the first shot. No question and no subscribe line at the end.",
                "question": "End with a short question viewers can answer in the comments.",
@@ -556,6 +573,7 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
     "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
     "series": {"single": "", "two parts": "", "three parts": ""},  # Shorts with a cliffhanger between them (emit_kind()); a rich pack only
 }
+LONG_NEEDS = {"about 60 s": 9, "about 2 min": 16}      # facts a pack must hold for a long arm (never padding, never invention)
 NOT_FOR = {"breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
            "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
 RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
@@ -730,7 +748,7 @@ def choose_writer(sid):
     return best
 
 
-def write_one(p, sid, day, prompt_head, extra="", kind="news"):
+def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
     pick = choose_writer(sid)
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, **({"prefer": pick} if pick else {}))
@@ -742,9 +760,14 @@ def write_one(p, sid, day, prompt_head, extra="", kind="news"):
         if not isinstance(b.get("beats"), list) or not b["beats"]: b["beats"] = []
         for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
+        if tests: b["test"] = dict(tests)          # the validator reads the length arm from it
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
+        if errs and tests and tests.get("length") in LONG_NEEDS and all("(about" in x or x.startswith("beats:") for x in errs):
+            print(f"{sid}: a normal length came back instead of {tests['length']}: kept as written")   # a Short is worth more than the arm
+            tests = {**tests, "length": "as written"}; b["test"] = dict(tests)
+            errs, warns = validate.check(b)
         if kind == "fiction": warns = [w for w in warns if "stock" not in w and "real picture" not in w]   # stock is the point
         else: errs = errs + media_problems(b)
         if not errs and kind != "fiction": errs = ["facts: " + x for x in fact_check(b, p)]     # only a clean board is worth a fact check
@@ -783,7 +806,11 @@ def main():
     def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None):
         sid = f"QD-{state['n']:03d}"
         if tests is None: style, tests = test_plan(state["n"], kind)
-        else: style = style_note(tests)
+        facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
+        if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
+            print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
+            tests = {**tests, "length": "35 to 44 s"}
+        style = style_note(tests)
         extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
                   f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
         if tests.get("title_search") == "search phrase":
@@ -795,7 +822,7 @@ def main():
             if ang: extra.append("SHORTS ALREADY GETTING VIEWS ON THIS SUBJECT (learn which angle or question works, then "
                                  "find a fresher or better one; never copy their wording, footage or script): " + "; ".join(ang))
         try:
-            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind)
+            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests)
         except Exception as e:
             b, why = None, f"error: {e}"[:200]
         print(f"{p['topic']}: {why}")
@@ -803,7 +830,7 @@ def main():
         before = json.dumps(b)
         shape(b, tests)
         if validate.check(b)[0]: b = json.loads(before)
-        b.update(kind=kind, test=tests, source=source_of(p.get("signal")))
+        b.update(kind=kind, test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")))
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
         if series: b["series"] = series

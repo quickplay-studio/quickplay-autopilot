@@ -125,3 +125,16 @@ the channel's comment question and replies.
   for full-screen pictures and cards alike; when the person sits low in a full-screen picture and the beat has no
   graphic, that shot's captions move to the top band (template3.html, capTop). The clips channel got the same rule in
   its "full" layout. Untested on a real render until the next write run; the change is guarded (no face, no change).
+
+## 22 October, 00:30 to 01:30 UK: relatable, and a minute or two long
+- Charlie: content must be relatable ("the Tetris one is so niche"), to reach more people's algorithm. RULES: the Short
+  is for the millions who know the subject from their own life, told through what it means for the viewer; no business
+  history, licensing, corporate timelines or fan lore; a niche subject gets an ordinary person's angle or {"skip":
+  "niche"}; every board records "appeal" ("everyone" or "fans"), now a feature in drivers.csv and shorts.csv so the data
+  shows what mass appeal is worth. The evergreen planner asks for ideas most people know (appeal 4 or 5 only). The hook
+  may not open "Discover", "Learn", "Here's how", "Today we", "Let's look" (validate.py errors, the model fixes it).
+- Charlie: test shorter and longer Shorts, a minute and two minutes, the long ones packed with more to keep viewers
+  watching. Length arms "about 60 s" (150 to 180 words, 10 to 14 beats, the wildest fact last) and "about 2 min" (280 to
+  340 words, 18 to 26 beats, a twist every 10 seconds, a running count, a reason to stay said out loud); only on packs
+  with 9 or 16 facts (LONG_NEEDS), never padding. validate.py reads the arm from the board's test; a board that comes
+  back at a normal length is kept as written. drivers.py bands: "45 to 89 s" and "90 s or more".

@@ -65,7 +65,12 @@ def check(b, path=None):
     if not mu.get("slug") and not mu.get("mood"): w.append("music: no mood given, a track will be picked by category")
 
     beats = b.get("beats") or []
-    if not 3 <= len(beats) <= 14: e.append("beats: 3 to 14")
+    arm = str((b.get("test") or {}).get("length") or "")           # the length test (writer.py): a minute or two minutes allowed
+    lo, hi, best, top = {"about 60 s": (130, 200, (150, 180), 16), "about 2 min": (250, 370, (280, 340), 30)}.get(arm, (50, 135, (55, 125), 14))
+    if not 3 <= len(beats) <= top: e.append(f"beats: 3 to {top}")
+    hook0 = ((beats[0].get("say") if beats else "") or "").strip().lower()
+    if re.match(r"(discover|learn|here'?s how|here is how|today we|let'?s look|let'?s talk|welcome|in this short|in this video)\b", hook0):
+        e.append("beat 0: a slow intro (Discover, Learn, Here's how, Today we, Let's look): open on the most surprising detail instead")
     total = 0
     for i, bt in enumerate(beats):
         say = (bt.get("say") or "").strip()
@@ -87,8 +92,8 @@ def check(b, path=None):
         w.append(f"shots: {len(stock)} of {len(allshots)} are stock; real pictures of the subject first (stock at most 1 in 5)")
     if beats and any(str(s.get("src", "")).startswith(("pixabay:", "gameplay:")) for s in (beats[0].get("shots") or [])):
         w.append("beat 0: the hook needs a real picture of the subject, not stock")
-    if not 50 <= total <= 135: e.append(f"narration: {total} words, needs 55 to 125 (20 to 45 seconds)")
-    elif not 55 <= total <= 125: w.append(f"narration: {total} words, best between 55 and 125")
+    if not lo <= total <= hi: e.append(f"narration: {total} words, needs {best[0]} to {best[1]}" + (f" ({arm})" if arm in ("about 60 s", "about 2 min") else " (20 to 45 seconds)"))
+    elif not best[0] <= total <= best[1]: w.append(f"narration: {total} words, best between {best[0]} and {best[1]}")
 
     # the video behind the Short (pipeline/background.py): 2 to 4 stock searches, not shots, so never counted as stock above
     bgq = b.get("background")

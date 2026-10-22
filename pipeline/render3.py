@@ -105,7 +105,10 @@ def scene_fit(src, start, vis, slow):
     return round(st, 3), round(slow, 3), note
 
 LOOK, MOTION = {}, 1.0     # set in main() from the board's look (templates/looks.json, resolved by run_board.py)
-CARDS = False              # set in main(): True when a video plays behind the Short; photos then sit on top of it as cards
+CARDS = False              # set in main(): True only with config.json render.picture_cards (photos as cards over the background video);
+                           # off since 22 October: every picture fills the 9:16 screen (Charlie: no dead space), the video plays behind graphics
+try: CFG_RENDER = (json.loads((pathlib.Path(__file__).resolve().parent.parent / "config.json").read_text()).get("render") or {})
+except Exception: CFG_RENDER = {}
 
 
 def face_focus(path):
@@ -282,7 +285,7 @@ def main():
             bginfo, bgused = BG.build(sb["bg_clips"], duration, out_dir / f"{sid}_bg", sb.get("bg_cfg") or BG.DEFAULTS, fps=FPS)
         except Exception as e:
             print(f"  warning: background video failed, rendering without it: {e}", file=sys.stderr)
-    CARDS = bool(bginfo)
+    CARDS = bool(bginfo) and bool(CFG_RENDER.get("picture_cards", False))   # Charlie, 22 October: no dead space, every picture fills the screen
     items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir)
     wav = out_dir / f"{sid}.wav"
     events = sfx_events(sb, beats, items)

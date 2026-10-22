@@ -145,3 +145,7 @@ the channel's comment question and replies.
 - The afternoon run (13:39 UTC) still dropped every top list ("only 1 or 2 checked facts") with trafilatura's tables
   on, so factpack.wiki_tables now parses a Wikipedia page's first data tables itself into lines like "1 | Minecraft |
   300,000,000 | Multi-platform" after the prose, and the fact checker is told to quote a whole line; verify() matches it.
+- Charlie: full portrait footage on the main channel too, no dead space. render3.py: picture cards over the background
+  video are off (CARDS only with config.json render.picture_cards true); every picture and video fills the 9:16 screen,
+  framed on the face (face_focus), captions moving off a person who sits low; the background video now plays only
+  behind graphic beats. First real render: the 18:23 UTC evening run.

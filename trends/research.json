@@ -1,5 +1,5 @@
 {
- "date": "2026-10-21",
+ "date": "2026-10-22",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
@@ -48,218 +48,343 @@
    ]
   },
   {
-   "topic": "Raindance by Dave & Tems",
-   "signal": "Apple Music GB: new in the top 25",
-   "wikipedia": "https://en.wikipedia.org/wiki/Raindance_(Dave_and_Tems_song)",
+   "topic": "Patient Zero by Taylor Swift",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
    "articles": [
     {
      "outlet": "Billboard",
-     "title": "Dave & Tems’ ‘Raindance’ Hits No. 1 on Mainstream R&B/Hip-Hop Airplay Chart",
-     "url": "https://www.billboard.com/music/chart-beat/dave-tems-raindance-number-1-mainstream-hip-hop-radio-chart-1236326343/",
-     "published": "2026-08-27"
+     "title": "Taylor Swift’s ‘Patient Zero’ Debuts at No. 1 on Billboard Hot 100",
+     "url": "https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-debut/",
+     "published": "2026-10-05"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Taylor Swift Named Her New Song ‘Patient Zero.’ Where Does the Term Originate?",
+     "url": "https://www.nytimes.com/2026/09/24/arts/music/taylor-swift-patient-zero-origin.html",
+     "published": "2026-09-24"
     }
    ]
   },
   {
-   "topic": "champions league fixtures",
-   "signal": "Google Trends GB 100000+",
+   "topic": "sri lanka vs england",
+   "signal": "Google Trends GB 500+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "Miserable Man Utd ripped apart by Como",
-     "url": "https://www.skysports.com/football/como-vs-manchester-united/report/577645",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Como 4-1 Manchester United: Champions League – live reaction",
-     "url": "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
-     "published": "2026-10-21"
+     "title": "England chase victory over Sri Lanka in ODI tri-series LIVE!",
+     "url": "https://www.skysports.com/cricket/live-blog/12040/13602136/england-vs-sri-lanka-odi-tri-series-live-latest-cricket-scores-updates-and-video-as-harry-brooks-side-chase-victory",
+     "published": "2026-10-22"
     },
     {
      "outlet": "BBC",
-     "title": "Why do Man City fans boo pre-match anthems?",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cvx28yk1j6z0o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Barca condemn PSG tifo inciting 'violence and hatred'",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm4g1jwp9827o?at_medium=RSS&at_campaign=rss",
+     "title": "England v Sri Lanka - toss and team news",
+     "url": "https://www.bbc.co.uk/sport/cricket/live/c6wyzx7wlqryt",
      "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "manuel neuer",
+   "topic": "wrexham",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Manuel_Neuer",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wrexham",
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Wrexham 4-1 Preston (Oct 17, 2026) Game Analysis - ESPN",
+     "url": "https://www.espn.com/soccer/report/_/gameId/401880209",
+     "published": "2026-10-17"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Wrexham buy famous The Turf pub from Welcome to Wrexham documentary",
+     "url": "https://www.nytimes.com/athletic/7616981/2026/09/21/welcome-to-wrexham-pub-the-turf-buy/",
+     "published": "2026-09-21"
+    }
+   ]
+  },
+  {
+   "topic": "arsenal asking price viktor gyokeres",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "BBC",
-     "title": "'I like every single thing about Manuel Neuer' - Raya",
-     "url": "https://www.bbc.com/sport/football/videos/cr93z12928n4o",
+     "title": "Chelsea eye Brighton's Ayari - Thursday's gossip",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cme3xk2jkyv0o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-21"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Bayern Munich's Manuel Neuer's error led to Augsburg scoring the fastest goal in Bundesliga history",
-     "url": "https://www.usatoday.com/story/sports/soccer/2026/10/10/neuers-error-fastest-goal-bundesliga-history/92190461007/",
-     "published": "2026-10-10"
     }
    ]
   },
   {
-   "topic": "alphonso davies",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Alphonso_Davies",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Alphonso Davies: From refugee fleeing war and starvation to Bayern Munich star",
-     "url": "https://www.skysports.com/football/news/11971669/alphonso-davies-from-refugee-fleeing-war-and-starvation-to-bayern-munich-star",
-     "published": "2020-06-12"
-    }
-   ]
-  },
-  {
-   "topic": "rb leipzig",
+   "topic": "liverpool interest in malo gusto",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/RB_Leipzig",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Aston Villa v Viking, Real Madrid v RB Leipzig and more: Champions League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/21/real-madrid-v-rb-leipzig-aston-villa-v-viking-and-more-champions-league-live",
+     "title": "Clayface review – flesh-stretching DC body horror is very gory but not very good",
+     "url": "https://www.theguardian.com/film/2026/oct/21/clayface-movie-review-body-horror",
      "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "steve wilks",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Steve_Wilks",
+   "topic": "john anderson",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Anderson_(actor)",
    "articles": [
     {
+     "outlet": "Billboard",
+     "title": "‘The Great And Unmatched’: John Anderson Remembered by Blake Shelton, Tim McGraw & More",
+     "url": "https://www.billboard.com/music/country/john-anderson-death-reaction-1236365421/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Tim McGraw, Blake Shelton, Riley Green Mourn John Anderson: ‘This One Really Hurts’",
+     "url": "https://www.rollingstone.com/music/music-country/john-anderson-tributes-tim-mcgraw-blake-shelton-riley-green-1235646417/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Variety",
+     "title": "John Anderson, Country Hall of Famer Whose Hits Included ‘Seminole Wind’ and ‘Swingin’,’ Dies at 71",
+     "url": "https://variety.com/2026/music/people-news/john-anderson-dead-seminole-wind-swingin-die-1236919387/",
+     "published": "2026-10-22"
+    },
+    {
      "outlet": "Guardian",
-     "title": "‘You are a humanitarian also, sir’: the US feeds Putin with lies as Ukraine’s children take cover and die | Andrew Roth",
-     "url": "https://www.theguardian.com/world/2026/oct/21/you-are-a-humanitarian-also-sir-us-putin-lies-ukraine-children-take-cover-and-die-witkoff",
+     "title": "Jimmy Anderson set to retire from cricket as Lancashire opt against renewing contract",
+     "url": "https://www.theguardian.com/sport/2026/oct/21/jimmy-anderson-set-to-retire-from-cricket-lancashire-contract",
+     "published": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "topic": "air canada",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Air_Canada",
+   "articles": [
+    {
+     "outlet": "Engadget",
+     "title": "Government websites in the EU and Canada taken offline over PHP vulnerability",
+     "url": "https://www.engadget.com/2293625/government-websites-in-the-eu-and-canada-taken-offline-over-php-vulnerability/",
      "published": "2026-10-21"
     },
     {
-     "outlet": "BBC",
-     "title": "Russia says it is ready to resume talks with Ukraine and US to end war",
-     "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "sham marriage",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Sham_marriage",
-   "articles": [
-    {
      "outlet": "Guardian",
-     "title": "US charges six people in alleged Massachusetts marriage fraud ring",
-     "url": "https://www.theguardian.com/us-news/2026/oct/21/massachusetts-marriage-fraud-ring-bust",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "NBC News",
-     "title": "‘The American dream is not for sale’: Feds bust Mass. marriage fraud ring",
-     "url": "https://www.nbcnews.com/news/us-news/-american-dream-not-sale-feds-bust-mass-marriage-fraud-ring-rcna604814",
+     "title": "Red Roses drop Kildunne to bench for Canada rematch as Mitchell seeks England reset",
+     "url": "https://www.theguardian.com/sport/2026/oct/21/red-roses-drop-ellie-kildunne-bench-canada-rematch-as-mitchell-seeks-england-reset",
      "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "ucl schedule",
-   "signal": "Google Trends US 20000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/ULE_scheduler",
+   "topic": "tom arnold response roseanne barr",
+   "signal": "Google Trends US 100+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Xbox Game Pass’s Newest Wave Is Headlined By A Huge Final Fantasy Adventure",
-     "url": "https://www.gamespot.com/articles/xbox-game-pass-newest-wave-is-headlined-by-a-huge-final-fantasy-adventure/",
+     "outlet": "The Hollywood Reporter",
+     "title": "Roseanne Barr Breaks Silence on High-Stakes TV Return: “Who Wants a Number One Show?”",
+     "url": "https://www.hollywoodreporter.com/tv/tv-features/roseanne-barr-meemaw-comeback-john-goodman-michael-jackson-1236735647/",
      "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "kristaps porzingis",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kristaps_Porzingis",
+   "topic": "playstation plus",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Playstation_plus",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "Kristaps Porzingis, Warriors address growing concern over health issues",
-     "url": "https://www.usatoday.com/story/sports/nba/warriors/2026/10/14/kristaps-porzingis-illness-injury-update-warriors/92255399007/",
-     "published": "2026-10-14"
+     "outlet": "PlayStation Blog",
+     "title": "Once Human’s Isles of Abyss expansion launches on PS5 tomorrow",
+     "url": "https://blog.playstation.com/2026/10/21/once-humans-isles-of-abyss-expansion-launches-on-ps5-tomorrow/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Engadget",
+     "title": "Sony's PlayStation Pulse headset arrives on November 19 for $100",
+     "url": "https://www.engadget.com/2293077/sonys-playstation-pulse-headset-arrives-on-november-19-for-dollar100/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Everything New In Cyberpunk 2077 Update 2.5",
+     "url": "https://www.gamespot.com/articles/everything-new-in-cyberpunk-2077-update-2-5/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Xbox follows in PlayStation's footsteps, introducing AMD FSR 4.1, targeting better graphics and performance on Series X/S",
+     "url": "https://www.eurogamer.net/xbox-series-x-s-amd-fsr-4-1-upscaling",
+     "published": "2026-10-21"
     }
    ]
   },
   {
-   "topic": "sporting vs lask",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": null,
+   "topic": "al pacino",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Al_Pacino",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Al Pacino to Be Honored With SAG-AFTRA Life Achievement Award",
+     "url": "https://variety.com/2026/film/news/al-pacino-sag-aftra-life-achievement-award-1236912626/",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "AP",
+     "title": "Al Pacino to get lifetime achievement award from the Screen Actors Guild",
+     "url": "https://apnews.com/article/al-pacino-sag-life-achievement-award-718e104b00ff18a7b21aa4fd97906103",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Al Pacino inspired 'The Kominsky Method' – and then nearly killed the Netflix show",
+     "url": "https://www.usatoday.com/story/entertainment/books/2026/10/13/al-pacino-kominsky-method-show-says-chuck-lorre/92238906007/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "rebel ridge",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Rebel_Ridge",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Ex-tennis pro Megan Rose appointed to lead 2031 men’s Rugby World Cup in US",
-     "url": "https://www.theguardian.com/sport/2026/oct/21/ex-tennis-pro-megan-rose-appointed-to-lead-2031-mens-rugby-world-cup-in-us",
+     "title": "The Spin | Writing a book with Chris Woakes showed the inner steel of the nicest man in cricket",
+     "url": "https://www.theguardian.com/sport/2026/oct/21/the-spin-cricket-book-chris-woakes-nicest-man-in-cricket",
      "published": "2026-10-21"
+    },
+    {
+     "outlet": "Variety",
+     "title": "Don’t Forget ‘Rebel Ridge’ Star Aaron Pierre This Emmy Season",
+     "url": "https://variety.com/2025/awards/features/aaron-pierre-rebel-ridge-emmy-season-1236425191/",
+     "published": "2025-06-12"
+    }
+   ]
+  },
+  {
+   "topic": "hannibal",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Hannibal",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "25 Years Ago, ‘Hannibal’ Marked the Rise of a New Kind of Blockbuster",
+     "url": "https://www.nytimes.com/2024/06/09/books/booksupdate/25-years-thomas-harris-hannibal-lecter.html",
+     "published": "2024-06-09"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Hannibal: Mads Mikkelsen Looks Back on Season 3 and Ponders Whether The Show Will Continue",
+     "url": "https://www.ign.com/articles/2015/12/04/hannibal-mads-mikkelsen-looks-back-on-season-3-and-ponders-whether-the-show-will-continue",
+     "published": "2015-12-04"
     }
    ]
   },
   {
    "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 253,155 views",
+   "signal": "Wikipedia 208,412 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": [
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "Tanner Buchanan, Peyton Elizabeth Lee to Star in ‘Gasoline’ From ‘SLC Punk!’ Director James Merendino (Exclusive)",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/tanner-buchanan-peyton-elizabeth-lee-to-star-in-gasoline-1236736936/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Haven’t Seen Enough? The Books and Shows to Read and Watch After ‘You Can See Everything’",
-     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/best-shows-and-books-about-elizabeth-holmes-theranos-1235645790/",
-     "published": "2026-10-21"
-    },
-    {
      "outlet": "Guardian",
-     "title": "‘I’m always being real’: what on earth persuades disgraced people like Elizabeth Holmes to let the cameras in?",
-     "url": "https://www.theguardian.com/film/2026/oct/21/elizabeth-holmes-you-can-see-everything-disgrace-documentary",
+     "title": "Elizabeth Holmes is back in the spotlight: why can’t we look away? – podcast",
+     "url": "https://www.theguardian.com/science/audio/2026/oct/22/elizabeth-holmes-you-can-see-everything-podcast",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘You Can See Everything’ Winning Wednesday With $2.3M; Can Elizabeth Holmes Melt ‘Clayface’ In U.S.? DC Villain Eyes $45M+ WW",
+     "url": "https://deadline.com/2026/10/you-can-see-everything-clayface-box-office-1237168607/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "Aberfan disaster",
+   "signal": "Wikipedia 187,692 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Aberfan_disaster",
+   "articles": [
+    {
+     "outlet": "Space.com",
+     "title": "Could a $200K bond for satellites paid before launch prevent a space junk disaster in orbit? Here's why some scientists think so",
+     "url": "https://www.space.com/space-exploration/satellites/could-satellite-deorbit-deposits-prevent-a-space-debris-disaster",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "Heath Ledger",
+   "signal": "Wikipedia 177,482 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Heath_Ledger",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "David Krumholtz Explains Why He Missed ’10 Things I Hate About You’ Reunion On ‘DWTS’: “Love Them All”",
+     "url": "https://deadline.com/2026/10/david-krumholtz-missed-10-things-i-hate-about-you-reunion-dwts-1237170408/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Why David Krumholtz Was Absent From ’10 Things I Hate About You’ Reunion on ‘DWTS’",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/david-krumholtz-absent-10-things-i-hate-about-you-reunion-dwts-1236737892/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "BioWare",
+   "signal": "Wikipedia 170,992 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/BioWare",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "'We Were Working on a Great Game' — Former Mass Effect 5 Writers Speak Out After EA Shuts Down BioWare",
+     "url": "https://www.ign.com/articles/we-were-working-on-a-great-game-former-mass-effect-5-writers-speak-out-after-ea-shuts-down-bioware",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "EA Cuts Around 400 Jobs, Shuts Down BioWare",
+     "url": "https://deadline.com/2026/10/ea-cuts-400-jobs-shuts-down-bioware-1237170402/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "The next Mass Effect would have had 'a level of autonomy and choice that no other game has been able to match', according to BioWare veteran",
+     "url": "https://www.pcgamer.com/games/mass-effect/the-next-mass-effect-would-have-had-a-level-of-autonomy-and-choice-that-no-other-game-has-been-able-to-match-according-to-bioware-veteran/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Star Wars Battlefront 3 Reportedly In Development By EA’s Top Shooter Studios",
+     "url": "https://www.gamespot.com/articles/star-wars-battlefront-3-reportedly-in-development-by-eas-top-shooter-studios/",
      "published": "2026-10-21"
     }
    ]
   },
   {
    "topic": "You Can See Everything",
-   "signal": "Wikipedia 206,507 views",
+   "signal": "Wikipedia 170,153 views",
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "Will ‘You Can See Everything’ Beat DC’s ‘Clayface’ at the Box Office?",
-     "url": "https://variety.com/2026/film/box-office/you-can-see-everything-could-beat-clayface-box-office-1236917465/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Haven’t Seen Enough? The Books and Shows to Read and Watch After ‘You Can See Everything’",
-     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/best-shows-and-books-about-elizabeth-holmes-theranos-1235645790/",
-     "published": "2026-10-21"
-    },
-    {
      "outlet": "Guardian",
-     "title": "‘I’m always being real’: what on earth persuades disgraced people like Elizabeth Holmes to let the cameras in?",
-     "url": "https://www.theguardian.com/film/2026/oct/21/elizabeth-holmes-you-can-see-everything-disgrace-documentary",
-     "published": "2026-10-21"
+     "title": "Elizabeth Holmes is back in the spotlight: why can’t we look away? – podcast",
+     "url": "https://www.theguardian.com/science/audio/2026/oct/22/elizabeth-holmes-you-can-see-everything-podcast",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘You Can See Everything’ Winning Wednesday With $2.3M; Can Elizabeth Holmes Melt ‘Clayface’ In U.S.? DC Villain Eyes $45M+ WW",
+     "url": "https://deadline.com/2026/10/you-can-see-everything-clayface-box-office-1237168607/",
+     "published": "2026-10-22"
     },
     {
      "outlet": "GameSpot",
@@ -270,72 +395,66 @@
    ]
   },
   {
-   "topic": "Luke McCaffrey",
-   "signal": "Wikipedia 142,208 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Luke_McCaffrey",
+   "topic": "Amy Acton",
+   "signal": "Wikipedia 158,230 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Amy_Acton",
    "articles": [
     {
-     "outlet": "NFL",
-     "title": "Luke McCaffrey's 58-yard kick return gets Commanders into Falcons' territory",
-     "url": "https://www.nfl.com/videos/luke-mccaffrey-s-58-yard-kick-return-gets-commanders-into-falcons-territory",
-     "published": "2025-09-28"
-    }
-   ]
-  },
-  {
-   "topic": "ChatGPT",
-   "signal": "Wikipedia 140,548 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/ChatGPT",
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "ChatGPT now lets you lock your chats",
-     "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+     "outlet": "USA Today",
+     "title": "Ohio's Amy Acton rips 'awful' ad showing estranged mother speaking against her",
+     "url": "https://www.usatoday.com/story/news/politics/elections/2026/10/20/amy-acton-mother-ad-ohio-governor-race/92348414007/",
      "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 110,411 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "‘Street Fighter’ Punches to Summit as Rajinikanth’s ‘Jailer 2’ Bows in Third at U.K., Ireland Box Office",
-     "url": "https://variety.com/2026/film/global/street-fighter-rajinikanth-jailer-2-uk-ireland-box-office-1236916622/",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Street Fighter (2026 Movie) Guide",
-     "url": "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "published": "2026-10-15"
-    }
-   ]
-  },
-  {
-   "topic": "Barbara Palvin",
-   "signal": "Wikipedia 104,012 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Palvin",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Rayman Legends Retold’s New Baguette Costumes Are A Tip Of The Beret To Expedition 33",
-     "url": "https://www.gamespot.com/articles/rayman-legends-retold-new-baguette-costumes-are-a-tip-of-the-beret-to-expedition-33/",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "Richard Riehle",
-   "signal": "Wikipedia 101,727 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Richard_Riehle",
+   "topic": "Helen Haines",
+   "signal": "Wikipedia 154,476 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Epstein’s attorney and accountant accused of ‘facilitating and concealing’ his crimes in lawsuit",
-     "url": "https://www.theguardian.com/us-news/2026/oct/21/epstein-attorney-accountant-lawsuit",
+     "title": "Man charged after allegedly making threats at Hannah Beazley’s electorate office while armed with nunchucks",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/22/man-with-nunchucks-arrested-wa-mp-hannah-beazley-ntwnfb",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "Dancing with the Stars (American TV series) season 35",
+   "signal": "Wikipedia 151,353 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "'Dancing with the Stars': Dedication Night has tears, pregnancy news and no Val",
+     "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/20/dancing-with-the-stars-dwts-dedication-night-live-updates--live/92347888007/",
+     "published": "2026-10-20"
+    }
+   ]
+  },
+  {
+   "topic": "Deaths in 2026",
+   "signal": "Wikipedia 131,170 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "articles": [
+    {
+     "outlet": "Reuters",
+     "title": "US CDC confirms two measles-related deaths in 2026",
+     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-confirms-two-measles-related-deaths-2026-2026-09-29/",
+     "published": "2026-09-29"
+    }
+   ]
+  },
+  {
+   "topic": "Cyberpunk 2077",
+   "signal": "YouTube GB 143,863/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cyberpunk_2077",
+   "articles": [
+    {
+     "outlet": "Eurogamer",
+     "title": "CD Projekt Red details new Cyberpunk 2077 update - adding dual-wielding, cross-platform mods, Edgerunners story quests, and more",
+     "url": "https://www.eurogamer.net/cyberpunk-2077-update-edgerunners-2-mod-support",
      "published": "2026-10-21"
     },
     {
@@ -345,48 +464,47 @@
      "published": "2026-10-21"
     },
     {
-     "outlet": "BBC",
-     "title": "Farmer lost out by minutes in race for wildlife funding",
-     "url": "https://www.bbc.co.uk/news/articles/cm9qznp3gdvdo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-21"
+     "outlet": "PC Gamer",
+     "title": "Of course a new Edgerunners series means a new Cyberpunk 2077 patch",
+     "url": "https://www.pcgamer.com/games/rpg/of-course-a-new-edgerunners-series-means-a-new-cyberpunk-2077-patch/",
+     "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "Above the Below",
-   "signal": "YouTube GB 64,363/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Above_the_Below",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Jess Cartner-Morley on fashion: don’t want to get your Big Winter Coat out just yet? Try ‘onion dressing’",
-     "url": "https://www.theguardian.com/fashion/2026/oct/21/jess-cartner-morley-fashion-onion-dressing",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "Elephant Island is an icy sight from orbit | Space photo of the day for Oct. 19, 2026",
-     "url": "https://www.space.com/astronomy/earth/elephant-island-is-an-icy-sight-from-orbit-space-photo-of-the-day-for-oct-19-2026",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Steal An Egg, But It's MODDED..",
-   "signal": "YouTube GB-gaming 40,488/h",
+   "topic": "The Halloween Update",
+   "signal": "YouTube GB 56,874/h",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Everything New In Cyberpunk 2077 Update 2.5",
-     "url": "https://www.gamespot.com/articles/everything-new-in-cyberpunk-2077-update-2-5/",
+     "outlet": "The Hollywood Reporter",
+     "title": "‘Obsession’ Star Inde Navarrette Says Meeting Nikki Scare Actor at Halloween Horror Nights Was “Surreal”",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/obsession-inde-navarrette-nikki-halloween-horror-nights-1236737517/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Save 50% Off a Rechargeable LED Light Up Mask With 50 Different Effects for Halloween, Now Under $15",
+     "url": "https://www.ign.com/articles/led-mask-halloween-deal-october-2026",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "PlayStation Blog",
+     "title": "PlayStation Indies: 9 must-play horror games for the spooky season",
+     "url": "https://blog.playstation.com/2026/10/21/playstation-indies-9-must-play-horror-games-for-the-spooky-season/",
+     "published": "2026-10-21"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Popcorn with your Puccini: can opera on screen ever work?",
+     "url": "https://www.theguardian.com/music/2026/oct/21/opera-at-the-cinema-tv-screenings-raymond-gubbay",
      "published": "2026-10-21"
     }
    ]
   },
   {
    "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 124,009/h",
+   "signal": "YouTube GB-sport 119,951/h",
    "wikipedia": null,
    "articles": [
     {
@@ -410,21 +528,8 @@
    ]
   },
   {
-   "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 445,271/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Kylie Jenner's debut at Victoria's Secret Fashion Show in $50m bra sparks mixed reaction",
-     "url": "https://www.bbc.co.uk/news/articles/cmx2wqwxvyxlo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
    "topic": "Ranking Best Flag Football Moments 🏈",
-   "signal": "YouTube US-sport 88,194/h",
+   "signal": "YouTube US-sport 85,759/h",
    "wikipedia": null,
    "articles": [
     {
@@ -442,82 +547,51 @@
    ]
   },
   {
-   "topic": "What is the BEST app?!📱🤔",
-   "signal": "YouTube US-tech 57,554/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever Is Continuing A Long-Running Questing Tradition",
-     "url": "https://www.gamespot.com/articles/wow-forever-is-continuing-a-long-running-questing-tradition/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "The 15 Best Steam Next Fest Demos to Play Right Now",
-     "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Best Buy Is Selling Pokémon TCG: Prismatic Evolutions ETBs at MSRP — But You'll Need An Invite",
-     "url": "https://www.ign.com/articles/pokemon-tcg-prismatic-evolutions-etb-best-buy-invite",
-     "published": "2026-10-21"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "US government leaks the best GTA 6 promo yet: Pißwasser is real",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/us-government-leaks-the-best-gta-6-promo-yet-pisswasser-is-real/",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "I Can't Love You Anymore by Ella Langley & Morgan Wallen",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": "https://en.wikipedia.org/wiki/I_Can%27t_Love_You_Anymore_(Ella_Langley_and_Morgan_Wallen_song)",
+   "topic": "sl vs eng",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Samsung",
    "articles": []
   },
   {
-   "topic": "serge gnabry",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Serge_Gnabry",
+   "topic": "jumbotron",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jumbotron",
    "articles": []
   },
   {
-   "topic": "tom bischof",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tom_Bischof",
-   "articles": []
-  },
-  {
-   "topic": "5g",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/5G",
-   "articles": []
-  },
-  {
-   "topic": "club brugge",
+   "topic": "terence atmane",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Club_Brugge_KV",
+   "wikipedia": "https://en.wikipedia.org/wiki/Terence_Atmane",
    "articles": []
   },
   {
-   "topic": "Kim Jong Un",
-   "signal": "Wikipedia 321,739 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+   "topic": "jim risch",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jim_Risch",
+   "articles": []
+  },
+  {
+   "topic": "magda linette",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Magda_Linette",
    "articles": []
   },
   {
    "topic": "Jailer 2",
-   "signal": "Wikipedia 303,129 views",
+   "signal": "Wikipedia 278,796 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": []
   },
   {
-   "topic": "Helen Haines",
-   "signal": "Wikipedia 158,924 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Helen_Haines",
+   "topic": "PHP2Shell",
+   "signal": "Wikipedia 238,212 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/PHP2Shell",
+   "articles": []
+  },
+  {
+   "topic": "ChatGPT",
+   "signal": "Wikipedia 163,328 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/ChatGPT",
    "articles": []
   }
  ]

@@ -1,105 +1,139 @@
 {
- "date": "2026-10-21",
- "built": "2026-10-21T19:08+00:00",
+ "date": "2026-10-22",
+ "built": "2026-10-22T07:31+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "evening",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
    "n": 4,
-   "topic": "Raindance by Dave & Tems",
-   "signal": "Apple Music GB: new in the top 25",
+   "topic": "Patient Zero by Taylor Swift",
+   "signal": "Apple Music US: new in the top 25",
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Did you know Raindance became Dave's fourth number one single on the Official U.K. Singles chart?"
+    "Taylor Swift's Patient Zero just debuted at No. 1 on the Billboard Hot 100!",
+    "Did you know Patient Zero is Taylor Swift's 16th career number one?",
+    "Colin Farrell and Dakota Johnson star in Taylor Swift's new music video!"
    ],
    "sources": [
     [
-     "Dave & Tems’ ‘Raindance’ Hits No. 1 on Mainstream R&B/Hip-Hop Airplay Chart",
-     "https://www.billboard.com/music/chart-beat/dave-tems-raindance-number-1-mainstream-hip-hop-radio-chart-1236326343/",
+     "Taylor Swift’s ‘Patient Zero’ Debuts at No. 1 on Billboard Hot 100",
+     "https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-debut/",
      "Billboard",
-     "2026-08-27"
+     "2026-10-05"
     ],
     [
-     "Raindance by Dave & Tems",
-     "https://en.wikipedia.org/wiki/Raindance_(Dave_and_Tems_song)",
+     "Patient Zero by Taylor Swift",
+     "https://en.wikipedia.org/wiki/Patient_Zero_(Taylor_Swift_song)",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Raindance became Dave's fourth number one single on the Official U.K. Singles chart.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In his native U.K., the single became the rapper’s fourth champ on the Official U.K. Singles chart and 15th top 10 overall."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 5,
-   "topic": "champions league fixtures",
-   "signal": "Google Trends GB 100000+",
-   "category": "Sport",
-   "what_is_new": "Manchester United suffered a 4-1 defeat away to Como in the Champions League on Wednesday night.",
-   "hooks": [
-    "Como thrashed Manchester United 4-1 in the Champions League.",
-    "Barcelona suffered a 4-2 defeat against Paris St Germain."
-   ],
-   "sources": [
-    [
-     "Miserable Man Utd ripped apart by Como",
-     "https://www.skysports.com/football/como-vs-manchester-united/report/577645",
-     "Sky Sports",
-     "2026-10-21"
-    ],
-    [
-     "Como 4-1 Manchester United: Champions League – live reaction",
-     "https://www.theguardian.com/football/live/2026/oct/21/como-v-manchester-united-champions-league-live",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "Why do Man City fans boo pre-match anthems?",
-     "https://www.bbc.co.uk/sport/football/articles/cvx28yk1j6z0o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-21"
-    ],
-    [
-     "Barca condemn PSG tifo inciting 'violence and hatred'",
-     "https://www.bbc.co.uk/sport/football/articles/cm4g1jwp9827o?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-21"
-    ]
-   ],
    "verified": [
     {
-     "claim": "Como defeated Manchester United 4-1 in the Champions League.",
+     "claim": "Taylor Swift wrote and produced Patient Zero alongside Max Martin and Shellback.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Como 4-1 Man Utd: Michael Carrick's side ripped apart in Italy during Champions League hammering",
-      "2": "GOAL! Como 4-1 Manchester United (Zirkzee, 90+1 mins)"
+      "1": "Swift cowrote and coproduced “Patient Zero” with Max Martin and Shellback.",
+      "2": "She wrote and produced the song alongside Max Martin and Shellback."
+     }
+    },
+    {
+     "claim": "Patient Zero was released on September 25, 2026, through Republic Records as the lead single from The Life of a Showgirl: The Encore.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "“Patient Zero,” on Republic Records, opens with 34.5 million official streams, 28.5 million radio airplay audience impressions and 65,000 sold in the U.S. Sept. 25-Oct.",
+      "2": "It was released on September 25, 2026, through Republic Records, as the lead single from The Encore."
+     }
+    },
+    {
+     "claim": "The music video for Patient Zero premiered at the 2026 MTV Video Music Awards on September 27.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Its Swift-directed video, starring Swift, Dakota Johnson and Colin Farrell, premiered Sept. 27 during the 2026 MTV Video Music Awards.",
+      "2": "It premiered at the 2026 MTV Video Music Awards on September 27."
+     }
+    },
+    {
+     "claim": "Colin Farrell and Dakota Johnson star in the music video for Patient Zero.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Its Swift-directed video, starring Swift, Dakota Johnson and Colin Farrell, premiered Sept. 27 during the 2026 MTV Video Music Awards.",
+      "2": "The video took stylistic inspiration from thriller, true crime, and gothic cinema, and stars Swift as a ghost haunting an affluent couple played by Colin"
+     }
+    },
+    {
+     "claim": "Taylor Swift directed the music video for Patient Zero.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Its Swift-directed video, starring Swift, Dakota Johnson and Colin Farrell, premiered Sept. 27 during the 2026 MTV Video Music Awards.",
+      "2": "Swift wrote and directed the music video for the song, which the Mexican cinematographer Emmanuel Lubezki shot."
+     }
+    },
+    {
+     "claim": "Patient Zero debuted at No. 1 on the Billboard Hot 100.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Taylor Swift’s “Patient Zero” bounds in at No. 1 on the Billboard Hot 100, becoming her 16th career leader.",
+      "2": "In North America, \"Patient Zero\" topped both the US Billboard Hot 100 and Canadian Hot 100, making The Life of a Showgirl (2025) Swift's first"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Barcelona lost 4-2 against Paris St Germain in the French capital after winning their opening two Champions League matches.",
+     "claim": "Patient Zero is Swift's 16th career leader on the Billboard Hot 100.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Barcelona lost 4-2 in the French capital after previously winning their opening two Champions League matches."
+      "1": "Taylor Swift’s “Patient Zero” bounds in at No. 1 on the Billboard Hot 100, becoming her 16th career leader."
+     }
+    },
+    {
+     "claim": "Patient Zero is featured on the deluxe version of Swift's album The Life of a Showgirl, titled The Life of a Showgirl: The Encore.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“Patient Zero” is one of four new songs on the deluxe version, released Sept. 25, of Swift’s 2025 album, The Life of a Showgirl, dubbed"
+     }
+    },
+    {
+     "claim": "Patient Zero is Taylor Swift's 10th career No. 1 Hot 100 debut.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“Patient Zero” is also Swift’s 10th career No. 1 Hot 100 debut — tying her with Drake for the most."
+     }
+    },
+    {
+     "claim": "Patient Zero opened with 34.5 million official streams in the U.S.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“Patient Zero,” on Republic Records, opens with 34.5 million official streams, 28.5 million radio airplay audience impressions and 65,000 sold in the U.S. Sept. 25-Oct."
      }
     }
    ],
@@ -107,19 +141,18 @@
   },
   {
    "n": 6,
-   "topic": "manuel neuer",
+   "topic": "wrexham",
    "signal": "Google Trends GB 200+",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know Manuel Neuer holds the record for most Bundesliga clean sheets?",
-    "Manuel Neuer is the only goalkeeper to win the European treble twice.",
-    "Neuer saved penalties from both Cristiano Ronaldo and Kaka in 2012."
+    "Did you know Wrexham was awarded city status in 2022?",
+    "Wrexham's built up area population reached 44,785 at the 2021 census."
    ],
    "sources": [
     [
-     "manuel neuer",
-     "https://en.wikipedia.org/wiki/Manuel_Neuer",
+     "wrexham",
+     "https://en.wikipedia.org/wiki/Wrexham",
      "Wikipedia",
      ""
     ]
@@ -127,252 +160,77 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Manuel Peter Neuer was born on 27 March 1986 and is a German professional footballer who plays as a goalkeeper and is the captain of Bundesliga club Bayern Munich.",
+     "claim": "The first recorded reference to the town in 1161 is to a castle at Wristlesham.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Manuel Peter Neuer[A] (born 27 March 1986) is a German professional footballer who plays as a goalkeeper and is the captain of Bundesliga club Bayern"
+      "1": "The first recorded reference to the town in 1161 is to a castle at \"Wristlesham\"[12] (or \"Wristlesha'\"), with the present form \"Wrexham\" used in 1186,[3][13]"
      }
     },
     {
-     "claim": "He was named the best goalkeeper of the decade from 2011 to 2020 by IFFHS.",
+     "claim": "At the 2021 census, the built up area had a population of 44,785, the seventh largest in Wales and the largest in North Wales.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He was named the best goalkeeper of the decade from 2011 to 2020 by IFFHS.[28]"
+      "1": "At the 2021 census, the built up area had a population of 44,785, the seventh largest in Wales and the largest in North Wales."
      }
     },
     {
-     "claim": "He has the most clean sheets recorded in the Bundesliga competition, with 224.",
+     "claim": "It was awarded city status in 2022.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He has the most clean sheets recorded in the competition, with 224."
+      "1": "It was awarded city status in 2022."
      }
     },
     {
-     "claim": "He holds the most clean sheets in a single season, with 21 in the 2015 to 16 campaign.",
+     "claim": "Human activity in the Wrexham area dates back to the Mesolithic period 8000 to 4300 BC.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He also holds the most clean sheets in a single season, with 21 in the 2015–16 campaign."
-     }
-    },
-    {
-     "claim": "Neuer is the only goalkeeper in Bundesliga history with more than 100 appearances to have conceded fewer goals than matches played.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Neuer is the only goalkeeper in Bundesliga history with more than 100 appearances to have conceded fewer goals than matches played.[30]"
-     }
-    },
-    {
-     "claim": "In international football he holds the record for the most appearances by a goalkeeper at the FIFA World Cup.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In international football he holds the record for the most appearances by a goalkeeper at the FIFA World Cup.[32]"
-     }
-    },
-    {
-     "claim": "Four years later, Neuer won the 2014 tournament with Germany as well as the Golden Glove award for being the best goalkeeper in the tournament.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Four years later, Neuer won the 2014 tournament with Germany as well as the Golden Glove award for being the best goalkeeper in the tournament,"
-     }
-    },
-    {
-     "claim": "Neuer is the fifth-most capped German international of all time, and holds the team's record for most appearances at European Championships and at international tournaments.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Neuer is the fifth-most capped German international of all time, and holds the team's record for most appearances at European Championships and at international tournaments."
-     }
-    },
-    {
-     "claim": "On 5 March 2008, in the first knockout round of the UEFA Champions League against Porto, he almost single-handedly kept Schalke in the game with several saves, forcing the game into penalties.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 5 March 2008, in the first knockout round of the UEFA Champions League against Porto, he almost single-handedly kept Schalke in the game with"
-     }
-    },
-    {
-     "claim": "On 1 June 2011, Neuer made his move to Bayern Munich and signed a five-year contract that lasted until June 2016.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 1 June 2011, Neuer made his move to Bayern Munich and signed a five-year contract that lasted until June 2016.[47][48]"
-     }
-    },
-    {
-     "claim": "On 25 April 2012, in the second leg of the 2011 to 12 Champions League semi-finals against Real Madrid, Neuer saved penalty kicks from both Cristiano Ronaldo and Kaká.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 25 April 2012, in the second leg of the 2011–12 Champions League semi-finals against Real Madrid, Neuer saved penalty kicks from both Cristiano Ronaldo"
+      "1": "Human activity in the Wrexham area dates back to the Mesolithic period (8000 to 4300 BC),[29] with tools made from flint being found to the"
      }
     }
    ],
    "images": [
-    "commons:File:Manuel_Neuer_Ecuador_v_Germany_25_June_2026-148.jpg"
+    "commons:File:Wrexham_City_Centre_(cropped).jpg"
    ]
   },
   {
-   "n": 7,
-   "topic": "alphonso davies",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Discover how Alphonso Davies went from a refugee camp to Bayern Munich star.",
-    "How Alphonso Davies became the youngest goalscorer in USL history at 15.",
-    "From Buduburam refugee camp to Canadian citizenship, the story of Alphonso Davies."
-   ],
-   "sources": [
-    [
-     "Alphonso Davies: From refugee fleeing war and starvation to Bayern Munich star",
-     "https://www.skysports.com/football/news/11971669/alphonso-davies-from-refugee-fleeing-war-and-starvation-to-bayern-munich-star",
-     "Sky Sports",
-     "2020-06-12"
-    ],
-    [
-     "alphonso davies",
-     "https://en.wikipedia.org/wiki/Alphonso_Davies",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Alphonso Davies was born in Buduburam, a refugee camp in Ghana.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The year is 2000, but there is little fanfare for a new millennium in Buduburam. This Ghanaian refugee camp, often compared to a prison by",
-      "2": "Davies was born to Liberian parents in Buduburam, a refugee camp in Ghana, the fourth youngest of six siblings."
-     }
-    },
-    {
-     "claim": "In 2005, Alphonso Davies and his family emigrated to Canada and settled in Edmonton.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It took five years to finally see life outside of Buduburam. The family's route out of Ghana and poverty came via a place on a",
-      "2": "In 2005, the family emigrated to Canada, eventually settling in Edmonton."
-     }
-    },
-    {
-     "claim": "Alphonso Davies joined the Whitecaps FC Residency program at the age of 14.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "When the Vancouver Whitecaps offered a 14-year-old Davies a place on their residential academy scheme, his parents were not convinced - but he had earned",
-      "2": "After playing for Edmonton Internationals, and Edmonton Strikers, Davies joined the Whitecaps FC Residency in 2015 at the age of 14."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Alphonso Davies signed with Whitecaps FC 2 in the USL on February 23, 2016.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "After joining Vancouver Whitecaps FC during their 2016 MLS preseason tour,[37] Davies signed with Whitecaps FC 2 in the USL on February 23, 2016."
-     }
-    },
-    {
-     "claim": "Alphonso Davies became the youngest goalscorer in USL history at 15 years, 6 months.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On May 15, 2016, he scored his first professional goal, making him the youngest goal scorer in USL history at 15 years, 6 months,[40] a"
-     }
-    },
-    {
-     "claim": "Alphonso Davies joined Bayern Munich in January 2019 from MLS side Vancouver Whitecaps FC.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He joined Bayern in January 2019 from MLS side Vancouver Whitecaps FC on a contract lasting until 2023 for a then-record MLS transfer fee, and"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Alphonso_Davies_Canada_v_Qatar_18_June_2026-007_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 8,
-   "topic": "rb leipzig",
-   "signal": "Google Trends GB 100+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know RB Leipzig plays its home matches at the Red Bull Arena?"
-   ],
-   "sources": [
-    [
-     "Aston Villa v Viking, Real Madrid v RB Leipzig and more: Champions League – live",
-     "https://www.theguardian.com/football/live/2026/oct/21/real-madrid-v-rb-leipzig-aston-villa-v-viking-and-more-champions-league-live",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "rb leipzig",
-     "https://en.wikipedia.org/wiki/RB_Leipzig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "RB Leipzig plays its home matches at the Red Bull Arena.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "RB Leipzig plays its home matches at the Red Bull Arena."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 11,
-   "topic": "ucl schedule",
-   "signal": "Google Trends US 20000+",
+   "n": 12,
+   "topic": "playstation plus",
+   "signal": "Google Trends US 2000+",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "Once Human’s Isles of Abyss expansion is officially launching tomorrow on PlayStation 5.",
    "hooks": [
-    "Did you know ULE is the default FreeBSD scheduler?"
+    "Discover PlayStation Plus benefits now!"
    ],
    "sources": [
     [
-     "ucl schedule",
-     "https://en.wikipedia.org/wiki/ULE_scheduler",
+     "Once Human’s Isles of Abyss expansion launches on PS5 tomorrow",
+     "https://blog.playstation.com/2026/10/21/once-humans-isles-of-abyss-expansion-launches-on-ps5-tomorrow/",
+     "PlayStation Blog",
+     "2026-10-21"
+    ],
+    [
+     "Sony's PlayStation Pulse headset arrives on November 19 for $100",
+     "https://www.engadget.com/2293077/sonys-playstation-pulse-headset-arrives-on-november-19-for-dollar100/",
+     "Engadget",
+     "2026-10-21"
+    ],
+    [
+     "Xbox follows in PlayStation's footsteps, introducing AMD FSR 4.1, targeting better graphics and performance on Series X/S",
+     "https://www.eurogamer.net/xbox-series-x-s-amd-fsr-4-1-upscaling",
+     "Eurogamer",
+     "2026-10-21"
+    ],
+    [
+     "playstation plus",
+     "https://en.wikipedia.org/wiki/Playstation_plus",
      "Wikipedia",
      ""
     ]
@@ -380,927 +238,18 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "ULE is the default scheduler for the FreeBSD operating system for the i386 and AMD64 architectures.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "ULE is the default scheduler for the FreeBSD operating system (versions 7.1 and forward) for the i386 and AMD64 architectures."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 15,
-   "topic": "You Can See Everything",
-   "signal": "Wikipedia 206,507 views",
-   "category": "Film",
-   "what_is_new": "Nothing changed in the last two days.",
-   "hooks": [
-    "Discover how You Can See Everything shattered box office records!",
-    "Why did Elizabeth Holmes invite filmmakers into her home?",
-    "Inside the most shocking documentary release of the year!"
-   ],
-   "sources": [
-    [
-     "Will ‘You Can See Everything’ Beat DC’s ‘Clayface’ at the Box Office?",
-     "https://variety.com/2026/film/box-office/you-can-see-everything-could-beat-clayface-box-office-1236917465/",
-     "Variety",
-     "2026-10-21"
-    ],
-    [
-     "Haven’t Seen Enough? The Books and Shows to Read and Watch After ‘You Can See Everything’",
-     "https://www.rollingstone.com/product-recommendations/lifestyle/best-shows-and-books-about-elizabeth-holmes-theranos-1235645790/",
-     "Rolling Stone",
-     "2026-10-21"
-    ],
-    [
-     "‘I’m always being real’: what on earth persuades disgraced people like Elizabeth Holmes to let the cameras in?",
-     "https://www.theguardian.com/film/2026/oct/21/elizabeth-holmes-you-can-see-everything-disgrace-documentary",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "You Can See Everything",
-     "https://en.wikipedia.org/wiki/You_Can_See_Everything",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "You Can See Everything is a 2026 American experimental meta-documentary film directed by Nathan Fielder in his feature directorial debut and Lance Oppenheim.",
+     "claim": "PlayStation Plus is an optional premium subscription service that provides access to exclusive content, complementary games, regular store discounts, and early access to forthcoming games.",
      "sources": [
       4
      ],
      "evidence": {
-      "4": "You Can See Everything is a 2026 American experimental meta-documentary film directed by Nathan Fielder (in his feature directorial debut) and Lance Oppenheim."
-     }
-    },
-    {
-     "claim": "You Can See Everything has grossed $18.2 million against a $7 million production budget.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "It received widespread acclaim from critics and has grossed $18.2 million against a $7 million production budget."
-     }
-    },
-    {
-     "claim": "You Can See Everything could collect a staggering $20 million to $25 million while expanding to 2,600 venues in its second weekend of release.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "“You Can See Everything” could collect a staggering $20 million to $25 million while expanding to 2,600 venues in its second weekend of release."
-     }
-    },
-    {
-     "claim": "You Can See Everything has earned $20.8 million domestically to date.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It has earned $20.8 million domestically to date."
-     }
-    },
-    {
-     "claim": "In 2023, thirty-four days before Elizabeth Holmes begins her eleven-year prison sentence for defrauding investors with her company Theranos, she and her partner Billy Evans invite filmmakers Nathan Fielder and Lance Oppenheim to document their lives at a rented beach house in Del Mar, California.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In 2023, thirty-four days before Elizabeth Holmes begins her eleven-year prison sentence for defrauding investors with her company Theranos, she and her partner Billy Evans"
-     }
-    },
-    {
-     "claim": "You Can See Everything, Nathan Fielder and Lance Oppenheim’s quasi-documentary about Theranos founder and convicted fraudster Elizabeth Holmes, has become one of the buzziest movies of the year.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "You Can See Everything, Nathan Fielder and Lance Oppenheim’s quasi-documentary about Theranos founder and convicted fraudster Elizabeth Holmes, has become one of the buzziest movies"
-     }
-    },
-    {
-     "claim": "In You Can See Everything, convicted fraudster Elizabeth Holmes invites film-makers Nathan Fielder and Lance Oppenheim into her home in a supposed act of radical transparency.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In You Can See Everything, convicted fraudster Elizabeth Holmes invites film-makers Nathan Fielder and Lance Oppenheim into her home in a supposed act of “radical"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 16,
-   "topic": "Luke McCaffrey",
-   "signal": "Wikipedia 142,208 views",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Luke McCaffrey comes from an incredible family of athletes?",
-    "Discover how Luke McCaffrey made his way to the NFL!",
-    "Luke McCaffrey was born on April 2, 2001!"
-   ],
-   "sources": [
-    [
-     "Luke McCaffrey",
-     "https://en.wikipedia.org/wiki/Luke_McCaffrey",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Luke McCaffrey was born on April 2, 2001, in Highlands Ranch, Colorado.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "McCaffrey was born on April 2, 2001, in Highlands Ranch, Colorado.[1]"
-     }
-    },
-    {
-     "claim": "He attended Valor Christian High School, where he played for his father.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He attended Valor Christian High School, where he played for his father.[2][3]"
-     }
-    },
-    {
-     "claim": "McCaffrey was selected by the Washington Commanders in the third round of the 2024 NFL draft.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "McCaffrey was selected by the Commanders in the third round of the 2024 NFL draft."
-     }
-    },
-    {
-     "claim": "His maternal grandfather, Dave Sime, won a silver medal in the 100 meter at the 1960 Olympic Games.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "His maternal grandfather, Dave Sime, won a silver medal in the 100 meter at the 1960 Olympic Games.[41]"
+      "4": "Sony launched an optional premium subscription service on top of the free PSN service in June 2010. Known as PlayStation Plus, the system provides access"
      }
     }
    ],
    "images": [
-    "commons:File:Commanders_Training_Camp_-_54752501769.jpg"
+    "page:https://blog.playstation.com/2026/10/21/once-humans-isles-of-abyss-expansion-launches-on-ps5-tomorrow/"
    ]
-  },
-  {
-   "n": 17,
-   "topic": "ChatGPT",
-   "signal": "Wikipedia 140,548 views",
-   "category": "Tech",
-   "what_is_new": "OpenAI announced on Tuesday that users can now lock ChatGPT conversations with a PIN or biometric authentication to keep sensitive chats private.",
-   "hooks": [],
-   "sources": [
-    [
-     "ChatGPT now lets you lock your chats",
-     "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
-     "TechCrunch",
-     "2026-10-20"
-    ],
-    [
-     "ChatGPT",
-     "https://en.wikipedia.org/wiki/ChatGPT",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": [
-    "commons:File:OpenAI_logo_2025_(symbol).svg"
-   ]
-  },
-  {
-   "n": 18,
-   "topic": "Street Fighter (2026 film)",
-   "signal": "Wikipedia 110,411 views",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Street Fighter is the third live action adaptation?",
-    "Legendary Entertainment acquired the rights to Street Fighter in April 2023.",
-    "Street Fighter was released in the US on October 16 2026."
-   ],
-   "sources": [
-    [
-     "‘Street Fighter’ Punches to Summit as Rajinikanth’s ‘Jailer 2’ Bows in Third at U.K., Ireland Box Office",
-     "https://variety.com/2026/film/global/street-fighter-rajinikanth-jailer-2-uk-ireland-box-office-1236916622/",
-     "Variety",
-     "2026-10-20"
-    ],
-    [
-     "Street Fighter (2026 Movie) Guide",
-     "https://www.ign.com/wikis/street-fighter-2026-movie",
-     "IGN",
-     "2026-10-15"
-    ],
-    [
-     "Street Fighter (2026 film)",
-     "https://en.wikipedia.org/wiki/Street_Fighter_(2026_film)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Street Fighter is a 2026 action comedy movie directed by Kitao Sakurai.",
-      "3": "Street Fighter is a 2026 martial arts comedy film directed by Kitao Sakurai and written by Sakurai and T. J. Fixman, with a story by"
-     }
-    },
-    {
-     "claim": "It is the third live action adaptation based on the Street Fighter video game series by Capcom.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The movie serves as a standalone reboot and fresh adaptation of Capcom's fighting game franchise, though it is the third live-action adaptation overall.",
-      "3": "It is the third live-action feature-length film based on the Street Fighter video game series by Capcom."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Legendary Entertainment acquired the live action film and television rights to Street Fighter in April 2023.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Legendary Entertainment acquired the live-action film and television rights to Street Fighter in April 2023, by which point the film had entered active development, with"
-     }
-    },
-    {
-     "claim": "Danny and Michael Philippou were announced as directors before dropping out in June 2024.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Danny and Michael Philippou were announced as directors before dropping out in June 2024, with Sakurai joining the following February."
-     }
-    },
-    {
-     "claim": "Principal photography began in August 2025 and ended in November.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Principal photography began in August 2025 and ended in November."
-     }
-    },
-    {
-     "claim": "Street Fighter was released in the United States by Paramount Pictures on October 16, 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Street Fighter was released in the United States by Paramount Pictures on October 16, 2026."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 21,
-   "topic": "Above the Below",
-   "signal": "YouTube GB 64,363/h",
-   "category": "Science",
-   "what_is_new": "",
-   "hooks": [
-    "Discover the upcoming survival thriller Above the Below!",
-    "Three astronauts fight to survive as their capsule sinks."
-   ],
-   "sources": [
-    [
-     "Jess Cartner-Morley on fashion: don’t want to get your Big Winter Coat out just yet? Try ‘onion dressing’",
-     "https://www.theguardian.com/fashion/2026/oct/21/jess-cartner-morley-fashion-onion-dressing",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "Elephant Island is an icy sight from orbit | Space photo of the day for Oct. 19, 2026",
-     "https://www.space.com/astronomy/earth/elephant-island-is-an-icy-sight-from-orbit-space-photo-of-the-day-for-oct-19-2026",
-     "Space.com",
-     "2026-10-19"
-    ],
-    [
-     "Above the Below",
-     "https://en.wikipedia.org/wiki/Above_the_Below",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Above the Below is an upcoming British American survival thriller film co directed by Idris Elba and Martin Owen.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Above the Below is an upcoming British-American survival thriller film co-directed by Idris Elba and Martin Owen."
-     }
-    },
-    {
-     "claim": "Elizabeth Morris, Matt Mitchell, and Vicki Sargent wrote the screenplay from a story by Owen.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Elizabeth Morris, Matt Mitchell, and Vicki Sargent wrote the screenplay from a story by Owen."
-     }
-    },
-    {
-     "claim": "Elba also stars in the film alongside Caitlin FitzGerald and Hero Fiennes Tiffin in a story about three astronauts trapped in their capsule as it sinks in the ocean.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Elba also stars in the film alongside Caitlin FitzGerald and Hero Fiennes Tiffin in a story about three astronauts trapped in their capsule as it"
-     }
-    },
-    {
-     "claim": "The film is scheduled to be released on 4 December 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The film is scheduled to be released on 4 December 2026."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 23,
-   "topic": "How is This Even Possible? 😳🥌",
-   "signal": "YouTube GB-sport 124,009/h",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [],
-   "sources": [
-    [
-     "Getting into the swing of playing golf | Letters",
-     "https://www.theguardian.com/sport/2026/oct/21/getting-into-the-swing-of-playing-golf",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "Elon Musk confirms he is considering merging Tesla and SpaceX",
-     "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-21"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 24,
-   "topic": "The Victoria’s Secret Fashion Show 2026",
-   "signal": "YouTube GB-entertainment 445,271/h",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Kylie Jenner made her Victoria's Secret Fashion Show debut in a $50m bra.",
-    "The Fantasy Bra was crafted from 18-carat gold and 4,410 diamonds.",
-    "The Victoria's Secret catwalk show returned in 2024 after being scrapped."
-   ],
-   "sources": [
-    [
-     "Kylie Jenner's debut at Victoria's Secret Fashion Show in $50m bra sparks mixed reaction",
-     "https://www.bbc.co.uk/news/articles/cmx2wqwxvyxlo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-19"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Reality TV star Kylie Jenner made her Victoria's Secret Fashion Show debut on Sunday wearing a $50m bra.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Reality TV star Kylie Jenner has sparked mixed reaction after making her Victoria's Secret Fashion Show debut in a $50m (Â£37m) bra."
-     }
-    },
-    {
-     "claim": "Kylie Jenner is 29 years old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Kardashians star, 29, being selected to wear the piece delighted some fans, while many others criticised the brand for not giving the opportunity to"
-     }
-    },
-    {
-     "claim": "Adam Selman is the chief creative officer at Victoria's Secret.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Chief creative officer at Victoria's Secret, Adam Selman, told Vogue, external that Jenner was picked for being a \"cultural powerhouse\"."
-     }
-    },
-    {
-     "claim": "The lingerie brand's catwalk show was scrapped after its 2018 edition drew low ratings and criticism.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The lingerie brand's catwalk show was scrapped after its 2018 edition drew low ratings, as well as criticism that it was sexist, outdated and lacked"
-     }
-    },
-    {
-     "claim": "The fashion show returned in 2024 with a promise to celebrate all women.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It returned in 2024, with a promise to \"celebrate all women\" and featured more a diverse range of talent, including Ashley Graham's appearance as a"
-     }
-    },
-    {
-     "claim": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob & Co.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Victoria's Secret created this year's Fantasy Bra in collaboration with jewellery brand Jacob & Co, who said it was the \"most valuable\" one ever created"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 25,
-   "topic": "Ranking Best Flag Football Moments 🏈",
-   "signal": "YouTube US-sport 88,194/h",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [],
-   "sources": [
-    [
-     "Golden bat or ball: does cricket need an equivalent to the Ballon d’Or? | Taha Hashim",
-     "https://www.theguardian.com/sport/2026/oct/20/golden-bat-or-ball-does-cricket-need-an-equivalent-to-the-ballon-dor",
-     "Guardian",
-     "2026-10-20"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 26,
-   "topic": "What is the BEST app?!📱🤔",
-   "signal": "YouTube US-tech 57,554/h",
-   "category": "Tech",
-   "what_is_new": "Best Buy launched an invite-only sale for Pokémon TCG Prismatic Evolutions ETBs.",
-   "hooks": [
-    "Grand Theft Auto 6 launches on November 19!",
-    "Get Pokémon TCG Prismatic Evolutions ETBs for only $49.99!"
-   ],
-   "sources": [
-    [
-     "The 15 Best Steam Next Fest Demos to Play Right Now",
-     "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
-     "Polygon",
-     "2026-10-21"
-    ],
-    [
-     "Best Buy Is Selling Pokémon TCG: Prismatic Evolutions ETBs at MSRP — But You'll Need An Invite",
-     "https://www.ign.com/articles/pokemon-tcg-prismatic-evolutions-etb-best-buy-invite",
-     "IGN",
-     "2026-10-21"
-    ],
-    [
-     "US government leaks the best GTA 6 promo yet: Pißwasser is real",
-     "https://www.pcgamer.com/games/grand-theft-auto/us-government-leaks-the-best-gta-6-promo-yet-pisswasser-is-real/",
-     "PC Gamer",
-     "2026-10-21"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Grand Theft Auto 6 is set to launch on consoles on November 19.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto 6 is set to launch on consoles on November 19."
-     }
-    },
-    {
-     "claim": "Prismatic Evolutions Elite Trainer Boxes are priced at $49.99 at Best Buy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Prismatic Evolutions — for only $49.99 at Best Buy, thanks to the retailer’s new invite-only listing."
-     }
-    },
-    {
-     "claim": "Steam Next Fest runs through Oct. 26.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This October's edition, which runs through Oct. 26, was especially exciting on paper given that it would give some air to upcoming games that aren't"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 27,
-   "topic": "I Can't Love You Anymore by Ella Langley & Morgan Wallen",
-   "signal": "Apple Music US: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Ella Langley and Morgan Wallen teamed up for a brand new duet!",
-    "Discover the hidden Easter egg in Ella Langley's music video.",
-    "Ella Langley and Morgan Wallen released their first collaboration on April 24."
-   ],
-   "sources": [
-    [
-     "I Can't Love You Anymore by Ella Langley & Morgan Wallen",
-     "https://en.wikipedia.org/wiki/I_Can%27t_Love_You_Anymore_(Ella_Langley_and_Morgan_Wallen_song)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "It was released on April 24, 2026, through Sawgod and Columbia.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It was released on April 24, 2026, through Sawgod and Columbia."
-     }
-    },
-    {
-     "claim": "The song marks the first collaboration between Langley and Wallen, and appears on the reissue of Langley's second studio album, Dandelion (2026).",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The song marks the first collaboration between Langley and Wallen, and appears on the reissue of Langley's second studio album, Dandelion (2026)."
-     }
-    },
-    {
-     "claim": "Langley first performed with Wallen in June 2025 when she joined him on his I'm the Problem tour.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Langley first performed with Wallen in June 2025 when she joined him on his I'm the Problem tour."
-     }
-    },
-    {
-     "claim": "On April 18, 2026, Langley joined Wallen for an eighth time during his tour in Tuscaloosa, Alabama.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On April 18, 2026, Langley joined Wallen for an eighth time during his tour in Tuscaloosa, Alabama."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 28,
-   "topic": "serge gnabry",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Serge Gnabry scored four goals against Tottenham Hotspur?",
-    "Serge Gnabry scored a hat trick on his senior international debut!",
-    "Serge Gnabry scored Bayern Munich's 4000th Bundesliga goal in 2019."
-   ],
-   "sources": [
-    [
-     "serge gnabry",
-     "https://en.wikipedia.org/wiki/Serge_Gnabry",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Serge Gnabry was born on 14 July 1995.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Serge David Gnabry (German pronunciation: [sɛʁʃ ˈdaːvɪt gnabʁi];[4][5] born 14 July 1995) is a German professional footballer who plays for Bundesliga club Bayern Munich and"
-     }
-    },
-    {
-     "claim": "Serge Gnabry made his senior international debut in November 2016 in a 2018 FIFA World Cup qualification match against San Marino, scoring a hat-trick in an 8-0 win.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "After appearing for Germany at various youth levels, Gnabry made his senior international debut in November 2016 in a 2018 FIFA World Cup qualification match"
-     }
-    },
-    {
-     "claim": "On 2 March 2019, Serge Gnabry scored Bayern Munich's 4000th Bundesliga goal during a 5-1 win over Gladbach.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 2 March 2019, Gnabry scored Bayern Munich's 4000th Bundesliga goal during a 5–1 win over Gladbach, helping the club become the first team to"
-     }
-    },
-    {
-     "claim": "On 1 October 2019, Serge Gnabry scored four goals in the 2019-20 UEFA Champions League 7-2 away win against Tottenham Hotspur.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 1 October 2019, Gnabry scored four goals in the 2019–20 UEFA Champions League 7–2 away win against Tottenham Hotspur.[51][52][53]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Serge_Gnabry_WC2022.jpg"
-   ]
-  },
-  {
-   "n": 29,
-   "topic": "tom bischof",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Tom Bischof is a professional footballer for Bayern Munich?"
-   ],
-   "sources": [
-    [
-     "tom bischof",
-     "https://en.wikipedia.org/wiki/Tom_Bischof",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 30,
-   "topic": "5g",
-   "signal": "Google Trends US 500+",
-   "category": "Tech",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know 5G is the fifth generation of cellular network technology?",
-    "Large scale commercial deployments of 5G began in 2019 in South Korea.",
-    "In 2008 NASA conducted nanosatellite studies that influenced early network concepts."
-   ],
-   "sources": [
-    [
-     "5g",
-     "https://en.wikipedia.org/wiki/5G",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "5G is the fifth and current generation of cellular network technology and the successor to 4G.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "5G refers to the fifth and current generation of cellular network technology and the successor to 4G."
-     }
-    },
-    {
-     "claim": "Large-scale commercial deployments of 5G began in 2019, including South Korea's national rollout.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Large-scale commercial deployments began in 2019, including South Korea's national 5G rollout."
-     }
-    },
-    {
-     "claim": "In 2008, NASA and the Machine-to-Machine Intelligence Corporation conducted nanosatellite communication studies that influenced early next-generation network concepts.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2008, NASA and the Machine-to-Machine Intelligence Corporation (M2Mi) conducted nanosatellite communication studies that influenced early next-generation network concepts."
-     }
-    },
-    {
-     "claim": "In 2012, New York University established NYU Wireless, a research center focused on millimeter-wave communication.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2012, New York University established NYU Wireless, a research center focused on millimeter-wave communication."
-     }
-    },
-    {
-     "claim": "In 2012, the European Union launched the Mobile and Wireless Communications Enablers for the Twenty-Twenty Information Society project.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Also in 2012, the European Union launched the Mobile and Wireless Communications Enablers for the Twenty-Twenty Information Society (METIS) project to align emerging network research"
-     }
-    },
-    {
-     "claim": "In 2013, the ITU-R Working Party 5D began studies on IMT-2020, later formalized as the 5G standard.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2013, the ITU-R Working Party 5D began studies on IMT-2020, later formalized as the 5G standard."
-     }
-    },
-    {
-     "claim": "On April 3, 2019, South Korea launched its national network, the first full commercial deployment.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On April 3, 2019, South Korea launched its national network, the first full commercial deployment."
-     }
-    },
-    {
-     "claim": "In June 2019, Globe Telecom introduced the Philippines' first next-generation network.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In June 2019, Globe Telecom introduced the Philippines' first next-generation network"
-     }
-    },
-    {
-     "claim": "In December 2019, AT&T launched a consumer service in the United States that expanded nationwide during 2020.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "and in December 2019, AT&T launched a consumer service in the United States that expanded nationwide during 2020."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 31,
-   "topic": "club brugge",
-   "signal": "Google Trends US 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Club Brugge was founded on 13 November 1891?",
-    "Club Brugge has been crowned Belgian league champions 20 times.",
-    "Daniel Amokachi became the first goal scorer in the Champions League on 25 November 1992."
-   ],
-   "sources": [
-    [
-     "club brugge",
-     "https://en.wikipedia.org/wiki/Club_Brugge_KV",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Club Brugge was founded on 13 November 1891.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "A year later on 13 November 1891, the club was re-created under Brugsche FC, and this is now seen as the official foundation of the"
-     }
-    },
-    {
-     "claim": "Club Brugge has been crowned Belgian league champions 20 times.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "One of the most decorated clubs in Belgian football, Club Brugge has been crowned Belgian league champions 20 times, second only to major rivals Anderlecht,"
-     }
-    },
-    {
-     "claim": "Club Brugge holds the European record for the highest number of consecutive participations in the UEFA Europa League with 20.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Club Brugge holds the European record for the highest number of consecutive participations in the UEFA Europa League (20), the record number of Belgian Cups"
-     }
-    },
-    {
-     "claim": "Daniel Amokachi became the first goal scorer in the Champions League on 25 November 1992.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On 25 November 1992, Brugge player Daniel Amokachi became the first goal scorer in the Champions League."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 33,
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 303,129 views",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Jailer 2 is the highest-grossing Tamil film of 2026?",
-    "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
-   ],
-   "sources": [
-    [
-     "Jailer 2",
-     "https://en.wikipedia.org/wiki/Jailer_2",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Jailer 2 is a 2026 Indian Tamil-language action comedy film written and directed by Nelson Dilipkumar."
-     }
-    },
-    {
-     "claim": "Sun Pictures officially announced the sequel to Jailer in January 2025.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Sun Pictures officially announced the sequel to Jailer in January 2025."
-     }
-    },
-    {
-     "claim": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Jailer 2 was released worldwide on 15 October 2026 in standard and IMAX formats."
-     }
-    },
-    {
-     "claim": "It is the highest-grossing Tamil film of 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It is the highest-grossing Tamil film of 2026."
-     }
-    }
-   ],
-   "images": []
   }
  ]
 }

@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Fri 23 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 40 scheduled |
-| Thu 22 Oct | 27 public, 2 scheduled | 18 | 11 | ⏳ 27 of 40 so far, 2 more scheduled |
+| Fri 23 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
+| Thu 22 Oct | 27 public, 2 scheduled | 18 | 12 | ⏳ 27 of 40 so far, 2 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -54,6 +54,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-056** Street Fighter movie: Chun-Li's 12-egg diet 🥚: failed. RuntimeError: checks failed: unclear narration in beats [3]
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
+- **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
 ## On the channel (latest first)
@@ -94,7 +95,7 @@ public · 25 s · music: defying-gravity · on Facebook · [script](../boards/do
 ![QD-119](QD-119.jpg)
 
 ### Thu 22 Oct 17:30 · Julia Stiles honours Heath Ledger on DWTS 🎭
-public · 8 views · 29 s · music: defying-gravity · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
+public · 8 views · 29 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
 
 ![QD-118](QD-118.jpg)
 

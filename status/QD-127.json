@@ -1,0 +1,89 @@
+{
+ "id": "QD-127",
+ "board": "boards/queue/QD-127.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T00:30:00Z",
+ "rendered": "2026-10-22T19:18:14.909281+00:00",
+ "title": "Manchester United: The historic 1999 treble journey ⚽",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 5.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.74,
+   "title",
+   0
+  ],
+  [
+   5.74,
+   9.4,
+   "none",
+   2
+  ],
+  [
+   9.4,
+   13.49,
+   "none",
+   1
+  ],
+  [
+   13.49,
+   17.51,
+   "none",
+   1
+  ],
+  [
+   17.51,
+   23.5,
+   "date",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "212698",
+   "q": "stadium confetti celebration",
+   "t0": 0.0,
+   "t1": 12.05
+  },
+  {
+   "p": "pixabay",
+   "id": "139361",
+   "q": "running track sunrise",
+   "t0": 11.45,
+   "t1": 23.5
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T19:39:25Z",
+ "video": "Ck2cgaAUxiY",
+ "url": "https://youtube.com/shorts/Ck2cgaAUxiY",
+ "publish_at": "2026-10-23T00:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T00:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-127"
+}

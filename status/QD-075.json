@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T11:00:00Z",
  "rendered": "2026-10-21T09:40:07.844798+00:00",
- "title": "ChatGPT adds new PIN lock for private chats 🔒",
+ "title": "How to lock your ChatGPT conversations 📱",
  "background_notes": [
   "Pixabay 'futuristic city night': 40 results, none at 720p or better",
   "picked pixabay 2 (+3 spares)"
@@ -104,7 +104,14 @@
  },
  "engage": {
   "comment": "UgziaHtLwj0KQET41DR4AaABAg",
-  "playlist": "Quickplay Daily: Tech"
+  "playlist": "Quickplay Daily: Tech",
+  "title": {
+   "swapped_from": "ChatGPT adds new PIN lock for private chats 🔒",
+   "to": "How to lock your ChatGPT conversations 📱",
+   "at": "2026-10-22T11:17+00:00",
+   "views_an_hour": 0.5,
+   "typical": 2.2
+  }
  },
  "instagram": {
   "media": "18156589900456225",

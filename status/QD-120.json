@@ -1,0 +1,90 @@
+{
+ "id": "QD-120",
+ "board": "boards/queue/QD-120.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T17:30:00Z",
+ "rendered": "2026-10-22T15:05:13.913496+00:00",
+ "title": "Moon's origin: giant impact 🌕",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "majestic-12",
+ "social_music": "space-ambient-cinematic-442834",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "lab-opening-1019"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 35.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.09,
+   "none",
+   0
+  ],
+  [
+   3.09,
+   7.94,
+   "none",
+   1
+  ],
+  [
+   7.94,
+   14.71,
+   "stat",
+   2
+  ],
+  [
+   14.71,
+   20.27,
+   "none",
+   1
+  ],
+  [
+   20.27,
+   27.82,
+   "none",
+   1
+  ],
+  [
+   27.82,
+   34.94,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1700",
+   "q": "night sky horizon",
+   "t0": 0.0,
+   "t1": 34.94
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:15Z",
+ "video": "SKvuDC9-ngk",
+ "url": "https://youtube.com/shorts/SKvuDC9-ngk",
+ "publish_at": "2026-10-22T17:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T17:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-120"
+}

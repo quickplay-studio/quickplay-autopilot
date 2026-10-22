@@ -1,0 +1,90 @@
+{
+ "id": "QD-119",
+ "board": "boards/queue/QD-119.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T17:00:00Z",
+ "rendered": "2026-10-22T14:34:53.429481+00:00",
+ "title": "Best-selling single of all time: the truth 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "defying-gravity",
+ "social_music": "uplifting-friend-605770",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.4,
+  "wps": 3.18,
+  "weak_beats": [],
+  "size_mb": 13.1
+ },
+ "timeline": [
+  [
+   0.06,
+   3.1,
+   "none",
+   0
+  ],
+  [
+   3.1,
+   10.13,
+   "none",
+   1
+  ],
+  [
+   10.13,
+   15.05,
+   "none",
+   1
+  ],
+  [
+   15.05,
+   20.99,
+   "cards",
+   2
+  ],
+  [
+   20.99,
+   25.4,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "5026",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 13.0
+  },
+  {
+   "p": "pixabay",
+   "id": "24458",
+   "q": "dj mixer lights",
+   "t0": 12.4,
+   "t1": 25.4
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:13Z",
+ "video": "AMHe_Fz7f5c",
+ "url": "https://youtube.com/shorts/AMHe_Fz7f5c",
+ "publish_at": "2026-10-22T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-119"
+}

@@ -1,0 +1,102 @@
+{
+ "id": "QD-117",
+ "board": "boards/queue/QD-117.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T16:00:00Z",
+ "rendered": "2026-10-22T14:35:17.398699+00:00",
+ "title": "Ronnie O'Sullivan stunned by qualifier 😲",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "rise-of-the-machines",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 26.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.2
+ },
+ "timeline": [
+  [
+   0.06,
+   3.26,
+   "none",
+   0
+  ],
+  [
+   3.26,
+   6.81,
+   "none",
+   1
+  ],
+  [
+   6.81,
+   11.9,
+   "none",
+   1
+  ],
+  [
+   11.9,
+   15.68,
+   "none",
+   1
+  ],
+  [
+   15.68,
+   18.61,
+   "none",
+   1
+  ],
+  [
+   18.61,
+   22.31,
+   "stat",
+   1
+  ],
+  [
+   22.31,
+   26.03,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "174460",
+   "q": "snooker hall lights",
+   "t0": 0.0,
+   "t1": 13.32
+  },
+  {
+   "p": "pixabay",
+   "id": "189991",
+   "q": "stadium crowd",
+   "t0": 12.72,
+   "t1": 26.03
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:08Z",
+ "video": "6ghvpNf9Mu8",
+ "url": "https://youtube.com/shorts/6ghvpNf9Mu8",
+ "publish_at": "2026-10-22T16:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T16:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-117"
+}

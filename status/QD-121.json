@@ -1,0 +1,90 @@
+{
+ "id": "QD-121",
+ "board": "boards/queue/QD-121.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T18:00:00Z",
+ "rendered": "2026-10-22T14:34:36.266770+00:00",
+ "title": "How the iPhone was kept a total secret 📱",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "ego-chall",
+ "social_music": "creative-technology-showreel-241274",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "lab-opening-1019"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 24.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.9
+ },
+ "timeline": [
+  [
+   0.06,
+   2.97,
+   "title",
+   0
+  ],
+  [
+   2.97,
+   8.61,
+   "none",
+   1
+  ],
+  [
+   8.61,
+   12.94,
+   "cards",
+   1
+  ],
+  [
+   12.94,
+   18.2,
+   "none",
+   1
+  ],
+  [
+   18.2,
+   24.49,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "4973",
+   "q": "circuit board close up",
+   "t0": 0.0,
+   "t1": 12.55
+  },
+  {
+   "p": "pixabay",
+   "id": "4723",
+   "q": "modern office interior",
+   "t0": 11.95,
+   "t1": 24.49
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:17Z",
+ "video": "5O4upSca3ZA",
+ "url": "https://youtube.com/shorts/5O4upSca3ZA",
+ "publish_at": "2026-10-22T18:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T18:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-121"
+}

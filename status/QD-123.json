@@ -1,0 +1,101 @@
+{
+ "id": "QD-123",
+ "board": "boards/queue/QD-123.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T22:30:00Z",
+ "rendered": "2026-10-22T14:44:12.374600+00:00",
+ "title": "Queen's legendary Live Aid performance 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Bob Geldof and Midge Ure: no Commons image named 'Bob Geldof and Midge Ure')",
+  "beat 5 reused a nearby picture (commons-search:Live Aid audience: no Commons image named 'Live Aid audience')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7
+ },
+ "music": "duty-calls",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 28.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.9
+ },
+ "timeline": [
+  [
+   0.06,
+   4.85,
+   "title",
+   0
+  ],
+  [
+   4.85,
+   10.55,
+   "none",
+   1
+  ],
+  [
+   10.55,
+   16.5,
+   "cards",
+   1
+  ],
+  [
+   16.5,
+   20.92,
+   "none",
+   1
+  ],
+  [
+   20.92,
+   24.73,
+   "none",
+   1
+  ],
+  [
+   24.73,
+   28.27,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "50474",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 14.43
+  },
+  {
+   "p": "pixabay",
+   "id": "58013",
+   "q": "vintage television static",
+   "t0": 13.83,
+   "t1": 28.27
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:21Z",
+ "video": "pJzl_YBZP-A",
+ "url": "https://youtube.com/shorts/pJzl_YBZP-A",
+ "publish_at": "2026-10-22T22:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T22:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-123"
+}

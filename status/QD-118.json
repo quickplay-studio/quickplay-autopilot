@@ -1,0 +1,96 @@
+{
+ "id": "QD-118",
+ "board": "boards/queue/QD-118.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T16:30:00Z",
+ "rendered": "2026-10-22T14:34:30.483391+00:00",
+ "title": "Julia Stiles honours Heath Ledger on DWTS 🎭",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "defying-gravity",
+ "social_music": "uplifting-friend-605770",
+ "look": {
+  "captions": "clean",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 29.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.6
+ },
+ "timeline": [
+  [
+   0.06,
+   4.59,
+   "title",
+   0
+  ],
+  [
+   4.59,
+   8.72,
+   "none",
+   2
+  ],
+  [
+   8.72,
+   13.19,
+   "none",
+   1
+  ],
+  [
+   13.19,
+   19.12,
+   "cards",
+   1
+  ],
+  [
+   19.12,
+   25.19,
+   "stat",
+   1
+  ],
+  [
+   25.19,
+   28.93,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "9596",
+   "q": "film reel projection",
+   "t0": 0.0,
+   "t1": 14.76
+  },
+  {
+   "p": "pixabay",
+   "id": "62824",
+   "q": "movie theatre seats",
+   "t0": 14.16,
+   "t1": 28.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:11Z",
+ "video": "j4yzV_qS2OA",
+ "url": "https://youtube.com/shorts/j4yzV_qS2OA",
+ "publish_at": "2026-10-22T16:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T16:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-118"
+}

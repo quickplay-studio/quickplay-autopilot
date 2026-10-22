@@ -1,0 +1,91 @@
+{
+ "id": "QD-122",
+ "board": "boards/queue/QD-122.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T22:00:00Z",
+ "rendered": "2026-10-22T14:36:44.065577+00:00",
+ "title": "Leicester City's historic Premier League win 🏆",
+ "background_notes": [
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Leicester City vs Sunderland: no Commons image named 'Leicester City vs Sunderland')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "defying-gravity",
+ "social_music": "uplifting-friend-605770",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 35.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.9
+ },
+ "timeline": [
+  [
+   0.06,
+   5.07,
+   "none",
+   0
+  ],
+  [
+   5.07,
+   9.26,
+   "none",
+   1
+  ],
+  [
+   9.26,
+   14.22,
+   "none",
+   1
+  ],
+  [
+   14.22,
+   19.92,
+   "none",
+   1
+  ],
+  [
+   19.92,
+   25.14,
+   "none",
+   1
+  ],
+  [
+   25.14,
+   35.59,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "139360",
+   "q": "running track sunrise",
+   "t0": 0.0,
+   "t1": 35.58
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T15:26:19Z",
+ "video": "LZAeF5Wnmu8",
+ "url": "https://youtube.com/shorts/LZAeF5Wnmu8",
+ "publish_at": "2026-10-22T22:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T22:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-122"
+}

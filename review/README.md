@@ -4,7 +4,7 @@
 
 YouTube checked Thu 22 Oct 14:37 (UK): 1 scheduled, 101 public, 32 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 13:06).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 16:10).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 22 public | 18 | 6 | ⏳ 22 of 40 so far |
+| Thu 22 Oct | 22 public, 7 scheduled | 18 | 7 | ⏳ 22 of 40 so far, 7 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -55,16 +55,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 
-## In the queue
-
-- **QD-117** Ronnie O'Sullivan stunned by qualifier 😲 (rendering next)
-- **QD-118** Julia Stiles honours Heath Ledger on DWTS 🎭 (rendering next)
-- **QD-119** Best-selling single of all time: the truth 🎶 (rendering next)
-- **QD-120** Moon's origin: giant impact 🌕 (rendering next)
-- **QD-121** How the iPhone was kept a total secret 📱 (rendering next)
-- **QD-122** Leicester City's historic Premier League win 🏆 (rendering next)
-- **QD-123** Queen's legendary Live Aid performance 🎤 (rendering next)
-
 ## On the channel (latest first)
 
 ### Thu 22 Oct 15:00 · American football joins the 2028 Olympics 🏈
@@ -73,7 +63,7 @@ private · 41 s · music: risen · on Facebook · [script](../boards/done/QD-116
 ![QD-116](QD-116.jpg)
 
 ### Thu 22 Oct 14:30 · How BioWare built Knights of the Old Republic 🌌
-public · 25 s · music: risen · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
+public · 25 s · music: risen · on Facebook · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
 
 ![QD-115](QD-115.jpg)
 

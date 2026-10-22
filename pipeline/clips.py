@@ -641,6 +641,8 @@ def make(cid, count=None):
         if len(made) >= want: break
         bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
         if bad: m["skipped"] = f"profanity: {', '.join(bad[:3])}"; log(f"{m['id']}: skipped: {m['skipped']}"); continue
+        if UNSAFE.search(f"{m.get('hook', '')} {m.get('title', '')}"):      # planned before the rule, or slipped through
+            m["skipped"] = "not brand safe"; log(f"{m['id']}: skipped: not brand safe ({m.get('hook', '')[:40]})"); continue
         try:
             out = make_clip(cid, m, words)
             f = frame_of(out, m)

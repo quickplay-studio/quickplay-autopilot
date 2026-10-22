@@ -1,21 +1,11 @@
-afternoon run for 2026-10-22: 24 to write from 6 fact packs
-local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
-local model ready
+evening run for 2026-10-23: 1 to write from 6 fact packs
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Angel Of My Dreams by JADE: still failing: facts: beat 2: Beat 2 states the debut was on Wednesday 21 October, but the pack states October 21 was a Wednesday in 2026/date context, however the pack specifically says 'On Wednesday October 21 JADE debuted... two and a half years postrelease'. Wait, checking the date/day: October 21, 2026 is a W
-ronnie o'sullivan: groq:openai/gpt-oss-120b, 0 warnings
-Heath Ledger: gemini-3.6-flash, 0 warnings
+Angel Of My Dreams by JADE: still failing: UK date style: write '20 October', not ['October 21']
+covered already: ronnie o'sullivan
+covered already: Heath Ledger
 covered already: BioWare
 covered already: Cyberpunk 2077
 too few facts: Dancing with the Stars (American TV series) season 35
-evergreen: Top 10 best-selling video game franchises of all time: only 1 checked facts
-evergreen: Top 10 best-selling video games of all time: only 2 checked facts
-evergreen: Top 10 highest-grossing films of all time worldwide: only 2 checked facts
-What is the best-selling single of all time worldwide?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Top 10 highest-grossing superhero films of all time: still failing: meta.facts: source numbers run from 1 to 1 (Avengers: Endgame is the number one high); meta.facts: source numbers run from 1 to 1 (Spider-Man: Brand New Day is the second ); meta.facts: source numbers run from 1 to 1 (Avengers: Infinity War is the third high); meta.facts: source numbers run from 1 t
-How the Moon was created by a massive cosmic collision billion years ago: groq:openai/gpt-oss-120b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How the iPhone was kept top secret before its 2007 reveal: gemini-3.1-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How Leicester City won the Premier League against 5000-to-1 odds: gemini-3.1-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How Queen stole the show at Live Aid in 1985: gemini-3.1-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 7 of 24: QD-117 Ronnie O'Sullivan stunned by qualifier 😲; QD-118 Julia Stiles honours Heath Ledger on DWTS 🎭; QD-119 Best-selling single of all time: the truth 🎶; QD-120 Moon's origin: giant impact 🌕; QD-121 How the iPhone was kept a total secret 📱; QD-122 Leicester City's historic Premier League win 🏆; QD-123 Queen's legendary Live Aid performance 🎤
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-omni-1.1-flash": "daily limit", "gemini-3.5-flash": "daily limit 20", "gemini-3-flash-preview": "daily limit 20"}, "retired": ["gemini-2.5-flash", "gemini-2.5-flash-lite"], "timeouts": {"gemini-3.5-flash-lite": 2, "gemma-4-26b-a4b-it": 1}, "answers": {"local:qwen2.5-7b-instruct-q4_k_m": 2, "gemini-flash-latest": 1, "gemini-3.5-flash-lite": 2, "gemini-3.7-flash": 1, "gemini-flash-lite-latest": 6, "groq:openai/gpt-oss-120b": 2, "gemini-3.6-flash": 1, "gemini-3.1-flash-lite": 35, "gemini-3.5-flash": 1, "gemini-3-flash-preview": 1, "openrouter:nvidia/nemotron-3.5-lightning:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+David Warner slams South Africa Test crowds 🏏: gemini-3.5-flash-lite, 0 warnings
+wrote 1 of 1: QD-124 Bavuma scores majestic 179 against Australia 🏏
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash-lite": 9, "gemini-flash-latest": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

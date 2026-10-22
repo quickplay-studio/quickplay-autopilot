@@ -142,3 +142,6 @@ the channel's comment question and replies.
   boards, the length guard downgrading thin packs, no empty boards. The evergreen top lists all failed on "only 2 or 3
   checked facts": Wikipedia list articles keep their rankings in tables and page_text dropped tables. factpack.page_text
   now keeps tables for Wikipedia pages (rows read as "| 1 | Minecraft | 300 million |"), which also feeds the long arms.
+- The afternoon run (13:39 UTC) still dropped every top list ("only 1 or 2 checked facts") with trafilatura's tables
+  on, so factpack.wiki_tables now parses a Wikipedia page's first data tables itself into lines like "1 | Minecraft |
+  300,000,000 | Multi-platform" after the prose, and the fact checker is told to quote a whole line; verify() matches it.

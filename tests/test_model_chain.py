@@ -155,3 +155,14 @@ else: p.unlink()
 assert [r["short"] for r in w] == ["QD-001"], w
 print("9 weak ok")
 print("model chain ok")
+
+# Wikipedia data tables become quotable rows for the fact checker (factpack.wiki_tables)
+html = """<html><body><p>Intro.</p><table class="infobox"><tr><td>x</td></tr></table>
+<table class="wikitable sortable"><tbody><tr><th>Rank</th><th>Title</th><th>Sales</th></tr>
+<tr><td>1</td><td><a>Minecraft</a><sup>[1]</sup></td><td>300,000,000</td></tr><tr><td>2</td><td>Grand Theft Auto V</td><td>215,000,000<sup>[2]</sup></td></tr></tbody></table></body></html>"""
+rows = F.wiki_tables(html)
+assert rows[:3] == ["Rank | Title | Sales", "1 | Minecraft | 300,000,000", "2 | Grand Theft Auto V | 215,000,000"], rows
+_, single = F.verify([{"claim": "Minecraft is number one with 300,000,000 copies sold.", "evidence": [{"source": 1, "quote": "1 | Minecraft | 300,000,000"}]}],
+                     {1: F.norm("Intro.\n\n" + "\n".join(rows))}, {1: "wikipedia"})
+assert len(single) == 1, single
+print("wiki tables ok")

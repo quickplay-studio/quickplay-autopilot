@@ -393,7 +393,8 @@ EVERGREEN_FACTS = """You check facts for a family-friendly Shorts channel. The S
 encyclopedia article. Using ONLY this article, {how} For each fact:
 - "claim": one plain sentence in UK English. Copy names, numbers and dates exactly as the article writes them. No dashes.
 - "evidence": [{{"source": 1, "quote": the exact text from the article that states it, copied character for
-  character, at most 40 words}}].
+  character, at most 40 words}}]. The article's tables come as lines like "1 | Minecraft | 300,000,000 | Multi-platform":
+  for a ranking or a figure, quote that whole line.
 Leave out opinions, rumours, and anything about politics, crime, health or money advice.
 "what_is_new": "". "hooks": up to 3 openings of 12 words or fewer, each built only on facts above.
 

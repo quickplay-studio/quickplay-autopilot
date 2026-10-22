@@ -78,17 +78,57 @@ def digits(s):
     return re.sub(r"[,.]", "", s)
 
 
+def wiki_tables(html, tables=2, rows=25):
+    """The rows of a Wikipedia page's first data tables ("wikitable"), one line each, cells joined with " | ", reference
+    marks dropped: a list article's ranking (best-selling games, highest-grossing films) lives there, not in its prose."""
+    from html.parser import HTMLParser
+    class P(HTMLParser):
+        def __init__(self):
+            super().__init__(); self.out, self.table, self.row, self.cell, self.depth, self.skip = [], None, None, None, 0, 0
+        def handle_starttag(self, tag, attrs):
+            a = dict(attrs)
+            if tag == "table":
+                self.depth += 1
+                if self.table is None and self.depth == 1 and "wikitable" in (a.get("class") or ""): self.table = []
+            elif self.table is not None and tag == "tr": self.row = []
+            elif self.table is not None and tag in ("td", "th") and self.row is not None: self.cell = []
+            elif tag in ("sup", "style", "script"): self.skip += 1
+        def handle_endtag(self, tag):
+            if tag == "table":
+                if self.table is not None and self.depth == 1: self.out.append(self.table); self.table = None
+                self.depth = max(0, self.depth - 1)
+            elif self.table is not None and tag == "tr" and self.row is not None:
+                if any(c.strip() for c in self.row): self.table.append(self.row)
+                self.row = None
+            elif self.table is not None and tag in ("td", "th") and self.cell is not None and self.row is not None:
+                self.row.append(re.sub(r"\s+", " ", "".join(self.cell)).strip()); self.cell = None
+            elif tag in ("sup", "style", "script"): self.skip = max(0, self.skip - 1)
+        def handle_data(self, data):
+            if self.cell is not None and not self.skip: self.cell.append(data)
+    try:
+        p = P(); p.feed(html); p.close()
+    except Exception: return []
+    lines = []
+    for t in p.out[:tables]:
+        lines += [" | ".join(c for c in r if c) for r in t[:rows + 1]]
+        lines.append("")
+    return lines
+
+
 def page_text(url, wiki=False):
-    """The page's readable text, and its share picture (og:image) for the image ideas."""
+    """The page's readable text, and its share picture (og:image) for the image ideas. A Wikipedia page adds the rows of
+    its first data tables after the prose (wiki_tables), inside the same character budget."""
     import requests, trafilatura
     try:
         r = requests.get(url, headers=WIKI_UA if wiki else BROWSER, timeout=20)
         if not r.ok: return "", ""
         m = re.search(r'<meta[^>]+?property=["\']og:image["\'][^>]+?content=["\']([^"\']+)', r.text, re.I) or \
             re.search(r'<meta[^>]+?content=["\']([^"\']+)["\'][^>]+?property=["\']og:image["\']', r.text, re.I)
-        # Wikipedia list articles keep their rankings in tables (best-selling games, highest-grossing films): kept for wiki pages
-        txt = (trafilatura.extract(r.text, include_comments=False, include_tables=bool(wiki), favor_precision=True) or "")[:PAGE_CHARS]
-        return txt, (m.group(1) if m else "")
+        txt = trafilatura.extract(r.text, include_comments=False, include_tables=False, favor_precision=True) or ""
+        if wiki:
+            rows = "\n".join(wiki_tables(r.text))
+            if rows.strip(): txt = txt[:max(2000, PAGE_CHARS - len(rows) - 2)] + "\n\n" + rows
+        return txt[:PAGE_CHARS + 4000] if wiki else txt[:PAGE_CHARS], (m.group(1) if m else "")
     except Exception:
         return "", ""
 

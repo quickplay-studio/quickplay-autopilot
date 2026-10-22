@@ -1,10 +1,10 @@
 name: clips
 # Quickplay Clips (pipeline/clips.py): clips from campaign-permitted footage (clips/campaigns.json), made at 13:00 UK and
 # public together at 18:00 UK; the batch run then posts them to Instagram and Facebook, comments, and submits every link
-# to its campaign itself (pipeline/submit.py, with the saved logins WHOP_COOKIES and VYRO_COOKIES; what it cannot submit
-# stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
+# to its campaign itself (pipeline/submit.py, with the studio's sign-ins from tokens/, see logins.yml; what it cannot
+# submit stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
 # "stats" refreshes clips/stats.csv only; "submit" puts the public links into their campaigns now ("submit probe" only
-# checks the saved logins work).
+# checks the sign-ins work).
 on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
@@ -59,8 +59,6 @@ jobs:
           FB_CLIPS_PAGE_ID: ${{ secrets.FB_CLIPS_PAGE_ID }}
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
-          WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
-          VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
           IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}        # one line per clips channel (GitHub refuses a workflow that passes toJSON(secrets), 22 October)
           IG_GAMING_USER_ID: ${{ secrets.IG_GAMING_USER_ID }}
           FB_GAMING_PAGE_TOKEN: ${{ secrets.FB_GAMING_PAGE_TOKEN }}

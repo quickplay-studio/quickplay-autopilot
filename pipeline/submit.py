@@ -1,7 +1,8 @@
 """Submissions (Charlie, 21 October): GitHub puts every public clip link into its campaign itself, the minute the batch
 run starts (Reach wants a link within 30 minutes; Content Rewards counts views from the submission). It uses the studio
-account's saved logins: the repository secrets WHOP_COOKIES (contentrewards.com and whop.com) and VYRO_COOKIES
-(app.vyro.com), the cookies.txt that the "Get cookies.txt LOCALLY" extension exports (Playwright's JSON works too).
+account's sign-ins for contentrewards.com (with whop.com) and app.vyro.com: Charlie exports each site's cookies.txt with
+the "Get cookies.txt LOCALLY" extension, pastes it as the secret WHOP_COOKIES or VYRO_COOKIES and runs the logins
+workflow, which keeps them encrypted in tokens/login_whop.enc and tokens/login_vyro.enc (SOCIAL_KEY), where this reads them.
 A headless browser opens the campaign page, presses Submit clip (Content Rewards) or Submit post (Vyro), pastes the link,
 confirms and reads the page's answer. Each row of clips/submit.csv gets the time it was submitted, or "failed: why"
 (kept on the phone page and tried again next run, with a screenshot in status/submit_<site>.png and the page's buttons in
@@ -66,11 +67,37 @@ def cookies(text):
     return out
 
 
+def login_name(site):
+    return "login_" + ("vyro" if site == "Vyro" else "whop")
+
+
 def site_cookies(site):
-    raw = os.environ.get(SITES[site]["secret"], "")
+    """The site's saved sign-in: tokens/login_<site>.enc (written by the logins workflow from the pasted export, read
+    with SOCIAL_KEY), else the raw secret when a run still has it."""
+    raw = ""
+    if os.environ.get("SOCIAL_KEY"):
+        try:
+            import social as SO
+            raw = (SO.load(login_name(site)) or {}).get("cookies", "")
+        except Exception as e: log(f"{site}: saved sign-in unreadable: {str(e)[:80]}")
+    raw = raw or os.environ.get(SITES[site]["secret"], "")
     cs = [c for c in cookies(raw) if any(h in c["domain"] for h in SITES[site]["hosts"])]
-    if not cs: raise RuntimeError(f"no {SITES[site]['secret']} secret: export the {site} cookies first")
+    if not cs: raise RuntimeError(f"no saved sign-in for {site}: export its cookies, paste them as {SITES[site]['secret']}, run the logins workflow")
     return cs
+
+
+def import_logins():
+    """The logins workflow: each pasted export (WHOP_COOKIES, VYRO_COOKIES) into tokens/login_<site>.enc."""
+    import social as SO
+    n = 0
+    for site, spec in SITES.items():
+        raw = os.environ.get(spec["secret"], "").strip()
+        if not raw: log(f"{site}: {spec['secret']} is empty, nothing saved"); continue
+        cs = [c for c in cookies(raw) if any(h in c["domain"] for h in spec["hosts"])]
+        if not cs: log(f"{site}: {spec['secret']} holds no {'/'.join(spec['hosts'])} cookies, nothing saved"); continue
+        SO.save(login_name(site), {"cookies": raw, "saved": NOW.isoformat(timespec="minutes"), "count": len(cs)})
+        log(f"{site}: {len(cs)} cookies saved to tokens/{login_name(site)}.enc"); n += 1
+    return n
 
 
 def context(play, site):
@@ -528,7 +555,8 @@ def alerts(stale, by_site):
             A.raise_issue(title, f"GitHub could not submit today's {site} links: the saved login (secret {secret}) no longer works. "
                                  f"In Chrome on the Mac, signed in to {SITES[site]['home']} as the studio account, press the "
                                  f"\"Get cookies.txt LOCALLY\" extension, Export (current site), and paste the file's text into the "
-                                 f"secret {secret}: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/{secret}. "
+                                 f"secret {secret}: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/{secret}, "
+                                 f"then run the logins workflow (Run workflow): https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml. "
                                  f"Until then the links are on the phone page: https://quickplay-studio.github.io/quickplay-autopilot/submit.html")
         elif site in by_site: A.clear(title, "The login works again.")
 
@@ -680,4 +708,6 @@ def scout(limit=40):
 
 
 if __name__ == "__main__":
-    scout() if "scout" in sys.argv[1:] else run(dry=bool(os.environ.get("SUBMIT_DRY")))
+    if "import-logins" in sys.argv[1:]: import_logins()
+    elif "scout" in sys.argv[1:]: scout()
+    else: run(dry=bool(os.environ.get("SUBMIT_DRY")))

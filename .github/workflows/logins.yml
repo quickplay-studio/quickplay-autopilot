@@ -1,0 +1,42 @@
+name: logins
+# The studio's saved sign-ins for the campaign sites (Content Rewards, Vyro), kept encrypted in tokens/ like the other
+# sign-ins (SOCIAL_KEY). Run it (Run workflow) after pasting a fresh export into WHOP_COOKIES or VYRO_COOKIES; it writes
+# tokens/login_whop.enc and tokens/login_vyro.enc and the clips runs read those. Nothing else reads the two secrets.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['requests/logins.txt']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: clips
+  cancel-in-progress: false
+
+jobs:
+  logins:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q cryptography tzdata
+      - name: Save the sign-ins
+        env:
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          WHOP_COOKIES: ${{ secrets.WHOP_COOKIES }}
+          VYRO_COOKIES: ${{ secrets.VYRO_COOKIES }}
+        run: python pipeline/submit.py import-logins 2>&1 | tee status/logins_log.txt
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add tokens/login_whop.enc tokens/login_vyro.enc status/logins_log.txt 2>/dev/null || true
+          git commit -q -m "Logins $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

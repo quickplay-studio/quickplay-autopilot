@@ -20,6 +20,12 @@ assert js[0]["sameSite"] == "None" and js[0]["expires"] == 1790000000.5
 os.environ["WHOP_COOKIES"] = txt; os.environ["VYRO_COOKIES"] = txt
 assert {c["name"] for c in S.site_cookies("Content Rewards")} == {"session", "whop_sid"} and [c["name"] for c in S.site_cookies("Vyro")] == ["vyro"]
 assert S.site_of({"platform": "Vyro"}) == "Vyro" and S.site_of({"platform": "Content Rewards (Reach)"}) == "Content Rewards"
+os.environ["SOCIAL_KEY"] = "test-key-for-the-sign-ins-store"
+import social as SO; SO.TOK = SCRATCH / "tokens"
+assert S.import_logins() == 2 and (SCRATCH / "tokens" / "login_whop.enc").exists() and (SCRATCH / "tokens" / "login_vyro.enc").exists()
+os.environ["WHOP_COOKIES"] = ""; os.environ["VYRO_COOKIES"] = ""
+assert {c["name"] for c in S.site_cookies("Content Rewards")} == {"session", "whop_sid"} and [c["name"] for c in S.site_cookies("Vyro")] == ["vyro"]
+os.environ["WHOP_COOKIES"] = txt; os.environ["VYRO_COOKIES"] = txt
 print("1 cookies ok")
 
 # 2. due rows: public already, with a link, not submitted (a failed one is tried again), under 3 days old

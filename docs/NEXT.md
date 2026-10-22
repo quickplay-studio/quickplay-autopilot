@@ -138,3 +138,7 @@ the channel's comment question and replies.
   340 words, 18 to 26 beats, a twist every 10 seconds, a running count, a reason to stay said out loud); only on packs
   with 9 or 16 facts (LONG_NEEDS), never padding. validate.py reads the arm from the board's test; a board that comes
   back at a normal length is kept as written. drivers.py bands: "45 to 89 s" and "90 s or more".
+- First full run with the new rules (22 October, 08:48 UTC): 7 of 18 written; "appeal": "everyone" on the Gemini
+  boards, the length guard downgrading thin packs, no empty boards. The evergreen top lists all failed on "only 2 or 3
+  checked facts": Wikipedia list articles keep their rankings in tables and page_text dropped tables. factpack.page_text
+  now keeps tables for Wikipedia pages (rows read as "| 1 | Minecraft | 300 million |"), which also feeds the long arms.

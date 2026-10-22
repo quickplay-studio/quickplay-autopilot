@@ -86,7 +86,8 @@ def page_text(url, wiki=False):
         if not r.ok: return "", ""
         m = re.search(r'<meta[^>]+?property=["\']og:image["\'][^>]+?content=["\']([^"\']+)', r.text, re.I) or \
             re.search(r'<meta[^>]+?content=["\']([^"\']+)["\'][^>]+?property=["\']og:image["\']', r.text, re.I)
-        txt = (trafilatura.extract(r.text, include_comments=False, include_tables=False, favor_precision=True) or "")[:PAGE_CHARS]
+        # Wikipedia list articles keep their rankings in tables (best-selling games, highest-grossing films): kept for wiki pages
+        txt = (trafilatura.extract(r.text, include_comments=False, include_tables=bool(wiki), favor_precision=True) or "")[:PAGE_CHARS]
         return txt, (m.group(1) if m else "")
     except Exception:
         return "", ""

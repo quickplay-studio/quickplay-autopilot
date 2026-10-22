@@ -9,6 +9,8 @@
   "Vyro": "mac"
  },
  "submit_note": "Vyro drops a session that arrives from GitHub's servers (22 October), so its clips go public at 19:00 UK and the Mac Chrome run (19:07 UK, docs/CHROME_JOBS.md) submits them in Charlie's own browser minutes later; GitHub leaves Vyro rows alone (submit_by mac) and submits Content Rewards itself at 18:01.",
+ "min_active": 6,
+ "min_active_note": "Charlie (22 October): fully automatic. GitHub switches a campaign off at its end date or when its budget is spent (check_campaigns) and shares the day's number among the rest; the Mac Chrome run keeps at least min_active campaigns live with footage by joining the best-ranked fitting ones (status/scout.md for Content Rewards, Vyro's open list read in Chrome) whenever the count, less those ending within 3 days, falls short.",
  "campaigns": {
   "speed-expedia": {
    "name": "$8,000 IShowSpeed x Expedia Clipping Campaign",

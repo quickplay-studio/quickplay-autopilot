@@ -105,8 +105,16 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   same way. If the GitHub issue "🔒 Security: a sign-in outside the studio account" is open, send Charlie its text first.
 - If a GitHub issue titled "Clips: the Content Rewards login has expired" or "... the Vyro login has expired" is open,
   export that site's cookies again into its secret and close the issue.
-- status/scout.md is refreshed by GitHub every morning (09:35 UK): join any new yes row as above, and add it to
-  clips/campaigns.json. If the file is older than 2 days, run "scout" yourself first.
+- Capacity (Charlie, 22 October: fully automatic, never fewer campaigns than the channels can fill): count the active
+  campaigns in clips/campaigns.json that still have footage and more than 3 days before "ends". If fewer than
+  campaigns.json min_active (6), join enough to reach it, best first: the yes rows of status/scout.md (GitHub refreshes it
+  every morning at 09:35 UK; if it is older than 2 days, push "scout" in requests/clips.txt first and wait for the run),
+  then Vyro's open list at https://app.vyro.com/campaigns (open each card: clipping, YouTube Shorts allowed, footage
+  provided, family friendly, not locked, budget mostly unspent). For each one joined, read its rules and footage link
+  (visible once joined) and add the entry to clips/campaigns.json in the shape of the existing ones (channels: gaming for
+  game footage, irl for creators and challenges, always clips); commit and push. Skip anything political, adult, gambling,
+  supplements or health claims, "edgy" or "unfiltered" shows, and anything without provided footage. GitHub switches a
+  campaign off itself when it ends or its budget runs out, and shares the day's clips among the rest.
 - status/streamers.md lists the viral streamers right now and "Programmes to join next": for each one, find the official
   clipping programme (Content Rewards, Vyro, the streamer's Discord), join it if YouTube Shorts counts and the footage is
   family friendly, and add it to clips/campaigns.json; note in clips/streamers.json "programme" what you found.

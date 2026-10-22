@@ -1,12 +1,6 @@
-speed-expedia-03 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for get_by_role("dialog").first.get_b
-speed-expedia-04 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for get_by_role("dialog").first.get_b
-speed-expedia-06 (youtube, Content Rewards): failed: TimeoutError: Locator.click: Timeout 30000ms exceeded.
-Call log:
-  - waiting for get_by_role("dialog").first.get_b
-mrbeast-cod-01: Vyro: the login has expired
-opened: ⚠️ Clips: the Vyro login has expired GraphQL: Resource not accessible by integration (createIssue)
+speed-expedia-03 (youtube, Content Rewards): dry: logged in; buttons: , , Help & support, , Back, Studio SocialMedia, Show more, , Submit clip, , 
+speed-expedia-04 (youtube, Content Rewards): dry: logged in; buttons: , , Help & support, , Back, Studio SocialMedia, Show more, , Submit clip, , 
+speed-expedia-06 (youtube, Content Rewards): dry: logged in; buttons: , , Help & support, , Back, Studio SocialMedia, Show more, , Submit clip, , 
+mrbeast-cod-01: Vyro: the login has expired (https://app.vyro.com/login?redirectTo=L2NhbXBhaWducy9hZGQtY2xpcHM%3D; buttons: Continue, Continue with Google)
+opened: ⚠️ Clips: the Vyro login has expired https://github.com/quickplay-studio/quickplay-autopilot/issues/3
 submit: 0 of 23 submitted

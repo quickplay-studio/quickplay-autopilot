@@ -16,11 +16,15 @@ ok   workflow voices.yml: no secrets
 ok   workflow weekly.yml: SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 ok   workflow write.yml: CEREBRAS_API_KEY, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 ok   tokens/instagram.enc: expected
+ok   tokens/login_vyro.enc: expected
+ok   tokens/login_whop.enc: expected
 ok   tokens/tiktok.enc: expected
 ok   tokens/youtube.enc: expected
 ok   tokens/youtube_clips.enc: expected
 ok   tokens/youtube_gaming.enc: expected
 ok   tokens/youtube_irl.enc: expected
+ok   login_whop: 19 cookies
+ok   login_vyro: 9 cookies
 ok   youtube: Quickplay Daily (@quickplaydaily)
 ok   youtube_clips: Quickplay Clips (@quickplayclips-x9b)
 ok   youtube_gaming: Quickplay Gaming Clips (@quickplaygamingclips-z1b)
@@ -28,4 +32,4 @@ ok   youtube_irl: Quickplay IRL Clips (@quickplayirlclips)
 ok   instagram: @quickplaydaily (17841465022278792)
 ok   FB_PAGE_TOKEN: Quickplay Daily (1394922903704330)
 ok   tiktok: HTTP 401 (the key does not answer (expired keys are refreshed by the social run))
-identity: clean: 30 checks
+identity: clean: 34 checks

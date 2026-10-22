@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-22T19:24:06+00:00",
+ "checked": "2026-10-22T22:28:56+00:00",
  "ok": true,
  "studio": "studiosocialmedia123@gmail.com",
  "checks": [
@@ -130,6 +130,20 @@
    "note": ""
   },
   {
+   "what": "tokens/login_vyro.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/login_whop.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
    "what": "tokens/tiktok.enc",
    "found": "expected",
    "ok": true,
@@ -162,6 +176,20 @@
    "found": "expected",
    "ok": true,
    "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "login_whop",
+   "found": "19 cookies",
+   "ok": true,
+   "expected": "cookies for contentrewards.com and whop.com",
+   "note": ""
+  },
+  {
+   "what": "login_vyro",
+   "found": "9 cookies",
+   "ok": true,
+   "expected": "cookies for vyro.com",
    "note": ""
   },
   {

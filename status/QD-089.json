@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T17:00:00Z",
  "rendered": "2026-10-21T13:59:49.946502+00:00",
- "title": "Bob Iger announces new book One Last Time 📖",
+ "title": "Bob Iger reveals tell-all Disney memoir 📚",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -92,6 +92,13 @@
  },
  "engage": {
   "comment": "UgxMHhkny3VlfjWDYRR4AaABAg",
-  "playlist": "Quickplay Daily: Entertainment"
+  "playlist": "Quickplay Daily: Entertainment",
+  "title": {
+   "swapped_from": "Bob Iger announces new book One Last Time 📖",
+   "to": "Bob Iger reveals tell-all Disney memoir 📚",
+   "at": "2026-10-22T17:16+00:00",
+   "views_an_hour": 0.2,
+   "typical": 1.4
+  }
  }
 }

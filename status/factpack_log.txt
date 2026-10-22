@@ -1,13 +1,7 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Patient Zero by Taylor Swift: 4 verified, 0 one-source, 3 pages
-bbc cricket: 0 verified, 1 one-source, 3 pages
-it gets worse: 6 verified, 0 one-source, 3 pages
-sims: 3 verified, 0 one-source, 4 pages
-nobody wants this: 1 verified, 2 one-source, 4 pages
-BioWare: 2 verified, 1 one-source, 4 pages
-Dancing with the Stars (American TV series) season 35: 0 verified, 10 one-source, 1 pages
-Cyberpunk 2077: 0 verified, 3 one-source, 3 pages
-Olivia Rodrigo: 1 verified, 0 one-source, 3 pages
-Ranking Best Flag Football Moments 🏈: 0 verified, 0 one-source, 1 pages
-10 packs, 17 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 11}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+Patient Zero by Taylor Swift: 4 verified, 4 one-source, 2 pages
+Cyberpunk 2077: 0 verified, 6 one-source, 4 pages
+BioWare: 7 verified, 1 one-source, 5 pages
+bromley fc: 0 verified, 5 one-source, 1 pages
+4 packs, 11 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

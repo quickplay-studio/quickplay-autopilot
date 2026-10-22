@@ -1,9 +1,9 @@
 {
  "date": "2026-10-22",
- "built": "2026-10-22T08:47+00:00",
+ "built": "2026-10-22T11:17+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "morning",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
@@ -13,9 +13,9 @@
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Taylor Swift just debuted Patient Zero at number one!",
-    "Patient Zero is Taylor Swift's sixteenth chart topper.",
-    "Did you know Patient Zero was written with Max Martin?"
+    "Taylor Swift just scored her sixteenth Billboard Hot number one with Patient Zero!",
+    "Patient Zero is Taylor Swift's tenth career Hot 100 number one debut!",
+    "The new music video for Patient Zero stars Taylor Swift as a ghost!"
    ],
    "sources": [
     [
@@ -23,12 +23,6 @@
      "https://www.billboard.com/lists/taylor-swift-patient-zero-hot-100-number-one-debut/",
      "Billboard",
      "2026-10-05"
-    ],
-    [
-     "Taylor Swift Announces New Single “Patient Zero”",
-     "https://www.hollywoodreporter.com/music/music-news/taylor-swift-announces-single-patient-zero-1236707696/",
-     "The Hollywood Reporter",
-     "2026-09-22"
     ],
     [
      "Patient Zero by Taylor Swift",
@@ -39,551 +33,108 @@
    ],
    "verified": [
     {
-     "claim": "Taylor Swift’s “Patient Zero” bounds in at No. 1 on the Billboard Hot 100, becoming her 16th career leader.",
+     "claim": "Taylor Swift wrote and produced Patient Zero alongside Max Martin and Shellback.",
      "sources": [
       1,
-      3
-     ],
-     "evidence": {
-      "1": "Taylor Swift’s “Patient Zero” bounds in at No. 1 on the Billboard Hot 100, becoming her 16th career leader.",
-      "3": "In North America, \"Patient Zero\" topped both the US Billboard Hot 100 and Canadian Hot 100, making The Life of a Showgirl (2025) Swift's first"
-     }
-    },
-    {
-     "claim": "“Patient Zero” is one of four new songs on the deluxe version, released Sept. 25, of Swift’s 2025 album, The Life of a Showgirl, dubbed The Life of a Showgirl: The Encore.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "“Patient Zero” is one of four new songs on the deluxe version, released Sept. 25, of Swift’s 2025 album, The Life of a Showgirl, dubbed",
-      "3": "\"Patient Zero\" is a song by the American singer-songwriter Taylor Swift from her reissued twelfth studio album, The Life of a Showgirl: The Encore (2026)."
-     }
-    },
-    {
-     "claim": "Swift cowrote and coproduced “Patient Zero” with Max Martin and Shellback.",
-     "sources": [
-      1,
-      3
+      2
      ],
      "evidence": {
       "1": "Swift cowrote and coproduced “Patient Zero” with Max Martin and Shellback.",
-      "3": "She wrote and produced the song alongside Max Martin and Shellback."
+      "2": "She wrote and produced the song alongside Max Martin and Shellback."
      }
     },
     {
-     "claim": "On September 22, 2026, Swift launched a countdown scheduled to end at 2:00 p.m. EDT, without disclosing what it would reveal.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Swift had put up a 24-hour countdown on Monday set to 2 p.m. ET, and with the reveal, she’s listing three different collector’s edition CDs",
-      "3": "On September 22, 2026, Swift launched a countdown scheduled to end at 2:00 p.m. EDT, without disclosing what it would reveal."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 5,
-   "topic": "bbc cricket",
-   "signal": "Google Trends GB 1000+",
-   "category": "Sport",
-   "what_is_new": "England are playing Sri Lanka in a one-day international tri-series match following their defeat to Pakistan.",
-   "hooks": [
-    "Could Jamie Overton make a sensational return for the Ashes?",
-    "England face Sri Lanka after a tough defeat against Pakistan!"
-   ],
-   "sources": [
-    [
-     "England v Sri Lanka: men’s tri-series cricket one-day international – live",
-     "https://www.theguardian.com/sport/live/2026/oct/22/sri-lanka-v-england-tri-series-cricket-one-day-international-live",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "Overton would consider Ashes return if Root asks",
-     "https://www.bbc.co.uk/sport/cricket/articles/cj62y0l5ed1vo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-21"
-    ],
-    [
-     "bbc cricket",
-     "https://en.wikipedia.org/wiki/Bye_(cricket)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "England all-rounder Jamie Overton would consider returning to play Test cricket for next year's Ashes if approached by captain Joe Root.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "England all-rounder Jamie Overton would consider returning to play Test cricket for next year's Ashes if approached by captain Joe Root."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 6,
-   "topic": "it gets worse",
-   "signal": "Google Trends GB 200+",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Discover how the new comedy series It Gets Worse brings fresh laughs.",
-    "Leo Reich stars in the hit new comedy series It Gets Worse."
-   ],
-   "sources": [
-    [
-     "What’s on TV tonight: new comedy It Gets Worse, Celebrity Traitors, and more",
-     "https://www.telegraph.co.uk/tv/0/whats-on-tv-guide-celebrity-traitors-pride-of-britain-mercury-prize/",
-     "The Telegraph",
-     "2026-10-16"
-    ],
-    [
-     "Paramount+ Buys British A24 Series ‘It Gets Worse’, ‘Major Players’ & ‘The Ministry Of Time’",
-     "https://deadline.com/2026/09/paramount-plus-uk-a24-series-it-gets-worse-ministry-of-time-1237115978/",
-     "Deadline",
-     "2026-09-29"
-    ],
-    [
-     "it gets worse",
-     "https://en.wikipedia.org/wiki/It_Gets_Worse_(TV_series)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The comedy series It Gets Worse is created by, written by and stars Leo Reich.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Deadline first told you about Leo Reich’s Channel 4 and Crave comedy It Gets Worse in February last year.",
-      "3": "It Gets Worse is a British-Canadian comedy television series written, created by and starring Leo Reich and produced by A24 for Channel 4 and Crave."
-     }
-    },
-    {
-     "claim": "The comedy series It Gets Worse is produced by A24.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Paramount+ has gone shopping for a trio of A24 scripted TV shows.",
-      "3": "It Gets Worse is a British-Canadian comedy television series written, created by and starring Leo Reich and produced by A24 for Channel 4 and Crave."
-     }
-    },
-    {
-     "claim": "The series It Gets Worse is narrated by Zadie Smith.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "He has much to feel grateful for, the narrator (voiced by novelist Zadie Smith) tells us.",
-      "3": "The series is narrated by Zadie Smith.[5]"
-     }
-    },
-    {
-     "claim": "Emily Fairn stars in the comedy series It Gets Worse.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Main cast also includes Emily Fairn, Olive Gray, Sean Delaney, Dane Williams, India Mullen and John Tothill, Andrew Scot, Lena Dunham and Amelia Dimoldenberg guesting.",
-      "3": "- Emily Fairn as Abi"
-     }
-    },
-    {
-     "claim": "Andrew Scott makes a guest appearance in the comedy series It Gets Worse.",
+     "claim": "Patient Zero was released on September 25, 2026, through Republic Records as the lead single from The Life of a Showgirl: The Encore.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "In one scene tonight, Andrew Scott makes a cameo as a horny therapist who tells Ethan, “You’re fine, you’re valid, now open your mouth, you",
-      "2": "Main cast also includes Emily Fairn, Olive Gray, Sean Delaney, Dane Williams, India Mullen and John Tothill, Andrew Scot, Lena Dunham and Amelia Dimoldenberg guesting."
+      "1": "“Patient Zero,” on Republic Records, opens with 34.5 million official streams, 28.5 million radio airplay audience impressions and 65,000 sold in the U.S. Sept. 25-Oct.",
+      "2": "It was released on September 25, 2026, through Republic Records, as the lead single from The Encore."
      }
     },
     {
-     "claim": "Lena Dunham appears in a guest role in the comedy series It Gets Worse.",
+     "claim": "The music video for Patient Zero premiered at the 2026 MTV Video Music Awards on September 27.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Dunham even pops up in a guest role as Abi’s brash American boss, as though passing the baton from one generation to the next.",
-      "2": "Main cast also includes Emily Fairn, Olive Gray, Sean Delaney, Dane Williams, India Mullen and John Tothill, Andrew Scot, Lena Dunham and Amelia Dimoldenberg guesting."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "sims",
-   "signal": "Google Trends GB 500+",
-   "category": "Gaming",
-   "what_is_new": "EA has paused development on a mobile multiplayer Sims game known as Project Lotus and is prioritizing Project Evergreen instead.",
-   "hooks": [
-    "EA paused development on a mobile multiplayer Sims game.",
-    "Did you know The Sims 4 was released in 2014?",
-    "EA is prioritising something called Project Evergreen."
-   ],
-   "sources": [
-    [
-     "EA Halts Development on Mobile Multiplayer Sims Game in Favor of Rumored Sims 4 Sequel",
-     "https://www.ign.com/articles/ea-halts-development-on-mobile-multiplayer-sims-game-in-favor-of-rumored-sims-4-sequel",
-     "IGN",
-     "2026-10-21"
-    ],
-    [
-     "EA cancels unannounced The Sims project, trims the Skate team and reportedly plans to lay off 400 workers: \"We're the number one publisher i",
-     "https://www.eurogamer.net/ea-cancels-sims-skate-400-layoffs",
-     "Eurogamer",
-     "2026-10-21"
-    ],
-    [
-     "EA is shutting down BioWare and cutting around 400 jobs",
-     "https://www.engadget.com/2293402/ea-is-shutting-down-bioware-and-cutting-around-400-jobs/",
-     "Engadget",
-     "2026-10-21"
-    ],
-    [
-     "sims",
-     "https://en.wikipedia.org/wiki/Sims",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "EA is pausing development on a Sims related title called Project Lotus.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "One other big change is that EA is shelving a mobile-first multiplayer Sims project, formerly known as Project Rene and now known as Project Lotus.",
-      "2": "pausing development on a project connected to The Sims",
-      "3": "EA is pausing development of what it calls \"Project Lotus\" in order to funnel more resources into another initiative dubbed Project Evergreen."
+      "1": "Its Swift-directed video, starring Swift, Dakota Johnson and Colin Farrell, premiered Sept. 27 during the 2026 MTV Video Music Awards.",
+      "2": "It premiered at the 2026 MTV Video Music Awards on September 27."
      }
     },
     {
-     "claim": "EA is prioritising something called Project Evergreen.",
+     "claim": "Patient Zero debuted at No. 1 on the Billboard Hot 100, becoming Taylor Swift's 16th career leader.",
      "sources": [
       1,
-      2,
-      3
+      2
      ],
      "evidence": {
-      "1": "With that game being put on the back burner, EA is shifting its focus to a Sims title that it's calling Project Evergreen.",
-      "2": "As for The Sims, the publisher claims it's prioritising something called \"Project Evergreen\" and is giving \"the team more time to reach the full potential",
-      "3": "in order to funnel more resources into another initiative dubbed Project Evergreen."
-     }
-    },
-    {
-     "claim": "The Sims 4 was released in 2014.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "The Sims 4 was released in 2014, meaning it has been 12 years since the franchise got a new game.",
-      "4": "The Sims 4, the fourth installment, released in 2014"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 10,
-   "topic": "nobody wants this",
-   "signal": "Google Trends GB 200+",
-   "category": "Film",
-   "what_is_new": "Season three of Nobody Wants This premiered on Netflix on October 22, 2026.",
-   "hooks": [
-    "Nobody Wants This season three is finally here!",
-    "Kristen Bell and Adam Brody return for more romance."
-   ],
-   "sources": [
-    [
-     "Nobody Wants This review – prepare to fall in love again … with a different couple",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/22/nobody-wants-this-season-three-review-netflix",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "‘Nobody Wants This’ Season 3 Review: Kristen Bell and Adam Brody’s Netflix Romance Levels Up but Can’t Ditch Old Habits",
-     "https://www.hollywoodreporter.com/tv/tv-reviews/nobody-wants-this-season-3-review-netflix-adam-brody-1236737074/",
-     "The Hollywood Reporter",
-     "2026-10-22"
-    ],
-    [
-     "Star Wars Zero Company review",
-     "https://www.eurogamer.net/star-wars-zero-company-review",
-     "Eurogamer",
-     "2026-10-19"
-    ],
-    [
-     "nobody wants this",
-     "https://en.wikipedia.org/wiki/Nobody_Wants_This",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Nobody Wants This season three premieres on October 22, 2026.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Nobody Wants This is now in its third season, so it has had to leave behind the days when it was powered entirely by the",
-      "4": "The third season premiered on October 22, 2026."
+      "1": "Taylor Swift’s “Patient Zero” bounds in at No. 1 on the Billboard Hot 100, becoming her 16th career leader.",
+      "2": "In North America, \"Patient Zero\" topped both the US Billboard Hot 100 and Canadian Hot 100"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Nobody Wants This is an American romantic comedy television series created by Erin Foster which premiered on Netflix on September 26, 2024 and stars Kristen Bell, Adam Brody, Justine Lupe, Timothy Simons and Jackie Tohn.",
+     "claim": "Patient Zero is Taylor Swift's 10th career No. 1 Hot 100 debut, tying her with Drake for the most.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Nobody Wants This is an American romantic comedy television series created by Erin Foster which premiered on Netflix on September 26, 2024 and stars Kristen"
+      "1": "“Patient Zero” is also Swift’s 10th career No. 1 Hot 100 debut — tying her with Drake for the most."
      }
     },
     {
-     "claim": "In November 2025, the series was renewed for a third season which premiered on October 22, 2026.",
+     "claim": "The song is 3 minutes and 46 seconds long.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "In November 2025, the series was renewed for a third season which premiered on October 22, 2026."
+      "2": "At 3 minutes and 46 seconds long,"
+     }
+    },
+    {
+     "claim": "The music video stars Taylor Swift as a ghost haunting an affluent couple played by Colin Farrell and Dakota Johnson.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The video took stylistic inspiration from thriller, true crime, and gothic cinema, and stars Swift as a ghost haunting an affluent couple played by Colin"
+     }
+    },
+    {
+     "claim": "Matthew Stafford and Cara Delevingne also appear in guest roles in the music video.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Matthew Stafford and Cara Delevingne also appear in guest roles."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 20,
-   "topic": "BioWare",
-   "signal": "Wikipedia 170,992 views",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "BioWare has been shut down by EA after more than 30 years.",
-    "EA is cutting around 400 jobs and closing BioWare.",
-    "BioWare was founded in 1995 by medical doctors."
-   ],
-   "sources": [
-    [
-     "'We Were Working on a Great Game' — Former Mass Effect 5 Writers Speak Out After EA Shuts Down BioWare",
-     "https://www.ign.com/articles/we-were-working-on-a-great-game-former-mass-effect-5-writers-speak-out-after-ea-shuts-down-bioware",
-     "IGN",
-     "2026-10-22"
-    ],
-    [
-     "EA Cuts Around 400 Jobs, Shuts Down BioWare",
-     "https://deadline.com/2026/10/ea-cuts-400-jobs-shuts-down-bioware-1237170402/",
-     "Deadline",
-     "2026-10-22"
-    ],
-    [
-     "The next Mass Effect would have had 'a level of autonomy and choice that no other game has been able to match', according to BioWare veteran",
-     "https://www.pcgamer.com/games/mass-effect/the-next-mass-effect-would-have-had-a-level-of-autonomy-and-choice-that-no-other-game-has-been-able-to-match-according-to-bioware-veteran/",
-     "PC Gamer",
-     "2026-10-22"
-    ],
-    [
-     "BioWare",
-     "https://en.wikipedia.org/wiki/BioWare",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Electronic Arts shut down video game developer BioWare on October 21, 2026.",
-     "sources": [
-      1,
-      2,
-      4
-     ],
-     "evidence": {
-      "1": "EA announced the news somewhat unceremoniously in a single paragraph tucked within a lengthy open letter on October 21, 2026.",
-      "2": "On Wednesday, EA reportedly notified employees in an email that the company would be laying off around 400 people, including about 50 at BioWare, as",
-      "4": "On 21 October 2026, the studio was shut down as part of a series of layoffs at Electronic Arts."
-     }
-    },
-    {
-     "claim": "Electronic Arts is cutting about 3% of its staff and laying off around 400 people.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "After going private in August, Electronic Arts (EA) is cutting about 3% of its staff and shutting down video game developer BioWare.",
-      "3": "Over 400 people have been laid off as the publisher pivots to live service shooters and sports."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "BioWare was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Epcor_Tower.JPG"
-   ]
-  },
-  {
-   "n": 23,
-   "topic": "Dancing with the Stars (American TV series) season 35",
-   "signal": "Wikipedia 151,353 views",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Season thirty-five of Dancing with the Stars premiered on September 15, 2026.",
-    "Amber Glenn and Ezra Frech made history this season.",
-    "Witney Carson achieved a major first for the show."
-   ],
-   "sources": [
-    [
-     "Dancing with the Stars (American TV series) season 35",
-     "https://en.wikipedia.org/wiki/Dancing_with_the_Stars_(American_TV_series)_season_35",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Season thirty-five of Dancing with the Stars premiered on ABC and Disney+ on September 15, 2026, and is scheduled to conclude on November 24, 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Season thirty-five of Dancing with the Stars premiered on ABC and Disney+ on September 15, 2026,[1] and is scheduled to conclude on November 24, 2026.[2]"
-     }
-    },
-    {
-     "claim": "Season nineteen champion Alfonso Ribeiro returned to host the installment, while former professional dancer and judge Julianne Hough returned as co-host.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Season nineteen champion Alfonso Ribeiro returned to host the installment, while former professional dancer and judge Julianne Hough returned as co-host.[3]"
-     }
-    },
-    {
-     "claim": "Amber Glenn and Ezra Frech became the first Olympic and Paralympic champions to compete during the same season.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Amber Glenn and Ezra Frech became the first Olympic and Paralympic champions to compete during the same season.[12]"
-     }
-    },
-    {
-     "claim": "At the time of the announcement, Carson was four months pregnant with her third child.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "At the time of the announcement, Carson was four months pregnant with her third child.[14]"
-     }
-    },
-    {
-     "claim": "She became the first pro to enter an installment of Dancing with the Stars while pregnant, and the first to compete that far into her second trimester.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She became the first pro to enter an installment of Dancing with the Stars while pregnant,[15] and the first to compete that far into her"
-     }
-    },
-    {
-     "claim": "Adele Zaikman, winner of Dancing with the Stars: The Next Pro, joined the series as a first-time pro on August 31.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Adele Zaikman, winner of Dancing with the Stars: The Next Pro, joined the series as a first-time pro on August 31.[19]"
-     }
-    },
-    {
-     "claim": "She is the first Israeli professional dancer to be featured on the series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She is the first Israeli professional dancer to be featured on the series.[20]"
-     }
-    },
-    {
-     "claim": "With sixteen couples, this season is tied with season nine and season thirty-one as having the largest cast in the show's history.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "With sixteen couples, this season is tied with season nine and season thirty-one as having the largest cast in the show's history.[24]"
-     }
-    },
-    {
-     "claim": "Joe Buck served as the guest judge for Super Bowl Night.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Joe Buck served as the guest judge for Super Bowl Night.[33]"
-     }
-    },
-    {
-     "claim": "Kym Johnson served as the guest judge for Dedication Night.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Kym Johnson served as the guest judge for Dedication Night.[34]"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 24,
+   "n": 21,
    "topic": "Cyberpunk 2077",
-   "signal": "YouTube GB 136,989/h",
+   "signal": "YouTube GB 124,139/h",
    "category": "Gaming",
-   "what_is_new": "CD Projekt Red detailed a substantial new Cyberpunk 2077 update adding dual-wielding, cross-platform mods, and Edgerunners quests.",
+   "what_is_new": "The Edgerunners 2 update for Cyberpunk 2077 was released on October 22, 2026, bringing dual-wielding, cross-platform mod support, and new story quests.",
    "hooks": [
-    "Did you know Cyberpunk 2077 has sold over 40 million copies?",
-    "Cyberpunk 2077 launched back in December 2020."
+    "Did you know Cyberpunk 2077 just got a massive new update?",
+    "Dual wielding is finally here in Night City!",
+    "Explore brand new stories in Cyberpunk 2077 today."
    ],
    "sources": [
+    [
+     "From the Anime to the Game — Free Update Brings Edgerunners 2 Content and More to Cyberpunk 2077!",
+     "https://news.xbox.com/en-us/2026/10/22/cyberpunk-2077-edgerunners-2-update/",
+     "Xbox Wire",
+     "2026-10-22"
+    ],
     [
      "CD Projekt Red details new Cyberpunk 2077 update - adding dual-wielding, cross-platform mods, Edgerunners story quests, and more",
      "https://www.eurogamer.net/cyberpunk-2077-update-edgerunners-2-mod-support",
@@ -606,97 +157,268 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Cyberpunk 2077 was released for PlayStation 4, Stadia, Windows, and Xbox One in December 2020.",
+     "claim": "The free Edgerunners 2 Update to Cyberpunk 2077 is available now.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The free Edgerunners 2 Update to Cyberpunk 2077 is available now."
+     }
+    },
+    {
+     "claim": "Cyberpunk 2077 now supports XBOX Play Anywhere, with one purchase enabling play on both XBOX Series X|S and XBOX on PC, and your saves transferring seamlessly between the two.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Cyberpunk 2077 now supports XBOX Play Anywhere, with one purchase enabling play on both XBOX Series X|S and XBOX on PC, and your saves transferring"
+     }
+    },
+    {
+     "claim": "CD Projekt Red has detailed the substantial update coming to Cyberpunk 2077, revealing a new dual-wielding skill for pistols and revolvers, cyberware customisation, cross-platform mod support, and a brand-new Edgerunners-related story quest featuring voice actors from the Netflix anime show.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "CD Projekt Red has detailed the substantial update coming to Cyberpunk 2077, revealing a new dual-wielding skill for pistols and revolvers, cyberware customisation, cross-platform mod"
+     }
+    },
+    {
+     "claim": "The update arrives 22nd October on PC, PS5, and Xbox Series S/X, with the Switch 2 version following \"in a couple of days\", CDPR media manager Laura Beitzel said during a RedStream this afternoon.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The update arrives 22nd October on PC, PS5, and Xbox Series S/X, with the Switch 2 version following \"in a couple of days\", CDPR media"
+     }
+    },
+    {
+     "claim": "A new series of Cyberpunk: Edgerunners will drop on Netflix today and you know what that means: the nation of Poland has again conspired to make us all very sad.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "After years of anticipation, Cyberpunk 2077 was released for PlayStation 4, Stadia, Windows, and Xbox One in December 2020"
+      "3": "A new series of Cyberpunk: Edgerunners will drop on Netflix today and you know what that means: the nation of Poland has again conspired to"
      }
     },
     {
      "claim": "Cyberpunk 2077 is a 2020 action role-playing game developed by CD Projekt Red and published by CD Projekt.",
      "sources": [
-      3
+      4
      ],
      "evidence": {
-      "3": "Cyberpunk 2077 is a 2020 action role-playing game developed by CD Projekt Red and published by CD Projekt."
-     }
-    },
-    {
-     "claim": "As of July 2026, Cyberpunk 2077 had sold over 40 million copies, making it one of the best-selling video games of all time.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "As of July 2026, Cyberpunk 2077 had sold over 40 million copies, making it one of the best-selling video games of all time."
+      "4": "Cyberpunk 2077 is a 2020 action role-playing game developed by CD Projekt Red and published by CD Projekt."
      }
     }
    ],
-   "images": []
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/22/cyberpunk-2077-edgerunners-2-update/"
+   ]
   },
   {
-   "n": 26,
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 119,716/h",
-   "category": "Music",
+   "n": 16,
+   "topic": "BioWare",
+   "signal": "Wikipedia 170,992 views",
+   "category": "Gaming",
    "what_is_new": "",
-   "hooks": [],
+   "hooks": [
+    "BioWare has officially closed after thirty one years.",
+    "Electronic Arts has cut four hundred jobs and closed BioWare.",
+    "The Mass Effect TV series is reportedly continuing after the studio shutdown."
+   ],
    "sources": [
     [
-     "Brooklyn Punk Duo Venus Twins Tell Us How They Ended Up in Olivia Rodrigo’s New Music Video",
-     "https://www.rollingstone.com/music/music-features/venus-twins-olivia-rodrigo-chappell-roan-expectations-video-1235643173/",
-     "Rolling Stone",
-     "2026-10-16"
+     "Mass Effect's Amazon series is reportedly continuing after BioWare shutdown, which'll make an uncomfortable gravestone for the studio's work",
+     "https://www.pcgamer.com/movies-tv/mass-effects-amazon-series-is-reportedly-continuing-after-bioware-shutdown-whichll-make-an-uncomfortable-gravestone-for-the-studios-work/",
+     "PC Gamer",
+     "2026-10-22"
     ],
     [
-     "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "Billboard",
-     "2026-10-14"
+     "Legendary video game studio BioWare closed after 31 years",
+     "https://www.bbc.co.uk/news/articles/cq8jzrxlkmwmo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-22"
     ],
     [
-     "Olivia Rodrigo",
-     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "'We Were Working on a Great Game' — Former Mass Effect 5 Writers Speak Out After EA Shuts Down BioWare",
+     "https://www.ign.com/articles/we-were-working-on-a-great-game-former-mass-effect-5-writers-speak-out-after-ea-shuts-down-bioware",
+     "IGN",
+     "2026-10-22"
+    ],
+    [
+     "EA Cuts Around 400 Jobs, Shuts Down BioWare",
+     "https://deadline.com/2026/10/ea-cuts-400-jobs-shuts-down-bioware-1237170402/",
+     "Deadline",
+     "2026-10-22"
+    ],
+    [
+     "BioWare",
+     "https://en.wikipedia.org/wiki/BioWare",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Olivia Rodrigo released her third studio album You Seem Pretty Sad for a Girl So in Love in 2026.",
+     "claim": "BioWare was founded in 1995.",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "The Canadian developer specialising in role-playing games was founded in 1995 and found millions of fans with its complex, branching narratives.",
+      "5": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
+     }
+    },
+    {
+     "claim": "BioWare was shut down on 21 October 2026.",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "EA announced the news somewhat unceremoniously in a single paragraph tucked within a lengthy open letter on October 21, 2026.",
+      "5": "On 21 October 2026, the studio was shut down as part of a series of layoffs at Electronic Arts.[3]"
+     }
+    },
+    {
+     "claim": "Electronic Arts cut about 400 jobs across the business.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "Its last two releases, however, did not meet sales expectations, and parent company Electronic Arts (EA) announced it had decided to close the studio as",
+      "4": "On Wednesday, EA reportedly notified employees in an email that the company would be laying off around 400 people, including about 50 at BioWare, as"
+     }
+    },
+    {
+     "claim": "BioWare was acquired by American publisher Electronic Arts in 2007.",
+     "sources": [
+      4,
+      5
+     ],
+     "evidence": {
+      "4": "Last year, EA went private in a $55B deal led by Silver Lake, Saudi Arabia’s Public Investment Fund and Jared Kushner’s investment firm Affinity Partners.",
+      "5": "The company was acquired by American publisher Electronic Arts in 2007."
+     }
+    },
+    {
+     "claim": "BioWare released role-playing game Baldur's Gate in 1998.",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "The developer's first big taste of success came in 1998 when it released role-playing game Baldur's Gate, based on Dungeons and Dragons rules.",
+      "5": "The result was Baldur's Gate, with a development cycle of three years."
+     }
+    },
+    {
+     "claim": "BioWare released Anthem in 2019.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "I mean, just look at Anthem. I could point to any number of developer tell-alls that might suggest EA didn't know what to do with",
+      "2": "As industry trends changed, BioWare pivoted from single player to multiplayer games with the release of Anthem in 2019 - which disappointed fans and critics."
+     }
+    },
+    {
+     "claim": "BioWare released Dragon Age: The Veilguard in 2024.",
      "sources": [
       2,
       3
      ],
      "evidence": {
-      "2": "The track is part of Rodrigo’s third studio album, You Seem Pretty Sad for a Girl So in Love, which debuted at No. 1 on",
-      "3": "Her next two studio albums, Guts (2023) and You Seem Pretty Sad for a Girl So in Love (2026), produced the US number-one singles \"Vampire\""
+      "2": "It followed up with Dragon Age: The Veilguard, the fourth game in the series, in 2024.",
+      "3": "In response to a different commenter, she revealed that she hadn’t contributed to Dragon Age: The Veilguard, Mass Effect: Andromeda, or Anthem, clarifying that she"
      }
     }
    ],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "The Mass Effect TV series has been in the works at Prime Video since 2024.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "According to sources who spoke to IGN, however, the TV series, which has been in the works at Prime Video since 2024, will still go"
+     }
+    }
+   ],
    "images": [
-    "commons:File:Glasto2025-546_(cropped)_2.jpg"
+    "commons:File:Epcor_Tower.JPG"
    ]
   },
   {
-   "n": 28,
-   "topic": "Ranking Best Flag Football Moments 🏈",
-   "signal": "YouTube US-sport 85,384/h",
+   "n": 9,
+   "topic": "bromley fc",
+   "signal": "Google Trends GB 1000+",
    "category": "Sport",
    "what_is_new": "",
-   "hooks": [],
+   "hooks": [
+    "Did you know Bromley Football Club was founded in 1892?",
+    "Bromley play their home matches at Hayes Lane.",
+    "In the 2025 to 26 season Bromley won the League Two title."
+   ],
    "sources": [
     [
-     "Golden bat or ball: does cricket need an equivalent to the Ballon d’Or? | Taha Hashim",
-     "https://www.theguardian.com/sport/2026/oct/20/golden-bat-or-ball-does-cricket-need-an-equivalent-to-the-ballon-dor",
-     "Guardian",
-     "2026-10-20"
+     "bromley fc",
+     "https://en.wikipedia.org/wiki/Bromley_F.C.",
+     "Wikipedia",
+     ""
     ]
    ],
    "verified": [],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "Bromley Football Club was founded in 1892.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Founded | 1892"
+     }
+    },
+    {
+     "claim": "Bromley play their home matches at Hayes Lane.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Ground | Hayes Lane"
+     }
+    },
+    {
+     "claim": "The chairman of Bromley is Robin Stanton-Gleaves.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Chairman | Robin Stanton-Gleaves"
+     }
+    },
+    {
+     "claim": "The manager of Bromley is Andy Woodman.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Manager | Andy Woodman"
+     }
+    },
+    {
+     "claim": "In the 2025 to 26 season Bromley won the League Two title and earned promotion to League One.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "2025–26 | EFL League Two, 1st of 24 (promoted)"
+     }
+    }
+   ],
    "images": []
   }
  ]

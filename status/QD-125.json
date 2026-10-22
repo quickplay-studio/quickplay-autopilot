@@ -1,0 +1,89 @@
+{
+ "id": "QD-125",
+ "board": "boards/queue/QD-125.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T23:30:00Z",
+ "rendered": "2026-10-22T16:49:08.008316+00:00",
+ "title": "Eden Sessions: Ben Howard headlines this summer 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "paradise",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 22.3,
+  "wps": 3.13,
+  "weak_beats": [],
+  "size_mb": 4.3
+ },
+ "timeline": [
+  [
+   0.06,
+   3.16,
+   "title",
+   0
+  ],
+  [
+   3.16,
+   10.7,
+   "none",
+   2
+  ],
+  [
+   10.7,
+   14.67,
+   "none",
+   1
+  ],
+  [
+   14.67,
+   18.32,
+   "date",
+   1
+  ],
+  [
+   18.32,
+   22.25,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "213953",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 11.42
+  },
+  {
+   "p": "pixabay",
+   "id": "2402",
+   "q": "festival crowd dusk",
+   "t0": 10.82,
+   "t1": 22.25
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T16:58:21Z",
+ "video": "FRdpiOogtKs",
+ "url": "https://youtube.com/shorts/FRdpiOogtKs",
+ "publish_at": "2026-10-22T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T23:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-125"
+}

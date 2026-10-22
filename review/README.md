@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Fri 23 Oct | 0 public, 1 scheduled | 0 | 0 | ⏳ 1 of 40 scheduled |
+| Fri 23 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 40 scheduled |
 | Thu 22 Oct | 24 public, 5 scheduled | 18 | 8 | ⏳ 24 of 40 so far, 5 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -55,10 +55,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
-
-## In the queue
-
-- **QD-125** Eden Sessions: Ben Howard headlines this summer 🎤 (rendering next)
 
 ## On the channel (latest first)
 

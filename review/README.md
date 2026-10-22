@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 11:39): 8 of 1,000 subscribers · 5,384 of 10 million Shorts views in 90 days · 3,887 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 12:40): 8 of 1,000 subscribers · 5,398 of 10 million Shorts views in 90 days · 3,689 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 12:17 (UK): 6 scheduled, 96 public, 36 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 16 public, 6 scheduled | 17 | 3 | ⏳ 16 of 40 so far, 6 more scheduled |
+| Thu 22 Oct | 17 public, 5 scheduled | 17 | 3 | ⏳ 17 of 40 so far, 5 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -83,7 +83,7 @@ scheduled · 24 s · music: mirror-mirror · [script](../boards/done/QD-111.json
 ![QD-111](QD-111.jpg)
 
 ### Thu 22 Oct 12:30 · EA pauses Project Lotus 🛑
-scheduled · 25 s · music: mirror-mirror · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
+private · 25 s · music: mirror-mirror · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
 
 ![QD-110](QD-110.jpg)
 

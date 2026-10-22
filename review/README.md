@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 12:40): 8 of 1,000 subscribers · 5,398 of 10 million Shorts views in 90 days · 3,689 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 13:48): 8 of 1,000 subscribers · 5,418 of 10 million Shorts views in 90 days · 3,482 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 12:17 (UK): 6 scheduled, 96 public, 36 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 10:12).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 13:06).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 17 public, 5 scheduled | 17 | 3 | ⏳ 17 of 40 so far, 5 more scheduled |
+| Thu 22 Oct | 20 public, 2 scheduled | 18 | 4 | ⏳ 20 of 40 so far, 2 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -68,17 +68,17 @@ scheduled · 25 s · music: risen · [script](../boards/done/QD-115.json) · [Yo
 ![QD-115](QD-115.jpg)
 
 ### Thu 22 Oct 14:00 · Dancing with the Stars makes history 💃
-scheduled · 24 s · music: mirror-mirror · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
+private · 24 s · music: mirror-mirror · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
 
 ![QD-113](QD-113.jpg)
 
 ### Thu 22 Oct 13:30 · Cyberpunk 2077 gets massive new update 🎮
-scheduled · 21 s · music: the-bombs · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
+private · 21 s · music: the-bombs · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 
 ### Thu 22 Oct 13:00 · Nobody Wants This S3 romance twist 🎬
-scheduled · 24 s · music: mirror-mirror · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
+private · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
 
 ![QD-111](QD-111.jpg)
 
@@ -188,7 +188,7 @@ public · 5 views · 22 s · music: level · on Facebook · [script](../boards/d
 ![QD-089](QD-089.jpg)
 
 ### Wed 21 Oct 17:30 · Glee reboot officially confirmed 🎵
-public · 59 views · 27 s · music: dance-with-you · on Facebook · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
+public · 59 views · 27 s · music: dance-with-you · on Instagram · on Facebook · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
 
 ![QD-088](QD-088.jpg)
 

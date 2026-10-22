@@ -122,9 +122,25 @@ def names(page, role="button"):
     return out
 
 
+SIGNED_IN = re.compile(r"^\s*(earnings|submissions|add posts|my campaigns|settings|account menu)\s*$", re.I)
+
+
 def logged_out(page):
+    """The login page, or a Log in button with none of the signed-in navigation (Earnings, Submissions, Add Posts): an
+    onboarding card's Get started on a signed-in page is not a logout."""
     if re.search(r"/(login|log-in|sign-?in|auth|signup|sign-up)(/|\?|$)", page.url): return True
+    try:
+        if page.get_by_role("link", name=SIGNED_IN).count() or page.get_by_role("button", name=SIGNED_IN).count(): return False
+    except Exception: pass
     return bool(visible(page, "button", LOGIN) or visible(page, "link", LOGIN))
+
+
+def dismiss(page):
+    """Closes an onboarding or notice card that covers the page (Skip, Got it, Close, Get started, Continue)."""
+    for _ in range(3):
+        if not dialog_open(page): return
+        if not click(page, re.compile(r"^\s*(skip( for now)?|got it|close|dismiss|not now|maybe later|get started|continue|ok)\s*$", re.I), roles=("button", "link")): return
+        page.wait_for_timeout(600)
 
 
 def click(page, pattern, roles=("button", "link", "menuitem", "tab")):
@@ -206,19 +222,37 @@ def outcome(page, link, wait_s=25):
 
 
 def tick(page, pattern=None):
-    """Ticks the dialog's consent checkbox (the one whose label matches, else the only one) when it is not ticked yet."""
+    """Ticks the dialog's consent checkbox (the one whose label matches, else the only one) when it is not ticked yet.
+    Content Rewards' box is a hidden input under a styled label, so a plain click times out: the label text is clicked
+    instead, then a forced click; the box is read back afterwards."""
     d = dialog(page)
+    def checked(el):
+        try:
+            if el.get_attribute("aria-checked") == "true": return True
+            return el.get_attribute("type") == "checkbox" and el.is_checked()
+        except Exception: return False
+    boxes = []
     for role_name in ((pattern,) if pattern else ()) + (None,):
         try: loc = d.get_by_role("checkbox", name=role_name) if role_name else d.get_by_role("checkbox")
         except Exception: continue
         for i in range(min(loc.count(), 6)):
             el = loc.nth(i)
+            if el not in boxes: boxes.append(el)
+        if boxes: break
+    for el in boxes:
+        if checked(el): return True
+        for step in ("click", "label", "force"):
             try:
-                if not el.is_visible(): continue
-                if el.get_attribute("aria-checked") in ("true",) or (el.get_attribute("type") == "checkbox" and el.is_checked()): return True
-                el.click(); page.wait_for_timeout(500); return True
-            except Exception: pass
-    return False
+                if step == "click": el.click(timeout=3000)
+                elif step == "label":
+                    txt = d.get_by_text(pattern) if pattern else None
+                    if txt is None or not txt.count(): raise RuntimeError("no label text")
+                    txt.first.click(timeout=3000)
+                else: el.click(force=True, timeout=3000)
+                page.wait_for_timeout(500)
+                if checked(el): return True
+            except Exception: continue
+    return bool(boxes) and checked(boxes[0])
 
 
 def failed_check(page):
@@ -319,6 +353,7 @@ def submit_vyro(page, row, c, dry=False):
     page.goto(VYRO_ADD, wait_until="domcontentloaded", timeout=60000); settle(page)
     if logged_out(page): raise Stale("Vyro")
     if dry: return "dry: logged in; buttons: " + ", ".join(names(page)[:15])
+    dismiss(page)
     for _ in range(6): page.mouse.wheel(0, 1800); page.wait_for_timeout(300)
     page.mouse.wheel(0, -20000); page.wait_for_timeout(500)
     card, btn = vyro_card(page, c)
@@ -396,6 +431,26 @@ def due(rows, public_ok=None):
     return out
 
 
+PAUSE = tuple(float(x) for x in (os.environ.get("SUBMIT_PAUSE") or "120,300").split(","))     # seconds, Charlie: 2 to 5 minutes
+
+
+def pause(row, site, dry=False):
+    """Charlie (22 October): a different gap every time between a clip going public and its submission, 2 to 5 minutes,
+    so submissions never land in one burst the second the batch goes live. Content Rewards closes its window 30 minutes
+    after the post, so a gap there is cut to keep the submission inside 25 minutes of the public time."""
+    if dry or PAUSE[1] <= 0: return 0
+    import random
+    wait = random.uniform(PAUSE[0], PAUSE[1])
+    if site == "Content Rewards":
+        try:
+            t = dt.datetime.strptime(row.get("public_at_uk", ""), "%Y-%m-%d %H:%M").replace(tzinfo=UK)
+            wait = min(wait, max(0.0, (t + dt.timedelta(minutes=25) - dt.datetime.now(dt.timezone.utc)).total_seconds()))
+        except ValueError: pass
+    if wait > 0:
+        log(f"{row.get('clip')}: waiting {wait / 60:.1f} min before submitting"); time.sleep(wait)
+    return wait
+
+
 def youtube_public():
     """A check that a YouTube link is public now (the API), or None when no YouTube sign-in is at hand."""
     try:
@@ -421,8 +476,9 @@ def run(dry=False):
     todo = due(rows, None if dry else youtube_public())
     if not todo: log("submit: nothing due"); return 0
     from playwright.sync_api import sync_playwright
-    done, stale, by_site = 0, set(), {}
+    done, stale, by_site = 0, set(), {"Content Rewards": [], "Vyro": []}
     for r in todo: by_site.setdefault(site_of(C.CFG["campaigns"].get(r["campaign"]) or {}), []).append(r)
+    by_site = {s: sorted(rs, key=lambda r: r.get("public_at_uk", "")) for s, rs in by_site.items() if rs}
     with sync_playwright() as play:
         for site, rs in by_site.items():
             try: b, ctx = context(play, site)
@@ -433,11 +489,15 @@ def run(dry=False):
                 c = C.CFG["campaigns"].get(r["campaign"]) or {}
                 try:
                     if (site, r.get("channel") or "clips") in limited: res = "failed: Vyro's daily limit for this account (5 posts a day): tomorrow"
-                    else: res = SUBMITTERS[site](page, r, c, dry)
+                    else:
+                        pause(r, site, dry)
+                        res = SUBMITTERS[site](page, r, c, dry)
                     if "daily limit" in res: limited.add((site, r.get("channel") or "clips"))
                 except Stale:
                     res = "failed: login expired"; stale.add(site)
-                    log(f"{r['clip']}: {site}: the login has expired"); break
+                    try: page.screenshot(path=str(ROOT / "status" / f"submit_{site.split()[0].lower()}.png"), full_page=False)
+                    except Exception: pass
+                    log(f"{r['clip']}: {site}: the login has expired ({page.url[:80]}; buttons: {', '.join(names(page)[:8])})"); break
                 except Exception as e:
                     res = f"failed: {type(e).__name__}: {str(e)[:100]}"
                 if res.startswith("failed") and "daily limit" not in res:

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 22:37): 8 of 1,000 subscribers · 5,576 of 10 million Shorts views in 90 days · 2,340 views in the last 24 hours (about 111,049 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 23:36): 8 of 1,000 subscribers · 5,594 of 10 million Shorts views in 90 days · 2,185 views in the last 24 hours (about 111,049 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 20:06 (UK): 4 scheduled, 106 public, 34 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 40 scheduled |
-| Thu 22 Oct | 27 public, 2 scheduled | 18 | 14 | ⏳ 27 of 40 so far, 2 more scheduled |
+| Thu 22 Oct | 29 public | 18 | 16 | ⏳ 29 of 40 so far |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -70,12 +70,12 @@ scheduled · 24 s · music: stake-out · [script](../boards/done/QD-124.json) ·
 ![QD-124](QD-124.jpg)
 
 ### Thu 22 Oct 23:30 · Queen's legendary Live Aid performance 🎤
-scheduled · 28 s · music: duty-calls · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
+private · 28 s · music: duty-calls · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
 
 ![QD-123](QD-123.jpg)
 
 ### Thu 22 Oct 23:00 · Leicester City's historic Premier League win 🏆
-scheduled · 36 s · music: defying-gravity · [script](../boards/done/QD-122.json) · [YouTube](https://youtube.com/shorts/LZAeF5Wnmu8)
+private · 36 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-122.json) · [YouTube](https://youtube.com/shorts/LZAeF5Wnmu8)
 
 ![QD-122](QD-122.jpg)
 

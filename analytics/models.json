@@ -1,27 +1,33 @@
 {
- "updated": "2026-10-22T08:47+00:00",
+ "updated": "2026-10-22T13:37+00:00",
  "writers": {
   "gemini:gemini-3-flash-preview": {
-   "n": 1,
+   "n": 4,
    "shorts": 6,
-   "score": 0.793,
-   "views_vs_typical": 0.61
+   "score": 0.324,
+   "views_vs_typical": 0.17
   },
   "gemini:gemini-3.1-flash-lite": {
    "n": 0,
-   "shorts": 1
+   "shorts": 2
   },
   "gemini:gemini-3.5-flash": {
-   "n": 0,
-   "shorts": 1
+   "n": 1,
+   "shorts": 2,
+   "score": 0.256,
+   "views_vs_typical": 0.14
   },
   "gemini:gemini-3.5-flash-lite": {
    "n": 4,
    "shorts": 21,
-   "score": 1.466,
-   "views_vs_typical": 1.11
+   "score": 1.821,
+   "views_vs_typical": 1.37
   },
   "gemini:gemini-3.6-flash": {
+   "n": 0,
+   "shorts": 1
+  },
+  "gemini:gemini-3.7-flash": {
    "n": 0,
    "shorts": 1
   },
@@ -30,14 +36,16 @@
    "shorts": 1
   },
   "gemini:gemini-flash-latest": {
-   "n": 0,
-   "shorts": 4
+   "n": 2,
+   "shorts": 5,
+   "score": 0.513,
+   "views_vs_typical": 0.09
   },
   "groq:openai/gpt-oss-120b": {
-   "n": 1,
-   "shorts": 2,
-   "score": 2.207,
-   "views_vs_typical": 1.8
+   "n": 2,
+   "shorts": 5,
+   "score": 1.534,
+   "views_vs_typical": 1.21
   }
  },
  "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts."

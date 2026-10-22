@@ -1,45 +1,45 @@
 {
- "updated": "2026-10-22T08:47+00:00",
+ "updated": "2026-10-22T13:37+00:00",
  "dimensions": {
   "captions": {
    "punch": {
     "n": 2,
-    "score": 0.722,
+    "score": 0.837,
     "held_3s_pct": 120.0,
     "avg_viewed_pct": 54.3,
     "stayed_pct": 24.0
    },
    "clean": {
-    "n": 12,
-    "score": 1.609,
+    "n": 17,
+    "score": 1.213,
     "held_3s_pct": 106.0,
     "avg_viewed_pct": 54.2,
     "stayed_pct": 37.0
    },
    "pop": {
     "n": 6,
-    "score": 1.617,
+    "score": 1.881,
     "held_3s_pct": 110.0,
     "avg_viewed_pct": 59.4,
     "stayed_pct": 37.0
    },
    "boxed": {
     "n": 3,
-    "score": 0.444,
+    "score": 0.632,
     "held_3s_pct": 111.0,
     "avg_viewed_pct": 24.4,
     "stayed_pct": 30.0
    },
    "minimal": {
-    "n": 6,
-    "score": 0.953,
+    "n": 8,
+    "score": 0.982,
     "held_3s_pct": 106.5,
     "avg_viewed_pct": 41.0,
     "stayed_pct": 23.5
    },
    "lab-captions-1019": {
-    "n": 5,
-    "score": 4.448
+    "n": 6,
+    "score": 4.636
    }
   },
   "voice": {
@@ -95,22 +95,22 @@
   },
   "energy": {
    "steady": {
-    "n": 20,
-    "score": 1.699,
+    "n": 23,
+    "score": 1.59,
     "held_3s_pct": 105.0,
     "avg_viewed_pct": 55.5,
     "stayed_pct": 35.0
    },
    "punchy": {
     "n": 8,
-    "score": 1.349,
+    "score": 1.462,
     "held_3s_pct": 112.5,
     "avg_viewed_pct": 54.3,
     "stayed_pct": 33.5
    },
    "calm": {
-    "n": 6,
-    "score": 1.14,
+    "n": 11,
+    "score": 0.55,
     "held_3s_pct": 106.5,
     "avg_viewed_pct": 41.0,
     "stayed_pct": 23.5
@@ -121,49 +121,49 @@
   },
   "grade": {
    "natural": {
-    "n": 11,
-    "score": 1.285,
+    "n": 13,
+    "score": 1.352,
     "held_3s_pct": 106.0,
     "avg_viewed_pct": 47.5,
     "stayed_pct": 29.0
    },
    "cinematic": {
-    "n": 17,
-    "score": 1.443,
+    "n": 19,
+    "score": 1.59,
     "held_3s_pct": 110.5,
     "avg_viewed_pct": 54.3,
     "stayed_pct": 30.0
    },
    "vivid": {
     "n": 3,
-    "score": 1.414,
+    "score": 1.571,
     "held_3s_pct": 112.5,
     "avg_viewed_pct": 54.4,
     "stayed_pct": 38.0
    },
    "lab-grade-1019": {
-    "n": 3,
-    "score": 3.08
+    "n": 7,
+    "score": 0.55
    }
   },
   "opening": {
    "graphic_first": {
-    "n": 21,
-    "score": 1.443,
+    "n": 29,
+    "score": 1.333,
     "held_3s_pct": 110.0,
     "avg_viewed_pct": 54.2,
     "stayed_pct": 25.0
    },
    "image_first": {
     "n": 12,
-    "score": 1.463,
+    "score": 1.659,
     "held_3s_pct": 109.0,
     "avg_viewed_pct": 54.5,
     "stayed_pct": 34.0
    },
    "lab-opening-1019": {
     "n": 1,
-    "score": 0.276
+    "score": 0.359
    }
   }
  },

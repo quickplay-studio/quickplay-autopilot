@@ -1,7 +1,9 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Patient Zero by Taylor Swift: 4 verified, 4 one-source, 2 pages
-Cyberpunk 2077: 0 verified, 6 one-source, 4 pages
-BioWare: 7 verified, 1 one-source, 5 pages
-bromley fc: 0 verified, 5 one-source, 1 pages
-4 packs, 11 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+Angel Of My Dreams by JADE: 0 verified, 4 one-source, 1 pages
+ronnie o'sullivan: 2 verified, 2 one-source, 4 pages
+Heath Ledger: 3 verified, 1 one-source, 4 pages
+BioWare: 4 verified, 3 one-source, 4 pages
+Dancing with the Stars (American TV series) season 35: 0 verified, 1 one-source, 1 pages
+Cyberpunk 2077: 3 verified, 4 one-source, 4 pages
+6 packs, 12 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {"gemini-3.5-flash-lite": 1}, "answers": {"gemini-3.5-flash-lite": 6, "gemini-3.1-flash-lite": 1}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

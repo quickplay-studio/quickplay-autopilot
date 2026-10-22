@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 13:48): 8 of 1,000 subscribers · 5,418 of 10 million Shorts views in 90 days · 3,482 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 14:37): 8 of 1,000 subscribers · 5,436 of 10 million Shorts views in 90 days · 3,225 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Thu 22 Oct 12:17 (UK): 6 scheduled, 96 public, 36 uploads in the last 24 hours.
+YouTube checked Thu 22 Oct 14:37 (UK): 1 scheduled, 101 public, 32 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 13:06).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 20 public, 2 scheduled | 18 | 4 | ⏳ 20 of 40 so far, 2 more scheduled |
+| Thu 22 Oct | 21 public, 1 scheduled | 18 | 5 | ⏳ 21 of 40 so far, 1 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -41,10 +41,10 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (5 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (6 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
 - Testing energy: camera motion 0.7, punch-ins 0.05 (0 of 8 Shorts measured)
-- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (3 of 8 Shorts measured)
+- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (7 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (1 of 8 Shorts measured)
 
 ## Needs a look
@@ -63,37 +63,37 @@ scheduled · 41 s · music: risen · [script](../boards/done/QD-116.json) · [Yo
 ![QD-116](QD-116.jpg)
 
 ### Thu 22 Oct 14:30 · How BioWare built Knights of the Old Republic 🌌
-scheduled · 25 s · music: risen · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
+public · 25 s · music: risen · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
 
 ![QD-115](QD-115.jpg)
 
 ### Thu 22 Oct 14:00 · Dancing with the Stars makes history 💃
-private · 24 s · music: mirror-mirror · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
+public · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
 
 ![QD-113](QD-113.jpg)
 
 ### Thu 22 Oct 13:30 · Cyberpunk 2077 gets massive new update 🎮
-private · 21 s · music: the-bombs · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
+public · 21 s · music: the-bombs · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 
 ### Thu 22 Oct 13:00 · Nobody Wants This S3 romance twist 🎬
-private · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
+public · 4 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
 
 ![QD-111](QD-111.jpg)
 
 ### Thu 22 Oct 12:30 · EA pauses Project Lotus 🛑
-private · 25 s · music: mirror-mirror · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
+public · 2 views · 25 s · music: mirror-mirror · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
 
 ![QD-110](QD-110.jpg)
 
 ### Thu 22 Oct 11:30 · It Gets Worse: Leo Reich’s triple‑threat comedy 📺
-public · 28 s · music: sneaky-spelunking · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
+public · 1 views · 28 s · music: sneaky-spelunking · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
 
 ![QD-109](QD-109.jpg)
 
 ### Thu 22 Oct 10:00 · Morgan Wallen and Ella Langley duet details 🎶
-public · 2 views · 24 s · music: back-in-the-saddle · on Facebook · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
+public · 4 views · 24 s · music: back-in-the-saddle · on Facebook · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
 
 ![QD-108](QD-108.jpg)
 
@@ -108,12 +108,12 @@ public · 2 views · 20 s · music: once-upon-a-time · [script](../boards/done/
 ![QD-106](QD-106.jpg)
 
 ### Thu 22 Oct 5:30 · Alphonso Davies: From refugee to Bayern star 🏆
-public · 6 views · 33 s · music: once-upon-a-time · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
+public · 7 views · 33 s · music: once-upon-a-time · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
 
 ![QD-105](QD-105.jpg)
 
 ### Thu 22 Oct 5:00 · Taylor Swift's haunted video twist 🎬
-public · 98 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
+public · 100 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
 
 ![QD-103](QD-103.jpg)
 
@@ -123,7 +123,7 @@ public · 6 views · 27 s · music: cued-for-liftoff · [script](../boards/done/
 ![QD-102](QD-102.jpg)
 
 ### Thu 22 Oct 4:00 · Ella Langley and Morgan Wallen released new duet 🎶
-public · 246 views · 22 s · music: purple-desire · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
+public · 252 views · 22 s · music: purple-desire · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
 
 ![QD-101](QD-101.jpg)
 
@@ -138,7 +138,7 @@ public · 3 views · 25 s · music: in-battery · [script](../boards/done/QD-099
 ![QD-099](QD-099.jpg)
 
 ### Thu 22 Oct 2:30 · Mark Allen snooker career highlights 🎱
-public · 78 views · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
+public · 86 views · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
 
 ![QD-098](QD-098.jpg)
 
@@ -148,7 +148,7 @@ public · 1 views · 21 s · music: death-duel · [script](../boards/done/QD-097
 ![QD-097](QD-097.jpg)
 
 ### Thu 22 Oct 1:30 · Dave Raindance hits number one 🎶
-public · 19 views · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
+public · 21 views · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
 
 ![QD-096](QD-096.jpg)
 
@@ -158,7 +158,7 @@ public · 4 views · 20 s · music: dance-with-you · [script](../boards/done/QD
 ![QD-095](QD-095.jpg)
 
 ### Thu 22 Oct 0:30 · What is the loudest sound ever recorded on Earth? 🌋
-public · 15 views · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
+public · 17 views · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
 
 ![QD-094](QD-094.jpg)
 
@@ -168,7 +168,7 @@ public · 1 views · 38 s · music: after-sunset · [script](../boards/done/QD-0
 ![QD-093](QD-093.jpg)
 
 ### Wed 21 Oct 23:30 · The day Godzilla was almost an octopus 🐙
-public · 7 views · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
+public · 8 views · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
 
 ![QD-092](QD-092.jpg)
 
@@ -178,7 +178,7 @@ public · 3 views · 36 s · music: horizons · [script](../boards/done/QD-091.j
 ![QD-091](QD-091.jpg)
 
 ### Wed 21 Oct 21:30 · Shrek 2 Remastered revealed with GTA parody 🧅
-public · 3 views · 23 s · music: treasure-hunt · on Facebook · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
+public · 4 views · 23 s · music: treasure-hunt · on Facebook · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
 
 ![QD-090](QD-090.jpg)
 
@@ -188,7 +188,7 @@ public · 5 views · 22 s · music: level · on Facebook · [script](../boards/d
 ![QD-089](QD-089.jpg)
 
 ### Wed 21 Oct 17:30 · Glee reboot officially confirmed 🎵
-public · 59 views · 27 s · music: dance-with-you · on Instagram · on Facebook · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
+public · 60 views · 27 s · music: dance-with-you · on Instagram · on Facebook · [script](../boards/done/QD-088.json) · [YouTube](https://youtube.com/shorts/h9hs4IovByM)
 
 ![QD-088](QD-088.jpg)
 
@@ -217,23 +217,23 @@ public · 16 views · 28 s · music: defying-gravity · on Instagram · on Faceb
 
 ![QD-081](QD-081.jpg)
 
-### Wed 21 Oct 14:30 · Who invented the World Wide Web? 🌐
-public · 3 views · 28 s · music: circuit-rush · on Instagram · on Facebook · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
+### Wed 21 Oct 14:30 · The man who created the internet 💻
+public · 4 views · 28 s · music: circuit-rush · on Instagram · on Facebook · [script](../boards/done/QD-080.json) · [YouTube](https://youtube.com/shorts/n9u_lNVm3eA)
 
 ![QD-080](QD-080.jpg)
 
-### Wed 21 Oct 14:00 · How often do the Orionids meteor showers occur? 🌠
+### Wed 21 Oct 14:00 · When is the peak of the Orionids meteor shower? ✨
 public · 3 views · 26 s · music: defying-gravity · on Instagram · on Facebook · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
 
 ![QD-079](QD-079.jpg)
 
 ### Wed 21 Oct 13:30 · Bohemian Rhapsody: the 5.55 minute record 🎸
-public · 26 views · 34 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
+public · 28 views · 34 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
 
 ![QD-078](QD-078.jpg)
 
-### Wed 21 Oct 13:00 · Anuel AA’s birth name and album timeline 🎤
-public · 18 views · 28 s · music: rubberband · on Instagram · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
+### Wed 21 Oct 13:00 · From Emmanuel Gazmey to LLNM2: Anuel AA’s milestones 🎧
+public · 19 views · 28 s · music: rubberband · on Instagram · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
 
 ![QD-077](QD-077.jpg)
 
@@ -248,11 +248,11 @@ public · 20 views · 31 s · music: mirror-mirror · on Instagram · on Faceboo
 ![QD-074](QD-074.jpg)
 
 ### Wed 21 Oct 10:10 · Barcelona defeat Real Betis 5-2 in La Liga ⚽
-public · 12 views · 26 s · music: gta-type-beat · on Instagram · on Facebook · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
+public · 25 views · 26 s · music: gta-type-beat · on Instagram · on Facebook · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
 
 ![QD-062](QD-062.jpg)
 
 ### Wed 21 Oct 9:54 · Kylie Jenner wears Victoria's Secret Fantasy Bra 💎
-public · 7 views · 24 s · music: mirror-mirror · on Instagram · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
+public · 27 views · 24 s · music: mirror-mirror · on Instagram · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
 
 ![QD-073](QD-073.jpg)

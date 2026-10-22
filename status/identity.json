@@ -1,0 +1,218 @@
+{
+ "checked": "2026-10-22T19:24:06+00:00",
+ "ok": true,
+ "studio": "studiosocialmedia123@gmail.com",
+ "checks": [
+  {
+   "what": "workflow alerts.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow analytics.yml",
+   "found": "FB_PAGE_ID, FB_PAGE_TOKEN, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow audit.yml",
+   "found": "FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, FB_PAGE_ID, FB_PAGE_TOKEN, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow clips.yml",
+   "found": "CEREBRAS_API_KEY, FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow engage.yml",
+   "found": "GEMINI_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow llmprobe.yml",
+   "found": "CEREBRAS_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow logins.yml",
+   "found": "SOCIAL_KEY, VYRO_COOKIES, WHOP_COOKIES",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow music.yml",
+   "found": "MUSIC_KEY",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow publish.yml",
+   "found": "SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow render.yml",
+   "found": "MUSIC_KEY, PEXELS_API_KEY, PIXABAY_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow report.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow social.yml",
+   "found": "FB_PAGE_ID, FB_PAGE_TOKEN, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow trends.yml",
+   "found": "CEREBRAS_API_KEY, FB_PAGE_ID, FB_PAGE_TOKEN, FOOTBALL_DATA_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_TOKEN, IG_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow voicebank.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow voices.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow weekly.yml",
+   "found": "SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow write.yml",
+   "found": "CEREBRAS_API_KEY, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "tokens/instagram.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/tiktok.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/youtube.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/youtube_clips.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/youtube_gaming.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "tokens/youtube_irl.enc",
+   "found": "expected",
+   "ok": true,
+   "expected": "youtube_*, instagram*, facebook*, tiktok*, login_whop, login_vyro",
+   "note": ""
+  },
+  {
+   "what": "youtube",
+   "found": "Quickplay Daily (@quickplaydaily)",
+   "ok": true,
+   "expected": "a Quickplay channel of the studio account",
+   "note": ""
+  },
+  {
+   "what": "youtube_clips",
+   "found": "Quickplay Clips (@quickplayclips-x9b)",
+   "ok": true,
+   "expected": "a Quickplay channel of the studio account",
+   "note": ""
+  },
+  {
+   "what": "youtube_gaming",
+   "found": "Quickplay Gaming Clips (@quickplaygamingclips-z1b)",
+   "ok": true,
+   "expected": "a Quickplay channel of the studio account",
+   "note": ""
+  },
+  {
+   "what": "youtube_irl",
+   "found": "Quickplay IRL Clips (@quickplayirlclips)",
+   "ok": true,
+   "expected": "a Quickplay channel of the studio account",
+   "note": ""
+  },
+  {
+   "what": "instagram",
+   "found": "@quickplaydaily (17841465022278792)",
+   "ok": true,
+   "expected": "a Quickplay Instagram account",
+   "note": ""
+  },
+  {
+   "what": "FB_PAGE_TOKEN",
+   "found": "Quickplay Daily (1394922903704330)",
+   "ok": true,
+   "expected": "a Quickplay Facebook Page",
+   "note": ""
+  },
+  {
+   "what": "tiktok",
+   "found": "HTTP 401",
+   "ok": true,
+   "expected": "",
+   "note": "the key does not answer (expired keys are refreshed by the social run)"
+  }
+ ],
+ "problems": []
+}

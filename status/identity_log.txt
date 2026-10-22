@@ -1,0 +1,31 @@
+ok   workflow alerts.yml: no secrets
+ok   workflow analytics.yml: FB_PAGE_ID, FB_PAGE_TOKEN, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   workflow audit.yml: FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, FB_PAGE_ID, FB_PAGE_TOKEN, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET
+ok   workflow clips.yml: CEREBRAS_API_KEY, FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET
+ok   workflow engage.yml: GEMINI_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET
+ok   workflow llmprobe.yml: CEREBRAS_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY
+ok   workflow logins.yml: SOCIAL_KEY, VYRO_COOKIES, WHOP_COOKIES
+ok   workflow music.yml: MUSIC_KEY
+ok   workflow publish.yml: SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   workflow render.yml: MUSIC_KEY, PEXELS_API_KEY, PIXABAY_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   workflow report.yml: no secrets
+ok   workflow social.yml: FB_PAGE_ID, FB_PAGE_TOKEN, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET
+ok   workflow trends.yml: CEREBRAS_API_KEY, FB_PAGE_ID, FB_PAGE_TOKEN, FOOTBALL_DATA_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_TOKEN, IG_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   workflow voicebank.yml: no secrets
+ok   workflow voices.yml: no secrets
+ok   workflow weekly.yml: SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   workflow write.yml: CEREBRAS_API_KEY, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+ok   tokens/instagram.enc: expected
+ok   tokens/tiktok.enc: expected
+ok   tokens/youtube.enc: expected
+ok   tokens/youtube_clips.enc: expected
+ok   tokens/youtube_gaming.enc: expected
+ok   tokens/youtube_irl.enc: expected
+ok   youtube: Quickplay Daily (@quickplaydaily)
+ok   youtube_clips: Quickplay Clips (@quickplayclips-x9b)
+ok   youtube_gaming: Quickplay Gaming Clips (@quickplaygamingclips-z1b)
+ok   youtube_irl: Quickplay IRL Clips (@quickplayirlclips)
+ok   instagram: @quickplaydaily (17841465022278792)
+ok   FB_PAGE_TOKEN: Quickplay Daily (1394922903704330)
+ok   tiktok: HTTP 401 (the key does not answer (expired keys are refreshed by the social run))
+identity: clean: 30 checks

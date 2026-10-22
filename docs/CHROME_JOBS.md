@@ -23,9 +23,9 @@ Claude in Chrome acts inside web pages only, and Claude never handles credential
 
 ## Jobs
 
-### blocked: Saved logins for the submissions (22 October)
-Waiting for Charlie (asked 22 October 19:45 UK): install the extension, Export on contentrewards.com and app.vyro.com,
-paste the two files as WHOP_COOKIES and VYRO_COOKIES. Content Rewards is signed in as Studio SocialMedia; Vyro unchecked.
+### done: Saved logins for the submissions (22 October)
+Charlie exported both cookie files and pasted WHOP_COOKIES and VYRO_COOKIES (22 October 19:37 UK). Both sites are signed in as
+the studio. When a login expires (a GitHub issue says so), the same three steps again: extension, Export, paste.
 Install the Chrome extension "Get cookies.txt LOCALLY" if missing (https://chromewebstore.google.com/search/get%20cookies.txt%20locally).
 On https://contentrewards.com/ signed in as the studio account, export the cookies (extension icon, Export, current site),
 read the downloaded file and add its text as the GitHub secret WHOP_COOKIES at
@@ -33,7 +33,12 @@ https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions
 https://app.vyro.com/campaigns into VYRO_COOKIES. If a site asks to sign in, ask Charlie to sign in, then continue.
 
 ### open: Prove the automatic submissions (22 October)
-After the saved logins exist. The 22 October 18:01 UK batch: 0 of 23 submitted, no cookies.
+The real forms were read in Chrome and submit.py rewritten to them (commit 01eb3ef): Content Rewards' Submit clip dialog
+(url box, three checks, consent box, Submit clip; a Failed icon beside the refused check; clips must be submitted within 30
+minutes of going public, so only the 18:01 batch run can submit that day's clips) and Vyro's Add Posts cards (card text in
+campaigns.json "card", Use a link instead, the social account, the rules box, Continue, Review your post, Submit post; 5 posts
+per connected account a day). GitHub then held every clips run as "possibly malicious" (the workflow passed toJSON(secrets));
+fixed in the same commit, run #41 approved by Charlie. Next: read status/clips_log.txt of run #41 and the 22:01 batch.
 Set requests/clips.txt to "submit probe", commit and push, wait for the clips workflow run, read status/clips_log.txt and
 status/submit_*.png. If a site's form differs from what pipeline/submit.py expects (submit_cr and submit_vyro: the Submit
 clip or Submit post button, the platform choice, the link box, the confirm button, the answer text), fix those steps,
@@ -41,7 +46,12 @@ run python tests/test_submit.py, commit and push, then set requests/clips.txt to
 every due row of clips/submit.csv submitted.
 
 ### open: Join the campaigns the scout ranks (22 October)
-After the saved logins exist (the scout needs the Content Rewards cookies; status/scout.md does not exist yet).
+The scout has not run yet (its runs were held with the rest; the 09:35 UK run tomorrow is the next). Done by hand on 22
+October: Vyro's open list read; joined Kevin Langue (4 Imposters vs 1 Real Ghost Hunter, $2.00, Shorts allowed, footage on
+Frame.io) and added it; skipped Don't Lie To Me (dating and divorce talk), Ground Stop ("edgy, zero filters"), both Ketone-IQ
+(a supplement). Content Rewards: the $10,000 Kai Cenat pool (Reach) sources from his Twitch and YouTube streams (no
+provided files, 350K views to qualify, raw stream language) and the MW4 Campaign Moments one is TikTok and Instagram only,
+so neither joined. Streamer Discords (N3on, Jynxzi, Clix) not started: needs a studio Discord account.
 Set requests/clips.txt to "scout", commit and push, wait for the run, read status/scout.md. Join every campaign marked yes
 on Content Rewards (Join or Apply on its page) and the fitting ones at https://app.vyro.com/campaigns (clipping not UGC,
 YouTube Shorts allowed, footage provided, family friendly, open). For each joined campaign read its rules page and add an
@@ -62,7 +72,10 @@ IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN and FB_CLIPS_PAGE_ID. Connect the Instagra
 https://contentrewards.com/c/settings and https://app.vyro.com/settings.
 
 ### open: Two more YouTube channels for the niches (22 October)
-Charlie asked 22 October 19:45 UK to create them. The run opens the connect_url for each; Charlie clicks Allow.
+Created and signed in by Charlie 22 October 19:45 UK (tokens/youtube_gaming.enc, tokens/youtube_irl.enc; Google blocks
+Claude's clicks on its sign-in pages, so the Allow is always his). Both unverified: his number already verified Daily and
+Clips (a number verifies 2 channels a year). Left: connect both as accounts on Content Rewards (Settings, Connected
+accounts, Connect account, YouTube, a Google window) and Vyro (settings, social account); asked 20:05 UK.
 Charlie creates them himself under the studio Google account (https://www.youtube.com/channel_switcher, Create a channel):
 "Quickplay Gaming Clips" (the word Gaming in the title) and "Quickplay IRL Clips" (the word IRL in the title); then
 https://www.youtube.com/features on each for the phone verification. Ask him for that, wait. Then for each new channel:
@@ -97,3 +110,5 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 - 22 October 19:45 UK: first Mac run. Chrome's connection dropped after a window resize; the cookie export, every secret and every account
   are Charlie's hands (see Who does what), so one message asked him for all of them with links. Nothing on GitHub can submit or scout until
   WHOP_COOKIES and VYRO_COOKIES exist.
+- 22 October 20:10 UK: cookies in; submit.py rewritten to the real forms; GitHub's malicious-workflow hold found and fixed (named secrets);
+  gaming and irl channels signed in; Kevin Langue joined on Vyro; three Vyro and two Content Rewards campaigns judged and skipped.

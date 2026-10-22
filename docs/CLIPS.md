@@ -192,3 +192,26 @@ forbids it for that creator's content.
   submit rows (a "channel" column). Channels without a sign-in are skipped. One Content Rewards account and one Vyro
   account hold all the channels as connected accounts (a second clipper account would count as linked accounts and be
   banned). Creating the channels is Charlie's (a Chrome job asks him); signing them in and connecting them is the worker's.
+
+## 22 October, 19:30 to 20:10 UK: the Mac run, the real forms, GitHub's hold
+- What Claude cannot do in Charlie's Chrome, learnt today: click an extension's popup (the cookie export), type any secret,
+  key or cookie text into GitHub, type a password, create an account, or click anything on accounts.google.com (the
+  extension refuses the domain, so every YouTube Allow, including Content Rewards' and Vyro's channel connects, is his).
+  docs/CHROME_JOBS.md "Who does what" has the split; each run asks him for his part in one message with links.
+- The submission forms as they really are (pipeline/submit.py): Content Rewards opens a dialog with one url box, three
+  checks (a linked account, not already submitted, posted within the last 30 minutes), a consent box and Submit clip; a
+  refused check shows a Failed icon beside its reason. The 30-minute rule means only the 18:01 batch run can submit that
+  day's clips; anything older is marked "failed: past the 30-minute window" once and never retried. Vyro's Add Posts page
+  lists the joined campaigns as cards (each campaign's card text is "card" in campaigns.json), each with its own Submit
+  post; then Use a link instead, the social account (the YouTube channel), "This account can submit N posts today" (5 per
+  connected channel a day, so three channels give 15 Vyro submissions a day), the rules box, Continue, Review your post
+  (ad disclosure, hashtags, collaborators), Submit post. Duplicate answer: "Post not submitted. You have already
+  submitted this post to a campaign." Seven of the 21 October clips were already pending on Vyro by hand.
+- GitHub held every clips run from 19:01 UK as "this workflow file may be malicious": clips.yml passed toJSON(secrets)
+  into one variable (so IG_<CHANNEL>_* needed no workflow edit). Each channel's four Instagram and Facebook secrets are
+  now named in clips.yml; a new channel means adding its four lines. Charlie approved the held run (#41).
+- Channels: Quickplay Gaming Clips and Quickplay IRL Clips exist and are signed in (tokens/youtube_gaming.enc and
+  youtube_irl.enc). Unverified: one phone number verifies two YouTube channels a year and Daily and Clips used it, so
+  they run at the lower daily number until their history earns advanced features.
+- Campaigns: joined Kevin Langue's Vyro campaign (clips and irl). Not joined, with reasons, in docs/CHROME_JOBS.md.
+

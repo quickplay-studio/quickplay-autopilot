@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 01:50): 8 of 1,000 subscribers · 5,115 of 10 million Shorts views in 90 days · 5,930 views in the last 24 hours (about 111,054 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 02:41): 8 of 1,000 subscribers · 5,134 of 10 million Shorts views in 90 days · 5,846 views in the last 24 hours (about 111,054 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Wed 21 Oct 20:08 (UK): 9 scheduled, 76 public, 38 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 5 public, 9 scheduled | 0 | 0 | ⏳ 5 of 40 so far, 9 more scheduled |
+| Thu 22 Oct | 6 public, 8 scheduled | 0 | 0 | ⏳ 6 of 40 so far, 8 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -59,7 +59,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 ## On the channel (latest first)
 
 ### Thu 22 Oct 2:30 · Mark Allen snooker career highlights 🎱
-scheduled · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
+private · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
 
 ![QD-098](QD-098.jpg)
 

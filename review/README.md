@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 08:50): 8 of 1,000 subscribers · 5,343 of 10 million Shorts views in 90 days · 4,569 views in the last 24 hours (about 111,052 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 09:47): 8 of 1,000 subscribers · 5,361 of 10 million Shorts views in 90 days · 4,325 views in the last 24 hours (about 111,052 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Thu 22 Oct 8:31 (UK): 0 scheduled, 93 public, 34 uploads in the last 24 hours.
+YouTube checked Thu 22 Oct 9:47 (UK): 1 scheduled, 93 public, 33 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 21 Oct 15:13).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 9:14).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 14 public, 1 scheduled | 0 | 0 | ⏳ 14 of 40 so far, 1 more scheduled |
+| Thu 22 Oct | 14 public, 1 scheduled | 10 | 0 | ⏳ 14 of 40 so far, 1 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -26,9 +26,9 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
 - george_dramatic (British male, more dramatic delivery): 1.12 x typical, 22% stayed past the first seconds, 3 Shorts
-- george (British male, clear): 1.00 x typical, 32% stayed past the first seconds, 10 Shorts
-- emma (British female): 1.83 x typical, 56% stayed past the first seconds, 2 Shorts
-- george_quick (British male, clear and quicker): 0.92 x typical, 27% stayed past the first seconds, 1 Short
+- george (British male, clear): 0.99 x typical, 32% stayed past the first seconds, 10 Shorts
+- emma (British female): 1.77 x typical, 56% stayed past the first seconds, 2 Shorts
+- george_quick (British male, clear and quicker): 0.91 x typical, 27% stayed past the first seconds, 1 Short
 - lewis (British male, deeper and calm): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
 - isabella (British female, warm): 0 Shorts measured so far
@@ -41,11 +41,11 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (1 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (5 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
 - Testing energy: camera motion 0.7, punch-ins 0.05 (0 of 8 Shorts measured)
-- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
-- Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
+- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (3 of 8 Shorts measured)
+- Testing opening: the picture alone for 1 word, then the hook's card (1 of 8 Shorts measured)
 
 ## Needs a look
 
@@ -57,6 +57,11 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
 ## On the channel (latest first)
+
+### Thu 22 Oct 10:00 · Morgan Wallen and Ella Langley duet details 🎶
+scheduled · 24 s · music: back-in-the-saddle · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
+
+![QD-108](QD-108.jpg)
 
 ### Thu 22 Oct 6:30 · How does ChatGPT process natural language queries? 🤖
 public · 20 s · music: glitcher · [script](../boards/done/QD-107.json) · [YouTube](https://youtube.com/shorts/fCu432D5mgw)
@@ -74,12 +79,12 @@ public · 2 views · 33 s · music: once-upon-a-time · [script](../boards/done/
 ![QD-105](QD-105.jpg)
 
 ### Thu 22 Oct 5:00 · Taylor Swift's haunted video twist 🎬
-public · 82 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
+public · 86 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
 
 ![QD-103](QD-103.jpg)
 
 ### Thu 22 Oct 4:30 · Club Brugge 20 league titles history ⚽
-public · 2 views · 27 s · music: cued-for-liftoff · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
+public · 6 views · 27 s · music: cued-for-liftoff · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
 
 ![QD-102](QD-102.jpg)
 
@@ -159,7 +164,7 @@ public · 4 views · 27 s · music: scale-the-mountain · on Facebook · [script
 ![QD-087](QD-087.jpg)
 
 ### Wed 21 Oct 16:30 · The day Apollo 13 became a rescue mission 🚀
-public · 1 views · 26 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
+public · 2 views · 26 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
 
 ![QD-085](QD-085.jpg)
 
@@ -169,12 +174,12 @@ public · 2 views · 25 s · music: f16 · on Facebook · [script](../boards/don
 ![QD-083](QD-083.jpg)
 
 ### Wed 21 Oct 15:30 · How Manchester United won the 1999 Champions League 🏆
-public · 11 views · 24 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
+public · 14 views · 24 s · music: across-seas-and-lands · on Facebook · [script](../boards/done/QD-082.json) · [YouTube](https://youtube.com/shorts/xU_YzAN_0x4)
 
 ![QD-082](QD-082.jpg)
 
 ### Wed 21 Oct 15:00 · Jupiter: Which is the largest planet? 🪐
-public · 14 views · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
+public · 15 views · 28 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-081.json) · [YouTube](https://youtube.com/shorts/1Qtndl8rCuY)
 
 ![QD-081](QD-081.jpg)
 
@@ -184,62 +189,62 @@ public · 3 views · 28 s · music: circuit-rush · on Facebook · [script](../b
 ![QD-080](QD-080.jpg)
 
 ### Wed 21 Oct 14:00 · How often do the Orionids meteor showers occur? 🌠
-public · 2 views · 26 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
+public · 3 views · 26 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-079.json) · [YouTube](https://youtube.com/shorts/YzkUYea_37E)
 
 ![QD-079](QD-079.jpg)
 
 ### Wed 21 Oct 13:30 · Bohemian Rhapsody: the 5.55 minute record 🎸
-public · 24 views · 34 s · music: walking-the-wire · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
+public · 24 views · 34 s · music: walking-the-wire · on Instagram · [script](../boards/done/QD-078.json) · [YouTube](https://youtube.com/shorts/v4laO9KMtP4)
 
 ![QD-078](QD-078.jpg)
 
 ### Wed 21 Oct 13:00 · Anuel AA’s birth name and album timeline 🎤
-public · 18 views · 28 s · music: rubberband · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
+public · 18 views · 28 s · music: rubberband · on Instagram · on Facebook · [script](../boards/done/QD-077.json) · [YouTube](https://youtube.com/shorts/AEzAI1mguKg)
 
 ![QD-077](QD-077.jpg)
 
 ### Wed 21 Oct 12:00 · ChatGPT adds new PIN lock for private chats 🔒
-public · 13 views · 28 s · music: circuit-rush · on Facebook · [script](../boards/done/QD-075.json) · [YouTube](https://youtube.com/shorts/HPGQwI0SHBI)
+public · 13 views · 28 s · music: circuit-rush · on Instagram · on Facebook · [script](../boards/done/QD-075.json) · [YouTube](https://youtube.com/shorts/HPGQwI0SHBI)
 
 ![QD-075](QD-075.jpg)
 
 ### Wed 21 Oct 10:30 · K/DA returns with a brand new line-up 🎶
-public · 14 views · 31 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-074.json) · [YouTube](https://youtube.com/shorts/P3r8h3msA7c)
+public · 14 views · 31 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-074.json) · [YouTube](https://youtube.com/shorts/P3r8h3msA7c)
 
 ![QD-074](QD-074.jpg)
 
 ### Wed 21 Oct 10:10 · Lamine Yamal ends Real Betis 15 game unbeaten run ⚽
-public · 10 views · 26 s · music: gta-type-beat · on Facebook · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
+public · 11 views · 26 s · music: gta-type-beat · on Instagram · on Facebook · [script](../boards/done/QD-062.json) · [YouTube](https://youtube.com/shorts/QnO9Y09ThbE)
 
 ![QD-062](QD-062.jpg)
 
 ### Wed 21 Oct 9:54 · Kylie Jenner makes Victoria's Secret show debut ✨
-public · 3 views · 24 s · music: mirror-mirror · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
+public · 3 views · 24 s · music: mirror-mirror · on Instagram · [script](../boards/done/QD-073.json) · [YouTube](https://youtube.com/shorts/80enLT-H0Zo)
 
 ![QD-073](QD-073.jpg)
 
 ### Wed 21 Oct 9:30 · Taylor Swift's Patient Zero hits three weeks at number one 🎵
-public · 314 views · 19 s · music: f16 · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
+public · 314 views · 19 s · music: f16 · on Instagram · [script](../boards/done/QD-061.json) · [YouTube](https://youtube.com/shorts/FQ27dGO66hk)
 
 ![QD-061](QD-061.jpg)
 
 ### Wed 21 Oct 8:50 · Larne face Linfield in Irish Premiership match ⚽
-public · 91 views · 22 s · music: ego-chall · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
+public · 92 views · 22 s · music: ego-chall · on Instagram · [script](../boards/done/QD-060.json) · [YouTube](https://youtube.com/shorts/b3dV8eVWOpE)
 
 ![QD-060](QD-060.jpg)
 
 ### Wed 21 Oct 8:10 · Japan launches historic mission to Mars's moon Phobos 🚀
-public · 261 views · 26 s · music: pulsar · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
+public · 261 views · 26 s · music: pulsar · on Instagram · [script](../boards/done/QD-059.json) · [YouTube](https://youtube.com/shorts/jzxZdvaKr2E)
 
 ![QD-059](QD-059.jpg)
 
 ### Wed 21 Oct 7:30 · Zelda Ocarina of Time remake file size confirmed 🗡️
-public · 542 views · 29 s · music: death-duel · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
+public · 556 views · 29 s · music: death-duel · on Instagram · [script](../boards/done/QD-058.json) · [YouTube](https://youtube.com/shorts/2PEgNuzSy0Y)
 
 ![QD-058](QD-058.jpg)
 
 ### Wed 21 Oct 4:30 · Who was the first person to win an EGOT? 🏆
-public · 158 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
+public · 155 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-072.json) · [YouTube](https://youtube.com/shorts/t3SSjxjQzqU)
 
 ![QD-072](QD-072.jpg)
 
@@ -252,8 +257,3 @@ public · 24 views · 27 s · music: event-horizon · on Instagram · [script](.
 public · 94 views · 23 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-070.json) · [YouTube](https://youtube.com/shorts/Y9sfjXFS4Z0)
 
 ![QD-070](QD-070.jpg)
-
-### Wed 21 Oct 2:42 · The Beatles debut album recorded in 12 hours 🎸
-public · 700 views · 33 s · music: death-duel · on Instagram · [script](../boards/done/QD-069.json) · [YouTube](https://youtube.com/shorts/FM2COeZ6Oi4)
-
-![QD-069](QD-069.jpg)

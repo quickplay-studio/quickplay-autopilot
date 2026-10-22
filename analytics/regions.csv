@@ -1,153 +1,161 @@
 kind,country,views,share_pct,avg_viewed_pct,subs_gained,shorts_seen,best_category,best_format,best_hook,best_length,top_short,dimension,value,shorts,views_per_short,lift
-fit,US,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,US,515,,,,,,,,,,Category,Film,10,51.5,1.54
-fit,US,213,,,,,,,,,,Category,Gaming,8,26.6,0.92
-fit,US,628,,,,,,,,,,Category,Music,13,48.3,1.49
-fit,US,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,US,91,,,,,,,,,,Category,Sport,8,11.4,0.55
-fit,US,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,US,140,,,,,,,,,,Format,news_explained,7,20.0,0.76
-fit,US,332,,,,,,,,,,Format,one_detail,7,47.4,1.4
-fit,US,56,,,,,,,,,,Format,real_reason,3,18.7,0.81
-fit,US,160,,,,,,,,,,Format,three_details,3,53.3,1.38
-fit,US,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,US,140,,,,,,,,,,Hook,number,11,12.7,0.55
-fit,US,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,US,437,,,,,,,,,,Hook,statement,7,62.4,1.75
-fit,US,111,,,,,,,,,,Hook,superlative,2,55.5,1.34
-fit,US,81,,,,,,,,,,Length,30 to 40 s,7,11.6,0.57
-fit,US,607,,,,,,,,,,Length,under 30 s,14,43.4,1.36
-country,US,1907,35.6,50.5,0,18,"Film (1.5x, 10 Shorts)","one_detail (1.4x, 7 Shorts)","statement (1.8x, 7 Shorts)","under 30 s (1.4x, 14 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (251 views)",,,,,
-fit,GB,23,,,,,,,,,,Category,Entertainment,4,5.8,0.92
-fit,GB,0,,,,,,,,,,Category,Film,10,0.0,0.23
-fit,GB,30,,,,,,,,,,Category,Gaming,8,3.8,0.68
-fit,GB,142,,,,,,,,,,Category,Music,13,10.9,1.51
-fit,GB,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,GB,128,,,,,,,,,,Category,Sport,8,16.0,2.0
-fit,GB,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,GB,0,,,,,,,,,,Format,news_explained,7,0.0,0.3
-fit,GB,164,,,,,,,,,,Format,one_detail,7,23.4,2.74
-fit,GB,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,GB,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,GB,37,,,,,,,,,,Format,timeline,1,37.0,2.12
-fit,GB,91,,,,,,,,,,Hook,number,11,8.3,1.18
-fit,GB,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,GB,110,,,,,,,,,,Hook,statement,7,15.7,1.93
-fit,GB,0,,,,,,,,,,Hook,superlative,2,0.0,0.6
-fit,GB,147,,,,,,,,,,Length,30 to 40 s,7,21.0,2.48
-fit,GB,54,,,,,,,,,,Length,under 30 s,14,3.9,0.65
-country,GB,695,13.0,47.6,0,8,"Sport (2.0x, 8 Shorts)","one_detail (2.7x, 7 Shorts)","statement (1.9x, 7 Shorts)","30 to 40 s (2.5x, 7 Shorts)",Arsenal's 1st shot on target came in minute 80 ⚽ (91 views),,,,,
-fit,IN,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,IN,168,,,,,,,,,,Category,Film,10,16.8,2.36
-fit,IN,39,,,,,,,,,,Category,Gaming,8,4.9,0.86
-fit,IN,85,,,,,,,,,,Category,Music,13,6.5,1.06
-fit,IN,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,IN,0,,,,,,,,,,Category,Sport,8,0.0,0.27
-fit,IN,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,IN,39,,,,,,,,,,Format,news_explained,7,5.6,0.94
-fit,IN,95,,,,,,,,,,Format,one_detail,7,13.6,1.86
-fit,IN,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,IN,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,IN,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,IN,95,,,,,,,,,,Hook,number,11,8.6,1.33
-fit,IN,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,IN,0,,,,,,,,,,Hook,statement,7,0.0,0.3
-fit,IN,39,,,,,,,,,,Hook,superlative,2,19.5,1.88
-fit,IN,0,,,,,,,,,,Length,30 to 40 s,7,0.0,0.3
-fit,IN,134,,,,,,,,,,Length,under 30 s,14,9.6,1.47
-country,IN,547,10.2,44.3,0,4,"Film (2.4x, 10 Shorts)","one_detail (1.9x, 7 Shorts)","superlative (1.9x, 2 Shorts)","under 30 s (1.5x, 14 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (95 views),,,,,
-fit,PH,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,PH,23,,,,,,,,,,Category,Film,10,2.3,3.92
-fit,PH,0,,,,,,,,,,Category,Gaming,8,0.0,0.27
-fit,PH,0,,,,,,,,,,Category,Music,13,0.0,0.19
-fit,PH,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,PH,0,,,,,,,,,,Category,Sport,8,0.0,0.27
-fit,PH,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,PH,0,,,,,,,,,,Format,news_explained,7,0.0,0.3
-fit,PH,0,,,,,,,,,,Format,one_detail,7,0.0,0.3
-fit,PH,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,PH,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,PH,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,PH,0,,,,,,,,,,Hook,number,11,0.0,0.21
-fit,PH,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,PH,0,,,,,,,,,,Hook,statement,7,0.0,0.3
-fit,PH,0,,,,,,,,,,Hook,superlative,2,0.0,0.6
-fit,PH,0,,,,,,,,,,Length,30 to 40 s,7,0.0,0.3
-fit,PH,0,,,,,,,,,,Length,under 30 s,14,0.0,0.18
-country,PH,281,5.2,46.3,0,1,"Film (3.9x, 10 Shorts)",,,,Why Godzilla Minus Zero is a big deal 🦖 (23 views),,,,,
-fit,ES,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,ES,0,,,,,,,,,,Category,Film,10,0.0,0.23
-fit,ES,0,,,,,,,,,,Category,Gaming,8,0.0,0.27
-fit,ES,143,,,,,,,,,,Category,Music,13,11.0,3.19
-fit,ES,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,ES,0,,,,,,,,,,Category,Sport,8,0.0,0.27
-fit,ES,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,ES,0,,,,,,,,,,Format,news_explained,7,0.0,0.3
-fit,ES,0,,,,,,,,,,Format,one_detail,7,0.0,0.3
-fit,ES,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,ES,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,ES,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,ES,0,,,,,,,,,,Hook,number,11,0.0,0.21
-fit,ES,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,ES,0,,,,,,,,,,Hook,statement,7,0.0,0.3
-fit,ES,0,,,,,,,,,,Hook,superlative,2,0.0,0.6
-fit,ES,0,,,,,,,,,,Length,30 to 40 s,7,0.0,0.3
-fit,ES,0,,,,,,,,,,Length,under 30 s,14,0.0,0.18
-country,ES,223,4.2,55.9,0,1,"Music (3.2x, 13 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (143 views),,,,,
-fit,CA,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,CA,0,,,,,,,,,,Category,Film,10,0.0,0.23
-fit,CA,0,,,,,,,,,,Category,Gaming,8,0.0,0.27
-fit,CA,38,,,,,,,,,,Category,Music,13,2.9,3.19
-fit,CA,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,CA,0,,,,,,,,,,Category,Sport,8,0.0,0.27
-fit,CA,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,CA,0,,,,,,,,,,Format,news_explained,7,0.0,0.3
-fit,CA,38,,,,,,,,,,Format,one_detail,7,5.4,5.1
-fit,CA,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,CA,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,CA,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,CA,0,,,,,,,,,,Hook,number,11,0.0,0.21
-fit,CA,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,CA,38,,,,,,,,,,Hook,statement,7,5.4,5.1
-fit,CA,0,,,,,,,,,,Hook,superlative,2,0.0,0.6
-fit,CA,0,,,,,,,,,,Length,30 to 40 s,7,0.0,0.3
-fit,CA,38,,,,,,,,,,Length,under 30 s,14,2.7,3.0
-country,CA,217,4.0,40.2,0,1,"Music (3.2x, 13 Shorts)","one_detail (5.1x, 7 Shorts)","statement (5.1x, 7 Shorts)","under 30 s (3.0x, 14 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (38 views)",,,,,
-fit,ID,0,,,,,,,,,,Category,Entertainment,4,0.0,0.43
-fit,ID,0,,,,,,,,,,Category,Film,10,0.0,0.23
-fit,ID,0,,,,,,,,,,Category,Gaming,8,0.0,0.27
-fit,ID,37,,,,,,,,,,Category,Music,13,2.8,3.19
-fit,ID,0,,,,,,,,,,Category,Science,3,0.0,0.5
-fit,ID,0,,,,,,,,,,Category,Sport,8,0.0,0.27
-fit,ID,0,,,,,,,,,,Category,Tech,2,0.0,0.6
-fit,ID,0,,,,,,,,,,Format,news_explained,7,0.0,0.3
-fit,ID,0,,,,,,,,,,Format,one_detail,7,0.0,0.3
-fit,ID,0,,,,,,,,,,Format,real_reason,3,0.0,0.5
-fit,ID,0,,,,,,,,,,Format,three_details,3,0.0,0.5
-fit,ID,0,,,,,,,,,,Format,timeline,1,0.0,0.75
-fit,ID,0,,,,,,,,,,Hook,number,11,0.0,0.21
-fit,ID,0,,,,,,,,,,Hook,question,1,0.0,0.75
-fit,ID,0,,,,,,,,,,Hook,statement,7,0.0,0.3
-fit,ID,0,,,,,,,,,,Hook,superlative,2,0.0,0.6
-fit,ID,0,,,,,,,,,,Length,30 to 40 s,7,0.0,0.3
-fit,ID,0,,,,,,,,,,Length,under 30 s,14,0.0,0.18
-country,ID,206,3.8,80.0,0,1,"Music (3.2x, 13 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
-fit,DE,0,,,,,,,,,,Category,Entertainment,4,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Film,10,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Gaming,8,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Music,13,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Science,3,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Sport,8,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Tech,2,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,news_explained,7,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,one_detail,7,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,real_reason,3,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,three_details,3,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,timeline,1,0.0,1.0
-fit,DE,0,,,,,,,,,,Hook,number,11,0.0,1.0
-fit,DE,0,,,,,,,,,,Hook,question,1,0.0,1.0
-fit,DE,0,,,,,,,,,,Hook,statement,7,0.0,1.0
-fit,DE,0,,,,,,,,,,Hook,superlative,2,0.0,1.0
-fit,DE,0,,,,,,,,,,Length,30 to 40 s,7,0.0,1.0
-fit,DE,0,,,,,,,,,,Length,under 30 s,14,0.0,1.0
+fit,US,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,US,515,,,,,,,,,,Category,Film,12,42.9,1.65
+fit,US,213,,,,,,,,,,Category,Gaming,9,23.7,1.0
+fit,US,628,,,,,,,,,,Category,Music,17,36.9,1.47
+fit,US,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,US,91,,,,,,,,,,Category,Sport,10,9.1,0.53
+fit,US,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,US,140,,,,,,,,,,Format,news_explained,8,17.5,0.81
+fit,US,332,,,,,,,,,,Format,one_detail,11,30.2,1.21
+fit,US,56,,,,,,,,,,Format,real_reason,5,11.2,0.67
+fit,US,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,US,160,,,,,,,,,,Format,three_details,6,26.7,1.08
+fit,US,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,US,140,,,,,,,,,,Hook,number,19,7.4,0.4
+fit,US,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,US,437,,,,,,,,,,Hook,statement,10,43.7,1.65
+fit,US,111,,,,,,,,,,Hook,superlative,3,37.0,1.28
+fit,US,81,,,,,,,,,,Length,30 to 40 s,11,7.4,0.46
+fit,US,607,,,,,,,,,,Length,under 30 s,23,26.4,1.1
+country,US,1907,35.6,50.5,0,18,"Film (1.6x, 12 Shorts)","one_detail (1.2x, 11 Shorts)","statement (1.6x, 10 Shorts)","under 30 s (1.1x, 23 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (251 views)",,,,,
+fit,GB,23,,,,,,,,,,Category,Entertainment,5,4.6,0.92
+fit,GB,0,,,,,,,,,,Category,Film,12,0.0,0.2
+fit,GB,30,,,,,,,,,,Category,Gaming,9,3.3,0.72
+fit,GB,142,,,,,,,,,,Category,Music,17,8.4,1.49
+fit,GB,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,GB,128,,,,,,,,,,Category,Sport,10,12.8,2.09
+fit,GB,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,GB,0,,,,,,,,,,Format,news_explained,8,0.0,0.27
+fit,GB,164,,,,,,,,,,Format,one_detail,11,14.9,2.43
+fit,GB,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,GB,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,GB,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,GB,37,,,,,,,,,,Format,timeline,2,18.5,2.0
+fit,GB,91,,,,,,,,,,Hook,number,19,4.8,0.92
+fit,GB,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,GB,110,,,,,,,,,,Hook,statement,10,11.0,1.83
+fit,GB,0,,,,,,,,,,Hook,superlative,3,0.0,0.5
+fit,GB,147,,,,,,,,,,Length,30 to 40 s,11,13.4,2.2
+fit,GB,54,,,,,,,,,,Length,under 30 s,23,2.3,0.51
+country,GB,695,13.0,47.6,0,8,"Sport (2.1x, 10 Shorts)","one_detail (2.4x, 11 Shorts)","statement (1.8x, 10 Shorts)","30 to 40 s (2.2x, 11 Shorts)",Arsenal's 1st shot on target came in minute 80 ⚽ (91 views),,,,,
+fit,IN,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,IN,168,,,,,,,,,,Category,Film,12,14.0,2.54
+fit,IN,39,,,,,,,,,,Category,Gaming,9,4.3,0.93
+fit,IN,85,,,,,,,,,,Category,Music,17,5.0,1.04
+fit,IN,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,IN,0,,,,,,,,,,Category,Sport,10,0.0,0.23
+fit,IN,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,IN,39,,,,,,,,,,Format,news_explained,8,4.9,1.01
+fit,IN,95,,,,,,,,,,Format,one_detail,11,8.6,1.63
+fit,IN,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,IN,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,IN,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,IN,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,IN,95,,,,,,,,,,Hook,number,19,5.0,1.04
+fit,IN,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,IN,0,,,,,,,,,,Hook,statement,10,0.0,0.23
+fit,IN,39,,,,,,,,,,Hook,superlative,3,13.0,1.86
+fit,IN,0,,,,,,,,,,Length,30 to 40 s,11,0.0,0.21
+fit,IN,134,,,,,,,,,,Length,under 30 s,23,5.8,1.19
+country,IN,547,10.2,44.3,0,4,"Film (2.5x, 12 Shorts)","one_detail (1.6x, 11 Shorts)","superlative (1.9x, 3 Shorts)","under 30 s (1.2x, 23 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (95 views),,,,,
+fit,PH,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,PH,23,,,,,,,,,,Category,Film,12,1.9,4.27
+fit,PH,0,,,,,,,,,,Category,Gaming,9,0.0,0.25
+fit,PH,0,,,,,,,,,,Category,Music,17,0.0,0.15
+fit,PH,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,PH,0,,,,,,,,,,Category,Sport,10,0.0,0.23
+fit,PH,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,PH,0,,,,,,,,,,Format,news_explained,8,0.0,0.27
+fit,PH,0,,,,,,,,,,Format,one_detail,11,0.0,0.21
+fit,PH,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,PH,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,PH,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,PH,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,PH,0,,,,,,,,,,Hook,number,19,0.0,0.14
+fit,PH,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,PH,0,,,,,,,,,,Hook,statement,10,0.0,0.23
+fit,PH,0,,,,,,,,,,Hook,superlative,3,0.0,0.5
+fit,PH,0,,,,,,,,,,Length,30 to 40 s,11,0.0,0.21
+fit,PH,0,,,,,,,,,,Length,under 30 s,23,0.0,0.12
+country,PH,281,5.2,46.3,0,1,"Film (4.3x, 12 Shorts)",,,,Why Godzilla Minus Zero is a big deal 🦖 (23 views),,,,,
+fit,ES,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,ES,0,,,,,,,,,,Category,Film,12,0.0,0.2
+fit,ES,0,,,,,,,,,,Category,Gaming,9,0.0,0.25
+fit,ES,143,,,,,,,,,,Category,Music,17,8.4,3.2
+fit,ES,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,ES,0,,,,,,,,,,Category,Sport,10,0.0,0.23
+fit,ES,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,ES,0,,,,,,,,,,Format,news_explained,8,0.0,0.27
+fit,ES,0,,,,,,,,,,Format,one_detail,11,0.0,0.21
+fit,ES,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,ES,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,ES,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,ES,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,ES,0,,,,,,,,,,Hook,number,19,0.0,0.14
+fit,ES,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,ES,0,,,,,,,,,,Hook,statement,10,0.0,0.23
+fit,ES,0,,,,,,,,,,Hook,superlative,3,0.0,0.5
+fit,ES,0,,,,,,,,,,Length,30 to 40 s,11,0.0,0.21
+fit,ES,0,,,,,,,,,,Length,under 30 s,23,0.0,0.12
+country,ES,223,4.2,55.9,0,1,"Music (3.2x, 17 Shorts)",,,,Fontaines D.C.'s first ever guest is ROSALÍA 🎻 (143 views),,,,,
+fit,CA,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,CA,0,,,,,,,,,,Category,Film,12,0.0,0.2
+fit,CA,0,,,,,,,,,,Category,Gaming,9,0.0,0.25
+fit,CA,38,,,,,,,,,,Category,Music,17,2.2,3.2
+fit,CA,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,CA,0,,,,,,,,,,Category,Sport,10,0.0,0.23
+fit,CA,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,CA,0,,,,,,,,,,Format,news_explained,8,0.0,0.27
+fit,CA,38,,,,,,,,,,Format,one_detail,11,3.5,4.57
+fit,CA,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,CA,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,CA,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,CA,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,CA,0,,,,,,,,,,Hook,number,19,0.0,0.14
+fit,CA,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,CA,38,,,,,,,,,,Hook,statement,10,3.8,4.92
+fit,CA,0,,,,,,,,,,Hook,superlative,3,0.0,0.5
+fit,CA,0,,,,,,,,,,Length,30 to 40 s,11,0.0,0.21
+fit,CA,38,,,,,,,,,,Length,under 30 s,23,1.7,2.46
+country,CA,217,4.0,40.2,0,1,"Music (3.2x, 17 Shorts)","one_detail (4.6x, 11 Shorts)","statement (4.9x, 10 Shorts)","under 30 s (2.5x, 23 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (38 views)",,,,,
+fit,ID,0,,,,,,,,,,Category,Entertainment,5,0.0,0.38
+fit,ID,0,,,,,,,,,,Category,Film,12,0.0,0.2
+fit,ID,0,,,,,,,,,,Category,Gaming,9,0.0,0.25
+fit,ID,37,,,,,,,,,,Category,Music,17,2.2,3.2
+fit,ID,0,,,,,,,,,,Category,Science,4,0.0,0.43
+fit,ID,0,,,,,,,,,,Category,Sport,10,0.0,0.23
+fit,ID,0,,,,,,,,,,Category,Tech,4,0.0,0.43
+fit,ID,0,,,,,,,,,,Format,news_explained,8,0.0,0.27
+fit,ID,0,,,,,,,,,,Format,one_detail,11,0.0,0.21
+fit,ID,0,,,,,,,,,,Format,real_reason,5,0.0,0.38
+fit,ID,0,,,,,,,,,,Format,story,2,0.0,0.6
+fit,ID,0,,,,,,,,,,Format,three_details,6,0.0,0.33
+fit,ID,0,,,,,,,,,,Format,timeline,2,0.0,0.6
+fit,ID,0,,,,,,,,,,Hook,number,19,0.0,0.14
+fit,ID,0,,,,,,,,,,Hook,question,2,0.0,0.6
+fit,ID,0,,,,,,,,,,Hook,statement,10,0.0,0.23
+fit,ID,0,,,,,,,,,,Hook,superlative,3,0.0,0.5
+fit,ID,0,,,,,,,,,,Length,30 to 40 s,11,0.0,0.21
+fit,ID,0,,,,,,,,,,Length,under 30 s,23,0.0,0.12
+country,ID,206,3.8,80.0,0,1,"Music (3.2x, 17 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
+fit,DE,0,,,,,,,,,,Category,Entertainment,5,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Film,12,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Gaming,9,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Music,17,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Science,4,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Sport,10,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Tech,4,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,news_explained,8,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,one_detail,11,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,real_reason,5,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,story,2,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,three_details,6,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,timeline,2,0.0,1.0
+fit,DE,0,,,,,,,,,,Hook,number,19,0.0,1.0
+fit,DE,0,,,,,,,,,,Hook,question,2,0.0,1.0
+fit,DE,0,,,,,,,,,,Hook,statement,10,0.0,1.0
+fit,DE,0,,,,,,,,,,Hook,superlative,3,0.0,1.0
+fit,DE,0,,,,,,,,,,Length,30 to 40 s,11,0.0,1.0
+fit,DE,0,,,,,,,,,,Length,under 30 s,23,0.0,1.0
 country,DE,190,3.5,42.2,0,0,,,,,,,,,,

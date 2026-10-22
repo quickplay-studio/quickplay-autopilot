@@ -29,6 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - name: Anything waiting?
         id: check
         # Shorts waiting for approval, evergreen spares in the reserve (decisions and evening releases), or a decision file

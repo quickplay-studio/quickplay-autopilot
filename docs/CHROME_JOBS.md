@@ -93,6 +93,12 @@ With the studio account make free API keys at https://cloud.cerebras.ai/ and htt
 the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 
 ## Standing jobs (every run)
+- First, the identity guard (Charlie, 22 October: nothing outside the studio Google account, ever): open
+  https://myaccount.google.com/ in the run's own tab and read the account shown. It must be studiosocialmedia123@gmail.com;
+  any other account (or none) means the wrong Chrome profile: stop every browser step, touch nothing, and tell Charlie in
+  one line which account Chrome is signed in as. On each site the signed-in name must be the studio's (Content Rewards
+  "Studio SocialMedia", Vyro the studio avatar, GitHub quickplay-studio); a different name on any site stops the run the
+  same way. If the GitHub issue "🔒 Security: a sign-in outside the studio account" is open, send Charlie its text first.
 - If a GitHub issue titled "Clips: the Content Rewards login has expired" or "... the Vyro login has expired" is open,
   export that site's cookies again into its secret and close the issue.
 - status/scout.md is refreshed by GitHub every morning (09:35 UK): join any new yes row as above, and add it to
@@ -112,3 +118,6 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   WHOP_COOKIES and VYRO_COOKIES exist.
 - 22 October 20:10 UK: cookies in; submit.py rewritten to the real forms; GitHub's malicious-workflow hold found and fixed (named secrets);
   gaming and irl channels signed in; Kevin Langue joined on Vyro; three Vyro and two Content Rewards campaigns judged and skipped.
+- 22 October 20:40 UK: identity guard added (pipeline/identity.py, audit.yml every 6 hours, a gate step in every posting workflow, the
+  Chrome-profile check above); the campaign-site sign-ins moved out of the clips workflow into tokens/ (logins.yml) after GitHub held
+  every clips run that read the cookie secrets.

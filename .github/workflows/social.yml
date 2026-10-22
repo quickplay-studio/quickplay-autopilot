@@ -35,6 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
       - run: pip install -q requests cryptography

@@ -35,6 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: |
@@ -59,7 +61,7 @@ jobs:
           FB_CLIPS_PAGE_ID: ${{ secrets.FB_CLIPS_PAGE_ID }}
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
-          IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}        # one line per clips channel (GitHub refuses a workflow that passes toJSON(secrets), 22 October)
+          IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}        # one line per clips channel: its Instagram and Facebook keys, named here one by one
           IG_GAMING_USER_ID: ${{ secrets.IG_GAMING_USER_ID }}
           FB_GAMING_PAGE_TOKEN: ${{ secrets.FB_GAMING_PAGE_TOKEN }}
           FB_GAMING_PAGE_ID: ${{ secrets.FB_GAMING_PAGE_ID }}

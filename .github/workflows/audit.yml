@@ -1,0 +1,65 @@
+name: audit
+# The identity guard (pipeline/identity.py): every sign-in the automation holds is resolved live and must belong to the
+# studio Google account's own Quickplay channels, pages and profiles; every secret a workflow reads must be on the
+# allowlist (config.json "accounts"); the saved campaign-site sign-ins may hold cookies for their own sites only.
+# A mismatch opens the issue "Security: a sign-in outside the studio account" and every posting workflow stops at its
+# first step (identity.py gate) until the next clean audit. Runs every 6 hours, on Run workflow, or on a push of
+# requests/audit.txt.
+on:
+  schedule:
+    - cron: '20 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['requests/audit.txt']
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -q requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
+      - name: Audit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          IG_CLIPS_TOKEN: ${{ secrets.IG_CLIPS_TOKEN }}
+          IG_CLIPS_USER_ID: ${{ secrets.IG_CLIPS_USER_ID }}
+          FB_CLIPS_PAGE_TOKEN: ${{ secrets.FB_CLIPS_PAGE_TOKEN }}
+          FB_CLIPS_PAGE_ID: ${{ secrets.FB_CLIPS_PAGE_ID }}
+          IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}
+          IG_GAMING_USER_ID: ${{ secrets.IG_GAMING_USER_ID }}
+          FB_GAMING_PAGE_TOKEN: ${{ secrets.FB_GAMING_PAGE_TOKEN }}
+          FB_GAMING_PAGE_ID: ${{ secrets.FB_GAMING_PAGE_ID }}
+          IG_IRL_TOKEN: ${{ secrets.IG_IRL_TOKEN }}
+          IG_IRL_USER_ID: ${{ secrets.IG_IRL_USER_ID }}
+          FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
+          FB_IRL_PAGE_ID: ${{ secrets.FB_IRL_PAGE_ID }}
+        run: python pipeline/identity.py audit 2>&1 | tee status/identity_log.txt || true
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add status/identity.json status/identity_log.txt 2>/dev/null || true
+          git commit -q -m "Identity audit $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

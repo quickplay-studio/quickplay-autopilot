@@ -29,6 +29,12 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
 - docs/CHROME_JOBS.md: the jobs the Mac task does in Charlie's Chrome (cookies, joins, account keys); a cloud session
   adds a job there (or fires the task with the job text) instead of trying to use a browser itself.
 - tests/: offline tests with stubbed HTTP. Run them all before every push.
+- The identity guard (Charlie, 22 October): pipeline/identity.py and audit.yml (every 6 hours) resolve every sign-in the
+  automation holds and check it is the studio Google account's own Quickplay channel, page or profile (config.json
+  "accounts": ids, the Quickplay name rule, the secrets allowlist, own-site cookies only in tokens/login_*.enc). A mismatch
+  opens the issue "🔒 Security: a sign-in outside the studio account" and every posting workflow stops at its first step
+  (identity.py gate) until the next clean audit. A new secret is added to the allowlist by hand, on purpose. The Mac
+  Chrome run checks the profile's Google account first (docs/CHROME_JOBS.md).
 
 ## Channel rules (non-negotiable)
 Anonymous, family-friendly, UK English ("Tuesday 20 October", colour, favourite). Never politics, crime, health claims,

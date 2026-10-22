@@ -19,6 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - name: Signed in?
         id: check
         run: if [ -f tokens/youtube.enc ]; then echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi

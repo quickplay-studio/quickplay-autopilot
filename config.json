@@ -30,14 +30,22 @@
  "youtube_upload_units": 100,
  "youtube_quota_margin": 1000,
  "youtube_quota_note": "quota.py keeps optional extras (comments, playlists, title swaps, replies, angle searches) inside the daily YouTube allowance so uploads always fit; set youtube_upload_units to what the Google Cloud console shows for an upload.",
- "languages": {"pt": {"channel": "Quickplay Daily Português", "voice": "default"}},
+ "languages": {
+  "pt": {
+   "channel": "Quickplay Daily Português",
+   "voice": "default"
+  }
+ },
  "languages_note": "The Spanish channel is dropped (Charlie, 21 October). Language channels (Charlie, 19 October): Chatterbox Multilingual's own voice (he picked default over George and Emma); each channel's YouTube sign-in is tokens/youtube_<lang>.enc, made with the social workflow (channel es or pt).",
  "approval_note": "all: every Short waits for Charlie's OK; flagged: only Shorts with a reason to look wait (the end goal); none: everything uploads straight away.",
  "note": "Three writer runs a day (see runs): 20:50 writes the first part of tomorrow, 06:50 and 12:50 write from the day's trends. daily_limit is Shorts made per day, slots_per_day how many go public a day (all 24 hours from 07:30, every 36 minutes, until learned slots take over), upload_limit_24h how many uploads GitHub attempts in 24 hours. The channel has YouTube's Advanced features; if YouTube refuses an upload for its limit, the Short waits and the next run retries. The YouTube Data API allows about 100 uploads a day.",
  "background": {
   "enabled": true,
   "reuse_days": 7,
-  "clip_seconds": [8, 15],
+  "clip_seconds": [
+   8,
+   15
+  ],
   "min_px": 720,
   "blur": 13,
   "target_luma": 0.27,
@@ -93,5 +101,58 @@
  "facebook_min_gap_minutes": 30,
  "crosspost_max_age_hours": 48,
  "crosspost_youtube_line": "New every day on YouTube: Quickplay Daily",
- "facebook_note": "Facebook Page Reels (GitHub secrets FB_PAGE_TOKEN and FB_PAGE_ID): every Short once public on YouTube, picks first, ramped like Instagram (Meta allows 30 API Reels per Page per 24 hours)."
+ "facebook_note": "Facebook Page Reels (GitHub secrets FB_PAGE_TOKEN and FB_PAGE_ID): every Short once public on YouTube, picks first, ramped like Instagram (Meta allows 30 API Reels per Page per 24 hours).",
+ "accounts": {
+  "note": "The identity guard (pipeline/identity.py, audit.yml): everything the automation signs in to must be the studio Google account or an account hanging off it, all named Quickplay. The audit checks every sign-in live; a mismatch opens a security issue and stops every posting workflow (identity.py gate).",
+  "google": "studiosocialmedia123@gmail.com",
+  "name_prefix": "Quickplay",
+  "youtube": {
+   "UC-75vkMtOxgFFkXwBNfBOeg": "Quickplay Daily"
+  },
+  "instagram": [
+   "quickplaydaily"
+  ],
+  "facebook": [
+   "Quickplay Daily"
+  ],
+  "tiktok": [],
+  "contentrewards": "Studio SocialMedia",
+  "secrets": [
+   "CEREBRAS_API_KEY",
+   "CLAUDE_CODE_OAUTH_TOKEN",
+   "FB_CLIPS_PAGE_ID",
+   "FB_CLIPS_PAGE_TOKEN",
+   "FB_GAMING_PAGE_ID",
+   "FB_GAMING_PAGE_TOKEN",
+   "FB_IRL_PAGE_ID",
+   "FB_IRL_PAGE_TOKEN",
+   "FB_PAGE_ID",
+   "FB_PAGE_TOKEN",
+   "FOOTBALL_DATA_TOKEN",
+   "GEMINI_API_KEY",
+   "GROQ_API_KEY",
+   "IG_CLIPS_TOKEN",
+   "IG_CLIPS_USER_ID",
+   "IG_GAMING_TOKEN",
+   "IG_GAMING_USER_ID",
+   "IG_IRL_TOKEN",
+   "IG_IRL_USER_ID",
+   "IG_TOKEN",
+   "IG_USER_ID",
+   "MISTRAL_API_KEY",
+   "MUSIC_KEY",
+   "OPENROUTER_API_KEY",
+   "PEXELS_API_KEY",
+   "PIXABAY_API_KEY",
+   "SOCIAL_KEY",
+   "TIKTOK_CLIENT_KEY",
+   "TIKTOK_CLIENT_SECRET",
+   "VYRO_COOKIES",
+   "WHOP_COOKIES",
+   "YT_CLIENT_ID",
+   "YT_CLIENT_SECRET",
+   "YT_REFRESH_TOKEN"
+  ],
+  "secrets_note": "Every secret a workflow may read. A new one is added here on purpose, by hand; the audit flags any other."
+ }
 }

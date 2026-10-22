@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T15:30:00Z",
  "rendered": "2026-10-21T09:55:30.467545+00:00",
- "title": "The day Apollo 13 became a rescue mission 🚀",
+ "title": "How Apollo 13 astronauts survived their spacecraft disaster 🤯",
  "background_notes": [
   "picked pixabay 3 (+2 spares)"
  ],
@@ -81,7 +81,14 @@
  },
  "engage": {
   "comment": "UgxnASC_g0rsAxGBYWx4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "The day Apollo 13 became a rescue mission 🚀",
+   "to": "How Apollo 13 astronauts survived their spacecraft disaster 🤯",
+   "at": "2026-10-22T16:17+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.4
+  }
  },
  "facebook": {
   "video": "962163393168523",

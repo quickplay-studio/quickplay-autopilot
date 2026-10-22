@@ -472,6 +472,51 @@
    "joined": "2026-10-21",
    "active": false,
    "why_off": "Brez ended; the weekly pool needs 250,000 views to qualify and footage is YouTube-only; Henry Cejudo episode is YouTube-only footage. Off."
+  },
+  "kevin-langue-ghost": {
+   "platform": "Vyro",
+   "joined": "2026-10-22",
+   "min_views": 5000,
+   "max_payout": 1000,
+   "submit": {
+    "kind": "link_form",
+    "where": "https://app.vyro.com/campaigns/add-clips, Submit post, as soon as it is public"
+   },
+   "name": "Kevin Langue: 4 Imposters vs 1 Real Ghost Hunter",
+   "card": "4 Imposters vs 1 Real Ghost Hunter",
+   "url": "https://app.vyro.com/campaigns?c=5-guys-face-their-crush-4YWRQEx1",
+   "active": true,
+   "per_day": 3,
+   "pay_per_1k": 2.0,
+   "subject": "Kevin Langue",
+   "source": {
+    "kind": "frameio",
+    "url": "https://f.io/58zYKG1t",
+    "label": "Kevin Langue's video 4 Imposters vs 1 Real Ghost Hunter"
+   },
+   "rules": {
+    "focus": "The best moments of Kevin Langue's game show: the reveals, the lies caught out, the funniest answers, the reactions. Entertaining first; never misrepresent the video or Kevin Langue.",
+    "on_screen": "On-screen text must match what happens; no made-up claims.",
+    "hashtags": [
+     "#kevinlangue",
+     "#kevinlanguepartner"
+    ],
+    "description": "",
+    "avoid": [
+     "any logo, hashtag, watermark or footage not from this campaign",
+     "anything that misrepresents the video or the people in it",
+     "collab posts or tagged accounts",
+     "profanity or anything not brand safe"
+    ],
+    "min_s": 20,
+    "max_s": 55,
+    "language": "English"
+   },
+   "ends": "2026-10-30",
+   "channels": [
+    "clips",
+    "irl"
+   ]
   }
  },
  "daily_clips": 10,

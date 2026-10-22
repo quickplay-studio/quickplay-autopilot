@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 14:50): 8 of 1,000 subscribers · 5,448 of 10 million Shorts views in 90 days · 3,275 views in the last 24 hours (about 111,051 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 15:42): 8 of 1,000 subscribers · 5,460 of 10 million Shorts views in 90 days · 3,061 views in the last 24 hours (about 111,050 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 14:37 (UK): 1 scheduled, 101 public, 32 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Thu 22 Oct | 21 public, 1 scheduled | 18 | 5 | ⏳ 21 of 40 so far, 1 more scheduled |
+| Thu 22 Oct | 22 public | 18 | 6 | ⏳ 22 of 40 so far |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -55,10 +55,20 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 
+## In the queue
+
+- **QD-117** Ronnie O'Sullivan stunned by qualifier 😲 (rendering next)
+- **QD-118** Julia Stiles honours Heath Ledger on DWTS 🎭 (rendering next)
+- **QD-119** Best-selling single of all time: the truth 🎶 (rendering next)
+- **QD-120** Moon's origin: giant impact 🌕 (rendering next)
+- **QD-121** How the iPhone was kept a total secret 📱 (rendering next)
+- **QD-122** Leicester City's historic Premier League win 🏆 (rendering next)
+- **QD-123** Queen's legendary Live Aid performance 🎤 (rendering next)
+
 ## On the channel (latest first)
 
 ### Thu 22 Oct 15:00 · American football joins the 2028 Olympics 🏈
-scheduled · 41 s · music: risen · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
+private · 41 s · music: risen · on Facebook · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
 
 ![QD-116](QD-116.jpg)
 

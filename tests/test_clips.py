@@ -161,9 +161,13 @@ print("11 comment questions ok")
 # 12. several YouTube channels per campaign: each channel has its own number, ceiling and moments
 C.CFG["campaigns"] = json.loads(pathlib.Path(REPO_DIR + "/clips/campaigns.json").read_text())["campaigns"]
 C.CFG["campaigns"]["tdr-mitch"]["channels"] = ["clips", "gaming"]
+C.CFG["campaigns"]["tdr-jenny"].pop("channels", None)
 assert C.campaign_channels("tdr-mitch") == ["clips", "gaming"] and C.channel_of("tdr-mitch") == "clips" and C.campaign_channels("tdr-jenny") == ["clips"]
-assert C.channels()["gaming"] == ["tdr-mitch"] and "tdr-jenny" in C.channels()["clips"]
-assert C.allocate(5, None, "gaming") == {"tdr-mitch": 5} and sum(C.allocate(12, None, "clips").values()) == 12
+C.ROOT = pathlib.Path(SCRATCH) / "root2"; (C.ROOT / "tokens").mkdir(parents=True, exist_ok=True)
+for ch in ("clips", "gaming"): (C.ROOT / "tokens" / f"youtube_{ch}.enc").write_text("x")
+assert "tdr-mitch" in C.channels()["gaming"] and "tdr-jenny" in C.channels()["clips"] and "tdr-jenny" not in C.channels()["gaming"]
+gam = C.allocate(5, None, "gaming"); assert sum(gam.values()) == 5 and "tdr-jenny" not in gam and "speed-expedia" not in gam, gam
+assert sum(C.allocate(12, None, "clips").values()) == 12
 C.PLANS = pathlib.Path(SCRATCH) / "plans2"; C.PLANS.mkdir(exist_ok=True)
 iso, _ = C.batch_time()
 (C.PLANS / "tdr-mitch.json").write_text(json.dumps({"moments": [{"id": "tdr-mitch-01", "publish_at": iso, "channel": "gaming"}, {"id": "tdr-mitch-02", "publish_at": iso},

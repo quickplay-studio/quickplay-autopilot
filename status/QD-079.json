@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T13:00:00Z",
  "rendered": "2026-10-21T09:39:34.449336+00:00",
- "title": "How often do the Orionids meteor showers occur? 🌠",
+ "title": "When is the peak of the Orionids meteor shower? ✨",
  "background_notes": [
   "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
   "picked nasa 1, pixabay 1 (+2 spares)"
@@ -101,7 +101,14 @@
  },
  "engage": {
   "comment": "UgzikYx5e6J3BYPY5dV4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "How often do the Orionids meteor showers occur? 🌠",
+   "to": "When is the peak of the Orionids meteor shower? ✨",
+   "at": "2026-10-22T13:30+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.9
+  }
  },
  "instagram": {
   "media": "18027780839862694",

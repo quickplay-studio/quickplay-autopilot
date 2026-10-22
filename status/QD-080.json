@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T13:30:00Z",
  "rendered": "2026-10-21T09:39:46.002783+00:00",
- "title": "Who invented the World Wide Web? 🌐",
+ "title": "The man who created the internet 💻",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -105,7 +105,14 @@
  },
  "engage": {
   "comment": "Ugxa8l-PTZFw8nWLBjB4AaABAg",
-  "playlist": "Quickplay Daily: Tech"
+  "playlist": "Quickplay Daily: Tech",
+  "title": {
+   "swapped_from": "Who invented the World Wide Web? 🌐",
+   "to": "The man who created the internet 💻",
+   "at": "2026-10-22T13:30+00:00",
+   "views_an_hour": 0.2,
+   "typical": 1.9
+  }
  },
  "facebook": {
   "video": "1560493882780779",

@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: clips
+  group: logins
   cancel-in-progress: false
 
 jobs:

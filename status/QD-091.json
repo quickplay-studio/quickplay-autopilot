@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T22:00:00Z",
  "rendered": "2026-10-21T14:00:01.963920+00:00",
- "title": "Japan's Phobos rover Idefix's two hour drill 🚀",
+ "title": "Why the Phobos rover only has two hours 🛰️",
  "background_notes": [
   "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
   "picked nasa 1 (+0 spares)"
@@ -100,6 +100,13 @@
  "social_release": "social-QD-091",
  "engage": {
   "comment": "UgysN_sk2q0t3tKu_WZ4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "Japan's Phobos rover Idefix's two hour drill 🚀",
+   "to": "Why the Phobos rover only has two hours 🛰️",
+   "at": "2026-10-22T22:14+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.3
+  }
  }
 }

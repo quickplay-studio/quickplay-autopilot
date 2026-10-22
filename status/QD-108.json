@@ -1,0 +1,96 @@
+{
+ "id": "QD-108",
+ "board": "boards/queue/QD-108.json",
+ "mode": "schedule",
+ "slot": "2026-10-22T09:00:00Z",
+ "rendered": "2026-10-22T07:47:47.879896+00:00",
+ "title": "Morgan Wallen and Ella Langley duet details 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "back-in-the-saddle",
+ "social_music": "backroads-country-music-381194",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1019",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 24.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.4
+ },
+ "timeline": [
+  [
+   0.06,
+   3.74,
+   "none",
+   0
+  ],
+  [
+   3.74,
+   8.51,
+   "date",
+   1
+  ],
+  [
+   8.51,
+   13.75,
+   "none",
+   2
+  ],
+  [
+   13.75,
+   18.93,
+   "title",
+   1
+  ],
+  [
+   18.93,
+   21.35,
+   "none",
+   1
+  ],
+  [
+   21.35,
+   24.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "136709",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 12.43
+  },
+  {
+   "p": "pixabay",
+   "id": "1651",
+   "q": "acoustic guitar performance",
+   "t0": 11.83,
+   "t1": 24.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-22T07:56:51Z",
+ "video": "aDMC8Av6fU4",
+ "url": "https://youtube.com/shorts/aDMC8Av6fU4",
+ "publish_at": "2026-10-22T09:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-22T09:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-108"
+}

@@ -8,9 +8,24 @@ must do), commits as "Quickplay Studio" and pushes. Rules: CLAUDE.md (studio acc
 only in GitHub secrets, family friendly, UK English, no em or en dashes). New jobs go at the top of the list, newest
 first; the task text of a fired run counts as an extra job.
 
+## Who does what (learnt 22 October)
+Claude in Chrome acts inside web pages only, and Claude never handles credentials. So in every job:
+- Charlie's hands: clicking an extension's toolbar icon or popup (the cookie export), pasting any secret, key, token or
+  cookie text into GitHub (https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new), typing a
+  password or code, creating an account (YouTube channels, Instagram, Facebook, Cerebras, Mistral), and clicking Allow on
+  an OAuth or Connect screen. The run opens the page for him, asks in one message with the exact steps and links, and waits.
+- Claude's hands: everything else on a page (joining campaigns, reading rules, forms without credentials), pushing
+  requests (requests/clips.txt), reading the run results, fixing pipeline/submit.py, editing clips/campaigns.json, the
+  social workflow runs, and this file.
+- The browser tools in a scheduled run are mcp__claude-in-chrome__* (load them with ToolSearch; if only
+  enable__mcp__claude-in-chrome exists, call it first). They work whenever Chrome is open on the Mac with the extension
+  signed in to Charlie's account; a window resize dropped the connection once, so leave the window size alone.
+
 ## Jobs
 
-### open: Saved logins for the submissions (22 October)
+### blocked: Saved logins for the submissions (22 October)
+Waiting for Charlie (asked 22 October 19:45 UK): install the extension, Export on contentrewards.com and app.vyro.com,
+paste the two files as WHOP_COOKIES and VYRO_COOKIES. Content Rewards is signed in as Studio SocialMedia; Vyro unchecked.
 Install the Chrome extension "Get cookies.txt LOCALLY" if missing (https://chromewebstore.google.com/search/get%20cookies.txt%20locally).
 On https://contentrewards.com/ signed in as the studio account, export the cookies (extension icon, Export, current site),
 read the downloaded file and add its text as the GitHub secret WHOP_COOKIES at
@@ -18,6 +33,7 @@ https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions
 https://app.vyro.com/campaigns into VYRO_COOKIES. If a site asks to sign in, ask Charlie to sign in, then continue.
 
 ### open: Prove the automatic submissions (22 October)
+After the saved logins exist. The 22 October 18:01 UK batch: 0 of 23 submitted, no cookies.
 Set requests/clips.txt to "submit probe", commit and push, wait for the clips workflow run, read status/clips_log.txt and
 status/submit_*.png. If a site's form differs from what pipeline/submit.py expects (submit_cr and submit_vyro: the Submit
 clip or Submit post button, the platform choice, the link box, the confirm button, the answer text), fix those steps,
@@ -25,6 +41,7 @@ run python tests/test_submit.py, commit and push, then set requests/clips.txt to
 every due row of clips/submit.csv submitted.
 
 ### open: Join the campaigns the scout ranks (22 October)
+After the saved logins exist (the scout needs the Content Rewards cookies; status/scout.md does not exist yet).
 Set requests/clips.txt to "scout", commit and push, wait for the run, read status/scout.md. Join every campaign marked yes
 on Content Rewards (Join or Apply on its page) and the fitting ones at https://app.vyro.com/campaigns (clipping not UGC,
 YouTube Shorts allowed, footage provided, family friendly, open). For each joined campaign read its rules page and add an
@@ -36,6 +53,7 @@ Shorts; skip anything political, adult or not family friendly. List for Charlie 
 message or a screen recording.
 
 ### open: Instagram and Facebook for Quickplay Clips (22 October)
+Charlie asked 22 October 19:45 UK to create the account and the Page; the secrets are his to paste too.
 Ask Charlie to create the Instagram account quickplayclips (Creator type) and the Facebook Page "Quickplay Clips" with
 the studio email and to link the Instagram account to the Page; wait for his reply. Then in
 https://developers.facebook.com/tools/explorer/ (the Meta app the main channel uses) make a long-lived Page access token
@@ -44,6 +62,7 @@ IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN and FB_CLIPS_PAGE_ID. Connect the Instagra
 https://contentrewards.com/c/settings and https://app.vyro.com/settings.
 
 ### open: Two more YouTube channels for the niches (22 October)
+Charlie asked 22 October 19:45 UK to create them. The run opens the connect_url for each; Charlie clicks Allow.
 Charlie creates them himself under the studio Google account (https://www.youtube.com/channel_switcher, Create a channel):
 "Quickplay Gaming Clips" (the word Gaming in the title) and "Quickplay IRL Clips" (the word IRL in the title); then
 https://www.youtube.com/features on each for the phone verification. Ask him for that, wait. Then for each new channel:
@@ -55,7 +74,8 @@ https://app.vyro.com/settings (one Content Rewards account and one Vyro account 
 account, the platforms ban linked accounts). The campaigns already list their channels in clips/campaigns.json
 ("channels"); the next 13:00 UK run fills each channel with different moments of the same footage.
 
-### open: Two more free model keys (22 October)
+### blocked: Two more free model keys (22 October)
+Both need an account and a key pasted, so both are Charlie's (asked 22 October 19:45 UK, links given).
 With the studio account make free API keys at https://cloud.cerebras.ai/ and https://console.mistral.ai/api-keys and add
 the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 
@@ -74,3 +94,6 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 - Finish by appending one dated line per job to the end of this file's log below, committing and pushing.
 
 ## Log
+- 22 October 19:45 UK: first Mac run. Chrome's connection dropped after a window resize; the cookie export, every secret and every account
+  are Charlie's hands (see Who does what), so one message asked him for all of them with links. Nothing on GitHub can submit or scout until
+  WHOP_COOKIES and VYRO_COOKIES exist.

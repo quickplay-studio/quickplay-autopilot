@@ -50,13 +50,14 @@ page_ok.write_text("""<html><body><h1>$8,000 Speed x Expedia</h1><p>Clips must b
 <input id="u" type="url" placeholder="https://www.tiktok.com/@username/video...">
 <div><span>Posted from one of your linked accounts</span><p>We match the clip's author against the social accounts connected to your profile.</p></div>
 <div><span>Not already submitted to any campaign</span><p>A clip can only earn once, in one campaign.</p></div>
-<div id="w"><span>Posted within the last 30 minutes</span><p id="wp">This campaign only accepts freshly posted clips, so views are counted from zero.</p></div>
+<div id="checks"><div><span>Not already submitted to any campaign</span><p>A clip can only earn once, in one campaign.</p></div>
+<div id="w"><span>Posted within the last 30 minutes</span><p id="wp">This campaign only accepts freshly posted clips, so views are counted from zero.</p></div></div>
 <label style="position:relative;display:block"><input id="c" type="checkbox" style="position:absolute;opacity:0;width:1px;height:1px"><span>I've read the requirements and accept that non-compliant clips may be auto-rejected.</span></label>
 <button onclick="document.getElementById('d').style.display='none'">Cancel</button><button id="s" disabled onclick="go()">Submit clip</button></div>
 <script>document.getElementById('c').addEventListener('change',function(){document.getElementById('s').disabled=!this.checked});
 function go(){var u=document.getElementById('u').value;if(!document.getElementById('c').checked)return;
  if(u.indexOf('old')>=0){document.getElementById('wp').textContent='Posts have to be submitted within 30 minutes of going live, and this one is past that window.';
-   var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('w').appendChild(i);}
+   var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('checks').appendChild(i);}
  else if(u.indexOf('youtube.com')>=0){document.getElementById('d').style.display='none';}
  else {document.getElementById('wp').textContent='That link is invalid for this campaign.';var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('w').appendChild(i);}}</script></body></html>""")
 page_vyro = SCRATCH / "vyro.html"

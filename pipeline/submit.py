@@ -282,15 +282,23 @@ def tick(page, pattern=None):
     return bool(boxes) and checked(boxes[0])
 
 
+CR_STATIC = re.compile(r"posted from one of your linked accounts|we match the clip's author[^.]*\.|not already submitted to any campaign|"
+                       r"a clip can only earn once[^.]*\.[^.]*\.|posted within the last 30 minutes|this campaign only accepts freshly posted clips[^.]*\.|"
+                       r"submit clip link|post a clip link|i've read the requirements[^.]*\.", re.I)
+
+
 def failed_check(page):
-    """Content Rewards marks the check that failed with a 'Failed' icon; the sentence next to it is the reason."""
+    """Content Rewards marks the check that failed with a 'Failed' icon; the sentence beside it is the reason. The
+    dialog's standing labels ('Not already submitted to any campaign' and the rest) are removed first, so a refused
+    30-minute window is never read as a duplicate."""
     try:
         d = dialog(page)
         img = d.locator("img[alt='Failed'], [aria-label='Failed']")
         if not img.count() or not img.first.is_visible(): return None
         for k in range(1, 6):
             txt = re.sub(r"\s+", " ", img.first.locator(f"xpath=ancestor::*[{k}]").inner_text()).strip()
-            if len(txt) > 40: return txt[:200]
+            reason = CR_STATIC.sub(" ", txt); reason = re.sub(r"\s+", " ", reason).strip(" .")
+            if len(reason) > 20: return reason[:200]
         return "a check failed"
     except Exception: return None
 

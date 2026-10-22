@@ -219,7 +219,8 @@
    "url": "https://youtube.com/shorts/DDwJBVbFYo8",
    "uploaded": "2026-10-22T12:21+00:00",
    "publish_at": "2026-10-22T17:00:00Z",
-   "mode": "batch"
+   "mode": "batch",
+   "pulled": "not brand safe"
   },
   {
    "id": "tdr-flamingo-11",
@@ -248,7 +249,8 @@
    "url": "https://youtube.com/shorts/j3akqbht_qA",
    "uploaded": "2026-10-22T12:21+00:00",
    "publish_at": "2026-10-22T17:00:00Z",
-   "mode": "batch"
+   "mode": "batch",
+   "pulled": "not brand safe"
   },
   {
    "id": "tdr-flamingo-12",
@@ -284,12 +286,28 @@
    "end": 1875.4,
    "hook": "GENERATIONAL TRAUMA WITH HEATHER",
    "label": "Final Challenge",
-   "title": "Flamingo Watches The Finale",
+   "title": "Generational trauma with heather | Flamingo",
    "why": "Flamingo rants from the sidelines about his multi-game vendetta against Heather during the final challenge.",
    "planned": "2026-10-22T12:21+00:00",
    "model": "gemini-3.7-flash",
    "peak": 1853.0,
-   "question": "Were you rooting for Heather or Gwen to win?"
+   "question": "Were you rooting for Heather or Gwen to win?",
+   "title_planned": "Flamingo Watches The Finale",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T14:18+00:00",
+   "file": "tdr-flamingo-13.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-13.mp4",
+   "video": "SQgxLVbV83w",
+   "url": "https://youtube.com/shorts/SQgxLVbV83w",
+   "uploaded": "2026-10-22T14:18+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   }
  ]
 }

@@ -145,15 +145,32 @@
   {
    "id": "tdr-mitch-07",
    "start": 1014.7,
-   "end": 1048.4,
+   "end": 1041.94,
    "hook": "I THINK I'M GETTING ROBBED",
    "label": "",
-   "title": "Mitch Gaming Calls Out the Final Teaming",
+   "title": "I think i'm getting robbed | Mitch Gaming",
    "why": "Mitch panics about being betrayed and furiously exposes the players teaming up to vote him off.",
    "planned": "2026-10-21T11:01+00:00",
    "model": "gemini-flash-latest",
    "peak": 1037.0,
-   "question": "Were they teaming against Mitch in the final four?"
+   "question": "Were they teaming against Mitch in the final four?",
+   "end_planned": 1048.4,
+   "title_planned": "Mitch Gaming Calls Out the Final Teaming",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "short",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T14:18+00:00",
+   "file": "tdr-mitch-07.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-07.mp4",
+   "video": "SBT4hv7X8ls",
+   "url": "https://youtube.com/shorts/SBT4hv7X8ls",
+   "uploaded": "2026-10-22T14:18+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-08",

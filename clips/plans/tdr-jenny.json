@@ -181,7 +181,22 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 2392.0,
-   "question": "Which elimination was the most shocking to you?"
+   "question": "Which elimination was the most shocking to you?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-22T14:18+00:00",
+   "file": "tdr-jenny-08.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-08.mp4",
+   "video": "n05qkUrbWqo",
+   "url": "https://youtube.com/shorts/n05qkUrbWqo",
+   "uploaded": "2026-10-22T14:18+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   }
  ]
 }

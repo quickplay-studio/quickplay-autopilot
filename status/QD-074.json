@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T09:30:00Z",
  "rendered": "2026-10-21T07:40:32.822961+00:00",
- "title": "K/DA returns with a brand new line-up 🎶",
+ "title": "Why Madison Beer is not in K/DA comeback 🎤",
  "background_notes": [
   "picked pixabay 2 (+1 spares)"
  ],
@@ -109,7 +109,14 @@
  },
  "engage": {
   "comment": "Ugz551gUR3U6wQDxlkN4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "K/DA returns with a brand new line-up 🎶",
+   "to": "Why Madison Beer is not in K/DA comeback 🎤",
+   "at": "2026-10-22T10:20+00:00",
+   "views_an_hour": 0.6,
+   "typical": 2.4
+  }
  },
  "instagram": {
   "media": "17873675751638783",

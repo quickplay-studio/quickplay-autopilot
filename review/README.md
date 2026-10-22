@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Thu 22 Oct, 18:37): 8 of 1,000 subscribers · 5,510 of 10 million Shorts views in 90 days · 2,724 views in the last 24 hours (about 111,050 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Thu 22 Oct, 19:44): 8 of 1,000 subscribers · 5,529 of 10 million Shorts views in 90 days · 2,665 views in the last 24 hours (about 111,050 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 17:31 (UK): 5 scheduled, 103 public, 33 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 16:10).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 19:45).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Fri 23 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 40 scheduled |
-| Thu 22 Oct | 26 public, 3 scheduled | 18 | 9 | ⏳ 26 of 40 so far, 3 more scheduled |
+| Thu 22 Oct | 27 public, 2 scheduled | 18 | 11 | ⏳ 27 of 40 so far, 2 more scheduled |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
@@ -69,12 +69,12 @@ scheduled · 36 s · music: defying-gravity · [script](../boards/done/QD-122.js
 ![QD-122](QD-122.jpg)
 
 ### Thu 22 Oct 19:00 · How the iPhone was kept a total secret 📱
-scheduled · 24 s · music: ego-chall · [script](../boards/done/QD-121.json) · [YouTube](https://youtube.com/shorts/5O4upSca3ZA)
+private · 24 s · music: ego-chall · on Facebook · [script](../boards/done/QD-121.json) · [YouTube](https://youtube.com/shorts/5O4upSca3ZA)
 
 ![QD-121](QD-121.jpg)
 
 ### Thu 22 Oct 18:30 · Moon's origin: giant impact 🌕
-private · 35 s · music: majestic-12 · [script](../boards/done/QD-120.json) · [YouTube](https://youtube.com/shorts/SKvuDC9-ngk)
+private · 35 s · music: majestic-12 · on Facebook · [script](../boards/done/QD-120.json) · [YouTube](https://youtube.com/shorts/SKvuDC9-ngk)
 
 ![QD-120](QD-120.jpg)
 

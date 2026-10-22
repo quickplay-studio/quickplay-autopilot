@@ -1,17 +1,13 @@
-speed-expedia: page: $1,729 remaining; Skip to content Discover Solutions Resources Sign in Create Account Back Reach $8,000 ISho
-tdr-flamingo-10: pulled before publishing (not brand safe)
-tdr-flamingo-11: pulled before publishing (not brand safe)
-today's shares: {"tdr-jenny": 1, "tdr-flamingo": 1, "tdr-mitch": 1}
-  faces: 17 frames, groups (np.float64(0.3), np.float64(0.3)):2, (np.float64(0.1), np.float64(0.3)):1, (np.float64(0.2), np.float64(0.2)):2, (np.float64(0.6), np.float64(0.2)):1, (np.float64(0.5), np.float64(0.3)):1, best change -1.0
-tdr-mitch-07: short arm, 27s instead of 34s
-tdr-mitch-07: full layout, person at y 0.50, hook at 120, captions bottom
-tdr-mitch-07: made (27 s) I think i'm getting robbed | Mitch Gaming
-tdr-mitch-07: uploaded https://youtube.com/shorts/SBT4hv7X8ls (batch)
-  faces: 18 frames, groups (np.float64(0.1), np.float64(0.1)):3, (np.float64(0.4), np.float64(0.3)):1, best change -1.0
-tdr-flamingo-13: full layout, person at y 0.50, hook at 120, captions bottom
-tdr-flamingo-13: made (36 s) Generational trauma with heather | Flamingo
-tdr-flamingo-13: uploaded https://youtube.com/shorts/SQgxLVbV83w (batch)
-tdr-jenny-08: made (33 s) Jenny Hoyos Reacts to a Shocking Betrayal
-tdr-jenny-08: uploaded https://youtube.com/shorts/n05qkUrbWqo (batch)
-stats: 48 clips
+speed-expedia: page: $1,728 remaining; Skip to content We use cookies and similar tools to measure how the product is used. You c
+tdr-flamingo-13: pulled before publishing (not brand safe)
+today's shares: {"tdr-jenny": 1}
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+tdr-jenny: 0 of 3 moments planned (gemini-3.5-flash-lite), 8 in all; dropped {"bad time": 0, "length": 0, "overlap": 3, "no hook": 0}; first: {"start": 2372, "end": 2404, "hook": "WAIT, DID THEY VOTE OUT SADIE?", "label": "Sadie", "title": "Jenny Hoyos plays Total Drama Roblox Streamer Tournament", "peak": 2392, "question": "Why did they vo
+tdr-jenny: 1 of 4 moments planned (gemini-3.5-flash-lite), 9 in all; dropped {"bad time": 0, "length": 0, "overlap": 3, "no hook": 0}
+  faces: 15 frames, groups (np.float64(0.1), np.float64(0.8)):9, (np.float64(0.1), np.float64(0.7)):6, best change 22.5
+tdr-jenny-09: full layout, face at x 0.13 y 0.79 size 0.13
+tdr-jenny-09: full layout, person at y 0.86, hook at 120, captions top
+tdr-jenny-09: made (29 s) Find the statue | Jenny Hoyos
+tdr-jenny-09: uploaded https://youtube.com/shorts/pHn64e4QFfw (batch)
+stats: 49 clips
 insights: {"layout": null, "captions": null, "punch": null, "length": null, "title": null}

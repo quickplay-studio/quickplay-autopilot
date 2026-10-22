@@ -197,6 +197,35 @@
    "uploaded": "2026-10-22T14:18+00:00",
    "publish_at": "2026-10-22T17:00:00Z",
    "mode": "batch"
+  },
+  {
+   "id": "tdr-jenny-09",
+   "start": 5797.7,
+   "end": 5826.4,
+   "hook": "FIND THE STATUE",
+   "label": "Sadie",
+   "title": "Find the statue | Jenny Hoyos",
+   "why": "Intense elimination strategy and frantic searching.",
+   "planned": "2026-10-22T14:25+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "peak": 5811.0,
+   "question": "Did you find the secret immunity statue?",
+   "title_planned": "Jenny Hoyos searches for immunity statues",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-22T14:25+00:00",
+   "file": "tdr-jenny-09.mp4",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-09.mp4",
+   "video": "pHn64e4QFfw",
+   "url": "https://youtube.com/shorts/pHn64e4QFfw",
+   "uploaded": "2026-10-22T14:25+00:00",
+   "publish_at": "2026-10-22T17:00:00Z",
+   "mode": "batch"
   }
  ]
 }

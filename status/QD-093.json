@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T23:00:00Z",
  "rendered": "2026-10-21T13:59:58.964062+00:00",
- "title": "How Tetris became a global video game phenomenon 🧩",
+ "title": "The incredible true story of how Tetris was made 🎮",
  "background_notes": [
   "picked pixabay 1 (+0 spares)"
  ],
@@ -99,6 +99,13 @@
  "social_release": "social-QD-093",
  "engage": {
   "comment": "Ugw74zQMS0ykxt_tgBJ4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "How Tetris became a global video game phenomenon 🧩",
+   "to": "The incredible true story of how Tetris was made 🎮",
+   "at": "2026-10-22T23:13+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.3
+  }
  }
 }

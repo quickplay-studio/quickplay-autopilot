@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T22:30:00Z",
  "rendered": "2026-10-21T13:59:43.677035+00:00",
- "title": "The day Godzilla was almost an octopus 🐙",
+ "title": "How the first Godzilla suit was created 🦖",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -88,6 +88,13 @@
  "social_release": "social-QD-092",
  "engage": {
   "comment": "UgxVyR5bUIsnuYxkGTh4AaABAg",
-  "playlist": "Quickplay Daily: Film"
+  "playlist": "Quickplay Daily: Film",
+  "title": {
+   "swapped_from": "The day Godzilla was almost an octopus 🐙",
+   "to": "How the first Godzilla suit was created 🦖",
+   "at": "2026-10-22T23:13+00:00",
+   "views_an_hour": 0.4,
+   "typical": 1.3
+  }
  }
 }

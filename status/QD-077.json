@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T12:00:00Z",
  "rendered": "2026-10-21T09:39:42.972328+00:00",
- "title": "Anuel AA’s birth name and album timeline 🎤",
+ "title": "From Emmanuel Gazmey to LLNM2: Anuel AA’s milestones 🎧",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:24490 skipped: nearly black (brightness 0.03)"
@@ -99,7 +99,14 @@
  },
  "engage": {
   "comment": "UgyD_OLUPhFhQ2otOJp4AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "Anuel AA’s birth name and album timeline 🎤",
+   "to": "From Emmanuel Gazmey to LLNM2: Anuel AA’s milestones 🎧",
+   "at": "2026-10-22T12:18+00:00",
+   "views_an_hour": 0.7,
+   "typical": 2.1
+  }
  },
  "instagram": {
   "media": "18386532859226181",

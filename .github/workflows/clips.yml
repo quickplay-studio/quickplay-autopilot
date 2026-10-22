@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
     - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
-    - cron: '1 17,18,21,22 * * *'   # the batch times (18:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts, comments, submissions
+    - cron: '1 17,18,19,21,22 * * *'   # the batch times (19:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts, comments, submissions
     - cron: '30 22 * * *'      # views per clip for the learning data
     - cron: '35 8 * * *'       # 09:35 UK: the scout (campaigns ranked by money and heat, the viral streamers), for the evening's Chrome jobs
   push:

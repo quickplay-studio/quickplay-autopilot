@@ -30,12 +30,12 @@ assert lines and lines[0].endswith("THIS IS THE MOMENT") and "0:00:01.00" in lin
 assert all(float(l.split(",")[2].split(":")[-1]) <= 9.0 for l in lines)
 print("3 captions ok", len(lines), "lines")
 
-# 4. the batch time: today's 18:00 UK unless that is under an hour away, then tomorrow's
+# 4. the batch time: today's 19:00 UK (campaigns.json batch_time) unless that is under an hour away, then tomorrow's
 C.NOW = dt.datetime(2026, 10, 21, 12, 0, tzinfo=dt.timezone.utc)
 iso, when = C.batch_time()
-assert when.strftime("%Y-%m-%d %H:%M") == "2026-10-21 18:00" and iso.endswith("Z"), (iso, when)
-C.NOW = dt.datetime(2026, 10, 21, 16, 30, tzinfo=dt.timezone.utc)       # 17:30 UK
-assert C.batch_time()[1].strftime("%Y-%m-%d %H:%M") == "2026-10-22 18:00"
+assert when.strftime("%Y-%m-%d %H:%M") == "2026-10-21 19:00" and iso.endswith("Z"), (iso, when)
+C.NOW = dt.datetime(2026, 10, 21, 17, 30, tzinfo=dt.timezone.utc)       # 18:30 UK
+assert C.batch_time()[1].strftime("%Y-%m-%d %H:%M") == "2026-10-22 19:00"
 print("4 batch time ok")
 
 # 5. planning with a stubbed model: lengths checked, overlaps dropped, ids in order

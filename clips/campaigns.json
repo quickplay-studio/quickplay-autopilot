@@ -1,14 +1,11 @@
 {
  "note": "Quickplay Clips (@QuickplayClips-x9b): one entry per clipping campaign Charlie joined. A campaign is used only while active is true and its rules are here; permission is the campaign itself. Times are UK. No secrets in this file.",
- "batch_time": "18:00",
- "batch_note": "Reach wants every clip submitted within 30 minutes of posting, so the day's clips go public together at batch_time and clips/submit.csv lists the links Charlie pastes into each campaign then.",
- "batch_times": {
-  "Vyro": "19:00"
- },
+ "batch_time": "19:00",
+ "batch_note": "Reach wants every clip submitted within 30 minutes of posting, so the day's clips go public together at batch_time (19:00 UK, Charlie 22 October): GitHub submits Content Rewards at 19:01 and the Mac Chrome run at 19:07 submits Vyro and any Content Rewards link GitHub could not (an expired login), still inside the window.",
  "submit_by": {
   "Vyro": "mac"
  },
- "submit_note": "Vyro drops a session that arrives from GitHub's servers (22 October), so its clips go public at 19:00 UK and the Mac Chrome run (19:07 UK, docs/CHROME_JOBS.md) submits them in Charlie's own browser minutes later; GitHub leaves Vyro rows alone (submit_by mac) and submits Content Rewards itself at 18:01.",
+ "submit_note": "Vyro drops a session that arrives from GitHub's servers (22 October), so the Mac Chrome run (19:07 UK, docs/CHROME_JOBS.md) submits Vyro in Charlie's own browser; GitHub leaves Vyro rows alone (submit_by mac) and submits Content Rewards itself at 19:01; a Content Rewards row GitHub could not submit is the Mac run's fallback.",
  "min_active": 6,
  "min_active_note": "Charlie (22 October): fully automatic. GitHub switches a campaign off at its end date or when its budget is spent (check_campaigns) and shares the day's number among the rest; the Mac Chrome run keeps at least min_active campaigns live with footage by joining the best-ranked fitting ones (status/scout.md for Content Rewards, Vyro's open list read in Chrome) whenever the count, less those ending within 3 days, falls short.",
  "campaigns": {

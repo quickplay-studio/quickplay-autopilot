@@ -87,7 +87,7 @@ With the studio account make free API keys at https://cloud.cerebras.ai/ and htt
 the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 
 ## Standing jobs (every run)
-- Vyro submissions (every run, right after the identity guard; Vyro clips go public at 19:00 UK and Vyro drops any session
+- Vyro submissions (every run, right after the identity guard; the day's clips go public at 19:00 UK and Vyro drops any session
   that arrives from GitHub's servers, so this is the only route): for every row of clips/submit.csv whose campaign is on
   Vyro, whose public_at_uk has passed within the last 3 days and whose submitted column is empty or starts with "failed":
   on https://app.vyro.com/campaigns/add-clips find the campaign's card (the "card" text in clips/campaigns.json), press
@@ -97,6 +97,12 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   counts as done. Write the UK time (or the time plus " (already)") into the row's submitted column; a refusal goes in
   as "failed: <reason>". Stop for the day when the dialog says the account can submit 0 posts today (5 per connected
   account a day). Commit as "Quickplay Studio" and push. Leave a random 2 to 5 minutes between submissions.
+- Content Rewards fallback (every run): a Content Rewards row of clips/submit.csv public today whose submitted column
+  says "failed: login expired" or "failed: no saved sign-in" is submitted the same way in Chrome (the campaign page's
+  Submit clip, paste the link, tick the requirements box, Submit clip) while it is still within 30 minutes of going
+  public; then the saved login is re-exported: extension, Export on https://contentrewards.com/c/campaigns, Charlie
+  pastes WHOP_COOKIES, Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml
+  (the paste is his; ask in one line).
 - First, the identity guard (Charlie, 22 October: nothing outside the studio Google account, ever): open
   https://myaccount.google.com/ in the run's own tab and read the account shown. It must be studiosocialmedia123@gmail.com;
   any other account (or none) means the wrong Chrome profile: stop every browser step, touch nothing, and tell Charlie in
@@ -122,6 +128,10 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   workflow's connect link (status/youtube_connect.json, channel name e.g. "gaming"), set "channel": "<name>" on its
   campaigns in clips/campaigns.json, and when he has made its Instagram and Facebook Page add the secrets
   IG_<NAME>_TOKEN, IG_<NAME>_USER_ID, FB_<NAME>_PAGE_TOKEN, FB_<NAME>_PAGE_ID (upper case name).
+- Footage (every run): a campaign whose last run says its footage could not be downloaded (status/clips_log.txt: "no
+  footage", "download failed", "frameio" or "gdrive" errors) gets its footage link re-read on the campaign page (joined
+  campaigns show it) and clips/campaigns.json "source" updated; if the footage is gone for good, set "active": false
+  with "why_off".
 - Finish by appending one dated line per job to the end of this file's log below, committing and pushing.
 
 ## Log

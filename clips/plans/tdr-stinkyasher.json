@@ -190,6 +190,45 @@
    "why": "A humorous take on the social strategy of the tournament and YouTuber tropes.",
    "planned": "2026-10-21T09:19+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-stinkyasher-14",
+   "start": 150.7,
+   "end": 167.4,
+   "hook": "THEY DID OWEN DIRTY",
+   "label": "StinkyAsher",
+   "title": "StinkyAsher Reacts to Owen's Roblox Model",
+   "why": "A funny reaction to the character models and a sudden elimination reveal.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 157.0,
+   "question": "Which Roblox Total Drama model is the funniest?"
+  },
+  {
+   "id": "tdr-stinkyasher-15",
+   "start": 1187.7,
+   "end": 1211.4,
+   "hook": "EVA'S SECRET ASMR CHANNEL",
+   "label": "StinkyAsher",
+   "title": "StinkyAsher Catches a Secret Whisperer",
+   "why": "Funny commentary on another player's constant whispering during the tournament.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1195.0,
+   "question": "Is whispering the best strategy to win Total Drama?"
+  },
+  {
+   "id": "tdr-stinkyasher-16",
+   "start": 53.7,
+   "end": 73.4,
+   "hook": "I HAVE 100,000 COINS",
+   "label": "StinkyAsher",
+   "title": "StinkyAsher Goes on a Shopping Spree",
+   "why": "A high-energy intro moment showing Asher's excitement about his in-game wealth.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 66.0,
+   "question": "What is the first thing you would buy in the Tuck Shop?"
   }
  ]
 }

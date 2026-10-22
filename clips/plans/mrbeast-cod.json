@@ -239,6 +239,84 @@
    "why": "The ultimate payoff of the video where the final chaos leads to the big win.",
    "planned": "2026-10-21T09:30+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "mrbeast-cod-20",
+   "start": 0.0,
+   "end": 34.4,
+   "hook": "10 TEAMS COMPETING FOR $1,000,000",
+   "label": "DMZ CHALLENGE",
+   "title": "MrBeast Gaming $1,000,000 DMZ Challenge Begins",
+   "why": "It sets up the high stakes, the massive map, and the $1,000,000 prize pool perfectly.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 22.0,
+   "question": "What would you do if you won a million dollars today?"
+  },
+  {
+   "id": "mrbeast-cod-21",
+   "start": 200.7,
+   "end": 242.4,
+   "hook": "CAN WE TRUST THIS TEAM?",
+   "label": "THE BETRAYAL",
+   "title": "MrBeast Gaming Alliances and Intense Firefights",
+   "why": "It captures the tension of potential betrayal followed by a fast-paced combat sequence.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 223.0,
+   "question": "Do you trust other players in DMZ or go solo?"
+  },
+  {
+   "id": "mrbeast-cod-22",
+   "start": 335.7,
+   "end": 369.4,
+   "hook": "THEY ARE HUNTING US DOWN",
+   "label": "THE TAG",
+   "title": "MrBeast Gaming Becomes the Target in DMZ",
+   "why": "The reveal that picking up the tag alerts the whole map creates immediate suspense.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 362.0,
+   "question": "Would you pick up the tag if it meant everyone could see you?"
+  },
+  {
+   "id": "mrbeast-cod-23",
+   "start": 651.7,
+   "end": 684.4,
+   "hook": "YOU DIED SO FAST!",
+   "label": "ELIMINATION",
+   "title": "MrBeast Gaming Intense Roof Fight in DMZ",
+   "why": "A high-energy moment featuring a quick elimination and a genuine reaction to the speed of the play.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 678.0,
+   "question": "What is the best weapon for a roof fight in Modern Warfare?"
+  },
+  {
+   "id": "mrbeast-cod-24",
+   "start": 778.7,
+   "end": 827.4,
+   "hook": "FIGHTING THE LIEUTENANT FOR THE TAG",
+   "label": "BOSS FIGHT",
+   "title": "MrBeast Gaming Taking Down the Lieutenant",
+   "why": "Shows the PvE challenge required to actually qualify for extraction with the money.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 821.0,
+   "question": "Have you managed to defeat a Lieutenant yet?"
+  },
+  {
+   "id": "mrbeast-cod-25",
+   "start": 1339.7,
+   "end": 1385.4,
+   "hook": "THE FINAL BATTLE FOR A MILLION",
+   "label": "FINAL EXFIL",
+   "title": "MrBeast Gaming The Final Million Dollar Extraction",
+   "why": "The climax of the video where the final teams collide for the ultimate prize.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1373.0,
+   "question": "Who do you think deserved the win the most?"
   }
  ]
 }

@@ -187,6 +187,45 @@
    "why": "Speed reacts in genuine awe to his custom Expedia world travel site.",
    "planned": "2026-10-21T09:19+00:00",
    "model": "gemini-flash-latest"
+  },
+  {
+   "id": "speed-expedia-14",
+   "start": 786.7,
+   "end": 811.4,
+   "hook": "JAPAN TAKES THE NUMBER TWO SPOT",
+   "label": "Hyogo, Japan",
+   "title": "IShowSpeed reacts to Hyogo Japan",
+   "why": "Speed shows great enthusiasm for Japan, a destination his fanbase knows he loves, making it highly shareable.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 805.0,
+   "question": "What is your favourite thing about Japanese culture?"
+  },
+  {
+   "id": "speed-expedia-15",
+   "start": 872.7,
+   "end": 897.4,
+   "hook": "THE NUMBER ONE DESTINATION REVEALED",
+   "label": "South Lake Tahoe, USA",
+   "title": "IShowSpeed reacts to the #1 destination South Lake Tahoe",
+   "why": "This is the climax of the countdown with the biggest reveal and a high-energy reaction from Speed.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 891.0,
+   "question": "Do you agree with South Lake Tahoe being number one?"
+  },
+  {
+   "id": "speed-expedia-16",
+   "start": 988.7,
+   "end": 1022.4,
+   "hook": "WHERE SHOULD SPEED GO NEXT?",
+   "label": "",
+   "title": "IShowSpeed plans his next world tour",
+   "why": "A great closing clip where Speed discusses his future travel plans and interacts with his global audience.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1015.0,
+   "question": "Which region has the best food: Africa, South America or the Middle East?"
   }
  ]
 }

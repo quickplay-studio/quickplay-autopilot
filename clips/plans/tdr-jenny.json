@@ -121,6 +121,19 @@
    "why": "A genuine and wholesome reaction to receiving a massive raid from another streamer.",
    "planned": "2026-10-21T06:30+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "tdr-jenny-08",
+   "start": 2371.7,
+   "end": 2404.4,
+   "hook": "THEY VOTED OUT MY SISTER",
+   "label": "",
+   "title": "Jenny Hoyos Reacts to a Shocking Betrayal",
+   "why": "Captures the drama of a teammate's elimination and Jenny's immediate reaction to the 'betrayal'.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 2392.0,
+   "question": "Which elimination was the most shocking to you?"
   }
  ]
 }

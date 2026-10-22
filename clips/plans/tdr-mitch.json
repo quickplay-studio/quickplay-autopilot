@@ -178,6 +178,97 @@
    "model": "gemini-flash-latest",
    "peak": 1841.0,
    "question": "Did Mitch play the role of the villain to win?"
+  },
+  {
+   "id": "tdr-mitch-11",
+   "start": 143.7,
+   "end": 163.4,
+   "hook": "I TRUST YOU WITH EVERYTHING I HAVE",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Forms a Total Drama Alliance",
+   "why": "A dramatic moment of alliance building between Mitch and Duncan with a funny team name reveal.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 155.0,
+   "question": "Who is your favourite Total Drama character to play as in Roblox?"
+  },
+  {
+   "id": "tdr-mitch-12",
+   "start": 254.7,
+   "end": 274.4,
+   "hook": "DUNCAN YOU ARE HONESTLY REALLY MESSY",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Confronts Duncan in Roblox",
+   "why": "High drama and funny bickering between Mitch and Duncan about game strategy.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 263.0,
+   "question": "Do you prefer playing as a hero or a villain in Roblox tournaments?"
+  },
+  {
+   "id": "tdr-mitch-13",
+   "start": 302.7,
+   "end": 322.4,
+   "hook": "YOU JUST LOOK LIKE A LEPRECHAUN",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Gets Roasted in Total Drama",
+   "why": "A hilarious and quotable insult directed at Mitch followed by a desperate apology attempt.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 306.0,
+   "question": "What is the funniest insult you have heard in a Roblox lobby?"
+  },
+  {
+   "id": "tdr-mitch-14",
+   "start": 347.7,
+   "end": 367.4,
+   "hook": "OH MY GOD I FEEL SICK",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Reacts to Team Swaps",
+   "why": "Captures Mitch's dramatic reaction to being put on a team he considers 'flops'.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 356.0,
+   "question": "Do you hate it when teams get swapped mid-game in Roblox?"
+  },
+  {
+   "id": "tdr-mitch-15",
+   "start": 478.7,
+   "end": 496.4,
+   "hook": "I WILL LITERALLY CRASH OUT",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Survives Elimination",
+   "why": "Dramatic tension as Mitch fears elimination and reacts with high energy to staying safe.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 485.0,
+   "question": "Have you ever been nervous during a Roblox elimination ceremony?"
+  },
+  {
+   "id": "tdr-mitch-16",
+   "start": 1318.7,
+   "end": 1336.4,
+   "hook": "IF I GET VOTED I WILL RAGE QUIT",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Calls Out Whispering Players",
+   "why": "Funny reaction to other players whispering and Mitch's threat to rage quit.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1332.0,
+   "question": "Is whispering in Roblox games a fair strategy or just annoying?"
+  },
+  {
+   "id": "tdr-mitch-17",
+   "start": 1386.7,
+   "end": 1414.4,
+   "hook": "COURTNEY IS A THREAT SHE HAS TO GO",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming Plots a Big Betrayal",
+   "why": "Shows Mitch's strategic 'villain' side as he plots to remove a major threat.",
+   "planned": "2026-10-22T09:36+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1411.0,
+   "question": "What is your favourite strategy for winning Roblox Total Drama?"
   }
  ]
 }

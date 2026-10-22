@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T08:54:00Z",
  "rendered": "2026-10-21T07:40:38.198881+00:00",
- "title": "Kylie Jenner makes Victoria's Secret show debut ✨",
+ "title": "Kylie Jenner wears Victoria's Secret Fantasy Bra 💎",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -99,7 +99,14 @@
  "social_release": "social-QD-073",
  "engage": {
   "comment": "Ugzlu5HVuHhycPlhmlp4AaABAg",
-  "playlist": "Quickplay Daily: Entertainment"
+  "playlist": "Quickplay Daily: Entertainment",
+  "title": {
+   "swapped_from": "Kylie Jenner makes Victoria's Secret show debut ✨",
+   "to": "Kylie Jenner wears Victoria's Secret Fantasy Bra 💎",
+   "at": "2026-10-22T09:20+00:00",
+   "views_an_hour": 0.1,
+   "typical": 2.7
+  }
  },
  "instagram": {
   "media": "18014041394972925",

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T09:10:00Z",
  "rendered": "2026-10-20T19:43:38.782615+00:00",
- "title": "Lamine Yamal ends Real Betis 15 game unbeaten run ⚽",
+ "title": "Barcelona defeat Real Betis 5-2 in La Liga ⚽",
  "background_notes": [
   "PEXELS_API_KEY is not set, so Pexels is skipped",
   "picked pixabay 3 (+3 spares)"
@@ -88,7 +88,14 @@
  },
  "engage": {
   "comment": "Ugyr_0brvU_cVrocC_l4AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Lamine Yamal ends Real Betis 15 game unbeaten run ⚽",
+   "to": "Barcelona defeat Real Betis 5-2 in La Liga ⚽",
+   "at": "2026-10-22T09:20+00:00",
+   "views_an_hour": 0.5,
+   "typical": 2.7
+  }
  },
  "facebook": {
   "video": "1100638079548426",

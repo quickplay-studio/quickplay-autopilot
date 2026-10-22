@@ -149,3 +149,8 @@ the channel's comment question and replies.
   video are off (CARDS only with config.json render.picture_cards true); every picture and video fills the 9:16 screen,
   framed on the face (face_focus), captions moving off a person who sits low; the background video now plays only
   behind graphic beats. First real render: the 18:23 UTC evening run.
+- A board was lost (QD-124, 15:33 UTC): the write job's push failed five times with "CONFLICT (file location):
+  boards/queue/QD-124.json added ... inside a directory that was renamed in HEAD": the render job had emptied
+  boards/queue meanwhile, which git's rebase read as a folder rename. Every workflow's save step now sets
+  merge.directoryRenames false (reproduced and confirmed in a scratch repo). Any write run finishing while the queue
+  emptied would have lost its boards the same way, part of the shortfall.

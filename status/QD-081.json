@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-21T14:00:00Z",
  "rendered": "2026-10-21T09:47:51.453546+00:00",
- "title": "Jupiter: Which is the largest planet? 🪐",
+ "title": "Is Jupiter the largest planet in our solar system? 🔭",
  "background_notes": [
   "NASA 'galaxy stars nebula': nothing usable (4 results, 2 news or captioned)",
   "picked nasa 2 (+1 spares)"
@@ -108,7 +108,14 @@
  },
  "engage": {
   "comment": "Ugzglgpjc29AZg8QTWV4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "Jupiter: Which is the largest planet? 🪐",
+   "to": "Is Jupiter the largest planet in our solar system? 🔭",
+   "at": "2026-10-22T14:20+00:00",
+   "views_an_hour": 0.7,
+   "typical": 1.7
+  }
  },
  "instagram": {
   "media": "17911175859484686",

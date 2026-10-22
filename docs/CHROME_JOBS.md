@@ -128,3 +128,6 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
 - 22 October 21:00 UK: Vyro rejects the saved session on GitHub (the vyro_sid cookie is dropped on arrival); Content Rewards works. Vyro
   submissions are now a standing job of this run (above) with Vyro clips public at 19:00 UK; GitHub leaves Vyro rows alone. Three
   Content Rewards rows of 21 October had been marked "already" by mistake (the dialog's standing label); corrected, the reading fixed.
+- 22 October 21:30 UK: the daily task is on (19:07 UK, Vyro submissions first). Vyro signed the Chrome profile out when GitHub presented
+  the saved session (hijack protection): Charlie signs back in with Google; nothing on GitHub reads tokens/login_vyro.enc any more.
+  developers.facebook.com is logged out in the studio profile; the Instagram token and the Cerebras and Mistral keys are his, links sent.

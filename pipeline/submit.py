@@ -371,6 +371,14 @@ def vyro_option(page, pattern):
     return False
 
 
+def cookie_report(page, site):
+    """Which cookies the context holds now, by name only: shows whether the site cleared the session it was given."""
+    try:
+        names = sorted({c["name"] for c in page.context.cookies() if any(h in c.get("domain", "") for h in SITES[site]["hosts"])})
+        return ", ".join(names)[:300] or "none"
+    except Exception as e: return f"unreadable: {str(e)[:60]}"
+
+
 def submit_vyro(page, row, c, dry=False):
     """Vyro (22 October): the Add Posts page lists the joined campaigns as cards, each with its own Submit post button.
     The dialog: Campaign (preselected), Social account (a YouTube channel), recent posts or 'Use a link instead' (a Paste
@@ -524,7 +532,8 @@ def run(dry=False):
                     res = "failed: login expired"; stale.add(site)
                     try: page.screenshot(path=str(ROOT / "status" / f"submit_{site.split()[0].lower()}.png"), full_page=False)
                     except Exception: pass
-                    log(f"{r['clip']}: {site}: the login has expired ({page.url[:80]}; buttons: {', '.join(names(page)[:8])})"); break
+                    log(f"{r['clip']}: {site}: the login has expired ({page.url[:80]}; buttons: {', '.join(names(page)[:8])}; "
+                        f"cookies given: {', '.join(sorted({x['name'] for x in site_cookies(site)}))[:300]}; cookies now: {cookie_report(page, site)})"); break
                 except Exception as e:
                     res = f"failed: {type(e).__name__}: {str(e)[:100]}"
                 if res.startswith("failed") and "daily limit" not in res:

@@ -130,6 +130,13 @@ def youtube(ours=None):
         except Exception: continue
         if curve: retention[vid] = {float(r["elapsedVideoTimeRatio"]): float(r["audienceWatchRatio"]) for r in curve}
     aud = audience(query, vids, ours or {})
+    # the long-form route to the Partner Programme (8,000 watch hours in 365 days from 1 February 2027; 4,000 before):
+    # watch time on long videos only (the weekly video), as YouTube counts it
+    try:
+        lf = query("estimatedMinutesWatched", since=str(TODAY - dt.timedelta(days=365)), filters="creatorContentType==VIDEO_ON_DEMAND")
+        aud["longform_watch_hours_365d"] = round(sum(float(r.get("estimatedMinutesWatched") or 0) for r in lf) / 60, 1)
+    except Exception as e:
+        aud["longform_watch_hours_365d"] = None; print("long-form watch hours:", str(e)[:120])
     CACHE.mkdir(parents=True, exist_ok=True)
     cache_p.write_text(json.dumps({"at": NOW.isoformat(timespec="minutes"), "analytics": per_video, "daily": daily,
                                    "audience": aud, "retention": {v: {str(k): x for k, x in cv.items()} for v, cv in retention.items()}},
@@ -632,7 +639,13 @@ def main():
                 "views_pct": round(100 * est / 10_000_000, 2),
                 "views_needed_per_day": round(max(0, 10_000_000 - est) / max(1, min(90, (YPP_DEADLINE - TODAY).days))),
                 "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent "
-                        "engaged share (YouTube's own figure lags a day or two)."},
+                        "engaged share (YouTube's own figure lags a day or two).",
+                # from 1 February 2027 (announced 10 August 2026): 20M Shorts views in 90 days, or 8,000 long-form watch hours
+                # in 365 days, with 1,000 subscribers either way
+                "from_2027": {"shorts_views_needed_90_days": 20_000_000, "views_pct": round(100 * est / 20_000_000, 2),
+                              "views_needed_per_day": round(max(0, 20_000_000 - est) / 90),
+                              "watch_hours_needed_365_days": 8000,
+                              "watch_hours_365d": ((yt or {}).get("audience") or {}).get("longform_watch_hours_365d")}},
     }
     if aud.get("errors"): summary["audience_errors"] = aud["errors"]
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))

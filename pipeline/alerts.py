@@ -21,7 +21,7 @@ WHAT = {"trends": "finding topics and building fact packs", "write": "writing th
 # How long each job may go without a successful run before it counts as silently stopped (a cron typo, a disabled
 # schedule, a job that never finishes): the 23 October clips finding was a step that never ran for days.
 STALE_HOURS = {"trends": 14, "write": 14, "render": 14, "publish": 4, "analytics": 6, "clips": 26, "policy": 50, "audit": 14,
-               "engage": 14, "social": 26}
+               "engage": 14, "social": 26, "weekly": 200}
 HOWTO = ("Nothing to do if this closes by itself within a few hours. If it stays open, start a new Claude chat, use the "
          "quickplay skill and paste this issue's link.")
 

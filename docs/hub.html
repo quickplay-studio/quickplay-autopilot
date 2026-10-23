@@ -103,6 +103,7 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
     <button role="tab" data-tab="clips">Clips and money</button>
     <button role="tab" data-tab="scout">Campaigns to join</button>
     <button role="tab" data-tab="accounts">Accounts and runs</button>
+    <button role="tab" data-tab="export">Export for Claude</button>
   </nav>
 </header>
 <main>
@@ -112,6 +113,12 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
   <section id="clips" role="tabpanel" hidden></section>
   <section id="scout" role="tabpanel" hidden></section>
   <section id="accounts" role="tabpanel" hidden></section>
+  <section id="export" role="tabpanel" hidden>
+    <h2>Everything in one file</h2>
+    <p class="sub">One click builds a single Markdown file with the project's current numbers, tests, decisions, logs and notes (read live from the repository), sized to drop into a Claude chat. Drag it in and ask anything, such as "what should we change this week and why?".</p>
+    <p><button type="button" id="export-btn">Download the data file</button> <span class="sub" id="export-state"></span></p>
+    <details><summary>What goes in it</summary><ul class="sub" id="export-list"></ul></details>
+  </section>
 </main>
 <script>
 const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/";
@@ -290,7 +297,8 @@ function render(){
     <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum)</div></div></div>
       ${meter("Quickplay Daily subscribers (Partner Programme needs 1,000)", num(prog.subscribers || y.subscribers), num(ypp.subscribers_needed) || 1000)}
       ${meter("Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
-      <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}</div>
+      <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}
+        ${ypp.from_2027 ? `From 1 February 2027 the bar doubles: 20 million Shorts views in 90 days (${num(ypp.from_2027.views_pct).toFixed(2)}% there), or 8,000 watch hours on long videos in a year (${ypp.from_2027.watch_hours_365d == null ? "not measured yet" : fmt(ypp.from_2027.watch_hours_365d) + " so far"}), with 1,000 subscribers either way.` : ""}</div>
     </div>
     <div class="tiles">
       ${tile("Views in the last 24 hours", compact(prog.views_last_24h), "Quickplay Daily, YouTube")}
@@ -429,6 +437,57 @@ function render(){
     <div class="md">${logLines.length ? md(logLines.join("\n")) : "<p class='muted'>No runs logged yet.</p>"}</div>`;
 }
 
+// Export for Claude: the project's state in one Markdown file (big tables trimmed to their latest rows)
+const EXPORT = [
+  ["How the project runs (rules and map)", "CLAUDE.md", "text", 0],
+  ["Headline numbers", "analytics/summary.json", "text", 0],
+  ["Progress, latest rows", "analytics/progress.csv", "tail", 15],
+  ["Daily numbers", "analytics/daily.csv", "tail", 40],
+  ["Pipeline funnel today", "status/funnel.json", "text", 0],
+  ["Pipeline funnel by day", "analytics/funnel.csv", "tail", 30],
+  ["Every Short (newest 80)", "analytics/shorts.csv", "tail", 80],
+  ["What drives views (every tested choice)", "analytics/drivers.csv", "text", 0],
+  ["The Recipe the writer follows", "analytics/insights.md", "text", 0],
+  ["The Monday report", "analytics/weekly.md", "text", 0],
+  ["Changes made from the data", "analytics/decisions.csv", "tail", 40],
+  ["Writers and editors", "analytics/models.json", "text", 0],
+  ["Posting times and quarters of the day", "analytics/slots.json", "text", 0],
+  ["Regions", "analytics/regions.csv", "text", 0],
+  ["Looks (voices, captions, music)", "analytics/looks.json", "text", 0],
+  ["Where viewers swipe away", "analytics/dropoff.json", "text", 0],
+  ["Fewer-better test", "status/volume.json", "text", 0],
+  ["Claude use", "status/claude_usage.json", "text", 0],
+  ["Last writer run", "status/write_log.txt", "tail", 60],
+  ["Last fact pack run", "status/factpack_log.txt", "tail", 40],
+  ["Clips: what works", "clips/insights.json", "text", 0],
+  ["Clips: views per clip", "clips/stats.csv", "tail", 120],
+  ["Clips: submissions", "clips/submit.csv", "tail", 60],
+  ["Clips: last run", "status/clips_log.txt", "tail", 60],
+  ["Campaign scout", "status/scout.md", "text", 0],
+  ["Rule and law watch", "docs/POLICY.md", "tail", 40],
+  ["Build notes, Daily Shorts (latest)", "docs/NEXT.md", "tail", 60],
+  ["Build notes, clips (latest)", "docs/CLIPS.md", "tail", 40],
+  ["Mac Chrome jobs", "docs/CHROME_JOBS.md", "tail", 60]];
+function exportList(){ const ul = $("export-list"); if (ul && !ul.children.length) ul.innerHTML = EXPORT.map(e => `<li>${esc(e[0])} (${esc(e[1])}${e[2] === "tail" ? ", last " + e[3] + " lines" : ""})</li>`).join(""); }
+async function exportAll(){
+  const st = $("export-state"); st.textContent = "Building...";
+  const now = new Date(), parts = [`# Quickplay data export\n\nBuilt ${now.toLocaleString("en-GB", {timeZone: "Europe/London"})} UK from ${REPO} (main). Tables are CSV; long ones keep their header and latest rows.\n`];
+  for (const [label, path, kind, n] of EXPORT) {
+    let text = await get(path);
+    if (text == null) { parts.push(`## ${label}\n\n(${path}: not found)\n`); continue; }
+    if (kind === "tail") { const lines = text.trimEnd().split("\n"); text = lines.length > n + 1 ? (path.endsWith(".csv") ? lines[0] + "\n" : "") + lines.slice(-n).join("\n") : text; }
+    if (text.length > 60000) text = text.slice(-60000);
+    const fence = /\.(csv|json|txt)$/.test(path) ? "```" : "";
+    parts.push(`## ${label} (${path})\n\n${fence}\n${text.trim()}\n${fence}\n`);
+  }
+  const iss = D.iss || [];
+  parts.push(`## Open issues\n\n` + (iss.length ? iss.map(i => `- ${i.title} (${i.html_url})`).join("\n") : "None.") + "\n");
+  const blob = new Blob([parts.join("\n")], {type: "text/markdown"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `quickplay-data-${now.toISOString().slice(0, 10)}.md`; document.body.appendChild(a); a.click(); a.remove();
+  st.textContent = `Done: ${Math.round(blob.size / 1024)} KB.`;
+}
+
 document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
   document.querySelectorAll("#tabs [role=tab]").forEach(x => x.setAttribute("aria-selected", x === b));
   document.querySelectorAll("main section").forEach(s => s.hidden = s.id !== b.dataset.tab);
@@ -438,6 +497,7 @@ document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
 (() => { let t = location.hash.slice(1); try { t = t || localStorage.getItem("qp-hub-tab") || ""; } catch (e) {}
   const b = document.querySelector(`#tabs [data-tab="${t}"]`); if (b) b.click(); })();
 $("refresh").onclick = load;
+$("export-btn").onclick = exportAll; exportList();
 load();
 setInterval(load, 10 * 60 * 1000);
 </script>

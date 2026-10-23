@@ -240,7 +240,18 @@
    "title": "StinkyAsher vs Duncan Roast Battle",
    "why": "A high-energy comedic insult exchange which is highly quotable for a short.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "tdr-stinkyasher-10.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-10.mp4"
   },
   {
    "id": "tdr-stinkyasher-11",

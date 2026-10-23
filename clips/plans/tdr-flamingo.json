@@ -487,6 +487,35 @@
    "uploaded": "2026-10-23T12:15+00:00",
    "publish_at": "2026-10-23T18:00:00Z",
    "mode": "batch"
+  },
+  {
+   "id": "tdr-flamingo-20",
+   "start": 788.7,
+   "end": 836.4,
+   "hook": "FLAMINGO HATES HEATHER IN ROBLOX TOTAL DRAMA",
+   "label": "",
+   "title": "Flamingo Hates Heather in Roblox Total Drama",
+   "why": "Captures a classic funny Roblox moment with high energy and a clear punchline payoff.",
+   "planned": "2026-10-23T18:29+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 808.0,
+   "question": "Who is your favourite character in Roblox Total Drama Island?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "tdr-flamingo-20.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-20.mp4",
+   "video": "UUCY88omlak",
+   "url": "https://youtube.com/shorts/UUCY88omlak",
+   "uploaded": "2026-10-23T18:29+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   }
  ]
 }

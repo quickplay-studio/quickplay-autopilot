@@ -222,6 +222,59 @@
    "file": "kevin-langue-ghost-08.mp4",
    "channel": "irl",
    "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-08.mp4"
+  },
+  {
+   "id": "kevin-langue-ghost-09",
+   "start": 1228.7,
+   "end": 1262.4,
+   "hook": "ARE YOU TRYING TO SMASH THE GHOST?",
+   "label": "Kevin Langue",
+   "title": "Kevin Langue guess the adult ghost",
+   "why": "Funniest question asked during the blindfold test.",
+   "planned": "2026-10-23T18:29+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "peak": 1250.0,
+   "question": "What would you ask a ghost?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "kevin-langue-ghost-09.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-09.mp4",
+   "video": "Kpl3syxT5ds",
+   "url": "https://youtube.com/shorts/Kpl3syxT5ds",
+   "uploaded": "2026-10-23T18:29+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "kevin-langue-ghost-10",
+   "start": 1734.7,
+   "end": 1762.4,
+   "hook": "GO CHECK YOUR PHONE RIGHT NOW!",
+   "label": "Jean-Pierre",
+   "title": "Kevin Langue joy ghost reading",
+   "why": "High energy prediction payoff with a funny text.",
+   "planned": "2026-10-23T18:29+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "peak": 1749.0,
+   "question": "Would you check your phone if a medium told you to?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "kevin-langue-ghost-10.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-10.mp4"
   }
  ]
 }

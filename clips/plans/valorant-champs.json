@@ -204,7 +204,18 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 441.0,
-   "question": "Did you pick up the VALORANT Champions 2024 bundle?"
+   "question": "Did you pick up the VALORANT Champions 2024 bundle?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "valorant-champs-09.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-09.mp4"
   }
  ]
 }

@@ -362,7 +362,23 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 356.0,
-   "question": "Do you hate it when teams get swapped mid-game in Roblox?"
+   "question": "Do you hate it when teams get swapped mid-game in Roblox?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "tdr-mitch-14.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-14.mp4",
+   "video": "gIVlZ5Zeb_0",
+   "url": "https://youtube.com/shorts/gIVlZ5Zeb_0",
+   "uploaded": "2026-10-23T18:29+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-15",
@@ -370,12 +386,21 @@
    "end": 496.4,
    "hook": "I WILL LITERALLY CRASH OUT",
    "label": "Mitch Gaming",
-   "title": "Mitch Gaming Survives Elimination",
+   "title": "I will literally crash out | Mitch Gaming",
    "why": "Dramatic tension as Mitch fears elimination and reacts with high energy to staying safe.",
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 485.0,
-   "question": "Have you ever been nervous during a Roblox elimination ceremony?"
+   "question": "Have you ever been nervous during a Roblox elimination ceremony?",
+   "title_planned": "Mitch Gaming Survives Elimination",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "skipped": "dark picture"
   },
   {
    "id": "tdr-mitch-16",
@@ -388,7 +413,18 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1332.0,
-   "question": "Is whispering in Roblox games a fair strategy or just annoying?"
+   "question": "Is whispering in Roblox games a fair strategy or just annoying?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "tdr-mitch-16.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-16.mp4"
   },
   {
    "id": "tdr-mitch-17",

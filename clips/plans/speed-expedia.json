@@ -348,7 +348,18 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 891.0,
-   "question": "Do you agree with South Lake Tahoe being number one?"
+   "question": "Do you agree with South Lake Tahoe being number one?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "speed-expedia-15.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-15.mp4"
   },
   {
    "id": "speed-expedia-16",

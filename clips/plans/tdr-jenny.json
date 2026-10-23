@@ -343,6 +343,30 @@
     "title": "subject first"
    },
    "skipped": "dark picture"
+  },
+  {
+   "id": "tdr-jenny-14",
+   "start": 4070.7,
+   "end": 4101.4,
+   "hook": "CODYS DUMP TRUCK?!",
+   "label": "Cody",
+   "title": "Jenny Hoyos reacts to Cody in Roblox Total Drama",
+   "why": "Hilarious and unexpected comment from Jenny about Cody after winning the game.",
+   "planned": "2026-10-23T18:29+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "peak": 4088.0,
+   "question": "Who was your favourite player in this tournament?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "tdr-jenny-14.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-14.mp4"
   }
  ]
 }

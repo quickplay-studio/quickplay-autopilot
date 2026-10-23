@@ -304,10 +304,22 @@
    "end": 1339.4,
    "hook": "ONE MILLION DOLLARS ON THE LINE",
    "label": "",
-   "title": "MrBeast $1,000,000 DMZ Final Showdown",
+   "title": "One million dollars on the line | MrBeast",
    "why": "Jimmy warns the teams about the million-dollar stakes right as the climactic sniper shootout begins.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "title_planned": "MrBeast $1,000,000 DMZ Final Showdown",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T18:29+00:00",
+   "file": "mrbeast-cod-13.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-13.mp4"
   },
   {
    "id": "mrbeast-cod-14",

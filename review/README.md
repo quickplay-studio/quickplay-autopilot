@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 14:29): 8 of 1,000 subscribers · 5,928 of 10 million Shorts views in 90 days · 1,851 views in the last 24 hours (about 111,045 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 14:47): 8 of 1,000 subscribers · 5,952 of 10 million Shorts views in 90 days · 1,938 views in the last 24 hours (about 111,045 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 14:29 (UK): 5 scheduled, 118 public, 24 uploads in the last 24 hours.
 
@@ -61,6 +61,12 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
+
+## In the queue
+
+- **QD-140** The Northumbria Mysteries: New BBC Detective Drama 🎬 (rendering next)
+- **QD-141** Avengers Doomsday preview drops during World Series ⚾ (rendering next)
+- **QD-142** Jerry Hall’s record-breaking music night 🎤 (rendering next)
 
 ## On the channel (latest first)
 

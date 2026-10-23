@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 15:46): 8 of 1,000 subscribers · 5,665 of 10 million Shorts views in 90 days · 2,172 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 16:43): 8 of 1,000 subscribers · 5,760 of 10 million Shorts views in 90 days · 2,422 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 14:29 (UK): 5 scheduled, 118 public, 24 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 13 public, 5 scheduled | 22 | 2 | ⏳ 13 of 40 so far, 5 more scheduled |
+| Fri 23 Oct | 15 public, 3 scheduled | 22 | 2 | ⏳ 15 of 40 so far, 3 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -65,12 +65,12 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 ## On the channel (latest first)
 
 ### Fri 23 Oct 16:30 · Modern Warfare 4: New matchmaking system revealed 🎮
-scheduled · 43 s · music: dead-wrong · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
+private · 43 s · music: dead-wrong · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
 
 ![QD-139](QD-139.jpg)
 
 ### Fri 23 Oct 16:00 · Top 10 highest-grossing superhero films ever 🎬
-scheduled · 35 s · music: across-seas-and-lands · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
+private · 35 s · music: across-seas-and-lands · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
 
 ![QD-138](QD-138.jpg)
 

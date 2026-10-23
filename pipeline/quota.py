@@ -131,7 +131,9 @@ def state():
 
 
 def uploads_left():
-    """Uploads still to come before the reset: the day's limit (and the weekly video) less the uploads made since it."""
+    """Uploads still to come before the reset: the day's planned number (target(), and the weekly video) less the uploads
+    made since it. (The learned ceiling was used until 24 October: 40 kept places for a 15-a-day plan held back 2,500
+    units every day.)"""
     start = dt.datetime.now(PT).replace(hour=0, minute=0, second=0, microsecond=0).astimezone(dt.timezone.utc)
     done = 0
     for p in (ROOT / "status").glob("QD-*.json"):
@@ -140,7 +142,7 @@ def uploads_left():
         try:
             if up and dt.datetime.fromisoformat(up.replace("Z", "+00:00")) >= start: done += 1
         except ValueError: pass
-    return max(0, daily_limit() + 1 - done)
+    return max(0, target() + 1 - done)
 
 
 def allow(units, what="extra"):

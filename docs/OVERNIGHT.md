@@ -56,6 +56,12 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    clipped stretch first.
 9. **No more empty clip places.** When a campaign has nothing left to clip (the finished Valorant series) or finds no
    moments, its places for the day now go to the campaigns on the same channel that filled theirs, strongest first.
+10. **The YouTube allowance was closer to running out than the system knew.** YouTube gives the project 10,000 units a
+   day, shared by the Shorts and the clips. The guard that protects the Shorts' uploads never saw them (their record was
+   thrown away after each upload job), so it thought 7,666 were spent when the real figure was about 9,200. Fixed: the
+   Shorts' uploads are counted, the guard keeps room for the 15 planned Shorts (not the 40 ceiling), and clips upload
+   only from what the Shorts don't need (a clip that doesn't fit waits for the next run). Clips grew to 53 uploads a
+   day, so this would have started failing Shorts within days.
 
 ## What needs Charlie
 
@@ -69,7 +75,10 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    - Cerebras: https://cloud.cerebras.ai, key name CEREBRAS_API_KEY
    - Mistral: https://console.mistral.ai, key name MISTRAL_API_KEY
    - add each at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions
-4. Nothing else. The 11 promoted clips go public with Saturday's 19:00 batch on their own.
+4. **Optional, more YouTube allowance:** Google raises the 10,000 units a day for free after an audit form, which takes
+   a few weeks: https://support.google.com/youtube/contact/yt_api_form (sign in with the studio account; describe the
+   automation as it is). The clips and the Shorts share the one allowance; with more, clips can keep growing.
+5. Nothing else. The 11 promoted clips go public with Saturday's 19:00 batch on their own.
 
 Checked and fine, no action: YouTube's AI disclosure rule covers realistic people, events and AI music, not a
 narrator voice reading our own script, so the Shorts and clips stay undisclosed (disclosing would not cut reach either:

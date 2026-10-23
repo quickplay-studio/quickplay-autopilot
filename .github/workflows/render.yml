@@ -110,7 +110,11 @@ jobs:
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
         run: python pipeline/upload.py results
       - name: Keep statuses
-        run: find results -name video.mp4 -delete
+        run: |
+          find results -name video.mp4 -delete
+          # this job's uploads in the YouTube allowance record (status/quota/render.json): the record job commits it. Until
+          # 24 October it was lost with this job's workspace, so the guard never counted the main channel's uploads
+          mkdir -p results/_quota && cp status/quota/render.json results/_quota/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with: { name: statuses, path: results, retention-days: 30 }
 
@@ -128,6 +132,7 @@ jobs:
       - name: Commit results
         env: { GH_TOKEN: '${{ github.token }}' }
         run: |
+          if [ -f results/_quota/render.json ]; then mkdir -p status/quota && cp results/_quota/render.json status/quota/render.json; fi
           python pipeline/record.py results
           python pipeline/review_page.py
           git config user.name "quickplay-bot"

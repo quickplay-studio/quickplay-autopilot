@@ -14,6 +14,11 @@ assert Q.daily_limit() == 40 and Q.target() == 15
 Q.VOLUME_P.write_text(json.dumps({"per_day": 40})); assert Q.target() == 40
 Q.LIMIT_P.write_text(json.dumps({"limit": 12})); Q.VOLUME_P.unlink(); assert Q.target() == 12     # never above what YouTube allows
 Q.LIMIT_P.unlink()
+# the allowance keeps room for the planned Shorts still to come today (target, 15), not the ceiling (40): 24 October
+_root = Q.ROOT; Q.ROOT = SCRATCH / "q"; (Q.ROOT / "status").mkdir(parents=True)
+for i in range(5): (Q.ROOT / "status" / f"QD-9{i:02d}.json").write_text(json.dumps({"uploaded_at": dt.datetime.now(dt.timezone.utc).isoformat()}))
+assert Q.uploads_left() == 15 + 1 - 5, Q.uploads_left()
+Q.ROOT = _root
 
 A.ROOT, A.OUT = SCRATCH, SCRATCH / "analytics"; A.OUT.mkdir(); (SCRATCH / "status").mkdir()
 A.CFG = dict(A.CFG, volume_test={"start": "2026-10-24", "days": 7, "per_day": 15, "before": 40})

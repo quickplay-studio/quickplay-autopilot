@@ -884,7 +884,12 @@ def upload(cid, mode=None):
     mode = mode or os.environ.get("CLIPS_MODE", "").strip() or "batch"
     publish_at, when = (None, None) if mode == "private" else batch_time(c.get("platform"))
     rows, p = [], ROOT / "clips" / "submit.csv"
+    import quota
     for m in todo:
+        # the main channel's uploads come first in the one YouTube allowance the two lines share: a clip waits for the next
+        # run (or the reset at 08:00 UK) rather than leave a Short unable to upload (24 October: 53 clips in a day)
+        if not quota.allow(quota.COST["upload"], "clip upload"):
+            log(f"{cid}: {len(todo) - todo.index(m)} clip(s) wait: the YouTube allowance left today is kept for the Shorts"); break
         try:
             if gh("release", "view", OUTREL, check=False).returncode:
                 gh("release", "create", OUTREL, "--title", "Clips made", "--notes", "The clips as posted (for Instagram, Facebook and TikTok posting).", "--prerelease")

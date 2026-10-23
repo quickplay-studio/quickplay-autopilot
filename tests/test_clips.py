@@ -244,6 +244,10 @@ def fake_upload(client, *a, **k):
     return f"vid{len(UPS)}"
 Y.upload = fake_upload
 C.campaign_channels = lambda cid: ["irl", "clips"]
+import quota
+quota.allow, quota.spend = (lambda *a, **k: False), (lambda *a, **k: None)
+assert C.upload("speed-expedia", mode="private") == [] and UPS == []      # the Shorts' allowance comes first: the clips wait
+quota.allow = lambda *a, **k: True
 rows = C.upload("speed-expedia", mode="private")
 ms = json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]
 assert [m.get("channel") for m in ms] == ["clips", "clips"] and all(m.get("video") for m in ms), ms

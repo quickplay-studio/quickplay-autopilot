@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T03:30:00Z",
  "rendered": "2026-10-21T19:37:40.928809+00:00",
- "title": "Club Brugge 20 league titles history ⚽",
+ "title": "The history of Club Brugge explained 🇧🇪",
  "background_notes": [
   "picked pixabay 2 (+3 spares)"
  ],
@@ -97,6 +97,13 @@
  "social_release": "social-QD-102",
  "engage": {
   "comment": "Ugy5X7GmpVCiONRVj114AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Club Brugge 20 league titles history ⚽",
+   "to": "The history of Club Brugge explained 🇧🇪",
+   "at": "2026-10-23T04:17+00:00",
+   "views_an_hour": 0.4,
+   "typical": 1.2
+  }
  }
 }

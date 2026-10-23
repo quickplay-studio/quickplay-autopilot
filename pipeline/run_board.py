@@ -22,7 +22,7 @@ def recent_tracks():
     for f in (ROOT / "status").glob("*.json"):
         try: st = json.loads(f.read_text())
         except Exception: continue
-        if st.get("music"): rows.append((st.get("rendered", ""), st["music"]))
+        if isinstance(st, dict) and st.get("music"): rows.append((st.get("rendered", ""), st["music"]))
     return [m for _, m in sorted(rows, reverse=True)]
 
 def pick_music(sb):
@@ -54,7 +54,7 @@ def pick_social_music(sb):
     for f in (ROOT / "status").glob("*.json"):
         try: st = json.loads(f.read_text())
         except Exception: continue
-        if st.get("social_music"): rows.append((st.get("rendered", ""), st["social_music"]))
+        if isinstance(st, dict) and st.get("social_music"): rows.append((st.get("rendered", ""), st["social_music"]))
     recent = [m for _, m in sorted(rows, reverse=True)]
     age = lambda c: recent.index(c["slug"]) if c["slug"] in recent else 10 ** 6
     pool.sort(key=lambda c: (-age(c), hashlib.sha1((sb["id"] + c["slug"]).encode()).hexdigest()))

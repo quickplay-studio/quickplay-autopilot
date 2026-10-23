@@ -90,7 +90,7 @@ def voice_section():
 
 
 def main():
-    statuses = [s for s in (load(p) for p in sorted((ROOT / "status").glob("*.json")) if p.name != "channel.json") if s and s.get("id")]
+    statuses = [s for s in (load(p) for p in sorted((ROOT / "status").glob("*.json")) if p.name != "channel.json") if isinstance(s, dict) and s.get("id")]
     social = load(ROOT / "status" / "social.json") or {}
     channel = load(ROOT / "status" / "channel.json") or {}
     by_video = {s.get("video"): s for s in statuses if s.get("video")}

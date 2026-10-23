@@ -54,7 +54,7 @@ def our_shorts():
     out = {}
     for p in (ROOT / "status").glob("*.json"):
         st = load_json(p, {})
-        if not st.get("video"): continue
+        if not isinstance(st, dict) or not st.get("video"): continue      # only Short status files (a list file broke this, 23 October)
         b = boards.get(st.get("id"), {})
         beats = b.get("beats") or []
         hook = beats[0].get("say", "") if beats else ""

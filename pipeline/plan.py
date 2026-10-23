@@ -90,8 +90,9 @@ def schedule_state(now, yt=None):
     statuses = []
     for f in (ROOT / "status").glob("*.json"):
         if f.name == "channel.json": continue
-        try: statuses.append(json.loads(f.read_text()))
-        except Exception: pass
+        try: st = json.loads(f.read_text())
+        except Exception: continue
+        if isinstance(st, dict): statuses.append(st)
     ours = {st.get("video") for st in statuses if st.get("video")}
     for st in statuses:
         if st.get("publish_at"): taken.add(Y.utc(st["publish_at"]))

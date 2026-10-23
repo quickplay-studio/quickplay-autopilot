@@ -14,7 +14,7 @@ import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
-SEEN = ROOT / "status" / "policy_seen.json"
+SEEN = ROOT / "status" / "policy" / "seen.json"      # not status/*.json: those are read as Short status files
 LOG = ROOT / "docs" / "POLICY.md"
 UA = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}
 GN = "https://news.google.com/rss/search?q={q}&hl=en-GB&gl=GB&ceid=GB:en"

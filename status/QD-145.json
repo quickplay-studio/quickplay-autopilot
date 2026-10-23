@@ -1,0 +1,97 @@
+{
+ "id": "QD-145",
+ "board": "boards/queue/QD-145.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T23:30:00Z",
+ "rendered": "2026-10-23T19:25:11.457529+00:00",
+ "title": "BABYMONSTER's G-Dragon Drip collab 🎧",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:5624 skipped: nearly black (brightness 0.04)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "paradise",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 20.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 3.8
+ },
+ "timeline": [
+  [
+   0.06,
+   2.95,
+   "none",
+   0
+  ],
+  [
+   2.95,
+   6.2,
+   "none",
+   1
+  ],
+  [
+   6.2,
+   9.29,
+   "none",
+   1
+  ],
+  [
+   9.29,
+   12.99,
+   "none",
+   1
+  ],
+  [
+   12.99,
+   17.43,
+   "none",
+   1
+  ],
+  [
+   17.43,
+   20.59,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "98176",
+   "q": "arena crowd lights",
+   "t0": 0.0,
+   "t1": 10.6
+  },
+  {
+   "p": "pixabay",
+   "id": "86350",
+   "q": "city night skyline",
+   "t0": 10.0,
+   "t1": 20.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T19:30:23Z",
+ "video": "IRlAawe_xY8",
+ "url": "https://youtube.com/shorts/IRlAawe_xY8",
+ "publish_at": "2026-10-23T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T23:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-145"
+}

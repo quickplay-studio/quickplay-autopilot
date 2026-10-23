@@ -41,9 +41,13 @@ function parse(text){
   if(cell||row.length){row.push(cell);rows.push(row);}
   const head=rows.shift()||[]; return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]||""])));
 }
-const num=x=>+(x||0), fmt=x=>Math.round(x).toLocaleString("en-GB"), money=x=>"$"+(Math.round(x*100)/100).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
+const num=x=>+(x||0), fmt=x=>Math.round(x).toLocaleString("en-GB"), money=x=>"$"+(Math.round(x*100)/100).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2})+(FX?` (£${(Math.round(x*FX*100)/100).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2})})`:"");
+let FX=null;   // campaigns pay in US dollars: pounds at today's rate (European Central Bank via frankfurter, else open.er-api.com)
+const fxNow=()=>fetch("https://api.frankfurter.app/latest?from=USD&to=GBP").then(r=>r.json()).then(d=>d.rates.GBP)
+  .catch(()=>fetch("https://open.er-api.com/v6/latest/USD").then(r=>r.json()).then(d=>d.rates.GBP)).catch(()=>null);
 const med=a=>{a=a.slice().sort((x,y)=>x-y);return a.length?a[Math.floor(a.length/2)]:null};
-Promise.all([fetch(BASE+"stats.csv"+T).then(r=>r.text()),fetch(BASE+"campaigns.json"+T).then(r=>r.json()),fetch(BASE+"submit.csv"+T).then(r=>r.ok?r.text():"")]).then(([st,cj,sb])=>{
+Promise.all([fetch(BASE+"stats.csv"+T).then(r=>r.text()),fetch(BASE+"campaigns.json"+T).then(r=>r.json()),fetch(BASE+"submit.csv"+T).then(r=>r.ok?r.text():""),fxNow()]).then(([st,cj,sb,fx])=>{
+  FX=(fx>0.3&&fx<2)?fx:null;
   const stats=parse(st), subs=parse(sb), C=cj.campaigns||{};
   const pub=stats.filter(r=>r.privacy==="public");
   const asOf=stats.length?stats[0].as_of.replace("T"," ").slice(0,16)+" UTC":"";

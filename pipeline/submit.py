@@ -663,6 +663,12 @@ def heat(subject):
         hits = HEAT_CACHE["lsf"].count(low)
         if hits: score += min(0.8, 0.3 * hits); why.append(f"{hits} of today's top stream-clip posts on Reddit")
     except Exception: pass
+    try:                                   # the watchlist (pipeline/watch.py): coming or surging events weigh more
+        for it in json.loads((ROOT / "status" / "watch.json").read_text()).get("items") or []:
+            if any(t.lower() in low or low in t.lower() for t in it.get("terms") or [it["name"]]):
+                add = {"launch": 1.2, "surging": 1.0, "build-up": 0.5}.get(it.get("level"), 0.0)
+                if add: score += add; why.append(f"watchlist: {it['name']} {it['level']}")
+    except Exception: pass
     try:
         for r in csv.DictReader((ROOT / "analytics" / "search_terms.csv").open()):
             if low in str(r.get("term", "")).lower(): score += 0.4; why.append(f"our viewers search \"{r['term']}\""); break

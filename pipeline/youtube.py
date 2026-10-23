@@ -76,6 +76,7 @@ def upload(yt, path, title, description, tags, category="Entertainment", publish
                         "categoryId": CATEGORY.get(category, "24"), "defaultLanguage": "en-GB", "defaultAudioLanguage": "en-GB"},
             "status": status}
     if localizations: body["localizations"] = localizations
+    path = named_copy(path, title)
     try:
         vid = _send(yt, path, body)
     except HttpError as e:
@@ -85,6 +86,21 @@ def upload(yt, path, title, description, tags, category="Entertainment", publish
         vid = _send(yt, path, body)
     _quota("upload")
     return vid
+
+
+def named_copy(path, title):
+    """The video under a file name made of its title's words ("why-is-minecraft-still-everywhere.mp4"): YouTube reads
+    the uploaded file's name, so it should describe the video, not say "video.mp4" (23 October, from Charlie's upload
+    checklist video). A hard link, so nothing is copied; the original path when that fails."""
+    import os, pathlib, re, tempfile
+    slug = re.sub(r"[^a-z0-9]+", "-", str(title).lower()).strip("-")[:70] or "video"
+    p = pathlib.Path(path)
+    named = pathlib.Path(tempfile.mkdtemp(prefix="qp-up-")) / f"{slug}{p.suffix or '.mp4'}"
+    try: os.link(p, named); return named
+    except Exception:
+        try:
+            import shutil; shutil.copyfile(p, named); return named
+        except Exception: return p
 
 
 def _quota(event):

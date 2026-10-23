@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  issues: write      # the watchlist's "surging" note
 
 jobs:
   trends:
@@ -43,6 +44,7 @@ jobs:
           FACTPACK_TOPICS: ${{ github.event.schedule == '47 6,10,15 * * *' && '6' || '' }}
           RUN: ${{ github.event.schedule == '10 8 * * *' && 'morning' || github.event.schedule == '47 12 * * *' && 'afternoon' || github.event.schedule == '23 18 * * *' && 'evening' || '' }}
         run: |
+          GH_TOKEN="${{ github.token }}" python pipeline/watch.py || echo "watchlist failed"
           python pipeline/trends.py
           python pipeline/factpack.py build 2>&1 | tee status/factpack_log.txt || echo "fact packs failed"
           python pipeline/report.py || echo "channel report failed"

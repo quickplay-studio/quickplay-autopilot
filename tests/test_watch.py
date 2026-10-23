@@ -1,0 +1,62 @@
+"""Offline test of the watchlist (pipeline/watch.py, Charlie 23 October: be ready for GTA 6 before the searches peak):
+momentum from Wikipedia views, phases from the date, surging from news or Google Trends, topics for trends.py, places a
+day, a one-time issue when an item surges, the scout's heat boost and the writer's source label."""
+import pathlib as _p, tempfile as _t
+REPO_DIR = str(_p.Path(__file__).resolve().parent.parent)
+SCRATCH = _p.Path(_t.mkdtemp(prefix="qp-test-"))
+import datetime as dt, json, os, sys
+os.chdir(REPO_DIR)
+sys.path.insert(0, REPO_DIR + "/pipeline")
+import watch as W
+
+W.STATE, W.HIST = SCRATCH / "watch.json", SCRATCH / "watch.csv"
+W.CFG = {"watchlist": [{"name": "GTA 6", "terms": ["GTA 6", "GTA VI"], "wikipedia": "Grand Theft Auto VI", "date": "2026-11-19",
+                        "category": "Gaming", "angles": ["GTA 6 price", "GTA 6 map", "GTA 6 soundtrack"], "rules": "no violence"}]}
+VIEWS, NEWS = [10000] * 29 + [10000], 4
+
+
+class R:
+    def __init__(self, data=None, text=""): self.ok, self.data, self.text = True, data, text
+    def json(self): return self.data
+
+
+def get(url, **kw):
+    if "wikimedia" in url: return R({"items": [{"views": v} for v in VIEWS]})
+    if "news.google" in url: return R(text="<item></item>" * NEWS)
+    if "suggestqueries" in url: return R(["gta 6", ["gta 6 price", "gta 6 trailer 3", "gta 6 map"]])
+    return R({})
+W.requests.get = get
+ISSUES = []
+W.note_surge = lambda g: ISSUES.append(g["name"])
+
+# 1. steady interest 27 days out: build-up, 2 places; the main term every run plus angles
+got = W.run(dt.date(2026, 10, 23))[0]
+assert got["phase"] == "build-up" and got["level"] == "build-up" and got["places"] == 2 and got["momentum"] == 1.0, got
+tops = W.topics_today()
+assert tops[0] == ("GTA 6", "watchlist: GTA 6 (build-up, 27 days to go)") and [t for t, _ in tops[1:]] == ["GTA 6 price", "GTA 6 map"], tops
+assert not ISSUES
+# 2. interest doubles: surging, 3 places, one issue (not again the next run)
+VIEWS = [10000] * 29 + [25000]
+got = W.run(dt.date(2026, 10, 24))[0]
+assert got["level"] == "surging" and got["places"] == 3 and got["momentum"] == 2.5 and ISSUES == ["GTA 6"], (got, ISSUES)
+W.run(dt.date(2026, 10, 24)); assert ISSUES == ["GTA 6"]
+# 3. launch week whatever the numbers: 4 places; a day per row in the history
+VIEWS, NEWS = [10000] * 30, 0
+assert W.run(dt.date(2026, 11, 18))[0]["level"] == "launch" and W.state()["items"][0]["places"] == 4
+assert len(W.HIST.read_text().strip().splitlines()) == 1 + 3
+# 4. long before or long after: steady, the main term only
+assert W.phase({"date": "2027-06-01"}, dt.date(2026, 10, 23))[1] == "steady"
+print("watch ok")
+
+# 5. the writer labels it Watchlist (not "Rocket launches", which also says launch), the scout adds heat
+import writer
+assert writer.source_of("watchlist: GTA 6 (launch, 2 days to go)") == "Watchlist"
+import submit as S
+S.ROOT = SCRATCH; (SCRATCH / "status").mkdir(exist_ok=True)
+(SCRATCH / "status" / "watch.json").write_text(json.dumps({"items": [{"name": "GTA 6", "terms": ["GTA 6", "GTA VI"], "level": "surging"}]}))
+S.requests = None
+import requests as _rq
+_rq.get = lambda *a, **k: R({"items": []}, "")
+h, why = S.heat("GTA 6")
+assert h >= 1.0 and any("watchlist" in w for w in why), (h, why)
+print("watch wiring ok")

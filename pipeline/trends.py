@@ -373,6 +373,10 @@ def research(data):
                                          "published": a["when"].strftime("%Y-%m-%d") if a["when"] else ""} for a in arts]})
     for q in requested_topics():                  # Charlie's own requests first
         add(q, "Charlie's request", vetted=True)
+    try:                                          # then the watchlist (pipeline/watch.py): big events coming or surging
+        import watch
+        for q, sig in watch.topics_today(): add(q, sig, vetted=True)
+    except Exception as e: print("watchlist:", str(e)[:120])
     for l in [x for x in data.get("launches") or [] if x.get("name")][:2]:      # then what is happening on a schedule
         add(l["name"], f"rocket launch {str(l.get('net_utc', ''))[:16].replace('T', ' ')} UTC ({l.get('status') or '?'})")
     for m in ((data.get("football") or {}).get("fixtures") or [])[:3]:

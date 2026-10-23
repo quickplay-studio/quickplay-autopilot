@@ -120,18 +120,39 @@ def clips_money(root=None):
     return round(sum(by.values()), 2), by
 
 
+def usd_gbp():
+    """Today's dollar to pound rate (European Central Bank via frankfurter, no key; open.er-api.com as the fallback),
+    kept in status/fx.json for the hub. The campaigns pay in US dollars (Charlie, 23 October: show pounds too)."""
+    import urllib.request
+    p = ROOT / "status" / "fx.json"
+    for url, pick in (("https://api.frankfurter.app/latest?from=USD&to=GBP", lambda d: d["rates"]["GBP"]),
+                      ("https://open.er-api.com/v6/latest/USD", lambda d: d["rates"]["GBP"])):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Quickplay/1.0"}), timeout=20) as r:
+                rate = float(pick(json.loads(r.read().decode())))
+            if 0.3 < rate < 2:
+                p.write_text(json.dumps({"usd_gbp": rate, "at": NOW.isoformat(timespec="minutes"), "source": url.split("/")[2]}))
+                return rate
+        except Exception: continue
+    try: return float(json.loads(p.read_text())["usd_gbp"])
+    except Exception: return None
+
+
 def money():
     """Charlie (22 October): tell him when money is made. The clips' estimate (above) is noted in one issue, updated whenever it
     has risen by a dollar or more since the last note; the YouTube Partner Programme thresholds get their own note."""
     st = ROOT / "status" / "money.json"
     prev = json.loads(st.read_text()) if st.exists() else {}
     total, by = clips_money()
+    rate = usd_gbp()
     title = "💰 Money: the clips have earned about ${:,.2f} so far (estimate)"
+    gbp = lambda usd: f" (about £{usd * rate:,.2f})" if rate else ""
     noted = float(prev.get("clips_noted") or 0)
     if total >= noted + 1:
         old_title = prev.get("clips_title")
-        lines = [f"- {cid}: ${amt:,.2f}" for cid, amt in sorted(by.items(), key=lambda x: -x[1])]
-        body = (f"Estimated from views over each campaign's minimum at its rate (up ${total - noted:,.2f} since the last note). The platforms' "
+        lines = [f"- {cid}: ${amt:,.2f}{gbp(amt)}" for cid, amt in sorted(by.items(), key=lambda x: -x[1])]
+        body = (f"Estimated from views over each campaign's minimum at its rate (up ${total - noted:,.2f}{gbp(total - noted)} since the last "
+                f"note; {('$1 = £' + format(rate, '.4f') + ' today') if rate else 'no exchange rate today'}). The platforms' "
                 f"own figures are the truth: https://contentrewards.com/c/earnings and https://app.vyro.com/earnings; the page: "
                 f"https://quickplay-studio.github.io/quickplay-autopilot/clips.html\n\n" + "\n".join(lines))
         have = open_issues()

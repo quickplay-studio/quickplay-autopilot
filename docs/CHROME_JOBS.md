@@ -142,6 +142,19 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   with "why_off".
 - Finish by appending one dated line per job to the end of this file's log below, committing and pushing.
 
+- Link the week's Shorts to the long video (Mondays only, after the other standing jobs; 23 October, from Charlie's
+  upload checklist: Shorts that link to a long video feed it watch hours, the second Partner Programme route, 8,000
+  hours a year from February 2027): in YouTube Studio for Quickplay Daily (the studio account's channel only), take the
+  newest public weekly long video (status/weekly*.json or the channel's Videos tab) and, for the 10 Shorts of the last 7
+  days with the most views (analytics/shorts.csv yt_views), open each Short's Details, set "Related video" to that long
+  video and Save. Then on the long video itself add an end screen (Editor, End screen, the "Best for viewer" video and a
+  Subscribe element) if it has none. Log one line: how many Shorts were linked. Skip quietly when there is no weekly
+  video yet.
+- Watchlist campaigns (every run while status/watch.json shows an item in build-up, surging or launch; 23 October: GTA 6,
+  out 19 November 2026): search Vyro's and Content Rewards' campaign lists for the item's terms (GTA 6, GTA VI,
+  Grand Theft Auto VI) and for streamers playing it, and join any campaign that pays for YouTube, Instagram or TikTok
+  views and whose rules the channel can keep (family friendly: no violence or crime moments in the clips). Add each to
+  clips/campaigns.json as the "Join the campaigns" job says. Log what was found, even when nothing was.
 ## Log
 - 22 October 19:45 UK: first Mac run. Chrome's connection dropped after a window resize; the cookie export, every secret and every account
   are Charlie's hands (see Who does what), so one message asked him for all of them with links. Nothing on GitHub can submit or scout until

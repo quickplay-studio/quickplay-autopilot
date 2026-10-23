@@ -53,7 +53,8 @@ streamers and creators, tech launches and space. Never: politics, crime, health,
 gambling, deaths, or a website people only want to visit (a news site, an email service, an app store).
 Below are today's trending topics with their headlines. Return the numbers of the topics worth a Short, best first
 (biggest audience and freshest story first), at most {limit}, each with its category: Gaming, Film, Music, Sport, Tech,
-Science or Entertainment. Topics marked REQUEST were asked for by the channel owner: keep them unless they break a rule.
+Science or Entertainment. Topics marked REQUEST were asked for by the channel owner or are on its watchlist: keep them
+unless they break a rule (a game rated for adults is fine as entertainment news).
 
 {lines}"""
 TRIAGE_SCHEMA = {"type": "OBJECT", "properties": {"picks": {"type": "ARRAY", "items": {"type": "OBJECT", "properties": {
@@ -561,7 +562,7 @@ def gemini_state():
 def triage(topics, limit):
     """One short Gemini call picks the topics worth a pack (skips news sites, mail services and banned subjects)."""
     def line(i, t):
-        req = "REQUEST " if t.get("signal") == "Charlie's request" else ""
+        req = "REQUEST " if t.get("signal") == "Charlie's request" or str(t.get("signal", "")).startswith("watchlist") else ""
         heads = " | ".join(a["title"] for a in (t.get("articles") or [])[:3])
         return f"{i}. {req}{t['topic']} ({t.get('signal', '')}): {heads}"
     lines = "\n".join(line(i, t) for i, t in enumerate(topics, 1))

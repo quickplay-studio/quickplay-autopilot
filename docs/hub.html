@@ -87,6 +87,7 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
 .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
 .toolbar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
 .err{color:var(--critical);font-size:13px}
+  .gbp{opacity:.75;font-size:.85em;font-weight:inherit}
 </style>
 </head>
 <body>
@@ -129,7 +130,20 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;
 const num = x => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return isFinite(v) ? v : 0; };
 const fmt = x => Math.round(num(x)).toLocaleString("en-GB");
 const compact = x => { x = num(x); return x >= 1e6 ? (x/1e6).toFixed(x >= 1e7 ? 0 : 1) + "M" : x >= 1e4 ? (x/1e3).toFixed(x >= 1e5 ? 0 : 1) + "K" : fmt(x); };
-const money = x => "$" + num(x).toLocaleString("en-GB", {minimumFractionDigits:2, maximumFractionDigits:2});
+// The campaigns pay in US dollars; every amount also shows pounds at today's rate (FX, set by load(): European Central Bank
+// via frankfurter, else open.er-api.com, else the evening check's status/fx.json)
+let FX = null;
+const money = x => "$" + num(x).toLocaleString("en-GB", {minimumFractionDigits:2, maximumFractionDigits:2})
+  + (FX ? ` <span class="gbp">(£${(num(x) * FX.rate).toLocaleString("en-GB", {minimumFractionDigits:2, maximumFractionDigits:2})})</span>` : "");
+async function fx(){
+  for (const [url, pick] of [["https://api.frankfurter.app/latest?from=USD&to=GBP", d => d.rates.GBP],
+                             ["https://open.er-api.com/v6/latest/USD", d => d.rates.GBP]]) {
+    try { const r = await fetch(url); if (r.ok) { const v = Number(pick(await r.json())); if (v > 0.3 && v < 2) return {rate: v, source: new URL(url).host, live: true}; } }
+    catch (e) {}
+  }
+  const s = await get("status/fx.json", "json");
+  return s && s.usd_gbp ? {rate: Number(s.usd_gbp), source: "the evening check, " + ukTime(s.at), live: false} : null;
+}
 const ukTime = s => { if (!s) return ""; const d = new Date(s); if (isNaN(d)) return esc(s); return d.toLocaleString("en-GB", {weekday:"short", day:"numeric", month:"short", hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}); };
 const pill = (kind, icon, text) => `<span class="pill ${kind}"><i aria-hidden="true">${icon}</i>${esc(text)}</span>`;
 try { const t = localStorage.getItem("qp-hub-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -233,12 +247,13 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs()]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow};
+  FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
 }
@@ -312,7 +327,7 @@ function render(){
     `<p>${pill("good", "✓", "Nothing needs you")}</p>`;
 
   $("overview").innerHTML = `
-    <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum)</div></div></div>
+    <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum). Campaigns pay in US dollars; pounds at ${FX ? `today's rate, $1 = £${FX.rate.toFixed(4)} (${esc(FX.source)})` : "today's rate when it can be read"}.</div></div></div>
       ${meter("Quickplay Daily subscribers (Partner Programme needs 1,000)", num(prog.subscribers || y.subscribers), num(ypp.subscribers_needed) || 1000)}
       ${meter("Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
       <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}
@@ -327,6 +342,14 @@ function render(){
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>
     <h2>Live: GitHub jobs right now</h2>${liveCard()}
+    <h2>Watchlist: big events coming</h2>
+    <p class="sub">Checked every trends run: Wikipedia views against the usual (momentum), news in the last 24 hours, Google Trends and YouTube charts. Build-up within 45 days, launch from 3 days before to 7 after, surging when interest jumps. Each gets its own Shorts a day (1 steady, 2 build-up, 3 surging, 4 launch week) and its clip campaigns weigh more.</p>
+    ${table([{h:"Event", f:i => esc(i.name)}, {h:"Days to go", n:1, f:i => i.days_to == null ? "" : fmt(i.days_to)},
+      {h:"State", f:i => i.level === "surging" || i.level === "launch" ? pill("bad", "🔥", i.level) : pill(i.level === "build-up" ? "wait" : "", "·", i.level)},
+      {h:"Momentum", n:1, f:i => i.momentum == null ? "" : num(i.momentum).toFixed(2) + "x"},
+      {h:"Wikipedia views", n:1, f:i => i.views_yesterday == null ? "" : `${fmt(i.views_yesterday)} <span class="sub">(usual ${fmt(i.views_usual)})</span>`},
+      {h:"News in 24 h", n:1, f:i => fmt(i.news_24h || 0)}, {h:"Shorts a day", n:1, f:i => fmt(i.places || 1)},
+      {h:"In", f:i => esc((i.in || []).join(", "))}], ((D.watchNow || {}).items) || [], "Filled in by the next trends run.")}
     <h2>Pipeline today</h2>${funnelCard()}
     <h2>Claude use (your subscription)</h2>${claudeCard()}
     <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>

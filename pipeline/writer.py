@@ -321,7 +321,7 @@ def over_share(cat, written, cap, shares):
 def source_of(signal):
     """Where a topic came from, from its pack's trend signal, so the data can learn which sources find winners."""
     s = str(signal or "").lower()
-    for key, name in (("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
+    for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
                       ("wikipedia", "Wikipedia"), ("google trends", "Google Trends"), ("launch", "Rocket launches"),
                       ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"), ("apple", "Apple Music"),
                       ("chart", "Apple Music"), ("news", "News")):
@@ -1021,14 +1021,26 @@ def main():
         return emit(p, base, kind, tests={**tests, "series": "single"})
 
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
-    rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
+    rank = lambda kp: (kp[0] - (200 if watch_of(kp[1]) else 0) - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
+    try:                                                     # the watchlist (pipeline/watch.py): its own places today
+        import watch
+        WATCH = {i["name"]: i for i in (watch.state().get("items") or [])}
+    except Exception: WATCH = {}
+    def watch_of(p):
+        s = str(p.get("signal", ""))
+        return next((n for n in WATCH if s.startswith(f"watchlist: {n} ")), None) if s.startswith("watchlist") else None
+    def watch_done(name):
+        return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
+                   if (board(f).get("watch") == name and board(f).get("created") == str(day))) + sum(1 for b in written if b.get("watch") == name)
     shares, later = category_shares(), []
     if shares: print("category shares:", {c: round(v, 2) for c, v in sorted(shares.items(), key=lambda x: -x[1])})
     order = sorted(topics, key=rank)
     for k, (_, p) in enumerate(order):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
-        if p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
+        wn = watch_of(p)
+        if wn and watch_done(wn) >= int(WATCH[wn].get("places", 1)): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
+        if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
             p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end
         if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:
             print("stopped choice, skipped:", p["topic"], p.get("category")); continue
@@ -1039,7 +1051,11 @@ def main():
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
-        if fol or breaking: got = emit(p, note, "follow-up" if fol else "breaking", fol=fol)
+        if wn:
+            rules = f"WATCHLIST ({wn}, {WATCH[wn].get('level')}): {WATCH[wn].get('rules', '')}".strip()
+            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip())
+            if got: got["watch"] = wn; (out / f"{got['id']}.json").write_text(json.dumps(got, ensure_ascii=False, separators=(",", ":")))
+        elif fol or breaking: got = emit(p, note, "follow-up" if fol else "breaking", fol=fol)
         else: got = emit_kind(p, "news")
         if got and fol: follow.remove(fol)
     for fol in follow[:1]:                                    # the strongest breakout with no pack today: one from its own pages
@@ -1068,7 +1084,8 @@ def main():
         want = min(20, spare + (2 if reserve_count() < 6 else 0))      # every place the news left, so each run writes its full number
         if want and not late():
             try:
-                ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written], [p["topic"] for _, p in topics[:12]])
+                riding = [n for n, i in WATCH.items() if i.get("level") != "steady"]      # proactive: ideas that ride what is coming
+                ever = evergreen_packs(pick_kinds(want), seen + [about(b) for b in written], riding + [p["topic"] for _, p in topics[:12]])
             except Exception as e:
                 ever = []; print("evergreen:", str(e)[:200])
             for p in ever:

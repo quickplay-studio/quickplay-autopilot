@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 00:36): 8 of 1,000 subscribers · 5,611 of 10 million Shorts views in 90 days · 2,188 views in the last 24 hours (about 111,049 a day needed, 102 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 01:52): 8 of 1,000 subscribers · 5,627 of 10 million Shorts views in 90 days · 2,146 views in the last 24 hours (about 111,049 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 20:06 (UK): 4 scheduled, 106 public, 34 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 2 public, 1 scheduled | 0 | 1 | ⏳ 2 of 40 so far, 1 more scheduled |
+| Fri 23 Oct | 3 public | 0 | 2 | ⏳ 3 of 40 so far |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -60,7 +60,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 ## On the channel (latest first)
 
 ### Fri 23 Oct 0:30 · Eden Sessions: Ben Howard headlines this summer 🎤
-private · 22 s · music: paradise · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
+private · 22 s · music: paradise · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
 
 ![QD-125](QD-125.jpg)
 

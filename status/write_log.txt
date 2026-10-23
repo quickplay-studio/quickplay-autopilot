@@ -1,11 +1,6 @@
-evening run for 2026-10-23: 10 to write from 6 fact packs
+breaking run for 2026-10-23: 2 to write from 4 fact packs
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Angel Of My Dreams by JADE: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-too few facts: mohamed salah
-covered already: Heath Ledger
-too few facts: artemis ii orion cabin warning
-covered already: BioWare
-too few facts: Cyberpunk 2077
-How Manchester United won the 1999 Champions League 🏆: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 2 of 10: QD-126 JADE hits US charts years after debut 🎶; QD-127 Manchester United: The historic 1999 treble journey ⚽
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-3.8-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-3.8-flash": 1}, "answers": {"openrouter:nvidia/nemotron-3.5-lightning:free": 1, "gemini-flash-latest": 1, "gemini-3.5-flash-lite": 11}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+jenna ortega: gemini-flash-latest, 0 warnings
+Clayface (film): gemini-flash-latest, 0 warnings
+wrote 2 of 2: QD-128 Jenna Ortega: stepping away from television 📺; QD-129 Clayface: The dark new body horror film in cinemas 🎬
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"openrouter:nvidia/nemotron-3.5-lightning:free": 1, "gemini-flash-latest": 2, "gemini-3.5-flash-lite": 5}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

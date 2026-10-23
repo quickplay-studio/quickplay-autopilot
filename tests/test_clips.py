@@ -231,3 +231,13 @@ ms = json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]
 assert [m.get("channel") for m in ms] == ["clips", "clips"] and all(m.get("video") for m in ms), ms
 assert UPS == ["irl", "clips", "clips"], UPS        # irl refused once, then skipped for the run
 print("channel fallback ok")
+
+# the virality score is measured against real views: bands, and a learned threshold only when high scores really earn more
+rows = [{"privacy": "public", "hours_public": "30", "campaign": "c", "views": str(300 if k % 10 >= 7 else 10), "score": str(k % 10 + 1),
+         **{f"test_{t}": C.TESTS[t][0] for t in C.TESTS}} for k in range(60)]
+ins = C.insights(rows)
+assert ins["scored_clips"] == 60 and ins["score_bands"]["8 to 10"]["mean_views"] == 300 and ins["min_score"] == 8, ins
+assert C.min_score() == 8
+flat = [dict(r, views="5") for r in rows]
+assert C.insights(flat)["min_score"] is None and C.min_score() == C.MIN_SCORE
+print("viral score ok")

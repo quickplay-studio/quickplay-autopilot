@@ -337,6 +337,14 @@ MIN_S, MAX_S = 25, 75        # clip length unless a campaign's rules say otherwi
 MIN_SCORE = 6                # the planner's own virality score (1 to 10): below this a moment isn't worth a clip
 
 
+def min_score():
+    """The planner's virality score a moment needs: learned from real views (clips/insights.json min_score) once 20 or more
+    scored clips have views, else MIN_SCORE."""
+    try: got = json.loads((ROOT / "clips" / "insights.json").read_text()).get("min_score")
+    except Exception: got = None
+    return int(got) if isinstance(got, (int, float)) else MIN_SCORE
+
+
 def marked(lines, done):
     """Transcript lines inside a moment already clipped are marked, so the planner stops offering them again (the 23
     October runs lost 8 of 8 picks to overlaps)."""
@@ -377,7 +385,7 @@ def plan(cid, n=8):
         a, b = max(0.0, a - 0.3), min(total, b + 0.4)      # a breath before, the reaction after
         if b - a > r.get("max_s", MAX_S) + 1: b = a + r.get("max_s", MAX_S)      # a long pick is cut to the limit, the payoff is usually early
         if not r.get("min_s", MIN_S) <= b - a: why["length"] += 1; continue
-        if num(m.get("score")) is not None and num(m.get("score")) < MIN_SCORE: why["low score"] += 1; continue
+        if num(m.get("score")) is not None and num(m.get("score")) < min_score(): why["low score"] += 1; continue
         if any(a < y and b > x for x, y in done): why["overlap"] += 1; continue
         hook = re.sub(r"[–—]", "-", str(m.get("hook") or "")).strip()[:60]
         if not hook: why["no hook"] += 1; continue
@@ -996,6 +1004,22 @@ def insights(rows):
         second = (arms[ranked[1]]["mean_views"] or 0) if len(ranked) > 1 else 0
         best = ranked[0] if ranked and top >= 20 and top >= 1.1 * second else None     # no verdict from clips nobody watched
         out["tests"][t] = {"arms": arms, "best": best}
+    # How "viral" is measured (23 October): the planner scores each moment 1 to 10 before it is cut; here that score is
+    # checked against what the clip really did (views at 24 hours or more). score_bands shows whether high scores earn more;
+    # min_score is the lowest score whose clips (10 or more) beat the clips under it, and plan() uses it in place of 6.
+    scored = [(float(r["score"]), float(r["views"] or 0)) for r in aged if str(r.get("score", "")).strip() not in ("", "None")]
+    bands = {}
+    for lo, hi, name in ((0, 6, "under 6"), (6, 8, "6 to 7"), (8, 11, "8 to 10")):
+        vals = [v for sc, v in scored if lo <= sc < hi]
+        bands[name] = {"n": len(vals), "mean_views": round(sum(vals) / len(vals), 1) if vals else None}
+    out["score_bands"], out["scored_clips"] = bands, len(scored)
+    best, top = None, 0.0           # the cut whose clips at or above it average the most views (ties: the lower cut)
+    for cut in range(4, 10):
+        hi_, lo_ = [v for sc, v in scored if sc >= cut], [v for sc, v in scored if sc < cut]
+        if len(hi_) < 10 or len(lo_) < 10: continue
+        m_hi = sum(hi_) / len(hi_)
+        if m_hi >= 20 and m_hi > 1.2 * (sum(lo_) / len(lo_)) and m_hi > top: best, top = cut, m_hi
+    out["min_score"] = best
     for cid in {r["campaign"] for r in aged}:
         vals = [float(r["views"] or 0) for r in aged if r["campaign"] == cid]
         out["campaigns"][cid] = {"n": len(vals), "median_views": med(vals)}
@@ -1027,7 +1051,8 @@ def stats():
                 except Exception: hours = ""
                 tests = m.get("tests") or {}
                 rows.append({"clip": m["id"], "campaign": cid, "channel": channel, "video": v["id"], "seconds": round(m["end"] - m["start"]),
-                             "hook_words": len(m["hook"].split()), "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
+                             "hook_words": len(m["hook"].split()), "score": m.get("score") if m.get("score") is not None else "",
+                             "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
                              "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
                              **{f"test_{t}": tests.get(t, "") for t in TESTS},
                              "instagram": (m.get("instagram") or {}).get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""),

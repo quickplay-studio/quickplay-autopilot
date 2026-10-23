@@ -312,7 +312,7 @@ function render(){
   const list = mode === "best" ? sh.slice().sort((a, b) => num(b.all_views || b.yt_views) - num(a.all_views || a.yt_views)).slice(0, 40) : sh.slice(0, 40);
   $("shorts").innerHTML = `
     <h2>Every Short, ${mode === "best" ? "most watched first" : "newest first"}</h2>
-    <p class="sub">${fmt(sh.length)} Shorts measured. Views add YouTube, Instagram and Facebook. "Held at 3 s" is the share still watching after the hook.</p>
+    <p class="sub">${fmt(sh.length)} Shorts measured. Views add YouTube, Instagram and Facebook. "Held at 3 s" is YouTube's audience retention 3 seconds in: views of that moment per view, so replays and loops count and over 100% means people watched the opening more than once (a strong signal).</p>
     <div class="toolbar"><button type="button" aria-pressed="${mode === "newest"}" data-shorts="newest">Newest</button><button type="button" aria-pressed="${mode === "best"}" data-shorts="best">Most watched</button>
       <a href="${REPO}/blob/main/review/README.md" target="_blank" rel="noopener" style="align-self:center;font-size:13px">Full review page</a></div>
     ${table([

@@ -1,0 +1,86 @@
+{
+ "id": "QD-128",
+ "board": "boards/queue/QD-128.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T09:00:00Z",
+ "rendered": "2026-10-23T07:38:54.963182+00:00",
+ "title": "Jenna Ortega: stepping away from television 📺",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Jenna Ortega red carpet: no Commons image named 'Jenna Ortega red carpet')",
+  "beat 4 reused a nearby picture (commons-search:Jenna Ortega Beetlejuice: no Commons image named 'Jenna Ortega Beetlejuice')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "flight-is-aight",
+ "social_music": "chill-chill-music-520383",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 28.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.3
+ },
+ "timeline": [
+  [
+   0.06,
+   4.24,
+   "title",
+   0
+  ],
+  [
+   4.24,
+   9.85,
+   "none",
+   1
+  ],
+  [
+   9.85,
+   15.78,
+   "timeline",
+   1
+  ],
+  [
+   15.78,
+   22.93,
+   "none",
+   1
+  ],
+  [
+   22.93,
+   28.5,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "318654",
+   "q": "tv studio cameras",
+   "t0": 0.0,
+   "t1": 28.5
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T07:53:44Z",
+ "video": "3M7qiLrzVPk",
+ "url": "https://youtube.com/shorts/3M7qiLrzVPk",
+ "publish_at": "2026-10-23T09:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T09:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-128"
+}

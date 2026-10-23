@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 07:47): 8 of 1,000 subscribers · 5,713 of 10 million Shorts views in 90 days · 1,787 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 08:48): 8 of 1,000 subscribers · 5,716 of 10 million Shorts views in 90 days · 1,677 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 8:31 (UK): 0 scheduled, 111 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Thu 22 Oct 19:45).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 8:43).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 3 public | 0 | 2 | ⏳ 3 of 40 so far |
+| Fri 23 Oct | 3 public, 2 scheduled | 4 | 2 | ⏳ 3 of 40 so far, 2 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -224,22 +224,22 @@ public · 2 views · 38 s · music: after-sunset · [script](../boards/done/QD-0
 ![QD-093](QD-093.jpg)
 
 ### Wed 21 Oct 23:30 · How the first Godzilla suit was created 🦖
-public · 13 views · 29 s · music: after-sunset · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
+public · 13 views · 29 s · music: after-sunset · on Instagram · [script](../boards/done/QD-092.json) · [YouTube](https://youtube.com/shorts/6_uQBelVyo0)
 
 ![QD-092](QD-092.jpg)
 
 ### Wed 21 Oct 23:00 · Why the Phobos rover only has two hours 🛰️
-public · 4 views · 36 s · music: horizons · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
+public · 4 views · 36 s · music: horizons · on Instagram · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
 
 ![QD-091](QD-091.jpg)
 
 ### Wed 21 Oct 21:30 · Shrek 2 Remastered gets surprising PC requirements 🎮
-public · 15 views · 23 s · music: treasure-hunt · on Facebook · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
+public · 15 views · 23 s · music: treasure-hunt · on Instagram · on Facebook · [script](../boards/done/QD-090.json) · [YouTube](https://youtube.com/shorts/_DiyJaLv6YY)
 
 ![QD-090](QD-090.jpg)
 
 ### Wed 21 Oct 18:00 · Bob Iger reveals tell-all Disney memoir 📚
-public · 8 views · 22 s · music: level · on Facebook · [script](../boards/done/QD-089.json) · [YouTube](https://youtube.com/shorts/ipEPjlNKVxk)
+public · 8 views · 22 s · music: level · on Instagram · on Facebook · [script](../boards/done/QD-089.json) · [YouTube](https://youtube.com/shorts/ipEPjlNKVxk)
 
 ![QD-089](QD-089.jpg)
 

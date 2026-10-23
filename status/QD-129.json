@@ -1,0 +1,99 @@
+{
+ "id": "QD-129",
+ "board": "boards/queue/QD-129.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T09:30:00Z",
+ "rendered": "2026-10-23T07:38:57.819841+00:00",
+ "title": "Clayface: The dark new body horror film in cinemas 🎬",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Tom Rhys Harries: no Commons image named 'Tom Rhys Harries')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "house-on-the-hill",
+ "social_music": "tension-documentary-519912",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 25.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 4.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.99,
+   "title",
+   0
+  ],
+  [
+   4.99,
+   8.38,
+   "none",
+   1
+  ],
+  [
+   8.38,
+   11.94,
+   "none",
+   1
+  ],
+  [
+   11.94,
+   16.72,
+   "none",
+   2
+  ],
+  [
+   16.72,
+   21.88,
+   "none",
+   1
+  ],
+  [
+   21.88,
+   25.27,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "15351",
+   "q": "dark atmospheric lights",
+   "t0": 0.0,
+   "t1": 12.94
+  },
+  {
+   "p": "pixabay",
+   "id": "24603",
+   "q": "neon city street night",
+   "t0": 12.34,
+   "t1": 25.27
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T07:53:46Z",
+ "video": "UBEArnOdRLY",
+ "url": "https://youtube.com/shorts/UBEArnOdRLY",
+ "publish_at": "2026-10-23T09:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T09:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-129"
+}

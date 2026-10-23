@@ -100,7 +100,8 @@ def youtube(ours=None):
         c = load_json(cache_p, {}) or {}
         return {"subs": subs, "videos": vids, "stats": stats, "analytics": c.get("analytics") or {},
                 "daily": c.get("daily") or [], "audience": c.get("audience") or {}, "cached_at": c.get("at"),
-                "retention": {v: {float(k): x for k, x in cv.items()} for v, cv in (c.get("retention") or {}).items()}}
+                "retention": {v: {float(k): x for k, x in cv.items()} for v, cv in (c.get("retention") or {}).items()},
+                "sources": c.get("sources") or {}}
     ya = build("youtubeAnalytics", "v2", credentials=Y.creds(), cache_discovery=False)
     start = str(TODAY - dt.timedelta(days=120))
 
@@ -121,7 +122,7 @@ def youtube(ours=None):
     daily = query("views,engagedViews,subscribersGained,subscribersLost", dimensions="day", sort="day")
     # retention curve per Short (2 to 30 days old; YouTube Analytics lags a day or two): share of viewers still watching
     # at each point, as {fraction of the video: ratio}. Ratios above 1 mean people rewatched that part (loops).
-    retention = {}
+    retention, sources = {}, {}
     for vid, v in vids.items():
         posted = utc(v.get("publish_at")) or utc(v.get("uploaded"))
         if v.get("privacy") != "public" or not posted or not (dt.timedelta(days=2) <= NOW - posted <= dt.timedelta(days=30)):
@@ -129,6 +130,10 @@ def youtube(ours=None):
         try: curve = query("audienceWatchRatio", dimensions="elapsedVideoTimeRatio", filters=f"video=={vid}")
         except Exception: continue
         if curve: retention[vid] = {float(r["elapsedVideoTimeRatio"]): float(r["audienceWatchRatio"]) for r in curve}
+        try:            # where this Short's views came from (Shorts feed, search, channel page...): did the feed pick it up?
+            src = query("views", dimensions="insightTrafficSourceType", filters=f"video=={vid}")
+            if src: sources[vid] = {r["insightTrafficSourceType"]: int(r.get("views") or 0) for r in src}
+        except Exception: pass
     aud = audience(query, vids, ours or {})
     # the long-form route to the Partner Programme (8,000 watch hours in 365 days from 1 February 2027; 4,000 before):
     # watch time on long videos only (the weekly video), as YouTube counts it
@@ -139,10 +144,10 @@ def youtube(ours=None):
         aud["longform_watch_hours_365d"] = None; print("long-form watch hours:", str(e)[:120])
     CACHE.mkdir(parents=True, exist_ok=True)
     cache_p.write_text(json.dumps({"at": NOW.isoformat(timespec="minutes"), "analytics": per_video, "daily": daily,
-                                   "audience": aud, "retention": {v: {str(k): x for k, x in cv.items()} for v, cv in retention.items()}},
-                                  ensure_ascii=False))
+                                   "audience": aud, "retention": {v: {str(k): x for k, x in cv.items()} for v, cv in retention.items()},
+                                   "sources": sources}, ensure_ascii=False))
     return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily, "retention": retention,
-            "audience": aud, "cached_at": NOW.isoformat(timespec="minutes")}
+            "audience": aud, "cached_at": NOW.isoformat(timespec="minutes"), "sources": sources}
 
 def audience(query, vids, ours):
     """Where viewers are, how they found the Shorts, and their age and gender: for the channel, for each category (a
@@ -551,6 +556,10 @@ def main():
         secs = o.get("seconds") or 0
         row["yt_held_3s_pct"] = at_point(curve, min(1.0, 3 / secs)) if curve and secs else ""      # still watching 3 seconds in
         row["yt_held_end_pct"] = at_point(curve, 0.95) if curve else ""                            # still watching at the end
+        src = (yt.get("sources") or {}).get(vid) or {}
+        tot = sum(src.values())
+        row["yt_feed_pct"] = round(100 * src.get("SHORTS", 0) / tot) if tot else ""          # views from the Shorts feed (the algorithm)
+        row["yt_search_pct"] = round(100 * src.get("YT_SEARCH", 0) / tot) if tot else ""     # views from YouTube search
         row["real_share"] = o.get("real_share", "")            # share of shots that are real images of the subject
         dr = drops(curve, o.get("timeline"), secs) if curve and secs else []
         row["yt_worst_beat"] = (lambda w: f"beat {w[1] + 1} ({w[2]}), -{w[0]} pts/s")(max(dr)) if dr else ""

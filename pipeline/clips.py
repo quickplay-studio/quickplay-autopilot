@@ -1144,6 +1144,7 @@ def stats():
                              "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
                              **{f"test_{t}": tests.get(t, "") for t in TESTS},
                              "instagram": (m.get("instagram") or {}).get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""),
+                             **ig_numbers((m.get("instagram") or {}).get("media")),
                              "as_of": NOW.isoformat(timespec="minutes")})
     p = ROOT / "clips" / "stats.csv"
     if not rows: return
@@ -1152,6 +1153,16 @@ def stats():
     log(f"stats: {len(rows)} clips")
     try: ins = insights(rows); log("insights:", json.dumps({t: v["best"] for t, v in ins["tests"].items()}))
     except Exception as e: log("insights:", str(e)[:200])
+
+
+def ig_numbers(media):
+    """Instagram views, reach and average watch time of a clip's Reel (23 October), from analytics/cache/instagram.json:
+    the clips post on the main channel's Instagram, whose insights the hourly analytics already read for every post."""
+    if not media: return {"ig_views": "", "ig_reach": "", "ig_watch_s": ""}
+    try: c = json.loads((ROOT / "analytics" / "cache" / "instagram.json").read_text()).get(str(media)) or {}
+    except Exception: c = {}
+    w = c.get("ig_reels_avg_watch_time")
+    return {"ig_views": c.get("views", ""), "ig_reach": c.get("reach", ""), "ig_watch_s": round(w / 1000, 1) if w else ""}
 
 
 def probe(url):

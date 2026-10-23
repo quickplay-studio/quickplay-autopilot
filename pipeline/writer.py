@@ -969,6 +969,12 @@ def main():
         style = style_note(tests)
         extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
                   f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
+        try:                                       # what other channels' Shorts are winning with this week (competitors.py)
+            import competitors
+            wins = competitors.top_titles(p.get("category") or "")
+            if wins: extra.append("WHAT IS WINNING ON SHORTS THIS WEEK IN THIS CATEGORY (other channels, by views an hour; learn "
+                                  "what makes people stop and find a fresher angle, never copy their wording): " + "; ".join(wins))
+        except Exception: pass
         if tests.get("title_search") == "search phrase":
             sug = suggestions(p["topic"])
             if sug: extra.append("WHAT PEOPLE TYPE INTO YOUTUBE SEARCH ABOUT THIS: " + "; ".join(sug))

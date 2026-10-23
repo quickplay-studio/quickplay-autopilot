@@ -247,12 +247,12 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals};
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -373,9 +373,16 @@ function render(){
       {h:"Per hour", n:1, f:r => num(r.views_per_hour).toFixed(1)},
       {h:"Held at 3 s", n:1, f:r => r.yt_held_3s_pct ? num(r.yt_held_3s_pct).toFixed(0) + "%" : ""},
       {h:"Watched", n:1, f:r => r.yt_avg_viewed_pct ? num(r.yt_avg_viewed_pct).toFixed(0) + "%" : ""},
+      {h:"From the feed", n:1, f:r => r.yt_feed_pct !== "" && r.yt_feed_pct != null ? num(r.yt_feed_pct).toFixed(0) + "%" : ""},
       {h:"Writer", f:r => esc(String(r.writer || "").split(":").pop())},
       {h:"Editor", f:r => esc(r.editor || "")}
     ], list, "No Shorts measured yet.")}
+    <h2>Where the views come from</h2>
+    <p class="sub">The whole channel, from YouTube Analytics. The Shorts feed is the algorithm recommending us; search is people looking for the subject. "From the feed" in the table above is the same for each Short.</p>
+    ${table([{h:"Source", f:r => esc(r.source)}, {h:"Views", n:1, f:r => fmt(r.views)}, {h:"Share", n:1, f:r => num(r.share_pct).toFixed(1) + "%"}],
+      (D.traffic || []).filter(r => r.scope === "channel").slice(0, 8), "Filled in by the next full analytics run.")}
+    <h2>What wins for everyone else</h2>
+    <div class="md">${D.rivals ? md(D.rivals.split("\n").slice(2).join("\n")) : "<p class='muted'>Filled in once a day by the trends run.</p>"}</div>
     <h2>When each kind does best</h2>
     <p class="sub">Views against typical by the UK quarter of the day each Short went out (00 to 06 UK is the American evening). Once a kind has 12 measured Shorts and one quarter is clearly better, most of its Shorts are posted there (news within 6 hours); 1 in 5 keeps the next free slot so every hour stays tested.</p>
     ${table([{h:"Kind", f:r => esc(r[0] === "_all" ? "All Shorts" : r[0])}].concat(["00-06", "06-12", "12-18", "18-24"].map(b => ({h:b + " UK", n:1, f:r => r[1][b] ? `${num(r[1][b].score).toFixed(1)}x <span class="sub">(${fmt(r[1][b].n)})</span>` : ""}))),

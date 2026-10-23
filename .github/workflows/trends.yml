@@ -49,6 +49,7 @@ jobs:
           python pipeline/factpack.py build 2>&1 | tee status/factpack_log.txt || echo "fact packs failed"
           python pipeline/report.py || echo "channel report failed"
           [ -n "$BREAKING" ] || python pipeline/analytics.py || echo "analytics failed"
+          [ -n "$BREAKING" ] || python pipeline/competitors.py || echo "competitors failed"
           python pipeline/review_page.py || echo "review page failed"
       - run: |
           git config user.name "quickplay-bot"

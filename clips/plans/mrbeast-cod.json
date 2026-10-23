@@ -213,7 +213,23 @@
    "title": "MrBeast $1,000,000 DMZ Extraction Match",
    "why": "Sets up the high stakes of the $1,000,000 tournament and highlights creators sharing what they would do with the prize money.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "mrbeast-cod-09.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-09.mp4",
+   "video": "Kovu7r7IujY",
+   "url": "https://youtube.com/shorts/Kovu7r7IujY",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "mrbeast-cod-10",
@@ -224,7 +240,18 @@
    "title": "MrBeast Lieutenant Tag Challenge in DMZ",
    "why": "Explains the key requirement to extract with the money, adding high tension around taking down the lieutenant.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "mrbeast-cod-10.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-10.mp4"
   },
   {
    "id": "mrbeast-cod-11",
@@ -235,7 +262,18 @@
    "title": "MrBeast CoD DMZ Final Extraction Rush",
    "why": "High adrenaline push to the extraction rooftop as the final countdown approaches.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "mrbeast-cod-11.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-11.mp4"
   },
   {
    "id": "mrbeast-cod-12",
@@ -243,10 +281,22 @@
    "end": 1297.4,
    "hook": "ALONE AT THE FINAL EXFIL",
    "label": "",
-   "title": "MrBeast Final Exfil Ambush in DMZ",
+   "title": "Alone at the final exfil | MrBeast",
    "why": "A solo survivor attempts a last-second squad plea right before the final chaos erupts.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "title_planned": "MrBeast Final Exfil Ambush in DMZ",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "mrbeast-cod-12.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-12.mp4"
   },
   {
    "id": "mrbeast-cod-13",

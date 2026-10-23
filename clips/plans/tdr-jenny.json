@@ -293,6 +293,56 @@
    "uploaded": "2026-10-23T12:15+00:00",
    "publish_at": "2026-10-23T18:00:00Z",
    "mode": "batch"
+  },
+  {
+   "id": "tdr-jenny-12",
+   "start": 191.7,
+   "end": 220.4,
+   "hook": "JENNY HOYOS REVEALS HER ROBLOX SKIN",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Roblox Avatar Reveal",
+   "why": "Matches search intent for 'Jenny Hoyos' and 'glow up' by showing her character reveal and interaction with other creators.",
+   "planned": "2026-10-23T17:28+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 198.0,
+   "question": "How would you rate Jenny's Roblox outfit out of 10?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "tdr-jenny-12.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-12.mp4",
+   "video": "U7mU12xF71Y",
+   "url": "https://youtube.com/shorts/U7mU12xF71Y",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-jenny-13",
+   "start": 148.7,
+   "end": 168.4,
+   "hook": "WAIT YOU CAN SEE ME IRL?",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos has a funny mic confusion moment",
+   "why": "A classic funny streamer moment where she confuses her avatar with her real self.",
+   "planned": "2026-10-23T17:28+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 156.0,
+   "question": "What is your favourite Roblox skin to wear?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "skipped": "dark picture"
   }
  ]
 }

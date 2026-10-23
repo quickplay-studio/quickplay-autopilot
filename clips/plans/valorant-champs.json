@@ -148,7 +148,23 @@
    "title": "VALORANT Champs Shanghai Sacy Carries Leo Faria",
    "why": "A funny reveal that Sacy had to use an Odin to carry the Head of VALORANT Esports in a ranked game.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "valorant-champs-07.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-07.mp4",
+   "video": "UssWPKOteUg",
+   "url": "https://youtube.com/shorts/UssWPKOteUg",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-08",
@@ -159,7 +175,23 @@
    "title": "VALORANT Champs Shanghai Wyatt's Weekly Award",
    "why": "Wyatt jokingly admits to being 'bought off' for his weekly award, ending the segment on a funny, cynical note.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "valorant-champs-08.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-08.mp4",
+   "video": "nrV1nKKCqeQ",
+   "url": "https://youtube.com/shorts/nrV1nKKCqeQ",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-09",

@@ -167,6 +167,61 @@
    "uploaded": "2026-10-23T12:15+00:00",
    "publish_at": "2026-10-23T18:00:00Z",
    "mode": "batch"
+  },
+  {
+   "id": "kevin-langue-ghost-07",
+   "start": 854.7,
+   "end": 882.4,
+   "hook": "IS HE ACTUALLY A GHOST?",
+   "label": "",
+   "title": "Is he actually a ghost? | Kevin Langue",
+   "why": "High energy reaction and a funny accusation that one of the guests is the ghost.",
+   "planned": "2026-10-23T17:28+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 870.0,
+   "question": "Do you think the EMF meter was real or a prank?",
+   "title_planned": "Kevin Langue finds a ghost in the studio",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "kevin-langue-ghost-07.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-07.mp4",
+   "video": "-7vvPmpZxU8",
+   "url": "https://youtube.com/shorts/-7vvPmpZxU8",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "kevin-langue-ghost-08",
+   "start": 1193.7,
+   "end": 1220.4,
+   "hook": "THE SALT TEST REVEAL",
+   "label": "",
+   "title": "The salt test reveal | Kevin Langue",
+   "why": "A funny physical comedy moment with a big reaction from the group.",
+   "planned": "2026-10-23T17:28+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1198.0,
+   "question": "Would you step over the salt or are you too scared?",
+   "title_planned": "Kevin Langue tries the salt circle test",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "kevin-langue-ghost-08.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-08.mp4"
   }
  ]
 }

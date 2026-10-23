@@ -181,10 +181,27 @@
    "end": 1413.4,
    "hook": "SHOCKING SECOND ROUND ELIMINATION REACTION",
    "label": "",
-   "title": "StinkyAsher Reacts To Elimination In Roblox",
+   "title": "Shocking second round elimination reaction | StinkyAsher",
    "why": "StinkyAsher gets voted out in round two and delivers a dramatic final rant blaming haters and jealousy.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "title_planned": "StinkyAsher Reacts To Elimination In Roblox",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "tdr-stinkyasher-08.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-08.mp4",
+   "video": "BNxPLliTB1A",
+   "url": "https://youtube.com/shorts/BNxPLliTB1A",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-stinkyasher-09",
@@ -192,10 +209,27 @@
    "end": 228.4,
    "hook": "I FEAR I TALK TOO MUCH",
    "label": "SADIE",
-   "title": "StinkyAsher Gets Caught Whispering",
+   "title": "I fear i talk too much | StinkyAsher",
    "why": "Captures a dramatic confrontation and a humorous self-aware realization about their gameplay.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "StinkyAsher Gets Caught Whispering",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T17:28+00:00",
+   "file": "tdr-stinkyasher-09.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-09.mp4",
+   "video": "bJgeJaa-nAg",
+   "url": "https://youtube.com/shorts/bJgeJaa-nAg",
+   "uploaded": "2026-10-23T17:28+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-stinkyasher-10",

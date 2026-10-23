@@ -17,7 +17,7 @@
      "median_views": null
     }
    },
-   "best": "letterbox"
+   "best": null
   },
   "captions": {
    "arms": {
@@ -30,7 +30,7 @@
      "median_views": 0.0
     }
    },
-   "best": "lines"
+   "best": null
   },
   "punch": {
    "arms": {
@@ -43,7 +43,7 @@
      "median_views": 0.0
     }
    },
-   "best": "none"
+   "best": null
   },
   "length": {
    "arms": {
@@ -56,7 +56,7 @@
      "median_views": 0.0
     }
    },
-   "best": "as planned"
+   "best": null
   },
   "title": {
    "arms": {
@@ -69,7 +69,7 @@
      "median_views": 0.0
     }
    },
-   "best": "subject first"
+   "best": null
   }
  },
  "campaigns": {

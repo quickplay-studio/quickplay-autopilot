@@ -42,8 +42,8 @@
      "AI-generated video",
      "slang from outside the US and UK"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English captions and on-screen text",
     "full_frame": true,
     "full_frame_note": "the yellow suitcase and Speed must both stay in frame, so no face crop"
@@ -101,8 +101,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-11-06",
@@ -145,8 +145,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-11-02",
@@ -189,8 +189,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-11-02",
@@ -233,8 +233,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-11-02",
@@ -277,8 +277,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-10-29",
@@ -322,8 +322,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English",
     "series": "Each episode in order as Part 1, Part 2, Part 3 (whole episodes, nothing left out, nothing reordered)."
    },
@@ -367,8 +367,8 @@
      "anything that misrepresents the video or the people in it",
      "profanity or anything not brand safe"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-10-30",
@@ -408,8 +408,8 @@
      "exaggerated hooks or rage bait",
      "political or controversial content"
     ],
-    "min_s": 15,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "submit": {
@@ -514,8 +514,8 @@
      "collab posts or tagged accounts",
      "profanity or anything not brand safe"
     ],
-    "min_s": 20,
-    "max_s": 55,
+    "min_s": 25,
+    "max_s": 75,
     "language": "English"
    },
    "ends": "2026-10-30",

@@ -42,20 +42,26 @@ print("4 batch time ok")
 C.PLANS = pathlib.Path(SCRATCH) / "plans"
 C.transcribe = lambda cid: [{"w": f"w{i}", "s": i * 1.0, "e": i * 1.0 + 0.5} for i in range(600)]
 import factpack
-factpack.gemini = lambda prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer=None: ({"moments": [
+PROMPTS = []
+factpack.gemini = lambda prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer=None, writing=False: (PROMPTS.append((prompt, writing, lite)), {"moments": [
     {"start": 10, "end": 40, "hook": "He opens it", "label": "Tokyo", "title": "IShowSpeed finds Tokyo"},
     {"start": 30, "end": 60, "hook": "overlaps the first", "label": "", "title": "x"},
     {"start": 100, "end": 104, "hook": "too short", "title": "x"},
     {"start": 200, "end": 300, "hook": "too long", "title": "x"},
-    {"start": 400, "end": 440, "hook": "the second reveal", "label": "Paris, France", "title": "IShowSpeed and Paris"}]}, "stub")
+    {"start": 400, "end": 440, "hook": "the second reveal", "label": "Paris, France", "title": "IShowSpeed and Paris", "score": 9},
+    {"start": 500, "end": 540, "hook": "a dull bit", "title": "x", "score": 3}]})[1:] + ("stub",)
 plan = C.plan("speed-expedia")
 ids = [m["id"] for m in plan["moments"]]
 assert ids == ["speed-expedia-01", "speed-expedia-02", "speed-expedia-03"], ids
-assert plan["moments"][0]["start"] == 9.7 and plan["moments"][0]["end"] == 40.4 and plan["moments"][2]["label"] == "Paris, France"
-assert plan["moments"][1]["end"] - plan["moments"][1]["start"] == 55      # a long pick is cut to the limit
+by = {m["hook"]: m for m in plan["moments"]}
+assert plan["moments"][0]["hook"] == "the second reveal" and plan["moments"][0]["score"] == 9     # the likeliest hit first
+assert by["He opens it"]["start"] == 9.7 and by["He opens it"]["end"] == 40.4 and by["the second reveal"]["label"] == "Paris, France"
+assert by["too long"]["end"] - by["too long"]["start"] == 75      # a long pick is cut to the limit (75 s since 23 October)
+assert "a dull bit" not in by and PROMPTS[-1][1:] == (True, True)  # a low virality score is dropped; strong free models, never Claude
 assert C.unmade("speed-expedia") == 3
 plan2 = C.plan("speed-expedia")                       # the same answer again: everything overlaps what is planned
 assert len(plan2["moments"]) == 3
+assert "(already clipped)" in PROMPTS[-1][0]      # taken lines are marked for the planner
 print("5 planning ok")
 
 # 6. one synthetic render, when ffmpeg is installed here
@@ -192,3 +198,11 @@ assert C.reach_share(10**9) == 0.1                            # (0 + 1) / (6 + 4
 C.ROOT = _old
 print("reach share ok")
 
+
+# clip test verdicts need real views: four arms of zero views never crown the first one (23 October: "letterbox" won 0-0)
+C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir(exist_ok=True)
+zero = [{"privacy": "public", "hours_public": "30", "views": "0", "campaign": "c", **{f"test_{t}": C.TESTS[t][k % len(C.TESTS[t])] for t in C.TESTS}} for k in range(12)]
+assert all(v["best"] is None for v in C.insights(zero)["tests"].values())
+some = [dict(r, views="40" if r["test_layout"] == "full" else "2") for r in zero]
+assert C.insights(some)["tests"]["layout"]["best"] == "full"
+print("verdicts ok")

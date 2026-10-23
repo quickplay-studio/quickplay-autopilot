@@ -34,10 +34,15 @@ clipping channel under a campaign with these rules, which every clip must keep:
 - {focus}
 - {on_screen}
 - Avoid: {avoid}
-- Each clip runs {min_s} to {max_s} seconds, starts at a natural moment (a question, a reveal, a reaction) and ends on
-  the payoff (the reaction, the punchline, the reveal), never mid-sentence.
-Pick up to {n} moments, best first: the funniest reactions, the biggest reveals, the lines people quote. Spread them
-across the segment; no two may overlap. Already made (skip anything that overlaps these): {done}.
+- Each clip runs {min_s} to {max_s} seconds (longer is better when the moment holds: a whole mini story keeps people
+  watching), starts at a natural moment and ends on the payoff (the reaction, the punchline, the reveal), never
+  mid-sentence.
+Pick up to {n} moments that would go viral on their own, best first. A viral clip: the first 2 seconds already grab
+(something surprising said or happening, mid-action, never a greeting or set-up); it makes sense to someone who never
+saw the stream; it builds to one big payoff (a shock, a huge win or fail, a hilarious reaction, a line people will quote
+or argue about in the comments); and it ends right after the payoff. Skip quiet talk, explanations and anything that
+needs context. Score each 1 to 10 for how likely it is to go viral, honestly: most moments are 5 or below.
+Spread them across the segment; no two may overlap. Lines marked (already clipped) are taken: never pick them.
 {searches}The transcript is a list of lines with their start and end seconds:
 {lines}
 Hooks and titles stay family friendly and brand safe: fun, drama, chaos and wins are fine; never trauma, abuse, mental
@@ -45,7 +50,8 @@ illness, self-harm, cruelty, slurs or threats, even as a joke, and never a word 
 Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line, 8 words or fewer, in capitals OK, what
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
-comments that viewers can answer, under 90 characters, UK English spelling (favourite, colour)", "why": "one line"}}]}}"""
+comments that viewers can answer, under 90 characters, UK English spelling (favourite, colour)", "score": 1 to 10,
+"why": "one line: the grab, the payoff"}}]}}"""
 
 
 def log(*a): print(*a, flush=True)
@@ -327,6 +333,21 @@ def lines_of(words, every=6.0):
     return lines
 
 
+MIN_S, MAX_S = 25, 75        # clip length unless a campaign's rules say otherwise (Charlie, 23 October: longer clips)
+MIN_SCORE = 6                # the planner's own virality score (1 to 10): below this a moment isn't worth a clip
+
+
+def marked(lines, done):
+    """Transcript lines inside a moment already clipped are marked, so the planner stops offering them again (the 23
+    October runs lost 8 of 8 picks to overlaps)."""
+    out = []
+    for ln in lines:
+        m = re.match(r"\[(\d+)-(\d+)\]", ln)
+        if m and any(int(m.group(1)) < y and int(m.group(2)) > x for x, y in done): ln += " (already clipped)"
+        out.append(ln)
+    return out
+
+
 def plan(cid, n=8):
     """The moments worth a clip, from the transcript, checked against the rules' lengths; appended to clips/plans/<id>.json."""
     import factpack
@@ -340,22 +361,23 @@ def plan(cid, n=8):
     prompt = PLAN_PROMPT.format(label=c["source"].get("label", cid), focus=r["focus"], on_screen=r["on_screen"],
                                 searches=(f"What people type into YouTube search about {c['subject']} right now: {'; '.join(terms)}. Prefer the "
                                           "moments those searches would want, and use their words in a hook or title when they fit.\n") if terms else "",
-                                avoid="; ".join(r.get("avoid") or []), min_s=r.get("min_s", 15), max_s=r.get("max_s", 55), n=n,
-                                subject=c["subject"], done=", ".join(f"{a:.0f}-{b:.0f}s" for a, b in done) or "none",
-                                lines="\n".join(lines_of(words)))
-    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.4)
+                                avoid="; ".join(r.get("avoid") or []), min_s=r.get("min_s", MIN_S), max_s=r.get("max_s", MAX_S), n=n,
+                                subject=c["subject"], lines="\n".join(marked(lines_of(words), done)))
+    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.4, writing=True, lite=True)    # the best free models, never Claude
     total = words[-1]["e"]
-    added, why = 0, {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0}
+    added, why = 0, {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 0}
     if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict) and x.get("moments")), {"moments": [x for x in ans if isinstance(x, dict) and "start" in x]})
     raw = (ans.get("moments") if isinstance(ans, dict) else None) or []
     if not raw: log(f"{cid}: the model gave no moments: {json.dumps(ans)[:300]}")
+    raw = sorted((m for m in raw if isinstance(m, dict)), key=lambda m: -(num(m.get("score")) or 0))     # the likeliest hits first
     for m in raw:
         try:
             a, b = (secs(m["start"]) if ":" in str(m["start"]) else float(m["start"])), (secs(m["end"]) if ":" in str(m["end"]) else float(m["end"]))
         except (KeyError, TypeError, ValueError): why["bad time"] += 1; continue
         a, b = max(0.0, a - 0.3), min(total, b + 0.4)      # a breath before, the reaction after
-        if b - a > r.get("max_s", 55) + 1: b = a + r.get("max_s", 55)      # a long pick is cut to the limit, the payoff is usually early
-        if not r.get("min_s", 15) <= b - a: why["length"] += 1; continue
+        if b - a > r.get("max_s", MAX_S) + 1: b = a + r.get("max_s", MAX_S)      # a long pick is cut to the limit, the payoff is usually early
+        if not r.get("min_s", MIN_S) <= b - a: why["length"] += 1; continue
+        if num(m.get("score")) is not None and num(m.get("score")) < MIN_SCORE: why["low score"] += 1; continue
         if any(a < y and b > x for x, y in done): why["overlap"] += 1; continue
         hook = re.sub(r"[–—]", "-", str(m.get("hook") or "")).strip()[:60]
         if not hook: why["no hook"] += 1; continue
@@ -365,7 +387,7 @@ def plan(cid, n=8):
                                  "hook": hook, "label": str(m.get("label") or "").strip()[:40],
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
                                  "why": str(m.get("why") or "")[:200], "planned": NOW.isoformat(timespec="minutes"), "model": model,
-                                 "peak": num(m.get("peak")),
+                                 "peak": num(m.get("peak")), "score": num(m.get("score")),
                                  "question": re.sub(r"[–—]", "-", str(m.get("question") or "")).strip()[:90]})
         done.append((a, b)); added += 1
     PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -539,7 +561,7 @@ def layout_filters(layout, face):
 
 
 TESTS = {"layout": ["letterbox", "full", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
-         "length": ["as planned", "short"], "title": ["subject first", "hook first"]}
+         "length": ["as planned"], "title": ["subject first", "hook first"]}     # "short" arm retired 23 October: longer clips
 
 
 def short_end(words, a, b, peak, min_s=15, max_s=28.0):
@@ -949,8 +971,8 @@ def engage():
 
 
 def insights(rows):
-    """clips/insights.json: for each test (layout, captions, punch) and each campaign, the median views of public clips
-    24 hours old or more, and the best arm when it has 3 clips and beats the rest by 10%. test_plan() leans on it."""
+    """clips/insights.json: for each test (layout, captions, punch) and each campaign, the median and mean views of public clips
+    24 hours old or more, and the best arm when it has 3 clips, a mean of 20 views or more and beats the rest by 10%. test_plan() leans on it."""
     aged = [r for r in rows if r.get("privacy") == "public" and float(r.get("hours_public") or 0) >= 24]
     out = {"updated": NOW.isoformat(timespec="minutes"), "clips": len(aged), "tests": {}, "campaigns": {}}
     def med(vals): vals = sorted(vals); return vals[len(vals) // 2] if vals else None
@@ -959,8 +981,13 @@ def insights(rows):
         for arm in TESTS[t]:
             vals = [float(r["views"] or 0) for r in aged if r.get(f"test_{t}") == arm]
             arms[arm] = {"n": len(vals), "median_views": med(vals)}
-        ranked = sorted((a for a in arms if arms[a]["n"] >= 3), key=lambda a: -arms[a]["median_views"])
-        best = ranked[0] if ranked and (len(ranked) == 1 or arms[ranked[0]]["median_views"] >= 1.1 * (arms[ranked[1]]["median_views"] or 0)) else None
+        for arm in arms:
+            vals = [float(r["views"] or 0) for r in aged if r.get(f"test_{t}") == arm]
+            arms[arm]["mean_views"] = round(sum(vals) / len(vals), 1) if vals else None
+        ranked = sorted((a for a in arms if arms[a]["n"] >= 3), key=lambda a: -(arms[a]["mean_views"] or 0))
+        top = arms[ranked[0]]["mean_views"] or 0 if ranked else 0
+        second = (arms[ranked[1]]["mean_views"] or 0) if len(ranked) > 1 else 0
+        best = ranked[0] if ranked and top >= 20 and top >= 1.1 * second else None     # no verdict from clips nobody watched
         out["tests"][t] = {"arms": arms, "best": best}
     for cid in {r["campaign"] for r in aged}:
         vals = [float(r["views"] or 0) for r in aged if r["campaign"] == cid]

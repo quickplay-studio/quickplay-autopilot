@@ -259,3 +259,31 @@ assert C.min_score() == 8
 flat = [dict(r, views="5") for r in rows]
 assert C.insights(flat)["min_score"] is None and C.min_score() == C.MIN_SCORE
 print("viral score ok")
+
+# private test clips join the next batch only when asked ("promote"): the publish time on YouTube, the day's count, the
+# submit rows' public time; a test older than 48 hours stays private
+import quota
+quota.allow, quota.spend = (lambda *a, **k: True), (lambda *a, **k: None)
+CALLS = []
+class _V:
+    def update(self, part, body): CALLS.append((part, body)); return types.SimpleNamespace(execute=lambda: {})
+C.clips_client = lambda ch: types.SimpleNamespace(videos=lambda: _V())
+plan_p = C.PLANS / "speed-expedia.json"
+pl = json.loads(plan_p.read_text())
+pl["moments"].append({"id": "speed-expedia-49", "video": "old", "publish_at": "private", "channel": "clips",
+                      "uploaded": (C.NOW - dt.timedelta(days=3)).isoformat(timespec="minutes")})
+plan_p.write_text(json.dumps(pl))
+C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir(exist_ok=True)
+with (C.ROOT / "clips" / "submit.csv").open("w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=C.SUBMIT_FIELDS); w.writeheader()
+    w.writerow({"clip": "speed-expedia-50", "campaign": "speed-expedia", "public_at_uk": "private (test)", "video": "https://youtube.com/shorts/vid2"})
+iso, when = C.batch_time(C.campaigns()["speed-expedia"].get("platform"))
+assert C.promote_tests() == 2 and len(CALLS) == 2, CALLS
+assert all(p == "status" and b["status"]["publishAt"] == iso and b["status"]["privacyStatus"] == "private" for p, b in CALLS), CALLS
+ms = {m["id"]: m for m in json.loads(plan_p.read_text())["moments"]}
+assert ms["speed-expedia-50"]["publish_at"] == iso and ms["speed-expedia-49"]["publish_at"] == "private"
+assert C.scheduled_today("clips") == 2
+row = next(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))
+assert row["public_at_uk"] == when.strftime("%Y-%m-%d %H:%M"), row
+assert C.promote_tests() == 0          # once only
+print("promote ok")

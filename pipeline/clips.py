@@ -891,6 +891,48 @@ def upload(cid, mode=None):
     return rows
 
 
+def promote_tests(hours=48):
+    """Private test clips (CLIPS_MODE=private) join the next batch instead of being wasted: each uploaded in the last
+    `hours` for a campaign still running gets the batch's publish time on YouTube, counts toward its channel's day (so the
+    next run makes that many fewer) and its submit row gets the public time (so it is posted and submitted like the rest).
+    Only when asked: "promote" in requests/clips.txt (a test stays private otherwise). 23 October: the spoken-take test
+    made 11 good clips privately."""
+    import quota
+    cs, cut, clients, n, fixed = campaigns(), NOW - dt.timedelta(hours=hours), {}, 0, {}
+    for p in sorted(PLANS.glob("*.json")):
+        if p.name.endswith(".words.json") or p.stem not in cs: continue
+        cid = p.stem; plan_ = json.loads(p.read_text()); changed = False
+        iso, when = batch_time(cs[cid].get("platform"))
+        for m in plan_.get("moments") or []:
+            if m.get("publish_at") != "private" or not m.get("video") or m.get("pulled"): continue
+            try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
+            except ValueError: continue
+            if up < cut: continue
+            if not quota.allow(50, "clip promote"): log("promote: no YouTube allowance left today"); break
+            ch = mchannel(cid, m)
+            try:
+                if ch not in clients: clients[ch] = clips_client(ch)
+                clients[ch].videos().update(part="status", body={"id": m["video"], "status": {
+                    "privacyStatus": "private", "publishAt": iso, "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False}}).execute()
+                quota.spend(50, "clip promote")
+            except Exception as e:
+                log(f"{m['id']}: not promoted: {type(e).__name__}: {str(e)[:160]}"); continue
+            m.update(publish_at=iso, mode="batch", promoted=NOW.isoformat(timespec="minutes"))
+            fixed[m["id"]] = when.strftime("%Y-%m-%d %H:%M"); changed = True; n += 1
+            log(f"{m['id']}: private test promoted: public with the batch at {when:%H:%M} UK on {ch}")
+        if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    sp = ROOT / "clips" / "submit.csv"
+    if fixed and sp.exists():
+        rows = list(csv.DictReader(sp.open()))
+        for r in rows:
+            if r.get("clip") in fixed and str(r.get("public_at_uk", "")).startswith("private"): r["public_at_uk"] = fixed[r["clip"]]
+        with sp.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=SUBMIT_FIELDS, extrasaction="ignore"); w.writeheader()
+            w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in rows])
+    log(f"promote: {n} private test clip(s) join the next batch")
+    return n
+
+
 OUTREL = "clips-out"
 REPO = os.environ.get("GITHUB_REPOSITORY", "quickplay-studio/quickplay-autopilot")
 SUBMIT_FIELDS = ["clip", "campaign", "campaign_url", "platform", "video", "public_at_uk", "title", "hashtags", "submitted", "channel"]
@@ -1434,11 +1476,17 @@ def main(argv):
     if cmd == "submit":
         submissions(dry=bool(os.environ.get("SUBMIT_DRY")))
         return
+    if cmd == "promote":
+        promote_tests()
+        return
     if cmd == "probe":
         for u in ids: probe(u)
         return
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
-    deadline = time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110)      # the job stops at 150: save what is made
+    # the job is stopped at 170 minutes and its Save step must still run: at most 110 minutes here, and never past 135
+    # minutes from the job's start (JOB_T0; on 23 October the runner's installs alone took 37 minutes)
+    deadline = min(time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110),
+                   float(os.environ.get("JOB_T0") or time.time()) + 60 * 135)
     cs = campaigns()
     if cmd in ("run", "prepare"):
         try: check_campaigns()

@@ -4,7 +4,7 @@ name: clips
 # to its campaign itself (pipeline/submit.py, with the studio's sign-ins from tokens/, see logins.yml; what it cannot
 # submit stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
 # "stats" refreshes clips/stats.csv only; "submit" puts the public links into their campaigns now ("submit probe" only
-# checks the sign-ins work).
+# checks the sign-ins work); "promote" schedules the last 48 hours' private test clips into the next batch.
 on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
@@ -35,14 +35,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"     # clips.py stops starting new campaigns 135 minutes after this
       - name: Identity guard
         run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - run: |
-          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          # retries and time limits: on 23 October these installs stalled for 37 minutes on a slow package mirror
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+          timeout 900 sudo apt-get $APT install -y -q ffmpeg fonts-dejavu-core
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography gdown faster-whisper playwright Pillow "opencv-python-headless<5" google-api-python-client==2.* google-auth==2.* tzdata
-          python -m playwright install --with-deps chromium >/dev/null 2>&1 || python -m playwright install chromium
+          timeout 900 python -m playwright install --with-deps chromium >/dev/null 2>&1 || timeout 600 python -m playwright install chromium
           sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
       # our own take on every clip (23 October): the Daily Shorts' voice (Chatterbox) reads the intro and the reaction,
       # installed only for the runs that make clips
@@ -97,6 +101,8 @@ jobs:
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qi scout; then
             python pipeline/submit.py scout 2>&1 | tee status/clips_log.txt
+          elif echo "$req" | grep -qi promote; then
+            python pipeline/clips.py promote 2>&1 | tee status/clips_log.txt      # private test clips join the next batch
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
             python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt

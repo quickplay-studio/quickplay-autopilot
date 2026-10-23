@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 16:43): 8 of 1,000 subscribers · 5,760 of 10 million Shorts views in 90 days · 2,422 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 17:42): 8 of 1,000 subscribers · 5,958 of 10 million Shorts views in 90 days · 2,984 views in the last 24 hours (about 111,045 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 17:21 (UK): 2 scheduled, 124 public, 24 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 16 public, 2 scheduled | 22 | 2 | ⏳ 16 of 40 so far, 2 more scheduled |
+| Fri 23 Oct | 17 public, 1 scheduled | 22 | 2 | ⏳ 17 of 40 so far, 1 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -62,6 +62,10 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
+## In the queue
+
+- **QD-143** Jenna Ortega’s book and Forbes fame 📚 (rendering next)
+
 ## On the channel (latest first)
 
 ### Fri 23 Oct 18:00 · Jerry Hall’s record-breaking music night 🎤
@@ -70,7 +74,7 @@ scheduled · 29 s · music: after-sunset · [script](../boards/done/QD-142.json)
 ![QD-142](QD-142.jpg)
 
 ### Fri 23 Oct 17:30 · Avengers Doomsday preview drops during World Series ⚾
-scheduled · 24 s · music: in-battery · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
+private · 24 s · music: in-battery · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
 
 ![QD-141](QD-141.jpg)
 

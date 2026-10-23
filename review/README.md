@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 13:47): 8 of 1,000 subscribers · 5,894 of 10 million Shorts views in 90 days · 1,811 views in the last 24 hours (about 111,046 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 14:29): 8 of 1,000 subscribers · 5,928 of 10 million Shorts views in 90 days · 1,851 views in the last 24 hours (about 111,045 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Fri 23 Oct 12:15 (UK): 8 scheduled, 114 public, 27 uploads in the last 24 hours.
+YouTube checked Fri 23 Oct 14:29 (UK): 5 scheduled, 118 public, 24 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 12:04).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 10 public, 5 scheduled | 22 | 2 | ⏳ 10 of 40 so far, 5 more scheduled |
+| Fri 23 Oct | 11 public, 4 scheduled | 22 | 2 | ⏳ 11 of 40 so far, 4 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -40,9 +40,9 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (14 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (18 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (2 of 8 Shorts measured)
-- Testing energy: camera motion 0.7, punch-ins 0.05 (3 of 8 Shorts measured)
+- Testing energy: camera motion 0.7, punch-ins 0.05 (4 of 8 Shorts measured)
 - Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (2 of 8 Shorts measured)
 - 2026-10-23: opening retired graphic_first (1.22x against 1.88x for image_first over 35 Shorts)
@@ -64,6 +64,11 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## On the channel (latest first)
 
+### Fri 23 Oct 16:30 · Modern Warfare 4: New matchmaking system revealed 🎮
+scheduled · 43 s · music: dead-wrong · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
+
+![QD-139](QD-139.jpg)
+
 ### Fri 23 Oct 16:00 · Top 10 highest-grossing superhero films ever 🎬
 scheduled · 35 s · music: across-seas-and-lands · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
 
@@ -80,27 +85,27 @@ scheduled · 29 s · music: city-of-the-wolf · [script](../boards/done/QD-136.j
 ![QD-136](QD-136.jpg)
 
 ### Fri 23 Oct 14:30 · Tate McRae: The new number one hit 🎶
-scheduled · 23 s · music: dance-with-you · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
+private · 23 s · music: dance-with-you · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
 
 ![QD-135](QD-135.jpg)
 
 ### Fri 23 Oct 14:00 · I Play Rocky: Sylvester Stallone biopic trailer 🥊
-private · 32 s · music: scale-the-mountain · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
+public · 4 views · 32 s · music: scale-the-mountain · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
 
 ![QD-134](QD-134.jpg)
 
 ### Fri 23 Oct 13:30 · BABYMONSTER: The massive world tour expansion 🎤
-private · 32 s · music: dance-with-you · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
+public · 44 views · 32 s · music: dance-with-you · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
 
 ![QD-133](QD-133.jpg)
 
 ### Fri 23 Oct 13:00 · LISA: Her first solo EP is coming 🎤
-private · 29 s · music: dance-with-you · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
+public · 1 views · 29 s · music: dance-with-you · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
 
 ![QD-132](QD-132.jpg)
 
 ### Fri 23 Oct 12:30 · Katie Boulter: British star reaches Japan Open 🎾
-private · 25 s · music: paradigm · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
+public · 28 views · 25 s · music: paradigm · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
 
 ![QD-131](QD-131.jpg)
 
@@ -115,7 +120,7 @@ public · 4 views · 25 s · music: house-on-the-hill · [script](../boards/done
 ![QD-129](QD-129.jpg)
 
 ### Fri 23 Oct 10:00 · Jenna Ortega: stepping away from television 📺
-public · 7 views · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
+public · 137 views · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
 
 ![QD-128](QD-128.jpg)
 
@@ -135,7 +140,7 @@ public · 13 views · 24 s · music: stake-out · on Facebook · [script](../boa
 ![QD-124](QD-124.jpg)
 
 ### Thu 22 Oct 23:30 · Queen's legendary Live Aid performance 🎤
-public · 17 views · 28 s · music: duty-calls · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
+public · 27 views · 28 s · music: duty-calls · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
 
 ![QD-123](QD-123.jpg)
 
@@ -160,12 +165,12 @@ public · 25 s · music: defying-gravity · on Facebook · [script](../boards/do
 ![QD-119](QD-119.jpg)
 
 ### Thu 22 Oct 17:30 · Julia Stiles honours Heath Ledger on DWTS 🎭
-public · 34 views · 29 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
+public · 35 views · 29 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
 
 ![QD-118](QD-118.jpg)
 
 ### Thu 22 Oct 17:00 · Ronnie O'Sullivan stunned by qualifier 😲
-public · 24 views · 26 s · music: rise-of-the-machines · on Facebook · [script](../boards/done/QD-117.json) · [YouTube](https://youtube.com/shorts/6ghvpNf9Mu8)
+public · 29 views · 26 s · music: rise-of-the-machines · on Facebook · [script](../boards/done/QD-117.json) · [YouTube](https://youtube.com/shorts/6ghvpNf9Mu8)
 
 ![QD-117](QD-117.jpg)
 
@@ -175,22 +180,22 @@ public · 15 views · 41 s · music: risen · on Facebook · [script](../boards/
 ![QD-116](QD-116.jpg)
 
 ### Thu 22 Oct 14:30 · How BioWare built Knights of the Old Republic 🌌
-public · 11 views · 25 s · music: risen · on Facebook · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
+public · 13 views · 25 s · music: risen · on Facebook · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
 
 ![QD-115](QD-115.jpg)
 
-### Thu 22 Oct 14:00 · Dancing with the Stars makes history 💃
+### Thu 22 Oct 14:00 · Dancing with the Stars season 35 firsts 🌟
 public · 1 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
 
 ![QD-113](QD-113.jpg)
 
-### Thu 22 Oct 13:30 · Cyberpunk 2077 gets massive new update 🎮
+### Thu 22 Oct 13:30 · Cyberpunk 2077 adds Edgerunners quests 🌆
 public · 13 views · 21 s · music: the-bombs · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 
 ### Thu 22 Oct 13:00 · Nobody Wants This S3 romance twist 🎬
-public · 99 views · 24 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
+public · 102 views · 24 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
 
 ![QD-111](QD-111.jpg)
 
@@ -200,7 +205,7 @@ public · 22 views · 25 s · music: mirror-mirror · on Instagram · on Faceboo
 ![QD-110](QD-110.jpg)
 
 ### Thu 22 Oct 11:30 · It Gets Worse: Leo Reich’s triple‑threat comedy 📺
-public · 93 views · 28 s · music: sneaky-spelunking · on Instagram · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
+public · 131 views · 28 s · music: sneaky-spelunking · on Instagram · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
 
 ![QD-109](QD-109.jpg)
 
@@ -250,16 +255,11 @@ public · 18 views · 25 s · music: in-battery · on Instagram · [script](../b
 ![QD-099](QD-099.jpg)
 
 ### Thu 22 Oct 2:30 · Mark Allen snooker career highlights 🎱
-public · 121 views · 30 s · music: twin-lynches · on Instagram · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
+public · 126 views · 30 s · music: twin-lynches · on Instagram · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
 
 ![QD-098](QD-098.jpg)
 
 ### Thu 22 Oct 2:00 · How The Beatles recorded Please Please Me in one day 🎶
-public · 11 views · 21 s · music: death-duel · on Instagram · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
+public · 12 views · 21 s · music: death-duel · on Instagram · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
 
 ![QD-097](QD-097.jpg)
-
-### Thu 22 Oct 1:30 · Dave Raindance hits number one 🎶
-public · 50 views · 27 s · music: good-energy · on Instagram · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
-
-![QD-096](QD-096.jpg)

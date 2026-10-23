@@ -1,8 +1,15 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Clayface (film): 2 verified, 2 one-source, 4 pages
-ChatGPT: 0 verified, 4 one-source, 2 pages
-ROBLOX THE HOLLOW: 4 verified, 0 one-source, 2 pages
-JEV PLAYS MODERN WARFARE 4 MULTIPLAYER: 0 verified, 3 one-source, 2 pages
-iPhone Duo Vs iPhone 18: 0 verified, 1 one-source, 3 pages
-5 packs, 6 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+the northumbria mysteries: 9 verified, 3 one-source, 2 pages
+avengers doomsday: 1 verified, 1 one-source, 2 pages
+Clayface (film): 2 verified, 3 one-source, 3 pages
+Jerry Hall: 0 verified, 8 one-source, 2 pages
+BioWare: 0 verified, 1 one-source, 4 pages
+LISA: 0 verified, 1 one-source, 2 pages
+BABYMONSTER: 1 verified, 0 one-source, 2 pages
+The Rings of Power: 0 verified, 1 one-source, 1 pages
+ROBLOX THE HOLLOW: 3 verified, 0 one-source, 2 pages
+JEV PLAYS MODERN WARFARE 4 MULTIPLAYER: 0 verified, 0 one-source, 2 pages
+Olivia Rodrigo: 1 verified, 1 one-source, 3 pages
+iPhone Duo Vs iPhone 18: 1 verified, 6 one-source, 3 pages
+12 packs, 18 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 13}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

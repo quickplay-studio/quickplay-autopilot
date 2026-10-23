@@ -1,58 +1,124 @@
 {
- "updated": "2026-10-23T08:44+00:00",
+ "updated": "2026-10-23T13:29+00:00",
  "writers": {
   "gemini:gemini-3-flash-preview": {
    "n": 6,
    "shorts": 7,
-   "score": 0.625,
-   "views_vs_typical": 0.22
+   "score": 0.591,
+   "views_vs_typical": 0.24
   },
   "gemini:gemini-3.1-flash-lite": {
    "n": 1,
    "shorts": 5,
    "score": 0.0,
-   "views_vs_typical": 0.04
+   "views_vs_typical": 0.05
   },
   "gemini:gemini-3.5-flash": {
-   "n": 1,
-   "shorts": 3,
-   "score": 0.364,
-   "views_vs_typical": 0.26
+   "n": 2,
+   "shorts": 4,
+   "score": 0.191,
+   "views_vs_typical": 0.16
   },
   "gemini:gemini-3.5-flash-lite": {
    "n": 21,
    "shorts": 24,
-   "score": 0.75,
-   "views_vs_typical": 0.36
+   "score": 1.18,
+   "views_vs_typical": 0.41
   },
   "gemini:gemini-3.6-flash": {
    "n": 1,
-   "shorts": 2,
-   "score": 0.174,
-   "views_vs_typical": 0.13
+   "shorts": 4,
+   "score": 0.182,
+   "views_vs_typical": 0.14
   },
   "gemini:gemini-3.7-flash": {
-   "n": 0,
-   "shorts": 1
+   "n": 1,
+   "shorts": 2,
+   "score": 0.5,
+   "views_vs_typical": 0.52
   },
   "gemini:gemini-3.8-flash": {
    "n": 1,
    "shorts": 1,
-   "score": 0.333,
-   "views_vs_typical": 0.1
+   "score": 0.364,
+   "views_vs_typical": 0.11
   },
   "gemini:gemini-flash-latest": {
-   "n": 4,
-   "shorts": 5,
-   "score": 0.682,
-   "views_vs_typical": 0.19
+   "n": 5,
+   "shorts": 8,
+   "score": 0.545,
+   "views_vs_typical": 0.3
   },
   "groq:openai/gpt-oss-120b": {
-   "n": 2,
+   "n": 5,
    "shorts": 7,
-   "score": 0.869,
-   "views_vs_typical": 2.18
+   "score": 1.366,
+   "views_vs_typical": 2.08
   }
  },
- "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts."
+ "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts.",
+ "editors": {
+  "none": {
+   "n": 43,
+   "shorts": 62,
+   "score": 0.636,
+   "views_vs_typical": 0.39
+  }
+ },
+ "combos": {
+  "gemini:gemini-3-flash-preview + no edit": {
+   "n": 6,
+   "shorts": 7,
+   "score": 0.591,
+   "views_vs_typical": 0.24
+  },
+  "gemini:gemini-3.1-flash-lite + no edit": {
+   "n": 1,
+   "shorts": 5,
+   "score": 0.0,
+   "views_vs_typical": 0.05
+  },
+  "gemini:gemini-3.5-flash + no edit": {
+   "n": 2,
+   "shorts": 4,
+   "score": 0.191,
+   "views_vs_typical": 0.16
+  },
+  "gemini:gemini-3.5-flash-lite + no edit": {
+   "n": 21,
+   "shorts": 24,
+   "score": 1.18,
+   "views_vs_typical": 0.41
+  },
+  "gemini:gemini-3.6-flash + no edit": {
+   "n": 1,
+   "shorts": 4,
+   "score": 0.182,
+   "views_vs_typical": 0.14
+  },
+  "gemini:gemini-3.7-flash + no edit": {
+   "n": 1,
+   "shorts": 2,
+   "score": 0.5,
+   "views_vs_typical": 0.52
+  },
+  "gemini:gemini-3.8-flash + no edit": {
+   "n": 1,
+   "shorts": 1,
+   "score": 0.364,
+   "views_vs_typical": 0.11
+  },
+  "gemini:gemini-flash-latest + no edit": {
+   "n": 5,
+   "shorts": 8,
+   "score": 0.545,
+   "views_vs_typical": 0.3
+  },
+  "groq:openai/gpt-oss-120b + no edit": {
+   "n": 5,
+   "shorts": 7,
+   "score": 1.366,
+   "views_vs_typical": 2.08
+  }
+ }
 }

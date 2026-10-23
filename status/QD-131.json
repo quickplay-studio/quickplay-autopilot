@@ -1,0 +1,95 @@
+{
+ "id": "QD-131",
+ "board": "boards/queue/QD-131.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T11:30:00Z",
+ "rendered": "2026-10-23T09:34:59.148013+00:00",
+ "title": "Katie Boulter: British star reaches Japan Open 🎾",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "paradigm",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.9
+ },
+ "timeline": [
+  [
+   0.06,
+   4.8,
+   "title",
+   0
+  ],
+  [
+   4.8,
+   9.87,
+   "none",
+   1
+  ],
+  [
+   9.87,
+   13.78,
+   "none",
+   1
+  ],
+  [
+   13.78,
+   17.0,
+   "none",
+   1
+  ],
+  [
+   17.0,
+   21.34,
+   "stat",
+   1
+  ],
+  [
+   21.34,
+   25.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "50109",
+   "q": "tennis court match",
+   "t0": 0.0,
+   "t1": 12.93
+  },
+  {
+   "p": "pixabay",
+   "id": "70858",
+   "q": "running track sunrise",
+   "t0": 12.33,
+   "t1": 25.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:17Z",
+ "video": "B_qYfZYCE8I",
+ "url": "https://youtube.com/shorts/B_qYfZYCE8I",
+ "publish_at": "2026-10-23T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T11:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-131"
+}

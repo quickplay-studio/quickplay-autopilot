@@ -1,0 +1,88 @@
+{
+ "id": "QD-134",
+ "board": "boards/queue/QD-134.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T13:00:00Z",
+ "rendered": "2026-10-23T09:34:33.349846+00:00",
+ "title": "I Play Rocky: Sylvester Stallone biopic trailer 🥊",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "scale-the-mountain",
+ "social_music": "motivational-530632",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "lab-opening-1019"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 31.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.8
+ },
+ "timeline": [
+  [
+   0.06,
+   5.09,
+   "title",
+   0
+  ],
+  [
+   5.09,
+   8.6,
+   "none",
+   1
+  ],
+  [
+   8.6,
+   14.62,
+   "none",
+   1
+  ],
+  [
+   14.62,
+   19.54,
+   "none",
+   1
+  ],
+  [
+   19.54,
+   23.2,
+   "date",
+   1
+  ],
+  [
+   23.2,
+   27.26,
+   "date",
+   1
+  ],
+  [
+   27.26,
+   31.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:25Z",
+ "video": "WjmzlG1lqf8",
+ "url": "https://youtube.com/shorts/WjmzlG1lqf8",
+ "publish_at": "2026-10-23T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-134"
+}

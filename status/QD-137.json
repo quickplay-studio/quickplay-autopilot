@@ -1,0 +1,95 @@
+{
+ "id": "QD-137",
+ "board": "boards/queue/QD-137.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T14:30:00Z",
+ "rendered": "2026-10-23T10:35:57.778799+00:00",
+ "title": "Top 10 most-streamed songs on Spotify of all time 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 12,
+  "planned_real": 12
+ },
+ "music": "dance-with-you",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 6.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.98,
+   "title",
+   0
+  ],
+  [
+   3.98,
+   8.41,
+   "none",
+   3
+  ],
+  [
+   8.41,
+   13.93,
+   "none",
+   3
+  ],
+  [
+   13.93,
+   17.82,
+   "none",
+   1
+  ],
+  [
+   17.82,
+   22.07,
+   "bars",
+   3
+  ],
+  [
+   22.07,
+   25.26,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "121110",
+   "q": "music studio mixing",
+   "t0": 0.0,
+   "t1": 12.93
+  },
+  {
+   "p": "pixabay",
+   "id": "110933",
+   "q": "neon city street night",
+   "t0": 12.33,
+   "t1": 25.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:31Z",
+ "video": "LPLtMQ4-QOI",
+ "url": "https://youtube.com/shorts/LPLtMQ4-QOI",
+ "publish_at": "2026-10-23T14:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T14:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-137"
+}

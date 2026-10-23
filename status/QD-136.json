@@ -1,0 +1,95 @@
+{
+ "id": "QD-136",
+ "board": "boards/queue/QD-136.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T14:00:00Z",
+ "rendered": "2026-10-23T10:34:55.565352+00:00",
+ "title": "Roblox The Hollow: Nine days of nightmare maze monsters 🎃",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "city-of-the-wolf",
+ "social_music": "mystery-suspect-199367",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 28.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.2
+ },
+ "timeline": [
+  [
+   0.06,
+   4.75,
+   "title",
+   0
+  ],
+  [
+   4.75,
+   8.31,
+   "none",
+   1
+  ],
+  [
+   8.31,
+   12.43,
+   "stat",
+   1
+  ],
+  [
+   12.43,
+   17.99,
+   "none",
+   1
+  ],
+  [
+   17.99,
+   22.41,
+   "none",
+   1
+  ],
+  [
+   22.41,
+   28.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "250461",
+   "q": "dark atmospheric lights",
+   "t0": 0.0,
+   "t1": 14.76
+  },
+  {
+   "p": "pixabay",
+   "id": "138495",
+   "q": "spooky horror hallway",
+   "t0": 14.16,
+   "t1": 28.92
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:29Z",
+ "video": "SwvtFiRJK0U",
+ "url": "https://youtube.com/shorts/SwvtFiRJK0U",
+ "publish_at": "2026-10-23T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-136"
+}

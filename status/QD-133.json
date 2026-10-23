@@ -1,0 +1,102 @@
+{
+ "id": "QD-133",
+ "board": "boards/queue/QD-133.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T12:30:00Z",
+ "rendered": "2026-10-23T09:34:46.934912+00:00",
+ "title": "BABYMONSTER: The massive world tour expansion 🎤",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "dance-with-you",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 32.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "title",
+   0
+  ],
+  [
+   4.0,
+   9.79,
+   "none",
+   1
+  ],
+  [
+   9.79,
+   16.56,
+   "none",
+   1
+  ],
+  [
+   16.56,
+   21.12,
+   "stat",
+   1
+  ],
+  [
+   21.12,
+   25.74,
+   "none",
+   1
+  ],
+  [
+   25.74,
+   29.25,
+   "cards",
+   1
+  ],
+  [
+   29.25,
+   32.36,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "4757",
+   "q": "crowd concert night",
+   "t0": 0.0,
+   "t1": 16.48
+  },
+  {
+   "p": "pixabay",
+   "id": "1257",
+   "q": "dj mixer lights",
+   "t0": 15.88,
+   "t1": 32.36
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:22Z",
+ "video": "1ObKNd47C68",
+ "url": "https://youtube.com/shorts/1ObKNd47C68",
+ "publish_at": "2026-10-23T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-133"
+}

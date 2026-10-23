@@ -1,0 +1,87 @@
+{
+ "id": "QD-138",
+ "board": "boards/queue/QD-138.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T15:00:00Z",
+ "rendered": "2026-10-23T09:47:45.039412+00:00",
+ "title": "Top 10 highest-grossing superhero films ever 🎬",
+ "background_notes": [
+  "Pixabay 'neon lights glowing background': 40 results, none at 720p or better",
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Avengers Endgame film: no Commons image named 'Avengers Endgame film')",
+  "beat 5 reused a nearby picture (commons-search:Avengers Endgame box office: no Commons image named 'Avengers Endgame box office')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lily",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 34.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.1,
+   "none",
+   0
+  ],
+  [
+   3.1,
+   11.04,
+   "none",
+   2
+  ],
+  [
+   11.04,
+   18.48,
+   "none",
+   2
+  ],
+  [
+   18.48,
+   27.45,
+   "none",
+   2
+  ],
+  [
+   27.45,
+   34.81,
+   "bars",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "3390",
+   "q": "movie theater projector light",
+   "t0": 0.0,
+   "t1": 34.81
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:33Z",
+ "video": "BjsQrem44PE",
+ "url": "https://youtube.com/shorts/BjsQrem44PE",
+ "publish_at": "2026-10-23T15:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T15:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-138"
+}

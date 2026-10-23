@@ -1,0 +1,102 @@
+{
+ "id": "QD-132",
+ "board": "boards/queue/QD-132.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T12:00:00Z",
+ "rendered": "2026-10-23T09:35:07.616744+00:00",
+ "title": "LISA: Her first solo EP is coming 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "dance-with-you",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "lab-energy-1019",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 29.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.04,
+   "none",
+   0
+  ],
+  [
+   3.04,
+   6.36,
+   "title",
+   1
+  ],
+  [
+   6.36,
+   13.43,
+   "none",
+   2
+  ],
+  [
+   13.43,
+   17.52,
+   "none",
+   1
+  ],
+  [
+   17.52,
+   21.63,
+   "title",
+   2
+  ],
+  [
+   21.63,
+   25.36,
+   "none",
+   1
+  ],
+  [
+   25.36,
+   29.02,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "205875",
+   "q": "neon city lights",
+   "t0": 0.0,
+   "t1": 14.81
+  },
+  {
+   "p": "pixabay",
+   "id": "380209",
+   "q": "music studio lights",
+   "t0": 14.21,
+   "t1": 29.02
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:20Z",
+ "video": "CY7Isfm6MqM",
+ "url": "https://youtube.com/shorts/CY7Isfm6MqM",
+ "publish_at": "2026-10-23T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-132"
+}

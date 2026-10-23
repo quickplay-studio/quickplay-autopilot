@@ -1,0 +1,111 @@
+{
+ "id": "QD-130",
+ "board": "boards/queue/QD-130.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T11:00:00Z",
+ "rendered": "2026-10-23T09:35:28.120123+00:00",
+ "title": "Formula 1: African Grand Prix deal signed 🏎️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Kyalami Grand Prix Circuit: no Commons image named 'Kyalami Grand Prix Circuit')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 31.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.07,
+   "title",
+   0
+  ],
+  [
+   4.07,
+   8.95,
+   "stat",
+   1
+  ],
+  [
+   8.95,
+   14.04,
+   "none",
+   1
+  ],
+  [
+   14.04,
+   17.76,
+   "none",
+   1
+  ],
+  [
+   17.76,
+   22.73,
+   "none",
+   1
+  ],
+  [
+   22.73,
+   27.11,
+   "quote",
+   1
+  ],
+  [
+   27.11,
+   31.35,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "10797",
+   "q": "race track grandstand lights",
+   "t0": 0.0,
+   "t1": 10.85
+  },
+  {
+   "p": "pixabay",
+   "id": "310872",
+   "q": "racing car pit lane",
+   "t0": 10.25,
+   "t1": 21.1
+  },
+  {
+   "p": "pixabay",
+   "id": "176043",
+   "q": "sports stadium floodlights",
+   "t0": 20.5,
+   "t1": 31.35
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:15Z",
+ "video": "u9wRS6aSxGQ",
+ "url": "https://youtube.com/shorts/u9wRS6aSxGQ",
+ "publish_at": "2026-10-23T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-130"
+}

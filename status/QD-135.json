@@ -1,0 +1,95 @@
+{
+ "id": "QD-135",
+ "board": "boards/queue/QD-135.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T13:30:00Z",
+ "rendered": "2026-10-23T09:35:08.767022+00:00",
+ "title": "Tate McRae: The new number one hit 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "dance-with-you",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 22.6,
+  "wps": 3.47,
+  "weak_beats": [],
+  "size_mb": 6.6
+ },
+ "timeline": [
+  [
+   0.06,
+   3.56,
+   "title",
+   0
+  ],
+  [
+   3.56,
+   6.84,
+   "none",
+   1
+  ],
+  [
+   6.84,
+   10.11,
+   "stat",
+   1
+  ],
+  [
+   10.11,
+   12.08,
+   "none",
+   1
+  ],
+  [
+   12.08,
+   15.58,
+   "none",
+   1
+  ],
+  [
+   15.58,
+   22.57,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "45443",
+   "q": "pop concert lights",
+   "t0": 0.0,
+   "t1": 11.58
+  },
+  {
+   "p": "pixabay",
+   "id": "30154",
+   "q": "city skyline night",
+   "t0": 10.98,
+   "t1": 22.56
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T10:46:27Z",
+ "video": "3lB5ozW1c14",
+ "url": "https://youtube.com/shorts/3lB5ozW1c14",
+ "publish_at": "2026-10-23T13:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T13:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-135"
+}

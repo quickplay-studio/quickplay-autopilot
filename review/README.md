@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 10:39): 8 of 1,000 subscribers · 5,778 of 10 million Shorts views in 90 days · 1,615 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 11:38): 8 of 1,000 subscribers · 5,808 of 10 million Shorts views in 90 days · 1,634 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 9:44 (UK): 2 scheduled, 111 public, 20 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 10:34).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 11:10).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 5 public | 18 | 2 | ⏳ 5 of 40 so far |
+| Fri 23 Oct | 5 public, 9 scheduled | 18 | 2 | ⏳ 5 of 40 so far, 9 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -61,18 +61,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
-
-## In the queue
-
-- **QD-130** Formula 1: African Grand Prix deal signed 🏎️ (rendering next)
-- **QD-131** Katie Boulter: British star reaches Japan Open 🎾 (rendering next)
-- **QD-132** LISA: Her first solo EP is coming 🎤 (rendering next)
-- **QD-133** BABYMONSTER: The massive world tour expansion 🎤 (rendering next)
-- **QD-134** I Play Rocky: Sylvester Stallone biopic trailer 🥊 (rendering next)
-- **QD-135** Tate McRae: The new number one hit 🎶 (rendering next)
-- **QD-136** Roblox The Hollow: Nine days of nightmare maze monsters 🎃 (rendering next)
-- **QD-137** Top 10 most-streamed songs on Spotify of all time 🎶 (rendering next)
-- **QD-138** Top 10 highest-grossing superhero films ever 🎬 (rendering next)
 
 ## On the channel (latest first)
 

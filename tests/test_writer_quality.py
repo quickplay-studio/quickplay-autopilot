@@ -171,3 +171,10 @@ assert set(out["combos"]) == {"groq:k + claude", "groq:k + no edit", "claude:son
 print("6 scores ok")
 for k in ("GROQ_API_KEY", "OPENROUTER_API_KEY", "CLAUDE_CODE_OAUTH_TOKEN"): os.environ.pop(k, None)
 print("writer quality ok")
+
+# the named series test: numbering counts this run's boards and every board folder
+W.ROOT = SCRATCH; (SCRATCH / "boards" / "done").mkdir(parents=True, exist_ok=True)
+(SCRATCH / "boards" / "done" / "QD-001.json").write_text(json.dumps({"franchise": "Song Secrets #1"}))
+assert W.franchise_count("Song Secrets", [{"franchise": "Song Secrets #2"}, {"franchise": "Film Facts #1"}]) == 2
+assert "franchise" in W.TESTS and W.FRANCHISE["Music"] == "Song Secrets"
+print("franchise ok")

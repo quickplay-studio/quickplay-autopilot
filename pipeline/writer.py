@@ -323,6 +323,20 @@ def over_share(cat, written, cap, shares):
     return sum(1 for b in written if b.get("category") == cat) >= max(1, -(-share * cap // 1))
 
 
+FRANCHISE = {"Music": "Song Secrets", "Film": "Film Facts", "Sport": "Sport Shocks", "Gaming": "Game Facts",
+             "Tech": "Tech Truths", "Science": "Space Facts", "Entertainment": "Star Stories", "Animals": "Animal Facts",
+             "Food": "Food Facts", "Cars": "Car Facts", "History": "History Bites"}
+
+
+def franchise_count(name, written=()):
+    """How many Shorts of a named series exist (every board folder, and this run's), so the next gets the next number."""
+    n = sum(1 for b in written if str(b.get("franchise", "")).startswith(name + " #"))
+    for d in ("queue", "ready", "done", "failed", "reserve"):
+        for f in (ROOT / "boards" / d).glob("QD-*.json"):
+            if str(board(f).get("franchise", "")).startswith(name + " #"): n += 1
+    return n
+
+
 def source_of(signal):
     """Where a topic came from, from its pack's trend signal, so the data can learn which sources find winners."""
     s = str(signal or "").lower()
@@ -620,6 +634,9 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
                     "photo": "Beat 1 has no graphic: the subject's photo alone fills the first frame."},
     "angles": {"shown": "", "hidden": ""},      # whether the writer sees which angles already work on YouTube (angles())
     "series": {"single": "", "two parts": "", "three parts": ""},  # Shorts with a cliffhanger between them (emit_kind()); a rich pack only
+    # a named recurring series per category ("Song Secrets #12: ..."), to turn viewers into subscribers (Charlie,
+    # 23 October: subscribers are the Partner Programme blocker, 9 from 19,500 views); the title prefix is added in emit()
+    "franchise": {"named": "", "plain": ""},
 }
 LONG_NEEDS = {"about 60 s": 9, "about 2 min": 16}      # facts a pack must hold for a long arm (never padding, never invention)
 NOT_FOR = {"breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
@@ -998,6 +1015,13 @@ def main():
         shape(b, tests)
         if validate.check(b)[0]: b = json.loads(before)
         b.update(kind=kind, test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")))
+        if tests.get("franchise") == "named":
+            name = FRANCHISE.get(b.get("category") or p.get("category") or "", "Quickplay Facts")
+            n = 1 + franchise_count(name, written)
+            m = b.setdefault("meta", {})
+            if not str(m.get("title", "")).startswith(name):
+                m["title"] = f"{name} #{n}: {m.get('title', '')}"[:95]
+            b["franchise"] = f"{name} #{n}"
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
         if series: b["series"] = series

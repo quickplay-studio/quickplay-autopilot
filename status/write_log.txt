@@ -4,6 +4,6 @@ covered already: LISA
 too few facts: BioWare
 too few facts: iPhone Duo Vs iPhone 18
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Tate McRae: The new number one hit 🎶: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: no answer (claude:sonnet: Invalid auth token · Fix external auth token )
-wrote 1 of 2: QD-144 Tate McRae hits #1 in Australia 🎶
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"claude:sonnet": "Invalid auth token \u00b7 Fix external auth token \u00b7 Invalid Authorization header valu"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 1, "late": false, "claude today": "1 of 24 edits, 0 of 8 writes"}
+BABYMONSTER: The massive world tour expansion 🎤: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
+wrote 0 of 2: 
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:openai/gpt-oss-120b": 3}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false, "claude today": "1 of 24 edits, 0 of 8 writes"}

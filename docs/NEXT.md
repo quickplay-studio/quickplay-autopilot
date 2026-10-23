@@ -154,3 +154,22 @@ the channel's comment question and replies.
   boards/queue meanwhile, which git's rebase read as a folder rename. Every workflow's save step now sets
   merge.directoryRenames false (reproduced and confirmed in a scratch repo). Any write run finishing while the queue
   emptied would have lost its boards the same way, part of the shortfall.
+
+## Writer quality upgrade (Charlie, 23 October): build next
+The writer model is now the limiting factor. The 23 October morning run: Gemini 3.5 Flash-Lite answered 32 calls and
+3.6 Flash 7; the stronger Gemini models hit 20 a day or timed out (flash-latest, 3.8 and 3.7 twice each); Groq and
+OpenRouter keys are set, but Groq wrote nothing, because keyed providers are only tried after every Gemini and Gemma model.
+1. Order the writing step (writer.write_one and its fix rounds) by writing quality, not provider: the strongest free
+   models first (Groq's largest instruction models and OpenRouter's best ":free" models from each /models endpoint; big
+   general chat models such as Kimi K2, GPT-OSS 120B, Llama 4 Maverick, DeepSeek or Qwen3 235B before small or vision
+   ones), then Gemini Flash (writing calls get 240 seconds), then Gemma. Gemini Lite and the local model write only when
+   everything else failed. Lite jobs keep their order. Seed the writer test's Thompson choice from this order.
+2. Claude, capped, as editor and test arm (only with the CLAUDE_CODE_OAUTH_TOKEN secret, already allowlisted): after a
+   free model's board passes every check, one short claude_call (the board plus a short brief, not the whole RULES prompt)
+   rewrites only meta.title, meta.alt_title, meta.comment, beat 0 and the last beat, keeping every fact, the word counts
+   and no dashes; validate and fact-check again, keep the original if anything fails; board["editor"] = "claude".
+   Claude also writes 1 board in 4 in full as a test arm. Caps in config.json: claude_edits_per_day 24,
+   claude_writes_per_day 8, counted per UK day in status/claude_usage.json, shown in the "gemini:" log line.
+3. Score writer and editor combinations in analytics/models.json and on the hub; when Claude-edited or Claude-written
+   Shorts don't earn more views, their share falls back by itself.
+4. Stubbed tests, every test run, then a real "dry 2" run; read status/write_log.txt.

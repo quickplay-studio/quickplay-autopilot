@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T17:30:00Z",
  "rendered": "2026-10-22T15:05:13.913496+00:00",
- "title": "Moon's origin: giant impact 🌕",
+ "title": "How Theia formed our Moon 🌑",
  "background_notes": [
   "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
   "picked pixabay 1 (+1 spares)"
@@ -89,7 +89,14 @@
  "social_release": "social-QD-120",
  "engage": {
   "comment": "UgxhYidf1eo3oFuV_Xl4AaABAg",
-  "playlist": "Quickplay Daily: Science"
+  "playlist": "Quickplay Daily: Science",
+  "title": {
+   "swapped_from": "Moon's origin: giant impact 🌕",
+   "to": "How Theia formed our Moon 🌑",
+   "at": "2026-10-23T18:11+00:00",
+   "views_an_hour": 0.2,
+   "typical": 1.0
+  }
  },
  "facebook": {
   "video": "1836598024161274",

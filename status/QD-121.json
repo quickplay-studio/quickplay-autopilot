@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T18:00:00Z",
  "rendered": "2026-10-22T14:34:36.266770+00:00",
- "title": "How the iPhone was kept a total secret 📱",
+ "title": "The secret history of the first iPhone 🍎",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -93,6 +93,13 @@
  },
  "engage": {
   "comment": "UgzayhnIFJ2P4S59RuF4AaABAg",
-  "playlist": "Quickplay Daily: Tech"
+  "playlist": "Quickplay Daily: Tech",
+  "title": {
+   "swapped_from": "How the iPhone was kept a total secret 📱",
+   "to": "The secret history of the first iPhone 🍎",
+   "at": "2026-10-23T18:11+00:00",
+   "views_an_hour": 0.1,
+   "typical": 1.0
+  }
  }
 }

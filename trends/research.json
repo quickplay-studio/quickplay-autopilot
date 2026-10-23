@@ -48,143 +48,192 @@
    ]
   },
   {
-   "topic": "mary berry",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mary_Berry",
-   "articles": [
-    {
-     "outlet": "The Telegraph",
-     "title": "Mary Berry: ‘I fuss about what I’m going to wear. I know what I want’",
-     "url": "https://www.telegraph.co.uk/fashion/style/mary-berry-interview/",
-     "published": "2026-10-06"
-    }
-   ]
-  },
-  {
-   "topic": "liquidation",
+   "topic": "turin",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Liquidation",
+   "wikipedia": "https://en.wikipedia.org/wiki/Turin",
    "articles": [
     {
-     "outlet": "TechCrunch",
-     "title": "WTF is a liquidation preference?",
-     "url": "https://techcrunch.com/2016/12/25/wtf-is-a-liquidation-preference/",
-     "published": "2016-12-25"
+     "outlet": "Deadline",
+     "title": "Hot Spots: How Turin & Italy’s Piedmont Region Is Revving Up To Become A Key Destination For Local & International Productions",
+     "url": "https://deadline.com/2023/05/turin-piedmont-hot-spots-fast-x-the-kings-man-michael-mann-ferrari-1235355932/",
+     "published": "2023-05-08"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Occupy Turin: refugees find a home in Italy's abandoned Olympic Village",
+     "url": "https://www.theguardian.com/cities/2016/mar/02/turin-refugees-italy-abandoned-olympic-village",
+     "published": "2016-03-02"
+    },
+    {
+     "outlet": "NBC News",
+     "title": "A Portrait of Turin",
+     "url": "https://www.nbcnews.com/id/wbna9885456",
+     "published": "2005-11-01"
     }
    ]
   },
   {
-   "topic": "the northumbria mysteries",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Northumbria_Mysteries",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Robson Green, Liz White and The Northumbria Mysteries cast reveal all about the detective drama set in the glorious Northumberland countrysi",
-     "url": "https://www.bbc.com/mediacentre/mediapacks/robson-green-liz-white-the-northumbria-mysteries",
-     "published": "2026-10-12"
-    }
-   ]
-  },
-  {
-   "topic": "flood warning",
-   "signal": "Google Trends GB 20000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Flood_warning",
+   "topic": "ali g movie 2026",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Oil hits five-month high as global stocks wobble on AI fears; retail sales in Great Britain fall as shoppers cut back - business live",
-     "url": "https://www.theguardian.com/business/live/2026/oct/23/global-stocks-fall-ai-fears-grow-british-retail-sales-fall-business-live-latest-news",
+     "title": "Taika Waititi’s Star Wars film is the latest to hit the buffers. At some point Lucasfilm is going to have to actually make a movie",
+     "url": "https://www.theguardian.com/film/2026/oct/23/taika-waititi-star-wars-lucasfilm",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "vincent kompany",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Vincent_Kompany",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Chaotic state of football in Brazil epitomises a nation where greed has conquered glory | Jonathan Liew",
+     "url": "https://www.theguardian.com/football/2026/oct/23/chaotic-football-brazil-politics-election-flavio-bolsonaro-lula",
      "published": "2026-10-23"
     },
     {
      "outlet": "Space.com",
-     "title": "'Cabin leak suspected': Artemis II astronaut reveals how a warning nearly derailed NASA's epic moon mission",
-     "url": "https://www.space.com/space-exploration/artemis/cabin-leak-suspected-artemis-ii-astronaut-reveals-how-a-warning-nearly-derailed-moon-mission",
+     "title": "Van Gogh's 'The Starry Night' depicts the sky on July 22, 1889, researchers find",
+     "url": "https://www.space.com/astronomy/van-goghs-the-starry-night-depicts-the-sky-on-july-22-1889-researchers-find",
      "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "alejandro garnacho",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Alejandro_Garnacho",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "What is happening with Alejandro Garnacho at Aston Villa?",
+     "url": "https://www.nytimes.com/athletic/7665235/2026/10/08/alejandro-garnacho-aston-villa-chelsea-man-utd/",
+     "published": "2026-10-07"
+    }
+   ]
+  },
+  {
+   "topic": "sicily",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sicily",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Dozens injured and buildings damaged as tornadoes hit Sicily",
+     "url": "https://www.theguardian.com/world/2026/oct/10/tornado-hit-marsala-sicily-injuries-damage",
+     "published": "2026-10-10"
     },
+    {
+     "outlet": "CNN",
+     "title": "How to buy a €1 home in Sicily without ruining its culture",
+     "url": "https://www.cnn.com/travel/article/mussomeli-sicily-one-euro-home-culture-cmd",
+     "published": "2021-05-13"
+    }
+   ]
+  },
+  {
+   "topic": "nottingham forest f.c.",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nottingham_Forest_F.C.",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Crystal Palace and Newcastle face off with both in search of season kickstart",
+     "url": "https://www.theguardian.com/football/2026/oct/23/crystal-palace-and-newcastle-face-off-with-both-in-search-of-season-kickstart",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "NME",
+     "title": "Panchiko follow up viral success with new album ‘Chimera’ and glitchy single ‘One Car Hits Another’",
+     "url": "https://www.nme.com/news/music/panchiko-new-album-chimera-glitchy-single-one-car-hits-another-3974049?utm_source=rss&utm_medium=rss&utm_campaign=panchiko-new-album-chimera-glitchy-single-one-car-hits-another",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Ex-Arsenal director of football Edu to advise Northampton",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cqrky7n63l6po?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "ray",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ray",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘The Mosquito Bowl’ Review: Nicholas Galitzine and Bill Skarsgard in Peter Berg’s Technically Impressive, Emotionally Hollow Netflix War Dra",
+     "url": "https://www.hollywoodreporter.com/movies/movie-reviews/the-mosquito-bowl-review-peter-berg-netflix-1236738732/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Man Ray’s Mysteries, in Glorious Bloom at the Met",
+     "url": "https://www.nytimes.com/2025/09/06/arts/design/man-ray-metropolitan-museum-exhibition.html",
+     "published": "2025-09-06"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "How Babyface Ray Became the Rap World’s Favorite Rapper",
+     "url": "https://www.rollingstone.com/music/music-features/detroit-rapper-babyface-ray-new-album-interview-1235103642/",
+     "published": "2024-09-17"
+    }
+   ]
+  },
+  {
+   "topic": "car chase",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Car_chase",
+   "articles": [
     {
      "outlet": "BBC",
-     "title": "UK working to identify exposure after global cyber-security warning",
-     "url": "https://www.bbc.co.uk/news/articles/cmx23d0k57d3o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
+     "title": "England balancing points chase and discipline at World Cup",
+     "url": "https://www.bbc.co.uk/sport/rugby-league/articles/ck9qzewgz1g3o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-23"
     },
     {
-     "outlet": "Sky News",
-     "title": "UK 'woefully unprepared' to face wildfires, MPs warn - as UN issues climate target warning",
-     "url": "https://news.sky.com/story/britain-woefully-unprepared-to-tackle-wildfires-and-needs-new-fire-fighting-planes-and-bbq-bans-needed-mps-warn-13601469",
-     "published": "2026-10-21"
-    }
-   ]
-  },
-  {
-   "topic": "freeview",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Freeview",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "Sling Launches ‘Freeview Weekends’ for Summer, With Free Streaming Online",
-     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/sling-tv-free-streaming-offer-1374991/",
-     "published": "2022-07-15"
-    }
-   ]
-  },
-  {
-   "topic": "avengers doomsday",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "New Look at Avengers: Doomsday to Premiere During MLB World Series",
-     "url": "https://www.ign.com/articles/new-look-at-avengers-doomsday-to-premiere-during-mlb-world-series",
+     "outlet": "Guardian",
+     "title": "Sri Lanka stun England with second-highest ODI chase despite Brook’s 202",
+     "url": "https://www.theguardian.com/sport/2026/oct/22/sri-lanka-england-odi-match-report-brook-202",
      "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "brazil",
+   "topic": "nikki floris",
+   "signal": "Google Trends US 10000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nikki_Flores",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Two ex-FBI officials charged with lying about investigation into Hunter Biden’s laptop",
+     "url": "https://www.theguardian.com/us-news/2026/oct/23/ex-fbi-officials-charged-hunter-biden-laptop",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "wsl",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Brazil",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wsl",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘This is a lethal threat’: Indigenous groups fear Bolsonaro’s hold on voters in Brazil’s Amazon towns",
-     "url": "https://www.theguardian.com/world/2026/oct/23/brazil-indigenous-groups-fear-bolsonaro-voters-amazon-towns",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "enes freedom",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Enes_Freedom",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Is a job guarantee the solution to mass AI unemployment?",
-     "url": "https://www.theguardian.com/technology/2026/oct/23/job-guarantee-ai-mass-unemployment",
+     "title": "Slegers and misfiring Arsenal badly need a result in WSL north London derby",
+     "url": "https://www.theguardian.com/football/2026/oct/23/arsenal-women-renee-slegers-tottenham-north-london-derby-womens-super-league",
      "published": "2026-10-23"
     },
     {
-     "outlet": "Eurogamer",
-     "title": "BioWare's cancelled Mass Effect game would've learned from Baldur's Gate 3 and The Witcher to deliver \"a level of autonomy and choice that n",
-     "url": "https://www.eurogamer.net/cancelled-mass-effect-bioware-unprecedented-levels-of-autonomy",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "tommy paul",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tommy_Paul_(tennis)",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "Tommy Hilfiger Is Giving Shoppers an Early Start on Holiday Deals",
-     "url": "https://www.rollingstone.com/product-recommendations/style/shop-tommy-hilfiger-holiday-preview-sale-2026-best-deals-1235646878/",
-     "published": "2026-10-22"
+     "outlet": "BBC Sport",
+     "title": "Ipswich on 'inevitable' path to WSL - Boswell",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cqdjvr3mn0yno?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-21"
     }
    ]
   },
@@ -197,12 +246,6 @@
      "outlet": "BBC",
      "title": "US actor Tom Skerritt, star of Top Gun, Steel Magnolias and Alien, dies aged 93",
      "url": "https://www.bbc.co.uk/news/articles/cqrkyly2p54xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Tom Skerritt Dies: Alien and Top Gun Actor Was 93",
-     "url": "https://www.ign.com/articles/tom-skerritt-alien-top-gun-actor-dies-93",
      "published": "2026-10-22"
     },
     {
@@ -220,10 +263,29 @@
    ]
   },
   {
+   "topic": "John Anderson (singer)",
+   "signal": "Wikipedia 336,579 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/John_Anderson_(singer)",
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "John Anderson Was an Expert Song Stylist. These Five Recordings Show Why",
+     "url": "https://www.rollingstone.com/music/music-features/john-anderson-best-cover-songs-atlantic-city-1235646975/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
    "topic": "Elizabeth Holmes",
    "signal": "Wikipedia 182,703 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Elizabeth Holmes Claims New York Times Misquoted Her. The Reporter Speaks Out After ‘You Can See Everything’ Release: ‘I Wish I’d Kept That ",
+     "url": "https://variety.com/2026/film/news/elizabeth-holmes-new-york-times-quote-reporter-1236929661/",
+     "published": "2026-10-23"
+    },
     {
      "outlet": "Guardian",
      "title": "The 'trad wife-ification' of Elizabeth Holmes – Stateside with Kai and Carter",
@@ -238,28 +300,15 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
    "articles": [
     {
-     "outlet": "IGN",
-     "title": "Clayface Ending Explained",
-     "url": "https://www.ign.com/articles/clayface-ending-explained-batman-dcu",
+     "outlet": "Deadline",
+     "title": "‘Clayface’ Cashes In $3.5M Previews; ‘You Can See Everything’ Ends Week With $25M+ – Box Office Update",
+     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
      "published": "2026-10-23"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘Clayface’ Aims to Give DC Studios a Box Office Win as ‘You Can See Everything’ Stays Strong",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-klara-1236738669/",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "ChatGPT",
-   "signal": "Wikipedia 155,469 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/ChatGPT",
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "Uber puts all 30,000 employees on ChatGPT Work",
-     "url": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+     "outlet": "IGN",
+     "title": "Clayface Ending Explained",
+     "url": "https://www.ign.com/articles/clayface-ending-explained-batman-dcu",
      "published": "2026-10-22"
     }
    ]
@@ -296,28 +345,22 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "Variety",
+     "title": "Elizabeth Holmes Claims New York Times Misquoted Her. The Reporter Speaks Out After ‘You Can See Everything’ Release: ‘I Wish I’d Kept That ",
+     "url": "https://variety.com/2026/film/news/elizabeth-holmes-new-york-times-quote-reporter-1236929661/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Clayface’ Cashes In $3.5M Previews; ‘You Can See Everything’ Ends Week With $25M+ – Box Office Update",
+     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
+     "published": "2026-10-23"
+    },
+    {
      "outlet": "Guardian",
      "title": "‘Overnight, everything was dead’: the Teesside fisherman turned activist dubbed the Mr Bates of the seas",
      "url": "https://www.theguardian.com/film/2026/oct/23/overnight-everything-was-dead-the-teeside-fisherman-turned-activist-dubbed-the-mr-bates-of-the-seas",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "5 Things You Didn’t See on TV at The 2026 Billboard Latin Music Awards",
-     "url": "https://www.billboard.com/lists/billboard-latin-music-awards-2026-things-you-didnt-see-on-tv/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘Clayface’ Aims to Give DC Studios a Box Office Win as ‘You Can See Everything’ Stays Strong",
-     "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-klara-1236738669/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "If You Want Heartfelt BioWare Eulogies, Check The Comments",
-     "url": "https://www.gamespot.com/articles/if-you-want-heartfelt-bioware-eulogies-check-the-comments/",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -327,10 +370,22 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Amy_Acton",
    "articles": [
     {
+     "outlet": "Billboard",
+     "title": "John Legend to Appear With Democratic Ohio Gov. Candidate Amy Acton Amid Backlash Against Opponent’s ‘Deeply Troubling’ Ad",
+     "url": "https://www.billboard.com/culture/politics/john-legend-appear-ohio-gov-candidate-acton-backlash-ramaswamy-1236367094/",
+     "published": "2026-10-23"
+    },
+    {
      "outlet": "BBC",
      "title": "'This is despicable': Amy Acton responds to Ohio attack ad featuring her estranged mother",
      "url": "https://www.bbc.com/news/articles/c6z981l59wnwo",
      "published": "2026-10-22"
+    },
+    {
+     "outlet": "AP",
+     "title": "Ramaswamy takes responsibility for ad with Amy Acton’s mother and will spend millions to promote it",
+     "url": "https://apnews.com/article/election-2026-ohio-governor-acton-mother-ramaswamy-dc59bd5f0c47f9e06f37022e2ba2cce5",
+     "published": "2026-10-20"
     }
    ]
   },
@@ -340,47 +395,59 @@
    "wikipedia": "https://en.wikipedia.org/wiki/BioWare",
    "articles": [
     {
-     "outlet": "Eurogamer",
-     "title": "Flashy internal trailer for now-cancelled Mass Effect Universe appears online, following EA's closure of BioWare",
-     "url": "https://www.eurogamer.net/mass-effect-universe-trailer-leak-real",
+     "outlet": "GameSpot",
+     "title": "Battlefield 6 Reportedly Cancels Mass Effect Collab In Wake Of BioWare Closure",
+     "url": "https://www.gamespot.com/articles/battlefield-6-reportedly-cancels-mass-effect-collab-in-wake-of-bioware-closure/",
      "published": "2026-10-23"
     },
     {
-     "outlet": "GameSpot",
-     "title": "After The BioWare Shutdown, Mass Effect Spiritual Successor Exodus Gets A New Look",
-     "url": "https://www.gamespot.com/articles/after-the-bioware-shutdown-mass-effect-spiritual-successor-exodus-gets-a-new-look/",
-     "published": "2026-10-22"
+     "outlet": "Polygon",
+     "title": "Plan to Save BioWare and Mass Effect Proposed by Canadian Politician",
+     "url": "https://www.polygon.com/bioware-mass-effect-canadian-government-bailout/",
+     "published": "2026-10-23"
     },
     {
-     "outlet": "PC Gamer",
-     "title": "Canadian politician calls on government to help BioWare employees buy the studio and run it themselves",
-     "url": "https://www.pcgamer.com/games/mass-effect/canadian-politician-calls-on-government-to-help-bioware-employees-buy-the-studio-and-run-it-themselves/",
-     "published": "2026-10-22"
+     "outlet": "IGN",
+     "title": "EA Appears to Have Quietly Pulled Mass Effect Content From Battlefield 6 Following BioWare Shutdown",
+     "url": "https://www.ign.com/articles/ea-appears-to-have-quietly-pulled-mass-effect-content-from-battlefield-6-following-bioware-shutdown",
+     "published": "2026-10-23"
     },
     {
-     "outlet": "Space.com",
-     "title": "Next Mass Effect game cancelled as EA shuts down legendary sci-fi RPG studio BioWare",
-     "url": "https://www.space.com/entertainment/space-games/next-mass-effect-game-cancelled-as-ea-shuts-down-developer-bioware",
-     "published": "2026-10-22"
+     "outlet": "Guardian",
+     "title": "A farewell to BioWare, maker of some of the best games of the 21st century | Lucy James",
+     "url": "https://www.theguardian.com/games/2026/oct/23/bioware-rpg-games-ea-closure-mass-effect",
+     "published": "2026-10-23"
     }
    ]
   },
   {
    "topic": "LISA",
-   "signal": "YouTube GB 1,553,124/h",
+   "signal": "YouTube GB 1,691,579/h",
    "wikipedia": "https://en.wikipedia.org/wiki/LISA",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "LISA, Miley, Kacey Musgraves & John Mayer: New Music Friday Guide",
-     "url": "https://www.billboard.com/music/music-news/lisa-miley-kacey-musgraves-new-music-friday-guide-1236366499/",
+     "outlet": "PC Gamer",
+     "title": "AMD says the re-release of the Ryzen 7 5800X3D was 'like a final gift to our loyal [AM4] users' and it was CEO Dr. Lisa Su who first came up",
+     "url": "https://www.pcgamer.com/hardware/processors/amd-says-the-re-release-of-the-ryzen-7-5800x3d-was-like-a-final-gift-to-our-loyal-am4-users-and-it-was-ceo-dr-lisa-su-who-first-came-up-with-the-idea/",
      "published": "2026-10-23"
+    },
+    {
+     "outlet": "IGN",
+     "title": "'Press Play' — Amazon Reveals Full PlayStation x Lisa Merch Collection as the Blackpink Star Drops New EP",
+     "url": "https://www.ign.com/articles/press-play-amazon-reveals-full-playstation-x-lisa-merch-collection-as-the-blackpink-star-drops-new-ep",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "LISA’s ‘Press Play’: All 6 Tracks Ranked",
+     "url": "https://www.billboard.com/lists/lisa-press-play-album-review-tracks-ranked/",
+     "published": "2026-10-22"
     }
    ]
   },
   {
    "topic": "BABYMONSTER",
-   "signal": "YouTube GB 707,987/h",
+   "signal": "YouTube GB 635,507/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
    "articles": [
     {
@@ -393,9 +460,15 @@
   },
   {
    "topic": "The Rings of Power",
-   "signal": "YouTube GB 111,532/h",
+   "signal": "YouTube GB 110,763/h",
    "wikipedia": "https://en.wikipedia.org/wiki/The_Rings_of_Power",
    "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "Lord of the Rings Stars to Reunite for Netflix's The Gentlemen",
+     "url": "https://www.polygon.com/netflix-the-gentlemen-season-3-casting-lord-of-the-rings-orlando-bloom-elijah-wood/",
+     "published": "2026-10-23"
+    },
     {
      "outlet": "GameSpot",
      "title": "Why People Think Valve Just Accidentally Confirmed Half-Life 3",
@@ -405,15 +478,34 @@
    ]
   },
   {
+   "topic": "I Play Rocky",
+   "signal": "YouTube GB 53,494/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/I_Play_Rocky",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "I Play Rocky - Official Trailer 2",
+     "url": "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Variety",
+     "title": "‘I Play Rocky’ Surprise Screens at London Film Festival",
+     "url": "https://variety.com/2026/film/festivals/i-play-rocky-surprise-movie-london-film-festival-1236914385/",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
    "topic": "ROBLOX THE HOLLOW",
-   "signal": "YouTube GB-gaming 66,519/h",
+   "signal": "YouTube GB-gaming 55,671/h",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "IGN",
-     "title": "The Hollow Guide and Quest Walkthroughs",
-     "url": "https://www.ign.com/wikis/core-roblox/The_Hollow_Guide_and_Quest_Walkthroughs",
-     "published": "2026-10-22"
+     "title": "The Hollow Event Guide and Puzzle Walkthroughs",
+     "url": "https://www.ign.com/wikis/core-roblox/The_Hollow_Guide_and_Puzzle_Walkthroughs",
+     "published": "2026-10-23"
     },
     {
      "outlet": "Eurogamer",
@@ -424,33 +516,8 @@
    ]
   },
   {
-   "topic": "JEV PLAYS MODERN WARFARE 4 MULTIPLAYER",
-   "signal": "YouTube GB-gaming 28,004/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Call Of Duty Ads On Xbox Are Even More Annoying This Year With Modern Warfare 4",
-     "url": "https://www.gamespot.com/articles/call-of-duty-ads-on-xbox-are-even-more-annoying-this-year-with-modern-warfare-4/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "IGN",
-     "title": "'I Don't Know if There's Perfecting It' — Call of Duty: Modern Warfare 4 Multiplayer Chief Weighs in on Matchmaking",
-     "url": "https://www.ign.com/articles/i-dont-know-if-theres-perfecting-it-call-of-duty-modern-warfare-4-multiplayer-chief-weighs-in-on-matchmaking",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Xbox Wire",
-     "title": "Call of Duty: Modern Warfare 4 w/Devs – Campaign, Multiplayer, DMZ, and More | Official XBOX Podcast",
-     "url": "https://news.xbox.com/en-us/2026/10/22/call-of-duty-modern-warfare-4-w-devs-campaign-multiplayer-dmz-and-more-official-xbox-podcast/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 107,905/h",
+   "signal": "YouTube GB-music 106,746/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -458,18 +525,12 @@
      "title": "Chaotic state of football in Brazil epitomises a nation where greed has conquered glory | Jonathan Liew",
      "url": "https://www.theguardian.com/football/2026/oct/23/chaotic-football-brazil-politics-election-flavio-bolsonaro-lula",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
-     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
-     "published": "2026-10-14"
     }
    ]
   },
   {
    "topic": "Bro Ran Too Fast 😭",
-   "signal": "YouTube GB-sport 156,071/h",
+   "signal": "YouTube GB-sport 153,981/h",
    "wikipedia": null,
    "articles": [
     {
@@ -482,13 +543,13 @@
   },
   {
    "topic": "iPhone Duo Vs iPhone 18",
-   "signal": "YouTube GB-tech 88,087/h",
+   "signal": "YouTube GB-tech 103,018/h",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "The Verge",
-     "title": "No, the iPhone Duo isn’t a small phone",
-     "url": "https://www.theverge.com/tech/1017090/iphone-duo-screen-size-mini",
+     "title": "Our best tips for using the iPhone Duo",
+     "url": "https://www.theverge.com/tech/1017157/iphone-duo-tips-touch-id-magsafe",
      "published": "2026-10-23"
     },
     {
@@ -498,66 +559,47 @@
      "published": "2026-10-23"
     },
     {
-     "outlet": "Engadget",
-     "title": "iPhone Duo's next-gen prototypes are trying to cram in Face ID",
-     "url": "https://www.engadget.com/2294041/iphone-duos-next-gen-prototypes-are-trying-to-cram-in-face-id/",
-     "published": "2026-10-22"
-    },
-    {
      "outlet": "Apple Newsroom",
-     "title": "Developers bring incredible new app experiences to iPhone Duo",
-     "url": "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
-     "published": "2026-10-22"
+     "title": "iPhone Duo arrives at Apple Store locations worldwide",
+     "url": "https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/",
+     "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "Something About Resident Evil Requiem ANIMATED 🧟🧟",
-   "signal": "YouTube US-gaming 59,230/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Resident Evil Director Zach Cregger Feels “Gratified” Following Gamer Backlash To His Highly Successful Movie",
-     "url": "https://www.gamespot.com/articles/resident-evil-director-zach-cregger-feels-vindicated-following-gamer-backlash-to-his-highly-successful-movie/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "ryan reynolds",
+   "topic": "evangelos marinakis",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ryan_Reynolds",
+   "wikipedia": "https://en.wikipedia.org/wiki/Evangelos_Marinakis",
    "articles": []
   },
   {
-   "topic": "steve morison",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Steve_Morison",
+   "topic": "petroleum",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Petroleum",
    "articles": []
   },
   {
-   "topic": "karrueche tran",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Karrueche_Tran",
+   "topic": "chad patrick",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chad_Patrick",
    "articles": []
   },
   {
-   "topic": "elena rybakina",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elena_Rybakina",
-   "articles": []
-  },
-  {
-   "topic": "John Anderson (singer)",
-   "signal": "Wikipedia 336,579 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/John_Anderson_(singer)",
+   "topic": "bublik",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bublik",
    "articles": []
   },
   {
    "topic": "Jailer 2",
    "signal": "Wikipedia 243,842 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "articles": []
+  },
+  {
+   "topic": "ChatGPT",
+   "signal": "Wikipedia 155,469 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/ChatGPT",
    "articles": []
   },
   {
@@ -568,7 +610,7 @@
   },
   {
    "topic": "【#ホロ鯖ARK】ARK上陸13日目！海賊船色ガチャするのだ！【ホロライブ/癒月ちょこ】",
-   "signal": "YouTube US 193,739/h",
+   "signal": "YouTube US 83,805/h",
    "wikipedia": "https://en.wikipedia.org/wiki/%E3%80%90",
    "articles": []
   }

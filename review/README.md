@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 39 scheduled |
-| Sat 24 Oct | 1 public | 0 | 1 | ⏳ 1 of 40 so far |
+| Sat 24 Oct | 1 public, 3 scheduled | 0 | 1 | ⏳ 1 of 40 so far, 3 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -59,6 +59,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
+- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
@@ -71,14 +72,6 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![QD-144](QD-144.jpg)
-
-## In the queue
-
-- **QD-146** GTA 6 has no disc, so what will it cost you? 🎮 (rendering next)
-- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤 (rendering next)
-- **QD-148** New Alien movie confirmed, and Ridley Scott is producing 👽 (rendering next)
-- **QD-149** Cyberpunk 2077 now fits in your hands 🎮 (rendering next)
-- **QD-150** Queen and Bowie: The night Under Pressure began 🎸 (rendering next)
 
 ## On the channel (latest first)
 

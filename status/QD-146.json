@@ -1,0 +1,83 @@
+{
+ "id": "QD-146",
+ "board": "boards/queue/QD-146.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T06:00:00Z",
+ "rendered": "2026-10-23T23:22:51.641057+00:00",
+ "title": "GTA 6 has no disc, so what will it cost you? 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)",
+  "pixabay:5624 skipped: nearly black (brightness 0.04)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "pulsar",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 23.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 5.8
+ },
+ "timeline": [
+  [
+   0.06,
+   3.43,
+   "none",
+   0
+  ],
+  [
+   3.43,
+   8.15,
+   "stat",
+   1
+  ],
+  [
+   8.15,
+   12.75,
+   "stat",
+   1
+  ],
+  [
+   12.75,
+   18.37,
+   "none",
+   1
+  ],
+  [
+   18.37,
+   23.83,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "198477",
+   "q": "city night skyline",
+   "t0": 0.0,
+   "t1": 23.83
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T23:52:52Z",
+ "video": "qQiayx_AZBQ",
+ "url": "https://youtube.com/shorts/qQiayx_AZBQ",
+ "publish_at": "2026-10-24T06:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T06:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-146"
+}

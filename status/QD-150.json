@@ -1,0 +1,120 @@
+{
+ "id": "QD-150",
+ "board": "boards/queue/QD-150.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-23T23:22:43.604805+00:00",
+ "title": "Queen and Bowie: The night Under Pressure began 🎸",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 6 reused a nearby picture (commons-search:Mountain Studios Montreux: no Commons image named 'Mountain Studios Montreux')"
+ ],
+ "media": {
+  "real_shots": 12,
+  "planned_real": 12
+ },
+ "music": "sixseven",
+ "social_music": "alexrockbeat-playful-560960",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice DN was less clear, used george",
+ "qa": {
+  "duration": 34.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.23,
+   "none",
+   0
+  ],
+  [
+   3.23,
+   7.43,
+   "title",
+   1
+  ],
+  [
+   7.43,
+   11.35,
+   "none",
+   2
+  ],
+  [
+   11.35,
+   14.82,
+   "none",
+   1
+  ],
+  [
+   14.82,
+   19.35,
+   "none",
+   2
+  ],
+  [
+   19.35,
+   21.96,
+   "none",
+   1
+  ],
+  [
+   21.96,
+   26.9,
+   "none",
+   2
+  ],
+  [
+   26.9,
+   31.43,
+   "stat",
+   1
+  ],
+  [
+   31.43,
+   34.23,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "122744",
+   "q": "recording studio mixing desk",
+   "t0": 0.0,
+   "t1": 11.81
+  },
+  {
+   "p": "pixabay",
+   "id": "369788",
+   "q": "snowy mountain lake",
+   "t0": 11.21,
+   "t1": 23.02
+  },
+  {
+   "p": "pixabay",
+   "id": "143419",
+   "q": "dj mixer lights",
+   "t0": 22.42,
+   "t1": 34.23
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: waits in boards/reserve to fill slots the day's writer runs leave empty",
+  "check: meta.sources: one site only; name it in the narration for breaking news"
+ ],
+ "preview_release": "preview-QD-150",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-2725fa1eeb0e6fab2de2"
+}

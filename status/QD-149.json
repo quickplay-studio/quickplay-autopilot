@@ -1,0 +1,89 @@
+{
+ "id": "QD-149",
+ "board": "boards/queue/QD-149.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T01:30:00Z",
+ "rendered": "2026-10-23T23:23:09.823468+00:00",
+ "title": "Cyberpunk 2077 now fits in your hands 🎮",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "pulsar",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "minimal",
+  "voice": "lily",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 22.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 4.8
+ },
+ "timeline": [
+  [
+   0.06,
+   4.09,
+   "none",
+   0
+  ],
+  [
+   4.09,
+   7.71,
+   "none",
+   1
+  ],
+  [
+   7.71,
+   13.62,
+   "none",
+   1
+  ],
+  [
+   13.62,
+   17.56,
+   "none",
+   1
+  ],
+  [
+   17.56,
+   22.31,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "216724",
+   "q": "neon city night",
+   "t0": 0.0,
+   "t1": 11.46
+  },
+  {
+   "p": "pixabay",
+   "id": "149927",
+   "q": "futuristic street rain",
+   "t0": 10.86,
+   "t1": 22.31
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T23:52:55Z",
+ "video": "zIJUGpN-otU",
+ "url": "https://youtube.com/shorts/zIJUGpN-otU",
+ "publish_at": "2026-10-24T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-149"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "QD-148",
+ "board": "boards/queue/QD-148.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T07:00:00Z",
+ "rendered": "2026-10-23T23:23:13.068578+00:00",
+ "title": "New Alien movie confirmed, and Ridley Scott is producing 👽",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Aaron Guzikowski: no Commons image named 'Aaron Guzikowski')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5
+ },
+ "music": "pulsar",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 30.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.81,
+   "title",
+   0
+  ],
+  [
+   3.81,
+   10.52,
+   "none",
+   1
+  ],
+  [
+   10.52,
+   17.21,
+   "none",
+   1
+  ],
+  [
+   17.21,
+   24.4,
+   "none",
+   1
+  ],
+  [
+   24.4,
+   30.16,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T23:52:53Z",
+ "video": "ZNbWfnNLFnU",
+ "url": "https://youtube.com/shorts/ZNbWfnNLFnU",
+ "publish_at": "2026-10-24T07:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T07:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-148"
+}

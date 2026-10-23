@@ -20,7 +20,7 @@ TEXT = (" ".join(SENT) + " ") * 3
 calls = []
 
 
-def fake(prompt, schema=None, timeout=100, temperature=0.1, lite=False):
+def fake(prompt, schema=None, timeout=100, temperature=0.1, lite=False, **kw):
     kind = ("premise" if prompt.startswith("You write premises") else "plan" if prompt.startswith("You plan evergreen")
             else "facts" if prompt.startswith("You check facts for a family-friendly Shorts channel. The Short is about")
             else "translate" if prompt.startswith("Translate") else "check" if prompt.startswith("You check a YouTube Short") else "write")

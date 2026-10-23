@@ -173,3 +173,14 @@ OpenRouter keys are set, but Groq wrote nothing, because keyed providers are onl
 3. Score writer and editor combinations in analytics/models.json and on the hub; when Claude-edited or Claude-written
    Shorts don't earn more views, their share falls back by itself.
 4. Stubbed tests, every test run, then a real "dry 2" run; read status/write_log.txt.
+- Built 23 October (portal request): factpack.writing_order() and gemini(writing=True) put a Short's script and its fix
+  rounds in quality order (quality(): Kimi K2, GPT-OSS 120B, Maverick, DeepSeek, Qwen3 235B, Mistral Large first; 70B
+  models next; vision, coder and small models last), then Gemini Flash (240 s), Gemma, weaker keyed models, and Lite, the
+  runner's model and Claude only when all else failed; providers list their best writers, not the first few. The
+  writer's Thompson choice is seeded from that order (never Lite, local or Claude). writer.claude_edit(): Claude rewrites
+  title, alt_title, comment, first and last lines of a passing free-model board; numbers kept, length within 2 words, no
+  dashes, validated and fact-checked again, else the original stays; board "editor": "claude". claude_arm(): Claude
+  writes 1 board in 4. Caps config.json claude_edits_per_day 24 and claude_writes_per_day 8 in status/claude_usage.json
+  (UK day), shown in the "gemini:" log line. analytics/models.json adds "editors" and "combos"; both Claude shares fall
+  back by views (claude_shares) after 5 measured Shorts. Hub: Editor column and a "Writers and editors" table.
+  tests/test_writer_quality.py.

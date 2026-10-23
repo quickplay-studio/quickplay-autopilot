@@ -222,12 +222,12 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models};
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
 }
@@ -288,8 +288,18 @@ function render(){
       {h:"Per hour", n:1, f:r => num(r.views_per_hour).toFixed(1)},
       {h:"Held at 3 s", n:1, f:r => r.yt_held_3s_pct ? num(r.yt_held_3s_pct).toFixed(0) + "%" : ""},
       {h:"Watched", n:1, f:r => r.yt_avg_viewed_pct ? num(r.yt_avg_viewed_pct).toFixed(0) + "%" : ""},
-      {h:"Writer", f:r => esc(String(r.writer || "").split(":").pop())}
-    ], list, "No Shorts measured yet.")}`;
+      {h:"Writer", f:r => esc(String(r.writer || "").split(":").pop())},
+      {h:"Editor", f:r => esc(r.editor || "")}
+    ], list, "No Shorts measured yet.")}
+    <h2>Writers and editors</h2>
+    <p class="sub">Each writer model, and each writer with or without Claude's edit, against Shorts posted around the same time (1.0 = typical). Claude's write and edit shares fall back by themselves when its Shorts earn no more views.</p>
+    ${table([
+      {h:"Writer + editor", f:r => esc(r.k)},
+      {h:"Shorts", n:1, f:r => fmt(r.shorts)},
+      {h:"Measured", n:1, f:r => fmt(r.n)},
+      {h:"Score", n:1, f:r => r.score != null ? num(r.score).toFixed(2) : ""},
+      {h:"Views vs typical", n:1, f:r => r.views_vs_typical != null ? num(r.views_vs_typical).toFixed(2) + "x" : ""}
+    ], Object.entries((D.models || {}).combos || (D.models || {}).writers || {}).map(([k, v]) => ({k, ...v})).sort((a, b) => num(b.shorts) - num(a.shorts)), "No writer scores yet.")}`;
   $("shorts").querySelectorAll("[data-shorts]").forEach(b => b.onclick = () => { window.__shortsMode = b.dataset.shorts; render(); });
 
   // What the data changed

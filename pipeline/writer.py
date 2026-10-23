@@ -727,32 +727,148 @@ def writer_name(model):
 
 def choose_writer(sid):
     """The first-choice model for one board, by Thompson sampling over the writers that still have quota, scored by
-    analytics/models.json (each Short against Shorts posted around the same time); a writer with under 3 measured Shorts
-    gets an early-try boost, so every company's model is tested on real Shorts and the data decides. None: the chain's
-    own order."""
+    analytics/models.json (each Short against Shorts posted around the same time). The prior is the writing order
+    (factpack.writing_order: the strongest writers first), so an untested big model starts ahead of a small one and the
+    data takes over as Shorts are measured. Never Gemini Lite, the runner's model or Claude (Claude has its own arm).
+    None: the chain's own order."""
     try: stats = json.loads((ROOT / "analytics" / "models.json").read_text()).get("writers") or {}
     except Exception: stats = {}
     spent, slow = factpack.STATE.get("spent_models") or set(), factpack.STATE.get("slow_models") or {}
-    try: cands = [writer_name(m) for m in (factpack.STATE.get("models") or [])] + factpack.chain()
-    except Exception: cands = []
-    cands = [m for m in cands if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
-             and slow.get(m, 0) < 2 and not m.startswith("claude:")]       # Claude only when every free model is spent
+    try: order = factpack.writing_order()
+    except Exception: order = []
+    cands = [m for m in order if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
+             and slow.get(m, 0) < 2 and not m.startswith(("claude:", "local:")) and "lite" not in m]
     if len(cands) < 2: return None
     rng, best, top = random.Random(f"writer:{sid}"), None, -1e9
-    for m in cands:
+    for i, m in enumerate(cands):
         s = stats.get(m) or {}
-        n = int(s.get("n") or 0)
-        mean = float(s.get("score") or 1.0) if n else 1.0
-        if n < 3: mean = max(mean, 1.08)
+        n = int(s.get("n") or 0) if s.get("score") is not None else 0
+        prior = max(0.95, 1.12 - 0.02 * i)             # the writing order, until the data says otherwise
+        mean = (n * float(s.get("score") or 1.0) + 3 * prior) / (n + 3)
         v = rng.gauss(mean, 0.35 / math.sqrt(n + 1))
         if v > top: best, top = m, v
     return best
 
 
+# Claude, capped: an editor on free models' boards and a test arm writing 1 board in 4 (Charlie, 23 October). Counted per
+# UK day in status/claude_usage.json; both shares fall back by themselves when Claude's Shorts don't earn more views.
+USAGE = ROOT / "status" / "claude_usage.json"
+EDIT = """You are the editor of a family-friendly UK YouTube Shorts channel. A writer's board follows (JSON). Make it more
+gripping for an ordinary viewer scrolling past: a sharper hook (first line), a title that makes people tap, a punchier
+last line, and a pinned comment that invites replies. Rewrite only these five, nothing else:
+- title (under 70 characters, no clickbait lies), alt_title (a different angle on the same Short),
+- comment (one question viewers want to answer),
+- first (beat 1's narration) and last (the last beat's narration): keep every fact, name and number they hold, keep their
+  length within two words, and never add a claim the board doesn't make.
+UK English, no dashes of any kind, no emoji in the narration. Reply with JSON only:
+{"title": "...", "alt_title": "...", "comment": "...", "first": "...", "last": "..."}"""
+
+
+def usage():
+    day = str(dt.datetime.now(UK).date())
+    try: u = json.loads(USAGE.read_text())
+    except Exception: u = {}
+    if u.get("day") != day: u = {"day": day, "edits": 0, "writes": 0}
+    return u
+
+
+def used(what):
+    u = usage(); u[what] = int(u.get(what) or 0) + 1
+    try: USAGE.write_text(json.dumps(u))
+    except Exception: pass
+
+
+def claude_label():
+    if not os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip(): return None
+    label = "claude:" + CFG.get("claude_model", "sonnet")
+    return None if label in (factpack.STATE.get("spent_models") or set()) else label
+
+
+def claude_shares():
+    """(write share, edit share): 1 in 4 boards written by Claude and every passing board edited, until 5 measured Shorts
+    each; then scaled by views against the rest (views_vs_typical in analytics/models.json), squared, so a Claude choice
+    that doesn't earn more views fades out by itself."""
+    try: m = json.loads((ROOT / "analytics" / "models.json").read_text())
+    except Exception: m = {}
+    def ratio(mine, rest):
+        if int(mine.get("n") or 0) < 5 or not mine.get("views_vs_typical") or not rest.get("views_vs_typical"): return None
+        return float(mine["views_vs_typical"]) / max(0.05, float(rest["views_vs_typical"]))
+    ws = m.get("writers") or {}
+    cl = [w for k, w in ws.items() if k.startswith("claude:") and w.get("views_vs_typical")]
+    others = [float(w["views_vs_typical"]) for k, w in ws.items() if not k.startswith("claude:") and w.get("views_vs_typical")]
+    mine = {"n": sum(int(w.get("n") or 0) for w in cl), "views_vs_typical": max([float(w["views_vs_typical"]) for w in cl] or [0])}
+    rw = ratio(mine, {"views_vs_typical": sorted(others)[len(others) // 2] if others else 0})
+    ed = m.get("editors") or {}
+    re_ = ratio(ed.get("claude") or {}, ed.get("none") or {})
+    write = 0.25 if rw is None else min(0.5, max(0.03, 0.25 * rw * rw))
+    edit = 1.0 if re_ is None else min(1.0, max(0.05, re_ * re_))
+    return write, edit
+
+
+def claude_arm(sid):
+    """"claude:<model>" when this board is one of Claude's test-arm boards and today's cap has room, else None."""
+    label = claude_label()
+    if not label or usage()["writes"] >= int(CFG.get("claude_writes_per_day", 8)): return None
+    return label if random.Random(f"claude-write:{sid}").random() < claude_shares()[0] else None
+
+
+def words(t): return len(str(t or "").split())
+
+
+def numbers(t): return sorted(re.findall(r"\d+", factpack.digits(str(t or ""))))
+
+
+def claude_edit(b, p, kind, note):
+    """Claude rewrites the title, alternative title, pinned comment, first and last lines of a free model's passing board;
+    the board is validated and fact-checked again and the original kept if anything fails. Returns (board, note)."""
+    label = claude_label()
+    if (not label or str(b.get("writer", "")).startswith("claude:") or not b.get("beats")
+            or usage()["edits"] >= int(CFG.get("claude_edits_per_day", 24))
+            or random.Random(f"claude-edit:{b.get('id')}").random() >= claude_shares()[1]): return b, note
+    m, beats = b.get("meta") or {}, b["beats"]
+    show = {"title": m.get("title", ""), "alt_title": m.get("alt_title", ""), "comment": m.get("comment", ""),
+            "lines": [x.get("say", "") for x in beats], "facts": m.get("facts") or []}
+    used("edits")
+    ans, why = factpack.claude_call(label, EDIT + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
+    if not isinstance(ans, dict): return b, note + f", editor: no answer ({str(why)[:60]})"
+    new = json.loads(json.dumps(b))
+    nm = new["meta"]
+    for k in ("title", "alt_title", "comment"):
+        if str(ans.get(k) or "").strip(): nm[k] = str(ans[k]).strip()
+    first, last = str(ans.get("first") or "").strip(), str(ans.get("last") or "").strip()
+    bad = []
+    for i, t in ((0, first), (len(beats) - 1, last)):
+        if not t: continue
+        old = beats[i].get("say", "")
+        if abs(words(t) - words(old)) > 2: bad.append(f"beat {i + 1} length")
+        if any(n not in numbers(t) for n in numbers(old)): bad.append(f"beat {i + 1} lost a number")
+        new["beats"][i]["say"] = t
+    if re.search("[\u2013\u2014]", json.dumps([nm.get(k) for k in ("title", "alt_title", "comment")] + [first, last], ensure_ascii=False)):
+        bad.append("a dash")
+    if not bad:
+        errs, warns = validate.check(new)
+        _, old_warns = validate.check(b)
+        bad = errs + (["more warnings"] if len(warns) > len(old_warns) else [])
+    if not bad and kind != "fiction": bad = fact_check(new, p)
+    if bad: return b, note + f", editor: kept the original ({'; '.join(bad)[:120]})"
+    new["editor"] = "claude"
+    return new, note + ", edited by Claude"
+
+
 def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):
+    """One board, then (when it passed every check) Claude's edit."""
+    b, note = write_board(p, sid, day, prompt_head, extra, kind, tests)
+    if b and str(b.get("writer", "")).startswith("claude:"): used("writes")
+    if b:
+        try: b, note = claude_edit(b, p, kind, note)
+        except Exception as e: note += f", editor: kept the original ({str(e)[:80]})"     # the board is never lost to the edit
+    return b, note
+
+
+def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
-    pick = choose_writer(sid)
-    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, **({"prefer": pick} if pick else {}))
+    pick = claude_arm(sid) or choose_writer(sid)
+    ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, writing=True, **({"prefer": pick} if pick else {}))
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
     for attempt in range(3):
@@ -780,7 +896,7 @@ def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         if attempt == 2: break
         fix = (prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p) + "\n\nYOUR BOARD\n" + json.dumps(ans, ensure_ascii=False)
                + "\n\nIt fails these checks. Fix every one and return the whole corrected board as JSON:\n- " + "\n- ".join(errs + warns))
-        ans, model = factpack.gemini(fix, None, timeout=150, temperature=0.3)
+        ans, model = factpack.gemini(fix, None, timeout=150, temperature=0.3, writing=True)
         if not isinstance(ans, dict): break
     return best or (None, "still failing: " + "; ".join(errs)[:300])
 
@@ -918,7 +1034,12 @@ def main():
                 if spare > 0: spare = max(0, spare - (len(written) - before))
     print(f"wrote {len(written)} of {cap}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
                                                for b in written))
-    print("gemini:", json.dumps({"order": factpack.STATE.get("models", [])[:6], **factpack.gemini_state(), "late": late()}))
+    try: order = factpack.writing_order()[:6]
+    except Exception: order = factpack.STATE.get("models", [])[:6]
+    u = usage()
+    print("gemini:", json.dumps({"order": order, **factpack.gemini_state(), "late": late(),
+                                 "claude today": f"{u['edits']} of {CFG.get('claude_edits_per_day', 24)} edits, "
+                                                 f"{u['writes']} of {CFG.get('claude_writes_per_day', 8)} writes"}))
 
 
 if __name__ == "__main__":

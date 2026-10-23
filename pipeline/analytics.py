@@ -61,7 +61,7 @@ def our_shorts():
         out[st["video"]] = {
             "id": st.get("id"), "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
-            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "appeal")}, "writer": b.get("writer", ""),
+            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "appeal")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")),
@@ -532,7 +532,7 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "series", "writer", "appeal")},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "series", "writer", "editor", "appeal")},
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
             "yt_engaged_views": a.get("engagedViews", ""), "yt_avg_viewed_pct": round(a["averageViewPercentage"], 1) if a.get("averageViewPercentage") is not None else "",
             "yt_shares": a.get("shares", ""), "yt_subs_gained": a.get("subscribersGained", ""),
@@ -733,14 +733,22 @@ def writer_scores(rows):
     out = {"updated": NOW.isoformat(timespec="minutes"), "writers": {},
            "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, "
                   "40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts."}
-    for w in sorted({r["writer"] for r in rows if r.get("writer")}):
-        used = [r for r in aged if r["writer"] == w]
-        e = {"n": len(used), "shorts": sum(1 for r in rows if r.get("writer") == w)}
-        if used:
-            e["score"] = round(statistics.median(r["look_score"] for r in used), 3)
-            vals = [float(r["views_vs_typical"]) for r in used if r.get("views_vs_typical") not in ("", None)]
-            if vals: e["views_vs_typical"] = round(statistics.median(vals), 2)
-        out["writers"][w] = e
+    def score(key):
+        out_ = {}
+        for w in sorted({key(r) for r in rows if r.get("writer")} - {None}):
+            used = [r for r in aged if key(r) == w]
+            e = {"n": len(used), "shorts": sum(1 for r in rows if r.get("writer") and key(r) == w)}
+            if used:
+                e["score"] = round(statistics.median(r["look_score"] for r in used), 3)
+                vals = [float(r["views_vs_typical"]) for r in used if r.get("views_vs_typical") not in ("", None)]
+                if vals: e["views_vs_typical"] = round(statistics.median(vals), 2)
+            out_[w] = e
+        return out_
+    out["writers"] = score(lambda r: r["writer"])
+    # Claude as editor (23 October): edited free-model Shorts against unedited ones, and every writer and editor pair.
+    # Claude-written Shorts are left out of "editors": the editor only edits other models' boards.
+    out["editors"] = score(lambda r: None if r["writer"].startswith("claude:") else r.get("editor") or "none")
+    out["combos"] = score(lambda r: r["writer"] + " + " + (r.get("editor") or "no edit"))
     return out
 
 def slot_scores(rows):

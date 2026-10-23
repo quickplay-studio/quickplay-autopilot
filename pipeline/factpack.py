@@ -190,20 +190,39 @@ def loads_loose(text):
     raise ValueError("no readable JSON")
 
 
-def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer=None):
+def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer=None, writing=False):
     """JSON from the first model that answers, and that model's name. Gemini first: a model out of its free daily quota, or
     retired (404), is skipped for the rest of the run, so every other model gets its turn (each has its own quota); a
     per-minute limit waits and tries again, and so does an answer that isn't readable JSON. lite: simple jobs (triage,
     fact extraction, translations, replies) try the Lite models first, which have the biggest free quota, and save the
     others for writing and checking. When every Gemini API model (Flash, then Gemma) is spent or failing, the chain goes
     on (others()): the keyed free providers, the open model on this runner, and Claude last. prefer: a model name (as
-    returned) to try first, so the writer can test models against each other."""
+    returned) to try first, so the writer can test models against each other. writing: a Short's script and its fix rounds
+    go by writing quality instead (writing_order: the strongest keyed models, Gemini Flash with 240 seconds, Gemma, then
+    Lite, the runner's model and Claude only when everything else failed)."""
     import requests
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     spent = STATE.setdefault("spent_models", set())
     notes = STATE.setdefault("quota_notes", {})         # which limit each spent model hit, for the run's log
     last = "no Gemini model answered"
     slow = STATE.setdefault("slow_models", {})          # timeouts this run: after 2, the model is passed over
+    if writing:                                        # writing: by quality, not provider (writing_order)
+        order = writing_order()
+        want = prefer if prefer and ":" in prefer else f"gemini:{prefer}" if prefer else ""
+        if want in order: order.remove(want); order.insert(0, want)
+        for label in order:
+            if label.startswith("gemini:"):
+                model = label[7:]
+                if model in spent or slow.get(model, 0) >= 2: continue
+                ans, why = gem_one(model, key, prompt, schema, max(timeout, 240), temperature)
+                if ans is not None: return ans, model
+                last = why
+            else:
+                got = others(prompt, timeout, temperature, only=label)
+                if got: return got
+                last = STATE.get("last_other") or last
+        if all(m in spent for m in models(key) if key) and all(m in spent for m in chain()): STATE["spent"] = True
+        raise RuntimeError(last)
     if prefer and ":" in prefer and not prefer.startswith("gemini:"):
         got = others(prompt, timeout, temperature, lite, only=prefer)
         if got: return got
@@ -212,47 +231,60 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer
     if lite: todo.sort(key=lambda m: "lite" not in m)
     if prefer in todo: todo.remove(prefer); todo.insert(0, prefer)
     for model in todo:
-        timed_out = False
-        gemma = model.startswith("gemma")              # no JSON mode, no thinking settings: plain text, read loosely
-        for think in ([{}] if gemma else [STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
-            gen = {"temperature": temperature} if gemma else {"temperature": temperature, "responseMimeType": "application/json", **think}
-            if schema and not gemma: gen["responseSchema"] = schema
-            text = prompt + ("\n\nReply with the JSON only, no other text." if gemma else "")
-            body = {"contents": [{"role": "user", "parts": [{"text": text}]}], "generationConfig": gen}
-            for attempt in range(3):
-                try:
-                    r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
-                                      json=body, timeout=timeout)
-                except requests.exceptions.RequestException as e:      # too slow or unreachable: the next model tries
-                    slow[model] = slow.get(model, 0) + 1; last = f"{model}: {type(e).__name__}"; timed_out = True; break
-                if r.status_code == 429:
-                    per_day = "perday" in r.text.lower().replace("_", "")
-                    wait = re.search(r'"retryDelay":\s*"(\d+)', r.text)
-                    cap = re.search(r'"quotaValue":\s*"(\d+)', r.text)
-                    if per_day or attempt == 2:                         # the next model has its own quota
-                        spent.add(model); last = f"{model}: free quota used up"
-                        notes[model] = ("daily limit" if per_day else "per-minute limit, 3 tries") + (f" {cap.group(1)}" if cap else "")
-                        break
-                    last = f"{model}: per-minute limit"; time.sleep(min(65, int(wait.group(1)) + 2) if wait else 20 * (attempt + 1)); continue
-                if r.status_code in (500, 502, 503, 504):
-                    last = f"{model}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
-                if r.ok:
-                    parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
-                    STATE.setdefault("think", {})[model] = think
-                    try:
-                        ans = loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought")))
-                        count(model); return ans, model
-                    except ValueError as e: last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
-                last = f"{model}: {r.status_code} {r.text[:150]}"
-                if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
-                break
-            if timed_out or model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
+        ans, why = gem_one(model, key, prompt, schema, timeout, temperature)
+        if ans is not None: return ans, model
+        last = why
     got = others(prompt, timeout, temperature, lite)
     if got: return got
     if not todo: last = "no Gemini model is answering (free quota used up or too slow)"
     if STATE.get("last_other"): last += "; " + STATE["last_other"]
     if all(m in spent for m in models(key) if key) and STATE.get("others_spent"): STATE["spent"] = True
     raise RuntimeError(last)
+
+
+def gem_one(model, key, prompt, schema, timeout, temperature):
+    """One Gemini API model: (json, None), or (None, why). A daily limit or a 404 marks it spent for the run, a timeout
+    counts against it, a per-minute limit waits, an unreadable answer asks again."""
+    import requests
+    spent, notes = STATE.setdefault("spent_models", set()), STATE.setdefault("quota_notes", {})
+    slow = STATE.setdefault("slow_models", {})
+    last = f"{model}: no answer"
+    timed_out = False
+    gemma = model.startswith("gemma")              # no JSON mode, no thinking settings: plain text, read loosely
+    for think in ([{}] if gemma else [STATE["think"][model]] if model in STATE.get("think", {}) else THINKING):
+        gen = {"temperature": temperature} if gemma else {"temperature": temperature, "responseMimeType": "application/json", **think}
+        if schema and not gemma: gen["responseSchema"] = schema
+        text = prompt + ("\n\nReply with the JSON only, no other text." if gemma else "")
+        body = {"contents": [{"role": "user", "parts": [{"text": text}]}], "generationConfig": gen}
+        for attempt in range(3):
+            try:
+                r = requests.post(API.format(model), headers={"x-goog-api-key": key, "Content-Type": "application/json"},
+                                  json=body, timeout=timeout)
+            except requests.exceptions.RequestException as e:      # too slow or unreachable: the next model tries
+                slow[model] = slow.get(model, 0) + 1; last = f"{model}: {type(e).__name__}"; timed_out = True; break
+            if r.status_code == 429:
+                per_day = "perday" in r.text.lower().replace("_", "")
+                wait = re.search(r'"retryDelay":\s*"(\d+)', r.text)
+                cap = re.search(r'"quotaValue":\s*"(\d+)', r.text)
+                if per_day or attempt == 2:                         # the next model has its own quota
+                    spent.add(model); last = f"{model}: free quota used up"
+                    notes[model] = ("daily limit" if per_day else "per-minute limit, 3 tries") + (f" {cap.group(1)}" if cap else "")
+                    break
+                last = f"{model}: per-minute limit"; time.sleep(min(65, int(wait.group(1)) + 2) if wait else 20 * (attempt + 1)); continue
+            if r.status_code in (500, 502, 503, 504):
+                last = f"{model}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
+            if r.ok:
+                parts = (((r.json().get("candidates") or [{}])[0].get("content")) or {}).get("parts") or []
+                STATE.setdefault("think", {})[model] = think
+                try:
+                    ans = loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought")))
+                    count(model); return ans, None
+                except ValueError as e: last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
+            last = f"{model}: {r.status_code} {r.text[:150]}"
+            if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
+            break
+        if timed_out or model in spent or not ("think" in last.lower() and " 400 " in f" {last} "): break   # a refused thinking setting tries the next
+    return None, last
 
 
 def count(model):
@@ -274,9 +306,43 @@ JSON_ONLY = "Reply with one JSON value only, no other text."
 LOCAL_PORT = 8089
 
 
+# How well a model writes, roughly, from its name: big general chat models (5) before mid-size (4), unknown (3), small,
+# coder or vision models (1 or 2). Used for the writing order only; the data (analytics/models.json) decides after that.
+TOP = re.compile(r"kimi-k2|gpt-oss-120b|deepseek-(?:r1|v3|chat)|qwen-?3-235b|qwen3-max|maverick|mistral-large|405b|glm-4\.[5-9](?!-air)|hermes-?4", re.I)
+MID = re.compile(r"70b|72b|qwen3-next|mistral-medium|gemini-|llama-3\.3|command-a", re.I)
+SMALL = re.compile(r"vision|\bvl\b|-vl|mini|nano|tiny|small|scout|coder|math|\b(?:[0-9]|1[0-9])b\b|-(?:[0-9]|1[0-9])b", re.I)
+
+
+def quality(label):
+    pre, _, rest = label.partition(":")
+    name = (rest if pre in PROVIDERS or pre in ("gemini", "local", "claude") else label).lower()
+    if re.search(r"vision|\bvl\b|-vl", name): return 1          # picture readers write worse
+    if TOP.search(name): return 5
+    if MID.search(name): return 4
+    size = max([float(v) for v in re.findall(r"(\d+(?:\.\d+)?)b\b", name)] or [0])
+    if SMALL.search(name) or 0 < size < 20: return 1
+    if size >= 100: return 5
+    if size >= 60: return 4
+    return 2 if size else 3
+
+
+def writing_order():
+    """The models a Short's script is written by, best writer first: the strongest keyed free models (quality 4 or 5),
+    Gemini Flash, Gemma, the weaker keyed models, then only when all else failed Gemini Lite, the runner's model and
+    Claude (capped)."""
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    gem = models(key) if key else []
+    keyed = sorted((m for n in PROVIDERS for m in provider_models(n)), key=lambda m: -quality(m))
+    flash = [f"gemini:{m}" for m in gem if not m.startswith("gemma") and "lite" not in m]
+    gemma = [f"gemini:{m}" for m in gem if m.startswith("gemma")]
+    lite = [f"gemini:{m}" for m in gem if "lite" in m and not m.startswith("gemma")]
+    rest = [m for m in chain() if m.startswith(("local:", "claude:"))]
+    return [m for m in keyed if quality(m) >= 4] + flash + gemma + [m for m in keyed if quality(m) < 4] + lite + rest
+
+
 def provider_models(name):
-    """The models of one keyed provider to try, in order: configured ones, else its preferences it still offers, else
-    the first few chat models it lists."""
+    """The models of one keyed provider to try, in order: configured ones, else the best writers it lists today (quality,
+    its preferences breaking ties; OpenRouter's ":free" ones only)."""
     cache = STATE.setdefault("provider_models", {})
     if name in cache: return cache[name]
     env, base, pref = PROVIDERS[name]
@@ -295,9 +361,9 @@ def provider_models(name):
             except Exception: pass
             if name == "openrouter":
                 free = [i for i in ids if i.endswith(":free")]
-                got = sorted(free, key=lambda i: -int(meta[i].get("context_length") or 0))[:4]
-            elif ids:
-                got = [m for m in pref if m in ids] or ids[:3]
+                got = sorted(free, key=lambda i: (-quality(i), -int(meta[i].get("context_length") or 0)))[:4]
+            elif ids:           # the best writers it offers today, its preferences breaking ties
+                got = sorted(ids, key=lambda i: (-quality(i), pref.index(i) if i in pref else len(pref)))[:4]
             else: got = pref
     cache[name] = [f"{name}:{m}" for m in got]
     return cache[name]

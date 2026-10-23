@@ -209,7 +209,7 @@ def main():
             print(f"voice {v} at {wps} words a second: unclear in beats {weak}", flush=True)
         _, worst, _, v, vdir, man, weak = min(tried, key=lambda x: x[:3])
         if weak and len(weak) == 1 and weak[0] != 0 and -worst >= 0.25:     # one middle beat, mostly heard: the captions carry it
-            flags = list(flags) + [f"narration a little unclear in beat {weak[0]} (captions carry it)"]; weak = []
+            status["qa_note"] = f"narration a little unclear in beat {weak[0]} (captions carry it)"; weak = []    # a note, not a flag: flags hold a Short for approval
         if v != voice:
             status["look"]["voice"] = "george"; status["look_note"] = f"voice {voice} was less clear, used george"
         sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))

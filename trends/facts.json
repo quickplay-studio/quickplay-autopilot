@@ -1,42 +1,157 @@
 {
  "date": "2026-10-23",
- "built": "2026-10-23T16:21+00:00",
+ "built": "2026-10-23T19:05+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
   {
-   "n": 22,
-   "topic": "BioWare",
-   "signal": "Wikipedia 120,343 views",
-   "category": "Gaming",
-   "what_is_new": "Nothing changed in the last two days.",
+   "n": 4,
+   "topic": "So Easy (To Fall In Love) by Olivia Dean",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
    "hooks": [
-    "Did you know BioWare was founded by doctors?"
+    "Did you know Olivia Dean won best new artist at the Grammys?",
+    "Olivia Dean reached No. 1 on Billboard’s Pop Airplay chart.",
+    "Olivia Dean sold out two nights at Rod Laver Arena."
    ],
    "sources": [
     [
-     "Plan to Save BioWare and Mass Effect Proposed by Canadian Politician",
-     "https://www.polygon.com/bioware-mass-effect-canadian-government-bailout/",
-     "Polygon",
-     "2026-10-23"
-    ],
-    [
-     "EA Appears to Have Quietly Pulled Mass Effect Content From Battlefield 6 Following BioWare Shutdown",
-     "https://www.ign.com/articles/ea-appears-to-have-quietly-pulled-mass-effect-content-from-battlefield-6-following-bioware-shutdown",
-     "IGN",
-     "2026-10-23"
-    ],
-    [
-     "A farewell to BioWare, maker of some of the best games of the 21st century | Lucy James",
-     "https://www.theguardian.com/games/2026/oct/23/bioware-rpg-games-ea-closure-mass-effect",
+     "Olivia Dean review – a powerful, affirming night with a pop star at the height of her powers",
+     "https://www.theguardian.com/music/2026/oct/06/olivia-dean-review-a-powerful-affirming-and-fun-singer-at-the-height-of-her-powers",
      "Guardian",
-     "2026-10-23"
+     "2026-10-05"
     ],
     [
-     "BioWare",
-     "https://en.wikipedia.org/wiki/BioWare",
+     "Olivia Dean’s First U.S. Arena Tour Is Off to a Smashing Start, With L.A. Shows Proving She’s No One-Grammy Wonder: Concert Review",
+     "https://variety.com/2026/music/concert-reviews/olivia-dean-concert-review-crypto-arena-tour-1236815197/",
+     "Variety",
+     "2026-07-17"
+    ],
+    [
+     "Olivia Dean’s ‘Man I Need’ Hits No. 1 on Pop Airplay Chart",
+     "https://www.billboard.com/music/chart-beat/olivia-dean-man-i-need-number-one-pop-airplay-chart-1236145790/",
+     "Billboard",
+     "2025-12-26"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Olivia Dean won best new artist at the Grammys.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "winning best new artist at the Grammys and an armful of Brits",
+      "2": "Roughly half a year ago, she was at the podium accepting the award for best new artist, the only category in which she’d been nominated."
+     }
+    },
+    {
+     "claim": "Olivia Dean released her sophomore album titled The Art of Loving.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Even before I had pressed play on her smash album, The Art of Loving, I’d heard so many of its songs – the No 1",
+      "3": "Both songs are from her sophomore album, The Art of Loving, which rose to No. 5 on the Billboard 200 in November."
+     }
+    },
+    {
+     "claim": "Olivia Dean is 27 years old.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "I don’t wish heartbreak on any 27-year-old, but if it might inspire more songs like A Couple Minutes, I might be tempted to send every",
+      "2": "That’s what she delivered Tuesday night at Crypto, seeming seasoned well beyond her 27 years, and as firmly in command of that stage as just"
+     }
+    },
+    {
+     "claim": "Olivia Dean’s song Man I Need reached No. 1 on Billboard’s Pop Airplay chart.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Even before I had pressed play on her smash album, The Art of Loving, I’d heard so many of its songs – the No 1",
+      "3": "Olivia Dean’s “Man I Need” ascends two spots to No. 1 on Billboard’s Pop Airplay chart (dated Jan. 3, 2026)."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Olivia Dean performed two sold out nights at Rod Laver Arena with a capacity of 14,000.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It’s the reason she has sold out two nights at Rod Laver arena (capacity 14,000), the first stop on the Australian leg of her world"
+     }
+    },
+    {
+     "claim": "Olivia Dean’s mother is the former deputy leader of the Women’s Equality party.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Her mother, the daughter of a Jamaican Guyanese immigrant, gave her the middle name Lauryn – as in Hill – and is the former deputy"
+     }
+    },
+    {
+     "claim": "Olivia Dean performed at the Crypto.com Arena for a two night stand in Los Angeles.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Soon after taking the stage at L.A.’s Crypto.com Arena for a two-night stand this week, the singer said, “The last time we played in L.A.,"
+     }
+    },
+    {
+     "claim": "Olivia Dean performed all 12 songs from The Art of Loving alongside 12 older songs.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "As Dean proceeded through all 12 songs from “The Art of Loving” (plus another 12 lesser-known songs that predate it), it suddenly seemed like this"
+     }
+    },
+    {
+     "claim": "Olivia Dean’s song So Easy (To Fall in Love) debuted at No. 40 on the Pop Airplay chart.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Plus, Dean bookends Pop Airplay as “So Easy (To Fall in Love)” debuts at No. 40."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 6,
+   "topic": "ghosts tv show",
+   "signal": "Google Trends GB 100+",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Ghosts is a British sitcom?",
+    "Discover the 2021 American sitcom based on Ghosts!"
+   ],
+   "sources": [
+    [
+     "Ghosts: The Possession of Button House review – new levels of giddiness unleashed in spooky spin-off",
+     "https://www.theguardian.com/film/2026/oct/21/ghosts-the-possession-of-button-house-review-spin-off-new-film-bbc-haunted-house-comedy",
+     "Guardian",
+     "2026-10-20"
+    ],
+    [
+     "ghosts tv show",
+     "https://en.wikipedia.org/wiki/Ghost_(TV_show)",
      "Wikipedia",
      ""
     ]
@@ -44,42 +159,146 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "BioWare was founded in 1995 by Ray Muzyka, Greg Zeschuk, and Augustine Yip.",
+     "claim": "Ghosts (2019 TV series) is a British sitcom.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
+      "2": "Ghosts (2019 TV series), a British sitcom"
+     }
+    },
+    {
+     "claim": "Ghosts (American TV series) is a 2021 sitcom based on the 2019 British sitcom.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ghosts (American TV series), a 2021 sitcom based on the 2019 British sitcom"
+     }
+    },
+    {
+     "claim": "Ghost (Malaysian TV series) is a 2008 mystery series.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ghost (Malaysian TV series), a 2008 mystery series"
+     }
+    },
+    {
+     "claim": "Phantom (South Korean TV series) is a 2012 police procedural series, also known as Ghost.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Phantom (South Korean TV series), a 2012 police procedural series, also known as Ghost"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "ipswich town vs nottm forest",
+   "signal": "Google Trends US 5000+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Ipswich Town face Nottingham Forest tonight in the Premier League."
+   ],
+   "sources": [
+    [
+     "Ipswich Town vs Nottingham Forest predictions: Premier League bet builder, tips and odds",
+     "https://www.telegraph.co.uk/betting/football/ipswich-vs-nottingham-forest-predictions-tips/",
+     "The Telegraph",
+     "2026-10-23"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "al hilal",
+   "signal": "Google Trends US 500+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Al Hilal signed Gabriel Martinelli in a club-record deal?",
+    "Al Hilal has been part of every Saudi Pro League season!",
+    "Al Hilal was named the Greatest Asian Club of the 20th Century."
+   ],
+   "sources": [
+    [
+     "Gabriel Martinelli transfer news: Forward joins Al Hilal in club-record sale for Arsenal in £60m deal",
+     "https://www.skysports.com/football/news/13579276/gabriel-martinelli-transfer-news-forward-joins-al-hilal-in-a-club-record-sale-for-arsenal-in-lb60m-deal",
+     "Sky Sports",
+     "2026-09-03"
+    ],
+    [
+     "al hilal",
+     "https://en.wikipedia.org/wiki/Al_Hilal_SFC",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Gabriel Martinelli has joined Al Hilal in a club-record £60m sale for Arsenal.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Gabriel Martinelli has joined Al Hilal in a club-record £60m sale for Arsenal."
+     }
+    },
+    {
+     "claim": "In September 2009, Al-Hilal was awarded Greatest Asian Club of the 20th Century by the IFFHS.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In September 2009, Al-Hilal was awarded Greatest Asian Club of the 20th Century by the IFFHS."
+     }
+    },
+    {
+     "claim": "Al-Hilal has a market value of €242.5 million as of 2024, the highest in Saudi Arabia.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Al-Hilal has a market value of €242.5 million as of 2024, the highest in Saudi Arabia."
      }
     }
    ],
    "images": [
-    "commons:File:Epcor_Tower.JPG"
+    "commons:File:Al_Hilal_SFC_Logo.svg"
    ]
   },
   {
-   "n": 17,
+   "n": 18,
    "topic": "Clayface (film)",
    "signal": "Wikipedia 168,347 views",
    "category": "Film",
-   "what_is_new": "Warner Bros and DC's Clayface finished its Thursday preview night with $3.5 million.",
+   "what_is_new": "",
    "hooks": [
-    "Discover the surprising box office numbers for the new Clayface movie!",
-    "Is Batman actually in the brand new Clayface film?",
-    "Find out how the terrifying final form of Clayface was made."
+    "Discover how much Clayface earned in Thursday previews!",
+    "Clayface is officially out in cinemas today!"
    ],
    "sources": [
     [
-     "‘Clayface’ Cashes In $3.5M Previews; ‘You Can See Everything’ Ends Week With $25M+ – Box Office Update",
-     "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-     "Deadline",
+     "‘Clayface’ Soaks Up $3.5M in Box Office Previews as ‘You Can See Everything’ Expands",
+     "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-previews-you-can-see-everything-wicker-1236739049/",
+     "The Hollywood Reporter",
      "2026-10-23"
     ],
     [
-     "Clayface Ending Explained",
-     "https://www.ign.com/articles/clayface-ending-explained-batman-dcu",
+     "Clayface’s 4K Steelbook Is Now Available To Preorder – Here’s Where To Buy It",
+     "https://www.ign.com/articles/clayface-4k-steelbook-where-to-buy",
      "IGN",
-     "2026-10-22"
+     "2026-10-23"
     ],
     [
      "Clayface (film)",
@@ -91,111 +310,30 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Clayface is a 2026 American body horror psychological thriller film based on the eponymous character from DC Comics.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Clayface is a 2026 American body horror psychological thriller film based on the eponymous character from DC Comics."
-     }
-    },
-    {
-     "claim": "Clayface was released by Warner Bros Pictures in the United States on October 23, 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "and was released by Warner Bros. Pictures in the United States on October 23, 2026."
-     }
-    },
-    {
-     "claim": "Tom Rhys Harries stars as Matt Hagen / Clayface, alongside Naomi Ackie, David Dencik, Max Minghella, and Eddie Marsan.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Tom Rhys Harries stars as Matt Hagen / Clayface, alongside Naomi Ackie, David Dencik, Max Minghella, and Eddie Marsan."
-     }
-    },
-    {
-     "claim": "Clayface premiered at the Hollywood Legion Theater in Los Angeles on October 13, 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Clayface premiered at the Hollywood Legion Theater in Los Angeles on October 13, 2026,"
-     }
-    },
-    {
-     "claim": "Previews started at 2 pm today for the James Watkins-directed Clayface, which though based on the Batman villain is a stand-alone story about babyfaced Hollywood actor Matt Hagen (Tom Rhys Harries), who in reaching for the stars falls short, kisses the wrong girl at the party, and oops there goes his face.",
+     "claim": "Warner Bros. releases Clayface in more than 3,400 North American theaters on Friday, with the DC Studios body-horror movie earning $3.5 million in Thursday previews.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Previews started at 2 p.m. today for the James Watkins-directed Clayface, which though based on the Batman villain is a stand-alone story about babyfaced Hollywood"
+      "1": "Warner Bros. releases Clayface in more than 3,400 North American theaters on Friday, with the DC Studios body-horror movie earning $3.5 million in Thursday previews."
      }
     },
     {
-     "claim": "Filming lasted from the end of August until the start of November 2025, taking place on location throughout Liverpool and on soundstages at Warner Bros. Studios Leavesden in England.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Filming lasted from the end of August until the start of November 2025, taking place on location throughout Liverpool and on soundstages at Warner Bros."
-     }
-    },
-    {
-     "claim": "Watkins was hired in February 2025, Amini was rewriting the script by May, and Rhys Harries was cast in June.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Watkins was hired in February 2025, Amini was rewriting the script by May, and Rhys Harries was cast in June."
-     }
-    },
-    {
-     "claim": "DC Studios officially greenlit Clayface in December 2024, as part of the DCU.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "DC Studios officially greenlit Clayface in December 2024,[34] as part of the DCU."
-     }
-    },
-    {
-     "claim": "The new movie Clayface marks the live-action film debut of the classic Batman villain but fans are obviously wondering if the film also introduces the DCUs incarnation of the Caped Crusader.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The new movie Clayface marks the live-action film debut of the classic Batman villain but fans are obviously wondering if the film also introduces the"
-     }
-    },
-    {
-     "claim": "It does not.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "It does not."
-     }
-    },
-    {
-     "claim": "While there is no post-credits scene, fans will have to wait until the final scenes of DC Studios new movie Clayface to see a comics and cartoon-accurate depiction of the monstrous Batman villain.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "While there’s no post-credits scene, fans will have to wait until the final scenes of DC Studios’ new movie Clayface to see a comics and"
-     }
-    },
-    {
-     "claim": "Warner Bros/DCs Clayface came in exactly where we spotted it at $3.5M in previews.",
+     "claim": "Tom Rhys Harries and Naomi Ackie star in the story of Matt Hagen (Harries), an actor who turns to a scientist (Ackie) for assistance when his face becomes disfigured.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Warner Bros/DC’s Clayface came in exactly where we spotted it – at $3.5M in previews."
+      "1": "Tom Rhys Harries and Naomi Ackie star in the story of Matt Hagen (Harries), an actor who turns to a scientist (Ackie) for assistance when"
+     }
+    },
+    {
+     "claim": "DC Studios' horror flick Clayface - which we called a \"fun, gritty and gruesome throwback\" in our review - is out in cinemas today, but that's not all.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "DC Studios' horror flick Clayface - which we called a \"fun, gritty and gruesome throwback\" in our review - is out in cinemas today, but"
      }
     }
    ],
@@ -203,32 +341,204 @@
   },
   {
    "n": 23,
-   "topic": "LISA",
-   "signal": "YouTube GB 1,691,579/h",
-   "category": "Music",
-   "what_is_new": "Lisa released her new EP Press Play along with a music video for the single Tarantino.",
+   "topic": "BioWare",
+   "signal": "Wikipedia 120,343 views",
+   "category": "Gaming",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Lisa just dropped her brand new EP Press Play?",
-    "Lisa made history at the 2026 MTV Video Music Awards!"
+    "EA just announced it is closing BioWare after thirty years.",
+    "Did you know BioWare's founders were all medical doctors?",
+    "Mass Effect 5 was just cancelled following the studio's closure."
    ],
    "sources": [
+    [
+     "All 23 BioWare Games, Ranked",
+     "https://www.polygon.com/bioware-games-ranked/",
+     "Polygon",
+     "2026-10-23"
+    ],
+    [
+     "'I'm forever grateful to BioWare': 16 game developers share the moment a BioWare game inspired them to join the industry",
+     "https://www.pcgamer.com/gaming-industry/im-forever-grateful-to-bioware-16-game-developers-share-the-moment-a-bioware-game-inspired-them-to-join-the-industry/",
+     "PC Gamer",
+     "2026-10-23"
+    ],
+    [
+     "Mass Effect 5 Details Revealed Following Cancellation, Including 'Hitman-Style Freedom' in Missions",
+     "https://www.ign.com/articles/mass-effect-5-details-revealed-following-cancellation-including-hitman-style-freedom-in-missions",
+     "IGN",
+     "2026-10-23"
+    ],
+    [
+     "BioWare",
+     "https://en.wikipedia.org/wiki/BioWare",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "EA announced on October 21, 2026, that it is closing BioWare.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "On Oct. 21, EA announced it’s closing BioWare, so we’ve ranked all 23 of its games — including remasters and mobile and browser spin-offs (but",
+      "4": "leading to an announcement on 21 October 2026 that they intended to close the studio."
+     }
+    },
+    {
+     "claim": "Shattered Steel was BioWare's very first game and sold over 170,000 copies.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "It sold fairly well for the time — over 170,000 copies.",
+      "4": "BioWare's first game was released the following year, described by IGN as a \"modest success\" with \"decent sales\"."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "BioWare was founded in 1995 by Ray Muzyka, Greg Zeschuk, and Augustine Yip.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
+     }
+    },
+    {
+     "claim": "BioWare was acquired by American publisher Electronic Arts in 2007.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The company was acquired by American publisher Electronic Arts in 2007."
+     }
+    },
+    {
+     "claim": "Electronic Arts was acquired by Saudi Arabia's Public Investment Fund on 4 August 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "On 4 August 2026, publisher Electronic Arts was acquired by Saudi Arabia's Public Investment Fund, leading to an announcement on 21 October 2026 that they"
+     }
+    },
+    {
+     "claim": "Baldur's Gate was released in 1998 and sold more than two million copies.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Upon its release in 1998, Baldur's Gate sold more than two million copies, nearly matching the sales of Diablo."
+     }
+    },
+    {
+     "claim": "Baldur's Gate II: Shadows of Amn was released in 2000 and sold two million units.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "This led to the release of Baldur's Gate II: Shadows of Amn in 2000, matching the first game's commercial success with two million units sold."
+     }
+    },
+    {
+     "claim": "Neverwinter Nights was released in 2002.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Neverwinter Nights was released in 2002 to universal acclaim"
+     }
+    },
+    {
+     "claim": "Star Wars: Knights of the Old Republic was released in 2003.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "BioWare released Star Wars: Knights of the Old Republic in 2003 to critical acclaim."
+     }
+    },
+    {
+     "claim": "Star Wars: The Old Republic launched in 2011 as BioWare's first massively multiplayer online role-playing game.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "In 2011, BioWare launched their first massively multiplayer online role-playing game (MMORPG), Star Wars: The Old Republic."
+     }
+    },
+    {
+     "claim": "Anthem's servers were finally shut down by EA in January 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It launched in rough shape, and EA finally shut servers down in January 2026, but the first time you lifted off in a Javelin truly"
+     }
+    },
+    {
+     "claim": "Mass Effect 5 had been cancelled alongside the closure of the entire BioWare development studio.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Following this week's cancellation of Mass Effect 5, purportedly called Mass Effect Universe – alongside the closure of the entire BioWare development studio – new"
+     }
+    },
+    {
+     "claim": "An online petition for BioWare has surged past 50,000 signatures.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Fans aren't giving up yet, though, as an online petition has already surged past 50,000 signatures."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Epcor_Tower.JPG"
+   ]
+  },
+  {
+   "n": 24,
+   "topic": "LISA",
+   "signal": "YouTube GB 1,810,669/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Lisa leads Billboard's new music roundup?",
+    "Lisa's new EP features her hit song Sawadika."
+   ],
+   "sources": [
+    [
+     "From LISA to Miley Cyrus, John Mayer & More, Which New Music Release Is Your Favorite This Week? Vote!",
+     "https://www.billboard.com/music/music-news/blackpink-lisa-miley-cyrus-john-mayer-best-new-music-poll-1236367274/",
+     "Billboard",
+     "2026-10-23"
+    ],
+    [
+     "Casey Bloys Unveils His Skydance DTC Content Team Featuring All HBO Max Execs: Francesca Orsi, Sarah Aubrey, Amy Gravitt & More",
+     "https://deadline.com/2026/10/casey-bloys-skydance-dtc-content-executive-team-1237171839/",
+     "Deadline",
+     "2026-10-23"
+    ],
+    [
+     "Kacey Musgraves, Doechii, Lisa, and All the Songs You Need to Know This Week",
+     "https://www.rollingstone.com/music/music-features/kacey-musgraves-doechii-lisa-songs-you-need-to-know-1235647140/",
+     "Rolling Stone",
+     "2026-10-23"
+    ],
     [
      "AMD says the re-release of the Ryzen 7 5800X3D was 'like a final gift to our loyal [AM4] users' and it was CEO Dr. Lisa Su who first came up",
      "https://www.pcgamer.com/hardware/processors/amd-says-the-re-release-of-the-ryzen-7-5800x3d-was-like-a-final-gift-to-our-loyal-am4-users-and-it-was-ceo-dr-lisa-su-who-first-came-up-with-the-idea/",
      "PC Gamer",
      "2026-10-23"
-    ],
-    [
-     "'Press Play' — Amazon Reveals Full PlayStation x Lisa Merch Collection as the Blackpink Star Drops New EP",
-     "https://www.ign.com/articles/press-play-amazon-reveals-full-playstation-x-lisa-merch-collection-as-the-blackpink-star-drops-new-ep",
-     "IGN",
-     "2026-10-23"
-    ],
-    [
-     "LISA’s ‘Press Play’: All 6 Tracks Ranked",
-     "https://www.billboard.com/lists/lisa-press-play-album-review-tracks-ranked/",
-     "Billboard",
-     "2026-10-22"
     ],
     [
      "LISA",
@@ -237,90 +547,211 @@
      ""
     ]
    ],
-   "verified": [
-    {
-     "claim": "Lisa released her new EP Press Play.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The full merch drop arrives just as Lisa releases her new EP ‘Press Play.'",
-      "3": "Now, with that momentum behind her, LISA unveils her new EP, Press Play."
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Lisa won best pop at the 2026 MTV Video Music Awards for Dream.",
+     "claim": "Lisa of Blackpink leads Billboard's music roundup with her new EP titled Press Play.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "On Sept. 27, LISA took home best pop at the 2026 MTV Video Music Awards for “Dream,” beating a field that included Taylor Swift, Ariana"
+      "1": "LISA of BLACKPINK leads this week’s roundup with her sizzling Press Play EP, which features her Billboard Hot 100 hit “SaWaDiKa” (No. 69) and the"
      }
     },
     {
-     "claim": "The Lisa Edition DualSense controller is available with a release date of October 30.",
+     "claim": "Lisa's new EP titled Press Play features her hit song Sawadika and the newly released track Tarantino.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "The DualSense controller is still up for preorder with a release date of October 30."
+      "1": "LISA of BLACKPINK leads this week’s roundup with her sizzling Press Play EP, which features her Billboard Hot 100 hit “SaWaDiKa” (No. 69) and the"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 30,
-   "topic": "iPhone Duo Vs iPhone 18",
-   "signal": "YouTube GB-tech 103,018/h",
-   "category": "Tech",
+   "n": 25,
+   "topic": "BABYMONSTER",
+   "signal": "YouTube GB 627,096/h",
+   "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "The iPhone Duo arrived worldwide on Friday, October 23."
+    "Did you know BABYMONSTER added six new stops to their tour?",
+    "Find out how G-Dragon helped create their hit Drip."
    ],
    "sources": [
     [
-     "Our best tips for using the iPhone Duo",
-     "https://www.theverge.com/tech/1017157/iphone-duo-tips-touch-id-magsafe",
-     "The Verge",
-     "2026-10-23"
+     "BABYMONSTER add new stops to 2025 ‘Hello Monsters’ world tour",
+     "https://www.nme.com/news/music/babymonster-2025-hello-monsters-world-tour-cities-dates-tickets-more-3813574",
+     "NME",
+     "2025-03-27"
     ],
     [
-     "iPhone Duo arrives at Apple Store locations worldwide",
-     "https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/",
-     "Apple Newsroom",
-     "2026-10-23"
+     "BABYMONSTER",
+     "https://en.wikipedia.org/wiki/Babymonster",
+     "Wikipedia",
+     ""
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "The iPhone Duo arrived at Apple Store locations worldwide on Friday, October 23.",
+     "claim": "BABYMONSTER announced six new North American stops as part of their ongoing 2025 Hello Monsters world tour.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "On Friday, October 23, the highly anticipated iPhone Duo made its debut at Apple Store locations worldwide."
+      "1": "BABYMONSTER have announced six new North American stops as part of their ongoing 2025 ‘Hello Monsters’ world tour."
+     }
+    },
+    {
+     "claim": "The record features the singles Forever, Clik Clak and Drip, the latter of which was co-written by Big Bang member G-Dragon.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The record features the singles ‘Forever’, ‘Clik Clak’ and ‘Drip’, the latter of which was co-written by Big Bang member G-Dragon."
      }
     }
    ],
    "images": [
-    "page:https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/"
+    "commons:File:BabyMonster_Promoting_drip_on_2024112.png"
    ]
   },
   {
    "n": 27,
-   "topic": "ROBLOX THE HOLLOW",
-   "signal": "YouTube GB-gaming 55,671/h",
-   "category": "Gaming",
-   "what_is_new": "The Roblox server-wide event called The Hollow has launched for a limited time.",
+   "topic": "I Play Rocky",
+   "signal": "YouTube GB 51,059/h",
+   "category": "Film",
+   "what_is_new": "",
    "hooks": [
-    "Discover everything you need to know about Roblox The Hollow event!",
-    "Nine new monsters await you in the spooky Roblox maze event!",
-    "Can you survive the terrifying new Roblox The Hollow event?"
+    "Anthony Ippolito stars as Sylvester Stallone in I Play Rocky.",
+    "Peter Farrelly directs the biographical drama film I Play Rocky.",
+    "I Play Rocky arrives in select theaters on November 6."
+   ],
+   "sources": [
+    [
+     "I Play Rocky - Official Trailer 2",
+     "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
+     "IGN",
+     "2026-10-22"
+    ],
+    [
+     "‘I Play Rocky’ Surprise Screens at London Film Festival",
+     "https://variety.com/2026/film/festivals/i-play-rocky-surprise-movie-london-film-festival-1236914385/",
+     "Variety",
+     "2026-10-16"
+    ],
+    [
+     "I Play Rocky",
+     "https://en.wikipedia.org/wiki/I_Play_Rocky",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Anthony Ippolito stars as Sylvester Stallone in the biographical drama film I Play Rocky.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Alongside Ippolito, it stars AnnSophia Robb as Sasha Czack, Stallone’s wife; Matt Dillon as his father, Frank Stallone Sr.; P.J. Byrne as “Rocky” producer Irwin",
+      "3": "Anthony Ippolito stars as Sylvester Stallone, alongside AnnaSophia Robb, Toby Kebbell, P. J. Byrne, Jay Duplass, Matt Dillon, Stephan James, and Tracy Letts."
+     }
+    },
+    {
+     "claim": "The film I Play Rocky is directed by Peter Farrelly.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "The film is directed by Peter Farrelly and produced by Toby Emmerich, Christian Baha, and Peter Farrelly.",
+      "3": "I Play Rocky is a 2026 American biographical drama film directed by Peter Farrelly and written by Peter Gamble."
+     }
+    },
+    {
+     "claim": "I Play Rocky is scheduled to release in select theaters on November 6 and everywhere on November 20.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Sylvester Stallone becomes Rocky in I Play Rocky, in select theaters on November 6 and everywhere on November 20.",
+      "3": "The film is scheduled to begin a limited theatrical release by Amazon MGM Studios in the United States on November 6, 2026, expanding nationwide on"
+     }
+    },
+    {
+     "claim": "I Play Rocky premiered at the Toronto International Film Festival.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The film first premiered at Toronto Film Festival last month, where it was up for the People’s Choice Award and generated positive reviews.",
+      "3": "I Play Rocky premiered at the 2026 Toronto International Film Festival, where it was nominated for the People's Choice Award."
+     }
+    },
+    {
+     "claim": "AnnaSophia Robb plays Sylvester Stallone's wife Sasha Czack in the film.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Alongside Ippolito, it stars AnnSophia Robb as Sasha Czack, Stallone’s wife; Matt Dillon as his father, Frank Stallone Sr.; P.J. Byrne as “Rocky” producer Irwin",
+      "3": "AnnaSophia Robb as Sasha Czack, Sylvester's wife"
+     }
+    },
+    {
+     "claim": "Matt Dillon plays Sylvester Stallone's father Frank Stallone Sr. in the movie.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Alongside Ippolito, it stars AnnSophia Robb as Sasha Czack, Stallone’s wife; Matt Dillon as his father, Frank Stallone Sr.; P.J. Byrne as “Rocky” producer Irwin",
+      "3": "Matt Dillon as Frank Stallone Sr., Sylvester's father"
+     }
+    },
+    {
+     "claim": "P.J. Byrne plays Rocky producer Irwin Winkler in I Play Rocky.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Alongside Ippolito, it stars AnnSophia Robb as Sasha Czack, Stallone’s wife; Matt Dillon as his father, Frank Stallone Sr.; P.J. Byrne as “Rocky” producer Irwin",
+      "3": "P. J. Byrne as Irwin Winkler, a producer of Rocky"
+     }
+    },
+    {
+     "claim": "Jay Duplass plays Rocky director John G. Avildsen in the biographical drama.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Alongside Ippolito, it stars AnnSophia Robb as Sasha Czack, Stallone’s wife; Matt Dillon as his father, Frank Stallone Sr.; P.J. Byrne as “Rocky” producer Irwin",
+      "3": "Jay Duplass as John G. Avildsen, the director of Rocky"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 28,
+   "topic": "ROBLOX THE HOLLOW",
+   "signal": "YouTube GB-gaming 48,454/h",
+   "category": "Gaming",
+   "what_is_new": "The Roblox server-wide event, The Hollow, has launched.",
+   "hooks": [
+    "Discover everything you need to know about the new Roblox Hollow event!",
+    "Nine days of new monsters await players in the Roblox Hollow event!"
    ],
    "sources": [
     [
@@ -349,7 +780,7 @@
      }
     },
     {
-     "claim": "A live finale for The Hollow takes place on October 31.",
+     "claim": "A live finale is taking place on Oct. 31.",
      "sources": [
       1,
       2
@@ -360,7 +791,7 @@
      }
     },
     {
-     "claim": "A new monster is featured for each of the nine days in The Hollow.",
+     "claim": "A new monster is featured for each of the nine days.",
      "sources": [
       1,
       2
@@ -368,17 +799,6 @@
      "evidence": {
       "1": "There's a new monster featured for each of the nine days.",
       "2": "A new monster will appear in the maze each day for nine days."
-     }
-    },
-    {
-     "claim": "The Hollow is a celebration of the many horror games featured on Roblox.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It's a celebration of the many horror games featured on Roblox, with quests and a new monster from a specific game appearing.",
-      "2": "This Halloween-themed event brings with it a dedicated mini-game, where creatures from the platform's famous horror games like 99 Nights in the Forest, Dandy's World"
      }
     },
     {
@@ -393,45 +813,69 @@
      }
     }
    ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 29,
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 105,763/h",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Olivia Rodrigo was born in Murrieta, California?",
+    "Her debut album Sour topped charts worldwide!"
+   ],
+   "sources": [
+    [
+     "Billy Corgan Explains Why Olivia Rodrigo Is Your Favorite Rock Star’s Favorite Pop Star: ‘She’s Not Afraid’",
+     "https://www.billboard.com/music/music-news/billy-corgan-fan-olivia-rodrigo-what-he-likes-her-music-1236367252/",
+     "Billboard",
+     "2026-10-23"
+    ],
+    [
+     "All The Songs In ‘Junk’: Caroline Polacheck, Baird, Dean Martin And More",
+     "https://deadline.com/2026/10/junk-movie-songs-soundtrack-caroline-polacheck-dean-martin-1237167840/",
+     "Deadline",
+     "2026-10-23"
+    ],
+    [
+     "Chaotic state of football in Brazil epitomises a nation where greed has conquered glory | Jonathan Liew",
+     "https://www.theguardian.com/football/2026/oct/23/chaotic-football-brazil-politics-election-flavio-bolsonaro-lula",
+     "Guardian",
+     "2026-10-23"
+    ],
+    [
+     "Olivia Rodrigo",
+     "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "The first event begins on Oct. 23, starting at 11 AM PT.",
+     "claim": "Olivia Isabel Rodrigo was born on February 20, 2003, at the Rancho Springs Medical Center in Murrieta, California.",
      "sources": [
-      1
+      4
      ],
      "evidence": {
-      "1": "The first event begins on Oct. 23, starting at 11 AM PT."
+      "4": "Olivia Isabel Rodrigo (born February 20, 2003) is an American singer-songwriter and actress."
      }
     },
     {
-     "claim": "Completing the first floor puzzle unlocks the door and gives the Lord Umberhallow BLOXikin reward.",
+     "claim": "Her debut studio album, Sour, topped the US Billboard 200 and nine other charts worldwide.",
      "sources": [
-      1
+      4
      ],
      "evidence": {
-      "1": "Completing this unlocks the door, and then you can return to this floor's entrance and exit the elevator. When you leave, you'll receive the Lord"
-     }
-    },
-    {
-     "claim": "The Deer is a monster from 99 Nights in the Forest.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "- The Deer: Monster from 99 Nights in the Forest"
-     }
-    },
-    {
-     "claim": "Seek is a monster from DOORS.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "- Seek: Monster from DOORS"
+      "4": "Her debut studio album, Sour (2021), topped the US Billboard 200 and nine other charts worldwide."
      }
     }
    ],
-   "images": []
+   "images": [
+    "commons:File:Glasto2025-546_(cropped)_2.jpg"
+   ]
   }
  ]
 }

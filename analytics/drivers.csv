@@ -1,110 +1,113 @@
 feature,feature_label,value,n,lift,median_rel,verdict,held_3s_pct,avg_viewed_pct,subs_per_1k,shares_per_1k,why
-angles,Angle research,hidden,2,1.36,3.19,too few to tell,,,,,
-angles,Angle research,shown,3,0.79,0.28,early sign,241,184,0.0,0.0,
-category,Category,Music,25,1.68,2.91,push,109,53,0.0,0.0,
-category,Category,Sport,16,1.36,1.88,push,115,59,0.0,0.0,average viewed 59% vs 50% typical; engaged views 35% vs 31% typical
-category,Category,Film,16,1.27,1.39,push,105,40,0.0,0.0,
-category,Category,Gaming,16,0.59,0.68,cut back,106,39,0.0,0.0,engaged views 24% vs 31% typical; average viewed 39% vs 50% typical
-category,Category,Tech,8,0.45,0.45,cut back,,52,0.0,0.0,engaged views 26% vs 31% typical
-category,Category,Entertainment,9,0.41,0.19,cut back,128,53,0.0,0.0,
-category,Category,Science,9,0.27,0.07,cut back,,19,0.0,0.0,engaged views 10% vs 31% typical; average viewed 19% vs 50% typical
-ending,Ending,follow line,4,0.85,1.01,early sign,118,57,0.0,0.0,engaged views 25% vs 31% typical
-ending,Ending,question,3,0.77,0.37,early sign,,,,,
-ending,Ending,loop,2,0.58,0.26,too few to tell,,,,,
-first_frame,First frame,photo,6,0.82,0.99,about typical,104,42,0.0,0.0,engaged views 25% vs 31% typical; average viewed 42% vs 50% typical
-first_frame,First frame,cover,6,0.33,0.13,cut back,,46,0.0,0.0,engaged views 9% vs 31% typical
-format,Format,news_explained,13,1.29,1.21,push,118,58,0.0,0.0,average viewed 58% vs 50% typical; still watching at 3 seconds 118% vs 109% typical
-format,Format,one_detail,23,1.16,1.27,about typical,107,54,0.0,0.0,engaged views 35% vs 31% typical; average viewed 54% vs 50% typical
-format,Format,timeline,6,1.06,1.52,about typical,182,135,0.0,0.0,
-format,Format,legacy,27,0.88,0.82,about typical,,40,0.0,0.0,average viewed 40% vs 50% typical
-format,Format,real_reason,8,0.75,0.85,cut back,107,57,0.0,0.0,engaged views 28% vs 31% typical
-format,Format,story,9,0.5,0.29,cut back,116,60,0.0,0.0,
-format,Format,three_details,13,0.44,0.41,cut back,110,51,0.0,0.0,engaged views 26% vs 31% typical
-hook_len,Hook length,13 words or more,17,0.92,1.14,about typical,106,57,0.0,0.0,
-hook_len,Hook length,9 to 12 words,53,0.79,0.85,cut back,109,55,0.0,0.0,
-hook_len,Hook length,8 words or fewer,2,0.71,1.02,too few to tell,118,57,0.0,0.0,
-hook_type,Hook style,superlative,6,1.27,2.4,push,111,60,0.0,0.0,average viewed 60% vs 50% typical; engaged views 36% vs 31% typical
-hook_type,Hook style,statement,19,1.25,1.59,push,107,54,0.0,0.0,average viewed 54% vs 50% typical
-hook_type,Hook style,you,2,1.02,2.1,too few to tell,,,,,
-hook_type,Hook style,number,37,0.73,0.61,cut back,108,56,0.0,0.0,
-hook_type,Hook style,twist,1,0.5,0.06,too few to tell,,,,,
-hook_type,Hook style,question,7,0.46,0.41,cut back,118,28,0.0,0.0,engaged views 12% vs 31% typical; average viewed 28% vs 50% typical
-kind,Kind of Short,breaking,5,0.97,1.05,about typical,115,71,0.9,0.0,
-kind,Kind of Short,news,21,0.96,0.89,about typical,170,42,0.0,0.0,
-kind,Kind of Short,follow-up,9,0.73,0.61,cut back,102,46,0.0,0.0,engaged views 24% vs 31% typical
-kind,Kind of Short,true story,8,0.41,0.25,cut back,116,60,0.0,0.0,
-kind,Kind of Short,evergreen,10,0.4,0.29,cut back,112,54,0.0,0.0,engaged views 25% vs 31% typical
-length,Length,25 to 34 s,45,1.03,1.14,about typical,107,56,0.0,0.0,
-length,Length,under 25 s,23,0.66,0.86,cut back,112,57,0.0,0.0,engaged views 26% vs 31% typical
-length,Length,35 to 44 s,4,0.36,0.06,early sign,102,23,0.0,0.0,average viewed 23% vs 50% typical; engaged views 19% vs 31% typical
-look_captions,Captions,pop,6,2.9,4.59,push,131,81,0.0,0.0,average viewed 81% vs 50% typical; still watching at 3 seconds 131% vs 109% typical
-look_captions,Captions,lab-captions-1019,18,1.19,1.24,about typical,124,59,0.0,0.0,average viewed 59% vs 50% typical; engaged views 36% vs 31% typical
-look_captions,Captions,punch,2,0.8,3.3,too few to tell,118,55,2.3,0.0,
-look_captions,Captions,boxed,3,0.73,0.86,early sign,109,49,0.0,0.0,engaged views 28% vs 31% typical
-look_captions,Captions,clean,31,0.65,0.51,cut back,106,54,0.0,0.0,
-look_captions,Captions,minimal,12,0.46,0.77,cut back,107,50,0.0,0.0,engaged views 25% vs 31% typical
-look_energy,Camera energy,steady,33,1.32,1.82,push,107,59,0.0,0.0,average viewed 59% vs 50% typical; engaged views 34% vs 31% typical
-look_energy,Camera energy,punchy,8,1.21,3.03,early sign,115,55,0.0,0.0,average viewed 55% vs 50% typical
-look_energy,Camera energy,lab-energy-1019,4,0.83,0.93,early sign,,,,,
-look_energy,Camera energy,calm,27,0.41,0.37,cut back,105,50,0.0,0.0,engaged views 22% vs 31% typical
-look_grade,Colour grade,cinematic,21,1.31,1.47,push,109,54,0.0,0.0,average viewed 54% vs 50% typical
-look_grade,Colour grade,vivid,3,1.15,4.45,early sign,110,52,0.8,0.0,engaged views 35% vs 31% typical
-look_grade,Colour grade,natural,16,0.98,1.48,about typical,107,58,0.0,0.0,
-look_grade,Colour grade,lab-grade-1019,32,0.52,0.42,cut back,118,57,0.0,0.0,
-look_opening,Opening,image_first,24,0.98,1.51,about typical,109,59,0.0,0.0,
-look_opening,Opening,graphic_first,46,0.78,0.88,cut back,109,54,0.0,0.0,engaged views 26% vs 31% typical
-look_opening,Opening,lab-opening-1019,2,0.48,0.28,too few to tell,,54,0.0,0.0,
-look_voice,Voice,george,24,1.35,2.29,push,107,54,0.0,0.0,average viewed 54% vs 50% typical
-look_voice,Voice,george_quick,4,1.15,1.64,early sign,107,55,0.0,0.0,average viewed 55% vs 50% typical
-look_voice,Voice,isabella,1,1.09,1.43,too few to tell,,,,,
-look_voice,Voice,george_dramatic,13,0.83,1.16,about typical,118,56,0.0,0.0,engaged views 25% vs 31% typical
-look_voice,Voice,lab-voice-1019,6,0.83,0.33,about typical,112,61,0.0,0.0,
-look_voice,Voice,heart,3,0.76,0.21,early sign,102,47,0.0,0.0,
-look_voice,Voice,lewis,3,0.74,0.44,early sign,,,,,
-look_voice,Voice,lily,3,0.64,0.14,early sign,,,,,
-look_voice,Voice,michael,3,0.6,0.39,early sign,,,,,
-look_voice,Voice,emma,12,0.45,0.25,cut back,295,217,0.0,0.0,
-mood,Music mood,action,7,1.86,4.34,push,115,58,2.0,0.0,average viewed 58% vs 50% typical
-mood,Music mood,rock,3,1.65,1.59,early sign,182,135,0.0,0.0,average viewed 135% vs 50% typical; still watching at 3 seconds 182% vs 109% typical
-mood,Music mood,tense,6,1.53,1.91,push,124,71,0.0,0.0,average viewed 71% vs 50% typical; still watching at 3 seconds 124% vs 109% typical
-mood,Music mood,orchestral,1,1.35,3.36,too few to tell,105,54,0.0,0.0,
-mood,Music mood,retro,11,1.04,1.47,about typical,108,49,0.0,0.0,
-mood,Music mood,pop,15,0.98,1.27,about typical,107,47,0.0,0.0,
-mood,Music mood,hiphop,2,0.84,0.73,too few to tell,,,,,
-mood,Music mood,country,1,0.81,0.44,too few to tell,,,,,
-mood,Music mood,inspiring,4,0.74,1.02,early sign,217,164,0.0,0.0,
-mood,Music mood,playful,4,0.58,1.04,early sign,118,57,0.0,0.0,engaged views 25% vs 31% typical
-mood,Music mood,space,6,0.53,0.45,early sign,,54,0.0,0.0,engaged views 23% vs 31% typical
-mood,Music mood,epic,7,0.46,0.29,cut back,98,49,0.0,0.0,engaged views 27% vs 31% typical; still watching at 3 seconds 98% vs 109% typical
-mood,Music mood,tech,4,0.41,0.18,early sign,,,,,
-pictures,Pictures,mostly stock footage,5,2.15,4.34,push,131,80,0.0,0.0,average viewed 80% vs 50% typical; still watching at 3 seconds 131% vs 109% typical
-pictures,Pictures,mostly real pictures,67,0.73,0.85,cut back,107,54,0.0,0.0,
-replies,Comment replies,on,26,0.7,0.6,cut back,106,50,0.0,0.0,
-replies,Comment replies,off,27,0.58,0.41,cut back,124,65,0.0,0.0,
-slot,Posting time (UK),08:00 to 10:59,14,1.79,3.89,push,112,56,0.0,0.0,average viewed 56% vs 50% typical
-slot,Posting time (UK),11:00 to 13:59,18,1.32,1.4,push,107,51,0.0,0.0,
-slot,Posting time (UK),17:00 to 19:59,12,0.86,0.91,about typical,106,45,0.0,0.0,average viewed 45% vs 50% typical
-slot,Posting time (UK),other times,24,0.77,0.82,cut back,106,50,0.0,0.0,
-slot,Posting time (UK),20:00 to 22:59,13,0.55,0.46,cut back,294,39,0.0,0.0,average viewed 39% vs 50% typical; engaged views 27% vs 31% typical
-slot,Posting time (UK),14:00 to 16:59,18,0.44,0.46,cut back,107,50,0.0,0.0,
-title_search,Title wording,search phrase,2,0.97,3.25,too few to tell,,,,,
-title_search,Title wording,curiosity,1,0.97,0.89,too few to tell,,21,0.0,0.0,
-title_style,Title,number in title,29,0.97,1.14,about typical,111,48,0.0,0.0,
-title_style,Title,statement,57,0.82,0.85,about typical,106,46,0.0,0.0,
-title_style,Title,question,13,0.64,0.59,cut back,112,56,0.0,0.0,engaged views 28% vs 31% typical
-weekday,Day posted,Tuesday,7,2.37,4.23,early sign,182,76,0.0,0.0,still watching at 3 seconds 182% vs 109% typical; average viewed 76% vs 50% typical
-weekday,Day posted,Monday,19,1.47,2.5,early sign,109,55,0.0,0.0,average viewed 55% vs 50% typical
-weekday,Day posted,Saturday,9,1.04,0.82,early sign,,50,0.0,0.0,
-weekday,Day posted,Sunday,8,0.93,1.03,early sign,,34,0.0,0.0,
-weekday,Day posted,Friday,8,0.66,0.56,early sign,,46,0.0,0.0,
-weekday,Day posted,Thursday,20,0.56,0.48,cut back,,,,,
-weekday,Day posted,Wednesday,28,0.54,0.38,early sign,106,54,0.0,0.0,
-writer,Writer model,groq:openai/gpt-oss-120b,5,1.37,2.08,push,102,47,0.0,0.0,engaged views 38% vs 31% typical
-writer,Writer model,gemini:gemini-3.7-flash,1,0.85,0.52,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3.6-flash,1,0.61,0.14,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3.5-flash-lite,21,0.59,0.41,cut back,118,55,0.0,0.0,
-writer,Writer model,gemini:gemini-3.8-flash,1,0.58,0.11,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3.1-flash-lite,1,0.47,0.05,too few to tell,,,,,
-writer,Writer model,gemini:gemini-flash-latest,5,0.44,0.3,cut back,,,,,
-writer,Writer model,gemini:gemini-3.5-flash,2,0.42,0.16,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3-flash-preview,6,0.38,0.24,early sign,107,40,0.0,0.0,average viewed 40% vs 50% typical; engaged views 25% vs 31% typical
+angles,Angle research,hidden,2,1.44,3.88,too few to tell,105,58,0.0,0.0,
+angles,Angle research,shown,4,0.95,1.03,early sign,228,85,0.0,0.0,
+appeal,Appeal,fans,1,1.14,1.71,too few to tell,,,,,
+appeal,Appeal,everyone,8,0.51,0.49,early sign,,,,,
+category,Category,Music,25,1.68,2.0,push,110,53,0.0,0.0,
+category,Category,Sport,18,1.53,1.89,push,112,57,0.0,0.0,average viewed 57% vs 51% typical
+category,Category,Film,17,1.45,1.82,push,104,39,0.0,0.0,
+category,Category,Gaming,16,0.6,0.62,cut back,111,34,0.0,0.0,average viewed 34% vs 51% typical; engaged views 27% vs 32% typical
+category,Category,Tech,9,0.44,0.46,cut back,127,50,0.0,0.0,engaged views 25% vs 32% typical
+category,Category,Entertainment,9,0.44,0.2,cut back,118,54,0.0,0.0,
+category,Category,Science,10,0.31,0.15,cut back,105,39,0.0,0.0,average viewed 39% vs 51% typical; engaged views 25% vs 32% typical
+ending,Ending,follow line,4,1.01,1.42,early sign,114,54,0.0,0.0,
+ending,Ending,question,3,0.87,0.44,early sign,,51,0.0,0.0,engaged views 27% vs 32% typical
+ending,Ending,loop,2,0.64,0.33,too few to tell,,46,0.0,0.0,
+first_frame,First frame,photo,7,0.74,0.63,cut back,108,37,0.0,0.0,engaged views 21% vs 32% typical; average viewed 37% vs 51% typical
+first_frame,First frame,cover,6,0.37,0.18,cut back,96,51,0.0,0.0,engaged views 24% vs 32% typical; still watching at 3 seconds 96% vs 110% typical
+format,Format,one_detail,23,1.39,1.47,push,108,56,0.0,0.0,average viewed 56% vs 51% typical
+format,Format,news_explained,13,1.38,1.32,push,116,55,0.0,0.0,average viewed 55% vs 51% typical
+format,Format,timeline,6,1.23,1.73,about typical,103,58,0.0,0.0,average viewed 58% vs 51% typical; engaged views 35% vs 32% typical
+format,Format,legacy,27,0.93,0.91,about typical,,40,0.0,0.0,
+format,Format,real_reason,9,0.89,0.99,about typical,112,56,0.0,0.0,engaged views 28% vs 32% typical
+format,Format,story,13,0.52,0.41,cut back,112,24,0.0,0.0,average viewed 24% vs 51% typical; engaged views 29% vs 32% typical
+format,Format,countdown,1,0.49,0.06,too few to tell,,,,,
+format,Format,three_details,12,0.44,0.39,cut back,114,40,0.0,0.0,engaged views 22% vs 32% typical; average viewed 40% vs 51% typical
+hook_len,Hook length,13 words or more,19,1.05,1.25,about typical,112,57,0.0,0.0,
+hook_len,Hook length,8 words or fewer,3,0.87,1.71,early sign,114,53,0.0,0.0,
+hook_len,Hook length,9 to 12 words,55,0.82,0.72,about typical,110,54,0.0,0.0,
+hook_type,Hook style,statement,20,1.48,1.9,push,108,55,0.0,0.0,average viewed 55% vs 51% typical
+hook_type,Hook style,you,2,1.08,2.3,too few to tell,,81,0.0,0.0,
+hook_type,Hook style,superlative,6,0.97,1.23,about typical,118,53,0.0,0.0,
+hook_type,Hook style,number,39,0.84,0.72,about typical,110,55,0.0,0.0,
+hook_type,Hook style,twist,1,0.53,0.08,too few to tell,,0,0.0,0.0,
+hook_type,Hook style,question,9,0.42,0.41,cut back,114,40,0.0,0.0,average viewed 40% vs 51% typical
+kind,Kind of Short,news,23,1.19,1.71,about typical,108,58,0.0,0.0,average viewed 58% vs 51% typical; engaged views 36% vs 32% typical
+kind,Kind of Short,breaking,5,1.11,1.47,about typical,112,63,0.0,0.0,average viewed 63% vs 51% typical
+kind,Kind of Short,follow-up,9,0.89,0.72,about typical,106,51,0.0,0.0,
+kind,Kind of Short,true story,12,0.46,0.41,cut back,112,24,0.0,0.0,average viewed 24% vs 51% typical; engaged views 29% vs 32% typical
+kind,Kind of Short,evergreen,11,0.41,0.27,cut back,116,50,0.0,0.0,engaged views 26% vs 32% typical
+length,Length,25 to 34 s,48,1.13,1.36,about typical,110,55,0.0,0.0,average viewed 55% vs 51% typical
+length,Length,under 25 s,23,0.68,0.6,cut back,114,54,0.0,0.0,engaged views 26% vs 32% typical
+length,Length,35 to 44 s,6,0.43,0.26,cut back,103,45,0.0,0.0,average viewed 45% vs 51% typical
+look_captions,Captions,pop,5,2.93,5.5,push,146,91,0.0,0.0,average viewed 91% vs 51% typical; still watching at 3 seconds 146% vs 110% typical
+look_captions,Captions,lab-captions-1019,23,1.17,1.01,about typical,112,53,0.0,0.0,engaged views 35% vs 32% typical
+look_captions,Captions,punch,2,0.81,3.56,too few to tell,118,55,2.3,0.0,
+look_captions,Captions,clean,33,0.76,0.63,cut back,107,55,0.0,0.0,
+look_captions,Captions,boxed,2,0.55,0.51,too few to tell,127,49,0.0,0.0,
+look_captions,Captions,minimal,12,0.52,0.91,cut back,106,50,0.0,0.0,engaged views 24% vs 32% typical
+look_energy,Camera energy,steady,38,1.27,1.69,push,110,58,0.0,0.0,average viewed 58% vs 51% typical
+look_energy,Camera energy,punchy,7,1.14,2.99,early sign,118,56,0.0,0.0,average viewed 56% vs 51% typical
+look_energy,Camera energy,lab-energy-1019,5,0.94,0.65,about typical,,53,0.0,0.0,
+look_energy,Camera energy,calm,27,0.49,0.44,cut back,106,48,0.0,0.0,
+look_grade,Colour grade,cinematic,24,1.28,1.5,push,110,54,0.0,0.0,
+look_grade,Colour grade,vivid,3,1.18,4.8,early sign,110,52,0.8,0.0,engaged views 35% vs 32% typical
+look_grade,Colour grade,natural,16,0.88,0.91,about typical,109,58,0.0,0.0,
+look_grade,Colour grade,lab-grade-1019,34,0.64,0.58,cut back,111,53,0.0,0.0,
+look_opening,Opening,image_first,27,1.0,1.67,about typical,110,58,0.0,0.0,
+look_opening,Opening,graphic_first,45,0.91,0.99,about typical,110,54,0.0,0.0,
+look_opening,Opening,lab-opening-1019,5,0.44,0.41,cut back,,50,0.0,0.0,engaged views 21% vs 32% typical
+look_voice,Voice,george,26,1.3,1.69,push,110,54,0.0,0.0,
+look_voice,Voice,george_quick,4,1.26,1.94,early sign,107,54,0.0,0.0,
+look_voice,Voice,isabella,1,1.19,2.0,too few to tell,,53,0.0,0.0,
+look_voice,Voice,lab-voice-1019,6,0.96,0.41,about typical,114,54,0.0,0.0,
+look_voice,Voice,george_dramatic,13,0.94,1.23,about typical,112,55,0.0,0.0,
+look_voice,Voice,heart,3,0.87,0.3,early sign,103,45,0.0,0.0,average viewed 45% vs 51% typical; engaged views 29% vs 32% typical
+look_voice,Voice,lewis,3,0.85,0.6,early sign,110,30,0.0,0.0,average viewed 30% vs 51% typical; engaged views 22% vs 32% typical
+look_voice,Voice,lily,4,0.7,0.41,early sign,105,58,0.0,0.0,
+look_voice,Voice,michael,3,0.68,0.46,early sign,,57,0.0,0.0,
+look_voice,Voice,emma,14,0.46,0.35,cut back,261,72,0.0,0.0,
+mood,Music mood,action,7,1.83,2.4,push,115,58,0.0,0.0,average viewed 58% vs 51% typical
+mood,Music mood,rock,3,1.75,1.67,early sign,110,60,0.0,0.0,engaged views 38% vs 32% typical; average viewed 60% vs 51% typical
+mood,Music mood,tense,6,1.73,2.45,push,114,67,0.0,0.0,average viewed 67% vs 51% typical
+mood,Music mood,orchestral,1,1.43,4.16,too few to tell,118,63,0.0,0.0,
+mood,Music mood,pop,15,1.12,1.33,about typical,107,50,0.0,0.0,
+mood,Music mood,retro,10,1.12,1.4,about typical,114,50,0.0,0.0,
+mood,Music mood,hiphop,2,0.93,0.97,too few to tell,,43,0.0,0.0,
+mood,Music mood,country,1,0.88,0.6,too few to tell,,,,,
+mood,Music mood,inspiring,6,0.68,1.15,cut back,213,74,0.0,0.0,
+mood,Music mood,playful,4,0.66,1.29,early sign,114,38,0.0,0.0,average viewed 38% vs 51% typical; engaged views 28% vs 32% typical
+mood,Music mood,space,7,0.59,0.46,cut back,105,52,0.0,0.0,
+mood,Music mood,epic,9,0.54,0.44,cut back,98,41,0.0,0.0,average viewed 41% vs 51% typical; still watching at 3 seconds 98% vs 110% typical
+mood,Music mood,tech,5,0.38,0.12,cut back,,53,0.0,0.0,engaged views 25% vs 32% typical
+pictures,Pictures,mostly stock footage,4,2.07,3.37,early sign,136,94,0.0,0.0,average viewed 94% vs 51% typical; still watching at 3 seconds 136% vs 110% typical
+pictures,Pictures,mostly real pictures,73,0.81,0.72,about typical,110,54,0.0,0.0,
+replies,Comment replies,on,30,0.85,0.7,about typical,110,53,0.0,0.0,
+replies,Comment replies,off,30,0.64,0.47,cut back,110,54,0.0,0.0,
+slot,Posting time (UK),08:00 to 10:59,12,1.85,4.62,push,110,58,0.0,0.0,average viewed 58% vs 51% typical
+slot,Posting time (UK),11:00 to 13:59,18,1.45,1.4,push,108,52,0.0,0.0,
+slot,Posting time (UK),other times,24,0.99,1.08,about typical,112,53,0.0,0.0,
+slot,Posting time (UK),17:00 to 19:59,17,0.76,0.72,cut back,102,54,0.0,0.0,
+slot,Posting time (UK),20:00 to 22:59,13,0.6,0.48,cut back,206,39,0.0,0.0,average viewed 39% vs 51% typical; engaged views 28% vs 32% typical
+slot,Posting time (UK),14:00 to 16:59,20,0.49,0.62,cut back,110,41,0.0,0.0,average viewed 41% vs 51% typical
+title_search,Title wording,search phrase,2,1.09,4.54,too few to tell,,61,0.0,0.0,
+title_search,Title wording,curiosity,1,1.0,1.01,too few to tell,,21,0.0,0.0,
+title_style,Title,number in title,28,0.96,1.07,about typical,111,45,0.0,0.0,
+title_style,Title,statement,62,0.94,0.91,about typical,108,51,0.0,0.0,
+title_style,Title,question,14,0.62,0.65,cut back,117,54,0.0,0.0,engaged views 28% vs 32% typical
+weekday,Day posted,Tuesday,7,2.6,4.83,early sign,127,70,0.0,0.0,average viewed 70% vs 51% typical; still watching at 3 seconds 127% vs 110% typical
+weekday,Day posted,Monday,17,1.42,2.07,early sign,110,55,0.0,0.0,average viewed 55% vs 51% typical
+weekday,Day posted,Saturday,9,1.07,0.9,early sign,,49,0.0,0.0,
+weekday,Day posted,Sunday,8,0.98,1.1,early sign,,34,0.0,0.0,
+weekday,Day posted,Friday,8,0.69,0.62,early sign,,46,0.0,0.0,average viewed 46% vs 51% typical
+weekday,Day posted,Wednesday,28,0.66,0.45,early sign,110,53,0.0,0.0,
+weekday,Day posted,Thursday,27,0.63,0.6,cut back,,53,0.0,0.0,
+writer,Writer model,groq:openai/gpt-oss-120b,7,1.36,1.71,push,103,38,0.0,0.0,engaged views 44% vs 32% typical
+writer,Writer model,gemini:gemini-3.7-flash,1,0.87,0.56,too few to tell,,,,,
+writer,Writer model,gemini:gemini-3.6-flash,2,0.81,1.09,too few to tell,,64,0.0,0.0,
+writer,Writer model,gemini:gemini-3.5-flash-lite,21,0.75,0.57,cut back,117,52,0.0,0.0,
+writer,Writer model,gemini:gemini-3.8-flash,1,0.63,0.15,too few to tell,,20,0.0,0.0,
+writer,Writer model,gemini:gemini-flash-latest,5,0.51,0.37,cut back,96,62,0.0,0.0,still watching at 3 seconds 96% vs 110% typical
+writer,Writer model,gemini:gemini-3.5-flash,3,0.48,0.34,early sign,,81,0.0,0.0,engaged views 23% vs 32% typical
+writer,Writer model,gemini:gemini-3.1-flash-lite,3,0.4,0.12,early sign,,0,0.0,0.0,engaged views 0% vs 32% typical; average viewed 0% vs 51% typical
+writer,Writer model,gemini:gemini-3-flash-preview,7,0.35,0.11,cut back,108,46,0.0,0.0,average viewed 46% vs 51% typical

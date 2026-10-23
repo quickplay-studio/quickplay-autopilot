@@ -1,8 +1,14 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-BioWare: 0 verified, 1 one-source, 4 pages
-Clayface (film): 0 verified, 12 one-source, 3 pages
-LISA: 1 verified, 2 one-source, 4 pages
-iPhone Duo Vs iPhone 18: 0 verified, 1 one-source, 2 pages
-ROBLOX THE HOLLOW: 5 verified, 4 one-source, 2 pages
-5 packs, 6 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+So Easy (To Fall In Love) by Olivia Dean: 4 verified, 5 one-source, 3 pages
+ghosts tv show: 0 verified, 4 one-source, 2 pages
+ipswich town vs nottm forest: 0 verified, 0 one-source, 1 pages
+al hilal: 0 verified, 3 one-source, 2 pages
+Clayface (film): 0 verified, 3 one-source, 3 pages
+BioWare: 2 verified, 11 one-source, 4 pages
+LISA: 0 verified, 2 one-source, 5 pages
+BABYMONSTER: 0 verified, 2 one-source, 2 pages
+I Play Rocky: 8 verified, 0 one-source, 3 pages
+ROBLOX THE HOLLOW: 4 verified, 0 one-source, 2 pages
+Olivia Rodrigo: 0 verified, 2 one-source, 4 pages
+11 packs, 18 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 12}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

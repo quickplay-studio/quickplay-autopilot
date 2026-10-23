@@ -1,164 +1,180 @@
 {
- "updated": "2026-10-23T13:29+00:00",
+ "updated": "2026-10-23T19:05+00:00",
  "dimensions": {
   "captions": {
    "punch": {
     "n": 2,
-    "score": 0.868,
+    "score": 0.841,
     "held_3s_pct": 118.0,
     "avg_viewed_pct": 54.8,
     "stayed_pct": 21.0
    },
    "clean": {
-    "n": 31,
-    "score": 1.037,
-    "held_3s_pct": 106.0,
-    "avg_viewed_pct": 54.4,
-    "stayed_pct": 33.0
+    "n": 33,
+    "score": 1.045,
+    "held_3s_pct": 107.0,
+    "avg_viewed_pct": 55.0,
+    "stayed_pct": 31.5
    },
    "pop": {
-    "n": 6,
-    "score": 2.056,
-    "held_3s_pct": 131.0,
-    "avg_viewed_pct": 81.1,
-    "stayed_pct": 31.0
+    "n": 5,
+    "score": 2.039,
+    "held_3s_pct": 146.0,
+    "avg_viewed_pct": 90.6,
+    "stayed_pct": 34.0
    },
    "boxed": {
-    "n": 3,
-    "score": 1.335,
-    "held_3s_pct": 109.0,
-    "avg_viewed_pct": 49.0,
-    "stayed_pct": 28.0
+    "n": 2,
+    "score": 0.671,
+    "held_3s_pct": 127.0,
+    "avg_viewed_pct": 48.9,
+    "stayed_pct": 15.5
    },
    "minimal": {
     "n": 12,
-    "score": 0.908,
-    "held_3s_pct": 107.0,
-    "avg_viewed_pct": 50.2,
-    "stayed_pct": 25.0
+    "score": 0.881,
+    "held_3s_pct": 106.0,
+    "avg_viewed_pct": 50.5,
+    "stayed_pct": 24.0
    },
    "lab-captions-1019": {
-    "n": 18,
-    "score": 1.636,
-    "held_3s_pct": 124.0,
-    "avg_viewed_pct": 58.8,
-    "stayed_pct": 36.0
+    "n": 23,
+    "score": 1.103,
+    "held_3s_pct": 112.5,
+    "avg_viewed_pct": 52.8,
+    "stayed_pct": 35.0
    }
   },
   "voice": {
    "george": {
-    "n": 13,
-    "score": 0.991,
-    "held_3s_pct": 107.0,
-    "avg_viewed_pct": 54.8,
+    "n": 16,
+    "score": 1.007,
+    "held_3s_pct": 110.0,
+    "avg_viewed_pct": 54.5,
     "stayed_pct": 32.0
    },
    "george_dramatic": {
-    "n": 6,
-    "score": 1.057,
-    "held_3s_pct": 118.0,
-    "avg_viewed_pct": 60.8,
-    "stayed_pct": 29.5
+    "n": 9,
+    "score": 1.028,
+    "held_3s_pct": 112.0,
+    "avg_viewed_pct": 55.4,
+    "stayed_pct": 26.0
    },
    "george_quick": {
     "n": 3,
-    "score": 0.928,
+    "score": 0.883,
     "held_3s_pct": 107.0,
-    "avg_viewed_pct": 55.1,
-    "stayed_pct": 25.0
+    "avg_viewed_pct": 54.5,
+    "stayed_pct": 24.0
    },
    "emma": {
-    "n": 3,
-    "score": 1.806,
-    "held_3s_pct": 295.0,
-    "avg_viewed_pct": 217.0,
-    "stayed_pct": 29.0
+    "n": 6,
+    "score": 1.335,
+    "held_3s_pct": 261.0,
+    "avg_viewed_pct": 111.2,
+    "stayed_pct": 31.5
    },
    "lewis": {
-    "n": 0
+    "n": 1,
+    "score": 0.849,
+    "held_3s_pct": 110.0,
+    "avg_viewed_pct": 60.7,
+    "stayed_pct": 22.0
    },
    "daniel": {
     "n": 0
    },
    "isabella": {
-    "n": 0
+    "n": 1,
+    "score": 0.781,
+    "avg_viewed_pct": 52.8,
+    "stayed_pct": 25.0
    },
    "lily": {
-    "n": 0
+    "n": 1,
+    "score": 1.128,
+    "held_3s_pct": 105.0,
+    "avg_viewed_pct": 58.1,
+    "stayed_pct": 41.0
    },
    "michael": {
-    "n": 0
-   },
-   "heart": {
     "n": 1,
-    "score": 1.081,
-    "held_3s_pct": 102.0,
-    "avg_viewed_pct": 46.6,
+    "score": 1.188,
+    "avg_viewed_pct": 56.6,
     "stayed_pct": 38.0
    },
-   "lab-voice-1019": {
+   "heart": {
     "n": 2,
-    "score": 1.145,
-    "held_3s_pct": 112.5,
-    "avg_viewed_pct": 60.8,
-    "stayed_pct": 39.0
+    "score": 0.932,
+    "held_3s_pct": 103.0,
+    "avg_viewed_pct": 51.5,
+    "stayed_pct": 30.5
+   },
+   "lab-voice-1019": {
+    "n": 3,
+    "score": 1.23,
+    "held_3s_pct": 114.0,
+    "avg_viewed_pct": 53.7,
+    "stayed_pct": 44.0
    }
   },
   "energy": {
    "steady": {
-    "n": 33,
-    "score": 1.366,
-    "held_3s_pct": 107.0,
-    "avg_viewed_pct": 59.2,
-    "stayed_pct": 34.0
+    "n": 38,
+    "score": 1.266,
+    "held_3s_pct": 110.5,
+    "avg_viewed_pct": 58.1,
+    "stayed_pct": 31.0
    },
    "punchy": {
-    "n": 8,
-    "score": 1.587,
-    "held_3s_pct": 115.0,
-    "avg_viewed_pct": 54.8,
-    "stayed_pct": 28.0
+    "n": 7,
+    "score": 1.559,
+    "held_3s_pct": 118.0,
+    "avg_viewed_pct": 55.5,
+    "stayed_pct": 29.0
    },
    "calm": {
     "n": 27,
-    "score": 0.545,
-    "held_3s_pct": 105.0,
-    "avg_viewed_pct": 50.2,
-    "stayed_pct": 22.5
+    "score": 0.873,
+    "held_3s_pct": 106.5,
+    "avg_viewed_pct": 48.3,
+    "stayed_pct": 32.5
    },
    "lab-energy-1019": {
-    "n": 4,
-    "score": 1.012
+    "n": 5,
+    "score": 0.868,
+    "avg_viewed_pct": 52.8,
+    "stayed_pct": 36.0
    }
   },
   "grade": {
    "natural": {
     "n": 16,
-    "score": 1.642,
-    "held_3s_pct": 107.0,
-    "avg_viewed_pct": 58.4,
-    "stayed_pct": 30.0
+    "score": 1.349,
+    "held_3s_pct": 109.0,
+    "avg_viewed_pct": 57.8,
+    "stayed_pct": 31.0
    },
    "cinematic": {
-    "n": 21,
-    "score": 1.347,
-    "held_3s_pct": 109.0,
-    "avg_viewed_pct": 54.2,
-    "stayed_pct": 27.0
+    "n": 24,
+    "score": 1.269,
+    "held_3s_pct": 110.0,
+    "avg_viewed_pct": 53.8,
+    "stayed_pct": 25.0
    },
    "vivid": {
     "n": 3,
-    "score": 1.613,
+    "score": 1.559,
     "held_3s_pct": 109.5,
-    "avg_viewed_pct": 51.6,
+    "avg_viewed_pct": 51.5,
     "stayed_pct": 35.0
    },
    "lab-grade-1019": {
-    "n": 32,
-    "score": 0.545,
-    "held_3s_pct": 118.0,
-    "avg_viewed_pct": 56.7,
-    "stayed_pct": 42.0
+    "n": 34,
+    "score": 0.859,
+    "held_3s_pct": 111.0,
+    "avg_viewed_pct": 52.9,
+    "stayed_pct": 34.5
    },
    "lab-grade-1023": {
     "n": 0
@@ -166,24 +182,24 @@
   },
   "opening": {
    "graphic_first": {
-    "n": 46,
-    "score": 0.99,
-    "held_3s_pct": 109.0,
-    "avg_viewed_pct": 54.5,
-    "stayed_pct": 26.5
+    "n": 45,
+    "score": 1.045,
+    "held_3s_pct": 110.0,
+    "avg_viewed_pct": 54.0,
+    "stayed_pct": 29.5
    },
    "image_first": {
-    "n": 24,
-    "score": 1.52,
-    "held_3s_pct": 109.0,
-    "avg_viewed_pct": 59.2,
-    "stayed_pct": 34.0
+    "n": 27,
+    "score": 1.449,
+    "held_3s_pct": 110.5,
+    "avg_viewed_pct": 57.8,
+    "stayed_pct": 33.5
    },
    "lab-opening-1019": {
-    "n": 2,
-    "score": 0.456,
-    "avg_viewed_pct": 53.7,
-    "stayed_pct": 23.0
+    "n": 5,
+    "score": 0.429,
+    "avg_viewed_pct": 50.4,
+    "stayed_pct": 21.0
    }
   }
  },

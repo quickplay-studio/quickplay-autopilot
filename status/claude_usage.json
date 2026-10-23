@@ -1,8 +1,14 @@
 {
  "day": "2026-10-23",
- "edits": 1,
- "writes": 0,
- "calls": 1,
- "last": "Invalid auth token (token pasted cut short)",
- "last_at": "2026-10-23T17:04+00:00"
+ "edits": 3,
+ "writes": 1,
+ "calls": 4,
+ "last": "ok",
+ "last_at": "2026-10-23T19:14+00:00",
+ "history": {},
+ "caps": {
+  "edits": 24,
+  "writes": 8,
+  "calls per run": 12
+ }
 }

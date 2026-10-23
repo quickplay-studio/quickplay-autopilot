@@ -1,9 +1,24 @@
-breaking run for 2026-10-23: 2 to write from 5 fact packs
+evening run for 2026-10-24: 10 to write from 11 fact packs
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+BABYMONSTER: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: kept the original (beat 1 length)
+So Easy (To Fall In Love) by Olivia Dean: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: kept the original (meta.title: end with one emoji; meta.alt_title: under 70 characters, one emoji at the end)
+So Easy (To Fall In Love) by Olivia Dean: claude:sonnet, 0 warnings
+So Easy (To Fall In Love) by Olivia Dean: skipped: niche
+So Easy (To Fall In Love) by Olivia Dean: skipped: nothing new
+ghosts tv show: skipped: niche
+too few facts: ipswich town vs nottm forest
+al hilal: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
 covered already: Clayface (film)
 covered already: LISA
-too few facts: BioWare
-too few facts: iPhone Duo Vs iPhone 18
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-BABYMONSTER: The massive world tour expansion 🎤: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
-wrote 0 of 2: 
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:openai/gpt-oss-120b": 3}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false, "claude today": "1 of 24 edits, 0 of 8 writes"}
+covered already: I Play Rocky
+covered already: BioWare
+covered already: Olivia Rodrigo
+covered already: ROBLOX THE HOLLOW
+Cyberpunk 2077 gets massive new update 🎮: skipped: nothing new
+evergreen: Top 10 best-selling single-platform video games: only 1 checked facts
+evergreen: The day a man flew over Los Angeles with lawn chairs and balloons: only 4 checked facts
+evergreen: Top 10 largest stadiums in the United Kingdom: only 0 checked facts
+evergreen: Top 10 most-subscribed YouTube channels: only 4 checked facts
+How the 1966 World Cup trophy was found by a dog: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
+wrote 1 of 10: QD-145 BABYMONSTER's G-Dragon Drip collab 🎧
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"gemini-3.7-flash": "daily limit 20", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit"}, "retired": ["gemini-2.5-flash", "openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 6, "gemini-3.5-flash-lite": 20, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 3, "claude:sonnet": 3, "groq:qwen/qwen3.8-27b": 5, "gemini-3-flash-preview": 1, "openrouter:nvidia/nemotron-3.5-lightning:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 3, "late": false, "claude today": "3 of 24 edits, 1 of 8 writes"}

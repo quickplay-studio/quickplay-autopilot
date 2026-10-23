@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-23T19:39+00:00",
+ "updated": "2026-10-23T21:25+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-23T19:05+00:00",
  "youtube": {
   "subscribers": 8,
   "public_shorts": 125,
-  "views_all_time": 19503,
+  "views_all_time": 20017,
   "views_last_90_days": 5426,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 6464,
+  "views_last_90_days_estimate": 6635,
   "analytics_last_day": "2026-10-21"
  },
  "instagram": {
@@ -20,7 +20,7 @@
  "facebook": {
   "followers": 0,
   "page": "Quickplay Daily",
-  "reels": 48,
+  "reels": 50,
   "insights_error": null
  },
  "ypp": {
@@ -29,8 +29,15 @@
   "apply_before": "2027-02-01",
   "days_left": 101,
   "subscribers_pct": 0.8,
-  "views_pct": 0.06,
-  "views_needed_per_day": 111039,
-  "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two)."
+  "views_pct": 0.07,
+  "views_needed_per_day": 111037,
+  "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two).",
+  "from_2027": {
+   "shorts_views_needed_90_days": 20000000,
+   "views_pct": 0.03,
+   "views_needed_per_day": 222148,
+   "watch_hours_needed_365_days": 8000,
+   "watch_hours_365d": null
+  }
  }
 }

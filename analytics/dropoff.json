@@ -1,20 +1,21 @@
 {
- "updated": "2026-10-23T18:45+00:00",
- "shorts": 25,
+ "updated": "2026-10-23T19:39+00:00",
+ "shorts": 29,
  "lost_per_second": {
-  "graphic cards": 3.65,
-  "photos": 4.02,
-  "first 3 seconds": 2.27,
-  "after 3 seconds": 2.81,
-  "beat 1": 2.76,
-  "beat 2": 7.02,
-  "beat 3": 5.39,
-  "beat 4": 3.76,
-  "beat 5": 2.21,
-  "beat 6": 3.55,
-  "beat 7": 3.72
+  "graphic cards": 3.4,
+  "photos": 4.05,
+  "first 3 seconds": 2.43,
+  "after 3 seconds": 2.76,
+  "beat 1": 3.17,
+  "beat 2": 7.07,
+  "beat 3": 4.64,
+  "beat 4": 3.25,
+  "beat 5": 1.82,
+  "beat 6": 3.56,
+  "beat 7": 4.35,
+  "beat 8": 8.51
  },
  "guidance": [
-  "Beat 2 loses the most viewers after the hook (7.0% a second): keep it short and get to the point."
+  "Beat 2 loses the most viewers after the hook (7.1% a second): keep it short and get to the point."
  ]
 }

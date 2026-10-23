@@ -353,7 +353,7 @@ function render(){
     ${table([
       {h:"Campaign", f:r => `${esc(r.c.name || r.k)}${r.c.url ? ` <a href="${esc(r.c.url)}" target="_blank" rel="noopener">open</a>` : ""}`},
       {h:"Site", f:r => esc(String(r.c.platform || "").split(" (")[0])},
-      {h:"Status", f:r => r.c.active ? pill("good", "✓", "live") : pill("", "·", (r.c.why_off || "off").replace(/^Switched off [\d-]+: /, "").replace(/\.$/, "").slice(0, 40))},
+      {h:"Status", f:r => r.c.active ? pill("good", "✓", "live") : pill("", "·", "off") + `<div class="sub" style="margin-top:4px">${esc((r.c.why_off || "").replace(/^Switched off [\d-]+: /, "").replace(/\s*\(https?:[^)]*\)/g, ""))}</div>`},
       {h:"Rate per 1K", n:1, f:r => r.c.pay_per_1k ? money(r.c.pay_per_1k) : ""},
       {h:"Min views", n:1, f:r => r.c.min_views ? compact(r.c.min_views) : ""},
       {h:"Ends", nw:1, f:r => esc(r.c.ends || "")},

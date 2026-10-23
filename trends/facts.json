@@ -1,376 +1,21 @@
 {
  "date": "2026-10-23",
- "built": "2026-10-23T08:44+00:00",
+ "built": "2026-10-23T11:15+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "morning",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 5,
-   "topic": "dua lipa",
-   "signal": "Google Trends GB 100+",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Dua Lipa was born in London in 1995?",
-    "Find out how Dua Lipa made history with her hit albums!",
-    "Discover the amazing music journey of pop star Dua Lipa."
-   ],
-   "sources": [
-    [
-     "Dua Lipa, Amy Poehler, Bowen Yang and More Come Out For ‘Lincoln in the Bardo’ Opera World Premiere",
-     "https://www.hollywoodreporter.com/lifestyle/arts/dua-lipa-amy-poehler-bowen-yang-lincoln-in-the-bardo-opera-1236736336/",
-     "The Hollywood Reporter",
-     "2026-10-20"
-    ],
-    [
-     "dua lipa",
-     "https://en.wikipedia.org/wiki/Dua_Lipa",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Dua Lipa was born on 22 August 1995 at Queen Charlotte's and Chelsea Hospital in London, England.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Dua Lipa was born on 22 August 1995,[3] at Queen Charlotte's and Chelsea Hospital in London, England,[4] the eldest child of Kosovo Albanian parents Anesa"
-     }
-    },
-    {
-     "claim": "Lipa released her eponymous debut album in 2017, which peaked at number three on the UK Albums Chart.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "She released her eponymous debut album in 2017, which peaked at number three on the UK Albums Chart and spawned the singles \"Be the One\","
-     }
-    },
-    {
-     "claim": "Lipa's second album, Future Nostalgia, became her first UK number-one album in 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Lipa's second album, Future Nostalgia (2020), became her first UK number-one album and peaked in the top-three in the US."
-     }
-    },
-    {
-     "claim": "Lipa released her third studio album, Radical Optimism, in 2024.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Lipa released her third studio album, Radical Optimism (2024), which debuted atop the UK Albums Chart and was preceded by the UK top-ten singles \"Houdini\","
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Dua_Lipa-69798_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 8,
-   "topic": "leo reich it gets worse review",
-   "signal": "Google Trends GB 100+",
-   "category": "Entertainment",
-   "what_is_new": "Leo Reich's new television series It Gets Worse was reviewed by the Guardian on October 22, 2026.",
-   "hooks": [
-    "Leo Reich is now 28 years old.",
-    "Leo Reich released a 2023 standup special titled Literally Who Cares?!."
-   ],
-   "sources": [
-    [
-     "It Gets Worse review – Leo Reich is a rare star and the future of TV comedy",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/22/it-gets-worse-review-leo-reich-is-a-rare-star-and-the-future-of-tv-comedy",
-     "Guardian",
-     "2026-10-22"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Leo Reich is now 28 years old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Reich – now 28 – is a rare comic to land an HBO special, and now an A24/Channel 4 series, putting him in the ideal"
-     }
-    },
-    {
-     "claim": "Leo Reich released a 2023 standup special titled Literally Who Cares?!.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In his 2023 standup special Literally Who Cares?!, Leo Reich bemoaned the fact that his life wasn’t more like a TV comedy."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "south african grand prix",
-   "signal": "Google Trends GB 100+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Formula 1 is heading to Rwanda in the 2030s?",
-    "Lewis Hamilton wants to race until his mid-40s for Africa!"
-   ],
-   "sources": [
-    [
-     "Approach African GP with humility, says Hamilton",
-     "https://www.bbc.co.uk/sport/formula1/articles/c6vgxd2xyv7do?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-22"
-    ],
-    [
-     "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
-     "https://www.theguardian.com/sport/2026/oct/22/lewis-hamilton-aims-to-extend-career-till-early-2030s-so-he-can-race-in-african-grand-prix",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "south african grand prix",
-     "https://en.wikipedia.org/wiki/South_African_Grand_Prix",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Formula 1 has signed a 10-year deal with Rwanda starting in the early 2030s.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Formula 1 has signed a 10-year deal with the central-east African country starting in the early 2030s.",
-      "2": "Last week F1 confirmed Rwanda was to host the African Grand Prix having concluded a 10-year agreement for the meeting on a purpose-built circuit, with"
-     }
-    },
-    {
-     "claim": "Lewis Hamilton has campaigned for a race in Africa for many years.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Briton Hamilton, who has campaigned for a race in Africa for many years, said: \"I don't get to choose where we go.",
-      "2": "Hamilton has been championing a race in Africa for some time."
-     }
-    },
-    {
-     "claim": "The 1993 race was the last South African Grand Prix.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "marks a return to the African continent for the first time since it last held a race at Kyalami, South Africa in 1993.",
-      "3": "The 1993 race was the last South African Grand Prix, as of 2026[update][2]"
-     }
-    },
-    {
-     "claim": "Lewis Hamilton is currently contracted with Ferrari until the end of the 2027 season.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "However, the Ferrari driver added: \"Going there doesn't mean that you neglect the things that are happening there.",
-      "2": "The 41-year-old is understood to be currently contracted with Ferrari until the end of the 2027 season, and speaking before this weekend’s US Grand Prix"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Jim Clark won the South African Grand Prix four times.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Jim Clark won four times and Niki Lauda three."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 10,
-   "topic": "blue planet 3 release date",
-   "signal": "Google Trends GB 100+",
-   "category": "Science",
-   "what_is_new": "",
-   "hooks": [
-    "Blue Planet III is coming in autumn 2026.",
-    "Sir David Attenborough returns to narrate Blue Planet III.",
-    "Discover five key underwater habitats in Blue Planet III."
-   ],
-   "sources": [
-    [
-     "Blue Planet III on the BBC - Everything you need to know",
-     "https://www.bbc.com/mediacentre/articles/2026/blue-planet-3-on-the-bbc",
-     "BBC",
-     "2026-10-14"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Blue Planet III is coming to BBC One and BBC iPlayer in autumn 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Blue Planet III is coming to BBC One and BBC iPlayer in autumn 2026."
-     }
-    },
-    {
-     "claim": "Sir David Attenborough returns to provide the narration for Blue Planet III.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Sir David Attenborough returns to provide the narration for Blue Planet III and you can get a sneak peek behind the scenes in the video"
-     }
-    },
-    {
-     "claim": "The first ever natural history series to give a comprehensive overview of the worlds oceans was broadcast across the globe 25 years ago.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Blue Planet, the first ever natural history series to give a comprehensive overview of the worldâs oceans, was broadcast across the globe 25 years"
-     }
-    },
-    {
-     "claim": "In 2017 Blue Planet II galvanised a global movement to rid our oceans of single use plastic.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "And in 2017, Blue Planet II galvanised a global movement to rid our oceans of single use plastic and revolutionised our perception of life in"
-     }
-    },
-    {
-     "claim": "The series will focus on the planets five key underwater habitats.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The series will focus on the planetâs five key underwater habitats: Tropical Seas; Open Ocean; Seasonal Seas; Polar Waters and The Deep."
-     }
-    },
-    {
-     "claim": "In the sixth and final episode we turn to the future of our seas and explore what we need to do to protect them in Future Seas.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In the sixth and final episode we turn to the future of our seas and explore what we need to do to protect them in"
-     }
-    },
-    {
-     "claim": "BRIT Award winning and Mercury Prize nominated singer songwriter JADE and multiple Academy Award winning composer Hans Zimmer collaborate on Into The Deep Seas Cry.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "BRIT Award winning and Mercury Prize-nominated singer-songwriter JADE and multiple Academy Award-winning composer Hans Zimmer collaborate on Into The Deep (Seas Cry), an original new"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 13,
-   "topic": "katie boulter",
-   "signal": "Google Trends US 1000+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Katie Boulter is the current British No. 2?",
-    "When did Katie Boulter start playing tennis?"
-   ],
-   "sources": [
-    [
-     "Japan Open: Katie Boulter beats Viktorija Golubic in straight sets to advance to quarter-finals in Osaka",
-     "https://www.skysports.com/tennis/news/13601799/japan-open-katie-boulter-beats-viktorija-golubic-in-straight-sets-to-advance-to-quarter-finals-in-osaka",
-     "Sky Sports",
-     "2026-10-21"
-    ],
-    [
-     "katie boulter",
-     "https://en.wikipedia.org/wiki/Katie_Boulter",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Katie Boulter is the current British No. 2 in women's singles.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The British No 2 was back on court for the third day in a row after rain in Osaka disrupted her first-round match, but wasted",
-      "2": "She is the current British No. 2 in women's singles."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Katie Charlotte Boulter was born on 1 August 1996.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Katie Charlotte Boulter (born 1 August 1996) is a British professional tennis player."
-     }
-    },
-    {
-     "claim": "Katie Boulter was born in Woodhouse Eaves, Leicestershire.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Boulter was born in Woodhouse Eaves, Leicestershire."
-     }
-    },
-    {
-     "claim": "Katie Boulter started playing tennis aged 5.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Boulter started playing tennis aged 5,[3] and went on to represent Great Britain three years later, aged 8.[3]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Boulter_RGQ23.jpg"
-   ]
-  },
-  {
-   "n": 17,
+   "n": 14,
    "topic": "Clayface (film)",
    "signal": "Wikipedia 168,347 views",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Discover the terrifying origin of Clayface in the new DC movie!",
-    "Tom Rhys Harries stars as the tragic monster in Clayface.",
-    "How does the new horror film Clayface connect to the DCU?"
+    "Did you know Clayface made three point five million in previews?",
+    "Find out why Clayface has no post credits scenes!",
+    "Clayface cost forty four million dollars to make."
    ],
    "sources": [
     [
@@ -392,12 +37,6 @@
      "2026-10-23"
     ],
     [
-     "'Clayface' Officially Sets Up Another Iconic Batman Villain in the DC Universe",
-     "https://www.polygon.com/clayface-joker-easter-eggs/",
-     "Polygon",
-     "2026-10-22"
-    ],
-    [
      "Clayface (film)",
      "https://en.wikipedia.org/wiki/Clayface_(film)",
      "Wikipedia",
@@ -406,255 +45,75 @@
    ],
    "verified": [
     {
-     "claim": "The film has a net production cost of $44 million before P and A.",
+     "claim": "Clayface is directed by James Watkins and stars Tom Rhys Harries as Matt Hagen alongside Naomi Ackie.",
      "sources": [
       1,
-      3
+      3,
+      4
      ],
      "evidence": {
-      "1": "shot in the UK.",
-      "3": "Director James Watkins’ $44 million-budgeted body-horror feature stars Tom Rhys Harries and Naomi Ackie in the story of Matt Hagen (Harries), an actor who turns"
+      "1": "Previews started at 2PM today for the James Watkins directed Clayface which though based on the Batman villain, is a standalone story about baby face",
+      "3": "Director James Watkins’ $44 million-budgeted body-horror feature stars Tom Rhys Harries and Naomi Ackie in the story of Matt Hagen (Harries), an actor who turns",
+      "4": "Tom Rhys Harries stars as Matt Hagen / Clayface, alongside Naomi Ackie, David Dencik, Max Minghella, and Eddie Marsan."
+     }
+    },
+    {
+     "claim": "Clayface is the third film in the DC Universe and was produced on a net production cost of $44 million.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The screenplay by Mike Flanagan in December 2024 got Gunn and Safran excited, and it was off to the races to make this movie which",
+      "3": "Director James Watkins’ $44 million-budgeted body-horror feature stars Tom Rhys Harries and Naomi Ackie in the story of Matt Hagen (Harries)",
+      "4": "Directed by James Watkins from a screenplay by Mike Flanagan and Hossein Amini, it is the third film in the DC Universe (DCU)."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Clayface is a 2026 American body horror psychological thriller film based on the eponymous character from DC Comics.",
+     "claim": "Clayface holds a 76 percent certified fresh Rotten Tomatoes critics score.",
      "sources": [
-      5
+      1
      ],
      "evidence": {
-      "5": "Clayface is a 2026 American body horror psychological thriller film based on the eponymous character from DC Comics."
+      "1": "Clayface glides into the weekend with a 76% certified fresh Rotten Tomatoes critics score which is higher than The Flash (63%), Supergirl (52% Rotten), Joker"
      }
     },
     {
-     "claim": "Tom Rhys Harries stars as Matt Hagen / Clayface, alongside Naomi Ackie, David Dencik, Max Minghella, and Eddie Marsan.",
+     "claim": "There are no mid or post credits scenes in Clayface.",
      "sources": [
-      5
+      2
      ],
      "evidence": {
-      "5": "Tom Rhys Harries stars as Matt Hagen / Clayface, alongside Naomi Ackie, David Dencik, Max Minghella, and Eddie Marsan."
-     }
-    },
-    {
-     "claim": "Clayface is directed by James Watkins from a screenplay by Mike Flanagan and Hossein Amini.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "Directed by James Watkins from a screenplay by Mike Flanagan and Hossein Amini, it is the third film in the DC Universe (DCU)."
-     }
-    },
-    {
-     "claim": "The film is produced by Matt Reeves and Lynn Harris alongside James Gunn and Peter Safran of DC Studios.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "It is produced by Matt Reeves and Lynn Harris alongside James Gunn and Peter Safran of DC Studios."
-     }
-    },
-    {
-     "claim": "Clayface premiered at the Hollywood Legion Theater in Los Angeles on October 13, 2026.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "Clayface premiered at the Hollywood Legion Theater in Los Angeles on October 13, 2026, and is scheduled for release by Warner Bros."
+      "2": "Let's make this simple: You want to know if there are any mid- or post-credits scenes in Clayface. The answer is no."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 23,
-   "topic": "BioWare",
-   "signal": "Wikipedia 120,343 views",
-   "category": "Gaming",
-   "what_is_new": "Electronic Arts announced they were shutting down BioWare on October 21, 2026.",
+   "n": 15,
+   "topic": "ChatGPT",
+   "signal": "Wikipedia 155,469 views",
+   "category": "Tech",
+   "what_is_new": "Uber expanded its partnership with OpenAI to put its entire global workforce of some 30,000 employees on ChatGPT Work.",
    "hooks": [
-    "Did you know BioWare was founded by three medical doctors in 1995?",
-    "Electronic Arts has announced the closure of legendary developer BioWare.",
-    "A leaked Mass Effect Universe trailer gave fans a surprise glimpse of a male Quarian."
+    "Did you know Uber just put all thirty thousand employees on ChatGPT Work?",
+    "ChatGPT was originally released on November 30 2022.",
+    "Uber originally piloted ChatGPT Work with 1000 employees."
    ],
    "sources": [
     [
-     "'Mass Effect Universe' Leak Promised What Fans Have Waited Decades For",
-     "https://www.polygon.com/mass-effect-universe-new-characters-male-quarian-asari-krogan-aliens/",
-     "Polygon",
+     "Uber puts all 30,000 employees on ChatGPT Work",
+     "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+     "TechCrunch",
      "2026-10-22"
     ],
     [
-     "Canadian politician calls on government to help BioWare employees buy the studio and run it themselves",
-     "https://www.pcgamer.com/games/mass-effect/canadian-politician-calls-on-government-to-help-bioware-employees-buy-the-studio-and-run-it-themselves/",
-     "PC Gamer",
-     "2026-10-22"
-    ],
-    [
-     "Farewell BioWare, you inspired so many of us, and you deserved so much better than this",
-     "https://www.eurogamer.net/farewell-bioware-closed-ea",
-     "Eurogamer",
-     "2026-10-22"
-    ],
-    [
-     "BioWare",
-     "https://en.wikipedia.org/wiki/BioWare",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "BioWare was founded in 1995 by Ray Muzyka, Greg Zeschuk and Augustine Yip.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "I remember interviewing BioWare doctor-founders Greg Zeschuk and Ray Muzyka at EGX 2011 before they announced the release date",
-      "4": "It was founded in 1995 by newly graduated medical doctors Ray Muzyka, Greg Zeschuk and Augustine Yip."
-     }
-    },
-    {
-     "claim": "Electronic Arts acquired BioWare in 2007.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "The Edmonton-based studio was named one of the country's best places to work multiple times over the years, even after the Electronic Arts acquisition that",
-      "4": "The company was acquired by American publisher Electronic Arts in 2007."
-     }
-    },
-    {
-     "claim": "BioWare released Mass Effect in 2007.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "I literally ran home from the office to play Mass Effect 1 when it came out",
-      "4": "2007 | Mass Effect | PlayStation 3, Windows, Xbox 360"
-     }
-    },
-    {
-     "claim": "Mass Effect Andromeda was released in 2017.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "The twin blows of Mass Effect: Andromeda in 2017 and Anthem in 2019 left it reeling",
-      "4": "Starting with Mass Effect: Andromeda (2017), which EA's CEO Andrew Wilson described as \"polarizing\" due to its very poor audience reception, Bioware would consistently fail"
-     }
-    },
-    {
-     "claim": "Anthem was released in 2019.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "The twin blows of Mass Effect: Andromeda in 2017 and Anthem in 2019 left it reeling",
-      "4": "Starting with Mass Effect: Andromeda (2017), which EA's CEO Andrew Wilson described as \"polarizing\" due to its very poor audience reception, Bioware would consistently fail"
-     }
-    },
-    {
-     "claim": "BioWare developed Baldur's Gate, Neverwinter Nights, and Star Wars Knights of the Old Republic.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "BioWare, the creator of so many beloved role-playing series and games - Mass Effect, Dragon Age, Baldur's Gate, Star Wars: Knights of the Old Republic",
-      "4": "BioWare specialized in role-playing video games, and achieved recognition for developing highly praised and successful licensed franchises: Baldur's Gate, Neverwinter Nights, and Star Wars: Knights"
-     }
-    },
-    {
-     "claim": "BioWare launched Star Wars The Old Republic in 2011.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Not to mention the colossal MMO project Star Wars: The Old Republic, which was the reason we never got another single-player Knights of the Old",
-      "4": "In 2011, BioWare launched their first massively multiplayer online role-playing game (MMORPG), Star Wars: The Old Republic."
-     }
-    },
-    {
-     "claim": "BioWare was a Canadian video game developer based in Edmonton.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "The Edmonton-based studio was named one of the country's best places to work multiple times over the years",
-      "4": "BioWare was a Canadian video game developer based in Edmonton, Alberta."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "A leaked trailer for Mass Effect Universe featured a male Quarian.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In particular, series devotees were intrigued by the prominent appearance of a male Quarian throughout the trailer."
-     }
-    },
-    {
-     "claim": "Canadian politician Avi Lewis called on the government to help BioWare employees buy the studio.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "\"The developers at BioWare know how to run the studio."
-     }
-    },
-    {
-     "claim": "Baldur's Gate sold more than two million copies upon its release in 1998.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Upon its release in 1998, Baldur's Gate sold more than two million copies, nearly matching the sales of Diablo."
-     }
-    },
-    {
-     "claim": "BioWare released Jade Empire in 2005.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "2005 | Jade Empire"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Epcor_Tower.JPG"
-   ]
-  },
-  {
-   "n": 24,
-   "topic": "LISA",
-   "signal": "YouTube GB 1,262,103/h",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Discover everything about LISA and her brand new EP!",
-    "LISA returns with her first solo EP just in time for Vegas!"
-   ],
-   "sources": [
-    [
-     "LISA, Miley, Kacey Musgraves & John Mayer: New Music Friday Guide",
-     "https://www.billboard.com/music/music-news/lisa-miley-kacey-musgraves-new-music-friday-guide-1236366499/",
-     "Billboard",
-     "2026-10-23"
-    ],
-    [
-     "LISA",
-     "https://en.wikipedia.org/wiki/LISA",
+     "ChatGPT",
+     "https://en.wikipedia.org/wiki/ChatGPT",
      "Wikipedia",
      ""
     ]
@@ -662,196 +121,56 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "LISA is now sharing her very first solo EP.",
+     "claim": "ChatGPT was originally released on November 30 2022.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Originally released on November 30, 2022, the product uses large language models—specifically generative pre-trained transformers (GPTs)—to generate text, speech, and images in response to user"
+     }
+    },
+    {
+     "claim": "Uber put all 30000 employees on ChatGPT Work.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Led by the hard-hitting pop-rap single “SaWaDiKa,” released in September, LISA is now sharing her very first solo EP."
+      "1": "Uber and OpenAI announced an expansion of their partnership on Thursday, with the ride-share giant telling TechCrunch that its entire global workforce — some 30,000"
      }
     },
     {
-     "claim": "Press Play follows the 2025 release of LISA’S debut solo full-length, Alter Ego, and arrives just in time for the Thai singer’s upcoming Vegas residency that kicks off in November.",
+     "claim": "ChatGPT Work was introduced in July as an enterprise-focused AI agent that corporate teams could deploy for various workflows.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Press Play follows the 2025 release of LISA’S debut solo full-length, Alter Ego, and arrives just in time for the Thai singer’s upcoming Vegas residency"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 25,
-   "topic": "BABYMONSTER",
-   "signal": "YouTube GB 738,808/h",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know BABYMONSTER added six new North American stops to their tour?",
-    "BABYMONSTER released their first studio album Drip in late 2024!",
-    "Their hit single Sheesh became their first top ten entry in South Korea."
-   ],
-   "sources": [
-    [
-     "BABYMONSTER add new stops to 2025 ‘Hello Monsters’ world tour",
-     "https://www.nme.com/news/music/babymonster-2025-hello-monsters-world-tour-cities-dates-tickets-more-3813574",
-     "NME",
-     "2025-03-27"
-    ],
-    [
-     "BABYMONSTER",
-     "https://en.wikipedia.org/wiki/Babymonster",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "In October 2024, BABYMONSTER released their first studio album, titled Drip.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In October 2024, BABYMONSTER released their first studio album, titled ‘Drip’.",
-      "2": "In November, the group subsequently released their first studio album Drip, which surpassed one million copies in domestic sales and became their earliest entry on"
+      "1": "ChatGPT Work was introduced in July as an enterprise-focused AI agent that corporate teams could deploy for various workflows."
      }
     },
     {
-     "claim": "The record features the singles Forever, Clik Clak and Drip, the latter of which was co-written by Big Bang member G-Dragon.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The record features the singles ‘Forever’, ‘Clik Clak’ and ‘Drip’, the latter of which was co-written by Big Bang member G-Dragon.",
-      "2": "Drip followed on November 1, led by the two singles, \"Clik Clak\" and \"Drip\"."
-     }
-    },
-    {
-     "claim": "The K-pop girl group also released their first mini-album called BABYMONS7ER in April last year.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The K-pop girl group also released their first mini-album called ‘BABYMONS7ER’ in April last year.",
-      "2": "Babymonster debuted as a full ensemble on April 1, 2024, with their eponymous extended play (EP) Babymons7er."
-     }
-    },
-    {
-     "claim": "The project included their debut single, Batter Up, as well as the hit single Sheesh.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The project included their debut single, ‘Batter Up’, as well as the hit single ‘Sheesh’.",
-      "2": "Its single, \"Sheesh\", became their first top-ten entry on South Korea's Circle Digital Chart."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "BABYMONSTER announced six new North American stops as part of their ongoing 2025 Hello Monsters world tour.",
+     "claim": "Uber originally piloted ChatGPT Work with 1000 employees earlier this year but has now scaled up its usage to the entire company.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "BABYMONSTER have announced six new North American stops as part of their ongoing 2025 ‘Hello Monsters’ world tour."
+      "1": "Uber originally piloted ChatGPT Work with 1,000 employees earlier this year but has now scaled up its usage to the entire company."
      }
     }
    ],
    "images": [
-    "commons:File:BabyMonster_Promoting_drip_on_2024112.png"
+    "commons:File:OpenAI_logo_2025_(symbol).svg"
    ]
   },
   {
-   "n": 27,
-   "topic": "I Play Rocky",
-   "signal": "YouTube GB 61,339/h",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Discover how I Play Rocky brings the ultimate underdog story to life.",
-    "Anthony Ippolito stars as Sylvester Stallone in I Play Rocky.",
-    "See when I Play Rocky arrives in theaters this November."
-   ],
-   "sources": [
-    [
-     "I Play Rocky - Official Trailer 2",
-     "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
-     "IGN",
-     "2026-10-22"
-    ],
-    [
-     "I Play Rocky",
-     "https://en.wikipedia.org/wiki/I_Play_Rocky",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "I Play Rocky is distributed by Amazon MGM Studios.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Don't miss the Official Trailer 2 for I Play Rocky, a dramatic biopic film distributed by Amazon MGM Studios.",
-      "2": "The film is scheduled to begin a limited theatrical release by Amazon MGM Studios in the United States on November 6, 2026, expanding nationwide on"
-     }
-    },
-    {
-     "claim": "I Play Rocky is directed by Peter Farrelly.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The film is directed by Peter Farrelly and produced by Toby Emmerich, Christian Baha, and Peter Farrelly.",
-      "2": "I Play Rocky is a 2026 American biographical drama film directed by Peter Farrelly and written by Peter Gamble."
-     }
-    },
-    {
-     "claim": "Anthony Ippolito stars as Sylvester Stallone in I Play Rocky.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "I Play Rocky stars Anthony Ippolito, Matt Dillon, AnnaSophia Robb, P.J. Byrne, Toby Kebbell, Tracy Letts, Jay Duplass, Stephan James, Kiki Seto, Robert Morgan, Saul",
-      "2": "Anthony Ippolito stars as Sylvester Stallone, alongside AnnaSophia Robb, Toby Kebbell, P. J. Byrne, Jay Duplass, Matt Dillon, Stephan James, and Tracy Letts."
-     }
-    },
-    {
-     "claim": "I Play Rocky has a limited theatrical release on November 6 and expands everywhere on November 20.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Sylvester Stallone becomes Rocky in I Play Rocky, in select theaters on November 6 and everywhere on November 20.",
-      "2": "The film is scheduled to begin a limited theatrical release by Amazon MGM Studios in the United States on November 6, 2026, expanding nationwide on"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 28,
+   "n": 24,
    "topic": "ROBLOX THE HOLLOW",
-   "signal": "YouTube GB-gaming 97,979/h",
+   "signal": "YouTube GB-gaming 77,885/h",
    "category": "Gaming",
    "what_is_new": "The Roblox server-wide horror event named The Hollow has been launched for a limited time.",
    "hooks": [
-    "Discover everything you need to know about the new Roblox event, The Hollow!",
-    "The Hollow event is packed with nine days of terrifying new monsters!",
-    "Are you ready to survive the maze in the new Roblox Hollow event?"
+    "Discover when Roblox The Hollow event ends!",
+    "Find out all about the nine monsters in Roblox The Hollow!",
+    "When does the live finale of Roblox The Hollow happen?"
    ],
    "sources": [
     [
@@ -891,7 +210,7 @@
      }
     },
     {
-     "claim": "A new monster will appear in the maze each day for nine days.",
+     "claim": "A new monster is featured in the maze each day for nine days.",
      "sources": [
       1,
       2
@@ -911,97 +230,113 @@
       "1": "The first event begins on Oct. 23, starting at 11 AM PT.",
       "2": "The Hollow event is launching in Roblox on Thursday 22nd October 2026 at 10pm BST."
      }
-    },
-    {
-     "claim": "The Hollow features creatures from famous horror games like 99 Nights in the Forest, Dandy's World and DOORS.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It's a celebration of the many horror games featured on Roblox, with quests and a new monster from a specific game appearing.",
-      "2": "This Halloween-themed event brings with it a dedicated mini-game, where creatures from the platform's famous horror games like 99 Nights in the Forest, Dandy's World"
-     }
     }
    ],
    "one_source": [],
    "images": []
   },
   {
-   "n": 30,
-   "topic": "Tate McRae",
-   "signal": "YouTube GB-music 68,995/h",
-   "category": "Music",
-   "what_is_new": "Tate McRae goes all the way to No. 1 in Australia, as “Housewife” opens its account at the top.",
+   "n": 25,
+   "topic": "JEV PLAYS MODERN WARFARE 4 MULTIPLAYER",
+   "signal": "YouTube GB-gaming 30,056/h",
+   "category": "Gaming",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Tate McRae just hit No. 1 in Australia?",
-    "How did Tate McRae start her incredible career?",
-    "Discover Tate McRaes latest chart-topping success!"
+    "Infinity Ward has been making Call of Duty games since the beginning.",
+    "It has been four years since Infinity Ward shipped Modern Warfare 2.",
+    "The Modern Warfare 4 beta uses a new matchmaking system from Black Ops 7."
    ],
    "sources": [
     [
-     "Tate McRae Debuts at No. 1 In Australia With ‘Housewife’",
-     "https://www.billboard.com/music/chart-beat/tate-mcrae-debuts-no-1-australia-housewife-1236367034/",
-     "Billboard",
-     "2026-10-23"
+     "Call of Duty: Modern Warfare 4 w/Devs – Campaign, Multiplayer, DMZ, and More | Official XBOX Podcast",
+     "https://news.xbox.com/en-us/2026/10/22/call-of-duty-modern-warfare-4-w-devs-campaign-multiplayer-dmz-and-more-official-xbox-podcast/",
+     "Xbox Wire",
+     "2026-10-22"
     ],
     [
-     "Tate McRae",
-     "https://en.wikipedia.org/wiki/Tate_McRae",
-     "Wikipedia",
-     ""
+     "The Big Call of Duty: Modern Warfare 4 Interview — Infinity Ward on the Beta, Matchmaking, and Much More",
+     "https://www.ign.com/articles/the-big-call-of-duty-modern-warfare-4-interview-infinity-ward-on-the-beta-matchmaking-and-much-more",
+     "IGN",
+     "2026-08-20"
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "Tate McRae goes all the way to No. 1 in Australia, as Housewife opens its account at the top.",
+     "claim": "Infinity Ward has been making Call of Duty games since the beginning.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Tate McRae goes all the way to No. 1 in Australia, as “Housewife” (via RCA/Sony) opens its account at the top."
+      "1": "The studio has been making Call of Duty games for — MARK GRIGSBY: Since the beginning, centuries, yes."
      }
     },
     {
-     "claim": "Housewife becomes the Canadian pop artists first leader and sixth top 10 appearance on the ARIA Singles Chart.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "“Housewife” becomes the Canadian pop artist’s first leader and sixth top 10 appearance on the ARIA Singles Chart."
-     }
-    },
-    {
-     "claim": "Lifted from her forthcoming fourth album, Housewife goes one better than McRaes Greedy, which peaked at No. 2 in 2023.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Lifted from her forthcoming fourth album, “Housewife” goes one better than McRae’s “Greedy,” which peaked at No. 2 in 2023."
-     }
-    },
-    {
-     "claim": "Tate Rosner McRae was born in Calgary, Alberta, on Canada Day, 2003.",
+     "claim": "It has been four years since Infinity Ward shipped its last Call of Duty game, Modern Warfare 2.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Tate Rosner McRae was born in Calgary, Alberta, on Canada Day, 2003, the daughter of Tanja Rosner, a German dance instructor, and Todd McRae, a"
+      "2": "It has been four years since Infinity Ward shipped its last Call of Duty game, Modern Warfare 2."
      }
     },
     {
-     "claim": "McRae began her career as a dancer, appearing as a contestant on the American reality television series So You Think You Can Dance in 2016.",
+     "claim": "The Modern Warfare 4 beta will utilize a new matchmaking system that was introduced to Black Ops 7 in July.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "McRae began her career as a dancer, appearing as a contestant on the American reality television series So You Think You Can Dance in 2016."
+      "2": "the Modern Warfare 4 beta will utilize a new matchmaking system that was introduced to Black Ops 7 in July."
      }
     }
    ],
    "images": [
-    "commons:File:Tate_McRae_in_Manila_01_(cropped)_2.jpg"
+    "page:https://news.xbox.com/en-us/2026/10/22/call-of-duty-modern-warfare-4-w-devs-campaign-multiplayer-dmz-and-more-official-xbox-podcast/"
+   ]
+  },
+  {
+   "n": 28,
+   "topic": "iPhone Duo Vs iPhone 18",
+   "signal": "YouTube GB-tech 77,893/h",
+   "category": "Tech",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know the iPhone Duo inner display is massive?"
+   ],
+   "sources": [
+    [
+     "No, the iPhone Duo isn’t a small phone",
+     "https://www.theverge.com/tech/1017090/iphone-duo-screen-size-mini",
+     "The Verge",
+     "2026-10-23"
+    ],
+    [
+     "iPhone Duo's next-gen prototypes are trying to cram in Face ID",
+     "https://www.engadget.com/2294041/iphone-duos-next-gen-prototypes-are-trying-to-cram-in-face-id/",
+     "Engadget",
+     "2026-10-22"
+    ],
+    [
+     "Developers bring incredible new app experiences to iPhone Duo",
+     "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
+     "Apple Newsroom",
+     "2026-10-22"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The iPhone Duo features an inner display that is 50 percent larger than iPhone 18 Pro Max.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "With an inner display that’s 50 percent larger than iPhone 18 Pro Max, and the flexibility to use iPhone Duo in a variety of poses,"
+     }
+    }
+   ],
+   "images": [
+    "page:https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/"
    ]
   }
  ]

@@ -48,204 +48,117 @@
    ]
   },
   {
-   "topic": "tax",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tax",
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta",
-     "url": "https://techcrunch.com/2026/10/22/mark-zuckerbergs-creative-plan-to-pay-californias-proposed-billionaire-tax-without-losing-control-of-meta/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Zuckerberg wins Meta deal to help him foot bill for possible California billionaire tax",
-     "url": "https://www.bbc.co.uk/news/articles/cky83vwnyglno?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Meta strikes deal with Mark Zuckerberg to help him foot billionaire tax bill",
-     "url": "https://www.theguardian.com/technology/2026/oct/22/meta-mark-zuckerberg-california-wealth-tax",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "You Can Now Buy GTA 6 Burgers And Fried Chicken IRL, But It’s Not Cheap",
-     "url": "https://www.gamespot.com/articles/you-can-now-buy-gta-6-burgers-and-fried-chicken-irl-but-its-not-cheap/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "dua lipa",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dua_Lipa",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Inside Dua Lipa and Callum Turner’s Night at the Opera",
-     "url": "https://www.nytimes.com/2026/10/20/style/met-opera-lincoln-bardo-premiere.html",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Dua Lipa, Amy Poehler, Bowen Yang and More Come Out For ‘Lincoln in the Bardo’ Opera World Premiere",
-     "url": "https://www.hollywoodreporter.com/lifestyle/arts/dua-lipa-amy-poehler-bowen-yang-lincoln-in-the-bardo-opera-1236736336/",
-     "published": "2026-10-20"
-    }
-   ]
-  },
-  {
-   "topic": "jd",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jd",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Seth Meyers on JD Vance: ‘The integrity of a used-car salesman and the charisma of a wet ham’",
-     "url": "https://www.theguardian.com/culture/2026/oct/22/late-night-seth-meyers-jd-vance",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "energy",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Energy",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Starlink access for Ukraine limited after Trump’s claims satellite service restored, officials say – Europe live",
-     "url": "https://www.theguardian.com/world/live/2026/oct/23/starlink-ukraine-musk-trump-russia-black-sea-strikes-france-milan-europe-protests-latest-news-updates",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Lights will stay on this winter, grid operator says after concerns",
-     "url": "https://www.bbc.co.uk/news/articles/cmy56q2n1veqo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Why Street Fighter Movie Goes For “Gonzo” Vibes Instead of Gritty And Grounded",
-     "url": "https://www.gamespot.com/articles/why-street-fighter-movie-goes-for-gonzo-vibes-instead-of-gritty-and-grounded/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Winter energy supply secure but possible 'tight days' for electricity - grid operators",
-     "url": "https://news.sky.com/story/winter-energy-supply-secure-despite-forecast-increase-in-peak-gas-and-possible-external-events-influence-grid-operators-13602351",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "leo reich it gets worse review",
-   "signal": "Google Trends GB 100+",
+   "topic": "Ain't In LA by ADÉLA",
+   "signal": "Apple Music GB: new in the top 25",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "It Gets Worse review – Leo Reich is a rare star and the future of TV comedy",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/22/it-gets-worse-review-leo-reich-is-a-rare-star-and-the-future-of-tv-comedy",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "south african grand prix",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/South_African_Grand_Prix",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Approach African GP with humility, says Hamilton",
-     "url": "https://www.bbc.co.uk/sport/formula1/articles/c6vgxd2xyv7do?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
-     "url": "https://www.theguardian.com/sport/2026/oct/22/lewis-hamilton-aims-to-extend-career-till-early-2030s-so-he-can-race-in-african-grand-prix",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "The African Grand Prix: Why F1 is going to Rwanda and why is it controversial?",
-     "url": "https://www.nytimes.com/athletic/7686849/2026/10/13/f1-rwanda-african-grand-prix-explainer/",
-     "published": "2026-10-13"
-    }
-   ]
-  },
-  {
-   "topic": "blue planet 3 release date",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Blue Planet III on the BBC - Everything you need to know",
-     "url": "https://www.bbc.com/mediacentre/articles/2026/blue-planet-3-on-the-bbc",
-     "published": "2026-10-14"
-    }
-   ]
-  },
-  {
-   "topic": "taylor swift",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Taylor_Swift",
-   "articles": [
-    {
-     "outlet": "Polygon",
-     "title": "Anya Taylor-Joy’s breakout movie gave horror a different kind of female lead",
-     "url": "https://www.polygon.com/anya-taylor-joy-the-witch-free-streaming-october-2026/",
+     "outlet": "Billboard",
+     "title": "‘She’s My Muse’: Adéla Lost It When Nicole Kidman Mentioned Her on Late-Night TV",
+     "url": "https://www.billboard.com/music/pop/adela-nicole-kidman-interview-performance-fallon-1236367047/",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "How tech became the villain of the US midterms",
-     "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/22/us-midterms-tech-datacenters-ai",
-     "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "openai",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/OpenAI",
+   "topic": "kieran maguire",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kieran_Maguire",
    "articles": [
     {
-     "outlet": "TechCrunch",
-     "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
-     "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "Canva’s first AI image model plans designs before generating them",
-     "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "The Guardian view on AI safety: the push for global regulation must advance | Editorial",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/22/the-guardian-view-on-ai-safety-the-push-for-global-regulation-must-advance",
-     "published": "2026-10-22"
+     "outlet": "BBC",
+     "title": "Kieran Maguire on Manchester City's guilty charges",
+     "url": "https://www.bbc.co.uk/sounds/play/p0pfr35w",
+     "published": "2026-10-07"
     }
    ]
   },
   {
-   "topic": "katie boulter",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Boulter",
+   "topic": "rolls royce",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Rolls_royce",
    "articles": [
     {
-     "outlet": "Sky Sports",
-     "title": "Japan Open: Katie Boulter beats Viktorija Golubic in straight sets to advance to quarter-finals in Osaka",
-     "url": "https://www.skysports.com/tennis/news/13601799/japan-open-katie-boulter-beats-viktorija-golubic-in-straight-sets-to-advance-to-quarter-finals-in-osaka",
+     "outlet": "GameSpot",
+     "title": "EA Cancels New Mass Effect, Pauses New Sims Game, And All The Other  Big EA News That Just Happened",
+     "url": "https://www.gamespot.com/articles/ea-kills-bioware-cancels-new-mass-effect-pauses-new-sims-game-and-all-the-other-big-ea-news-that-just-happened/",
      "published": "2026-10-21"
+    },
+    {
+     "outlet": "Xbox Wire",
+     "title": "Cloud Playtime Now Available to Test with XBOX Insiders",
+     "url": "https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/",
+     "published": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "topic": "bristol news",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bristol_News",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "EFL preview: 'Sleepless nights' for under pressure bosses",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c6r7ymev78edo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "‘A life among the trees’: Bristol zoo’s gorillas move out of town",
+     "url": "https://www.theguardian.com/world/2026/mar/30/bristol-zoo-gorillas-move",
+     "published": "2026-03-29"
+    }
+   ]
+  },
+  {
+   "topic": "bbc sounds",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/BBC_Sounds",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Can AI really predict cancer survival better than a doctor? I have my doubts | Devi Sridhar",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/23/ai-cancer-survival-doctor-selfie-health-research",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "I’m Getting Very Worried About Skate Following EA Layoffs",
+     "url": "https://www.gamespot.com/articles/im-getting-very-worried-about-skate-following-ea-layoffs/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "morgan freeman",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Morgan_Freeman",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Zach Braff: ‘You can be talented and good-looking, but acting success is still like winning the lottery’",
+     "url": "https://www.theguardian.com/film/2026/oct/22/zach-braff-reader-interview",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "driver",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Driver",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "F1 crown in reach for Kimi Antonelli at bumpy Austin circuit drivers insist is ‘unacceptable’",
+     "url": "https://www.theguardian.com/sport/2026/oct/23/formula-one-kimi-antonelli-mercedes-title-austin-us-grand-prix-texas",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "No more waiting on shaders to compile as Nvidia's latest driver adds advanced shader delivery: users report lower RAM usage in Call of Duty:",
+     "url": "https://www.pcgamer.com/hardware/graphics-cards/no-more-waiting-on-shaders-to-compile-as-nvidias-latest-driver-adds-advanced-shader-delivery-users-report-lower-ram-usage-in-call-of-duty-modern-warfare-4-and-gears-of-war-e-day/",
+     "published": "2026-10-22"
     }
    ]
   },
@@ -300,8 +213,8 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Under Fire by Humza Yousaf – a deeply affecting story of being stranded in Gaza",
-     "url": "https://www.theguardian.com/books/2026/oct/23/under-fire-by-humza-yousaf-a-deeply-affecting-story-of-being-stranded-in-gaza",
+     "title": "The 'trad wife-ification' of Elizabeth Holmes – Stateside with Kai and Carter",
+     "url": "https://www.theguardian.com/us-news/video/2026/oct/23/elizabeth-holmes-stateside-kai-and-carter",
      "published": "2026-10-23"
     }
    ]
@@ -328,12 +241,6 @@
      "title": "‘Clayface’ Aims to Give DC Studios a Box Office Win as ‘You Can See Everything’ Stays Strong",
      "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-klara-1236738669/",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "'Clayface' Officially Sets Up Another Iconic Batman Villain in the DC Universe",
-     "url": "https://www.polygon.com/clayface-joker-easter-eggs/",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -360,12 +267,6 @@
      "title": "Heat killed ‘staggering’ 50,000 people in Europe’s cities this summer, scientists warn",
      "url": "https://www.theguardian.com/environment/2026/oct/23/heat-killed-staggering-50000-people-european-cities-this-summer-experts",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "At least four dead after storm brings flooding to southern France",
-     "url": "https://www.bbc.co.uk/news/articles/cm5ynl4v4wgwo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -388,6 +289,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "‘Overnight, everything was dead’: the Teesside fisherman turned activist dubbed the Mr Bates of the seas",
+     "url": "https://www.theguardian.com/film/2026/oct/23/overnight-everything-was-dead-the-teeside-fisherman-turned-activist-dubbed-the-mr-bates-of-the-seas",
+     "published": "2026-10-23"
+    },
+    {
      "outlet": "Billboard",
      "title": "5 Things You Didn’t See on TV at The 2026 Billboard Latin Music Awards",
      "url": "https://www.billboard.com/lists/billboard-latin-music-awards-2026-things-you-didnt-see-on-tv/",
@@ -400,15 +307,9 @@
      "published": "2026-10-23"
     },
     {
-     "outlet": "Variety",
-     "title": "Oscars Predictions 2027: Is ‘You Can See Everything’ the Film That Can Take Down ‘The Odyssey’?",
-     "url": "https://variety.com/lists/2027-oscars-predictions/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "The best bread makers in the UK for easy homemade loaves – tested",
-     "url": "https://www.theguardian.com/thefilter/2026/oct/22/best-bread-makers-tested-uk",
+     "outlet": "GameSpot",
+     "title": "If You Want Heartfelt BioWare Eulogies, Check The Comments",
+     "url": "https://www.gamespot.com/articles/if-you-want-heartfelt-bioware-eulogies-check-the-comments/",
      "published": "2026-10-22"
     }
    ]
@@ -423,12 +324,6 @@
      "title": "'This is despicable': Amy Acton responds to Ohio attack ad featuring her estranged mother",
      "url": "https://www.bbc.com/news/articles/c6z981l59wnwo",
      "published": "2026-10-22"
-    },
-    {
-     "outlet": "AP",
-     "title": "Trump backs Ramaswamy on ad featuring Amy Acton’s estranged mother",
-     "url": "https://apnews.com/article/election-2026-ohio-governor-acton-mother-ramaswamy-de2aec0076776539cd206f91d39d0236",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -438,10 +333,10 @@
    "wikipedia": "https://en.wikipedia.org/wiki/BioWare",
    "articles": [
     {
-     "outlet": "Polygon",
-     "title": "'Mass Effect Universe' Leak Promised What Fans Have Waited Decades For",
-     "url": "https://www.polygon.com/mass-effect-universe-new-characters-male-quarian-asari-krogan-aliens/",
-     "published": "2026-10-22"
+     "outlet": "Eurogamer",
+     "title": "Flashy internal trailer for now-cancelled Mass Effect Universe appears online, following EA's closure of BioWare",
+     "url": "https://www.eurogamer.net/mass-effect-universe-trailer-leak-real",
+     "published": "2026-10-23"
     },
     {
      "outlet": "GameSpot",
@@ -456,16 +351,16 @@
      "published": "2026-10-22"
     },
     {
-     "outlet": "Eurogamer",
-     "title": "Farewell BioWare, you inspired so many of us, and you deserved so much better than this",
-     "url": "https://www.eurogamer.net/farewell-bioware-closed-ea",
+     "outlet": "Space.com",
+     "title": "Next Mass Effect game cancelled as EA shuts down legendary sci-fi RPG studio BioWare",
+     "url": "https://www.space.com/entertainment/space-games/next-mass-effect-game-cancelled-as-ea-shuts-down-developer-bioware",
      "published": "2026-10-22"
     }
    ]
   },
   {
    "topic": "LISA",
-   "signal": "YouTube GB 1,262,103/h",
+   "signal": "YouTube GB 1,435,979/h",
    "wikipedia": "https://en.wikipedia.org/wiki/LISA",
    "articles": [
     {
@@ -478,7 +373,7 @@
   },
   {
    "topic": "BABYMONSTER",
-   "signal": "YouTube GB 738,808/h",
+   "signal": "YouTube GB 681,685/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
    "articles": [
     {
@@ -491,7 +386,7 @@
   },
   {
    "topic": "The Rings of Power",
-   "signal": "YouTube GB 112,963/h",
+   "signal": "YouTube GB 112,054/h",
    "wikipedia": "https://en.wikipedia.org/wiki/The_Rings_of_Power",
    "articles": [
     {
@@ -503,21 +398,8 @@
    ]
   },
   {
-   "topic": "I Play Rocky",
-   "signal": "YouTube GB 61,339/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/I_Play_Rocky",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "I Play Rocky - Official Trailer 2",
-     "url": "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
    "topic": "ROBLOX THE HOLLOW",
-   "signal": "YouTube GB-gaming 97,979/h",
+   "signal": "YouTube GB-gaming 77,885/h",
    "wikipedia": null,
    "articles": [
     {
@@ -535,8 +417,33 @@
    ]
   },
   {
+   "topic": "JEV PLAYS MODERN WARFARE 4 MULTIPLAYER",
+   "signal": "YouTube GB-gaming 30,056/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Xbox Wire",
+     "title": "Call of Duty: Modern Warfare 4 w/Devs – Campaign, Multiplayer, DMZ, and More | Official XBOX Podcast",
+     "url": "https://news.xbox.com/en-us/2026/10/22/call-of-duty-modern-warfare-4-w-devs-campaign-multiplayer-dmz-and-more-official-xbox-podcast/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "IGN",
+     "title": "The Big Call of Duty: Modern Warfare 4 Interview — Infinity Ward on the Beta, Matchmaking, and Much More",
+     "url": "https://www.ign.com/articles/the-big-call-of-duty-modern-warfare-4-interview-infinity-ward-on-the-beta-matchmaking-and-much-more",
+     "published": "2026-08-20"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "CoD: Modern Warfare 4 Aims For Fast And Fluid Movement, But A Classic Mode Isn’t Off The Table",
+     "url": "https://www.gamespot.com/articles/cod-modern-warfare-4-aims-for-fast-and-fluid-movement-but-a-classic-mode-isnt-off-the-table/",
+     "published": "2026-08-20"
+    }
+   ]
+  },
+  {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 110,146/h",
+   "signal": "YouTube GB-music 108,902/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -554,40 +461,103 @@
    ]
   },
   {
-   "topic": "Tate McRae",
-   "signal": "YouTube GB-music 68,995/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
+   "topic": "Bro Ran Too Fast 😭",
+   "signal": "YouTube GB-sport 157,649/h",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Tate McRae Debuts at No. 1 In Australia With ‘Housewife’",
-     "url": "https://www.billboard.com/music/chart-beat/tate-mcrae-debuts-no-1-australia-housewife-1236367034/",
-     "published": "2026-10-23"
+     "outlet": "Guardian",
+     "title": "‘The tech bro fight club is real!’ The titans of AI get the Succession treatment in a wild new TV show",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/22/the-audacity-hbo-max-billionaires-succession-treatment",
+     "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "duhan van der merwe",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Duhan_van_der_Merwe",
+   "topic": "iPhone Duo Vs iPhone 18",
+   "signal": "YouTube GB-tech 77,893/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "The Verge",
+     "title": "No, the iPhone Duo isn’t a small phone",
+     "url": "https://www.theverge.com/tech/1017090/iphone-duo-screen-size-mini",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "The £1,000 mistake people are making with new iPhone purchase",
+     "url": "https://news.sky.com/story/the-1000-mistake-people-are-making-with-new-iphone-purchase-13602560",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Engadget",
+     "title": "iPhone Duo's next-gen prototypes are trying to cram in Face ID",
+     "url": "https://www.engadget.com/2294041/iphone-duos-next-gen-prototypes-are-trying-to-cram-in-face-id/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Apple Newsroom",
+     "title": "Developers bring incredible new app experiences to iPhone Duo",
+     "url": "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "Something About Resident Evil Requiem ANIMATED 🧟🧟",
+   "signal": "YouTube US-gaming 62,518/h",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Resident Evil Director Zach Cregger Feels “Gratified” Following Gamer Backlash To His Highly Successful Movie",
+     "url": "https://www.gamespot.com/articles/resident-evil-director-zach-cregger-feels-vindicated-following-gamer-backlash-to-his-highly-successful-movie/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "GAMERS WON..",
+   "signal": "YouTube US-gaming 52,510/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Games_Workshop",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Resident Evil Director Zach Cregger Feels “Gratified” Following Gamer Backlash To His Highly Successful Movie",
+     "url": "https://www.gamespot.com/articles/resident-evil-director-zach-cregger-feels-vindicated-following-gamer-backlash-to-his-highly-successful-movie/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "brighton west pier",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Brighton_West_Pier_Act_1866",
    "articles": []
   },
   {
-   "topic": "power outage near me",
+   "topic": "becky north",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Becky_Birtha",
+   "articles": []
+  },
+  {
+   "topic": "daniil medvedev",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Daniil_Medvedev",
+   "articles": []
+  },
+  {
+   "topic": "ohio state buckeyes football",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Power_Outage_(Charmed)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ohio_State_Buckeyes_football",
    "articles": []
   },
   {
-   "topic": "leylah fernandez",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Leylah_Fernandez",
-   "articles": []
-  },
-  {
-   "topic": "khloe kardashian",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Khlo%C3%A9_Kardashian",
+   "topic": "radiation",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Radiation",
    "articles": []
   },
   {
@@ -603,14 +573,8 @@
    "articles": []
   },
   {
-   "topic": "LNGSHOT",
-   "signal": "YouTube GB-music 68,502/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Lngshot",
-   "articles": []
-  },
-  {
    "topic": "Zara Larsson",
-   "signal": "YouTube US-music 40,214/h",
+   "signal": "YouTube US-music 39,909/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   }

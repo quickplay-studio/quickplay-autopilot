@@ -1,8 +1,22 @@
-breaking run for 2026-10-23: 2 to write from 5 fact packs
-covered already: Clayface (film)
-covered already: ChatGPT
-covered already: ROBLOX THE HOLLOW
-covered already: JEV PLAYS MODERN WARFARE 4 MULTIPLAYER
-wrote 0 of 2: 
+afternoon run for 2026-10-23: 25 to write from 12 fact packs
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false, "claude today": "0 of 24 edits, 0 of 8 writes"}
+the northumbria mysteries: groq:openai/gpt-oss-120b, 0 warnings
+avengers doomsday: groq:openai/gpt-oss-120b, 0 warnings
+covered already: Clayface (film)
+Jerry Hall: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings
+too few facts: LISA
+too few facts: BABYMONSTER
+too few facts: BioWare
+covered already: Olivia Rodrigo
+too few facts: The Rings of Power
+covered already: ROBLOX THE HOLLOW
+too few facts: JEV PLAYS MODERN WARFARE 4 MULTIPLAYER
+covered already: iPhone Duo Vs iPhone 18
+evergreen: Top 10 highest-grossing Marvel Cinematic Universe films: only 0 checked facts
+evergreen: Top 10 best-selling Call of Duty games: only 0 checked facts
+evergreen: How BioWare accidentally deleted the Baldur's Gate source code: only 4 checked facts
+evergreen: How Michael Jackson secretly helped compose the soundtrack for Sonic the Hedgehog 3: only 3 checked facts
+evergreen: Why is the FIFA World Cup trophy kept in a secret vault in Switzerland?: only 1 checked facts
+evergreen: Why do film trailers play before the movie instead of after?: only 2 checked facts
+wrote 3 of 25: QD-140 The Northumbria Mysteries: New BBC Detective Drama 🎬; QD-141 Avengers Doomsday preview drops during World Series ⚾; QD-142 Jerry Hall’s record-breaking music night 🎤
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"groq:openai/gpt-oss-120b": "prompt too large", "gemini-3.7-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash", "openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemini-flash-latest": 1, "gemini-3.8-flash": 1}, "answers": {"groq:openai/gpt-oss-120b": 3, "gemini-3.5-flash-lite": 16, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1, "gemini-3.6-flash": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false, "claude today": "0 of 24 edits, 0 of 8 writes"}

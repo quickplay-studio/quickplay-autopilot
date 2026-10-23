@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T18:29+00:00",
+ "updated": "2026-10-23T19:31+00:00",
  "clips": 23,
  "tests": {
   "layout": {
@@ -73,15 +73,11 @@
   }
  },
  "campaigns": {
-  "valorant-champs": {
-   "n": 1,
+  "tdr-mitch": {
+   "n": 4,
    "median_views": 0.0
   },
-  "tdr-jenny": {
-   "n": 7,
-   "median_views": 0.0
-  },
-  "speed-expedia": {
+  "tdr-flamingo": {
    "n": 3,
    "median_views": 0.0
   },
@@ -89,7 +85,7 @@
    "n": 2,
    "median_views": 2.0
   },
-  "tdr-flamingo": {
+  "speed-expedia": {
    "n": 3,
    "median_views": 0.0
   },
@@ -97,8 +93,12 @@
    "n": 3,
    "median_views": 4.0
   },
-  "tdr-mitch": {
-   "n": 4,
+  "tdr-jenny": {
+   "n": 7,
+   "median_views": 0.0
+  },
+  "valorant-champs": {
+   "n": 1,
    "median_views": 0.0
   }
  }

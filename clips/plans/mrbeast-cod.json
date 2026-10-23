@@ -330,7 +330,18 @@
    "title": "MrBeast Gaming: First Team Fight in DMZ",
    "why": "High energy combat and a narrow escape that sets the tone for the rest of the match.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T19:31+00:00",
+   "file": "mrbeast-cod-14.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-14.mp4"
   },
   {
    "id": "mrbeast-cod-15",

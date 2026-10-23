@@ -372,7 +372,18 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1015.0,
-   "question": "Which region has the best food: Africa, South America or the Middle East?"
+   "question": "Which region has the best food: Africa, South America or the Middle East?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T19:31+00:00",
+   "file": "speed-expedia-16.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-16.mp4"
   }
  ]
 }

@@ -1,46 +1,20 @@
-speed-expedia: page: $813 remaining; Skip to content Discover Solutions Resources Sign in Create Account Back Reach $8,000 ISho
-today's shares: {"clips": {"tdr-flamingo": 1, "tdr-mitch": 1, "tdr-jenny": 1, "kevin-langue-ghost": 1}, "irl": {"kevin-langue-ghost": 2, "speed-expedia": 1, "mrbeast-cod": 1}, "gaming": {"tdr-jenny": 2, "tdr-flamingo": 1, "tdr-stinkyasher": 1, "tdr-mitch": 1, "valorant-microdrama": 1, "valorant-champs": 1}}
-speed-expedia-15: made (25 s) IShowSpeed reacts to the #1 destination South Lake Tahoe [irl]
-speed-expedia-15: upload failed (irl): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
+speed-expedia: page: $803 remaining; Skip to content We use cookies and similar tools to measure how the product is used. You c
+today's shares: {"clips": {"tdr-flamingo": 1}, "irl": {"kevin-langue-ghost": 2, "speed-expedia": 1, "mrbeast-cod": 1}, "gaming": {"tdr-jenny": 1}}
+speed-expedia-16: made (34 s) IShowSpeed plans his next world tour [irl]
+speed-expedia-16: upload failed (irl): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
 ceiling: YouTube refused an upload with 0 today, the irl channel's limit is now 4
-mrbeast-cod-13: made (39 s) One million dollars on the line | MrBeast [irl]
-mrbeast-cod-13: upload failed (irl): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
+mrbeast-cod-14: made (29 s) MrBeast Gaming: First Team Fight in DMZ [irl]
+mrbeast-cod-14: upload failed (irl): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
 ceiling: YouTube refused an upload with 0 today, the irl channel's limit is now 4
-tdr-stinkyasher-10: made (20 s) StinkyAsher vs Duncan Roast Battle [gaming]
-tdr-stinkyasher-10: upload failed (gaming): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
-ceiling: YouTube refused an upload with 3 today, the gaming channel's limit is now 4
-tdr-mitch-14: made (20 s) Mitch Gaming Reacts to Team Swaps
-tdr-mitch-15: skipped: dark picture
-  faces: 9 frames, groups (np.float64(0.6), np.float64(0.3)):1, (np.float64(0.2), np.float64(0.2)):1, (np.float64(0.3), np.float64(0.3)):1, best change -1.0
-tdr-mitch-16: split layout asked, no steady face, letterbox instead
-tdr-mitch-16: made (18 s) Mitch Gaming Calls Out Whispering Players [gaming]
-tdr-mitch-14: uploaded https://youtube.com/shorts/gIVlZ5Zeb_0 (batch)
-tdr-mitch-16: upload failed (gaming): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
-ceiling: YouTube refused an upload with 3 today, the gaming channel's limit is now 4
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-tdr-flamingo: 1 of 3 moments planned (gemini-3.6-flash), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "profanity": 1}
-  faces: 24 frames, groups , best change -1.0
-tdr-flamingo-20: split layout asked, no steady face, letterbox instead
-tdr-flamingo-20: made (48 s) Flamingo Hates Heather in Roblox Total Drama
 tdr-flamingo: 0 of 8 moments planned (gemini-3-flash-preview), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 8, "no hook": 0}; first: {"start": 1090, "end": 1133, "hook": "FLAMINGO VS HEATHER ROUND TWO", "label": "Cody", "title": "Flamingo Roblox Total Drama Island Rematch", "peak": 1127, "question": "Who is your favourite Total Dra
-tdr-flamingo-20: uploaded https://youtube.com/shorts/UUCY88omlak (batch)
-tdr-jenny: 0 of 8 moments planned (gemini-3-flash-preview), 13 in all; dropped {"bad time": 0, "length": 0, "overlap": 8, "no hook": 0}; first: {"start": 4141, "end": 4171, "hook": "JENNY HOYOS WINS THE TOURNAMENT", "label": "Jenny Hoyos", "title": "Jenny Hoyos wins the Total Drama Roblox tournament", "peak": 4153, "question": "What is your f
-tdr-jenny: 0 of 6 moments planned (gemini-3.5-flash-lite), 13 in all; dropped {"bad time": 0, "length": 1, "overlap": 5, "no hook": 0}; first: {"start": 4147, "end": 4171, "hook": "I WON TOTAL DRAMA!", "label": "Jenny Hoyos", "title": "Jenny Hoyos wins Total Drama Roblox", "peak": 4153, "question": "Did you expect Jenny to win the whole tour
-tdr-jenny: 1 of 3 moments planned (gemini-3.5-flash-lite), 14 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0}
-tdr-jenny-14: made (31 s) Jenny Hoyos reacts to Cody in Roblox Total Drama [gaming]
-tdr-jenny-14: upload failed (gaming): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
-ceiling: YouTube refused an upload with 3 today, the gaming channel's limit is now 4
-valorant-microdrama: 0 parts planned, 4 in all
-valorant-microdrama: 0 parts planned, 4 in all
-valorant-microdrama: nothing to upload
-valorant-champs-09: made (32 s) VALORANT Champs 2024 Bundle Record Reveal [gaming]
-valorant-champs-09: upload failed (gaming): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
-ceiling: YouTube refused an upload with 3 today, the gaming channel's limit is now 4
-kevin-langue-ghost: 2 of 6 moments planned (gemini-3.5-flash-lite), 10 in all; dropped {"bad time": 0, "length": 0, "overlap": 3, "no hook": 0, "profanity": 1}
-kevin-langue-ghost-09: made (34 s) Kevin Langue guess the adult ghost
-kevin-langue-ghost-10: made (28 s) Kevin Langue joy ghost reading [irl]
-kevin-langue-ghost-09: uploaded https://youtube.com/shorts/Kpl3syxT5ds (batch)
-kevin-langue-ghost-10: upload failed (irl): LimitReached: <HttpError 400 when requesting None returned "The user has exceeded the number of videos they may upload.". Details: "[{'message': 'The user has exceeded the number of videos they may upload.', 'domai
-ceiling: YouTube refused an upload with 0 today, the irl channel's limit is now 4
+tdr-flamingo: 0 of 8 moments planned (gemini-3-flash-preview), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 8, "no hook": 0}; first: {"start": 1090, "end": 1133, "hook": "FLAMINGO VS HEATHER ROUND TWO", "label": "Flamingo", "title": "Flamingo Roblox Total Drama Island Rematch", "peak": 1127, "question": "Who is your favourite Total
+tdr-flamingo: nothing to upload
+tdr-jenny: 0 of 8 moments planned (gemini-3-flash-preview), 14 in all; dropped {"bad time": 0, "length": 0, "overlap": 8, "no hook": 0}; first: {"start": 4147, "end": 4171, "hook": "JENNY HOYOS WINS THE TOURNAMENT", "label": "Jenny Hoyos", "title": "Jenny Hoyos wins the Total Drama Roblox Tournament", "peak": 4153, "question": "What is your f
+tdr-jenny: 0 of 5 moments planned (gemini-3.5-flash-lite), 14 in all; dropped {"bad time": 0, "length": 0, "overlap": 5, "no hook": 0}; first: {"start": 4071, "end": 4127, "hook": "THE CREATOR OF TOTAL DRAMA JOINED!", "label": "Tom McGillis", "title": "Jenny Hoyos wins Total Drama Roblox with the creator watching", "peak": 4116, "question": 
+tdr-jenny: nothing to upload
+kevin-langue-ghost: 0 of 4 moments planned (gemini-3.5-flash-lite), 10 in all; dropped {"bad time": 0, "length": 0, "overlap": 3, "no hook": 0, "profanity": 1}; first: {"start": 340, "end": 372, "hook": "SHE DIDN'T PEEL THE BATTERY?!", "label": "Jordan", "title": "Kevin Langue catches a fake ghost hunter", "peak": 348, "question": "Would you have noticed the unpeele
+kevin-langue-ghost: 0 of 6 moments planned (gemini-3.5-flash-lite), 10 in all; dropped {"bad time": 0, "length": 0, "overlap": 5, "no hook": 0, "profanity": 1}; first: {"start": 2107, "end": 2139, "hook": "THE REAL GHOST HUNTER REVEAL", "label": "Jean-Pierre", "title": "Kevin Langue 4 Imposters vs 1 Real Ghost Hunter", "peak": 2114, "question": "Who was your favouri
+kevin-langue-ghost: nothing to upload
 stats: 91 clips
 insights: {"layout": "letterbox", "captions": "lines", "punch": "none", "length": "as planned", "title": "subject first"}

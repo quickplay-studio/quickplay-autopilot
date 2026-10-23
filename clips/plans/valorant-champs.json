@@ -78,10 +78,27 @@
    "end": 3360.4,
    "hook": "PLAYING WITHOUT A CONTRACT",
    "label": "Babybay",
-   "title": "VALORANT Champs Shanghai Babybay on Playing Under Pressure",
+   "title": "Playing without a contract | VALORANT Champs",
    "why": "A raw and honest moment about the reality of 'no pressure' when you are playing for your career future.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "VALORANT Champs Shanghai Babybay on Playing Under Pressure",
+   "tests": {
+    "layout": "split",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "valorant-champs-04.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-04.mp4",
+   "video": "52ecE7URvMI",
+   "url": "https://youtube.com/shorts/52ecE7URvMI",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-05",
@@ -92,7 +109,8 @@
    "title": "VALORANT Champs Shanghai Bren Defends Jawgemo",
    "why": "A passionate rant defending a player's selflessness and utility usage over their individual stats.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "skipped": "profanity: fuck, fuck, fuck"
   },
   {
    "id": "valorant-champs-06",
@@ -103,7 +121,23 @@
    "title": "VALORANT Champs Shanghai Bren's Austin Bat Idea",
    "why": "A funny, weird suggestion for a podcast backdrop involving hundreds of thousands of bats in Texas.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "valorant-champs-06.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-06.mp4",
+   "video": "H01uN8j3B_4",
+   "url": "https://youtube.com/shorts/H01uN8j3B_4",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-07",

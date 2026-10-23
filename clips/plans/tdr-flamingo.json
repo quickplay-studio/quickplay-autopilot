@@ -317,12 +317,29 @@
    "end": 1133.4,
    "hook": "FLAMINGO VS HEATHER ROUND TWO",
    "label": "CODY",
-   "title": "Flamingo Roblox Total Drama Island Admin",
+   "title": "Flamingo vs heather round two | Flamingo",
    "why": "Features a fresh start as Cody and the immediate dramatic rivalry with Heather.",
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1127.0,
-   "question": "Who is your favourite Total Drama character to play as in Roblox?"
+   "question": "Who is your favourite Total Drama character to play as in Roblox?",
+   "title_planned": "Flamingo Roblox Total Drama Island Admin",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-14.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-14.mp4",
+   "video": "PL216T4-azY",
+   "url": "https://youtube.com/shorts/PL216T4-azY",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-15",
@@ -330,12 +347,29 @@
    "end": 1301.4,
    "hook": "THE TRAP CHALLENGE IS CHAOS",
    "label": "DODGE",
-   "title": "Flamingo Roblox Total Drama Island Moments",
+   "title": "The trap challenge is chaos | Flamingo",
    "why": "Contains high-energy gameplay and a funny reaction to Heather's sabotage.",
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1296.0,
-   "question": "What is your favourite Roblox admin command to use on friends?"
+   "question": "What is your favourite Roblox admin command to use on friends?",
+   "title_planned": "Flamingo Roblox Total Drama Island Moments",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-15.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-15.mp4",
+   "video": "IA9IyAWVxVA",
+   "url": "https://youtube.com/shorts/IA9IyAWVxVA",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-16",
@@ -343,12 +377,29 @@
    "end": 1603.4,
    "hook": "THE ULTIMATE OBBY SPEEDRUN",
    "label": "OBBY",
-   "title": "Flamingo Roblox Total Drama Island Win",
+   "title": "The ultimate obby speedrun | Flamingo",
    "why": "Shows Flamingo's skill and focus during a high-stakes elimination round.",
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1597.0,
-   "question": "What is the hardest Roblox obby you have ever completed?"
+   "question": "What is the hardest Roblox obby you have ever completed?",
+   "title_planned": "Flamingo Roblox Total Drama Island Win",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-16.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-16.mp4",
+   "video": "CGZbj0lySnI",
+   "url": "https://youtube.com/shorts/CGZbj0lySnI",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-17",
@@ -361,7 +412,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 143.0,
-   "question": "Have you ever been voted out first in a Roblox game?"
+   "question": "Have you ever been voted out first in a Roblox game?",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-17.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-17.mp4",
+   "video": "Bv7lTIkWKnw",
+   "url": "https://youtube.com/shorts/Bv7lTIkWKnw",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-18",
@@ -374,7 +441,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 302.0,
-   "question": "What is your favourite colour of marshmallow?"
+   "question": "What is your favourite colour of marshmallow?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-18.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-18.mp4",
+   "video": "AiuVIKy2OWE",
+   "url": "https://youtube.com/shorts/AiuVIKy2OWE",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-flamingo-19",
@@ -387,7 +470,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1942.0,
-   "question": "Would you like to see Flamingo play more Total Drama Roblox?"
+   "question": "Would you like to see Flamingo play more Total Drama Roblox?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-flamingo-19.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-19.mp4",
+   "video": "spzNPUHVfkA",
+   "url": "https://youtube.com/shorts/spzNPUHVfkA",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   }
  ]
 }

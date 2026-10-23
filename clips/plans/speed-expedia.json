@@ -133,13 +133,30 @@
   {
    "id": "speed-expedia-07",
    "start": 253.7,
-   "end": 301.4,
+   "end": 272.03,
    "hook": "WINE GRAPES AND A GOLF CLUB?",
    "label": "Niagara-on-the-Lake, Canada",
    "title": "IShowSpeed Reveals Canada Travel Spot",
    "why": "Speed ponders strange item clues and celebrates guessing Canada correctly.",
    "planned": "2026-10-21T00:36+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "end_planned": 301.4,
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "short",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "speed-expedia-07.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-07.mp4",
+   "video": "-9cKiZKoc5w",
+   "url": "https://youtube.com/shorts/-9cKiZKoc5w",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "speed-expedia-08",
@@ -147,10 +164,27 @@
    "end": 426.4,
    "hook": "WHAT CITY IS THIS SAXOPHONE FOR?",
    "label": "Perugia, Italy",
-   "title": "IShowSpeed Unpacks Italy Destination",
+   "title": "What city is this saxophone for? | IShowSpeed",
    "why": "Speed guesses New Orleans for the saxophone before the reveal of Perugia, Italy.",
    "planned": "2026-10-21T00:36+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "title_planned": "IShowSpeed Unpacks Italy Destination",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "speed-expedia-08.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-08.mp4",
+   "video": "3sK2QLaCxPs",
+   "url": "https://youtube.com/shorts/3sK2QLaCxPs",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "speed-expedia-09",
@@ -161,7 +195,23 @@
    "title": "IShowSpeed Guesses Destination Number 6",
    "why": "Speed wildly guesses the North Pole and Finland before revealing Mexico.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "speed-expedia-09.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-09.mp4",
+   "video": "eGNM_5JJBsE",
+   "url": "https://youtube.com/shorts/eGNM_5JJBsE",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "speed-expedia-10",
@@ -172,7 +222,23 @@
    "title": "IShowSpeed Unpacks Top 3 Destination",
    "why": "Speed pulls out a strange hand statue item and reacts to the Uruguay reveal.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-flash-latest"
+   "model": "gemini-flash-latest",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "speed-expedia-10.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/speed-expedia-10.mp4",
+   "video": "YI1DORTCH1A",
+   "url": "https://youtube.com/shorts/YI1DORTCH1A",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "speed-expedia-11",

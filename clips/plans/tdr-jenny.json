@@ -234,6 +234,65 @@
    "publish_at": "2026-10-22T17:00:00Z",
    "mode": "batch",
    "comment": "UgzNiGrzxscsKlszlKR4AaABAg"
+  },
+  {
+   "id": "tdr-jenny-10",
+   "start": 3323.7,
+   "end": 3363.4,
+   "hook": "DID THEY JUST VOTE ME OUT?",
+   "label": "Jenny Hoyos",
+   "title": "Jenny Hoyos Survives a Dramatic Elimination Vote",
+   "why": "A high-drama moment where Jenny thinks she is eliminated but survives the vote.",
+   "planned": "2026-10-23T12:15+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 3346.0,
+   "question": "Who would you have voted for in this round?",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-jenny-10.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-10.mp4",
+   "video": "KSUCqndjawY",
+   "url": "https://youtube.com/shorts/KSUCqndjawY",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
+  },
+  {
+   "id": "tdr-jenny-11",
+   "start": 299.7,
+   "end": 336.4,
+   "hook": "A STATUE IN THE ACTUAL GAME?",
+   "label": "Jenny Hoyos",
+   "title": "A statue in the actual game? | Jenny Hoyos",
+   "why": "A major reveal that sets the stakes for the entire competition and explains her motivation.",
+   "planned": "2026-10-23T12:15+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 313.0,
+   "question": "Would you want a statue of your avatar in Roblox?",
+   "title_planned": "Jenny Hoyos reveals the massive winner's prize",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-jenny-11.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-11.mp4",
+   "video": "Bzv_eqX7flk",
+   "url": "https://youtube.com/shorts/Bzv_eqX7flk",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   }
  ]
 }

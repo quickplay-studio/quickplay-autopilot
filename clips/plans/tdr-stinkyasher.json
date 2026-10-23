@@ -130,7 +130,23 @@
    "title": "StinkyAsher Exposes Eva In Roblox Total Drama",
    "why": "StinkyAsher hilariously calls out Eva's constant whispering and gameplay backstabbing to the entire group.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-stinkyasher-06.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-06.mp4",
+   "video": "QY_eGukmmWk",
+   "url": "https://youtube.com/shorts/QY_eGukmmWk",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-stinkyasher-07",
@@ -141,7 +157,23 @@
    "title": "StinkyAsher Hides In Roblox Total Drama",
    "why": "StinkyAsher bonds with another player while hiding from hunters in a chaotic minigame.",
    "planned": "2026-10-21T06:30+00:00",
-   "model": "gemini-3.6-flash"
+   "model": "gemini-3.6-flash",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-stinkyasher-07.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-07.mp4",
+   "video": "91kgG7-VyBY",
+   "url": "https://youtube.com/shorts/91kgG7-VyBY",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-stinkyasher-08",

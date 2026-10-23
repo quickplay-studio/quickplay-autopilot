@@ -180,12 +180,29 @@
    "end": 1790.4,
    "hook": "I AM NOT VOTING MYSELF",
    "label": "",
-   "title": "Mitch Gaming Final Three Betrayal",
+   "title": "I am not voting myself | Mitch Gaming",
    "why": "Bridget suggests mutual self-voting, but Mitch refuses to play nice and cuts her right before the finale.",
    "planned": "2026-10-21T11:01+00:00",
    "model": "gemini-flash-latest",
    "peak": 1780.0,
-   "question": "Would you have voted yourself out in the final three?"
+   "question": "Would you have voted yourself out in the final three?",
+   "title_planned": "Mitch Gaming Final Three Betrayal",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-mitch-08.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-08.mp4",
+   "video": "J4nlJRS_QZ4",
+   "url": "https://youtube.com/shorts/J4nlJRS_QZ4",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-09",
@@ -198,7 +215,23 @@
    "planned": "2026-10-21T11:01+00:00",
    "model": "gemini-flash-latest",
    "peak": 685.0,
-   "question": "Who had the better comeback here?"
+   "question": "Who had the better comeback here?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-mitch-09.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-09.mp4",
+   "video": "pr22pdJ3cbk",
+   "url": "https://youtube.com/shorts/pr22pdJ3cbk",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-10",
@@ -211,7 +244,23 @@
    "planned": "2026-10-21T11:01+00:00",
    "model": "gemini-flash-latest",
    "peak": 1841.0,
-   "question": "Did Mitch play the role of the villain to win?"
+   "question": "Did Mitch play the role of the villain to win?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "tdr-mitch-10.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-mitch-10.mp4",
+   "video": "T8gni-6AYBA",
+   "url": "https://youtube.com/shorts/T8gni-6AYBA",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-mitch-11",

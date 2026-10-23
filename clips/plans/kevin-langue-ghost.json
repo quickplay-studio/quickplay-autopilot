@@ -11,7 +11,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 2107.0,
-   "question": "Did you guess the right person was the real ghost hunter?"
+   "question": "Did you guess the right person was the real ghost hunter?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "kevin-langue-ghost-01.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-01.mp4",
+   "video": "TJlTz0z1CDU",
+   "url": "https://youtube.com/shorts/TJlTz0z1CDU",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-02",
@@ -24,7 +40,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1330.0,
-   "question": "Do you believe ghost hunting equipment actually works?"
+   "question": "Do you believe ghost hunting equipment actually works?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "kevin-langue-ghost-02.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-02.mp4",
+   "video": "p5FlCKbs_ZI",
+   "url": "https://youtube.com/shorts/p5FlCKbs_ZI",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-03",
@@ -37,7 +69,23 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1648.0,
-   "question": "Do you believe in mediums who can see spirits?"
+   "question": "Do you believe in mediums who can see spirits?",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "kevin-langue-ghost-03.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-03.mp4",
+   "video": "oc_ci1dqcTQ",
+   "url": "https://youtube.com/shorts/oc_ci1dqcTQ",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-04",
@@ -50,7 +98,15 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 1572.0,
-   "question": "What is your favourite ghost hunting show?"
+   "question": "What is your favourite ghost hunting show?",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first"
+   },
+   "skipped": "dark picture"
   },
   {
    "id": "kevin-langue-ghost-05",
@@ -58,17 +114,34 @@
    "end": 372.4,
    "hook": "CAUGHT WITH A NEW BATTERY",
    "label": "JORDAN",
-   "title": "Kevin Langue Drama Caught Lying",
+   "title": "Caught with a new battery | Kevin Langue",
    "why": "A classic 'caught out' moment where Kevin finds a flaw in an imposter's story.",
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 351.0,
-   "question": "Was the battery peel a sign she was an imposter?"
+   "question": "Was the battery peel a sign she was an imposter?",
+   "title_planned": "Kevin Langue Drama Caught Lying",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "kevin-langue-ghost-05.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-05.mp4",
+   "video": "EGlTYV8NPDE",
+   "url": "https://youtube.com/shorts/EGlTYV8NPDE",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-06",
    "start": 736.7,
-   "end": 770.4,
+   "end": 762.4,
    "hook": "GHOSTS FROM THE 1600S?",
    "label": "BETH",
    "title": "Kevin Langue 2 Ghost Hunter Imposters",
@@ -76,7 +149,24 @@
    "planned": "2026-10-23T09:31+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 757.0,
-   "question": "Is Michelle a realistic name for a ghost from the 1600s?"
+   "question": "Is Michelle a realistic name for a ghost from the 1600s?",
+   "end_planned": 770.4,
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "short",
+    "title": "subject first"
+   },
+   "made": "2026-10-23T12:15+00:00",
+   "file": "kevin-langue-ghost-06.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-06.mp4",
+   "video": "82IbIthxSMM",
+   "url": "https://youtube.com/shorts/82IbIthxSMM",
+   "uploaded": "2026-10-23T12:15+00:00",
+   "publish_at": "2026-10-23T18:00:00Z",
+   "mode": "batch"
   }
  ]
 }

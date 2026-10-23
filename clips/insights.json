@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T22:58+00:00",
+ "updated": "2026-10-23T12:15+00:00",
  "clips": 11,
  "tests": {
   "layout": {
@@ -73,29 +73,29 @@
   }
  },
  "campaigns": {
-  "tdr-mitch": {
-   "n": 2,
-   "median_views": 1.0
-  },
-  "speed-expedia": {
-   "n": 2,
-   "median_views": 0.0
-  },
   "tdr-stinkyasher": {
    "n": 1,
    "median_views": 2.0
   },
-  "mrbeast-cod": {
+  "tdr-flamingo": {
    "n": 2,
-   "median_views": 4.0
+   "median_views": 0.0
   },
   "tdr-jenny": {
    "n": 2,
    "median_views": 0.0
   },
-  "tdr-flamingo": {
+  "speed-expedia": {
    "n": 2,
    "median_views": 0.0
+  },
+  "tdr-mitch": {
+   "n": 2,
+   "median_views": 1.0
+  },
+  "mrbeast-cod": {
+   "n": 2,
+   "median_views": 4.0
   }
  }
 }

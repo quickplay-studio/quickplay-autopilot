@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 09:44): 8 of 1,000 subscribers · 5,772 of 10 million Shorts views in 90 days · 1,659 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 10:39): 8 of 1,000 subscribers · 5,778 of 10 million Shorts views in 90 days · 1,615 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 9:44 (UK): 2 scheduled, 111 public, 20 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 8:43).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 10:34).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 3 public, 2 scheduled | 14 | 2 | ⏳ 3 of 40 so far, 2 more scheduled |
+| Fri 23 Oct | 5 public | 18 | 2 | ⏳ 5 of 40 so far |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -59,17 +59,30 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
+- **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
+
+## In the queue
+
+- **QD-130** Formula 1: African Grand Prix deal signed 🏎️ (rendering next)
+- **QD-131** Katie Boulter: British star reaches Japan Open 🎾 (rendering next)
+- **QD-132** LISA: Her first solo EP is coming 🎤 (rendering next)
+- **QD-133** BABYMONSTER: The massive world tour expansion 🎤 (rendering next)
+- **QD-134** I Play Rocky: Sylvester Stallone biopic trailer 🥊 (rendering next)
+- **QD-135** Tate McRae: The new number one hit 🎶 (rendering next)
+- **QD-136** Roblox The Hollow: Nine days of nightmare maze monsters 🎃 (rendering next)
+- **QD-137** Top 10 most-streamed songs on Spotify of all time 🎶 (rendering next)
+- **QD-138** Top 10 highest-grossing superhero films ever 🎬 (rendering next)
 
 ## On the channel (latest first)
 
 ### Fri 23 Oct 10:30 · Clayface: The dark new body horror film in cinemas 🎬
-scheduled · 25 s · music: house-on-the-hill · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
+private · 25 s · music: house-on-the-hill · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
 
 ![QD-129](QD-129.jpg)
 
 ### Fri 23 Oct 10:00 · Jenna Ortega: stepping away from television 📺
-scheduled · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
+private · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
 
 ![QD-128](QD-128.jpg)
 
@@ -164,22 +177,22 @@ public · 17 views · 24 s · music: back-in-the-saddle · on Facebook · [scrip
 ![QD-108](QD-108.jpg)
 
 ### Thu 22 Oct 6:30 · How does ChatGPT work and remember information? 💻
-public · 1 views · 20 s · music: glitcher · on Facebook · [script](../boards/done/QD-107.json) · [YouTube](https://youtube.com/shorts/fCu432D5mgw)
+public · 1 views · 20 s · music: glitcher · on Instagram · on Facebook · [script](../boards/done/QD-107.json) · [YouTube](https://youtube.com/shorts/fCu432D5mgw)
 
 ![QD-107](QD-107.jpg)
 
 ### Thu 22 Oct 6:00 · What is the biggest stadium in the Scottish Premiership 🏟️
-public · 8 views · 20 s · music: once-upon-a-time · [script](../boards/done/QD-106.json) · [YouTube](https://youtube.com/shorts/e3ia6uzfmVg)
+public · 8 views · 20 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-106.json) · [YouTube](https://youtube.com/shorts/e3ia6uzfmVg)
 
 ![QD-106](QD-106.jpg)
 
 ### Thu 22 Oct 5:30 · The incredible journey of Bayern Munich’s Alphonso Davies 🏆
-public · 16 views · 33 s · music: once-upon-a-time · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
+public · 16 views · 33 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
 
 ![QD-105](QD-105.jpg)
 
 ### Thu 22 Oct 5:00 · Taylor Swift's haunted video twist 🎬
-public · 139 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
+public · 139 views · 32 s · music: purple-desire · on Instagram · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
 
 ![QD-103](QD-103.jpg)
 

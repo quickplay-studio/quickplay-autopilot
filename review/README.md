@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 17 public, 1 scheduled | 22 | 2 | ⏳ 17 of 40 so far, 1 more scheduled |
+| Fri 23 Oct | 18 public, 1 scheduled | 22 | 2 | ⏳ 18 of 40 so far, 1 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -64,12 +64,12 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## In the queue
 
-- **QD-143** Jenna Ortega’s book and Forbes fame 📚 (rendering next)
+- **QD-144** Tate McRae hits #1 in Australia 🎶 (rendering next)
 
 ## On the channel (latest first)
 
 ### Fri 23 Oct 18:00 · Jerry Hall’s record-breaking music night 🎤
-scheduled · 29 s · music: after-sunset · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
+private · 29 s · music: after-sunset · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
 
 ![QD-142](QD-142.jpg)
 

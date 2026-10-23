@@ -1,0 +1,81 @@
+{
+ "id": "QD-143",
+ "board": "boards/queue/QD-143.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T17:30:00Z",
+ "rendered": "2026-10-23T17:06:31.542705+00:00",
+ "title": "Jenna Ortega’s book and Forbes fame 📚",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "purple-desire",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "minimal",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 28.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.6
+ },
+ "timeline": [
+  [
+   0.06,
+   2.73,
+   "title",
+   0
+  ],
+  [
+   2.73,
+   7.38,
+   "none",
+   1
+  ],
+  [
+   7.38,
+   13.07,
+   "none",
+   1
+  ],
+  [
+   13.07,
+   17.8,
+   "none",
+   1
+  ],
+  [
+   17.8,
+   25.97,
+   "none",
+   1
+  ],
+  [
+   25.97,
+   28.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T17:13:48Z",
+ "video": "FvEctqCZhx4",
+ "url": "https://youtube.com/shorts/FvEctqCZhx4",
+ "publish_at": "2026-10-23T17:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T17:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-143"
+}

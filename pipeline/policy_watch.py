@@ -3,7 +3,7 @@ reads free feeds (the official YouTube blog, YouTube's Creator Insider channel, 
 the Partner Programme, reused content, AI disclosure, UK online safety and advertising rules), has a free model sort the
 new items into "act" (changes what we may post or how we earn), "watch" or "ignore", and:
 - appends every act and watch item to docs/POLICY.md (dated, with its link): the record a Claude session reads first;
-- opens a GitHub issue "📜 Rule change to act on: <title>" for each act item, so the weekly Claude review (a scheduled
+- opens one GitHub issue a run, "📜 Rule changes to act on (<date>)", listing the act items, so the weekly Claude review (a scheduled
   task) or Charlie's next request changes the pipeline to fit.
 Nothing here changes the pipeline by itself: news text never goes into a prompt that writes or posts.
 
@@ -56,10 +56,23 @@ def items():
     return out
 
 
+def recent(when, days=14):
+    """True for an item dated in the last `days` days (or undated)."""
+    from email.utils import parsedate_to_datetime
+    if not when: return True
+    try: t = parsedate_to_datetime(when)
+    except Exception:
+        try: t = dt.datetime.fromisoformat(when.replace("Z", "+00:00"))
+        except Exception: return True
+    if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+    return (dt.datetime.now(dt.timezone.utc) - t).days <= days
+
+
 def run():
     try: seen = set(json.loads(SEEN.read_text()))
     except Exception: seen = set()
-    new = [i for i in items() if i["link"] not in seen][:60]
+    fresh = [i for i in items() if i["link"] not in seen]
+    new = [i for i in fresh if recent(i["when"])][:60]          # old news was handled already (the first run opened 23 issues)
     print(f"policy watch: {len(new)} new items")
     if not new: return []
     import factpack
@@ -81,16 +94,17 @@ def run():
                            "to the channel, newest at the bottom. \"act\" items also open a GitHub issue.\n")
         with LOG.open("a") as f:
             for p in picked: f.write(f"- {today} [{p['level']}] {p['note']} ({p['source']}: [{p['title']}]({p['link']}))\n")
-    for p in picked:
-        if p["level"] != "act": continue
-        title = f"📜 Rule change to act on: {p['title'][:90]}"
+    acts = [p for p in picked if p["level"] == "act"]
+    if acts:                                   # one issue a run, listing every act item (never one issue per article)
+        title = f"📜 Rule changes to act on ({today})"
         subprocess.run(["gh", "label", "create", "policy", "--color", "5319E7", "--description", "A platform rule or law change"],
                        capture_output=True)
+        body = "\n".join(f"- {p['note']} ({p['source']}: [{p['title'][:100]}]({p['link']}))" for p in acts)
         r = subprocess.run(["gh", "issue", "create", "--title", title, "--label", "policy", "--body",
-                            f"{p['note']}\n\nSource: {p['source']}, {p['link']}\n\nThe weekly Claude review reads docs/POLICY.md and "
-                            "these issues and changes the pipeline to fit; close this once handled."], capture_output=True, text=True)
+                            body + "\n\nThe weekly Claude review reads docs/POLICY.md and these issues and changes the pipeline to "
+                            "fit; it closes this once handled."], capture_output=True, text=True)
         print("issue:", title, (r.stdout or r.stderr).strip()[:120])
-    SEEN.write_text(json.dumps(sorted(seen | {i["link"] for i in new})[-3000:]))
+    SEEN.write_text(json.dumps(sorted(seen | {i["link"] for i in fresh})[-3000:]))
     print(f"policy watch: {sum(p['level'] == 'act' for p in picked)} act, {sum(p['level'] == 'watch' for p in picked)} watch ({model})")
     return picked
 

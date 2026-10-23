@@ -23,6 +23,7 @@ assert [g["level"] for g in got] == ["act", "watch"]
 log = P.LOG.read_text()
 assert "[act] Reposted clips lose reach, add our own take." in log and "https://x/3" in log and "cat filters" not in log, log
 issues = [c for c in CALLS if c[:3] == ["gh", "issue", "create"]]
-assert len(issues) == 1 and "original content" in issues[0][4], issues
+assert len(issues) == 1 and "Rule changes to act on" in issues[0][4] and "original content" in issues[0][8], issues
+assert P.recent("Mon, 1 Jan 2024 10:00:00 GMT") is False and P.recent("") is True
 assert P.run() == []                       # nothing new the second time
 print("policy watch ok")

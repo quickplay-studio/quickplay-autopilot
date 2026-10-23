@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T01:00:00Z",
  "rendered": "2026-10-21T16:34:53.153003+00:00",
- "title": "The Beatles Please Please Me secret history revealed 🎸",
+ "title": "How The Beatles recorded Please Please Me in one day 🎶",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -88,6 +88,13 @@
  "social_release": "social-QD-097",
  "engage": {
   "comment": "Ugzdl7Ml9MZYsuh6Ws14AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "The Beatles Please Please Me secret history revealed 🎸",
+   "to": "How The Beatles recorded Please Please Me in one day 🎶",
+   "at": "2026-10-23T01:25+00:00",
+   "views_an_hour": 0.4,
+   "typical": 1.2
+  }
  }
 }

@@ -144,9 +144,12 @@ reply["v"] = {"title": "The game that sold 300 million", "alt_title": "Bigger th
 b, note = W.claude_edit(board, {}, "news", "n")
 assert b["editor"] == "claude" and b["meta"]["title"] == "The game that sold 300 million" and b["beats"][0]["say"].startswith("Minecraft sold")
 assert board["meta"]["title"] == "Old title" and "edited by Claude" in note and W.usage()["edits"] == 1 and CHECKS
-reply["v"] = {"title": "New — title", "first": "Minecraft sold a lot of copies worldwide, honestly"}
+reply["v"] = {"title": "New \u2014 title"}
 b, note = W.claude_edit(dict(board, id="QD-501"), {}, "news", "n")
 assert "editor" not in b and b["meta"]["title"] == "Old title" and "kept the original" in note, note
+reply["v"] = {"title": "Sharper title", "first": "Minecraft sold a lot of copies worldwide, honestly, truly"}   # a number lost
+b, note = W.claude_edit(dict(board, id="QD-505"), {}, "news", "n")
+assert b["editor"] == "claude" and b["meta"]["title"] == "Sharper title" and b["beats"][0]["say"] == board["beats"][0]["say"] and "beat 1 kept" in note, note
 W.fact_check = lambda b, p: ["beat 1: not in the pack"]
 reply["v"] = {"title": "Fine title"}
 b, note = W.claude_edit(dict(board, id="QD-502"), {}, "news", "n")

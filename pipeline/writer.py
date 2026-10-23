@@ -755,10 +755,12 @@ def choose_writer(sid):
 EDIT = """You are the editor of a family-friendly UK YouTube Shorts channel. A writer's board follows (JSON). Make it more
 gripping for an ordinary viewer scrolling past: a sharper hook (first line), a title that makes people tap, a punchier
 last line, and a pinned comment that invites replies. Rewrite only these five, nothing else:
-- title (under 70 characters, no clickbait lies), alt_title (a different angle on the same Short),
+- title and alt_title (a different angle on the same Short): each under 70 characters and ending with exactly one emoji,
+  no clickbait lies,
 - comment (one question viewers want to answer),
-- first (beat 1's narration) and last (the last beat's narration): keep every fact, name and number they hold, keep their
-  length within two words, and never add a claim the board doesn't make.
+- first (beat 1's narration) and last (the last beat's narration): keep every fact, name and number they hold, use the
+  same number of words as first_words and last_words say (two more or fewer at most: count them), and never add a claim
+  the board doesn't make.
 UK English, no dashes of any kind, no emoji in the narration. Reply with JSON only:
 {"title": "...", "alt_title": "...", "comment": "...", "first": "...", "last": "..."}"""
 
@@ -820,7 +822,8 @@ def claude_edit(b, p, kind, note):
             or random.Random(f"claude-edit:{b.get('id')}").random() >= claude_shares()[1]): return b, note
     m, beats = b.get("meta") or {}, b["beats"]
     show = {"title": m.get("title", ""), "alt_title": m.get("alt_title", ""), "comment": m.get("comment", ""),
-            "lines": [x.get("say", "") for x in beats], "facts": m.get("facts") or []}
+            "lines": [x.get("say", "") for x in beats], "facts": m.get("facts") or [],
+            "first_words": words(beats[0].get("say")), "last_words": words(beats[-1].get("say"))}
     used("edits")
     ans, why = factpack.claude_call(label, EDIT + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
     if not isinstance(ans, dict): return b, note + f", editor: no answer ({str(why)[:60]})"
@@ -829,14 +832,14 @@ def claude_edit(b, p, kind, note):
     for k in ("title", "alt_title", "comment"):
         if str(ans.get(k) or "").strip(): nm[k] = str(ans[k]).strip()
     first, last = str(ans.get("first") or "").strip(), str(ans.get("last") or "").strip()
-    bad = []
+    bad, skipped = [], []
     for i, t in ((0, first), (len(beats) - 1, last)):
         if not t: continue
         old = beats[i].get("say", "")
-        if abs(words(t) - words(old)) > 2: bad.append(f"beat {i + 1} length")
-        if any(n not in numbers(t) for n in numbers(old)): bad.append(f"beat {i + 1} lost a number")
+        if abs(words(t) - words(old)) > 2 or any(n not in numbers(t) for n in numbers(old)) or re.search("[\u2013\u2014]", t):
+            skipped.append(f"beat {i + 1}"); continue      # that line stays as written, the rest of the edit still counts
         new["beats"][i]["say"] = t
-    if re.search("[\u2013\u2014]", json.dumps([nm.get(k) for k in ("title", "alt_title", "comment")] + [first, last], ensure_ascii=False)):
+    if re.search("[\u2013\u2014]", json.dumps([nm.get(k) for k in ("title", "alt_title", "comment")], ensure_ascii=False)):
         bad.append("a dash")
     if not bad:
         errs, warns = validate.check(new)
@@ -845,7 +848,7 @@ def claude_edit(b, p, kind, note):
     if not bad and kind != "fiction": bad = fact_check(new, p)
     if bad: return b, note + f", editor: kept the original ({'; '.join(bad)[:120]})"
     new["editor"] = "claude"
-    return new, note + ", edited by Claude"
+    return new, note + ", edited by Claude" + (f" ({', '.join(skipped)} kept as written)" if skipped else "")
 
 
 def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):

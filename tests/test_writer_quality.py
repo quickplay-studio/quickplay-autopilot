@@ -91,6 +91,14 @@ assert F.gemini("x")[1] == "gemini-flash-latest" and CALLS == ["gemini-flash-lat
 # a preferred model goes first in the writing order too
 reset(); SCRIPT["gemini-3.6-flash"] = [gem('{"w": 5}')]
 assert F.gemini("x", writing=True, prefer="gemini:gemini-3.6-flash")[1] == "gemini-3.6-flash" and CALLS == ["gemini-3.6-flash"]
+# a prompt too large for one model (Groq's tokens-a-minute cap) skips that call only; the fourth time, the model is passed over
+reset(); SCRIPT["api.groq.com"] = [R(413, {"error": {"message": "Request too large on tokens per minute (TPM)"}}), oai('{"w": 6}')]
+SCRIPT["openrouter.ai"] = [oai('{"w": 7}')]
+assert F.gemini("big", writing=True)[1] == "openrouter:deepseek/deepseek-chat-v3-0324:free"
+assert F.gemini("small", writing=True)[1] == "groq:moonshotai/kimi-k2-instruct"
+F.STATE["too_large"] = {"groq:moonshotai/kimi-k2-instruct": 3}; SCRIPT["api.groq.com"] = [R(413, {"error": "too large"})]
+F.openai_chat("groq:moonshotai/kimi-k2-instruct", "https://api.groq.com/openai/v1", "g", "m", "x", 10, 0.1)
+assert "groq:moonshotai/kimi-k2-instruct" in F.STATE["spent_models"]
 print("2 writing chain ok")
 
 # 3. choose_writer: never Lite, local or Claude; untested strong models are favoured by the order

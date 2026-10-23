@@ -184,3 +184,4 @@ OpenRouter keys are set, but Groq wrote nothing, because keyed providers are onl
   (UK day), shown in the "gemini:" log line. analytics/models.json adds "editors" and "combos"; both Claude shares fall
   back by views (claude_shares) after 5 measured Shorts. Hub: Editor column and a "Writers and editors" table.
   tests/test_writer_quality.py.
+- 23 October, first real run (13:32 UTC): Groq GPT-OSS 120B wrote 2 boards, OpenRouter Nemotron Ultra 1, but Groq was then benched for the run on one "prompt too large" (its free tier caps tokens a minute); now an oversized prompt skips only that call, and the model is passed over after 4. No Claude edits or arm boards: the CLAUDE_CODE_OAUTH_TOKEN secret is empty on the runner (allowlisted, never set); Charlie adds it. Most empty places were packs with too few facts, not the writer.

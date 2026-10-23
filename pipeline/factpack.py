@@ -444,7 +444,9 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
         if r.status_code == 404:
             spent.add(label); return None, f"{label}: not offered (404)"
         if r.status_code == 413 or ("context" in t and "length" in t) or "too large" in t:
-            spent.add(label); notes[label] = "prompt too large"; return None, f"{label}: prompt too large"
+            big = STATE.setdefault("too_large", {}); big[label] = big.get(label, 0) + 1     # this prompt is too big, a smaller one may fit
+            if big[label] >= 4: spent.add(label); notes[label] = "prompt too large, 4 times"     # (Groq's free tier caps tokens a minute)
+            return None, f"{label}: prompt too large"
         if r.status_code == 400 and label not in nojson and ("response_format" in t or "json" in t):
             nojson.add(label); continue
         if r.status_code >= 500:

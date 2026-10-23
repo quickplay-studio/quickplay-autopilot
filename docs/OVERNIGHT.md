@@ -22,7 +22,23 @@ Newest work at the bottom of each section. Every change ran the full test suite 
 
 ## Changes made overnight
 
-(filled in as the night goes)
+1. **End-to-end test of tonight's build (23:05 UTC).** A full trends run, then the writer, ran on GitHub with everything
+   built tonight. It worked: the GTA 6 watchlist measured "surging" (80 news articles in 24 hours, 18,007 Wikipedia views
+   against 16,324 usual) and gave it 3 places; fact packs got 3 second opinions; covered topics were skipped; Claude
+   edited 3 boards and wrote 2 (usage counted: 3 of 12 edits, 2 of 4 writes); the first GTA 6 Short was written ("GTA 6
+   has no disc, so what will it cost you?"). The fact check stopped one GTA board that claimed pre-orders start next
+   week, which the sources didn't say. Exactly what it is for.
+2. **Clip money counts Instagram.** Each clip's Instagram Reel is submitted and paid as its own post, so the money
+   estimates (hub, clips page, money alert) now count it once it has views over the campaign's minimum.
+3. **An expired sign-in no longer stops everything.** If Google ever expires or revokes one of the YouTube sign-ins, the
+   identity guard used to treat it as "a sign-in outside the studio account" and stop every posting job. Now it is
+   marked "expired sign-in", posting elsewhere carries on, and a separate issue asks you to reconnect it. (Checked: none of
+   the four sign-ins has an expiry date, so this is a safety net, not a live problem.)
+4. **Competitor research fixed after its first real run.** It searched "gaming" and "movie" and got Spanish, Hindi and
+   Indonesian film recaps. It now searches Shorts like ours ("music facts", "football facts", one per category, US
+   region), keeps English titles only, and a day the YouTube allowance cut short is finished by the next run.
+5. **No more Shorts about "movie times".** A practical search ("movie times", showtimes, near me, login, weather) has no
+   story in it; the topic pickers now skip them.
 
 ## What needs Charlie
 

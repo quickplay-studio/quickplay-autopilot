@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 05:38): 8 of 1,000 subscribers · 5,677 of 10 million Shorts views in 90 days · 1,931 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 06:38): 8 of 1,000 subscribers · 5,690 of 10 million Shorts views in 90 days · 1,817 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Thu 22 Oct 20:06 (UK): 4 scheduled, 106 public, 34 uploads in the last 24 hours.
 
@@ -27,7 +27,6 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 - emma (British female): 1.80 x typical, 29% stayed past the first seconds, 3 Shorts
 - george_dramatic (British male, more dramatic delivery): 1.05 x typical, 30% stayed past the first seconds, 6 Shorts
-- george (British male, clear): 0.97 x typical, 32% stayed past the first seconds, 12 Shorts
 - george_quick (British male, clear and quicker): 0.81 x typical, 25% stayed past the first seconds, 3 Shorts
 - lab-voice-1019 (British male, 3.15 words a second): 1.26 x typical, 39% stayed past the first seconds, 2 Shorts
 - heart (American female, expressive): 1.23 x typical, 38% stayed past the first seconds, 1 Short
@@ -44,8 +43,13 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (7 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (2 of 8 Shorts measured)
 - Testing energy: camera motion 0.7, punch-ins 0.05 (1 of 8 Shorts measured)
-- Testing grade: contrast(1.0) saturate(0.94) sepia(0.0) brightness(1.0), vignette 0.0 (12 of 8 Shorts measured)
+- Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
+- 2026-10-23: opening retired graphic_first (1.22x against 1.88x for image_first over 35 Shorts)
+- 2026-10-23: grade retired lab-grade-1019 (0.37x against 1.92x for natural over 12 Shorts)
+- 2026-10-23: energy retired calm (0.57x against 1.65x for steady over 17 Shorts)
+- 2026-10-23: voice retired george (0.97x against 1.80x for emma over 12 Shorts)
+- 2026-10-23: captions retired clean (1.22x against 3.58x for lab-captions-1019 over 19 Shorts)
 
 ## Needs a look
 

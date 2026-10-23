@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
     - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
-    - cron: '1 17,18,19,21,22 * * *'   # the batch times (19:00 and 22:00 UK, either side of the clock change): Instagram, Facebook, TikTok posts, comments, submissions
+    - cron: '31 16,17 * * *'   # before the 19:00 UK batch, either side of the clock change: the job waits for 19:01 UK, then Instagram, Facebook, TikTok, comments, submissions (GitHub starts crons up to an hour late)
     - cron: '30 22 * * *'      # views per clip for the learning data
     - cron: '35 8 * * *'       # 09:35 UK: the scout (campaigns ranked by money and heat, the viral streamers), for the evening's Chrome jobs
   push:
@@ -85,9 +85,14 @@ jobs:
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
             python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt
-          elif [ "${{ github.event.schedule }}" = "1 17,18,21,22 * * *" ] || echo "$req" | grep -qi social; then
+          elif [ "${{ github.event.schedule }}" = "31 16,17 * * *" ] || echo "$req" | grep -qi social; then
             case "$req" in *social*) export CLIPS_SOCIAL_NOW=1;; esac
-            python pipeline/clips.py social 2>&1 | tee status/clips_log.txt
+            # 23 October: this branch never ran (the schedule string here did not match the cron), so no clip was ever posted
+            # to Instagram or submitted. Now: wait for 19:01 UK when the batch is under 100 minutes away; a later start runs at once.
+            wait=$(python -c "import json,datetime as d,zoneinfo as z;u=z.ZoneInfo('Europe/London');n=d.datetime.now(u);h,m=map(int,json.load(open('clips/campaigns.json')).get('batch_time','19:00').split(':'));t=n.replace(hour=h,minute=m,second=0,microsecond=0)+d.timedelta(minutes=1);w=(t-n).total_seconds();print(-1 if w>6000 else max(0,int(w)))")
+            if [ -z "$CLIPS_SOCIAL_NOW" ] && [ "$wait" = "-1" ]; then echo "social: the batch is over 100 minutes away; the later run posts it" | tee status/clips_log.txt
+            else [ -z "$CLIPS_SOCIAL_NOW" ] && echo "social: waiting $wait s for the batch" && sleep "$wait"
+              python pipeline/clips.py social 2>&1 | tee status/clips_log.txt; fi
           elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
             case "$req" in *redo*) export CLIPS_REDO=1;; esac
             python pipeline/clips.py prepare $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt

@@ -303,6 +303,32 @@
    "model": "gemini-3-flash-preview",
    "peak": 1411.0,
    "question": "What is your favourite strategy for winning Roblox Total Drama?"
+  },
+  {
+   "id": "tdr-mitch-18",
+   "start": 1050.7,
+   "end": 1092.4,
+   "hook": "MITCH GAMING CALLS OUT THE SNAKES",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming trd: Calling out the snakes",
+   "why": "This is a high-drama confrontation where Mitch defends his gameplay against Sadie and Cody.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1078.0,
+   "question": "Who was the biggest snake in this tournament? 🐍"
+  },
+  {
+   "id": "tdr-mitch-19",
+   "start": 1149.7,
+   "end": 1181.4,
+   "hook": "A SURPRISE GUEST APPEARS",
+   "label": "Mitch Gaming",
+   "title": "Mitch Gaming trd: Meeting a legend",
+   "why": "Mitch has a genuine and excited reaction to the surprise guest appearance.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1173.0,
+   "question": "Who is your favourite Total Drama character? 🏝️"
   }
  ]
 }

@@ -334,6 +334,45 @@
    "model": "gemini-3-flash-preview",
    "peak": 1373.0,
    "question": "Who do you think deserved the win the most?"
+  },
+  {
+   "id": "mrbeast-cod-26",
+   "start": 1136.7,
+   "end": 1177.4,
+   "hook": "THEY FORMED A TEAM TO HUNT PLAYERS",
+   "label": "Call of Duty",
+   "title": "MrBeast Gaming Call of Duty Ambush",
+   "why": "High-octane car chase and shoot-out featuring an alliance hunt across the map.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-flash-latest",
+   "peak": 1167.0,
+   "question": "Would you ever team up in Call of Duty DMZ?"
+  },
+  {
+   "id": "mrbeast-cod-27",
+   "start": 1226.7,
+   "end": 1258.4,
+   "hook": "BEGGING FOR A TEAMMATE IN COD",
+   "label": "DMZ Battle",
+   "title": "MrBeast Call of Duty Solos Desperate Play",
+   "why": "Funny solo player encounter trying desperately to plead for an alliance near exfil.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-flash-latest",
+   "peak": 1249.0,
+   "question": "Would you spare a solo player in DMZ?"
+  },
+  {
+   "id": "mrbeast-cod-28",
+   "start": 1041.7,
+   "end": 1076.4,
+   "hook": "TWO TEAMS WITH 300K COLLIDE",
+   "label": "TimTheTatman",
+   "title": "MrBeast Gaming Call of Duty $300,000 Meeting",
+   "why": "Tense stand-off between the richest teams in the match deciding whether to fight.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-flash-latest",
+   "peak": 1065.0,
+   "question": "Would you keep the peace or take the shot?"
   }
  ]
 }

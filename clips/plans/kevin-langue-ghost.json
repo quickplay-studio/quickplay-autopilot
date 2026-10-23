@@ -1,0 +1,82 @@
+{
+ "moments": [
+  {
+   "id": "kevin-langue-ghost-01",
+   "start": 2091.7,
+   "end": 2112.4,
+   "hook": "THE REAL GHOST HUNTER REVEAL",
+   "label": "THE REVEAL",
+   "title": "Kevin Langue 4 Imposters vs 1 Real Ghost Hunter Reveal",
+   "why": "This is the climax of the video where the imposter game concludes with the big reveal.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 2107.0,
+   "question": "Did you guess the right person was the real ghost hunter?"
+  },
+  {
+   "id": "kevin-langue-ghost-02",
+   "start": 1319.7,
+   "end": 1346.4,
+   "hook": "TESTING THE GHOST BOX METHOD",
+   "label": "THE TEST",
+   "title": "Kevin Langue 2 Ghost Hunting Methods",
+   "why": "Features a high-energy moment where they test the equipment with funny results.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1330.0,
+   "question": "Do you believe ghost hunting equipment actually works?"
+  },
+  {
+   "id": "kevin-langue-ghost-03",
+   "start": 1627.7,
+   "end": 1673.4,
+   "hook": "HE SEES A SPIRIT OVER KEVIN",
+   "label": "JEAN-PIERRE",
+   "title": "Kevin Langue Show Ghost Hunter Medium",
+   "why": "A high-drama moment where an expert claims a spirit is standing right next to Kevin.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1648.0,
+   "question": "Do you believe in mediums who can see spirits?"
+  },
+  {
+   "id": "kevin-langue-ghost-04",
+   "start": 1562.7,
+   "end": 1593.4,
+   "hook": "THE EQUIPMENT GOES CRAZY",
+   "label": "COURTNEY",
+   "title": "Kevin Langue Guess The Real Ghost Hunter",
+   "why": "Shows a compelling piece of evidence that makes the group believe Courtney is the real one.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1572.0,
+   "question": "What is your favourite ghost hunting show?"
+  },
+  {
+   "id": "kevin-langue-ghost-05",
+   "start": 339.7,
+   "end": 372.4,
+   "hook": "CAUGHT WITH A NEW BATTERY",
+   "label": "JORDAN",
+   "title": "Kevin Langue Drama Caught Lying",
+   "why": "A classic 'caught out' moment where Kevin finds a flaw in an imposter's story.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 351.0,
+   "question": "Was the battery peel a sign she was an imposter?"
+  },
+  {
+   "id": "kevin-langue-ghost-06",
+   "start": 736.7,
+   "end": 770.4,
+   "hook": "GHOSTS FROM THE 1600S?",
+   "label": "BETH",
+   "title": "Kevin Langue 2 Ghost Hunter Imposters",
+   "why": "A funny interrogation moment where the group questions the historical accuracy of a name.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 757.0,
+   "question": "Is Michelle a realistic name for a ghost from the 1600s?"
+  }
+ ]
+}

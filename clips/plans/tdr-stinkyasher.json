@@ -247,6 +247,45 @@
    "model": "gemini-3-flash-preview",
    "peak": 66.0,
    "question": "What is the first thing you would buy in the Tuck Shop?"
+  },
+  {
+   "id": "tdr-stinkyasher-17",
+   "start": 245.7,
+   "end": 290.4,
+   "hook": "LOCKED IN TOTAL DRAMA ALLIANCE",
+   "label": "",
+   "title": "StinkyAsher Total Roblox Drama Alliance Strategy",
+   "why": "Asher forms an alliance on the beach after calling out Duncan's messy gameplay.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 284.0,
+   "question": "Would you trust Duncan in Total Roblox Drama?"
+  },
+  {
+   "id": "tdr-stinkyasher-18",
+   "start": 464.7,
+   "end": 506.4,
+   "hook": "STINKYASHER PANICS IN ROBLOX OBBY",
+   "label": "",
+   "title": "StinkyAsher Roblox Total Drama Chaos",
+   "why": "Features iconic Sadie energy, confusion over Katie/Sadie, and floor-disappearing panic.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 496.0,
+   "question": "What is the hardest obby challenge in Roblox?"
+  },
+  {
+   "id": "tdr-stinkyasher-19",
+   "start": 947.7,
+   "end": 985.4,
+   "hook": "TOTAL DRAMA CREATOR APPEARS IN GAME",
+   "label": "JENNY HOYOS",
+   "title": "StinkyAsher Roblox Total Drama Special Guest",
+   "why": "Tom McGillis enters the game to congratulate winner Jenny Hoyos.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 970.0,
+   "question": "Did you expect the creator of Total Drama to show up?"
   }
  ]
 }

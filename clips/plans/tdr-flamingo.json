@@ -310,6 +310,84 @@
    "publish_at": "2026-10-22T17:00:00Z",
    "mode": "batch",
    "pulled": "not brand safe"
+  },
+  {
+   "id": "tdr-flamingo-14",
+   "start": 1089.7,
+   "end": 1133.4,
+   "hook": "FLAMINGO VS HEATHER ROUND TWO",
+   "label": "CODY",
+   "title": "Flamingo Roblox Total Drama Island Admin",
+   "why": "Features a fresh start as Cody and the immediate dramatic rivalry with Heather.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1127.0,
+   "question": "Who is your favourite Total Drama character to play as in Roblox?"
+  },
+  {
+   "id": "tdr-flamingo-15",
+   "start": 1251.7,
+   "end": 1301.4,
+   "hook": "THE TRAP CHALLENGE IS CHAOS",
+   "label": "DODGE",
+   "title": "Flamingo Roblox Total Drama Island Moments",
+   "why": "Contains high-energy gameplay and a funny reaction to Heather's sabotage.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1296.0,
+   "question": "What is your favourite Roblox admin command to use on friends?"
+  },
+  {
+   "id": "tdr-flamingo-16",
+   "start": 1554.7,
+   "end": 1603.4,
+   "hook": "THE ULTIMATE OBBY SPEEDRUN",
+   "label": "OBBY",
+   "title": "Flamingo Roblox Total Drama Island Win",
+   "why": "Shows Flamingo's skill and focus during a high-stakes elimination round.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1597.0,
+   "question": "What is the hardest Roblox obby you have ever completed?"
+  },
+  {
+   "id": "tdr-flamingo-17",
+   "start": 115.7,
+   "end": 155.4,
+   "hook": "FLAMINGO MEETS THE MEANEST PLAYERS",
+   "label": "KATIE",
+   "title": "Flamingo Roblox Total Drama Island Gameplay",
+   "why": "Features funny commentary on the 'mean' NPCs and players in the tournament.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 143.0,
+   "question": "Have you ever been voted out first in a Roblox game?"
+  },
+  {
+   "id": "tdr-flamingo-18",
+   "start": 269.7,
+   "end": 315.4,
+   "hook": "FLAMINGO'S CRAZY OBBY COMEBACK",
+   "label": "HEATHER",
+   "title": "Flamingo Roblox Total Drama Island Pro",
+   "why": "A classic Flamingo motivational monologue during a difficult Roblox challenge.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 302.0,
+   "question": "What is your favourite colour of marshmallow?"
+  },
+  {
+   "id": "tdr-flamingo-19",
+   "start": 1928.7,
+   "end": 1951.52,
+   "hook": "FLAMINGO'S FINAL MESSAGE TO ROBLOX",
+   "label": "CHRIS",
+   "title": "Flamingo Roblox Total Drama Island Review",
+   "why": "A natural ending clip with his final thoughts on the game and its mechanics.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 1942.0,
+   "question": "Would you like to see Flamingo play more Total Drama Roblox?"
   }
  ]
 }

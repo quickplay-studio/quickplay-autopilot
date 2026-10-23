@@ -126,6 +126,19 @@
    "why": "Wyatt jokingly admits to being 'bought off' for his weekly award, ending the segment on a funny, cynical note.",
    "planned": "2026-10-21T06:30+00:00",
    "model": "gemini-3-flash-preview"
+  },
+  {
+   "id": "valorant-champs-09",
+   "start": 434.7,
+   "end": 466.4,
+   "hook": "CHAMPIONS BUNDLE HITS 50 MILLION DOLLARS",
+   "label": "VCT 2024",
+   "title": "VALORANT Champs 2024 Bundle Record Reveal",
+   "why": "A major financial reveal and record-breaking moment for the tournament.",
+   "planned": "2026-10-23T09:31+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 441.0,
+   "question": "Did you pick up the VALORANT Champions 2024 bundle?"
   }
  ]
 }

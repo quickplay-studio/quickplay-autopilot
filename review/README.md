@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 12:40): 8 of 1,000 subscribers · 5,852 of 10 million Shorts views in 90 days · 1,735 views in the last 24 hours (about 111,046 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 13:47): 8 of 1,000 subscribers · 5,894 of 10 million Shorts views in 90 days · 1,811 views in the last 24 hours (about 111,046 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 12:15 (UK): 8 scheduled, 114 public, 27 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 8 public, 7 scheduled | 21 | 2 | ⏳ 8 of 40 so far, 7 more scheduled |
+| Fri 23 Oct | 10 public, 5 scheduled | 22 | 2 | ⏳ 10 of 40 so far, 5 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -85,12 +85,12 @@ scheduled · 23 s · music: dance-with-you · [script](../boards/done/QD-135.jso
 ![QD-135](QD-135.jpg)
 
 ### Fri 23 Oct 14:00 · I Play Rocky: Sylvester Stallone biopic trailer 🥊
-scheduled · 32 s · music: scale-the-mountain · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
+private · 32 s · music: scale-the-mountain · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
 
 ![QD-134](QD-134.jpg)
 
 ### Fri 23 Oct 13:30 · BABYMONSTER: The massive world tour expansion 🎤
-scheduled · 32 s · music: dance-with-you · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
+private · 32 s · music: dance-with-you · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
 
 ![QD-133](QD-133.jpg)
 
@@ -190,7 +190,7 @@ public · 13 views · 21 s · music: the-bombs · on Facebook · [script](../boa
 ![QD-112](QD-112.jpg)
 
 ### Thu 22 Oct 13:00 · Nobody Wants This S3 romance twist 🎬
-public · 99 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
+public · 99 views · 24 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
 
 ![QD-111](QD-111.jpg)
 

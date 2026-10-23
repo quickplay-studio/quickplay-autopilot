@@ -367,6 +367,40 @@
    "file": "tdr-jenny-14.mp4",
    "channel": "gaming",
    "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-14.mp4"
+  },
+  {
+   "id": "tdr-jenny-15",
+   "start": 685.7,
+   "end": 753.4,
+   "hook": "SKYDIVING INTO SHARK INFESTED WATERS",
+   "label": "ROBLOX",
+   "title": "Skydiving into shark infested waters | Jenny Hoyos",
+   "why": "The grab is the high-stakes skydive; the payoff is Jenny's sudden realization that she is 'cracked' at the game.",
+   "planned": "2026-10-23T22:14+00:00",
+   "model": "gemini-3-flash-preview",
+   "peak": 744.0,
+   "score": 8.0,
+   "take_intro": "The challenges in this tournament are getting absolutely out of control.",
+   "take_outro": "She went from last place to being totally cracked. What is your favourite Roblox game?",
+   "question": "Would you jump into a pool of sharks for a challenge?",
+   "title_planned": "Jenny Hoyos skydiving in Roblox Total Drama",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-23T22:14+00:00",
+   "file": "tdr-jenny-15.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-15.mp4",
+   "video": "6FZH3a9cWes",
+   "url": "https://youtube.com/shorts/6FZH3a9cWes",
+   "uploaded": "2026-10-23T22:14+00:00",
+   "publish_at": "private",
+   "mode": "private"
   }
  ]
 }

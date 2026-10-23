@@ -259,10 +259,30 @@
    "end": 528.4,
    "hook": "DROP IF I'M CUTE",
    "label": "DUNCAN",
-   "title": "StinkyAsher Wins the Survival Challenge",
+   "title": "Drop if i'm cute | StinkyAsher",
    "why": "A dramatic win sequence featuring a funny taunt toward an opponent.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "StinkyAsher Wins the Survival Challenge",
+   "take_intro": "Watch the epic showdown that catches everyone off guard",
+   "take_outro": "That was priceless! Who else laughed at that surprise?",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-23T22:14+00:00",
+   "file": "tdr-stinkyasher-11.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-11.mp4",
+   "video": "3kRHyCYPCMM",
+   "url": "https://youtube.com/shorts/3kRHyCYPCMM",
+   "uploaded": "2026-10-23T22:14+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-stinkyasher-12",
@@ -273,7 +293,26 @@
    "title": "StinkyAsher Reacts to Courtney's Elimination",
    "why": "Captures a dramatic elimination and a sassy response from Asher.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "take_intro": "Watch the drama unfold as Asher demands a recount",
+   "take_outro": "What would you have done in that tense moment?",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-23T22:14+00:00",
+   "file": "tdr-stinkyasher-12.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-12.mp4",
+   "video": "9kaforX88zI",
+   "url": "https://youtube.com/shorts/9kaforX88zI",
+   "uploaded": "2026-10-23T22:14+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "tdr-stinkyasher-13",

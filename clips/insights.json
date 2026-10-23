@@ -1,20 +1,23 @@
 {
- "updated": "2026-10-23T19:31+00:00",
+ "updated": "2026-10-23T22:14+00:00",
  "clips": 23,
  "tests": {
   "layout": {
    "arms": {
     "letterbox": {
      "n": 12,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.2
     },
     "full": {
      "n": 2,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.0
     },
     "split": {
      "n": 0,
-     "median_views": null
+     "median_views": null,
+     "mean_views": null
     }
    },
    "best": null
@@ -23,11 +26,13 @@
    "arms": {
     "lines": {
      "n": 8,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.1
     },
     "karaoke": {
      "n": 6,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.3
     }
    },
    "best": null
@@ -36,11 +41,13 @@
    "arms": {
     "none": {
      "n": 11,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.2
     },
     "zoom": {
      "n": 3,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.3
     }
    },
    "best": null
@@ -49,11 +56,8 @@
    "arms": {
     "as planned": {
      "n": 8,
-     "median_views": 0.0
-    },
-    "short": {
-     "n": 4,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.1
     }
    },
    "best": null
@@ -62,19 +66,47 @@
    "arms": {
     "subject first": {
      "n": 6,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.2
     },
     "hook first": {
      "n": 6,
-     "median_views": 0.0
+     "median_views": 0.0,
+     "mean_views": 0.3
+    }
+   },
+   "best": null
+  },
+  "take": {
+   "arms": {
+    "voice": {
+     "n": 0,
+     "median_views": null,
+     "mean_views": null
     }
    },
    "best": null
   }
  },
  "campaigns": {
+  "mrbeast-cod": {
+   "n": 3,
+   "median_views": 4.0
+  },
   "tdr-mitch": {
    "n": 4,
+   "median_views": 0.0
+  },
+  "speed-expedia": {
+   "n": 3,
+   "median_views": 0.0
+  },
+  "valorant-champs": {
+   "n": 1,
+   "median_views": 0.0
+  },
+  "tdr-jenny": {
+   "n": 7,
    "median_views": 0.0
   },
   "tdr-flamingo": {
@@ -84,22 +116,22 @@
   "tdr-stinkyasher": {
    "n": 2,
    "median_views": 2.0
-  },
-  "speed-expedia": {
-   "n": 3,
-   "median_views": 0.0
-  },
-  "mrbeast-cod": {
-   "n": 3,
-   "median_views": 4.0
-  },
-  "tdr-jenny": {
-   "n": 7,
-   "median_views": 0.0
-  },
-  "valorant-champs": {
-   "n": 1,
-   "median_views": 0.0
   }
- }
+ },
+ "score_bands": {
+  "under 6": {
+   "n": 0,
+   "mean_views": null
+  },
+  "6 to 7": {
+   "n": 0,
+   "mean_views": null
+  },
+  "8 to 10": {
+   "n": 0,
+   "mean_views": null
+  }
+ },
+ "scored_clips": 0,
+ "min_score": null
 }

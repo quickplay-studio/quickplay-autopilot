@@ -349,10 +349,30 @@
    "end": 302.4,
    "hook": "WE HAVE $300,000 ON US",
    "label": "",
-   "title": "MrBeast Gaming: How to Win $1,000,000",
+   "title": "We have $300,000 on us | MrBeast",
    "why": "Explains the core mechanic of the challenge (collecting tags) and the high stakes involved.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "MrBeast Gaming: How to Win $1,000,000",
+   "take_intro": "Watch as the stakes climb in this DMZ run",
+   "take_outro": "Did you expect the NPC lieutenants to turn the tide?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-23T22:14+00:00",
+   "file": "mrbeast-cod-15.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-15.mp4",
+   "video": "xU_vpku1VpQ",
+   "url": "https://youtube.com/shorts/xU_vpku1VpQ",
+   "uploaded": "2026-10-23T22:14+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "mrbeast-cod-16",
@@ -363,7 +383,26 @@
    "title": "MrBeast Gaming: Secret Team Strategies",
    "why": "Shows a unique and funny strategy of using different languages to confuse opponents via proximity chat.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "take_intro": "Watch what happens when languages become a secret weapon",
+   "take_outro": "Did that language trick catch you off guard, comment below?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-23T22:14+00:00",
+   "file": "mrbeast-cod-16.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-16.mp4",
+   "video": "PbmzA76f0Pk",
+   "url": "https://youtube.com/shorts/PbmzA76f0Pk",
+   "uploaded": "2026-10-23T22:14+00:00",
+   "publish_at": "private",
+   "mode": "private"
   },
   {
    "id": "mrbeast-cod-17",

@@ -459,6 +459,40 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
     return None, why
 
 
+USAGE = ROOT / "status" / "claude_usage.json"
+
+
+def claude_usage():
+    """Today's Claude use (UK day) and the last 14 days, from status/claude_usage.json: every call, the editor's edits,
+    the boards Claude wrote, and how the last call went. The hub shows it (Charlie, 23 October: his allowance)."""
+    import datetime as _dt
+    from zoneinfo import ZoneInfo
+    day = str(_dt.datetime.now(ZoneInfo("Europe/London")).date())
+    try: u = json.loads(USAGE.read_text())
+    except Exception: u = {}
+    hist = u.get("history") or {}
+    if u.get("day") and u.get("day") != day:
+        hist[u["day"]] = {k: int(u.get(k) or 0) for k in ("calls", "edits", "writes")}
+        u = {"day": day, "calls": 0, "edits": 0, "writes": 0, "last": u.get("last"), "last_at": u.get("last_at")}
+    u.setdefault("day", day)
+    for k in ("calls", "edits", "writes"): u[k] = int(u.get(k) or 0)
+    u["history"] = dict(sorted(hist.items())[-14:])
+    u["caps"] = {"edits": int(CFG.get("claude_edits_per_day", 24)), "writes": int(CFG.get("claude_writes_per_day", 8)),
+                 "calls per run": int(CFG.get("claude_max_per_run", 12))}
+    return u
+
+
+def claude_note(what=None, last=None):
+    """Counts one use (what: calls, edits or writes) and/or records how the last call went."""
+    import datetime as _dt
+    u = claude_usage()
+    if what: u[what] = u.get(what, 0) + 1
+    if last is not None: u["last"], u["last_at"] = last, _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="minutes")
+    try: USAGE.parent.mkdir(exist_ok=True); USAGE.write_text(json.dumps(u, indent=1))
+    except Exception: pass
+    return u
+
+
 def claude_call(label, prompt, timeout):
     """Claude Code in print mode with Charlie's subscription token (CLAUDE_CODE_OAUTH_TOKEN), no tools, in an empty folder
     so no project files load. At most claude_max_per_run calls a run (config.json), so his Claude allowance lasts."""
@@ -469,14 +503,16 @@ def claude_call(label, prompt, timeout):
     exe = shutil.which("claude")
     if not exe: spent.add(label); return None, f"{label}: CLI not installed"
     STATE["claude_calls"] = STATE.get("claude_calls", 0) + 1
+    claude_note("calls")
     try:
         r = subprocess.run([exe, "-p", "--output-format", "json", "--model", label.split(":", 1)[1], "--tools", "",
                             "--system-prompt", JSON_ONLY, "--no-session-persistence", "--max-turns", "2"],
                            input=prompt, capture_output=True, text=True, timeout=max(timeout, 300), cwd=tempfile.mkdtemp())
         out = json.loads(r.stdout or "{}")
-    except subprocess.TimeoutExpired: return None, f"{label}: timeout"
+    except subprocess.TimeoutExpired: claude_note(last="timeout"); return None, f"{label}: timeout"
     except ValueError: return None, f"{label}: {(r.stderr or r.stdout)[:150]}"
     res = str(out.get("result") or "")
+    claude_note(last="ok" if not (out.get("is_error") or r.returncode) else res[:120])
     if out.get("is_error") or r.returncode:
         if re.search(r"limit|quota|credit|auth|login|token", res, re.I):
             spent.add(label); notes[label] = res[:80]

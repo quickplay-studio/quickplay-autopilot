@@ -105,7 +105,7 @@ print("2 writing chain ok")
 import writer as W
 reset()
 W.ROOT = SCRATCH; (SCRATCH / "analytics").mkdir(); (SCRATCH / "status").mkdir()
-W.USAGE = SCRATCH / "status" / "claude_usage.json"
+F.USAGE = SCRATCH / "status" / "claude_usage.json"
 picks = [W.choose_writer(f"QD-{n:03d}") for n in range(60)]
 assert not any(p.startswith("claude:") or "lite" in p for p in picks), set(picks)
 assert picks.count("groq:moonshotai/kimi-k2-instruct") > picks.count("gemini:gemma-3-27b-it"), picks
@@ -115,10 +115,12 @@ print("3 choice ok")
 arm = [W.claude_arm(f"QD-{n:03d}") for n in range(200)]
 share = sum(1 for a in arm if a) / len(arm)
 assert 0.15 < share < 0.35 and set(arm) <= {None, "claude:sonnet"}, share
-W.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 0, "writes": 8}))
+F.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 0, "writes": 8}))
 assert not any(W.claude_arm(f"QD-{n:03d}") for n in range(50))
-W.USAGE.write_text(json.dumps({"day": "2020-01-01", "edits": 99, "writes": 99}))
-assert W.usage()["writes"] == 0                                  # a new UK day starts at zero
+F.USAGE.write_text(json.dumps({"day": "2020-01-01", "edits": 99, "writes": 99}))
+assert W.usage()["writes"] == 0 and W.usage()["history"]["2020-01-01"]["edits"] == 99   # a new UK day starts at zero, the old one kept
+u = F.claude_note("calls", last="ok")
+assert u["calls"] == 1 and u["last"] == "ok" and u["caps"]["edits"] == 24 and json.loads(F.USAGE.read_text())["calls"] == 1
 # a Claude arm that doesn't earn more views fades
 (SCRATCH / "analytics" / "models.json").write_text(json.dumps({"writers": {"claude:sonnet": {"n": 8, "views_vs_typical": 0.5},
     "gemini:gemini-flash-latest": {"n": 20, "views_vs_typical": 1.0}}, "editors": {"claude": {"n": 10, "views_vs_typical": 0.6},
@@ -151,7 +153,7 @@ b, note = W.claude_edit(dict(board, id="QD-502"), {}, "news", "n")
 assert "editor" not in b and "not in the pack" in note
 b, note = W.claude_edit(dict(board, id="QD-503", writer="claude:sonnet"), {}, "news", "n")    # Claude never edits its own
 assert note == "n"
-W.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 24, "writes": 0}))
+F.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 24, "writes": 0}))
 assert W.claude_edit(dict(board, id="QD-504"), {}, "news", "n")[1] == "n"
 print("5 editor ok")
 

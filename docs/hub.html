@@ -222,14 +222,31 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude};
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+}
+
+// Claude on the writer: today's calls against the caps, the last 7 days, and whether the last call worked (status/claude_usage.json)
+function claudeCard(){
+  const c = D.claude, ukToday = new Date().toLocaleDateString("en-CA", {timeZone: "Europe/London"});
+  if (!c) return `<p class="sub">No Claude calls yet. The writer uses Claude only once its token is set.</p>`;
+  const today = c.day === ukToday ? c : {calls: 0, edits: 0, writes: 0}, caps = c.caps || {};
+  const ok = !c.last || c.last === "ok";
+  const hist = Object.entries(c.history || {}).concat(c.day !== ukToday ? [[c.day, c]] : []).slice(-7).reverse();
+  return `<div class="tiles" style="margin-top:0">
+      ${tile("Claude calls today", fmt(today.calls), "every call the automation made with your token")}
+      ${tile("Edits today", `${fmt(today.edits)} of ${fmt(caps.edits || 24)}`, "titles, hooks and endings polished")}
+      ${tile("Boards written today", `${fmt(today.writes)} of ${fmt(caps.writes || 8)}`, "the 1 in 4 test arm")}
+      ${tile("Last call", ok ? "Worked" : "Failed", c.last_at ? ukTime(c.last_at) + (ok ? "" : ": " + esc(String(c.last).slice(0, 80))) : "")}
+    </div>
+    <p class="sub">Each call is one short request. At most ${fmt((caps.edits || 24) + (caps.writes || 8))} edits and boards a day, and ${fmt(caps["calls per run"] || 12)} calls a write run; lower the caps in config.json to use less.</p>
+    ${hist.length ? table([{h:"Day", f:r => esc(r[0])}, {h:"Calls", n:1, f:r => fmt(r[1].calls)}, {h:"Edits", n:1, f:r => fmt(r[1].edits)}, {h:"Boards", n:1, f:r => fmt(r[1].writes)}], hist) : ""}`;
 }
 
 function render(){
@@ -267,6 +284,7 @@ function render(){
       ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>
+    <h2>Claude use (your subscription)</h2>${claudeCard()}
     <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>
     <h2>Needs you or worth knowing</h2>${alertList}
     <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them). Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;

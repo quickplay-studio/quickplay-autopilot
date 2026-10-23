@@ -752,7 +752,6 @@ def choose_writer(sid):
 
 # Claude, capped: an editor on free models' boards and a test arm writing 1 board in 4 (Charlie, 23 October). Counted per
 # UK day in status/claude_usage.json; both shares fall back by themselves when Claude's Shorts don't earn more views.
-USAGE = ROOT / "status" / "claude_usage.json"
 EDIT = """You are the editor of a family-friendly UK YouTube Shorts channel. A writer's board follows (JSON). Make it more
 gripping for an ordinary viewer scrolling past: a sharper hook (first line), a title that makes people tap, a punchier
 last line, and a pinned comment that invites replies. Rewrite only these five, nothing else:
@@ -765,17 +764,11 @@ UK English, no dashes of any kind, no emoji in the narration. Reply with JSON on
 
 
 def usage():
-    day = str(dt.datetime.now(UK).date())
-    try: u = json.loads(USAGE.read_text())
-    except Exception: u = {}
-    if u.get("day") != day: u = {"day": day, "edits": 0, "writes": 0}
-    return u
+    return factpack.claude_usage()
 
 
 def used(what):
-    u = usage(); u[what] = int(u.get(what) or 0) + 1
-    try: USAGE.write_text(json.dumps(u))
-    except Exception: pass
+    factpack.claude_note(what)
 
 
 def claude_label():
@@ -1037,6 +1030,7 @@ def main():
     try: order = factpack.writing_order()[:6]
     except Exception: order = factpack.STATE.get("models", [])[:6]
     u = usage()
+    u["edits"], u["writes"] = u.get("edits", 0), u.get("writes", 0)
     print("gemini:", json.dumps({"order": order, **factpack.gemini_state(), "late": late(),
                                  "claude today": f"{u['edits']} of {CFG.get('claude_edits_per_day', 24)} edits, "
                                                  f"{u['writes']} of {CFG.get('claude_writes_per_day', 8)} writes"}))

@@ -7,6 +7,7 @@ import json, os, sys
 os.chdir(REPO_DIR)
 sys.path.insert(0, REPO_DIR + "/pipeline")
 import factpack as F
+F.USAGE = _p.Path(SCRATCH) / "claude_usage.json"     # never the real usage file
 os.environ["GEMINI_API_KEY"] = "test"
 for k in ("GROQ_API_KEY", "CEREBRAS_API_KEY", "MISTRAL_API_KEY", "OPENROUTER_API_KEY", "LLAMA_SERVER", "CLAUDE_CODE_OAUTH_TOKEN"):
     os.environ.pop(k, None)

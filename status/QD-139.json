@@ -1,0 +1,104 @@
+{
+ "id": "QD-139",
+ "board": "boards/queue/QD-139.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T15:30:00Z",
+ "rendered": "2026-10-23T12:08:43.633300+00:00",
+ "title": "Modern Warfare 4: New matchmaking system revealed 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Infinity Ward: no Commons image named 'Infinity Ward')",
+  "beat 8 reused a nearby picture (commons-search:Infinity Ward: no Commons image named 'Infinity Ward')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "dead-wrong",
+ "social_music": "dark-suspense-trailer-488322",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 43.4,
+  "wps": 3.17,
+  "weak_beats": [],
+  "size_mb": 13.1
+ },
+ "timeline": [
+  [
+   0.06,
+   3.74,
+   "title",
+   0
+  ],
+  [
+   3.74,
+   8.6,
+   "none",
+   1
+  ],
+  [
+   8.6,
+   14.52,
+   "date",
+   1
+  ],
+  [
+   14.52,
+   20.61,
+   "none",
+   1
+  ],
+  [
+   20.61,
+   27.31,
+   "stat",
+   1
+  ],
+  [
+   27.31,
+   32.16,
+   "none",
+   1
+  ],
+  [
+   32.16,
+   37.51,
+   "none",
+   1
+  ],
+  [
+   37.51,
+   43.39,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "19611",
+   "q": "dark atmospheric lights",
+   "t0": 0.0,
+   "t1": 43.39
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T12:19:32Z",
+ "video": "kY4VHE_sizQ",
+ "url": "https://youtube.com/shorts/kY4VHE_sizQ",
+ "publish_at": "2026-10-23T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-139"
+}

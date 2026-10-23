@@ -113,10 +113,13 @@ def clips_money(root=None):
         try: views = int(float(r.get("views") or 0))
         except ValueError: views = 0
         rate, minimum, cap = float(c.get("pay_per_1k") or 0), int(c.get("min_views") or 0), float(c.get("max_payout") or 0)
-        if not rate or views < minimum: continue
-        earned = views / 1000 * rate
-        if cap: earned = min(earned, cap)
-        by[r["campaign"]] = round(by.get(r["campaign"], 0.0) + earned, 2)
+        try: ig = int(float(r.get("ig_views") or 0))
+        except ValueError: ig = 0
+        for v in (views, ig):              # each platform's post is submitted and paid on its own (YouTube, the Instagram Reel)
+            if not rate or not v or v < minimum: continue
+            earned = v / 1000 * rate
+            if cap: earned = min(earned, cap)
+            by[r["campaign"]] = round(by.get(r["campaign"], 0.0) + earned, 2)
     return round(sum(by.values()), 2), by
 
 

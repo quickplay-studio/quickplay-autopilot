@@ -239,7 +239,9 @@ function clipMoney(campaigns, stats){
     by[id] = by[id] || {clips: 0, views: 0, earned: 0, channels: {}};
     const v = num(r.views); by[id].clips++; by[id].views += v; by[id].channels[r.channel || "clips"] = (by[id].channels[r.channel || "clips"] || 0) + 1;
     const rate = num(c.pay_per_1k), min = num(c.min_views), cap = num(c.max_payout);
-    if (rate && v >= min){ let e = v / 1000 * rate; if (cap) e = Math.min(e, cap); by[id].earned += e; }
+    // each platform's post is submitted and paid on its own: the YouTube Short and, once posted, its Instagram Reel
+    for (const pv of [v, num(r.ig_views)]) if (rate && pv && pv >= min){ let e = pv / 1000 * rate; if (cap) e = Math.min(e, cap); by[id].earned += e; }
+    by[id].views += num(r.ig_views);
   }
   return by;
 }

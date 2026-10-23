@@ -58,7 +58,7 @@ Promise.all([fetch(BASE+"stats.csv"+T).then(r=>r.text()),fetch(BASE+"campaigns.j
   for(const id of ids){
     const c=C[id], rows=pub.filter(r=>r.campaign===id); const views=rows.reduce((s,r)=>s+num(r.views),0);
     const rate=num(c.pay_per_1k), min=num(c.min_views), cap=num(c.max_payout);
-    let earned=0,paying=0,building=0; for(const r of rows){ const v=num(r.views); if(v>=min){paying++; earned+=v/1000*rate;} else building+=v; }
+    let earned=0,paying=0,building=0; for(const r of rows){ for(const v of [num(r.views),num(r.ig_views)]){ if(!v) continue; if(v>=min){paying++; earned+=v/1000*rate;} else building+=v; } }   // YouTube and Instagram posts are paid separately
     if(cap) earned=Math.min(earned,cap);
     const submitted=subs.filter(s=>s.campaign===id && s.submitted && !s.submitted.startsWith("failed") && s.submitted!=="pulled").length;
     if(c.active){active++; totalViews+=views; totalMoney+=earned;} else if(rows.length){totalViews+=views; totalMoney+=earned;}

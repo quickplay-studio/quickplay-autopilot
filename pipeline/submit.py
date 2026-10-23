@@ -621,11 +621,15 @@ def cr_terms(text):
     return out
 
 
+HEAT_CACHE = {}
+
+
 def heat(subject):
     """How hot a subject is right now, 0 to about 3, from free signals: Wikipedia page views of its article over the last
     7 days (Wikimedia REST, no key), its presence in today's Google Trends, Wikipedia top pages and YouTube charts
     (trends/latest.json), the searches that already bring the clips channel viewers (analytics/search_terms.csv), and how
-    many YouTube search suggestions it has. The scout multiplies a campaign's money by (1 + heat)."""
+    many YouTube search suggestions it has, and how often it is in today's top stream-clip posts on Reddit
+    (r/LivestreamFail, r/Twitch, r/KickStreaming). The scout multiplies a campaign's money by (1 + heat)."""
     import requests, urllib.parse
     subject = (subject or "").strip()
     if not subject: return 0.0, []
@@ -648,6 +652,16 @@ def heat(subject):
         if any(low in str(x.get("page", "")).lower() for x in t.get("wikipedia_top") or []): score += 0.5; why.append("a Wikipedia top page today")
         yc = json.dumps(t.get("youtube_charts") or {}).lower()
         if low in yc: score += 0.5; why.append("in the YouTube charts")
+    except Exception: pass
+    try:                                   # what stream clips are blowing up today (23 October: one more independent source)
+        if "lsf" not in HEAT_CACHE:
+            HEAT_CACHE["lsf"] = ""
+            for sub in ("LivestreamFail", "Twitch", "KickStreaming"):
+                x = requests.get(f"https://www.reddit.com/r/{sub}/top/.rss?t=day&limit=50", timeout=15,
+                                 headers={"User-Agent": "QuickplayClips/1.0 (quickplay-studio@users.noreply.github.com)"})
+                if x.ok: HEAT_CACHE["lsf"] += " " + " ".join(re.findall(r"<title>(.*?)</title>", x.text)).lower()
+        hits = HEAT_CACHE["lsf"].count(low)
+        if hits: score += min(0.8, 0.3 * hits); why.append(f"{hits} of today's top stream-clip posts on Reddit")
     except Exception: pass
     try:
         for r in csv.DictReader((ROOT / "analytics" / "search_terms.csv").open()):
@@ -672,7 +686,7 @@ def radar():
         rows.append({**st, "heat": h, "heat_why": why})
     rows.sort(key=lambda r: -r["heat"])
     L = [f"# Viral streamers right now ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "",
-         "Heat: Wikipedia page views over 7 days, Google Trends today, YouTube charts, our viewers' searches. Joined: the campaigns we already clip.", "",
+         "Heat: Wikipedia page views over 7 days, Google Trends today, YouTube charts, our viewers' searches, today's top stream-clip posts on Reddit. Joined: the campaigns we already clip.", "",
          "| Heat | Streamer | Why | Programme | Joined | Off limits |", "|---|---|---|---|---|---|"]
     for r in rows:
         L.append(f"| {r['heat']} | {r['name']} | {'; '.join(r.get('heat_why') or [])[:90]} | {r.get('programme') or ''} | {', '.join(r.get('campaigns') or [])} | {r.get('off') or ''} |")

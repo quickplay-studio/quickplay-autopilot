@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 20:39): 8 of 1,000 subscribers · 6,464 of 10 million Shorts views in 90 days · 3,674 views in the last 24 hours (about 111,039 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 22:39): 8 of 1,000 subscribers · 6,618 of 10 million Shorts views in 90 days · 4,009 views in the last 24 hours (about 111,038 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 20:05 (UK): 0 scheduled, 127 public, 21 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public, 1 scheduled | 0 | 0 | ⏳ 1 of 40 scheduled |
-| Fri 23 Oct | 19 public | 22 | 2 | ⏳ 19 of 40 so far |
+| Fri 23 Oct | 19 public | 22 | 4 | ⏳ 19 of 40 so far |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -75,12 +75,12 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 ## On the channel (latest first)
 
 ### Fri 23 Oct 18:30 · Jenna Ortega’s book and Forbes fame 📚
-public · 29 s · music: purple-desire · [script](../boards/done/QD-143.json) · [YouTube](https://youtube.com/shorts/FvEctqCZhx4)
+public · 29 s · music: purple-desire · on Facebook · [script](../boards/done/QD-143.json) · [YouTube](https://youtube.com/shorts/FvEctqCZhx4)
 
 ![QD-143](QD-143.jpg)
 
 ### Fri 23 Oct 18:00 · Jerry Hall’s record-breaking music night 🎤
-public · 29 s · music: after-sunset · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
+public · 29 s · music: after-sunset · on Facebook · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
 
 ![QD-142](QD-142.jpg)
 

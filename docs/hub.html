@@ -156,6 +156,10 @@ async function get(path, kind){
     return kind === "json" ? JSON.parse(t) : kind === "csv" ? csv(t) : t;
   } catch (e) { return null; }
 }
+async function runs(){        // GitHub's own list of recent job runs, live (no key: the public API, 60 calls an hour per viewer)
+  try { const r = await fetch(API + "/actions/runs?per_page=60"); return r.ok ? (await r.json()).workflow_runs || [] : null; }
+  catch (e) { return null; }
+}
 async function issues(){
   try { const r = await fetch(API + "/issues?state=open&per_page=30"); return r.ok ? (await r.json()).filter(i => !i.pull_request) : null; }
   catch (e) { return null; }
@@ -229,14 +233,28 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs()]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns};
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+}
+
+// Live job status from GitHub (refreshes with the page every 10 minutes, or press Refresh)
+function liveCard(){
+  const rs = D.liveRuns;
+  if (rs === null) return `<p class="sub">GitHub's job list could not be read just now (its public limit is 60 reads an hour); press Refresh later.</p>`;
+  const latest = {};
+  for (const r of rs || []) if (!latest[r.name]) latest[r.name] = r;
+  const rows = Object.values(latest).sort((a, b) => (b.run_started_at || "").localeCompare(a.run_started_at || ""));
+  const state = r => r.status !== "completed" ? pill("wait", "…", r.status === "in_progress" ? "running now" : r.status)
+    : r.conclusion === "success" ? pill("good", "✓", "worked") : r.conclusion === "skipped" || r.conclusion === "cancelled" ? pill("", "·", r.conclusion) : pill("bad", "✕", r.conclusion || "failed");
+  return table([{h:"Job", f:r => `<a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.name)}</a>`},
+    {h:"State", f:state}, {h:"Started", nw:1, f:r => ukTime(r.run_started_at)}, {h:"What started it", f:r => esc(r.event === "schedule" ? "its schedule" : r.event === "push" ? "a change or request" : r.event === "workflow_run" ? "the job before it" : r.event)}],
+    rows, "No runs found.");
 }
 
 // The day's funnel (status/funnel.json, pipeline/funnel.py each evening): where Shorts and clips are made and lost
@@ -308,6 +326,7 @@ function render(){
       ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>
+    <h2>Live: GitHub jobs right now</h2>${liveCard()}
     <h2>Pipeline today</h2>${funnelCard()}
     <h2>Claude use (your subscription)</h2>${claudeCard()}
     <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>

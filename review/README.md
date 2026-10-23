@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 3 public, 2 scheduled | 4 | 2 | ⏳ 3 of 40 so far, 2 more scheduled |
+| Fri 23 Oct | 3 public, 2 scheduled | 14 | 2 | ⏳ 3 of 40 so far, 2 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -184,52 +184,52 @@ public · 139 views · 32 s · music: purple-desire · [script](../boards/done/Q
 ![QD-103](QD-103.jpg)
 
 ### Thu 22 Oct 4:30 · The history of Club Brugge explained 🇧🇪
-public · 26 views · 27 s · music: cued-for-liftoff · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
+public · 26 views · 27 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
 
 ![QD-102](QD-102.jpg)
 
 ### Thu 22 Oct 4:00 · Ella Langley and Morgan Wallen released new duet 🎶
-public · 264 views · 22 s · music: purple-desire · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
+public · 264 views · 22 s · music: purple-desire · on Instagram · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
 
 ![QD-101](QD-101.jpg)
 
 ### Thu 22 Oct 3:30 · Best Buy launches Pokemon TCG sale 📱
-public · 61 views · 21 s · music: cued-for-liftoff · [script](../boards/done/QD-100.json) · [YouTube](https://youtube.com/shorts/u9PklpxhW4s)
+public · 61 views · 21 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-100.json) · [YouTube](https://youtube.com/shorts/u9PklpxhW4s)
 
 ![QD-100](QD-100.jpg)
 
 ### Thu 22 Oct 3:00 · Above the Below release date revealed 🎬
-public · 18 views · 25 s · music: in-battery · [script](../boards/done/QD-099.json) · [YouTube](https://youtube.com/shorts/BwVWTok1z5E)
+public · 18 views · 25 s · music: in-battery · on Instagram · [script](../boards/done/QD-099.json) · [YouTube](https://youtube.com/shorts/BwVWTok1z5E)
 
 ![QD-099](QD-099.jpg)
 
 ### Thu 22 Oct 2:30 · Mark Allen snooker career highlights 🎱
-public · 119 views · 30 s · music: twin-lynches · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
+public · 119 views · 30 s · music: twin-lynches · on Instagram · [script](../boards/done/QD-098.json) · [YouTube](https://youtube.com/shorts/29ehu4f0dRI)
 
 ![QD-098](QD-098.jpg)
 
 ### Thu 22 Oct 2:00 · How The Beatles recorded Please Please Me in one day 🎶
-public · 11 views · 21 s · music: death-duel · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
+public · 11 views · 21 s · music: death-duel · on Instagram · [script](../boards/done/QD-097.json) · [YouTube](https://youtube.com/shorts/oERciIImqJI)
 
 ![QD-097](QD-097.jpg)
 
 ### Thu 22 Oct 1:30 · Dave Raindance hits number one 🎶
-public · 47 views · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
+public · 47 views · 27 s · music: good-energy · on Instagram · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
 
 ![QD-096](QD-096.jpg)
 
 ### Thu 22 Oct 1:00 · Who holds the record for the most Grammy wins? 🎤
-public · 24 views · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
+public · 24 views · 20 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
 
 ![QD-095](QD-095.jpg)
 
 ### Thu 22 Oct 0:30 · What is the loudest sound ever recorded on Earth? 🌋
-public · 26 views · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
+public · 26 views · 27 s · music: horizons · on Instagram · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
 
 ![QD-094](QD-094.jpg)
 
 ### Thu 22 Oct 0:00 · The incredible true story of how Tetris was made 🎮
-public · 2 views · 38 s · music: after-sunset · [script](../boards/done/QD-093.json) · [YouTube](https://youtube.com/shorts/_X6RQIMVXAw)
+public · 2 views · 38 s · music: after-sunset · on Instagram · [script](../boards/done/QD-093.json) · [YouTube](https://youtube.com/shorts/_X6RQIMVXAw)
 
 ![QD-093](QD-093.jpg)
 

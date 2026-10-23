@@ -1,50 +1,9 @@
 {
- "updated": "2026-10-22T22:16+00:00",
+ "updated": "2026-10-23T09:16+00:00",
  "campaigns": [
   {
-   "name": "Pet Simulator 99! [CLIPPING]",
-   "subject": "Pet Simulator 99",
-   "type": "clipping",
-   "platforms": [
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 10.0,
-   "budget_remaining": 16099.0,
-   "min_views": 0,
-   "max_payout": 0.0,
-   "footage": "Pet Simulator 99 gameplay",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides game footage, is family friendly, and is open.",
-   "hashtags": [
-    "#PetSimulator99",
-    "#Roblox"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Pet Simulator 99’s gameplay, rare pets, exciting moments, and unique features",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/6b341aff-816a-419d-9b6f-c4763559be12?group=1",
-   "id": "6b341aff-816a-419d-9b6f-c4763559be12",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.36,
-   "heat_why": [
-    "Wikipedia 37 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
    "name": "Drummer Records Until We Reunite (ANY Clips)",
-   "subject": "James Tonic Until We Reunite",
+   "subject": "James Tonic's Until We Reunite",
    "type": "clipping",
    "platforms": [
     "YouTube",
@@ -61,7 +20,7 @@
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides general trending footage source, and is family-friendly.",
+   "why": "It is a clipping campaign allowing YouTube, provides general trending clips, and fits family-friendly guidelines.",
    "hashtags": [
     "#UntilWeReunite",
     "#JamesTonic"
@@ -79,14 +38,70 @@
    "url": "https://contentrewards.com/c/campaigns/2da00512-a992-46db-859a-2a91194549f9?group=1",
    "id": "2da00512-a992-46db-859a-2a91194549f9",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {},
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "STRANGER THAN HEAVEN Previews Clipping",
-   "subject": "Clipping Culture",
+   "name": "Clip Farm x FlightReacts x Nick Nayersina",
+   "subject": "FlightReacts and Nick Nayersina",
+   "type": "clipping",
+   "platforms": [
+    "YouTube",
+    "Instagram"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 1.5,
+   "budget_remaining": 7062.0,
+   "min_views": 667,
+   "max_payout": 500.0,
+   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video provided upon joining",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is an open clipping campaign allowing YouTube Shorts with provided footage and fits all family-friendly criteria.",
+   "hashtags": [
+    "#FlightReacts",
+    "#NickNayersina"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "FlightReacts and Nick Nayersina content",
+    "on_screen": "",
+    "avoid": [
+     "non-compliance rules"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/124592be-0430-40e4-a9f3-2bb67eb99ef6",
+   "id": "124592be-0430-40e4-a9f3-2bb67eb99ef6",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.5,
+     "min_payout": 1.0,
+     "max_payout": 500.0,
+     "min_views": 667
+    },
+    "Instagram": {
+     "rate_per_1k": 1.5,
+     "min_payout": 1.0,
+     "max_payout": 500.0,
+     "min_views": 667
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
+  },
+  {
+   "name": "Persona 4 Revival X ViralClips®",
+   "subject": "Persona 4 Revival",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -94,24 +109,93 @@
     "YouTube"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 2.0,
-   "budget_remaining": 24000.0,
-   "min_views": 0,
-   "max_payout": 1200.0,
-   "footage": "Download the STRANGER THAN HEAVEN preview videos from the content folder",
+   "rate_per_1.30": 1.3,
+   "rate_per_1k": 1.3,
+   "budget_remaining": 1242.0,
+   "min_views": 3000,
+   "max_payout": 260.0,
+   "footage": "Dropbox",
+   "needs_application": true,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is a gaming clipping campaign that allows YouTube Shorts, provides footage via Dropbox, and is family-friendly.",
+   "hashtags": [
+    "#Persona4Revival",
+    "#P4R",
+    "#ad",
+    "#18février2027"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "trailer officiel de Persona 4 Revival",
+    "on_screen": "écris toujours le nom complet Persona 4 Revival",
+    "avoid": [
+     "musique externe",
+     "image externe"
+    ],
+    "min_s": 15,
+    "max_s": 45
+   },
+   "url": "https://contentrewards.com/c/campaigns/11c3d7de-754c-4858-b5c4-b9caf80c4092",
+   "id": "11c3d7de-754c-4858-b5c4-b9caf80c4092",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.3,
+     "min_payout": 3.9,
+     "max_payout": 260.0,
+     "min_views": 3000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.3,
+     "min_payout": 3.9,
+     "max_payout": 260.0,
+     "min_views": 3000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.3,
+     "min_payout": 3.9,
+     "max_payout": 260.0,
+     "min_views": 3000
+    }
+   },
+   "heat": 0.53,
+   "heat_why": [
+    "Wikipedia 530 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "Demi Lovato Podcast Clipping Campaign",
+   "subject": "Demi Lovato Podcast",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 2.5,
+   "budget_remaining": 730.0,
+   "min_views": 4000,
+   "max_payout": 450.0,
+   "footage": "Reference materials (3 files provided upon joining)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube Shorts, provides footage, is family-friendly, and open.",
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
    "hashtags": [
-    "#StrangerThanHeaven",
-    "#Shorts",
-    "#Gaming"
+    "#demilovato",
+    "#podcast",
+    "#clips"
    ],
    "ends": "",
    "rules": {
-    "focus": "Snoop Dogg, combat finishers, city exploration, or minigames",
+    "focus": "Demi Lovato Podcast moments",
     "on_screen": "",
     "avoid": [
      "politics",
@@ -124,109 +208,31 @@
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/9b220b37-2593-4dd7-a336-f5142dba7982",
-   "id": "9b220b37-2593-4dd7-a336-f5142dba7982",
+   "url": "https://contentrewards.com/c/campaigns/a917d855-61f3-4c17-a75d-927dca325134",
+   "id": "a917d855-61f3-4c17-a75d-927dca325134",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "7 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Clip Farm: FreezerTarps x FlightReacts x Nick Nayersina",
-   "subject": "FreezerTarps, FlightReacts, Nick Nayersina",
-   "type": "clipping",
-   "platforms": [
-    "YouTube",
-    "Instagram"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 1.5,
-   "budget_remaining": 7076.0,
-   "min_views": 0,
-   "max_payout": 500.0,
-   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign allowing YouTube, provides footage, offers a good rate, and is family-friendly and open.",
-   "hashtags": [
-    "#FlightReacts",
-    "#NickNayersina",
-    "#FreezerTarps",
-    "#Shorts"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "FreezerTarps, FlightReacts and Nick Nayersina content",
-    "on_screen": "captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    },
+    "TikTok": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    },
+    "Instagram": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    }
    },
-   "url": "https://contentrewards.com/c/campaigns/124592be-0430-40e4-a9f3-2bb67eb99ef6",
-   "id": "124592be-0430-40e4-a9f3-2bb67eb99ef6",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "Ricky Hilfiger | Clipping",
-   "subject": "Ricky Hil",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 2.0,
-   "budget_remaining": 1463.0,
-   "min_views": 0,
-   "max_payout": 250.0,
-   "footage": "Drive, Dropbox or Frame.io folder referenced in campaign",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#RickyHil",
-    "#Documentary",
-    "#EmoRap"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Documentary about Rich Hil making emo rap",
-    "on_screen": "Leave viewers wanting the full story",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/a9b951e0-1dcf-4f3b-80bb-49d25cfb97c8",
-   "id": "a9b951e0-1dcf-4f3b-80bb-49d25cfb97c8",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
@@ -234,7 +240,7 @@
   },
   {
    "name": "CLASH x HOH Clipping",
-   "subject": "CLASH (House of Highlights)",
+   "subject": "CLASH sports show from House of Highlights",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -243,24 +249,20 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.25,
-   "budget_remaining": 4217.0,
-   "min_views": 0,
+   "budget_remaining": 1830.0,
+   "min_views": 5000,
    "max_payout": 250.0,
-   "footage": "provided videos (1 file visible once joined)",
+   "footage": "Google Drive",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube Shorts, provides footage, is family-friendly sports content, and is currently open.",
-   "hashtags": [
-    "#clash",
-    "#houseofhighlights",
-    "#sports"
-   ],
+   "why": "It is a family-friendly sports clipping campaign providing source footage and allowing YouTube Shorts.",
+   "hashtags": [],
    "ends": "",
    "rules": {
-    "focus": "best parts from provided videos",
-    "on_screen": "",
+    "focus": "Clip the best parts from provided videos to get people to watch CLASH",
+    "on_screen": "Tag correct account on each platform",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
@@ -268,14 +270,34 @@
    "url": "https://contentrewards.com/c/campaigns/68082037-4f0c-44cb-9658-732e9b48cd3d",
    "id": "68082037-4f0c-44cb-9658-732e9b48cd3d",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.25,
+     "min_payout": 6.25,
+     "max_payout": 250.0,
+     "min_views": 5000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.25,
+     "min_payout": 1.25,
+     "max_payout": 250.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.25,
+     "min_payout": 1.25,
+     "max_payout": 250.0,
+     "min_views": 1000
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "YoungLA Clipping",
-   "subject": "YoungLA",
+   "name": "Tony Hawk Part 2 | Clipping",
+   "subject": "Tony Hawk",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -283,165 +305,64 @@
     "YouTube"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 2707.0,
-   "min_views": 0,
-   "max_payout": 350.0,
-   "footage": "Reference materials (visible after joining)",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube Shorts, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#YoungLA",
-    "#Gym",
-    "#Fitness"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "athletes and gym creators wearing YoungLA apparel",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/f40d3229-94a2-4886-b7cd-94fff1c5622f",
-   "id": "f40d3229-94a2-4886-b7cd-94fff1c5622f",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "$2,000 Rare Americans Apt 4 Sound Campaign",
-   "subject": "Rare Americans",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 2000.0,
-   "min_views": 0,
-   "max_payout": 150.0,
-   "footage": "official music video, late night POVs, TV and film scenes, or anime provided in reference materials",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is open.",
-   "hashtags": [
-    "#apt4byRareAmericans"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Edit the official music video, late night POVs, TV and film scenes, or anime to the official Apt 4 sound",
-    "on_screen": "Caption must include apt 4 by Rare Americans",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/699433fb-c2fc-49d4-b50b-12ac6550487b",
-   "id": "699433fb-c2fc-49d4-b50b-12ac6550487b",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.38,
-   "heat_why": [
-    "Wikipedia 59 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Movie Edit | Sofiane Pamart",
-   "subject": "Sofiane Pamart",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.7,
-   "budget_remaining": 2750.0,
-   "min_views": 0,
+   "rate_per_1k": 1.25,
+   "budget_remaining": 862.0,
+   "min_views": 2000,
    "max_payout": 250.0,
-   "footage": "Reference materials file provided upon joining",
+   "footage": "Reference materials provided upon joining",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
    "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
    "hashtags": [
-    "#SofianePamart",
-    "#MovieEdit",
-    "#Piano"
+    "#TonyHawk",
+    "#Skateboarding",
+    "#Shorts"
    ],
    "ends": "",
    "rules": {
-    "focus": "Sofiane Pamart movie edits",
+    "focus": "Tony Hawk content",
     "on_screen": "",
-    "avoid": [],
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/667adb2b-0423-4930-9385-95cdd207a096",
-   "id": "667adb2b-0423-4930-9385-95cdd207a096",
+   "url": "https://contentrewards.com/c/campaigns/bd4a3ba0-9dc6-4cde-a89f-0ac902f84643",
+   "id": "bd4a3ba0-9dc6-4cde-a89f-0ac902f84643",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.39,
-   "heat_why": [
-    "Wikipedia 89 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Rob Smith Campaign",
-   "subject": "Rob Smith",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 1.5,
-   "budget_remaining": 1000.0,
-   "min_views": 0,
-   "max_payout": 150.0,
-   "footage": "Reference materials file provided upon joining",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#RobSmith",
-    "#RobSmithClips"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Rob Smith content",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.25,
+     "min_payout": 2.5,
+     "max_payout": 250.0,
+     "min_views": 2000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.25,
+     "min_payout": 2.5,
+     "max_payout": 250.0,
+     "min_views": 2000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.25,
+     "min_payout": 2.5,
+     "max_payout": 250.0,
+     "min_views": 2000
+    }
    },
-   "url": "https://contentrewards.com/c/campaigns/cf0481b5-8f9d-4a6d-bd04-e12ab149246a",
-   "id": "cf0481b5-8f9d-4a6d-bd04-e12ab149246a",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.32,
+   "heat": 0.82,
    "heat_why": [
-    "Wikipedia 2 views a day",
+    "Wikipedia 2,699 views a day",
     "8 YouTube search suggestions"
    ]
   },
@@ -458,19 +379,17 @@
    "budget_remaining": 47978.0,
    "min_views": 0,
    "max_payout": 750.0,
-   "footage": "SoFi's Smart Money Social Club event",
+   "footage": "SoFi's Smart Money Social Club",
    "needs_application": true,
    "status": "open",
-   "family_friendly": true,
+   "family_friendly": false,
    "fits": false,
-   "why": "It violates the rule against money or investing advice and finance content, and YouTube is not an allowed platform.",
-   "hashtags": [
-    "#Sofi"
-   ],
+   "why": "YouTube Shorts are not paid on this campaign. It violates the rule against money or investing advice and does not allow YouTube.",
+   "hashtags": [],
    "ends": "",
    "rules": {
     "focus": "Smart Money Social Club moments",
-    "on_screen": "Tag Sofi And Use Hasghtag",
+    "on_screen": "Tag Sofi",
     "avoid": [
      "Financial Claims"
     ],
@@ -480,54 +399,86 @@
    "url": "https://contentrewards.com/c/campaigns/9f0c4d01-3a67-4db3-8ec4-f8ee2fbe9498",
    "id": "9f0c4d01-3a67-4db3-8ec4-f8ee2fbe9498",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 3.0,
+     "min_payout": 1.0,
+     "max_payout": 750.0,
+     "min_views": 333
+    },
+    "Instagram": {
+     "rate_per_1k": 3.0,
+     "min_payout": 1.0,
+     "max_payout": 750.0,
+     "min_views": 333
+    }
+   },
    "heat": 0.54,
    "heat_why": [
-    "Wikipedia 579 views a day",
+    "Wikipedia 557 views a day",
     "8 YouTube search suggestions"
    ]
   },
   {
-   "name": "GymBeam UGC Fitness",
-   "subject": "GymBeam",
-   "type": "ugc",
+   "name": "Vest Markets",
+   "subject": "Vest Markets",
+   "type": "clipping",
    "platforms": [
     "TikTok",
     "Instagram",
-    "YouTube"
+    "X"
    ],
-   "youtube_allowed": true,
+   "youtube_allowed": false,
    "rate_per_1k": 3.0,
-   "budget_remaining": 5000.0,
-   "min_views": 0,
-   "max_payout": 800.0,
-   "footage": "Reference materials provided upon joining",
+   "budget_remaining": 2500.0,
+   "min_views": 1500,
+   "max_payout": 250.0,
+   "footage": "Visible once you join",
    "needs_application": false,
    "status": "open",
-   "family_friendly": true,
+   "family_friendly": false,
    "fits": false,
-   "why": "It requires UGC content creation that you must film yourself rather than clipping existing creator footage.",
+   "why": "YouTube Shorts are not paid on this campaign. It violates the family-friendly and content rules against money or investing advice, and YouTube is not an allowed platform.",
    "hashtags": [
-    "#GymBeam",
-    "#Fitness"
+    "#VestMarkets",
+    "#Trading",
+    "#Finance"
    ],
    "ends": "",
    "rules": {
-    "focus": "Fitness and gym products",
-    "on_screen": "",
-    "avoid": [],
+    "focus": "Vest Markets",
+    "on_screen": "Visible once you join",
+    "avoid": [
+     "Visible once you join"
+    ],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/ae354b0d-7569-4cd2-ae82-02f062c71822",
-   "id": "ae354b0d-7569-4cd2-ae82-02f062c71822",
+   "url": "https://contentrewards.com/c/campaigns/9eceaa2f-8830-478c-93f0-9fe25ef05529",
+   "id": "9eceaa2f-8830-478c-93f0-9fe25ef05529",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.37,
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 3.0,
+     "min_payout": 4.5,
+     "max_payout": 200.0,
+     "min_views": 1500,
+     "budget_left": 625.0
+    },
+    "Instagram": {
+     "rate_per_1k": 3.0,
+     "min_payout": 4.5,
+     "max_payout": 200.0,
+     "min_views": 1500,
+     "budget_left": 625.0
+    }
+   },
+   "heat": 0.3,
    "heat_why": [
-    "Wikipedia 51 views a day",
     "8 YouTube search suggestions"
    ]
   },
@@ -542,24 +493,24 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.8,
-   "budget_remaining": 986.0,
-   "min_views": 0,
+   "budget_remaining": 985.0,
+   "min_views": 1875,
    "max_payout": 150.0,
-   "footage": "Drive, Dropbox or Frame.io folder",
+   "footage": "Reference materials (3 files provided after joining)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is open.",
    "hashtags": [
-    "#MISFITZ",
-    "#MobileGaming",
-    "#Shorts"
+    "#misfitz",
+    "#mobilegaming",
+    "#shorts"
    ],
    "ends": "",
    "rules": {
     "focus": "MISFITZ mobile extraction shooter videos",
-    "on_screen": "",
+    "on_screen": "Read the rules before posting",
     "avoid": [
      "politics",
      "crime",
@@ -574,137 +525,84 @@
    "url": "https://contentrewards.com/c/campaigns/efcdffcc-d036-4553-97eb-b85f5adb5b84",
    "id": "efcdffcc-d036-4553-97eb-b85f5adb5b84",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.8,
+     "min_payout": 1.5,
+     "max_payout": 150.0,
+     "min_views": 1875
+    },
+    "TikTok": {
+     "rate_per_1k": 0.8,
+     "min_payout": 1.5,
+     "max_payout": 150.0,
+     "min_views": 1875
+    },
+    "Instagram": {
+     "rate_per_1k": 0.8,
+     "min_payout": 1.5,
+     "max_payout": 150.0,
+     "min_views": 1875
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "Call of Duty MW4 (en Français)",
-   "subject": "French Clipping",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 2.0,
-   "budget_remaining": 15570.0,
-   "min_views": 0,
-   "max_payout": 350.0,
-   "footage": "Reference materials (2 files)",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": false,
-   "fits": false,
-   "why": "Call of Duty involves violence and crime themes, making it not family friendly.",
-   "hashtags": [
-    "#CallOfDuty",
-    "#MW4",
-    "#Gaming",
-    "#Shorts"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Call of Duty MW4 gameplay",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/18496202-6029-4a29-a44c-9fc33678fcb9",
-   "id": "18496202-6029-4a29-a44c-9fc33678fcb9",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "6 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Democratic and Progressive Interview Clipping",
-   "subject": "Clipping Culture",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 2.0,
-   "budget_remaining": 10500.0,
-   "min_views": 0,
-   "max_payout": 600.0,
-   "footage": "Drive, Dropbox, or Frame.io folder / named stream / YouTube video provided after joining",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "It involves politics, which violates the channel's restriction against politics.",
-   "hashtags": [
-    "#interview",
-    "#politics",
-    "#progressive"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "compelling and widely appealing moments, positive about the guest and their ideas",
-    "on_screen": "",
-    "avoid": [
-     "negative content about the guest"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/cdc8600a-2959-4ddb-b8a3-ae1008335d5a",
-   "id": "cdc8600a-2959-4ddb-b8a3-ae1008335d5a",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Modern Warfare 4 - Campaign Moments Clipping",
-   "subject": "Clipping Culture",
+   "name": "LIV LAS VEGAS - OCTOBER NIGHTS",
+   "subject": "LIV Las Vegas and LIV Beach",
    "type": "clipping",
    "platforms": [
     "TikTok",
     "Instagram"
    ],
    "youtube_allowed": false,
-   "rate_per_1k": 1.75,
-   "budget_remaining": 9513.0,
-   "min_views": 3000,
-   "max_payout": 1000.0,
-   "footage": "official content folder",
+   "rate_per_1k": 2.5,
+   "budget_remaining": 14886.0,
+   "min_views": 0,
+   "max_payout": 125.0,
+   "footage": "Visible once you join",
    "needs_application": false,
    "status": "open",
-   "family_friendly": true,
+   "family_friendly": false,
    "fits": false,
-   "why": "YouTube is not allowed as a target platform for this campaign.",
-   "hashtags": [],
+   "why": "YouTube Shorts are not paid on this campaign. It does not allow YouTube and involves nightlife/clubbing content which may not strictly align with family-friendly guidelines.",
+   "hashtags": [
+    "#LIVLasVegas",
+    "#VegasNightlife",
+    "#Fontainebleau"
+   ],
    "ends": "",
    "rules": {
-    "focus": "MW4 Campaign moments",
+    "focus": "capturing the energy of Vegas nightlife through viral, high-energy clips",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/bd77f416-274c-4aa1-9912-024f907f1bca",
-   "id": "bd77f416-274c-4aa1-9912-024f907f1bca",
+   "url": "https://contentrewards.com/c/campaigns/127a28fc-a45f-44a7-b68f-f16fe15ef962",
+   "id": "127a28fc-a45f-44a7-b68f-f16fe15ef962",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
-   ]
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 2.5,
+     "min_payout": 3.75,
+     "max_payout": 125.0,
+     "min_views": 1500
+    },
+    "Instagram": {
+     "rate_per_1k": 2.5,
+     "min_payout": 3.75,
+     "max_payout": 125.0,
+     "min_views": 1500
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
   },
   {
    "name": "AbMaxxx [SLIDESHOW]",
@@ -715,7 +613,7 @@
    ],
    "youtube_allowed": false,
    "rate_per_1k": 1.5,
-   "budget_remaining": 4773.0,
+   "budget_remaining": 4770.0,
    "min_views": 0,
    "max_payout": 400.0,
    "footage": "none",
@@ -723,14 +621,15 @@
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It requires UGC TikTok slideshow content, does not allow YouTube, and the channel requires clipping and YouTube Shorts.",
+   "why": "YouTube Shorts are not paid on this campaign. It requires UGC TikTok slideshow content which you must film/create yourself, and YouTube is not allowed.",
    "hashtags": [
     "#AbMaxx",
-    "#AbsWorkout"
+    "#AbsWorkout",
+    "#Fitness"
    ],
    "ends": "",
    "rules": {
-    "focus": "Promoting the AbMaxx app with TikTok slideshow content",
+    "focus": "Promoting the AbMaxx app and AI-powered abs coach",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -739,99 +638,19 @@
    "url": "https://contentrewards.com/c/campaigns/53eb4665-f8de-4cc4-ac72-e473dc8be919",
    "id": "53eb4665-f8de-4cc4-ac72-e473dc8be919",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.5,
+     "min_payout": 1.5,
+     "max_payout": 400.0,
+     "min_views": 1000
+    }
+   },
    "heat": 0.3,
    "heat_why": [
     "6 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Call of Duty MW4 عربي V2",
-   "subject": "Call of Duty MW4",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram"
-   ],
-   "youtube_allowed": false,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 22218.0,
-   "min_views": 0,
-   "max_payout": 300.0,
-   "footage": "provided in campaign files",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": false,
-   "fits": false,
-   "why": "It does not allow YouTube and Call of Duty is not family friendly.",
-   "hashtags": [
-    "#CallOfDuty",
-    "#MW4"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Call of Duty MW4 gameplay",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/0afd04db-e183-4411-9957-0b890ef272b5",
-   "id": "0afd04db-e183-4411-9957-0b890ef272b5",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.8,
-   "heat_why": [
-    "in the YouTube charts",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Zak Azoury - MEDUSA",
-   "subject": "Zak Azoury",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.25,
-   "budget_remaining": 1590.0,
-   "min_views": 0,
-   "max_payout": 200.0,
-   "footage": "Reference materials visible once you join",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is an open clipping campaign allowing YouTube, provides footage/references, and is family-friendly anime/TV edits.",
-   "hashtags": [
-    "#ZakAzoury",
-    "#Medusa",
-    "#AnimeEdits"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Anime Edits, TV Edits, Kdrama Edits fitting the lyrics and vibe of the song Medusa",
-    "on_screen": "Fit the lyrics and vibe of the song",
-    "avoid": [
-     "adult content",
-     "politics",
-     "crime"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/ef476b9b-9818-4d13-a1f6-3478fd02b953",
-   "id": "ef476b9b-9818-4d13-a1f6-3478fd02b953",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
    ]
   },
   {
@@ -846,15 +665,15 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.5,
-   "budget_remaining": 4074.0,
-   "min_views": 0,
+   "budget_remaining": 4032.0,
+   "min_views": 1000,
    "max_payout": 500.0,
-   "footage": "Reference materials (3 files) provided upon joining",
+   "footage": "Reference materials (3 files visible once joined)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It requires UGC that you must film rather than clipping provided creator footage.",
+   "why": "It requires UGC (user-generated content you must film) rather than clipping existing creator footage.",
    "hashtags": [],
    "ends": "",
    "rules": {
@@ -867,14 +686,153 @@
    "url": "https://contentrewards.com/c/campaigns/6e8cb2c6-7724-44a4-83da-66697acb20af",
    "id": "6e8cb2c6-7724-44a4-83da-66697acb20af",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.5,
+     "min_payout": 1.5,
+     "max_payout": 500.0,
+     "min_views": 1000
+    },
+    "TikTok": {
+     "rate_per_1k": 3.0,
+     "min_payout": 3.0,
+     "max_payout": 500.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 3.0,
+     "min_payout": 3.0,
+     "max_payout": 500.0,
+     "min_views": 1000
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "BELLES - Jolene Live Performance Clipping [8411]",
-   "subject": "Sound Network / Belles",
+   "name": "Clip Dillon's best moments before his RAF fight against arman!",
+   "subject": "Dillon Danis",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "X",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 1.0,
+   "budget_remaining": 2500.0,
+   "min_views": 2000,
+   "max_payout": 300.0,
+   "footage": "Visible once you join",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": false,
+   "fits": false,
+   "why": "It violates the family-friendly and no combat sports/violence rules as it features Dillon Danis and a fight.",
+   "hashtags": [
+    "#DillonDanis",
+    "#RAF",
+    "#CombatSports"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Dillon's best moments before his RAF fight against arman",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/da416664-ae72-4fc4-b0c0-78acc04affaf",
+   "id": "da416664-ae72-4fc4-b0c0-78acc04affaf",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 300.0,
+     "min_views": 2000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 300.0,
+     "min_views": 2000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 300.0,
+     "min_views": 2000
+    }
+   },
+   "heat": 0.56,
+   "heat_why": [
+    "Wikipedia 686 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "2 Bears 1 Cave Clipping October",
+   "subject": "Tom Segura and Bert Kreischer",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 1.0,
+   "budget_remaining": 2838.0,
+   "min_views": 2000,
+   "max_payout": 200.0,
+   "footage": "Drive, Dropbox or Frame.io folder",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": false,
+   "fits": false,
+   "why": "It does not fit because 2 Bears 1 Cave often includes adult content and profanity, failing the family-friendly requirement.",
+   "hashtags": [
+    "#2BearsWeekly"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Best moments from Ep. 344",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/295e9879-4464-4a31-975d-1c7b3a80d359",
+   "id": "295e9879-4464-4a31-975d-1c7b3a80d359",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 200.0,
+     "min_views": 2000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 200.0,
+     "min_views": 2000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "BELLES - Jolene Live Performance Clipping",
+   "subject": "Sound Network",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -883,24 +841,20 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.0,
-   "budget_remaining": 433.0,
-   "min_views": 0,
+   "budget_remaining": 196.0,
+   "min_views": 1000,
    "max_payout": 100.0,
-   "footage": "content folder provided in campaign",
+   "footage": "content folder",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is open.",
-   "hashtags": [
-    "#belles",
-    "#jolene",
-    "#livemusic"
-   ],
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
+   "hashtags": [],
    "ends": "",
    "rules": {
-    "focus": "strong moment from the live performance",
-    "on_screen": "none specified",
+    "focus": "Belles performing Jolene live",
+    "on_screen": "",
     "avoid": [
      "other audio"
     ],
@@ -910,140 +864,154 @@
    "url": "https://contentrewards.com/c/campaigns/2ad9c2b6-0605-4d72-90ca-5fa6adb39e75",
    "id": "2ad9c2b6-0605-4d72-90ca-5fa6adb39e75",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 100.0,
+     "min_views": 1000
+    },
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 100.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 100.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ]
   },
   {
-   "name": "WMW CLIPPING",
-   "subject": "WatchMeWin",
+   "name": "YoungLA Clipping",
+   "subject": "YoungLA",
    "type": "clipping",
    "platforms": [
-    "Instagram",
     "TikTok",
+    "Instagram",
     "YouTube"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 0.8,
-   "budget_remaining": 383.0,
-   "min_views": 0,
-   "max_payout": 80.0,
-   "footage": "Reference materials 3 files",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#WatchMeWin",
-    "#Shorts",
-    "#Clipping"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Entertainment content from WatchMeWin",
-    "on_screen": "As required by campaign",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/2eae3b20-87f5-4fa2-9bc3-0c2bb62facc5",
-   "id": "2eae3b20-87f5-4fa2-9bc3-0c2bb62facc5",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "Liftly Clipping",
-   "subject": "Liftly (@liftlyapp)",
-   "type": "ugc",
-   "platforms": [
-    "TikTok"
-   ],
-   "youtube_allowed": false,
    "rate_per_1k": 1.0,
-   "budget_remaining": 3460.0,
+   "budget_remaining": 1842.0,
    "min_views": 1000,
-   "max_payout": 300.0,
-   "footage": "slideshow builder",
+   "max_payout": 350.0,
+   "footage": "Clip Farm reference materials",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "The campaign is for TikTok slideshows (UGC) and does not allow YouTube.",
-   "hashtags": [],
+   "why": "Its YouTube budget is spent. It is a clipping campaign, allows YouTube Shorts, provides footage, is family friendly, and is currently open.",
+   "hashtags": [
+    "#YoungLA",
+    "#Gym",
+    "#Fitness"
+   ],
    "ends": "",
    "rules": {
-    "focus": "gym tracker for logging lifts, PRs, and strength rankings",
-    "on_screen": "strong first slide, a clear CTA to download Liftly",
-    "avoid": [
-     "ads that do not feel native"
-    ],
+    "focus": "athletes and gym creators wearing YoungLA apparel",
+    "on_screen": "",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/ee2c713b-2cca-4619-8606-e6dd1aa233c7",
-   "id": "ee2c713b-2cca-4619-8606-e6dd1aa233c7",
+   "url": "https://contentrewards.com/c/campaigns/f40d3229-94a2-4886-b7cd-94fff1c5622f",
+   "id": "f40d3229-94a2-4886-b7cd-94fff1c5622f",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "FR Yomi Denzel Campagne Principale",
-   "subject": "Yomi Denzel",
-   "type": "clipping",
-   "platforms": [
-    "Instagram",
-    "TikTok",
-    "YouTube",
-    "facebook"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.7,
-   "budget_remaining": 3074.0,
-   "min_views": 0,
-   "max_payout": 100.0,
-   "footage": "Google Drive",
-   "needs_application": true,
-   "status": "open",
-   "family_friendly": false,
-   "fits": false,
-   "why": "It involves money and investing advice from Yomi Denzel, which violates the channel's niche constraints.",
-   "hashtags": [
-    "#YomiDenzel"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Yomi Denzel content",
-    "on_screen": "",
-    "avoid": [
-     "Ne pas dénigrer l'image de Yomi Denzel et d'autres créateurs"
-    ],
-    "min_s": 10,
-    "max_s": 60
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 350.0,
+     "min_views": 1000,
+     "budget_left": 0.0
+    },
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 350.0,
+     "min_views": 1000,
+     "budget_left": 0.0
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 350.0,
+     "min_views": 1000,
+     "budget_left": 1842.0
+    }
    },
-   "url": "https://contentrewards.com/c/campaigns/14f743b2-c5ca-4f3e-8c0d-3010c485005d",
-   "id": "14f743b2-c5ca-4f3e-8c0d-3010c485005d",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.41,
+   "heat": 0.3,
    "heat_why": [
-    "Wikipedia 116 views a day",
     "8 YouTube search suggestions"
    ]
+  },
+  {
+   "name": "The Cut FINALE PART 1",
+   "subject": "The Home Depot / The Cut",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 2.0,
+   "budget_remaining": 1074.0,
+   "min_views": 0,
+   "max_payout": 250.0,
+   "footage": "3 files provided upon joining",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
+   "hashtags": [
+    "#measuretwice",
+    "#thecut"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "DIY and building content from The Cut Finale Part 1",
+    "on_screen": "Mark the part on screen",
+    "avoid": [
+     "spoilers"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/01e5c6d7-c7fb-49c5-a3c2-7ccc92c1f85d",
+   "id": "01e5c6d7-c7fb-49c5-a3c2-7ccc92c1f85d",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 2.0,
+     "min_payout": 2.0,
+     "max_payout": 250.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 2.0,
+     "min_payout": 2.0,
+     "max_payout": 250.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
   },
   {
    "name": "EDC DUSK TILL DAWN",
@@ -1058,19 +1026,19 @@
    "budget_remaining": 1841.0,
    "min_views": 1000,
    "max_payout": 150.0,
-   "footage": "reference materials provided in campaign",
+   "footage": "Drive, Dropbox or Frame.io folder",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It does not allow YouTube, which is required for the channel.",
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign, and it requires TikTok and Instagram.",
    "hashtags": [
     "#EDC",
     "#EDCLasVegas"
    ],
    "ends": "",
    "rules": {
-    "focus": "EDC Las Vegas 2027 Dusk Till Dawn content",
+    "focus": "EDC Las Vegas Dusk Till Dawn content",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -1079,55 +1047,93 @@
    "url": "https://contentrewards.com/c/campaigns/816157c7-7b7f-4970-9f5c-ef83e469189c",
    "id": "816157c7-7b7f-4970-9f5c-ef83e469189c",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000,
+     "budget_left": 1000.0
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000,
+     "budget_left": 841.0
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "Artist Influence - 8lanco - Man Out Of Me",
-   "subject": "8lanco",
+   "name": "Melly Mike - Clown (Pt.1)",
+   "subject": "Melly Mike",
    "type": "clipping",
    "platforms": [
-    "TikTok",
-    "Instagram"
+    "Instagram",
+    "TikTok"
    ],
    "youtube_allowed": false,
    "rate_per_1k": 1.0,
-   "budget_remaining": 1309.0,
-   "min_views": 1000,
+   "budget_remaining": 1250.0,
+   "min_views": 0,
    "max_payout": 150.0,
-   "footage": "Drive",
+   "footage": "Drive, Dropbox or Frame.io folder or edit repo",
    "needs_application": false,
    "status": "open",
-   "family_friendly": true,
+   "family_friendly": false,
    "fits": false,
-   "why": "YouTube is not allowed for this campaign as it is restricted to TikTok and Instagram.",
+   "why": "YouTube Shorts are not paid on this campaign. It does not allow YouTube Shorts and features horror themes which may not be strictly family-friendly.",
    "hashtags": [
-    "#8lanco",
-    "#ManOutOfMe"
+    "#mellymike",
+    "#clown"
    ],
    "ends": "",
    "rules": {
-    "focus": "Music promotion for 8lanco Man Out Of Me",
-    "on_screen": "",
-    "avoid": [],
+    "focus": "Cut the track under iconic horror clowns with a hook in 2s",
+    "on_screen": "Caption Clown, Melly Mike + tag @melly__mike",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/8ebe36fe-461f-4b1d-842e-a6e24ec5e014",
-   "id": "8ebe36fe-461f-4b1d-842e-a6e24ec5e014",
+   "url": "https://contentrewards.com/c/campaigns/403544ad-44e2-4265-b070-3575abdb613c",
+   "id": "403544ad-44e2-4265-b070-3575abdb613c",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.32,
    "heat_why": [
+    "Wikipedia 3 views a day",
     "8 YouTube search suggestions"
    ]
   },
   {
-   "name": "BIOS Zonewars Clipping",
-   "subject": "BIOS Trio Zonewars (Fortnite UEFN)",
+   "name": "UEFN Clipping",
+   "subject": "BIOS TRIO ZONEWARS",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -1136,24 +1142,23 @@
    "youtube_allowed": true,
    "rate_per_1k": 0.4,
    "budget_remaining": 405.0,
-   "min_views": 0,
+   "min_views": 2500,
    "max_payout": 50.0,
-   "footage": "BIOS Trio Zonewars map (Code: 4059-2791-0712)",
+   "footage": "BIOS TRIO ZONEWARS map (4059-2791-0712)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a gaming clipping campaign allowing YouTube Shorts with provided map footage, fits all family-friendly and content criteria, and is currently open.",
+   "why": "It is a clipping campaign for a family-friendly gaming map allowing YouTube Shorts with provided map/gameplay source.",
    "hashtags": [
-    "#BiosZonewars",
-    "#Fortnite",
-    "#FortniteZonewars",
-    "#Shorts"
+    "#BIOSZoneWars",
+    "#UEFN",
+    "#Fortnite"
    ],
    "ends": "",
    "rules": {
-    "focus": "Videos must include the map code and be directly related to BIOS Trio Zonewars using the current version.",
-    "on_screen": "Must include map code 4059-2791-0712",
+    "focus": "BIOS TRIO ZONEWARS gameplay",
+    "on_screen": "Videos must include the map code",
     "avoid": [
      "old videos",
      "reuploads"
@@ -1164,92 +1169,132 @@
    "url": "https://contentrewards.com/c/campaigns/e5b1e838-31d8-4a4e-9584-841c01456638",
    "id": "e5b1e838-31d8-4a4e-9584-841c01456638",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.4,
+     "min_payout": 1.0,
+     "max_payout": 50.0,
+     "min_views": 2500
+    },
+    "TikTok": {
+     "rate_per_1k": 0.4,
+     "min_payout": 1.0,
+     "max_payout": 50.0,
+     "min_views": 2500
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "Forest Slater - Remember You | ADVENTURE TIME CLIP",
-   "subject": "Forest Slater / Adventure Time",
+   "name": "Artist Influence",
+   "subject": "8lanco - Man Out Of Me",
    "type": "clipping",
    "platforms": [
     "TikTok",
-    "Instagram",
-    "YouTube"
+    "Instagram"
    ],
-   "youtube_allowed": true,
+   "youtube_allowed": false,
    "rate_per_1k": 1.0,
-   "budget_remaining": 154.0,
+   "budget_remaining": 1309.0,
    "min_views": 0,
    "max_payout": 150.0,
-   "footage": "Reference materials file provided upon joining",
+   "footage": "Drive",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#AdventureTime",
-    "#ForestSlater",
-    "#RememberYou"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Adventure Time clips and edits using Forest Slater's Remember You with official audio",
-    "on_screen": "Keep the song as the main audio focus",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/3c3e8684-72ee-45a0-94b1-8b9c3fc28170",
-   "id": "3c3e8684-72ee-45a0-94b1-8b9c3fc28170",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "Humboldt Seed Company [CLIPPING]",
-   "subject": "Humboldt Seed Company",
-   "type": "clipping",
-   "platforms": [
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 1.2,
-   "budget_remaining": 1000.0,
-   "min_views": 0,
-   "max_payout": 150.0,
-   "footage": "documentary provided in reference materials",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": false,
    "fits": false,
-   "why": "It does not fit because the subject is seed/cannabis related, which violates family-friendly and content policies.",
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign.",
    "hashtags": [
-    "#HumboldtSeedCompany",
-    "#Shorts"
+    "#8lanco",
+    "#ManOutOfMe"
    ],
    "ends": "",
    "rules": {
-    "focus": "Turn Humboldt Seed Company's documentary into short clips",
+    "focus": "8lanco Man Out Of Me music",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/bbffc7f1-d7f8-46e6-accc-b9db618a8a4f",
-   "id": "bbffc7f1-d7f8-46e6-accc-b9db618a8a4f",
+   "url": "https://contentrewards.com/c/campaigns/8ebe36fe-461f-4b1d-842e-a6e24ec5e014",
+   "id": "8ebe36fe-461f-4b1d-842e-a6e24ec5e014",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.03,
-   "heat_why": [
-    "Wikipedia 10 views a day"
-   ]
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
+  },
+  {
+   "name": "SameBoat.Club",
+   "subject": "SameBoat.Club",
+   "type": "clipping",
+   "platforms": [
+    "YouTube",
+    "Instagram"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 1.0,
+   "budget_remaining": 1000.0,
+   "min_views": 0,
+   "max_payout": 350.0,
+   "footage": "Reference materials (8 files provided)",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
+   "hashtags": [
+    "#SameBoat",
+    "#Voicemails",
+    "#Shorts"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "emotional audio, unsaid words, and real reactions",
+    "on_screen": "captions and a hook",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
+    "min_s": 10,
+    "max_s": 20
+   },
+   "url": "https://contentrewards.com/c/campaigns/438f2273-3682-4808-8ca7-db2a844bf35d",
+   "id": "438f2273-3682-4808-8ca7-db2a844bf35d",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 10.0,
+     "max_payout": 350.0,
+     "min_views": 10000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
   },
   {
    "name": "Preme Clipping Campaign",
@@ -1263,32 +1308,30 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.5,
-   "budget_remaining": 1981.0,
-   "min_views": 0,
+   "budget_remaining": 1973.0,
+   "min_views": 1000,
    "max_payout": 500.0,
-   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator",
+   "footage": "Drive, Dropbox or Frame.io folder or named stream",
    "needs_application": false,
    "status": "open",
    "family_friendly": false,
    "fits": false,
-   "why": "It features hip-hop artists (Preme, Baka Not Nice, Smiley) which may involve explicit language or adult themes not suitable for a strictly family-friendly channel.",
+   "why": "It does not fit because hip-hop streams may contain explicit content not suitable for a strictly family-friendly channel.",
    "hashtags": [
     "#Preme",
+    "#OVO",
+    "#Toronto",
     "#BakaNotNice",
-    "#Smiley",
-    "#OVOToronto"
+    "#Smiley"
    ],
    "ends": "",
    "rules": {
-    "focus": "funny moments, unexpected conversations, Toronto hip-hop and behind-the-scenes content",
+    "focus": "best moments from the Toronto livestream including funny moments and unexpected conversations",
     "on_screen": "",
     "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
      "adult content",
-     "gambling"
+     "crime",
+     "politics"
     ],
     "min_s": 15,
     "max_s": 60
@@ -1296,10 +1339,188 @@
    "url": "https://contentrewards.com/c/campaigns/737afda7-f1b5-4986-932a-fb681a603cea",
    "id": "737afda7-f1b5-4986-932a-fb681a603cea",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.5,
+     "min_payout": 0.5,
+     "max_payout": 500.0,
+     "min_views": 1000
+    },
+    "TikTok": {
+     "rate_per_1k": 0.5,
+     "min_payout": 0.5,
+     "max_payout": 500.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 0.5,
+     "min_payout": 0.5,
+     "max_payout": 500.0,
+     "min_views": 1000
+    }
+   },
    "heat": 0.0,
    "heat_why": []
+  },
+  {
+   "name": "Harlow Dolce \"Wrong Number\" Clipping",
+   "subject": "Harlow Dolce",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.25,
+   "budget_remaining": 5547.0,
+   "min_views": 0,
+   "max_payout": 350.0,
+   "footage": "official sound with lyric edits, wrong number moments, fall content, lighthearted movie and TV edits",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides reference materials, is family-friendly, and is currently open.",
+   "hashtags": [
+    "#WrongNumber",
+    "#HarlowDolce"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "lyric edits, wrong number moments, fall content, lighthearted movie and TV edits using the official sound",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/cf9e1d94-ce51-4eb8-9ea6-0de9393e8678",
+   "id": "cf9e1d94-ce51-4eb8-9ea6-0de9393e8678",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 0.25,
+     "min_payout": 1.0,
+     "max_payout": 350.0,
+     "min_views": 4000,
+     "budget_left": 2974.0
+    },
+    "Instagram": {
+     "rate_per_1k": 0.25,
+     "min_payout": 1.0,
+     "max_payout": 350.0,
+     "min_views": 4000,
+     "budget_left": 2573.0
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
+  },
+  {
+   "name": "Mohamed Ramadan Music || Arabic campaign",
+   "subject": "Mohamed Ramadan",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.75,
+   "budget_remaining": 542.0,
+   "min_views": 0,
+   "max_payout": 75.0,
+   "footage": "Reference materials (Drive/Dropbox/Frame.io or named stream)",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is an open clipping campaign allowing YouTube, provides footage, offers a clear CPM, and is family-friendly.",
+   "hashtags": [
+    "#MohamedRamadan",
+    "#MR1",
+    "#AJTracey",
+    "#ORIO"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Music video clips from MR.1 by Mohamed Ramadan x AJ Tracey x ORIO",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/6e916c26-12b2-4838-ba9c-f0ca7f0c0a3e",
+   "id": "6e916c26-12b2-4838-ba9c-f0ca7f0c0a3e",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 0.75,
+     "min_payout": 0.75,
+     "max_payout": 75.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.32,
+   "heat_why": [
+    "Wikipedia 3 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "Edits for the song \"Medusa\" by Zak Azoury",
+   "subject": "Zak Azoury",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.25,
+   "budget_remaining": 1581.0,
+   "min_views": 0,
+   "max_payout": 200.0,
+   "footage": "Reference materials file provided",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, YouTube is allowed, footage is provided, it is family-friendly, and it is open.",
+   "hashtags": [
+    "#Medusa",
+    "#AnimeEdits",
+    "#KdramaEdits"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Anime Edits, TV Edits, Kdrama Edits fitting the song Medusa",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/ef476b9b-9818-4d13-a1f6-3478fd02b953",
+   "id": "ef476b9b-9818-4d13-a1f6-3478fd02b953",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 0.25,
+     "min_payout": 0.5,
+     "max_payout": 200.0,
+     "min_views": 2000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ]
   },
   {
    "name": "Ascent Competitive Gaming Campaign",
@@ -1312,37 +1533,242 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.3,
-   "budget_remaining": 1303.0,
-   "min_views": 0,
+   "budget_remaining": 1073.0,
+   "min_views": 33333,
    "max_payout": 50.0,
-   "footage": "Reference materials 1 file",
+   "footage": "reference materials provided upon joining",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It requires UGC across platforms rather than clipping existing creator footage.",
+   "why": "It requires UGC filmed by the creator showcasing a desktop app rather than standard clipping.",
    "hashtags": [
     "#AscentGG",
-    "#GamingClips"
+    "#GamingClips",
+    "#CompetitiveGaming"
    ],
    "ends": "",
    "rules": {
-    "focus": "Showcases Ascent naturally through gameplay, highlights, clips, and relatable moments in strictly competitive games.",
+    "focus": "showcases Ascent naturally through gameplay, highlights, clips, and relatable moments in strictly competitive games",
     "on_screen": "",
-    "avoid": [
-     "non-competitive games"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/ff21c915-4c04-4ace-83bd-36f6cc75d480",
    "id": "ff21c915-4c04-4ace-83bd-36f6cc75d480",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.3,
+     "min_payout": 10.0,
+     "max_payout": 50.0,
+     "min_views": 33333
+    },
+    "TikTok": {
+     "rate_per_1k": 0.3,
+     "min_payout": 10.0,
+     "max_payout": 50.0,
+     "min_views": 33333
+    },
+    "Instagram": {
+     "rate_per_1k": 0.3,
+     "min_payout": 10.0,
+     "max_payout": 50.0,
+     "min_views": 33333
+    }
+   },
+   "heat": 0.0,
+   "heat_why": []
+  },
+  {
+   "name": "THEO - Feels Like a Remedy | Audio Only Campaign",
+   "subject": "THEO",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "X",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.1,
+   "budget_remaining": 352.0,
+   "min_views": 4500,
+   "max_payout": 30.0,
+   "footage": "Audio only campaign, use your best content",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "It requires using your own content for music promotion rather than provided creator footage.",
+   "hashtags": [],
+   "ends": "",
+   "rules": {
+    "focus": "Promote song with its audio and optionally lyrics",
+    "on_screen": "Song and artist name must be visible on the video with text",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/11b42131-311d-42d3-8847-b0b23eb47ec6",
+   "id": "11b42131-311d-42d3-8847-b0b23eb47ec6",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.1,
+     "min_payout": 0.45,
+     "max_payout": 30.0,
+     "min_views": 4500
+    },
+    "TikTok": {
+     "rate_per_1k": 0.1,
+     "min_payout": 0.4,
+     "max_payout": 30.0,
+     "min_views": 4000
+    },
+    "Instagram": {
+     "rate_per_1k": 0.08,
+     "min_payout": 0.45,
+     "max_payout": 25.0,
+     "min_views": 5625
+    }
+   },
+   "heat": 0.34,
+   "heat_why": [
+    "Wikipedia 19 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "Hello Sister - Look Away | Multi Edit Campaign",
+   "subject": "Hello Sister",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1k": 1.0,
+   "budget_remaining": 16.0,
+   "min_views": 0,
+   "max_payout": 150.0,
+   "footage": "Reference materials file provided upon joining",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign (TikTok and Instagram only).",
+   "hashtags": [
+    "#HelloSister",
+    "#LookAway"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Lyric Aesthetic Edits, Relationship/Situationship Edits, Girly Grunge/Alt/Rock Edits, Emo/Alt Edits, 2000s Movie/Show Edits, Y2K Aesthetic, Motocross Edits",
+    "on_screen": "Quotes, montages",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/52a68809-edd4-469c-9227-c480d2f75e12",
+   "id": "52a68809-edd4-469c-9227-c480d2f75e12",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.32,
+   "heat_why": [
+    "Wikipedia 2 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "GATTOUZ0 CLIPPING CAMPAIGN",
+   "subject": "Gattouz0",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube",
+    "X"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.2,
+   "budget_remaining": 51.0,
+   "min_views": 100000,
+   "max_payout": 20.0,
+   "footage": "Gattouz's streams, podcasts, vlogs and gaming content",
+   "needs_application": false,
+   "status": "full",
+   "family_friendly": true,
+   "fits": false,
+   "why": "It does not fit because the campaign is currently not accepting clips.",
+   "hashtags": [
+    "#gattouz0",
+    "#clipping",
+    "#shorts"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "funniest, most entertaining and most memorable moments from Gattouz's streams, podcasts, vlogs and gaming content",
+    "on_screen": "",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/cb5ea267-0c32-4fda-b010-0cc29512039e",
+   "id": "cb5ea267-0c32-4fda-b010-0cc29512039e",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.2,
+     "min_payout": 20.0,
+     "max_payout": 20.0,
+     "min_views": 100000
+    },
+    "TikTok": {
+     "rate_per_1k": 0.2,
+     "min_payout": 20.0,
+     "max_payout": 20.0,
+     "min_views": 100000
+    },
+    "Instagram": {
+     "rate_per_1k": 0.2,
+     "min_payout": 20.0,
+     "max_payout": 20.0,
+     "min_views": 100000
+    }
+   },
    "heat": 0.3,
    "heat_why": [
-    "7 YouTube search suggestions"
+    "8 YouTube search suggestions"
    ]
   },
   {
@@ -1357,24 +1783,145 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.11,
-   "budget_remaining": 75.0,
-   "min_views": 0,
+   "budget_remaining": 63.0,
+   "min_views": 6364,
    "max_payout": 30.0,
-   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator",
+   "footage": "none provided",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
-   "fits": true,
-   "why": "It is a music promo clipping campaign allowing YouTube, provides footage/reference, is family-friendly, and open.",
+   "fits": false,
+   "why": "It is an audio-only campaign that does not provide or point to specific video footage for the channel to use.",
+   "hashtags": [],
+   "ends": "",
+   "rules": {
+    "focus": "promote the song using audio and optional lyrics",
+    "on_screen": "song and artist name visible on the video itself with text",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/bdebe4a4-be6c-4110-81a5-b598a3e1badc",
+   "id": "bdebe4a4-be6c-4110-81a5-b598a3e1badc",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.11,
+     "min_payout": 0.7,
+     "max_payout": 30.0,
+     "min_views": 6364
+    },
+    "TikTok": {
+     "rate_per_1k": 0.1,
+     "min_payout": 0.4,
+     "max_payout": 30.0,
+     "min_views": 4000
+    },
+    "Instagram": {
+     "rate_per_1k": 0.08,
+     "min_payout": 0.45,
+     "max_payout": 25.0,
+     "min_views": 5625
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "6 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "FR Yomi Denzel Campagne Principale",
+   "subject": "Yomi Denzel",
+   "type": "clipping",
+   "platforms": [
+    "YouTube",
+    "Instagram",
+    "TikTok",
+    "facebook"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.7,
+   "budget_remaining": 6.0,
+   "min_views": 28571,
+   "max_payout": 100.0,
+   "footage": "Google Drive",
+   "needs_application": true,
+   "status": "full",
+   "family_friendly": true,
+   "fits": false,
+   "why": "Does not fit because the campaign is not currently accepting clips and the budget is almost full.",
    "hashtags": [
-    "#dashemzed",
-    "#anotherhit",
-    "#newmusic"
+    "#YomiDenzel"
    ],
    "ends": "",
    "rules": {
-    "focus": "promote this song by adding its audio and optionally lyrics to your content",
-    "on_screen": "song & artist name visible on the video itself with text",
+    "focus": "Yomi Denzel content",
+    "on_screen": "",
+    "avoid": [
+     "dénigrer l'image de Yomi Denzel et d'autres créateurs"
+    ],
+    "min_s": 10,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/14f743b2-c5ca-4f3e-8c0d-3010c485005d",
+   "id": "14f743b2-c5ca-4f3e-8c0d-3010c485005d",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.7,
+     "min_payout": 20.0,
+     "max_payout": 100.0,
+     "min_views": 28571
+    },
+    "TikTok": {
+     "rate_per_1k": 0.7,
+     "min_payout": 20.0,
+     "max_payout": 100.0,
+     "min_views": 28571
+    },
+    "Instagram": {
+     "rate_per_1k": 0.7,
+     "min_payout": 20.0,
+     "max_payout": 100.0,
+     "min_views": 28571
+    }
+   },
+   "heat": 0.41,
+   "heat_why": [
+    "Wikipedia 114 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "$10,000 Kai Cenat Campaign",
+   "subject": "Kai Cenat",
+   "type": "clipping",
+   "platforms": [
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.0,
+   "budget_remaining": 10000.0,
+   "min_views": 350000,
+   "max_payout": 10000.0,
+   "footage": "https://reachclipping.com/KaiCenat",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": false,
+   "fits": false,
+   "why": "Kai Cenat content often contains swearing and adult themes which violates family-friendly requirements.",
+   "hashtags": [
+    "#KaiCenat",
+    "#Shorts"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Kai Cenat stream moments",
+    "on_screen": "",
     "avoid": [
      "politics",
      "crime",
@@ -1386,201 +1933,26 @@
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/bdebe4a4-be6c-4110-81a5-b598a3e1badc",
-   "id": "bdebe4a4-be6c-4110-81a5-b598a3e1badc",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "6 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "THEO - Feels Like a Remedy | Audio Only Campaign",
-   "subject": "THEO",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "X",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.1,
-   "budget_remaining": 354.0,
-   "min_views": 0,
-   "max_payout": 30.0,
-   "footage": "Audio only campaign, use your best content",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "It requires using your own content with their audio rather than providing specific footage to clip from.",
-   "hashtags": [],
-   "ends": "",
-   "rules": {
-    "focus": "Promote the song by adding its audio and optionally lyrics",
-    "on_screen": "Add the song & artist name visible on the video itself with text",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/11b42131-311d-42d3-8847-b0b23eb47ec6",
-   "id": "11b42131-311d-42d3-8847-b0b23eb47ec6",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.35,
-   "heat_why": [
-    "Wikipedia 21 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Hello Sister - Look Away | Multi Edit Campaign",
-   "subject": "Hello Sister",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram"
-   ],
-   "youtube_allowed": false,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 19.0,
-   "min_views": 1000,
-   "max_payout": 150.0,
-   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video provided by campaign",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "It does not allow YouTube Shorts.",
-   "hashtags": [
-    "#HelloSister",
-    "#LookAway"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Lyric Aesthetic Edits, Relationship/Situationship Edits, Girly Grunge/Alt/Rock Edits, Emo/Alt Edits, 2000s Movie/Show Edits, Y2K Aesthetic, Motocross Edits",
-    "on_screen": "quotes, montages",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money advice",
-     "investing advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/52a68809-edd4-469c-9227-c480d2f75e12",
-   "id": "52a68809-edd4-469c-9227-c480d2f75e12",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.32,
-   "heat_why": [
-    "Wikipedia 2 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "GATTUZ0 CLIPPING CAMPAIGN",
-   "subject": "Gattouz0",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube",
-    "X"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.2,
-   "budget_remaining": 53.0,
-   "min_views": 0,
-   "max_payout": 20.0,
-   "footage": "Gattouz's streams, podcasts, vlogs and gaming content",
-   "needs_application": false,
-   "status": "full",
-   "family_friendly": true,
-   "fits": false,
-   "why": "The campaign is currently not accepting clips, so it does not have an open status.",
-   "hashtags": [],
-   "ends": "",
-   "rules": {
-    "focus": "funniest, most entertaining and most memorable moments from Gattouz's streams, podcasts, vlogs and gaming content",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/cb5ea267-0c32-4fda-b010-0cc29512039e",
-   "id": "cb5ea267-0c32-4fda-b010-0cc29512039e",
-   "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "$10,000 Kai Cenat Campaign",
-   "subject": "Kai Cenat",
-   "type": "clipping",
-   "platforms": [
-    "YouTube",
-    "Instagram",
-    "Facebook"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.0,
-   "budget_remaining": 10000.0,
-   "min_views": 350000,
-   "max_payout": 10000.0,
-   "footage": "Files provided in campaign link",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": false,
-   "fits": false,
-   "why": "Kai Cenat's content often includes profanity and adult themes, making it unsuitable for a strictly family-friendly channel.",
-   "hashtags": [
-    "#KaiCenat",
-    "#KaiCenatClips",
-    "#Shorts"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Kai Cenat stream moments",
-    "on_screen": "Follow campaign rules and requirements",
-    "avoid": [
-     "breaking rules"
-    ],
-    "min_s": 15,
-    "max_s": 60
-   },
    "url": "https://contentrewards.com/c/campaigns/44a3ffcb-d4a1-492b-94a4-704919950246",
    "id": "44a3ffcb-d4a1-492b-94a4-704919950246",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {},
    "heat": 0.77,
    "heat_why": [
-    "Wikipedia 2,186 views a day",
+    "Wikipedia 2,174 views a day",
     "8 YouTube search suggestions"
    ]
   },
   {
-   "name": "Lacy 30 Day Campaign",
+   "name": "$30,000 LACY 30 DAY CAMPAIGN",
    "subject": "Lacy",
    "type": "clipping",
    "platforms": [
-    "YouTube",
     "TikTok",
     "Instagram",
+    "YouTube",
     "Twitter/X"
    ],
    "youtube_allowed": true,
@@ -1593,34 +1965,82 @@
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is an open clipping campaign allowing YouTube shorts with provided social media footage and fits all safety criteria.",
+   "why": "It is a clipping campaign allowing YouTube, provides source footage, is family friendly, and is open.",
    "hashtags": [
-    "#Lacy",
-    "#Shorts"
+    "#Lacy"
    ],
    "ends": "",
    "rules": {
     "focus": "Clip content from Lacy's social media accounts",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7?group=1",
    "id": "4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {},
    "heat": 0.35,
    "heat_why": [
     "Wikipedia 24 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "Call of Duty MW4 عربي V2",
+   "subject": "Call of Duty MW4",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1.0k": 1.0,
+   "budget_remaining": 22177.0,
+   "min_views": 0,
+   "max_payout": 300.0,
+   "footage": "Reference materials (2 files)",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed in the allowed platforms and it may involve violence.",
+   "hashtags": [
+    "#CallOfDuty",
+    "#MW4"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Call of Duty MW4 gameplay for the GCC market",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/0afd04db-e183-4411-9957-0b890ef272b5",
+   "id": "0afd04db-e183-4411-9957-0b890ef272b5",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 300.0,
+     "min_views": 2000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 3.0,
+     "max_payout": 150.0,
+     "min_views": 3000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
     "8 YouTube search suggestions"
    ]
   },
@@ -1633,70 +2053,267 @@
    ],
    "youtube_allowed": false,
    "rate_per_1.0": 1.0,
-   "budget_remaining": 373.0,
-   "min_views": 0,
+   "budget_remaining": 366.0,
+   "min_views": 1000,
    "max_payout": 150.0,
-   "footage": "Google Doc Below",
+   "footage": "Google Doc provided in campaign",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube is not allowed as a posting platform for this campaign.",
-   "hashtags": [],
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign as it specifies TikTok.",
+   "hashtags": [
+    "#Geezerbomb",
+    "#AllIGot",
+    "#GTA6",
+    "#FIFA16",
+    "#Blokecore"
+   ],
    "ends": "",
    "rules": {
     "focus": "GTA6, FIFA16, Football, Normal Life, UK Blokecore, Skate, BMX, +Gaming Edits",
     "on_screen": "hook in the first 2 seconds",
-    "avoid": [],
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/cc9c7ec2-2274-4589-a886-d4f55005a078",
    "id": "cc9c7ec2-2274-4589-a886-d4f55005a078",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
    "heat": 0.0,
    "heat_why": []
   },
   {
-   "name": "Melvin Lassooy Insta Growth",
-   "subject": "Melvin Lassooy",
+   "name": "Double Coverage x Brez Podcast",
+   "subject": "Double Coverage Podcast",
    "type": "clipping",
    "platforms": [
+    "YouTube",
     "Instagram",
-    "YouTube"
+    "Facebook"
    ],
    "youtube_allowed": true,
-   "rate_per_1.0": 1.0,
-   "budget_remaining": 2400.0,
+   "rate_per_1k": 0.0,
+   "budget_remaining": 200.0,
    "min_views": 0,
-   "max_payout": 400.0,
-   "footage": "B-rolls collected of the past three years and several YouTube videos provided in the campaign",
+   "max_payout": 5000.0,
+   "footage": "BrezScales x Double Coverage Podcast",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, YouTube is allowed, footage is provided, it is family-friendly, and the status is open.",
+   "why": "It is an open clipping campaign allowing YouTube Shorts with provided podcast footage and fits all family-friendly criteria.",
    "hashtags": [
-    "#MelvinLassooy",
-    "#InstaGrowth"
+    "#DoubleCoverage",
+    "#Podcast",
+    "#Shorts"
    ],
    "ends": "",
    "rules": {
-    "focus": "Growth and personal brand of Melvin Lassooy using provided B-roll and videos",
+    "focus": "Clip content from the BrezScales x Double Coverage Podcast",
+    "on_screen": "Use captions and a hook",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/d47a99c8-0faa-43f6-b906-a7501b3c8749?group=1",
+   "id": "d47a99c8-0faa-43f6-b906-a7501b3c8749",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {},
+   "heat": 0.0,
+   "heat_why": []
+  },
+  {
+   "name": "ForgeGUI Clipping [Roblox]",
+   "subject": "ForgeGUI",
+   "type": "clipping",
+   "platforms": [
+    "YouTube",
+    "Instagram",
+    "Facebook"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1.0k": 1.0,
+   "budget_remaining": 30700.0,
+   "min_views": 0,
+   "max_payout": 0.0,
+   "footage": "provided ForgeGUI footage",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is a clipping campaign, allows YouTube Shorts, provides footage, is family-friendly, and open.",
+   "hashtags": [
+    "#ForgeGUI",
+    "#Roblox",
+    "#RobloxDev"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "ForgeGUI AI tool for Roblox developers",
+    "on_screen": "none",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money advice",
+     "investing advice",
+     "adult content",
+     "gambling"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/52a937dd-2e14-4e4b-8eaf-971ac5921208?group=1",
+   "id": "52a937dd-2e14-4e4b-8eaf-971ac5921208",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {},
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "Armand Van Helden - Witch Doktor | Multi Edit Camp",
+   "subject": "Armand Van Helden",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1.0": 1.0,
+   "budget_remaining": 1350.0,
+   "min_views": 1000,
+   "max_payout": 150.0,
+   "footage": "Reference materials (2 files)",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": false,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed and it involves horror movie scenes which may violate family-friendly criteria.",
+   "hashtags": [
+    "#witchdoktor",
+    "#halloween"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "Horror movie scenes & Halloween parties, dancing, costumes + Repository Edits",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/48ef8af6-3300-49fa-99c9-aa03e7b389ea",
-   "id": "48ef8af6-3300-49fa-99c9-aa03e7b389ea",
+   "url": "https://contentrewards.com/c/campaigns/e64192f7-ed5a-4239-bad3-2bb9e6b7aa1b",
+   "id": "e64192f7-ed5a-4239-bad3-2bb9e6b7aa1b",
    "platform": "Content Rewards",
-   "judged": "2026-10-22T22:16+00:00",
+   "judged": "2026-10-23T09:16+00:00",
    "model": "gemini-3.5-flash-lite",
-   "heat": 0.0,
-   "heat_why": []
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.36,
+   "heat_why": [
+    "Wikipedia 39 views a day",
+    "8 YouTube search suggestions"
+   ]
+  },
+  {
+   "name": "BABEL - AKIRA | Night Drive/City/Rave/Meme+ Edits",
+   "subject": "BABEL",
+   "type": "clipping",
+   "platforms": [
+    "Instagram",
+    "TikTok"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1.0k": 1.0,
+   "budget_remaining": 1250.0,
+   "min_views": 0,
+   "max_payout": 150.0,
+   "footage": "Reference materials provided",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign.",
+   "hashtags": [
+    "#akira",
+    "#babel"
+   ],
+   "ends": "",
+   "rules": {
+    "focus": "night drives, neon city, techno/rave POV, festival crowds & iconic movie/TV meme scenes/drive reposts",
+    "on_screen": "Hook in 2s, hit the drop",
+    "avoid": [
+     "artist footage",
+     "anime"
+    ],
+    "min_s": 15,
+    "max_s": 15
+   },
+   "url": "https://contentrewards.com/c/campaigns/78898bcc-a7dd-458b-94d4-9ffec8e68a0c",
+   "id": "78898bcc-a7dd-458b-94d4-9ffec8e68a0c",
+   "platform": "Content Rewards",
+   "judged": "2026-10-23T09:16+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 1.0,
+     "max_payout": 150.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ]
   }
  ]
 }

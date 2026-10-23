@@ -120,7 +120,7 @@ assert not any(W.claude_arm(f"QD-{n:03d}") for n in range(50))
 F.USAGE.write_text(json.dumps({"day": "2020-01-01", "edits": 99, "writes": 99}))
 assert W.usage()["writes"] == 0 and W.usage()["history"]["2020-01-01"]["edits"] == 99   # a new UK day starts at zero, the old one kept
 u = F.claude_note("calls", last="ok")
-assert u["calls"] == 1 and u["last"] == "ok" and u["caps"]["edits"] == 24 and json.loads(F.USAGE.read_text())["calls"] == 1
+assert u["calls"] == 1 and u["last"] == "ok" and u["caps"]["edits"] == int(F.CFG.get("claude_edits_per_day", 24)) and json.loads(F.USAGE.read_text())["calls"] == 1
 # a Claude arm that doesn't earn more views fades
 (SCRATCH / "analytics" / "models.json").write_text(json.dumps({"writers": {"claude:sonnet": {"n": 8, "views_vs_typical": 0.5},
     "gemini:gemini-flash-latest": {"n": 20, "views_vs_typical": 1.0}}, "editors": {"claude": {"n": 10, "views_vs_typical": 0.6},

@@ -284,7 +284,7 @@ function funnelCard(){
     row("Clip moments planned", "clips_planned"), row("Clips made", "clips_made"), row("Clips uploaded", "clips_uploaded"),
     row("Clips refused by YouTube", "clips_refused", "unverified channels; they move to Quickplay Clips"),
     row("Clips on Instagram", "clips_instagram"), row("Clips submitted to campaigns", "clips_submitted"), row("Clip views so far", "clips_views")];
-  const stuck = (f.stuck || []).length ? `<p>${pill("bad", "!", "Stuck: " + esc(f.stuck.join("; ")))}</p>` : `<p>${pill("good", "✓", "Every stage moved")}</p>`;
+  const stuck = (f.stuck || []).length ? `<p>${pill("bad", "!", "Stuck")} ${esc(f.stuck.join("; "))}</p>` : `<p>${pill("good", "✓", "Every stage moved")}</p>`;
   const lost = Object.entries(f.lost || {}).map(([k, v]) => `${esc(k)} (${v})`).join("; ");
   return stuck + table([{h:"Stage", f:r => esc(r.label)}, {h:esc(f.day), n:1, f:r => fmt(r.v || 0)}, {h:"", f:r => esc(r.note)}], rows)
     + (lost ? `<p class="sub">Lost today: ${lost}</p>` : "") + `<p class="sub">Every day is kept in analytics/funnel.csv.</p>`;

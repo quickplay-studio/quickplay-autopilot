@@ -45,6 +45,7 @@ For each fact:
 Leave out opinions, rumours, predictions, and anything about politics, crime, health or money advice.
 "what_is_new": one sentence on what changed in the last two days, or "" if nothing did.
 "hooks": up to 3 openings of 12 words or fewer, each built only on facts above.
+Reply as JSON: {{"what_is_new": "...", "hooks": ["..."], "facts": [{{"claim": "...", "evidence": [{{"source": 1, "quote": "..."}}]}}]}}
 
 {pages}"""
 TRIAGE_PROMPT = """You pick topics for a family-friendly UK Shorts channel about gaming, film and TV, music, sport, celebrities,
@@ -217,7 +218,7 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer
                 ans, why = gem_one(model, key, prompt, schema, max(timeout, 240), temperature)
                 if ans is not None: return ans, model
                 last = why
-            else:
+            elif not (lite and label.startswith("claude:")):          # lite: never Claude
                 got = others(prompt, timeout, temperature, only=label)
                 if got: return got
                 last = STATE.get("last_other") or last
@@ -303,6 +304,7 @@ PROVIDERS = {
 }
 NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound", re.I)
 JSON_ONLY = "Reply with one JSON value only, no other text."
+FACT_SHAPE = 'Reply as JSON: {"what_is_new": "...", "hooks": ["..."], "facts": [{"claim": "...", "evidence": [{"source": 1, "quote": "..."}]}]}'
 LOCAL_PORT = 8089
 
 
@@ -552,7 +554,8 @@ def gemini_state():
     return {"out of quota": STATE.get("quota_notes") or {}, "retired": sorted(set(STATE.get("spent_models") or []) - set(STATE.get("quota_notes") or {})),
             "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {},
             "providers": [n for n in PROVIDERS if os.environ.get(PROVIDERS[n][0], "").strip()],
-            "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0)}
+            "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0),
+            "second opinions": STATE.get("second_opinions", 0)}
 
 
 def triage(topics, limit):
@@ -572,24 +575,82 @@ def triage(topics, limit):
     return [(i, "") for i, t in enumerate(topics, 1) if not skip.search(t["topic"])][:limit]
 
 
+def toks(s):
+    return re.findall(r"[a-z0-9]+", digits(norm(s)))
+
+
+def near(q, text, cache):
+    """The page's own words for a quote a model copied slightly wrong: the shortest stretch of the page holding at least
+    85% of the quote's words (and every number in it), at most twice its length. None when the page doesn't say it."""
+    qt = toks(q)
+    if len(qt) < 5: return None
+    pt = cache.get(id(text)) or cache.setdefault(id(text), toks(text))
+    where = {}
+    for i, t in enumerate(pt): where.setdefault(t, []).append(i)
+    anchors = sorted({t for t in qt if t in where}, key=lambda t: len(where[t]))
+    if not anchors: return None
+    nums = {t for t in qt if t.isdigit()}
+    from collections import Counter
+    need, cq = 0.85 * len(qt), Counter(qt)
+    for a in anchors[:2]:
+        for i in where[a][:40]:
+            lo, hi = max(0, i - len(qt)), min(len(pt), i + len(qt) + 1)
+            win = pt[lo:hi]
+            cw = Counter(win)
+            if sum(min(c, cw[t]) for t, c in cq.items()) < need or not nums <= set(win): continue
+            hit = [k for k, t in enumerate(win) if t in cq]
+            return " ".join(win[hit[0]:hit[-1] + 1][:40])
+    return None
+
+
 def verify(facts, texts, kinds):
-    """Keep a fact only where its evidence sentences really are in the pages (word for word) and its numbers match."""
-    verified, single = [], []
+    """Keep a fact only where its evidence really is in the pages and its numbers match: the quote word for word, or
+    (models misquote) the stretch of the page that holds nearly all its words and every number (near())."""
+    verified, single, cache = [], [], {}
     for f in facts or []:
+        if not isinstance(f, dict): continue
         claim = undash(re.sub(r"\s+", " ", str(f.get("claim") or "")).strip())
         if not claim: continue
         good = {}
         for e in f.get("evidence") or []:
+            if not isinstance(e, dict): continue
             n, q = e.get("source"), str(e.get("quote") or "").strip()
-            if isinstance(n, int) and n in texts and len(norm(q)) >= 12 and norm(q) in texts[n] and n not in good:
-                good[n] = " ".join(q.split()[:25])
+            if isinstance(n, str) and n.isdigit(): n = int(n)
+            if not isinstance(n, int) or n not in texts or n in good or len(norm(q)) < 12: continue
+            if norm(q) in texts[n]: good[n] = " ".join(q.split()[:25])
+            else:
+                got = near(q, texts[n], cache)
+                if got: good[n] = got
         joined = digits(norm(" ".join(good.values())))
         if not all(digits(x) in joined for x in re.findall(r"\d[\d,.]*\d|\d", claim)): continue
+        if any(norm(claim) == norm(x["claim"]) for x in verified + single): continue      # two models, one fact
         wiki = sum(1 for n in good if kinds[n] == "wikipedia")
         entry = {"claim": claim, "sources": sorted(good), "evidence": {str(n): good[n] for n in sorted(good)}}
         if len(good) - max(0, wiki - 1) >= 2: verified.append(entry)
         elif good: single.append(entry)
     return verified, single
+
+
+def facts_from(prompt, texts, kinds, want=4):
+    """Facts for a pack: a Lite model first (the biggest free quota); when fewer than `want` survive the check, the
+    strongest free writers (writing_order, never Claude) read the same pages and both answers are checked together.
+    Returns (answer, verified, single, model)."""
+    ans, model = gemini(prompt, SCHEMA, lite=True)
+    ans = ans if isinstance(ans, dict) else {}
+    verified, single = verify(ans.get("facts"), texts, kinds)
+    if len(verified) + len(single) < want and not STATE.get("spent"):
+        try:
+            more, m2 = gemini(prompt, SCHEMA, writing=True, lite=True)
+            if isinstance(more, dict) and more.get("facts"):
+                facts = (ans.get("facts") or []) + (more.get("facts") or [])
+                v2, s2 = verify(facts, texts, kinds)
+                if len(v2) + len(s2) > len(verified) + len(single):
+                    verified, single, model = v2, s2, f"{model} + {m2}"
+                    ans = {**more, **{k: v for k, v in ans.items() if v and k != "facts"}}
+                    STATE["second_opinions"] = STATE.get("second_opinions", 0) + 1
+        except RuntimeError as e:
+            print("second opinion:", str(e)[:120])
+    return ans, verified, single, model
 
 
 def build():
@@ -600,9 +661,18 @@ def build():
     limit, start = int(os.environ.get("FACTPACK_TOPICS") or CFG.get("factpack_topics", 20)), time.time()
     packs, model, errors = [], None, []
     topics = research.get("topics") or []
-    for i, cat in triage(topics, limit):
+    try:                                              # topics a recent Short covered get no pack: the writer would skip them
+        import writer as W
+        seen, done_before = W.recent(), W.covered
+    except Exception as e:
+        seen, done_before = [], None; print("recent Shorts not read:", str(e)[:100])
+    skipped = []
+    for i, cat in triage(topics, limit * 2):          # spares, so covered topics don't leave places empty
         t = topics[i - 1]
-        if time.time() - start > 22 * 60 or STATE.get("spent"): break
+        if len(packs) >= limit or time.time() - start > 22 * 60 or STATE.get("spent"): break
+        if done_before and t.get("signal") != "Charlie's request" and done_before(
+                {"topic": t["topic"], "sources": [[a.get("title", ""), a.get("url", "")] for a in t.get("articles") or []]}, seen):
+            skipped.append(t["topic"]); continue
         srcs = [dict(a, kind="article") for a in t.get("articles") or []]
         if t.get("wikipedia"): srcs.append({"outlet": "Wikipedia", "title": t["topic"], "url": t["wikipedia"], "published": "", "kind": "wikipedia"})
         got = []
@@ -614,13 +684,12 @@ def build():
         if not got: continue                          # one page will do: a one-source fact is used with its source named
         pages = "\n\n".join(f"[{k}] {s['outlet']} · {s['title']} · {s.get('published') or 'undated'} · {s['url']}\n{txt}"
                             for k, (s, txt) in enumerate(got, 1))
-        try:
-            ans, model = gemini(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages), SCHEMA, lite=True)
-        except Exception as e:
-            errors.append(f"{t['topic']}: {e}"[:200]); continue
         texts = {k: norm(txt) for k, (s, txt) in enumerate(got, 1)}
         kinds = {k: s["kind"] for k, (s, txt) in enumerate(got, 1)}
-        verified, single = verify(ans.get("facts"), texts, kinds)
+        try:
+            ans, verified, single, model = facts_from(PROMPT.format(topic=t["topic"], today=today, n=len(got), pages=pages), texts, kinds)
+        except Exception as e:
+            errors.append(f"{t['topic']}: {e}"[:200]); continue
         hooks = [undash(h) for h in ans.get("hooks") or []][:3]
         packs.append({"n": i, "topic": t["topic"], "signal": t.get("signal", ""), "category": cat,
                       "what_is_new": ans.get("what_is_new", ""), "hooks": hooks,
@@ -633,7 +702,9 @@ def build():
     OUT.write_text(json.dumps({"date": today, "built": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"),
                                "model": model, "mode": "breaking" if os.environ.get("BREAKING") else "full",
                                "run": os.environ.get("RUN", ""), "errors": errors[:10], "topics": packs}, ensure_ascii=False, indent=1))
-    print(f"{len(packs)} packs, {sum(len(p['verified']) for p in packs)} verified facts")
+    if skipped: print("covered recently, no pack:", "; ".join(skipped)[:300])
+    print(f"{len(packs)} packs, {sum(len(p['verified']) for p in packs)} verified facts, "
+          f"{sum(len(p['one_source']) for p in packs)} one-source")
     print("gemini:", json.dumps(gemini_state()))
 
 

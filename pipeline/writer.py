@@ -200,7 +200,9 @@ def pack_text(p):
     lines = [f"TOPIC: {p['topic']} (trend signal: {p.get('signal', '')}; category hint: {p.get('category', '')})"]
     if p.get("what_is_new"): lines.append(f"What is new: {p['what_is_new']}")
     lines.append("Sources (number: outlet, title, date, url):")
-    for k, s in enumerate(p["sources"], 1): lines.append(f"  {k}: {s[2]}, {s[0]}, {s[3]}, {s[1]}")
+    for k, s in enumerate(p["sources"], 1):
+        ref = " (a reference: state its facts plainly, never name or cite it)" if "wikipedia.org" in str(s[1]) else ""
+        lines.append(f"  {k}: {s[2]}, {s[0]}, {s[3]}, {s[1]}{ref}")
     lines.append("Verified facts (two sources):")
     for f in p["verified"]: lines.append(f"  - {f['claim']} {f['sources']}")
     if p.get("one_source"):
@@ -209,6 +211,20 @@ def pack_text(p):
     if p.get("images"): lines.append("Real pictures to use as shots: " + ", ".join(p["images"]))
     if p.get("hooks"): lines.append("Hook ideas: " + " | ".join(p["hooks"]))
     return "\n".join(lines)
+
+
+WIKI_SAID = re.compile(r"(,\s*)?\b(according to wikipedia|as wikipedia (puts it|says|notes)|wikipedia (says|shows|states|lists|notes|reports)( that)?)\b(,\s*)?", re.I)
+
+
+def unwiki(b):
+    """Narration never cites Wikipedia (validate.py): the attribution is dropped and the fact stated, so a board isn't
+    lost to a habit models keep (two of the 23 October evening boards failed only on this)."""
+    for x in b.get("beats") or []:
+        s = x.get("say")
+        if isinstance(s, str) and WIKI_SAID.search(s):
+            s = re.sub(r"\s+([,.!?])", r"\1", re.sub(r"\s{2,}", " ", WIKI_SAID.sub(" ", s))).strip(" ,")
+            x["say"] = s[:1].upper() + s[1:]
+    return b
 
 
 def clean(x):
@@ -397,6 +413,7 @@ encyclopedia article. Using ONLY this article, {how} For each fact:
   for a ranking or a figure, quote that whole line.
 Leave out opinions, rumours, and anything about politics, crime, health or money advice.
 "what_is_new": "". "hooks": up to 3 openings of 12 words or fewer, each built only on facts above.
+Reply as JSON: {{"what_is_new": "", "hooks": ["..."], "facts": [{{"claim": "...", "evidence": [{{"source": 1, "quote": "..."}}]}}]}}
 
 [1] Wikipedia · {title} · {url}
 {text}"""
@@ -516,11 +533,10 @@ def evergreen_packs(kinds, seen, trending=()):
         try:
             txt, img = factpack.page_text(url, wiki=True)
             if len(txt) < 800: continue
-            got, _ = factpack.gemini(EVERGREEN_FACTS.format(q=q, how=HOW[kind], title=title, url=url, text=txt), factpack.SCHEMA,
-                                     timeout=100, lite=True)
+            got, _, single, _ = factpack.facts_from(EVERGREEN_FACTS.format(q=q, how=HOW[kind], title=title, url=url, text=txt),
+                                                    {1: factpack.norm(txt)}, {1: "wikipedia"}, want=MIN_FACTS[kind])
         except Exception as e:
             print("evergreen:", title, str(e)[:120]); continue
-        _, single = factpack.verify((got or {}).get("facts"), {1: factpack.norm(txt)}, {1: "wikipedia"})
         if len(single) < MIN_FACTS[kind]: print(f"evergreen: {q}: only {len(single)} checked facts"); continue
         src = {"outlet": "Wikipedia", "title": title, "url": url, "published": "", "kind": "wikipedia"}
         rides = str(it.get("trending") or "").strip()[:80]
@@ -871,6 +887,7 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         if isinstance(ans, dict) and isinstance(ans.get("board"), dict): ans = ans["board"]     # a model that wrapped it
         b = clean(ans)
         if not isinstance(b.get("beats"), list) or not b["beats"]: b["beats"] = []
+        unwiki(b)
         for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
         if tests: b["test"] = dict(tests)          # the validator reads the length arm from it

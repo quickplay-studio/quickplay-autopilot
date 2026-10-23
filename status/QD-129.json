@@ -95,5 +95,6 @@
   "publish_at": "2026-10-23T09:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-129"
+ "social_release": "social-QD-129",
+ "facebook_error": "2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err"
 }

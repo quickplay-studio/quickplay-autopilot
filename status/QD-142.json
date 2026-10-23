@@ -1,0 +1,90 @@
+{
+ "id": "QD-142",
+ "board": "boards/queue/QD-142.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T17:00:00Z",
+ "rendered": "2026-10-23T13:45:24.768501+00:00",
+ "title": "Jerry Hall’s record-breaking music night 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "after-sunset",
+ "social_music": "synthwave-526520",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 29.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 3.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.71,
+   "none",
+   0
+  ],
+  [
+   3.71,
+   13.71,
+   "none",
+   2
+  ],
+  [
+   13.71,
+   19.89,
+   "none",
+   1
+  ],
+  [
+   19.89,
+   26.15,
+   "none",
+   1
+  ],
+  [
+   26.15,
+   29.15,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "15711",
+   "q": "tv studio lights",
+   "t0": 0.0,
+   "t1": 14.88
+  },
+  {
+   "p": "pixabay",
+   "id": "1258",
+   "q": "dj mixer lights",
+   "t0": 14.28,
+   "t1": 29.15
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T13:58:19Z",
+ "video": "Qn-Zk4JvlxM",
+ "url": "https://youtube.com/shorts/Qn-Zk4JvlxM",
+ "publish_at": "2026-10-23T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-142"
+}

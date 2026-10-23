@@ -1,0 +1,83 @@
+{
+ "id": "QD-141",
+ "board": "boards/queue/QD-141.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T16:30:00Z",
+ "rendered": "2026-10-23T13:45:22.370716+00:00",
+ "title": "Avengers Doomsday preview drops during World Series ⚾",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "in-battery",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "minimal",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 24.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 5.9
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "none",
+   0
+  ],
+  [
+   4.0,
+   9.71,
+   "none",
+   2
+  ],
+  [
+   9.71,
+   17.1,
+   "none",
+   1
+  ],
+  [
+   17.1,
+   21.42,
+   "none",
+   1
+  ],
+  [
+   21.42,
+   24.16,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "250395",
+   "q": "stadium night",
+   "t0": 0.0,
+   "t1": 24.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T13:58:17Z",
+ "video": "ijQ5iXKFmhU",
+ "url": "https://youtube.com/shorts/ijQ5iXKFmhU",
+ "publish_at": "2026-10-23T16:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T16:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-141"
+}

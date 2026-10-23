@@ -1,0 +1,92 @@
+{
+ "id": "QD-140",
+ "board": "boards/queue/QD-140.json",
+ "mode": "schedule",
+ "slot": "2026-10-23T16:00:00Z",
+ "rendered": "2026-10-23T13:46:08.773184+00:00",
+ "title": "The Northumbria Mysteries: New BBC Detective Drama 🎬",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 5 reused a nearby picture (page:https://www.bbc.com/mediacentre/mediapacks/robson-green-liz-white-the-northumbria-mysteries: bbc.com is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 9
+ },
+ "music": "false-vacuum-decay",
+ "social_music": "soulsweeper-252499",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 24.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.0
+ },
+ "timeline": [
+  [
+   0.06,
+   3.9,
+   "title",
+   0
+  ],
+  [
+   3.9,
+   9.92,
+   "none",
+   2
+  ],
+  [
+   9.92,
+   14.97,
+   "none",
+   3
+  ],
+  [
+   14.97,
+   19.32,
+   "none",
+   1
+  ],
+  [
+   19.32,
+   24.82,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "365309",
+   "q": "countryside mist",
+   "t0": 0.0,
+   "t1": 12.71
+  },
+  {
+   "p": "pixabay",
+   "id": "223829",
+   "q": "old stone walls",
+   "t0": 12.11,
+   "t1": 24.82
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-23T13:58:15Z",
+ "video": "QFAPJz8DfUg",
+ "url": "https://youtube.com/shorts/QFAPJz8DfUg",
+ "publish_at": "2026-10-23T16:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-23T16:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-140"
+}

@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 11 public, 4 scheduled | 22 | 2 | ⏳ 11 of 40 so far, 4 more scheduled |
+| Fri 23 Oct | 11 public, 7 scheduled | 22 | 2 | ⏳ 11 of 40 so far, 7 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -61,12 +61,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
-
-## In the queue
-
-- **QD-140** The Northumbria Mysteries: New BBC Detective Drama 🎬 (rendering next)
-- **QD-141** Avengers Doomsday preview drops during World Series ⚾ (rendering next)
-- **QD-142** Jerry Hall’s record-breaking music night 🎤 (rendering next)
 
 ## On the channel (latest first)
 

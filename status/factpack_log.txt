@@ -1,7 +1,15 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-jenna ortega: 5 verified, 4 one-source, 2 pages
-Clayface (film): 0 verified, 3 one-source, 5 pages
-BioWare: 4 verified, 1 one-source, 4 pages
-I Play Rocky: 12 verified, 2 one-source, 2 pages
-4 packs, 21 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+dua lipa: 0 verified, 4 one-source, 2 pages
+leo reich it gets worse review: 0 verified, 2 one-source, 1 pages
+south african grand prix: 4 verified, 1 one-source, 3 pages
+blue planet 3 release date: 0 verified, 7 one-source, 1 pages
+katie boulter: 1 verified, 3 one-source, 2 pages
+Clayface (film): 1 verified, 5 one-source, 5 pages
+BioWare: 8 verified, 4 one-source, 4 pages
+LISA: 0 verified, 2 one-source, 2 pages
+BABYMONSTER: 4 verified, 1 one-source, 2 pages
+I Play Rocky: 4 verified, 0 one-source, 2 pages
+ROBLOX THE HOLLOW: 5 verified, 0 one-source, 2 pages
+Tate McRae: 0 verified, 5 one-source, 2 pages
+12 packs, 27 verified facts
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 13}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}

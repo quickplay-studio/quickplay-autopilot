@@ -35,198 +35,216 @@
    ]
   },
   {
-   "topic": "jenna ortega",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jenna_Ortega",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Jenna Ortega on moving beyond her 'Wednesday' image and embracing optimism",
-     "url": "https://www.usatoday.com/story/entertainment/movies/2026/10/22/jenna-ortega-klara-and-the-sun-interview/92335176007/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "Jenna Ortega Says She’ll Be “Off TV for Awhile” After ‘Wednesday’ Ends",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/jenna-ortega-break-tv-wednesday-ending-1236738198/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "atlanta nba team",
-   "signal": "Google Trends GB 100+",
+   "topic": "The Call the Police trend on TikTok and Instagram",
+   "signal": "Charlie's request",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "‘The Bird Reich’: Atlanta Falcons roasted over throwback logo with Nazi resemblance",
-     "url": "https://www.theguardian.com/sport/2026/oct/22/atlanta-falcons-throwback-logo-nazi-germany-comparisons-memes",
-     "published": "2026-10-23"
+     "outlet": "NBC News",
+     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
+     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
+     "published": "2026-07-28"
     }
    ]
   },
   {
-   "topic": "boy george",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Boy_George",
+   "topic": "tax",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tax",
    "articles": [
     {
-     "outlet": "Sky Sports",
-     "title": "Norris: 'Incredible' Antonelli two levels above Russell all season",
-     "url": "https://www.skysports.com/f1/news/12040/13602369/kimi-antonelli-lando-norris-lewis-hamilton-praise-mercedes-driver-ahead-of-first-f1-2026-title-win-chance-at-united-states-gp",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "Chris Jericho To Play Gorgeous George In Prime Video’s Muhammad Ali Limited Series ‘The Greatest’",
-     "url": "https://deadline.com/2026/10/chris-jericho-the-greatest-cast-gorgeous-george-1237171251/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "weather cardiff",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_weather_in_Cardiff",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "At Cop17, the pressure is on to rescue a deal that could end the destruction of nature",
-     "url": "https://www.theguardian.com/environment/2026/oct/23/cop17-deal-that-could-end-the-destruction-of-nature-deadline-armenia",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "Tommy Hilfiger Is Giving Shoppers an Early Start on Holiday Deals",
-     "url": "https://www.rollingstone.com/product-recommendations/style/shop-tommy-hilfiger-holiday-preview-sale-2026-best-deals-1235646878/",
+     "outlet": "TechCrunch",
+     "title": "Mark Zuckerberg’s creative plan to pay California’s proposed billionaire tax without losing control of Meta",
+     "url": "https://techcrunch.com/2026/10/22/mark-zuckerbergs-creative-plan-to-pay-californias-proposed-billionaire-tax-without-losing-control-of-meta/",
      "published": "2026-10-22"
     },
     {
      "outlet": "BBC",
-     "title": "Weather warning in place ahead of Storm Boelo",
-     "url": "https://www.bbc.co.uk/news/articles/c83vqn2x54v1o?at_medium=RSS&at_campaign=rss",
+     "title": "Zuckerberg wins Meta deal to help him foot bill for possible California billionaire tax",
+     "url": "https://www.bbc.co.uk/news/articles/cky83vwnyglno?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-22"
     },
     {
-     "outlet": "Eurogamer",
-     "title": "GTA 6 is so detailed no single Rockstar employee knows it all - which is how we got shrinking horse testicles in Red Dead Redemption 2",
-     "url": "https://www.eurogamer.net/red-dead-redemption-2-horse-testicles-staff-autonomy-gta-6",
+     "outlet": "Guardian",
+     "title": "Meta strikes deal with Mark Zuckerberg to help him foot billionaire tax bill",
+     "url": "https://www.theguardian.com/technology/2026/oct/22/meta-mark-zuckerberg-california-wealth-tax",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "You Can Now Buy GTA 6 Burgers And Fried Chicken IRL, But It’s Not Cheap",
+     "url": "https://www.gamespot.com/articles/you-can-now-buy-gta-6-burgers-and-fried-chicken-irl-but-its-not-cheap/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "dua lipa",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dua_Lipa",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "Inside Dua Lipa and Callum Turner’s Night at the Opera",
+     "url": "https://www.nytimes.com/2026/10/20/style/met-opera-lincoln-bardo-premiere.html",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Dua Lipa, Amy Poehler, Bowen Yang and More Come Out For ‘Lincoln in the Bardo’ Opera World Premiere",
+     "url": "https://www.hollywoodreporter.com/lifestyle/arts/dua-lipa-amy-poehler-bowen-yang-lincoln-in-the-bardo-opera-1236736336/",
      "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "gold price today",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": null,
+   "topic": "jd",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jd",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "London Gold Centre Launches Gold Price Calculator to Help Consumers Check the Value of Their Gold",
-     "url": "https://www.usatoday.com/press-release/story/52057/london-gold-centre-launches-gold-price-calculator-to-help-consumers-check-the-value-of-their-gold/",
+     "outlet": "Guardian",
+     "title": "Seth Meyers on JD Vance: ‘The integrity of a used-car salesman and the charisma of a wet ham’",
+     "url": "https://www.theguardian.com/culture/2026/oct/22/late-night-seth-meyers-jd-vance",
      "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "when is the ballon d'or 2026",
+   "topic": "energy",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Energy",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Starlink access for Ukraine limited after Trump’s claims satellite service restored, officials say – Europe live",
+     "url": "https://www.theguardian.com/world/live/2026/oct/23/starlink-ukraine-musk-trump-russia-black-sea-strikes-france-milan-europe-protests-latest-news-updates",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Lights will stay on this winter, grid operator says after concerns",
+     "url": "https://www.bbc.co.uk/news/articles/cmy56q2n1veqo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Why Street Fighter Movie Goes For “Gonzo” Vibes Instead of Gritty And Grounded",
+     "url": "https://www.gamespot.com/articles/why-street-fighter-movie-goes-for-gonzo-vibes-instead-of-gritty-and-grounded/",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Winter energy supply secure but possible 'tight days' for electricity - grid operators",
+     "url": "https://news.sky.com/story/winter-energy-supply-secure-despite-forecast-increase-in-peak-gas-and-possible-external-events-influence-grid-operators-13602351",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "leo reich it gets worse review",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "It Gets Worse review – Leo Reich is a rare star and the future of TV comedy",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/22/it-gets-worse-review-leo-reich-is-a-rare-star-and-the-future-of-tv-comedy",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "south african grand prix",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/South_African_Grand_Prix",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Approach African GP with humility, says Hamilton",
+     "url": "https://www.bbc.co.uk/sport/formula1/articles/c6vgxd2xyv7do?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Lewis Hamilton aims to extend career till early 2030s so he can race in African Grand Prix",
+     "url": "https://www.theguardian.com/sport/2026/oct/22/lewis-hamilton-aims-to-extend-career-till-early-2030s-so-he-can-race-in-african-grand-prix",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "The African Grand Prix: Why F1 is going to Rwanda and why is it controversial?",
+     "url": "https://www.nytimes.com/athletic/7686849/2026/10/13/f1-rwanda-african-grand-prix-explainer/",
+     "published": "2026-10-13"
+    }
+   ]
+  },
+  {
+   "topic": "blue planet 3 release date",
    "signal": "Google Trends GB 100+",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Pride, prestige, profile - the great Ballon d'Or campaign",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c65yng4x302jo?at_medium=RSS&at_campaign=rss",
+     "title": "Blue Planet III on the BBC - Everything you need to know",
+     "url": "https://www.bbc.com/mediacentre/articles/2026/blue-planet-3-on-the-bbc",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "taylor swift",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Taylor_Swift",
+   "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "Anya Taylor-Joy’s breakout movie gave horror a different kind of female lead",
+     "url": "https://www.polygon.com/anya-taylor-joy-the-witch-free-streaming-october-2026/",
      "published": "2026-10-23"
     },
     {
      "outlet": "Guardian",
-     "title": "Champions League review: PSG take a hit, Man City’s empty seats and teenage hope for Liverpool",
-     "url": "https://www.theguardian.com/football/2026/oct/22/champions-league-review-psg-take-a-hit-man-citys-empty-seats-and-teenage-hope-for-liverpool",
+     "title": "How tech became the villain of the US midterms",
+     "url": "https://www.theguardian.com/us-news/ng-interactive/2026/oct/22/us-midterms-tech-datacenters-ai",
      "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "isle of wight festival",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Isle_of_Wight_Festival",
-   "articles": [
-    {
-     "outlet": "NME",
-     "title": "Isle Of Wight Festival 2027 headliners and first wave of line-up announced",
-     "url": "https://www.nme.com/news/music/isle-of-wight-festival-2027-headliners-line-up-announced-3973887?utm_source=rss&utm_medium=rss&utm_campaign=isle-of-wight-festival-2027-headliners-line-up-announced",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "stockpile",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Stockpile",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Every Briton should stockpile water and food supplies, government advises",
-     "url": "https://www.theguardian.com/politics/2026/oct/22/britain-prepare-infrastructure-attacks-hostile-states-wes-streeting",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "petr yan",
+   "topic": "openai",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Petr_Yan",
+   "wikipedia": "https://en.wikipedia.org/wiki/OpenAI",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "Petr Yan vs. Merab Dvalishvili 3 breakdown, prediction for UFC 333",
-     "url": "https://mmajunkie.usatoday.com/videos/sports/ufc/2026/10/23/petr-yan-vs-merab-dvalishvili-3-ufc-333-breakdown-video-prediction/92370411007/",
+     "outlet": "TechCrunch",
+     "title": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+     "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/",
      "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "when is black friday",
-   "signal": "Google Trends US 200+",
-   "wikipedia": null,
-   "articles": [
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Canva’s first AI image model plans designs before generating them",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model",
+     "published": "2026-10-22"
+    },
     {
      "outlet": "Guardian",
-     "title": "Nocturne to The One About Matthew Perry: the seven best shows to stream this week",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/23/nocturne-to-the-one-about-matthew-perry-the-seven-best-shows-to-stream-this-week",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Amber warning in place as Storm Austen hits parts of UK",
-     "url": "https://www.bbc.co.uk/weather/articles/cq8ezy256e42o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Save $50 Off the Endlessly Useful ASUS ZenScreen 16\" 1080p Portable USB Monitor Ahead of Black Friday",
-     "url": "https://www.ign.com/articles/asus-zenscreen-usb-portable-monitor-deal-october-2026",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Best Black Friday controller deals",
-     "url": "https://www.pcgamer.com/hardware/controllers/black-friday-controller-deals/",
+     "title": "The Guardian view on AI safety: the push for global regulation must advance | Editorial",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/22/the-guardian-view-on-ai-safety-the-push-for-global-regulation-must-advance",
      "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "doj seeks judges recusal immigration cases",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": null,
+   "topic": "katie boulter",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Boulter",
    "articles": [
     {
-     "outlet": "Reuters",
-     "title": "DOJ seeks to bar Minnesota judges from two cases over statements on Trump immigration surge",
-     "url": "https://www.reuters.com/legal/government/doj-seeks-bar-minnesota-judges-two-cases-over-statements-trump-immigration-surge-2026-10-21/",
+     "outlet": "Sky Sports",
+     "title": "Japan Open: Katie Boulter beats Viktorija Golubic in straight sets to advance to quarter-finals in Osaka",
+     "url": "https://www.skysports.com/tennis/news/13601799/japan-open-katie-boulter-beats-viktorija-golubic-in-straight-sets-to-advance-to-quarter-finals-in-osaka",
      "published": "2026-10-21"
     }
    ]
@@ -447,7 +465,7 @@
   },
   {
    "topic": "LISA",
-   "signal": "YouTube GB 1,082,037/h",
+   "signal": "YouTube GB 1,262,103/h",
    "wikipedia": "https://en.wikipedia.org/wiki/LISA",
    "articles": [
     {
@@ -460,7 +478,7 @@
   },
   {
    "topic": "BABYMONSTER",
-   "signal": "YouTube GB 482,375/h",
+   "signal": "YouTube GB 738,808/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
    "articles": [
     {
@@ -472,8 +490,34 @@
    ]
   },
   {
+   "topic": "The Rings of Power",
+   "signal": "YouTube GB 112,963/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Rings_of_Power",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Why People Think Valve Just Accidentally Confirmed Half-Life 3",
+     "url": "https://www.gamespot.com/articles/why-people-think-valve-just-accidentally-confirmed-half-life-3/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "I Play Rocky",
+   "signal": "YouTube GB 61,339/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/I_Play_Rocky",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "I Play Rocky - Official Trailer 2",
+     "url": "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
    "topic": "ROBLOX THE HOLLOW",
-   "signal": "YouTube GB 111,512/h",
+   "signal": "YouTube GB-gaming 97,979/h",
    "wikipedia": null,
    "articles": [
     {
@@ -491,40 +535,8 @@
    ]
   },
   {
-   "topic": "The Rings of Power",
-   "signal": "YouTube GB 111,459/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Rings_of_Power",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Why People Think Valve Just Accidentally Confirmed Half-Life 3",
-     "url": "https://www.gamespot.com/articles/why-people-think-valve-just-accidentally-confirmed-half-life-3/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "I Play Rocky",
-   "signal": "YouTube GB 57,293/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/I_Play_Rocky",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "I Play Rocky - Official Trailer 2",
-     "url": "https://www.ign.com/videos/i-play-rocky-official-trailer-2",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "'I Play Rocky' biopic lands a knockout debut, sparks Oscar buzz",
-     "url": "https://www.usatoday.com/story/entertainment/movies/2026/09/13/i-play-rocky-sylvester-stallone-anthony-ippolito-toronto-film-festival/91743985007/",
-     "published": "2026-09-13"
-    }
-   ]
-  },
-  {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 110,733/h",
+   "signal": "YouTube GB-music 110,146/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -535,15 +547,15 @@
     },
     {
      "outlet": "Billboard",
-     "title": "Olivia Rodrigo Teases a Potential Pop Collaboration: ‘Olivia Does Remixes Now’",
-     "url": "https://www.billboard.com/music/pop/olivia-rodrigo-collaboration-remix-tease-1236359281/",
-     "published": "2026-10-12"
+     "title": "Chappell Roan Talks Bringing Her Perspective to Olivia Rodrigo’s ‘Expectations’: ‘I Love Making Things a Little Gay’",
+     "url": "https://www.billboard.com/music/pop/chappell-roan-olivia-rodrigo-zane-lowe-expectations-1236361689/",
+     "published": "2026-10-14"
     }
    ]
   },
   {
    "topic": "Tate McRae",
-   "signal": "YouTube GB-music 69,230/h",
+   "signal": "YouTube GB-music 68,995/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Tate_McRae",
    "articles": [
     {
@@ -555,21 +567,27 @@
    ]
   },
   {
-   "topic": "știrile pro tv",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/StirilePROTV",
+   "topic": "duhan van der merwe",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Duhan_van_der_Merwe",
+   "articles": []
+  },
+  {
+   "topic": "power outage near me",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Power_Outage_(Charmed)",
+   "articles": []
+  },
+  {
+   "topic": "leylah fernandez",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Leylah_Fernandez",
    "articles": []
   },
   {
    "topic": "khloe kardashian",
    "signal": "Google Trends US 100+",
    "wikipedia": "https://en.wikipedia.org/wiki/Khlo%C3%A9_Kardashian",
-   "articles": []
-  },
-  {
-   "topic": "kourtney kardashian",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kourtney_Kardashian",
    "articles": []
   },
   {
@@ -586,13 +604,13 @@
   },
   {
    "topic": "LNGSHOT",
-   "signal": "YouTube GB-music 69,250/h",
+   "signal": "YouTube GB-music 68,502/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Lngshot",
    "articles": []
   },
   {
    "topic": "Zara Larsson",
-   "signal": "YouTube US-music 40,354/h",
+   "signal": "YouTube US-music 40,214/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   }

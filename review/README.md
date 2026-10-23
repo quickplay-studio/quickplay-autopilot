@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 08:48): 8 of 1,000 subscribers · 5,716 of 10 million Shorts views in 90 days · 1,677 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 09:44): 8 of 1,000 subscribers · 5,772 of 10 million Shorts views in 90 days · 1,659 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
-YouTube checked Fri 23 Oct 8:31 (UK): 0 scheduled, 111 public, 18 uploads in the last 24 hours.
+YouTube checked Fri 23 Oct 9:44 (UK): 2 scheduled, 111 public, 20 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 8:43).
 
@@ -25,11 +25,11 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
-- emma (British female): 1.80 x typical, 29% stayed past the first seconds, 3 Shorts
-- george_dramatic (British male, more dramatic delivery): 1.05 x typical, 30% stayed past the first seconds, 6 Shorts
-- george_quick (British male, clear and quicker): 0.81 x typical, 25% stayed past the first seconds, 3 Shorts
-- lab-voice-1019 (British male, 3.15 words a second): 1.26 x typical, 39% stayed past the first seconds, 2 Shorts
-- heart (American female, expressive): 1.23 x typical, 38% stayed past the first seconds, 1 Short
+- emma (British female): 1.81 x typical, 29% stayed past the first seconds, 3 Shorts
+- george_dramatic (British male, more dramatic delivery): 1.06 x typical, 30% stayed past the first seconds, 6 Shorts
+- george_quick (British male, clear and quicker): 0.93 x typical, 25% stayed past the first seconds, 3 Shorts
+- lab-voice-1019 (British male, 3.15 words a second): 1.15 x typical, 39% stayed past the first seconds, 2 Shorts
+- heart (American female, expressive): 1.08 x typical, 38% stayed past the first seconds, 1 Short
 - lewis (British male, deeper and calm): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
 - isabella (British female, warm): 0 Shorts measured so far
@@ -40,11 +40,11 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (7 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (14 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (2 of 8 Shorts measured)
-- Testing energy: camera motion 0.7, punch-ins 0.05 (1 of 8 Shorts measured)
+- Testing energy: camera motion 0.7, punch-ins 0.05 (3 of 8 Shorts measured)
 - Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
-- Testing opening: the picture alone for 1 word, then the hook's card (0 of 8 Shorts measured)
+- Testing opening: the picture alone for 1 word, then the hook's card (2 of 8 Shorts measured)
 - 2026-10-23: opening retired graphic_first (1.22x against 1.88x for image_first over 35 Shorts)
 - 2026-10-23: grade retired lab-grade-1019 (0.37x against 1.92x for natural over 12 Shorts)
 - 2026-10-23: energy retired calm (0.57x against 1.65x for steady over 17 Shorts)
@@ -63,18 +63,28 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 
 ## On the channel (latest first)
 
+### Fri 23 Oct 10:30 · Clayface: The dark new body horror film in cinemas 🎬
+scheduled · 25 s · music: house-on-the-hill · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
+
+![QD-129](QD-129.jpg)
+
+### Fri 23 Oct 10:00 · Jenna Ortega: stepping away from television 📺
+scheduled · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
+
+![QD-128](QD-128.jpg)
+
 ### Fri 23 Oct 1:30 · Manchester United: The historic 1999 treble journey ⚽
-public · 18 views · 24 s · music: fire-in-the-sky · [script](../boards/done/QD-127.json) · [YouTube](https://youtube.com/shorts/Ck2cgaAUxiY)
+public · 15 views · 24 s · music: fire-in-the-sky · [script](../boards/done/QD-127.json) · [YouTube](https://youtube.com/shorts/Ck2cgaAUxiY)
 
 ![QD-127](QD-127.jpg)
 
 ### Fri 23 Oct 0:30 · Eden Sessions: Ben Howard headlines this summer 🎤
-public · 3 views · 22 s · music: paradise · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
+public · 2 views · 22 s · music: paradise · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
 
 ![QD-125](QD-125.jpg)
 
 ### Fri 23 Oct 0:00 · Bavuma scores majestic 179 against Australia 🏏
-public · 5 views · 24 s · music: stake-out · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
+public · 7 views · 24 s · music: stake-out · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
 
 ![QD-124](QD-124.jpg)
 
@@ -104,7 +114,7 @@ public · 25 s · music: defying-gravity · on Facebook · [script](../boards/do
 ![QD-119](QD-119.jpg)
 
 ### Thu 22 Oct 17:30 · Julia Stiles honours Heath Ledger on DWTS 🎭
-public · 31 views · 29 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
+public · 30 views · 29 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-118.json) · [YouTube](https://youtube.com/shorts/j4yzV_qS2OA)
 
 ![QD-118](QD-118.jpg)
 
@@ -114,7 +124,7 @@ public · 23 views · 26 s · music: rise-of-the-machines · on Facebook · [scr
 ![QD-117](QD-117.jpg)
 
 ### Thu 22 Oct 15:00 · American football joins the 2028 Olympics 🏈
-public · 14 views · 41 s · music: risen · on Facebook · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
+public · 15 views · 41 s · music: risen · on Facebook · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
 
 ![QD-116](QD-116.jpg)
 
@@ -129,12 +139,12 @@ public · 1 views · 24 s · music: mirror-mirror · on Facebook · [script](../
 ![QD-113](QD-113.jpg)
 
 ### Thu 22 Oct 13:30 · Cyberpunk 2077 gets massive new update 🎮
-public · 11 views · 21 s · music: the-bombs · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
+public · 13 views · 21 s · music: the-bombs · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 
 ### Thu 22 Oct 13:00 · Nobody Wants This S3 romance twist 🎬
-public · 87 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
+public · 89 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-111.json) · [YouTube](https://youtube.com/shorts/GpqVx0L_zaE)
 
 ![QD-111](QD-111.jpg)
 
@@ -144,7 +154,7 @@ public · 21 views · 25 s · music: mirror-mirror · on Facebook · [script](..
 ![QD-110](QD-110.jpg)
 
 ### Thu 22 Oct 11:30 · It Gets Worse: Leo Reich’s triple‑threat comedy 📺
-public · 62 views · 28 s · music: sneaky-spelunking · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
+public · 68 views · 28 s · music: sneaky-spelunking · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
 
 ![QD-109](QD-109.jpg)
 
@@ -164,22 +174,22 @@ public · 8 views · 20 s · music: once-upon-a-time · [script](../boards/done/
 ![QD-106](QD-106.jpg)
 
 ### Thu 22 Oct 5:30 · The incredible journey of Bayern Munich’s Alphonso Davies 🏆
-public · 15 views · 33 s · music: once-upon-a-time · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
+public · 16 views · 33 s · music: once-upon-a-time · [script](../boards/done/QD-105.json) · [YouTube](https://youtube.com/shorts/PVkVdBiGf5s)
 
 ![QD-105](QD-105.jpg)
 
 ### Thu 22 Oct 5:00 · Taylor Swift's haunted video twist 🎬
-public · 138 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
+public · 139 views · 32 s · music: purple-desire · [script](../boards/done/QD-103.json) · [YouTube](https://youtube.com/shorts/wKmX0n-LEUk)
 
 ![QD-103](QD-103.jpg)
 
 ### Thu 22 Oct 4:30 · The history of Club Brugge explained 🇧🇪
-public · 28 views · 27 s · music: cued-for-liftoff · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
+public · 26 views · 27 s · music: cued-for-liftoff · [script](../boards/done/QD-102.json) · [YouTube](https://youtube.com/shorts/o9CH_gaz12Q)
 
 ![QD-102](QD-102.jpg)
 
 ### Thu 22 Oct 4:00 · Ella Langley and Morgan Wallen released new duet 🎶
-public · 269 views · 22 s · music: purple-desire · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
+public · 264 views · 22 s · music: purple-desire · [script](../boards/done/QD-101.json) · [YouTube](https://youtube.com/shorts/GFJ00EZuhRQ)
 
 ![QD-101](QD-101.jpg)
 
@@ -204,17 +214,17 @@ public · 11 views · 21 s · music: death-duel · [script](../boards/done/QD-09
 ![QD-097](QD-097.jpg)
 
 ### Thu 22 Oct 1:30 · Dave Raindance hits number one 🎶
-public · 46 views · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
+public · 47 views · 27 s · music: good-energy · [script](../boards/done/QD-096.json) · [YouTube](https://youtube.com/shorts/CA8JNcmMZoc)
 
 ![QD-096](QD-096.jpg)
 
 ### Thu 22 Oct 1:00 · Who holds the record for the most Grammy wins? 🎤
-public · 25 views · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
+public · 24 views · 20 s · music: dance-with-you · [script](../boards/done/QD-095.json) · [YouTube](https://youtube.com/shorts/Ulv7gqbpKuM)
 
 ![QD-095](QD-095.jpg)
 
 ### Thu 22 Oct 0:30 · What is the loudest sound ever recorded on Earth? 🌋
-public · 25 views · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
+public · 26 views · 27 s · music: horizons · [script](../boards/done/QD-094.json) · [YouTube](https://youtube.com/shorts/L8Hzj6oXI1Y)
 
 ![QD-094](QD-094.jpg)
 
@@ -229,7 +239,7 @@ public · 13 views · 29 s · music: after-sunset · on Instagram · [script](..
 ![QD-092](QD-092.jpg)
 
 ### Wed 21 Oct 23:00 · Why the Phobos rover only has two hours 🛰️
-public · 4 views · 36 s · music: horizons · on Instagram · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
+public · 7 views · 36 s · music: horizons · on Instagram · [script](../boards/done/QD-091.json) · [YouTube](https://youtube.com/shorts/YTxtjZbLxdg)
 
 ![QD-091](QD-091.jpg)
 
@@ -252,13 +262,3 @@ public · 68 views · 27 s · music: dance-with-you · on Instagram · on Facebo
 public · 8 views · 27 s · music: scale-the-mountain · on Instagram · on Facebook · [script](../boards/done/QD-087.json) · [YouTube](https://youtube.com/shorts/oA9hiDV3JXY)
 
 ![QD-087](QD-087.jpg)
-
-### Wed 21 Oct 16:30 · How Apollo 13 astronauts survived their spacecraft disaster 🤯
-public · 2 views · 26 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-085.json) · [YouTube](https://youtube.com/shorts/iQh-V6RdPMM)
-
-![QD-085](QD-085.jpg)
-
-### Wed 21 Oct 16:00 · How Toru Iwatani created Pac-Man 🕹️
-public · 2 views · 25 s · music: f16 · on Instagram · on Facebook · [script](../boards/done/QD-083.json) · [YouTube](https://youtube.com/shorts/5qb7XUBcYY8)
-
-![QD-083](QD-083.jpg)

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T12:30:00Z",
  "rendered": "2026-10-22T09:13:09.264610+00:00",
- "title": "Cyberpunk 2077 gets massive new update 🎮",
+ "title": "Cyberpunk 2077 adds Edgerunners quests 🌆",
  "background_notes": [
   "picked nothing (+0 spares)"
  ],
@@ -78,7 +78,14 @@
  "social_release": "social-QD-112",
  "engage": {
   "comment": "UgxKIsVHbm3liwTCycd4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Cyberpunk 2077 gets massive new update 🎮",
+   "to": "Cyberpunk 2077 adds Edgerunners quests 🌆",
+   "at": "2026-10-23T13:26+00:00",
+   "views_an_hour": 0.5,
+   "typical": 1.1
+  }
  },
  "facebook": {
   "video": "1881371586359265",

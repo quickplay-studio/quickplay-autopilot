@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T13:00:00Z",
  "rendered": "2026-10-22T09:14:19.931014+00:00",
- "title": "Dancing with the Stars makes history 💃",
+ "title": "Dancing with the Stars season 35 firsts 🌟",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:3742 skipped: only 960x540, needs 720p"
@@ -102,6 +102,13 @@
  },
  "engage": {
   "comment": "UgyvBzyu0Vi02WoBWRl4AaABAg",
-  "playlist": "Quickplay Daily: Entertainment"
+  "playlist": "Quickplay Daily: Entertainment",
+  "title": {
+   "swapped_from": "Dancing with the Stars makes history 💃",
+   "to": "Dancing with the Stars season 35 firsts 🌟",
+   "at": "2026-10-23T13:26+00:00",
+   "views_an_hour": 0.0,
+   "typical": 1.1
+  }
  }
 }

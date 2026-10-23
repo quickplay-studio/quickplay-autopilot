@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T17:00:00Z",
  "rendered": "2026-10-22T14:34:53.429481+00:00",
- "title": "Best-selling single of all time: the truth 🎶",
+ "title": "What is the best selling single ever? 📀",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:24490 skipped: nearly black (brightness 0.03)"
@@ -93,6 +93,13 @@
  },
  "engage": {
   "comment": "UgxMHpZA6cQrMIHUTJJ4AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "Best-selling single of all time: the truth 🎶",
+   "to": "What is the best selling single ever? 📀",
+   "at": "2026-10-23T17:17+00:00",
+   "views_an_hour": 0.0,
+   "typical": 1.1
+  }
  }
 }

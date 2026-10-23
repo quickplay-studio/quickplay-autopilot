@@ -46,8 +46,8 @@ Newest work at the bottom of each section. Every change ran the full test suite 
 7. **The clips' spoken take is confirmed working on GitHub, and the 11 test clips are not wasted.** Tonight's private
    test made 11 clips: 9 with the voice reading our own intro and reaction ("Watch as Mitch plots his next big move" ...
    "Did his strategy surprise you? What do you think?"), 2 as on-screen text because Speed's campaign avoids AI. They
-   were private, so a new "promote" step put them into Saturday's 19:00 batch like any other clip (posted, submitted,
-   counted in the day). The same job's installs stalled for 37 minutes on a slow mirror; installs now retry with time
+   were private, so a new "promote" step puts them into Saturday's 19:00 batch like any other clip (posted, submitted,
+   counted in the day). YouTube's daily allowance was nearly used when it ran, so it finishes in the 10:00 run. The same job's installs stalled for 37 minutes on a slow mirror; installs now retry with time
    limits and the clips step always leaves time to save its work.
 8. **Two campaigns were making no clips; fixed.** valorant-champs and kevin-langue-ghost got "no moments" every run:
    two free models replied with nothing, the system read that as an empty answer instead of asking the next model, and

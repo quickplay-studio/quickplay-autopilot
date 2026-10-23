@@ -928,7 +928,8 @@ def promote_tests(hours=48):
     Only when asked: "promote" in requests/clips.txt (a test stays private otherwise). 23 October: the spoken-take test
     made 11 good clips privately."""
     import quota
-    cs, cut, clients, n, fixed = campaigns(), NOW - dt.timedelta(hours=hours), {}, 0, {}
+    cs, cut, clients, n, fixed, blocked = campaigns(), NOW - dt.timedelta(hours=hours), {}, 0, {}, False
+    pending = STATE / "promote.json"          # asked but held back by the YouTube allowance: the next run or prepare does it
     for p in sorted(PLANS.glob("*.json")):
         if p.name.endswith(".words.json") or p.stem not in cs: continue
         cid = p.stem; plan_ = json.loads(p.read_text()); changed = False
@@ -938,7 +939,7 @@ def promote_tests(hours=48):
             try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
             except ValueError: continue
             if up < cut: continue
-            if not quota.allow(50, "clip promote"): log("promote: no YouTube allowance left today"); break
+            if not quota.allow(50, "clip promote"): blocked = True; break
             ch = mchannel(cid, m)
             try:
                 if ch not in clients: clients[ch] = clips_client(ch)
@@ -951,6 +952,12 @@ def promote_tests(hours=48):
             fixed[m["id"]] = when.strftime("%Y-%m-%d %H:%M"); changed = True; n += 1
             log(f"{m['id']}: private test promoted: public with the batch at {when:%H:%M} UK on {ch}")
         if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+        if blocked: break
+    if blocked:
+        STATE.mkdir(parents=True, exist_ok=True)
+        pending.write_text(json.dumps({"asked": NOW.isoformat(timespec="minutes"), "hours": hours + 24}))
+        log("promote: the YouTube allowance is kept for today's uploads; the next run after the reset (08:00 UK) finishes it")
+    else: pending.unlink(missing_ok=True)
     sp = ROOT / "clips" / "submit.csv"
     if fixed and sp.exists():
         rows = list(csv.DictReader(sp.open()))
@@ -1536,6 +1543,9 @@ def main(argv):
     if cmd == "promote":
         promote_tests()
         return
+    if cmd in ("run", "prepare") and (STATE / "promote.json").exists():      # a promote the allowance held back
+        try: promote_tests(int(json.loads((STATE / "promote.json").read_text()).get("hours") or 72))
+        except Exception as e: log("promote:", str(e)[:200])
     if cmd == "probe":
         for u in ids: probe(u)
         return

@@ -261,7 +261,7 @@ assert C.insights(flat)["min_score"] is None and C.min_score() == C.MIN_SCORE
 print("viral score ok")
 
 # private test clips join the next batch only when asked ("promote"): the publish time on YouTube, the day's count, the
-# submit rows' public time; a test older than 48 hours stays private
+# submit rows' public time; an old test stays private
 import quota
 quota.allow, quota.spend = (lambda *a, **k: True), (lambda *a, **k: None)
 CALLS = []
@@ -271,7 +271,7 @@ C.clips_client = lambda ch: types.SimpleNamespace(videos=lambda: _V())
 plan_p = C.PLANS / "speed-expedia.json"
 pl = json.loads(plan_p.read_text())
 pl["moments"].append({"id": "speed-expedia-49", "video": "old", "publish_at": "private", "channel": "clips",
-                      "uploaded": (C.NOW - dt.timedelta(days=3)).isoformat(timespec="minutes")})
+                      "uploaded": (C.NOW - dt.timedelta(days=5)).isoformat(timespec="minutes")})
 plan_p.write_text(json.dumps(pl))
 C.ROOT = pathlib.Path(SCRATCH); (C.ROOT / "clips").mkdir(exist_ok=True)
 with (C.ROOT / "clips" / "submit.csv").open("w", newline="") as f:
@@ -286,6 +286,13 @@ assert C.scheduled_today("clips") == 2
 row = next(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))
 assert row["public_at_uk"] == when.strftime("%Y-%m-%d %H:%M"), row
 assert C.promote_tests() == 0          # once only
+# held back by the YouTube allowance: a marker, and the next run or prepare finishes it
+C.STATE = pathlib.Path(SCRATCH) / "state"
+pl = json.loads(plan_p.read_text()); pl["moments"][0].update(publish_at="private"); plan_p.write_text(json.dumps(pl))
+quota.allow = lambda *a, **k: False
+assert C.promote_tests() == 0 and (C.STATE / "promote.json").exists()
+quota.allow = lambda *a, **k: True
+assert C.promote_tests(json.loads((C.STATE / "promote.json").read_text())["hours"]) == 1 and not (C.STATE / "promote.json").exists()
 print("promote ok")
 
 # a long transcript is planned a window at a time: the stretch with the least already clipped (23 October: 144 minutes at

@@ -769,15 +769,22 @@ def upload(cid, mode=None):
         tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
         desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
                 f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}).")
-        ch = mchannel(cid, m)
-        if ch in refused: continue
-        try:
-            if ch not in clients: clients[ch] = clips_client(ch)
-            vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
-        except Exception as e:
-            log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
-            if "uploadLimitExceeded" in str(e): ceiling_learn(scheduled_today(ch), refused=True, channel=ch); refused.add(ch)
-            continue
+        vid, own = None, mchannel(cid, m)
+        # the clip's own channel first; when YouTube refuses it for its daily limit (the gaming and irl channels can't be
+        # phone-verified: one number, 23 October), the campaign's other channels take it, so a made clip isn't stranded
+        for ch in [own] + [x for x in campaign_channels(cid) + ["clips"] if x != own]:
+            if ch in refused: continue
+            try:
+                if ch not in clients: clients[ch] = clips_client(ch)
+                vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
+            except Exception as e:
+                log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
+                if "uploadLimitExceeded" in str(e) or "exceeded the number of videos" in str(e):
+                    ceiling_learn(scheduled_today(ch), refused=True, channel=ch); refused.add(ch); continue
+                break                                   # anything else: this clip waits for the next run
+            if ch != own: m["channel"] = ch; log(f"{m['id']}: {own} is at its limit, posted on {ch} instead")
+            break
+        if not vid: continue
         m.update(video=vid, url=f"https://youtube.com/shorts/{vid}", uploaded=NOW.isoformat(timespec="minutes"),
                  publish_at=publish_at or "private", mode=mode)
         where = re.search(r"https://[^\s,]+", str((c.get("submit") or {}).get("where", "")))

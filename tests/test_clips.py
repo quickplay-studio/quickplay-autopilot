@@ -206,3 +206,28 @@ assert all(v["best"] is None for v in C.insights(zero)["tests"].values())
 some = [dict(r, views="40" if r["test_layout"] == "full" else "2") for r in zero]
 assert C.insights(some)["tests"]["layout"]["best"] == "full"
 print("verdicts ok")
+
+# a channel at its YouTube limit hands the clip to the campaign's next channel (gaming and irl can't be phone-verified)
+import types
+Y = sys.modules.get("youtube") or types.ModuleType("youtube"); sys.modules["youtube"] = Y      # no Google libraries needed here
+C.PLANS = pathlib.Path(SCRATCH) / "plans_up"; C.PLANS.mkdir(exist_ok=True); C.OUT = pathlib.Path(SCRATCH) / "out_up"; C.OUT.mkdir(exist_ok=True)
+(C.OUT / "speed-expedia-50.mp4").write_bytes(b"x"); (C.OUT / "speed-expedia-51.mp4").write_bytes(b"x")
+(C.PLANS / "speed-expedia.json").write_text(json.dumps({"moments": [
+    {"id": "speed-expedia-50", "made": "t", "file": "speed-expedia-50.mp4", "hook": "a", "title": "t", "channel": "irl", "start": 0, "end": 30},
+    {"id": "speed-expedia-51", "made": "t", "file": "speed-expedia-51.mp4", "hook": "b", "title": "t", "channel": "irl", "start": 40, "end": 70}]}))
+C.gh = lambda *a, **k: subprocess.CompletedProcess(a, 0)
+C.clips_client = lambda ch: ch
+C.add_rows = lambda rows: None
+C.ceiling_learn = lambda *a, **k: None
+UPS = []
+def fake_upload(client, *a, **k):
+    UPS.append(client)
+    if client == "irl": raise RuntimeError('<HttpError 400 "The user has exceeded the number of videos they may upload." uploadLimitExceeded>')
+    return f"vid{len(UPS)}"
+Y.upload = fake_upload
+C.campaign_channels = lambda cid: ["irl", "clips"]
+rows = C.upload("speed-expedia", mode="private")
+ms = json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]
+assert [m.get("channel") for m in ms] == ["clips", "clips"] and all(m.get("video") for m in ms), ms
+assert UPS == ["irl", "clips", "clips"], UPS        # irl refused once, then skipped for the run
+print("channel fallback ok")

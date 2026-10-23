@@ -153,9 +153,9 @@ def plan(breaking=False, hint=""):
             except Exception: continue
             if b.get("created") == str(day) and not b.get("reserve"): made += 1
     import quota
-    limit = quota.daily_limit() - (1 if day.weekday() == 6 else 0)
+    limit = quota.target() - (1 if day.weekday() == 6 else 0)
     runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
-    per_run = share("breaking", 2, 4) if breaking else max(1, -(-runs.get(run, 6) * quota.daily_limit() // max(1, sum(runs.values()))))
+    per_run = share("breaking", 2, 4) if breaking else max(1, -(-runs.get(run, 6) * quota.target() // max(1, sum(runs.values()))))
     if run == "afternoon": per_run = min(max(30, limit * 3 // 4), max(per_run, limit - made))     # the day's last run makes up anything the morning missed
     cap = min(per_run, max(0, limit - made))
     if os.environ.get("WRITE_COUNT", "").strip().isdigit(): cap = int(os.environ["WRITE_COUNT"])
@@ -292,6 +292,30 @@ def boosts(feature="category"):
         elif v == "cut back": out[r.get("value")] = -2
         elif v == "early sign": out[r.get("value")] = 1 if lift > 1.15 else -1 if lift < 0.85 else 0
     return out
+
+
+def category_shares():
+    """Each category's share of the day's Shorts from the data (analytics/drivers.csv category lift, squared, so the
+    winners get most places: on 23 October Music 1.68x, Sport 1.53x, Film 1.45x; Gaming, Tech, Entertainment and
+    Science 0.3x to 0.6x), at least 4% each so every category stays measured; a stopped one gets none. Empty without data."""
+    p, w = ROOT / "analytics" / "drivers.csv", {}
+    if not p.exists(): return {}
+    for r in csv.DictReader(p.open()):
+        if r.get("feature") != "category" or not r.get("value"): continue
+        try: lift = float(r.get("lift") or 1)
+        except ValueError: continue
+        w[r["value"]] = 0.0 if r.get("verdict") == "stop" else max(0.2, lift) ** 2
+    tot = sum(w.values())
+    if not tot: return {}
+    out = {c: (max(0.04, v / tot) if v else 0.0) for c, v in w.items()}
+    tot = sum(out.values())
+    return {c: v / tot for c, v in out.items()}
+
+
+def over_share(cat, written, cap, shares):
+    """True when the day's run already has its category's share of places (rounded up; no data: never)."""
+    if not shares or cap <= 0 or cat not in shares: return False
+    return sum(1 for b in written if b.get("category") == cat) >= max(1, -(-shares[cat] * cap // 1))
 
 
 def source_of(signal):
@@ -519,7 +543,9 @@ def evergreen_packs(kinds, seen, trending=()):
     tr = TRENDING_ASK.format(subjects="; ".join(subjects), n=max(1, round(trend_share() * len(kinds)))) if subjects else ""
     terms = search_terms()
     if terms: tr += SEARCH_ASK.format(terms="; ".join(terms))
-    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=", ".join(cats), recent=recent, trending=tr), None,
+    sh = category_shares()
+    named = ", ".join(f"{c} (about {round(100 * sh[c])}% of the ideas)" if c in sh else c for c in cats)
+    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=named, recent=recent, trending=tr), None,
                              timeout=100, temperature=0.8)
     items = ans.get("items") if isinstance(ans, dict) else None
     packs = []
@@ -997,8 +1023,13 @@ def main():
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
     rank = lambda kp: (kp[0] - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
-    for _, p in sorted(topics, key=rank):
+    shares, later = category_shares(), []
+    if shares: print("category shares:", {c: round(v, 2) for c, v in sorted(shares.items(), key=lambda x: -x[1])})
+    order = sorted(topics, key=rank)
+    for k, (_, p) in enumerate(order):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        if p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
+            p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end
         if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:
             print("stopped choice, skipped:", p["topic"], p.get("category")); continue
         if len(p.get("verified") or []) + len(p.get("one_source") or []) < 2:      # one fact makes a thin Short

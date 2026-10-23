@@ -127,7 +127,7 @@ def reserve_step(lines):
             except Exception: continue
             if b.get("created") == today and not b.get("reserve"): made += 1
     used = sum(1 for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json") if load_status(p.stem).get("from_reserve") == today)
-    want = quota.daily_limit() - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
+    want = quota.target() - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
     gap = min(int(plan.CFG.get("reserve_per_day", 3)) - used, want - made - used)
     if gap <= 0: return
     auto = plan.CFG.get("approval", "flagged") in ("flagged", "none")

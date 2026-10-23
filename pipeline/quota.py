@@ -41,6 +41,18 @@ def daily_limit():
     except (TypeError, ValueError): return base
 
 
+VOLUME_P = ROOT / "status" / "volume.json"
+
+
+def target():
+    """Shorts a day we choose to make (Charlie, 23 October: fewer, better, a week's test): status/volume.json "per_day"
+    (set and judged by analytics.volume_test), else config shorts_per_day, never above the learned ceiling (daily_limit)."""
+    try: n = int(json.loads(VOLUME_P.read_text()).get("per_day") or 0)
+    except Exception: n = 0
+    n = n or int(CFG.get("shorts_per_day") or 0)
+    return max(1, min(daily_limit(), n)) if n else daily_limit()
+
+
 def _decide(change, why, evidence):
     p = ROOT / "analytics" / "decisions.csv"
     import csv

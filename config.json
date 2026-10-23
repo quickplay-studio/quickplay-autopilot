@@ -1,5 +1,8 @@
 {
  "daily_limit": 40,
+ "shorts_per_day": 15,
+ "volume_test": {"start": "2026-10-24", "days": 7, "per_day": 15, "before": 40},
+ "shorts_per_day_note": "Shorts a day we choose to make, under the learned ceiling (daily_limit): 15 from 24 October, a week's test of fewer, better Shorts against the 40 a day before (Charlie, 23 October). analytics.volume_test judges it on 31 October from the channel's daily views and writes status/volume.json (which then wins): kept when daily views hold at 90% or more, else back to 40. Slots: this many a day at the learned best times.",
  "per_session": 12,
  "slot_first": "07:30",
  "slot_every_minutes": 36,

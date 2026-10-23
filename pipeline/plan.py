@@ -68,7 +68,8 @@ def learned_slots(n):
     return None
 
 def day_slots(day):
-    n = max(int(CFG.get("slots_per_day", 10)), quota.daily_limit())      # the learned ceiling needs a slot for every Short
+    n = quota.target() if CFG.get("shorts_per_day") or quota.VOLUME_P.exists() else \
+        max(int(CFG.get("slots_per_day", 10)), quota.daily_limit())       # a slot for every Short, at the day's best times
     times = learned_slots(n)
     if times:
         return [dt.datetime(day.year, day.month, day.day, *map(int, t.split(":")), tzinfo=UK).astimezone(dt.timezone.utc)

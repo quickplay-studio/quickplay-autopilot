@@ -32,12 +32,17 @@ assert Q.daily_limit() == int(Q.CFG.get("upload_limit_max", 72)), Q.daily_limit(
 assert Q.refused(3) == int(Q.CFG.get("upload_limit_min", 10))        # never under the floor
 print("1 ceiling ok", DECIDED[:2], "...", DECIDED[-1])
 
-# 2. the writer's day follows the ceiling
+# 2. the writer's day follows the ceiling (with no chosen number a day), and never passes the chosen number (15)
 import writer as W
+Q.VOLUME_P = pathlib.Path(SCRATCH) / "volume.json"
+chosen = Q.CFG.get("shorts_per_day"); Q.CFG["shorts_per_day"] = 0
 Q.LIMIT_P.write_text(json.dumps({"limit": 60}))
 run, day, cap = W.plan(False, "morning")
 runs = W.CFG["runs"]
 assert cap <= 60 and cap >= 60 * runs["morning"] // sum(runs.values()) - 1, (cap, runs)
+Q.CFG["shorts_per_day"] = 15
+assert W.plan(False, "morning")[2] <= 15
+Q.CFG["shorts_per_day"] = chosen
 Q.LIMIT_P.write_text(json.dumps({"limit": 40}))
 print("2 writer plan ok", cap)
 

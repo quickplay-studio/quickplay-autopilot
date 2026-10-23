@@ -655,6 +655,8 @@ def main():
         (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
         (OUT / "models.json").write_text(json.dumps(writer_scores(rows), indent=1, ensure_ascii=False))
         slot_scores(rows)
+        try: volume_test()
+        except Exception as e: print("volume test:", str(e)[:150])
         write_audience(aud)
         reg_rows, aud["_regions"] = regions(rows, aud)
         write_csv(OUT / "regions.csv", reg_rows, ["kind", "country", "views", "share_pct", "avg_viewed_pct", "subs_gained", "shorts_seen",
@@ -782,6 +784,52 @@ def slot_scores(rows):
                              "slots": {k: {"n": len(v), "score": round(statistics.median(v), 3)} for k, v in sorted(by.items())},
                              "bands": {c: {b: {"n": len(v), "score": round(statistics.median(v), 3)} for b, v in sorted(bs.items())}
                                        for c, bs in sorted(bands.items())}}, indent=1))
+
+
+def volume_test(today=None):
+    """Judges the fewer-better test (config shorts_per_day, from 24 October, 7 days) once it has run: the channel's average
+    daily views over the test week (from the daily snapshots' all-time totals) against the week before, and the median
+    views per Short. Daily views at 90% or more of before: the lower number stays (as many views for less work and quota,
+    each Short with more room); else back to the number before. Writes status/volume.json (quota.target reads it) and a
+    line in decisions.csv. Returns the verdict, or None while the test runs."""
+    p = ROOT / "status" / "volume.json"
+    try: st = json.loads(p.read_text())
+    except Exception: st = {}
+    test = CFG.get("volume_test") or {}
+    if st.get("verdict") or not test.get("start"): return None
+    start = dt.date.fromisoformat(test["start"]); days = int(test.get("days", 7))
+    today = today or NOW.astimezone(ZoneInfo("Europe/London")).date()
+    if today < start + dt.timedelta(days=days + 1): return None
+    snaps = {}
+    for r in csv.DictReader((OUT / "daily.csv").open()):
+        if r.get("source") == "snapshot" and r.get("yt_views_total"): snaps[r["day"]] = float(r["yt_views_total"])
+    def total(d):
+        got = [snaps[k] for k in sorted(snaps) if k >= str(d)]
+        return got[0] if got else None
+    a0, a1, b1 = total(start - dt.timedelta(days=days)), total(start), total(start + dt.timedelta(days=days))
+    if None in (a0, a1, b1): return None
+    before, during = (a1 - a0) / days, (b1 - a1) / days
+    ratio = during / before if before else 1.0
+    keep = ratio >= 0.9
+    n_new, n_old = int(test.get("per_day", 15)), int(test.get("before", 40))
+    st = {"per_day": n_new if keep else n_old, "verdict": "kept" if keep else "back", "judged": str(today),
+          "views_a_day_before": round(before), "views_a_day_during": round(during), "ratio": round(ratio, 2)}
+    p.write_text(json.dumps(st, indent=1))
+    _decision("Shorts a day", f"{'Keep' if keep else 'Back to'} {st['per_day']} Shorts a day",
+              f"{n_new} a day for {days} days brought {round(during):,} views a day against {round(before):,} with {n_old} a day ({ratio:.2f}x)",
+              "daily.csv snapshots (yt_views_total)", today + dt.timedelta(days=7))
+    return st
+
+
+def _decision(area, change, why, evidence, check_on):
+    p = OUT / "decisions.csv"
+    new = not p.exists()
+    with p.open("a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=DEC_FIELDS)
+        if new: w.writeheader()
+        w.writerow({"date": str(NOW.date()), "area": area, "change": change, "why": why, "evidence": evidence,
+                    "check_on": str(check_on), "by": "analytics (automatic)"})
+
 
 def write_csv(path, rows, fields):
     with open(path, "w", newline="") as f:

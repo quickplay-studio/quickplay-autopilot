@@ -59,8 +59,28 @@ def youtube_checks():
             out.append(check(name, f"{title} ({handle or cid})", ok, expected="a Quickplay channel of the studio account",
                              note="" if ok else "neither a listed channel id nor a Quickplay name"))
         except (Exception, SystemExit) as e:
+            if EXPIRED.search(str(e)):      # an expired or revoked sign-in reaches no account at all: not a security problem,
+                out.append(check(name, "expired sign-in", True, note="reconnect it (the hub's Accounts tab or the social workflow)"))
+                EXPIRED_SIGNINS.append(name); continue      # so posting is not stopped for it; expired() raises its own issue
             out.append(check(name, "", False, note=f"{type(e).__name__}: {str(e)[:120]}"))
     return out
+
+
+EXPIRED = re.compile(r"invalid_grant|expired or revoked|Token has been expired", re.I)
+EXPIRED_SIGNINS = []
+
+
+def expired_note():
+    """One issue listing the sign-ins that have expired (closed again once they work)."""
+    try:
+        import alerts as A
+        title = "🔑 A sign-in has expired: reconnect it"
+        if EXPIRED_SIGNINS:
+            A.raise_issue(title, "These sign-ins no longer work (Google says expired or revoked), so their uploads stop until they "
+                          "are reconnected: " + ", ".join(EXPIRED_SIGNINS) + ". Reconnect from the social workflow (channel name) or ask "
+                          "Claude from your Quickplay page. Nothing outside the studio account is involved, so posting elsewhere continues.")
+        else: A.clear(title, "Every sign-in works again.")
+    except Exception as e: log("expired alert:", str(e)[:120])
 
 
 def meta_checks():
@@ -174,7 +194,9 @@ def audit(live=True):
     checks = secret_checks() + token_file_checks()
     if live and len(os.environ.get("SOCIAL_KEY", "")) < 20:
         checks.append(check("SOCIAL_KEY", "missing", False, note="the saved sign-ins cannot be read, so they cannot be checked"))
-    elif live: checks += login_checks() + youtube_checks() + meta_checks() + tiktok_checks()
+    elif live:
+        checks += login_checks() + youtube_checks() + meta_checks() + tiktok_checks()
+        expired_note()
     bad = [c for c in checks if not c["ok"]]
     result = {"checked": NOW.isoformat(timespec="seconds"), "ok": not bad, "studio": ACC.get("google", ""),
               "checks": checks, "problems": [f"{c['what']}: {c['found']} ({c['note']})" for c in bad]}

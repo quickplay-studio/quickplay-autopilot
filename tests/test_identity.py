@@ -41,3 +41,22 @@ I.OUT.write_text(json.dumps({"checked": I.NOW.isoformat(), "ok": True, "problems
 I.OUT.write_text(json.dumps({"checked": I.NOW.isoformat(), "ok": False, "problems": ["youtube_x: Charlie Page (not a Quickplay name)"]})); assert I.gate() == 1
 print("5 gate ok")
 print("identity ok")
+
+# 6. an expired or revoked YouTube sign-in is a reconnect alert, not a security problem that stops all posting
+import types
+os.environ.setdefault("YT_CLIENT_ID", "x"); os.environ.setdefault("YT_CLIENT_SECRET", "y")
+soc = types.ModuleType("social"); soc.load = lambda name: {"refresh_token": "r", "scope": "s"}; sys.modules["social"] = soc
+g1 = types.ModuleType("google.oauth2.credentials"); g1.Credentials = lambda *a, **k: object()
+g2 = types.ModuleType("googleapiclient.discovery")
+def boom(*a, **k): raise RuntimeError("('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant'})")
+g2.build = boom
+for name, mod in (("google", types.ModuleType("google")), ("google.oauth2", types.ModuleType("google.oauth2")), ("google.oauth2.credentials", g1),
+                  ("googleapiclient", types.ModuleType("googleapiclient")), ("googleapiclient.discovery", g2)):
+    sys.modules[name] = mod
+old_root = I.ROOT; I.ROOT = SCRATCH / "exp"; (I.ROOT / "tokens").mkdir(parents=True); (I.ROOT / "tokens" / "youtube.enc").write_bytes(b"x")
+r = I.youtube_checks()
+assert r[0]["ok"] and r[0]["found"] == "expired sign-in" and I.EXPIRED_SIGNINS == ["youtube"], r
+g2.build = lambda *a, **k: (_ for _ in ()).throw(RuntimeError("HttpError 403 forbidden"))      # any other failure still fails
+I.EXPIRED_SIGNINS.clear(); r = I.youtube_checks(); assert not r[0]["ok"], r
+I.ROOT = old_root
+print("6 expired sign-in ok")

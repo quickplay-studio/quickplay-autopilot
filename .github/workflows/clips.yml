@@ -44,6 +44,20 @@ jobs:
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography gdown faster-whisper playwright Pillow "opencv-python-headless<5" google-api-python-client==2.* google-auth==2.* tzdata
           python -m playwright install --with-deps chromium >/dev/null 2>&1 || python -m playwright install chromium
           sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
+      # our own take on every clip (23 October): the Daily Shorts' voice (Chatterbox) reads the intro and the reaction,
+      # installed only for the runs that make clips
+      - name: Voice packages
+        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        run: |
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
+      - uses: actions/cache@v4
+        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
+      - name: Voice model
+        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        run: python pipeline/get_model.py models/chatterbox && echo "CB_CKPT=$GITHUB_WORKSPACE/models/chatterbox" >> "$GITHUB_ENV"
       - name: Clips
         env:
           GH_TOKEN: ${{ github.token }}
@@ -70,6 +84,7 @@ jobs:
           FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
           FB_IRL_PAGE_ID: ${{ secrets.FB_IRL_PAGE_ID }}
           CLIPS_WORK: /mnt/clips
+          TQDM_DISABLE: '1'
           IN_COUNT: ${{ inputs.count }}
           IN_MODE: ${{ inputs.mode }}
         run: |

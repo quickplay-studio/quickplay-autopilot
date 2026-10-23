@@ -77,6 +77,24 @@ if shutil.which("ffmpeg") and C.FONT:
                           capture_output=True, text=True).stdout.strip()
     assert info == "1080,1920", info
     print("6 render ok", out.stat().st_size, "bytes")
+    # our own take: spoken intro over the start (stream sound dipped), our reaction on a held last frame
+    dur = lambda p: float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
+                                         capture_output=True, text=True).stdout)
+    for name, secs in (("i.wav", 2.0), ("o.wav", 3.0)):
+        subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", f"sine=frequency=220:duration={secs}",
+                        "-ar", "24000", "-ac", "1", str(C.WORK / name)], check=True)
+    C.take_voice = lambda m, i, o: (C.WORK / "i.wav", C.WORK / "o.wav")
+    m2 = dict(m, id="speed-expedia-02", take_intro="Watch what happens when he opens this", take_outro="Would you have picked Tokyo? Tell us below")
+    os.environ.pop("CLIPS_TAKE", None)
+    camp = C.CFG["campaigns"]["speed-expedia"]; avoid = list(camp["rules"].get("avoid") or [])
+    camp["rules"]["avoid"] = [a for a in avoid if "AI" not in a]           # a campaign without the AI rule: spoken take
+    out2 = C.make_clip("speed-expedia", m2, words)
+    assert m2["tests"]["take"] == "voice" and abs(dur(out2) - (6.0 + 3.6)) < 0.6, (m2["tests"], dur(out2))
+    camp["rules"]["avoid"] = avoid + ["AI-generated video"]                 # a campaign that avoids AI: text take only
+    m3 = dict(m2, id="speed-expedia-03"); out3 = C.make_clip("speed-expedia", m3, words)
+    assert m3["tests"]["take"] == "text" and abs(dur(out3) - 9.5) < 0.6, (m3["tests"], dur(out3))
+    camp["rules"]["avoid"] = avoid
+    print("6 take ok", round(dur(out2), 1), round(dur(out3), 1))
 else:
     print("6 render skipped (no ffmpeg or font here)")
 print("clips ok")

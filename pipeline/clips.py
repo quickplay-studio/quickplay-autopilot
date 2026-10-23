@@ -51,6 +51,8 @@ Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
 comments that viewers can answer, under 90 characters, UK English spelling (favourite, colour)", "score": 1 to 10,
+"intro": "our own spoken set-up for the first seconds, 6 to 12 words, opinion and framing only, no spoiler",
+"outro": "our own reaction after the payoff, 6 to 14 words, ending with a question for the comments",
 "why": "one line: the grab, the payoff"}}]}}"""
 
 
@@ -396,6 +398,8 @@ def plan(cid, n=8):
                                  "title": re.sub(r"[–—]", "-", str(m.get("title") or f"{c['subject']}: {hook}")).strip()[:70],
                                  "why": str(m.get("why") or "")[:200], "planned": NOW.isoformat(timespec="minutes"), "model": model,
                                  "peak": num(m.get("peak")), "score": num(m.get("score")),
+                                 **{f"take_{k}": re.sub("[\u2013\u2014]", ",", str(m.get(k) or "")).strip()[:120] for k in ("intro", "outro")
+                                    if m.get(k) and not PROFANE.search(str(m.get(k))) and not UNSAFE.search(str(m.get(k)))},
                                  "question": re.sub(r"[–—]", "-", str(m.get("question") or "")).strip()[:90]})
         done.append((a, b)); added += 1
     PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -569,7 +573,7 @@ def layout_filters(layout, face):
 
 
 TESTS = {"layout": ["letterbox", "full", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
-         "length": ["as planned"], "title": ["subject first", "hook first"]}     # "short" arm retired 23 October: longer clips
+         "length": ["as planned"], "title": ["subject first", "hook first"], "take": ["voice"]}     # take: recorded, not drawn     # "short" arm retired 23 October: longer clips
 
 
 def short_end(words, a, b, peak, min_s=15, max_s=28.0):
@@ -592,6 +596,63 @@ def test_plan(mid):
         best = (ins.get(t) or {}).get("best")
         out[t] = best if best in arms and rng.random() < 0.7 else rng.choice(arms)
     return out
+
+
+# ----- our own take (Charlie, 23 October) ---------------------------------------------------------------------------------
+# YouTube (1 October 2026) cuts the reach of re-uploads "without significant changes" and says template edits don't count,
+# so every clip now carries our own commentary: a spoken set-up over the first seconds (the stream's sound dips under it)
+# and our reaction after the payoff, on a held last frame with a question for the comments. It is opinion and framing,
+# never a claim the footage doesn't show (the campaigns' "no made-up claims" rule). Campaigns whose rules avoid AI-made
+# video get the take as on-screen text only; CLIPS_TAKE=none turns it off (tests).
+TAKE_PROMPT = """You add a short spoken take of our own to a clip for a family-friendly UK clips channel, so the clip is
+commentary, not a re-upload. The clip: {label}. Its on-screen hook: "{hook}". Why it was picked: {why}. What is said in
+it: "{said}".
+Write:
+- "intro": what our narrator says over the first seconds, 6 to 12 words: sets up why to keep watching, in our own voice
+  ("Watch what happens when...", "This is the moment...", "Nobody expected this from..."), without giving away the payoff;
+- "outro": our reaction after the payoff, 6 to 14 words, ending with a short question viewers will answer in the comments.
+Opinion and framing only: never state a fact, name or number the clip doesn't show, nothing negative about anyone, no
+swearing, UK English, no dashes. Return {{"intro": "...", "outro": "..."}}"""
+
+
+def take_lines(c, m, words):
+    """Our intro and outro lines for a moment (planned with the moment since 23 October, else written here); None when no
+    model answers or the lines break a rule."""
+    if m.get("take_intro") and m.get("take_outro"): return m["take_intro"], m["take_outro"]
+    import factpack
+    said = " ".join(w["w"] for w in words if m["start"] <= w["s"] <= m["end"])[:900]
+    try:
+        ans, _ = factpack.gemini(TAKE_PROMPT.format(label=c["source"].get("label", c["subject"]), hook=m.get("hook", ""),
+                                                    why=m.get("why", ""), said=said), None, timeout=90, temperature=0.6, writing=True, lite=True)
+    except Exception as e:
+        log(f"{m['id']}: take not written ({str(e)[:80]})"); return None
+    intro, outro = (factpack.undash(str((ans or {}).get(k) or "")).strip() for k in ("intro", "outro"))
+    ok = lambda t, lo, hi: lo <= len(t.split()) <= hi and not PROFANE.search(t) and not UNSAFE.search(t)
+    if not (ok(intro, 4, 14) and ok(outro, 4, 16)): log(f"{m['id']}: take refused ({intro} | {outro})"[:160]); return None
+    m["take_intro"], m["take_outro"] = intro, outro
+    return intro, outro
+
+
+def take_voice(m, intro, outro):
+    """The two lines read by the house voice (Chatterbox, tts_cb.py, as the Daily Shorts): (intro wav, outro wav), or None
+    when the voice model isn't installed on this runner (the take is then on-screen text)."""
+    if not os.environ.get("CB_CKPT") or not shutil.which("ffmpeg"): return None
+    d = WORK / f"take-{m['id']}"; d.mkdir(parents=True, exist_ok=True)
+    board = d / "take.json"
+    board.write_text(json.dumps({"id": m["id"], "beats": [{"say": intro}, {"say": outro}]}))
+    try:
+        subprocess.run([sys.executable, str(ROOT / "pipeline" / "tts_cb.py"), str(board), str(d), "--voice", "F2", "--target-wps", "2.9"],
+                       check=True, capture_output=True, text=True, timeout=600, cwd=str(ROOT / "pipeline"))
+        a, b = d / "cb_b00.wav", d / "cb_b01.wav"
+        return (a, b) if a.exists() and b.exists() else None
+    except Exception as e:
+        log(f"{m['id']}: take voice failed ({str(e)[:120]})"); return None
+
+
+def wav_seconds(p):
+    try: return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(p)],
+                                     capture_output=True, text=True).stdout.strip() or 0)
+    except Exception: return 0.0
 
 
 def make_clip(cid, m, words):
@@ -643,10 +704,37 @@ def make_clip(cid, m, words):
     vf = (graph + f"[v1z]{drawtext(m['hook'].upper(), 62, hook_y)}[v2];"
           + (f"[v2]{drawtext(m['label'], 44, label_y, 'yellow')}[v3];" if m.get("label") else "[v2]null[v3];")
           + f"[v3]subtitles='{ass}'[v4];[v4]{drawtext(credit, 30, 1800 if layout != 'split' else 1862, 'white', False)}[v]")
-    cmd = ["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.2f}", "-to", f"{b:.2f}", "-i", str(seg),
-           "-filter_complex", vf, "-map", "[v]", "-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-r", "30",
+    take = None if os.environ.get("CLIPS_TAKE", "").strip() == "none" or m.get("episode") else take_lines(c, m, words)
+    no_ai = any(re.search(r"\bAI\b", str(x)) for x in r.get("avoid") or [])      # a campaign that avoids AI-made video
+    voice = take_voice(m, *take) if take and not no_ai else None
+    L = b - a
+    if take:
+        intro, outro = take
+        i_dur = max(2.5, wav_seconds(voice[0]) + 0.3) if voice else 3.0
+        o_dur = max(3.0, wav_seconds(voice[1]) + 0.6) if voice else 3.5
+        # the held last frame for our reaction; the intro line sits under the hook while it is spoken
+        vf = vf[:-len("[v]")] + "[vb0];" + (f"[vb0]{drawtext(intro, 46, hook_y + 330, 'white')}:enable='lt(t,{i_dur:.2f})'[vb1];"
+              f"[vb1]tpad=stop_mode=clone:stop_duration={o_dur:.2f}[vb2];"
+              f"[vb2]{drawtext(outro, 56, 1300, 'yellow')}:enable='gte(t,{L:.2f})'[v]")
+        tests["take"] = "voice" if voice else "text"
+    else:
+        tests["take"] = "none"
+    if voice:
+        ms = int(L * 1000)
+        af = (f"[0:a]aresample=48000,aformat=channel_layouts=stereo,volume='if(lt(t,{i_dur:.2f}),0.25,1)':eval=frame,apad=pad_dur={o_dur:.2f}[o];"
+              f"[1:a]aresample=48000,aformat=channel_layouts=stereo,adelay=150|150[i];"
+              f"[2:a]aresample=48000,aformat=channel_layouts=stereo,adelay={ms}|{ms}[e];"
+              f"[o][i][e]amix=inputs=3:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[aout]")
+        ins, amap = ["-i", str(voice[0]), "-i", str(voice[1])], ["-map", "[aout]"]
+        vf = vf + ";" + af
+    elif take:
+        vf = vf + f";[0:a]apad=pad_dur={o_dur:.2f},loudnorm=I=-14:TP=-1.5:LRA=11[aout]"; ins, amap = [], ["-map", "[aout]"]
+    else:
+        ins, amap = [], ["-map", "0:a", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11"]
+    cmd = (["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{a:.2f}", "-to", f"{b:.2f}", "-i", str(seg)] + ins
+           + ["-filter_complex", vf, "-map", "[v]"] + amap + ["-r", "30",
            "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
-           "-movflags", "+faststart", str(out)]
+           "-movflags", "+faststart", str(out)])
     run(cmd)
     m["tests"] = tests
     return out

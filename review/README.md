@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 11:38): 8 of 1,000 subscribers · 5,808 of 10 million Shorts views in 90 days · 1,634 views in the last 24 hours (about 111,047 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 12:40): 8 of 1,000 subscribers · 5,852 of 10 million Shorts views in 90 days · 1,735 views in the last 24 hours (about 111,046 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 12:15 (UK): 8 scheduled, 114 public, 27 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 6 public, 8 scheduled | 18 | 2 | ⏳ 6 of 40 so far, 8 more scheduled |
+| Fri 23 Oct | 7 public, 7 scheduled | 21 | 2 | ⏳ 7 of 40 so far, 7 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -62,6 +62,10 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
+## In the queue
+
+- **QD-139** Modern Warfare 4: New matchmaking system revealed 🎮 (rendering next)
+
 ## On the channel (latest first)
 
 ### Fri 23 Oct 16:00 · Top 10 highest-grossing superhero films ever 🎬
@@ -100,7 +104,7 @@ scheduled · 29 s · music: dance-with-you · [script](../boards/done/QD-132.jso
 ![QD-132](QD-132.jpg)
 
 ### Fri 23 Oct 12:30 · Katie Boulter: British star reaches Japan Open 🎾
-scheduled · 25 s · music: paradigm · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
+private · 25 s · music: paradigm · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
 
 ![QD-131](QD-131.jpg)
 
@@ -195,17 +199,17 @@ public · 99 views · 24 s · music: mirror-mirror · on Facebook · [script](..
 ![QD-111](QD-111.jpg)
 
 ### Thu 22 Oct 12:30 · EA pauses Project Lotus 🛑
-public · 22 views · 25 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
+public · 22 views · 25 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-110.json) · [YouTube](https://youtube.com/shorts/eEteEeLQ8Mg)
 
 ![QD-110](QD-110.jpg)
 
 ### Thu 22 Oct 11:30 · It Gets Worse: Leo Reich’s triple‑threat comedy 📺
-public · 93 views · 28 s · music: sneaky-spelunking · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
+public · 93 views · 28 s · music: sneaky-spelunking · on Instagram · on Facebook · [script](../boards/done/QD-109.json) · [YouTube](https://youtube.com/shorts/-2yWBGmmkrg)
 
 ![QD-109](QD-109.jpg)
 
 ### Thu 22 Oct 10:00 · Morgan Wallen and Ella Langley duet details 🎶
-public · 18 views · 24 s · music: back-in-the-saddle · on Facebook · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
+public · 18 views · 24 s · music: back-in-the-saddle · on Instagram · on Facebook · [script](../boards/done/QD-108.json) · [YouTube](https://youtube.com/shorts/aDMC8Av6fU4)
 
 ![QD-108](QD-108.jpg)
 

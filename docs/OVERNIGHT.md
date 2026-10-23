@@ -39,6 +39,10 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    region), keeps English titles only, and a day the YouTube allowance cut short is finished by the next run.
 5. **No more Shorts about "movie times".** A practical search ("movie times", showtimes, near me, login, weather) has no
    story in it; the topic pickers now skip them.
+6. **The watchlist now covers the next big dated events, not only GTA 6.** Avengers: Doomsday and Dune: Part Three
+   (both out 18 December) and The Game Awards (10 December). Each starts its build-up at its own lead time (films 30
+   days out, The Game Awards 21, GTA 6 45) and turns "surging" the moment a trailer or big news lands, whatever the date.
+   Items far off and quiet are only measured, so the list can grow without taking forced Shorts a day.
 
 ## What needs Charlie
 

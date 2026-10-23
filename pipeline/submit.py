@@ -665,7 +665,7 @@ def heat(subject):
     except Exception: pass
     try:                                   # the watchlist (pipeline/watch.py): coming or surging events weigh more
         for it in json.loads((ROOT / "status" / "watch.json").read_text()).get("items") or []:
-            if any(t.lower() in low or low in t.lower() for t in it.get("terms") or [it["name"]]):
+            if any(t.lower() in low or (len(low) >= 4 and low in t.lower()) for t in it.get("terms") or [it["name"]]):
                 add = {"launch": 1.2, "surging": 1.0, "build-up": 0.5}.get(it.get("level"), 0.0)
                 if add: score += add; why.append(f"watchlist: {it['name']} {it['level']}")
     except Exception: pass

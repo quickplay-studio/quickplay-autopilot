@@ -44,8 +44,20 @@ W.run(dt.date(2026, 10, 24)); assert ISSUES == ["GTA 6"]
 VIEWS, NEWS = [10000] * 30, 0
 assert W.run(dt.date(2026, 11, 18))[0]["level"] == "launch" and W.state()["items"][0]["places"] == 4
 assert len(W.HIST.read_text().strip().splitlines()) == 1 + 3
-# 4. long before or long after: steady, the main term only
+# 4. long before or long after: steady, measured only (no topics, no places); an item's own lead time
 assert W.phase({"date": "2027-06-01"}, dt.date(2026, 10, 23))[1] == "steady"
+assert W.phase({"date": "2026-12-10", "lead_days": 21}, dt.date(2026, 10, 23))[1] == "steady"
+assert W.phase({"date": "2026-12-10", "lead_days": 21}, dt.date(2026, 11, 20))[1] == "build-up"
+W.CFG["watchlist"].append({"name": "Dune: Part Three", "terms": ["Dune Part Three"], "date": "2026-12-18", "lead_days": 30,
+                           "category": "Film", "angles": ["Dune Part Three cast"]})
+VIEWS, NEWS = [10000] * 30, 2
+got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
+assert got["Dune: Part Three"]["level"] == "steady" and got["Dune: Part Three"]["places"] == 0, got["Dune: Part Three"]
+assert not [t for t, s in W.topics_today() if "Dune" in s], W.topics_today()
+NEWS = 20                                   # a trailer drops: surging that run, whatever the date
+got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
+assert got["Dune: Part Three"]["level"] == "surging" and ("Dune: Part Three", "watchlist: Dune: Part Three (surging, 56 days to go)") in W.topics_today()
+W.CFG["watchlist"].pop()
 print("watch ok")
 
 # 5. the writer labels it Watchlist (not "Rocket launches", which also says launch), the scout adds heat

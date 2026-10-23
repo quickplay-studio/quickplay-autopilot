@@ -9,13 +9,15 @@ For each item in config.json "watchlist" it measures, from free sources:
 - how many reputable news articles named it in the last 24 hours (Google News RSS search);
 - whether it is in today's Google Trends, Wikipedia top pages or YouTube charts (trends/latest.json);
 - how many YouTube search suggestions it has (what people type).
-Then a phase from the date (build-up within 45 days, launch from 3 days before to 7 after) and a level: "surging" when
-momentum is 1.5 or more, 15 or more articles a day, or it is in Google Trends; else "steady".
+Then a phase from the date (build-up within the item's "lead_days", 45 unless set, launch from 3 days before to 7 after)
+and a level: "surging" when momentum is 1.5 or more, 15 or more articles a day, or it is in Google Trends; else "steady".
+A steady item (far from its date and quiet) is only measured: no topics and no places until it builds up or surges, so
+four items on the list never take four forced places a day (a trailer drop or a leak turns it surging that run).
 
 What follows from it (each part reads status/watch.json):
 - trends.py adds the item's main term and its angles as topics marked "watchlist", which the fact packs keep like
   Charlie's own requests, so news packs about it are built every run;
-- writer.py gives it its own places each day (1 steady, 2 in the build-up, 3 when surging, 4 in launch week), outside the
+- writer.py gives it its own places each day (none steady, 2 in the build-up, 3 when surging, 4 in launch week), outside the
   category shares, with the item's own rules in the brief (for GTA 6: the game as news, never its violence or crime);
   the evergreen planner rides it (top lists and true stories from its series);
 - the clips scout adds heat to campaigns about it, and the Mac Chrome run looks for its campaigns to join;
@@ -29,7 +31,7 @@ CFG = json.loads((ROOT / "config.json").read_text())
 STATE = ROOT / "status" / "watch.json"
 HIST = ROOT / "analytics" / "watch.csv"
 UA = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}
-PLACES = {"steady": 1, "build-up": 2, "surging": 3, "launch": 4}
+PLACES = {"steady": 0, "build-up": 2, "surging": 3, "launch": 4}
 
 
 def items():
@@ -84,7 +86,7 @@ def phase(w, today):
     try: d = (dt.date.fromisoformat(str(w.get("date"))) - today).days
     except Exception: return None, "steady"
     if -7 <= d <= 3: return d, "launch"
-    if 0 < d <= 45: return d, "build-up"
+    if 0 < d <= int(w.get("lead_days") or 45): return d, "build-up"
     return d, "steady"
 
 
@@ -113,13 +115,15 @@ def state():
 
 
 def topics_today():
-    """(topic, signal) pairs for trends.py: each item's main term every run, and its angles once it is in the build-up,
-    surging or launching."""
+    """(topic, signal) pairs for trends.py: for each item in the build-up, surging or launching, its main term and as many
+    angles as it has places; a steady item adds nothing (it is only measured)."""
     out = []
     for it in (state().get("items") or []):
-        sig = f"watchlist: {it['name']} ({it['level']}" + (f", {it['days_to']} days to go" if it.get("days_to") is not None and it["days_to"] > 0 else "") + ")"
+        if it.get("level", "steady") == "steady" or not it.get("places"): continue
+        d = it.get("days_to")
+        sig = f"watchlist: {it['name']} ({it['level']}" + (f", {d} day{'s' if d != 1 else ''} to go" if d is not None and d > 0 else "") + ")"
         out.append((it["name"], sig))
-        if it["level"] != "steady": out += [(a, sig) for a in it.get("angles") or []][:it.get("places", 1)]
+        out += [(a, sig) for a in it.get("angles") or []][:it.get("places", 1)]
     return out
 
 
@@ -140,7 +144,7 @@ def run(today=None):
     with HIST.open("w", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=fields); wr.writeheader(); wr.writerows(rows[-2000:])
     for g in got:
-        print(f"watch: {g['name']}: {g['level']}, {g['days_to']} days to go, momentum {g['momentum']}, "
+        print(f"watch: {g['name']}: {g['level']}, {g['days_to']} day(s) to go, momentum {g['momentum']}, "
               f"{g['views_yesterday']} Wikipedia views (usual {g['views_usual']}), {g['news_24h']} articles in 24 h, in {g['in'] or 'nothing'}")
         if g["level"] in ("surging", "launch") and (prev.get(g["name"]) or {}).get("level") not in ("surging", "launch"):
             note_surge(g)

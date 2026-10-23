@@ -345,7 +345,7 @@ function render(){
     </div>
     <h2>Live: GitHub jobs right now</h2>${liveCard()}
     <h2>Watchlist: big events coming</h2>
-    <p class="sub">Checked every trends run: Wikipedia views against the usual (momentum), news in the last 24 hours, Google Trends and YouTube charts. Build-up within 45 days, launch from 3 days before to 7 after, surging when interest jumps. Each gets its own Shorts a day (1 steady, 2 build-up, 3 surging, 4 launch week) and its clip campaigns weigh more.</p>
+    <p class="sub">Checked every trends run: Wikipedia views against the usual (momentum), news in the last 24 hours, Google Trends and YouTube charts. Build-up from its lead time (45 days unless set), launch from 3 days before to 7 after, surging when interest jumps. Each gets its own Shorts a day (none while steady, 2 build-up, 3 surging, 4 launch week) and its clip campaigns weigh more.</p>
     ${table([{h:"Event", f:i => esc(i.name)}, {h:"Days to go", n:1, f:i => i.days_to == null ? "" : fmt(i.days_to)},
       {h:"State", f:i => i.level === "surging" || i.level === "launch" ? pill("bad", "🔥", i.level) : pill(i.level === "build-up" ? "wait" : "", "·", i.level)},
       {h:"Momentum", n:1, f:i => i.momentum == null ? "" : num(i.momentum).toFixed(2) + "x"},

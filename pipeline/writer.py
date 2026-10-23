@@ -19,10 +19,11 @@ import background as BG, factpack, validate
 CFG = json.loads((ROOT / "config.json").read_text())
 UK = ZoneInfo("Europe/London")
 NOW = dt.datetime.now(dt.timezone.utc)
-CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"]
+CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment", "Animals", "Food", "Cars", "History"]   # the last four: new markets on test from 24 October
 
 RULES = """You write one YouTube Short script ("board") as JSON for Quickplay Daily: an anonymous, family-friendly UK channel about
-gaming, film and TV, music, sport, celebrities, streamers and creators, tech launches and space. Every rule must hold.
+gaming, film and TV, music, sport, celebrities, streamers and creators, tech launches, space, animals and nature, food,
+cars and history. Every rule must hold.
 - UK English and UK style: "Tuesday 20 October", "20 million pounds", colour, favourite. Never use an en dash or an em dash
   anywhere (use commas, colons or full stops).
 - Never politics, crime, health claims, money or investing advice, adult content or gambling. Explore the subject itself;
@@ -68,7 +69,7 @@ gaming, film and TV, music, sport, celebrities, streamers and creators, tech lau
   meta.comment: one question viewers can answer, under 100 characters, no links.
 - meta.sources: the pack's sources as [title, url] in the same order. meta.facts: every claim you used as
   [claim, [source numbers from the pack]].
-- "format": one of the format ids below. "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment.
+- "format": one of the format ids below. "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars, History.
   "appeal": "everyone" or "fans" (see above). "music": {"mood": one of %(moods)s}.
 - Lead with what is new today (the pack's "What is new"). If the pack has nothing new from the last few days, return
   {"skip": "nothing new"}.
@@ -312,10 +313,14 @@ def category_shares():
     return {c: v / tot for c, v in out.items()}
 
 
+EXPLORE = 0.08       # a category with no measured Shorts yet gets about 1 place in 12 until the data speaks
+
+
 def over_share(cat, written, cap, shares):
     """True when the day's run already has its category's share of places (rounded up; no data: never)."""
-    if not shares or cap <= 0 or cat not in shares: return False
-    return sum(1 for b in written if b.get("category") == cat) >= max(1, -(-shares[cat] * cap // 1))
+    if not shares or cap <= 0: return False
+    share = shares.get(cat, EXPLORE)            # a category with no data yet (a new market) explores at a fixed share
+    return sum(1 for b in written if b.get("category") == cat) >= max(1, -(-share * cap // 1))
 
 
 def source_of(signal):
@@ -420,7 +425,7 @@ fans know; give each idea "appeal": 1 to 5 (5: nearly everyone knows and cares) 
 Never politics, crime, health, money, adult themes, deaths or a person under 18.
 {trending}Nothing on these recent Shorts: {recent}.
 Return {{"items": [{{"kind": "question, top list or true story", "idea": "the question, list or story in a few words",
-"category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment", "wikipedia": "the exact article title",
+"category": "Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars or History", "wikipedia": "the exact article title",
 "appeal": 5, "trending": "the trending subject it rides, or empty"}}]}}"""
 SEARCH_ASK = ("Searches that already bring us viewers (people type these into YouTube; plan more Shorts those searches would "
               "find, on the next question or the next entry of the same subject): {terms}. ")
@@ -475,7 +480,7 @@ FICTION_NOTE = ("FICTION: this Short is an ORIGINAL short story (the topic is it
 FICTION_PLAN = """You write premises for original, family-friendly short stories told in 30 seconds on YouTube Shorts:
 gripping, a little eerie or funny, with a twist ending, set in worlds our viewers love (games, films, music, sport, space,
 the internet). No real people, brands or crimes, nothing too scary for children. Not like these recent ones: {recent}.
-Return {{"premise": "one sentence", "category": "Gaming, Film, Music, Sport, Tech, Science or Entertainment"}}"""
+Return {{"premise": "one sentence", "category": "Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars or History"}}"""
 PART_FIRST = ("SERIES: this is Part 1 of {of}. Cover the first part only (for a countdown, the lowest entries of the list; for "
               "a story, up to the first turning point; for news, what happened first) and end on a cliffhanger line that makes "
               "viewers want Part 2, such as \"Number 1 is in Part 2\" or \"What happened next is in Part 2\". End the title "

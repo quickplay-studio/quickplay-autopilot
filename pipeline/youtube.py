@@ -9,7 +9,7 @@ from googleapiclient.http import MediaFileUpload
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube.readonly",
           "https://www.googleapis.com/auth/yt-analytics.readonly"]
 CATEGORY = {"Gaming": "20", "Film": "1", "Music": "10", "Sport": "17", "Tech": "28", "Science": "28",
-            "Entertainment": "24", "News": "25", "Education": "27"}
+            "Entertainment": "24", "News": "25", "Education": "27", "Animals": "15", "Food": "26", "Cars": "2", "History": "27"}
 
 class LimitReached(Exception): pass
 
@@ -67,7 +67,7 @@ def recent_videos(yt, limit=100):
                         "views": int(v.get("statistics", {}).get("viewCount", 0))})
     return out
 
-def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None, localizations=None):
+def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None, localizations=None, paid=False):
     """Uploads as private (scheduled when publish_at is given). localizations ({lang: {title, description}}) let the Short
     be found in searches in other languages; if YouTube refuses them, the upload is retried without."""
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False}
@@ -76,13 +76,15 @@ def upload(yt, path, title, description, tags, category="Entertainment", publish
                         "categoryId": CATEGORY.get(category, "24"), "defaultLanguage": "en-GB", "defaultAudioLanguage": "en-GB"},
             "status": status}
     if localizations: body["localizations"] = localizations
+    if paid: body["paidProductPlacementDetails"] = {"hasPaidProductPlacement": True}     # paid promotion (campaign clips)
     path = named_copy(path, title)
     try:
         vid = _send(yt, path, body)
     except HttpError as e:
-        if not localizations or e.resp.status != 400: raise
-        print("upload: YouTube refused the translated titles, uploading without them:", str(e)[:200])
+        if e.resp.status != 400 or not (localizations or paid): raise
+        print("upload: YouTube refused part of the details, uploading with the core ones:", str(e)[:200])
         body.pop("localizations", None)
+        if body.pop("paidProductPlacementDetails", None): body["snippet"]["description"] = body["snippet"]["description"][:4900]
         vid = _send(yt, path, body)
     _quota("upload")
     return vid
@@ -113,7 +115,8 @@ def _quota(event):
 
 
 def _send(yt, path, body):
-    part = "snippet,status" + (",localizations" if body.get("localizations") else "")
+    part = "snippet,status" + (",localizations" if body.get("localizations") else "") + (
+        ",paidProductPlacementDetails" if body.get("paidProductPlacementDetails") else "")
     req = yt.videos().insert(part=part, body=body, media_body=MediaFileUpload(str(path), chunksize=8 << 20, resumable=True))
     resp, tries = None, 0
     while resp is None:

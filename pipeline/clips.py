@@ -863,8 +863,8 @@ def upload(cid, mode=None):
         except Exception as e:
             log(f"{m['id']}: clip asset not kept: {str(e)[:120]}")
         tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
-        desc = (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
-                f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}).")
+        desc = (f"#ad {m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
+                f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}). {AD_NOTE}")
         vid, own = None, mchannel(cid, m)
         # the clip's own channel first; when YouTube refuses it for its daily limit (the gaming and irl channels can't be
         # phone-verified: one number, 23 October), the campaign's other channels take it, so a made clip isn't stranded
@@ -872,7 +872,7 @@ def upload(cid, mode=None):
             if ch in refused: continue
             try:
                 if ch not in clients: clients[ch] = clips_client(ch)
-                vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at)
+                vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at, paid=True)
             except Exception as e:
                 log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
                 if "uploadLimitExceeded" in str(e) or "exceeded the number of videos" in str(e):
@@ -914,10 +914,15 @@ def add_rows(rows):
         w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in old + rows])
 
 
+# Campaign clips are paid for (per view, by the creator or brand), so UK advertising rules (the ASA's CAP code and the
+# CMA's guidance for influencers) ask for "#ad" up front, and YouTube asks for the paid promotion box (23 October).
+AD_NOTE = "Paid clip: we are paid per view by the campaign."
+
+
 def social_caption(c, m):
     r = c.get("rules") or {}
-    return (f"{m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
-            + f"\n\nClip from {c['subject']}, posted with the creator's permission.")
+    return (f"#ad {m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
+            + f"\n\nClip from {c['subject']}, posted with the creator's permission. {AD_NOTE}")
 
 
 def social_posts(force=False):

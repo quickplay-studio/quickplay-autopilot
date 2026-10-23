@@ -9,7 +9,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import background as BG        # the search format for the video behind a Short (standard library at import)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"}
+CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment", "Animals", "Food", "Cars", "History"}
 VISUALS = {"none", "title", "stat", "cards", "quote", "date", "versus", "timeline", "bars"}
 MODES = {"schedule", "private", "none", "dry"}
 SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+|page:https://.+|openverse:.+|nasa:(video|image):.+|gameplay:.*)$")

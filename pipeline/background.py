@@ -38,6 +38,10 @@ FALLBACK = {
     "Tech": ["circuit board closeup", "server room lights", "futuristic city night"],
     "Science": ["galaxy stars space", "nebula space clouds", "earth from orbit"],
     "Entertainment": ["red carpet lights", "city lights night", "theatre stage curtain"],
+    "Animals": ["wildlife savanna sunset", "forest animals nature", "ocean underwater reef"],
+    "Food": ["kitchen cooking closeup", "street food night market", "chef plating food"],
+    "Cars": ["sports car night road", "race track cars", "city traffic lights night"],
+    "History": ["old library books", "ancient ruins sunset", "vintage film archive"],
 }
 
 # ---------------- the board's searches ----------------

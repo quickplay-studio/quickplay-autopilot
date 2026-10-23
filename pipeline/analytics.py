@@ -359,7 +359,7 @@ def relative(rows, field, out_field, min_age_h=24):
         peers = [float(x[field]) for x in aged if abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
         if len(peers) >= 3 and statistics.median(peers): r[out_field] = round(float(r[field]) / statistics.median(peers), 3)
 
-CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment"]
+CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment", "Animals", "Food", "Cars", "History"]
 
 def update_hourly(rows, ig, fb):
     """analytics/hourly.csv: one row per hour (UTC, with UK day, hour and weekday) with the views gained since the last

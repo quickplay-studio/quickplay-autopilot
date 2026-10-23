@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 23 Oct, 14:47): 8 of 1,000 subscribers · 5,952 of 10 million Shorts views in 90 days · 1,938 views in the last 24 hours (about 111,045 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Fri 23 Oct, 15:46): 8 of 1,000 subscribers · 5,665 of 10 million Shorts views in 90 days · 2,172 views in the last 24 hours (about 111,048 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Fri 23 Oct 14:29 (UK): 5 scheduled, 118 public, 24 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 24 Oct | 0 public | 0 | 0 | ⏳ 0 of 40 scheduled |
-| Fri 23 Oct | 11 public, 7 scheduled | 22 | 2 | ⏳ 11 of 40 so far, 7 more scheduled |
+| Fri 23 Oct | 13 public, 5 scheduled | 22 | 2 | ⏳ 13 of 40 so far, 5 more scheduled |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
@@ -75,12 +75,12 @@ scheduled · 35 s · music: across-seas-and-lands · [script](../boards/done/QD-
 ![QD-138](QD-138.jpg)
 
 ### Fri 23 Oct 15:30 · Top 10 most-streamed songs on Spotify of all time 🎶
-scheduled · 25 s · music: dance-with-you · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
+private · 25 s · music: dance-with-you · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
 
 ![QD-137](QD-137.jpg)
 
 ### Fri 23 Oct 15:00 · Roblox The Hollow: Nine days of nightmare maze monsters 🎃
-scheduled · 29 s · music: city-of-the-wolf · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
+private · 29 s · music: city-of-the-wolf · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
 
 ![QD-136](QD-136.jpg)
 

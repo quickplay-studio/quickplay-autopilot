@@ -62,9 +62,15 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
-## In the queue
+## Waiting for your approval
 
-- **QD-144** Tate McRae hits #1 in Australia 🎶 (rendering next)
+Reply to the daily message ("approve all", "approve all except QD-032", "reject QD-032"), or on GitHub: Actions, publish, Run workflow, and type the same.
+
+### QD-144 · Tate McRae hits #1 in Australia 🎶
+awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-135ae7dbeab2e30bcf25)
+- dry run: always waits for approval, never uploaded
+
+![QD-144](QD-144.jpg)
 
 ## On the channel (latest first)
 

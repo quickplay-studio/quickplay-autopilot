@@ -1,0 +1,89 @@
+{
+ "id": "QD-144",
+ "board": "boards/queue/QD-144.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-23T18:00:10.614510+00:00",
+ "title": "Tate McRae hits #1 in Australia 🎶",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:Tate_McRae_in_Manila_01_%28cropped%29_2.jpg: 'imageinfo')",
+  "beat 5 reused a nearby picture (commons:File:Tate_McRae_in_Manila_01_%28cropped%29_2.jpg: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 8
+ },
+ "music": "mirror-mirror",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 6.3
+ },
+ "timeline": [
+  [
+   0.06,
+   3.87,
+   "none",
+   0
+  ],
+  [
+   3.87,
+   11.48,
+   "none",
+   1
+  ],
+  [
+   11.48,
+   16.47,
+   "none",
+   1
+  ],
+  [
+   16.47,
+   21.39,
+   "none",
+   1
+  ],
+  [
+   21.39,
+   25.15,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380207",
+   "q": "recording studio lights",
+   "t0": 0.0,
+   "t1": 12.88
+  },
+  {
+   "p": "pixabay",
+   "id": "210592",
+   "q": "city night lights",
+   "t0": 12.28,
+   "t1": 25.15
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-144",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-135ae7dbeab2e30bcf25"
+}

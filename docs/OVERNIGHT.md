@@ -62,6 +62,9 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    Shorts' uploads are counted, the guard keeps room for the 15 planned Shorts (not the 40 ceiling), and clips upload
    only from what the Shorts don't need (a clip that doesn't fit waits for the next run). Clips grew to 53 uploads a
    day, so this would have started failing Shorts within days.
+11. **The two newer clip channels were about to make 12 fewer clips a day.** When YouTube refused an upload, the system
+   recorded how many clips were booked for the next batch instead of how many YouTube had taken that day, so irl and
+   gaming (refused after 10 uploads each) learned a limit of 4. Fixed and reset to 10.
 
 ## What needs Charlie
 

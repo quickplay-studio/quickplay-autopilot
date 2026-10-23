@@ -252,6 +252,7 @@ rows = C.upload("speed-expedia", mode="private")
 ms = json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]
 assert [m.get("channel") for m in ms] == ["clips", "clips"] and all(m.get("video") for m in ms), ms
 assert UPS == ["irl", "clips", "clips"], UPS        # irl refused once, then skipped for the run
+assert C.uploads_24h("clips") == 2 and C.uploads_24h("irl") == 0     # what a refusal settles a ceiling at
 print("channel fallback ok")
 
 # the virality score is measured against real views: bands, and a learned threshold only when high scores really earn more

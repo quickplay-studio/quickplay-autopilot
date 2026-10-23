@@ -1,5 +1,6 @@
 {
- "limit": 4,
+ "limit": 10,
  "refused_at": "2026-10-23T22:14+00:00",
- "refused_with": 3
+ "refused_with": 10,
+ "note": "24 October: set to 10 by hand, what YouTube took in the 24 hours before its refusals (the old count said 0 and 3)"
 }

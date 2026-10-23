@@ -911,7 +911,7 @@ def upload(cid, mode=None):
             except Exception as e:
                 log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
                 if "uploadLimitExceeded" in str(e) or "exceeded the number of videos" in str(e):
-                    ceiling_learn(scheduled_today(ch), refused=True, channel=ch); refused.add(ch); continue
+                    ceiling_learn(uploads_24h(ch), refused=True, channel=ch); refused.add(ch); continue
                 break                                   # anything else: this clip waits for the next run
             if ch != own: m["channel"] = ch; log(f"{m['id']}: {own} is at its limit, posted on {ch} instead")
             break
@@ -1464,6 +1464,20 @@ def review():
             with sp.open("w", newline="") as f:
                 w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
     return pulled
+
+
+def uploads_24h(channel):
+    """Clips YouTube took on a channel in the last 24 hours (tests included): what a refusal settles the ceiling at. Until
+    24 October the count was the clips scheduled for the next batch, which after 18:00 UK is tomorrow's (0), so the irl
+    and gaming channels, refused after 10 uploads each, learned a limit of 4."""
+    cut, n = NOW - dt.timedelta(hours=24), 0
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        for m in json.loads(p.read_text()).get("moments") or []:
+            try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
+            except ValueError: continue
+            if up >= cut and m.get("video") and mchannel(p.stem, m) == channel: n += 1
+    return n
 
 
 def scheduled_today(channel=None):

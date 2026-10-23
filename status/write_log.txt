@@ -1,24 +1,9 @@
-morning run for 2026-10-23: 18 to write from 12 fact packs
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-south african grand prix: gemini-flash-latest, 0 warnings
-dua lipa: skipped: nothing new
-katie boulter: gemini-3.5-flash, 0 warnings
-covered already: leo reich it gets worse review
-covered already: blue planet 3 release date
+breaking run for 2026-10-23: 2 to write from 5 fact packs
 covered already: Clayface (film)
-LISA: gemini-3.6-flash, 0 warnings
-BABYMONSTER: gemini-3.7-flash, 0 warnings
-covered already: BioWare
-QD-134: about 2 min needs 16 facts, the pack has 4: 35 to 44 s instead
-I Play Rocky: gemini-3.6-flash, 0 warnings, background: 3 from the category
-Tate McRae: gemma-4-31b-it, 0 warnings
-ROBLOX THE HOLLOW: gemini-3.6-flash, 0 warnings
-evergreen: Top 10 Formula One drivers with the most Grand Prix wins: only 0 checked facts
-evergreen: Why is Mars known as the Red Planet?: only 2 checked facts
-evergreen: How Dua Lipa posted YouTube covers before her massive record deal: only 4 checked facts
-evergreen: The day Duncan Ferguson confronted burglars breaking into his home: only 0 checked facts
-Top 10 most-streamed songs on Spotify of all time: gemini-3.6-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Top 10 highest-grossing superhero films in box office history: gemini-3.6-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-How two college friends created Roblox under the original name DynaBlocks: still failing: say: never cite Wikipedia; state the fact, or name the outlet that reported it
-wrote 9 of 18: QD-130 Formula 1: African Grand Prix deal signed 🏎️; QD-131 Katie Boulter: British star reaches Japan Open 🎾; QD-132 LISA: Her first solo EP is coming 🎤; QD-133 BABYMONSTER: The massive world tour expansion 🎤; QD-134 I Play Rocky: Sylvester Stallone biopic trailer 🥊; QD-135 Tate McRae: The new number one hit 🎶; QD-136 Roblox The Hollow: Nine days of nightmare maze monsters 🎃; QD-137 Top 10 most-streamed songs on Spotify of all time 🎶; QD-138 Top 10 highest-grossing superhero films ever 🎬
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-omni-1.1-flash": "daily limit", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 2, "gemini-3.8-flash": 2, "gemini-3.7-flash": 2, "gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"openrouter:nvidia/nemotron-3.5-super-vl:free": 2, "gemini-flash-latest": 1, "gemini-3.5-flash-lite": 32, "gemini-3.8-flash": 1, "gemini-3.5-flash": 2, "gemma-4-26b-a4b-it": 1, "gemini-3.6-flash": 7, "gemini-3.7-flash": 1, "gemma-4-31b-it": 1, "gemini-3.1-flash-lite": 1, "gemini-3-flash-preview": 4}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+covered already: ChatGPT
+covered already: ROBLOX THE HOLLOW
+QD-139: about 2 min needs 16 facts, the pack has 3: 35 to 44 s instead
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+JEV PLAYS MODERN WARFARE 4 MULTIPLAYER: gemini-3-flash-preview, 1 warnings (narration: 133 words, best between 55 and 125)
+wrote 1 of 2: QD-139 Modern Warfare 4: New matchmaking system revealed 🎮
+gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-flash-latest": "daily limit 20", "gemini-3.6-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1}, "answers": {"openrouter:nvidia/nemotron-3.5-super-vl:free": 1, "gemini-3-flash-preview": 2, "gemini-3.5-flash-lite": 3}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}

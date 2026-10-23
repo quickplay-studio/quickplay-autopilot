@@ -10,7 +10,7 @@ import competitors as C
 assert C.features("Why is Minecraft STILL everywhere? 🎮") == {"title_words": 5, "has_number": 0, "is_question": 1, "has_emoji": 1, "first_word": "why"}
 assert C.iso_seconds("PT1M5S") == 65 and C.iso_seconds("PT45S") == 45
 
-C.OUT, C.MD = SCRATCH / "competitors.csv", SCRATCH / "competitors.md"
+C.OUT, C.MD, C.ROOT = SCRATCH / "competitors.csv", SCRATCH / "competitors.md", SCRATCH     # no watchlist here
 class Exec:
     def __init__(self, data): self.data = data
     def execute(self): return self.data
@@ -20,7 +20,7 @@ class YT:
     def list(self, **kw):
         if "q" in kw: return Exec({"items": [{"id": {"videoId": f"{kw['q'][:3]}{i}"}} for i in range(3)]})
         ids = kw["id"].split(",")
-        return Exec({"items": [{"id": v, "snippet": {"title": f"Top {n} thing {v}?", "channelTitle": "Other", "publishedAt": "2026-10-23T00:00:00Z"},
+        return Exec({"items": [{"id": v, "snippet": {"title": f"Top {n} things you never knew about {v}?", "channelTitle": "Other", "publishedAt": "2026-10-23T00:00:00Z"},
                                 "statistics": {"viewCount": str(1000 * (n + 1))}, "contentDetails": {"duration": "PT40S"}} for n, v in enumerate(ids)]})
 Y = types.ModuleType("youtube"); Y.client = lambda: YT(); sys.modules["youtube"] = Y
 import quota
@@ -29,9 +29,16 @@ got = C.run(force=True)
 assert len(got) == 3 * len(C.QUERIES) and C.MD.exists() and "Top Shorts" in C.MD.read_text()
 assert C.run() == []                                      # once a UK day
 tt = C.top_titles("Music")
-assert len(tt) == 3 and tt[0].startswith('"Top 2 thing') and "views an hour" in tt[0], tt
+assert len(tt) == 3 and tt[0].startswith('"Top 2 things') and "views an hour" in tt[0], tt
 quota.allow = lambda units, what="": False                 # the allowance guard stops the searches
 assert C.run(force=True) == []
+assert C.english("What If I Go to Space in GTA 5 With 5 Stars?") and not C.english("MAIN BALL BAN GAYA #shorts #cricket")
+assert not C.english("9-1-1: Lone Star | Mereces 12 nuggets #shorts #triste") and not C.english("why is this 很好 the best")
+# a day the allowance cut short: the next run does only the searches still missing
+quota.allow = lambda units, what="": True
+C.OUT.write_text("day,query,category,video\n" + f"{C.NOW.astimezone(C.UK).date()},gaming facts,Gaming,x\n")
+got = C.run()
+assert "gaming facts" not in {r["query"] for r in got} and len({r["query"] for r in got}) == len(C.QUERIES) - 1, {r["query"] for r in got}
 print("competitors ok")
 
 import clips as K

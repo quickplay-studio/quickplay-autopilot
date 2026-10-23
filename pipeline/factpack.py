@@ -50,7 +50,8 @@ Reply as JSON: {{"what_is_new": "...", "hooks": ["..."], "facts": [{{"claim": ".
 {pages}"""
 TRIAGE_PROMPT = """You pick topics for a family-friendly UK Shorts channel about gaming, film and TV, music, sport, celebrities,
 streamers and creators, tech launches, space, animals and nature, food, cars and history. Never: politics, crime, health, money or investing, adult content,
-gambling, deaths, or a website people only want to visit (a news site, an email service, an app store).
+gambling, deaths, or a website people only want to visit (a news site, an email service, an app store), or a practical
+search with no story in it (film or cinema times, weather, tickets, opening hours, near me, how to log in).
 Below are today's trending topics with their headlines. Return the numbers of the topics worth a Short, best first
 (biggest audience and freshest story first), at most {limit}, each with its category: Gaming, Film, Music, Sport, Tech,
 Science, Entertainment, Animals, Food, Cars or History. Topics marked REQUEST were asked for by the channel owner or are on its watchlist: keep them

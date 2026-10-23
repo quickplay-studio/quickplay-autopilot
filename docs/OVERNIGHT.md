@@ -49,11 +49,48 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    were private, so a new "promote" step put them into Saturday's 19:00 batch like any other clip (posted, submitted,
    counted in the day). The same job's installs stalled for 37 minutes on a slow mirror; installs now retry with time
    limits and the clips step always leaves time to save its work.
+8. **Two campaigns were making no clips; fixed.** valorant-champs and kevin-langue-ghost got "no moments" every run:
+   two free models replied with nothing, the system read that as an empty answer instead of asking the next model, and
+   the Valorant stream (144 minutes) was too long for one request anyway. Empty replies now go straight to the next model
+   (this also protects fact packs and the writer), and long streams are planned in 45-minute windows, the least
+   clipped stretch first.
+9. **No more empty clip places.** When a campaign has nothing left to clip (the finished Valorant series) or finds no
+   moments, its places for the day now go to the campaigns on the same channel that filled theirs, strongest first.
 
 ## What needs Charlie
 
-(filled in as the night goes)
+1. **Submit last night's Vyro clips by hand (5 minutes).** The Mac Chrome job failed at 19:07 and 22:07 with "usage
+   limit reached" (your Claude allowance), so the evening's Vyro submissions were not made. Open
+   https://quickplay-studio.github.io/quickplay-autopilot/submit.html on your phone and submit the rows not marked done.
+2. **Check your Claude allowance before 19:00:** https://claude.ai/settings/usage. Tonight's session used a lot of it,
+   and the Mac Chrome job needs some left at 19:00 to submit the day's clips.
+3. **Optional, more free writing power:** two free providers are wired in but have no key. Sign in with the studio
+   Google account, make a key, and add it as a repository secret (both names are already on the identity allowlist):
+   - Cerebras: https://cloud.cerebras.ai, key name CEREBRAS_API_KEY
+   - Mistral: https://console.mistral.ai, key name MISTRAL_API_KEY
+   - add each at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions
+4. Nothing else. The 11 promoted clips go public with Saturday's 19:00 batch on their own.
+
+Checked and fine, no action: YouTube's AI disclosure rule covers realistic people, events and AI music, not a
+narrator voice reading our own script, so the Shorts and clips stay undisclosed (disclosing would not cut reach either:
+https://support.google.com/youtube/answer/14328491).
 
 ## Ideas to research or decide (things Claude could not do tonight)
 
-(filled in as the night goes)
+1. **Automatic dubbing** (Spanish, Portuguese, Hindi, French and more): India alone is 10.5% of our views. There is no
+   API for it, so check whether the channel has it: YouTube Studio > Settings > Upload defaults > Advanced settings >
+   "Allow automatic dubbing".
+2. **TikTok Creator Rewards** pays in the UK from 10,000 followers and 100,000 views in 30 days, for videos of 1 minute
+   or more. Our Shorts run about 30 seconds; a 60 to 90 second TikTok cut is worth testing once the account has followers.
+3. **Facebook Content Monetization** is by invitation: look in the Quickplay page's Professional Dashboard >
+   Monetisation for an invite.
+4. **A second-language channel** (Spanish or Hindi): the same pipeline with translated scripts and a native voice, all
+   free. Worth a demand check in vidIQ's keyword tool before building.
+5. **More paid-clip platforms** besides Vyro and Content Rewards (Vues and Klippify were named in the research):
+   check which pay UK creators and allow YouTube Shorts, then join with the studio account; the scout adds them after.
+6. **The 2027 Partner Programme route:** from 1 February 2027 it needs 20M Shorts views in 90 days or 8,000 long-form
+   watch hours in a year. The weekly compilation is a start; longer compilations (10 minutes or more per category) are
+   the other road.
+7. **Decisions only you can make** (each breaks a current rule, so not done): US spelling in titles (40% of views are
+   American; the rule says UK English); "money facts, never advice" Shorts (records, prices, most expensive) under the
+   "never money" rule.

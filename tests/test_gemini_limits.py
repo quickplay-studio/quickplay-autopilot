@@ -45,5 +45,12 @@ assert CALLS == ["gemini-3.6-flash", "gemini-3.6-flash"]
 # 4. lite jobs go to Lite first
 CALLS.clear(); SCRIPT[:] = [ok('{"e": 1}')]
 F.gemini("x", lite=True); assert CALLS == ["gemini-3.5-flash-lite"]
+# 5. an empty reply is not an answer ({} before 24 October): the next model is asked at once; twice empty, passed over
+CALLS.clear(); SCRIPT[:] = [ok(''), ok('{"f": 1}')]
+assert F.gemini("x") == ({"f": 1}, "gemini-3.5-flash-lite") and CALLS == ["gemini-3.6-flash", "gemini-3.5-flash-lite"], CALLS
+CALLS.clear(); SCRIPT[:] = [ok('  '), ok('{"g": 1}')]
+F.gemini("x"); assert F.STATE["slow_models"].get("gemini-3.6-flash") == 2 and F.STATE["empty"]["gemini-3.6-flash"] == 2
+CALLS.clear(); SCRIPT[:] = [ok('{"h": 1}')]
+F.gemini("x"); assert CALLS == ["gemini-3.5-flash-lite"], CALLS          # the empty one is skipped for the rest of the run
 print(F.gemini_state())
 print("gemini handling ok")

@@ -287,3 +287,25 @@ row = next(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))
 assert row["public_at_uk"] == when.strftime("%Y-%m-%d %H:%M"), row
 assert C.promote_tests() == 0          # once only
 print("promote ok")
+
+# a long transcript is planned a window at a time: the stretch with the least already clipped (23 October: 144 minutes at
+# once gave nothing back)
+lines = [f"[{i * 6}-{i * 6 + 6}] " + "word " * 20 + ("(already clipped)" if i < 300 else "") for i in range(1000)]
+w, st = C.window(lines, size=9000)
+assert st >= 300 and 8000 <= sum(len(l.split()) for l in w) <= 9000 and not any(l.endswith("(already clipped)") for l in w), (st, len(w))
+assert C.window(lines[:100]) == (lines[:100], 0)
+print("plan window ok")
+
+# places a campaign leaves unfilled go to the campaigns on its channel that filled theirs, strongest first; never a series
+MADE, UPL = [], []
+C.make = lambda cid, count=None, channel=None: (MADE.append((cid, channel)), [{"id": cid}])[1]
+C.upload = lambda cid, mode=None: UPL.append(cid)
+cs_ = {"a": {"rules": {}}, "b": {"rules": {}}, "c": {"rules": {}}, "s": {"rules": {"series": True}}}
+shares_ = {"clips": {"a": 2, "s": 1, "b": 1, "c": 1}}
+made_ = {("clips", "a"): 2, ("clips", "s"): 0, ("clips", "b"): 0, ("clips", "c"): 1}
+import time as _time
+assert C.spill(shares_, made_, cs_, _time.time() + 60) == 2 and MADE == [("a", "clips"), ("c", "clips")] and UPL == ["a", "c"], MADE
+assert made_[("clips", "a")] == 3 and made_[("clips", "s")] == 0
+MADE.clear()
+assert C.spill({"clips": {"a": 2, "b": 1}}, {("clips", "a"): 2}, cs_, _time.time() - 1) == 0 and not MADE    # out of time
+print("spill ok")

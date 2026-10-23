@@ -181,12 +181,14 @@ def models(key):
 
 def loads_loose(text):
     """A model's JSON, forgiving the slips models make: a code fence or a thinking block around it, a trailing comma,
-    words before or after it."""
+    words before or after it. An empty reply is not an answer (23 October: two free models replied with nothing, read as
+    {}, and the clip planner took "no moments" from them three times over, 22 minutes, instead of asking the next model)."""
     s = re.sub(r"(?s)<think>.*?</think>", "", text or "").strip()
     s = re.sub(r"^\s*```(?:json)?\s*|\s*```\s*$", "", s)
+    if not s: raise ValueError("empty answer")
     for t in (s, s[s.find("{"):s.rfind("}") + 1] if "{" in s and "}" in s else None):
-        if t is None: continue
-        try: return json.loads(t or "{}")
+        if not t: continue
+        try: return json.loads(t)
         except ValueError:
             try: return json.loads(re.sub(r",\s*([}\]])", r"\1", t))
             except ValueError: pass
@@ -282,7 +284,10 @@ def gem_one(model, key, prompt, schema, timeout, temperature):
                 try:
                     ans = loads_loose("".join(p.get("text", "") for p in parts if not p.get("thought")))
                     count(model); return ans, None
-                except ValueError as e: last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
+                except ValueError as e:
+                    if "empty" in str(e):                  # nothing came back (blocked, or its thinking used every token): the next model
+                        last = f"{model}: empty answer"; empty_answer(model); break
+                    last = f"{model}: unreadable JSON ({str(e)[:60]})"; continue     # ask again
             last = f"{model}: {r.status_code} {r.text[:150]}"
             if r.status_code == 404: spent.add(model)          # retired or not offered to this key: never again this run
             break
@@ -292,6 +297,13 @@ def gem_one(model, key, prompt, schema, timeout, temperature):
 
 def count(model):
     c = STATE.setdefault("calls", {}); c[model] = c.get(model, 0) + 1
+
+
+def empty_answer(model):
+    """A model that replied with nothing: counted for the run's log; twice in a run and it is passed over (like a model
+    that timed out twice)."""
+    e = STATE.setdefault("empty", {}); e[model] = e.get(model, 0) + 1
+    if e[model] >= 2: STATE.setdefault("slow_models", {})[model] = 2
 
 
 # Other companies' free tiers, all OpenAI-style, used only when Charlie has added the key as a repository secret. The model
@@ -456,10 +468,16 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
         if r.status_code >= 500:
             why = f"{label}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
         if not r.ok: return None, f"{label}: {r.status_code} {r.text[:150]}"
+        ch0 = {}
         try:
-            msg = ((r.json().get("choices") or [{}])[0].get("message") or {}).get("content") or ""
+            ch0 = (r.json().get("choices") or [{}])[0] or {}
+            msg = (ch0.get("message") or {}).get("content") or ""
             ans = loads_loose(msg); count(label); return ans, None
-        except ValueError as e: why = f"{label}: unreadable JSON ({str(e)[:60]})"
+        except ValueError as e:
+            if "empty" in str(e):                          # nothing came back: the next model, not this one three times
+                empty_answer(label)
+                return None, f"{label}: empty answer" + (" (cut off at its token limit)" if ch0.get("finish_reason") == "length" else "")
+            why = f"{label}: unreadable JSON ({str(e)[:60]})"
     return None, why
 
 
@@ -554,7 +572,7 @@ def gemini_state():
     """How the run's model calls went, for the logs: models out of quota (and which limit), timeouts, answers per model,
     the keyed providers in use and how many Claude calls the run made."""
     return {"out of quota": STATE.get("quota_notes") or {}, "retired": sorted(set(STATE.get("spent_models") or []) - set(STATE.get("quota_notes") or {})),
-            "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {},
+            "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {}, "empty answers": STATE.get("empty") or {},
             "providers": [n for n in PROVIDERS if os.environ.get(PROVIDERS[n][0], "").strip()],
             "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0),
             "second opinions": STATE.get("second_opinions", 0)}

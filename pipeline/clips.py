@@ -358,6 +358,31 @@ def marked(lines, done):
     return out
 
 
+PLAN_WORDS = 9000           # the most transcript one planner call reads (about 13,000 tokens): long streams go by windows
+
+
+def window(lines, size=PLAN_WORDS):
+    """For a long transcript, the stretch of about `size` words with the least already clipped (the earliest on a tie),
+    so a 2-hour stream is planned a window at a time: on 23 October the planner sent all 144 minutes of valorant-champs
+    (27,757 words) in one prompt and every model that took it gave nothing back. (lines, index of its first line)."""
+    counts = [len(l.split()) for l in lines]
+    if sum(counts) <= size: return lines, 0
+    starts, run = [0], 0
+    for j, c in enumerate(counts):                     # a window starts every half window
+        run += c
+        if run >= size / 2 * len(starts): starts.append(j + 1)
+    best = None
+    for st in starts[:-1] or [0]:
+        w, n = [], 0
+        for l, c in zip(lines[st:], counts[st:]):
+            if n + c > size and w: break
+            w.append(l); n += c
+        if n < size / 3 and best: continue             # a short tail is part of the window before it
+        done = sum(1 for l in w if l.endswith("(already clipped)")) / max(1, len(w))
+        if best is None or done < best[0]: best = (done, st, w)
+    return best[2], best[1]
+
+
 def plan(cid, n=8):
     """The moments worth a clip, from the transcript, checked against the rules' lengths; appended to clips/plans/<id>.json."""
     import factpack
@@ -368,11 +393,16 @@ def plan(cid, n=8):
     plan_ = json.loads(p.read_text()) if p.exists() else {"moments": []}
     done = [(m["start"], m["end"]) for m in plan_["moments"]]
     terms = searches(c["subject"])
+    every = marked(lines_of(words), done)
+    lines, _ = window(every)
+    if len(lines) < len(every):
+        a0, b0 = int(re.match(r"\[(\d+)-", lines[0]).group(1)), int(re.match(r"\[\d+-(\d+)\]", lines[-1]).group(1))
+        log(f"{cid}: a long transcript, planning minutes {a0 // 60} to {b0 // 60} of {int(words[-1]['e']) // 60}")
     prompt = PLAN_PROMPT.format(label=c["source"].get("label", cid), focus=r["focus"], on_screen=r["on_screen"],
                                 searches=(f"What people type into YouTube search about {c['subject']} right now: {'; '.join(terms)}. Prefer the "
                                           "moments those searches would want, and use their words in a hook or title when they fit.\n") if terms else "",
                                 avoid="; ".join(r.get("avoid") or []), min_s=r.get("min_s", MIN_S), max_s=r.get("max_s", MAX_S), n=n,
-                                subject=c["subject"], lines="\n".join(marked(lines_of(words), done)))
+                                subject=c["subject"], lines="\n".join(lines))
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.4, writing=True, lite=True)    # the best free models, never Claude
     total = words[-1]["e"]
     added, why = 0, {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 0}
@@ -1355,6 +1385,33 @@ def allocate(remaining, count=None, channel=None):
     return out
 
 
+def spill(shares, made_n, cs, deadline):
+    """Places a campaign left unfilled (nothing left to clip, no moments found, a failure) go to the other campaigns on
+    the same channel that filled theirs, strongest first, one more each round, while time lasts: on 23 October the
+    finished Valorant series and two campaigns with no moments left 3 of the day's places empty. Returns clips added."""
+    added = 0
+    for channel, got in shares.items():
+        short = sum(max(0, n - made_n.get((channel, cid), 0)) for cid, n in got.items())
+        if short <= 0: continue
+        able = [cid for cid in got if cid in cs and made_n.get((channel, cid), 0) >= got[cid]
+                and not (cs[cid].get("rules") or {}).get("series")]
+        log(f"spill: {short} place(s) unfilled on {channel}; offered to {', '.join(able) or 'nobody (no campaign filled its share)'}")
+        while short > 0 and able:
+            for cid in list(able):
+                if short <= 0 or time.time() > deadline: able = []; break
+                if made_n.get((channel, cid), 0) >= int(cs[cid].get("per_day_max", 8)): able.remove(cid); continue
+                try:
+                    got_one = len(make(cid, 1, channel) or [])          # make plans more moments when none are left
+                except Exception as e:
+                    log(f"spill: {cid}: {type(e).__name__}: {str(e)[:160]}"); got_one = 0
+                if not got_one: able.remove(cid); continue
+                made_n[(channel, cid)] = made_n.get((channel, cid), 0) + 1; short -= 1; added += 1
+                try: upload(cid)
+                except Exception as e: log(f"spill: {cid} upload: {str(e)[:160]}")
+    if added: log(f"spill: {added} more clip(s) made in places other campaigns left")
+    return added
+
+
 def review():
     """Before a run: any clip still waiting for its publish time whose words fail the profanity check is pulled (made
     private with no publish time) and marked, so a rule that tightened after the upload still holds."""
@@ -1507,6 +1564,7 @@ def main(argv):
             for cid, n in got.items(): want[cid] = want.get(cid, 0) + n
         log("today's shares:", json.dumps(shares if len(shares) > 1 else want))
         if not want: log("the day's number is already scheduled"); return
+    made_n = {}                                                                  # (channel, campaign): clips made this run
     for cid in (ids or list(cs)):
         if cid not in cs: log(f"{cid}: not an active campaign"); continue
         if cmd == "run" and not want.get(cid): continue
@@ -1518,12 +1576,13 @@ def main(argv):
             if cmd in ("plan", "prepare") or (cmd == "run" and unmade(cid) < n): planner(cid)
             if cmd == "run":
                 for channel, got in shares.items():                              # the campaign's moments, shared out by channel
-                    if got.get(cid): make(cid, got[cid], channel)
+                    if got.get(cid): made_n[(channel, cid)] = len(make(cid, got[cid], channel) or [])
             elif cmd == "make": make(cid, n)
             if cmd in ("run", "upload"): upload(cid)
         except Exception as e:
             log(f"{cid}: {type(e).__name__}: {str(e)[:300]}")
     if cmd == "run":
+        spill(shares, made_n, cs, deadline)
         try: stats()
         except Exception as e: log("stats:", str(e)[:200])
 

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T04:30:00Z",
  "rendered": "2026-10-21T21:54:03.657821+00:00",
- "title": "Alphonso Davies: From refugee to Bayern star 🏆",
+ "title": "The incredible journey of Bayern Munich’s Alphonso Davies 🏆",
  "background_notes": [
   "picked pixabay 2 (+3 spares)"
  ],
@@ -100,6 +100,13 @@
  "social_release": "social-QD-105",
  "engage": {
   "comment": "UgzHS_qKXaetWiE1-pd4AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Alphonso Davies: From refugee to Bayern star 🏆",
+   "to": "The incredible journey of Bayern Munich’s Alphonso Davies 🏆",
+   "at": "2026-10-23T05:15+00:00",
+   "views_an_hour": 0.5,
+   "typical": 1.1
+  }
  }
 }

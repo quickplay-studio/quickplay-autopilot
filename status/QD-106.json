@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T05:00:00Z",
  "rendered": "2026-10-21T21:54:26.017909+00:00",
- "title": "Scottish Premiership biggest stadium and history ⚽",
+ "title": "What is the biggest stadium in the Scottish Premiership 🏟️",
  "background_notes": [
   "picked pixabay 2 (+2 spares)"
  ],
@@ -93,6 +93,13 @@
  "social_release": "social-QD-106",
  "engage": {
   "comment": "UgzRukfArJiGNUCseBl4AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Scottish Premiership biggest stadium and history ⚽",
+   "to": "What is the biggest stadium in the Scottish Premiership 🏟️",
+   "at": "2026-10-23T05:15+00:00",
+   "views_an_hour": 0.3,
+   "typical": 1.1
+  }
  }
 }

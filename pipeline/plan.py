@@ -10,7 +10,9 @@ Rules (numbers live in config.json)
   third of the audience is American and a fifth Asian, so the UK night counts. Until 30 Shorts have results: every
   slot_every_minutes (at most 1440 / n); then the times learned from results (analytics/slots.json, learned_slots, any
   hour of the day). A slot already taken is never reused.
-- A Short goes to the first free slot at least lead_hours away (time to render and process).
+- A Short goes to the first free slot at least lead_hours away (time to render and process), or, when its category
+  clearly does better in another quarter of the UK day (analytics/slots.json "bands"), the first free slot there within
+  18 hours (6 for news).
 - A board may fix its slot with "publish_at": "YYYY-MM-DD HH:MM" (UK time), or set "mode": "private"
   (test upload, not scheduled), "mode": "none" (render only) or "mode": "dry" (rendered and held for approval like a real
   Short, but never uploaded: tests the approval path).
@@ -101,9 +103,35 @@ def schedule_state(now, yt=None):
             if v["id"] not in ours and v["privacy"] != "public" and up and now - up < dt.timedelta(hours=24): recent += 1
     return taken, recent, online
 
+BANDS = ("00-06", "06-12", "12-18", "18-24")         # UK hours: 00-06 is the American evening, 06-12 Asia and the US night
+FRESH = {"news", "breaking", "follow-up", "remake"}    # news can't wait long for a better hour
+
+
+def band(t):
+    return BANDS[t.astimezone(UK).hour // 6]
+
+
+def band_scores():
+    """{category: {band: score}} from analytics/slots.json "bands": each category's Shorts by the UK quarter of the day they
+    went out, views against typical, shrunk towards that band's overall score (4 Shorts' worth) so a lucky one can't
+    decide. Empty until a category has 12 measured Shorts."""
+    try: bands = json.loads((ROOT / "analytics" / "slots.json").read_text()).get("bands") or {}
+    except Exception: return {}
+    allb, out = bands.get("_all") or {}, {}
+    for cat, bs in bands.items():
+        if cat == "_all" or sum(v.get("n", 0) for v in bs.values()) < 12: continue
+        out[cat] = {}
+        for b in BANDS:
+            base = (allb.get(b) or {}).get("score", 1.0)
+            v = bs.get(b) or {}
+            out[cat][b] = (v.get("n", 0) * v.get("score", base) + 4 * base) / (v.get("n", 0) + 4)
+    return out
+
+
 def slot_picker(now, taken):
-    def next_slot(created=None):
-        """The first free slot at least lead_hours away, on or after the board's "created" day (UK)."""
+    scores = band_scores()
+
+    def free(created):
         day = (now + LEAD).astimezone(UK).date() - dt.timedelta(days=1)      # yesterday's list runs on past midnight
         try:
             want = dt.date.fromisoformat(str(created)[:10]) if created else None
@@ -111,10 +139,27 @@ def slot_picker(now, taken):
         except ValueError: pass
         for _ in range(60):
             for t in day_slots(day):
-                if t >= now + LEAD and t not in taken:
-                    taken.add(t); return t
+                if t >= now + LEAD and t not in taken: yield t
             day += dt.timedelta(days=1)
-        raise RuntimeError("no free slot in the next 60 days")
+
+    def next_slot(created=None, category=None, kind=None, sid=""):
+        """The first free slot at least lead_hours away, on or after the board's "created" day (UK); when the data shows
+        the board's category does clearly better in another quarter of the day (band_scores, at least 15% better), the
+        first free slot in that quarter within the next 18 hours (6 for news). 1 board in 5 keeps the first slot so
+        every hour stays measured (Charlie, 23 October: post music when the Americans watch)."""
+        import random
+        first = next(free(created), None)
+        if first is None: raise RuntimeError("no free slot in the next 60 days")
+        pick, sc = first, scores.get(category or "")
+        if sc and random.Random(f"slot:{sid}").random() >= 0.2:
+            window = dt.timedelta(hours=6 if kind in FRESH else 18)
+            cands = []
+            for t in free(created):
+                if t > first + window: break
+                cands.append(t)
+            best = max(cands, key=lambda t: (sc[band(t)], -t.timestamp()))
+            if sc[band(best)] >= 1.15 * sc[band(first)]: pick = best
+        taken.add(pick); return pick
     return next_slot
 
 def hold_reasons(b, warnings):
@@ -181,7 +226,7 @@ def main():
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
+            slot = (t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))).isoformat().replace("+00:00", "Z")
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}

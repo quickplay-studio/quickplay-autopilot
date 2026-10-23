@@ -222,12 +222,12 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots};
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
 }
@@ -309,6 +309,10 @@ function render(){
       {h:"Writer", f:r => esc(String(r.writer || "").split(":").pop())},
       {h:"Editor", f:r => esc(r.editor || "")}
     ], list, "No Shorts measured yet.")}
+    <h2>When each kind does best</h2>
+    <p class="sub">Views against typical by the UK quarter of the day each Short went out (00 to 06 UK is the American evening). Once a kind has 12 measured Shorts and one quarter is clearly better, most of its Shorts are posted there (news within 6 hours); 1 in 5 keeps the next free slot so every hour stays tested.</p>
+    ${table([{h:"Kind", f:r => esc(r[0] === "_all" ? "All Shorts" : r[0])}].concat(["00-06", "06-12", "12-18", "18-24"].map(b => ({h:b + " UK", n:1, f:r => r[1][b] ? `${num(r[1][b].score).toFixed(1)}x <span class="sub">(${fmt(r[1][b].n)})</span>` : ""}))),
+      Object.entries((D.slots || {}).bands || {}).sort((a, b) => a[0] === "_all" ? -1 : b[0] === "_all" ? 1 : a[0].localeCompare(b[0])), "Filled in by the next analytics run.")}
     <h2>Writers and editors</h2>
     <p class="sub">Each writer model, and each writer with or without Claude's edit, against Shorts posted around the same time (1.0 = typical). Claude's write and edit shares fall back by themselves when its Shorts earn no more views.</p>
     ${table([

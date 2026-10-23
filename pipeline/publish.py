@@ -229,7 +229,7 @@ def main():
                     t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=plan.UK).astimezone(dt.timezone.utc)
                     if t < NOW + dt.timedelta(minutes=45) or t in taken: t = None
                     else: taken.add(t)
-                slot = (t or next_slot(b.get("created"))).isoformat().replace("+00:00", "Z")
+                slot = (t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))).isoformat().replace("+00:00", "Z")
             try:
                 vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
             except Y.LimitReached as e:

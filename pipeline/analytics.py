@@ -771,8 +771,17 @@ def slot_scores(rows):
         q = int(round((h * 60 + m) / 30)) * 30 % 1440          # to the nearest half hour
         key = f"{q // 60:02d}:{q % 60:02d}"
         by.setdefault(key, []).append(float(r["views_per_hour"]) / med)
+    # Quarters of the UK day by category (plan.band_scores: post a category when its audience watches; 23 October)
+    bands = {}
+    for r in aged:
+        if r.get("views_vs_typical") in ("", None): continue
+        b = ("00-06", "06-12", "12-18", "18-24")[int(r["slot_uk"][:2]) // 6]
+        for cat in ("_all", r.get("category") or ""):
+            if cat: bands.setdefault(cat, {}).setdefault(b, []).append(float(r["views_vs_typical"]))
     p.write_text(json.dumps({"day": today, "updated": NOW.isoformat(timespec="minutes"),
-                             "slots": {k: {"n": len(v), "score": round(statistics.median(v), 3)} for k, v in sorted(by.items())}}, indent=1))
+                             "slots": {k: {"n": len(v), "score": round(statistics.median(v), 3)} for k, v in sorted(by.items())},
+                             "bands": {c: {b: {"n": len(v), "score": round(statistics.median(v), 3)} for b, v in sorted(bs.items())}
+                                       for c, bs in sorted(bands.items())}}, indent=1))
 
 def write_csv(path, rows, fields):
     with open(path, "w", newline="") as f:

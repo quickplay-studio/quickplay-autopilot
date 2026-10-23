@@ -4,7 +4,7 @@ name: alerts
 # once things work again.
 on:
   workflow_run:
-    workflows: [trends, write, render, publish, social, engage, analytics, weekly]
+    workflows: [trends, write, render, publish, social, engage, analytics, weekly, clips, policy, audit]
     types: [completed]
   schedule:
     - cron: '30 21 * * *'      # the evening check: did the day's Shorts go out?

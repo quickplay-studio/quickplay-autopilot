@@ -16,7 +16,12 @@ REPO = "https://github.com/quickplay-studio/quickplay-autopilot"
 WHAT = {"trends": "finding topics and building fact packs", "write": "writing the Shorts with Gemini",
         "render": "making the videos", "publish": "uploading and scheduling on YouTube",
         "social": "posting to Instagram and Facebook", "engage": "comments, playlists and second titles",
-        "analytics": "the stats and what works", "weekly": "the weekly long video"}
+        "analytics": "the stats and what works", "weekly": "the weekly long video", "clips": "the clips line",
+        "policy": "the rule and law watch", "audit": "the identity guard"}
+# How long each job may go without a successful run before it counts as silently stopped (a cron typo, a disabled
+# schedule, a job that never finishes): the 23 October clips finding was a step that never ran for days.
+STALE_HOURS = {"trends": 14, "write": 14, "render": 14, "publish": 4, "analytics": 6, "clips": 26, "policy": 50, "audit": 14,
+               "engage": 14, "social": 26}
 HOWTO = ("Nothing to do if this closes by itself within a few hours. If it stays open, start a new Claude chat, use the "
          "quickplay skill and paste this issue's link.")
 
@@ -148,6 +153,20 @@ def money():
     print(f"money: clips about ${total:,.2f} (noted ${noted:,.2f}); subscribers {ypp.get('subscribers_pct')}%, views {ypp.get('views_pct')}%")
 
 
+def stale_check():
+    """An issue for every job with no successful run inside its STALE_HOURS (closed again once it runs)."""
+    for name, hours in STALE_HOURS.items():
+        r = gh("run", "list", "--workflow", f"{name}.yml", "--status", "success", "--limit", "1", "--json", "createdAt,url")
+        try: last = (json.loads(r.stdout or "[]") or [None])[0]
+        except ValueError: continue
+        title = f"⚠️ {name} has not run successfully for over {hours} hours ({WHAT.get(name, name)})"
+        when = dt.datetime.fromisoformat(last["createdAt"].replace("Z", "+00:00")) if last else None
+        if when is None or (NOW - when).total_seconds() > hours * 3600:
+            raise_issue(title, f"Last successful {name} run: {last['url'] + ' at ' + last['createdAt'] if last else 'none found'}. "
+                               "Its schedule may have stopped or every run is failing.")
+        else: clear(title, f"Ran successfully at {last['createdAt']}.")
+
+
 def funnel_check():
     """The day's funnel (pipeline/funnel.py): an issue naming any stage that got nothing while the one before it had work."""
     import funnel
@@ -167,5 +186,7 @@ if __name__ == "__main__":
         evening()
         try: funnel_check()
         except Exception as e: print("funnel:", str(e)[:160])
+        try: stale_check()
+        except Exception as e: print("stale:", str(e)[:160])
         try: money()
         except Exception as e: print("money:", str(e)[:120])

@@ -1,0 +1,46 @@
+name: policy
+# The rule and law watch (pipeline/policy_watch.py): new YouTube, Instagram and UK rule items sorted by a free model;
+# "act" and "watch" go to docs/POLICY.md, "act" also opens an issue labelled "policy" for the weekly Claude review.
+on:
+  schedule:
+    - cron: '41 7 * * *'       # every day, 07:41 UTC
+  push:
+    branches: [main]
+    paths: ['requests/policy*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: policy
+  cancel-in-progress: false
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests tzdata trafilatura
+      - name: Watch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: python pipeline/policy_watch.py 2>&1 | tee status/policy_log.txt
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git config merge.directoryRenames false
+          git add docs/POLICY.md status/policy_seen.json status/policy_log.txt 2>/dev/null || true
+          git commit -q -m "Rule watch $(date -u '+%F %H:%M')" || exit 0
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

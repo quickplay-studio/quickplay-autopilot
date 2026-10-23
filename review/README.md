@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 00:10): 9 of 1,000 subscribers · 6,722 of 10 million Shorts views in 90 days · 4,173 views in the last 24 hours (about 111,036 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 00:36): 9 of 1,000 subscribers · 6,730 of 10 million Shorts views in 90 days · 4,228 views in the last 24 hours (about 111,036 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 0:10 (UK): 1 scheduled, 127 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 39 scheduled |
-| Sat 24 Oct | 0 public, 1 scheduled | 0 | 0 | ⏳ 0 of 40 so far, 1 more scheduled |
+| Sat 24 Oct | 1 public | 0 | 1 | ⏳ 1 of 40 so far |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -72,10 +72,18 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-144](QD-144.jpg)
 
+## In the queue
+
+- **QD-146** GTA 6 has no disc, so what will it cost you? 🎮 (rendering next)
+- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤 (rendering next)
+- **QD-148** New Alien movie confirmed, and Ridley Scott is producing 👽 (rendering next)
+- **QD-149** Cyberpunk 2077 now fits in your hands 🎮 (rendering next)
+- **QD-150** Queen and Bowie: The night Under Pressure began 🎸 (rendering next)
+
 ## On the channel (latest first)
 
 ### Sat 24 Oct 0:30 · BABYMONSTER's G-Dragon Drip collab 🎧
-scheduled · 21 s · music: paradise · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
+private · 21 s · music: paradise · on Facebook · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
 
 ![QD-145](QD-145.jpg)
 

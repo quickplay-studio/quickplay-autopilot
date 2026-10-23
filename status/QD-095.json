@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T00:00:00Z",
  "rendered": "2026-10-21T14:08:25.763044+00:00",
- "title": "Which artist has won the most Grammy Awards? 🏆",
+ "title": "Who holds the record for the most Grammy wins? 🎤",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:24490 skipped: nearly black (brightness 0.03)"
@@ -89,6 +89,13 @@
  "social_release": "social-QD-095",
  "engage": {
   "comment": "UgzLxy6JsPxtA6q9iF54AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "Which artist has won the most Grammy Awards? 🏆",
+   "to": "Who holds the record for the most Grammy wins? 🎤",
+   "at": "2026-10-23T00:08+00:00",
+   "views_an_hour": 0.2,
+   "typical": 1.2
+  }
  }
 }

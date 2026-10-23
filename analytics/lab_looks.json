@@ -46,7 +46,16 @@
     "vignette": 0.0,
     "lab": true,
     "parent": "natural",
-    "born": "2026-10-19"
+    "born": "2026-10-19",
+    "retired": "2026-10-23: 0.37x against 1.92x for natural over 12 Shorts"
+   },
+   "lab-grade-1023": {
+    "desc": "contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0",
+    "filter": "contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0)",
+    "vignette": 0.0,
+    "lab": true,
+    "parent": "natural",
+    "born": "2026-10-23"
    }
   },
   "opening": {
@@ -59,7 +68,20 @@
    }
   }
  },
- "retired": {},
+ "retired": {
+  "captions": {
+   "clean": "2026-10-23: 1.22x against 3.58x for lab-captions-1019 over 19 Shorts"
+  },
+  "voice": {
+   "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts"
+  },
+  "energy": {
+   "calm": "2026-10-23: 0.57x against 1.65x for steady over 17 Shorts"
+  },
+  "opening": {
+   "graphic_first": "2026-10-23: 1.22x against 1.88x for image_first over 35 Shorts"
+  }
+ },
  "log": [
   {
    "day": "2026-10-19",
@@ -90,7 +112,43 @@
    "dimension": "opening",
    "change": "testing lab-opening-1019: the picture alone for 1 word, then the hook's card",
    "why": "one or two settings changed from the best so far, graphic_first"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "captions",
+   "change": "retired clean",
+   "why": "1.22x against 3.58x for lab-captions-1019 over 19 Shorts"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "voice",
+   "change": "retired george",
+   "why": "0.97x against 1.80x for emma over 12 Shorts"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "energy",
+   "change": "retired calm",
+   "why": "0.57x against 1.65x for steady over 17 Shorts"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "grade",
+   "change": "retired lab-grade-1019",
+   "why": "0.37x against 1.92x for natural over 12 Shorts"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "grade",
+   "change": "testing lab-grade-1023: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0",
+   "why": "one or two settings changed from the best so far, natural"
+  },
+  {
+   "day": "2026-10-23",
+   "dimension": "opening",
+   "change": "retired graphic_first",
+   "why": "1.22x against 1.88x for image_first over 35 Shorts"
   }
  ],
- "day": "2026-10-22"
+ "day": "2026-10-23"
 }

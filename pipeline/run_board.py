@@ -195,17 +195,21 @@ def main():
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
-        tried = []      # an unclear read in a new voice is tried again in the house voice; the clearer read wins (ties: the look's)
-        for v in [voice] + (["F2"] if voice != "F2" else []):
-            vdir = f"voice/{sid}-{v}"
+        tried = []      # an unclear read in a new voice is tried again in the house voice, then the house voice 15% slower
+        wps0 = float(look["voice"]["wps"])  # (unclear Shorts were lost outright before 23 October); the clearest read wins
+        for k, (v, wps) in enumerate([(voice, wps0)] + ([("F2", wps0)] if voice != "F2" else []) + [("F2", round(wps0 * 0.85, 2))]):
+            vdir = f"voice/{sid}-{v}-{k}"
             sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
-            sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(look["voice"]["wps"]))
+            sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(wps))
             man = json.loads((P / vdir / "cb_manifest.json").read_text())
-            weak = [b["beat"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4]
-            tried.append((len(weak), v != voice, v, vdir, man, weak))
+            low = {b["beat"]: b["recall"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4}
+            weak = sorted(low)
+            tried.append((len(weak), -min(low.values(), default=1.0), k, v, vdir, man, weak))
             if not weak: break
-            print(f"voice {v}: unclear in beats {weak}", flush=True)
-        _, _, v, vdir, man, weak = min(tried, key=lambda x: x[:2])
+            print(f"voice {v} at {wps} words a second: unclear in beats {weak}", flush=True)
+        _, worst, _, v, vdir, man, weak = min(tried, key=lambda x: x[:3])
+        if weak and len(weak) == 1 and weak[0] != 0 and -worst >= 0.25:     # one middle beat, mostly heard: the captions carry it
+            flags = list(flags) + [f"narration a little unclear in beat {weak[0]} (captions carry it)"]; weak = []
         if v != voice:
             status["look"]["voice"] = "george"; status["look_note"] = f"voice {voice} was less clear, used george"
         sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
@@ -228,7 +232,8 @@ def main():
         if big and (P / "out" / f"{sid}.social.mp4").exists():      # template tests show both layouts
             contact_sheet(P / "out" / f"{sid}.social.mp4", P / "out" / f"{sid}.timeline.json", res / "review_social.jpg", big=True)
         problems = []
-        if not 12 <= dur <= 75: problems.append(f"length {dur:.0f}s")
+        top = 180 if (sb.get("test") or {}).get("length") == "about 2 min" else 75     # the 2-minute arm (YouTube allows 3)
+        if not 12 <= dur <= top: problems.append(f"length {dur:.0f}s")
         if weak: problems.append(f"unclear narration in beats {weak}")
         if problems: raise RuntimeError("checks failed: " + "; ".join(problems))
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())

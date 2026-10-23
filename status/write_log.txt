@@ -2,8 +2,7 @@ breaking run for 2026-10-23: 2 to write from 5 fact packs
 covered already: Clayface (film)
 covered already: ChatGPT
 covered already: ROBLOX THE HOLLOW
-QD-139: about 2 min needs 16 facts, the pack has 3: 35 to 44 s instead
+covered already: JEV PLAYS MODERN WARFARE 4 MULTIPLAYER
+wrote 0 of 2: 
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-JEV PLAYS MODERN WARFARE 4 MULTIPLAYER: gemini-3-flash-preview, 1 warnings (narration: 133 words, best between 55 and 125)
-wrote 1 of 2: QD-139 Modern Warfare 4: New matchmaking system revealed 🎮
-gemini: {"order": ["gemini-flash-latest", "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"], "out of quota": {"gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-flash-latest": "daily limit 20", "gemini-3.6-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1}, "answers": {"openrouter:nvidia/nemotron-3.5-super-vl:free": 1, "gemini-3-flash-preview": 2, "gemini-3.5-flash-lite": 3}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false}
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "late": false, "claude today": "0 of 24 edits, 0 of 8 writes"}

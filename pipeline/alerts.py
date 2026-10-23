@@ -62,8 +62,9 @@ def after_run():
 def evening():
     today = NOW.astimezone(UK).date()
     load = lambda p, d: json.loads(p.read_text()) if p.exists() else d
-    want = int(load(ROOT / "status" / "targets.json", {}).get(str(today))
-               or load(ROOT / "config.json", {}).get("daily_limit", 24))
+    try: import quota; chosen = quota.target()      # the chosen number a day (15 from 24 October), not the ceiling
+    except Exception: chosen = load(ROOT / "config.json", {}).get("daily_limit", 24)
+    want = int(load(ROOT / "status" / "targets.json", {}).get(str(today)) or chosen)
     went = 0
     for p in (ROOT / "status").glob("QD-*.json"):
         try: st = json.loads(p.read_text())
@@ -147,9 +148,24 @@ def money():
     print(f"money: clips about ${total:,.2f} (noted ${noted:,.2f}); subscribers {ypp.get('subscribers_pct')}%, views {ypp.get('views_pct')}%")
 
 
+def funnel_check():
+    """The day's funnel (pipeline/funnel.py): an issue naming any stage that got nothing while the one before it had work."""
+    import funnel
+    f = funnel.run()
+    title = "⚠️ A pipeline stage is stuck"
+    if f["stuck"]:
+        lost = "; ".join(f"{k} ({v})" for k, v in (f.get("lost") or {}).items())
+        raise_issue(title, f"{f['day']}: " + "; ".join(f["stuck"]) + ". Stage counts: " +
+                    ", ".join(f"{k} {v}" for k, v in f["stages"].items() if k not in ("day", "stuck")) + (f". Lost: {lost}." if lost else "")
+                    + " The hub's Overview shows the funnel.")
+    else: clear(title, f"{f['day']}: every stage moved.")
+
+
 if __name__ == "__main__":
     if os.environ.get("EVENT") == "workflow_run": after_run()
     else:
         evening()
+        try: funnel_check()
+        except Exception as e: print("funnel:", str(e)[:160])
         try: money()
         except Exception as e: print("money:", str(e)[:120])

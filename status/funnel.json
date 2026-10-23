@@ -1,0 +1,29 @@
+{
+ "day": "2026-10-23",
+ "updated": "2026-10-23T20:19+00:00",
+ "stages": {
+  "day": "2026-10-23",
+  "packs": 11,
+  "written": 19,
+  "rendered": 17,
+  "render_failed": 0,
+  "uploaded": 17,
+  "public": 19,
+  "target": 15,
+  "clips_planned": 31,
+  "clips_made": 58,
+  "clips_uploaded": 42,
+  "clips_refused": 2,
+  "clips_instagram": 0,
+  "clips_submitted": 0,
+  "clips_views": 16,
+  "stuck": "clips went up on YouTube but none to Instagram; clips went up but none were submitted to a campaign"
+ },
+ "stuck": [
+  "clips went up on YouTube but none to Instagram",
+  "clips went up but none were submitted to a campaign"
+ ],
+ "lost": {
+  "clip skipped: dark picture": 2
+ }
+}

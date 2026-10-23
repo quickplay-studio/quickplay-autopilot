@@ -222,14 +222,30 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel};
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+}
+
+// The day's funnel (status/funnel.json, pipeline/funnel.py each evening): where Shorts and clips are made and lost
+function funnelCard(){
+  const f = D.funnel;
+  if (!f) return `<p class="sub">Filled in by the evening check (21:30 UK).</p>`;
+  const s = f.stages || {}, row = (label, k, note) => ({label, v: s[k], note: note || ""});
+  const rows = [row("Fact packs", "packs"), row("Shorts written", "written", `target ${fmt(s.target)}`), row("Rendered", "rendered"),
+    row("Render failed", "render_failed"), row("Uploaded", "uploaded"), row("Gone public", "public"),
+    row("Clip moments planned", "clips_planned"), row("Clips made", "clips_made"), row("Clips uploaded", "clips_uploaded"),
+    row("Clips refused by YouTube", "clips_refused", "unverified channels; they move to Quickplay Clips"),
+    row("Clips on Instagram", "clips_instagram"), row("Clips submitted to campaigns", "clips_submitted"), row("Clip views so far", "clips_views")];
+  const stuck = (f.stuck || []).length ? `<p>${pill("bad", "!", "Stuck: " + esc(f.stuck.join("; ")))}</p>` : `<p>${pill("good", "✓", "Every stage moved")}</p>`;
+  const lost = Object.entries(f.lost || {}).map(([k, v]) => `${esc(k)} (${v})`).join("; ");
+  return stuck + table([{h:"Stage", f:r => esc(r.label)}, {h:esc(f.day), n:1, f:r => fmt(r.v || 0)}, {h:"", f:r => esc(r.note)}], rows)
+    + (lost ? `<p class="sub">Lost today: ${lost}</p>` : "") + `<p class="sub">Every day is kept in analytics/funnel.csv.</p>`;
 }
 
 // Claude on the writer: today's calls against the caps, the last 7 days, and whether the last call worked (status/claude_usage.json)
@@ -284,6 +300,7 @@ function render(){
       ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>
+    <h2>Pipeline today</h2>${funnelCard()}
     <h2>Claude use (your subscription)</h2>${claudeCard()}
     <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>
     <h2>Needs you or worth knowing</h2>${alertList}

@@ -38,6 +38,7 @@ jobs:
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           git add status/money.json 2>/dev/null || true
+          git add status/funnel.json analytics/funnel.csv 2>/dev/null || true
           git commit -q -m "Money note $(date -u '+%F %H:%M')" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 0

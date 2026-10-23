@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-22T05:30:00Z",
  "rendered": "2026-10-21T21:54:27.478799+00:00",
- "title": "How does ChatGPT process natural language queries? 🤖",
+ "title": "How does ChatGPT work and remember information? 💻",
  "background_notes": [
   "Pixabay 'futuristic city night': 40 results, none at 720p or better",
   "picked pixabay 1 (+2 spares)"
@@ -76,7 +76,14 @@
  "social_release": "social-QD-107",
  "engage": {
   "comment": "UgydT6PSJr47u0sCnwZ4AaABAg",
-  "playlist": "Quickplay Daily: Tech"
+  "playlist": "Quickplay Daily: Tech",
+  "title": {
+   "swapped_from": "How does ChatGPT process natural language queries? 🤖",
+   "to": "How does ChatGPT work and remember information? 💻",
+   "at": "2026-10-23T06:16+00:00",
+   "views_an_hour": 0.0,
+   "typical": 1.1
+  }
  },
  "facebook": {
   "video": "1652226153206392",

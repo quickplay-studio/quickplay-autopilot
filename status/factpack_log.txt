@@ -1,14 +1,11 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-So Easy (To Fall In Love) by Olivia Dean: 4 verified, 5 one-source, 3 pages
-ghosts tv show: 0 verified, 4 one-source, 2 pages
-ipswich town vs nottm forest: 0 verified, 0 one-source, 1 pages
-al hilal: 0 verified, 3 one-source, 2 pages
-Clayface (film): 0 verified, 3 one-source, 3 pages
-BioWare: 2 verified, 11 one-source, 4 pages
-LISA: 0 verified, 2 one-source, 5 pages
-BABYMONSTER: 0 verified, 2 one-source, 2 pages
-I Play Rocky: 8 verified, 0 one-source, 3 pages
-ROBLOX THE HOLLOW: 4 verified, 0 one-source, 2 pages
-Olivia Rodrigo: 0 verified, 2 one-source, 4 pages
-11 packs, 18 verified facts
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 12}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0}
+GTA 6: 1 verified, 4 one-source, 4 pages
+GTA 6 price: 0 verified, 7 one-source, 4 pages
+GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
+GTA 6 map: 1 verified, 0 one-source, 4 pages
+So Easy (To Fall In Love) by Olivia Dean: 5 verified, 0 one-source, 3 pages
+jorja smith: 1 verified, 5 one-source, 3 pages
+movie times: 4 verified, 3 one-source, 5 pages
+covered recently, no pack: Clayface (film); LISA; BABYMONSTER; iPhone Duo Vs iPhone 18
+7 packs, 12 verified facts, 19 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 8, "groq:openai/gpt-oss-120b": 5}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 3}

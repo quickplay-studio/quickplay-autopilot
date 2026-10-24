@@ -10,3 +10,16 @@ speed-expedia-11 (youtube, Content Rewards): failed: $8,000 IShowSpeed x Expedia
 speed-expedia-17 (youtube, Content Rewards): failed: $8,000 IShowSpeed x Expedia Clipping Campaign $1.00 per 1K views · up to $500 $7.3K/$8K Cancel Submit clip
 speed-expedia-18 (youtube, Content Rewards): failed: $8,000 IShowSpeed x Expedia Clipping Campaign $1.00 per 1K views · up to $500 $7.3K/$8K Cancel Submit clip
 submit: 0 of 82 submitted
+=== run 2026-10-24 22:53 UTC, schedule '30 22 * * *', request ''
+stats: 119 clips
+insights: {"layout": null, "captions": null, "punch": null, "length": null, "title": null, "take": null, "take_style": null}
+reach: {"clips": {"public_a_day_old": 34, "no_views": 28, "views": 13, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 12, "unseen": true, "take_unseen": false}, "gaming": {"public_a_day_old": 7, "no_views": 0, "views": 78, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 67, "unseen": false, "take_unseen": false}, "irl": {"public_a_day_old": 10, "no_views": 10, "views": 0, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 0, "unseen": true, "take_unseen": false}}
+late rows: 0 expired (over 30 hours old without the views to justify a late submission)
+engage: 0 comments
+late rows: 0 expired (over 30 hours old without the views to justify a late submission)
+submit: Vyro: 75 row(s) left for the Mac Chrome run (submit_by mac)
+speed-expedia-07 (youtube, Content Rewards): failed: past the 30-minute window: check: window
+speed-expedia-08 (youtube, Content Rewards): failed: past the 30-minute window: check: window
+speed-expedia-09 (youtube, Content Rewards): failed: past the 30-minute window: check: window
+speed-expedia-10 (youtube, Content Rewards): failed: past the 30-minute window: check: window
+submit: 0 of 79 submitted

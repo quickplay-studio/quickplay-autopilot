@@ -86,3 +86,22 @@ _rq.get = lambda *a, **k: R({"items": []}, "")
 h, why = S.heat("GTA 6")
 assert h >= 1.0 and any("watchlist" in w for w in why), (h, why)
 print("watch wiring ok")
+
+# 6. per-item launch length and ceiling (24 October, the calendar of big dates): after_days ends launch week early, places caps
+#    an item below its level's places; neither field: as before
+VIEWS = [10000] * 30
+d0 = dt.date(2026, 10, 31)
+assert W.phase({"date": "2026-10-31", "after_days": 1}, d0 + dt.timedelta(days=1))[1] == "launch"
+assert W.phase({"date": "2026-10-31", "after_days": 1}, d0 + dt.timedelta(days=2))[1] == "steady"
+assert W.phase({"date": "2026-10-31"}, d0 + dt.timedelta(days=7))[1] == "launch"
+item = {"name": "Halloween 2026", "terms": ["Halloween"], "wikipedia": "Halloween", "date": "2026-10-31", "category": "Entertainment", "places": 2}
+assert W.measure(item, d0)["places"] == 2 and W.measure({**item, "places": None}, d0)["places"] == 4
+# the shipped watchlist reads: names unique, dates parse, no dashes, inactive items left out of items()
+import json as _j
+_cfg = _j.loads((_p.Path(REPO_DIR) / "config.json").read_text())
+_names = [w["name"] for w in _cfg["watchlist"]]
+assert len(_names) == len(set(_names))
+for w in _cfg["watchlist"]:
+    dt.date.fromisoformat(w["date"]); assert "–" not in _j.dumps(w, ensure_ascii=False) and "—" not in _j.dumps(w, ensure_ascii=False), w["name"]
+assert 0 < float(_cfg.get("watch_share_max", 0.34)) <= 0.5
+print("watch: per-item launch length and places ok")

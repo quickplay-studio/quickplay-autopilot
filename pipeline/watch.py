@@ -85,9 +85,11 @@ def in_trends(terms):
 
 
 def phase(w, today):
+    """(days to go, phase). Launch runs from 3 days before to "after_days" after (7 unless set: 1 suits a one-day moment
+    such as Halloween, 2 an awards night or a match); build-up within "lead_days" (45 unless set)."""
     try: d = (dt.date.fromisoformat(str(w.get("date"))) - today).days
     except Exception: return None, "steady"
-    if -7 <= d <= 3: return d, "launch"
+    if -int(w.get("after_days") or 7) <= d <= 3: return d, "launch"
     if 0 < d <= int(w.get("lead_days") or 45): return d, "build-up"
     return d, "steady"
 
@@ -108,7 +110,8 @@ def measure(w, today=None):
     news_jump = usual_news is not None and news >= max(15, 2 * usual_news)
     surging = (momentum or 0) >= 1.5 or news_jump or "Google Trends" in where
     level = "launch" if ph == "launch" else "surging" if surging else ph
-    return {"name": w["name"], "days_to": days, "phase": ph, "level": level, "places": PLACES.get(level, 1),
+    places = PLACES.get(level, 1) if w.get("places") is None else min(PLACES.get(level, 1), int(w["places"]))   # "places": an item's own ceiling
+    return {"name": w["name"], "days_to": days, "phase": ph, "level": level, "places": places,
             "momentum": momentum, "views_yesterday": pv[-1] if pv else None, "views_usual": round(base) if base else None,
             "views_30d": pv, "news_24h": news, "news_usual": usual_news, "suggestions": sug[:8], "in": where, "category": w.get("category", ""),
             "angles": w.get("angles") or [], "rules": w.get("rules", ""), "terms": terms}

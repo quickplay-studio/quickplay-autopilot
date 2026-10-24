@@ -481,11 +481,11 @@ function insightsTab(){
   // what works: the drivers' verdicts, one line per kind of choice
   const areas = [];
   for (const r of D.drivers || []) {
-    if (!["push", "cut back", "stop"].includes(r.verdict)) continue;
+    if (!["push", "cut back", "stop", "pause", "retest"].includes(r.verdict)) continue;
     const name = r.feature_label || r.feature;
     let a = areas.find(x => x.name === name);
-    if (!a) { a = {name, push: [], cut: [], stop: []}; areas.push(a); }
-    (r.verdict === "push" ? a.push : r.verdict === "stop" ? a.stop : a.cut).push(r);
+    if (!a) { a = {name, push: [], cut: [], stop: [], retest: []}; areas.push(a); }
+    (r.verdict === "push" ? a.push : (r.verdict === "stop" || r.verdict === "pause") ? a.stop : r.verdict === "retest" ? a.retest : a.cut).push(r);
   }
   for (const a of areas) { a.push.sort((x, y) => num(y.lift) - num(x.lift)); a.cut.sort((x, y) => num(x.lift) - num(y.lift)); }
   const choice = list => list.length ? list.map(r => `${esc(r.value)} <span class="sub" style="white-space:nowrap">${num(r.lift).toFixed(2)}x, ${fmt(r.n)}</span>`).join("<br>") : `<span class="muted">·</span>`;
@@ -528,15 +528,15 @@ function insightsTab(){
       ${tile("Instagram views", B.ig.med == null ? "·" : fmt(B.ig.med), `median, ${fmt(B.ig.n)} Reels a day old or more`)}
       ${tile("Facebook plays", B.fb.med == null ? "·" : fmt(B.fb.med), `median, ${fmt(B.fb.n)} Reels a day old or more`)}
       ${tile("Biggest audience", geo.length ? `${esc(countryName(geo[0].country))} ${num(geo[0].share_pct).toFixed(0)}%` : "·", "share of YouTube views")}
-      ${tile("Choices being pushed", fmt(count("push")), `${fmt(count("cut back"))} cut back, ${fmt(count("stop"))} stopped for good`)}
+      ${tile("Choices being pushed", fmt(count("push")), `${fmt(count("cut back"))} cut back, ${fmt(count("pause") + count("stop"))} paused for 14 days, ${fmt(count("retest"))} being retested`)}
     </div>
     ${flagged.length ? `<div class="callout"><p>${pill("bad", "!", "A change cost something")} ${flagged.length === 1 ? "One change" : fmt(flagged.length) + " changes"} made a number worse or traded one for another:</p>
       ${flagged.map(r => `<p><b>${esc(r.id)}</b> ${esc(r.change)}: ${verdictPill(r.verdict)} ${esc(r.result)}</p>`).join("")}</div>` : ""}
 
     <h2>What the numbers say works</h2>
-    <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 days or more. The writer follows these; "stopped" choices are never made again.</p>
+    <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 UK days, a 90% interval clear of typical and both halves of the data agreeing (25 October). The writer follows these, but 1 Short in 5 still explores; a paused choice rests 14 days and is then retested on a small share.</p>
     ${table([{h:"Choice", f:a => esc(a.name)}, {h:"Lean towards", f:a => choice(a.push)}, {h:"Use less", f:a => choice(a.cut)}]
-      .concat(areas.some(a => a.stop.length) ? [{h:"Stopped", f:a => choice(a.stop)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
+      .concat(areas.some(a => a.stop.length) ? [{h:"Paused", f:a => choice(a.stop)}] : []).concat(areas.some(a => a.retest.length) ? [{h:"Retesting", f:a => choice(a.retest)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
 
     <h2>Where the viewers are</h2>
     <p class="sub">YouTube's own split of the channel's views by country (it only names countries with enough viewers). "Watched" is the average share of each Short seen there; "best" is the category that does best for that country.</p>

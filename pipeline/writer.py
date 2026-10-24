@@ -1213,7 +1213,8 @@ def main():
         return emit(p, base, kind, tests={**tests, "series": "single"})
 
     topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
-    rank = lambda kp: (kp[0] - (200 if watch_of(kp[1]) else 0) - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
+    rank = lambda kp: (kp[0] - (200 - 20 * {"launch": 0, "surging": 1, "build-up": 2}.get((WATCH.get(watch_of(kp[1])) or {}).get("level"), 3) if watch_of(kp[1]) else 0)
+                       - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     try:                                                     # the watchlist (pipeline/watch.py): its own places today
         import watch
@@ -1225,6 +1226,15 @@ def main():
     def watch_done(name):
         return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
                    if (board(f).get("watch") == name and board(f).get("created") == str(day))) + sum(1 for b in written if b.get("watch") == name)
+    # one cap across the watchlist (24 October: the calendar of big dates would ask for 22 places a day in GTA 6 week, more
+    # than the day's Shorts): at most watch_share_max of the day's target goes to watch items, launch items first, then
+    # surging, then build-up, so the day's own news and every category keep their room
+    WATCH_CAP = max(1, round(float(CFG.get("watch_share_max", 0.34)) * max(1, int(DAY.get("target") or quota.target()))))
+    WATCH_RANK = {"launch": 0, "surging": 1, "build-up": 2}
+    def watch_total():
+        """Watch boards for the day so far, every item together (one pass over the boards)."""
+        return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
+                   if board(f).get("watch") and board(f).get("created") == str(day)) + sum(1 for b in written if b.get("watch"))
     shares, later = category_shares(), []
     if shares: print("category shares:", {c: round(v, 2) for c, v in sorted(shares.items(), key=lambda x: -x[1])})
     def eligible(q):
@@ -1248,6 +1258,7 @@ def main():
         if p.get("_done"): continue                 # written already as an exploration Short
         wn = watch_of(p)
         if wn and watch_done(wn) >= int(WATCH[wn].get("places", 1)): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
+        if wn and watch_total() >= WATCH_CAP: print(f"watchlist: the day's {WATCH_CAP} watch places are filled:", p["topic"]); continue
         if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
             p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end
         if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:

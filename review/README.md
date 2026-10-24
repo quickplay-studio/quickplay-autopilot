@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 23:35): 11 of 1,000 subscribers · 8,223 of 10 million Shorts views in 90 days · 5,013 views in the last 24 hours (about 111,020 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 00:32): 11 of 1,000 subscribers · 8,230 of 10 million Shorts views in 90 days · 4,836 views in the last 24 hours (about 111,020 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
 
@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sun 25 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 14 scheduled |
-| Sat 24 Oct | 14 public | 26 | 3 | ⏳ 14 of 15 so far |
+| Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
+| Sun 25 Oct | 1 public, 6 scheduled | 0 | 0 | ⏳ 1 of 14 so far, 6 more scheduled |
+| Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 | Tue 20 Oct | 7 public | 10 | 10 | ⚠️ 7 of 24 |
 | Mon 19 Oct | 19 public | 6 | 6 | ⚠️ 19 of 24 |
-| Sun 18 Oct | 8 public | 0 | 0 | no target then |
 
 ## Voice test
 
@@ -91,7 +91,7 @@ scheduled · 27 s · music: try-to-catch-me · [script](../boards/done/QD-159.js
 ![QD-159](QD-159.jpg)
 
 ### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-scheduled · 27 s · music: death-duel · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
+private · 27 s · music: death-duel · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
 
 ![QD-158](QD-158.jpg)
 

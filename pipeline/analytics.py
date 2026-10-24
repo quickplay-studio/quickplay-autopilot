@@ -68,12 +68,14 @@ def our_shorts():
         out[st["video"]] = {
             "id": st.get("id"), "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
-            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
+            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")),
-            "source": st.get("source", "pipeline"), "timeline": st.get("timeline"),
+            # where the Short came from (pipeline, backlog, manual). Until 24 October this was "source", which overwrote the
+            # board's topic source above, so the "Topic source" driver was never scored.
+            "origin": st.get("source", "pipeline"), "timeline": st.get("timeline"),
             "real_share": round((st.get("media") or {}).get("real_shots", 0) / max(1, sum(len(bt.get("shots") or []) for bt in beats)), 2)
                           if st.get("media") and beats else ""}
     legacy = load_json(OUT / "legacy.json", {}) or {}       # Shorts from before the pipeline kept boards
@@ -83,7 +85,7 @@ def our_shorts():
     for vid, cat in (legacy.get("by_video") or {}).items():
         out.setdefault(vid, {"id": "", "title": "", "category": cat, "format": "legacy", "mood": "", "hook": "", "hook_words": "",
                              "words": "", "seconds": "", "hashtags": "", "instagram_media": None, "tiktok": False,
-                             "source": "manual", "timeline": None, "real_share": ""})
+                             "origin": "manual", "timeline": None, "real_share": ""})
     return out
 
 # ---------------- YouTube ----------------
@@ -203,12 +205,16 @@ def drops(curve, timeline, secs):
     return out
 
 def at_point(curve, frac):
-    """The retention ratio at a fraction of the video (the first measured point at or after it), as a percentage."""
+    """The retention ratio at a fraction of the video (the first measured point at or after it), as a percentage, at most
+    100. YouTube's audienceWatchRatio counts replays, so on 24 October 31 of 35 Shorts read over 100% at 3 seconds (up to
+    319%): a loop is not a viewer who stayed, so the share is capped."""
     if not curve: return ""
     k = min((k for k in curve if k >= frac), default=max(curve))
-    return round(100 * curve[k])
+    return round(100 * min(1.0, curve[k]))
 
 # ---------------- Instagram ----------------
+REEL_METRICS = ("ig_reels_avg_watch_time", "reels_skip_rate", "reposts", "facebook_views")
+
 def instagram():
     if len(os.environ.get("SOCIAL_KEY", "")) < 20: return None
     import requests, social
@@ -226,7 +232,10 @@ def instagram():
         media += r.get("data", []); url = (r.get("paging") or {}).get("next"); params = None
     insights_error = None
     cache_p = CACHE / "instagram.json"; cache = load_json(cache_p, {}) or {}
-    keys = ("views", "reach", "shares", "saved", "total_interactions", "ig_reels_avg_watch_time")
+    keys = ("views", "reach", "shares", "saved", "total_interactions") + REEL_METRICS
+    if str(cache.get("_reel_metrics_at", "")) < str(TODAY - dt.timedelta(days=7)): cache.pop("_reel_metrics", None)   # relearn weekly
+    reel_ok = list(cache.get("_reel_metrics") or REEL_METRICS)      # the Reels metrics the API still answers
+    def value(d): return (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value"))
     for m in media:
         posted = utc(m.get("timestamp"))
         if FAST and m["id"] in cache and posted and NOW - posted > dt.timedelta(days=3):
@@ -234,12 +243,20 @@ def instagram():
         r = requests.get(f"{api}/{m['id']}/insights", params={"metric": "views,reach,shares,saved,total_interactions",
                                                               "access_token": tok}, timeout=30).json()
         if "error" in r: insights_error = r["error"].get("message", "")[:200]; continue
-        for d in r.get("data", []):
-            m[d["name"]] = (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value"))
-        if not FAST and m.get("media_product_type") == "REELS":     # average watch time, asked apart so a refusal costs nothing else
-            w = requests.get(f"{api}/{m['id']}/insights", params={"metric": "ig_reels_avg_watch_time", "access_token": tok}, timeout=30).json()
-            for d in w.get("data", []) if "error" not in w else []:
-                m[d["name"]] = (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value"))
+        for d in r.get("data", []): m[d["name"]] = value(d)
+        # Reels-only metrics, asked apart so a refusal costs nothing else: average watch time, and (24 October) the share
+        # of views skipped inside 3 seconds (reels_skip_rate, the only direct hook measure any platform's API gives),
+        # reposts, and the plays of the Reel on Facebook when it is crossposted (facebook_views)
+        if not FAST and m.get("media_product_type") == "REELS" and reel_ok:
+            w = requests.get(f"{api}/{m['id']}/insights", params={"metric": ",".join(reel_ok), "access_token": tok}, timeout=30).json()
+            if "error" in w and not cache.get("_reel_metrics"):         # one retired or unknown metric fails the ask: find the rest, once
+                ok, w = [], {"data": []}
+                for name in REEL_METRICS:
+                    q = requests.get(f"{api}/{m['id']}/insights", params={"metric": name, "access_token": tok}, timeout=30).json()
+                    if "error" not in q: ok.append(name); w["data"] += q.get("data", [])
+                reel_ok = ok
+                if ok: cache["_reel_metrics"], cache["_reel_metrics_at"] = ok, str(TODAY)     # none answering may be a passing fault
+            for d in w.get("data", []) if "error" not in w else []: m[d["name"]] = value(d)
         cache[m["id"]] = {**cache.get(m["id"], {}), **{k: m[k] for k in keys if k in m}}
     CACHE.mkdir(parents=True, exist_ok=True); cache_p.write_text(json.dumps(cache))
     return {"followers": me.get("followers_count"), "username": me.get("username"), "media": media, "insights_error": insights_error}
@@ -357,15 +374,26 @@ def breakouts(rows, curves):
                                             "times_typical", "youtube_url"])
     return out
 
+def peers_of(r, pool, field):
+    """`field` for the Shorts posted the same UK day as r (r included), widening to ±36 hours, then ±3 days, while there
+    are fewer than 3. Same-day peers take out the day's luck (24 October: with ±3 days 21% of the variance in views
+    against peers sat between posting days, with the same UK day 2%)."""
+    t = utc(r["posted"]); day = t.astimezone(UK).date()
+    for near in (lambda x: utc(x["posted"]).astimezone(UK).date() == day,
+                 lambda x: abs((utc(x["posted"]) - t).total_seconds()) <= 36 * 3600,
+                 lambda x: abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400):
+        peers = [float(x[field]) for x in pool if x.get(field) not in ("", None) and near(x)]
+        if len(peers) >= 3: return peers
+    return []
+
 def relative(rows, field, out_field, min_age_h=24):
-    """Each Short's `field` against the median of Shorts posted within 3 days of it (1.0 = typical); needs 3 peers."""
+    """Each Short's `field` against the median of the Shorts posted the same UK day (peers_of; 1.0 = typical)."""
     aged = [r for r in rows if r["posted"] and r.get(field) not in ("", None) and (NOW - utc(r["posted"])).total_seconds() >= min_age_h * 3600]
     for r in rows:
         r[out_field] = ""
         if r not in aged: continue
-        t = utc(r["posted"])
-        peers = [float(x[field]) for x in aged if abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
-        if len(peers) >= 3 and statistics.median(peers): r[out_field] = round(float(r[field]) / statistics.median(peers), 3)
+        peers = peers_of(r, aged, field)
+        if peers and statistics.median(peers): r[out_field] = round(float(r[field]) / statistics.median(peers), 3)
 
 CATS = ["Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment", "Animals", "Food", "Cars", "History"]
 
@@ -495,25 +523,45 @@ def write_audience(aud):
 # ---------------- decisions: every change made from the data, with its reason ----------------
 DEC_FIELDS = ["date", "area", "change", "why", "evidence", "check_on", "by"]
 
-def log_decisions(table):
-    """When a driver's verdict turns to "push" or "cut back" (or back to typical), add a line to decisions.csv: the
-    writer's recipe changes with it, so Charlie can see what changed and why. Reviews add their own lines."""
+ACTING = ("push", "cut back", "pause", "retest", "stop")      # the verdicts that change what the writer does
+
+def log_decisions(table, method=""):
+    """When a driver's verdict turns to or from one the writer acts on ("push", "cut back", "pause", "retest"), add a line
+    to decisions.csv: the writer's recipe changes with it, so Charlie can see what changed and why. Moves between "early
+    sign" and "about typical" change nothing the writer does and are not logged (24 October: 180 automatic decisions in 7
+    days, most of them noise). A new judging method (`method`, drivers.METHOD) is one line, not one per verdict it moves.
+    Reviews add their own lines."""
     p, vp = OUT / "decisions.csv", CACHE / "verdicts.json"
     prev = load_json(vp, {}) or {}
     cur = {f"{t['feature']}|{t['value']}": t for t in table if t["n"] >= 5}
     rows = list(csv.DictReader(io.StringIO(p.read_text()))) if p.exists() else []
     today = str(NOW.astimezone(UK).date()); check = str(NOW.astimezone(UK).date() + dt.timedelta(days=7))
+    state = lambda: {**{k: {"verdict": t["verdict"], "lift": t["lift"], "n": t["n"]} for k, t in cur.items()},
+                     **({"_method": method} if method else {})}
+    if method and prev.get("_method") != method:
+        acting = [t for t in cur.values() if t["verdict"] in ACTING]
+        was = sum(1 for k, v in prev.items() if not k.startswith("_") and (v or {}).get("verdict") in ACTING)
+        rows.append({"date": today, "area": "How the data is judged", "change": f"New judging rule: {method}",
+                     "why": f"{len(acting)} verdicts the writer acts on now, against {was} before (the old rule's were mostly noise)",
+                     "evidence": ("drivers.py docstring and SHRINK_NOTE; now " +
+                                  ", ".join(f"{t['verdict']} {t['feature']} {t['value']}" for t in acting))[:400],
+                     "check_on": check, "by": "analytics (automatic)"})
+        vp.write_text(json.dumps(state()))
+        rows.sort(key=lambda r: r["date"], reverse=True)
+        write_csv(p, rows, DEC_FIELDS); return
     for k, t in cur.items():
         was = (prev.get(k) or {}).get("verdict")
-        if t["verdict"] == was or (was is None and t["verdict"] == "about typical"): continue
+        if t["verdict"] == was or (t["verdict"] not in ACTING and was not in ACTING): continue
         if t["verdict"] == "push": change = f"Lean towards {t['feature_label'].lower()} \"{t['value']}\""
         elif t["verdict"] == "cut back": change = f"Use less {t['feature_label'].lower()} \"{t['value']}\""
+        elif t["verdict"] == "pause": change = f"Pause {t['feature_label'].lower()} \"{t['value']}\" for 14 days, then retest it"
+        elif t["verdict"] == "retest": change = f"Retest {t['feature_label'].lower()} \"{t['value']}\" on a small share"
         else: change = f"Back to normal for {t['feature_label'].lower()} \"{t['value']}\""
         why = f"{t['lift']}x typical views over {t['n']} Shorts" + (f" ({t['why']})" if t.get("why") else "")
         rows.append({"date": today, "area": t["feature_label"], "change": change, "why": why,
                      "evidence": f"drivers.csv: {t['feature']} = {t['value']}, n {t['n']}, lift {t['lift']}, median {t['median_rel']}",
                      "check_on": check, "by": "analytics (automatic)"})
-    vp.write_text(json.dumps({k: {"verdict": t["verdict"], "lift": t["lift"], "n": t["n"]} for k, t in cur.items()}))
+    vp.write_text(json.dumps(state()))
     rows.sort(key=lambda r: r["date"], reverse=True)
     write_csv(p, rows, DEC_FIELDS)
 
@@ -552,12 +600,13 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "series", "franchise", "writer", "editor", "appeal", "late")},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore")},
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
             "yt_engaged_views": a.get("engagedViews", ""), "yt_avg_viewed_pct": round(a["averageViewPercentage"], 1) if a.get("averageViewPercentage") is not None else "",
             "yt_shares": a.get("shares", ""), "yt_subs_gained": a.get("subscribersGained", ""),
             "ig_views": im.get("views", ""), "ig_reach": im.get("reach", ""), "ig_likes": im.get("like_count", ""),
             "ig_comments": im.get("comments_count", ""), "ig_shares": im.get("shares", ""), "ig_saves": im.get("saved", ""),
+            "ig_skip_rate": im.get("reels_skip_rate", ""), "ig_reposts": im.get("reposts", ""), "ig_fb_views": im.get("facebook_views", ""),
             "fb_views": fv.get("views", ""), "fb_avg_watch_s": fv.get("avg_watch_s", ""),
             "youtube_url": f"https://youtube.com/shorts/{vid}", "instagram_url": im.get("permalink", "")}
         curve = (yt.get("retention") or {}).get(vid)
@@ -596,7 +645,8 @@ def main():
     relative(rows, "views_per_hour", "_relvph")
     for r in rows:      # views against Shorts posted around the same time: at 24 hours where measured, else views an hour
         r["views_vs_typical"] = r["_rel24"] if r["_rel24"] != "" else r["_relvph"]
-        r["rel"] = r["views_vs_typical"]
+        # what drives views is judged at 24 hours only: the views-an-hour stand-in for younger Shorts ran 2 to 6x high
+        r["rel"] = r["_rel24"]
     looks_out = look_scores(rows)
     hourly = update_hourly(rows, ig, fb)
 
@@ -692,10 +742,12 @@ def main():
         write_csv(OUT / "regions.csv", reg_rows, ["kind", "country", "views", "share_pct", "avg_viewed_pct", "subs_gained", "shorts_seen",
                                                   "best_category", "best_format", "best_hook", "best_length", "top_short",
                                                   "dimension", "value", "shorts", "views_per_short", "lift"])
-        table, _base = DRV.analyse(rows)
+        pauses = DRV.load_pauses()          # choices left out for 14 days, then retested (drivers.py)
+        table, _base = DRV.analyse(rows, pauses)
+        DRV.save_pauses(pauses)
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
-        log_decisions(table)
+        log_decisions(table, DRV.METHOD)
         follow = [f"Follow up {b['short'] or b['title']} (\"{b['title']}\"): {b['times_typical']}x the views recent Shorts had "
                   f"{b['hours_public']} hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer "
                   "to its top comment), title tied to it." for b in hot[:2]]
@@ -703,13 +755,15 @@ def main():
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
 STAY_DIMS = ("voice",)     # Charlie, 20 October: narrators are judged on viewers not swiping away
+WRITER_SHRINK = 5          # a writer model's score is shrunk towards typical by 5 Shorts' worth (writer_scores)
 
 def look_scores(rows):
-    """How each look option (templates/looks.json) does. Every Short public for 24 hours gets a score against Shorts posted
-    within 3 days of it (1.0 = typical): 40% the share still watching 3 seconds in, 40% the average % viewed, 20% views an
-    hour, using whichever are available. Voices (STAY_DIMS) are scored on viewers not swiping away instead: YouTube's
-    engaged views as a share of views, and the share still watching 3 seconds in, among Shorts with 30 or more views.
-    Each option's score is the median over the Shorts that used it."""
+    """How each look option (templates/looks.json) does. Every Short public for 24 hours gets a score against the Shorts
+    posted the same UK day (peers_of; 1.0 = typical): 40% engaged views as a share of views (viewers who didn't swipe
+    away), 40% the average % viewed, 20% views an hour, using whichever are available. Until 24 October the first 40% was
+    "still watching at 3 seconds", which counts replays (31 of 35 Shorts over 100%) and tracked views at 0.11. Voices
+    (STAY_DIMS) are scored on viewers not swiping away alone, among Shorts with 30 or more views. Each option's score is
+    the median over the Shorts that used it."""
     import looks as LK
     look_by_id = {}
     for p in (ROOT / "status").glob("QD-*.json"):
@@ -725,22 +779,20 @@ def look_scores(rows):
     def rel(r, field, min_views=0):
         v = r.get(field)
         if v in ("", None) or float(r.get("yt_views") or 0) < min_views: return None
-        t = utc(r["posted"])
-        peers = [float(x[field]) for x in aged if x.get(field) not in ("", None) and float(x.get("yt_views") or 0) >= min_views
-                 and abs((utc(x["posted"]) - t).total_seconds()) <= 3 * 86400]
+        peers = peers_of(r, [x for x in aged if float(x.get("yt_views") or 0) >= min_views], field)
         if len(peers) < 3: return None
         med = statistics.median(peers)
         return float(v) / med if med else None
     for r in aged:
-        parts = [(w, x) for w, x in ((0.4, rel(r, "yt_held_3s_pct")), (0.4, rel(r, "yt_avg_viewed_pct")), (0.2, rel(r, "views_per_hour")))
+        parts = [(w, x) for w, x in ((0.4, rel(r, "yt_engaged_pct")), (0.4, rel(r, "yt_avg_viewed_pct")), (0.2, rel(r, "views_per_hour")))
                  if x is not None]
         if parts: r["look_score"] = round(sum(w * x for w, x in parts) / sum(w for w, _ in parts), 3)
-        stay = [x for x in (rel(r, "yt_engaged_pct", 30), rel(r, "yt_held_3s_pct", 30)) if x is not None]
-        r["stay_score"] = round(sum(stay) / len(stay), 3) if stay else ""
+        stay = rel(r, "yt_engaged_pct", 30)
+        r["stay_score"] = round(stay, 3) if stay is not None else ""
     out = {"updated": NOW.isoformat(timespec="minutes"), "dimensions": {},
-           "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, "
-                  "40% average % viewed, 20% views an hour. Voices: viewers not swiping away instead (engaged views as a share of "
-                  "views, and still watching at 3 seconds; Shorts with 30 or more views). An option's score is the median of its Shorts.",
+           "how": "Each Short against the Shorts posted the same UK day (1.0 = typical): 40% engaged views as a share of views "
+                  "(not swiping away), 40% average % viewed, 20% views an hour. Voices: not swiping away alone (Shorts with 30 or "
+                  "more views). An option's score is the median of its Shorts.",
            "measure": {d: "not swiping away" for d in STAY_DIMS}}
     try: cat = LK.catalogue()
     except Exception: return out
@@ -763,15 +815,18 @@ def writer_scores(rows):
     first-choice model from this (analytics/models.json)."""
     aged = [r for r in rows if r.get("writer") and r.get("look_score") not in ("", None)]
     out = {"updated": NOW.isoformat(timespec="minutes"), "writers": {},
-           "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, "
-                  "40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts."}
+           "how": "Each Short against the Shorts posted the same UK day (1.0 = typical): 40% engaged views as a share of views, "
+                  "40% average % viewed, 20% views an hour. A writer's score is exp(sum of log scores / (n + 5)): shrunk towards "
+                  "typical, so one breakout can't crown a model (24 October: 20.9 from 2 Shorts, one at 27.7x, gave a model 41% "
+                  "of the day's boards)."}
     def score(key):
         out_ = {}
         for w in sorted({key(r) for r in rows if r.get("writer")} - {None}):
             used = [r for r in aged if key(r) == w]
             e = {"n": len(used), "shorts": sum(1 for r in rows if r.get("writer") and key(r) == w)}
             if used:
-                e["score"] = round(statistics.median(r["look_score"] for r in used), 3)
+                logs = [math.log(min(20.0, max(0.05, float(r["look_score"])))) for r in used]
+                e["score"] = round(math.exp(sum(logs) / (len(logs) + WRITER_SHRINK)), 3)
                 vals = [float(r["views_vs_typical"]) for r in used if r.get("views_vs_typical") not in ("", None)]
                 if vals: e["views_vs_typical"] = round(statistics.median(vals), 2)
             out_[w] = e

@@ -287,54 +287,109 @@ def media_problems(b):
             "commons-search shots of the people, teams, venues or events to at least half the beats (page: pictures often fail)"]
 
 
-STOP = -99        # the weight of a "stop" verdict (drivers.py): the choice is left out, not just moved down
+STOP = -99        # the weight of a paused choice (drivers.py "pause", once "stop"): left out, not just moved down
+PAUSED = ("pause", "stop")
+
+
+def driver_rows():
+    p = ROOT / "analytics" / "drivers.csv"
+    if not p.exists(): return []
+    try: return list(csv.DictReader(p.open()))
+    except Exception: return []
 
 
 def stopped():
-    """{feature: {values}} the data has stopped (verdict "stop" in analytics/drivers.csv)."""
-    p, out = ROOT / "analytics" / "drivers.csv", {}
-    if not p.exists(): return out
-    for r in csv.DictReader(p.open()):
-        if r.get("verdict") == "stop": out.setdefault(r.get("feature"), set()).add(r.get("value"))
+    """{feature: {values}} the data has paused (verdict "pause", or the old "stop", in analytics/drivers.csv): left out
+    for 14 days, then retested (drivers.py)."""
+    out = {}
+    for r in driver_rows():
+        if r.get("verdict") in PAUSED: out.setdefault(r.get("feature"), set()).add(r.get("value"))
     return out
 
 
 def boosts(feature="category"):
     """How far the data moves a pack up (or down) the list for one feature (its category, or where the topic came from,
-    analytics/drivers.csv): "push" 2 places up, an early sign 1; below typical the same way down ("cut back" 2)."""
-    p, out = ROOT / "analytics" / "drivers.csv", {}
-    if not p.exists(): return out
-    for r in csv.DictReader(p.open()):
+    analytics/drivers.csv): "push" 2 places up, an early sign 1; below typical the same way down ("cut back" 2); a choice
+    back from a pause ("retest") 2 down, so it comes back on a small share."""
+    out = {}
+    for r in driver_rows():
         if r.get("feature") != feature: continue
         try: lift = float(r.get("lift") or 0)
         except ValueError: continue
         v = r.get("verdict")
         if v == "push" and lift > 1: out[r.get("value")] = 2
-        elif v == "stop": out[r.get("value")] = STOP           # a week on, little to no views: never chosen again
-        elif v == "cut back": out[r.get("value")] = -2
+        elif v in PAUSED: out[r.get("value")] = STOP           # a week on, little to no views: left out for 14 days
+        elif v in ("cut back", "retest"): out[r.get("value")] = -2
         elif v == "early sign": out[r.get("value")] = 1 if lift > 1.15 else -1 if lift < 0.85 else 0
     return out
 
 
 def category_shares():
-    """Each category's share of the day's Shorts from the data (analytics/drivers.csv category lift, squared, so the
-    winners get most places: on 23 October Music 1.68x, Sport 1.53x, Film 1.45x; Gaming, Tech, Entertainment and
-    Science 0.3x to 0.6x), at least 4% each so every category stays measured; a stopped one gets none. Empty without data."""
-    p, w = ROOT / "analytics" / "drivers.csv", {}
-    if not p.exists(): return {}
-    for r in csv.DictReader(p.open()):
-        if r.get("feature") != "category" or not r.get("value"): continue
-        try: lift = float(r.get("lift") or 1)
-        except ValueError: continue
-        w[r["value"]] = 0.0 if r.get("verdict") == "stop" else max(0.2, lift) ** 2
-    tot = sum(w.values())
-    if not tot: return {}
-    out = {c: (max(0.04, v / tot) if v else 0.0) for c, v in w.items()}
-    tot = sum(out.values())
-    return {c: v / tot for c, v in out.items()}
+    """Each category's share of the day's Shorts from the data (drivers.category_mix over analytics/drivers.csv: lift
+    squared, every category at least 5% and none over 35%; a paused one none, one being retested 5%). Until 24 October
+    the floor was 4% and there was no cap: Music 33%, Film 32%, Sport 20% and 0.6 Shorts a day for each of the rest.
+    Empty without data."""
+    import drivers
+    return drivers.category_mix(driver_rows())
 
 
 EXPLORE = 0.08       # a category with no measured Shorts yet gets about 1 place in 12 until the data speaks
+EXPLORE_SHARE = 0.2  # at least 1 Short in 5 each day is an exploration Short (24 October guardrail, explore_due)
+WRITER_CAP, WRITER_PROVEN = 0.35, 10      # no writer model over 35% of the day's boards until it has 10 measured Shorts
+DAY = {"boards": [], "target": 0}         # the target day's boards so far (earlier runs and this one), set by main()
+
+
+def day_boards(day):
+    """The target day's boards so far, from every folder, without the reserve and dry runs."""
+    out = []
+    for d in ("queue", "ready", "done", "failed"):
+        for f in (ROOT / "boards" / d).glob("QD-*.json"):
+            b = board(f)
+            if b.get("created") == str(day) and not b.get("reserve") and b.get("mode") != "dry": out.append(b)
+    return out
+
+
+def explore_due(boards=None):
+    """True while fewer than 1 in 5 of the day's Shorts are exploration Shorts (test "explore": "yes"). An exploration
+    Short takes a category drawn evenly from the day's packs, and draws every test arm, look and posting band evenly,
+    cut-back choices included and paused ones not, so the data keeps measuring what the recipe has turned away from
+    (Charlie, 24 October: an "improvement" must not quietly narrow the channel). analytics compares them with the rest."""
+    boards = DAY["boards"] if boards is None else boards
+    n, e = len(boards), sum(1 for b in boards if (b.get("test") or {}).get("explore") == "yes")
+    return e < EXPLORE_SHARE * (n + 1)
+
+
+def explore_pick(rest, n):
+    """The pack for exploration Short number n: a category drawn evenly from the packs still open (`rest`, best first),
+    whatever the recipe's shares, then that category's best pack. None without packs."""
+    cats = sorted({q.get("category") for q in rest if q.get("category")})
+    if not cats: return None
+    cat = random.Random(f"explore-category:{n}").choice(cats)
+    return next(q for q in rest if q.get("category") == cat)
+
+
+def floor_needs(boards=None, target=None):
+    """The categories under their floor for the day: at least 1 Short each, or 5% of the day's number when it is 15 or
+    more. Paused categories have no floor."""
+    boards = DAY["boards"] if boards is None else boards
+    target = DAY["target"] if target is None else target
+    floor = max(1, round(0.05 * target)) if target >= 15 else 1
+    got = {}
+    for b in boards: got[b.get("category")] = got.get(b.get("category"), 0) + 1
+    paused = stopped().get("category", set())
+    return {c for c in CATS if got.get(c, 0) < floor and c not in paused}
+
+
+def explore_format(k, avoid=""):
+    """A format drawn evenly for an exploration Short (paused formats, and the day's last format, left out), as a note
+    for its prompt."""
+    try: ids = [x["id"] for x in json.loads((ROOT / "templates" / "formats.json").read_text()).get("formats", []) if not x.get("retired")]
+    except Exception: return ""
+    ids = [i for i in ids if i not in stopped().get("format", set()) and i != avoid] or ids
+    if not ids: return ""
+    f = random.Random(f"explore-format:{k}").choice(ids)
+    return (f"EXPLORATION SHORT (1 in 5 a day, so the data keeps measuring every option): use the {f} format if the pack "
+            "suits it at all, whatever the recipe says.")
 
 
 def over_share(cat, written, cap, shares):
@@ -685,11 +740,17 @@ def arms(t):
     return [a for a in TESTS[t] if a not in stopped().get(t, ())] or list(TESTS[t])
 
 
-def test_plan(k, kind="news"):
+def test_plan(k, kind="news", explore=False):
     """The style for Short number k: every winner the data has found, plus one test in turn (an open test, or on every
-    RETEST-th Short a challenger to a winner), plus the comment-replies test on alternate Shorts.
-    Returns (the note for the prompt, {test: arm} recorded on the board for analytics)."""
+    RETEST-th Short a challenger to a winner), plus the comment-replies test on alternate Shorts. An exploration Short
+    (explore_due) draws every test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always
+    be overturned. Returns (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore")."""
     dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
+    if explore:
+        rng = random.Random(f"explore-arms:{k}")
+        picks = {t: rng.choice(arms(t)) for t in dims}
+        picks.update(replies=rng.choice(["on", "off"]), explore="yes")
+        return style_note(picks), picks
     won = {t: a for t, a in winners().items() if t in dims}
     picks, still = dict(won), [t for t in dims if t not in won]
     if won and k % RETEST == 0:
@@ -701,6 +762,7 @@ def test_plan(k, kind="news"):
         options = arms(t)
         picks[t] = options[(k // len(still)) % len(options)]
     picks["replies"] = "on" if k % 2 == 0 else "off"
+    picks["explore"] = "no"
     return style_note(picks), picks
 
 
@@ -782,8 +844,9 @@ def lift_of(feature, value):
 
 def share(kind, base, top):
     """How many Shorts of a kind to write: more when the data says that kind beats typical, fewer when it trails (never
-    none, so it keeps being measured)."""
-    if kind in stopped().get("kind", ()): return 0        # a week on, little to no views: not made again
+    none, so it keeps being measured); none while paused, 1 while it is retested after a pause."""
+    if kind in stopped().get("kind", ()): return 0        # a week on, little to no views: left out for 14 days
+    if any(r.get("feature") == "kind" and r.get("value") == kind and r.get("verdict") == "retest" for r in driver_rows()): return 1
     lift = lift_of("kind", kind)
     return base if lift is None else max(1, min(top, round(base * min(2.0, max(0.5, lift)))))
 
@@ -826,7 +889,16 @@ def choose_writer(sid):
     except Exception: order = []
     cands = [m for m in order if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
              and slow.get(m, 0) < 2 and not m.startswith(("claude:", "local:")) and "lite" not in m]
-    if len(cands) < 2: return None
+    # no model over 35% of the day's boards until it has 10 measured Shorts (24 October: one model wrote 41% of the day's
+    # boards on the strength of 2 measured Shorts)
+    counts = {}
+    for b in DAY["boards"]: counts[b.get("writer")] = counts.get(b.get("writer"), 0) + 1
+    total = sum(counts.values())
+    def capped(m):
+        if total < 3 or int((stats.get(m) or {}).get("n") or 0) >= WRITER_PROVEN: return False
+        return (counts.get(writer_name(m), 0) + 1) / (total + 1) > WRITER_CAP
+    cands = [m for m in cands if not capped(m)]
+    if len(cands) < 2: return cands[0] if cands else None
     rng, best, top = random.Random(f"writer:{sid}"), None, -1e9
     for i, m in enumerate(cands):
         s = stats.get(m) or {}
@@ -994,6 +1066,11 @@ def main():
     run, day, cap = plan(breaking, d.get("run", ""))
     print(f"{run} run for {day}: {cap} to write from {len(d.get('topics') or [])} fact packs")
     if cap <= 0 and (breaking or reserve_count() >= 6): return
+    DAY["boards"] = day_boards(day)                # the day so far: exploration share, category floors, writer cap
+    try:
+        import quota
+        DAY["target"] = quota.target()
+    except Exception: DAY["target"] = len(DAY["boards"]) + cap
     seen, used, follow, up, src_up = recent(), day_formats(day), hot(), boosts(), boosts("source")
     moods, notes = list(CFG.get("music_moods") or []), dropoff_notes()
     head = (RULES % {"moods": moods} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe()
@@ -1005,9 +1082,9 @@ def main():
     state = {"n": next_id(), "angles": int(CFG.get("angle_searches_per_run", 2))}
     out.mkdir(parents=True, exist_ok=True)
 
-    def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None):
+    def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None, explore=False):
         sid = f"QD-{state['n']:03d}"
-        if tests is None: style, tests = test_plan(state["n"], kind)
+        if tests is None: style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
@@ -1015,6 +1092,7 @@ def main():
         style = style_note(tests)
         extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
                   f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
+        if tests.get("explore") == "yes": extra.append(explore_format(state["n"], used[-1] if used else ""))
         try:                                       # what other channels' Shorts are winning with this week (competitors.py)
             import competitors
             wins = competitors.top_titles(p.get("category") or "")
@@ -1053,13 +1131,15 @@ def main():
         if tr: b["meta"]["translations"] = tr
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
         written.append(b); used.append(b.get("format", "")); state["n"] += 1
+        if not reserve: DAY["boards"].append(b)
         return b
 
-    def emit_kind(p, kind, reserve=False, note="", fol=None):
+    def emit_kind(p, kind, reserve=False, note="", fol=None, explore=None):
         """A Short of any kind, or two or three parts with a cliffhanger between them when its series test says so and the
         pack has 3 facts or more a part (never from the reserve, which could release them out of order, and never a
-        follow-up or breaking news)."""
-        style, tests = test_plan(state["n"], kind)
+        follow-up or breaking news). `explore`: an exploration Short (None: when explore_due says so; never the reserve)."""
+        if explore is None: explore = not reserve and explore_due()
+        style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
@@ -1094,9 +1174,25 @@ def main():
                    if (board(f).get("watch") == name and board(f).get("created") == str(day))) + sum(1 for b in written if b.get("watch") == name)
     shares, later = category_shares(), []
     if shares: print("category shares:", {c: round(v, 2) for c, v in sorted(shares.items(), key=lambda x: -x[1])})
+    def eligible(q):
+        """A news pack that could be written now as a plain news Short (for an exploration pick)."""
+        if q.get("_done") or watch_of(q): return False
+        if up.get(q.get("category"), 0) <= STOP or src_up.get(source_of(q.get("signal")), 0) <= STOP: return False
+        if len(q.get("verified") or []) + len(q.get("one_source") or []) < 2: return False
+        if any(covered(q, [r["_about"]]) for r in follow): return False            # a follow-up is no exploration
+        return not covered(q, seen + [about(b) for b in written])
     order = sorted(topics, key=rank)
+    # category floors (24 October): the best pack of each category still under its floor for the day goes first, after
+    # the watchlist and the breakouts, so no category drops out of measurement
+    need, firsts = floor_needs(), set()
+    for _, q in order:
+        if q.get("category") in need and eligible(q): firsts.add(id(q)); need.discard(q.get("category"))
+    if firsts:
+        order = sorted(topics, key=lambda kp: rank(kp) - (150 if id(kp[1]) in firsts else 0))
+        print("category floors first:", sorted({q.get("category") for _, q in order if id(q) in firsts}))
     for k, (_, p) in enumerate(order):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        if p.get("_done"): continue                 # written already as an exploration Short
         wn = watch_of(p)
         if wn and watch_done(wn) >= int(WATCH[wn].get("places", 1)): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
         if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
@@ -1112,10 +1208,18 @@ def main():
                 "repeat, with a title tied to the original.") if fol else ""
         if wn:
             rules = f"WATCHLIST ({wn}, {WATCH[wn].get('level')}): {WATCH[wn].get('rules', '')}".strip()
-            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip())
+            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False)
             if got: got["watch"] = wn; (out / f"{got['id']}.json").write_text(json.dumps(got, ensure_ascii=False, separators=(",", ":")))
         elif fol or breaking: got = emit(p, note, "follow-up" if fol else "breaking", fol=fol)
-        else: got = emit_kind(p, "news")
+        elif explore_due():
+            # an exploration Short: a category drawn evenly from the packs still open, its best pack; the pack this
+            # place was for comes straight after
+            q = explore_pick([x for _, x in order[k:] if eligible(x)], state["n"]) or p
+            if q is not p: order.insert(k + 1, (0, p))
+            q["_done"] = True
+            print(f"exploration Short: {q.get('category')}: {q['topic']}")
+            got = emit_kind(q, "news", explore=True)
+        else: got = emit_kind(p, "news", explore=False)
         if got and fol: follow.remove(fol)
     for fol in follow[:1]:                                    # the strongest breakout with no pack today: one from its own pages
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break

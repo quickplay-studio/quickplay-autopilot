@@ -8,7 +8,7 @@ r = subprocess.run([sys.executable, REPO_DIR + "/pipeline/weekly_report.py"], en
 assert r.returncode == 0, r.stderr[-800:]
 t = out.read_text()
 for h in ("# Quickplay weekly:", "## The week in numbers", "## Is the optimisation working", "## What changed this week",
-          "## Did the changes work", "## Stopped", "## What every Short is measured on", "## Quickplay Clips", "Pages:"):
+          "## Did the changes work", "## Paused", "## What every Short is measured on", "## Quickplay Clips", "Pages:"):
     assert h in t, h
 assert "Shorts posted:" in t and "Rulings in force:" in t and "clips public" in t
 print("weekly report ok")

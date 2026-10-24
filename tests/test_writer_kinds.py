@@ -55,7 +55,7 @@ W.recent = lambda days=14: []      # the real queue must not count as "covered a
 W.pick_kinds = lambda n: (["top list", "true story", "evergreen"] * 4)[:n]     # every kind, whatever the day's shuffle
 W.plan = lambda breaking=False, hint="": ("morning", __import__("datetime").date(2026, 10, 21), 6)
 orig = W.test_plan
-W.test_plan = lambda k, kind="news": (lambda st, t: (st, {**t, "series": "two parts"} if kind in ("top list", "true story", "fiction") else t))(*orig(k, kind))
+W.test_plan = lambda k, kind="news", explore=False: (lambda st, t: (st, {**t, "series": "two parts"} if kind in ("top list", "true story", "fiction") else t))(*orig(k, kind, explore))
 before = {p.name for p in pathlib.Path("boards/queue").glob("QD-*.json")}
 W.main()
 new = sorted(p for p in pathlib.Path("boards/queue").glob("QD-*.json") if p.name not in before)

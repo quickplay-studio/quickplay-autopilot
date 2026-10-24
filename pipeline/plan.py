@@ -144,21 +144,30 @@ def slot_picker(now, taken):
                 if t >= now + LEAD and t not in taken: yield t
             day += dt.timedelta(days=1)
 
-    def next_slot(created=None, category=None, kind=None, sid=""):
+    def next_slot(created=None, category=None, kind=None, sid="", explore=False):
         """The first free slot at least lead_hours away, on or after the board's "created" day (UK); when the data shows
         the board's category does clearly better in another quarter of the day (band_scores, at least 15% better), the
         first free slot in that quarter within the next 18 hours (6 for news). 1 board in 5 keeps the first slot so
-        every hour stays measured (Charlie, 23 October: post music when the Americans watch)."""
+        every hour stays measured (Charlie, 23 October: post music when the Americans watch). An exploration Short
+        (writer.py, test "explore") takes a quarter of the day drawn evenly from those within the window instead."""
         import random
         first = next(free(created), None)
         if first is None: raise RuntimeError("no free slot in the next 60 days")
         pick, sc = first, scores.get(category or "")
-        if sc and random.Random(f"slot:{sid}").random() >= 0.2:
-            window = dt.timedelta(hours=6 if kind in FRESH else 18)
-            cands = []
+        window = dt.timedelta(hours=6 if kind in FRESH else 18)
+        def within():
+            out = []
             for t in free(created):
                 if t > first + window: break
-                cands.append(t)
+                out.append(t)
+            return out
+        if explore:
+            cands = within()
+            bands = sorted({band(t) for t in cands})
+            b = random.Random(f"explore-slot:{sid}").choice(bands)
+            pick = next(t for t in cands if band(t) == b)
+        elif sc and random.Random(f"slot:{sid}").random() >= 0.2:
+            cands = within()
             best = max(cands, key=lambda t: (sc[band(t)], -t.timestamp()))
             if sc[band(best)] >= 1.15 * sc[band(first)]: pick = best
         taken.add(pick); return pick
@@ -199,7 +208,7 @@ def main():
         try: st = json.loads(sp.read_text())
         except Exception: continue
         if st.get("look"): seen.append((st.get("rendered", ""), st["look"]))
-    recent_looks = [lk for _, lk in sorted(seen, key=lambda x: x[0])][-5:]
+    recent_looks = [lk for _, lk in sorted(seen, key=lambda x: x[0])][-20:]     # 20: looks.choose caps an option at 70% of them
 
     import background as BG    # the video behind each Short: one clip per search, never one used in the last reuse_days
     bg_used, bg_cfg = None, BG.settings(CFG)
@@ -223,6 +232,7 @@ def main():
         if mode != "none" and not hold:
             if uploads >= capacity: continue
             uploads += 1; counted = True
+        explore = (b.get("test") or {}).get("explore") == "yes"      # an exploration Short (writer.py): look and hour drawn evenly
         slot, slot_t = "", None
         if mode == "schedule" and not hold:
             t = None
@@ -230,7 +240,7 @@ def main():
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))
+            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=explore)
             slot = slot_t.isoformat().replace("+00:00", "Z")
         # Charlie (24 October): a news Short that would go public after its day needs the data to say its story is still
         # alive, or it expires (freshness.py: boards/expired, analytics/late_uploads.csv)
@@ -242,7 +252,7 @@ def main():
             jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": "", "mode": "reject", "expired": True,
                          "errors": late["evidence"][:900], "late": late})
             continue
-        look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
+        look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats, explore=explore)
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
         if late: job["late"] = late                 # late but alive: the evidence lands in status/<id>.json

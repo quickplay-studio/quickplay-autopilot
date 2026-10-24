@@ -133,7 +133,7 @@ def check(b, at=None, get=None, where="render", record=True):
         out = {"alive": False, "evidence": f"{late} days late: {kind} Shorts expire after {limit - 1}"}
     elif wrong := words_wrong(b, made, day):
         out = {"alive": False, "evidence": wrong}
-    elif verdict in ("cut back", "stop"):
+    elif verdict in ("cut back", "stop", "pause"):
         out = {"alive": False, "evidence": f"late Shorts do worse ({verdict}: {vwhy}), so none go out late"}
     else:
         if get is None:

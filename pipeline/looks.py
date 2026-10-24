@@ -40,15 +40,27 @@ def default(cat=None):
     cat = cat or catalogue()
     return {d: next(iter(active(cat, d))) for d in cat["dimensions"]}
 
-def choose(sid, recent=(), stats=None, cat=None):
-    """One option per dimension for Short `sid`. `recent`: the looks of the latest Shorts, oldest first."""
+CAP, CAP_UNTIL = 0.7, 30    # no option above 70% of the latest looks until every option of its dimension has 30 measured Shorts
+
+
+def choose(sid, recent=(), stats=None, cat=None, explore=False):
+    """One option per dimension for Short `sid`. `recent`: the looks of the latest Shorts (about 20), oldest first.
+    `explore`: an exploration Short (writer.py): every dimension drawn evenly. Otherwise an option already on 70% or more
+    of the recent looks sits out while its dimension still has an option under 30 measured Shorts (24 October: grade
+    "natural" was on 79% to 92% of Shorts and opening "image_first" on 83% to 89%, with no proven effect)."""
     cat = cat or catalogue(); stats = load_stats() if stats is None else stats
     rng = random.Random(f"look:{sid}")
     look = {}
+    recent = [r for r in recent if isinstance(r, dict)]
     for dim in cat["dimensions"]:
         opts = list(active(cat, dim))
-        if rng.random() < EXPLORE:
+        if explore or rng.random() < EXPLORE:
             look[dim] = rng.choice(opts); continue
+        seen = [r.get(dim) for r in recent[-20:] if r.get(dim)]
+        n_of = lambda k: int(((stats.get("dimensions", {}).get(dim) or {}).get(k) or {}).get("n") or 0)
+        if len(seen) >= 10 and len(opts) > 1 and any(n_of(k) < CAP_UNTIL for k in opts):
+            over = {k for k in opts if seen.count(k) / len(seen) >= CAP}
+            opts = [k for k in opts if k not in over] or opts
         best, top = opts[0], -1e9
         for k in opts:
             s = (stats.get("dimensions", {}).get(dim) or {}).get(k) or {}
@@ -59,7 +71,6 @@ def choose(sid, recent=(), stats=None, cat=None):
             v = rng.gauss(mean, SPREAD / math.sqrt(n + 1))
             if v > top: best, top = k, v
         look[dim] = best
-    recent = [r for r in recent if isinstance(r, dict)]
     caps = [k for k in active(cat, "captions") if k != look["captions"]]
     if len(recent) >= 2 and recent[-1].get("captions") == recent[-2].get("captions") == look["captions"] and caps:
         look["captions"] = rng.choice(caps)

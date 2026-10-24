@@ -67,7 +67,7 @@ def followed(r, v):
     import drivers
     feats = drivers.features(r)
     vs = [v.get(k, {}).get(val) for k, val in feats.items() if val]
-    return ("push" in vs) and not any(x in ("cut back", "stop") for x in vs)
+    return ("push" in vs) and not any(x in ("cut back", "stop", "pause") for x in vs)
 
 
 def built(start, end):
@@ -147,8 +147,9 @@ def main():
                  f"their median views {n(med(views(fol)))} against {n(med(views(rest)))} for the rest" + (f" ({ratio:.1f}x)." if ratio else "."))
     else:
         L.append(f"- Shorts that followed the data's rulings: {len(fol)} of {len(this)}; not enough of both kinds yet to compare.")
-    counts = {k: sum(1 for feat in v.values() for x in feat.values() if x == k) for k in ("push", "cut back", "stop")}
-    L.append(f"- Rulings in force: {counts['push']} push, {counts['cut back']} cut back, {counts['stop']} stopped (analytics/drivers.csv).")
+    counts = {k: sum(1 for feat in v.values() for x in feat.values() if x == k) for k in ("push", "cut back", "pause", "stop", "retest")}
+    L.append(f"- Rulings in force: {counts['push']} push, {counts['cut back']} cut back, {counts['pause'] + counts['stop']} paused, "
+             f"{counts['retest']} being retested (analytics/drivers.csv).")
     dec = [r for r in rows_of("analytics/decisions.csv") if r.get("date") and start.date() <= dt.date.fromisoformat(r["date"]) <= end.date()]
     L += ["", "## What changed this week"]
     moves = [r for r in dec if not r["change"].startswith("Back to normal")]
@@ -160,10 +161,10 @@ def main():
     L += [f"- Built: {x}" for x in b] or ["- No design change this week (docs/NEXT.md, docs/CLIPS.md)."]
     L += ["", "## Did the changes work (analytics/changes.csv)"] + ledger_lines(start, end)
     # stopped
-    stops = [r for r in rows_of("analytics/drivers.csv") if r.get("verdict") == "stop"]
+    stops = [r for r in rows_of("analytics/drivers.csv") if r.get("verdict") in ("pause", "stop", "retest")]
     dead = drivers.dead(shorts)
-    L += ["", "## Stopped (little to no views a week on: never again)"]
-    L += [f"- {r['feature_label']} \"{r['value']}\": {r['why']}." for r in stops] or ["- No choice has failed outright yet."]
+    L += ["", "## Paused (little to no views a week on: left out for 14 days, then retested)"]
+    L += [f"- {r['feature_label']} \"{r['value']}\" ({r['verdict']}): {r['why']}." for r in stops] or ["- No choice has failed outright yet."]
     if dead: L.append("- Dead Shorts (not followed up, remade or posted about again): " + "; ".join(f"{r['short']} \"{r.get('title', '')}\" {n(f(r.get('yt_views')) or 0)} views" for r in dead[:12]) + ("…" if len(dead) > 12 else "") + ".")
     floor = drivers.dead_floor(shorts)
     L.append(f"- The floor: {n(floor)} views a week after posting." if floor else "- The floor is set once 5 Shorts are a week old.")

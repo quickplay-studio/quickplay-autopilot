@@ -111,7 +111,8 @@ def expired_note():
             A.raise_issue(title, "These sign-ins no longer work (Google or Meta says expired or revoked), so their posts stop until "
                           "they are reconnected: " + ", ".join(EXPIRED_SIGNINS) + ". YouTube: reconnect from the social workflow "
                           "(channel name). An IG_ or FB_ name: paste a new key into that GitHub secret. Or ask Claude from your "
-                          "Quickplay page. Nothing outside the studio account is involved, so posting elsewhere continues.")
+                          "Quickplay page. Nothing outside the studio account is involved, so posting elsewhere continues.",
+                          labels=["needs-charlie"])
         else: A.clear(title, "Every sign-in works again.")
     except Exception as e: log("expired alert:", str(e)[:120])
 
@@ -275,7 +276,8 @@ def audit(live=True):
             A.raise_issue(TITLE, "The automation holds a sign-in, key or file that is not the studio's (" + (ACC.get("google") or "the studio Google account") + "). "
                           "Every workflow that posts is stopped until this is clean.\n\n" + "\n".join("- " + p for p in result["problems"]) +
                           "\n\nFix: remove or replace it (GitHub secrets, tokens/ or the workflow file), then run the audit workflow: "
-                          "https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml")
+                          "https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml",
+                          labels=["needs-charlie"])
         else: A.clear(TITLE, "Clean: every sign-in belongs to the studio account.")
     except Exception as e: log("identity alert:", str(e)[:120])
     return result

@@ -36,12 +36,24 @@ def open_issues():
     except ValueError: return {}
 
 
-def raise_issue(title, body):
+# Labels an issue can carry besides "alert". "needs-charlie" (24 October): only Charlie can do it (a key, a login, a
+# sign-in outside the studio); the hub's Overview lists those issues under "Your actions this week".
+LABELS = {"needs-charlie": ("FBCA04", "Only Charlie can do this: the hub lists it under Your actions this week")}
+
+
+def raise_issue(title, body, labels=None):
     have = open_issues()
+    extra = [l for l in (labels or []) if l]
+    for l in extra:                     # creating a label that exists already fails quietly, as it does for "alert"
+        color, about = LABELS.get(l, ("BFD4F2", "Quickplay automation"))
+        gh("label", "create", l, "--color", color, "--description", about)
     if title in have:
-        gh("issue", "comment", str(have[title]), "--body", body); print("updated:", title); return
+        gh("issue", "comment", str(have[title]), "--body", body)
+        for l in extra: gh("issue", "edit", str(have[title]), "--add-label", l)
+        print("updated:", title); return
     gh("label", "create", "alert", "--color", "B60205", "--description", "Automatic alert from the Quickplay automation")
-    r = gh("issue", "create", "--title", title, "--body", body + "\n\n" + HOWTO, "--label", "alert")
+    r = gh("issue", "create", "--title", title, "--body", body + "\n\n" + HOWTO, "--label", "alert",
+           *[x for l in extra for x in ("--label", l)])
     print("opened:", title, (r.stdout or r.stderr).strip())
 
 
@@ -89,7 +101,8 @@ def evening():
         left = (dt.datetime.fromtimestamp(int(exp), dt.timezone.utc) - NOW).days
         if left < 15:
             raise_issue(title, f"Facebook's key stops working in {max(left, 0)} days. Make a new one in the Graph API Explorer as "
-                               f"before and paste it into the FB_PAGE_TOKEN secret: {REPO}/settings/secrets/actions")
+                               f"before and paste it into the FB_PAGE_TOKEN secret: {REPO}/settings/secrets/actions",
+                        labels=["needs-charlie"])
         else: clear(title, "Renewed.")
 
 

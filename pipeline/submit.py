@@ -578,7 +578,8 @@ def alerts(stale, by_site):
                                  f"\"Get cookies.txt LOCALLY\" extension, Export (current site), and paste the file's text into the "
                                  f"secret {secret}: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/{secret}, "
                                  f"then run the logins workflow (Run workflow): https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml. "
-                                 f"Until then the links are on the phone page: https://quickplay-studio.github.io/quickplay-autopilot/submit.html")
+                                 f"Until then the links are on the phone page: https://quickplay-studio.github.io/quickplay-autopilot/submit.html",
+                          labels=["needs-charlie"])
         elif site in by_site: A.clear(title, "The login works again.")
         elif (C.CFG.get("submit_by") or {}).get(site) == "mac": A.clear(title, f"{site} links are submitted by the Mac Chrome run now (docs/CHROME_JOBS.md), not from GitHub.")
 

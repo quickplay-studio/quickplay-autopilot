@@ -26,6 +26,9 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
 ## Where to look
 - The hub, everything on one page for Charlie: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html;
   it reads the live repository files in the browser, so it needs no rebuild; add a tab there when something new is worth watching).
+  Its Overview opens with "Your actions this week": status/actions.json (Charlie's to-dos with steps and links; a session adds an
+  item when only he can do something and sets done true once it is done) plus open issues labelled needs-charlie
+  (alerts.raise_issue(..., labels=["needs-charlie"])).
 - status/write_log.txt and status/factpack_log.txt: the last writer and fact pack runs (models, quota, what was written).
 - `python pipeline/digest.py` and `python pipeline/health.py`: one-screen state. status/<id>.json: one Short's life.
 - docs/NEXT.md: what was built and why, newest at the bottom; docs/CLIPS.md: the clips channel plan.

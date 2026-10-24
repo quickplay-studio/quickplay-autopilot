@@ -1678,7 +1678,8 @@ def main(argv):
         except Exception as e:
             log(f"{cid}: {type(e).__name__}: {str(e)[:300]}")
     if cmd == "run":
-        spill(shares, made_n, cs, deadline)
+        try: spill(shares, made_n, cs, deadline)
+        except Exception as e: log("spill:", str(e)[:200])
         try: stats()
         except Exception as e: log("stats:", str(e)[:200])
 

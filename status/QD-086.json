@@ -2,87 +2,81 @@
  "id": "QD-086",
  "board": "boards/queue/QD-086.json",
  "mode": "schedule",
- "slot": "2026-10-21T16:00:00Z",
- "rendered": "2026-10-21T09:58:37.779389+00:00",
+ "slot": "2026-10-24T09:00:00Z",
+ "rendered": "2026-10-24T02:00:02.401337+00:00",
  "title": "What is the fastest land animal in the world? 🐆",
  "background_notes": [
-  "picked pixabay 1 (+1 spares)"
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked nothing (+0 spares)"
  ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
  "media": {
   "real_shots": 7,
   "planned_real": 7
  },
- "music": "defying-gravity",
- "social_music": "ambient-space-background-350710",
+ "music": "event-horizon",
+ "social_music": "futuristic-sci-fi-174819",
  "look": {
-  "captions": "clean",
-  "voice": "heart",
-  "energy": "calm",
-  "grade": "lab-grade-1019",
-  "opening": "lab-opening-1019"
+  "captions": "minimal",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first"
  },
  "qa": {
-  "duration": 21.0,
-  "wps": 3.0,
+  "duration": 22.4,
+  "wps": 2.8,
   "weak_beats": [
    2,
    5
   ],
-  "size_mb": 11.1
+  "size_mb": 6.4
  },
  "timeline": [
   [
    0.06,
-   3.07,
+   2.9,
    "none",
    0
   ],
   [
-   3.07,
-   6.12,
+   2.9,
+   6.39,
    "stat",
    1
   ],
   [
-   6.12,
-   8.38,
+   6.39,
+   8.76,
    "none",
    1
   ],
   [
-   8.38,
-   11.71,
+   8.76,
+   12.91,
    "date",
    1
   ],
   [
-   11.71,
-   15.84,
+   12.91,
+   17.25,
    "stat",
    1
   ],
   [
-   15.84,
-   19.32,
+   17.25,
+   21.21,
    "none",
    1
   ],
   [
-   19.32,
-   21.03,
+   21.21,
+   22.43,
    "none",
    1
   ]
  ],
- "background": [
-  {
-   "p": "pixabay",
-   "id": "147800",
-   "q": "concert stage lights",
-   "t0": 0.0,
-   "t1": 21.03
-  }
- ],
+ "background": [],
  "state": "failed",
  "error": "RuntimeError: checks failed: unclear narration in beats [2, 5]"
 }

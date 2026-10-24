@@ -2,13 +2,14 @@
  "id": "QD-126",
  "board": "boards/queue/QD-126.json",
  "mode": "schedule",
- "slot": "2026-10-23T00:00:00Z",
- "rendered": "2026-10-22T19:18:23.860539+00:00",
+ "slot": "2026-10-24T10:00:00Z",
+ "rendered": "2026-10-24T01:59:37.781587+00:00",
  "title": "JADE hits US charts years after debut 🎶",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
+  "pixabay:780 skipped: nearly black (brightness 0.03)",
   "pixabay:24490 skipped: nearly black (brightness 0.03)",
-  "pixabay:780 skipped: nearly black (brightness 0.03)"
+  "pixabay:1227 skipped: nearly black (brightness 0.01)"
  ],
  "media_notes": [
   "beat 1 reused a nearby picture (commons-search:Jade Thirlwall: no Commons image named 'Jade Thirlwall')",
@@ -20,15 +21,15 @@
   "planned_real": 5
  },
  "music": "f16",
- "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "social_music": "dance-upbeat-pop-611603",
  "look": {
-  "captions": "clean",
+  "captions": "minimal",
   "voice": "george",
-  "energy": "lab-energy-1019",
+  "energy": "steady",
   "grade": "natural",
-  "opening": "lab-opening-1019"
+  "opening": "image_first"
  },
- "look_note": "voice G was less clear, used george",
+ "look_note": "voice DN was less clear, used george",
  "qa": {
   "duration": 31.6,
   "wps": 3.0,
@@ -78,22 +79,22 @@
  "background": [
   {
    "p": "pixabay",
-   "id": "5713",
-   "q": "runway fashion show lights",
+   "id": "8675",
+   "q": "dj mixer lights",
    "t0": 0.0,
    "t1": 10.93
   },
   {
    "p": "pixabay",
-   "id": "7382",
-   "q": "dj mixer lights",
+   "id": "41315",
+   "q": "crowd concert night",
    "t0": 10.33,
    "t1": 21.27
   },
   {
    "p": "pixabay",
-   "id": "221132",
-   "q": "crowd concert night",
+   "id": "331030",
+   "q": "dj mixer lights",
    "t0": 20.67,
    "t1": 31.6
   }

@@ -2,12 +2,11 @@
  "id": "QD-056",
  "board": "boards/queue/QD-056.json",
  "mode": "schedule",
- "slot": "2026-10-20T18:30:00Z",
- "rendered": "2026-10-20T16:11:58.119906+00:00",
+ "slot": "2026-10-24T08:00:00Z",
+ "rendered": "2026-10-24T01:59:55.569443+00:00",
  "title": "Street Fighter movie: Chun-Li's 12-egg diet 🥚",
  "background_notes": [
-  "PEXELS_API_KEY is not set, so Pexels is skipped",
-  "picked pixabay 3 (+3 spares)"
+  "picked pixabay 1 (+1 spares)"
  ],
  "media_notes": [
   "beat 3 reused a nearby picture (commons-search:Kitao Sakurai: no Commons image named 'Kitao Sakurai')"
@@ -17,62 +16,61 @@
   "planned_real": 8
  },
  "music": "ten",
- "social_music": "cool-powerful-hard-rock-243776",
+ "social_music": "sport-mortals-566578",
  "look": {
-  "captions": "minimal",
-  "voice": "george_quick",
-  "energy": "steady",
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
   "grade": "natural",
-  "opening": "graphic_first"
+  "opening": "image_first"
  },
+ "voice_note": "beat 3 read as two sentences",
  "qa": {
-  "duration": 29.6,
-  "wps": 3.3,
-  "weak_beats": [
-   3
-  ],
-  "size_mb": 14.4
+  "duration": 31.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.5
  },
  "timeline": [
   [
    0.06,
-   3.9,
+   4.78,
    "title",
    0
   ],
   [
-   3.9,
-   8.24,
+   4.78,
+   9.27,
    "stat",
    2
   ],
   [
-   8.24,
-   13.25,
+   9.27,
+   14.02,
    "none",
    1
   ],
   [
-   13.25,
-   16.99,
+   14.02,
+   18.26,
    "none",
    1
   ],
   [
-   16.99,
-   21.23,
+   18.26,
+   22.8,
    "none",
    1
   ],
   [
-   21.23,
-   25.46,
+   22.8,
+   27.62,
    "none",
    1
   ],
   [
-   25.46,
-   29.54,
+   27.62,
+   31.84,
    "none",
    1
   ]
@@ -80,19 +78,21 @@
  "background": [
   {
    "p": "pixabay",
-   "id": "26537",
-   "q": "cinema auditorium screen",
-   "t0": 0.0,
-   "t1": 15.07
-  },
-  {
-   "p": "pixabay",
-   "id": "148196",
+   "id": "148197",
    "q": "gym weight training",
-   "t0": 14.47,
-   "t1": 29.54
+   "t0": 0.0,
+   "t1": 31.84
   }
  ],
- "state": "failed",
- "error": "RuntimeError: checks failed: unclear narration in beats [3]"
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T02:30:00Z",
+ "video": "lc62rdRQvmk",
+ "url": "https://youtube.com/shorts/lc62rdRQvmk",
+ "publish_at": "2026-10-24T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-056"
 }

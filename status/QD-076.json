@@ -2,74 +2,73 @@
  "id": "QD-076",
  "board": "boards/queue/QD-076.json",
  "mode": "schedule",
- "slot": "2026-10-21T11:30:00Z",
- "rendered": "2026-10-21T09:39:51.783330+00:00",
+ "slot": "2026-10-24T04:00:00Z",
+ "rendered": "2026-10-24T02:00:02.200969+00:00",
  "title": "How Barbara Palvin was discovered at age 13 ✨",
  "background_notes": [
-  "picked pixabay 3 (+3 spares)",
+  "picked pixabay 2 (+3 spares)",
   "pixabay:3742 skipped: only 960x540, needs 720p"
  ],
  "media": {
   "real_shots": 7,
   "planned_real": 7
  },
- "music": "paradise",
- "social_music": "upbeat-motivational-dance-pop-227623",
+ "music": "f16",
+ "social_music": "dance-upbeat-pop-611603",
  "look": {
-  "captions": "clean",
-  "voice": "lab-voice-1019",
-  "energy": "calm",
-  "grade": "lab-grade-1019",
-  "opening": "graphic_first"
+  "captions": "lab-captions-1019",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
  },
+ "qa_note": "narration a little unclear in beat 6 (captions carry it)",
  "qa": {
   "duration": 28.0,
   "wps": 3.0,
-  "weak_beats": [
-   4
-  ],
-  "size_mb": 8.9
+  "weak_beats": [],
+  "size_mb": 7.9
  },
  "timeline": [
   [
    0.06,
-   3.63,
+   3.43,
    "none",
    0
   ],
   [
-   3.63,
-   7.14,
+   3.43,
+   7.19,
    "timeline",
    1
   ],
   [
-   7.14,
-   10.75,
+   7.19,
+   11.2,
    "none",
    1
   ],
   [
-   10.75,
-   15.78,
+   11.2,
+   16.01,
    "none",
    1
   ],
   [
-   15.78,
-   19.52,
+   16.01,
+   19.75,
    "none",
    1
   ],
   [
-   19.52,
-   24.62,
+   19.75,
+   24.32,
    "none",
    1
   ],
   [
-   24.62,
-   27.98,
+   24.32,
+   28.03,
    "none",
    1
   ]
@@ -77,19 +76,28 @@
  "background": [
   {
    "p": "pixabay",
-   "id": "180894",
-   "q": "concert stage lights",
+   "id": "190483",
+   "q": "city lights night",
    "t0": 0.0,
-   "t1": 14.29
+   "t1": 14.31
   },
   {
    "p": "pixabay",
-   "id": "233983",
-   "q": "city lights night",
-   "t0": 13.69,
-   "t1": 27.98
+   "id": "37844",
+   "q": "red carpet lights",
+   "t0": 13.71,
+   "t1": 28.03
   }
  ],
- "state": "failed",
- "error": "RuntimeError: checks failed: unclear narration in beats [4]"
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T02:30:02Z",
+ "video": "bENhL4PxDDE",
+ "url": "https://youtube.com/shorts/bENhL4PxDDE",
+ "publish_at": "2026-10-24T04:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T04:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-076"
 }

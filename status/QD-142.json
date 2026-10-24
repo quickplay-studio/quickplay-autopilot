@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-23T17:00:00Z",
  "rendered": "2026-10-23T13:45:24.768501+00:00",
- "title": "Jerry Hall’s record-breaking music night 🎤",
+ "title": "Jerry Hall’s early school exit and TV comeback 🌟",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:24490 skipped: nearly black (brightness 0.03)"
@@ -89,7 +89,14 @@
  "social_release": "social-QD-142",
  "engage": {
   "comment": "UgwDR-mTOmJBONYM9fZ4AaABAg",
-  "playlist": "Quickplay Daily: Music"
+  "playlist": "Quickplay Daily: Music",
+  "title": {
+   "swapped_from": "Jerry Hall’s record-breaking music night 🎤",
+   "to": "Jerry Hall’s early school exit and TV comeback 🌟",
+   "at": "2026-10-24T17:11+00:00",
+   "views_an_hour": 0.4,
+   "typical": 0.8
+  }
  },
  "facebook": {
   "video": "28689375054089597",

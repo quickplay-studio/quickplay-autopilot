@@ -60,3 +60,46 @@ g2.build = lambda *a, **k: (_ for _ in ()).throw(RuntimeError("HttpError 403 for
 I.EXPIRED_SIGNINS.clear(); r = I.youtube_checks(); assert not r[0]["ok"], r
 I.ROOT = old_root
 print("6 expired sign-in ok")
+
+# 7. a failure that says nothing about whose account it is (network, rate or quota limit, server error, an expired Meta
+# key) never stops posting; a foreign account still does, and a network error right after one keeps the gate shut
+import requests
+I.ROOT = SCRATCH / "exp"
+class _R:
+    def __init__(self, code, data): self.status_code, self._d, self.ok = code, data, 200 <= code < 300
+    def json(self): return self._d
+CASE = {}
+def _get(url, **k):
+    v = CASE.get("fb" if "facebook" in url else "ig")
+    if isinstance(v, Exception): raise v
+    return v or (_R(200, {"name": "Quickplay Daily", "id": "1"}) if "facebook" in url else _R(200, {"username": "quickplaydaily", "user_id": "1"}))
+requests.get = _get
+soc.load = lambda name: {"refresh_token": "r", "scope": "s"}       # no saved Instagram key: only the secrets below are checked
+os.environ.update(IG_TOKEN="ig", FB_PAGE_TOKEN="fb", FB_PAGE_ID="1")
+for code, data in ((500, {"error": {"code": 2, "is_transient": True}}), (403, {"error": {"code": 4}}), (429, {}),
+                   (400, {"error": {"code": 190, "type": "OAuthException", "message": "Session has expired"}})):
+    CASE.clear(); CASE["fb"] = _R(code, data); I.EXPIRED_SIGNINS.clear()
+    fb = [c for c in I.meta_checks() if c["what"] == "FB_PAGE_TOKEN"][0]
+    assert fb["ok"], (code, fb)
+    assert (I.EXPIRED_SIGNINS == ["FB_PAGE_TOKEN"]) == (code == 400), (code, I.EXPIRED_SIGNINS)
+CASE.clear(); CASE["ig"] = requests.exceptions.ConnectionError("Connection aborted")
+assert all(c["ok"] for c in I.meta_checks())
+CASE.clear(); CASE["fb"] = _R(400, {"error": {"code": 100, "message": "Unsupported get request"}})     # unexplained: fails as before
+assert not [c for c in I.meta_checks() if c["what"] == "FB_PAGE_TOKEN"][0]["ok"]
+g2.build = lambda *a, **k: (_ for _ in ()).throw(RuntimeError("<HttpError 503 when requesting x returned \"backendError\">"))
+assert I.youtube_checks()[0]["ok"] and I.youtube_checks()[0].get("unverified")
+I.OUT = SCRATCH / "identity7.json"; I.login_checks = lambda *a, **k: []; I.tiktok_checks = lambda: []
+import alerts as _A
+_A.raise_issue = _A.clear = lambda *a, **k: None                                 # never a real GitHub issue from a test
+_key = os.environ.get("SOCIAL_KEY"); os.environ["SOCIAL_KEY"] = "k" * 32
+I.youtube_checks = lambda: [I.check("youtube", "Some Other Channel", False, note="not a Quickplay name")]
+CASE.clear(); assert not I.audit()["ok"] and I.gate() == 1                       # a foreign channel stops posting
+I.youtube_checks = lambda: [I.unverified("youtube", "TransportError")]
+assert not I.audit()["ok"] and I.gate() == 1                                     # a network error does not reopen the gate
+I.youtube_checks = lambda: [I.check("youtube", "Quickplay Daily", True)]
+assert I.audit()["ok"] and I.gate() == 0                                         # a clean check does
+for k in ("IG_TOKEN", "FB_PAGE_TOKEN", "FB_PAGE_ID"): os.environ.pop(k, None)
+if _key is None: os.environ.pop("SOCIAL_KEY", None)
+else: os.environ["SOCIAL_KEY"] = _key
+I.ROOT = old_root
+print("7 transient failures ok")

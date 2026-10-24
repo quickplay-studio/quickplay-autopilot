@@ -36,6 +36,37 @@ def check(what, found, ok, expected="", note=""):
     return {"what": what, "found": found, "ok": bool(ok), "expected": expected, "note": note}
 
 
+# Failures that say nothing about whose account a sign-in is: the network, a rate or quota limit, a server error. Until
+# 24 October each of them failed the audit, which stopped every posting workflow for at least 6 hours (a Meta 500, a
+# YouTube quotaExceeded, a timeout). Now the sign-in is "not checked this time" and keeps the last audit's verdict.
+TRANSIENT = re.compile(r"quotaExceeded|rateLimitExceeded|backendError|internalError|HttpError (?:429|5\d\d)|TransportError"
+                       r"|ServerNotFound|ConnectionError|ConnectTimeout|ReadTimeout|Timeout|timed out|RemoteDisconnected"
+                       r"|Connection (?:aborted|reset|refused)|Max retries exceeded|Temporary failure in name resolution|SSLError", re.I)
+
+
+def transient(e):
+    return bool(TRANSIENT.search(f"{type(e).__name__}: {e}"))
+
+
+def unverified(what, why):
+    c = check(what, "not checked this time", True, note=f"could not be checked now ({why}); the last audit's verdict stands")
+    c["unverified"] = True
+    return c
+
+
+def meta_failure(r):
+    """What a Graph API refusal means: "expired" (code 190: the key no longer works, so it reaches no account), "transient"
+    (a server error or a rate limit), or "" (a refusal the audit cannot explain: it fails, as before)."""
+    try: err = (r.json() or {}).get("error") or {}
+    except Exception: err = {}
+    code = err.get("code")
+    if r.status_code == 429 or r.status_code >= 500 or err.get("is_transient") or code in (1, 2, 4, 17, 32, 341, 613) \
+            or (isinstance(code, int) and 80000 <= code < 80100):
+        return "transient"
+    if code == 190: return "expired"
+    return ""
+
+
 # ---------- the live sign-ins ----------
 def youtube_checks():
     out = []
@@ -62,6 +93,7 @@ def youtube_checks():
             if EXPIRED.search(str(e)):      # an expired or revoked sign-in reaches no account at all: not a security problem,
                 out.append(check(name, "expired sign-in", True, note="reconnect it (the hub's Accounts tab or the social workflow)"))
                 EXPIRED_SIGNINS.append(name); continue      # so posting is not stopped for it; expired() raises its own issue
+            if transient(e): out.append(unverified(name, f"{type(e).__name__}: {str(e)[:80]}")); continue
             out.append(check(name, "", False, note=f"{type(e).__name__}: {str(e)[:120]}"))
     return out
 
@@ -76,9 +108,10 @@ def expired_note():
         import alerts as A
         title = "🔑 A sign-in has expired: reconnect it"
         if EXPIRED_SIGNINS:
-            A.raise_issue(title, "These sign-ins no longer work (Google says expired or revoked), so their uploads stop until they "
-                          "are reconnected: " + ", ".join(EXPIRED_SIGNINS) + ". Reconnect from the social workflow (channel name) or ask "
-                          "Claude from your Quickplay page. Nothing outside the studio account is involved, so posting elsewhere continues.")
+            A.raise_issue(title, "These sign-ins no longer work (Google or Meta says expired or revoked), so their posts stop until "
+                          "they are reconnected: " + ", ".join(EXPIRED_SIGNINS) + ". YouTube: reconnect from the social workflow "
+                          "(channel name). An IG_ or FB_ name: paste a new key into that GitHub secret. Or ask Claude from your "
+                          "Quickplay page. Nothing outside the studio account is involved, so posting elsewhere continues.")
         else: A.clear(title, "Every sign-in works again.")
     except Exception as e: log("expired alert:", str(e)[:120])
 
@@ -102,11 +135,12 @@ def meta_checks():
         seen.add(tok)
         try:
             r = requests.get("https://graph.instagram.com/me", params={"fields": "user_id,username,account_type", "access_token": tok}, timeout=30)
-            if not r.ok: out.append(check(label, f"HTTP {r.status_code}", False, note="the key does not answer")); continue
+            if not r.ok: out.append(meta_refusal(label, r)); continue
             me = r.json(); user = me.get("username", "")
             ok = user in (ACC.get("instagram") or []) or studio_name(user)
             out.append(check(label, f"@{user} ({me.get('user_id')})", ok, expected="a Quickplay Instagram account", note="" if ok else "not a Quickplay name"))
-        except Exception as e: out.append(check(label, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+        except Exception as e:
+            out.append(unverified(label, type(e).__name__) if transient(e) else check(label, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
     # Facebook: every FB_*_PAGE_TOKEN with its FB_*_PAGE_ID
     api = "https://graph.facebook.com/" + CFG.get("facebook_api_version", "v25.0")
     for k, v in os.environ.items():
@@ -115,12 +149,26 @@ def meta_checks():
         page = os.environ.get(f"FB{m.group(1) or ''}_PAGE_ID", "").strip()
         try:
             r = requests.get(f"{api}/{page or 'me'}", params={"fields": "id,name", "access_token": v.strip()}, timeout=30)
-            if not r.ok: out.append(check(k, f"HTTP {r.status_code}", False, note="the key does not answer")); continue
+            if not r.ok: out.append(meta_refusal(k, r)); continue
             j = r.json(); name = j.get("name", "")
             ok = name in (ACC.get("facebook") or []) or studio_name(name)
             out.append(check(k, f"{name} ({j.get('id')})", ok, expected="a Quickplay Facebook Page", note="" if ok else "not a Quickplay name"))
-        except Exception as e: out.append(check(k, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+        except Exception as e:
+            out.append(unverified(k, type(e).__name__) if transient(e) else check(k, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
     return out
+
+
+def meta_refusal(label, r):
+    """An Instagram or Facebook key the Graph API refused: an expired key (a 60-day Instagram key in a GitHub secret runs out
+    by itself) is a reconnect alert like an expired YouTube sign-in; a server error or rate limit is "not checked this time";
+    anything else fails the audit, as before."""
+    why = meta_failure(r)
+    if why == "expired":
+        EXPIRED_SIGNINS.append(label)
+        return check(label, "expired key", True, note="Meta says the key has expired: paste a new one into the GitHub secret "
+                     "(it reaches no account, so nothing else stops)")
+    if why == "transient": return unverified(label, f"HTTP {r.status_code}")
+    return check(label, f"HTTP {r.status_code}", False, note="the key does not answer")
 
 
 def tiktok_checks():
@@ -139,7 +187,8 @@ def tiktok_checks():
             who = u.get("username") or u.get("display_name") or ""
             ok = who in (ACC.get("tiktok") or []) or studio_name(who) or studio_name(u.get("display_name"))
             out.append(check(name, f"@{who}", ok, expected="a Quickplay TikTok account", note="" if ok else "not a Quickplay name"))
-        except (Exception, SystemExit) as e: out.append(check(name, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+        except (Exception, SystemExit) as e:
+            out.append(unverified(name, type(e).__name__) if transient(e) else check(name, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
     return out
 
 
@@ -190,6 +239,17 @@ def token_file_checks(token_dir=None):
 
 
 # ---------- audit and gate ----------
+def keep_failures(checks):
+    """A sign-in that could not be checked this time keeps the last audit's verdict: one the last audit found outside the
+    studio stays a failure until a check succeeds, so a network error can never reopen the gate for it."""
+    try: last = {c.get("what"): c for c in json.loads(OUT.read_text()).get("checks") or []}
+    except Exception: last = {}
+    for c in checks:
+        p = last.get(c["what"]) or {}
+        if c.get("unverified") and p and not p.get("ok"):
+            c.update(ok=False, found=p.get("found", ""), note=f"not checked this time; the last audit found it outside the studio ({p.get('note', '')})"[:240])
+
+
 def audit(live=True):
     checks = secret_checks() + token_file_checks()
     if live and len(os.environ.get("SOCIAL_KEY", "")) < 20:
@@ -197,12 +257,15 @@ def audit(live=True):
     elif live:
         checks += login_checks() + youtube_checks() + meta_checks() + tiktok_checks()
         expired_note()
+    keep_failures(checks)
     bad = [c for c in checks if not c["ok"]]
     result = {"checked": NOW.isoformat(timespec="seconds"), "ok": not bad, "studio": ACC.get("google", ""),
               "checks": checks, "problems": [f"{c['what']}: {c['found']} ({c['note']})" for c in bad]}
     OUT.parent.mkdir(exist_ok=True); OUT.write_text(json.dumps(result, indent=1, ensure_ascii=False))
     for c in checks: log(("ok   " if c["ok"] else "FAIL ") + f"{c['what']}: {c['found']}" + (f" ({c['note']})" if c["note"] else ""))
-    log(f"identity: {'clean' if not bad else str(len(bad)) + ' problem(s)'}: {len(checks)} checks")
+    skipped = sum(1 for c in checks if c.get("unverified") and c["ok"])
+    log(f"identity: {'clean' if not bad else str(len(bad)) + ' problem(s)'}: {len(checks)} checks"
+        + (f", {skipped} not checked this time (network or rate limit)" if skipped else ""))
     try:
         import alerts as A
         if bad:

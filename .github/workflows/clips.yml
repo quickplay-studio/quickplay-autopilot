@@ -1,17 +1,18 @@
 name: clips
-# Quickplay Clips (pipeline/clips.py): clips from campaign-permitted footage (clips/campaigns.json), made at 13:00 UK and
-# public together at 18:00 UK; the batch run then posts them to Instagram and Facebook, comments, and submits every link
+# Quickplay Clips (pipeline/clips.py): clips from campaign-permitted footage (clips/campaigns.json), made at 12:00 UTC and
+# public together at batch_time (19:00 UK); the batch run then posts them to Instagram and Facebook, comments, and submits every link
 # to its campaign itself (pipeline/submit.py, with the studio's sign-ins from tokens/, see logins.yml; what it cannot
 # submit stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
 # "stats" refreshes clips/stats.csv only; "submit" puts the public links into their campaigns now ("submit probe" only
 # checks the sign-ins work); "promote" schedules the last 48 hours' private test clips into the next batch.
 on:
   schedule:
-    - cron: '0 9 * * *'        # 10:00 UK: footage and transcripts ready for the day (sources cut once, kept as release assets)
-    - cron: '0 12 * * *'       # 13:00 UK: the day's clips, public together at 18:00 UK
-    - cron: '31 16,17 * * *'   # before the 19:00 UK batch, either side of the clock change: the job waits for 19:01 UK, then Instagram, Facebook, TikTok, comments, submissions (GitHub starts crons up to an hour late)
+    # crons are UTC: UK time is an hour later in summer (BST) and the same in winter (GMT, from 25 October 2026)
+    - cron: '0 9 * * *'        # 10:00 UK in summer, 09:00 in winter: footage and transcripts ready for the day (sources cut once, kept as release assets)
+    - cron: '0 12 * * *'       # 13:00 UK in summer, 12:00 in winter: the day's clips, public together at the 19:00 UK batch
+    - cron: '31 16,17,18 * * *'   # before the 19:00 UK batch: a run waits for 19:01 UK when the batch is under 100 minutes away (in summer the 16:31 and 17:31 runs, in winter 17:31 and 18:31; GitHub starts crons 20 to 60 minutes late and can drop one), then Instagram, Facebook, TikTok, comments, submissions; a later run repeats only what is left
     - cron: '30 22 * * *'      # views per clip for the learning data
-    - cron: '35 8 * * *'       # 09:35 UK: the scout (campaigns ranked by money and heat, the viral streamers), for the evening's Chrome jobs
+    - cron: '35 8 * * *'       # 09:35 UK in summer, 08:35 in winter: the scout (campaigns ranked by money and heat, the viral streamers), for the evening's Chrome jobs
   push:
     branches: [main]
     paths: ['requests/clips*']
@@ -115,7 +116,7 @@ jobs:
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
             python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt
-          elif [ "${{ github.event.schedule }}" = "31 16,17 * * *" ] || echo "$req" | grep -qi social; then
+          elif [ "${{ github.event.schedule }}" = "31 16,17,18 * * *" ] || echo "$req" | grep -qi social; then
             case "$req" in *social*) export CLIPS_SOCIAL_NOW=1;; esac
             # 23 October: this branch never ran (the schedule string here did not match the cron), so no clip was ever posted
             # to Instagram or submitted. Now: wait for 19:01 UK when the batch is under 100 minutes away; a later start runs at once.

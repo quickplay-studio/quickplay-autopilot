@@ -1,11 +1,20 @@
 """The YouTube allowance guard (Charlie, 19 October): uploads come first.
 
-Uploads, creator comments, playlists, title swaps, comment replies and the writer's angle searches all draw on one daily
-YouTube API allowance, which resets at midnight Pacific time (08:00 UK, 07:00 in winter). Each workflow records what it
-spends in status/quota/<workflow>.json (one file each, so they never overwrite each other). allow() lets an optional
-extra go ahead only while what is spent today, plus what the rest of the day's uploads will need, plus a margin, plus
-the extra, stays under the allowance. Once YouTube refuses an upload for quota, every extra stops until the reset.
-  config.json: youtube_quota_per_day, youtube_upload_units, youtube_quota_margin
+The allowance resets at midnight Pacific time: 08:00 UK most of the year, 07:00 UK in the weeks when only one side has
+changed its clocks (25 October to 1 November 2026, and late March). All four channels share it: they sign in through one
+Google Cloud project (YT_CLIENT_ID). Each workflow records what it spends in status/quota/<workflow>.json (one file each,
+so they never overwrite each other).
+
+Since 1 June 2026 (the YouTube Data API's revision history) uploads (videos.insert) and searches (search.list) each have
+their own bucket, 100 calls a day by default, and every other method shares the 10,000 units (comments and title or
+privacy changes 50, reads 1). youtube_quota_model "buckets" (the default) counts it that way: a clip upload goes ahead
+only while the upload calls made today, plus the main channel's Shorts still to come, plus a margin, stay under the upload
+bucket; an optional extra only while the units spent, plus a margin, stay under the 10,000. A quotaExceeded on an upload
+stops uploads (and nothing else) until the reset. Until 24 October every upload and search was counted as 100 of the
+10,000 units, so on 23 and 24 October clip promotes and comments were held back for room the uploads never used, while
+the real limit, 100 uploads a day across the four channels, was not watched at all. "units" restores that old model.
+  config.json: youtube_quota_model, youtube_quota_per_day, youtube_uploads_per_day, youtube_searches_per_day,
+  youtube_upload_units, youtube_quota_margin, youtube_upload_margin, youtube_search_margin
 """
 import datetime as dt, json, os, pathlib, re
 from zoneinfo import ZoneInfo
@@ -16,6 +25,17 @@ CFG = json.loads((ROOT / "config.json").read_text())
 PT = ZoneInfo("America/Los_Angeles")
 COST = {"upload": int(CFG.get("youtube_upload_units", 100)), "comment": 50, "playlist": 50, "title": 50, "reply": 50,
         "search": 100}
+MODE = str(CFG.get("youtube_quota_model", "buckets"))
+BUCKETS = {"upload": int(CFG.get("youtube_uploads_per_day", 100)), "search": int(CFG.get("youtube_searches_per_day", 100))}
+
+
+def bucket(what):
+    """The bucket of its own a call draws on ("upload" or "search"), or None for the shared units. Callers name their
+    calls ("upload", "clip upload", "competitor search", "angle search") and pass the old unit price (COST), so the part
+    above that price (a search's video details, 1 or 2 units) still counts in the shared units."""
+    if MODE != "buckets": return None
+    w = str(what or "").lower()
+    return "upload" if "upload" in w else "search" if "search" in w else None
 
 
 def today():
@@ -110,24 +130,73 @@ def _save(d):
     _mine().write_text(json.dumps(d, indent=1))
 
 
+def _upgrade(d):
+    """A record written before the buckets (no "calls"): its uploads and searches move from units to calls, so the day
+    of the change counts them once."""
+    if MODE != "buckets" or "calls" in d: return d
+    d["calls"], by = {}, d.setdefault("by", {})
+    for what, u in list(by.items()):
+        b = bucket(what)
+        if not (b and COST[b]): continue
+        n = int(u) // COST[b]
+        d["calls"][b] = d["calls"].get(b, 0) + n
+        d["units"] = int(d.get("units") or 0) - n * COST[b]
+        by[what] = int(u) - n * COST[b]
+        if not by[what]: by.pop(what)
+    return d
+
+
 def spend(units, what="other"):
-    """Records units this workflow spent today."""
-    d = _load(_mine()) or {"day": today(), "units": 0, "by": {}}
-    d["units"] += int(units); d["by"][what] = d["by"].get(what, 0) + int(units)
+    """Records what this workflow spent today: a call in its own bucket (an upload or a search), and units."""
+    d = _upgrade(_load(_mine()) or {"day": today(), "units": 0, "by": {}})
+    b, units = bucket(what), int(units)
+    if b:
+        calls = d.setdefault("calls", {}); calls[b] = calls.get(b, 0) + 1
+        units = max(0, units - COST[b])
+    d["units"] = int(d.get("units") or 0) + units
+    if units or not b: d.setdefault("by", {})[what] = d.get("by", {}).get(what, 0) + units
     _save(d)
 
 
-def exhausted():
-    """YouTube refused an upload for quota: every optional extra stops until the reset."""
-    d = _load(_mine()) or {"day": today(), "units": 0, "by": {}}
-    d["exhausted"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
+def exhausted(kind="upload"):
+    """YouTube refused a call for quota (kind "upload", "search" or "units"): what draws on that bucket stops until the
+    reset. (The only caller is an upload; with youtube_quota_model "units" every optional extra stops, as before.)"""
+    d = _upgrade(_load(_mine()) or {"day": today(), "units": 0, "by": {}})
+    ex = d.get("exhausted")
+    ex = dict(ex) if isinstance(ex, dict) else ({"upload": ex} if ex else {})
+    ex[kind if MODE == "buckets" else "units"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
+    d["exhausted"] = ex
     _save(d)
+
+
+def _norm(f):
+    """One workflow's record of today as (units, {bucket: calls}, {bucket: refused at}), whichever version wrote it (a
+    record from before the buckets refused only uploads, and counted each upload and search as its old price in units)."""
+    f = _upgrade(json.loads(json.dumps(f)))
+    ex = f.get("exhausted")
+    ex = dict(ex) if isinstance(ex, dict) else ({"upload": ex} if ex else {})
+    if MODE != "buckets" and ex: ex = {"units": next(iter(ex.values()))}
+    return max(0, int(f.get("units") or 0)), dict(f.get("calls") or {}), ex
+
+
+def _records():
+    return [_norm(_load(p)) for p in DIR.glob("*.json")] if DIR.exists() else []
 
 
 def state():
-    """(units spent today across all workflows, whether YouTube refused an upload for quota today)."""
-    files = [_load(p) for p in DIR.glob("*.json")] if DIR.exists() else []
-    return sum(int(f.get("units") or 0) for f in files), any(f.get("exhausted") for f in files)
+    """(units spent today across all workflows, whether YouTube refused a call for quota in the shared units today; with
+    youtube_quota_model "units", any refusal)."""
+    recs = _records()
+    return sum(u for u, _, _ in recs), any("units" in ex for _, _, ex in recs)
+
+
+def calls(b):
+    """Calls made today in one of the buckets of their own ("upload", "search"), across all workflows."""
+    return sum(c.get(b, 0) for _, c, _ in _records())
+
+
+def bucket_refused(b):
+    return any(b in ex for _, _, ex in _records())
 
 
 def uploads_left():
@@ -146,11 +215,23 @@ def uploads_left():
 
 
 def allow(units, what="extra"):
-    """True when an optional extra of `units` fits without touching what the day's uploads need."""
+    """True when an optional call fits without touching what the day's Shorts need: an upload or a search in its own
+    bucket (a clip upload keeps room for the main channel's Shorts still to come), anything else in the shared units."""
+    b, units = bucket(what), int(units)
+    if b:
+        if bucket_refused(b):
+            print(f"YouTube allowance: {what} skipped, YouTube refused a {b} for quota today"); return False
+        keep = int(CFG.get(f"youtube_{b}_margin", 3)) + (uploads_left() if b == "upload" and what != "upload" else 0)
+        made = calls(b)
+        if made + keep + 1 > BUCKETS[b]:
+            print(f"YouTube allowance: {what} skipped ({made} of {BUCKETS[b]} {b} calls made today, {keep} kept for the Shorts)")
+            return False
+        units = max(0, units - COST[b])
+        if not units: return True
     spent, refused = state()
     if refused:
-        print(f"YouTube allowance: {what} skipped, YouTube refused an upload for quota today"); return False
-    keep = uploads_left() * COST["upload"] + int(CFG.get("youtube_quota_margin", 1000))
-    if spent + keep + int(units) <= int(CFG.get("youtube_quota_per_day", 10000)): return True
-    print(f"YouTube allowance: {what} skipped ({spent} units spent today, {keep} kept for the uploads still to come)")
+        print(f"YouTube allowance: {what} skipped, YouTube refused a call for quota today"); return False
+    keep = int(CFG.get("youtube_quota_margin", 1000)) + (0 if MODE == "buckets" else uploads_left() * COST["upload"])
+    if spent + keep + units <= int(CFG.get("youtube_quota_per_day", 10000)): return True
+    print(f"YouTube allowance: {what} skipped ({spent} units spent today, {keep} kept)")
     return False

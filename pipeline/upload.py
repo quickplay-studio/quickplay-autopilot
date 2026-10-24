@@ -12,6 +12,7 @@ def main(root):
     if yt is not None:      # never upload the same Short twice (e.g. a re-run of an old commit)
         try: on_channel = {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(yt, limit=100)}
         except Exception as e: print("could not list channel videos:", e)
+    limited = False         # YouTube refused one for its daily limit or quota: the rest wait without another call
     for res in sorted(pathlib.Path(root).iterdir()):
         st_path = res / "status.json"
         if not st_path.exists(): continue
@@ -32,6 +33,8 @@ def main(root):
             st["state"] = "rendered (YouTube keys missing)"
         elif dup:
             st.update(state="already on YouTube (not uploaded again)", video=dup, url=f"https://youtube.com/shorts/{dup}")
+        elif limited:
+            st["state"] = "waiting for YouTube's daily upload limit"
         else:
             try:
                 vid = Y.upload(yt, res / "video.mp4", u["title"], u["description"], u["tags"], u["category"],
@@ -46,7 +49,7 @@ def main(root):
                 except Exception as e:
                     st["youtube"] = {"error": str(e)[:200]}
             except Y.LimitReached:
-                st["state"] = "waiting for YouTube's daily upload limit"
+                st["state"] = "waiting for YouTube's daily upload limit"; limited = True
             except Exception as e:
                 st.update(state="upload failed", error=f"{type(e).__name__}: {e}"[:600])
         st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False))

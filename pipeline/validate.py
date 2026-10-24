@@ -121,8 +121,14 @@ def _check(b, path=None):
 
     m = b.get("meta") or {}
     title = m.get("title") or ""
+    # the title emoji test (writer.py TITLE_TESTS, 24 October): a "none" title carries no emoji, the rest end with one
+    arm = str((b.get("test") or {}).get("title_emoji") or "") if isinstance(b.get("test"), dict) else ""
     if not 1 <= len(title) <= 70: e.append("meta.title: 1 to 70 characters")
-    if not EMOJI.search(title[-2:]): e.append("meta.title: end with one emoji")
+    elif len(title) > 50 and not b.get("franchise"):      # one limit, 50 (the series prefix is added after the writer)
+        w.append(f"meta.title: {len(title)} characters: under 50, the searched name still first")
+    if arm == "none":
+        if EMOJI.search(title): e.append("meta.title: no emoji (this Short tests a title without one)")
+    elif not EMOJI.search(title[-2:]): e.append("meta.title: end with one emoji")
     if not (m.get("summary") or "").strip(): e.append("meta.summary: 1 to 2 sentences")
     tags = [t for t in (m.get("hashtags") or []) if str(t).lower() != "#shorts"]
     bad_tags = [t for t in tags if not re.fullmatch(r"#\w{2,40}", str(t))]
@@ -149,7 +155,8 @@ def _check(b, path=None):
         except (OSError, ValueError, KeyError): pass
     if m.get("comment") and (len(str(m["comment"])) > 100 or "http" in str(m["comment"])): e.append("meta.comment: under 100 characters, no links")
     alt = str(m.get("alt_title") or "")
-    if alt and (len(alt) > 70 or not EMOJI.search(alt[-2:])): e.append("meta.alt_title: under 70 characters, one emoji at the end")
+    if alt and (len(alt) > 70 or (bool(EMOJI.search(alt)) if arm == "none" else not EMOJI.search(alt[-2:]))):
+        e.append("meta.alt_title: under 70 characters, " + ("no emoji" if arm == "none" else "one emoji at the end"))
     if not m.get("comment") or not alt: w.append("meta.comment and meta.alt_title: add both (comment question, backup title)")
     srcs = m.get("sources") or []
     bad = [s for s in srcs if not (isinstance(s, list) and len(s) == 2 and str(s[1]).startswith("https://"))]

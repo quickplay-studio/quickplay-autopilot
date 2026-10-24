@@ -21,7 +21,8 @@ def main(args):
     p = next((t for t in topics if len(t.get("verified") or []) + len(t.get("one_source") or []) >= 3), topics[0] if topics else None)
     if not p: print("no fact packs to try"); return
     head = (W.RULES % {"moods": list(W.CFG.get("music_moods") or [])} + "\n\nFORMATS\n" + W.formats()
-            + "\n\nWHAT THE DATA SAYS WORKS\n" + W.recipe() + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + W.example())
+            + "\n\nWHAT THE DATA SAYS WORKS\n" + W.recipe() + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + W.example()
+            + "\n\n" + W.style_note({"title_emoji": "emoji"}))     # the title emoji arm the validator then expects (24 October)
     prompt = head + "\n\nTHE PACK\n" + W.pack_text(p)
     out = W.ROOT / "status" / "llm_probe"; out.mkdir(parents=True, exist_ok=True)
     summary = {"when": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "order": order, "pack": p["topic"],

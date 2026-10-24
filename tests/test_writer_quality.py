@@ -111,7 +111,12 @@ assert not any(p.startswith("claude:") or "lite" in p for p in picks), set(picks
 assert picks.count("groq:moonshotai/kimi-k2-instruct") > picks.count("gemini:gemma-3-27b-it"), picks
 print("3 choice ok")
 
-# 4. Claude's test arm: about 1 board in 4, capped per UK day
+# 4a. Charlie's allowance first (24 October): the real config writes no test-arm boards and edits a 3 in 10 share, at most 4
+REAL = W.CFG
+assert int(REAL["claude_writes_per_day"]) == 0 and int(REAL["claude_edits_per_day"]) <= 4 and float(REAL["claude_edit_share"]) <= 0.3
+assert not any(W.claude_arm(f"QD-{n:03d}") for n in range(200))
+# 4. Claude's test arm (the mechanism, with the old caps): about 1 board in 4, capped per UK day
+W.CFG = dict(REAL, claude_writes_per_day=8, claude_edits_per_day=24, claude_edit_share=1.0)
 arm = [W.claude_arm(f"QD-{n:03d}") for n in range(200)]
 share = sum(1 for a in arm if a) / len(arm)
 assert 0.15 < share < 0.35 and set(arm) <= {None, "claude:sonnet"}, share
@@ -158,6 +163,21 @@ b, note = W.claude_edit(dict(board, id="QD-503", writer="claude:sonnet"), {}, "n
 assert note == "n"
 F.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 24, "writes": 0}))
 assert W.claude_edit(dict(board, id="QD-504"), {}, "news", "n")[1] == "n"
+# claude_edit_share: the day's few edits land on a random share of the passing boards, spread over every run
+F.USAGE.write_text(json.dumps({"day": W.usage()["day"], "edits": 0, "writes": 0}))
+W.CFG = dict(W.CFG, claude_edit_share=0.3, claude_edits_per_day=1000)
+W.fact_check = lambda b, p: []
+reply["v"] = {"title": "Fine title"}
+got = sum(1 for n in range(200) if W.claude_edit(dict(board, id=f"QD-{600 + n}"), {}, "news", "n")[0].get("editor") == "claude")
+assert 40 < got < 80, got
+# the title emoji arm reaches the editor's prompt: a "none" board's titles are asked for with no emoji
+PROMPTS = []
+W.factpack.claude_call = lambda label, prompt, timeout: (PROMPTS.append(prompt) or reply["v"], None)
+W.CFG = dict(W.CFG, claude_edit_share=1.0)
+W.claude_edit(dict(board, id="QD-900", test={"title_emoji": "none"}), {}, "news", "n")
+W.claude_edit(dict(board, id="QD-901", test={"title_emoji": "emoji"}), {}, "news", "n")
+assert "with no emoji at all" in PROMPTS[0] and "{emoji}" not in PROMPTS[0] and "exactly one emoji" in PROMPTS[1], PROMPTS[0][:600]
+assert "under 50 characters" in PROMPTS[0] and "under 70" not in PROMPTS[0]
 print("5 editor ok")
 
 # 6. scores: writers, editors (Claude-written left out) and pairs

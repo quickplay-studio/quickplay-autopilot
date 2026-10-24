@@ -81,6 +81,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
           IG_CLIPS_TOKEN: ${{ secrets.IG_CLIPS_TOKEN }}
           IG_CLIPS_USER_ID: ${{ secrets.IG_CLIPS_USER_ID }}
           FB_CLIPS_PAGE_TOKEN: ${{ secrets.FB_CLIPS_PAGE_TOKEN }}

@@ -31,15 +31,21 @@ cars and history. Every rule must hold.
 - Facts: use ONLY the facts in the pack below. A "verified" fact can be stated plainly. A "one source" fact must name its
   source in the narration ("Variety says", "according to the BBC"). Anything unconfirmed must be said to be unconfirmed and
   who is saying it. Never invent anything. Copy names, numbers and dates exactly as the pack writes them.
+- Your own point (YouTube only pays for and recommends original Shorts, never ones that read out news text or follow a
+  template): every Short makes one point its sources don't spell out, built only from the pack's own facts: two facts set
+  side by side, one number measured against another, what follows from the facts, or what it means for the viewer. Land
+  it in the payoff beat. Tell the story in your own order and your own words around that point: never follow an article's
+  order, structure or phrasing, and never add an outside fact to make the point.
 - Relatable, for everyone: the Short is for the millions who know the subject from their own life (the game on every
   phone, the film everyone has seen, the song at every party, the team, the gadget in their pocket), never for the fans
   who know the lore. Tell it through what it means for the viewer ("you", "your", "everyone who..."), and skip business
   history, licensing, corporate timelines, dates for their own sake and records only fans care about. If the subject is
   known only to fans, find the angle an ordinary person would care about, or return {"skip": "niche"}. Set "appeal":
   "everyone" when most people in the UK and US know the subject, "fans" when only followers do.
-- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, speaking to the viewer's own experience, never
-  "X is back", never "Discover", "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put "impact": true on
-  the hook and on the payoff beat.
+- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, said as a plain statement that names the star
+  or the title (on this channel statement hooks get two to three times the views of the others), speaking to the viewer's
+  own experience; open with a question only when the style line below asks for one. Never "X is back", never "Discover",
+  "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put "impact": true on the hook and on the payoff beat.
 - 5 to 9 beats, 70 to 110 words of narration in total, one or two sentences per beat (a longer Short, when the style
   note below asks for one, keeps every beat a new surprise and saves the wildest for last).
 - Ending: land the payoff, then either a line that loops back into the hook or a short question viewers can answer.
@@ -50,7 +56,9 @@ cars and history. Every rule must hold.
   page's own picture (a studio, publisher, label, team or agency; never a news site). Stock ("pixabay:video:2 to 4
   concrete words") only when nothing real exists, at most 1 in 5 shots, never on beat 1.
 - Shots: 1 to 3 per beat, a new shot every 2 to 3 seconds (about every 6 to 8 words): later shots in a beat take "at"
-  (the word number the cut lands on); "move" is one of in, out, left, right, up, down, still.
+  (the word number the cut lands on); "move" is one of in, out, left, right, up, down, still. Keep the camera moving
+  gently (in, out, left or right; Shorts with a steady, moving camera do about twice as well here as calm, still ones):
+  "still" only under a graphic.
 - "background": 3 stock video searches (2 to 4 are allowed), each 2 to 4 concrete lower case words, for the clips that play
   softly blurred and darkened behind the whole Short, one after another. Describe the WORLD of the story as a camera would
   film it: "football stadium night", "concert stage lights", "neon gaming setup", "cinema auditorium screen", "galaxy stars
@@ -61,15 +69,22 @@ cars and history. Every rule must hold.
   cards {items[{icon, t, s}]}, quote {text, by}, date {month, day, weekday, label, sub},
   versus {items: [2 x {label, value, sub}]}, timeline {items[{y, t}]}, bars {items[{label, value, w 0 to 1}]}.
   Icons are lucide icon names.
-- meta.title: under 50 characters, the searchable name first (person, game, film, team), then the curiosity, exactly one
-  emoji at the end, never promising what the Short doesn't deliver (a question title for anything unconfirmed).
+- meta.title: under 50 characters (count them). The exact name people search comes first (person, game, film, show,
+  team), then hold the answer back: promise the detail without giving it away, as the Shorts that break out from small
+  channels do ("LISA's Tarantino video: the detail you missed", "Avengers: Doomsday teaser: 3 things to spot", "iPhone
+  Duo: every big change explained"). Never a question (question titles get about half the views here) and never a
+  promise the Short doesn't keep: anything unconfirmed is called a report or a rumour. An emoji only as the style line
+  below says: one at the very end when it asks for one, none at all otherwise.
   meta.alt_title: a second title with a different angle, same rules. meta.summary: one or two sentences.
 - meta.hashtags: 8 to 15, exact names first, then the franchise or show, the category, then one or two broad ones such as
   #Trending or #Gaming; never #viral or anything unrelated. meta.tags: 5 to 15 phrases people would search.
   meta.comment: one question viewers can answer, under 100 characters, no links.
 - meta.sources: the pack's sources as [title, url] in the same order. meta.facts: every claim you used as
   [claim, [source numbers from the pack]].
-- "format": one of the format ids below. "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars, History.
+- "format": one of the format ids below. On this channel "one_detail" does best (about twice the typical views) and
+  "three_details" worst (under half): choose one_detail whenever one striking detail carries the story, three_details only
+  when the pack holds three details each strong enough to lead, and keep rotating formats as the note below asks.
+  "category": one of Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars, History.
   "appeal": "everyone" or "fans" (see above). "music": {"mood": one of %(moods)s}.
 - Lead with what is new today (the pack's "What is new"). If the pack has nothing new from the last few days, return
   {"skip": "nothing new"}.
@@ -508,7 +523,7 @@ STORY_NOTE = ("TRUE STORY: tell it in order like a storyteller: a gripping first
               "encyclopedia article: state them plainly and never name the source.")
 FICTION_NOTE = ("FICTION: this Short is an ORIGINAL short story (the topic is its premise), not news and not about real people, so "
                 "the facts rule and the real pictures rule don't apply. Tell it in the \"story\" format with a twist ending, 90 to "
-                "120 words, family-friendly. The title says it is a story (\"... | a short story\" before the emoji) and the "
+                "120 words, family-friendly. The title says it is a story (\"... | a short story\" at the end, before the emoji if it has one) and the "
                 "summary starts \"An original short story.\" Every beat's shots are game footage: write each src as \"gameplay:\" plus 2 to 4 words of "
                 "satisfying, game-like motion (our own gameplay recordings play when we have them, otherwise stock video of those "
                 "words), the same kind all the way through (\"gameplay:parkour rooftop run\", \"gameplay:racing track onboard\", "
@@ -522,13 +537,13 @@ Return {{"premise": "one sentence", "category": "Gaming, Film, Music, Sport, Tec
 PART_FIRST = ("SERIES: this is Part 1 of {of}. Cover the first part only (for a countdown, the lowest entries of the list; for "
               "a story, up to the first turning point; for news, what happened first) and end on a cliffhanger line that makes "
               "viewers want Part 2, such as \"Number 1 is in Part 2\" or \"What happened next is in Part 2\". End the title "
-              "with \"(Part 1)\" before the emoji.")
+              "with \"(Part 1)\", before the emoji if it has one.")
 PART_MID = ("SERIES: this is Part {n} of {of}, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
             "recap that makes sense on its own, carry on (the middle of the list, or what happened next) without repeating "
-            "earlier parts, and end on a cliffhanger for Part {next}. End the title with \"(Part {n})\" before the emoji.")
+            "earlier parts, and end on a cliffhanger for Part {next}. End the title with \"(Part {n})\", before the emoji if it has one.")
 PART_LAST = ("SERIES: this is Part {n} of {of}, following our Short \"{title}\", whose narration was: {said} Open with a five-word "
              "recap that makes sense on its own, then finish it (the top of the list, or what happened next) and land the "
-             "payoff. Don't repeat the earlier parts. End the title with \"(Part {n})\" before the emoji.")
+             "payoff. Don't repeat the earlier parts. End the title with \"(Part {n})\", before the emoji if it has one.")
 PART1_NOTE, PART2_NOTE = PART_FIRST.format(of=2), PART_LAST.replace("{n}", "2").replace("{of}", "2")     # kept for tests
 
 
@@ -704,14 +719,39 @@ def test_plan(k, kind="news"):
     return style_note(picks), picks
 
 
+# The title emoji (24 October): all 7 vidIQ outlier explainers from small channels carry no emoji, all of ours one, so every
+# Short takes an arm, 50/50 by its number and independent of the replies test (which follows k % 2), until drivers.csv
+# gives one arm a clear "push" (feature "title_emoji", read from the live title); then that arm, with every RETEST-th Short
+# still trying the other so new data can overturn it. Recorded on the board's test field; shape() and validate.py hold it.
+TITLE_TESTS = {"title_emoji": {"emoji": "Title emoji: end meta.title and meta.alt_title with exactly one emoji that fits the payoff.",
+                               "none": "Title emoji: none. No emoji anywhere in meta.title or meta.alt_title."}}
+
+
+def title_arm(k):
+    won = None
+    try:
+        for r in csv.DictReader((ROOT / "analytics" / "drivers.csv").open()):
+            if r.get("feature") == "title_emoji" and r.get("verdict") == "push" and float(r.get("lift") or 0) > 1:
+                won = r.get("value"); break
+    except Exception: pass
+    arms_ = list(TITLE_TESTS["title_emoji"])
+    if won in arms_: return won if k % RETEST else next(a for a in arms_ if a != won)
+    return arms_[(k // 2) % 2]
+
+
+def with_title_test(tests, k):
+    """The tests with this Short's title emoji arm added (kept when the board already has one, as series parts do)."""
+    return tests if tests.get("title_emoji") else {**tests, "title_emoji": title_arm(k)}
+
+
 def style_note(picks):
-    note = " ".join(TESTS[t][a] for t, a in picks.items() if t in TESTS and TESTS[t].get(a))
+    note = " ".join(src[t][a] for t, a in picks.items() for src in (TESTS, TITLE_TESTS) if t in src and src[t].get(a))
     return f"STYLE FOR THIS SHORT: {note}" if note else ""
 
 
 TRANSLATE = """Translate this YouTube Short's title and summary for viewers searching in Spanish ("es", Spain), Portuguese
 ("pt", Brazil) and Hindi ("hi"). Keep the names of people, games, films, shows, teams and songs as they are, keep numbers
-and the emoji at the end of the title, keep titles under 70 characters, and use no dashes and no < or > characters.
+and the emoji at the end of the title when it has one, keep titles under 50 characters, and use no dashes and no < or > characters.
 Title: {title}
 Summary: {summary}
 Return {{"es": {{"title": "...", "summary": "..."}}, "pt": {{"title": "...", "summary": "..."}}, "hi": {{"title": "...", "summary": "..."}}}}"""
@@ -796,7 +836,11 @@ def dropoff_notes():
 
 
 def shape(b, picks):
-    """Makes the board follow its first-frame test."""
+    """Makes the board follow its first-frame test and its title emoji arm (a "none" title loses any emoji it came with)."""
+    if picks.get("title_emoji") == "none":
+        m = b.get("meta") or {}
+        for k in ("title", "alt_title"):
+            if m.get(k): m[k] = re.sub(r"\s{2,}", " ", validate.EMOJI.sub("", str(m[k])).replace("️", "").replace("‍", "")).strip()
     beats = b.get("beats") or []
     if not beats: return
     v = beats[0].get("visual") or {"type": "none"}
@@ -840,14 +884,18 @@ def choose_writer(sid):
 
 # Claude, capped: an editor on free models' boards and a test arm writing 1 board in 4 (Charlie, 23 October). Counted per
 # UK day in status/claude_usage.json; both shares fall back by themselves when Claude's Shorts don't earn more views.
+# 24 October: Charlie's allowance comes first, so 4 edits a day on a random 3 in 10 passing boards (claude_edit_share) and
+# no test-arm boards (claude_writes_per_day 0); edited boards keep "editor": "claude", so the editor test still measures.
 EDIT = """You are the editor of a family-friendly UK YouTube Shorts channel. A writer's board follows (JSON). Make it more
 gripping for an ordinary viewer scrolling past: a sharper hook (first line), a title that makes people tap, a punchier
 last line, and a pinned comment that invites replies. Rewrite only these five, nothing else:
-- title and alt_title (a different angle on the same Short): each under 70 characters and ending with exactly one emoji,
-  no clickbait lies,
+- title and alt_title (a different angle on the same Short): each under 50 characters, the exact name people search
+  first, then the detail promised but held back ("LISA's Tarantino video: the detail you missed"), never a question,
+  no clickbait lies, {emoji},
 - comment (one question viewers want to answer),
 - first (beat 1's narration) and last (the last beat's narration): keep every fact, name and number they hold, use the
-  same number of words as first_words and last_words say (two more or fewer at most: count them), and never add a claim
+  same number of words as first_words and last_words say (two more or fewer at most: count them), keep the first line's
+  form (a statement stays a statement, a question stays a question: the board may be testing it), and never add a claim
   the board doesn't make.
 UK English, no dashes of any kind, no emoji in the narration. Reply with JSON only:
 {"title": "...", "alt_title": "...", "comment": "...", "first": "...", "last": "..."}"""
@@ -907,13 +955,15 @@ def claude_edit(b, p, kind, note):
     label = claude_label()
     if (not label or str(b.get("writer", "")).startswith("claude:") or not b.get("beats")
             or usage()["edits"] >= int(CFG.get("claude_edits_per_day", 24))
-            or random.Random(f"claude-edit:{b.get('id')}").random() >= claude_shares()[1]): return b, note
+            or random.Random(f"claude-edit:{b.get('id')}").random() >= min(claude_shares()[1], float(CFG.get("claude_edit_share", 1.0)))):
+        return b, note      # claude_edit_share (24 October: 0.3): the day's few edits spread over every run, not the first boards
     m, beats = b.get("meta") or {}, b["beats"]
     show = {"title": m.get("title", ""), "alt_title": m.get("alt_title", ""), "comment": m.get("comment", ""),
             "lines": [x.get("say", "") for x in beats], "facts": m.get("facts") or [],
             "first_words": words(beats[0].get("say")), "last_words": words(beats[-1].get("say"))}
     used("edits")
-    ans, why = factpack.claude_call(label, EDIT + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
+    emoji = {"none": "with no emoji at all"}.get((b.get("test") or {}).get("title_emoji"), "each ending with exactly one emoji")
+    ans, why = factpack.claude_call(label, EDIT.replace("{emoji}", emoji) + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
     if not isinstance(ans, dict): return b, note + f", editor: no answer ({str(why)[:60]})"
     new = json.loads(json.dumps(b))
     nm = new["meta"]
@@ -962,7 +1012,8 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         unwiki(b)
         for k in ("tiktok", "look", "flag", "bgvideo") + BOOKKEEPING: b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
-        if tests: b["test"] = dict(tests)          # the validator reads the length arm from it
+        if tests: b["test"] = dict(tests)          # the validator reads the length and title emoji arms from it
+        if (tests or {}).get("title_emoji") == "none": shape(b, {"title_emoji": "none"})     # an emoji the model added anyway goes
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
         errs, warns = validate.check(b)
@@ -1008,6 +1059,7 @@ def main():
     def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None):
         sid = f"QD-{state['n']:03d}"
         if tests is None: style, tests = test_plan(state["n"], kind)
+        tests = with_title_test(tests, state["n"])      # the title emoji test rides on every Short
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
@@ -1060,6 +1112,7 @@ def main():
         pack has 3 facts or more a part (never from the reserve, which could release them out of order, and never a
         follow-up or breaking news)."""
         style, tests = test_plan(state["n"], kind)
+        tests = with_title_test(tests, state["n"])      # one arm for every part of a series
         base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least

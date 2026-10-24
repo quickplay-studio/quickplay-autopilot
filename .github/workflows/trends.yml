@@ -42,6 +42,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
           BREAKING: ${{ github.event.schedule == '47 6,10,15 * * *' && '1' || '' }}
           FACTPACK_TOPICS: ${{ github.event.schedule == '47 6,10,15 * * *' && '6' || '' }}

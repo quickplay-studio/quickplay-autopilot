@@ -189,3 +189,31 @@ assert ans is None and "cloudflare:@cf/openai/gpt-oss-120b" in F3.STATE["spent_m
 _rq3.get, _rq3.post = _g, _p
 for k in ("CF_ACCOUNT_ID", "CF_API_TOKEN"): os.environ.pop(k, None)
 print("cloudflare ok")
+
+
+# SambaNova (24 October): dormant without its key; with it, only the free tier's models are tried whatever /models lists,
+# best writers first; its own list unreadable: the preferences. Groq's Orpheus voices are never taken for writers.
+import factpack as F4, requests as _rq4
+_g4 = _rq4.get
+F4.STATE.clear(); F4.CFG = dict(F4.CFG, providers={})
+os.environ.pop("SAMBANOVA_API_KEY", None)
+assert F4.provider_models("sambanova") == []
+os.environ["SAMBANOVA_API_KEY"] = "s"; F4.STATE.clear()
+class _R4:
+    def __init__(self, code, data): self.status_code, self.data, self.ok, self.headers, self.text = code, data, code == 200, {}, json.dumps(data)
+    def json(self): return self.data
+_rq4.get = lambda url, **kw: _R4(200, {"data": [{"id": "Meta-Llama-3.3-70B-Instruct"}, {"id": "DeepSeek-R1-0528"}, {"id": "gpt-oss-120b"},
+                                                 {"id": "DeepSeek-V3.1"}, {"id": "Llama-4-Maverick-17B-128E-Instruct"}]})
+SAMBA = ["sambanova:DeepSeek-V3.1", "sambanova:gpt-oss-120b", "sambanova:Meta-Llama-3.3-70B-Instruct"]
+assert F4.provider_models("sambanova") == SAMBA, F4.provider_models("sambanova")
+F4.STATE.clear(); _rq4.get = lambda url, **kw: _R4(500, {})
+assert F4.provider_models("sambanova") == SAMBA
+assert F4.provider_base("sambanova") == "https://api.sambanova.ai/v1"
+os.environ.pop("SAMBANOVA_API_KEY", None)
+F4.STATE.clear(); os.environ["GROQ_API_KEY"] = "g"
+_rq4.get = lambda url, **kw: _R4(200, {"data": [{"id": "openai/gpt-oss-120b"}, {"id": "canopylabs/orpheus-v1-english"}, {"id": "canopylabs/orpheus-arabic-saudi"},
+                                                 {"id": "openai/gpt-oss-safeguard-20b"}, {"id": "qwen/qwen3.8-27b"}, {"id": "whisper-large-v3"}]})
+got = F4.provider_models("groq")
+assert got[0] == "groq:openai/gpt-oss-120b" and not any("orpheus" in m or "guard" in m or "whisper" in m for m in got), got
+os.environ.pop("GROQ_API_KEY", None); _rq4.get = _g4; F4.STATE.clear()
+print("sambanova and groq lists ok")

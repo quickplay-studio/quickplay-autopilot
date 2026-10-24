@@ -81,10 +81,11 @@ https://app.vyro.com/settings (one Content Rewards account and one Vyro account 
 account, the platforms ban linked accounts). The campaigns already list their channels in clips/campaigns.json
 ("channels"); the next 13:00 UK run fills each channel with different moments of the same footage.
 
-### blocked: Two more free model keys (22 October)
-Both need an account and a key pasted, so both are Charlie's (asked 22 October 19:45 UK, links given).
-With the studio account make free API keys at https://cloud.cerebras.ai/ and https://console.mistral.ai/api-keys and add
-the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
+### blocked: More free model keys (22 October; corrected 24 October)
+Each needs an account and a key pasted, so each is Charlie's (asked 22 October 19:45 UK, links given). With the studio
+account make free API keys at https://console.mistral.ai/api-keys (free plan: a verified phone number, no card) and
+https://cloud.sambanova.ai (no payment method, or the free tier ends) and add the secrets MISTRAL_API_KEY and
+SAMBANOVA_API_KEY. Not Cerebras: its trial credit needs a payment method.
 
 ## Standing jobs (every run)
 - Vyro submissions (every run, right after the identity guard; the day's clips go public at 19:00 UK and Vyro drops any session

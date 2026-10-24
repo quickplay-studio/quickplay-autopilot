@@ -9,8 +9,9 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
   refreshes analytics/ (what works, by every choice a Short makes).
 - write.yml (after every trends run, or a push of requests/write.txt such as "afternoon 8" or "dry 2"): pipeline/writer.py
   writes JSON boards into boards/queue from the packs. Models, one door (factpack.gemini): Gemini Flash, Gemma, Groq,
-  Cerebras, Mistral, OpenRouter free models (only with secrets), llama.cpp on the runner, Claude last
-  (CLAUDE_CODE_OAUTH_TOKEN, at most 12 calls a run). Every board records its writer and its tests.
+  Mistral, SambaNova, Cloudflare, OpenRouter free models (only with secrets), llama.cpp on the runner, Claude last
+  (CLAUDE_CODE_OAUTH_TOKEN is Charlie's allowance: 4 edits a day, no test boards, at most 3 calls a run; config claude_*).
+  Every board records its writer and its tests.
 - render.yml renders and checks each board; publish.yml (hourly) uploads to YouTube in slots that cover all 24 hours,
   up to the learned ceiling (quota.py, status/upload_limit.json: 40 a day, rising while YouTube accepts everything);
   social.yml posts to Instagram and Facebook; engage.yml comments and replies; alerts.yml, weekly.yml, voices.yml.

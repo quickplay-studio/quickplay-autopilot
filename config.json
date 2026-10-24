@@ -1,6 +1,11 @@
 {
  "daily_limit": 40,
  "shorts_per_day": 15,
+ "max_tokens": {"groq": 3500},
+ "writing_timeout_s": 180,
+ "writing_timeouts_before_skip": 1,
+ "provider_refusals_before_skip": 3,
+ "model_chain_note": "24 October (audit M7): a writing model that times out once is passed over for the run, a provider that refuses 3 calls (too large, limits, server errors, timeouts; a refused key at once) is passed over for the run, and Groq answers within 3,500 tokens (its free tier counts the prompt and max_tokens against the minute), with one smaller retry on too large.",
  "watchlist": [
   {"name": "Ballon d'Or 2026", "terms": ["Ballon d'Or", "Ballon d'Or nominees", "Ballon d'Or winner"], "wikipedia": "2026 Ballon d'Or", "date": "2026-10-26", "category": "Sport", "angles": ["Ballon d'Or 2026 nominees", "Ballon d'Or 2026 winner", "Ballon d'Or 2026 London ceremony", "Ballon d'Or past winners", "Kopa Trophy 2026"], "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly.", "lead_days": 7, "after_days": 2},
   {"name": "The Celebrity Traitors", "terms": ["Celebrity Traitors", "Celebrity Traitors final", "Celebrity Traitors 2026"], "wikipedia": "The Celebrity Traitors", "date": "2026-10-30", "category": "Entertainment", "angles": ["Celebrity Traitors 2026 cast", "Celebrity Traitors final", "Celebrity Traitors viewing figures", "Celebrity Traitors winner"], "rules": "Cover it as TV news: the cast, the format, viewing figures and the result once the BBC has shown it. The final's date (late October or early November) is expected, not announced: never state it as fact. Murder is only the game's word; keep it light, no spoilers before broadcast, family friendly.", "lead_days": 3, "after_days": 2, "places": 2},

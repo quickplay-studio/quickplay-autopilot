@@ -1,68 +1,66 @@
-# Quickplay Daily: how it runs (21 October 2026)
+# Quickplay Daily: how it runs (24 October 2026)
 
 GitHub does everything; a Claude session is only for changes Charlie asks for. Nothing waits for a person (approval
 "none" in config.json).
 
+## Token budget (Charlie, 24 October: his allowance is shared with other projects)
+Read this file, then `python pipeline/digest.py` (one screen); `tail -n 40 docs/NEXT.md` only when history matters. Never
+open a data file whole (analytics/*.csv, clips/*.csv, status/*.json, boards/): `head -1`, `tail`, `grep` or a one-line
+aggregate. Hand log reading, number questions, test runs and dated doc lines to the Haiku agents in .claude/agents/
+(quickplay-logs, quickplay-data, quickplay-tests, quickplay-docs) so only their short answers reach the main context.
+
 ## The line
-- trends.yml (08:10, 12:47, 18:23 UTC, breaking checks 06:47, 10:47, 15:47): pipeline/trends.py finds what people are
-  searching for (free sources), pipeline/factpack.py builds checked fact packs (trends/facts.json), pipeline/analytics.py
-  refreshes analytics/ (what works, by every choice a Short makes).
-- write.yml (after every trends run, or a push of requests/write.txt such as "afternoon 8" or "dry 2"): pipeline/writer.py
-  writes JSON boards into boards/queue from the packs. Models, one door (factpack.gemini): Gemini Flash, Gemma, Groq,
-  Mistral, SambaNova, Cloudflare, OpenRouter free models (only with secrets), llama.cpp on the runner, Claude last
-  (CLAUDE_CODE_OAUTH_TOKEN is Charlie's allowance: 4 edits a day, no test boards, at most 3 calls a run; config claude_*).
-  Every board records its writer and its tests.
-- render.yml renders and checks each board; publish.yml (hourly) uploads to YouTube in slots that cover all 24 hours,
-  up to the learned ceiling (quota.py, status/upload_limit.json: 40 a day, rising while YouTube accepts everything);
-  social.yml posts to Instagram and Facebook; engage.yml comments and replies; alerts.yml, weekly.yml, voices.yml.
-- Every Short is a test (kind, source, format, hook, length, ending, title, first frame, series, look, slot, writer
-  model); analytics/drivers.csv, models.json, looks.json and slots.json score them and the next choices follow the data.
-  A choice whose Shorts have little to no views a week on is stopped for good (verdict "stop"); a dead Short is never
-  followed up or remade.
-- Freshness gate (Charlie, 24 October): a time-sensitive Short goes out after its day only with evidence its story is
-  alive (pipeline/freshness.py: trends, a Wikipedia surge, news), else boards/expired; a clip, test clip or submission over
-  30 hours late needs heat or views. Every decision: analytics/late_uploads.csv.
+- trends.yml (08:10, 12:47, 18:23 UTC; breaking checks 06:47, 10:47, 15:47): pipeline/trends.py finds what people search
+  for (free sources), factpack.py builds checked fact packs (trends/facts.json), analytics.py refreshes analytics/.
+- write.yml (after each trends run, or requests/write.txt such as "afternoon 8" or "dry 2"): writer.py writes boards into
+  boards/queue. Models, one door (factpack.gemini): the strongest keyed free models, Gemini Flash, Gemma, the rest
+  (Groq, Mistral, SambaNova, Cloudflare, OpenRouter, only with secrets), llama.cpp, Claude last (CLAUDE_CODE_OAUTH_TOKEN is
+  Charlie's allowance: 4 edits a day, no test boards, at most 3 calls a run; config claude_*).
+- render.yml renders, checks and uploads each board (its upload job) in slots round the clock: the day's number is
+  quota.target() (status/volume.json, 15 in the volume test), the ceiling is learned (status/upload_limit.json). quota.py
+  guards the YouTube allowance: 10,000 units, plus 100 uploads and 100 searches a day in their own buckets, shared by the
+  four channels. publish.yml (hourly): approvals and the reserve. social.yml: Instagram, Facebook (a 1-a-day probe),
+  TikTok off (docs/TIKTOK.md). engage.yml: comments. clips.yml: clips made at 12:00 UTC, public at 19:00 UK; Vyro is
+  submitted by the Mac (docs/CHROME_JOBS.md). alerts.yml, audit.yml, weekly.yml, report.yml.
+- Every Short is a test (kind, source, format, hook, length, ending, title, emoji, first frame, series, look, slot, writer).
+  analytics/drivers.csv gives a verdict only with proof (5 Shorts over 2 UK days, a 90% interval clear of typical, both
+  halves agreeing); a choice with little to no views a week on is paused 14 days, then retested. 1 Short in 5 explores,
+  every category keeps a floor, no writer model passes 35% before 10 measured Shorts. A dead Short is never remade.
+- Freshness gate (pipeline/freshness.py): a time-sensitive Short goes out after its day only with evidence its story is
+  alive, else boards/expired; a clip or submission over 30 hours late needs heat or views (analytics/late_uploads.csv).
+- Watchlist (config.json "watchlist", watch.py): dated events get places in their build-up and launch week, at most
+  watch_share_max (a third) of the day together.
 
 ## Where to look
-- The hub, everything on one page for Charlie: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html;
-  it reads the live repository files in the browser, so it needs no rebuild; add a tab there when something new is worth watching).
-  Its Overview opens with "Your actions this week": status/actions.json (Charlie's to-dos with steps and links; a session adds an
-  item when only he can do something and sets done true once it is done) plus open issues labelled needs-charlie
+- The hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
+  rebuild). Its Overview opens with "Your actions this week": status/actions.json plus issues labelled needs-charlie
   (alerts.raise_issue(..., labels=["needs-charlie"])).
-- status/write_log.txt and status/factpack_log.txt: the last writer and fact pack runs (models, quota, what was written).
-- `python pipeline/digest.py` and `python pipeline/health.py`: one-screen state. status/<id>.json: one Short's life.
-- docs/NEXT.md: what was built and why, newest at the bottom; docs/CLIPS.md: the clips channel plan.
-- analytics/insights.md: the Recipe from the data; analytics/decisions.csv: every change made from it; analytics/weekly.md:
-  the Monday report (report.yml, a GitHub issue labelled weekly). Clips: docs/clips.html (money and views per campaign),
-  clips/submit.csv (GitHub submits the links itself, submit.py), docs/CLIPS.md.
-- docs/CHROME_JOBS.md: the jobs the Mac task does in Charlie's Chrome (cookies, joins, account keys); a cloud session
-  adds a job there (or fires the task with the job text) instead of trying to use a browser itself.
-- tests/: offline tests with stubbed HTTP. Run them all before every push.
-- The identity guard (Charlie, 22 October): pipeline/identity.py and audit.yml (every 6 hours) resolve every sign-in the
-  automation holds and check it is the studio Google account's own Quickplay channel, page or profile (config.json
-  "accounts": ids, the Quickplay name rule, the secrets allowlist, own-site cookies only in tokens/login_*.enc). A mismatch
-  opens the issue "🔒 Security: a sign-in outside the studio account" and every posting workflow stops at its first step
-  (identity.py gate) until the next clean audit. A new secret is added to the allowlist by hand, on purpose. The Mac
-  Chrome run checks the profile's Google account first (docs/CHROME_JOBS.md).
+- `python pipeline/health.py`; status/write_log.txt and status/factpack_log.txt (tail only); status/<id>.json: one Short.
+- docs/NEXT.md (what was built and why, newest at the bottom), docs/CLIPS.md (clips), analytics/insights.md (the
+  Recipe), analytics/decisions.csv (the Recipe's changes), analytics/changes.csv (the change ledger), analytics/weekly.md.
+- The Mac: docs/CHROME_JOBS.md (a 4 KB card), `python3 pipeline/mac_rows.py` (its work), docs/CHROME_LOG.md (one-off jobs,
+  history). A cloud session adds a one-off job there instead of using a browser itself.
+- Identity guard (22 October): identity.py and audit.yml (every 6 hours) check every sign-in is the studio Google
+  account's own Quickplay channel, page or profile, and every secret is on config.json accounts.secrets (a new one is
+  added by hand, on purpose). A mismatch opens "🔒 Security: a sign-in outside the studio account" and the posting
+  workflows stop at their gate step until a clean audit. The audit also refreshes the IG_<CHANNEL>_TOKEN keys weekly.
+- tests/: offline, stubbed HTTP. Run them all before every push.
 
 ## Channel rules (non-negotiable)
 Anonymous, family-friendly, UK English ("Tuesday 20 October", colour, favourite). Never politics, crime, health claims,
-money or investing advice, adult content or gambling. Never other creators' footage without their permission (the
-clips channel uses only campaign-permitted footage). No em or en dashes anywhere. Nothing invented: every claim cites
-its source. Weak Shorts stay up (a remake, never a delete). Free keys only; no paid tools until the channel earns.
+money or investing advice, adult content or gambling. Never other creators' footage without their permission (clips
+use only campaign-permitted footage). No em or en dashes anywhere. Nothing invented: every claim cites its source. Weak
+Shorts stay up (a remake, never a delete). Free keys only; no paid tools until the channel earns.
 
 ## Working rules (Charlie)
-- Terse, conclusion-first replies; step-by-step lists with every link; no recap messages. Keep his Claude usage low:
-  read only what a change needs, never whole data files.
+- Terse, conclusion-first replies; step-by-step lists with every link; no recap messages.
 - Touch only the studio account and this repo. Never type passwords or create accounts; keys only in GitHub secrets.
   Ask before anything new that is public, any download to his computer or any purchase.
 - Never break the next scheduled run: run tests/, commit as "Quickplay Studio" <quickplay-studio@users.noreply.github.com>,
-  `git pull --rebase` before each push. Test a writer change for real with "dry 2" in requests/write.txt and read
-  status/write_log.txt.
+  `git pull --rebase` before each push. Test a writer change for real with "dry 2" in requests/write.txt.
 - Every change pushed gets a ledger row: `python pipeline/changes.py add --area .. --change .. --hypothesis .. --target ..
-  --guardrails ..` (analytics/changes.csv; `metrics` lists targets; verdicts and the trade-off issue come by themselves).
+  --guardrails ..` (`metrics` lists the targets; verdicts and the trade-off issue come by themselves).
 - Board shape: copy any board in boards/done; validate with `python pipeline/validate.py boards/queue/<file>`.
-- Supply chain (Black October, 22 October 2026: poisoned LiteLLM and OVHcloud releases stole keys): every workflow installs
-  packages with pip 26.2.1 and `--uploaded-prior-to P7D`, so nothing published in the last 7 days reaches a runner that
-  holds the keys; npm's global installs use `--before` 7 days ago. Keep both on any new install line; pin exact versions
-  where a package matters. No PHP anywhere in this project (PHP2Shell does not apply).
+- Supply chain (Black October, 22 October 2026: poisoned LiteLLM and OVHcloud releases stole keys): every install uses
+  pip 26.2.1 with `--uploaded-prior-to P7D`, npm's global installs `--before` 7 days ago; keep both on any new install
+  line and pin exact versions where a package matters. No PHP anywhere.

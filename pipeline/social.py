@@ -61,6 +61,105 @@ def ig_refresh(t):
         save("instagram", t); return "instagram token refreshed"
     return f"instagram refresh failed ({r.status_code})"
 
+# ---------- the channels' own Instagram and Facebook keys (24 October, audit M8) ----------
+# IG_<CHANNEL>_TOKEN keys live only in GitHub secrets, which a workflow cannot rewrite, so left alone each stops 60 days
+# after Charlie made it. The identity audit (every 6 hours, it holds every key) refreshes each one weekly with Instagram's
+# refresh_access_token and keeps the new key encrypted in tokens/instagram_<channel>.enc; apply_stored_keys() then puts the
+# refreshed key in place of the secret it grew from, for the clips runs and for the audit's own checks. A secret Charlie
+# replaces starts a new line from itself. A key (Instagram or a channel's Facebook Page key) within 10 days of its end
+# that could not be refreshed raises a needs-charlie issue.
+IG_CHANNEL_KEY = re.compile(r"IG_([A-Z]+)_TOKEN")
+FB_CHANNEL_KEY = re.compile(r"FB_([A-Z]+)_PAGE_TOKEN")
+KEY_ISSUE = "🔑 An Instagram or Facebook key needs renewing"
+
+
+def _seed(tok):
+    return hashlib.sha256(tok.encode()).hexdigest()[:16]
+
+
+def _when(s):
+    try: return dt.datetime.fromisoformat(str(s))
+    except (TypeError, ValueError): return None
+
+
+def apply_stored_keys(env=None):
+    """Each IG_<CHANNEL>_TOKEN in env whose stored key grew from the same secret is replaced by the stored (refreshed)
+    key. Returns the names replaced. Needs SOCIAL_KEY; without it nothing changes."""
+    env = os.environ if env is None else env
+    done = []
+    for name, v in list(env.items()):
+        m, v = IG_CHANNEL_KEY.fullmatch(name), (v or "").strip()
+        if not m or not v: continue
+        try: s = load(f"instagram_{m.group(1).lower()}")
+        except (Exception, SystemExit): continue
+        if s.get("token") and s.get("seed") == _seed(v) and s["token"] != v:
+            env[name] = s["token"]; done.append(name)
+    return done
+
+
+def refresh_meta_keys(env=None, get=None, now=None, every_days=7, warn_days=10):
+    """Refreshes every IG_<CHANNEL>_TOKEN weekly into tokens/instagram_<channel>.enc, checks every FB_<CHANNEL>_PAGE_TOKEN's
+    expiry, and raises (or clears) the needs-charlie issue for keys close to their end. Returns notes for the log."""
+    env = os.environ if env is None else env
+    get = get or requests.get
+    now = now or NOW()
+    notes, due = [], []
+    for name, v in sorted(env.items()):
+        m, v = IG_CHANNEL_KEY.fullmatch(name), (v or "").strip()
+        if not m or not v: continue
+        store = f"instagram_{m.group(1).lower()}"
+        try: s = load(store)
+        except (Exception, SystemExit) as e:
+            notes.append(f"{name}: its store can't be read ({type(e).__name__})"); continue
+        if s.get("seed") != _seed(v) and s.get("token") != v:      # first sight of this secret, or Charlie pasted a new one
+            s = {"token": v, "seed": _seed(v), "user": env.get(f"IG_{m.group(1)}_USER_ID", ""), "first_seen": now.isoformat(timespec="minutes")}
+        last = _when(s.get("refreshed")) or _when(s.get("tried"))
+        if not last or (now - last).days >= every_days or not s.get("expires_at"):
+            try:
+                r = get("https://graph.instagram.com/refresh_access_token",
+                        params={"grant_type": "ig_refresh_token", "access_token": s["token"]}, timeout=30)
+                j = r.json() if r.content else {}
+            except Exception as e:
+                r, j = None, {"error": {"message": f"{type(e).__name__}"}}
+            s["tried"] = now.isoformat(timespec="minutes")
+            if r is not None and r.ok and j.get("access_token"):
+                exp = now + dt.timedelta(seconds=int(j.get("expires_in") or 5184000))
+                s.update(token=j["access_token"], refreshed=now.isoformat(timespec="minutes"), expires_at=exp.isoformat(timespec="minutes"), error="")
+                notes.append(f"{name}: refreshed, good until {exp:%d %B}")
+            else:
+                s["error"] = f"refresh refused ({getattr(r, 'status_code', 'no answer')}): {str((j.get('error') or {}).get('message', ''))[:120]}"
+                notes.append(f"{name}: {s['error']}")
+        try: save(store, s)
+        except (Exception, SystemExit) as e: notes.append(f"{name}: not saved ({type(e).__name__})")
+        # its end: known after a refresh; for a secret never refreshed, 60 days from when it was first seen (the latest
+        # it can run, since Charlie made it before then)
+        end = _when(s.get("expires_at")) or ((_when(s.get("first_seen")) or now) + dt.timedelta(days=60))
+        if s.get("error") and end - now < dt.timedelta(days=warn_days): due.append((name, end, "Instagram"))
+    for name, v in sorted(env.items()):
+        m, v = FB_CHANNEL_KEY.fullmatch(name), (v or "").strip()
+        if not m or not v: continue
+        try: d = (get(f"{FB_API}/debug_token", params={"input_token": v, "access_token": v}, timeout=30).json() or {}).get("data") or {}
+        except Exception: continue                              # unreadable this time: the next audit asks again
+        for k in ("expires_at", "data_access_expires_at"):
+            ts = int(d.get(k) or 0)
+            if ts and dt.datetime.fromtimestamp(ts, dt.timezone.utc) - now < dt.timedelta(days=warn_days):
+                due.append((name, dt.datetime.fromtimestamp(ts, dt.timezone.utc), "Facebook")); break
+    try:
+        import alerts as A
+        if due:
+            A.raise_issue(KEY_ISSUE, "These keys stop working soon and could not be refreshed automatically:\n" + "\n".join(
+                f"- {n} ({kind}): ends {when:%A %d %B}" for n, when, kind in due) +
+                "\n\nInstagram (IG_<NAME>_TOKEN): make a new long-lived key for that account in the Meta app "
+                "(https://developers.facebook.com/apps, Instagram, API setup with Instagram login, Generate token) and paste it "
+                "into the secret at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions. Facebook "
+                "(FB_<NAME>_PAGE_TOKEN): a new Page key from https://developers.facebook.com/tools/explorer/ (the studio account), "
+                "pasted the same way. The audit refreshes Instagram keys by itself after that.", labels=["needs-charlie"])
+            notes.append(f"renewal issue raised for {', '.join(n for n, _, _ in due)}")
+        else: A.clear(KEY_ISSUE, "Every channel key is fresh again.")
+    except Exception as e: notes.append(f"key issue: {type(e).__name__}: {str(e)[:100]}")
+    return notes
+
+
 def ig_post(t, video_url, caption):
     """Reel from a public video URL: create a container, wait until Instagram has processed it, publish."""
     user = t.get("user") or os.environ.get("IG_USER_ID")

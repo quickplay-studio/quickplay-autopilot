@@ -212,18 +212,21 @@ def gemini(prompt, schema=None, timeout=100, temperature=0.1, lite=False, prefer
     last = "no Gemini model answered"
     slow = STATE.setdefault("slow_models", {})          # timeouts this run: after 2, the model is passed over
     if writing:                                        # writing: by quality, not provider (writing_order)
+        # (24 October, audit M7) a script that hasn't come back in writing_timeout_s (180) won't: one timeout passes a model
+        # over for the run (writing_timeouts_before_skip), so the next model gets the time
+        cap, wait = int(CFG.get("writing_timeouts_before_skip", 1)), int(CFG.get("writing_timeout_s", 180))
         order = writing_order()
         want = prefer if prefer and ":" in prefer else f"gemini:{prefer}" if prefer else ""
         if want in order: order.remove(want); order.insert(0, want)
         for label in order:
             if label.startswith("gemini:"):
                 model = label[7:]
-                if model in spent or slow.get(model, 0) >= 2: continue
-                ans, why = gem_one(model, key, prompt, schema, max(timeout, 240), temperature)
+                if model in spent or slow.get(model, 0) >= cap: continue
+                ans, why = gem_one(model, key, prompt, schema, max(timeout, wait), temperature)
                 if ans is not None: return ans, model
                 last = why
             elif not (lite and label.startswith("claude:")):          # lite: never Claude
-                got = others(prompt, timeout, temperature, only=label)
+                got = others(prompt, timeout, temperature, only=label, slow_cap=cap)
                 if got: return got
                 last = STATE.get("last_other") or last
         if all(m in spent for m in models(key) if key) and all(m in spent for m in chain()): STATE["spent"] = True
@@ -465,15 +468,16 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
     slow = STATE.setdefault("slow_models", {})
     nojson = STATE.setdefault("no_json_mode", set())
     why = f"{label}: no answer"
+    budget, shrunk = max_tokens_for(label), False
     for attempt in range(3):
-        body = {"model": model, "temperature": temperature, "max_tokens": 6000,
+        body = {"model": model, "temperature": temperature, "max_tokens": budget,
                 "messages": [{"role": "system", "content": JSON_ONLY}, {"role": "user", "content": prompt}]}
         if label not in nojson: body["response_format"] = {"type": "json_object"}
         try:
             r = requests.post(base + "/chat/completions", json=body, timeout=timeout,
                               headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
         except requests.exceptions.RequestException as e:
-            slow[label] = slow.get(label, 0) + 1; return None, f"{label}: {type(e).__name__}"
+            slow[label] = slow.get(label, 0) + 1; refused(label); return None, f"{label}: {type(e).__name__}"
         t = r.text.lower() if not r.ok else ""
         if r.status_code == 429:
             ra = r.headers.get("retry-after") or ""
@@ -481,22 +485,31 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
             per_day = bool(re.search(r"per[ _-]day|daily|\brpd\b|\btpd\b|quota|credits|86400", t)) or (ra or 0) > 120
             if per_day or attempt == 2:
                 spent.add(label); notes[label] = "daily limit" if per_day else "per-minute limit, 3 tries"
+                if not per_day: refused(label)                 # a daily limit is this model's alone; a minute limit is the provider's
                 return None, f"{label}: free quota used up"
             time.sleep(min(65, ra + 2) if ra else 20 * (attempt + 1)); why = f"{label}: per-minute limit"; continue
         if r.status_code in (401, 403):
-            spent.add(label); notes[label] = f"key refused ({r.status_code})"; return None, f"{label}: key refused"
+            spent.add(label); notes[label] = f"key refused ({r.status_code})"
+            r_ = STATE.setdefault("provider_refusals", {}); prov = provider_of(label)
+            if prov: r_[prov] = max(r_.get(prov, 0), int(CFG.get("provider_refusals_before_skip", 3)))   # a refused key refuses every model
+            return None, f"{label}: key refused"
         if "neurons" in t and re.search(r"used up|exceed|limit|allocation", t):        # Cloudflare's free daily allocation
             spent.add(label); notes[label] = "daily limit (neurons)"; return None, f"{label}: free quota used up"
         if r.status_code == 404:
             spent.add(label); return None, f"{label}: not offered (404)"
         if r.status_code == 413 or ("context" in t and "length" in t) or "too large" in t:
+            if not shrunk and budget > 1500:                # once: a smaller answer budget often fits the minute's tokens
+                budget, shrunk = max(1500, int(budget * 0.6)), True; continue
             big = STATE.setdefault("too_large", {}); big[label] = big.get(label, 0) + 1     # this prompt is too big, a smaller one may fit
+            refused(label)
             if big[label] >= 4: spent.add(label); notes[label] = "prompt too large, 4 times"     # (Groq's free tier caps tokens a minute)
             return None, f"{label}: prompt too large"
         if r.status_code == 400 and label not in nojson and ("response_format" in t or "json" in t):
             nojson.add(label); continue
         if r.status_code >= 500:
-            why = f"{label}: {r.status_code}"; time.sleep(12 * (attempt + 1)); continue
+            why = f"{label}: {r.status_code}"
+            if attempt == 2: refused(label); break
+            time.sleep(12 * (attempt + 1)); continue
         if not r.ok: return None, f"{label}: {r.status_code} {r.text[:150]}"
         ch0 = {}
         try:
@@ -574,14 +587,41 @@ def claude_call(label, prompt, timeout):
     except ValueError as e: return None, f"{label}: unreadable JSON ({str(e)[:60]})"
 
 
-def others(prompt, timeout=100, temperature=0.1, lite=False, only=None):
+def provider_of(label):
+    prov = str(label).split(":", 1)[0]
+    return prov if prov in PROVIDERS else None
+
+
+def refused(label):
+    """A keyed provider refused or failed a call (too large, a limit after its retries, a server error, a refused key, a
+    timeout): counted per provider; at provider_refusals_before_skip (3) its other models are passed over for the run, so
+    a provider that is down or over its per-minute tokens doesn't cost a wait on every model (24 October, audit M7)."""
+    prov = provider_of(label)
+    if not prov: return
+    r = STATE.setdefault("provider_refusals", {}); r[prov] = r.get(prov, 0) + 1
+
+
+def provider_skipped(label):
+    prov = provider_of(label)
+    return bool(prov) and (STATE.get("provider_refusals") or {}).get(prov, 0) >= int(CFG.get("provider_refusals_before_skip", 3))
+
+
+def max_tokens_for(label):
+    """The answer budget for one call: config max_tokens by label or provider (Groq 3500: its free tier counts the prompt
+    and max_tokens against the model's tokens a minute, so 6,000 on a 4,500-token prompt was refused as too large)."""
+    caps = CFG.get("max_tokens") or {}
+    return int(caps.get(label) or caps.get(str(label).split(":", 1)[0]) or 6000)
+
+
+def others(prompt, timeout=100, temperature=0.1, lite=False, only=None, slow_cap=2):
     """The rest of the chain after the Gemini API: keyed free providers, the open model on this runner, then Claude (never
     for lite jobs: Charlie's allowance goes on writing and checking Shorts, not fact extraction). Returns (json, model)
     from the first that answers, else None (and marks the chain spent when nothing is left)."""
     spent, slow = STATE.setdefault("spent_models", set()), STATE.setdefault("slow_models", {})
-    todo = [m for m in chain() if m not in spent and slow.get(m, 0) < 2 and not (lite and m.startswith("claude:"))]
+    todo = [m for m in chain() if m not in spent and slow.get(m, 0) < slow_cap and not (lite and m.startswith("claude:"))]
     if only: todo = [m for m in todo if m == only]
     for label in todo:
+        if provider_skipped(label): continue                 # this provider kept refusing this run
         prov, model = label.split(":", 1)
         if prov in PROVIDERS:
             ans, why = openai_chat(label, provider_base(prov), os.environ.get(PROVIDERS[prov][0], "").strip(), model, prompt,
@@ -605,7 +645,9 @@ def gemini_state():
             "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {}, "empty answers": STATE.get("empty") or {},
             "providers": [n for n in PROVIDERS if os.environ.get(PROVIDERS[n][0], "").strip()],
             "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0),
-            "second opinions": STATE.get("second_opinions", 0)}
+            "second opinions": STATE.get("second_opinions", 0),
+            "providers passed over": sorted(k for k, v in (STATE.get("provider_refusals") or {}).items()
+                                            if v >= int(CFG.get("provider_refusals_before_skip", 3)))}
 
 
 def triage(topics, limit):

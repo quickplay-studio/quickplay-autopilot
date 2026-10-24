@@ -184,13 +184,47 @@ async function get(path, kind){
     return kind === "json" ? JSON.parse(t) : kind === "csv" ? csv(t) : t;
   } catch (e) { return null; }
 }
-async function runs(){        // GitHub's own list of recent job runs, live (no key: the public API, 60 calls an hour per viewer)
-  try { const r = await fetch(API + "/actions/runs?per_page=60"); return r.ok ? (await r.json()).workflow_runs || [] : null; }
-  catch (e) { return null; }
+// GitHub's API without a key allows 60 calls an hour per connection, and a mobile network shares one connection among
+// many people (24 October). So each answer is kept 10 minutes in this browser and shared by every tab and reload, only
+// the fields the page shows are kept, nothing is asked while the page is hidden, and once GitHub says the hour's calls
+// are used up nothing is asked until its reset time (the last answer stays on screen with a note). Refresh asks again.
+const API_TTL = 10 * 60 * 1000;
+let API_NOTE = "";
+const apiReset = () => { try { return Number(localStorage.getItem("qp-api-reset") || 0); } catch (e) { return 0; } };
+async function api(path, pick, force){
+  const key = "qp-api:" + path, now = Date.now();
+  let cached = null;
+  try { cached = JSON.parse(localStorage.getItem(key) || "null"); } catch (e) {}
+  const keep = () => cached ? cached.data : null;
+  if (cached && !force && now - cached.at < API_TTL) return cached.data;
+  if (cached && !force && document.visibilityState === "hidden") return cached.data;
+  const reset = apiReset();
+  if (now < reset) {
+    API_NOTE = `GitHub's hourly allowance for this connection is used up; the live lists come back at ${new Date(reset).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"})} UK` + (cached ? ` (showing the lists from ${new Date(cached.at).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"})}).` : ".");
+    return keep();
+  }
+  try {
+    const r = await fetch(API + path, {headers: {"Accept": "application/vnd.github+json"}});
+    if (r.status === 403 || r.status === 429) {
+      const at = Number(r.headers.get("x-ratelimit-reset") || 0) * 1000 || now + 15 * 60 * 1000;
+      try { localStorage.setItem("qp-api-reset", String(at)); } catch (e) {}
+      API_NOTE = `GitHub's hourly allowance for this connection is used up; the live lists come back at ${new Date(at).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"})} UK.`;
+      return keep();
+    }
+    if (!r.ok) return keep();
+    const data = pick(await r.json());
+    API_NOTE = "";
+    try { localStorage.setItem(key, JSON.stringify({at: now, data})); } catch (e) {}
+    return data;
+  } catch (e) { return keep(); }
 }
-async function issues(){
-  try { const r = await fetch(API + "/issues?state=open&per_page=30"); return r.ok ? (await r.json()).filter(i => !i.pull_request) : null; }
-  catch (e) { return null; }
+async function runs(force){   // GitHub's own list of recent job runs
+  return api("/actions/runs?per_page=60", j => (j.workflow_runs || []).map(r => ({name: r.name, html_url: r.html_url, status: r.status,
+    conclusion: r.conclusion, run_started_at: r.run_started_at, event: r.event})), force);
+}
+async function issues(force){
+  return api("/issues?state=open&per_page=30", j => (Array.isArray(j) ? j : []).filter(i => !i.pull_request).map(i => ({number: i.number,
+    title: i.title, html_url: i.html_url, created_at: i.created_at, updated_at: i.updated_at, labels: (i.labels || []).map(l => ({name: l.name || l}))})), force);
 }
 const md = t => (window.marked ? marked.parse(t || "") : "<pre>" + esc(t) + "</pre>");
 
@@ -368,14 +402,16 @@ function clipMoney(campaigns, stats){
 }
 
 let D = {};
-async function load(){
+let LAST_LOAD = 0;
+async function load(force){
+  LAST_LOAD = Date.now(); force = force === true;
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
          drivers, geo, regions, changes, late, hourly, actions] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_LOG.md"), issues(force), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(force), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
     get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv"),
     get("analytics/hourly.csv", "csv"), get("status/actions.json", "json")]);
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
@@ -388,13 +424,13 @@ async function load(){
 // Live job status from GitHub (refreshes with the page every 10 minutes, or press Refresh)
 function liveCard(){
   const rs = D.liveRuns;
-  if (rs === null) return `<p class="sub">GitHub's job list could not be read just now (its public limit is 60 reads an hour); press Refresh later.</p>`;
+  if (rs === null) return `<p class="sub">${esc(API_NOTE || "GitHub's job list could not be read just now; press Refresh later.")}</p>`;
   const latest = {};
   for (const r of rs || []) if (!latest[r.name]) latest[r.name] = r;
   const rows = Object.values(latest).sort((a, b) => (b.run_started_at || "").localeCompare(a.run_started_at || ""));
   const state = r => r.status !== "completed" ? pill("wait", "…", r.status === "in_progress" ? "running now" : r.status)
     : r.conclusion === "success" ? pill("good", "✓", "worked") : r.conclusion === "skipped" || r.conclusion === "cancelled" ? pill("", "·", r.conclusion) : pill("bad", "✕", r.conclusion || "failed");
-  return table([{h:"Job", f:r => `<a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.name)}</a>`},
+  return (API_NOTE ? `<p class="sub">${esc(API_NOTE)}</p>` : "") + table([{h:"Job", f:r => `<a href="${esc(r.html_url)}" target="_blank" rel="noopener">${esc(r.name)}</a>`},
     {h:"State", f:state}, {h:"Started", nw:1, f:r => ukTime(r.run_started_at)}, {h:"What started it", f:r => esc(r.event === "schedule" ? "its schedule" : r.event === "push" ? "a change or request" : r.event === "workflow_run" ? "the job before it" : r.event)}],
     rows, "No runs found.");
 }
@@ -598,7 +634,7 @@ function render(){
 
   // the alerts and news issues; those that need Charlie (label needs-charlie) are listed under Your actions instead
   const alerts = (D.iss || []).filter(i => !(i.labels || []).some(l => (l.name || l) === "needs-charlie"));
-  const alertList = D.iss === null ? `<p class="err">Could not read the issues list just now.</p>` :
+  const alertList = D.iss === null ? `<p class="err">${esc(API_NOTE || "Could not read the issues list just now.")}</p>` :
     alerts.length ? table([{h:"Issue", f:i => `<a href="${i.html_url}" target="_blank" rel="noopener">${esc(i.title)}</a>`}, {h:"Updated", f:i => ukTime(i.updated_at)}], alerts) :
     `<p>${pill("good", "✓", "No alerts")}</p>`;
 
@@ -743,7 +779,7 @@ function render(){
   const checks = (id.checks || []).slice().sort((a, b) => (a.ok ? 1 : 0) - (b.ok ? 1 : 0));
   const so = D.social || {};
   const jobsText = D.jobs || "";
-  const jobHeads = [...jobsText.matchAll(/^### (open|done|blocked): (.+)$/gm)].map(m => ({s: m[1], t: m[2]}));
+  const jobHeads = [...jobsText.matchAll(/^### (open|done|blocked|waiting): (.+)$/gm)].map(m => ({s: m[1], t: m[2]}));
   const logPart = jobsText.split(/^## Log\s*$/m)[1] || "";
   const logLines = logPart.split(/\n(?=- )/).map(x => x.trim()).filter(x => x.startsWith("- ")).slice(-8).reverse();
   $("accounts").innerHTML = `
@@ -761,7 +797,7 @@ function render(){
         ["Instagram", so.instagram ? (so.instagram.ok ? pill("good", "✓", "@" + (so.instagram.username || "")) : pill("bad", "✕", so.instagram.error || "problem")) : "unknown"],
         ["Facebook", so.facebook ? (so.facebook.ok ? pill("good", "✓", so.facebook.page || "") : pill("bad", "✕", so.facebook.error || "problem")) : "unknown"],
         ["TikTok", so.tiktok ? esc(so.tiktok.mode === "off" ? "off" : (so.tiktok.ok ? "connected" : "not connected")) : "unknown"]])}</div>
-      <div><h2>Mac Chrome jobs (19:07 UK daily)</h2>${table([{h:"Job", f:j => esc(j.t)}, {h:"State", f:j => j.s === "done" ? pill("good", "✓", "done") : j.s === "blocked" ? pill("bad", "✕", "needs you") : pill("wait", "…", "open")}], jobHeads, "No jobs listed.")}</div>
+      <div><h2>Mac Chrome jobs (19:07 UK daily)</h2>${table([{h:"Job", f:j => esc(j.t)}, {h:"State", f:j => j.s === "done" ? pill("good", "✓", "done") : j.s === "blocked" ? pill("bad", "✕", "needs you") : j.s === "waiting" ? pill("bad", "!", "waiting on you") : pill("wait", "…", "open")}], jobHeads, "No jobs listed.")}</div>
     </div>
     <h2>Mac run log, newest first</h2>
     <div class="md">${logLines.length ? md(logLines.join("\n")) : "<p class='muted'>No runs logged yet.</p>"}</div>`;
@@ -800,7 +836,7 @@ const EXPORT = [
   ["Rule and law watch", "docs/POLICY.md", "tail", 40],
   ["Build notes, Daily Shorts (latest)", "docs/NEXT.md", "tail", 60],
   ["Build notes, clips (latest)", "docs/CLIPS.md", "tail", 40],
-  ["Mac Chrome jobs", "docs/CHROME_JOBS.md", "tail", 60]];
+  ["Mac Chrome jobs and log", "docs/CHROME_LOG.md", "tail", 60]];
 function exportList(){ const ul = $("export-list"); if (ul && !ul.children.length) ul.innerHTML = EXPORT.map(e => `<li>${esc(e[0])} (${esc(e[1])}${e[2] === "tail" ? ", last " + e[3] + " lines" : e[2] === "head" ? ", first " + e[3] + " lines" : ""})</li>`).join(""); }
 async function exportAll(){
   const st = $("export-state"); st.textContent = "Building...";
@@ -830,10 +866,11 @@ document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
 });
 (() => { let t = location.hash.slice(1); try { t = t || localStorage.getItem("qp-hub-tab") || ""; } catch (e) {}
   const b = document.querySelector(`#tabs [data-tab="${t}"]`); if (b) b.click(); })();
-$("refresh").onclick = load;
+$("refresh").onclick = () => load(true);
 $("export-btn").onclick = exportAll; exportList();
 load();
-setInterval(load, 10 * 60 * 1000);
+setInterval(() => { if (document.visibilityState !== "hidden") load(); }, 10 * 60 * 1000);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && Date.now() - LAST_LOAD > 10 * 60 * 1000) load(); });
 </script>
 </body>
 </html>

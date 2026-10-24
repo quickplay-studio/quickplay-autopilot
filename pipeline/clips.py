@@ -1819,6 +1819,10 @@ def submissions(dry=False):
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
+    try:                    # refreshed Instagram keys (the identity audit, weekly) beat the 60-day IG_<CHANNEL>_TOKEN secrets
+        import social
+        social.apply_stored_keys()
+    except (Exception, SystemExit) as e: log("keys:", f"{type(e).__name__}: {str(e)[:120]}")
     if cmd == "stats":
         stats()
         try: engage()

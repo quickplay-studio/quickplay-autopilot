@@ -106,10 +106,14 @@ def named_copy(path, title):
 
 
 def _quota(event):
-    """Tells the allowance guard (quota.py) about an upload, or a refusal for quota."""
+    """Tells the allowance guard (quota.py) about an upload, a refusal for quota (only uploads stop), or an upload the
+    channel's own limit refused (still a call in the day's 100-upload bucket, which all four channels share)."""
     try:
         import quota
-        quota.exhausted() if event == "exhausted" else quota.spend(quota.COST["upload"], "upload")
+        if event == "exhausted": quota.exhausted("upload")
+        elif event == "refused":
+            if quota.MODE == "buckets": quota.spend(quota.COST["upload"], "upload refused")
+        else: quota.spend(quota.COST["upload"], "upload")
     except Exception as e:
         print("quota record:", str(e)[:120])
 
@@ -125,6 +129,7 @@ def _send(yt, path, body):
         except HttpError as e:
             reason = str(e)
             if "quotaExceeded" in reason: _quota("exhausted")
+            if "uploadLimitExceeded" in reason: _quota("refused")
             if "uploadLimitExceeded" in reason or "quotaExceeded" in reason: raise LimitReached(reason)
             if e.resp.status in (500, 502, 503, 504) and tries < 5:
                 tries += 1; time.sleep(5 * tries); continue

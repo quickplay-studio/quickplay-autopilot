@@ -178,3 +178,17 @@ W.ROOT = SCRATCH; (SCRATCH / "boards" / "done").mkdir(parents=True, exist_ok=Tru
 assert W.franchise_count("Song Secrets", [{"franchise": "Song Secrets #2"}, {"franchise": "Film Facts #1"}]) == 2
 assert "franchise" in W.TESTS and W.FRANCHISE["Music"] == "Song Secrets"
 print("franchise ok")
+
+# a dry-run board (a test that never goes out) covers nothing and follows nothing: the breakout still gets its follow-up
+(SCRATCH / "boards" / "ready").mkdir(parents=True, exist_ok=True); (SCRATCH / "analytics").mkdir(exist_ok=True)
+(SCRATCH / "boards" / "ready" / "QD-144.json").write_text(json.dumps({"id": "QD-144", "mode": "dry", "follows": "QD-135", "created": str(W.NOW.date()),
+                                                                     "meta": {"title": "Tate McRae hits number one"}}))
+(SCRATCH / "boards" / "done" / "QD-135.json").write_text(json.dumps({"id": "QD-135", "created": str(W.NOW.date()), "meta": {"title": "Tate McRae: the new number one hit"}}))
+(SCRATCH / "analytics" / "breakouts.csv").write_text("short,title,category,hours_public,views,typical_at_this_age,times_typical,youtube_url\n"
+                                                     "QD-135,Tate McRae: the new number one hit,Music,10.1,646,20,31.5,u\n")
+assert [r["short"] for r in W.hot()] == ["QD-135"]
+assert all("hits number one" not in str(a) for a in W.recent())
+b = json.loads((SCRATCH / "boards" / "ready" / "QD-144.json").read_text()); b.pop("mode")
+(SCRATCH / "boards" / "ready" / "QD-144.json").write_text(json.dumps(b))
+assert W.hot() == []                                      # a real follow-up does count
+print("dry boards ok")

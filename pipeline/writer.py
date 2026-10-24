@@ -95,12 +95,13 @@ def about(b):
 
 
 def recent(days=14):
-    """What the last 14 days of boards covered (queue, ready, done, reserve and failed)."""
+    """What the last 14 days of boards covered (queue, ready, done, reserve and failed); dry-run boards are tests that
+    never go out, so they cover nothing."""
     cut, out = str((NOW - dt.timedelta(days=days)).date()), []
     for d in ("queue", "ready", "done", "reserve", "failed"):
         for f in (ROOT / "boards" / d).glob("QD-*.json"):
             b = board(f)
-            if str(b.get("created", "")) >= cut: out.append(about(b))
+            if str(b.get("created", "")) >= cut and b.get("mode") != "dry": out.append(about(b))
     return out
 
 
@@ -333,7 +334,8 @@ def franchise_count(name, written=()):
     n = sum(1 for b in written if str(b.get("franchise", "")).startswith(name + " #"))
     for d in ("queue", "ready", "done", "failed", "reserve"):
         for f in (ROOT / "boards" / d).glob("QD-*.json"):
-            if str(board(f).get("franchise", "")).startswith(name + " #"): n += 1
+            b = board(f)
+            if str(b.get("franchise", "")).startswith(name + " #") and b.get("mode") != "dry": n += 1
     return n
 
 
@@ -353,7 +355,9 @@ def hot():
     first, with no follow-up yet: a fresh pack on the same subject is written first, as a follow-up."""
     p = ROOT / "analytics" / "breakouts.csv"
     if not p.exists(): return []
-    done = {board(f).get("follows") for f in (ROOT / "boards").glob("*/QD-*.json")}
+    # a dry-run board never goes out, so it is no follow-up (24 October: the dry test's follow-up of QD-135, a 31x
+    # breakout, sat in boards/ready and stopped the real one)
+    done = {b.get("follows") for b in map(board, (ROOT / "boards").glob("*/QD-*.json")) if b.get("mode") != "dry"}
     rows = []
     times = float(CFG.get("breakout_times", 2))
     for r in csv.DictReader(p.open()):
@@ -373,7 +377,7 @@ def weak():
     subject, while it still trends, is the second try (one a day)."""
     p = ROOT / "analytics" / "shorts.csv"
     if not p.exists(): return []
-    done = {board(f).get("remakes") for f in (ROOT / "boards").glob("*/QD-*.json")}
+    done = {b.get("remakes") for b in map(board, (ROOT / "boards").glob("*/QD-*.json")) if b.get("mode") != "dry"}
     import drivers
     allrows = list(csv.DictReader(p.open()))
     dead_ids = {r.get("short") for r in drivers.dead(allrows)}

@@ -72,6 +72,9 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    made for kids), shows it on the hub, and opens an alert with what to check in Studio. Likely causes, in order: copyright
    claims on the creators' footage, "reused content" (the spoken take started tonight to answer it), and brand-new
    channels posting 10 or more clips at the same minute.
+13. **The Tate McRae breakout gets its follow-up after all.** QD-135 is at 31.5 times our usual views. A test follow-up
+   written earlier (a dry run, never published) was counted as the real one, so the system would never have written it.
+   Tests no longer count; the next write run can follow it up.
 
 ## What needs Charlie
 

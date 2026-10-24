@@ -1,6 +1,2 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-{"model": "gemma-4-31b-it", "seconds": 192, "title": "Zelda Ocarina of Time remake file size revealed 🗡️", "words": 74, "errors": [], "warnings": []}
-{"model": "gemini-3.5-flash-lite", "seconds": 2, "title": "Zelda Ocarina of Time remake file size confirmed 🗡️", "words": 79, "errors": [], "warnings": []}
-local model: downloading https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q4_K_M.gguf
-local model ready
-{"model": "local:qwen2.5-7b-instruct-q4_k_m", "seconds": 456, "title": "Zelda Ocarina of Time remake 27 GB 🗡️", "words": 44, "errors": ["narration: 44 words, needs 55 to 125 (20 to 45 seconds)"], "warnings": []}
+{"model": "github:openai/gpt-4.1", "seconds": 1, "failed": "RuntimeError: github:openai/gpt-4.1: unreadable JSON (Expecting value: line 1 column 1 (char 0))"}

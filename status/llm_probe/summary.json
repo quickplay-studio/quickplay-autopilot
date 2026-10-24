@@ -1,5 +1,5 @@
 {
- "when": "2026-10-20T22:29+00:00",
+ "when": "2026-10-24T13:29+00:00",
  "order": [
   "gemini-flash-latest",
   "gemini-3.8-flash",
@@ -17,49 +17,42 @@
   "gemini-3.1-flash-lite-preview",
   "gemma-4-31b-it",
   "gemma-4-26b-a4b-it",
+  "groq:openai/gpt-oss-120b",
+  "groq:canopylabs/orpheus-v1-english",
+  "groq:canopylabs/orpheus-arabic-saudi",
+  "groq:openai/gpt-oss-20b",
+  "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
+  "openrouter:nvidia/nemotron-3-super-120b-a12b:free",
+  "openrouter:thinkingmachines/inkling:free",
+  "openrouter:nvidia/nemotron-3.5-lightning:free",
+  "github:openai/gpt-4.1",
+  "github:openai/gpt-4o",
+  "github:deepseek/DeepSeek-V3-0324",
+  "github:meta/Llama-4-Maverick-17B-128E-Instruct-FP8",
   "local:qwen2.5-7b-instruct-q4_k_m"
  ],
- "pack": "The Legend of Zelda: Ocarina of Time – Art thou ready?",
- "prompt_chars": 12858,
+ "pack": "GTA 6 price",
+ "prompt_chars": 13738,
  "results": [
   {
-   "model": "gemma-4-31b-it",
-   "seconds": 192,
-   "title": "Zelda Ocarina of Time remake file size revealed 🗡️",
-   "words": 74,
-   "errors": [],
-   "warnings": []
-  },
-  {
-   "model": "gemini-3.5-flash-lite",
-   "seconds": 2,
-   "title": "Zelda Ocarina of Time remake file size confirmed 🗡️",
-   "words": 79,
-   "errors": [],
-   "warnings": []
-  },
-  {
-   "model": "local:qwen2.5-7b-instruct-q4_k_m",
-   "seconds": 456,
-   "title": "Zelda Ocarina of Time remake 27 GB 🗡️",
-   "words": 44,
-   "errors": [
-    "narration: 44 words, needs 55 to 125 (20 to 45 seconds)"
-   ],
-   "warnings": []
+   "model": "github:openai/gpt-4.1",
+   "seconds": 1,
+   "failed": "RuntimeError: github:openai/gpt-4.1: unreadable JSON (Expecting value: line 1 column 1 (char 0))"
   }
  ],
  "gemini": {
   "out of quota": {},
   "retired": [],
   "timeouts": {},
-  "answers": {
-   "gemma-4-31b-it": 1,
-   "gemini-3.5-flash-lite": 1,
-   "local:qwen2.5-7b-instruct-q4_k_m": 1
-  },
-  "providers": [],
+  "answers": {},
+  "empty answers": {},
+  "providers": [
+   "groq",
+   "openrouter",
+   "github"
+  ],
   "local": true,
-  "claude calls": 0
+  "claude calls": 0,
+  "second opinions": 0
  }
 }

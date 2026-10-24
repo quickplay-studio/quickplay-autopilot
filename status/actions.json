@@ -1,0 +1,107 @@
+[
+ {
+  "id": "facebook-status",
+  "title": "Check the Quickplay Facebook Page for a restriction",
+  "why": "54 Reels have 1 view between them and Meta put a spam limit on the Page on 23 October. Only you can see why: the Page's account status is behind the studio login.",
+  "steps": [
+   "Sign in to Facebook with the studio account only, never your own.",
+   "Switch to the Quickplay Daily Page (your picture at the top right, then the Page).",
+   "Open the Page's Professional dashboard and find Account status (some versions call it Page quality). Also open Account Quality in Meta Business Suite.",
+   "Note any restriction, warning or 'limited distribution', with its date and reason. Don't appeal anything yet.",
+   "Send a screenshot or the wording to Claude (your pinned Quickplay page or a Claude chat)."
+  ],
+  "links": [
+   {"label": "Professional dashboard", "url": "https://www.facebook.com/professional_dashboard"},
+   {"label": "Account Quality (Meta Business Suite)", "url": "https://business.facebook.com/accountquality"}
+  ],
+  "added": "2026-10-24",
+  "due": "2026-10-27",
+  "done": false
+ },
+ {
+  "id": "tiktok-status",
+  "title": "Find out why TikTok restricted the account on 19 October",
+  "why": "TikTok blocked the drafts as spam on 19 October and nothing is posted there until we know why. Its reason is only in the app. Don't apply for TikTok's Direct Post audit: its rules turn down tools that post to your own accounts.",
+  "steps": [
+   "In the TikTok app, signed in to the Quickplay account: Profile, the menu at the top right, Settings and privacy, Account, Account status.",
+   "Note every violation or restriction with its date and reason.",
+   "At developers.tiktok.com, sign in, open Manage apps and the Quickplay app. Note its status (draft, in review or live) and its scopes (for example user.info.basic, video.upload, video.publish).",
+   "Send both to Claude."
+  ],
+  "links": [
+   {"label": "TikTok for Developers", "url": "https://developers.tiktok.com/"}
+  ],
+  "added": "2026-10-24",
+  "due": "2026-10-28",
+  "done": false
+ },
+ {
+  "id": "mac-vyro",
+  "title": "Leave the Mac awake around 19:07 UK for the Vyro submissions",
+  "why": "Vyro only accepts submissions from your Chrome, so the Mac task submits the day's Vyro clips at 19:07 UK. It is the only job that needs the Mac, and it uses a little of your Claude allowance. One missed night costs nothing (a clip's row stays open 30 hours); two in a row loses that day's Vyro clips.",
+  "steps": [
+   "Keep the Mac on, awake and online, with Chrome open on the studio profile, from about 19:00 to 19:30 UK.",
+   "Nothing else: the task runs by itself and records what it submitted in clips/submit.csv."
+  ],
+  "links": [
+   {"label": "What the Mac task does", "url": "https://github.com/quickplay-studio/quickplay-autopilot/blob/main/docs/CHROME_JOBS.md"}
+  ],
+  "added": "2026-10-24",
+  "due": "",
+  "repeat": "every day",
+  "done": false
+ },
+ {
+  "id": "cloudflare-key",
+  "title": "Optional, free: a Cloudflare Workers AI key (one more writing model)",
+  "why": "Free every day with no card (10,000 neurons a day). More free writers means fewer Shorts fall back to Claude, which spends your allowance. The code is ready and both secret names are already allowed.",
+  "steps": [
+   "Sign up at https://dash.cloudflare.com/sign-up with the studio Google account (Continue with Google). No card is needed.",
+   "Copy the Account ID: Account home, the three dots next to the account name, Copy account ID (it is also the long code in the dashboard address).",
+   "Open https://dash.cloudflare.com/profile/api-tokens, Create Token, use the Workers AI template, Continue to summary, Create Token, and copy the token.",
+   "At https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions add two secrets: CF_ACCOUNT_ID (the Account ID) and CF_API_TOKEN (the token)."
+  ],
+  "links": [
+   {"label": "Cloudflare sign-up", "url": "https://dash.cloudflare.com/sign-up"},
+   {"label": "GitHub secrets", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"}
+  ],
+  "added": "2026-10-24",
+  "due": "",
+  "done": false
+ },
+ {
+  "id": "mistral-key",
+  "title": "Optional, free: a Mistral key (one more writing model)",
+  "why": "Mistral's free Experiment plan needs a verified phone number but no card (the earlier note that it was business only was wrong). The code already uses it once the secret exists, and the name is already allowed.",
+  "steps": [
+   "Sign in at https://console.mistral.ai with the studio Google account.",
+   "Choose the free Experiment plan and verify a phone number.",
+   "Open API Keys, Create new key, and copy it.",
+   "Add it as the secret MISTRAL_API_KEY at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new."
+  ],
+  "links": [
+   {"label": "Mistral console", "url": "https://console.mistral.ai/"},
+   {"label": "New GitHub secret", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"}
+  ],
+  "added": "2026-10-24",
+  "due": "",
+  "done": false
+ },
+ {
+  "id": "instagram-key",
+  "title": "Renew the Instagram seed key (IG_TOKEN) before it runs out",
+  "why": "IG_TOKEN is a 60-day Instagram key, expected to run out around mid-December. Posting doesn't stop when it does: the live key the automation uses (tokens/instagram.enc) renews itself. But the identity check then opens a 'sign-in has expired' alert, and the seed is needed if that live key is ever lost.",
+  "steps": [
+   "When the alert '🔑 A sign-in has expired: reconnect it' names IG_TOKEN (or by the due date), make a new long-lived key the way the first was made: Meta for Developers, the Quickplay app, Instagram API with Instagram Login, Generate token for quickplaydaily.",
+   "Paste it into the IG_TOKEN secret at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN.",
+   "Or ask Claude first whether the seed is still needed."
+  ],
+  "links": [
+   {"label": "Meta for Developers: your apps", "url": "https://developers.facebook.com/apps/"},
+   {"label": "IG_TOKEN secret", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN"}
+  ],
+  "added": "2026-10-24",
+  "due": "2026-12-10",
+  "done": false
+ }
+]

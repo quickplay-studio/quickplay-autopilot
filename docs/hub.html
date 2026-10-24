@@ -93,6 +93,13 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
 .up{color:var(--good-text);font-weight:600} .down{color:var(--critical);font-weight:600}
 .callout{border:1px solid var(--critical);border-radius:12px;padding:10px 14px;background:var(--surface-1);margin:10px 0}
 .callout p{margin:4px 0}
+select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface-1);color:var(--text-primary);border-radius:8px;padding:5px 8px;max-width:100%}
+.action{padding:10px 0;border-bottom:1px solid var(--line)}
+.action:first-child{padding-top:0} .action:last-child{border-bottom:0;padding-bottom:0}
+.action .ah{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.action ol{margin:4px 0 6px;padding-left:22px;font-size:14px} .action li{margin:2px 0}
+.action .links{font-size:13px;margin:4px 0 0}
+.chartnote{color:var(--text-secondary);font-size:13px;margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -200,9 +207,13 @@ function table(cols, rows, empty){
 }
 
 function barChart(id, points, label){
-  // single series: daily values, 2px gaps, 4px rounded tops anchored to the baseline, hover tooltip, table view below
+  // single series: daily values, 2px gaps, 4px rounded tops anchored to the baseline, hover tooltip, table view below.
+  // Optional per point: est (an estimate: lighter bar), today (so far: faded with a dashed edge), none (no numbers: no
+  // bar), src (where the number comes from: tooltip and table), tick (with any tick set, only those days are labelled).
   if (!points.length) return `<p class="muted">No daily numbers yet.</p>`;
-  const W = 720, H = 200, pl = 44, pr = 8, pt = 10, pb = 26;
+  const ticks = points.some(p => "tick" in p), srcs = points.some(p => p.src);
+  // the drawing is as wide as the screen allows (up to 720), so on a phone the labels keep their size instead of shrinking
+  const W = Math.round(Math.max(320, Math.min(720, (window.innerWidth || 720) - 64))), H = 200, pl = 44, pr = 8, pt = 10, pb = 26;
   const max = Math.max(...points.map(p => p.v), 1);
   const step = Math.pow(10, Math.floor(Math.log10(max)));
   const top = Math.ceil(max / step) * step;
@@ -215,10 +226,11 @@ function barChart(id, points, label){
   let bars = "";
   points.forEach((p, i) => {
     const x = pl + i * bw + 1, w = Math.max(2, bw - 2), yy = y(p.v), h = Math.max(0, H - pb - yy), r = Math.min(4, w / 2, h);
-    const path = h > 0 ? `M${x},${H - pb} V${yy + r} Q${x},${yy} ${x + r},${yy} H${x + w - r} Q${x + w},${yy} ${x + w},${yy + r} V${H - pb} Z` : "";
-    bars += `<path d="${path}" fill="var(--bar)" data-i="${i}"/>`;
+    const path = h > 0 && !p.none ? `M${x},${H - pb} V${yy + r} Q${x},${yy} ${x + r},${yy} H${x + w - r} Q${x + w},${yy} ${x + w},${yy + r} V${H - pb} Z` : "";
+    const look = p.today ? ` fill-opacity="0.4" stroke="var(--bar)" stroke-width="1" stroke-dasharray="3 2"` : p.est ? ` fill-opacity="0.6"` : "";
+    bars += `<path d="${path}" fill="var(--bar)"${look} data-i="${i}"/>`;
     bars += `<rect x="${pl + i * bw}" y="${pt}" width="${bw}" height="${H - pt - pb}" fill="transparent" data-i="${i}"/>`;
-    if (points.length <= 16 || i % Math.ceil(points.length / 12) === 0)
+    if (ticks ? p.tick : (points.length <= 16 || i % Math.ceil(points.length / 12) === 0))
       bars += `<text x="${x + w / 2}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${esc(p.short)}</text>`;
   });
   setTimeout(() => {
@@ -227,14 +239,116 @@ function barChart(id, points, label){
     svg.addEventListener("mousemove", e => {
       const i = e.target.dataset.i; if (i === undefined){ tip.style.display = "none"; return; }
       const p = points[+i], box = root.getBoundingClientRect();
-      tip.innerHTML = `<b>${esc(p.label)}</b><br>${fmt(p.v)} ${esc(label)}`;
+      tip.innerHTML = `<b>${esc(p.label)}</b><br>${p.none ? "no numbers" : fmt(p.v) + " " + esc(label)}${p.src ? `<br><span class="muted">${esc(p.src)}</span>` : ""}`;
       tip.style.left = (e.clientX - box.left) + "px"; tip.style.top = (e.clientY - box.top) + "px"; tip.style.display = "block";
       svg.querySelectorAll("path[data-i]").forEach(b => b.setAttribute("fill", b.dataset.i === i ? "var(--bar-hover)" : "var(--bar)"));
     });
     svg.addEventListener("mouseleave", () => { tip.style.display = "none"; svg.querySelectorAll("path[data-i]").forEach(b => b.setAttribute("fill", "var(--bar)")); });
   });
   return `<div class="chart" id="${id}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(label)} by day">${g}${bars}</svg><div class="tip"></div></div>
-    <details><summary>Show as a table</summary>${table([{h:"Day", f:p => esc(p.label)}, {h:label, n:1, f:p => fmt(p.v)}], points.slice().reverse())}</details>`;
+    <details><summary>Show as a table</summary>${table([{h:"Day", f:p => esc(p.label)}, {h:label, n:1, f:p => p.none ? "" : fmt(p.v)}]
+      .concat(srcs ? [{h:"From", f:p => esc(p.src || "")}] : []), points.slice().reverse())}</details>`;
+}
+
+// Views by day, a month at a time (Charlie, 24 October: every day of the month, earlier months in a dropdown, as fresh as
+// possible). YouTube's own daily figure (daily.csv youtube_daily rows, from YouTube Analytics) arrives 2 to 3 days late;
+// until then a day shows our live counter: the views gained between the hourly analytics runs on that UK day (hourly.csv,
+// 60 days kept), else the change in the daily snapshot totals (daily.csv snapshot rows, kept for good). Today is the live
+// counter so far. Instagram and Facebook have no daily figure of their own: always the counter.
+const PLATS = {yt: "YouTube", ig: "Instagram", fb: "Facebook", all: "All platforms"};
+const ukToday = () => new Date().toLocaleDateString("en-CA", {timeZone: "Europe/London"});
+const dayAdd = (d, n) => { const t = new Date(d + "T12:00:00Z"); t.setUTCDate(t.getUTCDate() + n); return t.toISOString().slice(0, 10); };
+const dayName = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {weekday: "short", day: "numeric", month: "short", timeZone: "UTC"});
+function viewsByDay(){
+  const out = {yt: {}, ig: {}, fb: {}}, today = ukToday(), hr = {};
+  for (const r of D.hourly || []){
+    const d = r.uk_day; if (!d) continue;
+    const h = hr[d] = hr[d] || {hours: 0, yt: null, ig: null, fb: null};
+    h.hours += num(r.hours);
+    for (const k of ["yt", "ig", "fb"]){ const g = r[k + "_gained"]; if (g !== "" && g != null) h[k] = (h[k] || 0) + num(g); }
+  }
+  // a day's hourly rows count when they cover most of it (the first day of the file is partial), or when it is today
+  for (const [d, h] of Object.entries(hr)) for (const k of ["yt", "ig", "fb"])
+    if (h[k] != null && (h.hours >= 20 || d === today))
+      out[k][d] = {v: h[k], est: true, src: d === today ? "our live counter, so far today" : "our live counter (hourly runs)"};
+  const snaps = (D.daily || []).filter(r => r.source === "snapshot").sort((a, b) => a.day.localeCompare(b.day));
+  for (let i = 1; i < snaps.length; i++){
+    const a = snaps[i - 1], b = snaps[i]; if (dayAdd(a.day, 1) !== b.day) continue;
+    for (const k of ["yt", "ig", "fb"]){
+      const x = a[k + "_views_total"], y = b[k + "_views_total"];
+      if (out[k][b.day] || x === "" || y === "" || x == null || y == null) continue;
+      out[k][b.day] = {v: Math.max(0, num(y) - num(x)), est: true, src: "daily totals (the change from the day before)"};
+    }
+  }
+  for (const r of D.daily || [])      // YouTube's own figure replaces the estimate once it arrives
+    if (r.source === "youtube_daily" && r.yt_views_day !== "" && r.yt_views_day != null)
+      out.yt[r.day] = {v: num(r.yt_views_day), est: false, src: "YouTube's own daily figure"};
+  return out;
+}
+function monthPoints(month, plat, vb){
+  const [y, m] = month.split("-").map(Number), today = ukToday(), last = new Date(Date.UTC(y, m, 0)).getUTCDate(), pts = [];
+  const ks = plat === "all" ? ["yt", "ig", "fb"] : [plat];
+  for (let d = 1; d <= last; d++){
+    const day = `${month}-${String(d).padStart(2, "0")}`;
+    if (day > today) break;
+    const parts = ks.filter(k => vb[k][day]).map(k => [k, vb[k][day]]);
+    const src = !parts.length ? "" : plat !== "all" ? parts[0][1].src :
+      parts.map(([k, p]) => `${PLATS[k]} ${fmt(p.v)}${p.est ? " (counter)" : ""}`).join(", ");
+    pts.push({label: dayName(day) + (day === today ? ", so far" : ""), short: String(d), tick: d === 1 || d % 5 === 0 || day === today,
+              v: parts.reduce((a, [, p]) => a + p.v, 0), est: parts.some(([, p]) => p.est), today: day === today, none: !parts.length, src});
+  }
+  return pts;
+}
+function dailyCard(){
+  const vb = viewsByDay(), today = ukToday();
+  const months = [...new Set([today.slice(0, 7), ...["yt", "ig", "fb"].flatMap(k => Object.keys(vb[k]).map(d => d.slice(0, 7)))])].sort().reverse();
+  const month = months.includes(window.__dvMonth) ? window.__dvMonth : months[0];
+  const plat = PLATS[window.__dvPlat] ? window.__dvPlat : "yt";
+  const pts = monthPoints(month, plat, vb);
+  const name = mo => new Date(mo + "-01T12:00:00Z").toLocaleDateString("en-GB", {month: "long", year: "numeric", timeZone: "UTC"});
+  const sel = (id, lab, opts, cur) => `<label class="sub" style="margin:0">${esc(lab)} <select id="${id}">${opts.map(([v, t]) =>
+    `<option value="${v}"${v === cur ? " selected" : ""}>${esc(t)}</option>`).join("")}</select></label>`;
+  const total = pts.reduce((a, p) => a + p.v, 0), full = pts.filter(p => !p.today && !p.none), tp = pts.find(p => p.today);
+  const best = full.length ? full.reduce((a, p) => p.v > a.v ? p : a) : null;
+  const lastRun = ((D.progress || []).slice(-1)[0] || {}).as_of || (((D.hourly || []).slice(-1)[0] || {}).hour_utc || "");
+  const what = plat === "all" ? "views on all platforms" : PLATS[plat] + " views";
+  return `<div class="toolbar">${sel("dv-month", "Month", months.map(mo => [mo, name(mo)]), month)}${sel("dv-plat", "Platform", Object.entries(PLATS), plat)}</div>
+    ${barChart("chart-daily", pts, "views")}
+    <p class="chartnote">${esc(name(month))}: ${fmt(total)} ${esc(what)}${best ? `; best day ${esc(best.label)} (${fmt(best.v)})` : ""}${tp ? `; today so far ${fmt(tp.v)}` : ""}.
+      ${lastRun ? `Numbers from ${ukTime(lastRun)} UK; they refresh every hour and this page reloads them every 10 minutes.` : ""}</p>
+    <p class="chartnote">${plat === "yt" ? "Solid bars: YouTube's own daily figure. Lighter bars: our live counter, until YouTube's figure arrives 2 to 3 days later (YouTube's day runs on Pacific time, so one day's two numbers can differ by a third either way)."
+      : plat === "all" ? "Solid bars: every number is final. Lighter bars: at least one platform is our live counter (Instagram and Facebook always are; YouTube until its own figure arrives 2 to 3 days later)."
+      : "Lighter bars: our live counter (this platform has no daily figure of its own)."} Faded bar with a dashed edge: today so far.</p>`;
+}
+function wireDaily(){
+  const redo = () => { const c = $("daily-card"); if (c){ c.innerHTML = dailyCard(); wireDaily(); } };
+  const m = $("dv-month"), p = $("dv-plat");
+  if (m) m.onchange = () => { window.__dvMonth = m.value; redo(); };
+  if (p) p.onchange = () => { window.__dvPlat = p.value; redo(); };
+}
+
+// Your actions this week (Charlie, 24 October): status/actions.json, written by Claude sessions (a list of {id, title,
+// why, steps, links, added, due, done, repeat}), and every open issue labelled needs-charlie (keys, logins, sign-ins).
+function actionsCard(){
+  const raw = D.actions, today = ukToday(), week = dayAdd(today, 7);
+  const items = (Array.isArray(raw) ? raw : (raw && raw.items) || []).filter(a => a && !a.done);
+  const asks = (D.iss || []).filter(i => (i.labels || []).some(l => (l.name || l) === "needs-charlie"));
+  const key = a => a.repeat ? "0" : a.due || "9999";
+  const now = items.filter(a => a.repeat || (a.due && a.due <= week)).sort((a, b) => key(a).localeCompare(key(b)));
+  const later = items.filter(a => !now.includes(a)).sort((a, b) => key(a).localeCompare(key(b)));
+  const linkify = s => esc(s).replace(/https?:\/\/[^\s<]*[^\s<.,;:)]/g, u => `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https:\/\//, "")}</a>`);
+  const due = a => a.repeat ? pill("wait", "↻", a.repeat) : !a.due ? pill("", "·", "optional") :
+    a.due < today ? pill("bad", "!", "overdue, was due " + dayName(a.due)) : pill(a.due <= week ? "wait" : "", "·", "by " + dayName(a.due));
+  const one = a => `<div class="action"><div class="ah"><b>${esc(a.title)}</b>${due(a)}</div>
+    ${a.why ? `<p class="sub" style="margin:4px 0 6px">${esc(a.why)}</p>` : ""}
+    ${(a.steps || []).length ? `<ol>${a.steps.map(s => `<li>${linkify(s)}</li>`).join("")}</ol>` : ""}
+    ${(a.links || []).length ? `<p class="links">${a.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(" · ")}</p>` : ""}</div>`;
+  const ask = i => `<div class="action"><div class="ah"><b><a href="${esc(i.html_url)}" target="_blank" rel="noopener">${esc(i.title)}</a></b>${pill("bad", "!", "alert")}</div>
+    <p class="sub" style="margin:4px 0 0">Opened ${ukTime(i.created_at)}. The issue says what to do; it closes by itself once it is fixed.</p></div>`;
+  const body = asks.map(ask).join("") + now.map(one).join("");
+  return (D.actions === null && D.iss === null ? `<p class="err">Could not read the actions list just now.</p>` : "") +
+    `<div class="card">${body || `<p style="margin:0">${pill("good", "✓", "Nothing needs you this week")}</p>`}</div>` +
+    (later.length ? `<details><summary>Coming up and optional (${later.length})</summary><div class="card" style="margin-top:8px">${later.map(one).join("")}</div></details>` : "");
 }
 
 function clipMoney(campaigns, stats){
@@ -257,14 +371,15 @@ let D = {};
 async function load(){
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
-         drivers, geo, regions, changes, late] = await Promise.all([
+         drivers, geo, regions, changes, late, hourly, actions] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
     get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
-    get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv")]);
+    get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv"),
+    get("analytics/hourly.csv", "csv"), get("status/actions.json", "json")]);
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
-       drivers, geo, regions, changes, late};
+       drivers, geo, regions, changes, late, hourly, actions};
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -481,18 +596,15 @@ function render(){
   const verdicts = Object.values(latestClip).reduce((a, r) => { if (r.rejected) a.rejected++; if (r.blocked_in && r.blocked_in !== "0") a.blocked++; if (r.age_restricted === "1") a.age++; return a; }, {rejected: 0, blocked: 0, age: 0});
   const verdictNote = [verdicts.blocked && `${verdicts.blocked} blocked somewhere`, verdicts.rejected && `${verdicts.rejected} rejected`, verdicts.age && `${verdicts.age} age restricted`].filter(Boolean).join(", ");
 
-  // daily YouTube views (last value per day)
-  const perDay = {};
-  for (const r of D.daily || []) if (r.yt_views_day !== "" && r.yt_views_day !== undefined) perDay[r.day] = num(r.yt_views_day);
-  const days = Object.keys(perDay).sort().slice(-30).map(d => { const dt = new Date(d + "T12:00:00Z");
-    return {label: dt.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"}), short: dt.toLocaleDateString("en-GB", {day:"numeric", month:"short"}), v: perDay[d]}; });
-
-  const alerts = (D.iss || []);
+  // the alerts and news issues; those that need Charlie (label needs-charlie) are listed under Your actions instead
+  const alerts = (D.iss || []).filter(i => !(i.labels || []).some(l => (l.name || l) === "needs-charlie"));
   const alertList = D.iss === null ? `<p class="err">Could not read the issues list just now.</p>` :
     alerts.length ? table([{h:"Issue", f:i => `<a href="${i.html_url}" target="_blank" rel="noopener">${esc(i.title)}</a>`}, {h:"Updated", f:i => ukTime(i.updated_at)}], alerts) :
-    `<p>${pill("good", "✓", "Nothing needs you")}</p>`;
+    `<p>${pill("good", "✓", "No alerts")}</p>`;
 
   $("overview").innerHTML = `
+    <h2>Your actions this week</h2>${actionsCard()}
+    <h2>Money and the Partner Programme</h2>
     <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum). Campaigns pay in US dollars; pounds at ${FX ? `today's rate, $1 = £${FX.rate.toFixed(4)} (${esc(FX.source)})` : "today's rate when it can be read"}.</div></div></div>
       ${meter("Quickplay Daily subscribers (Partner Programme needs 1,000)", num(prog.subscribers || y.subscribers), num(ypp.subscribers_needed) || 1000)}
       ${meter("Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
@@ -507,6 +619,7 @@ function render(){
       ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>
+    <h2>Views by day</h2><div class="card" id="daily-card">${dailyCard()}</div>
     <h2>Live: GitHub jobs right now</h2>${liveCard()}
     <h2>Watchlist: big events coming</h2>
     <p class="sub">Checked every trends run: Wikipedia views against the usual (momentum), news in the last 24 hours, Google Trends and YouTube charts. Build-up from its lead time (45 days unless set), launch from 3 days before to 7 after, surging when interest jumps. Each gets its own Shorts a day (none while steady, 2 build-up, 3 surging, 4 launch week) and its clip campaigns weigh more.</p>
@@ -518,9 +631,9 @@ function render(){
       {h:"In", f:i => esc((i.in || []).join(", "))}], ((D.watchNow || {}).items) || [], "Filled in by the next trends run.")}
     <h2>Pipeline today</h2>${funnelCard()}
     <h2>Claude use (your subscription)</h2>${claudeCard()}
-    <h2>Quickplay Daily views by day</h2><div class="card">${barChart("chart-daily", days, "views")}</div>
-    <h2>Needs you or worth knowing</h2>${alertList}
-    <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them). Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;
+    <h2>Alerts and news (no action unless listed above)</h2>${alertList}
+    <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them); the ones only you can fix are listed at the top. Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;
+  wireDaily();
 
   $("insights").innerHTML = insightsTab();
 
@@ -669,6 +782,7 @@ const EXPORT = [
   ["Changes made from the data (newest first)", "analytics/decisions.csv", "head", 60],
   ["Change ledger (hypothesis, target, guardrails, verdict)", "analytics/changes.csv", "text", 0],
   ["Late uploads (freshness decisions)", "analytics/late_uploads.csv", "tail", 40],
+  ["Charlie's actions (the Overview's to-do list)", "status/actions.json", "text", 0],
   ["Writers and editors", "analytics/models.json", "text", 0],
   ["Posting times and quarters of the day", "analytics/slots.json", "text", 0],
   ["Regions", "analytics/regions.csv", "text", 0],

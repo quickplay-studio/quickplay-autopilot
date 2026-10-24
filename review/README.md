@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 21:34): 11 of 1,000 subscribers · 8,117 of 10 million Shorts views in 90 days · 5,211 views in the last 24 hours (about 111,021 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 22:35): 11 of 1,000 subscribers · 8,189 of 10 million Shorts views in 90 days · 5,433 views in the last 24 hours (about 111,020 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
 
@@ -34,6 +34,7 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 - heart (American female, expressive): 0.90 x typical, 26% stayed past the first seconds, 2 Shorts
 - isabella (British female, warm): 0.88 x typical, 22% stayed past the first seconds, 1 Short
 - lewis (British male, deeper and calm): 0.84 x typical, 24% stayed past the first seconds, 1 Short
+- george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
 
 ## Look lab

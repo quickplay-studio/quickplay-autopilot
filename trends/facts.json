@@ -1,522 +1,198 @@
 {
  "date": "2026-10-24",
- "built": "2026-10-24T08:39+00:00",
- "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "full",
- "run": "morning",
+ "built": "2026-10-24T11:10+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 12,
-   "topic": "ballon d or ceremony",
-   "signal": "Google Trends GB 100+",
-   "category": "Sport",
+   "n": 5,
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "The 2026 Ballon d Or is heading to London for the very first time!",
-    "Find out when and where the 2026 Ballon d Or ceremony takes place."
+    "Did you know GTA 6 will cost $79.99 when it launches?",
+    "The Ultimate Edition of GTA 6 will cost $99.99!",
+    "GTA 6 is finally releasing on November 19, 2026."
    ],
    "sources": [
     [
-     "All you need to know about the 2026 Ballon d'Or",
-     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-23"
-    ],
-    [
-     "With albums under threat, Raye’s Mercury win is a triumph for grand statements | Alexis Petridis",
-     "https://www.theguardian.com/music/2026/oct/23/with-albums-under-threat-rayes-mercury-win-is-a-triumph-for-grand-statements",
+     "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
+     "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
      "Guardian",
-     "2026-10-22"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The 2026 Ballon d Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
-     }
-    },
-    {
-     "claim": "It is the first time the Ballon d Or event will be held in London.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It is the first time the event will be held in London, a move which Uefa says is to pay tribute to the inaugural winner,"
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals across club and international competitions in the 2025 26 season.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "England captain Kane scored 73 goals across club and international competitions in the 2025-26 season."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
-     }
-    },
-    {
-     "claim": "A dual voting system is used to determine Ballon d'Or winners.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "A dual voting system is used to determine Ballon d'Or winners."
-     }
-    },
-    {
-     "claim": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world."
-     }
-    },
-    {
-     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 15,
-   "topic": "ufc",
-   "signal": "Google Trends US 5000+",
-   "category": "Sport",
-   "what_is_new": "Alexander Volkanovski is preparing to defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi.",
-   "hooks": [
-    "Will Alexander Volkanovski break the UFC featherweight record at UFC 333?",
-    "Did you know the UFC has over 578 contracted fighters?"
-   ],
-   "sources": [
-    [
-     "Volkanovski nears featherweight immortality as record beckons",
-     "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/cq5ynjgkn68vo?at_medium=RSS&at_campaign=rss",
-     "BBC",
      "2026-10-24"
     ],
     [
-     "ufc",
-     "https://en.wikipedia.org/wiki/Ufc",
+     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
+     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
+     "The Hollywood Reporter",
+     "2026-10-15"
+    ],
+    [
+     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+     "IGN",
+     "2026-06-25"
+    ],
+    [
+     "GTA 6 price",
+     "https://en.wikipedia.org/wiki/Gas_Price",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Alexander Volkanovski is the UFC featherweight champion",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The Australian will defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi on Saturday as he seeks to add another accolade",
-      "2": "Featherweight | 136 | 61.7 | 145 | 65.8 | Men | Alexander Volkanovski | April 12, 2025 | 560 | 1 | UFC 333"
-     }
-    },
-    {
-     "claim": "UFC 333 will host a featherweight title fight between Alexander Volkanovski and Movsar Evloev",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The Australian will defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi on Saturday as he seeks to add another accolade",
-      "2": "Featherweight | 136 | 61.7 | 145 | 65.8 | Men | Alexander Volkanovski | April 12, 2025 | 560 | 1 | UFC 333"
-     }
-    },
-    {
-     "claim": "Justin Gaethje is the UFC lightweight champion",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Win or lose, Volkanovski says he is not considering retiring, but added a \"super fight\" against lightweight champion Justin Gaethje could convince him to hang",
-      "2": "Lightweight | 146 | 66.2 | 155 | 70.3 | Men | Justin Gaethje | June 14, 2026 | 132 | 0 | TBD"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Alexander Volkanovski will earn a record ninth win in UFC featherweight title fights if he triumphs against the Russian.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Now in his second championship run, the 38-year-old will earn a record ninth win in UFC featherweight title fights if he triumphs against the Russian."
-     }
-    },
-    {
-     "claim": "The Ultimate Fighting Championship has over 578 fighters contracted that fight across 11 weight divisions.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The largest MMA promotion in the world,[11] the UFC has over 578 fighters contracted that fight across 11 weight divisions (eight men's and three women's)."
-     }
-    },
-    {
-     "claim": "Alexander Volkanovski holds the longest average fight time in UFC featherweight history at 18 minutes and three seconds",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "At 18 minutes and three seconds, Volkanovski has the longest average fight time in UFC featherweight history, illustrating his mastery inside the octagon."
-     }
-    },
-    {
-     "claim": "Movsar Evloev is undefeated in 20 bouts and enjoys a ten‑fight winning streak in the UFC",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 32‑year‑old Evloev, Volkanovski faces another difficult challenge with the Russian undefeated in 20 bouts and on a 10‑fight winning streak in the UFC."
-     }
-    },
-    {
-     "claim": "In 2025 the UFC signed a seven‑year US$7.7 billion deal with Paramount Skydance, ending its pay‑per‑view business",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In 2025, the UFC signed a 7‑year, US$7.7 billion deal with Paramount Skydance (operators of CBS Sports and Paramount+) beginning the next year, exiting the"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:UFC_Logo.svg"
-   ]
-  },
-  {
-   "n": 16,
-   "topic": "kimi",
-   "signal": "Google Trends US 100+",
-   "category": "Tech",
-   "what_is_new": "",
-   "hooks": [
-    "Will Kimi Antonelli become Formula 1's youngest ever world champion this weekend?",
-    "Kimi Antonelli overcame a loose seat during practice at the United States Grand Prix.",
-    "Discover how Kimi Antonelli started karting at the age of five."
-   ],
-   "sources": [
-    [
-     "Leclerc fastest from Antonelli in US GP practice",
-     "https://www.bbc.co.uk/sport/formula1/articles/cm5ynle2n082o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-23"
-    ],
-    [
-     "Leclerc warns Ferrari to ‘be careful’ after setting early US GP pace",
-     "https://www.skysports.com/f1/news/12040/13602756/united-states-gp-charles-leclerc-edges-kimi-antonelli-in-practice-two-to-complete-friday-double-for-ferrari",
-     "Sky Sports",
-     "2026-10-23"
-    ],
-    [
-     "‘A different kid’: from karting to F1 champion-elect, Antonelli’s ability has always stood out",
-     "https://www.theguardian.com/sport/2026/oct/23/kimi-antonelli-f1-champion-elect",
-     "Guardian",
-     "2026-10-23"
-    ],
-    [
-     "kimi",
-     "https://en.wikipedia.org/wiki/Kimi",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Charles Leclerc led Mercedes driver Kimi Antonelli in Friday practice at the United States Grand Prix.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Ferrari's Charles Leclerc led Mercedes' Kimi Antonelli in Friday practice at the United States Grand Prix - but Max Verstappen left the strongest impression in",
-      "2": "Ferrari's Charles Leclerc edged out Kimi Antonelli to complete a Friday practice double at the United States Grand Prix."
-     }
-    },
-    {
-     "claim": "Kimi Antonelli has a mathematical chance of tying up his first world title this weekend in Austin.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Antonelli will win the championship in Austin only if he wins the race and team-mate George Russell finishes below eighth and Ferrari's Lewis Hamilton below",
-      "2": "Antonelli could clinch his maiden title if he wins on Sunday, and Russell and Hamilton do not score sufficient points to stay in mathematical contention."
-     }
-    },
-    {
-     "claim": "Kimi Antonelli could become Formula 1's youngest ever world champion at 20 years old.",
+     "claim": "Grand Theft Auto VI costs $79.99 across PlayStation 5 and Xbox Series X and S.",
      "sources": [
       2,
       3
      ],
      "evidence": {
-      "2": "Antonelli, who could become Formula 1's youngest ever world champion on Sunday.",
-      "3": "Whether the Italian seals his place as F1’s youngest world champion, at 20 years old, at this Sunday’s US Grand Prix in Austin"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Kimi Antonelli had a loose seat at the start of practice which required a ten minute repair.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The 20-year-old Italian had to overcome some early disruption as his seat became loose, which left him needing to pit and leave the car for"
+      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
+      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
      }
     },
     {
-     "claim": "Kimi Antonelli started go karting at the age of five.",
+     "claim": "Grand Theft Auto VI is set to be released on Nov. 19, 2026.",
      "sources": [
+      2,
       3
      ],
      "evidence": {
-      "3": "From going karting at the age of five, a meteoric rise through the ranks, being taken on as a Mercedes junior driver aged 12, then"
+      "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
+      "3": "GTA 6 launches on November 19, 2026."
      }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 24,
-   "topic": "John Anderson (singer)",
-   "signal": "Wikipedia 98,885 views",
-   "category": "Music",
-   "what_is_new": "Country legend John Anderson passed away at the age of 71 on October 21, 2026.",
-   "hooks": [
-    "Country music legend John Anderson passed away at age 71.",
-    "Did you know John Anderson charted over 40 country singles?",
-    "John Anderson scored five number one hits on the Billboard charts."
-   ],
-   "sources": [
-    [
-     "See Red Clay Strays and Zach Top Pay Tribute to the Late John Anderson",
-     "https://www.rollingstone.com/music/music-country/red-clay-strays-zach-top-cover-john-anderson-swingin-1235647271/",
-     "Rolling Stone",
-     "2026-10-23"
-    ],
-    [
-     "John Anderson (singer)",
-     "https://en.wikipedia.org/wiki/John_Anderson_(singer)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
+    },
     {
-     "claim": "John David Anderson passed away on October 21 at the age of 71.",
+     "claim": "Parent company Take-Two is estimated to have spent $1 to 1.5 billion on GTA 6 so far.",
      "sources": [
-      1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "It was a live staple for Anderson, who died Oct. 21 at 71.",
-      "2": "John David Anderson (December 13, 1954 – October 21, 2026) was an American country singer."
+      "2": "It cost the company in the ballpark of $1 billion to $1.5 billion to make.",
+      "3": "Discussion of the price of GTA 6 comes amid speculation it may be the most expensive video game ever made, with parent company Take-Two estimated"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "John Anderson charted more than 40 singles on the Billboard country music charts including five number ones.",
+     "claim": "Rockstar took eight years developing GTA 6.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Anderson charted more than 40 singles on the Billboard country music charts, including five number ones: \"Wild and Blue\", \"Swingin'\", \"Black Sheep\", \"Straight Tequila Night\","
-     }
-    },
-    {
-     "claim": "His final album Years was released on April 10, 2020 on the Easy Eye Sound label.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "His final album, Years, was released on April 10, 2020, on the Easy Eye Sound label and was produced by Nashville veteran producer David Ferguson"
-     }
-    },
-    {
-     "claim": "He graduated from Apopka High School in 1972 and was nominated as Most Talented Senior Boy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Anderson graduated from Apopka High School in 1972, being nominated as Most Talented Senior Boy.[6]"
-     }
-    },
-    {
-     "claim": "In September 2003 Anderson suffered a heart attack in a Charleston hotel.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In September 2003, Anderson suffered a heart attack in a Charleston hotel, forcing him to suspend his touring schedule.[21][22]"
+      "2": "Rockstar took eight years developing GTA 6, which had more starts and stops than some of the game’s banged up beater vehicles."
      }
     }
    ],
    "images": [
-    "commons:File:John_Anderson.jpg"
+    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
    ]
   },
   {
-   "n": 28,
-   "topic": "This Game is FREE if you beat it fast enough",
-   "signal": "YouTube GB-gaming 55,373/h",
+   "n": 6,
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
    "category": "Gaming",
    "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+   ]
+  },
+  {
+   "n": 7,
+   "topic": "WHERE IS MY HUSBAND! by RAYE",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
    "hooks": [
-    "Free to play games are back this weekend!",
-    "Score high in a free daily browser game.",
-    "Sea of Thieves boasts an 88% Steam rating."
+    "Did you know Rayes hit song surpassed a billion streams?",
+    "Find out how Rayes viral track became a massive wedding anthem!"
    ],
    "sources": [
     [
-     "The best multiplayer pirate game is free on Steam",
-     "https://www.polygon.com/steam-games-free-to-play-weekend-sea-of-thieves-diablo-4/",
-     "Polygon",
-     "2026-09-18"
+     "You be the judge: should my husband stop letting our cat drink on the kitchen counter?",
+     "https://www.theguardian.com/lifeandstyle/2026/oct/22/you-be-the-judge-should-my-husband-stop-cat-drinking-on-kitchen-counter",
+     "Guardian",
+     "2026-10-22"
     ],
     [
-     "Announcing Game Scope: IGN Daily Game #001",
-     "https://www.ign.com/articles/announcing-game-scope-ign-daily-game-001",
-     "IGN",
-     "2026-08-03"
+     "“Where Is My Husband!” Inside the Song That Made Raye All The Rage",
+     "https://www.hollywoodreporter.com/music/music-features/raye-where-is-my-husband-making-of-song-1236723326/",
+     "The Hollywood Reporter",
+     "2026-10-08"
     ]
    ],
-   "verified": [
-    {
-     "claim": "The game is free to play.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "free to play until sept 21 at 1 pm local time and is currently 65 off diablo 4 diablo 4 is undoubtedly one of",
-      "2": "The daily game is free for everyone."
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Sea of Thieves has an 88% user score on Steam from almost 150,000 reviews.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "As a result, it now sits at an impressive 88% user score on Steam from almost 150,000 reviews."
-     }
-    },
-    {
-     "claim": "Diablo 4 is free to play until Sept. 21 at 1 p.m. local time.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Diablo 4 is free to play until Sept. 21 at 1 p.m. local time, and it's 75% off until Sept. 24."
-     }
-    },
-    {
-     "claim": "Crystal Crisis is free to keep until Sept. 21 at 11:59 local time.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It is free to keep until Sept. 21 at 11:59 local time."
-     }
-    },
-    {
-     "claim": "Space Menace is free to keep until Sept. 23 at 10 a.m.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The game normally costs $6.99, but it's free to keep until Sept. 23 at 10 a.m."
-     }
-    },
-    {
-     "claim": "Game Scope is a daily game that is free for everyone.",
+     "claim": "Rayes song Where Is My Husband has surpassed a billion Spotify streams.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "The daily game is free for everyone."
+      "2": "The soul-pop track has surpassed a billion Spotify streams thanks to its catchy chorus, with Raye asking: “What is taking him so long / to"
      }
     },
     {
-     "claim": "Logged‑in members can save their streak and compete for high scores.",
+     "claim": "Raye is 28 years old.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Logged-in members can save their streak and compete for high scores."
+      "2": "It was top of mind for Raye when she started crafting the biggest song of her career, a dramatic, all-too-relatable outcry as the 28-year-old seeks"
      }
     },
     {
-     "claim": "IGN Plus subscribers get access to the full archives.",
+     "claim": "Mike Sabath is Rayes longtime record producer and co-writer on the track.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "IGN Plus subscribers get access to the full archives, just in case you ever miss a day."
+      "2": "Mike Sabath, Raye’s longtime record producer and co-writer on the track, says the chorus “pretty much arrived immediately” once the pair got to Big Bear,"
      }
     },
     {
-     "claim": "Game Scope will be in beta for a little while.",
+     "claim": "The song Where Is My Husband was released in September 2025.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Game Scope will be in beta for a little while, so we’d love to collect your feedback on the game."
+      "2": "As Raye and Sabath neared putting the final touches on the track ahead of its September 2025 release, they debuted the song live instead, getting"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 29,
-   "topic": "TV Royale",
-   "signal": "YouTube GB-gaming 45,453/h",
-   "category": "Film",
+   "n": 12,
+   "topic": "indiana fever",
+   "signal": "Google Trends US 5000+",
+   "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Apple TV axed Palm Royale after two Emmy‑nominated seasons.",
-    "Palm Royale won an Emmy for its original title theme.",
-    "Kristen Wiig leads Palm Royale, based on a 2018 novel."
+    "Did you know the Indiana Fever were founded for the 2000 WNBA season?",
+    "In 2012, the Fever won the WNBA Finals against the Minnesota Lynx!"
    ],
    "sources": [
     [
-     "Apple TV cancels Palm Royale after two seasons",
-     "https://9to5mac.com/2026/03/02/apple-tv-cancels-palm-royale-after-two-seasons/",
-     "9to5Mac",
-     "2026-03-02"
-    ],
-    [
-     "TV Royale",
-     "https://en.wikipedia.org/wiki/TS_Royalist_(1971)",
+     "indiana fever",
+     "https://en.wikipedia.org/wiki/Indiana_Fever",
      "Wikipedia",
      ""
     ]
@@ -524,46 +200,77 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Apple TV cancelled Palm Royale after two seasons.",
+     "claim": "In 2012, the Indiana Fever won the WNBA Finals with a 3 to 1 series victory over the Minnesota Lynx.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The Emmy‑nominated dramedy was canceled at the streamer after two seasons."
+      "1": "In 2012, the Fever won the WNBA Finals with a 3–1 series victory over the Minnesota Lynx."
      }
     },
     {
-     "claim": "Palm Royale received 11 Emmy nominations for its first season, winning Outstanding Original Main Title Theme Music.",
+     "claim": "The Fever won the 2012 WNBA Finals with a 3 to 1 series victory over the Minnesota Lynx.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Yet it landed 11 Emmy nominations for its first season (including Outstanding Comedy Series), taking home the trophy for Outstanding Original Main Title Theme Music."
+      "1": "In 2012, the Fever won the WNBA Finals with a 3–1 series victory over the Minnesota Lynx."
      }
     },
     {
-     "claim": "Palm Royale is based on Julie McDaniel’s 2018 novel “Mr. and Mrs. American Pie”.",
+     "claim": "The team was founded for the 2000 WNBA season.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Based on Julie McDaniel’s 2018 novel “Mr. and Mrs. American Pie,” the show premiered on Apple TV on March 20, 2024, and ran for 20"
+      "1": "The team was founded for the 2000 WNBA season."
      }
     },
     {
-     "claim": "Kristen Wiig stars as Maxine Simmons in Palm Royale.",
+     "claim": "The Fever have qualified for the WNBA playoffs in 14 of its 25 seasons in Indiana.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Cast-wise, Palm Royale had a star‑studded ensemble, including Kristen Wiig (The Secret Life of Walter Mitty), Ricky Martin (American Crime Story), Laura Dern (Twin Peaks:"
+      "1": "The Fever have qualified for the WNBA playoffs in 14 of its 25 seasons in Indiana."
+     }
+    },
+    {
+     "claim": "The team is owned by Herb Simon, the founder of Simon Property Group.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The team is owned by Herb Simon, the founder of Simon Property Group."
      }
     }
    ],
-   "images": [
-    "page:https://9to5mac.com/2026/03/02/apple-tv-cancels-palm-royale-after-two-seasons/",
-    "commons:File:TS_Royalist.JPG"
-   ]
+   "images": []
+  },
+  {
+   "n": 3,
+   "topic": "The Call the Police trend on TikTok and Instagram",
+   "signal": "Charlie's request",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [],
+   "sources": [
+    [
+     "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
+     "Guardian",
+     "2026-10-24"
+    ],
+    [
+     "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
+     "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
+     "NBC News",
+     "2026-07-28"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
   }
  ]
 }

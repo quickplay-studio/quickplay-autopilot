@@ -1,12 +1,12 @@
 {
- "updated": "2026-10-24T08:35+00:00",
+ "updated": "2026-10-24T11:08+00:00",
  "items": [
   {
    "name": "GTA 6",
    "days_to": 26,
    "phase": "build-up",
-   "level": "surging",
-   "places": 3,
+   "level": "build-up",
+   "places": 2,
    "momentum": 0.9,
    "views_yesterday": 16054,
    "views_usual": 17908,
@@ -42,7 +42,7 @@
     18007,
     16054
    ],
-   "news_24h": 71,
+   "news_24h": 64,
    "news_usual": null,
    "suggestions": [
     "gta 6",
@@ -77,8 +77,8 @@
    "name": "Avengers: Doomsday",
    "days_to": 55,
    "phase": "steady",
-   "level": "surging",
-   "places": 3,
+   "level": "steady",
+   "places": 0,
    "momentum": 1.06,
    "views_yesterday": 20813,
    "views_usual": 19712,
@@ -126,7 +126,9 @@
     "avengers doomsday mlb",
     "avengers doomsday clock"
    ],
-   "in": [],
+   "in": [
+    "YouTube charts"
+   ],
    "category": "Film",
    "angles": [
     "Avengers Doomsday cast",
@@ -181,7 +183,7 @@
     9306,
     8831
    ],
-   "news_24h": 26,
+   "news_24h": 24,
    "news_usual": null,
    "suggestions": [
     "dune part three",
@@ -248,7 +250,7 @@
     875,
     836
    ],
-   "news_24h": 8,
+   "news_24h": 6,
    "news_usual": null,
    "suggestions": [
     "the game awards",

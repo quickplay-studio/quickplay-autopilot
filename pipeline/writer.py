@@ -432,9 +432,14 @@ def franchise_count(name, written=()):
 def source_of(signal):
     """Where a topic came from, from its pack's trend signal, so the data can learn which sources find winners."""
     s = str(signal or "").lower()
-    for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"), ("music", "YouTube music"), ("youtube", "YouTube"),
+    # the free sources added on 24 October (trend_sources.py) come before the families their signals also name ("On this
+    # day ... (Wikipedia)", "Apple albums"), and Apple Music before "music" (its chart topics were labelled YouTube music)
+    for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"),
+                      ("on this day", "On this day"), ("in the news", "Wikipedia In the news"), ("tvmaze", "TVmaze"), ("steam", "Steam"),
+                      ("app store", "App Store"), ("apple albums", "Apple albums"), ("bluesky", "Bluesky"), ("formula 1", "Formula 1"),
+                      ("apple", "Apple Music"), ("music", "YouTube music"), ("youtube", "YouTube"),
                       ("wikipedia", "Wikipedia"), ("google trends", "Google Trends"), ("launch", "Rocket launches"),
-                      ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"), ("apple", "Apple Music"),
+                      ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"),
                       ("chart", "Apple Music"), ("news", "News")):
         if key in s: return name
     return "Other"

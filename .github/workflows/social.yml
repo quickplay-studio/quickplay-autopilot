@@ -83,9 +83,11 @@ jobs:
             TT_TEST_ID=$(grep -o 'tiktok-test [A-Za-z0-9-]*' requests/social-check.txt | cut -d' ' -f2) python pipeline/social.py tiktok-test > /dev/null
           fi
           if grep -qi "dry-run" requests/social-check.txt 2>/dev/null && [ "${{ github.event_name }}" = "push" ]; then
-            APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"      # a slow mirror never stalls the job
-            timeout 600 sudo apt-get $APT update -q || true
-            timeout 900 sudo apt-get $APT install -y -q ffmpeg
+            if ! command -v ffmpeg >/dev/null; then      # the runner usually has it; a slow mirror never stalls the job
+              APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+              timeout 600 sudo apt-get $APT update -q || true
+              timeout 900 sudo apt-get $APT install -y -q ffmpeg
+            fi
             python pipeline/social.py ig-dry-run > /dev/null
           fi
       - name: Post

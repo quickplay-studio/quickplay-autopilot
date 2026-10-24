@@ -31,10 +31,15 @@ jobs:
         with: { python-version: '3.13' }
       - name: Install
         run: |
-          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
-          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
-          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
-          timeout 900 sudo apt-get $APT install -y -q ffmpeg fonts-dejavu-core
+          # only what the runner is missing: its image already carries ffmpeg and the DejaVu fonts, and on 23 and 24 October a
+          # slow Ubuntu mirror made this step take 37 minutes on the clips job and over 20 on a render; apt also retries and is capped.
+          need=""
+          for p in ffmpeg fonts-dejavu-core; do dpkg -s "$p" >/dev/null 2>&1 || need="$need $p"; done
+          if [ -n "$need" ]; then
+            APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+            timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+            timeout 900 sudo apt-get $APT install -y -q $need
+          else echo "system packages already on the runner"; fi
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography pillow google-api-python-client==2.* google-auth==2.* tzdata
       - name: Build and upload
         env:

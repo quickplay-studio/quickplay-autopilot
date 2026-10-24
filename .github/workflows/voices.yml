@@ -19,10 +19,15 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
       - run: |
-          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
-          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
-          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
-          timeout 900 sudo apt-get $APT install -y -q ffmpeg
+          # only what the runner is missing: its image already carries ffmpeg and the DejaVu fonts, and on 23 and 24 October a
+          # slow Ubuntu mirror made this step take 37 minutes on the clips job and over 20 on a render; apt also retries and is capped.
+          need=""
+          for p in ffmpeg; do dpkg -s "$p" >/dev/null 2>&1 || need="$need $p"; done
+          if [ -n "$need" ]; then
+            APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+            timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+            timeout 900 sudo apt-get $APT install -y -q $need
+          else echo "system packages already on the runner"; fi
       - run: |
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D chatterbox-tts==0.1.7

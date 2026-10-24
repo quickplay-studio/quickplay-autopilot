@@ -164,9 +164,14 @@ for a in real:
 work.write_text(json.dumps(real, indent=1, ensure_ascii=False) + "\n")
 assert {"facebook-status", "tiktok-status", "mac-vyro", "cloudflare-key", "mistral-key", "sambanova-key", "pages-from-actions"} <= set(ids), ids
 checks_in_file = {a["id"]: a["check"] for a in real if a.get("check")}
-assert checks_in_file == {"mac-vyro": "vyro_today", "cloudflare-key": "secret_works:CF_API_TOKEN", "mistral-key": "secret_works:MISTRAL_API_KEY",
-                          "sambanova-key": "secret_works:SAMBANOVA_API_KEY", "pages-from-actions": "pages_workflow"}, checks_in_file
+assert {"mac-vyro": "vyro_today", "cloudflare-key": "secret_works:CF_API_TOKEN", "mistral-key": "secret_works:MISTRAL_API_KEY",
+        "sambanova-key": "secret_works:SAMBANOVA_API_KEY", "pages-from-actions": "pages_workflow"}.items() <= checks_in_file.items(), checks_in_file
 assert all(c.startswith(("secret_works:", "vyro_today", "pages_workflow")) for c in checks_in_file.values())
+# a Facebook Page key item is checked from the key health rows (keys.py), not a probe of its own
+import types as _ty
+_ctx = _ty.SimpleNamespace(env={}, get=None, keys=[{"id": "FB_CLIPS_PAGE_TOKEN", "status": "missing", "detail": "FB_CLIPS_PAGE_TOKEN is not set"}])
+assert AC.secret_works("FB_CLIPS_PAGE_TOKEN", _ctx)[0] is False
+_ctx.keys[0].update(status="ok", detail="the Page accepts the key"); assert AC.secret_works("FB_CLIPS_PAGE_TOKEN", _ctx)[0] is True
 A = Stub(scan=[])
 get = getter({"mistral": R(200, {}), "sambanova": R(401, {})})
 vrows = [vrow("a"), vrow("b")]
@@ -271,7 +276,7 @@ assert runs == ["identity", "keys", "actions"], "the audit first (keys reuses it
 for name in list(K.PROBES) + ["CLAUDE_CODE_OAUTH_TOKEN", "CF_ACCOUNT_ID"]:
     assert f"secrets.{name}" in wf, f"audit.yml must pass {name} to the key check"
 for check_ in checks_in_file.values():
-    if check_.startswith("secret_works:"): assert check_.split(":")[1] in K.PROBES
+    if check_.startswith("secret_works:"): assert check_.split(":")[1] in K.PROBES or check_.split(":")[1] in K.FB
 save_step = wf[wf.index("name: Save"):]
 assert "status/keys.json" in save_step and "status/actions.json" in save_step and "status/identity.json" in save_step, "the Save step commits the new files"
 assert "cron: '20 */3 * * *'" in wf and "*/6" not in wf, "every 3 hours"

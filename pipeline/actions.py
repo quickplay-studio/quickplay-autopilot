@@ -55,7 +55,13 @@ def check(name):
 def secret_works(arg, ctx):
     """A GitHub secret exists and its service accepts it: one cheap call (keys.probe: Mistral and SambaNova list their models,
     Cloudflare verifies the token and needs CF_ACCOUNT_ID too)."""
-    if arg not in K.PROBES: return None, f"no probe is written for {arg}", None
+    if arg not in K.PROBES:
+        if arg in K.FB:                       # a Facebook Page key: the identity audit's own check (status/keys.json row) is the probe
+            row = next((r for r in (getattr(ctx, "keys", None) or []) if arg in str(r.get("id") or "") or arg in str(r.get("what") or "")), None)
+            if row is None: return (False, f"{arg} is not set yet", None) if not (ctx.env.get(arg) or "").strip() else (None, f"{arg} is set; the next audit checks it", None)
+            st = row.get("status")
+            return (True, row.get("detail") or "the Page accepts the key", None) if st == "ok" else (None, row.get("detail") or st, None) if st == "unverified" else (False, row.get("detail") or f"{arg} {st}", None)
+        return None, f"no probe is written for {arg}", None
     res = K.probe(arg, ctx.env, ctx.get)
     if res["status"] == "ok": return True, res["detail"], None
     if res["status"] == "unverified": return None, res["detail"], None
@@ -225,7 +231,9 @@ def run(now=None, env=None, get=None, A=None, path=None, write=True, rows=None, 
     if items is None: log("actions: status/actions.json is missing or not a list"); return None
     if rows is None: rows = M.rows()
     if cfg is None: cfg = M.load_json(ROOT / "clips" / "campaigns.json", {}) or {}
-    ctx = SimpleNamespace(now=now, env=os.environ if env is None else env, get=get, A=A, rows=rows, cfg=cfg)
+    try: keys = (json.loads(K.OUT.read_text()) or {}).get("keys") or []        # the key health rows (keys.py), for the Facebook key items
+    except Exception: keys = []
+    ctx = SimpleNamespace(now=now, env=os.environ if env is None else env, get=get, A=A, rows=rows, cfg=cfg, keys=keys)
     scan = A.issues_with(NEEDS)
     patches, notes, budget = {}, [], [MAX_NEW]
     for it in items:

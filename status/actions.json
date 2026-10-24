@@ -203,5 +203,30 @@
   "check": "secret_works:SAMBANOVA_API_KEY",
   "done": false,
   "note": "SAMBANOVA_API_KEY is not set yet"
+ },
+ {
+  "id": "facebook-clips-keys",
+  "title": "Optional: Facebook keys for the clips Pages (FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID)",
+  "short": "Clips Facebook keys",
+  "why": "Tonight's batch posted 12 clips to Instagram but none to Facebook: the clips channels have no Facebook Page key in the repository secrets, so Facebook is skipped. Facebook is on a 1-a-day probe for the main channel and gets almost no plays, so this is optional until that probe shows reach.",
+  "steps": [
+   "Only if the Quickplay Clips Facebook Page exists under the studio account: in Meta's Graph API Explorer (signed in as the studio account), get a Page access token for that Page with pages_manage_posts and pages_read_engagement.",
+   "Save it as the repository secret FB_CLIPS_PAGE_TOKEN and the Page id as FB_CLIPS_PAGE_ID (both are already on the identity allowlist).",
+   "Nothing else: the next 19:00 UK batch posts the day's clips to the Page too (social_per_day 6)."
+  ],
+  "links": [
+   {
+    "label": "Graph API Explorer",
+    "url": "https://developers.facebook.com/tools/explorer/"
+   },
+   {
+    "label": "Repository secrets",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"
+   }
+  ],
+  "added": "2026-10-24",
+  "due": "",
+  "done": false,
+  "check": "secret_works:FB_CLIPS_PAGE_TOKEN"
  }
 ]

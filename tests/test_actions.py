@@ -157,6 +157,11 @@ AC.log = lambda *a: None          # the run logs every step; the checks below re
 # 6. the whole run on a copy of the real list: checks move items, issues are made once, the file is written only when it changed
 work = SCRATCH / "actions.json"; shutil.copy(REPO_DIR + "/status/actions.json", work)
 real = json.loads(work.read_text()); ids = [a["id"] for a in real]
+# the live file carries what the audit runs have done (issue numbers, done marks): the test starts from the items as written
+for a in real:
+    for k in ("issue", "done_at", "done_by", "note"): a.pop(k, None)
+    a["done"] = False
+work.write_text(json.dumps(real, indent=1, ensure_ascii=False) + "\n")
 assert {"facebook-status", "tiktok-status", "mac-vyro", "cloudflare-key", "mistral-key", "sambanova-key", "pages-from-actions"} <= set(ids), ids
 checks_in_file = {a["id"]: a["check"] for a in real if a.get("check")}
 assert checks_in_file == {"mac-vyro": "vyro_today", "cloudflare-key": "secret_works:CF_API_TOKEN", "mistral-key": "secret_works:MISTRAL_API_KEY",
@@ -170,7 +175,7 @@ after = {a["id"]: a for a in json.loads(work.read_text())}
 assert after["mistral-key"]["done"] is True and after["mistral-key"]["done_by"] == "check" and after["mistral-key"]["done_at"] == "2026-10-24T20:20+00:00", after["mistral-key"]
 assert after["sambanova-key"]["done"] is False and "401" in after["sambanova-key"]["note"], after["sambanova-key"]
 assert after["cloudflare-key"]["done"] is False and "not set yet" in after["cloudflare-key"]["note"]
-assert after["pages-from-actions"]["done"] is True and after["pages-from-actions"]["done_by"] == "check" and after["pages-from-actions"]["done_at"] == "2026-10-24", "Charlie's word, now proven"
+assert after["pages-from-actions"]["done"] is True and after["pages-from-actions"]["done_by"] == "check" and str(after["pages-from-actions"]["done_at"]).startswith("2026-10-24"), after["pages-from-actions"]
 assert after["mac-vyro"]["done"] is False and "2 Vyro clips still wait" in after["mac-vyro"]["note"]
 made = {x[1]: after[i].get("issue") for x in A.log if x[0] == "raise" for i in ids if after[i]["title"] == x[1]}
 assert sorted(made) == sorted(a["title"] for a in real if not a.get("check")) and all(made.values()), made          # one issue per item without a check

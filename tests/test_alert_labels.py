@@ -32,7 +32,7 @@ assert not [c for c in CALLS if c[:2] == ("issue", "create")]
 
 # 4. the call sites that need Charlie pass the label (identity, submit logins, the Facebook key)
 root = pathlib.Path(__file__).resolve().parent.parent / "pipeline"
-for f, n in (("identity.py", 2), ("submit.py", 1), ("alerts.py", 1)):
+for f, n in (("identity.py", 2), ("submit.py", 2), ("alerts.py", 1)):      # submit.py: the expired login and the unlinked channel
     assert (root / f).read_text().count('labels=["needs-charlie"]') == n, f
 
 # 5. status/actions.json is a list the hub can read, with the fields it shows

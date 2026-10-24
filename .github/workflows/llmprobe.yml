@@ -33,6 +33,7 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
         run: python pipeline/llm_probe.py $(head -1 requests/llmprobe.txt 2>/dev/null) 2>&1 | tee /tmp/probe.log
       - name: Save
         if: ${{ always() }}

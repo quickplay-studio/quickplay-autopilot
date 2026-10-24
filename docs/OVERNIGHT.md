@@ -103,10 +103,15 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    https://quickplay-studio.github.io/quickplay-autopilot/submit.html on your phone and submit the rows not marked done.
 2. **Check your Claude allowance before 19:00:** https://claude.ai/settings/usage. Tonight's session used a lot of it,
    and the Mac Chrome job needs some left at 19:00 to submit the day's clips.
-3. **Optional, more free writing power:** two free providers are wired in but have no key. Sign in with the studio
-   Google account, make a key, and add it as a repository secret (both names are already on the identity allowlist):
-   - Cerebras: https://cloud.cerebras.ai, key name CEREBRAS_API_KEY
-   - Mistral: https://console.mistral.ai, key name MISTRAL_API_KEY
+3. **Optional, more free writing power:** three free providers are wired in but have no key. Sign in with the studio
+   Google account, make a key, and add it as a repository secret (every name is already on the identity allowlist).
+   Corrected 24 October: Mistral is not business-only, and Cerebras is left out because its trial needs a card.
+   - Mistral: https://console.mistral.ai, choose the free plan, verify a phone number (no card), API Keys, Create new
+     key; key name MISTRAL_API_KEY
+   - SambaNova: https://cloud.sambanova.ai, add no payment method (the free tier applies only without one), create a
+     key; key name SAMBANOVA_API_KEY
+   - Cloudflare Workers AI: https://dash.cloudflare.com (free plan), copy the Account ID, make an API token with the
+     Workers AI permission; key names CF_ACCOUNT_ID and CF_API_TOKEN
    - add each at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions
 4. **Optional, more YouTube allowance:** Google raises the 10,000 units a day for free after an audit form, which takes
    a few weeks: https://support.google.com/youtube/contact/yt_api_form (sign in with the studio account; describe the

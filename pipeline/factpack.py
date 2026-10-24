@@ -309,8 +309,10 @@ def empty_answer(model):
 # Other companies' free tiers, all OpenAI-style, used only when Charlie has added the key as a repository secret. The model
 # lists are preferences: each provider's own /models list decides what is offered today (config.json "providers" overrides).
 PROVIDERS = {
+    # Groq (24 October: its limits page lists gpt-oss-120b, gpt-oss-20b and qwen3.8-27b, 1,000 requests a day each;
+    # Llama 3.3 70B and Kimi K2 are gone, and its /models list decides anyway)
     "groq": ("GROQ_API_KEY", "https://api.groq.com/openai/v1",
-             ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "moonshotai/kimi-k2-instruct", "qwen/qwen3-32b"]),
+             ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"]),
     "cerebras": ("CEREBRAS_API_KEY", "https://api.cerebras.ai/v1",
                  ["gpt-oss-120b", "qwen-3-235b-a22b-instruct-2507", "llama-3.3-70b"]),
     "mistral": ("MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-large-latest", "mistral-medium-latest", "mistral-small-latest"]),
@@ -321,7 +323,12 @@ PROVIDERS = {
     # gpt-oss-120b first, then the cheap Qwen.
     "cloudflare": ("CF_API_TOKEN", "https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}/ai/v1",
                    ["@cf/openai/gpt-oss-120b", "@cf/qwen/qwen3-30b-a3b-fp8", "@cf/meta/llama-3.3-70b-instruct-fp8-fast"]),
+    # SambaNova Cloud (24 October): free while no payment method is linked, no card; DeepSeek-V3.1, gpt-oss-120b and
+    # Meta-Llama-3.3-70B-Instruct get 20 requests a minute and 20 a day each (docs.sambanova.ai, rate limits). Only those
+    # are tried (FREE_ONLY), whatever else its /models lists. Dormant until Charlie adds SAMBANOVA_API_KEY.
+    "sambanova": ("SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]),
 }
+FREE_ONLY = {"sambanova"}      # providers whose free tier covers only the models listed above
 
 
 def provider_base(name):
@@ -331,7 +338,8 @@ def provider_base(name):
         acct = os.environ.get("CF_ACCOUNT_ID", "").strip()
         return base.replace("{CF_ACCOUNT_ID}", acct) if acct else None
     return base
-NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound", re.I)
+NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound"
+                      r"|orpheus|speech|voice", re.I)      # Groq lists its Orpheus voices with the chat models (24 October)
 JSON_ONLY = "Reply with one JSON value only, no other text."
 FACT_SHAPE = 'Reply as JSON: {"what_is_new": "...", "hooks": ["..."], "facts": [{"claim": "...", "evidence": [{"source": 1, "quote": "..."}]}]}'
 LOCAL_PORT = 8089
@@ -397,9 +405,10 @@ def provider_models(name):
             if name == "openrouter":
                 free = [i for i in ids if i.endswith(":free")]
                 got = sorted(free, key=lambda i: (-quality(i), -int(meta[i].get("context_length") or 0)))[:4]
-            elif ids:           # the best writers it offers today, its preferences breaking ties
-                got = sorted(ids, key=lambda i: (-quality(i), pref.index(i) if i in pref else len(pref)))[:4]
-            else: got = pref
+            else:
+                if name in FREE_ONLY: ids = [i for i in ids if i in pref]      # its free tier covers only these: paid ones never tried
+                # the best writers it offers today, its preferences breaking ties; its own list unreadable: the preferences
+                got = sorted(ids, key=lambda i: (-quality(i), pref.index(i) if i in pref else len(pref)))[:4] if ids else pref
     cache[name] = [f"{name}:{m}" for m in got]
     return cache[name]
 

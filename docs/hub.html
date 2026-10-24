@@ -309,11 +309,11 @@ function claudeCard(){
   const hist = Object.entries(c.history || {}).concat(c.day !== ukToday ? [[c.day, c]] : []).slice(-7).reverse();
   return `<div class="tiles" style="margin-top:0">
       ${tile("Claude calls today", fmt(today.calls), "every call the automation made with your token")}
-      ${tile("Edits today", `${fmt(today.edits)} of ${fmt(caps.edits || 24)}`, "titles, hooks and endings polished")}
-      ${tile("Boards written today", `${fmt(today.writes)} of ${fmt(caps.writes || 8)}`, "the 1 in 4 test arm")}
+      ${tile("Edits today", `${fmt(today.edits)} of ${fmt(caps.edits ?? 24)}`, "titles, hooks and endings polished")}
+      ${tile("Boards written today", `${fmt(today.writes)} of ${fmt(caps.writes ?? 8)}`, caps.writes === 0 ? "test arm off: your allowance comes first" : "the 1 in 4 test arm")}
       ${tile("Last call", !c.last ? "Not yet" : ok ? "Worked" : "Failed", c.last_at ? ukTime(c.last_at) + (ok ? "" : ": " + esc(String(c.last).slice(0, 80))) : "")}
     </div>
-    <p class="sub">Each call is one short request. At most ${fmt((caps.edits || 24) + (caps.writes || 8))} edits and boards a day, and ${fmt(caps["calls per run"] || 12)} calls a write run; lower the caps in config.json to use less.</p>
+    <p class="sub">Each call is one short request. At most ${fmt((caps.edits ?? 24) + (caps.writes ?? 8))} edits and boards a day, and ${fmt(caps["calls per run"] ?? 12)} calls a write run (Claude also writes when every free model fails); lower the caps in config.json to use less.</p>
     ${hist.length ? table([{h:"Day", f:r => esc(r[0])}, {h:"Calls", n:1, f:r => fmt(r[1].calls)}, {h:"Edits", n:1, f:r => fmt(r[1].edits)}, {h:"Boards", n:1, f:r => fmt(r[1].writes)}], hist) : ""}`;
 }
 

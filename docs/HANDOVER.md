@@ -54,8 +54,8 @@ Commit as "Quickplay Studio" <quickplay-studio@users.noreply.github.com>, run te
    "Quickplay Clips", linked; then in https://developers.facebook.com/tools/explorer/ make a long-lived Page token, read
    the Page ID and Instagram Business ID, add the secrets IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, FB_CLIPS_PAGE_TOKEN,
    FB_CLIPS_PAGE_ID; connect the Instagram account on both campaign platforms.
-6. Free model keys: https://cloud.cerebras.ai/ into CEREBRAS_API_KEY and https://console.mistral.ai/api-keys into
-   MISTRAL_API_KEY.
+6. Free model keys: https://console.mistral.ai/api-keys into MISTRAL_API_KEY (free plan, a verified phone, no card) and
+   https://cloud.sambanova.ai into SAMBANOVA_API_KEY (no payment method). Not Cerebras: its trial needs a card.
 7. When done: append a dated section to docs/CLIPS.md, and schedule the standing jobs of docs/CHROME_JOBS.md as a daily
    task at 19:07 UK that requires this computer (create it from this Mac chat so it is bound to the Mac).
 

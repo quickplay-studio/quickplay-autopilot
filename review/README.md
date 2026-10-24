@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 14:36): 11 of 1,000 subscribers · 8,003 of 10 million Shorts views in 90 days · 6,755 views in the last 24 hours (about 111,022 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 15:36): 11 of 1,000 subscribers · 8,038 of 10 million Shorts views in 90 days · 6,686 views in the last 24 hours (about 111,022 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 14:22 (UK): 5 scheduled, 139 public, 26 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 14 scheduled |
-| Sat 24 Oct | 12 public, 2 scheduled | 26 | 3 | ⏳ 12 of 15 so far, 2 more scheduled |
+| Sat 24 Oct | 13 public, 1 scheduled | 26 | 3 | ⏳ 13 of 15 so far, 1 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -94,7 +94,7 @@ scheduled · 32 s · music: death-duel · [script](../boards/done/QD-157.json) �
 ![QD-157](QD-157.jpg)
 
 ### Sat 24 Oct 15:30 · Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴
-scheduled · 26 s · music: purple-desire · [script](../boards/done/QD-156.json) · [YouTube](https://youtube.com/shorts/EcMJ6WpHiy0)
+private · 26 s · music: purple-desire · [script](../boards/done/QD-156.json) · [YouTube](https://youtube.com/shorts/EcMJ6WpHiy0)
 
 ![QD-156](QD-156.jpg)
 

@@ -1,0 +1,35 @@
+{
+ "as_of": "2026-10-24T00:08+00:00",
+ "channels": {
+  "clips": {
+   "public_a_day_old": 23,
+   "no_views": 17,
+   "views": 11,
+   "rejected": 0,
+   "blocked": 0,
+   "age_restricted": 0,
+   "for_kids": 0,
+   "unseen": false
+  },
+  "gaming": {
+   "public_a_day_old": 0,
+   "no_views": 0,
+   "views": 18,
+   "rejected": 0,
+   "blocked": 0,
+   "age_restricted": 0,
+   "for_kids": 0,
+   "unseen": false
+  },
+  "irl": {
+   "public_a_day_old": 0,
+   "no_views": 0,
+   "views": 0,
+   "rejected": 0,
+   "blocked": 0,
+   "age_restricted": 0,
+   "for_kids": 0,
+   "unseen": false
+  }
+ }
+}

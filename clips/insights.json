@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T23:14+00:00",
+ "updated": "2026-10-24T00:08+00:00",
  "clips": 23,
  "tests": {
   "layout": {
@@ -89,17 +89,21 @@
   }
  },
  "campaigns": {
+  "mrbeast-cod": {
+   "n": 3,
+   "median_views": 1.0
+  },
   "tdr-jenny": {
    "n": 7,
+   "median_views": 0.0
+  },
+  "tdr-flamingo": {
+   "n": 3,
    "median_views": 0.0
   },
   "valorant-champs": {
    "n": 1,
    "median_views": 0.0
-  },
-  "mrbeast-cod": {
-   "n": 3,
-   "median_views": 1.0
   },
   "tdr-mitch": {
    "n": 4,
@@ -108,10 +112,6 @@
   "tdr-stinkyasher": {
    "n": 2,
    "median_views": 2.0
-  },
-  "tdr-flamingo": {
-   "n": 3,
-   "median_views": 0.0
   },
   "speed-expedia": {
    "n": 3,

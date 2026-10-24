@@ -24,10 +24,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Anything queued?
+        id: queued
+        # an empty queue ends the run here, before any install (the 3-hourly retry found nothing on most runs, 24 October)
+        run: |
+          if compgen -G "boards/queue/*.json" > /dev/null; then echo "any=yes" >> "$GITHUB_OUTPUT"
+          else echo "any=no" >> "$GITHUB_OUTPUT"; echo "nothing queued"; fi
       - uses: actions/setup-python@v5
+        if: steps.queued.outputs.any == 'yes'
         with: { python-version: '3.13' }
-      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
+      - if: steps.queued.outputs.any == 'yes'
+        run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
       - id: plan
+        if: steps.queued.outputs.any == 'yes'
         env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -106,6 +115,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account (audit H4)
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
       - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.*
@@ -133,6 +144,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      issues: write        # record.py: one issue while Shorts wait for the YouTube keys
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
@@ -150,5 +162,6 @@ jobs:
           git add -A boards status review
           git add analytics/late_uploads.csv 2>/dev/null || true      # freshness.py: why a late Short went out or expired
           git commit -q -m "Results from run ${{ github.run_number }}" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

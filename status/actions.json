@@ -11,8 +11,14 @@
    "Send a screenshot or the wording to Claude (your pinned Quickplay page or a Claude chat)."
   ],
   "links": [
-   {"label": "Professional dashboard", "url": "https://www.facebook.com/professional_dashboard"},
-   {"label": "Account Quality (Meta Business Suite)", "url": "https://business.facebook.com/accountquality"}
+   {
+    "label": "Professional dashboard",
+    "url": "https://www.facebook.com/professional_dashboard"
+   },
+   {
+    "label": "Account Quality (Meta Business Suite)",
+    "url": "https://business.facebook.com/accountquality"
+   }
   ],
   "added": "2026-10-24",
   "due": "2026-10-27",
@@ -29,7 +35,10 @@
    "Send both to Claude."
   ],
   "links": [
-   {"label": "TikTok for Developers", "url": "https://developers.tiktok.com/"}
+   {
+    "label": "TikTok for Developers",
+    "url": "https://developers.tiktok.com/"
+   }
   ],
   "added": "2026-10-24",
   "due": "2026-10-28",
@@ -44,7 +53,10 @@
    "Nothing else: the task runs by itself and records what it submitted in clips/submit.csv."
   ],
   "links": [
-   {"label": "What the Mac task does", "url": "https://github.com/quickplay-studio/quickplay-autopilot/blob/main/docs/CHROME_JOBS.md"}
+   {
+    "label": "What the Mac task does",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/blob/main/docs/CHROME_JOBS.md"
+   }
   ],
   "added": "2026-10-24",
   "due": "",
@@ -62,8 +74,14 @@
    "At https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions add two secrets: CF_ACCOUNT_ID (the Account ID) and CF_API_TOKEN (the token)."
   ],
   "links": [
-   {"label": "Cloudflare sign-up", "url": "https://dash.cloudflare.com/sign-up"},
-   {"label": "GitHub secrets", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"}
+   {
+    "label": "Cloudflare sign-up",
+    "url": "https://dash.cloudflare.com/sign-up"
+   },
+   {
+    "label": "GitHub secrets",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"
+   }
   ],
   "added": "2026-10-24",
   "due": "",
@@ -80,8 +98,14 @@
    "Add it as the secret MISTRAL_API_KEY at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new."
   ],
   "links": [
-   {"label": "Mistral console", "url": "https://console.mistral.ai/"},
-   {"label": "New GitHub secret", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"}
+   {
+    "label": "Mistral console",
+    "url": "https://console.mistral.ai/"
+   },
+   {
+    "label": "New GitHub secret",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   }
   ],
   "added": "2026-10-24",
   "due": "",
@@ -97,11 +121,41 @@
    "Or ask Claude first whether the seed is still needed."
   ],
   "links": [
-   {"label": "Meta for Developers: your apps", "url": "https://developers.facebook.com/apps/"},
-   {"label": "IG_TOKEN secret", "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN"}
+   {
+    "label": "Meta for Developers: your apps",
+    "url": "https://developers.facebook.com/apps/"
+   },
+   {
+    "label": "IG_TOKEN secret",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN"
+   }
   ],
   "added": "2026-10-24",
   "due": "2026-12-10",
+  "done": false
+ },
+ {
+  "id": "pages-from-actions",
+  "title": "Optional: let the hub's page rebuild only when the page itself changes (one setting)",
+  "why": "GitHub rebuilds the hub's site after every commit the automation makes, about 160 a day, which is over its soft limit of 10 builds an hour and fills the Actions list (35 of the last 100 runs on 24 October). The hub reads its numbers live, so it only needs a rebuild when docs/ changes. The workflow for that (.github/workflows/pages.yml) is ready and does nothing until this setting is switched.",
+  "steps": [
+   "Open the repository's Pages settings, signed in as the studio GitHub account (quickplay-studio).",
+   "Under Build and deployment, change Source from 'Deploy from a branch' to 'GitHub Actions'. Nothing else to set.",
+   "Then Actions, pages, Run workflow once, so the hub is published straight away. From then on it redeploys by itself whenever docs/ changes.",
+   "To undo: set Source back to 'Deploy from a branch', branch main, folder /docs."
+  ],
+  "links": [
+   {
+    "label": "Pages settings",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/pages"
+   },
+   {
+    "label": "The pages workflow (Run workflow)",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/pages.yml"
+   }
+  ],
+  "added": "2026-10-24",
+  "due": "",
   "done": false
  }
 ]

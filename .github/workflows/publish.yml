@@ -34,10 +34,15 @@ jobs:
         run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
       - name: Anything waiting?
         id: check
-        # Shorts waiting for approval, evergreen spares in the reserve (decisions and evening releases), or a decision file
+        # Shorts waiting in boards/ready (for approval, or approved and waiting for room on YouTube), a decision file or
+        # the Run workflow box; the reserve only from reserve_after (UK), when publish.py may release spares. Until 24 October
+        # the reserve, which always holds spares, started a full run every hour of the day for nothing (audit L2).
         run: |
-          if compgen -G "boards/ready/*.json" > /dev/null || compgen -G "boards/reserve/*.json" > /dev/null || compgen -G "approvals/*.txt" > /dev/null; then
-            echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; fi
+          late=no
+          python3 -c "import json,datetime as d,zoneinfo as z;a=json.load(open('config.json')).get('reserve_after','18:20');n=d.datetime.now(z.ZoneInfo('Europe/London'));h,m=map(int,a.split(':'));raise SystemExit(0 if (n.hour,n.minute)>=(h,m) else 1)" && late=yes
+          if compgen -G "boards/ready/*.json" > /dev/null || compgen -G "approvals/*.txt" > /dev/null || [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+             || { [ "$late" = "yes" ] && compgen -G "boards/reserve/*.json" > /dev/null; }; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"; else echo "run=no" >> "$GITHUB_OUTPUT"; echo "nothing waiting"; fi
       - uses: actions/setup-python@v5
         if: steps.check.outputs.run == 'yes'
         with: { python-version: '3.13' }
@@ -63,5 +68,6 @@ jobs:
           git add -A boards status review approvals
           git add analytics/late_uploads.csv 2>/dev/null || true      # freshness.py: why a late Short went out or expired
           git commit -q -m "Approvals and uploads $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

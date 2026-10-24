@@ -39,9 +39,22 @@ jobs:
       - run: echo "JOB_T0=$(date +%s)" >> "$GITHUB_ENV"     # clips.py stops starting new campaigns 135 minutes after this
       - name: Identity guard
         run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account
+      - name: Batch time?
+        id: when
+        # a social run that starts over 100 minutes before the batch has nothing to do: it stops here, before apt, pip and
+        # Playwright (in winter the 16:31 UTC run is 2.5 hours early; audit L2). The Clips step makes the same check.
+        run: |
+          skip=0
+          if [ "${{ github.event.schedule }}" = "31 16,17,18 * * *" ]; then
+            wait=$(python3 -c "import json,datetime as d,zoneinfo as z;u=z.ZoneInfo('Europe/London');n=d.datetime.now(u);h,m=map(int,json.load(open('clips/campaigns.json')).get('batch_time','19:00').split(':'));t=n.replace(hour=h,minute=m,second=0,microsecond=0)+d.timedelta(minutes=1);w=(t-n).total_seconds();print(-1 if w>6000 else max(0,int(w)))" || echo 0)
+            if [ "$wait" = "-1" ]; then skip=1; echo "social: the batch is over 100 minutes away; the later run posts it"; fi
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
       - uses: actions/setup-python@v5
+        if: steps.when.outputs.skip != '1'
         with: { python-version: '3.12' }
-      - run: |
+      - if: steps.when.outputs.skip != '1'
+        run: |
           # only what the runner is missing: its image already carries ffmpeg and the DejaVu fonts, and on 23 and 24 October a
           # slow Ubuntu mirror made this step take 37 minutes on the clips job and over 20 on a render; apt also retries and is capped.
           need=""
@@ -57,18 +70,24 @@ jobs:
       # our own take on every clip (23 October): the Daily Shorts' voice (Chatterbox) reads the intro and the reaction,
       # installed only for the runs that make clips
       - name: Voice packages
-        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         run: |
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
       - uses: actions/cache@v4
-        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
       - name: Voice model
-        if: ${{ github.event.schedule == '0 12 * * *' || github.event_name != 'schedule' }}
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         run: python pipeline/get_model.py models/chatterbox && echo "CB_CKPT=$GITHUB_WORKSPACE/models/chatterbox" >> "$GITHUB_ENV"
+      # faster-whisper's "small" model (about 460 MB from Hugging Face) for the runs that transcribe footage: kept between
+      # runs instead of downloaded each time (audit L2)
+      - uses: actions/cache@v4
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 9 * * *' || github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
+        with: { path: ~/.cache/huggingface, key: whisper-small-v1 }
       - name: Clips
+        if: steps.when.outputs.skip != '1'
         env:
           GH_TOKEN: ${{ github.token }}
           SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
@@ -142,5 +161,6 @@ jobs:
           mkdir -p clips/plans status/quota
           for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json clips/reach.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json analytics/late_uploads.csv; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

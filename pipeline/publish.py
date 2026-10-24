@@ -195,11 +195,14 @@ def main():
     next_slot = plan.slot_picker(NOW, taken)
     on_channel = {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(yt, limit=100)}
     print(f"approved: {len(todo)}, room today: {capacity}")
+    try: refused = quota.bucket_refused("upload")       # YouTube refused an upload for quota today: no call until the reset
+    except Exception: refused = False
+    if refused: print("YouTube refused an upload for quota today: approved Shorts wait for the reset")
     for i in todo:
         st, board = status[i], ready[i]
         b = json.loads(board.read_text())
         tag = st.get("preview_release")
-        if capacity <= 0:
+        if capacity <= 0 or refused:
             st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); continue
         if not tag:
             st["state"] = "approved, but the preview render is missing (re-queue the board)"; save_status(st); continue

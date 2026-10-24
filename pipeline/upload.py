@@ -6,6 +6,22 @@ import datetime as dt, json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import youtube as Y
 
+KEYS_MISSING = "approved, waiting for the YouTube keys (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN)"
+LIMIT_WAIT = "approved, waiting for YouTube's daily upload limit"
+
+
+def hold(res, st, state):
+    """A rendered Short YouTube can't take now (its daily limit, or the keys are missing) is kept as it is: the video
+    becomes preview.mp4, record.py stores it as the draft release preview-<id> and moves the board to boards/ready, already
+    approved, and publish.py (hourly) uploads it from there once there is room. Until 24 October such a Short stayed in
+    the queue and was rendered again from scratch by the next run, 7 to 15 minutes each (audit M5), or, without the keys,
+    was filed as done and never uploaded (audit M9)."""
+    v = res / "video.mp4"
+    if v.exists(): v.replace(res / "preview.mp4")
+    st.update(state=state, approved=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+              approved_by="automatic: nothing needed approval; YouTube could not take it yet")
+
+
 def main(root):
     yt = Y.client() if Y.available() else None
     on_channel = {}
@@ -30,11 +46,11 @@ def main(root):
             st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False))
             print(st["id"], "awaiting approval:", "; ".join(u["flags"])); continue
         if yt is None:
-            st["state"] = "rendered (YouTube keys missing)"
+            hold(res, st, KEYS_MISSING)
         elif dup:
             st.update(state="already on YouTube (not uploaded again)", video=dup, url=f"https://youtube.com/shorts/{dup}")
         elif limited:
-            st["state"] = "waiting for YouTube's daily upload limit"
+            hold(res, st, LIMIT_WAIT)
         else:
             try:
                 vid = Y.upload(yt, res / "video.mp4", u["title"], u["description"], u["tags"], u["category"],
@@ -49,7 +65,7 @@ def main(root):
                 except Exception as e:
                     st["youtube"] = {"error": str(e)[:200]}
             except Y.LimitReached:
-                st["state"] = "waiting for YouTube's daily upload limit"; limited = True
+                hold(res, st, LIMIT_WAIT); limited = True
             except Exception as e:
                 st.update(state="upload failed", error=f"{type(e).__name__}: {e}"[:600])
         st_path.write_text(json.dumps(st, indent=1, ensure_ascii=False))

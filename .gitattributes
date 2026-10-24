@@ -1,0 +1,6 @@
+# Files several workflows write at once merge by key, not by line (pipeline/merge_driver.py, audit M3, 24 October).
+# The driver is set in each workflow's Save step; where it is not set (a local clone), git merges as it always has.
+status/QD-*.json merge=qp
+status/TEST-*.json merge=qp
+clips/submit.csv merge=qp
+analytics/hourly.csv merge=qp

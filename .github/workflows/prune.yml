@@ -1,0 +1,42 @@
+name: prune
+# Release storage only grew (audit L3, 24 October: 7.73 GB in 75 releases): once a week, pipeline/prune_releases.py removes
+# draft preview-/social- releases and clips-out files whose Shorts and clips no longer need them (public over a week,
+# nothing waiting on them), at most 150 a run, listed in status/prune_log.txt. Push requests/prune.txt containing "dry"
+# to see what it would remove without removing anything.
+on:
+  schedule:
+    - cron: '23 3 * * 0'       # Sunday 03:23 UTC, a quiet hour
+  push:
+    branches: [main]
+    paths: ['requests/prune*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prune
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Prune
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && grep -qi "dry" requests/prune.txt 2>/dev/null; then python3 pipeline/prune_releases.py --dry
+          else python3 pipeline/prune_releases.py; fi
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add status 2>/dev/null || true
+          git commit -q -m "Pruned releases $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

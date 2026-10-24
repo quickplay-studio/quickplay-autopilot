@@ -350,7 +350,7 @@ def category_shares():
 
 EXPLORE = 0.08       # a category with no measured Shorts yet gets about 1 place in 12 until the data speaks
 EXPLORE_SHARE = 0.2  # at least 1 Short in 5 each day is an exploration Short (24 October guardrail, explore_due)
-WRITER_CAP, WRITER_PROVEN = 0.35, 10      # no writer model over 35% of the day's boards until it has 10 measured Shorts
+WRITER_CAP, WRITER_PROVEN = 0.35, 20      # no writer model over 35% of the day's boards until it has 20 measured Shorts (data report item 7)
 DAY = {"boards": [], "target": 0}         # the target day's boards so far (earlier runs and this one), set by main()
 
 
@@ -384,11 +384,11 @@ def explore_pick(rest, n):
 
 
 def floor_needs(boards=None, target=None):
-    """The categories under their floor for the day: at least 1 Short each, or 5% of the day's number when it is 15 or
+    """The categories under their floor for the day: at least 1 Short each, or 7% of the day's number when it is 15 or
     more. Paused categories have no floor."""
     boards = DAY["boards"] if boards is None else boards
     target = DAY["target"] if target is None else target
-    floor = max(1, round(0.05 * target)) if target >= 15 else 1
+    floor = max(1, round(0.07 * target)) if target >= 15 else 1
     got = {}
     for b in boards: got[b.get("category")] = got.get(b.get("category"), 0) + 1
     paused = stopped().get("category", set())
@@ -441,19 +441,34 @@ def source_of(signal):
 
 
 def hot():
-    """Our Shorts at 3x or more the usual views for their age in their first 3 days (analytics/breakouts.csv), strongest
-    first, with no follow-up yet: a fresh pack on the same subject is written first, as a follow-up."""
+    """Our breakouts (analytics/breakouts.csv: the top fifth at 3 hours, or 2x the usual views for their age) in their first
+    3 days, strongest first, with no follow-up yet: a fresh pack on the same subject is written first, as a follow-up.
+    Guards (24 October, the data report's act-at-3-hours): no third follow-up on one subject (a breakout that is itself a
+    follow-up of a follow-up is left), nothing in a paused category or from a paused topic source (drivers.py), and never
+    a dead Short (drivers.dead)."""
     p = ROOT / "analytics" / "breakouts.csv"
     if not p.exists(): return []
     # a dry-run board never goes out, so it is no follow-up (24 October: the dry test's follow-up of QD-135, a 31x
     # breakout, sat in boards/ready and stopped the real one)
-    done = {b.get("follows") for b in map(board, (ROOT / "boards").glob("*/QD-*.json")) if b.get("mode") != "dry"}
+    boards = {b.get("id"): b for b in map(board, (ROOT / "boards").glob("*/QD-*.json")) if b.get("mode") != "dry"}
+    done = {b.get("follows") for b in boards.values()}
+    paused = stopped()
+    try:
+        import drivers
+        sp = ROOT / "analytics" / "shorts.csv"
+        dead = {r.get("short") for r in drivers.dead(list(csv.DictReader(sp.open())) if sp.exists() else [])}
+    except Exception: dead = set()
     rows = []
     times = float(CFG.get("breakout_times", 2))
     for r in csv.DictReader(p.open()):
         try: x, h = float(r.get("times_typical") or 0), float(r.get("hours_public") or 999)
         except ValueError: continue
-        if x < times or h > 72 or r.get("short") in done: continue
+        if x < times or h > 72 or r.get("short") in done or r.get("short") in dead: continue
+        own = boards.get(r.get("short")) or {}
+        if own.get("follows") and (boards.get(own["follows"]) or {}).get("follows"):
+            print(f"follow-up: {r.get('short')} is already the second follow-up on its subject"); continue
+        if r.get("category") in paused.get("category", set()) or own.get("source") in paused.get("source", set()):
+            print(f"follow-up: {r.get('short')}: its category or source is paused"); continue
         f = next((ROOT / "boards").glob(f"*/{r.get('short')}.json"), None)
         r["_about"] = about(board(f)) if f else (r.get("title", ""), r.get("title", ""), set())
         r["_board"] = f
@@ -704,11 +719,13 @@ def fiction_pack(seen):
 
 
 TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides, and keeps deciding as it grows
-    "hook_type": {"question": "Open with a question (ending in a question mark) that the Short then answers.",
+    "hook_type": {"statement": "Open with a plain statement of the news, naming the star, team, game or title first.",
+                  "question": "Open with a question (ending in a question mark) that the Short then answers.",
                   "number": "Open with the most surprising number in the facts.",
                   "superlative": "Open with a first, biggest, only or record detail from the facts.",
                   "twist": "Open with a twist: what people would expect, then the surprising truth."},
     "length": {"under 25 s": "Keep it short: 60 to 72 words in total.",
+               "25 to 34 s": "Keep it tight: 78 to 95 words in total.",
                "35 to 44 s": "Take a little longer: 105 to 120 words in total.",
                "about 60 s": "A full minute: 150 to 180 words over 10 to 14 beats. Every beat lands a new surprise or turn, the "
                              "wildest fact comes last, and the hook promises it ('the last one changes everything').",
@@ -755,11 +772,25 @@ def arms(t):
     return [a for a in TESTS[t] if a not in stopped().get(t, ())] or list(TESTS[t])
 
 
-def test_plan(k, kind="news", explore=False):
-    """The style for Short number k: every winner the data has found, plus one test in turn (an open test, or on every
-    RETEST-th Short a challenger to a winner), plus the comment-replies test on alternate Shorts. An exploration Short
-    (explore_due) draws every test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always
-    be overturned. Returns (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore")."""
+def test_round(today=None):
+    """The factorial round in force (config "test_round"): {name, start, factors: {test: [two arms]}, per_arm}, or {}
+    before its start. Every Short in the round gets an arm of EVERY factor, each drawn 50/50 on its own (data report,
+    24 October: one test in turn gave each arm well under a Short a day, so nothing settled; four independent 50/50
+    factors give each arm about 7 a day at 15 Shorts, and a 2x difference shows at about 70 Shorts an arm)."""
+    r = CFG.get("test_round") or {}
+    today = today or NOW.astimezone(UK).date()
+    try:
+        if not r.get("factors") or today < dt.date.fromisoformat(str(r.get("start"))): return {}
+    except ValueError: return {}
+    return {**r, "factors": {f: [a for a in arms_ if a in TESTS.get(f, {})] for f, arms_ in r["factors"].items() if f in TESTS}}
+
+
+def test_plan(k, kind="news", explore=False, today=None):
+    """The style for Short number k: every winner the data has found; the factorial round's factors (test_round), each
+    drawn 50/50 on its own for this Short (a winner's factor still challenged on every RETEST-th Short); one other open
+    test in turn; and the comment-replies test on alternate Shorts. An exploration Short (explore_due) draws every
+    test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always be overturned. Returns
+    (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore" and the round's name)."""
     dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
     if explore:
         rng = random.Random(f"explore-arms:{k}")
@@ -767,17 +798,26 @@ def test_plan(k, kind="news", explore=False):
         picks.update(replies=rng.choice(["on", "off"]), explore="yes")
         return style_note(picks), picks
     won = {t: a for t, a in winners().items() if t in dims}
-    picks, still = dict(won), [t for t in dims if t not in won]
-    if won and k % RETEST == 0:
-        t = list(won)[(k // RETEST) % len(won)]
+    rnd = test_round(today)
+    factors = {f: [a for a in arms_ if a in arms(f)] for f, arms_ in (rnd.get("factors") or {}).items() if f in dims}
+    factors = {f: a for f, a in factors.items() if len(a) >= 2}
+    picks = dict(won)
+    for f, options in factors.items():               # the round: every factor, 50/50, independent of the others
+        if f in won and k % RETEST: continue          # a settled factor keeps its winner, challenged 1 Short in RETEST
+        picks[f] = random.Random(f"{rnd.get('name', 'round')}:{f}:{k}").choice(options)
+    still = [t for t in dims if t not in won and t not in factors]
+    others = [t for t in won if t not in factors]
+    if others and k % RETEST == 0:
+        t = others[(k // RETEST) % len(others)]
         rivals = [a for a in arms(t) if a != won[t]]
-        if rivals: picks[t] = rivals[(k // (RETEST * len(won))) % len(rivals)]
+        if rivals: picks[t] = rivals[(k // (RETEST * len(others))) % len(rivals)]
     elif still:
         t = still[k % len(still)]
         options = arms(t)
         picks[t] = options[(k // len(still)) % len(options)]
     picks["replies"] = "on" if k % 2 == 0 else "off"
     picks["explore"] = "no"
+    if factors: picks["round"] = rnd.get("name", "round")
     return style_note(picks), picks
 
 

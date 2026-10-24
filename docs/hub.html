@@ -509,6 +509,18 @@ function categoryPlatforms(){
   return {base, rows, n: recent.length};
 }
 
+// The factorial round (analytics/tests.json, from config test_round): how many measured Shorts each arm has and still needs
+async function fillTests(){
+  const T = await get("analytics/tests.json", "json"), el = $("tests-card");
+  if (!el) return;
+  if (!T || !T.factors){ el.innerHTML = `<p class="sub">No factorial round running yet: it shows here after the next full analytics run.</p>`; return; }
+  const rows = Object.entries(T.factors).map(([f, x]) => ({f, x}));
+  el.innerHTML = `<p class="sub">${esc(T.round)}, from ${esc(T.start)}: every Short takes an arm of each test, 50/50, so the comparison is fair. An arm settles at ${fmt(T.per_arm)} measured Shorts (enough to see a 2x difference), or sooner when the result is clear.</p>`
+    + table([{h:"Test", f:r => esc(r.f.replace(/_/g, " "))},
+      {h:"Arms (measured so far)", f:r => Object.entries(r.x.arms).map(([a, v]) => `${esc(a)} <b>${fmt(v.n)}</b>` + (v.needs ? ` <span class="sub">needs ${fmt(v.needs)} more</span>` : "") + (v.verdict && v.verdict !== "too few to tell" ? ` ${pill(v.verdict === "push" ? "good" : v.verdict === "cut back" ? "bad" : "", "·", v.verdict)}` : "")).join("<br>")},
+      {h:"When", f:r => r.x.settled ? pill("good", "✓", "settled") : `about ${fmt(r.x.days_left)} days`}], rows, "No tests yet.");
+}
+
 function insightsTab(){
   const ins = D.insights || "";
   const updated = (ins.match(/updated ([^)]+)\)/) || [])[1] || "";
@@ -573,6 +585,9 @@ function insightsTab(){
     <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 UK days, a 90% interval clear of typical and both halves of the data agreeing (25 October). The writer follows these, but 1 Short in 5 still explores; a paused choice rests 14 days and is then retested on a small share.</p>
     ${table([{h:"Choice", f:a => esc(a.name)}, {h:"Lean towards", f:a => choice(a.push)}, {h:"Use less", f:a => choice(a.cut)}]
       .concat(areas.some(a => a.stop.length) ? [{h:"Paused", f:a => choice(a.stop)}] : []).concat(areas.some(a => a.retest.length) ? [{h:"Retesting", f:a => choice(a.retest)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
+
+    <h2>Tests being run</h2>
+    <div id="tests-card"><p class="sub">Loading the factorial round.</p></div>
 
     <h2>Where the viewers are</h2>
     <p class="sub">YouTube's own split of the channel's views by country (it only names countries with enough viewers). "Watched" is the average share of each Short seen there; "best" is the category that does best for that country.</p>
@@ -672,6 +687,7 @@ function render(){
   wireDaily();
 
   $("insights").innerHTML = insightsTab();
+  fillTests();
 
   // Daily Shorts
   const sh = (D.shorts || []).slice().sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));

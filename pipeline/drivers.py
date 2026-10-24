@@ -305,10 +305,24 @@ def analyse(rows, pauses=None, today=None):
 
 
 # ---------------- the category mix (shared by the recipe and writer.category_shares) ----------------
-CAT_FLOOR, CAT_CAP, RETEST_SHARE = 0.05, 0.35, 0.05
+CAT_FLOOR, CAT_CAP, RETEST_SHARE = 0.07, 0.35, 0.05     # floor 7% (data report, 24 October: 5% left 4 categories at 0.6 a day)
 
 
-def category_mix(rows):
+def timed_mins(today=None):
+    """Categories held at a minimum share until a date (config category_min, e.g. Gaming 15% until the GTA 6 window
+    closes on 26 November: the data report's diversity item). {category: share} for the minimums still in force."""
+    try: cfg = json.loads((ROOT / "config.json").read_text()).get("category_min") or {}
+    except Exception: cfg = {}
+    today = today or dt.datetime.now(UK).date()
+    out = {}
+    for cat, m in cfg.items():
+        try:
+            if today <= dt.date.fromisoformat(str(m.get("until"))): out[cat] = float(m.get("share") or 0)
+        except (ValueError, AttributeError, TypeError): continue
+    return out
+
+
+def category_mix(rows, today=None):
     """Each category's share of the day's Shorts from drivers.csv rows (feature "category"): weight lift squared, at least
     CAT_FLOOR and at most CAT_CAP each, so no category drops out of measurement and none takes over (24 October: the old
     mix gave Music 33%, Film 32%, Sport 20% and 4% to each of the rest); a paused category gets none, one being retested
@@ -323,16 +337,30 @@ def category_mix(rows):
         except ValueError: continue
         w[r["value"]] = max(0.2, lift) ** 2
     if not w: return {k: v for k, v in fixed.items()} if fixed else {}
+    out = _clamp(w, fixed)
+    # a category held at a minimum until a date (timed_mins, config category_min) is fixed at it when the data gives it
+    # less, and the rest is shared out again within the floor and cap (a paused category stays paused)
+    lift = {k: m for k, m in timed_mins(today).items() if out.get(k) != 0.0 and out.get(k, 0.0) < m and k not in fixed}
+    if lift and sum(lift.values()) + sum(fixed.values()) < 1:
+        out = _clamp({k: x for k, x in w.items() if k not in lift}, {**fixed, **lift})
+    return out
+
+
+def _clamp(w, fixed):
+    """Shares from weights `w` in the room `fixed` leaves, each within [CAT_FLOOR, CAT_CAP], normalised with `fixed`."""
     room = max(0.0, 1.0 - sum(fixed.values()))
+    if not w: return dict(fixed)
     share = {k: room * x / sum(w.values()) for k, x in w.items()}
-    for _ in range(20):          # clamp to [floor, cap] and hand what is freed or taken to the categories still free
-        lo = {k for k, s in share.items() if s < CAT_FLOOR}
-        hi = {k for k, s in share.items() if s > CAT_CAP}
+    held = set()
+    for _ in range(30):          # clamp to [floor, cap] and hand what is freed or taken to the categories still free
+        lo = {k for k, s in share.items() if s < CAT_FLOOR - 1e-12 and k not in held}
+        hi = {k for k, s in share.items() if s > CAT_CAP + 1e-12 and k not in held}
         if not lo and not hi: break
         for k in lo: share[k] = CAT_FLOOR
         for k in hi: share[k] = CAT_CAP
-        free = [k for k in share if k not in lo | hi]
-        left = room - sum(share[k] for k in lo | hi)
+        held |= lo | hi
+        free = [k for k in share if k not in held]
+        left = room - sum(share[k] for k in held)
         if not free or left <= 0: break
         tot = sum(w[k] for k in free)
         for k in free: share[k] = left * w[k] / tot

@@ -33,11 +33,20 @@
  "watchlist_note": "Big events we know are coming (pipeline/watch.py, every trends run): measured daily (Wikipedia views momentum, news in 24 hours, Google Trends, YouTube suggestions); build-up within lead_days (45 unless set), launch from 3 days before to 7 after, surging when interest jumps. Each gets its own places a day outside the category shares (none while steady, 2 build-up, 3 surging, 4 launch), its own rules in the brief, evergreen ideas that ride it and a heat boost for its clip campaigns. Add an item with a name, terms (specific ones: a single common word matches unrelated trends), wikipedia, date, category, angles, rules and optionally lead_days.",
  "volume_test": {
   "start": "2026-10-24",
-  "days": 7,
+  "days": 14,
   "per_day": 15,
-  "before": 40
+  "before": 40,
+  "ledger": "CH-011"
  },
- "shorts_per_day_note": "Shorts a day we choose to make, under the learned ceiling (daily_limit): 15 from 24 October, a week's test of fewer, better Shorts against the 40 a day before (Charlie, 23 October). analytics.volume_test judges it on 31 October from the channel's daily views and writes status/volume.json (which then wins): kept when daily views hold at 90% or more, else back to 40. Slots: this many a day at the learned best times.",
+ "category_min": {"Gaming": {"share": 0.15, "until": "2026-11-26", "why": "GTA 6 launches 19 November and Gaming is Instagram's best category (2.48x): held at 15% of the day's Shorts until a week after (data report item 6, 24 October)"}},
+ "test_round": {
+  "name": "round 1",
+  "start": "2026-10-25",
+  "factors": {"hook_type": ["statement", "number"], "length": ["25 to 34 s", "35 to 44 s"], "title_search": ["search phrase", "curiosity"], "first_frame": ["cover", "photo"]},
+  "per_arm": 70,
+  "note": "24 October, the data report's factorial tests: every Short (exploration Shorts aside) takes an arm of each factor, 50/50 and independent (writer.test_plan), so each arm gets about 7 Shorts a day at 15; a factor settles at per_arm measured Shorts an arm, or sooner when drivers.py's proof rule is met. The camera energy and posting-time factors the report also names need plan.py to read the board's arm: a later round. analytics/tests.json and the hub show how many Shorts each arm still needs."
+ },
+ "shorts_per_day_note": "Shorts a day we choose to make, under the learned ceiling (daily_limit): 15 from 24 October, a test of fewer, better Shorts against the 24 to 40 a day before (Charlie, 23 October). 24 October: the test runs 14 days and analytics.volume_test judges it from Sunday 8 November on each UK day's numbers (daily YouTube views and the day's Shorts' 24-hour views, each with a 90% interval over days), not on the 7-day ratio first planned, whose noise (about 19%) can't tell 0.9x from 1.1x. 15 stays unless both are clearly lower (interval top under 0.9); then back to the days before's median number. status/volume.json carries the reading meanwhile. Slots: this many a day at the learned best times.",
  "per_session": 12,
  "slot_first": "07:30",
  "slot_every_minutes": 36,

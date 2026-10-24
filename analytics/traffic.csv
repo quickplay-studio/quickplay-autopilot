@@ -1,8 +1,8 @@
 scope,source,views,share_pct
-channel,Shorts feed,12534,76.7
-channel,YouTube search,3581,21.9
-channel,Other YouTube pages,168,1.0
-channel,Channel page,24,0.1
+channel,Shorts feed,12489,76.6
+channel,YouTube search,3597,22.1
+channel,Other YouTube pages,167,1.0
+channel,Channel page,26,0.2
 channel,Subscribers,13,0.1
 channel,Outside YouTube,7,0.0
 channel,Hashtag pages,2,0.0
@@ -28,9 +28,9 @@ category: Gaming,YouTube search,422,23.4
 category: Gaming,Other YouTube pages,33,1.8
 category: Gaming,Channel page,4,0.2
 category: Gaming,Direct or unknown,0,0.0
-category: Music,Shorts feed,6540,85.5
-category: Music,YouTube search,1024,13.4
-category: Music,Other YouTube pages,63,0.8
+category: Music,Shorts feed,6646,84.8
+category: Music,YouTube search,1090,13.9
+category: Music,Other YouTube pages,73,0.9
 category: Music,Channel page,12,0.2
 category: Music,Subscribers,7,0.1
 category: Music,Outside YouTube,3,0.0
@@ -43,11 +43,11 @@ category: Science,Subscribers,1,0.3
 category: Science,Other YouTube pages,1,0.3
 category: Science,Direct or unknown,0,0.0
 category: Science,Channel page,0,0.0
-category: Sport,Shorts feed,1321,62.8
-category: Sport,YouTube search,765,36.3
-category: Sport,Other YouTube pages,11,0.5
-category: Sport,Subscribers,4,0.2
-category: Sport,Channel page,2,0.1
+category: Sport,Shorts feed,1934,70.9
+category: Sport,YouTube search,771,28.3
+category: Sport,Other YouTube pages,15,0.5
+category: Sport,Subscribers,4,0.1
+category: Sport,Channel page,3,0.1
 category: Sport,Outside YouTube,2,0.1
 category: Sport,Direct or unknown,0,0.0
 category: Tech,Shorts feed,153,50.0

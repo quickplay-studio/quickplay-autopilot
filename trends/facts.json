@@ -1,261 +1,569 @@
 {
  "date": "2026-10-24",
- "built": "2026-10-24T07:26+00:00",
+ "built": "2026-10-24T08:39+00:00",
  "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 4,
-   "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
-   "category": "Gaming",
-   "what_is_new": "The official Grand Theft Auto VI launch trailer was posted on 23 October 2026.",
+   "n": 12,
+   "topic": "ballon d or ceremony",
+   "signal": "Google Trends GB 100+",
+   "category": "Sport",
+   "what_is_new": "",
    "hooks": [
-    "GTA 6 arrives on November 19, 2026!",
-    "Explore Leonida in Grand Theft Auto VI very soon!"
+    "The 2026 Ballon d Or is heading to London for the very first time!",
+    "Find out when and where the 2026 Ballon d Or ceremony takes place."
    ],
    "sources": [
     [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
      "2026-10-23"
     ],
     [
-     "Call of Duty promises a return to form - but can it compete with GTA?",
-     "https://www.bbc.co.uk/news/articles/cm369kkg92x6o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-23"
-    ],
-    [
-     "Nintendo Switch Sports Resort review – Wii Sports lives on in this effortlessly appealing collection of games",
-     "https://www.theguardian.com/games/2026/oct/22/nintendo-switch-sports-resort-review-wii-sports-games",
+     "With albums under threat, Raye’s Mercury win is a triumph for grand statements | Alexis Petridis",
+     "https://www.theguardian.com/music/2026/oct/23/with-albums-under-threat-rayes-mercury-win-is-a-triumph-for-grand-statements",
      "Guardian",
      "2026-10-22"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The 2026 Ballon d Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "It is the first time the Ballon d Or event will be held in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It is the first time the event will be held in London, a move which Uefa says is to pay tribute to the inaugural winner,"
+     }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals across club and international competitions in the 2025 26 season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "England captain Kane scored 73 goals across club and international competitions in the 2025-26 season."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "A dual voting system is used to determine Ballon d'Or winners.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "A dual voting system is used to determine Ballon d'Or winners."
+     }
+    },
+    {
+     "claim": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world."
+     }
+    },
+    {
+     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "ufc",
+   "signal": "Google Trends US 5000+",
+   "category": "Sport",
+   "what_is_new": "Alexander Volkanovski is preparing to defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi.",
+   "hooks": [
+    "Will Alexander Volkanovski break the UFC featherweight record at UFC 333?",
+    "Did you know the UFC has over 578 contracted fighters?"
+   ],
+   "sources": [
+    [
+     "Volkanovski nears featherweight immortality as record beckons",
+     "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/cq5ynjgkn68vo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-24"
     ],
     [
-     "GTA 6",
-     "https://en.wikipedia.org/wiki/GTA_6",
+     "ufc",
+     "https://en.wikipedia.org/wiki/Ufc",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "GTA 6 will be released on PlayStation 5 and Xbox Series X/S at launch.",
+     "claim": "Alexander Volkanovski is the UFC featherweight champion",
      "sources": [
-      2,
-      4
+      1,
+      2
      ],
      "evidence": {
-      "2": "GTA 6 will only be released on PlayStation 5 and Xbox consoles at first, and multiplayer modes won't be available at launch.",
-      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "1": "The Australian will defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi on Saturday as he seeks to add another accolade",
+      "2": "Featherweight | 136 | 61.7 | 145 | 65.8 | Men | Alexander Volkanovski | April 12, 2025 | 560 | 1 | UFC 333"
+     }
+    },
+    {
+     "claim": "UFC 333 will host a featherweight title fight between Alexander Volkanovski and Movsar Evloev",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Australian will defend his featherweight title against Movsar Evloev at UFC 333 in Abu Dhabi on Saturday as he seeks to add another accolade",
+      "2": "Featherweight | 136 | 61.7 | 145 | 65.8 | Men | Alexander Volkanovski | April 12, 2025 | 560 | 1 | UFC 333"
+     }
+    },
+    {
+     "claim": "Justin Gaethje is the UFC lightweight champion",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Win or lose, Volkanovski says he is not considering retiring, but added a \"super fight\" against lightweight champion Justin Gaethje could convince him to hang",
+      "2": "Lightweight | 146 | 66.2 | 155 | 70.3 | Men | Justin Gaethje | June 14, 2026 | 132 | 0 | TBD"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "claim": "Alexander Volkanovski will earn a record ninth win in UFC featherweight title fights if he triumphs against the Russian.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "1": "Now in his second championship run, the 38-year-old will earn a record ninth win in UFC featherweight title fights if he triumphs against the Russian."
      }
     },
     {
-     "claim": "Principal production on Grand Theft Auto VI began in 2020.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "The game is set in the fictional US state of Leonida.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Set within the fictional US state of Leonida, based on Florida"
-     }
-    },
-    {
-     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
-     }
-    },
-    {
-     "claim": "The map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
-     }
-    },
-    {
-     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Multiplayer modes won't be available at launch.",
+     "claim": "The Ultimate Fighting Championship has over 578 fighters contracted that fight across 11 weight divisions.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "GTA 6 will only be released on PlayStation 5 and Xbox consoles at first, and multiplayer modes won't be available at launch."
+      "2": "The largest MMA promotion in the world,[11] the UFC has over 578 fighters contracted that fight across 11 weight divisions (eight men's and three women's)."
+     }
+    },
+    {
+     "claim": "Alexander Volkanovski holds the longest average fight time in UFC featherweight history at 18 minutes and three seconds",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "At 18 minutes and three seconds, Volkanovski has the longest average fight time in UFC featherweight history, illustrating his mastery inside the octagon."
+     }
+    },
+    {
+     "claim": "Movsar Evloev is undefeated in 20 bouts and enjoys a ten‑fight winning streak in the UFC",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 32‑year‑old Evloev, Volkanovski faces another difficult challenge with the Russian undefeated in 20 bouts and on a 10‑fight winning streak in the UFC."
+     }
+    },
+    {
+     "claim": "In 2025 the UFC signed a seven‑year US$7.7 billion deal with Paramount Skydance, ending its pay‑per‑view business",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 2025, the UFC signed a 7‑year, US$7.7 billion deal with Paramount Skydance (operators of CBS Sports and Paramount+) beginning the next year, exiting the"
      }
     }
    ],
    "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+    "commons:File:UFC_Logo.svg"
    ]
   },
   {
-   "n": 6,
-   "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
-   "category": "Gaming",
+   "n": 16,
+   "topic": "kimi",
+   "signal": "Google Trends US 100+",
+   "category": "Tech",
    "what_is_new": "",
-   "hooks": [],
+   "hooks": [
+    "Will Kimi Antonelli become Formula 1's youngest ever world champion this weekend?",
+    "Kimi Antonelli overcame a loose seat during practice at the United States Grand Prix.",
+    "Discover how Kimi Antonelli started karting at the age of five."
+   ],
    "sources": [
     [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
+     "Leclerc fastest from Antonelli in US GP practice",
+     "https://www.bbc.co.uk/sport/formula1/articles/cm5ynle2n082o?at_medium=RSS&at_campaign=rss",
+     "BBC",
      "2026-10-23"
+    ],
+    [
+     "Leclerc warns Ferrari to ‘be careful’ after setting early US GP pace",
+     "https://www.skysports.com/f1/news/12040/13602756/united-states-gp-charles-leclerc-edges-kimi-antonelli-in-practice-two-to-complete-friday-double-for-ferrari",
+     "Sky Sports",
+     "2026-10-23"
+    ],
+    [
+     "‘A different kid’: from karting to F1 champion-elect, Antonelli’s ability has always stood out",
+     "https://www.theguardian.com/sport/2026/oct/23/kimi-antonelli-f1-champion-elect",
+     "Guardian",
+     "2026-10-23"
+    ],
+    [
+     "kimi",
+     "https://en.wikipedia.org/wiki/Kimi",
+     "Wikipedia",
+     ""
     ]
    ],
-   "verified": [],
-   "one_source": [],
-   "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
-   ]
+   "verified": [
+    {
+     "claim": "Charles Leclerc led Mercedes driver Kimi Antonelli in Friday practice at the United States Grand Prix.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Ferrari's Charles Leclerc led Mercedes' Kimi Antonelli in Friday practice at the United States Grand Prix - but Max Verstappen left the strongest impression in",
+      "2": "Ferrari's Charles Leclerc edged out Kimi Antonelli to complete a Friday practice double at the United States Grand Prix."
+     }
+    },
+    {
+     "claim": "Kimi Antonelli has a mathematical chance of tying up his first world title this weekend in Austin.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Antonelli will win the championship in Austin only if he wins the race and team-mate George Russell finishes below eighth and Ferrari's Lewis Hamilton below",
+      "2": "Antonelli could clinch his maiden title if he wins on Sunday, and Russell and Hamilton do not score sufficient points to stay in mathematical contention."
+     }
+    },
+    {
+     "claim": "Kimi Antonelli could become Formula 1's youngest ever world champion at 20 years old.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Antonelli, who could become Formula 1's youngest ever world champion on Sunday.",
+      "3": "Whether the Italian seals his place as F1’s youngest world champion, at 20 years old, at this Sunday’s US Grand Prix in Austin"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Kimi Antonelli had a loose seat at the start of practice which required a ten minute repair.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The 20-year-old Italian had to overcome some early disruption as his seat became loose, which left him needing to pit and leave the car for"
+     }
+    },
+    {
+     "claim": "Kimi Antonelli started go karting at the age of five.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "From going karting at the age of five, a meteoric rise through the ranks, being taken on as a Mercedes junior driver aged 12, then"
+     }
+    }
+   ],
+   "images": []
   },
   {
-   "n": 7,
-   "topic": "GTA 6 map",
-   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [],
+   "n": 24,
+   "topic": "John Anderson (singer)",
+   "signal": "Wikipedia 98,885 views",
+   "category": "Music",
+   "what_is_new": "Country legend John Anderson passed away at the age of 71 on October 21, 2026.",
+   "hooks": [
+    "Country music legend John Anderson passed away at age 71.",
+    "Did you know John Anderson charted over 40 country singles?",
+    "John Anderson scored five number one hits on the Billboard charts."
+   ],
    "sources": [
     [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
+     "See Red Clay Strays and Zach Top Pay Tribute to the Late John Anderson",
+     "https://www.rollingstone.com/music/music-country/red-clay-strays-zach-top-cover-john-anderson-swingin-1235647271/",
+     "Rolling Stone",
      "2026-10-23"
     ],
     [
-     "‘The audience gets to be in on it’: How narrative-led gameplay is Call of Duty’s greatest weapon",
-     "https://www.theguardian.com/games/2026/oct/21/pushing-buttons-call-of-duty-modern-warfare-4",
-     "Guardian",
-     "2026-10-21"
+     "John Anderson (singer)",
+     "https://en.wikipedia.org/wiki/John_Anderson_(singer)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "John David Anderson passed away on October 21 at the age of 71.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It was a live staple for Anderson, who died Oct. 21 at 71.",
+      "2": "John David Anderson (December 13, 1954 – October 21, 2026) was an American country singer."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "John Anderson charted more than 40 singles on the Billboard country music charts including five number ones.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Anderson charted more than 40 singles on the Billboard country music charts, including five number ones: \"Wild and Blue\", \"Swingin'\", \"Black Sheep\", \"Straight Tequila Night\","
+     }
+    },
+    {
+     "claim": "His final album Years was released on April 10, 2020 on the Easy Eye Sound label.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "His final album, Years, was released on April 10, 2020, on the Easy Eye Sound label and was produced by Nashville veteran producer David Ferguson"
+     }
+    },
+    {
+     "claim": "He graduated from Apopka High School in 1972 and was nominated as Most Talented Senior Boy.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Anderson graduated from Apopka High School in 1972, being nominated as Most Talented Senior Boy.[6]"
+     }
+    },
+    {
+     "claim": "In September 2003 Anderson suffered a heart attack in a Charleston hotel.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In September 2003, Anderson suffered a heart attack in a Charleston hotel, forcing him to suspend his touring schedule.[21][22]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:John_Anderson.jpg"
+   ]
+  },
+  {
+   "n": 28,
+   "topic": "This Game is FREE if you beat it fast enough",
+   "signal": "YouTube GB-gaming 55,373/h",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Free to play games are back this weekend!",
+    "Score high in a free daily browser game.",
+    "Sea of Thieves boasts an 88% Steam rating."
+   ],
+   "sources": [
+    [
+     "The best multiplayer pirate game is free on Steam",
+     "https://www.polygon.com/steam-games-free-to-play-weekend-sea-of-thieves-diablo-4/",
+     "Polygon",
+     "2026-09-18"
     ],
     [
-     "GTA 6 map",
-     "https://en.wikipedia.org/wiki/Gram_panchayat",
+     "Announcing Game Scope: IGN Daily Game #001",
+     "https://www.ign.com/articles/announcing-game-scope-ign-daily-game-001",
+     "IGN",
+     "2026-08-03"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The game is free to play.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "free to play until sept 21 at 1 pm local time and is currently 65 off diablo 4 diablo 4 is undoubtedly one of",
+      "2": "The daily game is free for everyone."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Sea of Thieves has an 88% user score on Steam from almost 150,000 reviews.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "As a result, it now sits at an impressive 88% user score on Steam from almost 150,000 reviews."
+     }
+    },
+    {
+     "claim": "Diablo 4 is free to play until Sept. 21 at 1 p.m. local time.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Diablo 4 is free to play until Sept. 21 at 1 p.m. local time, and it's 75% off until Sept. 24."
+     }
+    },
+    {
+     "claim": "Crystal Crisis is free to keep until Sept. 21 at 11:59 local time.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It is free to keep until Sept. 21 at 11:59 local time."
+     }
+    },
+    {
+     "claim": "Space Menace is free to keep until Sept. 23 at 10 a.m.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The game normally costs $6.99, but it's free to keep until Sept. 23 at 10 a.m."
+     }
+    },
+    {
+     "claim": "Game Scope is a daily game that is free for everyone.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The daily game is free for everyone."
+     }
+    },
+    {
+     "claim": "Logged‑in members can save their streak and compete for high scores.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Logged-in members can save their streak and compete for high scores."
+     }
+    },
+    {
+     "claim": "IGN Plus subscribers get access to the full archives.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "IGN Plus subscribers get access to the full archives, just in case you ever miss a day."
+     }
+    },
+    {
+     "claim": "Game Scope will be in beta for a little while.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Game Scope will be in beta for a little while, so we’d love to collect your feedback on the game."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 29,
+   "topic": "TV Royale",
+   "signal": "YouTube GB-gaming 45,453/h",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Apple TV axed Palm Royale after two Emmy‑nominated seasons.",
+    "Palm Royale won an Emmy for its original title theme.",
+    "Kristen Wiig leads Palm Royale, based on a 2018 novel."
+   ],
+   "sources": [
+    [
+     "Apple TV cancels Palm Royale after two seasons",
+     "https://9to5mac.com/2026/03/02/apple-tv-cancels-palm-royale-after-two-seasons/",
+     "9to5Mac",
+     "2026-03-02"
+    ],
+    [
+     "TV Royale",
+     "https://en.wikipedia.org/wiki/TS_Royalist_(1971)",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [],
-   "one_source": [],
-   "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-    "commons:File:Grampanchayat_Raj_Bhavan,_Basuki_Bihari_North.jpg"
-   ]
-  },
-  {
-   "n": 10,
-   "topic": "strictly come dancing week 5 results",
-   "signal": "Google Trends GB 200+",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Melanie C joins the Strictly pros for a fitness based routine!",
-    "Delta Goodrem returns to the Strictly ballroom after an injury absence.",
-    "Jamie Miller makes his UK television debut performing Babydoll."
-   ],
-   "sources": [
-    [
-     "Melanie C and the Strictly Come Dancing professionals work up a sweat and Babydoll takes over the ballroom in Week 5's Results Show",
-     "https://www.bbc.co.uk/mediacentre/2026/strictly-come-dancing-melanie-c-pro-routine",
-     "BBC",
-     "2026-10-23"
-    ]
-   ],
-   "verified": [],
    "one_source": [
     {
-     "claim": "Jamie Miller performs Babydoll for his UK television debut alongside four Strictly Pros in the ballroom.",
+     "claim": "Apple TV cancelled Palm Royale after two seasons.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "From Sporty to Babydoll, Jamie Miller is in the ballroom on Sunday for the UK television debut performance of Babydoll feat. Antonio Cipriano."
+      "1": "The Emmy‑nominated dramedy was canceled at the streamer after two seasons."
      }
     },
     {
-     "claim": "Delta Goodrem returns from a week off due to injury to join her fellow Strictly stars in the ballroom on Saturday night.",
+     "claim": "Palm Royale received 11 Emmy nominations for its first season, winning Outstanding Original Main Title Theme Music.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Delta Goodrem returns from a week off due to injury to join her fellow Strictly stars in the ballroom on Saturday night (on BBC One"
+      "1": "Yet it landed 11 Emmy nominations for its first season (including Outstanding Comedy Series), taking home the trophy for Outstanding Original Main Title Theme Music."
      }
     },
     {
-     "claim": "Melanie C is the sportiest Spice Girl who joins the pros for a fitness‑based routine.",
+     "claim": "Palm Royale is based on Julie McDaniel’s 2018 novel “Mr. and Mrs. American Pie”.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The sportiest Spice Girl joins the pros for a fitness-based routine"
+      "1": "Based on Julie McDaniel’s 2018 novel “Mr. and Mrs. American Pie,” the show premiered on Apple TV on March 20, 2024, and ran for 20"
      }
     },
     {
-     "claim": "The routine is set to Spacedust's Gym and Tonic, Meghan Trainor's Shimmer and Melanie C's track Sweat.",
+     "claim": "Kristen Wiig stars as Maxine Simmons in Palm Royale.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "And itâs all set to the tune of Spacedust's Gym and Tonic, Meghan Trainor's Shimmer, and Melanie C's own track, Sweat â which is performed"
-     }
-    },
-    {
-     "claim": "Jamie Miller performed the UK television debut of Babydoll feat. Antonio Cipriano on Sunday.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "From Sporty to Babydoll, Jamie Miller is in the ballroom on Sunday for the UK television debut performance of Babydoll feat. Antonio Cipriano."
+      "1": "Cast-wise, Palm Royale had a star‑studded ensemble, including Kristen Wiig (The Secret Life of Walter Mitty), Ricky Martin (American Crime Story), Laura Dern (Twin Peaks:"
      }
     }
    ],
-   "images": []
+   "images": [
+    "page:https://9to5mac.com/2026/03/02/apple-tv-cancels-palm-royale-after-two-seasons/",
+    "commons:File:TS_Royalist.JPG"
+   ]
   }
  ]
 }

@@ -1,8 +1,8 @@
 {
- "checked": "2026-10-24T07:26Z",
- "uploads_last_24h": 23,
- "scheduled": 1,
- "public": 133,
+ "checked": "2026-10-24T08:39Z",
+ "uploads_last_24h": 25,
+ "scheduled": 2,
+ "public": 134,
  "flagged": [
   {
    "video": "ApvkxPKexGc",
@@ -16,12 +16,39 @@
  ],
  "videos": [
   {
+   "video": "lc62rdRQvmk",
+   "title": "Street Fighter movie: Chun-Li's 12-egg diet 🥚",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-24T08:00:11Z",
+   "views": 3,
+   "flag": ""
+  },
+  {
+   "video": "fGjeLLGyljU",
+   "title": "Melanie C leads a sweaty Strictly workout to her own track 💪",
+   "privacy": "private",
+   "publish_at": "2026-10-24T10:00:00Z",
+   "uploaded": "2026-10-24T07:49:40Z",
+   "views": 0,
+   "flag": ""
+  },
+  {
+   "video": "jDOsuCfxHVw",
+   "title": "Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮",
+   "privacy": "private",
+   "publish_at": "2026-10-24T09:00:00Z",
+   "uploaded": "2026-10-24T07:49:39Z",
+   "views": 0,
+   "flag": ""
+  },
+  {
    "video": "ZNbWfnNLFnU",
    "title": "New Alien movie confirmed, and Ridley Scott is producing 👽",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T07:00:08Z",
-   "views": 4,
+   "views": 35,
    "flag": ""
   },
   {
@@ -39,7 +66,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T04:00:22Z",
-   "views": 742,
+   "views": 839,
    "flag": ""
   },
   {
@@ -48,16 +75,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T03:00:03Z",
-   "views": 10,
-   "flag": ""
-  },
-  {
-   "video": "lc62rdRQvmk",
-   "title": "Street Fighter movie: Chun-Li's 12-egg diet 🥚",
-   "privacy": "private",
-   "publish_at": "2026-10-24T08:00:00Z",
-   "uploaded": "2026-10-24T02:29:58Z",
-   "views": 0,
+   "views": 11,
    "flag": ""
   },
   {
@@ -75,7 +93,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T23:30:07Z",
-   "views": 10,
+   "views": 14,
    "flag": ""
   },
   {
@@ -102,7 +120,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T16:30:36Z",
-   "views": 412,
+   "views": 471,
    "flag": ""
   },
   {
@@ -111,7 +129,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T16:00:07Z",
-   "views": 233,
+   "views": 239,
    "flag": ""
   },
   {
@@ -120,7 +138,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T15:30:00Z",
-   "views": 16,
+   "views": 19,
    "flag": ""
   },
   {
@@ -138,7 +156,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T14:30:39Z",
-   "views": 47,
+   "views": 53,
    "flag": ""
   },
   {
@@ -156,7 +174,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T13:30:16Z",
-   "views": 901,
+   "views": 904,
    "flag": ""
   },
   {
@@ -165,7 +183,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T13:00:37Z",
-   "views": 130,
+   "views": 141,
    "flag": ""
   },
   {
@@ -174,7 +192,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T12:30:20Z",
-   "views": 563,
+   "views": 571,
    "flag": ""
   },
   {
@@ -183,7 +201,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T12:00:23Z",
-   "views": 82,
+   "views": 83,
    "flag": ""
   },
   {
@@ -219,7 +237,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T09:00:06Z",
-   "views": 1045,
+   "views": 1047,
    "flag": ""
   },
   {
@@ -318,7 +336,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T14:00:24Z",
-   "views": 20,
+   "views": 19,
    "flag": ""
   },
   {
@@ -354,7 +372,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T12:00:06Z",
-   "views": 140,
+   "views": 143,
    "flag": ""
   },
   {
@@ -462,7 +480,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T01:30:31Z",
-   "views": 133,
+   "views": 134,
    "flag": ""
   },
   {
@@ -588,7 +606,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T14:30:27Z",
-   "views": 294,
+   "views": 295,
    "flag": ""
   },
   {
@@ -678,7 +696,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T08:30:35Z",
-   "views": 340,
+   "views": 341,
    "flag": ""
   },
   {
@@ -786,7 +804,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-20T19:50:12Z",
-   "views": 1176,
+   "views": 1185,
    "flag": ""
   },
   {
@@ -813,7 +831,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-20T17:10:09Z",
-   "views": 571,
+   "views": 572,
    "flag": ""
   },
   {
@@ -876,7 +894,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T15:50:11Z",
-   "views": 419,
+   "views": 421,
    "flag": ""
   },
   {
@@ -885,7 +903,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T15:10:25Z",
-   "views": 148,
+   "views": 149,
    "flag": ""
   },
   {
@@ -898,12 +916,12 @@
    "flag": ""
   },
   {
-   "video": "n6j8dxF9M7o",
-   "title": "K/DA's new song: Start a Fire or Watch Me? 💜",
+   "video": "-InuBVWX0uA",
+   "title": "Duncan Ferguson is Glentoran's new manager ⚽",
    "privacy": "public",
    "publish_at": null,
-   "uploaded": "2026-10-19T13:50:01Z",
-   "views": 96,
+   "uploaded": "2026-10-19T15:10:25Z",
+   "views": 148,
    "flag": ""
   },
   {
@@ -975,7 +993,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T09:10:40Z",
-   "views": 624,
+   "views": 623,
    "flag": ""
   },
   {
@@ -1002,7 +1020,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T07:10:28Z",
-   "views": 930,
+   "views": 928,
    "flag": ""
   },
   {

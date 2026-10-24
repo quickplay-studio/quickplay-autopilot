@@ -2,138 +2,138 @@ kind,country,views,share_pct,avg_viewed_pct,subs_gained,shorts_seen,best_categor
 fit,US,125,,,,,,,,,,Category,Entertainment,10,12.5,0.5
 fit,US,700,,,,,,,,,,Category,Film,17,41.2,1.13
 fit,US,486,,,,,,,,,,Category,Gaming,17,28.6,0.83
-fit,US,1876,,,,,,,,,,Category,Music,25,75.0,1.98
-fit,US,225,,,,,,,,,,Category,Science,10,22.5,0.71
-fit,US,369,,,,,,,,,,Category,Sport,19,19.4,0.6
+fit,US,1925,,,,,,,,,,Category,Music,26,74.0,1.97
+fit,US,225,,,,,,,,,,Category,Science,10,22.5,0.72
+fit,US,404,,,,,,,,,,Category,Sport,21,19.2,0.6
 fit,US,52,,,,,,,,,,Category,Tech,9,5.8,0.37
 fit,US,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,US,502,,,,,,,,,,Format,news_explained,14,35.9,1.0
-fit,US,1414,,,,,,,,,,Format,one_detail,22,64.3,1.7
-fit,US,118,,,,,,,,,,Format,real_reason,9,13.1,0.52
+fit,US,502,,,,,,,,,,Format,news_explained,13,38.6,1.07
+fit,US,1449,,,,,,,,,,Format,one_detail,23,63.0,1.68
+fit,US,118,,,,,,,,,,Format,real_reason,9,13.1,0.53
 fit,US,341,,,,,,,,,,Format,story,16,21.3,0.66
-fit,US,250,,,,,,,,,,Format,three_details,12,20.8,0.67
-fit,US,426,,,,,,,,,,Format,timeline,6,71.0,1.65
-fit,US,1422,,,,,,,,,,Hook,number,41,34.7,0.97
-fit,US,62,,,,,,,,,,Hook,question,9,6.9,0.39
+fit,US,299,,,,,,,,,,Format,three_details,13,23.0,0.71
+fit,US,426,,,,,,,,,,Format,timeline,8,53.2,1.36
+fit,US,1506,,,,,,,,,,Hook,number,44,34.2,0.96
+fit,US,62,,,,,,,,,,Hook,question,9,6.9,0.4
 fit,US,1215,,,,,,,,,,Hook,statement,20,60.8,1.61
-fit,US,352,,,,,,,,,,Hook,superlative,7,50.3,1.28
+fit,US,352,,,,,,,,,,Hook,superlative,7,50.3,1.29
 fit,US,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,US,0,,,,,,,,,,Hook,you,2,0.0,0.6
-fit,US,873,,,,,,,,,,Length,30 to 40 s,18,48.5,1.3
+fit,US,908,,,,,,,,,,Length,30 to 40 s,18,50.4,1.36
 fit,US,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,US,2178,,,,,,,,,,Length,under 30 s,61,35.7,1.0
-country,US,4804,40.1,67.0,,31,"Music (2.0x, 25 Shorts)","one_detail (1.7x, 22 Shorts)","statement (1.6x, 20 Shorts)","30 to 40 s (1.3x, 18 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (403 views),,,,,
-fit,GB,23,,,,,,,,,,Category,Entertainment,10,2.3,0.51
+fit,US,2227,,,,,,,,,,Length,under 30 s,64,34.8,0.98
+country,US,4804,40.1,67.0,,33,"Music (2.0x, 26 Shorts)","one_detail (1.7x, 23 Shorts)","statement (1.6x, 20 Shorts)","30 to 40 s (1.4x, 18 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (403 views),,,,,
+fit,GB,23,,,,,,,,,,Category,Entertainment,10,2.3,0.48
 fit,GB,0,,,,,,,,,,Category,Film,17,0.0,0.15
-fit,GB,63,,,,,,,,,,Category,Gaming,17,3.7,0.65
-fit,GB,281,,,,,,,,,,Category,Music,25,11.2,1.71
+fit,GB,63,,,,,,,,,,Category,Gaming,17,3.7,0.59
+fit,GB,281,,,,,,,,,,Category,Music,26,10.8,1.46
 fit,GB,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,GB,302,,,,,,,,,,Category,Sport,19,15.9,2.33
+fit,GB,421,,,,,,,,,,Category,Sport,21,20.0,2.57
 fit,GB,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,GB,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,GB,33,,,,,,,,,,Format,news_explained,14,2.4,0.49
-fit,GB,73,,,,,,,,,,Format,one_detail,22,3.3,0.59
-fit,GB,198,,,,,,,,,,Format,real_reason,9,22.0,2.89
-fit,GB,61,,,,,,,,,,Format,story,16,3.8,0.67
-fit,GB,70,,,,,,,,,,Format,three_details,12,5.8,0.95
-fit,GB,112,,,,,,,,,,Format,timeline,6,18.7,2.32
-fit,GB,292,,,,,,,,,,Hook,number,41,7.1,1.13
+fit,GB,33,,,,,,,,,,Format,news_explained,13,2.5,0.48
+fit,GB,192,,,,,,,,,,Format,one_detail,23,8.3,1.15
+fit,GB,198,,,,,,,,,,Format,real_reason,9,22.0,2.55
+fit,GB,61,,,,,,,,,,Format,story,16,3.8,0.61
+fit,GB,70,,,,,,,,,,Format,three_details,13,5.4,0.8
+fit,GB,112,,,,,,,,,,Format,timeline,8,14.0,1.69
+fit,GB,411,,,,,,,,,,Hook,number,44,9.3,1.28
 fit,GB,0,,,,,,,,,,Hook,question,9,0.0,0.25
-fit,GB,217,,,,,,,,,,Hook,statement,20,10.8,1.64
-fit,GB,38,,,,,,,,,,Hook,superlative,7,5.4,0.91
+fit,GB,217,,,,,,,,,,Hook,statement,20,10.8,1.45
+fit,GB,38,,,,,,,,,,Hook,superlative,7,5.4,0.83
 fit,GB,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,GB,0,,,,,,,,,,Hook,you,2,0.0,0.6
-fit,GB,152,,,,,,,,,,Length,30 to 40 s,18,8.4,1.3
+fit,GB,271,,,,,,,,,,Length,30 to 40 s,18,15.1,1.94
 fit,GB,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,GB,395,,,,,,,,,,Length,under 30 s,61,6.5,1.03
-country,GB,1511,12.6,69.2,0,13,"Sport (2.3x, 19 Shorts)","real_reason (2.9x, 9 Shorts)","statement (1.6x, 20 Shorts)","30 to 40 s (1.3x, 18 Shorts)",Mark Allen knocked out of Northern Ireland Open 🎱 (198 views),,,,,
+fit,GB,395,,,,,,,,,,Length,under 30 s,64,6.2,0.87
+country,GB,1511,12.6,69.2,0,14,"Sport (2.6x, 21 Shorts)","real_reason (2.5x, 9 Shorts)","statement (1.4x, 20 Shorts)","30 to 40 s (1.9x, 18 Shorts)",Mark Allen knocked out of Northern Ireland Open 🎱 (198 views),,,,,
 fit,IN,0,,,,,,,,,,Category,Entertainment,10,0.0,0.23
-fit,IN,499,,,,,,,,,,Category,Film,17,29.4,3.7
-fit,IN,39,,,,,,,,,,Category,Gaming,17,2.3,0.43
-fit,IN,85,,,,,,,,,,Category,Music,25,3.4,0.54
+fit,IN,499,,,,,,,,,,Category,Film,17,29.4,3.8
+fit,IN,39,,,,,,,,,,Category,Gaming,17,2.3,0.44
+fit,IN,85,,,,,,,,,,Category,Music,26,3.3,0.53
 fit,IN,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,IN,128,,,,,,,,,,Category,Sport,19,6.7,0.97
+fit,IN,128,,,,,,,,,,Category,Sport,21,6.1,0.91
 fit,IN,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,IN,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,IN,120,,,,,,,,,,Format,news_explained,14,8.6,1.18
-fit,IN,473,,,,,,,,,,Format,one_detail,22,21.5,2.82
+fit,IN,120,,,,,,,,,,Format,news_explained,13,9.2,1.29
+fit,IN,473,,,,,,,,,,Format,one_detail,23,20.6,2.78
 fit,IN,0,,,,,,,,,,Format,real_reason,9,0.0,0.25
 fit,IN,0,,,,,,,,,,Format,story,16,0.0,0.16
-fit,IN,0,,,,,,,,,,Format,three_details,12,0.0,0.2
-fit,IN,0,,,,,,,,,,Format,timeline,6,0.0,0.33
-fit,IN,473,,,,,,,,,,Hook,number,41,11.5,1.6
+fit,IN,0,,,,,,,,,,Format,three_details,13,0.0,0.19
+fit,IN,0,,,,,,,,,,Format,timeline,8,0.0,0.27
+fit,IN,473,,,,,,,,,,Hook,number,44,10.8,1.54
 fit,IN,0,,,,,,,,,,Hook,question,9,0.0,0.25
-fit,IN,81,,,,,,,,,,Hook,statement,20,4.0,0.63
-fit,IN,39,,,,,,,,,,Hook,superlative,7,5.6,0.86
+fit,IN,81,,,,,,,,,,Hook,statement,20,4.0,0.65
+fit,IN,39,,,,,,,,,,Hook,superlative,7,5.6,0.87
 fit,IN,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,IN,0,,,,,,,,,,Hook,you,2,0.0,0.6
-fit,IN,81,,,,,,,,,,Length,30 to 40 s,18,4.5,0.69
+fit,IN,81,,,,,,,,,,Length,30 to 40 s,18,4.5,0.71
 fit,IN,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,IN,512,,,,,,,,,,Length,under 30 s,61,8.4,1.19
-country,IN,1264,10.5,47.4,0,6,"Film (3.7x, 17 Shorts)","one_detail (2.8x, 22 Shorts)","number (1.6x, 41 Shorts)","under 30 s (1.2x, 61 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (426 views),,,,,
+fit,IN,512,,,,,,,,,,Length,under 30 s,64,8.0,1.16
+country,IN,1264,10.5,47.4,0,6,"Film (3.8x, 17 Shorts)","one_detail (2.8x, 23 Shorts)","number (1.5x, 44 Shorts)","under 30 s (1.2x, 64 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (426 views),,,,,
 fit,PH,0,,,,,,,,,,Category,Entertainment,10,0.0,0.23
-fit,PH,23,,,,,,,,,,Category,Film,17,1.4,2.07
+fit,PH,23,,,,,,,,,,Category,Film,17,1.4,2.13
 fit,PH,0,,,,,,,,,,Category,Gaming,17,0.0,0.15
-fit,PH,25,,,,,,,,,,Category,Music,25,1.0,1.6
+fit,PH,25,,,,,,,,,,Category,Music,26,1.0,1.59
 fit,PH,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,PH,16,,,,,,,,,,Category,Sport,19,0.8,1.35
+fit,PH,16,,,,,,,,,,Category,Sport,21,0.8,1.27
 fit,PH,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,PH,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,PH,0,,,,,,,,,,Format,news_explained,14,0.0,0.18
-fit,PH,16,,,,,,,,,,Format,one_detail,22,0.7,1.19
+fit,PH,0,,,,,,,,,,Format,news_explained,13,0.0,0.19
+fit,PH,16,,,,,,,,,,Format,one_detail,23,0.7,1.17
 fit,PH,0,,,,,,,,,,Format,real_reason,9,0.0,0.25
 fit,PH,0,,,,,,,,,,Format,story,16,0.0,0.16
-fit,PH,0,,,,,,,,,,Format,three_details,12,0.0,0.2
-fit,PH,25,,,,,,,,,,Format,timeline,6,4.2,4.98
-fit,PH,16,,,,,,,,,,Hook,number,41,0.4,0.68
+fit,PH,0,,,,,,,,,,Format,three_details,13,0.0,0.19
+fit,PH,25,,,,,,,,,,Format,timeline,8,3.1,4.18
+fit,PH,16,,,,,,,,,,Hook,number,44,0.4,0.65
 fit,PH,0,,,,,,,,,,Hook,question,9,0.0,0.25
-fit,PH,25,,,,,,,,,,Hook,statement,20,1.2,1.95
+fit,PH,25,,,,,,,,,,Hook,statement,20,1.2,2.0
 fit,PH,0,,,,,,,,,,Hook,superlative,7,0.0,0.3
 fit,PH,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,PH,0,,,,,,,,,,Hook,you,2,0.0,0.6
-fit,PH,16,,,,,,,,,,Length,30 to 40 s,18,0.9,1.42
+fit,PH,16,,,,,,,,,,Length,30 to 40 s,18,0.9,1.45
 fit,PH,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,PH,25,,,,,,,,,,Length,under 30 s,61,0.4,0.7
-country,PH,523,4.4,57.5,0,3,"Film (2.1x, 17 Shorts)","timeline (5.0x, 6 Shorts)","statement (1.9x, 20 Shorts)","30 to 40 s (1.4x, 18 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (25 views),,,,,
+fit,PH,25,,,,,,,,,,Length,under 30 s,64,0.4,0.69
+country,PH,523,4.4,57.5,0,3,"Film (2.1x, 17 Shorts)","timeline (4.2x, 8 Shorts)","statement (2.0x, 20 Shorts)","30 to 40 s (1.4x, 18 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (25 views),,,,,
 fit,CA,0,,,,,,,,,,Category,Entertainment,10,0.0,0.23
-fit,CA,29,,,,,,,,,,Category,Film,17,1.7,2.0
+fit,CA,29,,,,,,,,,,Category,Film,17,1.7,2.05
 fit,CA,0,,,,,,,,,,Category,Gaming,17,0.0,0.15
-fit,CA,55,,,,,,,,,,Category,Music,25,2.2,2.61
+fit,CA,55,,,,,,,,,,Category,Music,26,2.1,2.59
 fit,CA,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,CA,0,,,,,,,,,,Category,Sport,19,0.0,0.14
+fit,CA,0,,,,,,,,,,Category,Sport,21,0.0,0.12
 fit,CA,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,CA,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,CA,0,,,,,,,,,,Format,news_explained,14,0.0,0.18
-fit,CA,67,,,,,,,,,,Format,one_detail,22,3.0,3.53
+fit,CA,0,,,,,,,,,,Format,news_explained,13,0.0,0.19
+fit,CA,67,,,,,,,,,,Format,one_detail,23,2.9,3.49
 fit,CA,0,,,,,,,,,,Format,real_reason,9,0.0,0.25
-fit,CA,17,,,,,,,,,,Format,story,16,1.1,1.3
-fit,CA,0,,,,,,,,,,Format,three_details,12,0.0,0.2
-fit,CA,0,,,,,,,,,,Format,timeline,6,0.0,0.33
-fit,CA,46,,,,,,,,,,Hook,number,41,1.1,1.4
+fit,CA,17,,,,,,,,,,Format,story,16,1.1,1.33
+fit,CA,0,,,,,,,,,,Format,three_details,13,0.0,0.19
+fit,CA,0,,,,,,,,,,Format,timeline,8,0.0,0.27
+fit,CA,46,,,,,,,,,,Hook,number,44,1.0,1.35
 fit,CA,0,,,,,,,,,,Hook,question,9,0.0,0.25
-fit,CA,38,,,,,,,,,,Hook,statement,20,1.9,2.23
+fit,CA,38,,,,,,,,,,Hook,statement,20,1.9,2.29
 fit,CA,0,,,,,,,,,,Hook,superlative,7,0.0,0.3
 fit,CA,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,CA,0,,,,,,,,,,Hook,you,2,0.0,0.6
-fit,CA,17,,,,,,,,,,Length,30 to 40 s,18,0.9,1.17
+fit,CA,17,,,,,,,,,,Length,30 to 40 s,18,0.9,1.2
 fit,CA,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,CA,67,,,,,,,,,,Length,under 30 s,61,1.1,1.38
-country,CA,499,4.2,45.9,0,3,"Music (2.6x, 25 Shorts)","one_detail (3.5x, 22 Shorts)","statement (2.2x, 20 Shorts)","under 30 s (1.4x, 61 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (38 views)",,,,,
+fit,CA,67,,,,,,,,,,Length,under 30 s,64,1.0,1.35
+country,CA,499,4.2,45.9,0,3,"Music (2.6x, 26 Shorts)","one_detail (3.5x, 23 Shorts)","statement (2.3x, 20 Shorts)","under 30 s (1.4x, 64 Shorts)","Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤 (38 views)",,,,,
 fit,DE,0,,,,,,,,,,Category,Entertainment,10,0.0,1.0
 fit,DE,0,,,,,,,,,,Category,Film,17,0.0,1.0
 fit,DE,0,,,,,,,,,,Category,Gaming,17,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Music,25,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Music,26,0.0,1.0
 fit,DE,0,,,,,,,,,,Category,Science,10,0.0,1.0
-fit,DE,0,,,,,,,,,,Category,Sport,19,0.0,1.0
+fit,DE,0,,,,,,,,,,Category,Sport,21,0.0,1.0
 fit,DE,0,,,,,,,,,,Category,Tech,9,0.0,1.0
 fit,DE,0,,,,,,,,,,Format,countdown,1,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,news_explained,14,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,one_detail,22,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,news_explained,13,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,one_detail,23,0.0,1.0
 fit,DE,0,,,,,,,,,,Format,real_reason,9,0.0,1.0
 fit,DE,0,,,,,,,,,,Format,story,16,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,three_details,12,0.0,1.0
-fit,DE,0,,,,,,,,,,Format,timeline,6,0.0,1.0
-fit,DE,0,,,,,,,,,,Hook,number,41,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,three_details,13,0.0,1.0
+fit,DE,0,,,,,,,,,,Format,timeline,8,0.0,1.0
+fit,DE,0,,,,,,,,,,Hook,number,44,0.0,1.0
 fit,DE,0,,,,,,,,,,Hook,question,9,0.0,1.0
 fit,DE,0,,,,,,,,,,Hook,statement,20,0.0,1.0
 fit,DE,0,,,,,,,,,,Hook,superlative,7,0.0,1.0
@@ -141,47 +141,47 @@ fit,DE,0,,,,,,,,,,Hook,twist,1,0.0,1.0
 fit,DE,0,,,,,,,,,,Hook,you,2,0.0,1.0
 fit,DE,0,,,,,,,,,,Length,30 to 40 s,18,0.0,1.0
 fit,DE,0,,,,,,,,,,Length,over 40 s,1,0.0,1.0
-fit,DE,0,,,,,,,,,,Length,under 30 s,61,0.0,1.0
+fit,DE,0,,,,,,,,,,Length,under 30 s,64,0.0,1.0
 country,DE,390,3.3,47.9,0,0,,,,,,,,,,
 fit,AU,0,,,,,,,,,,Category,Entertainment,10,0.0,0.23
 fit,AU,0,,,,,,,,,,Category,Film,17,0.0,0.15
 fit,AU,0,,,,,,,,,,Category,Gaming,17,0.0,0.15
-fit,AU,25,,,,,,,,,,Category,Music,25,1.0,3.93
+fit,AU,25,,,,,,,,,,Category,Music,26,1.0,3.9
 fit,AU,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,AU,0,,,,,,,,,,Category,Sport,19,0.0,0.14
+fit,AU,0,,,,,,,,,,Category,Sport,21,0.0,0.12
 fit,AU,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,AU,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,AU,0,,,,,,,,,,Format,news_explained,14,0.0,0.18
-fit,AU,0,,,,,,,,,,Format,one_detail,22,0.0,0.12
+fit,AU,0,,,,,,,,,,Format,news_explained,13,0.0,0.19
+fit,AU,0,,,,,,,,,,Format,one_detail,23,0.0,0.12
 fit,AU,0,,,,,,,,,,Format,real_reason,9,0.0,0.25
 fit,AU,0,,,,,,,,,,Format,story,16,0.0,0.16
-fit,AU,25,,,,,,,,,,Format,three_details,12,2.1,7.33
-fit,AU,0,,,,,,,,,,Format,timeline,6,0.0,0.33
-fit,AU,0,,,,,,,,,,Hook,number,41,0.0,0.07
+fit,AU,25,,,,,,,,,,Format,three_details,13,1.9,7.06
+fit,AU,0,,,,,,,,,,Format,timeline,8,0.0,0.27
+fit,AU,0,,,,,,,,,,Hook,number,44,0.0,0.06
 fit,AU,0,,,,,,,,,,Hook,question,9,0.0,0.25
 fit,AU,0,,,,,,,,,,Hook,statement,20,0.0,0.13
-fit,AU,25,,,,,,,,,,Hook,superlative,7,3.6,11.0
+fit,AU,25,,,,,,,,,,Hook,superlative,7,3.6,11.3
 fit,AU,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,AU,0,,,,,,,,,,Hook,you,2,0.0,0.6
 fit,AU,0,,,,,,,,,,Length,30 to 40 s,18,0.0,0.14
 fit,AU,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,AU,25,,,,,,,,,,Length,under 30 s,61,0.4,1.72
-country,AU,384,3.2,57.3,0,1,"Music (3.9x, 25 Shorts)","three_details (7.3x, 12 Shorts)","superlative (11.0x, 7 Shorts)","under 30 s (1.7x, 61 Shorts)",What was the first music video on MTV? 📺 (25 views),,,,,
+fit,AU,25,,,,,,,,,,Length,under 30 s,64,0.4,1.69
+country,AU,384,3.2,57.3,0,1,"Music (3.9x, 26 Shorts)","three_details (7.1x, 13 Shorts)","superlative (11.3x, 7 Shorts)","under 30 s (1.7x, 64 Shorts)",What was the first music video on MTV? 📺 (25 views),,,,,
 fit,ID,0,,,,,,,,,,Category,Entertainment,10,0.0,0.23
 fit,ID,0,,,,,,,,,,Category,Film,17,0.0,0.15
 fit,ID,0,,,,,,,,,,Category,Gaming,17,0.0,0.15
-fit,ID,37,,,,,,,,,,Category,Music,25,1.5,3.93
+fit,ID,37,,,,,,,,,,Category,Music,26,1.4,3.9
 fit,ID,0,,,,,,,,,,Category,Science,10,0.0,0.23
-fit,ID,0,,,,,,,,,,Category,Sport,19,0.0,0.14
+fit,ID,0,,,,,,,,,,Category,Sport,21,0.0,0.12
 fit,ID,0,,,,,,,,,,Category,Tech,9,0.0,0.25
 fit,ID,0,,,,,,,,,,Format,countdown,1,0.0,0.75
-fit,ID,0,,,,,,,,,,Format,news_explained,14,0.0,0.18
-fit,ID,0,,,,,,,,,,Format,one_detail,22,0.0,0.12
+fit,ID,0,,,,,,,,,,Format,news_explained,13,0.0,0.19
+fit,ID,0,,,,,,,,,,Format,one_detail,23,0.0,0.12
 fit,ID,0,,,,,,,,,,Format,real_reason,9,0.0,0.25
 fit,ID,0,,,,,,,,,,Format,story,16,0.0,0.16
-fit,ID,0,,,,,,,,,,Format,three_details,12,0.0,0.2
-fit,ID,0,,,,,,,,,,Format,timeline,6,0.0,0.33
-fit,ID,0,,,,,,,,,,Hook,number,41,0.0,0.07
+fit,ID,0,,,,,,,,,,Format,three_details,13,0.0,0.19
+fit,ID,0,,,,,,,,,,Format,timeline,8,0.0,0.27
+fit,ID,0,,,,,,,,,,Hook,number,44,0.0,0.06
 fit,ID,0,,,,,,,,,,Hook,question,9,0.0,0.25
 fit,ID,0,,,,,,,,,,Hook,statement,20,0.0,0.13
 fit,ID,0,,,,,,,,,,Hook,superlative,7,0.0,0.3
@@ -189,5 +189,5 @@ fit,ID,0,,,,,,,,,,Hook,twist,1,0.0,0.75
 fit,ID,0,,,,,,,,,,Hook,you,2,0.0,0.6
 fit,ID,0,,,,,,,,,,Length,30 to 40 s,18,0.0,0.14
 fit,ID,0,,,,,,,,,,Length,over 40 s,1,0.0,0.75
-fit,ID,0,,,,,,,,,,Length,under 30 s,61,0.0,0.05
-country,ID,352,2.9,65.5,0,1,"Music (3.9x, 25 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
+fit,ID,0,,,,,,,,,,Length,under 30 s,64,0.0,0.04
+country,ID,352,2.9,65.5,0,1,"Music (3.9x, 26 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,

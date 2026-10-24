@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write      # the change ledger's trade-off issue (pipeline/changes.py)
 
 concurrency:
   group: analytics
@@ -37,6 +38,12 @@ jobs:
           python pipeline/analytics.py --fast
           python pipeline/dropoff.py || echo "drop-off analysis failed"
       - run: python pipeline/lab.py || echo "look lab failed"     # new looks to test, once a day
+      # the change ledger (analytics/changes.csv): before and after for every change past its check day, guardrails
+      # included; a trade-off opens an issue (pipeline/changes.py)
+      - name: Change ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python pipeline/changes.py check || echo "change ledger failed"
       - run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"

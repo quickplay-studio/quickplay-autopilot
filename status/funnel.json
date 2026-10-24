@@ -1,29 +1,27 @@
 {
- "day": "2026-10-23",
- "updated": "2026-10-23T21:55+00:00",
+ "day": "2026-10-24",
+ "updated": "2026-10-24T21:51+00:00",
  "stages": {
-  "day": "2026-10-23",
-  "packs": 11,
-  "written": 19,
-  "rendered": 17,
-  "render_failed": 0,
-  "uploaded": 17,
-  "public": 19,
+  "day": "2026-10-24",
+  "packs": 9,
+  "written": 15,
+  "rendered": 22,
+  "render_failed": 2,
+  "uploaded": 20,
+  "public": 14,
   "target": 15,
-  "clips_planned": 31,
-  "clips_made": 58,
-  "clips_uploaded": 42,
-  "clips_refused": 2,
-  "clips_instagram": 0,
-  "clips_submitted": 0,
-  "clips_views": 16,
-  "stuck": "clips went up on YouTube but none to Instagram; clips went up but none were submitted to a campaign"
+  "clips_planned": 27,
+  "clips_made": 17,
+  "clips_uploaded": 17,
+  "clips_refused": 0,
+  "clips_instagram": 12,
+  "clips_submitted": 3,
+  "clips_views": 59,
+  "stuck": ""
  },
- "stuck": [
-  "clips went up on YouTube but none to Instagram",
-  "clips went up but none were submitted to a campaign"
- ],
+ "stuck": [],
  "lost": {
-  "clip skipped: dark picture": 2
+  "RuntimeError: checks failed: unclear narration in beats [N]": 1,
+  "RuntimeError: checks failed: unclear narration in beats [N, ": 1
  }
 }

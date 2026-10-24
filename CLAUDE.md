@@ -52,6 +52,8 @@ its source. Weak Shorts stay up (a remake, never a delete). Free keys only; no p
 - Never break the next scheduled run: run tests/, commit as "Quickplay Studio" <quickplay-studio@users.noreply.github.com>,
   `git pull --rebase` before each push. Test a writer change for real with "dry 2" in requests/write.txt and read
   status/write_log.txt.
+- Every change pushed gets a ledger row: `python pipeline/changes.py add --area .. --change .. --hypothesis .. --target ..
+  --guardrails ..` (analytics/changes.csv; `metrics` lists targets; verdicts and the trade-off issue come by themselves).
 - Board shape: copy any board in boards/done; validate with `python pipeline/validate.py boards/queue/<file>`.
 - Supply chain (Black October, 22 October 2026: poisoned LiteLLM and OVHcloud releases stole keys): every workflow installs
   packages with pip 26.2.1 and `--uploaded-prior-to P7D`, so nothing published in the last 7 days reaches a runner that

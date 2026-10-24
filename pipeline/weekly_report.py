@@ -2,7 +2,7 @@
 optimisation is working as more is posted, what was stopped, and the clips channel's money. Written to analytics/weekly.md
 and opened as a GitHub issue (label "weekly"), which the GitHub app shows on Charlie's phone.
   python pipeline/weekly_report.py          (REPORT_ISSUE=0: the file only)
-Sources: analytics/shorts.csv, hourly.csv, daily.csv, drivers.csv, decisions.csv, summary.json; clips/stats.csv,
+Sources: analytics/shorts.csv, hourly.csv, daily.csv, drivers.csv, decisions.csv, changes.csv, summary.json; clips/stats.csv,
 campaigns.json, submit.csv, insights.json; the dated headings of docs/NEXT.md and docs/CLIPS.md (what was built).
 """
 import csv, datetime as dt, json, os, pathlib, re, statistics, subprocess, sys
@@ -87,6 +87,31 @@ def built(start, end):
     return out
 
 
+def ledger_lines(start, end):
+    """The change ledger's verdicts that came due this week, the open trade-offs, and how often the automatic recipe's
+    calls held up (pipeline/changes.py)."""
+    try:
+        import changes as C
+        rows = C.load()
+    except Exception as e:
+        return [f"- The change ledger could not be read ({type(e).__name__})."]
+    mine, auto = C.due(start.date(), end.date(), rows)
+    out = [f"- {r['id']} ({r['date']}, {r['area']}): {r['change']}: **{r.get('verdict') or 'not checked yet'}**. {r.get('result', '')}".rstrip()
+           for r in mine] or ["- No change came due for its check this week."]
+    trade = C.open_tradeoffs(rows)
+    if trade: out.append("- Open trade-offs (keep or revert each: python pipeline/changes.py set <id> --status kept): "
+                         + "; ".join(f"{r['id']} {r['change'][:60]}" for r in trade) + ".")
+    right, wrong, level = C.calls_record(auto)
+    if right or wrong or level:
+        out.append(f"- The writer's automatic recipe: {right + wrong + level} of its calls came due; {right} held up, {wrong} faded or "
+                   f"recovered (the data was chasing noise), {level} were level." + (f" Right {right / (right + wrong):.0%} of the time." if right + wrong else ""))
+    waiting = [r for r in rows if r.get("status") == "live" and r.get("by") != C.AUTO]
+    if waiting:
+        nxt = min(r.get("check_on", "") for r in waiting)
+        out.append(f"- {len(waiting)} changes still waiting for their after-week; the next check is on {nxt}.")
+    return out
+
+
 def main():
     import drivers
     end = NOW; start = end - WEEK; prev = start - WEEK
@@ -133,6 +158,7 @@ def main():
     if quiet: L.append(f"- {quiet} earlier rulings went back to normal as more Shorts came in (a choice is only kept while the data still says so).")
     b = built(start, end)
     L += [f"- Built: {x}" for x in b] or ["- No design change this week (docs/NEXT.md, docs/CLIPS.md)."]
+    L += ["", "## Did the changes work (analytics/changes.csv)"] + ledger_lines(start, end)
     # stopped
     stops = [r for r in rows_of("analytics/drivers.csv") if r.get("verdict") == "stop"]
     dead = drivers.dead(shorts)

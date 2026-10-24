@@ -86,7 +86,6 @@
   "publish_at": "2026-10-22T18:00:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-121",
  "facebook": {
   "video": "1337843534978129",
   "at": "2026-10-22T18:01:38+00:00"
@@ -101,5 +100,9 @@
    "views_an_hour": 0.1,
    "typical": 1.0
   }
+ },
+ "instagram": {
+  "media": "18047331260830648",
+  "at": "2026-10-24T09:03:51+00:00"
  }
 }

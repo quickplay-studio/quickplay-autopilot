@@ -170,6 +170,14 @@ def plan(breaking=False, hint=""):
     return run, day, cap
 
 
+# Keys the pipeline sets on a board itself. A model shown an example board copied them into new ones (24 October: seven
+# news boards claimed to follow QD-037, four carried "watch": their own topic, three a franchise with no number), which
+# can count a breakout as followed up or fill a watchlist item's places, so the example never shows them and they are
+# stripped from whatever a model writes.
+BOOKKEEPING = ("watch", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
+               "test", "mode", "appeal_note")
+
+
 def example():
     """The newest finished board closest to the rules (fewest validator warnings, least stock), as the shape to copy."""
     best, free = None, f"QD-{next_id():03d}"
@@ -177,8 +185,9 @@ def example():
     for p in done[:20]:
         try: b = json.loads(p.read_text())
         except Exception: continue
-        for k in ("id", "created", "tiktok", "look", "flag", "bgvideo"): b.pop(k, None)
         if b.get("mode") or b.get("reserve"): continue
+        for k in ("id", "created", "tiktok", "look", "flag", "bgvideo") + BOOKKEEPING: b.pop(k, None)
+        (b.get("meta") or {}).pop("translations", None)         # made separately (translations()), not by the writer
         if not b.get("background"): b["background"] = BG.fallback(b)[:3]       # older boards predate the field: show its shape
         errs, warns = validate.check({"id": free, "created": str(NOW.date()), **b})
         stock = sum(str(s.get("src", "")).startswith("pixabay:") for bt in b.get("beats", []) for s in bt.get("shots") or [])
@@ -946,7 +955,7 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         b = clean(ans)
         if not isinstance(b.get("beats"), list) or not b["beats"]: b["beats"] = []
         unwiki(b)
-        for k in ("tiktok", "look", "mode", "flag", "bgvideo"): b.pop(k, None)
+        for k in ("tiktok", "look", "flag", "bgvideo") + BOOKKEEPING: b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
         if tests: b["test"] = dict(tests)          # the validator reads the length arm from it
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2

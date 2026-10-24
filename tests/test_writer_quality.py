@@ -202,3 +202,11 @@ assert not W.covered(p_, seen_) and W.covered(dict(p_, signal="Google Trends"), 
 assert W.covered(dict(p_, sources=[["", "https://ign.com/p"], ["", "https://a.com/x"], ["", "https://c.com/z"]]), seen_)
 assert W.covered({"topic": "Avengers Doomsday", "signal": "watchlist: x", "sources": []}, [("Avengers Doomsday trailer record", "", set())])
 print("watch covered ok")
+
+# the pipeline's own keys never reach the model's example, so a new board can't copy "follows", "watch" or "franchise"
+(SCRATCH / "boards" / "done" / "QD-170.json").write_text(json.dumps({"id": "QD-170", "created": "2026-10-24", "category": "Music", "format": "one_detail",
+    "beats": [{"say": "One two three four five six.", "shots": []}], "meta": {"title": "T", "translations": {"es": {}}},
+    "follows": "QD-037", "watch": "GTA 6", "franchise": "Song Secrets #3", "kind": "follow-up", "source": "Follow-up", "test": {"x": 1}}))
+ex = json.loads(W.example())
+assert not set(ex) & set(W.BOOKKEEPING) and "translations" not in (ex.get("meta") or {}), set(ex)
+print("example clean ok")

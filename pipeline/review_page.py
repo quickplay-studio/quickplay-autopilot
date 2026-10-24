@@ -2,7 +2,7 @@
 Built from status/<id>.json (what the pipeline did), status/channel.json (what YouTube shows) and review/<id>.jpg.
 usage: python pipeline/review_page.py
 """
-import datetime as dt, json, pathlib
+import datetime as dt, json, pathlib, sys
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -23,7 +23,10 @@ def posts_by_day(statuses, now):
     one fewer on Sundays for the weekly video)."""
     cfg = load(ROOT / "config.json") or {}
     today = now.astimezone(UK).date()
-    aim = lambda d: int(cfg.get("daily_limit", 24)) - (1 if d.weekday() == 6 else 0)
+    try:                      # the chosen number a day (quota.target: 15 in the test from 24 October), not the ceiling (40)
+        sys.path.insert(0, str(ROOT / "pipeline")); import quota; chosen = quota.target()
+    except Exception: chosen = int(cfg.get("daily_limit", 24))
+    aim = lambda d: chosen - (1 if d.weekday() == 6 else 0)
     tp = ROOT / "status" / "targets.json"
     targets = load(tp) or {}
     if str(today) not in targets:

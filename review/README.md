@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 24 Oct | 6 public, 1 scheduled | 4 | 3 | ⏳ 6 of 15 so far, 1 more scheduled |
+| Sat 24 Oct | 6 public, 3 scheduled | 4 | 3 | ⏳ 6 of 15 so far, 3 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -70,11 +70,6 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![QD-144](QD-144.jpg)
-
-## In the queue
-
-- **QD-151** Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮 (rendering next)
-- **QD-152** Melanie C leads a sweaty Strictly workout to her own track 💪 (rendering next)
 
 ## On the channel (latest first)
 

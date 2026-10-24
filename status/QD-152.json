@@ -1,0 +1,98 @@
+{
+ "id": "QD-152",
+ "board": "boards/queue/QD-152.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T10:00:00Z",
+ "rendered": "2026-10-24T07:36:56.871385+00:00",
+ "title": "Melanie C leads a sweaty Strictly workout to her own track 💪",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 6 reused a nearby picture (page:https://www.bbc.co.uk/mediacentre/2026/strictly-come-dancing-melanie-c-pro-routine: bbc.co.uk is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 10
+ },
+ "music": "dance-with-you",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lily",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 30.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.6
+ },
+ "timeline": [
+  [
+   0.06,
+   4.07,
+   "title",
+   0
+  ],
+  [
+   4.07,
+   10.15,
+   "none",
+   1
+  ],
+  [
+   10.15,
+   15.5,
+   "none",
+   1
+  ],
+  [
+   15.5,
+   21.86,
+   "none",
+   2
+  ],
+  [
+   21.86,
+   26.55,
+   "none",
+   1
+  ],
+  [
+   26.55,
+   29.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1678",
+   "q": "ballroom dance floor",
+   "t0": 0.0,
+   "t1": 15.26
+  },
+  {
+   "p": "pixabay",
+   "id": "122737",
+   "q": "tv studio lights",
+   "t0": 14.66,
+   "t1": 29.92
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T07:49:42Z",
+ "video": "fGjeLLGyljU",
+ "url": "https://youtube.com/shorts/fGjeLLGyljU",
+ "publish_at": "2026-10-24T10:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T10:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-152"
+}

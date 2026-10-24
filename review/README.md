@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 10:37): 10 of 1,000 subscribers · 7,851 of 10 million Shorts views in 90 days · 6,369 views in the last 24 hours (about 111,024 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 11:37): 11 of 1,000 subscribers · 7,800 of 10 million Shorts views in 90 days · 6,417 views in the last 24 hours (about 111,024 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 9:39 (UK): 2 scheduled, 134 public, 25 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 14 scheduled |
-| Sat 24 Oct | 8 public, 6 scheduled | 18 | 3 | ⏳ 8 of 15 so far, 6 more scheduled |
+| Sat 24 Oct | 9 public, 5 scheduled | 22 | 3 | ⏳ 9 of 15 so far, 5 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -74,7 +74,7 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 ## On the channel (latest first)
 
 ### Sat 24 Oct 11:00 · Melanie C leads a sweaty Strictly workout to her own track 💪
-scheduled · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
+private · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
 
 ![QD-152](QD-152.jpg)
 
@@ -159,22 +159,22 @@ public · 19 views · 29 s · music: city-of-the-wolf · [script](../boards/done
 ![QD-136](QD-136.jpg)
 
 ### Fri 23 Oct 14:30 · Tate McRae: The new number one hit 🎶
-public · 904 views · 23 s · music: dance-with-you · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
+public · 904 views · 23 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
 
 ![QD-135](QD-135.jpg)
 
 ### Fri 23 Oct 14:00 · I Play Rocky: Sylvester Stallone biopic trailer 🥊
-public · 141 views · 32 s · music: scale-the-mountain · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
+public · 141 views · 32 s · music: scale-the-mountain · on Instagram · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
 
 ![QD-134](QD-134.jpg)
 
 ### Fri 23 Oct 13:30 · BABYMONSTER: The massive world tour expansion 🎤
-public · 571 views · 32 s · music: dance-with-you · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
+public · 571 views · 32 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
 
 ![QD-133](QD-133.jpg)
 
 ### Fri 23 Oct 13:00 · LISA: Her first solo EP is coming 🎤
-public · 83 views · 29 s · music: dance-with-you · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
+public · 83 views · 29 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
 
 ![QD-132](QD-132.jpg)
 

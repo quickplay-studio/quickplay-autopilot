@@ -38,24 +38,27 @@ def halves(text):
     return a, b[0].upper() + b[1:] if b else ""
 
 
-def split_read(sb, bi, vdir, voice, wps, out_root):
-    """Reads one stubborn beat as two short sentences and joins them: returns (recall, seconds) of the joined audio, which
-    replaces cb_b<bi>.wav in `vdir`, or None when it is no better. Never raises: a failure here just leaves the beat as it was."""
+def split_read(sb, bi, vdir, voice, wps, out_root, was):
+    """Reads one stubborn beat as two short sentences and joins them with a short pause. The two halves are each checked by
+    the same ear proxy as any beat (their own cb_manifest), so nothing is measured twice; when the worse half beats `was`
+    (the recall of the read we have) and is clear enough, the joined audio replaces cb_b<bi>.wav in `vdir` and
+    (recall, seconds) comes back. None when it is no better, and the beat keeps the audio it had."""
     import shutil
     a, b = halves(sb["beats"][bi].get("say_cb") or sb["beats"][bi]["say"])
-    if not a or not b: return None
+    if not a or not b: print(f"beat {bi}: no natural place to split", flush=True); return None
     d = out_root / f"{vdir}-split{bi}"
     two = d / "two.json"; d.mkdir(parents=True, exist_ok=True)
     two.write_text(json.dumps({"id": sb["id"], "beats": [{"say": a}, {"say": b}]}))
     sh(PY, "tts_cb.py", two, d, "--voice", voice, "--target-wps", str(wps))
     w0, w1 = d / "cb_b00.wav", d / "cb_b01.wav"
     if not (w0.exists() and w1.exists()): return None
+    halves_recall = [x.get("recall", 0) for x in json.loads((d / "cb_manifest.json").read_text()).get("beats") or []]
+    recall = min(halves_recall) if len(halves_recall) == 2 else 0
+    print(f"beat {bi}: as two sentences, {', '.join(f'{r:.0%}' for r in halves_recall)} of words heard (was {was:.0%})", flush=True)
+    if recall < 0.5 or recall <= was: return None
     joined = d / "joined.wav"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(w0), "-i", str(w1), "-filter_complex",
                     "[0:a]apad=pad_dur=0.12[a0];[a0][1:a]concat=n=2:v=0:a=1[a]", "-map", "[a]", str(joined)], check=True)
-    sys.path.insert(0, str(P))
-    import qa_asr as Q
-    recall = Q.recall(sb["beats"][bi]["say"], Q.hear(str(joined)))[0]
     secs = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(joined)],
                                 capture_output=True, text=True, check=True).stdout or 0)
     shutil.copy(joined, out_root / vdir / f"cb_b{bi:02d}.wav")
@@ -257,11 +260,10 @@ def main():
         if weak:                       # still unclear after three reads: each stubborn beat read again as two short sentences
             fixed, mbeats = [], {b["beat"]: b for b in man["beats"]}
             for bi in list(weak):
-                try: got = split_read(sb, bi, vdir, v, wps0 * 0.9, P)
+                try: got = split_read(sb, bi, vdir, v, wps0 * 0.9, P, mbeats[bi]["recall"])
                 except Exception as e: print(f"split read of beat {bi} failed: {str(e)[:160]}", flush=True); got = None
-                if not got or got[0] < max(0.4, mbeats[bi]["recall"] + 0.05): continue
+                if not got: continue
                 mbeats[bi].update(recall=round(got[0], 3), dur=got[1], split=True); fixed.append(bi)
-                print(f"beat {bi}: read as two sentences instead, {got[0]:.0%} of words heard", flush=True)
             if fixed:
                 weak = [b for b in weak if b not in fixed]
                 worst = -min([mbeats[b]["recall"] for b in weak], default=1.0)

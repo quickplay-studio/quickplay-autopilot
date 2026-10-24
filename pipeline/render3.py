@@ -22,6 +22,7 @@ sys.path.insert(0, str(HERE))
 import numpy as np
 import soundfile as sf
 import render as R  # v2 renderer: TTS, timeline, captions, capture loop
+import faces as FC     # YuNet face finder (Haar cascade when its model file is missing)
 
 SR, FPS = R.SR, R.FPS
 GRAPHIC = {"title", "stat", "cards", "quote", "date", "versus", "timeline", "bars", "cta"}
@@ -119,17 +120,21 @@ except Exception: CFG_RENDER = {}
 
 
 def face_focus(path):
-    """The largest face in a picture as (x, y) fractions of its size, or None (OpenCV's frontal detector; without OpenCV
-    or a face, None). The full-screen window and a card's framing follow it, and captions move off it (template3.html)."""
+    """The largest face in a picture as (x, y) fractions of its size, or None (YuNet, which also finds side-on, small and
+    tilted faces: faces.py; OpenCV's frontal Haar cascade when the YuNet model file is missing; without OpenCV or a face,
+    None). The full-screen window and a card's framing follow it, and captions move off it (template3.html)."""
     try:
         import cv2
         img = cv2.imread(str(path))
         if img is None: return None
         h, w = img.shape[:2]; sc = min(1.0, 800 / max(w, h))
         small = cv2.resize(img, (int(w * sc), int(h * sc))) if sc < 1 else img
-        grey = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
-        det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
-        faces = det.detectMultiScale(grey, 1.1, 5, minSize=(max(24, int(min(small.shape[:2]) * 0.06)),) * 2)
+        minpx = max(24, int(min(small.shape[:2]) * 0.06))
+        faces = FC.yunet_faces(small, minpx)
+        if faces is None:                                       # no YuNet: the Haar cascade, as before
+            grey = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
+            det = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+            faces = det.detectMultiScale(grey, 1.1, 5, minSize=(minpx,) * 2)
         if len(faces) == 0: return None
         x, y, fw, fh = max(faces, key=lambda f: f[2] * f[3])
         return (round(float(x + fw / 2) / small.shape[1], 3), round(float(y + fh / 2) / small.shape[0], 3))

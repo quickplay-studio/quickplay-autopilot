@@ -252,6 +252,10 @@ def main():
                 got = fetch_media.extras(sb)
                 if got: status["media"]["extra_photos"] = got
             except Exception as e: print(f"extra photos skipped: {str(e)[:160]}", flush=True)
+        try:        # how well the pictures fit their beats (pictures.py): media.pic_* in status, shorts.csv by analytics.py
+            status["media"].update(fetch_media.pictures_summary(sb))
+            fetch_media.PX.unload()     # the picture model's 1.5 GB is not needed again; the voice model loads next
+        except Exception as e: print(f"picture summary skipped: {str(e)[:160]}", flush=True)
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)

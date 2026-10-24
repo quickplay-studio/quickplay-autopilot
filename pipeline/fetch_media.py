@@ -17,13 +17,22 @@ Shot "src" forms (anything else is treated as a local path under pipeline/):
 A video shot with "cuts": "auto" gets scene-cut detection, so trailer clips never cross a cut (render3 scene_fit).
 resolve() keeps each shot's own form in shot["from"], and extras() (the minimal style's fast pace, 24 October) adds more
 photos of the same subject from the same Commons search, as shots marked "extra" and "of" the shot they belong to.
+
+Relevance (24 October, pictures.py): a search no longer takes its first hit. Each search's first 8 candidates (Commons photos,
+Pixabay photo and video thumbnails, Openverse, NASA) are scored by SigLIP 2 against the beat's text (the shot's words, its
+label, the beat's "say" line, the board's subject), near-duplicates are dropped, and the best one is taken. The score stays on
+the shot ("relevance", 0 to 1; shots from an explicit source such as commons:File: are scored too) and pictures_summary() hands
+status/<id>.json the mean and the share of beats where a picture was found. With no model (or any failure) every search keeps
+its own order, as it always did.
 usage: python fetch_media.py <board.json> <resolved.json>
 """
 import hashlib, html, json, os, pathlib, re, subprocess, sys, time, urllib.parse
 import requests
+import pictures as PX
 
 HERE = pathlib.Path(__file__).resolve().parent
 UA = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}
+PX.HEADERS = UA
 COMMONS = "https://commons.wikimedia.org/w/api.php"
 
 def _get(url, **kw):
@@ -64,16 +73,19 @@ def _stem(w):
     return w[:-1] if len(w) > 4 and w.endswith("s") else w
 
 _CANDS = {}      # a Commons search's candidates, kept per search: the fast pace's extra photos cost no second search
+_RANKED = set()  # the searches whose candidates pictures.py already ordered by relevance (their order is what _CANDS keeps)
+PICK = {}        # resolve() tells the pick functions the beat's text for the ranker ("ctx") and they leave the chosen picture's scores ("info")
 
 def commons_candidates(words):
     """Every Commons photo a search can use, best first. The file title must contain every capitalised word of the query (the
     name), so a search for a person never returns a building or someone else; photos with politicians are skipped. A query
     with no capitalised words ("octopus arm suckers") needs all its longer words in the title, or failing that any two of
     them, so a loose description still finds the subject without matching something unrelated. Pictures 1600 px wide or
-    more come before those of 1000 to 1599 px. [] when nothing fits."""
+    more come before those of 1000 to 1599 px. [] when nothing fits. Each page carries its 330 px thumbnail (imageinfo[0]
+    ["thumburl"]) for the relevance ranking."""
     if words in _CANDS: return _CANDS[words]
     q = {"action": "query", "generator": "search", "gsrsearch": f"{words} filetype:bitmap", "gsrnamespace": 6,
-         "gsrlimit": 30, "prop": "imageinfo", "iiprop": "size", "format": "json"}
+         "gsrlimit": 30, "prop": "imageinfo", "iiprop": "size|url", "iiurlwidth": 330, "format": "json"}
     pages = sorted(_get(COMMONS, params=q).json().get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
     pages = [p for p in pages if not POLITICAL.search(p["title"])]
     caps = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)]
@@ -91,10 +103,40 @@ def commons_candidates(words):
     if out: _CANDS[words] = out
     return out
 
+def _ranked(items, thumbs, bonus=None):
+    """A source's candidates (its own order, `thumbs` their thumbnail urls) as [(item, scores)], most relevant to the beat first,
+    near-duplicates left out, when pictures.py can rank them; None when it cannot (no model, no beat text, any failure): the
+    caller then keeps the source's own order. The scores are what the shot keeps ("relevance")."""
+    ctx = PICK.get("ctx")
+    if not ctx or not items: return None
+    try: order = PX.rank(thumbs, ctx, bonus)
+    except Exception as e:
+        print(f"  media: picture ranking skipped: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr); return None
+    return None if order is None else [(items[i], info) for i, info in order]
+
+def _rank_commons(words, c):
+    """Commons candidates, best first by relevance to the beat (the first 8 by their thumbnails) when they can be ranked. The
+    ranked list replaces the search's own in _CANDS, so extras() and later shots see it and c[0] is the picture taken."""
+    if words in _RANKED:
+        if c and c[0].get("_info"): PICK["info"] = c[0]["_info"]
+        return c
+    order = _ranked(c, [((p.get("imageinfo") or [{}])[0]).get("thumburl") for p in c])
+    if order is None: return c
+    for p, info in order:
+        if info: p["_info"] = info
+    ranked = [p for p, _ in order]
+    _CANDS[words] = ranked
+    _RANKED.add(words)
+    PICK["info"] = order[0][1]
+    return ranked
+
 def commons_search(words):
-    """The best Commons photo for the words (commons_candidates' first)."""
+    """The best Commons photo for the words (commons_candidates' first, or the most relevant of its first 8 when the beat's text
+    can rank them: pictures.py)."""
     c = commons_candidates(words)
-    if c: return commons_file(c[0]["title"])
+    if c:
+        c = _rank_commons(words, c)
+        return commons_file(c[0]["title"])
     raise RuntimeError(f"no Commons image named '{words}'")
 
 def _brightness(url):
@@ -136,18 +178,24 @@ def pixabay(kind, words, used, dark_ok=False):
             if h["id"] in used or not v.get("url") or h.get("duration", 0) < 4 or _junk(h, words): continue
             score = _match(h.get("tags"), words) + (0.15 if v.get("height", 0) > v.get("width", 1) else 0) - rank * 0.005
             cands.append((score, h, v))
-        for score, h, v in sorted(cands, key=lambda c: -c[0])[:6]:
-            thumb = v.get("thumbnail") or (h["videos"].get("tiny") or {}).get("thumbnail")
+        top = sorted(cands, key=lambda c: -c[0])
+        thumb_of = lambda c: c[2].get("thumbnail") or (c[1]["videos"].get("tiny") or {}).get("thumbnail")
+        # the tag match picked the best 8 to look at; relevance to the beat orders them (a vertical clip edges ahead a little)
+        pick = _ranked(top, [thumb_of(c) for c in top], [0.01 if c[2].get("height", 0) > c[2].get("width", 1) else 0.0 for c in top])
+        for (score, h, v), info in (pick[:8] if pick else [(c, None) for c in top[:6]]):
+            thumb = thumb_of((score, h, v))
             if not dark_ok and thumb and _brightness(thumb) < 38: continue
-            used.add(h["id"])
+            used.add(h["id"]); PICK["info"] = info
             return v["url"], f"Video: {h['user']} / Pixabay", h["pageURL"]
     else:
         hits = _get("https://pixabay.com/api/", params={"key": key, "q": words[:100], "image_type": "photo", "safesearch": "true", "per_page": 40}).json()["hits"]
         cands = [(_match(h.get("tags"), words) + (0.15 if h.get("imageHeight", 0) > h.get("imageWidth", 1) else 0) - r * 0.005, h)
                  for r, h in enumerate(hits) if h["id"] not in used and not _junk(h, words)]
-        for score, h in sorted(cands, key=lambda c: -c[0])[:6]:
+        top = sorted(cands, key=lambda c: -c[0])
+        pick = _ranked(top, [c[1].get("webformatURL") for c in top])          # 640 px previews, for the relevance ranking
+        for (score, h), info in (pick[:8] if pick else [(c, None) for c in top[:6]]):
             if not dark_ok and _brightness(h["previewURL"]) < 38: continue
-            used.add(h["id"])
+            used.add(h["id"]); PICK["info"] = info
             return h["largeImageURL"], f"Photo: {h['user']} / Pixabay", h["pageURL"]
     raise RuntimeError(f"no usable Pixabay {kind} for '{words}'")
 
@@ -160,17 +208,22 @@ def nasa(kind, words, used):
     media = "video" if kind == "video" else "image"
     items = _get(f"{NASA}/search", params={"q": words, "media_type": media}).json().get("collection", {}).get("items", [])
     want = [_stem(w) for w in words.split() if len(w) > 3]
+    cands = []
     for it in items[:30]:
         d = (it.get("data") or [{}])[0]; nid = d.get("nasa_id")
         text = _fold(" ".join([d.get("title", "")] + list(d.get("keywords") or [])))
         if not nid or nid in used or NOT_NASA.search(" ".join(str(d.get(k, "")) for k in ("description", "photographer", "secondary_creator"))):
             continue
         if want and sum(w in text for w in want) < min(2, len(want)): continue
+        cands.append(it)
+    prev = lambda it: next((l.get("href") for l in it.get("links") or [] if l.get("rel") == "preview" and l.get("href")), None)
+    for it, info in _ranked(cands, [prev(c) for c in cands]) or [(c, None) for c in cands]:
+        d = (it.get("data") or [{}])[0]; nid = d.get("nasa_id")
         hrefs = [h.replace("http://", "https://") for h in _get(it["href"]).json() if isinstance(h, str)]
         prefs = ("~large.mp4", "~medium.mp4", "~orig.mp4") if media == "video" else ("~large.jpg", "~orig.jpg", "~medium.jpg")
         pick = next((h for suf in prefs for h in hrefs if h.endswith(suf)), None)
         if not pick: continue
-        used.add(nid)
+        used.add(nid); PICK["info"] = info
         return pick, f"{'Video' if media == 'video' else 'Photo'}: NASA ({d.get('center') or 'NASA'})", f"https://images.nasa.gov/details/{urllib.parse.quote(nid)}"
     raise RuntimeError(f"no NASA {media} for '{words}'")
 
@@ -183,11 +236,16 @@ def openverse(words, used):
     except requests.HTTPError:          # Openverse now asks for a sign-in: Commons still covers most people
         return commons_search(words)
     caps = [_fold(w) for w in re.findall(r"[A-Z][\w'-]+", words)]
+    ok = []
     for it in res:
         text = _fold(it.get("title", "")) + " " + " ".join(_fold(t.get("name", "")) for t in it.get("tags") or [])
         if it.get("id") in used or POLITICAL.search(text) or (it.get("width") or 0) < 1000: continue
         if caps and not all(c in text for c in caps): continue
-        used.add(it["id"])
+        ok.append(it)
+    pick = _ranked(ok, [x.get("thumbnail") for x in ok]) or [(x, None) for x in ok]
+    if pick:
+        it, info = pick[0]
+        used.add(it["id"]); PICK["info"] = info
         lic = {"cc0": "CC0", "pdm": "public domain"}.get(it.get("license"), f"CC {str(it.get('license', '')).upper()} {it.get('license_version', '')}".strip())
         return it["url"], f"Photo: {it.get('creator') or 'Unknown'}, {lic}, via {str(it.get('source') or 'Openverse').title()}", \
             it.get("foreign_landing_url") or it["url"]
@@ -258,9 +316,35 @@ def gameplay_clip(sid, k):
     return f, (h // 7) % max(1, int(dur) - 20)
 
 
+def _words(kind, rest):
+    """The search words of a shot's src, for the ranker's text ("pixabay:video:crowd cheering" -> "crowd cheering"; a Commons
+    file name without File: and its extension; nothing for a url or a page, whose picture is named by its source alone)."""
+    if kind in ("url", "page"): return ""
+    if kind in ("pixabay", "nasa"): return rest.partition(":")[2] or rest
+    if kind == "commons": return re.sub(r"\.\w{2,5}$", "", re.sub(r"^File:", "", rest, flags=re.I)).replace("_", " ")
+    return rest
+
+
+def _relevance(f):
+    """{"relevance": 0.83} for the picture just downloaded: the score the ranking chose it by (PICK["info"]), else scored now
+    when it is a still (a shot from an explicit source: no candidates to choose between). {} with no score. The picture is
+    then "taken": a later candidate that repeats it goes behind the others."""
+    try:
+        info = PICK.get("info") or PX.score_file(f, PICK.get("ctx"))
+        if not info: return {}
+        PX.commit(info)
+        return {"relevance": info["rel"]}
+    except Exception as e:
+        print(f"  media: relevance not kept for {f.name}: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+        return {}
+
+
 def resolve(sb):
     sid = sb["id"]; d = HERE / "media" / sid; d.mkdir(parents=True, exist_ok=True)
     used, cache, n = set(), {}, 0
+    _RANKED.clear()
+    try: PX.begin(sb)                           # a new Short for the picture ranker: the board's subject and category, a clean slate
+    except Exception as e: print(f"  media: picture ranking not started: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
     for beat in sb["beats"]:
         for shot in beat.get("shots") or []:
             src = shot["src"]
@@ -268,6 +352,9 @@ def resolve(sb):
             if src in cache:
                 shot.update(cache[src]); continue
             kind, _, rest = src.partition(":")
+            PICK.clear()
+            try: PICK["ctx"] = PX.context(_words(kind, rest), beat.get("say"), shot.get("label"))      # the beat's text; None when it has none
+            except Exception: PICK["ctx"] = None
             try:
                 if kind == "commons": url, credit, source = commons_file(rest)
                 elif kind == "commons-search": url, credit, source = commons_search(rest)
@@ -286,7 +373,7 @@ def resolve(sb):
                 stem = f"{n:02d}_" + hashlib.sha1(url.encode()).hexdigest()[:8]; n += 1
                 f = download(url, d, stem)
                 if shot.get("cuts") == "auto" and f.suffix in {".mp4", ".mov", ".webm", ".m4v"}: scene_cuts(f)
-                res = {"src": os.path.relpath(f, HERE), "credit": credit, "source": source}
+                res = {"src": os.path.relpath(f, HERE), "credit": credit, "source": source, **_relevance(f)}
                 if kind not in ("pixabay", "gameplay"): cache[src] = res   # same image reused on purpose; stock never repeats
                 shot.update(res)
             except Exception as e:
@@ -296,6 +383,8 @@ def resolve(sb):
     # move, so it doesn't look frozen) instead of failing the whole Short; run_board flags it so a person checks it.
     goods = [[s for s in beat.get("shots") or [] if "_failed" not in s] for beat in sb["beats"]]
     if not any(goods): raise RuntimeError("no usable media for any beat")
+    asked = [bi for bi, beat in enumerate(sb["beats"]) if beat.get("shots")]
+    sb["_pic_found"] = [sum(1 for bi in asked if goods[bi]), len(asked)]        # beats where a picture was found, of those that asked for one
     notes = []
     for bi, beat in enumerate(sb["beats"]):
         if not beat.get("shots"): continue
@@ -308,7 +397,7 @@ def resolve(sb):
         for k in ("w", "at", "tin"):
             if k in mine: donor[k] = mine[k]
             else: donor.pop(k, None)
-        donor.pop("label", None)
+        donor.pop("label", None); donor.pop("relevance", None)      # its score was for another beat's words
         if donor.get("start") is not None: donor["start"] = float(donor["start"]) + 2.0
         beat["shots"] = [donor]
         notes.append(f"beat {bi + 1} reused a nearby picture ({mine.get('src', '?')}: {mine.get('_failed', 'not found')[:80]})")
@@ -370,9 +459,27 @@ def extras(sb, per=2, cap=18, seconds=80):
                 except Exception as e:
                     print(f"  media: extra photo {c['title']} failed: {e}", file=sys.stderr); continue
                 seen.append(h); room -= lines(credit, source); got += 1; added += 1
-                add.append({"src": os.path.relpath(f, HERE), "credit": credit, "source": source, "extra": True, "of": shot["src"]})
+                add.append({"src": os.path.relpath(f, HERE), "credit": credit, "source": source, "extra": True, "of": shot["src"],
+                            **({"relevance": c["_info"]["rel"]} if c.get("_info") else {})})
         if add: bt["shots"] = list(bt.get("shots") or []) + add
     return added
+
+
+def pictures_summary(sb):
+    """What status/<id>.json keeps of the picture ranking (media.*, then shorts.csv by analytics.py): pic_relevance, the mean
+    relevance (0 to 1) of the pictures used, extras included, and pic_found_share, the share of the beats that asked for a
+    picture where one was found; "" when there was nothing to score (no model, or no stills). Plus the ranker's own counts
+    (pictures.summary). Never raises: a Short is never held up by its own statistics."""
+    out = {}
+    try:
+        found = sb.pop("_pic_found", None)
+        if found and found[1]: out["pic_found_share"] = round(found[0] / found[1], 2)
+        rel = [sh["relevance"] for bt in sb.get("beats") or [] for sh in bt.get("shots") or [] if isinstance(sh.get("relevance"), (int, float))]
+        if rel: out["pic_relevance"] = round(sum(rel) / len(rel), 3)
+        out.update(PX.summary())
+    except Exception as e:
+        print(f"  media: picture summary failed: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+    return out
 
 if __name__ == "__main__":
     sb = json.loads(pathlib.Path(sys.argv[1]).read_text())

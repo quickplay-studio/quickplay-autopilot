@@ -57,9 +57,13 @@ assert not [t for t, s in W.topics_today() if "Dune" in s], W.topics_today()
 NEWS = 20                                   # 20 articles a day is a big film's normal coverage, not a surge
 got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
 assert got["Dune: Part Three"]["level"] == "steady", got["Dune: Part Three"]
-NEWS = 45                                   # a trailer drops: surging that run, whatever the date (no history: 40 or more)
+NEWS = 100                                  # no news history yet: a lot of news is not a surge on its own (its normal)
+got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
+assert got["Dune: Part Three"]["level"] == "steady", got["Dune: Part Three"]
+VIEWS = [10000] * 29 + [16000]              # a trailer drops: Wikipedia interest jumps, surging that run whatever the date
 got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
 assert got["Dune: Part Three"]["level"] == "surging" and ("Dune: Part Three", "watchlist: Dune: Part Three (surging, 56 days to go)") in W.topics_today()
+VIEWS = [10000] * 30
 import csv as _csv                          # with a week of history: twice its usual is a surge
 rows = list(_csv.DictReader(W.HIST.open())); f = list(rows[0].keys())
 rows += [dict(rows[-1], day=f"2026-10-1{k}", name="Dune: Part Three", news_24h="25") for k in range(5)]

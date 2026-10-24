@@ -105,14 +105,20 @@ def recent(days=14):
     return out
 
 
-def covered(p, seen):
+def covered(p, seen, watch=None):
     """Covered: a recent board cites one of the pack's articles (Wikipedia pages don't count: many stories share one), or
-    its title shares two of the topic's longer words."""
+    its title shares two of the topic's longer words. A watchlist topic (watch: True, or a "watchlist" signal) is judged
+    more loosely, because a big event's news all cites the same few articles: covered only when one recent board cites at
+    least half of its articles (and two or more), or its title shares two of the topic's longer words. (24 October: one GTA
+    6 Short made every GTA 6 and Avengers angle "covered", so the watchlist's places a day could never be filled.)"""
+    if watch is None: watch = str(p.get("signal", "")).startswith("watchlist")
     words = {w for w in re.findall(r"[a-z0-9]+", p["topic"].lower()) if len(w) > 3}
     urls = {s[1] for s in p.get("sources") or [] if len(s) > 1 and "wikipedia.org" not in str(s[1])}
+    need_urls = max(2, -(-len(urls) // 2)) if watch else 1
+    need_words = 2 if watch else min(2, len(words))
     for title, _, srcs in seen:
-        if urls & srcs: return True
-        if words and len(words & set(re.findall(r"[a-z0-9]+", title.lower()))) >= min(2, len(words)): return True
+        if urls and len(urls & srcs) >= need_urls: return True
+        if words and len(words) >= need_words and len(words & set(re.findall(r"[a-z0-9]+", title.lower()))) >= need_words: return True
     return False
 
 

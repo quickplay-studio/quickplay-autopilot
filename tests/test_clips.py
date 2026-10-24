@@ -331,3 +331,31 @@ assert got["clips"]["take_unseen"] and C.unseen_cap("clips") == 4 and C.unseen_c
 assert C.unseen_cap("clips") == 4 and (C.ROOT / "analytics" / "decisions.csv").read_text().count("clips channel: 4 clips a day") == 1   # noted once
 C.reach_check([dict(r, views="40") for r in rows]); assert C.unseen_cap("clips") is None
 print("unseen cap ok")
+
+# a promote window that took more than meant is undone: promoted clips uploaded before a time go private again; a series
+# part is never promoted; promote honours a "since" time
+C.ROOT = pathlib.Path(SCRATCH) / "dm"; (C.ROOT / "clips").mkdir(parents=True); C.PLANS = C.ROOT / "clips" / "plans"; C.PLANS.mkdir()
+C.STATE = C.ROOT / "clips" / "state"
+CALLS.clear()
+old_up, new_up = (C.NOW - dt.timedelta(hours=30)).isoformat(timespec="minutes"), (C.NOW - dt.timedelta(hours=2)).isoformat(timespec="minutes")
+(C.PLANS / "speed-expedia.json").write_text(json.dumps({"moments": [
+    {"id": "speed-expedia-60", "video": "v60", "publish_at": "private", "uploaded": old_up, "channel": "clips"},
+    {"id": "speed-expedia-61", "video": "v61", "publish_at": "private", "uploaded": new_up, "channel": "clips"},
+    {"id": "speed-expedia-62", "video": "v62", "publish_at": "private", "uploaded": new_up, "channel": "clips", "episode": 1}]}))
+with (C.ROOT / "clips" / "submit.csv").open("w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=C.SUBMIT_FIELDS); w.writeheader()
+    w.writerow({"clip": "speed-expedia-60", "campaign": "speed-expedia", "public_at_uk": "private (test)"})
+assert C.promote_tests(72) == 2                        # the series part stays private
+ms = {m["id"]: m for m in json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]}
+assert ms["speed-expedia-62"]["publish_at"] == "private" and ms["speed-expedia-60"]["promoted"]
+since = (C.NOW - dt.timedelta(hours=12)).isoformat(timespec="minutes")
+CALLS.clear(); assert C.demote(since) == 1 and len(CALLS) == 1 and "publishAt" not in CALLS[0][1]["status"], CALLS
+ms = {m["id"]: m for m in json.loads((C.PLANS / "speed-expedia.json").read_text())["moments"]}
+assert ms["speed-expedia-60"]["publish_at"] == "private" and "promoted" not in ms["speed-expedia-60"] and ms["speed-expedia-61"]["publish_at"] != "private"
+assert next(csv.DictReader((C.ROOT / "clips" / "submit.csv").open()))["public_at_uk"] == "private (test)"
+assert C.demote(since) == 0                            # once only
+# promote with a since time takes only what came after it
+ms["speed-expedia-61"].update(publish_at="private"); ms["speed-expedia-61"].pop("promoted")
+(C.PLANS / "speed-expedia.json").write_text(json.dumps({"moments": list(ms.values())}))
+assert C.promote_tests(72, since=since) == 1
+print("demote ok")

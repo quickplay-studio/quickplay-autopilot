@@ -926,21 +926,25 @@ def upload(cid, mode=None):
     return rows
 
 
-def promote_tests(hours=48):
+def promote_tests(hours=48, since=None):
     """Private test clips (CLIPS_MODE=private) join the next batch instead of being wasted: each uploaded in the last
-    `hours` for a campaign still running gets the batch's publish time on YouTube, counts toward its channel's day (so the
-    next run makes that many fewer) and its submit row gets the public time (so it is posted and submitted like the rest).
-    Only when asked: "promote" in requests/clips.txt (a test stays private otherwise). 23 October: the spoken-take test
-    made 11 good clips privately."""
+    `hours` (and after `since`, an ISO time, when given) for a campaign still running gets the batch's publish time on
+    YouTube, counts toward its channel's day (so the next run makes that many fewer) and its submit row gets the public
+    time (so it is posted and submitted like the rest). Series parts never (a part on its own makes no sense). Only when
+    asked: "promote" in requests/clips.txt (a test stays private otherwise). 23 October: the spoken-take test made 11 good
+    clips privately. 24 October: a 72-hour window also took 20 older test clips; demote() puts those back."""
     import quota
     cs, cut, clients, n, fixed, blocked = campaigns(), NOW - dt.timedelta(hours=hours), {}, 0, {}, False
+    if since:
+        try: cut = max(cut, dt.datetime.fromisoformat(str(since)))
+        except ValueError: pass
     pending = STATE / "promote.json"          # asked but held back by the YouTube allowance: the next run or prepare does it
     for p in sorted(PLANS.glob("*.json")):
         if p.name.endswith(".words.json") or p.stem not in cs: continue
         cid = p.stem; plan_ = json.loads(p.read_text()); changed = False
         iso, when = batch_time(cs[cid].get("platform"))
         for m in plan_.get("moments") or []:
-            if m.get("publish_at") != "private" or not m.get("video") or m.get("pulled"): continue
+            if m.get("publish_at") != "private" or not m.get("video") or m.get("pulled") or m.get("episode"): continue
             try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
             except ValueError: continue
             if up < cut: continue
@@ -972,6 +976,47 @@ def promote_tests(hours=48):
             w = csv.DictWriter(f, fieldnames=SUBMIT_FIELDS, extrasaction="ignore"); w.writeheader()
             w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in rows])
     log(f"promote: {n} private test clip(s) join the next batch")
+    return n
+
+
+def demote(since):
+    """Puts promoted test clips uploaded before `since` (ISO time) back to private with no publish time: on YouTube, in the
+    plans (publish_at "private" again) and in clips/submit.csv. For a promote window that took more than was meant."""
+    import quota
+    cut, clients, n, back = dt.datetime.fromisoformat(str(since)), {}, 0, set()
+    for p in sorted(PLANS.glob("*.json")):
+        if p.name.endswith(".words.json"): continue
+        cid = p.stem; plan_ = json.loads(p.read_text()); changed = False
+        for m in plan_.get("moments") or []:
+            if not m.get("promoted") or not m.get("video") or m.get("publish_at") in (None, "private"): continue
+            try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
+            except ValueError: continue
+            if up >= cut: continue
+            try: due = dt.datetime.fromisoformat(str(m["publish_at"]).replace("Z", "+00:00"))
+            except ValueError: continue
+            if due <= NOW: log(f"{m['id']}: already public, left as it is"); continue
+            if not quota.allow(50, "clip demote"): log("demote: no YouTube allowance left today"); break
+            ch = mchannel(cid, m)
+            try:
+                if ch not in clients: clients[ch] = clips_client(ch)
+                clients[ch].videos().update(part="status", body={"id": m["video"], "status": {
+                    "privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False}}).execute()
+                quota.spend(50, "clip demote")
+            except Exception as e:
+                log(f"{m['id']}: not demoted: {type(e).__name__}: {str(e)[:160]}"); continue
+            m.update(publish_at="private", mode="private", demoted=NOW.isoformat(timespec="minutes")); m.pop("promoted", None)
+            back.add(m["id"]); changed = True; n += 1
+            log(f"{m['id']}: back to private (an older test clip)")
+        if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    sp = ROOT / "clips" / "submit.csv"
+    if back and sp.exists():
+        rows = list(csv.DictReader(sp.open()))
+        for r in rows:
+            if r.get("clip") in back and not r.get("submitted"): r["public_at_uk"] = "private (test)"
+        with sp.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=SUBMIT_FIELDS, extrasaction="ignore"); w.writeheader()
+            w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in rows])
+    log(f"demote: {n} older test clip(s) back to private")
     return n
 
 
@@ -1623,10 +1668,15 @@ def main(argv):
         submissions(dry=bool(os.environ.get("SUBMIT_DRY")))
         return
     if cmd == "promote":
-        promote_tests()
+        promote_tests(since=next((a for a in ids if a[:2] == "20"), None))
+        return
+    if cmd == "demote":
+        demote(next(a for a in ids if a[:2] == "20"))
         return
     if cmd in ("run", "prepare") and (STATE / "promote.json").exists():      # a promote the allowance held back
-        try: promote_tests(int(json.loads((STATE / "promote.json").read_text()).get("hours") or 72))
+        try:
+            mk = json.loads((STATE / "promote.json").read_text())
+            promote_tests(int(mk.get("hours") or 48), since=mk.get("since"))
         except Exception as e: log("promote:", str(e)[:200])
     if cmd == "probe":
         for u in ids: probe(u)

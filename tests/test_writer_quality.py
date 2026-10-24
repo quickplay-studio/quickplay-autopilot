@@ -192,3 +192,13 @@ b = json.loads((SCRATCH / "boards" / "ready" / "QD-144.json").read_text()); b.po
 (SCRATCH / "boards" / "ready" / "QD-144.json").write_text(json.dumps(b))
 assert W.hot() == []                                      # a real follow-up does count
 print("dry boards ok")
+
+# a watchlist topic is covered only by half its articles (two or more) or two title words: a big event's news all cites
+# the same few articles, and one GTA 6 Short must not make every GTA 6 angle "covered" (24 October)
+seen_ = [("GTA 6 has no disc, so what will it cost you?", "", {"https://ign.com/p", "https://a.com/x"})]
+p_ = {"topic": "GTA 6 price", "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+      "sources": [["", "https://ign.com/p"], ["", "https://b.com/y"], ["", "https://c.com/z"]]}
+assert not W.covered(p_, seen_) and W.covered(dict(p_, signal="Google Trends"), seen_)
+assert W.covered(dict(p_, sources=[["", "https://ign.com/p"], ["", "https://a.com/x"], ["", "https://c.com/z"]]), seen_)
+assert W.covered({"topic": "Avengers Doomsday", "signal": "watchlist: x", "sources": []}, [("Avengers Doomsday trailer record", "", set())])
+print("watch covered ok")

@@ -106,8 +106,10 @@ jobs:
             python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qi scout; then
             python pipeline/submit.py scout 2>&1 | tee status/clips_log.txt
+          elif echo "$req" | grep -qi demote; then        # "demote 2026-10-23T22:00+00:00": promoted test clips from before it go private again
+            python pipeline/clips.py demote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee status/clips_log.txt
           elif echo "$req" | grep -qi promote; then
-            python pipeline/clips.py promote 2>&1 | tee status/clips_log.txt      # private test clips join the next batch
+            python pipeline/clips.py promote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee status/clips_log.txt      # private test clips join the next batch
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
             python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt

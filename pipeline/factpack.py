@@ -691,7 +691,8 @@ def build():
         t = topics[i - 1]
         if len(packs) >= limit or time.time() - start > 22 * 60 or STATE.get("spent"): break
         if done_before and t.get("signal") != "Charlie's request" and done_before(
-                {"topic": t["topic"], "sources": [[a.get("title", ""), a.get("url", "")] for a in t.get("articles") or []]}, seen):
+                {"topic": t["topic"], "signal": t.get("signal", ""),
+                 "sources": [[a.get("title", ""), a.get("url", "")] for a in t.get("articles") or []]}, seen):
             skipped.append(t["topic"]); continue
         srcs = [dict(a, kind="article") for a in t.get("articles") or []]
         if t.get("wikipedia"): srcs.append({"outlet": "Wikipedia", "title": t["topic"], "url": t["wikipedia"], "published": "", "kind": "wikipedia"})

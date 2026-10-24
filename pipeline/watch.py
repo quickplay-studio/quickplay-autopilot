@@ -11,8 +11,8 @@ For each item in config.json "watchlist" it measures, from free sources:
 - how many YouTube search suggestions it has (what people type).
 Then a phase from the date (build-up within the item's "lead_days", 45 unless set, launch from 3 days before to 7 after)
 and a level: "surging" when momentum is 1.5 or more, it is in Google Trends, or the news jumps: at least twice its usual
-articles a day (the median of the last 7 days in analytics/watch.csv) and 15 or more, or 40 or more while there are under
-3 days of history (a big film is written about 20 times a day every day; that is its normal, not a surge); else "steady".
+articles a day (the median of the last 7 days in analytics/watch.csv) and 15 or more, once there are 3 days of history (a
+big film is written about 100 times a day every day; that is its normal, not a surge); else "steady".
 A steady item (far from its date and quiet) is only measured: no topics and no places until it builds up or surges, so
 four items on the list never take four forced places a day (a trailer drop or a leak turns it surging that run).
 
@@ -103,7 +103,9 @@ def measure(w, today=None):
     where = in_trends(terms)
     days, ph = phase(w, today)
     usual_news = news_usual(w["name"], today)
-    news_jump = news >= 40 if usual_news is None else news >= max(15, 2 * usual_news)
+    # no news jump until the item has 3 days of its own news history: 24 October, Avengers: Doomsday had 100 articles on its
+    # first day and was called surging, but that is its normal (Wikipedia momentum and Google Trends have their own baselines)
+    news_jump = usual_news is not None and news >= max(15, 2 * usual_news)
     surging = (momentum or 0) >= 1.5 or news_jump or "Google Trends" in where
     level = "launch" if ph == "launch" else "surging" if surging else ph
     return {"name": w["name"], "days_to": days, "phase": ph, "level": level, "places": PLACES.get(level, 1),

@@ -136,7 +136,14 @@ def meta_checks():
         seen.add(tok)
         try:
             r = requests.get("https://graph.instagram.com/me", params={"fields": "user_id,username,account_type", "access_token": tok}, timeout=30)
-            if not r.ok: out.append(meta_refusal(label, r)); continue
+            if not r.ok:
+                c = meta_refusal(label, r)
+                # the IG_TOKEN secret only seeds tokens/instagram.enc, which is refreshed weekly and checked above as
+                # "instagram": the seed running out is expected, not a key to renew (it still fails if it answers foreign)
+                if label == "IG_TOKEN" and c.get("found") == "expired key" and igs and igs[0][0] == "instagram":
+                    EXPIRED_SIGNINS.remove(label)
+                    c.update(found="expired seed", note="the seed of tokens/instagram.enc; the stored key is refreshed weekly")
+                out.append(c); continue
             me = r.json(); user = me.get("username", "")
             ok = user in (ACC.get("instagram") or []) or studio_name(user)
             out.append(check(label, f"@{user} ({me.get('user_id')})", ok, expected="a Quickplay Instagram account", note="" if ok else "not a Quickplay name"))
@@ -259,6 +266,12 @@ def audit(live=True):
     if live and len(os.environ.get("SOCIAL_KEY", "")) < 20:
         checks.append(check("SOCIAL_KEY", "missing", False, note="the saved sign-ins cannot be read, so they cannot be checked"))
     elif live:
+        try:            # the channels' Instagram keys refreshed weekly (tokens/instagram_<channel>.enc), then checked as used
+            import social
+            for n in social.refresh_meta_keys(): log("keys:", n)
+            swapped = social.apply_stored_keys()
+            if swapped: log("keys: checking the refreshed keys for", ", ".join(swapped))
+        except (Exception, SystemExit) as e: log("keys:", f"{type(e).__name__}: {str(e)[:120]}")
         checks += login_checks() + youtube_checks() + meta_checks() + tiktok_checks()
         expired_note()
     keep_failures(checks)

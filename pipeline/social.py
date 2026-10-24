@@ -160,11 +160,12 @@ def refresh_meta_keys(env=None, get=None, now=None, every_days=7, warn_days=10):
     return notes
 
 
-def ig_post(t, video_url, caption):
-    """Reel from a public video URL: create a container, wait until Instagram has processed it, publish."""
+def ig_post(t, video_url, caption, extra=None):
+    """Reel from a public video URL: create a container, wait until Instagram has processed it, publish. `extra`: more
+    container parameters (trial_params, thumb_offset: ig_publish)."""
     user = t.get("user") or os.environ.get("IG_USER_ID")
     r = requests.post(f"{IG_API}/{user}/media", data={"media_type": "REELS", "video_url": video_url, "caption": caption,
-                                                       "share_to_feed": "true", "access_token": t["token"]}, timeout=60)
+                                                       "share_to_feed": "true", **(extra or {}), "access_token": t["token"]}, timeout=60)
     if not r.ok: raise RuntimeError(f"instagram container: {r.status_code} {r.text[:300]}")
     cid = r.json()["id"]
     for _ in range(60):
@@ -177,6 +178,155 @@ def ig_post(t, video_url, caption):
     r = requests.post(f"{IG_API}/{user}/media_publish", data={"creation_id": cid, "access_token": t["token"]}, timeout=60)
     if not r.ok: raise RuntimeError(f"instagram publish: {r.status_code} {r.text[:300]}")
     return r.json()["id"]
+
+# ---------- Instagram's own tests (24 October) ----------
+# Instagram gets about 90 views a Reel from an account with 1 follower and 4.4 s average watch; the data report found it
+# favours Gaming and Sport (relative to YouTube), that earlier-morning posts look better (small n) and that YouTube's views
+# at 3 hours don't predict Instagram's (rank correlation 0.10). So Instagram picks its own Reels and tests its own levers,
+# each fixed per Short by its id and recorded on the post (status/<id>.json "instagram"), so analytics scores it against
+# Instagram views (drivers.analyse_instagram) and a proven arm takes most posts here (ig_share), never all:
+# - which Reels: by category fit on Instagram (ig_category_scores), 1 in 4 an exploration pick from any category;
+# - when: half held to the UK morning (instagram_morning_hours), half as soon as they are public, each with its own share
+#   of the day's cap so neither starves the other;
+# - trial reels for half (shown first to non-followers; graduated by Meta when they do well, SS_PERFORMANCE). Meta added
+#   trial_params to the Content Publishing API on 3 December 2025, for Instagram Login and Facebook Login apps alike
+#   (developers.facebook.com/docs/instagram-platform/changelog; reference: .../instagram-graph-api/reference/ig-user/media:
+#   "trial_params ... graduation_strategy: MANUAL or SS_PERFORMANCE", media_type REELS only);
+# - a short caption (the spoken hook and 3 hashtags) for half against the full one (title, summary, YouTube line, 5);
+# - the cover frame (thumb_offset, ms) inside the opening beat, where the hook is on screen (the reference: "Location, in
+#   milliseconds, of the video or reel frame to be used as the cover thumbnail image", default 0).
+# Captions allow 2,200 characters, 30 hashtags and 20 @ tags (the same reference); we use 5 or 3 hashtags.
+def ig_arm(sid, salt, share, a, b):
+    """Arm `a` for a `share` of Shorts, else `b`, fixed by the Short's id and the test's salt (a re-run gives the same)."""
+    h = int(hashlib.sha256(f"{salt}:{sid}".encode()).hexdigest()[:8], 16) / 0xFFFFFFFF
+    return a if h < share else b
+
+
+def ig_share(feature, a, b, default=0.5):
+    """The share of posts for arm `a` of an Instagram test (arm `b` gets the rest): `default` until drivers.csv proves an
+    arm against Instagram views (a push for `a` or a cut back for `b`: 0.8; the reverse: 0.2), never 0 or 1, so the
+    test keeps measuring."""
+    import csv
+    try:
+        v = {r.get("value"): r.get("verdict") for r in csv.DictReader((ROOT / "analytics" / "drivers.csv").open()) if r.get("feature") == feature}
+    except (FileNotFoundError, csv.Error): return default
+    if v.get(a) == "push" or v.get(b) == "cut back": return 0.8
+    if v.get(b) == "push" or v.get(a) == "cut back": return 0.2
+    return default
+
+
+def ig_category_scores(min_reels=15):
+    """How each category does on Instagram, {category: score} with 1.0 typical: the median views of its Reels a day old or
+    more over the median of all of them, shrunk towards 1 by 5 Reels' worth (on the log scale). Under `min_reels`
+    measured Reels: instagram_category_order (the data report: Gaming and Sport) at 1.5, the rest 1.0."""
+    import csv, math, statistics
+    vals = {}
+    try:
+        for r in csv.DictReader((ROOT / "analytics" / "shorts.csv").open()):
+            try: v = float(r.get("ig_views"))
+            except (TypeError, ValueError): continue
+            cat, at = r.get("category"), r.get("ig_posted") or r.get("posted")
+            if not cat or not at: continue
+            try: t = dt.datetime.fromisoformat(str(at).replace("Z", "+00:00"))
+            except ValueError: continue
+            if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+            if (NOW() - t).total_seconds() >= 86400: vals.setdefault(cat, []).append(v)
+    except (FileNotFoundError, csv.Error): pass
+    every = [x for v in vals.values() for x in v]
+    base = statistics.median(every) if every else 0
+    if len(every) < min_reels or base <= 0:
+        return {c: 1.5 for c in CFG.get("instagram_category_order", ["Gaming", "Sport"])}
+    return {c: round(math.exp(math.log(max(0.05, statistics.median(v) / base)) * len(v) / (len(v) + 5)), 3) for c, v in vals.items()}
+
+
+def ig_choose(statuses, cap, now=None, category_of=None):
+    """The Shorts Instagram takes this run and how: {id: {"pick": "category" | "explore", "hour": "morning" | "any"}}.
+    Eligible: public on YouTube within crosspost_max_age_hours, a social release, not posted or skipped yet, and for the
+    morning arm only inside instagram_morning_hours (UK). The day's cap (ramp_cap) is shared between the hour arms by
+    their shares, counted over the last 24 hours, so the morning Reels always have room; at most instagram_max_per_run a
+    run (no bursts). Best category fit first, newest first within it; an exploration pick ranks with the best."""
+    from zoneinfo import ZoneInfo
+    now = now or NOW()
+    category_of = category_of or (lambda s: (board_for(s) or {}).get("category", ""))
+    fresh_h = float(CFG.get("crosspost_max_age_hours", 48))
+    lo, hi = (CFG.get("instagram_morning_hours") or [6, 10])[:2]
+    in_morning = int(lo) <= now.astimezone(ZoneInfo("Europe/London")).hour < int(hi)
+    share_m = ig_share("ig_hour", "morning", "any", float(CFG.get("instagram_hour_share", 0.5))) if CFG.get("instagram_hour_test", True) else 0.0
+    recent = {"morning": 0, "any": 0}
+    for s in statuses:
+        ig = s.get("instagram") if isinstance(s.get("instagram"), dict) else None
+        if not ig: continue
+        try: at = dt.datetime.fromisoformat(str(ig.get("at")).replace("Z", "+00:00"))
+        except ValueError: continue
+        if now - at <= dt.timedelta(hours=24): recent["morning" if ig.get("hour") == "morning" else "any"] += 1
+    cap_m = round(cap * share_m)
+    room = {"morning": max(0, cap_m - recent["morning"]), "any": max(0, cap - cap_m - recent["any"])}
+    scores = ig_category_scores()
+    top = max(list(scores.values()) + [1.0])
+    exp_share = float(CFG.get("instagram_explore_share", 0.25))
+    elig = []
+    for s in statuses:
+        if not (s.get("id") and s.get("video") and s.get("social_release") and s.get("publish_at")): continue
+        if s.get("instagram") or s.get("instagram_skipped"): continue
+        try: pa = dt.datetime.fromisoformat(str(s["publish_at"]).replace("Z", "+00:00"))
+        except ValueError: continue
+        if not 0 <= (now - pa).total_seconds() / 3600 <= fresh_h: continue
+        hour = ig_arm(s["id"], "ig-hour", share_m, "morning", "any") if share_m > 0 else "any"
+        if hour == "morning" and not in_morning: continue
+        pick = ig_arm(s["id"], "ig-explore", exp_share, "explore", "category")
+        score = top if pick == "explore" else scores.get(category_of(s), 1.0)
+        elig.append((-score, -pa.timestamp(), s["id"], pick, hour))
+    out, per_run = {}, int(CFG.get("instagram_max_per_run", 2))
+    for _, _, sid, pick, hour in sorted(elig):
+        if len(out) >= per_run: break
+        if room[hour] <= 0: continue
+        room[hour] -= 1; out[sid] = {"pick": pick, "hour": hour}
+    return out
+
+
+def ig_hook_ms(st):
+    """The cover frame (thumb_offset, ms): inside the opening beat, where the hook is on screen (the middle of beat 0, at
+    most 1.2 s in, from status "timeline"); 1,000 ms without one."""
+    try:
+        t0, t1 = float(st["timeline"][0][0]), float(st["timeline"][0][1])
+        return int(1000 * min(t0 + 1.2, (t0 + t1) / 2))
+    except (KeyError, IndexError, TypeError, ValueError): return 1000
+
+
+def ig_trial_ok():
+    """Trial reels are asked for unless Meta refused one in the last 14 days (status/instagram_trial.json)."""
+    try: s = json.loads((ROOT / "status" / "instagram_trial.json").read_text())
+    except Exception: return True
+    try: return NOW() - dt.datetime.fromisoformat(s["refused"]) > dt.timedelta(days=14)
+    except Exception: return True
+
+
+def ig_publish(t, video_url, cap, trial=False, thumb_ms=None):
+    """ig_post with this Reel's test settings. When Meta refuses the container with them: once more without the trial
+    (remembered for 14 days, status/instagram_trial.json, so the next Reels don't ask), then without the cover frame.
+    A failure after the container (processing, publishing) is not about the settings and is raised as it is.
+    Returns (media id, {"trial": "yes" | "no" | "refused", "thumb_ms": ms or None})."""
+    full = {}
+    if trial: full["trial_params"] = json.dumps({"graduation_strategy": CFG.get("instagram_trial_strategy", "SS_PERFORMANCE")})
+    if thumb_ms is not None: full["thumb_offset"] = str(int(thumb_ms))
+    tries = [full]
+    if trial: tries.append({k: v for k, v in full.items() if k != "trial_params"})
+    if "thumb_offset" in full: tries.append({})
+    first = None
+    for ex in tries:
+        try: mid = ig_post(t, video_url, cap, ex or None)
+        except RuntimeError as e:
+            if not str(e).startswith("instagram container"): raise
+            first = first or str(e); continue
+        used = {"trial": "yes" if "trial_params" in ex else ("refused" if trial else "no"),
+                "thumb_ms": int(ex["thumb_offset"]) if "thumb_offset" in ex else None}
+        if used["trial"] == "refused":
+            (ROOT / "status").mkdir(exist_ok=True)
+            (ROOT / "status" / "instagram_trial.json").write_text(json.dumps({"refused": NOW().isoformat(timespec="minutes"),
+                                                                              "error": (first or "")[:300]}, indent=1))
+        return mid, used
+    raise RuntimeError(first or "instagram container: refused")
+
 
 # ---------- TikTok ----------
 def tt_connect():
@@ -527,10 +677,11 @@ def _decide(area, change, why, evidence):
         w.writerow([f"{NOW():%Y-%m-%d}", area, change, why, evidence, f"{NOW() + dt.timedelta(days=7):%Y-%m-%d}", "social.py (automatic)"])
 
 # ---------- what to post ----------
-def caption(st, board, platform="instagram"):
+def caption(st, board, platform="instagram", arm="full"):
     """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp.
     Facebook (24 October: Meta's spam rules of April 2025 name captions stuffed with hashtags, and the Page was limited on
-    23 October) gets the title line and at most facebook_hashtags (3) hashtags, no summary and no other platform's name."""
+    23 October) gets the title line and at most facebook_hashtags (3) hashtags, no summary and no other platform's name.
+    Instagram's "short" arm (the caption test, 24 October): the spoken hook line and 3 hashtags."""
     m = (board or {}).get("meta", {})
     tags, seen = [], set()
     for h in m.get("hashtags", []):
@@ -538,6 +689,9 @@ def caption(st, board, platform="instagram"):
         seen.add(h.lower()); tags.append(h)
     if platform == "facebook":
         return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), " ".join(tags[:int(CFG.get("facebook_hashtags", 3))])) if x)
+    if platform == "instagram" and arm == "short":
+        hook = str((((board or {}).get("beats") or [{}])[0] or {}).get("say") or st.get("title") or m.get("title", "")).strip()
+        return "\n\n".join(x for x in (hook, " ".join(tags[:3])) if x)
     tags = tags[:5] if platform == "instagram" else tags[:7] + ["#fyp"]
     yt = CFG.get("crosspost_youtube_line", "") if platform == "instagram" else ""     # YouTube first: point viewers there
     return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags)) if x)
@@ -619,8 +773,11 @@ def post():
     # picks first, then by publish time): on 24 October our 96 Shorts with both numbers showed views at 3 hours do not
     # predict Instagram views (rank correlation 0.10; the top half by 3-hour views had a median of 71 Instagram views,
     # the bottom half 90), so it waits for data that says otherwise.
-    v3 = views_3h() if ig and CFG.get("instagram_pick_by", "order") == "views_3h" else {}
-    ig_allowed = None
+    v3 = views_3h() if ig and CFG.get("instagram_pick_by", "category") == "views_3h" else {}
+    ig_allowed, ig_plan = None, {}
+    if ig and CFG.get("instagram_pick_by", "category") == "category":     # 24 October: Instagram picks its own (ig_choose)
+        ig_plan = ig_choose(_statuses(), ig_cap)
+        ig_allowed = set(ig_plan)
     if v3:
         wait_h, elig = float(CFG.get("instagram_pick_wait_hours", 3)), []
         for s1 in _statuses():
@@ -687,7 +844,17 @@ def post():
             try:
                 gh("release", "edit", rel, "--draft=false")
                 url = f"https://github.com/{REPO}/releases/download/{rel}/social.mp4"
-                st["instagram"] = {"media": ig_post(ig, url, caption(st, b, "instagram")), "at": NOW().isoformat(timespec="seconds")}
+                arm = ig_arm(st["id"], "ig-caption", ig_share("ig_caption", "short", "full", float(CFG.get("instagram_caption_share", 0.5))),
+                             "short", "full") if CFG.get("instagram_caption_test", True) else "full"
+                trial = bool(CFG.get("instagram_trial", True)) and ig_trial_ok() and ig_arm(
+                    st["id"], "ig-trial", ig_share("ig_trial", "yes", "no", float(CFG.get("instagram_trial_share", 0.5))), True, False)
+                thumb = ig_hook_ms(st) if CFG.get("instagram_thumb_at_hook", True) else None
+                mid, used = ig_publish(ig, url, caption(st, b, "instagram", arm), trial, thumb)
+                how = ig_plan.get(st["id"]) or {"pick": CFG.get("instagram_pick_by", "category"), "hour": "any"}
+                from zoneinfo import ZoneInfo
+                st["instagram"] = {"media": mid, "at": NOW().isoformat(timespec="seconds"), "caption": arm, "trial": used["trial"],
+                                   "thumb_ms": used["thumb_ms"], "pick": how["pick"], "hour": how["hour"],
+                                   "hour_uk": NOW().astimezone(ZoneInfo("Europe/London")).hour}
                 st.pop("instagram_error", None)
             except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
         if want_fb:

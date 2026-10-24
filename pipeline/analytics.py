@@ -44,6 +44,18 @@ def load_json(p, default=None):
     except Exception: return default
 
 # ---------------- our own records ----------------
+IG_TESTS = ("ig_trial", "ig_caption", "ig_hour", "ig_pick", "ig_posted", "ig_hour_uk")
+
+
+def ig_tests(st):
+    """The Instagram post's own tests (social.py, 24 October) for shorts.csv: trial reel (yes, no, refused), caption arm
+    (full, short), posting hour arm (morning, any), how it was picked (category, explore, order) and when it went to
+    Instagram (UTC time and UK hour). Blank for a Short not on Instagram or posted before the tests."""
+    ig = st.get("instagram") if isinstance(st.get("instagram"), dict) else {}
+    return {"ig_trial": ig.get("trial", ""), "ig_caption": ig.get("caption", ""), "ig_hour": ig.get("hour", ""),
+            "ig_pick": ig.get("pick", ""), "ig_posted": ig.get("at", ""), "ig_hour_uk": ig.get("hour_uk", "")}
+
+
 def late_label(st, b):
     """"late" or "on time" for a time-sensitive Short (freshness.py: late means public after the day it was written for),
     "" for evergreen kinds, so drivers.csv compares late news with news on time and the late-upload rule follows the data."""
@@ -72,7 +84,7 @@ def our_shorts():
             "late": late_label(st, b),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
-            "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")),
+            "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")), **ig_tests(st),
             # where the Short came from (pipeline, backlog, manual). Until 24 October this was "source", which overwrote the
             # board's topic source above, so the "Topic source" driver was never scored.
             "origin": st.get("source", "pipeline"), "timeline": st.get("timeline"),
@@ -637,6 +649,7 @@ def main():
             "ig_views": im.get("views", ""), "ig_reach": im.get("reach", ""), "ig_likes": im.get("like_count", ""),
             "ig_comments": im.get("comments_count", ""), "ig_shares": im.get("shares", ""), "ig_saves": im.get("saved", ""),
             "ig_skip_rate": im.get("reels_skip_rate", ""), "ig_reposts": im.get("reposts", ""), "ig_fb_views": im.get("facebook_views", ""),
+            **{k: o.get(k, "") for k in IG_TESTS},
             "fb_views": fv.get("views", ""), "fb_avg_watch_s": fv.get("avg_watch_s", ""),
             "youtube_url": f"https://youtube.com/shorts/{vid}", "instagram_url": im.get("permalink", "")}
         curve = (yt.get("retention") or {}).get(vid)
@@ -775,6 +788,8 @@ def main():
         pauses = DRV.load_pauses()          # choices left out for 14 days, then retested (drivers.py)
         table, _base = DRV.analyse(rows, pauses)
         DRV.save_pauses(pauses)
+        try: table += DRV.analyse_instagram(rows)        # Instagram's own tests and categories, against Instagram views
+        except Exception as e: print("instagram drivers:", str(e)[:150])
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table, DRV.METHOD)

@@ -1,5 +1,5 @@
 """Write results back to the repository: status/<id>.json, review/<id>.jpg, and move each board.
-Rendered or uploaded -> boards/done. Failed -> boards/failed. Waiting for the upload limit -> stays queued.
+Rendered or uploaded -> boards/done. Failed -> boards/failed. Expired (freshness.py) -> boards/expired. Waiting for the upload limit -> stays queued.
 Waiting for Charlie's approval -> boards/ready, with the render kept as a draft release preview-<id>.
 usage: python record.py <results dir>"""
 import json, pathlib, shutil, subprocess, sys
@@ -45,7 +45,13 @@ def main(root):
             (ROOT / "status" / f"{sid}.json").write_text(json.dumps(st, indent=1, ensure_ascii=False))
         board = ROOT / st["board"]
         if not board.exists() or st["state"].startswith("waiting"): continue
+        if st.get("late"):           # freshness.py's decision on a late Short, kept now the job can commit (plan.py cannot)
+            try:
+                import freshness as FR
+                FR.log({**json.loads(board.read_text()), "id": sid}, st["late"], "render")
+            except Exception as e: print(sid, "late log:", str(e)[:120])
         folder = "ready" if st["state"] == "awaiting approval" else ("failed" if "fail" in st["state"] else "done")
+        if st["state"].startswith("expired"): folder = "expired"                # freshness.py: missed its day, story moved on
         try: is_reserve = bool(json.loads(board.read_text()).get("reserve"))
         except Exception: is_reserve = False
         if is_reserve and folder == "ready": folder = "reserve"                 # evergreen spares wait apart (publish.py)

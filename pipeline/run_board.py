@@ -199,6 +199,11 @@ def main():
     res = ROOT / "result" / sid; res.mkdir(parents=True, exist_ok=True)
     status = {"id": sid, "board": job["board"], "mode": job["mode"], "slot": job.get("slot", ""),
               "rendered": dt.datetime.now(dt.timezone.utc).isoformat()}
+    if job.get("late"): status["late"] = job["late"]          # freshness.py: how late, and the evidence it went out on (or not)
+    if job["mode"] == "reject" and job.get("expired"):          # missed its day and the data says the story has moved on
+        status.update(state=f"expired: {job.get('errors', '')}"[:300])
+        (res / "status.json").write_text(json.dumps(status, indent=1, ensure_ascii=False)); print(json.dumps(status, indent=1))
+        return
     if job["mode"] == "reject":
         status.update(state="failed (board rejected)", error=job.get("errors", "failed validation"))
         (res / "status.json").write_text(json.dumps(status, indent=1, ensure_ascii=False)); print(json.dumps(status, indent=1))

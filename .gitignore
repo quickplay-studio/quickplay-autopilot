@@ -15,3 +15,6 @@ results/
 *.safetensors
 __pycache__/
 .cache/
+
+# agent worktrees made by Claude sessions, never committed
+.claude/worktrees/

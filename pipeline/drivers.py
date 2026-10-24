@@ -41,7 +41,8 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
-            ("appeal", "Appeal")]
+            ("appeal", "Appeal"), ("late", "Posted late")]
+PIPELINE_ONLY = {"late"}      # measured like the rest, but decided by the pipeline (freshness.py), never put to the writer
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer")     # recorded on the board by the writer (writer.py tests)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 
@@ -85,6 +86,7 @@ def features(r):
     out["title_style"] = "question" if "?" in t else ("number in title" if re.search(r"\d", t) else "statement") if t else ""
     out["follow_line"] = r.get("follow_line") or ""
     for k in TESTED: out[k] = r.get(k) or ""
+    out["late"] = r.get("late") or ""          # "late" or "on time" (freshness.py): judged for the late-upload rule
     return out
 
 def _med(vals):
@@ -179,6 +181,7 @@ def recipe(table, rows):
                                ([("ease off " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in down))] if down else [])) +
                      ", while still covering at least 3 categories a day.")
     for feat, label in FEATURES[1:]:
+        if feat in PIPELINE_ONLY: continue      # not the writer's choice: freshness.py reads that verdict itself
         push = [t for t in solid if t["feature"] == feat and t["verdict"] == "push"]
         cut = [t for t in solid if t["feature"] == feat and t["verdict"] == "cut back"]
         if push or cut:
@@ -186,7 +189,7 @@ def recipe(table, rows):
             if push: parts.append("lean towards " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in push))
             if cut: parts.append("use less " + ", ".join(f"{t['value']} ({t['lift']}x, {t['n']} Shorts)" for t in cut))
             L.append(f"{label}: " + "; ".join(parts) + ".")
-    stops = [t for t in table if t["verdict"] == "stop"]
+    stops = [t for t in table if t["verdict"] == "stop" and t["feature"] not in PIPELINE_ONLY]
     if stops:
         L.append("Never again (a week on, little to no views): " + "; ".join(f"{t['feature_label'].lower()} \"{t['value']}\" ({t['why']})" for t in stops) + ".")
     return L or ["Nothing stands clearly above or below typical yet: keep the variety rules and the spread of categories."]

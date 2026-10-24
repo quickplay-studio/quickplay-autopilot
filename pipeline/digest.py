@@ -23,11 +23,11 @@ def main():
     except Exception: pass
     today = NOW.astimezone(UK).date(); tomorrow = today + dt.timedelta(days=1)
     folders, made = {}, {str(today): [0, 0], str(tomorrow): [0, 0]}
-    for d in ("queue", "ready", "done", "failed", "reserve", "rejected"):
+    for d in ("queue", "ready", "done", "failed", "reserve", "rejected", "expired"):
         files = list((ROOT / "boards" / d).glob("QD-*.json")); folders[d] = len(files)
         for f in files:
             b = load(f)
-            if b.get("created") in made and d != "rejected" and not b.get("reserve"):
+            if b.get("created") in made and d not in ("rejected", "expired") and not b.get("reserve"):
                 made[b["created"]][0] += 1; made[b["created"]][1] += 1 if b.get("tiktok") else 0
     print("boards: " + ", ".join(f"{k} {v}" for k, v in folders.items()))
     print(f"made for today ({today}): {made[str(today)][0]} Shorts; for tomorrow ({tomorrow}): {made[str(tomorrow)][0]} Shorts")

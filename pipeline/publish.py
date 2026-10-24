@@ -20,6 +20,7 @@ import datetime as dt, json, os, pathlib, re, shutil, subprocess, sys, tempfile
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import plan, quota
+import freshness as FR
 
 NOW = dt.datetime.now(dt.timezone.utc)
 READY, STATUS, RESERVE = ROOT / "boards" / "ready", ROOT / "status", ROOT / "boards" / "reserve"
@@ -222,14 +223,23 @@ def main():
                 st.update(state="already on YouTube (not uploaded again)", video=dup, url=f"https://youtube.com/shorts/{dup}")
                 gh("release", "delete", tag, "-y", check=False); st.pop("preview_release", None)
                 save_status(st); move(board, "done"); continue
-            slot = None
+            slot, slot_t = None, None
             if b.get("mode", "schedule") == "schedule":
                 t = None
                 if b.get("publish_at"):
                     t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=plan.UK).astimezone(dt.timezone.utc)
                     if t < NOW + dt.timedelta(minutes=45) or t in taken: t = None
                     else: taken.add(t)
-                slot = (t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))).isoformat().replace("+00:00", "Z")
+                slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))
+                slot = slot_t.isoformat().replace("+00:00", "Z")
+                # a Short that waited for approval past its day goes out only while its story is alive (freshness.py)
+                late = FR.safe_check(b, slot_t, where="publish")
+                if late and not late["alive"]:
+                    taken.discard(slot_t)
+                    gh("release", "delete", tag, "-y", check=False); st.pop("preview_release", None); st.pop("preview_url", None)
+                    st.update(state=f"expired: {late['evidence']}"[:300], late=late); save_status(st); move(board, "expired")
+                    print(i, st["state"]); continue
+                if late: st["late"] = late
             try:
                 vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
             except Y.LimitReached as e:

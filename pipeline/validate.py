@@ -36,7 +36,7 @@ def _catalog():
 
 def _ids_elsewhere(path):
     out = {}
-    for d in ("queue", "ready", "done", "failed", "hold", "rejected", "reserve"):
+    for d in ("queue", "ready", "done", "failed", "hold", "rejected", "reserve", "expired"):
         for p in (ROOT / "boards" / d).glob("*.json"):
             if path and p.resolve() == pathlib.Path(path).resolve(): continue
             try: out[json.loads(p.read_text()).get("id")] = p

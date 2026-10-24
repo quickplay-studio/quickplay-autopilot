@@ -160,7 +160,7 @@ def main():
         earned = sum((f(r.get("views")) or 0) / 1000 * f(c.get("pay_per_1k") or 0) for r in rs if (f(r.get("views")) or 0) >= f(c.get("min_views") or 0))
         if f(c.get("max_payout")): earned = min(earned, f(c.get("max_payout")))
         money += earned; money_rows.append(f"{c.get('subject', cid)} {len(rs)} clips, {n(vv)} views, ${earned:,.2f}")
-    subs = [r for r in rows_of("clips/submit.csv") if r.get("submitted") and not r["submitted"].startswith("failed") and r["submitted"] != "pulled"]
+    subs = [r for r in rows_of("clips/submit.csv") if r.get("submitted") and not r["submitted"].startswith(("failed", "expired")) and r["submitted"] != "pulled"]
     try: cins = json.loads((ROOT / "clips" / "insights.json").read_text()).get("tests") or {}
     except Exception: cins = {}
     bests = {t: x.get("best") for t, x in cins.items() if x.get("best")}

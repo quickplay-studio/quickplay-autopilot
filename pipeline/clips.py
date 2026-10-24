@@ -871,6 +871,15 @@ def batch_time(platform=None):
     return t.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"), t
 
 
+LATE_HOURS = 30          # Charlie (24 October): a clip or a submission over this late needs a reason (heat, views) to go out
+
+
+def made_hours(m, key="made"):
+    """Hours since the moment's `key` time (made, uploaded); 0 when it has none."""
+    try: return (NOW - dt.datetime.fromisoformat(str(m.get(key)).replace("Z", "+00:00"))).total_seconds() / 3600
+    except (TypeError, ValueError): return 0.0
+
+
 def upload(cid, mode=None):
     """Uploads the made clips not yet uploaded: private, public together at batch_time (CLIPS_MODE=private: no publish time,
     a test). Each gets a row in clips/submit.csv for Charlie to paste into the campaign."""
@@ -879,6 +888,15 @@ def upload(cid, mode=None):
     plan_p = PLANS / f"{cid}.json"
     plan_ = json.loads(plan_p.read_text())
     todo = [m for m in plan_["moments"] if m.get("made") and not m.get("video") and (OUT / m.get("file", "")).exists()]
+    stale = [m for m in todo if made_hours(m) > LATE_HOURS]      # Charlie (24 October): nothing goes out just because it waited
+    for m in stale:
+        log(f"{m['id']}: not uploaded: made {made_hours(m):.0f} hours ago (a clip goes out within {LATE_HOURS} hours of being made)")
+        try:
+            import freshness as FR
+            FR.log_row(m["id"], m.get("title"), "clip", round(made_hours(m) / 24, 1), "expired",
+                       f"made {made_hours(m):.0f} hours before its upload", "clips upload")
+        except Exception as e: log(f"late log: {str(e)[:100]}")
+    todo = [m for m in todo if m not in stale]
     if not todo: log(f"{cid}: nothing to upload"); return []
     clients, refused = {}, set()
     mode = mode or os.environ.get("CLIPS_MODE", "").strip() or "batch"
@@ -926,15 +944,21 @@ def upload(cid, mode=None):
     return rows
 
 
+PROMOTE_HEAT = 0.8       # the heat (submit.heat) a test clip over LATE_HOURS old needs to join a batch: the scout's "hot"
+
+
 def promote_tests(hours=48, since=None):
     """Private test clips (CLIPS_MODE=private) join the next batch instead of being wasted: each uploaded in the last
     `hours` (and after `since`, an ISO time, when given) for a campaign still running gets the batch's publish time on
     YouTube, counts toward its channel's day (so the next run makes that many fewer) and its submit row gets the public
     time (so it is posted and submitted like the rest). Series parts never (a part on its own makes no sense). Only when
     asked: "promote" in requests/clips.txt (a test stays private otherwise). 23 October: the spoken-take test made 11 good
-    clips privately. 24 October: a 72-hour window also took 20 older test clips; demote() puts those back."""
+    clips privately. 24 October: a 72-hour window also took 20 older test clips; demote() puts those back. Since then a test
+    clip uploaded over LATE_HOURS ago joins only when its subject is hot (submit.heat at least PROMOTE_HEAT), the decision
+    logged in analytics/late_uploads.csv."""
     import quota
     cs, cut, clients, n, fixed, blocked = campaigns(), NOW - dt.timedelta(hours=hours), {}, 0, {}, False
+    heat_of = {}                              # campaign: (heat, why), for test clips over LATE_HOURS old
     if since:
         try: cut = max(cut, dt.datetime.fromisoformat(str(since)))
         except ValueError: pass
@@ -948,6 +972,22 @@ def promote_tests(hours=48, since=None):
             try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
             except ValueError: continue
             if up < cut: continue
+            if made_hours(m, "uploaded") > LATE_HOURS:         # Charlie (24 October): an older test clip needs its subject to be hot
+                if cid not in heat_of:
+                    try:
+                        import submit
+                        heat_of[cid] = submit.heat(cs[cid].get("subject") or "")
+                    except Exception as e: heat_of[cid] = (0.0, [f"heat failed: {type(e).__name__}"])
+                h, why = heat_of[cid]; hours_old = made_hours(m, "uploaded")
+                ok = h >= PROMOTE_HEAT
+                try:
+                    import freshness as FR
+                    FR.log_row(m["id"], m.get("title"), "clip", round(hours_old / 24, 1), "posted late" if ok else "expired",
+                               f"{cs[cid].get('subject')}: heat {h} ({'; '.join(why) or 'no signal'}) against the {PROMOTE_HEAT} an older clip needs",
+                               "clips promote")
+                except Exception as e: log(f"late log: {str(e)[:100]}")
+                if not ok:
+                    log(f"{m['id']}: stays private: {hours_old:.0f} hours old and {cs[cid].get('subject')} is not hot (heat {h})"); continue
             if not quota.allow(50, "clip promote"): blocked = True; break
             ch = mchannel(cid, m)
             try:
@@ -1048,6 +1088,12 @@ def add_rows(rows):
 AD_NOTE = "Paid clip: we are paid per view by the campaign."
 
 
+def posted_uk():
+    """The UK time a post went up, as clips/submit.csv's public_at_uk (submit.due() reads "%Y-%m-%d %H:%M"; 24 October: the
+    Instagram, Facebook and TikTok rows carried the day only, so none of them would ever have been submitted)."""
+    return dt.datetime.now(dt.timezone.utc).astimezone(UK).strftime("%Y-%m-%d %H:%M")
+
+
 def social_caption(c, m):
     r = c.get("rules") or {}
     return (f"#ad {m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
@@ -1119,7 +1165,7 @@ def social_posts(force=False):
                     import requests
                     link = requests.get(f"{S.IG_API}/{media}", params={"fields": "permalink", "access_token": ig["token"]}, timeout=30).json().get("permalink", "")
                     m["instagram"] = {"media": media, "url": link, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["instagram"] += 1
-                    rows.append(submit_row(cid, c, m, "instagram", link or media, today)); log(f"{m['id']}: Instagram {link}")
+                    rows.append(submit_row(cid, c, m, "instagram", link or media, posted_uk())); log(f"{m['id']}: Instagram {link}")
                 except Exception as e:
                     m["instagram_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: Instagram failed: {str(e)[:160]}")
             if fb and not m.get("facebook") and posted["facebook"] < cap:
@@ -1129,7 +1175,7 @@ def social_posts(force=False):
                     vid = S.fb_post(fb, f, caption)
                     link = f"https://www.facebook.com/reel/{vid}"
                     m["facebook"] = {"video": vid, "url": link, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["facebook"] += 1
-                    rows.append(submit_row(cid, c, m, "facebook", link, today)); log(f"{m['id']}: Facebook {link}")
+                    rows.append(submit_row(cid, c, m, "facebook", link, posted_uk())); log(f"{m['id']}: Facebook {link}")
                 except Exception as e:
                     m["facebook_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: Facebook failed: {str(e)[:160]}")
             if tt.get("access_token") and CFG.get("tiktok") and not m.get("tiktok") and posted["tiktok"] < cap:
@@ -1138,7 +1184,7 @@ def social_posts(force=False):
                     if not f.exists(): gh("release", "download", OUTREL, "-p", m["file"], "-D", str(WORK), "--clobber")
                     pid = S.tt_post(tt, f, caption, CFG.get("tiktok_mode", "direct"))
                     m["tiktok"] = {"publish": pid, "at": NOW.isoformat(timespec="minutes")}; changed = True; posted["tiktok"] += 1
-                    rows.append(submit_row(cid, c, m, "tiktok", "TikTok: open the app, the post is in your profile", today)); log(f"{m['id']}: TikTok {pid}")
+                    rows.append(submit_row(cid, c, m, "tiktok", "TikTok: open the app, the post is in your profile", posted_uk())); log(f"{m['id']}: TikTok {pid}")
                 except Exception as e:
                     m["tiktok_error"] = f"{NOW:%Y-%m-%d %H:%M} {str(e)[:200]}"; changed = True; log(f"{m['id']}: TikTok failed: {str(e)[:160]}")
         if changed: p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -1296,6 +1342,8 @@ def stats():
     except Exception as e: log("insights:", str(e)[:200])
     try: log("reach:", json.dumps(reach_check(rows)))
     except Exception as e: log("reach:", str(e)[:200])
+    try: expire_rows()                     # before the evening's Mac run reads the rows (its commit lands first)
+    except Exception as e: log("late rows:", str(e)[:200])
 
 
 def reach_check(rows):
@@ -1665,8 +1713,71 @@ def check_campaigns():
     return changed
 
 
+def late_need(c):
+    """Views a clip needs to be submitted late (expire_rows): a tenth of its campaign's minimum, at least 100."""
+    try: return max(100.0, 0.1 * float(c.get("min_views") or 0))
+    except (TypeError, ValueError): return 100.0
+
+
+def expire_rows(hours=LATE_HOURS):
+    """Charlie (24 October): a clip that missed its submission window is only submitted later with a reason. A
+    clips/submit.csv row not yet submitted (empty, or failed and still worth a retry) whose post went public over `hours`
+    ago stays open only while the clip is getting views: at least late_need() (clips/stats.csv; a clip under its campaign's
+    minimum earns nothing, and Vyro gives each account 5 places a day). Otherwise its submitted column says why it
+    expired, so neither GitHub (submit.py) nor the Mac's Vyro job submits it; every decision goes in
+    analytics/late_uploads.csv. Returns how many rows expired."""
+    sp = ROOT / "clips" / "submit.csv"
+    if not sp.exists(): return 0
+    rows = list(csv.DictReader(sp.open()))
+    yt, ig = {}, {}
+    stp = ROOT / "clips" / "stats.csv"
+    if stp.exists():
+        for r in csv.DictReader(stp.open()):
+            def num(k):
+                try: return float(r.get(k) or 0)
+                except (TypeError, ValueError): return 0.0
+            if r.get("video"): yt[r["video"]] = max(num("views"), yt.get(r["video"], 0.0))
+            if r.get("instagram"): ig[str(r["instagram"]).rstrip("/")] = max(num("ig_views"), ig.get(str(r["instagram"]).rstrip("/"), 0.0))
+    try: import freshness as FR
+    except Exception: FR = None
+    n = 0
+    for r in rows:
+        sub = str(r.get("submitted") or "")
+        if (sub and not sub.startswith("failed")) or sub.startswith("failed: past the"): continue
+        when = str(r.get("public_at_uk") or "")
+        try: t = dt.datetime.strptime(when, "%Y-%m-%d %H:%M").replace(tzinfo=UK)
+        except ValueError:
+            try: t = dt.datetime.strptime(when, "%Y-%m-%d").replace(hour=23, minute=59, tzinfo=UK)    # rows that carried the day only
+            except ValueError: continue                                                              # private tests, odd values
+        age = (NOW - t).total_seconds() / 3600
+        if age <= hours: continue
+        c = (CFG.get("campaigns") or {}).get(r.get("campaign")) or {}
+        need, plat, link = late_need(c), (r.get("platform") or "youtube"), str(r.get("video") or "")
+        if plat == "youtube":
+            hit = re.search(r"(?:shorts/|v=|youtu\.be/)([\w-]+)", link); views = yt.get(hit.group(1), 0.0) if hit else 0.0
+        elif plat == "instagram": views = ig.get(link.rstrip("/"), 0.0)
+        else: views = 0.0                                              # Facebook and TikTok views are not read yet
+        if views >= need:
+            why, decision = f"kept for submission: {plat} {views:.0f} views at {age:.0f} hours, at least the {need:.0f} a late row needs", "posted late"
+        else:
+            why, decision = f"{age:.0f}h old with {views:.0f} views (a late row needs {need:.0f})", "expired"
+            r["submitted"] = f"expired: {why}"; n += 1
+        if FR:
+            try: FR.log_row(r.get("clip", ""), r.get("title"), "clip", round(age / 24, 1), decision, why, "clips submit")
+            except Exception as e: log(f"late log: {str(e)[:100]}")
+    if n:
+        with sp.open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=SUBMIT_FIELDS, extrasaction="ignore"); w.writeheader()
+            w.writerows([{k: r.get(k, "") for k in SUBMIT_FIELDS} for r in rows])
+    log(f"late rows: {n} expired (over {hours} hours old without the views to justify a late submission)")
+    return n
+
+
 def submissions(dry=False):
-    """Every public link into its campaign by GitHub (pipeline/submit.py), after the posts and comments of a batch run."""
+    """Every public link into its campaign by GitHub (pipeline/submit.py), after the posts and comments of a batch run.
+    Rows that missed their window and have no views to show for it expire first (expire_rows)."""
+    try: expire_rows()
+    except Exception as e: log("late rows:", f"{type(e).__name__}: {str(e)[:200]}")
     try:
         import submit
         submit.run(dry=dry)

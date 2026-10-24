@@ -181,6 +181,7 @@ def main():
     if not queue:
         print("boards=[]"); return
     import validate as V
+    import freshness as FR
     now = dt.datetime.now(dt.timezone.utc)
     taken, recent, online = schedule_state(now)
     capacity = max(0, LIMIT - recent)
@@ -218,20 +219,33 @@ def main():
         warns = [x for x in warns if not x.startswith("background:")]     # a board without searches gets its category's: never held for it
         hold = hold_reasons(b, warns) if mode != "none" else []
         if mode == "dry" and not hold: hold = ["dry run: always waits for approval, never uploaded"]
+        counted = False
         if mode != "none" and not hold:
             if uploads >= capacity: continue
-            uploads += 1
-        slot = ""
+            uploads += 1; counted = True
+        slot, slot_t = "", None
         if mode == "schedule" and not hold:
             t = None
             if b.get("publish_at"):
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot = (t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))).isoformat().replace("+00:00", "Z")
+            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""))
+            slot = slot_t.isoformat().replace("+00:00", "Z")
+        # Charlie (24 October): a news Short that would go public after its day needs the data to say its story is still
+        # alive, or it expires (freshness.py: boards/expired, analytics/late_uploads.csv)
+        late = FR.safe_check(b, slot_t or now, where="render", record=False) if mode == "schedule" else None
+        if late and not late["alive"]:
+            if slot_t: taken.discard(slot_t)
+            if counted: uploads -= 1
+            print(f"expired: {b['id']}: {late['evidence']}", file=sys.stderr)
+            jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": "", "mode": "reject", "expired": True,
+                         "errors": late["evidence"][:900], "late": late})
+            continue
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats)
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
+        if late: job["late"] = late                 # late but alive: the evidence lands in status/<id>.json
         if BG.wanted(b, CFG):
             BG.NOTES.clear()
             try:

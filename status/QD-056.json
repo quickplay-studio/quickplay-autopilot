@@ -98,5 +98,10 @@
  "engage": {
   "comment": "UgwW6VFgYxgBblo4ucV4AaABAg",
   "playlist": "Quickplay Daily: Film"
+ },
+ "late": {
+  "alive": null,
+  "days_late": 4,
+  "evidence": "re-queued on 24 October before the freshness gate; posted without a check"
  }
 }

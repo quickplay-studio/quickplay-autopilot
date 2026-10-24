@@ -148,6 +148,7 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           git add -A boards status review
+          git add analytics/late_uploads.csv 2>/dev/null || true      # freshness.py: why a late Short went out or expired
           git commit -q -m "Results from run ${{ github.run_number }}" || exit 0
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

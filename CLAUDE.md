@@ -18,6 +18,9 @@ GitHub does everything; a Claude session is only for changes Charlie asks for. N
   model); analytics/drivers.csv, models.json, looks.json and slots.json score them and the next choices follow the data.
   A choice whose Shorts have little to no views a week on is stopped for good (verdict "stop"); a dead Short is never
   followed up or remade.
+- Freshness gate (Charlie, 24 October): a time-sensitive Short goes out after its day only with evidence its story is
+  alive (pipeline/freshness.py: trends, a Wikipedia surge, news), else boards/expired; a clip, test clip or submission over
+  30 hours late needs heat or views. Every decision: analytics/late_uploads.csv.
 
 ## Where to look
 - The hub, everything on one page for Charlie: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html;

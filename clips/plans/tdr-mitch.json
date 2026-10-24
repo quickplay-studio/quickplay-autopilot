@@ -61,8 +61,9 @@
    "video": "M9fsRySxk1Y",
    "url": "https://youtube.com/shorts/M9fsRySxk1Y",
    "uploaded": "2026-10-21T10:30+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-mitch-04",
@@ -85,8 +86,9 @@
    "video": "iWh49NBrgss",
    "url": "https://youtube.com/shorts/iWh49NBrgss",
    "uploaded": "2026-10-21T10:51+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-mitch-05",
@@ -111,8 +113,9 @@
    "video": "povPFckSKHE",
    "url": "https://youtube.com/shorts/povPFckSKHE",
    "uploaded": "2026-10-21T11:01+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-mitch-06",
@@ -459,8 +462,9 @@
    "video": "HiTGUxg7AM8",
    "url": "https://youtube.com/shorts/HiTGUxg7AM8",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-mitch-18",
@@ -492,8 +496,9 @@
    "video": "zyCJ7Qfe0Kc",
    "url": "https://youtube.com/shorts/zyCJ7Qfe0Kc",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-mitch-19",
@@ -507,6 +512,38 @@
    "model": "gemini-3-flash-preview",
    "peak": 1173.0,
    "question": "Who is your favourite Total Drama character? 🏝️"
+  },
+  {
+   "id": "tdr-mitch-20",
+   "start": 810.7,
+   "end": 857.4,
+   "hook": "BLINDSIDE STRATEGY IN TOTAL DRAMA ROBLOX",
+   "label": "",
+   "title": "Mitch Gaming TRD Target Ezekiel In Merge",
+   "why": "Grabs with intense strategic plotting; payoff is Cody winning immunity and ruining the plan.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 839.0,
+   "score": 7.0,
+   "take_intro": "Mitch Gaming spots a dangerous duo forming in the merge.",
+   "take_outro": "That blindside plan completely changed the game. Who would you vote out first?",
+   "question": "Was voting out Ezekiel the smartest strategy?"
+  },
+  {
+   "id": "tdr-mitch-21",
+   "start": 1258.7,
+   "end": 1309.4,
+   "hook": "AFK VOTING CHAOS IN ROBLOX TOTAL DRAMA",
+   "label": "",
+   "title": "Mitch Gaming TRD Round 2 Elimination Chaos",
+   "why": "Grabs mid-discussion about AFK players; payoff is Mitch realizing he got third and is in danger.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 1299.0,
+   "score": 6.0,
+   "take_intro": "Mitch Gaming tries to clear out dead weight early in round two.",
+   "take_outro": "Panic sets in as the elimination target shifts fast. Who would you vote off?",
+   "question": "Is voting AFK players fair in Total Drama Roblox?"
   }
  ]
 }

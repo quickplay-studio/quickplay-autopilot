@@ -41,8 +41,9 @@
    "video": "BpHc7lS7CtM",
    "url": "https://youtube.com/shorts/BpHc7lS7CtM",
    "uploaded": "2026-10-21T10:30+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-stinkyasher-03",
@@ -65,8 +66,9 @@
    "video": "5tQjWQXIWYU",
    "url": "https://youtube.com/shorts/5tQjWQXIWYU",
    "uploaded": "2026-10-21T10:51+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-stinkyasher-04",
@@ -89,8 +91,9 @@
    "video": "SCgzJEdL-nA",
    "url": "https://youtube.com/shorts/SCgzJEdL-nA",
    "uploaded": "2026-10-21T11:01+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-stinkyasher-05",
@@ -285,8 +288,9 @@
    "video": "3kRHyCYPCMM",
    "url": "https://youtube.com/shorts/3kRHyCYPCMM",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-stinkyasher-12",
@@ -315,8 +319,9 @@
    "video": "9kaforX88zI",
    "url": "https://youtube.com/shorts/9kaforX88zI",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-stinkyasher-13",
@@ -406,6 +411,86 @@
    "model": "gemini-3.6-flash",
    "peak": 970.0,
    "question": "Did you expect the creator of Total Drama to show up?"
+  },
+  {
+   "id": "tdr-stinkyasher-20",
+   "start": 877.7,
+   "end": 922.4,
+   "hook": "I AM ONLY HAUNTING DUNCAN",
+   "label": "StinkyAsher Ghost",
+   "title": "StinkyAsher Roblox Total Drama Ghost Drama",
+   "why": "A furious comedic rant where Asher declares they are haunting Duncan and exposes their fake alliance.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 885.0,
+   "score": 9.0,
+   "take_intro": "Asher was voted out but refused to leave quietly.",
+   "take_outro": "Haunting your opponent from beyond the grave is elite behaviour, wouldn't you agree?",
+   "question": "Would you haunt your rival after being voted out?"
+  },
+  {
+   "id": "tdr-stinkyasher-21",
+   "start": 1275.7,
+   "end": 1305.4,
+   "hook": "THAT FACE CARD IS THE STATUE",
+   "label": "",
+   "title": "StinkyAsher Total Drama Face-Off With Eva",
+   "why": "A direct confrontational argument full of sassy comebacks and mind games before a challenge.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 1292.0,
+   "score": 7.0,
+   "take_intro": "The rivalry between Asher and Eva reached boiling point here.",
+   "take_outro": "Claiming your face card is an idol is pure confidence, wouldn't you say?",
+   "question": "Who had the better comeback in this face-off?"
+  },
+  {
+   "id": "tdr-stinkyasher-22",
+   "start": 327.7,
+   "end": 361.4,
+   "hook": "THIS IS MY APOLOGY TOUR",
+   "label": "",
+   "title": "StinkyAsher Roblox Total Drama Apology Tour",
+   "why": "Hilarious contrast between Asher's fake apology and immediate savage celebration when Bridget gets voted out.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 348.0,
+   "score": 7.0,
+   "take_intro": "Asher attempted an apology tour right before the elimination vote.",
+   "take_outro": "Getting the first marshmallow always feels like sweet victory, doesn't it?",
+   "question": "Who is your favourite Total Drama character to play?"
+  },
+  {
+   "id": "tdr-stinkyasher-23",
+   "start": 1077.7,
+   "end": 1106.4,
+   "hook": "I'M JUST BRINGING LIGHT AND POSITIVITY",
+   "label": "",
+   "title": "StinkyAsher Roblox Total Drama Round Two",
+   "why": "Irony of Asher declaring peace and immediately attempting to put a hit out on Eva.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 1088.0,
+   "score": 6.0,
+   "take_intro": "Asher promised to bring total peace until voting time arrived.",
+   "take_outro": "Positivity never seems to last long in Total Drama, does it?",
+   "question": "Can you stay positive after losing six rounds?"
+  },
+  {
+   "id": "tdr-stinkyasher-24",
+   "start": 534.7,
+   "end": 576.4,
+   "hook": "I HAVE HAD ANXIETY THIS ENTIRE TIME",
+   "label": "",
+   "title": "StinkyAsher Roblox Total Drama Alliance Drama",
+   "why": "Panic over conflicting whisper alliances builds to pure relief when Courtney is sent packing.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 569.0,
+   "score": 6.0,
+   "take_intro": "Whispered plots put Asher into an absolute panic mode.",
+   "take_outro": "Surviving the vote always brings out Asher's best energy, agreed?",
+   "question": "Who was playing the smartest game in this lobby?"
   }
  ]
 }

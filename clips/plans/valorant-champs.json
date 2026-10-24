@@ -40,8 +40,9 @@
    "video": "-AF3A5DEHTg",
    "url": "https://youtube.com/shorts/-AF3A5DEHTg",
    "uploaded": "2026-10-21T10:30+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "valorant-champs-03",
@@ -216,6 +217,86 @@
    "file": "valorant-champs-09.mp4",
    "channel": "gaming",
    "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-09.mp4"
+  },
+  {
+   "id": "valorant-champs-10",
+   "start": 5460.7,
+   "end": 5489.4,
+   "hook": "UNBELIEVABLE SLIDING NO-SCOPE PLAY",
+   "label": "",
+   "title": "VALORANT Champs Insane Duelist Plays Reacted To",
+   "why": "Starts right on the crazy trick shot description and pays off with the jaw-dropping reaction.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 5468.0,
+   "score": 8.0,
+   "take_intro": "Reacting to one of the most absurd duelist plays this year.",
+   "take_outro": "Is this one of the cleanest highlights in VALORANT history?",
+   "question": "What is the cleanest trick shot you have ever seen live?"
+  },
+  {
+   "id": "valorant-champs-11",
+   "start": 5334.7,
+   "end": 5383.4,
+   "hook": "34 AND 2 IN SCRIMS SECRET",
+   "label": "",
+   "title": "VALORANT Champs 100T Dominant Scrim Record",
+   "why": "Surprising claim of 34-2 scrim record immediately grabs attention and builds to overcoming their rivals.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 5373.0,
+   "score": 7.0,
+   "take_intro": "Sean drops an unbelievable stat about 100 Thieves practice runs.",
+   "take_outro": "Can 100 Thieves carry this insane momentum all the way to the top?",
+   "question": "Do you think scrim results reflect actual match performance?"
+  },
+  {
+   "id": "valorant-champs-12",
+   "start": 6356.7,
+   "end": 6388.4,
+   "hook": "25 AND 5 PICK'EM WIZARD",
+   "label": "",
+   "title": "VALORANT Champs Predictions Mastermind Revealed",
+   "why": "Grabs with an absurd prediction record stat and pays off on the 'clairvoyant vision' reveal.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 6379.0,
+   "score": 7.0,
+   "take_intro": "Revealing an almost perfect prediction bracket live on air.",
+   "take_outro": "Who is your pick to take down the entire tournament?",
+   "question": "How many prediction points have you scored so far?"
+  },
+  {
+   "id": "valorant-champs-13",
+   "start": 4725.7,
+   "end": 4756.4,
+   "hook": "WHO WOULD MAKE A BETTER PARENT?",
+   "label": "",
+   "title": "VALORANT Champs Talent Debate Parenting Styles",
+   "why": "Grabs with a direct personal choice question and pays off with the 'harsh love' vs 'back cop' joke.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 4744.0,
+   "score": 6.0,
+   "take_intro": "The desk devolves into a hilarious debate about parenting styles.",
+   "take_outro": "Which style of coaching or parenting works best for getting results?",
+   "question": "Which caster would make the better parent in your opinion?"
+  },
+  {
+   "id": "valorant-champs-14",
+   "start": 5931.7,
+   "end": 5963.4,
+   "hook": "I HAD TO CARRY HIM HOME",
+   "label": "",
+   "title": "VALORANT Champs Casters Expose Shanghai Stories",
+   "why": "Immediate funny accusation grabs viewers and pays off with the immediate denial on live camera.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 5940.0,
+   "score": 6.0,
+   "take_intro": "Unfiltering wild stories from past international events in Shanghai.",
+   "take_outro": "Did this story actually happen or are they just stirring up drama?",
+   "question": "Who is the friend that always needs carrying after a night out?"
   }
  ]
 }

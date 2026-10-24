@@ -79,8 +79,9 @@
    "video": "IATu267lR08",
    "url": "https://youtube.com/shorts/IATu267lR08",
    "uploaded": "2026-10-21T10:28+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-flamingo-05",
@@ -103,8 +104,9 @@
    "video": "TMCuUebrWGQ",
    "url": "https://youtube.com/shorts/TMCuUebrWGQ",
    "uploaded": "2026-10-21T10:30+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-flamingo-06",
@@ -127,8 +129,9 @@
    "video": "sVU3NPbQcec",
    "url": "https://youtube.com/shorts/sVU3NPbQcec",
    "uploaded": "2026-10-21T10:51+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-flamingo-07",
@@ -151,8 +154,9 @@
    "video": "V09Jcu-xN-I",
    "url": "https://youtube.com/shorts/V09Jcu-xN-I",
    "uploaded": "2026-10-21T11:01+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-flamingo-08",
@@ -554,8 +558,9 @@
    "video": "rPCZpRabIDA",
    "url": "https://youtube.com/shorts/rPCZpRabIDA",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-flamingo-22",
@@ -588,8 +593,25 @@
    "video": "bCHAXSs1LKY",
    "url": "https://youtube.com/shorts/bCHAXSs1LKY",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
+  },
+  {
+   "id": "tdr-flamingo-23",
+   "start": 836.7,
+   "end": 874.4,
+   "hook": "FLAMINGO TRIES TO DESTROY HEATHER IN ROBLOX",
+   "label": "Total Drama",
+   "title": "Flamingo Vs Heather in Roblox Total Drama",
+   "why": "Action-packed obby gameplay building up to funny shouting matches over the button mechanics.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 850.0,
+   "score": 6.0,
+   "take_intro": "Flamingo targets Heather during a high-stakes Roblox obby button challenge.",
+   "take_outro": "Which Roblox Total Drama challenge is the most intense to play?",
+   "question": "Which Roblox Total Drama challenge is the most intense?"
   }
  ]
 }

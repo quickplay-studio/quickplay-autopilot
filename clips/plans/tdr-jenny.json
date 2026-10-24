@@ -60,8 +60,9 @@
    "video": "UwmIqsW_N-U",
    "url": "https://youtube.com/shorts/UwmIqsW_N-U",
    "uploaded": "2026-10-21T10:30+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
   },
   {
    "id": "tdr-jenny-04",
@@ -401,8 +402,89 @@
    "video": "6FZH3a9cWes",
    "url": "https://youtube.com/shorts/6FZH3a9cWes",
    "uploaded": "2026-10-23T22:14+00:00",
-   "publish_at": "private",
-   "mode": "private"
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch",
+   "promoted": "2026-10-24T09:25+00:00"
+  },
+  {
+   "id": "tdr-jenny-16",
+   "start": 2008.7,
+   "end": 2062.4,
+   "hook": "JENNY HOYOS EXPOSES THE QUIET PLAYERS",
+   "label": "",
+   "title": "Jenny Hoyos Roblox Total Drama Strategy",
+   "why": "Hooks with an aggressive game strategy and ends with the brutal 'she's giving nothing' line.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 2057.0,
+   "score": 7.0,
+   "take_intro": "Jenny Hoyos comes up with a bold strategy to survive elimination.",
+   "take_outro": "That tactic was hilarious! Do you agree with targeting silent players?",
+   "question": "Was Jenny right to target the quiet players in this game?"
+  },
+  {
+   "id": "tdr-jenny-17",
+   "start": 2984.7,
+   "end": 3046.4,
+   "hook": "JENNY HOYOS LIES TO SURVIVE ELIMINATION",
+   "label": "",
+   "title": "Jenny Hoyos Total Drama Roblox Voting Drama",
+   "why": "Starts with intense audience interaction and ends on a funny deceptive confession.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 3016.0,
+   "score": 6.0,
+   "take_intro": "Jenny asks her chat for advice before making a sly move.",
+   "take_outro": "She completely tricked everyone! Who would you have voted for here?",
+   "question": "What is your favourite Total Drama Roblox strategy?"
+  },
+  {
+   "id": "tdr-jenny-18",
+   "start": 3533.7,
+   "end": 3585.4,
+   "hook": "JENNY HOYOS ACCIDENTALLY OUTSMARTS THE TOURNAMENT",
+   "label": "",
+   "title": "Jenny Hoyos Roblox Tournament Betrayal",
+   "why": "Mid-action voting strategy that leads directly to Jenny realising she might win.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 3560.0,
+   "score": 6.0,
+   "take_intro": "Jenny tries to map out everyone's secret voting plans.",
+   "take_outro": "Her game plan actually worked out! Could you outsmart this tournament?",
+   "question": "Who was your favourite contestant in this Roblox tournament?"
+  },
+  {
+   "id": "tdr-jenny-19",
+   "start": 5447.7,
+   "end": 5522.7,
+   "hook": "JENNY HOYOS CATCHES A FAKE ALLY",
+   "label": "",
+   "title": "Jenny Hoyos Exposes Roblox Teamer",
+   "why": "Instant drama as chat exposes a fake friend right in front of Jenny.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 5523.0,
+   "score": 6.0,
+   "take_intro": "Jenny's chat alerts her to a secret alliance happening live.",
+   "take_outro": "Exposing the teamers was tense! Who is the sneaky player here?",
+   "question": "How do you deal with sneaky teamers in Roblox games?"
+  },
+  {
+   "id": "tdr-jenny-20",
+   "start": 6204.7,
+   "end": 6279.7,
+   "hook": "JENNY HOYOS REBELS AFTER GETTING ELIMINATED",
+   "label": "",
+   "title": "Jenny Hoyos Reacts To Roblox Elimination",
+   "why": "Fun post-elimination exit interview filled with classic Jenny Hoyos humor.",
+   "planned": "2026-10-24T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 6281.0,
+   "score": 6.0,
+   "take_intro": "Jenny reflects on being targeted in the second tournament game.",
+   "take_outro": "She handled that loss like a champ! Who would you target first?",
+   "question": "Was it fair that Jenny Hoyos got targeted in game two?"
   }
  ]
 }

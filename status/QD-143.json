@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-23T17:30:00Z",
  "rendered": "2026-10-23T17:06:31.542705+00:00",
- "title": "Jenna Ortega’s book and Forbes fame 📚",
+ "title": "From TV star to Forbes 30 Under 30 🌟",
  "background_notes": [
   "picked nothing (+0 spares)"
  ],
@@ -80,7 +80,14 @@
  "social_release": "social-QD-143",
  "engage": {
   "comment": "Ugy1nknKP4AAcq4xRbd4AaABAg",
-  "playlist": "Quickplay Daily: Film"
+  "playlist": "Quickplay Daily: Film",
+  "title": {
+   "swapped_from": "Jenna Ortega’s book and Forbes fame 📚",
+   "to": "From TV star to Forbes 30 Under 30 🌟",
+   "at": "2026-10-24T18:07+00:00",
+   "views_an_hour": 0.0,
+   "typical": 0.8
+  }
  },
  "facebook": {
   "video": "1745439406531070",

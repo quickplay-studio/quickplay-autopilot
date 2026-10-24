@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 00:36): 9 of 1,000 subscribers · 6,730 of 10 million Shorts views in 90 days · 4,228 views in the last 24 hours (about 111,036 a day needed, 101 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 01:55): 9 of 1,000 subscribers · 6,729 of 10 million Shorts views in 90 days · 4,365 views in the last 24 hours (about 111,036 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 0:10 (UK): 1 scheduled, 127 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 24 Oct | 1 public, 3 scheduled | 0 | 1 | ⏳ 1 of 15 so far, 3 more scheduled |
+| Sat 24 Oct | 1 public, 3 scheduled | 0 | 2 | ⏳ 1 of 15 so far, 3 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -73,6 +73,10 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-144](QD-144.jpg)
 
+## In the queue
+
+- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤 (rendering next)
+
 ## On the channel (latest first)
 
 ### Sat 24 Oct 0:30 · BABYMONSTER's G-Dragon Drip collab 🎧
@@ -96,7 +100,7 @@ public · 112 views · 24 s · music: in-battery · on Facebook · [script](../b
 ![QD-141](QD-141.jpg)
 
 ### Fri 23 Oct 17:00 · The Northumbria Mysteries: New BBC Detective Drama 🎬
-public · 40 views · 25 s · music: false-vacuum-decay · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
+public · 40 views · 25 s · music: false-vacuum-decay · on Facebook · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
 
 ![QD-140](QD-140.jpg)
 

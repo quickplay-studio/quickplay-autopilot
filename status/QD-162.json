@@ -1,0 +1,89 @@
+{
+ "id": "QD-162",
+ "board": "boards/queue/QD-162.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T07:00:00Z",
+ "rendered": "2026-10-24T19:46:30.179059+00:00",
+ "title": "Ballon d'Or 2026 ceremony is moving to London",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 8
+ },
+ "music": "the-bombs",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "low",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 38.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.5
+ },
+ "timeline": [
+  [
+   0.06,
+   2.89,
+   "none",
+   1
+  ],
+  [
+   2.89,
+   9.23,
+   "none",
+   4
+  ],
+  [
+   9.23,
+   14.04,
+   "none",
+   3
+  ],
+  [
+   14.04,
+   20.02,
+   "none",
+   4
+  ],
+  [
+   20.02,
+   26.36,
+   "none",
+   4
+  ],
+  [
+   26.36,
+   34.02,
+   "none",
+   5
+  ],
+  [
+   34.02,
+   38.01,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T19:58:46Z",
+ "video": "6YlbgON866U",
+ "url": "https://youtube.com/shorts/6YlbgON866U",
+ "publish_at": "2026-10-25T07:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T07:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-162"
+}

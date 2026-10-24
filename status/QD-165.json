@@ -1,0 +1,101 @@
+{
+ "id": "QD-165",
+ "board": "boards/queue/QD-165.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T12:00:00Z",
+ "rendered": "2026-10-24T19:46:15.614067+00:00",
+ "title": "Song Secrets #1: Dai Dai Shakira: the global chart record 🏆",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Burna Boy stage: no Commons image named 'Burna Boy stage')",
+  "beat 5 reused a nearby picture (commons-search:Shakira stage performance: no Commons image named 'Shakira stage performance')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 7
+ },
+ "music": "paradise",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 27.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.3
+ },
+ "timeline": [
+  [
+   0.06,
+   3.36,
+   "none",
+   1
+  ],
+  [
+   3.36,
+   8.26,
+   "none",
+   3
+  ],
+  [
+   8.26,
+   14.69,
+   "none",
+   4
+  ],
+  [
+   14.69,
+   19.71,
+   "none",
+   3
+  ],
+  [
+   19.71,
+   24.64,
+   "none",
+   3
+  ],
+  [
+   24.64,
+   27.26,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "147800",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 13.93
+  },
+  {
+   "p": "pixabay",
+   "id": "133080",
+   "q": "stadium music festival",
+   "t0": 13.33,
+   "t1": 27.26
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T19:58:52Z",
+ "video": "edZ6QEq7tGM",
+ "url": "https://youtube.com/shorts/edZ6QEq7tGM",
+ "publish_at": "2026-10-25T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-165"
+}

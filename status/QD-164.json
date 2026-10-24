@@ -1,0 +1,86 @@
+{
+ "id": "QD-164",
+ "board": "boards/queue/QD-164.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T05:00:00Z",
+ "rendered": "2026-10-24T19:46:26.035712+00:00",
+ "title": "GTA 6 price: the physical edition surprise 🎮",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 5 reused a nearby picture (commons-search:Take-Two Interactive: no Commons image named 'Take-Two Interactive')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 6
+ },
+ "music": "the-bombs",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 27.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 7.4
+ },
+ "timeline": [
+  [
+   0.06,
+   3.85,
+   "none",
+   2
+  ],
+  [
+   3.85,
+   8.9,
+   "none",
+   3
+  ],
+  [
+   8.9,
+   13.55,
+   "none",
+   3
+  ],
+  [
+   13.55,
+   17.75,
+   "none",
+   3
+  ],
+  [
+   17.75,
+   23.27,
+   "none",
+   4
+  ],
+  [
+   23.27,
+   26.92,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T19:58:49Z",
+ "video": "m4dcmkj0AhI",
+ "url": "https://youtube.com/shorts/m4dcmkj0AhI",
+ "publish_at": "2026-10-25T05:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T05:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-164"
+}

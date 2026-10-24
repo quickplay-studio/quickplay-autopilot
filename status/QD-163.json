@@ -1,0 +1,105 @@
+{
+ "id": "QD-163",
+ "board": "boards/queue/QD-163.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T04:00:00Z",
+ "rendered": "2026-10-24T19:45:48.907991+00:00",
+ "title": "Richard E Grant admits betrayal to Joe Lycett",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Joe Lycett: no Commons image named 'Joe Lycett')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "the-bombs",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "daniel",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 24.8,
+  "wps": 3.07,
+  "weak_beats": [],
+  "size_mb": 9.6
+ },
+ "timeline": [
+  [
+   0.06,
+   2.78,
+   "none",
+   0
+  ],
+  [
+   2.78,
+   7.47,
+   "none",
+   1
+  ],
+  [
+   7.47,
+   11.35,
+   "none",
+   1
+  ],
+  [
+   11.35,
+   14.12,
+   "none",
+   1
+  ],
+  [
+   14.12,
+   17.83,
+   "stat",
+   1
+  ],
+  [
+   17.83,
+   21.26,
+   "none",
+   1
+  ],
+  [
+   21.26,
+   24.8,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "122748",
+   "q": "tv studio lights",
+   "t0": 0.0,
+   "t1": 12.7
+  },
+  {
+   "p": "pixabay",
+   "id": "113565",
+   "q": "game show set",
+   "t0": 12.1,
+   "t1": 24.8
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T19:58:48Z",
+ "video": "MpzJ9obgR3M",
+ "url": "https://youtube.com/shorts/MpzJ9obgR3M",
+ "publish_at": "2026-10-25T04:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T04:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-163"
+}

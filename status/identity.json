@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-24T13:00:30+00:00",
+ "checked": "2026-10-24T18:54:01+00:00",
  "ok": true,
  "studio": "studiosocialmedia123@gmail.com",
  "checks": [
@@ -26,7 +26,7 @@
   },
   {
    "what": "workflow clips.yml",
-   "found": "CEREBRAS_API_KEY, FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "found": "CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY, SOCIAL_KEY, TIKTOK_CLIENT_KEY, TIKTOK_CLIENT_SECRET, YT_CLIENT_ID, YT_CLIENT_SECRET",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -40,7 +40,7 @@
   },
   {
    "what": "workflow llmprobe.yml",
-   "found": "CEREBRAS_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY",
+   "found": "CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -60,8 +60,22 @@
    "note": ""
   },
   {
+   "what": "workflow pages.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
    "what": "workflow policy.yml",
    "found": "GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow prune.yml",
+   "found": "no secrets",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -96,7 +110,7 @@
   },
   {
    "what": "workflow trends.yml",
-   "found": "CEREBRAS_API_KEY, FB_PAGE_ID, FB_PAGE_TOKEN, FOOTBALL_DATA_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_TOKEN, IG_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "found": "CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, FB_PAGE_ID, FB_PAGE_TOKEN, FOOTBALL_DATA_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_TOKEN, IG_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -124,7 +138,7 @@
   },
   {
    "what": "workflow write.yml",
-   "found": "CEREBRAS_API_KEY, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
+   "found": "CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -250,10 +264,10 @@
   },
   {
    "what": "tiktok",
-   "found": "HTTP 401",
+   "found": "@quickplaydaily",
    "ok": true,
-   "expected": "",
-   "note": "the key does not answer (expired keys are refreshed by the social run)"
+   "expected": "a Quickplay TikTok account",
+   "note": ""
   }
  ],
  "problems": []

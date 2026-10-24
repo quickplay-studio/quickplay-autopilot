@@ -1,41 +1,18 @@
-mrbeast-cod-03: private test promoted: public with the batch at 19:00 UK on clips
-mrbeast-cod-15: private test promoted: public with the batch at 19:00 UK on clips
-mrbeast-cod-16: private test promoted: public with the batch at 19:00 UK on clips
-speed-expedia-05: private test promoted: public with the batch at 19:00 UK on clips
-speed-expedia-17: private test promoted: public with the batch at 19:00 UK on clips
-speed-expedia-18: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-04: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-05: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-06: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-07: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-21: private test promoted: public with the batch at 19:00 UK on clips
-tdr-flamingo-22: private test promoted: public with the batch at 19:00 UK on clips
-tdr-jenny-03: private test promoted: public with the batch at 19:00 UK on clips
-tdr-jenny-15: private test promoted: public with the batch at 19:00 UK on clips
-tdr-mitch-03: private test promoted: public with the batch at 19:00 UK on clips
-tdr-mitch-04: private test promoted: public with the batch at 19:00 UK on clips
-tdr-mitch-05: private test promoted: public with the batch at 19:00 UK on clips
-tdr-mitch-17: private test promoted: public with the batch at 19:00 UK on clips
-tdr-mitch-18: private test promoted: public with the batch at 19:00 UK on clips
-tdr-stinkyasher-02: private test promoted: public with the batch at 19:00 UK on clips
-tdr-stinkyasher-03: private test promoted: public with the batch at 19:00 UK on clips
-tdr-stinkyasher-04: private test promoted: public with the batch at 19:00 UK on clips
-tdr-stinkyasher-11: private test promoted: public with the batch at 19:00 UK on clips
-tdr-stinkyasher-12: private test promoted: public with the batch at 19:00 UK on clips
-valorant-champs-02: private test promoted: public with the batch at 19:00 UK on clips
-valorant-microdrama-e01p1: private test promoted: public with the batch at 19:00 UK on clips
-valorant-microdrama-e01p3: private test promoted: public with the batch at 19:00 UK on clips
-valorant-microdrama-e01p4: private test promoted: public with the batch at 19:00 UK on clips
-promote: 28 private test clip(s) join the next batch
-speed-expedia: page: $686 remaining; Skip to content We use cookies and similar tools to measure how the product is used. You c
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-speed-expedia: 0 of 2 moments planned (groq:openai/gpt-oss-120b), 18 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 1}; first: {"start": 414, "end": 440, "hook": "PERUGIA, ITALY?!", "label": "Perugia", "title": "IShowSpeed discovers Perugia, Italy \u2013 never been there", "peak": 440, "question": "Have you ever visited Perug
-mrbeast-cod: 0 of 3 moments planned (gemini-flash-latest), 28 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 2}; first: {"start": 416, "end": 441, "hook": "THEY STOLE OUR TAG AND RAN AWAY", "label": "Lieutenant Tag", "title": "MrBeast Gaming Call of Duty DMZ Trap Stolen", "peak": 422, "question": "Would you have chased
-tdr-stinkyasher: 5 of 6 moments planned (gemini-3.7-flash), 24 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}
-tdr-mitch: 2 of 5 moments planned (gemini-3.6-flash), 21 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 3}
-tdr-flamingo: 1 of 7 moments planned (gemini-3.6-flash), 23 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0, "low score": 2, "profanity": 2}
-tdr-jenny: 5 of 8 moments planned (gemini-3.6-flash), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 1, "profanity": 1}
-valorant-microdrama: 0 parts planned, 4 in all
-valorant-champs: a long transcript, planning minutes 65 to 110 of 144
-valorant-champs: 5 of 8 moments planned (gemini-3.6-flash), 14 in all; dropped {"bad time": 0, "length": 2, "overlap": 0, "no hook": 0, "low score": 0, "profanity": 1}
-kevin-langue-ghost: 7 of 8 moments planned (openrouter:nvidia/nemotron-3-ultra-550b-a55b:free), 17 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}
+mrbeast-cod-03: back to private (an older test clip)
+speed-expedia-05: back to private (an older test clip)
+tdr-flamingo-04: back to private (an older test clip)
+tdr-flamingo-05: back to private (an older test clip)
+tdr-flamingo-06: back to private (an older test clip)
+tdr-flamingo-07: back to private (an older test clip)
+tdr-jenny-03: back to private (an older test clip)
+tdr-mitch-03: back to private (an older test clip)
+tdr-mitch-04: back to private (an older test clip)
+tdr-mitch-05: back to private (an older test clip)
+tdr-stinkyasher-02: back to private (an older test clip)
+tdr-stinkyasher-03: back to private (an older test clip)
+tdr-stinkyasher-04: back to private (an older test clip)
+valorant-champs-02: back to private (an older test clip)
+valorant-microdrama-e01p1: back to private (an older test clip)
+valorant-microdrama-e01p3: back to private (an older test clip)
+valorant-microdrama-e01p4: back to private (an older test clip)
+demote: 17 older test clip(s) back to private

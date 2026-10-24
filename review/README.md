@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 07:44): 9 of 1,000 subscribers · 7,637 of 10 million Shorts views in 90 days · 5,824 views in the last 24 hours (about 111,026 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 08:40): 9 of 1,000 subscribers · 7,688 of 10 million Shorts views in 90 days · 5,892 views in the last 24 hours (about 111,026 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 8:26 (UK): 1 scheduled, 133 public, 23 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 23 Oct 12:04).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 24 Oct 8:35).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 24 Oct | 6 public, 1 scheduled | 0 | 3 | ⏳ 6 of 15 so far, 1 more scheduled |
+| Sat 24 Oct | 6 public, 1 scheduled | 4 | 3 | ⏳ 6 of 15 so far, 1 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -70,6 +70,11 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![QD-144](QD-144.jpg)
+
+## In the queue
+
+- **QD-151** Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮 (rendering next)
+- **QD-152** Melanie C leads a sweaty Strictly workout to her own track 💪 (rendering next)
 
 ## On the channel (latest first)
 
@@ -239,22 +244,22 @@ public · 34 views · 26 s · music: rise-of-the-machines · on Facebook · [scr
 ![QD-117](QD-117.jpg)
 
 ### Thu 22 Oct 15:00 · American football joins the 2028 Olympics 🏈
-public · 20 views · 41 s · music: risen · on Facebook · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
+public · 20 views · 41 s · music: risen · on Instagram · on Facebook · [script](../boards/done/QD-116.json) · [YouTube](https://youtube.com/shorts/99w92L65OLg)
 
 ![QD-116](QD-116.jpg)
 
 ### Thu 22 Oct 14:30 · The story behind Knights of the Old Republic 🎮
-public · 26 views · 25 s · music: risen · on Facebook · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
+public · 26 views · 25 s · music: risen · on Instagram · on Facebook · [script](../boards/done/QD-115.json) · [YouTube](https://youtube.com/shorts/V0vrjXnNAMY)
 
 ![QD-115](QD-115.jpg)
 
 ### Thu 22 Oct 14:00 · Dancing with the Stars season 35 firsts 🌟
-public · 17 views · 24 s · music: mirror-mirror · on Facebook · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
+public · 17 views · 24 s · music: mirror-mirror · on Instagram · on Facebook · [script](../boards/done/QD-113.json) · [YouTube](https://youtube.com/shorts/DrukzpyrsrU)
 
 ![QD-113](QD-113.jpg)
 
 ### Thu 22 Oct 13:30 · Cyberpunk 2077 adds Edgerunners quests 🌆
-public · 316 views · 21 s · music: the-bombs · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
+public · 316 views · 21 s · music: the-bombs · on Instagram · on Facebook · [script](../boards/done/QD-112.json) · [YouTube](https://youtube.com/shorts/yJxpg-kbZXw)
 
 ![QD-112](QD-112.jpg)
 

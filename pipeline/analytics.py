@@ -76,6 +76,16 @@ PIC_COLUMNS = ("pic_relevance", "pic_found_share")
 def pic_fields(st):
     m = st.get("media") if isinstance(st.get("media"), dict) else {}
     return {k: m.get(k, "") for k in PIC_COLUMNS}
+# The opening-frame scorecard (24 October): run_board.py reads the first 1.5 seconds of each render back as numbers (status qa.opening,
+# pipeline/opening_frame.py); these are its shorts.csv columns, for drivers.py to test the first_frame arms against
+OPENING_COLUMNS = {"open_sharp": "sharpness", "open_contrast": "contrast", "open_face": "face_area", "open_text": "text_area",
+                   "open_caption": "caption_contrast"}
+
+
+def opening_scores(st):
+    """A Short's opening-frame scorecard under its shorts.csv column names; "" for a number not read (and for Shorts from before it)."""
+    o = (st.get("qa") or {}).get("opening") or {}
+    return {c: ("" if o.get(k) is None else o[k]) for c, k in OPENING_COLUMNS.items()}
 
 
 def hook_named(b):
@@ -112,7 +122,7 @@ def our_shorts():
             # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
             **{k: ((b.get("test") or {}).get(t, "") if isinstance(b.get("test"), dict) else "")
                for k, t in (("arm_hook_type", "hook_type"), ("arm_length", "length"), ("title_answer", "title_answer"))},
-            "hook_named": hook_named(b),
+            "hook_named": hook_named(b), **opening_scores(st),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")), **ig_tests(st),
@@ -673,7 +683,7 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS)},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),

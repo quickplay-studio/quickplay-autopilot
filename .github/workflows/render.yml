@@ -84,6 +84,8 @@ jobs:
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
           # imagehash (pHash) for the near-duplicate check of pipeline/pictures.py; optional, the average hash stands in without it
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D imagehash==4.3.2 || echo "imagehash not installed: pictures.py uses its average hash"
+          # the opening-frame scorecard's text coverage (pipeline/opening_frame.py, 24 October): an extra, so a failed install only drops that one number
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D rapidocr==3.10.0 onnxruntime==1.31.0 || echo "RapidOCR not installed: the opening scorecard skips its text coverage"
           python -m playwright install --with-deps chromium
       - name: Fonts and icons
         if: matrix.job.mode != 'reject'
@@ -115,6 +117,16 @@ jobs:
       - uses: actions/cache/save@v4
         if: ${{ matrix.job.mode != 'reject' && steps.siglip_cache.outputs.cache-hit != 'true' && hashFiles('models/siglip2/MANIFEST.json') != '' }}
         with: { path: models/siglip2, key: siglip2-b16-224-v1 }
+      # the george_turbo voice (templates/looks.json, 24 October) reads on Chatterbox-Turbo, which chatterbox-tts 0.1.7 already has: only
+      # a Short drawn that voice fetches its 3 GB (pinned commit, every file hash-checked), and one that cannot start it is read in the
+      # house voice instead (run_board.py), so a failed download costs a voice test, never a Short
+      - uses: actions/cache@v4
+        if: matrix.job.mode != 'reject' && matrix.job.look.voice == 'george_turbo'
+        with: { path: models/chatterbox-turbo, key: chatterbox-turbo-749d1c1 }
+      - name: Voice model (Turbo arm)
+        if: matrix.job.mode != 'reject' && matrix.job.look.voice == 'george_turbo'
+        continue-on-error: true
+        run: python pipeline/get_model.py models/chatterbox-turbo --turbo
       - name: Unlock music
         if: matrix.job.mode != 'reject'
         env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }
@@ -125,6 +137,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}      # lists our own gameplay recordings (release "gameplay")
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           CB_CKPT: ${{ github.workspace }}/models/chatterbox
+          CB_TURBO_CKPT: ${{ github.workspace }}/models/chatterbox-turbo
           TQDM_DISABLE: '1'
         run: python pipeline/run_board.py
       - uses: actions/upload-artifact@v4

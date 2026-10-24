@@ -1,14 +1,9 @@
-evening run for 2026-10-24: 4 to write from 7 fact packs
+breaking run for 2026-10-24: 2 to write from 4 fact packs
 category shares: {'Music': 0.35, 'Film': 0.26, 'Sport': 0.22, 'Gaming': 0.05, 'Entertainment': 0.04, 'Tech': 0.04, 'Science': 0.04}
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: still failing: facts: beat 5: Pre-orders start next week is not supported by the pack.
-GTA 6 price: gemini-3.7-flash, 0 warnings, edited by Claude
-too few facts: GTA 6 trailer views record
-too few facts: GTA 6 map
-So Easy (To Fall In Love) by Olivia Dean: skipped: nothing new
-jorja smith: claude:sonnet, 0 warnings
-movie times: groq:openai/gpt-oss-120b, 0 warnings, edited by Claude
-Cyberpunk 2077 gets massive new update 🎮: groq:openai/gpt-oss-120b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), edited by Claude
-How Queen and David Bowie created Under Pressure in a single night: claude:sonnet, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 5 of 4: QD-146 GTA 6 has no disc, so what will it cost you? 🎮; QD-147 Jorja Smith sings at the Amy Winehouse tribute 🎤; QD-148 New Alien movie confirmed, and Ridley Scott is producing 👽; QD-149 Cyberpunk 2077 now fits in your hands 🎮; QD-150 Queen and Bowie: The night Under Pressure began 🎸 (reserve)
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"gemini-3.7-flash": "daily limit 20", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.7-flash": 2, "groq:openai/gpt-oss-120b": 6, "gemini-3.5-flash-lite": 19, "claude:sonnet": 6, "gemini-3.6-flash": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 6, "second opinions": 0, "late": false, "claude today": "3 of 12 edits, 2 of 4 writes"}
+GTA 6: claude:sonnet, 0 warnings
+watchlist GTA 6: today's places are filled: GTA 6 trailer views record
+watchlist GTA 6: today's places are filled: GTA 6 map
+strictly come dancing week 5 results: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), edited by Claude
+wrote 2 of 2: QD-151 Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮; QD-152 Melanie C leads a sweaty Strictly workout to her own track 💪
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"claude:sonnet": 2, "gemini-3.5-flash-lite": 7, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 2, "second opinions": 0, "late": false, "claude today": "4 of 12 edits, 3 of 4 writes"}

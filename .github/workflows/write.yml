@@ -78,5 +78,9 @@ jobs:
           git add status/claude_usage.json 2>/dev/null || true
           new=$(git diff --cached --name-only -- boards/queue | wc -l)
           git commit -q -m "Gemini boards $(date -u '+%F %H:%M')" || exit 0
-          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && break; sleep $((5 + RANDOM % 10)); done
+          pushed=""
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && { pushed=1; break; }; sleep $((5 + RANDOM % 10)); done
+          # until 24 October a push that failed five times ended this step green: the boards (and their model calls) were lost
+          # with the runner and nothing said so. Now the run fails, so alerts.yml sees it.
+          [ -n "$pushed" ] || { echo "::error::the written boards could not be pushed after 5 tries"; exit 1; }
           [ "$new" -gt 0 ] && gh workflow run render.yml --ref main || true    # a push made by this job can't start render.yml itself

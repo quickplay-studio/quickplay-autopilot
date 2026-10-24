@@ -86,7 +86,7 @@ def wiki_alive(article, get, today=None):
     """(alive, evidence): yesterday's reads at least SURGE times the usual (median of the 14 days before) and MIN_READS."""
     end = (today or dt.date.today()) - dt.timedelta(days=1); start = end - dt.timedelta(days=14)
     u = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/"
-         f"{urllib.parse.quote(article.replace(' ', '_'), safe='')}/daily/{start:%Y%m%d}00/{end:%Y%m%d}00")
+         f"{urllib.parse.quote(article.replace(' ', '_'), safe='')}/daily/{start:%Y%m%d}/{end:%Y%m%d}")      # as watch.py, which runs daily
     try:
         r = get(u, headers=UA, timeout=20)
         reads = [int(x.get("views", 0)) for x in r.json().get("items", [])] if r.ok else []

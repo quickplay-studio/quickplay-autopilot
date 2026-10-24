@@ -147,6 +147,14 @@ def m_dead(D, a, b):
     return (sum(1 for v in aged if v < D.floor) / len(aged), len(aged)) if aged else (None, 0)
 
 
+def m_feed_pick(D, a, b):
+    """The share of Shorts the Shorts feed picks up in their first 3 hours: 20 or more views at 3 hours (views_3h, from
+    the hourly curves). The data report of 24 October: 27% of Shorts, holding 77% of the 24-hour views."""
+    v = [num(r.get("views_3h")) for r in D.shorts_in(a, b)]
+    v = [x for x in v if x is not None]
+    return (sum(1 for x in v if x >= 20) / len(v), len(v)) if v else (None, 0)
+
+
 def m_subs(D, a, b):
     pairs = [(num(r.get("yt_subs_gained")), num(r.get("yt_views"))) for r in D.shorts_in(a, b)]
     pairs = [(s, v) for s, v in pairs if s is not None and v is not None]
@@ -248,6 +256,7 @@ METRICS = {
     "yt_views_24h": ("YouTube views per Short at 24 hours", "higher", "{:,.0f}", m_views_24h),
     "yt_rel": ("Shorts views against the Shorts around them", "higher", "{:.2f}x", m_rel),
     "dead_share": ("share of dead Shorts a week on", "lower", "{:.0%}", m_dead),
+    "feed_pick": ("share of Shorts the feed picks up (20+ views at 3 hours)", "higher", "{:.0%}", m_feed_pick),
     "uploads_day": ("Shorts posted a day", "higher", "{:.0f}", per_day(shorts_per_day, lambda D: first([r["_day"] for r in D.shorts]), Data.shorts_end)),
     "yt_views_day": ("YouTube views a day", "higher", "{:,.0f}", per_day(yt_views_per_day, yt_views_start, lambda D: None, zero_fill=False)),
     "avg_viewed_pct": ("average viewed %", "higher", "{:.0f}%", m_field("yt_avg_viewed_pct")),

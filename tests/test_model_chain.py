@@ -3,7 +3,7 @@ Cerebras, Mistral, OpenRouter), the open model on the runner and Claude last; th
 import pathlib as _p, sys as _s, tempfile as _t
 REPO_DIR = str(_p.Path(__file__).resolve().parent.parent)
 SCRATCH = _t.mkdtemp(prefix="qp-test-")
-import json, os, sys
+import json, math, os, sys
 os.chdir(REPO_DIR)
 sys.path.insert(0, REPO_DIR + "/pipeline")
 import factpack as F
@@ -140,7 +140,11 @@ import analytics as A
 rows = [{"writer": "gemini:gemini-flash-latest", "look_score": 0.8, "views_vs_typical": 0.5}, {"writer": "gemini:gemini-flash-latest", "look_score": 1.2, "views_vs_typical": 2},
         {"writer": "groq:x", "look_score": "", "views_vs_typical": ""}, {"writer": "", "look_score": 1.0}]
 out = A.writer_scores(rows)["writers"]
-assert out["gemini:gemini-flash-latest"] == {"n": 2, "shorts": 2, "score": 1.0, "views_vs_typical": 1.25} and out["groq:x"] == {"n": 0, "shorts": 1}, out
+# the score is shrunk on the log scale (24 October: one breakout at 27.7x gave a 2-Short model a score of 20.9)
+shrunk = round(math.exp((math.log(0.8) + math.log(1.2)) / (2 + A.WRITER_SHRINK)), 3)
+assert out["gemini:gemini-flash-latest"] == {"n": 2, "shorts": 2, "score": shrunk, "views_vs_typical": 1.25} and out["groq:x"] == {"n": 0, "shorts": 1}, out
+lucky = A.writer_scores([{"writer": "w", "look_score": 27.7}, {"writer": "w", "look_score": 14.0}])["writers"]["w"]["score"]
+assert lucky < 3, lucky
 import drivers as D
 assert "writer" in D.TESTED
 print("8 scores ok")

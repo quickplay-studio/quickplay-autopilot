@@ -8,12 +8,18 @@ only, so reading it costs Claude very little. research() adds trends/research.js
 Scheduled events too: rocket launches in the next 48 hours (Launch Library 2, no key), yesterday's football results
 and the next two days' big matches (football-data.org, FOOTBALL_DATA_TOKEN), and Apple Music's most-played songs
 in GB, US, ES, BR and MX with the songs new to each top 25 since the day before (Apple's free charts, no key).
+More free sources, no keys (pipeline/trend_sources.py, 24 October): Wikipedia's In the news and On this day, TVmaze's
+premieres tonight, Steam's most played (new or climbing), Apple's albums and free apps new to a top 10, Bluesky's
+trending topics and the Formula 1 weekend. They share one time limit (TREND_SOURCES_SECONDS, 60) and have their own
+places in research.json (EXTRA_SLOTS, round-robin across the sources), so each is measured daily without pushing out
+the trends above; every such topic's signal starts with its source's name.
 """
 import datetime as dt, json, os, pathlib, re, sys, xml.etree.ElementTree as ET
 import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
+EXTRA_SLOTS, EXTRA_SEARCHES = 8, 10        # research.json places and news searches for the extra sources' topics
 UA = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}
 SKIP = re.compile(r"\b(election|vote|minister|president|senate|war|shooting|murder|killed|police|court|trial|arrest|"
                   r"cancer|vaccine|crypto|bitcoin|stock|shares|betting|odds|casino|lottery|porn|onlyfans|"
@@ -123,6 +129,13 @@ def main():
     fb = football()
     if fb: data["football"] = fb
     data["music_charts"] = music_charts()
+    try:                                       # the extra free sources: optional, time-limited, never stop the run
+        import trend_sources as TS
+        extra = TS.collect(SKIP)
+        data.update({k: v for k, v in extra.items() if k != "notes"})
+        if extra.get("notes"): data["extra_sources_notes"] = extra["notes"]
+    except Exception as e:
+        data["extra_sources_notes"] = [f"{type(e).__name__}: {str(e)[:150]}"]
     if Y.available():
         data["youtube_charts"] = youtube_charts(Y.client())
         data["our_last_7_days"] = own_channel()
@@ -345,8 +358,10 @@ def research(data):
             for it in _feed_items(u):
                 if it["when"] and now - it["when"] > dt.timedelta(hours=72): continue
                 it["outlet"] = outlet; it["words"] = set(_words(it["text"])); items.append(it)
-    topics, seen, searches = [], set(), [0]
-    def add(q, signal, wiki=None, vetted=False):
+    topics, seen, searches, xsearches = [], set(), [0], [0]
+    def add(q, signal, wiki=None, vetted=False, extra=None):
+        """extra: {"source": ..., "kind": ...} for a topic from trend_sources.py: it has its own places in the output and
+        its own news searches (EXTRA_SLOTS, EXTRA_SEARCHES), so it never takes room from the trends above."""
         key = " ".join(_words(q))
         if not key or key in seen or (SKIP.search(q) and not vetted): return
         seen.add(key)
@@ -354,8 +369,9 @@ def research(data):
         longest = max(ws, key=len)
         need = 1 if len(ws) == 1 else (len(ws) - 1 if len(ws) <= 3 else -(-len(ws) * 3 // 5))
         hits = [it for it in items if sum(w in it["words"] for w in ws) >= need and longest in it["words"]]
-        if len(hits) < 3 and searches[0] < 40:          # top up from a news search for this topic
-            searches[0] += 1
+        budget, cap = (xsearches, EXTRA_SEARCHES) if extra else (searches, 40)
+        if len(hits) < 3 and budget[0] < cap:           # top up from a news search for this topic
+            budget[0] += 1
             key2 = sorted(ws, key=len, reverse=True)[:2]      # the search already did the matching: the headline only has
             hits += [it for it in _news_search(q) if any(w in it["words"] for w in key2)]   # to name the topic's main word
         hits.sort(key=lambda it: it["when"] or now - dt.timedelta(days=3), reverse=True)
@@ -371,7 +387,8 @@ def research(data):
         if arts or wiki:
             topics.append({"topic": q, "signal": signal, "wikipedia": wiki,
                            "articles": [{"outlet": a["outlet"], "title": a["title"][:140], "url": a["url"],
-                                         "published": a["when"].strftime("%Y-%m-%d") if a["when"] else ""} for a in arts]})
+                                         "published": a["when"].strftime("%Y-%m-%d") if a["when"] else ""} for a in arts],
+                           **({k: v for k, v in extra.items() if v} if extra else {})})
     for q in requested_topics():                  # Charlie's own requests first
         add(q, "Charlie's request", vetted=True)
     try:                                          # then the watchlist (pipeline/watch.py): big events coming or surging
@@ -395,8 +412,15 @@ def research(data):
             if r.get("title"):
                 t = re.split(r"\s[|(\[]|\s[-:]\s", r["title"])[0]
                 add(t, f"YouTube {chart} {r.get('views_per_hour', 0):,}/h")
+    try:                                          # the extra free sources (trend_sources.py), round-robin, in their own places
+        import trend_sources as TS
+        for x in TS.topics(data)[:EXTRA_SLOTS * 2]:
+            add(x["q"], x["signal"], x.get("wiki"), extra={"source": x.get("source"), "kind": x.get("kind")})
+    except Exception as e: print("extra sources:", str(e)[:120])
+    main = [t for t in topics if not t.get("source")]
+    more = [t for t in topics if t.get("source")][:EXTRA_SLOTS]
     return {"date": data.get("date"), "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
-            "topics": [t for t in topics if t["articles"]][:30] + [t for t in topics if not t["articles"]][:8]}
+            "topics": [t for t in main if t["articles"]][:30] + more + [t for t in main if not t["articles"]][:8]}
 
 if __name__ == "__main__":
     main()

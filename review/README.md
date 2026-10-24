@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 14:22): 11 of 1,000 subscribers · 8,014 of 10 million Shorts views in 90 days · 6,719 views in the last 24 hours (about 111,022 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 14:36): 11 of 1,000 subscribers · 8,003 of 10 million Shorts views in 90 days · 6,755 views in the last 24 hours (about 111,022 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 14:22 (UK): 5 scheduled, 139 public, 26 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 14 scheduled |
-| Sat 24 Oct | 12 public, 2 scheduled | 25 | 3 | ⏳ 12 of 15 so far, 2 more scheduled |
+| Sat 24 Oct | 12 public, 2 scheduled | 26 | 3 | ⏳ 12 of 15 so far, 2 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -179,7 +179,7 @@ public · 332 views · 25 s · music: false-vacuum-decay · on Facebook · [scri
 ![QD-140](QD-140.jpg)
 
 ### Fri 23 Oct 16:30 · Modern Warfare 4: New matchmaking system revealed 🎮
-public · 19 views · 43 s · music: dead-wrong · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
+public · 19 views · 43 s · music: dead-wrong · on Instagram · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
 
 ![QD-139](QD-139.jpg)
 

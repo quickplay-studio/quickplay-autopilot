@@ -13,9 +13,26 @@
      "box": "transparent",
      "pad": "0"
     },
-    "lab": true,
+    "lab": false,
     "parent": "clean",
-    "born": "2026-10-19"
+    "born": "2026-10-19",
+    "kept": "2026-10-24"
+   },
+   "lab-captions-1024": {
+    "desc": "68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel",
+    "class": "lab",
+    "group": 4,
+    "cap": {
+     "size": "68px",
+     "top": "1290px",
+     "weight": "600",
+     "on": "var(--accent)",
+     "box": "transparent",
+     "pad": "0"
+    },
+    "lab": true,
+    "parent": "lab-captions-1019",
+    "born": "2026-10-24"
    }
   },
   "voice": {
@@ -148,7 +165,19 @@
    "dimension": "opening",
    "change": "retired graphic_first",
    "why": "1.22x against 1.88x for image_first over 35 Shorts"
+  },
+  {
+   "day": "2026-10-24",
+   "dimension": "captions",
+   "change": "kept lab-captions-1019: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel",
+   "why": "1.08x against 1.06x for clean over 25 Shorts"
+  },
+  {
+   "day": "2026-10-24",
+   "dimension": "captions",
+   "change": "testing lab-captions-1024: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel",
+   "why": "one or two settings changed from the best so far, lab-captions-1019"
   }
  ],
- "day": "2026-10-23"
+ "day": "2026-10-24"
 }

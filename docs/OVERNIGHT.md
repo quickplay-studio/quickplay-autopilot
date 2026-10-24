@@ -80,6 +80,10 @@ Newest work at the bottom of each section. Every change ran the full test suite 
 13. **The Tate McRae breakout gets its follow-up after all.** QD-135 is at 31.5 times our usual views. A test follow-up
    written earlier (a dry run, never published) was counted as the real one, so the system would never have written it.
    Tests no longer count; the next write run can follow it up.
+14. **Shorts lost to one unclear sentence are saved.** Five of the six boards ever lost died the same way: the voice
+   garbles one long sentence and all three reads fail the clarity check, so the whole Short is thrown away (QD-147
+   tonight). That sentence is now read again as two short sentences and joined, which is exactly how a person would
+   fix it. Worth about one Short a day.
 
 ## What needs Charlie
 

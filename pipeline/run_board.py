@@ -16,6 +16,52 @@ def sh(*cmd, cwd=P):
     print("$", " ".join(map(str, cmd)), flush=True)
     subprocess.run([str(c) for c in cmd], check=True, cwd=cwd)
 
+def halves(text):
+    """A beat's line split in two near the middle, at a comma or clause word when there is one, else at a word boundary:
+    Chatterbox garbles a long sentence far more often than two short ones (24 October: 5 of the 6 boards ever lost were
+    lost to one unclear beat). ("", "") when the line is too short to split."""
+    words = str(text or "").split()
+    if len(words) < 8: return "", ""
+    mid, lo, hi = len(words) / 2, max(3, int(len(words) * 0.25)), min(len(words) - 3, int(len(words) * 0.75))
+    joins = ("and", "but", "so", "because", "which", "while", "when", "after", "before", "then", "in", "on", "to",
+             "with", "for", "from", "as", "at", "by")
+    best = None
+    for i in range(lo, hi + 1):                     # cut after a comma, else before a joining word; never mid-phrase
+        prev, nxt = words[i - 1], words[i].lower().strip(",.")
+        if prev.endswith(","): score = abs(i - mid)
+        elif nxt in joins: score = abs(i - mid) + 1
+        else: continue
+        if best is None or score < best[0]: best = (score, i)
+    if best is None: return "", ""                  # no natural place to cut: left as it is
+    a, b = " ".join(words[:best[1]]), " ".join(words[best[1]:])
+    a = a.rstrip(",;: ") + ("" if a.rstrip()[-1:] in ".?!" else ".")
+    return a, b[0].upper() + b[1:] if b else ""
+
+
+def split_read(sb, bi, vdir, voice, wps, out_root):
+    """Reads one stubborn beat as two short sentences and joins them: returns (recall, seconds) of the joined audio, which
+    replaces cb_b<bi>.wav in `vdir`, or None when it is no better. Never raises: a failure here just leaves the beat as it was."""
+    import shutil
+    a, b = halves(sb["beats"][bi].get("say_cb") or sb["beats"][bi]["say"])
+    if not a or not b: return None
+    d = out_root / f"{vdir}-split{bi}"
+    two = d / "two.json"; d.mkdir(parents=True, exist_ok=True)
+    two.write_text(json.dumps({"id": sb["id"], "beats": [{"say": a}, {"say": b}]}))
+    sh(PY, "tts_cb.py", two, d, "--voice", voice, "--target-wps", str(wps))
+    w0, w1 = d / "cb_b00.wav", d / "cb_b01.wav"
+    if not (w0.exists() and w1.exists()): return None
+    joined = d / "joined.wav"
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(w0), "-i", str(w1), "-filter_complex",
+                    "[0:a]apad=pad_dur=0.12[a0];[a0][1:a]concat=n=2:v=0:a=1[a]", "-map", "[a]", str(joined)], check=True)
+    sys.path.insert(0, str(P))
+    import qa_asr as Q
+    recall = Q.recall(sb["beats"][bi]["say"], Q.hear(str(joined)))[0]
+    secs = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(joined)],
+                                capture_output=True, text=True, check=True).stdout or 0)
+    shutil.copy(joined, out_root / vdir / f"cb_b{bi:02d}.wav")
+    return recall, round(secs, 3)
+
+
 def recent_tracks():
     """Music slugs of the most recent Shorts, newest first, so the same track isn't used twice in a row."""
     rows = []
@@ -208,6 +254,19 @@ def main():
             if not weak: break
             print(f"voice {v} at {wps} words a second: unclear in beats {weak}", flush=True)
         _, worst, _, v, vdir, man, weak = min(tried, key=lambda x: x[:3])
+        if weak:                       # still unclear after three reads: each stubborn beat read again as two short sentences
+            fixed, mbeats = [], {b["beat"]: b for b in man["beats"]}
+            for bi in list(weak):
+                try: got = split_read(sb, bi, vdir, v, wps0 * 0.9, P)
+                except Exception as e: print(f"split read of beat {bi} failed: {str(e)[:160]}", flush=True); got = None
+                if not got or got[0] < max(0.4, mbeats[bi]["recall"] + 0.05): continue
+                mbeats[bi].update(recall=round(got[0], 3), dur=got[1], split=True); fixed.append(bi)
+                print(f"beat {bi}: read as two sentences instead, {got[0]:.0%} of words heard", flush=True)
+            if fixed:
+                weak = [b for b in weak if b not in fixed]
+                worst = -min([mbeats[b]["recall"] for b in weak], default=1.0)
+                (P / vdir / "cb_manifest.json").write_text(json.dumps(man, indent=1))
+                status["voice_note"] = f"beat{'s' if len(fixed) > 1 else ''} {', '.join(map(str, fixed))} read as two sentences"
         if weak and len(weak) == 1 and weak[0] != 0 and -worst >= 0.25:     # one middle beat, mostly heard: the captions carry it
             status["qa_note"] = f"narration a little unclear in beat {weak[0]} (captions carry it)"; weak = []    # a note, not a flag: flags hold a Short for approval
         if v != voice:

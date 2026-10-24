@@ -1,9 +1,9 @@
 {
  "date": "2026-10-24",
- "built": "2026-10-24T11:10+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-24T13:22+00:00",
+ "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
+ "mode": "full",
+ "run": "afternoon",
  "errors": [],
  "topics": [
   {
@@ -13,9 +13,9 @@
    "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Did you know GTA 6 will cost $79.99 when it launches?",
-    "The Ultimate Edition of GTA 6 will cost $99.99!",
-    "GTA 6 is finally releasing on November 19, 2026."
+    "Did you know GTA 6 will cost $79.99 for the base game?",
+    "GTA 6 is finally launching on November 19, 2026!",
+    "The Ultimate Edition of GTA 6 will cost $99.99."
    ],
    "sources": [
     [
@@ -37,6 +37,12 @@
      "2026-06-25"
     ],
     [
+     "‘GTA 6’ Price Still Not Revealed, but Take-Two Chief Says Rockstar on Track to Begin Marketing This Summer",
+     "https://variety.com/2026/gaming/news/gta-5-no-delay-price-marketing-summer-1236755303/",
+     "Variety",
+     "2026-05-21"
+    ],
+    [
      "GTA 6 price",
      "https://en.wikipedia.org/wiki/Gas_Price",
      "Wikipedia",
@@ -45,7 +51,7 @@
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI costs $79.99 across PlayStation 5 and Xbox Series X and S.",
+     "claim": "Rockstar Games has announced that the base game of GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S.",
      "sources": [
       2,
       3
@@ -59,15 +65,28 @@
      "claim": "Grand Theft Auto VI is set to be released on Nov. 19, 2026.",
      "sources": [
       2,
-      3
+      3,
+      4
      ],
      "evidence": {
       "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
-      "3": "GTA 6 launches on November 19, 2026."
+      "3": "GTA 6 launches on November 19, 2026.",
+      "4": "Rockstar Games’ “Grand Theft Auto 6″ is still on track for its Nov. 19 release but does not yet have an announced price."
      }
     },
     {
-     "claim": "Parent company Take-Two is estimated to have spent $1 to 1.5 billion on GTA 6 so far.",
+     "claim": "GTA 6 physical copies do not include a disc and are just a code in a box.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "there will be no physical version of GTA 6.",
+      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed. They're just a code in a box."
+     }
+    },
+    {
+     "claim": "Parent company Take Two is estimated to have spent $1 1.5 billion so far on GTA 6.",
      "sources": [
       2,
       3
@@ -86,6 +105,24 @@
      ],
      "evidence": {
       "2": "Rockstar took eight years developing GTA 6, which had more starts and stops than some of the game’s banged up beater vehicles."
+     }
+    },
+    {
+     "claim": "Players will be able to begin preloading the giant game on Nov. 12.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Players will be able to begin the lengthy process of preloading the giant game on Nov. 12; there will be no physical version of GTA"
+     }
+    },
+    {
+     "claim": "Rockstar confirmed GTA 6 features a single player experience at launch.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Rockstar Games has finally announced the price of GTA 6, while confirming it features a “single-player experience” at launch."
      }
     }
    ],
@@ -115,84 +152,327 @@
    ]
   },
   {
-   "n": 7,
-   "topic": "WHERE IS MY HUSBAND! by RAYE",
-   "signal": "Apple Music GB: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
+   "n": 3,
+   "topic": "The Call the Police trend on TikTok and Instagram",
+   "signal": "Charlie's request",
+   "category": "Film",
+   "what_is_new": "Channel 4 has released its first vertical drama titled The Guest List on social media in the UK.",
    "hooks": [
-    "Did you know Rayes hit song surpassed a billion streams?",
-    "Find out how Rayes viral track became a massive wedding anthem!"
+    "Channel 4 just launched its very first vertical drama in the UK!",
+    "Can a 90 second vertical drama series keep viewers hooked for weeks?",
+    "Find out how a PR guru's phone gets snatched on the way to a boat party."
    ],
    "sources": [
     [
-     "You be the judge: should my husband stop letting our cat drink on the kitchen counter?",
-     "https://www.theguardian.com/lifeandstyle/2026/oct/22/you-be-the-judge-should-my-husband-stop-cat-drinking-on-kitchen-counter",
+     "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
      "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "“Where Is My Husband!” Inside the Song That Made Raye All The Rage",
-     "https://www.hollywoodreporter.com/music/music-features/raye-where-is-my-husband-making-of-song-1236723326/",
-     "The Hollywood Reporter",
-     "2026-10-08"
+     "2026-10-24"
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "Rayes song Where Is My Husband has surpassed a billion Spotify streams.",
+     "claim": "Channel 4 has released its first vertical drama on social media in the UK.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "The soul-pop track has surpassed a billion Spotify streams thanks to its catchy chorus, with Raye asking: “What is taking him so long / to"
+      "1": "Enter Channel 4, which has released its first vertical drama on social media in the UK."
      }
     },
     {
-     "claim": "Raye is 28 years old.",
+     "claim": "The Guest List is made in partnership with the skincare brand Sol de Janeiro.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "It was top of mind for Raye when she started crafting the biggest song of her career, a dramatic, all-too-relatable outcry as the 28-year-old seeks"
+      "1": "The Guest List is made in partnership with the skincare brand Sol de Janeiro, and episodes are around 90 seconds to two minutes in length."
      }
     },
     {
-     "claim": "Mike Sabath is Rayes longtime record producer and co-writer on the track.",
+     "claim": "Episodes of The Guest List are around 90 seconds to two minutes in length.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Mike Sabath, Raye’s longtime record producer and co-writer on the track, says the chorus “pretty much arrived immediately” once the pair got to Big Bear,"
-     }
-    },
-    {
-     "claim": "The song Where Is My Husband was released in September 2025.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "As Raye and Sabath neared putting the final touches on the track ahead of its September 2025 release, they debuted the song live instead, getting"
+      "1": "The Guest List is made in partnership with the skincare brand Sol de Janeiro, and episodes are around 90 seconds to two minutes in length."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 12,
-   "topic": "indiana fever",
-   "signal": "Google Trends US 5000+",
+   "n": 9,
+   "topic": "west ham vs southampton",
+   "signal": "Google Trends GB 1000+",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know the Indiana Fever were founded for the 2000 WNBA season?",
-    "In 2012, the Fever won the WNBA Finals against the Minnesota Lynx!"
+    "Josh Ajala scores a debut double for West Ham!",
+    "How West Ham thrashed Southampton 4-1 in the Carabao Cup."
    ],
    "sources": [
     [
-     "indiana fever",
-     "https://en.wikipedia.org/wiki/Indiana_Fever",
+     "Southampton 1-4 West Ham: Josh Ajala scores debut double as Hammers hit back to reach Carabao Cup third round",
+     "https://www.skysports.com/football/news/13577047/southampton-west-ham-united",
+     "Sky Sports",
+     "2026-08-25"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Leo Scienza scored for Southampton after 10 minutes.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Southampton took just 10 minutes to open the scoring."
+     }
+    },
+    {
+     "claim": "Jarrod Bowen scored an 84th minute fourth goal for West Ham.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Taty Castellanos swept in Joel Veltman's low cross 15 minutes from time before Jarrod Bowen grabbed an 84th minute fourth to condemn Southampton to a"
+     }
+    },
+    {
+     "claim": "Josh Ayala scored twice on his full professional debut as West Ham beat Southampton 4-1 in the Carabao Cup.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Teenager Josh Ayala scored twice on his full professional debut as West Ham came from behind to thrash Championship rivals Southampton 4-1 in the Carabao"
+     }
+    },
+    {
+     "claim": "Southampton took the lead after just ten minutes.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Southampton took just 10 minutes to open the scoring."
+     }
+    },
+    {
+     "claim": "The Carabao Cup second round tie between Southampton and West Ham United was played at St Mary's on Tuesday 25 August 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Tuesday 25 August 2026 22:39, UK"
+     }
+    },
+    {
+     "claim": "Nuno Espirito Santo fielded a team made up of four teenagers and three 20‑year‑olds, making eight changes from the previous match.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Nuno Espirito Santo made it clear a cup run was not his priority by fielding a team made up of four teenagers and three 20-year-olds"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 10,
+   "topic": "unai emery",
+   "signal": "Google Trends GB 200+",
+   "category": "Sport",
+   "what_is_new": "Villa beat Viking 3-1 to extend their European home winning streak to 12 games.",
+   "hooks": [
+    "Unai Emery holds the record for the most UEFA Europa League titles with five.",
+    "Unai Emery is the manager of Premier League club Aston Villa."
+   ],
+   "sources": [
+    [
+     "Emery's Villa 2.0 reboot restores optimism before Man City meeting",
+     "https://www.bbc.co.uk/sport/football/articles/cwg7xvz8e8dpo?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-23"
+    ],
+    [
+     "unai emery",
+     "https://en.wikipedia.org/wiki/Unai_Emery",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Unai Emery is the manager of Premier League club Aston Villa.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Emery celebrates the fourth anniversary of his appointment from Villarreal when Villa face Premier League leaders Manchester City at Villa Park on Saturday lunchtime, his",
+      "2": "Unai Emery Etxegoien (born 3 November 1971) is a Spanish football manager and former player who is the manager of Premier League club Aston Villa."
+     }
+    },
+    {
+     "claim": "Unai Emery holds the record for the most UEFA Europa League titles with five.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
+      "2": "One of the most successful managers in the history of European continental competitions, Emery holds the record for the most UEFA Europa League titles with"
+     }
+    },
+    {
+     "claim": "Emery won three consecutive Europa League titles with Sevilla.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
+      "2": "to sevilla in 2013 where he won an unprecedented three consecutive europa leagues emery moved to french club paris saint germain in 2016 there he won"
+     }
+    },
+    {
+     "claim": "Emery won a Europa League title with Villarreal.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
+      "2": "He was hired by Villarreal in July 2020, where he won the Europa League in his first season and guided the club to a Champions"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Villa have now won 12 European home games in a row under Emery.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Villa have now won 12 European home games in a row, under the great specialist Emery."
+     }
+    },
+    {
+     "claim": "Emery celebrated the fourth anniversary of his appointment from Villarreal.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Emery celebrates the fourth anniversary of his appointment from Villarreal when Villa face Premier League leaders Manchester City at Villa Park on Saturday lunchtime, his"
+     }
+    },
+    {
+     "claim": "Emery holds the record for the most UEFA Europa League titles with five.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Emery holds the record for the most UEFA Europa League titles with five,[3][4]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Unai_Emery_-_Sevilla_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 12,
+   "topic": "ross barkley",
+   "signal": "Google Trends GB 1000+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside."
+   ],
+   "sources": [
+    [
+     "Barkley and Buendía on target as Aston Villa sink Viking to maintain perfect start",
+     "https://www.theguardian.com/football/2026/oct/21/aston-villa-viking-champions-league-match-report",
+     "Guardian",
+     "2026-10-21"
+    ],
+    [
+     "ross barkley",
+     "https://en.wikipedia.org/wiki/Ross_Barkley",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Ross Barkley is an Aston Villa player",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Two corners later, an inswinger from the livewire 18-year-old Ibrahim Mbaye was met by Ross Barkley, who leapt highest to plant a firm header across",
+      "2": "Ross Barkley (born 5 December 1993) is an English professional footballer who plays as a midfielder for Premier League club Aston Villa."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ross Barkley[3] was born on 5 December 1993[4] in Liverpool, Merseyside.[5]"
+     }
+    },
+    {
+     "claim": "Barkley had scored twice in the previous week’s big win",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barkley had scored twice in the previous week’s big win but the rest of the first half resembled a quest for Emiliano Buendía to put"
+     }
+    },
+    {
+     "claim": "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ross Barkley[3] was born on 5 December 1993[4] in Liverpool, Merseyside.[5]"
+     }
+    },
+    {
+     "claim": "On 5 January 2018, Barkley joined Chelsea for £15 million, signing a five-and-a-half-year contract",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "On 5 January 2018, Barkley joined Premier League club Chelsea for a fee of £15 million, signing a five-and-a-half-year contract with the defending champions."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Ross_Barkley_in_2019.jpg"
+   ]
+  },
+  {
+   "n": 14,
+   "topic": "eberechi eze",
+   "signal": "Google Trends GB 200+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Eberechi Eze was born in Greenwich on 29 June 1998?"
+   ],
+   "sources": [
+    [
+     "eberechi eze",
+     "https://en.wikipedia.org/wiki/Eberechi_Eze",
      "Wikipedia",
      ""
     ]
@@ -200,77 +480,27 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "In 2012, the Indiana Fever won the WNBA Finals with a 3 to 1 series victory over the Minnesota Lynx.",
+     "claim": "Eberechi Eze was born on 29 June 1998 in Greenwich, Greater London.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "In 2012, the Fever won the WNBA Finals with a 3–1 series victory over the Minnesota Lynx."
+      "1": "Eberechi Oluchi Eze[4] was born on 29 June 1998[1] in Greenwich, Greater London.[5]"
      }
     },
     {
-     "claim": "The Fever won the 2012 WNBA Finals with a 3 to 1 series victory over the Minnesota Lynx.",
+     "claim": "He was born on 29 June 1998 in Greenwich, Greater London",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "In 2012, the Fever won the WNBA Finals with a 3–1 series victory over the Minnesota Lynx."
-     }
-    },
-    {
-     "claim": "The team was founded for the 2000 WNBA season.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The team was founded for the 2000 WNBA season."
-     }
-    },
-    {
-     "claim": "The Fever have qualified for the WNBA playoffs in 14 of its 25 seasons in Indiana.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Fever have qualified for the WNBA playoffs in 14 of its 25 seasons in Indiana."
-     }
-    },
-    {
-     "claim": "The team is owned by Herb Simon, the founder of Simon Property Group.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The team is owned by Herb Simon, the founder of Simon Property Group."
+      "1": "Eberechi Oluchi Eze[4] was born on 29 June 1998[1] in Greenwich, Greater London."
      }
     }
    ],
-   "images": []
-  },
-  {
-   "n": 3,
-   "topic": "The Call the Police trend on TikTok and Instagram",
-   "signal": "Charlie's request",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [],
-   "sources": [
-    [
-     "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
-     "Guardian",
-     "2026-10-24"
-    ],
-    [
-     "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
-     "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
-     "NBC News",
-     "2026-07-28"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": []
+   "images": [
+    "commons:File:Eberechi_Eze_England_v_Ghana_23_June_2026-039.jpg"
+   ]
   }
  ]
 }

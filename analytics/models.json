@@ -1,57 +1,57 @@
 {
- "updated": "2026-10-24T08:39+00:00",
+ "updated": "2026-10-24T13:22+00:00",
  "writers": {
   "claude:sonnet": {
    "n": 0,
-   "shorts": 1
+   "shorts": 3
   },
   "gemini:gemini-3-flash-preview": {
    "n": 7,
    "shorts": 9,
-   "score": 0.675,
+   "score": 0.684,
    "views_vs_typical": 0.1
   },
   "gemini:gemini-3.1-flash-lite": {
    "n": 5,
    "shorts": 5,
-   "score": 0.714,
-   "views_vs_typical": 0.56
+   "score": 0.625,
+   "views_vs_typical": 0.52
   },
   "gemini:gemini-3.5-flash": {
-   "n": 3,
+   "n": 4,
    "shorts": 4,
-   "score": 0.667,
-   "views_vs_typical": 0.34
+   "score": 0.823,
+   "views_vs_typical": 0.46
   },
   "gemini:gemini-3.5-flash-lite": {
    "n": 24,
    "shorts": 24,
-   "score": 1.03,
-   "views_vs_typical": 0.59
+   "score": 0.996,
+   "views_vs_typical": 0.52
   },
   "gemini:gemini-3.6-flash": {
-   "n": 2,
+   "n": 4,
    "shorts": 7,
-   "score": 1.084,
-   "views_vs_typical": 1.05
+   "score": 2.562,
+   "views_vs_typical": 2.52
   },
   "gemini:gemini-3.7-flash": {
-   "n": 1,
-   "shorts": 3,
-   "score": 9.0,
-   "views_vs_typical": 0.53
+   "n": 2,
+   "shorts": 4,
+   "score": 20.875,
+   "views_vs_typical": 14.08
   },
   "gemini:gemini-3.8-flash": {
    "n": 1,
    "shorts": 1,
-   "score": 0.359,
-   "views_vs_typical": 0.14
+   "score": 0.365,
+   "views_vs_typical": 0.13
   },
   "gemini:gemini-flash-latest": {
-   "n": 5,
+   "n": 8,
    "shorts": 8,
-   "score": 1.004,
-   "views_vs_typical": 0.37
+   "score": 1.01,
+   "views_vs_typical": 0.41
   },
   "gemini:gemma-4-31b-it": {
    "n": 0,
@@ -59,84 +59,84 @@
   },
   "groq:openai/gpt-oss-120b": {
    "n": 7,
-   "shorts": 12,
-   "score": 1.143,
-   "views_vs_typical": 1.67
+   "shorts": 13,
+   "score": 1.0,
+   "views_vs_typical": 1.22
   },
   "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": {
    "n": 0,
-   "shorts": 2
+   "shorts": 3
   }
  },
  "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. A writer's score is the median of its Shorts.",
  "editors": {
   "claude": {
    "n": 0,
-   "shorts": 3
+   "shorts": 6
   },
   "none": {
-   "n": 55,
+   "n": 62,
    "shorts": 73,
-   "score": 0.882,
-   "views_vs_typical": 0.53
+   "score": 0.95,
+   "views_vs_typical": 0.51
   }
  },
  "combos": {
   "claude:sonnet + no edit": {
    "n": 0,
-   "shorts": 1
+   "shorts": 3
   },
   "gemini:gemini-3-flash-preview + no edit": {
    "n": 7,
    "shorts": 9,
-   "score": 0.675,
+   "score": 0.684,
    "views_vs_typical": 0.1
   },
   "gemini:gemini-3.1-flash-lite + no edit": {
    "n": 5,
    "shorts": 5,
-   "score": 0.714,
-   "views_vs_typical": 0.56
+   "score": 0.625,
+   "views_vs_typical": 0.52
   },
   "gemini:gemini-3.5-flash + no edit": {
-   "n": 3,
+   "n": 4,
    "shorts": 4,
-   "score": 0.667,
-   "views_vs_typical": 0.34
+   "score": 0.823,
+   "views_vs_typical": 0.46
   },
   "gemini:gemini-3.5-flash-lite + no edit": {
    "n": 24,
    "shorts": 24,
-   "score": 1.03,
-   "views_vs_typical": 0.59
+   "score": 0.996,
+   "views_vs_typical": 0.52
   },
   "gemini:gemini-3.6-flash + no edit": {
-   "n": 2,
+   "n": 4,
    "shorts": 7,
-   "score": 1.084,
-   "views_vs_typical": 1.05
+   "score": 2.562,
+   "views_vs_typical": 2.52
   },
   "gemini:gemini-3.7-flash + claude": {
    "n": 0,
-   "shorts": 1
+   "shorts": 2
   },
   "gemini:gemini-3.7-flash + no edit": {
-   "n": 1,
+   "n": 2,
    "shorts": 2,
-   "score": 9.0,
-   "views_vs_typical": 0.53
+   "score": 20.875,
+   "views_vs_typical": 14.08
   },
   "gemini:gemini-3.8-flash + no edit": {
    "n": 1,
    "shorts": 1,
-   "score": 0.359,
-   "views_vs_typical": 0.14
+   "score": 0.365,
+   "views_vs_typical": 0.13
   },
   "gemini:gemini-flash-latest + no edit": {
-   "n": 5,
+   "n": 8,
    "shorts": 8,
-   "score": 1.004,
-   "views_vs_typical": 0.37
+   "score": 1.01,
+   "views_vs_typical": 0.41
   },
   "gemini:gemma-4-31b-it + no edit": {
    "n": 0,
@@ -144,13 +144,17 @@
   },
   "groq:openai/gpt-oss-120b + claude": {
    "n": 0,
-   "shorts": 2
+   "shorts": 3
   },
   "groq:openai/gpt-oss-120b + no edit": {
    "n": 7,
    "shorts": 10,
-   "score": 1.143,
-   "views_vs_typical": 1.67
+   "score": 1.0,
+   "views_vs_typical": 1.22
+  },
+  "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free + claude": {
+   "n": 0,
+   "shorts": 1
   },
   "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free + no edit": {
    "n": 0,

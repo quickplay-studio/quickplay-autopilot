@@ -1,21 +1,20 @@
 {
- "date": "2026-10-23",
- "built": "2026-10-23T23:10+00:00",
+ "date": "2026-10-24",
+ "built": "2026-10-24T07:26+00:00",
  "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "full",
+ "mode": "breaking",
  "run": "",
  "errors": [],
  "topics": [
   {
    "n": 4,
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (surging, 27 days to go)",
+   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "The official Grand Theft Auto VI launch trailer was posted on 23 October 2026.",
    "hooks": [
-    "Did you know GTA 6 is launching on November 19, 2026?",
-    "GTA 6 is set in the fictional US state of Leonida!",
-    "GTA 6 is coming exclusively to PlayStation 5 and Xbox consoles at first."
+    "GTA 6 arrives on November 19, 2026!",
+    "Explore Leonida in Grand Theft Auto VI very soon!"
    ],
    "sources": [
     [
@@ -25,16 +24,16 @@
      "2026-10-23"
     ],
     [
-     "Ahead of GTA 6, PlayStation 5 Sales Were Up 22%, Likely Due To Wolverine",
-     "https://www.ign.com/articles/ahead-of-gta-6-playstation-5-sales-were-up-22-likely-due-to-wolverine",
-     "IGN",
-     "2026-10-23"
-    ],
-    [
      "Call of Duty promises a return to form - but can it compete with GTA?",
      "https://www.bbc.co.uk/news/articles/cm369kkg92x6o?at_medium=RSS&at_campaign=rss",
      "BBC",
      "2026-10-23"
+    ],
+    [
+     "Nintendo Switch Sports Resort review – Wii Sports lives on in this effortlessly appealing collection of games",
+     "https://www.theguardian.com/games/2026/oct/22/nintendo-switch-sports-resort-review-wii-sports-games",
+     "Guardian",
+     "2026-10-22"
     ],
     [
      "GTA 6",
@@ -45,27 +44,18 @@
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI will only be released on PlayStation 5 and Xbox consoles at first.",
+     "claim": "GTA 6 will be released on PlayStation 5 and Xbox Series X/S at launch.",
      "sources": [
-      3,
+      2,
       4
      ],
      "evidence": {
-      "3": "GTA 6 will only be released on PlayStation 5 and Xbox consoles at first, and multiplayer modes won't be available at launch.",
+      "2": "GTA 6 will only be released on PlayStation 5 and Xbox consoles at first, and multiplayer modes won't be available at launch.",
       "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     }
    ],
    "one_source": [
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on November 19, 2026.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
     {
      "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
      "sources": [
@@ -76,21 +66,66 @@
      }
     },
     {
-     "claim": "Grand Theft Auto VI is the eighth main entry in the Grand Theft Auto series.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "It is due to be the eighth main entry in the Grand Theft Auto series, following 2013's Grand Theft Auto V, and the sixteenth entry"
-     }
-    },
-    {
      "claim": "Principal production on Grand Theft Auto VI began in 2020.",
      "sources": [
       4
      ],
      "evidence": {
-      "4": "and principal production began in 2020."
+      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The game is set in the fictional US state of Leonida.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Set within the fictional US state of Leonida, based on Florida"
+     }
+    },
+    {
+     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "The map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Multiplayer modes won't be available at launch.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "GTA 6 will only be released on PlayStation 5 and Xbox consoles at first, and multiplayer modes won't be available at launch."
      }
     }
    ],
@@ -99,116 +134,9 @@
    ]
   },
   {
-   "n": 5,
-   "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (surging, 27 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Grand Theft Auto VI launches for just $79.99.",
-    "No physical copy, only digital preloads from 12 November.",
-    "Ultimate edition priced at $99.99 for extra gear."
-   ],
-   "sources": [
-    [
-     "Ahead of GTA 6, PlayStation 5 Sales Were Up 22%, Likely Due To Wolverine",
-     "https://www.ign.com/articles/ahead-of-gta-6-playstation-5-sales-were-up-22-likely-due-to-wolverine",
-     "IGN",
-     "2026-10-23"
-    ],
-    [
-     "The young Americans choosing Y2K cars over shiny new SUVs: ‘I get so much crap from people’",
-     "https://www.theguardian.com/us-news/2026/oct/23/y2k-used-cars-gen-z",
-     "Guardian",
-     "2026-10-23"
-    ],
-    [
-     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
-     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
-     "The Hollywood Reporter",
-     "2026-10-15"
-    ],
-    [
-     "GTA 6 price",
-     "https://en.wikipedia.org/wiki/Gas_Price",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The base version of Grand Theft Auto VI costs $79.99.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99."
-     }
-    },
-    {
-     "claim": "The Ultimate edition of Grand Theft Auto VI costs $99.99.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is scheduled for release on 19 November 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the"
-     }
-    },
-    {
-     "claim": "There will be no physical version of Grand Theft Auto VI.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Players will be able to begin the lengthy process of preloading the giant game on Nov. 12; there will be no physical version of GTA"
-     }
-    },
-    {
-     "claim": "Rockstar Games spent between $1 billion and $1.5 billion developing Grand Theft Auto VI.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It cost the company in the ballpark of $1 billion to $1.5 billion to make."
-     }
-    },
-    {
-     "claim": "If any video game is worth $100, it’s Grand Theft Auto VI.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "If any video game is worth $100, it’s Grand Theft Auto VI."
-     }
-    },
-    {
-     "claim": "The launch trailer for Grand Theft Auto VI was released on Thursday.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "On Thursday, developer Rockstar Games (Red Dead Redemption 2, Bully) released what it is calling the “launch trailer” for its month‑away masterpiece, the most highly‑anticipated"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
-   ]
-  },
-  {
    "n": 6,
    "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (surging, 27 days to go)",
+   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
    "category": "Gaming",
    "what_is_new": "",
    "hooks": [],
@@ -229,23 +157,15 @@
   {
    "n": 7,
    "topic": "GTA 6 map",
-   "signal": "watchlist: GTA 6 (surging, 27 days to go)",
+   "signal": "watchlist: GTA 6 (surging, 26 days to go)",
    "category": "Gaming",
    "what_is_new": "",
-   "hooks": [
-    "Grand Theft Auto VI arrives on November 19."
-   ],
+   "hooks": [],
    "sources": [
     [
      "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
      "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
      "Xbox Wire",
-     "2026-10-23"
-    ],
-    [
-     "Ahead of GTA 6, PlayStation 5 Sales Were Up 22%, Likely Due To Wolverine",
-     "https://www.ign.com/articles/ahead-of-gta-6-playstation-5-sales-were-up-22-likely-due-to-wolverine",
-     "IGN",
      "2026-10-23"
     ],
     [
@@ -261,19 +181,7 @@
      ""
     ]
    ],
-   "verified": [
-    {
-     "claim": "Grand Theft Auto VI arrives on November 19.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "leading up to GTA 6 on November 19",
-      "3": "before the much-anticipated release of Grand Theft Auto VI"
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
@@ -281,302 +189,69 @@
    ]
   },
   {
-   "n": 8,
-   "topic": "So Easy (To Fall In Love) by Olivia Dean",
-   "signal": "Apple Music GB: new in the top 25",
-   "category": "Music",
+   "n": 10,
+   "topic": "strictly come dancing week 5 results",
+   "signal": "Google Trends GB 200+",
+   "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Did you know Olivia Dean won best new artist at the Grammys?",
-    "Olivia Dean's second album is titled The Art of Loving.",
-    "Olivia Dean is 27 years old."
+    "Melanie C joins the Strictly pros for a fitness based routine!",
+    "Delta Goodrem returns to the Strictly ballroom after an injury absence.",
+    "Jamie Miller makes his UK television debut performing Babydoll."
    ],
    "sources": [
     [
-     "Olivia Dean review – a powerful, affirming night with a pop star at the height of her powers",
-     "https://www.theguardian.com/music/2026/oct/06/olivia-dean-review-a-powerful-affirming-and-fun-singer-at-the-height-of-her-powers",
-     "Guardian",
-     "2026-10-05"
-    ],
-    [
-     "Olivia Dean’s First U.S. Arena Tour Is Off to a Smashing Start, With L.A. Shows Proving She’s No One-Grammy Wonder: Concert Review",
-     "https://variety.com/2026/music/concert-reviews/olivia-dean-concert-review-crypto-arena-tour-1236815197/",
-     "Variety",
-     "2026-07-17"
-    ],
-    [
-     "Olivia Dean’s ‘Man I Need’ Hits No. 1 on Pop Airplay Chart",
-     "https://www.billboard.com/music/chart-beat/olivia-dean-man-i-need-number-one-pop-airplay-chart-1236145790/",
-     "Billboard",
-     "2025-12-26"
+     "Melanie C and the Strictly Come Dancing professionals work up a sweat and Babydoll takes over the ballroom in Week 5's Results Show",
+     "https://www.bbc.co.uk/mediacentre/2026/strictly-come-dancing-melanie-c-pro-routine",
+     "BBC",
+     "2026-10-23"
     ]
    ],
-   "verified": [
-    {
-     "claim": "Olivia Dean won best new artist at the Grammys.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "winning best new artist at the Grammys and an armful of Brits",
-      "2": "Roughly half a year ago, she was at the podium accepting the award for best new artist, the only category in which she’d been nominated."
-     }
-    },
-    {
-     "claim": "The Art of Loving is Olivia Dean's second album.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Her second album’s brash musical prophecy has proven true, then: It is so easy (to fall in love) [with her], as a matter of fact.",
-      "3": "Both songs are from her sophomore album, The Art of Loving, which rose to No. 5 on the Billboard 200 in November."
-     }
-    },
-    {
-     "claim": "Olivia Dean is 27 years old.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "I don’t wish heartbreak on any 27-year-old, but if it might inspire more songs like A Couple Minutes, I might be tempted to send every",
-      "2": "That’s what she delivered Tuesday night at Crypto, seeming seasoned well beyond her 27 years, and as firmly in command of that stage as just"
-     }
-    },
-    {
-     "claim": "Olivia Dean’s Man I Need reached No. 1 on Billboard’s Pop Airplay chart.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Even before I had pressed play on her smash album, The Art of Loving, I’d heard so many of its songs – the No 1",
-      "3": "Olivia Dean’s “Man I Need” ascends two spots to No. 1 on Billboard’s Pop Airplay chart (dated Jan. 3, 2026)."
-     }
-    },
-    {
-     "claim": "So Easy (To Fall in Love) is by Olivia Dean.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "It’s so easy to fall in love with Olivia Dean.",
-      "3": "Plus, Dean bookends Pop Airplay as “So Easy (To Fall in Love)” debuts at No. 40."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 13,
-   "topic": "jorja smith",
-   "signal": "Google Trends GB 5000+",
-   "category": "Music",
-   "what_is_new": "On 22 October 2026 Jorja Smith performed in the BBC‑televised Back to Black tribute show.",
-   "hooks": [
-    "Did you know Jorja Smith was born on 11 June 1997?"
-   ],
-   "sources": [
-    [
-     "Amy Winehouse: Back to Black 20 review – trying an all-star Amy tribute show is a losing game",
-     "https://www.theguardian.com/music/2026/oct/22/amy-winehouse-back-to-black-20-review-bbc-roundhouse-london",
-     "Guardian",
-     "2026-10-22"
-    ],
-    [
-     "Jorja Smith – ‘What Are The Odds’ review: embracing catharsis on the dancefloor",
-     "https://www.nme.com/reviews/album/jorja-smith-what-are-the-odds-review-3962552",
-     "NME",
-     "2026-08-14"
-    ],
-    [
-     "jorja smith",
-     "https://en.wikipedia.org/wiki/Jorja_Smith",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Jorja Smith is from Walsall.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Among sombre and sobering offerings lie the exhilarating, elastic segments of the 29‑year‑old Walsall native’s discography; the pulse of the two‑step‑infused ‘On My Mind’, the",
-      "3": "Born and raised in Walsall, West Midlands, she has been writing songs since the age of 11."
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Jorja Smith was born on 11 June 1997 in Walsall, West Midlands.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Jorja Alice Smith (born 11 June 1997) is an English singer and songwriter. Born and raised in Walsall, West Midlands, she has been writing songs"
-     }
-    },
-    {
-     "claim": "Jorja Smith performed in a BBC TV show tribute to Amy Winehouse's Back to Black.",
+     "claim": "Jamie Miller performs Babydoll for his UK television debut alongside four Strictly Pros in the ballroom.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "hand‑pick singers such as Jorja Smith, Lianne La Havas and Corinne Bailey Rae to recreate the album, is stronger except that it’s primarily staged for"
+      "1": "From Sporty to Babydoll, Jamie Miller is in the ballroom on Sunday for the UK television debut performance of Babydoll feat. Antonio Cipriano."
      }
     },
     {
-     "claim": "Jorja Smith's album 'What Are The Odds' was released on 21 August 2026.",
+     "claim": "Delta Goodrem returns from a week off due to injury to join her fellow Strictly stars in the ballroom on Saturday night.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "- Release date: August 21, 2026"
+      "1": "Delta Goodrem returns from a week off due to injury to join her fellow Strictly stars in the ballroom on Saturday night (on BBC One"
      }
     },
     {
-     "claim": "Jorja Smith is the cousin of football player Kemar Roofe.",
+     "claim": "Melanie C is the sportiest Spice Girl who joins the pros for a fitness‑based routine.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "is a jewellery designer 3 4 smith has a younger brother luca and is the cousin of football player kemar roofe 5 6 she"
+      "1": "The sportiest Spice Girl joins the pros for a fitness-based routine"
      }
     },
     {
-     "claim": "Jorja Smith opened for Bruno Mars on his 24K Magic World Tour in October and November 2017.",
+     "claim": "The routine is set to Spacedust's Gym and Tonic, Meghan Trainor's Shimmer and Melanie C's track Sweat.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "She performed as the opening act on Bruno Mars' 24K Magic World Tour in October and November 2017."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Jorja_Smith_11_26_2018_-5_(45772599074).jpg"
-   ]
-  },
-  {
-   "n": 14,
-   "topic": "movie times",
-   "signal": "Google Trends GB 100+",
-   "category": "Film",
-   "what_is_new": "A new Alien film was announced on Oct 23 2026.",
-   "hooks": [
-    "A new Alien movie is in the works!"
-   ],
-   "sources": [
-    [
-     "Sandra Hüller Joins ‘Avengers: Doomsday’ in Cameo Role",
-     "https://variety.com/2026/film/news/sandra-huller-avengers-doomsday-cameo-role-1236930032/",
-     "Variety",
-     "2026-10-23"
-    ],
-    [
-     "Hailee Steinfeld Will Have a Hold on You in ‘Magic’ Cover of The Cars for ‘Hexed’ Movie: Listen",
-     "https://www.billboard.com/music/music-news/hailee-steinfeld-magic-the-cars-cover-hexed-movie-listen-1236367434/",
-     "Billboard",
-     "2026-10-23"
-    ],
-    [
-     "Aaron Guzikowski Tapped To Pen New ‘Alien’ Movie For 20th, Scott Free",
-     "https://deadline.com/2026/10/new-alien-movie-aaron-guzikowski-writing-20th-1237172102/",
-     "Deadline",
-     "2026-10-23"
-    ],
-    [
-     "New ‘Alien’ Movie in the Works With Writer Aaron Guzikowski (Exclusive)",
-     "https://www.hollywoodreporter.com/movies/movie-news/new-alien-movie-in-the-works-1236739216/",
-     "The Hollywood Reporter",
-     "2026-10-23"
-    ],
-    [
-     "movie times",
-     "https://en.wikipedia.org/wiki/MovieTime",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Aaron Guzikowski has been tapped to write a new Alien movie for 20th Century Studios.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Aaron Guzikowski, creator of the Scott Free-produced HBO Max sci-fi series Raised by Wolves, is scripting a new Alien movie for 20th Century Studios, Deadline",
-      "4": "Aaron Guzikowski, who wrote Denis Villeneuve’s English-language debut Prisoners, has been tapped to write a mystery Alien feature project for 20th Century Studios and Ridley"
+      "1": "And itâs all set to the tune of Spacedust's Gym and Tonic, Meghan Trainor's Shimmer, and Melanie C's own track, Sweat â which is performed"
      }
     },
     {
-     "claim": "Aaron Guzikowski is writing a new Alien movie for 20th Century Studios.",
+     "claim": "Jamie Miller performed the UK television debut of Babydoll feat. Antonio Cipriano on Sunday.",
      "sources": [
-      3,
-      4
+      1
      ],
      "evidence": {
-      "3": "Aaron Guzikowski, creator of the Scott Free-produced HBO Max sci-fi series Raised by Wolves, is scripting a new Alien movie for 20th Century Studios, Deadline",
-      "4": "Aaron Guzikowski, who wrote Denis Villeneuve’s English-language debut Prisoners, has been tapped to write a mystery Alien feature project for 20th Century Studios and Ridley"
-     }
-    },
-    {
-     "claim": "Ridley Scott is producing the new Alien movie.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Scott and Michael Pruss will produce for Scott Free, with, J.R. Young overseeing for the studio.",
-      "4": "Scott is not at this point directing the Alien project, just producing it, along with Michael Pruss via their Scott Free production banner."
-     }
-    },
-    {
-     "claim": "J.R. Young is overseeing the Alien project for 20th Century Studios.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "with, J.R. Young overseeing for the studio.",
-      "4": "which J.R. Young is overseeing for 20th Century."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The new Alien movie is related to the 2010s films Prometheus and Alien: Covenant.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "This one is said to be related to the two Alien movies Scott directed in the 2010’s, Prometheus and Alien: Covenant."
-     }
-    },
-    {
-     "claim": "MovieTime rebranded on October 6 2008.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "The name change took effect on October 6, 2008."
-     }
-    },
-    {
-     "claim": "MovieTime launched a high definition simulcast feed on March 12 2010.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "A high definition simulcast feed of MovieTime was launched on March 12, 2010."
+      "1": "From Sporty to Babydoll, Jamie Miller is in the ballroom on Sunday for the UK television debut performance of Babydoll feat. Antonio Cipriano."
      }
     }
    ],

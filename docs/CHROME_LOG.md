@@ -102,3 +102,4 @@ Charlie exported both cookie files and pasted WHOP_COOKIES and VYRO_COOKIES at 1
   - `python3 pipeline/mac_rows.py` now hands the run its Vyro rows (newest first, the places left per account, never an expired row), any Content Rewards rescue, the occasional jobs due and the open one-off jobs. It says "NOTHING TO DO" when there is nothing, so a late pass stops at once.
   - `mac_rows.py done` marks a row without opening clips/submit.csv.
   - Jobs that wait on Charlie are marked waiting, so the run no longer re-asks him every evening.
+- 24 October 19:09 UK: blocked. The scheduled run fired in the cloud with no Claude in Chrome extension reachable, so no browser step ran; 15 Vyro rows (clips 5, gaming 5, irl 5) left for Charlie (submit.html) or the 22:07 pass. No open one-off jobs.

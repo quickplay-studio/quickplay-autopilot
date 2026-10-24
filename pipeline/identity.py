@@ -180,7 +180,10 @@ def tiktok_checks():
         try:
             t = social.load(name)
             if not t.get("access_token"): out.append(check(name, "no sign-in", True, note="empty")); continue
-            r = requests.get("https://open.tiktokapis.com/v2/user/info/", params={"fields": "open_id,display_name,username"},
+            # username needs the user.info.profile scope, which new sign-ins no longer ask for (social.TT_SCOPES, 24 October):
+            # without it the display name is what the allowlist (config accounts.tiktok) and the Quickplay name rule check
+            fields = "open_id,display_name" + (",username" if "user.info.profile" in str(t.get("scope") or "") else "")
+            r = requests.get("https://open.tiktokapis.com/v2/user/info/", params={"fields": fields},
                              headers={"Authorization": f"Bearer {t['access_token']}"}, timeout=30)
             u = (r.json().get("data") or {}).get("user") or {} if r.ok else {}
             if not u: out.append(check(name, f"HTTP {r.status_code}", True, note="the key does not answer (expired keys are refreshed by the social run)")); continue

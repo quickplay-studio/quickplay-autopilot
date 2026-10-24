@@ -1175,6 +1175,19 @@ def social_posts(force=False):
         log("social: no Instagram, Facebook or TikTok account for the clips channel yet"); return 0
     cap, posted, rows = int(CFG.get("social_per_day", 6)), {"instagram": 0, "facebook": 0, "tiktok": 0}, []
     today = str(uk.date())
+    # the cap is a day's, not a run's (24 October: two runs either side of the batch posted 6 Reels each): what the plans
+    # already posted in the last 24 hours counts first
+    since = (NOW - dt.timedelta(hours=24)).isoformat(timespec="minutes")
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        try: moments = json.loads(p.read_text()).get("moments") or []
+        except Exception: continue
+        for m in moments:
+            for k in posted:
+                at = str((m.get(k) or {}).get("at", "")) if isinstance(m.get(k), dict) else ""
+                if at and at >= since: posted[k] += 1
+    if any(posted.values()): log(f"social: posted in the last 24 hours already: {posted} (cap {cap} a platform a day)")
+    no_fb = set()
     for p in sorted(PLANS.glob("*.json")):
         if p.name.endswith(".words.json"): continue
         cid = p.stem; c = CFG["campaigns"].get(cid) or {}
@@ -1185,6 +1198,8 @@ def social_posts(force=False):
             ch = mchannel(cid, m)
             ig, fb, tt = have.get(ch) or ({"token": "", "user": ""}, None, {})
             if fb: os.environ["FB_PAGE_TOKEN"], os.environ["FB_PAGE_ID"] = os.environ[f"FB_{ch.upper()}_PAGE_TOKEN"], os.environ[f"FB_{ch.upper()}_PAGE_ID"]; S._FB.clear()
+            elif ch not in no_fb:
+                no_fb.add(ch); log(f"social: no Facebook sign-in for the {ch} channel (secrets FB_{ch.upper()}_PAGE_TOKEN and FB_{ch.upper()}_PAGE_ID, or FB_CLIPS_*): Facebook skipped")
             try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
             except ValueError: continue
             if due > NOW + dt.timedelta(minutes=3) or (NOW - due) > dt.timedelta(hours=36): continue

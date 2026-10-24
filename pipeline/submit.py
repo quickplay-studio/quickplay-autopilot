@@ -283,22 +283,32 @@ def tick(page, pattern=None):
 
 
 CR_STATIC = re.compile(r"posted from one of your linked accounts|we match the clip's author[^.]*\.|not already submitted to any campaign|"
-                       r"a clip can only earn once[^.]*\.[^.]*\.|posted within the last 30 minutes|this campaign only accepts freshly posted clips[^.]*\.|"
+                       r"a clip can only earn once[^.]*\.(?:[^.]*\.)?|posted within the last 30 minutes|this campaign only accepts freshly posted clips[^.]*\.|"
                        r"submit clip link|post a clip link|i've read the requirements[^.]*\.", re.I)
 
 
+# Content Rewards' three standing checks: the one whose row carries the Failed icon is the reason (24 October: the first
+# real batch failed every Expedia clip with "Not already submitted to any campaign", and the log showed the campaign's
+# title instead, because the standing labels were stripped before the reason was read)
+CR_CHECKS = (("linked", re.compile(r"posted from one of your linked accounts", re.I)),
+             ("already", re.compile(r"not already submitted to any campaign", re.I)),
+             ("window", re.compile(r"posted within the last \d+ minutes", re.I)))
+
+
 def failed_check(page):
-    """Content Rewards marks the check that failed with a 'Failed' icon; the sentence beside it is the reason. The
-    dialog's standing labels ('Not already submitted to any campaign' and the rest) are removed first, so a refused
-    30-minute window is never read as a duplicate."""
+    """Content Rewards marks the check that failed with a 'Failed' icon: the standing check in the icon's own row
+    ("check: linked", "check: already", "check: window"), else the sentence beside it (the standing labels removed, so
+    a refused window is never read as a duplicate)."""
     try:
         d = dialog(page)
         img = d.locator("img[alt='Failed'], [aria-label='Failed']")
         if not img.count() or not img.first.is_visible(): return None
         for k in range(1, 6):
             txt = re.sub(r"\s+", " ", img.first.locator(f"xpath=ancestor::*[{k}]").inner_text()).strip()
+            hits = [name for name, rx in CR_CHECKS if rx.search(txt)]
             reason = CR_STATIC.sub(" ", txt); reason = re.sub(r"\s+", " ", reason).strip(" .")
-            if len(reason) > 20: return reason[:200]
+            if len(reason) > 20: return reason[:200]          # a sentence of its own beside the icon
+            if len(hits) == 1: return "check: " + hits[0]       # only the standing label: that check is the reason
         return "a check failed"
     except Exception: return None
 
@@ -338,8 +348,9 @@ def submit_cr(page, row, c, dry=False):
     while time.time() < end:
         why = failed_check(page)
         if why:
-            if DUP.search(why): return "already"
-            if WINDOW.search(why): return "failed: past the 30-minute window: " + why[:120]
+            if why == "check: already" or DUP.search(why): return "already"
+            if why == "check: window" or WINDOW.search(why): return "failed: past the 30-minute window: " + why[:120]
+            if why == "check: linked": return "failed: not from a linked account: link this clip's channel on Content Rewards (Settings)"
             return "failed: " + why[:140]
         if not dialog_open(page): return "submitted"
         for role, text in texts(page):
@@ -465,7 +476,7 @@ def due(rows, public_ok=None):
         when = r.get("public_at_uk", "")
         if when.startswith("private") or not r.get("video", "").startswith("http"): continue
         if r.get("submitted") and not r["submitted"].startswith("failed"): continue
-        if r.get("submitted", "").startswith("failed: past the"): continue      # Content Rewards' 30-minute window: over for good
+        if r.get("submitted", "").startswith(("failed: past the", "failed: not from a linked")): continue      # over for good, or needs Charlie
         try: t = dt.datetime.strptime(when, "%Y-%m-%d %H:%M").replace(tzinfo=UK)
         except ValueError: continue
         if t > NOW or NOW - t > dt.timedelta(days=3): continue
@@ -562,8 +573,25 @@ def run(dry=False):
             w.writerows([{k: r.get(k, "") for k in C.SUBMIT_FIELDS} for r in rows])
     try: alerts(stale, by_site)
     except Exception as e: log("submit alerts:", str(e)[:120])
+    try: linked_alert(rows)
+    except Exception as e: log("linked alert:", str(e)[:120])
     log(f"submit: {done} of {len(todo)} submitted")
     return done
+
+
+def linked_alert(rows):
+    """Content Rewards refused a clip as not posted from a linked account: Charlie links that channel (one issue, closed
+    when the refusals stop)."""
+    import alerts as A
+    title = "🔗 Content Rewards: link a clips channel"
+    chans = sorted({r.get("channel") or "clips" for r in rows if str(r.get("submitted", "")).startswith("failed: not from a linked")
+                    and str(r.get("public_at_uk", ""))[:10] >= str((NOW - dt.timedelta(days=3)).date())})
+    if chans:
+        A.raise_issue(title, "Content Rewards refused clips from the " + ", ".join(chans) + " channel(s) as not posted from a linked "
+                      "account. On the Mac, signed in to https://www.contentrewards.com as the studio account, open Settings, Connected "
+                      "accounts, and connect that YouTube channel (the studio Google account's own channel). The refused rows are not "
+                      "retried; the next day's clips are submitted once the channel is linked.", labels=["needs-charlie"])
+    else: A.clear(title, "No clip has been refused for its channel in the last 3 days.")
 
 
 def alerts(stale, by_site):

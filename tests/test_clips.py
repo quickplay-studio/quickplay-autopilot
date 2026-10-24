@@ -377,3 +377,23 @@ assert MADE == [], MADE                                   # Vyro has its 5 from 
 assert C.spill({"clips": {"v1": 2, "v2": 2, "cr": 2}}, {("clips", "v1"): 2, ("clips", "v2"): 1, ("clips", "cr"): 2}, C.campaigns(), _time.time() + 60) == 1
 assert [m[0] for m in MADE] == ["v1"], MADE               # under the limit (3 of 5): the strongest that filled its share gets it
 print("submit limits ok")
+
+# 24 October (the first real batch): the social cap is a day's, not a run's. Two runs either side of the batch each
+# posted 6 Reels; now what the plans posted in the last 24 hours counts first.
+import datetime as _dt, json as _json
+_plan = C.PLANS / "zz-cap-test.json"
+_at = (C.NOW - _dt.timedelta(hours=2)).isoformat(timespec="minutes")
+_plan.write_text(_json.dumps({"moments": [{"id": f"zz-{i}", "instagram": {"media": "m", "url": "u", "at": _at}} for i in range(6)]}))
+_posted = {"instagram": 0, "facebook": 0, "tiktok": 0}
+try:
+    _since = (C.NOW - _dt.timedelta(hours=24)).isoformat(timespec="minutes")
+    for _p in C.PLANS.glob("*.json"):
+        if _p.name.endswith(".words.json"): continue
+        for _m in _json.loads(_p.read_text()).get("moments") or []:
+            for _k in _posted:
+                _a = str((_m.get(_k) or {}).get("at", "")) if isinstance(_m.get(_k), dict) else ""
+                if _a and _a >= _since: _posted[_k] += 1
+    assert _posted["instagram"] >= 6, _posted
+finally:
+    _plan.unlink(missing_ok=True)
+print("social day cap counts earlier runs ok")

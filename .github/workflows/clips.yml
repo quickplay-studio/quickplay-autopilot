@@ -125,32 +125,36 @@ jobs:
           case "$IN_MODE $req" in *private*|*test*) export CLIPS_MODE=private;; esac
           for kv in $(echo "$req" | grep -oE '(layout|captions|punch)=[a-z]+'); do export CLIPS_$(echo "${kv%%=*}" | tr a-z A-Z)="${kv#*=}"; done
           set -o pipefail
+          # the log keeps the last few runs (24 October: three runs around the batch each overwrote the one before, so the
+          # run that posted the Reels and tried the submissions could not be read): trimmed to 400 lines, one header a run
+          mkdir -p status; tail -n 400 status/clips_log.txt > status/clips_log.tmp 2>/dev/null || true; mv -f status/clips_log.tmp status/clips_log.txt
+          echo "=== run $(date -u '+%F %H:%M') UTC, schedule '${{ github.event.schedule }}', request '$req'" >> status/clips_log.txt
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
-            python pipeline/clips.py stats 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py stats 2>&1 | tee -a status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qi scout; then
-            python pipeline/submit.py scout 2>&1 | tee status/clips_log.txt
+            python pipeline/submit.py scout 2>&1 | tee -a status/clips_log.txt
           elif echo "$req" | grep -qi demote; then        # "demote 2026-10-23T22:00+00:00": promoted test clips from before it go private again
-            python pipeline/clips.py demote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py demote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee -a status/clips_log.txt
           elif echo "$req" | grep -qi promote; then
-            python pipeline/clips.py promote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee status/clips_log.txt      # private test clips join the next batch
+            python pipeline/clips.py promote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee -a status/clips_log.txt      # private test clips join the next batch
           elif echo "$req" | grep -qi submit; then
             case "$req" in *probe*|*dry*) export SUBMIT_DRY=1;; esac
-            python pipeline/clips.py submit 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py submit 2>&1 | tee -a status/clips_log.txt
           elif [ "${{ github.event.schedule }}" = "31 16,17,18 * * *" ] || echo "$req" | grep -qi social; then
             case "$req" in *social*) export CLIPS_SOCIAL_NOW=1;; esac
             # 23 October: this branch never ran (the schedule string here did not match the cron), so no clip was ever posted
             # to Instagram or submitted. Now: wait for 19:01 UK when the batch is under 100 minutes away; a later start runs at once.
             wait=$(python -c "import json,datetime as d,zoneinfo as z;u=z.ZoneInfo('Europe/London');n=d.datetime.now(u);h,m=map(int,json.load(open('clips/campaigns.json')).get('batch_time','19:00').split(':'));t=n.replace(hour=h,minute=m,second=0,microsecond=0)+d.timedelta(minutes=1);w=(t-n).total_seconds();print(-1 if w>6000 else max(0,int(w)))")
-            if [ -z "$CLIPS_SOCIAL_NOW" ] && [ "$wait" = "-1" ]; then echo "social: the batch is over 100 minutes away; the later run posts it" | tee status/clips_log.txt
+            if [ -z "$CLIPS_SOCIAL_NOW" ] && [ "$wait" = "-1" ]; then echo "social: the batch is over 100 minutes away; the later run posts it" | tee -a status/clips_log.txt
             else [ -z "$CLIPS_SOCIAL_NOW" ] && echo "social: waiting $wait s for the batch" && sleep "$wait"
-              python pipeline/clips.py social 2>&1 | tee status/clips_log.txt; fi
+              python pipeline/clips.py social 2>&1 | tee -a status/clips_log.txt; fi
           elif [ "${{ github.event.schedule }}" = "0 9 * * *" ] || echo "$req" | grep -qi prepare; then
             case "$req" in *redo*) export CLIPS_REDO=1;; esac
-            python pipeline/clips.py prepare $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py prepare $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee -a status/clips_log.txt
           elif echo "$req" | grep -qi probe; then
-            python pipeline/clips.py probe $(echo "$req" | grep -o 'https://[^ ]*') 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py probe $(echo "$req" | grep -o 'https://[^ ]*') 2>&1 | tee -a status/clips_log.txt
           else
-            python pipeline/clips.py run $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee status/clips_log.txt
+            python pipeline/clips.py run $(echo "$req" | tr ' ' '\n' | grep -E '^[a-z]+-[a-z0-9-]+$' | tr '\n' ' ') 2>&1 | tee -a status/clips_log.txt
           fi
       - name: Save
         if: ${{ always() }}

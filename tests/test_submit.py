@@ -36,6 +36,7 @@ rows = [row(), row(submitted="2026-10-21 18:05"), row(submitted="failed: no answ
         row(platform="tiktok", video="TikTok: open the app")]
 d = S.due(rows)
 assert len(d) == 2 and d[1]["submitted"].startswith("failed"), d
+assert not S.due([row(submitted="failed: not from a linked account: link this clip's channel")])       # waits for Charlie, never retried
 assert len(S.due(rows, lambda url: False)) == 0 and len(S.due(rows, lambda url: True)) == 2
 print("2 due rows ok")
 
@@ -58,6 +59,8 @@ page_ok.write_text("""<html><body><h1>$8,000 Speed x Expedia</h1><p>Clips must b
 function go(){var u=document.getElementById('u').value;if(!document.getElementById('c').checked)return;
  if(u.indexOf('old')>=0){document.getElementById('wp').textContent='Posts have to be submitted within 30 minutes of going live, and this one is past that window.';
    var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('checks').appendChild(i);}
+ else if(u.indexOf('dup')>=0){var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('checks').firstElementChild.appendChild(i);}
+ else if(u.indexOf('other')>=0){var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('d').children[2].appendChild(i);}
  else if(u.indexOf('youtube.com')>=0){document.getElementById('d').style.display='none';}
  else {document.getElementById('wp').textContent='That link is invalid for this campaign.';var i=document.createElement('img');i.alt='Failed';i.src='x';document.getElementById('w').appendChild(i);}}</script></body></html>""")
 page_vyro = SCRATCH / "vyro.html"
@@ -93,6 +96,10 @@ try:
         res = S.submit_cr(page, old, {}); assert res.startswith("failed: past the 30-minute window"), res
         bad = dict(r, video="https://vimeo.com/1")
         res = S.submit_cr(page, bad, {}); assert res.startswith("failed:") and "invalid" in res, res
+        # 24 October: the Failed icon in a standing check's own row names that check (the first real batch logged the
+        # campaign's title instead): "not already submitted" is a duplicate, "linked accounts" needs Charlie
+        res = S.submit_cr(page, dict(r, video="https://youtube.com/shorts/dup"), {}); assert res == "already", res
+        res = S.submit_cr(page, dict(r, video="https://youtube.com/shorts/other"), {}); assert res.startswith("failed: not from a linked account"), res
         page.goto(page_out.as_uri()); assert S.logged_out(page)
         try: S.submit_cr(page, dict(r, campaign_url=page_out.as_uri()), {}); raise AssertionError("no Stale")
         except S.Stale: pass

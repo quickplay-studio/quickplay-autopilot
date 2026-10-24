@@ -246,7 +246,12 @@ def main():
         if rw and (b0.get("visual") or {}).get("type", "none") != "none" and "atWord" not in b0["visual"]:
             n0 = len((b0.get("say") or "").split())          # image first: the hook's card waits for the fourth word
             if n0 > rw: b0["visual"] = dict(b0["visual"], atWord=rw)
-        status["look"] = dict(look["ids"])
+        status["look"] = dict(look["ids"])           # includes the style (minimal or standard): analytics reads look_style from here
+        if look["render"].get("pace") == "fast":     # the minimal style cuts to a new picture every 1.2 to 1.8 seconds: more photos of the same subject
+            try:
+                got = fetch_media.extras(sb)
+                if got: status["media"]["extra_photos"] = got
+            except Exception as e: print(f"extra photos skipped: {str(e)[:160]}", flush=True)
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)

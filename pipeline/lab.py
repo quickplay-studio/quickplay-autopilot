@@ -121,11 +121,13 @@ def main(force=False):
         else: lab["retired"].setdefault(dim, {})[k] = f"{TODAY}: {why}"
         note(dim, f"retired {k}", why)
 
+    # LK.free: an option that only comes with a style (the low captions of the minimal style, 24 October) is never judged,
+    # pruned or built on here: the style test judges the whole look through drivers.csv (feature look_style)
     for dim in LK.catalogue(lab)["dimensions"]:
         if dim not in LIMITS: continue
         st = stats.get(dim) or {}
         sc = lambda k: (int((st.get(k) or {}).get("n") or 0), float((st.get(k) or {}).get("score") or 1.0))
-        for k, o in list(LK.active(LK.catalogue(lab), dim).items()):        # 1. judge
+        for k, o in list(LK.free(LK.catalogue(lab), dim).items()):        # 1. judge
             n, s = sc(k)
             if o.get("lab") and n >= JUDGE:
                 pn, ps = sc(o.get("parent"))
@@ -133,13 +135,13 @@ def main(force=False):
                 if s > ps:
                     lab["options"][dim][k].update(lab=False, kept=TODAY); note(dim, f"kept {k}: {o.get('desc')}", why)
                 else: retire(dim, k, why)
-        act = LK.active(LK.catalogue(lab), dim)
+        act = LK.free(LK.catalogue(lab), dim)
         best = max(act, key=lambda k: (sc(k)[0] >= 3, sc(k)[1]))
         for k in list(act):                                                  # 2. prune
             n, s = sc(k)
-            if k != best and len(LK.active(LK.catalogue(lab), dim)) > 2 and n >= PRUNE_N and s <= PRUNE_GAP * sc(best)[1]:
+            if k != best and len(LK.free(LK.catalogue(lab), dim)) > 2 and n >= PRUNE_N and s <= PRUNE_GAP * sc(best)[1]:
                 retire(dim, k, f"{s:.2f}x against {sc(best)[1]:.2f}x for {best} over {n} Shorts")
-        act = LK.active(LK.catalogue(lab), dim)
+        act = LK.free(LK.catalogue(lab), dim)
         if any(o.get("lab") and sc(k)[0] < JUDGE for k, o in act.items()): continue     # one new option at a time
         if len(act) >= MAX_ACTIVE:
             weak = [k for k in act if k != best and sc(k)[0] >= 6]

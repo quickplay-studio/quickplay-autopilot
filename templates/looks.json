@@ -27,6 +27,12 @@
      "desc": "sentence case, white with a soft shadow and no outline or panel, the spoken word full white and the rest dimmed, up to 4 words, lower third",
      "group": 4,
      "tested": "TEST-W1019, 2026-10-19: clean and legible on dark and bright frames, YouTube and social layouts"
+    },
+    "low": {
+     "desc": "small sentence case (46px, about two thirds of the other styles), white with a soft shadow, no outline or panel, 3 words at a time, low in the frame (1385 to 1505 on YouTube, above its title rows), never over the middle of the picture",
+     "group": 3,
+     "style_only": "minimal",
+     "born": "2026-10-24"
     }
    }
   },
@@ -140,6 +146,31 @@
     "image_first": {
      "desc": "the subject's picture alone for the first words, then the hook's card appears on the fourth word",
      "reveal_word": 4
+    }
+   }
+  },
+  "style": {
+   "about": "How much text sits on the pictures and how fast they change (Charlie, 24 October: \"fast changing images with minimal text\", nothing covering the picture). A fixed test: 2 Shorts in 3 minimal, 1 in 3 standard (the control), until both arms have about 70 measured Shorts and drivers.csv (feature look_style) proves one better; then the winner takes 9 in 10 and the other keeps 1 in 10, so it stays measured. \"assign\" holds the split; looks.choose() uses it instead of the scores. Under minimal the opening dimension has no title card to reveal, so its arms differ only under standard.",
+   "assign": {"minimal": 2, "standard": 1},
+   "default": "standard",
+   "options": {
+    "minimal": {
+     "desc": "minimal text, fast pictures: the low captions; a name shows once, as a small corner tag for 1.2 seconds, never over a face or the middle; the category chip small and only in the first 2.5 seconds; title, stat, list, quote, date, timeline, versus and bar cards give way to the beat's full-screen photo (the numbers stay in the narration and the captions); a new picture every 1.2 to 1.8 seconds (more photos of the same subject, else the same photo with a new crop and move); a lighter shade over the picture",
+     "captions": "low",
+     "labels": "brief",
+     "chip": "brief",
+     "graphics": "photo",
+     "pace": "fast",
+     "shade": "light",
+     "born": "2026-10-24"
+    },
+    "standard": {
+     "desc": "the look until 24 October, the control: captions from the captions dimension, a name label on every picture that has one, the category chip throughout, text cards for stats and lists, pictures as the board times them (a median of 4.3 seconds each)",
+     "labels": "full",
+     "chip": "full",
+     "graphics": "cards",
+     "pace": "board",
+     "shade": "full"
     }
    }
   }

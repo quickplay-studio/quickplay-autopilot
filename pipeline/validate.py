@@ -24,6 +24,34 @@ WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|c
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 US_DATE = re.compile(rf"\b({MONTHS}) \d{{1,2}}(st|nd|rd|th)?\b")
 EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿⬀-⯿]")
+# a first line that opens on a date ("On 11 April 1970", "Tuesday 20 October", "In 1999", "October 1976"): the lead is the person
+# and the result, not the day (content review, 24 October: the 2 date-first hooks got 0.27x the views of the rest); drivers.py
+# keeps the same pattern (DATE_FIRST) so a date is never taken for the number arm
+DATE_FIRST = re.compile(rf"(on |in |back in )?((monday|tuesday|wednesday|thursday|friday|saturday|sunday) )?(\d{{1,2}}(st|nd|rd|th)? )?"
+                        rf"(({MONTHS.lower()})\b|(1[89]\d\d|20\d\d)\b)")
+
+
+def _toks(t):
+    """Lower case words, a trailing 's dropped and punctuation trimmed: "Olivia Rodrigo's new video:" -> olivia, rodrigo, new, video."""
+    return [re.sub(r"['’]s$", "", x).strip(".,:;!?") for x in re.findall(r"[\w'’.&-]+", str(t).lower())]
+
+
+def hook_lead(b):
+    """The lead name of a board: a name it labels on screen (shots' label.t, which the prompt asks for on each person) that
+    its title opens with (one of the title's first six words), or "" when there is none."""
+    title = str((b.get("meta") or {}).get("title") or "")
+    head = _toks(title)[:6]
+    for bt in b.get("beats") or []:
+        for s in (bt.get("shots") or []) if isinstance(bt, dict) else []:
+            n = str(s["label"].get("t") or "") if isinstance(s, dict) and isinstance(s.get("label"), dict) else ""
+            if n and any(x in head for x in _toks(n) if len(x) > 2): return n
+    return ""
+
+
+def lead_named(lead, hook):
+    """The lead is named in the hook's first five words (any of its words of 3 letters or more)."""
+    first = _toks(hook)[:5]
+    return any(x in first for x in _toks(lead) if len(x) > 2)
 
 def _formats():
     return {f["id"] for f in json.loads((ROOT / "templates" / "formats.json").read_text())["formats"]}
@@ -75,11 +103,23 @@ def _check(b, path=None):
 
     beats = b.get("beats") or []
     arm = str((b.get("test") or {}).get("length") or "")           # the length test (writer.py): a minute or two minutes allowed
-    lo, hi, best, top = {"about 60 s": (130, 200, (150, 180), 16), "about 2 min": (250, 370, (280, 340), 30)}.get(arm, (50, 135, (55, 125), 14))
+    # each length arm is held to its own range (content review, 24 October: 22 of 96 boards ran under 70 words and 4 of 8
+    # "35 to 44 s" boards missed theirs, so round 1's length factor would compare arms that were never written to length)
+    lo, hi, best, top = {"about 60 s": (130, 200, (150, 180), 16), "about 2 min": (250, 370, (280, 340), 30),
+                         "under 25 s": (50, 135, (58, 80), 14), "25 to 34 s": (50, 135, (75, 100), 14),
+                         "35 to 44 s": (50, 135, (100, 125), 14)}.get(arm, (50, 135, (70, 125), 14))
     if not 3 <= len(beats) <= top: e.append(f"beats: 3 to {top}")
     hook0 = ((beats[0].get("say") if beats else "") or "").strip().lower()
     if re.match(r"(discover|learn|here'?s how|here is how|today we|let'?s look|let'?s talk|welcome|in this short|in this video)\b", hook0):
         e.append("beat 0: a slow intro (Discover, Learn, Here's how, Today we, Let's look): open on the most surprising detail instead")
+    # content review (24 October), warnings that get one fixing round: question and "Did you know" openings got 0.47x the
+    # views of the rest (7 of the 11 were asked for by no arm), and the 2 date-first openings 0.27x
+    hook_arm = str((b.get("test") or {}).get("hook_type") or "") if isinstance(b.get("test"), dict) else ""
+    if hook_arm != "question" and (hook0.endswith("?") or "?" in " ".join(hook0.split()[:10])
+                                   or re.match(r"(did you know|have you ever|ever wondered|can you guess|guess what)\b", hook0)):
+        w.append("beat 0: open with a plain statement that names the star, not a question or 'Did you know'")
+    if DATE_FIRST.match(hook0):
+        w.append("beat 0: lead with the person and the result, not the date")
     total = 0
     for i, bt in enumerate(beats):
         say = (bt.get("say") or "").strip()
@@ -129,6 +169,12 @@ def _check(b, path=None):
     if arm == "none":
         if EMOJI.search(title): e.append("meta.title: no emoji (this Short tests a title without one)")
     elif not EMOJI.search(title[-2:]): e.append("meta.title: end with one emoji")
+    # the hook names the lead the title names (content review, 24 October: hooks whose first four words name the best-known
+    # person got 2.24x the views; Olivia Rodrigo first 5.42x, David Byrne first 0.27x): the lead is a name the board labels
+    # on screen that the title opens with, and it belongs in the hook's first five words (question and twist arms aside)
+    lead = hook_lead(b)
+    if hook_arm not in ("question", "twist") and lead and not lead_named(lead, hook0):
+        w.append(f"beat 0: name {lead} in the first five words, as the title does")
     if not (m.get("summary") or "").strip(): e.append("meta.summary: 1 to 2 sentences")
     tags = [t for t in (m.get("hashtags") or []) if str(t).lower() != "#shorts"]
     bad_tags = [t for t in tags if not re.fullmatch(r"#\w{2,40}", str(t))]

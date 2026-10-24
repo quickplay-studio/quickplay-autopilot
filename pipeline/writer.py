@@ -42,12 +42,16 @@ cars and history. Every rule must hold.
   history, licensing, corporate timelines, dates for their own sake and records only fans care about. If the subject is
   known only to fans, find the angle an ordinary person would care about, or return {"skip": "niche"}. Set "appeal":
   "everyone" when most people in the UK and US know the subject, "fans" when only followers do.
-- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, said as a plain statement that names the star
-  or the title (on this channel statement hooks get two to three times the views of the others), speaking to the viewer's
-  own experience; open with a question only when the style line below asks for one. Never "X is back", never "Discover",
-  "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put "impact": true on the hook and on the payoff beat.
-- 5 to 9 beats, 70 to 110 words of narration in total, one or two sentences per beat (a longer Short, when the style
-  note below asks for one, keeps every beat a new surprise and saves the wildest for last).
+- Beat 1 (the hook): the most surprising true detail in 12 words or fewer, said as a plain statement whose first four
+  words name the best-known person, band or team in the pack (the one most viewers know; never a co-star, outlet or date
+  first: "Olivia Rodrigo's new video has a surprise host", not "David Byrne turns host in Olivia Rodrigo's video"), or the
+  title when no person is in the story, then the result: what just changed, or how it ended (hooks led by a named person
+  get about twice the views here). Open with a question or a twist only when the style line below asks for one. Never
+  "X is back", never "Discover", "Did you know", "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put
+  "impact": true on the hook and on the payoff beat.
+- 5 to 9 beats, 70 to 110 words of narration in total (count them; a length in the style line below sets its own range),
+  one or two sentences per beat (a longer Short, when the style note below asks for one, keeps every beat a new surprise
+  and saves the wildest for last).
 - Ending: land the payoff, then either a line that loops back into the hook or a short question viewers can answer.
 - Neat and minimal: at most 3 beats with a graphic ("visual" not {"type": "none"}), few words on each graphic.
 - Real footage first: at least 4 in 5 shots show the actual subject, and beat 1's shots always do. In order: the pack's
@@ -70,9 +74,10 @@ cars and history. Every rule must hold.
   versus {items: [2 x {label, value, sub}]}, timeline {items[{y, t}]}, bars {items[{label, value, w 0 to 1}]}.
   Icons are lucide icon names.
 - meta.title: under 50 characters (count them). The exact name people search comes first (person, game, film, show,
-  team), then hold the answer back: promise the detail without giving it away, as the Shorts that break out from small
-  channels do ("LISA's Tarantino video: the detail you missed", "Avengers: Doomsday teaser: 3 things to spot", "iPhone
-  Duo: every big change explained"). Never a question (question titles get about half the views here) and never a
+  team), then, as the style line's title answer says, either the news the first line says ("Tate McRae hits number one
+  in Australia") or hold the answer back: promise the detail without giving it away, as the Shorts that break out from
+  small channels do ("LISA's Tarantino video: the detail you missed", "Avengers: Doomsday teaser: 3 things to spot",
+  "iPhone Duo: every big change explained"). Never a question (question titles get about half the views here) and never a
   promise the Short doesn't keep: anything unconfirmed is called a report or a rumour. An emoji only as the style line
   below says: one at the very end when it asks for one, none at all otherwise.
   meta.alt_title: a second title with a different angle, same rules. meta.summary: one or two sentences.
@@ -225,12 +230,42 @@ def formats():
     return "\n".join(out)
 
 
+# The Recipe lines the writer can act on, the robust verdicts first (content review, 24 October: a blind cut at 900 of the
+# Recipe's 3,054 characters ended mid-line in "Format: ...", so the hook, length and title lines never reached the writer).
+# RECIPE_FIRST is the writer's own craft choices in the order of their evidence: hook style, length and format are the
+# ones the data report found robust (the same direction on every measure), then what is paused, the title, the music
+# mood and the rest. Lines on what the pipeline decides itself (posting time and day, the look, comment replies, the
+# writer model, the kind, the category mix and follow-ups, which the planner applies) are left out, and so are pictures
+# (real pictures first is the channel's rule, and Charlie's) and the progress of the tests (the hub's, not the writer's);
+# a test's STYLE line beats any of them. A line is kept whole or left out, never cut, and the lot stays inside RECIPE_BUDGET.
+RECIPE_FIRST = ("Hook style", "Length", "Format", "Hook length", "Paused for 14 days", "Title", "Title wording", "Title emoji",
+                "Title answer", "Music mood", "Ending", "Follow line", "Appeal")
+RECIPE_NOT = ("Posting time", "Day posted", "Captions", "Voice", "Camera energy", "Colour grade", "Opening", "Comment replies",
+              "Writer model", "Kind of Short", "Category mix", "Follow up", "Topic source", "Series", "Named series", "Pictures",
+              "Exploration", "Posted late", "First frame", "Angle research", "Tests being run")
+RECIPE_BUDGET = 1600
+
+
 def recipe():
+    """The Recipe section of analytics/insights.md as the writer is given it: the top-level lines it can act on (not the
+    tests' progress, nor what the planner and the render decide), the robust verdicts first, whole lines within the budget."""
     p = ROOT / "analytics" / "insights.md"
     if not p.exists(): return ""
-    s = p.read_text()
-    m = re.search(r"## Recipe.*?(?=\n## )", s, re.S)
-    return (m.group(0) if m else "")[:900]
+    m = re.search(r"## Recipe.*?(?=\n## )", p.read_text(), re.S)
+    if not m: return ""
+    lines = [l for l in m.group(0).splitlines()[1:] if l.startswith("- ") and not l.startswith("- - ")]
+    # an insights.md written before 24 October evening still carries "a hook of 8 words or fewer" (3 Shorts of evidence, and
+    # the hook rule allows 12 words); analytics.audience_recipe now says the name belongs in the hook's first four words
+    lines = [re.sub(r" and a hook of \d+ words or fewer", " and the best-known name in the hook's first four words", l) for l in lines]
+    label = lambda l: l[2:].split(":", 1)[0].split(" (", 1)[0].strip()
+    first = sorted((l for l in lines if label(l) in RECIPE_FIRST), key=lambda l: RECIPE_FIRST.index(label(l)))
+    rest = [l for l in lines if label(l) not in RECIPE_FIRST and not label(l).startswith(RECIPE_NOT)]
+    out, size = [], 0
+    for l in first + rest:
+        if size + len(l) > RECIPE_BUDGET: continue
+        out.append(l); size += len(l) + 1
+    if not out: return ""
+    return "\n".join(["(Where a STYLE FOR THIS SHORT line below differs from these, follow the style line: it is a test.)"] + out)
 
 
 def pack_text(p):
@@ -585,14 +620,17 @@ MIN_FACTS = {"evergreen": 3, "top list": 5, "true story": 5}
 
 EVERGREEN_NOTE = ("EVERGREEN: this Short answers the question in the topic for people searching it at any time of year. It "
                   "is not news: ignore the rule about what is new, and never say today, this week or recently. Title it as "
-                  "the question people type, with the searchable name early. Its facts come from one encyclopedia article: "
+                  "the question people type, with the searchable name early, but never open with a question: the first line "
+                  "is the answer's most surprising fact, said plainly. Its facts come from one encyclopedia article: "
                   "state them plainly and never name the source.")
 COUNTDOWN_NOTE = ("COUNTDOWN: count down the ranked list in the pack, from the lowest entry it gives (number 10, or as many as "
-                  "there are) to number 1, one or two entries a beat, each with its figure; tease number 1 in the hook without "
+                  "there are) to number 1, one or two entries a beat, each with its figure; tease number 1 in the hook, as a "
+                  "plain statement of its figure, without "
                   "naming it and save it for the last beat. Use the \"countdown\" format and at most one bars graphic, for the "
                   "top three. Title it as people search the list (\"Top 10 best-selling games ever\"). Its facts come from one "
                   "encyclopedia article: state them plainly and never name the source.")
-STORY_NOTE = ("TRUE STORY: tell it in order like a storyteller: a gripping first line, the set-up, what happened, the turn and "
+STORY_NOTE = ("TRUE STORY: open on how it ended, naming who (\"The Beatles recorded their entire debut album in just twelve "
+              "hours.\"), never on a date or the set-up; then tell it in order: the set-up, what happened, the turn and "
               "how it ended. Use the \"story\" format. Real photos of the people and places in every beat (commons-search with "
               "full names), never stock for people. Title it as the story (\"The day ...\", \"How ...\"). Its facts come from one "
               "encyclopedia article: state them plainly and never name the source.")
@@ -724,9 +762,9 @@ def fiction_pack(seen):
 
 
 TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides, and keeps deciding as it grows
-    "hook_type": {"statement": "Open with a plain statement of the news, naming the star, team, game or title first.",
+    "hook_type": {"statement": "Open with a plain statement of the news, naming the best-known person, band or team first (the game or title when there is none).",
                   "question": "Open with a question (ending in a question mark) that the Short then answers.",
-                  "number": "Open with the most surprising number in the facts.",
+                  "number": "Open with the most surprising number in the facts, then the best-known name by the fourth word (\"16 times: Rod Stewart owned MTV's first day\").",
                   "superlative": "Open with a first, biggest, only or record detail from the facts.",
                   "twist": "Open with a twist: what people would expect, then the surprising truth."},
     "length": {"under 25 s": "Keep it short: 60 to 72 words in total.",
@@ -836,25 +874,35 @@ def test_plan(k, kind="news", explore=False, today=None):
 # Short takes an arm, 50/50 by its number and independent of the replies test (which follows k % 2), until drivers.csv
 # gives one arm a clear "push" (feature "title_emoji", read from the live title); then that arm, with every RETEST-th Short
 # still trying the other so new data can overturn it. Recorded on the board's test field; shape() and validate.py hold it.
+# The title answer (content review, 24 October): our own data has 7 of the best 8 titles stating the news and our 5
+# held-back titles at a median of 0.12x, while the vidIQ outliers from other channels all hold the answer back. So every
+# news Short takes an arm, 50/50 by (k // 4) % 2, independent of the replies (k % 2) and emoji ((k // 2) % 2) tests, and
+# drivers.csv decides ("title_answer", as assigned). Evergreen, top list, true story and fiction keep their own title forms.
 TITLE_TESTS = {"title_emoji": {"emoji": "Title emoji: end meta.title and meta.alt_title with exactly one emoji that fits the payoff.",
-                               "none": "Title emoji: none. No emoji anywhere in meta.title or meta.alt_title."}}
+                               "none": "Title emoji: none. No emoji anywhere in meta.title or meta.alt_title."},
+               "title_answer": {"stated": "Title answer: after the searched name, say the news the first line says (\"Tate McRae hits number one in Australia\").",
+                                "held back": "Title answer: after the searched name, hold the answer back (\"LISA's Tarantino video: the detail you missed\")."}}
+TITLE_BITS = {"title_emoji": 2, "title_answer": 4}           # the arm is (k // bit) % 2 until a winner
+TITLE_NOT_FOR = {"title_answer": {"evergreen", "top list", "true story", "fiction"}}
 
 
-def title_arm(k):
+def title_arm(k, test="title_emoji"):
     won = None
     try:
         for r in csv.DictReader((ROOT / "analytics" / "drivers.csv").open()):
-            if r.get("feature") == "title_emoji" and r.get("verdict") == "push" and float(r.get("lift") or 0) > 1:
+            if r.get("feature") == test and r.get("verdict") == "push" and float(r.get("lift") or 0) > 1:
                 won = r.get("value"); break
     except Exception: pass
-    arms_ = list(TITLE_TESTS["title_emoji"])
+    arms_ = list(TITLE_TESTS[test])
     if won in arms_: return won if k % RETEST else next(a for a in arms_ if a != won)
-    return arms_[(k // 2) % 2]
+    return arms_[(k // TITLE_BITS.get(test, 2)) % 2]
 
 
-def with_title_test(tests, k):
-    """The tests with this Short's title emoji arm added (kept when the board already has one, as series parts do)."""
-    return tests if tests.get("title_emoji") else {**tests, "title_emoji": title_arm(k)}
+def with_title_test(tests, k, kind="news"):
+    """The tests with this Short's title arms added (each kept when the board already has one, as series parts do)."""
+    for t in TITLE_TESTS:
+        if not tests.get(t) and kind not in TITLE_NOT_FOR.get(t, ()): tests = {**tests, t: title_arm(k, t)}
+    return tests
 
 
 def style_note(picks):
@@ -1015,16 +1063,18 @@ def choose_writer(sid):
 # 24 October: Charlie's allowance comes first, so 4 edits a day on a random 3 in 10 passing boards (claude_edit_share) and
 # no test-arm boards (claude_writes_per_day 0); edited boards keep "editor": "claude", so the editor test still measures.
 EDIT = """You are the editor of a family-friendly UK YouTube Shorts channel. A writer's board follows (JSON). Make it more
-gripping for an ordinary viewer scrolling past: a sharper hook (first line), a title that makes people tap, a punchier
-last line, and a pinned comment that invites replies. Rewrite only these five, nothing else:
+gripping for an ordinary viewer scrolling past: a sharper hook (first line, the best-known name in its first four
+words), a title that makes people tap, a punchier last line, and a pinned comment that invites replies. Rewrite only
+these five, nothing else:
 - title and alt_title (a different angle on the same Short): each under 50 characters, the exact name people search
-  first, then the detail promised but held back ("LISA's Tarantino video: the detail you missed"), never a question,
-  no clickbait lies, {emoji},
+  first, then {title_way}, never a question, no clickbait lies, {emoji},
 - comment (one question viewers want to answer),
 - first (beat 1's narration) and last (the last beat's narration): keep every fact, name and number they hold, use the
   same number of words as first_words and last_words say (two more or fewer at most: count them), keep the first line's
-  form (a statement stays a statement, a question stays a question: the board may be testing it), and never add a claim
-  the board doesn't make.
+  form (a statement stays a statement, a question stays a question, a number hook still opens on its number: the board
+  may be testing it), put the best-known person, band or team within the first four words of the first line (a co-star,
+  an outlet or a date never comes first) and then the result (what just changed, or how it ended), never open it on
+  "Did you know" or a date, and never add a claim the board doesn't make.
 UK English, no dashes of any kind, no emoji in the narration. Reply with JSON only:
 {"title": "...", "alt_title": "...", "comment": "...", "first": "...", "last": "..."}"""
 
@@ -1091,7 +1141,10 @@ def claude_edit(b, p, kind, note):
             "first_words": words(beats[0].get("say")), "last_words": words(beats[-1].get("say"))}
     used("edits")
     emoji = {"none": "with no emoji at all"}.get((b.get("test") or {}).get("title_emoji"), "each ending with exactly one emoji")
-    ans, why = factpack.claude_call(label, EDIT.replace("{emoji}", emoji) + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
+    way = {"stated": "the news the first line says (\"Tate McRae hits number one in Australia\")"}.get(
+        (b.get("test") or {}).get("title_answer"), "the detail promised but held back (\"LISA's Tarantino video: the detail you missed\")")
+    ans, why = factpack.claude_call(label, EDIT.replace("{emoji}", emoji).replace("{title_way}", way)
+                                    + "\n\nTHE BOARD\n" + json.dumps(show, ensure_ascii=False), 150)
     if not isinstance(ans, dict): return b, note + f", editor: no answer ({str(why)[:60]})"
     new = json.loads(json.dumps(b))
     nm = new["meta"]
@@ -1198,7 +1251,7 @@ def main():
     def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None, explore=False):
         sid = f"QD-{state['n']:03d}"
         if tests is None: style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
-        tests = with_title_test(tests, state["n"])      # the title emoji test rides on every Short
+        tests = with_title_test(tests, state["n"], kind)      # the title emoji and title answer tests ride on every Short
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
@@ -1254,7 +1307,7 @@ def main():
         follow-up or breaking news). `explore`: an exploration Short (None: when explore_due says so; never the reserve)."""
         if explore is None: explore = not reserve and explore_due()
         style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
-        tests = with_title_test(tests, state["n"])      # one arm for every part of a series
+        tests = with_title_test(tests, state["n"], kind)      # one arm for every part of a series
         base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least

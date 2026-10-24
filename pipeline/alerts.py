@@ -1,12 +1,13 @@
 """Alerts (Charlie, 19 October): a GitHub issue when something needs a look, so the GitHub app on his phone tells him,
 and nothing otherwise. Run by .github/workflows/alerts.yml:
-- after a main job finishes: two failures in a row open an issue for that job; its next success closes it;
+- after a main job fails (a runner starts only for failures since 24 October): two failures in a row open an issue for
+  that job; every 2 hours recovered() closes it once the job's latest run has succeeded;
 - each evening (21:30 UTC): an issue if under 70% of the day's Shorts went public on YouTube, and one if the Facebook
   key runs out within 14 days; each closes again once things are fine.
 Issues carry the label "alert", one per problem, updated rather than repeated.
   python pipeline/alerts.py         (EVENT=workflow_run with RUN_NAME, RUN_CONCLUSION and RUN_URL, or the evening check)
 """
-import datetime as dt, json, os, pathlib, subprocess
+import datetime as dt, json, os, pathlib, re, subprocess
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -68,12 +69,29 @@ def after_run():
     if name not in WHAT: return
     title = f"⚠️ {name} is failing ({WHAT[name]})"
     if concl == "success": clear(title, f"Working again: {url}"); return
-    if concl != "failure": return
+    if concl not in FAILED: return
     r = gh("run", "list", "--workflow", f"{name}.yml", "--status", "completed", "--limit", "2", "--json", "conclusion,url")
     try: last = json.loads(r.stdout or "[]")
     except ValueError: last = []
-    if len(last) >= 2 and all(x.get("conclusion") == "failure" for x in last[:2]):
+    if len(last) >= 2 and all(x.get("conclusion") in FAILED for x in last[:2]):
         raise_issue(title, f"The {name} job ({WHAT[name]}) failed twice in a row. Latest run: {url}")
+
+
+FAILED = ("failure", "timed_out", "startup_failure")
+RECOVERY_CRON = "40 */2 * * *"
+
+
+def recovered():
+    """Every 2 hours (alerts.yml): each open "is failing" issue whose job's latest finished run succeeded is closed. Since
+    24 October a successful run no longer starts this workflow (a runner only for failures), so the success that closes
+    an issue is looked up here instead of arriving as an event."""
+    for title in list(open_issues()):
+        m = re.match(r"⚠️ (\S+) is failing \(", title)
+        if not m or m.group(1) not in WHAT: continue
+        r = gh("run", "list", "--workflow", f"{m.group(1)}.yml", "--status", "completed", "--limit", "1", "--json", "conclusion,url")
+        try: last = (json.loads(r.stdout or "[]") or [None])[0]
+        except ValueError: continue
+        if last and last.get("conclusion") == "success": clear(title, f"Working again: {last.get('url', '')}")
 
 
 def evening():
@@ -244,6 +262,7 @@ def reach_alert():
 
 if __name__ == "__main__":
     if os.environ.get("EVENT") == "workflow_run": after_run()
+    elif os.environ.get("SCHEDULE") == RECOVERY_CRON: recovered()
     else:
         evening()
         try: funnel_check()

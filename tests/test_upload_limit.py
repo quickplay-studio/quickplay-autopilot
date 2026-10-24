@@ -28,5 +28,22 @@ for i in range(1, 5):
 U.main(str(SCRATCH))
 states = [json.loads((SCRATCH / f"QD-90{i}" / "status.json").read_text())["state"] for i in range(1, 5)]
 assert CALLS == ["Short 1", "Short 2"], CALLS                     # no call after the refusal
-assert states == ["scheduled"] + ["waiting for YouTube's daily upload limit"] * 3, states
+assert states == ["scheduled"] + [U.LIMIT_WAIT] * 3, states
+# held, not re-rendered (audit M5): the video is kept as preview.mp4 and the Short is approved for publish.py
+for i in range(2, 5):
+    d = SCRATCH / f"QD-90{i}"; st = json.loads((d / "status.json").read_text())
+    assert (d / "preview.mp4").exists() and not (d / "video.mp4").exists() and st.get("approved"), st
 print("upload limit ok")
+
+# without the YouTube keys (audit M9): every rendered Short is held the same way, never filed as done
+Y.available = lambda: False
+S2 = _p.Path(tempfile.mkdtemp(prefix="qp-test-"))
+d = S2 / "QD-911"; d.mkdir()
+(d / "status.json").write_text(json.dumps({"id": "QD-911", "state": "rendered", "mode": "schedule"}))
+(d / "upload.json").write_text(json.dumps({"title": "Short 11", "description": "", "tags": [], "category": "Gaming", "mode": "schedule",
+                                            "slot": "2026-10-25T07:30:00Z"}))
+(d / "video.mp4").write_bytes(b"x")
+U.main(str(S2))
+st = json.loads((d / "status.json").read_text())
+assert st["state"] == U.KEYS_MISSING and st.get("approved") and (d / "preview.mp4").exists(), st
+print("keys missing: held as a preview ok")

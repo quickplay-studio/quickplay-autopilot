@@ -1,0 +1,58 @@
+name: pages
+# The hub (docs/) on GitHub Pages, deployed only when docs/ changes (audit P4, 24 October). Until then Pages builds from
+# the branch after every commit, about 160 a day, over GitHub's soft limit of 10 builds an hour, although the hub reads its
+# numbers live and only its own files ever need a rebuild.
+# Harmless until Charlie switches Settings, Pages, Source to "GitHub Actions" (status/actions.json): while Pages still
+# builds from the branch, the check job finds that and the deploy job is skipped (no deployment is made).
+# (Pushes made by the workflows' own token start no workflow, so docs written by a workflow reach Pages with the next
+# push from a session or a Run workflow; the hub's data comes from the repository directly, so nothing waits on that.)
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: read
+    outputs:
+      deploy: ${{ steps.mode.outputs.deploy }}
+    steps:
+      - name: Is Pages set to deploy from Actions?
+        id: mode
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          t=$(gh api "repos/${{ github.repository }}/pages" --jq .build_type 2>/dev/null || echo unknown)
+          echo "Pages build type: $t"
+          if [ "$t" = "workflow" ]; then echo "deploy=yes" >> "$GITHUB_OUTPUT"
+          else echo "deploy=no" >> "$GITHUB_OUTPUT"; echo "Pages still builds from the branch: nothing to do here"; fi
+
+  deploy:
+    needs: check
+    if: ${{ needs.check.outputs.deploy == 'yes' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, sparse-checkout: docs }
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: docs }
+      - id: d
+        uses: actions/deploy-pages@v4

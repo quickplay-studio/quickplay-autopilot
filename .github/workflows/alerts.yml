@@ -8,6 +8,7 @@ on:
     types: [completed]
   schedule:
     - cron: '30 21 * * *'      # the evening check: did the day's Shorts go out?
+    - cron: '40 */2 * * *'     # every 2 hours: closes "is failing" issues whose job has run successfully since (alerts.recovered)
   workflow_dispatch:
 
 permissions:
@@ -21,6 +22,10 @@ concurrency:
 
 jobs:
   alerts:
+    # a runner only for a failed run, the evening check and the 2-hourly recovery check: until 24 October every finished
+    # run of these 11 workflows started one (about 160 a day, a third of the Actions list); a success needs no alert, and
+    # the recovery check closes a job's "is failing" issue once it works again (audit P5)
+    if: ${{ github.event_name != 'workflow_run' || contains(fromJSON('["failure", "timed_out", "startup_failure"]'), github.event.workflow_run.conclusion) }}
     runs-on: ubuntu-latest
     timeout-minutes: 10      # runs take seconds
     steps:
@@ -29,6 +34,7 @@ jobs:
       - env:
           GH_TOKEN: ${{ github.token }}
           EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
           RUN_NAME: ${{ github.event.workflow_run.name }}
           RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           RUN_URL: ${{ github.event.workflow_run.html_url }}
@@ -41,5 +47,6 @@ jobs:
           git add status/money.json status/fx.json 2>/dev/null || true
           git add status/funnel.json analytics/funnel.csv 2>/dev/null || true
           git commit -q -m "Money note $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 0

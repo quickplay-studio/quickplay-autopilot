@@ -80,6 +80,7 @@ jobs:
           new=$(git diff --cached --name-only -- boards/queue | wc -l)
           git commit -q -m "Gemini boards $(date -u '+%F %H:%M')" || exit 0
           pushed=""
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && { pushed=1; break; }; sleep $((5 + RANDOM % 10)); done
           # until 24 October a push that failed five times ended this step green: the boards (and their model calls) were lost
           # with the runner and nothing said so. Now the run fails, so alerts.yml sees it.

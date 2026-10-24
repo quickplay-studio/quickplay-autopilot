@@ -22,7 +22,7 @@ Rules (numbers live in config.json)
   Waiting Shorts are rendered but not uploaded, so they don't use the daily upload limit; pipeline/publish.py uploads
   them once approved.
 """
-import datetime as dt, json, os, pathlib, sys, time
+import datetime as dt, json, os, pathlib, re, sys, time
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -218,13 +218,17 @@ def main():
     for p in queue:
         try: b = json.loads(p.read_text())
         except Exception: b = {"id": p.stem}
-        errs, warns = V.check(b, p) if "beats" in b else (["not a valid board"], [])
+        if not isinstance(b, dict): b = {"id": p.stem, "_shape": type(b).__name__}    # a JSON list or string: rejected, never a crash (audit H3)
+        errs, warns = V.check(b, p) if "beats" in b else ([f"not a valid board (a JSON {b['_shape']}, not a board object)" if b.get("_shape")
+                                                           else "not a valid board"], [])
         if errs:
-            jobs.append({"board": str(p.relative_to(ROOT)), "id": b.get("id", p.stem), "slot": "", "mode": "reject",
+            rid = b.get("id") if isinstance(b.get("id"), str) and re.fullmatch(r"[A-Za-z0-9-]{1,40}", b.get("id")) else p.stem
+            jobs.append({"board": str(p.relative_to(ROOT)), "id": rid, "slot": "", "mode": "reject",
                          "errors": "; ".join(errs)[:900]})
             continue
         mode = b.get("mode", "schedule")
-        if mode in ("schedule", "private") and not online: mode = "none"
+        # Without the YouTube keys a Short still renders, then waits in boards/ready as a preview until the keys are back
+        # (upload.py, record.py, publish.py); until 24 October it rendered as mode "none" and was filed as done, never uploaded (audit M9)
         warns = [x for x in warns if not x.startswith("background:")]     # a board without searches gets its category's: never held for it
         hold = hold_reasons(b, warns) if mode != "none" else []
         if mode == "dry" and not hold: hold = ["dry run: always waits for approval, never uploaded"]

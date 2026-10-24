@@ -82,6 +82,8 @@ jobs:
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
+          # imagehash (pHash) for the near-duplicate check of pipeline/pictures.py; optional, the average hash stands in without it
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D imagehash==4.3.2 || echo "imagehash not installed: pictures.py uses its average hash"
           python -m playwright install --with-deps chromium
       - name: Fonts and icons
         if: matrix.job.mode != 'reject'
@@ -92,6 +94,27 @@ jobs:
       - name: Voice model
         if: matrix.job.mode != 'reject'
         run: python pipeline/get_model.py models/chatterbox
+      # picture models (24 October): YuNet for faces (232 KB, SHA-256 pinned) and SigLIP 2 base for ranking each beat's candidate
+      # pictures (about 1.5 GB). Saved to the cache only when complete, so one failed download never fixes an empty copy under the key;
+      # a failure never fails the render (faces keep the Haar cascade, pictures keep the search's own order). Bump a key with its pin.
+      - uses: actions/cache/restore@v4
+        id: yunet_cache
+        if: matrix.job.mode != 'reject'
+        with: { path: models/yunet, key: yunet-2023mar-8f2383e }
+      - uses: actions/cache/restore@v4
+        id: siglip_cache
+        if: matrix.job.mode != 'reject'
+        with: { path: models/siglip2, key: siglip2-b16-224-v1 }
+      - name: Picture models
+        if: matrix.job.mode != 'reject'
+        env: { HF_HUB_DISABLE_PROGRESS_BARS: '1' }
+        run: python pipeline/get_pictures.py models
+      - uses: actions/cache/save@v4
+        if: ${{ matrix.job.mode != 'reject' && steps.yunet_cache.outputs.cache-hit != 'true' && hashFiles('models/yunet/face_detection_yunet_2023mar.onnx') != '' }}
+        with: { path: models/yunet, key: yunet-2023mar-8f2383e }
+      - uses: actions/cache/save@v4
+        if: ${{ matrix.job.mode != 'reject' && steps.siglip_cache.outputs.cache-hit != 'true' && hashFiles('models/siglip2/MANIFEST.json') != '' }}
+        with: { path: models/siglip2, key: siglip2-b16-224-v1 }
       - name: Unlock music
         if: matrix.job.mode != 'reject'
         env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }

@@ -539,14 +539,15 @@ def drawtext(text, size, y, colour="white", box=True):
 
 
 def face_box(seg, a, b, every=2.0):
-    """Where the person is between a and b, as (x, y, w, h) fractions of the picture: OpenCV's face detector on a frame
-    every `every` seconds, detections grouped by position, and the group that is present in at least half the frames
-    AND changes most over time wins (a real face talks and moves; a face-like patch of wall does not). None when no
-    group qualifies."""
+    """Where the person is between a and b, as (x, y, w, h) fractions of the picture: a face detector on a frame every
+    `every` seconds (YuNet, which keeps people who turn their head, faces.py; OpenCV's Haar cascade when its model file is
+    missing), detections grouped by position, and the group that is present in at least half the frames AND changes most
+    over time wins (a real face talks and moves; a face-like patch of wall does not). None when no group qualifies."""
     try:
         import cv2, numpy as np
     except ImportError: return None
-    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    import faces as FC
+    casc = None                # the Haar cascade, built only when a frame needs it
     groups, n = {}, 0          # (round x, round y) -> [(box, 32x32 grey patch)]
     t = a + 0.5
     while t < b:
@@ -555,7 +556,11 @@ def face_box(seg, a, b, every=2.0):
         img = cv2.imread(str(f)) if f.exists() else None
         if img is not None:
             n += 1; h, w = img.shape[:2]; grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            for (x, y, fw, fh) in casc.detectMultiScale(grey, 1.2, 6, minSize=(int(h * 0.08), int(h * 0.08))):
+            found = FC.yunet_faces(img, int(h * 0.08))
+            if found is None:                                   # no YuNet: the Haar cascade, as before
+                if casc is None: casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+                found = casc.detectMultiScale(grey, 1.2, 6, minSize=(int(h * 0.08), int(h * 0.08)))
+            for (x, y, fw, fh) in found:
                 key = (round(x / w, 1), round(y / h, 1))
                 patch = cv2.resize(grey[y:y + fh, x:x + fw], (32, 32)).astype("float32")
                 groups.setdefault(key, []).append(((x / w, y / h, fw / w, fh / h), patch))
@@ -566,7 +571,7 @@ def face_box(seg, a, b, every=2.0):
         if len(items) < max(2, n / 2): continue
         change = float(np.mean(np.std(np.stack([pt for _, pt in items]), axis=0)))     # how much the patch moves and talks
         if change > score: best, score = items, change
-    log(f"  faces: {n} frames, groups " + ", ".join(f"{k}:{len(v)}" for k, v in groups.items()) + f", best change {score:.1f}")
+    log(f"  faces ({FC.engine()}): {n} frames, groups " + ", ".join(f"{k}:{len(v)}" for k, v in groups.items()) + f", best change {score:.1f}")
     if not best or score < 4.0: return None
     med = lambda k: sorted(v[0][k] for v in best)[len(best) // 2]
     return (med(0), med(1), med(2), med(3))

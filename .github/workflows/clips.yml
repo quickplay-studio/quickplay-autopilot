@@ -86,6 +86,18 @@ jobs:
       - uses: actions/cache@v4
         if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 9 * * *' || github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         with: { path: ~/.cache/huggingface, key: whisper-small-v1 }
+      # YuNet face detector (24 October; 232 KB, SHA-256 pinned in pipeline/get_pictures.py) for the person finder, clips.face_box;
+      # the Haar cascade stands in when the file is missing, and a failure here never fails the run
+      - uses: actions/cache/restore@v4
+        id: yunet_cache
+        if: steps.when.outputs.skip != '1'
+        with: { path: models/yunet, key: yunet-2023mar-8f2383e }
+      - name: Face model
+        if: steps.when.outputs.skip != '1'
+        run: python pipeline/get_pictures.py models --only yunet
+      - uses: actions/cache/save@v4
+        if: ${{ steps.when.outputs.skip != '1' && steps.yunet_cache.outputs.cache-hit != 'true' && hashFiles('models/yunet/face_detection_yunet_2023mar.onnx') != '' }}
+        with: { path: models/yunet, key: yunet-2023mar-8f2383e }
       - name: Clips
         if: steps.when.outputs.skip != '1'
         env:

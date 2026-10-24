@@ -4,7 +4,8 @@ Writes analytics/ (read by the daily writer and the reviews, and uploaded to the
   shorts.csv     one row per Short: when, topic, format, and views, likes, comments, shares on each platform,
                  YouTube average % viewed, engaged views and subscribers gained, views per hour since posting,
                  retention (share still watching 3 seconds in and at the end), views 1 to 72 hours after posting,
-                 views against Shorts posted around the same time, top countries
+                 views against Shorts posted around the same time, top countries, how well the pictures fit their
+                 beats (pic_relevance, pic_found_share)
   daily.csv      one row per day and platform: views, followers, followers gained
   hourly.csv     views gained each hour (UK time), by platform and by category: when the audience watches
   curves/        each Short's views hour by hour for its first week (then every few hours to 30 days)
@@ -67,6 +68,15 @@ def late_label(st, b):
 # hook and length arms, its title answer arm, and whether the hook names the lead the title names
 ARM_COLUMNS = ("arm_hook_type", "arm_length", "title_answer", "hook_named")
 
+# How well the pictures fit their beats (pictures.py, 24 October): the mean relevance (0 to 1) of the pictures used and the share
+# of beats where a picture was found. status/<id>.json keeps them in media; blank for a Short rendered before the ranker.
+PIC_COLUMNS = ("pic_relevance", "pic_found_share")
+
+
+def pic_fields(st):
+    m = st.get("media") if isinstance(st.get("media"), dict) else {}
+    return {k: m.get(k, "") for k in PIC_COLUMNS}
+
 
 def hook_named(b):
     """"yes" when the hook's first five words name the lead the title names (a name the board labels on screen:
@@ -110,7 +120,7 @@ def our_shorts():
             # board's topic source above, so the "Topic source" driver was never scored.
             "origin": st.get("source", "pipeline"), "timeline": st.get("timeline"),
             "real_share": round((st.get("media") or {}).get("real_shots", 0) / max(1, sum(len(bt.get("shots") or []) for bt in beats)), 2)
-                          if st.get("media") and beats else ""}
+                          if st.get("media") and beats else "", **pic_fields(st)}
     legacy = load_json(OUT / "legacy.json", {}) or {}       # Shorts from before the pipeline kept boards
     for vid, o in out.items():
         if not o["category"] and o["id"] in (legacy.get("by_id") or {}):
@@ -684,6 +694,7 @@ def main():
         row["yt_feed_pct"] = round(100 * src.get("SHORTS", 0) / tot) if tot else ""          # views from the Shorts feed (the algorithm)
         row["yt_search_pct"] = round(100 * src.get("YT_SEARCH", 0) / tot) if tot else ""     # views from YouTube search
         row["real_share"] = o.get("real_share", "")            # share of shots that are real images of the subject
+        row.update({k: o.get(k, "") for k in PIC_COLUMNS})     # pictures.py: mean relevance of the pictures, beats with a picture found
         dr = drops(curve, o.get("timeline"), secs) if curve and secs else []
         row["yt_worst_beat"] = (lambda w: f"beat {w[1] + 1} ({w[2]}), -{w[0]} pts/s")(max(dr)) if dr else ""
         row["_drops"] = dr

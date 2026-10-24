@@ -1270,9 +1270,14 @@ def reach_check(rows):
         if old:
             c["public_a_day_old"] += 1; c["no_views"] += int(float(r.get("views") or 0) == 0)
             c["views_day_old"] = c.get("views_day_old", 0) + int(float(r.get("views") or 0))
+            if r.get("test_take") in ("voice", "text"):          # the clips with our own take (from 24 October), on their own
+                c["take_day_old"] = c.get("take_day_old", 0) + 1; c["take_no_views"] = c.get("take_no_views", 0) + int(float(r.get("views") or 0) == 0)
+                c["take_views"] = c.get("take_views", 0) + int(float(r.get("views") or 0))
     for c in out.values():           # unseen: 8 or more clips a day old, 70% with no views or under 5 views a clip
         n = c["public_a_day_old"]
         c["unseen"] = n >= 8 and (c["no_views"] >= 0.7 * n or c.get("views_day_old", 0) < 5 * n)
+        t = c.get("take_day_old", 0)
+        c["take_unseen"] = t >= 8 and (c.get("take_no_views", 0) >= 0.7 * t or c.get("take_views", 0) < 5 * t)
     (ROOT / "clips" / "reach.json").write_text(json.dumps({"as_of": NOW.isoformat(timespec="minutes"), "channels": out}, indent=1))
     return out
 
@@ -1398,6 +1403,31 @@ def reach_share(min_views):
             if k not in latest or (r.get("as_of") or "") >= (latest[k].get("as_of") or ""): latest[k] = r
         vals = [float(r.get("views") or 0) for r in latest.values()]
     return max(0.05, (sum(1 for v in vals if v >= float(min_views)) + 1) / (len(vals) + 4))
+
+
+def unseen_cap(channel):
+    """Clips a day for a channel YouTube is not showing (clips/reach.json "take_unseen": 8 or more clips with our own take,
+    a day old, still 70% unseen): campaigns.json clips_unseen_cap (4) instead of the learned ceiling, until the reach check
+    clears. Fewer clips cost fewer of the shared YouTube allowance and look less like a spam burst from a new channel; the
+    change is written to analytics/decisions.csv once. None when the channel is being seen."""
+    try: c = (json.loads((ROOT / "clips" / "reach.json").read_text()).get("channels") or {}).get(channel) or {}
+    except Exception: return None
+    if not c.get("take_unseen"): return None
+    cap = int(CFG.get("clips_unseen_cap", 4))
+    mark = STATE / f"unseen_{channel}.json"
+    if not mark.exists():
+        STATE.mkdir(parents=True, exist_ok=True); mark.write_text(json.dumps({"since": NOW.isoformat(timespec="minutes"), "cap": cap}))
+        p = ROOT / "analytics" / "decisions.csv"
+        try:
+            new = not p.exists()
+            with p.open("a", newline="") as f:
+                w = csv.writer(f)
+                if new: w.writerow(["date", "area", "change", "why", "evidence", "check_on", "by"])
+                w.writerow([str(NOW.date()), "Clips a day", f"{channel} channel: {cap} clips a day until YouTube shows them",
+                            f"{c.get('take_no_views')} of {c.get('take_day_old')} clips with our own take had no views a day on",
+                            "clips/reach.json", str(NOW.date() + dt.timedelta(days=4)), "clips.py (automatic)"])
+        except Exception as e: log("decision:", str(e)[:120])
+    return cap
 
 
 def allocate(remaining, count=None, channel=None):
@@ -1619,7 +1649,11 @@ def main(argv):
         for channel, ids_on in channels().items():
             done_today = scheduled_today(channel)
             ceiling_learn(done_today, channel=channel)
-            got = allocate((count or 1) * len(ids_on) if private else max(0, daily_limit(channel) - done_today), count, channel)
+            limit = daily_limit(channel)
+            cap = None if private else unseen_cap(channel)
+            if cap is not None and cap < limit: log(f"channel {channel}: YouTube is not showing its clips, {cap} a day until it does"); limit = cap
+            elif not private: (STATE / f"unseen_{channel}.json").unlink(missing_ok=True)
+            got = allocate((count or 1) * len(ids_on) if private else max(0, limit - done_today), count, channel)
             if got: shares[channel] = got
         want = {}
         for channel, got in shares.items():

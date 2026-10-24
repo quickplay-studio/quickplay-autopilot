@@ -73,8 +73,9 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    claims on the creators' footage, "reused content" (the spoken take started tonight to answer it), and brand-new
    channels posting 10 or more clips at the same minute. First answer (01:20): YouTube has not rejected, blocked or
    restricted a single clip, so it is not copyright; the clips are clean and simply not shown. That points at originality,
-   which the spoken take (live from Saturday's batch) answers. If clips with the take are still unseen by Monday, the
-   next test is fewer clips per channel per day.
+   which the spoken take (live from Saturday's batch) answers. If clips with the take are still unseen after a day, the
+   system now tests the next fix by itself: that channel drops to 4 clips a day until YouTube shows them (logged in
+   the decisions list, lifted automatically).
 13. **The Tate McRae breakout gets its follow-up after all.** QD-135 is at 31.5 times our usual views. A test follow-up
    written earlier (a dry run, never published) was counted as the real one, so the system would never have written it.
    Tests no longer count; the next write run can follow it up.

@@ -321,3 +321,13 @@ assert made_[("clips", "a")] == 3 and made_[("clips", "s")] == 0
 MADE.clear()
 assert C.spill({"clips": {"a": 2, "b": 1}}, {("clips", "a"): 2}, cs_, _time.time() - 1) == 0 and not MADE    # out of time
 print("spill ok")
+
+# a channel YouTube is not showing (8+ clips with our own take, a day old, 70% unseen) makes 4 a day until the check clears
+C.ROOT = pathlib.Path(SCRATCH) / "uc"; (C.ROOT / "clips").mkdir(parents=True); (C.ROOT / "analytics").mkdir()
+C.STATE = C.ROOT / "clips" / "state"
+rows = [{"channel": "clips", "privacy": "public", "hours_public": "30", "views": "0", "test_take": "voice"} for _ in range(8)]
+got = C.reach_check(rows)
+assert got["clips"]["take_unseen"] and C.unseen_cap("clips") == 4 and C.unseen_cap("gaming") is None
+assert C.unseen_cap("clips") == 4 and (C.ROOT / "analytics" / "decisions.csv").read_text().count("clips channel: 4 clips a day") == 1   # noted once
+C.reach_check([dict(r, views="40") for r in rows]); assert C.unseen_cap("clips") is None
+print("unseen cap ok")

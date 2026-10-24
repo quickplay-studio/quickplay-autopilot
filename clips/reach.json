@@ -1,25 +1,28 @@
 {
- "as_of": "2026-10-24T00:08+00:00",
+ "as_of": "2026-10-24T12:15+00:00",
  "channels": {
   "clips": {
    "public_a_day_old": 23,
    "no_views": 17,
-   "views": 11,
+   "views": 12,
    "rejected": 0,
    "blocked": 0,
    "age_restricted": 0,
    "for_kids": 0,
-   "unseen": false
+   "views_day_old": 12,
+   "unseen": true,
+   "take_unseen": false
   },
   "gaming": {
    "public_a_day_old": 0,
    "no_views": 0,
-   "views": 18,
+   "views": 47,
    "rejected": 0,
    "blocked": 0,
    "age_restricted": 0,
    "for_kids": 0,
-   "unseen": false
+   "unseen": false,
+   "take_unseen": false
   },
   "irl": {
    "public_a_day_old": 0,
@@ -29,7 +32,8 @@
    "blocked": 0,
    "age_restricted": 0,
    "for_kids": 0,
-   "unseen": false
+   "unseen": false,
+   "take_unseen": false
   }
  }
 }

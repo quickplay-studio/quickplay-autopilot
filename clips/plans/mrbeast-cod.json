@@ -421,10 +421,30 @@
    "end": 642.4,
    "hook": "MRBEAST GETS AMBUSHED",
    "label": "MrBeast",
-   "title": "MrBeast Gaming: MrBeast vs Pro Players",
+   "title": "Mrbeast gets ambushed | MrBeast",
    "why": "A high-intensity moment where MrBeast himself is under fire and barely escapes.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "MrBeast Gaming: MrBeast vs Pro Players",
+   "take_intro": "Watch the chaos unfold as everything goes wrong",
+   "take_outro": "That escape was absolutely mental what would you do",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "mrbeast-cod-17.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-17.mp4",
+   "video": "2199epJUlCg",
+   "url": "https://youtube.com/shorts/2199epJUlCg",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "mrbeast-cod-18",
@@ -432,10 +452,30 @@
    "end": 896.4,
    "hook": "THE MOST INTENSE SNIPER BATTLE",
    "label": "",
-   "title": "MrBeast Gaming: Insane Sniper Clutch",
+   "title": "The most intense sniper battle | MrBeast",
    "why": "Features high-skill gameplay and trash talk that is very popular in gaming clips.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "MrBeast Gaming: Insane Sniper Clutch",
+   "take_intro": "This sniper battle takes a wild turn",
+   "take_outro": "What a read could you pull that off",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "mrbeast-cod-18.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-18.mp4",
+   "video": "s2ZpfPo8TZM",
+   "url": "https://youtube.com/shorts/s2ZpfPo8TZM",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "mrbeast-cod-19",
@@ -446,7 +486,26 @@
    "title": "MrBeast Gaming: The $1,000,000 Extraction",
    "why": "The ultimate payoff of the video where the final chaos leads to the big win.",
    "planned": "2026-10-21T09:30+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "take_intro": "Watch the chaos unfold as they race for escape",
+   "take_outro": "Heart pounding finale who would you trust in that helicopter",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "mrbeast-cod-19.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-19.mp4",
+   "video": "suK30mhwvaE",
+   "url": "https://youtube.com/shorts/suK30mhwvaE",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "mrbeast-cod-20",
@@ -459,7 +518,26 @@
    "planned": "2026-10-22T09:36+00:00",
    "model": "gemini-3-flash-preview",
    "peak": 22.0,
-   "question": "What would you do if you won a million dollars today?"
+   "question": "What would you do if you won a million dollars today?",
+   "take_intro": "See what unfolds as teams fight for massive prize",
+   "take_outro": "That extraction was absolutely wild, which team played smartest",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "mrbeast-cod-20.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/mrbeast-cod-20.mp4",
+   "video": "j2uKgqReGCY",
+   "url": "https://youtube.com/shorts/j2uKgqReGCY",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "mrbeast-cod-21",

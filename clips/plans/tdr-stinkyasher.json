@@ -329,10 +329,30 @@
    "end": 730.4,
    "hook": "HOW ARE YOU IN A TOURNAMENT?",
    "label": "GWEN",
-   "title": "StinkyAsher Votes Out the Mute Players",
+   "title": "How are you in a tournament? | StinkyAsher",
    "why": "A humorous take on the social strategy of the tournament and YouTuber tropes.",
    "planned": "2026-10-21T09:19+00:00",
-   "model": "gemini-3-flash-preview"
+   "model": "gemini-3-flash-preview",
+   "title_planned": "StinkyAsher Votes Out the Mute Players",
+   "take_intro": "Watch the chaos unfold in this tournament",
+   "take_outro": "That dancing competition changed everything who saw that coming",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "tdr-stinkyasher-13.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-stinkyasher-13.mp4",
+   "video": "YItWw_xb4zc",
+   "url": "https://youtube.com/shorts/YItWw_xb4zc",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-stinkyasher-14",

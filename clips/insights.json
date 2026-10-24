@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T00:08+00:00",
+ "updated": "2026-10-24T12:15+00:00",
  "clips": 23,
  "tests": {
   "layout": {
@@ -7,7 +7,7 @@
     "letterbox": {
      "n": 12,
      "median_views": 0.0,
-     "mean_views": 0.2
+     "mean_views": 0.3
     },
     "full": {
      "n": 2,
@@ -27,7 +27,7 @@
     "lines": {
      "n": 8,
      "median_views": 0.0,
-     "mean_views": 0.1
+     "mean_views": 0.2
     },
     "karaoke": {
      "n": 6,
@@ -47,7 +47,7 @@
     "zoom": {
      "n": 3,
      "median_views": 0.0,
-     "mean_views": 0.3
+     "mean_views": 0.7
     }
    },
    "best": null
@@ -57,7 +57,7 @@
     "as planned": {
      "n": 8,
      "median_views": 0.0,
-     "mean_views": 0.1
+     "mean_views": 0.2
     }
    },
    "best": null
@@ -67,7 +67,7 @@
     "subject first": {
      "n": 6,
      "median_views": 0.0,
-     "mean_views": 0.2
+     "mean_views": 0.3
     },
     "hook first": {
      "n": 6,
@@ -89,33 +89,33 @@
   }
  },
  "campaigns": {
-  "mrbeast-cod": {
-   "n": 3,
-   "median_views": 1.0
+  "tdr-stinkyasher": {
+   "n": 2,
+   "median_views": 2.0
+  },
+  "tdr-mitch": {
+   "n": 4,
+   "median_views": 0.0
   },
   "tdr-jenny": {
    "n": 7,
-   "median_views": 0.0
-  },
-  "tdr-flamingo": {
-   "n": 3,
    "median_views": 0.0
   },
   "valorant-champs": {
    "n": 1,
    "median_views": 0.0
   },
-  "tdr-mitch": {
-   "n": 4,
-   "median_views": 0.0
-  },
-  "tdr-stinkyasher": {
-   "n": 2,
-   "median_views": 2.0
-  },
   "speed-expedia": {
    "n": 3,
    "median_views": 0.0
+  },
+  "tdr-flamingo": {
+   "n": 3,
+   "median_views": 0.0
+  },
+  "mrbeast-cod": {
+   "n": 3,
+   "median_views": 1.0
   }
  },
  "score_bands": {

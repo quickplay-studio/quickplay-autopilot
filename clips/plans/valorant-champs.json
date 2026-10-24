@@ -224,7 +224,7 @@
    "end": 5489.4,
    "hook": "UNBELIEVABLE SLIDING NO-SCOPE PLAY",
    "label": "",
-   "title": "VALORANT Champs Insane Duelist Plays Reacted To",
+   "title": "Unbelievable sliding no-scope play | VALORANT Champs",
    "why": "Starts right on the crazy trick shot description and pays off with the jaw-dropping reaction.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "gemini-3.6-flash",
@@ -232,7 +232,25 @@
    "score": 8.0,
    "take_intro": "Reacting to one of the most absurd duelist plays this year.",
    "take_outro": "Is this one of the cleanest highlights in VALORANT history?",
-   "question": "What is the cleanest trick shot you have ever seen live?"
+   "question": "What is the cleanest trick shot you have ever seen live?",
+   "title_planned": "VALORANT Champs Insane Duelist Plays Reacted To",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "valorant-champs-10.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/valorant-champs-10.mp4",
+   "video": "ZBEwPgE8ccs",
+   "url": "https://youtube.com/shorts/ZBEwPgE8ccs",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "valorant-champs-11",

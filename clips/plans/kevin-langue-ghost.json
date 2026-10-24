@@ -295,7 +295,24 @@
    "score": 8.0,
    "take_intro": "Courtney describes a ghost that appeared to sceptics and believers alike.",
    "take_outro": "That conviction is rare. What's your favourite paranormal encounter?",
-   "question": "Would you believe a ghost multiple people saw separately?"
+   "question": "Would you believe a ghost multiple people saw separately?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-11.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-11.mp4",
+   "video": "x8q-S47_cg0",
+   "url": "https://youtube.com/shorts/x8q-S47_cg0",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-12",
@@ -303,7 +320,7 @@
    "end": 732.4,
    "hook": "YOU'RE READING A SCRIPT BETH",
    "label": "Beth",
-   "title": "Kevin Langue Exposes Fake Ghost Hunter Script",
+   "title": "You're reading a script beth | Kevin Langue",
    "why": "Grab: Kevin's sharp observation; Payoff: Beth's flustered 'What the script?'",
    "planned": "2026-10-24T09:25+00:00",
    "model": "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -311,7 +328,25 @@
    "score": 8.0,
    "take_intro": "Kevin notices Beth ignores his questions and repeats her Salem story.",
    "take_outro": "The script accusation changes everything. Who's your pick now?",
-   "question": "Can you spot a liar by their rehearsed answers?"
+   "question": "Can you spot a liar by their rehearsed answers?",
+   "title_planned": "Kevin Langue Exposes Fake Ghost Hunter Script",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-12.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-12.mp4",
+   "video": "EqP9XRuIesU",
+   "url": "https://youtube.com/shorts/EqP9XRuIesU",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-13",
@@ -327,7 +362,24 @@
    "score": 7.0,
    "take_intro": "Jordan recounts hearing a voice yell run in an asylum basement.",
    "take_outro": "Kevin's take on race and ghosts is hilarious. Your reaction?",
-   "question": "Would you run or investigate a voice yelling run?"
+   "question": "Would you run or investigate a voice yelling run?",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-13.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-13.mp4",
+   "video": "7tkBOhgEbqg",
+   "url": "https://youtube.com/shorts/7tkBOhgEbqg",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-14",
@@ -335,7 +387,7 @@
    "end": 932.4,
    "hook": "PHD IN PARAPSYCHOLOGY FOR REAL",
    "label": "Jean-Pierre",
-   "title": "Kevin Langue Ghost Hunter PhD Parapsychology",
+   "title": "Phd in parapsychology for real | Kevin Langue",
    "why": "Grab: unexpected academic credential; Payoff: Kevin's iconic cultural callout.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -343,7 +395,25 @@
    "score": 7.0,
    "take_intro": "Jean-Pierre reveals his doctorate and Kevin questions the institution.",
    "take_outro": "That costume line killed me. What's your favourite Kevin one-liner?",
-   "question": "Is a parapsychology PhD legit or just a fancy title?"
+   "question": "Is a parapsychology PhD legit or just a fancy title?",
+   "title_planned": "Kevin Langue Ghost Hunter PhD Parapsychology",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-14.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-14.mp4",
+   "video": "jCvIQS2Zi08",
+   "url": "https://youtube.com/shorts/jCvIQS2Zi08",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-15",
@@ -351,7 +421,7 @@
    "end": 1931.4,
    "hook": "EMF METER HITS RED LIVE",
    "label": "Jean-Pierre",
-   "title": "Kevin Langue Ghost Hunt EMF Meter Spikes",
+   "title": "Emf meter hits red live | Kevin Langue",
    "why": "Grab: real-time device spike; Payoff: Kevin's logical breakdown of the hit.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -359,7 +429,25 @@
    "score": 7.0,
    "take_intro": "Jean-Pierre asks for a sign and the meter maxes out instantly.",
    "take_outro": "Kevin deduces it's reacting to Jean-Pierre not the ghost. Thoughts?",
-   "question": "Do you trust EMF meters as ghost evidence?"
+   "question": "Do you trust EMF meters as ghost evidence?",
+   "title_planned": "Kevin Langue Ghost Hunt EMF Meter Spikes",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "lines",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-15.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-15.mp4",
+   "video": "XTPj1aQ1x-E",
+   "url": "https://youtube.com/shorts/XTPj1aQ1x-E",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-16",
@@ -367,7 +455,7 @@
    "end": 2078.4,
    "hook": "I NEVER GUESSED WRONG BEFORE",
    "label": "",
-   "title": "Kevin Langue Guesses Real Ghost Hunter Courtney",
+   "title": "I never guessed wrong before | Kevin Langue",
    "why": "Grab: Kevin's unbeaten claim; Payoff: group debate and Anya's fear.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
@@ -375,7 +463,25 @@
    "score": 7.0,
    "take_intro": "The panel votes and Kevin stakes his perfect record on Courtney.",
    "take_outro": "Confidence like that is rare. Did Kevin keep his streak alive?",
-   "question": "Who would you pick as the real ghost hunter?"
+   "question": "Who would you pick as the real ghost hunter?",
+   "title_planned": "Kevin Langue Guesses Real Ghost Hunter Courtney",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "zoom",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "kevin-langue-ghost-16.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-16.mp4",
+   "video": "kylRgFP61Lk",
+   "url": "https://youtube.com/shorts/kylRgFP61Lk",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-17",

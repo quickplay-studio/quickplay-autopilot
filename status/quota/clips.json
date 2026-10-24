@@ -1,8 +1,9 @@
 {
  "day": "2026-10-24",
- "units": 2250,
+ "units": 3950,
  "by": {
   "clip promote": 1400,
-  "clip demote": 850
+  "clip demote": 850,
+  "upload": 1700
  }
 }

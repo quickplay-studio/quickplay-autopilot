@@ -412,7 +412,7 @@
    "end": 2062.4,
    "hook": "JENNY HOYOS EXPOSES THE QUIET PLAYERS",
    "label": "",
-   "title": "Jenny Hoyos Roblox Total Drama Strategy",
+   "title": "Jenny hoyos exposes the quiet players | Jenny Hoyos",
    "why": "Hooks with an aggressive game strategy and ends with the brutal 'she's giving nothing' line.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "gemini-3.6-flash",
@@ -420,7 +420,25 @@
    "score": 7.0,
    "take_intro": "Jenny Hoyos comes up with a bold strategy to survive elimination.",
    "take_outro": "That tactic was hilarious! Do you agree with targeting silent players?",
-   "question": "Was Jenny right to target the quiet players in this game?"
+   "question": "Was Jenny right to target the quiet players in this game?",
+   "title_planned": "Jenny Hoyos Roblox Total Drama Strategy",
+   "tests": {
+    "layout": "split",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice"
+   },
+   "made": "2026-10-24T12:15+00:00",
+   "file": "tdr-jenny-16.mp4",
+   "channel": "gaming",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-jenny-16.mp4",
+   "video": "exbyLi_9gIE",
+   "url": "https://youtube.com/shorts/exbyLi_9gIE",
+   "uploaded": "2026-10-24T12:15+00:00",
+   "publish_at": "2026-10-24T18:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "tdr-jenny-17",

@@ -1,0 +1,102 @@
+{
+ "id": "QD-156",
+ "board": "boards/queue/QD-156.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T14:30:00Z",
+ "rendered": "2026-10-24T09:07:27.374464+00:00",
+ "title": "Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "purple-desire",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 25.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 4.1
+ },
+ "timeline": [
+  [
+   0.06,
+   4.13,
+   "none",
+   0
+  ],
+  [
+   4.13,
+   8.56,
+   "none",
+   1
+  ],
+  [
+   8.56,
+   10.27,
+   "none",
+   1
+  ],
+  [
+   10.27,
+   15.06,
+   "stat",
+   1
+  ],
+  [
+   15.06,
+   19.88,
+   "title",
+   1
+  ],
+  [
+   19.88,
+   23.47,
+   "none",
+   1
+  ],
+  [
+   23.47,
+   25.7,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "26537",
+   "q": "cinema auditorium screen",
+   "t0": 0.0,
+   "t1": 13.15
+  },
+  {
+   "p": "pixabay",
+   "id": "199208",
+   "q": "palm trees sunset",
+   "t0": 12.55,
+   "t1": 25.7
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T09:27:39Z",
+ "video": "EcMJ6WpHiy0",
+ "url": "https://youtube.com/shorts/EcMJ6WpHiy0",
+ "publish_at": "2026-10-24T14:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T14:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-156"
+}

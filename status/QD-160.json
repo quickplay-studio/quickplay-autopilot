@@ -1,0 +1,90 @@
+{
+ "id": "QD-160",
+ "board": "boards/queue/QD-160.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-24T09:17:42.501197+00:00",
+ "title": "Ballon d'Or: most wins in football history 🏆",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "lab-opening-1019"
+ },
+ "qa": {
+  "duration": 30.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 16.5
+ },
+ "timeline": [
+  [
+   0.06,
+   3.21,
+   "title",
+   0
+  ],
+  [
+   3.21,
+   8.51,
+   "none",
+   2
+  ],
+  [
+   8.51,
+   13.17,
+   "none",
+   2
+  ],
+  [
+   13.17,
+   18.82,
+   "none",
+   3
+  ],
+  [
+   18.82,
+   22.85,
+   "none",
+   1
+  ],
+  [
+   22.85,
+   27.55,
+   "bars",
+   1
+  ],
+  [
+   27.55,
+   30.68,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "147898",
+   "q": "stadium lights haze",
+   "t0": 0.0,
+   "t1": 30.68
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: waits in boards/reserve to fill slots the day's writer runs leave empty",
+  "check: meta.sources: one site only; name it in the narration for breaking news"
+ ],
+ "preview_release": "preview-QD-160",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-8bcaf646a344bfd67775"
+}

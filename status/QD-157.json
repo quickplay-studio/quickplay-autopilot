@@ -1,0 +1,94 @@
+{
+ "id": "QD-157",
+ "board": "boards/queue/QD-157.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T15:30:00Z",
+ "rendered": "2026-10-24T09:07:23.348182+00:00",
+ "title": "Kimi Antonelli: F1's youngest world champion? 🏎️",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9
+ },
+ "music": "death-duel",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "lewis",
+  "energy": "lab-energy-1019",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 31.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.9
+ },
+ "timeline": [
+  [
+   0.06,
+   3.56,
+   "title",
+   0
+  ],
+  [
+   3.56,
+   8.93,
+   "stat",
+   2
+  ],
+  [
+   8.93,
+   13.95,
+   "none",
+   2
+  ],
+  [
+   13.95,
+   18.51,
+   "none",
+   1
+  ],
+  [
+   18.51,
+   22.32,
+   "none",
+   1
+  ],
+  [
+   22.32,
+   27.48,
+   "cards",
+   1
+  ],
+  [
+   27.48,
+   31.68,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "369152",
+   "q": "racing circuit asphalt",
+   "t0": 0.0,
+   "t1": 31.68
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T09:27:41Z",
+ "video": "gIS6da6LTVE",
+ "url": "https://youtube.com/shorts/gIS6da6LTVE",
+ "publish_at": "2026-10-24T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-157"
+}

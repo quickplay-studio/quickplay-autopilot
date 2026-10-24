@@ -1,0 +1,93 @@
+{
+ "id": "QD-158",
+ "board": "boards/queue/QD-158.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T23:30:00Z",
+ "rendered": "2026-10-24T09:06:47.104951+00:00",
+ "title": "Free Steam games to grab before time runs out (Part 1) 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)",
+  "pixabay:5624 skipped: nearly black (brightness 0.04)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Computer keyboard gaming: no Commons image named 'Computer keyboard gaming')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6
+ },
+ "music": "death-duel",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "look_note": "voice G was less clear, used george",
+ "qa": {
+  "duration": 27.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.7
+ },
+ "timeline": [
+  [
+   0.06,
+   3.52,
+   "title",
+   0
+  ],
+  [
+   3.52,
+   8.6,
+   "cards",
+   1
+  ],
+  [
+   8.6,
+   13.69,
+   "cards",
+   1
+  ],
+  [
+   13.69,
+   18.75,
+   "date",
+   1
+  ],
+  [
+   18.75,
+   23.55,
+   "stat",
+   1
+  ],
+  [
+   23.55,
+   27.27,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "210358",
+   "q": "city skyline night",
+   "t0": 0.0,
+   "t1": 27.27
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T09:27:44Z",
+ "video": "ver1S5QH3yo",
+ "url": "https://youtube.com/shorts/ver1S5QH3yo",
+ "publish_at": "2026-10-24T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T23:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-158"
+}

@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 24 Oct | 7 public, 2 scheduled | 8 | 3 | ⏳ 7 of 15 so far, 2 more scheduled |
+| Sun 25 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 14 scheduled |
+| Sat 24 Oct | 8 public, 6 scheduled | 18 | 3 | ⏳ 8 of 15 so far, 6 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -79,7 +79,7 @@ scheduled · 30 s · music: dance-with-you · [script](../boards/done/QD-152.jso
 ![QD-152](QD-152.jpg)
 
 ### Sat 24 Oct 10:00 · Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮
-scheduled · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
+private · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
 
 ![QD-151](QD-151.jpg)
 
@@ -179,52 +179,52 @@ public · 83 views · 29 s · music: dance-with-you · [script](../boards/done/Q
 ![QD-132](QD-132.jpg)
 
 ### Fri 23 Oct 12:30 · Katie Boulter: British star reaches Japan Open 🎾
-public · 204 views · 25 s · music: paradigm · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
+public · 204 views · 25 s · music: paradigm · on Instagram · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
 
 ![QD-131](QD-131.jpg)
 
 ### Fri 23 Oct 12:00 · Formula 1: African Grand Prix deal signed 🏎️
-public · 3 views · 31 s · music: across-seas-and-lands · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
+public · 3 views · 31 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
 
 ![QD-130](QD-130.jpg)
 
 ### Fri 23 Oct 10:30 · Clayface: The dark new body horror film in cinemas 🎬
-public · 37 views · 25 s · music: house-on-the-hill · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
+public · 37 views · 25 s · music: house-on-the-hill · on Instagram · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
 
 ![QD-129](QD-129.jpg)
 
 ### Fri 23 Oct 10:00 · Jenna Ortega: stepping away from television 📺
-public · 1,047 views · 28 s · music: flight-is-aight · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
+public · 1,047 views · 28 s · music: flight-is-aight · on Instagram · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
 
 ![QD-128](QD-128.jpg)
 
 ### Fri 23 Oct 1:30 · Manchester United: The historic 1999 treble journey ⚽
-public · 49 views · 24 s · music: fire-in-the-sky · [script](../boards/done/QD-127.json) · [YouTube](https://youtube.com/shorts/Ck2cgaAUxiY)
+public · 49 views · 24 s · music: fire-in-the-sky · on Instagram · [script](../boards/done/QD-127.json) · [YouTube](https://youtube.com/shorts/Ck2cgaAUxiY)
 
 ![QD-127](QD-127.jpg)
 
 ### Fri 23 Oct 0:30 · Eden Sessions: Ben Howard headlines this summer 🎤
-public · 16 views · 22 s · music: paradise · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
+public · 16 views · 22 s · music: paradise · on Instagram · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
 
 ![QD-125](QD-125.jpg)
 
 ### Fri 23 Oct 0:00 · Bavuma scores majestic 179 against Australia 🏏
-public · 29 views · 24 s · music: stake-out · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
+public · 29 views · 24 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
 
 ![QD-124](QD-124.jpg)
 
 ### Thu 22 Oct 23:30 · Queen's legendary Live Aid performance 🎤
-public · 59 views · 28 s · music: duty-calls · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
+public · 59 views · 28 s · music: duty-calls · on Instagram · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
 
 ![QD-123](QD-123.jpg)
 
 ### Thu 22 Oct 23:00 · Leicester City's historic Premier League win 🏆
-public · 16 views · 36 s · music: defying-gravity · on Facebook · [script](../boards/done/QD-122.json) · [YouTube](https://youtube.com/shorts/LZAeF5Wnmu8)
+public · 16 views · 36 s · music: defying-gravity · on Instagram · on Facebook · [script](../boards/done/QD-122.json) · [YouTube](https://youtube.com/shorts/LZAeF5Wnmu8)
 
 ![QD-122](QD-122.jpg)
 
 ### Thu 22 Oct 19:00 · The secret history of the first iPhone 🍎
-public · 3 views · 24 s · music: ego-chall · on Facebook · [script](../boards/done/QD-121.json) · [YouTube](https://youtube.com/shorts/5O4upSca3ZA)
+public · 3 views · 24 s · music: ego-chall · on Instagram · on Facebook · [script](../boards/done/QD-121.json) · [YouTube](https://youtube.com/shorts/5O4upSca3ZA)
 
 ![QD-121](QD-121.jpg)
 

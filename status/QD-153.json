@@ -1,0 +1,94 @@
+{
+ "id": "QD-153",
+ "board": "boards/queue/QD-153.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T11:00:00Z",
+ "rendered": "2026-10-24T09:07:18.653503+00:00",
+ "title": "The Ballon d'Or is coming to London for the first time 🏆",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8
+ },
+ "music": "once-upon-a-time",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 37.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.7
+ },
+ "timeline": [
+  [
+   0.06,
+   2.95,
+   "none",
+   0
+  ],
+  [
+   2.95,
+   11.16,
+   "date",
+   2
+  ],
+  [
+   11.16,
+   17.35,
+   "none",
+   1
+  ],
+  [
+   17.35,
+   20.19,
+   "none",
+   1
+  ],
+  [
+   20.19,
+   26.22,
+   "title",
+   1
+  ],
+  [
+   26.22,
+   33.12,
+   "stat",
+   1
+  ],
+  [
+   33.12,
+   37.02,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "139358",
+   "q": "running track sunrise",
+   "t0": 0.0,
+   "t1": 37.02
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T09:27:33Z",
+ "video": "hJZL-czewhY",
+ "url": "https://youtube.com/shorts/hJZL-czewhY",
+ "publish_at": "2026-10-24T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-153"
+}

@@ -1,0 +1,104 @@
+{
+ "id": "QD-155",
+ "board": "boards/queue/QD-155.json",
+ "mode": "schedule",
+ "slot": "2026-10-24T13:00:00Z",
+ "rendered": "2026-10-24T09:06:53.692016+00:00",
+ "title": "Country legend John Anderson has died aged 71 🎸",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Apopka High School: no Commons image named 'Apopka High School')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7
+ },
+ "music": "mississippi-mover",
+ "social_music": "train-country-blues-rock-131593",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "cinematic",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 26.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 7.5
+ },
+ "timeline": [
+  [
+   0.06,
+   4.34,
+   "title",
+   0
+  ],
+  [
+   4.34,
+   8.23,
+   "none",
+   1
+  ],
+  [
+   8.23,
+   13.5,
+   "none",
+   1
+  ],
+  [
+   13.5,
+   17.32,
+   "stat",
+   1
+  ],
+  [
+   17.32,
+   19.81,
+   "none",
+   1
+  ],
+  [
+   19.81,
+   23.35,
+   "date",
+   1
+  ],
+  [
+   23.35,
+   26.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "180894",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 13.48
+  },
+  {
+   "p": "pixabay",
+   "id": "51199",
+   "q": "acoustic guitar performance",
+   "t0": 12.88,
+   "t1": 26.37
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T09:27:37Z",
+ "video": "yC_shy0URVM",
+ "url": "https://youtube.com/shorts/yC_shy0URVM",
+ "publish_at": "2026-10-24T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-155"
+}

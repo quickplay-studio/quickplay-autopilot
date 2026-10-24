@@ -152,7 +152,12 @@ def plan(breaking=False, hint=""):
     run = "breaking" if breaking else hint if hint in ("morning", "afternoon", "evening") else \
         "morning" if NOW.hour < 11 else "afternoon" if NOW.hour < 17 else "evening"
     h, m = map(int, str(CFG.get("slot_first", "07:30")).split(":"))
-    base = (uk - dt.timedelta(hours=h, minutes=m)).date()      # a posting day runs from slot_first to slot_first (all 24 hours)
+    # a posting day runs from slot_first to slot_first (all 24 hours), and what this run writes goes out lead_hours from now
+    # at the soonest (plan.py's LEAD), so the day is the one that hour falls in. Without the lead, the 06:47 UTC breaking
+    # check (started by GitHub at about 07:15, 07:15 UK in winter) counted towards yesterday, which is usually full, and
+    # wrote nothing from 25 October, when the clocks go back.
+    lead = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
+    base = (uk + lead - dt.timedelta(hours=h, minutes=m)).date()
     day = base + dt.timedelta(days=1 if run == "evening" else 0)
     made = 0
     for d in ("queue", "ready", "done", "failed"):

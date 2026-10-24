@@ -81,14 +81,16 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
-            ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji")]
+            ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
+            ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test")]
 # Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline
-NEVER_PAUSED = {"weekday", "late", "explore"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out
-TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji")     # recorded on the board by the writer (writer.py tests)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
+          "fx_energy", "fx_slot", "writer_arm")     # recorded on the board by the writer (writer.py tests); the last three as assigned (an intention-to-treat comparison)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 T90 = ((1, 6.314), (2, 2.920), (3, 2.353), (4, 2.132), (5, 2.015), (6, 1.943), (7, 1.895), (8, 1.860), (9, 1.833),
        (10, 1.812), (12, 1.782), (15, 1.753), (20, 1.725), (30, 1.697), (60, 1.671))

@@ -43,17 +43,22 @@ def default(cat=None):
 CAP, CAP_UNTIL = 0.7, 30    # no option above 70% of the latest looks until every option of its dimension has 30 measured Shorts
 
 
-def choose(sid, recent=(), stats=None, cat=None, explore=False):
+def choose(sid, recent=(), stats=None, cat=None, explore=False, energy=None):
     """One option per dimension for Short `sid`. `recent`: the looks of the latest Shorts (about 20), oldest first.
     `explore`: an exploration Short (writer.py): every dimension drawn evenly. Otherwise an option already on 70% or more
     of the recent looks sits out while its dimension still has an option under 30 measured Shorts (24 October: grade
-    "natural" was on 79% to 92% of Shorts and opening "image_first" on 83% to 89%, with no proven effect)."""
+    "natural" was on 79% to 92% of Shorts and opening "image_first" on 83% to 89%, with no proven effect).
+    `energy`: the board's camera-energy arm in the factorial round (test "fx_energy", writer.py), used as it is when it
+    is an active option, never for an exploration Short; the other dimensions are chosen as usual."""
     cat = cat or catalogue(); stats = load_stats() if stats is None else stats
     rng = random.Random(f"look:{sid}")
     look = {}
     recent = [r for r in recent if isinstance(r, dict)]
+    fixed = {"energy": energy} if energy and not explore and energy in active(cat, "energy") else {}
     for dim in cat["dimensions"]:
         opts = list(active(cat, dim))
+        if dim in fixed:
+            look[dim] = fixed[dim]; continue
         if explore or rng.random() < EXPLORE:
             look[dim] = rng.choice(opts); continue
         seen = [r.get(dim) for r in recent[-20:] if r.get(dim)]
@@ -75,7 +80,7 @@ def choose(sid, recent=(), stats=None, cat=None, explore=False):
     if len(recent) >= 2 and recent[-1].get("captions") == recent[-2].get("captions") == look["captions"] and caps:
         look["captions"] = rng.choice(caps)
     if recent and all(recent[-1].get(d) == look[d] for d in look):
-        dims = [d for d in look if len(active(cat, d)) > 1]
+        dims = [d for d in look if len(active(cat, d)) > 1 and d not in fixed]
         if dims:
             d = rng.choice(dims); look[d] = rng.choice([k for k in active(cat, d) if k != look[d]])
     return look

@@ -383,6 +383,56 @@ def writing_order():
     return [m for m in keyed if quality(m) >= 4] + flash + gemma + [m for m in keyed if quality(m) < 4] + lite + rest
 
 
+# The writer-model test (24 October, data report item 7): groq gpt-oss-120b (2.61x day-adjusted, n 7) against Gemini Flash
+# (41% of a day's boards on 2 measured Shorts), randomised by board number for the writing step only, so the comparison
+# is fair (each board's arm decided before anything about it is known). config "writer_test": {start, until, share,
+# arms}; a board outside the share, or written while either arm has no model left this run, is not in the test.
+WRITER_ARMS = {"gpt-oss-120b": lambda l: "gpt-oss-120b" in l.lower(),
+               "gemini flash": lambda l: l.startswith("gemini:") and "flash" in l.lower() and "lite" not in l.lower()}
+
+
+def writer_arm_of(label):
+    """The writer-test arm a model label (as factpack.gemini returns it, or writer.writer_name) belongs to, or "other"."""
+    lab = str(label or "")
+    lab = lab if ":" in lab else f"gemini:{lab}"
+    return next((a for a, hit in WRITER_ARMS.items() if hit(lab)), "other")
+
+
+def writer_test_label(arm, order=None):
+    """The model that serves one arm now: the first label of the writing order in that arm, not spent or slowed this run
+    (groq's gpt-oss-120b first, the one the data measured), or None."""
+    spent, slow = STATE.get("spent_models") or set(), STATE.get("slow_models") or {}
+    cap = int(CFG.get("writing_timeouts_before_skip", 1))
+    try: order = list(order if order is not None else writing_order())
+    except Exception: return None
+    ok = [l for l in order if WRITER_ARMS[arm](l) and l not in spent and l.split(":", 1)[-1] not in spent
+          and slow.get(l, 0) < cap and slow.get(l.split(":", 1)[-1], 0) < cap]
+    ok.sort(key=lambda l: not l.startswith("groq:"))
+    return ok[0] if ok else None
+
+
+def writer_test(k, today=None, order=None):
+    """(arm, label) for board number k: arm "" (not in the test) or one of WRITER_ARMS, 50/50 by k with its own seed
+    (independent of the factorial round, the replies and the title tests); label the model that serves it now, None when
+    the board is outside the test. Only while both arms have a model this run, so neither arm is favoured by availability."""
+    t = CFG.get("writer_test") or {}
+    arms = [a for a in t.get("arms") or [] if a in WRITER_ARMS]
+    if len(arms) != 2: return "", None
+    if today is None:
+        from zoneinfo import ZoneInfo
+        today = dt.datetime.now(ZoneInfo("Europe/London")).date()
+    try:
+        if today < dt.date.fromisoformat(str(t.get("start"))) or (t.get("until") and today > dt.date.fromisoformat(str(t["until"]))): return "", None
+    except ValueError: return "", None
+    import random
+    rng = random.Random(f"writer-test:{k}")
+    if rng.random() >= float(t.get("share", 0.6)): return "", None
+    labels = {a: writer_test_label(a, order) for a in arms}
+    if not all(labels.values()): return "", None
+    arm = arms[0] if rng.random() < 0.5 else arms[1]
+    return arm, labels[arm]
+
+
 def provider_models(name):
     """The models of one keyed provider to try, in order: configured ones, else the best writers it lists today (quality,
     its preferences breaking ties; OpenRouter's ":free" ones only)."""

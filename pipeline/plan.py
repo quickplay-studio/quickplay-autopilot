@@ -107,6 +107,8 @@ def schedule_state(now, yt=None):
 
 BANDS = ("00-06", "06-12", "12-18", "18-24")         # UK hours: 00-06 is the American evening, 06-12 Asia and the US night
 FRESH = {"news", "breaking", "follow-up", "remake"}    # news can't wait long for a better hour
+ARM_BANDS = {"06:00 to 12:00": "06-12", "12:00 to 18:00": "12-18"}     # the factorial round's posting-quarter arms (writer.py "fx_slot")
+BAND_ARMS = {"00-06": "00:00 to 06:00", "06-12": "06:00 to 12:00", "12-18": "12:00 to 18:00", "18-24": "18:00 to 24:00"}
 
 
 def band(t):
@@ -144,12 +146,43 @@ def slot_picker(now, taken):
                 if t >= now + LEAD and t not in taken: yield t
             day += dt.timedelta(days=1)
 
-    def next_slot(created=None, category=None, kind=None, sid="", explore=False):
+    def arm_slot(created, kind, arm, first, window):
+        """The first free time in the arm's quarter of the UK day: a slot of the day's grid, else (the grid's slots in
+        that quarter taken) a half hour in it at least 45 minutes from any taken slot. Searched up to the end of the
+        board's own day, or first + window if later (breaking news and follow-ups: first + window only, they can't wait),
+        so a test arm never makes a Short late. None when the quarter can't be reached."""
+        want = ARM_BANDS[arm]
+        end = first + window
+        if kind not in ("breaking", "follow-up"):
+            try:
+                d = dt.date.fromisoformat(str(created)[:10])
+                day_end = dt.datetime(d.year, d.month, d.day, tzinfo=UK) + dt.timedelta(days=1)
+                end = max(end, day_end.astimezone(dt.timezone.utc) - dt.timedelta(minutes=1))
+            except (TypeError, ValueError): pass
+        for t in free(created):
+            if t > end: break
+            if band(t) == want: return t
+        gap, soonest = dt.timedelta(minutes=45), max(first, now + LEAD)
+        day = soonest.astimezone(UK).date()
+        h0 = int(want[:2])
+        while True:
+            start = dt.datetime(day.year, day.month, day.day, h0, tzinfo=UK)
+            for i in range(12):                       # every half hour of the 6-hour quarter
+                t = (start + dt.timedelta(minutes=30 * i)).astimezone(dt.timezone.utc)
+                if t > end: return None
+                if t >= soonest and all(abs(t - x) >= gap for x in taken): return t
+            day += dt.timedelta(days=1)
+            if dt.datetime(day.year, day.month, day.day, tzinfo=UK).astimezone(dt.timezone.utc) > end: return None
+
+    def next_slot(created=None, category=None, kind=None, sid="", explore=False, arm=None):
         """The first free slot at least lead_hours away, on or after the board's "created" day (UK); when the data shows
         the board's category does clearly better in another quarter of the day (band_scores, at least 15% better), the
         first free slot in that quarter within the next 18 hours (6 for news). 1 board in 5 keeps the first slot so
         every hour stays measured (Charlie, 23 October: post music when the Americans watch). An exploration Short
-        (writer.py, test "explore") takes a quarter of the day drawn evenly from those within the window instead."""
+        (writer.py, test "explore") takes a quarter of the day drawn evenly from those within the window instead.
+        `arm`: the board's posting-quarter arm in the factorial round (test "fx_slot", 24 October): it replaces the
+        category's best quarter (the same 1 board in 5 still keeps the first slot), as long as the quarter is reachable
+        on the board's own day; otherwise the usual pick. analytics records the quarter actually used (fx_slot_used)."""
         import random
         first = next(free(created), None)
         if first is None: raise RuntimeError("no free slot in the next 60 days")
@@ -161,12 +194,17 @@ def slot_picker(now, taken):
                 if t > first + window: break
                 out.append(t)
             return out
+        keep_first = random.Random(f"slot:{sid}").random() < 0.2
         if explore:
             cands = within()
             bands = sorted({band(t) for t in cands})
             b = random.Random(f"explore-slot:{sid}").choice(bands)
             pick = next(t for t in cands if band(t) == b)
-        elif sc and random.Random(f"slot:{sid}").random() >= 0.2:
+        elif arm in ARM_BANDS and not keep_first and band(first) != ARM_BANDS[arm]:
+            pick = arm_slot(created, kind, arm, first, window) or first
+        elif arm in ARM_BANDS:
+            pass                                      # the first slot already sits in the arm's quarter, or 1 in 5 keeps it
+        elif sc and not keep_first:
             cands = within()
             best = max(cands, key=lambda t: (sc[band(t)], -t.timestamp()))
             if sc[band(best)] >= 1.15 * sc[band(first)]: pick = best
@@ -237,6 +275,7 @@ def main():
             if uploads >= capacity: continue
             uploads += 1; counted = True
         explore = (b.get("test") or {}).get("explore") == "yes"      # an exploration Short (writer.py): look and hour drawn evenly
+        fx = {k: v for k, v in (b.get("test") or {}).items() if k in ("fx_energy", "fx_slot") and not explore}    # the round's arms
         slot, slot_t = "", None
         if mode == "schedule" and not hold:
             t = None
@@ -244,7 +283,7 @@ def main():
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=explore)
+            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=explore, arm=fx.get("fx_slot"))
             slot = slot_t.isoformat().replace("+00:00", "Z")
         # Charlie (24 October): a news Short that would go public after its day needs the data to say its story is still
         # alive, or it expires (freshness.py: boards/expired, analytics/late_uploads.csv)
@@ -256,9 +295,13 @@ def main():
             jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": "", "mode": "reject", "expired": True,
                          "errors": late["evidence"][:900], "late": late})
             continue
-        look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats, explore=explore)
+        look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats, explore=explore,
+                                                                               energy=fx.get("fx_energy"))
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
+        if fx:              # the round's arms against what this run gave them (analytics compares the arms as assigned)
+            job["fx"] = {k: {"assigned": v, "used": (look.get("energy") if k == "fx_energy" else BAND_ARMS.get(band(slot_t)) if slot_t else "")}
+                         for k, v in fx.items()}
         if late: job["late"] = late                 # late but alive: the evidence lands in status/<id>.json
         if BG.wanted(b, CFG):
             BG.NOTES.clear()

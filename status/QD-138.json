@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-23T15:00:00Z",
  "rendered": "2026-10-23T09:47:45.039412+00:00",
- "title": "Top 10 highest-grossing superhero films ever 🎬",
+ "title": "The biggest superhero box office hits in history 🍿",
  "background_notes": [
   "Pixabay 'neon lights glowing background': 40 results, none at 720p or better",
   "picked pixabay 1 (+1 spares)"
@@ -86,7 +86,14 @@
  "social_release": "social-QD-138",
  "engage": {
   "comment": "UgyVSCMYoATIcLVyGdJ4AaABAg",
-  "playlist": "Quickplay Daily: Film"
+  "playlist": "Quickplay Daily: Film",
+  "title": {
+   "swapped_from": "Top 10 highest-grossing superhero films ever 🎬",
+   "to": "The biggest superhero box office hits in history 🍿",
+   "at": "2026-10-24T15:09+00:00",
+   "views_an_hour": 0.3,
+   "typical": 0.8
+  }
  },
  "instagram": {
   "media": "17932544394163597",

@@ -85,7 +85,8 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    tonight). That sentence is now read again as two short sentences and joined, which is exactly how a person would
    fix it. Tried live on QD-147 twice: the first try found the bug in my own check (it re-measured the joined audio
    instead of trusting the two halves), the second put the Short on the schedule, "beat 0 read as two sentences", no
-   weak beats. Worth about one Short a day.
+   weak beats. Worth about one Short a day. The other four Shorts lost the same way (QD-056, QD-076, QD-086, QD-126)
+   went back in the queue at 02:57 to be saved too, so you may wake up to four extra Shorts.
 
 15. **A slow package mirror no longer eats a job's time.** GitHub's Ubuntu mirror crawled tonight: the clips job spent
    37 minutes installing ffmpeg, a render job over 15. Every workflow that installs system packages now retries with

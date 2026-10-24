@@ -54,6 +54,12 @@
      "voice": "F2",
      "wps": 3.3
     },
+    "george_turbo": {
+     "desc": "British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace",
+     "voice": "T2",
+     "wps": 3.0,
+     "born": "2026-10-24"
+    },
     "emma": {
      "desc": "British female",
      "voice": "G",

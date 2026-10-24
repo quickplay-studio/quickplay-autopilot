@@ -169,6 +169,17 @@ def fill_defaults(sb):
     (sb.setdefault("music", {})).setdefault("gain_db", -15)
     return sb
 
+def record_opening(status, mp4, look):
+    """The opening-frame scorecard (pipeline/opening_frame.py) of the finished video into status qa.opening: sharpness, contrast,
+    the largest face's share of the frame, the share covered by text, and how legible the captions are, over the first 1.5
+    seconds. A note for analytics (shorts.csv open_*), never a check: nothing here can fail or hold a render."""
+    try:
+        import opening_frame as OF
+        status["qa"]["opening"] = OF.scorecard(mp4, look["render"].get("captions", ""), look["render"].get("cap"))
+        o = status["qa"]["opening"]
+        print("opening scorecard:", {k: o.get(k) for k in ("sharpness", "contrast", "face_area", "text_area", "caption_contrast", "ocr", "error")}, flush=True)
+    except Exception as e: print("opening scorecard skipped:", str(e)[:160], flush=True)
+
 def contact_sheet(mp4, timeline, dest, big=False):
     """One frame from the middle of every shot. A test board (big) gets larger tiles, then a second block with a frame
     every 3 seconds, so the video behind the shots can be judged as it changes."""
@@ -255,12 +266,16 @@ def main():
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
         sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
-        tried = []      # an unclear read in a new voice is tried again in the house voice, then the house voice 15% slower
+        tried, crashed = [], ""      # an unclear read in a new voice is tried again in the house voice, then the house voice 15% slower
         wps0 = float(look["voice"]["wps"])  # (unclear Shorts were lost outright before 23 October); the clearest read wins
         for k, (v, wps) in enumerate([(voice, wps0)] + ([("F2", wps0)] if voice != "F2" else []) + [("F2", round(wps0 * 0.85, 2))]):
             vdir = f"voice/{sid}-{v}-{k}"
             sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
-            sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(wps))
+            try: sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(wps))
+            except subprocess.CalledProcessError as e:
+                if v == "F2": raise          # the house voice failing is a real failure, as it always was
+                crashed = f"voice {voice} could not run (exit {e.returncode})"       # a voice that cannot start (Turbo's model files, 24 October) is read in the house voice instead
+                print(crashed, flush=True); continue
             man = json.loads((P / vdir / "cb_manifest.json").read_text())
             low = {b["beat"]: b["recall"] for b in man["beats"] if b["recall"] < 0.4 and len(sb["beats"][b["beat"]]["say"].split()) >= 4}
             weak = sorted(low)
@@ -283,13 +298,14 @@ def main():
         if weak and len(weak) == 1 and weak[0] != 0 and -worst >= 0.25:     # one middle beat, mostly heard: the captions carry it
             status["qa_note"] = f"narration a little unclear in beat {weak[0]} (captions carry it)"; weak = []    # a note, not a flag: flags hold a Short for approval
         if v != voice:
-            status["look"]["voice"] = "george"; status["look_note"] = f"voice {voice} was less clear, used george"
+            status["look"]["voice"] = "george"; status["look_note"] = (crashed or f"voice {voice} was less clear") + ", used george"
         sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
         sh(PY, "render3.py", resolved, P / "out")
         mp4 = P / "out" / f"{sid}.mp4"
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp4)],
                                    capture_output=True, text=True, check=True).stdout)
         status["qa"] = {"duration": round(dur, 1), "wps": man["wps"], "weak_beats": weak, "size_mb": round(mp4.stat().st_size / 1e6, 1)}
+        record_opening(status, mp4, look)      # the first 1.5 seconds read back as numbers (qa.opening); never a reason to fail
         try:       # when each beat starts and what's on screen, so analytics can map where viewers leave
             tl = json.loads((P / "out" / f"{sid}.timeline.json").read_text())
             status["timeline"] = [[round(b["start"], 2), round(b["end"], 2), (b.get("visual") or {}).get("type", "none"),

@@ -3,7 +3,7 @@
  "board": "boards/queue/QD-147.json",
  "mode": "schedule",
  "slot": "2026-10-24T03:00:00Z",
- "rendered": "2026-10-24T00:52:13.479868+00:00",
+ "rendered": "2026-10-24T01:27:12.203468+00:00",
  "title": "Jorja Smith sings at the Amy Winehouse tribute 🎤",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
@@ -13,22 +13,21 @@
   "real_shots": 8,
   "planned_real": 8
  },
- "music": "silk-sleeve",
- "social_music": "lofi-relax-570489",
+ "music": "mas-cafe",
+ "social_music": "chillhop-jazz-coffee-shop-552792",
  "look": {
-  "captions": "lab-captions-1019",
+  "captions": "minimal",
   "voice": "isabella",
   "energy": "steady",
   "grade": "natural",
   "opening": "image_first"
  },
+ "voice_note": "beat 0 read as two sentences",
  "qa": {
   "duration": 29.0,
   "wps": 3.0,
-  "weak_beats": [
-   0
-  ],
-  "size_mb": 10.6
+  "weak_beats": [],
+  "size_mb": 10.7
  },
  "timeline": [
   [
@@ -71,19 +70,28 @@
  "background": [
   {
    "p": "pixabay",
-   "id": "38392",
+   "id": "38387",
    "q": "vinyl record spinning",
    "t0": 0.0,
    "t1": 14.79
   },
   {
    "p": "pixabay",
-   "id": "8675",
+   "id": "3360",
    "q": "dj mixer lights",
    "t0": 14.19,
    "t1": 28.97
   }
  ],
- "state": "failed",
- "error": "RuntimeError: checks failed: unclear narration in beats [0]"
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T01:48:50Z",
+ "video": "OXaGNn5zGH8",
+ "url": "https://youtube.com/shorts/OXaGNn5zGH8",
+ "publish_at": "2026-10-24T03:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-24T03:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-147"
 }

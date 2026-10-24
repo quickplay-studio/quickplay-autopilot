@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 01:55): 9 of 1,000 subscribers · 6,729 of 10 million Shorts views in 90 days · 4,365 views in the last 24 hours (about 111,036 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 02:46): 9 of 1,000 subscribers · 6,871 of 10 million Shorts views in 90 days · 4,740 views in the last 24 hours (about 111,035 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 0:10 (UK): 1 scheduled, 127 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 24 Oct | 1 public, 3 scheduled | 0 | 2 | ⏳ 1 of 15 so far, 3 more scheduled |
+| Sat 24 Oct | 2 public, 3 scheduled | 0 | 3 | ⏳ 2 of 15 so far, 3 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -59,7 +59,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-076** How Barbara Palvin was discovered at age 13 ✨: failed. RuntimeError: checks failed: unclear narration in beats [4]
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
-- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 

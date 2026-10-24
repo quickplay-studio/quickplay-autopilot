@@ -44,7 +44,16 @@ def _ids_elsewhere(path):
     return out
 
 def check(b, path=None):
-    """Returns (errors, warnings) for one board dict."""
+    """Returns (errors, warnings) for one board dict. Never raises: a board the checks cannot even read (a beat that is a
+    string, a title that is a number) is an error like any other. Until 24 October such a board raised here, and since
+    plan.py checks every queued board before the render matrix, one bad board stopped every Short from rendering."""
+    if not isinstance(b, dict): return ["not a board: a JSON object is expected"], []
+    try: return _check(b, path)
+    except Exception as ex:
+        return [f"malformed board ({type(ex).__name__}: {str(ex)[:120]}): every field must have the shape the example board has"], []
+
+
+def _check(b, path=None):
     e, w = [], []
     sid = b.get("id", "")
     if not re.fullmatch(r"QD-\d{3,}|TEST-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")

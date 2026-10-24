@@ -167,3 +167,34 @@ _, single = F.verify([{"claim": "Minecraft is number one with 300,000,000 copies
                      {1: F.norm("Intro.\n\n" + "\n".join(rows))}, {1: "wikipedia"})
 assert len(single) == 1, single
 print("wiki tables ok")
+
+# GitHub Models (24 October): free with the workflow's own token; its catalog lists the models, the best writers come first,
+# a daily limit ("per 86400s") marks the model spent, and its requests ask for at most 4,000 tokens back
+import factpack as F2
+F2.STATE.clear(); os.environ["GH_MODELS_TOKEN"] = "t"
+F2.CFG = dict(F2.CFG, providers={})
+class _R:
+    def __init__(self, code, data, headers=None): self.status_code, self.data, self.ok, self.headers, self.text = code, data, code == 200, headers or {}, json.dumps(data)
+    def json(self): return self.data
+SEEN = []
+def _get(url, **kw):
+    SEEN.append(url)
+    return _R(200, [{"id": "openai/gpt-4.1", "supported_output_modalities": ["text"]}, {"id": "openai/gpt-4o-mini", "supported_output_modalities": ["text"]},
+                    {"id": "openai/text-embedding-3-small", "supported_output_modalities": ["embeddings"]}, {"id": "microsoft/Phi-4", "supported_output_modalities": ["text"]}])
+F2.requests = None
+import requests as _rq
+_old_get, _old_post = _rq.get, _rq.post
+_rq.get = _get
+got = F2.provider_models("github")
+assert SEEN[-1] == F2.GITHUB_CATALOG and got[0] == "github:openai/gpt-4.1" and "github:openai/text-embedding-3-small" not in got, got
+BODIES = []
+def _post(url, json=None, **kw):
+    BODIES.append((url, json))
+    return _R(429, {"error": {"message": "Rate limit of 50 per 86400s exceeded for UserByModelByDay."}})
+_rq.post = _post
+ans, why = F2.openai_chat("github:openai/gpt-4.1", "https://models.github.ai/inference", "t", "openai/gpt-4.1", "x", 30, 0.2)
+assert ans is None and "github:openai/gpt-4.1" in F2.STATE["spent_models"] and BODIES[0][1]["max_tokens"] == 4000, (why, BODIES[0][1].get("max_tokens"))
+assert BODIES[0][0] == "https://models.github.ai/inference/chat/completions"
+_rq.get, _rq.post = _old_get, _old_post
+os.environ.pop("GH_MODELS_TOKEN", None)
+print("github models ok")

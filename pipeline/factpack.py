@@ -315,7 +315,13 @@ PROVIDERS = {
                  ["gpt-oss-120b", "qwen-3-235b-a22b-instruct-2507", "llama-3.3-70b"]),
     "mistral": ("MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-large-latest", "mistral-medium-latest", "mistral-small-latest"]),
     "openrouter": ("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1", []),       # its ":free" models, biggest context first
+    # GitHub Models (24 October): free with the workflow's own token (permissions: models: read, GH_MODELS_TOKEN), no key
+    # or account; the free tier takes about 8,000 tokens a request (a bigger prompt moves on to the next model) and some
+    # dozens of requests a day per model, so it widens the chain rather than carrying it
+    "github": ("GH_MODELS_TOKEN", "https://models.github.ai/inference",
+               ["openai/gpt-4.1", "openai/gpt-4o", "deepseek/DeepSeek-V3-0324", "meta/Llama-4-Maverick-17B-128E-Instruct-FP8"]),
 }
+GITHUB_CATALOG = "https://models.github.ai/catalog/models"
 NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound", re.I)
 JSON_ONLY = "Reply with one JSON value only, no other text."
 FACT_SHAPE = 'Reply as JSON: {"what_is_new": "...", "hooks": ["..."], "facts": [{"claim": "...", "evidence": [{"source": 1, "quote": "..."}]}]}'
@@ -324,8 +330,9 @@ LOCAL_PORT = 8089
 
 # How well a model writes, roughly, from its name: big general chat models (5) before mid-size (4), unknown (3), small,
 # coder or vision models (1 or 2). Used for the writing order only; the data (analytics/models.json) decides after that.
-TOP = re.compile(r"kimi-k2|gpt-oss-120b|deepseek-(?:r1|v3|chat)|qwen-?3-235b|qwen3-max|maverick|mistral-large|405b|glm-4\.[5-9](?!-air)|hermes-?4", re.I)
-MID = re.compile(r"70b|72b|qwen3-next|mistral-medium|gemini-|llama-3\.3|command-a", re.I)
+TOP = re.compile(r"kimi-k2|gpt-oss-120b|deepseek-(?:r1|v3|chat)|qwen-?3-235b|qwen3-max|maverick|mistral-large|405b|glm-4\.[5-9](?!-air)|hermes-?4"
+                 r"|gpt-5(?!-mini|-nano)|gpt-4\.1(?!-mini|-nano)|gpt-4o(?!-mini)|grok-[34](?!-mini)", re.I)
+MID = re.compile(r"70b|72b|qwen3-next|mistral-medium|gemini-|llama-3\.3|command-a|gpt-5-mini|gpt-4\.1-mini|gpt-4o-mini", re.I)
 SMALL = re.compile(r"vision|\bvl\b|-vl|mini|nano|tiny|small|scout|coder|math|\b(?:[0-9]|1[0-9])b\b|-(?:[0-9]|1[0-9])b", re.I)
 
 
@@ -371,9 +378,13 @@ def provider_models(name):
             import requests
             ids, meta = [], {}
             try:
-                r = requests.get(base + "/models", headers={"Authorization": f"Bearer {key}"}, timeout=30)
-                for m in (r.json().get("data") or []) if r.ok else []:
-                    if m.get("id") and not NOT_TEXT.search(m["id"]): ids.append(m["id"]); meta[m["id"]] = m
+                url = GITHUB_CATALOG if name == "github" else base + "/models"
+                r = requests.get(url, headers={"Authorization": f"Bearer {key}", "Accept": "application/json"}, timeout=30)
+                data = r.json() if r.ok else []
+                for m in (data if isinstance(data, list) else data.get("data") or []):
+                    if not isinstance(m, dict) or not m.get("id") or NOT_TEXT.search(m["id"]): continue
+                    if name == "github" and "text" not in (m.get("supported_output_modalities") or ["text"]): continue
+                    ids.append(m["id"]); meta[m["id"]] = m
             except Exception: pass
             if name == "openrouter":
                 free = [i for i in ids if i.endswith(":free")]
@@ -438,7 +449,7 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
     nojson = STATE.setdefault("no_json_mode", set())
     why = f"{label}: no answer"
     for attempt in range(3):
-        body = {"model": model, "temperature": temperature, "max_tokens": 6000,
+        body = {"model": model, "temperature": temperature, "max_tokens": 4000 if label.startswith("github:") else 6000,   # GitHub's free tier: 4,000 out
                 "messages": [{"role": "system", "content": JSON_ONLY}, {"role": "user", "content": prompt}]}
         if label not in nojson: body["response_format"] = {"type": "json_object"}
         try:
@@ -450,7 +461,7 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
         if r.status_code == 429:
             ra = r.headers.get("retry-after") or ""
             ra = float(ra) if re.fullmatch(r"\d+(\.\d+)?", ra) else None
-            per_day = bool(re.search(r"per[ _-]day|daily|\brpd\b|\btpd\b|quota|credits", t)) or (ra or 0) > 120
+            per_day = bool(re.search(r"per[ _-]day|daily|\brpd\b|\btpd\b|quota|credits|86400", t)) or (ra or 0) > 120
             if per_day or attempt == 2:
                 spent.add(label); notes[label] = "daily limit" if per_day else "per-minute limit, 3 tries"
                 return None, f"{label}: free quota used up"

@@ -23,6 +23,7 @@ on:
 permissions:
   contents: write
   issues: write      # the expired-login issue (alerts.py)
+  models: read       # GitHub Models: free model calls with the workflow's own token, no key or account
 
 concurrency:
   group: clips
@@ -78,6 +79,7 @@ jobs:
           CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GH_MODELS_TOKEN: ${{ github.token }}
           IG_CLIPS_TOKEN: ${{ secrets.IG_CLIPS_TOKEN }}
           IG_CLIPS_USER_ID: ${{ secrets.IG_CLIPS_USER_ID }}
           FB_CLIPS_PAGE_TOKEN: ${{ secrets.FB_CLIPS_PAGE_TOKEN }}

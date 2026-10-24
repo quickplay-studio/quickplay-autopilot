@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 24 Oct, 12:36): 11 of 1,000 subscribers · 7,927 of 10 million Shorts views in 90 days · 6,713 views in the last 24 hours (about 111,023 a day needed, 100 days left) · Instagram 0 and Facebook 0 followers.
+**Progress** (Sat 24 Oct, 13:43): 11 of 1,000 subscribers · 7,967 of 10 million Shorts views in 90 days · 6,697 views in the last 24 hours (about 111,023 a day needed, 100 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 12:10 (UK): 6 scheduled, 137 public, 29 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 25 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 14 scheduled |
-| Sat 24 Oct | 10 public, 4 scheduled | 22 | 3 | ⏳ 10 of 15 so far, 4 more scheduled |
+| Sat 24 Oct | 11 public, 3 scheduled | 25 | 3 | ⏳ 11 of 15 so far, 3 more scheduled |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 | Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
@@ -99,7 +99,7 @@ scheduled · 26 s · music: mississippi-mover · [script](../boards/done/QD-155.
 ![QD-155](QD-155.jpg)
 
 ### Sat 24 Oct 13:00 · Volkanovski vs Evloev: UFC 333 record on the line 🥊
-scheduled · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
+private · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
 
 ![QD-154](QD-154.jpg)
 
@@ -179,17 +179,17 @@ public · 19 views · 43 s · music: dead-wrong · [script](../boards/done/QD-13
 ![QD-139](QD-139.jpg)
 
 ### Fri 23 Oct 16:00 · Top 10 highest-grossing superhero films ever 🎬
-public · 8 views · 35 s · music: across-seas-and-lands · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
+public · 8 views · 35 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
 
 ![QD-138](QD-138.jpg)
 
 ### Fri 23 Oct 15:30 · Top 10 most-streamed songs on Spotify of all time 🎶
-public · 55 views · 25 s · music: dance-with-you · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
+public · 55 views · 25 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
 
 ![QD-137](QD-137.jpg)
 
 ### Fri 23 Oct 15:00 · Roblox The Hollow: Nine days of nightmare maze monsters 🎃
-public · 19 views · 29 s · music: city-of-the-wolf · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
+public · 19 views · 29 s · music: city-of-the-wolf · on Instagram · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
 
 ![QD-136](QD-136.jpg)
 

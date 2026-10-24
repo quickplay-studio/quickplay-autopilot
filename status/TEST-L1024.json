@@ -1,0 +1,89 @@
+{
+ "id": "TEST-L1024",
+ "board": "boards/queue/TEST-L1024.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-24T19:09:29.534539+00:00",
+ "title": "Free Steam games to grab before time runs out 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)",
+  "pixabay:5624 skipped: nearly black (brightness 0.04)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Computer keyboard gaming: no Commons image named 'Computer keyboard gaming')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 11
+ },
+ "music": "glitcher",
+ "social_music": "sport-phonk-571905",
+ "look": {
+  "style": "minimal",
+  "captions": "low",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 27.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.5
+ },
+ "timeline": [
+  [
+   0.06,
+   3.62,
+   "none",
+   2
+  ],
+  [
+   3.62,
+   9.15,
+   "none",
+   4
+  ],
+  [
+   9.15,
+   13.58,
+   "none",
+   3
+  ],
+  [
+   13.58,
+   18.6,
+   "none",
+   3
+  ],
+  [
+   18.6,
+   23.27,
+   "none",
+   3
+  ],
+  [
+   23.27,
+   27.25,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "209890",
+   "q": "city skyline night",
+   "t0": 0.0,
+   "t1": 27.25
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-TEST-L1024",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc"
+}

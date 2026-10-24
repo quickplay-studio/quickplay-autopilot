@@ -4,7 +4,7 @@
 
 YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 24 Oct 18:00).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 24 Oct 20:04).
 
 ## Posts by day
 
@@ -70,6 +70,12 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![QD-144](QD-144.jpg)
+
+### TEST-L1024 · Free Steam games to grab before time runs out 🎮
+awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc)
+- dry run: always waits for approval, never uploaded
+
+![TEST-L1024](TEST-L1024.jpg)
 
 ## On the channel (latest first)
 

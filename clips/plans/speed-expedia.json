@@ -275,7 +275,9 @@
    "url": "https://youtube.com/shorts/egEhnVWiAhw",
    "uploaded": "2026-10-23T17:28+00:00",
    "publish_at": "2026-10-24T18:00:00Z",
-   "mode": "batch"
+   "mode": "batch",
+   "question": "Which of these top travel destinations is your favourite?",
+   "comment": "UgxEGxsGi5LmQdSXjpR4AaABAg"
   },
   {
    "id": "speed-expedia-12",
@@ -426,7 +428,8 @@
    "uploaded": "2026-10-23T22:14+00:00",
    "publish_at": "2026-10-24T18:00:00Z",
    "mode": "batch",
-   "promoted": "2026-10-24T09:25+00:00"
+   "promoted": "2026-10-24T09:25+00:00",
+   "comment": "UgzBGUlXWvCgBjQbEDN4AaABAg"
   },
   {
    "id": "speed-expedia-18",
@@ -461,7 +464,8 @@
    "uploaded": "2026-10-23T22:14+00:00",
    "publish_at": "2026-10-24T18:00:00Z",
    "mode": "batch",
-   "promoted": "2026-10-24T09:25+00:00"
+   "promoted": "2026-10-24T09:25+00:00",
+   "comment": "Ugz9EcWHNGuvzNCD9yB4AaABAg"
   }
  ]
 }

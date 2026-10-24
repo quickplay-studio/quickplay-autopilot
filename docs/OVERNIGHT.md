@@ -85,6 +85,12 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    tonight). That sentence is now read again as two short sentences and joined, which is exactly how a person would
    fix it. Worth about one Short a day.
 
+15. **A slow package mirror no longer eats a job's time.** GitHub's Ubuntu mirror crawled tonight: the clips job spent
+   37 minutes installing ffmpeg, a render job over 15. Every workflow that installs system packages now retries with
+   time limits and carries on from the runner's own package lists rather than stalling.
+16. **The day's target on the dashboard is the 15 we chose, not the 40 ceiling.** The evening alert had been reporting
+   "19 of 40" every night; it compares against the real plan now.
+
 ## What needs Charlie
 
 1. **Submit last night's Vyro clips by hand (5 minutes).** The Mac Chrome job failed at 19:07 and 22:07 with "usage

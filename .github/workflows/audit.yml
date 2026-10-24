@@ -3,19 +3,31 @@ name: audit
 # studio Google account's own Quickplay channels, pages and profiles; every secret a workflow reads must be on the
 # allowlist (config.json "accounts"); the saved campaign-site sign-ins may hold cookies for their own sites only.
 # A mismatch opens the issue "Security: a sign-in outside the studio account" and every posting workflow stops at its
-# first step (identity.py gate) until the next clean audit. Runs every 6 hours, on Run workflow, or on a push of
-# requests/audit.txt.
+# first step (identity.py gate) until the next clean audit.
+# Key health (pipeline/keys.py, 24 October): straight after the audit, one row per key and sign-in in status/keys.json
+# (ok, expiring, failing or missing, with the day it ends and the steps to fix it; the hub's Accounts tab shows it). It
+# reuses the audit's own calls and makes one cheap call per API key. A key that fails or ends within 14 days opens one
+# needs-charlie issue with the exact steps, closed again once it works.
+# The live action list (pipeline/actions.py): runs each check on status/actions.json (a key pasted, a setting changed,
+# the Mac's Vyro run) and marks the item done by itself; each item without a check has one issue, and closing it in the
+# GitHub app marks the item done. Hence the issues trigger: closing or reopening a needs-charlie issue runs this within a
+# minute (an event made by the workflow's own token starts nothing, so only Charlie's closes do).
+# Runs every 3 hours, on Run workflow, on a push of requests/audit.txt, status/actions.json (a new item gets its issue at
+# once) or clips/submit.csv (the Mac's Vyro run ticks its item off), and when Charlie closes or reopens a needs-charlie issue.
 on:
   schedule:
-    - cron: '20 */6 * * *'
+    - cron: '20 */3 * * *'
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['requests/audit.txt']
+    paths: ['requests/audit.txt', 'status/actions.json', 'clips/submit.csv']
+  issues:
+    types: [closed, reopened]
 
 permissions:
   contents: write
   issues: write
+  pages: read       # the action list's pages_workflow check reads how GitHub Pages builds
 
 concurrency:
   group: audit
@@ -23,6 +35,7 @@ concurrency:
 
 jobs:
   audit:
+    if: ${{ github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'needs-charlie') }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -54,13 +67,48 @@ jobs:
           FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
           FB_IRL_PAGE_ID: ${{ secrets.FB_IRL_PAGE_ID }}
         run: python pipeline/identity.py audit 2>&1 | tee status/identity_log.txt || true
+      - name: Key health
+        # status/keys.json from the audit's facts plus one cheap call per API key; it reads which secrets are set, never what they are
+        env:
+          GH_TOKEN: ${{ github.token }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_CLIPS_TOKEN: ${{ secrets.IG_CLIPS_TOKEN }}
+          IG_GAMING_TOKEN: ${{ secrets.IG_GAMING_TOKEN }}
+          IG_IRL_TOKEN: ${{ secrets.IG_IRL_TOKEN }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          FB_CLIPS_PAGE_TOKEN: ${{ secrets.FB_CLIPS_PAGE_TOKEN }}
+          FB_GAMING_PAGE_TOKEN: ${{ secrets.FB_GAMING_PAGE_TOKEN }}
+          FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: python pipeline/keys.py || true
+      - name: Action list
+        # status/actions.json: each item's check run (a pasted key proven by one call, the Pages setting, the Mac's Vyro run) and each item's issue read
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+        run: python pipeline/actions.py || true
       - name: Save
         if: ${{ always() }}
         run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
-          for f in status/identity.json status/identity_log.txt tokens/instagram_*.enc; do git add $f 2>/dev/null || true; done      # tokens/instagram_<channel>.enc: the channels' Instagram keys, refreshed weekly (social.refresh_meta_keys)
-          git commit -q -m "Identity audit $(date -u '+%F %H:%M')" || exit 0
-          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
+          for f in status/identity.json status/identity_log.txt status/keys.json status/actions.json tokens/instagram_*.enc; do git add $f 2>/dev/null || true; done      # tokens/instagram_<channel>.enc: the channels' Instagram keys, refreshed weekly (social.refresh_meta_keys)
+          git commit -q -m "Audit, keys and actions $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv, hourly.csv and actions.json merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

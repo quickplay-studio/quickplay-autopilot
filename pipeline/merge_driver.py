@@ -13,6 +13,8 @@ This driver merges those files by key instead of by line, so both sides' changes
 - clips/submit.csv: row by row (clip, platform), field by field. For "submitted", a submitted time beats "pulled", which
   beats anything else, so the Mac's submission is never overwritten by an "expired" or "failed" from GitHub.
 - analytics/hourly.csv: row by row (hour_utc), sorted by hour.
+- status/actions.json (24 October): the action list, an array of items with an id. Item by item, field by field: pipeline/
+  actions.py marks an item done or adds its issue number while a Claude session adds an item or edits one, so both survive.
 - Anything else, or a file it cannot read as expected, falls back to git's own line merge favouring this run (exactly
   what -X theirs did), so the driver can never make a Save step fail where it would have passed before.
 
@@ -102,9 +104,34 @@ def merge_json(o_text, a_text, b_text):
     return json.dumps(m, indent=1, ensure_ascii=False) + ("\n" if a_text.endswith("\n") else "")
 
 
+def merge_list(o_text, a_text, b_text, key="id"):
+    """A JSON array of objects with a unique key (status/actions.json): item by item, each merged field by field like the
+    status files. An item only the other side added is kept; one only this run added is kept; one a side deleted and the
+    other left alone is deleted. Main's order is kept, this run's new items follow."""
+    o = json.loads(o_text) if o_text.strip() else []
+    a, b = json.loads(a_text), json.loads(b_text)
+    if not all(isinstance(x, list) for x in (o, a, b)): raise ValueError("not an array")
+    def index(items):
+        d = {}
+        for it in items:
+            if not isinstance(it, dict) or key not in it or it[key] in d: raise ValueError(f"items need a unique {key}")
+            d[it[key]] = it
+        return d
+    io_, ia, ib = index(o), index(a), index(b)
+    out = []
+    for k in list(ia) + [k for k in ib if k not in ia]:
+        ov, av, bv = io_.get(k, MISSING), ia.get(k, MISSING), ib.get(k, MISSING)
+        if av is not MISSING and bv is not MISSING: out.append(merge3(ov, av, bv))
+        elif av is not MISSING:              # not in this run's file: added on main, or deleted here
+            if ov is MISSING or ov != av: out.append(av)
+        elif ov is MISSING or ov != bv: out.append(bv)      # not on main: added by this run, or deleted there
+    return json.dumps(out, indent=1, ensure_ascii=False) + ("\n" if a_text.endswith("\n") else "")
+
+
 def kind(path):
     p = str(path).replace("\\", "/")
     if re.search(r"(^|/)status/(QD|TEST)-[^/]*\.json$", p): return "json"
+    if re.search(r"(^|/)status/actions\.json$", p): return "list"
     for k in CSV_KEYS:
         if p == k or p.endswith("/" + k): return k
     return None
@@ -120,7 +147,7 @@ def main(o, a, b, path):
     try:
         if not k: return 0 if line_merge(o, a, b) else 1
         ot, at, bt = (open(x, encoding="utf-8", newline="").read() for x in (o, a, b))     # newline="": keep CRLF as written
-        merged = merge_json(ot, at, bt) if k == "json" else merge_csv(ot, at, bt, *CSV_KEYS[k])
+        merged = merge_json(ot, at, bt) if k == "json" else merge_list(ot, at, bt) if k == "list" else merge_csv(ot, at, bt, *CSV_KEYS[k])
         with open(a, "w", encoding="utf-8", newline="") as f: f.write(merged)
         return 0
     except Exception as e:

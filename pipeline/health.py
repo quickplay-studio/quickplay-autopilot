@@ -39,6 +39,14 @@ def main():
             left = (dt.datetime.fromtimestamp(int(v["data_access_expires"]), dt.timezone.utc) - NOW).days
             if left <= 14: problems.append(f"Facebook key needs renewing within {max(0, left)} days (redo the Facebook key steps)")
     if not (load("status/youtube_connect.json", {}) or {}).get("connected"): problems.append("YouTube engagement sign-in missing")
+    ks, kp = load("status/keys.json", {}) or {}, []          # pipeline/keys.py, every 3 hours: a key that fails or ends within 14 days
+    t = when(ks.get("checked"))
+    if ks and t and NOW - t > dt.timedelta(hours=12): kp.append(f"key check last ran {int((NOW - t).total_seconds() // 3600)} hours ago")
+    for r in ks.get("keys") or []:
+        if r.get("id") == "FB_PAGE_TOKEN": continue         # the Facebook line above says it
+        if r.get("status") in ("failing", "expiring") or (r.get("status") == "missing" and r.get("needed")):
+            kp.append(f"key {r.get('what')} is {r.get('status')}" + (f" (ends {r['expires']})" if r.get("status") == "expiring" and r.get("expires") else ""))
+    problems[:0] = kp               # first: an expired key stops the project quietly, and the line shows only the first four
     tr = load("trends/latest.json", {}) or {}
     if tr.get("date") != str(dt.datetime.now(ZoneInfo("Europe/London")).date()): problems.append(f"trends last refreshed {tr.get('date', 'never')}")
     s = load("analytics/summary.json", {}) or {}

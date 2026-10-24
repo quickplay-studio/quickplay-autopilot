@@ -4,3 +4,4 @@ status/QD-*.json merge=qp
 status/TEST-*.json merge=qp
 clips/submit.csv merge=qp
 analytics/hourly.csv merge=qp
+status/actions.json merge=qp

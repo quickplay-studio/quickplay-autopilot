@@ -34,16 +34,22 @@ aggregate. Hand log reading, number questions, test runs and dated doc lines to 
 ## Where to look
 - The hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
   rebuild). Its Overview opens with "Your actions this week": status/actions.json plus issues labelled needs-charlie
-  (alerts.raise_issue(..., labels=["needs-charlie"])).
+  (alerts.raise_issue(..., labels=["needs-charlie"])). actions.py keeps that list true (below), so add an item there
+  with a "check" (secret_works:NAME, pages_workflow, vyro_today, or a new one in actions.CHECKS) whenever one can prove it.
 - `python pipeline/health.py`; status/write_log.txt and status/factpack_log.txt (tail only); status/<id>.json: one Short.
 - docs/NEXT.md (what was built and why, newest at the bottom), docs/CLIPS.md (clips), analytics/insights.md (the
   Recipe), analytics/decisions.csv (the Recipe's changes), analytics/changes.csv (the change ledger), analytics/weekly.md.
 - The Mac: docs/CHROME_JOBS.md (a 4 KB card), `python3 pipeline/mac_rows.py` (its work), docs/CHROME_LOG.md (one-off jobs,
   history). A cloud session adds a one-off job there instead of using a browser itself.
-- Identity guard (22 October): identity.py and audit.yml (every 6 hours) check every sign-in is the studio Google
+- Identity guard (22 October): identity.py and audit.yml (every 3 hours) check every sign-in is the studio Google
   account's own Quickplay channel, page or profile, and every secret is on config.json accounts.secrets (a new one is
   added by hand, on purpose). A mismatch opens "🔒 Security: a sign-in outside the studio account" and the posting
   workflows stop at their gate step until a clean audit. The audit also refreshes the IG_<CHANNEL>_TOKEN keys weekly.
+- Live checks (24 October), run by audit.yml after the identity audit: keys.py writes status/keys.json (every sign-in and key:
+  ok, expiring, failing or missing, its end date, the fix steps; the hub's Accounts tab) from the audit's own calls plus one
+  cheap call per API key, and opens one needs-charlie issue per failing key or one ending within 14 days, closed when it works.
+  actions.py runs each status/actions.json item's "check" and ticks it off or reopens it; an item with no check gets an
+  issue, and closing it in the GitHub app ticks it off (the hub hides done items and lists them under Done this week).
 - tests/: offline, stubbed HTTP. Run them all before every push.
 
 ## Channel rules (non-negotiable)

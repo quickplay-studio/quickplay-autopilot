@@ -227,7 +227,8 @@
   "added": "2026-10-24",
   "due": "",
   "done": false,
-  "check": "secret_works:FB_CLIPS_PAGE_TOKEN"
+  "check": "secret_works:FB_CLIPS_PAGE_TOKEN",
+  "note": "not set up"
  },
  {
   "id": "anthropic-api-key",

@@ -1221,8 +1221,10 @@ def stats():
     for channel, ids in by_channel.items():
         yt = clips_client(channel)
         for i in range(0, len(ids), 50):
-            for v in yt.videos().list(part="statistics,status", id=",".join(ids[i:i + 50])).execute().get("items", []):
+            for v in yt.videos().list(part="statistics,status,contentDetails", id=",".join(ids[i:i + 50])).execute().get("items", []):
                 cid, m = vids[v["id"]]; st = v.get("statistics", {})
+                cd, vs = v.get("contentDetails") or {}, v.get("status") or {}
+                rr = cd.get("regionRestriction") or {}
                 pub = v["status"].get("publishAt") or (m.get("publish_at") if m.get("publish_at") not in (None, "private") else None) or m.get("uploaded")
                 try: hours = round((NOW - dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))).total_seconds() / 3600, 1)
                 except Exception: hours = ""
@@ -1234,6 +1236,11 @@ def stats():
                              **{f"test_{t}": tests.get(t, "") for t in TESTS},
                              "instagram": (m.get("instagram") or {}).get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""),
                              **ig_numbers((m.get("instagram") or {}).get("media")),
+                             # why a clip might get no views (24 October: 51 public clips, 31 views): YouTube's own verdicts
+                             "upload_status": vs.get("uploadStatus", ""), "rejected": vs.get("rejectionReason", ""),
+                             "blocked_in": len(rr.get("blocked") or []) if "allowed" not in rr else f"all but {len(rr.get('allowed') or [])}",
+                             "age_restricted": int((cd.get("contentRating") or {}).get("ytRating") == "ytAgeRestricted"),
+                             "for_kids": int(bool(vs.get("madeForKids"))),
                              "as_of": NOW.isoformat(timespec="minutes")})
     p = ROOT / "clips" / "stats.csv"
     if not rows: return
@@ -1242,6 +1249,30 @@ def stats():
     log(f"stats: {len(rows)} clips")
     try: ins = insights(rows); log("insights:", json.dumps({t: v["best"] for t, v in ins["tests"].items()}))
     except Exception as e: log("insights:", str(e)[:200])
+    try: log("reach:", json.dumps(reach_check(rows)))
+    except Exception as e: log("reach:", str(e)[:200])
+
+
+def reach_check(rows):
+    """Whether YouTube shows our clips to anyone, per channel: public clips a day old or more, how many have no views,
+    and YouTube's verdicts on them (rejected, blocked in some countries, age restricted, made for kids). Saved to
+    clips/reach.json for the alerts and the hub; on 24 October 34 clips on the clips channel had 11 views in all."""
+    out = {}
+    for r in rows:
+        if r.get("privacy") != "public": continue
+        try: old = float(r.get("hours_public") or 0) >= 24
+        except ValueError: old = False
+        c = out.setdefault(r.get("channel") or "clips", {"public_a_day_old": 0, "no_views": 0, "views": 0, "rejected": 0, "blocked": 0,
+                                                         "age_restricted": 0, "for_kids": 0})
+        c["views"] += int(float(r.get("views") or 0))
+        c["rejected"] += int(bool(r.get("rejected"))); c["blocked"] += int(str(r.get("blocked_in") or "0") not in ("0", ""))
+        c["age_restricted"] += int(r.get("age_restricted") or 0); c["for_kids"] += int(r.get("for_kids") or 0)
+        if old:
+            c["public_a_day_old"] += 1; c["no_views"] += int(float(r.get("views") or 0) == 0)
+    for c in out.values():
+        c["unseen"] = c["public_a_day_old"] >= 8 and c["no_views"] >= 0.8 * c["public_a_day_old"]
+    (ROOT / "clips" / "reach.json").write_text(json.dumps({"as_of": NOW.isoformat(timespec="minutes"), "channels": out}, indent=1))
+    return out
 
 
 def ig_numbers(media):

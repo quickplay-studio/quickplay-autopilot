@@ -19,3 +19,23 @@ total, by = A.clips_money(root)
 assert total == 22.0 and by == {"a": 10.0, "b": 12.0}, (total, by)
 assert A.clips_money(SCRATCH / "nowhere") == (0.0, {})
 print("money ok")
+
+# clips YouTube shows to nobody: the reach check per channel (clips.reach_check) and one issue naming them (alerts.reach_alert)
+import clips as C
+C.ROOT = root
+rows = [{"channel": "clips", "privacy": "public", "hours_public": "30", "views": "0", "rejected": "", "blocked_in": "0",
+         "age_restricted": "0", "for_kids": "0"} for _ in range(9)]
+rows += [{"channel": "clips", "privacy": "public", "hours_public": "30", "views": "4", "rejected": "", "blocked_in": "all but 0",
+          "age_restricted": "0", "for_kids": "0"},
+         {"channel": "gaming", "privacy": "public", "hours_public": "5", "views": "12", "rejected": "", "blocked_in": "0",
+          "age_restricted": "0", "for_kids": "0"}]
+got = C.reach_check(rows)
+assert got["clips"]["unseen"] and got["clips"]["no_views"] == 9 and got["clips"]["blocked"] == 1, got
+assert not got["gaming"]["unseen"] and got["gaming"]["public_a_day_old"] == 0
+ISS, CLR = [], []
+A.ROOT, A.raise_issue, A.clear = root, (lambda t, b: ISS.append((t, b))), (lambda t, b: CLR.append(t))
+A.reach_alert()
+assert len(ISS) == 1 and "clips: 9 of 10 clips a day old have no views" in ISS[0][1] and "1 blocked" in ISS[0][1] and "gaming" not in ISS[0][1], ISS
+C.reach_check(rows[-1:]); A.reach_alert()
+assert CLR == [ISS[0][0]]
+print("reach ok")

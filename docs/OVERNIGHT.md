@@ -65,6 +65,13 @@ Newest work at the bottom of each section. Every change ran the full test suite 
 11. **The two newer clip channels were about to make 12 fewer clips a day.** When YouTube refused an upload, the system
    recorded how many clips were booked for the next batch instead of how many YouTube had taken that day, so irl and
    gaming (refused after 10 uploads each) learned a limit of 4. Fixed and reset to 10.
+12. **The biggest problem found tonight: YouTube is showing the clips to almost nobody.** 34 public clips on the clips
+   channel have 11 views in total (most have 0 after 30 hours); gaming 20 views on 7, irl 0 on 10. No campaign can pay
+   until clips reach their minimum views, so this matters more than anything else on the clips side. The system now reads
+   YouTube's own verdict on every clip each night (rejected, blocked in countries by a copyright claim, age restricted,
+   made for kids), shows it on the hub, and opens an alert with what to check in Studio. Likely causes, in order: copyright
+   claims on the creators' footage, "reused content" (the spoken take started tonight to answer it), and brand-new
+   channels posting 10 or more clips at the same minute.
 
 ## What needs Charlie
 

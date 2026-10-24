@@ -316,6 +316,11 @@ function render(){
   const active = Object.entries(camps).filter(([k, c]) => c.active);
   const pubClips = Object.values(by).reduce((a, b) => a + b.clips, 0);
   const clipViews = Object.values(by).reduce((a, b) => a + b.views, 0);
+  // YouTube's own verdicts on the clips (from the nightly stats, 24 October): rejected, blocked somewhere, age restricted
+  const latestClip = {};
+  for (const r of (D.stats || [])) { const k = r.clip + "|" + r.video; if (!latestClip[k] || (r.as_of || "") >= (latestClip[k].as_of || "")) latestClip[k] = r; }
+  const verdicts = Object.values(latestClip).reduce((a, r) => { if (r.rejected) a.rejected++; if (r.blocked_in && r.blocked_in !== "0") a.blocked++; if (r.age_restricted === "1") a.age++; return a; }, {rejected: 0, blocked: 0, age: 0});
+  const verdictNote = [verdicts.blocked && `${verdicts.blocked} blocked somewhere`, verdicts.rejected && `${verdicts.rejected} rejected`, verdicts.age && `${verdicts.age} age restricted`].filter(Boolean).join(", ");
 
   // daily YouTube views (last value per day)
   const perDay = {};
@@ -339,7 +344,7 @@ function render(){
       ${tile("Views in the last 24 hours", compact(prog.views_last_24h), "Quickplay Daily, YouTube")}
       ${tile("Public Shorts", fmt(prog.public_shorts || y.public_shorts), D.channel ? `${fmt(D.channel.scheduled)} scheduled` : "")}
       ${tile("Instagram followers", fmt(prog.ig_followers ?? (s.instagram || {}).followers), "quickplaydaily")}
-      ${tile("Public clips", fmt(pubClips), `${compact(clipViews)} views across the clips channels`)}
+      ${tile("Public clips", fmt(pubClips), `${compact(clipViews)} views across the clips channels` + (verdictNote ? `; YouTube: ${verdictNote}` : ""))}
       ${tile("Active campaigns", fmt(active.length), `keeps at least ${fmt((D.camps || {}).min_active || 6)} live`)}
       ${tile("Account check", D.identity ? (D.identity.ok ? "Clean" : "Problem") : "Unknown", D.identity ? ukTime(D.identity.checked) : "")}
     </div>

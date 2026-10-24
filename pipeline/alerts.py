@@ -204,6 +204,30 @@ def funnel_check():
     else: clear(title, f"{f['day']}: every stage moved.")
 
 
+def reach_alert():
+    """Clips that YouTube shows to nobody (clips/reach.json, from the nightly clip stats): one issue naming the channels where
+    8 or more clips a day old have 80% or more with no views, or where YouTube rejected, blocked or age-restricted clips,
+    with what to look at in Studio. Closed again once every channel is seen. (24 October: 34 clips, 11 views.)"""
+    try: r = json.loads((ROOT / "clips" / "reach.json").read_text())
+    except Exception: return
+    title = "📉 YouTube is showing the clips to almost nobody"
+    bad = {ch: c for ch, c in (r.get("channels") or {}).items()
+           if c.get("unseen") or c.get("rejected") or c.get("blocked") or c.get("age_restricted") or c.get("for_kids")}
+    if not bad: clear(title, f"Clips are being seen again ({r.get('as_of')})."); return
+    lines = []
+    for ch, c in bad.items():
+        why = [f"{c[k]} {label}" for k, label in (("rejected", "rejected by YouTube"), ("blocked", "blocked in some countries (usually a copyright claim)"),
+                                                   ("age_restricted", "age restricted"), ("for_kids", "marked made for kids")) if c.get(k)]
+        lines.append(f"- {ch}: {c['no_views']} of {c['public_a_day_old']} clips a day old have no views ({c['views']} views in all)"
+                     + (f"; {', '.join(why)}" if why else ""))
+    raise_issue(title, "From the nightly clip stats (clips/reach.json):\n" + "\n".join(lines) + "\n\nWhat to look at (2 minutes): "
+                "open https://studio.youtube.com, switch to the channel (your picture, top right > Switch account), Content > Shorts, "
+                "and read the Restrictions column: Copyright means a claim (the campaign footage is matched; the campaign's "
+                "permission letter or its own upload settles it), Reused content means YouTube sees no change from the original "
+                "(the spoken take started on 24 October to answer that). Nothing listed and still no views usually means a brand-new "
+                "channel posting many clips at once; fewer clips spread through the day is the change to test.")
+
+
 if __name__ == "__main__":
     if os.environ.get("EVENT") == "workflow_run": after_run()
     else:
@@ -214,3 +238,5 @@ if __name__ == "__main__":
         except Exception as e: print("stale:", str(e)[:160])
         try: money()
         except Exception as e: print("money:", str(e)[:120])
+        try: reach_alert()
+        except Exception as e: print("reach:", str(e)[:120])

@@ -21,7 +21,11 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }        # Kokoro needs Python 3.12 or older
-      - run: sudo apt-get update -q && sudo apt-get install -y -q espeak-ng
+      - run: |
+          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+          timeout 900 sudo apt-get $APT install -y -q espeak-ng
       - run: |
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D kokoro==0.9.4 soundfile
@@ -40,7 +44,11 @@ jobs:
         with: { name: voice-refs, path: pipeline/voices }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13', cache: pip, cache-dependency-path: pipeline/requirements.txt }
-      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - run: |
+          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+          timeout 900 sudo apt-get $APT install -y -q ffmpeg
       - run: |
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt

@@ -31,7 +31,10 @@ jobs:
         with: { python-version: '3.13' }
       - name: Install
         run: |
-          sudo apt-get update -q && sudo apt-get install -y -q ffmpeg fonts-dejavu-core
+          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+          timeout 900 sudo apt-get $APT install -y -q ffmpeg fonts-dejavu-core
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography pillow google-api-python-client==2.* google-auth==2.* tzdata
       - name: Build and upload
         env:

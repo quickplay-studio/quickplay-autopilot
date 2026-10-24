@@ -57,7 +57,11 @@ jobs:
         with: { node-version: 20 }
       - name: System packages
         if: matrix.job.mode != 'reject'
-        run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+        run: |
+          # retries and time limits: on 23 October a slow package mirror stalled this step for over 35 minutes
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+          timeout 900 sudo apt-get $APT install -y -q ffmpeg
       - name: Python packages
         if: matrix.job.mode != 'reject'
         run: |

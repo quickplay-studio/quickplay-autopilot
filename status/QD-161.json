@@ -1,0 +1,92 @@
+{
+ "id": "QD-161",
+ "board": "boards/queue/QD-161.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T02:30:00Z",
+ "rendered": "2026-10-24T11:17:37.074667+00:00",
+ "title": "Raye is 28 and Where Is My Husband just hit a billion streams 🎉",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Mike Sabath: no Commons image named 'Mike Sabath')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 9
+ },
+ "music": "mirror-mirror",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "minimal",
+  "voice": "lab-voice-1019",
+  "energy": "lab-energy-1019",
+  "grade": "lab-grade-1023",
+  "opening": "image_first"
+ },
+ "qa": {
+  "duration": 27.2,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 15.6
+ },
+ "timeline": [
+  [
+   0.06,
+   6.58,
+   "none",
+   0
+  ],
+  [
+   6.58,
+   12.92,
+   "none",
+   1
+  ],
+  [
+   12.92,
+   17.34,
+   "none",
+   1
+  ],
+  [
+   17.34,
+   20.3,
+   "none",
+   1
+  ],
+  [
+   20.3,
+   27.19,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1670",
+   "q": "neon music club",
+   "t0": 0.0,
+   "t1": 13.9
+  },
+  {
+   "p": "pixabay",
+   "id": "233983",
+   "q": "city night lights",
+   "t0": 13.3,
+   "t1": 27.19
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-24T11:28:01Z",
+ "video": "Y3nAUT-nrQc",
+ "url": "https://youtube.com/shorts/Y3nAUT-nrQc",
+ "publish_at": "2026-10-25T02:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T02:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-161"
+}

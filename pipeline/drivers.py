@@ -82,8 +82,12 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji")]
-PIPELINE_ONLY = {"late", "explore"}     # measured like the rest, but decided by the pipeline, never put to the writer
-NEVER_PAUSED = {"weekday", "late", "explore"}       # nothing the writer could leave out
+# Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
+# (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
+IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
+               ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
+PIPELINE_ONLY = {"late", "explore"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline
+NEVER_PAUSED = {"weekday", "late", "explore"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji")     # recorded on the board by the writer (writer.py tests)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 T90 = ((1, 6.314), (2, 2.920), (3, 2.353), (4, 2.132), (5, 2.015), (6, 1.943), (7, 1.895), (8, 1.860), (9, 1.833),
@@ -302,6 +306,63 @@ def analyse(rows, pauses=None, today=None):
                           "why": why})
     table.sort(key=lambda t: (t["feature"], -t["lift"]))
     return table, base
+
+
+# ---------------- Instagram (24 October) ----------------
+def ig_features(r):
+    """The comparable things about one Reel (shorts.csv row) for analyse_instagram."""
+    return {"ig_trial": r.get("ig_trial") or "", "ig_caption": r.get("ig_caption") or "", "ig_hour": r.get("ig_hour") or "",
+            "ig_pick": r.get("ig_pick") or "", "ig_category": r.get("category") or ""}
+
+
+def ig_rel_rows(rows, now=None):
+    """Reels posted to Instagram a day ago or more, each a copy of its shorts.csv row with "rel" = its Instagram views over
+    the median of the Reels posted to Instagram the same UK day (widening to ±1, then ±3 days when a day has under 3)
+    and "posted" = when it went to Instagram, so gate() counts Instagram's own days and halves."""
+    now = now or NOW
+    pts = []
+    for r in rows:
+        v, at = _f(r.get("ig_views")), r.get("ig_posted")
+        if v is None or not at: continue
+        try: t = dt.datetime.fromisoformat(str(at).replace("Z", "+00:00"))
+        except ValueError: continue
+        if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+        if (now - t).total_seconds() < 86400: continue          # a Reel under a day old waits
+        pts.append((t.astimezone(UK).date(), v, t, r))
+    out = []
+    for day, v, t, r in pts:
+        for w in (0, 1, 3):
+            peers = [pv for pd, pv, _, _ in pts if abs((pd - day).days) <= w]
+            if len(peers) >= 3: break
+        med = statistics.median(peers) if peers else 0
+        if med > 0: out.append({**r, "rel": v / med, "posted": t.isoformat()})
+    return out
+
+
+def analyse_instagram(rows, now=None):
+    """Instagram's own tests (trial reel, caption, posting hour, how the Reel was picked) and the categories on Instagram,
+    each against Instagram views (ig_rel_rows), as drivers.csv rows. The same shrinkage and proof gate as analyse(); never
+    paused, never put to the writer (PIPELINE_ONLY): social.ig_share reads the verdicts (a proven arm gets 80% of Reels,
+    never all, so the test keeps measuring)."""
+    pseudo = ig_rel_rows(rows, now)
+    if not pseudo: return []
+    cut, table = split_time(pseudo), []
+    for feat, label in IG_FEATURES:
+        groups = {}
+        for r in pseudo:
+            v = ig_features(r).get(feat)
+            if v: groups.setdefault(v, []).append(r)
+        if len(groups) < 2: continue
+        for v, grp in groups.items():
+            logs = [_logrel(r) for r in grp]
+            n = len(logs); lift = math.exp(sum(logs) / (n + SHRINK))
+            verdict, gwhy = gate(grp, lift, cut)
+            table.append({"feature": feat, "feature_label": label, "value": v, "n": n, "lift": round(lift, 2),
+                          "median_rel": round(statistics.median(float(r["rel"]) for r in grp), 2), "verdict": verdict,
+                          "held_3s_pct": "", "avg_viewed_pct": "", "subs_per_1k": "", "shares_per_1k": "",
+                          "why": "against Instagram views" + (f"; not proven: {gwhy}" if gwhy and verdict == "early sign" else "")})
+    table.sort(key=lambda t: (t["feature"], -t["lift"]))
+    return table
 
 
 # ---------------- the category mix (shared by the recipe and writer.category_shares) ----------------

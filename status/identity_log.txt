@@ -6,6 +6,7 @@ ok   workflow engage.yml: GEMINI_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SE
 ok   workflow llmprobe.yml: CEREBRAS_API_KEY, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY
 ok   workflow logins.yml: SOCIAL_KEY, VYRO_COOKIES, WHOP_COOKIES
 ok   workflow music.yml: MUSIC_KEY
+ok   workflow policy.yml: GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY
 ok   workflow publish.yml: SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 ok   workflow render.yml: MUSIC_KEY, PEXELS_API_KEY, PIXABAY_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
 ok   workflow report.yml: no secrets
@@ -30,6 +31,7 @@ ok   youtube_clips: Quickplay Clips (@quickplayclips-x9b)
 ok   youtube_gaming: Quickplay Gaming Clips (@quickplaygamingclips-z1b)
 ok   youtube_irl: Quickplay IRL Clips (@quickplayirlclips)
 ok   instagram: @quickplaydaily (17841465022278792)
+ok   IG_TOKEN: @quickplaydaily (17841465022278792)
 ok   FB_PAGE_TOKEN: Quickplay Daily (1394922903704330)
 ok   tiktok: HTTP 401 (the key does not answer (expired keys are refreshed by the social run))
-identity: clean: 34 checks
+identity: clean: 36 checks

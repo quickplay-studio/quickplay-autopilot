@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-23T19:02:11+00:00",
+ "checked": "2026-10-24T01:12:18+00:00",
  "ok": true,
  "studio": "studiosocialmedia123@gmail.com",
  "checks": [
@@ -55,6 +55,13 @@
   {
    "what": "workflow music.yml",
    "found": "MUSIC_KEY",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow policy.yml",
+   "found": "GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -222,6 +229,13 @@
   },
   {
    "what": "instagram",
+   "found": "@quickplaydaily (17841465022278792)",
+   "ok": true,
+   "expected": "a Quickplay Instagram account",
+   "note": ""
+  },
+  {
+   "what": "IG_TOKEN",
    "found": "@quickplaydaily (17841465022278792)",
    "ok": true,
    "expected": "a Quickplay Instagram account",

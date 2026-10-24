@@ -1,506 +1,234 @@
 {
  "date": "2026-10-24",
- "built": "2026-10-24T13:22+00:00",
+ "built": "2026-10-24T16:12+00:00",
  "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "full",
- "run": "afternoon",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 5,
-   "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
-   "category": "Gaming",
+   "n": 9,
+   "topic": "Celebrity Traitors 2026 cast",
+   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
+   "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Did you know GTA 6 will cost $79.99 for the base game?",
-    "GTA 6 is finally launching on November 19, 2026!",
-    "The Ultimate Edition of GTA 6 will cost $99.99."
+    "Maya Jama and Richard E Grant start as secret Traitors.",
+    "Grant confessed his betrayal to Joe Lycett in episode one.",
+    "Amol Rajan fell victim to the Traitors in episode two."
    ],
    "sources": [
     [
-     "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
-     "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
-     "Guardian",
-     "2026-10-24"
-    ],
-    [
-     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
-     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
-     "The Hollywood Reporter",
-     "2026-10-15"
-    ],
-    [
-     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
-     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
-     "IGN",
-     "2026-06-25"
-    ],
-    [
-     "‘GTA 6’ Price Still Not Revealed, but Take-Two Chief Says Rockstar on Track to Begin Marketing This Summer",
-     "https://variety.com/2026/gaming/news/gta-5-no-delay-price-marketing-summer-1236755303/",
-     "Variety",
-     "2026-05-21"
-    ],
-    [
-     "GTA 6 price",
-     "https://en.wikipedia.org/wiki/Gas_Price",
-     "Wikipedia",
-     ""
+     "Celebrity Traitors 2026: Who will be banished and who is tipped to win?",
+     "https://www.standard.co.uk/showbiz/celebrity-traitors-2026-tonight-richard-e-grant-b1298716.html",
+     "Evening Standard",
+     "2026-10-08"
     ]
    ],
-   "verified": [
-    {
-     "claim": "Rockstar Games has announced that the base game of GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
-      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is set to be released on Nov. 19, 2026.",
-     "sources": [
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
-      "3": "GTA 6 launches on November 19, 2026.",
-      "4": "Rockstar Games’ “Grand Theft Auto 6″ is still on track for its Nov. 19 release but does not yet have an announced price."
-     }
-    },
-    {
-     "claim": "GTA 6 physical copies do not include a disc and are just a code in a box.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "there will be no physical version of GTA 6.",
-      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed. They're just a code in a box."
-     }
-    },
-    {
-     "claim": "Parent company Take Two is estimated to have spent $1 1.5 billion so far on GTA 6.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "It cost the company in the ballpark of $1 billion to $1.5 billion to make.",
-      "3": "Discussion of the price of GTA 6 comes amid speculation it may be the most expensive video game ever made, with parent company Take-Two estimated"
-     }
-    }
-   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Rockstar took eight years developing GTA 6.",
+     "claim": "This year's original Traitors were Maya Jama and Richard E Grant, with James Acaster later recruited as the third member of their coven.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Rockstar took eight years developing GTA 6, which had more starts and stops than some of the game’s banged up beater vehicles."
+      "1": "This year's original Traitors were Maya Jama and Richard E Grant, with James Acaster later recruited as the third member of their coven."
      }
     },
     {
-     "claim": "Players will be able to begin preloading the giant game on Nov. 12.",
+     "claim": "Grant even explicitly revealed to Joe Lycett that he was a Traitor during the first episode, leaving the Faithfuls none the wiser about whether he was joking or telling the truth.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Players will be able to begin the lengthy process of preloading the giant game on Nov. 12; there will be no physical version of GTA"
+      "1": "Grant even explicitly revealed to Joe Lycett that he was a Traitor during the first episode, leaving the Faithfuls none the wiser about whether he"
      }
     },
     {
-     "claim": "Rockstar confirmed GTA 6 features a single player experience at launch.",
+     "claim": "In episode two, the Traitors were given a choice between James Acaster and Amol Rajan, with one celebrity set to be recruited and the other facing murder.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "Rockstar Games has finally announced the price of GTA 6, while confirming it features a “single-player experience” at launch."
+      "1": "In episode two, the Traitors were given a choice between James Acaster and Amol Rajan, with one celebrity set to be recruited and the other"
+     }
+    },
+    {
+     "claim": "Amol Rajan was subsequently murdered by the Traitors.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Amol Rajan was subsequently murdered by the Traitors."
      }
     }
    ],
-   "images": [
-    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
-   ]
+   "images": []
   },
   {
-   "n": 6,
-   "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
-   "category": "Gaming",
+   "n": 37,
+   "topic": "iPhone Duo goes on sale",
+   "signal": "Bluesky trending, 1,348 posts",
+   "category": "Tech",
    "what_is_new": "",
    "hooks": [],
    "sources": [
     [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
-     "2026-10-23"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
-   ]
-  },
-  {
-   "n": 3,
-   "topic": "The Call the Police trend on TikTok and Instagram",
-   "signal": "Charlie's request",
-   "category": "Film",
-   "what_is_new": "Channel 4 has released its first vertical drama titled The Guest List on social media in the UK.",
-   "hooks": [
-    "Channel 4 just launched its very first vertical drama in the UK!",
-    "Can a 90 second vertical drama series keep viewers hooked for weeks?",
-    "Find out how a PR guru's phone gets snatched on the way to a boat party."
-   ],
-   "sources": [
-    [
-     "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
-     "Guardian",
+     "What to expect from Apple’s ‘Pro and tell’ event",
+     "https://www.theverge.com/tech/1018169/what-to-expect-apple-pro-and-tell-event-touchscreen-macbook-pro",
+     "The Verge",
      "2026-10-24"
     ]
    ],
    "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "Dai Dai by Shakira & Burna Boy",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Shakira and Burna Boy score a massive chart milestone!",
+    "Dai Dai hits ten weeks at number one!",
+    "How well is the World Cup anthem performing globally?"
+   ],
+   "sources": [
+    [
+     "Shakira & Burna Boy’s ‘Dai Dai’ Scores 10th Week at No. 1 on Billboard Global Excl. U.S. Chart",
+     "https://www.billboard.com/music/chart-beat/shakira-burna-boy-global-charts-sept-5-1236329009/",
+     "Billboard",
+     "2026-08-31"
+    ]
+   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Channel 4 has released its first vertical drama on social media in the UK.",
+     "claim": "Shakira and Burna Boy's Dai Dai scores a 10th week at number 1 on the Billboard Global Excl. U.S. chart.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Enter Channel 4, which has released its first vertical drama on social media in the UK."
+      "1": "on billboard shakira and burna boy s dai dai fifa world cup official song 2026 nets a milestone 10th week at no 1 on the billboard global excl us chart it also tops the billboard global"
      }
     },
     {
-     "claim": "The Guest List is made in partnership with the skincare brand Sol de Janeiro.",
+     "claim": "Dai Dai is the FIFA World Cup Official Song 2026.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The Guest List is made in partnership with the skincare brand Sol de Janeiro, and episodes are around 90 seconds to two minutes in length."
+      "1": "Shakira and Burna Boy’s “Dai Dai (FIFA World Cup Official Song 2026)” nets a milestone 10th week at No. 1 on the Billboard Global Excl."
      }
     },
     {
-     "claim": "Episodes of The Guest List are around 90 seconds to two minutes in length.",
+     "claim": "Dai Dai also tops the Billboard Global 200 chart for a seventh week.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The Guest List is made in partnership with the skincare brand Sol de Janeiro, and episodes are around 90 seconds to two minutes in length."
+      "1": "It also tops the Billboard Global 200 chart for a seventh week."
+     }
+    },
+    {
+     "claim": "Dai Dai drew 36.7 million streams and sold 4,000 worldwide August 21 to 27.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“Dai Dai” drew 36.7 million streams (down 9% week over week) and sold 4,000 (down 15%) worldwide Aug. 21-27, according to Luminate."
+     }
+    },
+    {
+     "claim": "Dai Dai totaled 31.4 million streams and 3,000 sold outside the U.S.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It totaled 31.4 million streams (down 9%) and 3,000 sold (down 18%) outside the U.S."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 9,
-   "topic": "west ham vs southampton",
-   "signal": "Google Trends GB 1000+",
-   "category": "Sport",
+   "n": 21,
+   "topic": "stoke",
+   "signal": "Google Trends GB 200+",
+   "category": "Science",
    "what_is_new": "",
    "hooks": [
-    "Josh Ajala scores a debut double for West Ham!",
-    "How West Ham thrashed Southampton 4-1 in the Carabao Cup."
+    "Did you know Stoke Space is an American space launch company?"
    ],
    "sources": [
     [
-     "Southampton 1-4 West Ham: Josh Ajala scores debut double as Hammers hit back to reach Carabao Cup third round",
-     "https://www.skysports.com/football/news/13577047/southampton-west-ham-united",
-     "Sky Sports",
-     "2026-08-25"
+     "Stoke Space’s $510M round shows the future of launch belongs to defense",
+     "https://techcrunch.com/2025/10/09/stoke-spaces-510m-round-shows-the-future-of-launch-belongs-to-defense/",
+     "TechCrunch",
+     "2025-10-09"
+    ],
+    [
+     "stoke",
+     "https://en.wikipedia.org/wiki/Stoke",
+     "Wikipedia",
+     ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Stoke Space is referenced in both sources.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "stoke space announced a massive capital raise on wednesday that might seem at first glance like just another bet on the commercial launch market the details tell a",
+      "2": "Stoke Space, an American space launch company."
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Leo Scienza scored for Southampton after 10 minutes.",
+     "claim": "Stoke Space is an American space launch company.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "Southampton took just 10 minutes to open the scoring."
+      "2": "Stoke Space, an American space launch company."
      }
     },
     {
-     "claim": "Jarrod Bowen scored an 84th minute fourth goal for West Ham.",
+     "claim": "Stoke Space raised $510 million in a Series D funding round.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Taty Castellanos swept in Joel Veltman's low cross 15 minutes from time before Jarrod Bowen grabbed an 84th minute fourth to condemn Southampton to a"
+      "1": "Led by billionaire Thomas Tull’s U.S. Innovative Technology (USIT), a fund that explicitly invests in technologies tied to national security, the $510 million Series D"
      }
     },
     {
-     "claim": "Josh Ayala scored twice on his full professional debut as West Ham beat Southampton 4-1 in the Carabao Cup.",
+     "claim": "Thomas Tull launched the U.S. Innovative Technology fund in 2023 to fund technologies relevant to the national interest.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Teenager Josh Ayala scored twice on his full professional debut as West Ham came from behind to thrash Championship rivals Southampton 4-1 in the Carabao"
+      "1": "Thomas Tull launched the fund in 2023 to fund technologies “relevant to the national interest.”"
      }
     },
     {
-     "claim": "Southampton took the lead after just ten minutes.",
+     "claim": "The Pentagon’s “Golden Dome” initiative is a multibillion‑dollar project aimed at creating a layered missile‑defense shield over the continental United States.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Southampton took just 10 minutes to open the scoring."
-     }
-    },
-    {
-     "claim": "The Carabao Cup second round tie between Southampton and West Ham United was played at St Mary's on Tuesday 25 August 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Tuesday 25 August 2026 22:39, UK"
-     }
-    },
-    {
-     "claim": "Nuno Espirito Santo fielded a team made up of four teenagers and three 20‑year‑olds, making eight changes from the previous match.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Nuno Espirito Santo made it clear a cup run was not his priority by fielding a team made up of four teenagers and three 20-year-olds"
+      "1": "The Pentagon’s new “Golden Dome” initiative, a multibillion-dollar project aimed at creating a layered missile defense shield over the continental United States, has flooded the"
      }
     }
    ],
    "images": []
-  },
-  {
-   "n": 10,
-   "topic": "unai emery",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "Villa beat Viking 3-1 to extend their European home winning streak to 12 games.",
-   "hooks": [
-    "Unai Emery holds the record for the most UEFA Europa League titles with five.",
-    "Unai Emery is the manager of Premier League club Aston Villa."
-   ],
-   "sources": [
-    [
-     "Emery's Villa 2.0 reboot restores optimism before Man City meeting",
-     "https://www.bbc.co.uk/sport/football/articles/cwg7xvz8e8dpo?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-23"
-    ],
-    [
-     "unai emery",
-     "https://en.wikipedia.org/wiki/Unai_Emery",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Unai Emery is the manager of Premier League club Aston Villa.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Emery celebrates the fourth anniversary of his appointment from Villarreal when Villa face Premier League leaders Manchester City at Villa Park on Saturday lunchtime, his",
-      "2": "Unai Emery Etxegoien (born 3 November 1971) is a Spanish football manager and former player who is the manager of Premier League club Aston Villa."
-     }
-    },
-    {
-     "claim": "Unai Emery holds the record for the most UEFA Europa League titles with five.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
-      "2": "One of the most successful managers in the history of European continental competitions, Emery holds the record for the most UEFA Europa League titles with"
-     }
-    },
-    {
-     "claim": "Emery won three consecutive Europa League titles with Sevilla.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
-      "2": "to sevilla in 2013 where he won an unprecedented three consecutive europa leagues emery moved to french club paris saint germain in 2016 there he won"
-     }
-    },
-    {
-     "claim": "Emery won a Europa League title with Villarreal.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It will come as no surprise given Emery's back catalogue of work, which includes three successive Europa League wins with Sevilla, another with Villarreal and",
-      "2": "He was hired by Villarreal in July 2020, where he won the Europa League in his first season and guided the club to a Champions"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Villa have now won 12 European home games in a row under Emery.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Villa have now won 12 European home games in a row, under the great specialist Emery."
-     }
-    },
-    {
-     "claim": "Emery celebrated the fourth anniversary of his appointment from Villarreal.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Emery celebrates the fourth anniversary of his appointment from Villarreal when Villa face Premier League leaders Manchester City at Villa Park on Saturday lunchtime, his"
-     }
-    },
-    {
-     "claim": "Emery holds the record for the most UEFA Europa League titles with five.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Emery holds the record for the most UEFA Europa League titles with five,[3][4]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Unai_Emery_-_Sevilla_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 12,
-   "topic": "ross barkley",
-   "signal": "Google Trends GB 1000+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside."
-   ],
-   "sources": [
-    [
-     "Barkley and Buendía on target as Aston Villa sink Viking to maintain perfect start",
-     "https://www.theguardian.com/football/2026/oct/21/aston-villa-viking-champions-league-match-report",
-     "Guardian",
-     "2026-10-21"
-    ],
-    [
-     "ross barkley",
-     "https://en.wikipedia.org/wiki/Ross_Barkley",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Ross Barkley is an Aston Villa player",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Two corners later, an inswinger from the livewire 18-year-old Ibrahim Mbaye was met by Ross Barkley, who leapt highest to plant a firm header across",
-      "2": "Ross Barkley (born 5 December 1993) is an English professional footballer who plays as a midfielder for Premier League club Aston Villa."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Ross Barkley[3] was born on 5 December 1993[4] in Liverpool, Merseyside.[5]"
-     }
-    },
-    {
-     "claim": "Barkley had scored twice in the previous week’s big win",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barkley had scored twice in the previous week’s big win but the rest of the first half resembled a quest for Emiliano Buendía to put"
-     }
-    },
-    {
-     "claim": "Ross Barkley was born on 5 December 1993 in Liverpool, Merseyside",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Ross Barkley[3] was born on 5 December 1993[4] in Liverpool, Merseyside.[5]"
-     }
-    },
-    {
-     "claim": "On 5 January 2018, Barkley joined Chelsea for £15 million, signing a five-and-a-half-year contract",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 5 January 2018, Barkley joined Premier League club Chelsea for a fee of £15 million, signing a five-and-a-half-year contract with the defending champions."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Ross_Barkley_in_2019.jpg"
-   ]
-  },
-  {
-   "n": 14,
-   "topic": "eberechi eze",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Eberechi Eze was born in Greenwich on 29 June 1998?"
-   ],
-   "sources": [
-    [
-     "eberechi eze",
-     "https://en.wikipedia.org/wiki/Eberechi_Eze",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Eberechi Eze was born on 29 June 1998 in Greenwich, Greater London.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Eberechi Oluchi Eze[4] was born on 29 June 1998[1] in Greenwich, Greater London.[5]"
-     }
-    },
-    {
-     "claim": "He was born on 29 June 1998 in Greenwich, Greater London",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Eberechi Oluchi Eze[4] was born on 29 June 1998[1] in Greenwich, Greater London."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Eberechi_Eze_England_v_Ghana_23_June_2026-039.jpg"
-   ]
   }
  ]
 }

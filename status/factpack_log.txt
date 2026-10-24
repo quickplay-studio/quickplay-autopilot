@@ -1,11 +1,8 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6 price: 4 verified, 3 one-source, 5 pages
-GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
-The Call the Police trend on TikTok and Instagram: 0 verified, 3 one-source, 1 pages
-west ham vs southampton: 0 verified, 6 one-source, 1 pages
-unai emery: 4 verified, 3 one-source, 2 pages
-ross barkley: 1 verified, 4 one-source, 2 pages
-eberechi eze: 0 verified, 2 one-source, 1 pages
-covered recently, no pack: GTA 6; Jailer 2; Clayface (film); BioWare; LISA; BABYMONSTER
-7 packs, 9 verified facts, 21 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 8, "groq:openai/gpt-oss-120b": 6}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 4}
+Celebrity Traitors 2026 cast: 0 verified, 4 one-source, 1 pages
+iPhone Duo goes on sale: 0 verified, 0 one-source, 1 pages
+Dai Dai by Shakira & Burna Boy: 0 verified, 5 one-source, 1 pages
+stoke: 1 verified, 4 one-source, 2 pages
+covered recently, no pack: GTA 6; Clayface (film); 2026 United States Grand Prix
+4 packs, 1 verified facts, 13 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 3}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}

@@ -1,5 +1,16 @@
-afternoon run for 2026-10-24: 0 to write from 7 fact packs
-category shares: {'Music': 0.33, 'Film': 0.32, 'Sport': 0.2, 'Gaming': 0.04, 'Entertainment': 0.04, 'Tech': 0.04, 'Science': 0.04}
+evening run for 2026-10-25: 4 to write from 9 fact packs
+category shares: {'Music': 0.28, 'Film': 0.19, 'Sport': 0.16, 'Gaming': 0.15, 'Entertainment': 0.08, 'Tech': 0.07, 'Science': 0.07}
+category floors first: ['Gaming', 'Music', 'Sport']
+QD-162: about 60 s needs 9 facts, the pack has 4: 35 to 44 s instead
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-wrote 0 of 0: 
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-flash-latest": 1, "gemini-3.5-flash-lite": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 0, "late": false, "claude today": "11 of 12 edits, 4 of 4 writes"}
+Ballon d'Or 2026: gemini-flash-latest, 0 warnings
+covered already: Ballon d'Or 2026 winner
+The Celebrity Traitors: still failing: excluded topic or virality words: ['murder', 'murdered']
+Celebrity Traitors 2026 cast: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+GTA 6 price: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (check these words are fine in context: ['invested'])
+watchlist GTA 6: today's places are filled: GTA 6 trailer views record
+exploration Short: Music: Dai Dai by Shakira & Burna Boy
+Dai Dai by Shakira & Burna Boy: gemini-3.6-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+evergreen: Top 10 highest-grossing Grand Theft Auto games: only 2 checked facts
+wrote 4 of 4: QD-162 Ballon d'Or 2026 ceremony is moving to London; QD-163 Richard E Grant admits betrayal to Joe Lycett; QD-164 GTA 6 price: the physical edition surprise 🎮; QD-165 Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20"}, "retired": ["openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemma-4-26b-a4b-it": 1}, "answers": {"gemini-flash-latest": 4, "gemini-3.5-flash-lite": 16, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 4, "gemini-3.6-flash": 4}, "empty answers": {"openrouter:nvidia/nemotron-3.5-lightning:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 1, "providers passed over": [], "late": false, "claude today": "11 of 4 edits, 4 of 0 writes"}

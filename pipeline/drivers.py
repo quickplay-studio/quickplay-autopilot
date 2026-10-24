@@ -81,10 +81,12 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
-            ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji")]
-PIPELINE_ONLY = {"late", "explore"}     # measured like the rest, but decided by the pipeline, never put to the writer
-NEVER_PAUSED = {"weekday", "late", "explore"}       # nothing the writer could leave out
-TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji")     # recorded on the board by the writer (writer.py tests)
+            ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
+            ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test")]
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm"}     # measured like the rest, but decided by the pipeline, never put to the writer
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm"}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
+          "fx_energy", "fx_slot", "writer_arm")     # the last three as assigned (24 October): an intention-to-treat comparison     # recorded on the board by the writer (writer.py tests)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
 T90 = ((1, 6.314), (2, 2.920), (3, 2.353), (4, 2.132), (5, 2.015), (6, 1.943), (7, 1.895), (8, 1.860), (9, 1.833),
        (10, 1.812), (12, 1.782), (15, 1.753), (20, 1.725), (30, 1.697), (60, 1.671))

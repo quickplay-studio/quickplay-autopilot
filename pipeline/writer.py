@@ -753,7 +753,13 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
     # a named recurring series per category ("Song Secrets #12: ..."), to turn viewers into subscribers (Charlie,
     # 23 October: subscribers are the Partner Programme blocker, 9 from 19,500 views); the title prefix is added in emit()
     "franchise": {"named": "", "plain": ""},
+    # factors that act after the writing (24 October, data report item 4): the camera energy (looks.choose honours the arm)
+    # and the quarter of the UK day the Short goes out (plan.py's slot picker); no prompt text, the arm rides on the
+    # board's test field and analytics records what was actually used (look_energy, fx_slot_used)
+    "fx_energy": {"steady": "", "lab-energy-1019": ""},   # the two active looks: punchy is retired (Charlie, 19 October: neat, minimal Shorts), calm by the data (23 October)
+    "fx_slot": {"06:00 to 12:00": "", "12:00 to 18:00": ""},
 }
+FX = ("fx_energy", "fx_slot")       # never drawn for an exploration Short, whose look and hour are drawn evenly (plan.py, looks.py)
 LONG_NEEDS = {"about 60 s": 9, "about 2 min": 16}      # facts a pack must hold for a long arm (never padding, never invention)
 NOT_FOR = {"breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
            "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
@@ -799,7 +805,7 @@ def test_plan(k, kind="news", explore=False, today=None):
     dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
     if explore:
         rng = random.Random(f"explore-arms:{k}")
-        picks = {t: rng.choice(arms(t)) for t in dims}
+        picks = {t: rng.choice(arms(t)) for t in dims if t not in FX}
         picks.update(replies=rng.choice(["on", "off"]), explore="yes")
         return style_note(picks), picks
     won = {t: a for t, a in winners().items() if t in dims}
@@ -965,6 +971,19 @@ def writer_name(model):
     return model if ":" in model else f"gemini:{model}"
 
 
+def writer_capped(m, stats=None):
+    """No model over 35% of the day's boards (counted by the model that actually wrote them) until it has WRITER_PROVEN
+    measured Shorts (24 October: one model wrote 41% of the day's boards on the strength of 2 measured Shorts)."""
+    if stats is None:
+        try: stats = json.loads((ROOT / "analytics" / "models.json").read_text()).get("writers") or {}
+        except Exception: stats = {}
+    counts = {}
+    for b in DAY["boards"]: counts[b.get("writer")] = counts.get(b.get("writer"), 0) + 1
+    total = sum(counts.values())
+    if total < 3 or int((stats.get(m) or {}).get("n") or 0) >= WRITER_PROVEN: return False
+    return (counts.get(writer_name(m), 0) + 1) / (total + 1) > WRITER_CAP
+
+
 def choose_writer(sid):
     """The first-choice model for one board, by Thompson sampling over the writers that still have quota, scored by
     analytics/models.json (each Short against Shorts posted around the same time). The prior is the writing order
@@ -978,15 +997,7 @@ def choose_writer(sid):
     except Exception: order = []
     cands = [m for m in order if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
              and slow.get(m, 0) < 2 and not m.startswith(("claude:", "local:")) and "lite" not in m]
-    # no model over 35% of the day's boards until it has 10 measured Shorts (24 October: one model wrote 41% of the day's
-    # boards on the strength of 2 measured Shorts)
-    counts = {}
-    for b in DAY["boards"]: counts[b.get("writer")] = counts.get(b.get("writer"), 0) + 1
-    total = sum(counts.values())
-    def capped(m):
-        if total < 3 or int((stats.get(m) or {}).get("n") or 0) >= WRITER_PROVEN: return False
-        return (counts.get(writer_name(m), 0) + 1) / (total + 1) > WRITER_CAP
-    cands = [m for m in cands if not capped(m)]
+    cands = [m for m in cands if not writer_capped(m, stats)]
     if len(cands) < 2: return cands[0] if cands else None
     rng, best, top = random.Random(f"writer:{sid}"), None, -1e9
     for i, m in enumerate(cands):
@@ -1118,7 +1129,12 @@ def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):
 
 def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
-    pick = claude_arm(sid) or choose_writer(sid)
+    # the writer-model test (factpack.writer_test, data report item 7): the board's arm decides the first model, unless
+    # Claude's own arm has it or the 35% cap says no (the arm is still recorded: an intention-to-treat comparison)
+    arm, arm_model = factpack.writer_test(int(re.sub(r"\D", "", str(sid)) or 0), day if isinstance(day, dt.date) else None)
+    claude = claude_arm(sid)
+    test_pick = arm_model if arm_model and not claude and not writer_capped(arm_model) else None
+    pick = claude or test_pick or choose_writer(sid)
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, writing=True, **({"prefer": pick} if pick else {}))
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
@@ -1130,6 +1146,7 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         for k in ("tiktok", "look", "flag", "bgvideo") + BOOKKEEPING: b.pop(k, None)
         b = {"id": sid, "created": str(day), **{k: v for k, v in b.items() if k not in ("id", "created", "writer")}, "writer": writer_name(model)}
         if tests: b["test"] = dict(tests)          # the validator reads the length and title emoji arms from it
+        if arm: b.setdefault("test", {}).update(writer_arm=arm, writer_arm_used=factpack.writer_arm_of(model))
         if (tests or {}).get("title_emoji") == "none": shape(b, {"title_emoji": "none"})     # an emoji the model added anyway goes
         added = BG.fill(b)        # the video behind the Short: the writer's own searches, tidied; the category's when it gave fewer than 2
         if os.environ.get("WRITE_DRY"): b["mode"] = "dry"
@@ -1149,7 +1166,7 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
         if attempt == 2: break
         fix = (prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p) + "\n\nYOUR BOARD\n" + json.dumps(ans, ensure_ascii=False)
                + "\n\nIt fails these checks. Fix every one and return the whole corrected board as JSON:\n- " + "\n- ".join(errs + warns))
-        ans, model = factpack.gemini(fix, None, timeout=150, temperature=0.3, writing=True)
+        ans, model = factpack.gemini(fix, None, timeout=150, temperature=0.3, writing=True, **({"prefer": test_pick} if test_pick else {}))
         if not isinstance(ans, dict): break
     return best or (None, "still failing: " + "; ".join(errs)[:300])
 

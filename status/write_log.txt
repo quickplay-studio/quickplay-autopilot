@@ -1,14 +1,8 @@
-morning run for 2026-10-24: 7 to write from 6 fact packs
+breaking run for 2026-10-24: 1 to write from 5 fact packs
 category shares: {'Music': 0.36, 'Sport': 0.25, 'Film': 0.22, 'Gaming': 0.05, 'Entertainment': 0.04, 'Tech': 0.04, 'Science': 0.04}
-QD-153: about 2 min needs 16 facts, the pack has 7: 35 to 44 s instead
+watchlist GTA 6: today's places are filled: GTA 6 price
+watchlist GTA 6: today's places are filled: GTA 6 trailer views record
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-ballon d or ceremony: groq:openai/gpt-oss-120b, 1 warnings (check these words are fine in context: ['vote', 'voting']), edited by Claude
-ufc: claude:sonnet, 0 warnings
-John Anderson (singer): gemini-3.7-flash, 0 warnings, edited by Claude
-TV Royale: gemini-3.7-flash, 0 warnings, edited by Claude
-kimi: gemini-3.7-flash, 0 warnings, editor: kept the original (meta.alt_title: under 70 characters, one emoji at the end)
-This Game is FREE if you beat it fast enough: gemini-3.7-flash, 0 warnings, edited by Claude
-This Game is FREE if you beat it fast enough: gemini-3.7-flash, 0 warnings, editor: no answer (claude:sonnet: run cap reached)
-Top 10 most successful players in Ballon d'Or history: gemini-3.7-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 8 of 7: QD-153 The Ballon d'Or is coming to London for the first time 🏆; QD-154 Volkanovski vs Evloev: UFC 333 record on the line 🥊; QD-155 Country legend John Anderson has died aged 71 🎸; QD-156 Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴; QD-157 Kimi Antonelli: F1's youngest world champion? 🏎️; QD-158 Free Steam games to grab before time runs out (Part 1) 🎮; QD-159 Free Steam games you can play right now (Part 2) 🎮; QD-160 Ballon d'Or: most wins in football history 🏆 (reserve)
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"claude:sonnet": "run cap"}, "retired": [], "timeouts": {"gemini-flash-latest": 1, "gemini-3.8-flash": 1}, "answers": {"gemini-3.7-flash": 8, "gemini-3.5-flash-lite": 24, "groq:openai/gpt-oss-120b": 3, "claude:sonnet": 6}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 6, "second opinions": 1, "late": false, "claude today": "10 of 12 edits, 4 of 4 writes"}
+WHERE IS MY HUSBAND! by RAYE: groq:openai/gpt-oss-120b, 0 warnings, edited by Claude
+wrote 1 of 1: QD-161 Raye is 28 and Where Is My Husband just hit a billion streams 🎉
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash-lite": 3, "claude:sonnet": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 1, "second opinions": 0, "late": false, "claude today": "11 of 12 edits, 4 of 4 writes"}

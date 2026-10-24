@@ -73,10 +73,6 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-144](QD-144.jpg)
 
-## In the queue
-
-- **QD-147** Jorja Smith sings at the Amy Winehouse tribute 🎤 (rendering next)
-
 ## On the channel (latest first)
 
 ### Sat 24 Oct 0:30 · BABYMONSTER's G-Dragon Drip collab 🎧

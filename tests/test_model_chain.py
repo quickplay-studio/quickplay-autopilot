@@ -168,33 +168,24 @@ _, single = F.verify([{"claim": "Minecraft is number one with 300,000,000 copies
 assert len(single) == 1, single
 print("wiki tables ok")
 
-# GitHub Models (24 October): free with the workflow's own token; its catalog lists the models, the best writers come first,
-# a daily limit ("per 86400s") marks the model spent, and its requests ask for at most 4,000 tokens back
-import factpack as F2
-F2.STATE.clear(); os.environ["GH_MODELS_TOKEN"] = "t"
-F2.CFG = dict(F2.CFG, providers={})
-class _R:
-    def __init__(self, code, data, headers=None): self.status_code, self.data, self.ok, self.headers, self.text = code, data, code == 200, headers or {}, json.dumps(data)
+
+# Cloudflare Workers AI (24 October): dormant until both secrets exist; the account id goes into the base; its preferred
+# models when it lists none; its free daily allocation ("neurons") used up marks the model spent
+import factpack as F3, requests as _rq3
+F3.STATE.clear(); F3.CFG = dict(F3.CFG, providers={})
+os.environ.pop("CF_ACCOUNT_ID", None); os.environ["CF_API_TOKEN"] = "t"
+assert F3.provider_base("cloudflare") is None and F3.provider_models("cloudflare") == []
+F3.STATE.clear(); os.environ["CF_ACCOUNT_ID"] = "acc1"
+assert F3.provider_base("cloudflare") == "https://api.cloudflare.com/client/v4/accounts/acc1/ai/v1"
+class _R3:
+    def __init__(self, code, data): self.status_code, self.data, self.ok, self.headers, self.text = code, data, code == 200, {}, json.dumps(data)
     def json(self): return self.data
-SEEN = []
-def _get(url, **kw):
-    SEEN.append(url)
-    return _R(200, [{"id": "openai/gpt-4.1", "supported_output_modalities": ["text"]}, {"id": "openai/gpt-4o-mini", "supported_output_modalities": ["text"]},
-                    {"id": "openai/text-embedding-3-small", "supported_output_modalities": ["embeddings"]}, {"id": "microsoft/Phi-4", "supported_output_modalities": ["text"]}])
-F2.requests = None
-import requests as _rq
-_old_get, _old_post = _rq.get, _rq.post
-_rq.get = _get
-got = F2.provider_models("github")
-assert SEEN[-1] == F2.GITHUB_CATALOG and got[0] == "github:openai/gpt-4.1" and "github:openai/text-embedding-3-small" not in got, got
-BODIES = []
-def _post(url, json=None, **kw):
-    BODIES.append((url, json))
-    return _R(429, {"error": {"message": "Rate limit of 50 per 86400s exceeded for UserByModelByDay."}})
-_rq.post = _post
-ans, why = F2.openai_chat("github:openai/gpt-4.1", "https://models.github.ai/inference", "t", "openai/gpt-4.1", "x", 30, 0.2)
-assert ans is None and "github:openai/gpt-4.1" in F2.STATE["spent_models"] and BODIES[0][1]["max_tokens"] == 4000, (why, BODIES[0][1].get("max_tokens"))
-assert BODIES[0][0] == "https://models.github.ai/inference/chat/completions"
-_rq.get, _rq.post = _old_get, _old_post
-os.environ.pop("GH_MODELS_TOKEN", None)
-print("github models ok")
+_g, _p = _rq3.get, _rq3.post
+_rq3.get = lambda url, **kw: _R3(404, {"errors": [{"message": "not found"}]})
+assert F3.provider_models("cloudflare")[0] == "cloudflare:@cf/openai/gpt-oss-120b"
+_rq3.post = lambda url, **kw: _R3(429, {"errors": [{"message": "You have used up your daily free allocation of 10,000 neurons"}]})
+ans, why = F3.openai_chat("cloudflare:@cf/openai/gpt-oss-120b", F3.provider_base("cloudflare"), "t", "@cf/openai/gpt-oss-120b", "x", 30, 0.2)
+assert ans is None and "cloudflare:@cf/openai/gpt-oss-120b" in F3.STATE["spent_models"], why
+_rq3.get, _rq3.post = _g, _p
+for k in ("CF_ACCOUNT_ID", "CF_API_TOKEN"): os.environ.pop(k, None)
+print("cloudflare ok")

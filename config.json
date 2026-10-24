@@ -125,6 +125,8 @@
   "tiktok": [],
   "contentrewards": "Studio SocialMedia",
   "secrets": [
+   "CF_ACCOUNT_ID",
+   "CF_API_TOKEN",
    "CEREBRAS_API_KEY",
    "CLAUDE_CODE_OAUTH_TOKEN",
    "FB_CLIPS_PAGE_ID",

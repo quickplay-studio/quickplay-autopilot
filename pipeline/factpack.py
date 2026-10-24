@@ -315,13 +315,22 @@ PROVIDERS = {
                  ["gpt-oss-120b", "qwen-3-235b-a22b-instruct-2507", "llama-3.3-70b"]),
     "mistral": ("MISTRAL_API_KEY", "https://api.mistral.ai/v1", ["mistral-large-latest", "mistral-medium-latest", "mistral-small-latest"]),
     "openrouter": ("OPENROUTER_API_KEY", "https://openrouter.ai/api/v1", []),       # its ":free" models, biggest context first
-    # GitHub Models (24 October): free with the workflow's own token (permissions: models: read, GH_MODELS_TOKEN), no key
-    # or account; the free tier takes about 8,000 tokens a request (a bigger prompt moves on to the next model) and some
-    # dozens of requests a day per model, so it widens the chain rather than carrying it
-    "github": ("GH_MODELS_TOKEN", "https://models.github.ai/inference",
-               ["openai/gpt-4.1", "openai/gpt-4o", "deepseek/DeepSeek-V3-0324", "meta/Llama-4-Maverick-17B-128E-Instruct-FP8"]),
+    # Cloudflare Workers AI (24 October): free 10,000 "neurons" a day on the free plan, no card, commercial use allowed; a
+    # Short's board costs about 400 neurons on gpt-oss-120b, so about 25 a day. Dormant until Charlie adds CF_ACCOUNT_ID and
+    # CF_API_TOKEN (a token with Workers AI permission) as repository secrets. Big Llama output is costly in neurons, so
+    # gpt-oss-120b first, then the cheap Qwen.
+    "cloudflare": ("CF_API_TOKEN", "https://api.cloudflare.com/client/v4/accounts/{CF_ACCOUNT_ID}/ai/v1",
+                   ["@cf/openai/gpt-oss-120b", "@cf/qwen/qwen3-30b-a3b-fp8", "@cf/meta/llama-3.3-70b-instruct-fp8-fast"]),
 }
-GITHUB_CATALOG = "https://models.github.ai/catalog/models"
+
+
+def provider_base(name):
+    """A provider's API base, with the Cloudflare account id filled in; None when a needed id is missing."""
+    base = PROVIDERS[name][1]
+    if "{CF_ACCOUNT_ID}" in base:
+        acct = os.environ.get("CF_ACCOUNT_ID", "").strip()
+        return base.replace("{CF_ACCOUNT_ID}", acct) if acct else None
+    return base
 NOT_TEXT = re.compile(r"whisper|tts|guard|embed|playai|distil|vision|ocr|moderation|audio|transcri|image|prompt-guard|compound", re.I)
 JSON_ONLY = "Reply with one JSON value only, no other text."
 FACT_SHAPE = 'Reply as JSON: {"what_is_new": "...", "hooks": ["..."], "facts": [{"claim": "...", "evidence": [{"source": 1, "quote": "..."}]}]}'
@@ -370,20 +379,19 @@ def provider_models(name):
     if name in cache: return cache[name]
     env, base, pref = PROVIDERS[name]
     key = os.environ.get(env, "").strip()
+    base = provider_base(name)
     got = []
-    if key:
+    if key and base:
         cfg = (CFG.get("providers") or {}).get(name)
         if cfg: got = list(cfg)
         else:
             import requests
             ids, meta = [], {}
             try:
-                url = GITHUB_CATALOG if name == "github" else base + "/models"
-                r = requests.get(url, headers={"Authorization": f"Bearer {key}", "Accept": "application/json"}, timeout=30)
+                r = requests.get(base + "/models", headers={"Authorization": f"Bearer {key}", "Accept": "application/json"}, timeout=30)
                 data = r.json() if r.ok else []
                 for m in (data if isinstance(data, list) else data.get("data") or []):
                     if not isinstance(m, dict) or not m.get("id") or NOT_TEXT.search(m["id"]): continue
-                    if name == "github" and "text" not in (m.get("supported_output_modalities") or ["text"]): continue
                     ids.append(m["id"]); meta[m["id"]] = m
             except Exception: pass
             if name == "openrouter":
@@ -449,7 +457,7 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
     nojson = STATE.setdefault("no_json_mode", set())
     why = f"{label}: no answer"
     for attempt in range(3):
-        body = {"model": model, "temperature": temperature, "max_tokens": 4000 if label.startswith("github:") else 6000,   # GitHub's free tier: 4,000 out
+        body = {"model": model, "temperature": temperature, "max_tokens": 6000,
                 "messages": [{"role": "system", "content": JSON_ONLY}, {"role": "user", "content": prompt}]}
         if label not in nojson: body["response_format"] = {"type": "json_object"}
         try:
@@ -468,6 +476,8 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
             time.sleep(min(65, ra + 2) if ra else 20 * (attempt + 1)); why = f"{label}: per-minute limit"; continue
         if r.status_code in (401, 403):
             spent.add(label); notes[label] = f"key refused ({r.status_code})"; return None, f"{label}: key refused"
+        if "neurons" in t and re.search(r"used up|exceed|limit|allocation", t):        # Cloudflare's free daily allocation
+            spent.add(label); notes[label] = "daily limit (neurons)"; return None, f"{label}: free quota used up"
         if r.status_code == 404:
             spent.add(label); return None, f"{label}: not offered (404)"
         if r.status_code == 413 or ("context" in t and "length" in t) or "too large" in t:
@@ -565,7 +575,7 @@ def others(prompt, timeout=100, temperature=0.1, lite=False, only=None):
     for label in todo:
         prov, model = label.split(":", 1)
         if prov in PROVIDERS:
-            ans, why = openai_chat(label, PROVIDERS[prov][1], os.environ.get(PROVIDERS[prov][0], "").strip(), model, prompt,
+            ans, why = openai_chat(label, provider_base(prov), os.environ.get(PROVIDERS[prov][0], "").strip(), model, prompt,
                                    timeout, temperature)
         elif prov == "local":
             if not local_start(): spent.add(label); continue

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-23T11:00:00Z",
  "rendered": "2026-10-23T09:35:28.120123+00:00",
- "title": "Formula 1: African Grand Prix deal signed 🏎️",
+ "title": "Lewis Hamilton aims to race in Rwanda Grand Prix 🏁",
  "background_notes": [
   "picked pixabay 3 (+3 spares)"
  ],
@@ -110,7 +110,14 @@
  "social_release": "social-QD-130",
  "engage": {
   "comment": "UgwENpQ2jlI-sitkMk14AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Formula 1: African Grand Prix deal signed 🏎️",
+   "to": "Lewis Hamilton aims to race in Rwanda Grand Prix 🏁",
+   "at": "2026-10-24T11:10+00:00",
+   "views_an_hour": 0.1,
+   "typical": 0.8
+  }
  },
  "instagram": {
   "media": "18162685483436670",

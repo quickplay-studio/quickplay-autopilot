@@ -1269,8 +1269,10 @@ def reach_check(rows):
         c["age_restricted"] += int(r.get("age_restricted") or 0); c["for_kids"] += int(r.get("for_kids") or 0)
         if old:
             c["public_a_day_old"] += 1; c["no_views"] += int(float(r.get("views") or 0) == 0)
-    for c in out.values():
-        c["unseen"] = c["public_a_day_old"] >= 8 and c["no_views"] >= 0.8 * c["public_a_day_old"]
+            c["views_day_old"] = c.get("views_day_old", 0) + int(float(r.get("views") or 0))
+    for c in out.values():           # unseen: 8 or more clips a day old, 70% with no views or under 5 views a clip
+        n = c["public_a_day_old"]
+        c["unseen"] = n >= 8 and (c["no_views"] >= 0.7 * n or c.get("views_day_old", 0) < 5 * n)
     (ROOT / "clips" / "reach.json").write_text(json.dumps({"as_of": NOW.isoformat(timespec="minutes"), "channels": out}, indent=1))
     return out
 

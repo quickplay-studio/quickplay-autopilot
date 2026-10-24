@@ -206,7 +206,8 @@ def funnel_check():
 
 def reach_alert():
     """Clips that YouTube shows to nobody (clips/reach.json, from the nightly clip stats): one issue naming the channels where
-    8 or more clips a day old have 80% or more with no views, or where YouTube rejected, blocked or age-restricted clips,
+    8 or more clips a day old have 70% with no views or under 5 views a clip, or where YouTube rejected, blocked or
+    age-restricted clips,
     with what to look at in Studio. Closed again once every channel is seen. (24 October: 34 clips, 11 views.)"""
     try: r = json.loads((ROOT / "clips" / "reach.json").read_text())
     except Exception: return

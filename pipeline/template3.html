@@ -100,6 +100,29 @@ body.lay-social #caps { top: 1110px; }
 body.lay-social.cap-clean #caps { top: 1150px; }
 body.lay-social.cap-pop #caps { top: 1060px; }
 body.lay-social.cap-minimal #caps { top: 1170px; }
+/* the style test (templates/looks.json "style", Charlie 24 October: minimal text, fast pictures, nothing over the
+   middle of the picture). "low" captions: about two thirds the size, 3 words, a soft shadow only, in a 120px band
+   above YouTube's title rows (1385 to 1505) and clear of the button column on the right */
+body.cap-low #caps { top: 1385px; height: 122px; left: 80px; right: 250px; }
+body.cap-low .capbox { gap: 0 13px; max-width: 100%; }
+body.cap-low .cw { font: 700 46px/1.18 "Inter"; text-transform: none; -webkit-text-stroke: 0; letter-spacing: -0.2px;
+  color: rgba(245,248,250,.86); text-shadow: 0 2px 16px rgba(0,0,0,.85), 0 1px 3px rgba(0,0,0,.95); }
+body.cap-low .cw.on { color: #FFFFFF; }
+body.lay-social.cap-low #caps { top: 1265px; }
+/* the category chip and the credit line small (the chip shows for the first 2.5 seconds only, renderAt) */
+body.chip-brief #chip { top: 238px; padding: 8px 16px 8px 12px; gap: 8px; font-size: 22px; letter-spacing: 2px; border-width: 2px;
+  background: color-mix(in srgb, var(--accent) 14%, rgba(8,12,18,.66)); }
+body.chip-brief #chip svg { width: 24px; height: 24px; }
+body.chip-brief #credit { left: auto; right: 70px; top: 304px; max-width: 900px; overflow: hidden; text-overflow: ellipsis; text-align: right;
+  font-size: 20px; color: rgba(245,248,250,.74); }      /* under the @handle on the right, so the name tag has the left to itself */
+/* a name once, as a small corner tag for 1.2 seconds (render3 "brief"), top left or, when a face is there, top right */
+.mi .mtag { position: absolute; top: 334px; left: 70px; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; max-width: 560px; opacity: 0; }
+.mi .mtag.right { left: auto; right: 70px; align-items: flex-end; }
+.mtag .tn { font: 700 34px/1.1 "Inter"; color: #FFFFFF; white-space: nowrap; text-shadow: 0 2px 12px rgba(0,0,0,.85), 0 1px 3px rgba(0,0,0,.9); }
+.mtag .tr { font: 700 18px "Inter"; letter-spacing: 2px; text-transform: uppercase; color: #0B1118; background: var(--accent); padding: 4px 10px; border-radius: 999px; }
+/* a lighter shade over full-screen pictures (the standard one is .86 at the top and .9 at the bottom, with a dim of up to .3 on top):
+   a little down to the chip, credit and name tag rows (to 407px), nothing across the middle, a little under the captions (1385 to 1507) */
+body.shade-light #mshade { background: linear-gradient(180deg, rgba(8,12,18,.6) 0%, rgba(8,12,18,.34) 13%, rgba(8,12,18,.15) 20%, rgba(8,12,18,0) 26%, rgba(8,12,18,0) 66%, rgba(8,12,18,.4) 80%, rgba(8,12,18,.58) 100%); }
 body.cap-lab #caps { top: var(--cap-top, 1290px); height: 230px; }      /* look lab (lab.py): settings come from the look */
 body.cap-lab .capbox { gap: 0 18px; max-width: 920px; background: var(--cap-box, transparent); border-radius: 28px; padding: var(--cap-pad, 0); }
 body.cap-lab .cw { font: var(--cap-weight, 700) var(--cap-size, 68px)/1.2 "Inter"; text-transform: none; -webkit-text-stroke: 0; letter-spacing: -0.4px;
@@ -188,6 +211,8 @@ async function build(data) {
   document.body.classList.add('cap-' + (LK.captions || 'punch'));
   for (const [k, v] of Object.entries(LK.cap || {})) document.body.style.setProperty('--cap-' + k, String(v));
   if (D.layout === 'social') document.body.classList.add('lay-social');
+  if (LK.chip === 'brief') document.body.classList.add('chip-brief');          // the style test (looks.json "style")
+  if (LK.shade === 'light') document.body.classList.add('shade-light');
   if (LK.filter && LK.filter !== 'none') { document.getElementById('media').style.filter = LK.filter; document.getElementById('bgv').style.filter = LK.filter; }
   if (D.bg && D.bg.count) {                       // the video behind the Short: frames are swapped in prepMedia
     document.body.classList.add('hasbg');
@@ -219,7 +244,11 @@ async function build(data) {
       d.appendChild(f);
     }
     let lab = null;
-    if (hasLab) {
+    if (hasLab && m.brief) {               // a small corner tag, once per name (render3 "brief"), away from the face
+      lab = document.createElement('div'); lab.className = 'mtag' + (m.tagRight ? ' right' : '');
+      lab.innerHTML = (m.label.t ? `<div class="tn">${esc(m.label.t)}</div>` : '') + (m.label.s ? `<div class="tr">${esc(m.label.s)}</div>` : '');
+      d.appendChild(lab);
+    } else if (hasLab) {
       lab = document.createElement('div'); lab.className = 'mlab' + (box ? ' clab' : '');
       if (box) {                 // centred under its card, and narrow enough to stay clear of the button column on the right
         const cx = box.x + box.w / 2;
@@ -230,6 +259,7 @@ async function build(data) {
     }
     mediaEl.appendChild(d);
     if (lab) lab.querySelectorAll('.mname').forEach(n => fitEl(n, box ? 720 : 760));      // the label column stops short of the button column
+    if (lab) lab.querySelectorAll('.tn').forEach(n => fitEl(n, 560));
     M.push(Object.assign({}, m, {el: d, f, wrap, ci, cdim, box, lab, cur: -1}));
   });
   await Promise.all([...mediaEl.querySelectorAll('img'), ...(BG ? [BG.img] : [])].map(i => i.decode().catch(() => {})));
@@ -346,9 +376,13 @@ function renderAt(t) {
       }
       m.f.style.filter = blur > 0.5 ? `blur(${blur.toFixed(1)}px)` : 'none';
     }
-    if (m.lab) { const q = easeBack((t - m.t0 - 0.1) / 0.35); m.lab.style.opacity = easeOut((t - m.t0 - 0.1) / 0.25) * clamp((m.t1 - t) / 0.15, 0, 1); m.lab.style.transform = `translateY(${(1 - q) * 40}px)`; }
+    if (m.lab && m.brief) {                // the corner tag: in for 1.2 seconds at most, then gone
+      const until = Math.min(m.t1, m.t0 + 1.3);
+      m.lab.style.opacity = easeOut((t - m.t0 - 0.1) / 0.2) * clamp((until - t) / 0.2, 0, 1);
+    } else if (m.lab) { const q = easeBack((t - m.t0 - 0.1) / 0.35); m.lab.style.opacity = easeOut((t - m.t0 - 0.1) / 0.25) * clamp((m.t1 - t) / 0.15, 0, 1); m.lab.style.transform = `translateY(${(1 - q) * 40}px)`; }
   });
   document.getElementById('flash').style.opacity = flash;
+  if (D.look && D.look.chip === 'brief') document.getElementById('chip').style.opacity = clamp((2.5 - t) / 0.3, 0, 1);   // the first 2.5 seconds only (gone by 2.5)
   document.body.classList.toggle('hasmedia', vis > 0.02 || !!BG);
   // a card dims itself (.cdim) and needs no gradient across it; full-screen pictures and video keep the old dim and shade
   const card = !!(top && top.wrap);

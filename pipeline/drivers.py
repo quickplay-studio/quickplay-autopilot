@@ -79,7 +79,7 @@ def dead(rows):
 FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook style"), ("hook_len", "Hook length"),
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
-            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
+            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("look_style", "Style (text and pace)"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
             ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test")]
@@ -87,8 +87,8 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm", "look_style"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal, until a proven arm)
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm", "look_style"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
           "fx_energy", "fx_slot", "writer_arm")     # recorded on the board by the writer (writer.py tests); the last three as assigned (an intention-to-treat comparison)
 NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
@@ -117,7 +117,7 @@ def _f(x):
 def features(r):
     """The comparable things about one Short (shorts.csv row) as {feature: value}."""
     out = {k: (r.get(k) or "") for k in ("category", "format", "mood", "look_captions", "look_voice", "look_energy",
-                                          "look_grade", "look_opening")}
+                                          "look_grade", "look_opening", "look_style")}
     out["hook_type"] = r.get("hook_type") or hook_type(r.get("hook"))
     hw = _f(r.get("hook_words"))
     out["hook_len"] = "" if not hw else ("8 words or fewer" if hw <= 8 else "9 to 12 words" if hw <= 12 else "13 words or more")

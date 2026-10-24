@@ -9,6 +9,12 @@ Storyboard additions over v2:
                    "label": {"t", "s"}, "credit", "tin": cut|whip|zoom|flash}]
   beat["impact"]: true  -> boom + punch-in at the beat start
   beat["riser"]: true   -> riser leading into the beat
+  shot["extra"]: true, shot["of"]: <src>  -> another photo of the subject of the shot whose src is "of" (fetch_media.extras),
+                   used only by the fast pace; the other pace never sees it
+  shot["crop"], ["amp"] -> a closer crop (1.0 to 1.26) and a shorter move (0.6) for a fast-pace quick cut
+The look's style (templates/looks.json, 24 October): "minimal" turns text cards into photos, shows a name once as a
+corner tag, keeps the chip to the first 2.5 seconds, lightens the shade and cuts to a new picture every 1.2 to 1.8 s;
+"standard" is as before.
 """
 import asyncio, json, math, os, subprocess, sys, pathlib, time
 HERE = pathlib.Path(__file__).resolve().parent
@@ -105,6 +111,7 @@ def scene_fit(src, start, vis, slow):
     return round(st, 3), round(slow, 3), note
 
 LOOK, MOTION = {}, 1.0     # set in main() from the board's look (templates/looks.json, resolved by run_board.py)
+FACES = {}                 # face_focus per picture, so the quick cuts of one photo look it up once
 CARDS = False              # set in main(): True only with config.json render.picture_cards (photos as cards over the background video);
                            # off since 22 October: every picture fills the 9:16 screen (Charlie: no dead space), the video plays behind graphics
 try: CFG_RENDER = (json.loads((pathlib.Path(__file__).resolve().parent.parent / "config.json").read_text()).get("render") or {})
@@ -139,12 +146,123 @@ def card_move(move):
         return 1.08, 1.08, x0, x1, y0, y1
     return 1.0, 1.0 + 0.10 * MOTION, 0, 0, 0, 0
 
-def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
+# ---------------- the style test (templates/looks.json "style", Charlie 24 October) ----------------
+# minimal: "fast changing images with minimal text", nothing covering the picture. Text slabs give way to the beat's
+# photo, a name shows once as a small corner tag, and a still picture never holds longer than PACE_MAX: the beat's extra
+# photos of the same subject (fetch_media.extras) come in, else the same photo with another crop and move.
+TEXTY = {"title", "stat", "cards", "quote", "timeline", "bars", "date", "versus"}
+PACE_MAX, PACE_TARGET, PACE_MIN = 1.8, 1.5, 1.2      # seconds a still picture holds under the fast pace
+MOVES = ("in", "left", "out", "right", "up", "down")
+
+
+def minimal_photos(sb, beats):
+    """Under the minimal style ("graphics": "photo"): a beat whose visual is a text slab (TEXTY) shows its full-screen
+    photo instead (the numbers stay in the narration and the captions); one with no picture of its own borrows the
+    nearest beat's, closer and with another move. A media beat's name label becomes its first picture's brief tag.
+    Returns {beat index: label} for those tags. The timeline's beats (what template3.html draws) change, not the board."""
+    tags = {}
+    if LOOK.get("graphics") != "photo": return tags
+    have = [bi for bi, bt in enumerate(sb["beats"]) if bt.get("shots")]
+    for bi, (beat, b) in enumerate(zip(sb["beats"], beats)):
+        v = b.get("visual") or beat.get("visual") or {}
+        kind = v.get("type")
+        if kind == "media" and (v.get("t") or v.get("s")):
+            tags[bi] = {"t": v.get("t", ""), "s": v.get("s", "")}
+            b["visual"] = {"type": "media"}
+        if kind not in TEXTY: continue
+        if not beat.get("shots"):
+            if not have: continue                     # no picture anywhere in the Short: the card stays
+            donor = min(have, key=lambda j: (abs(j - bi), j > bi))
+            d = dict(sb["beats"][donor]["shots"][-1 if donor < bi else 0])
+            for key in ("at", "label", "w", "tin", "extra", "of"): d.pop(key, None)
+            d.update(move="out" if d.get("move", "in") == "in" else "in", crop=1.22)
+            if d.get("start") is not None: d["start"] = float(d["start"]) + 2.0
+            beat["shots"] = [d]
+        b["visual"] = {"type": "none", "was": kind}
+    return tags
+
+
+def pace_cuts(t0, t1, mbeats):
+    """The cut times that split a picture's [t0, t1] into pictures of PACE_MIN to PACE_MAX seconds, as near PACE_TARGET as
+    the span allows, each cut moved onto the music's beat when one is near enough (0.16 s) to keep every picture inside that
+    band; a cut with no beat near is the even one, moved only as far as the band needs. No whole number of such pictures
+    fits a span of 1.8 to 2.4 seconds: it takes the count that misses the band by least, in even pieces (up to 2.0 s stays
+    one picture)."""
+    span = t1 - t0
+    if span <= PACE_MAX: return [t0, t1]
+    miss = lambda n: max(0.0, PACE_MIN - span / n, span / n - PACE_MAX)
+    n = min(range(1, int(span / 0.6) + 2), key=lambda n: (round(miss(n), 3), abs(span / n - PACE_TARGET), n))
+    inband = n * PACE_MIN - 1e-9 <= span <= n * PACE_MAX + 1e-9      # else no cut can put every piece in the band
+    cuts = [t0]
+    for j in range(1, n):
+        c, left = t0 + span * j / n, n - j                           # `left` pictures still to come after this cut
+        if inband:                                                   # this cut keeps this piece and the `left` after it inside the band
+            lo = max(cuts[-1] + PACE_MIN, t1 - left * PACE_MAX); hi = min(cuts[-1] + PACE_MAX, t1 - left * PACE_MIN)
+            near = [mb for mb in mbeats if abs(mb - c) <= 0.16 and lo <= mb <= hi]
+            if near: c = min(near, key=lambda mb: abs(mb - c))
+            c = min(max(c, lo), hi)
+            lo3, hi3 = math.ceil(lo * 1000 - 1e-6) / 1000, math.floor(hi * 1000 + 1e-6) / 1000      # still inside the band at the millisecond
+            if lo3 <= hi3: c = min(max(round(c, 3), lo3), hi3)
+        else: c = round(c, 3)
+        cuts.append(c)
+    return cuts + [t1]
+
+
+def next_move(prev):
+    """A move unlike `prev`: the next of MOVES (a push in, a pan, a pull out, a pan the other way, up, down), never "still"."""
+    return MOVES[(MOVES.index(prev) + 1) % len(MOVES)] if prev in MOVES else MOVES[0]
+
+
+def variant(shot, k, prev_move):
+    """The same picture again for the k-th quick cut of a long hold: a closer crop, then a mid one, then the full frame,
+    each with a move unlike the one before."""
+    v = {key: val for key, val in shot.items() if key not in ("at", "label", "tin", "w", "extra", "of")}
+    v["move"] = next_move(prev_move)
+    v["crop"] = (1.26, 1.13, 1.0)[(k - 1) % 3]
+    return v
+
+
+def split_segments(segs, pool, mbeats):
+    """Fast pace: a still picture held longer than PACE_MAX becomes quick cuts of 1.2 to 1.8 seconds (pace_cuts). The first
+    keeps the board's picture; the next ones are more photos of the same subject (the beat's `pool`: shots marked "extra"
+    and "of" this picture, fetch_media.extras) while it has any, then the same photo again with a new crop and a short move
+    (variant). Video keeps its own motion."""
+    out = []
+    for shot, t0, t1 in segs:
+        cs = pace_cuts(t0, t1, mbeats)
+        if len(cs) == 2 or pathlib.Path(str(shot.get("src", ""))).suffix.lower() in R.VIDEO_EXT:
+            out.append((shot, t0, t1)); continue
+        mine = [x for x in pool if x.get("of") == shot.get("src")]       # this picture's own extra photos, as they were found
+        prev, k = shot.get("move", "in"), 0
+        for i, (a, b) in enumerate(zip(cs, cs[1:])):
+            if i == 0: s = dict(shot)
+            elif mine:
+                s = dict(mine.pop(0)); s["tin"] = "cut"
+                if s.get("move") in (None, prev): s["move"] = next_move(prev)
+            else:
+                k += 1; s = variant(shot, k, prev); s["tin"] = "cut"
+            s["amp"] = 0.6                              # a short move: the cut does the work
+            prev = s.get("move", "in")
+            out.append((s, a, b))
+    return out
+
+
+def tag_right(face, W, H, cx0, cy0, s0):
+    """True when the picture's face sits where the brief name tag would go (top left), so the tag goes top right."""
+    if not face or not W: return False
+    x, y = 540 + (face[0] * W - cx0) * s0, 960 + (face[1] * H - cy0) * s0
+    return x < 660 and 230 < y < 600
+
+
+def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags=None):
     from PIL import Image
     work = out_dir / f"{sid}_shots"; work.mkdir(parents=True, exist_ok=True)
     items, credits, punches, k, dirn = [], [], [], 0, 1
+    fast, brief, light, named = LOOK.get("pace") == "fast", LOOK.get("labels") == "brief", LOOK.get("shade") == "light", set()
     for bi, (beat, b) in enumerate(zip(sb["beats"], beats)):
-        shots = beat.get("shots") or []
+        allshots = beat.get("shots") or []
+        shots = [s for s in allshots if not s.get("extra")] or allshots      # extra photos only fill the fast pace
+        pool = [s for s in allshots if s.get("extra") and s not in shots]
         if not shots: continue
         start = 0.0 if bi == 0 else b["start"]; end = b["end"]
         ws = [s.get("w", 1.0) for s in shots]; n = len(shots)
@@ -163,17 +281,19 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 cuts.append(max(cuts[-1] + 0.5, c))
             if q < n: cuts.append(max(cuts[-1] + 0.35, fixed[q]))
         cuts.append(end)
-        has_graphic = beat["visual"].get("type") in GRAPHIC
+        has_graphic = (b.get("visual") or beat["visual"]).get("type") in GRAPHIC      # minimal_photos may have turned a card into its photo
         if beat.get("impact") or (LOOK.get("beat_punches") and bi): punches.append(round(start + 0.02, 3))
-        for j, shot in enumerate(shots):
-            t0, t1 = cuts[j], cuts[j + 1]
+        segs = [(shot, cuts[j], cuts[j + 1]) for j, shot in enumerate(shots)]
+        if fast: segs = split_segments(segs, pool, mbeats)
+        for j, (shot, t0, t1) in enumerate(segs):
             src = (HERE / shot["src"]).resolve()
             if not src.exists():
                 print(f"  warning: missing {src}", file=sys.stderr); continue
             fx, fy = (shot.get("focus") or [0.5, 0.45])[:2]
             face = None
             if not shot.get("focus") and src.suffix.lower() not in R.VIDEO_EXT:      # the window follows the person (Charlie, 21 October)
-                face = face_focus(src)
+                if str(src) not in FACES: FACES[str(src)] = face_focus(src)      # a picture's quick cuts share one look-up
+                face = FACES[str(src)]
                 if face: fx, fy = face[0], min(face[1] + 0.06, 0.9)
             move = shot.get("move", "in")
             tin = shot.get("tin") or ("cut" if j else ("zoom" if bi == 0 else "whip"))
@@ -181,6 +301,7 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
             d = work / f"s{k:02d}"; d.mkdir(exist_ok=True); k += 1
             it = {"t0": round(t0, 3), "t1": round(t1, 3), "tin": tin, "dir": dirn, "credit": shot.get("credit", sb.get("credit", "")),
                   "src": pathlib.Path(shot["src"]).stem}
+            tagr = False
             if src.suffix.lower() in R.VIDEO_EXT:
                 w, h, dur = R._probe(src)
                 zoom = shot.get("zoom", 1.08); H2 = int(1920 * zoom) // 2 * 2; W2 = int(round(w * H2 / h)) // 2 * 2
@@ -213,16 +334,19 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
             else:
                 img = Image.open(src).convert("RGB"); w, h = img.size
                 m = 1.14 if move in ("left", "right", "up", "down") else 1.04
-                sc = max(1080 * m / w, 1920 * m / h); W, H = int(round(w * sc)), int(round(h * sc))
+                # "crop" (a fast-pace variant, 24 October): the picture is made that much larger, so the window shows a
+                # closer part of it at full resolution; "amp" shortens the move for a quick cut
+                crop, amp = max(1.0, float(shot.get("crop") or 1.0)), float(shot.get("amp") or 1.0)
+                sc = max(1080 * m / w, 1920 * m / h) * crop; W, H = int(round(w * sc)), int(round(h * sc))
                 img.resize((W, H), Image.LANCZOS).save(d / "img.jpg", quality=88)
                 cx, cy = fx * W, fy * H
                 def clampc(cx, cy, s):
                     return min(max(cx, 540 / s + 2), W - 540 / s - 2), min(max(cy, 960 / s + 2), H - 960 / s - 2)
-                if move == "out": s0, s1 = 1.0 + 0.12 * MOTION, 1.0
+                if move == "out": s0, s1 = 1.0 + 0.12 * MOTION * amp, 1.0
                 elif move == "still": s0 = s1 = 1.02
                 elif move in ("left", "right", "up", "down"): s0 = s1 = 1.02
-                else: s0, s1 = 1.0, 1.0 + 0.11 * MOTION
-                dx = min(170, (W - 1080 / s0) / 2 - 4); dy = min(150, (H - 1920 / s0) / 2 - 4)
+                else: s0, s1 = 1.0, 1.0 + 0.11 * MOTION * amp
+                dx = min(170 * amp, (W - 1080 / s0) / 2 - 4); dy = min(150 * amp, (H - 1920 / s0) / 2 - 4)
                 c0, c1 = (cx, cy), (cx, cy)
                 if move == "left": c0, c1 = (cx + dx, cy), (cx - dx, cy)
                 if move == "right": c0, c1 = (cx - dx, cy), (cx + dx, cy)
@@ -232,10 +356,20 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir):
                 it.update(kind="image", fill=os.path.relpath(d / "img.jpg", HERE), W=W, H=H, s0=s0, s1=s1,
                           cx0=round(cx0, 1), cy0=round(cy0, 1), cx1=round(cx1, 1), cy1=round(cy1, 1))
                 lum = _luma(img.crop((int(cx0 - 540 / s0), int(cy0 - 960 / s0), int(cx0 + 540 / s0), int(cy0 + 960 / s0))))
+                tagr = tag_right(face, W, H, cx0, cy0, s0)
             # legibility: darken more behind graphics, and more on bright footage. A card dims only itself, and only under a graphic
             if it.get("cardmode"): it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else 0.0
-            else: it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2) if has_graphic else round(min(0.3, max(0.06, (lum - 0.45) * 0.8)), 2)
-            if shot.get("label"):
+            elif has_graphic: it["dim"] = round(min(0.72, max(0.30, 0.34 + (lum - 0.35) * 0.9)), 2)
+            elif light: it["dim"] = round(min(0.18, max(0.04, (lum - 0.5) * 0.5)), 2)      # the minimal style's lighter shade (no card sits on it)
+            else: it["dim"] = round(min(0.3, max(0.06, (lum - 0.45) * 0.8)), 2)
+            # a name: under the minimal style, once per Short, as a small corner tag for 1.2 seconds (template3.html
+            # .mtag), on the side away from the face; otherwise the name label on the picture, as before
+            lab = shot.get("label") or ((tags or {}).get(bi) if j == 0 else None)
+            if lab and brief:
+                name = str(lab.get("t") or lab.get("s") or "").strip().lower()
+                if name and name not in named:
+                    named.add(name); it.update(label=lab, brief=True, tagRight=tagr)
+            elif lab and shot.get("label"):
                 it["label"] = shot["label"]; it["labelTop"] = shot.get("labelTop", 1020)
             if face and face[1] > 0.6 and not has_graphic and not it.get("cardmode"): it["capTop"] = True   # person low in the picture: captions go to the top
             items.append(it)
@@ -253,7 +387,7 @@ def sfx_events(sb, beats, items):
         st = 0.0 if bi == 0 else b["start"]
         if beat.get("impact"): ev.append((max(0, st - 0.01), sfx_impact(300 + bi)))
         if beat.get("riser"): ev.append((max(0, st - 1.6), sfx_riser(400 + bi)))
-        v = beat["visual"]
+        v = b.get("visual") or beat["visual"]          # the timeline's visual: a card turned into its photo makes no tick
         if v.get("type") in ("cards", "quote", "date", "versus"): ev.append((st + 0.12, sfx_tick(500 + bi)))
     return ev
 
@@ -286,7 +420,8 @@ def main():
         except Exception as e:
             print(f"  warning: background video failed, rendering without it: {e}", file=sys.stderr)
     CARDS = bool(bginfo) and bool(CFG_RENDER.get("picture_cards", False))   # Charlie, 22 October: no dead space, every picture fills the screen
-    items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir)
+    tags = minimal_photos(sb, beats)          # the style test: under minimal, text cards give way to photos (no-op otherwise)
+    items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags)
     wav = out_dir / f"{sid}.wav"
     events = sfx_events(sb, beats, items)
     mix_audio3(segs, duration, music, events, str(wav), mus.get("gain_db", -16))

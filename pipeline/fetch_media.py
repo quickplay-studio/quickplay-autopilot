@@ -15,9 +15,11 @@ Shot "src" forms (anything else is treated as a local path under pipeline/):
   nasa:image:<words>
 
 A video shot with "cuts": "auto" gets scene-cut detection, so trailer clips never cross a cut (render3 scene_fit).
+resolve() keeps each shot's own form in shot["from"], and extras() (the minimal style's fast pace, 24 October) adds more
+photos of the same subject from the same Commons search, as shots marked "extra" and "of" the shot they belong to.
 usage: python fetch_media.py <board.json> <resolved.json>
 """
-import hashlib, html, json, os, pathlib, re, subprocess, sys, urllib.parse
+import hashlib, html, json, os, pathlib, re, subprocess, sys, time, urllib.parse
 import requests
 
 HERE = pathlib.Path(__file__).resolve().parent
@@ -61,11 +63,15 @@ def _stem(w):
     w = _fold(w)
     return w[:-1] if len(w) > 4 and w.endswith("s") else w
 
-def commons_search(words):
-    """Best Commons photo for the words. The file title must contain every capitalised word of the query (the name),
-    so a search for a person never returns a building or someone else; photos with politicians are skipped.
-    A query with no capitalised words ("octopus arm suckers") needs all its longer words in the title, or failing
-    that any two of them, so a loose description still finds the subject without matching something unrelated."""
+_CANDS = {}      # a Commons search's candidates, kept per search: the fast pace's extra photos cost no second search
+
+def commons_candidates(words):
+    """Every Commons photo a search can use, best first. The file title must contain every capitalised word of the query (the
+    name), so a search for a person never returns a building or someone else; photos with politicians are skipped. A query
+    with no capitalised words ("octopus arm suckers") needs all its longer words in the title, or failing that any two of
+    them, so a loose description still finds the subject without matching something unrelated. Pictures 1600 px wide or
+    more come before those of 1000 to 1599 px. [] when nothing fits."""
+    if words in _CANDS: return _CANDS[words]
     q = {"action": "query", "generator": "search", "gsrsearch": f"{words} filetype:bitmap", "gsrnamespace": 6,
          "gsrlimit": 30, "prop": "imageinfo", "iiprop": "size", "format": "json"}
     pages = sorted(_get(COMMONS, params=q).json().get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
@@ -75,11 +81,20 @@ def commons_search(words):
     else:
         ws = [_stem(w) for w in words.split() if len(w) > 3] or [_stem(w) for w in words.split()]
         tiers = [(ws, len(ws))] + ([(ws, 2)] if len(ws) >= 3 else [])
+    out, seen = [], set()
     for names, need in tiers:
         ok = [p for p in pages if sum(n in _fold(p["title"]) for n in names) >= need]
         for min_w in (1600, 1000):
             for p in ok:
-                if (p.get("imageinfo") or [{}])[0].get("width", 0) >= min_w: return commons_file(p["title"])
+                if p["title"] not in seen and (p.get("imageinfo") or [{}])[0].get("width", 0) >= min_w:
+                    seen.add(p["title"]); out.append(p)
+    if out: _CANDS[words] = out
+    return out
+
+def commons_search(words):
+    """The best Commons photo for the words (commons_candidates' first)."""
+    c = commons_candidates(words)
+    if c: return commons_file(c[0]["title"])
     raise RuntimeError(f"no Commons image named '{words}'")
 
 def _brightness(url):
@@ -249,6 +264,7 @@ def resolve(sb):
     for beat in sb["beats"]:
         for shot in beat.get("shots") or []:
             src = shot["src"]
+            shot["from"] = src                  # the form the board gave it, kept for extras()
             if src in cache:
                 shot.update(cache[src]); continue
             kind, _, rest = src.partition(":")
@@ -298,6 +314,65 @@ def resolve(sb):
         notes.append(f"beat {bi + 1} reused a nearby picture ({mine.get('src', '?')}: {mine.get('_failed', 'not found')[:80]})")
     if notes: sb["_media_notes"] = notes
     return sb
+
+def _ahash(path):
+    """A 64-bit average hash of a picture: two files of one photo (a resize, another upload) differ in a few bits at most,
+    two photos of the same subject in many."""
+    import numpy as np
+    from PIL import Image
+    g = np.asarray(Image.open(path).convert("L").resize((8, 8)), dtype=np.float32).ravel()
+    return sum(1 << i for i, v in enumerate(g >= g.mean()) if v)
+
+
+EXTRA_CREDIT_ROOM = 3000      # characters the credit lines may take in a Short's description (YouTube cuts it at 4900)
+
+
+def extras(sb, per=2, cap=18, seconds=80):
+    """More photos of the same subject for the fast pace (the minimal style, templates/looks.json, 24 October): for each shot
+    found by a name search (commons-search:) up to `per` more photos from the same Commons search, each added to its beat as
+    a shot marked "extra" and "of" the shot it belongs to, with its own credit. render3's fast pace cuts to them; the other
+    pace never sees them. At most `cap` photos and `seconds` of fetching, and only as many as the description has room for
+    their credit lines (EXTRA_CREDIT_ROOM). A photo that is the same picture as one already in the Short is dropped. Never
+    raises: what cannot be fetched is left out (the pace then cuts to the same photo with a new crop, render3.variant).
+    Returns how many were added."""
+    d = HERE / "media" / sb["id"]; d.mkdir(parents=True, exist_ok=True)
+    stop, added, n, given = time.time() + seconds, 0, 0, {}
+    lines = lambda c, src: len(f"{c} ({src})" if src else c) + 1
+    room = EXTRA_CREDIT_ROOM - sum(lines(sh.get("credit", ""), sh.get("source", "")) for bt in sb["beats"] for sh in bt.get("shots") or []
+                                   if sh.get("credit"))
+    seen = []
+    for bt in sb["beats"]:                                  # every picture already in the Short
+        for sh in bt.get("shots") or []:
+            f = HERE / str(sh.get("src", ""))
+            if f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp") and f.exists():
+                try: seen.append(_ahash(f))
+                except Exception: pass
+    for bt in sb["beats"]:
+        add = []
+        for shot in list(bt.get("shots") or []):
+            kind, _, words = str(shot.get("from", "")).partition(":")
+            if kind != "commons-search" or shot.get("extra") or added >= cap or time.time() > stop: continue
+            try: cands = commons_candidates(words)
+            except Exception as e:
+                print(f"  media: extra photos for {words} failed: {e}", file=sys.stderr); continue
+            taken = given.setdefault(words, {c["title"] for c in cands[:1]})        # the first is the shot's own photo
+            got = 0
+            for c in cands:
+                if got >= per or added >= cap or time.time() > stop: break
+                if c["title"] in taken: continue
+                taken.add(c["title"])
+                try:
+                    url, credit, source = commons_file(c["title"])
+                    if lines(credit, source) > room: continue
+                    f = download(url, d, f"x{n:02d}_" + hashlib.sha1(url.encode()).hexdigest()[:8]); n += 1
+                    h = _ahash(f)
+                    if any(bin(h ^ o).count("1") <= 6 for o in seen): f.unlink(); continue
+                except Exception as e:
+                    print(f"  media: extra photo {c['title']} failed: {e}", file=sys.stderr); continue
+                seen.append(h); room -= lines(credit, source); got += 1; added += 1
+                add.append({"src": os.path.relpath(f, HERE), "credit": credit, "source": source, "extra": True, "of": shot["src"]})
+        if add: bt["shots"] = list(bt.get("shots") or []) + add
+    return added
 
 if __name__ == "__main__":
     sb = json.loads(pathlib.Path(sys.argv[1]).read_text())

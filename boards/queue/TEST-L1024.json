@@ -1,0 +1,215 @@
+{
+ "id": "TEST-L1024",
+ "created": "2026-10-24",
+ "mode": "dry",
+ "look": {
+  "style": "minimal"
+ },
+ "format": "countdown",
+ "category": "Gaming",
+ "music": {
+  "mood": "action"
+ },
+ "appeal": "everyone",
+ "kind": "news",
+ "source": "YouTube",
+ "beats": [
+  {
+   "say": "Hurry, these free Steam games are only available for a limited time.",
+   "visual": {
+    "type": "title",
+    "kicker": "Free games",
+    "lines": [
+     "Free on Steam",
+     "Right now"
+    ],
+    "highlight": [
+     0
+    ],
+    "atWord": 0
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "commons-search:Steam logo",
+     "move": "in",
+     "label": {
+      "t": "Steam",
+      "s": "gaming platform"
+     }
+    }
+   ]
+  },
+  {
+   "say": "First up, Polygon says Space Menace is completely free to keep until 23 September.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "rocket",
+      "t": "Space Menace",
+      "s": "Free to keep"
+     }
+    ],
+    "atWord": 2
+   },
+   "shots": [
+    {
+     "src": "commons-search:Steam Deck",
+     "move": "right",
+     "label": {
+      "t": "Steam Deck",
+      "s": "handheld PC"
+     }
+    }
+   ]
+  },
+  {
+   "say": "Next, Polygon reports that Crystal Crisis is free to keep until 21 September.",
+   "visual": {
+    "type": "cards",
+    "items": [
+     {
+      "icon": "gem",
+      "t": "Crystal Crisis",
+      "s": "Free to keep"
+     }
+    ],
+    "atWord": 2
+   },
+   "shots": [
+    {
+     "src": "commons-search:Video game controller",
+     "move": "left"
+    }
+   ]
+  },
+  {
+   "say": "Then Diablo 4 is free to play until 21 September at 1 p.m. local time.",
+   "visual": {
+    "type": "date",
+    "month": "September",
+    "day": "21",
+    "weekday": "Monday",
+    "label": "Diablo 4",
+    "sub": "Free to play",
+    "atWord": 0
+   },
+   "shots": [
+    {
+     "src": "commons-search:Computer keyboard gaming",
+     "move": "in"
+    }
+   ]
+  },
+  {
+   "say": "Polygon also highlights Sea of Thieves, boasting an 88 percent Steam score.",
+   "visual": {
+    "type": "stat",
+    "value": "88%",
+    "label": "Steam score",
+    "sub": "Sea of Thieves",
+    "atWord": 4
+   },
+   "shots": [
+    {
+     "src": "commons-search:Pirate flag",
+     "move": "out"
+    }
+   ]
+  },
+  {
+   "say": "The week's biggest free game is waiting for you in Part 2.",
+   "visual": {
+    "type": "none"
+   },
+   "impact": true,
+   "shots": [
+    {
+     "src": "commons-search:Steam logo",
+     "move": "still"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Free Steam games to grab before time runs out 🎮",
+  "alt_title": "Four Steam games you can get for free right now 🎁",
+  "summary": "Polygon highlights several major free games available on Steam, including Space Menace, Crystal Crisis, Diablo 4 and Sea of Thieves. Find out what you can play and keep this week.",
+  "hashtags": [
+   "#Steam",
+   "#Gaming",
+   "#PCGaming",
+   "#FreeGames",
+   "#Diablo4",
+   "#SeaOfThieves",
+   "#GamingNews",
+   "#VideoGames",
+   "#Trending"
+  ],
+  "tags": [
+   "free Steam games",
+   "free PC games",
+   "Diablo 4 free",
+   "Sea of Thieves Steam",
+   "Steam weekend",
+   "Steam free games"
+  ],
+  "comment": "Which of these free games are you downloading first, and why?",
+  "sources": [
+   [
+    "Polygon, The best multiplayer pirate game is free on Steam, 2026-09-18",
+    "https://www.polygon.com/steam-games-free-to-play-weekend-sea-of-thieves-diablo-4/"
+   ],
+   [
+    "IGN, Announcing Game Scope: IGN Daily Game #001, 2026-08-03",
+    "https://www.ign.com/articles/announcing-game-scope-ign-daily-game-001"
+   ]
+  ],
+  "facts": [
+   [
+    "Space Menace is free to keep until Sept. 23 at 10 a.m.",
+    [
+     1
+    ]
+   ],
+   [
+    "Crystal Crisis is free to keep until Sept. 21 at 11:59 local time.",
+    [
+     1
+    ]
+   ],
+   [
+    "Diablo 4 is free to play until Sept. 21 at 1 p.m. local time.",
+    [
+     1
+    ]
+   ],
+   [
+    "Sea of Thieves has an 88% user score on Steam from almost 150,000 reviews.",
+    [
+     1
+    ]
+   ]
+  ],
+  "translations": {
+   "es": {
+    "title": "Juegos gratis de Steam antes de que acabe el tiempo 1 🎮",
+    "summary": "Polygon destaca varios juegos gratuitos importantes disponibles en Steam, incluyendo Space Menace, Crystal Crisis, Diablo 4 y Sea of Thieves. Descubre qué puedes jugar y conservar esta semana."
+   },
+   "pt": {
+    "title": "Jogos grátis na Steam antes que o tempo acabe 1 🎮",
+    "summary": "Polygon destaca vários grandes jogos gratuitos disponíveis na Steam, incluindo Space Menace, Crystal Crisis, Diablo 4 e Sea of Thieves. Descubra o que você pode jogar e guardar esta semana."
+   },
+   "hi": {
+    "title": "समय समाप्त होने से पहले स्टीम के मुफ्त गेम्स 1 🎮",
+    "summary": "Polygon स्टीम पर उपलब्ध कई प्रमुख मुफ्त खेलों को उजागर करता है, जिसमें Space Menace, Crystal Crisis, Diablo 4 और Sea of Thieves शामिल हैं। पता लगाएं कि इस हफ्ते आप क्या खेल सकते हैं और अपने पास रख सकते हैं।"
+   }
+  }
+ },
+ "background": [
+  "neon gaming setup",
+  "server room lights",
+  "city skyline night"
+ ]
+}

@@ -32,6 +32,7 @@ concurrency:
 jobs:
   social:
     runs-on: ubuntu-latest
+    timeout-minutes: 120     # well above a backlog of Reels (up to 10 minutes each to process); a hung call would otherwise hold the group 6 hours
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }

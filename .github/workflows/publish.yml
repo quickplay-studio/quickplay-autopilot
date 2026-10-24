@@ -26,6 +26,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 120     # well above a day's backlog of uploads; without a limit a hung call holds the publish group 6 hours
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }

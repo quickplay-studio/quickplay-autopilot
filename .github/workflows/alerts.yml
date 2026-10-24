@@ -22,6 +22,7 @@ concurrency:
 jobs:
   alerts:
     runs-on: ubuntu-latest
+    timeout-minutes: 10      # runs take seconds
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }

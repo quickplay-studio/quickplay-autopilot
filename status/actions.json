@@ -261,6 +261,7 @@
   "added": "2026-10-24",
   "due": "2026-10-31",
   "done": false,
-  "check": "secret_works:ANTHROPIC_API_KEY"
+  "check": "secret_works:ANTHROPIC_API_KEY",
+  "note": "ANTHROPIC_API_KEY is not set yet"
  }
 ]

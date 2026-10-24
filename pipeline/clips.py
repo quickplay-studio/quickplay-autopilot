@@ -1488,21 +1488,39 @@ def allocate(remaining, count=None, channel=None):
     score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * reach_share(c.get("min_views") or 0) * rng.uniform(0.8, 1.25)
              for cid, c in cs.items()}
     order = sorted(cs, key=lambda cid: -score[cid])
-    out, left = {}, remaining
+    out, left, used = {}, remaining, {}
+    def room(cid):                                      # a site that takes only so many posts a day from one account
+        s = submit_site(cs[cid]); lim = submit_limit(s)
+        return lim is None or count is not None or used.get(s, 0) < lim
+    def give(cid):
+        out[cid] = out.get(cid, 0) + 1; s = submit_site(cs[cid]); used[s] = used.get(s, 0) + 1
     for cid in order:                                   # one each first, strongest first, then up to per_day
         cap = count if count is not None else int(cs[cid].get("per_day", 3))
-        if left > 0 and cap > 0: out[cid] = 1; left -= 1
+        if left > 0 and cap > 0 and room(cid): give(cid); left -= 1
     for cid in order:
         cap = count if count is not None else int(cs[cid].get("per_day", 3))
-        while left > 0 and out.get(cid, 0) < cap: out[cid] = out.get(cid, 0) + 1; left -= 1
+        while left > 0 and out.get(cid, 0) < cap and room(cid): give(cid); left -= 1
     if count is None:                                   # the day's number is the point: past per_day, one more each round, strongest first
         more = [cid for cid in order if not (cs[cid].get("rules") or {}).get("series")]
         while left > 0 and more:
             grew = False
             for cid in more:
-                if left > 0 and out.get(cid, 0) < int(cs[cid].get("per_day_max", 8)): out[cid] = out.get(cid, 0) + 1; left -= 1; grew = True
+                if left > 0 and out.get(cid, 0) < int(cs[cid].get("per_day_max", 8)) and room(cid): give(cid); left -= 1; grew = True
             if not grew: break
     return out
+
+
+def submit_site(c):
+    """The site a campaign's links are submitted on: "Vyro" or "Content Rewards" (as submit.site_of)."""
+    return "Vyro" if "vyro" in str((c or {}).get("platform", "")).lower() else "Content Rewards"
+
+
+def submit_limit(site):
+    """Posts a site accepts from one social account a day (campaigns.json submit_daily_limits; Vyro 5), None: no limit.
+    A clip that can't be submitted can't earn, so a channel makes no more of a site's clips a day than it can submit
+    (24 October: 39 Vyro clips were due in one evening against 15 places, 5 per channel)."""
+    v = (CFG.get("submit_daily_limits") or {}).get(site)
+    return int(v) if str(v).isdigit() else None
 
 
 def spill(shares, made_n, cs, deadline):
@@ -1515,17 +1533,23 @@ def spill(shares, made_n, cs, deadline):
         if short <= 0: continue
         able = [cid for cid in got if cid in cs and made_n.get((channel, cid), 0) >= got[cid]
                 and not (cs[cid].get("rules") or {}).get("series")]
+        per_site = {}
+        for cid, n in got.items():                      # what each submission site already has from this channel today
+            if cid in cs: per_site[submit_site(cs[cid])] = per_site.get(submit_site(cs[cid]), 0) + made_n.get((channel, cid), 0)
         log(f"spill: {short} place(s) unfilled on {channel}; offered to {', '.join(able) or 'nobody (no campaign filled its share)'}")
         while short > 0 and able:
             for cid in list(able):
                 if short <= 0 or time.time() > deadline: able = []; break
                 if made_n.get((channel, cid), 0) >= int(cs[cid].get("per_day_max", 8)): able.remove(cid); continue
+                lim = submit_limit(submit_site(cs[cid]))
+                if lim is not None and per_site.get(submit_site(cs[cid]), 0) >= lim: able.remove(cid); continue
                 try:
                     got_one = len(make(cid, 1, channel) or [])          # make plans more moments when none are left
                 except Exception as e:
                     log(f"spill: {cid}: {type(e).__name__}: {str(e)[:160]}"); got_one = 0
                 if not got_one: able.remove(cid); continue
                 made_n[(channel, cid)] = made_n.get((channel, cid), 0) + 1; short -= 1; added += 1
+                per_site[submit_site(cs[cid])] = per_site.get(submit_site(cs[cid]), 0) + 1
                 try: upload(cid)
                 except Exception as e: log(f"spill: {cid} upload: {str(e)[:160]}")
     if added: log(f"spill: {added} more clip(s) made in places other campaigns left")

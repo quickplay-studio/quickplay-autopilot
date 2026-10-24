@@ -97,6 +97,9 @@ the secrets CEREBRAS_API_KEY and MISTRAL_API_KEY.
   counts as done. Write the UK time (or the time plus " (already)") into the row's submitted column; a refusal goes in
   as "failed: <reason>". Stop for the day when the dialog says the account can submit 0 posts today (5 per connected
   account a day). Commit as "Quickplay Studio" and push. Leave a random 2 to 5 minutes between submissions.
+  Order (24 October): newest public_at_uk first, so each account's 5 places go to the day's fresh clips (they carry our
+  spoken take); older rows only fill places left over. With 5 places per account a day, a row older than a day is
+  rarely worth a place: skip rows over 48 hours old when today's rows for that account fill its 5.
 - Content Rewards fallback (every run): a Content Rewards row of clips/submit.csv public today whose submitted column
   says "failed: login expired" or "failed: no saved sign-in" is submitted the same way in Chrome (the campaign page's
   Submit clip, paste the link, tick the requirements box, Submit clip) while it is still within 30 minutes of going

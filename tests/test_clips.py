@@ -359,3 +359,20 @@ ms["speed-expedia-61"].update(publish_at="private"); ms["speed-expedia-61"].pop(
 (C.PLANS / "speed-expedia.json").write_text(json.dumps({"moments": list(ms.values())}))
 assert C.promote_tests(72, since=since) == 1
 print("demote ok")
+
+# a channel makes no more of a site's clips a day than the site accepts from one account (Vyro: 5)
+C.CFG = dict(C.CFG, submit_daily_limits={"Vyro": 5})
+C.campaigns = lambda ids=(): {"v1": {"platform": "Vyro", "per_day": 3, "per_day_max": 8, "rules": {}},
+                              "v2": {"platform": "Vyro", "per_day": 3, "per_day_max": 8, "rules": {}},
+                              "cr": {"platform": "Content Rewards (Reach)", "per_day": 3, "per_day_max": 8, "rules": {}}}
+C.campaign_channels = lambda cid: ["clips"]
+C.median_views = lambda cid: None; C.reach_share = lambda m: 1.0
+got = C.allocate(14, None, "clips")
+assert got.get("v1", 0) + got.get("v2", 0) == 5 and got.get("cr", 0) == 8, got       # 5 for Vyro, the rest where it can be submitted
+assert sum(C.allocate(4, None, "clips").values()) == 4
+MADE.clear()
+assert C.spill({"clips": {"v1": 3, "v2": 3, "cr": 2}}, {("clips", "v1"): 3, ("clips", "v2"): 2, ("clips", "cr"): 0}, C.campaigns(), _time.time() + 60) == 0
+assert MADE == [], MADE                                   # Vyro has its 5 from this channel: no spare place goes to v1
+assert C.spill({"clips": {"v1": 2, "v2": 2, "cr": 2}}, {("clips", "v1"): 2, ("clips", "v2"): 1, ("clips", "cr"): 2}, C.campaigns(), _time.time() + 60) == 1
+assert [m[0] for m in MADE] == ["v1"], MADE               # under the limit (3 of 5): the strongest that filled its share gets it
+print("submit limits ok")

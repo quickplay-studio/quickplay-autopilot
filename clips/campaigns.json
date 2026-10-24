@@ -531,6 +531,8 @@
  "clips_limit_max": 60,
  "clips_limit_min": 4,
  "clips_unseen_cap": 4,
+ "submit_daily_limits": {"Vyro": 5},
+ "submit_daily_limits_note": "Posts a submission site accepts from one social account a day: a channel makes no more of that site's clips a day than it can submit (24 October: 39 Vyro clips due in one evening against 15 places).",
  "clips_budget_floor": 50,
  "ceiling_note": "The clips channel's own learning ceiling (clips/state/ceiling.json): from daily_clips, +clips_limit_step after each full day with no refusal, settles where YouTube refuses (uploadLimitExceeded). Campaigns switch off on their end date or when their public page says full, ended or under clips_budget_floor dollars left.",
  "social_per_day": 6,

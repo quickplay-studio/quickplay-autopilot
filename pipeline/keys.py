@@ -273,6 +273,9 @@ PROBES = {
                             where="https://console.mistral.ai/api-keys", how="press Create new key"),
     "SAMBANOVA_API_KEY": dict(what="SambaNova API key (writing)", url="https://api.sambanova.ai/v1/models", headers=bearer, vendor="SambaNova",
                               where="https://cloud.sambanova.ai/apis", how="create an API key"),
+    "ANTHROPIC_API_KEY": dict(what="Anthropic API key (Claude edits on the monthly API credits)", url="https://api.anthropic.com/v1/models?limit=1",
+                              headers=lambda k: {"x-api-key": k, "anthropic-version": "2023-06-01"}, vendor="Anthropic",
+                              where="https://platform.claude.com/settings/keys", how="claim the Max API credits in claude.ai Billing, then create a key"),
 }
 
 

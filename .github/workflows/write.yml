@@ -41,7 +41,9 @@ jobs:
         env: { HAS_CLAUDE: "${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' && '1' || '' }}" }
         run: |
           [ "$HAS_CLAUDE" = "1" ] || { echo "no CLAUDE_CODE_OAUTH_TOKEN secret: Claude is left out of the chain"; exit 0; }
-          npm install -g @anthropic-ai/claude-code --before="$(date -u -d '7 days ago' +%Y-%m-%d)" >/dev/null 2>&1 && claude --version || echo "Claude CLI not installed"
+          # pinned (24 October): the docs say --bare will become -p's default and ignores OAuth sign-ins, so an unpinned newest CLI could
+          # one day leave CLAUDE_CODE_OAUTH_TOKEN unused; 2.1.302 was published 16 October (over 7 days ago, the supply-chain rule)
+          npm install -g @anthropic-ai/claude-code@2.1.302 --before="$(date -u -d '7 days ago' +%Y-%m-%d)" >/dev/null 2>&1 && claude --version || echo "Claude CLI not installed"
       - name: Write
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -53,6 +55,7 @@ jobs:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # Charlie's monthly API credits: used before the CLI when set (factpack.claude_api)
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}

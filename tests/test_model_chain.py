@@ -221,3 +221,27 @@ got = F4.provider_models("groq")
 assert got[0] == "groq:openai/gpt-oss-120b" and not any("orpheus" in m or "guard" in m or "whisper" in m for m in got), got
 os.environ.pop("GROQ_API_KEY", None); _rq4.get = _g4; F4.STATE.clear()
 print("sambanova and groq lists ok")
+
+
+# 24 October: with ANTHROPIC_API_KEY the Claude step calls the Messages API (Charlie's monthly API credits) instead of the CLI
+import os as _os, json as _json
+import factpack as _F
+class _R:
+    def __init__(self, code, body): self.status_code, self._b, self.text = code, body, _json.dumps(body)
+    def json(self): return self._b
+_calls = []
+def _post(url, **kw): _calls.append((url, kw)); return _R(200, {"content": [{"type": "text", "text": "{\"ok\": 1}"}]})
+import requests as _rq; _old_post = _rq.post; _rq.post = _post
+_os.environ["ANTHROPIC_API_KEY"] = "sk-test"
+_F.STATE.pop("claude_calls", None); _F.STATE.setdefault("spent_models", set()).discard("claude:sonnet")
+try:
+    ans, err = _F.claude_api("claude:sonnet", "write json", "sk-test", 60)
+    assert ans == {"ok": 1} and err is None, (ans, err)
+    assert _calls and _calls[0][0].endswith("/v1/messages") and _calls[0][1]["json"]["model"] == "claude-sonnet-5-5", _calls
+    assert _calls[0][1]["headers"]["x-api-key"] == "sk-test"
+    _rq.post = lambda url, **kw: _R(429, {"error": {"message": "credit balance too low"}})
+    ans, err = _F.claude_api("claude:sonnet", "write json", "sk-test", 60)
+    assert ans is None and "429" in err and "claude:sonnet" in _F.STATE["spent_models"], (err, _F.STATE["spent_models"])
+finally:
+    _rq.post = _old_post; _os.environ.pop("ANTHROPIC_API_KEY", None)
+print("claude api route ok")

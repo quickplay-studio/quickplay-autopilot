@@ -1,7 +1,9 @@
 {
  "daily_limit": 40,
  "shorts_per_day": 15,
- "max_tokens": {"groq": 3500},
+ "max_tokens": {
+  "groq": 3500
+ },
  "writing_timeout_s": 180,
  "writing_timeouts_before_skip": 1,
  "provider_refusals_before_skip": 3,
@@ -38,15 +40,55 @@
   "before": 40,
   "ledger": "CH-011"
  },
- "category_min": {"Gaming": {"share": 0.15, "until": "2026-11-26", "why": "GTA 6 launches 19 November and Gaming is Instagram's best category (2.48x): held at 15% of the day's Shorts until a week after (data report item 6, 24 October)"}},
+ "category_min": {
+  "Gaming": {
+   "share": 0.15,
+   "until": "2026-11-26",
+   "why": "GTA 6 launches 19 November and Gaming is Instagram's best category (2.48x): held at 15% of the day's Shorts until a week after (data report item 6, 24 October)"
+  }
+ },
  "test_round": {
   "name": "round 1",
   "start": "2026-10-25",
-  "factors": {"hook_type": ["statement", "number"], "length": ["25 to 34 s", "35 to 44 s"], "title_search": ["search phrase", "curiosity"], "first_frame": ["cover", "photo"], "fx_energy": ["steady", "lab-energy-1019"], "fx_slot": ["06:00 to 12:00", "12:00 to 18:00"]},
+  "factors": {
+   "hook_type": [
+    "statement",
+    "number"
+   ],
+   "length": [
+    "25 to 34 s",
+    "35 to 44 s"
+   ],
+   "title_search": [
+    "search phrase",
+    "curiosity"
+   ],
+   "first_frame": [
+    "cover",
+    "photo"
+   ],
+   "fx_energy": [
+    "steady",
+    "lab-energy-1019"
+   ],
+   "fx_slot": [
+    "06:00 to 12:00",
+    "12:00 to 18:00"
+   ]
+  },
   "per_arm": 70,
   "note": "24 October, the data report's factorial tests: every Short (exploration Shorts aside) takes an arm of each factor, 50/50 and independent (writer.test_plan), so each arm gets about 7 Shorts a day at 15; a factor settles at per_arm measured Shorts an arm, or sooner when drivers.py's proof rule is met. fx_energy (camera energy, looks.choose) and fx_slot (the quarter of the UK day, plan.py's slot picker; reached on the board's own day or the usual slot instead, 1 board in 5 keeps the first slot) act after the writing; analytics records the arm as assigned and what was used (fx_energy_used, fx_slot_used) and judges the arm as assigned. analytics/tests.json and the hub show how many Shorts each arm still needs."
  },
- "writer_test": {"start": "2026-10-25", "until": "2026-11-08", "share": 0.6, "arms": ["gpt-oss-120b", "gemini flash"], "note": "24 October, data report item 7: groq gpt-oss-120b (2.61x day-adjusted, n 7) against Gemini Flash for the writing step, 6 boards in 10 drawn 50/50 by board number (factpack.writer_test) while both have a model this run; the other 4 in 10 go by the writer's own pick, and the 35% cap on the model that actually writes still holds, so each arm sits near 30% of the day. Boards record writer_arm (assigned) and writer_arm_used; drivers.py judges the arm as assigned."},
+ "writer_test": {
+  "start": "2026-10-25",
+  "until": "2026-11-08",
+  "share": 0.6,
+  "arms": [
+   "gpt-oss-120b",
+   "gemini flash"
+  ],
+  "note": "24 October, data report item 7: groq gpt-oss-120b (2.61x day-adjusted, n 7) against Gemini Flash for the writing step, 6 boards in 10 drawn 50/50 by board number (factpack.writer_test) while both have a model this run; the other 4 in 10 go by the writer's own pick, and the 35% cap on the model that actually writes still holds, so each arm sits near 30% of the day. Boards record writer_arm (assigned) and writer_arm_used; drivers.py judges the arm as assigned."
+ },
  "shorts_per_day_note": "Shorts a day we choose to make, under the learned ceiling (daily_limit): 15 from 24 October, a test of fewer, better Shorts against the 24 to 40 a day before (Charlie, 23 October). 24 October: the test runs 14 days and analytics.volume_test judges it from Sunday 8 November on each UK day's numbers (daily YouTube views and the day's Shorts' 24-hour views, each with a 90% interval over days), not on the 7-day ratio first planned, whose noise (about 19%) can't tell 0.9x from 1.1x. 15 stays unless both are clearly lower (interval top under 0.9); then back to the days before's median number. status/volume.json carries the reading meanwhile. Slots: this many a day at the learned best times.",
  "per_session": 12,
  "slot_first": "07:30",
@@ -164,7 +206,10 @@
  "instagram_pick_by": "category",
  "instagram_pick_wait_hours": 3,
  "instagram_pick_note": "category (the default from 24 October): Instagram picks its own Reels by how each category does on Instagram (social.ig_category_scores: median Instagram views per category over the median, shrunk by 5 Reels; under 15 measured Reels, instagram_category_order first), 1 in 4 an exploration pick from any category (instagram_explore_share), newest first, at most instagram_max_per_run a run. order: the day's picks first, then by publish time. views_3h: a Short waits until it has been public 3 hours and Instagram's room goes to the most watched on YouTube first. views_3h is not used because on 24 October our 96 Shorts with both numbers showed YouTube views at 3 hours do not predict Instagram views (rank correlation 0.10; the top half by 3-hour views had a median of 71 Instagram views, the bottom half 90).",
- "instagram_category_order": ["Gaming", "Sport"],
+ "instagram_category_order": [
+  "Gaming",
+  "Sport"
+ ],
  "instagram_explore_share": 0.25,
  "instagram_max_per_run": 2,
  "instagram_trial": true,
@@ -174,7 +219,10 @@
  "instagram_caption_share": 0.5,
  "instagram_hour_test": true,
  "instagram_hour_share": 0.5,
- "instagram_morning_hours": [6, 10],
+ "instagram_morning_hours": [
+  6,
+  10
+ ],
  "instagram_thumb_at_hook": true,
  "instagram_tests_note": "Instagram's own tests (24 October, social.py): trial reels for instagram_trial_share of Reels (trial_params with graduation_strategy instagram_trial_strategy: shown first to non-followers, graduated by Meta when they do well; in the Content Publishing API since 3 December 2025 for Instagram Login apps; off for 14 days after Meta refuses one, status/instagram_trial.json); a short caption (the spoken hook and 3 hashtags) for instagram_caption_share against the full one; instagram_hour_share of Reels held to instagram_morning_hours (UK) against posting as soon as public, each arm with its share of the day's cap; the cover frame (thumb_offset) inside the opening beat. Each arm is fixed per Short by its id and recorded on the post; analytics scores them against Instagram views (drivers.analyse_instagram, never put to the writer) and a proven arm then takes 80% of Reels, never all. Cap: instagram_per_day (4) to start and after Meta pushes back, +instagram_ramp_per_day a day up to instagram_target (8, the data report's cap).",
  "tiktok_per_day": 2,
@@ -231,10 +279,13 @@
    "WHOP_COOKIES",
    "YT_CLIENT_ID",
    "YT_CLIENT_SECRET",
-   "YT_REFRESH_TOKEN"
+   "YT_REFRESH_TOKEN",
+   "ANTHROPIC_API_KEY"
   ],
   "secrets_note": "Every secret a workflow may read. A new one is added here on purpose, by hand; the audit flags any other."
  },
  "watch_share_max": 0.34,
- "watch_share_note": "24 October: at most this share of the day's Shorts target goes to watchlist items (launch first, then surging, then build-up), so big dates never crowd out the day's news or any category. Items take after_days (launch week length after the date, 7 unless set) and places (an item's own ceiling a day)."
+ "watch_share_note": "24 October: at most this share of the day's Shorts target goes to watchlist items (launch first, then surging, then build-up), so big dates never crowd out the day's news or any category. Items take after_days (launch week length after the date, 7 unless set) and places (an item's own ceiling a day).",
+ "claude_api_effort": "low",
+ "claude_api_note": "24 October: with an ANTHROPIC_API_KEY secret (Charlie's monthly Max API credits, claimed in claude.ai Settings, Billing) the pipeline's Claude calls use the Messages API at claude_api_effort instead of the CLI and his chat allowance; the same caps apply (claude_max_per_run, claude_edits_per_day)."
 }

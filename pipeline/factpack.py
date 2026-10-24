@@ -616,9 +616,14 @@ def claude_call(label, prompt, timeout):
     if STATE.get("claude_calls", 0) >= int(CFG.get("claude_max_per_run", 12)):
         spent.add(label); notes[label] = "run cap"; return None, f"{label}: run cap reached"
     exe = shutil.which("claude")
-    if not exe: spent.add(label); return None, f"{label}: CLI not installed"
+    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    if not exe and not api_key: spent.add(label); return None, f"{label}: CLI not installed"
     STATE["claude_calls"] = STATE.get("claude_calls", 0) + 1
     claude_note("calls")
+    if api_key:
+        # Charlie's monthly API credits (24 October: a Max plan's credits cover the Claude API, not Claude Code, and leave
+        # his chat allowance alone), so the pipeline's few calls draw on them first: the Messages API, no CLI
+        return claude_api(label, prompt, api_key, timeout)
     try:
         r = subprocess.run([exe, "-p", "--output-format", "json", "--model", label.split(":", 1)[1], "--tools", "",
                             "--system-prompt", JSON_ONLY, "--no-session-persistence", "--max-turns", "2"],
@@ -632,6 +637,35 @@ def claude_call(label, prompt, timeout):
         if re.search(r"limit|quota|credit|auth|login|token", res, re.I):
             spent.add(label); notes[label] = res[:80]
         return None, f"{label}: {res[:150]}"
+    try:
+        ans = loads_loose(res); count(label); return ans, None
+    except ValueError as e: return None, f"{label}: unreadable JSON ({str(e)[:60]})"
+
+
+API_MODELS = {"sonnet": "claude-sonnet-5-5", "opus": "claude-opus-5-5", "haiku": "claude-haiku-5-5"}     # the CLI's aliases as API ids (platform.claude.com models overview, 24 October 2026; config claude_api_models overrides)
+
+
+def claude_api(label, prompt, api_key, timeout):
+    """One Messages API call (ANTHROPIC_API_KEY: Charlie's monthly API credits), the same JSON-only contract as the CLI."""
+    import requests
+    spent, notes = STATE.setdefault("spent_models", set()), STATE.setdefault("quota_notes", {})
+    alias = label.split(":", 1)[1]
+    model = (CFG.get("claude_api_models") or {}).get(alias) or API_MODELS.get(alias, alias)
+    try:
+        r = requests.post("https://api.anthropic.com/v1/messages", timeout=max(timeout, 120),
+                          headers={"x-api-key": api_key, "anthropic-version": "2023-06-01", "content-type": "application/json"},
+                          json={"model": model, "max_tokens": 4000, "system": JSON_ONLY, "messages": [{"role": "user", "content": prompt}],
+                                **({"effort": CFG["claude_api_effort"]} if CFG.get("claude_api_effort") else {})})
+    except Exception as e: claude_note(last=type(e).__name__); return None, f"{label}: {type(e).__name__}"
+    if r.status_code != 200:
+        text = r.text[:160]
+        claude_note(last=f"HTTP {r.status_code}")
+        if r.status_code in (401, 402, 403, 429) or re.search(r"credit|billing|limit|quota", text, re.I):
+            spent.add(label); notes[label] = f"API {r.status_code}"
+        return None, f"{label}: API {r.status_code}: {text}"
+    try: res = "".join(b.get("text", "") for b in r.json().get("content") or [] if b.get("type") == "text")
+    except ValueError: return None, f"{label}: unreadable API answer"
+    claude_note(last="ok (API)")
     try:
         ans = loads_loose(res); count(label); return ans, None
     except ValueError as e: return None, f"{label}: unreadable JSON ({str(e)[:60]})"

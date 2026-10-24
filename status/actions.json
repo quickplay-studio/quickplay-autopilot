@@ -228,5 +228,38 @@
   "due": "",
   "done": false,
   "check": "secret_works:FB_CLIPS_PAGE_TOKEN"
+ },
+ {
+  "id": "anthropic-api-key",
+  "title": "Take the pipeline's Claude calls off your chat allowance: claim the Max API credits and add ANTHROPIC_API_KEY",
+  "short": "Claude API credits",
+  "why": "The writer's 4 Claude edits a day (and the audit's checks) use CLAUDE_CODE_OAUTH_TOKEN, which draws on the same Max allowance as your chats. A Max plan includes monthly API credits that cover the Claude API and expire monthly; with an API key the pipeline uses those first (factpack.claude_api) and your chat allowance is left alone.",
+  "steps": [
+   "In claude.ai open Settings, Billing, and claim the monthly API credits (they attach to a Console organisation).",
+   "At platform.claude.com, in that organisation, open API Keys and create a key named quickplay.",
+   "Save it as the repository secret ANTHROPIC_API_KEY (already on the identity allowlist). Nothing else changes: the same caps apply (4 edits a day, 3 calls a run)."
+  ],
+  "links": [
+   {
+    "label": "Claude settings, Billing",
+    "url": "https://claude.ai/settings/billing"
+   },
+   {
+    "label": "Console API keys",
+    "url": "https://platform.claude.com/settings/keys"
+   },
+   {
+    "label": "Repository secrets",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"
+   },
+   {
+    "label": "API credits for subscribers",
+    "url": "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers"
+   }
+  ],
+  "added": "2026-10-24",
+  "due": "2026-10-31",
+  "done": false,
+  "check": "secret_works:ANTHROPIC_API_KEY"
  }
 ]

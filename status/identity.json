@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-24T18:54:01+00:00",
+ "checked": "2026-10-24T19:06:45+00:00",
  "ok": true,
  "studio": "studiosocialmedia123@gmail.com",
  "checks": [
@@ -19,7 +19,7 @@
   },
   {
    "what": "workflow audit.yml",
-   "found": "FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, FB_PAGE_ID, FB_PAGE_TOKEN, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, IG_TOKEN, IG_USER_ID, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "found": "CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, FB_CLIPS_PAGE_ID, FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_ID, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_ID, FB_IRL_PAGE_TOKEN, FB_PAGE_ID, FB_PAGE_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, IG_CLIPS_TOKEN, IG_CLIPS_USER_ID, IG_GAMING_TOKEN, IG_GAMING_USER_ID, IG_IRL_TOKEN, IG_IRL_USER_ID, IG_TOKEN, IG_USER_ID, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -204,70 +204,135 @@
    "found": "19 cookies",
    "ok": true,
    "expected": "cookies for contentrewards.com and whop.com",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "login",
+    "saved": "2026-10-22T19:54+00:00",
+    "count": 19,
+    "session_ends": "2026-11-21T18:02+00:00"
+   }
   },
   {
    "what": "login_vyro",
    "found": "9 cookies",
    "ok": true,
    "expected": "cookies for vyro.com",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "login",
+    "saved": "2026-10-22T19:54+00:00",
+    "count": 9,
+    "session_ends": "2027-10-22T18:36+00:00"
+   }
   },
   {
    "what": "youtube",
    "found": "Quickplay Daily (@quickplaydaily)",
    "ok": true,
    "expected": "a Quickplay channel of the studio account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "youtube",
+    "state": "ok",
+    "channel": "Quickplay Daily",
+    "saved": "2026-10-17T13:09:17+00:00",
+    "expires_at": null
+   }
   },
   {
    "what": "youtube_clips",
    "found": "Quickplay Clips (@quickplayclips-x9b)",
    "ok": true,
    "expected": "a Quickplay channel of the studio account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "youtube",
+    "state": "ok",
+    "channel": "Quickplay Clips",
+    "saved": "2026-10-20T23:48:37+00:00",
+    "expires_at": null
+   }
   },
   {
    "what": "youtube_gaming",
    "found": "Quickplay Gaming Clips (@quickplaygamingclips-z1b)",
    "ok": true,
    "expected": "a Quickplay channel of the studio account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "youtube",
+    "state": "ok",
+    "channel": "Quickplay Gaming Clips",
+    "saved": "2026-10-22T18:44:37+00:00",
+    "expires_at": null
+   }
   },
   {
    "what": "youtube_irl",
    "found": "Quickplay IRL Clips (@quickplayirlclips)",
    "ok": true,
    "expected": "a Quickplay channel of the studio account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "youtube",
+    "state": "ok",
+    "channel": "Quickplay IRL Clips",
+    "saved": "2026-10-22T18:45:54+00:00",
+    "expires_at": null
+   }
   },
   {
    "what": "instagram",
    "found": "@quickplaydaily (17841465022278792)",
    "ok": true,
    "expected": "a Quickplay Instagram account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "instagram",
+    "state": "ok",
+    "user": "quickplaydaily",
+    "expires_at": "2026-12-22T23:59+00:00"
+   }
   },
   {
    "what": "IG_TOKEN",
    "found": "@quickplaydaily (17841465022278792)",
    "ok": true,
    "expected": "a Quickplay Instagram account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "instagram",
+    "state": "ok",
+    "user": "quickplaydaily",
+    "expires_at": null
+   }
   },
   {
    "what": "FB_PAGE_TOKEN",
    "found": "Quickplay Daily (1394922903704330)",
    "ok": true,
    "expected": "a Quickplay Facebook Page",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "facebook",
+    "state": "ok",
+    "page": "Quickplay Daily",
+    "expires_at": 0,
+    "data_access_expires_at": 1800174972
+   }
   },
   {
    "what": "tiktok",
    "found": "@quickplaydaily",
    "ok": true,
    "expected": "a Quickplay TikTok account",
-   "note": ""
+   "note": "",
+   "key": {
+    "kind": "tiktok",
+    "state": "ok",
+    "refresh_ends": "2027-10-17T12:13+00:00",
+    "mode": "off"
+   }
   }
  ],
  "problems": []

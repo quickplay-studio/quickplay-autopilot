@@ -1,0 +1,376 @@
+{
+ "checked": "2026-10-24T19:06+00:00",
+ "audit": "2026-10-24T19:06:45+00:00",
+ "counts": {
+  "ok": 14,
+  "expiring": 0,
+  "failing": 0,
+  "missing": 10
+ },
+ "keys": [
+  {
+   "id": "youtube",
+   "what": "YouTube sign-in: Quickplay Daily",
+   "group": "YouTube",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the refresh works; Google set no 7-day Testing limit on it",
+   "needed": true,
+   "fix": [
+    "Signed in to Google as the studio account only, open https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html and press Sign in to YouTube.",
+    "When Google asks which channel, pick Quickplay Daily. On the permissions page tick Select all, then Continue.",
+    "Press Copy code on the page that opens.",
+    "Within 5 minutes open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml, press Run workflow, paste the code into \"YouTube address or code\", type main as the channel, and press the green Run workflow.",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml.",
+    "If this comes back about 7 days after each sign-in, Google's app is still in Testing: publish it at https://console.cloud.google.com/auth/audience (Publish app) and sign in once more."
+   ]
+  },
+  {
+   "id": "youtube_clips",
+   "what": "YouTube sign-in: Quickplay Clips",
+   "group": "YouTube",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the refresh works; Google set no 7-day Testing limit on it",
+   "needed": false,
+   "fix": [
+    "Signed in to Google as the studio account only, open https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html and press Sign in to YouTube.",
+    "When Google asks which channel, pick Quickplay Clips. On the permissions page tick Select all, then Continue.",
+    "Press Copy code on the page that opens.",
+    "Within 5 minutes open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml, press Run workflow, paste the code into \"YouTube address or code\", type clips as the channel, and press the green Run workflow.",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml.",
+    "If this comes back about 7 days after each sign-in, Google's app is still in Testing: publish it at https://console.cloud.google.com/auth/audience (Publish app) and sign in once more."
+   ]
+  },
+  {
+   "id": "youtube_gaming",
+   "what": "YouTube sign-in: Quickplay Gaming Clips",
+   "group": "YouTube",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the refresh works; Google set no 7-day Testing limit on it",
+   "needed": false,
+   "fix": [
+    "Signed in to Google as the studio account only, open https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html and press Sign in to YouTube.",
+    "When Google asks which channel, pick Quickplay Gaming Clips. On the permissions page tick Select all, then Continue.",
+    "Press Copy code on the page that opens.",
+    "Within 5 minutes open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml, press Run workflow, paste the code into \"YouTube address or code\", type gaming as the channel, and press the green Run workflow.",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml.",
+    "If this comes back about 7 days after each sign-in, Google's app is still in Testing: publish it at https://console.cloud.google.com/auth/audience (Publish app) and sign in once more."
+   ]
+  },
+  {
+   "id": "youtube_irl",
+   "what": "YouTube sign-in: Quickplay IRL Clips",
+   "group": "YouTube",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the refresh works; Google set no 7-day Testing limit on it",
+   "needed": false,
+   "fix": [
+    "Signed in to Google as the studio account only, open https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html and press Sign in to YouTube.",
+    "When Google asks which channel, pick Quickplay IRL Clips. On the permissions page tick Select all, then Continue.",
+    "Press Copy code on the page that opens.",
+    "Within 5 minutes open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml, press Run workflow, paste the code into \"YouTube address or code\", type irl as the channel, and press the green Run workflow.",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml.",
+    "If this comes back about 7 days after each sign-in, Google's app is still in Testing: publish it at https://console.cloud.google.com/auth/audience (Publish app) and sign in once more."
+   ]
+  },
+  {
+   "id": "instagram",
+   "what": "Instagram key in use (Quickplay Daily)",
+   "group": "Instagram",
+   "status": "ok",
+   "expires": "2026-12-22",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "answers as @quickplaydaily",
+   "needed": false,
+   "fix": [
+    "Open https://developers.facebook.com/apps and choose the Quickplay app, signed in as the studio account.",
+    "Instagram, then API setup with Instagram login, then Generate token for the account this key belongs to.",
+    "Copy the token and paste it into the GitHub secret IG_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN",
+    "The key in use is kept in tokens/instagram.enc and is only replaced when that file is removed: ask Claude (your pinned Quickplay page) to remove it so the new IG_TOKEN seeds a fresh one.",
+    "Press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml: from then on the audit refreshes the key every week by itself."
+   ]
+  },
+  {
+   "id": "IG_TOKEN",
+   "what": "Instagram seed key (IG_TOKEN)",
+   "group": "Instagram",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "answers as @quickplaydaily; Meta has not given an end date yet (the weekly refresh records it)",
+   "needed": false,
+   "fix": [
+    "Open https://developers.facebook.com/apps and choose the Quickplay app, signed in as the studio account.",
+    "Instagram, then API setup with Instagram login, then Generate token for the account this key belongs to.",
+    "Copy the token and paste it into the GitHub secret IG_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/IG_TOKEN",
+    "Press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml: from then on the audit refreshes the key every week by itself."
+   ]
+  },
+  {
+   "id": "IG_CLIPS_TOKEN",
+   "what": "Instagram key: Quickplay Clips (IG_CLIPS_TOKEN)",
+   "group": "Instagram",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret IG_CLIPS_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "IG_GAMING_TOKEN",
+   "what": "Instagram key: Quickplay Gaming Clips (IG_GAMING_TOKEN)",
+   "group": "Instagram",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret IG_GAMING_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "IG_IRL_TOKEN",
+   "what": "Instagram key: Quickplay IRL Clips (IG_IRL_TOKEN)",
+   "group": "Instagram",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret IG_IRL_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "FB_PAGE_TOKEN",
+   "what": "Facebook Page key: Quickplay Daily (FB_PAGE_TOKEN)",
+   "group": "Facebook",
+   "status": "ok",
+   "expires": "2027-01-17",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "answers as the Page Quickplay Daily; the key never ends; Meta's data access ends Sunday 17 January",
+   "needed": false,
+   "fix": [
+    "Open https://developers.facebook.com/tools/explorer/ signed in as the studio account and choose the Quickplay app.",
+    "Under Permissions add pages_manage_posts, pages_manage_engagement, pages_read_engagement, pages_read_user_content, pages_show_list and read_insights, then press Generate Access Token and allow it for the Quickplay Daily Page.",
+    "Copy the token and paste it into the GitHub secret FB_PAGE_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/FB_PAGE_TOKEN. A user key is fine: the automation swaps it for the Page's own key, which lasts as long.",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "FB_CLIPS_PAGE_TOKEN",
+   "what": "Facebook Page key: Quickplay Clips (FB_CLIPS_PAGE_TOKEN)",
+   "group": "Facebook",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret FB_CLIPS_PAGE_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "FB_GAMING_PAGE_TOKEN",
+   "what": "Facebook Page key: Quickplay Gaming Clips (FB_GAMING_PAGE_TOKEN)",
+   "group": "Facebook",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret FB_GAMING_PAGE_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "FB_IRL_PAGE_TOKEN",
+   "what": "Facebook Page key: Quickplay IRL Clips (FB_IRL_PAGE_TOKEN)",
+   "group": "Facebook",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "not set up",
+   "needed": false,
+   "fix": [
+    "Add it as the GitHub secret FB_IRL_PAGE_TOKEN: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   ]
+  },
+  {
+   "id": "tiktok",
+   "what": "TikTok sign-in (refresh token)",
+   "group": "TikTok",
+   "status": "ok",
+   "expires": "2027-10-17",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the refresh token ends Sunday 17 October 2027",
+   "needed": false,
+   "fix": [
+    "TikTok is off at the moment (docs/TIKTOK.md), so nothing is needed until you switch it back on.",
+    "To reconnect: open https://quickplay-studio.github.io/quickplay-autopilot/tiktok.html, sign in to the Quickplay TikTok account and copy the code.",
+    "Open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml, press Run workflow, paste the code into \"TikTok code\" and press the green Run workflow."
+   ]
+  },
+  {
+   "id": "GEMINI_API_KEY",
+   "what": "Gemini API key (writing, fact packs)",
+   "group": "AI models",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "Google accepts the key",
+   "needed": true,
+   "fix": [
+    "Open https://aistudio.google.com/apikey signed in as the studio Google account and create an API key (or copy the one you have).",
+    "Copy it and paste it into the GitHub secret GEMINI_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/GEMINI_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "GROQ_API_KEY",
+   "what": "Groq API key (writing)",
+   "group": "AI models",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "Groq accepts the key",
+   "needed": false,
+   "fix": [
+    "Open https://console.groq.com/keys signed in as the studio Google account and press Create API Key.",
+    "Copy it and paste it into the GitHub secret GROQ_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/GROQ_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "CEREBRAS_API_KEY",
+   "what": "Cerebras API key (writing)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the secret is not set",
+   "needed": false,
+   "fix": [
+    "Open https://cloud.cerebras.ai/ signed in as the studio Google account and open API Keys and generate one.",
+    "Copy it and paste it into the GitHub secret CEREBRAS_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/CEREBRAS_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "OPENROUTER_API_KEY",
+   "what": "OpenRouter API key (writing)",
+   "group": "AI models",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "OpenRouter accepts the key",
+   "needed": false,
+   "fix": [
+    "Open https://openrouter.ai/settings/keys signed in as the studio Google account and press Create Key.",
+    "Copy it and paste it into the GitHub secret OPENROUTER_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/OPENROUTER_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "CF_API_TOKEN",
+   "what": "Cloudflare Workers AI token (writing)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the secret is not set",
+   "needed": false,
+   "fix": [
+    "Open https://dash.cloudflare.com/profile/api-tokens signed in as the studio Google account and press Create Token, use the Workers AI template, Continue to summary, Create Token.",
+    "Copy it and paste it into the GitHub secret CF_API_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/CF_API_TOKEN",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "MISTRAL_API_KEY",
+   "what": "Mistral API key (writing)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the secret is not set",
+   "needed": false,
+   "fix": [
+    "Open https://console.mistral.ai/api-keys signed in as the studio Google account and press Create new key.",
+    "Copy it and paste it into the GitHub secret MISTRAL_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/MISTRAL_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "SAMBANOVA_API_KEY",
+   "what": "SambaNova API key (writing)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the secret is not set",
+   "needed": false,
+   "fix": [
+    "Open https://cloud.sambanova.ai/apis signed in as the studio Google account and create an API key.",
+    "Copy it and paste it into the GitHub secret SAMBANOVA_API_KEY (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/SAMBANOVA_API_KEY",
+    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
+   ]
+  },
+  {
+   "id": "CLAUDE_CODE_OAUTH_TOKEN",
+   "what": "Claude token (the writer's last resort, your allowance)",
+   "group": "Claude",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "the secret is set (only its presence is checked, so no allowance is used); the writer's last call: ok at 2026-10-24T11:14+00:00",
+   "needed": false,
+   "fix": [
+    "On the Mac, open Terminal and run: claude setup-token (signed in to Claude with your subscription).",
+    "Copy the token it prints and paste it into the GitHub secret CLAUDE_CODE_OAUTH_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/CLAUDE_CODE_OAUTH_TOKEN",
+    "This turns green after the writer next calls Claude (a few times a day); it does not use your allowance to check."
+   ]
+  },
+  {
+   "id": "login_whop",
+   "what": "Content Rewards login (saved cookies)",
+   "group": "Campaign sites",
+   "status": "ok",
+   "expires": "2026-11-21",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "saved 1 days ago, 19 cookies; no submission seen yet",
+   "needed": false,
+   "fix": [
+    "In Chrome on the Mac, signed in to https://contentrewards.com/ as the studio account, press the \"Get cookies.txt LOCALLY\" extension, then Export (current site).",
+    "Paste the file's text into the GitHub secret WHOP_COOKIES (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/WHOP_COOKIES",
+    "Open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml, press Run workflow, and wait for it to finish."
+   ]
+  },
+  {
+   "id": "login_vyro",
+   "what": "Vyro login (saved cookies)",
+   "group": "Campaign sites",
+   "status": "ok",
+   "expires": "2027-10-22",
+   "checked": "2026-10-24T19:06+00:00",
+   "detail": "saved 1 days ago, 9 cookies; no submission seen yet",
+   "needed": false,
+   "fix": [
+    "In Chrome on the Mac, signed in to https://app.vyro.com/campaigns as the studio account, press the \"Get cookies.txt LOCALLY\" extension, then Export (current site).",
+    "Paste the file's text into the GitHub secret VYRO_COOKIES (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/VYRO_COOKIES",
+    "Open https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/logins.yml, press Run workflow, and wait for it to finish."
+   ]
+  }
+ ]
+}

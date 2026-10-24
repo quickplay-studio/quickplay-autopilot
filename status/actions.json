@@ -23,7 +23,8 @@
   "added": "2026-10-24",
   "due": "2026-10-27",
   "done": false,
-  "short": "Facebook Page status"
+  "short": "Facebook Page status",
+  "issue": 34
  },
  {
   "id": "tiktok-status",
@@ -44,7 +45,8 @@
   "added": "2026-10-24",
   "due": "2026-10-28",
   "done": false,
-  "short": "TikTok status"
+  "short": "TikTok status",
+  "issue": 35
  },
  {
   "id": "mac-vyro",
@@ -65,7 +67,8 @@
   "repeat": "every day",
   "done": false,
   "short": "Mac awake for Vyro",
-  "check": "vyro_today"
+  "check": "vyro_today",
+  "note": "Saturday 24 October: 15 Vyro clips still wait for the Mac (0 submitted so far)"
  },
  {
   "id": "cloudflare-key",
@@ -91,7 +94,8 @@
   "due": "",
   "done": false,
   "short": "Cloudflare key",
-  "check": "secret_works:CF_API_TOKEN"
+  "check": "secret_works:CF_API_TOKEN",
+  "note": "CF_API_TOKEN is not set yet"
  },
  {
   "id": "mistral-key",
@@ -117,7 +121,8 @@
   "due": "",
   "done": false,
   "short": "Mistral key",
-  "check": "secret_works:MISTRAL_API_KEY"
+  "check": "secret_works:MISTRAL_API_KEY",
+  "note": "MISTRAL_API_KEY is not set yet"
  },
  {
   "id": "instagram-key",
@@ -141,7 +146,8 @@
   "added": "2026-10-24",
   "due": "2026-12-10",
   "done": false,
-  "short": "Instagram seed key"
+  "short": "Instagram seed key",
+  "issue": 36
  },
  {
   "id": "pages-from-actions",
@@ -169,7 +175,8 @@
   "short": "Hub rebuild setting",
   "check": "pages_workflow",
   "done_at": "2026-10-24",
-  "done_by": "Charlie"
+  "done_by": "check",
+  "note": "GitHub Pages builds from GitHub Actions"
  },
  {
   "id": "sambanova-key",
@@ -194,6 +201,7 @@
   "added": "2026-10-24",
   "due": "",
   "check": "secret_works:SAMBANOVA_API_KEY",
-  "done": false
+  "done": false,
+  "note": "SAMBANOVA_API_KEY is not set yet"
  }
 ]

@@ -63,6 +63,23 @@ def late_label(st, b):
     if FR.kind_of(b) not in FR.TIMELY or b.get("reserve"): return ""
     return "late" if st.get("late") else "on time"
 
+# What round 1 (from 25 October) adds to each Short's row in shorts.csv, scored as assigned by drivers.features: the board's
+# hook and length arms, its title answer arm, and whether the hook names the lead the title names
+ARM_COLUMNS = ("arm_hook_type", "arm_length", "title_answer", "hook_named")
+
+
+def hook_named(b):
+    """"yes" when the hook's first five words name the lead the title names (a name the board labels on screen:
+    validate.hook_lead, the V4 rule), "no" when they don't, "" when the board labels no lead. Content review, 24 October:
+    hooks led by the best-known name got 2.24x the views, so the loop scores the rule every day."""
+    try:
+        import validate as V
+        lead = V.hook_lead(b)
+        if not lead: return ""
+        beats = b.get("beats") or []
+        return "yes" if V.lead_named(lead, (beats[0].get("say") or "") if beats else "") else "no"
+    except Exception: return ""
+
 def our_shorts():
     """Status files and boards: what each Short was (category, format, mood, hook, words) keyed by YouTube id."""
     boards = {}
@@ -82,6 +99,10 @@ def our_shorts():
             "category": b.get("category", ""), "format": b.get("format", ""),
             "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
+            # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
+            **{k: ((b.get("test") or {}).get(t, "") if isinstance(b.get("test"), dict) else "")
+               for k, t in (("arm_hook_type", "hook_type"), ("arm_length", "length"), ("title_answer", "title_answer"))},
+            "hook_named": hook_named(b),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")), **ig_tests(st),
@@ -642,7 +663,7 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used")},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
@@ -923,7 +944,10 @@ def slot_scores(rows):
                                        for c, bs in sorted(bands.items())}}, indent=1))
 
 
-FACTOR_LABELS = {"fx_energy": "camera energy", "fx_slot": "posting quarter (UK)", "writer_arm": "writer model"}
+FACTOR_LABELS = {"fx_energy": "camera energy", "fx_slot": "posting quarter (UK)", "writer_arm": "writer model",
+                 "title_emoji": "title emoji", "title_answer": "title answer (stated or held back)"}
+# the title tests ride on every Short beside the round (writer.TITLE_TESTS): their progress shows with the round's
+TITLE_FACTORS = {"title_emoji": ["emoji", "none"], "title_answer": ["stated", "held back"]}
 
 
 def test_progress(rows, table, today=None):
@@ -942,6 +966,7 @@ def test_progress(rows, table, today=None):
     factors = dict(rnd["factors"])
     wt = CFG.get("writer_test") or {}
     if len(wt.get("arms") or []) == 2: factors["writer_arm"] = list(wt["arms"])      # the writer-model test (factpack.writer_test)
+    for f, arms_ in TITLE_FACTORS.items(): factors.setdefault(f, list(arms_))
     counts = {f: {a: 0 for a in arms} for f, arms in factors.items()}
     followed = {f: [0, 0] for f in counts}            # (Shorts whose arm was used as assigned, Shorts with a used value)
     posted_days = set()
@@ -954,7 +979,10 @@ def test_progress(rows, table, today=None):
         for f, arms in counts.items():
             if feats.get(f) in arms:
                 arms[feats[f]] += 1
-                used = r.get(f"{f}_used") or (r.get("look_energy") if f == "fx_energy" else "")
+                # what the Short actually did, against the arm it was given: the look's energy, the hook as written
+                # (drivers.hook_type), the length it ran to (content review, 24 October)
+                used = r.get(f"{f}_used") or (r.get("look_energy") if f == "fx_energy" else DRV.hook_used(r.get("hook"), feats[f]) if f == "hook_type"
+                                              else DRV.length_label(r.get("seconds")) if f == "length" else "")
                 if used: followed[f][1] += 1; followed[f][0] += used == feats[f]
     try:
         import quota
@@ -1171,8 +1199,10 @@ def audience_recipe(aud):
                    "with the exact name people type (person, game, film, team), the first hashtag and first tag repeat it, and topics "
                    "people are actively searching today beat clever angles on quiet ones.")
     elif feed >= 0.7:
+        # 24 October (content review): "a hook of 8 words or fewer" rested on 3 Shorts, and hooks of 13 words or more did
+        # no worse; what separated the best from the worst was the best-known name in the first four words
         out.append(f"The Shorts feed brings {round(100 * feed)}% of views: the first second decides everything, so lead with the "
-                   "strongest real image and a hook of 8 words or fewer.")
+                   "strongest real image and the best-known name in the hook's first four words.")
     cc = {r.get("country"): float(r.get("views") or 0) for r in ch.get("countries") or []}
     ctot = sum(cc.values()) or 1
     us, gb = cc.get("US", 0) / ctot, cc.get("GB", 0) / ctot

@@ -82,31 +82,64 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
-            ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test")]
+            ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
+            ("title_answer", "Title answer"), ("hook_named", "Hook names the lead")]
 # Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "title_answer"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts; title_answer is drawn 50/50 whatever a pause says)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
-          "fx_energy", "fx_slot", "writer_arm")     # recorded on the board by the writer (writer.py tests); the last three as assigned (an intention-to-treat comparison)
-NUM = r"\b(one|two|three|four|five|six|seven|eight|nine|ten|twelve|twenty|hundred|thousand|million|billion)\b"
+          "fx_energy", "fx_slot", "writer_arm", "title_answer")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison)
+# The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
+# in features(); anything else a board carries (length "as written", when a long arm came back at a normal length) is
+# scored on what the Short did
+HOOK_ARMS = ("statement", "question", "number", "superlative", "twist")
+LENGTH_ARMS = ("under 25 s", "25 to 34 s", "35 to 44 s", "about 60 s", "about 2 min")
+# The number arm's own definition: the hook opens on a number (its first word, after at most "over", "nearly", "just" and the
+# like), not a name that holds one ("Formula 1", "Shrek 2") and not a date ("23 October", "1999", "On 11 April 1970")
+DIGITS = r"[$£€]?\d[\d,.]*"
+NUMWORD = (r"(?:one(?! of\b| day\b)|two|three|four|five|six|seven|eight|nine|ten(?! hag\b)|eleven|twelve|twenty|thirty|forty|fifty|"
+           r"sixty|seventy|eighty|ninety|hundred|thousand|million|billion)")
+LEADS_WITH_NUMBER = re.compile(rf"(?:(?:over|nearly|almost|about|around|more than|at least|up to|just)\s+)?(?:{DIGITS}|{NUMWORD})\b"
+                               rf"|only\s+{DIGITS}\b")
+DATE_FIRST = re.compile(r"(?:on |in |back in )?(?:(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday) )?(?:\d{1,2}(?:st|nd|rd|th)? )?"
+                        r"(?:(?:january|february|march|april|may|june|july|august|september|october|november|december)\b|(?:1[89]\d\d|20\d\d)\b)")
 T90 = ((1, 6.314), (2, 2.920), (3, 2.353), (4, 2.132), (5, 2.015), (6, 1.943), (7, 1.895), (8, 1.860), (9, 1.833),
        (10, 1.812), (12, 1.782), (15, 1.753), (20, 1.725), (30, 1.697), (60, 1.671))
 
 
 def hook_type(h):
-    """A rough label for the first line, so hooks can be compared: question, number, superlative, twist, you, statement."""
+    """A label for the first line as written, by the writer's own hook arms (writer.TESTS "hook_type"): question, number,
+    superlative, twist, you, statement. A hook is "number" only when it opens on the number, as the number arm asks (see
+    LEADS_WITH_NUMBER); until 24 October any number word or digit anywhere made it one (59 of 114 hooks, 5 of the best 8,
+    among them "The Beatles recorded their entire debut album in just twelve hours", which is a statement). Superlatives
+    count in the first six words, where the superlative arm puts them. Shorts that were given a hook arm are scored on the
+    arm as assigned (features below), so this label only describes the rest and checks how often an arm was followed."""
     s = (h or "").strip(); low = s.lower()
     if not s: return ""
-    if s.endswith("?"): return "question"
-    if re.search(r"\d", s) or re.search(NUM, low): return "number"
-    if re.search(r"\b(first|only|biggest|largest|fastest|most|least|never|ever|record|smallest|oldest|youngest|longest)\b", low):
+    if s.endswith("?") or re.match(r"(did you know|have you ever|ever wondered|can you guess|guess what)\b", low): return "question"
+    if LEADS_WITH_NUMBER.match(low) and not DATE_FIRST.match(low): return "number"
+    if re.search(r"\b(first|only|biggest|largest|fastest|most|least|never|ever|record|smallest|oldest|youngest|longest)\b",
+                 " ".join(low.split()[:6])):
         return "superlative"
     if re.search(r"\b(but|actually|isn't|wasn't|instead|secret|hidden|nobody|no one|really|until)\b", low): return "twist"
     if re.search(r"\b(you|your)\b", low): return "you"
     return "statement"
+
+
+def hook_used(h, arm):
+    """What a hook counts as when asking whether its arm was followed (analytics.test_progress): the hook's own label, except
+    that the statement arm is any plain statement of the news, so a hook leaning on "you", a twist or a superlative still
+    follows it (only a question or an opening number does not)."""
+    label = hook_type(h)
+    return "statement" if arm == "statement" and label in ("you", "twist", "superlative") else label
+
+
+def length_label(seconds):
+    s = _f(seconds)
+    return "" if not s else ("under 25 s" if s < 25 else "25 to 34 s" if s < 35 else "35 to 44 s" if s < 45 else "45 to 89 s" if s < 90 else "90 s or more")
 
 
 def _f(x):
@@ -118,11 +151,14 @@ def features(r):
     """The comparable things about one Short (shorts.csv row) as {feature: value}."""
     out = {k: (r.get(k) or "") for k in ("category", "format", "mood", "look_captions", "look_voice", "look_energy",
                                           "look_grade", "look_opening")}
-    out["hook_type"] = r.get("hook_type") or hook_type(r.get("hook"))
+    # the hook and length tests are scored as assigned (content review, 24 October): a Short given a hook or length arm
+    # counts under that arm whatever the text or the render came to (an intention-to-treat comparison); the rest under
+    # the label of what was written (hook_type) and how long it ran
+    out["hook_type"] = (r.get("arm_hook_type") if r.get("arm_hook_type") in HOOK_ARMS else "") or r.get("hook_type") or hook_type(r.get("hook"))
     hw = _f(r.get("hook_words"))
     out["hook_len"] = "" if not hw else ("8 words or fewer" if hw <= 8 else "9 to 12 words" if hw <= 12 else "13 words or more")
-    s = _f(r.get("seconds"))
-    out["length"] = "" if not s else ("under 25 s" if s < 25 else "25 to 34 s" if s < 35 else "35 to 44 s" if s < 45 else "45 to 89 s" if s < 90 else "90 s or more")
+    out["length"] = (r.get("arm_length") if r.get("arm_length") in LENGTH_ARMS else "") or length_label(r.get("seconds"))
+    out["hook_named"] = r.get("hook_named") or ""
     out["appeal"] = r.get("appeal") or ""
     slot = r.get("slot_uk") or ""
     if slot:

@@ -88,6 +88,11 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
 .toolbar button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
 .err{color:var(--critical);font-size:13px}
   .gbp{opacity:.75;font-size:.85em;font-weight:inherit}
+.minibar{display:inline-block;width:48px;height:8px;background:var(--accent-track);border-radius:4px;vertical-align:middle;margin-right:6px;overflow:hidden}
+.minibar>span{display:block;height:100%;background:var(--accent);border-radius:4px}
+.up{color:var(--good-text);font-weight:600} .down{color:var(--critical);font-weight:600}
+.callout{border:1px solid var(--critical);border-radius:12px;padding:10px 14px;background:var(--surface-1);margin:10px 0}
+.callout p{margin:4px 0}
 </style>
 </head>
 <body>
@@ -99,6 +104,7 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
   </div>
   <nav role="tablist" id="tabs">
     <button role="tab" data-tab="overview" aria-selected="true">Overview</button>
+    <button role="tab" data-tab="insights">Insights</button>
     <button role="tab" data-tab="shorts">Daily Shorts</button>
     <button role="tab" data-tab="learning">What the data changed</button>
     <button role="tab" data-tab="clips">Clips and money</button>
@@ -109,6 +115,7 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
 </header>
 <main>
   <section id="overview" role="tabpanel"></section>
+  <section id="insights" role="tabpanel" hidden></section>
   <section id="shorts" role="tabpanel" hidden></section>
   <section id="learning" role="tabpanel" hidden></section>
   <section id="clips" role="tabpanel" hidden></section>
@@ -249,12 +256,15 @@ function clipMoney(campaigns, stats){
 let D = {};
 async function load(){
   $("when").textContent = "Loading";
-  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals] = await Promise.all([
+  const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
+         drivers, geo, regions, changes, late] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
-    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md")]);
-  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals};
+    get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_JOBS.md"), issues(), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
+    get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv")]);
+  D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
+       drivers, geo, regions, changes, late};
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -305,6 +315,155 @@ function claudeCard(){
     </div>
     <p class="sub">Each call is one short request. At most ${fmt((caps.edits || 24) + (caps.writes || 8))} edits and boards a day, and ${fmt(caps["calls per run"] || 12)} calls a write run; lower the caps in config.json to use less.</p>
     ${hist.length ? table([{h:"Day", f:r => esc(r[0])}, {h:"Calls", n:1, f:r => fmt(r[1].calls)}, {h:"Edits", n:1, f:r => fmt(r[1].edits)}, {h:"Boards", n:1, f:r => fmt(r[1].writes)}], hist) : ""}`;
+}
+
+// Insights (24 October): the data in one snapshot. What works (drivers.csv verdicts), where the viewers are (geo.csv,
+// regions.csv), each category on each platform over the last 14 days (shorts.csv), what is being changed and how each
+// change is judged (decisions.csv and the change ledger, analytics/changes.csv), and late content (analytics/late_uploads.csv).
+const median = a => { const v = a.filter(x => x != null && isFinite(x)).sort((x, y) => x - y); if (!v.length) return null;
+  const m = v.length >> 1; return v.length % 2 ? v[m] : (v[m - 1] + v[m]) / 2; };
+const has = x => x !== "" && x != null;
+let REGION_NAMES = null;
+const countryName = cc => { try { REGION_NAMES = REGION_NAMES || new Intl.DisplayNames(["en-GB"], {type: "region"}); return REGION_NAMES.of(cc) || cc; } catch (e) { return cc; } };
+const relMark = (v, base) => { if (v == null || !base) return ""; const r = v / base;
+  return `<span class="${r >= 1.25 ? "up" : r <= 0.8 ? "down" : "sub"}">${r.toFixed(2)}x</span>`; };
+function newestDecisions(n){        // decisions.csv is kept newest first; rows added later on the same day come after
+  return (D.decisions || []).map((r, i) => ({...r, _i: i}))
+    .sort((a, b) => (b.date || "").localeCompare(a.date || "") || b._i - a._i).slice(0, n);
+}
+const guards = r => String(r.guardrails || "").split(";").map(x => x.trim()).filter(Boolean).join(", ");
+const metric = m => esc(m).replace(/_/g, "_<wbr>");      // long metric names may wrap on a phone
+function verdictPill(v){
+  const k = String(v || "").toLowerCase();
+  return k === "better" ? pill("good", "✓", "better") : k === "worse" ? pill("bad", "✕", "worse") : k === "trade-off" ? pill("bad", "⚖", "trade-off")
+    : k === "too early" ? pill("wait", "…", "too early") : k ? pill("", "·", k) : pill("wait", "…", "measuring");
+}
+
+function categoryPlatforms(){
+  // Shorts posted in the last 14 days, by category. YouTube: views at 24 hours (the same age for every Short, from the
+  // hourly snapshots). Instagram and Facebook: views so far, for posts at least a day old. Each against the median of
+  // every Short in the same 14 days on that platform (1.00x = typical).
+  const now = Date.now(), cut = now - 14 * 864e5, dayOld = now - 864e5;
+  const recent = (D.shorts || []).filter(r => { const t = Date.parse(r.posted); return isFinite(t) && t >= cut; });
+  const aged = r => Date.parse(r.posted) <= dayOld;
+  const pick = {yt: r => has(r.views_24h) ? num(r.views_24h) : null,
+                ig: r => aged(r) && has(r.ig_views) ? num(r.ig_views) : null,
+                fb: r => aged(r) && has(r.fb_views) ? num(r.fb_views) : null};
+  const stat = (rs, f) => { const v = rs.map(f).filter(x => x != null); return {med: median(v), n: v.length}; };
+  const base = {yt: stat(recent, pick.yt), ig: stat(recent, pick.ig), fb: stat(recent, pick.fb)};
+  const cats = {};
+  for (const r of recent) (cats[r.category || "Other"] = cats[r.category || "Other"] || []).push(r);
+  const rows = Object.entries(cats).map(([cat, rs]) => ({cat, posted: rs.length, yt: stat(rs, pick.yt), ig: stat(rs, pick.ig), fb: stat(rs, pick.fb)}))
+    .sort((a, b) => b.posted - a.posted);
+  return {base, rows, n: recent.length};
+}
+
+function insightsTab(){
+  const ins = D.insights || "";
+  const updated = (ins.match(/updated ([^)]+)\)/) || [])[1] || "";
+  const headline = (ins.split(/\n\s*\n/).map(x => x.trim()).find(x => x && !x.startsWith("#")) || "").replace(/\n/g, " ");
+
+  // what works: the drivers' verdicts, one line per kind of choice
+  const areas = [];
+  for (const r of D.drivers || []) {
+    if (!["push", "cut back", "stop"].includes(r.verdict)) continue;
+    const name = r.feature_label || r.feature;
+    let a = areas.find(x => x.name === name);
+    if (!a) { a = {name, push: [], cut: [], stop: []}; areas.push(a); }
+    (r.verdict === "push" ? a.push : r.verdict === "stop" ? a.stop : a.cut).push(r);
+  }
+  for (const a of areas) { a.push.sort((x, y) => num(y.lift) - num(x.lift)); a.cut.sort((x, y) => num(x.lift) - num(y.lift)); }
+  const choice = list => list.length ? list.map(r => `${esc(r.value)} <span class="sub" style="white-space:nowrap">${num(r.lift).toFixed(2)}x, ${fmt(r.n)}</span>`).join("<br>") : `<span class="muted">·</span>`;
+  const count = k => (D.drivers || []).filter(r => r.verdict === k).length;
+
+  // where the viewers are
+  const geo = (D.geo || []).filter(r => r.scope === "channel").sort((a, b) => num(b.share_pct) - num(a.share_pct)).slice(0, 10);
+  const reg = Object.fromEntries((D.regions || []).filter(r => r.kind === "country").map(r => [r.country, r]));
+  const topShare = geo.length ? num(geo[0].share_pct) : 0;
+  const igFollowers = num(((D.summary || {}).instagram || {}).followers);
+
+  // each category on each platform
+  const cp = categoryPlatforms(), B = cp.base;
+  const cell = (st, base) => st.med == null ? `<span class="muted">·</span>`
+    : `${fmt(st.med)}<div style="font-size:12.5px;white-space:nowrap">${relMark(st.med, base.med)} <span class="sub">(${fmt(st.n)})</span></div>`;
+  const leans = r => { if (r.yt.med == null || r.ig.med == null || !B.yt.med || !B.ig.med) return "";
+    const y = r.yt.med / B.yt.med, i = r.ig.med / B.ig.med;       // named only when it is not weak there too
+    if (i >= 0.8 && i >= 1.5 * Math.max(y, 0.01)) return pill("good", "▲", "better on Instagram");
+    if (y >= 0.8 && y >= 1.5 * Math.max(i, 0.01)) return pill("good", "▲", "better on YouTube");
+    return ""; };
+
+  // what is being changed
+  const dec = newestDecisions(10);
+  const L = D.changes;
+  const live = (L || []).filter(r => !has(r.verdict) || String(r.status).toLowerCase() === "live");
+  const checked = (L || []).filter(r => has(r.verdict) && String(r.status).toLowerCase() !== "live")
+    .sort((a, b) => (b.check_on || "").localeCompare(a.check_on || ""));
+  const flagged = (L || []).filter(r => ["worse", "trade-off"].includes(String(r.verdict).toLowerCase()));
+
+  // late content
+  const late = (D.late || []).slice(-15).reverse();
+  const lateTally = (D.late || []).reduce((a, r) => { a[r.decision === "posted late" ? "posted" : "expired"]++; return a; }, {posted: 0, expired: 0});
+
+  return `
+    <h2>The data right now</h2>
+    <p class="sub">${updated ? `The Recipe was rebuilt ${esc(updated)}. ` : ""}Every number here is read live from the repository.</p>
+    ${headline ? `<div class="card">${esc(headline)}</div>` : ""}
+    <div class="tiles">
+      ${tile("YouTube views at 24 hours", B.yt.med == null ? "·" : fmt(B.yt.med), `median, ${fmt(B.yt.n)} Shorts in 14 days`)}
+      ${tile("Instagram views", B.ig.med == null ? "·" : fmt(B.ig.med), `median, ${fmt(B.ig.n)} Reels a day old or more`)}
+      ${tile("Facebook plays", B.fb.med == null ? "·" : fmt(B.fb.med), `median, ${fmt(B.fb.n)} Reels a day old or more`)}
+      ${tile("Biggest audience", geo.length ? `${esc(countryName(geo[0].country))} ${num(geo[0].share_pct).toFixed(0)}%` : "·", "share of YouTube views")}
+      ${tile("Choices being pushed", fmt(count("push")), `${fmt(count("cut back"))} cut back, ${fmt(count("stop"))} stopped for good`)}
+    </div>
+    ${flagged.length ? `<div class="callout"><p>${pill("bad", "!", "A change cost something")} ${flagged.length === 1 ? "One change" : fmt(flagged.length) + " changes"} made a number worse or traded one for another:</p>
+      ${flagged.map(r => `<p><b>${esc(r.id)}</b> ${esc(r.change)}: ${verdictPill(r.verdict)} ${esc(r.result)}</p>`).join("")}</div>` : ""}
+
+    <h2>What the numbers say works</h2>
+    <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 days or more. The writer follows these; "stopped" choices are never made again.</p>
+    ${table([{h:"Choice", f:a => esc(a.name)}, {h:"Lean towards", f:a => choice(a.push)}, {h:"Use less", f:a => choice(a.cut)}]
+      .concat(areas.some(a => a.stop.length) ? [{h:"Stopped", f:a => choice(a.stop)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
+
+    <h2>Where the viewers are</h2>
+    <p class="sub">YouTube's own split of the channel's views by country (it only names countries with enough viewers). "Watched" is the average share of each Short seen there; "best" is the category that does best for that country.</p>
+    ${table([{h:"Country", f:r => esc(countryName(r.country)) + ((reg[r.country] || {}).best_category
+        ? `<div class="sub" style="margin:2px 0 0">best: ${esc(String(reg[r.country].best_category).replace(/\s*\(([\d.]+x), \d+ Shorts\)/, " $1"))}</div>` : "")},
+      {h:"Share of views", n:1, f:r => `<span class="minibar" aria-hidden="true"><span style="width:${topShare ? (num(r.share_pct) / topShare * 100).toFixed(0) : 0}%"></span></span>${num(r.share_pct).toFixed(1)}%`
+        + `<div class="sub" style="margin:2px 0 0">${fmt(r.views)} views</div>`},
+      {h:"Watched", n:1, f:r => reg[r.country] && has(reg[r.country].avg_viewed_pct) ? num(reg[r.country].avg_viewed_pct).toFixed(0) + "%" : ""}],
+      geo, "Filled in by the next full analytics run.")}
+    <p class="sub" style="margin-top:8px">Instagram's audience by country: Instagram only reports it for accounts with 100 or more followers (${fmt(igFollowers)} now), so the next best signal is how each category does there, below.</p>
+
+    <h2>Categories on each platform (last 14 days)</h2>
+    <p class="sub">Median views per Short, then against the median of every Short in the same 14 days on that platform (green 1.25x or more, red 0.80x or less), then how many were measured. YouTube counts views at 24 hours so every Short is the same age; Instagram and Facebook count views so far on posts a day old or more. "Better on" names a platform where the category does at least 1.5 times as well, relative to that platform's typical Short, and is not weak there.</p>
+    ${table([{h:"Category", f:r => `${esc(r.cat)}<div class="sub" style="margin:2px 0 0">${fmt(r.posted)} posted</div>${leans(r) ? `<div style="margin-top:3px">${leans(r)}</div>` : ""}`},
+      {h:"YouTube", n:1, f:r => cell(r.yt, B.yt)}, {h:"Instagram", n:1, f:r => cell(r.ig, B.ig)}]
+      .concat(B.fb.med ? [{h:"Facebook", n:1, f:r => cell(r.fb, B.fb)}] : []), cp.rows, "No Shorts in the last 14 days.")}
+    ${B.fb.n && !B.fb.med ? `<p class="sub" style="margin-top:8px">Facebook is left out: most of its ${fmt(B.fb.n)} Reels a day old or more have no plays yet, so it cannot rank categories.</p>` : ""}
+
+    <h2>What is being changed now</h2>
+    <p class="sub">The latest changes the analytics made to the Recipe from these numbers (newest first). Each is checked again on its date.</p>
+    ${table([{h:"Date", nw:1, f:r => esc(r.date)}, {h:"Change", f:r => `<b>${esc(r.area)}:</b> ${esc(r.change)}<div class="sub" style="margin:2px 0 0">${esc(r.why)}</div>`},
+      {h:"Check on", nw:1, f:r => esc(r.check_on)}], dec, "No changes logged yet.")}
+    <h3 style="font-size:15px;margin:22px 0 6px">The change ledger: every change to the system, judged</h3>
+    <p class="sub">Each change states what it should improve (the target) and what it must not hurt (the guardrails). On its check date the numbers before and after are compared: "trade-off" means the target moved but a guardrail got worse.</p>
+    ${L === null || L === undefined ? `<p class="muted">The ledger starts with the next analytics run.</p>` : `
+      <p class="sub" style="margin:4px 0 6px"><b>Being measured</b> (${fmt(live.length)})</p>
+      ${table([{h:"Change", f:r => `<b>${esc(r.id)}</b> ${esc(r.change)}<div class="sub" style="margin:2px 0 0">${esc(r.hypothesis)}</div>
+          <div class="sub" style="margin:2px 0 0">Target: ${metric(r.target)}${guards(r) ? `; must not hurt: ${metric(guards(r))}` : ""}</div>
+          <div class="sub" style="margin:2px 0 0">${esc(r.area)}, live since ${esc(r.date)}${r.by ? ", by " + esc(r.by) : ""}</div>`},
+        {h:"Check on", nw:1, f:r => esc(r.check_on) + (has(r.verdict) ? "<br>" + verdictPill(r.verdict) : "")}], live, "Nothing being measured right now.")}
+      <p class="sub" style="margin:14px 0 6px"><b>Checked</b> (${fmt(checked.length)})</p>
+      ${table([{h:"Change", f:r => `<b>${esc(r.id)}</b> ${esc(r.change)}<div style="margin-top:3px">${verdictPill(r.verdict)}</div>
+          <div class="sub" style="margin:2px 0 0">${esc(r.area)}, checked ${esc(r.check_on)}${has(r.status) ? ", " + esc(r.status) : ""}</div>`},
+        {h:"Result", f:r => esc(r.result)}], checked, "No change has reached its check date yet.")}`}
+
+    <h2>Late content: posted or expired</h2>
+    <p class="sub">A news Short that would go public after its day, or a clip past its window, goes out only when the data says its story is still alive (in today's trends, Wikipedia reads well above usual, or plenty of news in 24 hours); otherwise it expires with the reason kept. ${D.late ? `So far ${fmt(lateTally.posted)} posted late, ${fmt(lateTally.expired)} expired.` : ""}</p>
+    ${D.late ? table([
+      {h:"What", f:r => `<b>${esc(r.id)}</b> ${esc(r.what)}<div class="sub" style="margin:2px 0 0">${esc(r.kind)}${has(r.days_late) ? `, ${esc(r.days_late)} day${r.days_late === "1" ? "" : "s"} late` : ""}${r.where ? ", at " + esc(r.where) : ""}, ${ukTime(r.decided_at)}</div>`},
+      {h:"Decision and evidence", f:r => (r.decision === "posted late" ? pill("wait", "↻", "posted late") : pill("", "·", r.decision || "expired"))
+        + `<div class="sub" style="margin:3px 0 0">${esc(r.evidence)}</div>`}], late, "No late content so far.")
+      : `<p class="muted">No late content so far: the freshness check started on 24 October.</p>`}`;
 }
 
 function render(){
@@ -363,6 +522,8 @@ function render(){
     <h2>Needs you or worth knowing</h2>${alertList}
     <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them). Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;
 
+  $("insights").innerHTML = insightsTab();
+
   // Daily Shorts
   const sh = (D.shorts || []).slice().sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
   const mode = window.__shortsMode || "newest";
@@ -406,7 +567,7 @@ function render(){
   $("shorts").querySelectorAll("[data-shorts]").forEach(b => b.onclick = () => { window.__shortsMode = b.dataset.shorts; render(); });
 
   // What the data changed
-  const dec = (D.decisions || []).slice().reverse().slice(0, 30);
+  const dec = newestDecisions(30);
   $("learning").innerHTML = `
     <h2>Changes the system made from the numbers</h2>
     <p class="sub">Newest first. Each one is checked again on its "check on" date and kept or undone.</p>
@@ -505,7 +666,9 @@ const EXPORT = [
   ["What drives views (every tested choice)", "analytics/drivers.csv", "text", 0],
   ["The Recipe the writer follows", "analytics/insights.md", "text", 0],
   ["The Monday report", "analytics/weekly.md", "text", 0],
-  ["Changes made from the data", "analytics/decisions.csv", "tail", 40],
+  ["Changes made from the data (newest first)", "analytics/decisions.csv", "head", 60],
+  ["Change ledger (hypothesis, target, guardrails, verdict)", "analytics/changes.csv", "text", 0],
+  ["Late uploads (freshness decisions)", "analytics/late_uploads.csv", "tail", 40],
   ["Writers and editors", "analytics/models.json", "text", 0],
   ["Posting times and quarters of the day", "analytics/slots.json", "text", 0],
   ["Regions", "analytics/regions.csv", "text", 0],
@@ -524,7 +687,7 @@ const EXPORT = [
   ["Build notes, Daily Shorts (latest)", "docs/NEXT.md", "tail", 60],
   ["Build notes, clips (latest)", "docs/CLIPS.md", "tail", 40],
   ["Mac Chrome jobs", "docs/CHROME_JOBS.md", "tail", 60]];
-function exportList(){ const ul = $("export-list"); if (ul && !ul.children.length) ul.innerHTML = EXPORT.map(e => `<li>${esc(e[0])} (${esc(e[1])}${e[2] === "tail" ? ", last " + e[3] + " lines" : ""})</li>`).join(""); }
+function exportList(){ const ul = $("export-list"); if (ul && !ul.children.length) ul.innerHTML = EXPORT.map(e => `<li>${esc(e[0])} (${esc(e[1])}${e[2] === "tail" ? ", last " + e[3] + " lines" : e[2] === "head" ? ", first " + e[3] + " lines" : ""})</li>`).join(""); }
 async function exportAll(){
   const st = $("export-state"); st.textContent = "Building...";
   const now = new Date(), parts = [`# Quickplay data export\n\nBuilt ${now.toLocaleString("en-GB", {timeZone: "Europe/London"})} UK from ${REPO} (main). Tables are CSV; long ones keep their header and latest rows.\n`];
@@ -532,6 +695,7 @@ async function exportAll(){
     let text = await get(path);
     if (text == null) { parts.push(`## ${label}\n\n(${path}: not found)\n`); continue; }
     if (kind === "tail") { const lines = text.trimEnd().split("\n"); text = lines.length > n + 1 ? (path.endsWith(".csv") ? lines[0] + "\n" : "") + lines.slice(-n).join("\n") : text; }
+    if (kind === "head") text = text.trimEnd().split("\n").slice(0, n + 1).join("\n");      // files kept newest first
     if (text.length > 60000) text = text.slice(-60000);
     const fence = /\.(csv|json|txt)$/.test(path) ? "```" : "";
     parts.push(`## ${label} (${path})\n\n${fence}\n${text.trim()}\n${fence}\n`);

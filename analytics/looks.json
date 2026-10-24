@@ -1,48 +1,48 @@
 {
- "updated": "2026-10-24T13:22+00:00",
+ "updated": "2026-10-24T19:10+00:00",
  "dimensions": {
   "captions": {
    "punch": {
     "n": 2,
-    "score": 0.869,
-    "held_3s_pct": 118.0,
+    "score": 0.521,
+    "held_3s_pct": 100.0,
     "avg_viewed_pct": 54.8,
     "stayed_pct": 21.0
    },
    "clean": {
     "n": 34,
-    "score": 1.002,
-    "held_3s_pct": 106.0,
-    "avg_viewed_pct": 55.0,
-    "stayed_pct": 31.5
+    "score": 1.084,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 52.9,
+    "stayed_pct": 30.0
    },
    "pop": {
     "n": 6,
-    "score": 2.07,
-    "held_3s_pct": 131.5,
-    "avg_viewed_pct": 80.3,
-    "stayed_pct": 32.0
+    "score": 1.482,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 80.2,
+    "stayed_pct": 32.5
    },
    "boxed": {
     "n": 3,
-    "score": 1.325,
-    "held_3s_pct": 118.0,
+    "score": 0.953,
+    "held_3s_pct": 100.0,
     "avg_viewed_pct": 47.9,
     "stayed_pct": 28.0
    },
    "minimal": {
-    "n": 14,
-    "score": 0.954,
-    "held_3s_pct": 106.0,
-    "avg_viewed_pct": 50.5,
-    "stayed_pct": 24.0
+    "n": 18,
+    "score": 1.05,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 48.5,
+    "stayed_pct": 23.5
    },
    "lab-captions-1019": {
-    "n": 32,
-    "score": 1.209,
-    "held_3s_pct": 108.0,
-    "avg_viewed_pct": 52.8,
-    "stayed_pct": 35.0
+    "n": 37,
+    "score": 1.26,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 47.5,
+    "stayed_pct": 26.5
    },
    "lab-captions-1024": {
     "n": 0
@@ -50,165 +50,167 @@
   },
   "voice": {
    "george": {
-    "n": 18,
-    "score": 0.982,
-    "held_3s_pct": 109.0,
-    "avg_viewed_pct": 54.5,
-    "stayed_pct": 31.5
+    "n": 23,
+    "score": 1.032,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 55.0,
+    "stayed_pct": 31.0
    },
    "george_dramatic": {
     "n": 9,
-    "score": 1.028,
-    "held_3s_pct": 110.5,
-    "avg_viewed_pct": 55.4,
-    "stayed_pct": 26.0
+    "score": 1.065,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 56.3,
+    "stayed_pct": 29.0
    },
    "george_quick": {
-    "n": 3,
-    "score": 0.889,
-    "held_3s_pct": 106.0,
-    "avg_viewed_pct": 54.5,
-    "stayed_pct": 24.0
+    "n": 4,
+    "score": 0.881,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 45.9,
+    "stayed_pct": 23.5
    },
    "emma": {
-    "n": 6,
-    "score": 1.335,
-    "held_3s_pct": 261.0,
-    "avg_viewed_pct": 111.2,
-    "stayed_pct": 31.5
+    "n": 9,
+    "score": 0.96,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 43.0,
+    "stayed_pct": 24.0
    },
    "lewis": {
     "n": 1,
-    "score": 0.855,
-    "held_3s_pct": 110.0,
-    "avg_viewed_pct": 60.7,
-    "stayed_pct": 22.0
+    "score": 0.842,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 64.3,
+    "stayed_pct": 24.0
    },
    "daniel": {
     "n": 0
    },
    "isabella": {
     "n": 1,
-    "score": 0.882,
-    "held_3s_pct": 108.0,
+    "score": 0.88,
+    "held_3s_pct": 100.0,
     "avg_viewed_pct": 52.8,
-    "stayed_pct": 25.0
+    "stayed_pct": 22.0
    },
    "lily": {
     "n": 1,
-    "score": 1.139,
-    "held_3s_pct": 105.0,
-    "avg_viewed_pct": 58.1,
-    "stayed_pct": 41.0
+    "score": 1.474,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 58.4,
+    "stayed_pct": 42.0
    },
    "michael": {
-    "n": 1,
-    "score": 1.188,
-    "avg_viewed_pct": 56.6,
-    "stayed_pct": 38.0
+    "n": 2,
+    "score": 1.38,
+    "held_3s_pct": 89.5,
+    "avg_viewed_pct": 44.0,
+    "stayed_pct": 37.0
    },
    "heart": {
     "n": 2,
-    "score": 0.944,
-    "held_3s_pct": 103.0,
-    "avg_viewed_pct": 51.5,
-    "stayed_pct": 30.5
+    "score": 0.895,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 43.8,
+    "stayed_pct": 25.5
    },
    "lab-voice-1019": {
     "n": 3,
-    "score": 1.241,
-    "held_3s_pct": 114.0,
-    "avg_viewed_pct": 53.7,
-    "stayed_pct": 44.0
+    "score": 1.368,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 67.4,
+    "stayed_pct": 39.0
    }
   },
   "energy": {
    "steady": {
-    "n": 47,
-    "score": 1.212,
-    "held_3s_pct": 110.0,
-    "avg_viewed_pct": 59.0,
-    "stayed_pct": 31.0
+    "n": 50,
+    "score": 1.29,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 55.1,
+    "stayed_pct": 29.0
    },
    "punchy": {
     "n": 8,
-    "score": 1.542,
-    "held_3s_pct": 115.0,
+    "score": 1.067,
+    "held_3s_pct": 100.0,
     "avg_viewed_pct": 54.8,
     "stayed_pct": 28.0
    },
    "calm": {
     "n": 27,
-    "score": 0.898,
-    "held_3s_pct": 104.0,
-    "avg_viewed_pct": 48.3,
-    "stayed_pct": 32.5
+    "score": 1.011,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 42.7,
+    "stayed_pct": 29.0
    },
    "lab-energy-1019": {
-    "n": 9,
-    "score": 1.0,
-    "held_3s_pct": 104.0,
-    "avg_viewed_pct": 52.8,
-    "stayed_pct": 36.0
+    "n": 15,
+    "score": 1.07,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 53.1,
+    "stayed_pct": 25.5
    }
   },
   "grade": {
    "natural": {
-    "n": 25,
-    "score": 1.9,
-    "held_3s_pct": 109.5,
-    "avg_viewed_pct": 60.1,
-    "stayed_pct": 29.5
+    "n": 33,
+    "score": 1.298,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 59.2,
+    "stayed_pct": 25.0
    },
    "cinematic": {
     "n": 29,
-    "score": 1.0,
-    "held_3s_pct": 110.0,
-    "avg_viewed_pct": 52.8,
-    "stayed_pct": 26.0
+    "score": 1.02,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 53.5,
+    "stayed_pct": 28.0
    },
    "vivid": {
     "n": 3,
-    "score": 1.609,
-    "held_3s_pct": 109.5,
+    "score": 1.132,
+    "held_3s_pct": 100.0,
     "avg_viewed_pct": 51.5,
     "stayed_pct": 35.0
    },
    "lab-grade-1019": {
     "n": 34,
-    "score": 0.848,
-    "held_3s_pct": 108.0,
-    "avg_viewed_pct": 52.9,
-    "stayed_pct": 34.5
+    "score": 1.123,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 48.3,
+    "stayed_pct": 29.5
    },
    "lab-grade-1023": {
-    "n": 0
+    "n": 1,
+    "score": 1.733
    }
   },
   "opening": {
    "graphic_first": {
     "n": 46,
-    "score": 1.025,
-    "held_3s_pct": 110.0,
-    "avg_viewed_pct": 54.2,
+    "score": 1.052,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 53.8,
     "stayed_pct": 29.0
    },
    "image_first": {
-    "n": 39,
-    "score": 1.325,
-    "held_3s_pct": 108.5,
-    "avg_viewed_pct": 57.0,
-    "stayed_pct": 33.0
+    "n": 47,
+    "score": 1.232,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 52.9,
+    "stayed_pct": 28.0
    },
    "lab-opening-1019": {
-    "n": 6,
-    "score": 0.5,
-    "avg_viewed_pct": 50.4,
-    "stayed_pct": 21.0
+    "n": 7,
+    "score": 0.933,
+    "avg_viewed_pct": 43.6,
+    "stayed_pct": 37.0
    }
   }
  },
- "how": "Each Short against Shorts posted within 3 days of it (1.0 = typical): 40% still watching at 3 seconds, 40% average % viewed, 20% views an hour. Voices: viewers not swiping away instead (engaged views as a share of views, and still watching at 3 seconds; Shorts with 30 or more views). An option's score is the median of its Shorts.",
+ "how": "Each Short against the Shorts posted the same UK day (1.0 = typical): 40% engaged views as a share of views (not swiping away), 40% average % viewed, 20% views an hour. Voices: not swiping away alone (Shorts with 30 or more views). An option's score is the median of its Shorts.",
  "measure": {
   "voice": "not swiping away"
  }

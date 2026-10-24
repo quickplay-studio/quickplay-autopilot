@@ -1,0 +1,127 @@
+{
+ "round": "round 1",
+ "start": "2026-10-25",
+ "per_arm": 70,
+ "as_of": "2026-10-24T19:10+00:00",
+ "factors": {
+  "hook_type": {
+   "arms": {
+    "statement": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "push"
+    },
+    "number": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "about typical"
+    }
+   },
+   "settled": true,
+   "days_left": 0,
+   "label": "hook type"
+  },
+  "length": {
+   "arms": {
+    "25 to 34 s": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "about typical"
+    },
+    "35 to 44 s": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "early sign"
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "length"
+  },
+  "title_search": {
+   "arms": {
+    "search phrase": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "too few to tell"
+    },
+    "curiosity": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "about typical"
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "title search"
+  },
+  "first_frame": {
+   "arms": {
+    "cover": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "early sign"
+    },
+    "photo": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "about typical"
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "first frame"
+  },
+  "fx_energy": {
+   "arms": {
+    "steady": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "lab-energy-1019": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "camera energy"
+  },
+  "fx_slot": {
+   "arms": {
+    "06:00 to 12:00": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "12:00 to 18:00": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "posting quarter (UK)"
+  },
+  "writer_arm": {
+   "arms": {
+    "gpt-oss-120b": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "gemini flash": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "writer model"
+  }
+ }
+}

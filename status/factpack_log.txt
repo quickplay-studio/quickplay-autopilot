@@ -1,8 +1,13 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+Ballon d'Or 2026: 3 verified, 1 one-source, 3 pages
+Ballon d'Or 2026 winner: 5 verified, 0 one-source, 2 pages
+The Celebrity Traitors: 1 verified, 5 one-source, 3 pages
 Celebrity Traitors 2026 cast: 0 verified, 4 one-source, 1 pages
-iPhone Duo goes on sale: 0 verified, 0 one-source, 1 pages
-Dai Dai by Shakira & Burna Boy: 0 verified, 5 one-source, 1 pages
-stoke: 1 verified, 4 one-source, 2 pages
-covered recently, no pack: GTA 6; Clayface (film); 2026 United States Grand Prix
-4 packs, 1 verified facts, 13 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 3}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}
+GTA 6 price: 5 verified, 1 one-source, 4 pages
+GTA 6 trailer views record: 0 verified, 3 one-source, 2 pages
+Dai Dai by Shakira & Burna Boy: 0 verified, 4 one-source, 1 pages
+harvey elliott: 0 verified, 5 one-source, 1 pages
+Sonic the Hedgehog fan creations: 0 verified, 4 one-source, 1 pages
+covered recently, no pack: GTA 6; WHERE IS MY HUSBAND! by RAYE; Clayface (film); Jailer 2; 2026 United States Grand Prix
+9 packs, 14 verified facts, 27 one-source
+gemini: {"out of quota": {}, "retired": ["openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 10, "groq:openai/gpt-oss-120b": 5, "gemini-flash-latest": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 6, "providers passed over": []}

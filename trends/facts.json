@@ -1,11 +1,266 @@
 {
  "date": "2026-10-24",
- "built": "2026-10-24T16:12+00:00",
- "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-24T19:10+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
+  {
+   "n": 4,
+   "topic": "Ballon d'Or 2026",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Discover when and where the 2026 Ballon d'Or will take place!"
+   ],
+   "sources": [
+    [
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-23"
+    ],
+    [
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
+     "BBC",
+     "2026-10-23"
+    ],
+    [
+     "Ballon d'Or 2026",
+     "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
+      "2": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019."
+     }
+    },
+    {
+     "claim": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
+      "2": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Lionel_Messi_-_Reus.jpg"
+   ]
+  },
+  {
+   "n": 6,
+   "topic": "Ballon d'Or 2026 winner",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Will London host the 2026 Ballon d'Or ceremony?",
+    "Discover when the 2026 Ballon d'Or takes place!"
+   ],
+   "sources": [
+    [
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-23"
+    ],
+    [
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
+     "BBC",
+     "2026-10-23"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
+      "2": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday 26 October at London's Palladium Theatre",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "The ceremony is traditionally held in France and has taken place in Paris' Theatre du Chatelet since 2019",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
+      "2": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019."
+     }
+    },
+    {
+     "claim": "A dual voting system is used to determine Ballon d'Or winners",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "A dual voting system is used to determine Ballon d'Or winners.",
+      "2": "A dual voting system is used to determine Ballon d'Or winners."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 8,
+   "topic": "The Celebrity Traitors",
+   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
+   "category": "Entertainment",
+   "what_is_new": "Details from episode eight of The Celebrity Traitors series two revealed that Miranda Hart was murdered, leaving 10 players.",
+   "hooks": [
+    "Did you know The Celebrity Traitors is a spin off?",
+    "Claudia Winkleman presented the hit series."
+   ],
+   "sources": [
+    [
+     "Caroline Hirons: ‘My celebrity crush? Colin Farrell. I hope he reads this – I hear he likes an older woman’",
+     "https://www.theguardian.com/lifeandstyle/2026/oct/24/caroline-hirons-interview-beauty-aesthetician-writer-new-book-skin-rules",
+     "Guardian",
+     "2026-10-24"
+    ],
+    [
+     "Celebrity Traitors left on a knife edge after a trip to the field of screams",
+     "https://www.bbc.co.uk/news/articles/c6jdmrz00v7lo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-23"
+    ],
+    [
+     "The Celebrity Traitors",
+     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Claudia Winkleman presented The Celebrity Traitors.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "On to Friday's mission, as the dwindling group arrived in a \"field of screams\", as presenter Claudia Winkleman aptly put it, full of scary-looking scarecrows.",
+      "3": "Claudia Winkleman presented the series."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The Celebrity Traitors is a spin off of the British version of the reality television series The Traitors.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The Celebrity Traitors (also known as The Celebrity Traitors UK) is a spin-off of the British version of the reality television series The Traitors."
+     }
+    },
+    {
+     "claim": "Claudia Winkleman presented the series.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Claudia Winkleman presented the series."
+     }
+    },
+    {
+     "claim": "A second series of The Celebrity Traitors began broadcasting on 1 October 2026.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "A second series began broadcasting on the 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October."
+     }
+    },
+    {
+     "claim": "The Celebrity Traitors was first broadcast on BBC One on 8 October 2025.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It was first broadcast on BBC One on 8 October 2025."
+     }
+    },
+    {
+     "claim": "The murder of Miranda Hart left only 10 of the initial 21 players remaining in the castle.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "When it became clear that the murdered Miranda had danced her last dance in the castle - leaving only 10 of the initial 21 players"
+     }
+    }
+   ],
+   "images": []
+  },
   {
    "n": 9,
    "topic": "Celebrity Traitors 2026 cast",
@@ -14,8 +269,8 @@
    "what_is_new": "",
    "hooks": [
     "Maya Jama and Richard E Grant start as secret Traitors.",
-    "Grant confessed his betrayal to Joe Lycett in episode one.",
-    "Amol Rajan fell victim to the Traitors in episode two."
+    "Richard E Grant admits his betrayal to Joe Lycett on debut.",
+    "James Acaster joins the coven after a dramatic recruitment."
    ],
    "sources": [
     [
@@ -28,7 +283,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "This year's original Traitors were Maya Jama and Richard E Grant, with James Acaster later recruited as the third member of their coven.",
+     "claim": "Maya Jama and Richard E Grant were the original Traitors, with James Acaster later recruited as the third member of their coven.",
      "sources": [
       1
      ],
@@ -37,7 +292,7 @@
      }
     },
     {
-     "claim": "Grant even explicitly revealed to Joe Lycett that he was a Traitor during the first episode, leaving the Faithfuls none the wiser about whether he was joking or telling the truth.",
+     "claim": "Richard E Grant explicitly told Joe Lycett that he was a Traitor in the first episode.",
      "sources": [
       1
      ],
@@ -46,44 +301,193 @@
      }
     },
     {
-     "claim": "In episode two, the Traitors were given a choice between James Acaster and Amol Rajan, with one celebrity set to be recruited and the other facing murder.",
+     "claim": "The Traitors chose to recruit James Acaster into their coven.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "In episode two, the Traitors were given a choice between James Acaster and Amol Rajan, with one celebrity set to be recruited and the other"
+      "1": "They chose to recruit Acaster, who was welcomed into the coven by Grant and Jama."
      }
     },
     {
-     "claim": "Amol Rajan was subsequently murdered by the Traitors.",
+     "claim": "There is a cash prize of up to £100,000 for the winner's chosen charity.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Amol Rajan was subsequently murdered by the Traitors."
+      "1": "There is also a cash prize of up to £100,000 for the winner's chosen charity."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 37,
-   "topic": "iPhone Duo goes on sale",
-   "signal": "Bluesky trending, 1,348 posts",
-   "category": "Tech",
+   "n": 13,
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "category": "Gaming",
    "what_is_new": "",
-   "hooks": [],
+   "hooks": [
+    "Discover the real cost and release date of GTA 6!",
+    "Is GTA 6 really worth the massive $80 price tag?",
+    "Everything you need to know about the upcoming GTA 6 release."
+   ],
    "sources": [
     [
-     "What to expect from Apple’s ‘Pro and tell’ event",
-     "https://www.theverge.com/tech/1018169/what-to-expect-apple-pro-and-tell-event-touchscreen-macbook-pro",
-     "The Verge",
+     "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
+     "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
+     "Guardian",
      "2026-10-24"
+    ],
+    [
+     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
+     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
+     "The Hollywood Reporter",
+     "2026-10-15"
+    ],
+    [
+     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+     "IGN",
+     "2026-06-25"
+    ],
+    [
+     "GTA 6 price",
+     "https://en.wikipedia.org/wiki/Gas_Price",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI costs $79.99 across PlayStation 5 and Xbox Series X and S.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
+      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
+     }
+    },
+    {
+     "claim": "The Ultimate Edition of Grand Theft Auto VI is priced at $99.99.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
+      "3": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is set to be released on Nov. 19, 2026.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
+      "3": "GTA 6 launches on November 19, 2026."
+     }
+    },
+    {
+     "claim": "Parent company TakeTwo is estimated to have spent $1 billion to $1.5 billion on developing Grand Theft Auto VI.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "It cost the company in the ballpark of $1 billion to $1.5 billion to make.",
+      "3": "Discussion of the price of GTA 6 comes amid speculation it may be the most expensive video game ever made, with parent company Take-Two estimated"
+     }
+    },
+    {
+     "claim": "Physical copies of Grand Theft Auto VI do not include a disc and are just a code in a box.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "there will be no physical version of GTA 6.",
+      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed. They're just a code in a box."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Rockstar took eight years developing Grand Theft Auto VI.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Rockstar took eight years developing GTA 6, which had more starts and stops than some of the game’s banged up beater vehicles."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
+   ]
+  },
+  {
+   "n": 14,
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "GTA VI drops on November 19 after record‑breaking trailer debut",
+    "Nearly thirty‑minute trailer starring Jason and Lucia thrills fans",
+    "Official launch trailer released October 23, sparking massive online buzz"
+   ],
+   "sources": [
+    [
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
+    ],
+    [
+     "Every big reveal from the GTA 6 Netflix trailer",
+     "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
+     "Polygon",
+     "2026-08-27"
     ]
    ],
    "verified": [],
-   "one_source": [],
-   "images": []
+   "one_source": [
+    {
+     "claim": "The Grand Theft Auto VI trailer runs for nearly thirty minutes.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
+     }
+    },
+    {
+     "claim": "The Grand Theft Auto VI trailer premiered on Netflix before appearing elsewhere.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
+     }
+    },
+    {
+     "claim": "The trailer showcases the protagonists Jason and Lucia.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "A handful of segments followed Jason and Lucia as they roamed around the city without any pressing concerns hanging over them, and Rockstar briefly swapped"
+     }
+    }
+   ],
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+   ]
   },
   {
    "n": 15,
@@ -92,9 +496,8 @@
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Shakira and Burna Boy score a massive chart milestone!",
-    "Dai Dai hits ten weeks at number one!",
-    "How well is the World Cup anthem performing globally?"
+    "Shakira and Burna Boy just hit a massive tenth week at number one!",
+    "Dai Dai makes history with ten weeks at the top of the global chart!"
    ],
    "sources": [
     [
@@ -107,16 +510,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Shakira and Burna Boy's Dai Dai scores a 10th week at number 1 on the Billboard Global Excl. U.S. chart.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "on billboard shakira and burna boy s dai dai fifa world cup official song 2026 nets a milestone 10th week at no 1 on the billboard global excl us chart it also tops the billboard global"
-     }
-    },
-    {
-     "claim": "Dai Dai is the FIFA World Cup Official Song 2026.",
+     "claim": "Shakira and Burna Boy's Dai Dai scores a milestone tenth week at number one on the Billboard Global Excl. U.S. chart.",
      "sources": [
       1
      ],
@@ -134,7 +528,7 @@
      }
     },
     {
-     "claim": "Dai Dai drew 36.7 million streams and sold 4,000 worldwide August 21 to 27.",
+     "claim": "Dai Dai drew 36.7 million streams and sold 4,000 worldwide from August 21 to 27.",
      "sources": [
       1
      ],
@@ -143,7 +537,7 @@
      }
     },
     {
-     "claim": "Dai Dai totaled 31.4 million streams and 3,000 sold outside the U.S.",
+     "claim": "Dai Dai totaled 31.4 million streams and 3,000 sold outside the United States.",
      "sources": [
       1
      ],
@@ -156,75 +550,129 @@
   },
   {
    "n": 21,
-   "topic": "stoke",
+   "topic": "harvey elliott",
    "signal": "Google Trends GB 200+",
-   "category": "Science",
+   "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know Stoke Space is an American space launch company?"
+    "Did you know Harvey Elliott was born on April 4 2003?",
+    "Harvey Elliott made his Fulham debut as a 15 year old!"
    ],
    "sources": [
     [
-     "Stoke Space’s $510M round shows the future of launch belongs to defense",
-     "https://techcrunch.com/2025/10/09/stoke-spaces-510m-round-shows-the-future-of-launch-belongs-to-defense/",
-     "TechCrunch",
-     "2025-10-09"
-    ],
-    [
-     "stoke",
-     "https://en.wikipedia.org/wiki/Stoke",
+     "harvey elliott",
+     "https://en.wikipedia.org/wiki/Harvey_Elliott",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Stoke Space is referenced in both sources.",
+     "claim": "Harvey Daniel James Elliott was born on 4 April 2003 in Chertsey, Surrey.",
      "sources": [
-      1,
-      2
+      1
      ],
      "evidence": {
-      "1": "stoke space announced a massive capital raise on wednesday that might seem at first glance like just another bet on the commercial launch market the details tell a",
-      "2": "Stoke Space, an American space launch company."
+      "1": "Harvey Daniel James Elliott (born 4 April 2003) is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on"
+     }
+    },
+    {
+     "claim": "Harvey Elliott made his first team debut for Fulham on 25 September 2018 as a 15 year old in the EFL Cup third round.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He made his first-team debut for Fulham on 25 September 2018 as a 15-year-old in the EFL Cup third round away to Millwall, as an"
+     }
+    },
+    {
+     "claim": "Harvey Elliott is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on loan from Premier League club Liverpool.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Harvey Daniel James Elliott (born 4 April 2003) is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on"
+     }
+    },
+    {
+     "claim": "He became the youngest ever Premier League player at the time, at 16 years and 30 days old.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In doing so, he became the youngest ever Premier League player at the time, at 16 years and 30 days old, beating the then‑record set"
+     }
+    },
+    {
+     "claim": "His transfer fee was a record for a then‑16‑year‑old.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The fee was a record for a then‑16 year old."
      }
     }
    ],
+   "images": [
+    "commons:File:Harvey_Elliott_in_2022.jpg"
+   ]
+  },
+  {
+   "n": 35,
+   "topic": "Sonic the Hedgehog fan creations",
+   "signal": "Bluesky trending, 2,011 posts",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Discover amazing free fan made Sonic the Hedgehog tabletop games today.",
+    "Play as your original character in these two fan made Sonic games.",
+    "Try out these incredible fan made Sonic tabletop RPG adventures now."
+   ],
+   "sources": [
+    [
+     "Play as your Sonic the Hedgehog OC with these fan made tabletop games",
+     "https://www.polygon.com/tabletop-games/501703/sonic-the-hedgehog-oc-fan-ttrpg-tag-team-heroes-rings-and-running-shoes/",
+     "Polygon",
+     "2024-12-23"
+    ]
+   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Stoke Space is an American space launch company.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Stoke Space, an American space launch company."
-     }
-    },
-    {
-     "claim": "Stoke Space raised $510 million in a Series D funding round.",
+     "claim": "Fans have created two tabletop games called Rings and Running Shoes and Sonic Tag Team Heroes.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Led by billionaire Thomas Tull’s U.S. Innovative Technology (USIT), a fund that explicitly invests in technologies tied to national security, the $510 million Series D"
+      "1": "I've found two fan-made Sonic games, for two different kinds of players."
      }
     },
     {
-     "claim": "Thomas Tull launched the U.S. Innovative Technology fund in 2023 to fund technologies relevant to the national interest.",
+     "claim": "Both fan made Sonic tabletop games are completely free.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Thomas Tull launched the fund in 2023 to fund technologies “relevant to the national interest.”"
+      "1": "You can get both titles completely free, at sonictth.com and ringsandrunningshoes.itch.io."
      }
     },
     {
-     "claim": "The Pentagon’s “Golden Dome” initiative is a multibillion‑dollar project aimed at creating a layered missile‑defense shield over the continental United States.",
+     "claim": "Sonic Tag Team Heroes uses Dungeons and Dragons inspired grid based combat.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The Pentagon’s new “Golden Dome” initiative, a multibillion-dollar project aimed at creating a layered missile defense shield over the continental United States, has flooded the"
+      "1": "Sonic Tag-Team Heroes is a more traditional tabletop game with crunchy, Dungeons & Dragons-inspired grid-based combat to play through heroic boss battles."
+     }
+    },
+    {
+     "claim": "Rings and Running Shoes is a Powered by the Apocalypse game.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Rings and Running Shoes is a Powered by the Apocalypse game set in the world of anthropomorphic hedgehogs and echidnas."
      }
     }
    ],

@@ -4,11 +4,11 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
-| Title words (median) | 10.0 | 7.0 |
-| With a number | 32% | 31% |
-| A question | 21% | 11% |
-| With an emoji | 53% | 99% |
-| Length, seconds (median) | 32.0 | 26.9 |
+| Title words (median) | 10.5 | 7.0 |
+| With a number | 27% | 32% |
+| A question | 27% | 11% |
+| With an emoji | 50% | 99% |
+| Length, seconds (median) | 34.0 | 27.0 |
 
 ## Animals
 - The Snakehead Fish Can Survive Days Out of Water #animals #shorts (360,725 views, 12,144 an hour, 6 s, Events Untold)
@@ -21,6 +21,13 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Finally Ultron Is Back With A Vibranium Body 🤯 #shorts (756,951 views, 18,797 an hour, 91 s, The Abhay Dynasty )
 - Biggest UNO reverse of MCU #mcu #avengers #loki #doom (123,813 views, 2,841 an hour, 20 s, NORVIQUE)
 - Why Doctor Doom Is So Powerful in Avengers Doomsday 😱🔥 #marvel #avengersdoomsday #shorts (62,301 views, 1,512 an hour, 41 s, Incursion Saga)
+
+## Ballon d'Or 2026
+- Most Ballon d'Or Wins by Club 🏆 Real Madrid or Barça? (385,548 views, 11,603 an hour, 31 s, Marble Dream League)
+- The Goat's Entry In Ballon d'or 🐐🥶 #shorts #ronaldo #messi #ballondor #shortsvideo (157,034 views, 5,122 an hour, 36 s, @xa07_Editx)
+- Why the 2026 Ballon d'Or Will Break Every Football Fan's Heart! 😳💔 (91 Goals vs Now 🥀) (31,051 views, 3,389 an hour, 37 s, BallStory)
+- Who Deserves The Ballon D'Or 🤔| Harry Kane Vs Mbappe Comparison ✨ #fcmobile #shorts #ballondor (44,914 views, 1,185 an hour, 24 s, Singo FC)
+- 2026 Ballon d’Or 🏆 Who DESERVES to Win? 👇 (32,363 views, 1,179 an hour, 50 s, Corrado Arangio)
 
 ## Cars
 - Why Race Tracks are made so slanted 😨 #core #views #shorts (198,652 views, 8,163 an hour, 22 s, Raw Factz)
@@ -62,6 +69,12 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - One Missed Shot… And It’s Game Over! 😱🏀 #basketball #amazing #facts #tamilshorts (22,018 views, 1,090 an hour, 18 s, Wow Facts Tamil)
 - Proof That Xbox Is SCARED of Sony 😳 (33,013 views, 899 an hour, 30 s, ByteRush)
 
+## Halloween 2026
+- Ranking The BEST Halloween Makeup Hacks of 2026 🎃✨ (843,507 views, 27,906 an hour, 35 s, Ranknosaur)
+- DID TZE SECRETLY TEASE THIS IN HALLOWEEN OF JJS!?… #shorts #jujutsushenanigans (172,375 views, 5,608 an hour, 45 s, Ichigo Yash)
+- The Hollow EVENT in Dandy's World! #roblox #dandysworld #thehollow #fyp #shorts #halloween (118,439 views, 5,026 an hour, 62 s, Jeiki)
+- How To Use And Unlock MEGUNA In JJS | JJS HALLOWEEN UPDATE (78,224 views, 3,924 an hour, 57 s, budgie0nyt)
+
 ## History
 - The Most Fun Watch Ever Made #facts #history (348,194 views, 15,680 an hour, 7 s, History Snap92)
 - The Invention Of The M113 🫪 #shorts #facts (79,877 views, 9,929 an hour, 59 s, Pure Logic)
@@ -93,3 +106,9 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Enable this 2 Secret settings in your realme phone #tech #technology #shorts (25,589 views, 1,153 an hour, 33 s, MSquare Tech)
 - The camera specs on this phone are insane #oppo #tech #shorts (32,267 views, 805 an hour, 80 s, GadgetGuy)
 - How Phone comes In your Hand.? #shorts (23,648 views, 602 an hour, 60 s, Tech wallah Aryan)
+
+## The Celebrity Traitors
+- Prince William Reveals His Kids Are Obsessed With Celebrity Traitors! 👀 (1,031 views, 139 an hour, 24 s, Hollywood Files Uncut)
+- Miranda Hart Is OUT! 😱 The Traitors’ Biggest Twist Yet! (161 views, 38 an hour, 29 s, Celeb Verse)
+- Prince William Says He’s A Christopher Nolan & ‘The Celebrity Traitors’ Super Fan #shorts (979 views, 29 an hour, 8 s, MONDAY MAG)
+- The Celebrity Traitors S2 Isn't in the US — Here's How to Stream It #Shorts (40 views, 2 an hour, 52 s, NextTrailers   • 348k Views •  24 hours ago...)

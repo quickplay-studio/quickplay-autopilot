@@ -65,9 +65,15 @@
      "published": "2026-10-23"
     },
     {
-     "outlet": "Guardian",
-     "title": "Is el clásico still the world’s biggest match? Three questions before Barcelona v Real Madrid",
-     "url": "https://www.theguardian.com/football/2026/oct/23/el-clasico-real-madrid-barcelona-lamine-yamal-kylian-mbappe",
+     "outlet": "BBC",
+     "title": "All you need to know about the 2026 Ballon d'Or",
+     "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Mexico’s Julián Quiñones may stand out on Ballon d’Or shortlist, but he’s earned his recognition",
+     "url": "https://www.nytimes.com/athletic/7708791/2026/10/23/julian-quinones-ballon-dor-mexico-shortlist/",
      "published": "2026-10-23"
     }
    ]
@@ -103,12 +109,6 @@
      "published": "2026-10-23"
     },
     {
-     "outlet": "Guardian",
-     "title": "Is el clásico still the world’s biggest match? Three questions before Barcelona v Real Madrid",
-     "url": "https://www.theguardian.com/football/2026/oct/23/el-clasico-real-madrid-barcelona-lamine-yamal-kylian-mbappe",
-     "published": "2026-10-23"
-    },
-    {
      "outlet": "BBC",
      "title": "All you need to know about the 2026 Ballon d'Or",
      "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
@@ -141,9 +141,9 @@
     },
     {
      "outlet": "UEFA",
-     "title": "2026 Ballon d'Or ceremony: When and where, all the nominees and how the awards are decided",
-     "url": "https://www.uefa.com/ballondor/news/02aa-21dcfc743210-2786daba77d8-1000--2026-ballon-d-or-ceremony-when-and-where-all-the-nominees-/",
-     "published": "2026-10-19"
+     "title": "Where to watch the 2026 Ballon d'Or ceremony: TV broadcast partners, live streams",
+     "url": "https://www.uefa.com/ballondor/news/02aa-21e300b43166-1cde2af6c1f4-1000--where-to-watch-the-2026-ballon-d-or-ceremony-tv-broadcast-p/",
+     "published": "2026-10-22"
     }
    ]
   },
@@ -355,217 +355,199 @@
    ]
   },
   {
-   "topic": "grant dawson",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grant_Dawson",
+   "topic": "March Madness by Future",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Cheltenham’s racing return provides romance over jumps and 20-1 shock",
-     "url": "https://www.theguardian.com/sport/2026/oct/23/cheltenhams-long-awaited-return-proves-romance-lives-on-in-jumps-racing",
-     "published": "2026-10-23"
+     "outlet": "CNN",
+     "title": "March Madness tournaments will expand to 76 teams each starting next season",
+     "url": "https://www.cnn.com/2026/05/07/sport/march-madness-expansion",
+     "published": "2026-05-07"
     }
    ]
   },
   {
-   "topic": "bristol vs exeter",
+   "topic": "darts scores",
    "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bristol_%26_Exeter",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dar%C3%9F_Forest",
    "articles": [
     {
+     "outlet": "Sky Sports",
+     "title": "Tel's sensational solo goal seals Spurs' win",
+     "url": "https://www.skysports.com/watch/video/13603333/goal-m-tel-87-chelsea-0-2-tottenham-hotspur",
+     "published": "2026-10-24"
+    },
+    {
      "outlet": "Guardian",
-     "title": "Stranger things turn an English village upside down in Max Porter’s rural noir Lanny",
-     "url": "https://www.theguardian.com/stage/2026/oct/23/lanny-review-bristol-old-vic-max-porter",
-     "published": "2026-10-23"
+     "title": "Scottish Premiership: Kelsy fires Rangers to emphatic win; Dundee United pip Aberdeen",
+     "url": "https://www.theguardian.com/football/2026/oct/24/scottish-premiership-rangers-dundee-celtic-hearts",
+     "published": "2026-10-24"
     },
     {
      "outlet": "BBC",
-     "title": "Bristol Rovers beat Exeter for 11th straight home win",
-     "url": "https://www.bbc.com/sport/football/live/cv5yjx1rdn5dt",
-     "published": "2026-09-26"
+     "title": "Arsenal fight back to beat Tottenham and ease pressure on Slegers",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cmy0r7epegd4o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
     },
     {
-     "outlet": "ESPN",
-     "title": "Exeter late try pushes Bristol closer to relegation",
-     "url": "https://www.espn.com/rugby/report/_/gameId/290102/league/267979",
-     "published": "2017-04-07"
+     "outlet": "GameSpot",
+     "title": "Call Of Duty Ads On Xbox Are Even More Annoying This Year With Modern Warfare 4",
+     "url": "https://www.gamespot.com/articles/call-of-duty-ads-on-xbox-are-even-more-annoying-this-year-with-modern-warfare-4/",
+     "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "valencia vs villarreal",
+   "topic": "burnley",
    "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Burnley",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Burnley sack head coach Hayen with 26-word statement",
+     "url": "https://www.skysports.com/football/news/12040/13603332/burnley-nicky-hayen-sacked-after-thrashing-at-lincoln-with-clarets-in-championship-relegation-zone",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Championship roundup: Southampton beat West Ham; QPR put five past Swansea",
+     "url": "https://www.theguardian.com/football/2026/oct/24/championship-roundup-sheffield-united-derby-west-ham-swansea",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Hayen sacked by Burnley after just 14 games",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cm4gv830j73do?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "borussia dortmund vs eintracht frankfurt standings",
+   "signal": "Google Trends GB 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "ESPN",
-     "title": "Valencia vs Villarreal: How to watch live on Disney+",
-     "url": "https://www.espn.com/soccer/story/_/id/46696894/valencia-vs-villarreal-how-watch-stats-team-news-laliga-2025-disney%2B",
-     "published": "2025-10-23"
+     "outlet": "USA Today",
+     "title": "Borussia Dortmund vs. Eintracht Frankfurt prediction, where to watch, time for Bundesliga match",
+     "url": "https://www.usatoday.com/story/sports/soccer/2026/05/08/where-to-watch-borussia-dortmund-eintracht-frankfurt-prediction-odds-stream/89988426007/",
+     "published": "2026-05-08"
     }
    ]
   },
   {
-   "topic": "brighton vs west ham",
+   "topic": "harvey elliott",
    "signal": "Google Trends GB 200+",
-   "wikipedia": null,
+   "wikipedia": "https://en.wikipedia.org/wiki/Harvey_Elliott",
    "articles": [
     {
      "outlet": "New York Times",
-     "title": "Brighton may have kicked their habit of freezing when favourites at the ideal time",
-     "url": "https://www.nytimes.com/athletic/7692266/2026/10/16/brighton-conference-league-favourites/",
-     "published": "2026-10-15"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Women's Super League round-up: Lisa Baum shines on Arsenal debut to beat Brighton and Tottenham dominate West Ham",
-     "url": "https://www.skysports.com/football/news/13581388/womens-super-league-round-up-lisa-baum-shines-on-arsenal-debut-to-beat-brighton-and-tottenham-dominate-west-ham",
-     "published": "2026-09-06"
+     "title": "Harvey Elliott seals loan move to Valencia from Liverpool",
+     "url": "https://www.nytimes.com/athletic/7545985/2026/08/31/liverpool-transfers-harvey-elliott-valencia/",
+     "published": "2026-08-31"
     }
    ]
   },
   {
-   "topic": "stoke",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Stoke",
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "Stoke Space’s $510M round shows the future of launch belongs to defense",
-     "url": "https://techcrunch.com/2025/10/09/stoke-spaces-510m-round-shows-the-future-of-launch-belongs-to-defense/",
-     "published": "2025-10-09"
-    }
-   ]
-  },
-  {
-   "topic": "traffic scotland",
+   "topic": "jason cundy",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Traffic_Scotland",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jason_Cundy",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "Trains cancelled and road warnings as Scotland prepares for Storm Boelo",
-     "url": "https://www.bbc.co.uk/news/articles/c60qk5lw1z8wo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Met says it shared allegations about Meghan’s father with her but not other forces",
-     "url": "https://www.theguardian.com/uk-news/2026/oct/24/met-admits-it-did-not-pass-on-2019-letter-about-meghan-markle-father-thomas-markle-allegations-",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "sports",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Sport",
-   "articles": [
-    {
-     "outlet": "Polygon",
-     "title": "Nintendo Is Still Being Wildly Underestimated",
-     "url": "https://www.polygon.com/switchboard-nintendo-switch-sports-resort/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Sports quiz of the week: eagles, ultra-endurance feats and assist records",
-     "url": "https://www.theguardian.com/sport/2026/oct/23/sports-quiz-of-the-week-eagles-ultra-endurance-feats-and-assist-records",
+     "outlet": "GameSpot",
+     "title": "Arkane Lyon Could Be Shut Down Within Weeks As Deadline To Find A Buyer Looms",
+     "url": "https://www.gamespot.com/articles/arkane-lyon-could-be-shut-down-within-weeks-as-deadline-to-find-a-buyer-looms/",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "PlayStation Blog",
-     "title": "PlayStation Store: September 2026’s top downloads",
-     "url": "https://blog.playstation.com/2026/10/22/playstation-store-september-2026s-top-downloads/",
-     "published": "2026-10-22"
     }
    ]
   },
   {
-   "topic": "oscar bobb",
+   "topic": "ufc today",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/USA_Today",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Older, calmer, but still playing the hits: Mourinho and Madrid primed for clásico",
+     "url": "https://www.theguardian.com/football/2026/oct/24/la-liga-clasico-barcelona-real-madrid-jose-mourinho",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Who am I? Plus today's other quizzes",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cknv01g9n27do?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "NASA",
+     "title": "APOD: 2026 October 24 – Rosetta’s Selfie",
+     "url": "https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "SpaceX launches Starlink satellites from California as Falcon 9 cadence slows (video)",
+     "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-starlink-group-15-15-b1063-ocisly",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "mi state vs ucla",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Spartan football goes on the road. How to watch the MSU-UCLA game",
+     "url": "https://www.usatoday.com/story/news/local/michigan/2026/10/23/michigan-state-university-spartans-ucla-bruins-college-football-how-to-watch-week-eight/92380613007/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "boston college vs georgia tech",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Georgia Tech takes on Boston College in ACC action",
+     "url": "https://www.espn.com/college-football/preview/_/gameId/401858273",
+     "published": "2026-10-18"
+    }
+   ]
+  },
+  {
+   "topic": "jeremy sochan",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Oscar_Bobb",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jeremy_Sochan",
    "articles": [
     {
-     "outlet": "Sky Sports",
-     "title": "Moment of magic from Bobb wins it for Fulham at Coventry",
-     "url": "https://www.skysports.com/football/coventry-city-vs-fulham/report/559517",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "Quentin Tarantino Wraps His AFI Fest Q&A By Showing Crowd First 17 Minutes Of ‘Cliff Booth’",
-     "url": "https://deadline.com/2026/10/quentin-tarantino-cliff-booth-screening-surprise-afi-fest-1237172221/",
-     "published": "2026-10-24"
-    },
-    {
      "outlet": "Guardian",
-     "title": "From Wildwood to John Legend: your complete entertainment guide to the week ahead",
-     "url": "https://www.theguardian.com/culture/2026/oct/24/entertainment-week-ahead-wildwood-john-legend-suede-lives-of-others",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Zendaya Sets Best Actress Oscar Campaign for Dune: Part 3",
-     "url": "https://www.ign.com/articles/zendaya-dune-part-3-best-actress-oscars",
+     "title": "The White House Farm massacre - exclusive: new forensic evidence suggests Sheila Caffell killed herself. Is Jeremy Bamber innocent?",
+     "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/oct/23/the-white-house-farm-massacre-exclusive-new-forensic-evidence-suggests-sheila-caffell-killed-herself-is-jeremy-bamber-innocent",
      "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "chelsea vs spurs",
+   "topic": "oklahoma vs ms state",
    "signal": "Google Trends US 10000+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Chelsea v Tottenham: Premier League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/24/chelsea-v-tottenham-premier-league-live",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Joao Pedro absent for Chelsea vs Tottenham LIVE!",
-     "url": "https://www.skysports.com/football/chelsea-vs-tottenham-hotspur/live/559516",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Derby day - when Chelsea and Spurs meet, is chaos guaranteed?",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c50mex301jjno?at_medium=RSS&at_campaign=rss",
+     "outlet": "ESPN",
+     "title": "SEC Now crew previews OU vs. MS State as Bulldogs return key pieces",
+     "url": "https://www.espn.com/video/clip/_/id/50262408/sec-now-crew-previews-ou-vs-ms-state-bulldogs-return-key-pieces",
      "published": "2026-10-23"
     },
-    {
-     "outlet": "BBC Sport",
-     "title": "New Victor Moses? How Alonso has transformed Neto",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c9gkvrkkjv0lo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "troy aikman",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Troy_Aikman",
-   "articles": [
     {
      "outlet": "USA Today",
-     "title": "Latest Joe Buck and Troy Aikman details are heated: 'You [expletive] me over!'",
-     "url": "https://ftw.usatoday.com/story/sports/nfl/2026/10/22/joe-buck-troy-aikman-espn-contract/92376695007/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "max dowman",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Max_Dowman",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "The Max Dowman conundrum: Mikel Arteta is wrestling with how to balance caution and opportunity",
-     "url": "https://www.nytimes.com/athletic/7717390/2026/10/23/max-dowman-arteta-arsenal-minutes/",
-     "published": "2026-10-23"
+     "title": "Jeff Lebby gives Kamario Taylor injury update for Mississippi State vs Oklahoma",
+     "url": "https://pantherswire.usatoday.com/story/sports/college/mississippi-state/2026/10/19/kamario-taylor-injury-update-mississippi-state-oklahoma/92281777007/",
+     "published": "2026-10-19"
     }
    ]
   },
@@ -618,29 +600,23 @@
      "published": "2026-10-24"
     },
     {
-     "outlet": "Polygon",
-     "title": "Aaron Paul Originally Had A Much More Important Role In Clayface",
-     "url": "https://www.polygon.com/clayface-aaron-paul-cameo-explained/",
+     "outlet": "IGN",
+     "title": "Aaron Paul Makes Surprise Cameo in DC’s Clayface",
+     "url": "https://www.ign.com/articles/aaron-paul-clayface-cameo-dc",
      "published": "2026-10-24"
     }
    ]
   },
   {
-   "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 170,289 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 192,717 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "‘Clayface’ Takes Shape As No. 1 With $24M+; ‘You Can See Everything’ Wowing With Possible $20M Second Weekend – Box Office Update",
-     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Under Fire by Humza Yousaf – a deeply affecting story of being stranded in Gaza",
-     "url": "https://www.theguardian.com/books/2026/oct/23/under-fire-by-humza-yousaf-a-deeply-affecting-story-of-being-stranded-in-gaza",
-     "published": "2026-10-23"
+     "outlet": "Variety",
+     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
+     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
+     "published": "2026-10-19"
     }
    ]
   },
@@ -665,9 +641,15 @@
    "wikipedia": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
    "articles": [
     {
+     "outlet": "Sky Sports",
+     "title": "Hamilton fastest from Verstappen ahead of US GP Qualifying",
+     "url": "https://www.skysports.com/f1/news/12040/13603143/united-states-gp-lewis-hamilton-fastest-from-max-verstappen-in-final-practice-ahead-of-qualifying-in-austin",
+     "published": "2026-10-24"
+    },
+    {
      "outlet": "BBC",
-     "title": "Leclerc fastest from Antonelli in US GP practice",
-     "url": "https://www.bbc.co.uk/sport/formula1/articles/cm5ynle2n082o?at_medium=RSS&at_campaign=rss",
+     "title": "Leclerc fastest in United States Grand Prix second practice",
+     "url": "https://www.bbc.co.uk/sport/formula1/live/c8jk934zyr3t?page=4",
      "published": "2026-10-23"
     },
     {
@@ -686,21 +668,14 @@
    "source": "Formula 1"
   },
   {
-   "topic": "Tabletop role-playing games",
-   "signal": "Bluesky trending, 6,669 posts",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tabletop_role-playing_game",
-   "articles": [],
-   "source": "Bluesky"
-  },
-  {
    "topic": "Storm Boelo hits the UK",
-   "signal": "Bluesky trending, 2,412 posts",
+   "signal": "Bluesky trending, 2,583 posts",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Amber weather warning as Storm Boelo hits Scotland",
-     "url": "https://www.bbc.co.uk/news/videos/cmqlnkq6p6y7o?at_medium=RSS&at_campaign=rss",
+     "title": "UK braces for worst of Storm Boelo as amber warnings due to come into force",
+     "url": "https://www.bbc.co.uk/news/articles/cmr4ydglq9r3o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-24"
     },
     {
@@ -714,7 +689,7 @@
   },
   {
    "topic": "Sonic the Hedgehog fan creations",
-   "signal": "Bluesky trending, 1,811 posts",
+   "signal": "Bluesky trending, 2,011 posts",
    "wikipedia": null,
    "articles": [
     {
@@ -727,41 +702,59 @@
    "source": "Bluesky"
   },
   {
-   "topic": "iPhone Duo goes on sale",
-   "signal": "Bluesky trending, 1,348 posts",
+   "topic": "Fire hits Hitler's Eagle's Nest",
+   "signal": "Bluesky trending, 500 posts",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "The Verge",
-     "title": "What to expect from Apple’s ‘Pro and tell’ event",
-     "url": "https://www.theverge.com/tech/1018169/what-to-expect-apple-pro-and-tell-event-touchscreen-macbook-pro",
+     "outlet": "BBC",
+     "title": "Watch: Fire engulfs Hitler's mountaintop Eagle's Nest retreat",
+     "url": "https://www.bbc.co.uk/news/videos/cq98z9xxy2n2o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-24"
     },
     {
-     "outlet": "New York Times",
-     "title": "iPhone Duo, Apple’s First Foldable Phone, Goes On Sale",
-     "url": "https://www.nytimes.com/video/technology/100000011232864/apple-iphone-duo-foldable-sale.html",
-     "published": "2026-10-23"
+     "outlet": "Guardian",
+     "title": "Suspect arrested over fire at Hitler’s ‘Eagle’s Nest’ retreat in Bavaria",
+     "url": "https://www.theguardian.com/world/2026/oct/24/blaze-engulfs-hitlers-eagles-nest-mountain-retreat-in-bavaria",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Suspect arrested after fire at Hitler's 'Eagle's Nest' retreat",
+     "url": "https://news.sky.com/story/suspect-arrested-after-fire-at-nazis-wwii-eagles-nest-mountain-retreat-13602938",
+     "published": "2026-10-24"
     }
    ],
    "source": "Bluesky"
   },
   {
-   "topic": "scarlett johansson",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Scarlett_Johansson",
+   "topic": "Frozen by Lil Baby",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Frozen_(Lil_Baby_song)",
    "articles": []
   },
   {
-   "topic": "wirus",
+   "topic": "dani dyer",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dani_Dyer",
+   "articles": []
+  },
+  {
+   "topic": "tenzing movie",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wir_sind_Helden",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tenzing_Montes",
    "articles": []
   },
   {
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 192,717 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "topic": "danny dyer",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Danny_Dyer",
+   "articles": []
+  },
+  {
+   "topic": "jordin canada",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jordin_Canada",
    "articles": []
   },
   {
@@ -771,21 +764,15 @@
    "articles": []
   },
   {
-   "topic": "Ilhan Omar",
-   "signal": "Wikipedia 103,972 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ilhan_Omar",
-   "articles": []
-  },
-  {
    "topic": "Ansel Adams",
    "signal": "Wikipedia 102,156 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Ansel_Adams",
    "articles": []
   },
   {
-   "topic": "Aadarsha Kutumbam",
-   "signal": "YouTube GB 172,242/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Aadarsha_Kutumbam_House_No:_47_-_AK47",
+   "topic": "WATCHPARTY",
+   "signal": "YouTube GB 1,325,590/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Watch_the_Party_Die",
    "articles": []
   }
  ]

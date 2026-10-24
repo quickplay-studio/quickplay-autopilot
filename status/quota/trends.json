@@ -1,7 +1,10 @@
 {
  "day": "2026-10-24",
- "units": 1326,
+ "units": 32,
  "by": {
-  "competitor search": 1326
+  "competitor search": 32
+ },
+ "calls": {
+  "search": 16
  }
 }

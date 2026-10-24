@@ -1,8 +1,5 @@
-breaking run for 2026-10-24: 1 to write from 5 fact packs
-category shares: {'Music': 0.36, 'Sport': 0.25, 'Film': 0.22, 'Gaming': 0.05, 'Entertainment': 0.04, 'Tech': 0.04, 'Science': 0.04}
-watchlist GTA 6: today's places are filled: GTA 6 price
-watchlist GTA 6: today's places are filled: GTA 6 trailer views record
+afternoon run for 2026-10-24: 0 to write from 7 fact packs
+category shares: {'Music': 0.33, 'Film': 0.32, 'Sport': 0.2, 'Gaming': 0.04, 'Entertainment': 0.04, 'Tech': 0.04, 'Science': 0.04}
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-WHERE IS MY HUSBAND! by RAYE: groq:openai/gpt-oss-120b, 0 warnings, edited by Claude
-wrote 1 of 1: QD-161 Raye is 28 and Where Is My Husband just hit a billion streams 🎉
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash-lite": 3, "claude:sonnet": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 1, "second opinions": 0, "late": false, "claude today": "11 of 12 edits, 4 of 4 writes"}
+wrote 0 of 0: 
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-flash-latest": 1, "gemini-3.5-flash-lite": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 0, "late": false, "claude today": "11 of 12 edits, 4 of 4 writes"}

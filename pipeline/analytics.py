@@ -354,24 +354,54 @@ def views_at(curve, hours):
         prev = (h, v)
     return None
 
+BREAKOUT_FIELDS = ["short", "title", "category", "hours_public", "views", "typical_at_this_age", "times_typical", "youtube_url",
+                   "trigger", "views_3h", "typical_3h"]
+
+
+def early_break(r, recent, curves):
+    """(views at 3 hours, typical at 3 hours) when a Short's first 3 hours put it in the top fifth of the last 7 days'
+    Shorts at the same age, at 2 times their median or more and at least breakout_3h_min_views (20); else None. 24 October,
+    on our own curves: of 89 Shorts this flagged 13 (15%), 10 of them in the top fifth by 24 hours and the other 3 at
+    3 to 4 times the median Short, hours before the 24-hour numbers exist (the data report: views at 3 hours pick the top
+    fifth with 92% accuracy; breakouts were being flagged 9 to 28 hours in)."""
+    v3 = views_at(curves.get(rkey(r)), 3)
+    if v3 is None: return None
+    t = utc(r["posted"])
+    peers = [p for p in (views_at(curves.get(rkey(x)), 3) for x in recent if x is not r and utc(x["posted"]) and utc(x["posted"]) < t)
+             if p is not None]
+    if len(peers) < 10: return None
+    q80 = sorted(peers)[int(0.8 * len(peers))]; med = max(1.0, statistics.median(peers))
+    if v3 >= max(q80 + 1, float(CFG.get("breakout_times", 2)) * med, int(CFG.get("breakout_3h_min_views", 20))): return v3, med
+    return None
+
+
 def breakouts(rows, curves):
-    """analytics/breakouts.csv: Shorts 2 to 48 hours old running at breakout_times (config.json, 2) or more the views
-    recent Shorts had at the same age (from the hourly curves, 5 or more peers, at least breakout_min_views, 150). Views come in lopsided bursts, so the writer
-    follows these up while the topic is hot (CLAUDE.md, What gets views)."""
+    """analytics/breakouts.csv: the Shorts to follow up while their topic is hot (the writer's hot(), CLAUDE.md What gets
+    views), 2 to 48 hours old, by either trigger:
+      - "3 hours" (24 October, the data report's act-at-3-hours): early_break, the top fifth at 3 hours;
+      - "views for age": breakout_times (config, 2) or more the views recent Shorts had at the same age (the hourly
+        curves, 5 or more peers), with at least breakout_min_views (150).
+    times_typical is the ratio of the trigger that fired (the stronger when both)."""
     out, recent = [], [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() <= 7 * 86400]
     for r in recent:
         age = (NOW - utc(r["posted"])).total_seconds() / 3600
         if not 2 <= age <= 48: continue
+        hit = None
         peers = [p for p in (views_at(curves.get(rkey(x)), age) for x in recent if x is not r) if p is not None]
-        if len(peers) < 5: continue
-        typ = max(1.0, statistics.median(peers)); ratio = r["yt_views"] / typ
-        if ratio >= float(CFG.get("breakout_times", 2)) and r["yt_views"] >= int(CFG.get("breakout_min_views", 150)):
+        if len(peers) >= 5:
+            typ = max(1.0, statistics.median(peers)); ratio = r["yt_views"] / typ
+            if ratio >= float(CFG.get("breakout_times", 2)) and r["yt_views"] >= int(CFG.get("breakout_min_views", 150)):
+                hit = {"trigger": "views for age", "typical_at_this_age": round(typ), "times_typical": round(ratio, 1)}
+        early = early_break(r, recent, curves) if age >= 3 else None
+        if early and (hit is None or early[0] / early[1] > hit["times_typical"]):
+            hit = {"trigger": "3 hours", "typical_at_this_age": round(early[1]), "times_typical": round(early[0] / early[1], 1)}
+        if hit:
             out.append({"short": r["short"], "title": r["title"], "category": r["category"], "hours_public": round(age, 1),
-                        "views": r["yt_views"], "typical_at_this_age": round(typ), "times_typical": round(ratio, 1),
-                        "youtube_url": r["youtube_url"]})
+                        "views": r["yt_views"], "youtube_url": r["youtube_url"], **hit,
+                        "views_3h": early[0] if early else (views_at(curves.get(rkey(r)), 3) or ""),
+                        "typical_3h": round(early[1]) if early else ""})
     out.sort(key=lambda b: -b["times_typical"])
-    write_csv(OUT / "breakouts.csv", out, ["short", "title", "category", "hours_public", "views", "typical_at_this_age",
-                                            "times_typical", "youtube_url"])
+    write_csv(OUT / "breakouts.csv", out, BREAKOUT_FIELDS)
     return out
 
 def peers_of(r, pool, field):
@@ -748,10 +778,14 @@ def main():
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table, DRV.METHOD)
-        follow = [f"Follow up {b['short'] or b['title']} (\"{b['title']}\"): {b['times_typical']}x the views recent Shorts had "
-                  f"{b['hours_public']} hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer "
-                  "to its top comment), title tied to it." for b in hot[:2]]
-        (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + audience_recipe(aud), aud))
+        follow = [f"Follow up {b['short'] or b['title']} (\"{b['title']}\"): " +
+                  (f"{b['views_3h']} views in its first 3 hours, {b['times_typical']}x the median Short at 3 hours (the top fifth)"
+                   if b.get("trigger") == "3 hours" else f"{b['times_typical']}x the views recent Shorts had {b['hours_public']} hours in") +
+                  ". Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title "
+                  "tied to it." for b in hot[:2]]
+        try: tests_lines = test_progress(rows, table)
+        except Exception as e: tests_lines = []; print("test progress:", str(e)[:150])
+        (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + tests_lines + audience_recipe(aud), aud))
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
 STAY_DIMS = ("voice",)     # Charlie, 20 October: narrators are judged on viewers not swiping away
@@ -871,39 +905,175 @@ def slot_scores(rows):
                                        for c, bs in sorted(bands.items())}}, indent=1))
 
 
+def test_progress(rows, table, today=None):
+    """The factorial round's progress (config test_round, writer.test_plan): for each factor and arm, the Shorts measured
+    so far (posted since the round began, 24-hour views in), how many more it needs to show a 2x difference (per_arm, 70;
+    data report, 24 October), the days that takes at today's rate, and drivers.csv's verdict once the proof rule is met.
+    Writes analytics/tests.json for the hub; returns lines for insights.md."""
+    rnd = CFG.get("test_round") or {}
+    p = OUT / "tests.json"
+    if not rnd.get("factors") or not rnd.get("start"):
+        p.unlink(missing_ok=True); return []
+    import drivers as DRV
+    start, per = str(rnd["start"]), int(rnd.get("per_arm", 70))
+    today = today or NOW.astimezone(UK).date()
+    verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
+    counts = {f: {a: 0 for a in arms} for f, arms in rnd["factors"].items()}
+    posted_days = set()
+    for r in rows:
+        t = utc(r.get("posted"))
+        if not t or str(t.astimezone(UK).date()) < start: continue
+        posted_days.add(str(t.astimezone(UK).date()))
+        if r.get("views_24h") in ("", None): continue
+        feats = DRV.features(r)
+        for f, arms in counts.items():
+            if feats.get(f) in arms: arms[feats[f]] += 1
+    try:
+        import quota
+        rate = max(1.0, 0.8 * quota.target() / 2)      # Shorts an arm a day: 4 in 5 Shorts are in the round, half to each arm
+    except Exception: rate = 6.0
+    out = {"round": rnd.get("name", "round"), "start": start, "per_arm": per, "as_of": NOW.isoformat(timespec="minutes"), "factors": {}}
+    lines = []
+    for f, arms in counts.items():
+        need = max(0, max(per - n for n in arms.values()))
+        settled = any(verdict.get((f, a)) in ("push", "cut back") for a in arms) or need == 0
+        out["factors"][f] = {"arms": {a: {"n": n, "needs": max(0, per - n), "verdict": verdict.get((f, a), "")} for a, n in arms.items()},
+                             "settled": settled, "days_left": 0 if settled else math.ceil(need / rate)}
+        lines.append(f"- {f.replace('_', ' ')}: " + ", ".join(f"{a} {n}" + (f" (needs {per - n} more)" if n < per else "") for a, n in arms.items())
+                     + ("; settled" if settled else f"; about {math.ceil(need / rate)} more days at today's rate"))
+    p.write_text(json.dumps(out, indent=1))
+    if today < dt.date.fromisoformat(start): return []
+    return [f"Tests being run ({out['round']}, from {start}: every Short takes an arm of each, 50/50; an arm settles at {per} "
+            "measured Shorts, or sooner on a clear result). Shorts measured so far:"] + lines
+
+
+def volume_days(today=None):
+    """Per UK day: Shorts posted, YouTube views gained (hourly.csv, only days the hourly rows cover for 20 hours or more),
+    the day's cohort (the 24-hour views of the Shorts posted that day, summed; scaled up when 80% or more of them are
+    measured) and their 24-hour views one by one. {day: {...}} from analytics/shorts.csv and hourly.csv."""
+    days = {}
+    new_day = lambda: {"views": 0.0, "hours": 0.0, "n": 0, "v24": [], "measured": 0}
+    p = OUT / "hourly.csv"
+    for r in (csv.DictReader(io.StringIO(p.read_text())) if p.exists() else []):
+        if r.get("yt_gained") in ("", None) or not r.get("uk_day"): continue
+        d = days.setdefault(r["uk_day"], new_day())
+        d["views"] += float(r["yt_gained"]); d["hours"] += float(r.get("hours") or 1)
+    p = OUT / "shorts.csv"
+    for r in (csv.DictReader(io.StringIO(p.read_text())) if p.exists() else []):
+        t = utc(r.get("posted"))
+        if not t: continue
+        d = days.setdefault(str(t.astimezone(UK).date()), new_day())
+        d["n"] += 1
+        try: v = float(r.get("views_24h"))
+        except (TypeError, ValueError): continue
+        d["v24"].append(v); d["measured"] += 1
+    for d in days.values():
+        d["daily"] = d["views"] if d["hours"] >= 20 else None
+        d["cohort"] = sum(d["v24"]) * d["n"] / d["measured"] if d["n"] and d["measured"] >= 0.8 * d["n"] else None
+    return days
+
+
+def ratio_ci(during, before, reps=2000, seed=11):
+    """Mean of `during` over mean of `before`, with a 90% bootstrap interval over days (each group resampled on its own).
+    None when either side is empty or before sums to 0."""
+    import random
+    if not during or not before or not sum(before): return None
+    rng, out = random.Random(seed), []
+    for _ in range(reps):
+        a = [rng.choice(during) for _ in during]; b = [rng.choice(before) for _ in before]
+        if sum(b): out.append((sum(a) / len(a)) / (sum(b) / len(b)))
+    out.sort()
+    point = (sum(during) / len(during)) / (sum(before) / len(before))
+    return {"during": round(sum(during) / len(during)), "before": round(sum(before) / len(before)), "ratio": round(point, 2),
+            "lo": round(out[int(0.05 * len(out))], 2), "hi": round(out[min(len(out) - 1, int(0.95 * len(out)))], 2),
+            "days": [len(during), len(before)]}
+
+
 def volume_test(today=None):
-    """Judges the fewer-better test (config shorts_per_day, from 24 October, 7 days) once it has run: the channel's average
-    daily views over the test week (from the daily snapshots' all-time totals) against the week before, and the median
-    views per Short. Daily views at 90% or more of before: the lower number stays (as many views for less work and quota,
-    each Short with more room); else back to the number before. Writes status/volume.json (quota.target reads it) and a
-    line in decisions.csv. Returns the verdict, or None while the test runs."""
+    """Charlie's fewer-better test (config volume_test: 15 Shorts a day from 24 October, against the 24 to 40 a day before).
+    Judged on each UK day, not on a 7-day snapshot ratio (data report, 24 October: that ratio's standard error is about
+    19%, so it can't tell 0.9x from 1.1x):
+      - daily YouTube views (views gained per UK day, analytics/hourly.csv),
+      - the day's cohort: the 24-hour views of the Shorts posted that day, summed (what the day's work brought in),
+      - the median 24-hour views of one Short (a guardrail: fewer Shorts should each do better),
+    over the test's days (14) against the days in the two weeks before it that posted 1.25 times the test number or more,
+    each ratio with a 90% bootstrap interval over days. The test number stays unless daily views AND the cohort are both
+    clearly lower (each interval's top under 0.9); then back to the median number of those days before. While it runs,
+    status/volume.json holds the reading so far (quota.target keeps the test number) and the ledger row (volume_test
+    "ledger", CH-011) waits for this verdict rather than a 7-day comparison. Returns the reading or the verdict."""
     p = ROOT / "status" / "volume.json"
     try: st = json.loads(p.read_text())
     except Exception: st = {}
     test = CFG.get("volume_test") or {}
     if st.get("verdict") or not test.get("start"): return None
-    start = dt.date.fromisoformat(test["start"]); days = int(test.get("days", 7))
-    today = today or NOW.astimezone(ZoneInfo("Europe/London")).date()
-    if today < start + dt.timedelta(days=days + 1): return None
-    snaps = {}
-    for r in csv.DictReader((OUT / "daily.csv").open()):
-        if r.get("source") == "snapshot" and r.get("yt_views_total"): snaps[r["day"]] = float(r["yt_views_total"])
-    def total(d):
-        got = [snaps[k] for k in sorted(snaps) if k >= str(d)]
-        return got[0] if got else None
-    a0, a1, b1 = total(start - dt.timedelta(days=days)), total(start), total(start + dt.timedelta(days=days))
-    if None in (a0, a1, b1): return None
-    before, during = (a1 - a0) / days, (b1 - a1) / days
-    ratio = during / before if before else 1.0
-    keep = ratio >= 0.9
-    n_new, n_old = int(test.get("per_day", 15)), int(test.get("before", 40))
-    st = {"per_day": n_new if keep else n_old, "verdict": "kept" if keep else "back", "judged": str(today),
-          "views_a_day_before": round(before), "views_a_day_during": round(during), "ratio": round(ratio, 2)}
+    start = dt.date.fromisoformat(test["start"]); n_days = int(test.get("days", 14)); per = int(test.get("per_day", 15))
+    today = today or NOW.astimezone(UK).date()
+    if today <= start: return None
+    days = volume_days(today)
+    judge_on = start + dt.timedelta(days=n_days + 1)          # the last test day's Shorts need their 24 hours
+    test_days = [str(start + dt.timedelta(days=i)) for i in range(n_days) if start + dt.timedelta(days=i) < today]
+    before_days = [str(start - dt.timedelta(days=i)) for i in range(1, 15)
+                   if days.get(str(start - dt.timedelta(days=i)), {}).get("n", 0) >= math.ceil(1.25 * per)]
+    pick = lambda ks, f: [days[k][f] for k in ks if k in days and days[k].get(f) is not None]
+    daily = ratio_ci(pick(test_days, "daily"), pick(before_days, "daily"))
+    cohort = ratio_ci(pick(test_days, "cohort"), pick(before_days, "cohort"))
+    def med(ks):
+        vals = [v for k in ks if k in days for v in days[k]["v24"]]
+        return statistics.median(vals) if vals else None
+    before_n = sorted(days[k]["n"] for k in before_days)
+    reading = {"test_days_in": len(test_days), "test_days": n_days, "judge_on": str(judge_on), "before_days": sorted(before_days),
+               "shorts_a_day": {"during": round(statistics.mean([days[k]["n"] for k in test_days if k in days] or [0]), 1),
+                                "before": round(statistics.mean(before_n), 1) if before_n else None},
+               "daily_views": daily, "cohort_24h": cohort,
+               "median_24h_per_short": {"during": med(test_days), "before": med(before_days)}}
+    clearly_lower = lambda x: bool(x) and x["hi"] < 0.9
+    enough = bool(daily and cohort and min(daily["days"][0], cohort["days"][0]) >= 10 and min(daily["days"][1], cohort["days"][1]) >= 3)
+    ledger_sync(test, judge_on)
+    if today < judge_on or not enough:
+        why = (f"collecting: day {len(test_days)} of {n_days}, judged from {judge_on:%A %d %B}" if today < judge_on else
+               f"extended: too few measured days to judge (daily {(daily or {}).get('days')}, cohort {(cohort or {}).get('days')}; "
+               "needs 10 test days and 3 days before)")
+        st = {"per_day": per, "verdict": None, "why": why, "reading": reading, "as_of": NOW.isoformat(timespec="minutes")}
+        p.parent.mkdir(exist_ok=True); p.write_text(json.dumps(st, indent=1))
+        return st
+    back = clearly_lower(daily) and clearly_lower(cohort)
+    back_to = max(per + 1, min(int(test.get("before", 40)), round(statistics.median(before_n)))) if before_n else int(test.get("before", 40))
+    before_a_day = reading["shorts_a_day"]["before"]
+    st = {"per_day": back_to if back else per, "verdict": "back" if back else "kept", "judged": str(today), "reading": reading,
+          "why": (f"{per} a day brought clearly fewer views: daily views {daily['ratio']}x [{daily['lo']}, {daily['hi']}] and the day's "
+                  f"Shorts {cohort['ratio']}x [{cohort['lo']}, {cohort['hi']}] of the days at {before_a_day} a day") if back else
+                 (f"{per} a day kept the views: daily views {daily['ratio']}x [{daily['lo']}, {daily['hi']}], the day's Shorts "
+                  f"{cohort['ratio']}x [{cohort['lo']}, {cohort['hi']}] of the days at {before_a_day} a day, for less work and "
+                  "YouTube allowance")}
     p.write_text(json.dumps(st, indent=1))
-    _decision("Shorts a day", f"{'Keep' if keep else 'Back to'} {st['per_day']} Shorts a day",
-              f"{n_new} a day for {days} days brought {round(during):,} views a day against {round(before):,} with {n_old} a day ({ratio:.2f}x)",
-              "daily.csv snapshots (yt_views_total)", today + dt.timedelta(days=7))
+    _decision("Shorts a day", f"{'Back to' if back else 'Keep'} {st['per_day']} Shorts a day", st["why"],
+              "analytics.volume_test: daily views (hourly.csv) and day cohorts (shorts.csv views_24h), 90% bootstrap intervals over days",
+              today + dt.timedelta(days=14))
+    ledger_sync(test, judge_on, st)
     return st
+
+
+def ledger_sync(test, judge_on, verdict=None):
+    """Keeps the volume test's ledger row (volume_test "ledger", CH-011) on this test: checked on the judging day rather than
+    after the 7 days it was added with, and, once judged, the verdict and the numbers (changes.py leaves a checked row)."""
+    cid = test.get("ledger")
+    if not cid: return
+    try:
+        import changes
+        rows = changes.load()
+        r = next((x for x in rows if x.get("id") == cid), None)
+        if r is None or r.get("status") in ("kept", "reverted") or (r.get("status") == "checked" and r.get("verdict") and not verdict): return
+        r["after_days"] = str(int(test.get("days", 14))); r["check_on"] = str(judge_on)
+        if verdict:
+            d, c = verdict["reading"]["daily_views"], verdict["reading"]["cohort_24h"]
+            m = verdict["reading"]["median_24h_per_short"]
+            r.update(status="checked", verdict="worse" if verdict["verdict"] == "back" else ("better" if d["lo"] > 1.1 else "no change"),
+                     result=f"volume test {verdict['verdict']}: daily views {d['before']} -> {d['during']} ({d['ratio']}x, 90% "
+                            f"{d['lo']} to {d['hi']}, days {d['days'][0]}/{d['days'][1]}); the day's Shorts at 24 h {c['before']} -> "
+                            f"{c['during']} ({c['ratio']}x, {c['lo']} to {c['hi']}); median a Short {m['before']} -> {m['during']}; "
+                            f"now {verdict['per_day']} a day")
+        changes.save(rows)
+    except Exception as e: print("volume test ledger:", str(e)[:150])
 
 
 def _decision(area, change, why, evidence, check_on):

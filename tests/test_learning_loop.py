@@ -119,7 +119,7 @@ W.ROOT = SCRATCH
 need = W.floor_needs([{"category": "Music"}, {"category": "Film"}], 15)
 assert "Music" not in need and "Gaming" in need, need
 need40 = W.floor_needs([{"category": "Music"}], 40)
-assert "Music" in need40                                                                    # 5% of 40 is 2 a day
+assert "Music" in need40                                                                    # 7% of 40 is 3 a day
 print("3a exploration and floors ok")
 
 class FP:
@@ -131,6 +131,8 @@ W.factpack = FP
 W.DAY["boards"] = [{"writer": "gemini:flash"}] * 4 + [{"writer": "groq:big"}] * 2
 assert all(W.choose_writer(f"QD-{i}") != "gemini:flash" for i in range(30))              # 4 of 6 already: capped until proven
 (SCRATCH / "analytics" / "models.json").write_text(json.dumps({"writers": {"gemini:flash": {"n": 12, "score": 20.0}}}))
+assert all(W.choose_writer(f"QD-{i}") != "gemini:flash" for i in range(30))              # 12 measured: still capped (20 needed, data report item 7)
+(SCRATCH / "analytics" / "models.json").write_text(json.dumps({"writers": {"gemini:flash": {"n": 22, "score": 20.0}}}))
 assert any(W.choose_writer(f"QD-{i}") == "gemini:flash" for i in range(30))              # proven: no cap
 W.DAY["boards"] = []
 W.ROOT = _p.Path(REPO_DIR)                      # the real formats catalogue

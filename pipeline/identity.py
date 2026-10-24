@@ -10,6 +10,9 @@ account (studiosocialmedia123@gmail.com) and the accounts hanging off it, all na
   python pipeline/identity.py gate     the first step of every workflow that posts: exits 1 while the last audit found a
                                        sign-in outside the studio, so nothing is uploaded, posted, commented or submitted.
 Nothing secret is written anywhere: ids, names and handles only.
+Key health (24 October): a check may carry "key", the facts the same call already gave about that sign-in (is it expired,
+when does it end, which channel it reached). pipeline/keys.py turns them into status/keys.json and the key issues, so
+no sign-in is called twice. Runs every 3 hours (audit.yml).
 """
 import datetime as dt, glob, json, os, pathlib, re, sys
 
@@ -32,8 +35,22 @@ def studio_name(name):
     return re.sub(r"[\s_\-.]+", "", str(name or "")).lower().startswith(prefix)
 
 
-def check(what, found, ok, expected="", note=""):
-    return {"what": what, "found": found, "ok": bool(ok), "expected": expected, "note": note}
+def check(what, found, ok, expected="", note="", key=None):
+    c = {"what": what, "found": found, "ok": bool(ok), "expected": expected, "note": note}
+    if key: c["key"] = key          # facts for status/keys.json (expiry dates, states): never a secret
+    return c
+
+
+def iso(t):
+    return t.isoformat(timespec="minutes") if t else None
+
+
+def keys_running(hours=48):
+    """True while pipeline/keys.py has written status/keys.json within `hours`: it then owns the issues for expired and
+    expiring keys (one each, with exact steps), and the audit's older combined ones (expired_note, social.KEY_ISSUE) wait
+    as the fallback for the day keys.py stops."""
+    try: return (NOW - dt.datetime.fromisoformat(json.loads((ROOT / "status" / "keys.json").read_text())["checked"])).total_seconds() < hours * 3600
+    except Exception: return False
 
 
 # Failures that say nothing about whose account a sign-in is: the network, a rate or quota limit, a server error. Until
@@ -73,28 +90,30 @@ def youtube_checks():
     try: import social
     except Exception as e: return [check("youtube", "", False, note=f"social.py: {e}")]
     for p in sorted((ROOT / "tokens").glob("youtube*.enc")):
-        name = p.stem
+        name, t = p.stem, {}
+        yk = lambda state, channel="": {"kind": "youtube", "state": state, "channel": channel, "saved": t.get("saved"),
+                                        "expires_at": t.get("expires_at")}      # Google sets an end date only while its app is in Testing
         try:
             t = social.load(name)
-            if not t.get("refresh_token"): out.append(check(name, "no sign-in", True, note="empty")); continue
+            if not t.get("refresh_token"): out.append(check(name, "no sign-in", True, note="empty", key=yk("empty"))); continue
             from google.oauth2.credentials import Credentials
             from googleapiclient.discovery import build
             creds = Credentials(None, refresh_token=t["refresh_token"], token_uri="https://oauth2.googleapis.com/token",
                                 client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"], scopes=(t.get("scope") or "").split())
             yt = build("youtube", "v3", credentials=creds, cache_discovery=False)
             items = yt.channels().list(part="snippet", mine=True).execute().get("items", [])
-            if not items: out.append(check(name, "no channel", False, note="the sign-in reaches no channel")); continue
+            if not items: out.append(check(name, "no channel", False, note="the sign-in reaches no channel", key=yk("no channel"))); continue
             cid, title, handle = items[0]["id"], items[0]["snippet"].get("title", ""), items[0]["snippet"].get("customUrl", "")
             known = (ACC.get("youtube") or {})
             ok = cid in known or studio_name(title)
             out.append(check(name, f"{title} ({handle or cid})", ok, expected="a Quickplay channel of the studio account",
-                             note="" if ok else "neither a listed channel id nor a Quickplay name"))
+                             note="" if ok else "neither a listed channel id nor a Quickplay name", key=yk("ok", title)))
         except (Exception, SystemExit) as e:
             if EXPIRED.search(str(e)):      # an expired or revoked sign-in reaches no account at all: not a security problem,
-                out.append(check(name, "expired sign-in", True, note="reconnect it (the hub's Accounts tab or the social workflow)"))
+                out.append(check(name, "expired sign-in", True, note="reconnect it (the hub's Accounts tab or the social workflow)", key=yk("expired")))
                 EXPIRED_SIGNINS.append(name); continue      # so posting is not stopped for it; expired() raises its own issue
             if transient(e): out.append(unverified(name, f"{type(e).__name__}: {str(e)[:80]}")); continue
-            out.append(check(name, "", False, note=f"{type(e).__name__}: {str(e)[:120]}"))
+            out.append(check(name, "", False, note=f"{type(e).__name__}: {str(e)[:120]}", key=yk("error")))
     return out
 
 
@@ -117,6 +136,39 @@ def expired_note():
     except Exception as e: log("expired alert:", str(e)[:120])
 
 
+META = {}      # what social.refresh_meta_keys learned this run about each channel Facebook key's end (asked once, shared below)
+
+
+def ig_end(t):
+    """When a stored Instagram key ends, from Meta's last refresh answer: tokens/instagram_<channel>.enc keeps expires_at,
+    tokens/instagram.enc keeps saved and expires_in."""
+    if t.get("expires_at"): return str(t["expires_at"])
+    try: return iso(dt.datetime.fromisoformat(t["saved"]) + dt.timedelta(seconds=int(t["expires_in"])))
+    except Exception: return None
+
+
+def stored_end(label, tok):
+    """The end of an IG_<CHANNEL>_TOKEN as its refreshed copy (tokens/instagram_<channel>.enc) records it, if that copy grew
+    from this very key."""
+    m = re.fullmatch(r"IG_([A-Z]+)_TOKEN", label)
+    if not m: return None
+    try:
+        import social
+        s = social.load("instagram_" + m.group(1).lower())
+        return ig_end(s) if s.get("token") == tok else None
+    except (Exception, SystemExit): return None
+
+
+def fb_end(api, label, tok, requests):
+    """When a Facebook key and its data access end (unix seconds, 0 for never): what refresh_meta_keys read for the
+    channels' keys this run (META), else one debug_token call."""
+    if label in META: return dict(META[label])
+    try:
+        d = (requests.get(f"{api}/debug_token", params={"input_token": tok, "access_token": tok}, timeout=30).json() or {}).get("data") or {}
+        return {"expires_at": int(d.get("expires_at") or 0), "data_access_expires_at": int(d.get("data_access_expires_at") or 0)} if d else {}
+    except Exception: return {}
+
+
 def meta_checks():
     out = []
     try:
@@ -124,31 +176,33 @@ def meta_checks():
     except Exception as e: return [check("meta", "", False, note=f"{e}")]
     # Instagram: the saved sign-in and every IG_*_TOKEN a workflow passes
     seen = set()
-    igs = []
+    igs = []        # (label, key, when it ends if the stored copy says)
     try:
         t = social.load("instagram")
-        if t.get("token"): igs.append(("instagram", t["token"]))
+        if t.get("token"): igs.append(("instagram", t["token"], ig_end(t)))
     except (Exception, SystemExit) as e: out.append(check("instagram", "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
     for k, v in os.environ.items():
-        if re.fullmatch(r"IG(_[A-Z]+)?_TOKEN", k) and v.strip(): igs.append((k, v.strip()))
-    for label, tok in igs:
+        if re.fullmatch(r"IG(_[A-Z]+)?_TOKEN", k) and v.strip(): igs.append((k, v.strip(), stored_end(k, v.strip())))
+    for label, tok, end in igs:
         if tok in seen: continue
         seen.add(tok)
         try:
             r = requests.get("https://graph.instagram.com/me", params={"fields": "user_id,username,account_type", "access_token": tok}, timeout=30)
             if not r.ok:
-                c = meta_refusal(label, r)
+                c = meta_refusal(label, r, "instagram")
                 # the IG_TOKEN secret only seeds tokens/instagram.enc, which is refreshed weekly and checked above as
                 # "instagram": the seed running out is expected, not a key to renew (it still fails if it answers foreign)
                 if label == "IG_TOKEN" and c.get("found") == "expired key" and igs and igs[0][0] == "instagram":
                     EXPIRED_SIGNINS.remove(label)
                     c.update(found="expired seed", note="the seed of tokens/instagram.enc; the stored key is refreshed weekly")
+                    c["key"]["state"] = "expired seed"
                 out.append(c); continue
             me = r.json(); user = me.get("username", "")
             ok = user in (ACC.get("instagram") or []) or studio_name(user)
-            out.append(check(label, f"@{user} ({me.get('user_id')})", ok, expected="a Quickplay Instagram account", note="" if ok else "not a Quickplay name"))
+            out.append(check(label, f"@{user} ({me.get('user_id')})", ok, expected="a Quickplay Instagram account", note="" if ok else "not a Quickplay name",
+                             key={"kind": "instagram", "state": "ok", "user": user, "expires_at": end}))
         except Exception as e:
-            out.append(unverified(label, type(e).__name__) if transient(e) else check(label, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+            out.append(unverified(label, type(e).__name__) if transient(e) else check(label, "", False, note=f"{type(e).__name__}: {str(e)[:80]}", key={"kind": "instagram", "state": "error"}))
     # Facebook: every FB_*_PAGE_TOKEN with its FB_*_PAGE_ID
     api = "https://graph.facebook.com/" + CFG.get("facebook_api_version", "v25.0")
     for k, v in os.environ.items():
@@ -157,16 +211,17 @@ def meta_checks():
         page = os.environ.get(f"FB{m.group(1) or ''}_PAGE_ID", "").strip()
         try:
             r = requests.get(f"{api}/{page or 'me'}", params={"fields": "id,name", "access_token": v.strip()}, timeout=30)
-            if not r.ok: out.append(meta_refusal(k, r)); continue
+            if not r.ok: out.append(meta_refusal(k, r, "facebook")); continue
             j = r.json(); name = j.get("name", "")
             ok = name in (ACC.get("facebook") or []) or studio_name(name)
-            out.append(check(k, f"{name} ({j.get('id')})", ok, expected="a Quickplay Facebook Page", note="" if ok else "not a Quickplay name"))
+            out.append(check(k, f"{name} ({j.get('id')})", ok, expected="a Quickplay Facebook Page", note="" if ok else "not a Quickplay name",
+                             key={"kind": "facebook", "state": "ok", "page": name, **fb_end(api, k, v.strip(), requests)}))
         except Exception as e:
-            out.append(unverified(k, type(e).__name__) if transient(e) else check(k, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+            out.append(unverified(k, type(e).__name__) if transient(e) else check(k, "", False, note=f"{type(e).__name__}: {str(e)[:80]}", key={"kind": "facebook", "state": "error"}))
     return out
 
 
-def meta_refusal(label, r):
+def meta_refusal(label, r, kind=""):
     """An Instagram or Facebook key the Graph API refused: an expired key (a 60-day Instagram key in a GitHub secret runs out
     by itself) is a reconnect alert like an expired YouTube sign-in; a server error or rate limit is "not checked this time";
     anything else fails the audit, as before."""
@@ -174,9 +229,15 @@ def meta_refusal(label, r):
     if why == "expired":
         EXPIRED_SIGNINS.append(label)
         return check(label, "expired key", True, note="Meta says the key has expired: paste a new one into the GitHub secret "
-                     "(it reaches no account, so nothing else stops)")
+                     "(it reaches no account, so nothing else stops)", key={"kind": kind, "state": "expired"})
     if why == "transient": return unverified(label, f"HTTP {r.status_code}")
-    return check(label, f"HTTP {r.status_code}", False, note="the key does not answer")
+    return check(label, f"HTTP {r.status_code}", False, note="the key does not answer", key={"kind": kind, "state": "error"})
+
+
+def tt_end(t):
+    """When TikTok's refresh token ends: saved plus refresh_expires_in (about a year), as TikTok answered at the last refresh."""
+    try: return iso(dt.datetime.fromisoformat(t["saved"]) + dt.timedelta(seconds=int(t["refresh_expires_in"])))
+    except Exception: return None
 
 
 def tiktok_checks():
@@ -184,22 +245,23 @@ def tiktok_checks():
     try: import requests, social
     except Exception as e: return [check("tiktok", "", False, note=f"{e}")]
     for p in sorted((ROOT / "tokens").glob("tiktok*.enc")):
-        name = p.stem
+        name, t = p.stem, {}
+        tk = lambda state: {"kind": "tiktok", "state": state, "refresh_ends": tt_end(t), "mode": CFG.get("tiktok_mode", "inbox")}
         try:
             t = social.load(name)
-            if not t.get("access_token"): out.append(check(name, "no sign-in", True, note="empty")); continue
+            if not t.get("access_token"): out.append(check(name, "no sign-in", True, note="empty", key=tk("empty"))); continue
             # username needs the user.info.profile scope, which new sign-ins no longer ask for (social.TT_SCOPES, 24 October):
             # without it the display name is what the allowlist (config accounts.tiktok) and the Quickplay name rule check
             fields = "open_id,display_name" + (",username" if "user.info.profile" in str(t.get("scope") or "") else "")
             r = requests.get("https://open.tiktokapis.com/v2/user/info/", params={"fields": fields},
                              headers={"Authorization": f"Bearer {t['access_token']}"}, timeout=30)
             u = (r.json().get("data") or {}).get("user") or {} if r.ok else {}
-            if not u: out.append(check(name, f"HTTP {r.status_code}", True, note="the key does not answer (expired keys are refreshed by the social run)")); continue
+            if not u: out.append(check(name, f"HTTP {r.status_code}", True, note="the key does not answer (expired keys are refreshed by the social run)", key=tk("no answer"))); continue
             who = u.get("username") or u.get("display_name") or ""
             ok = who in (ACC.get("tiktok") or []) or studio_name(who) or studio_name(u.get("display_name"))
-            out.append(check(name, f"@{who}", ok, expected="a Quickplay TikTok account", note="" if ok else "not a Quickplay name"))
+            out.append(check(name, f"@{who}", ok, expected="a Quickplay TikTok account", note="" if ok else "not a Quickplay name", key=tk("ok")))
         except (Exception, SystemExit) as e:
-            out.append(unverified(name, type(e).__name__) if transient(e) else check(name, "", False, note=f"{type(e).__name__}: {str(e)[:80]}"))
+            out.append(unverified(name, type(e).__name__) if transient(e) else check(name, "", False, note=f"{type(e).__name__}: {str(e)[:80]}", key=tk("error")))
     return out
 
 
@@ -208,22 +270,33 @@ def login_checks(cookie_texts=None):
     profile (google.com, github.com, a bank) is the wrong file and is refused."""
     out = []
     hosts = {"login_whop": ("contentrewards.com", "whop.com"), "login_vyro": ("vyro.com",)}
-    texts = cookie_texts
+    texts, saved = cookie_texts, {}
     if texts is None:
         texts = {}
         try:
             import social
             for name in hosts:
-                if (ROOT / "tokens" / f"{name}.enc").exists(): texts[name] = (social.load(name) or {}).get("cookies", "")
+                if (ROOT / "tokens" / f"{name}.enc").exists():
+                    blob = social.load(name) or {}
+                    texts[name], saved[name] = blob.get("cookies", ""), blob.get("saved")
         except (Exception, SystemExit) as e: return [check("logins", "", False, note=f"{type(e).__name__}: {str(e)[:80]}")]
     import submit
     for name, text in texts.items():
         cs = submit.cookies(text)
         foreign = sorted({c["domain"].lstrip(".") for c in cs if not any(h in c["domain"] for h in hosts.get(name, ()))})
         ok = bool(cs) and not foreign
+        # for status/keys.json: when the export was saved, how many cookies, and the LATEST end among the site's own session-like
+        # cookies that have one (an export holds many cookies, some very short: a 30-minute payment cookie ending says nothing;
+        # only when every session-like cookie has ended is the sign-in surely over)
+        ends = [c["expires"] for c in cs if c["expires"] > 0 and SESSIONY.search(c["name"]) and any(h in c["domain"] for h in hosts.get(name, ()))]
+        key = {"kind": "login", "saved": saved.get(name), "count": len(cs),
+               "session_ends": iso(dt.datetime.fromtimestamp(max(ends), dt.timezone.utc)) if ends else None}
         out.append(check(name, f"{len(cs)} cookies" + (f", foreign: {', '.join(foreign[:6])}" if foreign else ""), ok,
-                         expected="cookies for " + " and ".join(hosts.get(name, ())), note="" if ok else ("no cookies" if not cs else "cookies for other sites: the wrong export")))
+                         expected="cookies for " + " and ".join(hosts.get(name, ())), note="" if ok else ("no cookies" if not cs else "cookies for other sites: the wrong export"), key=key))
     return out
+
+
+SESSIONY = re.compile(r"sess|sid|token|auth|jwt|login|remember", re.I)
 
 
 # ---------- the repository itself ----------
@@ -266,14 +339,16 @@ def audit(live=True):
     if live and len(os.environ.get("SOCIAL_KEY", "")) < 20:
         checks.append(check("SOCIAL_KEY", "missing", False, note="the saved sign-ins cannot be read, so they cannot be checked"))
     elif live:
+        owned = keys_running()      # keys.py raises the key issues (one each, exact steps) while it keeps status/keys.json fresh
+        META.clear()
         try:            # the channels' Instagram keys refreshed weekly (tokens/instagram_<channel>.enc), then checked as used
             import social
-            for n in social.refresh_meta_keys(): log("keys:", n)
+            for n in social.refresh_meta_keys(report=META, issues=not owned): log("keys:", n)
             swapped = social.apply_stored_keys()
             if swapped: log("keys: checking the refreshed keys for", ", ".join(swapped))
         except (Exception, SystemExit) as e: log("keys:", f"{type(e).__name__}: {str(e)[:120]}")
         checks += login_checks() + youtube_checks() + meta_checks() + tiktok_checks()
-        expired_note()
+        if not owned: expired_note()
     keep_failures(checks)
     bad = [c for c in checks if not c["ok"]]
     result = {"checked": NOW.isoformat(timespec="seconds"), "ok": not bad, "studio": ACC.get("google", ""),

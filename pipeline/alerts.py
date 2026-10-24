@@ -42,7 +42,9 @@ def open_issues():
 LABELS = {"needs-charlie": ("FBCA04", "Only Charlie can do this: the hub lists it under Your actions this week")}
 
 
-def raise_issue(title, body, labels=None):
+def raise_issue(title, body, labels=None, howto=None):
+    """Opens the issue (or comments on the open one with this title). Returns its number, None when GitHub didn't say.
+    howto: the footer of a new issue (default HOWTO; "" for none)."""
     have = open_issues()
     extra = [l for l in (labels or []) if l]
     for l in extra:                     # creating a label that exists already fails quietly, as it does for "alert"
@@ -51,17 +53,46 @@ def raise_issue(title, body, labels=None):
     if title in have:
         gh("issue", "comment", str(have[title]), "--body", body)
         for l in extra: gh("issue", "edit", str(have[title]), "--add-label", l)
-        print("updated:", title); return
+        print("updated:", title); return have[title]
     gh("label", "create", "alert", "--color", "B60205", "--description", "Automatic alert from the Quickplay automation")
-    r = gh("issue", "create", "--title", title, "--body", body + "\n\n" + HOWTO, "--label", "alert",
+    foot = HOWTO if howto is None else howto
+    r = gh("issue", "create", "--title", title, "--body", body + (("\n\n" + foot) if foot else ""), "--label", "alert",
            *[x for l in extra for x in ("--label", l)])
     print("opened:", title, (r.stdout or r.stderr).strip())
+    m = re.search(r"/issues/(\d+)", r.stdout or "")
+    return int(m.group(1)) if m else None
 
 
 def clear(title, body):
     have = open_issues()
     if title in have:
         gh("issue", "close", str(have[title]), "--comment", body); print("closed:", title)
+
+
+# Helpers for the live action list and the key health (pipeline/actions.py, pipeline/keys.py; 24 October). They talk to
+# GitHub only through gh(), so a test stubs that one function.
+def issue_info(number):
+    """{"state": "OPEN" or "CLOSED", "closed_at", "reason", "url"} for an issue, or None when GitHub can't say (the
+    network, a bad token, an issue that is gone): callers then change nothing."""
+    r = gh("issue", "view", str(number), "--json", "state,closedAt,stateReason,url")
+    try: j = json.loads(r.stdout or "")
+    except ValueError: return None
+    if not isinstance(j, dict) or j.get("state") not in ("OPEN", "CLOSED"): return None
+    return {"state": j["state"], "closed_at": j.get("closedAt") or "", "reason": j.get("stateReason") or "", "url": j.get("url") or ""}
+
+
+def close_issue(number, comment):
+    gh("issue", "close", str(number), "--comment", comment)
+
+
+def issues_with(label):
+    """The open issues carrying a label: [{"number", "title", "body"}]. None when GitHub can't say (so a caller never takes
+    "could not read" for "there are none")."""
+    r = gh("issue", "list", "--label", label, "--state", "open", "--json", "number,title,body", "--limit", "100")
+    if getattr(r, "returncode", 0): return None
+    try: out = json.loads(r.stdout or "[]")
+    except ValueError: return None
+    return [i for i in out if isinstance(i, dict) and "number" in i] if isinstance(out, list) else None
 
 
 def after_run():

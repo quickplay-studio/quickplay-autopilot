@@ -22,7 +22,8 @@
   ],
   "added": "2026-10-24",
   "due": "2026-10-27",
-  "done": false
+  "done": false,
+  "short": "Facebook Page status"
  },
  {
   "id": "tiktok-status",
@@ -42,7 +43,8 @@
   ],
   "added": "2026-10-24",
   "due": "2026-10-28",
-  "done": false
+  "done": false,
+  "short": "TikTok status"
  },
  {
   "id": "mac-vyro",
@@ -61,7 +63,9 @@
   "added": "2026-10-24",
   "due": "",
   "repeat": "every day",
-  "done": false
+  "done": false,
+  "short": "Mac awake for Vyro",
+  "check": "vyro_today"
  },
  {
   "id": "cloudflare-key",
@@ -85,7 +89,9 @@
   ],
   "added": "2026-10-24",
   "due": "",
-  "done": false
+  "done": false,
+  "short": "Cloudflare key",
+  "check": "secret_works:CF_API_TOKEN"
  },
  {
   "id": "mistral-key",
@@ -109,7 +115,9 @@
   ],
   "added": "2026-10-24",
   "due": "",
-  "done": false
+  "done": false,
+  "short": "Mistral key",
+  "check": "secret_works:MISTRAL_API_KEY"
  },
  {
   "id": "instagram-key",
@@ -132,7 +140,8 @@
   ],
   "added": "2026-10-24",
   "due": "2026-12-10",
-  "done": false
+  "done": false,
+  "short": "Instagram seed key"
  },
  {
   "id": "pages-from-actions",
@@ -156,6 +165,35 @@
   ],
   "added": "2026-10-24",
   "due": "",
+  "done": true,
+  "short": "Hub rebuild setting",
+  "check": "pages_workflow",
+  "done_at": "2026-10-24",
+  "done_by": "Charlie"
+ },
+ {
+  "id": "sambanova-key",
+  "title": "Optional, free: a SambaNova key (one more writing model)",
+  "short": "SambaNova key",
+  "why": "SambaNova Cloud's free tier needs no card while no payment method is linked: DeepSeek-V3.1, gpt-oss-120b and Llama 3.3 70B get 20 requests a day each. More free writers means fewer Shorts fall back to Claude, which spends your allowance. The code is ready and the secret name is already allowed.",
+  "steps": [
+   "Sign in at https://cloud.sambanova.ai with the studio Google account. Don't add a payment method: the free tier needs none.",
+   "Open https://cloud.sambanova.ai/apis, create an API key and copy it.",
+   "Add it as the secret SAMBANOVA_API_KEY at https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new."
+  ],
+  "links": [
+   {
+    "label": "SambaNova Cloud",
+    "url": "https://cloud.sambanova.ai/"
+   },
+   {
+    "label": "New GitHub secret",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new"
+   }
+  ],
+  "added": "2026-10-24",
+  "due": "",
+  "check": "secret_works:SAMBANOVA_API_KEY",
   "done": false
  }
 ]

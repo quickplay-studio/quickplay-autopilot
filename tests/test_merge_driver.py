@@ -100,6 +100,39 @@ for with_driver in (True, False):
         print("two writers without the driver: a key or row is lost (the bug the driver fixes)")
     shutil.rmtree(tmp, ignore_errors=True)
 
+# 2b. status/actions.json (24 October): pipeline/actions.py (the audit) marks an item done and links its issue while a Claude
+# session adds an item and edits another; the list merges item by item, so every one of those changes survives
+assert M.kind("status/actions.json") == "list" and M.kind("docs/status/actions.json") == "list" and M.kind("status/actions.txt") is None
+IT = lambda id, **kw: dict({"id": id, "title": "Do " + id, "why": "w", "done": False}, **kw)
+base = [IT("a"), IT("b"), IT("c"), IT("e")]
+audit = [IT("a"), IT("b", done=True, done_at="2026-10-24T20:20+00:00", done_by="check", note="ok"), IT("c", issue=41), IT("e")]
+session = [IT("a", why="edited"), IT("b"), IT("c"), IT("d")]                       # edits a, adds d, removes e
+got = json.loads(M.merge_list(json.dumps(base), json.dumps(session), json.dumps(audit)))        # a = latest main (the session), b = this run (the audit)
+byid = {i["id"]: i for i in got}
+assert [i["id"] for i in got] == ["a", "b", "c", "d"], [i["id"] for i in got]
+assert byid["a"]["why"] == "edited" and byid["b"]["done"] is True and byid["b"]["note"] == "ok" and byid["c"]["issue"] == 41 and "d" in byid, got
+assert "e" not in byid, "deleted on main, left alone by this run: deleted"
+# a reopen removes the fields the audit had set; a field both sides changed takes this run's value
+done_base = [IT("b", done=True, done_at="t", done_by="check")]
+got = json.loads(M.merge_list(json.dumps(done_base), json.dumps(done_base + [IT("n")]), json.dumps([IT("b")])))
+assert got[0] == IT("b") and [i["id"] for i in got] == ["b", "n"], got
+same = json.loads(M.merge_list(json.dumps([IT("a")]), json.dumps([IT("a", note="main")]), json.dumps([IT("a", note="run")])))
+assert same[0]["note"] == "run"
+for bad_text in ("{}", json.dumps([{"title": "no id"}]), json.dumps([IT("a"), IT("a")])):
+    try: M.merge_list("[]", "[]", bad_text); raise AssertionError("an unreadable list must fall back to the line merge")
+    except ValueError: pass
+AJ = "status/actions.json"
+tmp = pathlib.Path(tempfile.mkdtemp(prefix="qp-merge-"))
+jt = lambda items: json.dumps(items, indent=1, ensure_ascii=False) + "\n"
+remote, (audit_clone, session_clone) = setup(tmp, {AJ: jt(base)})
+(audit_clone / AJ).write_text(jt(audit))                 # the audit job: checks ran, an issue was made
+(session_clone / AJ).write_text(jt(session))             # a Claude session: edited a, added d, removed e
+save(session_clone, "session"); save(audit_clone, "audit")                    # the session pushes first; the audit rebases over it
+final_items = json.loads(final(remote, tmp, AJ)); byid = {i["id"]: i for i in final_items}
+assert byid["a"]["why"] == "edited" and byid["b"]["done"] is True and byid["c"]["issue"] == 41 and "d" in byid and "e" not in byid, final_items
+print("actions.json: the audit's checks and a session's edits both survive the race")
+shutil.rmtree(tmp, ignore_errors=True)
+
 # 3. a file the driver can't read falls back to git's line merge favouring this run, never a failed Save
 tmp = pathlib.Path(tempfile.mkdtemp(prefix="qp-merge-"))
 o, a, b = tmp / "o", tmp / "a", tmp / "b"

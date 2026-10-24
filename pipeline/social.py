@@ -63,7 +63,7 @@ def ig_refresh(t):
 
 # ---------- the channels' own Instagram and Facebook keys (24 October, audit M8) ----------
 # IG_<CHANNEL>_TOKEN keys live only in GitHub secrets, which a workflow cannot rewrite, so left alone each stops 60 days
-# after Charlie made it. The identity audit (every 6 hours, it holds every key) refreshes each one weekly with Instagram's
+# after Charlie made it. The identity audit (every 3 hours, it holds every key) refreshes each one weekly with Instagram's
 # refresh_access_token and keeps the new key encrypted in tokens/instagram_<channel>.enc; apply_stored_keys() then puts the
 # refreshed key in place of the secret it grew from, for the clips runs and for the audit's own checks. A secret Charlie
 # replaces starts a new line from itself. A key (Instagram or a channel's Facebook Page key) within 10 days of its end
@@ -97,9 +97,11 @@ def apply_stored_keys(env=None):
     return done
 
 
-def refresh_meta_keys(env=None, get=None, now=None, every_days=7, warn_days=10):
+def refresh_meta_keys(env=None, get=None, now=None, every_days=7, warn_days=10, report=None, issues=True):
     """Refreshes every IG_<CHANNEL>_TOKEN weekly into tokens/instagram_<channel>.enc, checks every FB_<CHANNEL>_PAGE_TOKEN's
-    expiry, and raises (or clears) the needs-charlie issue for keys close to their end. Returns notes for the log."""
+    expiry, and raises (or clears) the needs-charlie issue for keys close to their end. Returns notes for the log.
+    report (a dict): each channel Facebook key's end as Graph's debug_token gave it, for the audit's key table
+    (identity.py, keys.py) so the answer is asked once. issues=False: pipeline/keys.py owns the issues (one per key)."""
     env = os.environ if env is None else env
     get = get or requests.get
     now = now or NOW()
@@ -140,13 +142,15 @@ def refresh_meta_keys(env=None, get=None, now=None, every_days=7, warn_days=10):
         if not m or not v: continue
         try: d = (get(f"{FB_API}/debug_token", params={"input_token": v, "access_token": v}, timeout=30).json() or {}).get("data") or {}
         except Exception: continue                              # unreadable this time: the next audit asks again
+        if report is not None and d: report[name] = {"expires_at": int(d.get("expires_at") or 0), "data_access_expires_at": int(d.get("data_access_expires_at") or 0)}
         for k in ("expires_at", "data_access_expires_at"):
             ts = int(d.get(k) or 0)
             if ts and dt.datetime.fromtimestamp(ts, dt.timezone.utc) - now < dt.timedelta(days=warn_days):
                 due.append((name, dt.datetime.fromtimestamp(ts, dt.timezone.utc), "Facebook")); break
     try:
         import alerts as A
-        if due:
+        if not issues: pass
+        elif due:
             A.raise_issue(KEY_ISSUE, "These keys stop working soon and could not be refreshed automatically:\n" + "\n".join(
                 f"- {n} ({kind}): ends {when:%A %d %B}" for n, when, kind in due) +
                 "\n\nInstagram (IG_<NAME>_TOKEN): make a new long-lived key for that account in the Meta app "

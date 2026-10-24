@@ -94,7 +94,7 @@ details summary{cursor:pointer;color:var(--text-secondary);font-size:13px;margin
 .callout{border:1px solid var(--critical);border-radius:12px;padding:10px 14px;background:var(--surface-1);margin:10px 0}
 .callout p{margin:4px 0}
 select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface-1);color:var(--text-primary);border-radius:8px;padding:5px 8px;max-width:100%}
-.action{padding:10px 0;border-bottom:1px solid var(--line)}
+.action{padding:10px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
 .action:first-child{padding-top:0} .action:last-child{border-bottom:0;padding-bottom:0}
 .action .ah{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .action ol{margin:4px 0 6px;padding-left:22px;font-size:14px} .action li{margin:2px 0}
@@ -361,28 +361,68 @@ function wireDaily(){
   if (p) p.onchange = () => { window.__dvPlat = p.value; redo(); };
 }
 
-// Your actions this week (Charlie, 24 October): status/actions.json, written by Claude sessions (a list of {id, title,
-// why, steps, links, added, due, done, repeat}), and every open issue labelled needs-charlie (keys, logins, sign-ins).
+// Your actions this week (Charlie, 24 October): status/actions.json (a list of {id, title, why, steps, links, added, due,
+// done, repeat}) and every open issue labelled needs-charlie (keys, logins, sign-ins). GitHub keeps the list true
+// (pipeline/actions.py, every 3 hours and within a minute of an issue being closed): an item with a "check" is ticked off
+// when the check passes, an item with an "issue" when Charlie closes that issue. Done items leave the list and show in the
+// "Done this week" line. An issue an item already links to is not listed a second time.
+const linkify = s => esc(s).replace(/https?:\/\/[^\s<]*[^\s<.,;:)]/g, u => `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https:\/\//, "")}</a>`);
+const shortTitle = a => a.short || String(a.title || "").replace(/^Optional[^:]*:\s*/i, "").replace(/\s*\(.*$/, "").slice(0, 48);
 function actionsCard(){
   const raw = D.actions, today = ukToday(), week = dayAdd(today, 7);
-  const items = (Array.isArray(raw) ? raw : (raw && raw.items) || []).filter(a => a && !a.done);
-  const asks = (D.iss || []).filter(i => (i.labels || []).some(l => (l.name || l) === "needs-charlie"));
+  const all = (Array.isArray(raw) ? raw : (raw && raw.items) || []).filter(a => a && typeof a === "object");
+  const items = all.filter(a => !a.done);
+  const doneDay = a => { const d = a.done_at ? new Date(a.done_at) : null; return d && !isNaN(d) ? d.toLocaleDateString("en-CA", {timeZone: "Europe/London"}) : ""; };
+  const finished = all.filter(a => a.done && doneDay(a) && doneDay(a) >= dayAdd(today, -7)).sort((a, b) => doneDay(b).localeCompare(doneDay(a)));
+  const dayWord = d => d === today ? "today" : d === dayAdd(today, -1) ? "yesterday" : dayName(d);
+  const linked = new Set(all.filter(a => a.issue).map(a => Number(a.issue)));
+  const asks = (D.iss || []).filter(i => (i.labels || []).some(l => (l.name || l) === "needs-charlie") && !linked.has(i.number));
   const key = a => a.repeat ? "0" : a.due || "9999";
   const now = items.filter(a => a.repeat || (a.due && a.due <= week)).sort((a, b) => key(a).localeCompare(key(b)));
   const later = items.filter(a => !now.includes(a)).sort((a, b) => key(a).localeCompare(key(b)));
-  const linkify = s => esc(s).replace(/https?:\/\/[^\s<]*[^\s<.,;:)]/g, u => `<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https:\/\//, "")}</a>`);
   const due = a => a.repeat ? pill("wait", "↻", a.repeat) : !a.due ? pill("", "·", "optional") :
     a.due < today ? pill("bad", "!", "overdue, was due " + dayName(a.due)) : pill(a.due <= week ? "wait" : "", "·", "by " + dayName(a.due));
+  const live = a => a.check ? `<p class="sub live" style="margin:4px 0 6px">GitHub checks this by itself every 3 hours and ticks it off when it passes.${a.note ? " Last check: " + esc(a.note) + "." : ""}</p>`
+    : a.issue ? `<p class="sub live" style="margin:4px 0 6px">When it is done, close <a href="${REPO}/issues/${Number(a.issue)}" target="_blank" rel="noopener">issue #${Number(a.issue)}</a> in the GitHub app: this list updates by itself.</p>` : "";
   const one = a => `<div class="action"><div class="ah"><b>${esc(a.title)}</b>${due(a)}</div>
     ${a.why ? `<p class="sub" style="margin:4px 0 6px">${esc(a.why)}</p>` : ""}
     ${(a.steps || []).length ? `<ol>${a.steps.map(s => `<li>${linkify(s)}</li>`).join("")}</ol>` : ""}
+    ${live(a)}
     ${(a.links || []).length ? `<p class="links">${a.links.map(l => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(" · ")}</p>` : ""}</div>`;
   const ask = i => `<div class="action"><div class="ah"><b><a href="${esc(i.html_url)}" target="_blank" rel="noopener">${esc(i.title)}</a></b>${pill("bad", "!", "alert")}</div>
     <p class="sub" style="margin:4px 0 0">Opened ${ukTime(i.created_at)}. The issue says what to do; it closes by itself once it is fixed.</p></div>`;
   const body = asks.map(ask).join("") + now.map(one).join("");
+  const by = a => a.done_by === "check" ? "GitHub's check" : a.done_by === "issue" ? "the issue was closed" : a.done_by ? a.done_by : "marked done";
   return (D.actions === null && D.iss === null ? `<p class="err">Could not read the actions list just now.</p>` : "") +
     `<div class="card">${body || `<p style="margin:0">${pill("good", "✓", "Nothing needs you this week")}</p>`}</div>` +
-    (later.length ? `<details><summary>Coming up and optional (${later.length})</summary><div class="card" style="margin-top:8px">${later.map(one).join("")}</div></details>` : "");
+    (later.length ? `<details><summary>Coming up and optional (${later.length})</summary><div class="card" style="margin-top:8px">${later.map(one).join("")}</div></details>` : "") +
+    (finished.length ? `<p class="sub done-week" style="margin:10px 0 0"><b>Done this week:</b> ${finished.map(a => `<span title="${esc(by(a))}">✓ ${esc(shortTitle(a))} (${esc(dayWord(doneDay(a)))})</span>`).join(", ")}.</p>` : "");
+}
+
+// Keys (Charlie, 24 October: "often project checks on api keys etc expiring so that the project is always running"):
+// status/keys.json, written every 3 hours by pipeline/keys.py. One row per sign-in or key: what it is, its state, the day it
+// ends when that is known, when it was last checked, and the steps that fix it. Problems come first with their steps open.
+function keysCard(){
+  const k = D.keys;
+  if (!k || !Array.isArray(k.keys)) return `<h2>Keys</h2><p class="sub">The key list is not there yet: the first key check runs within 3 hours, or press Run workflow on the audit workflow. If this stays, GitHub could not be read just now.</p>`;
+  const c = k.counts || {}, today = ukToday();
+  const look = {ok: ["good", "✓", "ok"], expiring: ["wait", "!", "ending soon"], failing: ["bad", "✕", "failing"], missing: ["", "·", "not set up"]};
+  const needs = r => r.status === "failing" || r.status === "expiring" || (r.status === "missing" && r.needed);
+  const rank = r => r.status === "failing" ? 0 : r.status === "expiring" ? 1 : 2;
+  const problems = k.keys.map((r, i) => ({r, i})).filter(x => needs(x.r)).sort((a, b) => rank(a.r) - rank(b.r) || a.i - b.i).map(x => x.r);
+  const working = k.keys.filter(r => r.status === "ok"), notSet = k.keys.filter(r => r.status === "missing" && !needs(r));
+  const ends = r => !r.expires ? "" : dayName(r.expires) + (r.expires.slice(0, 4) !== today.slice(0, 4) ? " " + r.expires.slice(0, 4) : "");
+  const fix = r => !(r.fix || []).length ? "" :
+    `<details${r.status === "missing" ? "" : " open"}><summary>How to fix</summary><ol>${r.fix.map(s => `<li>${linkify(s)}</li>`).join("")}</ol>${
+      r.issue ? `<p class="links">Or follow <a href="${REPO}/issues/${Number(r.issue)}" target="_blank" rel="noopener">issue #${Number(r.issue)}</a>; it closes by itself once the key works.</p>` : ""}</details>`;
+  const block = r => `<div class="action"><div class="ah"><b>${esc(r.what)}</b>${pill(...(look[r.status] || ["", "?", r.status]))}${r.expires ? pill("", "·", "ends " + ends(r)) : ""}</div>
+    <p class="sub" style="margin:4px 0 6px">${esc(r.detail || "")}</p>${fix(r)}</div>`;
+  return `<h2>Keys</h2>
+    <p class="sub">Every 3 hours GitHub proves that each key and sign-in still works and notes when it runs out. A key that fails, or ends within 14 days, opens an issue with the exact steps; the issue closes by itself once the key works. Checked ${ukTime(k.checked)}.</p>
+    <p>${pill("good", "✓", (c.ok || 0) + " ok")} ${c.expiring ? pill("wait", "!", c.expiring + " ending soon") : ""} ${c.failing ? pill("bad", "✕", c.failing + " failing") : ""} ${c.missing ? pill("", "·", c.missing + " not set up") : ""}</p>
+    ${problems.length ? `<div class="card">${problems.map(block).join("")}</div>` : `<p>${pill("good", "✓", "No key needs fixing")}</p>`}
+    ${working.length ? table([{h: "Working", f: r => `<b>${esc(r.what)}</b><br><span class="muted" style="font-size:12px">${esc(r.detail || "")}</span>`}, {h: "Ends", nw: 1, f: r => ends(r) ? esc(ends(r)) : '<span class="muted">no end date</span>'}], working) : ""}
+    ${notSet.length ? `<p class="sub">Not set up (optional): ${notSet.map(r => esc(r.what)).join("; ")}.</p>` : ""}`;
 }
 
 function clipMoney(campaigns, stats){
@@ -407,15 +447,15 @@ async function load(force){
   LAST_LOAD = Date.now(); force = force === true;
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
-         drivers, geo, regions, changes, late, hourly, actions] = await Promise.all([
+         drivers, geo, regions, changes, late, hourly, actions, keys] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
     get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_LOG.md"), issues(force), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(force), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
     get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv"),
-    get("analytics/hourly.csv", "csv"), get("status/actions.json", "json")]);
+    get("analytics/hourly.csv", "csv"), get("status/actions.json", "json"), get("status/keys.json", "json")]);
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
-       drivers, geo, regions, changes, late, hourly, actions};
+       drivers, geo, regions, changes, late, hourly, actions, keys};
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -799,8 +839,9 @@ function render(){
   const logPart = jobsText.split(/^## Log\s*$/m)[1] || "";
   const logLines = logPart.split(/\n(?=- )/).map(x => x.trim()).filter(x => x.startsWith("- ")).slice(-8).reverse();
   $("accounts").innerHTML = `
+    ${keysCard()}
     <h2>Account check</h2>
-    <p class="sub">Every 6 hours GitHub signs in with every key it holds and checks each one is the studio's own Quickplay account. Anything else stops all posting and opens an issue.</p>
+    <p class="sub">Every 3 hours GitHub signs in with every key it holds and checks each one is the studio's own Quickplay account. Anything else stops all posting and opens an issue.</p>
     <p>${id.checked ? (id.ok ? pill("good", "✓", `Clean: ${checks.length} checks, ${ukTime(id.checked)}`) : pill("bad", "✕", `${(id.problems || []).length} problem(s), ${ukTime(id.checked)}`)) : pill("wait", "…", "No audit yet")}</p>
     ${table([{h:"What", f:c => esc(c.what)}, {h:"Signed in as", f:c => esc(c.found)}, {h:"Result", f:c => c.ok ? pill("good", "✓", "ok") : pill("bad", "✕", c.note || "problem")}],
       checks.filter(c => !String(c.what).startsWith("workflow ") && !String(c.what).startsWith("tokens/")), "No checks yet.")}
@@ -835,6 +876,7 @@ const EXPORT = [
   ["Change ledger (hypothesis, target, guardrails, verdict)", "analytics/changes.csv", "text", 0],
   ["Late uploads (freshness decisions)", "analytics/late_uploads.csv", "tail", 40],
   ["Charlie's actions (the Overview's to-do list)", "status/actions.json", "text", 0],
+  ["Key health (every sign-in and key: state, end date, fix steps)", "status/keys.json", "text", 0],
   ["Writers and editors", "analytics/models.json", "text", 0],
   ["Posting times and quarters of the day", "analytics/slots.json", "text", 0],
   ["Regions", "analytics/regions.csv", "text", 0],

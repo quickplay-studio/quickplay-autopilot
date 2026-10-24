@@ -43,6 +43,7 @@ Newest work at the bottom of each section. Every change ran the full test suite 
    (both out 18 December) and The Game Awards (10 December). Each starts its build-up at its own lead time (films 30
    days out, The Game Awards 21, GTA 6 45) and turns "surging" the moment a trailer or big news lands, whatever the date.
    Items far off and quiet are only measured, so the list can grow without taking forced Shorts a day.
+   A surge now means a jump against the item's own usual news (a big film is in the news every day; that is not a surge).
 7. **The clips' spoken take is confirmed working on GitHub, and the 11 test clips are not wasted.** Tonight's private
    test made 11 clips: 9 with the voice reading our own intro and reaction ("Watch as Mitch plots his next big move" ...
    "Did his strategy surprise you? What do you think?"), 2 as on-screen text because Speed's campaign avoids AI. They

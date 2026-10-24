@@ -10,7 +10,9 @@ For each item in config.json "watchlist" it measures, from free sources:
 - whether it is in today's Google Trends, Wikipedia top pages or YouTube charts (trends/latest.json);
 - how many YouTube search suggestions it has (what people type).
 Then a phase from the date (build-up within the item's "lead_days", 45 unless set, launch from 3 days before to 7 after)
-and a level: "surging" when momentum is 1.5 or more, 15 or more articles a day, or it is in Google Trends; else "steady".
+and a level: "surging" when momentum is 1.5 or more, it is in Google Trends, or the news jumps: at least twice its usual
+articles a day (the median of the last 7 days in analytics/watch.csv) and 15 or more, or 40 or more while there are under
+3 days of history (a big film is written about 20 times a day every day; that is its normal, not a surge); else "steady".
 A steady item (far from its date and quiet) is only measured: no topics and no places until it builds up or surges, so
 four items on the list never take four forced places a day (a trailer drop or a leak turns it surging that run).
 
@@ -100,12 +102,22 @@ def measure(w, today=None):
     sug = suggestions(terms[0])
     where = in_trends(terms)
     days, ph = phase(w, today)
-    surging = (momentum or 0) >= 1.5 or news >= 15 or "Google Trends" in where
+    usual_news = news_usual(w["name"], today)
+    news_jump = news >= 40 if usual_news is None else news >= max(15, 2 * usual_news)
+    surging = (momentum or 0) >= 1.5 or news_jump or "Google Trends" in where
     level = "launch" if ph == "launch" else "surging" if surging else ph
     return {"name": w["name"], "days_to": days, "phase": ph, "level": level, "places": PLACES.get(level, 1),
             "momentum": momentum, "views_yesterday": pv[-1] if pv else None, "views_usual": round(base) if base else None,
-            "views_30d": pv, "news_24h": news, "suggestions": sug[:8], "in": where, "category": w.get("category", ""),
+            "views_30d": pv, "news_24h": news, "news_usual": usual_news, "suggestions": sug[:8], "in": where, "category": w.get("category", ""),
             "angles": w.get("angles") or [], "rules": w.get("rules", ""), "terms": terms}
+
+
+def news_usual(name, today):
+    """The item's usual articles a day: the median of its last 7 days before today in analytics/watch.csv; None with under 3."""
+    try: rows = [r for r in csv.DictReader(HIST.open()) if r.get("name") == name and r.get("day", "") < str(today)]
+    except Exception: return None
+    vals = [float(r["news_24h"]) for r in rows[-7:] if str(r.get("news_24h", "")).replace(".", "", 1).isdigit()]
+    return statistics.median(vals) if len(vals) >= 3 else None
 
 
 def state():

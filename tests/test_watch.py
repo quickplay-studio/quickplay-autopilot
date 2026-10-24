@@ -54,9 +54,19 @@ VIEWS, NEWS = [10000] * 30, 2
 got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
 assert got["Dune: Part Three"]["level"] == "steady" and got["Dune: Part Three"]["places"] == 0, got["Dune: Part Three"]
 assert not [t for t, s in W.topics_today() if "Dune" in s], W.topics_today()
-NEWS = 20                                   # a trailer drops: surging that run, whatever the date
+NEWS = 20                                   # 20 articles a day is a big film's normal coverage, not a surge
+got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
+assert got["Dune: Part Three"]["level"] == "steady", got["Dune: Part Three"]
+NEWS = 45                                   # a trailer drops: surging that run, whatever the date (no history: 40 or more)
 got = {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}
 assert got["Dune: Part Three"]["level"] == "surging" and ("Dune: Part Three", "watchlist: Dune: Part Three (surging, 56 days to go)") in W.topics_today()
+import csv as _csv                          # with a week of history: twice its usual is a surge
+rows = list(_csv.DictReader(W.HIST.open())); f = list(rows[0].keys())
+rows += [dict(rows[-1], day=f"2026-10-1{k}", name="Dune: Part Three", news_24h="25") for k in range(5)]
+with W.HIST.open("w", newline="") as fh: w = _csv.DictWriter(fh, fieldnames=f); w.writeheader(); w.writerows(rows)
+assert W.news_usual("Dune: Part Three", dt.date(2026, 10, 23)) == 25
+NEWS = 45; assert {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}["Dune: Part Three"]["level"] == "steady"
+NEWS = 55; assert {g["name"]: g for g in W.run(dt.date(2026, 10, 23))}["Dune: Part Three"]["level"] == "surging"
 W.CFG["watchlist"].pop()
 print("watch ok")
 

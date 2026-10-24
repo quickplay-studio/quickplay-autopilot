@@ -6,6 +6,7 @@ usage:
   python pipeline/social.py refresh          refresh the Instagram and TikTok tokens
   python pipeline/social.py check            check both sign-ins, write status/social.json
   python pipeline/social.py ig-dry-run       prove Instagram can take a video from a release, without posting
+  python pipeline/social.py tiktok-stats     our TikTok posts' numbers (read-only) -> analytics/tiktok.csv
 
 Sign-ins live in tokens/*.enc, encrypted with SOCIAL_KEY (a GitHub secret); IG_TOKEN and IG_USER_ID seed Instagram.
 The TikTok/Instagram version of each Short (platform-safe music) waits in a draft GitHub release named social-<id>.
@@ -22,6 +23,7 @@ IG_API = "https://graph.instagram.com/" + CFG.get("instagram_api_version", "v23.
 TT_API = "https://open.tiktokapis.com/v2"
 FB_API = "https://graph.facebook.com/" + CFG.get("facebook_api_version", "v25.0")
 TT_REDIRECT = "https://quickplay-studio.github.io/quickplay-autopilot/tiktok-callback.html"
+TT_SCOPES = "user.info.basic,user.info.stats,video.list,video.upload"    # no video.publish: no automatic public posting
 NOW = lambda: dt.datetime.now(dt.timezone.utc)
 
 # ---------- encrypted token store ----------
@@ -104,28 +106,206 @@ def tt_refresh(t):
     t.update({k: j.get(k) for k in ("access_token", "refresh_token", "expires_in", "refresh_expires_in")}, saved=NOW().isoformat())
     save("tiktok", t); return "tiktok token refreshed"
 
-def tt_post(t, path, caption, mode):
-    """mode "inbox": the video lands in the TikTok inbox to finish in the app (works before TikTok's audit).
-    mode "direct": posts straight away (public only once TikTok has audited the app)."""
+class TikTokStop(RuntimeError):
+    """TikTok says the account is posting too much or is banned from posting (a spam_risk code): TikTok stops until Charlie
+    has looked (status/tiktok_safety.json and an issue)."""
+
+
+TT_STOP_CODES = ("spam_risk_user_banned_from_posting", "spam_risk_too_many_posts")
+TT_WAIT_CODES = ("spam_risk_too_many_pending_share", "rate_limit_exceeded", "reached_active_user_cap")
+
+
+def tt_error(where, err):
+    """The exception for a TikTok error object: TikTokStop for the account-level spam codes, RuntimeError otherwise."""
+    code = str((err or {}).get("code") or "")
+    msg = f"tiktok {where}: {code} {str((err or {}).get('message') or '')[:160]}".strip()
+    return TikTokStop(msg) if code in TT_STOP_CODES else RuntimeError(msg)
+
+
+def tt_privacy(info):
+    """The privacy for a direct post (24 October, TikTok's Content Sharing Guidelines): never chosen as public by us.
+    config tiktok_privacy (Charlie's choice) when creator_info offers it, else SELF_ONLY (only me); refused otherwise."""
+    opts = list(info.get("privacy_level_options") or [])
+    want = str(CFG.get("tiktok_privacy") or "SELF_ONLY")
+    if want in opts: return want
+    raise RuntimeError(f"tiktok privacy: {want} is not one of the account's options ({', '.join(opts) or 'none'})")
+
+
+def tt_post(t, path, caption, mode, seconds=None):
+    """mode "inbox": the video lands in the TikTok inbox as a draft for Charlie to finish and post in the app (no audit
+    needed; TikTok allows 5 pending drafts in 24 hours). mode "direct": posts at once with the privacy tt_privacy() picks,
+    which is never public unless Charlie set tiktok_privacy (an unaudited app may only post SELF_ONLY, and TikTok's audit
+    is not open to tools that post to their owner's own account). Returns the publish_id; tt_status() tells whether it
+    landed."""
     h = {"Authorization": f"Bearer {t['access_token']}", "Content-Type": "application/json; charset=UTF-8"}
     size = path.stat().st_size
     src = {"source": "FILE_UPLOAD", "video_size": size, "chunk_size": size, "total_chunk_count": 1}
     if mode == "direct":
-        info = requests.post(f"{TT_API}/post/publish/creator_info/query/", headers=h, timeout=30).json().get("data", {})
-        opts = info.get("privacy_level_options") or ["SELF_ONLY"]
-        body = {"post_info": {"title": caption[:2200], "privacy_level": "PUBLIC_TO_EVERYONE" if "PUBLIC_TO_EVERYONE" in opts else opts[0],
-                              "disable_comment": False, "disable_duet": False, "disable_stitch": False,
-                              "video_cover_timestamp_ms": 1000, "is_aigc": True}, "source_info": src}
+        q = requests.post(f"{TT_API}/post/publish/creator_info/query/", headers=h, timeout=30).json()
+        if (q.get("error") or {}).get("code") not in (None, "ok"): raise tt_error("creator info", q["error"])
+        info = q.get("data") or {}
+        top = info.get("max_video_post_duration_sec")
+        if seconds and top and float(seconds) > float(top):
+            raise RuntimeError(f"tiktok: the video runs {float(seconds):.0f} s, over the account's {top} s")
+        body = {"post_info": {"title": caption[:2200], "privacy_level": tt_privacy(info),
+                              "disable_comment": bool(info.get("comment_disabled")), "disable_duet": bool(info.get("duet_disabled")),
+                              "disable_stitch": bool(info.get("stitch_disabled")), "video_cover_timestamp_ms": 1000,
+                              "brand_content_toggle": False, "brand_organic_toggle": False, "is_aigc": True}, "source_info": src}
         url = f"{TT_API}/post/publish/video/init/"
     else:
         body, url = {"source_info": src}, f"{TT_API}/post/publish/inbox/video/init/"
     r = requests.post(url, headers=h, json=body, timeout=60).json()
-    if r.get("error", {}).get("code") not in (None, "ok"): raise RuntimeError(f"tiktok init: {r['error']}")
+    if (r.get("error") or {}).get("code") not in (None, "ok"): raise tt_error("init", r["error"])
     d = r["data"]
     up = requests.put(d["upload_url"], data=path.read_bytes(), timeout=300,
                       headers={"Content-Type": "video/mp4", "Content-Length": str(size), "Content-Range": f"bytes 0-{size - 1}/{size}"})
     if up.status_code not in (200, 201): raise RuntimeError(f"tiktok upload: {up.status_code} {up.text[:200]}")
     return d["publish_id"]
+
+TT_LANDED = ("SEND_TO_USER_INBOX", "PUBLISH_COMPLETE")
+
+
+def tt_status(t, publish_id, tries=1, wait=10):
+    """TikTok's word on an upload (Get Post Status): {"status", "fail_reason", "post_ids"}; status SEND_TO_USER_INBOX (a
+    draft waits in the app) or PUBLISH_COMPLETE (posted) means it landed, FAILED that it did not, PROCESSING_* that it is
+    still going (asked again next run)."""
+    h = {"Authorization": f"Bearer {t['access_token']}", "Content-Type": "application/json; charset=UTF-8"}
+    out = {"status": "", "fail_reason": None, "post_ids": []}
+    for i in range(max(1, tries)):
+        if i: time.sleep(wait)
+        r = requests.post(f"{TT_API}/post/publish/status/fetch/", headers=h, json={"publish_id": publish_id}, timeout=30).json()
+        if (r.get("error") or {}).get("code") not in (None, "ok"): raise tt_error("status", r["error"])
+        d = r.get("data") or {}
+        out = {"status": d.get("status") or "", "fail_reason": d.get("fail_reason"),
+               "post_ids": d.get("publicaly_available_post_id") or d.get("publicly_available_post_id") or []}
+        if out["status"] and not out["status"].startswith("PROCESSING"): break
+    return out
+
+
+def tt_settle(t, st):
+    """Moves a pending TikTok upload to "tiktok" once TikTok confirms it landed, to tiktok_error when it failed; leaves it
+    pending while TikTok is still processing. True when st changed."""
+    p = st.get("tiktok_pending")
+    if not p: return False
+    s = tt_status(t, p["publish_id"])
+    if s["status"] in TT_LANDED:
+        st["tiktok"] = {**p, "status": s["status"], **({"post_ids": s["post_ids"]} if s["post_ids"] else {})}
+        st.pop("tiktok_pending", None); st.pop("tiktok_error", None)
+    elif s["status"] == "FAILED":
+        st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} failed: {s['fail_reason']}"[:300]; st.pop("tiktok_pending", None)
+    elif s["status"]:
+        p["last_status"] = s["status"]
+        if NOW() - dt.datetime.fromisoformat(p["at"]) > dt.timedelta(hours=24):      # never confirmed: count it as failed
+            st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} still {s['status']} after 24 hours"; st.pop("tiktok_pending", None)
+    return True
+
+
+def tt_sent_24h(statuses=None):
+    """TikTok uploads (landed or pending) in the last 24 hours: TikTok allows 5 pending drafts in any 24 hours, and a young
+    account posting in a burst is what its spam checks look for (the 19 October block)."""
+    n = 0
+    for st in statuses if statuses is not None else _statuses():
+        for k in ("tiktok", "tiktok_pending"):
+            try: at = dt.datetime.fromisoformat(str((st.get(k) or {}).get("at") or "").replace("Z", "+00:00"))
+            except (ValueError, AttributeError): continue
+            if NOW() - at <= dt.timedelta(hours=24): n += 1
+    return n
+
+
+def tt_cap(mode):
+    """TikTok uploads allowed in 24 hours: config tiktok_per_day (2 to start, the 24 October plan), never over TikTok's 5
+    pending drafts for the inbox."""
+    n = int(CFG.get("tiktok_per_day", 2))
+    return min(n, 5) if mode == "inbox" else n
+
+
+def tt_safety():
+    """The TikTok stop (status/tiktok_safety.json): set when TikTok answered with an account-level spam code; posting stays
+    off until Charlie deletes the file (or sets "cleared") after checking the app's Account status page."""
+    try: s = json.loads((ROOT / "status" / "tiktok_safety.json").read_text())
+    except Exception: return {}
+    return {} if s.get("cleared") else s
+
+
+def tt_stop(why):
+    p = ROOT / "status" / "tiktok_safety.json"; p.parent.mkdir(exist_ok=True)
+    p.write_text(json.dumps({"stopped": NOW().isoformat(timespec="minutes"), "why": str(why)[:300],
+                             "what_to_do": "Open the TikTok app: Settings and privacy, Account, Account status. When it is clear, "
+                                           "delete status/tiktok_safety.json (or set \"cleared\": true)."}, indent=1))
+    try:
+        import alerts as A
+        A.raise_issue("⛔ TikTok stopped posting: the account was flagged", f"TikTok answered: {str(why)[:200]}. Nothing more goes "
+                      "to TikTok until you have checked the app (Settings and privacy, Account, Account status) and the file "
+                      "status/tiktok_safety.json is deleted. Never open a new account to get round it.")
+    except Exception as e: print("tiktok stop issue:", str(e)[:120])
+
+
+def _statuses():
+    out = []
+    for sp in (ROOT / "status").glob("QD-*.json"):
+        try: out.append(json.loads(sp.read_text()))
+        except Exception: pass
+    return out
+
+
+TT_FIELDS = ["video", "created", "duration", "title", "url", "views", "likes", "comments", "shares", "short", "as_of"]
+
+
+def tt_stats():
+    """Our own TikTok numbers, read-only (Display API, scope video.list): every public post's views, likes, comments and
+    shares to analytics/tiktok.csv, matched to its Short where it can be (the post id TikTok gave the upload, else the
+    caption's words and the draft's time), plus followers to status/tiktok_account.json. Dormant until a TikTok sign-in
+    exists. TikTok shows SELF_ONLY posts to nobody, so they never appear here."""
+    try: tt = load("tiktok")
+    except SystemExit: tt = {}
+    if not tt.get("access_token"): print("tiktok stats: not connected"); return 0
+    if tt.get("refresh_token") and _age_h(tt) > 20 and os.environ.get("TIKTOK_CLIENT_KEY"): print(tt_refresh(tt)); tt = load("tiktok")
+    h = {"Authorization": f"Bearer {tt['access_token']}", "Content-Type": "application/json; charset=UTF-8"}
+    fields = "id,create_time,duration,title,video_description,share_url,view_count,like_count,comment_count,share_count"
+    vids, cursor = [], None
+    for _ in range(10):                                          # 20 a page, newest first: the last 200 posts
+        body = {"max_count": 20, **({"cursor": cursor} if cursor else {})}
+        r = requests.post(f"{TT_API}/video/list/", params={"fields": fields}, headers=h, json=body, timeout=30)
+        j = r.json() if r.content else {}
+        if not r.ok or (j.get("error") or {}).get("code") not in (None, "ok"):
+            print("tiktok stats:", r.status_code, str(j.get("error"))[:160]); break
+        d = j.get("data") or {}; vids += d.get("videos") or []
+        if not d.get("has_more"): break
+        cursor = d.get("cursor")
+    sts = [s for s in _statuses() if s.get("tiktok") or s.get("tiktok_pending")]
+    words = lambda x: set(re.findall(r"[a-z0-9']{4,}", str(x or "").lower()))
+    rows, now = [], NOW().isoformat(timespec="minutes")
+    for v in vids:
+        made = dt.datetime.fromtimestamp(int(v.get("create_time") or 0), dt.timezone.utc)
+        short = next((s["id"] for s in sts if str(v.get("id")) in [str(x) for x in (s.get("tiktok") or {}).get("post_ids") or []]), "")
+        if not short:          # a draft Charlie posted: the Short whose caption shares the most words, sent before the post
+            best, score = "", 0
+            for s in sts:
+                t0 = (s.get("tiktok") or s.get("tiktok_pending") or {}).get("at")
+                try: sent = dt.datetime.fromisoformat(str(t0).replace("Z", "+00:00"))
+                except ValueError: continue
+                if not (sent <= made <= sent + dt.timedelta(days=3)): continue
+                cap = (s.get("tiktok") or {}).get("caption") or s.get("title") or ""
+                k = len(words(cap) & (words(v.get("title")) | words(v.get("video_description"))))
+                if k > score: best, score = s["id"], k
+            short = best if score >= 3 else ""
+        rows.append({"video": v.get("id"), "created": made.isoformat(timespec="minutes"), "duration": v.get("duration"),
+                     "title": str(v.get("title") or v.get("video_description") or "")[:120], "url": v.get("share_url", ""),
+                     "views": v.get("view_count", 0), "likes": v.get("like_count", 0), "comments": v.get("comment_count", 0),
+                     "shares": v.get("share_count", 0), "short": short, "as_of": now})
+    import csv
+    p = ROOT / "analytics" / "tiktok.csv"; p.parent.mkdir(exist_ok=True)
+    with p.open("w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=TT_FIELDS); w.writeheader(); w.writerows(rows)
+    try:
+        u = requests.get(f"{TT_API}/user/info/", params={"fields": "open_id,display_name,follower_count,likes_count,video_count"},
+                         headers=h, timeout=30).json()
+        user = (u.get("data") or {}).get("user") or {}
+        if user: (ROOT / "status" / "tiktok_account.json").write_text(json.dumps(
+            {"as_of": now, **{k: user.get(k) for k in ("display_name", "follower_count", "likes_count", "video_count")}}, indent=1))
+    except Exception as e: print("tiktok account:", str(e)[:120])
+    print(f"tiktok stats: {len(rows)} posts, {sum(1 for r in rows if r['short'])} matched to Shorts")
+    return len(rows)
 
 # ---------- Facebook Page Reels ----------
 _FB = {}
@@ -167,7 +347,8 @@ def fb_post(fb, path, cap):
 def ramp_cap(platform):
     """How many posts this platform may take in 24 hours today: <platform>_per_day to start, rising by
     <platform>_ramp_per_day for each day since its first post, up to <platform>_target. Back to the starting number
-    for 3 days after an error that sounds like Meta pushing back (spam, block, restriction, limit)."""
+    for 3 days after an error that sounds like Meta pushing back (spam, block, restriction, limit). Facebook on a probe
+    (fb_probe) stays at the starting number until the probe clears, and then ramps from the day it cleared."""
     start = int(CFG.get(f"{platform}_per_day", 6)); target = int(CFG.get(f"{platform}_target", start))
     step = int(CFG.get(f"{platform}_ramp_per_day", 0)); firsts, trouble = [], False
     for sp in (ROOT / "status").glob("QD-*.json"):
@@ -180,18 +361,84 @@ def ramp_cap(platform):
             when = dt.datetime.strptime(err[:16], "%Y-%m-%d %H:%M").replace(tzinfo=dt.timezone.utc)
             if NOW() - when < dt.timedelta(hours=72) and re.search(r"spam|block|restrict|limit|temporar", err, re.I): trouble = True
         except ValueError: pass
-    if trouble or not firsts: return start
-    days = (NOW() - dt.datetime.fromisoformat(min(firsts).replace("Z", "+00:00"))).days
+    since = min(firsts).replace("Z", "+00:00") if firsts else None
+    if platform == "facebook" and CFG.get("facebook_probe"):
+        probe = fb_probe()
+        if not probe.get("cleared"): return start                        # the probe: facebook_per_day until a week shows plays
+        since = max(since or probe["cleared"], probe["cleared"])           # then the ramp counts from the day it cleared
+    if trouble or not since: return start
+    days = (NOW() - dt.datetime.fromisoformat(since)).days
     return min(target, start + step * max(0, days))
+
+
+def fb_plays_week():
+    """Facebook plays of the Reels posted 1 to 8 days ago (analytics/shorts.csv fb_views, by Short id)."""
+    import csv
+    ids = set()
+    for st in _statuses():
+        try: at = dt.datetime.fromisoformat(str((st.get("facebook") or {}).get("at") or "").replace("Z", "+00:00"))
+        except (ValueError, AttributeError): continue
+        if dt.timedelta(days=1) <= NOW() - at <= dt.timedelta(days=8): ids.add(st.get("id"))
+    plays = []
+    try:
+        for r in csv.DictReader((ROOT / "analytics" / "shorts.csv").open()):
+            if r.get("short") in ids and str(r.get("fb_views", "")).strip() not in ("", "None"):
+                try: plays.append(float(r["fb_views"]))
+                except ValueError: pass
+    except FileNotFoundError: pass
+    return plays
+
+
+def fb_probe():
+    """Facebook on a probe (Charlie's data, 24 October: 54 Reels had 1 play between them and Meta set a spam limit on 23
+    October, so posting more only adds to whatever Meta holds against the Page). While config facebook_probe is on, the Page
+    takes facebook_per_day Reels a day (1) with a short caption (caption(..., "facebook")). It clears by itself once the
+    probe has run a week and the Reels posted 1 to 8 days ago number facebook_probe_min_reels (5) or more with median plays
+    of facebook_probe_min_plays (10) or more; the ramp then resumes from that day. The state is status/facebook_probe.json,
+    written when it starts, once a day while it runs, and when it clears (a line in analytics/decisions.csv)."""
+    import statistics
+    p = ROOT / "status" / "facebook_probe.json"
+    try: s = json.loads(p.read_text())
+    except Exception: s = {}
+    if s.get("cleared") or not CFG.get("facebook_probe"): return s
+    today, changed = f"{NOW():%Y-%m-%d}", False
+    if not s.get("started"): s, changed = {"started": NOW().isoformat(timespec="minutes")}, True
+    if s.get("checked") != today:
+        plays = fb_plays_week()
+        med = statistics.median(plays) if plays else 0
+        s.update(checked=today, reels_measured=len(plays), median_plays=med); changed = True
+        ran = (NOW() - dt.datetime.fromisoformat(s["started"])).days
+        if ran >= 7 and len(plays) >= int(CFG.get("facebook_probe_min_reels", 5)) and med >= float(CFG.get("facebook_probe_min_plays", 10)):
+            s["cleared"] = NOW().isoformat(timespec="minutes")
+            _decide("Facebook", "Facebook probe cleared: the Page ramps up again from facebook_per_day",
+                    f"{len(plays)} Reels from the last week had a median of {med:g} plays", "status/facebook_probe.json")
+    if changed:
+        p.parent.mkdir(exist_ok=True); p.write_text(json.dumps(s, indent=1))
+    return s
+
+
+def _decide(area, change, why, evidence):
+    """One line in analytics/decisions.csv (the record of every change made from the data)."""
+    import csv
+    p = ROOT / "analytics" / "decisions.csv"; p.parent.mkdir(exist_ok=True)
+    new = not p.exists()
+    with p.open("a", newline="") as f:
+        w = csv.writer(f)
+        if new: w.writerow(["date", "area", "change", "why", "evidence", "check_on", "by"])
+        w.writerow([f"{NOW():%Y-%m-%d}", area, change, why, evidence, f"{NOW() + dt.timedelta(days=7):%Y-%m-%d}", "social.py (automatic)"])
 
 # ---------- what to post ----------
 def caption(st, board, platform="instagram"):
-    """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp."""
+    """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp.
+    Facebook (24 October: Meta's spam rules of April 2025 name captions stuffed with hashtags, and the Page was limited on
+    23 October) gets the title line and at most facebook_hashtags (3) hashtags, no summary and no other platform's name."""
     m = (board or {}).get("meta", {})
     tags, seen = [], set()
     for h in m.get("hashtags", []):
         if h.lower() in seen or h.lower() == "#shorts": continue
         seen.add(h.lower()); tags.append(h)
+    if platform == "facebook":
+        return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), " ".join(tags[:int(CFG.get("facebook_hashtags", 3))])) if x)
     tags = tags[:5] if platform == "instagram" else tags[:7] + ["#fyp"]
     yt = CFG.get("crosspost_youtube_line", "") if platform == "instagram" else ""     # YouTube first: point viewers there
     return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags)) if x)
@@ -209,13 +456,38 @@ def _age_h(t):
     try: return (NOW() - dt.datetime.fromisoformat(t["saved"])).total_seconds() / 3600
     except Exception: return 1e9
 
+def views_3h():
+    """YouTube views at 3 hours per Short id (analytics/shorts.csv: yt_views_3h when the analytics has it, else views_3h)."""
+    import csv
+    out = {}
+    try:
+        for r in csv.DictReader((ROOT / "analytics" / "shorts.csv").open()):
+            v = r.get("yt_views_3h") if r.get("yt_views_3h") not in (None, "") else r.get("views_3h")
+            try: out[r["short"]] = float(v)
+            except (TypeError, ValueError, KeyError): pass
+    except FileNotFoundError: pass
+    return out
+
+
 def post():
     mode = CFG.get("tiktok_mode", "inbox")                       # "off" since 19 Oct 2026: TikTok blocked every post as spam
+    safety = tt_safety()
+    if safety and mode != "off": print("tiktok: stopped since", safety.get("stopped"), "|", safety.get("why")); mode = "off"
     ig, tt = ig_tokens(), ({} if mode == "off" else load("tiktok"))
     if ig and _age_h(ig) > 24 * 7: print(ig_refresh(ig))            # long-lived Instagram token: refresh weekly
     if tt.get("refresh_token") and _age_h(tt) > 20: print(tt_refresh(tt))   # TikTok access tokens last 24 hours
     tt_max_age = float(CFG.get("tiktok_max_age_hours", 24))   # trends go stale: skip TikTok for Shorts public longer than this
     tt_blocked = False                                           # TikTok said "too many drafts waiting": try again next hour
+    if tt.get("access_token"):                                   # uploads TikTok had not confirmed yet: ask again
+        for sp in (ROOT / "status").glob("QD-*.json"):
+            try: s0 = json.loads(sp.read_text())
+            except Exception: continue
+            if not s0.get("tiktok_pending"): continue
+            try:
+                if tt_settle(tt, s0): sp.write_text(json.dumps(s0, indent=1, ensure_ascii=False))
+            except TikTokStop as e: tt_stop(e); tt_blocked = True; break
+            except Exception as e: print(s0.get("id"), "tiktok status:", str(e)[:120])
+    tt_room = (tt_cap(mode) - tt_sent_24h()) if tt.get("access_token") else 0
     fb = fb_tokens()
     done_any, ig_recent, fb_recent, fb_last = False, 0, 0, None
     for sp in (ROOT / "status").glob("QD-*.json"):
@@ -243,6 +515,20 @@ def post():
             pa = dt.datetime.fromisoformat(s1["publish_at"].replace("Z", "+00:00"))
             if pa <= NOW() and (NOW() - pa).total_seconds() / 3600 <= fresh_h: cands.append((pa, s1.get("id")))
         fb_pick = max(cands)[1] if cands else None
+    # Instagram by YouTube views at 3 hours (config instagram_pick_by "views_3h"): a Short waits until it has been public for
+    # instagram_pick_wait_hours, and the day's room goes to the most watched first. Off by default ("order": the day's
+    # picks first, then by publish time): on 24 October our 96 Shorts with both numbers showed views at 3 hours do not
+    # predict Instagram views (rank correlation 0.10; the top half by 3-hour views had a median of 71 Instagram views,
+    # the bottom half 90), so it waits for data that says otherwise.
+    v3 = views_3h() if ig and CFG.get("instagram_pick_by", "order") == "views_3h" else {}
+    ig_allowed = None
+    if v3:
+        wait_h, elig = float(CFG.get("instagram_pick_wait_hours", 3)), []
+        for s1 in _statuses():
+            if not (s1.get("video") and s1.get("social_release") and s1.get("publish_at")) or s1.get("instagram") or s1.get("instagram_skipped"): continue
+            age = (NOW() - dt.datetime.fromisoformat(s1["publish_at"].replace("Z", "+00:00"))).total_seconds() / 3600
+            if wait_h <= age <= fresh_h: elig.append((s1["id"] not in v3, -v3.get(s1["id"], 0.0), s1["publish_at"], s1["id"]))
+        ig_allowed = {x[-1] for x in sorted(elig)[:max(0, ig_cap - ig_recent)]}
     def order(sp):          # the day's picks first, then the rest by publish time
         try: st0 = json.loads(sp.read_text())
         except Exception: return (2, "")
@@ -269,13 +555,15 @@ def post():
             st["instagram_skipped"] = "not one of the day's picks"
         if ig and public and not recent_public and not st.get("instagram") and not st.get("instagram_skipped"):
             st["instagram_skipped"] = f"public over {fresh_h:g} hours before Instagram had room"
-        want_ig = bool(ig) and recent_public and not st.get("instagram") and ig_pick and ig_recent < ig_cap and not st.get("instagram_skipped")
+        want_ig = bool(ig) and recent_public and not st.get("instagram") and ig_pick and ig_recent < ig_cap and not st.get("instagram_skipped") \
+            and (ig_allowed is None or st.get("id") in ig_allowed)
         if fb and public and not recent_public and not st.get("facebook") and not st.get("facebook_skipped"):
             st["facebook_skipped"] = f"public over {fresh_h:g} hours before Facebook had room"
         want_fb = bool(fb) and recent_public and not st.get("facebook") and fb_recent < fb_cap and not st.get("facebook_skipped") \
             and st.get("id") == fb_pick
         manual = mode == "manual"                    # Charlie uploads TikTok himself on desktop from the morning package
-        want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not tt_blocked and fresh and not st.get("tiktok_skipped")
+        want_tt = bool(tt) and not manual and tt_now and picked and not st.get("tiktok") and not st.get("tiktok_pending") \
+            and not tt_blocked and tt_room > 0 and fresh and not st.get("tiktok_skipped")
         if not (want_ig or want_tt or want_fb):
             if st.get("instagram_skipped") or st.get("facebook_skipped"): sp.write_text(json.dumps(st, indent=1, ensure_ascii=False))
             continue
@@ -286,12 +574,16 @@ def post():
         if want_tt:
             try:
                 cap = caption(st, b, "tiktok")
-                st["tiktok"] = {"publish_id": tt_post(tt, mp4, cap, mode), "mode": mode, "at": NOW().isoformat(timespec="seconds")}
-                if mode == "inbox": st["tiktok"]["caption"] = cap     # drafts can't carry a caption: Charlie pastes this one
-                st.pop("tiktok_error", None)
+                pend = {"publish_id": tt_post(tt, mp4, cap, mode, seconds=(st.get("qa") or {}).get("duration")), "mode": mode,
+                        "at": NOW().isoformat(timespec="seconds")}
+                if mode == "inbox": pend["caption"] = cap     # drafts can't carry a caption: Charlie pastes this one
+                tt_room -= 1; st["tiktok_pending"] = pend; st.pop("tiktok_error", None)
+                tt_settle(tt, st)                            # posted only once TikTok confirms it landed (else asked next run)
+            except TikTokStop as e:
+                st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]; tt_stop(e); tt_blocked = True
             except Exception as e:
                 st["tiktok_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
-                if "too_many_pending" in str(e) or "rate_limit" in str(e): tt_blocked = True
+                if any(c in str(e) for c in TT_WAIT_CODES): tt_blocked = True
         if want_ig:
             try:
                 gh("release", "edit", rel, "--draft=false")
@@ -301,14 +593,15 @@ def post():
             except Exception as e: st["instagram_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
         if want_fb:
             try:
-                st["facebook"] = {"video": fb_post(fb, mp4, caption(st, b, "instagram")), "at": NOW().isoformat(timespec="seconds")}
+                st["facebook"] = {"video": fb_post(fb, mp4, caption(st, b, "facebook")), "at": NOW().isoformat(timespec="seconds")}
                 st.pop("facebook_error", None); fb_recent += 1
             except Exception as e: st["facebook_error"] = f"{NOW():%Y-%m-%d %H:%M} {e}"[:300]
-        if tt and not fresh and not st.get("tiktok"): st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
-        if tt and not picked and not st.get("tiktok"): st["tiktok_skipped"] = "not one of the day's 5 TikTok picks"
-        if tt and manual and not st.get("tiktok"): st["tiktok_skipped"] = "uploaded by hand on desktop" if picked else "not a TikTok pick"
+        done_tt = st.get("tiktok") or st.get("tiktok_pending")
+        if tt and not fresh and not done_tt: st["tiktok_skipped"] = f"over {tt_max_age:g} hours old before TikTok could take it"
+        if tt and not picked and not done_tt: st["tiktok_skipped"] = "not one of the day's 5 TikTok picks"
+        if tt and manual and not done_tt: st["tiktok_skipped"] = "uploaded by hand on desktop" if picked else "not a TikTok pick"
         if st.get("instagram") and want_ig: ig_recent += 1
-        if (st.get("tiktok") or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or st.get("instagram_skipped") or not ig) \
+        if (done_tt or st.get("tiktok_skipped") or not tt) and (st.get("instagram") or st.get("instagram_skipped") or not ig) \
                 and (st.get("facebook") or st.get("facebook_skipped") or not fb):
             gh("release", "delete", rel, "--cleanup-tag", "-y", check=False); st.pop("social_release", None)
         else:
@@ -368,12 +661,14 @@ def check():
         ck = os.environ.get("TIKTOK_CLIENT_KEY", "")
         out["tiktok"] = {"ok": False, "error": "not connected yet" if ck else "not connected (TIKTOK_CLIENT_KEY secret missing)"}
         if ck:   # the client key is public by design (it is part of every sign-in link)
-            q = {"client_key": ck, "scope": "user.info.basic,user.info.profile,user.info.stats,video.list,video.upload,video.publish", "response_type": "code",
+            # only what is used (24 October): who the account is, its numbers, our posts' numbers, and drafts to the inbox
+            q = {"client_key": ck, "scope": TT_SCOPES, "response_type": "code",
                  "redirect_uri": TT_REDIRECT, "state": hashlib.sha1(ck.encode()).hexdigest()[:12]}
             out["tiktok"]["connect_url"] = "https://www.tiktok.com/v2/auth/authorize/?" + requests.compat.urlencode(q)
     else:
         h = {"Authorization": f"Bearer {tt['access_token']}"}
-        r = requests.get(f"{TT_API}/user/info/", params={"fields": "open_id,display_name,username"}, headers=h, timeout=30)
+        fields = "open_id,display_name" + (",username" if "user.info.profile" in str(tt.get("scope") or "") else "")
+        r = requests.get(f"{TT_API}/user/info/", params={"fields": fields}, headers=h, timeout=30)
         j = r.json() if r.content else {}
         out["tiktok"] = {"ok": r.ok and j.get("error", {}).get("code") in (None, "ok"), "user": (j.get("data") or {}).get("user"),
                          "scopes": tt.get("scope"), "mode": CFG.get("tiktok_mode", "inbox")}
@@ -456,4 +751,5 @@ def refresh():
     if tt.get("refresh_token"): print(tt_refresh(tt))
 
 if __name__ == "__main__":
-    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check, "ig-dry-run": ig_dry_run, "tiktok-test": tt_test}[sys.argv[1]]()
+    {"post": post, "tiktok-connect": tt_connect, "refresh": refresh, "check": check, "ig-dry-run": ig_dry_run, "tiktok-test": tt_test,
+     "tiktok-stats": tt_stats}[sys.argv[1]]()

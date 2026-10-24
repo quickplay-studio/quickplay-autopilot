@@ -84,12 +84,13 @@ if shutil.which("ffmpeg") and C.FONT:
         subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-f", "lavfi", "-i", f"sine=frequency=220:duration={secs}",
                         "-ar", "24000", "-ac", "1", str(C.WORK / name)], check=True)
     C.take_voice = lambda m, i, o: (C.WORK / "i.wav", C.WORK / "o.wav")
-    m2 = dict(m, id="speed-expedia-02", take_intro="Watch what happens when he opens this", take_outro="Would you have picked Tokyo? Tell us below")
+    m2 = dict(m, id="speed-expedia-02", take_intro="Nobody picks a holiday this fast, and it shows", take_outro="Brave or reckless? Would you have picked Tokyo?",
+              take_style="argument")         # planned in the arguing style (24 October): used as it is, no model call
     os.environ.pop("CLIPS_TAKE", None)
     camp = C.CFG["campaigns"]["speed-expedia"]; avoid = list(camp["rules"].get("avoid") or [])
     camp["rules"]["avoid"] = [a for a in avoid if "AI" not in a]           # a campaign without the AI rule: spoken take
     out2 = C.make_clip("speed-expedia", m2, words)
-    assert m2["tests"]["take"] == "voice" and abs(dur(out2) - (6.0 + 3.6)) < 0.6, (m2["tests"], dur(out2))
+    assert m2["tests"]["take"] == "voice" and m2["tests"]["take_style"] == "argument" and abs(dur(out2) - (6.0 + 3.6)) < 0.6, (m2["tests"], dur(out2))
     camp["rules"]["avoid"] = avoid + ["AI-generated video"]                 # a campaign that avoids AI: text take only
     m3 = dict(m2, id="speed-expedia-03"); out3 = C.make_clip("speed-expedia", m3, words)
     assert m3["tests"]["take"] == "text" and abs(dur(out3) - 9.5) < 0.6, (m3["tests"], dur(out3))

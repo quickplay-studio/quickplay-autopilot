@@ -51,8 +51,8 @@ Return {{"moments": [{{"start": seconds, "end": seconds, "hook": "on-screen line
 makes someone stop (no spoilers of the payoff)", "label": "1 to 4 words to show on screen only when the rules above ask for a name (a destination, a person); otherwise empty", "title": "YouTube title under 60 characters, starts with {subject}, plain and searchable, no clickbait",
 "peak": seconds of the single biggest reaction or punchline inside the moment, "question": "a short question for the
 comments that viewers can answer, under 90 characters, UK English spelling (favourite, colour)", "score": 1 to 10,
-"intro": "our own spoken set-up for the first seconds, 6 to 12 words, opinion and framing only, no spoiler",
-"outro": "our own reaction after the payoff, 6 to 14 words, ending with a question for the comments",
+"intro": "our own angle for the first seconds, 6 to 14 words: the point this moment proves or the argument it settles (why it matters, what most people would do, what it says about the streamer), never a description of what is on screen, no spoiler",
+"outro": "our verdict after the payoff, 6 to 14 words: take a side or make a point the footage alone doesn't, then a short question for the comments",
 "why": "one line: the grab, the payoff"}}]}}"""
 
 
@@ -430,6 +430,8 @@ def plan(cid, n=8):
                                  "peak": num(m.get("peak")), "score": num(m.get("score")),
                                  **{f"take_{k}": re.sub("[\u2013\u2014]", ",", str(m.get(k) or "")).strip()[:120] for k in ("intro", "outro")
                                     if m.get(k) and not PROFANE.search(str(m.get(k))) and not UNSAFE.search(str(m.get(k)))},
+                                 # planned in the arguing style (24 October); take_lines() rewrites a planned take that narrates
+                                 **({"take_style": "argument"} if m.get("intro") and m.get("outro") and not NARRATES.search(str(m.get("intro"))) else {}),
                                  "question": re.sub(r"[–—]", "-", str(m.get("question") or "")).strip()[:90]})
         done.append((a, b)); added += 1
     PLANS.mkdir(parents=True, exist_ok=True); p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -603,7 +605,11 @@ def layout_filters(layout, face):
 
 
 TESTS = {"layout": ["letterbox", "full", "split"], "captions": ["lines", "karaoke"], "punch": ["none", "zoom"],
-         "length": ["as planned"], "title": ["subject first", "hook first"], "take": ["voice"]}     # take: recorded, not drawn     # "short" arm retired 23 October: longer clips
+         "length": ["as planned"], "title": ["subject first", "hook first"], "take": ["voice"],
+         "take_style": ["argument"]}     # take and take_style: recorded, not drawn     # "short" arm retired 23 October: longer clips
+# take_style (24 October): "argument" (the take argues, TAKE_PROMPT) is drawn for every clip; "framing" is what a take that
+# only narrates is recorded as, and what the takes before 24 October were, so insights() compares the two
+RECORDED_ARMS = {"take_style": ["argument", "framing"]}
 
 
 def short_end(words, a, b, peak, min_s=15, max_s=28.0):
@@ -634,33 +640,56 @@ def test_plan(mid):
 # and our reaction after the payoff, on a held last frame with a question for the comments. It is opinion and framing,
 # never a claim the footage doesn't show (the campaigns' "no made-up claims" rule). Campaigns whose rules avoid AI-made
 # video get the take as on-screen text only; CLIPS_TAKE=none turns it off (tests).
-TAKE_PROMPT = """You add a short spoken take of our own to a clip for a family-friendly UK clips channel, so the clip is
-commentary, not a re-upload. The clip: {label}. Its on-screen hook: "{hook}". Why it was picked: {why}. What is said in
-it: "{said}".
+TAKE_PROMPT = """You add a short spoken take of our own to a clip for a family-friendly UK clips channel. YouTube no longer
+counts a voice describing what is on screen as original (1 October 2026), so the take must add what the footage doesn't:
+an argument, a comparison, the stakes or our verdict, with the clip as the evidence. The clip: {label}. Its on-screen
+hook: "{hook}". Why it was picked: {why}. What is said in it: "{said}".
 Write:
-- "intro": what our narrator says over the first seconds, 6 to 12 words: sets up why to keep watching, in our own voice
-  ("Watch what happens when...", "This is the moment...", "Nobody expected this from..."), without giving away the payoff;
-- "outro": our reaction after the payoff, 6 to 14 words, ending with a short question viewers will answer in the comments.
-Opinion and framing only: never state a fact, name or number the clip doesn't show, nothing negative about anyone, no
+- "intro": our angle over the first seconds, 6 to 14 words: the point this moment proves or the argument it settles (why
+  it matters, what most people would do here, what it says about the streamer), without giving away the payoff. Never
+  narrate the picture ("Watch what happens...", "Here he...", "This is the moment...", "Look at...");
+- "outro": our verdict after the payoff, 6 to 14 words: take a side or make a point the footage alone doesn't, then end
+  with a short question viewers will answer in the comments.
+Opinion and argument only: never state a fact, name or number the clip doesn't show, nothing negative about anyone, no
 swearing, UK English, no dashes. Return {{"intro": "...", "outro": "..."}}"""
+
+# A take that only narrates the picture (24 October): YouTube's originality rule says it adds nothing
+NARRATES = re.compile(r"^\s*(watch|look|see|here\b|this is the moment|check (this|out))|\bwatch (what|him|her|them|as|how)\b"
+                      r"|\b(here (he|she|they) (goes|go|is|are))\b", re.I)
 
 
 def take_lines(c, m, words):
-    """Our intro and outro lines for a moment (planned with the moment since 23 October, else written here); None when no
-    model answers or the lines break a rule."""
-    if m.get("take_intro") and m.get("take_outro"): return m["take_intro"], m["take_outro"]
+    """Our intro and outro lines for a moment; None when no model answers or the lines break a rule. Since 24 October the
+    take argues rather than narrates (TAKE_PROMPT): lines planned with the moment in the new style (take_style
+    "argument") are used as they are; older planned lines, or new ones that still narrate, are written again here, and a
+    take that still narrates after two tries is used but recorded as "framing", so clips/insights.json compares the two."""
+    if m.get("take_intro") and m.get("take_outro") and m.get("take_style") == "argument" \
+            and not NARRATES.search(m["take_intro"]):
+        return m["take_intro"], m["take_outro"]
     import factpack
     said = " ".join(w["w"] for w in words if m["start"] <= w["s"] <= m["end"])[:900]
-    try:
-        ans, _ = factpack.gemini(TAKE_PROMPT.format(label=c["source"].get("label", c["subject"]), hook=m.get("hook", ""),
-                                                    why=m.get("why", ""), said=said), None, timeout=90, temperature=0.6, writing=True, lite=True)
-    except Exception as e:
-        log(f"{m['id']}: take not written ({str(e)[:80]})"); return None
-    intro, outro = (factpack.undash(str((ans or {}).get(k) or "")).strip() for k in ("intro", "outro"))
     ok = lambda t, lo, hi: lo <= len(t.split()) <= hi and not PROFANE.search(t) and not UNSAFE.search(t)
-    if not (ok(intro, 4, 14) and ok(outro, 4, 16)): log(f"{m['id']}: take refused ({intro} | {outro})"[:160]); return None
-    m["take_intro"], m["take_outro"] = intro, outro
-    return intro, outro
+    got = None
+    for temp in (0.6, 0.9):
+        try:
+            ans, _ = factpack.gemini(TAKE_PROMPT.format(label=c["source"].get("label", c["subject"]), hook=m.get("hook", ""),
+                                                        why=m.get("why", ""), said=said), None, timeout=90, temperature=temp, writing=True, lite=True)
+        except Exception as e:
+            log(f"{m['id']}: take not written ({str(e)[:80]})"); break
+        if isinstance(ans, list): ans = next((x for x in ans if isinstance(x, dict)), {})
+        intro, outro = (factpack.undash(str((ans or {}).get(k) or "")).strip() for k in ("intro", "outro"))
+        if not (ok(intro, 4, 14) and ok(outro, 4, 16)): log(f"{m['id']}: take refused ({intro} | {outro})"[:160]); continue
+        got = (intro, outro)
+        if not NARRATES.search(intro): break
+        log(f"{m['id']}: take narrates the picture, asked again ({intro})"[:160])
+    if not got:
+        if m.get("take_intro") and m.get("take_outro"):          # an older planned take beats none
+            m["take_style"] = "argument" if m.get("take_style") == "argument" and not NARRATES.search(m["take_intro"]) else "framing"
+            return m["take_intro"], m["take_outro"]
+        return None
+    m["take_intro"], m["take_outro"] = got
+    m["take_style"] = "framing" if NARRATES.search(got[0]) else "argument"
+    return got
 
 
 def take_voice(m, intro, outro):
@@ -747,8 +776,9 @@ def make_clip(cid, m, words):
               f"[vb1]tpad=stop_mode=clone:stop_duration={o_dur:.2f}[vb2];"
               f"[vb2]{drawtext(outro, 56, 1300, 'yellow')}:enable='gte(t,{L:.2f})'[v]")
         tests["take"] = "voice" if voice else "text"
+        tests["take_style"] = m.get("take_style") or "framing"
     else:
-        tests["take"] = "none"
+        tests["take"] = "none"; tests["take_style"] = "none"
     if voice:
         ms = int(L * 1000)
         af = (f"[0:a]aresample=48000,aformat=channel_layouts=stereo,volume='if(lt(t,{i_dur:.2f}),0.25,1)':eval=frame,apad=pad_dur={o_dur:.2f}[o];"
@@ -1261,7 +1291,7 @@ def insights(rows):
     def med(vals): vals = sorted(vals); return vals[len(vals) // 2] if vals else None
     for t in TESTS:
         arms = {}
-        for arm in TESTS[t]:
+        for arm in RECORDED_ARMS.get(t, TESTS[t]):
             vals = [float(r["views"] or 0) for r in aged if r.get(f"test_{t}") == arm]
             arms[arm] = {"n": len(vals), "median_views": med(vals)}
         for arm in arms:
@@ -1325,6 +1355,8 @@ def stats():
                              "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
                              "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
                              **{f"test_{t}": tests.get(t, "") for t in TESTS},
+                             # a take from before 24 October framed the picture: recorded as such, so the two styles compare
+                             **({"test_take_style": "framing"} if tests.get("take") in ("voice", "text") and not tests.get("take_style") else {}),
                              "instagram": (m.get("instagram") or {}).get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""),
                              **ig_numbers((m.get("instagram") or {}).get("media")),
                              # why a clip might get no views (24 October: 51 public clips, 31 views): YouTube's own verdicts

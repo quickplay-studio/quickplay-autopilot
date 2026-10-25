@@ -44,12 +44,6 @@
      "title": "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
      "url": "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
      "published": "2026-10-24"
-    },
-    {
-     "outlet": "NBC News",
-     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
-     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
-     "published": "2026-07-28"
     }
    ]
   },
@@ -73,28 +67,15 @@
    ]
   },
   {
-   "topic": "Ballon d'Or 2026 nominees",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Ballon d’Or 2026 nominees: Messi, Kane and Mbappe on shortlist for men’s award",
-     "url": "https://www.nytimes.com/athletic/live-blogs/ballon-dor-2026-live-updates-shortlist-nominees/UtaqXQpPuqLX/",
-     "published": "2026-09-08"
-    }
-   ]
-  },
-  {
    "topic": "Halloween 2026",
    "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Becky Barnicoat on scary outfits for Halloween – cartoon",
-     "url": "https://www.theguardian.com/commentisfree/picture/2026/oct/24/becky-barnicoat-on-scary-outfits-for-halloween-cartoon",
-     "published": "2026-10-24"
+     "title": "Strictly Come Dancing week five results – live",
+     "url": "https://www.theguardian.com/tv-and-radio/live/2026/oct/24/strictly-come-dancing-week-five-live",
+     "published": "2026-10-25"
     },
     {
      "outlet": "Space.com",
@@ -105,15 +86,28 @@
    ]
   },
   {
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "See the top trending Halloween costumes in New York for 2026",
+     "url": "https://www.usatoday.com/story/news/2026/10/23/trending-halloween-costumes-new-york-2026/92358706007/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
    "topic": "Halloween history",
    "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Becky Barnicoat on scary outfits for Halloween – cartoon",
-     "url": "https://www.theguardian.com/commentisfree/picture/2026/oct/24/becky-barnicoat-on-scary-outfits-for-halloween-cartoon",
-     "published": "2026-10-24"
+     "title": "Strictly Come Dancing week five results – live",
+     "url": "https://www.theguardian.com/tv-and-radio/live/2026/oct/24/strictly-come-dancing-week-five-live",
+     "published": "2026-10-25"
     },
     {
      "outlet": "Space.com",
@@ -128,6 +122,12 @@
    "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/GTA_6",
    "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Rumored Lucia Actress Goes Viral After Dodging Swarm of GTA 6 Comments During Livestream",
+     "url": "https://www.ign.com/articles/rumored-lucia-actress-goes-viral-after-dodging-swarm-of-gta-6-comments-during-livestream",
+     "published": "2026-10-25"
+    },
     {
      "outlet": "Polygon",
      "title": "GTA: San Andreas’ Most Frustrating MIssion Show How Far Rockstar Has Come in 22 Years",
@@ -144,12 +144,6 @@
      "outlet": "GameSpot",
      "title": "Finger Out How To Prep For GTA 6 With These Exercises",
      "url": "https://www.gamespot.com/articles/finger-out-how-to-prep-for-gta-6-with-these-exercises/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Call of Duty promises a return to form - but can it compete with GTA?",
-     "url": "https://www.bbc.co.uk/news/articles/cm369kkg92x6o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-23"
     }
    ]
@@ -195,244 +189,252 @@
      "title": "GTA 6’s New TV Trailer Is A Bit Different, See It For Yourself",
      "url": "https://www.gamespot.com/articles/gta-6s-new-tv-trailer-is-a-bit-different-see-it-for-yourself/",
      "published": "2026-10-22"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Every big reveal from the GTA 6 Netflix trailer",
-     "url": "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
-     "published": "2026-08-27"
     }
    ]
   },
   {
-   "topic": "broken iphone duos",
+   "topic": "The Hunger Games: Sunrise on the Reaping",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 26 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games:_Sunrise_on_the_Reaping",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "The Hunger Games: Sunrise on the Reaping - Official Character Origins Featurette",
+     "url": "https://www.ign.com/videos/the-hunger-games-sunrise-on-the-reaping-official-character-origins-featurette",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘The Hunger Games: Sunrise On The Reaping’ Red Carpet Photos: All Of Joseph Zada & Mckenna Grace’s Looks From Press Tour",
+     "url": "https://deadline.com/gallery/the-hunger-games-sunrise-on-the-reaping-red-carpet-photos-joseph-zada-mckenna-grace/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "sc freiburg vs bayern munich standings",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Bayern vs. Freiburg (Mar 3, 2027) Live Score - ESPN",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401884610/sc-freiburg-bayern-munich",
+     "published": "2026-03-31"
+    }
+   ]
+  },
+  {
+   "topic": "steve borthwick england training squad",
    "signal": "Google Trends GB 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "MacRumors",
-     "title": "Crackgate? iPhone Duo Owners Report Screens Breaking Along the Hinge",
-     "url": "https://www.macrumors.com/2026/10/23/iphone-duo-screen-cracks/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "The first broken iPhone Duos are here",
-     "url": "https://www.theverge.com/tech/1017623/iphone-duo-broken-cracked-screen",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "ghost shark",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ghost_shark",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "The Stone Roses showed me the power of being an introvert",
-     "url": "https://www.theguardian.com/culture/2026/oct/24/cultural-awakening-stone-roses-john-squire-introvert",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever’s Divisive Layering Will See Major Improvements For Launch, Blizzard Says",
-     "url": "https://www.gamespot.com/articles/wow-forevers-divisive-layering-will-see-major-improvements-for-launch-blizzard-says/",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "marco rose",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Marco_Rose",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Soccer Drama ‘Forza,’ With AC Milan Great Alessandro Costacurta, Heads to Tokyo Market With EST N8 (EXCLUSIVE)",
-     "url": "https://variety.com/2026/film/news/soccer-drama-forza-ac-milan-alessandro-costacurta-tokyo-market-est-n8-1236930538/",
+     "outlet": "BBC",
+     "title": "Marchant recalled by Borthwick for England training camp",
+     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmq5nyywq8n1o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-25"
     },
     {
+     "outlet": "Guardian",
+     "title": "Joe Marchant recalled to England training squad for Nations Championship",
+     "url": "https://www.theguardian.com/sport/2026/oct/25/joe-marchant-recalled-to-england-training-squad-for-nations-championship",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "blue planet 3 release date",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
+   "articles": [
+    {
      "outlet": "BBC",
-     "title": "Bournemouth's 'Impossible Dream' keeps on rolling for Rose",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c63r57vlwenxo",
-     "published": "2026-10-24"
+     "title": "Blue Planet III on the BBC - Everything you need to know",
+     "url": "https://www.bbc.com/mediacentre/articles/2026/blue-planet-3-on-the-bbc",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
+   "topic": "mongolia",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mongolia",
+   "articles": [
+    {
+     "outlet": "National Geographic",
+     "title": "What I Learnt About Mongolia by Eating With its Nomadic Families",
+     "url": "https://www.nationalgeographic.com/travel/article/what-i-learnt-about-mongolia-by-eating-with-its-nomadic-families",
+     "published": "2026-10-15"
     },
+    {
+     "outlet": "CNN",
+     "title": "Mongolia’s new snow and ice festival sets Guinness World Record",
+     "url": "https://www.cnn.com/travel/mongolias-snow-and-ice-festival-world-record",
+     "published": "2024-01-18"
+    }
+   ]
+  },
+  {
+   "topic": "49ers game today",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "49ers vs. Falcons: TV channel, game time, streaming options",
+     "url": "https://ninerswire.usatoday.com/story/sports/nfl/niners/2026/10/25/49ers-falcons-tv-channel-game-time-streaming-options/92427779007/",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "mike gesicki",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mike_Gesicki",
+   "articles": [
     {
      "outlet": "New York Times",
-     "title": "Marco Rose’s Bournemouth finally show some swagger. Now for the game of a lifetime",
-     "url": "https://www.nytimes.com/athletic/7701822/2026/10/19/bournemouth-marco-rose-premier-league-win/",
-     "published": "2026-10-18"
+     "title": "Next week’s waiver wire: Mike Gesicki and more players to add — before the Week 5 rush",
+     "url": "https://www.nytimes.com/athletic/7650296/2026/10/02/next-weeks-waiver-wire-mike-gesicki/",
+     "published": "2026-10-02"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Bengals tight end Mike Gesicki injured vs Steelers in NFL Week 3",
+     "url": "https://sportsbookwire.usatoday.com/story/sports/nfl/bengals/2026/09/27/mike-gesicki-injured-bengals-steelers/87618686007/",
+     "published": "2026-09-27"
+    },
+    {
+     "outlet": "NFL",
+     "title": "Dolphins place franchise tag on TE Mike Gesicki",
+     "url": "https://www.nfl.com/news/dolphins-place-franchise-tag-on-te-mike-gesicki",
+     "published": "2022-03-07"
     }
    ]
   },
   {
-   "topic": "james hill",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/James_hill",
+   "topic": "elizabeth hurley",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Hurley",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "England one wicket from win but Pakistan rally chasing 241: tri-series one day international cricket – live",
-     "url": "https://www.theguardian.com/sport/live/2026/oct/25/pakistan-v-england-tri-series-one-day-international-cricket-live",
+     "outlet": "The Hollywood Reporter",
+     "title": "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
      "published": "2026-10-25"
     },
     {
-     "outlet": "Variety",
-     "title": "‘Clayface’ Director James Watkins Explains That [SPOILER] Cameo, Introducing Gotham City to the DC Universe and All the Shape-Shifting Kills",
-     "url": "https://variety.com/2026/film/news/clayface-batman-gotham-aaron-paul-cameo-1236921644/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Anderson stops short of retiring after Lancashire exit",
-     "url": "https://www.bbc.co.uk/sport/cricket/articles/c3qjng48exxwo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "IGN",
-     "title": "James Gunn Defends the DCU's Approach to Interconnected Stories, Doesn't Want Movies Like Clayface to Exist Just to 'Set Up' Crossovers",
-     "url": "https://www.ign.com/articles/james-gunn-defends-the-dcus-approach-to-interconnected-stories-doesnt-want-movies-like-clayface-to-exist-just-to-set-up-crossovers",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "hannah klugman",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Hannah_Klugman",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Klugman to face Jacquemot in Wrexham Open final",
-     "url": "https://www.bbc.co.uk/sport/tennis/articles/c64g19g780k9o",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "epl table",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/El_Taller",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Duran nets winner as Celtic restore four-point lead at struggling Hibs",
-     "url": "https://www.skysports.com/football/hibernian-vs-celtic/report/558389",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Four ways Labour could raise money in the Budget without hiking income tax",
-     "url": "https://www.bbc.co.uk/news/articles/c65yn9p55np2o?at_medium=RSS&at_campaign=rss",
+     "outlet": "Deadline",
+     "title": "‘Clayface’ Scares Off Elizabeth Holmes & Nathan Fielder From No. 1 With $24M; But ‘You Can See Everything’ Still Widely Seen With Near Epic ",
+     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
      "published": "2026-10-25"
     },
     {
      "outlet": "Guardian",
-     "title": "Chaotic state of football in Brazil epitomises a nation where greed has conquered glory | Jonathan Liew",
-     "url": "https://www.theguardian.com/football/2026/oct/23/chaotic-football-brazil-politics-election-flavio-bolsonaro-lula",
+     "title": "Under Fire by Humza Yousaf – a deeply affecting story of being stranded in Gaza",
+     "url": "https://www.theguardian.com/books/2026/oct/23/under-fire-by-humza-yousaf-a-deeply-affecting-story-of-being-stranded-in-gaza",
      "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "officer",
+   "topic": "49",
    "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Officer",
+   "wikipedia": "https://en.wikipedia.org/wiki/49",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "They wallow in Trump gunk 24/7. They say it’s necessary",
-     "url": "https://www.theguardian.com/media/ng-interactive/2026/oct/25/inside-trumps-head-podcast",
-     "published": "2026-10-25"
+     "title": "Apple Watch Ultra 4 review: longer battery life but still awaiting new features",
+     "url": "https://www.theguardian.com/technology/2026/oct/23/apple-watch-ultra-4-review-longer-battery-life-health-tracking",
+     "published": "2026-10-23"
     },
     {
-     "outlet": "IGN",
-     "title": "Man Arrested for Brandishing Knife at Crew on the Set of Miami Vice ‘85",
-     "url": "https://www.ign.com/articles/man-arrested-for-brandishing-knife-at-crew-on-the-set-of-miami-vice-85",
-     "published": "2026-10-25"
+     "outlet": "Rolling Stone",
+     "title": "‘49 Is Forever’: 49 Winchester Are Primed for the Future on New Album ‘Change of Plans’",
+     "url": "https://www.rollingstone.com/music/music-features/49-winchester-change-of-plans-interview-ozzy-1235561151/",
+     "published": "2026-05-13"
     },
     {
      "outlet": "Eurogamer",
-     "title": "Xbox's first chief operating officer Helen Chiang leaves Microsoft just three months into the job",
-     "url": "https://www.eurogamer.net/xbox-coo-helen-chiang-leaves-microsoft",
-     "published": "2026-10-24"
+     "title": "TR-49 review - Inkle does it again with an eerie hunt for answers within a mysterious archival machine",
+     "url": "https://www.eurogamer.net/tr-49-review",
+     "published": "2026-01-21"
+    }
+   ]
+  },
+  {
+   "topic": "harry kane",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Kane",
+   "articles": [
+    {
+     "outlet": "Billboard",
+     "title": "Harry Styles Quietly Reveals He’s Releasing a New Music Video for a Fan-Favorite Song",
+     "url": "https://www.billboard.com/music/pop/harry-styles-coming-up-roses-video-release-date-1236367595/",
+     "published": "2026-10-25"
     },
     {
-     "outlet": "GameSpot",
-     "title": "Call Of Duty Ads On Xbox Are Even More Annoying This Year With Modern Warfare 4",
-     "url": "https://www.gamespot.com/articles/call-of-duty-ads-on-xbox-are-even-more-annoying-this-year-with-modern-warfare-4/",
+     "outlet": "Guardian",
+     "title": "Readers reply: will there ever again be a band as big as the Beatles or the Stones?",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/25/readers-reply-will-there-ever-again-be-a-band-as-big-as-the-beatles-or-the-stones",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "BBC",
+     "title": "What books had people turning pages and turning up the volume this year?",
+     "url": "https://www.bbc.co.uk/news/articles/cqe8rgp8g1k2o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "sunderland vs leeds",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": null,
+   "topic": "michael olise",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Michael_Olise",
    "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Sunderland v Leeds: Premier League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/25/sunderland-v-leeds-premier-league-live",
-     "published": "2026-10-25"
-    },
     {
      "outlet": "Sky Sports",
-     "title": "Calvert-Lewin starts for Leeds at Sunderland LIVE!",
-     "url": "https://www.skysports.com/football/sunderland-vs-leeds-united/live/559523",
+     "title": "Carrick future in huge doubt as Man Utd consider alternatives",
+     "url": "https://www.skysports.com/football/news/12040/13603690/michael-carrick-man-utd-future-eddie-howe-and-julian-nagelsmann-expected-frontrunners-if-head-coach-departs",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Fernandes gamble leaves Carrick to carry the can for United’s institutional failures | Will Unwin",
+     "url": "https://www.theguardian.com/football/2026/oct/25/manchester-united-michael-carrick-bruno-fernandes-jim-ratcliffe-institutional-failures",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Carrick future under major threat - can he survive?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/crgj9wnpd1lvo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Fernandes left on bench for Man Utd defeat - a failed gamble?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cmrlye5w3p79o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-25"
     }
    ]
   },
   {
-   "topic": "xbox game pass",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Xbox_Game_Pass",
+   "topic": "kc concepcion",
+   "signal": "Google Trends US 5000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/KC_Concepcion_(American_football)",
    "articles": [
     {
-     "outlet": "Xbox Wire",
-     "title": "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "url": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "published": "2026-10-23"
+     "outlet": "NFL",
+     "title": "KC Concepcion's 17-yard reception moves Browns closer to midfield",
+     "url": "https://www.nfl.com/videos/kc-concepcion-s-17-yard-reception-moves-browns-closer-to-midfield",
+     "published": "2026-10-25"
     },
     {
-     "outlet": "GameSpot",
-     "title": "Arkane Lyon Could Be Shut Down Within Weeks As Deadline To Find A Buyer Looms",
-     "url": "https://www.gamespot.com/articles/arkane-lyon-could-be-shut-down-within-weeks-as-deadline-to-find-a-buyer-looms/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Call of Duty: Modern Warfare 4 review – a thrilling airport novel of a game",
-     "url": "https://www.theguardian.com/games/2026/oct/23/call-of-duty-modern-warfare-4-review-a-thrilling-airport-novel-of-a-game",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "data breach",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Data_breach",
-   "articles": [
-    {
-     "outlet": "Sky News",
-     "title": "Police to allow some offenders to breach curfews without arrest",
-     "url": "https://news.sky.com/story/police-to-reduce-enforcement-of-minor-tag-breaches-sky-news-understands-13603365",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Resident Evil Developer Capcom Issues Phishing Warning After Data Breach Hits Over 11 Million Customer Accounts",
-     "url": "https://www.ign.com/articles/resident-evil-developer-capcom-issues-phishing-warning-after-data-breach-hits-over-11-million-customer-accounts",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Reuters",
-     "title": "Pentagon hit with class action over data breach affecting millions of military members",
-     "url": "https://www.reuters.com/legal/government/pentagon-hit-with-class-action-over-data-breach-affecting-millions-military-2026-10-21/",
-     "published": "2026-10-21"
+     "outlet": "USA Today",
+     "title": "KC Concepcion leaves Week 5 game early",
+     "url": "https://www.usatoday.com/story/sports/fantasy/player-updates/2026/10/11/fantasy-browns-wr-kc-concepcion-suffers-head-injury-in-week-5/92207731007/",
+     "published": "2026-10-11"
     }
    ]
   },
@@ -441,6 +443,12 @@
    "signal": "Wikipedia 231,483 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
    "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "‘Clayface’ Beams $43M WW Opening, Delivers Paramount-Warner Bros. Second No. 1 Weekend Win Since Merger – Global Box Office",
+     "url": "https://deadline.com/2026/10/box-office-global-clayface-1237172755/",
+     "published": "2026-10-25"
+    },
     {
      "outlet": "The Hollywood Reporter",
      "title": "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
@@ -458,12 +466,6 @@
      "title": "Box Office: ‘You Can See Everything’ Scores $19.5 Million in Huge Second Weekend, ‘Clayface’ Leads With $24 Million Debut",
      "url": "https://variety.com/2026/film/box-office/you-can-see-everything-box-office-huge-second-weekend-clayface-leads-1236930604/",
      "published": "2026-10-25"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Clayface’ Scares Off Elizabeth Holmes & Nathan Fielder From No. 1 With $24M; But ‘You Can See Everything’ Still Widely Seen With Near Epic ",
-     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-     "published": "2026-10-25"
     }
    ]
   },
@@ -474,21 +476,9 @@
    "articles": [
     {
      "outlet": "USA Today",
-     "title": "Dominick Reyes trashes 'low IQ hater' Daniel Cormier for 'bias' UFC 333 commentary",
-     "url": "https://mmajunkie.usatoday.com/story/sports/ufc/2026/10/25/ufc-333-dominick-reyes-calls-out-daniel-cormier-bias-commentary-response/92430030007/",
+     "title": "Video: UFC 333 fallout and UFC 336 title fight reaction with Mike Bohn, Farah Hannoun",
+     "url": "https://mmajunkie.usatoday.com/story/sports/ufc/2026/10/25/video-ufc-333-fallout-ufc-336-title-fight-reaction-more/92414793007/",
      "published": "2026-10-25"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "UFC 333 Livestream: Where to Watch Volkanovski vs. Evloev Main Card",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/where-to-watch-ufc-333-volkanovski-evloev-live-stream-free-1236739560/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Here’s How to Watch UFC 333 Live Online for Free",
-     "url": "https://www.billboard.com/culture/product-recommendations/ufc-333-oct-2026-watch-mma-live-online-free-1236364114/",
-     "published": "2026-10-24"
     }
    ]
   },
@@ -536,6 +526,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "Deadline",
+     "title": "‘Clayface’ Beams $43M WW Opening, Delivers Paramount-Warner Bros. Second No. 1 Weekend Win Since Merger – Global Box Office",
+     "url": "https://deadline.com/2026/10/box-office-global-clayface-1237172755/",
+     "published": "2026-10-25"
+    },
+    {
      "outlet": "The Hollywood Reporter",
      "title": "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
      "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
@@ -552,31 +548,6 @@
      "title": "Box Office: ‘You Can See Everything’ Scores $19.5 Million in Huge Second Weekend, ‘Clayface’ Leads With $24 Million Debut",
      "url": "https://variety.com/2026/film/box-office/you-can-see-everything-box-office-huge-second-weekend-clayface-leads-1236930604/",
      "published": "2026-10-25"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Clayface’ Scares Off Elizabeth Holmes & Nathan Fielder From No. 1 With $24M; But ‘You Can See Everything’ Still Widely Seen With Near Epic ",
-     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "Jacob Misiorowski",
-   "signal": "Wikipedia 133,083 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Jacob Misiorowski grinds his way through a Game 1 World Series victory",
-     "url": "https://www.usatoday.com/story/sports/mlb/brewers/2026/10/24/jacob-misiorowski-grinds-his-way-through-a-game-1-world-series-victory/92391209007/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "ESPN",
-     "title": "Jacob Misiorowski brings tall tales -- and talent -- to World Series",
-     "url": "https://www.espn.com/mlb/story/_/id/50255002/jacob-misiorowski-miz-brewers-world-series",
-     "published": "2026-10-23"
     }
    ]
   },
@@ -603,12 +574,6 @@
      "title": "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
      "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
      "published": "2026-10-25"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "Laika has spent 20 years building up to Wildwood",
-     "url": "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
-     "published": "2026-10-24"
     },
     {
      "outlet": "Guardian",
@@ -639,31 +604,6 @@
      "outlet": "Sky News",
      "title": "Tom Skerritt, Top Gun and Alien actor, has died",
      "url": "https://news.sky.com/story/actor-tom-skerritt-known-for-roles-in-top-gun-and-alien-has-died-13602478",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "LISA",
-   "signal": "YouTube GB 917,041/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/LISA",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "How cocaine conquered the UK: in pubs, festivals and workplaces the drug has become an everyday habit",
-     "url": "https://www.theguardian.com/society/ng-interactive/2026/oct/25/how-cocaine-conquered-the-uk-inside-britains-pubs-festivals-and-workplaces-the-drug-has-become-an-everyday-habit",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "AMD says the re-release of the Ryzen 7 5800X3D was 'like a final gift to our loyal [AM4] users' and it was CEO Dr. Lisa Su who first came up",
-     "url": "https://www.pcgamer.com/hardware/processors/amd-says-the-re-release-of-the-ryzen-7-5800x3d-was-like-a-final-gift-to-our-loyal-am4-users-and-it-was-ceo-dr-lisa-su-who-first-came-up-with-the-idea/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "LISA’s ‘Press Play’: All 6 Tracks Ranked",
-     "url": "https://www.billboard.com/lists/lisa-press-play-album-review-tracks-ranked/",
      "published": "2026-10-22"
     }
    ]
@@ -717,14 +657,48 @@
    "source": "TVmaze"
   },
   {
+   "topic": "To Fall Asleep To by Rain Sounds",
+   "signal": "Apple albums GB: new in the top 10",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "TechCrunch",
+     "title": "This thin under-pillow speaker helped me fall asleep without earbuds",
+     "url": "https://techcrunch.com/2026/08/05/this-thin-under-pillow-speaker-helped-me-fall-asleep-without-earbuds/",
+     "published": "2026-08-05"
+    },
+    {
+     "outlet": "Washington Post",
+     "title": "Fall asleep faster using these science-backed tips",
+     "url": "https://www.washingtonpost.com/wellness/2026/05/19/6-things-you-can-do-get-better-sleep/",
+     "published": "2026-05-19"
+    }
+   ],
+   "source": "Apple albums"
+  },
+  {
+   "topic": "VibeShort: AI Short Dramas",
+   "signal": "App Store GB: new in the top 10 free apps",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "CapCut Introduces Director Mode to Help Creators Produce AI Short Dramas From One Creative Dashboard",
+     "url": "https://www.usatoday.com/press-release/story/35820/capcut-introduces-director-mode-to-help-creators-produce-ai-short-dramas-from-one-creative-dashboard/",
+     "published": "2026-06-28"
+    }
+   ],
+   "source": "App Store"
+  },
+  {
    "topic": "2026 United States Grand Prix",
    "signal": "Formula 1 race weekend, Sunday 25 October (Jolpica)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "‘Night and day different’ – why did Ferrari's pace evaporate again?",
-     "url": "https://www.skysports.com/f1/news/12040/13603156/lewis-hamilton-charles-leclerc-reasons-why-ferrari-went-from-us-gp-pole-favourites-to-behind-kimi-antonelli-red-bulls-on-grid",
+     "title": "United States GP: Antonelli on pole from Verstappen and with title chance LIVE!",
+     "url": "https://www.skysports.com/f1/live-blog/12040/13603251/f1-united-states-gp-live-race-updates-results-stream-highlights-from-18th-round-of-2026-formula-1-season-in-austin",
      "published": "2026-10-24"
     },
     {
@@ -765,39 +739,39 @@
    "source": "TVmaze"
   },
   {
-   "topic": "the hunger games",
+   "topic": "amal clooney",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games",
+   "wikipedia": "https://en.wikipedia.org/wiki/Amal_Clooney",
    "articles": []
   },
   {
-   "topic": "marshall faulk",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Marshall_Faulk",
+   "topic": "mcrib",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/McRib",
    "articles": []
   },
   {
-   "topic": "roger goodell",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Roger_Goodell",
+   "topic": "kyle pitts",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kyle_Pitts",
    "articles": []
   },
   {
-   "topic": "mbappe",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9",
-   "articles": []
-  },
-  {
-   "topic": "dave aranda",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dave_Aranda",
+   "topic": "nascar",
+   "signal": "Google Trends US 10000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Nascar",
    "articles": []
   },
   {
    "topic": "Jailer 2",
    "signal": "Wikipedia 190,945 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "articles": []
+  },
+  {
+   "topic": "Jacob Misiorowski",
+   "signal": "Wikipedia 133,083 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
    "articles": []
   },
   {

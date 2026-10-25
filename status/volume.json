@@ -14,7 +14,7 @@
   ],
   "shorts_a_day": {
    "during": 14,
-   "before": 22.5
+   "before": 23.2
   },
   "daily_views": {
    "during": 4792,
@@ -28,20 +28,20 @@
    ]
   },
   "cohort_24h": {
-   "during": 2226,
-   "before": 2450,
-   "ratio": 0.91,
-   "lo": 0.63,
-   "hi": 1.53,
+   "during": 1937,
+   "before": 2664,
+   "ratio": 0.73,
+   "lo": 0.54,
+   "hi": 1.1,
    "days": [
     1,
     4
    ]
   },
   "median_24h_per_short": {
-   "during": 57.5,
-   "before": 25.0
+   "during": 44.0,
+   "before": 27.0
   }
  },
- "as_of": "2026-10-25T13:21+00:00"
+ "as_of": "2026-10-25T18:59+00:00"
 }

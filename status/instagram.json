@@ -1,0 +1,148 @@
+{
+ "updated": "2026-10-25T19:04+00:00",
+ "followers": 1,
+ "followers_week_ago": 0,
+ "reels": 94,
+ "median_views": 112.5,
+ "own_medians": true,
+ "min_reels": 15,
+ "first": true,
+ "favour_min": 1.05,
+ "favoured": [
+  "Gaming"
+ ],
+ "categories": [
+  {
+   "category": "Gaming",
+   "median": 122.0,
+   "n": 12,
+   "score": 1.059,
+   "favoured": true
+  },
+  {
+   "category": "Sport",
+   "median": 118.5,
+   "n": 22,
+   "score": 1.043,
+   "favoured": false
+  },
+  {
+   "category": "Film",
+   "median": 119.0,
+   "n": 14,
+   "score": 1.042,
+   "favoured": false
+  },
+  {
+   "category": "Music",
+   "median": 75.0,
+   "n": 25,
+   "score": 0.713,
+   "favoured": false
+  },
+  {
+   "category": "Science",
+   "median": 35.0,
+   "n": 9,
+   "score": 0.472,
+   "favoured": false
+  },
+  {
+   "category": "Entertainment",
+   "median": 12.5,
+   "n": 6,
+   "score": 0.302,
+   "favoured": false
+  },
+  {
+   "category": "Tech",
+   "median": 8.5,
+   "n": 6,
+   "score": 0.244,
+   "favoured": false
+  }
+ ],
+ "tests": {
+  "trial": {
+   "label": "Trial reel",
+   "feature": "ig_trial",
+   "on": true,
+   "arms": {
+    "yes": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    },
+    "no": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    }
+   },
+   "paused": true
+  },
+  "caption": {
+   "label": "Caption",
+   "feature": "ig_caption",
+   "on": true,
+   "arms": {
+    "short": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    },
+    "full": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    }
+   },
+   "paused": false
+  },
+  "hour": {
+   "label": "Posting hour",
+   "feature": "ig_hour",
+   "on": true,
+   "arms": {
+    "morning": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    },
+    "any": {
+     "n": 0,
+     "median": null,
+     "share": 0.5,
+     "verdict": "",
+     "lift": ""
+    }
+   },
+   "paused": false
+  }
+ },
+ "week": {
+  "reels": 94,
+  "median": 112.5,
+  "before_reels": 0,
+  "before_median": null
+ },
+ "cover": {
+  "asked": 4,
+  "accepted": 4,
+  "refused": 0,
+  "last": "accepted",
+  "last_at": "2026-10-25T14:00+00:00",
+  "ok": true,
+  "paused_until": null
+ }
+}

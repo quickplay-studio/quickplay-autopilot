@@ -1,11 +1,86 @@
 {
  "date": "2026-10-25",
- "built": "2026-10-25T16:15+00:00",
- "model": "gemini-3.5-flash-lite + gemini-3-flash-preview",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-25T18:59+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
+  {
+   "n": 8,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Grand Theft Auto VI has an official launch trailer available to watch ahead of its release next month.",
+   "hooks": [
+    "Grand Theft Auto VI launches on 19 November 2026!",
+    "Explore Leonida in Grand Theft Auto VI!"
+   ],
+   "sources": [
+    [
+     "Rumored Lucia Actress Goes Viral After Dodging Swarm of GTA 6 Comments During Livestream",
+     "https://www.ign.com/articles/rumored-lucia-actress-goes-viral-after-dodging-swarm-of-gta-6-comments-during-livestream",
+     "IGN",
+     "2026-10-25"
+    ],
+    [
+     "GTA: San Andreas’ Most Frustrating MIssion Show How Far Rockstar Has Come in 22 Years",
+     "https://www.polygon.com/gta-san-andreas-retrospective/",
+     "Polygon",
+     "2026-10-25"
+    ],
+    [
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/GTA_6",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
+      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    }
+   ],
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+   ]
+  },
   {
    "n": 9,
    "topic": "GTA 6 price",
@@ -13,9 +88,8 @@
    "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Did you know GTA 6 costs $79.99?",
-    "GTA 6 physical copies do not include a disc!",
-    "The Ultimate Edition of GTA 6 is priced at $99.99."
+    "Did you know GTA 6 will cost $79.99 at launch?",
+    "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19!"
    ],
    "sources": [
     [
@@ -43,7 +117,19 @@
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto 6 launches on 19 November 2026.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X.",
+      "3": "GTA 6 launches on November 19, 2026."
+     }
+    }
+   ],
    "one_source": [
     {
      "claim": "Grand Theft Auto 6 costs $79.99 across PlayStation 5 and Xbox Series X and S.",
@@ -64,21 +150,39 @@
      }
     },
     {
-     "claim": "GTA 6 physical copies do not include a disc, Rockstar has confirmed.",
+     "claim": "GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed."
+      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
      }
     },
     {
-     "claim": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99.",
+     "claim": "GTA 6 features a single‑player experience at launch.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99."
+      "3": "Rockstar Games has finally announced the price of GTA 6, while confirming it features a “single-player experience” at launch."
+     }
+    },
+    {
+     "claim": "Physical copies of GTA 6 contain no disc, only a code in a box.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed. They're just a code in a box."
+     }
+    },
+    {
+     "claim": "Third‑party listings for the PS5 Pro have climbed to as high as $1,400, including a $1,299.99 listing sold and shipped by a third‑party seller.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "At Walmart and Best Buy, via TechPowerUp, third‑party listings for the PS5 Pro have climbed to as high as $1,400, including a $1,299.99 listing sold"
      }
     }
    ],
@@ -91,11 +195,10 @@
    "topic": "GTA 6 trailer views record",
    "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "The official Grand Theft Auto VI launch trailer was released on October 23, 2026.",
    "hooks": [
-    "GTA 6 trailer drops, promising Leonida and a 30‑minute showcase.",
-    "Meet Jason and Lucia in Rockstar's new cinematic‑gameplay blend.",
-    "Release date set for Nov. 19, excitement builds worldwide."
+    "Explore Leonida before the game arrives November 19.",
+    "Watch the official Grand Theft Auto VI launch trailer."
    ],
    "sources": [
     [
@@ -103,361 +206,285 @@
      "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
      "Xbox Wire",
      "2026-10-23"
-    ],
-    [
-     "Every big reveal from the GTA 6 Netflix trailer",
-     "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
-     "Polygon",
-     "2026-08-27"
     ]
    ],
    "verified": [],
-   "one_source": [
-    {
-     "claim": "Grand Theft Auto 6 will be released on Nov. 19.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19."
-     }
-    },
-    {
-     "claim": "A nearly 30 minute GTA 6 trailer premiered on Netflix.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
-     }
-    },
-    {
-     "claim": "The trailer mixes cinematics and gameplay.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The trailer was a mix of cinematics and gameplay, and it looked a lot like, well... Grand Theft Auto."
-     }
-    },
-    {
-     "claim": "The trailer features the characters Jason and Lucia.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "A handful of segments followed Jason and Lucia as they roamed around the city without any pressing concerns hanging over them, and Rockstar briefly swapped"
-     }
-    }
-   ],
+   "one_source": [],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
    ]
   },
   {
-   "n": 6,
-   "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Spot Halloween fireballs streaking from the Taurids this October.",
-    "Algol’s eerie wink signals a dimming star every few days.",
-    "Play Halloween: The Game on September eight for all consoles."
-   ],
-   "sources": [
-    [
-     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
-     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
-     "Space.com",
-     "2026-10-24"
-    ],
-    [
-     "Halloween 2026",
-     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The star Algol dims every 2.867 days, becoming about three point three times dimmer for a ten hour eclipse.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The demonic eye appears to \"wink\" at us every 2.867 days, as one of a pair of co-orbiting stars eclipses the other, making Algol appear"
-     }
-    },
-    {
-     "claim": "Halloween: The Game was released on September 8 2026 for PlayStation 5 Windows and Xbox Series X and Series S.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
-     }
-    },
-    {
-     "claim": "The multiplayer mode pits one player as Michael Myers against four civilian players in an asymmetrical horror mode.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The multiplayer mode is a one-versus-four asymmetrical horror mode in which one player controls Michael Myers, while four players control civilians in Haddonfield."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 28,
-   "topic": "Wildwood (film)",
-   "signal": "Wikipedia 96,858 views",
+   "n": 11,
+   "topic": "The Hunger Games: Sunrise on the Reaping",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 26 days to go)",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know Wildwood is the longest stop-motion animated film ever made?",
-    "Wildwood achieved a rare 100 percent approval rating on Rotten Tomatoes!",
-    "Laika's epic Wildwood carries a massive $100 million production budget."
+    "Discover when The Hunger Games Sunrise on the Reaping hits theaters!",
+    "See who stars in the upcoming Hunger Games prequel film.",
+    "Learn how Haymitch Abernathy enters the 50th Hunger Games arena."
    ],
    "sources": [
     [
-     "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
-     "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
-     "The Hollywood Reporter",
-     "2026-10-25"
+     "The Hunger Games: Sunrise on the Reaping - Official Character Origins Featurette",
+     "https://www.ign.com/videos/the-hunger-games-sunrise-on-the-reaping-official-character-origins-featurette",
+     "IGN",
+     "2026-10-19"
     ],
     [
-     "Laika has spent 20 years building up to Wildwood",
-     "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
-     "The Verge",
-     "2026-10-24"
+     "‘The Hunger Games: Sunrise On The Reaping’ Red Carpet Photos: All Of Joseph Zada & Mckenna Grace’s Looks From Press Tour",
+     "https://deadline.com/gallery/the-hunger-games-sunrise-on-the-reaping-red-carpet-photos-joseph-zada-mckenna-grace/",
+     "Deadline",
+     "2026-10-14"
     ],
     [
-     "From Wildwood to John Legend: your complete entertainment guide to the week ahead",
-     "https://www.theguardian.com/culture/2026/oct/24/entertainment-week-ahead-wildwood-john-legend-suede-lives-of-others",
-     "Guardian",
-     "2026-10-24"
-    ],
-    [
-     "Wildwood (film)",
-     "https://en.wikipedia.org/wiki/Wildwood_(film)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Wildwood has a theatrical runtime of 131 minutes, making it the longest stop-motionanimated film by run-time.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.[9]"
-     }
-    },
-    {
-     "claim": "Wildwood is directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Wildwood is a 2026 American stop-motion animated epic fantasy film[6][7][8] directed by Travis Knight and written by Chris Butler, based on the 2011 novel by"
-     }
-    },
-    {
-     "claim": "Wildwood is Laika's first film to receive a PG-13 rating from the Motion Picture Association.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.[11]"
-     }
-    },
-    {
-     "claim": "Carey Mulligan, Peyton Elizabeth Lee and Jacob Tremblay lead the voice cast for Travis Knight's feature about a teen girl venturing to an enchanted forest to save her baby brother.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Carey Mulligan, Peyton Elizabeth Lee and Jacob Tremblay lead the voice cast for Travis Knight’s feature about a teen girl venturing to an enchanted forest"
-     }
-    },
-    {
-     "claim": "Production took place at Laika's facility studio in Hillsboro, Oregon, with Caleb Deschanel serving as the cinematographer.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Production took place at Laika's facility studio in Hillsboro, Oregon, with Caleb Deschanel serving as the cinematographer."
-     }
-    },
-    {
-     "claim": "Wildwood won the Grand People's Choice Award for Best Feature film in the SOFC at the Sitges Film Festival on October 18, 2026.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Sitges Film Festival | October 18, 2026 | Grand People's Choice Award for Best Feature film in the SOFC | Wildwood | Won"
-     }
-    },
-    {
-     "claim": "Wildwood is expected to clear around $11.6 million for the weekend.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Taking third place is Laika’s stop-motion animated movie Wildwood, expected to clear around $11.6 million for the weekend."
-     }
-    },
-    {
-     "claim": "Wildwood carries a hefty reported production budget of $100 million.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "However, Wildwood, which has earned Oscar buzz, carries a hefty reported production budget of $100 million, giving the film a high bar for profitability that"
-     }
-    },
-    {
-     "claim": "Wildwood holds a dazzling 100 percent approval rating on Rotten Tomatoes and a 97 from audiences.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Earning an A CinemaScore, Wildwood holds a dazzling 100 percent approval rating on Rotten Tomatoes and a 97 from audiences, with Scheck heralding it as"
-     }
-    },
-    {
-     "claim": "Travis Knight originally optioned the rights for the book of the same name, written by Decemberists frontman Colin Meloy, in 2011.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Laika CEO Travis Knight originally optioned the rights for the book of the same name, written by Decemberists frontman Colin Meloy, in 2011."
-     }
-    },
-    {
-     "claim": "Wildwood required nearly 50 animators and more than 200 puppets to pull it off.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "It required nearly 50 animators and more than 200 puppets to pull it off, and the film is full of ambitious sequences, like a 12-minute"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 36,
-   "topic": "One Born Every Minute",
-   "signal": "TVmaze GB: season premiere tonight, 21:00",
-   "category": "Entertainment",
-   "what_is_new": "The documentary series One Born Every Minute returns for its 12th series on 25 October 2026.",
-   "hooks": [
-    "One Born Every Minute is back for a twelfth series.",
-    "The hit documentary series is returning on E4.",
-    "Discover what has changed in the new maternity series."
-   ],
-   "sources": [
-    [
-     "‘I can’t believe I get to see that’: One Born Every Minute is back for a 12th series",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/25/i-cant-believe-i-get-to-see-that-one-born-every-minute-is-back-for-a-12th-series",
-     "Guardian",
-     "2026-10-25"
-    ],
-    [
-     "One Born Every Minute",
-     "https://en.wikipedia.org/wiki/One_Born_Every_Minute",
+     "The Hunger Games: Sunrise on the Reaping",
+     "https://en.wikipedia.org/wiki/The_Hunger_Games:_Sunrise_on_the_Reaping",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "The first series of One Born Every Minute won a BAFTA award.",
+     "claim": "The Hunger Games Sunrise on the Reaping is scheduled to be released in the United States on November 20, 2026.",
      "sources": [
       1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "The first episode of the show, which airs on Sunday night, tackles topics that have come to the foreground in the years since the Bafta-winning",
-      "2": "The first series won a 2010 BAFTA for best factual series; the second series was nominated for a 2011 BAFTA for best factual series."
+      "1": "The Hunger Games: Sunrise on the Reaping, directed by Francis Lawrence, opens in theaters on November 20.",
+      "2": "Grace will play tribute Maysilee Donner in the film, set for U.S. release on November 20, 2026.",
+      "3": "The Hunger Games: Sunrise on the Reaping is scheduled to be released in the United States on November 20, 2026."
      }
     },
     {
-     "claim": "The original run of One Born Every Minute ended in 2018 after eleven series.",
+     "claim": "The Hunger Games Sunrise on the Reaping screenplay is by Billy Ray.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping screenplay is by Billy Ray.",
+      "2": "The Hunger Games: Sunrise on the Reaping is directed by Francis Lawrence from a screenplay by Billy Ray and Michael Lesslie, based on the adaptation",
+      "3": "The Hunger Games: Sunrise on the Reaping is an upcoming American dystopian film directed by Francis Lawrence from a screenplay by Billy Ray and Michael"
+     }
+    },
+    {
+     "claim": "The Hunger Games Sunrise on the Reaping is based on the novel by Suzanne Collins.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "It is based on the novel by Suzanne Collins.",
+      "2": "The Hunger Games: Sunrise on the Reaping is directed by Francis Lawrence from a screenplay by Billy Ray and Michael Lesslie, based on the adaptation",
+      "3": "Based on the 2025 novel Sunrise on the Reaping by Suzanne Collins, it serves as both a sequel to The Hunger Games: The Ballad of"
+     }
+    },
+    {
+     "claim": "The Hunger Games Sunrise on the Reaping is directed by Francis Lawrence.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping, directed by Francis Lawrence, opens in theaters on November 20.",
+      "2": "The Hunger Games: Sunrise on the Reaping is directed by Francis Lawrence from a screenplay by Billy Ray and Michael Lesslie, based on the adaptation",
+      "3": "The Hunger Games: Sunrise on the Reaping is an upcoming American dystopian film directed by Francis Lawrence from a screenplay by Billy Ray and Michael"
+     }
+    },
+    {
+     "claim": "The cast includes Joseph Zada, Jesse Plemons, Ralph Fiennes, Glenn Close, Kieran Culkin, Elle Fanning, Mckenna Grace, Maya Hawke, Whitney Peak, and Kelvin Harrison Jr.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Check out the Character Origins Featurette for The Hunger Games: Sunrise on the Reaping, an upcoming film starring Joseph Zada, Jesse Plemons, Ralph Fiennes, Glenn",
+      "2": "The cast includes Joseph Zada, Jesse Plemons, Ralph Fiennes, Glenn Close, Kieran Culkin, Elle Fanning, Mckenna Grace, Maya Hawke, Whitney Peak, Kelvin Harrison Jr., Ben",
+      "3": "It stars an ensemble cast that includes Joseph Zada, Jesse Plemons, Ralph Fiennes, Glenn Close, Kieran Culkin, Elle Fanning, Mckenna Grace, Maya Hawke, Whitney Peak,"
+     }
+    },
+    {
+     "claim": "The Hunger Games Sunrise on the Reaping is produced by Nina Jacobson, Brad Simpson, and Francis Lawrence.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "The first episode of the show, which airs on Sunday night, tackles topics that have come to the foreground in the years since the Bafta-winning",
-      "2": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018."
+      "1": "It is produced by Nina Jacobson, Brad Simpson, and Francis Lawrence.",
+      "2": "The Hunger Games: Sunrise on the Reaping Nina Jacobson, Brad Simpson and Francis Lawrence."
+     }
+    },
+    {
+     "claim": "The film is set in the world of Panem 24 years before the events of The Hunger Games.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping will revisit the world of Panem twenty-four years before the events of The Hunger Games, starting on the",
+      "2": "Set in the world of Panem 24 years before the events of The Hunger Games, the story follows Haymitch into the arena, where he forms"
+     }
+    },
+    {
+     "claim": "The 50th Hunger Games is also known as the Second Quarter Quell.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping will revisit the world of Panem twenty-four years before the events of The Hunger Games, starting on the",
+      "2": "The film follows sixteen-year-old Haymitch Abernathy (Zada) from District 12, beginning on the morning of the reaping for the 50th Annual Hunger Games, also known"
+     }
+    },
+    {
+     "claim": "Joseph Zada plays young Haymitch Abernathy.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The duo kicked things off in Sydney, the home country of Zada, who plays young Haymitch Abernathy.",
+      "3": "- Joseph Zada as Haymitch Abernathy, a tribute from District 12 who is born on the same day as the Reaping."
+     }
+    },
+    {
+     "claim": "Mckenna Grace will play tribute Maysilee Donner in the film.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Grace will play tribute Maysilee Donner in the film, set for U.S. release on November 20, 2026.",
+      "3": "- Mckenna Grace as Maysilee Donner, a tribute from District 12 and owner of the Mockingjay pin"
      }
     }
    ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 24,
+   "topic": "UFC 333",
+   "signal": "Wikipedia 224,691 views",
+   "category": "Sport",
+   "what_is_new": "UFC 333 took place yesterday on October 24, 2026, featuring title fights and post-fight bonuses.",
+   "hooks": [
+    "Did you know UFC 333 happened yesterday in Abu Dhabi?",
+    "Alexander Volkanovski headlined UFC 333 against Movsar Evloev!",
+    "Petr Yan and Merab Dvalishvili fought in a trilogy bout!"
+   ],
+   "sources": [
+    [
+     "UFC 333",
+     "https://en.wikipedia.org/wiki/UFC_333",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "One Born Every Minute is a British observational documentary series which shows activities taking place in the labour ward.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "One Born Every Minute is a British observational documentary series which shows activities taking place in the labour ward."
-     }
-    },
-    {
-     "claim": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018."
-     }
-    },
-    {
-     "claim": "In April 2026, Channel 4 announced that the series would return but this time on E4 later in the year and solely filmed at Saint Mary's Hospital in Manchester.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In April 2026, Channel 4 announced that the series would return (but this time on E4) later in the year and solely filmed at Saint"
-     }
-    },
-    {
-     "claim": "The number of caesarean births has doubled over the past decade.",
+     "claim": "UFC 333 took place on October 24, 2026, at the Etihad Arena in Abu Dhabi, United Arab Emirates.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "These include caesarean births – it notes that these have doubled over the past decade – as well as health anxiety and pregnancy loss."
+      "1": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
      }
     },
     {
-     "claim": "The most popular episodes of the show have attracted audiences of more than five million people.",
+     "claim": "Alexander Volkanovski and Movsar Evloev headlined the event in a UFC Featherweight Championship bout.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "One Born Every Minute has to date achieved the highest ratings of any \"fixed rig\" multicamera documentary series, with its most popular episodes attracting audiences"
+      "1": "A UFC Featherweight Championship bout between reigning two-time champion Alexander Volkanovski and undefeated contender Movsar Evloev headlined the event.[3]"
      }
     },
     {
-     "claim": "An American version of the show premiered on Lifetime Television on 1 February 2011.",
+     "claim": "Petr Yan and Merab Dvalishvili fought in a UFC Bantamweight Championship trilogy bout as the co-main event.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "In February 2011 an American version of One Born Every Minute premiered in the USA on Lifetime Television"
+      "1": "A UFC Bantamweight Championship trilogy bout between reigning two-time champion Petr Yan and former champion Merab Dvalishvili took place as the co-main event.[4]"
+     }
+    },
+    {
+     "claim": "Arnold Allen withdrew from his featherweight bout due to an injury and was replaced by Losene Keita.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "However, Allen withdrew due to an injury and was replaced by Losene Keita.[8]"
+     }
+    },
+    {
+     "claim": "Nicolle Caliari weighed in at 120.5 pounds, four and a half pound over the women's strawweight non-title fight limit.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "At the weigh-ins, Nicolle Caliari weighed in at 120.5 pounds, four and a half pound over the women's strawweight non-title fight limit."
      }
     }
    ],
    "images": []
+  },
+  {
+   "n": 15,
+   "topic": "mongolia",
+   "signal": "Google Trends GB 200+",
+   "category": "Animals",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know thirty percent of the population is nomadic?"
+   ],
+   "sources": [
+    [
+     "What I Learnt About Mongolia by Eating With its Nomadic Families",
+     "https://www.nationalgeographic.com/travel/article/what-i-learnt-about-mongolia-by-eating-with-its-nomadic-families",
+     "National Geographic",
+     "2026-10-15"
+    ],
+    [
+     "Mongolia’s new snow and ice festival sets Guinness World Record",
+     "https://www.cnn.com/travel/mongolias-snow-and-ice-festival-world-record",
+     "CNN",
+     "2024-01-18"
+    ],
+    [
+     "mongolia",
+     "https://en.wikipedia.org/wiki/Mongolia",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Approximately thirty percent of the population is nomadic or semi-nomadic.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "These days, only around a third of the population choose to follow a traditional, nomadic way of life — albeit alongside modern conveniences such as",
+      "3": "Approximately 30% of the population is nomadic or semi-nomadic; horse culture remains integral."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Flag_of_Mongolia.svg"
+   ]
   }
  ]
 }

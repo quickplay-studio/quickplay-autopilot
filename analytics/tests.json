@@ -2,7 +2,7 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-25T13:21+00:00",
+ "as_of": "2026-10-25T18:59+00:00",
  "factors": {
   "hook_type": {
    "arms": {
@@ -14,11 +14,11 @@
     "number": {
      "n": 0,
      "needs": 70,
-     "verdict": "push"
+     "verdict": "about typical"
     }
    },
-   "settled": true,
-   "days_left": 0,
+   "settled": false,
+   "days_left": 12,
    "label": "hook type"
   },
   "length": {
@@ -156,6 +156,23 @@
    "settled": false,
    "days_left": 12,
    "label": "title answer (stated or held back)"
+  },
+  "sub_push": {
+   "arms": {
+    "spoken": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "none": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "subscribe line (spoken or none)"
   }
  }
 }

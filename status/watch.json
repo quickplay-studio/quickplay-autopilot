@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T16:10+00:00",
+ "updated": "2026-10-25T18:55+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -50,13 +50,11 @@
     "ballon d'or 2026 ai",
     "ballon d'or 2026 nominees",
     "ballon d'or 2026 winner",
+    "ballon d'or 2026 date",
     "ballon d'or 2026 ceremony",
-    "ballon d'or 2026 video",
-    "ballon d'or 2026 trailer"
+    "ballon d'or 2026 video"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Sport",
    "angles": [
     "Ballon d'Or 2026 nominees",
@@ -114,7 +112,7 @@
     21833,
     16637
    ],
-   "news_24h": 30,
+   "news_24h": 27,
    "news_usual": null,
    "suggestions": [
     "the celebrity traitors",
@@ -188,11 +186,11 @@
    "suggestions": [
     "halloween 2026",
     "halloween 2026 dti quest",
-    "halloween 2026 playlist",
+    "halloween 2026 dti",
     "halloween 2026 countdown",
     "halloween 2026 dti quest tutorial",
     "halloween 2026 adopt me",
-    "halloween 2026 quest",
+    "halloween 2026 quest tutorial",
     "halloween 2026 mix"
    ],
    "in": [],
@@ -316,7 +314,7 @@
     16054,
     15460
    ],
-   "news_24h": 48,
+   "news_24h": 56,
    "news_usual": null,
    "suggestions": [
     "gta 6",
@@ -349,8 +347,8 @@
    "name": "The Hunger Games: Sunrise on the Reaping",
    "days_to": 26,
    "phase": "steady",
-   "level": "steady",
-   "places": 0,
+   "level": "surging",
+   "places": 3,
    "momentum": 1.16,
    "views_yesterday": 10157,
    "views_usual": 8782,
@@ -386,7 +384,7 @@
     8427,
     10157
    ],
-   "news_24h": 16,
+   "news_24h": 18,
    "news_usual": null,
    "suggestions": [
     "the hunger games sunrise on the reaping",
@@ -398,7 +396,9 @@
     "the hunger games sunrise on the reaping official trailer",
     "the hunger games sunrise on the reaping explained"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Film",
    "angles": [
     "Sunrise on the Reaping cast",
@@ -593,12 +593,12 @@
    "news_24h": 8,
    "news_usual": null,
    "suggestions": [
-    "the game awards",
     "the game awards 2025",
+    "the game awards",
     "the game awards 2026",
-    "the game awards orchestra",
     "the game awards 2024",
     "the game awards 2025 reaction",
+    "the game awards orchestra",
     "the game awards trailers",
     "the game awards reaction"
    ],
@@ -663,10 +663,10 @@
     "avengers doomsday",
     "avengers doomsday teaser",
     "avengers doomsday special look",
-    "avengers doomsday new trailer",
     "avengers doomsday trailer reaction",
-    "avengers doomsday trailer 3",
-    "avengers doomsday trailer 2"
+    "avengers doomsday new trailer",
+    "avengers doomsday trailer 2",
+    "avengers doomsday trailer 3"
    ],
    "in": [
     "YouTube charts"
@@ -725,7 +725,7 @@
     8831,
     8683
    ],
-   "news_24h": 22,
+   "news_24h": 21,
    "news_usual": null,
    "suggestions": [
     "dune part three",
@@ -733,9 +733,9 @@
     "dune part three tv spot",
     "dune part three trailer reaction",
     "dune part three official trailer",
+    "dune part three soundtrack",
     "dune part three teaser",
-    "dune part three full movie",
-    "dune part three paul atreides vs. feyd-rautha"
+    "dune part three full movie"
    ],
    "in": [],
    "category": "Film",
@@ -792,7 +792,7 @@
     4782,
     5257
    ],
-   "news_24h": 7,
+   "news_24h": 6,
    "news_usual": null,
    "suggestions": [
     "harry potter hbo series",
@@ -862,7 +862,7 @@
     1954,
     1642
    ],
-   "news_24h": 13,
+   "news_24h": 14,
    "news_usual": null,
    "suggestions": [
     "christmas 2026",
@@ -932,7 +932,7 @@
     344,
     303
    ],
-   "news_24h": 5,
+   "news_24h": 4,
    "news_usual": null,
    "suggestions": [
     "new year's eve 2026",

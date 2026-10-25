@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 18:39): 15 of 1,000 subscribers · 9,403 of 10 million Shorts views in 90 days · 4,742 views in the last 24 hours (about 111,007 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 18:59): 15 of 1,000 subscribers · 9,411 of 10 million Shorts views in 90 days · 4,798 views in the last 24 hours (about 111,007 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Sun 25 Oct 16:15 (UK): 6 scheduled, 143 public, 19 uploads in the last 24 hours.
+YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 18:30).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 14 public, 4 scheduled | 4 | 1 | ✅ done |
+| Sun 25 Oct | 15 public, 3 scheduled | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -25,15 +25,15 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
+- lab-voice-1019 (British male, 3.15 words a second): 1.56 x typical, 39% stayed past the first seconds, 3 Shorts
 - george_dramatic (British male, more dramatic delivery): 1.06 x typical, 29% stayed past the first seconds, 9 Shorts
 - emma (British female): 0.98 x typical, 24% stayed past the first seconds, 9 Shorts
-- michael (American male, friendly): 1.39 x typical, 37% stayed past the first seconds, 2 Shorts
-- lab-voice-1019 (British male, 3.15 words a second): 1.10 x typical, 32% stayed past the first seconds, 2 Shorts
-- lily (British female, bright): 1.08 x typical, 30% stayed past the first seconds, 2 Shorts
-- george_quick (British male, clear and quicker): 0.94 x typical, 26% stayed past the first seconds, 2 Shorts
+- george_quick (British male, clear and quicker): 0.95 x typical, 24% stayed past the first seconds, 4 Shorts
+- michael (American male, friendly): 1.49 x typical, 37% stayed past the first seconds, 2 Shorts
+- lily (British female, bright): 1.19 x typical, 30% stayed past the first seconds, 2 Shorts
+- heart (American female, expressive): 1.06 x typical, 26% stayed past the first seconds, 2 Shorts
+- lewis (British male, deeper and calm): 0.96 x typical, 24% stayed past the first seconds, 1 Short
 - isabella (British female, warm): 0.90 x typical, 22% stayed past the first seconds, 1 Short
-- lewis (British male, deeper and calm): 0.84 x typical, 24% stayed past the first seconds, 1 Short
-- heart (American female, expressive): 0.60 x typical, 17% stayed past the first seconds, 1 Short
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
 
@@ -41,10 +41,10 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (2 of 8 Shorts measured)
-- Testing voice: British male, 3.15 words a second (2 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (3 of 8 Shorts measured)
+- Testing voice: British male, 3.15 words a second (3 of 8 Shorts measured)
 - Testing energy: camera motion 0.9, punch-ins 0.03 (0 of 8 Shorts measured)
-- Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
+- Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (2 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (8 of 8 Shorts measured)
 - 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
 - 2026-10-25: energy retired lab-energy-1019 (1.07x against 1.29x for steady over 15 Shorts)
@@ -96,20 +96,20 @@ scheduled · 30 s · music: horizons · [script](../boards/done/QD-174.json) · 
 ![QD-174](QD-174.jpg)
 
 ### Sun 25 Oct 19:00 · This Week in Trends: Queen, Barbara Palvin and Jenna Ortega
-scheduled · [YouTube](https://youtube.com/shorts/ajlYdYeu-CY)
+private · [YouTube](https://youtube.com/shorts/ajlYdYeu-CY)
 
 ### Sun 25 Oct 19:00 · barbara palvin 13 years old: the church choice 💒
-scheduled · 32 s · music: level · [script](../boards/done/QD-173.json) · [YouTube](https://youtube.com/shorts/LENtoDiGI8E)
+private · 32 s · music: level · [script](../boards/done/QD-173.json) · [YouTube](https://youtube.com/shorts/LENtoDiGI8E)
 
 ![QD-173](QD-173.jpg)
 
 ### Sun 25 Oct 17:00 · Mortimer and Whitehouse: Ted's last trip 🐾
-private · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
+public · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
 
 ![QD-172](QD-172.jpg)
 
 ### Sun 25 Oct 15:30 · Sport Shocks #1: UFC 333: Volkanovski wins record ninth title
-public · 2 views · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
+public · 3 views · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
 
 ![QD-171](QD-171.jpg)
 
@@ -124,22 +124,22 @@ public · 21 views · 30 s · music: ego-chall · [script](../boards/done/QD-167
 ![QD-167](QD-167.jpg)
 
 ### Sun 25 Oct 12:30 · Harry Kane scores 73 goals before Ballon d'Or ⚽
-public · 8 views · 28 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-168.json) · [YouTube](https://youtube.com/shorts/qiBnn27q6ns)
+public · 104 views · 28 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-168.json) · [YouTube](https://youtube.com/shorts/qiBnn27q6ns)
 
 ![QD-168](QD-168.jpg)
 
 ### Sun 25 Oct 12:00 · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
-public · 774 views · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
+public · 962 views · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
 
 ![QD-165](QD-165.jpg)
 
 ### Sun 25 Oct 11:00 · Tech Truths #1: Windows XP arrived in shops (Part 1) 💻
-public · 13 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
+public · 87 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
 
 ![QD-169](QD-169.jpg)
 
 ### Sun 25 Oct 9:00 · Halloween: The Game secret you might have missed
-public · 24 views · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
+public · 35 views · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
 
 ![QD-166](QD-166.jpg)
 
@@ -149,7 +149,7 @@ public · 249 views · 38 s · music: the-bombs · [script](../boards/done/QD-16
 ![QD-162](QD-162.jpg)
 
 ### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
-public · 249 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
+public · 260 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
 
 ![QD-164](QD-164.jpg)
 
@@ -159,17 +159,17 @@ public · 105 views · 25 s · music: the-bombs · [script](../boards/done/QD-16
 ![QD-163](QD-163.jpg)
 
 ### Sun 25 Oct 2:30 · Raye is 28 and Where Is My Husband just hit a billion streams 🎉
-public · 166 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
+public · 253 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
 
 ![QD-161](QD-161.jpg)
 
 ### Sun 25 Oct 1:30 · Free Steam games you can play right now (Part 2) 🎮
-public · 211 views · 27 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
+public · 230 views · 27 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
 
 ![QD-159](QD-159.jpg)
 
 ### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-public · 61 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
+public · 83 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
 
 ![QD-158](QD-158.jpg)
 
@@ -184,32 +184,32 @@ public · 4 views · 26 s · music: purple-desire · [script](../boards/done/QD-
 ![QD-156](QD-156.jpg)
 
 ### Sat 24 Oct 14:00 · Country legend John Anderson has died aged 71 🎸
-public · 15 views · 26 s · music: mississippi-mover · [script](../boards/done/QD-155.json) · [YouTube](https://youtube.com/shorts/yC_shy0URVM)
+public · 19 views · 26 s · music: mississippi-mover · [script](../boards/done/QD-155.json) · [YouTube](https://youtube.com/shorts/yC_shy0URVM)
 
 ![QD-155](QD-155.jpg)
 
 ### Sat 24 Oct 13:00 · Volkanovski vs Evloev: UFC 333 record on the line 🥊
-public · 77 views · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
+public · 79 views · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
 
 ![QD-154](QD-154.jpg)
 
 ### Sat 24 Oct 12:00 · The Ballon d'Or is coming to London for the first time 🏆
-public · 35 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
+public · 36 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
 
 ![QD-153](QD-153.jpg)
 
 ### Sat 24 Oct 11:00 · Melanie C leads a sweaty Strictly workout to her own track 💪
-public · 146 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
+public · 160 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
 
 ![QD-152](QD-152.jpg)
 
 ### Sat 24 Oct 10:00 · GTA 6 on 19 November: no multiplayer at launch? 🕹️
-public · 16 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
+public · 19 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
 
 ![QD-151](QD-151.jpg)
 
 ### Sat 24 Oct 9:00 · Street Fighter movie: Chun-Li's 12-egg diet 🥚
-public · 294 views · 32 s · music: ten · [script](../boards/done/QD-056.json) · [YouTube](https://youtube.com/shorts/lc62rdRQvmk)
+public · 314 views · 32 s · music: ten · [script](../boards/done/QD-056.json) · [YouTube](https://youtube.com/shorts/lc62rdRQvmk)
 
 ![QD-056](QD-056.jpg)
 
@@ -229,17 +229,17 @@ public · 1,158 views · 28 s · music: f16 · [script](../boards/done/QD-076.js
 ![QD-076](QD-076.jpg)
 
 ### Sat 24 Oct 4:00 · Jorja Smith sings at the Amy Winehouse tribute 🎤
-public · 180 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
+public · 194 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
 
 ![QD-147](QD-147.jpg)
 
 ### Sat 24 Oct 2:30 · Cyberpunk 2077 now fits in your hands 🎮
-public · 33 views · 22 s · music: pulsar · on Facebook · [script](../boards/done/QD-149.json) · [YouTube](https://youtube.com/shorts/zIJUGpN-otU)
+public · 34 views · 22 s · music: pulsar · on Facebook · [script](../boards/done/QD-149.json) · [YouTube](https://youtube.com/shorts/zIJUGpN-otU)
 
 ![QD-149](QD-149.jpg)
 
 ### Sat 24 Oct 0:30 · BABYMONSTER's G-Dragon Drip collab 🎧
-public · 74 views · 21 s · music: paradise · on Facebook · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
+public · 75 views · 21 s · music: paradise · on Facebook · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
 
 ![QD-145](QD-145.jpg)
 
@@ -254,7 +254,7 @@ public · 17 views · 29 s · music: after-sunset · on Facebook · [script](../
 ![QD-142](QD-142.jpg)
 
 ### Fri 23 Oct 17:30 · Avengers Doomsday preview drops during World Series ⚾
-public · 531 views · 24 s · music: in-battery · on Facebook · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
+public · 533 views · 24 s · music: in-battery · on Facebook · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
 
 ![QD-141](QD-141.jpg)
 

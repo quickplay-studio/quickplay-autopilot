@@ -4,11 +4,11 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
-| Title words (median) | 9.0 | 8.0 |
-| With a number | 30% | 34% |
-| A question | 13% | 11% |
-| With an emoji | 57% | 98% |
-| Length, seconds (median) | 36.0 | 27.0 |
+| Title words (median) | 11.0 | 8.0 |
+| With a number | 33% | 35% |
+| A question | 22% | 10% |
+| With an emoji | 63% | 96% |
+| Length, seconds (median) | 35.0 | 27.2 |
 
 ## Animals
 - Animal Facts So Insane That They Hid From You! 😳 (93,985 views, 3,428 an hour, 148 s, ferawild)
@@ -107,3 +107,10 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - I Don’t Like The iPhone Duo… #Shorts (582,772 views, 16,571 an hour, 33 s, Phone Repair Guru)
 - Triple Decker Train in India! | Indian Railways Infra is Insane 😱 #shorts #facts #banglafacts (40,503 views, 2,031 an hour, 55 s, Bong Fact Tech)
 - New AI Technology Could Let You Smell Things Through The Internet #tech #shorts #internet (34,299 views, 726 an hour, 6 s, uncover reality)
+
+## The Hunger Games: Sunrise on the Reaping
+- Mckenna Grace's Face Card Is INSANE At The Hunger Games New York Press Tour 😭🔥 #MckennaGrace (19,004 views, 2,416 an hour, 7 s, SwipeRadar)
+- The Haymitch tape Katniss watched was edited #shorts (745 views, 243 an hour, 58 s, Bookish Bestie)
+- DIE TRIBUTE VON PANEM - SUNRISE ON THE REAPING | Ab 19. November im Kino. (1,004 views, 125 an hour, 15 s, LEONINE Studios)
+- How to Watch The Hunger Games in Order (Story Order) (589 views, 116 an hour, 70 s, Sagaspedia)
+- Haymitch, sweatheart, I couldn’t have said it better myself… (2,920 views, 64 an hour, 16 s, Rabecca Reads)

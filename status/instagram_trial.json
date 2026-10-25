@@ -1,0 +1,4 @@
+{
+ "refused": "2026-10-25T13:14+00:00",
+ "error": "instagram container: 400 {\"error\":{\"message\":\"Application does not have permission for this action\",\"type\":\"OAuthException\",\"code\":10,\"error_subcode\":2207081,\"is_transient\":false,\"error_user_title\":\"Trial Reel Not Enough Followers\",\"error_user_msg\":\"The instagram account does not meet the trial reel"
+}

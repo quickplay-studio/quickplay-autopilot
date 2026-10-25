@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 21:36): 15 of 1,000 subscribers · 9,602 of 10 million Shorts views in 90 days · 4,870 views in the last 24 hours (about 111,004 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 22:33): 16 of 1,000 subscribers · 9,640 of 10 million Shorts views in 90 days · 4,770 views in the last 24 hours (about 111,004 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 18:30).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 21:57).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Sun 25 Oct | 16 public, 2 scheduled | 4 | 1 | ✅ done |
+| Sun 25 Oct | 17 public, 1 scheduled | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -86,7 +86,7 @@ scheduled · 35 s · music: duty-calls · [script](../boards/done/QD-176.json) �
 ![QD-176](QD-176.jpg)
 
 ### Sun 25 Oct 22:00 · saints vs steelers: the Paris milestone explained
-scheduled · 38 s · music: duty-calls · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
+private · 38 s · music: duty-calls · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
 
 ![QD-175](QD-175.jpg)
 

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-24T09:00:00Z",
  "rendered": "2026-10-24T07:36:46.916882+00:00",
- "title": "Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮",
+ "title": "GTA 6 on 19 November: no multiplayer at launch? 🕹️",
  "background_notes": [
   "picked pixabay 1 (+1 spares)",
   "pixabay:5624 skipped: nearly black (brightness 0.04)"
@@ -95,6 +95,13 @@
  "social_release": "social-QD-151",
  "engage": {
   "comment": "Ugy11eTUfLFw9clU2rN4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮",
+   "to": "GTA 6 on 19 November: no multiplayer at launch? 🕹️",
+   "at": "2026-10-25T09:12+00:00",
+   "views_an_hour": 0.4,
+   "typical": 0.7
+  }
  }
 }

@@ -1,0 +1,165 @@
+{
+ "id": "QD-176",
+ "board": "boards/queue/QD-176.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T23:30:00Z",
+ "rendered": "2026-10-25T13:35:49.580671+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab-energy-1019",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "BioWare: fans petition after EA closure 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (page:https://www.ign.com/articles/mass-effect-fans-call-for-ea-boycott-as-petition-to-save-biowares-canceled-game-garners-more-than-75000-signatures: ign.com is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 5 reused a nearby picture (commons-search:gaming controller: no Commons image named 'gaming controller')"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 10,
+  "pic_found_share": 0.71,
+  "pic_relevance": 0.325,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 34,
+  "pic_searches": 5,
+  "pic_reranked": 4,
+  "pic_dups": 1,
+  "pic_secs": 14.4
+ },
+ "music": "duty-calls",
+ "social_music": "sport-mortals-566578",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 34.9,
+  "wps": 3.16,
+  "weak_beats": [],
+  "size_mb": 7.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 187.6,
+   "contrast": 0.258,
+   "face_area": 0.0,
+   "text_area": 0.1065,
+   "caption_contrast": 1.98,
+   "by_frame": {
+    "sharpness": [
+     172.6,
+     191.6,
+     192.4,
+     193.9
+    ],
+    "contrast": [
+     0.257,
+     0.258,
+     0.258,
+     0.258
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1083,
+     0.1082,
+     0.1052,
+     0.1044
+    ],
+    "caption_contrast": [
+     1.98,
+     1.98,
+     1.98,
+     1.98
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.17,
+   "none",
+   1
+  ],
+  [
+   6.17,
+   10.91,
+   "none",
+   2
+  ],
+  [
+   10.91,
+   16.02,
+   "none",
+   1
+  ],
+  [
+   16.02,
+   20.0,
+   "none",
+   1
+  ],
+  [
+   20.0,
+   24.17,
+   "none",
+   1
+  ],
+  [
+   24.17,
+   29.49,
+   "none",
+   1
+  ],
+  [
+   29.49,
+   34.89,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "7978",
+   "q": "digital data stream",
+   "t0": 0.0,
+   "t1": 34.89
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T13:49:15Z",
+ "video": "gPtD8qBcINI",
+ "url": "https://youtube.com/shorts/gPtD8qBcINI",
+ "publish_at": "2026-10-25T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T23:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-176"
+}

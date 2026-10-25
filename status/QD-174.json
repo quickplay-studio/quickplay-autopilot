@@ -1,0 +1,163 @@
+{
+ "id": "QD-174",
+ "board": "boards/queue/QD-174.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T20:30:00Z",
+ "rendered": "2026-10-25T13:35:19.225647+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Halloween skywatch: five spooky targets revealed",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_relevance": 0.411,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 28,
+  "pic_searches": 4,
+  "pic_reranked": 4,
+  "pic_dups": 1,
+  "pic_secs": 8.8
+ },
+ "music": "horizons",
+ "social_music": "sci-fi-ambient-587603",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 30.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 707.2,
+   "contrast": 0.126,
+   "face_area": 0.0,
+   "text_area": 0.1589,
+   "caption_contrast": 17.91,
+   "by_frame": {
+    "sharpness": [
+     473.4,
+     713.7,
+     714.1,
+     927.4
+    ],
+    "contrast": [
+     0.091,
+     0.133,
+     0.132,
+     0.148
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1215,
+     0.1628,
+     0.1594,
+     0.192
+    ],
+    "caption_contrast": [
+     17.87,
+     18.27,
+     17.56,
+     17.94
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.64,
+   "title",
+   0
+  ],
+  [
+   4.64,
+   9.0,
+   "none",
+   1
+  ],
+  [
+   9.0,
+   14.78,
+   "none",
+   1
+  ],
+  [
+   14.78,
+   21.79,
+   "cards",
+   1
+  ],
+  [
+   21.79,
+   26.7,
+   "none",
+   1
+  ],
+  [
+   26.7,
+   29.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "283431",
+   "q": "starry night",
+   "t0": 0.0,
+   "t1": 15.26
+  },
+  {
+   "p": "pixabay",
+   "id": "245594",
+   "q": "moon surface",
+   "t0": 14.66,
+   "t1": 29.92
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T13:49:11Z",
+ "video": "GGUpuX9LM9I",
+ "url": "https://youtube.com/shorts/GGUpuX9LM9I",
+ "publish_at": "2026-10-25T20:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T20:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-174"
+}

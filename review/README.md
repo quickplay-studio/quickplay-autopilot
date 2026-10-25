@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 11 public, 4 scheduled | 3 | 1 | ⏳ 11 of 14 so far, 4 more scheduled |
+| Sun 25 Oct | 11 public, 7 scheduled | 3 | 1 | ⏳ 11 of 14 so far, 7 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -78,12 +78,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-174** Halloween skywatch: five spooky targets revealed (rendering next)
-- **QD-175** saints vs steelers: the Paris milestone explained (rendering next)
-- **QD-176** BioWare: fans petition after EA closure 🎮 (rendering next)
 
 ## On the channel (latest first)
 

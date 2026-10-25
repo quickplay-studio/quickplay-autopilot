@@ -1,0 +1,178 @@
+{
+ "id": "QD-175",
+ "board": "boards/queue/QD-175.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T22:00:00Z",
+ "rendered": "2026-10-25T13:35:18.088216+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab-energy-1019",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "saints vs steelers: the Paris milestone explained",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 7 reused a nearby picture (commons-search:Stade de France pitch: no Commons image named 'Stade de France pitch')"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11,
+  "extra_photos": 6,
+  "pic_found_share": 0.88,
+  "pic_relevance": 0.149,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 53,
+  "pic_searches": 10,
+  "pic_reranked": 5,
+  "pic_dups": 1,
+  "pic_secs": 17.5
+ },
+ "music": "duty-calls",
+ "social_music": "sport-mortals-566578",
+ "look": {
+  "captions": "low",
+  "voice": "emma",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 37.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 457.6,
+   "contrast": 0.175,
+   "face_area": 0.0,
+   "text_area": 0.0559,
+   "caption_contrast": 15.91,
+   "by_frame": {
+    "sharpness": [
+     411.1,
+     475.6,
+     470.4,
+     473.5
+    ],
+    "contrast": [
+     0.174,
+     0.176,
+     0.174,
+     0.174
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0591,
+     0.0539,
+     0.0541,
+     0.0564
+    ],
+    "caption_contrast": [
+     18.29,
+     18.29,
+     13.02,
+     13.54
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.25,
+   "none",
+   3
+  ],
+  [
+   5.25,
+   10.2,
+   "none",
+   4
+  ],
+  [
+   10.2,
+   12.8,
+   "none",
+   2
+  ],
+  [
+   12.8,
+   16.41,
+   "none",
+   3
+  ],
+  [
+   16.41,
+   20.53,
+   "none",
+   3
+  ],
+  [
+   20.53,
+   27.55,
+   "none",
+   5
+  ],
+  [
+   27.55,
+   34.48,
+   "none",
+   5
+  ],
+  [
+   34.48,
+   37.78,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "34322",
+   "q": "paris stadium crowd",
+   "t0": 0.0,
+   "t1": 19.19
+  },
+  {
+   "p": "pixabay",
+   "id": "266428",
+   "q": "lights arena night",
+   "t0": 18.59,
+   "t1": 37.79
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T13:49:13Z",
+ "video": "Z7f5Da-Nd8Y",
+ "url": "https://youtube.com/shorts/Z7f5Da-Nd8Y",
+ "publish_at": "2026-10-25T22:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T22:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-175"
+}

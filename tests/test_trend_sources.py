@@ -15,7 +15,7 @@ DAY = dt.date(2026, 10, 24)
 
 
 class R:
-    def __init__(self, js=None, status=200): self.status_code, self._js, self.text = status, js, json.dumps(js)
+    def __init__(self, js=None, status=200): self.status_code, self._js, self.text = status, js, json.dumps(js); self.ok = status < 400
     def json(self): return self._js
 
 
@@ -157,8 +157,9 @@ assert time.monotonic() - t0 < 5 and any("time limit" in n for n in slow.get("no
 # 8. topics(): round-robin, one per source first, signals that start with the source's name, On this day as evergreen
 data["formula1"] = f1
 tops = TS.topics(data)
-first = [t["source"] for t in tops[:len(TS.SOURCES)]]
-assert first == list(TS.SOURCES), first
+present = [x for x in TS.SOURCES if any(t["source"] == x for t in tops)]        # Apify is empty without a token
+first = [t["source"] for t in tops[:len(present)]]
+assert first == present, first
 by = {}
 for t in tops: by.setdefault(t["source"], t)          # each source's best
 assert by["On this day"]["kind"] == "evergreen" and by["On this day"]["signal"].startswith("On this day in 1976, 50 years ago")
@@ -198,3 +199,29 @@ assert len(main_with) == 30 and pos[0] == 30, (len(main_with), pos[:3])
 assert sum(1 for q in SEARCHED if q in {x["q"] for x in TS.topics(data)}) <= T.EXTRA_SEARCHES
 assert all(t.get("signal", "").startswith(t["source"].split(" In ")[0]) for t in extra)
 print("trend sources ok:", ", ".join(f"{t['source']}: {t['topic']}" for t in extra))
+
+# 10. the Apify trend feed (25 October): only on the morning run and only with APIFY_TOKEN; items are data, filtered like
+#     every source; each topic carries the Apify source label
+import os as _os
+POSTS = []
+def post(url, params=None, json=None, headers=None, timeout=None):
+    POSTS.append((url, params, json))
+    return R([{"searchTerm": "GTA 6", "relatedQueries": [{"query": "gta 6 release date", "value": "Breakout"}, {"query": "gta 6 casino", "value": "+500%"}]},
+              {"title": "Taylor Swift new album", "query": "taylor swift"}, {"query": "ab"}])
+TS.requests.post = post
+_os.environ.pop("APIFY_TOKEN", None); _os.environ["RUN"] = "morning"
+assert TS.apify_feed() == {"skipped": "no APIFY_TOKEN"}
+_os.environ["APIFY_TOKEN"] = "t"; _os.environ["RUN"] = "afternoon"
+assert TS.apify_feed() == {"skipped": "morning run only"} and not POSTS
+_os.environ["RUN"] = "morning"
+TS.DEADLINE[0] = TS.time.monotonic() + 60
+got = TS.apify_feed()
+names = [g["topic"] for g in got]
+assert "gta 6 release date" in names and "taylor swift" in names and "Taylor Swift new album" in names, names
+assert "gta 6 casino" not in names and "ab" not in names, names            # gambling word dropped, too short dropped
+assert POSTS[0][0].endswith("/acts/apify~google-trends-scraper/run-sync-get-dataset-items") and POSTS[0][1]["token"] == "t"
+tops = TS.topics({"apify": got})
+assert any(t["source"] == "Apify" and t["signal"].startswith("Apify trend feed") for t in tops), tops[:2]
+assert W.source_of("Apify trend feed (apify/google-trends-scraper, Breakout)") == "Apify"
+_os.environ.pop("APIFY_TOKEN", None); _os.environ.pop("RUN", None)
+print("apify feed ok")

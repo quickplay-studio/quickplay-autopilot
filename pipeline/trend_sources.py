@@ -55,7 +55,7 @@ TV_GENRES_SKIP = {"adult", "horror", "crime", "war"}
 STEAM_SEXUAL = {1, 3, 4}          # store content notes: some nudity or sexual content, adult only sexual, frequent nudity
 
 # a topic's source: the start of its signal, also put on the research topic as "source" (writer.source_of reads signals)
-SOURCES = ("Wikipedia In the news", "On this day", "TVmaze", "Steam", "Apple albums", "App Store", "Bluesky", "Formula 1")
+SOURCES = ("Wikipedia In the news", "On this day", "TVmaze", "Steam", "Apple albums", "App Store", "Bluesky", "Formula 1", "Apify")
 
 
 def left():
@@ -274,6 +274,55 @@ def formula1(day):
 
 
 # ---------------- together ----------------
+def apify_feed(skip=None):
+    """An Apify actor run as a trend feed (Charlie, 25 October: "add an Apify trend feed to the morning run", APIFY_TOKEN).
+    Only on the morning run (RUN=morning) and only with the token: config apify_feeds lists actors with their input and
+    which item fields carry a topic (default: title, query, term, keyword, name, topic). Apify's free plan carries $5 of
+    monthly credit; the default actor (apify/google-trends-scraper, related and rising queries for our seed terms) costs
+    $0.30 per 1,000 results, so each run takes at most apify_max_results items. Items are data, never instructions."""
+    import os, json as _j
+    token = os.environ.get("APIFY_TOKEN", "").strip()
+    if not token: return {"skipped": "no APIFY_TOKEN"}
+    if (os.environ.get("RUN") or "") != "morning": return {"skipped": "morning run only"}
+    try: cfg = _j.loads((ROOT / "config.json").read_text())
+    except Exception: cfg = {}
+    feeds = cfg.get("apify_feeds") or [{"actor": "apify/google-trends-scraper", "input": {"searchTerms": ["GTA 6", "Taylor Swift", "Premier League", "iPhone", "Netflix"],
+                                                                                      "timeRange": "now 7-d", "viewedFrom": "GB"}, "fields": ["query", "title", "term", "keyword", "name", "topic"]}]
+    limit = int(cfg.get("apify_max_results", 100))
+    out = []
+    for f in feeds[:3]:
+        actor = str(f.get("actor", "")).replace("/", "~")
+        if not actor: continue
+        try:
+            r = requests.post(f"https://api.apify.com/v2/acts/{actor}/run-sync-get-dataset-items",
+                              params={"token": token, "limit": limit, "timeout": 120}, json=f.get("input") or {}, headers=UA, timeout=min(150, max(10, left())))
+        except Exception as e:
+            NOTES.append(f"apify {actor}: {type(e).__name__}"); continue
+        if not r.ok: NOTES.append(f"apify {actor}: HTTP {r.status_code}"); continue
+        try: items = r.json()
+        except ValueError: NOTES.append(f"apify {actor}: unreadable answer"); continue
+        fields = f.get("fields") or ["query", "title", "term", "keyword", "name", "topic"]
+        seen = set()
+        for it in (items if isinstance(items, list) else []):
+            if not isinstance(it, dict): continue
+            # related and rising queries sit in lists under the item (the Google Trends actor); plain items carry a name
+            cands = []
+            for key in fields:
+                v = it.get(key)
+                if isinstance(v, str) and v.strip(): cands.append((v.strip(), ""))
+            for key in ("relatedQueries", "risingQueries", "rising", "related", "topRelatedQueries", "risingRelatedQueries", "queries"):
+                for q in _list(it.get(key)):
+                    name = q.get("query") or q.get("topic") or q.get("title") if isinstance(q, dict) else q
+                    if isinstance(name, str) and name.strip(): cands.append((name.strip(), str(q.get("value", q.get("formattedValue", ""))) if isinstance(q, dict) else ""))
+            for name, val in cands:
+                low = name.lower()
+                if low in seen or len(name) < 3 or len(name) > 80 or (skip and skip(name)): continue
+                if ADULT.search(name) or NEWS_SKIP.search(name): continue
+                seen.add(low); out.append({"topic": name, "value": val, "actor": f.get("actor")})
+                if len(out) >= 40: break
+    return out[:40]
+
+
 def collect(skip=None, day=None, seconds=None):
     """Every extra source within one time limit; each returns its compact list or {"error": ...}; never raises."""
     import os
@@ -285,7 +334,7 @@ def collect(skip=None, day=None, seconds=None):
     out = {}
     for key, fn in (("formula1", lambda: formula1(day)), ("tv_tonight", lambda: tv_tonight(day, skip)),
                     ("wikipedia_feed", lambda: wikipedia_feed(day, skip)), ("steam", lambda: steam(skip)),
-                    ("apple_new", lambda: apple_new(skip)), ("bluesky", lambda: bluesky(skip))):
+                    ("apple_new", lambda: apple_new(skip)), ("bluesky", lambda: bluesky(skip)), ("apify", lambda: apify_feed(skip))):
         if left() <= 1:
             out[key] = {"error": "skipped: time limit reached"}; NOTES.append(f"{key}: skipped, time limit reached"); continue
         try: out[key] = fn()
@@ -336,6 +385,9 @@ def topics(data):
     for b in _list(data.get("bluesky")):
         if b.get("topic"):
             per["Bluesky"].append({"q": b["topic"], "signal": f"Bluesky trending, {b.get('posts', 0):,} posts" if b.get("posts") else "Bluesky trending"})
+    for a in _list(data.get("apify")):
+        if isinstance(a, dict) and a.get("topic"):
+            per["Apify"].append({"q": a["topic"], "signal": f"Apify trend feed ({a.get('actor', 'actor')}" + (f", {a['value']}" if a.get("value") else "") + ")"})
     out, k = [], 0
     while any(len(v) > k for v in per.values()):
         for s in SOURCES:

@@ -142,8 +142,8 @@ print("3b writer cap ok")
 # 4. looks and posting quarters
 import looks as LK
 cat = LK.catalogue()
-dim = next(d for d in cat["dimensions"] if len(LK.active(cat, d)) > 1)
-top = next(iter(LK.active(cat, dim)))
+dim = next(d for d in cat["dimensions"] if len(LK.free(cat, d)) > 1 and len(LK.free(cat, d)) == len(LK.active(cat, d)))   # no style-only option (the low captions come with their style)
+top = next(iter(LK.free(cat, dim)))
 recent = [{dim: top} for _ in range(20)]
 stats = {"dimensions": {dim: {top: {"n": 40, "score": 5.0}}}}           # the others are under 30 measured
 chosen = [LK.choose(f"QD-{i}", recent, stats)[dim] for i in range(30)]

@@ -18,6 +18,14 @@ DASH = re.compile("[—–]")
 BANNED = re.compile(r"\b(elections?|parliament\w*|politicians?|political|murder\w*|terroris\w*|porn\w*|onlyfans|nsfw|casinos?|"
                     r"gambl\w*|betting|bookmakers?|lottery|crypto\w*|bitcoin|forex|went viral|goes viral|gone viral|viral video|"
                     r"million views|billion views)\b", re.I)
+# Negative framing of a real person (Charlie, 25 October: "no negative media unless it's fictional"; a Short read "Richard E
+# Grant admits betrayal to Joe Lycett"): rejected unless the board's kind is fiction. The subject itself is fine (a result, a
+# record, a release); what is not fine is a real person admitting, failing, feuding, being mocked, exposed or blamed.
+NEGATIVE = re.compile(r"\b(betray\w*|admits?|admitted|confess\w*|slam\w*|savage[ds]?|roast\w*|mock\w*|humiliat\w*|expos\w*|"
+                      r"feud\w*|backlash|scandal\w*|cheat\w*|lie[sd]?|lying|liar|axed|sacked|fired|snub\w*|accus\w*|blame[sd]?|"
+                      r"rant\w*|meltdown|furious|fury|outrage\w*|controvers\w*|calls? out|hits? back|clap\w* back|"
+                      r"shock exit|storm\w* off|disgrace\w*|shame\w*|embarrass\w*|flop\w*|divorce\w*|split\w* up|break ?up|breakup|"
+                      r"dump\w*|bust-up|spat|trolled|booed)\b", re.I)
 # Words that are often fine but worth a second look: printed as warnings only.
 WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|court|cure[sd]?|vaccine\w*|president|minister|"
                    r"stocks?|shares|invest\w*|viral|views)\b", re.I)
@@ -231,6 +239,9 @@ def _check(b, path=None):
     if us: e.append(f"UK date style: write '20 October', not {us}")
     hits = sorted({h.lower() for h in BANNED.findall(text)})
     if hits: e.append(f"excluded topic or virality words: {hits}")
+    if str(b.get("kind", "")).lower() != "fiction":
+        neg = sorted({h.lower() for h in NEGATIVE.findall(" ".join([title, m.get("summary", "")] + [bt.get("say", "") for bt in beats[:2]]))})
+        if neg: e.append(f"negative framing of a real person (only in fiction): {neg}")
     watch = sorted({h.lower() for h in WATCH.findall(text)})
     if watch: w.append(f"check these words are fine in context: {watch}")
     return e, w

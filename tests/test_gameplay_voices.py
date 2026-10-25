@@ -64,7 +64,7 @@ print("gameplay ok")
 
 # 3. stock counting: gameplay counts as stock for the validator and is not a real picture for run_board's tally
 import validate as V
-b = json.loads((REPO / "boards" / "hold" / "QD-028.json").read_text())
+b = json.loads((REPO / "boards" / "expired" / "QD-028.json").read_text())
 for bt in b["beats"]: bt["shots"] = [{"src": "gameplay:marble run"}]
 errs, warns = V.check(b)[:2]
 print("validator:", errs[:2], [w for w in warns if "stock" in w][:2])

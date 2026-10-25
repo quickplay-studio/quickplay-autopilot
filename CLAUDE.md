@@ -8,6 +8,8 @@ Read this file, then `python pipeline/digest.py` (one screen); `tail -n 40 docs/
 open a data file whole (analytics/*.csv, clips/*.csv, status/*.json, boards/): `head -1`, `tail`, `grep` or a one-line
 aggregate. Hand log reading, number questions, test runs and dated doc lines to the Haiku agents in .claude/agents/
 (quickplay-logs, quickplay-data, quickplay-tests, quickplay-docs) so only their short answers reach the main context.
+Delegated work runs on Sonnet (or Haiku) in a worktree with a tight brief; a fork (the main model with the whole context) only
+when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every 2 hours, the weekly review, the portal) run on Sonnet.
 
 ## The line
 - trends.yml (08:10, 12:47, 18:23 UTC; breaking checks 06:47, 10:47, 15:47): pipeline/trends.py finds what people search
@@ -54,7 +56,8 @@ aggregate. Hand log reading, number questions, test runs and dated doc lines to 
 
 ## Channel rules (non-negotiable)
 Anonymous, family-friendly, UK English ("Tuesday 20 October", colour, favourite). Never politics, crime, health claims,
-money or investing advice, adult content or gambling. Never other creators' footage without their permission (clips
+money or investing advice, adult content or gambling. Never negative about a real person (admits, betrays, feuds, slammed,
+mocked, fails: validate.NEGATIVE rejects it; negative turns only in fiction). Never other creators' footage without their permission (clips
 use only campaign-permitted footage). No em or en dashes anywhere. Nothing invented: every claim cites its source. Weak
 Shorts stay up (a remake, never a delete). Free keys only; no paid tools until the channel earns.
 

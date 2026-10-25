@@ -28,6 +28,10 @@ cars and history. Every rule must hold.
   anywhere (use commas, colons or full stops).
 - Never politics, crime, health claims, money or investing advice, adult content or gambling. Explore the subject itself;
   never talk about views, virality or why something went viral.
+- Never negative about a real person (Charlie, 25 October): no admits, betrays, slams, feuds, backlash, mocked, exposed,
+  blamed, fails, flops, quits, splits, rows or drama about anyone real, however the source frames it. Real people appear
+  for what they made, won, released, said or achieved; a game show's "betrayal" is a plot point in fiction, not in
+  our Shorts. Negative turns are allowed only in a fiction board.
 - Facts: use ONLY the facts in the pack below. A "verified" fact can be stated plainly. A "one source" fact must name its
   source in the narration ("Variety says", "according to the BBC"). Anything unconfirmed must be said to be unconfirmed and
   who is saying it. Never invent anything. Copy names, numbers and dates exactly as the pack writes them.
@@ -471,7 +475,7 @@ def source_of(signal):
     # day ... (Wikipedia)", "Apple albums"), and Apple Music before "music" (its chart topics were labelled YouTube music)
     for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"),
                       ("on this day", "On this day"), ("in the news", "Wikipedia In the news"), ("tvmaze", "TVmaze"), ("steam", "Steam"),
-                      ("app store", "App Store"), ("apple albums", "Apple albums"), ("bluesky", "Bluesky"), ("formula 1", "Formula 1"),
+                      ("app store", "App Store"), ("apple albums", "Apple albums"), ("bluesky", "Bluesky"), ("formula 1", "Formula 1"), ("apify", "Apify"),
                       ("apple", "Apple Music"), ("music", "YouTube music"), ("youtube", "YouTube"),
                       ("wikipedia", "Wikipedia"), ("google trends", "Google Trends"), ("launch", "Rocket launches"),
                       ("rocket", "Rocket launches"), ("football", "Football"), ("fixture", "Football"),

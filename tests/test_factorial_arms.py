@@ -43,8 +43,9 @@ print("1 test plan ok")
 # 2. looks.choose
 import looks as LK
 cat = LK.catalogue()
+lab_e = next(k for k in LK.active(cat, "energy") if k != "steady")       # whatever variant the look lab runs today
 for i in range(30):
-    assert LK.choose(f"QD-{i}", [], {}, cat, energy="lab-energy-1019")["energy"] == "lab-energy-1019"
+    assert LK.choose(f"QD-{i}", [], {}, cat, energy=lab_e)["energy"] == lab_e
     assert LK.choose(f"QD-{i}", [], {}, cat, energy="steady")["energy"] == "steady"
 assert len({LK.choose(f"QD-{i}", [], {}, cat, explore=True, energy="steady")["energy"] for i in range(60)}) > 1    # exploration: drawn evenly
 assert LK.choose("QD-1", [], {}, cat, energy="wobbly")["energy"] in LK.active(cat, "energy")                  # unknown: ignored

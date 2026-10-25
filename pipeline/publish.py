@@ -62,7 +62,13 @@ def is_reserve_line(l):
     return l.strip().lower().startswith("reserve")
 
 def is_pull_line(l):
-    return bool(re.match(r"\s*(pull|unschedule)\b", l, re.I))
+    return bool(re.match(r"\s*(pull|unschedule|private)\b", l, re.I))
+
+
+def is_private_line(l):
+    """"private QD-163": a Short already public is made private (Charlie's content rules, 25 October: nothing is ever
+    deleted; YouTube Studio can make it public again)."""
+    return bool(re.match(r"\s*private\b", l, re.I))
 
 def pull_ids(l):
     return set(ids_in(re.sub(r"^\s*\w+", " ", l)))
@@ -80,7 +86,8 @@ def pull_step(lines):
         st = load_status(i); vid = st.get("video")
         if st.get("pulled"): continue
         if not vid: later.add(i); print(i, "pull: not on YouTube yet, trying again next run"); continue
-        if Y.video_status(yt, vid).get("privacy") != "private": print(i, "pull: already public, left as it is"); continue
+        wants_private = any(is_private_line(l) and i in pull_ids(l) for l in lines)
+        if Y.video_status(yt, vid).get("privacy") != "private" and not wants_private: print(i, "pull: already public, left as it is"); continue
         try:
             yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
                                                                           "containsSyntheticMedia": False}}).execute()
@@ -88,8 +95,8 @@ def pull_step(lines):
             st["pull_tries"] = int(st.get("pull_tries") or 0) + 1; st["pull_error"] = str(e)[:300]; save_status(st)
             if st["pull_tries"] < 3: later.add(i)
             print(i, "pull refused:", str(e)[:200]); continue
-        st.update(state="pulled (private on YouTube)", pulled=NOW.isoformat(timespec="seconds"), instagram_skipped="pulled",
-                  facebook_skipped="pulled")
+        st.update(state="made private (Charlie's content rule)" if wants_private else "pulled (private on YouTube)",
+                  pulled=NOW.isoformat(timespec="seconds"), instagram_skipped="pulled", facebook_skipped="pulled")
         save_status(st)
         for d in ("done", "queue", "ready"):
             p = ROOT / "boards" / d / f"{i}.json"

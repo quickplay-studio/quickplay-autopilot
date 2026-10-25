@@ -30,7 +30,7 @@ finished = lambda l: P.is_reserve_line(l) or (P.is_pull_line(l) and not P.pull_i
 assert not finished("pull QD-901 QD-902") and finished("pull QD-901") and not finished("approve all")
 print("pull ok")
 
-b = json.loads(pathlib.Path(REPO_DIR + "/boards/hold/QD-028.json").read_text())
+b = json.loads(pathlib.Path(REPO_DIR + "/boards/expired/QD-028.json").read_text())
 b["beats"][1]["say"] = "According to Wikipedia, the Moon is slowly drifting away from us."
 assert any("Wikipedia" in e for e in V.check(b)[0])
 b["beats"][1]["say"] = "The Moon is slowly drifting away from us, about 3.8 centimetres a year."

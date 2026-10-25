@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 13:37): 15 of 1,000 subscribers · 8,619 of 10 million Shorts views in 90 days · 4,066 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 14:35): 16 of 1,000 subscribers · 8,951 of 10 million Shorts views in 90 days · 4,363 views in the last 24 hours (about 111,012 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 13:21 (UK): 4 scheduled, 144 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 11:02).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 14:28).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 11 public, 7 scheduled | 3 | 1 | ⏳ 11 of 14 so far, 7 more scheduled |
+| Sun 25 Oct | 12 public, 6 scheduled | 4 | 1 | ⏳ 12 of 14 so far, 6 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -97,7 +97,7 @@ scheduled · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-1
 ![QD-171](QD-171.jpg)
 
 ### Sun 25 Oct 14:00 · Tech Truths #3: Windows XP Bliss wallpaper now on Crocs (Part 2) 👟
-scheduled · 38 s · music: rubberband · [script](../boards/done/QD-170.json) · [YouTube](https://youtube.com/shorts/uwq3RbhcXZQ)
+private · 38 s · music: rubberband · [script](../boards/done/QD-170.json) · [YouTube](https://youtube.com/shorts/uwq3RbhcXZQ)
 
 ![QD-170](QD-170.jpg)
 
@@ -152,7 +152,7 @@ public · 215 views · 27 s · music: try-to-catch-me · on Instagram · on Face
 ![QD-159](QD-159.jpg)
 
 ### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-public · 49 views · 27 s · music: death-duel · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
+public · 49 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
 
 ![QD-158](QD-158.jpg)
 

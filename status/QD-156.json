@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-24T14:30:00Z",
  "rendered": "2026-10-24T09:07:27.374464+00:00",
- "title": "Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴",
+ "title": "Kristen Wiig's Palm Royale is over after just two seasons 📺",
  "background_notes": [
   "picked pixabay 3 (+2 spares)",
   "pixabay:3742 skipped: only 960x540, needs 720p"
@@ -101,6 +101,13 @@
  "social_release": "social-QD-156",
  "engage": {
   "comment": "Ugy6fUqyI6PjQqUuKIl4AaABAg",
-  "playlist": "Quickplay Daily: Film"
+  "playlist": "Quickplay Daily: Film",
+  "title": {
+   "swapped_from": "Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴",
+   "to": "Kristen Wiig's Palm Royale is over after just two seasons 📺",
+   "at": "2026-10-25T15:09+00:00",
+   "views_an_hour": 0.1,
+   "typical": 0.7
+  }
  }
 }

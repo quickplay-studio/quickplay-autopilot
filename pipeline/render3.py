@@ -15,6 +15,8 @@ Storyboard additions over v2:
 The look's style (templates/looks.json, 24 October): "minimal" turns text cards into photos, shows a name once as a
 corner tag, keeps the chip to the first 2.5 seconds, lightens the shade and cuts to a new picture every 1.2 to 1.8 s;
 "standard" is as before.
+The look's closing (25 October, the subscriber push): "chip" adds a small subscribe line to the last 1.5 seconds, built from the
+board's series name and number (end_chip, subscribe.chip_text), low in the safe area above the captions; "none" is as before.
 """
 import asyncio, json, math, os, subprocess, sys, pathlib, time
 HERE = pathlib.Path(__file__).resolve().parent
@@ -389,6 +391,18 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags=None):
                 credits.append({"credit": it["credit"], "source": shot.get("source", sb.get("source", "")), "license": shot.get("license", "")})
     return items, credits, punches
 
+def end_chip(sb):
+    """The closing chip (templates/looks.json "closing", 25 October, the subscriber push): {"text", "seconds"} for the small
+    subscribe line of the last 1.5 seconds, built from the board's series name and number (subscribe.chip_text), or None when the
+    look has none. Never a reason to fail a render."""
+    secs = float(LOOK.get("end_chip") or 0)
+    if secs <= 0: return None
+    try:
+        import subscribe
+        return {"text": subscribe.chip_text(sb), "seconds": secs}
+    except Exception as e:
+        print(f"  warning: no closing chip: {e}", file=sys.stderr); return None
+
 def sfx_events(sb, beats, items):
     ev = []
     for i, it in enumerate(items):
@@ -457,6 +471,8 @@ def main():
             "handle": sb.get("handle") or "@quickplaydaily", "cta": sb.get("cta_lines") or None,       # another channel's name and call to action (config shorts_channels, mirror.py)
             "icons": R.icon_svgs(icons), "beats": beats, "words": words, "groups": groups, "duration": duration,
             "media": items, "punches": punches, "look": LOOK, "bg": bginfo}
+    chip = end_chip(sb)
+    if chip: data["endChip"] = chip       # the closing chip arm (template3.html #endchip)
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))
     (out_dir / f"{sid}.timeline.json").write_text(json.dumps({"beats": beats, "words": words, "groups": groups, "duration": duration,
                                                               "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc')} for it in items]}, indent=1))

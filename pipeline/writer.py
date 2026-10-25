@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import background as BG, factpack, validate
+import subscribe as SUB           # the subscriber push (25 October): the spoken-line arm and its note
 
 CFG = json.loads((ROOT / "config.json").read_text())
 UK = ZoneInfo("Europe/London")
@@ -56,7 +57,14 @@ cars and history. Every rule must hold.
 - 5 to 9 beats, 70 to 110 words of narration in total (count them; a length in the style line below sets its own range),
   one or two sentences per beat (a longer Short, when the style note below asks for one, keeps every beat a new surprise
   and saves the wildest for last).
-- Ending: land the payoff, then either a line that loops back into the hook or a short question viewers can answer.
+- Ending: land the payoff, then either a line that loops back into the hook or a short question viewers can answer. A
+  subscribe line (next rule), only when the style line below asks for one, sits between the payoff and that last line.
+- Subscribe line (25 October: 15 subscribers from 26,500 views, and 1,000 are needed): only when the style line below asks
+  for one; it is a test, so about half the Shorts have one and half have none. It is ONE short spoken line of 16 words or
+  fewer giving a concrete reason to subscribe, tied to the series the style line names (or, with none, the Short's category)
+  and, when the style line says how often it comes, how often: "Song Secrets is here every day; subscribe so you don't miss
+  the next one". Never a bare "like and subscribe", "smash the button", "hit the bell" or any plea, and nothing at all about
+  subscribing when the style line says none. The line counts in the word total.
 - Neat and minimal: at most 3 beats with a graphic ("visual" not {"type": "none"}), few words on each graphic.
 - Real footage first: at least 4 in 5 shots show the actual subject, and beat 1's shots always do. In order: the pack's
   real pictures, "commons-search:Full Name" for each person (add "label": {"t": "Full Name", "s": "who they are"} the
@@ -255,10 +263,10 @@ def formats():
 # (real pictures first is the channel's rule, and Charlie's) and the progress of the tests (the hub's, not the writer's);
 # a test's STYLE line beats any of them. A line is kept whole or left out, never cut, and the lot stays inside RECIPE_BUDGET.
 RECIPE_FIRST = ("Hook style", "Length", "Format", "Hook length", "Paused for 14 days", "Title", "Title wording", "Title emoji",
-                "Title answer", "Music mood", "Ending", "Follow line", "Appeal")
+                "Title answer", "Music mood", "Ending", "Subscribe line", "Follow line", "Appeal")
 RECIPE_NOT = ("Posting time", "Day posted", "Captions", "Voice", "Camera energy", "Colour grade", "Opening", "Comment replies",
               "Writer model", "Kind of Short", "Category mix", "Follow up", "Topic source", "Series", "Named series", "Pictures",
-              "Exploration", "Posted late", "First frame", "Angle research", "Tests being run")
+              "Exploration", "Posted late", "First frame", "Angle research", "Tests being run", "Subscribe chip")
 RECIPE_BUDGET = 1600
 
 
@@ -906,10 +914,11 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
                               "twist every 10 seconds, a running count or countdown so viewers stay, the wildest fact last, "
                               "and a reason to keep watching said out loud at the hook and at the halfway point."},
     "ending": {"loop": "End with a line that flows straight back into the first line so the Short loops, and end on the "
-                       "same picture as the first shot. No question and no subscribe line at the end.",
-               "question": "End with a short question viewers can answer in the comments.",
-               "follow line": "End the last beat with one short spoken line asking viewers to subscribe for one of these "
-                              "every day."},
+                       "same picture as the first shot. No question at the end.",
+               "question": "End with a short question viewers can answer in the comments."},
+    # the old third arm "follow line" (one spoken line asking viewers to subscribe; 3 Shorts measured) is folded into the
+    # sub_push test (with_sub_test, 25 October, the subscriber push): that line is drawn on its own, 50/50, so each of the
+    # two endings is measured with and without it, and its reason is concrete (series or category), never a bare plea
     "title_search": {"search phrase": "Open the title with one of the search phrases listed below, word for word, if one "
                                       "fits the story; otherwise with the name people search.",
                      "curiosity": "Open the title with the name, then the most curious detail; don't copy a search phrase."},
@@ -1033,6 +1042,31 @@ def with_title_test(tests, k, kind="news"):
     for t in TITLE_TESTS:
         if not tests.get(t) and kind not in TITLE_NOT_FOR.get(t, ()): tests = {**tests, t: title_arm(k, t)}
     return tests
+
+
+def with_sub_test(tests, k, kind="news"):
+    """The tests with this Short's subscribe-line arm (test "sub_push": "spoken" or "none", subscribe.arm; Charlie, 25 October:
+    a subscriber push that is measured): on every Short but an exploration Short, drawn 50/50 on its own seed so it is
+    independent of every other arm, then the arm the data proves (analytics/subs.csv) with every RETEST-th Short trying the
+    other; kept when the board already has one (the parts of a series share it). The text for the prompt is sub_note()."""
+    if tests.get("sub_push") or tests.get("explore") == "yes": return tests
+    a = SUB.arm(k)
+    return {**tests, "sub_push": a} if a else tests
+
+
+def sub_note(p, kind, tests, note="", reserve=False):
+    """`note` with the prompt text of the Short's subscribe-line arm after it: the spoken arm names the numbered series the
+    Short joins (series.py) or the named series of the franchise test, else its category; the "none" arm says none."""
+    a = tests.get("sub_push")
+    if a not in SUB.ARMS: return note
+    name = ""
+    try:
+        s = _series().series_for(p, kind, None, reserve)
+        if s: name = s["name"]
+    except Exception: pass
+    cat = str((p or {}).get("category") or "")
+    if not name and tests.get("franchise") == "named": name = FRANCHISE.get(cat, "Quickplay Facts")
+    return (note + "\n\n" if note else "") + SUB.note(a, name, cat)
 
 
 def style_note(picks):
@@ -1527,7 +1561,9 @@ def main():
         sid = f"QD-{state['n']:03d}"
         if tests is None: style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # the title emoji and title answer tests ride on every Short
+        tests = with_sub_test(tests, state["n"], kind)        # so does the subscribe line (not an exploration Short)
         tests, note = series_prepare(p, kind, tests, note, reserve)      # a Short of a numbered series leaves the franchise test (series.py)
+        note = sub_note(p, kind, tests, note, reserve)        # the spoken arm names that series, or the category
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
@@ -1586,7 +1622,8 @@ def main():
         if explore is None: explore = not reserve and explore_due()
         style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # one arm for every part of a series
-        base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
+        tests = with_sub_test(tests, state["n"], kind)        # (the subscribe-line arm too)
+        base ="\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
         if parts < 2 or reserve or fol or series_joins(p, kind):       # a numbered series Short is one Short (series.py)

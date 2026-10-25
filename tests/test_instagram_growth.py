@@ -135,9 +135,10 @@ board = {"meta": {"title": "GTA 6: the detail everyone missed", "summary": "A lo
          "beats": [{"say": "Rockstar hid one number in the GTA 6 trailer."}], "category": "Gaming"}
 S.CFG["instagram_hashtags"] = {"Gaming": ["#gaming", "#gamingnews", "#videogames"]}      # the category's own set (25 October)
 short = S.caption({}, board, "instagram", "short")
-assert short == "Rockstar hid one number in the GTA 6 trailer.\n\n#gaming #gamingnews #videogames", short
+FOLLOW = "\n\nFollow @quickplaydaily for a new %s Short every day."       # the subscriber push's last line (25 October)
+assert short == "Rockstar hid one number in the GTA 6 trailer.\n\n#gaming #gamingnews #videogames" + FOLLOW % "Gaming", short
 nocat = S.caption({}, {**board, "category": "Music"}, "instagram", "short")                # no set for the category: the board's first 3
-assert nocat == "Rockstar hid one number in the GTA 6 trailer.\n\n#GTA6 #Rockstar #Gaming", nocat
+assert nocat == "Rockstar hid one number in the GTA 6 trailer.\n\n#GTA6 #Rockstar #Gaming" + FOLLOW % "Music", nocat
 full = S.caption({}, board, "instagram")
 assert "A longer summary." in full and full.count("#") == 5
 assert S.caption({}, board, "instagram", "full") == full

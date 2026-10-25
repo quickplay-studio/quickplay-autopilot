@@ -44,6 +44,10 @@ GAME_WORDS = re.compile(r"\b(traitors?|faithfuls?|betray\w*|murder\w*|banish\w*|
 # Words that are often fine but worth a second look: printed as warnings only.
 WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|court|cure[sd]?|vaccine\w*|president|minister|"
                    r"stocks?|shares|invest\w*|viral|views)\b", re.I)
+# The subscriber push (25 October): an ask to subscribe is fine and a bare plea is not (subscribe.py)
+SUB_ASK = re.compile(r"\b(subscribe|follow)\b", re.I)
+SUB_BARE = re.compile(r"\b(like and subscribe|like,? comment,? and subscribe|smash (that|the) |hit (that|the) (like|bell|subscribe)|"
+                      r"ring the bell|don'?t forget to (like|subscribe|follow)|leave a like)", re.I)
 MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
 US_DATE = re.compile(rf"\b({MONTHS}) \d{{1,2}}(st|nd|rd|th)?\b")
 EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿⬀-⯿]")
@@ -259,6 +263,17 @@ def _check(b, path=None):
     said = " ".join(bt.get("say", "") for bt in beats) + " " + title
     if re.search(r"according to wikipedia|wikipedia (says|shows|states|lists|notes|reports)", said, re.I):
         e.append("say: never cite Wikipedia; state the fact, or name the outlet that reported it")
+    # the subscriber push (25 October, subscribe.py): "subscribe" is no banned word. The spoken arm of the sub_push test needs its
+    # one short line with a reason in the last two beats, the "none" arm no ask at all (so the comparison is clean), and no
+    # Short a bare plea. Warnings: the Short gets one fixing round and is never lost for them
+    sub_arm = str((b.get("test") or {}).get("sub_push") or "") if isinstance(b.get("test"), dict) else ""
+    said_all = " ".join(str(bt.get("say") or "") for bt in beats if isinstance(bt, dict))
+    said_end = " ".join(str(bt.get("say") or "") for bt in beats[-2:] if isinstance(bt, dict))
+    if SUB_BARE.search(said_all): w.append("narration: never a bare 'like and subscribe' or a plea: give one concrete reason to subscribe tied to the series or category, or nothing")
+    if sub_arm == "spoken" and not SUB_ASK.search(said_end):
+        w.append("last beats: this Short tests the subscribe line: add ONE short spoken line (16 words or fewer) with a concrete reason to subscribe, tied to its series or category, after the payoff")
+    elif sub_arm == "none" and re.search(r"\bsubscri\w*", said_all, re.I):
+        w.append("narration: this Short tests having no subscribe line: take every ask to subscribe out of the narration")
     text = " ".join([bt.get("say", "") for bt in beats] + [title, m.get("summary", "")])
     us = sorted({m.group(0) for m in US_DATE.finditer(text)})
     if us: e.append(f"UK date style: write '20 October', not {us}")

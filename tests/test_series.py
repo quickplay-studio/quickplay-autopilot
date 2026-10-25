@@ -95,19 +95,22 @@ assert lines[0].startswith("Science Explained #12: ") and lines[1] == f"More in 
 assert S.description_lines(SB, "", CFG)[1:] == [""]                         # no playlist yet: the series line alone
 assert S.description_lines({"category": "Film"}, URL, CFG) == [] and S.description_lines(None) == []
 c = S.comment_text("Which planet would you visit?", SB, URL)
-assert c.startswith("Which planet would you visit?") and "Science Explained #12." in c and URL in c and len(c) <= 500, c
-assert S.comment_text("Which planet?", SB, "").endswith("Science Explained #12.") and "playlist" not in S.comment_text("Which planet?", SB, "")
-assert S.comment_text("Which planet?", {"category": "Film"}, URL) == "Which planet?"
-assert len(S.comment_text("q" * 600, SB, URL)) <= 500 and URL in S.comment_text("q" * 600, SB, URL)
+# the first line names the series and asks to subscribe, with the playlist link; the question follows (the subscriber push, 25 October)
+assert c.startswith("Science Explained #12: subscribe") and URL in c.split("\n\n")[0] and c.endswith("\n\nWhich planet would you visit?") and len(c) <= 500, c
+assert S.comment_text("Which planet?", SB, "").startswith("Science Explained #12: subscribe") and "playlist" not in S.comment_text("Which planet?", SB, "")
+assert "sub_confirmation=1" in S.comment_text("Which planet?", SB, "")                  # no playlist: the subscribe link instead
+assert S.comment_text("Which planet?", {"category": "Film"}, URL).startswith("A new Film Short every day: subscribe") and S.comment_text("Which planet?", {"category": "Film"}, URL).endswith("\n\nWhich planet?")      # no series: the category
+assert len(S.comment_text("q" * 600, SB, URL)) <= 500 and URL in S.comment_text("q" * 600, SB, URL) and S.comment_text("q" * 600, SB, URL).startswith("Science Explained #12: subscribe")
 assert S.label({"series_name": "Ballon d'Or", "series_no": 2, "series_of": 5}) == "Ballon d'Or #2 of 5" and S.label(SB) == "Science Explained #12"
 nodash(*lines, c)
 import run_board as RB                                                       # the YouTube description (the render's)
 track = {"title": "T", "artist": "A"}
 meta = {"summary": "A short answer.", "sources": [["Wikipedia", "https://en.wikipedia.org/wiki/Sky"]], "hashtags": ["#sky"]}
 desc = RB.description({**SB, "meta": meta}, [], track).split("\n")
-assert desc[:2] == ["A short answer.", ""] and desc[2].startswith("Science Explained #12: ") and desc[3] == f"More in the series: {URL}", desc[:6]
-assert desc[4:6] == ["", "Sources:"], desc[:7]
-assert RB.description({"meta": meta}, [], track).split("\n")[:3] == ["A short answer.", "", "Sources:"]    # any other Short: as before
+assert desc[:2] == ["A short answer.", ""] and desc[2].startswith("Subscribe for the next Science Explained: ") and "sub_confirmation=1" in desc[2], desc[:6]      # the subscribe link first (25 October)
+assert desc[4].startswith("Science Explained #12: ") and desc[5] == f"More in the series: {URL}", desc[:8]
+assert desc[6:8] == ["", "Sources:"], desc[:9]
+assert RB.description({"meta": meta}, [], track).split("\n")[:5] == ["A short answer.", "", "Subscribe so you never miss the next one: https://www.youtube.com/@quickplaydaily?sub_confirmation=1", "", "Sources:"]    # any other Short: the subscribe link, then as before
 print("4 description and comment ok")
 
 # 5. what people search: our own terms, Google Trends related queries (none in latest.json yet), YouTube's suggestions, On this day
@@ -577,13 +580,14 @@ import engage as E
 S.PLAYLISTS = PL.STATE = STATUS / "playlists_engage.json"
 yt5 = FakeYT()
 text = E.comment_for(yt5, SB, "Which planet would you visit?")
-assert text.startswith("Which planet would you visit?") and "Science Explained #12." in text and "The whole series: https://www.youtube.com/playlist?list=PL1" in text, text
+assert text.startswith("Science Explained #12: subscribe") and text.endswith("Which planet would you visit?") and "The whole series: https://www.youtube.com/playlist?list=PL1" in text, text
 assert len(yt5.made("playlists.insert")) == 1 and E.comment_for(yt5, SB, "Again?").count("list=PL1") == 1 and len(yt5.made("playlists.insert")) == 1
-assert E.comment_for(yt5, {"category": "Film"}, "Plain?") == "Plain?" and len(E.comment_for(yt5, SB, "q" * 900)) <= 500
+assert E.comment_for(yt5, {"category": "Film"}, "Plain?").startswith("A new Film Short every day: subscribe") and E.comment_for(yt5, {"category": "Film"}, "Plain?").endswith("Plain?") and len(E.comment_for(yt5, SB, "q" * 900)) <= 500
+assert len(yt5.made("playlists.insert")) == 1                                       # a Short in no series makes no playlist call
 yt6 = FakeYT(); yt6.fail["playlists.list"] = [OSError("boom")]
 S.PLAYLISTS = PL.STATE = STATUS / "playlists_broken.json"
 text = E.comment_for(yt6, SB, "Which planet?")                                              # the playlist call fails: the comment still goes, without the link
-assert "Science Explained #12." in text and "playlist?list" not in text, text
+assert text.startswith("Science Explained #12: subscribe") and "playlist?list" not in text and "sub_confirmation=1" in text, text
 S.PLAYLISTS = PL.STATE = STATUS / "playlists_run.json"
 PL.ROOT = RP / "run"; (PL.ROOT / "status").mkdir(parents=True)
 real_run_root = RP

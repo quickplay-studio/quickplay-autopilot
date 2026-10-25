@@ -179,6 +179,22 @@
      "shade": "full"
     }
    }
+  },
+  "closing": {
+   "about": "The last 1.5 seconds (Charlie, 25 October: a subscriber push that is measured, not assumed). A fixed test: half the Shorts end with a small line asking to subscribe (the chip), half end as before; looks.choose() draws it on its own seed, so it is independent of the style and of every other dimension. It is judged on subscribers gained per 1,000 views (analytics/subs.csv, feature subs:look_closing, the proof rule of drivers.py) with views as the guardrail (drivers.csv, feature look_closing): \"decide_by\": \"subs\" makes looks.assign_weights read the subscriber verdict, and an arm the views test has cut back never wins. Both arms have to reach 70 measured Shorts before the split moves (90 to 10), as for the style test.",
+   "assign": {"chip": 1, "none": 1},
+   "decide_by": "subs",
+   "default": "none",
+   "options": {
+    "chip": {
+     "desc": "a small line in the last 1.5 seconds: \"Subscribe for Game Explained #13\" (the next number of the Short's series), else \"Subscribe for more\" and the series name or category; small (30px), low in the safe area just above the captions, centred clear of the button column, never over the middle of the picture; it fades in over 0.2 seconds and holds to the last frame",
+     "chip_seconds": 1.5,
+     "born": "2026-10-25"
+    },
+    "none": {
+     "desc": "nothing added at the end: the control"
+    }
+   }
   }
  }
 }

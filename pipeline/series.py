@@ -173,8 +173,18 @@ def description_lines(b, url=None, cfg=None):
 
 
 def comment_text(comment, b, url=""):
-    """The creator comment: the board's question, then for a Short in a series its name, number and playlist link."""
+    """The creator comment (500 characters at most). Its first line names the series (a Short in none: its category) and asks
+    to subscribe, with the series' playlist link (else the channel's one-tap subscribe link); the board's question follows
+    (subscriber push, 25 October: subscribe.comment_first_line; until then the question came first and a series' name, number
+    and playlist link last). Never fails: without the subscriber module it is the old form."""
     base = str(comment or "").strip()
+    try:
+        import subscribe
+        first = subscribe.comment_first_line(b if isinstance(b, dict) else {}, url)
+    except Exception: first = ""
+    if first:
+        room = 500 - len(first) - 2
+        return (first + ("\n\n" + base[:room] if base and room > 0 else ""))[:500]
     if not (isinstance(b, dict) and b.get("series_name") and b.get("series_no")): return base[:500]
     tail = f"{label(b)}." + (f" The whole series: {url}" if url else "")
     return (base[:300] + ("\n\n" if base else "") + tail)[:500]

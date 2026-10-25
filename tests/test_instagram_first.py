@@ -42,13 +42,14 @@ board = {"category": "Sport", "meta": {"title": "Hamilton in Rwanda", "summary":
                                        "hashtags": ["#Hamilton", "#F1", "#Rwanda", "#Shorts", "#GrandPrix", "#Formula1"]},
          "beats": [{"say": "Lewis Hamilton wants to race in Rwanda."}]}
 short = S.caption({}, board, "instagram", "short")
-assert short == "Lewis Hamilton wants to race in Rwanda.\n\n" + " ".join(sets["Sport"]), short
+FOLLOW = "\n\nFollow @quickplaydaily for a new %s Short every day."       # the subscriber push's last line (25 October)
+assert short == "Lewis Hamilton wants to race in Rwanda.\n\n" + " ".join(sets["Sport"]) + FOLLOW % "Sport", short
 full = S.caption({}, board, "instagram", "full")
 assert "#Hamilton #F1 #Rwanda #GrandPrix #Formula1" in full and "A longer summary." in full and "#sport" not in full, full
 assert S.caption({}, board, "instagram") == full                                 # the long caption is the default and is unchanged
 assert S.caption({}, board, "facebook").endswith("#Hamilton #F1 #Rwanda")        # Facebook keeps the board's first 3
-assert S.caption({}, {**board, "category": "Weather"}, "instagram", "short").endswith("#Hamilton #F1 #Rwanda")      # no set: the board's first 3
-assert S.caption({"category": "Gaming"}, {k: v for k, v in board.items() if k != "category"}, "instagram", "short").endswith(" ".join(sets["Gaming"]))
+assert S.caption({}, {**board, "category": "Weather"}, "instagram", "short").endswith("#Hamilton #F1 #Rwanda" + FOLLOW % "Weather")      # no set: the board's first 3
+assert S.caption({"category": "Gaming"}, {k: v for k, v in board.items() if k != "category"}, "instagram", "short").endswith(" ".join(sets["Gaming"]) + FOLLOW % "Gaming")
 S.CFG["instagram_hashtags"] = {"Sport": ["#sport", "sport", "#sport news", "#Sport", "#football", "#a", "#b", "#c", "#d"]}
 assert S.ig_hashtags({}, board) == ["#sport", "#football", "#a", "#b", "#c"]      # well formed, no repeats, 5 at most
 S.CFG["instagram_hashtags"] = REAL["instagram_hashtags"]
@@ -236,7 +237,7 @@ assert rec("QD-951") and rec("QD-952") and not rec("QD-953"), "the two favoured 
 for sid in ("QD-951", "QD-952"):
     assert rec(sid)["favoured"] is True and rec(sid)["thumb"] == "accepted" and rec(sid)["thumb_ms"] == 1260 and rec(sid)["caption"] == "short", rec(sid)
 gaming_caption = next(d["caption"] for d in SENT if "#gaming" in d["caption"])
-assert gaming_caption.endswith(" ".join(sets["Gaming"])) and "Lewis Hamilton" in gaming_caption          # the hook and the category's own set
+assert gaming_caption.endswith(" ".join(sets["Gaming"]) + FOLLOW % "Gaming") and "Lewis Hamilton" in gaming_caption          # the hook and the category's own set
 REFUSE.add("thumb_offset"); put("QD-954", "Gaming"); put("QD-955", "Sport")
 SENT.clear(); S.post()
 assert sorted(rec(s)["thumb"] for s in ("QD-954", "QD-955")) == ["off", "refused"], (rec("QD-954"), rec("QD-955"))   # the first found Meta refusing it;

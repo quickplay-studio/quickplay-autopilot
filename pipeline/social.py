@@ -902,12 +902,25 @@ def ig_hashtags(st, board):
     return out[:5]
 
 
+def ig_follow_line(board, st=None):
+    """The Instagram caption's last line, always on in both caption arms (the subscriber push, 25 October): follow for the series
+    (or the category's daily Short). The status supplies the category when the board has none. "" when it cannot be built;
+    never a reason to fail a post."""
+    try:
+        import subscribe
+        b = dict(board or {})
+        if not b.get("category") and (st or {}).get("category"): b["category"] = st["category"]
+        return subscribe.ig_line(b)
+    except Exception: return ""
+
+
 def caption(st, board, platform="instagram", arm="full"):
     """Title, summary and hashtags, most relevant first: Instagram allows 5 hashtags per Reel; TikTok gets 7 plus #fyp.
     Facebook (24 October: Meta's spam rules of April 2025 name captions stuffed with hashtags, and the Page was limited on
     23 October) gets the title line and at most facebook_hashtags (3) hashtags, no summary and no other platform's name.
     Instagram's "short" arm (the caption test, 24 October): the spoken hook line and the category's own hashtags
-    (ig_hashtags, 25 October; the board's first 3 for a category with no set). The "full" arm keeps the board's hashtags."""
+    (ig_hashtags, 25 October; the board's first 3 for a category with no set). The "full" arm keeps the board's hashtags.
+    An Instagram caption ends, in both arms, with a line asking to follow for the series (ig_follow_line, the subscriber push)."""
     m = (board or {}).get("meta", {})
     tags, seen = [], set()
     for h in m.get("hashtags", []):
@@ -915,12 +928,13 @@ def caption(st, board, platform="instagram", arm="full"):
         seen.add(h.lower()); tags.append(h)
     if platform == "facebook":
         return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), " ".join(tags[:int(CFG.get("facebook_hashtags", 3))])) if x)
+    follow = ig_follow_line(board, st) if platform == "instagram" else ""     # the subscriber push (25 October): the last line asks to follow
     if platform == "instagram" and arm == "short":
         hook = str((((board or {}).get("beats") or [{}])[0] or {}).get("say") or st.get("title") or m.get("title", "")).strip()
-        return "\n\n".join(x for x in (hook, " ".join(ig_hashtags(st, board) or tags[:3])) if x)
+        return "\n\n".join(x for x in (hook, " ".join(ig_hashtags(st, board) or tags[:3]), follow) if x)
     tags = tags[:5] if platform == "instagram" else tags[:7] + ["#fyp"]
     yt = CFG.get("crosspost_youtube_line", "") if platform == "instagram" else ""     # YouTube first: point viewers there
-    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags)) if x)
+    return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags), follow) if x)
 
 _plain_caption = caption
 def caption(st, board, platform="instagram", arm="full"):

@@ -1,20 +1,25 @@
 {
- "day": "2026-10-24",
- "calls": 15,
- "edits": 11,
- "writes": 4,
+ "day": "2026-10-25",
+ "calls": 3,
+ "edits": 4,
+ "writes": 0,
  "last": "ok",
- "last_at": "2026-10-24T11:14+00:00",
+ "last_at": "2026-10-25T09:10+00:00",
  "history": {
   "2026-10-23": {
    "calls": 4,
    "edits": 3,
    "writes": 1
+  },
+  "2026-10-24": {
+   "calls": 15,
+   "edits": 11,
+   "writes": 4
   }
  },
  "caps": {
-  "edits": 12,
-  "writes": 4,
-  "calls per run": 6
+  "edits": 4,
+  "writes": 0,
+  "calls per run": 3
  }
 }

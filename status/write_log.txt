@@ -1,9 +1,18 @@
-breaking run for 2026-10-25: 2 to write from 4 fact packs
-category shares: {'Music': 0.28, 'Film': 0.19, 'Sport': 0.16, 'Gaming': 0.15, 'Entertainment': 0.08, 'Tech': 0.07, 'Science': 0.07}
-category floors first: ['Film']
+morning run for 2026-10-25: 7 to write from 7 fact packs
+category shares: {'Music': 0.26, 'Film': 0.19, 'Sport': 0.15, 'Gaming': 0.15, 'Entertainment': 0.11, 'Tech': 0.07, 'Science': 0.07}
+category floors first: ['Tech']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6 trailer views record: still failing: narration: 34 words, needs 75 to 100 (20 to 45 seconds); meta.title: 1 to 70 characters; meta.summary: 1 to 2 sentences; meta.hashtags: 0 given, needs 8 to 15 (most relevant first; #Shorts is added for YouTube); meta.sources: at least 1 source (the exact page); meta.facts: list every factual claim a
-Halloween 2026: gemini-3.7-flash, 0 warnings
-zendaya: gemini-flash-latest, 1 warnings (narration: 89 words, best between 100 and 125)
-wrote 2 of 2: QD-166 Halloween: The Game secret you might have missed; QD-167 Zendaya: the major category change explained
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.7-flash": 2, "gemini-3.5-flash-lite": 6, "groq:openai/gpt-oss-120b": 2, "gemini-flash-latest": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 0, "providers passed over": [], "late": false, "claude today": "0 of 4 edits, 0 of 0 writes"}
+Ballon d'Or past winners: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), edited by Claude
+watchlist: the day's 5 watch places are filled: Dune Part Three cast
+watchlist: the day's 5 watch places are filled: Dune Part Three trailer
+watchlist: the day's 5 watch places are filled: GTA 6 trailer views record
+exploration Short: Tech: Windows XP
+QD-169: about 2 min needs 16 facts, the pack has 8: 35 to 44 s instead
+Windows XP: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: kept the original (beat 2: Beat 2 states Whistler was for home users, which the pack does not support (pack says developed under codename W)
+QD-170: about 2 min needs 16 facts, the pack has 8: 35 to 44 s instead
+Windows XP: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: kept the original (beat 3: The script states that mainstream support ended in 2009, but the pack specifies the exact date as April 14, 2009)
+UFC 333: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, editor: no answer (claude:sonnet: run cap reached)
+Mortimer and Whitehouse: Gone Fishing: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings
+How Barbara Palvin was discovered at age 13 ✨: gemini-flash-latest, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 6 of 7: QD-168 Harry Kane scores 73 goals before Ballon d'Or ⚽; QD-169 Tech Truths #1: Windows XP arrived in shops (Part 1) 💻; QD-170 Tech Truths #3: Windows XP Bliss wallpaper now on Crocs (Part 2) 👟; QD-171 Sport Shocks #1: UFC 333: Volkanovski wins record ninth title; QD-172 Mortimer and Whitehouse: Ted's last trip 🐾; QD-173 barbara palvin 13 years old: the church choice 💒
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"gemini-omni-1.1-flash": "daily limit", "gemini-omni-flash-preview": "daily limit", "claude:sonnet": "run cap"}, "retired": ["openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "answers": {"gemini-flash-latest": 4, "gemini-3.5-flash-lite": 23, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 11, "claude:sonnet": 3}, "empty answers": {"groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3.5-lightning:free": 1, "groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 3, "second opinions": 0, "providers passed over": [], "late": true, "claude today": "4 of 4 edits, 0 of 0 writes"}

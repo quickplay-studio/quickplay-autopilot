@@ -13,6 +13,24 @@ shape of the existing ones (subject, platform, pay_per_1k, min_views, max_payout
 on_screen, hashtags, description, avoid, min_s, max_s, card, channel: one only, gaming for game footage or irl for creators
 and challenges; pipeline/clips.py pins an older "channels" list to its first non-clips channel; any audience-country rule goes into rules). Joined but unusable: note why in the log.
 
+## Daily sound campaigns
+Campaigns that pay per 1,000 views for a Short that uses a sound or carries a brand hashtag: no footage, nobody on camera,
+paid on Quickplay Daily's own views (status/scout.md, "For Quickplay Daily's own views"; Vyro's open list too). Join with
+the studio account: open the link, press Join or Apply, and connect the Quickplay Daily YouTube channel on the site
+(Content Rewards: Settings, Connected accounts; Vyro: Settings, Social accounts). Join only when ALL hold: YouTube Shorts
+are paid; family friendly (no gambling, crypto, trading, finance, alcohol, adult, politics or health claims); nobody has
+to appear on camera; no proof per post beyond the link; no window for the link under a day on Content Rewards (Daily's
+links go in once a day). From the brief take the sound file's download link (a direct https link to the file; a Google
+Drive or Dropbox share link works, a web page does not), the hashtags and the end date. Add to clips/campaigns.json, with
+"daily": true and no "source" or "rules" (the clips line must not make clips for it):
+`"<id>": {"daily": true, "active": true, "name": "...", "card": "<as the site lists it>", "platform": "Content Rewards" or
+"Vyro", "url": "<campaign page>", "pay_per_1k": 0.0, "min_views": 0, "max_payout": 0, "subject": "...", "hashtags":
+["#Brand"], "sound_url": "<the sound file's https link>", "ends": "YYYY-MM-DD", "joined": "<today>"}`.
+From the next render 30% of Daily's Shorts (config daily_sponsor_share) carry it: its sound as the music, #ad and the
+hashtags first, paid promotion on, a clips/submit.csv row (channel daily). The Vyro rows come to you in step 4 (the account
+is Quickplay Daily); GitHub submits Content Rewards. No sound file in the brief: leave "sound_url" out and the Shorts carry
+the hashtags only. Log what was joined and why anything was skipped.
+
 ## Streamer programmes
 For each name listed: find the official clipping programme (Content Rewards, Vyro, the streamer's Discord), join it if
 YouTube Shorts counts and the footage is family friendly, add it to clips/campaigns.json, and note what you found in

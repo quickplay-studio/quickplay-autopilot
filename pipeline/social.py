@@ -922,6 +922,16 @@ def caption(st, board, platform="instagram", arm="full"):
     yt = CFG.get("crosspost_youtube_line", "") if platform == "instagram" else ""     # YouTube first: point viewers there
     return "\n\n".join(x for x in (st.get("title") or m.get("title", ""), m.get("summary", ""), yt, " ".join(tags)) if x)
 
+_plain_caption = caption
+def caption(st, board, platform="instagram", arm="full"):
+    """A Short that carries a daily campaign (status "sponsor", pipeline/sponsor.py) is paid promotion wherever it is posted: its
+    caption starts with #ad and leads with the campaign's hashtags (inside the platform's cap). Every other caption is as above."""
+    try:
+        import sponsor
+        if sponsor.applied(st): return sponsor.caption(st, _plain_caption(st, sponsor.caption_board(st, board), platform, arm))
+    except Exception: pass
+    return _plain_caption(st, board, platform, arm)
+
 def board_for(st):
     for d in ("done", "ready", "queue", "hold"):
         p = ROOT / "boards" / d / f"{st['id']}.json"

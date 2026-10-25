@@ -81,7 +81,7 @@ def main(root):
             try:
                 vid = Y.upload(yt, res / "video.mp4", u["title"], u["description"], u["tags"], u["category"],
                                u["slot"] if u["mode"] == "schedule" else None, localizations=u.get("localizations"),
-                               **({"language": u["language"]} if u.get("language") else {}))
+                               **({"language": u["language"]} if u.get("language") else {}), paid=bool(u.get("paid")))      # a daily campaign's Short is paid promotion (pipeline/sponsor.py)
                 st["uploaded_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
                 st.update(state="scheduled" if u["mode"] == "schedule" else "uploaded (private)", video=vid,
                           url=f"https://youtube.com/shorts/{vid}", publish_at=u["slot"] or None)

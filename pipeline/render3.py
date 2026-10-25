@@ -70,6 +70,13 @@ def load_music(slug, start, dur, lib="music"):
     beats = [b - st for b in c["beats"] if st <= b <= st + dur + 1]
     return m, beats, c
 
+def load_sound(path, start, dur):
+    """A campaign's own sound file (pipeline/sponsor.py, run_board.py: music.file) as the music track: looped when it is shorter than
+    the Short, cut from `start`. No beat list, so cuts are not snapped to it. Mixed by mix_audio3 at the same gain as any track."""
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-stream_loop", "-1", "-i", str(path), "-ss", f"{float(start or 0):.3f}", "-t", f"{dur + 1:.3f}",
+                          "-vn", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout     # -ss after -i: before it a seek breaks the loop
+    return np.frombuffer(raw, np.float32).copy()
+
 def mix_audio3(segs, duration, music, events, path, gain_db=-16):
     n = int(duration * SR) + SR
     voice = np.zeros(n, np.float32)
@@ -415,7 +422,11 @@ def main():
             rel = round(ws[min(aw, len(ws) - 1)]["start"] - (0.0 if bi == 0 else b["start"]), 2)
             b["visual"] = dict(b["visual"], at=[rel, rel + 0.05, rel + 0.15, rel + 0.2])
     mus = sb.get("music", {})
-    music, mbeats, mcat = load_music(mus.get("slug", "ten"), mus.get("start"), duration)
+    if mus.get("file"):        # a campaign's sound (run_board.py fetched it): the music track, same gain, no beats to cut on
+        music, mbeats = load_sound(mus["file"], mus.get("start"), duration), []
+        mcat = {"title": mus.get("title") or "campaign sound", "artist": mus.get("artist") or "the campaign", "source": "supplied by the campaign"}
+    else:
+        music, mbeats, mcat = load_music(mus.get("slug", "ten"), mus.get("start"), duration)
     # the video behind the Short (pipeline/background.py), built to the narration's length; with it, photos become cards on top
     bginfo, bgused = None, []
     if sb.get("bg_clips"):
@@ -435,7 +446,7 @@ def main():
     if soc.get("slug"):        # TikTok/Instagram version: same voice and effects, music licensed for every platform
         smusic, _, _ = load_music(soc["slug"], soc.get("start"), duration, lib="music_social")
         mix_audio3(segs, duration, smusic, events, str(swav), soc.get("gain_db", mus.get("gain_db", -16)))
-    credits.append({"credit": f"Music: {mcat['title']} by {mcat['artist']} (YouTube Audio Library)", "source": "", "license": ""})
+    credits.append({"credit": f"Music: {mcat['title']} by {mcat['artist']} ({mcat.get('source', 'YouTube Audio Library')})", "source": "", "license": ""})
     for u in bgused: credits.append({"credit": u["credit"], "source": u["source"], "license": ""})     # Pexels and the others are credited in the description
     (out_dir / f"{sid}.bg.json").write_text(json.dumps(bgused, indent=1, ensure_ascii=False))
     icons = set([sb.get("chipIcon", "trending-up")])

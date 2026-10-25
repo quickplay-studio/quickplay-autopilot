@@ -1144,6 +1144,24 @@ def shape(b, picks):
         beats[0]["visual"] = {"type": "none"}
 
 
+def sponsor_board(b, series=None):
+    """Daily sponsorship (25 October, pipeline/sponsor.py): while a daily campaign is live (clips/campaigns.json "daily": true),
+    config daily_sponsor_share (0.3) of the Shorts carry it. The draw is fixed by the board id (a series by its first part, so its
+    parts agree) and recorded on the board as test.sponsor: the campaign id, or "none" for the rest and for a sad or serious
+    story. The render does the rest (sound, #ad, hashtags, paid promotion); drivers.py measures the arm like any test field.
+    Dormant, and the board untouched, while no daily campaign is live. Returns the arm, or None when nothing was recorded."""
+    try:
+        import sponsor
+        cs = sponsor.active()
+        if not cs: return None
+        arm = "none" if sponsor.sombre(b) else sponsor.pick(str((series or {}).get("id") or b.get("id")), cs, sponsor.share(CFG))
+    except Exception as e:
+        print(f"{b.get('id')}: sponsor draw skipped: {str(e)[:120]}")
+        return None
+    if arm: b.setdefault("test", {})["sponsor"] = arm
+    return arm
+
+
 def writer_name(model):
     return model if ":" in model else f"gemini:{model}"
 
@@ -1541,6 +1559,7 @@ def main():
         shape(b, tests)
         if validate.check(b)[0]: b = json.loads(before)
         b.update(kind=kind, test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")))
+        sponsor_board(b, series)         # a live daily campaign: this Short's arm (test.sponsor); the board is left alone without one
         if tests.get("franchise") == "named":
             name = FRANCHISE.get(b.get("category") or p.get("category") or "", "Quickplay Facts")
             n = 1 + franchise_count(name, written)

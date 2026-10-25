@@ -417,7 +417,7 @@ function renderAt(t) {
   const caps = document.getElementById('caps');
   caps.style.top = (top && top.capTop && vis > 0.5) ? '400px' : '';
   let g = D.groups.find(g => t >= g.start && t < g.end);
-  if (!g) { caps.innerHTML = ''; return; }
+  if (!g || (D.play || []).some(w => t >= w[0] && t < w[1])) { caps.innerHTML = ''; return; }      // no captions while a clip's own sound plays (a "let it play" window)
   caps.innerHTML = '<div class="capbox">' + g.words.map(wi => { const w = D.words[wi]; const on = t >= w.start && t < w.end + 0.02; return `<span class="cw ${on ? 'on' : ''}">${esc(w.cap)}</span>`; }).join('') + '</div>';
   const box = caps.firstChild, fit = Math.min(1, (caps.clientHeight - 8) / Math.max(1, box.offsetHeight));
   if (fit < 1) box.style.transform = `scale(${fit.toFixed(3)})`;      // long words never spill out of the safe caption area

@@ -13,6 +13,10 @@ Shot "src" forms (anything else is treated as a local path under pipeline/):
                                   lacks: only licences that allow commercial use and changes, the name must be in the title
   nasa:video:<words>              NASA's image and video library (public domain), for space: real launches, missions, crews
   nasa:image:<words>
+  clip:<path>[:<start>[:<end>]]   footage that is already on this runner (25 October, clips.py commentary Shorts): a file under
+                                  the clips work areas (clips/, CLIPS_WORK, /mnt/clips, /tmp/clips), never downloaded. With a start
+                                  and an end the shot plays from <start> (the file's own seconds); when the two are the same
+                                  second it is a freeze frame of that second (a picture, so it counts as no footage)
 
 A video shot with "cuts": "auto" gets scene-cut detection, so trailer clips never cross a cut (render3 scene_fit).
 resolve() keeps each shot's own form in shot["from"], and extras() (the minimal style's fast pace, 24 October) adds more
@@ -316,10 +320,45 @@ def gameplay_clip(sid, k):
     return f, (h // 7) % max(1, int(dur) - 20)
 
 
+CLIP_NUM = re.compile(r"\d+(?:\.\d+)?")
+
+
+def clip_roots():
+    """The folders a clip: source may name: the repo's clips/ folder and the clips work disk (CLIPS_WORK, /mnt/clips, /tmp/clips)."""
+    roots = [HERE.parent / "clips", pathlib.Path("/mnt/clips"), pathlib.Path("/tmp/clips")]
+    if os.environ.get("CLIPS_WORK"): roots.append(pathlib.Path(os.environ["CLIPS_WORK"]))
+    return [r.resolve() for r in roots]
+
+
+def clip_parse(rest):
+    """'<path>[:<start>[:<end>]]' -> (path, start or None, end or None); the numbers are taken from the right, so a path may hold a colon."""
+    parts, nums = rest.split(":"), []
+    while len(parts) > 1 and len(nums) < 2 and CLIP_NUM.fullmatch(parts[-1].strip()):
+        nums.insert(0, float(parts.pop().strip()))
+    return ":".join(parts), (nums[0] if nums else None), (nums[1] if len(nums) > 1 else None)
+
+
+def clip_file(rest):
+    """(local file, start, end) for a clip: source. The file must exist under one of the clips work areas (a board can never
+    point a render at any other file on the runner)."""
+    path, a, b = clip_parse(rest)
+    f = pathlib.Path(path)
+    f = (f if f.is_absolute() else HERE.parent / f).resolve()
+    if not any(f.is_relative_to(r) for r in clip_roots()): raise ValueError(f"clip file outside the clips work areas: {path}")
+    if not f.is_file(): raise FileNotFoundError(f"clip file missing: {path}")
+    return f, a, b
+
+
+def clip_frame(f, t, dest):
+    """One frame of a clip file at second t, as a picture (a freeze frame for a context beat)."""
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{max(0.0, t):.3f}", "-i", str(f), "-frames:v", "1", "-q:v", "2", str(dest)], check=True)
+    return dest
+
+
 def _words(kind, rest):
     """The search words of a shot's src, for the ranker's text ("pixabay:video:crowd cheering" -> "crowd cheering"; a Commons
-    file name without File: and its extension; nothing for a url or a page, whose picture is named by its source alone)."""
-    if kind in ("url", "page"): return ""
+    file name without File: and its extension; nothing for a url, a page or a clip, whose picture is named by its source alone)."""
+    if kind in ("url", "page", "clip"): return ""
     if kind in ("pixabay", "nasa"): return rest.partition(":")[2] or rest
     if kind == "commons": return re.sub(r"\.\w{2,5}$", "", re.sub(r"^File:", "", rest, flags=re.I)).replace("_", " ")
     return rest
@@ -363,6 +402,16 @@ def resolve(sb):
                 elif kind == "page": url, credit, source = page_image(rest)
                 elif kind == "openverse": url, credit, source = openverse(rest, used)
                 elif kind == "nasa": url, credit, source = nasa(*rest.split(":", 1), used)
+                elif kind == "clip":         # footage already on this runner (clips.py): no download; a picture when start == end
+                    f, a, b = clip_file(rest)
+                    res = {"credit": shot.get("credit") or sb.get("credit", ""), "source": shot.get("source", "")}
+                    if a is not None and b is not None and abs(b - a) < 0.05:
+                        f = clip_frame(f, a, d / f"{n:02d}_clipframe_{hashlib.sha1(src.encode()).hexdigest()[:8]}.jpg")
+                    else:
+                        if a is not None: res["start"] = a
+                        if b is not None: res["clip_end"] = b
+                    n += 1; shot.update(src=os.path.relpath(f, HERE), **res)
+                    continue
                 elif kind == "gameplay":     # our own recordings when there are any, else stock video of the words
                     g = gameplay_clip(sid, n)
                     if g:

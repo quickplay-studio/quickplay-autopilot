@@ -8,6 +8,19 @@
  "submit_note": "Vyro drops a session that arrives from GitHub's servers (22 October), so the Mac Chrome run (19:07 UK, docs/CHROME_JOBS.md) submits Vyro in Charlie's own browser; GitHub leaves Vyro rows alone (submit_by mac) and submits Content Rewards itself at 19:01; a Content Rewards row GitHub could not submit is the Mac run's fallback.",
  "min_active": 6,
  "min_active_note": "Charlie (22 October): fully automatic. GitHub switches a campaign off at its end date or when its budget is spent (check_campaigns) and shares the day's number among the rest; the Mac Chrome run keeps at least min_active campaigns live with footage by joining the best-ranked fitting ones (status/scout.md for Content Rewards, Vyro's open list read in Chrome) whenever the count, less those ending within 3 days, falls short.",
+ "clips_format": "commentary",
+ "clips_format_note": "25 October (Charlie: the clips get no traction; YouTube stopped recommending re-uploaded clips on 1 October): every active campaign's clips are commentary Shorts, made by pipeline/commentary.py and rendered by the Daily pipeline (run_board.py): our argument and checked context fill most of the runtime and the permitted footage is the evidence (at most 40%, at most 15 seconds in one piece, the streamer's own sound only in a let-it-play window of up to 6 seconds). A campaign's own \"format\" (commentary or cut) wins; \"cut\" is the old way and stays as the control and as the fallback when a Short cannot be made (no voice on the runner, no checked facts about the subject, no punchline, strong language near it, under 9 minutes left). A series (whole episodes in order) and a campaign whose rules avoid AI-made video are always cuts. CLIPS_FORMAT in the environment beats both.",
+ "channel_categories": {
+  "gaming": "Gaming",
+  "irl": "Entertainment",
+  "clips": "Entertainment"
+ },
+ "channel_names": {
+  "clips": "Quickplay Clips",
+  "gaming": "Quickplay Gaming Clips",
+  "irl": "Quickplay IRL Clips"
+ },
+ "channel_note": "channel_categories: the Daily category of a commentary Short made for each clips channel; channel_names: the name shown on screen in its corner.",
  "campaigns": {
   "speed-expedia": {
    "name": "$8,000 IShowSpeed x Expedia Clipping Campaign",
@@ -54,7 +67,12 @@
     "where": "the campaign page, Submit clip"
    },
    "budget_left": 421,
-   "channel": "irl"
+   "channel": "irl",
+   "format": "cut",
+   "format_note": "the rules avoid AI-generated video, so this campaign's clips stay cuts (the take is text on screen)",
+   "wikipedia": [
+    "IShowSpeed"
+   ]
   },
   "forgegui-roblox": {
    "name": "ForgeGUI Clipping [Roblox] (BloxClips)",
@@ -103,7 +121,10 @@
     "language": "English"
    },
    "ends": "2026-11-06",
-   "channel": "irl"
+   "channel": "irl",
+   "wikipedia": [
+    "MrBeast"
+   ]
   },
   "tdr-stinkyasher": {
    "platform": "Vyro",
@@ -144,7 +165,10 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Roblox"
+   ]
   },
   "tdr-mitch": {
    "platform": "Vyro",
@@ -185,7 +209,10 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Roblox"
+   ]
   },
   "tdr-flamingo": {
    "platform": "Vyro",
@@ -226,7 +253,10 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Roblox"
+   ]
   },
   "tdr-jenny": {
    "platform": "Vyro",
@@ -267,7 +297,10 @@
     "language": "English"
    },
    "ends": "2026-10-29",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Roblox"
+   ]
   },
   "valorant-microdrama": {
    "platform": "Vyro",
@@ -311,7 +344,11 @@
    },
    "ends": "2026-11-02",
    "per_day_note": "per_day counts whole episodes for a series campaign (each is 2 or 3 parts)",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Valorant"
+   ],
+   "subject_role": "series"
   },
   "valorant-champs": {
    "platform": "Vyro",
@@ -351,7 +388,11 @@
     "language": "English"
    },
    "ends": "2026-10-30",
-   "channel": "gaming"
+   "channel": "gaming",
+   "wikipedia": [
+    "Valorant Champions Tour"
+   ],
+   "subject_role": "esports event"
   },
   "sega-metaphor": {
    "name": "SEGA Metaphor: ReFantazio Switch 2 Demo Clipping (Clipping Culture)",
@@ -495,7 +536,8 @@
     "language": "English"
    },
    "ends": "2026-10-30",
-   "channel": "irl"
+   "channel": "irl",
+   "subject_role": "creator"
   }
  },
  "daily_clips": 10,

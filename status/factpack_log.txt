@@ -1,5 +1,10 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Halloween 2026: 0 verified, 3 one-source, 2 pages
-covered recently, no pack: GTA 6; Ballon d'Or 2026; Clayface (film); Avengers: Doomsday; UFC 333; 2026 United States Grand Prix; LISA; Windows XP; Mortimer and Whitehouse: Gone Fishing
-1 packs, 0 verified facts, 3 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:openai/gpt-oss-120b": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}
+GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
+Halloween 2026: 0 verified, 6 one-source, 2 pages
+Halloween history: 0 verified, 7 one-source, 1 pages
+EA shuts down BioWare: 0 verified, 3 one-source, 2 pages
+saints vs steelers: 2 verified, 2 one-source, 3 pages
+The Call the Police trend on TikTok and Instagram: 0 verified, 5 one-source, 1 pages
+covered recently, no pack: GTA 6; GTA 6 price; Ballon d'Or 2026; Ballon d'Or 2026 nominees; Ballon d'Or 2026 winner; Clayface (film); Windows XP; 2026 United States Grand Prix; Mortimer and Whitehouse: Gone Fishing; BABYMONSTER; Tate McRae; Zara Larsson
+6 packs, 2 verified facts, 23 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 7, "groq:openai/gpt-oss-120b": 3}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}

@@ -2,7 +2,7 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-25T08:38+00:00",
+ "as_of": "2026-10-25T13:21+00:00",
  "factors": {
   "hook_type": {
    "arms": {
@@ -14,11 +14,11 @@
     "number": {
      "n": 0,
      "needs": 70,
-     "verdict": "about typical"
+     "verdict": "push"
     }
    },
-   "settled": false,
-   "days_left": 12,
+   "settled": true,
+   "days_left": 0,
    "label": "hook type"
   },
   "length": {
@@ -48,7 +48,7 @@
     "curiosity": {
      "n": 0,
      "needs": 70,
-     "verdict": "about typical"
+     "verdict": "early sign"
     }
    },
    "settled": false,

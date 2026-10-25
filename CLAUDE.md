@@ -34,6 +34,8 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   watch_share_max (a third) of the day together.
 
 ## Where to look
+- Claude Code on the Mac (25 October): docs/CLAUDE_CODE.md (setup, the three routine prompts, Sonnet and Haiku defaults in
+  .claude/settings.json). A new project starts from templates/claude-code-project/.
 - The hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
   rebuild). Its Overview opens with "Your actions this week": status/actions.json plus issues labelled needs-charlie
   (alerts.raise_issue(..., labels=["needs-charlie"])). actions.py keeps that list true (below), so add an item there

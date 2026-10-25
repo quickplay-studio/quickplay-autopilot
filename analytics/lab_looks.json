@@ -53,7 +53,17 @@
     "beat_punches": false,
     "lab": true,
     "parent": "steady",
-    "born": "2026-10-19"
+    "born": "2026-10-19",
+    "retired": "2026-10-25: 1.07x against 1.29x for steady over 15 Shorts"
+   },
+   "lab-energy-1025": {
+    "desc": "camera motion 0.9, punch-ins 0.03",
+    "motion": 0.9,
+    "punch": 0.03,
+    "beat_punches": false,
+    "lab": true,
+    "parent": "steady",
+    "born": "2026-10-25"
    }
   },
   "grade": {
@@ -87,7 +97,8 @@
  },
  "retired": {
   "captions": {
-   "clean": "2026-10-23: 1.22x against 3.58x for lab-captions-1019 over 19 Shorts"
+   "clean": "2026-10-23: 1.22x against 3.58x for lab-captions-1019 over 19 Shorts",
+   "minimal": "2026-10-25: 1.05x against 1.26x for lab-captions-1019 over 18 Shorts"
   },
   "voice": {
    "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts"
@@ -97,6 +108,9 @@
   },
   "opening": {
    "graphic_first": "2026-10-23: 1.22x against 1.88x for image_first over 35 Shorts"
+  },
+  "grade": {
+   "cinematic": "2026-10-25: 1.02x against 1.30x for natural over 29 Shorts"
   }
  },
  "log": [
@@ -177,7 +191,31 @@
    "dimension": "captions",
    "change": "testing lab-captions-1024: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel",
    "why": "one or two settings changed from the best so far, lab-captions-1019"
+  },
+  {
+   "day": "2026-10-25",
+   "dimension": "captions",
+   "change": "retired minimal",
+   "why": "1.05x against 1.26x for lab-captions-1019 over 18 Shorts"
+  },
+  {
+   "day": "2026-10-25",
+   "dimension": "energy",
+   "change": "retired lab-energy-1019",
+   "why": "1.07x against 1.29x for steady over 15 Shorts"
+  },
+  {
+   "day": "2026-10-25",
+   "dimension": "energy",
+   "change": "testing lab-energy-1025: camera motion 0.9, punch-ins 0.03",
+   "why": "one or two settings changed from the best so far, steady"
+  },
+  {
+   "day": "2026-10-25",
+   "dimension": "grade",
+   "change": "retired cinematic",
+   "why": "1.02x against 1.30x for natural over 29 Shorts"
   }
  ],
- "day": "2026-10-24"
+ "day": "2026-10-25"
 }

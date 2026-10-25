@@ -1,445 +1,21 @@
 {
- "date": "2026-10-24",
- "built": "2026-10-24T19:10+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "evening",
+ "date": "2026-10-25",
+ "built": "2026-10-25T07:37+00:00",
+ "model": "gemini-3.5-flash-lite + gemini-flash-latest",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 4,
-   "topic": "Ballon d'Or 2026",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Discover when and where the 2026 Ballon d'Or will take place!"
-   ],
-   "sources": [
-    [
-     "All you need to know about the 2026 Ballon d'Or",
-     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-23"
-    ],
-    [
-     "All you need to know about the 2026 Ballon d'Or",
-     "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
-     "BBC",
-     "2026-10-23"
-    ],
-    [
-     "Ballon d'Or 2026",
-     "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
-     }
-    },
-    {
-     "claim": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
-      "2": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019."
-     }
-    },
-    {
-     "claim": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world.",
-      "2": "Back for its 70th year, the Ballon d'Or ceremony will once again recognise the best footballing talent in the world."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Lionel_Messi_-_Reus.jpg"
-   ]
-  },
-  {
-   "n": 6,
-   "topic": "Ballon d'Or 2026 winner",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Will London host the 2026 Ballon d'Or ceremony?",
-    "Discover when the 2026 Ballon d'Or takes place!"
-   ],
-   "sources": [
-    [
-     "All you need to know about the 2026 Ballon d'Or",
-     "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-23"
-    ],
-    [
-     "All you need to know about the 2026 Ballon d'Or",
-     "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
-     "BBC",
-     "2026-10-23"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
-     }
-    },
-    {
-     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
-      "2": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday 26 October at London's Palladium Theatre",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
-      "2": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
-     }
-    },
-    {
-     "claim": "The ceremony is traditionally held in France and has taken place in Paris' Theatre du Chatelet since 2019",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
-      "2": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019."
-     }
-    },
-    {
-     "claim": "A dual voting system is used to determine Ballon d'Or winners",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "A dual voting system is used to determine Ballon d'Or winners.",
-      "2": "A dual voting system is used to determine Ballon d'Or winners."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 8,
-   "topic": "The Celebrity Traitors",
-   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
-   "category": "Entertainment",
-   "what_is_new": "Details from episode eight of The Celebrity Traitors series two revealed that Miranda Hart was murdered, leaving 10 players.",
-   "hooks": [
-    "Did you know The Celebrity Traitors is a spin off?",
-    "Claudia Winkleman presented the hit series."
-   ],
-   "sources": [
-    [
-     "Caroline Hirons: ‘My celebrity crush? Colin Farrell. I hope he reads this – I hear he likes an older woman’",
-     "https://www.theguardian.com/lifeandstyle/2026/oct/24/caroline-hirons-interview-beauty-aesthetician-writer-new-book-skin-rules",
-     "Guardian",
-     "2026-10-24"
-    ],
-    [
-     "Celebrity Traitors left on a knife edge after a trip to the field of screams",
-     "https://www.bbc.co.uk/news/articles/c6jdmrz00v7lo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-23"
-    ],
-    [
-     "The Celebrity Traitors",
-     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Claudia Winkleman presented The Celebrity Traitors.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "On to Friday's mission, as the dwindling group arrived in a \"field of screams\", as presenter Claudia Winkleman aptly put it, full of scary-looking scarecrows.",
-      "3": "Claudia Winkleman presented the series."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The Celebrity Traitors is a spin off of the British version of the reality television series The Traitors.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The Celebrity Traitors (also known as The Celebrity Traitors UK) is a spin-off of the British version of the reality television series The Traitors."
-     }
-    },
-    {
-     "claim": "Claudia Winkleman presented the series.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Claudia Winkleman presented the series."
-     }
-    },
-    {
-     "claim": "A second series of The Celebrity Traitors began broadcasting on 1 October 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "A second series began broadcasting on the 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October."
-     }
-    },
-    {
-     "claim": "The Celebrity Traitors was first broadcast on BBC One on 8 October 2025.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It was first broadcast on BBC One on 8 October 2025."
-     }
-    },
-    {
-     "claim": "The murder of Miranda Hart left only 10 of the initial 21 players remaining in the castle.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "When it became clear that the murdered Miranda had danced her last dance in the castle - leaving only 10 of the initial 21 players"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "Celebrity Traitors 2026 cast",
-   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Maya Jama and Richard E Grant start as secret Traitors.",
-    "Richard E Grant admits his betrayal to Joe Lycett on debut.",
-    "James Acaster joins the coven after a dramatic recruitment."
-   ],
-   "sources": [
-    [
-     "Celebrity Traitors 2026: Who will be banished and who is tipped to win?",
-     "https://www.standard.co.uk/showbiz/celebrity-traitors-2026-tonight-richard-e-grant-b1298716.html",
-     "Evening Standard",
-     "2026-10-08"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Maya Jama and Richard E Grant were the original Traitors, with James Acaster later recruited as the third member of their coven.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This year's original Traitors were Maya Jama and Richard E Grant, with James Acaster later recruited as the third member of their coven."
-     }
-    },
-    {
-     "claim": "Richard E Grant explicitly told Joe Lycett that he was a Traitor in the first episode.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Grant even explicitly revealed to Joe Lycett that he was a Traitor during the first episode, leaving the Faithfuls none the wiser about whether he"
-     }
-    },
-    {
-     "claim": "The Traitors chose to recruit James Acaster into their coven.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "They chose to recruit Acaster, who was welcomed into the coven by Grant and Jama."
-     }
-    },
-    {
-     "claim": "There is a cash prize of up to £100,000 for the winner's chosen charity.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "There is also a cash prize of up to £100,000 for the winner's chosen charity."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 13,
-   "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Discover the real cost and release date of GTA 6!",
-    "Is GTA 6 really worth the massive $80 price tag?",
-    "Everything you need to know about the upcoming GTA 6 release."
-   ],
-   "sources": [
-    [
-     "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
-     "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
-     "Guardian",
-     "2026-10-24"
-    ],
-    [
-     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
-     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
-     "The Hollywood Reporter",
-     "2026-10-15"
-    ],
-    [
-     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
-     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
-     "IGN",
-     "2026-06-25"
-    ],
-    [
-     "GTA 6 price",
-     "https://en.wikipedia.org/wiki/Gas_Price",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Grand Theft Auto VI costs $79.99 across PlayStation 5 and Xbox Series X and S.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
-      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
-     }
-    },
-    {
-     "claim": "The Ultimate Edition of Grand Theft Auto VI is priced at $99.99.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99.",
-      "3": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is set to be released on Nov. 19, 2026.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
-      "3": "GTA 6 launches on November 19, 2026."
-     }
-    },
-    {
-     "claim": "Parent company TakeTwo is estimated to have spent $1 billion to $1.5 billion on developing Grand Theft Auto VI.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "It cost the company in the ballpark of $1 billion to $1.5 billion to make.",
-      "3": "Discussion of the price of GTA 6 comes amid speculation it may be the most expensive video game ever made, with parent company Take-Two estimated"
-     }
-    },
-    {
-     "claim": "Physical copies of Grand Theft Auto VI do not include a disc and are just a code in a box.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "there will be no physical version of GTA 6.",
-      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed. They're just a code in a box."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Rockstar took eight years developing Grand Theft Auto VI.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Rockstar took eight years developing GTA 6, which had more starts and stops than some of the game’s banged up beater vehicles."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
-   ]
-  },
-  {
    "n": 14,
    "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "GTA VI drops on November 19 after record‑breaking trailer debut",
-    "Nearly thirty‑minute trailer starring Jason and Lucia thrills fans",
-    "Official launch trailer released October 23, sparking massive online buzz"
+    "Nearly 30 minutes of GTA 6 action debuted on Netflix",
+    "GTA 6 trailer mixes cinematics with real gameplay",
+    "Release date set for Nov 19 on PS5 and Xbox"
    ],
    "sources": [
     [
@@ -458,7 +34,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "The Grand Theft Auto VI trailer runs for nearly thirty minutes.",
+     "claim": "Rockstar delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available elsewhere a few hours later.",
      "sources": [
       2
      ],
@@ -467,21 +43,30 @@
      }
     },
     {
-     "claim": "The Grand Theft Auto VI trailer premiered on Netflix before appearing elsewhere.",
+     "claim": "The trailer was a mix of cinematics and gameplay and looked a lot like Grand Theft Auto.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
+      "2": "The trailer was a mix of cinematics and gameplay, and it looked a lot like, well... Grand Theft Auto."
      }
     },
     {
-     "claim": "The trailer showcases the protagonists Jason and Lucia.",
+     "claim": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "A handful of segments followed Jason and Lucia as they roamed around the city without any pressing concerns hanging over them, and Rockstar briefly swapped"
+      "2": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19."
+     }
+    },
+    {
+     "claim": "Rockstar let magazine Dazed in on a few features that moseyed into Leonida from Red Dead Redemption 2, like Jason's and Lucia's appearances altering based on how they eat and exercise.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Rockstar let magazine Dazed in on a few features that moseyed into Leonida from Red Dead Redemption 2, like Jason's and Lucia's appearances altering based"
      }
     }
    ],
@@ -490,78 +75,244 @@
    ]
   },
   {
-   "n": 15,
-   "topic": "Dai Dai by Shakira & Burna Boy",
-   "signal": "Apple Music GB: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
+   "n": 24,
+   "topic": "zendaya",
+   "signal": "Google Trends US 200+",
+   "category": "Film",
+   "what_is_new": "Zendaya is reportedly set to campaign in the Best Actress category for her role as Chani in Dune: Part III.",
    "hooks": [
-    "Shakira and Burna Boy just hit a massive tenth week at number one!",
-    "Dai Dai makes history with ten weeks at the top of the global chart!"
+    "Did you know Zendaya starred in Spider-Man Brand New Day in 2026?",
+    "Zendaya is changing categories for Dune Part Three!",
+    "Zendaya won two Primetime Emmy Awards for her role in Euphoria."
    ],
    "sources": [
     [
-     "Shakira & Burna Boy’s ‘Dai Dai’ Scores 10th Week at No. 1 on Billboard Global Excl. U.S. Chart",
-     "https://www.billboard.com/music/chart-beat/shakira-burna-boy-global-charts-sept-5-1236329009/",
-     "Billboard",
-     "2026-08-31"
+     "Zendaya Sets Best Actress Oscar Campaign for Dune: Part 3",
+     "https://www.ign.com/articles/zendaya-dune-part-3-best-actress-oscars",
+     "IGN",
+     "2026-10-23"
+    ],
+    [
+     "zendaya",
+     "https://en.wikipedia.org/wiki/Zendaya",
+     "Wikipedia",
+     ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Zendaya reprised the role of Michelle Jones Watson in the film Spider-Man Brand New Day in 2026.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "starring in the two highest-grossing movies of 2026, Spider-Man: Brand New Day and The Odyssey.",
+      "2": "She reprised the role in the film's sequels Far From Home (2019), No Way Home (2021), and Brand New Day (2026)."
+     }
+    },
+    {
+     "claim": "Zendaya starred in The Odyssey in 2026.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "starring in the two highest-grossing movies of 2026, Spider-Man: Brand New Day and The Odyssey.",
+      "2": "She also starred in the musical film The Greatest Showman (2017), Denis Villeneuve's Dune trilogy (2021–2026), and The Odyssey (2026)"
+     }
+    },
+    {
+     "claim": "Zendaya starred in The Drama in 2026.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Zendaya has enjoyed a stellar year as an actor, earning praise for The Drama and starring in the two highest-grossing movies of 2026",
+      "2": "and has earned praise for her performances in the romance films Malcolm & Marie (2021), Challengers (2024) and The Drama (2026)."
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Shakira and Burna Boy's Dai Dai scores a milestone tenth week at number one on the Billboard Global Excl. U.S. chart.",
+     "claim": "Zendaya played Chani in Dune Part Three.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Shakira and Burna Boy’s “Dai Dai (FIFA World Cup Official Song 2026)” nets a milestone 10th week at No. 1 on the Billboard Global Excl."
+      "1": "Zendaya will reportedly campaign in the Best Actress category for her role as Chani in Dune: Part III in the upcoming Oscars race."
      }
     },
     {
-     "claim": "Dai Dai also tops the Billboard Global 200 chart for a seventh week.",
+     "claim": "Zendaya was born in Oakland, California.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "It also tops the Billboard Global 200 chart for a seventh week."
+      "2": "Born in Oakland, California, Zendaya began her career as a child model and dancer"
      }
     },
     {
-     "claim": "Dai Dai drew 36.7 million streams and sold 4,000 worldwide from August 21 to 27.",
+     "claim": "Zendaya won two Primetime Emmy Awards for her performance in Euphoria.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "“Dai Dai” drew 36.7 million streams (down 9% week over week) and sold 4,000 (down 15%) worldwide Aug. 21-27, according to Luminate."
+      "2": "For her performance as the drug-addicted teenager Rue Bennett in the HBO drama series Euphoria (2019–2026), Zendaya was nominated for three Primetime Emmy Awards for"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Zendaya-byPhilipRomano.jpg"
+   ]
+  },
+  {
+   "n": 30,
+   "topic": "UFC 333",
+   "signal": "Wikipedia 224,691 views",
+   "category": "Sport",
+   "what_is_new": "Alexander Volkanovski stopped Movsar Evloev inside two rounds at UFC 333 in Abu Dhabi to retain his featherweight belt.",
+   "hooks": [
+    "Did Alexander Volkanovski make history at UFC 333?",
+    "Find out how Alexander Volkanovski won at UFC 333."
+   ],
+   "sources": [
+    [
+     "Volkanovski stops Evloev for record ninth title win",
+     "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/ckvg7j2p471lo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-24"
+    ],
+    [
+     "UFC 333 Livestream: Where to Watch Volkanovski vs. Evloev Main Card",
+     "https://www.hollywoodreporter.com/tv/tv-news/where-to-watch-ufc-333-volkanovski-evloev-live-stream-free-1236739560/",
+     "The Hollywood Reporter",
+     "2026-10-24"
+    ],
+    [
+     "Here’s How to Watch UFC 333 Live Online for Free",
+     "https://www.billboard.com/culture/product-recommendations/ufc-333-oct-2026-watch-mma-live-online-free-1236364114/",
+     "Billboard",
+     "2026-10-24"
+    ],
+    [
+     "UFC 333",
+     "https://en.wikipedia.org/wiki/UFC_333",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Alexander Volkanovski defeated Movsar Evloev inside two rounds at UFC 333 in Abu Dhabi.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "Alexander Volkanovski strengthened his claim as the greatest featherweight of all time as he defeated Movsar Evloev inside two rounds at UFC 333 in Abu",
+      "3": "On Saturday (Oct. 24), UFC 333 takes place at Etihad Arena in Abu Dhabi, United Arab Emirates, with a start time of 10 a.m. ET/7",
+      "4": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
      }
     },
     {
-     "claim": "Dai Dai totaled 31.4 million streams and 3,000 sold outside the United States.",
+     "claim": "UFC 333 was staged at Etihad Arena in Abu Dhabi, United Arab Emirates, on 24 October 2026.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "On Saturday (Oct. 24), UFC 333 takes place at Etihad Arena in Abu Dhabi, United Arab Emirates, with a start time of 10 a.m. ET/7",
+      "4": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
+     }
+    },
+    {
+     "claim": "Alexander Volkanovski defended his UFC featherweight championship against Movsar Evloev in the main event of UFC 333.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "UFC 333 is officially underway, but fans still have time to catch the main event: the Featherweight Championship bout between Alexander Volkanovski and Movsar Evloev,",
+      "3": "Two prime fighters face off in the championship main event, as Australian fighter Alexander Volkanovski (28-4-0) defends his featherweight title against Russian Movsar Evloev (20-0-0).",
+      "4": "A UFC Featherweight Championship bout between reigning two-time champion Alexander Volkanovski and undefeated contender Movsar Evloev headlined the event.[3]"
+     }
+    },
+    {
+     "claim": "Alexander Volkanovski stopped Movsar Evloev in the second round at UFC 333.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Alexander Volkanovski strengthened his claim as the greatest featherweight of all time as he defeated Movsar Evloev inside two rounds at UFC 333 in Abu",
+      "4": "Performance of the Night: Alexander Volkanovski and Lone'er Kavanagh"
+     }
+    },
+    {
+     "claim": "Alexander Volkanovski became the first opponent to defeat Movsar Evloev.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "The 38-year-old became the first opponent to defeat Russian Evloev, unleashing a lethal ground-and-pound combination to earn a stoppage victory in the final seconds of",
+      "4": "A UFC Featherweight Championship bout between reigning two-time champion Alexander Volkanovski and undefeated contender Movsar Evloev headlined the event.[3]"
+     }
+    },
+    {
+     "claim": "Lone'er Kavanagh fought Ramazan Temirov on the UFC 333 fight card.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "A little over three months after losing to Brandon Royval, the 27-year-old Briton bounced back by handing Ramazan Temirov the first defeat of his UFC",
+      "3": "Check out entire UFC 333 fight card below: Main Card, 2 p.m. ET/11 a.m. PT - Featherweight: Alexander Volkanovski (champion) vs. Movsar Evloev; Main Event,"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Alexander Volkanovski became the first UFC featherweight to win nine title fights.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "It totaled 31.4 million streams (down 9%) and 3,000 sold (down 18%) outside the U.S."
+      "1": "With his success, the Australian made history by becoming the first UFC featherweight to win nine title fights, surpassing Brazilian Jose Aldo's record of eight."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 21,
-   "topic": "harvey elliott",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
+   "n": 9,
+   "topic": "Halloween 2026",
+   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
+   "category": "Entertainment",
+   "what_is_new": "On 24 October 2026, guides were published highlighting non-scary video games and spooky night sky targets for the Halloween season.",
    "hooks": [
-    "Did you know Harvey Elliott was born on April 4 2003?",
-    "Harvey Elliott made his Fulham debut as a 15 year old!"
+    "Halloween: The Game launched on September 8, 2026!"
    ],
    "sources": [
     [
-     "harvey elliott",
-     "https://en.wikipedia.org/wiki/Harvey_Elliott",
+     "The 5 least-scary scary games for people who are scared of scary games",
+     "https://www.polygon.com/best-not-scary-horror-games/",
+     "Polygon",
+     "2026-10-24"
+    ],
+    [
+     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
+     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
+     "Space.com",
+     "2026-10-24"
+    ],
+    [
+     "Halloween 2026",
+     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
      "Wikipedia",
      ""
     ]
@@ -569,110 +320,30 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Harvey Daniel James Elliott was born on 4 April 2003 in Chertsey, Surrey.",
+     "claim": "Halloween: The Game was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series S.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "Harvey Daniel James Elliott (born 4 April 2003) is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on"
+      "3": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
      }
     },
     {
-     "claim": "Harvey Elliott made his first team debut for Fulham on 25 September 2018 as a 15 year old in the EFL Cup third round.",
+     "claim": "Luigi's Mansion 3 is one of two video games in history that includes the character Gooigi.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He made his first-team debut for Fulham on 25 September 2018 as a 15-year-old in the EFL Cup third round away to Millwall, as an"
+      "1": "Luigi’s Mansion 3 is also one of two games in history to feature Gooigi, an aptly-named Luigi clone made of green goo."
      }
     },
     {
-     "claim": "Harvey Elliott is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on loan from Premier League club Liverpool.",
+     "claim": "Halloween: The Game was launched on 8 September 2026 for PlayStation 5, Windows, and Xbox Series X and Series S.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "Harvey Daniel James Elliott (born 4 April 2003) is an English professional footballer who plays as an attacking midfielder for La Liga club Valencia, on"
-     }
-    },
-    {
-     "claim": "He became the youngest ever Premier League player at the time, at 16 years and 30 days old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In doing so, he became the youngest ever Premier League player at the time, at 16 years and 30 days old, beating the then‑record set"
-     }
-    },
-    {
-     "claim": "His transfer fee was a record for a then‑16‑year‑old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The fee was a record for a then‑16 year old."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harvey_Elliott_in_2022.jpg"
-   ]
-  },
-  {
-   "n": 35,
-   "topic": "Sonic the Hedgehog fan creations",
-   "signal": "Bluesky trending, 2,011 posts",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Discover amazing free fan made Sonic the Hedgehog tabletop games today.",
-    "Play as your original character in these two fan made Sonic games.",
-    "Try out these incredible fan made Sonic tabletop RPG adventures now."
-   ],
-   "sources": [
-    [
-     "Play as your Sonic the Hedgehog OC with these fan made tabletop games",
-     "https://www.polygon.com/tabletop-games/501703/sonic-the-hedgehog-oc-fan-ttrpg-tag-team-heroes-rings-and-running-shoes/",
-     "Polygon",
-     "2024-12-23"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Fans have created two tabletop games called Rings and Running Shoes and Sonic Tag Team Heroes.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "I've found two fan-made Sonic games, for two different kinds of players."
-     }
-    },
-    {
-     "claim": "Both fan made Sonic tabletop games are completely free.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "You can get both titles completely free, at sonictth.com and ringsandrunningshoes.itch.io."
-     }
-    },
-    {
-     "claim": "Sonic Tag Team Heroes uses Dungeons and Dragons inspired grid based combat.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Sonic Tag-Team Heroes is a more traditional tabletop game with crunchy, Dungeons & Dragons-inspired grid-based combat to play through heroic boss battles."
-     }
-    },
-    {
-     "claim": "Rings and Running Shoes is a Powered by the Apocalypse game.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Rings and Running Shoes is a Powered by the Apocalypse game set in the world of anthropomorphic hedgehogs and echidnas."
+      "3": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
      }
     }
    ],

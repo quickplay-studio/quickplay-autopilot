@@ -2,7 +2,7 @@
 
 **Progress** (Sun 25 Oct, 06:44): 12 of 1,000 subscribers · 8,551 of 10 million Shorts views in 90 days · 4,252 views in the last 24 hours (about 111,016 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
+YouTube checked Sun 25 Oct 7:37 (UK): 1 scheduled, 147 public, 15 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 24 Oct 20:04).
 
@@ -80,88 +80,108 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Sun 25 Oct 12:00 · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
+scheduled · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
+
+![QD-165](QD-165.jpg)
+
+### Sun 25 Oct 7:00 · Ballon d'Or 2026 ceremony is moving to London
+public · 15 views · 38 s · music: the-bombs · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
+
+![QD-162](QD-162.jpg)
+
+### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
+public · 199 views · 27 s · music: the-bombs · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
+
+![QD-164](QD-164.jpg)
+
+### Sun 25 Oct 4:00 · Richard E Grant admits betrayal to Joe Lycett
+public · 12 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
+
+![QD-163](QD-163.jpg)
+
 ### Sun 25 Oct 2:30 · Raye is 28 and Where Is My Husband just hit a billion streams 🎉
-private · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
+public · 40 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
 
 ![QD-161](QD-161.jpg)
 
 ### Sun 25 Oct 1:30 · Free Steam games you can play right now (Part 2) 🎮
-private · 27 s · music: try-to-catch-me · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
+public · 171 views · 27 s · music: try-to-catch-me · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
 
 ![QD-159](QD-159.jpg)
 
 ### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-private · 27 s · music: death-duel · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
+public · 18 views · 27 s · music: death-duel · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
 
 ![QD-158](QD-158.jpg)
 
 ### Sat 24 Oct 16:30 · Kimi Antonelli: F1's youngest world champion? 🏎️
-public · 6 views · 32 s · music: death-duel · [script](../boards/done/QD-157.json) · [YouTube](https://youtube.com/shorts/gIS6da6LTVE)
+public · 20 views · 32 s · music: death-duel · [script](../boards/done/QD-157.json) · [YouTube](https://youtube.com/shorts/gIS6da6LTVE)
 
 ![QD-157](QD-157.jpg)
 
 ### Sat 24 Oct 15:30 · Apple TV cancels Palm Royale despite 11 Emmy nominations 🌴
-public · 26 s · music: purple-desire · [script](../boards/done/QD-156.json) · [YouTube](https://youtube.com/shorts/EcMJ6WpHiy0)
+public · 1 views · 26 s · music: purple-desire · [script](../boards/done/QD-156.json) · [YouTube](https://youtube.com/shorts/EcMJ6WpHiy0)
 
 ![QD-156](QD-156.jpg)
 
 ### Sat 24 Oct 14:00 · Country legend John Anderson has died aged 71 🎸
-public · 3 views · 26 s · music: mississippi-mover · [script](../boards/done/QD-155.json) · [YouTube](https://youtube.com/shorts/yC_shy0URVM)
+public · 12 views · 26 s · music: mississippi-mover · [script](../boards/done/QD-155.json) · [YouTube](https://youtube.com/shorts/yC_shy0URVM)
 
 ![QD-155](QD-155.jpg)
 
 ### Sat 24 Oct 13:00 · Volkanovski vs Evloev: UFC 333 record on the line 🥊
-public · 20 views · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
+public · 75 views · 34 s · music: death-duel · [script](../boards/done/QD-154.json) · [YouTube](https://youtube.com/shorts/M-WnVtohhXI)
 
 ![QD-154](QD-154.jpg)
 
 ### Sat 24 Oct 12:00 · The Ballon d'Or is coming to London for the first time 🏆
-public · 20 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
+public · 34 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
 
 ![QD-153](QD-153.jpg)
 
 ### Sat 24 Oct 11:00 · Melanie C leads a sweaty Strictly workout to her own track 💪
-public · 69 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
+public · 110 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
 
 ![QD-152](QD-152.jpg)
 
 ### Sat 24 Oct 10:00 · Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮
-public · 4 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
+public · 9 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
 
 ![QD-151](QD-151.jpg)
 
 ### Sat 24 Oct 9:00 · Street Fighter movie: Chun-Li's 12-egg diet 🥚
-public · 144 views · 32 s · music: ten · [script](../boards/done/QD-056.json) · [YouTube](https://youtube.com/shorts/lc62rdRQvmk)
+public · 251 views · 32 s · music: ten · [script](../boards/done/QD-056.json) · [YouTube](https://youtube.com/shorts/lc62rdRQvmk)
 
 ![QD-056](QD-056.jpg)
 
 ### Sat 24 Oct 8:00 · New Alien movie confirmed, and Ridley Scott is producing 👽
-public · 53 views · 30 s · music: pulsar · [script](../boards/done/QD-148.json) · [YouTube](https://youtube.com/shorts/ZNbWfnNLFnU)
+public · 55 views · 30 s · music: pulsar · [script](../boards/done/QD-148.json) · [YouTube](https://youtube.com/shorts/ZNbWfnNLFnU)
 
 ![QD-148](QD-148.jpg)
 
 ### Sat 24 Oct 7:00 · GTA 6 has no disc, so what will it cost you? 🎮
-public · 14 views · 24 s · music: pulsar · [script](../boards/done/QD-146.json) · [YouTube](https://youtube.com/shorts/qQiayx_AZBQ)
+public · 15 views · 24 s · music: pulsar · [script](../boards/done/QD-146.json) · [YouTube](https://youtube.com/shorts/qQiayx_AZBQ)
 
 ![QD-146](QD-146.jpg)
 
 ### Sat 24 Oct 5:00 · How Barbara Palvin was discovered at age 13 ✨
-public · 1,140 views · 28 s · music: f16 · [script](../boards/done/QD-076.json) · [YouTube](https://youtube.com/shorts/bENhL4PxDDE)
+public · 1,158 views · 28 s · music: f16 · [script](../boards/done/QD-076.json) · [YouTube](https://youtube.com/shorts/bENhL4PxDDE)
 
 ![QD-076](QD-076.jpg)
 
 ### Sat 24 Oct 4:00 · Jorja Smith sings at the Amy Winehouse tribute 🎤
-public · 56 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
+public · 129 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
 
 ![QD-147](QD-147.jpg)
 
 ### Sat 24 Oct 2:30 · Cyberpunk 2077 now fits in your hands 🎮
-public · 30 views · 22 s · music: pulsar · on Facebook · [script](../boards/done/QD-149.json) · [YouTube](https://youtube.com/shorts/zIJUGpN-otU)
+public · 32 views · 22 s · music: pulsar · on Facebook · [script](../boards/done/QD-149.json) · [YouTube](https://youtube.com/shorts/zIJUGpN-otU)
 
 ![QD-149](QD-149.jpg)
 
 ### Sat 24 Oct 0:30 · BABYMONSTER's G-Dragon Drip collab 🎧
-public · 49 views · 21 s · music: paradise · on Facebook · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
+public · 67 views · 21 s · music: paradise · on Facebook · [script](../boards/done/QD-145.json) · [YouTube](https://youtube.com/shorts/IRlAawe_xY8)
 
 ![QD-145](QD-145.jpg)
 
@@ -171,77 +191,77 @@ public · 1 views · 29 s · music: purple-desire · on Facebook · [script](../
 ![QD-143](QD-143.jpg)
 
 ### Fri 23 Oct 18:00 · Jerry Hall’s early school exit and TV comeback 🌟
-public · 10 views · 29 s · music: after-sunset · on Facebook · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
+public · 17 views · 29 s · music: after-sunset · on Facebook · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
 
 ![QD-142](QD-142.jpg)
 
 ### Fri 23 Oct 17:30 · Avengers Doomsday preview drops during World Series ⚾
-public · 509 views · 24 s · music: in-battery · on Facebook · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
+public · 527 views · 24 s · music: in-battery · on Facebook · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
 
 ![QD-141](QD-141.jpg)
 
 ### Fri 23 Oct 17:00 · The Northumbria Mysteries: New BBC Detective Drama 🎬
-public · 461 views · 25 s · music: false-vacuum-decay · on Facebook · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
+public · 766 views · 25 s · music: false-vacuum-decay · on Facebook · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
 
 ![QD-140](QD-140.jpg)
 
 ### Fri 23 Oct 16:30 · Modern Warfare 4: New matchmaking system revealed 🎮
-public · 20 views · 43 s · music: dead-wrong · on Instagram · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
+public · 22 views · 43 s · music: dead-wrong · on Instagram · [script](../boards/done/QD-139.json) · [YouTube](https://youtube.com/shorts/kY4VHE_sizQ)
 
 ![QD-139](QD-139.jpg)
 
 ### Fri 23 Oct 16:00 · The biggest superhero box office hits in history 🍿
-public · 39 views · 35 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
+public · 57 views · 35 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
 
 ![QD-138](QD-138.jpg)
 
 ### Fri 23 Oct 15:30 · Top 10 most-streamed songs on Spotify of all time 🎶
-public · 75 views · 25 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
+public · 99 views · 25 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
 
 ![QD-137](QD-137.jpg)
 
 ### Fri 23 Oct 15:00 · Roblox The Hollow: Nine days of nightmare maze monsters 🎃
-public · 19 views · 29 s · music: city-of-the-wolf · on Instagram · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
+public · 23 views · 29 s · music: city-of-the-wolf · on Instagram · [script](../boards/done/QD-136.json) · [YouTube](https://youtube.com/shorts/SwvtFiRJK0U)
 
 ![QD-136](QD-136.jpg)
 
 ### Fri 23 Oct 14:30 · Tate McRae: The new number one hit 🎶
-public · 910 views · 23 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
+public · 908 views · 23 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-135.json) · [YouTube](https://youtube.com/shorts/3lB5ozW1c14)
 
 ![QD-135](QD-135.jpg)
 
 ### Fri 23 Oct 14:00 · I Play Rocky: Sylvester Stallone biopic trailer 🥊
-public · 172 views · 32 s · music: scale-the-mountain · on Instagram · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
+public · 245 views · 32 s · music: scale-the-mountain · on Instagram · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
 
 ![QD-134](QD-134.jpg)
 
 ### Fri 23 Oct 13:30 · BABYMONSTER: The massive world tour expansion 🎤
-public · 737 views · 32 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
+public · 899 views · 32 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
 
 ![QD-133](QD-133.jpg)
 
 ### Fri 23 Oct 13:00 · LISA: Her first solo EP is coming 🎤
-public · 83 views · 29 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
+public · 82 views · 29 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-132.json) · [YouTube](https://youtube.com/shorts/CY7Isfm6MqM)
 
 ![QD-132](QD-132.jpg)
 
 ### Fri 23 Oct 12:30 · Katie Boulter: British star reaches Japan Open 🎾
-public · 256 views · 25 s · music: paradigm · on Instagram · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
+public · 298 views · 25 s · music: paradigm · on Instagram · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
 
 ![QD-131](QD-131.jpg)
 
 ### Fri 23 Oct 12:00 · Lewis Hamilton aims to race in Rwanda Grand Prix 🏁
-public · 6 views · 31 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
+public · 9 views · 31 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
 
 ![QD-130](QD-130.jpg)
 
 ### Fri 23 Oct 10:30 · Clayface: The dark new body horror film in cinemas 🎬
-public · 52 views · 25 s · music: house-on-the-hill · on Instagram · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
+public · 57 views · 25 s · music: house-on-the-hill · on Instagram · [script](../boards/done/QD-129.json) · [YouTube](https://youtube.com/shorts/UBEArnOdRLY)
 
 ![QD-129](QD-129.jpg)
 
 ### Fri 23 Oct 10:00 · Jenna Ortega: stepping away from television 📺
-public · 1,067 views · 28 s · music: flight-is-aight · on Instagram · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
+public · 1,077 views · 28 s · music: flight-is-aight · on Instagram · [script](../boards/done/QD-128.json) · [YouTube](https://youtube.com/shorts/3M7qiLrzVPk)
 
 ![QD-128](QD-128.jpg)
 
@@ -251,31 +271,11 @@ public · 53 views · 24 s · music: fire-in-the-sky · on Instagram · [script]
 ![QD-127](QD-127.jpg)
 
 ### Fri 23 Oct 0:30 · Eden Sessions: Ben Howard headlines this summer 🎤
-public · 17 views · 22 s · music: paradise · on Instagram · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
+public · 20 views · 22 s · music: paradise · on Instagram · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
 
 ![QD-125](QD-125.jpg)
 
 ### Fri 23 Oct 0:00 · Bavuma scores majestic 179 against Australia 🏏
-public · 30 views · 24 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
+public · 32 views · 24 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
 
 ![QD-124](QD-124.jpg)
-
-### Thu 22 Oct 23:30 · Queen's legendary Live Aid performance 🎤
-public · 66 views · 28 s · music: duty-calls · on Instagram · on Facebook · [script](../boards/done/QD-123.json) · [YouTube](https://youtube.com/shorts/pJzl_YBZP-A)
-
-![QD-123](QD-123.jpg)
-
-### Thu 22 Oct 23:00 · Leicester City's historic Premier League win 🏆
-public · 20 views · 36 s · music: defying-gravity · on Instagram · on Facebook · [script](../boards/done/QD-122.json) · [YouTube](https://youtube.com/shorts/LZAeF5Wnmu8)
-
-![QD-122](QD-122.jpg)
-
-### Thu 22 Oct 19:00 · The secret history of the first iPhone 🍎
-public · 3 views · 24 s · music: ego-chall · on Instagram · on Facebook · [script](../boards/done/QD-121.json) · [YouTube](https://youtube.com/shorts/5O4upSca3ZA)
-
-![QD-121](QD-121.jpg)
-
-### Thu 22 Oct 18:30 · How Theia formed our Moon 🌑
-public · 7 views · 35 s · music: majestic-12 · on Instagram · on Facebook · [script](../boards/done/QD-120.json) · [YouTube](https://youtube.com/shorts/SKvuDC9-ngk)
-
-![QD-120](QD-120.jpg)

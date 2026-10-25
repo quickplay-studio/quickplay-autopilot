@@ -1,5 +1,5 @@
 {
- "date": "2026-10-24",
+ "date": "2026-10-25",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
@@ -44,51 +44,33 @@
      "title": "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
      "url": "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
      "published": "2026-10-24"
-    },
-    {
-     "outlet": "NBC News",
-     "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
-     "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
-     "published": "2026-07-28"
     }
    ]
   },
   {
    "topic": "Ballon d'Or 2026",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Why Stanley Matthews’ Ballon d’Or triumph echoes down the years for Harry Kane | Jonathan Wilson",
+     "url": "https://www.theguardian.com/football/2026/oct/24/why-stanley-matthews-ballon-dor-triumph-echoes-for-harry-kane",
+     "published": "2026-10-24"
+    },
     {
      "outlet": "BBC Sport",
      "title": "All you need to know about the 2026 Ballon d'Or",
      "url": "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "All you need to know about the 2026 Ballon d'Or",
-     "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Mexico’s Julián Quiñones may stand out on Ballon d’Or shortlist, but he’s earned his recognition",
-     "url": "https://www.nytimes.com/athletic/7708791/2026/10/23/julian-quinones-ballon-dor-mexico-shortlist/",
      "published": "2026-10-23"
     }
    ]
   },
   {
    "topic": "Ballon d'Or 2026 nominees",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": null,
    "articles": [
-    {
-     "outlet": "UEFA",
-     "title": "2026 Ballon d'Or ceremony: When and where, all the nominees and how the awards are decided",
-     "url": "https://www.uefa.com/ballondor/news/02aa-21dcfc743210-2786daba77d8-1000--2026-ballon-d-or-ceremony-when-and-where-all-the-nominees-/",
-     "published": "2026-10-19"
-    },
     {
      "outlet": "New York Times",
      "title": "Ballon d’Or 2026 nominees: Messi, Kane and Mbappe on shortlist for men’s award",
@@ -99,7 +81,7 @@
   },
   {
    "topic": "Ballon d'Or 2026 winner",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": null,
    "articles": [
     {
@@ -124,7 +106,7 @@
   },
   {
    "topic": "Ballon d'Or 2026 London ceremony",
-   "signal": "watchlist: Ballon d'Or 2026 (launch, 2 days to go)",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": null,
    "articles": [
     {
@@ -148,46 +130,33 @@
    ]
   },
   {
-   "topic": "The Celebrity Traitors",
-   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Caroline Hirons: ‘My celebrity crush? Colin Farrell. I hope he reads this – I hear he likes an older woman’",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/24/caroline-hirons-interview-beauty-aesthetician-writer-new-book-skin-rules",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Celebrity Traitors left on a knife edge after a trip to the field of screams",
-     "url": "https://www.bbc.co.uk/news/articles/c6jdmrz00v7lo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "Celebrity Traitors 2026 cast",
-   "signal": "watchlist: The Celebrity Traitors (surging, 6 days to go)",
+   "topic": "Ballon d'Or past winners",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Evening Standard",
-     "title": "Celebrity Traitors 2026: Who will be banished and who is tipped to win?",
-     "url": "https://www.standard.co.uk/showbiz/celebrity-traitors-2026-tonight-richard-e-grant-b1298716.html",
-     "published": "2026-10-08"
+     "outlet": "BBC",
+     "title": "All you need to know about the 2026 Ballon d'Or",
+     "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "The history and evolution of the Ballon d’Or, told with someone who knows this year’s winner",
+     "url": "https://www.nytimes.com/athletic/7705489/2026/10/21/ballon-dor-trophy-evolution-history-award-france-football/",
+     "published": "2026-10-21"
     }
    ]
   },
   {
    "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (build-up, 7 days to go)",
+   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
    "articles": [
     {
      "outlet": "Polygon",
-     "title": "Dead by Daylight Is Losing Another Horror Icon",
-     "url": "https://www.polygon.com/dead-by-daylight-chucky-removed/",
+     "title": "The 5 least-scary scary games for people who are scared of scary games",
+     "url": "https://www.polygon.com/best-not-scary-horror-games/",
      "published": "2026-10-24"
     },
     {
@@ -201,24 +170,31 @@
      "title": "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
      "url": "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
      "published": "2026-10-24"
-    },
+    }
+   ]
+  },
+  {
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
+   "wikipedia": null,
+   "articles": [
     {
-     "outlet": "IGN",
-     "title": "Save 50% Off a Rechargeable LED Light Up Mask With 50 Different Effects for Halloween, Now Under $15",
-     "url": "https://www.ign.com/articles/led-mask-halloween-deal-october-2026",
+     "outlet": "USA Today",
+     "title": "See the top trending Halloween costumes in New York for 2026",
+     "url": "https://www.usatoday.com/story/news/2026/10/23/trending-halloween-costumes-new-york-2026/92358706007/",
      "published": "2026-10-23"
     }
    ]
   },
   {
    "topic": "Halloween history",
-   "signal": "watchlist: Halloween 2026 (build-up, 7 days to go)",
+   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
    "wikipedia": null,
    "articles": [
     {
      "outlet": "Polygon",
-     "title": "Dead by Daylight Is Losing Another Horror Icon",
-     "url": "https://www.polygon.com/dead-by-daylight-chucky-removed/",
+     "title": "The 5 least-scary scary games for people who are scared of scary games",
+     "url": "https://www.polygon.com/best-not-scary-horror-games/",
      "published": "2026-10-24"
     },
     {
@@ -232,18 +208,12 @@
      "title": "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
      "url": "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
      "published": "2026-10-24"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Save 50% Off a Rechargeable LED Light Up Mask With 50 Different Effects for Halloween, Now Under $15",
-     "url": "https://www.ign.com/articles/led-mask-halloween-deal-october-2026",
-     "published": "2026-10-23"
     }
    ]
   },
   {
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/GTA_6",
    "articles": [
     {
@@ -274,7 +244,7 @@
   },
   {
    "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Gas_Price",
    "articles": [
     {
@@ -290,6 +260,12 @@
      "published": "2026-10-15"
     },
     {
+     "outlet": "Polygon",
+     "title": "GTA 6 anticipation is sending PS5 Pro prices through the roof",
+     "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+     "published": "2026-09-01"
+    },
+    {
      "outlet": "IGN",
      "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
      "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
@@ -299,7 +275,7 @@
   },
   {
    "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (build-up, 26 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "wikipedia": null,
    "articles": [
     {
@@ -323,300 +299,282 @@
    ]
   },
   {
-   "topic": "Dai Dai by Shakira & Burna Boy",
-   "signal": "Apple Music GB: new in the top 25",
-   "wikipedia": null,
+   "topic": "birmingham airport",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Birmingham_Airport",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Shakira & Burna Boy’s ‘Dai Dai’ Scores 10th Week at No. 1 on Billboard Global Excl. U.S. Chart",
-     "url": "https://www.billboard.com/music/chart-beat/shakira-burna-boy-global-charts-sept-5-1236329009/",
-     "published": "2026-08-31"
-    }
-   ]
-  },
-  {
-   "topic": "WHERE IS MY HUSBAND! by RAYE",
-   "signal": "Apple Music GB: new in the top 25",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "You be the judge: should my husband stop letting our cat drink on the kitchen counter?",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/22/you-be-the-judge-should-my-husband-stop-cat-drinking-on-kitchen-counter",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "“Where Is My Husband!” Inside the Song That Made Raye All The Rage",
-     "url": "https://www.hollywoodreporter.com/music/music-features/raye-where-is-my-husband-making-of-song-1236723326/",
-     "published": "2026-10-08"
-    }
-   ]
-  },
-  {
-   "topic": "March Madness by Future",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "CNN",
-     "title": "March Madness tournaments will expand to 76 teams each starting next season",
-     "url": "https://www.cnn.com/2026/05/07/sport/march-madness-expansion",
-     "published": "2026-05-07"
-    }
-   ]
-  },
-  {
-   "topic": "darts scores",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dar%C3%9F_Forest",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Tel's sensational solo goal seals Spurs' win",
-     "url": "https://www.skysports.com/watch/video/13603333/goal-m-tel-87-chelsea-0-2-tottenham-hotspur",
+     "outlet": "BBC Sport",
+     "title": "Cardiff's Aberfan inspiration after emotional tribute",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cj93z1pxdp57o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-24"
     },
     {
      "outlet": "Guardian",
-     "title": "Scottish Premiership: Kelsy fires Rangers to emphatic win; Dundee United pip Aberdeen",
-     "url": "https://www.theguardian.com/football/2026/oct/24/scottish-premiership-rangers-dundee-celtic-hearts",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Arsenal fight back to beat Tottenham and ease pressure on Slegers",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cmy0r7epegd4o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Call Of Duty Ads On Xbox Are Even More Annoying This Year With Modern Warfare 4",
-     "url": "https://www.gamespot.com/articles/call-of-duty-ads-on-xbox-are-even-more-annoying-this-year-with-modern-warfare-4/",
+     "title": "The Snowman gets a hi-tech rebuild – with help from Raging Bull and a ‘Hot Santa’",
+     "url": "https://www.theguardian.com/stage/2026/oct/23/the-snowman-reboot-raging-bull-hot-santa",
      "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "burnley",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Burnley",
+   "topic": "chef damu",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chef_Damu",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "Jackson Boxer’s vegetarian recipe for brown butter pumpkin soup",
+     "url": "https://www.theguardian.com/food/2026/oct/24/vegetarian-brown-butter-pumpkin-soup-recipe-jackson-boxer",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "boost",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Boost",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Four ways Labour could raise money in the Budget without hiking income tax",
+     "url": "https://www.bbc.co.uk/news/articles/c65yn9p55np2o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Labour unveils £285m funding boost to 'shift power' to local leaders",
+     "url": "https://news.sky.com/story/labour-unveils-285m-funding-boost-for-local-communities-so-decisions-can-be-made-closer-to-home-13603437",
+     "published": "2026-10-25"
+    },
+    {
      "outlet": "Sky Sports",
-     "title": "Burnley sack head coach Hayen with 26-word statement",
-     "url": "https://www.skysports.com/football/news/12040/13603332/burnley-nicky-hayen-sacked-after-thrashing-at-lincoln-with-clarets-in-championship-relegation-zone",
+     "title": "Antonelli takes surprise pole to boost chances of sealing title in USA",
+     "url": "https://www.skysports.com/f1/news/12040/13603149/united-states-gp-qualifying-kimi-antonelli-beats-max-verstappen-to-surprise-pole-to-boost-chances-of-sealing-maiden-f1-title-on-sunday",
      "published": "2026-10-24"
     },
     {
      "outlet": "Guardian",
-     "title": "Championship roundup: Southampton beat West Ham; QPR put five past Swansea",
-     "url": "https://www.theguardian.com/football/2026/oct/24/championship-roundup-sheffield-united-derby-west-ham-swansea",
+     "title": "Healey’s first budget to include big devolution package to boost growth",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/24/andy-burnham-john-healey-first-budget-devolution-growth-package",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "bbc news uk",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/BBC_News_Ukrainian",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Football Daily | Mourinho is ready for his clásico return – stock up on popcorn, folks!",
+     "url": "https://www.theguardian.com/football/2026/oct/23/jose-mourinho-real-madrid-barcelona-clasico-football-daily-newsletter",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "poland",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Poland",
+   "articles": [
+    {
+     "outlet": "Reuters",
+     "title": "OpenAI and Poland’s NASK collaborate on AI safety research",
+     "url": "https://www.reuters.com/legal/litigation/openai-polands-nask-collaborate-ai-safety-research-2026-10-23/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "surrogacy",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Surrogacy",
+   "articles": [
+    {
+     "outlet": "CNN",
+     "title": "Pope calls for ban on surrogacy, calling it ‘based on exploitation’",
+     "url": "https://www.cnn.com/2024/01/08/world/pope-ban-surrogacy",
+     "published": "2024-01-08"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Francis Urges Ban on Surrogacy, Calling It ‘Despicable’",
+     "url": "https://www.nytimes.com/2024/01/08/world/europe/pope-francis-surrogacy-ban.html",
+     "published": "2024-01-08"
+    }
+   ]
+  },
+  {
+   "topic": "winter storm warning",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Winter_storm_warning",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Storm Boelo: Travel disrupted and events cancelled as UK hit by wind and rain",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/24/storm-boelo-travel-disrupted-events-cancelled-uk-hit-wind-and-rain",
      "published": "2026-10-24"
     },
     {
      "outlet": "BBC",
-     "title": "Hayen sacked by Burnley after just 14 games",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm4gv830j73do?at_medium=RSS&at_campaign=rss",
+     "title": "Amber weather warning as Storm Boelo hits Scotland",
+     "url": "https://www.bbc.co.uk/news/videos/cmqlnkq6p6y7o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-24"
     }
    ]
   },
   {
-   "topic": "borussia dortmund vs eintracht frankfurt standings",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
+   "topic": "matthew perry",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Matthew_Perry",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "Borussia Dortmund vs. Eintracht Frankfurt prediction, where to watch, time for Bundesliga match",
-     "url": "https://www.usatoday.com/story/sports/soccer/2026/05/08/where-to-watch-borussia-dortmund-eintracht-frankfurt-prediction-odds-stream/89988426007/",
-     "published": "2026-05-08"
+     "outlet": "Deadline",
+     "title": "Kaitlin Olson & ‘High Potential’ Co-Stars Pay Respects To Matthew Lamb After Mother’s Death: “Forever Her Pride & Joy”",
+     "url": "https://deadline.com/2026/10/kaitlin-olson-high-potential-pay-respects-matthew-lamb-mother-1237172405/",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Xbox Wanted A Gargantuan Paycheck To Partner With Netflix On TV And Movies",
+     "url": "https://www.gamespot.com/articles/xbox-wanted-a-gargantuan-paycheck-to-partner-with-netflix-on-tv-and-movies/",
+     "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "harvey elliott",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Harvey_Elliott",
+   "topic": "game of thrones",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Game_of_Thrones",
+   "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "One line proves that Ned Stark is the best Game of Thrones character",
+     "url": "https://www.polygon.com/game-of-thrones-ned-stark-best-quote-ever/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "zendaya",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Zendaya",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Zendaya Sets Best Actress Oscar Campaign for Dune: Part 3",
+     "url": "https://www.ign.com/articles/zendaya-dune-part-3-best-actress-oscars",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "kateřina siniaková",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kate%C5%99ina_Siniakov%C3%A1",
    "articles": [
     {
      "outlet": "New York Times",
-     "title": "Harvey Elliott seals loan move to Valencia from Liverpool",
-     "url": "https://www.nytimes.com/athletic/7545985/2026/08/31/liverpool-transfers-harvey-elliott-valencia/",
-     "published": "2026-08-31"
+     "title": "Kateřina Siniaková and Taylor Townsend achieve yet more tennis greatness, together",
+     "url": "https://www.nytimes.com/athletic/7582262/2026/09/11/katerina-siniakova-tennis-best-doubles-player-taylor-townsend/",
+     "published": "2026-09-11"
     }
    ]
   },
   {
-   "topic": "jason cundy",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jason_Cundy",
+   "topic": "blade",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Blade",
    "articles": [
     {
      "outlet": "GameSpot",
      "title": "Arkane Lyon Could Be Shut Down Within Weeks As Deadline To Find A Buyer Looms",
      "url": "https://www.gamespot.com/articles/arkane-lyon-could-be-shut-down-within-weeks-as-deadline-to-find-a-buyer-looms/",
      "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "ufc today",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/USA_Today",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Older, calmer, but still playing the hits: Mourinho and Madrid primed for clásico",
-     "url": "https://www.theguardian.com/football/2026/oct/24/la-liga-clasico-barcelona-real-madrid-jose-mourinho",
-     "published": "2026-10-24"
     },
     {
-     "outlet": "BBC Sport",
-     "title": "Who am I? Plus today's other quizzes",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cknv01g9n27do?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "NASA",
-     "title": "APOD: 2026 October 24 – Rosetta’s Selfie",
-     "url": "https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "SpaceX launches Starlink satellites from California as Falcon 9 cadence slows (video)",
-     "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-starlink-group-15-15-b1063-ocisly",
+     "outlet": "Eurogamer",
+     "title": "Phantom Blade Zero isn't even out yet, but it could be 'one of the year's breakout hits' as it shifts half a million copies on Steam alone",
+     "url": "https://www.eurogamer.net/phantom-blade-zero-hit-not-out",
      "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "mi state vs ucla",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Spartan football goes on the road. How to watch the MSU-UCLA game",
-     "url": "https://www.usatoday.com/story/news/local/michigan/2026/10/23/michigan-state-university-spartans-ucla-bruins-college-football-how-to-watch-week-eight/92380613007/",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "boston college vs georgia tech",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "ESPN",
-     "title": "Georgia Tech takes on Boston College in ACC action",
-     "url": "https://www.espn.com/college-football/preview/_/gameId/401858273",
-     "published": "2026-10-18"
-    }
-   ]
-  },
-  {
-   "topic": "jeremy sochan",
+   "topic": "theft",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jeremy_Sochan",
+   "wikipedia": "https://en.wikipedia.org/wiki/Theft",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "The White House Farm massacre - exclusive: new forensic evidence suggests Sheila Caffell killed herself. Is Jeremy Bamber innocent?",
-     "url": "https://www.theguardian.com/uk-news/ng-interactive/2026/oct/23/the-white-house-farm-massacre-exclusive-new-forensic-evidence-suggests-sheila-caffell-killed-herself-is-jeremy-bamber-innocent",
-     "published": "2026-10-23"
+     "title": "Cookie theft: how fraudsters get the digital key to your accounts",
+     "url": "https://www.theguardian.com/money/2026/oct/25/cookie-theft-how-fraudsters-get-the-digital-key-to-your-accounts",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "FBI investigating theft of more than 6000 PSA-graded trading cards, including almost 3000 Pokémon cards",
+     "url": "https://www.eurogamer.net/fbi-investigates-psa-graded-card-theft-pokemon",
+     "published": "2026-10-24"
     }
    ]
   },
   {
-   "topic": "oklahoma vs ms state",
-   "signal": "Google Trends US 10000+",
+   "topic": "rams vs raiders",
+   "signal": "Google Trends US 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "ESPN",
-     "title": "SEC Now crew previews OU vs. MS State as Bulldogs return key pieces",
-     "url": "https://www.espn.com/video/clip/_/id/50262408/sec-now-crew-previews-ou-vs-ms-state-bulldogs-return-key-pieces",
-     "published": "2026-10-23"
-    },
-    {
      "outlet": "USA Today",
-     "title": "Jeff Lebby gives Kamario Taylor injury update for Mississippi State vs Oklahoma",
-     "url": "https://pantherswire.usatoday.com/story/sports/college/mississippi-state/2026/10/19/kamario-taylor-injury-update-mississippi-state-oklahoma/92281777007/",
-     "published": "2026-10-19"
-    }
-   ]
-  },
-  {
-   "topic": "Tom Skerritt",
-   "signal": "Wikipedia 406,636 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tom_Skerritt",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "US actor Tom Skerritt, star of Top Gun, Steel Magnolias and Alien, dies aged 93",
-     "url": "https://www.bbc.co.uk/news/articles/cqrkyly2p54xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Tom Skerritt, Alien and Top Gun actor, dies aged 93",
-     "url": "https://www.theguardian.com/film/2026/oct/22/tom-skerritt-actor-dead",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Tom Skerritt, Top Gun and Alien actor, has died",
-     "url": "https://news.sky.com/story/actor-tom-skerritt-known-for-roles-in-top-gun-and-alien-has-died-13602478",
-     "published": "2026-10-22"
+     "title": "LA Rams at Las Vegas Raiders odds, picks and predictions",
+     "url": "https://sportsbookwire.usatoday.com/story/sports/nfl/2026/10/24/rams-at-raiders-odds-picks-and-predictions/92397220007/",
+     "published": "2026-10-24"
     }
    ]
   },
   {
    "topic": "Clayface (film)",
-   "signal": "Wikipedia 264,281 views",
+   "signal": "Wikipedia 231,483 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
    "articles": [
+    {
+     "outlet": "IGN",
+     "title": "James Gunn Defends the DCU's Approach to Interconnected Stories, Doesn't Want Movies Like Clayface to Exist Just to 'Set Up' Crossovers",
+     "url": "https://www.ign.com/articles/james-gunn-defends-the-dcus-approach-to-interconnected-stories-doesnt-want-movies-like-clayface-to-exist-just-to-set-up-crossovers",
+     "published": "2026-10-24"
+    },
     {
      "outlet": "The Hollywood Reporter",
      "title": "‘You Can See Everything’ Eyes $20M Second Weekend as ‘Clayface’ Leads Box Office",
      "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
      "published": "2026-10-24"
-    },
-    {
-     "outlet": "Variety",
-     "title": "Box Office: ‘Clayface’ Lands at No. 1 with $10.4 Million Debut, ‘You Can See Everything’ Adds $6.14 Million on Friday",
-     "url": "https://variety.com/2026/film/box-office/box-office-clayface-you-can-see-everything-wildwood-wicker-1236930256/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Clayface’ Takes Shape As No. 1 With $24M+; ‘You Can See Everything’ Wowing With Possible $20M Second Weekend – Box Office Update",
-     "url": "https://deadline.com/2026/10/box-office-clayface-you-can-see-everything-1237171500/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Aaron Paul Makes Surprise Cameo in DC’s Clayface",
-     "url": "https://www.ign.com/articles/aaron-paul-clayface-cameo-dc",
-     "published": "2026-10-24"
     }
    ]
   },
   {
-   "topic": "Jailer 2",
-   "signal": "Wikipedia 192,717 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "topic": "UFC 333",
+   "signal": "Wikipedia 224,691 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/UFC_333",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "Rajinikanth’s ‘Jailer 2’ Ranks No. 2 at Global Box Office as ‘Street Fighter’ Leads",
-     "url": "https://variety.com/2026/film/box-office/rajinikanth-jailer-2-no-2-global-box-office-1236916220/",
-     "published": "2026-10-19"
+     "outlet": "BBC",
+     "title": "Volkanovski stops Evloev for record ninth title win",
+     "url": "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/ckvg7j2p471lo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "UFC 333 Livestream: Where to Watch Volkanovski vs. Evloev Main Card",
+     "url": "https://www.hollywoodreporter.com/tv/tv-news/where-to-watch-ufc-333-volkanovski-evloev-live-stream-free-1236739560/",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "Here’s How to Watch UFC 333 Live Online for Free",
+     "url": "https://www.billboard.com/culture/product-recommendations/ufc-333-oct-2026-watch-mma-live-online-free-1236364114/",
+     "published": "2026-10-24"
     }
    ]
   },
@@ -628,12 +586,45 @@
    "source": "Wikipedia In the news"
   },
   {
-   "topic": "Umbriel",
-   "signal": "On this day in 1851, 175 years ago (Wikipedia)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Umbriel",
-   "articles": [],
+   "topic": "Windows XP",
+   "signal": "On this day in 2001, 25 years ago (Wikipedia)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Windows_XP",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Call Of Duty Ads On Xbox Are Even More Annoying This Year With Modern Warfare 4",
+     "url": "https://www.gamespot.com/articles/call-of-duty-ads-on-xbox-are-even-more-annoying-this-year-with-modern-warfare-4/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Microsoft’s Windows XP Crocs are no joke",
+     "url": "https://www.theverge.com/microsoft/717965/microsoft-crocs-windows-xp-bliss-wallpaper-theme",
+     "published": "2025-08-05"
+    }
+   ],
    "source": "On this day",
    "kind": "evergreen"
+  },
+  {
+   "topic": "Adultery",
+   "signal": "TVmaze GB: series premiere tonight, 06:00",
+   "wikipedia": "https://en.wikipedia.org/wiki/Adultery",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "TV tonight: a horny drama stuffed with sex in a car, toilet and … city farm",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/25/tv-tonight-a-horny-drama-stuffed-with-sex-in-a-car-toilet-and-city-farm",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Fool Me Once’ Writer Danny Brocklehurst Penning ITV Drama Series: ‘Adultery’ Is Debut Greenlight For Ben Stephenson’s Poison Pen Studios",
+     "url": "https://deadline.com/2025/03/itv-adultery-drama-danny-brocklehurst-ben-stephenson-poison-pen-debut-1236322220/",
+     "published": "2025-03-10"
+    }
+   ],
+   "source": "TVmaze"
   },
   {
    "topic": "2026 United States Grand Prix",
@@ -642,21 +633,15 @@
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "Hamilton fastest from Verstappen ahead of US GP Qualifying",
-     "url": "https://www.skysports.com/f1/news/12040/13603143/united-states-gp-lewis-hamilton-fastest-from-max-verstappen-in-final-practice-ahead-of-qualifying-in-austin",
-     "published": "2026-10-24"
+     "title": "'Not realistic' - Can Wolff's assessment of Antonelli's title chance be trusted?",
+     "url": "https://www.skysports.com/f1/news/12040/13603166/united-states-gp-how-likely-is-pole-sitter-kimi-antonelli-to-win-2026-f1-drivers-championship-on-sunday-in-austin",
+     "published": "2026-10-25"
     },
     {
      "outlet": "BBC",
-     "title": "Leclerc fastest in United States Grand Prix second practice",
-     "url": "https://www.bbc.co.uk/sport/formula1/live/c8jk934zyr3t?page=4",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "How Ferrari's Charles Leclerc finished Friday practice fastest at United States Grand Prix",
-     "url": "https://www.nytimes.com/athletic/live-blogs/f1-united-states-gp-live-updates-fp1-fp2-times-results/86bXqBqdTSyl/",
-     "published": "2026-10-23"
+     "title": "Antonelli takes US pole on weekend he can win title",
+     "url": "https://www.bbc.co.uk/sport/formula1/articles/cqy7lvp7n57lo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
     },
     {
      "outlet": "Apple Newsroom",
@@ -668,111 +653,79 @@
    "source": "Formula 1"
   },
   {
-   "topic": "Storm Boelo hits the UK",
-   "signal": "Bluesky trending, 2,583 posts",
-   "wikipedia": null,
+   "topic": "Mortimer and Whitehouse: Gone Fishing",
+   "signal": "TVmaze GB: season premiere tonight, 06:00",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mortimer_and_Whitehouse:_Gone_Fishing",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "UK braces for worst of Storm Boelo as amber warnings due to come into force",
-     "url": "https://www.bbc.co.uk/news/articles/cmr4ydglq9r3o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Storm Boelo to bring 80mph gusts and heavy rain to parts of UK",
-     "url": "https://www.theguardian.com/world/2026/oct/24/storm-boelo-80mph-winds-heavy-rain-northern-uk",
-     "published": "2026-10-24"
+     "title": "Mortimer & Whitehouse: Gone Fishing returns for a new series and one last fish with Ted - “The great thing about Ted, really, is he didn't g",
+     "url": "https://www.bbc.co.uk/mediacentre/mediapacks/mortimer-and-whitehouse-gone-fishing",
+     "published": "2026-10-20"
     }
    ],
-   "source": "Bluesky"
+   "source": "TVmaze"
   },
   {
-   "topic": "Sonic the Hedgehog fan creations",
-   "signal": "Bluesky trending, 2,011 posts",
-   "wikipedia": null,
+   "topic": "One Born Every Minute",
+   "signal": "TVmaze GB: season premiere tonight, 21:00",
+   "wikipedia": "https://en.wikipedia.org/wiki/One_Born_Every_Minute",
    "articles": [
     {
-     "outlet": "Polygon",
-     "title": "Play as your Sonic the Hedgehog OC with these fan made tabletop games",
-     "url": "https://www.polygon.com/tabletop-games/501703/sonic-the-hedgehog-oc-fan-ttrpg-tag-team-heroes-rings-and-running-shoes/",
-     "published": "2024-12-23"
-    }
-   ],
-   "source": "Bluesky"
-  },
-  {
-   "topic": "Fire hits Hitler's Eagle's Nest",
-   "signal": "Bluesky trending, 500 posts",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Watch: Fire engulfs Hitler's mountaintop Eagle's Nest retreat",
-     "url": "https://www.bbc.co.uk/news/videos/cq98z9xxy2n2o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
      "outlet": "Guardian",
-     "title": "Suspect arrested over fire at Hitler’s ‘Eagle’s Nest’ retreat in Bavaria",
-     "url": "https://www.theguardian.com/world/2026/oct/24/blaze-engulfs-hitlers-eagles-nest-mountain-retreat-in-bavaria",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Suspect arrested after fire at Hitler's 'Eagle's Nest' retreat",
-     "url": "https://news.sky.com/story/suspect-arrested-after-fire-at-nazis-wwii-eagles-nest-mountain-retreat-13602938",
+     "title": "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
      "published": "2026-10-24"
     }
    ],
-   "source": "Bluesky"
+   "source": "TVmaze"
   },
   {
-   "topic": "Frozen by Lil Baby",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": "https://en.wikipedia.org/wiki/Frozen_(Lil_Baby_song)",
+   "topic": "wetter",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wetter",
    "articles": []
   },
   {
-   "topic": "dani dyer",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dani_Dyer",
+   "topic": "rico dowdle",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Rico_Dowdle",
    "articles": []
   },
   {
-   "topic": "tenzing movie",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tenzing_Montes",
+   "topic": "christian bale",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Christian_Bale",
    "articles": []
   },
   {
-   "topic": "danny dyer",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Danny_Dyer",
+   "topic": "ashlyn krueger",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ashlyn_Krueger",
    "articles": []
   },
   {
-   "topic": "jordin canada",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jordin_Canada",
+   "topic": "Jailer 2",
+   "signal": "Wikipedia 190,945 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
    "articles": []
   },
   {
-   "topic": "ChatGPT",
-   "signal": "Wikipedia 136,176 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/ChatGPT",
+   "topic": "Jacob Misiorowski",
+   "signal": "Wikipedia 133,083 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
    "articles": []
   },
   {
    "topic": "Ansel Adams",
-   "signal": "Wikipedia 102,156 views",
+   "signal": "Wikipedia 124,107 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Ansel_Adams",
    "articles": []
   },
   {
-   "topic": "WATCHPARTY",
-   "signal": "YouTube GB 1,325,590/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Watch_the_Party_Die",
+   "topic": "BABYMONSTER",
+   "signal": "YouTube GB-music 489,908/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
    "articles": []
   }
  ]

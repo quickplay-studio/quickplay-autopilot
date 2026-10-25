@@ -1,7 +1,6 @@
 {
- "date": "2026-10-24",
- "previous": {},
- "lists": {
+ "date": "2026-10-25",
+ "previous": {
   "albums_gb": [
    "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
    "The Art of Loving by Olivia Dean",
@@ -20,5 +19,14 @@
    "Uber: Rides, eats, and more"
   ],
   "albums_us": []
+ },
+ "lists": {
+  "albums_gb": [
+   "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
+   "The Art of Loving by Olivia Dean",
+   "FUDGE by Michael Kiwanuka",
+   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy"
+  ]
  }
 }

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 08:38): 12 of 1,000 subscribers · 8,633 of 10 million Shorts views in 90 days · 3,982 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 09:37): 12 of 1,000 subscribers · 8,711 of 10 million Shorts views in 90 days · 3,921 views in the last 24 hours (about 111,014 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 8:38 (UK): 3 scheduled, 147 public, 16 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 6 public, 3 scheduled | 0 | 1 | ⏳ 6 of 14 so far, 3 more scheduled |
+| Sun 25 Oct | 7 public, 2 scheduled | 0 | 1 | ⏳ 7 of 14 so far, 2 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -77,6 +77,15 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-168** Harry Kane scores 73 goals before Ballon d'Or ⚽ (rendering next)
+- **QD-169** Tech Truths #1: Windows XP arrived in shops (Part 1) 💻 (rendering next)
+- **QD-170** Tech Truths #3: Windows XP Bliss wallpaper now on Crocs (Part 2) 👟 (rendering next)
+- **QD-171** Sport Shocks #1: UFC 333: Volkanovski wins record ninth title (rendering next)
+- **QD-172** Mortimer and Whitehouse: Ted's last trip 🐾 (rendering next)
+- **QD-173** barbara palvin 13 years old: the church choice 💒 (rendering next)
+
 ## On the channel (latest first)
 
 ### Sun 25 Oct 13:00 · Zendaya: the major category change explained
@@ -90,7 +99,7 @@ scheduled · 27 s · music: paradise · [script](../boards/done/QD-165.json) · 
 ![QD-165](QD-165.jpg)
 
 ### Sun 25 Oct 9:00 · Halloween: The Game secret you might have missed
-scheduled · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
+private · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
 
 ![QD-166](QD-166.jpg)
 

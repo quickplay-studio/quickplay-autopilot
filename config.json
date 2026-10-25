@@ -132,6 +132,7 @@
    ],
    "per_day": 6,
    "language": "en",
+   "handle": "@quickplaymusic",
    "series": [
     "Chart Watch",
     "Song Secrets",
@@ -143,10 +144,14 @@
    "name": "Quickplay Diario",
    "mirror_of": "main",
    "language": "es",
-   "per_day": 6
+   "per_day": 6,
+   "handle": "@quickplaydiario",
+   "slot_grid": "americas",
+   "voice": "ES",
+   "wps": 2.8
   }
  },
- "shorts_channels_note": "More channels for the Daily line (Charlie, 25 October): a music-only channel and a Spanish mirror for the Americas. Charlie creates each channel in YouTube Studio under the studio account and signs it in (tokens/youtube_<key>.enc, the social workflow with channel music or es); until that file exists nothing here runs (youtube.connected). A board's optional channel field (default main) routes it: its own client, slot grid, per_day and peers. The 100-uploads bucket in quota.py is shared by every channel. Extra channels' Shorts are measured (analytics/shorts.csv channel column) but never counted in the main channel's target, headline or ledger.",
+ "shorts_channels_note": "More channels for the Daily line (Charlie, 25 October): a music-only channel and a Spanish mirror for the Americas. Charlie creates each channel in YouTube Studio under the studio account and signs it in (tokens/youtube_<key>.enc, the social workflow with channel music or es); until that file exists nothing here runs (youtube.connected). A board's optional channel field (default main) routes it: its own client, slot grid, per_day and peers. The 100-uploads bucket in quota.py is shared by every channel. The Spanish mirror (mirror.py) makes a -es board of each main board (language es, neutral Latin American Spanish, the Spanish voice on Chatterbox Multilingual, slot_grid americas: 23:00 UTC then 00:00 to 03:00 UTC, the American evening); handle is the name shown on screen. Extra channels' Shorts are measured (analytics/shorts.csv channel column) but never counted in the main channel's target, headline or ledger.",
  "languages": {
   "pt": {
    "channel": "Quickplay Daily Português",

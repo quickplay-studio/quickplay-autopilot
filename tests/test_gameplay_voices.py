@@ -89,7 +89,9 @@ sys.modules["kokoro"] = types.SimpleNamespace(KPipeline=KPipeline)
 MV.refs()
 presets = json.loads(MV.PRESETS.read_text())
 print("presets:", sorted(presets))
-assert sorted(presets) == ["DN", "HT", "IS", "LW", "MI"] and (SCR / "voices" / "lewis_ref.wav").exists()
+assert sorted(presets) == ["DN", "ES", "ESF", "HT", "IS", "LW", "MI"] and (SCR / "voices" / "lewis_ref.wav").exists()
+assert presets["ES"] == {"ref": "voices/es_alex_ref.wav", "exag": 0.5, "cfg": 0.5, "engine": "mtl", "language": "es"} and (SCR / "voices" / "es_dora_ref.wav").exists()      # the Spanish mirror's narrators (25 October)
+assert "engine" not in presets["LW"]
 
 real_run = subprocess.run
 def fake_run(cmd, check=False, **kw):

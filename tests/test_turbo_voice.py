@@ -71,7 +71,7 @@ def read(voice, out):
     return json.loads((out / "cb_manifest.json").read_text()), log.getvalue()
 
 assert T.VOICES["T2"] == {"ref": "voices/george_ref.wav", "engine": "turbo"} and T.VOICES["F2"]["ref"] == T.VOICES["T2"]["ref"]       # the same voice reference as george
-assert not any(v.get("engine") for k, v in T.VOICES.items() if k != "T2")
+assert not any(v.get("engine") for k, v in T.VOICES.items() if k not in ("T2", "ES", "ESF"))       # (ES and ESF are the Spanish mirror's, on the multilingual engine: tests/test_mirror.py)
 man, log = read("T2", SCRATCH / "o1")
 (kind, ckpt, device, m), = loaded
 assert (kind, ckpt, device) == ("turbo", str(SCRATCH / "turbo"), "cpu"), loaded

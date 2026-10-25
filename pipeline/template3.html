@@ -223,7 +223,7 @@ async function build(data) {
   document.getElementById('b1').style.cssText = `width:900px;height:900px;background:${D.accent};left:-260px;top:120px;`;
   document.getElementById('b2').style.cssText = `width:800px;height:800px;background:#FFB23F;right:-300px;top:1150px;opacity:.12;`;
   document.getElementById('chip').innerHTML = (D.icons[D.chipIcon] || '') + esc(D.category);
-  document.getElementById('handle').innerHTML = LOGO + '@quickplaydaily';
+  document.getElementById('handle').innerHTML = LOGO + esc(D.handle || '@quickplaydaily');
   const mediaEl = document.getElementById('media');
   (D.media || []).forEach((m, idx) => {
     const d = document.createElement('div'); d.className = 'mi'; d.style.zIndex = String(idx + 1);
@@ -301,7 +301,8 @@ async function build(data) {
     } else if (v.type === 'media') {
       if (v.t || v.s) h += `<div class="mlabel sub">${v.t ? `<div class="mname">${esc(v.t)}</div>` : ''}${v.s ? `<div class="mrole">${esc(v.s)}</div>` : ''}</div>`;
     } else if (v.type === 'cta') {
-      h += LOGO + `<div class="ctat sub">Follow for<br><span>tomorrow's</span><br>trend</div><div class="ctah sub">@quickplaydaily</div>`;
+      const cta = D.cta || ['Follow for', "tomorrow's", 'trend'];
+      h += LOGO + `<div class="ctat sub">${esc(cta[0])}<br><span>${esc(cta[1])}</span><br>${esc(cta[2])}</div><div class="ctah sub">${esc(D.handle || '@quickplaydaily')}</div>`;
       el.classList.add('cta');
     }
     el.innerHTML = h; stage.appendChild(el); fitAll(el);

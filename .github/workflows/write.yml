@@ -80,6 +80,7 @@ jobs:
           git add status/write_log.txt 2>/dev/null || true
           git add status/quota 2>/dev/null || true
           git add status/claude_usage.json 2>/dev/null || true
+          git add analytics/mirror_log.csv 2>/dev/null || true      # the Spanish mirror's attempts (pipeline/mirror.py)
           new=$(git diff --cached --name-only -- boards/queue | wc -l)
           git commit -q -m "Gemini boards $(date -u '+%F %H:%M')" || exit 0
           pushed=""

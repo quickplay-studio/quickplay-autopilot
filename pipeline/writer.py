@@ -212,7 +212,7 @@ def plan(breaking=False, hint=""):
 # stripped from whatever a model writes.
 BOOKKEEPING = ("watch", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
                "test", "mode", "appeal_note")
-BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of")       # set by extra_channel_boards for the line's other channels
+BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of", "mirrored", "chip_label", "handle")       # set for the line's other channels (extra_channel_boards, mirror.py)
 
 
 def example():
@@ -1580,6 +1580,8 @@ def main():
     if not breaking and not factpack.STATE.get("spent"):         # the line's other channels, after the main channel's day (once signed in)
         try: extra_channel_boards(day, run, [p for _, p in topics], head, state, out, late)
         except Exception as e: print("extra channels:", f"{type(e).__name__}: {e}"[:200])
+        try: import mirror; mirror.mirror_boards(day, run, late)       # the Spanish mirror of the day's main boards (pipeline/mirror.py; dormant until the es sign-in exists)
+        except Exception as e: print("mirror:", f"{type(e).__name__}: {e}"[:200])
     try: order = factpack.writing_order()[:6]
     except Exception: order = factpack.STATE.get("models", [])[:6]
     u = usage()

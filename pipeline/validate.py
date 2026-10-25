@@ -26,6 +26,20 @@ NEGATIVE = re.compile(r"\b(betray\w*|admits?|admitted|confess\w*|slam\w*|savage[
                       r"rant\w*|meltdown|furious|fury|outrage\w*|controvers\w*|calls? out|hits? back|clap\w* back|"
                       r"shock exit|storm\w* off|disgrace\w*|shame\w*|embarrass\w*|flop\w*|divorce\w*|split\w* up|break ?up|breakup|"
                       r"dump\w*|bust-up|spat|trolled|booed)\b", re.I)
+# The same two rules for a Spanish board (language "es", the mirror of a main Short: pipeline/mirror.py). The English patterns
+# are not run on Spanish text ("exposición" would match expos\w*); these stand in for them. Accents are optional.
+BANNED_ES = re.compile(r"\b(elecci[oó]n(es)?|parlament\w*|pol[ií]tic[oa]s?|asesin\w*|terroris\w*|porno\w*|onlyfans|nsfw|casinos?|"
+                       r"apuest\w*|apostar|apostadores?|loter[ií]a|cripto\w*|bitcoin|forex|se hizo viral|se vuelve viral|vuelto viral|"
+                       r"v[ií]deo viral|millones de visualizaciones|mil millones de visualizaciones)\b", re.I)
+NEGATIVE_ES = re.compile(r"\b(traici[oó]n|traicion\w*|admite[ns]?|admiti[oó]|admitieron|confes\w*|arremet\w*|destroz\w*|humill\w*|"
+                         r"burl\w*|ridiculiz\w*|expone[ns]?|expuso|expusieron|desenmascar\w*|en evidencia|pelea\w*|peleado|"
+                         r"enfrentamiento\w*|ri[ñn]a|polémic\w*|polemic\w*|controvers\w*|esc[aá]ndalo\w*|"
+                         r"trampa\w*|tramposo\w*|enga[ñn]\w*|mient[ea]\w*|mentir\w*|mentiros\w*|mentira\w*|despedid\w*|despide[ns]?|"
+                         r"despidi[oó]|echad\w+|acus\w*|culpa\w*|culpan|rabieta\w*|enojad\w*|furios\w*|furia|indignaci\w*|"
+                         r"abuche\w*|desaire\w*|trolle\w*|fracas\w*|divorci\w*|separaci[oó]n|se separa\w*|ruptura\w*|"
+                         r"verg[üu]enza|vergonzos\w*|bochorn\w*|contraataca\w*|responde con dureza|desprecia\w*|critic(a|an|aron|[oó]) a)\b",
+                         re.I)
+SLOW_ES = re.compile(r"(descubre|aprende|as[ií] es como|hoy vamos|vamos a ver|bienvenid\w+|en este (short|v[ií]deo))\b", re.I)
 # Words that are often fine but worth a second look: printed as warnings only.
 WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|court|cure[sd]?|vaccine\w*|president|minister|"
                    r"stocks?|shares|invest\w*|viral|views)\b", re.I)
@@ -92,9 +106,13 @@ def check(b, path=None):
 def _check(b, path=None):
     e, w = [], []
     sid = b.get("id", "")
-    if not re.fullmatch(r"QD-\d{3,}|TEST-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")
+    es = b.get("language") == "es"          # the Spanish mirror of a main Short (pipeline/mirror.py): id QD-###-es
+    if not re.fullmatch(r"QD-\d{3,}(-es)?|TEST-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")
     elif sid in _ids_elsewhere(path): e.append(f"id: {sid} is already used, take the next free number")
-    elif sid.startswith("QD-") and int(sid[3:]) < int(_config().get("first_id", 1)): e.append(f"id: numbers start at QD-{int(_config()['first_id']):03d}")
+    elif sid.startswith("QD-") and int(re.match(r"QD-(\d+)", sid).group(1)) < int(_config().get("first_id", 1)): e.append(f"id: numbers start at QD-{int(_config()['first_id']):03d}")
+    if sid.endswith("-es") != (es and bool(b.get("mirror_of"))) or (sid.endswith("-es") and b.get("mirror_of") != sid[:-3]):
+        e.append("id: a Spanish mirror is QD-###-es with language es and mirror_of (the main Short's id, QD-###), and nothing else is")
+    if es and b.get("channel") != "es": e.append("channel: a Spanish board is for the es channel")
     if b.get("format") not in _formats(): e.append(f"format: one of {sorted(_formats())}")
     if b.get("category") not in CATS: e.append(f"category: one of {sorted(CATS)}")
     if b.get("mode", "schedule") not in MODES: e.append(f"mode: one of {sorted(MODES)}")
@@ -119,10 +137,13 @@ def _check(b, path=None):
     lo, hi, best, top = {"about 60 s": (130, 200, (150, 180), 16), "about 2 min": (250, 370, (280, 340), 30),
                          "under 25 s": (50, 135, (58, 80), 14), "25 to 34 s": (50, 135, (75, 100), 14),
                          "35 to 44 s": (50, 135, (100, 125), 14)}.get(arm, (50, 135, (70, 125), 14))
+    if es: lo, hi, best = int(lo * 0.85), int(hi * 1.3), (int(best[0] * 0.9), int(best[1] * 1.25))      # Spanish runs about a fifth longer
     if not 3 <= len(beats) <= top: e.append(f"beats: 3 to {top}")
     hook0 = ((beats[0].get("say") if beats else "") or "").strip().lower()
     if re.match(r"(discover|learn|here'?s how|here is how|today we|let'?s look|let'?s talk|welcome|in this short|in this video)\b", hook0):
         e.append("beat 0: a slow intro (Discover, Learn, Here's how, Today we, Let's look): open on the most surprising detail instead")
+    if es and SLOW_ES.match(hook0):
+        e.append("beat 0: a slow intro (Descubre, Aprende, Hoy vamos a...): open on the most surprising detail instead")
     # content review (24 October), warnings that get one fixing round: question and "Did you know" openings got 0.47x the
     # views of the rest (7 of the 11 were asked for by no arm), and the 2 date-first openings 0.27x
     hook_arm = str((b.get("test") or {}).get("hook_type") or "") if isinstance(b.get("test"), dict) else ""
@@ -240,10 +261,11 @@ def _check(b, path=None):
     text = " ".join([bt.get("say", "") for bt in beats] + [title, m.get("summary", "")])
     us = sorted({m.group(0) for m in US_DATE.finditer(text)})
     if us: e.append(f"UK date style: write '20 October', not {us}")
-    hits = sorted({h.lower() for h in BANNED.findall(text)})
+    hits = sorted({h.lower() for h in BANNED.findall(text)} | ({m.group(0).lower() for m in BANNED_ES.finditer(text)} if es else set()))
     if hits: e.append(f"excluded topic or virality words: {hits}")
     if str(b.get("kind", "")).lower() != "fiction":
-        neg = sorted({h.lower() for h in NEGATIVE.findall(" ".join([title, m.get("summary", "")] + [bt.get("say", "") for bt in beats[:2]]))})
+        early = " ".join([title, m.get("summary", "")] + [bt.get("say", "") for bt in beats[:2]])
+        neg = sorted({m.group(0).lower() for m in NEGATIVE_ES.finditer(early)} if es else {h.lower() for h in NEGATIVE.findall(early)})
         if neg: e.append(f"negative framing of a real person (only in fiction): {neg}")
     watch = sorted({h.lower() for h in WATCH.findall(text)})
     if watch: w.append(f"check these words are fine in context: {watch}")

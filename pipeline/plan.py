@@ -83,10 +83,23 @@ def learned_slots(n):
             if len(picked) == n: return sorted(picked)
     return None
 
+def americas_slots(day, n):
+    """The Spanish mirror's day (UK date `day`): the American evening, 19:00 to 23:00 in New York in summer. The first at
+    23:00 UTC on `day`, the other n-1 evenly from 00:00 to 03:00 UTC the next day (config shorts_channels.<ch>.slot_grid
+    "americas"; 40% of our views are American)."""
+    first = dt.datetime(day.year, day.month, day.day, 23, 0, tzinfo=dt.timezone.utc)
+    if n <= 1: return [first]
+    nxt = first + dt.timedelta(hours=1)
+    gap = 180 / (n - 2) if n > 2 else 0
+    return [first] + [nxt + dt.timedelta(minutes=round(gap * i)) for i in range(n - 1)]
+
+
 def channel_slots(day, channel):
     """An extra channel's day (UK date): its per_day slots, spread evenly round the 24 hours from slot_first (UK), so a new
-    channel measures every hour; the times learned from results belong to the main channel's audience and are not used."""
+    channel measures every hour; the times learned from results belong to the main channel's audience and are not used. A
+    channel with slot_grid "americas" (the Spanish mirror) posts in the American evening instead."""
     n = max(1, int(channel_cfg(channel).get("per_day") or 6))
+    if channel_cfg(channel).get("slot_grid") == "americas": return americas_slots(day, n)
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
     step = dt.timedelta(minutes=1440 // n)
@@ -351,8 +364,10 @@ def main():
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats, explore=explore,
                                                                                energy=fx.get("fx_energy"))
         recent_looks.append(look)
+        if b.get("language") == "es": look = {**look, "voice": "george"}       # run_board.py reads a Spanish Short in the Spanish voice: no English voice model to fetch for it
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
         if ch != "main": job["channel"] = ch                      # run_board.py puts it in status/<id>.json, upload.py picks the client
+        if b.get("language") == "es": job["language"] = "es"      # render.yml fetches the multilingual voice model for it
         if fx:              # the round's arms against what this run gave them (analytics compares the arms as assigned)
             job["fx"] = {k: {"assigned": v, "used": (look.get("energy") if k == "fx_energy" else BAND_ARMS.get(band(slot_t)) if slot_t else "")}
                          for k, v in fx.items()}

@@ -353,7 +353,7 @@ def resolve(sb):
                 shot.update(cache[src]); continue
             kind, _, rest = src.partition(":")
             PICK.clear()
-            try: PICK["ctx"] = PX.context(_words(kind, rest), beat.get("say"), shot.get("label"))      # the beat's text; None when it has none
+            try: PICK["ctx"] = PX.context(_words(kind, rest), beat.get("say_en") or beat.get("say"), shot.get("label"))      # the beat's text (a Spanish mirror's English original: same pictures); None when it has none
             except Exception: PICK["ctx"] = None
             try:
                 if kind == "commons": url, credit, source = commons_file(rest)

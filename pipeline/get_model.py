@@ -1,9 +1,10 @@
 """Download the Chatterbox voice models (MIT licence) at pinned revisions and check every file's hash.
 usage: python get_model.py <dir>            the standard model (every Short's voices)
        python get_model.py <dir> --turbo    Chatterbox-Turbo, for the george_turbo voice (24 October; chatterbox-tts 0.1.7 reads it)
+       python get_model.py <dir> --multilingual    Chatterbox Multilingual, for the Spanish mirror's voice (25 October; pipeline/mirror.py)
 A hash of 64 hex digits is a SHA-256 (the large weight files); one of 40 is the file's git blob id, which is what the Hugging Face
 file list gives for the small text files (SHA-1 of "blob <size>", a NUL byte, then the file)."""
-import hashlib, pathlib, sys
+import hashlib, pathlib, re, sys
 from huggingface_hub import hf_hub_download
 
 REPO, REV = "ResembleAI/chatterbox", "5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18"
@@ -22,6 +23,15 @@ TURBO_FILES = {"t3_turbo_v1.safetensors": "fcf1f8c1d651bb7e3acd69ee5be269b4ac10c
                "tokenizer_config.json": "58bc759ea7dab3dd5442f0500e493f170eeba67f",
                "added_tokens.json": "fd85325cdfafc690469b6f0e8aeb5cf4649c1450",
                "special_tokens_map.json": "b2d2dbc845800c78fe98656af927d831ab4ff7b7"}
+
+# Chatterbox Multilingual (the same ResembleAI repo, later files; chatterbox-tts 0.1.7, chatterbox/mtl_tts.py reads ve.pt,
+# t3_mtl23ls_v2.safetensors, s3gen.pt, grapheme_mtl_merged_expanded_v1.json and, as the built-in voice, conds.pt). It could not be
+# pinned when it was added (25 October: Hugging Face was not reachable from where it was written), so the first run resolves
+# MTL_REV ("main") to its commit, downloads at that commit and prints the commit and every file's SHA-256: put them in MTL_REV
+# and MTL_FILES to pin it like the models above. The render step that runs it is optional (a failure costs a Spanish Short's
+# voice, never the main channel), and its cache keeps the first download.
+MTL_REPO, MTL_REV = "ResembleAI/chatterbox", "main"
+MTL_FILES = {"ve.pt": None, "t3_mtl23ls_v2.safetensors": None, "s3gen.pt": None, "grapheme_mtl_merged_expanded_v1.json": None, "conds.pt": None}
 
 def sha256(p):
     h = hashlib.sha256()
@@ -46,8 +56,21 @@ def fetch(repo, rev, files, dest):
             hf_hub_download(repo, name, revision=rev, local_dir=dest)
         if want and not matches(f, want):
             f.unlink(); sys.exit(f"{name}: hash mismatch, deleted")
-        print(name, "ok")
+        print(name, "ok" if want else f"ok (not pinned) sha256 {sha256(f)}")
+
+def resolve(repo, rev):
+    """A branch name as the commit it is now (printed, so it can be pinned); a commit stays as it is."""
+    if re.fullmatch(r"[0-9a-f]{40}", rev): return rev
+    try:
+        from huggingface_hub import HfApi
+        sha = HfApi().model_info(repo, revision=rev).sha
+        print(f"{repo}@{rev} is commit {sha}: set MTL_REV to it to pin the download")
+        return sha
+    except Exception as e:
+        print(f"could not resolve {repo}@{rev} to a commit ({type(e).__name__}); downloading it as it is")
+        return rev
 
 if __name__ == "__main__":
     if "--turbo" in sys.argv[2:]: fetch(TURBO_REPO, TURBO_REV, TURBO_FILES, sys.argv[1])
+    elif "--multilingual" in sys.argv[2:]: fetch(MTL_REPO, resolve(MTL_REPO, MTL_REV), MTL_FILES, sys.argv[1])
     else: fetch(REPO, REV, FILES, sys.argv[1])

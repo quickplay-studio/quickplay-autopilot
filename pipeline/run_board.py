@@ -120,18 +120,22 @@ def localize(meta, desc):
     return out
 
 
+LABELS = {"en": ("Sources:", "Visuals:", "Music", "Independent channel, not affiliated with the companies or people featured. Facts checked against the sources above."),
+          "es": ("Fuentes:", "Imágenes:", "Música", "Canal independiente, sin relación con las empresas ni las personas que aparecen. Datos comprobados con las fuentes indicadas.")}
+
+
 def description(sb, credits, track):
     m = sb.get("meta", {})
-    out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    src_l, vis_l, music_l, note_l = LABELS["es" if sb.get("language") == "es" else "en"]       # the Spanish mirror's description is Spanish
+    out = [m.get("summary", "").strip(), "", src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")
         if not cr or cr.startswith("Music:") or (cr, src) in seen: continue
         seen.add((cr, src)); vis.append(f"{cr} ({src})" if src else cr)
-    if vis: out += ["", "Visuals:"] + vis
-    out += ["", f"Music: {track['title']} by {track['artist']} ({track.get('source', 'YouTube Audio Library')})", "",
-            "Independent channel, not affiliated with the companies or people featured. Facts checked against the sources above.",
-            "", " ".join(hashtags_for(m, "youtube"))]
+    if vis: out += ["", vis_l] + vis
+    out += ["", f"{music_l}: {track['title']} " + ("de" if sb.get("language") == "es" else "by") + f" {track['artist']} ({track.get('source', 'YouTube Audio Library')})", "",
+            note_l, "", " ".join(hashtags_for(m, "youtube"))]
     return "\n".join(out)
 
 def hashtags_for(meta, platform):
@@ -253,6 +257,13 @@ def main():
         # the look (caption style, voice and pace, camera energy, colour grade): chosen by plan.py, see templates/looks.json
         import looks as LK
         look = LK.resolve(job.get("look") or sb.get("look"))
+        es = sb.get("language") == "es"      # the Spanish mirror (pipeline/mirror.py): the Spanish voice, Spanish labels and description
+        if es:
+            ec = (cfg.get("shorts_channels") or {}).get(status.get("channel") or "es") or {}
+            look["voice"] = {"voice": ec.get("voice") or "ES", "wps": float(ec.get("wps") or 2.8)}
+            look["ids"]["voice"] = "es"
+        hc = ((cfg.get("shorts_channels") or {}).get(status.get("channel")) or {}).get("handle") if status.get("channel") else ""
+        if hc and not sb.get("handle"): sb["handle"] = hc       # the name on screen is the channel's own (template3.html)
         sb.update(look=look["ids"], look_render=look["render"], group=look["render"]["group"])
         rw, b0 = look["render"].get("reveal_word", 0), (sb["beats"] or [{}])[0]
         if rw and (b0.get("visual") or {}).get("type", "none") != "none" and "atWord" not in b0["visual"]:
@@ -269,16 +280,17 @@ def main():
             fetch_media.PX.unload()     # the picture model's 1.5 GB is not needed again; the voice model loads next
         except Exception as e: print(f"picture summary skipped: {str(e)[:160]}", flush=True)
         voice = sb.get("voice", "F2") if sb.get("voice_fixed") else look["voice"]["voice"]
+        home = "ES" if es else "F2"          # the house voice an unclear or failed read falls back to
         sb.update(voice_engine="chatterbox", voice_tag="cb")
         resolved = P / "out" / f"{sid}.resolved.json"; resolved.parent.mkdir(exist_ok=True)
         tried, crashed = [], ""      # an unclear read in a new voice is tried again in the house voice, then the house voice 15% slower
         wps0 = float(look["voice"]["wps"])  # (unclear Shorts were lost outright before 23 October); the clearest read wins
-        for k, (v, wps) in enumerate([(voice, wps0)] + ([("F2", wps0)] if voice != "F2" else []) + [("F2", round(wps0 * 0.85, 2))]):
+        for k, (v, wps) in enumerate([(voice, wps0)] + ([(home, wps0)] if voice != home else []) + [(home, round(wps0 * 0.85, 2))]):
             vdir = f"voice/{sid}-{v}-{k}"
             sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
             try: sh(PY, "tts_cb.py", resolved, P / vdir, "--voice", v, "--target-wps", str(wps))
             except subprocess.CalledProcessError as e:
-                if v == "F2": raise          # the house voice failing is a real failure, as it always was
+                if v == home: raise          # the house voice failing is a real failure, as it always was
                 crashed = f"voice {voice} could not run (exit {e.returncode})"       # a voice that cannot start (Turbo's model files, 24 October) is read in the house voice instead
                 print(crashed, flush=True); continue
             man = json.loads((P / vdir / "cb_manifest.json").read_text())
@@ -303,7 +315,7 @@ def main():
         if weak and len(weak) == 1 and weak[0] != 0 and -worst >= 0.25:     # one middle beat, mostly heard: the captions carry it
             status["qa_note"] = f"narration a little unclear in beat {weak[0]} (captions carry it)"; weak = []    # a note, not a flag: flags hold a Short for approval
         if v != voice:
-            status["look"]["voice"] = "george"; status["look_note"] = (crashed or f"voice {voice} was less clear") + ", used george"
+            status["look"]["voice"] = "es" if es else "george"; status["look_note"] = (crashed or f"voice {voice} was less clear") + (", used the Spanish house voice" if es else ", used george")
         sb["voice_dir"] = vdir; resolved.write_text(json.dumps(sb, indent=1, ensure_ascii=False))
         sh(PY, "render3.py", resolved, P / "out")
         mp4 = P / "out" / f"{sid}.mp4"
@@ -332,10 +344,10 @@ def main():
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())
         meta = sb.get("meta", {})
         (res / "upload.json").write_text(json.dumps({
-            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": localize(meta, desc),
+            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": {} if es else localize(meta, desc),
             "tags": youtube_tags(meta),
             "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags,
-            **({"channel": status["channel"]} if status.get("channel") else {})},
+            **({"channel": status["channel"]} if status.get("channel") else {}), **({"language": "es"} if es else {})},
             indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
         smp4 = P / "out" / f"{sid}.social.mp4"

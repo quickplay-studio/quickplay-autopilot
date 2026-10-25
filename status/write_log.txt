@@ -1,7 +1,11 @@
-breaking run for 2026-10-25: 2 to write from 1 fact packs
-category shares: {'Music': 0.26, 'Film': 0.19, 'Sport': 0.15, 'Gaming': 0.15, 'Entertainment': 0.11, 'Tech': 0.07, 'Science': 0.07}
-watchlist: the day's 5 watch places are filled: Halloween 2026
+afternoon run for 2026-10-25: 3 to write from 6 fact packs
+category shares: {'Music': 0.21, 'Film': 0.2, 'Sport': 0.16, 'Gaming': 0.15, 'Entertainment': 0.14, 'Tech': 0.07, 'Science': 0.07}
+too few facts: GTA 6 trailer views record
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Tate McRae: The new number one hit 🎶: skipped: niche
-wrote 0 of 2: 
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:qwen/qwen3.8-27b": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 0, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+Halloween 2026: skipped: niche
+Halloween 2026: groq:openai/gpt-oss-120b, 0 warnings
+watchlist Halloween 2026: today's places are filled: Halloween history
+saints vs steelers: gemini-3.6-flash, 0 warnings
+EA shuts down BioWare: gemini-3-flash-preview, 1 warnings (narration: 106 words, best between 75 and 100)
+wrote 3 of 3: QD-174 Halloween skywatch: five spooky targets revealed; QD-175 saints vs steelers: the Paris milestone explained; QD-176 BioWare: fans petition after EA closure 🎮
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "openrouter:nvidia/nemotron-3-super-120b-a12b:free": "daily limit", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "gemini-3.8-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-3.8-flash": 1}, "answers": {"groq:qwen/qwen3.8-27b": 2, "gemini-3.5-flash-lite": 10, "groq:openai/gpt-oss-120b": 1, "gemini-3.6-flash": 1, "gemini-3-flash-preview": 5}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 1, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}

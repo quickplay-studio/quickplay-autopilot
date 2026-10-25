@@ -10,7 +10,7 @@
  "model_chain_note": "24 October (audit M7): a writing model that times out once is passed over for the run, a provider that refuses 3 calls (too large, limits, server errors, timeouts; a refused key at once) is passed over for the run, and Groq answers within 3,500 tokens (its free tier counts the prompt and max_tokens against the minute), with one smaller retry on too large.",
  "watchlist": [
   {"name": "Ballon d'Or 2026", "terms": ["Ballon d'Or", "Ballon d'Or nominees", "Ballon d'Or winner"], "wikipedia": "2026 Ballon d'Or", "date": "2026-10-26", "category": "Sport", "angles": ["Ballon d'Or 2026 nominees", "Ballon d'Or 2026 winner", "Ballon d'Or 2026 London ceremony", "Ballon d'Or past winners", "Kopa Trophy 2026"], "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly.", "lead_days": 7, "after_days": 2},
-  {"name": "The Celebrity Traitors", "terms": ["Celebrity Traitors", "Celebrity Traitors final", "Celebrity Traitors 2026"], "wikipedia": "The Celebrity Traitors", "date": "2026-10-30", "category": "Entertainment", "angles": ["Celebrity Traitors 2026 cast", "Celebrity Traitors final", "Celebrity Traitors viewing figures", "Celebrity Traitors winner"], "rules": "Off (Charlie, 25 October): the show's betrayals are real people framed negatively. Cover it as TV news: the cast, the format, viewing figures and the result once the BBC has shown it. The final's date (late October or early November) is expected, not announced: never state it as fact. Murder is only the game's word; keep it light, no spoilers before broadcast, family friendly.", "lead_days": 3, "after_days": 2, "places": 2, "active": false},
+  {"name": "The Celebrity Traitors", "terms": ["Celebrity Traitors", "Celebrity Traitors final", "Celebrity Traitors 2026"], "wikipedia": "The Celebrity Traitors", "date": "2026-10-30", "category": "Entertainment", "angles": ["Celebrity Traitors 2026 cast", "Celebrity Traitors final", "Celebrity Traitors viewing figures", "Celebrity Traitors winner"], "rules": "The game's own words (traitor, faithful, betrayal, murder, banished) are fine as the show's vocabulary (Charlie, 25 October); nothing negative about the people themselves. Cover it as TV news: the cast, the format, viewing figures and the result once the BBC has shown it. The final's date (late October or early November) is expected, not announced: never state it as fact. Murder is only the game's word; keep it light, no spoilers before broadcast, family friendly.", "lead_days": 3, "after_days": 2, "places": 2},
   {"name": "Halloween 2026", "terms": ["Halloween costumes 2026", "Halloween costume ideas", "Halloween traditions"], "wikipedia": "Halloween", "date": "2026-10-31", "category": "Entertainment", "angles": ["most popular Halloween costumes 2026", "Halloween history", "why we carve pumpkins", "Halloween around the world", "giant pumpkin record"], "rules": "Cover it as culture and fun facts: costume trends, traditions, history and records from the sources. No gore, no horror film scenes, nothing that would frighten young children, no pranks or dares; family friendly.", "lead_days": 7, "after_days": 1, "places": 2},
   {"name": "UFC 334", "terms": ["UFC Madison Square Garden", "UFC MSG 2026"], "wikipedia": "UFC 334", "date": "2026-11-14", "category": "Sport", "angles": ["UFC 334 fight card", "UFC 334 main event", "UFC 334 results", "UFC at Madison Square Garden history"], "rules": "Cover it as sport news: the card, the champions, records and results as the sources state them. No fight footage, injuries or blood, no odds or betting; family friendly.", "lead_days": 3, "active": false, "after_days": 1, "places": 1},
   {"name": "I'm a Celebrity 2026", "terms": ["I'm a Celebrity", "I'm A Celeb 2026", "I'm a Celebrity line-up"], "wikipedia": "I'm a Celebrity...Get Me Out of Here! (British series 26)", "date": "2026-11-15", "category": "Entertainment", "angles": ["I'm a Celebrity 2026 line-up", "I'm a Celebrity 2026 start date", "Ant and Dec", "I'm a Celebrity camp facts"], "rules": "Cover it as TV news: the line-up once ITV confirms it, the hosts, the camp, viewing figures and results. The start date (Sunday 15 November) is a rumour until ITV confirms it, and rumoured names stay rumours. No gross-out trial detail; family friendly.", "lead_days": 3, "active": false, "places": 2},
@@ -200,23 +200,212 @@
  "reserve_after": "18:20",
  "reserve_note": "Evergreen Shorts in boards/reserve fill any of the day's slots the writer runs left empty: after reserve_after (UK), up to reserve_per_day a day. In flagged approval mode a reserve Short with nothing flagged needs no approval; a flagged one waits for a 'reserve approve' line.",
  "evergreen_search_per_day": 2,
- "evergreen_search": {"prefixes": ["why does", "what is", "how did", "explained"], "categories_per_run": 5, "seconds": 20, "own_terms": 12},
+ "evergreen_search": {
+  "prefixes": [
+   "why does",
+   "what is",
+   "how did",
+   "explained"
+  ],
+  "categories_per_run": 5,
+  "seconds": 20,
+  "own_terms": 12
+ },
  "evergreen_search_note": "25 October (Charlie approved search-led evergreen): evergreen_search_per_day Shorts a day whose subjects come from what people search (pipeline/series.py candidates, writer.search_led_packs): our own search terms (analytics/search_terms.csv), YouTube's search suggestions for the prefixes (why does, what is, how did) and the suffix explained after a rotating handful of each category's seeds, Google Trends related queries when trends/latest.json carries them, and Wikipedia's On this day. The evening and morning runs write one each, the afternoon run whatever is missing. Each is kind evergreen from one Wikipedia article (facts checked word for word), source Search-led in drivers.csv, and a numbered Short of its category's series.",
  "series": [
-  {"name": "Game Explained", "category": "Gaming", "title": "{name} #{n}: {subject}", "about": "The gaming questions people type into YouTube, answered in under a minute with sources.", "seeds": ["minecraft", "fortnite", "gta", "pokemon", "zelda", "mario", "roblox", "call of duty"], "playlist": ""},
-  {"name": "Film Explained", "category": "Film", "title": "{name} #{n}: {subject}", "about": "The film and TV questions people type into YouTube, answered in under a minute with sources.", "seeds": ["marvel", "star wars", "disney", "pixar", "harry potter", "batman", "lord of the rings", "jurassic park"], "playlist": ""},
-  {"name": "Music Explained", "category": "Music", "title": "{name} #{n}: {subject}", "about": "The music questions people type into YouTube, answered in under a minute with sources.", "seeds": ["taylor swift", "the beatles", "queen", "adele", "eurovision", "vinyl records", "guitar", "oasis"], "playlist": ""},
-  {"name": "Sport Explained", "category": "Sport", "title": "{name} #{n}: {subject}", "about": "The sport questions people type into YouTube, answered in under a minute with sources.", "seeds": ["premier league", "formula 1", "olympics", "wimbledon", "world cup", "cricket", "rugby", "boxing"], "playlist": ""},
-  {"name": "Tech Explained", "category": "Tech", "title": "{name} #{n}: {subject}", "about": "The tech questions people type into YouTube, answered in under a minute with sources.", "seeds": ["iphone", "playstation", "wifi", "ai", "bluetooth", "5g", "nintendo switch", "youtube"], "playlist": ""},
-  {"name": "Science Explained", "category": "Science", "title": "{name} #{n}: {subject}", "about": "The space and science questions people type into YouTube, answered in under a minute with sources.", "seeds": ["space", "black holes", "the moon", "mars", "dinosaurs", "volcanoes", "the sun", "gravity"], "playlist": ""},
-  {"name": "Culture Explained", "category": "Entertainment", "title": "{name} #{n}: {subject}", "about": "The TV, anime and pop culture questions people type into YouTube, answered in under a minute with sources.", "seeds": ["strictly", "netflix", "anime", "the simpsons", "doctor who", "taskmaster", "bluey", "mrbeast"], "playlist": ""},
-  {"name": "Animals Explained", "category": "Animals", "title": "{name} #{n}: {subject}", "about": "The animal and nature questions people type into YouTube, answered in under a minute with sources.", "seeds": ["cats", "dogs", "octopus", "sharks", "penguins", "bees", "elephants", "dolphins"], "playlist": ""},
-  {"name": "Food Explained", "category": "Food", "title": "{name} #{n}: {subject}", "about": "The food questions people type into YouTube, answered in under a minute with sources.", "seeds": ["pizza", "chocolate", "coffee", "chips", "cheese", "curry", "ice cream", "bread"], "playlist": ""},
-  {"name": "Cars Explained", "category": "Cars", "title": "{name} #{n}: {subject}", "about": "The car questions people type into YouTube, answered in under a minute with sources.", "seeds": ["ferrari", "electric cars", "formula 1 cars", "mini cooper", "lamborghini", "tesla", "rolls royce", "supercars"], "playlist": ""},
-  {"name": "History Explained", "category": "History", "title": "{name} #{n}: {subject}", "about": "The history questions people type into YouTube, answered in under a minute with sources.", "seeds": ["titanic", "ancient rome", "the vikings", "pyramids", "tudors", "ancient egypt", "castles", "the romans"], "playlist": ""}
+  {
+   "name": "Game Explained",
+   "category": "Gaming",
+   "title": "{name} #{n}: {subject}",
+   "about": "The gaming questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "minecraft",
+    "fortnite",
+    "gta",
+    "pokemon",
+    "zelda",
+    "mario",
+    "roblox",
+    "call of duty"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Film Explained",
+   "category": "Film",
+   "title": "{name} #{n}: {subject}",
+   "about": "The film and TV questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "marvel",
+    "star wars",
+    "disney",
+    "pixar",
+    "harry potter",
+    "batman",
+    "lord of the rings",
+    "jurassic park"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Music Explained",
+   "category": "Music",
+   "title": "{name} #{n}: {subject}",
+   "about": "The music questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "taylor swift",
+    "the beatles",
+    "queen",
+    "adele",
+    "eurovision",
+    "vinyl records",
+    "guitar",
+    "oasis"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Sport Explained",
+   "category": "Sport",
+   "title": "{name} #{n}: {subject}",
+   "about": "The sport questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "premier league",
+    "formula 1",
+    "olympics",
+    "wimbledon",
+    "world cup",
+    "cricket",
+    "rugby",
+    "boxing"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Tech Explained",
+   "category": "Tech",
+   "title": "{name} #{n}: {subject}",
+   "about": "The tech questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "iphone",
+    "playstation",
+    "wifi",
+    "ai",
+    "bluetooth",
+    "5g",
+    "nintendo switch",
+    "youtube"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Science Explained",
+   "category": "Science",
+   "title": "{name} #{n}: {subject}",
+   "about": "The space and science questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "space",
+    "black holes",
+    "the moon",
+    "mars",
+    "dinosaurs",
+    "volcanoes",
+    "the sun",
+    "gravity"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Culture Explained",
+   "category": "Entertainment",
+   "title": "{name} #{n}: {subject}",
+   "about": "The TV, anime and pop culture questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "strictly",
+    "netflix",
+    "anime",
+    "the simpsons",
+    "doctor who",
+    "taskmaster",
+    "bluey",
+    "mrbeast"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Animals Explained",
+   "category": "Animals",
+   "title": "{name} #{n}: {subject}",
+   "about": "The animal and nature questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "cats",
+    "dogs",
+    "octopus",
+    "sharks",
+    "penguins",
+    "bees",
+    "elephants",
+    "dolphins"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Food Explained",
+   "category": "Food",
+   "title": "{name} #{n}: {subject}",
+   "about": "The food questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "pizza",
+    "chocolate",
+    "coffee",
+    "chips",
+    "cheese",
+    "curry",
+    "ice cream",
+    "bread"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "Cars Explained",
+   "category": "Cars",
+   "title": "{name} #{n}: {subject}",
+   "about": "The car questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "ferrari",
+    "electric cars",
+    "formula 1 cars",
+    "mini cooper",
+    "lamborghini",
+    "tesla",
+    "rolls royce",
+    "supercars"
+   ],
+   "playlist": ""
+  },
+  {
+   "name": "History Explained",
+   "category": "History",
+   "title": "{name} #{n}: {subject}",
+   "about": "The history questions people type into YouTube, answered in under a minute with sources.",
+   "seeds": [
+    "titanic",
+    "ancient rome",
+    "the vikings",
+    "pyramids",
+    "tudors",
+    "ancient egypt",
+    "castles",
+    "the romans"
+   ],
+   "playlist": ""
+  }
  ],
  "series_note": "25 October (Charlie approved named, numbered series in playlists): one series per category (pipeline/series.py). The writer gives each evergreen Short that is not in the reserve the next number of its category's series, counted over boards/* (series_name, series_no on the board), and the title (pattern in title, 70 characters at most), the alternative title, the description (run_board.description) and the creator comment (engage.py) carry the name and number. The series replaces the franchise test arm on these Shorts (test franchise: series). playlist is an optional playlist id to use instead of creating one; the ids engage.py creates are kept in status/playlists.json (playlists.py: 50 units to create, 50 to add a Short, both through quota.allow). Keep a name to 17 characters so the title fits. seeds are the subjects the search suggestions start from.",
- "playbook": {"angles": 5, "grace_days": 2},
+ "playbook": {
+  "angles": 5,
+  "grace_days": 2
+ },
  "playbook_note": "25 October (Charlie approved seasonal playbooks as mini-series): when a watchlist item first reaches launch or surging, watch.py writes a playbook once into status/playbooks.json: the item's first 5 angles (padded with generic ones), one a day, numbered '<Event> #1 to #5' in the titles and gathered in a playlist of the event. Progress is read from the boards (series_key), so a missed angle gets grace_days more days and then the series moves on. The angles are watch topics, so the watch places and watch_share_max still apply.",
  "upload_limit_24h": 40,
  "upload_limit_step": 6,
@@ -346,7 +535,7 @@
   ]
  },
  "instagram_first_note": "Instagram as its own product (25 October, social.py): a Short in a category Instagram favours goes out at the first run after it is public, whatever its YouTube views (the picker never reads them), inside the posting hour test's rules (a morning-arm Short waits for instagram_morning_hours). Favoured = a category whose Instagram score (ig_category_scores: median Instagram views of its Reels over everyone's, shrunk by 5 Reels) is instagram_favour_min or more; a category in instagram_category_order stays favoured until Instagram has numbers for it (under 15 measured Reels, only that order counts). Favoured and exploration Reels share the top tier, newest first, so a fresh favoured Short is not held behind an older one; the rest follow by score. instagram_first false puts the order back to score first. instagram_hashtags: 3 to 5 family-friendly UK English tags per category, used by the short-caption arm (the long arm keeps the board's own hashtags; a category with no set falls back to the board's first 3). The cover frame (thumb_offset at the hook) is recorded on each post as accepted, refused or off; a refusal stops it being asked for instagram_cover_pause_days days (status/instagram_cover.json) and the tally is in status/social.json (instagram.cover) and status/instagram.json. status/instagram.json and the Instagram section of analytics/insights.md are rewritten by every full analytics run (social.ig_report); the hub's Insights tab reads the file.",
- "instagram_tests_note":"Instagram's own tests (24 October, social.py): trial reels for instagram_trial_share of Reels (trial_params with graduation_strategy instagram_trial_strategy: shown first to non-followers, graduated by Meta when they do well; in the Content Publishing API since 3 December 2025 for Instagram Login apps; off for 14 days after Meta refuses one, status/instagram_trial.json); a short caption (the spoken hook and the category's own hashtags, instagram_hashtags) for instagram_caption_share against the full one; instagram_hour_share of Reels held to instagram_morning_hours (UK) against posting as soon as public, each arm with its share of the day's cap; the cover frame (thumb_offset) inside the opening beat. Each arm is fixed per Short by its id and recorded on the post; analytics scores them against Instagram views (drivers.analyse_instagram, never put to the writer) and a proven arm then takes 80% of Reels, never all. Cap: instagram_per_day (4) to start and after Meta pushes back, +instagram_ramp_per_day a day up to instagram_target (8, the data report's cap).",
+ "instagram_tests_note": "Instagram's own tests (24 October, social.py): trial reels for instagram_trial_share of Reels (trial_params with graduation_strategy instagram_trial_strategy: shown first to non-followers, graduated by Meta when they do well; in the Content Publishing API since 3 December 2025 for Instagram Login apps; off for 14 days after Meta refuses one, status/instagram_trial.json); a short caption (the spoken hook and the category's own hashtags, instagram_hashtags) for instagram_caption_share against the full one; instagram_hour_share of Reels held to instagram_morning_hours (UK) against posting as soon as public, each arm with its share of the day's cap; the cover frame (thumb_offset) inside the opening beat. Each arm is fixed per Short by its id and recorded on the post; analytics scores them against Instagram views (drivers.analyse_instagram, never put to the writer) and a proven arm then takes 80% of Reels, never all. Cap: instagram_per_day (4) to start and after Meta pushes back, +instagram_ramp_per_day a day up to instagram_target (8, the data report's cap).",
  "tiktok_per_day": 2,
  "tiktok_privacy": "",
  "accounts": {
@@ -416,5 +605,10 @@
  "claude_api_effort": "low",
  "claude_api_note": "24 October: with an ANTHROPIC_API_KEY secret (Charlie's monthly Max API credits, claimed in claude.ai Settings, Billing) the pipeline's Claude calls use the Messages API at claude_api_effort instead of the CLI and his chat allowance; the same caps apply (claude_max_per_run, claude_edits_per_day).",
  "apify_max_results": 100,
- "apify_note": "25 October (Charlie): the morning trends run (RUN=morning) adds an Apify trend feed when the APIFY_TOKEN secret exists: config apify_feeds lists actors (default apify/google-trends-scraper, related and rising queries for the seed terms), at most apify_max_results items a run ($0.30 per 1,000 on the free plan's $5 monthly credit). Topics carry the source label Apify, so drivers.csv scores the feed like every source."
+ "apify_note": "25 October (Charlie): the morning trends run (RUN=morning) adds an Apify trend feed when the APIFY_TOKEN secret exists: config apify_feeds lists actors (default apify/google-trends-scraper, related and rising queries for the seed terms), at most apify_max_results items a run ($0.30 per 1,000 on the free plan's $5 monthly credit). Topics carry the source label Apify, so drivers.csv scores the feed like every source.",
+ "game_shows": [
+  "The Traitors",
+  "The Celebrity Traitors"
+ ],
+ "game_shows_note": "25 October: for a Short about one of these shows, the game's vocabulary (traitor, faithful, betray, murder, banish) passes the excluded-word and negative-framing checks (validate.py); other negative words about real people are still rejected."
 }

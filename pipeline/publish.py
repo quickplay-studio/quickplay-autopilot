@@ -62,7 +62,12 @@ def is_reserve_line(l):
     return l.strip().lower().startswith("reserve")
 
 def is_pull_line(l):
-    return bool(re.match(r"\s*(pull|unschedule|private)\b", l, re.I))
+    return bool(re.match(r"\s*(pull|unschedule|private|public)\b", l, re.I))
+
+
+def is_public_line(l):
+    """"public QD-163": a Short made private is public again (Charlie changed his mind, 25 October)."""
+    return bool(re.match(r"\s*public\b", l, re.I))
 
 
 def is_private_line(l):
@@ -84,6 +89,18 @@ def pull_step(lines):
     yt, later, others = Y.client(), set(), {}
     for i in ids:
         st = load_status(i); vid = st.get("video")
+        if any(is_public_line(l) and i in pull_ids(l) for l in lines):
+            if not vid: continue
+            try:
+                yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False,
+                                                                              "containsSyntheticMedia": False}}).execute()
+                st.update(state="public again (Charlie)", public_again=NOW.isoformat(timespec="seconds")); st.pop("pulled", None); save_status(st)
+                for d in ("rejected", "expired"):
+                    p = ROOT / "boards" / d / f"{i}.json"
+                    if p.exists(): move(p, "done")
+                print(i, "public again")
+            except Exception as e: print(i, "public refused:", str(e)[:200])
+            continue
         if st.get("pulled"): continue
         if not vid: later.add(i); print(i, "pull: not on YouTube yet, trying again next run"); continue
         wants_private = any(is_private_line(l) and i in pull_ids(l) for l in lines)

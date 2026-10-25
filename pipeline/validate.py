@@ -40,6 +40,7 @@ NEGATIVE_ES = re.compile(r"\b(traici[oó]n|traicion\w*|admite[ns]?|admiti[oó]|a
                          r"verg[üu]enza|vergonzos\w*|bochorn\w*|contraataca\w*|responde con dureza|desprecia\w*|critic(a|an|aron|[oó]) a)\b",
                          re.I)
 SLOW_ES = re.compile(r"(descubre|aprende|as[ií] es como|hoy vamos|vamos a ver|bienvenid\w+|en este (short|v[ií]deo))\b", re.I)
+GAME_WORDS = re.compile(r"\b(traitors?|faithfuls?|betray\w*|murder\w*|banish\w*|round table|admits?|admitted|confess\w*)\b", re.I)     # a listed game show's own words
 # Words that are often fine but worth a second look: printed as warnings only.
 WATCH = re.compile(r"\b(vote|voting|police|shooting|shot dead|killed|arrest\w*|court|cure[sd]?|vaccine\w*|president|minister|"
                    r"stocks?|shares|invest\w*|viral|views)\b", re.I)
@@ -261,10 +262,14 @@ def _check(b, path=None):
     text = " ".join([bt.get("say", "") for bt in beats] + [title, m.get("summary", "")])
     us = sorted({m.group(0) for m in US_DATE.finditer(text)})
     if us: e.append(f"UK date style: write '20 October', not {us}")
+    # a Short about a game show on config "game_shows" (The Traitors: Charlie, 25 October) may use the game's own words
+    shows = [x for x in (_config().get("game_shows") or []) if x.lower() in (title + " " + " ".join(map(str, m.get("tags") or [])) + " " + str(b.get("watch") or "")).lower()]
+    text = GAME_WORDS.sub(" ", text) if shows else text
     hits = sorted({h.lower() for h in BANNED.findall(text)} | ({m.group(0).lower() for m in BANNED_ES.finditer(text)} if es else set()))
     if hits: e.append(f"excluded topic or virality words: {hits}")
     if str(b.get("kind", "")).lower() != "fiction":
         early = " ".join([title, m.get("summary", "")] + [bt.get("say", "") for bt in beats[:2]])
+        if shows: early = GAME_WORDS.sub(" ", early)
         neg = sorted({m.group(0).lower() for m in NEGATIVE_ES.finditer(early)} if es else {h.lower() for h in NEGATIVE.findall(early)})
         if neg: e.append(f"negative framing of a real person (only in fiction): {neg}")
     # 25 October, from the data: date, quote and cards graphics lose viewers fastest (one fixing round, never an error). Hook

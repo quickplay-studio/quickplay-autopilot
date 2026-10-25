@@ -1,4 +1,4 @@
-# Mac card: the Chrome run (19:07 UK, and whenever a cloud session fires it)
+# Mac card: the Chrome run (every 2 hours 09:07 to 23:07 UK, when the Mac is bound; or whenever a cloud session fires it)
 
 Read this card, then run `python3 pipeline/mac_rows.py`. Read nothing else unless its answer names a file.
 - Account: the studio Google account only.

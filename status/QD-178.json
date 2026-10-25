@@ -1,0 +1,166 @@
+{
+ "id": "QD-178",
+ "board": "boards/queue/QD-178.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T12:30:00Z",
+ "rendered": "2026-10-25T19:31:56.638212+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab-energy-1019",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "The Hunger Games: 2026 release date (Part 1)",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (page:https://www.ign.com/videos/the-hunger-games-sunrise-on-the-reaping-official-character-origins-featurette: ign.com is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 7 reused a nearby picture (page:https://deadline.com/gallery/the-hunger-games-sunrise-on-the-reaping-red-carpet-photos-joseph-zada-mckenna-grace/: deadline.com is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 11,
+  "pic_found_share": 0.71,
+  "pic_relevance": 0.338,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 58,
+  "pic_searches": 8,
+  "pic_reranked": 8,
+  "pic_dups": 10,
+  "pic_secs": 15.7
+ },
+ "music": "stake-out",
+ "social_music": "action-chase-adrenaline-soundtrack-364888",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 32.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 566.1,
+   "contrast": 0.15,
+   "face_area": 0.0,
+   "text_area": 0.1681,
+   "caption_contrast": 18.02,
+   "by_frame": {
+    "sharpness": [
+     544.2,
+     611.4,
+     608.1,
+     500.8
+    ],
+    "contrast": [
+     0.146,
+     0.152,
+     0.153,
+     0.148
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1341,
+     0.185,
+     0.1855,
+     0.1677
+    ],
+    "caption_contrast": [
+     17.93,
+     18.15,
+     18.11,
+     17.93
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.2,
+   "title",
+   0
+  ],
+  [
+   4.2,
+   8.75,
+   "none",
+   1
+  ],
+  [
+   8.75,
+   13.35,
+   "none",
+   2
+  ],
+  [
+   13.35,
+   19.24,
+   "none",
+   2
+  ],
+  [
+   19.24,
+   24.38,
+   "none",
+   2
+  ],
+  [
+   24.38,
+   28.98,
+   "none",
+   1
+  ],
+  [
+   28.98,
+   32.36,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "209659",
+   "q": "forest trees misty",
+   "t0": 0.0,
+   "t1": 32.36
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T19:43:16Z",
+ "video": "AV8b-2E-z6s",
+ "url": "https://youtube.com/shorts/AV8b-2E-z6s",
+ "publish_at": "2026-10-26T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-178"
+}

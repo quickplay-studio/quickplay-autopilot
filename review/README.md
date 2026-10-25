@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
+| Mon 26 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
 | Sun 25 Oct | 15 public, 3 scheduled | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -77,13 +77,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-177** Animals Explained #1: How dogs became man's best friend 🐕 (rendering next)
-- **QD-178** The Hunger Games: 2026 release date (Part 1) (rendering next)
-- **QD-179** Ralph Fiennes joins Hunger Games cast (Part 2) (rendering next)
-- **QD-180** Hunger Games: cast complete (Part 3) (rendering next)
 
 ## On the channel (latest first)
 

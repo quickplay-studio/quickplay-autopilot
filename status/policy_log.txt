@@ -1,4 +1,4 @@
-policy watch: 23 new items
+policy watch: 2 new items
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-issue: 📜 Rule changes to act on (2026-10-24) https://github.com/quickplay-studio/quickplay-autopilot/issues/31
-policy watch: 7 act, 2 watch (gemini-3.5-flash-lite)
+issue: 📜 Rule changes to act on (2026-10-25) https://github.com/quickplay-studio/quickplay-autopilot/issues/38
+policy watch: 1 act, 1 watch (gemini-3.5-flash-lite)

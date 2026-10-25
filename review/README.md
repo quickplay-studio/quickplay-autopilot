@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 11:36): 13 of 1,000 subscribers · 8,375 of 10 million Shorts views in 90 days · 3,745 views in the last 24 hours (about 111,018 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 12:43): 13 of 1,000 subscribers · 8,526 of 10 million Shorts views in 90 days · 3,838 views in the last 24 hours (about 111,016 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 11:10 (UK): 7 scheduled, 142 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 8 public, 7 scheduled | 0 | 1 | ⏳ 8 of 14 so far, 7 more scheduled |
+| Sun 25 Oct | 10 public, 5 scheduled | 2 | 1 | ⏳ 10 of 14 so far, 5 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -106,12 +106,12 @@ scheduled · 30 s · music: ego-chall · [script](../boards/done/QD-167.json) ·
 ![QD-167](QD-167.jpg)
 
 ### Sun 25 Oct 12:30 · Harry Kane scores 73 goals before Ballon d'Or ⚽
-scheduled · 28 s · music: rise-of-the-machines · [script](../boards/done/QD-168.json) · [YouTube](https://youtube.com/shorts/qiBnn27q6ns)
+private · 28 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-168.json) · [YouTube](https://youtube.com/shorts/qiBnn27q6ns)
 
 ![QD-168](QD-168.jpg)
 
 ### Sun 25 Oct 12:00 · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
-scheduled · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
+private · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
 
 ![QD-165](QD-165.jpg)
 
@@ -131,7 +131,7 @@ public · 24 views · 38 s · music: the-bombs · [script](../boards/done/QD-162
 ![QD-162](QD-162.jpg)
 
 ### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
-public · 211 views · 27 s · music: the-bombs · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
+public · 211 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
 
 ![QD-164](QD-164.jpg)
 

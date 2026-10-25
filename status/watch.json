@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T08:36+00:00",
+ "updated": "2026-10-25T11:09+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -49,12 +49,14 @@
     "ballon d'or 2026 live",
     "ballon d'or 2026 ai",
     "ballon d'or 2026 nominees",
+    "ballon d'or 2026 winner",
     "ballon d'or 2026 video",
     "ballon d'or 2026 trailer",
-    "ballon d'or 2026 winner",
     "ballon d'or 2026 ceremony"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Sport",
    "angles": [
     "Ballon d'Or 2026 nominees",
@@ -112,7 +114,7 @@
     21833,
     16637
    ],
-   "news_24h": 49,
+   "news_24h": 45,
    "news_usual": null,
    "suggestions": [
     "the celebrity traitors",
@@ -121,8 +123,8 @@
     "the celebrity traitors season 2",
     "the celebrity traitors reaction",
     "the celebrity traitors season 2 episode 8",
-    "the celebrity traitors season 2 episode 7",
-    "the celebrity traitors 2026"
+    "the celebrity traitors 2026",
+    "the celebrity traitors uk"
    ],
    "in": [],
    "category": "Entertainment",
@@ -181,17 +183,17 @@
     16393,
     16039
    ],
-   "news_24h": 48,
+   "news_24h": 41,
    "news_usual": null,
    "suggestions": [
     "halloween 2026",
     "halloween 2026 playlist",
     "halloween 2026 dti quest",
-    "halloween 2026 dti",
+    "halloween 2026 quest",
     "halloween 2026 countdown",
-    "halloween 2026 theory",
     "halloween 2026 trailer",
-    "halloween 2026 mix"
+    "halloween 2026 mix",
+    "halloween 2026 theory"
    ],
    "in": [],
    "category": "Entertainment",
@@ -323,8 +325,8 @@
     "gta 6 extended look",
     "gta 6 launch trailer",
     "gta 6 launch trailer reaction",
-    "gta 6 song",
-    "gta 6 leaks"
+    "gta 6 leaks",
+    "gta 6 song"
    ],
    "in": [],
    "category": "Gaming",
@@ -384,7 +386,7 @@
     8427,
     10157
    ],
-   "news_24h": 13,
+   "news_24h": 11,
    "news_usual": null,
    "suggestions": [
     "the hunger games sunrise on the reaping",
@@ -524,7 +526,7 @@
     279,
     209
    ],
-   "news_24h": 3,
+   "news_24h": 2,
    "news_usual": null,
    "suggestions": [
     "spotify wrapped 2026",
@@ -588,7 +590,7 @@
     836,
     638
    ],
-   "news_24h": 10,
+   "news_24h": 9,
    "news_usual": null,
    "suggestions": [
     "the game awards",
@@ -686,8 +688,8 @@
    "name": "Dune: Part Three",
    "days_to": 54,
    "phase": "steady",
-   "level": "surging",
-   "places": 3,
+   "level": "steady",
+   "places": 0,
    "momentum": 1.09,
    "views_yesterday": 8683,
    "views_usual": 7988,
@@ -723,21 +725,19 @@
     8831,
     8683
    ],
-   "news_24h": 17,
+   "news_24h": 22,
    "news_usual": null,
    "suggestions": [
     "dune part three",
     "dune part three trailer",
     "dune part three trailer reaction",
-    "dune part three official trailer",
     "dune part three soundtrack",
     "dune part three tv spot",
+    "dune part three official trailer",
     "dune part three teaser",
     "dune part three full movie"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Film",
    "angles": [
     "Dune Part Three cast",
@@ -792,7 +792,7 @@
     4782,
     5257
    ],
-   "news_24h": 8,
+   "news_24h": 7,
    "news_usual": null,
    "suggestions": [
     "harry potter hbo series",
@@ -862,12 +862,12 @@
     1954,
     1642
    ],
-   "news_24h": 31,
+   "news_24h": 30,
    "news_usual": null,
    "suggestions": [
     "christmas 2026",
-    "christmas 2026 uk",
     "christmas 2026 decor",
+    "christmas 2026 uk",
     "christmas 2026 songs",
     "christmas 2026 countdown",
     "christmas 2026 remix",
@@ -932,7 +932,7 @@
     344,
     303
    ],
-   "news_24h": 6,
+   "news_24h": 7,
    "news_usual": null,
    "suggestions": [
     "new year's eve 2026",
@@ -1001,7 +1001,7 @@
     359,
     288
    ],
-   "news_24h": 1,
+   "news_24h": 2,
    "news_usual": null,
    "suggestions": [
     "ces 2027"

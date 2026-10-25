@@ -91,15 +91,15 @@
    "wikipedia": null,
    "articles": [
     {
+     "outlet": "New York Times",
+     "title": "Kylian Mbappe has long been told he will win the Ballon d’Or. So why hasn’t he?",
+     "url": "https://www.nytimes.com/athletic/7719622/2026/10/25/kylian-mbappe-ballon-dor-real-madrid/",
+     "published": "2026-10-25"
+    },
+    {
      "outlet": "BBC Sport",
      "title": "All you need to know about the 2026 Ballon d'Or",
      "url": "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "All you need to know about the 2026 Ballon d'Or",
-     "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
      "published": "2026-10-23"
     }
    ]
@@ -109,12 +109,6 @@
    "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
    "wikipedia": null,
    "articles": [
-    {
-     "outlet": "BBC",
-     "title": "All you need to know about the 2026 Ballon d'Or",
-     "url": "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
-     "published": "2026-10-23"
-    },
     {
      "outlet": "New York Times",
      "title": "The history and evolution of the Ballon d’Or, told with someone who knows this year’s winner",
@@ -183,12 +177,6 @@
      "title": "Call of Duty promises a return to form - but can it compete with GTA?",
      "url": "https://www.bbc.co.uk/news/articles/cm369kkg92x6o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Nintendo Switch Sports Resort review – Wii Sports lives on in this effortlessly appealing collection of games",
-     "url": "https://www.theguardian.com/games/2026/oct/22/nintendo-switch-sports-resort-review-wii-sports-games",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -208,12 +196,6 @@
      "title": "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
      "url": "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
      "published": "2026-10-15"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "GTA 6 anticipation is sending PS5 Pro prices through the roof",
-     "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
-     "published": "2026-09-01"
     },
     {
      "outlet": "IGN",
@@ -239,19 +221,39 @@
      "title": "GTA 6’s New TV Trailer Is A Bit Different, See It For Yourself",
      "url": "https://www.gamespot.com/articles/gta-6s-new-tv-trailer-is-a-bit-different-see-it-for-yourself/",
      "published": "2026-10-22"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Every big reveal from the GTA 6 Netflix trailer",
-     "url": "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
-     "published": "2026-08-27"
     }
    ]
   },
   {
-   "topic": "Dune: Part Three",
-   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dune:_Part_Three",
+   "topic": "inter vs fiorentina",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "European football: Lazio beat Parma to top Serie A; Dortmund lead Bundesliga",
+     "url": "https://www.theguardian.com/football/2026/oct/24/european-football-napoli-roma-borussia-dortmund-atletico-madrid-paris-fc",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "msg",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Msg",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "Air Ball For New York Knicks Fans As MSG Networks Go Dark On Optimum; Is Carriage Fight Tipoff To Bankruptcy?",
+     "url": "https://deadline.com/2025/01/new-york-knicks-msg-networks-optimum-carriage-fight-bankruptcy-1236245372/",
+     "published": "2025-01-02"
+    }
+   ]
+  },
+  {
+   "topic": "seven",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Seven",
    "articles": [
     {
      "outlet": "Guardian",
@@ -260,268 +262,54 @@
      "published": "2026-10-25"
     },
     {
-     "outlet": "Sky Sports",
-     "title": "Foster drops Navarrete twice to unify three world titles",
-     "url": "https://www.skysports.com/boxing/news/12040/13603457/oshaquie-foster-drops-emanuel-navarrete-twice-to-unify-three-world-titles-in-texas-undisputed-thats-my-dream",
-     "published": "2026-10-25"
-    },
-    {
      "outlet": "BBC",
-     "title": "Moment of jeopardy as King embarks on Caribbean tour",
-     "url": "https://www.bbc.co.uk/news/articles/ckzd6gvg1r2jo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Xbox's first chief operating officer Helen Chiang leaves Microsoft just three months into the job",
-     "url": "https://www.eurogamer.net/xbox-coo-helen-chiang-leaves-microsoft",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "Dune Part Three cast",
-   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Battlefield 1’s Jack Lowden Is One Of The Finalists For New James Bond, Apparently",
-     "url": "https://www.gamespot.com/articles/battlefield-1s-jack-lowden-is-one-of-the-finalists-for-new-james-bond-apparently/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Dune: Part Three Director Denis Villeneuve Says Film Has ‘Same DNA’ as First Two but Is ‘A Very Different Movie’",
-     "url": "https://in.ign.com/dune-part-three/274655/dune-part-three-director-denis-villeneuve-says-film-has-same-dna-as-first-two-but-is-a-very-differen",
-     "published": "2026-10-16"
-    }
-   ]
-  },
-  {
-   "topic": "Dune Part Three trailer",
-   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "The Next Mass Effect Sounded Like John Wick In Space",
-     "url": "https://www.gamespot.com/articles/the-next-mass-effect-sounded-like-john-wick-in-space/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Dune: Part Three - Official 'Tickets on Sale' Trailer",
-     "url": "https://www.ign.com/videos/dune-part-three-official-tickets-on-sale-trailer",
-     "published": "2026-08-18"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Dune 3 trailer teases some big changes from Dune Messiah",
-     "url": "https://www.polygon.com/dune-part-3-trailer-changes-from-book/",
-     "published": "2026-07-08"
-    }
-   ]
-  },
-  {
-   "topic": "bbc cricket",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bye_(cricket)",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Pakistan v England: tri-series one day international cricket – live",
-     "url": "https://www.theguardian.com/sport/live/2026/oct/25/pakistan-v-england-tri-series-one-day-international-cricket-live",
+     "title": "Why are Liverpool struggling for Premier League goals?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c94g1p32gyrro?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "wind up radios",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wind-up_radio",
-   "articles": [
+    },
     {
-     "outlet": "Guardian",
-     "title": "What essentials to keep, what rubbish to get rid of? Burnham, Badenoch, Farage don’t know either | Robert Hutton",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/24/burnham-badenoch-farage-essentials-truss",
-     "published": "2026-10-24"
+     "outlet": "GameSpot",
+     "title": "Xbox Wanted A Gargantuan Paycheck To Partner With Netflix On TV And Movies",
+     "url": "https://www.gamespot.com/articles/xbox-wanted-a-gargantuan-paycheck-to-partner-with-netflix-on-tv-and-movies/",
+     "published": "2026-10-23"
     }
    ]
   },
   {
-   "topic": "henry crocombe",
+   "topic": "ben duckett",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Henry_Crocombe",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ben_Duckett",
    "articles": [
     {
      "outlet": "Sky Sports",
-     "title": "England begin ODI tri-series with Pakistan and Sri Lanka as Henry Crocombe, Sam Curran and spinners look to impress",
-     "url": "https://www.skysports.com/cricket/news/13600845/england-begin-odi-tri-series-with-pakistan-and-sri-lanka-as-henry-crocombe-sam-curran-and-spinners-look-to-impress",
-     "published": "2026-10-20"
-    },
-    {
-     "outlet": "ESPN",
-     "title": "England call up new faces Donald and Crocombe for SL white-ball series",
-     "url": "https://www.espn.com/cricket/story/_/id/49825951/aneurin-donald-t20i-squad-henry-crocombe-odi-squad-england-vs-sri-lanka",
-     "published": "2026-09-04"
+     "title": "Duckett out for 105 as England slip to 187-8 vs Pakistan LIVE!",
+     "url": "https://www.skysports.com/cricket/live-blog/12040/13603448/pakistan-vs-england-odi-tri-series-live-latest-cricket-score-updates-video-and-analysis-as-harry-brooks-side-target-first-win",
+     "published": "2026-10-25"
     },
     {
      "outlet": "The Telegraph",
-     "title": "Watch: Henry Crocombe takes second hat-trick to earn England call-up",
-     "url": "https://www.telegraph.co.uk/cricket/2026/09/03/henry-crocombe-second-hat-trick-in-two-games/",
-     "published": "2026-09-03"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Sussex bowler Crocombe to make Surrey move",
-     "url": "https://www.bbc.com/sport/cricket/articles/cqj19pnxwe5o",
-     "published": "2026-07-01"
+     "title": "England put Duckett, Robinson and Smith on notice",
+     "url": "https://www.telegraph.co.uk/cricket/2026/10/12/england-fire-warning-at-duckett-robinson-and-smith/",
+     "published": "2026-10-12"
     }
    ]
   },
   {
-   "topic": "who won the ballon d'or 2026",
-   "signal": "Google Trends GB 100+",
+   "topic": "when is black friday 2026",
+   "signal": "Google Trends GB 500+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "BBC Sport",
-     "title": "All you need to know about the 2026 Ballon d'Or",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cw0541g4qzgeo?at_medium=RSS&at_campaign=rss",
+     "outlet": "The Verge",
+     "title": "LG’s brilliant C6 OLED TV is already $400 off ahead of Black Friday",
+     "url": "https://www.theverge.com/gadgets/1017768/lg-c6-oled-tv-early-black-friday-2026-deal-sale",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "The Independent",
+     "title": "When is Black Friday 2026? Plus early deals to shop now",
+     "url": "https://www.independent.co.uk/extras/indybest/black-friday/black-friday-2026-b3071540.html",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Who should win the men’s Ballon d’Or? The Athletic asked 100 people from elite football to vote",
-     "url": "https://www.nytimes.com/athletic/7707638/2026/10/22/ballon-dor-survey-winner-contenders-the-athletic/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "stanley",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Stanley",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Ballon d’Or ceremony returns to England in nod to ‘revolutionary’ Stanley Matthews",
-     "url": "https://www.theguardian.com/football/2026/oct/25/ballon-dor-ceremony-returns-to-england-in-nod-to-revolutionary-stanley-matthews",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "hannibal",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Hannibal",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "25 Years Ago, ‘Hannibal’ Marked the Rise of a New Kind of Blockbuster",
-     "url": "https://www.nytimes.com/2024/06/09/books/booksupdate/25-years-thomas-harris-hannibal-lecter.html",
-     "published": "2024-06-09"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Hannibal: Mads Mikkelsen Looks Back on Season 3 and Ponders Whether The Show Will Continue",
-     "url": "https://www.ign.com/articles/2015/12/04/hannibal-mads-mikkelsen-looks-back-on-season-3-and-ponders-whether-the-show-will-continue",
-     "published": "2015-12-04"
-    }
-   ]
-  },
-  {
-   "topic": "flood",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Flood",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Resident Evil Director Zach Cregger Feels “Gratified” Following Gamer Backlash To His Highly Successful Movie",
-     "url": "https://www.gamespot.com/articles/resident-evil-director-zach-cregger-feels-vindicated-following-gamer-backlash-to-his-highly-successful-movie/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "The Racial Disparities of Flood Buyouts",
-     "url": "https://www.nytimes.com/2026/09/17/climate/the-racial-disparities-of-flood-buyouts.html",
-     "published": "2026-09-17"
-    }
-   ]
-  },
-  {
-   "topic": "hospital",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Hospital",
-   "articles": [
-    {
-     "outlet": "Deadline",
-     "title": "Ric Flair Latest Health Update: Ex-Wrestler Wears Eye Patch In Message Reassuring Fans “I Am Focused On My Healing And Recovery”",
-     "url": "https://deadline.com/2026/10/ric-flair-health-update-1237172323/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Kompany recovery will take 'weeks' as tests continue",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm2l4vq9k84yo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "He wants to clean up the city and banish high prices. But who is ‘London’s Batman’?",
-     "url": "https://www.theguardian.com/uk-news/2026/oct/24/london-batman-litter-fuel-fredos",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "us",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Us",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Ten days that could shake the world: democratic norms at stake in four pivotal elections",
-     "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/ten-days-shake-world-democratic-norms-pivotal-elections-brazil-israel-serbia-us",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Variety",
-     "title": "‘KPop Demon Hunters,’ ‘Squid Game’ Stars Fete Netflix’s Korea Decade as Ted Sarandos Teases ‘Tantara,’ ‘All of Us Are Dead’ Season 2",
-     "url": "https://variety.com/2026/tv/news/kpop-demon-hunters-squid-game-stars-netflix-korea-decade-1236930528/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Antonelli takes US pole on weekend he can win title",
-     "url": "https://www.bbc.co.uk/sport/formula1/articles/cqy7lvp7n57lo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "NASA lays out plan for Artemis 3 moon-lander test flight —but when will it launch?",
-     "url": "https://www.space.com/space-exploration/artemis/nasa-lays-out-plan-for-artemis-3-moon-lander-test-flight-but-when-will-it-launch",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "mr beast",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mr_Beast_(album)",
-   "articles": [
-    {
-     "outlet": "Polygon",
-     "title": "Jean-Claude Van Damme's First Action Classic is Streaming for Free",
-     "url": "https://www.polygon.com/bloodsport-free-youtube/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "I've never seen a laptop cooler come with its own comic strip before, but it still hasn't convinced me this noisy beast is worth $50",
-     "url": "https://www.pcgamer.com/hardware/cooling/ive-never-seen-a-laptop-cooler-come-with-its-own-comic-strip-before-but-it-still-hasnt-convinced-me-this-noisy-beast-is-worth-usd50/",
-     "published": "2026-10-22"
     }
    ]
   },
@@ -607,6 +395,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
     {
+     "outlet": "Space.com",
+     "title": "October's 'Hunter's Moon' stalks into the autumn sky tonight: Here's what you need to know",
+     "url": "https://www.space.com/stargazing/octobers-hunters-moon-stalks-into-the-autumn-sky-tonight-heres-what-you-need-to-know",
+     "published": "2026-10-25"
+    },
+    {
      "outlet": "Guardian",
      "title": "‘You can’t bring in robots’: the leather firm handmaking everything from wallets to cigar cases",
      "url": "https://www.theguardian.com/business/2026/oct/25/ettinger-leather-handmaking-wallets-cigar-cases-walsall",
@@ -623,6 +417,146 @@
      "title": "‘You Can See Everything’ Eyes $20M Second Weekend as ‘Clayface’ Leads Box Office",
      "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
      "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "Jacob Misiorowski",
+   "signal": "Wikipedia 133,083 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Jacob Misiorowski brings tall tales -- and talent -- to World Series",
+     "url": "https://www.espn.com/mlb/story/_/id/50255002/jacob-misiorowski-miz-brewers-world-series",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "Deaths in 2026",
+   "signal": "Wikipedia 124,463 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Lights out: the island that goes dark to save young seabirds – in pictures",
+     "url": "https://www.theguardian.com/environment/2026/oct/25/corvo-azores-corys-shearwaters-switch-off-saving-seabirds-aoe",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "Kehlsteinhaus",
+   "signal": "Wikipedia 110,874 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kehlsteinhaus",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Suspect arrested over fire at Hitler’s ‘Eagle’s Nest’ retreat in Bavaria",
+     "url": "https://www.theguardian.com/world/2026/oct/24/blaze-engulfs-hitlers-eagles-nest-mountain-retreat-in-bavaria",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "Wildwood (film)",
+   "signal": "Wikipedia 96,858 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wildwood_(film)",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘You Can See Everything’ Eyes $20M Second Weekend as ‘Clayface’ Leads Box Office",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Laika has spent 20 years building up to Wildwood",
+     "url": "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "From Wildwood to John Legend: your complete entertainment guide to the week ahead",
+     "url": "https://www.theguardian.com/culture/2026/oct/24/entertainment-week-ahead-wildwood-john-legend-suede-lives-of-others",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "Tom Skerritt",
+   "signal": "Wikipedia 88,131 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tom_Skerritt",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "US actor Tom Skerritt, star of Top Gun, Steel Magnolias and Alien, dies aged 93",
+     "url": "https://www.bbc.co.uk/news/articles/cqrkyly2p54xo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Tom Skerritt, Alien and Top Gun actor, dies aged 93",
+     "url": "https://www.theguardian.com/film/2026/oct/22/tom-skerritt-actor-dead",
+     "published": "2026-10-22"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Tom Skerritt, Top Gun and Alien actor, has died",
+     "url": "https://news.sky.com/story/actor-tom-skerritt-known-for-roles-in-top-gun-and-alien-has-died-13602478",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "LISA",
+   "signal": "YouTube GB 980,360/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/LISA",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "How cocaine conquered the UK: in pubs, festivals and workplaces the drug has become an everyday habit",
+     "url": "https://www.theguardian.com/society/ng-interactive/2026/oct/25/how-cocaine-conquered-the-uk-inside-britains-pubs-festivals-and-workplaces-the-drug-has-become-an-everyday-habit",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "AMD says the re-release of the Ryzen 7 5800X3D was 'like a final gift to our loyal [AM4] users' and it was CEO Dr. Lisa Su who first came up",
+     "url": "https://www.pcgamer.com/hardware/processors/amd-says-the-re-release-of-the-ryzen-7-5800x3d-was-like-a-final-gift-to-our-loyal-am4-users-and-it-was-ceo-dr-lisa-su-who-first-came-up-with-the-idea/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "LISA’s ‘Press Play’: All 6 Tracks Ranked",
+     "url": "https://www.billboard.com/lists/lisa-press-play-album-review-tracks-ranked/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "Avengers: Doomsday",
+   "signal": "YouTube GB 586,282/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "New Avengers: Doomsday Trailer Pokes Fun at Multiple 'Captains America'",
+     "url": "https://www.ign.com/articles/avengers-doomsday-trailer-multiple-captains-america",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "Olivia Rodrigo",
+   "signal": "YouTube GB-music 92,592/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Chaotic state of football in Brazil epitomises a nation where greed has conquered glory | Jonathan Liew",
+     "url": "https://www.theguardian.com/football/2026/oct/23/chaotic-football-brazil-politics-election-flavio-bolsonaro-lula",
+     "published": "2026-10-23"
     }
    ]
   },
@@ -673,26 +607,6 @@
     }
    ],
    "source": "TVmaze"
-  },
-  {
-   "topic": "To Fall Asleep To by Rain Sounds",
-   "signal": "Apple albums GB: new in the top 10",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "TechCrunch",
-     "title": "This thin under-pillow speaker helped me fall asleep without earbuds",
-     "url": "https://techcrunch.com/2026/08/05/this-thin-under-pillow-speaker-helped-me-fall-asleep-without-earbuds/",
-     "published": "2026-08-05"
-    },
-    {
-     "outlet": "Washington Post",
-     "title": "Fall asleep faster using these science-backed tips",
-     "url": "https://www.washingtonpost.com/wellness/2026/05/19/6-things-you-can-do-get-better-sleep/",
-     "published": "2026-05-19"
-    }
-   ],
-   "source": "Apple albums"
   },
   {
    "topic": "2026 United States Grand Prix",
@@ -749,47 +663,39 @@
    "source": "TVmaze"
   },
   {
-   "topic": "Storm Boelo hits the UK",
-   "signal": "Bluesky trending, 3,106 posts",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Thousands without electricity as Storm Boelo hits",
-     "url": "https://www.bbc.co.uk/news/articles/c84g10r00221o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Storm Boelo: Travel disrupted and events cancelled as UK hit by wind and rain",
-     "url": "https://www.theguardian.com/uk-news/2026/oct/24/storm-boelo-travel-disrupted-events-cancelled-uk-hit-wind-and-rain",
-     "published": "2026-10-24"
-    }
-   ],
-   "source": "Bluesky"
-  },
-  {
-   "topic": "Dunesday",
-   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dunesday",
+   "topic": "daniil medvedev",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Daniil_Medvedev",
    "articles": []
   },
   {
-   "topic": "eng vs pak",
-   "signal": "Google Trends GB 20000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Engro_Paktank",
+   "topic": "anthony albanese",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Anthony_Albanese",
    "articles": []
   },
   {
-   "topic": "corvette",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Corvette",
+   "topic": "unidentified flying object",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Unidentified_flying_object",
    "articles": []
   },
   {
-   "topic": "pak vs eng",
+   "topic": "laura aikman",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Laura_Aikman",
+   "articles": []
+  },
+  {
+   "topic": "almaty open",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Almaty_Open",
+   "articles": []
+  },
+  {
+   "topic": "jocelyn benson",
    "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Passenger_pigeon",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jocelyn_Benson",
    "articles": []
   },
   {
@@ -802,18 +708,6 @@
    "topic": "Ansel Adams",
    "signal": "Wikipedia 124,107 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Ansel_Adams",
-   "articles": []
-  },
-  {
-   "topic": "BABYMONSTER",
-   "signal": "YouTube GB-music 492,770/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
-   "articles": []
-  },
-  {
-   "topic": "Zara Larsson",
-   "signal": "YouTube US-music 35,865/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Zara_Larsson",
    "articles": []
   }
  ]

@@ -1,11 +1,5 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or past winners: 0 verified, 5 one-source, 1 pages
-GTA 6 trailer views record: 0 verified, 3 one-source, 2 pages
-Dune Part Three cast: 0 verified, 5 one-source, 1 pages
-Dune Part Three trailer: 1 verified, 4 one-source, 2 pages
-UFC 333: 4 verified, 0 one-source, 4 pages
-Windows XP: 1 verified, 7 one-source, 2 pages
-Mortimer and Whitehouse: Gone Fishing: 3 verified, 2 one-source, 2 pages
-covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; Ballon d'Or 2026 winner; GTA 6; GTA 6 price; Clayface (film); 2026 United States Grand Prix; BABYMONSTER; Zara Larsson
-7 packs, 9 verified facts, 26 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 8, "groq:openai/gpt-oss-120b": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}
+Halloween 2026: 0 verified, 3 one-source, 2 pages
+covered recently, no pack: GTA 6; Ballon d'Or 2026; Clayface (film); Avengers: Doomsday; UFC 333; 2026 United States Grand Prix; LISA; Windows XP; Mortimer and Whitehouse: Gone Fishing
+1 packs, 0 verified facts, 3 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 2, "groq:openai/gpt-oss-120b": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}

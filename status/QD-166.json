@@ -1,0 +1,167 @@
+{
+ "id": "QD-166",
+ "board": "boards/queue/QD-166.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T09:00:00Z",
+ "rendered": "2026-10-25T07:47:59.506589+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Halloween: The Game secret you might have missed",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Luigi Nintendo mascot: no Commons image named 'Luigi Nintendo mascot')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 7,
+  "pic_found_share": 0.83,
+  "pic_relevance": 0.111,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 28,
+  "pic_searches": 5,
+  "pic_reranked": 3,
+  "pic_dups": 2,
+  "pic_secs": 7.1
+ },
+ "music": "hopping-trains",
+ "social_music": "playful-days-291189",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 26.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 409.5,
+   "contrast": 0.179,
+   "face_area": 0.0014,
+   "text_area": 0.0539,
+   "caption_contrast": 8.36,
+   "by_frame": {
+    "sharpness": [
+     393.7,
+     411.0,
+     404.8,
+     428.4
+    ],
+    "contrast": [
+     0.182,
+     0.182,
+     0.177,
+     0.175
+    ],
+    "face_area": [
+     0.0,
+     0.0056,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.057,
+     0.056,
+     0.0511,
+     0.0514
+    ],
+    "caption_contrast": [
+     10.96,
+     9.88,
+     6.76,
+     6.84
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.14,
+   "none",
+   2
+  ],
+  [
+   5.14,
+   10.1,
+   "none",
+   3
+  ],
+  [
+   10.1,
+   15.0,
+   "none",
+   3
+  ],
+  [
+   15.0,
+   19.07,
+   "none",
+   3
+  ],
+  [
+   19.07,
+   23.39,
+   "none",
+   3
+  ],
+  [
+   23.39,
+   26.6,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "43751",
+   "q": "spooky autumn forest",
+   "t0": 0.0,
+   "t1": 13.6
+  },
+  {
+   "p": "pixabay",
+   "id": "190485",
+   "q": "city lights night",
+   "t0": 13.0,
+   "t1": 26.6
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T07:58:29Z",
+ "video": "cyrwyp0Kldk",
+ "url": "https://youtube.com/shorts/cyrwyp0Kldk",
+ "publish_at": "2026-10-25T09:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T09:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-166"
+}

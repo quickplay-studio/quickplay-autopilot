@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 6 public, 1 scheduled | 0 | 1 | ⏳ 6 of 14 so far, 1 more scheduled |
+| Sun 25 Oct | 6 public, 3 scheduled | 0 | 1 | ⏳ 6 of 14 so far, 3 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -77,11 +77,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-166** Halloween: The Game secret you might have missed (rendering next)
-- **QD-167** Zendaya: the major category change explained (rendering next)
 
 ## On the channel (latest first)
 

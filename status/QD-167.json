@@ -1,0 +1,161 @@
+{
+ "id": "QD-167",
+ "board": "boards/queue/QD-167.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T13:00:00Z",
+ "rendered": "2026-10-25T07:47:55.670139+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab-energy-1019",
+   "used": "lab-energy-1025"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Zendaya: the major category change explained",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 10,
+  "pic_found_share": 1.0,
+  "pic_relevance": 0.82,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 2,
+  "pic_searches": 1,
+  "pic_reranked": 0,
+  "pic_dups": 0,
+  "pic_secs": 1.3
+ },
+ "music": "ego-chall",
+ "social_music": "speed-race-344521",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1019",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 29.6,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 19.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 563.9,
+   "contrast": 0.172,
+   "face_area": 0.1728,
+   "text_area": 0.0388,
+   "caption_contrast": 3.67,
+   "by_frame": {
+    "sharpness": [
+     541.3,
+     532.9,
+     562.5,
+     618.7
+    ],
+    "contrast": [
+     0.172,
+     0.171,
+     0.169,
+     0.175
+    ],
+    "face_area": [
+     0.1508,
+     0.1482,
+     0.1521,
+     0.2401
+    ],
+    "text_area": [
+     0.0409,
+     0.0404,
+     0.0401,
+     0.0336
+    ],
+    "caption_contrast": [
+     3.53,
+     3.43,
+     3.81,
+     6.64
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.79,
+   "none",
+   2
+  ],
+  [
+   3.79,
+   6.77,
+   "none",
+   2
+  ],
+  [
+   6.77,
+   11.65,
+   "none",
+   3
+  ],
+  [
+   11.65,
+   14.77,
+   "none",
+   2
+  ],
+  [
+   14.77,
+   20.31,
+   "none",
+   4
+  ],
+  [
+   20.31,
+   25.21,
+   "none",
+   3
+  ],
+  [
+   25.21,
+   29.61,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "158350",
+   "q": "red carpet photography",
+   "t0": 0.0,
+   "t1": 29.61
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T07:58:32Z",
+ "video": "ieaRJvZrp1Y",
+ "url": "https://youtube.com/shorts/ieaRJvZrp1Y",
+ "publish_at": "2026-10-25T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-167"
+}

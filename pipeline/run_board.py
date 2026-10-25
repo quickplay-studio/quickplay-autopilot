@@ -120,9 +120,20 @@ def localize(meta, desc):
     return out
 
 
-def description(sb, credits, track):
+def long_link(slot):
+    """The line pointing to the latest long video that is public when the Short is (explainer.link_lines), as lines for the
+    top of the description; [] when there is none yet. A Short with no slot is judged by the time it is made."""
+    try:
+        import explainer
+        at = dt.datetime.fromisoformat(slot.replace("Z", "+00:00")) if slot else None
+        if at is not None and at.tzinfo is None: at = at.replace(tzinfo=dt.timezone.utc)
+        lines = explainer.link_lines(at)
+        return lines + [""] if lines else []
+    except Exception: return []
+
+def description(sb, credits, track, slot=""):
     m = sb.get("meta", {})
-    out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    out = [m.get("summary", "").strip(), ""] + long_link(slot) + ["Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")
@@ -331,7 +342,7 @@ def main():
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())
         meta = sb.get("meta", {})
         (res / "upload.json").write_text(json.dumps({
-            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": localize(meta, desc),
+            "title": meta["title"], "description": (desc := description(sb, credits, track, job.get("slot", ""))), "localizations": localize(meta, desc),
             "tags": youtube_tags(meta),
             "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags},
             indent=1, ensure_ascii=False))

@@ -28,6 +28,13 @@ def client():
                         client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"], scopes=yt_connect.SCOPES)
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
+def long_mention(comment, now):
+    """The creator comment (500 characters at most) with one line pointing to the latest long video, once (explainer.comment_text)."""
+    try:
+        import explainer
+        return explainer.comment_text(comment, now)
+    except Exception: return str(comment)[:500]
+
 TRANSIENT = re.compile(r"HttpError (409|500|502|503|504) |aborted|backendError|[Tt]imeout|timed out|[Cc]onnection")
 
 def tries(e, key):
@@ -73,7 +80,7 @@ def main():
         if m.get("comment") and not e.get("comment") and not e.get("comment_error"):
             try:
                 r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": st["video"], "topLevelComment": {
-                    "snippet": {"textOriginal": str(m["comment"])[:500]}}}}).execute()
+                    "snippet": {"textOriginal": long_mention(m["comment"], now)}}}}).execute()
                 e["comment"] = r["id"]
             except Exception as ex: e["comment_error"] = f"{type(ex).__name__}: {ex}"[:200]
             changed = True

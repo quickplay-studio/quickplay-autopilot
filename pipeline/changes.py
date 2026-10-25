@@ -34,7 +34,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 UK = ZoneInfo("Europe/London")
 FIELDS = ["id", "date", "area", "change", "hypothesis", "target", "guardrails", "before_days", "after_days", "check_on",
           "status", "verdict", "result", "by"]
-AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data")
+AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data", "longform")
 STATUSES = ("live", "checked", "kept", "reverted")
 AUTO = "analytics (automatic)"
 MIN_N, MOVE, BREAK, GRACE = 5, 0.10, 0.15, 14        # per side; a 10% move counts; a guardrail 15% worse is broken; final after 14 days
@@ -83,6 +83,7 @@ class Data:
         self.shorts = rows_of("analytics/shorts.csv")
         for r in self.shorts: r["_day"] = day_of(r.get("posted"))
         self.daily = rows_of("analytics/daily.csv")
+        self.longform = rows_of("analytics/longform.csv")        # the long videos' watch time by day (explainer.watch_report)
         self.cstats = rows_of("clips/stats.csv")
         for r in self.cstats:
             t = None
@@ -208,6 +209,15 @@ def yt_views_per_day(D):
     return out
 
 
+def longform_hours_per_day(D):
+    """Watch hours a day on the long videos (analytics/longform.csv): the compilation and the explainer together."""
+    out = {}
+    for r in D.longform:
+        d, h = day_of(r.get("date")), num(r.get("watch_hours"))
+        if d and h is not None: out[d] = out.get(d, 0) + h
+    return out
+
+
 def yt_views_start(D):
     v = yt_views_per_day(D)
     return min(v) if v else None
@@ -259,6 +269,7 @@ METRICS = {
     "feed_pick": ("share of Shorts the feed picks up (20+ views at 3 hours)", "higher", "{:.0%}", m_feed_pick),
     "uploads_day": ("Shorts posted a day", "higher", "{:.0f}", per_day(shorts_per_day, lambda D: first([r["_day"] for r in D.shorts]), Data.shorts_end)),
     "yt_views_day": ("YouTube views a day", "higher", "{:,.0f}", per_day(yt_views_per_day, yt_views_start, lambda D: None, zero_fill=False)),
+    "watch_hours_day": ("long-video watch hours a day", "higher", "{:.1f}", per_day(longform_hours_per_day, yt_views_start, Data.shorts_end)),
     "avg_viewed_pct": ("average viewed %", "higher", "{:.0f}%", m_field("yt_avg_viewed_pct")),
     "held_3s": ("still watching at 3 seconds", "higher", "{:.0f}%", m_field("yt_held_3s_pct")),
     "subs_per_1k": ("subscribers per 1,000 views", "higher", "{:.2f}", m_subs),

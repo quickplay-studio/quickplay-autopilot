@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 04:37): 12 of 1,000 subscribers · 8,440 of 10 million Shorts views in 90 days · 4,473 views in the last 24 hours (about 111,017 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 05:37): 12 of 1,000 subscribers · 8,519 of 10 million Shorts views in 90 days · 4,355 views in the last 24 hours (about 111,016 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 4 public, 3 scheduled | 0 | 1 | ⏳ 4 of 14 so far, 3 more scheduled |
+| Sun 25 Oct | 5 public, 2 scheduled | 0 | 1 | ⏳ 5 of 14 so far, 2 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -43,15 +43,15 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 
 - Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (0 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (3 of 8 Shorts measured)
-- Testing energy: camera motion 0.7, punch-ins 0.05 (15 of 8 Shorts measured)
+- Testing energy: camera motion 0.9, punch-ins 0.03 (0 of 8 Shorts measured)
 - Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
 - Testing opening: the picture alone for 1 word, then the hook's card (7 of 8 Shorts measured)
+- 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
+- 2026-10-25: energy retired lab-energy-1019 (1.07x against 1.29x for steady over 15 Shorts)
+- 2026-10-25: captions retired minimal (1.05x against 1.26x for lab-captions-1019 over 18 Shorts)
 - 2026-10-24: captions kept lab-captions-1019: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (1.08x against 1.06x for clean over 25 Shorts)
 - 2026-10-23: opening retired graphic_first (1.22x against 1.88x for image_first over 35 Shorts)
 - 2026-10-23: grade retired lab-grade-1019 (0.37x against 1.92x for natural over 12 Shorts)
-- 2026-10-23: energy retired calm (0.57x against 1.65x for steady over 17 Shorts)
-- 2026-10-23: voice retired george (0.97x against 1.80x for emma over 12 Shorts)
-- 2026-10-23: captions retired clean (1.22x against 3.58x for lab-captions-1019 over 19 Shorts)
 
 ## Needs a look
 

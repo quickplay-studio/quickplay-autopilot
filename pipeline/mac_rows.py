@@ -2,8 +2,9 @@
 clips/submit.csv, and a late pass failed on Charlie's usage limit). Standard library only, so it runs on the Mac as it is.
 
   python3 pipeline/mac_rows.py                  what to do now: the Vyro rows to submit (newest first, the places left
-                                                today per account), Content Rewards rows to rescue, occasional jobs due,
-                                                open one-off jobs; "NOTHING TO DO" when there is nothing (stop, no commit)
+                                                today per account), Content Rewards rows to rescue, today's community poll
+                                                (pipeline/community.py), occasional jobs due, open one-off jobs;
+                                                "NOTHING TO DO" when there is nothing (stop, no commit)
   python3 pipeline/mac_rows.py top              the 10 most viewed Shorts of the last 7 days (Monday's related-video job)
   python3 pipeline/mac_rows.py done CLIP [youtube|instagram] VALUE
                                                 writes VALUE ("now", "now (already)" or "failed: why") into that row's
@@ -19,7 +20,8 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 UK = ZoneInfo("Europe/London")
 SUBMIT = ROOT / "clips" / "submit.csv"
-HANDLES = {"clips": "Quickplay Clips (@quickplayclips-x9b)", "gaming": "Quickplay Gaming Clips", "irl": "Quickplay IRL Clips"}
+HANDLES = {"clips": "Quickplay Clips (@quickplayclips-x9b)", "gaming": "Quickplay Gaming Clips", "irl": "Quickplay IRL Clips",
+           "daily": "Quickplay Daily (@quickplaydaily)"}
 ISSUES = "https://api.github.com/repos/quickplay-studio/quickplay-autopilot/issues?state=open&per_page=50"
 FOR_THE_MAC = re.compile(r"Security: a sign-in outside|login has expired", re.I)
 
@@ -88,6 +90,23 @@ def cr_rescue(rs, camps, now):
     return out
 
 
+def daily_candidates(camps_cfg, now):
+    """New sound or hashtag campaigns the scout found for Quickplay Daily's own Shorts (clips/scout.json "daily", pipeline/sponsor.py),
+    while fewer than daily_min_active (2) are live and the Mac has not joined them already (any entry of campaigns.json, ended or not)."""
+    camps = camps_cfg.get("campaigns") or {}
+    live = [k for k, c in camps.items() if c.get("daily") and c.get("active") and str(c.get("ends") or "9999") >= f"{now:%Y-%m-%d}"]
+    if len(live) >= int(camps_cfg.get("daily_min_active") or 2): return live, []
+    last = lambda u: str(u or "").rstrip("/").rsplit("/", 1)[-1].lower()
+    known = set()
+    for c in camps.values():
+        known |= {str(c.get(k) or "").lower() for k in ("card", "name")} | {last(c.get("url"))}
+    out = []
+    for d in load_json(ROOT / "clips" / "scout.json", {}).get("daily") or []:
+        ids = {str(d.get(k) or "").lower() for k in ("card", "name", "id")} | {last(d.get("url"))}
+        if not (ids - {""}) & known: out.append(d)
+    return live, out
+
+
 def occasional(now, camps_cfg):
     """Occasional jobs due today (steps in docs/CHROME_OCCASIONAL.md)."""
     jobs = []
@@ -96,6 +115,10 @@ def occasional(now, camps_cfg):
     live = [k for k, c in camps.items() if c.get("active") and (c.get("source") or {}) and str(c.get("ends") or "9999") > soon]
     need = int(camps_cfg.get("min_active") or 6)
     if len(live) < need: jobs.append(f"Capacity: {len(live)} of {need} campaigns are live: join more")
+    daily_live, daily_new = daily_candidates(camps_cfg, now)
+    if daily_new:
+        jobs.append(f"Daily sound campaigns: {len(daily_live)} live; join one more from status/scout.md (\"For Quickplay Daily's own views\"): "
+                    + ", ".join(f"{str(d.get('name'))[:40]} (${d.get('rate_per_1k') or '?'}/1k, {d.get('platform')})" for d in daily_new[:3]))
     twice_weekly = now.weekday() in (0, 3)            # Monday and Thursday: the searches that cost the most browsing
     if now.weekday() == 0: jobs.append("Related video: link the week's 10 best Shorts to the newest weekly long video")
     if twice_weekly:
@@ -121,6 +144,14 @@ def one_offs():
     return re.findall(r"^### open: (.+)$", text, re.M)
 
 
+def community_lines(now):
+    """Today's community poll (pipeline/community.py) while it is made and not yet posted: the lines the Mac posts."""
+    try:
+        import community
+        return community.due(now, ROOT)
+    except Exception: return []
+
+
 def issues_for_the_mac():
     """Open GitHub issues the Mac acts on (security, expired site logins). None when GitHub can't be read."""
     try:
@@ -138,6 +169,7 @@ def show(now=None, fetch_issues=True):
     due, left = vyro_due(rs, camps, now, limit)
     rescue = cr_rescue(rs, camps, now)
     jobs, offs = occasional(now, cfg), one_offs()
+    comm = community_lines(now)
     iss = issues_for_the_mac() if fetch_issues else []
     out = [f"Mac run {now:%A %d %B %H:%M} UK"]
     if iss is None: out.append("Issues: GitHub could not be read; open https://github.com/quickplay-studio/quickplay-autopilot/issues")
@@ -152,9 +184,10 @@ def show(now=None, fetch_issues=True):
         for r in rescue:
             t = public_at(r) + dt.timedelta(minutes=30)
             out.append(f"- {r['clip']} | {r.get('campaign_url')} | {r['video']} | by {t:%H:%M}")
+    if comm: out += ["Community poll for Quickplay Daily (card step 6; then `python3 pipeline/community.py posted`):"] + comm
     if jobs: out += ["Occasional jobs (steps: docs/CHROME_OCCASIONAL.md):"] + [f"- {j}" for j in jobs]
     if offs: out += ["One-off jobs open (docs/CHROME_LOG.md):"] + [f"- {o}" for o in offs]
-    if not (due or rescue or jobs or offs or iss):
+    if not (due or rescue or jobs or offs or iss or comm):
         out.append("NOTHING TO DO: stop here (no commit).")
     return "\n".join(out)
 

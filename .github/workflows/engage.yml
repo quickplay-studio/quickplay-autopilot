@@ -1,5 +1,6 @@
 name: engage
-# Creator comments, category playlists and title fixes on our own public Shorts (pipeline/engage.py).
+# Creator comments, category playlists and title fixes on our own public Shorts (pipeline/engage.py), then the sponsored
+# Shorts' submission rows (pipeline/sponsor.py) and the day's community poll (pipeline/community.py).
 # Needs the second YouTube sign-in (tokens/youtube.enc, from the "Connect YouTube" step of the social workflow).
 on:
   schedule:
@@ -30,6 +31,12 @@ jobs:
         with: { python-version: '3.13' }
       - if: steps.check.outputs.run == 'yes'
         run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography tzdata google-api-python-client==2.* google-auth==2.*
+      - name: Sponsored submissions and the community poll
+        if: steps.check.outputs.run == 'yes'
+        continue-on-error: true      # 25 October: cheap, no API calls, standard library only; never stops the engagement below
+        run: |
+          python pipeline/sponsor.py rows      # a clips/submit.csv row for each Short that carries a daily campaign (pipeline/sponsor.py)
+          python pipeline/community.py         # once a day: the best Short's poll for the Mac to post (pipeline/community.py)
       - name: Engage
         if: steps.check.outputs.run == 'yes'
         env:
@@ -45,6 +52,7 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           git add -A status
+          git add clips/submit.csv 2>/dev/null || true      # the rows pipeline/sponsor.py added
           git commit -q -m "Engagement $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

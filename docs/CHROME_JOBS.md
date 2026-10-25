@@ -33,9 +33,12 @@ Read this card, then run `python3 pipeline/mac_rows.py`. Read nothing else unles
 5. Content Rewards rescue rows: GitHub's sign-in failed and the clip is still inside its 30 minutes. Open the campaign
    page, press Submit clip, paste the link, tick the requirements box and press Submit clip. Mark it as in step 4, then
    ask Charlie for the cookie export (step 3).
-6. Occasional jobs listed: their steps are in docs/CHROME_OCCASIONAL.md. One-off jobs listed: their steps are in
+6. Community poll listed (status/community.json is dated today and not yet posted): in YouTube Studio, as the studio
+   account, on Quickplay Daily's Community tab, post the text line, then the poll with the options shown, then run
+   `python3 pipeline/community.py posted`. No Community tab offered: `python3 pipeline/community.py unavailable`.
+7. Occasional jobs listed: their steps are in docs/CHROME_OCCASIONAL.md. One-off jobs listed: their steps are in
    docs/CHROME_LOG.md. Read only the section the job names.
-7. Finish: add one dated line at the end of docs/CHROME_LOG.md (submitted, refused, blocked). Commit as "Quickplay Studio"
+8. Finish: add one dated line at the end of docs/CHROME_LOG.md (submitted, refused, blocked). Commit as "Quickplay Studio"
    <quickplay-studio@users.noreply.github.com>, run `git pull --rebase`, and push.
 
 A cloud session that needs the browser adds a one-off job ("### open: ...") at the top of docs/CHROME_LOG.md's jobs, or

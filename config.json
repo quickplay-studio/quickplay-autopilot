@@ -286,6 +286,10 @@
  },
  "watch_share_max": 0.34,
  "watch_share_note": "24 October: at most this share of the day's Shorts target goes to watchlist items (launch first, then surging, then build-up), so big dates never crowd out the day's news or any category. Items take after_days (launch week length after the date, 7 unless set) and places (an item's own ceiling a day).",
+ "daily_sponsor_share": 0.3,
+ "daily_sponsor_note": "25 October: while a campaign with \"daily\": true is live in clips/campaigns.json (a sound or brand hashtag paid per 1,000 views on Quickplay Daily's own Shorts, no footage and no Partner Programme; pipeline/sponsor.py), this share of the Shorts, drawn by board id and recorded as test.sponsor, carries it: the sound as the music, #ad and the campaign hashtags first, YouTube paid promotion on, a clips/submit.csv row for the Vyro or Content Rewards job. Nothing changes while none is live.",
+ "community_hour_utc": 12,
+ "community_note": "25 October: from this hour (UTC) the hourly engage run writes status/community.json once a day from the day's best Short at 3 hours (pipeline/community.py): a poll and a one-line post with its link, which the Mac posts on the Community tab.",
  "claude_api_effort": "low",
  "claude_api_note": "24 October: with an ANTHROPIC_API_KEY secret (Charlie's monthly Max API credits, claimed in claude.ai Settings, Billing) the pipeline's Claude calls use the Messages API at claude_api_effort instead of the CLI and his chat allowance; the same caps apply (claude_max_per_run, claude_edits_per_day)."
 }

@@ -110,19 +110,24 @@ def pick_social_music(sb):
     sb["social_music"] = {"slug": pool[0]["slug"], "gain_db": (sb.get("music") or {}).get("gain_db", -15)}
     return pool[0]
 
-def localize(meta, desc):
+def localize(meta, desc, lead=""):
     """YouTube localisations from the writer's translations: the translated title, and the translated summary above the
-    English description."""
+    English description. `lead` goes first ("#ad " on a Short that carries a campaign)."""
     out = {}
     for lang, t in ((meta or {}).get("translations") or {}).items():
         if isinstance(t, dict) and t.get("title"):
-            out[lang] = {"title": str(t["title"])[:100], "description": (str(t.get("summary") or "") + "\n\n" + desc)[:4900]}
+            out[lang] = {"title": str(t["title"])[:100], "description": (lead + str(t.get("summary") or "") + "\n\n" + desc)[:4900]}
     return out
 
 
-def description(sb, credits, track):
+def description(sb, credits, track, sponsor=None):
+    """The YouTube description. A Short that carries a daily campaign (sponsor: its clips/campaigns.json entry, pipeline/sponsor.py)
+    starts with #ad and says it is paid, and puts #ad and the campaign's hashtags first in its hashtag line."""
     m = sb.get("meta", {})
-    out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    if sponsor:
+        import sponsor as SP
+        m = SP.with_hashtags(m, sponsor)
+    out = ([SP.ad_line(sponsor), ""] if sponsor else []) + [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")
@@ -199,6 +204,33 @@ def contact_sheet(mp4, timeline, dest, big=False):
         y += ((len(block) + cols - 1) // cols) * th
     sheet.save(dest, quality=75 if big else 70)
 
+def sponsor_setup(sb, sid, status):
+    """A Short that carries a daily campaign (pipeline/sponsor.py): the board's test.sponsor names it. Returns {id, c: its entry in
+    clips/campaigns.json, sound: the fetched file or None}, and records status["sponsor"]. A campaign that has ended since the board
+    was written, or whose sound cannot be fetched, is not carried at all (no #ad, no paid promotion, no submission row): a Short
+    without the sound would not qualify. Never a reason to fail the render."""
+    try:
+        import sponsor as SP
+        arm = str((sb.get("test") or {}).get("sponsor") or "")
+        if not arm or arm == "none": return None
+        cid, camp = SP.carrier(sb)
+        if not cid:
+            status["sponsor"] = {"campaign": arm, "applied": False, "why": "the campaign is no longer live"}
+            return None
+        snd = None
+        if camp.get("sound_url"):
+            snd, why = SP.fetch_sound(camp, P / "out", sid)
+            if not snd:
+                status["sponsor"] = {"campaign": cid, "applied": False, "why": "sound not fetched: " + why}
+                print(f"sponsor {cid}: {status['sponsor']['why']}: made without the campaign", flush=True)
+                return None
+        status["sponsor"] = {"campaign": cid, "applied": True, "sound": bool(snd), "hashtags": SP.hashtags(camp)}
+        return {"id": cid, "c": camp, "sound": snd}
+    except Exception as e:
+        print(f"sponsor skipped: {type(e).__name__}: {str(e)[:160]}", flush=True)
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("board", nargs="?"); ap.add_argument("--slot", default=""); ap.add_argument("--mode", default="none")
@@ -222,6 +254,7 @@ def main():
         return
     sb = fill_defaults(json.loads(board_path.read_text())); sid = sb["id"]
     status["title"] = sb.get("meta", {}).get("title")
+    spons = sponsor_setup(sb, sid, status)       # a Short that carries a daily campaign (pipeline/sponsor.py), else None
     try:
         import fetch_media, background as BG
         planned_real = sum(1 for bt in sb["beats"] for sh in bt.get("shots") or [] if not str(sh.get("src", "")).startswith(("pixabay:", "gameplay:")))
@@ -247,6 +280,11 @@ def main():
             flags += [f"render: {n}" for n in notes]
         status["media"] = {"real_shots": real, "planned_real": planned_real}
         track = pick_music(sb); status["music"] = track["slug"]
+        if spons and spons["sound"]:       # the campaign's own sound is the music track (render3.load_sound), at the same gain
+            import sponsor as SP
+            snd = SP.track(spons["c"])
+            sb["music"].update(file=str(spons["sound"]), start=0, title=snd["title"], artist=snd["artist"])
+            track, status["music"] = snd, "sponsor:" + spons["id"]
         social = pick_social_music(sb)
         if social: status["social_music"] = social["slug"]
         # the look (caption style, voice and pace, camera energy, colour grade): chosen by plan.py, see templates/looks.json
@@ -330,10 +368,17 @@ def main():
         if problems: raise RuntimeError("checks failed: " + "; ".join(problems))
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())
         meta = sb.get("meta", {})
+        camp = spons["c"] if spons else None
+        if camp:
+            import sponsor as SP
+            meta_up = SP.with_hashtags(meta, camp)       # #ad and the campaign's hashtags lead the tags too
+        else: meta_up = meta
         (res / "upload.json").write_text(json.dumps({
-            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": localize(meta, desc),
-            "tags": youtube_tags(meta),
-            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags},
+            "title": meta["title"], "description": (desc := description(sb, credits, track, camp)),
+            "localizations": localize(meta, desc, "#ad " if camp else ""),
+            "tags": youtube_tags(meta_up),
+            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags,
+            **({"paid": True, "sponsor": spons["id"]} if camp else {})},      # paid promotion: upload.py and publish.py pass it to YouTube
             indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
         smp4 = P / "out" / f"{sid}.social.mp4"

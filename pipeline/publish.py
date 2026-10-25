@@ -246,7 +246,8 @@ def main():
                     print(i, st["state"]); continue
                 if late: st["late"] = late
             try:
-                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
+                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"),
+                               paid=bool(u.get("paid")))      # a Short that carries a daily campaign is paid promotion (pipeline/sponsor.py)
             except Y.LimitReached as e:
                 if "uploadLimitExceeded" in str(e): print("upload ceiling:", quota.refused(recent))
                 st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); capacity = 0; continue

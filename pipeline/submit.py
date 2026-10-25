@@ -626,8 +626,12 @@ Return JSON: {{"name": "", "subject": "the creator or brand the clips show", "ty
 "platforms": ["YouTube", ...], "youtube_allowed": true, "rate_per_1k": 0.0, "budget_remaining": 0.0, "min_views": 0,
 "max_payout": 0.0, "footage": "where the footage comes from, or none", "needs_application": false, "status": "open, full, ended or application",
 "family_friendly": true, "fits": true, "why": "one line: why it fits or not", "hashtags": ["#..."], "ends": "YYYY-MM-DD or empty",
+"mode": "clips, sound or other", "sound": "", "must_carry": ["#..."], "on_camera": false,
 "rules": {{"focus": "what the clips must show", "on_screen": "any on-screen text rule", "avoid": ["..."], "min_s": 15, "max_s": 60}}}}
-fits is true only when: clipping (not UGC you must film), YouTube allowed, footage provided or named, family friendly, status open."""
+fits is true only when: clipping (not UGC you must film), YouTube allowed, footage provided or named, family friendly, status open.
+mode is sound when no footage is needed because any video can carry the sound, song, audio or brand hashtag the campaign names
+(sound is then its exact name, must_carry the hashtags to include); clips when the creator's footage is needed; otherwise other.
+on_camera is true when someone must film themselves, dance, lip sync, react or show a product."""
 
 
 def cr_terms(text):
@@ -647,6 +651,200 @@ def cr_terms(text):
         if b:
             used, total = (float(x.replace(",", "")) for x in b.groups())
             out.setdefault(plat, {})["budget_left"] = max(0.0, total - used)
+    return out
+
+
+# ---- campaigns Quickplay Daily's own Shorts can carry (Charlie, 25 October) ----
+# Some campaigns pay per 1,000 views for Shorts that use a sound or a song, or carry a brand hashtag, and need no footage: any
+# Daily Short can carry one, paid on Daily's own views (pipeline/sponsor.py). classify() reads a campaign page (or a Vyro card)
+# and says "clips" (the creator's footage is needed), "sound" or "other"; a "sound" one that allows YouTube Shorts, is family
+# friendly and asks nobody to appear on camera is a daily candidate, listed in status/scout.md under its own heading.
+NOT_FAMILY = re.compile(
+    r"\b(gambl\w*|casinos?|sportsbooks?|betting|bookmakers?|wager\w*|poker|slots? (?:games?|machines?)|lotter\w*|bingo|"
+    r"crypto\w*|bitcoin|ethereum|blockchain|nfts?|memecoins?|altcoins?|airdrops?|web3|defi|"
+    r"forex|trading|traders?|stocks|stock (?:market|picks|tips)|invest\w*|brokerage|hedge funds?|"
+    r"financ\w*|loans?|mortgages?|credit (?:cards?|scores?)|payday|insurance|banking|"
+    r"alcohol\w*|beers?|wines?|vodka|whisk(?:e)?y|gin|rum|tequila|liquor|cocktails?|brewery|"
+    r"vap(?:e|es|ing)|tobacco|cigar\w*|cannabis|marijuana|weed|cbd|thc|"
+    r"adults?[- ]only|adult content|18\+|21\+|nsfw|onlyfans|porn\w*|erotic\w*|sexual\w*|dating|escorts?|"
+    r"politic\w*|elections?|supplements?|weight[- ]loss|diet pills?)\b", re.I)
+FORBIDS = re.compile(r"\b(no|never|don't|do not|must not|mustn't|cannot|can't|avoid|without|prohibit\w*|forbid\w*|ban(?:ned|s)?|"
+                     r"exclud\w+|not allowed|not permitted|isn't allowed|aren't allowed)\b", re.I)
+BIDI = re.compile("[" + chr(0x2066) + "-" + chr(0x2069) + chr(0x200b) + "-" + chr(0x200f) + chr(0x202a) + "-" + chr(0x202e) + "]")
+# the page tells the poster to use a sound, a song or audio (SOUND_CUE), or to carry a hashtag (TAG_CUE)
+SOUND_CUE = re.compile(
+    r"\buse (?:this|the|our|their|these|official|original|campaign)\b[^.\n]{0,30}\b(?:sounds?|songs?|audio|tracks?|music|beat)\b"
+    r"|\b(?:official|original|campaign|branded?|trending|featured) (?:sounds?|audio|songs?)\b"
+    r"|\b(?:sound|song|music|audio|track) (?:campaign|challenge|promo|promotion)\b"
+    r"|\b(?:post|create|make|upload|share) (?:an? |your |your own )?(?:shorts?|videos?|reels?|tiktoks?|clips?) (?:using|with|featuring|that (?:uses|features|includes)) (?:the |this |our )?(?:sounds?|songs?|audio|tracks?|music)\b"
+    r"|\b(?:must|need to|have to|required to|should)\b[^.\n]{0,25}\b(?:use|include|add|feature|post with)\b[^.\n]{0,40}\b(?:sounds?|songs?|audio|tracks?|music)\b", re.I)
+TAG_CUE = re.compile(
+    r"\b(?:post|create|make|upload|share) (?:an? |your |your own )?(?:shorts?|videos?|reels?|tiktoks?|clips?) (?:using|with|featuring|that (?:uses|features|includes)) (?:the |this |our )?(?:hashtags?|#\w+)"
+    r"|\b(?:must|need to|have to|required to|should)\b[^.\n]{0,25}\b(?:use|include|add|feature|post with)\b[^.\n]{0,40}\b(?:hashtags?|#\w+)"
+    r"|\b(?:required|mandatory|official|campaign|branded?) hashtags?\b"
+    r"|\b(?:include|use|add|tag|with) (?:the |our |this )?(?:official |campaign |brand )?hashtags?\b", re.I)
+WEAK_WORDS = re.compile(r"\b(sounds?|songs?|audio|music|hashtags?|brand)\b", re.I)
+# the creator's footage is needed (a source to clip from), or the campaign calls itself clipping
+FOOTAGE = re.compile(r"\b(footage|source (?:videos?|material|content)|reference materials?|google drive|dropbox|frame\.io|f\.io|vods?|"
+                     r"stream|streamers?|livestreams?|podcasts?|episodes?|full videos?|clip(?:s|ping)? (?:of|from|the)|highlights?)\b", re.I)
+CLIPPING = re.compile(r"\bclipp(?:ing|ers?)\b", re.I)
+NO_FOOTAGE = re.compile(r"\b(no footage|any (?:videos?|footage|content)|footage (?:is )?(?:not )?(?:needed|required)|original content)\b", re.I)
+ON_CAMERA = re.compile(r"\b(film yourself|on[- ]camera|show your face|lip[- ]?sync\w*|danc(?:e|es|ing)|choreograph\w*|react(?:ion)?s? videos?|"
+                       r"unbox\w*|try[- ]on|hauls?|selfies?|ugc|talk(?:ing)? to (?:the )?camera|review (?:the|our) product)\b", re.I)
+WINDOW_MIN = re.compile(r"\b(?:within|inside) (?:the )?(?:last )?(\d+) minutes\b", re.I)
+
+
+def family_hit(text, ans=None):
+    """The first word that makes a campaign not family friendly ("" for none): gambling, crypto, trading, finance, alcohol, adult
+    and the other banned subjects. It reads the campaign's identity (name, subject, the model's one-line reason, the top of the
+    page); a line that forbids the thing ("no gambling") is the rules, not the campaign being about it."""
+    ans = ans or {}
+    ident = " ".join(str(ans.get(k) or "") for k in ("name", "subject", "why", "card")) + "\n" + (text or "")[:1500]
+    for line in re.split(r"(?<=[.!?])\s+|\n+", ident):
+        if FORBIDS.search(line): continue
+        m = NOT_FAMILY.search(line)
+        if m: return m.group(0).lower()
+    return ""
+
+
+def youtube_ok(text, ans=None, terms=None):
+    """YouTube Shorts are paid: the page's own terms table decides when it has one, else the model, else the page naming YouTube."""
+    if terms: return bool((terms.get("YouTube") or {}).get("rate_per_1k"))
+    flag = (ans or {}).get("youtube_allowed")
+    return bool(flag) if flag is not None else bool(re.search(r"you ?tube", text or "", re.I))
+
+
+def carry_of(text, ans=None):
+    """What a Short must carry for the campaign: the sound's name, the hashtags (the model's list, then any the page names after
+    "hashtag"), and "#ad" always, because a paid Short is an advert (UK advertising rules)."""
+    ans = ans or {}
+    tags, seen = [], set()
+    said = [s for s in re.split(r"(?<=[.!?])\s+|\n+", BIDI.sub("", text or ""))                  # the sentences about hashtags, sounds and what to use
+            if re.search(r"hashtags?", s, re.I) or SOUND_CUE.search(s) or TAG_CUE.search(s)]
+    named = re.findall(r"#[A-Za-z]\w{2,}", " ".join(said))
+    for h in list(ans.get("must_carry") or []) + list(ans.get("hashtags") or []) + named:
+        h = "#" + re.sub(r"\W", "", str(h)); k = h.lower()
+        if len(h) < 3 or k in seen or k in ("#shorts", "#fyp", "#foryou", "#viral", "#ad", "#sponsored"): continue
+        seen.add(k); tags.append(h)
+    sound = ans.get("sound")
+    sound = str((sound or {}).get("name") or "") if isinstance(sound, dict) else str(sound or "")
+    if not sound:
+        m = re.search(r"\b(?:sound|song|audio|track)\s*(?:called|named|titled|:)?\s*[\"“‘']([^\"”’']{2,60})[\"”’']", text or "", re.I)
+        sound = m.group(1) if m else ""
+    return {"sound": sound.strip()[:60], "hashtags": tags[:6], "ad": True}
+
+
+def classify(text, ans=None, terms=None):
+    """What kind of campaign a page (or a Vyro card) is, for Quickplay Daily: {mode, daily, why, block, carry, window}.
+    mode "sound": it tells the poster to use a sound, song or audio, or to carry a brand hashtag, and needs no footage; "clips":
+    the creator's footage is needed; "other": neither, or someone must appear on camera (dancing, lip sync, reacting, unboxing).
+    daily is true for a "sound" campaign that allows YouTube Shorts and is family friendly (block says what stopped it)."""
+    text = BIDI.sub("", text or ""); ans = ans or {}
+    model = str(ans.get("mode") or "").lower()
+    sound, tag, footage, nofoot = SOUND_CUE.search(text), TAG_CUE.search(text), FOOTAGE.search(text), NO_FOOTAGE.search(text)
+    clipping = CLIPPING.search(text) or model in ("clip", "clips", "clipping")
+    weak = {m.group(1).lower().rstrip("s") for m in WEAK_WORDS.finditer(text)}
+    cam = ON_CAMERA.search(text)
+    if cam or ans.get("on_camera") is True or str(ans.get("type") or "").lower() == "ugc":
+        mode, why = "other", "someone must appear on camera" + (f" (\"{cam.group(0)}\")" if cam else "")
+    elif sound and (not footage or nofoot): mode, why = "sound", f"the page says \"{sound.group(0)[:50]}\" and needs no footage"
+    elif tag and nofoot: mode, why = "sound", f"the page says \"{tag.group(0)[:50]}\" and \"{nofoot.group(0)}\""
+    elif tag and not footage and not clipping: mode, why = "sound", f"the page says \"{tag.group(0)[:50]}\" and needs no footage"
+    elif model == "sound" and len(weak) >= 2 and not footage and not clipping:
+        mode, why = "sound", "the model reads a sound or hashtag campaign (" + ", ".join(sorted(weak)) + ")"
+    elif footage or clipping: mode, why = "clips", "footage is needed" + (f" (\"{footage.group(0)}\")" if footage else "")
+    else: mode, why = "other", "no sound, song or hashtag to carry"
+    block = ""
+    if mode == "sound":
+        if not youtube_ok(text, ans, terms): block = "YouTube Shorts are not paid on it"
+        elif ans.get("family_friendly") is False: block = "not family friendly (the model's reading)"
+        else:
+            hit = family_hit(text, ans)
+            if hit: block = f"not family friendly (\"{hit}\")"
+    w = WINDOW_MIN.search(text)
+    return {"mode": mode, "daily": mode == "sound" and not block, "why": why, "block": block, "carry": carry_of(text, ans),
+            "window": int(w.group(1)) if w else 0}
+
+
+def carry_text(carry):
+    """The what-to-carry cell: the sound, the hashtags, #ad."""
+    parts = ([f"sound \"{carry['sound']}\""] if carry.get("sound") else []) + ([" ".join(carry["hashtags"])] if carry.get("hashtags") else [])
+    return "; ".join(parts or ["read the brief"]) + "; #ad"
+
+
+DAILY_HEAD = "For Quickplay Daily's own views"
+MAC_STEPS = ("Joined on the Mac, signed in as the studio account (steps and the entry to add: docs/CHROME_OCCASIONAL.md, \"Daily sound campaigns\"): "
+             "1. open the campaign link and press Join (or Apply); 2. connect the Quickplay Daily YouTube channel on the site if it is not "
+             "yet (Content Rewards: Settings, Connected accounts; Vyro: Settings, Social accounts); 3. read the brief for the sound file's "
+             "download link, the hashtags, the end date and any window for the link; 4. add the entry below to clips/campaigns.json with "
+             "\"daily\": true (no \"source\", no \"rules\") and push.")
+
+
+def daily_entry(r):
+    """A campaigns.json entry for a candidate, as far as the page told: the Mac fills in the sound link, the end date and the day joined."""
+    e = {"daily": True, "active": True, "name": str(r.get("name") or "")[:90], "card": str(r.get("card") or r.get("name") or "")[:90],
+         "platform": r.get("platform", "Content Rewards"), "url": r.get("url", ""), "pay_per_1k": r.get("rate_per_1k"),
+         "min_views": r.get("min_views"), "max_payout": r.get("max_payout"), "subject": str(r.get("subject") or "")[:60],
+         "hashtags": (r.get("carry") or {}).get("hashtags") or [], "sound_url": "<the sound file's link from the brief, or leave out>",
+         "ends": str(r.get("ends") or "<YYYY-MM-DD>"), "joined": "<today>"}
+    return json.dumps({k: v for k, v in e.items() if v not in (None, "")}, ensure_ascii=False)
+
+
+def daily_section(daily):
+    """status/scout.md's section for the campaigns any Daily Short can carry: rate, minimum views, what the Short must carry, the
+    window for the link, the join link, and the Mac's steps with the entry to add."""
+    L = ["", f"## {DAILY_HEAD}", "",
+         "Campaigns that pay for Shorts using a sound, a song or a brand hashtag, with no footage: any Quickplay Daily Short can carry one, "
+         "paid on Daily's own views (about 1,300 a day; config daily_sponsor_share of the Shorts carry the campaign while it is live). "
+         "Family friendly only, YouTube Shorts allowed, nobody on camera.", ""]
+    if not daily:
+        return L + ["None found in this run.", ""]
+    L += ["| Campaign | Site | Rate | Min views | The Short must carry | Link window | Join | Why |", "|---|---|---|---|---|---|---|---|"]
+    cell = lambda s, n=110: str(s if s not in (None, "") else "").replace("|", "/").replace("\n", " ")[:n]
+    for r in daily:
+        win = f"{r['window']} min after posting (links go in once a day: most Shorts would miss it)" if r.get("window") else "none"
+        rate = f"${r['rate_per_1k']}/1k" if r.get("rate_per_1k") else "see the brief"
+        L.append(f"| {cell(r.get('name'), 60)} | {r.get('platform')} | {rate} | {r.get('min_views') or 'see the brief'} | "
+                 f"{cell(carry_text(r.get('carry') or {}), 90)} | {win} | [join]({r.get('url')}) | {cell(r.get('why'), 90)} |")
+    L += ["", MAC_STEPS, ""] + [f"- {cell(r.get('name'), 50)}: `{daily_entry(r)}`" for r in daily] + [""]
+    return L
+
+
+VYRO_JUDGE = """You read the campaign list of Vyro, a clipping marketplace, for a family-friendly YouTube Shorts channel (UK, anonymous, no
+politics, crime, health claims, money or investing advice, adult content or gambling). Describe each campaign card.
+Page text:
+{text}
+Return JSON: {{"campaigns": [{{"name": "", "card": "the card's title exactly as shown", "text": "the card's own words about what the video
+must contain, up to 400 characters", "rate_per_1k": 0.0, "min_views": 0, "max_payout": 0.0, "platforms": ["YouTube"], "youtube_allowed": true,
+"family_friendly": true, "mode": "clips, sound or other", "sound": "", "must_carry": ["#..."], "on_camera": false, "ends": "YYYY-MM-DD or empty",
+"status": "open, full, ended or locked"}}]}}
+mode is sound when no footage is needed because any video can carry the sound, song, audio or brand hashtag the card names (sound is
+then its exact name, must_carry the hashtags to include); clips when the creator's footage is needed; otherwise other.
+on_camera is true when someone must film themselves, dance, lip sync, react or show a product."""
+
+
+def vyro_daily(text, ask=None, known=()):
+    """The sound and hashtag campaigns on Vyro's campaign list (the text the scout saved): one model call reads the cards, and each
+    goes through classify() like a Content Rewards page. Rows in the scout's shape; [] when the list cannot be read."""
+    if not (text or "").strip(): return []
+    if ask is None:
+        def ask(prompt):
+            import factpack
+            return factpack.gemini(prompt, None, timeout=90, temperature=0.1, lite=True)[0]
+    try: ans = ask(VYRO_JUDGE.format(text=text[:12000]))
+    except Exception as e: log(f"scout: Vyro cards: {type(e).__name__}: {str(e)[:100]}"); return []
+    cards = ans.get("campaigns") if isinstance(ans, dict) else ans
+    out = []
+    for c in cards if isinstance(cards, list) else []:
+        if not isinstance(c, dict) or not (c.get("name") or c.get("card")): continue
+        name = str(c.get("card") or c.get("name"))
+        if name in known or str(c.get("name")) in known or str(c.get("status") or "open").lower() not in ("open", ""): continue
+        plats = " ".join(map(str, c.get("platforms") or ["YouTube"]))
+        yt = c.get("youtube_allowed") is not False and bool(re.search(r"you ?tube|shorts", plats, re.I))
+        cls = classify(" ".join(str(c.get(k) or "") for k in ("name", "card", "text")), {**c, "youtube_allowed": yt, "type": ""})
+        if cls["daily"]:
+            out.append({**c, "platform": "Vyro", "url": "https://app.vyro.com/campaigns", "card": name, "mode": cls["mode"], "daily": True,
+                        "carry": cls["carry"], "window": cls["window"], "why": cls["why"], "id": re.sub(r"\W+", "-", name.lower()).strip("-")[:40]})
     return out
 
 
@@ -741,7 +939,7 @@ def scout(limit=40):
     except Exception as e: log(f"radar: {type(e).__name__}: {str(e)[:120]}")
     known = {str(c.get("url", "")).rstrip("/").split("/")[-1] for c in C.CFG["campaigns"].values()}
     from playwright.sync_api import sync_playwright
-    found, rows = {}, []
+    found, rows, vyro_rows = {}, [], []
     with sync_playwright() as play:
         try: b, ctx = context(play, "Content Rewards")
         except Exception as e: log(f"scout: {e}"); return []
@@ -776,7 +974,9 @@ def scout(limit=40):
                 if yt.get("budget_left") == 0:
                     ans["fits"] = False; ans["why"] = "Its YouTube budget is spent. " + str(ans.get("why") or "")
                 ans["heat"], ans["heat_why"] = heat(str(ans.get("subject") or ""))
-                rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}, heat {ans['heat']}: {str(ans.get('why'))[:90]}")
+                cls = classify(text, ans, terms)           # clips (footage needed) or sound (any Daily Short can carry it)
+                ans.update(mode=cls["mode"], daily=cls["daily"], carry=cls["carry"], window=cls["window"], daily_why=cls["block"] or cls["why"])
+                rows.append(ans); log(f"scout: {ans['name'][:50]}: {'fits' if ans.get('fits') else 'no'}, {cls['mode']}{' (daily)' if cls['daily'] else ''}, heat {ans['heat']}: {str(ans.get('why'))[:90]}")
             except Exception as e: log(f"scout: {url}: {type(e).__name__}: {str(e)[:120]}")
         try: b.close()
         except Exception: pass
@@ -790,20 +990,39 @@ def scout(limit=40):
                     text = re.sub(r"\n{2,}", "\n", page.locator("body").inner_text())[:12000]
                     (ROOT / "status" / "scout_vyro.txt").write_text(text)
                     log(f"scout: Vyro's campaign list saved to status/scout_vyro.txt ({len(text)} characters)")
+                    try:
+                        cards = {str(v.get(k)) for v in C.CFG["campaigns"].values() for k in ("card", "name") if v.get(k)}
+                        vyro_rows = vyro_daily(text, known=cards)
+                        log(f"scout: Vyro: {len(vyro_rows)} sound or hashtag campaign(s) any Daily Short can carry")
+                    except Exception as e: log(f"scout: Vyro cards: {type(e).__name__}: {str(e)[:120]}")
                 b.close()
             except Exception as e: log(f"scout: Vyro: {type(e).__name__}: {str(e)[:120]}")
+    daily = write_scout(rows, vyro_rows)
+    log(f"scout: {sum(1 for r in rows if r.get('fits'))} of {len(rows)} new campaigns fit for clips; {len(daily)} any Daily Short can carry")
+    return rows
+
+
+def write_scout(rows, vyro_rows=(), root=None):
+    """status/scout.md (the clips shortlist, then \"For Quickplay Daily's own views\") and clips/scout.json from the judged rows and
+    Vyro's sound campaigns. Returns the daily candidates, best rate first."""
+    root = pathlib.Path(root or ROOT)
     rows.sort(key=lambda r: -(float(r.get("rate_per_1k") or 0) * min(float(r.get("budget_remaining") or 500), 3000) * (1 + float(r.get("heat") or 0)) * (1 if r.get("fits") else 0.1)))
-    (ROOT / "clips" / "scout.json").write_text(json.dumps({"updated": NOW.isoformat(timespec="minutes"), "campaigns": rows}, indent=1, ensure_ascii=False))
+    daily = [r for r in list(rows) + list(vyro_rows) if r.get("daily")]
+    daily.sort(key=lambda r: -float(r.get("rate_per_1k") or 0))
+    slim = [{k: r.get(k) for k in ("id", "name", "card", "platform", "url", "rate_per_1k", "min_views", "max_payout", "carry", "window", "ends")} for r in daily]
+    (root / "clips" / "scout.json").write_text(json.dumps({"updated": NOW.isoformat(timespec="minutes"), "campaigns": rows, "daily": slim}, indent=1, ensure_ascii=False))
     L = [f"# Campaigns worth joining ({NOW.astimezone(UK):%A %d %B %H:%M} UK)", "",
          "Ranked by rate times budget times how hot the subject is right now (Wikipedia views, Google Trends, YouTube charts, our viewers' searches).", "",
          "Rate and minimum views are YouTube's, read from the page (minimum payout / rate). Footage and briefs are only visible after joining: the Mac run joins, reads the brief, and keeps a campaign only when it supplies footage and needs no manual proof per clip.", "",
          "| Fits | Campaign | Rate | Budget left | Min views | Heat | Footage | Why |", "|---|---|---|---|---|---|---|---|"]
     for r in rows:
-        L.append(f"| {'yes' if r.get('fits') else 'no'} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | "
+        # a sound campaign is not a clips one: it has its own section below, and a blocked one (not family friendly, no YouTube) is a no
+        fits = "sound" if r.get("daily") else ("no" if r.get("mode") == "sound" else ("yes" if r.get("fits") else "no"))
+        L.append(f"| {fits} | [{str(r.get('name'))[:60]}]({r['url']}) | ${r.get('rate_per_1k')}/1k | ${r.get('budget_remaining')} | {r.get('min_views')} | "
                  f"{r.get('heat')} ({'; '.join(r.get('heat_why') or [])[:80]}) | {str(r.get('footage'))[:50]} | {str(r.get('why'))[:120]} |")
-    (ROOT / "status" / "scout.md").write_text("\n".join(L) + "\n")
-    log(f"scout: {sum(1 for r in rows if r.get('fits'))} of {len(rows)} new campaigns fit")
-    return rows
+    L += daily_section(daily)
+    (root / "status" / "scout.md").write_text("\n".join(L) + "\n")
+    return daily
 
 
 if __name__ == "__main__":

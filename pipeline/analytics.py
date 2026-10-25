@@ -117,7 +117,7 @@ def our_shorts():
         out[st["video"]] = {
             "id": st.get("id"), "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
-            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
+            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used", "sponsor")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
             # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
             **{k: ((b.get("test") or {}).get(t, "") if isinstance(b.get("test"), dict) else "")
@@ -683,7 +683,7 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS)},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "sponsor", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS)},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),

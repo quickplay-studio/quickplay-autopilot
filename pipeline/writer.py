@@ -53,7 +53,6 @@ cars and history. Every rule must hold.
   get about twice the views here). Open with a question or a twist only when the style line below asks for one. Never
   "X is back", never "Discover", "Did you know", "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put
   "impact": true on the hook and on the payoff beat.
-- The hook (beat 1) is 10 words or fewer (25 October: hooks of 10 words or fewer get 79 median views against 58).
 - 5 to 9 beats, 70 to 110 words of narration in total (count them; a length in the style line below sets its own range),
   one or two sentences per beat (a longer Short, when the style note below asks for one, keeps every beat a new surprise
   and saves the wildest for last).

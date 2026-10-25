@@ -11,6 +11,9 @@ before it went live, 7 after) and the day to check it (check_on). From that day 
   helped one thing and hurt another") until a session marks the row kept or reverted (`set CH-007 --status kept`);
 - "overlapped": another change aimed at the same target went live inside the same windows, so neither is credited on its
   own. The numbers still show what they did together, and a trade-off between them still raises the issue.
+Every metric is the main channel's, except for a change that adds a channel (area channels, 25 October): its target is
+measured over the whole line's Shorts (analytics/shorts.csv has every channel, with a channel column), its guardrails stay
+the main channel's.
 Before and after is what happened, not proof: channel growth, news days and other changes move the numbers too.
 
 The writer's automatic recipe changes (analytics/decisions.csv, by "analytics (automatic)") are scored once each when
@@ -34,7 +37,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 UK = ZoneInfo("Europe/London")
 FIELDS = ["id", "date", "area", "change", "hypothesis", "target", "guardrails", "before_days", "after_days", "check_on",
           "status", "verdict", "result", "by"]
-AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data")
+AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data", "channels")
 STATUSES = ("live", "checked", "kept", "reverted")
 AUTO = "analytics (automatic)"
 MIN_N, MOVE, BREAK, GRACE = 5, 0.10, 0.15, 14        # per side; a 10% move counts; a guardrail 15% worse is broken; final after 14 days
@@ -80,8 +83,11 @@ class Data:
     def __init__(self, today=None, now=None):
         self.now = now or dt.datetime.now(dt.timezone.utc)
         self.today = today or self.now.astimezone(UK).date()
-        self.shorts = rows_of("analytics/shorts.csv")
-        for r in self.shorts: r["_day"] = day_of(r.get("posted"))
+        self.all_shorts = rows_of("analytics/shorts.csv")
+        for r in self.all_shorts: r["_day"] = day_of(r.get("posted"))
+        # every metric is the main channel's (25 October: shorts.csv also holds the Daily line's other channels, with their
+        # own channel column); only a change that adds a channel (area "channels") is judged on all of them, see line()
+        self.shorts = [r for r in self.all_shorts if (r.get("channel") or "main") == "main"]
         self.daily = rows_of("analytics/daily.csv")
         self.cstats = rows_of("clips/stats.csv")
         for r in self.cstats:
@@ -99,6 +105,14 @@ class Data:
     def age_days(self, r):
         try: return (self.now - dt.datetime.fromisoformat(str(r.get("posted")).replace("Z", "+00:00"))).total_seconds() / 86400
         except (TypeError, ValueError): return 0.0
+
+    def line(self):
+        """This data with every channel's Shorts in `shorts`: what a change that adds a channel is judged on, so the
+        target (subscribers per 1,000 views, views at 24 hours) is the whole line's, while its guardrails stay the main
+        channel's (a new channel must not cost the main one uploads or categories)."""
+        import copy
+        d = copy.copy(self); d.shorts = self.all_shorts
+        return d
 
     def shorts_in(self, a, b): return [r for r in self.shorts if r["_day"] and a <= r["_day"] < b]
     def clips_in(self, a, b): return [r for r in self.cstats if r["_day"] and a <= r["_day"] < b and r.get("privacy") == "public"]
@@ -353,7 +367,8 @@ def judge(r, D, rows):
     if name not in METRICS: r.update(verdict="too early", result=f"unknown target {name}", status="checked"); return r
     label, better, _, fn = METRICS[name]
     _, before, after = windows(r)
-    vb, nb = fn(D, *before); va, na = fn(D, *after)
+    DT = D.line() if r.get("area") == "channels" else D       # a new channel is judged on the whole line, its guardrails on the main channel
+    vb, nb = fn(DT, *before); va, na = fn(DT, *after)
     guards, broken = [], []
     for g in [x.strip() for x in (r.get("guardrails") or "").split(";") if x.strip() in METRICS]:
         gl, gbet, _, gfn = METRICS[g]

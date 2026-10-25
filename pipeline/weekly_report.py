@@ -115,7 +115,8 @@ def ledger_lines(start, end):
 def main():
     import drivers
     end = NOW; start = end - WEEK; prev = start - WEEK
-    shorts = rows_of("analytics/shorts.csv"); hourly = rows_of("analytics/hourly.csv")
+    shorts = [r for r in rows_of("analytics/shorts.csv") if (r.get("channel") or "main") == "main"]      # the main channel's week
+    hourly = rows_of("analytics/hourly.csv")
     v = verdicts()
     this = [r for r in shorts if when(r) and start <= when(r) <= end]
     last = [r for r in shorts if when(r) and prev <= when(r) < start]
@@ -134,6 +135,9 @@ def main():
           f"- Subscribers: {yt.get('subscribers', '?')} of 1,000. YPP: {n(f(yt.get('views_last_90_days')) or 0)} of 10,000,000 Shorts views in 90 days, "
           f"about {n(f(ypp.get('views_needed_per_day') or ypp.get('needed_per_day') or (rows_of('analytics/progress.csv') or [{}])[-1].get('needed_per_day')) or 0)} a day needed from now, "
           f"apply before {ypp.get('apply_before', '2027-02-01')} ({ypp.get('days_left', '?')} days)."]
+    for ch, c in sorted((summ.get("channels") or {}).items()):         # the Daily line's other channels (25 October), apart from the figures above
+        L.append(f"- Channel {ch}: {c.get('public_shorts', 0)} Shorts public, {n(c.get('views_all_time') or 0)} views in all, "
+                 f"{c.get('subscribers') if c.get('subscribers') is not None else '?'} subscribers (analytics/shorts.csv channel column).")
     best = sorted(this, key=lambda r: -(f(r.get("yt_views")) or 0))[:3]
     if best:
         L.append("- Best this week: " + "; ".join(f"{r.get('short') or 'Short'} \"{r.get('title', '')}\" {n(f(r.get('yt_views')) or 0)} views ({r.get('category')}, {r.get('format')}, {r.get('hook_type') or drivers.hook_type(r.get('hook'))} hook)" for r in best) + ".")

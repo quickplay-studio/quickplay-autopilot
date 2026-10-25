@@ -18,7 +18,7 @@ on:
         required: false
         default: ''
       youtube_channel:
-        description: 'Which channel that YouTube code is for: main (Quickplay Daily), clips, gaming, irl or pt (the sign-in itself says which, by the channel title)'
+        description: 'Which channel that YouTube code is for: main (Quickplay Daily), clips, gaming, irl, pt, music (Quickplay Music) or es (Quickplay Diario) (the sign-in itself says which, by the channel title)'
         required: false
         default: main
 

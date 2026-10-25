@@ -535,7 +535,7 @@ function categoryPlatforms(){
   // hourly snapshots). Instagram and Facebook: views so far, for posts at least a day old. Each against the median of
   // every Short in the same 14 days on that platform (1.00x = typical).
   const now = Date.now(), cut = now - 14 * 864e5, dayOld = now - 864e5;
-  const recent = (D.shorts || []).filter(r => { const t = Date.parse(r.posted); return isFinite(t) && t >= cut; });
+  const recent = (D.shorts || []).filter(r => { const t = Date.parse(r.posted); return isFinite(t) && t >= cut && (r.channel || "main") === "main"; });
   const aged = r => Date.parse(r.posted) <= dayOld;
   const pick = {yt: r => has(r.views_24h) ? num(r.views_24h) : null,
                 ig: r => aged(r) && has(r.ig_views) ? num(r.ig_views) : null,
@@ -761,7 +761,8 @@ function render(){
       <a href="${REPO}/blob/main/review/README.md" target="_blank" rel="noopener" style="align-self:center;font-size:13px">Full review page</a></div>
     ${table([
       {h:"Posted", f:r => ukTime(r.posted)},
-      {h:"Short", f:r => r.youtube_url ? `<a href="${esc(r.youtube_url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title)},
+      {h:"Short", f:r => (r.channel && r.channel !== "main" ? `<span class="pill" title="This Short is on the ${esc(r.channel)} channel">${esc(r.channel)}</span> ` : "")
+        + (r.youtube_url ? `<a href="${esc(r.youtube_url)}" target="_blank" rel="noopener">${esc(r.title)}</a>` : esc(r.title))},
       {h:"Kind", f:r => esc([r.category, r.format].filter(Boolean).join(", "))},
       {h:"Views", n:1, f:r => fmt(r.all_views || r.yt_views)},
       {h:"Per hour", n:1, f:r => num(r.views_per_hour).toFixed(1)},

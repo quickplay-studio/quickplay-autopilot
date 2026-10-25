@@ -69,11 +69,21 @@ def dead_floor(rows):
     return max(DEAD_MIN, DEAD_SHARE * statistics.median(aged)) if len(aged) >= 5 else None
 
 
+def channel_of(r):
+    """Which of the line's channels a Short is on (shorts.csv "channel"; a row without one is the main channel's)."""
+    return r.get("channel") or "main"
+
+
 def dead(rows):
-    """The Shorts a week old or more with views under the floor: never followed up, remade or posted about again."""
-    floor = dead_floor(rows)
-    if floor is None: return []
-    return [r for r in rows if age_days(r) >= 7 and (_f(r.get("yt_views")) or 0) < floor]
+    """The Shorts a week old or more with views under the floor: never followed up, remade or posted about again. Each
+    channel is judged against its own typical week-old Short (25 October: peers from the same channel), so a new channel's
+    first Shorts are not dead by the main channel's floor, nor the main channel's by a small channel's."""
+    out = []
+    for ch in dict.fromkeys(channel_of(r) for r in rows):
+        grp = [r for r in rows if channel_of(r) == ch]
+        floor = dead_floor(grp)
+        if floor is not None: out += [r for r in grp if age_days(r) >= 7 and (_f(r.get("yt_views")) or 0) < floor]
+    return out
 
 
 FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook style"), ("hook_len", "Hook length"),
@@ -315,6 +325,7 @@ def analyse(rows, pauses=None, today=None):
     `pauses`: the pause record (load_pauses()), updated in place; the caller saves it."""
     pauses = {} if pauses is None else pauses
     today = today or NOW.astimezone(UK).date().isoformat()
+    rows = [r for r in rows if channel_of(r) == "main"]       # the verdicts are the main channel's; another channel's Shorts have their own peers
     scored = [r for r in rows if r.get("rel") not in (None, "")]
     base = _support(scored)
     floor = dead_floor(rows)

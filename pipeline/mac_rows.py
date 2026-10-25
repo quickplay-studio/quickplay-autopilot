@@ -163,7 +163,8 @@ def top(now=None, n=10):
     """The week's best Shorts for the Monday related-video job: the n most viewed of the last 7 days (analytics/shorts.csv)."""
     now = now or now_uk()
     cut = (now - dt.timedelta(days=7)).date().isoformat()
-    try: rs = [r for r in csv.DictReader((ROOT / "analytics" / "shorts.csv").open()) if str(r.get("posted_day") or "") >= cut]
+    try: rs = [r for r in csv.DictReader((ROOT / "analytics" / "shorts.csv").open())
+               if str(r.get("posted_day") or "") >= cut and (r.get("channel") or "main") == "main"]      # the main channel's weekly video
     except FileNotFoundError: return "analytics/shorts.csv is missing"
     def views(r):
         try: return float(r.get("yt_views") or 0)

@@ -185,7 +185,7 @@ assert after["mac-vyro"]["done"] is False and "2 Vyro clips still wait" in after
 made = {x[1]: after[i].get("issue") for x in A.log if x[0] == "raise" for i in ids if after[i]["title"] == x[1]}
 assert sorted(made) == sorted(a["title"] for a in real if not a.get("check")) and all(made.values()), made          # one issue per item without a check
 assert all(after[i].get("issue") for i in ("facebook-status", "tiktok-status", "instagram-key")) and not any(after[i].get("issue") for i in checks_in_file)
-assert r["wrote"] and len([x for x in A.log if x[0] == "raise"]) == 3
+assert r["wrote"] and len([x for x in A.log if x[0] == "raise"]) == len([a for a in real if not a.get("check")]) <= AC.MAX_NEW     # one each (the channel items of 25 October included)
 # an hour later (still the 24th in the UK): nothing changed, so nothing is written or made
 before = work.read_text(); n = len(A.log)
 r = AC.run(NOW + dt.timedelta(hours=1), {"MISTRAL_API_KEY": "m", "SAMBANOVA_API_KEY": "s"}, get, A, work, True, vrows, cfg)

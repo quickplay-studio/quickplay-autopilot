@@ -32,19 +32,31 @@ NUM = r"(\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)"
 DAY_WORDS = re.compile(r"\b(today|tonight|yesterday|tomorrow|this (morning|afternoon|evening)|right now|just now|hours? ago|"
                        rf"last night|{NUM} days? (to go|away|left)|in {NUM} days?)\b", re.I)
 WEEK_WORDS = re.compile(r"\b(this week|this weekend|next week|last week)\b", re.I)
+# the Spanish mirror (language es, pipeline/mirror.py): the same two rules in Spanish, and its day is the American evening's
+# date (New York), since its slots are 23:00 UTC to 03:00 UTC the next day (config shorts_channels.es slot_grid americas)
+NYC = ZoneInfo("America/New_York")
+DAY_WORDS_ES = re.compile(r"\b(hoy|esta noche|anoche|ayer|ma[ñn]ana|esta (ma[ñn]ana|tarde)|ahora mismo|hace (unas )?horas?|"
+                          r"(faltan|quedan) \d+ d[ií]as?|dentro de \d+ d[ií]as?)\b", re.I)
+WEEK_WORDS_ES = re.compile(r"\b(esta semana|este fin de semana|la pr[oó]xima semana|la semana pasada|la semana que viene)\b", re.I)
 
 
 def kind_of(b):
     return "watchlist" if b.get("watch") else str(b.get("kind") or "news")
 
 
+def zone_of(b):
+    """The time zone a board's day is counted in: the UK, or New York for the Spanish mirror."""
+    return NYC if isinstance(b, dict) and b.get("language") == "es" else UK
+
+
 def words_wrong(b, made, day):
     """Why the board's words are no longer true on `day`, or None."""
     m = b.get("meta") or {}
     text = " ".join([str(m.get("title", "")), str(m.get("summary", ""))] + [str(bt.get("say", "")) for bt in b.get("beats") or []])
-    hit = DAY_WORDS.search(text)
+    es = b.get("language") == "es"
+    hit = (DAY_WORDS_ES if es else DAY_WORDS).search(text)
     if hit and day > made: return f'its words say "{hit.group(0)}", written for {made:%A %d %B}'
-    hit = WEEK_WORDS.search(text)
+    hit = (WEEK_WORDS_ES if es else WEEK_WORDS).search(text)
     if hit and day.isocalendar()[:2] != made.isocalendar()[:2]: return f'its words say "{hit.group(0)}" and the week has changed'
     return None
 
@@ -120,7 +132,7 @@ def check(b, at=None, get=None, where="render", record=True):
     """None when the board may go out as it is (on time, evergreen); else {"alive", "evidence", "days_late"}: alive True
     means late but justified, False means expired. `at`: when it would go public (default now). Logged unless record is
     False (the render plan job cannot commit: record.py logs its decisions from the status files instead)."""
-    at = (at or dt.datetime.now(dt.timezone.utc)).astimezone(UK)
+    at = (at or dt.datetime.now(dt.timezone.utc)).astimezone(zone_of(b))
     kind = kind_of(b)
     if kind not in TIMELY or b.get("reserve") or b.get("mode") in ("dry", "private"): return None
     try: made = dt.date.fromisoformat(str(b.get("created"))[:10])
@@ -160,7 +172,7 @@ def safe_check(b, at=None, get=None, where="render", record=True):
     try: return check(b, at, get, where, record)
     except Exception as e:
         try:
-            late = ((at or dt.datetime.now(dt.timezone.utc)).astimezone(UK).date() - dt.date.fromisoformat(str(b.get("created"))[:10])).days
+            late = ((at or dt.datetime.now(dt.timezone.utc)).astimezone(zone_of(b)).date() - dt.date.fromisoformat(str(b.get("created"))[:10])).days
         except Exception: return None
         if kind_of(b) not in TIMELY or b.get("reserve") or late < 1: return None
         out = {"alive": False, "evidence": f"the freshness check failed ({type(e).__name__}), so a late Short does not go out", "days_late": late}

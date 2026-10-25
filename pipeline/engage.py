@@ -55,7 +55,7 @@ def main():
     for sp in sorted((ROOT / "status").glob("QD-*.json")):
         st = json.loads(sp.read_text())
         pub = Y.utc(st.get("publish_at"))
-        if st.get("video") and pub and pub <= now: rows.append((sp, st, pub))
+        if st.get("video") and pub and pub <= now and not st.get("channel"): rows.append((sp, st, pub))     # the main channel's: another channel's Shorts need their own sign-in
     if not rows:
         print("no public Shorts of ours yet"); return
     views = {}
@@ -146,7 +146,7 @@ def replies():
         if len(todo) >= left: break
         st = json.loads(sp.read_text())
         pub = Y.utc(st.get("publish_at"))
-        if not st.get("video") or not pub or not 0 < (now - pub).total_seconds() < 72 * 3600 or per.get(st["video"], 0) >= 3: continue
+        if not st.get("video") or not pub or not 0 < (now - pub).total_seconds() < 72 * 3600 or per.get(st["video"], 0) >= 3 or st.get("channel"): continue
         b = next((json.loads(f.read_text()) for f in (ROOT / "boards").glob(f"*/{st['id']}.json")), {})
         if (b.get("test") or {}).get("replies") != "on": continue
         r = yt.commentThreads().list(part="snippet", videoId=st["video"], maxResults=20, order="time", textFormat="plainText").execute()

@@ -28,6 +28,15 @@ BANK = [    # look name, Kokoro voice, Kokoro language (b British, a American), 
     ("michael", "am_michael", "a", "MI", "American male, friendly", 0.6, 0.5),
     ("heart", "af_heart", "a", "HT", "American female, expressive", 0.7, 0.45),
 ]
+# The Spanish mirror's narrators (25 October, pipeline/mirror.py): Kokoro's Spanish voices as references for Chatterbox Multilingual
+# (synthetic voices, never a real person's). They are kept out of BANK: they are not English looks to test, and tts_cb.py reads
+# their presets (engine mtl, language es) through voices.json. Until their references exist the model's built-in voice reads.
+REF_TEXT_ES = ("Esto es lo que casi nadie nota. Las historias más grandes empiezan con un detalle pequeño que lo cambia todo. "
+               "Entonces, ¿qué habrías hecho tú? Quédate hasta el final, porque lo mejor llega al último.")
+BANK_ES = [    # reference name, Kokoro voice, Kokoro language (e Spanish), preset id, description, expressiveness, cfg
+    ("es_alex", "em_alex", "e", "ES", "Spanish male, the Spanish mirror's voice", 0.5, 0.5),
+    ("es_dora", "ef_dora", "e", "ESF", "Spanish female", 0.5, 0.5),
+]
 CLEAR = 0.4     # least share of a beat's words the speech check must hear (run_board.py calls a beat under this unclear)
 
 
@@ -35,13 +44,13 @@ def refs():
     import numpy as np, soundfile as sf
     from kokoro import KPipeline
     pipes, made = {}, {}
-    for name, kv, lang, pid, desc, exag, cfg in BANK:
+    for name, kv, lang, pid, desc, exag, cfg in BANK + BANK_ES:
         try:
             if lang not in pipes: pipes[lang] = KPipeline(lang_code=lang, repo_id="hexgrad/Kokoro-82M")
             parts = [np.asarray(a.numpy() if hasattr(a, "numpy") else a, dtype=np.float32)
-                     for _, _, a in pipes[lang](REF_TEXT, voice=kv, speed=1.0) if a is not None]
+                     for _, _, a in pipes[lang](REF_TEXT_ES if lang == "e" else REF_TEXT, voice=kv, speed=1.0) if a is not None]
             sf.write(HERE / "voices" / f"{name}_ref.wav", np.concatenate(parts), 24000)
-            made[pid] = {"ref": f"voices/{name}_ref.wav", "exag": exag, "cfg": cfg}
+            made[pid] = {"ref": f"voices/{name}_ref.wav", "exag": exag, "cfg": cfg, **({"engine": "mtl", "language": "es"} if lang == "e" else {})}
             print(name, "reference made", flush=True)
         except Exception as e:
             print(f"{name}: failed ({type(e).__name__}: {e})"[:300], flush=True)

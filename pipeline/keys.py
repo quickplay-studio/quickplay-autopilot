@@ -117,7 +117,8 @@ def secret_steps(name, where, how):
 # ---------- YouTube, Instagram, Facebook, TikTok, the logins: read from the audit's checks ----------
 YT = {"youtube": ("Quickplay Daily", "main"), "youtube_clips": ("Quickplay Clips", "clips"),
       "youtube_gaming": ("Quickplay Gaming Clips", "gaming"), "youtube_irl": ("Quickplay IRL Clips", "irl"),
-      "youtube_pt": ("Quickplay Portuguese", "pt")}
+      "youtube_pt": ("Quickplay Portuguese", "pt"), "youtube_music": ("Quickplay Music", "music"),
+      "youtube_es": ("Quickplay Diario", "es")}
 IG = {"instagram": "Instagram key in use (Quickplay Daily)", "IG_TOKEN": "Instagram seed key (IG_TOKEN)",
       "IG_CLIPS_TOKEN": "Instagram key: Quickplay Clips (IG_CLIPS_TOKEN)", "IG_GAMING_TOKEN": "Instagram key: Quickplay Gaming Clips (IG_GAMING_TOKEN)",
       "IG_IRL_TOKEN": "Instagram key: Quickplay IRL Clips (IG_IRL_TOKEN)"}

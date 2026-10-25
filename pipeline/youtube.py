@@ -49,6 +49,41 @@ def creds():
 def client():
     return build("youtube", "v3", credentials=creds(), cache_discovery=False)
 
+
+# ---- the Daily line's other channels (25 October): music, es (config.json shorts_channels) ----
+# Each has its own sign-in, tokens/youtube_<channel>.enc, made by yt_connect.py (the social workflow with the channel's name).
+# Nothing about a channel runs until that file exists.
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+
+def connected(channel="main"):
+    """Whether Shorts can go to this channel at all. main: always (its sign-in is the original secret, checked by available()).
+    Any other channel: only once Charlie has made it in YouTube Studio and signed it in, which is the encrypted file the
+    social workflow saves. The file is looked for, not opened, so the writer and the tests can ask without the sign-in key."""
+    if not channel or channel == "main": return True
+    try:
+        f = ROOT / "tokens" / f"youtube_{channel}.enc"
+        return f.is_file() and f.stat().st_size > 0
+    except OSError: return False
+
+
+def creds_for(channel="main"):
+    """The credentials of one channel: main's as ever (creds()), another channel's from its own saved sign-in (the same
+    Google client, so the 10,000 units and the 100 uploads a day are shared). RuntimeError when it is not signed in."""
+    if not channel or channel == "main": return creds()
+    import social
+    t = social.load(f"youtube_{channel}")
+    if not t.get("refresh_token"): raise RuntimeError(f"the {channel} channel is not signed in (social workflow, channel {channel})")
+    return Credentials(None, refresh_token=t["refresh_token"], token_uri="https://oauth2.googleapis.com/token",
+                       client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"],
+                       scopes=(t.get("scope") or "").split())
+
+
+def client_for(channel="main"):
+    """A YouTube client for a channel of the line: client() for main, else a client from the channel's own sign-in."""
+    if not channel or channel == "main": return client()
+    return build("youtube", "v3", credentials=creds_for(channel), cache_discovery=False)
+
 def recent_videos(yt, limit=100):
     """[{id, title, uploaded (UTC), publish_at (UTC or None), privacy, views}] newest first."""
     pl = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
@@ -67,13 +102,15 @@ def recent_videos(yt, limit=100):
                         "views": int(v.get("statistics", {}).get("viewCount", 0))})
     return out
 
-def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None, localizations=None, paid=False):
+def upload(yt, path, title, description, tags, category="Entertainment", publish_at=None, localizations=None, paid=False, language=None):
     """Uploads as private (scheduled when publish_at is given). localizations ({lang: {title, description}}) let the Short
-    be found in searches in other languages; if YouTube refuses them, the upload is retried without."""
+    be found in searches in other languages; if YouTube refuses them, the upload is retried without. `language`: the
+    video's own language when it is not British English (the Spanish channel: "es")."""
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False, "containsSyntheticMedia": False}
     if publish_at: status["publishAt"] = publish_at
     body = {"snippet": {"title": title[:100], "description": description[:4900], "tags": tags[:15],
-                        "categoryId": CATEGORY.get(category, "24"), "defaultLanguage": "en-GB", "defaultAudioLanguage": "en-GB"},
+                        "categoryId": CATEGORY.get(category, "24"),
+                        "defaultLanguage": language or "en-GB", "defaultAudioLanguage": language or "en-GB"},
             "status": status}
     if localizations: body["localizations"] = localizations
     if paid: body["paidProductPlacementDetails"] = {"hasPaidProductPlacement": True}     # paid promotion (campaign clips)

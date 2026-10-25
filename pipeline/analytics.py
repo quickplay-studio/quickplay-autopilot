@@ -115,7 +115,8 @@ def our_shorts():
         beats = b.get("beats") or []
         hook = beats[0].get("say", "") if beats else ""
         out[st["video"]] = {
-            "id": st.get("id"), "title": st.get("title") or b.get("meta", {}).get("title", ""),
+            "id": st.get("id"), "channel": st.get("channel") or b.get("channel") or "main",
+            "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
             "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
@@ -211,6 +212,57 @@ def youtube(ours=None):
                                    "sources": sources}, ensure_ascii=False))
     return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily, "retention": retention,
             "audience": aud, "cached_at": NOW.isoformat(timespec="minutes"), "sources": sources}
+
+def extra_youtube(ours=None):
+    """The Daily line's other channels (config shorts_channels), each once it is signed in: its videos, live view, like and
+    comment counts and subscriber total, read with the channel's own sign-in (a unit per 50 videos), and, in a full run, one
+    YouTube Analytics report per channel for the per-video figures that matter most (engaged views, average viewed, shares,
+    subscribers gained; the hourly runs reuse it). Retention curves, traffic sources and countries are read for the main
+    channel only. {"videos": {id: video}, "stats": {id: {views, likes, comments}}, "analytics": {id: {...}},
+    "channel_of": {id: channel}, "subs": {channel: n}, "errors": {channel: why}}; empty while no extra channel is signed in."""
+    import youtube as Y
+    out = {"videos": {}, "stats": {}, "analytics": {}, "channel_of": {}, "subs": {}, "errors": {}}
+    for ch in (CFG.get("shorts_channels") or {}):
+        if not Y.connected(ch): continue
+        try:
+            yt = Y.client_for(ch)
+            info = yt.channels().list(part="statistics,snippet", mine=True).execute()["items"][0]
+            vids = {v["id"]: v for v in Y.recent_videos(yt, limit=500)}
+            ids, stats = list(vids), {}
+            for i in range(0, len(ids), 50):
+                for v in yt.videos().list(part="statistics", id=",".join(ids[i:i + 50])).execute()["items"]:
+                    s = v.get("statistics", {})
+                    stats[v["id"]] = {"views": int(s.get("viewCount", 0)), "likes": int(s.get("likeCount", 0)),
+                                      "comments": int(s.get("commentCount", 0))}
+            out["subs"][ch] = int(info["statistics"].get("subscriberCount", 0))
+            out["videos"].update(vids); out["stats"].update(stats); out["channel_of"].update({vid: ch for vid in vids})
+            cache_p = CACHE / f"youtube_{ch}.json"
+            if FAST:        # YouTube Analytics only moves once or twice a day: the last full run's answers
+                out["analytics"].update((load_json(cache_p, {}) or {}).get("analytics") or {})
+                continue
+            try:
+                from googleapiclient.discovery import build
+                from googleapiclient.errors import HttpError
+                ya = build("youtubeAnalytics", "v2", credentials=Y.creds_for(ch), cache_discovery=False)
+                metrics = "views,engagedViews,averageViewPercentage,averageViewDuration,likes,comments,shares,subscribersGained"
+                for m in (metrics, metrics.replace("engagedViews,", "")):       # an API version that does not know engagedViews
+                    try:
+                        r = ya.reports().query(ids="channel==MINE", startDate=str(TODAY - dt.timedelta(days=120)), endDate=str(TODAY),
+                                               metrics=m, dimensions="video", sort="-views", maxResults=200).execute()
+                    except HttpError as e:
+                        if "engagedViews" in m: continue
+                        raise
+                    cols = [c["name"] for c in r.get("columnHeaders", [])]
+                    got = {row[cols.index("video")]: dict(zip(cols, row)) for row in r.get("rows", []) or []}
+                    out["analytics"].update(got)
+                    CACHE.mkdir(parents=True, exist_ok=True)
+                    cache_p.write_text(json.dumps({"at": NOW.isoformat(timespec="minutes"), "analytics": got}, ensure_ascii=False))
+                    break
+            except Exception as e:
+                out["errors"][f"{ch}_analytics"] = f"{type(e).__name__}: {e}"[:200]
+        except (Exception, SystemExit) as e:
+            out["errors"][ch] = f"{type(e).__name__}: {e}"[:200]
+    return out
 
 def audience(query, vids, ours):
     """Where viewers are, how they found the Shorts, and their age and gender: for the channel, for each category (a
@@ -656,6 +708,10 @@ def main():
     yt = ig = fb = None
     try: yt = youtube(ours)
     except Exception as e: errors["youtube"] = f"{type(e).__name__}: {e}"[:300]
+    xt = {"videos": {}, "stats": {}, "channel_of": {}, "subs": {}, "errors": {}}      # the line's other channels, once signed in
+    try: xt = extra_youtube(ours)
+    except Exception as e: errors["extra_channels"] = f"{type(e).__name__}: {e}"[:300]
+    errors.update({f"youtube_{ch}": why for ch, why in xt["errors"].items()})
     try: ig = instagram()
     except Exception as e: errors["instagram"] = f"{type(e).__name__}: {e}"[:300]
     try: fb = facebook()
@@ -669,18 +725,22 @@ def main():
     ig_by_id = {m["id"]: m for m in (ig or {}).get("media", [])}
     ig_by_title = {norm((m.get("caption") or "").split("\n")[0]): m for m in (ig or {}).get("media", [])}
     fb_reels = (fb or {}).get("reels") or {}
-    for vid, v in ((yt or {}).get("videos") or {}).items():
+    all_videos = dict((yt or {}).get("videos") or {})
+    if yt: all_videos.update(xt["videos"])         # the other channels' Shorts are measured too, by views (their own sign-ins)
+    for vid, v in all_videos.items():
         if v.get("privacy") != "public": continue
         o = ours.get(vid, {})
+        ch = xt["channel_of"].get(vid) or o.get("channel") or "main"
         posted = utc(v.get("publish_at")) or utc(v.get("uploaded"))
         hours = max(1.0, (NOW - posted).total_seconds() / 3600) if posted else None
-        s, a = yt["stats"].get(vid, {}), yt["analytics"].get(vid, {})
+        other = vid in xt["channel_of"]
+        s, a = (xt if other else yt)["stats"].get(vid, {}), (xt if other else yt)["analytics"].get(vid, {})
         key = norm(v["title"])
         im = ig_by_id.get(o.get("instagram_media")) or ig_by_title.get(key) or {}
         fv = fb_reels.get(o.get("id")) or {}
         uk = posted.astimezone(UK) if posted else None
         row = {
-            "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
+            "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
             "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS)},
@@ -723,14 +783,21 @@ def main():
         rows.append(row)
     rows.sort(key=lambda r: r["posted"], reverse=True)
     curves = update_curves(rows)
+    # the line's other channels (25 October) are measured but never counted in the main channel's numbers: each is compared
+    # with its own Shorts (peers from the same channel), and everything below (breakouts, looks, hours, the headline, the
+    # Partner Programme estimate, drivers, the volume test) runs on the main channel's rows alone
+    all_rows = rows
+    xrows = [r for r in all_rows if r["channel"] != "main"]
+    rows = [r for r in all_rows if r["channel"] == "main"]
     hot = breakouts(rows, curves)
-    for r in rows:
+    for r in all_rows:
         c = curves.get(rkey(r))
         for h in VEL_HOURS:
             v = views_at(c, h); r[f"views_{h}h"] = "" if v is None else v
-    relative(rows, "views_24h", "_rel24")
-    relative(rows, "views_per_hour", "_relvph")
-    for r in rows:      # views against Shorts posted around the same time: at 24 hours where measured, else views an hour
+    for pool in [rows] + [[r for r in xrows if r["channel"] == ch] for ch in sorted({r["channel"] for r in xrows})]:
+        relative(pool, "views_24h", "_rel24")
+        relative(pool, "views_per_hour", "_relvph")
+    for r in all_rows:      # views against Shorts posted around the same time: at 24 hours where measured, else views an hour
         r["views_vs_typical"] = r["_rel24"] if r["_rel24"] != "" else r["_relvph"]
         # what drives views is judged at 24 hours only: the views-an-hour stand-in for younger Shorts ran 2 to 6x high
         r["rel"] = r["_rel24"]
@@ -762,7 +829,8 @@ def main():
     fields = ["day", "source", "yt_followers", "yt_views_total", "ig_followers", "ig_views_total", "fb_followers",
               "fb_views_total", "yt_views_day", "yt_engaged_views_day", "yt_subs_gained_day"]
     write_csv(hist_p, hist, fields)
-    write_csv(OUT / "shorts.csv", rows, [k for k in rows[0] if not k.startswith("_") and k != "rel"] if rows else ["short", "title"])
+    every = sorted(all_rows, key=lambda r: r["posted"], reverse=True)       # every channel's Shorts, with the channel column
+    write_csv(OUT / "shorts.csv", every, [k for k in every[0] if not k.startswith("_") and k != "rel"] if every else ["short", "title"])
 
     # monetisation progress. YouTube counts engaged views for the Partner Program; its Analytics run a day or two behind,
     # so the estimate adds views since its last day (live counts) at the recent engaged share.
@@ -802,6 +870,10 @@ def main():
                               "watch_hours_365d": ((yt or {}).get("audience") or {}).get("longform_watch_hours_365d")}},
     }
     if aud.get("errors"): summary["audience_errors"] = aud["errors"]
+    if xt["subs"] or xrows:         # the line's other channels, apart from the main channel's figures above
+        summary["channels"] = {ch: {"subscribers": xt["subs"].get(ch), "public_shorts": sum(1 for r in xrows if r["channel"] == ch),
+                                    "views_all_time": sum(r["yt_views"] for r in xrows if r["channel"] == ch)}
+                               for ch in sorted(set(xt["subs"]) | {r["channel"] for r in xrows})}
     (OUT / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False))
     # one row for the dashboard's headline cards (a file of rows is what it reads)
     write_csv(OUT / "progress.csv", [{
@@ -1042,7 +1114,7 @@ def volume_days(today=None):
     p = OUT / "shorts.csv"
     for r in (csv.DictReader(io.StringIO(p.read_text())) if p.exists() else []):
         t = utc(r.get("posted"))
-        if not t: continue
+        if not t or (r.get("channel") or "main") != "main": continue        # the main channel's volume test; other channels are counted apart
         d = days.setdefault(str(t.astimezone(UK).date()), new_day())
         d["n"] += 1
         try: v = float(r.get("views_24h"))

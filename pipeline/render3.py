@@ -442,7 +442,8 @@ def main():
     for b in sb["beats"]:
         for it in b["visual"].get("items", []):
             if isinstance(it, dict) and it.get("icon"): icons.add(it["icon"])
-    data = {"accent": sb.get("accent", "#2EE6C5"), "category": sb["category"], "chipIcon": sb.get("chipIcon", "trending-up"),
+    data = {"accent": sb.get("accent", "#2EE6C5"), "category": sb.get("chip_label") or sb["category"], "chipIcon": sb.get("chipIcon", "trending-up"),
+            "handle": sb.get("handle") or "@quickplaydaily", "cta": sb.get("cta_lines") or None,       # another channel's name and call to action (config shorts_channels, mirror.py)
             "icons": R.icon_svgs(icons), "beats": beats, "words": words, "groups": groups, "duration": duration,
             "media": items, "punches": punches, "look": LOOK, "bg": bginfo}
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))

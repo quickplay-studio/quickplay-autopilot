@@ -2,14 +2,14 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-24T19:10+00:00",
+ "as_of": "2026-10-25T08:38+00:00",
  "factors": {
   "hook_type": {
    "arms": {
     "statement": {
      "n": 0,
      "needs": 70,
-     "verdict": "push"
+     "verdict": "about typical"
     },
     "number": {
      "n": 0,
@@ -17,8 +17,8 @@
      "verdict": "about typical"
     }
    },
-   "settled": true,
-   "days_left": 0,
+   "settled": false,
+   "days_left": 12,
    "label": "hook type"
   },
   "length": {
@@ -31,7 +31,7 @@
     "35 to 44 s": {
      "n": 0,
      "needs": 70,
-     "verdict": "early sign"
+     "verdict": "about typical"
     }
    },
    "settled": false,
@@ -43,7 +43,7 @@
     "search phrase": {
      "n": 0,
      "needs": 70,
-     "verdict": "too few to tell"
+     "verdict": "about typical"
     },
     "curiosity": {
      "n": 0,
@@ -60,7 +60,7 @@
     "cover": {
      "n": 0,
      "needs": 70,
-     "verdict": "early sign"
+     "verdict": "cut back"
     },
     "photo": {
      "n": 0,
@@ -68,8 +68,8 @@
      "verdict": "about typical"
     }
    },
-   "settled": false,
-   "days_left": 12,
+   "settled": true,
+   "days_left": 0,
    "label": "first frame"
   },
   "fx_energy": {
@@ -122,6 +122,40 @@
    "settled": false,
    "days_left": 12,
    "label": "writer model"
+  },
+  "title_emoji": {
+   "arms": {
+    "emoji": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "none": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "title emoji"
+  },
+  "title_answer": {
+   "arms": {
+    "stated": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "held back": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 12,
+   "label": "title answer (stated or held back)"
   }
  }
 }

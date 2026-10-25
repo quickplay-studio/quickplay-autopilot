@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T07:23+00:00",
+ "updated": "2026-10-25T08:36+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -48,9 +48,9 @@
     "ballon d'or 2026",
     "ballon d'or 2026 live",
     "ballon d'or 2026 ai",
-    "ballon d'or 2026 ceremony live",
     "ballon d'or 2026 nominees",
     "ballon d'or 2026 video",
+    "ballon d'or 2026 trailer",
     "ballon d'or 2026 winner",
     "ballon d'or 2026 ceremony"
    ],
@@ -112,7 +112,7 @@
     21833,
     16637
    ],
-   "news_24h": 54,
+   "news_24h": 49,
    "news_usual": null,
    "suggestions": [
     "the celebrity traitors",
@@ -181,17 +181,17 @@
     16393,
     16039
    ],
-   "news_24h": 49,
+   "news_24h": 48,
    "news_usual": null,
    "suggestions": [
     "halloween 2026",
     "halloween 2026 playlist",
     "halloween 2026 dti quest",
     "halloween 2026 dti",
-    "halloween 2026 fmr",
-    "halloween 2026 dti quest tutorial",
+    "halloween 2026 countdown",
     "halloween 2026 theory",
-    "halloween 2026 trailer"
+    "halloween 2026 trailer",
+    "halloween 2026 mix"
    ],
    "in": [],
    "category": "Entertainment",
@@ -314,7 +314,7 @@
     16054,
     15460
    ],
-   "news_24h": 42,
+   "news_24h": 44,
    "news_usual": null,
    "suggestions": [
     "gta 6",
@@ -326,9 +326,7 @@
     "gta 6 song",
     "gta 6 leaks"
    ],
-   "in": [
-    "YouTube charts"
-   ],
+   "in": [],
    "category": "Gaming",
    "angles": [
     "GTA 6 price",
@@ -386,7 +384,7 @@
     8427,
     10157
    ],
-   "news_24h": 12,
+   "news_24h": 13,
    "news_usual": null,
    "suggestions": [
     "the hunger games sunrise on the reaping",
@@ -456,7 +454,7 @@
     961,
     846
    ],
-   "news_24h": 7,
+   "news_24h": 9,
    "news_usual": null,
    "suggestions": [
     "mama awards 2026",
@@ -526,7 +524,7 @@
     279,
     209
    ],
-   "news_24h": 4,
+   "news_24h": 3,
    "news_usual": null,
    "suggestions": [
     "spotify wrapped 2026",
@@ -590,7 +588,7 @@
     836,
     638
    ],
-   "news_24h": 9,
+   "news_24h": 10,
    "news_usual": null,
    "suggestions": [
     "the game awards",
@@ -664,8 +662,8 @@
     "avengers doomsday teaser",
     "avengers doomsday special look",
     "avengers doomsday new trailer",
-    "avengers doomsday trailer 3",
     "avengers doomsday trailer reaction",
+    "avengers doomsday trailer 3",
     "avengers doomsday tv spot"
    ],
    "in": [
@@ -688,8 +686,8 @@
    "name": "Dune: Part Three",
    "days_to": 54,
    "phase": "steady",
-   "level": "steady",
-   "places": 0,
+   "level": "surging",
+   "places": 3,
    "momentum": 1.09,
    "views_yesterday": 8683,
    "views_usual": 7988,
@@ -725,7 +723,7 @@
     8831,
     8683
    ],
-   "news_24h": 16,
+   "news_24h": 17,
    "news_usual": null,
    "suggestions": [
     "dune part three",
@@ -737,7 +735,9 @@
     "dune part three teaser",
     "dune part three full movie"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Film",
    "angles": [
     "Dune Part Three cast",
@@ -932,7 +932,7 @@
     344,
     303
    ],
-   "news_24h": 7,
+   "news_24h": 6,
    "news_usual": null,
    "suggestions": [
     "new year's eve 2026",

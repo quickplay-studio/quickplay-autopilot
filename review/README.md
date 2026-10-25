@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 07:42): 12 of 1,000 subscribers · 8,622 of 10 million Shorts views in 90 days · 4,087 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 08:38): 12 of 1,000 subscribers · 8,633 of 10 million Shorts views in 90 days · 3,982 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Sun 25 Oct 7:37 (UK): 1 scheduled, 147 public, 15 uploads in the last 24 hours.
+YouTube checked Sun 25 Oct 8:38 (UK): 3 scheduled, 147 public, 16 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 7:37).
 
@@ -27,12 +27,12 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 - lab-voice-1019 (British male, 3.15 words a second): 1.37 x typical, 39% stayed past the first seconds, 3 Shorts
 - george_dramatic (British male, more dramatic delivery): 1.06 x typical, 29% stayed past the first seconds, 9 Shorts
-- emma (British female): 0.96 x typical, 24% stayed past the first seconds, 9 Shorts
-- george_quick (British male, clear and quicker): 0.88 x typical, 24% stayed past the first seconds, 4 Shorts
-- lily (British female, bright): 1.47 x typical, 42% stayed past the first seconds, 1 Short
-- michael (American male, friendly): 1.38 x typical, 37% stayed past the first seconds, 2 Shorts
-- heart (American female, expressive): 0.90 x typical, 26% stayed past the first seconds, 2 Shorts
-- isabella (British female, warm): 0.88 x typical, 22% stayed past the first seconds, 1 Short
+- emma (British female): 0.98 x typical, 24% stayed past the first seconds, 9 Shorts
+- george_quick (British male, clear and quicker): 0.91 x typical, 24% stayed past the first seconds, 4 Shorts
+- michael (American male, friendly): 1.39 x typical, 37% stayed past the first seconds, 2 Shorts
+- lily (British female, bright): 1.08 x typical, 30% stayed past the first seconds, 2 Shorts
+- heart (American female, expressive): 0.93 x typical, 26% stayed past the first seconds, 2 Shorts
+- isabella (British female, warm): 0.90 x typical, 22% stayed past the first seconds, 1 Short
 - lewis (British male, deeper and calm): 0.84 x typical, 24% stayed past the first seconds, 1 Short
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
@@ -45,7 +45,7 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing voice: British male, 3.15 words a second (3 of 8 Shorts measured)
 - Testing energy: camera motion 0.9, punch-ins 0.03 (0 of 8 Shorts measured)
 - Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
-- Testing opening: the picture alone for 1 word, then the hook's card (7 of 8 Shorts measured)
+- Testing opening: the picture alone for 1 word, then the hook's card (8 of 8 Shorts measured)
 - 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
 - 2026-10-25: energy retired lab-energy-1019 (1.07x against 1.29x for steady over 15 Shorts)
 - 2026-10-25: captions retired minimal (1.05x against 1.26x for lab-captions-1019 over 18 Shorts)
@@ -60,7 +60,6 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
-- [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
 ## Waiting for your approval
 
@@ -80,23 +79,33 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Sun 25 Oct 13:00 · Zendaya: the major category change explained
+scheduled · 30 s · music: ego-chall · [script](../boards/done/QD-167.json) · [YouTube](https://youtube.com/shorts/ieaRJvZrp1Y)
+
+![QD-167](QD-167.jpg)
+
 ### Sun 25 Oct 12:00 · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
 scheduled · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
 
 ![QD-165](QD-165.jpg)
 
+### Sun 25 Oct 9:00 · Halloween: The Game secret you might have missed
+scheduled · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
+
+![QD-166](QD-166.jpg)
+
 ### Sun 25 Oct 7:00 · Ballon d'Or 2026 ceremony is moving to London
-public · 15 views · 38 s · music: the-bombs · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
+public · 29 views · 38 s · music: the-bombs · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
 
 ![QD-162](QD-162.jpg)
 
 ### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
-public · 199 views · 27 s · music: the-bombs · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
+public · 212 views · 27 s · music: the-bombs · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
 
 ![QD-164](QD-164.jpg)
 
 ### Sun 25 Oct 4:00 · Richard E Grant admits betrayal to Joe Lycett
-public · 12 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
+public · 14 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
 
 ![QD-163](QD-163.jpg)
 
@@ -141,12 +150,12 @@ public · 34 views · 37 s · music: once-upon-a-time · [script](../boards/done
 ![QD-153](QD-153.jpg)
 
 ### Sat 24 Oct 11:00 · Melanie C leads a sweaty Strictly workout to her own track 💪
-public · 110 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
+public · 107 views · 30 s · music: dance-with-you · [script](../boards/done/QD-152.json) · [YouTube](https://youtube.com/shorts/fGjeLLGyljU)
 
 ![QD-152](QD-152.jpg)
 
 ### Sat 24 Oct 10:00 · Game Facts #1: GTA 6 launch trailer: what you get on day one 🎮
-public · 9 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
+public · 10 views · 27 s · music: gta-type-beat · [script](../boards/done/QD-151.json) · [YouTube](https://youtube.com/shorts/jDOsuCfxHVw)
 
 ![QD-151](QD-151.jpg)
 
@@ -161,7 +170,7 @@ public · 55 views · 30 s · music: pulsar · [script](../boards/done/QD-148.js
 ![QD-148](QD-148.jpg)
 
 ### Sat 24 Oct 7:00 · GTA 6 has no disc, so what will it cost you? 🎮
-public · 15 views · 24 s · music: pulsar · [script](../boards/done/QD-146.json) · [YouTube](https://youtube.com/shorts/qQiayx_AZBQ)
+public · 14 views · 24 s · music: pulsar · [script](../boards/done/QD-146.json) · [YouTube](https://youtube.com/shorts/qQiayx_AZBQ)
 
 ![QD-146](QD-146.jpg)
 
@@ -171,7 +180,7 @@ public · 1,158 views · 28 s · music: f16 · [script](../boards/done/QD-076.js
 ![QD-076](QD-076.jpg)
 
 ### Sat 24 Oct 4:00 · Jorja Smith sings at the Amy Winehouse tribute 🎤
-public · 129 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
+public · 142 views · 29 s · music: mas-cafe · [script](../boards/done/QD-147.json) · [YouTube](https://youtube.com/shorts/OXaGNn5zGH8)
 
 ![QD-147](QD-147.jpg)
 
@@ -201,7 +210,7 @@ public · 527 views · 24 s · music: in-battery · on Facebook · [script](../b
 ![QD-141](QD-141.jpg)
 
 ### Fri 23 Oct 17:00 · The Northumbria Mysteries: New BBC Detective Drama 🎬
-public · 766 views · 25 s · music: false-vacuum-decay · on Facebook · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
+public · 755 views · 25 s · music: false-vacuum-decay · on Facebook · [script](../boards/done/QD-140.json) · [YouTube](https://youtube.com/shorts/QFAPJz8DfUg)
 
 ![QD-140](QD-140.jpg)
 
@@ -211,12 +220,12 @@ public · 22 views · 43 s · music: dead-wrong · on Instagram · [script](../b
 ![QD-139](QD-139.jpg)
 
 ### Fri 23 Oct 16:00 · The biggest superhero box office hits in history 🍿
-public · 57 views · 35 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
+public · 58 views · 35 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-138.json) · [YouTube](https://youtube.com/shorts/BjsQrem44PE)
 
 ![QD-138](QD-138.jpg)
 
 ### Fri 23 Oct 15:30 · Top 10 most-streamed songs on Spotify of all time 🎶
-public · 99 views · 25 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
+public · 100 views · 25 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-137.json) · [YouTube](https://youtube.com/shorts/LPLtMQ4-QOI)
 
 ![QD-137](QD-137.jpg)
 
@@ -231,12 +240,12 @@ public · 908 views · 23 s · music: dance-with-you · on Instagram · [script]
 ![QD-135](QD-135.jpg)
 
 ### Fri 23 Oct 14:00 · I Play Rocky: Sylvester Stallone biopic trailer 🥊
-public · 245 views · 32 s · music: scale-the-mountain · on Instagram · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
+public · 255 views · 32 s · music: scale-the-mountain · on Instagram · [script](../boards/done/QD-134.json) · [YouTube](https://youtube.com/shorts/WjmzlG1lqf8)
 
 ![QD-134](QD-134.jpg)
 
 ### Fri 23 Oct 13:30 · BABYMONSTER: The massive world tour expansion 🎤
-public · 899 views · 32 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
+public · 909 views · 32 s · music: dance-with-you · on Instagram · [script](../boards/done/QD-133.json) · [YouTube](https://youtube.com/shorts/1ObKNd47C68)
 
 ![QD-133](QD-133.jpg)
 
@@ -246,12 +255,12 @@ public · 82 views · 29 s · music: dance-with-you · on Instagram · [script](
 ![QD-132](QD-132.jpg)
 
 ### Fri 23 Oct 12:30 · Katie Boulter: British star reaches Japan Open 🎾
-public · 298 views · 25 s · music: paradigm · on Instagram · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
+public · 296 views · 25 s · music: paradigm · on Instagram · [script](../boards/done/QD-131.json) · [YouTube](https://youtube.com/shorts/B_qYfZYCE8I)
 
 ![QD-131](QD-131.jpg)
 
 ### Fri 23 Oct 12:00 · Lewis Hamilton aims to race in Rwanda Grand Prix 🏁
-public · 9 views · 31 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
+public · 10 views · 31 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-130.json) · [YouTube](https://youtube.com/shorts/u9wRS6aSxGQ)
 
 ![QD-130](QD-130.jpg)
 
@@ -269,13 +278,3 @@ public · 1,077 views · 28 s · music: flight-is-aight · on Instagram · [scri
 public · 53 views · 24 s · music: fire-in-the-sky · on Instagram · [script](../boards/done/QD-127.json) · [YouTube](https://youtube.com/shorts/Ck2cgaAUxiY)
 
 ![QD-127](QD-127.jpg)
-
-### Fri 23 Oct 0:30 · Eden Sessions: Ben Howard headlines this summer 🎤
-public · 20 views · 22 s · music: paradise · on Instagram · on Facebook · [script](../boards/done/QD-125.json) · [YouTube](https://youtube.com/shorts/FRdpiOogtKs)
-
-![QD-125](QD-125.jpg)
-
-### Fri 23 Oct 0:00 · Bavuma scores majestic 179 against Australia 🏏
-public · 32 views · 24 s · music: stake-out · on Instagram · on Facebook · [script](../boards/done/QD-124.json) · [YouTube](https://youtube.com/shorts/XWQ_F4p4DbQ)
-
-![QD-124](QD-124.jpg)

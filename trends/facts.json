@@ -1,21 +1,90 @@
 {
  "date": "2026-10-25",
- "built": "2026-10-25T07:37+00:00",
- "model": "gemini-3.5-flash-lite + gemini-flash-latest",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-25T08:38+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 14,
+   "n": 7,
+   "topic": "Ballon d'Or past winners",
+   "signal": "watchlist: Ballon d'Or 2026 (launch, 1 day to go)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Discover the history of the prestigious Ballon d'Or awards!",
+    "The 2026 Ballon d'Or ceremony is happening in London!",
+    "Find out who is nominated for the Ballon d'Or!"
+   ],
+   "sources": [
+    [
+     "All you need to know about the 2026 Ballon d'Or",
+     "https://www.bbc.com/sport/football/articles/cw0541g4qzgeo",
+     "BBC",
+     "2026-10-23"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Run by France Football magazine since 1956, it is widely viewed as the pinnacle of individual prizes for professional footballers worldwide."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or ceremony will take place at 20:00 GMT on Monday, 26 October, at London's Palladium Theatre."
+     }
+    },
+    {
+     "claim": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony is traditionally held in France, and has taken place in Paris' Theatre du Chatelet since 2019."
+     }
+    },
+    {
+     "claim": "England captain Kane scored 73 goals across club and international competitions in the 2025-26 season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "England captain Kane scored 73 goals across club and international competitions in the 2025-26 season."
+     }
+    },
+    {
+     "claim": "The 2024 Ballon d'Or winner has had consecutive seasons marred by injury since taking home the trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2024 Ballon d'Or winner has had consecutive seasons marred by injury since taking home the trophy."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
    "topic": "GTA 6 trailer views record",
    "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "The official launch trailer was posted on Xbox Wire on 23 October 2026.",
    "hooks": [
-    "Nearly 30 minutes of GTA 6 action debuted on Netflix",
-    "GTA 6 trailer mixes cinematics with real gameplay",
-    "Release date set for Nov 19 on PS5 and Xbox"
+    "Grand Theft Auto VI drops November 19, Leonida revealed!",
+    "Nearly 30‑minute Netflix trailer introduces Jason and Lucia.",
+    "Xbox Wire shares official launch trailer on 23 October."
    ],
    "sources": [
     [
@@ -34,39 +103,30 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Rockstar delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available elsewhere a few hours later.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
-     }
-    },
-    {
-     "claim": "The trailer was a mix of cinematics and gameplay and looked a lot like Grand Theft Auto.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The trailer was a mix of cinematics and gameplay, and it looked a lot like, well... Grand Theft Auto."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19."
-     }
-    },
-    {
-     "claim": "Rockstar let magazine Dazed in on a few features that moseyed into Leonida from Red Dead Redemption 2, like Jason's and Lucia's appearances altering based on how they eat and exercise.",
+     "claim": "The trailer showcases the new city called Leonida.",
      "sources": [
       2
      ],
      "evidence": {
       "2": "Rockstar let magazine Dazed in on a few features that moseyed into Leonida from Red Dead Redemption 2, like Jason's and Lucia's appearances altering based"
+     }
+    },
+    {
+     "claim": "The trailer features characters Jason and Lucia who can be swapped between during gameplay.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "A handful of segments followed Jason and Lucia as they roamed around the city without any pressing concerns hanging over them, and Rockstar briefly swapped"
+     }
+    },
+    {
+     "claim": "The trailer shows side activities such as riding scooters, lounging at the beach, racing sports cars, dirt biking and urban skydiving.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Some of the activities the trailer showed included things like riding scooters, lounging at the beach, racing sports cars, dirt biking, and even a little"
      }
     }
    ],
@@ -75,107 +135,161 @@
    ]
   },
   {
-   "n": 24,
-   "topic": "zendaya",
-   "signal": "Google Trends US 200+",
+   "n": 14,
+   "topic": "Dune Part Three cast",
+   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
    "category": "Film",
-   "what_is_new": "Zendaya is reportedly set to campaign in the Best Actress category for her role as Chani in Dune: Part III.",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Zendaya starred in Spider-Man Brand New Day in 2026?",
-    "Zendaya is changing categories for Dune Part Three!",
-    "Zendaya won two Primetime Emmy Awards for her role in Euphoria."
+    "Dune Part Three releases in theatres on December 18, 2026.",
+    "Robert Pattinson joins the cast of Dune Part Three as Scytale.",
+    "Denis Villeneuve reveals Dune Part Three is a very different movie."
    ],
    "sources": [
     [
-     "Zendaya Sets Best Actress Oscar Campaign for Dune: Part 3",
-     "https://www.ign.com/articles/zendaya-dune-part-3-best-actress-oscars",
+     "Dune: Part Three Director Denis Villeneuve Says Film Has ‘Same DNA’ as First Two but Is ‘A Very Different Movie’",
+     "https://in.ign.com/dune-part-three/274655/dune-part-three-director-denis-villeneuve-says-film-has-same-dna-as-first-two-but-is-a-very-differen",
      "IGN",
-     "2026-10-23"
+     "2026-10-16"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Denis Villeneuve says Dune Part Three has the same DNA as the first two films but is a very different movie.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Dune: Part Three Director Denis Villeneuve Says Film Has ‘Same DNA’ as First Two but Is ‘A Very Different Movie’"
+     }
+    },
+    {
+     "claim": "Timothee Chalamet calls the upcoming instalment its own beast.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Timothee Chalamet calls the upcoming instalment “its own beast.”"
+     }
+    },
+    {
+     "claim": "Dune Part Three is based on Frank Herbert's novel Dune Messiah and serves as the final chapter in Villeneuve's trilogy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Based on Frank Herbert's novel Dune Messiah, the film serves as the final chapter in Villeneuve's Dune trilogy."
+     }
+    },
+    {
+     "claim": "Robert Pattinson joins the cast of Dune Part Three as Scytale.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Robert Pattinson also joins the cast as Scytale."
+     }
+    },
+    {
+     "claim": "Dune Part Three is set to release in theatres on December 18, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Dune: Part Three is set to release in theatres on December 18, 2026."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "Dune Part Three trailer",
+   "signal": "watchlist: Dune: Part Three (surging, 54 days to go)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Dune Part Three opens in theaters on December 18, 2026.",
+    "Dune Part Three is set nearly two decades after Paul Atreides seized control."
+   ],
+   "sources": [
+    [
+     "Dune: Part Three - Official 'Tickets on Sale' Trailer",
+     "https://www.ign.com/videos/dune-part-three-official-tickets-on-sale-trailer",
+     "IGN",
+     "2026-08-18"
     ],
     [
-     "zendaya",
-     "https://en.wikipedia.org/wiki/Zendaya",
-     "Wikipedia",
-     ""
+     "Dune 3 trailer teases some big changes from Dune Messiah",
+     "https://www.polygon.com/dune-part-3-trailer-changes-from-book/",
+     "Polygon",
+     "2026-07-08"
     ]
    ],
    "verified": [
     {
-     "claim": "Zendaya reprised the role of Michelle Jones Watson in the film Spider-Man Brand New Day in 2026.",
+     "claim": "Dune Part Three is set nearly two decades after Paul Atreides seized control of the Imperium.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "starring in the two highest-grossing movies of 2026, Spider-Man: Brand New Day and The Odyssey.",
-      "2": "She reprised the role in the film's sequels Far From Home (2019), No Way Home (2021), and Brand New Day (2026)."
-     }
-    },
-    {
-     "claim": "Zendaya starred in The Odyssey in 2026.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "starring in the two highest-grossing movies of 2026, Spider-Man: Brand New Day and The Odyssey.",
-      "2": "She also starred in the musical film The Greatest Showman (2017), Denis Villeneuve's Dune trilogy (2021–2026), and The Odyssey (2026)"
-     }
-    },
-    {
-     "claim": "Zendaya starred in The Drama in 2026.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Zendaya has enjoyed a stellar year as an actor, earning praise for The Drama and starring in the two highest-grossing movies of 2026",
-      "2": "and has earned praise for her performances in the romance films Malcolm & Marie (2021), Challengers (2024) and The Drama (2026)."
+      "1": "Dune: Part Three is set nearly two decades after Paul Atreides seized control of the Imperium.",
+      "2": "The YouTube description for the trailer confirms another deviation, albeit a potentially semantic one: Dune: Part Three is set “nearly two decades” after the events"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Zendaya played Chani in Dune Part Three.",
+     "claim": "Dune Part Three opens in theaters on December 18, 2026.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Zendaya will reportedly campaign in the Best Actress category for her role as Chani in Dune: Part III in the upcoming Oscars race."
+      "1": "Dune: Part Three opens in theaters on December 18, 2026."
      }
     },
     {
-     "claim": "Zendaya was born in Oakland, California.",
+     "claim": "Dune Part Three is directed by Denis Villeneuve and written by Villeneuve and Brian K Vaughan.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Born in Oakland, California, Zendaya began her career as a child model and dancer"
+      "1": "Dune: Part Three is directed by Denis Villeneuve and written by Villeneuve and Brian K. Vaughan, based on the novel Dune Messiah by Frank Herbert,"
      }
     },
     {
-     "claim": "Zendaya won two Primetime Emmy Awards for her performance in Euphoria.",
+     "claim": "Dune Part Three is based on the novel Dune Messiah by Frank Herbert.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "For her performance as the drug-addicted teenager Rue Bennett in the HBO drama series Euphoria (2019–2026), Zendaya was nominated for three Primetime Emmy Awards for"
+      "1": "Dune: Part Three is directed by Denis Villeneuve and written by Villeneuve and Brian K. Vaughan, based on the novel Dune Messiah by Frank Herbert,"
+     }
+    },
+    {
+     "claim": "Dune Part Three features newcomers NakoaWolf Momoa and Ida Brooke.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The film stars Timothée Chalamet, Zendaya, Jason Momoa, Florence Pugh, Rebecca Ferguson, Isaach De Bankolé, with Charlotte Rampling, with Anya Taylor-Joy, and Robert Pattinson, and"
      }
     }
    ],
-   "images": [
-    "commons:File:Zendaya-byPhilipRomano.jpg"
-   ]
+   "images": []
   },
   {
-   "n": 30,
+   "n": 27,
    "topic": "UFC 333",
    "signal": "Wikipedia 224,691 views",
    "category": "Sport",
-   "what_is_new": "Alexander Volkanovski stopped Movsar Evloev inside two rounds at UFC 333 in Abu Dhabi to retain his featherweight belt.",
+   "what_is_new": "Alexander Volkanovski successfully defended his featherweight title against Movsar Evloev at UFC 333 on October 24, 2026.",
    "hooks": [
-    "Did Alexander Volkanovski make history at UFC 333?",
-    "Find out how Alexander Volkanovski won at UFC 333."
+    "Did Alexander Volkanovski make UFC history at UFC 333?",
+    "How did Petr Yan defend his bantamweight title in Abu Dhabi?",
+    "Watch how Lone'er Kavanagh stunned Ramazan Temirov with a first-round finish!"
    ],
    "sources": [
     [
@@ -205,7 +319,7 @@
    ],
    "verified": [
     {
-     "claim": "Alexander Volkanovski defeated Movsar Evloev inside two rounds at UFC 333 in Abu Dhabi.",
+     "claim": "Alexander Volkanovski defeated Movsar Evloev at UFC 333 in Abu Dhabi.",
      "sources": [
       1,
       3,
@@ -213,137 +327,233 @@
      ],
      "evidence": {
       "1": "Alexander Volkanovski strengthened his claim as the greatest featherweight of all time as he defeated Movsar Evloev inside two rounds at UFC 333 in Abu",
-      "3": "On Saturday (Oct. 24), UFC 333 takes place at Etihad Arena in Abu Dhabi, United Arab Emirates, with a start time of 10 a.m. ET/7",
+      "3": "After UFC 332 in Salt Lake City, the UFC heads to the UAE for UFC 333. Two prime fighters face off in the championship main",
       "4": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
      }
     },
     {
-     "claim": "UFC 333 was staged at Etihad Arena in Abu Dhabi, United Arab Emirates, on 24 October 2026.",
+     "claim": "Petr Yan defeated Merab Dvalishvili in the co-main event to defend his bantamweight title.",
      "sources": [
+      1,
       3,
       4
      ],
      "evidence": {
-      "3": "On Saturday (Oct. 24), UFC 333 takes place at Etihad Arena in Abu Dhabi, United Arab Emirates, with a start time of 10 a.m. ET/7",
-      "4": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
+      "1": "In the co-main event, Russia's Petr Yan defeated Georgian Merab Dvalishvili in a breathtaking trilogy fight to make a successful first defence of his bantamweight",
+      "3": "And in the co-main event, Russian Petr Yan (20-5-0) takes on Georgian Merab Dvalishvili (21-5-0) for Yan’s bantamweight championship in a title bout.",
+      "4": "A UFC Bantamweight Championship trilogy bout between reigning two-time champion Petr Yan and former champion Merab Dvalishvili took place as the co-main event.[4]"
      }
     },
     {
-     "claim": "Alexander Volkanovski defended his UFC featherweight championship against Movsar Evloev in the main event of UFC 333.",
+     "claim": "UFC 333 took place on October 24, 2026, at the Etihad Arena in Abu Dhabi, United Arab Emirates.",
      "sources": [
-      2,
+      1,
       3,
-      4
-     ],
-     "evidence": {
-      "2": "UFC 333 is officially underway, but fans still have time to catch the main event: the Featherweight Championship bout between Alexander Volkanovski and Movsar Evloev,",
-      "3": "Two prime fighters face off in the championship main event, as Australian fighter Alexander Volkanovski (28-4-0) defends his featherweight title against Russian Movsar Evloev (20-0-0).",
-      "4": "A UFC Featherweight Championship bout between reigning two-time champion Alexander Volkanovski and undefeated contender Movsar Evloev headlined the event.[3]"
-     }
-    },
-    {
-     "claim": "Alexander Volkanovski stopped Movsar Evloev in the second round at UFC 333.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Alexander Volkanovski strengthened his claim as the greatest featherweight of all time as he defeated Movsar Evloev inside two rounds at UFC 333 in Abu",
-      "4": "Performance of the Night: Alexander Volkanovski and Lone'er Kavanagh"
-     }
-    },
-    {
-     "claim": "Alexander Volkanovski became the first opponent to defeat Movsar Evloev.",
-     "sources": [
-      1,
       4
      ],
      "evidence": {
       "1": "The 38-year-old became the first opponent to defeat Russian Evloev, unleashing a lethal ground-and-pound combination to earn a stoppage victory in the final seconds of",
-      "4": "A UFC Featherweight Championship bout between reigning two-time champion Alexander Volkanovski and undefeated contender Movsar Evloev headlined the event.[3]"
+      "3": "On Saturday (Oct. 24), UFC 333 takes place at Etihad Arena in Abu Dhabi, United Arab Emirates, with a start time of 10 a.m. ET/7",
+      "4": "UFC 333: Volkanovski vs. Evloev was a mixed martial arts event produced by the Ultimate Fighting Championship that took place on October 24, 2026, at"
      }
     },
     {
-     "claim": "Lone'er Kavanagh fought Ramazan Temirov on the UFC 333 fight card.",
+     "claim": "Lone'er Kavanagh secured a first-round stoppage win against Ramazan Temirov.",
      "sources": [
       1,
-      3
+      3,
+      4
      ],
      "evidence": {
       "1": "A little over three months after losing to Brandon Royval, the 27-year-old Briton bounced back by handing Ramazan Temirov the first defeat of his UFC",
-      "3": "Check out entire UFC 333 fight card below: Main Card, 2 p.m. ET/11 a.m. PT - Featherweight: Alexander Volkanovski (champion) vs. Movsar Evloev; Main Event,"
+      "3": "- Flyweight: Lone’er Kavanagh vs. Ramazan Temirov",
+      "4": "- Performance of the Night: Alexander Volkanovski and Lone'er Kavanagh"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 32,
+   "topic": "Windows XP",
+   "signal": "On this day in 2001, 25 years ago (Wikipedia)",
+   "category": "Tech",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Windows XP was released in 2001?"
+   ],
+   "sources": [
+    [
+     "Microsoft’s Windows XP Crocs are no joke",
+     "https://www.theverge.com/microsoft/717965/microsoft-crocs-windows-xp-bliss-wallpaper-theme",
+     "The Verge",
+     "2025-08-05"
+    ],
+    [
+     "Windows XP",
+     "https://en.wikipedia.org/wiki/Windows_XP",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Windows XP’s default wallpaper is the Bliss image, a photograph of a landscape.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The photograph of the rolling hills and blue skies of California was initially a stock image before Microsoft acquired the rights and used it as",
+      "2": "The default wallpaper, Bliss, is a photo of a landscape in the Napa Vall"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Alexander Volkanovski became the first UFC featherweight to win nine title fights.",
+     "claim": "Windows XP was released to manufacturing on August 24, 2001, and later to retail on October 25 that year.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It was released to manufacturing on August 24, 2001, and later to retail on October 25 that year."
+     }
+    },
+    {
+     "claim": "Microsoft created limited edition Windows XP‑themed Crocs.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "With his success, the Australian made history by becoming the first UFC featherweight to win nine title fights, surpassing Brazilian Jose Aldo's record of eight."
+      "1": "Multiple employees told me that Microsoft has created limited edition Windows XP-themed Crocs."
+     }
+    },
+    {
+     "claim": "The Windows XP Crocs include a Clippy shoe charm.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "They even come with a Clippy shoe charm if the Bliss wallpaper on your feet wasn’t enough nostalgia."
+     }
+    },
+    {
+     "claim": "The Crocs are priced at $80 and include a six‑pack of Microsoft Jibbitz charms.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The $80 shoes include a six-pack of Microsoft Jibbitz, with nostalgic options like the original MSN logo, the Internet Explorer icon, Clippy, and a mouse"
+     }
+    },
+    {
+     "claim": "Windows XP was released to manufacturing on August 24 2001 and to retail on October 25 2001.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It was released to manufacturing on August 24, 2001, and later to retail on October 25 that year."
+     }
+    },
+    {
+     "claim": "Windows XP was developed under the codename Whistler after merging the Neptune and Odyssey projects.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "However, in January 2000, both projects were scrapped in favor of a single OS codenamed “Whistler”, which would serve as a single platform for both"
+     }
+    },
+    {
+     "claim": "Mainstream support for Windows XP ended on April 14 2009 and extended support ended on April 8 2014.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Mainstream support for Windows XP ended on April 14, 2009, and extended support ended on April 8, 2014."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 9,
-   "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
+   "n": 36,
+   "topic": "Mortimer and Whitehouse: Gone Fishing",
+   "signal": "TVmaze GB: season premiere tonight, 06:00",
    "category": "Entertainment",
-   "what_is_new": "On 24 October 2026, guides were published highlighting non-scary video games and spooky night sky targets for the Halloween season.",
+   "what_is_new": "Series 9 of Mortimer and Whitehouse: Gone Fishing premieres today on BBC iPlayer and BBC Two.",
    "hooks": [
-    "Halloween: The Game launched on September 8, 2026!"
+    "Discover what happens in the brand new series of Gone Fishing today.",
+    "Sad news for fans as beloved dog Ted makes his final appearance.",
+    "From humble beginnings in 2018 to a massive ninth series today."
    ],
    "sources": [
     [
-     "The 5 least-scary scary games for people who are scared of scary games",
-     "https://www.polygon.com/best-not-scary-horror-games/",
-     "Polygon",
-     "2026-10-24"
+     "Mortimer & Whitehouse: Gone Fishing returns for a new series and one last fish with Ted - “The great thing about Ted, really, is he didn't g",
+     "https://www.bbc.co.uk/mediacentre/mediapacks/mortimer-and-whitehouse-gone-fishing",
+     "BBC",
+     "2026-10-20"
     ],
     [
-     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
-     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
-     "Space.com",
-     "2026-10-24"
-    ],
-    [
-     "Halloween 2026",
-     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
+     "Mortimer and Whitehouse: Gone Fishing",
+     "https://en.wikipedia.org/wiki/Mortimer_and_Whitehouse:_Gone_Fishing",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Mortimer and Whitehouse Gone Fishing returns for a ninth series from 9pm on Sunday 25 October on BBC iPlayer and BBC Two.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Mortimer & Whitehouse: Gone Fishing returns for a ninth series from 9pm on Sunday 25 October on BBC iPlayer and BBC Two.",
+      "2": "Series 9 series will premiere on 25 October 2026."
+     }
+    },
+    {
+     "claim": "Ted the Patterdale Terrier died in April 2026 before his final appearance in series 9 was aired.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It is very sad, but it is lovely that we've got an episode left where people can reflect on his presence and his attitude.",
+      "2": "Ted died in April 2026, before his final appearance in series 9 was aired."
+     }
+    },
+    {
+     "claim": "Ted was introduced to the show in season 3.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Interview with Bob Mortimer and Paul Whitehouse",
+      "2": "In season 3, Ted the Patterdale Terrier was introduced in the show, and has been featured in most episodes since."
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Halloween: The Game was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series S.",
+     "claim": "The series was first broadcast on BBC Two on 20 June 2018.",
      "sources": [
-      3
+      2
      ],
      "evidence": {
-      "3": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
+      "2": "The series was first broadcast on BBC Two on 20 June 2018 and has been recommissioned every year since."
      }
     },
     {
-     "claim": "Luigi's Mansion 3 is one of two video games in history that includes the character Gooigi.",
+     "claim": "In 2015 Mortimer underwent emergency triple heart bypass surgery.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "Luigi’s Mansion 3 is also one of two games in history to feature Gooigi, an aptly-named Luigi clone made of green goo."
-     }
-    },
-    {
-     "claim": "Halloween: The Game was launched on 8 September 2026 for PlayStation 5, Windows, and Xbox Series X and Series S.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
+      "2": "In 2015, Mortimer underwent emergency triple heart bypass surgery."
      }
     }
    ],

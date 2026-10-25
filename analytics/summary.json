@@ -1,15 +1,15 @@
 {
  "updated": "2026-10-25T08:38+00:00",
- "mode": "hourly",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-24T19:10+00:00",
+ "full_updated": "2026-10-25T08:38+00:00",
  "youtube": {
   "subscribers": 12,
   "public_shorts": 147,
-  "views_all_time": 26530,
+  "views_all_time": 26545,
   "views_last_90_days": 5793,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 8628,
+  "views_last_90_days_estimate": 8633,
   "analytics_last_day": "2026-10-22"
  },
  "instagram": {
@@ -39,8 +39,5 @@
    "watch_hours_needed_365_days": 8000,
    "watch_hours_365d": null
   }
- },
- "audience_errors": [
-  "Tech countries: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
- ]
+ }
 }

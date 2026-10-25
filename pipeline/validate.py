@@ -267,6 +267,11 @@ def _check(b, path=None):
         early = " ".join([title, m.get("summary", "")] + [bt.get("say", "") for bt in beats[:2]])
         neg = sorted({m.group(0).lower() for m in NEGATIVE_ES.finditer(early)} if es else {h.lower() for h in NEGATIVE.findall(early)})
         if neg: e.append(f"negative framing of a real person (only in fiction): {neg}")
+    # 25 October, from the data: date, quote and cards graphics lose viewers fastest (one fixing round, never an error), and a
+    # hook over 12 words trails (10 or fewer: 79 median views against 58)
+    slow = sorted({str((bt.get("visual") or {}).get("type")) for bt in beats if (bt.get("visual") or {}).get("type") in ("date", "quote", "cards")})
+    if slow: w.append(f"graphics that lose viewers: {slow}: say it in the narration over a picture instead")
+    if len(str(beats[0].get("say", "")).split()) > 12 if beats else False: w.append("hook over 12 words: 10 or fewer does better")
     watch = sorted({h.lower() for h in WATCH.findall(text)})
     if watch: w.append(f"check these words are fine in context: {watch}")
     return e, w

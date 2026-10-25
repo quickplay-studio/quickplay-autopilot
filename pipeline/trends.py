@@ -1,6 +1,6 @@
 """Daily trend shortlist for the script writer, from free sources. Writes trends/latest.json and trends/<date>.json.
 
-Sources: Google Trends daily searches (GB, US, AU, CA, IE), YouTube's most-popular charts (GB, US: all, gaming, music,
+Sources: Google Trends daily searches (GB, US, AU, CA, IE, IN), YouTube's most-popular charts (GB, US: all, gaming, music,
 sport, entertainment, science and tech), Google News top stories (UK: entertainment, sport, technology, science),
 English Wikipedia's most-read pages, and this channel's own last 7 days. (Reddit refuses GitHub's servers, so it isn't used.)
 Every source is optional: one that fails is noted and the rest still run. Kept small on purpose: titles and numbers
@@ -123,7 +123,8 @@ def own_channel():
 def main():
     import youtube as Y
     data = {"date": str(dt.date.today()),
-            "google_trends": {**{g: google_trends(g, 20) for g in ("GB", "US")}, **{g: google_trends(g, 8) for g in ("AU", "CA", "IE")}},
+            # IN added 25 October: India is 10% of views and 39% of Film's (the hub's regions), so its daily searches join the feed
+            "google_trends": {**{g: google_trends(g, 20) for g in ("GB", "US")}, **{g: google_trends(g, 8) for g in ("AU", "CA", "IE", "IN")}},
             "google_news_uk": google_news(), "wikipedia_top": wikipedia_top()}
     data["launches"] = launches()
     fb = football()

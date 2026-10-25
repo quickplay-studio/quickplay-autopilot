@@ -53,6 +53,7 @@ cars and history. Every rule must hold.
   get about twice the views here). Open with a question or a twist only when the style line below asks for one. Never
   "X is back", never "Discover", "Did you know", "Learn", "Here's how", "Today we", "Let's look" or any slow intro. Put
   "impact": true on the hook and on the payoff beat.
+- The hook (beat 1) is 10 words or fewer (25 October: hooks of 10 words or fewer get 79 median views against 58).
 - 5 to 9 beats, 70 to 110 words of narration in total (count them; a length in the style line below sets its own range),
   one or two sentences per beat (a longer Short, when the style note below asks for one, keeps every beat a new surprise
   and saves the wildest for last).
@@ -74,9 +75,10 @@ cars and history. Every rule must hold.
   start one with "nasa:" ("nasa:earth from orbit") to use NASA's own footage. They are not shots: they never count towards
   the 1 in 5 stock limit and are never mentioned in the narration.
 - Graphics: {"type": "none"} or one of: title {kicker, lines[], highlight[indexes]}, stat {value, label, sub},
-  cards {items[{icon, t, s}]}, quote {text, by}, date {month, day, weekday, label, sub},
   versus {items: [2 x {label, value, sub}]}, timeline {items[{y, t}]}, bars {items[{label, value, w 0 to 1}]}.
-  Icons are lucide icon names.
+  Never date, quote or cards graphics (25 October: viewers leave fastest while they are on screen, 5 to 6.5 points a
+  second against 0.6 for a timeline and 1.2 for a versus): say the date or the quote in the narration over a picture.
+  Prefer {"type": "none"} with a strong picture; a title graphic only on the hook beat. Icons are lucide icon names.
 - meta.title: under 50 characters (count them). The exact name people search comes first (person, game, film, show,
   team), then, as the style line's title answer says, either the news the first line says ("Tate McRae hits number one
   in Australia") or hold the answer back: promise the detail without giving it away, as the Shorts that break out from

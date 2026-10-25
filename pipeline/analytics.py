@@ -908,7 +908,8 @@ def main():
         try: volume_test()
         except Exception as e: print("volume test:", str(e)[:150])
         write_audience(aud)
-        reg_rows, aud["_regions"] = regions(rows, aud)
+        if "_region_rows" not in aud: reg_rows, aud["_regions"] = regions(rows, aud)
+        else: reg_rows = aud["_region_rows"]
         write_csv(OUT / "regions.csv", reg_rows, ["kind", "country", "views", "share_pct", "avg_viewed_pct", "subs_gained", "shorts_seen",
                                                   "best_category", "best_format", "best_hook", "best_length", "top_short",
                                                   "dimension", "value", "shorts", "views_per_short", "lift"])
@@ -927,6 +928,9 @@ def main():
                   "tied to it." for b in hot[:2]]
         try: tests_lines = test_progress(rows, table)
         except Exception as e: tests_lines = []; print("test progress:", str(e)[:150])
+        if "_region_rows" not in aud:              # the regions table (below) feeds the audience recipe: computed once, here first
+            try: reg_rows, aud["_regions"] = regions(rows, aud); aud["_region_rows"] = reg_rows
+            except Exception as e: print("regions:", str(e)[:120])
         (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + tests_lines + audience_recipe(aud), aud))
         try: import social; social.ig_report()       # status/instagram.json and insights.md's Instagram section (social.py, 25 October)
         except Exception as e: print("instagram section:", str(e)[:150])
@@ -1315,6 +1319,18 @@ def audience_recipe(aud):
     if us >= gb + 0.15:
         out.append(f"US viewers are {round(100 * us)}% (UK {round(100 * gb)}%): pick stories that matter in both, explain UK-only "
                    "references in a few words, and keep UK spelling.")
+    # 25 October: a country past 8% of views with a category it watches far more than the rest gets a line, so the writer
+    # keeps that category's stories open to it (India: 10% of views, 3.3x on Film, from the regions table)
+    try:
+        regs = (aud or {}).get("_region_rows") or []
+        share = {r.get("country"): float(r.get("share_pct") or 0) for r in regs if r.get("kind") == "country"}
+        for r in regs:
+            if r.get("kind") == "fit" and str(r.get("dimension", "")).lower() == "category" and share.get(r.get("country"), 0) >= 8 \
+                    and float(r.get("lift") or 0) >= 2.5 and int(r.get("shorts") or 0) >= 10:
+                names = {"IN": "India", "GB": "the UK", "US": "the US", "CA": "Canada", "AU": "Australia", "PH": "the Philippines", "ID": "Indonesia", "DE": "Germany"}
+                out.append(f"{names.get(r['country'], r['country'])} is {share[r['country']]:.0f}% of views and watches {r['value']} {float(r['lift']):.1f}x more than "
+                           f"the rest: keep {r['value']} open to stories from there (family friendly, names and titles as the sources write them).")
+    except Exception: pass
     return out
 
 def insights(rows, s, table=None, recipe=None, aud=None):

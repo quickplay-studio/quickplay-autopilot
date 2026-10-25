@@ -655,6 +655,40 @@
    "model": "gemini-flash-latest",
    "peak": 1065.0,
    "question": "Would you keep the peace or take the shot?"
+  },
+  {
+   "id": "mrbeast-cod-29",
+   "start": 34.7,
+   "end": 60.4,
+   "hook": "THOUSANDS OF HOURS ON THE LINE",
+   "label": "",
+   "title": "MrBeast Call of Duty Childhood Challenge",
+   "why": "MrBeast hypes up his childhood gaming skills before realizing how humiliating defeat would be.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 54.0,
+   "score": 6.0,
+   "take_intro": "Putting your childhood gaming reputation on the line always brings immense pressure.",
+   "take_outro": "Losing after boasting about childhood hours is everyone's worst gaming nightmare.",
+   "take_style": "argument",
+   "question": "What childhood game would you bet everything on?"
+  },
+  {
+   "id": "mrbeast-cod-30",
+   "start": 932.7,
+   "end": 966.4,
+   "hook": "I'M TRYING TO BUY MY MOM A HOUSE",
+   "label": "",
+   "title": "MrBeast Gaming Call of Duty Life Changing Money",
+   "why": "The emotional stakes of buying a parent a house contrast sharply with intense gameplay.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 955.0,
+   "score": 6.0,
+   "take_intro": "When real money is on the line, every encounter feels completely personal.",
+   "take_outro": "Clutching up under that kind of life-changing pressure takes serious nerve.",
+   "take_style": "argument",
+   "question": "What is the first thing you would buy with this money?"
   }
  ]
 }

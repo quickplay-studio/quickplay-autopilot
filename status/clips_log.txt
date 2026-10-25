@@ -70,3 +70,16 @@ scout: Survive the Horde [ROBLOX]: fits, heat 0.0: It is a family-friendly Roblo
 scout: RoSandBox [Roblox]: fits, heat 0.0: It is a family-friendly Roblox clipping campaign that allows YouTube Shorts, provides foot
 scout: Double Coverage Podcast: fits, heat 0.0: It is a clipping campaign allowing YouTube Shorts with provided footage and remaining budg
 scout: 23 of 40 new campaigns fit
+=== run 2026-10-25 09:25 UTC, schedule '0 9 * * *', request ''
+speed-expedia: page: $427 remaining; Skip to content Discover Solutions Resources Sign in Create Account Back Reach $8,000 ISho
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+speed-expedia: 1 of 4 moments planned (gemini-3.7-flash), 19 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 3}
+mrbeast-cod: 2 of 4 moments planned (gemini-3.7-flash), 30 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 1}
+tdr-stinkyasher: 0 of 8 moments planned (gemini-3.6-flash), 24 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 8}; first: {"start": 124, "end": 150, "hook": "STINKYASHER EXPOSES SECRET TOTAL DRAMA ALLIANCES", "label": "", "title": "StinkyAsher Catches Total Drama Roblox Cheaters", "peak": 146, "question": "Who is your fa
+tdr-mitch: 4 of 5 moments planned (gemini-3.6-flash), 25 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 1}
+tdr-flamingo: 1 of 5 moments planned (gemini-3.6-flash), 26 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 2, "profanity": 2}
+tdr-jenny: 3 of 8 moments planned (gemini-3.6-flash), 23 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 5}
+valorant-microdrama: 0 parts planned, 4 in all
+valorant-champs: a long transcript, planning minutes 45 to 87 of 144
+valorant-champs: 0 of 1 moments planned (gemini-3.6-flash), 14 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}; first: {"start": 4735, "end": 4765, "hook": "WOULD JOSH OR BEA BE A BETTER PARENT?", "label": "Josh vs Bea", "title": "VALORANT Champs 2026: Josh vs Bea Parent Debate", "peak": 4758, "question": "Which podca
+kevin-langue-ghost: 4 of 8 moments planned (gemini-3.6-flash), 21 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 3}

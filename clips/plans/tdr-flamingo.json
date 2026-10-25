@@ -703,6 +703,23 @@
    "publish_at": "2026-10-24T18:00:00Z",
    "mode": "batch",
    "comment": "UgwQQQIggVQHhVqo9Nt4AaABAg"
+  },
+  {
+   "id": "tdr-flamingo-26",
+   "start": 1420.7,
+   "end": 1455.4,
+   "hook": "FLAMINGO GOES FULL SPEED IN EGG HUNT",
+   "label": "",
+   "title": "Flamingo Roblox Total Drama Egg Hunt Minigame",
+   "why": "Fast-paced gameplay action transitions into sudden frantic missed jump reactions.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 1443.0,
+   "score": 6.0,
+   "take_intro": "Focusing under pressure separates standard Roblox competitors from the true game champions.",
+   "take_outro": "High-speed gameplay keeps the championship alive when elimination hangs in the balance. Did he win?",
+   "take_style": "argument",
+   "question": "How fast do you usually finish this Roblox egg challenge?"
   }
  ]
 }

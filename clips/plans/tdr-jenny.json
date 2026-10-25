@@ -506,6 +506,57 @@
    "take_intro": "Jenny reflects on being targeted in the second tournament game.",
    "take_outro": "She handled that loss like a champ! Who would you target first?",
    "question": "Was it fair that Jenny Hoyos got targeted in game two?"
+  },
+  {
+   "id": "tdr-jenny-21",
+   "start": 3864.7,
+   "end": 3934.4,
+   "hook": "JENNY HOYOS GOES FOR ROBLOX VICTORY",
+   "label": "",
+   "title": "Jenny Hoyos Final Battle in Roblox Total Drama",
+   "why": "The instant lock-in grab and the tense ladder climbing payoff.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 3910.0,
+   "score": 7.0,
+   "take_intro": "Focusing under pressure is the ultimate test of a Roblox creator.",
+   "take_outro": "Staying calm in high-stakes Roblox rounds takes practice. Did she make it look easy?",
+   "take_style": "argument",
+   "question": "What is your favourite moment from this Roblox stream?"
+  },
+  {
+   "id": "tdr-jenny-22",
+   "start": 4518.7,
+   "end": 4592.4,
+   "hook": "JENNY HOYOS GETS ATTACKED IN ROBLOX",
+   "label": "",
+   "title": "Jenny Hoyos Under Fire in Roblox Total Drama",
+   "why": "Surprise gunfire sound effect grab and hilarious panic reaction payoff.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 4553.0,
+   "score": 6.0,
+   "take_intro": "Unexpected attacks in Roblox always reveal who keeps their composure under pressure.",
+   "take_outro": "Quick dodging saved her from getting eliminated early. Would you have survived that?",
+   "take_style": "argument",
+   "question": "Who was your favourite player in the stream tournament?"
+  },
+  {
+   "id": "tdr-jenny-23",
+   "start": 251.7,
+   "end": 297.4,
+   "hook": "JENNY HOYOS ENTERS TOTAL DRAMA TOURNAMENT",
+   "label": "",
+   "title": "Jenny Hoyos Competes in Roblox Total Drama",
+   "why": "Host announcement grab and hype reaction payoff.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 288.0,
+   "score": 6.0,
+   "take_intro": "Starting a massive creator stream tournament requires instant high energy from hosts.",
+   "take_outro": "Big tournament announcements set high expectations. Do you think she can win it all?",
+   "take_style": "argument",
+   "question": "Which Roblox total drama game mode is your favourite?"
   }
  ]
 }

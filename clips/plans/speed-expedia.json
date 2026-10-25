@@ -466,6 +466,23 @@
    "mode": "batch",
    "promoted": "2026-10-24T09:25+00:00",
    "comment": "Ugz9EcWHNGuvzNCD9yB4AaABAg"
+  },
+  {
+   "id": "speed-expedia-19",
+   "start": 652.7,
+   "end": 685.4,
+   "hook": "WHERE IN AMERICA IS THIS?",
+   "label": "Sedona, USA",
+   "title": "IShowSpeed learns where Sedona is located",
+   "why": "Speed reads the glowing destination description but gets stumped asking what state Sedona is in.",
+   "planned": "2026-10-25T09:25+00:00",
+   "model": "gemini-3.7-flash",
+   "peak": 680.0,
+   "score": 6.0,
+   "take_intro": "Geography trivia always exposes streamers who travel across the world constantly.",
+   "take_outro": "Knowing the state matters before booking the flight. Have you visited Arizona?",
+   "take_style": "argument",
+   "question": "Did you know which state Sedona was in without searching?"
   }
  ]
 }

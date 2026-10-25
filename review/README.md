@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 22:33): 16 of 1,000 subscribers · 9,640 of 10 million Shorts views in 90 days · 4,770 views in the last 24 hours (about 111,004 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 23:32): 16 of 1,000 subscribers · 9,696 of 10 million Shorts views in 90 days · 4,845 views in the last 24 hours (about 111,003 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Sun 25 Oct | 17 public, 1 scheduled | 4 | 1 | ✅ done |
+| Sun 25 Oct | 18 public | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -81,7 +81,7 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## On the channel (latest first)
 
 ### Sun 25 Oct 23:30 · BioWare: fans petition after EA closure 🎮
-scheduled · 35 s · music: duty-calls · [script](../boards/done/QD-176.json) · [YouTube](https://youtube.com/shorts/gPtD8qBcINI)
+private · 35 s · music: duty-calls · [script](../boards/done/QD-176.json) · [YouTube](https://youtube.com/shorts/gPtD8qBcINI)
 
 ![QD-176](QD-176.jpg)
 

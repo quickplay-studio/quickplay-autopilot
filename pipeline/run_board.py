@@ -123,11 +123,19 @@ def localize(meta, desc):
 LABELS = {"en": ("Sources:", "Visuals:", "Music", "Independent channel, not affiliated with the companies or people featured. Facts checked against the sources above."),
           "es": ("Fuentes:", "Imágenes:", "Música", "Canal independiente, sin relación con las empresas ni las personas que aparecen. Datos comprobados con las fuentes indicadas.")}
 
+def series_lines(sb):
+    """A Short of a numbered series says so in its description, with the playlist link once there is one (pipeline/series.py,
+    25 October); [] for any other Short, and never a reason to fail a render."""
+    try:
+        import series
+        return series.description_lines(sb)
+    except Exception: return []
+
 
 def description(sb, credits, track):
     m = sb.get("meta", {})
     src_l, vis_l, music_l, note_l = LABELS["es" if sb.get("language") == "es" else "en"]       # the Spanish mirror's description is Spanish
-    out = [m.get("summary", "").strip(), "", src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    out = [m.get("summary", "").strip(), ""] + series_lines(sb) + [src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")

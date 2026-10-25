@@ -196,7 +196,7 @@ def _check(b, path=None):
     # the title emoji test (writer.py TITLE_TESTS, 24 October): a "none" title carries no emoji, the rest end with one
     arm = str((b.get("test") or {}).get("title_emoji") or "") if isinstance(b.get("test"), dict) else ""
     if not 1 <= len(title) <= 70: e.append("meta.title: 1 to 70 characters")
-    elif len(title) > 50 and not b.get("franchise"):      # one limit, 50 (the series prefix is added after the writer)
+    elif len(title) > 50 and not (b.get("franchise") or b.get("series_name")):      # one limit, 50 (the series prefix is added after the writer)
         w.append(f"meta.title: {len(title)} characters: under 50, the searched name still first")
     if arm == "none":
         if EMOJI.search(title): e.append("meta.title: no emoji (this Short tests a title without one)")

@@ -7,6 +7,8 @@ os.chdir(REPO_DIR)
 sys.path.insert(0, "pipeline")
 os.environ["WRITE_DRY"] = "1"
 import writer as W, factpack as F, validate as V
+import series as SER
+SER.suggest = lambda *a, **k: []       # the search-led step (series.py) asks YouTube's suggestions: no network in a test
 
 print("kinds for 12:", collections.Counter(W.pick_kinds(12)))
 ex = json.loads(W.example())

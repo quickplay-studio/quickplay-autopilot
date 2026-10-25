@@ -105,6 +105,7 @@ TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", 
 # The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
 # in features(); anything else a board carries (length "as written", when a long arm came back at a normal length) is
 # scored on what the Short did
+SERIES_PREFIX = re.compile(r"^\s*[^#?:|]{2,40}\s#\d+(?:\s+of\s+\d+)?\s*[:|]\s*")      # a series or franchise name and number leading a title (series.py, writer.py)
 HOOK_ARMS = ("statement", "question", "number", "superlative", "twist")
 LENGTH_ARMS = ("under 25 s", "25 to 34 s", "35 to 44 s", "about 60 s", "about 2 min")
 # The number arm's own definition: the hook opens on a number (its first word, after at most "over", "nearly", "just" and the
@@ -181,6 +182,8 @@ def features(r):
     rs = _f(r.get("real_share"))
     out["pictures"] = "" if rs is None else ("mostly real pictures" if rs >= 0.5 else "mostly stock footage")
     t = r.get("title") or ""
+    if r.get("series_name") or r.get("franchise") in ("named", "series"):       # "Science Explained #12: Why ...": the prefix's number is no title style
+        t = SERIES_PREFIX.sub("", t, count=1)
     out["title_style"] = "question" if "?" in t else ("number in title" if re.search(r"\d", t) else "statement") if t else ""
     out["follow_line"] = r.get("follow_line") or ""
     for k in TESTED: out[k] = r.get(k) or ""

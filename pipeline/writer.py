@@ -121,6 +121,9 @@ def about(b):
     """What a board covered: its title, its title with tags and hashtags, and its source pages."""
     m = b.get("meta") or {}
     title = str(m.get("title", ""))
+    if b.get("series_name"):        # "Science Explained #12: Why ..." covers "Why ...": the series prefix says nothing about the subject
+        try: title = _series().strip_name(title, [b.get("series_name"), b.get("series_key")])
+        except Exception: pass
     text = " ".join([title] + [str(t) for t in (m.get("tags") or []) + (m.get("hashtags") or [])])
     return title, text, {s[1] for s in m.get("sources") or [] if isinstance(s, list) and len(s) > 1}
 
@@ -481,7 +484,8 @@ def source_of(signal):
     s = str(signal or "").lower()
     # the free sources added on 24 October (trend_sources.py) come before the families their signals also name ("On this
     # day ... (Wikipedia)", "Apple albums"), and Apple Music before "music" (its chart topics were labelled YouTube music)
-    for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"), ("evergreen", "Evergreen"),
+    for key, name in (("watchlist", "Watchlist"), ("request", "Requests"), ("trending:", "Trend-tied"), ("follow-up", "Follow-up"),
+                      ("search-led", "Search-led"), ("evergreen", "Evergreen"),
                       ("on this day", "On this day"), ("in the news", "Wikipedia In the news"), ("tvmaze", "TVmaze"), ("steam", "Steam"),
                       ("app store", "App Store"), ("apple albums", "Apple albums"), ("bluesky", "Bluesky"), ("formula 1", "Formula 1"), ("apify", "Apify"),
                       ("apple", "Apple Music"), ("music", "YouTube music"), ("youtube", "YouTube"),
@@ -755,6 +759,118 @@ def evergreen_packs(kinds, seen, trending=()):
              "sources": [[title, url, "Wikipedia", ""]], "verified": [], "one_source": single,
              "images": factpack.image_ideas([(src, txt, img)])}
         if not covered(p, seen): packs.append(p); want[kind] -= 1
+    return packs
+
+
+# ---------------- search-led evergreen (pipeline/series.py, 25 October) ----------------
+# Charlie approved search-led evergreen Shorts as named, numbered series: YouTube search brings 24% of our views, so
+# evergreen_search_per_day (2) Shorts a day take their subjects from what people search instead of from a model's idea.
+# The series fields below are set by the pipeline itself (series.name_board); a model that copied them from an example
+# board would number its own Short, so they are stripped like the rest of BOOKKEEPING.
+BOOKKEEPING = BOOKKEEPING + ("series_name", "series_no", "series_kind", "series_key", "series_of")
+
+SEARCH_PLAN = """You pick search-led evergreen YouTube Shorts for Quickplay Daily (family-friendly, UK English). Each answers a
+question people really type into YouTube, so it keeps earning views all year: not news, nothing about today. Below are real
+searches and subjects, each tagged with where it came from ("our search traffic" is what already finds us viewers). Pick the
+{n} best, best first, in these categories (strongest first): {cats}.
+- The idea is the question as people type it (Why, How, What, Who or Which, or "... explained"), about something famous that
+  one English Wikipedia article answers with facts, dates, numbers or records: a game, film, show, song, artist, team,
+  player, record, animal, food, car, place, invention or space mission.
+- A search that is only a name (a person, game or film) becomes the question about it that people ask most ("What is ...",
+  "Why is ... so popular", "How did ... start").
+- Relatable first: subjects most people in the UK and US know from their own lives, angles an ordinary person feels, never
+  business history, licensing deals or lore only fans know. Give each idea "appeal": 1 to 5 (5: nearly everyone knows and
+  cares) and offer only 4s and 5s.
+- Never politics, crime, health, money, adult themes, deaths or a person under 18. Skip any line that is not a real subject.
+Nothing on these recent Shorts: {recent}.
+
+THE SEARCHES
+{lines}
+
+Return {{"items": [{{"idea": "the question in a few words", "category": "Gaming, Film, Music, Sport, Tech, Science, Entertainment, Animals, Food, Cars or History", "wikipedia": "the exact article title", "appeal": 5, "from": the number of the line it came from}}]}}"""
+
+
+def _series():
+    """pipeline/series.py, imported when first needed (it needs no network and no model of its own)."""
+    import series
+    return series
+
+
+# The three hooks below are the only places main() and emit() touch the series code. None of them can fail a run: on any
+# error the Short is written exactly as it was before the series existed.
+def series_prepare(p, kind, tests, note, reserve):
+    """A Short that joins a numbered series leaves the franchise test and tells the model the name is added (series.prepare)."""
+    try: return _series().prepare(p, kind, tests, note, reserve)
+    except Exception as e: print("series:", str(e)[:120]); return tests, note
+
+
+def series_name(b, p, written, reserve):
+    """The board's series, number and titles once it is written (series.name_board)."""
+    try: return _series().name_board(b, p, written, reserve)
+    except Exception as e: print("series:", str(e)[:120]); return None
+
+
+def series_joins(p, kind, reserve=False):
+    """True when the pack's Short joins a numbered series: one Short, never a cliffhanger in parts (one number, one Short)."""
+    try: return bool(_series().series_for(p, kind, None, reserve))
+    except Exception: return False
+
+
+def search_led_run(day, run, cap, seen, turn):
+    """The search-led fact packs this run writes: series.search_due says how many, [] when none or on any error."""
+    try: return search_led_packs(_series().search_due(day, run, cap), seen, turn=turn)
+    except Exception as e: print("search-led:", str(e)[:200]); return []
+
+
+def search_led_packs(n, seen, latest=None, turn=0):
+    """`n` fact packs for evergreen Shorts whose subjects are what people search (series.candidates: our own search terms,
+    YouTube's suggestions for why does, what is, how did and explained in our categories, Google Trends related queries
+    and Wikipedia's On this day). One planning call picks the subjects and the Wikipedia article that answers each; each
+    article then becomes a pack the way evergreen_packs builds one, its quotes checked word for word (factpack.facts_from).
+    The signal says where the subject came from ("evergreen question (search-led: ...)"), so the data scores the topic
+    source "Search-led" against "Evergreen". [] when n is 0 or nothing could be built."""
+    if n <= 0 or factpack.STATE.get("spent"): return []
+    SER = _series()
+    if latest is None:
+        try: latest = json.loads((ROOT / "trends" / "latest.json").read_text())
+        except Exception: latest = {}
+    cands = SER.candidates(latest, turn)
+    if not cands: print("search-led: no searches found"); return []
+    paused, up = stopped().get("category", set()), boosts()
+    cats = [c for c in sorted(CATS, key=lambda c: -up.get(c, 0)) if up.get(c, 0) > STOP and c not in paused] or list(CATS)
+    sh = category_shares()
+    named = ", ".join(f"{c} (about {round(100 * sh[c])}% of the ideas)" if c in sh else c for c in cats)
+    recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
+    ans, _ = factpack.gemini(SEARCH_PLAN.format(n=n + 2, cats=named, recent=recent, lines=SER.lines_of(cands)), None,
+                             timeout=100, temperature=0.6)
+    items = ans.get("items") if isinstance(ans, dict) else None
+    packs = []
+    for it in items or []:
+        if len(packs) >= n or factpack.STATE.get("spent"): break
+        if not isinstance(it, dict): continue
+        q, title = str(it.get("idea") or "").strip(), str(it.get("wikipedia") or "").strip()
+        cat = str(it.get("category") or "").strip()
+        if not q or not title or cat in paused: continue
+        try:
+            if int(it.get("appeal") or 5) < 3: continue
+        except (TypeError, ValueError): pass
+        url = "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"))
+        try:
+            txt, img = factpack.page_text(url, wiki=True)
+            if len(txt) < 800: continue
+            got, _, single, _ = factpack.facts_from(EVERGREEN_FACTS.format(q=q, how=HOW["evergreen"], title=title, url=url, text=txt),
+                                                    {1: factpack.norm(txt)}, {1: "wikipedia"}, want=MIN_FACTS["evergreen"])
+        except Exception as e:
+            print("search-led:", title, str(e)[:120]); continue
+        if len(single) < MIN_FACTS["evergreen"]: print(f"search-led: {q}: only {len(single)} checked facts"); continue
+        try: where = cands[int(it.get("from")) - 1]["source"]
+        except (TypeError, ValueError, IndexError): where = "search"
+        src = {"outlet": "Wikipedia", "title": title, "url": url, "published": "", "kind": "wikipedia"}
+        p = {"topic": q, "kind": "evergreen", "signal": f"evergreen question (search-led: {where})", "category": cat if cat in CATS else "",
+             "what_is_new": "", "hooks": [factpack.undash(h) for h in (got or {}).get("hooks") or []][:3],
+             "sources": [[title, url, "Wikipedia", ""]], "verified": [], "one_source": single,
+             "images": factpack.image_ideas([(src, txt, img)])}
+        if not covered(p, seen): packs.append(p)
     return packs
 
 
@@ -1392,6 +1508,7 @@ def main():
         sid = f"QD-{state['n']:03d}"
         if tests is None: style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # the title emoji and title answer tests ride on every Short
+        tests, note = series_prepare(p, kind, tests, note, reserve)      # a Short of a numbered series leaves the franchise test (series.py)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
@@ -1434,8 +1551,9 @@ def main():
         if fol: b["follows"] = fol["short"]
         if reserve: b["reserve"] = True
         if series: b["series"] = series
-        tr = translations(b)
+        tr = translations(b)                          # from the plain title: the series name and number are added in English only
         if tr: b["meta"]["translations"] = tr
+        series_name(b, p, written, reserve)         # the numbered series: series_name, series_no and the titles (series.py)
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
         written.append(b); used.append(b.get("format", "")); state["n"] += 1
         if not reserve: DAY["boards"].append(b)
@@ -1451,7 +1569,7 @@ def main():
         base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
-        if parts < 2 or reserve or fol:
+        if parts < 2 or reserve or fol or series_joins(p, kind):       # a numbered series Short is one Short (series.py)
             if "series" in tests: tests["series"] = "single"
             return emit(p, base, kind, reserve, fol=fol, tests=tests)
         first, made = f"QD-{state['n']:03d}", []
@@ -1471,6 +1589,9 @@ def main():
     rank = lambda kp: (kp[0] - (200 - 20 * {"launch": 0, "surging": 1, "build-up": 2}.get((WATCH.get(watch_of(kp[1])) or {}).get("level"), 3) if watch_of(kp[1]) else 0)
                        - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
+    # the day's playbook angle (series.py) ranks one level step above the rest of its level, so the mini-series is written first
+    rank_base = rank
+    rank = lambda kp: rank_base(kp) - (20 if str(kp[1].get("signal", "")).startswith("watchlist") and series_joins(kp[1], "news") else 0)
     try:                                                     # the watchlist (pipeline/watch.py): its own places today
         import watch
         WATCH = {i["name"]: i for i in (watch.state().get("items") or [])}
@@ -1478,9 +1599,11 @@ def main():
     def watch_of(p):
         s = str(p.get("signal", ""))
         return next((n for n in WATCH if s.startswith(f"watchlist: {n} ")), None) if s.startswith("watchlist") else None
-    def watch_done(name):
+    def watch_done(name, playbook=False):
+        """Watch boards of an item today; a playbook angle (series.py) has its one place a day apart from the item's places."""
         return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
-                   if (board(f).get("watch") == name and board(f).get("created") == str(day))) + sum(1 for b in written if b.get("watch") == name)
+                   if (board(f).get("watch") == name and board(f).get("created") == str(day) and (board(f).get("series_kind") == "playbook") == playbook)
+                   ) + sum(1 for b in written if b.get("watch") == name and (b.get("series_kind") == "playbook") == playbook)
     # one cap across the watchlist (24 October: the calendar of big dates would ask for 22 places a day in GTA 6 week, more
     # than the day's Shorts): at most watch_share_max of the day's target goes to watch items, launch items first, then
     # surging, then build-up, so the day's own news and every category keep their room
@@ -1508,11 +1631,19 @@ def main():
     if firsts:
         order = sorted(topics, key=lambda kp: rank(kp) - (150 if id(kp[1]) in firsts else 0))
         print("category floors first:", sorted({q.get("category") for _, q in order if id(q) in firsts}))
+    # search-led evergreen (series.py): this run's share of evergreen_search_per_day, written first so the news below fills the
+    # places that are left; each is a numbered Short of its category's series
+    if not breaking and not late():
+        turn = day.toordinal() * 3 + {"evening": 0, "morning": 1, "afternoon": 2}.get(run, 1)
+        for p in search_led_run(day, run, cap, seen + [about(b) for b in written], turn):
+            if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+            emit_kind(p, "evergreen", explore=False)
     for k, (_, p) in enumerate(order):
         if len(written) >= cap or factpack.STATE.get("spent") or late(): break
         if p.get("_done"): continue                 # written already as an exploration Short
         wn = watch_of(p)
-        if wn and watch_done(wn) >= int(WATCH[wn].get("places", 1)): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
+        pb = bool(wn) and series_joins(p, "news")      # the day's playbook angle: its own place (one a day), still inside the day's watch cap
+        if wn and watch_done(wn, pb) >= (1 if pb else int(WATCH[wn].get("places", 1))): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
         if wn and watch_total() >= WATCH_CAP: print(f"watchlist: the day's {WATCH_CAP} watch places are filled:", p["topic"]); continue
         if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
             p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end

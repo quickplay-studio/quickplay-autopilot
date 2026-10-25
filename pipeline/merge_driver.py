@@ -25,7 +25,7 @@ Set in each Save step (.gitattributes names the paths):
   git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"
 Where the driver is not configured (Charlie's Mac), git ignores the attribute and merges as before.
 """
-import csv, io, json, pathlib, re, subprocess, sys
+import csv, io, json, re, subprocess, sys
 
 MISSING = object()
 CSV_KEYS = {"clips/submit.csv": (("clip", "platform"), False), "analytics/hourly.csv": (("hour_utc",), True)}

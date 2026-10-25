@@ -29,7 +29,7 @@ What follows from it (each part reads status/watch.json):
   a playlist of the event). topics_today() then offers the day's angle instead of the same first angles every day; they are
   watch topics, so the places above and watch_share_max still apply.
 """
-import csv, datetime as dt, json, pathlib, re, statistics, sys, urllib.parse
+import csv, datetime as dt, json, pathlib, re, statistics, urllib.parse
 import requests
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent

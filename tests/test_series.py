@@ -104,6 +104,7 @@ assert len(S.comment_text("q" * 600, SB, URL)) <= 500 and URL in S.comment_text(
 assert S.label({"series_name": "Ballon d'Or", "series_no": 2, "series_of": 5}) == "Ballon d'Or #2 of 5" and S.label(SB) == "Science Explained #12"
 nodash(*lines, c)
 import run_board as RB                                                       # the YouTube description (the render's)
+RB.long_link = lambda slot="": []          # the weekly video link reads live status/weekly-*.json (tested in test_explainer.py); keep this test offline
 track = {"title": "T", "artist": "A"}
 meta = {"summary": "A short answer.", "sources": [["Wikipedia", "https://en.wikipedia.org/wiki/Sky"]], "hashtags": ["#sky"]}
 desc = RB.description({**SB, "meta": meta}, [], track).split("\n")

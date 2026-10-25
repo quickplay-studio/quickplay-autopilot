@@ -163,6 +163,7 @@ def _check(b, path=None):
         say = (bt.get("say") or "").strip()
         n = len(say.split()); total += n
         if not say: e.append(f"beat {i}: say is empty")
+        elif n < 3: e.append(f"beat {i}: say is cut off ({say!r}): every beat needs a full sentence")     # QD-086 ended on "Because" and failed the clarity check after a render
         if "cap" in bt and len(str(bt["cap"]).split()) != n: e.append(f"beat {i}: cap needs the same number of words as say")
         v = bt.get("visual") or {"type": "none"}
         if v.get("type") not in VISUALS: e.append(f"beat {i}: visual type must be one of {sorted(VISUALS)}")

@@ -276,6 +276,7 @@ print("4 validate ok")
 
 # 5. the always-on pieces -----------------------------------------------------------------------------------------------------------
 import series as SE, run_board as RB, social as SO
+RB.long_link = lambda slot="": []          # the weekly video link reads live status/weekly-*.json (tested in test_explainer.py); keep this test offline
 c1 = SE.comment_text("Which planet would you visit?", N12, URL)
 assert c1.split("\n\n")[0] == cm and c1.endswith("\n\nWhich planet would you visit?") and len(c1) <= 500, c1
 c2 = SE.comment_text("Which one?", {"category": "Film"}, URL)

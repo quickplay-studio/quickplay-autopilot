@@ -5,7 +5,7 @@ and opened as a GitHub issue (label "weekly"), which the GitHub app shows on Cha
 Sources: analytics/shorts.csv, hourly.csv, daily.csv, drivers.csv, decisions.csv, changes.csv, summary.json; clips/stats.csv,
 campaigns.json, submit.csv, insights.json; the dated headings of docs/NEXT.md and docs/CLIPS.md (what was built).
 """
-import csv, datetime as dt, json, os, pathlib, re, statistics, subprocess, sys
+import csv, datetime as dt, json, os, pathlib, re, statistics, sys
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent

@@ -41,7 +41,7 @@ def main():
             rows.append(st)
     rows.sort(key=lambda s: s.get("id", ""))
     attention = [s for s in rows if s.get("state", "").startswith(("failed", "awaiting", "approved, waiting", "upload failed"))
-                 and not (s.get("flags") or [""])[0].startswith("reserve")]
+                 and not (s.get("flags") or [""])[0].startswith("reserve") and s.get("mode") != "dry"]     # a dry board waits by design
     if attention:
         print("needs attention:")
         for s in attention:

@@ -14,7 +14,7 @@ The compilation's description points to the latest explainer, and every Short li
   python pipeline/weekly.py --dry --ids A,B,C  builds from the given Shorts and saves the video as a draft release
                                                (weekly-test) instead of uploading
 """
-import argparse, csv, datetime as dt, io, json, os, pathlib, re, subprocess, sys, tempfile, textwrap, zipfile
+import argparse, csv, datetime as dt, io, json, os, pathlib, re, subprocess, sys, tempfile, zipfile
 from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent

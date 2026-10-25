@@ -14,7 +14,7 @@ siglip2  google/siglip2-base-patch16-224 (Apache-2.0, not gated; safetensors, no
 Files go to <models dir>/yunet and <models dir>/siglip2; render.yml and clips.yml keep them in the Actions cache. Nothing here
 ever fails the job: a failure prints a ::warning:: line and the feature stays off (exit 0).
 """
-import argparse, hashlib, json, os, pathlib, sys
+import argparse, hashlib, json, os, pathlib
 
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent

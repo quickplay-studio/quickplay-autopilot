@@ -438,4 +438,10 @@ aud = {"channel": {"traffic": [{"insightTrafficSourceType": "SHORTS", "views": 8
 line = A.audience_recipe(aud)[0]
 assert "89% of views" in line and "best-known name in the hook's first four words" in line and "8 words" not in line, line
 print("11 recipe ok")
+
+# a cut-off beat (QD-086 ended on "Because", rendered, then failed the clarity check): an error, so the writer fixes it before a render
+cut = board(); cut["beats"][-1]["say"] = "Because"
+assert any("cut off" in x for x in errs(cut)), errs(cut)
+assert not any("cut off" in x for x in errs(board()))
+print("12 cut-off beat ok")
 print("validate hooks ok")

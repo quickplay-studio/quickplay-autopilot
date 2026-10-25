@@ -21,7 +21,7 @@ the source's own order, exactly as before; thumbnails that cannot be read stay u
 The model comes from models/siglip2 (get_pictures.py: pinned download, MANIFEST.json, Actions cache) and is loaded on the first
 need, from disk only. Nothing heavy is imported until then, so importing this module costs nothing and cannot fail.
 """
-import io, json, math, os, pathlib, re, sys, time
+import io, json, os, re, sys, time
 
 HEADERS = {"User-Agent": "QuickplayAutopilot/1.0 (https://github.com/quickplay-studio/quickplay-autopilot)"}   # fetch_media passes its own
 

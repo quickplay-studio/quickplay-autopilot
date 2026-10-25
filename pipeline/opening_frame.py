@@ -18,7 +18,7 @@ A note, never a check: scorecard() cannot raise, and a number it cannot work out
 
 usage: python pipeline/opening_frame.py <video.mp4> [caption class, e.g. low]      prints the scorecard of any rendered Short
 """
-import importlib.metadata, json, pathlib, subprocess, sys, time
+import importlib.metadata, json, subprocess, sys, time
 import numpy as np
 
 W, H = 1080, 1920            # a Short's size (render3.py): every frame is scaled to it, so the caption bands below always fit

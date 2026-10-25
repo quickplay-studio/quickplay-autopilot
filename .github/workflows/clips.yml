@@ -4,7 +4,8 @@ name: clips
 # to its campaign itself (pipeline/submit.py, with the studio's sign-ins from tokens/, see logins.yml; what it cannot
 # submit stays on the phone page). Test by pushing requests/clips.txt with "test 2" (2 private uploads, no publish time);
 # "stats" refreshes clips/stats.csv only; "submit" puts the public links into their campaigns now ("submit probe" only
-# checks the sign-ins work); "promote" schedules the last 48 hours' private test clips into the next batch.
+# checks the sign-ins work); "promote" schedules the last 48 hours' private test clips into the next batch; "outreach" runs
+# the creator scout now (clips/outreach.csv; it also runs weekly with the 08:35 UTC scout).
 on:
   schedule:
     # crons are UTC: UK time is an hour later in summer (BST) and the same in winter (GMT, from 25 October 2026)
@@ -143,8 +144,16 @@ jobs:
           echo "=== run $(date -u '+%F %H:%M') UTC, schedule '${{ github.event.schedule }}', request '$req'" >> status/clips_log.txt
           if [ "${{ github.event.schedule }}" = "30 22 * * *" ] || echo "$req" | grep -qi stats; then
             python pipeline/clips.py stats 2>&1 | tee -a status/clips_log.txt
-          elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qi scout; then
-            python pipeline/submit.py scout 2>&1 | tee -a status/clips_log.txt
+          elif [ "${{ github.event.schedule }}" = "35 8 * * *" ] || echo "$req" | grep -qiE 'scout|outreach'; then
+            # the creator scout (25 October): small creators who say clips are allowed -> clips/outreach.csv, for Charlie to read on the
+            # hub's Clips tab; nothing is sent. Once a week by its own gate (the other six days it says so and stops); "outreach" in
+            # a request runs it now and alone; a failure here never fails the scout that follows
+            if echo "$req" | grep -qi outreach; then
+              python pipeline/outreach.py --force 2>&1 | tee -a status/clips_log.txt || true
+            else
+              python pipeline/outreach.py 2>&1 | tee -a status/clips_log.txt || true
+              python pipeline/submit.py scout 2>&1 | tee -a status/clips_log.txt
+            fi
           elif echo "$req" | grep -qi demote; then        # "demote 2026-10-23T22:00+00:00": promoted test clips from before it go private again
             python pipeline/clips.py demote $(echo "$req" | grep -oE '20[0-9]{2}-[0-9]{2}-[0-9]{2}T[0-9:+]+' | head -1) 2>&1 | tee -a status/clips_log.txt
           elif echo "$req" | grep -qi promote; then
@@ -175,7 +184,7 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           mkdir -p clips/plans status/quota
-          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json clips/reach.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json analytics/late_uploads.csv; do git add $f 2>/dev/null || true; done
+          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json clips/reach.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json analytics/late_uploads.csv analytics/decisions.csv clips/outreach.csv; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

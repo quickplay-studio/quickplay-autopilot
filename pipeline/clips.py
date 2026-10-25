@@ -862,17 +862,20 @@ def make(cid, count=None, channel=None):
 
 # ----- uploading ------------------------------------------------------------------------------------------------------------
 def channel_of(cid):
-    """A campaign's first YouTube channel (campaigns.json "channel", or the first of "channels", default clips): its
+    """A campaign's YouTube channel (campaigns.json "channel"; an older entry's first "channels" item; default clips): its
     sign-in is tokens/youtube_<channel>.enc, made with the social workflow."""
     c = CFG["campaigns"].get(cid) or {}
-    chans = c.get("channels") or []
-    return str(chans[0] if chans else c.get("channel") or "clips")
+    one, chans = str(c.get("channel") or "").strip(), c.get("channels") or []
+    return one or str(chans[0] if chans else "clips")
 
 
 def campaign_channels(cid):
-    """Every channel a campaign posts on (Charlie, 22 October: each channel signed up to every campaign). With several,
-    each channel gets different moments of the same footage: a moment is made once and carries its "channel"."""
+    """The channels a campaign posts on. Since 25 October one creator or niche has one channel: a campaign with a
+    "channel" posts there and nowhere else (pin_channels() gives an older entry its one). Only an entry still written
+    with a "channels" list posts on each of them (Charlie, 22 October), each channel getting different moments of the
+    same footage: a moment is made once and carries its "channel"."""
     c = CFG["campaigns"].get(cid) or {}
+    if str(c.get("channel") or "").strip(): return [channel_of(cid)]
     chans = [str(x) for x in (c.get("channels") or []) if x]
     return list(dict.fromkeys(chans or [channel_of(cid)]))
 
@@ -1277,7 +1280,7 @@ def engage():
         plan_ = json.loads(p.read_text()); changed = False
         by_part = {(m.get("episode"), m.get("part")): m for m in plan_.get("moments") or [] if m.get("episode")}
         for m in plan_.get("moments") or []:
-            if not m.get("video") or m.get("pulled") or m.get("publish_at") in (None, "private"): continue
+            if not m.get("video") or m.get("pulled") or m.get("ig_only") or m.get("publish_at") in (None, "private"): continue
             try: due = dt.datetime.fromisoformat(m["publish_at"].replace("Z", "+00:00"))
             except ValueError: continue
             if due > NOW: continue
@@ -1303,10 +1306,53 @@ def engage():
     return done
 
 
+def lead(arms, key, n_key):
+    """The arm with 3 clips or more that leads on `key` (a mean of 20 or more and 10% over the next arm), else None: no verdict
+    from clips nobody watched (the rule the clip tests have always used)."""
+    ranked = sorted((a for a in arms if arms[a][n_key] >= 3), key=lambda a: -(arms[a][key] or 0))
+    top = arms[ranked[0]][key] or 0 if ranked else 0
+    second = (arms[ranked[1]][key] or 0) if len(ranked) > 1 else 0
+    return ranked[0] if ranked and top >= 20 and top >= 1.1 * second else None
+
+
+def take_style_verdict(ts):
+    """Argument against framing (a take that argues, TAKE_PROMPT, against one that only describes the picture), by YouTube
+    views and by Instagram views: the arm that leads on one measure while the other does not say otherwise, with a note for
+    Charlie. (arm or None, note)."""
+    arms = ts.get("arms") or {}
+    ns = ", ".join(f"{a} {arms[a]['n']} clips ({arms[a].get('ig_n', 0)} with Instagram views)" for a in arms)
+    views, ig = ts.get("best"), ts.get("best_ig")
+    if views and ig and views != ig: return None, f"no verdict: YouTube views favour {views}, Instagram views favour {ig} ({ns})"
+    if views and ig: return views, f"{views} leads on YouTube views and on Instagram views ({ns})"
+    if views or ig: return views or ig, f"{views or ig} leads on {'YouTube' if views else 'Instagram'} views; the other measure has not decided ({ns})"
+    return None, f"no verdict yet: it needs 3 clips an arm, a mean of 20 views and a 10% lead on YouTube or Instagram views ({ns})"
+
+
+def channel_summary(rows):
+    """The numbers the volume plan and the stop rule read, per channel, for clips/insights.json: clips and median views over
+    the last 7 days, clips and median over the stop rule's 14, the Instagram median, whether the stop rule fires or YouTube is
+    off, and the channel that has the volume. (Public clips a day old or more.)"""
+    days = int(policy_n("clips_stop_days", 14))
+    wk, fort, stop, off = channel_numbers(rows, days=int(policy_n("clips_window_days", 7))), channel_numbers(rows, days=days), stop_status(rows), youtube_off()
+    out = {}
+    for ch in sorted(set(wk) | set(fort) | set(off)):
+        w, f = wk.get(ch) or {}, fort.get(ch) or {}
+        out[ch] = {"clips_7d": w.get("n", 0), "median_views_7d": w.get("median"), "mean_views_7d": w.get("mean"), "ig_median_views_7d": w.get("ig_median"),
+                   "clips_14d": f.get("n", 0), "median_views_14d": f.get("median"), "stop_rule_fires": bool((stop.get(ch) or {}).get("fires")),
+                   "youtube_off_since": off.get(ch)}
+    return {"volume": allocation_state().get("volume"), "by_channel": out,
+            "stop_rule": f"median under {policy_n('clips_stop_median', 100):g} views a clip after {int(policy_n('clips_stop_clips', 30))} public clips in {days} days"}
+
+
 def insights(rows):
-    """clips/insights.json: for each test (layout, captions, punch) and each campaign, the median and mean views of public clips
-    24 hours old or more, and the best arm when it has 3 clips, a mean of 20 views or more and beats the rest by 10%. test_plan() leans on it."""
+    """clips/insights.json: for each test (layout, captions, punch, ...) and each campaign, the median and mean views of public
+    clips 24 hours old or more, and the best arm when it has 3 clips, a mean of 20 views or more and beats the rest by 10%
+    (test_plan() leans on it). Since 25 October the same is read for Instagram views (ig_n, ig_median_views and ig_mean_views
+    for each arm, best_ig: the campaigns pay for Instagram views and the Reels get them), "take_style" gives the verdict on
+    argument against framing, and "channels" the numbers behind the volume plan and the stop rule."""
     aged = [r for r in rows if r.get("privacy") == "public" and float(r.get("hours_public") or 0) >= 24]
+    ig_aged = [r for r in rows if r.get("privacy") in ("public", "instagram") and _f(r.get("hours_public"), -1.0) >= 24
+               and str(r.get("ig_views", "")).strip() not in ("", "None")]
     out = {"updated": NOW.isoformat(timespec="minutes"), "clips": len(aged), "tests": {}, "campaigns": {}}
     def med(vals): vals = sorted(vals); return vals[len(vals) // 2] if vals else None
     for t in TESTS:
@@ -1317,11 +1363,11 @@ def insights(rows):
         for arm in arms:
             vals = [float(r["views"] or 0) for r in aged if r.get(f"test_{t}") == arm]
             arms[arm]["mean_views"] = round(sum(vals) / len(vals), 1) if vals else None
-        ranked = sorted((a for a in arms if arms[a]["n"] >= 3), key=lambda a: -(arms[a]["mean_views"] or 0))
-        top = arms[ranked[0]]["mean_views"] or 0 if ranked else 0
-        second = (arms[ranked[1]]["mean_views"] or 0) if len(ranked) > 1 else 0
-        best = ranked[0] if ranked and top >= 20 and top >= 1.1 * second else None     # no verdict from clips nobody watched
-        out["tests"][t] = {"arms": arms, "best": best}
+            ivals = [_f(r.get("ig_views")) for r in ig_aged if r.get(f"test_{t}") == arm]
+            arms[arm].update(ig_n=len(ivals), ig_median_views=med(ivals), ig_mean_views=round(sum(ivals) / len(ivals), 1) if ivals else None)
+        out["tests"][t] = {"arms": arms, "best": lead(arms, "mean_views", "n"), "best_ig": lead(arms, "ig_mean_views", "ig_n")}
+    verdict, note = take_style_verdict(out["tests"].get("take_style") or {})
+    out["take_style"] = {"verdict": verdict, "note": note}
     # How "viral" is measured (23 October): the planner scores each moment 1 to 10 before it is cut; here that score is
     # checked against what the clip really did (views at 24 hours or more). score_bands shows whether high scores earn more;
     # min_score is the lowest score whose clips (10 or more) beat the clips under it, and plan() uses it in place of 6.
@@ -1341,21 +1387,39 @@ def insights(rows):
     for cid in {r["campaign"] for r in aged}:
         vals = [float(r["views"] or 0) for r in aged if r["campaign"] == cid]
         out["campaigns"][cid] = {"n": len(vals), "median_views": med(vals)}
+    try: out["channels"] = channel_summary(rows)
+    except Exception as e: out["channels"] = {"error": f"{type(e).__name__}: {str(e)[:120]}"}
     (ROOT / "clips" / "insights.json").write_text(json.dumps(out, indent=1))
     return out
 
 
+def ig_only_row(cid, m):
+    """The clips/stats.csv row of a clip posted on Instagram only (youtube_off): privacy "instagram", no YouTube numbers (blank,
+    so no YouTube median counts it), its Reel's views, reach and watch time. The readers of public clips skip it."""
+    try: hours = round((NOW - dt.datetime.fromisoformat(str(m.get("publish_at")).replace("Z", "+00:00"))).total_seconds() / 3600, 1)
+    except ValueError: hours = ""
+    tests, ig = m.get("tests") or {}, m.get("instagram") or {}
+    return {"clip": m["id"], "campaign": cid, "channel": mchannel(cid, m), "video": "", "seconds": round(m["end"] - m["start"]),
+            "hook_words": len(m["hook"].split()), "score": m.get("score") if m.get("score") is not None else "", "hours_public": hours,
+            "privacy": "instagram", "views": "", "likes": "", "comments": "", **{f"test_{t}": tests.get(t, "") for t in TESTS},
+            **({"test_take_style": "framing"} if tests.get("take") in ("voice", "text") and not tests.get("take_style") else {}),
+            "instagram": ig.get("url", ""), "facebook": (m.get("facebook") or {}).get("url", ""), **ig_numbers(ig.get("media")),
+            "as_of": NOW.isoformat(timespec="minutes")}
+
+
 def stats():
     """Views, likes and comments for every uploaded clip -> clips/stats.csv (the learning data for which campaigns,
-    moments and lengths earn)."""
+    moments and lengths earn). A clip posted on Instagram only has a row of its own (ig_only_row)."""
     import youtube as Y
-    vids = {}
+    vids, igs = {}, []
     for p in PLANS.glob("*.json"):
         if p.name.endswith(".words.json"): continue
         cid = p.stem
         for m in json.loads(p.read_text()).get("moments") or []:
-            if m.get("video"): vids[m["video"]] = (cid, m)
-    if not vids: return
+            if m.get("ig_only"):
+                if m.get("instagram") and not m.get("pulled"): igs.append((cid, m))
+            elif m.get("video"): vids[m["video"]] = (cid, m)
+    if not vids and not igs: return
     rows = []
     by_channel = {}
     for v, (cid, m) in vids.items(): by_channel.setdefault(mchannel(cid, m), []).append(v)
@@ -1385,11 +1449,14 @@ def stats():
                              "age_restricted": int((cd.get("contentRating") or {}).get("ytRating") == "ytAgeRestricted"),
                              "for_kids": int(bool(vs.get("madeForKids"))),
                              "as_of": NOW.isoformat(timespec="minutes")})
+    rows += [ig_only_row(cid, m) for cid, m in igs]
     p = ROOT / "clips" / "stats.csv"
     if not rows: return
     with p.open("w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
+        w = csv.DictWriter(f, fieldnames=list(dict.fromkeys(k for r in rows for k in r)), restval=""); w.writeheader(); w.writerows(rows)
     log(f"stats: {len(rows)} clips")
+    try: stop_check(rows)                     # the stop rule reads the fresh numbers; insights.json then shows the channel as off
+    except Exception as e: log("stop rule:", f"{type(e).__name__}: {str(e)[:200]}")
     try: ins = insights(rows); log("insights:", json.dumps({t: v["best"] for t, v in ins["tests"].items()}))
     except Exception as e: log("insights:", str(e)[:200])
     try: log("reach:", json.dumps(reach_check(rows)))
@@ -1550,17 +1617,18 @@ def reach_share(min_views):
     return max(0.05, (sum(1 for v in vals if v >= float(min_views)) + 1) / (len(vals) + 4))
 
 
-def unseen_cap(channel):
+def unseen_cap(channel, note=True):
     """Clips a day for a channel YouTube is not showing (clips/reach.json "take_unseen": 8 or more clips with our own take,
     a day old, still 70% unseen): campaigns.json clips_unseen_cap (4) instead of the learned ceiling, until the reach check
     clears. Fewer clips cost fewer of the shared YouTube allowance and look less like a spam burst from a new channel; the
-    change is written to analytics/decisions.csv once. None when the channel is being seen."""
+    change is written to analytics/decisions.csv once (note=False reads only, for the allocation command). None when the
+    channel is being seen."""
     try: c = (json.loads((ROOT / "clips" / "reach.json").read_text()).get("channels") or {}).get(channel) or {}
     except Exception: return None
     if not c.get("take_unseen"): return None
     cap = int(CFG.get("clips_unseen_cap", 4))
     mark = STATE / f"unseen_{channel}.json"
-    if not mark.exists():
+    if note and not mark.exists():
         STATE.mkdir(parents=True, exist_ok=True); mark.write_text(json.dumps({"since": NOW.isoformat(timespec="minutes"), "cap": cap}))
         p = ROOT / "analytics" / "decisions.csv"
         try:
@@ -1575,14 +1643,369 @@ def unseen_cap(channel):
     return cap
 
 
-def allocate(remaining, count=None, channel=None):
+# ----- one creator or niche per channel, volume where it works (Charlie, 25 October) ----------------------------------------------
+# YouTube buried re-uploaded clips on 1 October 2026: the 51 public clips on the three channels had 59 views in all (issue
+# #37), while the clips' Instagram Reels do get views and the campaigns pay for those too. So:
+#  1. every campaign names its one channel (campaigns.json "channel"): a channel keeps one creator or niche, and a moment is
+#     made for one channel only (channel_conflicts() checks it);
+#  2. the day's clips go to the channel with the best 7-day median views a clip (clips/stats.csv, public clips a day old or
+#     more); the others idle (0 a day) except one retest clip a week (volume_plan, channel_places);
+#  3. a channel whose median is under 100 views a clip after 30 public clips in 14 days stops YouTube uploads (campaigns.json
+#     "youtube_off", stop_check) and its clips are posted on Instagram only (ig_only_assets).
+# Every change of plan is a row in analytics/decisions.csv; docs/CLIPS.md has the story.
+ROLE_ORDER = {"volume": 0, "retest": 1, "idle": 2, "off": 3}      # the channels that spend the day's places go first
+IG_ONLY = "instagram-only"      # the "video" of a clip that was never on YouTube: social_posts() posts only a moment that has one
+
+
+def _f(x, default=0.0):
+    try: return float(x)
+    except (TypeError, ValueError): return default
+
+
+def _median(vals):
+    v = sorted(vals); n = len(v)
+    return None if not n else (v[n // 2] if n % 2 else (v[n // 2 - 1] + v[n // 2]) / 2)
+
+
+def uk_today(): return NOW.astimezone(UK).date()
+
+
+def policy_n(key, default):
+    """A setting of this policy from campaigns.json (clips_stop_median and the like); the default when it is not a number."""
+    return _f(CFG.get(key), default) if CFG.get(key) is not None else float(default)
+
+
+def stat_rows():
+    """clips/stats.csv as dicts, the latest row of each clip (the nightly run rewrites the file whole)."""
+    p = ROOT / "clips" / "stats.csv"
+    if not p.exists(): return []
+    latest = {}
+    for r in csv.DictReader(p.open()):
+        k = (r.get("clip"), r.get("video"))
+        if k not in latest or (r.get("as_of") or "") >= (latest[k].get("as_of") or ""): latest[k] = r
+    return list(latest.values())
+
+
+def published_on(r):
+    """The UK day a clips/stats.csv row's clip went public (the row's time less the hours it had been public); None when unknown."""
+    try:
+        t = dt.datetime.fromisoformat(str(r.get("as_of")).replace("Z", "+00:00"))
+        if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+        return (t - dt.timedelta(hours=float(r.get("hours_public")))).astimezone(UK).date()
+    except (TypeError, ValueError): return None
+
+
+def channel_numbers(rows=None, days=7, min_hours=24.0, after=None):
+    """What each channel's clips did: for the clips public on YouTube for `min_hours` hours up to `days` days, the count,
+    median, mean and total views, and the median Instagram views of the same clips (and of an Instagram-only clip, whose
+    privacy is "instagram"). {channel: {n, median, mean, total, ig_n, ig_median}}; the numbers the volume plan and the stop
+    rule read. after {channel: ISO date}: that channel's clips that went public on or before its date are left out."""
+    views, igs, after = {}, {}, after or {}
+    for r in stat_rows() if rows is None else rows:
+        ch, h = r.get("channel") or "clips", _f(r.get("hours_public"), -1.0)
+        if h < min_hours or h > days * 24: continue
+        if ch in after and (published_on(r) or dt.date.max) <= dt.date.fromisoformat(after[ch]): continue
+        if r.get("privacy") == "public": views.setdefault(ch, []).append(_f(r.get("views")))
+        if r.get("privacy") in ("public", "instagram") and str(r.get("ig_views", "")).strip() not in ("", "None"):
+            igs.setdefault(ch, []).append(_f(r.get("ig_views")))
+    out = {}
+    for ch in set(views) | set(igs):
+        v, g = views.get(ch, []), igs.get(ch, [])
+        out[ch] = {"n": len(v), "median": _median(v), "mean": round(sum(v) / len(v), 2) if v else None, "total": int(sum(v)),
+                   "ig_n": len(g), "ig_median": _median(g)}
+    return out
+
+
+def youtube_off():
+    """{channel: date} of the channels whose YouTube uploads are off (campaigns.json "youtube_off": the stop rule, or by hand)."""
+    v = CFG.get("youtube_off")
+    return {str(k): str(d) for k, d in v.items()} if isinstance(v, dict) else {}
+
+
+def stopped_on():
+    """{channel: ISO date} of the day the stop rule last switched a channel's YouTube off (clips/state/stopped.json). The clips
+    that were public by then no longer count towards a stop, so a channel Charlie starts again (by deleting it from
+    youtube_off) needs 30 new public clips in 14 days to be stopped again, not the same 30."""
+    try: d = json.loads((STATE / "stopped.json").read_text())
+    except Exception: return {}
+    out = {}
+    for k, v in (d.items() if isinstance(d, dict) else []):
+        try: dt.date.fromisoformat(str(v)); out[str(k)] = str(v)
+        except ValueError: pass
+    return out
+
+
+def last_clip_at(channel):
+    """When a clip last went to the channel (the latest made or uploaded time in the plans); None when it never had one."""
+    best = None
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        try: moments = json.loads(p.read_text()).get("moments") or []
+        except Exception: continue
+        for m in moments:
+            if mchannel(p.stem, m) != channel: continue
+            for k in ("uploaded", "made"):
+                try: t = dt.datetime.fromisoformat(str(m.get(k)).replace("Z", "+00:00"))
+                except ValueError: continue
+                if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+                if best is None or t > best: best = t
+    return best
+
+
+def next_retest(channel):
+    """The UK day an idle channel next gets its one retest clip: clips_retest_days (7) after its last clip, today when it never had one."""
+    t = last_clip_at(channel)
+    return uk_today() if t is None else t.astimezone(UK).date() + dt.timedelta(days=int(policy_n("clips_retest_days", 7)))
+
+
+def retest_due(channel): return next_retest(channel) <= uk_today()
+
+
+def pick_volume(live, numbers, incumbent=None):
+    """The channel with the best 7-day median views a clip among `live` (the channels with YouTube on). Ties go to the better
+    mean, then the better Instagram median, then the earlier name; a channel with no measured clip ranks below any that has
+    one. The channel that had the volume keeps it unless the leader's median is clearly higher (10% or a view), so two
+    channels that are level do not trade places each day."""
+    if not live: return None
+    def key(ch):
+        n = numbers.get(ch) or {}
+        return (n["median"] if n.get("n") else -1.0, n.get("mean") or 0.0, n.get("ig_median") or 0.0)
+    best = sorted(live, key=lambda ch: (tuple(-x for x in key(ch)), ch))[0]
+    if incumbent in live and incumbent != best:
+        a, b = numbers.get(incumbent) or {}, numbers.get(best) or {}
+        if key(incumbent) == key(best) or (a.get("n") and b.get("n") and b["median"] < a["median"] + max(1.0, 0.1 * a["median"])):
+            return incumbent
+    return best
+
+
+def allocation_state():
+    try: return json.loads((STATE / "allocation.json").read_text())
+    except Exception: return {}
+
+
+def log_decision(area, change, why, evidence, days=7):
+    """One row in analytics/decisions.csv (the columns the other automatic rulings use), to be looked at again in `days` days."""
+    p = ROOT / "analytics" / "decisions.csv"
+    try:
+        p.parent.mkdir(parents=True, exist_ok=True)
+        new = not p.exists()
+        with p.open("a", newline="") as f:
+            w = csv.writer(f)
+            if new: w.writerow(["date", "area", "change", "why", "evidence", "check_on", "by"])
+            w.writerow([str(uk_today()), area, change, why, evidence, str(uk_today() + dt.timedelta(days=days)), "clips.py (automatic)"])
+    except Exception as e: log("decision:", str(e)[:120])
+
+
+def says(numbers, ch):
+    """"6 views a clip over 7 clips" for a channel, for logs and decisions."""
+    n, days = (numbers or {}).get(ch) or {}, int(policy_n("clips_window_days", 7))
+    if not n.get("n"): return f"no clip measured in the last {days} days"
+    return f"{days}-day median {n['median']:g} views a clip over {n['n']} clips"
+
+
+def volume_plan(chans, rows=None):
+    """Each channel's place today ({channel: [campaign ids]} in): "volume" (the day's clips), "retest" (idle, but its one
+    clip a week is due), "idle" (0 a day) or "off" (YouTube uploads off: Instagram only). {volume, role, numbers}."""
+    numbers, off = channel_numbers(rows, days=int(policy_n("clips_window_days", 7))), youtube_off()
+    volume = pick_volume([ch for ch in chans if ch not in off], numbers, allocation_state().get("volume"))
+    role = {ch: "off" if ch in off else "volume" if ch == volume else "retest" if retest_due(ch) else "idle" for ch in chans}
+    return {"volume": volume, "role": role, "numbers": numbers}
+
+
+def note_plan(vplan):
+    """Remembers the plan in clips/state/allocation.json and, when the volume channel, the idle channels or the stopped
+    channels differ from the last plan, writes one row to analytics/decisions.csv (a retest day is not a change)."""
+    role = vplan["role"]
+    sig = {"volume": vplan["volume"], "idle": sorted(c for c, r in role.items() if r in ("idle", "retest")),
+           "off": sorted(c for c, r in role.items() if r == "off")}
+    old = allocation_state()
+    if {k: old.get(k) for k in sig} != sig:
+        nums = vplan["numbers"]
+        parts = [f"{ch} {say}" for ch, say in ((c, says(nums, c)) for c in [sig["volume"]] + sig["idle"]) if ch]
+        log_decision("Clips channels",
+                     (f"The day's clips go to the {sig['volume']} channel" if sig["volume"] else "No channel has YouTube on")
+                     + (f"; {', '.join(sig['idle'])} idle (0 a day, one retest clip a week)" if sig["idle"] else "")
+                     + (f"; {', '.join(sig['off'])}: YouTube off, Instagram only" if sig["off"] else ""),
+                     "best 7-day median views a clip (public clips a day old or more): " + "; ".join(parts),
+                     "clips/stats.csv; clips/state/allocation.json")
+        old["since"] = str(uk_today())
+    old.update(sig, seen=str(uk_today()), numbers={c: {k: v for k, v in n.items() if k in ("n", "median", "mean")} for c, n in vplan["numbers"].items()})
+    try: STATE.mkdir(parents=True, exist_ok=True); (STATE / "allocation.json").write_text(json.dumps(old, indent=1))
+    except Exception as e: log("allocation state:", str(e)[:120])
+
+
+def stop_status(rows=None):
+    """Where each channel stands on the stop rule (Charlie, 25 October): over its public clips a day old or more and at most
+    clips_stop_days (14) days old, {channel: {clips, median, total, off, fires}}; it fires at clips_stop_clips (30) clips with
+    a median under clips_stop_median (100) views."""
+    days, need, under = int(policy_n("clips_stop_days", 14)), int(policy_n("clips_stop_clips", 30)), policy_n("clips_stop_median", 100)
+    off = youtube_off()
+    return {ch: {"clips": s["n"], "median": s["median"], "total": s["total"], "off": off.get(ch),
+                 "fires": ch not in off and s["n"] >= need and s["median"] is not None and s["median"] < under}
+            for ch, s in channel_numbers(rows, days=days, after=stopped_on()).items()}
+
+
+def stop_check(rows=None):
+    """The stop rule: a channel whose median views a clip is under clips_stop_median (100) after clips_stop_clips (30) public
+    clips in clips_stop_days (14) days stops YouTube uploads. The day goes into campaigns.json "youtube_off" (its clips are
+    posted on Instagram only from then on, ig_only_assets), one row into analytics/decisions.csv and a needs-charlie issue so
+    Charlie knows; deleting the entry starts the channel again. Returns the channels stopped now."""
+    fired = []
+    days, under = int(policy_n("clips_stop_days", 14)), policy_n("clips_stop_median", 100)
+    for ch, s in sorted(stop_status(rows).items()):
+        if not s["fires"]: continue
+        if not isinstance(CFG.get("youtube_off"), dict): CFG["youtube_off"] = {}
+        CFG["youtube_off"][ch] = str(uk_today()); fired.append(ch)
+        log(f"STOP RULE: the {ch} channel has {s['clips']} public clips in {days} days with a median of {s['median']:g} views (under {under:g}): "
+            f"YouTube uploads are off from {uk_today()}, its clips go to Instagram only")
+        log_decision("Clips channels", f"{ch} channel: YouTube uploads off, Instagram only",
+                     f"stop rule: median {s['median']:g} views a clip over {s['clips']} public clips in {days} days, under the {under:g} it needs",
+                     f"clips/stats.csv; clips/campaigns.json youtube_off {ch}", days=14)
+        pinned = [cid for cid in campaigns() if ch in campaign_channels(cid)]
+        goes = (f"Its clips ({', '.join(pinned)}) are made for Instagram only, where the campaigns that pay for Instagram views still count them."
+                if pinned else "No active campaign is pinned to this channel, so no clip changes today; the record keeps the channel from being used "
+                               "again without a decision.")
+        try:
+            import alerts
+            alerts.raise_issue(f"🛑 Clips: the {ch} channel stops YouTube uploads",
+                               f"The stop rule (Charlie, 25 October) has fired for the {ch} channel: {s['clips']} public clips in the last {days} days, each a "
+                               f"day old or more, and their median is {s['median']:g} views a clip, under the {under:g} the rule asks for ({s['total']:,} views in all).\n\n"
+                               f"From {uk_today():%A %d %B}: no clip is uploaded to YouTube for {ch}. {goes} Nothing already on YouTube is deleted or hidden.\n\n"
+                               f"Nothing to do unless you disagree. To start the channel on YouTube again, delete \"{ch}\" from \"youtube_off\" in "
+                               f"clips/campaigns.json (or ask Claude); the allocation then retests it, and only clips public after today count towards a new stop. "
+                               f"The numbers are in clips/stats.csv and clips/insights.json; the rule is in docs/CLIPS.md (25 October).", labels=["needs-charlie"])
+        except Exception as e: log("stop rule issue:", f"{type(e).__name__}: {str(e)[:160]}")
+    if fired:
+        try:
+            p = ROOT / "clips" / "campaigns.json"; p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_text(json.dumps(CFG, indent=1, ensure_ascii=False) + "\n")
+        except Exception as e: log("stop rule: campaigns.json not written:", str(e)[:160])
+        try:
+            st = stopped_on(); st.update({ch: str(uk_today()) for ch in fired})
+            STATE.mkdir(parents=True, exist_ok=True); (STATE / "stopped.json").write_text(json.dumps(st, indent=1))
+        except Exception as e: log("stop rule: stopped.json not written:", str(e)[:160])
+    return fired
+
+
+def instagram_ready(channel):
+    """Whether Instagram can be posted to for the channel: its own IG_<CHANNEL>_TOKEN and _USER_ID, the clips channel's, or the
+    main account's stored sign-in (the way social_posts() finds an account)."""
+    for ch in (channel, "clips"):
+        if os.environ.get(f"IG_{ch.upper()}_TOKEN", "").strip() and os.environ.get(f"IG_{ch.upper()}_USER_ID", "").strip(): return True
+    return bool(os.environ.get("SOCIAL_KEY")) and (ROOT / "tokens" / "instagram.enc").exists()
+
+
+def channel_places(channel, role, done_today, planned=0, dry=False):
+    """(places, why): the clips to make today for a channel, by its place in the plan. The volume channel makes its own day's
+    number (the learned ceiling, or the unseen cap while YouTube is not showing its clips) less what is already scheduled.
+    An idle channel makes none ("per_day 0") except the one retest clip a week. A channel with YouTube off makes
+    clips_ig_only_per_day (3) for Instagram, inside what social_per_day (6 a platform a day) leaves after the day's other
+    clips (`planned` is what this run has given out already). dry: read only (the allocation command)."""
+    limit = daily_limit(channel)
+    if role in (None, "volume"):
+        cap = unseen_cap(channel, note=not dry)
+        if cap is not None and cap < limit: return max(0, cap - done_today), f"{'volume channel; ' if role else ''}YouTube is not showing its clips, {cap} a day until it does"
+        if not dry: (STATE / f"unseen_{channel}.json").unlink(missing_ok=True)
+        return max(0, limit - done_today), f"{'volume channel, ' if role else ''}{limit} a day"
+    if role == "retest":
+        return max(0, 1 - done_today), "idle, but its one retest clip is due: 1 today"
+    if role == "idle":
+        return 0, f"idle (per_day 0); next retest clip {next_retest(channel)}"
+    if not instagram_ready(channel):                     # off
+        return 0, "YouTube off; no Instagram sign-in here, so no clips are made for it"
+    room = int(CFG.get("social_per_day", 6)) - scheduled_today() - planned
+    each = int(policy_n("clips_ig_only_per_day", 3))
+    return max(0, min(each - done_today, room)), f"YouTube off, Instagram only: up to {each} a day, {max(0, room)} of the day's {int(CFG.get('social_per_day', 6))} Instagram places left"
+
+
+def ig_only_assets(cid):
+    """A clip made for a channel whose YouTube uploads are off (youtube_off) goes to Instagram only. social_posts() posts any
+    moment that has a "video", an "asset_url" in the clips-out release and a publish time, so the clip gets those without a
+    YouTube upload: its file is kept in the release as upload() keeps it, "video" is the marker IG_ONLY (which also keeps
+    upload(), running next, from taking the clip), the publish time is the next batch and "ig_only" tells the comment, pull
+    and stats code to leave YouTube out. A clip whose file cannot be kept is marked pulled, never uploaded to YouTube. A clip
+    made over LATE_HOURS ago is left for upload()'s own late check. Returns the moments done."""
+    off, p = youtube_off(), PLANS / f"{cid}.json"
+    if not off or not p.exists(): return []
+    plan_ = json.loads(p.read_text())
+    todo = [m for m in plan_.get("moments") or [] if m.get("made") and not m.get("video") and not m.get("skipped")
+            and mchannel(cid, m) in off and made_hours(m) <= LATE_HOURS and (OUT / m.get("file", "")).exists()]
+    if not todo: return []
+    iso, when = batch_time((CFG["campaigns"].get(cid) or {}).get("platform"))
+    for m in todo:
+        err = None
+        for attempt in range(2):
+            try:
+                if gh("release", "view", OUTREL, check=False).returncode:
+                    gh("release", "create", OUTREL, "--title", "Clips made", "--notes", "The clips as posted (for Instagram, Facebook and TikTok posting).", "--prerelease")
+                gh("release", "upload", OUTREL, str(OUT / m["file"]), "--clobber"); err = None; break
+            except Exception as e: err = e; time.sleep(2)
+        if err is not None:
+            m.update(video=IG_ONLY, ig_only=True, pulled=f"Instagram asset not kept: {str(err)[:100]}")
+            log(f"{m['id']}: not posted anywhere: the {mchannel(cid, m)} channel has YouTube off and the Instagram file could not be kept ({str(err)[:100]})")
+            continue
+        m.update(asset_url=f"https://github.com/{REPO}/releases/download/{OUTREL}/{m['file']}", video=IG_ONLY, ig_only=True, publish_at=iso,
+                 mode="instagram", uploaded=NOW.isoformat(timespec="minutes"))
+        log(f"{m['id']}: Instagram only ({mchannel(cid, m)} has YouTube uploads off since {off[mchannel(cid, m)]}): kept for the {when:%H:%M} UK batch, no YouTube upload")
+    p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
+    return [m for m in todo if not m.get("pulled")]
+
+
+def pin_channels():
+    """One creator or niche per channel: every active campaign names its one channel. An entry written with the older
+    "channels" list (the Mac's joins, docs/CHROME_OCCASIONAL.md) is pinned to the first of them that is not the catch-all
+    clips (gaming or irl, the niche), else to clips, and its list is dropped; campaigns.json is saved. {campaign: channel} changed."""
+    changed = {}
+    for cid, c in CFG["campaigns"].items():
+        if not c.get("active") or str(c.get("channel") or "").strip(): continue
+        chans = [str(x) for x in (c.get("channels") or []) if x]
+        c["channel"] = next((x for x in chans if x != "clips"), "clips"); c.pop("channels", None); changed[cid] = c["channel"]
+    if changed:
+        p = ROOT / "clips" / "campaigns.json"; p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(CFG, indent=1, ensure_ascii=False) + "\n")
+        log("channels pinned (one creator or niche per channel): " + ", ".join(f"{k} to {v}" for k, v in changed.items()))
+    return changed
+
+
+def channel_conflicts():
+    """The same moment on two channels: moments of one campaign that overlap in time yet were made for different channels.
+    plan() never plans overlapping moments and a moment is made once, so this is [] (a check, logged at the start of a run)."""
+    out = []
+    for p in PLANS.glob("*.json"):
+        if p.name.endswith(".words.json"): continue
+        try: ms = [m for m in json.loads(p.read_text()).get("moments") or [] if m.get("made")]
+        except Exception: continue
+        for i, a in enumerate(ms):
+            for b in ms[i + 1:]:
+                if mchannel(p.stem, a) != mchannel(p.stem, b) and _f(a.get("start")) < _f(b.get("end")) and _f(b.get("start")) < _f(a.get("end")):
+                    out.append((p.stem, a.get("id"), b.get("id")))
+    return out
+
+
+def policy_report():
+    """Today's plan without changing anything (`python pipeline/clips.py allocation`): each channel's place, its numbers, the
+    clips it would make and for which campaigns, and where it stands on the stop rule."""
+    chans = channels(); vplan = volume_plan(chans); stop = stop_status(); report, planned = {"volume": vplan["volume"], "channels": {}}, 0
+    for ch in sorted(chans, key=lambda c: ROLE_ORDER.get(vplan["role"].get(c), 0)):
+        role = vplan["role"].get(ch)
+        places, why = channel_places(ch, role, scheduled_today(ch), planned, dry=True)
+        got = allocate(places, None, ch, exclude_series=(role == "retest")); planned += sum(got.values())
+        report["channels"][ch] = {"role": role, "why": why, "numbers_7_days": vplan["numbers"].get(ch), "stop_rule": stop.get(ch), "places": places, "campaigns": got}
+    for ch in sorted((set(stop) | set(youtube_off())) - set(chans)):         # a channel with no active campaign or no sign-in: not in the plan
+        report["channels"][ch] = {"role": "no active campaign pinned to it, or not signed in", "numbers_7_days": vplan["numbers"].get(ch),
+                                  "stop_rule": stop.get(ch), "youtube_off": youtube_off().get(ch), "places": 0}
+    return report
+
+
+def allocate(remaining, count=None, channel=None, exclude_series=False):
     """How many clips each active campaign gets today: the day's remaining number shared by expected money (pay per
     1,000 times the campaign's median views, a 1,000-view prior until it has 3 measured clips, times how often our clips
     reach the campaign's minimum views (reach_share), with a little noise so every campaign keeps being tried), each
     capped by its per_day. The data decides, like the main channel. With a channel, only that channel's campaigns share
-    the number."""
+    the number (exclude_series: not a series campaign, whose whole episodes are more than one clip: the retest clip)."""
     import random
     cs = {cid: c for cid, c in campaigns().items() if channel is None or channel in campaign_channels(cid)}
+    if exclude_series: cs = {cid: c for cid, c in cs.items() if not (c.get("rules") or {}).get("series")}
     if not cs or remaining <= 0: return {}
     rng = random.Random(str(NOW.date()))
     score = {cid: c.get("pay_per_1k", 1.0) * (median_views(cid) or 1000.0) * reach_share(c.get("min_views") or 0) * rng.uniform(0.8, 1.25)
@@ -1650,7 +2073,7 @@ def spill(shares, made_n, cs, deadline):
                 if not got_one: able.remove(cid); continue
                 made_n[(channel, cid)] = made_n.get((channel, cid), 0) + 1; short -= 1; added += 1
                 per_site[submit_site(cs[cid])] = per_site.get(submit_site(cs[cid]), 0) + 1
-                try: upload(cid)
+                try: ig_only_assets(cid); upload(cid)           # a channel with YouTube off posts on Instagram only
                 except Exception as e: log(f"spill: {cid} upload: {str(e)[:160]}")
     if added: log(f"spill: {added} more clip(s) made in places other campaigns left")
     return added
@@ -1672,7 +2095,10 @@ def review():
             bad = profane(words, m["start"], m["end"]) or PROFANE.findall(m.get("hook", ""))
             if not bad and UNSAFE.search(f"{m.get('hook', '')} {m.get('title', '')}"): bad = ["not brand safe"]
             if not bad and dark(ROOT / "clips" / "frames" / f"{m['id']}.jpg"): bad = ["dark picture"]
-            if due > NOW and bad:
+            if due > NOW and bad and m.get("ig_only"):        # Instagram only (youtube_off): nothing on YouTube to make private
+                m["pulled"] = (bad[0] if bad in (["dark picture"], ["not brand safe"]) else f"profanity: {', '.join(bad[:3])}"); changed = True; pulled += 1
+                log(f"{m['id']}: pulled before posting on Instagram ({m['pulled']})")
+            elif due > NOW and bad:
                 try:
                     for attempt in range(4):        # YouTube answers 503 now and then
                         try:
@@ -1708,7 +2134,7 @@ def uploads_24h(channel):
         for m in json.loads(p.read_text()).get("moments") or []:
             try: up = dt.datetime.fromisoformat(str(m.get("uploaded")))
             except ValueError: continue
-            if up >= cut and m.get("video") and mchannel(p.stem, m) == channel: n += 1
+            if up >= cut and m.get("video") and not m.get("ig_only") and mchannel(p.stem, m) == channel: n += 1
     return n
 
 
@@ -1872,6 +2298,9 @@ def main(argv):
     if cmd == "probe":
         for u in ids: probe(u)
         return
+    if cmd == "allocation":                    # today's plan, read only: python pipeline/clips.py allocation
+        print(json.dumps(policy_report(), indent=1, default=str))
+        return
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
     # the job is stopped at 170 minutes and its Save step must still run: at most 110 minutes here, and never past 135
     # minutes from the job's start (JOB_T0; on 23 October the runner's installs alone took 37 minutes)
@@ -1881,21 +2310,31 @@ def main(argv):
     if cmd in ("run", "prepare"):
         try: check_campaigns()
         except Exception as e: log("campaign check:", str(e)[:200])
+        try: pin_channels()                     # one creator or niche per channel (25 October)
+        except Exception as e: log("pin channels:", str(e)[:200])
         cs = campaigns()
     if cmd == "run":
         try: review()
         except Exception as e: log("review:", str(e)[:200])
+        try: stop_check()                       # a channel under 100 views a clip after 30 public clips in 14 days: YouTube off
+        except Exception as e: log("stop rule:", f"{type(e).__name__}: {str(e)[:200]}")
         private = os.environ.get("CLIPS_MODE", "").strip() == "private"       # a test never counts against the day
-        shares = {}                                                            # {channel: {campaign: n}}: each channel has its own number and ceiling
-        for channel, ids_on in channels().items():
+        shares, chans, planned, vplan = {}, channels(), 0, None               # shares: {channel: {campaign: n}}, each channel with its own number and ceiling
+        for a, b, c in channel_conflicts(): log(f"WARNING: {a}: moments {b} and {c} overlap on different channels")
+        if not private:
+            try: vplan = volume_plan(chans); note_plan(vplan)                  # the day's clips go to the best channel, the others idle (25 October)
+            except Exception as e: log("volume plan (every channel makes its own day's number instead):", f"{type(e).__name__}: {str(e)[:200]}")
+        for channel in sorted(chans, key=lambda ch: ROLE_ORDER.get((vplan or {}).get("role", {}).get(ch), 0)):
             done_today = scheduled_today(channel)
             ceiling_learn(done_today, channel=channel)
-            limit = daily_limit(channel)
-            cap = None if private else unseen_cap(channel)
-            if cap is not None and cap < limit: log(f"channel {channel}: YouTube is not showing its clips, {cap} a day until it does"); limit = cap
-            elif not private: (STATE / f"unseen_{channel}.json").unlink(missing_ok=True)
-            got = allocate((count or 1) * len(ids_on) if private else max(0, limit - done_today), count, channel)
-            if got: shares[channel] = got
+            role = (vplan or {}).get("role", {}).get(channel)
+            if private and channel in youtube_off(): log(f"channel {channel}: YouTube uploads are off, no test clips"); continue
+            if private: places = (count or 1) * len(chans[channel])
+            else:
+                places, why = channel_places(channel, role, done_today, planned)
+                log(f"channel {channel}: {role or 'no plan'}: {why}" + (f" ({says(vplan['numbers'], channel)})" if vplan else ""))
+            got = allocate(places, count, channel, exclude_series=(role == "retest"))
+            if got: shares[channel] = got; planned += sum(got.values())
         want = {}
         for channel, got in shares.items():
             for cid, n in got.items(): want[cid] = want.get(cid, 0) + n
@@ -1915,7 +2354,9 @@ def main(argv):
                 for channel, got in shares.items():                              # the campaign's moments, shared out by channel
                     if got.get(cid): made_n[(channel, cid)] = len(make(cid, got[cid], channel) or [])
             elif cmd == "make": make(cid, n)
-            if cmd in ("run", "upload"): upload(cid)
+            if cmd in ("run", "upload"):
+                ig_only_assets(cid)                                              # a channel with YouTube off: its clips go to Instagram only, never to upload()
+                upload(cid)
         except Exception as e:
             log(f"{cid}: {type(e).__name__}: {str(e)[:300]}")
     if cmd == "run":

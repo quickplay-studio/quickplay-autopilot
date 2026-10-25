@@ -41,8 +41,8 @@ Commit as "Quickplay Studio" <quickplay-studio@users.noreply.github.com>, run te
    pipeline/submit.py's clicks (submit_cr, submit_vyro) to each site's real form, test with python tests/test_submit.py,
    then "submit" until every due row of clips/submit.csv is submitted.
 3. Campaigns: "scout", then join every yes row on Content Rewards and the fitting Vyro ones; add each to
-   clips/campaigns.json (copy an existing entry's shape; set "channels" to ["clips", "gaming"] for game footage or
-   ["clips", "irl"] for creators and challenges). Join the N3on, Kai Cenat, Jynxzi and Clix clipper programmes if they
+   clips/campaigns.json (copy an existing entry's shape; set "channel" to one channel: "gaming" for game footage or
+   "irl" for creators and challenges; one creator or niche to a channel, 25 October). Join the N3on, Kai Cenat, Jynxzi and Clix clipper programmes if they
    allow YouTube Shorts and the footage is family friendly.
 4. Two more YouTube channels: ask Charlie to create "Quickplay Gaming Clips" and "Quickplay IRL Clips" under the studio
    account (https://www.youtube.com/channel_switcher, then https://www.youtube.com/features to verify). Sign each in:

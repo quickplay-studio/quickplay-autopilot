@@ -54,10 +54,7 @@
     "where": "the campaign page, Submit clip"
    },
    "budget_left": 678,
-   "channels": [
-    "clips",
-    "irl"
-   ]
+   "channel": "irl"
   },
   "forgegui-roblox": {
    "name": "ForgeGUI Clipping [Roblox] (BloxClips)",
@@ -106,10 +103,7 @@
     "language": "English"
    },
    "ends": "2026-11-06",
-   "channels": [
-    "clips",
-    "irl"
-   ]
+   "channel": "irl"
   },
   "tdr-stinkyasher": {
    "platform": "Vyro",
@@ -150,10 +144,7 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "tdr-mitch": {
    "platform": "Vyro",
@@ -194,10 +185,7 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "tdr-flamingo": {
    "platform": "Vyro",
@@ -238,10 +226,7 @@
     "language": "English"
    },
    "ends": "2026-11-02",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "tdr-jenny": {
    "platform": "Vyro",
@@ -282,10 +267,7 @@
     "language": "English"
    },
    "ends": "2026-10-29",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "valorant-microdrama": {
    "platform": "Vyro",
@@ -329,10 +311,7 @@
    },
    "ends": "2026-11-02",
    "per_day_note": "per_day counts whole episodes for a series campaign (each is 2 or 3 parts)",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "valorant-champs": {
    "platform": "Vyro",
@@ -372,10 +351,7 @@
     "language": "English"
    },
    "ends": "2026-10-30",
-   "channels": [
-    "clips",
-    "gaming"
-   ]
+   "channel": "gaming"
   },
   "sega-metaphor": {
    "name": "SEGA Metaphor: ReFantazio Switch 2 Demo Clipping (Clipping Culture)",
@@ -519,10 +495,7 @@
     "language": "English"
    },
    "ends": "2026-10-30",
-   "channels": [
-    "clips",
-    "irl"
-   ]
+   "channel": "irl"
   }
  },
  "daily_clips": 10,
@@ -539,5 +512,20 @@
  "tiktok": false,
  "tiktok_mode": "direct",
  "social_note": "Every public clip is also posted as an Instagram Reel (IG_CLIPS_TOKEN, IG_CLIPS_USER_ID), a Facebook Reel (FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID) and, when tiktok is true, on TikTok (tokens/tiktok_clips.enc), at the batch time, at most social_per_day a platform a day; each post gets its own row on the submit page because campaigns pay per platform. batch_times can give a platform its own time, e.g. {\"Vyro\": \"22:00\"}.",
- "channels_note": "Every active campaign lists its YouTube channels (\"channels\"): clips (the first channel, everything), gaming (Roblox, VALORANT, Call of Duty footage) and irl (creators and challenges: IShowSpeed, MrBeast). Each channel gets different moments of the same footage, its own daily number and ceiling (clips/state/ceiling_<name>.json), its own sign-in (tokens/youtube_<name>.enc from the social workflow) and its own IG_<NAME>_* and FB_<NAME>_* secrets. A channel without a sign-in is skipped until it has one. All channels live under the studio Google account."
+ "channels_note": "One creator or niche per channel (Charlie, 25 October): every active campaign names its one YouTube channel (\"channel\"): clips (the catch-all, no campaign today), gaming (Roblox, VALORANT, Call of Duty footage) and irl (creators and challenges: IShowSpeed, MrBeast, Kevin Langue). A moment is made for one channel only. Each channel has its own daily number and ceiling (clips/state/ceiling_<name>.json), its own sign-in (tokens/youtube_<name>.enc from the social workflow) and its own IG_<NAME>_* and FB_<NAME>_* secrets. A channel without a sign-in is skipped until it has one. All channels live under the studio Google account. Until 25 October a campaign listed several channels (\"channels\"); an entry still written that way is pinned to the first of them that is not clips by pipeline/clips.py pin_channels().",
+ "volume_note": "Volume where it works (Charlie, 25 October): the day's clips go to the channel with the best median views a clip over clips_window_days (7) days (clips/stats.csv, public clips a day old or more; ties go to the better mean, then to Instagram views; the channel that had the volume keeps it unless another is 10% or a view ahead). The other channels idle (0 a day) except one retest clip every clips_retest_days (7) days. Each change of plan is one row in analytics/decisions.csv (clips/state/allocation.json remembers the last). python pipeline/clips.py allocation prints today's plan and changes nothing.",
+ "clips_window_days": 7,
+ "clips_retest_days": 7,
+ "youtube_off": {},
+ "youtube_off_note": "The stop rule (Charlie, 25 October): a channel whose median is under clips_stop_median views a clip after clips_stop_clips public clips (a day old or more) in clips_stop_days days stops YouTube uploads. pipeline/clips.py writes the channel and the day here, one row to analytics/decisions.csv and a needs-charlie issue; from then its clips are made for Instagram only (clips_ig_only_per_day a day, inside social_per_day) and nothing on YouTube is deleted. Delete the entry to start the channel again.",
+ "clips_stop_median": 100,
+ "clips_stop_clips": 30,
+ "clips_stop_days": 14,
+ "clips_ig_only_per_day": 3,
+ "outreach_note": "The creator scout (pipeline/outreach.py, weekly from clips.yml's scout run): at most outreach_searches (3) YouTube searches a run for creators under outreach_max_subscribers (and over outreach_min_subscribers) who say in their channel description or a video of the last outreach_days days that clips are allowed; the rows go to clips/outreach.csv for Charlie to read on the hub's Clips tab. Nothing is sent (docs/OUTREACH.md).",
+ "outreach_max_subscribers": 50000,
+ "outreach_min_subscribers": 500,
+ "outreach_searches": 3,
+ "outreach_days": 90,
+ "outreach_every_days": 7
 }

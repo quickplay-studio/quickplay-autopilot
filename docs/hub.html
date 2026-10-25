@@ -456,6 +456,7 @@ async function load(force){
     get("analytics/hourly.csv", "csv"), get("status/actions.json", "json"), get("status/keys.json", "json")]);
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
        drivers, geo, regions, changes, late, hourly, actions, keys};
+  D.outreach = await get("clips/outreach.csv", "csv");      // the creator scout's list (clips tab)
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -821,7 +822,17 @@ function render(){
       {h:"Campaign", f:r => esc(r.campaign)},
       {h:"Where", f:r => esc([r.platform, r.channel].filter(Boolean).join(", "))},
       {h:"Status", f:status}
-    ], subs, "No clips yet.")}`;
+    ], subs, "No clips yet.")}
+    <h2>Creators who say clips are allowed</h2>
+    <p class="sub">Found each week by the creator scout (small channels that say so in their own words). Nothing is sent: ask for written permission first, message in docs/OUTREACH.md; set the status in clips/outreach.csv.</p>
+    ${table([
+      {h:"Channel", f:r => `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.channel)}</a>`},
+      {h:"Subs", n:1, f:r => fmt(+r.subscribers)},
+      {h:"Niche", f:r => esc(r.niche)},
+      {h:"They say", f:r => esc(r.evidence)},
+      {h:"Found", nw:1, f:r => esc(r.found_on)},
+      {h:"Status", f:r => esc(r.status)}
+    ], (D.outreach || []).slice(-15).reverse(), "None yet: the first scout runs with the next 08:35 UTC scout, or at once with an outreach request.")}`;
 
   // Campaigns to join
   $("scout").innerHTML = `

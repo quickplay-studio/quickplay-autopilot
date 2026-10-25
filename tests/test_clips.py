@@ -183,8 +183,10 @@ m = {"id": "speed-expedia-12", "start": 9.0, "end": 18.0, "hook": "x"}
 assert "IShowSpeed" in C.question_for("speed-expedia", C.CFG["campaigns"]["speed-expedia"], m)
 print("11 comment questions ok")
 
-# 12. several YouTube channels per campaign: each channel has its own number, ceiling and moments
+# 12. several YouTube channels per campaign (an entry still written with a "channels" list): each channel has its own number, ceiling and moments
 C.CFG["campaigns"] = json.loads(pathlib.Path(REPO_DIR + "/clips/campaigns.json").read_text())["campaigns"]
+for _cid, _c in C.CFG["campaigns"].items():          # the campaigns as they were before 25 October pinned each to its one channel (tests/test_clips_policy.py)
+    if _c.get("channel"): _c["channels"] = ["clips", _c.pop("channel")]
 C.CFG["campaigns"]["tdr-mitch"]["channels"] = ["clips", "gaming"]
 C.CFG["campaigns"]["tdr-jenny"].pop("channels", None)
 assert C.campaign_channels("tdr-mitch") == ["clips", "gaming"] and C.channel_of("tdr-mitch") == "clips" and C.campaign_channels("tdr-jenny") == ["clips"]

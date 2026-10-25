@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-25T01:36+00:00",
+ "updated": "2026-10-25T02:37+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-24T19:10+00:00",
  "youtube": {
   "subscribers": 12,
-  "public_shorts": 143,
-  "views_all_time": 25635,
+  "public_shorts": 144,
+  "views_all_time": 25828,
   "views_last_90_days": 5793,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 8339,
+  "views_last_90_days_estimate": 8402,
   "analytics_last_day": "2026-10-22"
  },
  "instagram": {
@@ -20,7 +20,7 @@
  "facebook": {
   "followers": 0,
   "page": "Quickplay Daily",
-  "reels": 54,
+  "reels": 55,
   "insights_error": null
  },
  "ypp": {
@@ -35,7 +35,7 @@
   "from_2027": {
    "shorts_views_needed_90_days": 20000000,
    "views_pct": 0.04,
-   "views_needed_per_day": 222130,
+   "views_needed_per_day": 222129,
    "watch_hours_needed_365_days": 8000,
    "watch_hours_365d": null
   }

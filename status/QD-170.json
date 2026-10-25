@@ -1,0 +1,161 @@
+{
+ "id": "QD-170",
+ "board": "boards/queue/QD-170.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T14:00:00Z",
+ "rendered": "2026-10-25T09:49:27.157397+00:00",
+ "title": "Tech Truths #3: Windows XP Bliss wallpaper now on Crocs (Part 2) 👟",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Windows XP desktop: no Commons image named 'Windows XP desktop')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 11,
+  "pic_found_share": 0.86,
+  "pic_relevance": 0.046,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 30,
+  "pic_searches": 6,
+  "pic_reranked": 4,
+  "pic_dups": 0,
+  "pic_secs": 12.8
+ },
+ "music": "rubberband",
+ "social_music": "gentle-bluegrass-country-folk-daisy-203460",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 38.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 24.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 611.0,
+   "contrast": 0.142,
+   "face_area": 0.0,
+   "text_area": 0.1856,
+   "caption_contrast": 17.64,
+   "by_frame": {
+    "sharpness": [
+     478.2,
+     659.8,
+     655.3,
+     650.8
+    ],
+    "contrast": [
+     0.129,
+     0.146,
+     0.146,
+     0.146
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1399,
+     0.2013,
+     0.2008,
+     0.2002
+    ],
+    "caption_contrast": [
+     17.64,
+     17.65,
+     17.65,
+     17.63
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.34,
+   "title",
+   1
+  ],
+  [
+   3.34,
+   11.81,
+   "stat",
+   1
+  ],
+  [
+   11.81,
+   20.12,
+   "none",
+   1
+  ],
+  [
+   20.12,
+   24.48,
+   "none",
+   2
+  ],
+  [
+   24.48,
+   30.27,
+   "none",
+   1
+  ],
+  [
+   30.27,
+   35.41,
+   "versus",
+   1
+  ],
+  [
+   35.41,
+   38.01,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "6395",
+   "q": "computer desktop wallpaper",
+   "t0": 0.0,
+   "t1": 19.31
+  },
+  {
+   "p": "pixabay",
+   "id": "47219",
+   "q": "circuit board closeup",
+   "t0": 18.71,
+   "t1": 38.01
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T10:05:52Z",
+ "video": "uwq3RbhcXZQ",
+ "url": "https://youtube.com/shorts/uwq3RbhcXZQ",
+ "publish_at": "2026-10-25T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-170"
+}

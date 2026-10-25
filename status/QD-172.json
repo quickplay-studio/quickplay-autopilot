@@ -1,0 +1,180 @@
+{
+ "id": "QD-172",
+ "board": "boards/queue/QD-172.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T17:00:00Z",
+ "rendered": "2026-10-25T09:49:06.760701+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Mortimer and Whitehouse: Ted's last trip 🐾",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media_notes": [
+  "beat 5 reused a nearby picture (commons-search:Bob Mortimer and Paul Whitehouse fishing: no Commons image named 'Bob Mortimer and Paul Whitehouse fishing')",
+  "beat 7 reused a nearby picture (commons-search:Mortimer and Whitehouse Gone Fishing: no Commons image named 'Mortimer and Whitehouse Gone Fishing')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 13,
+  "pic_found_share": 0.71,
+  "pic_relevance": 0.365,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 12,
+  "pic_searches": 2,
+  "pic_reranked": 2,
+  "pic_dups": 1,
+  "pic_secs": 5.5
+ },
+ "music": "rise-of-the-machines",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 38.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 702.3,
+   "contrast": 0.163,
+   "face_area": 0.0,
+   "text_area": 0.1643,
+   "caption_contrast": 17.53,
+   "by_frame": {
+    "sharpness": [
+     554.7,
+     788.0,
+     756.8,
+     709.9
+    ],
+    "contrast": [
+     0.142,
+     0.169,
+     0.17,
+     0.173
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1289,
+     0.1769,
+     0.1765,
+     0.1747
+    ],
+    "caption_contrast": [
+     17.51,
+     17.52,
+     17.54,
+     17.58
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.02,
+   "title",
+   0
+  ],
+  [
+   5.02,
+   10.4,
+   "none",
+   1
+  ],
+  [
+   10.4,
+   14.89,
+   "none",
+   1
+  ],
+  [
+   14.89,
+   21.39,
+   "date",
+   1
+  ],
+  [
+   21.39,
+   27.96,
+   "none",
+   1
+  ],
+  [
+   27.96,
+   34.24,
+   "none",
+   1
+  ],
+  [
+   34.24,
+   38.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "134382",
+   "q": "river fishing sunrise",
+   "t0": 0.0,
+   "t1": 13.19
+  },
+  {
+   "p": "pixabay",
+   "id": "70202",
+   "q": "countryside lake mist",
+   "t0": 12.59,
+   "t1": 25.78
+  },
+  {
+   "p": "pixabay",
+   "id": "147803",
+   "q": "river fishing sunrise",
+   "t0": 25.18,
+   "t1": 38.37
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T10:05:57Z",
+ "video": "8NBbhUrLjGU",
+ "url": "https://youtube.com/shorts/8NBbhUrLjGU",
+ "publish_at": "2026-10-25T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-172"
+}

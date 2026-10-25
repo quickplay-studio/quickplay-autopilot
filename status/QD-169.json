@@ -1,0 +1,168 @@
+{
+ "id": "QD-169",
+ "board": "boards/queue/QD-169.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T11:00:00Z",
+ "rendered": "2026-10-25T09:48:41.863115+00:00",
+ "title": "Tech Truths #1: Windows XP arrived in shops (Part 1) 💻",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Windows XP retail box: no Commons image named 'Windows XP retail box')",
+  "beat 3 reused a nearby picture (commons-search:vintage PC CRT monitor: no Commons image named 'vintage PC CRT monitor')",
+  "beat 4 reused a nearby picture (commons-search:Bliss wallpaper hill Sonoma: no Commons image named 'Bliss wallpaper hill Sonoma')",
+  "beat 5 reused a nearby picture (commons-search:computer store 2001: no Commons image named 'computer store 2001')",
+  "beat 6 reused a nearby picture (commons-search:desktop PC computer vintage: no Commons image named 'desktop PC computer vintage')",
+  "beat 7 reused a nearby picture (commons-search:Windows XP retail box: no Commons image named 'Windows XP retail box')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 8,
+  "extra_photos": 6,
+  "pic_found_share": 0.14,
+  "pic_relevance": 0.165,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 7,
+  "pic_searches": 1,
+  "pic_reranked": 1,
+  "pic_dups": 0,
+  "pic_secs": 2.4
+ },
+ "music": "after-sunset",
+ "social_music": "synthwave-emotions-580875",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1019",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal"
+ },
+ "qa": {
+  "duration": 38.7,
+  "wps": 2.98,
+  "weak_beats": [],
+  "size_mb": 27.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1160.9,
+   "contrast": 0.185,
+   "face_area": 0.0,
+   "text_area": 0.0528,
+   "caption_contrast": 6.81,
+   "by_frame": {
+    "sharpness": [
+     1296.9,
+     1358.9,
+     1382.2,
+     605.7
+    ],
+    "contrast": [
+     0.187,
+     0.187,
+     0.187,
+     0.179
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0865,
+     0.0463,
+     0.0468,
+     0.0315
+    ],
+    "caption_contrast": [
+     8.04,
+     7.02,
+     6.6,
+     3.5
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.49,
+   "none",
+   3
+  ],
+  [
+   5.49,
+   11.21,
+   "none",
+   4
+  ],
+  [
+   11.21,
+   16.37,
+   "none",
+   4
+  ],
+  [
+   16.37,
+   21.72,
+   "none",
+   4
+  ],
+  [
+   21.72,
+   27.93,
+   "none",
+   4
+  ],
+  [
+   27.93,
+   34.28,
+   "none",
+   4
+  ],
+  [
+   34.28,
+   38.66,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "13370",
+   "q": "circuit board macro",
+   "t0": 0.0,
+   "t1": 19.63
+  },
+  {
+   "p": "pixabay",
+   "id": "47216",
+   "q": "circuit board closeup",
+   "t0": 19.03,
+   "t1": 38.65
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T10:05:47Z",
+ "video": "ycIgW6dE9lc",
+ "url": "https://youtube.com/shorts/ycIgW6dE9lc",
+ "publish_at": "2026-10-25T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-169"
+}

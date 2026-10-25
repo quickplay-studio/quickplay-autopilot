@@ -1,0 +1,182 @@
+{
+ "id": "QD-173",
+ "board": "boards/queue/QD-173.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T19:00:00Z",
+ "rendered": "2026-10-25T09:49:26.320751+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab-energy-1019",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "barbara palvin 13 years old: the church choice 💒",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:960px-MKr382323_Barbara_Palvin_%28Cannes_2025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')",
+  "beat 3 reused a nearby picture (commons-search:Prada runway Milan: no Commons image named 'Prada runway Milan')",
+  "beat 4 reused a nearby picture (commons-search:L'Oreal Paris ambassador: no Commons image named 'L'Oreal Paris ambassador')",
+  "beat 6 reused a nearby picture (commons:File:960px-MKr382323_Barbara_Palvin_%28Cannes_2025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')",
+  "beat 7 reused a nearby picture (commons:File:960px-MKr382323_Barbara_Palvin_%28Cannes_2025%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 11,
+  "pic_found_share": 0.29,
+  "pic_relevance": 0.017,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 10,
+  "pic_searches": 2,
+  "pic_reranked": 1,
+  "pic_dups": 0,
+  "pic_secs": 5.0
+ },
+ "music": "level",
+ "social_music": "epic-orchestral-inspiration-572059",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 32.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 19.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 501.3,
+   "contrast": 0.186,
+   "face_area": 0.003,
+   "text_area": 0.0465,
+   "caption_contrast": 17.36,
+   "by_frame": {
+    "sharpness": [
+     424.9,
+     448.6,
+     452.8,
+     679.0
+    ],
+    "contrast": [
+     0.168,
+     0.179,
+     0.188,
+     0.207
+    ],
+    "face_area": [
+     0.0,
+     0.0064,
+     0.0,
+     0.0056
+    ],
+    "text_area": [
+     0.0402,
+     0.038,
+     0.0382,
+     0.0696
+    ],
+    "caption_contrast": [
+     17.35,
+     17.38,
+     17.38,
+     17.23
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.61,
+   "none",
+   0
+  ],
+  [
+   3.61,
+   6.07,
+   "none",
+   1
+  ],
+  [
+   6.07,
+   12.35,
+   "stat",
+   1
+  ],
+  [
+   12.35,
+   18.96,
+   "stat",
+   1
+  ],
+  [
+   18.96,
+   25.09,
+   "date",
+   1
+  ],
+  [
+   25.09,
+   29.88,
+   "none",
+   1
+  ],
+  [
+   29.88,
+   32.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "155020",
+   "q": "budapest street daytime",
+   "t0": 0.0,
+   "t1": 11.19
+  },
+  {
+   "p": "pixabay",
+   "id": "173348",
+   "q": "church interior candles",
+   "t0": 10.59,
+   "t1": 21.78
+  },
+  {
+   "p": "pixabay",
+   "id": "19621",
+   "q": "red carpet lights",
+   "t0": 21.18,
+   "t1": 32.37
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T10:06:01Z",
+ "video": "LENtoDiGI8E",
+ "url": "https://youtube.com/shorts/LENtoDiGI8E",
+ "publish_at": "2026-10-25T19:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T19:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-173"
+}

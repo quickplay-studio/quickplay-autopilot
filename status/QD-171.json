@@ -1,0 +1,159 @@
+{
+ "id": "QD-171",
+ "board": "boards/queue/QD-171.json",
+ "mode": "schedule",
+ "slot": "2026-10-25T15:30:00Z",
+ "rendered": "2026-10-25T09:49:01.194655+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Sport Shocks #1: UFC 333: Volkanovski wins record ninth title",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Petr Yan: no Commons image named 'Petr Yan')",
+  "beat 5 reused a nearby picture (commons-search:Lone'er Kavanagh: no Commons image named 'Lone'er Kavanagh')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 9,
+  "pic_found_share": 0.67,
+  "pic_relevance": 0.349,
+  "pic_model": "siglip2-base-patch16-224:612923381c76",
+  "pic_scored": 10,
+  "pic_searches": 3,
+  "pic_reranked": 1,
+  "pic_dups": 0,
+  "pic_secs": 2.7
+ },
+ "music": "rise-of-the-machines",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard"
+ },
+ "qa": {
+  "duration": 38.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 994.9,
+   "contrast": 0.176,
+   "face_area": 0.0,
+   "text_area": 0.1774,
+   "caption_contrast": 17.5,
+   "by_frame": {
+    "sharpness": [
+     727.2,
+     1082.3,
+     1083.9,
+     1086.1
+    ],
+    "contrast": [
+     0.151,
+     0.185,
+     0.185,
+     0.185
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1481,
+     0.187,
+     0.1873,
+     0.1871
+    ],
+    "caption_contrast": [
+     17.46,
+     17.44,
+     17.53,
+     17.53
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.16,
+   "title",
+   0
+  ],
+  [
+   5.16,
+   13.56,
+   "none",
+   1
+  ],
+  [
+   13.56,
+   19.8,
+   "none",
+   1
+  ],
+  [
+   19.8,
+   25.09,
+   "none",
+   1
+  ],
+  [
+   25.09,
+   31.69,
+   "none",
+   1
+  ],
+  [
+   31.69,
+   38.91,
+   "stat",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47052",
+   "q": "abu dhabi arena night",
+   "t0": 0.0,
+   "t1": 38.91
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-25T10:05:55Z",
+ "video": "KisKqgSnwHs",
+ "url": "https://youtube.com/shorts/KisKqgSnwHs",
+ "publish_at": "2026-10-25T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-25T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-171"
+}

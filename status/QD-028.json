@@ -12,5 +12,10 @@
   "weak_beats": [],
   "size_mb": 9.0
  },
- "state": "waiting for YouTube's daily upload limit"
+ "state": "expired: held since 16 October, 9 days late (freshness rule, cleared 25 October)",
+ "late": {
+  "alive": false,
+  "days_late": 9,
+  "evidence": "a board left in boards/hold since 16 October; news that old is not posted"
+ }
 }

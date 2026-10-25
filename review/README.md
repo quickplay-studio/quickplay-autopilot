@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 12 public, 6 scheduled | 4 | 1 | ⏳ 12 of 14 so far, 6 more scheduled |
+| Sun 25 Oct | 13 public, 5 scheduled | 4 | 1 | ⏳ 13 of 14 so far, 5 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -92,7 +92,7 @@ scheduled · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-1
 ![QD-172](QD-172.jpg)
 
 ### Sun 25 Oct 15:30 · Sport Shocks #1: UFC 333: Volkanovski wins record ninth title
-scheduled · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
+private · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
 
 ![QD-171](QD-171.jpg)
 

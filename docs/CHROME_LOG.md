@@ -22,6 +22,21 @@ Claude in Chrome acts inside web pages only, and Claude never handles credential
 
 ## One-off jobs
 
+### open: Why the clips channels get no views: read YouTube Studio (25 October)
+Charlie: "find why the clips are getting no views". 69 of 93 public clips have 0 views, which only a channel kept out of
+the Shorts feed produces. For each clips channel (Quickplay Clips, Quickplay Gaming Clips, Quickplay IRL Clips), signed
+in as the studio account in Chrome:
+1. Open https://studio.youtube.com, switch to the channel (top right, Switch account), then Content. Note any label on
+   the clips: "Limited", "Copyright", "Ineligible", "Restricted", "Made for kids", "Checks" still running.
+2. Open Analytics, Reach (or Content, Shorts): the last 28 days' views by traffic source (Shorts feed, Browse, Search,
+   External). Note the Shorts feed figure and "Shown in feed" or impressions if present.
+3. Open Settings, Channel, Feature eligibility: note the verification level (phone verified? intermediate features?)
+   and Channel, Advanced settings: "Reused content" or any policy notice; also the Dashboard's notices and Community
+   guidelines status (any strike or warning).
+4. Write the findings as one line per channel into docs/CLIPS.md (date, channel, the labels, the feed figure, any
+   notice) and tell Charlie in the run's message. Do not change any setting.
+
+
 ### waiting: Instagram and Facebook for Quickplay Clips (22 October)
 Charlie asked on 22 October at 19:45 UK to create the account and the Page; the secrets are his to paste too.
 Waiting for him:

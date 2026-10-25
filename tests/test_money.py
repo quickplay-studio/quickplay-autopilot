@@ -22,6 +22,7 @@ print("money ok")
 
 # clips YouTube shows to nobody: the reach check per channel (clips.reach_check) and one issue naming them (alerts.reach_alert)
 import clips as C
+C.reach_traffic = lambda channels, days=14: {c: {"total": 0, "SHORTS": 0, "feed_share": None} for c in channels}
 C.ROOT = root
 rows = [{"channel": "clips", "privacy": "public", "hours_public": "30", "views": "0", "rejected": "", "blocked_in": "0",
          "age_restricted": "0", "for_kids": "0"} for _ in range(9)]

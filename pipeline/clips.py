@@ -1490,7 +1490,43 @@ def reach_check(rows):
         c["unseen"] = n >= 8 and (c["no_views"] >= 0.7 * n or c.get("views_day_old", 0) < 5 * n)
         t = c.get("take_day_old", 0)
         c["take_unseen"] = t >= 8 and (c.get("take_no_views", 0) >= 0.7 * t or c.get("take_views", 0) < 5 * t)
+    try: traffic = reach_traffic(list(out))              # where the views come from, per channel (YouTube Analytics)
+    except Exception as e: traffic = {"error": f"{type(e).__name__}: {str(e)[:120]}"}
+    for ch, t in (traffic.items() if isinstance(traffic, dict) else []):
+        if ch in out and isinstance(t, dict): out[ch]["traffic_14d"] = t
     (ROOT / "clips" / "reach.json").write_text(json.dumps({"as_of": NOW.isoformat(timespec="minutes"), "channels": out}, indent=1))
+    return out
+
+
+def reach_traffic(channels, days=14):
+    """Per clips channel, the last `days` days from YouTube Analytics through the channel's own sign-in: views by traffic
+    source (SHORTS is the Shorts feed; 0 there with public clips means YouTube is not putting them in the feed at all),
+    engaged views, and subscribers gained. 25 October (Charlie: "find why the clips are getting no views"): 69 of 93 public
+    clips had 0 views, which only a channel kept out of the feed produces. One query a channel (no units: Analytics is
+    not metered like the Data API)."""
+    import youtube as Y
+    from googleapiclient.discovery import build
+    out = {}
+    start, end = str((NOW - dt.timedelta(days=days)).date()), str(NOW.date())
+    for ch in channels:
+        try:
+            ya = build("youtubeAnalytics", "v2", credentials=Y.creds_for(ch), cache_discovery=False)
+            r = ya.reports().query(ids="channel==MINE", startDate=start, endDate=end, metrics="views,engagedViews",
+                                   dimensions="insightTrafficSourceType", sort="-views").execute()
+            cols = [c["name"] for c in r.get("columnHeaders", [])]
+            rows = [dict(zip(cols, row)) for row in r.get("rows", []) or []]
+            tot = sum(int(x.get("views") or 0) for x in rows)
+            t = {x["insightTrafficSourceType"]: int(x.get("views") or 0) for x in rows}
+            t["total"] = tot; t["engaged"] = sum(int(x.get("engagedViews") or 0) for x in rows)
+            try:
+                d = ya.reports().query(ids="channel==MINE", startDate=start, endDate=end, metrics="subscribersGained,subscribersLost").execute()
+                row = (d.get("rows") or [[0, 0]])[0]; t["subs_gained"], t["subs_lost"] = int(row[0]), int(row[1])
+            except Exception: pass
+            t["feed_share"] = round(t.get("SHORTS", 0) / tot, 2) if tot else None
+            out[ch] = t
+        except Exception as e:
+            out[ch] = {"error": f"{type(e).__name__}: {str(e)[:120]}"}
+    log("reach traffic:", json.dumps(out)[:600])
     return out
 
 

@@ -752,7 +752,8 @@ function render(){
     <h2>Money and the Partner Programme</h2>
     <div class="card"><div class="hero"><div><div class="big">${money(earned)}</div><div class="lab">Clips earnings so far (estimate from views over each campaign's minimum). Campaigns pay in US dollars; pounds at ${FX ? `today's rate, $1 = £${FX.rate.toFixed(4)} (${esc(FX.source)})` : "today's rate when it can be read"}.</div></div></div>
       ${meter("Quickplay Daily subscribers (Partner Programme needs 1,000)", num(prog.subscribers || y.subscribers), num(ypp.subscribers_needed) || 1000)}
-      ${meter("Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
+      ${meter("Engaged Shorts views in the last 90 days (needs 10 million)", num(prog.engaged_views_90d || y.views_last_90_days_estimate), num(ypp.shorts_views_needed_90_days) || 1e7)}
+      <div class="sub">The Partner Programme counts engaged views (a play that stays past the first seconds), about a third of plays: ${fmt(num(y.views_all_time))} plays in all, ${fmt(num(y.views_last_90_days))} engaged views in YouTube's own count to ${esc(y.analytics_last_day || "")} (it runs 2 to 3 days behind), plus an estimate for the days since at the recent engaged share. The chart below counts plays.</div>
       <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}
         ${ypp.from_2027 ? `From 1 February 2027 the bar doubles: 20 million Shorts views in 90 days (${num(ypp.from_2027.views_pct).toFixed(2)}% there), or 8,000 watch hours on long videos in a year (${ypp.from_2027.watch_hours_365d == null ? "not measured yet" : fmt(ypp.from_2027.watch_hours_365d) + " so far"}), with 1,000 subscribers either way.` : ""}</div>
     </div>

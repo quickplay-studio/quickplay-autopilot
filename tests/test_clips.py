@@ -7,6 +7,7 @@ import csv, datetime as dt, json, os, pathlib, shutil, subprocess, sys
 os.chdir(REPO_DIR)
 sys.path.insert(0, REPO_DIR + "/pipeline")
 import clips as C
+C.reach_traffic = lambda channels, days=14: {c: {"total": 0, "SHORTS": 0, "feed_share": None} for c in channels}
 
 # 1. only active campaigns with rules and a source are used
 cs = C.campaigns()

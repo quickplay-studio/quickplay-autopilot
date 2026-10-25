@@ -337,7 +337,7 @@ d_en = RB.description(EN, credits, track)
 assert "Sources:" in d_en and "Visuals:" in d_en and "Music: Sunny Day by Kevin MacLeod" in d_en and "Independent channel, not affiliated" in d_en and "Fuentes" not in d_en
 assert RB.localize(good["meta"], d_es) == {}                       # the mirror carries no translations of its own
 src = open("pipeline/run_board.py").read()
-assert '**({"language": "es"} if es else {})' in src and '"localizations": {} if es else localize(meta, desc)' in src
+assert '**({"language": "es"} if es else {})' in src and '"localizations": {} if es else localize(meta, desc' in src
 
 module = lambda name, **attrs: sys.modules.__setitem__(name, types.ModuleType(name)) or sys.modules[name].__dict__.update(attrs)
 repo = SCRATCH / "repo"

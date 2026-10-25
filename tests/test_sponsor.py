@@ -228,7 +228,7 @@ SP.active, SP.fetch_sound = real_active, real_fetch
 sb = {"meta": {"summary": "Three games are free.", "sources": [["Steam", "https://store.steampowered.com"]], "hashtags": ["#Gaming", "#Steam"]}}
 plain = RB.description(sb, [], {"title": "Track", "artist": "Artist"})
 assert "#ad" not in plain and "Paid promotion" not in plain, plain       # no campaign: the description is as it was
-paid = RB.description(sb, [], SP.track(camps["spring"]), camps["spring"])
+paid = RB.description(sb, [], SP.track(camps["spring"]), "", camps["spring"])
 lines = paid.split("\n")
 assert lines[0].startswith("#ad Paid promotion") and lines[1] == "" and lines[2] == "Three games are free.", lines[:4]
 assert "Music: Spring Sound Challenge by Spring (supplied by the campaign)" in paid

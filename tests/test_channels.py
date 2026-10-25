@@ -138,7 +138,7 @@ class LimitReached(Exception): pass
 Y.LimitReached = LimitReached
 def fake_upload(yt, path, title, description, tags, category, publish_at=None, localizations=None, **kw):
     if title == "refused": raise LimitReached("uploadLimitExceeded")
-    uploads.append((yt, title, kw)); return f"vid-{title}"
+    uploads.append((yt, title, {k: v for k, v in kw.items() if k != "paid" or v})); return f"vid-{title}"
 Y.upload = fake_upload
 Y.video_status = lambda yt, vid: {"privacy": "private", "publish_at": "2026-10-27T10:00:00Z"}
 res = SCRATCH / "results"

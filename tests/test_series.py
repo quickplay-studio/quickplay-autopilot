@@ -359,6 +359,9 @@ def fake(prompt, schema=None, timeout=100, temperature=0.1, lite=False, **kw):
 F.gemini = fake
 dd = json.loads(F.OUT.read_text()); dd["mode"] = "full"
 PACK = json.loads(json.dumps(dd["topics"][0])); dd["topics"] = []                   # no news: the search-led Shorts are the run
+PACK.setdefault("sources", [["Test source", "https://example.org/test", "A test page", "2026-10-25"]])     # the live pack can lack what the writer reads
+if len(PACK.get("verified") or []) + len(PACK.get("one_source") or []) < 2:          # the live pack can be thin: the writer wants 2 facts
+    PACK["verified"] = (PACK.get("verified") or []) + [{"claim": "Fact one for the test", "sources": [1]}, {"claim": "Fact two for the test", "sources": [1]}]
 F.OUT = SCRATCH / "facts_full.json"; F.OUT.write_text(json.dumps(dd))
 F.page_text = lambda url, wiki=False: (TEXT, "")
 S.own_terms = lambda root=None, n=12: [{"text": "why is minecraft so popular", "source": "our search traffic", "detail": "40 views"}]

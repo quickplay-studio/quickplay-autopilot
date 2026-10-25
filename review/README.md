@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 19:33): 15 of 1,000 subscribers · 9,475 of 10 million Shorts views in 90 days · 4,901 views in the last 24 hours (about 111,006 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 20:34): 15 of 1,000 subscribers · 9,560 of 10 million Shorts views in 90 days · 4,810 views in the last 24 hours (about 111,005 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Sun 25 Oct | 15 public, 3 scheduled | 4 | 1 | ✅ done |
+| Sun 25 Oct | 16 public, 2 scheduled | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -91,7 +91,7 @@ scheduled · 38 s · music: duty-calls · [script](../boards/done/QD-175.json) �
 ![QD-175](QD-175.jpg)
 
 ### Sun 25 Oct 20:30 · Halloween skywatch: five spooky targets revealed
-scheduled · 30 s · music: horizons · [script](../boards/done/QD-174.json) · [YouTube](https://youtube.com/shorts/GGUpuX9LM9I)
+private · 30 s · music: horizons · [script](../boards/done/QD-174.json) · [YouTube](https://youtube.com/shorts/GGUpuX9LM9I)
 
 ![QD-174](QD-174.jpg)
 

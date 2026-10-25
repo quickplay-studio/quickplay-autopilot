@@ -1,20 +1,101 @@
 {
  "date": "2026-10-25",
- "built": "2026-10-25T13:21+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "built": "2026-10-25T16:15+00:00",
+ "model": "gemini-3.5-flash-lite + gemini-3-flash-preview",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 13,
+   "n": 9,
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know GTA 6 costs $79.99?",
+    "GTA 6 physical copies do not include a disc!",
+    "The Ultimate Edition of GTA 6 is priced at $99.99."
+   ],
+   "sources": [
+    [
+     "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
+     "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
+     "Guardian",
+     "2026-10-24"
+    ],
+    [
+     "GTA 6 anticipation is sending PS5 Pro prices through the roof",
+     "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+     "Polygon",
+     "2026-09-01"
+    ],
+    [
+     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+     "IGN",
+     "2026-06-25"
+    ],
+    [
+     "GTA 6 price",
+     "https://en.wikipedia.org/wiki/Gas_Price",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto 6 costs $79.99 across PlayStation 5 and Xbox Series X and S.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X."
+     }
+    },
+    {
+     "claim": "GTA 6 physical copies do not include a disc, Rockstar has confirmed.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "GTA 6 physical copies do not include a disc, Rockstar has confirmed."
+     }
+    },
+    {
+     "claim": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The Ultimate Edition, meanwhile, is $20 more, priced $99.99."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Fan-Tankstelle_von_Dynamo_Dresden.JPG"
+   ]
+  },
+  {
+   "n": 10,
    "topic": "GTA 6 trailer views record",
    "signal": "watchlist: GTA 6 (build-up, 25 days to go)",
    "category": "Gaming",
-   "what_is_new": "Xbox Wire published an article on October 23, 2026, about the official Grand Theft Auto VI launch trailer.",
+   "what_is_new": "",
    "hooks": [
-    "Grand Theft Auto VI launch trailer details are finally here!",
-    "Explore Leonida before the game arrives on November 19."
+    "GTA 6 trailer drops, promising Leonida and a 30‑minute showcase.",
+    "Meet Jason and Lucia in Rockstar's new cinematic‑gameplay blend.",
+    "Release date set for Nov. 19, excitement builds worldwide."
    ],
    "sources": [
     [
@@ -22,24 +103,67 @@
      "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
      "Xbox Wire",
      "2026-10-23"
+    ],
+    [
+     "Every big reveal from the GTA 6 Netflix trailer",
+     "https://www.polygon.com/gta-6-netflix-preview-news-reveals-rockstar-games/",
+     "Polygon",
+     "2026-08-27"
     ]
    ],
    "verified": [],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto 6 will be released on Nov. 19.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Grand Theft Auto 6 will be released on PlayStation 5 and Xbox Series X on Nov. 19."
+     }
+    },
+    {
+     "claim": "A nearly 30 minute GTA 6 trailer premiered on Netflix.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "After months of waiting for actual Grand Theft Auto 6 gameplay, Rockstar finally delivered a nearly-30-minute GTA 6 trailer, first on Netflix and then available"
+     }
+    },
+    {
+     "claim": "The trailer mixes cinematics and gameplay.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The trailer was a mix of cinematics and gameplay, and it looked a lot like, well... Grand Theft Auto."
+     }
+    },
+    {
+     "claim": "The trailer features the characters Jason and Lucia.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "A handful of segments followed Jason and Lucia as they roamed around the city without any pressing concerns hanging over them, and Rockstar briefly swapped"
+     }
+    }
+   ],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
    ]
   },
   {
-   "n": 8,
+   "n": 6,
    "topic": "Halloween 2026",
    "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
    "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Spot Halloween fireballs from the Taurids this October night",
-    "Play the new Halloween: The Game on September 8, 2026",
-    "Watch Algol wink every 2.867 days in the night sky"
+    "Spot Halloween fireballs streaking from the Taurids this October.",
+    "Algol’s eerie wink signals a dimming star every few days.",
+    "Play Halloween: The Game on September eight for all consoles."
    ],
    "sources": [
     [
@@ -58,344 +182,278 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Taurids produce bright fireball meteors often called Halloween fireballs because they coincide with the annual celebration.",
+     "claim": "The star Algol dims every 2.867 days, becoming about three point three times dimmer for a ten hour eclipse.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Taurids are known for producing bright \"fireball\" meteors, which are often called \"Halloween fireballs\" because they tend to coincide with the annual celebration."
+      "1": "The demonic eye appears to \"wink\" at us every 2.867 days, as one of a pair of co-orbiting stars eclipses the other, making Algol appear"
      }
     },
     {
-     "claim": "Around the full moon on Oct. 26, spiderweb‑like patterns can be seen around the Tycho, Copernicus and Kepler craters on the Moon.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Look to the lunar disk in the week surrounding the full moon on Oct. 26 and you may notice a bright network of spiderweb‑like patterns"
-     }
-    },
-    {
-     "claim": "Halloween: The Game was released on September 8, 2026 for PlayStation 5, Windows and Xbox Series X and Series S.",
+     "claim": "Halloween: The Game was released on September 8 2026 for PlayStation 5 Windows and Xbox Series X and Series S.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "it is based on the 1978 film halloween and was released on september 8 2026 for playstation 5 windows and xbox series x and series s"
+      "2": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
      }
     },
     {
-     "claim": "The multiplayer mode pits one player as Michael Myers against four civilian players in Haddonfield.",
+     "claim": "The multiplayer mode pits one player as Michael Myers against four civilian players in an asymmetrical horror mode.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "The multiplayer mode is a one‑versus‑four asymmetrical horror mode in which one player controls Michael Myers, while four players control civilians in Haddonfield."
-     }
-    },
-    {
-     "claim": "The statement claimed that the presence of a controlled substance is behind the refusal.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "the account new zealand the statement claimed that the presence of a controlled substance is behind the refusal"
-     }
-    },
-    {
-     "claim": "A third map, Orange Grove Estates, was revealed in July 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "A third map, Orange Grove Estates, was revealed in July 2026."
+      "2": "The multiplayer mode is a one-versus-four asymmetrical horror mode in which one player controls Michael Myers, while four players control civilians in Haddonfield."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 10,
-   "topic": "Halloween history",
-   "signal": "watchlist: Halloween 2026 (build-up, 6 days to go)",
-   "category": "History",
-   "what_is_new": "Space.com published a guide on 2026-10-24 listing five Halloween themed skywatching targets.",
-   "hooks": [
-    "Did you know ancient Celtic druids celebrated Samhain when the Pleiades reached midnight?",
-    "The Demon Star Algol winks every 2.867 days in the night sky!",
-    "Ancient stargazers spotted terrifying sea monsters and spiderwebs on the moon!"
-   ],
-   "sources": [
-    [
-     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
-     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
-     "Space.com",
-     "2026-10-24"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Ancient Celtic druids held the celebration of Samhain when the Pleiades star cluster reached its highest point in the autumn night sky at midnight.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Ancient Celtic druids would hold the celebration of Samhain — the precursor to Halloween — when the star cluster reached its highest point in the"
-     }
-    },
-    {
-     "claim": "The Pleiades appears as a tight collection of six or seven bright twinkling stars to the naked eye.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Pleiades appears as a tight collection of six or seven bright twinkling stars to the naked eye, while a pair of binoculars will reveal"
-     }
-    },
-    {
-     "claim": "Algol is a beautiful binary system that represents an eye of the monstrous Gorgon Medusa.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Next we turn our gaze to the \"Demon Star\" Algol — a beautiful binary system that represents an eye of the monstrous Gorgon Medusa, whose"
-     }
-    },
-    {
-     "claim": "The demonic eye appears to wink at us every 2.867 days.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "the constellation perseus the demonic eye appears to wink at us every 2867 days as one of a pair of co orbiting stars eclipses the other making algol appear 33 times dimmer than usual at the climax or minima of"
-     }
-    },
-    {
-     "claim": "Algol won't be eclipsed on Halloween night in 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Algol won't be eclipsed on Halloween night in 2026, though you may notice its light dim during the surrounding minima on Oct. 29 and Nov."
-     }
-    },
-    {
-     "claim": "The constellation Cetus was a mighty sea beast that terrorized the coast of Aethiopia under the command of the god Poseidon.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In Greek mythology, Cetus was a mighty sea beast that terrorized the coast of Aethiopia under the command of the god Poseidon, according to the"
-     }
-    },
-    {
-     "claim": "The Taurids are comprised of two separate meteor showers which are active in late October.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Taurids are comprised of two separate meteor showers — the Northern Taurids and Southern Taurids — which are active in late October as Earth"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 37,
-   "topic": "EA shuts down BioWare",
-   "signal": "Bluesky trending, 9,580 posts",
-   "category": "Gaming",
-   "what_is_new": "In the two days since the closure announcement, fans have launched petitions and called for a boycott of EA.",
-   "hooks": [
-    "EA is shutting down BioWare after 30 years!",
-    "Fans are demanding an EA boycott after BioWare's closure."
-   ],
-   "sources": [
-    [
-     "BioWare's incredible legacy will continue as long as there are RPGs",
-     "https://www.pcgamer.com/games/rpg/biowares-incredible-legacy-will-continue-as-long-as-there-are-rpgs/",
-     "PC Gamer",
-     "2026-10-24"
-    ],
-    [
-     "Mass Effect Fans Call for EA Boycott as Petition to Save BioWare's Canceled Game Garners More than 75,000 Signatures",
-     "https://www.ign.com/articles/mass-effect-fans-call-for-ea-boycott-as-petition-to-save-biowares-canceled-game-garners-more-than-75000-signatures",
-     "IGN",
-     "2026-10-23"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "EA announced its plans to shut down BioWare on October 21.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On October 21, EA announced its plans to shut down BioWare, a 30-year-old studio that spearheaded RPGs in the West with titles like Dragon Age,"
-     }
-    },
-    {
-     "claim": "A fanmade petition urging EA to either sell off the IPs or hand development of Mass Effect 5 to a different studio has garnered over 76,500 signatures.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "At the time of writing, this petition has garnered over 76,500 signatures and counting as more fans and friends of the industry pile in."
-     }
-    },
-    {
-     "claim": "EA announced its plans to shut down BioWare.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "but then EA decided to finally murder BioWare after years of slowly poisoning it."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 21,
-   "topic": "saints vs steelers",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
+   "n": 28,
+   "topic": "Wildwood (film)",
+   "signal": "Wikipedia 96,858 views",
+   "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know the NFL is playing its first ever game in Paris?",
-    "The Steelers and Saints clash in Paris with very different season records!"
+    "Did you know Wildwood is the longest stop-motion animated film ever made?",
+    "Wildwood achieved a rare 100 percent approval rating on Rotten Tomatoes!",
+    "Laika's epic Wildwood carries a massive $100 million production budget."
    ],
    "sources": [
     [
-     "NFL Paris LIVE! Steelers face Saints at Stade de France",
-     "https://www.skysports.com/nfl/live-blog/12040/13603492/nfl-paris-2026-live-updates-result-highlights-from-new-orleans-saints-against-pittsburgh-steelers-at-stade-de-france",
-     "Sky Sports",
+     "‘Clayface’ Rolls to $24M Box Office Opening as ‘You Can See Everything’ Shines in Second Weekend",
+     "https://www.hollywoodreporter.com/movies/movie-news/clayface-box-office-you-can-see-everything-wildwood-1236739530/",
+     "The Hollywood Reporter",
      "2026-10-25"
     ],
     [
-     "NFL Paris Game Halftime Show 2026: Here’s Where to Watch Burna Boy Perform Live Online Free",
-     "https://www.billboard.com/culture/product-recommendations/nfl-paris-2026-burna-boy-halftime-show-watch-live-free-1236365165/",
-     "Billboard",
-     "2026-10-25"
-    ],
-    [
-     "The Steelers and Saints Face Off in Historic Paris Game — Here’s Where to Stream It Live",
-     "https://www.rollingstone.com/product-recommendations/lifestyle/where-to-watch-steelers-vs-saints-paris-football-game-live-1235647244/",
-     "Rolling Stone",
+     "Laika has spent 20 years building up to Wildwood",
+     "https://www.theverge.com/entertainment/1017740/wildwood-stop-motion-interview-laika",
+     "The Verge",
      "2026-10-24"
+    ],
+    [
+     "From Wildwood to John Legend: your complete entertainment guide to the week ahead",
+     "https://www.theguardian.com/culture/2026/oct/24/entertainment-week-ahead-wildwood-john-legend-suede-lives-of-others",
+     "Guardian",
+     "2026-10-24"
+    ],
+    [
+     "Wildwood (film)",
+     "https://en.wikipedia.org/wiki/Wildwood_(film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Wildwood has a theatrical runtime of 131 minutes, making it the longest stop-motionanimated film by run-time.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.[9]"
+     }
+    },
+    {
+     "claim": "Wildwood is directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Wildwood is a 2026 American stop-motion animated epic fantasy film[6][7][8] directed by Travis Knight and written by Chris Butler, based on the 2011 novel by"
+     }
+    },
+    {
+     "claim": "Wildwood is Laika's first film to receive a PG-13 rating from the Motion Picture Association.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.[11]"
+     }
+    },
+    {
+     "claim": "Carey Mulligan, Peyton Elizabeth Lee and Jacob Tremblay lead the voice cast for Travis Knight's feature about a teen girl venturing to an enchanted forest to save her baby brother.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Carey Mulligan, Peyton Elizabeth Lee and Jacob Tremblay lead the voice cast for Travis Knight’s feature about a teen girl venturing to an enchanted forest"
+     }
+    },
+    {
+     "claim": "Production took place at Laika's facility studio in Hillsboro, Oregon, with Caleb Deschanel serving as the cinematographer.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Production took place at Laika's facility studio in Hillsboro, Oregon, with Caleb Deschanel serving as the cinematographer."
+     }
+    },
+    {
+     "claim": "Wildwood won the Grand People's Choice Award for Best Feature film in the SOFC at the Sitges Film Festival on October 18, 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Sitges Film Festival | October 18, 2026 | Grand People's Choice Award for Best Feature film in the SOFC | Wildwood | Won"
+     }
+    },
+    {
+     "claim": "Wildwood is expected to clear around $11.6 million for the weekend.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Taking third place is Laika’s stop-motion animated movie Wildwood, expected to clear around $11.6 million for the weekend."
+     }
+    },
+    {
+     "claim": "Wildwood carries a hefty reported production budget of $100 million.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "However, Wildwood, which has earned Oscar buzz, carries a hefty reported production budget of $100 million, giving the film a high bar for profitability that"
+     }
+    },
+    {
+     "claim": "Wildwood holds a dazzling 100 percent approval rating on Rotten Tomatoes and a 97 from audiences.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Earning an A CinemaScore, Wildwood holds a dazzling 100 percent approval rating on Rotten Tomatoes and a 97 from audiences, with Scheck heralding it as"
+     }
+    },
+    {
+     "claim": "Travis Knight originally optioned the rights for the book of the same name, written by Decemberists frontman Colin Meloy, in 2011.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Laika CEO Travis Knight originally optioned the rights for the book of the same name, written by Decemberists frontman Colin Meloy, in 2011."
+     }
+    },
+    {
+     "claim": "Wildwood required nearly 50 animators and more than 200 puppets to pull it off.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It required nearly 50 animators and more than 200 puppets to pull it off, and the film is full of ambitious sequences, like a 12-minute"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 36,
+   "topic": "One Born Every Minute",
+   "signal": "TVmaze GB: season premiere tonight, 21:00",
+   "category": "Entertainment",
+   "what_is_new": "The documentary series One Born Every Minute returns for its 12th series on 25 October 2026.",
+   "hooks": [
+    "One Born Every Minute is back for a twelfth series.",
+    "The hit documentary series is returning on E4.",
+    "Discover what has changed in the new maternity series."
+   ],
+   "sources": [
+    [
+     "‘I can’t believe I get to see that’: One Born Every Minute is back for a 12th series",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/25/i-cant-believe-i-get-to-see-that-one-born-every-minute-is-back-for-a-12th-series",
+     "Guardian",
+     "2026-10-25"
+    ],
+    [
+     "One Born Every Minute",
+     "https://en.wikipedia.org/wiki/One_Born_Every_Minute",
+     "Wikipedia",
+     ""
     ]
    ],
    "verified": [
     {
-     "claim": "The Pittsburgh Steelers face the New Orleans Saints at Stade de France in the NFL's first-ever regular season game in Paris.",
+     "claim": "The first series of One Born Every Minute won a BAFTA award.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Live updates as Pittsburgh Steelers face New Orleans Saints at Stade de France in NFL's first-ever regular season game in Paris, live on Sky Sports",
-      "2": "In the middle of the NFL action during the Pittsburgh Steelers vs. New Orleans Saints game in Paris, global Afro-fusion star Burna Boy is set"
+      "1": "The first episode of the show, which airs on Sunday night, tackles topics that have come to the foreground in the years since the Bafta-winning",
+      "2": "The first series won a 2010 BAFTA for best factual series; the second series was nominated for a 2011 BAFTA for best factual series."
      }
     },
     {
-     "claim": "The Pittsburgh Steelers hold a 4-2 record this season while the New Orleans Saints hold a 2-4 record.",
+     "claim": "The original run of One Born Every Minute ended in 2018 after eleven series.",
      "sources": [
-      2,
-      3
+      1,
+      2
      ],
      "evidence": {
-      "2": "The NFL Paris Game happens on Sunday (Oct. 25) with a matchup featuring the Pittsburgh Steelers (4-2) taking on the New Orleans Saints (2-4) at",
-      "3": "The Steelers are nonetheless the favorites heading into the game. They have a 4-2 record this season and are coming off a two-game win streak"
+      "1": "The first episode of the show, which airs on Sunday night, tackles topics that have come to the foreground in the years since the Bafta-winning",
+      "2": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Global Afro-fusion star Burna Boy is set to perform at halftime during the NFL game in Paris.",
+     "claim": "One Born Every Minute is a British observational documentary series which shows activities taking place in the labour ward.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "In the middle of the NFL action during the Pittsburgh Steelers vs. New Orleans Saints game in Paris, global Afro-fusion star Burna Boy is set"
+      "2": "One Born Every Minute is a British observational documentary series which shows activities taking place in the labour ward."
      }
     },
     {
-     "claim": "The Stade de France is an over-80,000-seater and the largest stadium in the country.",
+     "claim": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018.",
      "sources": [
-      3
+      2
      ],
      "evidence": {
-      "3": "The two teams face off tomorrow at 9:30 a.m. ET in the Stade de France; the over-80,000-seater is the largest stadium in the country."
+      "2": "The programme originally ran for eleven series on Channel 4, premiering on 9 February 2010 and airing its final episode on 9 May 2018."
      }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 3,
-   "topic": "The Call the Police trend on TikTok and Instagram",
-   "signal": "Charlie's request",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Channel 4 just launched its very first vertical social media drama!",
-    "Meet the stars of the brand new microdrama The Guest List."
-   ],
-   "sources": [
-    [
-     "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
-     "Guardian",
-     "2026-10-24"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
+    },
     {
-     "claim": "Channel 4 has released its first vertical drama on social media in the UK called The Guest List.",
+     "claim": "In April 2026, Channel 4 announced that the series would return but this time on E4 later in the year and solely filmed at Saint Mary's Hospital in Manchester.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In April 2026, Channel 4 announced that the series would return (but this time on E4) later in the year and solely filmed at Saint"
+     }
+    },
+    {
+     "claim": "The number of caesarean births has doubled over the past decade.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Enter Channel 4, which has released its first vertical drama on social media in the UK."
+      "1": "These include caesarean births – it notes that these have doubled over the past decade – as well as health anxiety and pregnancy loss."
      }
     },
     {
-     "claim": "Episode one follows Amaka who is played by Jadesola Odunjo.",
+     "claim": "The most popular episodes of the show have attracted audiences of more than five million people.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "Episode one follows Amaka (Jadesola Odunjo) who – according to the publicity bumf – is “a PR guru who is bold, energetic and impossible to"
+      "2": "One Born Every Minute has to date achieved the highest ratings of any \"fixed rig\" multicamera documentary series, with its most popular episodes attracting audiences"
      }
     },
     {
-     "claim": "Finance intern Bella is played by Felicity Ali.",
+     "claim": "An American version of the show premiered on Lifetime Television on 1 February 2011.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "Next week’s episode finds finance intern Bella (Felicity Ali) on a work call, being patronised by her boss."
-     }
-    },
-    {
-     "claim": "Mika is played by Mia Ito Smith.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Meanwhile, the episode due for release on 4 November is perhaps the most relatable for me – Mika (Mia Ito Smith) racing to collect her"
-     }
-    },
-    {
-     "claim": "There are a mere five episodes in total in the series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "There are also a mere five episodes in total; while this is the broadcaster’s first foray into the format, it does feel rather slight."
+      "2": "In February 2011 an American version of One Born Every Minute premiered in the USA on Lifetime Television"
      }
     }
    ],

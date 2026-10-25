@@ -23,3 +23,50 @@ speed-expedia-08 (youtube, Content Rewards): failed: past the 30-minute window: 
 speed-expedia-09 (youtube, Content Rewards): failed: past the 30-minute window: check: window
 speed-expedia-10 (youtube, Content Rewards): failed: past the 30-minute window: check: window
 submit: 0 of 79 submitted
+=== run 2026-10-25 09:04 UTC, schedule '35 8 * * *', request ''
+radar: 29 streamers scored, hottest: MrBeast 1.94, IShowSpeed 1.43, HasanAbi 1.3, Marques Brownlee 1.12, Sidemen 1.11
+scout: https://contentrewards.com/c/discover: 105 campaign links so far
+scout: https://contentrewards.com/discover: 105 campaign links so far
+scout: https://contentrewards.com/c/campaigns: 105 campaign links so far
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+scout: (Parasocial with) Don Benitez: fits, heat 0.3: It is a clipping campaign, allows YouTube, provides specific footage links, is family frie
+scout: The Chris Heyn Show Clipping: fits, heat 0.3: It is a clipping campaign, YouTube is allowed, footage is provided, it is family-friendly,
+scout: Jesus Hernandez Clipping: no, heat 0.31: YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, p
+scout: Jesus Hernandez Clipping: no, heat 0.31: YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, p
+scout: ETCréations OCTOBRE 26: no, heat 0.0: It requires an application and focuses on fashion, but needs_application is true making it
+scout: Fliff | NFL Season Kickoff: no, heat 0.3: It involves gambling (Fliff social sportsbook), which violates the family-friendly and no-
+scout: Irubyana Twitch Clips: fits, heat 0.0: It is a clipping campaign, allows YouTube, provides named Twitch VOD source, is family-fri
+scout: Shuffle Streamers - Clipping: no, heat 0.0: It does not fit because Shuffle is a gambling/casino platform, violating the family-friend
+scout: Minogue For MA: no, heat 0.15: It is a political campaign, which violates the no politics rule.
+scout: TDCTrades Finsihed Edits: no, heat 0.0: It violates the family-friendly and money/investing advice criteria because it involves 'T
+scout: Agent Arcade Slideshows: no, heat 0.0: It involves money or investing advice (AI trades for you), which violates the channel's ru
+scout: G2G Channel Clipping Campaign: fits, heat 0.31: It is an open clipping campaign allowing YouTube, provides footage, offers family-friendly
+scout: HardScope x ClipFarm: fits, heat 0.0: It is a clipping campaign allowing YouTube Shorts with provided footage and fits family-fr
+scout: SKULLPANDA at Doja Cat’s 31st Birthday Party: fits, heat 0.3: It is a family-friendly clipping campaign allowing YouTube, provides footage, and is open 
+scout: Billy Porter Podcast Clipping Campaign: fits, heat 0.0: It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is cu
+scout: Double Coverage Podcast: fits, heat 0.0: It is an open clipping campaign allowing YouTube shorts with provided footage and fits all
+scout: The Iced Coffee Hour Podcast x Greg Lav: fits, heat 0.3: It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is cu
+scout: Ramp Tony Hawk FINALE: fits, heat 0.3: It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is cu
+scout: FableSMP Minecraft Clipping / Media Campaign: fits, heat 0.3: It is a family-friendly Minecraft clipping campaign allowing YouTube with provided footage
+scout: Riley Green - The Voice Coach Moments Clip [8417]: fits, heat 1.25: It is a clipping campaign, allows YouTube, provides source material direction, is family f
+scout: Clip LADbible's episode with john Cena & Jessica B: fits, heat 0.3: It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is cu
+scout: 2 Bears 1 Cave Clipping October: no, heat 0.3: It does not fit because 2 Bears 1 Cave is an adult comedy podcast that frequently contains
+scout: The Clip Ship: fits, heat 0.83: It is an open family-friendly clipping campaign allowing YouTube with provided footage.
+scout: Call of Duty MW4 عربي V2: no, heat 0.3: YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform
+scout: Customuse Creators: fits, heat 0.3: It is an open clipping campaign providing assets, allows YouTube, pays per view, and fits 
+scout: BABEL - AKIRA | Night Drive/City/Rave/Meme+ Edits: no, heat 0.3: YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign as 
+scout: BOTW X Syndicate: no, heat 0.32: YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, p
+scout: NettyWorth | Pokémon Pack Reveals [Clipping]: fits, heat 0.0: It is a family-friendly clipping campaign with provided footage, YouTube allowed, and open
+scout: FALL / HALLOWEEN Music Campaign - Late Checkout: no, heat 0.35: YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, p
+scout: Drink No Days Off: Fight Week: no, heat 0.0: YouTube Shorts are not paid on this campaign. YouTube is not listed among the allowed plat
+scout: WMW CLIPPING: no, heat 0.0: YouTube Shorts are not paid on this campaign. It is an open clipping campaign allowing You
+scout: PsyopAnime Clippers: fits, heat 0.3: It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is cu
+scout: Daimon X Syndicate: no, heat 0.53: YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform
+scout: Superstore: fits, heat 0.0: It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is op
+scout: Lacy 30 Day Campaign: fits, heat 0.35: It is a clipping campaign, allows YouTube, provides source footage, is family friendly, an
+scout: $10,000 Kai Cenat Campaign: no, heat 0.76: Kai Cenat content often contains swearing and adult themes, making it unsuitable for a fam
+scout: Scrub or Die [Horror Game]: fits, heat 0.0: It is an open Roblox horror game clipping campaign allowing YouTube with provided footage 
+scout: Survive the Horde [ROBLOX]: fits, heat 0.0: It is a family-friendly Roblox gaming clipping campaign on YouTube with an open status and
+scout: RoSandBox [Roblox]: fits, heat 0.0: It is a family-friendly Roblox clipping campaign that allows YouTube Shorts, provides foot
+scout: Double Coverage Podcast: fits, heat 0.0: It is a clipping campaign allowing YouTube Shorts with provided footage and remaining budg
+scout: 23 of 40 new campaigns fit

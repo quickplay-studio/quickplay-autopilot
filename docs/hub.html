@@ -447,15 +447,15 @@ async function load(force){
   LAST_LOAD = Date.now(); force = force === true;
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
-         drivers, geo, regions, changes, late, hourly, actions, keys] = await Promise.all([
+         drivers, geo, regions, changes, late, hourly, actions, keys, igs] = await Promise.all([
     get("analytics/summary.json", "json"), get("analytics/progress.csv", "csv"), get("analytics/daily.csv", "csv"), get("analytics/shorts.csv", "csv"),
     get("analytics/decisions.csv", "csv"), get("analytics/insights.md"), get("analytics/weekly.md"), get("clips/campaigns.json", "json"),
     get("clips/stats.csv", "csv"), get("clips/submit.csv", "csv"), get("status/scout.md"), get("status/streamers.md"), get("status/identity.json", "json"),
     get("status/social.json", "json"), get("status/channel.json", "json"), get("docs/CHROME_LOG.md"), issues(force), get("review/README.md"), get("analytics/models.json", "json"), get("status/claude_usage.json", "json"), get("analytics/slots.json", "json"), get("status/funnel.json", "json"), runs(force), fx(), get("status/watch.json", "json"), get("analytics/traffic.csv", "csv"), get("analytics/competitors.md"),
     get("analytics/drivers.csv", "csv"), get("analytics/geo.csv", "csv"), get("analytics/regions.csv", "csv"), get("analytics/changes.csv", "csv"), get("analytics/late_uploads.csv", "csv"),
-    get("analytics/hourly.csv", "csv"), get("status/actions.json", "json"), get("status/keys.json", "json")]);
+    get("analytics/hourly.csv", "csv"), get("status/actions.json", "json"), get("status/keys.json", "json"), get("status/instagram.json", "json")]);
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
-       drivers, geo, regions, changes, late, hourly, actions, keys};
+       drivers, geo, regions, changes, late, hourly, actions, keys, igs};
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -561,6 +561,23 @@ async function fillTests(){
       {h:"When", f:r => r.x.settled ? pill("good", "✓", "settled") : `about ${fmt(r.x.days_left)} days`}], rows, "No tests yet.");
 }
 
+// Instagram (25 October): status/instagram.json, written by social.ig_report with the Instagram section of insights.md
+function instagramCard(){
+  const g = D.igs;
+  if (!g) return `<p class="sub">Filled in by the next full analytics run.</p>`;
+  const c = g.cover || {}, w = g.week || {}, med = x => x == null ? "·" : fmt(x);
+  const cats = (g.categories || []).filter(x => x.median != null).map(x => `${x.favoured ? "<b>" : ""}${esc(x.category)} ${med(x.median)}${x.favoured ? "</b>" : ""} <span class="sub">(${fmt(x.n)})</span>`);
+  const arms = t => Object.entries(t.arms || {}).map(([k, a]) => `${esc(k)} <b>${fmt(a.n)}</b>${a.n ? ` <span class="sub">${med(a.median)} views</span>` : ""} <span class="sub">${Math.round(100 * a.share)}%</span>`
+    + (a.verdict === "push" || a.verdict === "cut back" ? " " + pill(a.verdict === "push" ? "good" : "bad", "·", a.verdict) : "")).join("<br>");
+  return `<div class="tiles" style="margin-top:0">
+      ${tile("Followers", g.followers == null ? "·" : fmt(g.followers), g.followers_week_ago == null ? "" : `${fmt(g.followers_week_ago)} a week ago`)}
+      ${tile("Reels measured", fmt(g.reels), `median ${med(g.median_views)} views; ${fmt(w.reels)} in the last 7 days`)}
+      ${tile("Cover frame", c.asked ? `${fmt(c.accepted)} of ${fmt(c.asked)}` : "·", c.asked ? "accepted by Instagram" + (c.refused ? `, ${fmt(c.refused)} refused` : "") : "none asked yet")}
+    </div>
+    <p>Median views by category: ${cats.join(", ") || "none yet"}. <span class="sub">Posted first, as soon as public: ${esc((g.favoured || []).join(", ") || "none")} (${g.own_medians ? "Instagram's own medians" : "the set order until " + fmt(g.min_reels) + " Reels are measured"}).</span></p>
+    ${table([{h:"Test", f:t => esc(t.label) + (t.on ? (t.paused ? " (paused)" : "") : " (off)")}, {h:"Arm, Reels, median, share", f:arms}], Object.values(g.tests || {}), "No tests yet.")}`;
+}
+
 function insightsTab(){
   const ins = D.insights || "";
   const updated = (ins.match(/updated ([^)]+)\)/) || [])[1] || "";
@@ -645,6 +662,10 @@ function insightsTab(){
       {h:"YouTube", n:1, f:r => cell(r.yt, B.yt)}, {h:"Instagram", n:1, f:r => cell(r.ig, B.ig)}]
       .concat(B.fb.med ? [{h:"Facebook", n:1, f:r => cell(r.fb, B.fb)}] : []), cp.rows, "No Shorts in the last 14 days.")}
     ${B.fb.n && !B.fb.med ? `<p class="sub" style="margin-top:8px">Facebook is left out: most of its ${fmt(B.fb.n)} Reels a day old or more have no plays yet, so it cannot rank categories.</p>` : ""}
+
+    <h2>Instagram</h2>
+    <p class="sub">Instagram picks its own Reels by its own medians and runs its own tests (trial reel, caption, posting hour). The same numbers are in the Instagram section of analytics/insights.md.</p>
+    ${instagramCard()}
 
     <h2>What is being changed now</h2>
     <p class="sub">The latest changes the analytics made to the Recipe from these numbers (newest first). Each is checked again on its date.</p>

@@ -111,18 +111,18 @@ S.requests.post = fake_post
 S.requests.get = lambda url, params=None, timeout=None, **kw: R(True, {"status_code": "FINISHED"})
 tok = {"token": "t", "user": "17841"}
 mid, used = S.ig_publish(tok, "https://x/social.mp4", "cap", trial=True, thumb_ms=1260)
-assert used == {"trial": "yes", "thumb_ms": 1260} and mid == "m1", (mid, used)
+assert used == {"trial": "yes", "thumb_ms": 1260, "thumb": "accepted"} and mid == "m1", (mid, used)
 assert json.loads(SENT[-1]["trial_params"]) == {"graduation_strategy": "SS_PERFORMANCE"} and SENT[-1]["thumb_offset"] == "1260"
 assert SENT[-1]["media_type"] == "REELS" and SENT[-1]["share_to_feed"] == "true"
 assert S.ig_trial_ok()
 REFUSE.add("trial_params"); SENT.clear()
 mid, used = S.ig_publish(tok, "https://x/social.mp4", "cap", trial=True, thumb_ms=1260)
-assert used == {"trial": "refused", "thumb_ms": 1260} and len(SENT) == 2 and "trial_params" not in SENT[1], used
+assert used == {"trial": "refused", "thumb_ms": 1260, "thumb": "accepted"} and len(SENT) == 2 and "trial_params" not in SENT[1], used
 assert not S.ig_trial_ok()                                       # Meta refused: no trial asked for 14 days
 st = json.loads((TMP / "status" / "instagram_trial.json").read_text()); assert "trial_params" in st["error"]
 REFUSE.add("thumb_offset"); SENT.clear()
 mid, used = S.ig_publish(tok, "https://x/social.mp4", "cap", trial=False, thumb_ms=1260)
-assert used == {"trial": "no", "thumb_ms": None} and len(SENT) == 2 and SENT[1].keys() >= {"media_type", "caption"}
+assert used == {"trial": "no", "thumb_ms": None, "thumb": "refused"} and len(SENT) == 2 and SENT[1].keys() >= {"media_type", "caption"}
 REFUSE.clear(); REFUSE.add("publish"); SENT.clear()
 try: S.ig_publish(tok, "https://x/social.mp4", "cap", trial=True, thumb_ms=1000); raise SystemExit("publish failure not raised")
 except RuntimeError as e: assert "instagram publish" in str(e) and len(SENT) == 1      # not about the settings: no retry
@@ -133,8 +133,11 @@ print("6 trial reels and fallbacks ok")
 board = {"meta": {"title": "GTA 6: the detail everyone missed", "summary": "A longer summary.",
                   "hashtags": ["#GTA6", "#Rockstar", "#Gaming", "#Shorts", "#Trailer", "#GTAVI"]},
          "beats": [{"say": "Rockstar hid one number in the GTA 6 trailer."}], "category": "Gaming"}
+S.CFG["instagram_hashtags"] = {"Gaming": ["#gaming", "#gamingnews", "#videogames"]}      # the category's own set (25 October)
 short = S.caption({}, board, "instagram", "short")
-assert short == "Rockstar hid one number in the GTA 6 trailer.\n\n#GTA6 #Rockstar #Gaming", short
+assert short == "Rockstar hid one number in the GTA 6 trailer.\n\n#gaming #gamingnews #videogames", short
+nocat = S.caption({}, {**board, "category": "Music"}, "instagram", "short")                # no set for the category: the board's first 3
+assert nocat == "Rockstar hid one number in the GTA 6 trailer.\n\n#GTA6 #Rockstar #Gaming", nocat
 full = S.caption({}, board, "instagram")
 assert "A longer summary." in full and full.count("#") == 5
 assert S.caption({}, board, "instagram", "full") == full

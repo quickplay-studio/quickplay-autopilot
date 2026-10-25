@@ -52,5 +52,6 @@
       "Read(./.env.*)",
       "Read(./tokens/**)"
     ]
-  }
+  },
+  "autoCompactWindow": 200000
 }

@@ -155,3 +155,22 @@ stats: 136 clips
 insights: {"layout": null, "captions": null, "punch": null, "length": null, "title": null, "take": null, "take_style": null}
 reach: {"clips": {"public_a_day_old": 34, "no_views": 27, "views": 15, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 14, "unseen": true, "take_unseen": false}, "gaming": {"public_a_day_old": 7, "no_views": 0, "views": 127, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 90, "unseen": false, "take_unseen": false}, "irl": {"public_a_day_old": 10, "no_views": 10, "views": 1, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 0, "unseen": true, "take_unseen": false}}
 late rows: 24 expired (over 30 hours old without the views to justify a late submission)
+=== run 2026-10-25 17:54 UTC, schedule '31 16,17,18 * * *', request ''
+social: no Facebook sign-in for the clips channel (secrets FB_CLIPS_PAGE_TOKEN and FB_CLIPS_PAGE_ID, or FB_CLIPS_*): Facebook skipped
+social: no Facebook sign-in for the irl channel (secrets FB_IRL_PAGE_TOKEN and FB_IRL_PAGE_ID, or FB_CLIPS_*): Facebook skipped
+kevin-langue-ghost-16: Instagram https://www.instagram.com/reel/De7aP16Clwc/
+kevin-langue-ghost-18: Instagram https://www.instagram.com/reel/De7aXNcFbtx/
+kevin-langue-ghost-19: Instagram https://www.instagram.com/reel/De7aeYDDVIN/
+kevin-langue-ghost-20: Instagram https://www.instagram.com/reel/De7ajVdEj3V/
+mrbeast-cod-17: Instagram https://www.instagram.com/reel/De7arTmEm85/
+mrbeast-cod-18: Instagram https://www.instagram.com/reel/De7a4XIDKW7/
+social: no Facebook sign-in for the gaming channel (secrets FB_GAMING_PAGE_TOKEN and FB_GAMING_PAGE_ID, or FB_CLIPS_*): Facebook skipped
+social: {'instagram': 6, 'facebook': 0, 'tiktok': 0}
+engage: 17 comments
+late rows: 0 expired (over 30 hours old without the views to justify a late submission)
+submit: Vyro: 72 row(s) left for the Mac Chrome run (submit_by mac)
+speed-expedia-19: waiting 3.2 min before submitting
+speed-expedia-19 (youtube, Content Rewards): failed: no answer from the page in 25s (buttons: Got it!)
+speed-expedia-20: waiting 3.6 min before submitting
+speed-expedia-20 (youtube, Content Rewards): failed: no answer from the page in 25s (buttons: Got it!)
+submit: 0 of 74 submitted

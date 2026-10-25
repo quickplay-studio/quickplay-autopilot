@@ -116,6 +116,7 @@ def our_shorts():
     for p in (ROOT / "status").glob("*.json"):
         st = load_json(p, {})
         if not isinstance(st, dict) or not st.get("video"): continue      # only Short status files (a list file broke this, 23 October)
+        if p.name.startswith("weekly-"): continue                         # the long videos (status/weekly-<date>.json) are not Shorts
         b = boards.get(st.get("id"), {})
         beats = b.get("beats") or []
         hook = beats[0].get("say", "") if beats else ""
@@ -207,10 +208,12 @@ def youtube(ours=None):
         except Exception: pass
     aud = audience(query, vids, ours or {})
     # the long-form route to the Partner Programme (8,000 watch hours in 365 days from 1 February 2027; 4,000 before):
-    # watch time on long videos only (the weekly video), as YouTube counts it
+    # watch time on long videos only (the Sunday compilation and the Wednesday explainer), as YouTube counts it. The old
+    # creatorContentType filter query came back null, so explainer.watch_report tries the dimension and our own videos too,
+    # and writes analytics/longform.csv (each long video's days)
     try:
-        lf = query("estimatedMinutesWatched", since=str(TODAY - dt.timedelta(days=365)), filters="creatorContentType==VIDEO_ON_DEMAND")
-        aud["longform_watch_hours_365d"] = round(sum(float(r.get("estimatedMinutesWatched") or 0) for r in lf) / 60, 1)
+        import explainer
+        aud["longform_watch_hours_365d"] = explainer.watch_report(query, TODAY, OUT)["hours_365d"]
     except Exception as e:
         aud["longform_watch_hours_365d"] = None; print("long-form watch hours:", str(e)[:120])
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -734,8 +737,9 @@ def main():
     fb_reels = (fb or {}).get("reels") or {}
     all_videos = dict((yt or {}).get("videos") or {})
     if yt: all_videos.update(xt["videos"])         # the other channels' Shorts are measured too, by views (their own sign-ins)
+    long_ids = {s.get("video") for s in (load_json(p, {}) for p in (ROOT / "status").glob("weekly-*.json")) if isinstance(s, dict)}
     for vid, v in all_videos.items():
-        if v.get("privacy") != "public": continue
+        if v.get("privacy") != "public" or vid in long_ids: continue      # a long video is no row of shorts.csv (analytics/longform.csv)
         o = ours.get(vid, {})
         ch = xt["channel_of"].get(vid) or o.get("channel") or "main"
         posted = utc(v.get("publish_at")) or utc(v.get("uploaded"))

@@ -6,6 +6,10 @@ frame (the Short in the middle over a blurred copy, its chapter title on the lef
 title card and an end card, and uploads it scheduled for Sunday 19:00 UK with chapters, links to the Shorts and every
 image credit. Long videos build watch hours and subscribers, which the Shorts views don't.
 
+Wednesday's long video is the explainer (pipeline/explainer.py, the same workflow): both write status/weekly-<date>.json, this
+one with kind "compilation" and the explainer with kind "explainer". weekly.py also supplies the explainer's cards and fonts.
+The compilation's description points to the latest explainer, and every Short links the latest long video (explainer.link_lines).
+
   python pipeline/weekly.py                    runs in GitHub (weekly.yml); result in status/weekly-<date>.json
   python pipeline/weekly.py --dry --ids A,B,C  builds from the given Shorts and saves the video as a draft release
                                                (weekly-test) instead of uploading
@@ -111,19 +115,26 @@ def side_overlay(path, n, total, title, fp):
     d.text((1320, 960), "@quickplaydaily", font=font(fp["body"], 34), fill=WHITE + (220,))
     im.save(path)
 
-def card(path, big, small, fp, lines=()):
+def card(path, big, small, fp, lines=(), fit=False):
+    """A title card. fit (the explainer's chapter cards): the title shrinks from 120 to 64 points until it fits three lines, so a
+    long chapter title is never cut off; otherwise two lines at 120 points, as the weekly video has always had."""
     from PIL import Image, ImageDraw
     im = Image.new("RGB", (W, H), INK); d = ImageDraw.Draw(im)
     d.ellipse([-300, -200, 700, 800], fill=(22, 60, 62)); d.ellipse([1300, 500, 2200, 1400], fill=(40, 34, 24))
-    f = font(fp["display"], 120); y = 300
-    for line in wrap(d, big.upper(), f, 1600)[:2]:
-        d.text(((W - d.textlength(line, font=f)) / 2, y), line, font=f, fill=WHITE); y += 140
+    size, rows = 120, 2
+    if fit:
+        rows = 3
+        while size > 64 and len(wrap(d, big.upper(), font(fp["display"], size), 1600)) > rows: size -= 8
+    f = font(fp["display"], size); y = 300 if not fit else 270
+    for line in wrap(d, big.upper(), f, 1600)[:rows]:
+        d.text(((W - d.textlength(line, font=f)) / 2, y), line, font=f, fill=WHITE); y += int(size * 1.17)
     fs = font(fp["body"], 46)
     d.text(((W - d.textlength(small, font=fs)) / 2, y + 30), small, font=fs, fill=ACCENT)
     fl = font(fp["body"], 34); y += 130
     for line in lines[:5]:
         d.text(((W - d.textlength(line, font=fl)) / 2, y), line, font=fl, fill=MUTED); y += 50
     im.save(path)
+    return path
 
 def segment(src, overlay, out):
     run("ffmpeg", "-y", "-v", "error", "-i", src, "-i", overlay, "-filter_complex",
@@ -212,11 +223,18 @@ def main():
     if links: desc += ["", "The Shorts"] + links
     if vis_all: desc += ["", "Visuals"] + vis_all
     if music_all: desc += [""] + music_all
+    try:                                   # the week's explainer, when there is one: the other long video links back
+        import explainer
+        ex = [v for v in explainer.long_videos().values() if v["kind"] == "explainer" and v["publish_at"] and v["publish_at"] <= NOW]
+        if ex:
+            v = max(ex, key=lambda v: v["publish_at"])
+            desc[1:1] = ["", f"This week's biggest stories, explained: {v['title']} https://youtu.be/{v['id']}"]
+    except Exception as e: print("explainer link skipped:", str(e)[:100])
     desc += ["", "Independent channel, not affiliated with the companies or people featured.", "", "#QuickplayDaily #Trending"]
     text = "\n".join(desc)
     if len(text) > 4900:                    # keep chapters and credits; drop the Short links first
         desc = [x for x in desc if "youtube.com/shorts/" not in x and x != "The Shorts"]; text = "\n".join(desc)[:4900]
-    st.update(state="built", shorts=used, title=title, chapters=[[stamp(c), n] for c, n in chapters], seconds=round(duration(final)),
+    st.update(kind="compilation", state="built", shorts=used, title=title, chapters=[[stamp(c), n] for c, n in chapters], seconds=round(duration(final)),
               at=NOW.isoformat(timespec="minutes"))
     if a.dry:
         tag = "weekly-test"

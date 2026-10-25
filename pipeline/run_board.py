@@ -132,10 +132,21 @@ def series_lines(sb):
     except Exception: return []
 
 
-def description(sb, credits, track):
+def long_link(slot):
+    """The line pointing to the latest long video that is public when the Short is (explainer.link_lines), as lines for the
+    top of the description; [] when there is none yet. A Short with no slot is judged by the time it is made."""
+    try:
+        import explainer
+        at = dt.datetime.fromisoformat(slot.replace("Z", "+00:00")) if slot else None
+        if at is not None and at.tzinfo is None: at = at.replace(tzinfo=dt.timezone.utc)
+        lines = explainer.link_lines(at)
+        return lines + [""] if lines else []
+    except Exception: return []
+
+def description(sb, credits, track, slot=""):
     m = sb.get("meta", {})
     src_l, vis_l, music_l, note_l = LABELS["es" if sb.get("language") == "es" else "en"]       # the Spanish mirror's description is Spanish
-    out = [m.get("summary", "").strip(), ""] + series_lines(sb) + [src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    out = [m.get("summary", "").strip(), ""] + (long_link(slot) if sb.get("language") != "es" else []) + series_lines(sb) + [src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")
@@ -352,7 +363,7 @@ def main():
         credits = json.loads((P / "out" / f"{sid}.credits.json").read_text())
         meta = sb.get("meta", {})
         (res / "upload.json").write_text(json.dumps({
-            "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": {} if es else localize(meta, desc),
+            "title": meta["title"], "description": (desc := description(sb, credits, track, job.get("slot", ""))), "localizations": {} if es else localize(meta, desc),
             "tags": youtube_tags(meta),
             "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags,
             **({"channel": status["channel"]} if status.get("channel") else {}), **({"language": "es"} if es else {})},

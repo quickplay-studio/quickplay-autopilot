@@ -42,6 +42,13 @@ def comment_for(yt, b, comment):
     except Exception as ex:
         print("series comment:", f"{type(ex).__name__}: {ex}"[:120]); return str(comment)[:500]
 
+def long_mention(comment, now):
+    """The creator comment (500 characters at most) with one line pointing to the latest long video, once (explainer.comment_text)."""
+    try:
+        import explainer
+        return explainer.comment_text(comment, now)
+    except Exception: return str(comment)[:500]
+
 TRANSIENT = re.compile(r"HttpError (409|500|502|503|504) |aborted|backendError|[Tt]imeout|timed out|[Cc]onnection")
 
 def tries(e, key):
@@ -87,7 +94,7 @@ def main():
         if m.get("comment") and not e.get("comment") and not e.get("comment_error"):
             try:
                 r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": st["video"], "topLevelComment": {
-                    "snippet": {"textOriginal": comment_for(yt, b, m["comment"])}}}}).execute()
+                    "snippet": {"textOriginal": long_mention(comment_for(yt, b, m["comment"]), now)}}}}).execute()
                 e["comment"] = r["id"]
             except Exception as ex: e["comment_error"] = f"{type(ex).__name__}: {ex}"[:200]
             changed = True

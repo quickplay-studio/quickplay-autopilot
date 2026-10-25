@@ -1,16 +1,27 @@
 name: weekly
-# Sunday's long video: the week's best Shorts in one landscape video with chapters (pipeline/weekly.py), scheduled for
-# 19:00 UK. Retries later if YouTube's upload limit is full. Push requests/weekly.txt containing "dry TEST-L1,TEST-L2"
-# to build a test copy from those Shorts as a draft release instead of uploading.
+# Two long videos a week, for the Partner Programme's 8,000 long-form watch hours (from 1 February 2027):
+# - Sunday's compilation of the week's best Shorts (pipeline/weekly.py), scheduled for 19:00 UK; retries if YouTube's upload
+#   limit was full. Push requests/weekly.txt containing "dry TEST-L1,TEST-L2" to build a test copy from those Shorts as a draft
+#   release instead of uploading.
+# - Wednesday's explainer (pipeline/explainer.py) on the week's three biggest stories, 6 to 10 minutes, built in the morning
+#   and scheduled for 19:00 UK. Two jobs: the build holds the model keys and the big install (torch, Chatterbox) and never the
+#   YouTube keys; the upload holds the YouTube keys and a tiny install. Push requests/weekly-explainer.txt with "dry" for a test
+#   build kept as a draft release (explainer-test), or "now" to build and schedule outside the Wednesday cron. Run by hand from
+#   the Actions tab with video = explainer. Retries at 08:40 and 12:40 when a run was skipped (no model answered, too few pictures).
 on:
   schedule:
-    - cron: '10 15 * * 0'     # Sunday afternoon
+    - cron: '10 15 * * 0'     # Sunday afternoon: the compilation
     - cron: '10 21 * * 0'     # retry if the upload limit was full
     - cron: '10 9 * * 1'      # last retry, Monday morning
+    - cron: '10 5 * * 3'      # Wednesday: the explainer
+    - cron: '40 8 * * 3'      # retry
+    - cron: '40 12 * * 3'     # last retry: a build takes up to three hours and must be scheduled before 19:00
   push:
     branches: [main]
     paths: ['requests/weekly*']
   workflow_dispatch:
+    inputs:
+      video: { description: 'compilation (the default) or explainer', required: false, default: 'compilation' }
 
 permissions:
   contents: write
@@ -21,7 +32,47 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  route:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    outputs:
+      compilation: ${{ steps.r.outputs.compilation }}
+      explainer: ${{ steps.r.outputs.explainer }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Which video
+        id: r
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          SUNDAY: ${{ github.event.schedule == '10 15 * * 0' || github.event.schedule == '10 21 * * 0' || github.event.schedule == '10 9 * * 1' }}
+          WEDNESDAY: ${{ github.event.schedule == '10 5 * * 3' || github.event.schedule == '40 8 * * 3' || github.event.schedule == '40 12 * * 3' }}
+          WHICH: ${{ inputs.video }}
+          SHA: ${{ github.sha }}
+        run: |
+          comp=no; expl=no
+          case "$EVENT" in
+            schedule)
+              [ "$SUNDAY" = "true" ] && comp=yes
+              [ "$WEDNESDAY" = "true" ] && expl=yes ;;
+            workflow_dispatch)
+              if [ "$WHICH" = "explainer" ]; then expl=yes; else comp=yes; fi ;;
+            push)
+              # only the request file that changed asks for its video (a stale request in the other file is ignored)
+              files=$(gh api "repos/$GITHUB_REPOSITORY/commits/$SHA" --jq '.files[].filename' 2>/dev/null || true)
+              if echo "$files" | grep -qx 'requests/weekly.txt' && grep -q '^dry' requests/weekly.txt 2>/dev/null; then comp=yes; fi
+              if echo "$files" | grep -qx 'requests/weekly-explainer.txt'; then expl=yes; fi ;;
+          esac
+          echo "compilation=$comp" >> "$GITHUB_OUTPUT"
+          echo "explainer=$expl" >> "$GITHUB_OUTPUT"
+          echo "compilation $comp, explainer $expl"
+
   weekly:
+    needs: route
+    if: ${{ needs.route.outputs.compilation == 'yes' }}
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -64,6 +115,132 @@ jobs:
           git add status/weekly-*.json 2>/dev/null || true
           git add status/quota 2>/dev/null || true      # the weekly upload in the YouTube allowance record (status/quota/weekly.json)
           git commit -q -m "Weekly video $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1
+
+  explainer:
+    needs: route
+    if: ${{ needs.route.outputs.explainer == 'yes' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 210
+    permissions:
+      contents: read
+    outputs:
+      go: ${{ steps.due.outputs.go }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Anything to build?
+        id: due
+        # the date rules (first Wednesday 28 October, nothing when the week is already scheduled) are in pipeline/explainer.py,
+        # standard library only, so a run with nothing to do ends here before any install
+        env: { EVENT: '${{ github.event_name }}' }
+        run: python3 pipeline/explainer.py due | tee -a "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.due.outputs.go == 'yes'
+        with: { python-version: '3.13', cache: pip, cache-dependency-path: pipeline/requirements.txt }
+      - name: System packages
+        if: steps.due.outputs.go == 'yes'
+        run: |
+          need=""
+          for p in ffmpeg fonts-dejavu-core; do dpkg -s "$p" >/dev/null 2>&1 || need="$need $p"; done
+          if [ -n "$need" ]; then
+            APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+            timeout 600 sudo apt-get $APT update -q || echo "apt update was slow or failed; installing from the runner's lists"
+            timeout 900 sudo apt-get $APT install -y -q $need
+          else echo "system packages already on the runner"; fi
+      - name: Python packages
+        if: steps.due.outputs.go == 'yes'
+        run: |
+          # the Shorts' voice: the same install as the render job (render.yml)
+          python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D imagehash==4.3.2 || echo "imagehash not installed: pictures.py uses its average hash"
+      - uses: actions/cache@v4
+        if: steps.due.outputs.go == 'yes'
+        with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
+      - name: Voice model
+        if: steps.due.outputs.go == 'yes'
+        run: python pipeline/get_model.py models/chatterbox
+      # picture models, restored from the render job's cache and never saved here; a missing cache only turns the relevance
+      # ranking and the face finder off (get_pictures.py never fails the job)
+      - uses: actions/cache/restore@v4
+        if: steps.due.outputs.go == 'yes'
+        with: { path: models/yunet, key: yunet-2023mar-8f2383e }
+      - uses: actions/cache/restore@v4
+        if: steps.due.outputs.go == 'yes'
+        with: { path: models/siglip2, key: siglip2-b16-224-v1 }
+      - name: Picture models
+        if: steps.due.outputs.go == 'yes'
+        env: { HF_HUB_DISABLE_PROGRESS_BARS: '1' }
+        run: python pipeline/get_pictures.py models
+      - name: Build the video
+        if: steps.due.outputs.go == 'yes'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          MUSIC_KEY: ${{ secrets.MUSIC_KEY }}
+          CB_CKPT: ${{ github.workspace }}/models/chatterbox
+          TQDM_DISABLE: '1'
+          MODE: ${{ steps.due.outputs.mode }}
+        run: |
+          # Claude is left out of this chain on purpose: it is Charlie's shared allowance, and a skipped run is retried at 08:40 and 12:40
+          if [ "$MODE" = "dry" ]; then python pipeline/explainer.py build --out explainer-out --dry
+          else python pipeline/explainer.py build --out explainer-out; fi
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() && steps.due.outputs.go == 'yes' }}
+        with:
+          name: explainer
+          path: |
+            explainer-out/video.mp4
+            explainer-out/thumb.jpg
+            explainer-out/explainer.json
+            explainer-out/script.json
+          compression-level: 0
+          retention-days: 3
+          if-no-files-found: ignore
+
+  explainer-upload:
+    needs: explainer
+    if: ${{ always() && needs.explainer.outputs.go == 'yes' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: Identity guard
+        run: python3 pipeline/identity.py gate      # stops while the last audit found a sign-in outside the studio account (audit H4)
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography google-api-python-client==2.* google-auth==2.* tzdata
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with: { name: explainer, path: explainer-out }
+      - name: Schedule on YouTube
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_KEY: ${{ secrets.SOCIAL_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: python pipeline/explainer.py upload --out explainer-out
+      - name: Save
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
+          git add status/weekly-*.json 2>/dev/null || true
+          git add status/quota 2>/dev/null || true      # the explainer's upload in the YouTube allowance record (status/quota/weekly.json)
+          git commit -q -m "Weekly explainer $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
           exit 1

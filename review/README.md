@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 18:59): 15 of 1,000 subscribers · 9,411 of 10 million Shorts views in 90 days · 4,798 views in the last 24 hours (about 111,007 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 19:33): 15 of 1,000 subscribers · 9,475 of 10 million Shorts views in 90 days · 4,901 views in the last 24 hours (about 111,006 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
@@ -77,6 +77,13 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-177** Animals Explained #1: How dogs became man's best friend 🐕 (rendering next)
+- **QD-178** The Hunger Games: 2026 release date (Part 1) (rendering next)
+- **QD-179** Ralph Fiennes joins Hunger Games cast (Part 2) (rendering next)
+- **QD-180** Hunger Games: cast complete (Part 3) (rendering next)
 
 ## On the channel (latest first)
 

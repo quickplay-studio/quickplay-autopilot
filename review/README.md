@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 03:38): 12 of 1,000 subscribers · 8,426 of 10 million Shorts views in 90 days · 4,617 views in the last 24 hours (about 111,017 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 04:37): 12 of 1,000 subscribers · 8,440 of 10 million Shorts views in 90 days · 4,473 views in the last 24 hours (about 111,017 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sat 24 Oct 20:10 (UK): 3 scheduled, 141 public, 17 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 3 public, 4 scheduled | 0 | 1 | ⏳ 3 of 14 so far, 4 more scheduled |
+| Sun 25 Oct | 4 public, 3 scheduled | 0 | 1 | ⏳ 4 of 14 so far, 3 more scheduled |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |

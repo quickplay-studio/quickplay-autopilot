@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 13:21): 15 of 1,000 subscribers · 8,588 of 10 million Shorts views in 90 days · 3,949 views in the last 24 hours (about 111,016 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 13:37): 15 of 1,000 subscribers · 8,619 of 10 million Shorts views in 90 days · 4,066 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 13:21 (UK): 4 scheduled, 144 public, 17 uploads in the last 24 hours.
 
@@ -78,6 +78,12 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-174** Halloween skywatch: five spooky targets revealed (rendering next)
+- **QD-175** saints vs steelers: the Paris milestone explained (rendering next)
+- **QD-176** BioWare: fans petition after EA closure 🎮 (rendering next)
 
 ## On the channel (latest first)
 

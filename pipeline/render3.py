@@ -79,7 +79,55 @@ def load_sound(path, start, dur):
                           "-vn", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout     # -ss after -i: before it a seek breaks the loop
     return np.frombuffer(raw, np.float32).copy()
 
-def mix_audio3(segs, duration, music, events, path, gain_db=-16):
+PLAY_MAX = 6.0       # the longest "let it play" window (beat["letplay"]): the clip's own sound with none of our voice
+PLAY_HUSH = 0.12     # the music bed's level in that window (a share of its normal level)
+CLIP_AUDIO = []      # prepare_shots() fills it: one entry per video shot that carries "sound" (clips.py commentary Shorts)
+
+
+def hush_curve(n, hush, floor=PLAY_HUSH, ramp=0.25):
+    """A gain curve of n samples: 1 everywhere except `floor` inside each (t0, t1) of `hush`, with `ramp`-second slopes."""
+    g = np.ones(n, np.float32)
+    for a, b in hush:
+        i, j = max(0, int(a * SR)), min(n, int(b * SR))
+        if j > i: g[i:j] = floor
+    k = max(1, int(ramp * SR))
+    return np.convolve(g, np.ones(k, np.float32) / k, mode="same").astype(np.float32) if hush else g
+
+
+def clip_sound(clips, segs, n):
+    """The sound of the footage in a commentary Short: for each clip shot, its own audio from the in-point, under our voice at
+    its `duck` level and at full level inside its "let it play" window (`play`: (t0, t1) on the Short's clock), levelled
+    to our voice there so the punchline is heard as loudly as we are. Returns (a track of n samples, the windows the music
+    should hush). A clip with no audio stream (or one ffmpeg cannot read) adds nothing."""
+    track, hush = np.zeros(n, np.float32), []
+    voice = np.concatenate([a for _, a in segs]) if segs else np.zeros(1, np.float32)
+    vr = float(np.sqrt(np.mean(voice[voice != 0] ** 2))) if np.any(voice) else 0.05
+    for c in clips:
+        try:
+            raw = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{c['start']:.3f}", "-t", f"{c['t1'] - c['t0']:.3f}", "-i", str(c["file"]),
+                                  "-vn", "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True, check=True).stdout
+        except Exception as e:
+            print(f"  warning: no sound from {pathlib.Path(str(c['file'])).name}: {str(e)[:100]}", file=sys.stderr); continue
+        a = np.frombuffer(raw, np.float32).copy()
+        if len(a) < SR // 10: continue
+        g = np.full(len(a), float(c.get("duck", 0.18)), np.float32)
+        play = c.get("play")
+        ref = a
+        if play:
+            i, j = int(max(0.0, play[0] - c["t0"]) * SR), min(len(a), int(max(0.0, play[1] - c["t0"]) * SR))
+            if j > i: g[i:j] = 1.0; ref = a[i:j]; hush.append((float(play[0]), float(play[1])))
+        k = int(0.15 * SR)
+        g = np.convolve(g, np.ones(k, np.float32) / k, mode="same")
+        rms = float(np.sqrt(np.mean(ref ** 2))) or 1e-4
+        scale = float(np.clip(vr * 0.9 / rms, 0.3, 5.0))
+        f = max(1, int(0.02 * SR)); a = a * g * scale; a[:f] *= np.linspace(0, 1, f); a[-f:] *= np.linspace(1, 0, f)
+        s = int(c["t0"] * SR); track[s:s + len(a)] += a[:max(0, n - s)]
+    return track, hush
+
+
+def mix_audio3(segs, duration, music, events, path, gain_db=-16, footage=None, hush=()):
+    """footage/hush (commentary Shorts): the footage's own track (clip_sound) is mixed in as it is, and the music bed drops to
+    PLAY_HUSH inside the `hush` windows, where only the clip's sound is heard."""
     n = int(duration * SR) + SR
     voice = np.zeros(n, np.float32)
     for t0, a in segs:
@@ -92,10 +140,13 @@ def mix_audio3(segs, duration, music, events, path, gain_db=-16):
     vr = np.sqrt(np.mean(voice[voice != 0] ** 2)) if np.any(voice) else 0.05
     mr = np.sqrt(np.mean(m[:end] ** 2)) or 1
     m = m / mr * vr * 10 ** (gain_db / 20)
+    if hush: m = m * hush_curve(n, hush)
     fx = np.zeros(n, np.float32)
     for t, a in events:
         s = max(0, int(t * SR)); fx[s:s + len(a)] += a[:max(0, n - s)]
-    mixed = (voice + m * duck + fx)[:end]
+    foot = np.zeros(n, np.float32)
+    if footage is not None: foot[:min(n, len(footage))] = footage[:n]
+    mixed = (voice + m * duck + fx + foot)[:end]
     mixed = mixed / (np.max(np.abs(mixed)) or 1) * 0.89
     sf.write(path, np.stack([mixed, mixed], axis=1), SR, subtype="PCM_16")
 
@@ -272,6 +323,7 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags=None):
     from PIL import Image
     work = out_dir / f"{sid}_shots"; work.mkdir(parents=True, exist_ok=True)
     items, credits, punches, k, dirn = [], [], [], 0, 1
+    CLIP_AUDIO.clear()
     fast, brief, light, named = LOOK.get("pace") == "fast", LOOK.get("labels") == "brief", LOOK.get("shade") == "light", set()
     for bi, (beat, b) in enumerate(zip(sb["beats"], beats)):
         allshots = beat.get("shots") or []
@@ -321,7 +373,14 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags=None):
                 zoom = shot.get("zoom", 1.08); H2 = int(1920 * zoom) // 2 * 2; W2 = int(round(w * H2 / h)) // 2 * 2
                 x = int(min(max(0, fx * W2 - 540), W2 - 1080)); y = int((H2 - 1920) * fy)
                 need = (t1 - t0) + 0.4
-                st, slow, note = scene_fit(src, float(shot.get("start", 0)), (t1 - t0) + 0.12, float(shot.get("slow") or 1.0))
+                st0 = float(shot.get("start", 0))
+                if shot.get("play_at") is not None and beat.get("letplay"):
+                    # commentary Shorts: our voice runs over the footage first, so the footage starts early enough that its
+                    # punchline (play_at, in the file's own seconds) begins just as our voice stops and the window opens
+                    st0 = max(0.0, float(shot["play_at"]) - max(0.0, b.get("speech_end", t0) - t0))
+                    if float(shot["play_at"]) - max(0.0, b.get("speech_end", t0) - t0) < 0:
+                        print(f"  warning: {sid} shot {k - 1}: the footage has less than {b.get('speech_end', t0) - t0:.1f}s before its punchline", file=sys.stderr)
+                st, slow, note = scene_fit(src, st0, (t1 - t0) + 0.12, float(shot.get("slow") or 1.0))
                 if note: print(f"  warning: {sid} shot {k - 1} ({shot['src']} @{st}) {note}", file=sys.stderr)
                 vf = f"scale={W2}:{H2},crop=1080:1920:{x}:{y},fps={FPS}"
                 if slow > 1.001: vf = f"setpts={slow}*PTS," + vf
@@ -331,6 +390,13 @@ def prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags=None):
                 subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", f"{st:.3f}", "-i", str(src), "-t", f"{need:.3f}",
                                 "-vf", vf, "-q:v", "3", str(fr / "%05d.jpg")], check=True)
                 it["vsrc"] = [st, slow]
+                if isinstance(shot.get("sound"), dict) and slow <= 1.001:       # the footage's own audio (clip_sound), ducked under our voice
+                    win = None
+                    if beat.get("letplay"):                                     # the beat's let-it-play window: after our voice, to the next beat
+                        w0, w1 = max(t0, b.get("speech_end", t0)), min(t1, b["end"])
+                        if w1 - w0 >= 0.3: win = (round(w0, 3), round(w1, 3))
+                    CLIP_AUDIO.append({"file": str(src), "start": st, "t0": t0, "t1": t1, "duck": float(shot["sound"].get("duck", 0.18)), "play": win})
+                    it["play"] = list(win) if win else None
                 frames = sorted(fr.glob("*.jpg"))
                 it.update(kind="video", fill=os.path.relpath(frames[0], HERE), frames=os.path.relpath(fr, HERE), count=len(frames), fps=FPS,
                           s0=1.0, s1=1.0 + (0.05 * MOTION if move != "still" else 0.0))
@@ -423,6 +489,11 @@ def main():
     sid = sb["id"]; t0 = time.time()
     global LOOK, MOTION, CARDS
     LOOK = sb.get("look_render") or {}; MOTION = float(LOOK.get("motion", 1.0))
+    for i, beat in enumerate(sb["beats"]):         # a "let it play" beat (commentary Shorts): our voice stops and the clip's own sound runs for `letplay` seconds
+        if beat.get("letplay"):
+            beat["letplay"] = round(min(PLAY_MAX, max(1.0, float(beat["letplay"]))), 2)
+            if i + 1 < len(sb["beats"]): beat["gap"] = beat["letplay"]
+            else: sb["tail"] = max(float(sb.get("tail", 0.55)), beat["letplay"])
     if sb.get("voice_engine") == "chatterbox":       # narration pre-rendered by tts_cb.py (one WAV per beat)
         import voice as V
         segs, words, beats, groups, duration = V.build_timeline_cb(
@@ -454,12 +525,14 @@ def main():
     items, credits, punches = prepare_shots(sb, beats, words, duration, mbeats, sid, out_dir, tags)
     wav = out_dir / f"{sid}.wav"
     events = sfx_events(sb, beats, items)
-    mix_audio3(segs, duration, music, events, str(wav), mus.get("gain_db", -16))
+    foot, hush = clip_sound(CLIP_AUDIO, segs, int(duration * SR) + SR) if CLIP_AUDIO else (None, [])     # the footage's own sound (commentary Shorts)
+    play = sorted({tuple(c["play"]) for c in CLIP_AUDIO if c.get("play")})
+    mix_audio3(segs, duration, music, events, str(wav), mus.get("gain_db", -16), footage=foot, hush=hush)
     soc = sb.get("social_music") or {}
     swav = out_dir / f"{sid}.social.wav"
     if soc.get("slug"):        # TikTok/Instagram version: same voice and effects, music licensed for every platform
         smusic, _, _ = load_music(soc["slug"], soc.get("start"), duration, lib="music_social")
-        mix_audio3(segs, duration, smusic, events, str(swav), soc.get("gain_db", mus.get("gain_db", -16)))
+        mix_audio3(segs, duration, smusic, events, str(swav), soc.get("gain_db", mus.get("gain_db", -16)), footage=foot, hush=hush)
     credits.append({"credit": f"Music: {mcat['title']} by {mcat['artist']} ({mcat.get('source', 'YouTube Audio Library')})", "source": "", "license": ""})
     for u in bgused: credits.append({"credit": u["credit"], "source": u["source"], "license": ""})     # Pexels and the others are credited in the description
     (out_dir / f"{sid}.bg.json").write_text(json.dumps(bgused, indent=1, ensure_ascii=False))
@@ -470,12 +543,13 @@ def main():
     data = {"accent": sb.get("accent", "#2EE6C5"), "category": sb.get("chip_label") or sb["category"], "chipIcon": sb.get("chipIcon", "trending-up"),
             "handle": sb.get("handle") or "@quickplaydaily", "cta": sb.get("cta_lines") or None,       # another channel's name and call to action (config shorts_channels, mirror.py)
             "icons": R.icon_svgs(icons), "beats": beats, "words": words, "groups": groups, "duration": duration,
-            "media": items, "punches": punches, "look": LOOK, "bg": bginfo}
+            "media": items, "punches": punches, "look": LOOK, "bg": bginfo,
+            "play": [list(w) for w in play]}       # the "let it play" windows: no captions while the clip's own sound runs
     chip = end_chip(sb)
     if chip: data["endChip"] = chip       # the closing chip arm (template3.html #endchip)
     (out_dir / f"{sid}.credits.json").write_text(json.dumps(credits, indent=1, ensure_ascii=False))
     (out_dir / f"{sid}.timeline.json").write_text(json.dumps({"beats": beats, "words": words, "groups": groups, "duration": duration,
-                                                              "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc')} for it in items]}, indent=1))
+                                                              "shots": [{k: v for k, v in it.items() if k in ('t0', 't1', 'tin', 'kind', 'fill', 'dim', 'src', 'vsrc', 'play')} for it in items]}, indent=1))
     # Up to about 30 MB a file (uploads all go through APIs now; TikTok takes up to 64 MB in one piece) and at most
     # 10 Mbps: the old 9.4 MB cap held a 35-second Short to under 2 Mbps, which softened caption edges and fast cuts.
     vmax = int(min(10_000_000, 0.95 * (30e6 * 8 / duration - 128_000)) / 1000)

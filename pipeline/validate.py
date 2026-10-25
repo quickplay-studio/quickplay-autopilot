@@ -12,7 +12,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATS = {"Gaming", "Film", "Music", "Sport", "Tech", "Science", "Entertainment", "Animals", "Food", "Cars", "History"}
 VISUALS = {"none", "title", "stat", "cards", "quote", "date", "versus", "timeline", "bars"}
 MODES = {"schedule", "private", "none", "dry"}
-SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+|page:https://.+|openverse:.+|nasa:(video|image):.+|gameplay:.*)$")
+SRC = re.compile(r"^(commons:File:.+|commons-search:.+|pixabay:(video|image):.+|url:https://.+|page:https://.+|openverse:.+|nasa:(video|image):.+|gameplay:.*|clip:.+)$")
+CLIP_KIND = "clip commentary"       # the only kind of board that may use a clip: shot (footage already on the runner, clips.py, 25 October)
 DASH = re.compile("[—–]")
 # Clear signs of an excluded topic: the board is rejected.
 BANNED = re.compile(r"\b(elections?|parliament\w*|politicians?|political|murder\w*|terroris\w*|porn\w*|onlyfans|nsfw|casinos?|"
@@ -112,7 +113,7 @@ def _check(b, path=None):
     e, w = [], []
     sid = b.get("id", "")
     es = b.get("language") == "es"          # the Spanish mirror of a main Short (pipeline/mirror.py): id QD-###-es
-    if not re.fullmatch(r"QD-\d{3,}(-es)?|TEST-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")
+    if not re.fullmatch(r"QD-\d{3,}(-es)?|TEST-[A-Z0-9-]+|CLIP-[A-Z0-9-]+", sid): e.append("id: QD-### (next free number)")
     elif sid in _ids_elsewhere(path): e.append(f"id: {sid} is already used, take the next free number")
     elif sid.startswith("QD-") and int(re.match(r"QD-(\d+)", sid).group(1)) < int(_config().get("first_id", 1)): e.append(f"id: numbers start at QD-{int(_config()['first_id']):03d}")
     if sid.endswith("-es") != (es and bool(b.get("mirror_of"))) or (sid.endswith("-es") and b.get("mirror_of") != sid[:-3]):
@@ -172,6 +173,7 @@ def _check(b, path=None):
             src = s.get("src", "")
             if not SRC.match(src): e.append(f"beat {i}: src {src!r} is not a supported form")
             if src.startswith("url:") and not (s.get("credit") and s.get("source")): e.append(f"beat {i}: url shots need credit and source")
+            if src.startswith("clip:") and str(b.get("kind", "")).lower() != CLIP_KIND: e.append(f"beat {i}: clip: shots are for {CLIP_KIND} boards only")
     allshots = [str(s.get("src", "")) for bt in beats for s in bt.get("shots") or []]
     stock = [x for x in allshots if x.startswith(("pixabay:", "gameplay:"))]
     if allshots and len(stock) > max(1, len(allshots) // 5):

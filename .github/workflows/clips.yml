@@ -69,13 +69,24 @@ jobs:
           timeout 900 python -m playwright install --with-deps chromium >/dev/null 2>&1 || timeout 600 python -m playwright install chromium
           sudo mkdir -p /mnt/clips && sudo chown "$USER" /mnt/clips
       # our own take on every clip (23 October): the Daily Shorts' voice (Chatterbox) reads the intro and the reaction,
-      # installed only for the runs that make clips
+      # installed only for the runs that make clips. Since 25 October the clips are commentary Shorts rendered by the Daily
+      # pipeline (pipeline/commentary.py, run_board.py), so this run also needs what a Daily render needs: Node for the fonts and
+      # icons (npm ci), the music library (unlocked with MUSIC_KEY), trafilatura for the Wikipedia pack of each campaign's subject
+      - uses: actions/setup-node@v4
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
+        with: { node-version: 20 }
       - name: Voice packages
         if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         run: |
           python -m pip install -q pip==26.2.1 && python -m pip install -q torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D -r pipeline/requirements.txt
           python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D --no-deps chatterbox-tts==0.1.7
+          python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D trafilatura
+          npm ci --prefix pipeline --silent
+      - name: Unlock music
+        if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
+        env: { MUSIC_KEY: '${{ secrets.MUSIC_KEY }}' }
+        run: for f in pipeline/music/*.mp3.enc; do [ -f "$f" ] || continue; openssl enc -d -aes-256-cbc -pbkdf2 -in "$f" -out "${f%.enc}" -pass env:MUSIC_KEY; done
       - uses: actions/cache@v4
         if: ${{ steps.when.outputs.skip != '1' && (github.event.schedule == '0 12 * * *' || github.event_name != 'schedule') }}
         with: { path: models/chatterbox, key: chatterbox-5bb1f6e }
@@ -128,6 +139,7 @@ jobs:
           IG_IRL_USER_ID: ${{ secrets.IG_IRL_USER_ID }}
           FB_IRL_PAGE_TOKEN: ${{ secrets.FB_IRL_PAGE_TOKEN }}
           FB_IRL_PAGE_ID: ${{ secrets.FB_IRL_PAGE_ID }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}        # a commentary Short is rendered by the Daily pipeline (stock video fallback, background)
           CLIPS_WORK: /mnt/clips
           TQDM_DISABLE: '1'
           IN_COUNT: ${{ inputs.count }}
@@ -184,7 +196,7 @@ jobs:
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           mkdir -p clips/plans status/quota
-          for f in clips/plans clips/frames clips/state clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json clips/reach.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json analytics/late_uploads.csv analytics/decisions.csv clips/outreach.csv; do git add $f 2>/dev/null || true; done
+          for f in clips/plans clips/frames clips/state boards/clips clips/campaigns.json clips/submit.csv clips/stats.csv clips/insights.json clips/reach.json status/clips_log.txt status/quota status/probe_*.html status/probe_*.png status/submit_*.png status/scout.md status/scout_vyro.txt status/streamers.md clips/scout.json analytics/late_uploads.csv analytics/decisions.csv clips/outreach.csv; do git add $f 2>/dev/null || true; done
           git commit -q -m "Clips $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

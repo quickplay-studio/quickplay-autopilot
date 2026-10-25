@@ -820,12 +820,120 @@ def dark(frame):
     except Exception: return False
 
 
-def frame_of(out, m):
+def frame_of(out, m, at=None):
     frames = ROOT / "clips" / "frames"; frames.mkdir(parents=True, exist_ok=True)
     f = frames / f"{m['id']}.jpg"
-    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{(m['end'] - m['start']) * 0.3:.2f}", "-i", str(out),
+    subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{(m['end'] - m['start']) * 0.3 if at is None else at:.2f}", "-i", str(out),
                     "-frames:v", "1", "-vf", "scale=540:960", "-q:v", "6", str(f)])
     return f
+
+
+# ----- commentary Shorts (25 October, Charlie: "they are still getting no traction") ----------------------------------------------------
+# YouTube stopped recommending re-uploaded clips "without significant changes" on 1 October: 93 public clips, 69 with no views, none
+# rejected, blocked or restricted. A clip is now a commentary Short (pipeline/commentary.py): our argument and checked facts fill most
+# of the runtime and the permitted footage is only the evidence, written as a Daily board and rendered by the Daily pipeline
+# (run_board.py). campaigns.json "format" on a campaign, or clips_format for all, chooses "commentary" or "cut"; the cut (make_clip)
+# stays as the control and as the fallback for a moment commentary cannot be made for (no voice on the runner, no checked facts about
+# the subject, no punchline, profanity near it, under 9 minutes left, any failure): the day's number is kept either way.
+DEADLINE = None            # set by main(): when this run must stop starting work (JOB_T0 + 135 minutes at most)
+BOARDS = ROOT / "boards" / "clips"        # the commentary boards as written (validated like the Daily's; the render reads them from here)
+
+
+def format_of(cid, c, m=None):
+    import commentary as CM
+    return CM.format_of(c, CFG, m)
+
+
+def channel_category(channel):
+    import commentary as CM
+    return (CFG.get("channel_categories") or {}).get(channel) or CM.CATEGORY.get(channel, "Entertainment")
+
+
+def channel_name(channel):
+    import commentary as CM
+    return (CFG.get("channel_names") or {}).get(channel) or CM.HANDLES.get(channel, "Quickplay Clips")
+
+
+def evidence_cut(seg, lo, hi, out):
+    """The evidence file of a commentary Short: the footage from `lo` to `hi` seconds of the segment, 1080x1920 as the cut's
+    letterbox (the whole picture over its own blurred copy; a vertical source fills the frame), with its own sound and no text. It
+    is the file the board's clip: shots read."""
+    graph, _ = layout_filters("full" if portrait(seg) else "letterbox", None)
+    run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{lo:.2f}", "-t", f"{hi - lo:.2f}", "-i", str(seg),
+         "-filter_complex", graph + "[v1]fps=30,format=yuv420p[v]", "-map", "[v]", "-map", "0:a?", "-c:v", "libx264", "-preset", "veryfast",
+         "-crf", "21", "-c:a", "aac", "-b:a", "128k", "-ar", "48000", "-movflags", "+faststart", str(out)])
+    return out
+
+
+def evidence_stills(seg, m, peak, count=8):
+    """Stills of the footage for a commentary Short's other beats, 1080x1920 as the evidence: the first at the peak (the hook's
+    picture), the rest spread across the moment in time order. Dark ones (an outage, a loading screen) are dropped."""
+    graph, _ = layout_filters("full" if portrait(seg) else "letterbox", None)
+    a, b = float(m["start"]), float(m["end"])
+    times = [peak] + [t for t in (a + (b - a) * (k + 0.5) / (count + 1) for k in range(count + 1)) if abs(t - peak) > 1.5][:count - 1]
+    out = []
+    for k, t in enumerate(times):
+        f = WORK / f"{m['id']}.s{k}.jpg"
+        r = subprocess.run(["ffmpeg", "-y", "-hide_banner", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", str(seg), "-filter_complex",
+                            graph + "[v1]null[v]", "-map", "[v]", "-frames:v", "1", "-q:v", "3", str(f)], capture_output=True)
+        if r.returncode == 0 and f.exists() and not dark(f): out.append(f)
+    return out
+
+
+def make_commentary(cid, m, words, channel=None):
+    """One commentary Short for a moment: the Path of the finished mp4 in clips/out, or None when it cannot be made (the cut then
+    stands in; every reason is logged). Steps: the punchline window and the evidence file, the checked facts (a Wikipedia pack),
+    the words (the free model chain; validated, fact-checked, fixed twice at most), the Daily render with the footage's own sound
+    in its window, and the moment's record (title, summary, sources, credits, what the render measured)."""
+    import commentary as CM
+    c = campaigns([cid])[cid]; r = c.get("rules") or {}
+    ok, why = CM.ready(DEADLINE)
+    if not ok: log(f"{m['id']}: no commentary Short: {why}"); return None
+    win = CM.punchline(m, words)
+    if not win: log(f"{m['id']}: no commentary Short: no 2.5 second punchline inside the moment"); return None
+    play_at, play_len = win
+    seg = segment(cid); total = duration(seg)
+    lo, hi = max(0.0, play_at - CM.LEAD), min(total, play_at + play_len + 0.5)
+    bad = profane(words, lo, hi) or PROFANE.findall(m.get("hook", ""))
+    if bad: log(f"{m['id']}: no commentary Short: strong language near the punchline ({', '.join(bad[:3])})"); return None
+    pack = CM.wiki_pack(cid, c)
+    if not pack: log(f"{m['id']}: no commentary Short: no checked facts about {c['subject']}"); return None
+    said = " ".join(w["w"] for w in words if max(float(m["start"]), play_at - 12) <= w["s"] <= play_at + play_len + 3)[:700]
+    pack2, foot = CM.with_moment(pack, c, m, said)
+    channel = channel or channel_of(cid)
+    sid = "CLIP-" + re.sub(r"[^A-Z0-9-]", "-", m["id"].upper())
+    ev = evidence_cut(seg, lo, hi, WORK / f"{m['id']}.ev.mp4")
+    peak = float(m["peak"]) if m.get("peak") is not None and m["start"] < float(m["peak"]) < m["end"] else play_at + 1.0
+    stills = evidence_stills(seg, m, peak)
+    if len(stills) < 4: log(f"{m['id']}: no commentary Short: only {len(stills)} usable stills of the footage"); return None
+    credit = f"Clip from {(c.get('source') or {}).get('label') or c['subject']}, posted with permission"
+    ctx = {"id": sid, "cid": cid, "campaign": c, "moment": m, "day": str(NOW.astimezone(UK).date()), "category": channel_category(channel),
+           "handle": channel_name(channel), "role": c.get("subject_role") or "creator", "outside": CM.outside_pictures(c), "foot": foot,
+           "sources": pack2["sources"], "play_at": play_at, "play_len": play_len, "ev_lo": lo, "ev_path": str(ev), "stills": [f"clip:{s}" for s in stills],
+           "credit": credit, "source_url": str(c.get("url") or ""), "profane": PROFANE, "unsafe": UNSAFE}
+    board, model, note = CM.write(ctx, pack2, said)
+    if not board: log(f"{m['id']}: no commentary Short: {note}"); return None
+    BOARDS.mkdir(parents=True, exist_ok=True)
+    path = BOARDS / f"{sid}.json"
+    path.write_text(json.dumps(board, ensure_ascii=False, indent=1))
+    log(f"{m['id']}: commentary written by {model} ({note}); rendering {sid}")
+    res = CM.render(board, path, sid, channel="clips")
+    OUT.mkdir(parents=True, exist_ok=True)
+    out = OUT / f"{m['id']}.mp4"
+    shutil.copy(res["video"], out)
+    meta, t = board["meta"], CM.timing(board)
+    m.update(format="commentary", title_planned=m.get("title_planned") or m.get("title"), title=meta["title"][:70], summary=meta["summary"],
+             hashtags=meta["hashtags"], sources=meta["sources"], credits=CM.credit_lines((res.get("upload") or {}).get("description")),
+             category=board["category"], seconds=round(res["seconds"]),
+             commentary={"board": str(path.relative_to(ROOT)), "writer": model, "words": sum(CM.words_of(x["say"]) for x in board["beats"]),
+                         "beats": len(board["beats"]), "play_at": play_at, "play_len": board["clip"]["play_len"], "estimated_share": t["share"],
+                         "footage_seconds": res["footage_seconds"], "footage_share": res["footage_share"], "seconds": res["seconds"]})
+    m["tests"] = {**{t_: "board" for t_ in ("layout", "captions", "punch", "length", "title", "take")}, "take_style": "board"}
+    if res["footage_share"] > CM.FOOTAGE_MAX: log(f"{m['id']}: WARNING footage is {res['footage_share']:.0%} of the render (rule: {CM.FOOTAGE_MAX:.0%})")
+    log(f"{m['id']}: commentary Short made, {res['seconds']:.0f} s, footage {res['footage_share']:.0%}, {len(board['beats'])} beats")
+    CM.cleanup(sid)
+    for f in [ev, *stills]: f.unlink(missing_ok=True)
+    return out
 
 
 def make(cid, count=None, channel=None):
@@ -847,13 +955,21 @@ def make(cid, count=None, channel=None):
         if bad: m["skipped"] = f"profanity: {', '.join(bad[:3])}"; log(f"{m['id']}: skipped: {m['skipped']}"); continue
         if UNSAFE.search(f"{m.get('hook', '')} {m.get('title', '')}"):      # planned before the rule, or slipped through
             m["skipped"] = "not brand safe"; log(f"{m['id']}: skipped: not brand safe ({m.get('hook', '')[:40]})"); continue
+        if DEADLINE and time.time() > DEADLINE: log(f"{cid}: out of time for more clips this run"); break
         try:
-            out = make_clip(cid, m, words)
-            f = frame_of(out, m)
+            out = None
+            if format_of(cid, c, m) == "commentary":       # 25 October: our argument for most of the runtime, the footage as the evidence
+                try: out = make_commentary(cid, m, words, channel)
+                except Exception as e: log(f"{m['id']}: commentary failed, the cut stands in: {type(e).__name__}: {str(e)[:240]}"); out = None
+                if out is None:
+                    import commentary as CM
+                    CM.cleanup("CLIP-" + re.sub(r"[^A-Z0-9-]", "-", m["id"].upper()))
+            if out is None: out = make_clip(cid, m, words); m.setdefault("format", "cut")
+            f = frame_of(out, m, at=m.get("seconds", 0) * 0.3 if m.get("format") == "commentary" else None)
             if dark(f):             # a black screen (an outage, a loading screen): not a clip
                 m["skipped"] = "dark picture"; out.unlink(missing_ok=True); log(f"{m['id']}: skipped: dark picture"); continue
             m["made"] = NOW.isoformat(timespec="minutes"); m["file"] = out.name; m["channel"] = channel or channel_of(cid); made.append(m)
-            log(f"{m['id']}: made ({m['end'] - m['start']:.0f} s) {m['title']}" + (f" [{m['channel']}]" if m["channel"] != "clips" else ""))
+            log(f"{m['id']}: made ({m.get('seconds') or m['end'] - m['start']:.0f} s, {m.get('format', 'cut')}) {m['title']}" + (f" [{m['channel']}]" if m["channel"] != "clips" else ""))
         except Exception as e:
             m["skipped"] = f"{type(e).__name__}: {e}"[:200]; log(f"{m['id']}: skipped: {m['skipped']}")
     plan_p.write_text(json.dumps(plan_, indent=1, ensure_ascii=False))
@@ -956,6 +1072,10 @@ def upload(cid, mode=None):
         tags = [t.lstrip("#") for t in r.get("hashtags") or []] + [c["subject"]]
         desc = (f"#ad {m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + "\n".join(r.get("hashtags") or []) + "\n\n"
                 f"Clip from {c['source'].get('label', '')}, posted with the creator's permission ({c['name']}). {AD_NOTE}")
+        if m.get("format") == "commentary":       # a commentary Short: the Daily's rules for the title and the description (summary, sources, credits), plus the campaign's
+            import commentary as CM
+            desc = CM.description(c, m, r.get("description", ""), AD_NOTE)
+            tags = list(dict.fromkeys(tags + [t.lstrip("#") for t in m.get("hashtags") or []]))
         vid, own = None, mchannel(cid, m)
         # the clip's own channel first; when YouTube refuses it for its daily limit (the gaming and irl channels can't be
         # phone-verified: one number, 23 October), the campaign's other channels take it, so a made clip isn't stranded
@@ -963,7 +1083,7 @@ def upload(cid, mode=None):
             if ch in refused: continue
             try:
                 if ch not in clients: clients[ch] = clips_client(ch)
-                vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, "Entertainment", publish_at, paid=True)
+                vid = Y.upload(clients[ch], OUT / m["file"], m["title"], desc, tags, m.get("category") or "Entertainment", publish_at, paid=True)
             except Exception as e:
                 log(f"{m['id']}: upload failed ({ch}): {type(e).__name__}: {str(e)[:200]}")
                 if "uploadLimitExceeded" in str(e) or "exceeded the number of videos" in str(e):
@@ -1134,7 +1254,8 @@ def posted_uk():
 
 def social_caption(c, m):
     r = c.get("rules") or {}
-    return (f"#ad {m['hook'].capitalize()}. {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
+    lead = (m.get("summary") or f"{m['hook'].capitalize()}.") if m.get("format") == "commentary" else f"{m['hook'].capitalize()}."      # a commentary Short says what it argues
+    return (f"#ad {lead} {r.get('description', '')}".strip() + "\n\n" + " ".join(r.get("hashtags") or [])
             + f"\n\nClip from {c['subject']}, posted with the creator's permission. {AD_NOTE}")
 
 
@@ -1328,6 +1449,29 @@ def take_style_verdict(ts):
     return None, f"no verdict yet: it needs 3 clips an arm, a mean of 20 views and a 10% lead on YouTube or Instagram views ({ns})"
 
 
+def style_of(r):
+    """How a clip row was made, for the comparison that matters since 25 October: "board" (a commentary Short, test_take_style
+    board), "voice" (the cut with the house voice's own take) or "cut" (the cut with its take as text, or none)."""
+    if r.get("test_take_style") == "board" or r.get("format") == "commentary": return "board"
+    return "voice" if r.get("test_take") == "voice" else "cut"
+
+
+def format_compare(aged, ig_aged):
+    """clips/insights.json "format": commentary Shorts (board) against the cut with the house voice (voice) and the plain cut (cut),
+    by YouTube views and by Instagram views, with the same verdict rule as every clip test (3 clips an arm, a mean of 20 views, a
+    10% lead; a verdict only when the two measures agree or one decides alone)."""
+    def med(vals): vals = sorted(vals); return vals[len(vals) // 2] if vals else None
+    arms = {}
+    for arm in ("board", "voice", "cut"):
+        vals = [_f(r.get("views")) for r in aged if style_of(r) == arm]
+        ivals = [_f(r.get("ig_views")) for r in ig_aged if style_of(r) == arm]
+        arms[arm] = {"n": len(vals), "median_views": med(vals), "mean_views": round(sum(vals) / len(vals), 1) if vals else None,
+                     "ig_n": len(ivals), "ig_median_views": med(ivals), "ig_mean_views": round(sum(ivals) / len(ivals), 1) if ivals else None}
+    best, best_ig = lead(arms, "mean_views", "n"), lead(arms, "ig_mean_views", "ig_n")
+    verdict, note = take_style_verdict({"arms": arms, "best": best, "best_ig": best_ig})
+    return {"arms": arms, "best": best, "best_ig": best_ig, "verdict": verdict, "note": note}
+
+
 def channel_summary(rows):
     """The numbers the volume plan and the stop rule read, per channel, for clips/insights.json: clips and median views over
     the last 7 days, clips and median over the stop rule's 14, the Instagram median, whether the stop rule fires or YouTube is
@@ -1368,6 +1512,7 @@ def insights(rows):
         out["tests"][t] = {"arms": arms, "best": lead(arms, "mean_views", "n"), "best_ig": lead(arms, "ig_mean_views", "ig_n")}
     verdict, note = take_style_verdict(out["tests"].get("take_style") or {})
     out["take_style"] = {"verdict": verdict, "note": note}
+    out["format"] = format_compare(aged, ig_aged)         # commentary Shorts against the cut with the voice and the plain cut (25 October)
     # How "viral" is measured (23 October): the planner scores each moment 1 to 10 before it is cut; here that score is
     # checked against what the clip really did (views at 24 hours or more). score_bands shows whether high scores earn more;
     # min_score is the lowest score whose clips (10 or more) beat the clips under it, and plan() uses it in place of 6.
@@ -1399,7 +1544,7 @@ def ig_only_row(cid, m):
     try: hours = round((NOW - dt.datetime.fromisoformat(str(m.get("publish_at")).replace("Z", "+00:00"))).total_seconds() / 3600, 1)
     except ValueError: hours = ""
     tests, ig = m.get("tests") or {}, m.get("instagram") or {}
-    return {"clip": m["id"], "campaign": cid, "channel": mchannel(cid, m), "video": "", "seconds": round(m["end"] - m["start"]),
+    return {"clip": m["id"], "campaign": cid, "channel": mchannel(cid, m), "video": "", "seconds": m.get("seconds") or round(m["end"] - m["start"]), "format": m.get("format", "cut"),
             "hook_words": len(m["hook"].split()), "score": m.get("score") if m.get("score") is not None else "", "hours_public": hours,
             "privacy": "instagram", "views": "", "likes": "", "comments": "", **{f"test_{t}": tests.get(t, "") for t in TESTS},
             **({"test_take_style": "framing"} if tests.get("take") in ("voice", "text") and not tests.get("take_style") else {}),
@@ -1434,7 +1579,7 @@ def stats():
                 try: hours = round((NOW - dt.datetime.fromisoformat(pub.replace("Z", "+00:00"))).total_seconds() / 3600, 1)
                 except Exception: hours = ""
                 tests = m.get("tests") or {}
-                rows.append({"clip": m["id"], "campaign": cid, "channel": channel, "video": v["id"], "seconds": round(m["end"] - m["start"]),
+                rows.append({"clip": m["id"], "campaign": cid, "channel": channel, "video": v["id"], "seconds": m.get("seconds") or round(m["end"] - m["start"]), "format": m.get("format", "cut"),
                              "hook_words": len(m["hook"].split()), "score": m.get("score") if m.get("score") is not None else "",
                              "hours_public": hours, "privacy": v["status"].get("privacyStatus"),
                              "views": st.get("viewCount", 0), "likes": st.get("likeCount", 0), "comments": st.get("commentCount", 0),
@@ -1485,11 +1630,17 @@ def reach_check(rows):
             if r.get("test_take") in ("voice", "text"):          # the clips with our own take (from 24 October), on their own
                 c["take_day_old"] = c.get("take_day_old", 0) + 1; c["take_no_views"] = c.get("take_no_views", 0) + int(float(r.get("views") or 0) == 0)
                 c["take_views"] = c.get("take_views", 0) + int(float(r.get("views") or 0))
+            if r.get("test_take_style") == "board":             # the commentary Shorts (from 25 October), on their own
+                c["board_day_old"] = c.get("board_day_old", 0) + 1; c["board_no_views"] = c.get("board_no_views", 0) + int(float(r.get("views") or 0) == 0)
+                c["board_views"] = c.get("board_views", 0) + int(float(r.get("views") or 0))
     for c in out.values():           # unseen: 8 or more clips a day old, 70% with no views or under 5 views a clip
         n = c["public_a_day_old"]
         c["unseen"] = n >= 8 and (c["no_views"] >= 0.7 * n or c.get("views_day_old", 0) < 5 * n)
         t = c.get("take_day_old", 0)
         c["take_unseen"] = t >= 8 and (c.get("take_no_views", 0) >= 0.7 * t or c.get("take_views", 0) < 5 * t)
+        bd = c.get("board_day_old", 0)
+        if bd >= 3:             # the cut's old record (voice clips YouTube never showed) no longer decides the cap once the commentary Shorts have 3 a day old: they do
+            c["take_unseen"] = bd >= 8 and (c.get("board_no_views", 0) >= 0.7 * bd or c.get("board_views", 0) < 5 * bd)
     try: traffic = reach_traffic(list(out))              # where the views come from, per channel (YouTube Analytics)
     except Exception as e: traffic = {"error": f"{type(e).__name__}: {str(e)[:120]}"}
     for ch, t in (traffic.items() if isinstance(traffic, dict) else []):
@@ -2340,8 +2491,9 @@ def main(argv):
     count = int(os.environ["CLIPS_COUNT"]) if os.environ.get("CLIPS_COUNT", "").strip().isdigit() else None
     # the job is stopped at 170 minutes and its Save step must still run: at most 110 minutes here, and never past 135
     # minutes from the job's start (JOB_T0; on 23 October the runner's installs alone took 37 minutes)
-    deadline = min(time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110),
-                   float(os.environ.get("JOB_T0") or time.time()) + 60 * 135)
+    global DEADLINE
+    deadline = DEADLINE = min(time.time() + 60 * float(os.environ.get("CLIPS_MINUTES") or 110),
+                              float(os.environ.get("JOB_T0") or time.time()) + 60 * 135)      # make() and make_commentary() stop at it too (a commentary Short takes minutes)
     cs = campaigns()
     if cmd in ("run", "prepare"):
         try: check_campaigns()

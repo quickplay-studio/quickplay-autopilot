@@ -719,7 +719,25 @@
    "take_intro": "Focusing under pressure separates standard Roblox competitors from the true game champions.",
    "take_outro": "High-speed gameplay keeps the championship alive when elimination hangs in the balance. Did he win?",
    "take_style": "argument",
-   "question": "How fast do you usually finish this Roblox egg challenge?"
+   "question": "How fast do you usually finish this Roblox egg challenge?",
+   "tests": {
+    "layout": "full",
+    "captions": "lines",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice",
+    "take_style": "argument"
+   },
+   "made": "2026-10-25T12:15+00:00",
+   "file": "tdr-flamingo-26.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/tdr-flamingo-26.mp4",
+   "video": "HO20X_gNiEE",
+   "url": "https://youtube.com/shorts/HO20X_gNiEE",
+   "uploaded": "2026-10-25T12:15+00:00",
+   "publish_at": "2026-10-25T19:00:00Z",
+   "mode": "batch"
   }
  ]
 }

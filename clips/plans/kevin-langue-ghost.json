@@ -557,15 +557,35 @@
    "end": 1096.4,
    "hook": "CLEANING CREW WILL FIND SALT",
    "label": "",
-   "title": "Kevin Langue Ghost Hunt Salt Line Prank",
+   "title": "Cleaning crew will find salt | Kevin Langue",
    "why": "Grab: mundane salt ritual; Payoff: Kevin's cleaning crew visualization.",
    "planned": "2026-10-24T09:25+00:00",
    "model": "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
    "peak": 1082.0,
    "score": 6.0,
-   "take_intro": "Kevin spreads salt in every corner and jokes about the cleaners.",
-   "take_outro": "Practical jokes during a seance are elite. Your favourite moment?",
-   "question": "What's the funniest ghost hunting ritual you've seen?"
+   "take_intro": "True bravery is worrying about the aftermath while facing the unknown.",
+   "take_outro": "Practicality is the ultimate defence against any unwanted spectral guests. Would you agree?",
+   "question": "What's the funniest ghost hunting ritual you've seen?",
+   "title_planned": "Kevin Langue Ghost Hunt Salt Line Prank",
+   "take_style": "argument",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "hook first",
+    "take": "voice",
+    "take_style": "argument"
+   },
+   "made": "2026-10-25T12:15+00:00",
+   "file": "kevin-langue-ghost-17.mp4",
+   "channel": "clips",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-17.mp4",
+   "video": "k-GNi9a1XdE",
+   "url": "https://youtube.com/shorts/k-GNi9a1XdE",
+   "uploaded": "2026-10-25T12:15+00:00",
+   "publish_at": "2026-10-25T19:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-18",
@@ -582,7 +602,25 @@
    "take_intro": "When someone brings professional gear you expect them to know how to turn it on.",
    "take_outro": "Knowing the buttons doesn't make you a professional but it keeps you in the game.",
    "take_style": "argument",
-   "question": "Did he actually know how to use the equipment or was he guessing?"
+   "question": "Did he actually know how to use the equipment or was he guessing?",
+   "tests": {
+    "layout": "full",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice",
+    "take_style": "argument"
+   },
+   "made": "2026-10-25T12:15+00:00",
+   "file": "kevin-langue-ghost-18.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-18.mp4",
+   "video": "Tr9x9EsKuQw",
+   "url": "https://youtube.com/shorts/Tr9x9EsKuQw",
+   "uploaded": "2026-10-25T12:15+00:00",
+   "publish_at": "2026-10-25T19:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-19",
@@ -599,7 +637,25 @@
    "take_intro": "Asking logical immigration questions about paranormal entities exposes how absurd the claim sounds.",
    "take_outro": "She did not hesitate for a second with that comeback answer.",
    "take_style": "argument",
-   "question": "Is this the most hilarious answer to a ghost question ever?"
+   "question": "Is this the most hilarious answer to a ghost question ever?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice",
+    "take_style": "argument"
+   },
+   "made": "2026-10-25T12:15+00:00",
+   "file": "kevin-langue-ghost-19.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-19.mp4",
+   "video": "2eC91tKS4OI",
+   "url": "https://youtube.com/shorts/2eC91tKS4OI",
+   "uploaded": "2026-10-25T12:15+00:00",
+   "publish_at": "2026-10-25T19:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-20",
@@ -616,7 +672,25 @@
    "take_intro": "Decades of experience should sound convincing until the story gets a bit too detailed.",
    "take_outro": "The room divided instantly between total disbelief and genuine chills.",
    "take_style": "argument",
-   "question": "Does her Salem story sound believable or rehearsed?"
+   "question": "Does her Salem story sound believable or rehearsed?",
+   "tests": {
+    "layout": "letterbox",
+    "captions": "karaoke",
+    "punch": "none",
+    "length": "as planned",
+    "title": "subject first",
+    "take": "voice",
+    "take_style": "argument"
+   },
+   "made": "2026-10-25T12:15+00:00",
+   "file": "kevin-langue-ghost-20.mp4",
+   "channel": "irl",
+   "asset_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/download/clips-out/kevin-langue-ghost-20.mp4",
+   "video": "ri6VEMhswis",
+   "url": "https://youtube.com/shorts/ri6VEMhswis",
+   "uploaded": "2026-10-25T12:15+00:00",
+   "publish_at": "2026-10-25T19:00:00Z",
+   "mode": "batch"
   },
   {
    "id": "kevin-langue-ghost-21",

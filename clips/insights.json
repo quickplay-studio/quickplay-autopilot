@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T22:53+00:00",
+ "updated": "2026-10-25T12:15+00:00",
  "clips": 51,
  "tests": {
   "layout": {
@@ -7,12 +7,12 @@
     "letterbox": {
      "n": 34,
      "median_views": 0.0,
-     "mean_views": 2.0
+     "mean_views": 2.7
     },
     "full": {
      "n": 7,
      "median_views": 0.0,
-     "mean_views": 0.6
+     "mean_views": 0.7
     },
     "split": {
      "n": 1,
@@ -27,12 +27,12 @@
     "lines": {
      "n": 25,
      "median_views": 0.0,
-     "mean_views": 2.2
+     "mean_views": 2.8
     },
     "karaoke": {
      "n": 17,
      "median_views": 0.0,
-     "mean_views": 0.9
+     "mean_views": 1.5
     }
    },
    "best": null
@@ -42,12 +42,12 @@
     "none": {
      "n": 31,
      "median_views": 0.0,
-     "mean_views": 1.7
+     "mean_views": 2.2
     },
     "zoom": {
      "n": 11,
      "median_views": 0.0,
-     "mean_views": 1.7
+     "mean_views": 2.5
     }
    },
    "best": null
@@ -57,7 +57,7 @@
     "as planned": {
      "n": 32,
      "median_views": 0.0,
-     "mean_views": 2.2
+     "mean_views": 2.9
     }
    },
    "best": null
@@ -67,7 +67,7 @@
     "subject first": {
      "n": 24,
      "median_views": 0.0,
-     "mean_views": 2.8
+     "mean_views": 3.8
     },
     "hook first": {
      "n": 16,
@@ -104,23 +104,11 @@
   }
  },
  "campaigns": {
-  "tdr-stinkyasher": {
-   "n": 4,
-   "median_views": 2.0
-  },
-  "valorant-champs": {
-   "n": 3,
+  "kevin-langue-ghost": {
+   "n": 5,
    "median_views": 0.0
   },
   "speed-expedia": {
-   "n": 7,
-   "median_views": 0.0
-  },
-  "tdr-jenny": {
-   "n": 9,
-   "median_views": 0.0
-  },
-  "tdr-mitch": {
    "n": 7,
    "median_views": 0.0
   },
@@ -128,13 +116,25 @@
    "n": 9,
    "median_views": 0.0
   },
+  "tdr-jenny": {
+   "n": 9,
+   "median_views": 0.0
+  },
+  "valorant-champs": {
+   "n": 3,
+   "median_views": 0.0
+  },
+  "tdr-mitch": {
+   "n": 7,
+   "median_views": 0.0
+  },
   "mrbeast-cod": {
    "n": 7,
    "median_views": 0.0
   },
-  "kevin-langue-ghost": {
-   "n": 5,
-   "median_views": 0.0
+  "tdr-stinkyasher": {
+   "n": 4,
+   "median_views": 2.0
   }
  },
  "score_bands": {

@@ -83,3 +83,75 @@ valorant-microdrama: 0 parts planned, 4 in all
 valorant-champs: a long transcript, planning minutes 45 to 87 of 144
 valorant-champs: 0 of 1 moments planned (gemini-3.6-flash), 14 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}; first: {"start": 4735, "end": 4765, "hook": "WOULD JOSH OR BEA BE A BETTER PARENT?", "label": "Josh vs Bea", "title": "VALORANT Champs 2026: Josh vs Bea Parent Debate", "peak": 4758, "question": "Which podca
 kevin-langue-ghost: 4 of 8 moments planned (gemini-3.6-flash), 21 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 3}
+=== run 2026-10-25 12:15 UTC, schedule '0 12 * * *', request ''
+speed-expedia: page: $421 remaining; Skip to content We use cookies and similar tools to measure how the product is used. You c
+today's shares: {"clips": {"tdr-mitch": 1, "tdr-jenny": 1, "tdr-flamingo": 1, "kevin-langue-ghost": 1, "mrbeast-cod": 1, "speed-expedia": 8}, "irl": {"kevin-langue-ghost": 3, "mrbeast-cod": 2, "speed-expedia": 5}, "gaming": {"tdr-mitch": 1, "tdr-flamingo": 1, "tdr-jenny": 1, "valorant-champs": 1, "valorant-microdrama": 1}}
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+speed-expedia: 0 of 3 moments planned (gemini-3.8-flash), 19 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0, "low score": 1}; first: {"start": 151, "end": 188, "hook": "WHAT DID EXPEDIA SEND IN THIS SUITCASE?", "label": "", "title": "IShowSpeed Unpacks Trending Destinations", "peak": 172, "question": "What is your favourite city to
+speed-expedia-19: made (33 s) Where in america is this? | IShowSpeed
+speed-expedia: 1 of 6 moments planned (gemini-3.8-flash), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 2, "no hook": 0, "low score": 3}
+speed-expedia-20: made (33 s) Speed unpacks the first destination | IShowSpeed [irl]
+speed-expedia-19: uploaded https://youtube.com/shorts/G2LvKTLbi88 (batch)
+speed-expedia-20: uploaded https://youtube.com/shorts/UkKBN7pfzyc (batch)
+mrbeast-cod-21: made (42 s) MrBeast Gaming Alliances and Intense Firefights
+mrbeast-cod-22: made (34 s) MrBeast Gaming Becomes the Target in DMZ [irl]
+mrbeast-cod-23: made (33 s) You died so fast! | MrBeast [irl]
+mrbeast-cod-21: uploaded https://youtube.com/shorts/Ohh5zYVK-PM (batch)
+mrbeast-cod-22: uploaded https://youtube.com/shorts/cpW2frIA5is (batch)
+mrbeast-cod-23: uploaded https://youtube.com/shorts/xBf_wFVCytE (batch)
+  faces (yunet): 24 frames, groups (0.6, 0.2):1, (0.5, 0.2):2, (0.4, 0.4):2, (0.3, 0.4):1, best change -1.0
+tdr-mitch-20: full layout, person at y 0.50, hook at 120, captions bottom
+tdr-mitch-20: made (47 s) Blindside strategy in total drama roblox | Mitch Gaming
+tdr-mitch-21: made (51 s) Mitch Gaming TRD Round 2 Elimination Chaos [gaming]
+tdr-mitch-20: uploaded https://youtube.com/shorts/6OZU5DDL9JM (batch)
+tdr-mitch-21: uploaded https://youtube.com/shorts/B0aoORG6IQQ (batch)
+tdr-flamingo: 0 of 4 moments planned (gemini-3.6-flash), 26 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 1, "profanity": 2}; first: {"start": 1000, "end": 1030, "hook": "FLAMINGO ACCIDENTALLY VOTES HIMSELF OUT IN ROBLOX", "label": "", "title": "Flamingo Roblox Total Drama Elimination Fail", "peak": 1012, "question": "What is your 
+  faces (yunet): 18 frames, groups (0.1, 0.1):17, (0.4, 0.3):1, best change 11.1
+tdr-flamingo-26: full layout, face at x 0.09 y 0.10 size 0.20
+tdr-flamingo-26: full layout, person at y 0.20, hook at 1200, captions bottom
+tdr-flamingo-26: made (35 s) Flamingo Roblox Total Drama Egg Hunt Minigame
+tdr-flamingo: 0 of 4 moments planned (gemini-3.6-flash), 26 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0, "profanity": 3}; first: {"start": 990, "end": 1016, "hook": "FLAMINGO ACCIDENTALLY VOTES HIMSELF OUT", "label": "TRENT", "title": "Flamingo Roblox Total Drama Self Vote Fail", "peak": 1009, "question": "What is your favourit
+tdr-flamingo-26: uploaded https://youtube.com/shorts/HO20X_gNiEE (batch)
+  faces (yunet): 31 frames, groups (0.1, 0.8):22, (0.2, 0.8):3, (0.5, 0.5):2, (0.1, 0.7):2, (0.5, 0.3):2, (0.5, 0.4):1, best change 25.9
+tdr-jenny-17: full layout, face at x 0.14 y 0.76 size 0.12
+tdr-jenny-17: full layout, person at y 0.82, hook at 120, captions top
+tdr-jenny-17: take refused (Crowdsourcing your strategy is brilliantly cunning when it lets you hide your true motives. | Blaming your audience for your own tac
+tdr-jenny-17: made (62 s) Jenny Hoyos Total Drama Roblox Voting Drama
+  faces (yunet): 26 frames, groups (0.2, 0.7):8, (0.2, 0.8):10, (0.5, 0.3):4, best change -1.0
+tdr-jenny-18: full layout, person at y 0.50, hook at 120, captions bottom
+tdr-jenny-18: made (52 s) Jenny Hoyos Roblox Tournament Betrayal [gaming]
+tdr-jenny-17: uploaded https://youtube.com/shorts/05S6G8Nms7g (batch)
+tdr-jenny-18: uploaded https://youtube.com/shorts/xWLSIHlP3G0 (batch)
+valorant-microdrama: 0 parts planned, 4 in all
+valorant-microdrama: 0 parts planned, 4 in all
+valorant-microdrama: nothing to upload
+valorant-champs-11: made (49 s) 34 and 2 in scrims secret | VALORANT Champs [gaming]
+valorant-champs-11: uploaded https://youtube.com/shorts/-BoKAwzIPPg (batch)
+  faces (yunet): 16 frames, groups (0.7, 0.1):1, (0.4, 0.3):6, (0.3, 0.2):1, (0.4, 0.2):5, (0.5, 0.1):1, (0.7, 0.3):2, (0.2, 0.2):1, (0.5, 0.2):3, (0.5, 0.3):1, (0.7, 0.4):2, (0.3, 0.3):1, (0.9, 0.0):1, (0.7, 0.0):1, (0.6, 0.4):1, (0.8, 0.1):1, (0.2, 0.5):1, (0.8, 0.3):1, (0.7, 0.5):1, (0.4, 0.4):1, best change -1.0
+kevin-langue-ghost-17: split layout asked, no steady face, letterbox instead
+kevin-langue-ghost-17: made (31 s) Cleaning crew will find salt | Kevin Langue
+  faces (yunet): 27 frames, groups (0.0, 0.3):1, (0.3, 0.3):5, (0.6, 0.3):3, (0.3, 0.1):2, (0.5, 0.4):2, (0.2, 0.3):4, (0.8, 0.4):4, (0.7, 0.4):4, (0.1, 0.3):4, (0.4, 0.4):1, (0.9, 0.4):2, (0.4, 0.3):4, (0.4, 0.0):1, (0.1, 0.2):1, (0.5, 0.3):7, (0.8, 0.3):1, (0.4, 0.1):2, (0.6, 0.4):1, (0.9, 0.3):2, (0.5, 0.2):2, (0.7, 0.3):1, best change -1.0
+kevin-langue-ghost-18: full layout, person at y 0.50, hook at 120, captions bottom
+kevin-langue-ghost-18: made (54 s) Kevin Langue Exposes Fake Ghost Hunter Equipment [irl]
+kevin-langue-ghost-19: made (32 s) Kevin Langue Asks The Hard Questions To Ghost Hunter [irl]
+kevin-langue-ghost-20: made (62 s) Kevin Langue Listens To 50 Year Ghost Story [irl]
+kevin-langue-ghost-17: uploaded https://youtube.com/shorts/k-GNi9a1XdE (batch)
+kevin-langue-ghost-18: uploaded https://youtube.com/shorts/Tr9x9EsKuQw (batch)
+kevin-langue-ghost-19: uploaded https://youtube.com/shorts/2eC91tKS4OI (batch)
+kevin-langue-ghost-20: uploaded https://youtube.com/shorts/ri6VEMhswis (batch)
+spill: 7 place(s) unfilled on clips; offered to tdr-mitch, tdr-jenny, tdr-flamingo, kevin-langue-ghost, mrbeast-cod
+spill: 4 place(s) unfilled on irl; offered to kevin-langue-ghost, mrbeast-cod
+spill: 2 place(s) unfilled on gaming; offered to tdr-mitch, tdr-jenny, valorant-champs
+  faces (yunet): 20 frames, groups (0.5, 0.4):2, (0.5, 0.2):1, (0.5, 0.3):1, (0.3, 0.6):1, best change -1.0
+tdr-mitch-22: full layout, person at y 0.50, hook at 120, captions bottom
+tdr-mitch-22: made (39 s) I am kind of running this game | Mitch Gaming [gaming]
+tdr-mitch-22: uploaded https://youtube.com/shorts/a3JluoqP_2M (batch)
+  faces (yunet): 38 frames, groups (0.2, 0.8):12, (0.1, 0.8):15, (0.2, 0.7):6, (0.1, 0.7):3, best change -1.0
+tdr-jenny-19: full layout, person at y 0.50, hook at 120, captions bottom
+tdr-jenny-19: made (75 s) Jenny hoyos catches a fake ally | Jenny Hoyos [gaming]
+tdr-jenny-19: uploaded https://youtube.com/shorts/Uqd0Svn66hY (batch)
+spill: 2 more clip(s) made in places other campaigns left
+stats: 136 clips
+insights: {"layout": null, "captions": null, "punch": null, "length": null, "title": null, "take": null, "take_style": null}
+reach: {"clips": {"public_a_day_old": 34, "no_views": 27, "views": 15, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 14, "unseen": true, "take_unseen": false}, "gaming": {"public_a_day_old": 7, "no_views": 0, "views": 127, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 90, "unseen": false, "take_unseen": false}, "irl": {"public_a_day_old": 10, "no_views": 10, "views": 1, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 0, "unseen": true, "take_unseen": false}}
+late rows: 24 expired (over 30 hours old without the views to justify a late submission)

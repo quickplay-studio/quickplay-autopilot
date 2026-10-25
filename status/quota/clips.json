@@ -1,11 +1,7 @@
 {
- "day": "2026-10-24",
- "units": 4450,
- "by": {
-  "clip promote": 1400,
-  "clip demote": 850,
-  "clip comment": 2200
- },
+ "day": "2026-10-25",
+ "units": 0,
+ "by": {},
  "calls": {
   "upload": 17
  }

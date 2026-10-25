@@ -1,41 +1,76 @@
 {
- "as_of": "2026-10-25T12:15+00:00",
+ "as_of": "2026-10-25T22:52+00:00",
  "channels": {
-  "clips": {
-   "public_a_day_old": 34,
-   "no_views": 27,
-   "views": 15,
-   "rejected": 0,
-   "blocked": 0,
-   "age_restricted": 0,
-   "for_kids": 0,
-   "views_day_old": 14,
-   "unseen": true,
-   "take_unseen": false
-  },
   "gaming": {
-   "public_a_day_old": 7,
-   "no_views": 0,
-   "views": 127,
+   "public_a_day_old": 34,
+   "no_views": 12,
+   "views": 165,
    "rejected": 0,
    "blocked": 0,
    "age_restricted": 0,
    "for_kids": 0,
-   "views_day_old": 90,
-   "unseen": false,
-   "take_unseen": false
+   "views_day_old": 164,
+   "take_day_old": 7,
+   "take_no_views": 1,
+   "take_views": 31,
+   "unseen": true,
+   "take_unseen": false,
+   "traffic_14d": {
+    "YT_SEARCH": 33,
+    "SHORTS": 10,
+    "NO_LINK_OTHER": 0,
+    "total": 43,
+    "engaged": 23,
+    "subs_gained": 0,
+    "subs_lost": 0,
+    "feed_share": 0.23
+   }
   },
-  "irl": {
-   "public_a_day_old": 10,
-   "no_views": 10,
+  "clips": {
+   "public_a_day_old": 33,
+   "no_views": 32,
    "views": 1,
    "rejected": 0,
    "blocked": 0,
    "age_restricted": 0,
    "for_kids": 0,
-   "views_day_old": 0,
+   "views_day_old": 1,
+   "take_day_old": 11,
+   "take_no_views": 11,
+   "take_views": 0,
    "unseen": true,
-   "take_unseen": false
+   "take_unseen": true,
+   "traffic_14d": {
+    "YT_CHANNEL": 10,
+    "YT_SEARCH": 5,
+    "total": 15,
+    "engaged": 6,
+    "subs_gained": 0,
+    "subs_lost": 0,
+    "feed_share": 0.0
+   }
+  },
+  "irl": {
+   "public_a_day_old": 26,
+   "no_views": 23,
+   "views": 6,
+   "rejected": 0,
+   "blocked": 0,
+   "age_restricted": 0,
+   "for_kids": 0,
+   "views_day_old": 6,
+   "take_day_old": 10,
+   "take_no_views": 9,
+   "take_views": 1,
+   "unseen": true,
+   "take_unseen": true,
+   "traffic_14d": {
+    "total": 0,
+    "engaged": 0,
+    "subs_gained": 0,
+    "subs_lost": 0,
+    "feed_share": null
+   }
   }
  }
 }

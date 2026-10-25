@@ -560,7 +560,10 @@
  "volume_note": "Volume where it works (Charlie, 25 October): the day's clips go to the channel with the best median views a clip over clips_window_days (7) days (clips/stats.csv, public clips a day old or more; ties go to the better mean, then to Instagram views; the channel that had the volume keeps it unless another is 10% or a view ahead). The other channels idle (0 a day) except one retest clip every clips_retest_days (7) days. Each change of plan is one row in analytics/decisions.csv (clips/state/allocation.json remembers the last). python pipeline/clips.py allocation prints today's plan and changes nothing.",
  "clips_window_days": 7,
  "clips_retest_days": 7,
- "youtube_off": {},
+ "youtube_off": {
+  "clips": "2026-10-25",
+  "gaming": "2026-10-25"
+ },
  "youtube_off_note": "The stop rule (Charlie, 25 October): a channel whose median is under clips_stop_median views a clip after clips_stop_clips public clips (a day old or more) in clips_stop_days days stops YouTube uploads. pipeline/clips.py writes the channel and the day here, one row to analytics/decisions.csv and a needs-charlie issue; from then its clips are made for Instagram only (clips_ig_only_per_day a day, inside social_per_day) and nothing on YouTube is deleted. Delete the entry to start the channel again.",
  "clips_stop_median": 100,
  "clips_stop_clips": 30,

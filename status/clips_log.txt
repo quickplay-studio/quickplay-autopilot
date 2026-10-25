@@ -188,3 +188,17 @@ speed-expedia-19 (youtube, Content Rewards): already
 speed-expedia-20: waiting 3.5 min before submitting
 speed-expedia-20 (youtube, Content Rewards): already
 submit: 2 of 74 submitted
+=== run 2026-10-25 22:52 UTC, schedule '30 22 * * *', request ''
+stats: 110 clips
+STOP RULE: the clips channel has 33 public clips in 14 days with a median of 0 views (under 100): YouTube uploads are off from 2026-10-25, its clips go to Instagram only
+opened: 🛑 Clips: the clips channel stops YouTube uploads https://github.com/quickplay-studio/quickplay-autopilot/issues/45
+STOP RULE: the gaming channel has 34 public clips in 14 days with a median of 1.5 views (under 100): YouTube uploads are off from 2026-10-25, its clips go to Instagram only
+opened: 🛑 Clips: the gaming channel stops YouTube uploads https://github.com/quickplay-studio/quickplay-autopilot/issues/46
+insights: {"layout": null, "captions": null, "punch": null, "length": null, "title": null, "take": null, "take_style": null}
+reach traffic: {"gaming": {"YT_SEARCH": 33, "SHORTS": 10, "NO_LINK_OTHER": 0, "total": 43, "engaged": 23, "subs_gained": 0, "subs_lost": 0, "feed_share": 0.23}, "clips": {"YT_CHANNEL": 10, "YT_SEARCH": 5, "total": 15, "engaged": 6, "subs_gained": 0, "subs_lost": 0, "feed_share": 0.0}, "irl": {"total": 0, "engaged": 0, "subs_gained": 0, "subs_lost": 0, "feed_share": null}}
+reach: {"gaming": {"public_a_day_old": 34, "no_views": 12, "views": 165, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 164, "take_day_old": 7, "take_no_views": 1, "take_views": 31, "unseen": true, "take_unseen": false, "traffic_14d": {"YT_SEARCH": 33, "SHORTS": 10, "NO_LINK_OTHER": 0, "total": 43, "engaged": 23, "subs_gained": 0, "subs_lost": 0, "feed_share": 0.23}}, "clips": {"public_a_day_old": 33, "no_views": 32, "views": 1, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 1, "take_day_old": 11, "take_no_views": 11, "take_views": 0, "unseen": true, "take_unseen": true, "traffic_14d": {"YT_CHANNEL": 10, "YT_SEARCH": 5, "total": 15, "engaged": 6, "subs_gained": 0, "subs_lost": 0, "feed_share": 0.0}}, "irl": {"public_a_day_old": 26, "no_views": 23, "views": 6, "rejected": 0, "blocked": 0, "age_restricted": 0, "for_kids": 0, "views_day_old": 6, "take_day_old": 10, "take_no_views": 9, "take_views": 1, "unseen": true, "take_unseen": true, "traffic_14d": {"total": 0, "engaged": 0, "subs_gained": 0, "subs_lost": 0, "feed_share": null}}}
+late rows: 0 expired (over 30 hours old without the views to justify a late submission)
+engage: 0 comments
+late rows: 0 expired (over 30 hours old without the views to justify a late submission)
+submit: Vyro: 72 row(s) left for the Mac Chrome run (submit_by mac)
+submit: 0 of 72 submitted

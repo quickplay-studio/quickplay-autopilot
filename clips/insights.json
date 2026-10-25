@@ -1,141 +1,223 @@
 {
- "updated": "2026-10-25T12:15+00:00",
- "clips": 51,
+ "updated": "2026-10-25T22:52+00:00",
+ "clips": 93,
  "tests": {
   "layout": {
    "arms": {
     "letterbox": {
-     "n": 34,
+     "n": 63,
      "median_views": 0.0,
-     "mean_views": 2.7
+     "mean_views": 2.4,
+     "ig_n": 10,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 39.8
     },
     "full": {
-     "n": 7,
+     "n": 16,
      "median_views": 0.0,
-     "mean_views": 0.7
+     "mean_views": 0.6,
+     "ig_n": 5,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 25.8
     },
     "split": {
-     "n": 1,
+     "n": 5,
      "median_views": 0.0,
-     "mean_views": 0.0
+     "mean_views": 0.2,
+     "ig_n": 0,
+     "ig_median_views": null,
+     "ig_mean_views": null
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "letterbox"
   },
   "captions": {
    "arms": {
     "lines": {
-     "n": 25,
+     "n": 51,
      "median_views": 0.0,
-     "mean_views": 2.8
+     "mean_views": 2.3,
+     "ig_n": 12,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 43.9
     },
     "karaoke": {
-     "n": 17,
+     "n": 33,
      "median_views": 0.0,
-     "mean_views": 1.5
+     "mean_views": 1.4,
+     "ig_n": 3,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 0.0
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "lines"
   },
   "punch": {
    "arms": {
     "none": {
-     "n": 31,
+     "n": 61,
      "median_views": 0.0,
-     "mean_views": 2.2
+     "mean_views": 1.8,
+     "ig_n": 6,
+     "ig_median_views": 111.0,
+     "ig_mean_views": 66.3
     },
     "zoom": {
-     "n": 11,
+     "n": 23,
      "median_views": 0.0,
-     "mean_views": 2.5
+     "mean_views": 2.3,
+     "ig_n": 9,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 14.3
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "none"
   },
   "length": {
    "arms": {
     "as planned": {
-     "n": 32,
+     "n": 74,
      "median_views": 0.0,
-     "mean_views": 2.9
+     "mean_views": 2.2,
+     "ig_n": 14,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 26.9
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "as planned"
   },
   "title": {
    "arms": {
     "subject first": {
-     "n": 24,
+     "n": 40,
      "median_views": 0.0,
-     "mean_views": 3.8
+     "mean_views": 3.5,
+     "ig_n": 7,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 21.6
     },
     "hook first": {
-     "n": 16,
+     "n": 42,
      "median_views": 0.0,
-     "mean_views": 0.2
+     "mean_views": 0.6,
+     "ig_n": 8,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 47.0
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "hook first"
   },
   "take": {
    "arms": {
     "voice": {
-     "n": 0,
-     "median_views": null,
-     "mean_views": null
+     "n": 26,
+     "median_views": 0.0,
+     "mean_views": 1.2,
+     "ig_n": 8,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 47.0
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "voice"
   },
   "take_style": {
    "arms": {
     "argument": {
      "n": 0,
      "median_views": null,
-     "mean_views": null
+     "mean_views": null,
+     "ig_n": 0,
+     "ig_median_views": null,
+     "ig_mean_views": null
     },
     "framing": {
-     "n": 0,
-     "median_views": null,
-     "mean_views": null
+     "n": 28,
+     "median_views": 0.0,
+     "mean_views": 1.1,
+     "ig_n": 8,
+     "ig_median_views": 0.0,
+     "ig_mean_views": 47.0
     }
    },
-   "best": null
+   "best": null,
+   "best_ig": "framing"
   }
  },
  "campaigns": {
-  "kevin-langue-ghost": {
-   "n": 5,
-   "median_views": 0.0
-  },
-  "speed-expedia": {
-   "n": 7,
-   "median_views": 0.0
-  },
-  "tdr-flamingo": {
-   "n": 9,
-   "median_views": 0.0
-  },
-  "tdr-jenny": {
-   "n": 9,
+  "tdr-mitch": {
+   "n": 14,
    "median_views": 0.0
   },
   "valorant-champs": {
-   "n": 3,
-   "median_views": 0.0
+   "n": 6,
+   "median_views": 1.0
   },
-  "tdr-mitch": {
-   "n": 7,
+  "tdr-jenny": {
+   "n": 12,
+   "median_views": 1.0
+  },
+  "tdr-stinkyasher": {
+   "n": 9,
    "median_views": 0.0
   },
   "mrbeast-cod": {
-   "n": 7,
+   "n": 14,
    "median_views": 0.0
   },
-  "tdr-stinkyasher": {
-   "n": 4,
-   "median_views": 2.0
+  "tdr-flamingo": {
+   "n": 15,
+   "median_views": 0.0
+  },
+  "speed-expedia": {
+   "n": 10,
+   "median_views": 0.0
+  },
+  "kevin-langue-ghost": {
+   "n": 13,
+   "median_views": 0.0
   }
+ },
+ "take_style": {
+  "verdict": "framing",
+  "note": "framing leads on Instagram views; the other measure has not decided (argument 0 clips (0 with Instagram views), framing 28 clips (8 with Instagram views))"
+ },
+ "format": {
+  "arms": {
+   "board": {
+    "n": 0,
+    "median_views": null,
+    "mean_views": null,
+    "ig_n": 0,
+    "ig_median_views": null,
+    "ig_mean_views": null
+   },
+   "voice": {
+    "n": 26,
+    "median_views": 0.0,
+    "mean_views": 1.2,
+    "ig_n": 8,
+    "ig_median_views": 0.0,
+    "ig_mean_views": 47.0
+   },
+   "cut": {
+    "n": 67,
+    "median_views": 0.0,
+    "mean_views": 2.1,
+    "ig_n": 7,
+    "ig_median_views": 0.0,
+    "ig_mean_views": 21.6
+   }
+  },
+  "best": null,
+  "best_ig": "voice",
+  "verdict": "voice",
+  "note": "voice leads on Instagram views; the other measure has not decided (board 0 clips (0 with Instagram views), voice 26 clips (8 with Instagram views), cut 67 clips (7 with Instagram views))"
  },
  "score_bands": {
   "under 6": {
@@ -143,14 +225,50 @@
    "mean_views": null
   },
   "6 to 7": {
-   "n": 0,
-   "mean_views": null
+   "n": 12,
+   "mean_views": 2.0
   },
   "8 to 10": {
-   "n": 0,
-   "mean_views": null
+   "n": 4,
+   "mean_views": 0.2
   }
  },
- "scored_clips": 0,
- "min_score": null
+ "scored_clips": 16,
+ "min_score": null,
+ "channels": {
+  "volume": null,
+  "by_channel": {
+   "clips": {
+    "clips_7d": 33,
+    "median_views_7d": 0.0,
+    "mean_views_7d": 0.03,
+    "ig_median_views_7d": 0.0,
+    "clips_14d": 33,
+    "median_views_14d": 0.0,
+    "stop_rule_fires": false,
+    "youtube_off_since": "2026-10-25"
+   },
+   "gaming": {
+    "clips_7d": 34,
+    "median_views_7d": 1.5,
+    "mean_views_7d": 4.82,
+    "ig_median_views_7d": null,
+    "clips_14d": 34,
+    "median_views_14d": 1.5,
+    "stop_rule_fires": false,
+    "youtube_off_since": "2026-10-25"
+   },
+   "irl": {
+    "clips_7d": 26,
+    "median_views_7d": 0.0,
+    "mean_views_7d": 0.23,
+    "ig_median_views_7d": 0.0,
+    "clips_14d": 26,
+    "median_views_14d": 0.0,
+    "stop_rule_fires": false,
+    "youtube_off_since": null
+   }
+  },
+  "stop_rule": "median under 100 views a clip after 30 public clips in 14 days"
+ }
 }

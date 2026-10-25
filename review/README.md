@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 06:44): 12 of 1,000 subscribers · 8,551 of 10 million Shorts views in 90 days · 4,252 views in the last 24 hours (about 111,016 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 07:42): 12 of 1,000 subscribers · 8,622 of 10 million Shorts views in 90 days · 4,087 views in the last 24 hours (about 111,015 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 7:37 (UK): 1 scheduled, 147 public, 15 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 24 Oct 20:04).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sun 25 Oct 7:37).
 
 ## Posts by day
 
@@ -77,6 +77,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-166** Halloween: The Game secret you might have missed (rendering next)
+- **QD-167** Zendaya: the major category change explained (rendering next)
 
 ## On the channel (latest first)
 

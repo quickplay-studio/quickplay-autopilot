@@ -1,11 +1,13 @@
 """Engagement on our own public Shorts, using the second YouTube sign-in (yt_connect.py, youtube.force-ssl):
-- a creator comment with the board's question (meta.comment) once the Short is public (YouTube's API can't pin comments)
+- a creator comment once the Short is public (YouTube's API can't pin comments): its first line names the series (a Short in
+  none: its category) and asks to subscribe, with the series' playlist link, then the board's question (meta.comment); the
+  subscriber push, 25 October (pipeline/subscribe.py, series.comment_text)
 - the Short added to its category playlist ("Quickplay Daily: Gaming" and so on, created when missing)
-- a Short of a numbered series (pipeline/series.py) says so in that comment, with its number and the series' playlist link, and
-  every uploaded Short of a series is added to the series' playlist (pipeline/playlists.py, 25 October)
+- every uploaded Short of a numbered series (pipeline/series.py) is added to the series' playlist (pipeline/playlists.py, 25 October)
 - 24 to 72 hours after going public, a Short getting under half the typical views an hour switches to its alternative
   title (meta.alt_title), once
-- short replies to the first comments on the Shorts in the replies test (replies(), Gemini)
+- short replies to the first comments on the Shorts in the replies test (replies(), Gemini), each ending with a short
+  invitation to subscribe, once per thread (subscribe.invite_reply)
 Everything is recorded in status/<id>.json under "engage". usage: python pipeline/engage.py
 """
 import datetime as dt, json, os, pathlib, re, statistics, sys
@@ -31,9 +33,16 @@ def client():
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
 
 def comment_for(yt, b, comment):
-    """The creator comment: the board's question and, for a Short in a numbered series, the series name, its number and the
-    playlist link (the playlist is made now when it doesn't exist yet, 50 units through quota.allow: pipeline/playlists.py)."""
-    if not b.get("series_name"): return str(comment)[:500]
+    """The creator comment: its first line names the series and asks to subscribe, with the series' playlist link (the playlist
+    is made now when it doesn't exist yet, 50 units through quota.allow: pipeline/playlists.py), then the board's question. A
+    Short in no series gets the category and the channel's subscribe link instead, and costs no call (subscriber push,
+    25 October)."""
+    if not b.get("series_name"):
+        try:
+            import series
+            return series.comment_text(comment, b, "")
+        except Exception as ex:
+            print("subscribe comment:", f"{type(ex).__name__}: {ex}"[:120]); return str(comment)[:500]
     try:                                 # the comment is posted once, so nothing here may keep it from going
         import playlists, series
         try: url = playlists.url_for(yt, b)
@@ -159,6 +168,7 @@ def replies():
     rec = json.loads(path.read_text()) if path.exists() else {}
     today = str(dt.date.today())
     done, per, days = rec.setdefault("done", {}), rec.setdefault("per_video", {}), rec.setdefault("days", {})
+    invited = rec.setdefault("invited", {})         # threads whose reply already carried the subscribe invitation
     left = min(5, int(json.loads((ROOT / "config.json").read_text()).get("comment_replies_per_day", 10)) - days.get(today, 0))
     if left <= 0: return
     me = yt.channels().list(part="id", mine=True).execute()["items"][0]["id"]
@@ -177,7 +187,8 @@ def replies():
             if (c.get("authorChannelId") or {}).get("value") == me or t["id"] in done: continue
             if room <= 0 or len(todo) >= left: break
             todo.append({"id": t["id"], "video": st["video"], "short": (b.get("meta") or {}).get("title", ""),
-                         "summary": (b.get("meta") or {}).get("summary", ""), "comment": c.get("textDisplay", "")[:400]})
+                         "summary": (b.get("meta") or {}).get("summary", ""), "comment": c.get("textDisplay", "")[:400],
+                         "board": {k: b.get(k) for k in ("category", "series_name", "series_no", "series_of", "series_kind", "franchise", "channel_series", "channel")}})
             room -= 1
     if not todo: return
     import quota
@@ -191,11 +202,18 @@ def replies():
         done[t["id"]] = today
         text = factpack.undash(str(x.get("reply") or "")).strip()
         if x.get("skip") or not text or "http" in text.lower() or "www." in text.lower(): continue
+        if t["id"] not in invited:           # the subscriber push (25 October): a short invitation ends a reply, once per thread
+            try:
+                import subscribe
+                text = subscribe.invite_reply(text, t.get("board") or {})
+            except Exception as ex: print("subscribe invitation:", f"{type(ex).__name__}: {ex}"[:120])
+            invited[t["id"]] = today
         yt.comments().insert(part="snippet", body={"snippet": {"parentId": t["id"], "textOriginal": text[:300]}}).execute()
         per[t["video"]] = per.get(t["video"], 0) + 1; posted += 1
     days[today] = days.get(today, 0) + posted
     quota.spend(50 * posted + 3, "comment replies")
     rec["done"] = dict(list(done.items())[-3000:])
+    rec["invited"] = dict(list(invited.items())[-3000:])
     path.write_text(json.dumps(rec, indent=1))
     print("comment replies posted:", posted)
 

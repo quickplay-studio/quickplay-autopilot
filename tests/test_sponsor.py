@@ -302,7 +302,8 @@ board = {"meta": {"title": "Free games", "summary": "Three are free.", "hashtags
 plain_st = {"title": "Free games"}
 sp_st = {"title": "Free games", "sponsor": {"applied": True, "hashtags": ["#SpringSound", "#springfest"]}}
 ig = SO.caption(sp_st, board, "instagram")
-assert ig.startswith("#ad Free games") and ig.split("\n\n")[-1].split()[:2] == ["#SpringSound", "#springfest"], ig
+assert ig.startswith("#ad Free games") and ig.split("\n\n")[-2].split()[:2] == ["#SpringSound", "#springfest"], ig      # the hashtags, then the follow line (25 October)
+assert ig.split("\n\n")[-1].startswith("Follow @quickplaydaily"), ig
 assert len([w for w in ig.split() if w.startswith("#") and w != "#ad"]) == 5, ig                       # Instagram's 5 hashtags, the campaign's first
 fb = SO.caption(sp_st, board, "facebook")
 assert fb.startswith("#ad Free games") and "#SpringSound" in fb, fb

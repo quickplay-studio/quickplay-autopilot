@@ -7,6 +7,9 @@ A dimension with an "assign" split (style, 24 October: minimal text and fast pic
 standard look) is a fixed test instead: drawn by its split until drivers.csv proves an arm (assign_weights). The style is
 recorded in the Short's look (status/<id>.json, then analytics look_style in shorts.csv, scored by drivers.py), and the
 look's render settings (resolve) carry its text, graphics, pace and shade choices to render3.py and template3.html.
+The closing dimension (25 October, the subscriber push: a small "Subscribe for ..." line in the last 1.5 seconds, "chip" or
+"none", 50/50) is a fixed split too, drawn on its own seed so it is independent of the style; it is decided by subscribers per
+1,000 views (analytics/subs.csv, "decide_by": "subs") with views as the guardrail (subs_rows), and recorded in the look.
   python pipeline/looks.py QD-031     prints the look that Short would get now
 """
 import json, math, pathlib, random, sys
@@ -56,13 +59,27 @@ def default(cat=None):
     return out
 
 DRIVERS = ROOT / "analytics" / "drivers.csv"
+SUBS = ROOT / "analytics" / "subs.csv"
 DECIDE_N, WIN_SHARE = 70, 0.9    # a fixed-split test (a dimension's "assign") is decided once both arms have this many Shorts
+
+def subs_rows(dim, views_rows):
+    """The verdicts of a dimension decided by subscribers (looks.json "decide_by": "subs", the closing chip of 25 October):
+    analytics/subs.csv's rows for feature subs:look_<dim>, named as assign_weights reads them (look_<dim>). The subscriber
+    push must not cost views, so an arm the views test (drivers.csv, look_<dim>) has cut back or paused is never a winner:
+    its "push" reads "early sign"."""
+    import csv
+    try: rows = [r for r in csv.DictReader(SUBS.open()) if r.get("feature") == f"subs:look_{dim}"]
+    except Exception: return []
+    hurt = {r.get("value") for r in views_rows if r.get("feature") == f"look_{dim}" and r.get("verdict") in ("cut back", "pause", "stop")}
+    return [dict(r, feature=f"look_{dim}", verdict=("early sign" if r.get("verdict") == "push" and r.get("value") in hurt else r.get("verdict")))
+            for r in rows]
 
 def assign_weights(cat, dim, drivers=None):
     """The split of a fixed test (looks.json "assign", the style test of 24 October): as written, until drivers.csv (feature
     look_<dim>, the proof rule of drivers.py) shows a "push" for one arm or a "cut back" for the other with at least
     DECIDE_N measured Shorts in every arm; then the winner gets WIN_SHARE and the others share the rest, so they stay
-    measured."""
+    measured. A dimension with "decide_by": "subs" (the closing chip) is decided by subscribers per 1,000 views instead
+    (subs_rows)."""
     opts = [k for k in (cat["dimensions"][dim].get("assign") or {}) if k in active(cat, dim)]
     w = {k: float(cat["dimensions"][dim]["assign"][k]) for k in opts}
     if len(opts) < 2: return w
@@ -72,6 +89,7 @@ def assign_weights(cat, dim, drivers=None):
             import csv
             rows = list(csv.DictReader(DRIVERS.open()))
         except Exception: rows = []
+        if cat["dimensions"][dim].get("decide_by") == "subs": rows = subs_rows(dim, rows)
     got = {r.get("value"): r for r in rows if r.get("feature") == f"look_{dim}" and r.get("value") in w}
     if len(got) < len(w) or any(int(float(got[k].get("n") or 0)) < DECIDE_N for k in w): return w
     win = [k for k in w if got[k].get("verdict") == "push"]
@@ -160,14 +178,17 @@ def resolve(ids=None, cat=None):
               # the style test (24 October): how much text sits on the pictures and how fast they change (render3.py,
               # template3.html); a look from before it has none of these, so it renders as it always did
               "style": ids.get("style", ""), "labels": st.get("labels", "full"), "chip": st.get("chip", "full"),
-              "graphics": st.get("graphics", "cards"), "pace": st.get("pace", "board"), "shade": st.get("shade", "full")}
+              "graphics": st.get("graphics", "cards"), "pace": st.get("pace", "board"), "shade": st.get("shade", "full"),
+              # the closing chip (25 October, subscriber push): seconds of the small subscribe line at the very end, 0 for none;
+              # a look from before the test has no closing, so it renders as it always did
+              "closing": ids.get("closing", ""), "end_chip": float((o.get("closing") or {}).get("chip_seconds") or 0)}
     return {"ids": ids, "render": render, "voice": {"voice": o["voice"].get("voice", "F2"), "wps": o["voice"].get("wps", 3.0)}}
 
 def describe(ids, cat=None):
     """One short line for the lineup message, e.g. 'pop captions, emma, punchy, vivid, image first'."""
     cat = cat or catalogue(); ids = resolve(ids, cat)["ids"]
-    rest = [ids[d].replace("_", " ") for d in cat["dimensions"] if d not in ("captions",)]
-    return ", ".join([f"{ids['captions']} captions"] + rest)
+    rest = [ids[d].replace("_", " ") for d in cat["dimensions"] if d not in ("captions", "closing")]
+    return ", ".join([f"{ids['captions']} captions"] + rest + (["end chip"] if ids.get("closing") == "chip" else []))
 
 if __name__ == "__main__":
     print(json.dumps(choose(sys.argv[1] if len(sys.argv) > 1 else "QD-999")))

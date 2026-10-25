@@ -12,6 +12,7 @@ Writes analytics/ (read by the daily writer and the reviews, and uploaded to the
   geo.csv, traffic.csv, audience.csv   where viewers are, how they found us, age and gender (channel and category)
   search_terms.csv  what people typed into YouTube search to find our Shorts (the writer plans more of these)
   drivers.csv    what drives views: every choice (category, format, hook, length, time, look) against typical
+  subs.csv       subscribers gained per 1,000 views for the subscriber push's arms, the ending, series and category (25 October)
   decisions.csv  every change made from the data, with the reason (written here when a result turns, and by reviews)
   summary.json   totals, monetisation progress (YouTube Partner Program, TikTok Creator Rewards) and the latest numbers
   insights.md    what's working, what drives views, and the recipe the writer follows
@@ -124,7 +125,7 @@ def our_shorts():
             "id": st.get("id"), "channel": st.get("channel") or b.get("channel") or "main",
             "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
-            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used", "sponsor")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
+            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used", "sponsor", "sub_push")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
             # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
             **{k: b.get(k, "") for k in SERIES_COLUMNS},
@@ -711,6 +712,58 @@ def log_decisions(table, method=""):
     write_csv(p, rows, DEC_FIELDS)
 
 # ---------------- put it together ----------------
+def log_sub_decisions(table):
+    """The Recipe's changes for subscribers (the subscriber push, 25 October): when a subscriber verdict (analytics/subs.csv)
+    turns to or from "push" or "cut back" with 5 or more Shorts, a line in decisions.csv, as log_decisions does for views. Its
+    own state file, so the two never mix, and nothing is logged for the first run's "about typical" rows."""
+    p, vp = OUT / "decisions.csv", CACHE / "verdicts_subs.json"
+    prev = load_json(vp, {}) or {}
+    cur = {f"{t['feature']}|{t['value']}": t for t in table if t["n"] >= 5}
+    rows = list(csv.DictReader(io.StringIO(p.read_text()))) if p.exists() else []
+    today, check = str(NOW.astimezone(UK).date()), str(NOW.astimezone(UK).date() + dt.timedelta(days=7))
+    acting = ("push", "cut back")
+    for k, t in cur.items():
+        was = (prev.get(k) or {}).get("verdict")
+        if t["verdict"] == was or (t["verdict"] not in acting and was not in acting): continue
+        what = f"{t['feature_label'].replace('Subscribers: ', '').lower()} \"{t['value']}\""
+        change = (f"Lean towards {what} for subscribers" if t["verdict"] == "push" else f"Use less {what} for subscribers"
+                  if t["verdict"] == "cut back" else f"Back to normal for {what} (subscribers)")
+        rows.append({"date": today, "area": t["feature_label"], "change": change,
+                     "why": f"{t['subs_per_1k']} subscribers per 1,000 views against {t['typical_per_1k']} typical over {t['n']} Shorts, {t['days']} UK days",
+                     "evidence": f"subs.csv: {t['feature']} = {t['value']}, n {t['n']}, lift {t['lift']}, {t['subs']} subscribers from {t['views']} views",
+                     "check_on": check, "by": "analytics (automatic)"})
+    vp.write_text(json.dumps({k: {"verdict": t["verdict"], "lift": t["lift"], "n": t["n"]} for k, t in cur.items()}))
+    rows.sort(key=lambda r: r["date"], reverse=True)
+    write_csv(p, rows, DEC_FIELDS)
+
+
+def subs_section(table, summ, summary=None):
+    """insights.md's "Subscribers" section as lines: subscribers per 1,000 views overall, by arm and by what is tested, the best
+    Short for subscribers, and the channel's count against the 1,000 the Partner Programme needs (drivers.analyse_subscribers)."""
+    L = ["## Subscribers (subscribers gained per 1,000 views, against Shorts posted the same UK day; Shorts public 3 days or more)"]
+    y = ((summary or {}).get("youtube") or {})
+    if y.get("subscribers") is not None:
+        L.append(f"- The channel has {y['subscribers']:,} of the 1,000 subscribers the Partner Programme needs.")
+    if not summ or not summ.get("shorts"):
+        return L + ["- No Short is old enough to count yet (20 views and 3 days public)."] + [""]
+    L.append(f"- Overall: {summ['per_1k']} subscribers per 1,000 views ({summ['subs']} from {summ['views']:,} views over {summ['shorts']} Shorts).")
+    names = {"subs:sub_push": "Subscribe line", "subs:look_closing": "Closing chip"}
+    for feat, label in names.items():
+        arms = [t for t in table if t["feature"] == feat]
+        if arms:
+            L.append(f"- {label}: " + "; ".join(f"{t['value']} {t['subs_per_1k']} per 1,000 ({t['subs']} from {t['views']:,} views, {t['n']} Shorts, "
+                                                f"{t['lift']}x typical, {t['verdict']})" for t in sorted(arms, key=lambda t: -t["lift"])) + ".")
+        else:
+            L.append(f"- {label}: no arm has 2 or more groups of counted Shorts yet.")
+    for feat, label in (("subs:ending", "Ending"), ("subs:series", "Series"), ("subs:category", "Category")):
+        top = sorted((t for t in table if t["feature"] == feat and t["n"] >= 3), key=lambda t: -t["lift"])
+        if top: L.append(f"- {label}: " + "; ".join(f"{t['value']} {t['subs_per_1k']} per 1,000 ({t['n']} Shorts, {t['verdict']})" for t in top[:4]) + ".")
+    b = summ.get("best")
+    L.append((f"- Best Short for subscribers: {b['id'] or '?'} \"{b['title']}\" gained {b['subs']} from {b['views']:,} views ({b['per_1k']} per 1,000)."
+              if b else "- Best Short for subscribers: none has gained one yet among the Shorts that count."))
+    return L + [""]
+
+
 def main():
     import drivers as DRV
     OUT.mkdir(exist_ok=True); CACHE.mkdir(exist_ok=True)
@@ -754,7 +807,7 @@ def main():
             "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "sponsor", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "sponsor", "sub_push", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
@@ -921,6 +974,12 @@ def main():
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table, DRV.METHOD)
+        sub_table, sub_sum = [], {}
+        try:        # subscribers per 1,000 views: the subscriber push's own judgement, apart from views (analytics/subs.csv)
+            sub_table, sub_sum = DRV.analyse_subscribers(rows), DRV.subs_summary(rows)
+            write_csv(OUT / "subs.csv", sub_table, DRV.SUBS_FIELDS)
+            log_sub_decisions(sub_table)
+        except Exception as e: print("subscriber drivers:", str(e)[:150])
         follow = [f"Follow up {b['short'] or b['title']} (\"{b['title']}\"): " +
                   (f"{b['views_3h']} views in its first 3 hours, {b['times_typical']}x the median Short at 3 hours (the top fifth)"
                    if b.get("trigger") == "3 hours" else f"{b['times_typical']}x the views recent Shorts had {b['hours_public']} hours in") +
@@ -931,7 +990,10 @@ def main():
         if "_region_rows" not in aud:              # the regions table (below) feeds the audience recipe: computed once, here first
             try: reg_rows, aud["_regions"] = regions(rows, aud); aud["_region_rows"] = reg_rows
             except Exception as e: print("regions:", str(e)[:120])
-        (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + tests_lines + audience_recipe(aud), aud))
+        try: sub_recipe = DRV.subs_recipe(sub_table, table)
+        except Exception as e: sub_recipe = []; print("subscriber recipe:", str(e)[:150])
+        (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + sub_recipe + tests_lines + audience_recipe(aud), aud,
+                                                  subs_section(sub_table, sub_sum, summary)))
         try: import social; social.ig_report()       # status/instagram.json and insights.md's Instagram section (social.py, 25 October)
         except Exception as e: print("instagram section:", str(e)[:150])
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
@@ -1055,9 +1117,10 @@ def slot_scores(rows):
 
 
 FACTOR_LABELS = {"fx_energy": "camera energy", "fx_slot": "posting quarter (UK)", "writer_arm": "writer model",
-                 "title_emoji": "title emoji", "title_answer": "title answer (stated or held back)"}
+                 "title_emoji": "title emoji", "title_answer": "title answer (stated or held back)",
+                 "sub_push": "subscribe line (spoken or none)"}
 # the title tests ride on every Short beside the round (writer.TITLE_TESTS): their progress shows with the round's
-TITLE_FACTORS = {"title_emoji": ["emoji", "none"], "title_answer": ["stated", "held back"]}
+TITLE_FACTORS = {"title_emoji": ["emoji", "none"], "title_answer": ["stated", "held back"], "sub_push": ["spoken", "none"]}
 
 
 def test_progress(rows, table, today=None):
@@ -1333,9 +1396,10 @@ def audience_recipe(aud):
     except Exception: pass
     return out
 
-def insights(rows, s, table=None, recipe=None, aud=None):
-    """A short read for the daily writer and the reviews: the recipe from the data, what drives views, when and where
-    people watch, then the best and worst Shorts and the finer detail."""
+def insights(rows, s, table=None, recipe=None, aud=None, subs=None):
+    """A short read for the daily writer and the reviews: the recipe from the data, what drives views, the subscribers
+    section (subs_section: the subscriber push, 25 October), when and where people watch, then the best and worst Shorts and
+    the finer detail."""
     L = [f"# What's working (updated {s['updated'][:16].replace('T', ' ')} UTC)", ""]
     y, p = s["youtube"], s["ypp"]
     L += [f"YouTube Partner Program: {y['subscribers'] or 0:,} of 1,000 subscribers, about {y.get('views_last_90_days_estimate', y['views_last_90_days']):,} "
@@ -1352,6 +1416,7 @@ def insights(rows, s, table=None, recipe=None, aud=None):
               + (f" ({t['why']})" if t["why"] else "") for t in sorted(strong, key=lambda t: -abs(math.log(t["lift"])))]
         L += [f"- Early sign: {t['feature_label'].lower()} \"{t['value']}\" {t['lift']}x over {t['n']} Shorts" for t in early[:6]]
         L += [""]
+    L += subs or []
     L += ["## When people watch"] + timing_lines() + [""]
     L += ["## Where viewers are and how they find us"] + audience_lines(aud) + [""]
     L += (aud or {}).get("_regions") or []

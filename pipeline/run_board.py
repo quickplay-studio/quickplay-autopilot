@@ -132,6 +132,16 @@ def series_lines(sb):
     except Exception: return []
 
 
+def subscribe_lines(sb):
+    """The subscribe link in the description's first lines, straight after the summary (https://www.youtube.com/@<handle>?
+    sub_confirmation=1, the channel's own; the channel id's link when the handle is unknown): the subscriber push, 25 October
+    (pipeline/subscribe.py). [] when no link is known, and never a reason to fail a render."""
+    try:
+        import subscribe
+        return subscribe.description_lines(sb)
+    except Exception: return []
+
+
 def long_link(slot):
     """The line pointing to the latest long video that is public when the Short is (explainer.link_lines), as lines for the
     top of the description; [] when there is none yet. A Short with no slot is judged by the time it is made."""
@@ -151,7 +161,7 @@ def description(sb, credits, track, slot="", sponsor=None):
         import sponsor as SP
         m = SP.with_hashtags(m, sponsor)
     src_l, vis_l, music_l, note_l = LABELS["es" if sb.get("language") == "es" else "en"]       # the Spanish mirror's description is Spanish
-    out = ([SP.ad_line(sponsor), ""] if sponsor else []) + [m.get("summary", "").strip(), ""] + (long_link(slot) if sb.get("language") != "es" else []) + series_lines(sb) + [src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    out = ([SP.ad_line(sponsor), ""] if sponsor else []) + [m.get("summary", "").strip(), ""] + subscribe_lines(sb) + (long_link(slot) if sb.get("language") != "es" else []) + series_lines(sb) + [src_l] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")

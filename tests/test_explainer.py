@@ -687,7 +687,8 @@ sb = {"meta": {"summary": "A summary.", "sources": [["Outlet", "https://example.
 track = {"title": "Song", "artist": "Artist"}
 d_new = RB.description(sb, [], track, "2026-10-29T15:00:00Z")
 lines = d_new.split("\n")
-assert lines[0] == "A summary." and lines[2].startswith("Watch the weekly video: Tate McRae, Queen and Jailer 2 explained https://youtu.be/CCC") and lines[4] == "Sources:", lines[:6]
+assert lines[0] == "A summary." and lines[2].startswith("Subscribe") and "sub_confirmation=1" in lines[2], lines[:3]      # the subscriber push (25 October) comes first
+assert lines[4].startswith("Watch the weekly video: Tate McRae, Queen and Jailer 2 explained https://youtu.be/CCC") and lines[6] == "Sources:", lines[:8]
 assert "youtu.be/BBB" in RB.description(sb, [], track, "2026-10-27T15:00:00Z") and "youtu.be/BBB" in RB.description(sb, [], track, "2026-10-27T15:00:00")
 assert "weekly video" not in RB.description(sb, [], track, "2026-10-01T15:00:00Z") and "Sources:" in RB.description(sb, [], track, "not a time")
 assert RB.description(sb, [], track).split("\n")[:2] == ["A summary.", ""], "the old call, with no slot, still works"

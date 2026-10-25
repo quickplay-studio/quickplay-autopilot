@@ -457,6 +457,7 @@ async function load(force){
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
        drivers, geo, regions, changes, late, hourly, actions, keys, igs};
   D.outreach = await get("clips/outreach.csv", "csv");      // the creator scout's list (clips tab)
+  D.subs = await get("analytics/subs.csv", "csv");           // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -579,6 +580,33 @@ function instagramCard(){
     ${table([{h:"Test", f:t => esc(t.label) + (t.on ? (t.paused ? " (paused)" : "") : " (off)")}, {h:"Arm, Reels, median, share", f:arms}], Object.values(g.tests || {}), "No tests yet.")}`;
 }
 
+// Subscribers (25 October, the subscriber push): subscribers gained per 1,000 views overall (shorts.csv: Shorts with 20 views, public 3
+// days), the arms of the push and what they are scored on (analytics/subs.csv, written by drivers.analyse_subscribers), and the
+// best Short for subscribers. subs.csv is apart from drivers.csv: its verdicts mean subscribers, and drivers.csv's mean views.
+function subscribersCard(){
+  const now = Date.now();
+  const counts = r => (r.channel || "main") === "main" && has(r.yt_subs_gained) && num(r.yt_views) >= 20 && isFinite(Date.parse(r.posted)) && now - Date.parse(r.posted) >= 3 * 864e5;
+  const rs = (D.shorts || []).filter(counts);
+  const views = rs.reduce((a, r) => a + num(r.yt_views), 0), subs = rs.reduce((a, r) => a + num(r.yt_subs_gained), 0);
+  const rate = r => num(r.yt_subs_gained) / Math.max(1, num(r.yt_views));
+  const best = rs.filter(r => num(r.yt_subs_gained) > 0).sort((a, b) => num(b.yt_subs_gained) - num(a.yt_subs_gained) || rate(b) - rate(a))[0];
+  const have = num(((D.summary || {}).youtube || {}).subscribers);
+  const label = {"subs:sub_push": "Subscribe line", "subs:look_closing": "Closing chip"};
+  const arms = (D.subs || []).filter(r => label[r.feature]);
+  const verdict = v => v === "push" ? pill("good", "▲", "more subscribers") : v === "cut back" ? pill("bad", "▼", "fewer subscribers")
+    : v === "early sign" ? pill("wait", "…", "early sign") : `<span class="sub">${esc(v)}</span>`;
+  return `<div class="tiles" style="margin-top:0">
+      ${tile("Subscribers", fmt(have), `of the 1,000 the Partner Programme needs`)}
+      ${tile("Per 1,000 views", views ? (1000 * subs / views).toFixed(2) : "·", `${fmt(subs)} from ${fmt(views)} views, ${fmt(rs.length)} Shorts`)}
+      ${tile("Best Short", best ? "+" + fmt(best.yt_subs_gained) : "·", best ? `${esc(String(best.title).slice(0, 52))}, ${(1000 * rate(best)).toFixed(1)} per 1,000` : "none has gained one yet")}
+    </div>
+    ${D.subs === null || D.subs === undefined ? `<p class="sub">The arms' numbers are filled in by the next full analytics run.</p>`
+      : table([{h:"Test and arm", f:r => `${esc(label[r.feature])}<div class="sub" style="margin:2px 0 0"><b>${esc(r.value)}</b>, ${fmt(r.n)} Shorts</div>`},
+          {h:"Per 1,000", n:1, f:r => `${num(r.subs_per_1k).toFixed(2)}<div class="sub" style="margin:2px 0 0">${num(r.typical_per_1k).toFixed(2)} typical</div>`},
+          {h:"Verdict", f:r => `${verdict(r.verdict)}<div class="sub" style="margin:2px 0 0">${num(r.lift).toFixed(2)}x typical</div>`}],
+        arms.sort((a, b) => a.feature.localeCompare(b.feature) || num(b.lift) - num(a.lift)), "No Short is old enough to count yet: the arms show here once they have 3 Shorts that are 3 days old.")}`;
+}
+
 function insightsTab(){
   const ins = D.insights || "";
   const updated = (ins.match(/updated ([^)]+)\)/) || [])[1] || "";
@@ -643,6 +671,10 @@ function insightsTab(){
     <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 UK days, a 90% interval clear of typical and both halves of the data agreeing (25 October). The writer follows these, but 1 Short in 5 still explores; a paused choice rests 14 days and is then retested on a small share.</p>
     ${table([{h:"Choice", f:a => esc(a.name)}, {h:"Lean towards", f:a => choice(a.push)}, {h:"Use less", f:a => choice(a.cut)}]
       .concat(areas.some(a => a.stop.length) ? [{h:"Paused", f:a => choice(a.stop)}] : []).concat(areas.some(a => a.retest.length) ? [{h:"Retesting", f:a => choice(a.retest)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
+
+    <h2>Subscribers</h2>
+    <p class="sub">Subscribers gained per 1,000 views, against the Shorts posted the same UK day (Shorts with 20 views, public 3 days). Two arms run on every Short but an exploration Short, each 50/50 and apart from the others: a spoken reason to subscribe at the end, and a small subscribe line in the last 1.5 seconds. Every Short also asks in its comment, its description and (on Instagram) its caption. A verdict needs the same proof as views (5 Shorts over 2 UK days, a 90% interval clear of typical, both halves agreeing), and an arm that costs views never wins.</p>
+    ${subscribersCard()}
 
     <h2>Tests being run</h2>
     <div id="tests-card"><p class="sub">Loading the factorial round.</p></div>
@@ -903,6 +935,7 @@ const EXPORT = [
   ["Pipeline funnel by day", "analytics/funnel.csv", "tail", 30],
   ["Every Short (newest 80)", "analytics/shorts.csv", "tail", 80],
   ["What drives views (every tested choice)", "analytics/drivers.csv", "text", 0],
+  ["Subscribers per 1,000 views (the subscriber push and what it is tested on)", "analytics/subs.csv", "text", 0],
   ["The Recipe the writer follows", "analytics/insights.md", "text", 0],
   ["The Monday report", "analytics/weekly.md", "text", 0],
   ["Changes made from the data (newest first)", "analytics/decisions.csv", "head", 60],

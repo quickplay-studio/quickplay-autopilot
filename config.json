@@ -407,6 +407,14 @@
   "grace_days": 2
  },
  "playbook_note": "25 October (Charlie approved seasonal playbooks as mini-series): when a watchlist item first reaches launch or surging, watch.py writes a playbook once into status/playbooks.json: the item's first 5 angles (padded with generic ones), one a day, numbered '<Event> #1 to #5' in the titles and gathered in a playlist of the event. Progress is read from the boards (series_key), so a missed angle gets grace_days more days and then the series moves on. The angles are watch topics, so the watch places and watch_share_max still apply.",
+ "sub_push": {
+  "on": true,
+  "handle": "@quickplaydaily",
+  "spoken_share": 0.5,
+  "cadence": {},
+  "times": {}
+ },
+ "sub_push_note": "25 October (Charlie: a subscriber push baked into everything, measured not assumed; pipeline/subscribe.py). Two arms, each 50/50 and independent of every other arm: test.sub_push (spoken or none: the Short ends with one short, concrete reason to subscribe tied to its series or category; writer.py, every Short but an exploration Short; the old ending arm follow line is folded into it) and the look's closing (chip or none: a small line in the last 1.5 seconds; templates/looks.json, render3.py). Scored on subscribers gained per 1,000 views against Shorts posted the same UK day (drivers.analyse_subscribers, analytics/subs.csv, feature subs:<name>) with views as the guardrail (drivers.csv scores the same arms). Always on: the creator comment's first line, the description's subscribe link, the Instagram caption's last line, the end of a reply. handle: the main channel's, for the subscribe link (https://www.youtube.com/<handle>?sub_confirmation=1; the channel id's link when empty). spoken_share: the share of Shorts that get the spoken line until the data proves an arm. cadence: {series name: how often it comes, e.g. every day}, only where Charlie knows the rhythm is kept (a category is every day: each has a daily floor; a series with no entry gets no promise of a day or time). times: {series or category: hour to name in the spoken line, e.g. two}, only where the posting time is really fixed; empty because slots move round the clock.",
  "upload_limit_24h": 40,
  "upload_limit_step": 6,
  "upload_limit_max": 72,

@@ -89,7 +89,7 @@ def dead(rows):
 FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook style"), ("hook_len", "Hook length"),
             ("length", "Length"), ("slot", "Posting time (UK)"), ("weekday", "Day posted"), ("mood", "Music mood"),
             ("pictures", "Pictures"), ("title_style", "Title"), ("look_captions", "Captions"), ("look_voice", "Voice"),
-            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("look_style", "Style (text and pace)"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
+            ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("look_style", "Style (text and pace)"), ("look_closing", "Closing chip"), ("sub_push", "Subscribe line"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
             ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
@@ -98,10 +98,10 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "look_style", "sponsor"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "sponsor"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
-          "fx_energy", "fx_slot", "writer_arm", "title_answer", "sponsor")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
+          "fx_energy", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
 # The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
 # in features(); anything else a board carries (length "as written", when a long arm came back at a normal length) is
 # scored on what the Short did
@@ -161,7 +161,7 @@ def _f(x):
 def features(r):
     """The comparable things about one Short (shorts.csv row) as {feature: value}."""
     out = {k: (r.get(k) or "") for k in ("category", "format", "mood", "look_captions", "look_voice", "look_energy",
-                                          "look_grade", "look_opening", "look_style")}
+                                          "look_grade", "look_opening", "look_style", "look_closing")}
     # the hook and length tests are scored as assigned (content review, 24 October): a Short given a hook or length arm
     # counts under that arm whatever the text or the render came to (an intention-to-treat comparison); the rest under
     # the label of what was written (hook_type) and how long it ran
@@ -415,6 +415,179 @@ def analyse_instagram(rows, now=None):
                           "why": "against Instagram views" + (f"; not proven: {gwhy}" if gwhy and verdict == "early sign" else "")})
     table.sort(key=lambda t: (t["feature"], -t["lift"]))
     return table
+
+
+# ---------------- subscribers (25 October, the subscriber push) ----------------
+# 15 subscribers from 26,500 views (about 0.5 per 1,000) and 1,000 needed: each Short's subscribers gained (shorts.csv
+# yt_subs_gained, YouTube Analytics) against its views, compared with the Shorts posted the same UK day, scored for the arms of
+# the subscriber push (sub_push, look_closing) and for the ending, the series and the category. Written to analytics/subs.csv
+# (feature "subs:<name>"), not into drivers.csv: that file's verdicts mean views (the hub counts them, log_decisions logs
+# them, writer.py and looks.py act on them), and a subscriber verdict must not be read as one.
+# Most Shorts gain none, so a per-Short ratio against a median of zeros says nothing. Each Short is compared in counts instead
+# (indirect standardisation): its subscribers against the subscribers its views would have brought at the rate of the
+# Shorts posted the same UK day (itself left out; widening to +-1, then +-3 days while fewer than 3 peers). A group's lift is
+# (observed + SUBS_PRIOR) / (expected + SUBS_PRIOR), shrunk like the views lift, and the verdict follows the same proof rule
+# as gate(): 5 Shorts over 2 UK days, a lift of 1.25 or more (0.8 or less), an exact Poisson 90% interval of the group's
+# observed count (over its expected one) clear of typical, and the Shorts posted before and after the median posting time
+# both on the same side. Only Shorts with SUBS_MIN_VIEWS views, public SUBS_MIN_AGE_DAYS days (Analytics lags a day or two).
+SUB_FEATURES = [("sub_push", "Subscribe line"), ("look_closing", "Closing chip"), ("ending", "Ending"), ("series", "Series"),
+                ("category", "Category")]
+SUBS_FIELDS = ["feature", "feature_label", "value", "n", "days", "views", "subs", "expected", "subs_per_1k", "typical_per_1k",
+               "lift", "low", "high", "verdict", "why"]
+SUBS_MIN_VIEWS, SUBS_MIN_AGE_DAYS, SUBS_PRIOR = 20, 3, 2.0
+
+
+def sub_features(r):
+    """The comparable things about one Short for the subscriber analysis: the arms of the push, the ending, the series it is
+    in ("no series" for the rest) and the category."""
+    f = features(r)
+    return {"sub_push": f.get("sub_push") or "", "look_closing": f.get("look_closing") or "", "ending": f.get("ending") or "",
+            "series": r.get("series_name") or "no series", "category": f.get("category") or ""}
+
+
+def _pois_cdf(k, lam):
+    """P(X <= k) for a Poisson mean lam."""
+    if lam <= 0: return 1.0
+    return min(1.0, sum(math.exp(-lam + i * math.log(lam) - math.lgamma(i + 1)) for i in range(int(k) + 1)))
+
+
+def poisson_ci(o, level=0.90):
+    """The exact (Garwood) interval for a Poisson mean from an observed count: o=5 gives 1.97 to 10.51 at 90%, o=0 gives 0 to
+    3.00 (the tests check these against the chi-squared tables)."""
+    a, o = (1 - level) / 2, int(round(o))
+    top, low = 10.0 * (o + 10), 0.0
+    if o > 0:                                   # P(X >= o | lam) rises with lam: the lam where it reaches a
+        lo, hi = 0.0, top
+        for _ in range(80):
+            mid = (lo + hi) / 2
+            if 1 - _pois_cdf(o - 1, mid) > a: hi = mid
+            else: lo = mid
+        low = (lo + hi) / 2
+    lo, hi = 0.0, top                           # P(X <= o | lam) falls as lam rises: the lam where it drops to a
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if _pois_cdf(o, mid) > a: lo = mid
+        else: hi = mid
+    return low, (lo + hi) / 2
+
+
+def subs_points(rows, now=None):
+    """The main channel's Shorts that can say something about subscribers, each with its UK day, views and subscribers: at
+    least SUBS_MIN_VIEWS views, public SUBS_MIN_AGE_DAYS days, and a subscribers figure from Analytics (a blank is not a zero)."""
+    now, pts = now or NOW, []
+    for r in rows:
+        if channel_of(r) != "main": continue
+        v, s = _f(r.get("yt_views")), _f(r.get("yt_subs_gained"))
+        if v is None or s is None or v < SUBS_MIN_VIEWS: continue
+        try: t = dt.datetime.fromisoformat(str(r["posted"]))
+        except (KeyError, ValueError, TypeError): continue
+        if t.tzinfo is None: t = t.replace(tzinfo=dt.timezone.utc)
+        if (now - t).total_seconds() < SUBS_MIN_AGE_DAYS * 86400: continue
+        pts.append({"r": r, "day": t.astimezone(UK).date(), "posted": str(r.get("posted")), "views": v, "subs": max(0.0, s)})
+    for p in pts:                                   # the subscribers its views would have brought at the same-day peers' rate
+        for w in (0, 1, 3):
+            peers = [q for q in pts if q is not p and abs((q["day"] - p["day"]).days) <= w]
+            if len(peers) >= 3: break
+        pv = sum(q["views"] for q in peers)
+        p["exp"] = p["views"] * sum(q["subs"] for q in peers) / pv if len(peers) >= 3 and pv else None
+    return pts
+
+
+def sub_halves(grp, cut):
+    """+1 or -1 when the group's Shorts posted before and from `cut` on (2 or more each) both brought more, or both fewer,
+    subscribers than expected; 0 when they disagree; None when a half has under 2 Shorts."""
+    side = []
+    for half in ([p for p in grp if p["posted"] < cut], [p for p in grp if p["posted"] >= cut]):
+        if len(half) < 2: return None
+        side.append((sum(p["subs"] for p in half) + 1) / (sum(p["exp"] for p in half) + 1))
+    return 1 if min(side) > 1 else -1 if max(side) < 1 else 0
+
+
+def sub_gate(grp, lift, cut):
+    """(verdict, reason, (low, high) of observed over expected): gate()'s proof rule for counts (see the section's note)."""
+    n, days = len(grp), len({p["day"] for p in grp})
+    o, e = sum(p["subs"] for p in grp), sum(p["exp"] for p in grp)
+    ci = tuple(x / e for x in poisson_ci(o)) if e > 0 else None
+    big = lift >= PUSH or lift <= CUT
+    if n < 3: return "too few to tell", "", ci
+    if n < MIN_N or days < MIN_DAYS: return ("early sign" if big else "about typical"), f"{n} Shorts over {days} UK day(s)", ci
+    if not big: return "about typical", "", ci
+    up = lift >= PUSH
+    clear = ci is not None and (ci[0] > 1.0 if up else ci[1] < 1.0)
+    side = sub_halves(grp, cut)
+    if clear and side == (1 if up else -1): return ("push" if up else "cut back"), "", ci
+    why = []
+    if not clear: why.append(f"90% interval {ci[0]:.2f}x to {ci[1]:.2f}x includes typical" if ci else "no subscribers expected from the peers")
+    if side != (1 if up else -1): why.append("a half has under 2 Shorts" if side is None else "the two halves of the data disagree")
+    return "early sign", "; ".join(why), ci
+
+
+def analyse_subscribers(rows, now=None):
+    """analytics/subs.csv rows (SUBS_FIELDS): for each arm or value of SUB_FEATURES, the Shorts that had it, their views,
+    subscribers gained, the subscribers expected at the same-day peers' rate, subscribers per 1,000 views against the typical
+    rate for those Shorts, the shrunk lift and the proof rule's verdict. Never paused, never put to the writer through the
+    views recipe (subs_recipe is its own line)."""
+    pts = [p for p in subs_points(rows, now) if p["exp"] is not None]
+    if not pts: return []
+    cut, table = split_time([p["r"] for p in pts]), []
+    for feat, label in SUB_FEATURES:
+        groups = {}
+        for p in pts:
+            v = sub_features(p["r"]).get(feat)
+            if v: groups.setdefault(v, []).append(p)
+        if len(groups) < 2: continue
+        for v, grp in groups.items():
+            o, e, views = sum(p["subs"] for p in grp), sum(p["exp"] for p in grp), sum(p["views"] for p in grp)
+            lift = (o + SUBS_PRIOR) / (e + SUBS_PRIOR)
+            verdict, why, ci = sub_gate(grp, lift, cut)
+            table.append({"feature": f"subs:{feat}", "feature_label": f"Subscribers: {label}", "value": v, "n": len(grp),
+                          "days": len({p["day"] for p in grp}), "views": int(views), "subs": int(round(o)), "expected": round(e, 2),
+                          "subs_per_1k": round(1000 * o / views, 2), "typical_per_1k": round(1000 * e / views, 2), "lift": round(lift, 2),
+                          "low": round(ci[0], 2) if ci else "", "high": round(ci[1], 2) if ci else "", "verdict": verdict,
+                          "why": f"not proven: {why}" if why and verdict == "early sign" else why})
+    table.sort(key=lambda t: (t["feature"], -t["lift"]))
+    return table
+
+
+def subs_summary(rows, now=None):
+    """Overall subscribers per 1,000 views over the Shorts that count (subs_points) and the best Short for subscribers (most
+    gained, then the higher rate): {"shorts", "views", "subs", "per_1k", "best": {"id", "title", "subs", "views", "per_1k"} or None}."""
+    pts = subs_points(rows, now)
+    views, subs = sum(p["views"] for p in pts), sum(p["subs"] for p in pts)
+    top = max(pts, key=lambda p: (p["subs"], p["subs"] / p["views"]), default=None)
+    best = ({"id": top["r"].get("short") or "", "title": top["r"].get("title") or "", "subs": int(top["subs"]), "views": int(top["views"]),
+             "per_1k": round(1000 * top["subs"] / top["views"], 2)} if top and top["subs"] > 0 else None)
+    return {"shorts": len(pts), "views": int(views), "subs": int(subs), "per_1k": round(1000 * subs / views, 2) if views else None, "best": best}
+
+
+def subs_recipe(table, views=()):
+    """Recipe lines (analytics.py puts them in insights.md's Recipe) for an arm of the subscriber push that is proven, for
+    subscribers, to win or to lose: the writer's own arms (the spoken subscribe line, the ending) and the chip (a line the
+    writer does not act on, labelled so writer.recipe() leaves it out). One line a feature; a "push" is read before a "cut
+    back" (the same result seen from the other arm). `views`: drivers.csv rows: no line names an arm the views test has cut
+    back or paused (the subscriber push must not cost views)."""
+    from subscribe import ARM_PAIRS
+    hurt = {(r.get("feature"), r.get("value")) for r in views if r.get("verdict") in ("cut back", "pause", "stop")}
+    out, seen = [], set()
+    for t in sorted(table, key=lambda t: t["verdict"] != "push"):
+        f = t["feature"].removeprefix("subs:")
+        if t["verdict"] not in ("push", "cut back") or f not in ("sub_push", "look_closing", "ending") or f in seen: continue
+        win = t["verdict"] == "push"
+        pair = ARM_PAIRS.get(f)
+        if pair and (f, t["value"] if win else next((a for a in pair if a != t["value"]), "")) in hurt: continue
+        seen.add(f)
+        ev = f"{t['subs_per_1k']} subscribers per 1,000 views against {t['typical_per_1k']} typical, {t['n']} Shorts over {t['days']} UK days"
+        if f == "sub_push":
+            if (t["value"] == "spoken") == win:
+                out.append(f"Subscribe line: the spoken reason wins for subscribers ({ev}): end every Short with one short, concrete "
+                           "reason tied to its series or category and how often it comes, never a bare plea.")
+            else:
+                out.append(f"Subscribe line: a Short with no spoken line wins for subscribers ({ev}): leave the subscribe line out.")
+        elif f == "ending":
+            out.append(f"Ending for subscribers: {'lean towards' if win else 'use less'} {t['value']} ({ev}).")
+        else:
+            out.append(f"Subscribe chip: the {t['value']} ending {'wins' if win else 'loses'} for subscribers ({ev}).")
+    return out
 
 
 # ---------------- the category mix (shared by the recipe and writer.category_shares) ----------------

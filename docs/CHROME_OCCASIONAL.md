@@ -10,8 +10,8 @@ drama or "bold claims"; it needs no proof per clip (tickets, analytics screensho
 share is not spent. Skip politics, adult, gambling, supplements or health claims, "edgy" or "unfiltered" shows.
 For each one joined: read its rules and footage link (visible once joined) and add an entry to clips/campaigns.json in the
 shape of the existing ones (subject, platform, pay_per_1k, min_views, max_payout, ends, source, rules with focus,
-on_screen, hashtags, description, avoid, min_s, max_s, card, channels: gaming for game footage, irl for creators and
-challenges, always clips; any audience-country rule goes into rules). Joined but unusable: note why in the log.
+on_screen, hashtags, description, avoid, min_s, max_s, card, channel: one only, gaming for game footage or irl for creators
+and challenges; pipeline/clips.py pins an older "channels" list to its first non-clips channel; any audience-country rule goes into rules). Joined but unusable: note why in the log.
 
 ## Streamer programmes
 For each name listed: find the official clipping programme (Content Rewards, Vyro, the streamer's Discord), join it if

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sun 25 Oct, 16:37): 15 of 1,000 subscribers · 9,196 of 10 million Shorts views in 90 days · 4,472 views in the last 24 hours (about 111,009 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sun 25 Oct, 17:35): 15 of 1,000 subscribers · 9,369 of 10 million Shorts views in 90 days · 4,799 views in the last 24 hours (about 111,007 a day needed, 99 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 16:15 (UK): 6 scheduled, 143 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Mon 26 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Sun 25 Oct | 13 public, 5 scheduled | 4 | 1 | ⏳ 13 of 14 so far, 5 more scheduled |
+| Sun 25 Oct | 14 public, 4 scheduled | 4 | 1 | ✅ done |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
@@ -104,7 +104,7 @@ scheduled · 32 s · music: level · [script](../boards/done/QD-173.json) · [Yo
 ![QD-173](QD-173.jpg)
 
 ### Sun 25 Oct 17:00 · Mortimer and Whitehouse: Ted's last trip 🐾
-scheduled · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
+private · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
 
 ![QD-172](QD-172.jpg)
 

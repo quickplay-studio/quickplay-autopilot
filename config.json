@@ -224,7 +224,81 @@
   10
  ],
  "instagram_thumb_at_hook": true,
- "instagram_tests_note": "Instagram's own tests (24 October, social.py): trial reels for instagram_trial_share of Reels (trial_params with graduation_strategy instagram_trial_strategy: shown first to non-followers, graduated by Meta when they do well; in the Content Publishing API since 3 December 2025 for Instagram Login apps; off for 14 days after Meta refuses one, status/instagram_trial.json); a short caption (the spoken hook and 3 hashtags) for instagram_caption_share against the full one; instagram_hour_share of Reels held to instagram_morning_hours (UK) against posting as soon as public, each arm with its share of the day's cap; the cover frame (thumb_offset) inside the opening beat. Each arm is fixed per Short by its id and recorded on the post; analytics scores them against Instagram views (drivers.analyse_instagram, never put to the writer) and a proven arm then takes 80% of Reels, never all. Cap: instagram_per_day (4) to start and after Meta pushes back, +instagram_ramp_per_day a day up to instagram_target (8, the data report's cap).",
+ "instagram_cover_pause_days": 3,
+ "instagram_first": true,
+ "instagram_favour_min": 1.05,
+ "instagram_hashtags": {
+  "Gaming": [
+   "#gaming",
+   "#gamingnews",
+   "#videogames",
+   "#gamers",
+   "#gamingcommunity"
+  ],
+  "Sport": [
+   "#sport",
+   "#sportnews",
+   "#football",
+   "#sportsfans",
+   "#highlights"
+  ],
+  "Film": [
+   "#film",
+   "#movies",
+   "#cinema",
+   "#filmnews"
+  ],
+  "Music": [
+   "#music",
+   "#newmusic",
+   "#musicnews",
+   "#popmusic"
+  ],
+  "Tech": [
+   "#tech",
+   "#technews",
+   "#gadgets",
+   "#technology"
+  ],
+  "Science": [
+   "#science",
+   "#sciencefacts",
+   "#space",
+   "#didyouknow"
+  ],
+  "Entertainment": [
+   "#entertainment",
+   "#celebrity",
+   "#tvshows",
+   "#popculture"
+  ],
+  "Animals": [
+   "#animals",
+   "#wildlife",
+   "#animalfacts",
+   "#nature"
+  ],
+  "Food": [
+   "#food",
+   "#foodfacts",
+   "#foodie",
+   "#cooking"
+  ],
+  "Cars": [
+   "#cars",
+   "#carnews",
+   "#supercars",
+   "#automotive"
+  ],
+  "History": [
+   "#history",
+   "#historyfacts",
+   "#onthisday",
+   "#historybuff"
+  ]
+ },
+ "instagram_first_note": "Instagram as its own product (25 October, social.py): a Short in a category Instagram favours goes out at the first run after it is public, whatever its YouTube views (the picker never reads them), inside the posting hour test's rules (a morning-arm Short waits for instagram_morning_hours). Favoured = a category whose Instagram score (ig_category_scores: median Instagram views of its Reels over everyone's, shrunk by 5 Reels) is instagram_favour_min or more; a category in instagram_category_order stays favoured until Instagram has numbers for it (under 15 measured Reels, only that order counts). Favoured and exploration Reels share the top tier, newest first, so a fresh favoured Short is not held behind an older one; the rest follow by score. instagram_first false puts the order back to score first. instagram_hashtags: 3 to 5 family-friendly UK English tags per category, used by the short-caption arm (the long arm keeps the board's own hashtags; a category with no set falls back to the board's first 3). The cover frame (thumb_offset at the hook) is recorded on each post as accepted, refused or off; a refusal stops it being asked for instagram_cover_pause_days days (status/instagram_cover.json) and the tally is in status/social.json (instagram.cover) and status/instagram.json. status/instagram.json and the Instagram section of analytics/insights.md are rewritten by every full analytics run (social.ig_report); the hub's Insights tab reads the file.",
+ "instagram_tests_note":"Instagram's own tests (24 October, social.py): trial reels for instagram_trial_share of Reels (trial_params with graduation_strategy instagram_trial_strategy: shown first to non-followers, graduated by Meta when they do well; in the Content Publishing API since 3 December 2025 for Instagram Login apps; off for 14 days after Meta refuses one, status/instagram_trial.json); a short caption (the spoken hook and the category's own hashtags, instagram_hashtags) for instagram_caption_share against the full one; instagram_hour_share of Reels held to instagram_morning_hours (UK) against posting as soon as public, each arm with its share of the day's cap; the cover frame (thumb_offset) inside the opening beat. Each arm is fixed per Short by its id and recorded on the post; analytics scores them against Instagram views (drivers.analyse_instagram, never put to the writer) and a proven arm then takes 80% of Reels, never all. Cap: instagram_per_day (4) to start and after Meta pushes back, +instagram_ramp_per_day a day up to instagram_target (8, the data report's cap).",
  "tiktok_per_day": 2,
  "tiktok_privacy": "",
  "accounts": {

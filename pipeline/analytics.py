@@ -845,6 +845,8 @@ def main():
         try: tests_lines = test_progress(rows, table)
         except Exception as e: tests_lines = []; print("test progress:", str(e)[:150])
         (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + tests_lines + audience_recipe(aud), aud))
+        try: import social; social.ig_report()       # status/instagram.json and insights.md's Instagram section (social.py, 25 October)
+        except Exception as e: print("instagram section:", str(e)[:150])
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
 
 STAY_DIMS = ("voice",)     # Charlie, 20 October: narrators are judged on viewers not swiping away

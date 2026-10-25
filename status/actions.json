@@ -68,7 +68,7 @@
   "done": false,
   "short": "Mac awake for Vyro",
   "check": "vyro_today",
-  "note": "Saturday 24 October: 15 Vyro clips still wait for the Mac (0 submitted so far)"
+  "note": "Sunday 25 October: 15 Vyro clips still wait for the Mac (0 submitted so far)"
  },
  {
   "id": "cloudflare-key",
@@ -300,7 +300,8 @@
   "short": "Quickplay Music channel",
   "added": "2026-10-25",
   "due": "",
-  "done": false
+  "done": false,
+  "issue": 42
  },
  {
   "id": "channel-diario",
@@ -338,6 +339,7 @@
   "short": "Quickplay Diario channel",
   "added": "2026-10-25",
   "due": "",
-  "done": false
+  "done": false,
+  "issue": 43
  }
 ]

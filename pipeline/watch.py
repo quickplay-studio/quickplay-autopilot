@@ -23,7 +23,11 @@ What follows from it (each part reads status/watch.json):
   category shares, with the item's own rules in the brief (for GTA 6: the game as news, never its violence or crime);
   the evergreen planner rides it (top lists and true stories from its series);
 - the clips scout adds heat to campaigns about it, and the Mac Chrome run looks for its campaigns to join;
-- a GitHub issue the first time an item turns surging; the hub's Watchlist table; analytics/watch.csv keeps every day.
+- a GitHub issue the first time an item turns surging; the hub's Watchlist table; analytics/watch.csv keeps every day;
+- a seasonal playbook (25 October, pipeline/series.py): the first time an item reaches launch or surging, a mini-series plan
+  is written once into status/playbooks.json (its first 5 angles, one a day, numbered "<Event> #1 to #5", each Short added to
+  a playlist of the event). topics_today() then offers the day's angle instead of the same first angles every day; they are
+  watch topics, so the places above and watch_share_max still apply.
 """
 import csv, datetime as dt, json, pathlib, re, statistics, sys, urllib.parse
 import requests
@@ -131,16 +135,32 @@ def state():
     except Exception: return {}
 
 
-def topics_today():
+def playbooks_path():
+    """status/playbooks.json, next to the state file (a test that moves STATE moves it too)."""
+    return STATE.with_name("playbooks.json")
+
+
+def topics_today(today=None):
     """(topic, signal) pairs for trends.py: for each item in the build-up, surging or launching, its main term and as many
-    angles as it has places; a steady item adds nothing (it is only measured)."""
+    angles as it has places; a steady item adds nothing (it is only measured). An item with a playbook (series.py) offers
+    the one angle that is due today instead of the same first angles every day, in order, one a day; its other angles
+    (those outside the playbook) keep their places."""
     out = []
     for it in (state().get("items") or []):
         if it.get("level", "steady") == "steady" or not it.get("places"): continue
         d = it.get("days_to")
         sig = f"watchlist: {it['name']} ({it['level']}" + (f", {d} day{'s' if d != 1 else ''} to go" if d is not None and d > 0 else "") + ")"
         out.append((it["name"], sig))
-        out += [(a, sig) for a in it.get("angles") or []][:it.get("places", 1)]
+        angles = list(it.get("angles") or [])
+        try:
+            import series as SER
+            if SER.plan_of(it["name"], playbooks_path()):
+                due = SER.today_angle(it["name"], today, playbooks_path())
+                if due: out.append((due[1], sig))
+                mine = {SER.norm(a) for a in SER.playbook_angles(it["name"], playbooks_path())}
+                angles = [a for a in angles if SER.norm(a) not in mine]
+        except Exception as e: print("playbook:", str(e)[:120])
+        out += [(a, sig) for a in angles][:it.get("places", 1)]
     return out
 
 
@@ -151,6 +171,14 @@ def run(today=None):
     STATE.parent.mkdir(exist_ok=True)
     STATE.write_text(json.dumps({"updated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes"), "items": got},
                                 indent=1, ensure_ascii=False))
+    for g in got:                       # a seasonal playbook is written once, the first time an item reaches launch or surging
+        w = next((i for i in items() if i["name"] == g["name"]), None)
+        if not w or g["level"] not in ("launch", "surging"): continue
+        try:
+            import series as SER
+            plan = SER.ensure_playbook(w, g["level"], today, playbooks_path())
+            if plan: print(f"watch: {g['name']}: playbook of {plan['of']} angles, one a day: " + "; ".join(plan["angles"]))
+        except Exception as e: print("playbook:", str(e)[:120])
     rows = list(csv.DictReader(HIST.open())) if HIST.exists() else []
     fields = ["day", "name", "level", "days_to", "momentum", "views_yesterday", "views_usual", "news_24h", "suggestions", "in"]
     for g in got:

@@ -1,6 +1,8 @@
 """Engagement on our own public Shorts, using the second YouTube sign-in (yt_connect.py, youtube.force-ssl):
 - a creator comment with the board's question (meta.comment) once the Short is public (YouTube's API can't pin comments)
 - the Short added to its category playlist ("Quickplay Daily: Gaming" and so on, created when missing)
+- a Short of a numbered series (pipeline/series.py) says so in that comment, with its number and the series' playlist link, and
+  every uploaded Short of a series is added to the series' playlist (pipeline/playlists.py, 25 October)
 - 24 to 72 hours after going public, a Short getting under half the typical views an hour switches to its alternative
   title (meta.alt_title), once
 - short replies to the first comments on the Shorts in the replies test (replies(), Gemini)
@@ -27,6 +29,18 @@ def client():
     creds = Credentials(None, refresh_token=t["refresh_token"], token_uri="https://oauth2.googleapis.com/token",
                         client_id=os.environ["YT_CLIENT_ID"], client_secret=os.environ["YT_CLIENT_SECRET"], scopes=yt_connect.SCOPES)
     return build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+def comment_for(yt, b, comment):
+    """The creator comment: the board's question and, for a Short in a numbered series, the series name, its number and the
+    playlist link (the playlist is made now when it doesn't exist yet, 50 units through quota.allow: pipeline/playlists.py)."""
+    if not b.get("series_name"): return str(comment)[:500]
+    try:                                 # the comment is posted once, so nothing here may keep it from going
+        import playlists, series
+        try: url = playlists.url_for(yt, b)
+        except Exception as ex: print("series playlist:", f"{type(ex).__name__}: {ex}"[:120]); url = ""
+        return series.comment_text(comment, b, url)
+    except Exception as ex:
+        print("series comment:", f"{type(ex).__name__}: {ex}"[:120]); return str(comment)[:500]
 
 TRANSIENT = re.compile(r"HttpError (409|500|502|503|504) |aborted|backendError|[Tt]imeout|timed out|[Cc]onnection")
 
@@ -73,7 +87,7 @@ def main():
         if m.get("comment") and not e.get("comment") and not e.get("comment_error"):
             try:
                 r = yt.commentThreads().insert(part="snippet", body={"snippet": {"videoId": st["video"], "topLevelComment": {
-                    "snippet": {"textOriginal": str(m["comment"])[:500]}}}}).execute()
+                    "snippet": {"textOriginal": comment_for(yt, b, m["comment"])}}}}).execute()
                 e["comment"] = r["id"]
             except Exception as ex: e["comment_error"] = f"{type(ex).__name__}: {ex}"[:200]
             changed = True
@@ -213,6 +227,16 @@ def series_links():
             path.write_text(json.dumps(st, indent=1, ensure_ascii=False)); print(st.get("id"), "series link:", e["series_link"])
 
 
+def series_playlists():
+    """Every uploaded Short of a numbered series goes into its series' playlist, in series order (pipeline/playlists.py:
+    each call is 50 units and goes through quota.allow first, so the day's Shorts are never short of allowance)."""
+    import playlists
+    yt = client()
+    if yt is None: return
+    n = playlists.run(yt)
+    if n: print("series playlists: added", n)
+
+
 def engaged():
     """Creator comments, playlist adds and title swaps recorded in the status files (to count what a run spent)."""
     c = p = t = 0
@@ -229,6 +253,8 @@ if __name__ == "__main__":
         before = engaged()
         main()
         quota.spend(50 * sum(max(0, a - b) for a, b in zip(engaged(), before)) + 5, "engagement")
+    try: series_playlists()
+    except Exception as e: print("series playlists:", str(e)[:200])
     try: replies()
     except Exception as e: print("comment replies:", str(e)[:200])
     try: series_links()

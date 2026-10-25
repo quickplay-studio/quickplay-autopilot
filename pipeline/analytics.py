@@ -68,6 +68,11 @@ def late_label(st, b):
 # hook and length arms, its title answer arm, and whether the hook names the lead the title names
 ARM_COLUMNS = ("arm_hook_type", "arm_length", "title_answer", "hook_named")
 
+# The named, numbered series a Short belongs to (series.py, 25 October): its name, number and kind (evergreen or playbook) beside
+# the franchise test's arm ("series" for these Shorts), so shorts.csv can be grouped by series. Blank for every other Short.
+# (The board's "series" is the two- or three-part cliffhanger and the test field "series" its arm: not these.)
+SERIES_COLUMNS = ("series_name", "series_no", "series_kind")
+
 # How well the pictures fit their beats (pictures.py, 24 October): the mean relevance (0 to 1) of the pictures used and the share
 # of beats where a picture was found. status/<id>.json keeps them in media; blank for a Short rendered before the ranker.
 PIC_COLUMNS = ("pic_relevance", "pic_found_share")
@@ -119,6 +124,8 @@ def our_shorts():
             "category": b.get("category", ""), "format": b.get("format", ""),
             "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
+            # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
+            **{k: b.get(k, "") for k in SERIES_COLUMNS},
             # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
             **{k: ((b.get("test") or {}).get(t, "") if isinstance(b.get("test"), dict) else "")
                for k, t in (("arm_hook_type", "hook_type"), ("arm_length", "length"), ("title_answer", "title_answer"))},
@@ -683,7 +690,7 @@ def main():
             "short": o.get("id", ""), "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS)},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),

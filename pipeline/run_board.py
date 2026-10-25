@@ -120,9 +120,18 @@ def localize(meta, desc):
     return out
 
 
+def series_lines(sb):
+    """A Short of a numbered series says so in its description, with the playlist link once there is one (pipeline/series.py,
+    25 October); [] for any other Short, and never a reason to fail a render."""
+    try:
+        import series
+        return series.description_lines(sb)
+    except Exception: return []
+
+
 def description(sb, credits, track):
     m = sb.get("meta", {})
-    out = [m.get("summary", "").strip(), "", "Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
+    out = [m.get("summary", "").strip(), ""] + series_lines(sb) + ["Sources:"] + [f"{t}: {u}" for t, u in m.get("sources", [])]
     seen, vis = set(), []
     for c in credits:
         cr, src = c.get("credit", ""), c.get("source", "")

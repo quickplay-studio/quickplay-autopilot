@@ -98,6 +98,9 @@ def _check(b, path=None):
     if b.get("format") not in _formats(): e.append(f"format: one of {sorted(_formats())}")
     if b.get("category") not in CATS: e.append(f"category: one of {sorted(CATS)}")
     if b.get("mode", "schedule") not in MODES: e.append(f"mode: one of {sorted(MODES)}")
+    chans = sorted((_config().get("shorts_channels") or {}))       # the Daily line's other channels (config shorts_channels)
+    if b.get("channel") not in (None, "main") and b.get("channel") not in chans:
+        e.append(f"channel: main (leave it out) or one of {chans}")
     try: dt.date.fromisoformat(b.get("created", ""))
     except ValueError: e.append("created: today's date as YYYY-MM-DD")
     if b.get("publish_at"):

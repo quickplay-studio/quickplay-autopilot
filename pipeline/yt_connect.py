@@ -2,7 +2,7 @@
 Uploads keep using the original sign-in (the YT_REFRESH_TOKEN secret); this one is stored encrypted in tokens/youtube.enc.
 
   python pipeline/yt_connect.py link       writes the sign-in link to status/youtube_connect.json (the client id is public)
-  python pipeline/yt_connect.py exchange [main|pt|clips]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
+  python pipeline/yt_connect.py exchange [main|pt|clips|music|es]   swaps the code Charlie pasted (YT_CODE: the code, or the whole address) for a
                                            refresh token and saves it; the result goes to status/youtube_connect.json
 """
 import datetime as dt, json, os, pathlib, sys, urllib.parse
@@ -20,7 +20,8 @@ OUT = ROOT / "status" / "youtube_connect.json"
 MAIN = "UC-75vkMtOxgFFkXwBNfBOeg"     # Quickplay Daily, the original channel
 # The other channels, by the words in their YouTube titles (most specific first): the sign-in is saved under the matching
 # name as tokens/youtube_<name>.enc. New niche channels (Charlie, 22 October) just need a title with their word in it.
-TITLES = {"gaming": ("gaming",), "irl": ("irl", "creators"), "pt": ("portugu",), "clips": ("clips",)}
+TITLES = {"gaming": ("gaming",), "irl": ("irl", "creators"), "pt": ("portugu",), "clips": ("clips",),
+          "music": ("music",), "es": ("diario", "español", "espanol")}     # music and es: the Daily line's extra channels (25 October)
 CHANNELS = ("main",) + tuple(TITLES)
 
 def now(): return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
@@ -57,7 +58,8 @@ def link():
                                      "copy the code, run the social workflow with it and channel " + ch}, out)
 
 def exchange(ch="main"):
-    """ch: main, the Portuguese channel (pt) or the clips channel, whose sign-in is saved as tokens/youtube_<ch>.enc."""
+    """ch: main, the Portuguese channel (pt), the clips channels, or the Daily line's music and es (Spanish) channels, whose
+    sign-in is saved as tokens/youtube_<ch>.enc."""
     name, out = ("youtube", OUT) if ch == "main" else (f"youtube_{ch}", OUT.with_name(f"youtube_connect_{ch}.json"))
     raw = os.environ.get("YT_CODE", "").strip()
     code = urllib.parse.parse_qs(urllib.parse.urlparse(raw).query).get("code", [raw])[0] if "code=" in raw else raw

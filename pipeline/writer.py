@@ -110,6 +110,13 @@ def board(f):
     except Exception: return {}
 
 
+def main_board(b):
+    """A board of the main channel (no channel field, or "main"). The day's number, formats, category shares and the topics
+    already covered are the main channel's; the Daily line's other channels (25 October) are written apart by
+    extra_channel_boards and never counted in them."""
+    return (b.get("channel") or "main") == "main"
+
+
 def about(b):
     """What a board covered: its title, its title with tags and hashtags, and its source pages."""
     m = b.get("meta") or {}
@@ -125,7 +132,7 @@ def recent(days=14):
     for d in ("queue", "ready", "done", "reserve", "failed"):
         for f in (ROOT / "boards" / d).glob("QD-*.json"):
             b = board(f)
-            if str(b.get("created", "")) >= cut and b.get("mode") != "dry": out.append(about(b))
+            if str(b.get("created", "")) >= cut and b.get("mode") != "dry" and main_board(b): out.append(about(b))
     return out
 
 
@@ -153,7 +160,7 @@ def day_formats(day):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == str(day) and b.get("format"): got.append((b["id"], b["format"]))
+            if b.get("created") == str(day) and b.get("format") and main_board(b): got.append((b["id"], b["format"]))
     return [f for _, f in sorted(got)]
 
 
@@ -188,7 +195,7 @@ def plan(breaking=False, hint=""):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == str(day) and not b.get("reserve"): made += 1
+            if b.get("created") == str(day) and not b.get("reserve") and main_board(b): made += 1
     import quota
     limit = quota.target() - (1 if day.weekday() == 6 else 0)
     runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
@@ -205,6 +212,7 @@ def plan(breaking=False, hint=""):
 # stripped from whatever a model writes.
 BOOKKEEPING = ("watch", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
                "test", "mode", "appeal_note")
+BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of")       # set by extra_channel_boards for the line's other channels
 
 
 def example():
@@ -399,7 +407,7 @@ def day_boards(day):
     for d in ("queue", "ready", "done", "failed"):
         for f in (ROOT / "boards" / d).glob("QD-*.json"):
             b = board(f)
-            if b.get("created") == str(day) and not b.get("reserve") and b.get("mode") != "dry": out.append(b)
+            if b.get("created") == str(day) and not b.get("reserve") and b.get("mode") != "dry" and main_board(b): out.append(b)
     return out
 
 
@@ -532,6 +540,7 @@ def weak():
     dead_ids = {r.get("short") for r in drivers.dead(allrows)}
     rows = []
     for r in allrows:
+        if (r.get("channel") or "main") != "main": continue        # a remake is for the main channel's Shorts only
         try:
             x = float(r.get("views_vs_typical") or "")
             age = (NOW - dt.datetime.fromisoformat(r["posted"])).total_seconds() / 3600 if r.get("posted") else 0
@@ -1228,6 +1237,133 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
     return best or (None, "still failing: " + "; ".join(errs)[:300])
 
 
+# ---------------- the Daily line's other channels (25 October) ----------------
+# config shorts_channels: a music-only channel that writes from the day's Music packs, and a Spanish mirror of the main channel
+# (pipeline/mirror.py). Each is a channel of its own: it starts only when Charlie has created it and signed it in
+# (youtube.connected: tokens/youtube_<channel>.enc), and until then nothing below runs. Their boards carry "channel": <name>,
+# are counted apart from the main channel's day (main_board), and are never cross-posted.
+SERIES_HINTS = {"chart watch": ("chart", "number one", "no. 1", "top 10", "top ten", "billboard", "most streamed", "most played", "apple albums"),
+                "new music friday": ("new album", "new single", "new song", "new music", "release", "out now", "debut", "drops", "dropped")}
+CHANNEL_NOTE = ("CHANNEL: this Short is for {name}, the music-only YouTube channel of the same studio (family-friendly, UK English). Stay on the "
+                "music: the artist, the song, the album, the chart or the story behind it, never gossip about private lives. Name the "
+                "best-known artist first. {series}")
+OVERLAP_NOTE = ("OTHER CHANNEL: our main channel already made a Short on this subject today. Make this one a different angle, a different "
+                "hook and a different title (never a repeat of that wording), opening on a fact the first Short did not lead with.")
+
+
+def channel_signed_in(ch):
+    """The channel has its own sign-in (youtube.connected: tokens/youtube_<ch>.enc)."""
+    try:
+        import youtube as Y
+        return bool(Y.connected(ch))
+    except Exception:           # no Google libraries here: the file is all connected() looks for anyway
+        f = ROOT / "tokens" / f"youtube_{ch}.enc"
+        return f.is_file() and f.stat().st_size > 0
+
+
+def line_channels(mirror=False):
+    """{name: config} of the line's other channels that are signed in: the ones that write from the packs of their own
+    categories (mirror=False) or the mirrors of another channel (mirror=True)."""
+    return {ch: c for ch, c in (CFG.get("shorts_channels") or {}).items()
+            if isinstance(c, dict) and bool(c.get("mirror_of")) == mirror and (mirror or c.get("categories")) and channel_signed_in(ch)}
+
+
+def channel_boards(ch, day=None, days=None):
+    """The channel's boards, from every folder a real Short can be in (no dry runs): those created for `day` when it is given,
+    else those of the last `days` days."""
+    cut = str((NOW - dt.timedelta(days=days)).date()) if days else ""
+    out = []
+    for d in ("queue", "ready", "done", "failed", "reserve"):
+        for f in (ROOT / "boards" / d).glob("QD-*.json"):
+            b = board(f)
+            if b.get("channel") != ch or b.get("mode") == "dry": continue
+            if (day is not None and b.get("created") != str(day)) or str(b.get("created", "")) < cut: continue
+            out.append(b)
+    return out
+
+
+def channel_series_count(ch, name):
+    """How many Shorts of a channel's series exist (every folder; this run's are already in the queue), so the next gets
+    the next number."""
+    return sum(1 for b in channel_boards(ch) if str(b.get("channel_series", "")).startswith(name + " #"))
+
+
+def pick_series(c, p, day, count):
+    """Which of a channel's series a Short joins (config shorts_channels.<ch>.series): a chart pack is Chart Watch, a new
+    release on a Friday is New Music Friday (never on another day), everything else rotates through the rest. `count`: the
+    channel's boards so far, which turns the rotation. None when the channel lists no series."""
+    names = [s for s in c.get("series") or [] if str(s).strip()]
+    if not names: return None
+    text = f"{p.get('topic', '')} {p.get('signal', '')} {p.get('what_is_new', '')}".lower()
+    low = {s: s.lower() for s in names}
+    for s in names:
+        hints = SERIES_HINTS.get(low[s])
+        if hints and any(h in text for h in hints) and (low[s] != "new music friday" or day.weekday() == 4): return s
+    plain = [s for s in names if low[s] not in SERIES_HINTS] or names
+    return plain[count % len(plain)]
+
+
+def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
+    """Boards for the line's other channels that write from the fact packs of their own categories (the music channel),
+    each once it is signed in; nothing happens until then. Called after the main channel's boards, so these never take the
+    main day's places, models or time. A channel writes up to its per_day a day, split over the day's runs like the main
+    channel's (config runs), from `packs` in its categories (a pack the main channel has not covered first, then the ones it
+    has, with a note to take another angle; never one the channel covered itself in 14 days), each in the channel's series
+    in rotation and numbered ("Chart Watch #4: ..."). The board is validated, fact-checked and shaped like any other, then
+    tagged "channel": <name> and written to the queue; the id is the next free number. Returns the boards written."""
+    wrote = []
+    for ch, c in line_channels().items():
+        per_day = int(c.get("per_day") or 6)
+        have = channel_boards(ch, day)
+        runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
+        per_run = max(1, -(-per_day * runs.get(run, 6) // max(1, sum(runs.values()))))
+        want = min(per_run, per_day - len(have))
+        if want <= 0: print(f"channel {ch}: {len(have)} of {per_day} for {day} already"); continue
+        own, mine = [about(b) for b in channel_boards(ch, days=14)], [about(b) for b in DAY["boards"]]
+        pool = [p for p in packs if p.get("category") in c["categories"] and len(p.get("verified") or []) + len(p.get("one_source") or []) >= 2
+                and not covered(p, own)]
+        pool.sort(key=lambda p: covered(p, mine))                 # stable: the main channel's untouched subjects first, best first
+        if not pool: print(f"channel {ch}: no {'/'.join(c['categories'])} packs to write from"); continue
+        made = []
+        for p in pool:
+            if len(made) >= want or factpack.STATE.get("spent") or late(): break
+            if covered(p, [about(b) for b in made]): continue
+            sid = f"QD-{state['n']:03d}"
+            style, tests = test_plan(state["n"], "news")
+            tests = {k: v for k, v in tests.items() if k not in FX + ("series", "franchise", "round")}      # the main channel's own rounds
+            tests = with_title_test(tests, state["n"], "news")
+            facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
+            if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]: tests = {**tests, "length": "35 to 44 s"}
+            series = pick_series(c, p, day, len(have) + len(made))
+            n = 1 + channel_series_count(ch, series) if series else 0
+            extra = [style_note(tests), CHANNEL_NOTE.format(name=c.get("name") or ch, series=(
+                f"It is {series} #{n} of the channel's recurring series: write the title without the series name or number (they are "
+                f"added) and make the Short fit the series." if series else "")), OVERLAP_NOTE if covered(p, mine) else ""]
+            try:
+                b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), "news", tests)
+            except Exception as e:
+                b, why = None, f"error: {e}"[:200]
+            print(f"channel {ch}: {p['topic']}: {why}")
+            if not b: continue
+            before = json.dumps(b)
+            shape(b, tests)
+            if validate.check(b)[0]: b = json.loads(before)
+            b.update(kind="news", test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")), channel=ch)
+            if series:
+                m, prefix = b.setdefault("meta", {}), None
+                for cand in (f"{series} #{n}: ", f"{series}: "):          # the longest form that keeps the title within 70 characters
+                    if len(cand) + len(str(m.get("title", ""))) <= 70: prefix = cand; break
+                if prefix and not str(m.get("title", "")).startswith(series): m["title"] = prefix + str(m.get("title", ""))
+                b["channel_series"] = f"{series} #{n}"
+            tr = translations(b)
+            if tr: b["meta"]["translations"] = tr
+            (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
+            made.append(b); state["n"] += 1
+        print(f"channel {ch}: wrote {len(made)} of {want}: " + "; ".join(f"{b['id']} {b['meta']['title']}" for b in made))
+        wrote += made
+    return wrote
+
+
 def main():
     facts = factpack.OUT
     if not facts.exists(): print("no fact packs"); return
@@ -1441,6 +1577,9 @@ def main():
                 if spare > 0: spare = max(0, spare - (len(written) - before))
     print(f"wrote {len(written)} of {cap}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
                                                for b in written))
+    if not breaking and not factpack.STATE.get("spent"):         # the line's other channels, after the main channel's day (once signed in)
+        try: extra_channel_boards(day, run, [p for _, p in topics], head, state, out, late)
+        except Exception as e: print("extra channels:", f"{type(e).__name__}: {e}"[:200])
     try: order = factpack.writing_order()[:6]
     except Exception: order = factpack.STATE.get("models", [])[:6]
     u = usage()

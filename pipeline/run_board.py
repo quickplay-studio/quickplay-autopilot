@@ -210,6 +210,7 @@ def main():
     res = ROOT / "result" / sid; res.mkdir(parents=True, exist_ok=True)
     status = {"id": sid, "board": job["board"], "mode": job["mode"], "slot": job.get("slot", ""),
               "rendered": dt.datetime.now(dt.timezone.utc).isoformat()}
+    if job.get("channel") and job["channel"] != "main": status["channel"] = job["channel"]     # one of the line's other channels (plan.py)
     if job.get("late"): status["late"] = job["late"]          # freshness.py: how late, and the evidence it went out on (or not)
     if job.get("fx"): status["fx"] = job["fx"]                # the factorial round's arms: assigned, and what plan.py gave them
     if job["mode"] == "reject" and job.get("expired"):          # missed its day and the data says the story has moved on
@@ -247,7 +248,7 @@ def main():
             flags += [f"render: {n}" for n in notes]
         status["media"] = {"real_shots": real, "planned_real": planned_real}
         track = pick_music(sb); status["music"] = track["slug"]
-        social = pick_social_music(sb)
+        social = pick_social_music(sb) if not status.get("channel") else None     # another channel's Shorts are never cross-posted
         if social: status["social_music"] = social["slug"]
         # the look (caption style, voice and pace, camera energy, colour grade): chosen by plan.py, see templates/looks.json
         import looks as LK
@@ -333,7 +334,8 @@ def main():
         (res / "upload.json").write_text(json.dumps({
             "title": meta["title"], "description": (desc := description(sb, credits, track)), "localizations": localize(meta, desc),
             "tags": youtube_tags(meta),
-            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags},
+            "category": sb.get("category", "Entertainment"), "slot": job.get("slot", ""), "mode": job["mode"], "flags": flags,
+            **({"channel": status["channel"]} if status.get("channel") else {})},
             indent=1, ensure_ascii=False))
         mp4.replace(res / "video.mp4")
         smp4 = P / "out" / f"{sid}.social.mp4"

@@ -200,18 +200,23 @@ def bucket_refused(b):
 
 
 def uploads_left():
-    """Uploads still to come before the reset: the day's planned number (target(), and the weekly video) less the uploads
-    made since it. (The learned ceiling was used until 24 October: 40 kept places for a 15-a-day plan held back 2,500
-    units every day.)"""
+    """Uploads still to come before the reset: the day's planned number (target(), and the weekly video) less the main
+    channel's uploads made since it, plus what each signed-in extra channel still has to come. (The learned ceiling was used
+    until 24 October: 40 kept places for a 15-a-day plan held back 2,500 units every day.)"""
     start = dt.datetime.now(PT).replace(hour=0, minute=0, second=0, microsecond=0).astimezone(dt.timezone.utc)
-    done = 0
+    done = {}
     for p in (ROOT / "status").glob("QD-*.json"):
-        try: up = json.loads(p.read_text()).get("uploaded_at")
+        try: st = json.loads(p.read_text()); up = st.get("uploaded_at")
         except Exception: continue
         try:
-            if up and dt.datetime.fromisoformat(up.replace("Z", "+00:00")) >= start: done += 1
-        except ValueError: pass
-    return max(0, target() + 1 - done)
+            if up and dt.datetime.fromisoformat(up.replace("Z", "+00:00")) >= start:
+                ch = st.get("channel") or "main"; done[ch] = done.get(ch, 0) + 1
+        except (ValueError, AttributeError): pass
+    # the Daily line's other channels (config shorts_channels) once they are signed in: their per_day uploads draw on the
+    # same 100-upload bucket, so what they still have to come is kept for them too (25 October)
+    more = sum(max(0, int(c.get("per_day") or 6) - done.get(ch, 0)) for ch, c in (CFG.get("shorts_channels") or {}).items()
+               if isinstance(c, dict) and (ROOT / "tokens" / f"youtube_{ch}.enc").is_file())
+    return max(0, target() + 1 - done.get("main", 0)) + more
 
 
 def allow(units, what="extra"):

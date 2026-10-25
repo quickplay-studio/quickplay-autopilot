@@ -17,6 +17,10 @@ Rules (numbers live in config.json)
   (test upload, not scheduled), "mode": "none" (render only) or "mode": "dry" (rendered and held for approval like a real
   Short, but never uploaded: tests the approval path).
 - A board that fails pipeline/validate.py is not rendered: it goes to boards/failed with the reasons.
+- Channels (25 October): a board's optional "channel" field (default main) names one of the Daily line's other channels
+  (config shorts_channels: music, es). Each has its own sign-in (youtube.connected), client, slots taken, per_day room and
+  slot grid; a board for a channel that is not signed in stays queued, untouched. The 100-uploads bucket (quota.py) is
+  shared by every channel.
 - Approval (config "approval"): "all" = every Short waits for Charlie's OK after rendering; "flagged" = only Shorts with a
   reason to look (the writer's "flag", validator warnings, or render checks) wait; "none" = nothing waits.
   Waiting Shorts are rendered but not uploaded, so they don't use the daily upload limit; pipeline/publish.py uploads
@@ -32,6 +36,18 @@ CFG = json.loads((ROOT / "config.json").read_text())
 import quota
 LIMIT = int(os.environ.get("DAILY_LIMIT") or max(quota.daily_limit(), int(CFG.get("upload_limit_24h", CFG.get("daily_limit", 10)))))
 LEAD = dt.timedelta(hours=float(CFG.get("lead_hours", 3)))
+
+def channel_cfg(ch):
+    """config shorts_channels.<ch>: {} for main or a channel that is not configured."""
+    c = (CFG.get("shorts_channels") or {}).get(ch)
+    return c if isinstance(c, dict) else {}
+
+
+def board_channel(b):
+    """Which channel a board is for: its "channel" field, main when it has none."""
+    c = b.get("channel") if isinstance(b, dict) else None
+    return c if isinstance(c, str) and c else "main"
+
 
 def _mins(hm):
     h, m = map(int, hm.split(":")); return h * 60 + m
@@ -67,7 +83,18 @@ def learned_slots(n):
             if len(picked) == n: return sorted(picked)
     return None
 
-def day_slots(day):
+def channel_slots(day, channel):
+    """An extra channel's day (UK date): its per_day slots, spread evenly round the 24 hours from slot_first (UK), so a new
+    channel measures every hour; the times learned from results belong to the main channel's audience and are not used."""
+    n = max(1, int(channel_cfg(channel).get("per_day") or 6))
+    h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
+    first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
+    step = dt.timedelta(minutes=1440 // n)
+    return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
+
+
+def day_slots(day, channel="main"):
+    if channel != "main": return channel_slots(day, channel)
     n = quota.target() if CFG.get("shorts_per_day") or quota.VOLUME_P.exists() else \
         max(int(CFG.get("slots_per_day", 10)), quota.daily_limit())       # a slot for every Short, at the day's best times
     times = learned_slots(n)
@@ -80,13 +107,15 @@ def day_slots(day):
     step = dt.timedelta(minutes=every)
     return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
 
-def schedule_state(now, yt=None):
+def schedule_state(now, yt=None, channel="main"):
     """(taken slots, uploads in the last 24 hours, YouTube reachable). Our uploads come from status files (exact upload
     time). YouTube only gives a reliable upload time for videos that are still private (once public, the playlist date
     becomes the publish time), so other private uploads are added from the channel; anything else is caught by YouTube's
-    own limit error."""
+    own limit error. `channel`: one of the line's channels (a status file without a channel is main's); an extra channel
+    that is not signed in, or cannot be read, is reported as not reachable."""
     import youtube as Y
-    taken, recent, online = set(), 0, Y.available()
+    main = channel == "main"
+    taken, recent, online = set(), 0, (Y.available() if main else Y.connected(channel))
     statuses = []
     for f in (ROOT / "status").glob("*.json"):
         if f.name == "channel.json": continue
@@ -95,11 +124,17 @@ def schedule_state(now, yt=None):
         if isinstance(st, dict): statuses.append(st)
     ours = {st.get("video") for st in statuses if st.get("video")}
     for st in statuses:
+        if (st.get("channel") or "main") != channel: continue
         if st.get("publish_at"): taken.add(Y.utc(st["publish_at"]))
         up = Y.utc(st.get("uploaded_at"))
         if up and now - up < dt.timedelta(hours=24): recent += 1
     if online:
-        for v in Y.recent_videos(yt or Y.client()):
+        try: vids = Y.recent_videos(yt or (Y.client() if main else Y.client_for(channel)))
+        except (Exception, SystemExit) as e:
+            if main: raise
+            print(f"{channel}: the channel could not be read ({type(e).__name__}: {str(e)[:100]}): its Shorts wait", file=sys.stderr)
+            return taken, recent, False
+        for v in vids:
             if v["publish_at"]: taken.add(Y.utc(v["publish_at"]))
             up = Y.utc(v["uploaded"])
             if v["id"] not in ours and v["privacy"] != "public" and up and now - up < dt.timedelta(hours=24): recent += 1
@@ -132,8 +167,8 @@ def band_scores():
     return out
 
 
-def slot_picker(now, taken):
-    scores = band_scores()
+def slot_picker(now, taken, channel="main"):
+    scores = band_scores() if channel == "main" else {}       # the quarters of the UK day were learned on the main channel
 
     def free(created):
         day = (now + LEAD).astimezone(UK).date() - dt.timedelta(days=1)      # yesterday's list runs on past midnight
@@ -142,7 +177,7 @@ def slot_picker(now, taken):
             if want and want > day: day = want
         except ValueError: pass
         for _ in range(60):
-            for t in day_slots(day):
+            for t in day_slots(day, channel):
                 if t >= now + LEAD and t not in taken: yield t
             day += dt.timedelta(days=1)
 
@@ -239,6 +274,20 @@ def main():
         except Exception: done_wk = False
         if not done_wk: capacity = max(0, capacity - 1)
     next_slot = slot_picker(now, taken)
+    lanes = {"main": {"taken": taken, "capacity": capacity, "uploads": 0, "next": next_slot}}
+
+    def lane(ch):
+        """One channel's day for this run: the slots taken, the room left (its per_day less the last 24 hours' uploads) and
+        its slot picker. Built when the channel's first board shows up; None while the channel is not configured, not signed
+        in or not readable (its boards stay queued, untouched)."""
+        if ch not in lanes:
+            lanes[ch] = None
+            if channel_cfg(ch):
+                tk, rc, on = schedule_state(now, channel=ch)
+                if on: lanes[ch] = {"taken": tk, "capacity": max(0, int(channel_cfg(ch).get("per_day") or 6) - rc), "uploads": 0,
+                                    "next": slot_picker(now, tk, ch)}
+                else: print(f"channel {ch}: not signed in or not readable: its boards wait in the queue", file=sys.stderr)
+        return lanes[ch]
 
     import looks as LK         # each new Short's look: caption style, voice, energy, grade (templates/looks.json)
     stats, seen = LK.load_stats(), []
@@ -252,7 +301,7 @@ def main():
     bg_used, bg_cfg = None, BG.settings(CFG)
     BG.DEADLINE = time.time() + 240        # searching must never hold the run up: past this, Shorts render without a background
 
-    jobs, uploads = [], 0
+    jobs = []
     for p in queue:
         try: b = json.loads(p.read_text())
         except Exception: b = {"id": p.stem}
@@ -264,6 +313,10 @@ def main():
             jobs.append({"board": str(p.relative_to(ROOT)), "id": rid, "slot": "", "mode": "reject",
                          "errors": "; ".join(errs)[:900]})
             continue
+        ch = board_channel(b)
+        L = lane(ch)
+        if L is None: continue         # the board's channel is not signed in (or unknown): left in the queue as it is
+        taken, next_slot = L["taken"], L["next"]
         mode = b.get("mode", "schedule")
         # Without the YouTube keys a Short still renders, then waits in boards/ready as a preview until the keys are back
         # (upload.py, record.py, publish.py); until 24 October it rendered as mode "none" and was filed as done, never uploaded (audit M9)
@@ -272,8 +325,8 @@ def main():
         if mode == "dry" and not hold: hold = ["dry run: always waits for approval, never uploaded"]
         counted = False
         if mode != "none" and not hold:
-            if uploads >= capacity: continue
-            uploads += 1; counted = True
+            if L["uploads"] >= L["capacity"]: continue
+            L["uploads"] += 1; counted = True
         explore = (b.get("test") or {}).get("explore") == "yes"      # an exploration Short (writer.py): look and hour drawn evenly
         fx = {k: v for k, v in (b.get("test") or {}).items() if k in ("fx_energy", "fx_slot") and not explore}    # the round's arms
         slot, slot_t = "", None
@@ -290,7 +343,7 @@ def main():
         late = FR.safe_check(b, slot_t or now, where="render", record=False) if mode == "schedule" else None
         if late and not late["alive"]:
             if slot_t: taken.discard(slot_t)
-            if counted: uploads -= 1
+            if counted: L["uploads"] -= 1
             print(f"expired: {b['id']}: {late['evidence']}", file=sys.stderr)
             jobs.append({"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": "", "mode": "reject", "expired": True,
                          "errors": late["evidence"][:900], "late": late})
@@ -299,6 +352,7 @@ def main():
                                                                                energy=fx.get("fx_energy"))
         recent_looks.append(look)
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
+        if ch != "main": job["channel"] = ch                      # run_board.py puts it in status/<id>.json, upload.py picks the client
         if fx:              # the round's arms against what this run gave them (analytics compares the arms as assigned)
             job["fx"] = {k: {"assigned": v, "used": (look.get("energy") if k == "fx_energy" else BAND_ARMS.get(band(slot_t)) if slot_t else "")}
                          for k, v in fx.items()}

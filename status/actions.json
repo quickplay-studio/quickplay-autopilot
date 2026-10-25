@@ -263,5 +263,79 @@
   "done": false,
   "check": "secret_works:ANTHROPIC_API_KEY",
   "note": "ANTHROPIC_API_KEY is not set yet"
+ },
+ {
+  "id": "channel-music",
+  "title": "Create the Quickplay Music channel in YouTube Studio and connect it",
+  "why": "The music category is the strongest we have (median 135 views a Short against 28 for Gaming), so Charlie approved a music-only channel run by the same pipeline. It cannot exist until you create it: the pipeline never creates accounts. Until it is signed in nothing about it runs.",
+  "steps": [
+   "Sign in to YouTube Studio with the studio Google account only, never your own.",
+   "Open Settings (bottom left), then Channel, then Add or manage your channels, then Create a channel.",
+   "Name it exactly: Quickplay Music.",
+   "Open the hub's Accounts tab (or https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html) and press Sign in to YouTube, signed in as the studio account.",
+   "When Google asks which channel, pick Quickplay Music. On the permissions page tick Select all, then Continue.",
+   "Press Copy code on the page that opens.",
+   "Within 5 minutes open the social workflow, press Run workflow, paste the code into \"YouTube address or code\", type music as the channel, and press the green Run workflow.",
+   "Nothing posts to Quickplay Music until that works; after it does, the pipeline starts it by itself within the hour."
+  ],
+  "links": [
+   {
+    "label": "YouTube Studio",
+    "url": "https://studio.youtube.com/"
+   },
+   {
+    "label": "Sign in to YouTube (callback page)",
+    "url": "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html"
+   },
+   {
+    "label": "The social workflow (Run workflow)",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml"
+   },
+   {
+    "label": "The hub, Accounts tab",
+    "url": "https://quickplay-studio.github.io/quickplay-autopilot/hub.html"
+   }
+  ],
+  "short": "Quickplay Music channel",
+  "added": "2026-10-25",
+  "due": "",
+  "done": false
+ },
+ {
+  "id": "channel-diario",
+  "title": "Create the Quickplay Diario channel in YouTube Studio and connect it",
+  "why": "40% of our views are American, and every board already carries Spanish translations, so Charlie approved a Spanish mirror for the Americas. It cannot exist until you create it: the pipeline never creates accounts. Until it is signed in nothing about it runs.",
+  "steps": [
+   "Sign in to YouTube Studio with the studio Google account only, never your own.",
+   "Open Settings (bottom left), then Channel, then Add or manage your channels, then Create a channel.",
+   "Name it exactly: Quickplay Diario.",
+   "Open the hub's Accounts tab (or https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html) and press Sign in to YouTube, signed in as the studio account.",
+   "When Google asks which channel, pick Quickplay Diario. On the permissions page tick Select all, then Continue.",
+   "Press Copy code on the page that opens.",
+   "Within 5 minutes open the social workflow, press Run workflow, paste the code into \"YouTube address or code\", type es as the channel, and press the green Run workflow.",
+   "Nothing posts to Quickplay Diario until that works; after it does, the pipeline starts it by itself within the hour."
+  ],
+  "links": [
+   {
+    "label": "YouTube Studio",
+    "url": "https://studio.youtube.com/"
+   },
+   {
+    "label": "Sign in to YouTube (callback page)",
+    "url": "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html"
+   },
+   {
+    "label": "The social workflow (Run workflow)",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/social.yml"
+   },
+   {
+    "label": "The hub, Accounts tab",
+    "url": "https://quickplay-studio.github.io/quickplay-autopilot/hub.html"
+   }
+  ],
+  "short": "Quickplay Diario channel",
+  "added": "2026-10-25",
+  "due": "",
+  "done": false
  }
 ]

@@ -56,7 +56,7 @@ def main(root):
         if (res / "review.jpg").exists(): shutil.copy(res / "review.jpg", ROOT / "review" / f"{sid}.jpg")
         if (res / "review_social.jpg").exists(): shutil.copy(res / "review_social.jpg", ROOT / "review" / f"{sid}.social.jpg")
         soc = res / "social.mp4"
-        if soc.exists() and st.get("video") and not st.get("social_release"):
+        if soc.exists() and st.get("video") and not st.get("social_release") and not st.get("channel"):    # another channel's Shorts are not cross-posted
             tag = f"social-{sid}"
             r = subprocess.run(["gh", "release", "create", tag, str(soc), "--draft", "--title", tag,
                                 "--notes", "TikTok and Instagram version, removed once posted."], capture_output=True, text=True)

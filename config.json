@@ -123,6 +123,30 @@
  "youtube_upload_units": 100,
  "youtube_quota_margin": 1000,
  "youtube_quota_note": "quota.py keeps optional extras (comments, playlists, title swaps, replies, searches, clip uploads) inside the daily YouTube allowance so the Shorts always fit. Since 1 June 2026 uploads (videos.insert) and searches (search.list) have buckets of their own, youtube_uploads_per_day and youtube_searches_per_day calls (100 each by default; the Google Cloud console's Quotas page shows the real numbers), shared by all four channels on the one project; everything else shares youtube_quota_per_day units. youtube_quota_model \"units\" goes back to counting an upload as youtube_upload_units of the shared units.",
+ "shorts_channels": {
+  "music": {
+   "title_word": "music",
+   "name": "Quickplay Music",
+   "categories": [
+    "Music"
+   ],
+   "per_day": 6,
+   "language": "en",
+   "series": [
+    "Chart Watch",
+    "Song Secrets",
+    "New Music Friday"
+   ]
+  },
+  "es": {
+   "title_word": "diario",
+   "name": "Quickplay Diario",
+   "mirror_of": "main",
+   "language": "es",
+   "per_day": 6
+  }
+ },
+ "shorts_channels_note": "More channels for the Daily line (Charlie, 25 October): a music-only channel and a Spanish mirror for the Americas. Charlie creates each channel in YouTube Studio under the studio account and signs it in (tokens/youtube_<key>.enc, the social workflow with channel music or es); until that file exists nothing here runs (youtube.connected). A board's optional channel field (default main) routes it: its own client, slot grid, per_day and peers. The 100-uploads bucket in quota.py is shared by every channel. Extra channels' Shorts are measured (analytics/shorts.csv channel column) but never counted in the main channel's target, headline or ledger.",
  "languages": {
   "pt": {
    "channel": "Quickplay Daily Português",

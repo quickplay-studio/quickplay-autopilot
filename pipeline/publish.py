@@ -81,15 +81,18 @@ def pull_step(lines):
     if not ids: return set()
     import youtube as Y
     if not Y.available(): print("pull: YouTube keys missing"); return set(ids)
-    yt, later = Y.client(), set()
+    yt, later, others = Y.client(), set(), {}
     for i in ids:
         st = load_status(i); vid = st.get("video")
         if st.get("pulled"): continue
         if not vid: later.add(i); print(i, "pull: not on YouTube yet, trying again next run"); continue
         wants_private = any(is_private_line(l) and i in pull_ids(l) for l in lines)
-        if Y.video_status(yt, vid).get("privacy") != "private" and not wants_private: print(i, "pull: already public, left as it is"); continue
+        ch = st.get("channel") or "main"
+        try: cl = yt if ch == "main" else others.setdefault(ch, Y.client_for(ch))        # a Short of another channel is pulled with that channel's sign-in
+        except (Exception, SystemExit) as e: later.add(i); print(i, f"pull: the {ch} channel's sign-in did not work:", str(e)[:120]); continue
+        if Y.video_status(cl, vid).get("privacy") != "private" and not wants_private: print(i, "pull: already public, left as it is"); continue
         try:
-            yt.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
+            cl.videos().update(part="status", body={"id": vid, "status": {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
                                                                           "containsSyntheticMedia": False}}).execute()
         except Exception as e:
             st["pull_tries"] = int(st.get("pull_tries") or 0) + 1; st["pull_error"] = str(e)[:300]; save_status(st)
@@ -133,7 +136,7 @@ def reserve_step(lines):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == today and not b.get("reserve"): made += 1
+            if b.get("created") == today and not b.get("reserve") and (b.get("channel") or "main") == "main": made += 1
     used = sum(1 for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json") if load_status(p.stem).get("from_reserve") == today)
     want = quota.target() - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
     gap = min(int(plan.CFG.get("reserve_per_day", 3)) - used, want - made - used)
@@ -202,6 +205,23 @@ def main():
     next_slot = plan.slot_picker(NOW, taken)
     on_channel = {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(yt, limit=100)}
     print(f"approved: {len(todo)}, room today: {capacity}")
+    # one lane per channel (25 October: the Daily line's other channels): its client, slots taken, room left and the titles
+    # already on it. The extra lanes are built when the first Short of that channel comes up, and only when it is signed in.
+    lanes = {"main": {"yt": yt, "taken": taken, "recent": recent, "capacity": capacity, "next": next_slot, "on": on_channel}}
+
+    def lane(ch):
+        if ch not in lanes:
+            lanes[ch] = None
+            if plan.channel_cfg(ch) and Y.connected(ch):
+                try:
+                    c = Y.client_for(ch)
+                    tk, rc, on = plan.schedule_state(NOW, c, ch)
+                    if on:
+                        lanes[ch] = {"yt": c, "taken": tk, "recent": rc, "next": plan.slot_picker(NOW, tk, ch),
+                                     "capacity": max(0, int(plan.channel_cfg(ch).get("per_day") or 6) - rc),
+                                     "on": {v["title"].strip().lower(): v["id"] for v in Y.recent_videos(c, limit=100)}}
+                except (Exception, SystemExit) as e: print(f"{ch}: the channel's sign-in did not work:", f"{type(e).__name__}: {e}"[:160])
+        return lanes[ch]
     try: refused = quota.bucket_refused("upload")       # YouTube refused an upload for quota today: no call until the reset
     except Exception: refused = False
     if refused: print("YouTube refused an upload for quota today: approved Shorts wait for the reset")
@@ -209,7 +229,12 @@ def main():
         st, board = status[i], ready[i]
         b = json.loads(board.read_text())
         tag = st.get("preview_release")
-        if capacity <= 0 or refused:
+        ch = b.get("channel") or st.get("channel") or "main"
+        L = lane(ch)
+        if L is None:
+            st["state"] = f"approved, waiting for the {ch} channel's sign-in"; save_status(st); continue
+        yt, taken, recent, next_slot, on_channel = L["yt"], L["taken"], L["recent"], L["next"], L["on"]
+        if L["capacity"] <= 0 or refused:
             st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); continue
         if not tag:
             st["state"] = "approved, but the preview render is missing (re-queue the board)"; save_status(st); continue
@@ -253,10 +278,15 @@ def main():
                     print(i, st["state"]); continue
                 if late: st["late"] = late
             try:
-                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"))
+                vid = Y.upload(yt, tmp / "video.mp4", u["title"], u["description"], u["tags"], u["category"], slot, localizations=u.get("localizations"),
+                               **({"language": u["language"]} if u.get("language") else {}))
             except Y.LimitReached as e:
-                if "uploadLimitExceeded" in str(e): print("upload ceiling:", quota.refused(recent))
-                st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); capacity = 0; continue
+                if "uploadLimitExceeded" in str(e) and ch == "main": print("upload ceiling:", quota.refused(recent))      # the learned ceiling is the main channel's
+                st["state"] = "approved, waiting for YouTube's daily upload limit"; save_status(st); L["capacity"] = 0
+                if "quotaExceeded" in str(e):          # the shared allowance: no channel can upload until the reset
+                    for x in lanes.values():
+                        if x: x["capacity"] = 0
+                continue
             except Exception as e:
                 st["upload_attempts"] = st.get("upload_attempts", 0) + 1
                 st.update(state="approved, upload failed (retrying hourly)", error=f"{type(e).__name__}: {e}"[:400])
@@ -264,7 +294,7 @@ def main():
                     st["state"] = "upload failed"; save_status(st); move(board, "failed")
                 else: save_status(st)
                 continue
-            capacity -= 1
+            L["capacity"] -= 1
             st.pop("error", None)
             st.update(uploaded_at=NOW.isoformat(timespec="seconds").replace("+00:00", "Z"), video=vid,
                       url=f"https://youtube.com/shorts/{vid}", publish_at=slot,

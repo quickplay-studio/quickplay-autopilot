@@ -1,15 +1,16 @@
 round,factor,arm_a,arm_b,n_a,n_b,effect,low,high,halves,verdict,winner,leaning,why
+round 1,angles,shown,hidden,3,0,,,,,too few to tell,,,
+round 1,ending,loop,question,2,0,,,,,too few to tell,,,
+round 1,first_frame,cover,photo,3,3,,,,,too few to tell,,,the arm cannot be told apart from the controls yet
+round 1,franchise,named,plain,3,1,,,,,too few to tell,,,
+round 1,fx_energy,steady,lab,2,0,,,,,too few to tell,,,
+round 1,fx_grade,natural,lab,0,0,,,,,too few to tell,,,
+round 1,fx_opening,image_first,lab,0,0,,,,,too few to tell,,,
+round 1,fx_slot,06:00 to 12:00,12:00 to 18:00,1,2,,,,,too few to tell,,,
+round 1,gene:g003,a,b,0,0,,,,,too few to tell,,,
 round 1,hook_type,statement,number,7,1,,,,,too few to tell,,,
 round 1,length,25 to 34 s,35 to 44 s,3,4,,,,,too few to tell,,,the arm cannot be told apart from the controls yet
 round 1,title_search,search phrase,curiosity,4,3,,,,,too few to tell,,,the arm cannot be told apart from the controls yet
-round 1,first_frame,cover,photo,3,3,,,,,too few to tell,,,the arm cannot be told apart from the controls yet
-round 1,fx_energy,steady,lab,2,0,,,,,too few to tell,,,
-round 1,fx_slot,06:00 to 12:00,12:00 to 18:00,1,2,,,,,too few to tell,,,
-round 1,fx_grade,natural,lab,0,0,,,,,too few to tell,,,
-round 1,fx_opening,image_first,lab,0,0,,,,,too few to tell,,,
-round 1,ending,loop,question,2,0,,,,,too few to tell,,,
-round 1,angles,shown,hidden,3,0,,,,,too few to tell,,,
-round 1,franchise,named,plain,3,1,,,,,too few to tell,,,
 round 1,writer_arm,gpt-oss-120b,gemini flash,0,4,,,,,too few to tell,,,
 round 1,title_emoji,emoji,none,5,4,,,,,too few to tell,,,the arm cannot be told apart from the controls yet
 round 1,title_answer,stated,held back,5,4,,,,,too few to tell,,,the arm cannot be told apart from the controls yet

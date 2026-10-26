@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T14:13+00:00",
+ "updated": "2026-10-26T15:14+00:00",
  "dimensions": {
   "captions": {
    "punch": {
@@ -39,7 +39,7 @@
    },
    "low": {
     "n": 7,
-    "score": 1.055
+    "score": 1.056
    },
    "lab-captions-1019": {
     "n": 47,
@@ -50,7 +50,7 @@
    },
    "lab-captions-1024": {
     "n": 5,
-    "score": 0.421
+    "score": 0.423
    }
   },
   "voice": {
@@ -162,13 +162,13 @@
    },
    "lab-energy-1025": {
     "n": 2,
-    "score": 0.712
+    "score": 0.711
    }
   },
   "grade": {
    "natural": {
     "n": 48,
-    "score": 1.119,
+    "score": 1.131,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 55.3,
     "stayed_pct": 29.0
@@ -196,7 +196,7 @@
    },
    "lab-grade-1023": {
     "n": 11,
-    "score": 0.945,
+    "score": 0.944,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 53.7,
     "stayed_pct": 21.0
@@ -212,14 +212,14 @@
    },
    "image_first": {
     "n": 66,
-    "score": 1.092,
+    "score": 1.099,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 53.7,
     "stayed_pct": 29.0
    },
    "lab-opening-1019": {
     "n": 14,
-    "score": 1.041,
+    "score": 1.036,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 52.1,
     "stayed_pct": 34.0
@@ -231,7 +231,7 @@
   "style": {
    "minimal": {
     "n": 7,
-    "score": 1.055
+    "score": 1.056
    },
    "standard": {
     "n": 2,

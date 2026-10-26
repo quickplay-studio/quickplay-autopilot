@@ -1,19 +1,20 @@
 {
  "date": "2026-10-26",
- "built": "2026-10-26T14:13+00:00",
- "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
+ "built": "2026-10-26T15:14+00:00",
+ "model": "gemini-3.5-flash-lite",
  "mode": "full",
- "run": "",
+ "run": "afternoon",
  "errors": [],
  "topics": [
   {
-   "n": 7,
+   "n": 8,
    "topic": "GTA 6",
    "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
    "category": "Gaming",
    "what_is_new": "Nothing changed in the last two days.",
    "hooks": [
-    "GTA 6 arrives on November 19, 2026!"
+    "GTA 6 is launching on November 19, 2026!",
+    "Rockstar Games developed Grand Theft Auto VI."
    ],
    "sources": [
     [
@@ -46,352 +47,89 @@
       "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
       "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
+    },
+    {
+     "claim": "Actor Stephen Root will play the character of drug runner Brian Heder in the game.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Who has been confirmed, whether Rockstar and any likely NDAs like it or not, is Stephen Root, who said he will be seen playing drug",
+      "3": "and Brian Heder (Stephen Root),[27] a long-time drug runner in the Keys and Jason's landlord.[25]"
+     }
     }
    ],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+     }
+    },
+    {
+     "claim": "Manni L Perez spent her twelve minute livestream talking about her life growing up in a small, rural, redneck-y town.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Perez spent her 12-minute livestream just talking about her life growing up in a \"small, rural, redneck-y\" town."
+     }
+    },
+    {
+     "claim": "The livestream reached a peak of more than 2,100 viewers on an Instagram account that was six months old.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Reaching a peak of more than 2,100 viewers on a six-month-old Instagram account with just nine posts, Perez spent her 12-minute livestream just talking about"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida; its map is reported to be three times larger"
+     }
+    },
+    {
+     "claim": "The main story follows a criminal couple named Jason Duval and Lucia Caminos.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The story follows a criminal couple: Jason Duval, who worked for local drug runners in the Leonida Keys after serving in the Army; and Lucia"
+     }
+    }
+   ],
    "images": [
     "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
    ]
   },
   {
-   "n": 13,
-   "topic": "ipad mini",
-   "signal": "Google Trends GB 500+",
-   "category": "Tech",
-   "what_is_new": "Apple announced a new iPad mini featuring an A20 Pro chip, an OLED display, and water resistance on October 26, 2026.",
-   "hooks": [
-    "Did you know the new iPad mini starts at $699?",
-    "Pre-orders for the new iPad mini open on October 28!",
-    "The new iPad mini features a stunning 8.5-inch OLED display."
-   ],
+   "n": 10,
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [],
    "sources": [
     [
-     "Apple updates the iPad mini with an A20 processor and OLED display",
-     "https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/",
-     "Engadget",
-     "2026-10-26"
-    ],
-    [
-     "Apple updates the iPad Mini with a larger OLED display",
-     "https://www.theverge.com/tech/1017801/ipad-mini-oled-display-apple-announce",
-     "The Verge",
-     "2026-10-26"
-    ],
-    [
-     "Apple gives iPad mini its biggest update ever",
-     "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
-     "Apple Newsroom",
-     "2026-10-26"
-    ],
-    [
-     "ipad mini",
-     "https://en.wikipedia.org/wiki/IPad_Mini",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The new iPad mini starts at $699.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The new tablet starts at $699.",
-      "2": "The iPad Mini starts at $699 for the Wi-Fi-only model, and $849 for Wi-Fi and cellular."
-     }
-    },
-    {
-     "claim": "Pre-orders for the new iPad mini open on October 28.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Pre-orders for both variants open on October 28, with general availability to follow on November 6.",
-      "2": "Preorders for the new iPad Mini start on Wednesday, October 28th, with availability on November 6th.",
-      "3": "Customers can pre-order it along with the new Smart Folio starting Wednesday, October 28, with availability beginning Friday, November 6."
-     }
-    },
-    {
-     "claim": "General availability for the new iPad mini follows on November 6.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Pre-orders for both variants open on October 28, with general availability to follow on November 6.",
-      "2": "Preorders for the new iPad Mini start on Wednesday, October 28th, with availability on November 6th.",
-      "3": "Customers can pre-order it along with the new Smart Folio starting Wednesday, October 28, with availability beginning Friday, November 6."
-     }
-    },
-    {
-     "claim": "The new iPad mini features an 8.5-inch OLED display.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "The new tablet has 8.5-inch OLED display, which Apple will allow customers to spec with its nano-texture coating.",
-      "2": "Apple announced a new iPad Mini with a larger, 8.5-inch OLED display.",
-      "3": "The larger 8.5-inch OLED display, also available with a nano-texture option, delivers higher contrast and more than 2x higher peak brightness than the previous-generation iPad"
-     }
-    },
-    {
-     "claim": "The new iPad mini is 5.4 mm thin.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "At 5.4mm thick, the iPad Mini is thinner and lighter than its predecessor.",
-      "3": "At 5.4 mm thin, the new iPad mini is more portable than ever, and is available in two gorgeous finishes: a new midnight and a"
-     }
-    },
-    {
-     "claim": "The new iPad mini has bezels that are 24 percent thinner.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "screen brightness across both sdr and hdr content additionally it offers a 2000000 1 contrast ratio thanks to 24 percent thinner bezels the new screen is also slightly larger than the 83 inch display the ipad mini previously offered in",
-      "2": "It also has bezels that are 24 percent slimmer.",
-      "3": "The new iPad mini comes with a stunning OLED display that delivers amazing front-of-screen performance and an even larger 8.5-inch size while maintaining the same"
-     }
-    },
-    {
-     "claim": "The new iPad mini is available in midnight and starlight colors.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Apple will offer the iPad mini in two colors (midnight and starlight), and three storage configurations: 128GB, 256GB and 512GB.",
-      "2": "The iPad Mini is available in “midnight” and “starlight” colors, along with 128GB, 256GB, and 512GB configurations.",
-      "3": "At 5.4 mm thin, the new iPad mini is more portable than ever, and is available in two gorgeous finishes: a new midnight and a"
-     }
-    },
-    {
-     "claim": "The new iPad mini is available in 128GB, 256GB and 512GB storage configurations.",
-     "sources": [
-      1,
-      2,
-      4
-     ],
-     "evidence": {
-      "1": "Apple will offer the iPad mini in two colors (midnight and starlight), and three storage configurations: 128GB, 256GB and 512GB.",
-      "2": "The iPad Mini is available in “midnight” and “starlight” colors, along with 128GB, 256GB, and 512GB configurations.",
-      "4": "the ipad mini is available with 128 256 and 512 gb a of storage with no expansion option apple sells a camera connection kit with"
-     }
-    },
-    {
-     "claim": "The new iPad mini has an IP67 rating against water and dust.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Apple has also sealed the enclosure; it's now iP67-rated against water and dust.",
-      "2": "It has an IP67 rating for protection against water and dust, in addition to Apple’s next-gen C2 cellular modem and in-house N1 networking chip.",
-      "3": "It also features an IP67 rating to protect against water and dust — ideal for a range of use cases, such as working outside on"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "page:https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
-    "commons:File:IPad_Mini.png"
-   ]
-  },
-  {
-   "n": 14,
-   "topic": "global photos october full moon",
-   "signal": "Google Trends GB 10000+",
-   "category": "Science",
-   "what_is_new": "Stunning photos of the October full Hunter's Moon captured around the world were published on October 26, 2026.",
-   "hooks": [
-    "Discover the stunning photos of the October full Hunter's Moon!",
-    "How did photographers capture the Hunter's Moon around the world?",
-    "Why is October's full moon traditionally called the Hunter's Moon?"
-   ],
-   "sources": [
-    [
-     "October full 'Hunter's Moon' dazzles in spectacular photos from around the world",
-     "https://www.space.com/stargazing/october-full-hunters-moon-dazzles-in-spectacular-photos-from-around-the-world",
-     "Space.com",
-     "2026-10-26"
-    ],
-    [
-     "Stunning photos capture October's Hunter's Moon around the world",
-     "https://www.bbc.co.uk/weather/articles/c6zjxgj83n80o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-26"
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
     ]
    ],
    "verified": [],
-   "one_source": [
-    {
-     "claim": "The October full Moon lit up skies around the world this weekend.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The October full Moon lit up skies around the world this weekend."
-     }
-    },
-    {
-     "claim": "This particular full moon is known by several names, including the Hunter's Moon.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "This particular full moon is known by several names, including the Hunter's Moon, a name rooted in historical traditions in the Northern Hemisphere."
-     }
-    },
-    {
-     "claim": "The full Hunter's Moon wowed stargazers with a breathtaking display of natural light when it rose to dominate the autumn sky overnight on Oct. 25-26.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The full \"Hunter's Moon\" wowed stargazers with a breathtaking display of natural light when it rose to dominate the autumn sky overnight on Oct. 25-26."
-     }
-    },
-    {
-     "claim": "October's full moon is often known as the Hunter's Moon because it traditionally rose around the time that hunters would take to the newly harvested fields to catch animals to prepare as food for the coming winter.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "October's full moon is often known as the Hunter's Moon because it traditionally rose around the time that hunters would take to the newly harvested"
-     }
-    },
-    {
-     "claim": "Gary Hershorn lined up a shot of the full Hunter's Moon rising behind the Empire State Building from Hoboken, New Jersey.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Veteran New York photographer Gary Hershorn was also able to line up a shot of the full Hunter's Moon rising behind the iconic architecture of"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 11,
-   "topic": "bleach",
-   "signal": "Google Trends GB 200+",
-   "category": "Film",
-   "what_is_new": "The Bleach finale aired on 26 October 2026, marking the series' official end.",
-   "hooks": [
-    "Bleach’s epic finale streams now on Disney+ and Hulu worldwide",
-    "Studio Pierrot revives Bleach with stunning dark‑fantasy animation",
-    "Bleach isn’t just anime, it’s also a chemical term"
-   ],
-   "sources": [
-    [
-     "Fans prepare to say goodbye as anime series Bleach officially ends",
-     "https://www.bbc.co.uk/news/articles/c8p3g73ep520o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-26"
-    ],
-    [
-     "Bleach’s final season is Studio Pierrot’s answer to Demon Slayer and Jujutsu Kaisen",
-     "https://www.polygon.com/bleach-thousand-year-blood-war-bests-demon-slayer-jujutsu-kaisen/",
-     "Polygon",
-     "2026-08-14"
-    ],
-    [
-     "bleach",
-     "https://en.wikipedia.org/wiki/Bleach",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Bleach's final season is available to stream globally on Disney+ and in the US on Hulu.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Bleach is available to stream via Disney+ globally and on Hulu in the US.",
-      "2": "New episodes of Bleach: Thousand-Year Blood War release on Hulu and Disney Plus Saturdays at 10:30 a.m. ET."
-     }
-    },
-    {
-     "claim": "The final season of the series is titled Thousand-Year Blood War.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The arc, Thousand-Year Blood War, has been split into four separate chapters, and the final run began this July.",
-      "2": "Bleach: Thousand-Year Blood War feels like it belongs to an entirely different era of anime."
-     }
-    },
-    {
-     "claim": "Studio Pierrot (also known as Pierrot Films) produces the Bleach anime.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "One of the reasons they've been so excited to see the new, animated finale is due to the fact Kubo and animation house Pierrot Films",
-      "2": "Studio Pierrot isn't simply tying up the end of Tite Kubo's story, but is applying all the incredible leaps and techniques it has learned since"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The original Bleach anime ran from 2004 to 2012 across 16 seasons but never caught up to the manga source material.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The original Bleach anime ran from 2004 to 2012 across 16 seasons but never caught up to the manga source material - with fans left"
-     }
-    },
-    {
-     "claim": "The new season uses dark‑fantasy film style with dense shadows and atmospheric effects.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "From its opening episodes, The Calamity — the final cour of the adaptation — looks more like a dark fantasy film that happens to arrive"
-     }
-    },
-    {
-     "claim": "Bleach is the generic name for any chemical product used to remove colour from fabric, fibre or food.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Bleach is the generic name for any chemical product that is used industrially or domestically to remove color from (i.e. to whiten) fabric, fiber, or"
-     }
-    },
-    {
-     "claim": "German‑Swedish chemist Carl Wilhelm Scheele discovered chlorine in 1774.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "German-Swedish chemist Carl Wilhelm Scheele discovered chlorine in 1774,"
-     }
-    }
-   ],
+   "one_source": [],
    "images": [
-    "commons:File:Clorox_Bleach_products.jpg"
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
    ]
   }
  ]

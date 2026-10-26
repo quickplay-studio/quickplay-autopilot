@@ -1,11 +1,11 @@
 feature,feature_label,value,n,days,views,subs,expected,subs_per_1k,typical_per_1k,lift,low,high,verdict,why
-subs:category,Subscribers: Category,Sport,21,6,3855,3,1.22,0.78,0.32,1.55,0.67,6.38,early sign,not proven: 90% interval 0.67x to 6.38x includes typical; the two halves of the data disagree
-subs:category,Subscribers: Category,Gaming,15,7,2263,2,0.95,0.88,0.42,1.36,0.38,6.65,early sign,not proven: 90% interval 0.38x to 6.65x includes typical
+subs:category,Subscribers: Category,Sport,21,6,3855,3,1.21,0.78,0.31,1.56,0.68,6.4,early sign,not proven: 90% interval 0.68x to 6.40x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Gaming,15,7,2263,2,0.95,0.88,0.42,1.36,0.38,6.66,early sign,not proven: 90% interval 0.38x to 6.66x includes typical
 subs:category,Subscribers: Category,Tech,6,4,321,1,0.29,3.12,0.91,1.31,0.18,16.21,early sign,not proven: 90% interval 0.18x to 16.21x includes typical; the two halves of the data disagree
-subs:category,Subscribers: Category,Film,20,8,4791,3,2.58,0.63,0.54,1.09,0.32,3.01,about typical,
+subs:category,Subscribers: Category,Film,21,8,4853,3,2.57,0.62,0.53,1.09,0.32,3.02,about typical,
 subs:category,Subscribers: Category,Science,5,3,449,0,0.16,0.0,0.36,0.93,0.0,18.74,about typical,
 subs:category,Subscribers: Category,Entertainment,7,5,559,0,0.29,0.0,0.51,0.87,0.0,10.43,about typical,
-subs:category,Subscribers: Category,Music,28,8,10609,3,8.01,0.28,0.75,0.5,0.1,0.97,early sign,not proven: the two halves of the data disagree
+subs:category,Subscribers: Category,Music,29,8,10718,3,8.02,0.28,0.75,0.5,0.1,0.97,early sign,not proven: the two halves of the data disagree
 subs:ending,Subscribers: Ending,follow line,3,2,182,0,0.07,0.0,0.41,0.96,0.0,40.24,about typical,3 Shorts over 2 UK day(s)
-subs:ending,Subscribers: Ending,loop,4,3,1172,0,0.41,0.0,0.35,0.83,0.0,7.28,about typical,4 Shorts over 3 UK day(s)
-subs:ending,Subscribers: Ending,question,4,3,1435,0,0.51,0.0,0.35,0.8,0.0,5.9,early sign,not proven: 4 Shorts over 3 UK day(s)
+subs:ending,Subscribers: Ending,loop,5,3,1281,0,0.42,0.0,0.33,0.83,0.0,7.18,about typical,
+subs:ending,Subscribers: Ending,question,4,3,1436,0,0.49,0.0,0.34,0.8,0.0,6.11,about typical,4 Shorts over 3 UK day(s)

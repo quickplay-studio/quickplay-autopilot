@@ -1,8 +1,6 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: 1 verified, 0 one-source, 3 pages
-ipad mini: 9 verified, 0 one-source, 4 pages
-global photos october full moon: 0 verified, 5 one-source, 2 pages
-bleach: 3 verified, 4 one-source, 3 pages
-covered recently, no pack: GTA 6 price; Ballon d'Or 2026; Ballon d'Or 2026 nominees; The Hunger Games: Sunrise on the Reaping; 2026 United States Grand Prix; EA shuts down BioWare; Clayface (film)
-4 packs, 13 verified facts, 9 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}
+GTA 6: 2 verified, 5 one-source, 3 pages
+GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
+covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Clayface (film); You Can See Everything; Avengers: Doomsday; LYON vs. GEN; FC BARCELONA 1; 2026 United States Grand Prix; EA shuts down BioWare
+2 packs, 2 verified facts, 5 one-source
+gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "openrouter:nvidia/nemotron-3-super-120b-a12b:free": "daily limit", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20"}, "retired": [], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.5-flash-lite": 3, "gemini-3.5-flash": 1, "groq:openai/gpt-oss-120b": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}

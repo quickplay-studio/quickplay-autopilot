@@ -3,151 +3,127 @@
  "google_trends": {
   "GB": [
    {
-    "q": "bleach",
+    "q": "mortimer & whitehouse: gone fishing",
+    "traffic": "5000+",
+    "news": [
+     "Mortimer & Whitehouse: Gone Fishing returns for a new series and one last fish with Ted - “The great thing about Ted, really, is he didn't give a monkey's about us”",
+     "Golf vs fishing: Four old codgers battle it out on BBC Two"
+    ]
+   },
+   {
+    "q": "ai bubble",
     "traffic": "200+",
     "news": [
-     "Fans prepare to say goodbye as anime series Bleach officially ends",
-     "Popular anime series Bleach officially ends as fans say goodbye"
+     "The tech ‘death spiral’ that could destroy the AI boom",
+     "AI Spending Fears Threaten to Swamp Big Tech’s Strong Earnings"
     ]
    },
    {
-    "q": "a303",
+    "q": "alex de minaur",
     "traffic": "200+",
     "news": [
-     "LIVE - Accident causes severe A303 delays in both directions",
-     "A303 closed near Stonehenge after lorry crashes and ends up in ditch"
+     "Machac vs. de Minaur Prediction at the Erste Bank Open – Monday, October 26",
+     "Alex de Minaur vs Tomas Machac ATP Vienna Tips, Prediction & Live Stream - Can Demon survive dangerous Machac?"
     ]
    },
    {
-    "q": "ibovespa",
-    "traffic": "100+",
-    "news": [
-     "Bolsa aciona circuit breaker pela primeira vez desde 2020 após vitória de Lula",
-     "Dólar trava em R$ 5,42 após atingir limite de negociação; ações brasileiras caem no exterior"
-    ]
-   },
-   {
-    "q": "centcom strait of hormuz oil",
-    "traffic": "100+",
-    "news": [
-     "US military says it helped Gulf states export 1.5 billion barrels of oil",
-     "U.S. Army Says It Has Helped 1.5 Billion Barrels of Oil Out of Hormuz"
-    ]
-   },
-   {
-    "q": "xbox game pass",
-    "traffic": "500+",
-    "news": [
-     "Rejoice! Console Gamers Can Finally Play One Of 2024’s Most Acclaimed Horror Games",
-     "Mouthwashing coming to PS5, Xbox Series, PS4, and Switch on October 29"
-    ]
-   },
-   {
-    "q": "ipad mini",
-    "traffic": "500+",
-    "news": [
-     "Apple gives iPad mini its biggest update ever",
-     "Apple updates the iPad Mini with a larger OLED display"
-    ]
-   },
-   {
-    "q": "global photos october full moon",
-    "traffic": "10000+",
-    "news": [
-     "Stunning photos capture October's Hunter's Moon around the world",
-     "The ‘Hunter’s Moon’ Is About To Meet The ‘Seven Sisters’"
-    ]
-   },
-   {
-    "q": "blencathra",
+    "q": "fin smith",
     "traffic": "200+",
     "news": [
-     "Man dies after falling from Lake District ridge",
-     "Man dies after long fall from exposed ridge of Cumbria mountain"
+     "Fin Smith could miss Australia game because of calf injury",
+     "Fin Smith deals England injury blow"
     ]
    },
    {
-    "q": "fa trophy draw",
+    "q": "skytrax best premium economy airlines 2026",
+    "traffic": "200+",
+    "news": [
+     "When is premium economy worth the extra cost? We compare five of the world's best-rated airlines",
+     "What Makes Premium Economy Worth Paying More For?"
+    ]
+   },
+   {
+    "q": "hargreaves lansdown money market workaround",
+    "traffic": "200+",
+    "news": [
+     "Labour Isa raid backfires as Britain’s biggest broker launches ‘workaround’",
+     "Hargreaves Lansdown launches money market fund amid surge in demand"
+    ]
+   },
+   {
+    "q": "jeremy clarkson pub car park row",
     "traffic": "500+",
     "news": [
-     "Horsham to host Torquay United in the FA Trophy",
-     "FA Trophy Second Round - The Draw"
+     "Jeremy Clarkson: You can’t build there, newts need a view of Saturn",
+     "Jeremy Clarkson reveals new row with council over Diddly Squat that risks 300 jobs: ‘We’ve begged’"
+    ]
+   },
+   {
+    "q": "fa trophy",
+    "traffic": "2000+",
+    "news": [
+     "FA Trophy draw today",
+     "City drawn at home to Truro City in FA Trophy 2nd Round"
     ]
    }
   ],
   "US": [
    {
-    "q": "timothy simons",
-    "traffic": "10000+",
+    "q": "alex de minaur",
+    "traffic": "500+",
     "news": [
-     "Nobody Wants This Season 3 Lets Morgan and Sasha Open the Door to Romance",
-     "Nobody Wants This review – prepare to fall in love again … with a different couple"
+     "Machac vs. de Minaur Prediction at the Erste Bank Open – Monday, October 26",
+     "Alex de Minaur vs Tomas Machac ATP Vienna Tips, Prediction & Live Stream - Can Demon survive dangerous Machac?"
     ]
    },
    {
-    "q": "keith urban",
-    "traffic": "200+",
+    "q": "polar vortex forecast",
+    "traffic": "500+",
     "news": [
-     "JLo Faces Negative Dating Update After Report Nicole Kidman Had Her ‘Hackles Up’ Over Keith Urban Rumors: ‘She’ll Never Learn’",
-     "Exclusive | Jennifer Lopez and Brett Goldstein are ‘casually’ dating"
+     "The polar vortex could make history before winter even begins",
+     "Polar Vortex Forecast: Live Maps, Latest Updates, and the Winter 2026/2027 Outlook"
     ]
    },
    {
-    "q": "humana",
+    "q": "dax shepard",
+    "traffic": "500+",
+    "news": [
+     "Kristen Bell says she uses daughters to spy on husband Dax Shepard after candid marriage confession",
+     "Kristen Bell Jokes Daughters Are Her ‘In-House Paparazzi’ When She’s Out of Town"
+    ]
+   },
+   {
+    "q": "ai bubble",
+    "traffic": "2000+",
+    "news": [
+     "In China, the AI bubble has already burst",
+     "Sellers are back in tech, while bear market grips Chinese stocks"
+    ]
+   },
+   {
+    "q": "trump accounts",
     "traffic": "1000+",
     "news": [
-     "Inside Humana’s Medicare Advantage star ratings resurgence",
-     "Centene sues feds over low ratings for senior health plans"
+     "Some Parents Are Rejecting Trump’s Free Money",
+     "Trump accounts for kids: how and when can families withdraw the money?"
     ]
    },
    {
-    "q": "valentin vacherot",
-    "traffic": "200+",
+    "q": "trump account for kids",
+    "traffic": "500+",
     "news": [
-     "Stricker vs. Ruud Prediction at the Swiss Indoors Basel – Monday, October 26",
-     "ATP Basel Day 1 Predictions Including Dominic Stricker vs Casper Ruud"
-    ]
-   },
-   {
-    "q": "matteo berrettini",
-    "traffic": "2000+",
-    "news": [
-     "October 27, 2026: Dayana Yastremska vs Katie Volynets: Set 1 Winner Tennis Prediction Market",
-     "October 27, 2026: Jurij Rodionov vs Nikoloz Basilashvili: Set 2 Winner Tennis Prediction Market"
-    ]
-   },
-   {
-    "q": "zoe saldana",
-    "traffic": "200+",
-    "news": [
-     "Goodbye 'Lioness,' Zoe Saldaña's 108-Minute Action Thriller Officially Scores New Streaming Home",
-     "Zoe Saldaña Action Thriller Explodes Onto New Streaming Home After Lioness Season 3"
-    ]
-   },
-   {
-    "q": "nuno borges",
-    "traffic": "200+",
-    "news": [
-     "Nuno Borges domina na estreia e soma primeira vitória em Basileia",
-     "Jaime Faria - Mika Brunold Resultado ao vivo 0-2 - ATP Basel - 24 de outubro de 2026"
-    ]
-   },
-   {
-    "q": "pga tour",
-    "traffic": "2000+",
-    "news": [
-     "Seamus Power, Austin Smotherman head to Monday playoff as Butterfield Bermuda Championship shortened to 54 holes",
-     "Smotherman makes it two wins in a row on PGA Tour with playoff victory over Seamus Power"
+     "Billionaires Stave off the Pitchforks With Payouts to One Kid at a Time",
+     "Elon Musk’s $10.5B SpaceX gift to kids has a catch: Families can’t say no — and may need to wait 5 years to cash out"
     ]
    }
   ],
   "AU": [
    {
-    "q": "black friday",
-    "traffic": "1000+",
+    "q": "alex de minaur",
+    "traffic": "200+",
     "news": [
-     "Aussies rush to mega Cotton On sale",
-     "Black Friday 2026: Here’s what the team at THE ICONIC expects to sell out"
+     "Alex de Minaur offers update on his injury ahead of the Vienna Open, ‘it was unfortunate’",
+     "Machac vs. de Minaur Prediction at the Erste Bank Open – Monday, October 26"
     ]
    },
    {
@@ -155,7 +131,7 @@
     "traffic": "200+",
     "news": [
      "Apple gives iPad mini its biggest update ever",
-     "Apple updates the iPad Mini with a larger OLED display"
+     "Apple just revealed the iPad Mini I’ve always wanted. But is it worth the new price?"
     ]
    },
    {
@@ -178,8 +154,8 @@
     "q": "chris brown",
     "traffic": "500+",
     "news": [
-     "Chris Brown avoids jail time over London nightclub brawl",
-     "Chris Brown avoids prison time for brawling at London nightclub"
+     "Chris Brown given suspended eight-month prison sentence over nightclub attack",
+     "Chris Brown avoids jail time over London nightclub brawl"
     ]
    },
    {
@@ -209,63 +185,63 @@
   ],
   "CA": [
    {
-    "q": "ibovespa",
-    "traffic": "100+",
-    "news": [
-     "Bolsa aciona circuit breaker pela primeira vez desde 2020 após vitória de Lula",
-     "Dólar trava em R$ 5,42 após atingir limite de negociação; ações brasileiras caem no exterior"
-    ]
-   },
-   {
-    "q": "volkswagen",
+    "q": "ai bubble",
     "traffic": "200+",
     "news": [
-     "VW picks Dutch chipmaker NXP for microcontrollers in future cars",
-     "Volkswagen Group partners NXP for SDV architecture, zonal control"
+     "No Signs of AI Payoff Outside the Tech Sector | The Daily Spark",
+     "Apollo says AI has delivered 'zero financial payoff' outside the tech industry"
     ]
    },
    {
-    "q": "cyanide lol",
+    "q": "basel open",
     "traffic": "100+",
     "news": [
-     "Cyanide, former Fnatic jungler and LoL World Champion, dies aged 31",
-     "Lauri \"Cyanide\" Happonen, Youngest League of Legends World Champion, Dies At 31"
+     "mein Radio: Dominic Stricker startet an den Swiss Indoors in Basel",
+     "Die Oldies prägen das Turnier der Jugend"
     ]
    },
    {
-    "q": "anthropic ipo",
+    "q": "desjardins",
     "traffic": "2000+",
     "news": [
-     "Anthropic publicly files IPO prospectus noting strong revenue growth and massive spending",
-     "Anthropic IPO live updates: AI lab lost $80.7 billion in first half of 2026"
+     "Plusieurs clients frustrés | Nombreux problèmes: «Qu’est-ce qui se passe chez Desjardins?»",
+     "Alors, avez-vous survécu à la saga des cartes Desjardins?"
     ]
    },
    {
-    "q": "ipad mini",
+    "q": "vegemite",
     "traffic": "100+",
     "news": [
-     "Apple gives iPad mini its biggest update ever",
-     "Apple updates the iPad Mini with a larger OLED display"
+     "Australian murderer loses bid to eat Vegemite in prison",
+     "Australian judge rejects prisoner's human rights challenge to Vegemite ban"
     ]
    },
    {
-    "q": "liam neeson",
-    "traffic": "100+",
+    "q": "bc hydro richmond power outages",
+    "traffic": "1000+",
     "news": [
-     "New \"Liam Neeson Meets Yellowstone\" Western Thriller Finds the Perfect Lead in Unsung Action Star",
-     "The Week of October 25th in TV & Movies: Please Stop Making Life-Changing Decisions"
+     "Good morning, Richmond! It's Monday",
+     "Over 9,000 Richmond Households Will Lose Power Overnight This Weekend"
     ]
    },
    {
-    "q": "november 2026 calendar",
+    "q": "remembrance day",
     "traffic": "100+",
     "news": [
-     "Trails in the Sky 2nd Chapter November 2026 Calendar Wallpaper Features Joshua, Loewe, and Karin",
-     "Important Days in November 2026, National and International Events"
+     "Sudbury’s Bridge of Nations covered in 14,000 handmade poppies for Remembrance Day",
+     "Remembrance Day services in Heverlee and Namur"
     ]
    }
   ],
   "IE": [
+   {
+    "q": "tom morrissey",
+    "traffic": "200+",
+    "news": [
+     "‘Wow! Wow! Wow!’: Limerick hurlers and partners celebrate ‘mighty wedding’ of Tom Morrissey and Elaine Dolan",
+     "Limerick hurling star receives heartfelt best wishes on his wedding day"
+    ]
+   },
    {
     "q": "kevin sinfield",
     "traffic": "100+",
@@ -276,7 +252,7 @@
    },
    {
     "q": "jim walsh ucd estate probate",
-    "traffic": "200+",
+    "traffic": "500+",
     "news": [
      "UCD professor of chemical engineering leaves estate worth €3.6m",
      "UCD professor of chemical engineering leaves estate worth €3.6m"
@@ -302,8 +278,8 @@
     "q": "petroleum",
     "traffic": "200+",
     "news": [
-     "U.S. Dips Into Strategic Oil Reserve Again Amid Supply Disruptions",
-     "Crude Oil Crisis Deepens as US Emergency Reserve Releases Run Out of Steam"
+     "Petrol Price Could Fall to Around Rs225 If Levy Is Reduced, Says Hafiz Naeem",
+     "No relief, no more talks: Hafiz Naeem warns government"
     ]
    },
    {
@@ -311,127 +287,116 @@
     "traffic": "500+",
     "news": [
      "Chris Brown given suspended sentence in London for affray",
-     "Chris Brown sentencing latest: Singer gives thumbs up and blows kiss to fans after avoiding jail term over London nightclub attack"
+     "CCTV shows Chris Brown attacking man with bottle at nightclub"
     ]
    },
    {
     "q": "constitution hill",
     "traffic": "500+",
     "news": [
-     "'We've got to win a good race for them' - Nicky Henderson vows to deliver for Constitution Hill fans after sampling the San Siro good life",
-     "Will Constitution Hill win in Italy on Sunday in San Siro's Gran Premio del Jockey Club?"
-    ]
-   },
-   {
-    "q": "stevie wonder",
-    "traffic": "200+",
-    "news": [
-     "Stevie Wonder files lawsuit to evict reported ex-fiancée living rent-free at his L.A. property",
-     "Stevie Wonder Files Lawsuit to Evict Woman Living on His Property Rent-Free for 38 Years"
+     "Social media gets it wrong about Constitution Hill - why on earth should such a horse be retired?",
+     "Henry De Bromhead's Lirakali claims maiden win at Wexford"
     ]
    }
   ],
   "IN": [
    {
-    "q": "രശ്മിക മന്ദാന",
-    "traffic": "200+",
+    "q": "ऋषभ पंत",
+    "traffic": "10000+",
     "news": [
-     "ആളുകൾ ഞങ്ങളെ ആക്രമിച്ച ആ രീതി എന്നെ ശരിക്കും ഞെട്ടിച്ചു, എന്നോട് ഓടി രക്ഷപ്പെടാൻ പറയുന്നവരോട്: മറുപടിയുമായി രശ്മിക മന്ദാന",
-     "'ലവലേശം ബഹുമാനമോ ദയയോ ഇല്ലാതെ പറയട്ടെ...'; രൂക്ഷ പ്രതികരണവുമായി വിജയ് ദേവരകൊണ്ട"
+     "IND A vs NZ A: बुमराह और पंत की होगी भारतीय टीम में वापसी? न्यूजीलैंड ए के खिलाफ खेलेंगे मैच!",
+     "जसप्रीत बुमराह-ऋषभ पंत की वापसी? खेल सकते हैं न्यूजीलैंड ए के खिलाफ तीसरा अनौपचारिक टेस्ट मैच"
     ]
    },
    {
-    "q": "జియో",
+    "q": "isl match today",
+    "traffic": "2000+",
+    "news": [
+     "Kerala Blasters FC and Mumbai City FC Play Out a Goalless Thriller in Kochi",
+     "ISL 2026/27: Last minute Sanathoi winner sees Punjab edge Churchill in thriller; Blasters, Mumbai draw 0-0"
+    ]
+   },
+   {
+    "q": "ಪಡಿತರ",
+    "traffic": "1000+",
+    "news": [
+     "BPL ಕಾರ್ಡ್‌ದಾರರಿಗೆ ಗುಡ್‌ ನ್ಯೂಸ್‌; ರೇಷನ್ ಮಾಲೀಕರ ದಾದಾಗಿರಿಗೆ ಬ್ರೇಕ್; ಕಾರ್ಡ್‌ದಾರರಿಗೆ ಬಿಗ್ ಪವರ್!",
+     "ಆಳಂದದಲ್ಲಿ ಮತ್ತೆ ಪಡಿತರ ಅಕ್ಕಿ ಅಕ್ರಮ ಸಾಗಣೆ ಶಂಕೆ: 84,500 ಮೌಲ್ಯದ ಅಕ್ಕಿ, ಟಂಟಂ ಜಪ್ತಿ"
+    ]
+   },
+   {
+    "q": "alex de minaur",
     "traffic": "500+",
     "news": [
-     "JIO IPO Allotment Status: జియో ఐపీఓ అలాట్‌మెంట్ నేడే.. మీకు షేర్లు వచ్చాయా? ఇలా చెక్ చేసుకోండి? నేటి జీఎంపీ ఎంతంటే?",
-     "IPO మార్కెట్ లో \"ధురంధర్\" జియో ప్లేట్ ఫామ్స్"
+     "Machac vs. de Minaur Prediction at the Erste Bank Open – Monday, October 26",
+     "Alex de Minaur vs Tomas Machac ATP Vienna Tips, Prediction & Live Stream - Can Demon survive dangerous Machac?"
     ]
    },
    {
-    "q": "ಬರ",
-    "traffic": "200+",
-    "news": [
-     "Kalaburagi | ರೈತರ ವಿವಿಧ ಬೇಡಿಕೆಗಳ ಈಡೇರಿಕೆಗೆ ಆಗ್ರಹಿಸಿ ಕರ್ನಾಟಕ ಪ್ರಾಂತ ರೈತ ಸಂಘದಿಂದ ಪ್ರತಿಭಟನೆ",
-     "226 taluks, Rs 62,000 crore in losses: Understanding Karnataka’s drought relief ask"
-    ]
-   },
-   {
-    "q": "ഹനുമാന് കുരങ്ങ്",
-    "traffic": "200+",
-    "news": [
-     "പ്രസവത്തിന് പിന്നാലെ തളളക്കുരങ്ങ് മരിച്ചു; കുരങ്ങിൻകുഞ്ഞിനു തണലായി വെറ്ററിനറി സംഘം",
-     "പ്രസവത്തിന് പിന്നാലെ അമ്മക്കുരങ്ങ് ചത്തു; തിരുവനന്തപുരം മൃഗശാലയിൽ ഹനുമാൻ കുരങ്ങിന്റെ കുഞ്ഞിന് സംരക്ഷണവുമായി ദൗത്യസംഘം"
-    ]
-   },
-   {
-    "q": "valentin vacherot",
-    "traffic": "200+",
-    "news": [
-     "Stricker vs. Ruud Prediction at the Swiss Indoors Basel – Monday, October 26",
-     "ATP Basel Day 1 Predictions Including Dominic Stricker vs Casper Ruud"
-    ]
-   },
-   {
-    "q": "ipad mini",
+    "q": "सार्वजनिक अवकाश",
     "traffic": "500+",
     "news": [
-     "Apple gives iPad mini its biggest update ever",
-     "Apple updates the iPad Mini with a larger OLED display"
+     "मेरठ के भैंसा में महर्षि वाल्मीकि जयंती मनाई गई: बड़े हर्षोल्लास से मनाई गई, रोहित बालाजी और अनुज धामा रहे ...",
+     "वाल्मीकि जयंती 2026: कैसे 'मरा-मरा' जपते-जपते राम नाम बन गया? पढ़ें डाकू रत्नाकर के महर्षि वाल्मीकि बनने की"
     ]
    },
    {
-    "q": "अभिषेक बच्चन",
+    "q": "डिजायर",
     "traffic": "500+",
     "news": [
-     "बम की धमकी के बाद ‘जलसा’ की सुरक्षा बढ़ी: तबीयत खराब होने के बावजूद फैंस से मिलने पहुंचे अमिताभ बच्चन; पीछे...",
-     "'और आराम चाहिए', स्वास्थ्य समस्याओं से जूझ रहे अमिताभ बच्चन, शेयर किया हेल्थ अपडेट"
+     "2023 Maruti Swift Dzire Finance Available कार पुणे में ₹7.21 लाख में",
+     "25 से 36 का माइलेज, 5-स्टार रेटिंग और कीमत 6 लाख से शुरू, इस दीवाली घर लाने के लिए बेस्ट है ये कार"
     ]
    },
    {
-    "q": "వధువు",
+    "q": "slk",
     "traffic": "500+",
+    "news": []
+   },
+   {
+    "q": "నజ్రియా నజీమ్",
+    "traffic": "200+",
     "news": [
-     "UP: గదిలోకి వెళ్లిన క్షణాల్లో నవ వధువు మృతి.. ఆ ఐదు సెకన్లలో ఏం జరిగింది?",
-     "పెళ్లైన నాలుగు నెలలకే హోటల్‌ గదిలో అనంతలోకాలకు : భర్త పనేనా?"
+     "Glimpse of Scene: డీఎస్పీ ఇన్బరాజ్‌గా సూర్య.. ‘సీన్‌’ గ్లింప్స్‌ రిలీజ్‌",
+     "Suriya Speech At Dubai: నా భార్య జ్యోతిక వల్లే ఈ స్థాయిలో ఉన్నా: సూర్య"
     ]
    }
   ]
  },
  "google_news_uk": {
   "entertainment": [
-   "Chris Brown given suspended sentence over London nightclub attack - live updates - BBC",
-   "Eric Bauza, award-winning Looney Tunes voice actor, dies aged 46 - The Guardian",
-   "Strictly announces surprise format change as fourth couple exits - The Independent",
+   "Chris Brown given suspended eight-month prison sentence over London nightclub attack - BBC",
    "Jamie Oliver's wife reveals life-changing diagnosis after '45 year' struggle - The Sun",
-   "Elon Musk’s AI-generated The Odyssey draws ridicule after first episode released - The Independent",
-   "Adultery review – a risible tale of middle-aged car sex, rat poo and rickety furniture - The Guardian",
-   "BBC This City Is Ours full list of filming locations across Merseyside - Liverpool Echo",
-   "‘I laughed so hard my Tampax fell out’: Michael Gambon’s pranks revealed by the stars he cracked up - The Guardian"
+   "Strictly announces surprise format change as fourth couple exits - The Independent",
+   "Eric Bauza, award-winning Looney Tunes voice actor, dies aged 46 - The Guardian",
+   "BBC's cosy crime drama Return to Paradise drops exciting first-look pics of s3 ahead of debut - Digital Spy",
+   "TV star unrecognisable as Harry Potter's Lord Voldemort - can you guess who? - The Sun",
+   "Celebrity Traitors accused of sexism as four women are banished from show - LBC",
+   "What did Meghan know about her father Thomas Markle — and what happens next? - The Times"
   ],
   "sports": [
    "Manchester United reaction LIVE: Michael Carrick future under scrutiny as Man Utd lose again - BBC",
    "Ballon d'Or: Harry Kane favourite to win prestigious award after goal-filled season - Sky News",
-   "FPL notes: Wirtz injury, Isak scores again + Brighton blanks - Fantasy Football Scout",
-   "Winners and losers from F1's 2026 United States Grand Prix - The Race",
+   "Liverpool 2-0 Brighton: Watch extended highlights and full match - Liverpool FC",
    "Liverpool injury update: Wirtz, Szoboszlai, Munoz latest return dates - London Evening Standard",
-   "Man United board holds crisis talks on Michael Carrick’s future - The Times",
    "NFL: Seattle Seahawks hand Kansas City Chiefs first season loss as Jaxon Smith-Njigba stars and Patrick Mahomes struggles - Sky Sports",
-   "‘We’re not doing great’: Gilgeous-Alexander in tears after Williams suffers gruesome leg injury - The Guardian"
+   "Gary Neville: Some Man United players 'aren't that professional' - ESPN",
+   "‘We’re not doing great’: Gilgeous-Alexander in tears after Williams suffers gruesome leg injury - The Guardian",
+   "Steve Borthwick and England's selection dilemmas amid World Cup countdown - BBC"
   ],
   "technology": [
    "After day-one screen failures, the iPhone Duo is facing more durability questions - Android Authority",
-   "Gurman: Apple to unveil OLED MacBook Pro with touchscreen in days, alongside M6 iMac - Notebookcheck",
-   "This is Samsung's next foldable and it's launching in just a few days - GSMArena.com news - GSMArena.com",
-   "New type of Galaxy Buds reportedly launching worldwide - PhoneArena",
    "Apple updates the iPad Mini with a larger OLED display - The Verge",
-   "\"Tomb Raider: Legacy of Atlantis\" 30th Anniversary Trailer - Dark Horizons",
-   "Original Xbox games now appearing in Xbox profile achievement history - TrueAchievements",
-   "Sunday Preview – Orlocks rule the roads of Necromunda - Warhammer Community"
+   "Gurman: Apple's Three-Day Announcement Run Could Start Today - MacRumors",
+   "Tomb Raider's PS5 Remake Tipped to Be Just as Long as the PS1 Classic - Push Square",
+   "This is Samsung's next foldable and it's launching in just a few days - GSMArena.com news - GSMArena.com",
+   "Despite initial player concerns, Capcom feels good about Onimusha: Way of the Sword's difficulty, and says it has the data to prove it got i",
+   "Sunday Preview – Orlocks rule the roads of Necromunda - Warhammer Community",
+   "Phantom Blade Zero Preload Time & Date Revealed; Clocks in at 145 GB as PC Requirements Listed - MP1st"
   ],
   "science": [
-   "This is what the mysterious Denisovans looked like - Nature",
    "Supercomputer reveals first two billion years of ‘cosmic web’ - The Times",
+   "This is what the mysterious Denisovans looked like - Nature",
    "Exercise helps woman's confidence 'massively' after partying life - BBC",
    "Japan’s mission to Mars’s moons takes off - The Economist",
    "There's a really weird-looking hole on the moon and no one knows why - Metro.co.uk",
@@ -535,48 +500,26 @@
  ],
  "music_charts": {
   "gb": {
-   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
+   "top5": [
+    "Babydoll by Jamie Miller",
+    "Housewife by Tate McRae",
+    "Great Expectation by SIENNA SPIRO",
+    "Stop The Wedding! by Ashe",
+    "Man I Need by Olivia Dean"
+   ],
+   "new_in_top25": [
+    "Babydoll by Jamie Miller & Antonio Cipriano",
+    "Ain't In LA by ADÉLA"
+   ]
   },
   "us": {
-   "top5": [
-    "Housewife by Tate McRae",
-    "BbY WOW by KAROL G, Judeline & rusowsky",
-    "Choosin' Texas by Ella Langley",
-    "Lies (feat. Lana Del Rey) by Zach Bryan & Lana Del Rey",
-    "Solar Eclipse by Drake & Don Toliver"
-   ],
-   "new_in_top25": [
-    "the cure by Olivia Rodrigo",
-    "Marvins Room by Drake"
-   ]
+   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
   },
   "es": {
-   "top5": [
-    "BbY WOW by KAROL G, Judeline & rusowsky",
-    "RETRICA by Lucho RK",
-    "CONTIGO by Lucho RK",
-    "DOGGY by La Pantera & Quevedo",
-    "LA GRACIOSA by Quevedo & Elvis Crespo"
-   ],
-   "new_in_top25": [
-    "FACE ID by Lucho RK"
-   ]
+   "error": "Expecting value: line 1 column 1 (char 0)"
   },
   "br": {
-   "top5": [
-    "Pós (Ao Vivo) by Felipe e Rodrigo",
-    "Housewife by Tate McRae",
-    "Nicole Kidman by ADÉLA",
-    "Vermelho (Ao Vivo) by Fafá de Belém",
-    "Postinho de Gasolina by João Gustavo e Murilo & Grelo"
-   ],
-   "new_in_top25": [
-    "Vermelho (Ao Vivo) by Fafá de Belém",
-    "Rap do Silva - Lula by Bob Rum",
-    "Lula Lá no Funk (O Pai Tá On) by Festa do Lula & DJ Fábio ACM",
-    "Tropa do Capitão by Flávio Bolsonaro",
-    "ELE INVESTIU EM VC by MC Carol"
-   ]
+   "error": "HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed o"
   },
   "mx": {
    "top5": [
@@ -661,627 +604,630 @@
   "albums_gb": [
    "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
    "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy"
+  ],
+  "apps_gb": [
+   "Claude by Anthropic"
   ]
  },
  "bluesky": [
   {
    "topic": "Spooky month stream schedules",
    "category": "entertainment",
-   "posts": 27960,
+   "posts": 28133,
    "status": "cooling"
   },
   {
    "topic": "EA shuts down BioWare",
    "category": "entertainment",
-   "posts": 10468,
+   "posts": 10521,
    "status": "cooling"
   },
   {
-   "topic": "'You Can See Everything' premieres",
-   "category": "entertainment",
-   "posts": 10301,
+   "topic": "Storm Boelo hits the UK",
+   "category": "other",
+   "posts": 3875,
    "status": "cooling"
   },
   {
-   "topic": "Claude Code leaders leave Anthropic",
+   "topic": "Anthropic files for IPO",
    "category": "science-tech",
-   "posts": 2412,
-   "status": "trending"
+   "posts": 2623,
+   "status": "cooling"
   },
   {
    "topic": "Marissa Mayer uses AI to describe daughter",
    "category": "science-tech",
-   "posts": 1594,
-   "status": "cooling"
-  },
-  {
-   "topic": "Clocks go back an hour in Europe",
-   "category": "other",
-   "posts": 1325,
+   "posts": 1723,
    "status": "cooling"
   },
   {
    "topic": "Study finds AI beats human peer review",
    "category": "science-tech",
-   "posts": 590,
+   "posts": 630,
    "status": "trending"
   },
   {
    "topic": "Local fights over AI data centers",
    "category": "science-tech",
-   "posts": 543,
-   "status": "saturating"
+   "posts": 596,
+   "status": "cooling"
+  },
+  {
+   "topic": "'Kinds of Bluesky users' meme",
+   "category": "culture",
+   "posts": 403,
+   "status": "trending"
   }
  ],
  "apify": {
   "skipped": "no APIFY_TOKEN"
  },
  "extra_sources_notes": [
-  "apple apps gb: ReadTimeout: HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed out. (read timeout=15"
+  "apple albums us: ReadTimeout: HTTPSConnectionPool(host='rss.marketingtools.apple.com', port=443): Read timed out. (read timeout=15"
  ],
  "youtube_charts": {
   "GB": [
    {
     "title": "LISA - Tarantino (Official Music Video)",
     "channel": "LISAOfficialVEVO",
-    "views": 58633233,
-    "views_per_hour": 713928
+    "views": 58803579,
+    "views_per_hour": 707346
    },
    {
     "title": "Ramayana: Mangal Rang (Song) | Namit M, Nitesh T | AR Rahman, Arijit Singh, Shreya Ghoshal, Kumar V",
     "channel": "T-Series",
-    "views": 19394490,
-    "views_per_hour": 560096
+    "views": 19642019,
+    "views_per_hour": 551245
    },
    {
     "title": "Avengers: Doomsday | In Theaters December 18",
     "channel": "Marvel Entertainment",
-    "views": 12357964,
-    "views_per_hour": 324104
-   },
-   {
-    "title": "LYON vs. GEN | WORLDS 2026 | Swiss Stage Day 3",
-    "channel": "LoL Esports",
-    "views": 2165732,
-    "views_per_hour": 159844
+    "views": 12494284,
+    "views_per_hour": 319264
    },
    {
     "title": "RIIZE 라이즈 'Insomnia' MV",
     "channel": "SMTOWN",
-    "views": 3574277,
-    "views_per_hour": 154540
+    "views": 4075318,
+    "views_per_hour": 168866
+   },
+   {
+    "title": "LYON vs. GEN | WORLDS 2026 | Swiss Stage Day 3",
+    "channel": "LoL Esports",
+    "views": 2169481,
+    "views_per_hour": 149064
    },
    {
     "title": "AVENGERS: DOOMSDAY New Trailer (2026) Extended",
     "channel": "MovieGasm‍․com",
-    "views": 3836690,
-    "views_per_hour": 95412
+    "views": 3906743,
+    "views_per_hour": 94785
    },
    {
     "title": "Fat Chance We Survive This Game...",
     "channel": "SMii7Yplus",
-    "views": 1579382,
-    "views_per_hour": 88349
+    "views": 1632597,
+    "views_per_hour": 86465
    },
    {
     "title": "CARTIER : OFFICIAL VIDEO | AMRIT MAAN | DR ZEUS | LATEST PUNJABI SONGS 2026 ",
     "channel": "Amrit Maan",
-    "views": 1683887,
-    "views_per_hour": 50066
+    "views": 1700387,
+    "views_per_hour": 49090
    },
    {
     "title": "AVENGERS 5: DOOMSDAY Official “Steve Rogers Meets New Avengers” Teaser Trailer (2026)",
     "channel": "KinoCheck.com",
-    "views": 2971813,
-    "views_per_hour": 48711
+    "views": 2986234,
+    "views_per_hour": 48154
    },
    {
     "title": "EXCLUSIVE PREVIEW ⚾ MLB Crosses Over Into Avengers: Doomsday 🤯",
     "channel": "MLB",
-    "views": 2713474,
-    "views_per_hour": 44303
+    "views": 2720787,
+    "views_per_hour": 43706
    },
    {
     "title": "Calling All Villains - Official Trailer",
     "channel": "ZAMination",
-    "views": 1706417,
-    "views_per_hour": 36209
+    "views": 1728566,
+    "views_per_hour": 35913
    },
    {
     "title": "Hermitcraft 11: Episode 30 - FORBIDDEN ANGLE",
     "channel": "Mumbo Jumbo",
-    "views": 624181,
-    "views_per_hour": 31008
+    "views": 641313,
+    "views_per_hour": 30344
    },
    {
     "title": "Boys vs Girls: POOR to RICH Chunk Battle!",
     "channel": "Cash",
-    "views": 698018,
-    "views_per_hour": 30186
+    "views": 717704,
+    "views_per_hour": 29744
    },
    {
     "title": "I Made Unlimited Power - Sky Factory Season 7 EP 7",
     "channel": "SSundeePlus",
-    "views": 578448,
-    "views_per_hour": 28207
+    "views": 591405,
+    "views_per_hour": 27491
    },
    {
     "title": "AVENGERS DOOMSDAY SPECIAL LOOK BREAKDOWN! Easter Eggs & Details You Missed!",
     "channel": "New Rockstars",
-    "views": 924862,
-    "views_per_hour": 22367
+    "views": 935121,
+    "views_per_hour": 22078
    }
   ],
   "GB-gaming": [
    {
     "title": "LYON vs. GEN | WORLDS 2026 | Swiss Stage Day 3",
     "channel": "LoL Esports",
-    "views": 2165732,
-    "views_per_hour": 159844
+    "views": 2169481,
+    "views_per_hour": 149064
    },
    {
     "title": "WATCHPARTY | 2026 PMGO S2 Main Event | Grand Finals Day 2 |",
     "channel": "Cr7 HORAA",
-    "views": 2350381,
-    "views_per_hour": 125953
+    "views": 2352183,
+    "views_per_hour": 119608
    },
    {
     "title": "Fat Chance We Survive This Game...",
     "channel": "SMii7Yplus",
-    "views": 1579382,
-    "views_per_hour": 88349
+    "views": 1632597,
+    "views_per_hour": 86465
    },
    {
     "title": "when the trapper learns how to PVP...",
     "channel": "JudeHigh",
-    "views": 1175380,
-    "views_per_hour": 51906
-   },
-   {
-    "title": "🔴 GRIEF 80%, 79% // 45%+ x27 🔴 21-100% 🔴 Stream 12 :3",
-    "channel": "Zoink",
-    "views": 699099,
-    "views_per_hour": 50534
+    "views": 1212973,
+    "views_per_hour": 51290
    },
    {
     "title": "Blizzard WISHES they made this..",
     "channel": "Asmongold TV  ",
-    "views": 992893,
-    "views_per_hour": 49968
+    "views": 1013153,
+    "views_per_hour": 48533
+   },
+   {
+    "title": "🔴 GRIEF 80%, 79% // 45%+ x27 🔴 21-100% 🔴 Stream 12 :3",
+    "channel": "Zoink",
+    "views": 701761,
+    "views_per_hour": 47291
    }
   ],
   "GB-music": [
    {
     "title": "LISA - Tarantino (Official Music Video)",
     "channel": "LISAOfficialVEVO",
-    "views": 58633233,
-    "views_per_hour": 713928
+    "views": 58803579,
+    "views_per_hour": 707346
    },
    {
     "title": "BABYMONSTER - 'DESERVE' M/V",
     "channel": "BABYMONSTER",
-    "views": 41280050,
-    "views_per_hour": 502636
+    "views": 42032049,
+    "views_per_hour": 505606
    },
    {
     "title": "ATEEZ(에이티즈) - 'Drip' Official MV",
     "channel": "KQ ENTERTAINMENT",
-    "views": 14834123,
-    "views_per_hour": 180620
+    "views": 14920322,
+    "views_per_hour": 179473
    },
    {
     "title": "Veezha Veera Lyrical (Tamil) | OM | Dhanush | Mammootty | Sai Pallavi | Rajkumar | Sai Abhyankkar",
     "channel": "Divo Music",
-    "views": 18449818,
-    "views_per_hour": 109414
+    "views": 18565886,
+    "views_per_hour": 109450
    },
    {
     "title": "KAALI HOODIE (MUSIC VIDEO) SIDHU MOOSE WALA FT BOHEMIA | THE KIDD",
     "channel": "Sidhu Moose Wala",
-    "views": 24561803,
-    "views_per_hour": 99793
+    "views": 24631244,
+    "views_per_hour": 99668
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 21673052,
-    "views_per_hour": 85284
+    "views": 21700481,
+    "views_per_hour": 85056
    }
   ],
   "GB-sport": [
    {
     "title": "My son wanted to play basketball but his two year old height wasn’t tall enough, so we changed plans",
     "channel": "BullyJuice",
-    "views": 151692254,
-    "views_per_hour": 1313629
+    "views": 153114528,
+    "views_per_hour": 1314506
    },
    {
     "title": "FC BARCELONA 1 - 2 REAL MADRID | RESUMEN LALIGA EA SPORTS",
     "channel": "LALIGA EA SPORTS",
-    "views": 10287184,
-    "views_per_hour": 646828
+    "views": 10534080,
+    "views_per_hour": 622985
    },
    {
     "title": "iSHOWSPEED vs DUDE PERFECT GAUNTLET!",
     "channel": "IShowSpeed",
-    "views": 27615183,
-    "views_per_hour": 287290
+    "views": 27768081,
+    "views_per_hour": 285892
    },
    {
     "title": "These Siblings Really Love Each Other 🤚😂",
     "channel": "Daily Tales",
-    "views": 11825472,
-    "views_per_hour": 129768
+    "views": 11929822,
+    "views_per_hour": 129485
    },
    {
     "title": "brain training.. 🧠",
     "channel": "Cam 23",
-    "views": 4325337,
-    "views_per_hour": 115411
+    "views": 4349424,
+    "views_per_hour": 113023
    },
    {
     "title": "IM TOO GOOD AT DEFENDING💪🏻 #povfootball #football #soccer #povsoccer #defender #funnyshorts",
     "channel": "JDBFOOTBALL",
-    "views": 19975905,
-    "views_per_hour": 104894
+    "views": 20033416,
+    "views_per_hour": 104644
    }
   ],
   "GB-entertainment": [
    {
     "title": "Lisa always makes sure to keep her distance from the VS Angels!!💖💖 #blackpink",
     "channel": "HEILWIG OFFICIAL",
-    "views": 169578195,
-    "views_per_hour": 2343233
+    "views": 172114606,
+    "views_per_hour": 2345707
    },
    {
     "title": "He literally has his life in his hands💀💔",
     "channel": "MainStream Media",
-    "views": 42440322,
-    "views_per_hour": 632262
+    "views": 42719051,
+    "views_per_hour": 627026
    },
    {
     "title": "Who Can Escape Without getting Crushed 💀",
     "channel": "Hero DW",
-    "views": 117335680,
-    "views_per_hour": 565676
+    "views": 117554734,
+    "views_per_hour": 564000
    },
    {
     "title": "When Words Aren’t Heard, Connection Speaks Louder 👇",
     "channel": "mdscae",
-    "views": 20448198,
-    "views_per_hour": 415078
+    "views": 20741895,
+    "views_per_hour": 412622
    },
    {
     "title": "Let’s choose our cats name! 🐈‍⬛😱 #cat #kitten #pet #funnycats",
     "channel": "Jasmin and James",
-    "views": 11351064,
-    "views_per_hour": 366605
+    "views": 11667476,
+    "views_per_hour": 364978
    },
    {
     "title": "What if this snake is actually poisonous ☠️ #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 53122162,
-    "views_per_hour": 365358
+    "views": 53232544,
+    "views_per_hour": 363604
    }
   ],
   "GB-tech": [
    {
     "title": "Самый неудачный iPhone в истории",
     "channel": "Новостной Гусь",
-    "views": 5582302,
-    "views_per_hour": 264287
+    "views": 5809683,
+    "views_per_hour": 262560
    },
    {
     "title": "iPhone Duo Durability: Destroyed",
     "channel": "JerryRigEverything",
-    "views": 10823938,
-    "views_per_hour": 186110
+    "views": 10930982,
+    "views_per_hour": 184758
    },
    {
     "title": "He peeled the nano-texture off his iPhone duo??",
     "channel": "CarterPCs",
-    "views": 11034893,
-    "views_per_hour": 133820
+    "views": 11074533,
+    "views_per_hour": 132683
    },
    {
     "title": "iPhone Duo Vs iPhone 18",
     "channel": "ZHC",
-    "views": 9531475,
-    "views_per_hour": 102276
+    "views": 9622038,
+    "views_per_hour": 102146
    },
    {
     "title": "HOW TO MAKE A HOMEMADE PROJECTOR 😱😱",
     "channel": "Speed McQueen",
-    "views": 23940700,
-    "views_per_hour": 100596
+    "views": 23962944,
+    "views_per_hour": 100266
    },
    {
     "title": "iPhone Duo Review: First Generation Fun!",
     "channel": "Marques Brownlee",
-    "views": 12081190,
-    "views_per_hour": 98933
+    "views": 12101949,
+    "views_per_hour": 98294
    }
   ],
   "US": [
    {
     "title": "LISA - Tarantino (Official Music Video)",
     "channel": "LISAOfficialVEVO",
-    "views": 58633233,
-    "views_per_hour": 713928
+    "views": 58803579,
+    "views_per_hour": 707346
    },
    {
     "title": "Ramayana: Mangal Rang (Song) | Namit M, Nitesh T | AR Rahman, Arijit Singh, Shreya Ghoshal, Kumar V",
     "channel": "T-Series",
-    "views": 19394490,
-    "views_per_hour": 560096
+    "views": 19642019,
+    "views_per_hour": 551245
    },
    {
     "title": "Avengers: Doomsday | In Theaters December 18",
     "channel": "Marvel Entertainment",
-    "views": 12357964,
-    "views_per_hour": 324104
+    "views": 12494284,
+    "views_per_hour": 319264
    },
    {
     "title": "ATEEZ(에이티즈) - 'Drip' Official MV",
     "channel": "KQ ENTERTAINMENT",
-    "views": 14834123,
-    "views_per_hour": 180620
+    "views": 14920322,
+    "views_per_hour": 179473
    },
    {
     "title": "LYON vs. GEN | WORLDS 2026 | Swiss Stage Day 3",
     "channel": "LoL Esports",
-    "views": 2165732,
-    "views_per_hour": 159844
+    "views": 2169481,
+    "views_per_hour": 149064
    },
    {
     "title": "AVENGERS: DOOMSDAY New Trailer (2026) Extended",
     "channel": "MovieGasm‍․com",
-    "views": 3836690,
-    "views_per_hour": 95412
+    "views": 3906743,
+    "views_per_hour": 94785
    },
    {
     "title": "Fat Chance We Survive This Game...",
     "channel": "SMii7Yplus",
-    "views": 1579382,
-    "views_per_hour": 88349
+    "views": 1632597,
+    "views_per_hour": 86465
    },
    {
     "title": "when the trapper learns how to PVP...",
     "channel": "JudeHigh",
-    "views": 1175380,
-    "views_per_hour": 51906
+    "views": 1212973,
+    "views_per_hour": 51290
    },
    {
     "title": "AVENGERS 5: DOOMSDAY Official “Steve Rogers Meets New Avengers” Teaser Trailer (2026)",
     "channel": "KinoCheck.com",
-    "views": 2971813,
-    "views_per_hour": 48711
+    "views": 2986234,
+    "views_per_hour": 48154
    },
    {
     "title": "EXCLUSIVE PREVIEW ⚾ MLB Crosses Over Into Avengers: Doomsday 🤯",
     "channel": "MLB",
-    "views": 2713474,
-    "views_per_hour": 44303
+    "views": 2720787,
+    "views_per_hour": 43706
    },
    {
     "title": "Calling All Villains - Official Trailer",
     "channel": "ZAMination",
-    "views": 1706417,
-    "views_per_hour": 36209
+    "views": 1728566,
+    "views_per_hour": 35913
    },
    {
     "title": "Hermitcraft 11: Episode 30 - FORBIDDEN ANGLE",
     "channel": "Mumbo Jumbo",
-    "views": 624181,
-    "views_per_hour": 31008
+    "views": 641313,
+    "views_per_hour": 30344
    },
    {
     "title": "There Was A Creature In This Cave…",
     "channel": "CaseOh",
-    "views": 496590,
-    "views_per_hour": 30904
+    "views": 515607,
+    "views_per_hour": 30198
    },
    {
     "title": "Boys vs Girls: POOR to RICH Chunk Battle!",
     "channel": "Cash",
-    "views": 698018,
-    "views_per_hour": 30186
+    "views": 717704,
+    "views_per_hour": 29744
    },
    {
     "title": "I Made Unlimited Power - Sky Factory Season 7 EP 7",
     "channel": "SSundeePlus",
-    "views": 578448,
-    "views_per_hour": 28207
+    "views": 591405,
+    "views_per_hour": 27491
    }
   ],
   "US-gaming": [
    {
     "title": "LYON vs. GEN | WORLDS 2026 | Swiss Stage Day 3",
     "channel": "LoL Esports",
-    "views": 2165732,
-    "views_per_hour": 159844
+    "views": 2169481,
+    "views_per_hour": 149064
    },
    {
     "title": "INSANE COMBOS FOR HIGH SCORE",
     "channel": "Vampyro111",
-    "views": 1459148,
-    "views_per_hour": 118305
+    "views": 1459190,
+    "views_per_hour": 109395
    },
    {
     "title": "Fat Chance We Survive This Game...",
     "channel": "SMii7Yplus",
-    "views": 1579382,
-    "views_per_hour": 88349
+    "views": 1632597,
+    "views_per_hour": 86465
    },
    {
     "title": "when the trapper learns how to PVP...",
     "channel": "JudeHigh",
-    "views": 1175380,
-    "views_per_hour": 51906
+    "views": 1212973,
+    "views_per_hour": 51290
    },
    {
     "title": "Blizzard WISHES they made this..",
     "channel": "Asmongold TV  ",
-    "views": 992893,
-    "views_per_hour": 49968
+    "views": 1013153,
+    "views_per_hour": 48533
    },
    {
     "title": "🔴LIVE | PPARTY GAMES ALL NIGHT | TRAILER PARK | H20 DELIRIOUS X GIMMICK X HABIBI X GINGY |#BUNGULATE",
     "channel": "TheBurntPeanut",
-    "views": 1224297,
-    "views_per_hour": 40056
+    "views": 1228071,
+    "views_per_hour": 38900
    }
   ],
   "US-music": [
    {
     "title": "LISA - Tarantino (Official Music Video)",
     "channel": "LISAOfficialVEVO",
-    "views": 58633233,
-    "views_per_hour": 713928
+    "views": 58803579,
+    "views_per_hour": 707346
    },
    {
     "title": "ATEEZ(에이티즈) - 'Drip' Official MV",
     "channel": "KQ ENTERTAINMENT",
-    "views": 14834123,
-    "views_per_hour": 180620
+    "views": 14920322,
+    "views_per_hour": 179473
    },
    {
     "title": "Olivia Rodrigo - expectations (feat. Chappell Roan) (Official Music Video)",
     "channel": "OliviaRodrigoVEVO",
-    "views": 21673052,
-    "views_per_hour": 85284
+    "views": 21700481,
+    "views_per_hour": 85056
    },
    {
     "title": "Bulin 47 X Kevin Wai - Dame Hombro (Video Oficial)",
     "channel": "Bulin 47 Oficial",
-    "views": 26702796,
-    "views_per_hour": 62081
+    "views": 26760293,
+    "views_per_hour": 62070
    },
    {
     "title": "Tate McRae - Housewife (Official Video)",
     "channel": "TateMcRaeVEVO",
-    "views": 15487304,
-    "views_per_hour": 60943
+    "views": 15534996,
+    "views_per_hour": 60890
    },
    {
     "title": "Ozuna x Jory Boy x Ñengo Flow - Vulnerable (Video Oficial)",
     "channel": "Ozuna",
-    "views": 5277961,
-    "views_per_hour": 44680
+    "views": 5289437,
+    "views_per_hour": 44400
    }
   ],
   "US-sport": [
    {
     "title": "My son wanted to play basketball but his two year old height wasn’t tall enough, so we changed plans",
     "channel": "BullyJuice",
-    "views": 151692254,
-    "views_per_hour": 1313629
+    "views": 153114528,
+    "views_per_hour": 1314506
    },
    {
     "title": "iSHOWSPEED vs DUDE PERFECT GAUNTLET!",
     "channel": "IShowSpeed",
-    "views": 27615183,
-    "views_per_hour": 287290
+    "views": 27768081,
+    "views_per_hour": 285892
    },
    {
     "title": "These Siblings Really Love Each Other 🤚😂",
     "channel": "Daily Tales",
-    "views": 11825472,
-    "views_per_hour": 129768
+    "views": 11929822,
+    "views_per_hour": 129485
    },
    {
     "title": "brain training.. 🧠",
     "channel": "Cam 23",
-    "views": 4325337,
-    "views_per_hour": 115411
+    "views": 4349424,
+    "views_per_hour": 113023
    },
    {
     "title": "Do they hit 180° 🤔 #olympics #gymnastics #sports #olympic #worldgymnastics",
     "channel": "Ian Gunther",
-    "views": 7685558,
-    "views_per_hour": 102672
+    "views": 7785908,
+    "views_per_hour": 102635
    },
    {
     "title": "Bro Was Not Leaving Empty Handed ☠️🔥 #nba #basketball #shorts",
     "channel": "BZ clips",
-    "views": 17993298,
-    "views_per_hour": 89488
+    "views": 18028944,
+    "views_per_hour": 89219
    }
   ],
   "US-entertainment": [
    {
     "title": "Lisa always makes sure to keep her distance from the VS Angels!!💖💖 #blackpink",
     "channel": "HEILWIG OFFICIAL",
-    "views": 169578885,
-    "views_per_hour": 2343243
+    "views": 172114606,
+    "views_per_hour": 2345707
    },
    {
     "title": "He literally has his life in his hands💀💔",
     "channel": "MainStream Media",
-    "views": 42440322,
-    "views_per_hour": 632262
+    "views": 42719051,
+    "views_per_hour": 627026
    },
    {
     "title": "When Words Aren’t Heard, Connection Speaks Louder 👇",
     "channel": "mdscae",
-    "views": 20448198,
-    "views_per_hour": 415078
+    "views": 20741895,
+    "views_per_hour": 412622
    },
    {
     "title": "What if this snake is actually poisonous ☠️ #ishowspeed",
     "channel": "Nexxo Recaps",
-    "views": 53122162,
-    "views_per_hour": 365358
+    "views": 53232544,
+    "views_per_hour": 363604
    },
    {
     "title": "He Should’ve Listened to Mom 🐝😭",
     "channel": "Linc Avenue",
-    "views": 55856560,
-    "views_per_hour": 307991
+    "views": 57009025,
+    "views_per_hour": 312613
    },
    {
     "title": "The Last Doomsday Bunker 😟 (fiction)",
     "channel": "Zack D. Films",
-    "views": 14298252,
-    "views_per_hour": 300200
+    "views": 14382774,
+    "views_per_hour": 295735
    }
   ],
   "US-tech": [
    {
     "title": "iPhone Duo Durability: Destroyed",
     "channel": "JerryRigEverything",
-    "views": 10823938,
-    "views_per_hour": 186110
+    "views": 10930982,
+    "views_per_hour": 184758
    },
    {
     "title": "He peeled the nano-texture off his iPhone duo??",
     "channel": "CarterPCs",
-    "views": 11034893,
-    "views_per_hour": 133820
+    "views": 11074533,
+    "views_per_hour": 132683
    },
    {
     "title": "iPhone Duo Vs iPhone 18",
     "channel": "ZHC",
-    "views": 9531475,
-    "views_per_hour": 102276
+    "views": 9622038,
+    "views_per_hour": 102146
    },
    {
     "title": "iPhone Duo Review: First Generation Fun!",
     "channel": "Marques Brownlee",
-    "views": 12081190,
-    "views_per_hour": 98933
+    "views": 12101949,
+    "views_per_hour": 98294
    },
    {
     "title": "JerryRigEverything DESTROYED the iPhone duo 😭😭",
     "channel": "John Casterline",
-    "views": 2023327,
-    "views_per_hour": 98047
+    "views": 2097480,
+    "views_per_hour": 96920
    },
    {
     "title": "OH!! Samsung S27 Ultra Camera Result🧀🔥#noads #tiktok #usa",
     "channel": "Fun_Games",
-    "views": 15361472,
-    "views_per_hour": 94676
+    "views": 15473234,
+    "views_per_hour": 94778
    }
   ]
  },

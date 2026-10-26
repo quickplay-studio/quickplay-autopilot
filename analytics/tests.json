@@ -2,8 +2,235 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-26T14:13+00:00",
+ "as_of": "2026-10-26T15:14+00:00",
  "factors": {
+  "angles": {
+   "arms": {
+    "shown": {
+     "n": 3,
+     "needs": 67,
+     "verdict": "about typical"
+    },
+    "hidden": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "about typical"
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "angles shown to the writer",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
+  "ending": {
+   "arms": {
+    "loop": {
+     "n": 2,
+     "needs": 68,
+     "verdict": "about typical"
+    },
+    "question": {
+     "n": 0,
+     "needs": 70,
+     "verdict": "early sign"
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "ending",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
+  "first_frame": {
+   "arms": {
+    "cover": {
+     "n": 3,
+     "needs": 67,
+     "verdict": "cut back"
+    },
+    "photo": {
+     "n": 3,
+     "needs": 67,
+     "verdict": "about typical"
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "first frame",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": "the arm cannot be told apart from the controls yet"
+  },
+  "franchise": {
+   "arms": {
+    "named": {
+     "n": 3,
+     "needs": 67,
+     "verdict": "about typical"
+    },
+    "plain": {
+     "n": 1,
+     "needs": 69,
+     "verdict": "too few to tell"
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "named series",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
+  "fx_energy": {
+   "arms": {
+    "steady": {
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
+    },
+    "lab": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "camera energy",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": "",
+   "followed_pct": 100
+  },
+  "fx_grade": {
+   "arms": {
+    "natural": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "lab": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "colour grade",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
+  "fx_opening": {
+   "arms": {
+    "image_first": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "lab": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "opening",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
+  "fx_slot": {
+   "arms": {
+    "06:00 to 12:00": {
+     "n": 1,
+     "needs": 69,
+     "verdict": "too few to tell"
+    },
+    "12:00 to 18:00": {
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "posting quarter (UK)",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": "",
+   "followed_pct": 100
+  },
+  "gene:g003": {
+   "arms": {
+    "a": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    },
+    "b": {
+     "n": 0,
+     "needs": 70,
+     "verdict": ""
+    }
+   },
+   "settled": false,
+   "days_left": 5,
+   "label": "writing instruction g003: Compare the number to something familiar",
+   "verdict": "too few to tell",
+   "effect": "",
+   "low": "",
+   "high": "",
+   "halves": "",
+   "winner": "",
+   "leaning": "",
+   "why": ""
+  },
   "hook_type": {
    "arms": {
     "statement": {
@@ -80,208 +307,6 @@
    "winner": "",
    "leaning": "",
    "why": "the arm cannot be told apart from the controls yet"
-  },
-  "first_frame": {
-   "arms": {
-    "cover": {
-     "n": 3,
-     "needs": 67,
-     "verdict": "cut back"
-    },
-    "photo": {
-     "n": 3,
-     "needs": 67,
-     "verdict": "about typical"
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "first frame",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": "the arm cannot be told apart from the controls yet"
-  },
-  "fx_energy": {
-   "arms": {
-    "steady": {
-     "n": 2,
-     "needs": 68,
-     "verdict": "too few to tell"
-    },
-    "lab": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "camera energy",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": "",
-   "followed_pct": 100
-  },
-  "fx_slot": {
-   "arms": {
-    "06:00 to 12:00": {
-     "n": 1,
-     "needs": 69,
-     "verdict": "too few to tell"
-    },
-    "12:00 to 18:00": {
-     "n": 2,
-     "needs": 68,
-     "verdict": "too few to tell"
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "posting quarter (UK)",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": "",
-   "followed_pct": 100
-  },
-  "fx_grade": {
-   "arms": {
-    "natural": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
-    },
-    "lab": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "colour grade",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": ""
-  },
-  "fx_opening": {
-   "arms": {
-    "image_first": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
-    },
-    "lab": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "opening",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": ""
-  },
-  "ending": {
-   "arms": {
-    "loop": {
-     "n": 2,
-     "needs": 68,
-     "verdict": "about typical"
-    },
-    "question": {
-     "n": 0,
-     "needs": 70,
-     "verdict": "early sign"
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "ending",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": ""
-  },
-  "angles": {
-   "arms": {
-    "shown": {
-     "n": 3,
-     "needs": 67,
-     "verdict": "about typical"
-    },
-    "hidden": {
-     "n": 0,
-     "needs": 70,
-     "verdict": "about typical"
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "angles shown to the writer",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": ""
-  },
-  "franchise": {
-   "arms": {
-    "named": {
-     "n": 3,
-     "needs": 67,
-     "verdict": "about typical"
-    },
-    "plain": {
-     "n": 1,
-     "needs": 69,
-     "verdict": "too few to tell"
-    }
-   },
-   "settled": false,
-   "days_left": 5,
-   "label": "named series",
-   "verdict": "too few to tell",
-   "effect": "",
-   "low": "",
-   "high": "",
-   "halves": "",
-   "winner": "",
-   "leaning": "",
-   "why": ""
   },
   "writer_arm": {
    "arms": {

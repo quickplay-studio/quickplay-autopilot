@@ -1,0 +1,162 @@
+{
+ "id": "QD-189",
+ "board": "boards/queue/QD-189.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T08:00:00Z",
+ "rendered": "2026-10-26T11:33:29.973111+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"FC Barcelona 1-1 Atlético Madrid (2014)\": no reading history; 100 news articles on \"mbappe vs barcelona\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Kylian Mbappé: the 87th minute moment that changed everything ⚽",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 8,
+  "extra_photos": 11,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "risen",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 38.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 382.3,
+   "contrast": 0.18,
+   "face_area": 0.0996,
+   "text_area": 0.0391,
+   "caption_contrast": 8.5,
+   "by_frame": {
+    "sharpness": [
+     302.6,
+     398.0,
+     412.7,
+     415.8
+    ],
+    "contrast": [
+     0.178,
+     0.179,
+     0.181,
+     0.183
+    ],
+    "face_area": [
+     0.1237,
+     0.1248,
+     0.0215,
+     0.1284
+    ],
+    "text_area": [
+     0.0377,
+     0.0394,
+     0.0397,
+     0.0395
+    ],
+    "caption_contrast": [
+     7.59,
+     7.74,
+     12.82,
+     9.26
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.55,
+   "none",
+   3
+  ],
+  [
+   5.55,
+   10.53,
+   "none",
+   3
+  ],
+  [
+   10.53,
+   15.75,
+   "none",
+   4
+  ],
+  [
+   15.75,
+   20.97,
+   "none",
+   4
+  ],
+  [
+   20.97,
+   25.87,
+   "none",
+   3
+  ],
+  [
+   25.87,
+   31.87,
+   "none",
+   4
+  ],
+  [
+   31.87,
+   38.01,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "146586",
+   "q": "green grass pitch",
+   "t0": 0.0,
+   "t1": 38.01
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T11:49:37Z",
+ "video": "pRQAsVMbuIA",
+ "url": "https://youtube.com/shorts/pRQAsVMbuIA",
+ "publish_at": "2026-10-27T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-189"
+}

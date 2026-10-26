@@ -1,0 +1,167 @@
+{
+ "id": "QD-188",
+ "board": "boards/queue/QD-188.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T01:30:00Z",
+ "rendered": "2026-10-26T11:34:33.051966+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"Halloween (2026 video game)\" read 1 times yesterday, 1.0x its usual 1; 100 news articles on \"halloween 2026\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Algol the Medusa star: why it winks 🌌",
+ "background_notes": [
+  "NASA 'earth from orbit': nothing usable (40 results, 7 news or captioned)",
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (nasa:video:binary star system animation: no NASA video for 'binary star system animation')",
+  "beat 6 reused a nearby picture (nasa:image:pleiades bright stars: no NASA image for 'pleiades bright stars')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 9,
+  "pic_found_share": 0.71,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "majestic-12",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "low",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 37.4,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 17.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 258.3,
+   "contrast": 0.08,
+   "face_area": 0.0,
+   "text_area": 0.0184,
+   "caption_contrast": 11.12,
+   "by_frame": {
+    "sharpness": [
+     267.1,
+     269.8,
+     265.8,
+     230.3
+    ],
+    "contrast": [
+     0.081,
+     0.081,
+     0.081,
+     0.079
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0191,
+     0.0191,
+     0.0195,
+     0.0159
+    ],
+    "caption_contrast": [
+     11.23,
+     11.01,
+     9.68,
+     13.32
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.77,
+   "none",
+   2
+  ],
+  [
+   4.77,
+   10.6,
+   "none",
+   4
+  ],
+  [
+   10.6,
+   16.15,
+   "none",
+   4
+  ],
+  [
+   16.15,
+   21.54,
+   "none",
+   1
+  ],
+  [
+   21.54,
+   26.35,
+   "none",
+   1
+  ],
+  [
+   26.35,
+   31.41,
+   "none",
+   1
+  ],
+  [
+   31.41,
+   37.42,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1373",
+   "q": "night sky silhouette",
+   "t0": 0.0,
+   "t1": 37.42
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T11:49:34Z",
+ "video": "wEznV2CypzI",
+ "url": "https://youtube.com/shorts/wEznV2CypzI",
+ "publish_at": "2026-10-27T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-188"
+}

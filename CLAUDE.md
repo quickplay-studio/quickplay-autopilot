@@ -66,7 +66,8 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   with a "check" (secret_works:NAME, pages_workflow, vyro_today, or a new one in actions.CHECKS) whenever one can prove it.
 - `python pipeline/health.py`; status/write_log.txt and status/factpack_log.txt (tail only); status/<id>.json: one Short.
 - docs/NEXT.md (what was built and why, newest at the bottom), docs/CLIPS.md (clips), analytics/insights.md (the
-  Recipe), analytics/decisions.csv (the Recipe's changes), analytics/changes.csv (the change ledger), analytics/weekly.md.
+  Recipe), analytics/decisions.csv (the Recipe's changes), analytics/changes.csv (the change ledger), analytics/weekly.md,
+  analytics/improvement.json (26 October: the hub's improvement line, trend.history, refreshed every analytics run).
 - The Mac: docs/CHROME_JOBS.md (a 4 KB card), `python3 pipeline/mac_rows.py` (its work), docs/CHROME_LOG.md (one-off jobs,
   history). A cloud session adds a one-off job there instead of using a browser itself.
 - Identity guard (22 October): identity.py and audit.yml (every 3 hours) check every sign-in is the studio Google

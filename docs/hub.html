@@ -100,6 +100,15 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
 .action ol{margin:4px 0 6px;padding-left:22px;font-size:14px} .action li{margin:2px 0}
 .action .links{font-size:13px;margin:4px 0 0}
 .chartnote{color:var(--text-secondary);font-size:13px;margin:10px 0 0}
+.chart .tip.wide{white-space:normal;width:min(300px,72vw);transform:none;z-index:2;line-height:1.4}
+.chart .tip ul{margin:4px 0 0;padding-left:0;list-style:none} .chart .tip li{margin:3px 0}
+.chart .tip svg{display:inline-block;width:10px;height:10px;vertical-align:-1px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--text-secondary);margin:0 0 6px}
+.legend span{display:inline-flex;align-items:center;gap:6px} .legend svg{flex:none}
+.imhead{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;margin:2px 0 8px}
+.imhead .v{font-size:28px;font-weight:650;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.imhead .d{color:var(--text-secondary);font-size:13.5px}
+.imgoal{color:var(--text-secondary);font-size:13.5px;margin:-4px 0 8px}
 </style>
 </head>
 <body>
@@ -361,6 +370,162 @@ function wireDaily(){
   if (p) p.onchange = () => { window.__dvPlat = p.value; redo(); };
 }
 
+// The improvement line (Charlie, 26 October: "show the improvement visually"). analytics/improvement.json, written by
+// pipeline/trend.py history() on every analytics run (hourly): one number over the days, the line its trailing 7 days (one
+// odd day does not swing it), the dots single days, and under the line a marker on each day the change ledger
+// (analytics/changes.csv) put something live, filled when a change that day was aimed at this number (its target is one of
+// the metric's targets). Hover or tap a day for its value and changes; both tables list the same. A rise after a change is
+// a hint; the ledger's own verdict is the test.
+const IM_GROUPS = {all: "All channels", main: "Quickplay Daily", clips: "Quickplay Clips", irl: "Quickplay IRL Clips", gaming: "Quickplay Gaming Clips"};
+const imVal = (v, unit) => v == null ? "" : (Math.abs(v) >= 100 ? fmt(v) : Number(v.toFixed(Math.abs(v) < 1 ? 2 : 1)).toLocaleString("en-GB")) + (unit === "%" ? "%" : "");
+const imCap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const imCut = (s, k) => { s = String(s || ""); return s.length > k ? s.slice(0, k - 1).replace(/\s+\S*$/, "") + "…" : s; };
+function imSeries(im, key, group){
+  const ms = im.metrics || [], m = ms.find(x => x.key === key) || ms[0];
+  if (!m) return null;
+  const c = im.channel || {};
+  if (m.scope === "channel")
+    return m.key === "engaged_day" ? {m, line: c.engaged_day_7d || [], dots: c.engaged_day || [], lineName: "7-day average", dotName: "that day"}
+                                   : {m, line: c[m.key] || [], dots: null, lineName: m.label, dotName: ""};
+  const g = (im.shorts || {})[group] || (im.shorts || {}).all || {}, s = g[m.key] || {};
+  return {m, line: s.week || [], dots: s.day || [], n: s.n || [], posted: g.posted || [],
+    lineName: m.key === "subs_per_1k" ? "7-day rate" : "7-day median", dotName: "that day's Shorts"};
+}
+function imByDay(im, S){
+  const tg = new Set(S.m.targets || []), by = {};
+  for (const c of im.changes || []) (by[c.date] = by[c.date] || []).push(c);
+  return {by, aimed: c => tg.has(c.target)};
+}
+const imDot = (aimed, size) => `<svg width="${size || 12}" height="${size || 12}" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="${aimed ? "var(--accent)" : "var(--surface-1)"}" stroke="${aimed ? "var(--surface-1)" : "var(--text-muted)"}" stroke-width="${aimed ? 2 : 1.5}"/></svg>`;
+function lineChart(id, im, S){
+  const days = im.days || [], n = days.length, L = S.line, Dt = S.dots || [], u = S.m.unit;
+  const vals = L.concat(Dt).filter(v => v != null);
+  if (!n || !vals.length) return `<p class="muted">No numbers for this yet: the line starts once ${S.m.scope === "channel" ? "YouTube reports the first days" : "3 Shorts from the same 7 days have been public 24 hours"}.</p>`;
+  const W = Math.round(Math.max(320, Math.min(720, (window.innerWidth || 720) - 64))), H = 236, pl = 44, pr = 10, pt = 12, pb = 22, lane = 20;
+  const base = H - pb - lane;     // the value axis's zero; the change markers sit in the lane under it
+  const max = Math.max(...vals), step = max > 0 ? Math.pow(10, Math.floor(Math.log10(max))) : 1;
+  const top = max > 0 ? [1, 1.2, 1.6, 2, 2.4, 3.2, 4, 4.8, 6, 8, 10].map(f => f * step).find(t => t >= max - 1e-9) : 1;
+  const bw = (W - pl - pr) / n, x = i => pl + bw * (i + .5), y = v => pt + (base - pt) * (1 - v / top);
+  const ax = v => top >= 1e4 ? compact(v) : imVal(v, u);
+  const {by, aimed} = imByDay(im, S), rec = im.recipe || {};
+  let g = "";
+  for (let k = 0; k <= 4; k++){ const v = top * k / 4, yy = y(v).toFixed(1);
+    g += `<line x1="${pl}" x2="${W - pr}" y1="${yy}" y2="${yy}" stroke="var(--line)" stroke-width="1"/>`;
+    g += `<text x="${pl - 6}" y="${+yy + 4}" text-anchor="end" font-size="11" fill="var(--text-muted)">${ax(v)}</text>`; }
+  // day labels: the first and each 1st of a month carry the month; the rest are placed from the newest back, never touching
+  const every = Math.max(1, Math.ceil(26 / bw)), lab = i => { const d = days[i];
+    return i === 0 || d.slice(8) === "01" || every > 3 ? new Date(d + "T12:00:00Z").toLocaleDateString("en-GB", {day: "numeric", month: "short", timeZone: "UTC"}) : String(+d.slice(8)); };
+  const want = [0].concat(days.map((d, i) => i).filter(i => i && days[i].slice(8) === "01"), days.map((d, i) => i).filter(i => !((n - 1 - i) % every)).reverse());
+  const placed = [];
+  for (const i of want){ const t = lab(i), hw = t.length * 3.3 + 3, cx0 = x(i);
+    if (placed.some(q => Math.abs(q.x - cx0) < q.hw + hw)) continue; placed.push({x: cx0, hw});
+    g += `<text x="${cx0.toFixed(1)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="var(--text-muted)">${t}</text>`; }
+  let dots = "", path = "", pen = false, lone = "", marks = "";
+  Dt.forEach((v, i) => { if (v != null) dots += `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3" fill="var(--text-muted)" fill-opacity=".55"/>`; });
+  L.forEach((v, i) => { if (v == null){ pen = false; return; }
+    path += (pen ? "L" : "M") + x(i).toFixed(1) + "," + y(v).toFixed(1); pen = true;
+    if (L[i - 1] == null && L[i + 1] == null) lone += `<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="3" fill="var(--accent)"/>`; });
+  days.forEach((d, i) => { const cs = by[d]; if (!cs || !cs.length) return; const a = cs.some(aimed);
+    marks += `<circle cx="${x(i).toFixed(1)}" cy="${base + lane / 2 + 1}" r="4" fill="${a ? "var(--accent)" : "var(--surface-1)"}" stroke="${a ? "var(--surface-1)" : "var(--text-muted)"}" stroke-width="${a ? 2 : 1.5}"/>`; });
+  const tipFor = i => {
+    const d = days[i], cs = by[d] || [], r = rec[d], nn = S.n ? S.n[i] : null;
+    const head = L[i] != null ? `${esc(S.lineName)}: <b>${imVal(L[i], u)}</b>${nn != null ? ` <span class="muted">(${fmt(nn)} Shorts)</span>` : ""}`
+      : `${esc(S.lineName)}: <span class="muted">${S.m.scope === "channel" && S.m.key !== "subscribers" ? "not reported by YouTube yet" : "too few Shorts measured"}</span>`;
+    const day = S.dots ? `<br>${esc(imCap(S.dotName))}: ${Dt[i] != null ? imVal(Dt[i], u) : `<span class="muted">${S.m.scope === "channel" ? "not reported yet" : S.posted && S.posted[i] ? "not measured yet" : i >= n - 2 ? "none 24 hours old yet" : "none posted"}</span>`}${S.posted && S.posted[i] ? ` <span class="muted">(${fmt(S.posted[i])} Shorts 24 hours old)</span>` : ""}` : "";
+    const sorted = cs.slice().sort((a, b) => aimed(b) - aimed(a));
+    const list = sorted.slice(0, 4).map(c => `<li>${imDot(aimed(c), 10)} <b>${esc(c.id)}</b> ${esc(c.area)}: ${esc(imCut(c.change, 90))}</li>`).join("");
+    return `<b>${esc(dayName(d))}</b><br>${head}${day}${cs.length ? `<ul>${list}${cs.length > 4 ? `<li class="muted">and ${cs.length - 4} more (table below)</li>` : ""}</ul>` : ""}${r && r.n ? `<div class="muted">The Recipe changed ${fmt(r.n)} thing${r.n === 1 ? "" : "s"} by itself</div>` : ""}`;
+  };
+  setTimeout(() => {
+    const root = $(id); if (!root) return;
+    const svg = root.querySelector("svg"), tip = root.querySelector(".tip"), cx = svg.querySelector(".cx"), hi = svg.querySelector(".hi");
+    const hide = () => { tip.style.display = "none"; cx.setAttribute("visibility", "hidden"); hi.setAttribute("visibility", "hidden"); };
+    const show = e => {
+      const r = svg.getBoundingClientRect(), sx = (e.clientX - r.left) * W / r.width;
+      const i = Math.max(0, Math.min(n - 1, Math.floor((sx - pl) / bw))), X = x(i).toFixed(1);
+      cx.setAttribute("x1", X); cx.setAttribute("x2", X); cx.setAttribute("visibility", "visible");
+      if (L[i] != null){ hi.setAttribute("cx", X); hi.setAttribute("cy", y(L[i]).toFixed(1)); hi.setAttribute("visibility", "visible"); } else hi.setAttribute("visibility", "hidden");
+      tip.innerHTML = tipFor(i); tip.style.display = "block";
+      const box = root.getBoundingClientRect(), px = x(i) * r.width / W + (r.left - box.left), tw = tip.offsetWidth;
+      if (box.width < 520){ tip.style.left = "0px"; tip.style.top = (r.bottom - box.top + 4) + "px"; return; }   // a phone: under the chart, so the line stays in view
+      tip.style.left = Math.max(0, px < box.width / 2 ? Math.min(px + 14, box.width - tw) : px - 14 - tw) + "px"; tip.style.top = "0px";
+    };
+    svg.addEventListener("pointermove", show); svg.addEventListener("pointerdown", show);
+    svg.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hide(); });
+    document.removeEventListener("pointerdown", window.__imHide);       // a tap outside the chart closes it on a phone
+    window.__imHide = e => { if (!root.contains(e.target)) hide(); };
+    document.addEventListener("pointerdown", window.__imHide);
+  });
+  const cols = [{h: "Day", nw: 1, f: i => esc(dayName(days[i]))}, {h: S.lineName, n: 1, f: i => imVal(L[i], u)}]
+    .concat(S.dots ? [{h: imCap(S.dotName), n: 1, f: i => imVal(Dt[i], u)}] : [])
+    .concat(S.n ? [{h: "Shorts in the 7 days", n: 1, f: i => fmt(S.n[i] || 0)}, {h: "Shorts that day", n: 1, f: i => fmt(S.posted[i] || 0)}] : [])
+    .concat([{h: "Changes that went live", f: i => { const cs = by[days[i]] || [], r = rec[days[i]];
+      return cs.map(c => aimed(c) ? `<b>${esc(c.id)}</b>` : esc(c.id)).join(", ") + (r && r.n ? `${cs.length ? "; " : ""}<span class="muted">Recipe ${fmt(r.n)}</span>` : ""); }}]);
+  return `<div class="chart" id="${id}"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(S.m.label)}, ${esc(S.lineName)} by day, with the days changes went live" style="touch-action:pan-y">
+      ${g}${dots}<path d="${path}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>${lone}${marks}
+      <line class="cx" x1="0" x2="0" y1="${pt}" y2="${base + lane}" stroke="var(--text-muted)" stroke-width="1" visibility="hidden"/>
+      <circle class="hi" cx="0" cy="0" r="5" fill="var(--accent)" stroke="var(--surface-1)" stroke-width="2" visibility="hidden"/>
+      <rect x="${pl}" y="0" width="${W - pl - pr}" height="${H}" fill="transparent"/></svg><div class="tip wide" role="status"></div></div>
+    <details><summary>Show as a table</summary>${table(cols, days.map((d, i) => i).reverse())}<p class="chartnote">Bold ids: aimed at this number.</p></details>`;
+}
+function improveCard(){
+  const im = D.improve;
+  if (!im || !(im.days || []).length) return `<p class="muted">The improvement line appears after the next analytics run (hourly).</p>`;
+  const ms = im.metrics || [], key = ms.some(m => m.key === window.__imMetric) ? window.__imMetric : "engaged_day";
+  const groups = Object.keys(IM_GROUPS).filter(k => (im.shorts || {})[k]), group = groups.includes(window.__imGroup) ? window.__imGroup : "all";
+  const S = imSeries(im, key, group); if (!S) return `<p class="muted">No numbers yet.</p>`;
+  const m = S.m, u = m.unit, days = im.days, L = S.line, goal = im.goal || {};
+  const opt = (v, t, cur) => `<option value="${v}"${v === cur ? " selected" : ""}>${esc(t)}</option>`;
+  const msel = `<label class="sub" style="margin:0">Number <select id="im-metric"><optgroup label="The Partner Programme counts">${ms.filter(x => x.scope === "channel").map(x => opt(x.key, x.label, key)).join("")}</optgroup>
+    <optgroup label="Each Short (what moves them)">${ms.filter(x => x.scope !== "channel").map(x => opt(x.key, x.label, key)).join("")}</optgroup></select></label>`;
+  const gsel = m.scope === "channel" ? `<span class="sub" style="margin:0;align-self:center">Quickplay Daily</span>`
+    : `<label class="sub" style="margin:0">Channel <select id="im-group">${groups.map(k => opt(k, IM_GROUPS[k], group)).join("")}</select></label>`;
+  // the headline: the line's latest value against 7 days before (or its first day, when younger)
+  let head = "";
+  const last = L.map((v, i) => v == null ? -1 : i).filter(i => i >= 0).pop();
+  if (last != null){
+    let pi = last - 7; if (pi < 0 || L[pi] == null) pi = L.findIndex(v => v != null);
+    const v = L[last], pv = pi < last ? L[pi] : null, pts = u === "%";   // a share moves in points, a count in per cent
+    const ch = pv == null ? null : pts ? v - pv : pv ? (v - pv) / Math.abs(pv) * 100 : null;
+    const move = ch == null ? "" : Math.abs(ch) < (pts ? 0.5 : 1) ? `<span class="d">level</span>`
+      : `<span class="${ch > 0 ? "up" : "down"}">${ch > 0 ? "▲ up" : "▼ down"} ${pts ? Math.abs(ch).toFixed(1) + " points" : Math.abs(ch).toFixed(0) + "%"}</span>`;
+    head = `<div class="imhead"><span class="v">${imVal(v, u)}</span><span class="d">${esc(S.lineName === m.label ? "" : S.lineName.toLowerCase() + ", ")}to ${esc(dayName(days[last]))}</span>
+      ${move}${pv != null ? `<span class="d">from ${esc(dayName(days[pi]))} (${imVal(pv, u)})</span>` : ""}</div>`;
+    const pct = (a, b) => { const p = a / b * 100; return (p < 1 ? p.toFixed(2) : p.toFixed(1)) + "%"; };
+    if (m.key === "engaged_day" && goal.views)
+      head += `<p class="imgoal">The expanded Partner Programme needs ${fmt(goal.views)} in 90 days: about ${fmt(goal.views / 90)} a day, ${fmt(goal.views / 90 / Math.max(v, 1))} times this line. From 1 February 2027 the Shorts pool needs ${compact(goal.shorts_pool_2027)} (about ${fmt(goal.shorts_pool_2027 / 90)} a day).</p>`;
+    if (m.key === "engaged_90d" && goal.views)
+      head += `<p class="imgoal">${pct(v, goal.views)} of the ${compact(goal.views)} the expanded Partner Programme needs; ${pct(v, goal.shorts_pool_2027)} of the ${compact(goal.shorts_pool_2027)} Shorts pool from 1 February 2027.</p>`;
+    if (m.key === "subscribers" && goal.subs)
+      head += `<p class="imgoal">${pct(v, goal.subs)} of the ${fmt(goal.subs)} the expanded Partner Programme needs; ${pct(v, goal.subs_2027)} of the ${fmt(goal.subs_2027)} needed from 1 February 2027.</p>`;
+  }
+  const two = !!S.dots;
+  const key2 = `<div class="legend">${two ? `<span><svg width="20" height="10" aria-hidden="true"><line x1="2" x2="18" y1="5" y2="5" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>${esc(S.lineName)}</span>
+      <span><svg width="10" height="10" aria-hidden="true"><circle cx="5" cy="5" r="3" fill="var(--text-muted)" fill-opacity=".55"/></svg>${esc(S.dotName)}</span>` : ""}
+    <span>${imDot(true)}a change aimed at this number went live</span><span>${imDot(false)}other changes only</span></div>`;
+  const {by, aimed} = imByDay(im, S), idx = Object.fromEntries(days.map((d, i) => [d, i]));
+  const mine = (im.changes || []).filter(aimed).slice().reverse();
+  const after = c => { const i = idx[c.date]; if (i == null) return ""; if (i + 7 >= days.length) return `<span class="muted">too soon</span>`;
+    return L[i + 7] == null ? `<span class="muted">not reported yet</span>` : imVal(L[i + 7], u); };
+  const lag = m.scope === "channel" ? (m.key === "subscribers" ? "From the daily snapshot of the channel." : "YouTube reports engaged views about 3 days late, so the line stops on the last day it has reported.")
+    : `A Short counts once it has been public 24 hours; a day on the line needs ${im.min_n || 3} measured Shorts in its 7 days.`;
+  return `<div class="toolbar">${msel}${gsel}</div>${head}${key2}
+    ${lineChart("chart-improve", im, S)}
+    <p class="chartnote">${esc(m.note || "")} ${lag} Updated ${ukTime(im.updated)} UK.</p>
+    <p class="chartnote">How to read it: ${two ? `the line is the ${esc(S.lineName.toLowerCase())} of the 7 days to each day, so one odd day does not swing it; dots are single days` : "the line is the count on each day"}. The markers under it are the days changes went live (the change ledger). Hover or tap a day to see them. A rise after a change is a hint, not proof: the ledger's own verdict, after its measuring window, is the test.</p>
+    <details><summary>Changes aimed at this number (${fmt(mine.length)})</summary>
+      ${table([{h: "Went live", nw: 1, f: c => esc(dayName(c.date))}, {h: "Change", f: c => `<b>${esc(c.id)}</b> ${esc(c.area)}: ${esc(imCut(c.change, 200))}`},
+        {h: "Target", nw: 1, f: c => esc(c.target)}, {h: "Line then", n: 1, f: c => imVal(L[idx[c.date]], u)}, {h: "7 days on", n: 1, f: after},
+        {h: "Ledger verdict", f: c => esc(c.verdict || c.status || "")}], mine, "No change in these days was aimed at this number.")}
+      <p class="chartnote">Line then and 7 days on are the line's own values; other changes and the season move it too. The verdict comes from the ledger once the change has had its measuring window.</p></details>`;
+}
+function wireImprove(){
+  const redo = () => { const c = $("improve-card"); if (c){ c.innerHTML = improveCard(); wireImprove(); } };
+  const m = $("im-metric"), g = $("im-group");
+  if (m) m.onchange = () => { window.__imMetric = m.value; redo(); };
+  if (g) g.onchange = () => { window.__imGroup = g.value; redo(); };
+}
+
 // Your actions this week (Charlie, 24 October): status/actions.json (a list of {id, title, why, steps, links, added, due,
 // done, repeat}) and every open issue labelled needs-charlie (keys, logins, sign-ins). GitHub keeps the list true
 // (pipeline/actions.py, every 3 hours and within a minute of an issue being closed): an item with a "check" is ticked off
@@ -457,7 +622,8 @@ async function load(force){
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
        drivers, geo, regions, changes, late, hourly, actions, keys, igs};
   D.outreach = await get("clips/outreach.csv", "csv");      // the creator scout's list (clips tab)
-  D.subs = await get("analytics/subs.csv", "csv");           // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
+  [D.subs, D.improve] = await Promise.all([get("analytics/subs.csv", "csv"),  // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
+    get("analytics/improvement.json", "json")]);                              // the improvement line (trend.history, 26 October)
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -711,7 +877,7 @@ function insightsTab(){
     ${table([{h:"Date", nw:1, f:r => esc(r.date)}, {h:"Change", f:r => `<b>${esc(r.area)}:</b> ${esc(r.change)}<div class="sub" style="margin:2px 0 0">${esc(r.why)}</div>`},
       {h:"Check on", nw:1, f:r => esc(r.check_on)}], dec, "No changes logged yet.")}
     <h3 style="font-size:15px;margin:22px 0 6px">The change ledger: every change to the system, judged</h3>
-    <p class="sub">Each change states what it should improve (the target) and what it must not hurt (the guardrails). On its check date the numbers before and after are compared: "trade-off" means the target moved but a guardrail got worse.</p>
+    <p class="sub">Each change states what it should improve (the target) and what it must not hurt (the guardrails). On its check date the numbers before and after are compared: "trade-off" means the target moved but a guardrail got worse. The Overview's improvement line shows each target over the days, with these changes marked on the day they went live.</p>
     ${L === null || L === undefined ? `<p class="muted">The ledger starts with the next analytics run.</p>` : `
       <p class="sub" style="margin:4px 0 6px"><b>Being measured</b> (${fmt(live.length)})</p>
       ${table([{h:"Change", f:r => `<b>${esc(r.id)}</b> ${esc(r.change)}<div class="sub" style="margin:2px 0 0">${esc(r.hypothesis)}</div>
@@ -763,6 +929,9 @@ function render(){
       <div class="sub" style="margin-top:8px">${ypp.days_left ? `${fmt(ypp.days_left)} days left to apply before 1 February 2027; about ${compact(ypp.views_needed_per_day)} views a day needed.` : ""}
         ${ypp.from_2027 ? `From 1 February 2027 the bar doubles: 20 million Shorts views in 90 days (${num(ypp.from_2027.views_pct).toFixed(2)}% there), or 8,000 watch hours on long videos in a year (${ypp.from_2027.watch_hours_365d == null ? "not measured yet" : fmt(ypp.from_2027.watch_hours_365d) + " so far"}), with 1,000 subscribers either way.` : ""}</div>
     </div>
+    <h2>Getting better? The improvement line</h2>
+    <p class="sub">Each number by day (up to 120 days), with the days a change went live marked under it. Pick a number: the Partner Programme counts first, then what each Short does.</p>
+    <div class="card" id="improve-card">${improveCard()}</div>
     <div class="tiles">
       ${tile("Views in the last 24 hours", compact(prog.views_last_24h), "Quickplay Daily, YouTube")}
       ${tile("Public Shorts", fmt(prog.public_shorts || y.public_shorts), D.channel ? `${fmt(D.channel.scheduled)} scheduled` : "")}
@@ -786,6 +955,7 @@ function render(){
     <h2>Alerts and news (no action unless listed above)</h2>${alertList}
     <p class="sub" style="margin-top:14px">Money notes and problems arrive as GitHub issues (the GitHub app shows them); the ones only you can fix are listed at the top. Changes you want: your pinned Quickplay page, or a Claude chat.</p>`;
   wireDaily();
+  wireImprove();
 
   $("insights").innerHTML = insightsTab();
   fillTests();

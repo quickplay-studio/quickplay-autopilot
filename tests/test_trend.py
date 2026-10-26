@@ -1,7 +1,7 @@
 """Offline test of pipeline/trend.py and the two alerts built on it (26 October): week-on-week medians, the rulings-followed
-count and its worth, the retention flag, alerts.trend_alert opening and closing its issue, alerts.recipe_stale_check, and
-the insights section's text. No live file is read."""
-import pathlib as _p, sys, os, json, datetime as dt, tempfile
+count and its worth, the retention flag, the hub's improvement line (history, write_history), alerts.trend_alert opening and
+closing its issue, alerts.recipe_stale_check, and the insights section's text. No live file is read."""
+import pathlib as _p, sys, os, json, csv, datetime as dt, tempfile
 REPO_DIR = str(_p.Path(__file__).resolve().parent.parent)
 os.chdir(REPO_DIR); sys.path.insert(0, REPO_DIR + "/pipeline")
 import trend as T, alerts as A
@@ -48,7 +48,55 @@ fine = before + [row(d, 52, 29, hours=h) for d in (1, 2) for h in (0, 6, 12, 18)
 assert T.falling(fine, NOW) == []
 print("2 falling ok")
 
-# 3. the alerts: trend_alert opens with the numbers and the suspects and closes when fine; recipe_stale_check reads summary.json
+# 3. the improvement line (analytics/improvement.json, the hub's chart): a main Short a day for 10 days, two IRL Shorts,
+# one too young to count, YouTube's engaged views for 18 to 23 October and two subscriber readings
+H = [row(d, 50, 30 + d, views24=10 * d, views=1000, subs=2) for d in range(1, 11)]
+IRL = [dict(row(d, 50, 20, views24=10, views=1000), short=f"QI-{d}", channel="irl") for d in (2, 3)]
+YOUNG = [row(0, 90, 90, hours=3)]
+DAILY = [{"day": f"2026-10-{18 + i}", "source": "youtube_daily", "yt_engaged_views_day": str(100 * (i + 1))} for i in range(6)]
+DAILY += [{"day": "2026-10-20", "source": "snapshot", "yt_followers": "5"}, {"day": "2026-10-25", "source": "snapshot", "yt_followers": "16"}]
+CH = [{"id": "CH-001", "date": "2026-09-01", "area": "shorts", "change": "too old"},
+      {"id": "CH-096", "date": "2026-10-26", "area": "clips", "change": "x" * 500, "target": "engaged_share", "status": "live"},
+      {"id": "", "date": "2026-10-25", "change": "no id"}]
+DEC = [{"date": "2026-10-22", "area": "hook", "change": f"rule {i}"} for i in range(5)] + [{"date": "2026-10-01", "area": "old", "change": "x"}]
+h = T.history(H + IRL + YOUNG, NOW, DAILY, CH, DEC)
+D = h["days"]; ix = D.index
+assert D[0] == "2026-10-16" and D[-1] == "2026-10-26" and len(D) == 11, D
+assert set(h) == {"updated", "goal", "min_n", "metrics", "days", "channel", "shorts", "changes", "recipe"} and h["goal"] == T.YPP
+assert [m["key"] for m in h["metrics"]] == ["engaged_day", "engaged_90d", "subscribers", "engaged_pct", "engaged_24h",
+                                            "views_24h", "viewed_pct", "subs_per_1k"], h["metrics"]
+assert len(T.history(H, NOW, days=5)["days"]) == 5
+c = h["channel"]
+assert all(len(v) == 11 for v in c.values()), c
+assert c["engaged_day"][ix("2026-10-19")] == 200 and c["engaged_day"][ix("2026-10-24")] is None
+assert c["engaged_day_7d"][ix("2026-10-18")] is None and c["engaged_day_7d"][ix("2026-10-20")] == 200   # 3 days needed
+assert c["engaged_day_7d"][ix("2026-10-23")] == 350 and c["engaged_day_7d"][ix("2026-10-24")] is None   # stops at the last reported day
+assert c["engaged_90d"][ix("2026-10-23")] == 2100 and c["engaged_90d"][ix("2026-10-17")] is None and c["engaged_90d"][-1] is None
+assert c["subscribers"][ix("2026-10-20")] == 5 and c["subscribers"][ix("2026-10-25")] == 16 and c["subscribers"][ix("2026-10-21")] is None
+S = h["shorts"]
+assert set(S) == {"all", "main", "irl"} and set(T.history([], NOW)["shorts"]) == {"all"}, set(S)   # empty groups skipped, "all" kept
+m = S["main"]
+assert m["posted"][-1] == 0 and m["posted"][ix("2026-10-25")] == 1 and S["all"]["posted"][ix("2026-10-24")] == 2   # 24 hours old only
+assert m["engaged_pct"]["week"][-1] == 33.5 and m["engaged_pct"]["n"][-1] == 6, m["engaged_pct"]            # the 6 main Shorts of 20 to 25 October
+assert m["engaged_pct"]["day"][ix("2026-10-25")] == 31 and m["engaged_pct"]["day"][-1] is None
+assert m["engaged_pct"]["week"][1] is None and m["engaged_pct"]["week"][2] == 39.0                          # under 3 measured: no line
+assert S["all"]["engaged_pct"]["week"][-1] == 32.5 and S["irl"]["engaged_pct"]["day"][ix("2026-10-23")] == 20
+assert m["views_24h"]["week"][-1] == 35.0 and m["subs_per_1k"]["week"][-1] == 2.0 and m["engaged_24h"]["day"][ix("2026-10-25")] == 3.1
+assert [x["id"] for x in h["changes"]] == ["CH-096"] and len(h["changes"][0]["change"]) == 400, h["changes"]
+assert h["recipe"] == {"2026-10-22": {"n": 5, "items": [f"hook: rule {i}" for i in range(4)]}}, h["recipe"]
+assert not any(ch in "".join(x["label"] + x["note"] for x in h["metrics"]) for ch in DASHES)
+tmpH = _p.Path(tempfile.mkdtemp(prefix="qp-improve-"))
+for name, rs in (("shorts.csv", H + IRL + YOUNG), ("daily.csv", DAILY), ("changes.csv", CH)):
+    keys = list(dict.fromkeys(k for r in rs for k in r))
+    with open(tmpH / name, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=keys, restval=""); w.writeheader(); w.writerows(rs)
+p = T.write_history(NOW, src=tmpH)                                                     # no decisions.csv: an empty recipe
+J = json.loads(p.read_text(encoding="utf-8"))
+assert p.name == "improvement.json" and J["days"] == D and J["recipe"] == {} and set(J["shorts"]) == {"all", "main", "irl"}, (p, set(J["shorts"]))
+assert J["shorts"]["main"]["engaged_pct"]["week"][-1] == 33.5 and J["channel"]["engaged_90d"][ix("2026-10-23")] == 2100
+print("3 improvement line ok")
+
+# 4. the alerts: trend_alert opens with the numbers and the suspects and closes when fine; recipe_stale_check reads summary.json
 RAISED, CLOSED, BODIES = [], [], []
 A.raise_issue = lambda title, body, labels=None, howto=None: (RAISED.append(title), BODIES.append(body))
 A.clear = lambda title, body: CLOSED.append(title)
@@ -76,5 +124,5 @@ summary.unlink(); RAISED.clear(); CLOSED.clear()
 A.recipe_stale_check()
 assert RAISED == [] and CLOSED == []                                                   # no summary yet: nothing to say
 assert not any(c in "\n".join(BODIES) for c in DASHES)
-print("3 alerts ok")
+print("4 alerts ok")
 print("trend ok")

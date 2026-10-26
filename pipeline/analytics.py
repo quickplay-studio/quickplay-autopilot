@@ -959,6 +959,10 @@ def main():
         "fb_followers": summary["facebook"]["followers"] if summary.get("facebook") else ""}],
         ["as_of", "as_of_uk", "full_as_of_uk", "subscribers", "engaged_views_90d", "engaged_views_90d_youtube", "youtube_last_day",
          "views_all_time", "public_shorts", "needed_per_day", "days_left", "views_last_hour", "views_last_24h", "ig_followers", "fb_followers"])
+    try:                    # the hub's improvement line (analytics/improvement.json), every run so the hourly counts reach it
+        import trend as TR
+        TR.write_history(NOW, src=OUT)
+    except Exception as e: print("improvement line:", str(e)[:150])
     if not FAST:            # the slower reads: looks, posting times, audience, drivers and the writer's notes
         (OUT / "looks.json").write_text(json.dumps(looks_out, indent=1, ensure_ascii=False))
         (OUT / "models.json").write_text(json.dumps(writer_scores(rows), indent=1, ensure_ascii=False))

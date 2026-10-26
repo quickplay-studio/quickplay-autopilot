@@ -14,7 +14,7 @@
    "used": "18:00 to 24:00"
   }
  },
- "title": "Halloween skywatch: five spooky targets revealed",
+ "title": "Halloween 2026: top skywatching moments",
  "background_notes": [
   "picked pixabay 3 (+3 spares)",
   "pixabay:3742 skipped: only 960x540, needs 720p"
@@ -162,6 +162,13 @@
  "social_release": "social-QD-174",
  "engage": {
   "comment": "UgykMZFYKTHUyic6CMN4AaABAg",
-  "playlist": "Quickplay Daily: Entertainment"
+  "playlist": "Quickplay Daily: Entertainment",
+  "title": {
+   "swapped_from": "Halloween skywatch: five spooky targets revealed",
+   "to": "Halloween 2026: top skywatching moments",
+   "at": "2026-10-26T21:17+00:00",
+   "views_an_hour": 0.1,
+   "typical": 0.6
+  }
  }
 }

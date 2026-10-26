@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T09:04+00:00",
+ "updated": "2026-10-26T09:20+00:00",
  "campaigns": [
   {
    "name": "SKULLPANDA at Doja Cat’s 31st Birthday Party",
@@ -12,36 +12,33 @@
     "X"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 10.0,
+   "rate_per_10k": 100.0,
    "budget_remaining": 3000.0,
    "min_views": 1000,
    "max_payout": 1000.0,
-   "footage": "reference materials provided upon joining",
+   "footage": "Reference materials (1 file provided upon joining)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a family-friendly clipping campaign allowing YouTube, provides footage, and is open with clear pay rates.",
-   "hashtags": [
-    "#skullpanda",
-    "#dojacat",
-    "#popmart",
-    "#shorts"
-   ],
+   "why": "It is a family-friendly clipping campaign on YouTube with an open status and provided reference footage.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "SKULLPANDA at Doja Cat's birthday party",
-    "on_screen": "none specified",
-    "avoid": [
-     "none specified"
-    ],
+    "focus": "SKULLPANDA at Doja Cat’s birthday party",
+    "on_screen": "",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/2478f835-202a-4df4-9c34-8fd9fa47088c",
    "id": "2478f835-202a-4df4-9c34-8fd9fa47088c",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -63,58 +60,19 @@
      "min_views": 1000
     }
    },
+   "rate_per_1k": 10.0,
    "heat": 0.3,
    "heat_why": [
     "6 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "HardScope x ClipFarm",
-   "subject": "HardScope shows (Zach Justice, MatCrackz, N3on)",
-   "type": "clipping",
-   "platforms": [
-    "YouTube",
-    "Instagram",
-    "Facebook"
    ],
-   "youtube_allowed": true,
-   "rate_per_1k": 3.7,
-   "budget_remaining": 3700.0,
-   "min_views": 1000,
-   "max_payout": 3700.0,
-   "footage": "HardScope channel and shows provided by campaign",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign allowing YouTube Shorts with provided footage and fits family-friendly guidelines.",
-   "hashtags": [
-    "#HardScope",
-    "#ClipFarm"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "HardScope show highlights and relationship or collectibles discussions",
-    "on_screen": "Use captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
    },
-   "url": "https://contentrewards.com/c/campaigns/db7f38ed-20ee-40aa-aa7c-658592ddcbf1?group=1",
-   "id": "db7f38ed-20ee-40aa-aa7c-658592ddcbf1",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {},
-   "heat": 0.0,
-   "heat_why": []
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Riley Green - The Voice Coach Moments Clip [8417]",
@@ -127,17 +85,21 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.5,
-   "budget_remaining": 4082.0,
+   "budget_remaining": 3099.0,
    "min_views": 2667,
    "max_payout": 100.0,
-   "footage": "Find your own clips of Riley Green as a coach on The Voice Season 30",
+   "footage": "The Voice Season 30",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides source material direction, is family friendly, and is open.",
+   "why": "It is a family-friendly music coaching clipping campaign with YouTube allowed, provided footage source, and an open status.",
    "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Riley Green as a coach on The Voice Season 30",
     "on_screen": "",
@@ -148,7 +110,7 @@
    "url": "https://contentrewards.com/c/campaigns/86b9452c-6f66-49e0-9c91-adf96cd64253",
    "id": "86b9452c-6f66-49e0-9c91-adf96cd64253",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -170,75 +132,23 @@
      "min_views": 3000
     }
    },
-   "heat": 1.25,
+   "heat": 1.22,
    "heat_why": [
-    "Wikipedia 8,933 views a day",
+    "Wikipedia 8,488 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"clips of\")"
   },
   {
-   "name": "Billy Porter Podcast Clipping Campaign",
-   "subject": "Billy Porter Podcast",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 2.5,
-   "budget_remaining": 3300.0,
-   "min_views": 4000,
-   "max_payout": 450.0,
-   "footage": "3 files (visible once you join)",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
-   "hashtags": [
-    "#BillyPorter",
-    "#Podcast"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Billy Porter Podcast clips",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/31265619-8ca9-40ad-9994-8a28aa27df85",
-   "id": "31265619-8ca9-40ad-9994-8a28aa27df85",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {
-    "YouTube": {
-     "rate_per_1k": 2.5,
-     "min_payout": 10.0,
-     "max_payout": 450.0,
-     "min_views": 4000
-    },
-    "TikTok": {
-     "rate_per_1k": 2.5,
-     "min_payout": 10.0,
-     "max_payout": 450.0,
-     "min_views": 4000
-    },
-    "Instagram": {
-     "rate_per_1k": 2.5,
-     "min_payout": 10.0,
-     "max_payout": 450.0,
-     "min_views": 4000
-    }
-   },
-   "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "FableSMP Minecraft Clipping / Media Campaign",
-   "subject": "FableSMP",
+   "name": "Matchday FC — UK clipping",
+   "subject": "Matchday FC",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -247,120 +157,138 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 2.0,
-   "budget_remaining": 2468.0,
-   "min_views": 1000,
-   "max_payout": 200.0,
-   "footage": "Reference materials provided upon joining",
+   "budget_remaining": 2300.0,
+   "min_views": 2000,
+   "max_payout": 25.0,
+   "footage": "source pack provided in campaign reference materials",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a family-friendly Minecraft clipping campaign allowing YouTube with provided footage and an open status.",
+   "why": "It is a clipping campaign, allows YouTube Shorts, provides footage, is family-friendly, and is currently open.",
    "hashtags": [
-    "#FableSMP",
-    "#Minecraft",
-    "#Shorts"
+    "#MatchdayFC"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Minecraft server content",
-    "on_screen": "",
-    "avoid": [],
+    "focus": "Matchday FC football card game",
+    "on_screen": "no club names or crests, no tournament logos",
+    "avoid": [
+     "club names",
+     "crests",
+     "tournament logos"
+    ],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/42307e1a-b958-43f9-8fcb-ffece45fb4b6",
-   "id": "42307e1a-b958-43f9-8fcb-ffece45fb4b6",
+   "url": "https://contentrewards.com/c/campaigns/4a7dff1e-ac34-4d20-9fa0-4dd3375f60c8",
+   "id": "4a7dff1e-ac34-4d20-9fa0-4dd3375f60c8",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
      "rate_per_1k": 2.0,
-     "min_payout": 2.0,
-     "max_payout": 200.0,
-     "min_views": 1000
+     "min_payout": 4.0,
+     "max_payout": 25.0,
+     "min_views": 2000
     },
     "TikTok": {
      "rate_per_1k": 2.0,
-     "min_payout": 2.0,
-     "max_payout": 200.0,
-     "min_views": 1000
+     "min_payout": 4.0,
+     "max_payout": 25.0,
+     "min_views": 2000
     },
     "Instagram": {
      "rate_per_1k": 2.0,
-     "min_payout": 2.0,
-     "max_payout": 200.0,
-     "min_views": 1000
+     "min_payout": 4.0,
+     "max_payout": 25.0,
+     "min_views": 2000
     }
    },
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#MatchdayFC"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"clips from\")"
   },
   {
-   "name": "Ramp Tony Hawk FINALE",
-   "subject": "Tony Hawk and Bam Margera",
+   "name": "ClipFarm x Solved w/ Mark Manson",
+   "subject": "Mark Manson",
    "type": "clipping",
    "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
+    "YouTube",
+    "Instagram"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 1.5,
-   "budget_remaining": 4008.0,
-   "min_views": 2000,
-   "max_payout": 450.0,
-   "footage": "Reference materials 1 file visible once you join",
+   "rate_per_1k": 1.25,
+   "budget_remaining": 13726.0,
+   "min_views": 2400,
+   "max_payout": 300.0,
+   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
    "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#TonyHawk",
-    "#BamMargera",
-    "#Ramp"
-   ],
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Tony Hawk and Bam Margera show set in 2006",
+    "focus": "relationships, purpose, self-improvement",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/ce9f2373-a374-491e-8a51-3684d030152a",
-   "id": "ce9f2373-a374-491e-8a51-3684d030152a",
+   "url": "https://contentrewards.com/c/campaigns/6bdc8e4b-3ebf-44f1-aedb-067589ca9c89",
+   "id": "6bdc8e4b-3ebf-44f1-aedb-067589ca9c89",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
-     "rate_per_1k": 1.5,
+     "rate_per_1k": 1.25,
      "min_payout": 3.0,
-     "max_payout": 450.0,
-     "min_views": 2000
-    },
-    "TikTok": {
-     "rate_per_1k": 1.5,
-     "min_payout": 1.5,
-     "max_payout": 450.0,
-     "min_views": 1000
+     "max_payout": 300.0,
+     "min_views": 2400
     },
     "Instagram": {
-     "rate_per_1k": 1.5,
-     "min_payout": 1.5,
-     "max_payout": 450.0,
-     "min_views": 1000
+     "rate_per_1k": 1.25,
+     "min_payout": 3.0,
+     "max_payout": 300.0,
+     "min_views": 2400
     }
    },
-   "heat": 0.3,
+   "heat": 0.54,
    "heat_why": [
+    "Wikipedia 558 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"episodes\")"
   },
   {
    "name": "NettyWorth | Pokémon Pack Reveals [Clipping]",
@@ -382,26 +310,37 @@
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a family-friendly clipping campaign with provided footage, YouTube allowed, and open status.",
+   "why": "It is a clipping campaign, allows YouTube, provides official footage, is family-friendly, and is currently open.",
    "hashtags": [
-    "#pokemon",
-    "#pokemoncards",
-    "#lego",
-    "#packreveal",
-    "#shorts"
+    "#NettyWorth",
+    "#Pokemon",
+    "#Lego"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#NettyWorth"
+   ],
+   "on_camera": false,
    "rules": {
     "focus": "real PSA-graded Pokémon cards, LEGO collectibles, pack reveals, and reactions",
     "on_screen": "",
-    "avoid": [],
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/d0b102ae-f134-4ba3-ae18-082a45e1696d",
    "id": "d0b102ae-f134-4ba3-ae18-082a45e1696d",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -423,8 +362,22 @@
      "min_views": 1000
     }
    },
-   "heat": 0.0,
-   "heat_why": []
+   "heat": 0.3,
+   "heat_why": [
+    "6 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#NettyWorth",
+     "#Pokemon",
+     "#Lego"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"clips from\")"
   },
   {
    "name": "Clip LADbible's episode with john Cena & Jessica Biel",
@@ -437,40 +390,32 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.0,
-   "budget_remaining": 4330.0,
+   "budget_remaining": 3868.0,
    "min_views": 2000,
    "max_payout": 300.0,
-   "footage": "Reference materials 2 files",
+   "footage": "Reference materials (2 files)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
-   "hashtags": [
-    "#JohnCena",
-    "#JessicaBiel",
-    "#LADbible"
-   ],
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "John Cena & Jessica Biel episode",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money",
-     "investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/187d5d23-22c6-4dfb-9e32-cf296a3fb0b7",
    "id": "187d5d23-22c6-4dfb-9e32-cf296a3fb0b7",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -494,11 +439,19 @@
    },
    "heat": 0.3,
    "heat_why": [
-    "7 YouTube search suggestions"
-   ]
+    "8 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"episode\")"
   },
   {
-   "name": "PsyopAnime Clippers",
+   "name": "Psyopanime Clippers",
    "subject": "PsyopAnime",
    "type": "clipping",
    "platforms": [
@@ -512,35 +465,29 @@
    "budget_remaining": 1000.0,
    "min_views": 2000,
    "max_payout": 210.0,
-   "footage": "Source Footage folder provided after joining",
+   "footage": "Source footage provided after joining",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
-   "hashtags": [
-    "#PsyopAnime",
-    "#AnimeShorts"
-   ],
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly and currently open.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Psyopanime's long-form anime and news episodes",
-    "on_screen": "Use brand rules provided in source materials",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "on_screen": "",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/99dea944-a29a-4169-8aaf-d6bd6b9ab5bc",
    "id": "99dea944-a29a-4169-8aaf-d6bd6b9ab5bc",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -565,11 +512,19 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"episodes\")"
   },
   {
-   "name": "The Chris Heyn Show Clipping",
-   "subject": "Chris Heyn Jr.",
+   "name": "Chris Heyn Jr. Clipping",
+   "subject": "Chris Heyn",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -578,23 +533,29 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.5,
-   "budget_remaining": 1972.0,
+   "budget_remaining": 1968.0,
    "min_views": 2000,
    "max_payout": 300.0,
-   "footage": "approved Chris Heyn Show episodes and reference materials",
-   "needs_application": true,
+   "footage": "approved Chris Heyn Show episodes in Discord",
+   "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, YouTube is allowed, footage is provided, it is family-friendly, and it is currently open.",
+   "why": "Fits all criteria for a family-friendly YouTube Shorts clipping campaign with provided footage and open status.",
    "hashtags": [
     "#chrisheynjr",
     "#chrisheynshow"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#chrisheynjr"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "old-money polish colliding with early rap, vintage ads, and VHS textures",
-    "on_screen": "catalog typography, optional, keep it tasteful, no meme font",
+    "focus": "Chris Heyn Show episodes mixed with vintage ads and rap visuals",
+    "on_screen": "catalog typography if used, optional",
     "avoid": [
      "loud meme edits",
      "Impact-font captions",
@@ -602,15 +563,20 @@
      "zoom punches",
      "Subway Surfers split screens",
      "explaining the joke",
-     "unflattering freeze-frames"
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
     ],
-    "min_s": 15,
+    "min_s": 1,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/19859ab5-057c-4cff-847c-93155c896827",
    "id": "19859ab5-057c-4cff-847c-93155c896827",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -635,7 +601,87 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#chrisheynjr",
+     "#chrisheynshow"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Clip the\")"
+  },
+  {
+   "name": "Billy Porter Podcast Clipping Campaign",
+   "subject": "Billy Porter Podcast / Street We Grew Up On",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 2.5,
+   "budget_remaining": 1243.0,
+   "min_views": 4000,
+   "max_payout": 450.0,
+   "footage": "Reference materials (3 files) provided upon joining",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is an open clipping campaign allowing YouTube with provided footage, fitting all family-friendly and safety criteria.",
+   "hashtags": [],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "Billy Porter Podcast / Street We Grew Up On content",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/31265619-8ca9-40ad-9994-8a28aa27df85",
+   "id": "31265619-8ca9-40ad-9994-8a28aa27df85",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    },
+    "TikTok": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    },
+    "Instagram": {
+     "rate_per_1k": 2.5,
+     "min_payout": 10.0,
+     "max_payout": 450.0,
+     "min_views": 4000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Podcast\")"
   },
   {
    "name": "The Iced Coffee Hour Podcast x Greg Lav",
@@ -650,36 +696,29 @@
    "budget_remaining": 9000.0,
    "min_views": 2000,
    "max_payout": 300.0,
-   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video",
+   "footage": "Drive, Dropbox or Frame.io folder or reference materials",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family-friendly, and is currently open.",
-   "hashtags": [
-    "#theicedcoffeehour",
-    "#greglav",
-    "#podcast"
-   ],
+   "why": "It is an open clipping campaign for a family-friendly podcast with YouTube allowed and footage provided.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Greg Lav's episode on The Iced Coffee Hour Podcast",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/a6e3a983-c8c7-4c4f-ac48-22022b391562",
    "id": "a6e3a983-c8c7-4c4f-ac48-22022b391562",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -698,7 +737,90 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Podcast\")"
+  },
+  {
+   "name": "Build a Ring Farm 2! [ROBLOX]",
+   "subject": "BloxClips",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "YouTube",
+    "Instagram"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.8,
+   "budget_remaining": 4467.0,
+   "min_views": 1000,
+   "max_payout": 300.0,
+   "footage": "Visible once you join",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is a family-friendly Roblox gaming clipping campaign allowing YouTube Shorts with provided footage and open status.",
+   "hashtags": [
+    "#Roblox",
+    "#BuildARingFarm2"
+   ],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "Build a Ring Farm 2 gameplay and getting viewers to play it",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/3522cb74-2e4d-4b3a-8e1d-ce4ea07f0ad9",
+   "id": "3522cb74-2e4d-4b3a-8e1d-ce4ea07f0ad9",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 0.8,
+     "min_payout": 0.8,
+     "max_payout": 300.0,
+     "min_views": 1000
+    },
+    "TikTok": {
+     "rate_per_1k": 0.8,
+     "min_payout": 0.8,
+     "max_payout": 300.0,
+     "min_views": 1000
+    },
+    "Instagram": {
+     "rate_per_1k": 0.8,
+     "min_payout": 0.8,
+     "max_payout": 300.0,
+     "min_views": 1000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#Roblox",
+     "#BuildARingFarm2"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Scrub or Die [Horror Game]",
@@ -711,7 +833,7 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.8,
-   "budget_remaining": 4764.0,
+   "budget_remaining": 3826.0,
    "min_views": 1000,
    "max_payout": 300.0,
    "footage": "Visible once you join",
@@ -719,27 +841,24 @@
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is an open Roblox horror game clipping campaign allowing YouTube with provided footage and family-friendly content.",
-   "hashtags": [
-    "#ScrubOrDie",
-    "#Roblox",
-    "#RobloxHorror"
-   ],
+   "why": "It is a family-friendly gaming clipping campaign on YouTube with open status and provided footage.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Scrub or Die gameplay",
     "on_screen": "",
-    "avoid": [
-     "adult content",
-     "violence"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/38bf82b8-47f0-4956-a0f8-9a4c73ba0a1f",
    "id": "38bf82b8-47f0-4956-a0f8-9a4c73ba0a1f",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -762,7 +881,15 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Survive the Horde [ROBLOX]",
@@ -775,40 +902,35 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.8,
-   "budget_remaining": 3869.0,
+   "budget_remaining": 3767.0,
    "min_views": 2000,
    "max_payout": 350.0,
-   "footage": "Drive, Dropbox or Frame.io folder",
+   "footage": "Drive",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a family-friendly Roblox gaming clipping campaign on YouTube with an open status and provided footage.",
+   "why": "It is a family-friendly Roblox gaming clipping campaign allowing YouTube Shorts with provided footage.",
    "hashtags": [
     "#SurviveTheHorde",
-    "#Roblox",
-    "#RobloxAnime",
-    "#Shorts"
+    "#Roblox"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "zombie waves, powerful anime abilities, and boss fights",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/e403010a-e6d4-4584-84c3-a2ce8939a61d",
    "id": "e403010a-e6d4-4584-84c3-a2ce8939a61d",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -831,7 +953,90 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#SurviveTheHorde",
+     "#Roblox"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
+  },
+  {
+   "name": "Rob Smith Campaign",
+   "subject": "Rob Smith",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 1.5,
+   "budget_remaining": 1000.0,
+   "min_views": 1333,
+   "max_payout": 150.0,
+   "footage": "Reference materials file provided upon joining",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": true,
+   "why": "It is an open clipping campaign allowing YouTube, provides footage, offers family-friendly entertainment content, and matches all channel criteria.",
+   "hashtags": [],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "Rob Smith Clips",
+    "on_screen": "Not specified",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/cf0481b5-8f9d-4a6d-bd04-e12ab149246a",
+   "id": "cf0481b5-8f9d-4a6d-bd04-e12ab149246a",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "YouTube": {
+     "rate_per_1k": 1.5,
+     "min_payout": 2.0,
+     "max_payout": 150.0,
+     "min_views": 1333
+    },
+    "TikTok": {
+     "rate_per_1k": 1.5,
+     "min_payout": 2.0,
+     "max_payout": 150.0,
+     "min_views": 1333
+    },
+    "Instagram": {
+     "rate_per_1k": 1.5,
+     "min_payout": 2.0,
+     "max_payout": 150.0,
+     "min_views": 1333
+    }
+   },
+   "heat": 0.31,
+   "heat_why": [
+    "Wikipedia 2 views a day",
+    "8 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Irubyana Twitch Clips",
@@ -848,36 +1053,37 @@
    "budget_remaining": 1963.0,
    "min_views": 1000,
    "max_payout": 60.0,
-   "footage": "Twitch livestream VODs @Irubyana",
+   "footage": "Twitch VODs @Irubyana",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides named Twitch VOD source, is family-friendly, and is open.",
+   "why": "It is a clipping campaign, allows YouTube, provides Twitch VOD footage, is family friendly, and is open.",
    "hashtags": [
     "#irubyana",
     "#twitch",
-    "#Twitch livestream"
+    "#Twitchlivestream"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#irubyana",
+    "#twitch",
+    "#Twitchlivestream"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Short and high energy clips from Twitch streams",
-    "on_screen": "Make sure to tag @Irubyana",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "focus": "Irubyana twitch streams",
+    "on_screen": "tag @Irubyana",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/d8f10d9f-5207-4268-8069-b6da45a23b67",
    "id": "d8f10d9f-5207-4268-8069-b6da45a23b67",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -901,67 +1107,23 @@
    },
    "rate_per_1k": 1.0,
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#irubyana",
+     "#twitch",
+     "#Twitchlivestream"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"livestream\")"
   },
   {
-   "name": "G2G Channel Clipping Campaign",
-   "subject": "G2G",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 1.5,
-   "budget_remaining": 827.0,
-   "min_views": 1667,
-   "max_payout": 15.0,
-   "footage": "Reference materials file provided upon joining",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is an open clipping campaign allowing YouTube, provides footage, offers family-friendly sports/stream highlights, and meets all criteria.",
-   "hashtags": [
-    "#G2G",
-    "#Shorts"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Live stream moments, highlights, and reactions",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/bb11120c-865b-4d12-911f-aec4e701767c",
-   "id": "bb11120c-865b-4d12-911f-aec4e701767c",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {
-    "YouTube": {
-     "rate_per_1k": 1.5,
-     "min_payout": 2.5,
-     "max_payout": 15.0,
-     "min_views": 1667
-    },
-    "TikTok": {
-     "rate_per_1k": 1.5,
-     "min_payout": 2.5,
-     "max_payout": 15.0,
-     "min_views": 1667
-    }
-   },
-   "heat": 0.31,
-   "heat_why": [
-    "Wikipedia 2 views a day",
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "The Clip Ship",
-   "subject": "Tony Hawk",
+   "name": "Mediaboost",
+   "subject": "Mediaboost",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -970,24 +1132,28 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.5,
-   "budget_remaining": 538.0,
-   "min_views": 2000,
-   "max_payout": 300.0,
-   "footage": "Drive, Dropbox or Frame.io folder",
+   "budget_remaining": 1000.0,
+   "min_views": 1333,
+   "max_payout": 100.0,
+   "footage": "Reference materials (3 files visible once joined)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is an open family-friendly clipping campaign allowing YouTube with provided footage.",
+   "why": "It is a clipping campaign, YouTube is allowed, footage is provided, it is family friendly and currently open.",
    "hashtags": [
-    "#TonyHawk",
-    "#Skateboarding",
-    "#Shorts"
+    "#ad"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#ad"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Tony Hawk Part 2",
-    "on_screen": "captions and a hook",
+    "focus": "Show founders how to get press and backlinks without an agency",
+    "on_screen": "Link in bio and #ad required",
     "avoid": [
      "politics",
      "crime",
@@ -999,36 +1165,41 @@
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/bd4a3ba0-9dc6-4cde-a89f-0ac902f84643",
-   "id": "bd4a3ba0-9dc6-4cde-a89f-0ac902f84643",
+   "url": "https://contentrewards.com/c/campaigns/d4cb2995-b50f-4155-92f7-791762c72e5d",
+   "id": "d4cb2995-b50f-4155-92f7-791762c72e5d",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
      "rate_per_1k": 1.5,
-     "min_payout": 3.0,
-     "max_payout": 300.0,
-     "min_views": 2000
+     "min_payout": 2.0,
+     "max_payout": 100.0,
+     "min_views": 1333
     },
     "TikTok": {
      "rate_per_1k": 1.5,
-     "min_payout": 3.0,
-     "max_payout": 300.0,
-     "min_views": 2000
+     "min_payout": 2.0,
+     "max_payout": 100.0,
+     "min_views": 1333
     },
     "Instagram": {
      "rate_per_1k": 1.5,
-     "min_payout": 3.0,
-     "max_payout": 300.0,
-     "min_views": 2000
+     "min_payout": 2.0,
+     "max_payout": 100.0,
+     "min_views": 1333
     }
    },
-   "heat": 0.83,
-   "heat_why": [
-    "Wikipedia 2,860 views a day",
-    "8 YouTube search suggestions"
-   ]
+   "heat": 0.0,
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "RoSandBox [Roblox]",
@@ -1041,23 +1212,23 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.8,
-   "budget_remaining": 1692.0,
+   "budget_remaining": 1628.0,
    "min_views": 2000,
    "max_payout": 300.0,
-   "footage": "reference materials provided upon joining",
+   "footage": "Visible once you join",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a family-friendly Roblox clipping campaign that allows YouTube Shorts, provides footage, and is currently open.",
-   "hashtags": [
-    "#RoSandBox",
-    "#Roblox",
-    "#RobloxShorts"
-   ],
+   "why": "It is an open Roblox clipping campaign allowing YouTube Shorts with provided footage and fits all family-friendly criteria.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "RoSandBox viral tool and gameplay",
+    "focus": "RoSandBox viral tool",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -1066,7 +1237,7 @@
    "url": "https://contentrewards.com/c/campaigns/75c7fc13-92ef-4171-93cf-bac7eb2e69aa",
    "id": "75c7fc13-92ef-4171-93cf-bac7eb2e69aa",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1089,7 +1260,15 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Customuse Creators",
@@ -1102,37 +1281,32 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.5,
-   "budget_remaining": 2073.0,
+   "budget_remaining": 1979.0,
    "min_views": 1000,
    "max_payout": 1200.0,
-   "footage": "reference materials provided",
+   "footage": "provided assets",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is an open clipping campaign providing assets, allows YouTube, pays per view, and fits all family-friendly criteria.",
-   "hashtags": [
-    "#Customuse"
-   ],
+   "why": "It is a clipping campaign, allows YouTube, provides assets, is family-friendly, and open.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Customuse assets and tools",
-    "on_screen": "must include captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "focus": "Customuse assets",
+    "on_screen": "",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/628310d1-3a5f-4fe2-b096-4e7eee7af03e",
    "id": "628310d1-3a5f-4fe2-b096-4e7eee7af03e",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1157,7 +1331,15 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "BOTW X Syndicate",
@@ -1170,38 +1352,32 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 3.0,
-   "budget_remaining": 7200.0,
+   "budget_remaining": 7144.0,
    "min_views": 0,
    "max_payout": 200.0,
-   "footage": "proven formats we give you",
+   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video provided upon joining",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#BOTW",
-    "#shorts"
-   ],
+   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is open.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "AI slideshows for BOTW using proven formats",
+    "focus": "BOTW AI slideshows",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/ed675223-69e7-4c20-aada-e3b6ebe50d1e",
    "id": "ed675223-69e7-4c20-aada-e3b6ebe50d1e",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "TikTok": {
@@ -1221,10 +1397,144 @@
    "heat_why": [
     "Wikipedia 5 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
-   "name": "(Parasocial with) Don Benitez",
+   "name": "CoachOne Vids",
+   "subject": "CoachOne",
+   "type": "clipping",
+   "platforms": [
+    "Instagram",
+    "TikTok"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1k": 10.0,
+   "budget_remaining": 1000.0,
+   "min_views": 0,
+   "max_payout": 200.0,
+   "footage": "Visible once you join",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform.",
+   "hashtags": [],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "CoachOne platform and business management for personal trainers",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/922f816d-0d9f-4251-9557-9e41563b1387",
+   "id": "922f816d-0d9f-4251-9557-9e41563b1387",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 10.0,
+     "min_payout": 50.0,
+     "max_payout": 200.0,
+     "min_views": 5000
+    },
+    "Instagram": {
+     "rate_per_1k": 10.0,
+     "min_payout": 50.0,
+     "max_payout": 200.0,
+     "min_views": 5000
+    }
+   },
+   "heat": 0.0,
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
+  },
+  {
+   "name": "Modern Warfare 4 - DMZ Live Clipping",
+   "subject": "Clipping Culture",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram"
+   ],
+   "youtube_allowed": false,
+   "rate_per_1k": 1.75,
+   "budget_remaining": 50000.0,
+   "min_views": 3000,
+   "max_payout": 1500.0,
+   "footage": "official content folder",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed on this campaign.",
+   "hashtags": [],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "DMZ gameplay clips that show how exciting the mode is",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/78bd78e4-0ec3-44d7-9f56-122ff7c374bc",
+   "id": "78bd78e4-0ec3-44d7-9f56-122ff7c374bc",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.75,
+     "min_payout": 5.25,
+     "max_payout": 1500.0,
+     "min_views": 3000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.25,
+     "min_payout": 3.75,
+     "max_payout": 1500.0,
+     "min_views": 3000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "7 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"footage\")"
+  },
+  {
+   "name": "Clip Don's Raids",
    "subject": "Don Benitez",
    "type": "clipping",
    "platforms": [
@@ -1232,39 +1542,32 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.5,
-   "budget_remaining": 844.0,
+   "budget_remaining": 841.0,
    "min_views": 1000,
    "max_payout": 500.0,
-   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video of the creator",
+   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides specific footage links, is family friendly, and is currently open.",
-   "hashtags": [
-    "#DonBenitez",
-    "#TwitchRaids",
-    "#YouTubeShorts"
-   ],
+   "why": "It is a clipping campaign on YouTube with provided footage, family-friendly content, and an open status.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Don Benitez raids and streams",
     "on_screen": "",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/e7d41210-0f7e-4385-87e7-f708d73f6720",
    "id": "e7d41210-0f7e-4385-87e7-f708d73f6720",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1277,7 +1580,15 @@
    "heat": 0.3,
    "heat_why": [
     "6 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"VODs\")"
   },
   {
    "name": "Daimon X Syndicate",
@@ -1289,19 +1600,23 @@
    ],
    "youtube_allowed": false,
    "rate_per_1k": 1.0,
-   "budget_remaining": 3469.0,
+   "budget_remaining": 2853.0,
    "min_views": 0,
    "max_payout": 300.0,
-   "footage": "proven VIRAL formats we give you",
+   "footage": "reference materials provided",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform for this campaign.",
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed as a platform for this campaign.",
    "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Post AI slideshows for Daimon using proven viral formats",
+    "focus": "AI slideshows for Daimon",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -1310,7 +1625,7 @@
    "url": "https://contentrewards.com/c/campaigns/bb7a286d-c388-4550-b2c2-8beca19cd6d0",
    "id": "bb7a286d-c388-4550-b2c2-8beca19cd6d0",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "TikTok": {
@@ -1328,61 +1643,89 @@
    },
    "heat": 0.53,
    "heat_why": [
-    "Wikipedia 538 views a day",
+    "Wikipedia 533 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
-   "name": "Call of Duty MW4 عربي V2",
-   "subject": "Call of Duty MW4",
+   "name": "CG5 Concert x +1 Speed Keyboard Escape [ROBLOX]",
+   "subject": "CG5",
    "type": "clipping",
    "platforms": [
     "TikTok",
-    "Instagram"
+    "Instagram",
+    "YouTube"
    ],
-   "youtube_allowed": false,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 21507.0,
+   "youtube_allowed": true,
+   "rate_per_1k": 1.5,
+   "budget_remaining": 2100.0,
    "min_views": 0,
-   "max_payout": 300.0,
-   "footage": "Reference materials provided",
+   "max_payout": 250.0,
+   "footage": "Drive, Dropbox or Frame.io folder",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform for this campaign.",
-   "hashtags": [],
+   "why": "YouTube Shorts are not paid on this campaign. It is a family-friendly Roblox gaming clipping campaign with YouTube allowed and footage provided.",
+   "hashtags": [
+    "#Roblox",
+    "#CG5"
+   ],
    "ends": "",
+   "mode": "clips",
+   "sound": "WAR",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Call of Duty MW4 GCC market",
+    "focus": "CG5 virtual concert inside +1 Speed Keyboard Escape on Roblox using song WAR",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/0afd04db-e183-4411-9957-0b890ef272b5",
-   "id": "0afd04db-e183-4411-9957-0b890ef272b5",
+   "url": "https://contentrewards.com/c/campaigns/9263d251-d194-4309-9c16-2f1b0d80372e",
+   "id": "9263d251-d194-4309-9c16-2f1b0d80372e",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "TikTok": {
-     "rate_per_1k": 1.0,
-     "min_payout": 2.0,
-     "max_payout": 300.0,
-     "min_views": 2000
+     "rate_per_1k": 1.5,
+     "min_payout": 1.5,
+     "max_payout": 250.0,
+     "min_views": 1000
     },
     "Instagram": {
-     "rate_per_1k": 1.0,
-     "min_payout": 3.0,
-     "max_payout": 150.0,
-     "min_views": 3000
+     "rate_per_1k": 1.5,
+     "min_payout": 1.5,
+     "max_payout": 250.0,
+     "min_views": 1000
     }
    },
-   "heat": 0.3,
+   "heat": 0.33,
    "heat_why": [
+    "Wikipedia 10 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "WAR",
+    "hashtags": [
+     "#Roblox",
+     "#CG5"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Minogue For MA",
@@ -1394,22 +1737,23 @@
     "YouTube"
    ],
    "youtube_allowed": true,
+   "rate_per_1.50": 1.5,
    "rate_per_1k": 1.5,
-   "budget_remaining": 1834.0,
+   "budget_remaining": 1804.0,
    "min_views": 1000,
    "max_payout": 150.0,
-   "footage": "Reference materials provided",
+   "footage": "Drive, Dropbox or Frame.io folder, named stream or YouTube video",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It is a political campaign, which violates the no politics rule.",
-   "hashtags": [
-    "#MinogueForMA",
-    "#Massachusetts",
-    "#Governor"
-   ],
+   "why": "It violates the rule against politics.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Mike Minogue's message as he runs for Governor of Massachusetts",
     "on_screen": "",
@@ -1420,7 +1764,7 @@
    "url": "https://contentrewards.com/c/campaigns/210e40be-92ca-4b3a-912f-231944511254",
    "id": "210e40be-92ca-4b3a-912f-231944511254",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1442,10 +1786,18 @@
      "min_views": 1000
     }
    },
-   "heat": 0.15,
+   "heat": 0.16,
    "heat_why": [
-    "Wikipedia 239 views a day"
-   ]
+    "Wikipedia 264 views a day"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "2 Bears 1 Cave Clipping October",
@@ -1457,21 +1809,27 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.0,
-   "budget_remaining": 2288.0,
+   "budget_remaining": 1868.0,
    "min_views": 2000,
    "max_payout": 200.0,
-   "footage": "Reference materials 3 files",
+   "footage": "Ep. 344",
    "needs_application": false,
    "status": "open",
    "family_friendly": false,
    "fits": false,
-   "why": "It does not fit because 2 Bears 1 Cave is an adult comedy podcast that frequently contains explicit language and adult content, failing the family-friendly requirement.",
+   "why": "It does not fit because comedy podcasts like 2 Bears 1 Cave often contain adult content and profanity, failing the family-friendly requirement.",
    "hashtags": [
     "#2BearsWeekly"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#2BearsWeekly"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Best moments from Ep. 344",
+    "focus": "best moments from Ep. 344",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -1480,7 +1838,7 @@
    "url": "https://contentrewards.com/c/campaigns/295e9879-4464-4a31-975d-1c7b3a80d359",
    "id": "295e9879-4464-4a31-975d-1c7b3a80d359",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1499,19 +1857,29 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#2BearsWeekly"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"episode\")"
   },
   {
    "name": "Jesus Hernandez Clipping",
    "subject": "Jesus Hernandez",
    "type": "clipping",
    "platforms": [
-    "Instagram",
-    "YouTube"
+    "YouTube",
+    "Instagram"
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.0,
-   "budget_remaining": 1595.0,
+   "budget_remaining": 1590.0,
    "min_views": 0,
    "max_payout": 100.0,
    "footage": "Drive and Youtube",
@@ -1521,12 +1889,18 @@
    "fits": false,
    "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
    "hashtags": [
-    "#jeesusdez"
+    "@jeesusdez"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "@jeesusdez"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Jesus must appear in at least 85% of the video",
-    "on_screen": "Must include text: Sigueme en mi cuenta principal @jeesusdez",
+    "focus": "Jesus debe aparecer en minimo el 85% del video",
+    "on_screen": "Sigueme en mi cuenta principal @jeesusdez",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
@@ -1534,7 +1908,7 @@
    "url": "https://contentrewards.com/c/campaigns/12f4b8df-f1f5-453e-b8d0-31110a13c808",
    "id": "12f4b8df-f1f5-453e-b8d0-31110a13c808",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "Instagram": {
@@ -1548,10 +1922,20 @@
    "heat_why": [
     "Wikipedia 1 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#jeesusdez"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
-   "name": "Drink No Days Off: Fight Week",
+   "name": "Drink No Days Off",
    "subject": "Drink No Days Off",
    "type": "clipping",
    "platforms": [
@@ -1564,19 +1948,26 @@
    "budget_remaining": 1650.0,
    "min_views": 0,
    "max_payout": 250.0,
-   "footage": "Drive, Dropbox or Frame.io folder, a named stream or YouTube video of the creator",
+   "footage": "Drive, Dropbox or Frame.io folder",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed among the allowed platforms for this campaign.",
+   "why": "YouTube Shorts are not paid on this campaign. YouTube is not listed as an allowed platform.",
    "hashtags": [
     "#NoDaysOff",
     "#ad"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#NoDaysOff",
+    "#ad"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Drink No Days Off, the Official Water of UFC & Zuffa Boxing, everywhere at the Nov 7 fight with Shane Mosley",
+    "focus": "Drink No Days Off everywhere at the Nov 7 fight with Shane Mosley",
     "on_screen": "Product on screen in the first 3 seconds",
     "avoid": [
      "broadcast fight footage"
@@ -1587,7 +1978,7 @@
    "url": "https://contentrewards.com/c/campaigns/8a28777e-6d77-4d77-8586-91b589aa44ca",
    "id": "8a28777e-6d77-4d77-8586-91b589aa44ca",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "TikTok": {
@@ -1604,7 +1995,17 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#NoDaysOff"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"footage\")"
   },
   {
    "name": "Fliff | NFL Season Kickoff",
@@ -1617,25 +2018,31 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.75,
-   "budget_remaining": 1715.0,
+   "budget_remaining": 1714.0,
    "min_views": 1333,
    "max_payout": 250.0,
    "footage": "Fliff Assets & Guidelines",
    "needs_application": true,
-   "status": "open",
-   "family_friendly": false,
+   "status": "application",
+   "family_friendly": true,
    "fits": false,
-   "why": "It involves gambling (Fliff social sportsbook), which violates the family-friendly and no-gambling criteria.",
+   "why": "It involves gambling/sports betting, which violates the family-friendly and content restrictions.",
    "hashtags": [
     "#Fliff",
     "#NFL"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "#Fliff"
+   ],
+   "on_camera": false,
    "rules": {
     "focus": "American Football and NFL content",
-    "on_screen": "Required Fliff bumper, CTA, promo code, and referral link",
+    "on_screen": "Required Fliff bumper, CTA, and promo code",
     "avoid": [
-     "violating guidelines"
+     "non-compliant guidelines"
     ],
     "min_s": 15,
     "max_s": 60
@@ -1643,7 +2050,7 @@
    "url": "https://contentrewards.com/c/campaigns/fb91efff-025b-4d50-b88f-55d67cf76c7a",
    "id": "fb91efff-025b-4d50-b88f-55d67cf76c7a",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1668,162 +2075,56 @@
    "heat": 0.3,
    "heat_why": [
     "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "BABEL - AKIRA | Night Drive/City/Rave/Meme+ Edits",
-   "subject": "BABEL",
-   "type": "clipping",
-   "platforms": [
-    "Instagram",
-    "TikTok"
    ],
-   "youtube_allowed": false,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 1250.0,
-   "min_views": 0,
-   "max_payout": 150.0,
-   "footage": "Reference materials 2 files",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. YouTube is not allowed for this campaign as it only specifies TikTok and IG.",
-   "hashtags": [
-    "#akira",
-    "#babel"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "night drives+ neon city, techno/rave POV, festival crowds & iconic movie/TV meme scenes",
-    "on_screen": "Hook in 2s, hit the drop",
-    "avoid": [
-     "artist footage",
-     "anime"
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#Fliff",
+     "#NFL"
     ],
-    "min_s": 15,
-    "max_s": 15
+    "ad": true
    },
-   "url": "https://contentrewards.com/c/campaigns/78898bcc-a7dd-458b-94d4-9ffec8e68a0c",
-   "id": "78898bcc-a7dd-458b-94d4-9ffec8e68a0c",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {
-    "TikTok": {
-     "rate_per_1k": 1.0,
-     "min_payout": 1.0,
-     "max_payout": 150.0,
-     "min_views": 1000
-    },
-    "Instagram": {
-     "rate_per_1k": 1.0,
-     "min_payout": 1.0,
-     "max_payout": 150.0,
-     "min_views": 1000
-    }
-   },
-   "heat": 0.3,
-   "heat_why": [
-    "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "FALL / HALLOWEEN Music Campaign - Late Checkout",
-   "subject": "Passive",
-   "type": "clipping",
-   "platforms": [
-    "TikTok",
-    "Instagram",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.75,
-   "budget_remaining": 1000.0,
-   "min_views": 0,
-   "max_payout": 25.0,
-   "footage": "provided",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "#LateCheckout",
-    "#FallMusic",
-    "#HalloweenMusic"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Fall, Halloween, or nostalgia themed music clips promoting Late Checkout",
-    "on_screen": "",
-    "avoid": [],
-    "min_s": 15,
-    "max_s": 60
-   },
-   "url": "https://contentrewards.com/c/campaigns/3b030ac1-c88c-45c4-b45a-80cf31a26734",
-   "id": "3b030ac1-c88c-45c4-b45a-80cf31a26734",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {
-    "TikTok": {
-     "rate_per_1k": 0.75,
-     "min_payout": 1.5,
-     "max_payout": 25.0,
-     "min_views": 2000
-    },
-    "Instagram": {
-     "rate_per_1k": 0.75,
-     "min_payout": 1.5,
-     "max_payout": 25.0,
-     "min_views": 2000
-    }
-   },
-   "heat": 0.35,
-   "heat_why": [
-    "Wikipedia 24 views a day",
-    "8 YouTube search suggestions"
-   ]
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Agent Arcade Slideshows",
    "subject": "Agent Arcade",
-   "type": "ugc",
+   "type": "clipping",
    "platforms": [
     "YouTube",
     "TikTok",
     "Instagram"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 972.0,
+   "rate_per_1.0": 1.0,
+   "budget_remaining": 969.0,
    "min_views": 1000,
    "max_payout": 250.0,
-   "footage": "Drive, Dropbox or Frame.io folder",
+   "footage": "Reference materials provided",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "It involves money or investing advice (AI trades for you), which violates the channel's rules.",
-   "hashtags": [
-    "#AgentArcade",
-    "#AITrading"
-   ],
+   "why": "It involves trading/money advice, violating the family-friendly and content safety rules.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Make TikTok slideshows for Agent Arcade",
+    "focus": "TikTok slideshows for Agent Arcade",
     "on_screen": "",
-    "avoid": [
-     "money or investing advice"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/ee17b975-4f4e-4c22-9523-b524b8b53a95",
    "id": "ee17b975-4f4e-4c22-9523-b524b8b53a95",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1845,8 +2146,17 @@
      "min_views": 1000
     }
    },
+   "rate_per_1k": 1.0,
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "ETCréations OCTOBRE 26",
@@ -1867,11 +2177,15 @@
    "status": "application",
    "family_friendly": true,
    "fits": false,
-   "why": "It requires an application and focuses on fashion, but needs_application is true making it not immediately open for direct clipping without approval.",
+   "why": "It requires an application and the content/brief involves fashion which might not strictly adhere to family-friendly or general guidelines without review, but mainly status is application.",
    "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Fashion content using provided Canva links",
+    "focus": "Fashion and Creator content",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -1880,7 +2194,7 @@
    "url": "https://contentrewards.com/c/campaigns/2033c62a-d8b3-4c35-ad95-c6a51e03c1e2",
    "id": "2033c62a-d8b3-4c35-ad95-c6a51e03c1e2",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1903,7 +2217,15 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
    "name": "Shuffle Streamers - Clipping",
@@ -1917,7 +2239,7 @@
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.5,
-   "budget_remaining": 428.0,
+   "budget_remaining": 407.0,
    "min_views": 3000,
    "max_payout": 300.0,
    "footage": "CONTENT DRIVE",
@@ -1925,11 +2247,17 @@
    "status": "open",
    "family_friendly": false,
    "fits": false,
-   "why": "It does not fit because Shuffle is a gambling/casino platform, violating the family-friendly and gambling restrictions.",
+   "why": "It promotes gambling (Shuffle), which violates the family-friendly and gambling restrictions.",
    "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "Get a $1,000 deposit match on Shuffle"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Shuffle streamers content (Gaming, Memes)",
+    "focus": "Shuffle streamers content",
     "on_screen": "Name the streamer and tie back to Shuffle",
     "avoid": [
      "gore",
@@ -1943,7 +2271,7 @@
    "url": "https://contentrewards.com/c/campaigns/a900b95b-85be-4113-9d74-5bdb6a6a0952",
    "id": "a900b95b-85be-4113-9d74-5bdb6a6a0952",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -1966,10 +2294,20 @@
     }
    },
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#Geta1000depositmatchonShuffle"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Streamers\")"
   },
   {
-   "name": "TDCTrades Finsihed Edits",
+   "name": "STRATFORGE - TDCTrades Finsihed Edits",
    "subject": "TDCTrades",
    "type": "clipping",
    "platforms": [
@@ -1978,21 +2316,25 @@
     "YouTube"
    ],
    "youtube_allowed": true,
-   "rate_per_1k": 1.0,
-   "budget_remaining": 507.0,
+   "rate_per_1.0k": 1.0,
+   "budget_remaining": 280.0,
    "min_views": 1000,
    "max_payout": 100.0,
-   "footage": "Drive folder",
+   "footage": "Drive folder with finished edits",
    "needs_application": false,
    "status": "open",
    "family_friendly": false,
    "fits": false,
-   "why": "It violates the family-friendly and money/investing advice criteria because it involves 'TDCTrades'.",
+   "why": "It violates the family-friendly and no money/investing advice constraints (TDCTrades).",
    "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "finished edits from Drive folder",
-    "on_screen": "matching captions",
+    "focus": "TDCTrades finished edits",
+    "on_screen": "",
     "avoid": [],
     "min_s": 15,
     "max_s": 60
@@ -2000,7 +2342,7 @@
    "url": "https://contentrewards.com/c/campaigns/2e20e031-5a2e-49bc-a07b-176419319610",
    "id": "2e20e031-5a2e-49bc-a07b-176419319610",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "YouTube": {
@@ -2022,112 +2364,56 @@
      "min_views": 1000
     }
    },
+   "rate_per_1k": 1.0,
    "heat": 0.0,
-   "heat_why": []
-  },
-  {
-   "name": "WMW CLIPPING",
-   "subject": "WatchMeWin",
-   "type": "clipping",
-   "platforms": [
-    "Instagram",
-    "TikTok",
-    "YouTube"
-   ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.8,
-   "budget_remaining": 464.0,
-   "min_views": 0,
-   "max_payout": 80.0,
-   "footage": "Reference materials (3 files) provided upon joining",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. It is an open clipping campaign allowing YouTube with provided footage and family-friendly entertainment content.",
-   "hashtags": [
-    "#WatchMeWin",
-    "#Shorts",
-    "#Clipping"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Entertainment content from WatchMeWin",
-    "on_screen": "Use captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
    },
-   "url": "https://contentrewards.com/c/campaigns/2eae3b20-87f5-4fa2-9bc3-0c2bb62facc5",
-   "id": "2eae3b20-87f5-4fa2-9bc3-0c2bb62facc5",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {
-    "TikTok": {
-     "rate_per_1k": 0.5,
-     "min_payout": 1.0,
-     "max_payout": 50.0,
-     "min_views": 2000
-    },
-    "Instagram": {
-     "rate_per_1k": 0.8,
-     "min_payout": 1.0,
-     "max_payout": 80.0,
-     "min_views": 1250
-    }
-   },
-   "heat": 0.0,
-   "heat_why": []
+   "window": 0,
+   "daily_why": "footage is needed (\"clip from\")"
   },
   {
    "name": "Jesus Hernandez Clipping",
    "subject": "Jesus Hernandez",
    "type": "clipping",
    "platforms": [
-    "YouTube",
-    "Instagram"
+    "Instagram",
+    "YouTube"
    ],
    "youtube_allowed": true,
    "rate_per_1k": 1.0,
-   "budget_remaining": 235.0,
+   "budget_remaining": 186.0,
    "min_views": 0,
    "max_payout": 85.0,
-   "footage": "Drive and Youtube",
+   "footage": "Drive, Youtube, Instagram",
    "needs_application": true,
    "status": "open",
    "family_friendly": true,
    "fits": false,
-   "why": "YouTube Shorts are not paid on this campaign. It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is currently open.",
-   "hashtags": [
-    "@jeesusdez"
-   ],
+   "why": "YouTube Shorts are not paid on this campaign. It is a family-friendly clipping campaign with provided footage, YouTube allowed, and open status.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [
+    "Sigueme en mi cuenta principal @jeesusdez"
+   ],
+   "on_camera": false,
    "rules": {
-    "focus": "Jesus must appear in at least 85% of the video",
+    "focus": "Jesus Hernandez must appear in minimum 85% of the video",
     "on_screen": "Sigueme en mi cuenta principal @jeesusdez",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/e621e0b4-fca8-4ff8-a655-d7a580568459",
    "id": "e621e0b4-fca8-4ff8-a655-d7a580568459",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {
     "Instagram": {
@@ -2141,34 +2427,50 @@
    "heat_why": [
     "Wikipedia 1 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#Siguemeenmicuentaprincipaljeesusdez"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
-   "name": "Double Coverage Podcast",
-   "subject": "Double Coverage Podcast",
+   "name": "HardScope x ClipFarm",
+   "subject": "HardScope shows (Zach Justice, MatCrackz, N3on)",
    "type": "clipping",
    "platforms": [
-    "YouTube"
+    "YouTube",
+    "Instagram",
+    "Facebook"
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.0,
-   "budget_remaining": 5000.0,
+   "budget_remaining": 3700.0,
    "min_views": 0,
-   "max_payout": 5000.0,
-   "footage": "provided via campaign links",
+   "max_payout": 4700.0,
+   "footage": "HardScope campaign folder / shows provided",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is an open clipping campaign allowing YouTube shorts with provided footage and fits all family-friendly criteria.",
+   "why": "It is a clipping campaign with provided footage, allows YouTube, is family friendly, and is currently open.",
    "hashtags": [
-    "#DoubleCoverage",
-    "#Podcast"
+    "#ClipFarm",
+    "#HardScope"
    ],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Podcast highlights and interviews",
-    "on_screen": "captions and a hook",
+    "focus": "HardScope show highlights (relationship issues, collectibles, fitness transformation)",
+    "on_screen": "",
     "avoid": [
      "politics",
      "crime",
@@ -2180,18 +2482,79 @@
     "min_s": 15,
     "max_s": 60
    },
-   "url": "https://contentrewards.com/c/campaigns/1e2d4910-8274-4236-9a9c-85a42f68a1ad?group=1",
-   "id": "1e2d4910-8274-4236-9a9c-85a42f68a1ad",
+   "url": "https://contentrewards.com/c/campaigns/db7f38ed-20ee-40aa-aa7c-658592ddcbf1?group=1",
+   "id": "db7f38ed-20ee-40aa-aa7c-658592ddcbf1",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {},
    "heat": 0.0,
-   "heat_why": []
+   "heat_why": [],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#ClipFarm",
+     "#HardScope"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Episode\")"
   },
   {
-   "name": "Superstore",
-   "subject": "Supersto.re",
+   "name": "Ramp Tony Hawk",
+   "subject": "Tony Hawk and Bam Margera",
+   "type": "clipping",
+   "platforms": [
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_1k": 0.0,
+   "budget_remaining": 1361.0,
+   "min_views": 0,
+   "max_payout": 0.0,
+   "footage": "Ramp show starring Tony Hawk and Bam Margera",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "Features Bam Margera whose content is often not strictly family-friendly.",
+   "hashtags": [],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "Tony Hawk and Bam Margera show set in 2006",
+    "on_screen": "",
+    "avoid": [],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/ce9f2373-a374-491e-8a51-3684d030152a?group=1",
+   "id": "ce9f2373-a374-491e-8a51-3684d030152a",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {},
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Episode\")"
+  },
+  {
+   "name": "Call of Duty MW4 عربي V2",
+   "subject": "Call of Duty MW4",
    "type": "clipping",
    "platforms": [
     "TikTok",
@@ -2199,22 +2562,102 @@
     "YouTube"
    ],
    "youtube_allowed": true,
-   "rate_per_10k": 10.0,
+   "rate_per_1.0": 1.0,
+   "budget_remaining": 21027.0,
+   "min_views": 1000,
+   "max_payout": 300.0,
+   "footage": "Reference materials (locked)",
+   "needs_application": false,
+   "status": "open",
+   "family_friendly": true,
+   "fits": false,
+   "why": "YouTube Shorts are not paid on this campaign. It is a gaming clipping campaign that allows YouTube and provides footage, fitting all family-friendly criteria.",
+   "hashtags": [
+    "#CallOfDutyMW4",
+    "#Gaming"
+   ],
+   "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
+   "rules": {
+    "focus": "Call of Duty MW4 gameplay",
+    "on_screen": "",
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money advice",
+     "adult content",
+     "gambling"
+    ],
+    "min_s": 15,
+    "max_s": 60
+   },
+   "url": "https://contentrewards.com/c/campaigns/0afd04db-e183-4411-9957-0b890ef272b5",
+   "id": "0afd04db-e183-4411-9957-0b890ef272b5",
+   "platform": "Content Rewards",
+   "judged": "2026-10-26T09:20+00:00",
+   "model": "gemini-3.5-flash-lite",
+   "terms": {
+    "TikTok": {
+     "rate_per_1k": 1.0,
+     "min_payout": 2.0,
+     "max_payout": 300.0,
+     "min_views": 2000
+    },
+    "Instagram": {
+     "rate_per_1k": 1.0,
+     "min_payout": 3.0,
+     "max_payout": 150.0,
+     "min_views": 3000
+    }
+   },
+   "heat": 0.3,
+   "heat_why": [
+    "8 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [
+     "#CallOfDutyMW4",
+     "#Gaming"
+    ],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
+  },
+  {
+   "name": "Superstore",
+   "subject": "Superstore",
+   "type": "clipping",
+   "platforms": [
+    "TikTok",
+    "Instagram",
+    "YouTube"
+   ],
+   "youtube_allowed": true,
+   "rate_per_10.0": 10.0,
    "budget_remaining": 1000.0,
    "min_views": 0,
    "max_payout": 0.0,
-   "footage": "Reference materials provided upon joining",
+   "footage": "reference materials provided upon joining",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly, and is open.",
-   "hashtags": [
-    "#superstore"
-   ],
+   "why": "It is a clipping campaign, allows YouTube, provides footage, is family friendly and open with a $10 rate per post.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Superstore features and product",
+    "focus": "Superstore online shop features",
     "on_screen": "",
     "avoid": [],
     "min_s": 15,
@@ -2223,14 +2666,25 @@
    "url": "https://contentrewards.com/c/campaigns/5ad699cd-7aed-44f7-9b57-489fdd6e2628",
    "id": "5ad699cd-7aed-44f7-9b57-489fdd6e2628",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {},
-   "heat": 0.0,
-   "heat_why": []
+   "heat": 0.35,
+   "heat_why": [
+    "Wikipedia 28 views a day",
+    "8 YouTube search suggestions"
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed (\"Reference materials\")"
   },
   {
-   "name": "Lacy 30 Day Campaign",
+   "name": "$30,000 LACY 30 DAY CAMPAIGN",
    "subject": "Lacy",
    "type": "clipping",
    "platforms": [
@@ -2243,44 +2697,59 @@
    "rate_per_1k": 0.0,
    "budget_remaining": 30000.0,
    "min_views": 0,
-   "max_payout": 30000.0,
+   "max_payout": 0.0,
    "footage": "Lacy's social media accounts (TikTok, IG, YT, Twitter/X)",
    "needs_application": false,
    "status": "open",
    "family_friendly": true,
    "fits": true,
-   "why": "It is a clipping campaign, allows YouTube, provides source footage, is family friendly, and is open.",
-   "hashtags": [
-    "#Lacy"
-   ],
+   "why": "It is a clipping campaign allowing YouTube, provides source footage, has an open status, and is family-friendly.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
     "focus": "Clip content from Lacy's social media accounts",
     "on_screen": "",
-    "avoid": [],
+    "avoid": [
+     "politics",
+     "crime",
+     "health claims",
+     "money or investing advice",
+     "adult content",
+     "gambling"
+    ],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/4479e5e2-9a00-489e-8b0c-345834f37cc7?group=1",
    "id": "4479e5e2-9a00-489e-8b0c-345834f37cc7",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {},
    "heat": 0.35,
    "heat_why": [
     "Wikipedia 21 views a day",
     "8 YouTube search suggestions"
-   ]
+   ],
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
+   },
+   "window": 0,
+   "daily_why": "footage is needed"
   },
   {
    "name": "$10,000 Kai Cenat Campaign",
    "subject": "Kai Cenat",
    "type": "clipping",
    "platforms": [
-    "YouTube",
-    "Instagram",
-    "Facebook"
+    "YouTube"
    ],
    "youtube_allowed": true,
    "rate_per_1k": 0.0,
@@ -2292,86 +2761,41 @@
    "status": "open",
    "family_friendly": false,
    "fits": false,
-   "why": "Kai Cenat content often contains swearing and adult themes, making it unsuitable for a family-friendly channel.",
-   "hashtags": [
-    "#kaicenat",
-    "#shorts"
-   ],
+   "why": "It does not fit because Kai Cenat's content often includes mature language and themes, failing the family-friendly requirement.",
+   "hashtags": [],
    "ends": "",
+   "mode": "clips",
+   "sound": "",
+   "must_carry": [],
+   "on_camera": false,
    "rules": {
-    "focus": "Kai Cenat streams and moments",
-    "on_screen": "Use captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
+    "focus": "Kai Cenat stream moments",
+    "on_screen": "",
+    "avoid": [],
     "min_s": 15,
     "max_s": 60
    },
    "url": "https://contentrewards.com/c/campaigns/44a3ffcb-d4a1-492b-94a4-704919950246",
    "id": "44a3ffcb-d4a1-492b-94a4-704919950246",
    "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
+   "judged": "2026-10-26T09:20+00:00",
    "model": "gemini-3.5-flash-lite",
    "terms": {},
-   "heat": 0.76,
+   "heat": 1.07,
    "heat_why": [
-    "Wikipedia 2,148 views a day",
+    "Wikipedia 2,171 views a day",
+    "1 of today's top stream-clip posts on Reddit",
     "8 YouTube search suggestions"
-   ]
-  },
-  {
-   "name": "Double Coverage Podcast",
-   "subject": "Double Coverage Podcast",
-   "type": "clipping",
-   "platforms": [
-    "YouTube",
-    "Instagram",
-    "Facebook"
    ],
-   "youtube_allowed": true,
-   "rate_per_1k": 0.0,
-   "budget_remaining": 5000.0,
-   "min_views": 0,
-   "max_payout": 5000.0,
-   "footage": "provided via links",
-   "needs_application": false,
-   "status": "open",
-   "family_friendly": true,
-   "fits": true,
-   "why": "It is a clipping campaign allowing YouTube Shorts with provided footage and remaining budget.",
-   "hashtags": [
-    "#DoubleCoverage",
-    "#Podcast",
-    "#Shorts"
-   ],
-   "ends": "",
-   "rules": {
-    "focus": "Double Coverage Podcast content",
-    "on_screen": "captions and a hook",
-    "avoid": [
-     "politics",
-     "crime",
-     "health claims",
-     "money or investing advice",
-     "adult content",
-     "gambling"
-    ],
-    "min_s": 15,
-    "max_s": 60
+   "daily": false,
+   "carry": {
+    "sound": "",
+    "hashtags": [],
+    "ad": true
    },
-   "url": "https://contentrewards.com/c/campaigns/b1b415db-5984-4a47-9d5b-b1f52224b1a6?group=1",
-   "id": "b1b415db-5984-4a47-9d5b-b1f52224b1a6",
-   "platform": "Content Rewards",
-   "judged": "2026-10-25T09:04+00:00",
-   "model": "gemini-3.5-flash-lite",
-   "terms": {},
-   "heat": 0.0,
-   "heat_why": []
+   "window": 0,
+   "daily_why": "footage is needed (\"Streamer\")"
   }
- ]
+ ],
+ "daily": []
 }

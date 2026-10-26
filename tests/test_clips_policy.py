@@ -36,6 +36,7 @@ def world(now=BASE, channels=("clips", "gaming", "irl")):
     C.ROOT, C.PLANS, C.STATE, C.OUT = root, root / "clips" / "plans", root / "clips" / "state", root / "clips" / "out"
     C.CEILING = C.STATE / "ceiling.json"
     C.CFG = json.loads(json.dumps(REAL)); C.NOW = now
+    C.CFG["youtube_off"] = {}      # every channel starts with YouTube on: the live stop rule's decisions (gaming and clips off since 25 October) are not this test's starting point
     (root / "clips" / "campaigns.json").write_text(json.dumps(C.CFG))
     LOG.clear(); ISSUES.clear()
     return root
@@ -411,6 +412,6 @@ for text in (src[src.index("# ----- one creator or niche per channel"):src.index
     assert not any(ch in text for ch in bad)
 for k in ("clips_window_days", "clips_retest_days", "clips_stop_median", "clips_stop_clips", "clips_stop_days", "clips_ig_only_per_day"):
     assert isinstance(REAL[k], int) and REAL[k] > 0, k
-assert REAL["youtube_off"] == {}
+assert isinstance(REAL["youtube_off"], dict) and all(dt.date.fromisoformat(str(v)) for v in REAL["youtube_off"].values()), REAL["youtube_off"]    # channels the stop rule switched off, each with the day it did
 print("13 text ok")
 print("clips policy ok")

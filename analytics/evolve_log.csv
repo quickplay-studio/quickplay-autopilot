@@ -1,3 +1,4 @@
 date,action,factor,arms,source,verdict,effect,note
 2026-10-26,bootstrap,,,,,,round copied from config test_round (11 factors)
 2026-10-26,open,gene:g001,a vs b,gene,,,"Famous name as first words: Open with the full name of the best-known person, band, game or brand in the fact pack as the very first words of the script, before any number, question or setup. (by claude:opus)"
+2026-10-26,open,gene:g002,a vs b,gene,,,"Headline number in sentence one: Put the single most striking number from the fact pack (a time, size, age, rank or count) in the first sentence, attached to what it measures. (by claude:opus)"

@@ -1,43 +1,45 @@
-# Quickplay weekly: Wednesday 14 October to Wednesday 21 October
+# Quickplay weekly: Monday 19 October to Monday 26 October
 
 ## The week in numbers
-- Shorts posted: 76 (the week before: 0).
-- YouTube views gained: 10,433.
-- Median views per Short, 24 hours after posting: 112.
-- Subscribers: 7 of 1,000. YPP: 1,518 of 10,000,000 Shorts views in 90 days, about 111,057 a day needed from now, apply before 2027-02-01 (103 days).
-- Best this week: Short "The K-pop group from BLACKPINK's producer 🎤" 1,176 views (Music, legacy,  hook); QD-034 "Olivia Rodrigo vs Chappell Roan, hosted by David Byrne 🎤" 927 views (Music, one_detail, statement hook); QD-032 "Bohemian Rhapsody: too long for radio? 🎸" 867 views (Music, timeline, statement hook).
+- Shorts posted: 131 (the week before: 29).
+- YouTube views gained: 26,061 (the week before: 489).
+- Median views per Short, 24 hours after posting: 39 (the week before: 119).
+- Subscribers: 16 of 1,000. YPP: 5,793 of 10,000,000 Shorts views in 90 days, about 111,001 a day needed from now, apply before 2027-02-01 (98 days).
+- Best this week: QD-032 "Bohemian Rhapsody: too long for radio? 🎸" 1,237 views (Music, timeline, statement hook); QD-076 "How Barbara Palvin was discovered at age 13 ✨" 1,166 views (Entertainment, timeline, statement hook); QD-128 "Jenna Ortega: stepping away from television 📺" 1,092 views (Film, news_explained, statement hook).
 
 ## Is the optimisation working
-- Shorts that followed the data's rulings: 3 of 76 this week (0 of 0 the week before); their median views 209 against 110 for the rest (1.9x).
-- Rulings in force: 4 push, 7 cut back, 0 stopped (analytics/drivers.csv).
+- Shorts that followed the data's rulings: 60 of 131 this week (12 of 29 the week before); their median views 92 against 18 for the rest (5.1x).
+- Rulings in force: 11 push, 8 cut back, 0 paused, 0 being retested (analytics/drivers.csv).
 
 ## What changed this week
-- 2026-10-21: Lean towards category "Sport" (1.37x typical views over 6 Shorts (average viewed 51% vs 42% typical)).
-- 2026-10-21: Lean towards format "one_detail" (1.71x typical views over 7 Shorts (likes per 1,000 views 15 vs 10 typical)).
-- 2026-10-21: Use less format "news_explained" (0.73x typical views over 6 Shorts (likes per 1,000 views 7 vs 10 typical)).
-- 2026-10-21: Lean towards hook style "statement" (1.3x typical views over 6 Shorts (likes per 1,000 views 17 vs 10 typical)).
-- 2026-10-21: Use less hook style "number" (0.77x typical views over 10 Shorts).
-- 2026-10-20: Lean towards category "Film" (1.27x typical views over 5 Shorts (likes per 1,000 views 18 vs 9 typical; engaged views 50% vs 32% typical)).
-- 2026-10-20: Use less posting time (uk) "20:00 to 22:59" (0.63x typical views over 6 Shorts (likes per 1,000 views 0 vs 9 typical)).
-- 2026-10-20: Use less category "Gaming" (0.75x typical views over 8 Shorts (likes per 1,000 views 4 vs 13 typical; engaged views 25% vs 32% typical)).
-- 2026-10-20: Use less format "legacy" (0.62x typical views over 26 Shorts (likes per 1,000 views 8 vs 13 typical)).
-- 2026-10-20: Lean towards posting time (uk) "08:00 to 10:59" (1.8x typical views over 6 Shorts (likes per 1,000 views 18 vs 13 typical; average viewed 58% vs 51% typical)).
-- 2026-10-20: Use less posting time (uk) "14:00 to 16:59" (0.78x typical views over 6 Shorts (likes per 1,000 views 1 vs 13 typical; engaged views 26% vs 32% typical)).
-- 2026-10-20: Use less posting time (uk) "17:00 to 19:59" (0.62x typical views over 6 Shorts (average viewed 45% vs 51% typical)).
-- 2026-10-20: Use less title "statement" (0.73x typical views over 18 Shorts (likes per 1,000 views 1 vs 13 typical)).
-- 2026-10-19: Back to 24 Shorts a day (writer runs: morning 12, evening 6, afternoon 6; a slot every 40 minutes from 07:30 UK) (Charlie asked for 24 a day again).
-- 2026-10-19: A video plays softly blurred and darkened behind every Short (2 to 4 stock clips matched to the topic; Pexels first, then Pixabay, NASA for space); photos sit on top as cards, real video of the subject still plays full screen (Charlie asked for moving video behind the Shorts so they look far better).
-- 2026-10-19: Lean towards posting time (uk) "11:00 to 13:59" (1.61x typical views over 5 Shorts (likes per 1,000 views 13 vs 6 typical)).
-- 2026-10-19: Use less posting time (uk) "17:00 to 19:59" (0.8x typical views over 6 Shorts (average viewed 45% vs 51% typical)).
-- 2026-10-18: Follow up breakouts within hours (analytics/breakouts.csv, one follow-up per run) (Shorts views are lopsided: a few breakouts carry the total, and the goal needs about 111,000 engaged views a day against about 1,300 views a day now. A follow-up while a topic is hot reuses demand that already exists.).
-- 2026-10-18: Test 2 evergreen search Shorts a day (questions people search all year) (63% of YouTube views come from search, 35% from the Shorts feed (Film 96% search), so searchable questions may bring steady views while the feed is still small.).
-- 2026-10-18: Lean towards category "Music" (1.57x typical views over 5 Shorts (likes per 1,000 views 13 vs 4 typical; engaged views 41% vs 37% typical)).
-- and 1 more in analytics/decisions.csv.
-- 34 earlier rulings went back to normal as more Shorts came in (a choice is only kept while the data still says so).
+- 2026-10-25: Use less first frame "cover" (0.57x typical views over 11 Shorts (engaged views 14% vs 29% typical; average viewed 37% vs 48% typical)).
+- 2026-10-25: Lean towards hook names the lead "yes" (1.58x typical views over 43 Shorts (average viewed 53% vs 48% typical; engaged views 32% vs 29% typical)).
+- 2026-10-25: Lean towards captions "lab-captions-1019" (1.45x typical views over 41 Shorts).
+- 2026-10-25: Use less music mood "tech" (0.69x typical views over 7 Shorts (engaged views 26% vs 29% typical)).
+- 2026-10-25: Lean towards hook style "number" (1.26x typical views over 8 Shorts (average viewed 69% vs 48% typical; engaged views 33% vs 29% typical)).
+- 2026-10-25: Use less hook style "question" (0.66x typical views over 9 Shorts (average viewed 38% vs 48% typical; still watching at 3 seconds 88% vs 100% typical)).
+- 2026-10-25: Use less kind of short "true story" (0.71x typical views over 12 Shorts (average viewed 39% vs 48% typical; engaged views 24% vs 29% typical)).
+- 2026-10-25: Lean towards topic source "YouTube music" (1.67x typical views over 6 Shorts).
+- 2026-10-25: Use less title "question" (0.64x typical views over 15 Shorts).
+- 2026-10-25: Use less category on instagram "Entertainment" (0.64x typical views over 7 Shorts (against Instagram views)).
+- 2026-10-25: Lean towards category "Music" (1.48x typical views over 30 Shorts).
+- 2026-10-25: Lean towards camera energy "steady" (1.37x typical views over 59 Shorts (average viewed 55% vs 48% typical)).
+- 2026-10-25: Use less camera energy "calm" (0.72x typical views over 27 Shorts (average viewed 43% vs 48% typical)).
+- 2026-10-25: Lean towards posting time (uk) "11:00 to 13:59" (1.31x typical views over 21 Shorts).
+- 2026-10-25: Use less category "Music" for subscribers (0.23 subscribers per 1,000 views against 0.86 typical over 24 Shorts, 7 UK days).
+- 2026-10-24: Lean towards format "timeline" (1.25x typical views over 6 Shorts (average viewed 58% vs 51% typical; engaged views 35% vs 32% typical)).
+- 2026-10-24: Lean towards pictures "mostly stock footage" (2.31x typical views over 5 Shorts (average viewed 91% vs 51% typical; still watching at 3 seconds 127% vs 110% typical)).
+- 2026-10-24: Use less day posted "Friday" (0.75x typical views over 9 Shorts (average viewed 46% vs 51% typical)).
+- 2026-10-24: Use less writer model "gemini:gemini-3.1-flash-lite" (0.53x typical views over 5 Shorts (engaged views 0% vs 32% typical; average viewed 0% vs 51% typical)).
+- 2026-10-24: Use less appeal "everyone" (0.66x typical views over 13 Shorts).
+- and 98 more in analytics/decisions.csv.
+- 89 earlier rulings went back to normal as more Shorts came in (a choice is only kept while the data still says so).
 - Built: 20 October: 22:20 to 22:40 UTC)
 - Built: 21 October: every Short a test, more of what works, the ceiling learns
 - Built: 21 October: 00:20 to 01:00 UK: posting round the clock, the clips channel
 - Built: 21 October: 19:00 to 21:00 UK: the stop rule, the Monday report
+- Built: 22 October: 00:30 to 01:30 UK: relatable, and a minute or two long
+- Built: 23 October: ): build next
 - Built: 21 October: (01:00 to 02:30 UK)
 - Built: 21 October: Live from 21 October
 - Built: 21 October: 10:00 to 12:30 UK
@@ -45,19 +47,33 @@
 - Built: 21 October: 18:00 UK: the first batch is live
 - Built: 21 October: 19:00 UK: GitHub submits the links itself
 - Built: 21 October: 19:30 UK: the dashboard, two more form tests, the day's number filled
+- Built: 22 October: 18:00 UK: better programmes, aligned with what people search
+- Built: 22 October: 19:00 UK: the Mac worker, the streamer radar, channels per niche
+- Built: 22 October: 19:30 to 20:10 UK: the Mac run, the real forms, GitHub's hold
+- Built: 22 October: 20:10 to 21:00 UK: Vyro from the Mac, one Instagram, the identity guard
+- Built: 22 October: 23:55 UK: minimums that our clips can reach
 
-## Stopped (little to no views a week on: never again)
+## Did the changes work (analytics/changes.csv)
+- CH-001 (2026-10-18, shorts): Follow up breakouts within hours (analytics/breakouts.csv, one follow-up per run): **too early**. YouTube views per Short at 24 hours 42 -> 40 (-6%, n 1/124); guardrails: share of dead Shorts a week on 6% -> 9% BROKEN (+55%); needs 5 a side
+- CH-002 (2026-10-18, shorts): Two evergreen search Shorts a day (questions people search all year): **too early**. YouTube views a day 1,178 -> 3,206 (+172%, n 2/8); guardrails: YouTube views per Short at 24 hours too few to tell; needs 5 a side
+- CH-003 (2026-10-19, schedule): Back to 24 Shorts a day (morning 12, evening 6, afternoon 6; a slot every 40 minutes): **too early**. YouTube views a day 1,841 -> 3,235 (+76%, n 3/7); guardrails: YouTube views per Short at 24 hours 63 -> 42 BROKEN (-34%); share of dead Shorts a week on too few to tell; needs 5 a side
+- CH-004 (2026-10-19, shorts): A softly blurred stock video plays behind every Short (2 to 4 clips matched to the topic): **too early**. still watching at 3 seconds none -> 100% (no figure, n 0/52); guardrails: average viewed % 41% -> 53% ok (+29%); needs 5 a side
+- The writer's automatic recipe: 8 of its calls came due; 3 held up, 1 faded or recovered (the data was chasing noise), 4 were level. Right 75% of the time.
+- 82 changes still waiting for their after-week; the next check is on 2026-10-25.
+
+## Paused (little to no views a week on: left out for 14 days, then retested)
 - No choice has failed outright yet.
-- The floor is set once 5 Shorts are a week old.
+- Dead Shorts (not followed up, remade or posted about again): QD-023 "The formula behind a 14 million view Roblox Short 📈" 11 views;  "This game was cancelled. Now it's back 🎮" 23 views.
+- The floor: 28 views a week after posting.
 
 ## What every Short is measured on
-- Choices recorded per Short: category, format, hook style, hook length, length, posting time (uk), day posted, music mood, pictures, title, captions, voice, camera energy, colour grade, opening, follow line, ending, title wording, first frame, angle research, comment replies, kind of short, topic source, series, writer model.
+- Choices recorded per Short: category, format, hook style, hook length, length, posting time (uk), day posted, music mood, pictures, title, captions, voice, camera energy, colour grade, opening, style (text and pace), closing chip, subscribe line, follow line, ending, title wording, first frame, angle research, comment replies, kind of short, topic source, series, named series, writer model, appeal, posted late, exploration short, title emoji, camera energy test, posting quarter test, writer model test, title answer, hook names the lead, carries a campaign (sound or hashtag).
 - Results: views at 1, 3, 6, 12, 24, 48 and 72 hours, views against the Shorts posted around the same time, still watching at 3 seconds, average viewed, engaged views, likes, shares and subscribers per 1,000 views, traffic sources and search terms, countries, the retention curve's worst beat.
 - Clips: layout, captions, punch-in, length, title, campaign; views, likes and comments per clip, estimated money per campaign.
 
 ## Quickplay Clips
-- 11 clips public, 0 views, about $0.00 earned so far (estimate), 0 submissions made, 8 campaigns active.
-- By campaign: IShowSpeed 2 clips, 0 views, $0.00; MrBeast 2 clips, 0 views, $0.00; StinkyAsher 1 clips, 0 views, $0.00; Mitch Gaming 2 clips, 0 views, $0.00; Flamingo 2 clips, 0 views, $0.00; Jenny Hoyos 2 clips, 0 views, $0.00.
+- 110 clips public, 172 views, about $0.00 earned so far (estimate), 5 submissions made, 9 campaigns active.
+- By campaign: IShowSpeed 12 clips, 0 views, $0.00; MrBeast 17 clips, 5 views, $0.00; StinkyAsher 9 clips, 28 views, $0.00; Mitch Gaming 17 clips, 35 views, $0.00; Flamingo 16 clips, 78 views, $0.00; Jenny Hoyos 15 clips, 8 views, $0.00; VALORANT Champs 7 clips, 17 views, $0.00; Kevin Langue 17 clips, 1 views, $0.00.
 - No form has won yet (3 clips an arm, a day old, 10% ahead).
 
 Pages: [clips dashboard](https://quickplay-studio.github.io/quickplay-autopilot/clips.html), [what's working](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/insights.md), [every ruling](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/decisions.csv), [what drives views](https://github.com/quickplay-studio/quickplay-autopilot/blob/main/analytics/drivers.csv).

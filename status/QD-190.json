@@ -1,0 +1,170 @@
+{
+ "id": "QD-190",
+ "board": "boards/queue/QD-190.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T09:00:00Z",
+ "rendered": "2026-10-26T15:16:38.462858+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  }
+ },
+ "title": "Science Explained #1: Moon: why days were 5 hours long",
+ "background_notes": [
+  "Pixabay 'nebula clouds space': 40 results, none at 720p or better",
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (nasa:video:earth rotation: no NASA video for 'earth rotation')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7,
+  "pic_found_share": 0.83,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "futuristic-sci-fi-174819",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 29.4,
+  "wps": 3.16,
+  "weak_beats": [],
+  "size_mb": 7.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 193.8,
+   "contrast": 0.24,
+   "face_area": 0.0,
+   "text_area": 0.028,
+   "caption_contrast": 3.16,
+   "by_frame": {
+    "sharpness": [
+     199.0,
+     200.6,
+     189.7,
+     186.0
+    ],
+    "contrast": [
+     0.239,
+     0.242,
+     0.239,
+     0.237
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0275,
+     0.0274,
+     0.0284,
+     0.0288
+    ],
+    "caption_contrast": [
+     3.36,
+     4.4,
+     2.95,
+     2.95
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.62,
+   "none",
+   2
+  ],
+  [
+   4.62,
+   11.09,
+   "none",
+   4
+  ],
+  [
+   11.09,
+   15.52,
+   "none",
+   3
+  ],
+  [
+   15.52,
+   20.8,
+   "none",
+   4
+  ],
+  [
+   20.8,
+   25.67,
+   "none",
+   3
+  ],
+  [
+   25.67,
+   29.4,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "368458",
+   "q": "starry night sky",
+   "t0": 0.0,
+   "t1": 15.0
+  },
+  {
+   "p": "pixabay",
+   "id": "115327",
+   "q": "moon surface close up",
+   "t0": 14.4,
+   "t1": 29.4
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T15:26:12Z",
+ "video": "Kl7Qb1Wbtuw",
+ "url": "https://youtube.com/shorts/Kl7Qb1Wbtuw",
+ "publish_at": "2026-10-27T09:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T09:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-190"
+}

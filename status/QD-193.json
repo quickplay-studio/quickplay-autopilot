@@ -1,0 +1,156 @@
+{
+ "id": "QD-193",
+ "board": "boards/queue/QD-193.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T12:00:00Z",
+ "rendered": "2026-10-26T15:16:23.427608+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  }
+ },
+ "title": "Did You Know #2: Top 10 Best-Selling Games: The List 🕹️",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 10,
+  "planned_real": 11,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "cued-for-liftoff",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 39.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 964.0,
+   "contrast": 0.188,
+   "face_area": 0.0,
+   "text_area": 0.2115,
+   "caption_contrast": 17.36,
+   "by_frame": {
+    "sharpness": [
+     628.8,
+     1077.9,
+     1072.7,
+     1076.4
+    ],
+    "contrast": [
+     0.135,
+     0.205,
+     0.205,
+     0.205
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.168,
+     0.2288,
+     0.225,
+     0.2243
+    ],
+    "caption_contrast": [
+     17.41,
+     17.31,
+     17.31,
+     17.59
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.72,
+   "title",
+   0
+  ],
+  [
+   5.72,
+   10.73,
+   "none",
+   1
+  ],
+  [
+   10.73,
+   15.92,
+   "none",
+   2
+  ],
+  [
+   15.92,
+   21.16,
+   "none",
+   1
+  ],
+  [
+   21.16,
+   26.85,
+   "none",
+   2
+  ],
+  [
+   26.85,
+   32.81,
+   "bars",
+   2
+  ],
+  [
+   32.81,
+   39.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T15:26:20Z",
+ "video": "k2Mti7zlpgA",
+ "url": "https://youtube.com/shorts/k2Mti7zlpgA",
+ "publish_at": "2026-10-27T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T12:00:00Z",
+  "upload_status": "uploaded"
+ }
+}

@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Tue 27 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Mon 26 Oct | 7 public, 2 scheduled | 6 | 1 | ⏳ 7 of 15 so far, 2 more scheduled |
+| Tue 27 Oct | 0 public, 8 scheduled | 0 | 0 | ⏳ 8 of 15 scheduled |
+| Mon 26 Oct | 7 public, 3 scheduled | 6 | 1 | ⏳ 7 of 15 so far, 3 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |

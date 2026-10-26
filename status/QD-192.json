@@ -1,0 +1,159 @@
+{
+ "id": "QD-192",
+ "board": "boards/queue/QD-192.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T07:30:00Z",
+ "rendered": "2026-10-26T15:16:13.090137+00:00",
+ "channel": "irl",
+ "title": "Did You Know #1: Godzilla: the real meaning behind the breath ☢️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 12,
+  "planned_real": 12,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 38.8,
+  "wps": 3.18,
+  "weak_beats": [],
+  "size_mb": 13.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 516.1,
+   "contrast": 0.188,
+   "face_area": 0.0,
+   "text_area": 0.1439,
+   "caption_contrast": 18.13,
+   "by_frame": {
+    "sharpness": [
+     456.3,
+     599.5,
+     500.7,
+     507.8
+    ],
+    "contrast": [
+     0.189,
+     0.19,
+     0.186,
+     0.186
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1156,
+     0.1552,
+     0.1514,
+     0.1535
+    ],
+    "caption_contrast": [
+     18.13,
+     18.13,
+     18.13,
+     18.13
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.6,
+   "title",
+   0
+  ],
+  [
+   3.6,
+   10.34,
+   "none",
+   2
+  ],
+  [
+   10.34,
+   16.15,
+   "none",
+   2
+  ],
+  [
+   16.15,
+   21.69,
+   "none",
+   2
+  ],
+  [
+   21.69,
+   28.3,
+   "none",
+   2
+  ],
+  [
+   28.3,
+   34.18,
+   "none",
+   2
+  ],
+  [
+   34.18,
+   38.75,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "348909",
+   "q": "stormy ocean waves",
+   "t0": 0.0,
+   "t1": 13.32
+  },
+  {
+   "p": "pixabay",
+   "id": "219833",
+   "q": "volcanic lava flow",
+   "t0": 12.72,
+   "t1": 26.03
+  },
+  {
+   "p": "pixabay",
+   "id": "134913",
+   "q": "dark forest mist",
+   "t0": 25.43,
+   "t1": 38.75
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T15:26:18Z",
+ "video": "GsRRXS6zICU",
+ "url": "https://youtube.com/shorts/GsRRXS6zICU",
+ "publish_at": "2026-10-27T07:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T07:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

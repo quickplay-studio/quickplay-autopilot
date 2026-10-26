@@ -1,0 +1,141 @@
+{
+ "id": "QD-194",
+ "board": "boards/queue/QD-194.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T19:30:00Z",
+ "rendered": "2026-10-26T15:16:22.276482+00:00",
+ "channel": "clips",
+ "title": "Screen Time #1: Bleach anime officially ends",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 6,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 27.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 499.6,
+   "contrast": 0.214,
+   "face_area": 0.011,
+   "text_area": 0.0293,
+   "caption_contrast": 11.16,
+   "by_frame": {
+    "sharpness": [
+     510.2,
+     513.8,
+     507.8,
+     466.6
+    ],
+    "contrast": [
+     0.211,
+     0.213,
+     0.215,
+     0.215
+    ],
+    "face_area": [
+     0.0121,
+     0.0117,
+     0.0107,
+     0.0097
+    ],
+    "text_area": [
+     0.0319,
+     0.0294,
+     0.0306,
+     0.0252
+    ],
+    "caption_contrast": [
+     11.17,
+     11.15,
+     11.04,
+     15.23
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.9,
+   "none",
+   2
+  ],
+  [
+   4.9,
+   10.08,
+   "none",
+   4
+  ],
+  [
+   10.08,
+   15.81,
+   "none",
+   4
+  ],
+  [
+   15.81,
+   23.13,
+   "none",
+   5
+  ],
+  [
+   23.13,
+   27.16,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "95828",
+   "q": "anime city night",
+   "t0": 0.0,
+   "t1": 13.88
+  },
+  {
+   "p": "pixabay",
+   "id": "378834",
+   "q": "dark studio lights",
+   "t0": 13.28,
+   "t1": 27.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T15:26:23Z",
+ "video": "yXt21IujUtc",
+ "url": "https://youtube.com/shorts/yXt21IujUtc",
+ "publish_at": "2026-10-26T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

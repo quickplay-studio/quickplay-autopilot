@@ -1,0 +1,174 @@
+{
+ "id": "QD-195",
+ "board": "boards/queue/QD-195.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T02:30:00Z",
+ "rendered": "2026-10-26T16:17:56.695739+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"GTA 6\" read 21 times yesterday, 0.8x its usual 25; 46 news articles on \"gta 6 release date\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1023"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Game Facts #3: GTA 6 is arriving on 19 November 2026",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Grand Theft Auto VI map: no Commons image named 'Grand Theft Auto VI map')",
+  "beat 5 reused a nearby picture (commons-search:Manni L Perez: no Commons image named 'Manni L Perez')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 5,
+  "pic_found_share": 0.71,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "ten",
+ "social_music": "upbeat-rock-514146",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 33.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 664.2,
+   "contrast": 0.184,
+   "face_area": 0.0,
+   "text_area": 0.0235,
+   "caption_contrast": 5.64,
+   "by_frame": {
+    "sharpness": [
+     632.9,
+     660.5,
+     691.2,
+     672.3
+    ],
+    "contrast": [
+     0.184,
+     0.183,
+     0.184,
+     0.184
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0268,
+     0.0168,
+     0.0208,
+     0.0297
+    ],
+    "caption_contrast": [
+     5.57,
+     4.15,
+     5.71,
+     5.86
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.84,
+   "none",
+   2
+  ],
+  [
+   4.84,
+   9.42,
+   "none",
+   3
+  ],
+  [
+   9.42,
+   14.33,
+   "none",
+   3
+  ],
+  [
+   14.33,
+   17.57,
+   "none",
+   2
+  ],
+  [
+   17.57,
+   23.09,
+   "none",
+   4
+  ],
+  [
+   23.09,
+   26.98,
+   "none",
+   3
+  ],
+  [
+   26.98,
+   33.03,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1044",
+   "q": "tropical city street",
+   "t0": 0.0,
+   "t1": 33.03
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T16:26:59Z",
+ "video": "fuvSdaRMAb0",
+ "url": "https://youtube.com/shorts/fuvSdaRMAb0",
+ "publish_at": "2026-10-27T02:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T02:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-195"
+}

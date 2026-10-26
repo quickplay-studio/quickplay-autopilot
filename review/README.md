@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Tue 27 Oct | 0 public, 10 scheduled | 0 | 0 | ⏳ 10 of 15 scheduled |
+| Tue 27 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 15 scheduled |
 | Mon 26 Oct | 8 public, 4 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 4 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -77,10 +77,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-195** Game Facts #3: GTA 6 is arriving on 19 November 2026 (rendering next)
 
 ## On the channel (latest first)
 

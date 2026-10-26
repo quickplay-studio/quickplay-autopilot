@@ -1,66 +1,64 @@
 {
- "updated": "2026-10-26T09:11+00:00",
+ "updated": "2026-10-26T14:17+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 96,
- "median_views": 109.0,
+ "reels": 100,
+ "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
  "favour_min": 1.05,
  "favoured": [
-  "Film",
-  "Gaming",
-  "Sport"
+  "Gaming"
  ],
  "categories": [
   {
    "category": "Gaming",
-   "median": 122.0,
-   "n": 12,
-   "score": 1.083,
+   "median": 123.0,
+   "n": 15,
+   "score": 1.059,
    "favoured": true
   },
   {
    "category": "Sport",
-   "median": 118.5,
-   "n": 22,
-   "score": 1.07,
-   "favoured": true
+   "median": 119.0,
+   "n": 23,
+   "score": 1.036,
+   "favoured": false
   },
   {
    "category": "Film",
    "median": 119.0,
    "n": 14,
-   "score": 1.067,
-   "favoured": true
+   "score": 1.032,
+   "favoured": false
   },
   {
    "category": "Music",
    "median": 75.0,
    "n": 25,
-   "score": 0.732,
+   "score": 0.705,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 35.0,
    "n": 9,
-   "score": 0.482,
+   "score": 0.468,
    "favoured": false
   },
   {
    "category": "Entertainment",
    "median": 15.0,
    "n": 7,
-   "score": 0.314,
+   "score": 0.306,
    "favoured": false
   },
   {
    "category": "Tech",
    "median": 11.0,
    "n": 7,
-   "score": 0.262,
+   "score": 0.256,
    "favoured": false
   }
  ],
@@ -78,11 +76,11 @@
      "lift": ""
     },
     "no": {
-     "n": 0,
-     "median": null,
+     "n": 3,
+     "median": 126.0,
      "share": 0.5,
-     "verdict": "",
-     "lift": ""
+     "verdict": "about typical",
+     "lift": "0.99"
     }
    },
    "paused": true
@@ -93,18 +91,18 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 0,
-     "median": null,
+     "n": 2,
+     "median": 132.5,
      "share": 0.5,
-     "verdict": "",
-     "lift": ""
+     "verdict": "too few to tell",
+     "lift": "1.0"
     },
     "full": {
-     "n": 0,
-     "median": null,
+     "n": 2,
+     "median": 125.5,
      "share": 0.5,
-     "verdict": "",
-     "lift": ""
+     "verdict": "too few to tell",
+     "lift": "0.99"
     }
    },
    "paused": false
@@ -122,8 +120,8 @@
      "lift": ""
     },
     "any": {
-     "n": 0,
-     "median": null,
+     "n": 4,
+     "median": 130.0,
      "share": 0.5,
      "verdict": "",
      "lift": ""
@@ -133,17 +131,17 @@
   }
  },
  "week": {
-  "reels": 93,
-  "median": 107.0,
-  "before_reels": 3,
-  "before_median": 123.0
+  "reels": 94,
+  "median": 112.5,
+  "before_reels": 6,
+  "before_median": 128.0
  },
  "cover": {
-  "asked": 8,
-  "accepted": 8,
+  "asked": 10,
+  "accepted": 10,
   "refused": 0,
   "last": "accepted",
-  "last_at": "2026-10-26T07:30+00:00",
+  "last_at": "2026-10-26T13:58+00:00",
   "ok": true,
   "paused_until": null
  }

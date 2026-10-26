@@ -1,20 +1,20 @@
 {
- "updated": "2026-10-26T11:48+00:00",
- "mode": "hourly",
+ "updated": "2026-10-26T14:13+00:00",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-26T09:08+00:00",
+ "full_updated": "2026-10-26T14:13+00:00",
  "youtube": {
   "subscribers": 16,
-  "public_shorts": 162,
-  "views_all_time": 30984,
+  "public_shorts": 166,
+  "views_all_time": 31173,
   "views_last_90_days": 7789,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 10119,
+  "views_last_90_days_estimate": 10180,
   "analytics_last_day": "2026-10-23"
  },
  "instagram": {
   "followers": 1,
-  "posts": 122,
+  "posts": 124,
   "insights_error": null
  },
  "facebook": {
@@ -30,17 +30,31 @@
   "days_left": 98,
   "subscribers_pct": 1.6,
   "views_pct": 0.1,
-  "views_needed_per_day": 110999,
+  "views_needed_per_day": 110998,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two).",
   "from_2027": {
    "shorts_views_needed_90_days": 20000000,
    "views_pct": 0.05,
-   "views_needed_per_day": 222110,
+   "views_needed_per_day": 222109,
    "watch_hours_needed_365_days": 8000,
    "watch_hours_365d": 0.0
   }
  },
- "audience_errors": [
-  "Music traffic: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
- ]
+ "channels": {
+  "clips": {
+   "subscribers": 0,
+   "public_shorts": 61,
+   "views_all_time": 15
+  },
+  "gaming": {
+   "subscribers": 0,
+   "public_shorts": 22,
+   "views_all_time": 167
+  },
+  "irl": {
+   "subscribers": 0,
+   "public_shorts": 26,
+   "views_all_time": 3
+  }
+ }
 }

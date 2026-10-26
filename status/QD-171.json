@@ -14,7 +14,7 @@
    "used": "12:00 to 18:00"
   }
  },
- "title": "Sport Shocks #1: UFC 333: Volkanovski wins record ninth title",
+ "title": "UFC 333: Two title fights one night in Abu Dhabi",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -158,7 +158,14 @@
  "social_release": "social-QD-171",
  "engage": {
   "comment": "Ugw2yukgcUdrfXmANF54AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Sport Shocks #1: UFC 333: Volkanovski wins record ninth title",
+   "to": "UFC 333: Two title fights one night in Abu Dhabi",
+   "at": "2026-10-26T15:53+00:00",
+   "views_an_hour": 0.2,
+   "typical": 0.7
+  }
  },
  "instagram": {
   "media": "18471332776140876",

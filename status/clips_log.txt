@@ -253,3 +253,16 @@ scout: $30,000 LACY 30 DAY CAMPAIGN: fits, clips, heat 0.35: It is a clipping ca
 scout: $10,000 Kai Cenat Campaign: no, clips, heat 1.07: It does not fit because Kai Cenat's content often includes mature language and themes, fai
 scout: RoSandBox [Roblox]: fits, clips, heat 0.0: It is an open Roblox clipping campaign allowing YouTube Shorts with provided footage and f
 scout: 22 of 40 new campaigns fit for clips; 0 any Daily Short can carry
+=== run 2026-10-26 09:38 UTC, schedule '0 9 * * *', request ''
+speed-expedia: page: $113 remaining; Skip to content We use cookies and similar tools to measure how the product is used. You c
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+speed-expedia: 0 of 3 moments planned (gemini-3.8-flash), 20 in all; dropped {"bad time": 0, "length": 1, "overlap": 1, "no hook": 0, "low score": 1}; first: {"start": 435, "end": 488, "hook": "I'VE BEEN TO 100 COUNTRIES BUT...", "label": "Holbox Island, Mexico", "title": "IShowSpeed Funny Moments Guessing Travel Spots", "peak": 468, "question": "Have you 
+mrbeast-cod: 0 of 1 moments planned (gemini-3.6-flash), 30 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}; first: {"start": 1386, "end": 1453, "hook": "THE ULTIMATE MILLION DOLLAR BACKSTAB", "label": "", "title": "MrBeast Gaming Chaos at the Heli", "peak": 1448, "question": "Would you have betrayed your teammates
+tdr-stinkyasher: 0 of 6 moments planned (gemini-3.6-flash), 24 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 6}; first: {"start": 415, "end": 460, "hook": "WHO IS GETTING VOTED OUT FIRST?", "label": "", "title": "StinkyAsher Total Roblox Drama Elimination Shock", "peak": 453, "question": "Was voting out Jeff the right 
+tdr-mitch: 1 of 2 moments planned (gemini-3.6-flash), 26 in all; dropped {"bad time": 0, "length": 0, "overlap": 1, "no hook": 0, "low score": 0}
+tdr-flamingo: 2 of 4 moments planned (gemini-3.5-flash), 28 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 0, "profanity": 2}
+tdr-jenny: 2 of 6 moments planned (gemini-3.6-flash), 25 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 4}
+valorant-microdrama: 0 parts planned, 4 in all
+valorant-champs: a long transcript, planning minutes 45 to 87 of 144
+valorant-champs: 6 of 8 moments planned (gemini-3-flash-preview), 20 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 1, "profanity": 1}
+kevin-langue-ghost: 1 of 3 moments planned (gemini-3.5-flash), 22 in all; dropped {"bad time": 0, "length": 0, "overlap": 0, "no hook": 0, "low score": 2}

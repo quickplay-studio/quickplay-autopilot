@@ -732,6 +732,23 @@
    "take_outro": "Random answers fitting exact questions makes everyone re-think what just happened.",
    "take_style": "argument",
    "question": "Do you believe she actually heard a spirit answer that question?"
+  },
+  {
+   "id": "kevin-langue-ghost-22",
+   "start": 1024.7,
+   "end": 1060.4,
+   "hook": "WHEN THE GHOST HUNTING GETS REAL",
+   "label": "",
+   "title": "Kevin Langue Experiences Real Ghost Ritual",
+   "why": "The sudden lighting of sage creates immediate tension, building to a chaotic group reaction.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.5-flash",
+   "peak": 1053.0,
+   "score": 6.0,
+   "take_intro": "When a ghost hunt turns serious, nobody expects the whole room to panic.",
+   "take_outro": "Some rituals are too intense for a game show. Was that fake?",
+   "take_style": "argument",
+   "question": "Do you believe in ghost rituals?"
   }
  ]
 }

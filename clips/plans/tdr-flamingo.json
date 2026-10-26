@@ -739,6 +739,40 @@
    "publish_at": "2026-10-25T19:00:00Z",
    "mode": "batch",
    "comment": "UgzQD4WvWkBuOHj4cY54AaABAg"
+  },
+  {
+   "id": "tdr-flamingo-27",
+   "start": 1791.7,
+   "end": 1837.4,
+   "hook": "WILL FLAMINGO SURVIVE TOTAL DRAMA",
+   "label": "Elimination",
+   "title": "Flamingo Total Drama Island Finale Panic",
+   "why": "Flamingo physically shakes in suspense right before learning his ultimate fate in the game.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.5-flash",
+   "peak": 1816.0,
+   "score": 8.0,
+   "take_intro": "The tension of a final vote reveal can break even veteran gaming creators.",
+   "take_outro": "Total Drama Island brings out unprecedented levels of competitive gamer stress.",
+   "take_style": "argument",
+   "question": "Did Flamingo deserve to make it to the end?"
+  },
+  {
+   "id": "tdr-flamingo-28",
+   "start": 580.7,
+   "end": 612.4,
+   "hook": "THE SECRET ROBLOX TOTAL DRAMA STRATEGY",
+   "label": "Trent",
+   "title": "Flamingo Plays Roblox Total Drama Island",
+   "why": "Flamingo explains his hilarious logic for picking male characters to avoid Roblox lobby mean girls.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.5-flash",
+   "peak": 595.0,
+   "score": 7.0,
+   "take_intro": "Picking the right avatar determines how other contestants treat you during the match.",
+   "take_outro": "Avatar choices genuinely change the social dynamic of Roblox competition games.",
+   "take_style": "argument",
+   "question": "Which Total Drama character is your favourite to play?"
   }
  ]
 }

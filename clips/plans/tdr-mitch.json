@@ -700,6 +700,23 @@
    "take_outro": "Surviving a close round brings instant relief when team members almost cost the match.",
    "take_style": "argument",
    "question": "Do you prefer playing team games or solo Roblox modes?"
+  },
+  {
+   "id": "tdr-mitch-26",
+   "start": 1867.7,
+   "end": 1898.15,
+   "hook": "UNDEFEATED ROBLOX TOURNAMENT CHAMPION",
+   "label": "Mitch Gaming",
+   "title": "mitch gaming wins total drama roblox tournament",
+   "why": "The ultimate brag of being the smallest creator invited and leaving completely undefeated.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 1879.0,
+   "score": 6.0,
+   "take_intro": "Being the underdog creator in a massive YouTuber tournament makes winning the whole thing sweeter.",
+   "take_outro": "Mitch proved that gameplay strategy beats channel subscriber count every single time. Who should challenge him next?",
+   "take_style": "argument",
+   "question": "Is Mitch Gaming the best Roblox Total Drama player?"
   }
  ]
 }

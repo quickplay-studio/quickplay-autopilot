@@ -618,6 +618,40 @@
    "take_outro": "Big tournament announcements set high expectations. Do you think she can win it all?",
    "take_style": "argument",
    "question": "Which Roblox total drama game mode is your favourite?"
+  },
+  {
+   "id": "tdr-jenny-24",
+   "start": 4006.7,
+   "end": 4064.4,
+   "hook": "JENNY HOYOS ACCIDENTALLY WINS THE TOURNAMENT",
+   "label": "",
+   "title": "Jenny Hoyos Wins Total Drama Roblox Tournament",
+   "why": "The sudden realization of victory followed by her roasting Ezekiel's seven strands of hair.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 4033.0,
+   "score": 8.0,
+   "take_intro": "Winning a tournament without expecting to proves pure skill beats overly intense gameplay strategies every time.",
+   "take_outro": "She did not expect the win, but her victory speech made the entire tournament iconic.",
+   "take_style": "argument",
+   "question": "Did Jenny Hoyos deserve to win the Roblox Total Drama tournament?"
+  },
+  {
+   "id": "tdr-jenny-25",
+   "start": 529.7,
+   "end": 578.4,
+   "hook": "WHEN SOCIAL ANXIETY HITS IN ROBLOX",
+   "label": "",
+   "title": "Jenny Hoyos Roblox Shorts Total Drama Strategy",
+   "why": "Jenny panics about how to talk to other players to avoid getting voted off early.",
+   "planned": "2026-10-26T09:38+00:00",
+   "model": "gemini-3.6-flash",
+   "peak": 571.0,
+   "score": 6.0,
+   "take_intro": "Playing social deduction games can trigger real anxiety even when it is just virtual Roblox avatars.",
+   "take_outro": "Social anxiety in voice chat is relatable, proving online tournaments are genuinely stressful for creators.",
+   "take_style": "argument",
+   "question": "Do you get social anxiety talking in online games like Roblox?"
   }
  ]
 }

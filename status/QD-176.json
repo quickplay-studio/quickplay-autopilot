@@ -161,7 +161,6 @@
   "publish_at": "2026-10-25T23:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-176",
  "engage": {
   "comment": "UgzrpEAQiba--Uxo3B54AaABAg",
   "playlist": "Quickplay Daily: Gaming"
@@ -169,5 +168,17 @@
  "facebook": {
   "video": "1672940734199283",
   "at": "2026-10-26T02:35:30+00:00"
+ },
+ "instagram": {
+  "media": "18098304323410867",
+  "at": "2026-10-26T13:57:55+00:00",
+  "caption": "short",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "category",
+  "hour": "any",
+  "favoured": true,
+  "hour_uk": 13
  }
 }

@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-26T12:52:15+00:00",
+ "checked": "2026-10-26T14:58:54+00:00",
  "ok": true,
  "studio": "studiosocialmedia123@gmail.com",
  "checks": [
@@ -34,6 +34,13 @@
   {
    "what": "workflow engage.yml",
    "found": "GEMINI_API_KEY, SOCIAL_KEY, YT_CLIENT_ID, YT_CLIENT_SECRET",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow evolve.yml",
+   "found": "ANTHROPIC_API_KEY, CEREBRAS_API_KEY, CF_ACCOUNT_ID, CF_API_TOKEN, CLAUDE_CODE_OAUTH_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, MISTRAL_API_KEY, OPENROUTER_API_KEY, SAMBANOVA_API_KEY",
    "ok": true,
    "expected": "listed secrets only",
    "note": ""
@@ -124,6 +131,13 @@
   },
   {
    "what": "workflow voices.yml",
+   "found": "no secrets",
+   "ok": true,
+   "expected": "listed secrets only",
+   "note": ""
+  },
+  {
+   "what": "workflow watchdog.yml",
    "found": "no secrets",
    "ok": true,
    "expected": "listed secrets only",

@@ -35,6 +35,12 @@ def load_json(p, default):
     except Exception: return default
 
 
+def clips_paused():
+    """config.json clips_paused (Charlie, 26 October: the clip channels post original Shorts instead of clips): the date
+    clipping stopped, else ''. While set the Mac has no Vyro rows, no rescues and no campaigns to join."""
+    return str(load_json(ROOT / "config.json", {}).get("clips_paused") or "")
+
+
 def rows():
     try: return list(csv.DictReader(SUBMIT.open()))
     except FileNotFoundError: return []
@@ -107,21 +113,21 @@ def daily_candidates(camps_cfg, now):
     return live, out
 
 
-def occasional(now, camps_cfg):
-    """Occasional jobs due today (steps in docs/CHROME_OCCASIONAL.md)."""
+def occasional(now, camps_cfg, paused=False):
+    """Occasional jobs due today (steps in docs/CHROME_OCCASIONAL.md); `paused` (clips_paused) drops the clip campaign ones."""
     jobs = []
     camps = camps_cfg.get("campaigns") or {}
     soon = (now + dt.timedelta(days=3)).date().isoformat()
     live = [k for k, c in camps.items() if c.get("active") and (c.get("source") or {}) and str(c.get("ends") or "9999") > soon]
     need = int(camps_cfg.get("min_active") or 6)
-    if len(live) < need: jobs.append(f"Capacity: {len(live)} of {need} campaigns are live: join more")
+    if len(live) < need and not paused: jobs.append(f"Capacity: {len(live)} of {need} campaigns are live: join more")
     daily_live, daily_new = daily_candidates(camps_cfg, now)
     if daily_new:
         jobs.append(f"Daily sound campaigns: {len(daily_live)} live; join one more from status/scout.md (\"For Quickplay Daily's own views\"): "
                     + ", ".join(f"{str(d.get('name'))[:40]} (${d.get('rate_per_1k') or '?'}/1k, {d.get('platform')})" for d in daily_new[:3]))
     twice_weekly = now.weekday() in (0, 3)            # Monday and Thursday: the searches that cost the most browsing
     if now.weekday() == 0: jobs.append("Related video: link the week's 10 best Shorts to the newest weekly long video")
-    if twice_weekly:
+    if twice_weekly and not paused:
         w = [i["name"] for i in (load_json(ROOT / "status" / "watch.json", {}).get("items") or [])
              if i.get("level") in ("surging", "launch")]
         if w: jobs.append("Watchlist campaigns: search Vyro and Content Rewards for " + ", ".join(w[:6]))
@@ -165,15 +171,16 @@ def show(now=None, fetch_issues=True):
     cfg = load_json(ROOT / "clips" / "campaigns.json", {})
     camps = cfg.get("campaigns") or {}
     limit = int((cfg.get("submit_daily_limits") or {}).get("Vyro") or 5)
-    rs = rows()
-    due, left = vyro_due(rs, camps, now, limit)
-    rescue = cr_rescue(rs, camps, now)
-    jobs, offs = occasional(now, cfg), one_offs()
+    rs, paused = rows(), clips_paused()
+    due, left = ([], {}) if paused else vyro_due(rs, camps, now, limit)
+    rescue = [] if paused else cr_rescue(rs, camps, now)
+    jobs, offs = occasional(now, cfg, bool(paused)), one_offs()
     comm = community_lines(now)
     iss = issues_for_the_mac() if fetch_issues else []
     out = [f"Mac run {now:%A %d %B %H:%M} UK"]
     if iss is None: out.append("Issues: GitHub could not be read; open https://github.com/quickplay-studio/quickplay-autopilot/issues")
     elif iss: out += ["Issues to act on first:"] + [f"- {t}" for t in iss]
+    if paused: out.append(f"Clips: paused since {paused} (config.json clips_paused): no Vyro rows, no campaigns to join")
     if due:
         out.append(f"Vyro: {len(due)} to submit now (places left today: " + ", ".join(f"{k} {v}" for k, v in left.items()) + ")")
         for n, r in enumerate(due, 1):

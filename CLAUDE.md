@@ -23,8 +23,10 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   quota.target() (status/volume.json, 15 in the volume test), the ceiling is learned (status/upload_limit.json). quota.py
   guards the YouTube allowance: 10,000 units, plus 100 uploads and 100 searches a day in their own buckets, shared by the
   four channels. publish.yml (hourly): approvals and the reserve. social.yml: Instagram, Facebook (a 1-a-day probe),
-  TikTok off (docs/TIKTOK.md). engage.yml: comments. clips.yml: clips made at 12:00 UTC, public at 19:00 UK; Vyro is
-  submitted by the Mac (docs/CHROME_JOBS.md). alerts.yml, audit.yml, weekly.yml, report.yml.
+  TikTok off (docs/TIKTOK.md). engage.yml: comments. clips.yml: paused since 26 October (config.json clips_paused; the
+  three clip channels post original Shorts through shorts_channels instead, one learning model for all four; set it to ""
+  to clip again): clips made at 12:00 UTC, public at 19:00 UK; Vyro is submitted by the Mac (docs/CHROME_JOBS.md).
+  alerts.yml, audit.yml, weekly.yml, report.yml.
 - Every Short is a test (kind, source, format, hook, length, ending, title, emoji, first frame, series, look, slot, writer).
   analytics/drivers.csv gives a verdict only with proof (5 Shorts over 2 UK days, a 90% interval clear of typical, both
   halves agreeing); a choice with little to no views a week on is paused 14 days, then retested. 1 Short in 5 explores,

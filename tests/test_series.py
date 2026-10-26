@@ -418,8 +418,9 @@ F.OUT.write_text(json.dumps(dd))
 assert W.series_joins(dd["topics"][1], "news") and not W.series_joins(dd["topics"][0], "news") and not W.series_joins(NEWS, "news")
 assert W.series_joins(EVP, "evergreen") and not W.series_joins(EVP, "evergreen", True)
 W.plan = lambda breaking=False, hint="": ("morning", FAKE_DAY, 6)
-real_led, real_tp = W.search_led_run, W.test_plan
+real_led, real_tp, real_ecb = W.search_led_run, W.test_plan, W.extra_channel_boards
 W.search_led_run = lambda *a, **k: []
+W.extra_channel_boards = lambda *a, **k: []                                           # the other channels' boards (26 October) are not this test's
 W.test_plan = lambda k, kind="news", explore=False: (lambda st, t: (st, {**t, "series": "two parts"}))(*real_tp(k, kind, explore))
 before = {p.name for p in pathlib.Path("boards/queue").glob("QD-*.json")}
 new = []
@@ -428,7 +429,7 @@ try:
     new = sorted(p for p in pathlib.Path("boards/queue").glob("QD-*.json") if p.name not in before)
     got = [json.loads(p.read_text()) for p in new]
 finally:
-    W.search_led_run, W.test_plan = real_led, real_tp
+    W.search_led_run, W.test_plan, W.extra_channel_boards = real_led, real_tp, real_ecb
     for p in pathlib.Path("boards/queue").glob("QD-*.json"):
         if p.name not in before: p.unlink()
 assert len(got) == 2, [(x["id"], x["meta"]["title"]) for x in got]

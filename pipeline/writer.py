@@ -726,12 +726,13 @@ def trend_share():
     return 0.5 if lift is None else min(0.75, max(0.25, 0.5 * lift))
 
 
-def evergreen_packs(kinds, seen, trending=()):
+def evergreen_packs(kinds, seen, trending=(), cats=None):
     """Fact packs for evergreen Shorts of the given kinds in the best categories, each from one Wikipedia article whose
     quotes are checked word for word (factpack.verify), like the news packs. `trending`: the day's trending subjects
-    (topic names): a share of the ideas (trend_share) are top 10s and true stories that ride them."""
+    (topic names): a share of the ideas (trend_share) are top 10s and true stories that ride them. `cats`: the categories
+    to stay inside (another channel's lanes, extra_channel_boards); None picks the main channel's best ones."""
     up = boosts()
-    cats = [c for c in sorted(CATS, key=lambda c: -up.get(c, 0)) if up.get(c, 0) > STOP] or list(CATS)
+    cats = [c for c in cats if c] if cats else [c for c in sorted(CATS, key=lambda c: -up.get(c, 0)) if up.get(c, 0) > STOP] or list(CATS)
     recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
     want = {k: kinds.count(k) for k in set(kinds)}
     names = {"evergreen": "question", "top list": "top list", "true story": "true story"}
@@ -1406,16 +1407,19 @@ def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
     return best or (None, "still failing: " + "; ".join(errs)[:300])
 
 
-# ---------------- the Daily line's other channels (25 October) ----------------
-# config shorts_channels: a music-only channel that writes from the day's Music packs, and a Spanish mirror of the main channel
-# (pipeline/mirror.py). Each is a channel of its own: it starts only when Charlie has created it and signed it in
-# (youtube.connected: tokens/youtube_<channel>.enc), and until then nothing below runs. Their boards carry "channel": <name>,
-# are counted apart from the main channel's day (main_board), and are never cross-posted.
+# ---------------- the Daily line's other channels (25 October; every channel since 26 October) ----------------
+# config shorts_channels: channels that write their own original Shorts from the packs of their own categories (music; and since
+# 26 October clips, gaming and irl, which carried clips until Charlie paused clipping: "push original content on all channels"),
+# and a Spanish mirror of the main channel (pipeline/mirror.py). Each is a channel of its own: it starts only when it is signed in
+# (youtube.connected: tokens/youtube_<channel>.enc), and until then nothing below runs. Their boards carry "channel": <name>, are
+# counted apart from the main channel's day (main_board), are never cross-posted, and feed the one learning model (drivers.analyse
+# pools every channel's rows, each judged against its own channel's floor: "all of them contributing to the same learning model").
 SERIES_HINTS = {"chart watch": ("chart", "number one", "no. 1", "top 10", "top ten", "billboard", "most streamed", "most played", "apple albums"),
                 "new music friday": ("new album", "new single", "new song", "new music", "release", "out now", "debut", "drops", "dropped")}
-CHANNEL_NOTE = ("CHANNEL: this Short is for {name}, the music-only YouTube channel of the same studio (family-friendly, UK English). Stay on the "
-                "music: the artist, the song, the album, the chart or the story behind it, never gossip about private lives. Name the "
-                "best-known artist first. {series}")
+SERIES_CATS = {"wild world": ("Animals",), "food facts": ("Food",), "screen time": ("Film",), "big science": ("Science", "Tech"),
+               "match day": ("Sport",), "time machine": ("History",), "on the road": ("Cars",)}      # a series bound to a category
+CHANNEL_NOTE = ("CHANNEL: this Short is for {name}, a YouTube channel of the same studio (family-friendly, UK English). {brief} {series}")
+DEFAULT_BRIEF = "Stay inside the channel's subjects: {cats}. Name the subject first."
 OVERLAP_NOTE = ("OTHER CHANNEL: our main channel already made a Short on this subject today. Make this one a different angle, a different "
                 "hook and a different title (never a repeat of that wording), opening on a fact the first Short did not lead with.")
 
@@ -1459,8 +1463,9 @@ def channel_series_count(ch, name):
 
 def pick_series(c, p, day, count):
     """Which of a channel's series a Short joins (config shorts_channels.<ch>.series): a chart pack is Chart Watch, a new
-    release on a Friday is New Music Friday (never on another day), everything else rotates through the rest. `count`: the
-    channel's boards so far, which turns the rotation. None when the channel lists no series."""
+    release on a Friday is New Music Friday (never on another day), a series bound to a category (SERIES_CATS) takes that
+    category's packs, everything else rotates through the rest. `count`: the channel's boards so far, which turns the
+    rotation. None when the channel lists no series."""
     names = [s for s in c.get("series") or [] if str(s).strip()]
     if not names: return None
     text = f"{p.get('topic', '')} {p.get('signal', '')} {p.get('what_is_new', '')}".lower()
@@ -1468,18 +1473,33 @@ def pick_series(c, p, day, count):
     for s in names:
         hints = SERIES_HINTS.get(low[s])
         if hints and any(h in text for h in hints) and (low[s] != "new music friday" or day.weekday() == 4): return s
-    plain = [s for s in names if low[s] not in SERIES_HINTS] or names
+        if str(p.get("category") or "") in SERIES_CATS.get(low[s], ()): return s
+    plain = [s for s in names if low[s] not in SERIES_HINTS and low[s] not in SERIES_CATS] or names
     return plain[count % len(plain)]
 
 
+def channel_note(ch, c, series, n):
+    """The writer's channel instruction: the channel's name and brief (config shorts_channels.<ch>.brief, else its
+    categories) and the series this Short joins."""
+    brief = str(c.get("brief") or "").strip() or DEFAULT_BRIEF.format(cats=", ".join(c.get("categories") or []))
+    return CHANNEL_NOTE.format(name=c.get("name") or ch, brief=brief, series=(
+        f"It is {series} #{n} of the channel's recurring series: write the title without the series name or number (they are "
+        f"added) and make the Short fit the series." if series else ""))
+
+
 def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
-    """Boards for the line's other channels that write from the fact packs of their own categories (the music channel),
-    each once it is signed in; nothing happens until then. Called after the main channel's boards, so these never take the
-    main day's places, models or time. A channel writes up to its per_day a day, split over the day's runs like the main
-    channel's (config runs), from `packs` in its categories (a pack the main channel has not covered first, then the ones it
-    has, with a note to take another angle; never one the channel covered itself in 14 days), each in the channel's series
-    in rotation and numbered ("Chart Watch #4: ..."). The board is validated, fact-checked and shaped like any other, then
-    tagged "channel": <name> and written to the queue; the id is the next free number. Returns the boards written."""
+    """Boards for the line's other channels that write original Shorts from the fact packs of their own categories (config
+    shorts_channels with categories: music, and since 26 October clips, gaming and irl), each once it is signed in; nothing
+    happens until then. Called after the main channel's boards, so these never take the main day's places, models or time.
+    A channel writes up to its per_day a day, split over the day's runs like the main channel's (config runs): first the
+    day's news packs in its categories (a pack the main channel has not covered first, then the ones it has, with a note to
+    take another angle; never one the channel covered itself in 14 days), then, for the places the news leaves, evergreen
+    packs of its own categories (evergreen_packs with cats: questions, top lists and true stories from Wikipedia, each
+    written in its own kind with the kind's note). Each joins the channel's series (pick_series) and is numbered ("Chart
+    Watch #4: ..."). Every board carries the title tests and the subscribe-line test (the spoken arm names the series) and
+    none of the main channel's own rounds (fx, series, franchise, round); it is validated, fact-checked and shaped like any
+    other, then tagged "channel": <name> and written to the queue; the id is the next free number. Returns the boards
+    written."""
     wrote = []
     for ch, c in line_channels().items():
         per_day = int(c.get("per_day") or 6)
@@ -1489,35 +1509,32 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
         want = min(per_run, per_day - len(have))
         if want <= 0: print(f"channel {ch}: {len(have)} of {per_day} for {day} already"); continue
         own, mine = [about(b) for b in channel_boards(ch, days=14)], [about(b) for b in DAY["boards"]]
-        pool = [p for p in packs if p.get("category") in c["categories"] and len(p.get("verified") or []) + len(p.get("one_source") or []) >= 2
-                and not covered(p, own)]
-        pool.sort(key=lambda p: covered(p, mine))                 # stable: the main channel's untouched subjects first, best first
-        if not pool: print(f"channel {ch}: no {'/'.join(c['categories'])} packs to write from"); continue
         made = []
-        for p in pool:
-            if len(made) >= want or factpack.STATE.get("spent") or late(): break
-            if covered(p, [about(b) for b in made]): continue
+        stop = lambda: len(made) >= want or factpack.STATE.get("spent") or late()
+
+        def write(p, kind):
+            """One board of the channel from pack `p`, of `kind`; None when the writer gave nothing usable."""
             sid = f"QD-{state['n']:03d}"
-            style, tests = test_plan(state["n"], "news")
+            style, tests = test_plan(state["n"], kind)
             tests = {k: v for k, v in tests.items() if k not in FX + ("series", "franchise", "round")}      # the main channel's own rounds
-            tests = with_title_test(tests, state["n"], "news")
+            tests = with_title_test(tests, state["n"], kind)
+            tests = with_sub_test(tests, state["n"], kind)           # the subscribe line is tested on every channel
             facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
             if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]: tests = {**tests, "length": "35 to 44 s"}
             series = pick_series(c, p, day, len(have) + len(made))
             n = 1 + channel_series_count(ch, series) if series else 0
-            extra = [style_note(tests), CHANNEL_NOTE.format(name=c.get("name") or ch, series=(
-                f"It is {series} #{n} of the channel's recurring series: write the title without the series name or number (they are "
-                f"added) and make the Short fit the series." if series else "")), OVERLAP_NOTE if covered(p, mine) else ""]
+            extra = [KIND_NOTE.get(kind, ""), style_note(tests), channel_note(ch, c, series, n), OVERLAP_NOTE if covered(p, mine) else "",
+                     SUB.note(tests.get("sub_push", ""), series or "", str(p.get("category") or ""))]
             try:
-                b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), "news", tests)
+                b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests)
             except Exception as e:
                 b, why = None, f"error: {e}"[:200]
             print(f"channel {ch}: {p['topic']}: {why}")
-            if not b: continue
+            if not b: return None
             before = json.dumps(b)
             shape(b, tests)
             if validate.check(b)[0]: b = json.loads(before)
-            b.update(kind="news", test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")), channel=ch)
+            b.update(kind=kind, test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")), channel=ch)
             if series:
                 m, prefix = b.setdefault("meta", {}), None
                 for cand in (f"{series} #{n}: ", f"{series}: "):          # the longest form that keeps the title within 70 characters
@@ -1528,6 +1545,22 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             if tr: b["meta"]["translations"] = tr
             (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
             made.append(b); state["n"] += 1
+            return b
+
+        pool = [p for p in packs if p.get("category") in c["categories"] and len(p.get("verified") or []) + len(p.get("one_source") or []) >= 2
+                and not covered(p, own)]
+        pool.sort(key=lambda p: covered(p, mine))                 # stable: the main channel's untouched subjects first, best first
+        if not pool: print(f"channel {ch}: no {'/'.join(c['categories'])} news packs; evergreen instead")
+        for p in pool:
+            if stop(): break
+            if covered(p, [about(b) for b in made]): continue
+            write(p, "news")
+        if not stop():                                            # the places the news left: evergreen Shorts in the channel's own subjects
+            try: ever = evergreen_packs(pick_kinds(want - len(made)), own + mine + [about(b) for b in made], cats=c["categories"])
+            except Exception as e: ever = []; print(f"channel {ch}: evergreen:", f"{type(e).__name__}: {e}"[:200])
+            for p in ever:
+                if stop(): break
+                write(p, p.get("kind") or "evergreen")
         print(f"channel {ch}: wrote {len(made)} of {want}: " + "; ".join(f"{b['id']} {b['meta']['title']}" for b in made))
         wrote += made
     return wrote

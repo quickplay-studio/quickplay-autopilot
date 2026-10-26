@@ -292,10 +292,20 @@ def save_pauses(pauses, path=None):
     p.write_text(json.dumps(pauses, indent=1, sort_keys=True))
 
 
+def floor_of(floor, r):
+    """The dead floor that applies to a row: one number (one channel's rows) or {channel: floor} (26 October: the
+    verdicts pool every channel's Shorts, each judged against its own channel's floor)."""
+    return floor.get(channel_of(r)) if isinstance(floor, dict) else floor
+
+
 def pause_state(key, grp, floor, pauses, today):
-    """("pause" | "retest" | None, why) for one choice, updating `pauses` (module docstring)."""
-    week = [r for r in grp if age_days(r) >= 7 and r.get("yt_views") not in (None, "")]
-    views = lambda rs: statistics.median(_f(r["yt_views"]) or 0 for r in rs)
+    """("pause" | "retest" | None, why) for one choice, updating `pauses` (module docstring). With floors per channel
+    (a dict) each row's views are scaled to the main channel's floor before the median, so a choice is paused on how its
+    Shorts do against their own channel's typical Short, whichever channels they are on."""
+    ref = (floor.get("main") or next((f for f in floor.values() if f), None)) if isinstance(floor, dict) else floor
+    week = [r for r in grp if age_days(r) >= 7 and r.get("yt_views") not in (None, "") and floor_of(floor, r)]
+    views = lambda rs: statistics.median((_f(r["yt_views"]) or 0) * ref / floor_of(floor, r) for r in rs)
+    floor = ref
     st = pauses.get(key)
     if st:
         until = st.get("until", "")
@@ -328,10 +338,13 @@ def analyse(rows, pauses=None, today=None):
     `pauses`: the pause record (load_pauses()), updated in place; the caller saves it."""
     pauses = {} if pauses is None else pauses
     today = today or NOW.astimezone(UK).date().isoformat()
-    rows = [r for r in rows if channel_of(r) == "main"]       # the verdicts are the main channel's; another channel's Shorts have their own peers
+    # 26 October: every channel's Shorts feed one set of verdicts (Charlie: "all of them contributing to the same learning
+    # model"). rel is already each Short's views over its own channel's same-day peers (analytics.relative per channel),
+    # so the lifts pool as they are; the dead floors stay per channel and pause_state scales views to the main one's.
     scored = [r for r in rows if r.get("rel") not in (None, "")]
     base = _support(scored)
-    floor = dead_floor(rows)
+    floors = {ch: dead_floor([r for r in rows if channel_of(r) == ch]) for ch in dict.fromkeys(channel_of(r) for r in rows)}
+    floor = floors if len(floors) > 1 else next(iter(floors.values()), None)
     cut = split_time(scored)
     table = []
     for feat, label in FEATURES:
@@ -472,11 +485,11 @@ def poisson_ci(o, level=0.90):
 
 
 def subs_points(rows, now=None):
-    """The main channel's Shorts that can say something about subscribers, each with its UK day, views and subscribers: at
-    least SUBS_MIN_VIEWS views, public SUBS_MIN_AGE_DAYS days, and a subscribers figure from Analytics (a blank is not a zero)."""
+    """The Shorts that can say something about subscribers, each with its UK day, views and subscribers: at least
+    SUBS_MIN_VIEWS views, public SUBS_MIN_AGE_DAYS days, and a subscribers figure from Analytics (a blank is not a zero).
+    26 October: every channel's Shorts count; a Short's expected subscribers come from its own channel's same-day peers."""
     now, pts = now or NOW, []
     for r in rows:
-        if channel_of(r) != "main": continue
         v, s = _f(r.get("yt_views")), _f(r.get("yt_subs_gained"))
         if v is None or s is None or v < SUBS_MIN_VIEWS: continue
         try: t = dt.datetime.fromisoformat(str(r["posted"]))
@@ -486,7 +499,7 @@ def subs_points(rows, now=None):
         pts.append({"r": r, "day": t.astimezone(UK).date(), "posted": str(r.get("posted")), "views": v, "subs": max(0.0, s)})
     for p in pts:                                   # the subscribers its views would have brought at the same-day peers' rate
         for w in (0, 1, 3):
-            peers = [q for q in pts if q is not p and abs((q["day"] - p["day"]).days) <= w]
+            peers = [q for q in pts if q is not p and channel_of(q["r"]) == channel_of(p["r"]) and abs((q["day"] - p["day"]).days) <= w]
             if len(peers) >= 3: break
         pv = sum(q["views"] for q in peers)
         p["exp"] = p["views"] * sum(q["subs"] for q in peers) / pv if len(peers) >= 3 and pv else None

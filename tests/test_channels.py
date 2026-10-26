@@ -290,8 +290,30 @@ assert DRV.dead(rows) == [], DRV.dead(rows)
 rows[6]["yt_views"] = 3
 assert [r["short"] for r in DRV.dead(rows)] == ["QD-10"], DRV.dead(rows)         # dead against the music channel's own floor
 main_rows = [r for r in rows if r["channel"] == "main"]
-assert DRV.analyse(rows, {}, "2026-10-25") == DRV.analyse(main_rows, {}, "2026-10-25")
 assert DRV.dead([{k: v for k, v in r.items() if k != "channel"} for r in main_rows]) == []        # rows from before the column are the main channel's
+
+# 26 October: the verdicts pool every channel's Shorts (rel is per channel already); each row keeps its own channel's floor
+rows[6]["yt_views"] = 100
+pooled = {(t["feature"], t["value"]): t for t in DRV.analyse(rows, {}, "2026-10-25")[0]}
+assert ("category", "Music") in pooled and ("category", "Film") in pooled, sorted(pooled)       # the music channel's rows count
+assert pooled[("category", "Music")]["n"] == 6 and pooled[("category", "Film")]["n"] == 6, pooled
+assert ("channel", "music") not in pooled                                                   # the channel is not a test of its own
+assert DRV.floor_of({"main": 200.0, "music": 20.0}, rows[6]) == 20.0 and DRV.floor_of(200.0, rows[6]) == 200.0
+# a choice is paused on its Shorts' views against their own channel's floor: 100 views on music (floor 20) is healthy, so
+# the music rows do not pull the Film+Music pool under the main channel's floor; 3 views there would
+pauses = {}
+grp = main_rows + [r for r in rows if r["channel"] == "music"]
+floors = {"main": 200.0, "music": 20.0}
+assert DRV.pause_state("x|y", grp, floors, pauses, "2026-10-25") == (None, ""), pauses
+for r in rows:
+    if r["channel"] == "music": r["yt_views"] = 3
+state, why = DRV.pause_state("x|y", grp, floors, pauses, "2026-10-25")
+assert state is None, (state, why)          # 6 main rows at 1000 views and 6 music rows at 3: the median straddles, not under
+grp2 = [dict(r, posted=(NOW - dt.timedelta(days=8 + i % 2)).isoformat()) for i, r in enumerate(rows) if r["channel"] == "music"]
+assert DRV.pause_state("x|z", grp2, floors, {}, "2026-10-25")[0] == "pause"                  # all music rows under its floor, 2 UK days
+assert DRV.pause_state("x|z", grp2, floors, {}, "2026-10-25")[1].endswith("under three quarters of the floor of 200")
+for r in rows:
+    if r["channel"] == "music": r["yt_views"] = 100
 
 # the ledger: every metric is the main channel's, except a change that adds a channel (its target is the whole line's)
 C.ROOT = SCRATCH / "chg"; (C.ROOT / "analytics").mkdir(parents=True)
@@ -325,6 +347,19 @@ assert W.pick_series(cfg_music, {"topic": "Taylor Swift's new album tops the cha
 assert W.pick_series(cfg_music, {"topic": "Sabrina Carpenter new single out now"}, fri, 0) == "New Music Friday"
 assert W.pick_series(cfg_music, {"topic": "Sabrina Carpenter new single out now"}, mon, 0) == "Song Secrets", "New Music Friday only on a Friday"
 assert W.pick_series({"series": []}, {"topic": "x"}, mon, 0) is None
+cfg_irl, cfg_clips = W.CFG["shorts_channels"]["irl"], W.CFG["shorts_channels"]["clips"]       # 26 October: the clip channels write original Shorts
+assert W.pick_series(cfg_irl, {"topic": "Octopus escapes its tank", "category": "Animals"}, mon, 0) == "Wild World"      # a series bound to a category
+assert W.pick_series(cfg_irl, {"topic": "The oldest cheese", "category": "Food"}, mon, 0) == "Food Facts"
+assert W.pick_series(cfg_irl, {"topic": "A record crowd", "category": "Entertainment"}, mon, 0) == "Did You Know", "the plain series takes the rest"
+assert W.pick_series(cfg_irl, {"topic": "A record crowd", "category": "Entertainment"}, mon, 1) == "Did You Know"
+assert W.pick_series(cfg_clips, {"topic": "Hadron collider", "category": "Science"}, mon, 0) == "Big Science"
+assert W.pick_series(cfg_clips, {"topic": "Hadron collider", "category": "Tech"}, mon, 0) == "Big Science"
+assert W.pick_series(cfg_clips, {"topic": "Derby day", "category": "Sport"}, mon, 3) == "Match Day"
+assert sorted(W.line_channels()) == ["music"], "only music is signed in in this test; gaming, irl and clips wait for their sign-in like any other"
+note = W.channel_note("irl", cfg_irl, "Wild World", 3)
+assert "Quickplay IRL Clips" in note and "dinner table" in note and "Wild World #3" in note, note
+note = W.channel_note("x", {"name": "X", "categories": ["Cars", "History"]}, None, 0)
+assert "Cars, History" in note and "#" not in note, note
 assert W.main_board({}) and W.main_board({"channel": "main"}) and not W.main_board({"channel": "music"})
 
 def pack(topic, cat, n=3, signal="Apple Music chart"):
@@ -338,6 +373,9 @@ def fake_write_one(p, sid, day, head, extra="", kind="news", tests=None):
     return {"id": sid, "created": str(day), "format": "one_detail", "category": p["category"], "beats": [{"say": "x"}],
             "meta": {"title": f"{p['topic']} 🎵", "sources": p["sources"], "hashtags": [], "summary": "s"}}, "fake"
 W.write_one = fake_write_one
+ever_asked = []
+def no_evergreen(kinds, seen, trending=(), cats=None): ever_asked.append((list(kinds), cats)); return []
+W.evergreen_packs = no_evergreen                     # offline: the evergreen fill asks nothing until the check below
 day = dt.date(2026, 10, 27)
 W.DAY["boards"] = [{"id": "QD-40", "category": "Music", "meta": {"title": "Chart topper alpha explained", "sources": [["T", "https://example.com/Chart-topper-alpha"]]}}]
 state = {"n": 100}
@@ -352,8 +390,14 @@ assert b0["channel_series"] == "Song Secrets #1" and b0["meta"]["title"].startsw
 assert b1["channel_series"] == "Chart Watch #1" and b1["meta"]["title"].startswith("Chart Watch #1: "), b1["meta"]["title"]
 assert "Quickplay Music" in asked[0][2] and "Song Secrets #1" in asked[0][2] and "OTHER CHANNEL" not in asked[0][2], asked[0][2]
 assert "OTHER CHANNEL" in asked[1][2] and "Chart Watch #1" in asked[1][2], asked[1][2]       # the overlap with the main channel's Short, said to the writer
+assert "never gossip about private lives" in asked[0][2], "the channel's brief (config) reaches the writer"
 assert all(len(b["meta"]["title"]) <= 70 for b in (b0, b1)) and all("franchise" not in b and "series" not in b for b in (b0, b1))
 assert not ({"fx_energy", "fx_slot", "round"} & set(b0["test"])), b0["test"]                # the main channel's own rounds are not drawn
+for b, a in ((b0, asked[0]), (b1, asked[1])):                                              # the subscribe line is tested on every channel
+    assert b["test"].get("sub_push") in ("spoken", "none") or b["test"].get("explore") == "yes", b["test"]
+    if b["test"].get("sub_push") == "spoken": assert "SUBSCRIBE LINE" in a[2] and f'our "{b["channel_series"].split(" #")[0]}" series' in a[2], a[2]
+    if b["test"].get("sub_push") == "none": assert "tests having none" in a[2], a[2]
+assert ever_asked and ever_asked[-1][1] == ["Music"], ever_asked                            # the places the news left: evergreen in the channel's own categories
 assert [x["id"] for x in got] == ["QD-100", "QD-101"]
 # the main channel's counters ignore them
 assert W.recent() == [] and W.day_boards(day) == [] and W.day_formats(day) == []
@@ -371,6 +415,21 @@ assert [b["channel_series"] for b in got] == ["Chart Watch #2"], got
 for name in ("Orchid anthem", "Velvet harbour", "Granite lullaby", "Copper skyline", "Marble echo", "Willow thunder"):
     W.extra_channel_boards(day, "evening", [pack(name, "Music")], "HEAD", state, out)
 assert len(W.channel_boards("music", day)) == 6, len(W.channel_boards("music", day))
+# a day with no news in the channel's categories: evergreen packs of those categories fill the places, each in its own kind
+def some_evergreen(kinds, seen, trending=(), cats=None):
+    ever_asked.append((list(kinds), cats))
+    assert cats == ["Music"] and all(k in ("evergreen", "top list", "true story") for k in kinds) and kinds, (kinds, cats)
+    assert any("Chart topper alpha" in t for t, _, _ in seen), "what the channel and the main channel covered is passed as seen"
+    return [dict(pack("Ten longest number ones", "Music", n=5, signal="evergreen top list"), kind="top list"),
+            dict(pack("Why vinyl came back", "Music", signal="evergreen question"), kind="evergreen")][:len(kinds)]
+W.evergreen_packs = some_evergreen
+n = len(asked)
+got = W.extra_channel_boards(dt.date(2026, 10, 29), "morning", [pack("Film thing", "Film")], "HEAD", state, out)
+assert got and got[0]["kind"] == "top list" and got[0]["channel"] == "music" and len(asked) > n, got
+assert W.KIND_NOTE["top list"][:60] in asked[n][2] and "Quickplay Music" in asked[n][2], asked[n][2]
+assert got[0]["test"].get("sub_push") in ("spoken", "none") or got[0]["test"].get("explore") == "yes"
+assert all(b["kind"] in ("top list", "evergreen") and b.get("channel_series") for b in got), got
+W.evergreen_packs = no_evergreen
 # not signed in: nothing is written, nothing asked
 W.channel_signed_in = lambda ch: False
 n, files_before = len(asked), len(list(out.glob("QD-*.json")))

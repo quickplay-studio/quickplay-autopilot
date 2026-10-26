@@ -133,10 +133,68 @@
    "per_day": 6,
    "language": "en",
    "handle": "@quickplaymusic",
+   "brief": "Stay on the music: the artist, the song, the album, the chart or the story behind it, never gossip about private lives. Name the best-known artist first.",
    "series": [
     "Chart Watch",
     "Song Secrets",
     "New Music Friday"
+   ]
+  },
+  "gaming": {
+   "title_word": "gaming",
+   "name": "Quickplay Gaming Clips",
+   "categories": [
+    "Gaming"
+   ],
+   "per_day": 6,
+   "language": "en",
+   "handle": "@quickplaygamingclips-z1b",
+   "brief": "Stay on the games: the game, the studio, the record, the update or the story behind it. Name the game first.",
+   "series": [
+    "Game Lore",
+    "Level Up",
+    "Player One"
+   ]
+  },
+  "irl": {
+   "title_word": "irl",
+   "name": "Quickplay IRL Clips",
+   "categories": [
+    "Entertainment",
+    "Animals",
+    "Food"
+   ],
+   "per_day": 6,
+   "language": "en",
+   "handle": "@quickplayirlclips",
+   "brief": "Real life, not screens: people, places, animals and food, the kind of fact someone repeats at the dinner table. Name the subject first.",
+   "series": [
+    "Did You Know",
+    "Wild World",
+    "Food Facts"
+   ]
+  },
+  "clips": {
+   "title_word": "clips",
+   "name": "Quickplay Clips",
+   "categories": [
+    "Film",
+    "Tech",
+    "Science",
+    "Sport",
+    "Cars",
+    "History"
+   ],
+   "per_day": 6,
+   "language": "en",
+   "handle": "@quickplayclips-x9b",
+   "brief": "The studio's film, tech, science, sport, cars and history channel: one surprising, checked fact at a time. Name the film, the device, the team or the car first.",
+   "series": [
+    "Screen Time",
+    "Big Science",
+    "Match Day",
+    "Time Machine",
+    "On the Road"
    ]
   },
   "es": {
@@ -151,7 +209,7 @@
    "wps": 2.8
   }
  },
- "shorts_channels_note": "More channels for the Daily line (Charlie, 25 October): a music-only channel and a Spanish mirror for the Americas. Charlie creates each channel in YouTube Studio under the studio account and signs it in (tokens/youtube_<key>.enc, the social workflow with channel music or es); until that file exists nothing here runs (youtube.connected). A board's optional channel field (default main) routes it: its own client, slot grid, per_day and peers. The 100-uploads bucket in quota.py is shared by every channel. The Spanish mirror (mirror.py) makes a -es board of each main board (language es, neutral Latin American Spanish, the Spanish voice on Chatterbox Multilingual, slot_grid americas: 23:00 UTC then 00:00 to 03:00 UTC, the American evening); handle is the name shown on screen. Extra channels' Shorts are measured (analytics/shorts.csv channel column) but never counted in the main channel's target, headline or ledger.",
+ "shorts_channels_note": "More channels for the Daily line (Charlie, 25 October): a music-only channel and a Spanish mirror for the Americas; since 26 October (Charlie: original content on all channels, one learning model) the three clip channels too, gaming, irl and clips, each writing original Shorts in its own categories from the day's news packs and then evergreen packs of those categories (writer.extra_channel_boards), in its own series, with the title and subscribe-line tests. Charlie creates each channel in YouTube Studio under the studio account and signs it in (tokens/youtube_<key>.enc, the social workflow with channel music or es; gaming, irl and clips use the clip channels' existing sign-ins); until that file exists nothing here runs (youtube.connected). A board's optional channel field (default main) routes it: its own client, slot grid, per_day and peers. brief is the writer's one-paragraph channel instruction (else its categories); handle is the name shown on screen (the identity audit's status/identity.json has each sign-in's). The 100-uploads bucket in quota.py is shared by every channel. The Spanish mirror (mirror.py) makes a -es board of each main board (language es, neutral Latin American Spanish, the Spanish voice on Chatterbox Multilingual, slot_grid americas: 23:00 UTC then 00:00 to 03:00 UTC, the American evening). Every channel's Shorts feed the one learning model (drivers.analyse pools every channel's rows, each against its own floor) but only the main channel's count in its target, headline and ledger.",
  "languages": {
   "pt": {
    "channel": "Quickplay Daily Português",
@@ -470,6 +528,8 @@
  ],
  "instagram_thumb_at_hook": true,
  "instagram_cover_pause_days": 3,
+ "clips_paused": "2026-10-26",
+ "clips_paused_note": "Charlie, 26 October: the clips earned no views, so the three clip channels post original Shorts (shorts_channels gaming, irl, clips) and clipping is paused from this date: clips.yml's scheduled runs stop at its Batch time? step (a push to requests/clips* or a workflow_dispatch still runs), clips.py returns at once on a scheduled run, alerts.py drops the clips stale alert, mac_rows.py lists no Vyro rows or campaigns to join (the Mac's Chrome task stays on for the Monday related-video job, one-offs, issues and the poll; it stops at NOTHING TO DO otherwise). Everything uploaded stays up. To clip again once the channels have traction: set this to \"\".",
  "instagram_first": true,
  "instagram_favour_min": 1.05,
  "instagram_hashtags": {

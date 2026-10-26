@@ -49,33 +49,6 @@
   "issue": 35
  },
  {
-  "id": "mac-vyro",
-  "title": "Bind the Chrome task to your Mac, then leave the Mac awake for the Vyro submissions",
-  "why": "Vyro only accepts submissions from your Chrome, so the scheduled task \"Quickplay: Chrome jobs (on the Mac)\" submits the day's Vyro clips from the Mac every 2 hours, 09:07 to 23:07 UK. Since 22 October it has run in the cloud with no Mac attached (so no Claude in Chrome tools) and nothing was ever submitted; a cloud session cannot bind it. One missed day costs nothing (a clip's row stays open 30 hours); two in a row loses that day's Vyro clips.",
-  "steps": [
-   "Once: in the Claude desktop app on the Mac open Scheduled tasks, then \"Quickplay: Chrome jobs (on the Mac)\", turn on \"Require this computer\" and approve the card.",
-   "Then keep the Mac on, awake and online, with Chrome open on the studio profile and the Claude extension on, at one of 09:07, 11:07, 13:07, 15:07, 17:07, 19:07, 21:07 or 23:07 UK (19:07 fits most days).",
-   "Nothing else: the first bound run clears the waiting rows and records each one in clips/submit.csv; until then the rows are on submit.html for submitting by hand."
-  ],
-  "links": [
-   {
-    "label": "What the Mac task does",
-    "url": "https://github.com/quickplay-studio/quickplay-autopilot/blob/main/docs/CHROME_JOBS.md"
-   },
-   {
-    "label": "Submit by hand (submit.html)",
-    "url": "https://quickplay-studio.github.io/quickplay-autopilot/submit.html"
-   }
-  ],
-  "added": "2026-10-24",
-  "due": "",
-  "repeat": "every day",
-  "done": false,
-  "short": "Mac bound and awake for Vyro",
-  "check": "vyro_today",
-  "note": "Sunday 25 October: 15 Vyro clips still wait for the Mac (0 submitted so far)"
- },
- {
   "id": "cloudflare-key",
   "title": "Optional, free: a Cloudflare Workers AI key (one more writing model)",
   "why": "Free every day with no card (10,000 neurons a day). More free writers means fewer Shorts fall back to Claude, which spends your allowance. The code is ready and both secret names are already allowed.",

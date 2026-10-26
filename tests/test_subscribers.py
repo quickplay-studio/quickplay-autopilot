@@ -231,7 +231,7 @@ emit = src.split("    def emit(p, ", 1)[1].split("    def emit_kind(", 1)[0]
 emit_kind = src.split("    def emit_kind(", 1)[1].split("\n    def ", 1)[0]
 assert "with_sub_test(" in emit and "sub_note(" in emit and "with_sub_test(" in emit_kind, "both writing paths draw the arm"
 extra = src.split("def extra_channel_boards(", 1)[1].split("\ndef ", 1)[0]
-assert "with_sub_test" not in extra and "sub_push" not in extra, "the other channels' boards have no arm"
+assert "with_sub_test(" in extra and "SUB.note(" in extra, "the other channels' boards draw the arm too (one learning model, 26 October)"
 assert "Subscribe line" in W.RECIPE_FIRST and "Subscribe chip" in W.RECIPE_NOT                    # the writer is told the line's result, not the chip's
 print("3 writer ok")
 
@@ -388,8 +388,10 @@ assert len(D.subs_points(rows, NOW)) == 40
 extras = [srow(900, 8, 10, 10, 1, sub_push="spoken"),                  # under 20 views
           srow(901, 8, 11, 1000, None, sub_push="spoken"),              # no figure from Analytics yet: a blank is not a zero
           srow(902, 24, 11, 1000, 5, sub_push="spoken"),                # public for a day only
-          srow(903, 8, 12, 1000, 5, sub_push="spoken", channel="es")]   # another channel
-assert len(D.subs_points(rows + extras, NOW)) == 40 and D.analyse_subscribers(rows + extras, NOW) == D.analyse_subscribers(rows, NOW)
+          srow(903, 8, 12, 1000, 5, sub_push="spoken", channel="es")]   # another channel: counted (26 October), but its peers are its own channel's
+assert len(D.subs_points(rows + extras, NOW)) == 41
+assert [p for p in D.subs_points(rows + extras, NOW) if p["r"].get("channel") == "es"][0]["exp"] is None     # no same-channel peers yet
+assert D.analyse_subscribers(rows + extras, NOW) == D.analyse_subscribers(rows, NOW)                           # so it changes no verdict
 assert len(D.subs_points(rows + [srow(904, 8, 12, 500, 0, sub_push="none")], NOW)) == 41           # a real zero counts
 tab = D.analyse_subscribers(rows, NOW)
 assert all(set(t) == set(D.SUBS_FIELDS) and t["feature"].startswith("subs:") for t in tab) and tab == sorted(tab, key=lambda t: (t["feature"], -t["lift"]))
@@ -422,7 +424,8 @@ assert D.sub_halves([{"posted": "a", "subs": 3, "exp": 1}, {"posted": "b", "subs
 assert D.sub_halves([{"posted": "a", "subs": 0, "exp": 3}], "b") is None                                    # a half with under 2 Shorts says nothing
 assert D.sub_halves([{"posted": p, "subs": 0, "exp": 3} for p in "aabb"], "b") == -1
 
-sm = D.subs_summary(rows + extras, NOW)
+assert D.subs_summary(rows + extras, NOW)["shorts"] == 41           # pooled, the other channel's Short counts
+sm = D.subs_summary(rows, NOW)
 assert sm["shorts"] == 40 and sm["views"] == 40000 and sm["subs"] == 60 and sm["per_1k"] == 1.5, sm
 assert sm["best"] == {"id": "QD-1", "title": "Short 1", "subs": 3, "views": 1000, "per_1k": 3.0}, sm["best"]
 assert D.subs_summary([], NOW) == {"shorts": 0, "views": 0, "subs": 0, "per_1k": None, "best": None}

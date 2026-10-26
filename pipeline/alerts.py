@@ -240,13 +240,22 @@ def money():
     print(f"money: clips about ${total:,.2f} (noted ${noted:,.2f}); subscribers {ypp.get('subscribers_pct')}%, views {ypp.get('views_pct')}%")
 
 
+def clips_paused():
+    """config.json clips_paused (Charlie, 26 October: the clip channels post original Shorts instead): the date, else ''."""
+    try: return str(json.loads((ROOT / "config.json").read_text()).get("clips_paused") or "")
+    except Exception: return ""
+
+
 def stale_check():
-    """An issue for every job with no successful run inside its STALE_HOURS (closed again once it runs)."""
+    """An issue for every job with no successful run inside its STALE_HOURS (closed again once it runs); none for clips
+    while clipping is paused."""
     for name, hours in STALE_HOURS.items():
+        title = f"⚠️ {name} has not run successfully for over {hours} hours ({WHAT.get(name, name)})"
+        if name == "clips" and clips_paused():
+            clear(title, f"Clipping is paused since {clips_paused()} (config.json clips_paused)."); continue
         r = gh("run", "list", "--workflow", f"{name}.yml", "--status", "success", "--limit", "1", "--json", "createdAt,url")
         try: last = (json.loads(r.stdout or "[]") or [None])[0]
         except ValueError: continue
-        title = f"⚠️ {name} has not run successfully for over {hours} hours ({WHAT.get(name, name)})"
         when = dt.datetime.fromisoformat(last["createdAt"].replace("Z", "+00:00")) if last else None
         if when is None or (NOW - when).total_seconds() > hours * 3600:
             raise_issue(title, f"Last successful {name} run: {last['url'] + ' at ' + last['createdAt'] if last else 'none found'}. "

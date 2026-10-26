@@ -59,6 +59,13 @@ comments that viewers can answer, under 90 characters, UK English spelling (favo
 def log(*a): print(*a, flush=True)
 
 
+def paused():
+    """config.json clips_paused (Charlie, 26 October: the clip channels post original Shorts instead of clips): the date
+    clipping stopped, else ''. A scheduled run does nothing while it is set; a request push or a dispatch still runs."""
+    try: return str(json.loads((ROOT / "config.json").read_text()).get("clips_paused") or "")
+    except Exception: return ""
+
+
 UNSAFE = re.compile(r"\b(trauma\w*|abus\w+|psycholog\w+ (destruction|damage|torture|warfare)|self[ -]harm|suicid\w*|overdos\w*|tortur\w+|"
                     r"mental(ly)? (ill\w*|breakdown)|rap(e|ed|ist)|molest\w*|nazi\w*|terror\w*)\b", re.I)      # not for a hook or title, even as a joke
 PROFANE = re.compile(r"\b(f+u+c+k+\w*|f\*+\w*|s+h+i+t+\w*|s\*+t\w*|b+i+t+c+h+\w*|a+s+s+h+o+l+e+\w*|d+i+c+k+s?|p+u+s+s+y|wtf|stfu|"
@@ -2452,6 +2459,8 @@ def submissions(dry=False):
 def main(argv):
     cmd = argv[0] if argv else "run"
     ids = argv[1:]
+    if paused() and os.environ.get("GITHUB_EVENT_NAME") == "schedule" and cmd != "allocation":
+        log(f"clips: paused since {paused()} (config.json clips_paused); nothing made, posted or submitted"); return
     try:                    # refreshed Instagram keys (the identity audit, weekly) beat the 60-day IG_<CHANNEL>_TOKEN secrets
         import social
         social.apply_stored_keys()

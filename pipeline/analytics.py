@@ -849,7 +849,8 @@ def main():
     curves = update_curves(rows)
     # the line's other channels (25 October) are measured but never counted in the main channel's numbers: each is compared
     # with its own Shorts (peers from the same channel), and everything below (breakouts, looks, hours, the headline, the
-    # Partner Programme estimate, drivers, the volume test) runs on the main channel's rows alone
+    # Partner Programme estimate, the volume test) runs on the main channel's rows alone. The drivers (26 October) pool
+    # every channel: rel is per channel, so one Short's lift is comparable with another's whichever channel it is on
     all_rows = rows
     xrows = [r for r in all_rows if r["channel"] != "main"]
     rows = [r for r in all_rows if r["channel"] == "main"]
@@ -967,7 +968,7 @@ def main():
                                                   "best_category", "best_format", "best_hook", "best_length", "top_short",
                                                   "dimension", "value", "shorts", "views_per_short", "lift"])
         pauses = DRV.load_pauses()          # choices left out for 14 days, then retested (drivers.py)
-        table, _base = DRV.analyse(rows, pauses)
+        table, _base = DRV.analyse(all_rows, pauses)      # 26 October: every channel's Shorts feed the verdicts (drivers.analyse)
         DRV.save_pauses(pauses)
         try: table += DRV.analyse_instagram(rows)        # Instagram's own tests and categories, against Instagram views
         except Exception as e: print("instagram drivers:", str(e)[:150])
@@ -976,7 +977,7 @@ def main():
         log_decisions(table, DRV.METHOD)
         sub_table, sub_sum = [], {}
         try:        # subscribers per 1,000 views: the subscriber push's own judgement, apart from views (analytics/subs.csv)
-            sub_table, sub_sum = DRV.analyse_subscribers(rows), DRV.subs_summary(rows)
+            sub_table, sub_sum = DRV.analyse_subscribers(all_rows), DRV.subs_summary(rows)      # verdicts pool every channel; the headline is the main channel's
             write_csv(OUT / "subs.csv", sub_table, DRV.SUBS_FIELDS)
             log_sub_decisions(sub_table)
         except Exception as e: print("subscriber drivers:", str(e)[:150])

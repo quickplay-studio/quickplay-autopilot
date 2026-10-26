@@ -156,13 +156,18 @@ print("5 issues ok")
 AC.log = lambda *a: None          # the run logs every step; the checks below read the file and the stub
 # 6. the whole run on a copy of the real list: checks move items, issues are made once, the file is written only when it changed
 work = SCRATCH / "actions.json"; shutil.copy(REPO_DIR + "/status/actions.json", work)
-real = json.loads(work.read_text()); ids = [a["id"] for a in real]
+real = json.loads(work.read_text())
+# the Mac Vyro item left the live list when clipping paused (26 October); the vyro_today check is still exercised on a copy of it
+if not any(a["id"] == "mac-vyro" for a in real):
+    real.append({"id": "mac-vyro", "title": "Leave the Mac awake for the Vyro submissions", "why": "test", "steps": ["test"], "links": [],
+                 "added": "2026-10-24", "due": "", "check": "vyro_today", "done": False})
+ids = [a["id"] for a in real]
 # the live file carries what the audit runs have done (issue numbers, done marks): the test starts from the items as written
 for a in real:
     for k in ("issue", "done_at", "done_by", "note"): a.pop(k, None)
     a["done"] = False
 work.write_text(json.dumps(real, indent=1, ensure_ascii=False) + "\n")
-assert {"facebook-status", "tiktok-status", "mac-vyro", "cloudflare-key", "mistral-key", "sambanova-key", "pages-from-actions"} <= set(ids), ids
+assert {"facebook-status", "tiktok-status", "cloudflare-key", "mistral-key", "sambanova-key", "pages-from-actions"} <= set(ids), ids
 checks_in_file = {a["id"]: a["check"] for a in real if a.get("check")}
 assert {"mac-vyro": "vyro_today", "cloudflare-key": "secret_works:CF_API_TOKEN", "mistral-key": "secret_works:MISTRAL_API_KEY",
         "sambanova-key": "secret_works:SAMBANOVA_API_KEY", "pages-from-actions": "pages_workflow"}.items() <= checks_in_file.items(), checks_in_file

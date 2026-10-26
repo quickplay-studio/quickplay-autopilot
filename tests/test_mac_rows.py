@@ -73,4 +73,20 @@ camps["min_active"] = 2; (ROOT / "clips" / "campaigns.json").write_text(json.dum
 o = M.show(NOW, fetch_issues=False)
 assert "- Join X" in o and "Make Y" not in o and "NOTHING" not in o, o
 print("jobs ok")
+
+# 5. clipping paused (config.json clips_paused, 26 October): no Vyro rows, no rescue, no campaigns to join; the Monday
+# related-video job and the one-offs stay; nothing else means NOTHING TO DO
+write([row("t0", "v1", "2026-10-24 19:00"), row("c1", "cr", "2026-10-24 19:00", sub="failed: login expired")])
+camps["min_active"] = 9; (ROOT / "clips" / "campaigns.json").write_text(json.dumps(camps))
+assert "Vyro: 1 to submit now" in M.show(NOW, fetch_issues=False) and "Capacity: 3 of 9" in M.show(NOW, fetch_issues=False)
+(ROOT / "config.json").write_text(json.dumps({"clips_paused": "2026-10-26"}))
+assert M.clips_paused() == "2026-10-26"
+o = M.show(NOW, fetch_issues=False)
+assert "Clips: paused since 2026-10-26" in o and "Vyro:" not in o and "rescue" not in o and "Capacity" not in o and "- Join X" in o, o
+assert "Related video" in M.show(monday, fetch_issues=False)
+(ROOT / "docs" / "CHROME_LOG.md").write_text("## One-off jobs\n")
+assert "NOTHING TO DO" in M.show(NOW, fetch_issues=False)
+(ROOT / "config.json").write_text(json.dumps({"clips_paused": ""}))
+assert M.clips_paused() == "" and "Vyro: 1 to submit now" in M.show(NOW, fetch_issues=False)
+print("paused ok")
 print("mac rows ok")

@@ -1,42 +1,136 @@
 {
  "date": "2026-10-26",
- "built": "2026-10-26T07:38+00:00",
- "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-26T09:08+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 5,
-   "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
-   "category": "Science",
-   "what_is_new": "",
+   "n": 7,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Nothing changed in the last two days.",
    "hooks": [
-    "Did you know Halloween: The Game launched on September 8, 2026?"
+    "Grand Theft Auto VI launches on 19 November 2026 for PlayStation 5 and Xbox Series X/S!"
    ],
    "sources": [
     [
-     "Scott Walker’s The Drift will get under your skin",
-     "https://www.theverge.com/entertainment/1018300/scott-walker-the-drift-music-album-review",
-     "The Verge",
+     "Rumored Lucia Actress Goes Viral After Dodging Swarm of GTA 6 Comments During Livestream",
+     "https://www.ign.com/articles/rumored-lucia-actress-goes-viral-after-dodging-swarm-of-gta-6-comments-during-livestream",
+     "IGN",
      "2026-10-25"
     ],
     [
-     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
-     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
-     "Space.com",
-     "2026-10-24"
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
     ],
     [
-     "Jackson Boxer’s vegetarian recipe for brown butter pumpkin soup",
-     "https://www.theguardian.com/food/2026/oct/24/vegetarian-brown-butter-pumpkin-soup-recipe-jackson-boxer",
-     "Guardian",
-     "2026-10-24"
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/GTA_6",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "GTA 6 is scheduled to launch on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Stephen Root plays the character Brian Heder.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Who has been confirmed, whether Rockstar and any likely NDAs like it or not, is Stephen Root, who said he will be seen playing drug",
+      "3": "Other characters include: Cal Hampton, Jason's paranoid friend; Boobie Ike, who runs a business empire in Vice City; Dre'Quan Priest, owner of the record label"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Manni L. Perez reached a peak of more than 2,100 viewers during her 12 minute livestream.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Reaching a peak of more than 2,100 viewers on a six-month-old Instagram account with just nine posts, Perez spent her 12-minute livestream just talking about"
+     }
+    },
+    {
+     "claim": "Manni L. Perez played a blackjack dealer in Grand Theft Auto Online.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Funnily enough, she also played a blackjack dealer in Grand Theft Auto Online."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI will include a social media app named Snapmatic.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI will feature a fully integrated social media app called Snapmatic, returning from Grand Theft Auto V.[14][15]"
+     }
+    },
+    {
+     "claim": "Rockstar Games grew from 2,441 staff in 2018 to 4,711 employees across 12 offices during development.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
+     }
+    }
+   ],
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+   ]
+  },
+  {
+   "n": 26,
+   "topic": "LYON vs. GEN",
+   "signal": "YouTube GB 258,921/h",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Dishonored studio Arkane Lyon faces closure by November."
+   ],
+   "sources": [
+    [
+     "As devastating Xbox \"reset\" continues, Dishonored studio Arkane Lyon reportedly only has until November to find a new buyer before it's clos",
+     "https://www.eurogamer.net/xbox-layoffs-marvels-blade-arkane-lyon-closure",
+     "Eurogamer",
+     "2026-10-23"
     ],
     [
-     "Halloween 2026",
-     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
+     "LYON vs. GEN",
+     "https://en.wikipedia.org/wiki/Enid_Lyons",
      "Wikipedia",
      ""
     ]
@@ -44,63 +138,55 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Halloween: The Game was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series S.",
+     "claim": "Arkane Lyon must find a buyer by 13th November or face closure.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
+      "1": "the deadline to find a buyer for the studio is imminent, ending on 13th November."
      }
     },
     {
-     "claim": "Halloween: The Game was released on September 8 2026 for PlayStation 5, Windows and Xbox Series X and Series S.",
+     "claim": "If Arkane Lyon closes, 217 workers could lose their jobs.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "it is based on the 1978 film halloween and was released on september 8 2026 for playstation 5 windows and xbox series x and series s"
+      "1": "If the closure occurs, 217 workers could lose their jobs."
      }
     },
     {
-     "claim": "The multiplayer mode is a one‑versus‑four asymmetrical horror mode where one player controls Michael Myers and four players control civilians.",
+     "claim": "Enid Lyons was the first woman to be elected to the Australian House of Representatives.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "The multiplayer mode is a one‑versus‑four asymmetrical horror mode in which one player controls Michael Myers, while four players control civilians in Haddonfield."
+      "2": "She was notable as being the first woman to be elected to the House of Representatives"
      }
     },
     {
-     "claim": "The game is being developed in Unreal Engine 5.",
+     "claim": "Enid Lyons served as Vice‑President of the Executive Council from 1949 to 1951, becoming the first woman in cabinet.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "The game is being developed in Unreal Engine 5."
-     }
-    },
-    {
-     "claim": "The game was refused classification by the Australian Classification Board, preventing its release in Australia.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "2026 14 a third map orange grove estates was revealed in july 2026 15 on august 10 2026 the official x account for halloween the game confirmed 16 that the game had been refused classification by the australian classification board"
+      "2": "served as Vice‑President of the Executive Council in the Menzies Government from 1949 to 1951 – the first woman in cabinet."
      }
     }
    ],
-   "images": []
+   "images": [
+    "commons:File:Enid_Lyons_1950.jpg"
+   ]
   },
   {
-   "n": 30,
+   "n": 29,
    "topic": "FC BARCELONA 1",
-   "signal": "YouTube GB-sport 801,450/h",
+   "signal": "YouTube GB-sport 792,940/h",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Kylian Mbappe scored a stunning late double to win El Clasico!",
-    "Real Madrid secured a dramatic 2-1 victory at Barcelona!",
-    "Jude Bellingham and Eduardo Camavinga teamed up for a dramatic late winner!"
+    "Kylian Mbappe stunned Barcelona with a late winner in El Clasico!",
+    "Real Madrid claimed a dramatic 2-1 victory at the Camp Nou!"
    ],
    "sources": [
     [
@@ -128,77 +214,8 @@
      ""
     ]
    ],
-   "verified": [
-    {
-     "claim": "Jude Bellingham set up Eduardo Camavinga who provided the cutback for Kylian Mbappé to score in the 87th minute.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "With just three minutes and the final reserves of energy remaining, a wonderful moment of skill from Jude Bellingham found Eduardo Camavinga and set them",
-      "2": "It was the 87th minute when Mbappe tucked in from Eduardo Camavinga's cutback following some sublime skill from Jude Bellingham."
-     }
-    },
-    {
-     "claim": "Raphinha scored for Barcelona to level the match after Mbappé had given Real Madrid the opening goal.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "They had drawn level after Mbappé’s opener, Raphinha scoring, but could not do it again.",
-      "2": "Barcelona equalised through Raphinha after Mbappe deflected in opener but Jude Bellingham brilliance set Real away to grab three LaLiga points and close in on"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The El Clasico match was broadcast in English on ABC and in Spanish on ESPN Deportes.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Network: ABC in English, ESPN Deportes in Spanish"
-     }
-    },
-    {
-     "claim": "The Barcelona vs Atlético Madrid match took place on 17 May 2014 at the Camp Nou in Barcelona, Spain.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The Barcelona vs Atlético Madrid football match that took place on 17 May 2014 at the Camp Nou in Barcelona, Spain, was played during the"
-     }
-    },
-    {
-     "claim": "The 1 to 1 draw gave Atlético Madrid the point to win their first league title in 18 years and their tenth overall.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The result was a 1–1 draw, earning Atlético Madrid the point to win their first league title in 18 years, and their tenth overall."
-     }
-    },
-    {
-     "claim": "Alexis Sánchez gave Barcelona the lead five minutes before half‑time after a chest‑pass from Lionel Messi.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Five minutes before half time, Barcelona took the lead into the break thanks to a goal by Alexis Sánchez after receiving a chest-pass from Lionel"
-     }
-    },
-    {
-     "claim": "Diego Godín equalised in the second half with a header from a corner kick.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In the 49th minute of the second half however, a header from Diego Godín off a corner kick made the score 1–1."
-     }
-    }
-   ],
+   "verified": [],
+   "one_source": [],
    "images": []
   }
  ]

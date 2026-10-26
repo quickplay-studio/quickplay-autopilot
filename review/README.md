@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 08:50): 16 of 1,000 subscribers · 9,936 of 10 million Shorts views in 90 days · 4,333 views in the last 24 hours (about 111,001 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 09:08): 16 of 1,000 subscribers · 10,012 of 10 million Shorts views in 90 days · 4,284 views in the last 24 hours (about 111,000 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Mon 26 Oct 7:38 (UK): 3 scheduled, 146 public, 17 uploads in the last 24 hours.
+YouTube checked Mon 26 Oct 9:08 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 8:20).
 
@@ -25,15 +25,15 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
-- lab-voice-1019 (British male, 3.15 words a second): 1.56 x typical, 39% stayed past the first seconds, 3 Shorts
+- michael (American male, friendly): 1.30 x typical, 39% stayed past the first seconds, 3 Shorts
+- lab-voice-1019 (British male, 3.15 words a second): 1.17 x typical, 35% stayed past the first seconds, 4 Shorts
 - george_dramatic (British male, more dramatic delivery): 1.06 x typical, 29% stayed past the first seconds, 9 Shorts
-- emma (British female): 0.98 x typical, 24% stayed past the first seconds, 9 Shorts
-- george_quick (British male, clear and quicker): 0.95 x typical, 24% stayed past the first seconds, 4 Shorts
-- michael (American male, friendly): 1.49 x typical, 37% stayed past the first seconds, 2 Shorts
-- lily (British female, bright): 1.19 x typical, 30% stayed past the first seconds, 2 Shorts
-- heart (American female, expressive): 1.06 x typical, 26% stayed past the first seconds, 2 Shorts
-- lewis (British male, deeper and calm): 0.96 x typical, 24% stayed past the first seconds, 1 Short
-- isabella (British female, warm): 0.90 x typical, 22% stayed past the first seconds, 1 Short
+- george_quick (British male, clear and quicker): 0.90 x typical, 26% stayed past the first seconds, 4 Shorts
+- emma (British female): 0.86 x typical, 24% stayed past the first seconds, 16 Shorts
+- lily (British female, bright): 0.61 x typical, 18% stayed past the first seconds, 4 Shorts
+- isabella (British female, warm): 0.96 x typical, 36% stayed past the first seconds, 2 Shorts
+- heart (American female, expressive): 0.87 x typical, 26% stayed past the first seconds, 2 Shorts
+- lewis (British male, deeper and calm): 0.80 x typical, 24% stayed past the first seconds, 1 Short
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
 - daniel (British male, brisk): 0 Shorts measured so far
 
@@ -41,10 +41,10 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (3 of 8 Shorts measured)
-- Testing voice: British male, 3.15 words a second (3 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (4 of 8 Shorts measured)
+- Testing voice: British male, 3.15 words a second (4 of 8 Shorts measured)
 - Testing energy: camera motion 0.9, punch-ins 0.03 (0 of 8 Shorts measured)
-- Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (2 of 8 Shorts measured)
+- Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (7 of 8 Shorts measured)
 - Testing opening: the picture alone for 3 words, then the hook's card (0 of 8 Shorts measured)
 - 2026-10-26: opening kept lab-opening-1019: the picture alone for 1 word, then the hook's card (1.14x against 1.06x for graphic_first over 8 Shorts)
 - 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
@@ -95,13 +95,23 @@ scheduled · 32 s · music: stake-out · [script](../boards/done/QD-178.json) ·
 
 ![QD-178](QD-178.jpg)
 
+### Mon 26 Oct 11:00 · Song Secrets #2: Song secrets: Shakira's chart record
+scheduled · 37 s · music: paradigm · [script](../boards/done/QD-182.json) · [YouTube](https://youtube.com/shorts/OoPuz2CbMhM)
+
+![QD-182](QD-182.jpg)
+
+### Mon 26 Oct 9:30 · Halloween: The Game: the country that said no 🎃
+scheduled · 37 s · music: paradigm · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
+
+![QD-181](QD-181.jpg)
+
 ### Mon 26 Oct 6:30 · Animals Explained #1: How dogs became man's best friend 🐕
-public · 7 views · 29 s · music: stake-out · on Instagram · [script](../boards/done/QD-177.json) · [YouTube](https://youtube.com/shorts/Wvba1xTu2BM)
+public · 15 views · 29 s · music: stake-out · on Instagram · [script](../boards/done/QD-177.json) · [YouTube](https://youtube.com/shorts/Wvba1xTu2BM)
 
 ![QD-177](QD-177.jpg)
 
 ### Sun 25 Oct 23:30 · BioWare: fans petition after EA closure 🎮
-public · 2 views · 35 s · music: duty-calls · on Facebook · [script](../boards/done/QD-176.json) · [YouTube](https://youtube.com/shorts/gPtD8qBcINI)
+public · 3 views · 35 s · music: duty-calls · on Facebook · [script](../boards/done/QD-176.json) · [YouTube](https://youtube.com/shorts/gPtD8qBcINI)
 
 ![QD-176](QD-176.jpg)
 
@@ -124,7 +134,7 @@ public · 9 views · 32 s · music: level · [script](../boards/done/QD-173.json
 ![QD-173](QD-173.jpg)
 
 ### Sun 25 Oct 17:00 · Mortimer and Whitehouse: Ted's last trip 🐾
-public · 49 views · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
+public · 48 views · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
 
 ![QD-172](QD-172.jpg)
 
@@ -154,7 +164,7 @@ public · 973 views · 27 s · music: paradise · [script](../boards/done/QD-165
 ![QD-165](QD-165.jpg)
 
 ### Sun 25 Oct 11:00 · Tech Truths #1: Windows XP arrived in shops (Part 1) 💻
-public · 202 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
+public · 200 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
 
 ![QD-169](QD-169.jpg)
 
@@ -164,37 +174,37 @@ public · 46 views · 27 s · music: hopping-trains · [script](../boards/done/Q
 ![QD-166](QD-166.jpg)
 
 ### Sun 25 Oct 7:00 · Ballon d'Or 2026 ceremony is moving to London
-public · 615 views · 38 s · music: the-bombs · on Instagram · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
+public · 651 views · 38 s · music: the-bombs · on Instagram · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
 
 ![QD-162](QD-162.jpg)
 
 ### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
-public · 269 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
+public · 270 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
 
 ![QD-164](QD-164.jpg)
 
 ### Sun 25 Oct 4:00 · Richard E Grant admits betrayal to Joe Lycett
-public · 199 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
+public · 205 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
 
 ![QD-163](QD-163.jpg)
 
 ### Sun 25 Oct 2:30 · Raye is 28 and Where Is My Husband just hit a billion streams 🎉
-public · 372 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
+public · 376 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
 
 ![QD-161](QD-161.jpg)
 
 ### Sun 25 Oct 1:30 · Free Steam games you can play right now (Part 2) 🎮
-public · 292 views · 27 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
+public · 294 views · 27 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
 
 ![QD-159](QD-159.jpg)
 
 ### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-public · 114 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
+public · 117 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
 
 ![QD-158](QD-158.jpg)
 
 ### Sat 24 Oct 16:30 · Kimi Antonelli: F1's youngest world champion? 🏎️
-public · 33 views · 32 s · music: death-duel · [script](../boards/done/QD-157.json) · [YouTube](https://youtube.com/shorts/gIS6da6LTVE)
+public · 36 views · 32 s · music: death-duel · [script](../boards/done/QD-157.json) · [YouTube](https://youtube.com/shorts/gIS6da6LTVE)
 
 ![QD-157](QD-157.jpg)
 
@@ -214,7 +224,7 @@ public · 79 views · 34 s · music: death-duel · [script](../boards/done/QD-15
 ![QD-154](QD-154.jpg)
 
 ### Sat 24 Oct 12:00 · The Ballon d'Or is coming to London for the first time 🏆
-public · 47 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
+public · 43 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-153.json) · [YouTube](https://youtube.com/shorts/hJZL-czewhY)
 
 ![QD-153](QD-153.jpg)
 
@@ -244,7 +254,7 @@ public · 18 views · 24 s · music: pulsar · [script](../boards/done/QD-146.js
 ![QD-146](QD-146.jpg)
 
 ### Sat 24 Oct 5:00 · How Barbara Palvin was discovered at age 13 ✨
-public · 1,166 views · 28 s · music: f16 · [script](../boards/done/QD-076.json) · [YouTube](https://youtube.com/shorts/bENhL4PxDDE)
+public · 1,167 views · 28 s · music: f16 · [script](../boards/done/QD-076.json) · [YouTube](https://youtube.com/shorts/bENhL4PxDDE)
 
 ![QD-076](QD-076.jpg)
 
@@ -267,13 +277,3 @@ public · 78 views · 21 s · music: paradise · on Facebook · [script](../boar
 public · 3 views · 29 s · music: purple-desire · on Facebook · [script](../boards/done/QD-143.json) · [YouTube](https://youtube.com/shorts/FvEctqCZhx4)
 
 ![QD-143](QD-143.jpg)
-
-### Fri 23 Oct 18:00 · Jerry Hall’s early school exit and TV comeback 🌟
-public · 17 views · 29 s · music: after-sunset · on Facebook · [script](../boards/done/QD-142.json) · [YouTube](https://youtube.com/shorts/Qn-Zk4JvlxM)
-
-![QD-142](QD-142.jpg)
-
-### Fri 23 Oct 17:30 · Avengers Doomsday preview drops during World Series ⚾
-public · 533 views · 24 s · music: in-battery · on Facebook · [script](../boards/done/QD-141.json) · [YouTube](https://youtube.com/shorts/ijQ5iXKFmhU)
-
-![QD-141](QD-141.jpg)

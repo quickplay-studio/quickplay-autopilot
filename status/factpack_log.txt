@@ -1,6 +1,7 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Halloween 2026: 0 verified, 5 one-source, 4 pages
-FC BARCELONA 1: 2 verified, 5 one-source, 4 pages
-covered recently, no pack: GTA 6; Ballon d'Or 2026; Clayface (film); the cure by Olivia Rodrigo; LISA; 2026 United States Grand Prix; xbox fifty new games release; The Hunger Games: Sunrise on the Reaping
-2 packs, 2 verified facts, 10 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 3, "groq:openai/gpt-oss-120b": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}
+GTA 6: 3 verified, 4 one-source, 3 pages
+LYON vs. GEN: 0 verified, 4 one-source, 2 pages
+FC BARCELONA 1: 0 verified, 0 one-source, 4 pages
+covered recently, no pack: Ballon d'Or 2026; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Clayface (film); LISA; Avengers: Doomsday; Olivia Rodrigo; 2026 United States Grand Prix; EA shuts down BioWare
+3 packs, 3 verified facts, 8 one-source
+gemini: {"out of quota": {}, "retired": ["openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemini-flash-latest": 1, "groq:openai/gpt-oss-120b": 2}, "answers": {"gemini-3.5-flash-lite": 4, "gemini-3.8-flash": 1, "groq:openai/gpt-oss-120b": 1, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 2}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}

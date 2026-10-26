@@ -1,140 +1,150 @@
 feature,feature_label,value,n,lift,median_rel,verdict,held_3s_pct,avg_viewed_pct,subs_per_1k,shares_per_1k,why
-angles,Angle research,hidden,5,1.13,1.47,about typical,100,50,0.0,0.0,engaged views 36% vs 29% typical
-angles,Angle research,shown,6,1.01,1.32,about typical,99,83,0.0,0.0,
-appeal,Appeal,fans,1,1.05,2.0,too few to tell,93,47,0.0,0.0,
-appeal,Appeal,everyone,41,0.91,0.87,about typical,100,35,0.0,0.0,
-category,Category,Music,30,1.48,1.68,push,100,48,0.0,0.0,
-category,Category,Film,24,1.2,1.29,about typical,100,41,0.0,0.0,
-category,Category,Sport,25,1.14,1.0,about typical,100,56,0.0,0.0,average viewed 56% vs 48% typical
-category,Category,Entertainment,9,0.93,0.48,about typical,100,57,0.0,0.0,
-category,Category,Gaming,19,0.82,0.7,about typical,100,34,0.0,0.0,average viewed 34% vs 48% typical; engaged views 26% vs 29% typical
-category,Category,Tech,7,0.68,0.27,cut back,100,51,0.0,0.0,
-category,Category,Science,9,0.67,0.2,early sign,91,36,0.0,0.0,average viewed 36% vs 48% typical; still watching at 3 seconds 91% vs 100% typical; not proven: 90% interval 0.12x to 1.24x includes typical
-ending,Ending,question,5,1.36,1.73,early sign,100,43,0.0,0.0,not proven: 90% interval 0.73x to 11.08x includes typical; a half has under 2 Shorts
-ending,Ending,follow line,4,1.21,2.83,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical
-ending,Ending,loop,8,1.16,0.9,about typical,100,39,0.0,0.0,
-first_frame,First frame,photo,9,0.97,0.4,about typical,100,39,0.0,0.0,
-first_frame,First frame,cover,11,0.59,0.27,cut back,98,37,0.0,0.0,engaged views 14% vs 29% typical; average viewed 37% vs 48% typical
-format,Format,one_detail,29,1.53,1.39,push,100,56,0.0,0.0,engaged views 34% vs 29% typical; average viewed 56% vs 48% typical
-format,Format,timeline,12,1.07,0.82,about typical,100,54,0.0,0.0,
-format,Format,news_explained,23,1.07,1.0,about typical,100,54,0.0,0.0,
-format,Format,story,18,0.98,0.83,about typical,100,39,0.0,0.0,
-format,Format,three_details,17,0.86,1.2,about typical,100,39,0.0,0.0,engaged views 18% vs 29% typical; average viewed 39% vs 48% typical
-format,Format,legacy,11,0.86,0.78,about typical,,36,0.0,0.0,average viewed 36% vs 48% typical
-format,Format,real_reason,10,0.79,0.88,early sign,100,54,0.0,0.0,not proven: 90% interval 0.23x to 1.51x includes typical
-format,Format,countdown,3,0.77,0.2,early sign,,,,,not proven: 3 Shorts over 2 UK day(s)
-hook_len,Hook length,13 words or more,25,1.19,1.0,about typical,100,48,0.0,0.0,
-hook_len,Hook length,8 words or fewer,4,1.1,1.69,about typical,96,47,0.0,0.0,
-hook_len,Hook length,9 to 12 words,83,1.0,0.87,about typical,100,53,0.0,0.0,
-hook_named,Hook names the lead,yes,44,1.59,1.48,push,100,53,0.0,0.0,average viewed 53% vs 48% typical; engaged views 32% vs 29% typical
-hook_named,Hook names the lead,no,22,1.01,1.02,about typical,93,47,0.0,0.0,
-hook_type,Hook style,statement,65,1.21,1.0,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical
-hook_type,Hook style,number,9,1.07,1.56,about typical,100,69,0.0,0.0,
-hook_type,Hook style,superlative,15,1.01,1.13,about typical,100,62,0.0,0.0,
-hook_type,Hook style,twist,5,0.96,1.04,about typical,100,41,0.0,0.0,
-hook_type,Hook style,you,8,0.93,0.79,about typical,94,41,0.0,0.0,
-hook_type,Hook style,question,10,0.74,0.5,early sign,100,44,0.0,0.0,engaged views 24% vs 29% typical; average viewed 44% vs 48% typical; not proven: 90% interval 0.21x to 1.26x includes typical
-kind,Kind of Short,news,43,1.48,1.73,push,100,53,0.0,0.0,average viewed 53% vs 48% typical
-kind,Kind of Short,breaking,10,1.09,0.99,about typical,100,59,0.0,0.0,
-kind,Kind of Short,follow-up,15,1.05,1.0,about typical,100,45,0.0,0.0,
-kind,Kind of Short,top list,2,0.91,0.8,too few to tell,,,,,
-kind,Kind of Short,true story,14,0.87,0.83,about typical,100,39,0.0,0.0,average viewed 39% vs 48% typical; engaged views 24% vs 29% typical
-kind,Kind of Short,evergreen,9,0.7,0.4,early sign,91,42,0.0,0.0,engaged views 18% vs 29% typical; average viewed 42% vs 48% typical; not proven: 90% interval 0.17x to 1.10x includes typical
-late,Posted late,late,2,1.43,16.0,too few to tell,,,,,
-late,Posted late,on time,91,1.18,1.13,about typical,100,50,0.0,0.0,
-length,Length,25 to 34 s,65,1.13,1.23,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical
-length,Length,under 25 s,34,1.02,0.79,about typical,100,54,0.0,0.0,
-length,Length,35 to 44 s,13,0.9,0.87,about typical,100,37,0.0,0.0,average viewed 37% vs 48% typical
-look_captions,Captions,lab-captions-1019,45,1.37,1.13,early sign,100,48,0.0,0.0,not proven: 90% interval 0.96x to 2.31x includes typical
-look_captions,Captions,pop,6,1.24,2.09,about typical,100,80,0.0,0.0,average viewed 80% vs 48% typical; engaged views 32% vs 29% typical
-look_captions,Captions,clean,32,0.96,0.85,about typical,100,53,0.0,0.0,
-look_captions,Captions,lab-captions-1024,3,0.92,0.61,about typical,,,,,
+angles,Angle research,hidden,5,1.13,1.47,about typical,100,58,0.0,0.0,average viewed 58% vs 53% typical
+angles,Angle research,shown,6,1.0,1.28,about typical,99,70,0.0,0.0,
+appeal,Appeal,fans,1,1.05,2.0,too few to tell,93,39,0.0,0.0,
+appeal,Appeal,everyone,48,0.89,0.92,about typical,100,51,0.0,0.0,engaged views 27% vs 30% typical
+category,Category,Music,31,1.46,1.56,push,100,51,0.0,0.0,
+category,Category,Film,24,1.19,1.29,about typical,100,40,0.0,0.0,engaged views 32% vs 30% typical
+category,Category,Sport,26,1.15,1.0,about typical,100,56,0.0,0.0,
+category,Category,Entertainment,12,0.94,0.6,about typical,100,57,0.0,0.0,
+category,Category,Gaming,22,0.8,0.74,early sign,100,52,0.0,0.0,engaged views 26% vs 30% typical; not proven: 90% interval 0.46x to 1.07x includes typical
+category,Category,Tech,8,0.7,0.3,cut back,100,53,0.0,0.0,
+category,Category,Science,9,0.65,0.18,early sign,91,33,0.0,0.0,average viewed 33% vs 53% typical; still watching at 3 seconds 91% vs 100% typical; not proven: 90% interval 0.12x to 1.17x includes typical; a half has under 2 Shorts
+ending,Ending,question,5,1.34,1.73,early sign,100,47,0.0,0.0,not proven: 90% interval 0.68x to 11.09x includes typical; a half has under 2 Shorts
+ending,Ending,follow line,4,1.21,2.83,about typical,100,54,0.0,0.0,
+ending,Ending,loop,9,1.13,0.85,about typical,100,61,0.0,0.0,average viewed 61% vs 53% typical
+first_frame,First frame,photo,11,0.91,0.4,about typical,94,36,0.0,0.0,engaged views 16% vs 30% typical; average viewed 36% vs 53% typical
+first_frame,First frame,cover,11,0.58,0.27,cut back,98,50,0.0,0.0,engaged views 17% vs 30% typical
+format,Format,one_detail,31,1.54,1.39,push,100,54,0.0,0.0,engaged views 34% vs 30% typical
+format,Format,timeline,12,1.06,0.82,about typical,100,53,0.0,0.0,
+format,Format,news_explained,26,1.03,1.02,about typical,100,55,0.0,0.0,
+format,Format,story,19,0.98,0.87,about typical,100,56,0.0,0.0,
+format,Format,three_details,18,0.87,1.27,about typical,100,44,0.0,0.0,engaged views 24% vs 30% typical; average viewed 44% vs 53% typical
+format,Format,legacy,11,0.86,0.78,about typical,,36,0.0,0.0,average viewed 36% vs 53% typical
+format,Format,real_reason,11,0.79,0.85,early sign,100,54,0.0,0.0,not proven: 90% interval 0.26x to 1.40x includes typical
+format,Format,countdown,4,0.73,0.28,early sign,100,13,0.0,0.0,average viewed 13% vs 53% typical; engaged views 12% vs 30% typical; not proven: 4 Shorts over 3 UK day(s)
+hook_len,Hook length,13 words or more,28,1.18,1.02,about typical,100,52,0.0,0.0,
+hook_len,Hook length,8 words or fewer,6,1.06,1.21,about typical,96,41,0.0,0.0,
+hook_len,Hook length,9 to 12 words,87,0.98,0.87,about typical,100,54,0.0,0.0,
+hook_named,Hook names the lead,yes,48,1.51,1.38,push,100,54,0.0,0.0,engaged views 33% vs 30% typical
+hook_named,Hook names the lead,no,23,1.0,1.04,about typical,93,44,0.0,0.0,
+hook_type,Hook style,statement,72,1.14,1.0,about typical,100,54,0.0,0.0,
+hook_type,Hook style,superlative,16,1.09,1.08,about typical,100,62,0.0,0.0,
+hook_type,Hook style,number,9,1.07,1.56,about typical,100,63,0.0,0.0,
+hook_type,Hook style,twist,6,0.96,1.07,about typical,100,49,0.0,0.0,
+hook_type,Hook style,you,8,0.93,0.75,about typical,94,50,0.0,0.0,
+hook_type,Hook style,question,10,0.73,0.5,early sign,100,44,0.0,0.0,engaged views 24% vs 30% typical; average viewed 44% vs 53% typical; not proven: 90% interval 0.21x to 1.23x includes typical
+kind,Kind of Short,news,49,1.35,1.23,early sign,100,54,0.0,0.0,not proven: 90% interval 0.98x to 2.15x includes typical
+kind,Kind of Short,breaking,11,1.1,1.0,about typical,100,53,0.0,0.0,
+kind,Kind of Short,follow-up,15,1.04,1.0,about typical,100,47,0.0,0.0,
+kind,Kind of Short,top list,2,0.91,0.8,too few to tell,100,33,0.0,0.0,
+kind,Kind of Short,true story,14,0.85,0.83,about typical,100,56,0.0,0.0,engaged views 26% vs 30% typical
+kind,Kind of Short,evergreen,11,0.8,0.53,early sign,96,40,0.0,0.0,average viewed 40% vs 53% typical; engaged views 24% vs 30% typical; not proven: 90% interval 0.26x to 1.53x includes typical; a half has under 2 Shorts
+late,Posted late,late,2,1.43,16.0,too few to tell,100,54,0.0,0.0,
+late,Posted late,on time,98,1.13,1.07,about typical,100,52,0.0,0.0,
+length,Length,25 to 34 s,72,1.1,1.16,about typical,100,54,0.0,0.0,
+length,Length,under 25 s,35,1.0,0.73,about typical,100,54,0.0,0.0,
+length,Length,35 to 44 s,14,0.92,0.93,about typical,100,48,0.0,0.0,
+look_captions,Captions,lab-captions-1019,47,1.34,1.04,early sign,100,53,0.0,0.0,not proven: 90% interval 0.95x to 2.19x includes typical
+look_captions,Captions,pop,6,1.24,2.09,about typical,100,80,0.0,0.0,average viewed 80% vs 53% typical; engaged views 32% vs 30% typical
+look_captions,Captions,clean,34,0.99,0.84,about typical,100,54,0.0,0.0,
+look_captions,Captions,low,3,0.93,1.0,about typical,,,,,
 look_captions,Captions,punch,2,0.87,1.41,too few to tell,100,55,2.3,0.0,
-look_captions,Captions,minimal,21,0.85,0.7,about typical,100,48,0.0,0.0,engaged views 24% vs 29% typical
-look_captions,Captions,boxed,3,0.76,0.2,early sign,100,48,0.0,0.0,not proven: 3 Shorts over 2 UK day(s)
-look_energy,Camera energy,steady,59,1.37,1.23,push,100,55,0.0,0.0,average viewed 55% vs 48% typical
-look_energy,Camera energy,lab-energy-1019,18,1.05,1.0,about typical,100,53,0.0,0.0,
+look_captions,Captions,lab-captions-1024,4,0.86,0.49,about typical,,,,,
+look_captions,Captions,minimal,22,0.85,0.84,about typical,100,50,0.0,0.0,engaged views 25% vs 30% typical
+look_captions,Captions,boxed,3,0.76,0.2,early sign,100,48,0.0,0.0,average viewed 48% vs 53% typical; not proven: 3 Shorts over 2 UK day(s)
+look_energy,Camera energy,steady,64,1.32,1.18,early sign,100,54,0.0,0.0,not proven: 90% interval 0.99x to 1.96x includes typical; a half has under 2 Shorts
+look_energy,Camera energy,lab-energy-1019,22,1.06,1.07,about typical,100,54,0.0,0.0,
 look_energy,Camera energy,punchy,8,0.86,1.3,about typical,100,55,0.0,0.0,
-look_energy,Camera energy,calm,27,0.72,0.51,cut back,100,43,0.0,0.0,average viewed 43% vs 48% typical
-look_grade,Colour grade,natural,44,1.11,1.06,about typical,100,56,0.0,0.0,average viewed 56% vs 48% typical
-look_grade,Colour grade,lab-grade-1019,34,1.11,1.07,about typical,100,48,0.0,0.0,
-look_grade,Colour grade,cinematic,29,1.02,0.87,about typical,100,51,0.0,0.0,
+look_energy,Camera energy,calm,27,0.69,0.51,early sign,100,48,0.0,0.0,average viewed 48% vs 53% typical; not proven: a half has under 2 Shorts
+look_grade,Colour grade,natural,47,1.12,1.04,about typical,100,55,0.0,0.0,
+look_grade,Colour grade,lab-grade-1019,34,1.07,1.02,about typical,100,49,0.0,0.0,
+look_grade,Colour grade,cinematic,30,1.01,0.86,about typical,100,54,0.0,0.0,
 look_grade,Colour grade,vivid,3,0.94,1.9,about typical,100,52,0.8,0.0,
-look_grade,Colour grade,lab-grade-1023,2,0.83,0.72,too few to tell,,,,,
-look_opening,Opening,graphic_first,45,1.18,1.13,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical
-look_opening,Opening,image_first,59,1.03,1.0,about typical,100,53,0.0,0.0,
-look_opening,Opening,lab-opening-1019,8,0.82,0.67,about typical,,33,0.0,0.0,average viewed 33% vs 48% typical
-look_voice,Voice,lab-voice-1019,6,1.31,1.0,early sign,100,67,0.0,0.0,average viewed 67% vs 48% typical; not proven: 90% interval 0.32x to 15.37x includes typical; a half has under 2 Shorts
-look_voice,Voice,george,33,1.27,1.78,early sign,100,54,0.0,0.0,average viewed 54% vs 48% typical; not proven: 90% interval 0.90x to 2.13x includes typical; a half has under 2 Shorts
-look_voice,Voice,george_quick,4,1.21,2.73,about typical,100,45,0.0,0.0,
-look_voice,Voice,isabella,2,1.16,3.06,too few to tell,100,53,0.0,0.0,
-look_voice,Voice,lewis,6,1.06,0.87,about typical,100,64,0.0,0.0,
-look_voice,Voice,heart,4,1.01,0.63,about typical,100,41,0.0,0.0,
-look_voice,Voice,daniel,1,0.98,0.77,too few to tell,,,,,
-look_voice,Voice,lily,7,0.97,0.7,about typical,100,61,0.0,0.0,
-look_voice,Voice,emma,28,0.88,0.93,about typical,100,42,0.0,0.0,engaged views 24% vs 29% typical; average viewed 42% vs 48% typical
-look_voice,Voice,michael,9,0.83,1.13,about typical,90,48,0.0,0.0,still watching at 3 seconds 90% vs 100% typical
-look_voice,Voice,george_dramatic,12,0.83,0.67,about typical,100,56,0.0,0.0,
-mood,Music mood,action,14,1.32,1.88,push,100,55,0.0,0.0,average viewed 55% vs 48% typical
-mood,Music mood,chill,2,1.32,12.95,too few to tell,100,,,,
-mood,Music mood,pop,25,1.23,1.47,about typical,100,45,0.0,0.0,
-mood,Music mood,retro,12,1.21,1.08,about typical,100,48,0.0,0.0,
-mood,Music mood,rock,3,1.12,1.8,about typical,100,59,0.0,0.0,average viewed 59% vs 48% typical; engaged views 34% vs 29% typical
-mood,Music mood,hiphop,2,1.09,2.07,too few to tell,79,38,0.0,0.0,
+look_grade,Colour grade,lab-grade-1023,7,0.82,1.0,about typical,100,54,0.0,0.0,engaged views 21% vs 30% typical
+look_opening,Opening,graphic_first,46,1.17,1.06,about typical,100,53,0.0,0.0,
+look_opening,Opening,image_first,64,1.0,1.0,about typical,100,54,0.0,0.0,
+look_opening,Opening,lab-opening-1019,11,0.84,0.87,about typical,100,52,0.0,0.0,
+look_style,Style (text and pace),standard,1,0.98,0.73,too few to tell,,,,,
+look_style,Style (text and pace),minimal,3,0.93,1.0,about typical,,,,,
+look_voice,Voice,lab-voice-1019,7,1.28,0.97,early sign,100,64,0.0,0.0,average viewed 64% vs 53% typical; not proven: 90% interval 0.40x to 9.34x includes typical; a half has under 2 Shorts
+look_voice,Voice,george,35,1.27,1.67,early sign,100,53,0.0,0.0,engaged views 33% vs 30% typical; not proven: 90% interval 0.91x to 2.12x includes typical
+look_voice,Voice,george_quick,4,1.19,2.52,about typical,100,51,0.0,0.0,
+look_voice,Voice,isabella,2,1.16,3.06,too few to tell,100,49,0.0,0.0,
+look_voice,Voice,lewis,7,1.08,1.13,about typical,100,65,0.0,0.0,
+look_voice,Voice,heart,4,0.99,0.58,about typical,100,44,0.0,0.0,
+look_voice,Voice,daniel,3,0.96,0.77,about typical,,,,,
+look_voice,Voice,lily,7,0.96,0.7,about typical,100,57,0.0,0.0,
+look_voice,Voice,emma,28,0.88,0.93,about typical,100,53,0.0,0.0,engaged views 24% vs 30% typical
+look_voice,Voice,george_dramatic,13,0.83,0.79,about typical,100,55,0.0,0.0,
+look_voice,Voice,michael,11,0.78,1.0,early sign,90,48,0.0,0.0,still watching at 3 seconds 90% vs 100% typical; average viewed 48% vs 53% typical; not proven: 90% interval 0.31x to 1.13x includes typical
+mood,Music mood,chill,2,1.32,12.95,too few to tell,100,49,0.0,0.5,
+mood,Music mood,action,18,1.24,1.75,about typical,100,55,0.0,0.0,
+mood,Music mood,pop,26,1.22,1.43,about typical,100,50,0.0,0.0,
+mood,Music mood,orchestral,1,1.19,9.58,too few to tell,100,63,0.0,0.0,
+mood,Music mood,retro,12,1.18,1.08,about typical,100,59,0.0,0.0,average viewed 59% vs 53% typical
+mood,Music mood,rock,3,1.12,1.64,about typical,100,61,0.0,0.0,average viewed 61% vs 53% typical; engaged views 33% vs 30% typical
+mood,Music mood,hiphop,2,1.09,2.01,too few to tell,79,38,0.0,0.0,
 mood,Music mood,tense,10,1.05,0.99,about typical,100,66,0.0,0.0,
-mood,Music mood,space,7,0.98,1.13,about typical,91,44,0.0,0.0,
-mood,Music mood,playful,4,0.96,2.8,about typical,94,46,0.0,0.0,
+mood,Music mood,space,8,0.99,1.13,about typical,91,39,0.0,0.0,
 mood,Music mood,country,2,0.92,0.71,too few to tell,,53,0.0,0.0,
-mood,Music mood,inspiring,8,0.88,0.85,about typical,100,57,0.0,0.0,
-mood,Music mood,epic,15,0.81,0.8,about typical,98,63,0.0,0.0,engaged views 24% vs 29% typical
-mood,Music mood,tech,7,0.72,0.32,early sign,100,48,0.0,0.0,engaged views 26% vs 29% typical; not proven: 90% interval 0.15x to 1.09x includes typical
-pictures,Pictures,mostly real pictures,107,1.06,1.0,about typical,100,50,0.0,0.0,
+mood,Music mood,inspiring,8,0.88,0.85,about typical,100,66,0.0,0.0,
+mood,Music mood,playful,6,0.87,0.67,about typical,94,36,0.0,0.0,average viewed 36% vs 53% typical; engaged views 24% vs 30% typical
+mood,Music mood,epic,15,0.8,0.8,early sign,95,50,0.0,0.0,engaged views 22% vs 30% typical; not proven: 90% interval 0.38x to 1.15x includes typical
+mood,Music mood,tech,7,0.71,0.32,early sign,100,58,0.0,0.0,engaged views 22% vs 30% typical; not proven: 90% interval 0.15x to 1.06x includes typical
 pictures,Pictures,mostly stock footage,5,1.05,1.97,about typical,100,91,0.0,0.0,
-replies,Comment replies,on,46,1.21,1.1,about typical,100,48,0.0,0.0,
-replies,Comment replies,off,47,1.03,0.98,about typical,100,46,0.0,0.0,
-slot,Posting time (UK),08:00 to 10:59,18,1.67,1.88,push,100,55,0.0,0.0,average viewed 55% vs 48% typical
-slot,Posting time (UK),other times,32,1.38,1.07,early sign,100,45,0.0,0.0,not proven: 90% interval 0.95x to 2.55x includes typical
-slot,Posting time (UK),11:00 to 13:59,21,1.31,1.48,push,100,42,0.0,0.0,
-slot,Posting time (UK),17:00 to 19:59,17,0.85,0.53,about typical,98,57,0.0,0.0,
-slot,Posting time (UK),14:00 to 16:59,25,0.62,0.48,cut back,100,42,0.0,0.0,average viewed 42% vs 48% typical; engaged views 26% vs 29% typical
-slot,Posting time (UK),20:00 to 22:59,10,0.59,0.27,early sign,100,44,0.0,0.0,average viewed 44% vs 48% typical; not proven: a half has under 2 Shorts
-source,Topic source,YouTube music,6,1.64,10.37,early sign,94,48,0.0,0.0,not proven: 90% interval 1.00x to 19.51x includes typical
-source,Topic source,Google Trends,24,1.48,1.89,push,100,53,0.0,0.0,average viewed 53% vs 48% typical
-source,Topic source,Rocket launches,1,1.25,17.33,too few to tell,100,58,0.0,0.0,
-source,Topic source,YouTube,14,1.1,1.03,about typical,100,54,0.0,0.0,
-source,Topic source,Follow-up,12,1.02,0.85,about typical,100,49,0.0,0.0,
-source,Topic source,Wikipedia,9,0.94,0.87,about typical,75,41,0.0,0.0,
-source,Topic source,Evergreen,16,0.9,0.73,about typical,100,39,0.0,0.0,average viewed 39% vs 48% typical; engaged views 25% vs 29% typical
-source,Topic source,Watchlist,2,0.83,0.28,too few to tell,,,,,
-source,Topic source,Trend-tied,9,0.64,0.53,early sign,93,53,0.0,0.0,engaged views 14% vs 29% typical; not proven: a half has under 2 Shorts
-title_search,Title wording,search phrase,3,1.2,2.11,about typical,100,64,0.0,0.0,average viewed 64% vs 48% typical; engaged views 34% vs 29% typical
-title_search,Title wording,curiosity,4,0.8,0.36,early sign,50,21,0.0,0.0,engaged views 6% vs 29% typical; average viewed 21% vs 48% typical; not proven: 4 Shorts over 3 UK day(s)
-title_style,Title,statement,72,1.24,1.18,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical
-title_style,Title,number in title,35,0.97,1.0,about typical,100,41,0.0,0.0,
-title_style,Title,question,16,0.63,0.45,cut back,100,51,0.0,0.0,
-weekday,Day posted,Wednesday,26,1.27,1.0,early sign,100,55,0.0,0.0,average viewed 55% vs 48% typical; not proven: 26 Shorts over 1 UK day(s)
-weekday,Day posted,Friday,19,1.16,1.0,about typical,100,35,0.0,0.0,
-weekday,Day posted,Thursday,29,1.01,1.0,about typical,100,47,0.0,0.0,
-weekday,Day posted,Saturday,15,0.96,0.77,about typical,,50,0.0,0.0,
-weekday,Day posted,Tuesday,7,0.93,1.0,about typical,100,69,0.0,0.0,
-weekday,Day posted,Sunday,8,0.92,1.0,about typical,,34,0.0,0.0,
+pictures,Pictures,mostly real pictures,116,1.04,1.0,about typical,100,53,0.0,0.0,
+replies,Comment replies,on,52,1.17,1.02,about typical,100,54,0.0,0.0,
+replies,Comment replies,off,50,1.01,0.99,about typical,100,47,0.0,0.0,
+series,Series,single,10,1.25,1.38,about typical,100,54,0.0,0.0,
+series,Series,two parts,2,0.93,0.7,too few to tell,,,,,
+slot,Posting time (UK),08:00 to 10:59,19,1.52,1.78,push,100,54,0.0,0.0,
+slot,Posting time (UK),other times,40,1.35,1.09,early sign,100,52,0.0,0.0,not proven: 90% interval 0.99x to 2.23x includes typical
+slot,Posting time (UK),11:00 to 13:59,21,1.3,1.48,push,100,45,0.0,0.0,
+slot,Posting time (UK),17:00 to 19:59,17,0.84,0.53,about typical,98,60,0.0,0.0,
+slot,Posting time (UK),14:00 to 16:59,25,0.61,0.48,cut back,100,50,0.0,0.0,engaged views 26% vs 30% typical
+slot,Posting time (UK),20:00 to 22:59,10,0.58,0.26,early sign,100,44,0.0,0.0,average viewed 44% vs 53% typical; not proven: a half has under 2 Shorts
+source,Topic source,YouTube music,7,1.61,2.93,push,100,49,0.0,0.0,
+source,Topic source,Google Trends,24,1.46,1.89,push,100,53,0.0,0.0,engaged views 33% vs 30% typical
+source,Topic source,Rocket launches,1,1.24,15.76,too few to tell,100,58,0.0,0.0,
+source,Topic source,YouTube,16,1.04,0.95,about typical,100,55,0.0,0.0,
+source,Topic source,Follow-up,12,1.01,0.85,about typical,100,47,0.0,0.0,
+source,Topic source,Evergreen,18,0.96,0.92,about typical,100,52,0.0,0.0,
+source,Topic source,Wikipedia,9,0.93,0.79,about typical,100,54,0.0,0.0,
+source,Topic source,Watchlist,6,0.8,0.52,about typical,,58,0.0,0.0,engaged views 18% vs 30% typical
+source,Topic source,Trend-tied,9,0.64,0.53,early sign,96,31,0.0,0.0,engaged views 12% vs 30% typical; average viewed 31% vs 53% typical; not proven: a half has under 2 Shorts
+title_answer,Title answer,stated,2,1.02,1.33,too few to tell,,,,,
+title_answer,Title answer,held back,2,0.88,0.59,too few to tell,,,,,
+title_emoji,Title emoji,emoji,1,1.0,1.0,too few to tell,,,,,
+title_emoji,Title emoji,none,3,0.91,0.73,about typical,,,,,
+title_search,Title wording,search phrase,4,1.18,1.56,about typical,100,57,0.0,0.0,engaged views 40% vs 30% typical
+title_search,Title wording,curiosity,5,0.73,0.29,early sign,50,23,0.0,0.0,average viewed 23% vs 53% typical; still watching at 3 seconds 50% vs 100% typical; not proven: a half has under 2 Shorts
+title_style,Title,statement,75,1.19,1.13,about typical,100,53,0.0,0.0,
+title_style,Title,number in title,40,0.96,1.0,about typical,100,47,0.0,0.0,
+title_style,Title,question,17,0.68,0.51,early sign,100,54,0.0,0.0,engaged views 25% vs 30% typical; not proven: 90% interval 0.26x to 1.05x includes typical
+weekday,Day posted,Wednesday,28,1.26,1.0,early sign,100,54,0.0,0.0,not proven: 28 Shorts over 1 UK day(s)
+weekday,Day posted,Friday,19,1.16,1.0,about typical,100,54,0.0,0.0,
+weekday,Day posted,Thursday,29,1.01,1.0,about typical,100,48,0.0,0.0,
+weekday,Day posted,Saturday,15,0.96,0.77,about typical,100,52,0.0,0.0,
+weekday,Day posted,Tuesday,7,0.93,1.0,about typical,100,68,0.0,0.0,
+weekday,Day posted,Sunday,15,0.87,1.0,about typical,,34,0.0,0.0,average viewed 34% vs 53% typical
 weekday,Day posted,Monday,19,0.83,1.0,about typical,100,55,0.0,0.0,
-writer,Writer model,groq:openai/gpt-oss-120b,13,1.37,1.47,early sign,93,42,0.0,0.0,engaged views 36% vs 29% typical; not proven: 90% interval 0.84x to 3.93x includes typical
-writer,Writer model,gemini:gemma-4-31b-it,1,1.26,20.64,too few to tell,,,,,
-writer,Writer model,gemini:gemini-3.5-flash-lite,22,1.12,0.9,about typical,100,46,0.0,0.0,
-writer,Writer model,claude:sonnet,3,0.99,1.73,about typical,,,,,
-writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,3,0.98,1.39,about typical,,,,,
+writer,Writer model,groq:openai/gpt-oss-120b,14,1.36,1.42,early sign,93,40,0.0,0.0,engaged views 34% vs 30% typical; not proven: 90% interval 0.87x to 3.54x includes typical
+writer,Writer model,gemini:gemma-4-31b-it,1,1.26,20.64,too few to tell,100,47,0.0,0.0,
+writer,Writer model,gemini:gemini-3.5-flash-lite,24,1.18,0.98,about typical,100,51,0.0,0.0,
+writer,Writer model,claude:sonnet,3,0.99,1.73,about typical,,44,0.0,0.0,
+writer,Writer model,gemini:gemini-flash-latest,9,0.98,0.98,about typical,96,53,0.0,0.0,
 writer,Writer model,gemini:gemini-3.6-flash,7,0.98,1.39,about typical,100,66,0.0,0.0,
-writer,Writer model,gemini:gemini-flash-latest,8,0.96,0.96,about typical,96,57,0.0,0.0,
-writer,Writer model,gemini:gemini-3.5-flash,4,0.93,0.93,about typical,99,63,0.0,0.0,
-writer,Writer model,gemini:gemini-3.8-flash,1,0.92,0.33,too few to tell,,19,0.0,0.0,
-writer,Writer model,gemini:gemini-3-flash-preview,9,0.88,0.43,about typical,100,42,0.0,0.0,average viewed 42% vs 48% typical
-writer,Writer model,gemini:gemini-3.7-flash,6,0.83,0.47,about typical,100,24,0.0,0.0,average viewed 24% vs 48% typical; engaged views 23% vs 29% typical
-writer,Writer model,gemini:gemini-3.1-flash-lite,5,0.82,0.87,about typical,100,32,0.0,0.0,engaged views 8% vs 29% typical; average viewed 32% vs 48% typical
+writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,5,0.96,1.0,about typical,,50,0.0,0.0,
+writer,Writer model,gemini:gemini-3.5-flash,4,0.92,0.89,about typical,99,56,0.0,0.0,
+writer,Writer model,gemini:gemini-3.8-flash,1,0.91,0.3,too few to tell,,29,0.0,0.0,
+writer,Writer model,gemini:gemini-3-flash-preview,9,0.86,0.43,about typical,100,40,0.0,0.0,average viewed 40% vs 53% typical
+writer,Writer model,gemini:gemini-3.1-flash-lite,5,0.81,0.87,about typical,100,57,0.0,0.0,engaged views 19% vs 30% typical
+writer,Writer model,gemini:gemini-3.7-flash,9,0.75,0.36,early sign,100,58,1.0,0.0,engaged views 26% vs 30% typical; not proven: 90% interval 0.20x to 1.33x includes typical; a half has under 2 Shorts
 ig_category,Category on Instagram,Gaming,12,1.51,2.03,push,,,,,against Instagram views
-ig_category,Category on Instagram,Sport,22,1.29,1.24,push,,,,,against Instagram views
-ig_category,Category on Instagram,Film,14,1.06,1.02,about typical,,,,,against Instagram views
-ig_category,Category on Instagram,Music,25,0.89,0.96,about typical,,,,,against Instagram views
+ig_category,Category on Instagram,Sport,22,1.26,1.24,push,,,,,against Instagram views
+ig_category,Category on Instagram,Film,14,1.05,1.03,about typical,,,,,against Instagram views
+ig_category,Category on Instagram,Music,25,0.88,0.96,about typical,,,,,against Instagram views
 ig_category,Category on Instagram,Science,9,0.69,0.82,cut back,,,,,against Instagram views
-ig_category,Category on Instagram,Entertainment,6,0.62,0.17,cut back,,,,,against Instagram views
-ig_category,Category on Instagram,Tech,6,0.56,0.2,cut back,,,,,against Instagram views
+ig_category,Category on Instagram,Entertainment,7,0.64,0.22,cut back,,,,,against Instagram views
+ig_category,Category on Instagram,Tech,7,0.59,0.23,cut back,,,,,against Instagram views

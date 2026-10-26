@@ -1,64 +1,65 @@
 {
- "updated": "2026-10-25T18:59+00:00",
+ "updated": "2026-10-26T09:08+00:00",
  "dimensions": {
   "captions": {
    "punch": {
     "n": 2,
-    "score": 0.527,
+    "score": 0.526,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 54.8,
     "stayed_pct": 21.0
    },
    "clean": {
-    "n": 32,
-    "score": 1.064,
+    "n": 34,
+    "score": 1.079,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 52.6,
-    "stayed_pct": 30.0
+    "avg_viewed_pct": 53.5,
+    "stayed_pct": 30.5
    },
    "pop": {
     "n": 6,
-    "score": 1.496,
+    "score": 1.484,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 80.2,
+    "avg_viewed_pct": 80.3,
     "stayed_pct": 32.5
    },
    "boxed": {
     "n": 3,
-    "score": 0.978,
+    "score": 0.966,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 47.9,
     "stayed_pct": 29.0
    },
    "minimal": {
-    "n": 21,
-    "score": 1.043,
+    "n": 22,
+    "score": 1.059,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 48.5,
-    "stayed_pct": 24.5
+    "avg_viewed_pct": 50.2,
+    "stayed_pct": 25.0
    },
    "low": {
-    "n": 0
+    "n": 3,
+    "score": 1.067
    },
    "lab-captions-1019": {
-    "n": 45,
-    "score": 1.24,
+    "n": 47,
+    "score": 1.144,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 47.5,
-    "stayed_pct": 26.5
+    "avg_viewed_pct": 53.4,
+    "stayed_pct": 31.0
    },
    "lab-captions-1024": {
-    "n": 3,
-    "score": 0.815
+    "n": 4,
+    "score": 0.619
    }
   },
   "voice": {
    "george": {
-    "n": 22,
-    "score": 1.042,
+    "n": 28,
+    "score": 1.066,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 54.9,
-    "stayed_pct": 31.0
+    "avg_viewed_pct": 54.1,
+    "stayed_pct": 31.5
    },
    "george_dramatic": {
     "n": 9,
@@ -69,95 +70,95 @@
    },
    "george_quick": {
     "n": 4,
-    "score": 0.95,
+    "score": 0.901,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 45.1,
-    "stayed_pct": 24.5
+    "avg_viewed_pct": 51.1,
+    "stayed_pct": 26.5
    },
    "george_turbo": {
     "n": 0
    },
    "emma": {
-    "n": 9,
-    "score": 0.98,
-    "held_3s_pct": 97.0,
-    "avg_viewed_pct": 43.0,
+    "n": 16,
+    "score": 0.864,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 53.5,
     "stayed_pct": 24.0
    },
    "lewis": {
     "n": 1,
-    "score": 0.96,
+    "score": 0.8,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 64.3,
+    "avg_viewed_pct": 65.8,
     "stayed_pct": 24.0
    },
    "daniel": {
     "n": 0
    },
    "isabella": {
-    "n": 1,
-    "score": 0.898,
+    "n": 2,
+    "score": 0.961,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 52.8,
-    "stayed_pct": 22.0
+    "avg_viewed_pct": 48.5,
+    "stayed_pct": 36.0
    },
    "lily": {
-    "n": 2,
-    "score": 1.187,
+    "n": 4,
+    "score": 0.611,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 61.4,
-    "stayed_pct": 29.5
+    "avg_viewed_pct": 57.2,
+    "stayed_pct": 17.5
    },
    "michael": {
-    "n": 2,
-    "score": 1.494,
+    "n": 3,
+    "score": 1.3,
     "held_3s_pct": 89.5,
-    "avg_viewed_pct": 44.0,
-    "stayed_pct": 37.0
+    "avg_viewed_pct": 39.9,
+    "stayed_pct": 39.0
    },
    "heart": {
     "n": 2,
-    "score": 1.06,
+    "score": 0.867,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 43.8,
-    "stayed_pct": 26.5
+    "stayed_pct": 26.0
    },
    "lab-voice-1019": {
-    "n": 3,
-    "score": 1.56,
+    "n": 4,
+    "score": 1.167,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 67.4,
-    "stayed_pct": 39.0
+    "avg_viewed_pct": 63.5,
+    "stayed_pct": 35.0
    }
   },
   "energy": {
    "steady": {
-    "n": 59,
-    "score": 1.202,
+    "n": 64,
+    "score": 1.161,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 55.0,
-    "stayed_pct": 29.0
+    "avg_viewed_pct": 54.4,
+    "stayed_pct": 31.0
    },
    "punchy": {
     "n": 8,
-    "score": 1.079,
+    "score": 1.082,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 54.8,
     "stayed_pct": 29.0
    },
    "calm": {
     "n": 27,
-    "score": 0.991,
+    "score": 1.011,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 42.7,
+    "avg_viewed_pct": 47.6,
     "stayed_pct": 29.0
    },
    "lab-energy-1019": {
-    "n": 18,
-    "score": 1.099,
+    "n": 22,
+    "score": 1.067,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 53.1,
-    "stayed_pct": 25.5
+    "avg_viewed_pct": 53.5,
+    "stayed_pct": 24.0
    },
    "lab-energy-1025": {
     "n": 0
@@ -165,66 +166,75 @@
   },
   "grade": {
    "natural": {
-    "n": 44,
-    "score": 1.222,
+    "n": 47,
+    "score": 1.144,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 55.9,
-    "stayed_pct": 25.0
+    "avg_viewed_pct": 55.3,
+    "stayed_pct": 29.0
    },
    "cinematic": {
-    "n": 29,
+    "n": 30,
     "score": 1.055,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 50.7,
+    "avg_viewed_pct": 54.1,
     "stayed_pct": 29.0
    },
    "vivid": {
     "n": 3,
-    "score": 1.143,
+    "score": 1.14,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 51.6,
     "stayed_pct": 35.5
    },
    "lab-grade-1019": {
     "n": 34,
-    "score": 1.121,
+    "score": 1.098,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 48.3,
+    "avg_viewed_pct": 49.0,
     "stayed_pct": 29.5
    },
    "lab-grade-1023": {
-    "n": 2,
-    "score": 0.983
+    "n": 7,
+    "score": 1.052,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 53.7,
+    "stayed_pct": 21.0
    }
   },
   "opening": {
    "graphic_first": {
-    "n": 45,
+    "n": 46,
     "score": 1.058,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 53.5,
+    "avg_viewed_pct": 53.2,
     "stayed_pct": 29.0
    },
    "image_first": {
-    "n": 59,
-    "score": 1.178,
+    "n": 64,
+    "score": 1.114,
     "held_3s_pct": 100.0,
-    "avg_viewed_pct": 52.9,
+    "avg_viewed_pct": 53.7,
     "stayed_pct": 29.0
    },
    "lab-opening-1019": {
-    "n": 8,
-    "score": 1.14,
-    "avg_viewed_pct": 33.1,
-    "stayed_pct": 50.0
+    "n": 11,
+    "score": 1.067,
+    "held_3s_pct": 100.0,
+    "avg_viewed_pct": 52.1,
+    "stayed_pct": 34.0
+   },
+   "lab-opening-1026": {
+    "n": 0
    }
   },
   "style": {
    "minimal": {
-    "n": 0
+    "n": 3,
+    "score": 1.067
    },
    "standard": {
-    "n": 0
+    "n": 1,
+    "score": 0.775
    }
   },
   "closing": {

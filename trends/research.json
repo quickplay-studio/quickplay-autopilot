@@ -40,12 +40,6 @@
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Channel 4’s new social media drama has 90-second episodes – and it’s as enjoyable as watching adverts",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/24/channel-4s-new-social-media-drama-has-90-second-episodes-and-its-as-enjoyable-as-watching-adverts",
-     "published": "2026-10-24"
-    },
-    {
      "outlet": "NBC News",
      "title": "Influencer killed by husband, police say, after she accused him of pedophilia on TikTok",
      "url": "https://www.nbcnews.com/news/us-news/influencer-sara-gilson-killed-rcna589211",
@@ -80,6 +74,19 @@
      "outlet": "Guardian",
      "title": "Ballon d’Or ceremony returns to England in nod to ‘revolutionary’ Stanley Matthews",
      "url": "https://www.theguardian.com/football/2026/oct/25/ballon-dor-ceremony-returns-to-england-in-nod-to-revolutionary-stanley-matthews",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "Ballon d'Or 2026 nominees",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "How to win the Ballon d’Or: What factors are important to lift trophy?",
+     "url": "https://www.nytimes.com/athletic/7716556/2026/10/26/how-to-win-the-ballon-dor/",
      "published": "2026-10-25"
     }
    ]
@@ -131,12 +138,6 @@
      "title": "Finger Out How To Prep For GTA 6 With These Exercises",
      "url": "https://www.gamespot.com/articles/finger-out-how-to-prep-for-gta-6-with-these-exercises/",
      "published": "2026-10-23"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Call of Duty promises a return to form - but can it compete with GTA?",
-     "url": "https://www.bbc.co.uk/news/articles/cm369kkg92x6o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-23"
     }
    ]
   },
@@ -147,9 +148,9 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "The Guide #266: The knives are out at Netflix – maybe now it will make something worth watching",
-     "url": "https://www.theguardian.com/culture/2026/oct/23/the-knives-are-out-at-netflix-maybe-now-it-will-make-something-worth-watching",
-     "published": "2026-10-24"
+     "title": "The young Americans choosing Y2K cars over shiny new SUVs: ‘I get so much crap from people’",
+     "url": "https://www.theguardian.com/us-news/2026/oct/23/y2k-used-cars-gen-z",
+     "published": "2026-10-23"
     },
     {
      "outlet": "The Hollywood Reporter",
@@ -171,6 +172,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games:_Sunrise_on_the_Reaping",
    "articles": [
     {
+     "outlet": "IGN",
+     "title": "The Hunger Games: Sunrise on the Reaping - Official Character Origins Featurette",
+     "url": "https://www.ign.com/videos/the-hunger-games-sunrise-on-the-reaping-official-character-origins-featurette",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "Deadline",
      "title": "‘The Hunger Games: Sunrise On The Reaping’ Red Carpet Photos: All Of Joseph Zada & Mckenna Grace’s Looks From Press Tour",
      "url": "https://deadline.com/gallery/the-hunger-games-sunrise-on-the-reaping-red-carpet-photos-joseph-zada-mckenna-grace/",
@@ -179,102 +186,141 @@
    ]
   },
   {
-   "topic": "the cure by Olivia Rodrigo",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": null,
+   "topic": "fabian hürzeler",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Fabian_H%C3%BCrzeler",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "Olivia Rodrigo Is Heartsick Again With ‘The Cure’ and, Well, That’s a Little More Like It: Single Review",
-     "url": "https://variety.com/2026/music/reviews/olivia-rodrigo-the-cure-single-music-video-review-1236756708/",
-     "published": "2026-05-22"
+     "outlet": "ESPN",
+     "title": "Arsenal boss Mikel Arteta on Fabian Hürzeler falling out: 'That's all in the past'",
+     "url": "https://www.espn.co.uk/football/story/_/id/49971397/arsenal-boss-mikel-arteta-fabian-hurzeler-falling-thats-all-premier-league",
+     "published": "2026-09-18"
     }
    ]
   },
   {
-   "topic": "russia plague",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Russian_plague_of_1770-1772",
+   "topic": "pension fund",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Pension_fund",
    "articles": [
     {
-     "outlet": "Sky News",
-     "title": "Talks between Ukraine, Russia and US to be held next month",
-     "url": "https://news.sky.com/story/meeting-between-ukraine-russia-and-us-to-be-held-next-month-zelenskyy-says-13603718",
-     "published": "2026-10-25"
-    },
+     "outlet": "Reuters",
+     "title": "German pension commission proposes shift to Swedish-style fund",
+     "url": "https://www.reuters.com/sports/german-pension-commission-proposes-shift-swedish-style-fund-2026-06-23/",
+     "published": "2026-06-23"
+    }
+   ]
+  },
+  {
+   "topic": "organ donation",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Organ_donation",
+   "articles": [
+    {
+     "outlet": "CBS News",
+     "title": "Rockland County's Lauren Shields honored with proposed federal legislation designed to expand organ donations",
+     "url": "https://www.cbsnews.com/newyork/news/lauren-shields-organ-donation-bill-mike-lawler-josh-gottheimer/",
+     "published": "2026-10-22"
+    }
+   ]
+  },
+  {
+   "topic": "generation x",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Generation_X",
+   "articles": [
     {
      "outlet": "Guardian",
-     "title": "Plague risks in Russia and a dangerous delay on WHO pandemic agreement | Letters",
-     "url": "https://www.theguardian.com/science/2026/oct/25/plague-risks-in-russia-and-a-dangerous-delay-on-who-pandemic-agreement",
+     "title": "Australia’s Rebecca Henderson claims historic race walk world record",
+     "url": "https://www.theguardian.com/sport/2026/oct/26/australian-rebecca-henderson-breaks-athletics-world-record-race-walk-marathon-japan",
      "published": "2026-10-25"
     },
     {
-     "outlet": "BBC",
-     "title": "From Russian cages to Irish sanctuary: The five-year rescue journey of Bu and Tyapa",
-     "url": "https://www.bbc.co.uk/news/articles/cx62y9j1zyjvo?at_medium=RSS&at_campaign=rss",
+     "outlet": "Engadget",
+     "title": "Don't throw away your old, unsupported Nest gadgets — Do this instead",
+     "url": "https://www.engadget.com/2294122/dont-throw-away-your-old-unsupported-nest-gadgets/",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "How Argentina’s Folk Sounds Are Shaping a Generation’s Politics and National Pride",
+     "url": "https://www.rollingstone.com/music/music-latin/argentina-folk-music-controversy-milo-j-cazzu-1235647735/",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "This Week In Space podcast: Episode 233 — The Artemis Generation",
+     "url": "https://www.space.com/entertainment/space-movies-shows/this-week-in-space-podcast-episode-233-the-artemis-generation",
      "published": "2026-10-24"
     }
    ]
   },
   {
-   "topic": "nyt wordle",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Network_length_(transport)",
+   "topic": "vacation",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Vacation",
    "articles": [
     {
-     "outlet": "NME",
-     "title": "Today’s Wordle answer and hints for #1955 on October 26",
-     "url": "https://www.nme.com/guides/gaming-guides/heres-the-wordle-answer-for-today-3171240?utm_source=rss&utm_medium=rss&utm_campaign=heres-the-wordle-answer-for-today",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "It's our new daily game fixation and we all stink at it: Can you guess how much used cars cost?",
-     "url": "https://www.pcgamer.com/games/puzzle/its-our-new-daily-game-fixation-and-we-all-stink-at-it-can-you-guess-how-much-used-cars-cost/",
-     "published": "2026-10-23"
+     "outlet": "Washington Post",
+     "title": "How to get the most days off with your vacation time in 2024",
+     "url": "https://www.washingtonpost.com/travel/tips/pto-hack-maximize-2024/",
+     "published": "2024-01-04"
     }
    ]
   },
   {
-   "topic": "vue cinema",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Vue_cinema",
+   "topic": "chad green",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chad_Greenway",
    "articles": [
     {
-     "outlet": "Eurogamer",
-     "title": "Phantom Blade Zero review",
-     "url": "https://www.eurogamer.net/phantom-blade-zero-review-1",
+     "outlet": "Guardian",
+     "title": "We’ve made Oxford Street traffic-free – and that’s just the start. Soon there’ll be green spaces for arts and music too | Sadiq Khan",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/26/oxford-street-car-traffic-ban-new-plans-2027-sadiq-khan",
      "published": "2026-10-26"
     },
     {
-     "outlet": "NME",
-     "title": "Watch Ali G mock Noel Gallagher’s Oasis comeback and try to kick him out of cinema",
-     "url": "https://www.nme.com/news/music/watch-ali-g-mock-noel-gallagher-oasis-comeback-cinema-3974172?utm_source=rss&utm_medium=rss&utm_campaign=watch-ali-g-mock-noel-gallagher-oasis-comeback-cinema",
+     "outlet": "BBC",
+     "title": "Board of Deputies of British Jews declares Greens to be racist party",
+     "url": "https://www.bbc.co.uk/news/articles/ckx2qyd17eqvo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-25"
     },
     {
-     "outlet": "GameSpot",
-     "title": "Control Resonant’s Unsettling Board Dialogue Is Carefully Crafted Gibberish",
-     "url": "https://www.gamespot.com/articles/control-resonant-unsettling-board-dialogue-is-carefully-crafted-gibberish/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Junk review – David Schwimmer is lost in Mubi’s frustrating LA-set misstep",
-     "url": "https://www.theguardian.com/film/2026/oct/23/junk-movie-review-david-schwimmer-mubi",
-     "published": "2026-10-23"
+     "outlet": "TechCrunch",
+     "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
+     "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/",
+     "published": "2026-10-25"
     }
    ]
   },
   {
-   "topic": "dinner",
-   "signal": "Google Trends US 5000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Dinner",
+   "topic": "winter storm forecast",
+   "signal": "Google Trends US 500+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "Donald Trump Attacks Bill Maher in Scathing, 1,318-Word Social Media Post: “Complete and Total Loser”",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/donald-trump-attacks-bill-maher-truth-social-post-loser-1236739778/",
+     "outlet": "BBC",
+     "title": "When will the weather settle after Storm Boelo?",
+     "url": "https://www.bbc.co.uk/news/videos/cmrlyeekzldpo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "black friday",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "AI cloud computing companies face ‘guppy-level death’, Elon Musk warns, as funding dries up – business live",
+     "url": "https://www.theguardian.com/business/live/2026/oct/26/ai-cloud-computing-companies-guppy-level-death-elon-musk-stock-markets-dollar-oil-bond-yieds-latest-news-updates",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Variety",
+     "title": "‘Saiyaara’ Star Ahaan Panday and Sharvari’s Ali Abbas Zafar Romantic Action-Drama for Yash Raj Films Unveils Title (EXCLUSIVE)",
+     "url": "https://variety.com/2026/film/news/saiyaara-star-ahaan-panday-sharvari-ali-abbas-zafar-film-title-1236930643/",
      "published": "2026-10-26"
     },
     {
@@ -284,86 +330,10 @@
      "published": "2026-10-26"
     },
     {
-     "outlet": "National Geographic",
-     "title": "‘Girl dinner’ broke the internet. Here’s what nutritionists think about it.",
-     "url": "https://www.nationalgeographic.com/science/article/girl-dinner-snacks-nutrition-eating-disorder",
-     "published": "2023-08-16"
-    }
-   ]
-  },
-  {
-   "topic": "kody brown",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kody_Brown",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Derren Brown turns into Nostradamus – and I predict you’ll submit to one gasp-inducing stunt after another",
-     "url": "https://www.theguardian.com/stage/2026/oct/25/derren-brown-only-human-review-gasp-inducing-stunts-apollo-london",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "kirill kaprizov",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Kirill_Kaprizov",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Kirill Kaprizov hits 10-goal mark, Wild only give up 14 shots vs. Blue Jackets: Takeaways",
-     "url": "https://www.nytimes.com/athletic/7703059/2026/10/18/wild-kaprizov-record-yurov-injuries-blue-jackets/",
-     "published": "2026-10-17"
-    }
-   ]
-  },
-  {
-   "topic": "laika studios",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Laika_Studios",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Anime’s Pay Divide Runs Between Studios That Take Risks and Those That Don’t, Says Tokyo Festival Advisor",
-     "url": "https://variety.com/2026/film/festivals/anime-pay-divide-studios-appetite-risk-tokyo-advisor-1236930984/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Indies and non-sequels have exploded in the last year, and it's not all friendslop",
-     "url": "https://www.pcgamer.com/gaming-industry/indies-and-non-sequels-have-exploded-in-the-last-year-and-its-not-all-friendslop/",
-     "published": "2026-10-25"
-    },
-    {
      "outlet": "IGN",
-     "title": "James Gunn Defends the DCU's Approach to Interconnected Stories, Doesn't Want Movies Like Clayface to Exist Just to 'Set Up' Crossovers",
-     "url": "https://www.ign.com/articles/james-gunn-defends-the-dcus-approach-to-interconnected-stories-doesnt-want-movies-like-clayface-to-exist-just-to-set-up-crossovers",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "‘Cuts mean jobs’: Skydance staff brace for shake-up after $110bn megamerger",
-     "url": "https://www.theguardian.com/media/2026/oct/24/skydance-employees-brace-change-megamerger-dust-settles",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "xbox fifty new games release",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Arkane Lyon Could Be Shut Down Within Weeks As Deadline To Find A Buyer Looms",
-     "url": "https://www.gamespot.com/articles/arkane-lyon-could-be-shut-down-within-weeks-as-deadline-to-find-a-buyer-looms/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "Xbox Wire",
-     "title": "Next Week on XBOX: New Games for October 26 to 30",
-     "url": "https://news.xbox.com/en-us/2026/10/23/next-week-on-xbox-new-games-for-october-26-to-30/",
-     "published": "2026-10-23"
+     "title": "Man Arrested for Brandishing Knife at Crew on the Set of Miami Vice ‘85",
+     "url": "https://www.ign.com/articles/man-arrested-for-brandishing-knife-at-crew-on-the-set-of-miami-vice-85",
+     "published": "2026-10-25"
     }
    ]
   },
@@ -383,19 +353,6 @@
      "title": "Clayface Looks Like a Win for the DCU After Earning $43 Million in Box Office Opening Weekend",
      "url": "https://www.ign.com/articles/clayface-looks-like-a-win-for-the-dcu-after-earning-43-million-in-box-office-opening-weekend",
      "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 193,621 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Here's why the Elizabeth Holmes documentary has a graphic nude scene",
-     "url": "https://www.usatoday.com/story/entertainment/movies/2026/10/24/billy-evans-elizabeth-holmes-nudity-you-can-see-everything/92387497007/",
-     "published": "2026-10-24"
     }
    ]
   },
@@ -422,12 +379,6 @@
      "title": "‘We built this land’: descendants of enslaved people are reclaiming their history across South Africa’s vineyards",
      "url": "https://www.theguardian.com/world/2026/oct/26/we-built-this-land-descendants-of-enslaved-people-are-reclaiming-their-history-across-south-africas-vineyards",
      "published": "2026-10-26"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Clayface’ Beams $43M WW Opening, Delivers Paramount-Warner Bros. Second No. 1 Weekend Win Since Merger – Global Box Office",
-     "url": "https://deadline.com/2026/10/box-office-global-clayface-1237172755/",
-     "published": "2026-10-25"
     },
     {
      "outlet": "Space.com",
@@ -484,7 +435,7 @@
   },
   {
    "topic": "LISA",
-   "signal": "YouTube GB 763,803/h",
+   "signal": "YouTube GB 753,564/h",
    "wikipedia": "https://en.wikipedia.org/wiki/LISA",
    "articles": [
     {
@@ -503,7 +454,7 @@
   },
   {
    "topic": "Avengers: Doomsday",
-   "signal": "YouTube GB 373,785/h",
+   "signal": "YouTube GB 362,932/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
    "articles": [
     {
@@ -522,7 +473,7 @@
   },
   {
    "topic": "LYON vs. GEN",
-   "signal": "YouTube GB 303,788/h",
+   "signal": "YouTube GB 258,921/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Enid_Lyons",
    "articles": [
     {
@@ -541,7 +492,7 @@
   },
   {
    "topic": "Blizzard WISHES they made this..",
-   "signal": "YouTube GB-gaming 64,094/h",
+   "signal": "YouTube GB-gaming 60,426/h",
    "wikipedia": null,
    "articles": [
     {
@@ -554,7 +505,7 @@
   },
   {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 87,077/h",
+   "signal": "YouTube GB-music 86,723/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -567,7 +518,7 @@
   },
   {
    "topic": "FC BARCELONA 1",
-   "signal": "YouTube GB-sport 801,450/h",
+   "signal": "YouTube GB-sport 792,940/h",
    "wikipedia": "https://en.wikipedia.org/wiki/FC_Barcelona_1-1_Atl%C3%A9tico_Madrid_(2014)",
    "articles": [
     {
@@ -591,6 +542,37 @@
    ]
   },
   {
+   "topic": "brain training.. 🧠",
+   "signal": "YouTube GB-sport 127,358/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Brain_training",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Higher training costs for older workers risks plan to tackle youth jobs crisis, employers say",
+     "url": "https://www.theguardian.com/education/2026/oct/26/training-costs-apprenticeships-older-workers-youth-jobs-crisis-neet",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Marchant recalled by Borthwick for England training camp",
+     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmq5nyywq8n1o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Spurs boss Ho wants 'more support and training' for WSL referees",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cmd7q47dd0e7o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "Xbox Wire",
+     "title": "Call of Duty: Modern Warfare 4 – Kill Block is Must-Play Multiplayer at Launch",
+     "url": "https://news.xbox.com/en-us/2026/10/23/call-of-duty-modern-warfare-4-kill-block-must-play-multiplayer/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
    "topic": "PHP2Shell",
    "signal": "Wikipedia In the news",
    "wikipedia": "https://en.wikipedia.org/wiki/PHP2Shell",
@@ -603,6 +585,26 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Minimum_Wage",
    "articles": [],
    "source": "TVmaze"
+  },
+  {
+   "topic": "Claude by Anthropic",
+   "signal": "App Store GB: new in the top 10 free apps",
+   "wikipedia": "https://en.wikipedia.org/wiki/Claude_Anthropic",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models",
+     "url": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "NME",
+     "title": "Elvis Presley rightsholders sue AI company Anthropic over alleged copyright infringement of 274 songs",
+     "url": "https://www.nme.com/news/music/elvis-presley-rightsholders-sue-anthropic-copyright-infringement-274-songs-3974178?utm_source=rss&utm_medium=rss&utm_campaign=elvis-presley-rightsholders-sue-anthropic-copyright-infringement-274-songs",
+     "published": "2026-10-25"
+    }
+   ],
+   "source": "App Store"
   },
   {
    "topic": "2026 United States Grand Prix",
@@ -639,6 +641,32 @@
    "source": "TVmaze"
   },
   {
+   "topic": "EA shuts down BioWare",
+   "signal": "Bluesky trending, 10,337 posts",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Mass Effect Leaks Reveal Canceled BioWare Game's Story Would Have Accounted for 'All' Choices From Previous Games",
+     "url": "https://www.ign.com/articles/mass-effect-leaks-reveal-canceled-bioware-games-story-would-have-accounted-for-all-choices-from-previous-games",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "BioWare's incredible legacy will continue as long as there are RPGs",
+     "url": "https://www.pcgamer.com/games/rpg/biowares-incredible-legacy-will-continue-as-long-as-there-are-rpgs/",
+     "published": "2026-10-24"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "The Next Mass Effect Sounded Like John Wick In Space",
+     "url": "https://www.gamespot.com/articles/the-next-mass-effect-sounded-like-john-wick-in-space/",
+     "published": "2026-10-23"
+    }
+   ],
+   "source": "Bluesky"
+  },
+  {
    "topic": "Love Island Australia",
    "signal": "TVmaze web: season premiere tonight, 18:00",
    "wikipedia": "https://en.wikipedia.org/wiki/Love_Island_Australia",
@@ -653,65 +681,65 @@
    "source": "TVmaze"
   },
   {
-   "topic": "Lingo",
-   "signal": "TVmaze GB: season premiere tonight, 15:00",
-   "wikipedia": "https://en.wikipedia.org/wiki/Lingo",
+   "topic": "Playing Deadlock",
+   "signal": "Bluesky trending, 9,004 posts",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "TechCrunch",
-     "title": "Lingo.dev is an app localization engine for developers",
-     "url": "https://techcrunch.com/2025/02/18/lingo-dev-is-an-app-localization-engine-for-developers/",
-     "published": "2025-02-18"
+     "outlet": "GameSpot",
+     "title": "Deadlock’s Magical Setting Carries On A Storied, And Welcome, Tradition",
+     "url": "https://www.gamespot.com/articles/deadlocks-magical-setting-carries-on-a-storied-and-welcome-tradition/1100-6538537/",
+     "published": "2026-03-03"
     }
    ],
-   "source": "TVmaze"
+   "source": "Bluesky"
+  },
+  {
+   "topic": "alexandra eala",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Alexandra_Eala",
+   "articles": []
+  },
+  {
+   "topic": "cheesecake factory",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cheesecake_Factory",
+   "articles": []
+  },
+  {
+   "topic": "mein schiff 3",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mein_Schiff_3",
+   "articles": []
+  },
+  {
+   "topic": "paula badosa",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Paula_Badosa",
+   "articles": []
   },
   {
    "topic": "han shi",
-   "signal": "Google Trends US 100+",
+   "signal": "Google Trends US 200+",
    "wikipedia": "https://en.wikipedia.org/wiki/Han_Shizhong",
    "articles": []
   },
   {
    "topic": "troy aikman",
-   "signal": "Google Trends US 500+",
+   "signal": "Google Trends US 2000+",
    "wikipedia": "https://en.wikipedia.org/wiki/Troy_Aikman",
    "articles": []
   },
   {
-   "topic": "komanche",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Komander",
-   "articles": []
-  },
-  {
-   "topic": "daria snigur",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Daria_Snigur",
+   "topic": "Elizabeth Holmes",
+   "signal": "Wikipedia 193,621 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
    "articles": []
   },
   {
    "topic": "Jailer 2",
    "signal": "Wikipedia 186,875 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
-   "articles": []
-  },
-  {
-   "topic": "Wildwood (film)",
-   "signal": "Wikipedia 118,435 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wildwood_(film)",
-   "articles": []
-  },
-  {
-   "topic": "Lorne Doerkson",
-   "signal": "Wikipedia 108,935 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Lorne_Doerkson",
-   "articles": []
-  },
-  {
-   "topic": "Ansel Adams",
-   "signal": "Wikipedia 102,028 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ansel_Adams",
    "articles": []
   }
  ]

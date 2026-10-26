@@ -1,8 +1,8 @@
 {
- "checked": "2026-10-26T07:38Z",
- "uploads_last_24h": 17,
- "scheduled": 3,
- "public": 146,
+ "checked": "2026-10-26T09:08Z",
+ "uploads_last_24h": 18,
+ "scheduled": 5,
+ "public": 144,
  "flagged": [
   {
    "video": "ApvkxPKexGc",
@@ -16,12 +16,30 @@
  ],
  "videos": [
   {
+   "video": "OoPuz2CbMhM",
+   "title": "Song Secrets #2: Song secrets: Shakira's chart record",
+   "privacy": "private",
+   "publish_at": "2026-10-26T11:00:00Z",
+   "uploaded": "2026-10-26T08:44:48Z",
+   "views": 0,
+   "flag": ""
+  },
+  {
+   "video": "ntA-j4u3hWY",
+   "title": "Halloween: The Game: the country that said no 🎃",
+   "privacy": "private",
+   "publish_at": "2026-10-26T09:30:00Z",
+   "uploaded": "2026-10-26T08:44:46Z",
+   "views": 0,
+   "flag": ""
+  },
+  {
    "video": "Wvba1xTu2BM",
    "title": "Animals Explained #1: How dogs became man's best friend 🐕",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T06:30:17Z",
-   "views": 7,
+   "views": 15,
    "flag": ""
   },
   {
@@ -30,7 +48,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T23:30:09Z",
-   "views": 2,
+   "views": 3,
    "flag": ""
   },
   {
@@ -102,7 +120,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T17:00:14Z",
-   "views": 49,
+   "views": 48,
    "flag": ""
   },
   {
@@ -156,7 +174,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T11:00:12Z",
-   "views": 202,
+   "views": 200,
    "flag": ""
   },
   {
@@ -174,7 +192,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T07:00:04Z",
-   "views": 615,
+   "views": 651,
    "flag": ""
   },
   {
@@ -183,7 +201,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T05:00:14Z",
-   "views": 269,
+   "views": 270,
    "flag": ""
   },
   {
@@ -192,7 +210,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T04:00:25Z",
-   "views": 199,
+   "views": 205,
    "flag": ""
   },
   {
@@ -201,7 +219,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T02:30:30Z",
-   "views": 372,
+   "views": 376,
    "flag": ""
   },
   {
@@ -210,7 +228,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T00:30:38Z",
-   "views": 292,
+   "views": 294,
    "flag": ""
   },
   {
@@ -219,7 +237,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T23:30:18Z",
-   "views": 114,
+   "views": 117,
    "flag": ""
   },
   {
@@ -228,7 +246,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T15:30:06Z",
-   "views": 33,
+   "views": 36,
    "flag": ""
   },
   {
@@ -264,7 +282,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T11:00:34Z",
-   "views": 47,
+   "views": 43,
    "flag": ""
   },
   {
@@ -318,7 +336,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T04:00:22Z",
-   "views": 1166,
+   "views": 1167,
    "flag": ""
   },
   {
@@ -381,7 +399,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T16:00:07Z",
-   "views": 1060,
+   "views": 1068,
    "flag": ""
   },
   {
@@ -435,7 +453,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T13:00:37Z",
-   "views": 298,
+   "views": 301,
    "flag": ""
   },
   {
@@ -489,7 +507,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T09:00:06Z",
-   "views": 1093,
+   "views": 1092,
    "flag": ""
   },
   {
@@ -831,7 +849,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T16:00:34Z",
-   "views": 10,
+   "views": 11,
    "flag": ""
   },
   {
@@ -1146,7 +1164,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-19T15:50:11Z",
-   "views": 424,
+   "views": 425,
    "flag": ""
   },
   {
@@ -1345,24 +1363,6 @@
    "publish_at": null,
    "uploaded": "2026-10-18T11:00:12Z",
    "views": 121,
-   "flag": ""
-  },
-  {
-   "video": "lJrQDP4e4TI",
-   "title": "Apple's new smart home screen, explained 🏠",
-   "privacy": "public",
-   "publish_at": null,
-   "uploaded": "2026-10-17T21:30:31Z",
-   "views": 87,
-   "flag": ""
-  },
-  {
-   "video": "UQDDZYN0Ukg",
-   "title": "Google's most powerful AI is now in the Gemini app 🤖",
-   "privacy": "public",
-   "publish_at": null,
-   "uploaded": "2026-10-17T20:00:19Z",
-   "views": 79,
    "flag": ""
   }
  ]

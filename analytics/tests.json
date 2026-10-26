@@ -2,13 +2,13 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-25T18:59+00:00",
+ "as_of": "2026-10-26T09:08+00:00",
  "factors": {
   "hook_type": {
    "arms": {
     "statement": {
-     "n": 0,
-     "needs": 70,
+     "n": 6,
+     "needs": 64,
      "verdict": "about typical"
     },
     "number": {
@@ -19,35 +19,37 @@
    },
    "settled": false,
    "days_left": 12,
-   "label": "hook type"
+   "label": "hook type",
+   "followed_pct": 100
   },
   "length": {
    "arms": {
     "25 to 34 s": {
-     "n": 0,
-     "needs": 70,
+     "n": 5,
+     "needs": 65,
      "verdict": "about typical"
     },
     "35 to 44 s": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": "about typical"
     }
    },
    "settled": false,
    "days_left": 12,
-   "label": "length"
+   "label": "length",
+   "followed_pct": 100
   },
   "title_search": {
    "arms": {
     "search phrase": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": "about typical"
     },
     "curiosity": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": "early sign"
     }
    },
@@ -63,8 +65,8 @@
      "verdict": "cut back"
     },
     "photo": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": "about typical"
     }
    },
@@ -75,8 +77,8 @@
   "fx_energy": {
    "arms": {
     "steady": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": ""
     },
     "lab-energy-1019": {
@@ -87,13 +89,14 @@
    },
    "settled": false,
    "days_left": 12,
-   "label": "camera energy"
+   "label": "camera energy",
+   "followed_pct": 100
   },
   "fx_slot": {
    "arms": {
     "06:00 to 12:00": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": ""
     },
     "12:00 to 18:00": {
@@ -104,7 +107,8 @@
    },
    "settled": false,
    "days_left": 12,
-   "label": "posting quarter (UK)"
+   "label": "posting quarter (UK)",
+   "followed_pct": 100
   },
   "writer_arm": {
    "arms": {
@@ -114,26 +118,27 @@
      "verdict": ""
     },
     "gemini flash": {
-     "n": 0,
-     "needs": 70,
+     "n": 2,
+     "needs": 68,
      "verdict": ""
     }
    },
    "settled": false,
    "days_left": 12,
-   "label": "writer model"
+   "label": "writer model",
+   "followed_pct": 100
   },
   "title_emoji": {
    "arms": {
     "emoji": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 1,
+     "needs": 69,
+     "verdict": "too few to tell"
     },
     "none": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 3,
+     "needs": 67,
+     "verdict": "about typical"
     }
    },
    "settled": false,
@@ -143,14 +148,14 @@
   "title_answer": {
    "arms": {
     "stated": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
     },
     "held back": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
     }
    },
    "settled": false,

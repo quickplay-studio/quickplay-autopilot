@@ -1,0 +1,32 @@
+name: watchdog
+# Missed-run watchdog (26 October, pipeline/watchdog.py): GitHub drops or delays scheduled runs under load, so every hour
+# this starts any watched workflow (trends' three main runs, render, analytics, social, engage, evolve) that has missed
+# its slot. Read only, no installs, never commits.
+on:
+  schedule:
+    - cron: '41 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            pipeline/watchdog.py
+            .github/workflows/
+      - name: Start what is overdue
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: python3 pipeline/watchdog.py

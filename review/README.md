@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 16:08): 16 of 1,000 subscribers · 10,455 of 10 million Shorts views in 90 days · 3,916 views in the last 24 hours (about 110,995 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 16:52): 16 of 1,000 subscribers · 10,223 of 10 million Shorts views in 90 days · 4,145 views in the last 24 hours (about 110,998 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Mon 26 Oct 16:38 (UK): 7 scheduled, 142 public, 21 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 15:36).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 16:46).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 15 scheduled |
-| Mon 26 Oct | 8 public, 4 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 4 more scheduled |
+| Mon 26 Oct | 9 public, 3 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 3 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -111,7 +111,7 @@ scheduled · 37 s · music: majestic-12 · [script](../boards/done/QD-188.json) 
 ![QD-188](QD-188.jpg)
 
 ### Mon 26 Oct 17:00 · Tech Explained #1: Why Your Phone Buzzes In Your Pocket
-scheduled · 43 s · music: circuit-rush · [script](../boards/done/QD-187.json) · [YouTube](https://youtube.com/shorts/nG0i9IOA_wI)
+private · 43 s · music: circuit-rush · [script](../boards/done/QD-187.json) · [YouTube](https://youtube.com/shorts/nG0i9IOA_wI)
 
 ![QD-187](QD-187.jpg)
 

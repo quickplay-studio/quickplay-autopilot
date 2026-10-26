@@ -156,6 +156,7 @@ def schedule_state(now, yt=None, channel="main"):
 BANDS = ("00-06", "06-12", "12-18", "18-24")         # UK hours: 00-06 is the American evening, 06-12 Asia and the US night
 FRESH = {"news", "breaking", "follow-up", "remake"}    # news can't wait long for a better hour
 ARM_BANDS = {"06:00 to 12:00": "06-12", "12:00 to 18:00": "12-18"}     # the factorial round's posting-quarter arms (writer.py "fx_slot")
+FX_DIMS = {"fx_energy": "energy", "fx_grade": "grade", "fx_opening": "opening"}    # the round's look arms (looks.arm_option: "lab" is the newest lab option)
 BAND_ARMS = {"00-06": "00:00 to 06:00", "06-12": "06:00 to 12:00", "12-18": "12:00 to 18:00", "18-24": "18:00 to 24:00"}
 
 
@@ -341,7 +342,7 @@ def main():
             if L["uploads"] >= L["capacity"]: continue
             L["uploads"] += 1; counted = True
         explore = (b.get("test") or {}).get("explore") == "yes"      # an exploration Short (writer.py): look and hour drawn evenly
-        fx = {k: v for k, v in (b.get("test") or {}).items() if k in ("fx_energy", "fx_slot") and not explore}    # the round's arms
+        fx = {k: v for k, v in (b.get("test") or {}).items() if (k in FX_DIMS or k == "fx_slot") and not explore}    # the round's arms
         slot, slot_t = "", None
         if mode == "schedule" and not hold:
             t = None
@@ -362,14 +363,14 @@ def main():
                          "errors": late["evidence"][:900], "late": late})
             continue
         look = b.get("look") if isinstance(b.get("look"), dict) else LK.choose(b["id"], recent_looks, stats, explore=explore,
-                                                                               energy=fx.get("fx_energy"))
+                                                                               fixed_arms={FX_DIMS[k]: v for k, v in fx.items() if k in FX_DIMS})
         recent_looks.append(look)
         if b.get("language") == "es": look = {**look, "voice": "george"}       # run_board.py reads a Spanish Short in the Spanish voice: no English voice model to fetch for it
         job = {"board": str(p.relative_to(ROOT)), "id": b["id"], "slot": slot, "mode": mode, "hold": hold, "look": look}
         if ch != "main": job["channel"] = ch                      # run_board.py puts it in status/<id>.json, upload.py picks the client
         if b.get("language") == "es": job["language"] = "es"      # render.yml fetches the multilingual voice model for it
         if fx:              # the round's arms against what this run gave them (analytics compares the arms as assigned)
-            job["fx"] = {k: {"assigned": v, "used": (look.get("energy") if k == "fx_energy" else BAND_ARMS.get(band(slot_t)) if slot_t else "")}
+            job["fx"] = {k: {"assigned": v, "used": (look.get(FX_DIMS[k], "") if k in FX_DIMS else BAND_ARMS.get(band(slot_t)) if slot_t else "")}
                          for k, v in fx.items()}
         if late: job["late"] = late                 # late but alive: the evidence lands in status/<id>.json
         if BG.wanted(b, CFG):

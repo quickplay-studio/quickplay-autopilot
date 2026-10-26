@@ -109,18 +109,33 @@ def pick_weighted(rng, weights):
 CAP, CAP_UNTIL = 0.7, 30    # no option above 70% of the latest looks until every option of its dimension has 30 measured Shorts
 
 
-def choose(sid, recent=(), stats=None, cat=None, explore=False, energy=None):
+def arm_option(cat, dim, arm):
+    """The option a factorial-round arm names (26 October): "lab" is the dimension's newest active lab option (by "born"),
+    so the round keeps testing the lab's current candidate against the control as the lab replaces it; an active option's
+    own name is itself; anything else (a retired option) is None, and the dimension is chosen as usual."""
+    opts = active(cat, dim) if dim in cat.get("dimensions", {}) else {}
+    if arm == "lab":
+        labs = sorted((str(v.get("born") or ""), k) for k, v in opts.items() if v.get("lab"))
+        return labs[-1][1] if labs else None
+    return arm if arm in opts else None
+
+
+def choose(sid, recent=(), stats=None, cat=None, explore=False, energy=None, fixed_arms=None):
     """One option per dimension for Short `sid`. `recent`: the looks of the latest Shorts (about 20), oldest first.
     `explore`: an exploration Short (writer.py): every dimension drawn evenly. Otherwise an option already on 70% or more
     of the recent looks sits out while its dimension still has an option under 30 measured Shorts (24 October: grade
     "natural" was on 79% to 92% of Shorts and opening "image_first" on 83% to 89%, with no proven effect).
     `energy`: the board's camera-energy arm in the factorial round (test "fx_energy", writer.py), used as it is when it
-    is an active option, never for an exploration Short; the other dimensions are chosen as usual."""
+    is an active option, never for an exploration Short; the other dimensions are chosen as usual. `fixed_arms`
+    ({dimension: arm}, 26 October: energy, grade and opening) does the same for every round dimension, through
+    arm_option()."""
     cat = cat or catalogue(); stats = load_stats() if stats is None else stats
     rng = random.Random(f"look:{sid}")
     look = {}
     recent = [r for r in recent if isinstance(r, dict)]
-    fixed = {"energy": energy} if energy and not explore and energy in active(cat, "energy") else {}
+    arms = dict(fixed_arms or {})
+    if energy: arms.setdefault("energy", energy)
+    fixed = {} if explore else {d: o for d, o in ((d, arm_option(cat, d, a)) for d, a in arms.items() if a) if o}
     # a fixed-split test ("assign", the style test of 24 October) is drawn first with its own seed, by its split (evenly
     # for an exploration Short), never by the scores; a style that brings its own captions (minimal: the low ones) sets them
     for dim, spec in cat["dimensions"].items():

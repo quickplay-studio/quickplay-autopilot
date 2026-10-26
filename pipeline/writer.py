@@ -934,26 +934,67 @@ TESTS = {   # what each Short can try; the data (analytics/drivers.csv) decides,
     # factors that act after the writing (24 October, data report item 4): the camera energy (looks.choose honours the arm)
     # and the quarter of the UK day the Short goes out (plan.py's slot picker); no prompt text, the arm rides on the
     # board's test field and analytics records what was actually used (look_energy, fx_slot_used)
-    "fx_energy": {"steady": "", "lab-energy-1019": ""},   # the two active looks: punchy is retired (Charlie, 19 October: neat, minimal Shorts), calm by the data (23 October)
+    # "lab" (26 October) is the dimension's newest lab option on the day (looks.arm_option), so the round keeps testing
+    # the lab's current candidate against the control as the lab replaces it (the old arm "lab-energy-1019" was retired
+    # mid-round and its Shorts quietly got other looks)
+    "fx_energy": {"steady": "", "lab": ""},       # punchy is retired (Charlie, 19 October: neat, minimal Shorts), calm by the data (23 October)
+    "fx_grade": {"natural": "", "lab": ""},       # the colour grade (26 October: natural was on 8 in 10 Shorts with no proven effect)
+    "fx_opening": {"image_first": "", "lab": ""}, # the opening move, the same
     "fx_slot": {"06:00 to 12:00": "", "12:00 to 18:00": ""},
 }
-FX = ("fx_energy", "fx_slot")       # never drawn for an exploration Short, whose look and hour are drawn evenly (plan.py, looks.py)
+OPEN_SLOTS = 4      # the open tests outside the round take turns over 4 places at least (test_plan)
+FX = ("fx_energy", "fx_grade", "fx_opening", "fx_slot")       # never drawn for an exploration Short, whose look and hour are drawn evenly (plan.py, looks.py)
 LONG_NEEDS = {"about 60 s": 9, "about 2 min": 16}      # facts a pack must hold for a long arm (never padding, never invention)
 NOT_FOR = {"breaking": {"series"}, "follow-up": {"series"}, "remake": {"series", "angles"}, "evergreen": {"title_search", "angles", "series"},
            "top list": {"title_search", "angles"}, "true story": {"title_search", "angles"}, "fiction": {"title_search", "angles"}}
 RETEST = 5      # 1 in 5 Shorts challenges a winner, so new data can overturn it
 
 
-def winners():
-    """{test: arm} for each test where the data has a clear winner (verdict "push", above typical)."""
-    out, p = {}, ROOT / "analytics" / "drivers.csv"
-    if not p.exists(): return out
-    for r in csv.DictReader(p.open()):
+def _csv(name):
+    p = ROOT / "analytics" / name
+    try: return list(csv.DictReader(p.open())) if p.exists() else []
+    except Exception: return []
+
+
+def round_results():
+    """{factor: analytics/round.csv row}: the round's adjusted verdicts (drivers.round_verdicts), every channel pooled."""
+    return {r.get("factor"): r for r in _csv("round.csv") if r.get("factor")}
+
+
+def settled():
+    """The round's factors the data has closed without a winner ("even", or "no clear difference" at per_arm a side): they
+    leave the round and the open-test rotation, so the Shorts go to the factors still undecided (26 October)."""
+    return {f for f, r in round_results().items() if r.get("verdict") in ("even", "no clear difference")}
+
+
+def winners(channel=None):
+    """{test: arm} for each test where the data has a clear winner: drivers.csv's "push" above typical, then the round's
+    adjusted winner (round.csv), which is the stronger proof. One model for every channel (26 October): a `channel` takes
+    the pooled winners, then its own exceptions (analytics/channel_drivers.csv, 10 or more of its own Shorts and its own
+    proof): "push here" makes that arm its winner, "cut back here" drops a winner that is the cut choice."""
+    out = {}
+    for r in _csv("drivers.csv"):
         try: lift = float(r.get("lift") or 0)
         except ValueError: continue
         f, v = r.get("feature"), r.get("value")
         if f in TESTS and v in TESTS[f] and r.get("verdict") == "push" and lift > 1: out.setdefault(f, v)
+    for f, r in round_results().items():
+        if f in TESTS and r.get("verdict") == "winner" and r.get("winner") in TESTS[f]: out[f] = r["winner"]
+    if channel and channel != "main":
+        for r in _csv("channel_drivers.csv"):
+            f, v, e = r.get("feature"), r.get("value"), r.get("exception")
+            if r.get("channel") != channel or f not in TESTS or v not in TESTS[f]: continue
+            if e == "push here": out[f] = v
+            elif e == "cut back here" and out.get(f) == v: out.pop(f)
     return out
+
+
+def channel_tests(tests, c):
+    """A channel's own tests from test_plan (26 October): never "series" or "franchise" (a channel is always its own
+    series), and no posting-hour arm ("fx_slot") on the Americas grid, which keeps its own hours. The round's other arms
+    stay, so every channel's Shorts count towards the one pooled model."""
+    drop = ("series", "franchise") + (("fx_slot",) if c.get("slot_grid") == "americas" else ())
+    return {k: v for k, v in tests.items() if k not in drop}
 
 
 def arms(t):
@@ -974,36 +1015,41 @@ def test_round(today=None):
     return {**r, "factors": {f: [a for a in arms_ if a in TESTS.get(f, {})] for f, arms_ in r["factors"].items() if f in TESTS}}
 
 
-def test_plan(k, kind="news", explore=False, today=None):
-    """The style for Short number k: every winner the data has found; the factorial round's factors (test_round), each
-    drawn 50/50 on its own for this Short (a winner's factor still challenged on every RETEST-th Short); one other open
-    test in turn; and the comment-replies test on alternate Shorts. An exploration Short (explore_due) draws every
-    test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always be overturned. Returns
-    (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore" and the round's name)."""
+def test_plan(k, kind="news", explore=False, today=None, channel=None):
+    """The style for Short number k: every winner the data has found (winners(channel): the pooled model with the
+    channel's own exceptions); the factorial round's factors (test_round), each drawn 50/50 on its own for this Short (a
+    winner's factor still challenged on every RETEST-th Short; a factor the round has settled even is left out); one
+    other open test in turn; and the comment-replies test on alternate Shorts. An exploration Short (explore_due) draws
+    every test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always be overturned.
+    Returns (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore" and the round's
+    name)."""
+    done = settled()
     dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
     if explore:
         rng = random.Random(f"explore-arms:{k}")
         picks = {t: rng.choice(arms(t)) for t in dims if t not in FX}
         picks.update(replies=rng.choice(["on", "off"]), explore="yes")
         return style_note(picks), picks
-    won = {t: a for t, a in winners().items() if t in dims}
+    won = {t: a for t, a in winners(channel).items() if t in dims}
     rnd = test_round(today)
-    factors = {f: [a for a in arms_ if a in arms(f)] for f, arms_ in (rnd.get("factors") or {}).items() if f in dims}
+    factors = {f: [a for a in arms_ if a in arms(f)] for f, arms_ in (rnd.get("factors") or {}).items() if f in dims and f not in done}
     factors = {f: a for f, a in factors.items() if len(a) >= 2}
     picks = dict(won)
     for f, options in factors.items():               # the round: every factor, 50/50, independent of the others
         if f in won and k % RETEST: continue          # a settled factor keeps its winner, challenged 1 Short in RETEST
         picks[f] = random.Random(f"{rnd.get('name', 'round')}:{f}:{k}").choice(options)
-    still = [t for t in dims if t not in won and t not in factors]
+    still = [t for t in dims if t not in won and t not in factors and t not in done]
     others = [t for t in won if t not in factors]
     if others and k % RETEST == 0:
         t = others[(k // RETEST) % len(others)]
         rivals = [a for a in arms(t) if a != won[t]]
         if rivals: picks[t] = rivals[(k // (RETEST * len(others))) % len(rivals)]
-    elif still:
-        t = still[k % len(still)]
-        options = arms(t)
-        picks[t] = options[(k // len(still)) % len(options)]
+    elif still:                                      # in turn over OPEN_SLOTS places at least, so a test left alone in the
+        n = max(OPEN_SLOTS, len(still))              # rotation (series, once the round took the rest) keeps its old share
+        t = (still + [None] * n)[k % n]
+        if t:
+            options = arms(t)
+            picks[t] = options[(k // n) % len(options)]
     picks["replies"] = "on" if k % 2 == 0 else "off"
     picks["explore"] = "no"
     if factors: picks["round"] = rnd.get("name", "round")
@@ -1033,6 +1079,8 @@ def title_arm(k, test="title_emoji"):
             if r.get("feature") == test and r.get("verdict") == "push" and float(r.get("lift") or 0) > 1:
                 won = r.get("value"); break
     except Exception: pass
+    rr = round_results().get(test) or {}
+    if rr.get("verdict") == "winner": won = rr.get("winner")        # the round's adjusted winner (26 October) is the stronger proof
     arms_ = list(TITLE_TESTS[test])
     if won in arms_: return won if k % RETEST else next(a for a in arms_ if a != won)
     return arms_[(k // TITLE_BITS.get(test, 2)) % 2]
@@ -1496,10 +1544,13 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
     take another angle; never one the channel covered itself in 14 days), then, for the places the news leaves, evergreen
     packs of its own categories (evergreen_packs with cats: questions, top lists and true stories from Wikipedia, each
     written in its own kind with the kind's note). Each joins the channel's series (pick_series) and is numbered ("Chart
-    Watch #4: ..."). Every board carries the title tests and the subscribe-line test (the spoken arm names the series) and
-    none of the main channel's own rounds (fx, series, franchise, round); it is validated, fact-checked and shaped like any
-    other, then tagged "channel": <name> and written to the queue; the id is the next free number. Returns the boards
-    written."""
+    Watch #4: ..."). Every board carries the same tests as the main channel (26 October: one pooled, channel-aware model, so every
+    channel's Shorts add to the same verdicts): the round's factors, the look and the hour (fx), an open test in turn, the
+    title tests and the subscribe-line test (the spoken arm names the series), with the pooled winners and the channel's own
+    exceptions (winners(channel)); 1 in 5 of the channel's day is an exploration Short. Left out: the series and franchise
+    tests (a channel's Shorts are always in its own series) and, on a channel posting on the Americas grid, the hour. It is
+    validated, fact-checked and shaped like any other, then tagged "channel": <name> and written to the queue; the id is the
+    next free number. Returns the boards written."""
     wrote = []
     for ch, c in line_channels().items():
         per_day = int(c.get("per_day") or 6)
@@ -1515,8 +1566,9 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
         def write(p, kind):
             """One board of the channel from pack `p`, of `kind`; None when the writer gave nothing usable."""
             sid = f"QD-{state['n']:03d}"
-            style, tests = test_plan(state["n"], kind)
-            tests = {k: v for k, v in tests.items() if k not in FX + ("series", "franchise", "round")}      # the main channel's own rounds
+            exp = explore_due(have + made)                       # 1 in 5 of the channel's own day
+            style, tests = test_plan(state["n"], kind, explore=exp, channel=ch)
+            tests = channel_tests(tests, c)
             tests = with_title_test(tests, state["n"], kind)
             tests = with_sub_test(tests, state["n"], kind)           # the subscribe line is tested on every channel
             facts = len(p.get("verified") or []) + len(p.get("one_source") or [])

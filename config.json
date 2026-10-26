@@ -69,15 +69,20 @@
    ],
    "fx_energy": [
     "steady",
-    "lab-energy-1019"
+    "lab"
    ],
    "fx_slot": [
     "06:00 to 12:00",
     "12:00 to 18:00"
-   ]
+   ],
+   "fx_grade": ["natural", "lab"],
+   "fx_opening": ["image_first", "lab"],
+   "ending": ["loop", "question"],
+   "angles": ["shown", "hidden"],
+   "franchise": ["named", "plain"]
   },
   "per_arm": 70,
-  "note": "24 October, the data report's factorial tests: every Short (exploration Shorts aside) takes an arm of each factor, 50/50 and independent (writer.test_plan), so each arm gets about 7 Shorts a day at 15; a factor settles at per_arm measured Shorts an arm, or sooner when drivers.py's proof rule is met. fx_energy (camera energy, looks.choose) and fx_slot (the quarter of the UK day, plan.py's slot picker; reached on the board's own day or the usual slot instead, 1 board in 5 keeps the first slot) act after the writing; analytics records the arm as assigned and what was used (fx_energy_used, fx_slot_used) and judges the arm as assigned. analytics/tests.json and the hub show how many Shorts each arm still needs."
+  "note": "24 October, the data report's factorial tests; widened 26 October to every channel and 11 factors (one pooled, channel-aware model: every Short on every channel, exploration Shorts aside, takes an arm of each factor, 50/50 and independent, writer.test_plan; a channel leaves out franchise, and the hour on the Americas grid). analytics/round.csv judges each factor adjusted for the channel, exploration and every other factor (drivers.round_verdicts): winner (90% interval clear, 10 a side, the halves agree), even (interval within 0.87x to 1.15x, 20 a side) or no clear difference at per_arm a side; a winner is kept and challenged 1 Short in 5, an even factor leaves the round. \"lab\" is the look dimension's newest lab option on the day (looks.arm_option). fx_* (looks.choose) and fx_slot (plan.py's slot picker) act after the writing; analytics records the arm as assigned and what was used ({factor}_used) and judges the arm as assigned. A channel's own proven difference (10 of its Shorts, its own proof) is in analytics/channel_drivers.csv and overrides the pooled winner there. analytics/tests.json and the hub show each factor's result so far."
  },
  "writer_test": {
   "start": "2026-10-25",

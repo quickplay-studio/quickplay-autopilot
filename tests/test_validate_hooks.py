@@ -279,12 +279,12 @@ rows = [mk(0, arm_hook_type="statement", arm_length="25 to 34 s", title_answer="
         mk(1, arm_hook_type="number", arm_length="35 to 44 s", hook="16 times: Rod Stewart owned MTV's first day.", seconds="38", title_answer="held back", title_emoji="none"),
         mk(2, arm_hook_type="number", arm_length="35 to 44 s", seconds="30", title_answer="held back"),            # the arm not followed: a plain hook, 30 s
         mk(3, arm_hook_type="statement", arm_length="25 to 34 s", hook="Your next match feels different.", title_answer="stated"),
-        mk(4, hook="Plain news.", seconds="40")]                                                                  # no arm: counted by the text and the seconds
+        mk(4, hook="Plain news.", seconds="40")]                                                                  # no arm (an exploration Short): not in the round (26 October, as assigned only)
 lines = A.test_progress(rows, [], today=dt.date(2026, 10, 27))
 t = json.loads((A.OUT / "tests.json").read_text())["factors"]
-assert t["hook_type"]["arms"]["statement"]["n"] == 3 and t["hook_type"]["arms"]["number"]["n"] == 2, t["hook_type"]
-assert t["hook_type"]["followed_pct"] == 80 and t["length"]["followed_pct"] == 80, (t["hook_type"], t["length"])     # 4 of 5 followed
-assert t["length"]["arms"]["25 to 34 s"]["n"] == 2 and t["length"]["arms"]["35 to 44 s"]["n"] == 3
+assert t["hook_type"]["arms"]["statement"]["n"] == 2 and t["hook_type"]["arms"]["number"]["n"] == 2, t["hook_type"]
+assert t["hook_type"]["followed_pct"] == 75 and t["length"]["followed_pct"] == 75, (t["hook_type"], t["length"])     # 3 of 4 followed
+assert t["length"]["arms"]["25 to 34 s"]["n"] == 2 and t["length"]["arms"]["35 to 44 s"]["n"] == 2
 assert t["title_answer"]["arms"] == {"stated": {"n": 2, "needs": 68, "verdict": ""}, "held back": {"n": 2, "needs": 68, "verdict": ""}}, t["title_answer"]
 assert t["title_emoji"]["arms"]["emoji"]["n"] == 1 and t["title_answer"]["label"].startswith("title answer")
 assert any(l.startswith("- title answer") for l in lines)

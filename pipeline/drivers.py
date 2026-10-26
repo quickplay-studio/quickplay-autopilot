@@ -92,16 +92,16 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("look_energy", "Camera energy"), ("look_grade", "Colour grade"), ("look_opening", "Opening"), ("look_style", "Style (text and pace)"), ("look_closing", "Closing chip"), ("sub_push", "Subscribe line"), ("follow_line", "Follow line"), ("ending", "Ending"), ("title_search", "Title wording"),
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
-            ("fx_energy", "Camera energy test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
+            ("fx_energy", "Camera energy test"), ("fx_grade", "Colour grade test"), ("fx_opening", "Opening test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
             ("title_answer", "Title answer"), ("hook_named", "Hook names the lead"), ("sponsor", "Carries a campaign (sound or hashtag)")]
 # Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
-          "fx_energy", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
+          "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
 # The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
 # in features(); anything else a board carries (length "as written", when a long arm came back at a normal length) is
 # scored on what the Short did
@@ -333,6 +333,18 @@ def pause_state(key, grp, floor, pauses, today):
     return None, ""
 
 
+def contrast(groups):
+    """{value: rows} keeping only the channels that show 2 or more of the choice's values (26 October). rel is each Short's
+    views over its own channel's same-day peers, so a channel that only ever had one value of a choice (one category, one
+    voice) averages about typical on it and would only drag that value's pooled lift towards 1."""
+    seen = {}
+    for v, grp in groups.items():
+        for r in grp: seen.setdefault(channel_of(r), set()).add(v)
+    keep = {ch for ch, vs in seen.items() if len(vs) >= 2}
+    out = {v: [r for r in grp if channel_of(r) in keep] for v, grp in groups.items()}
+    return {v: g for v, g in out.items() if g}
+
+
 def analyse(rows, pauses=None, today=None):
     """rows: shorts.csv rows with 'rel' set (or None). Returns (table rows for drivers.csv, base support measures).
     `pauses`: the pause record (load_pauses()), updated in place; the caller saves it."""
@@ -352,6 +364,7 @@ def analyse(rows, pauses=None, today=None):
         for r in scored:
             v = features(r).get(feat)
             if v: groups.setdefault(v, []).append(r)
+        groups = contrast(groups)
         if len(groups) < 2: continue
         for v, grp in groups.items():
             logs = [_logrel(r) for r in grp]
@@ -371,6 +384,151 @@ def analyse(rows, pauses=None, today=None):
                           "why": why})
     table.sort(key=lambda t: (t["feature"], -t["lift"]))
     return table, base
+
+
+# ---------------- one model, each channel's own reading (26 October) ----------------
+# Charlie, 26 October: one learning model for every channel or one each, whichever gives the best data. One pooled model,
+# channel-aware: the verdicts above pool every channel (more Shorts, so proof comes sooner), and channel_table() shows each
+# channel's own reading beside them, partially pooled (a channel with few Shorts reads as the pool, one with many as
+# itself). A channel only departs from the pooled verdict ("push here", "cut back here") when its own Shorts pass the same
+# proof gate on their own, disagree with the pool, and number EXC_N or more; writer.winners(channel) applies it.
+CHANNEL_FIELDS = ["channel", "feature", "feature_label", "value", "n", "lift", "own_lift", "pooled_lift", "pooled_verdict",
+                  "verdict", "exception", "why"]
+EXC_N = 10
+
+
+def channel_table(rows, table):
+    """Rows for analytics/channel_drivers.csv: per channel, per choice with 2 or more values on that channel, per value
+    with 2 or more Shorts: lift (the channel's Shorts shrunk towards the pooled lift), own_lift (shrunk towards typical,
+    as the pooled table is), the pooled lift and verdict, the channel's own gate() verdict and any exception."""
+    pooled = {(t["feature"], t["value"]): t for t in table}
+    feats = [(r, features(r)) for r in rows if r.get("rel") not in (None, "")]
+    out = []
+    for ch in dict.fromkeys(channel_of(r) for r, _ in feats):
+        mine = [(r, f) for r, f in feats if channel_of(r) == ch]
+        cut = split_time([r for r, _ in mine])
+        for feat, label in FEATURES:
+            groups = {}
+            for r, f in mine:
+                if f.get(feat): groups.setdefault(f[feat], []).append(r)
+            if len(groups) < 2: continue
+            for v, grp in groups.items():
+                if len(grp) < 2: continue
+                logs = [_logrel(r) for r in grp]; n = len(logs)
+                p = pooled.get((feat, v)) or {}
+                pl = float(p.get("lift") or 1.0); pv = p.get("verdict") or ""
+                own = math.exp(sum(logs) / (n + SHRINK))
+                verdict, gwhy = gate(grp, own, cut)
+                exc = verdict + " here" if n >= EXC_N and verdict in ("push", "cut back") and verdict != pv else ""
+                out.append({"channel": ch, "feature": feat, "feature_label": label, "value": v, "n": n,
+                            "lift": round(math.exp((sum(logs) + SHRINK * math.log(pl)) / (n + SHRINK)), 2),
+                            "own_lift": round(own, 2), "pooled_lift": round(pl, 2), "pooled_verdict": pv, "verdict": verdict,
+                            "exception": exc, "why": gwhy})
+    out.sort(key=lambda t: (t["channel"], t["feature"], -t["lift"]))
+    return out
+
+
+# ---------------- the factorial round's verdicts (26 October) ----------------
+# Every Short in the round takes an arm of every factor, 50/50 and independent (writer.test_plan), on every channel. Each
+# factor is judged by a regression of log rel on its arm (as assigned), controlling for the channel, exploration Shorts
+# and every other factor's arm, so the other factors' noise comes out of the comparison instead of widening it (pure
+# Python, Frisch-Waugh-Lovell: residualise y and the arm on the controls, then one slope). A winner needs the 90% interval
+# clear of no difference, 10 Shorts an arm, an effect of 15% or more and both halves of the data (split at the median
+# posting time) pointing the same way. "even" settles a factor whose interval sits inside +/-15% with 20 an arm; "no clear
+# difference" settles one whose arms both reach per_arm. A settled factor leaves the round (writer.settled); a winner is
+# used on every Short and still challenged 1 in writer.RETEST.
+ROUND_FIELDS = ["round", "factor", "arm_a", "arm_b", "n_a", "n_b", "effect", "low", "high", "halves", "verdict", "winner",
+                "leaning", "why"]
+EVEN, WIN_N, EVEN_N = 0.14, 10, 20
+
+
+def assigned(r, f):
+    """The arm a Short was given for a round factor, as the board recorded it (an intention-to-treat comparison)."""
+    return (r.get("arm_hook_type") if f == "hook_type" else r.get("arm_length") if f == "length" else r.get(f)) or ""
+
+
+def _gs(cols):
+    """An orthonormal basis of the columns (modified Gram-Schmidt), leaving out any the earlier ones already span."""
+    basis = []
+    for c in cols:
+        v = [float(x) for x in c]
+        for q in basis:
+            d = sum(a * b for a, b in zip(v, q)); v = [a - d * b for a, b in zip(v, q)]
+        norm = math.sqrt(sum(a * a for a in v))
+        if norm > 1e-6: basis.append([a / norm for a in v])
+    return basis
+
+
+def _resid(y, basis):
+    for q in basis:
+        d = sum(a * b for a, b in zip(y, q)); y = [a - d * b for a, b in zip(y, q)]
+    return y
+
+
+def _slope(rows, f, arm_b, others):
+    """(beta, se, df) of log rel on the arm-B indicator, controlling for the channel, exploration and `others` ({factor:
+    arms}: an arm-B and a missing indicator each); None when the arm is fully explained by the controls or df < 2."""
+    n = len(rows)
+    cols = [[1.0] * n]
+    for ch in sorted({channel_of(r) for r in rows}): cols.append([1.0 if channel_of(r) == ch else 0.0 for r in rows])
+    cols.append([1.0 if r.get("explore") == "yes" else 0.0 for r in rows])
+    for g, (ga, gb) in others.items():
+        cols.append([1.0 if assigned(r, g) == gb else 0.0 for r in rows])
+        cols.append([0.0 if assigned(r, g) in (ga, gb) else 1.0 for r in rows])
+    basis = _gs(cols)
+    y = [_logrel(r) for r in rows]
+    d = [1.0 if assigned(r, f) == arm_b else 0.0 for r in rows]
+    ed, ey = _resid(d, basis), _resid(y, basis)
+    sdd = sum(a * a for a in ed)
+    df = n - len(basis) - 1
+    if sdd < 1e-6 or df < 2: return None
+    beta = sum(a * b for a, b in zip(ed, ey)) / sdd
+    sse = sum((b - beta * a) ** 2 for a, b in zip(ed, ey))
+    return beta, math.sqrt(sse / df / sdd), df
+
+
+def round_verdicts(rows, factors, start, per_arm=70, name="round"):
+    """Rows for analytics/round.csv, one per round factor ({factor: [arm_a, arm_b]}): the Shorts posted from `start` (a UK
+    date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above)."""
+    pool = [r for r in rows if r.get("rel") not in (None, "") and uk_day(r) >= str(start)]
+    out = []
+    for f, arms_ in factors.items():
+        if len(arms_) != 2: continue
+        a, b = arms_
+        grp = [r for r in pool if assigned(r, f) in (a, b)]
+        na, nb = sum(assigned(r, f) == a for r in grp), sum(assigned(r, f) == b for r in grp)
+        row = {"round": name, "factor": f, "arm_a": a, "arm_b": b, "n_a": na, "n_b": nb, "effect": "", "low": "", "high": "",
+               "halves": "", "verdict": "too few to tell", "winner": "", "leaning": "", "why": ""}
+        out.append(row)
+        if min(na, nb) < 3: continue
+        others = {g: tuple(x) for g, x in factors.items() if g != f and len(x) == 2}
+        fit = _slope(grp, f, b, others)
+        if fit and fit[2] < 20: fit = _slope(grp, f, b, {})          # too few Shorts for every control: channel and exploration only
+        if not fit: row["why"] = "the arm cannot be told apart from the controls yet"; continue
+        beta, se, df = fit
+        h = t90(df) * se
+        row.update(effect=round(math.exp(beta), 2), low=round(math.exp(beta - h), 2), high=round(math.exp(beta + h), 2))
+        cut = split_time(grp)
+        halves = [_slope([r for r in grp if (str(r.get("posted")) < cut) == first], f, b, {}) for first in (True, False)]
+        agree = all(halves) and all(abs(x[0]) > 1e-9 for x in halves) and (halves[0][0] > 0) == (halves[1][0] > 0) == (beta > 0)
+        row["halves"] = "agree" if agree else "too few" if not all(halves) else "disagree"
+        clear, small = beta - h > 0 or beta + h < 0, -EVEN < beta - h and beta + h < EVEN
+        if clear and min(na, nb) >= WIN_N and abs(beta) >= EVEN and agree:
+            row.update(verdict="winner", winner=b if beta > 0 else a)
+        elif small and min(na, nb) >= EVEN_N:
+            row["verdict"] = "even"
+        elif min(na, nb) >= per_arm:
+            row["verdict"] = "no clear difference"
+        else:
+            row["verdict"] = "running"
+            if abs(beta) >= 0.05: row["leaning"] = b if beta > 0 else a
+            why = []
+            if not clear: why.append("the 90% interval includes no difference")
+            if min(na, nb) < WIN_N: why.append(f"{WIN_N - min(na, nb)} more Shorts on the smaller arm")
+            if clear and abs(beta) < EVEN: why.append("clear but under 15%")
+            if clear and not agree: why.append("the two halves of the data " + ("disagree" if row["halves"] == "disagree" else "are too small"))
+            row["why"] = "; ".join(why)
+    return out
 
 
 # ---------------- Instagram (24 October) ----------------

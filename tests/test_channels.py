@@ -294,10 +294,13 @@ assert DRV.dead([{k: v for k, v in r.items() if k != "channel"} for r in main_ro
 
 # 26 October: the verdicts pool every channel's Shorts (rel is per channel already); each row keeps its own channel's floor
 rows[6]["yt_views"] = 100
+for i, r in enumerate(rows): r["category"] = ("Film", "Music")[i % 2]                       # both channels show both values
 pooled = {(t["feature"], t["value"]): t for t in DRV.analyse(rows, {}, "2026-10-25")[0]}
 assert ("category", "Music") in pooled and ("category", "Film") in pooled, sorted(pooled)       # the music channel's rows count
 assert pooled[("category", "Music")]["n"] == 6 and pooled[("category", "Film")]["n"] == 6, pooled
 assert ("channel", "music") not in pooled                                                   # the channel is not a test of its own
+solo = rows + [{"short": f"QD-{50 + i}", "channel": "irl", "posted": posted, "yt_views": 100, "category": "Film", "rel": 9.0, "format": "x"} for i in range(3)]
+assert {(t["feature"], t["value"]): t for t in DRV.analyse(solo, {}, "2026-10-25")[0]}[("category", "Film")]["n"] == 6   # a channel with one value says nothing about it (contrast)
 assert DRV.floor_of({"main": 200.0, "music": 20.0}, rows[6]) == 20.0 and DRV.floor_of(200.0, rows[6]) == 200.0
 # a choice is paused on its Shorts' views against their own channel's floor: 100 views on music (floor 20) is healthy, so
 # the music rows do not pull the Film+Music pool under the main channel's floor; 3 views there would
@@ -392,7 +395,10 @@ assert "Quickplay Music" in asked[0][2] and "Song Secrets #1" in asked[0][2] and
 assert "OTHER CHANNEL" in asked[1][2] and "Chart Watch #1" in asked[1][2], asked[1][2]       # the overlap with the main channel's Short, said to the writer
 assert "never gossip about private lives" in asked[0][2], "the channel's brief (config) reaches the writer"
 assert all(len(b["meta"]["title"]) <= 70 for b in (b0, b1)) and all("franchise" not in b and "series" not in b for b in (b0, b1))
-assert not ({"fx_energy", "fx_slot", "round"} & set(b0["test"])), b0["test"]                # the main channel's own rounds are not drawn
+# one pooled model (26 October): the channel's first Short of the day explores, the next takes the round, the look and the hour
+assert b0["test"].get("explore") == "yes" and not ({"fx_energy", "fx_slot", "round"} & set(b0["test"])), b0["test"]
+assert {"fx_energy", "fx_grade", "fx_opening", "fx_slot", "round"} <= set(b1["test"]) and b1["test"]["explore"] == "no", b1["test"]
+assert not ({"series", "franchise"} & set(b1["test"])), b1["test"]                          # always its own series
 for b, a in ((b0, asked[0]), (b1, asked[1])):                                              # the subscribe line is tested on every channel
     assert b["test"].get("sub_push") in ("spoken", "none") or b["test"].get("explore") == "yes", b["test"]
     if b["test"].get("sub_push") == "spoken": assert "SUBSCRIBE LINE" in a[2] and f'our "{b["channel_series"].split(" #")[0]}" series' in a[2], a[2]

@@ -23,13 +23,14 @@ sys.argv = ["analytics.py", "--fast"]
 import writer as W
 day = dt.date(2026, 10, 26)
 W.CFG["test_round"] = {"name": "round 1", "start": "2026-10-25", "per_arm": 70,
-                       "factors": {"hook_type": ["statement", "number"], "fx_energy": ["steady", "lab-energy-1019"], "fx_slot": ["06:00 to 12:00", "12:00 to 18:00"]}}
-W.winners = lambda: {}
+                       "factors": {"hook_type": ["statement", "number"], "fx_energy": ["steady", "lab"], "fx_slot": ["06:00 to 12:00", "12:00 to 18:00"]}}
+W.winners = lambda channel=None: {}
+W.settled = lambda: set()
 W.stopped = lambda: {}
 seen = collections.Counter()
 for k in range(400):
     _, picks = W.test_plan(k, "news", today=day)
-    assert picks["fx_energy"] in ("steady", "lab-energy-1019") and picks["fx_slot"] in ("06:00 to 12:00", "12:00 to 18:00"), picks
+    assert picks["fx_energy"] in ("steady", "lab") and picks["fx_slot"] in ("06:00 to 12:00", "12:00 to 18:00"), picks
     seen[picks["fx_energy"]] += 1; seen[picks["fx_slot"]] += 1
 assert 160 <= seen["steady"] <= 240 and 160 <= seen["06:00 to 12:00"] <= 240, seen
 for k in range(50):
@@ -37,7 +38,7 @@ for k in range(50):
     assert not set(picks) & {"fx_energy", "fx_slot"} and picks["explore"] == "yes", picks
 _, before = W.test_plan(7, "news", today=dt.date(2026, 10, 24))          # before the round: no round factors forced
 assert before.get("round") is None
-assert W.style_note({"fx_energy": "lab-energy-1019", "fx_slot": "06:00 to 12:00"}) == ""     # nothing for the prompt
+assert W.style_note({"fx_energy": "lab", "fx_grade": "lab", "fx_opening": "image_first", "fx_slot": "06:00 to 12:00"}) == ""     # nothing for the prompt
 print("1 test plan ok")
 
 # 2. looks.choose

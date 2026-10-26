@@ -125,7 +125,7 @@ def our_shorts():
             "id": st.get("id"), "channel": st.get("channel") or b.get("channel") or "main",
             "title": st.get("title") or b.get("meta", {}).get("title", ""),
             "category": b.get("category", ""), "format": b.get("format", ""),
-            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_slot", "writer_arm", "writer_arm_used", "sponsor", "sub_push")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
+            "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "writer_arm_used", "sponsor", "sub_push")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
             # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
             **{k: b.get(k, "") for k in SERIES_COLUMNS},
@@ -807,7 +807,7 @@ def main():
             "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_slot", "sponsor", "sub_push", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
@@ -867,6 +867,7 @@ def main():
         # what drives views is judged at 24 hours only: the views-an-hour stand-in for younger Shorts ran 2 to 6x high
         r["rel"] = r["_rel24"]
     looks_out = look_scores(rows)
+    fx_used(all_rows)
     hourly = update_hourly(rows, ig, fb)
 
     # per-day history: today's totals are appended to analytics/history.csv, so growth shows over time
@@ -975,6 +976,14 @@ def main():
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
                                                "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
         log_decisions(table, DRV.METHOD)
+        try:        # 26 October: one pooled model, read per channel (each channel's own lift, pulled to the pooled one; an exception at 10+ Shorts)
+            write_csv(OUT / "channel_drivers.csv", DRV.channel_table(all_rows, table), DRV.CHANNEL_FIELDS)
+        except Exception as e: print("channel drivers:", str(e)[:150])
+        try:        # the round's adjusted verdicts (drivers.round_verdicts): winner, even, no clear difference or running
+            rf, r_start, r_per, r_name = round_factors()
+            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name), DRV.ROUND_FIELDS)
+            else: (OUT / "round.csv").unlink(missing_ok=True)
+        except Exception as e: print("round verdicts:", str(e)[:150])
         sub_table, sub_sum = [], {}
         try:        # subscribers per 1,000 views: the subscriber push's own judgement, apart from views (analytics/subs.csv)
             sub_table, sub_sum = DRV.analyse_subscribers(all_rows), DRV.subs_summary(rows)      # verdicts pool every channel; the headline is the main channel's
@@ -986,7 +995,7 @@ def main():
                    if b.get("trigger") == "3 hours" else f"{b['times_typical']}x the views recent Shorts had {b['hours_public']} hours in") +
                   ". Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title "
                   "tied to it." for b in hot[:2]]
-        try: tests_lines = test_progress(rows, table)
+        try: tests_lines = test_progress(all_rows, table)      # every channel's Shorts are in the round (26 October)
         except Exception as e: tests_lines = []; print("test progress:", str(e)[:150])
         if "_region_rows" not in aud:              # the regions table (below) feeds the audience recipe: computed once, here first
             try: reg_rows, aud["_regions"] = regions(rows, aud); aud["_region_rows"] = reg_rows
@@ -1001,6 +1010,22 @@ def main():
 
 STAY_DIMS = ("voice",)     # Charlie, 20 October: narrators are judged on viewers not swiping away
 WRITER_SHRINK = 5          # a writer model's score is shrunk towards typical by 5 Shorts' worth (writer_scores)
+
+FX_LOOK = {"fx_energy": "energy", "fx_grade": "grade", "fx_opening": "opening"}
+
+
+def fx_used(rows):
+    """What each look arm of the factorial round actually got (fx_energy_used, fx_grade_used, fx_opening_used; every
+    channel, 26 October): the arm "lab" is the newest lab option on the day (looks.arm_option), and an arm can miss (a
+    retired option, an exploration Short). The round is still judged on the arm as assigned."""
+    look_by_id = {}
+    for p in (ROOT / "status").glob("QD-*.json"):
+        st = load_json(p, {})
+        if isinstance(st.get("look"), dict): look_by_id[st.get("id")] = st["look"]
+    for r in rows:
+        lk = look_by_id.get(r["short"]) or {}
+        for k, d in FX_LOOK.items(): r[f"{k}_used"] = lk.get(d, "") if r.get(k) else ""
+
 
 def look_scores(rows):
     """How each look option (templates/looks.json) does. Every Short public for 24 hours gets a score against the Shorts
@@ -1019,7 +1044,6 @@ def look_scores(rows):
     for r in rows:
         lk = look_by_id.get(r["short"]) or {}
         for d in dims: r[f"look_{d}"] = lk.get(d, "")
-        r["fx_energy_used"] = lk.get("energy", "") if r.get("fx_energy") else ""      # the camera energy the arm actually got
         r["look_score"] = ""
     aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
     def rel(r, field, min_views=0):
@@ -1117,66 +1141,96 @@ def slot_scores(rows):
                                        for c, bs in sorted(bands.items())}}, indent=1))
 
 
-FACTOR_LABELS = {"fx_energy": "camera energy", "fx_slot": "posting quarter (UK)", "writer_arm": "writer model",
-                 "title_emoji": "title emoji", "title_answer": "title answer (stated or held back)",
-                 "sub_push": "subscribe line (spoken or none)"}
+FACTOR_LABELS = {"fx_energy": "camera energy", "fx_grade": "colour grade", "fx_opening": "opening", "fx_slot": "posting quarter (UK)",
+                 "writer_arm": "writer model", "title_emoji": "title emoji", "title_answer": "title answer (stated or held back)",
+                 "sub_push": "subscribe line (spoken or none)", "replies": "comment replies", "ending": "ending",
+                 "angles": "angles shown to the writer", "franchise": "named series", "hook_type": "hook", "length": "length",
+                 "title_search": "title opening", "first_frame": "first frame"}
 # the title tests ride on every Short beside the round (writer.TITLE_TESTS): their progress shows with the round's
 TITLE_FACTORS = {"title_emoji": ["emoji", "none"], "title_answer": ["stated", "held back"], "sub_push": ["spoken", "none"]}
 
 
-def test_progress(rows, table, today=None):
-    """The factorial round's progress (config test_round, writer.test_plan): for each factor and arm, the Shorts measured
-    so far (posted since the round began, 24-hour views in), how many more it needs to show a 2x difference (per_arm, 70;
-    data report, 24 October), the days that takes at today's rate, and drivers.csv's verdict once the proof rule is met.
-    Writes analytics/tests.json for the hub; returns lines for insights.md."""
+def round_factors():
+    """What the round judges (26 October): config test_round's factors, the writer-model test, the title tests, the
+    subscribe line and the comment replies, each a 50/50 arm on every Short of every channel. Returns ({factor: [arm_a,
+    arm_b]}, start, per_arm, name), or ({}, "", 70, "") with no round."""
     rnd = CFG.get("test_round") or {}
-    p = OUT / "tests.json"
-    if not rnd.get("factors") or not rnd.get("start"):
-        p.unlink(missing_ok=True); return []
-    import drivers as DRV
-    start, per = str(rnd["start"]), int(rnd.get("per_arm", 70))
-    today = today or NOW.astimezone(UK).date()
-    verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
-    factors = dict(rnd["factors"])
+    if not rnd.get("factors") or not rnd.get("start"): return {}, "", 70, ""
+    factors = {f: list(a) for f, a in rnd["factors"].items()}
     wt = CFG.get("writer_test") or {}
     if len(wt.get("arms") or []) == 2: factors["writer_arm"] = list(wt["arms"])      # the writer-model test (factpack.writer_test)
     for f, arms_ in TITLE_FACTORS.items(): factors.setdefault(f, list(arms_))
+    factors.setdefault("replies", ["on", "off"])
+    return factors, str(rnd["start"]), int(rnd.get("per_arm", 70)), rnd.get("name", "round")
+
+
+def test_progress(rows, table, today=None):
+    """The factorial round's progress (round_factors, writer.test_plan), every channel (26 October): for each factor and
+    arm, the Shorts measured so far (posted since the round began, 24-hour views in, counted on the arm as assigned), how
+    many more the arm has before the round's budget (per_arm, 70) closes it, and the round's adjusted verdict
+    (drivers.round_verdicts: "winner" with its effect and 90% interval, "even", "no clear difference", or "running" with
+    the side it leans to). A factor settles on any of the first three; a settled factor leaves the round (writer.settled).
+    Writes analytics/tests.json for the hub; returns lines for insights.md."""
+    factors, start, per, name = round_factors()
+    p = OUT / "tests.json"
+    if not factors:
+        p.unlink(missing_ok=True); return []
+    import drivers as DRV
+    today = today or NOW.astimezone(UK).date()
+    verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
+    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name)}
+    except Exception as e: rv = {}; print("round verdicts:", str(e)[:150])
     counts = {f: {a: 0 for a in arms} for f, arms in factors.items()}
     followed = {f: [0, 0] for f in counts}            # (Shorts whose arm was used as assigned, Shorts with a used value)
-    posted_days = set()
+    per_day = {}
     for r in rows:
         t = utc(r.get("posted"))
         if not t or str(t.astimezone(UK).date()) < start: continue
-        posted_days.add(str(t.astimezone(UK).date()))
+        day = str(t.astimezone(UK).date()); per_day[day] = per_day.get(day, 0) + 1
         if r.get("views_24h") in ("", None): continue
-        feats = DRV.features(r)
         for f, arms in counts.items():
-            if feats.get(f) in arms:
-                arms[feats[f]] += 1
-                # what the Short actually did, against the arm it was given: the look's energy, the hook as written
-                # (drivers.hook_type), the length it ran to (content review, 24 October)
-                used = r.get(f"{f}_used") or (r.get("look_energy") if f == "fx_energy" else DRV.hook_used(r.get("hook"), feats[f]) if f == "hook_type"
-                                              else DRV.length_label(r.get("seconds")) if f == "length" else "")
-                if used: followed[f][1] += 1; followed[f][0] += used == feats[f]
-    try:
-        import quota
-        rate = max(1.0, 0.8 * quota.target() / 2)      # Shorts an arm a day: 4 in 5 Shorts are in the round, half to each arm
-    except Exception: rate = 6.0
-    out = {"round": rnd.get("name", "round"), "start": start, "per_arm": per, "as_of": NOW.isoformat(timespec="minutes"), "factors": {}}
+            a = DRV.assigned(r, f)
+            if a not in arms: continue
+            arms[a] += 1
+            # what the Short actually did, against the arm it was given: the look (fx_used: "lab" is the lab's option of
+            # the day), the hook as written (drivers.hook_type), the length it ran to (content review, 24 October)
+            used = r.get(f"{f}_used") or (r.get("look_energy") if f == "fx_energy" else DRV.hook_used(r.get("hook"), a) if f == "hook_type"
+                                          else DRV.length_label(r.get("seconds")) if f == "length" else "")
+            if used: followed[f][1] += 1; followed[f][0] += used == a or (a == "lab" and str(used).startswith("lab"))
+    full = [n for d, n in sorted(per_day.items()) if d < str(today)][-3:]      # Shorts a day on every channel, the last 3 full days
+    if full: rate = max(1.0, 0.8 * statistics.median(full) / 2)                 # 4 in 5 Shorts are in the round, half to each arm
+    else:
+        try:
+            import quota
+            rate = max(1.0, 0.8 * quota.target() / 2)
+        except Exception: rate = 6.0
+    out = {"round": name, "start": start, "per_arm": per, "as_of": NOW.isoformat(timespec="minutes"), "factors": {}}
     lines = []
     for f, arms in counts.items():
+        v = rv.get(f) or {}
         need = max(0, max(per - n for n in arms.values()))
-        settled = any(verdict.get((f, a)) in ("push", "cut back") for a in arms) or need == 0
+        settled = v.get("verdict") in ("winner", "even", "no clear difference") or need == 0
+        label = FACTOR_LABELS.get(f, f.replace("_", " "))
         out["factors"][f] = {"arms": {a: {"n": n, "needs": max(0, per - n), "verdict": verdict.get((f, a), "")} for a, n in arms.items()},
-                             "settled": settled, "days_left": 0 if settled else math.ceil(need / rate),
-                             "label": FACTOR_LABELS.get(f, f.replace("_", " "))}
+                             "settled": settled, "days_left": 0 if settled else math.ceil(need / rate), "label": label,
+                             **{k: v.get(k, "") for k in ("verdict", "effect", "low", "high", "halves", "winner", "leaning", "why")}}
         if followed[f][1]: out["factors"][f]["followed_pct"] = round(100 * followed[f][0] / followed[f][1])
-        lines.append(f"- {FACTOR_LABELS.get(f, f.replace('_', ' '))}: " + ", ".join(f"{a} {n}" + (f" (needs {per - n} more)" if n < per else "") for a, n in arms.items())
-                     + ("; settled" if settled else f"; about {math.ceil(need / rate)} more days at today's rate"))
+        a_, b_ = (list(arms) + ["", ""])[:2]
+        res = v.get("verdict", "")
+        ci = f"{v.get('effect')}x, 90% interval {v.get('low')} to {v.get('high')}" if v.get("effect") != "" and v.get("effect") is not None else ""
+        if res == "winner": said = f"winner {v['winner']} ({b_} against {a_}: {ci}); kept, still challenged 1 Short in 5"
+        elif res == "even": said = f"even ({ci}): settled, out of the round"
+        elif res == "no clear difference": said = f"no clear difference at {per} a side: settled, out of the round"
+        elif res == "running": said = (f"running ({b_} against {a_}: {ci}" + (f"; leaning {v['leaning']}" if v.get("leaning") else "") + ")"
+                                       + f"; about {math.ceil(need / rate)} more days at most")
+        else: said = f"too few to tell; about {math.ceil(need / rate)} more days at most"
+        lines.append(f"- {label}: " + ", ".join(f"{a} {n}" for a, n in arms.items()) + f"; {said}")
     p.write_text(json.dumps(out, indent=1))
     if today < dt.date.fromisoformat(start): return []
-    return [f"Tests being run ({out['round']}, from {start}: every Short takes an arm of each, 50/50; an arm settles at {per} "
-            "measured Shorts, or sooner on a clear result). Shorts measured so far:"] + lines
+    return [f"Tests being run ({name}, from {start}, every channel: every Short takes an arm of each, 50/50 and independent, so "
+            "each verdict is adjusted for the channel, the exploration Shorts and every other arm; a winner needs a clear 90% "
+            f"interval, 15% or more, 10 Shorts a side and both halves of the data agreeing; a factor that is even, or level at {per} "
+            "a side, leaves the round for the next one). Shorts measured so far:"] + lines
 
 
 def volume_days(today=None):

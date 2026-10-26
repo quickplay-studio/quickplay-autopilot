@@ -31,6 +31,10 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   analytics/drivers.csv gives a verdict only with proof (5 Shorts over 2 UK days, a 90% interval clear of typical, both
   halves agreeing); a choice with little to no views a week on is paused 14 days, then retested. 1 Short in 5 explores,
   every category keeps a floor, no writer model passes 35% before 10 measured Shorts. A dead Short is never remade.
+  One pooled, channel-aware model (26 October): every channel's Shorts feed the one test round (config.json test_round,
+  11 factors, "lab" = the newest lab look); analytics/round.csv gives verdicts adjusted for channel and the other arms,
+  a settled factor (even or no clear difference) leaves the round, and analytics/channel_drivers.csv lets a channel
+  differ only with 10+ of its own Shorts proving it.
   trend.py (26 October) watches the absolute numbers week on week and how many Shorts followed the rulings (insights.md "Is
   the channel getting better"); alerts.py opens an issue when retention falls or the recipe stops refreshing.
 - Freshness gate (pipeline/freshness.py): a time-sensitive Short goes out after its day only with evidence its story is

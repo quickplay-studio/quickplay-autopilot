@@ -82,16 +82,20 @@ print("3 factorial round ok")
 # 4. progress of the round
 A.CFG = {**A.CFG, "test_round": W.CFG["test_round"]}
 prow = lambda i, day, hook, secs, v="50": {"short": f"P-{i}", "posted": f"{day}T10:00:00+00:00", "views_24h": v, "hook": hook, "seconds": secs,
-                                            "title_search": "curiosity", "first_frame": "cover"}
+                                            "title_search": "curiosity", "first_frame": "cover",
+                                            "arm_hook_type": "number" if hook[0].isdigit() else "statement",      # as assigned (26 October)
+                                            "arm_length": "35 to 44 s" if secs == "40" else "25 to 34 s"}
 rows = [prow(i, "2026-10-26", "Taylor Swift has a new album out", "30") for i in range(10)] + \
        [prow(100 + i, "2026-10-26", "3 million people watched this", "40") for i in range(4)] + \
        [prow(200, "2026-10-20", "Taylor Swift again", "30"), prow(201, "2026-10-27", "Not measured yet", "30", v="")]
 lines = A.test_progress(rows, [{"feature": "length", "value": "35 to 44 s", "verdict": "push"}], today=on)
 T = json.loads((A.OUT / "tests.json").read_text())
 assert T["factors"]["hook_type"]["arms"]["statement"] == {"n": 10, "needs": 60, "verdict": ""}, T["factors"]["hook_type"]
-assert T["factors"]["hook_type"]["arms"]["number"]["n"] == 4 and T["factors"]["length"]["settled"] is True, T["factors"]
+assert T["factors"]["hook_type"]["arms"]["number"]["n"] == 4, T["factors"]
+L = T["factors"]["length"]                         # 26 October: only the round's own adjusted verdict settles a factor; the pooled push shows on its arm
+assert L["settled"] is False and L["arms"]["35 to 44 s"]["verdict"] == "push" and L["verdict"] == "too few to tell", L
 assert T["factors"]["first_frame"]["arms"]["photo"]["needs"] == 70 and not T["factors"]["first_frame"]["settled"]
-assert lines[0].startswith("Tests being run (round 1") and any("statement 10 (needs 60 more)" in l for l in lines), lines
+assert lines[0].startswith("Tests being run (round 1") and any(l.startswith("- hook: statement 10, number 4; too few to tell") for l in lines), lines
 assert A.test_progress(rows, [], today=dt.date(2026, 10, 24)) == []                         # before the round: nothing in insights.md
 print("4 round progress ok")
 

@@ -1,0 +1,123 @@
+{
+ "adopted": {},
+ "champions": {},
+ "genes": {
+  "g001": {
+   "a_text": "",
+   "b_text": "Open with the full name of the best-known person, band, game or brand in the fact pack as the very first words of the script, before any number, question or setup.",
+   "born": "2026-10-26",
+   "by": "claude:opus",
+   "effect": "",
+   "kind": "new",
+   "label": "Famous name as first words",
+   "lineage": "g001",
+   "parent": "",
+   "status": "live",
+   "text": "Open with the full name of the best-known person, band, game or brand in the fact pack as the very first words of the script, before any number, question or setup.",
+   "why": "Every top Short starts with a recognisable name (The Beatles, Jenna Ortega, Taylor Swift), while flops open with vague teasers like 'You've seen her on screen' or generic topics like octopus blood."
+  }
+ },
+ "history": [],
+ "round": {
+  "factors": {
+   "angles": [
+    "shown",
+    "hidden"
+   ],
+   "ending": [
+    "loop",
+    "question"
+   ],
+   "first_frame": [
+    "cover",
+    "photo"
+   ],
+   "franchise": [
+    "named",
+    "plain"
+   ],
+   "fx_energy": [
+    "steady",
+    "lab"
+   ],
+   "fx_grade": [
+    "natural",
+    "lab"
+   ],
+   "fx_opening": [
+    "image_first",
+    "lab"
+   ],
+   "fx_slot": [
+    "06:00 to 12:00",
+    "12:00 to 18:00"
+   ],
+   "gene:g001": [
+    "a",
+    "b"
+   ],
+   "hook_type": [
+    "statement",
+    "number"
+   ],
+   "length": [
+    "25 to 34 s",
+    "35 to 44 s"
+   ],
+   "title_search": [
+    "search phrase",
+    "curiosity"
+   ]
+  },
+  "name": "round 1",
+  "origin": {
+   "angles": "round 1",
+   "ending": "round 1",
+   "first_frame": "round 1",
+   "franchise": "round 1",
+   "fx_energy": "round 1",
+   "fx_grade": "round 1",
+   "fx_opening": "round 1",
+   "fx_slot": "round 1",
+   "gene:g001": "gene",
+   "hook_type": "round 1",
+   "length": "round 1",
+   "title_search": "round 1"
+  },
+  "per_arm": 70,
+  "start": "2026-10-25",
+  "starts": {
+   "angles": "2026-10-25",
+   "ending": "2026-10-25",
+   "first_frame": "2026-10-25",
+   "franchise": "2026-10-25",
+   "fx_energy": "2026-10-25",
+   "fx_grade": "2026-10-25",
+   "fx_opening": "2026-10-25",
+   "fx_slot": "2026-10-25",
+   "gene:g001": "2026-10-26",
+   "hook_type": "2026-10-25",
+   "length": "2026-10-25",
+   "title_search": "2026-10-25"
+  }
+ },
+ "sources": {
+  "gene": {
+   "contests": 0,
+   "wins": 0
+  },
+  "mutate": {
+   "contests": 0,
+   "wins": 0
+  },
+  "neighbour": {
+   "contests": 0,
+   "wins": 0
+  },
+  "retest": {
+   "contests": 0,
+   "wins": 0
+  }
+ },
+ "updated": "2026-10-26"
+}

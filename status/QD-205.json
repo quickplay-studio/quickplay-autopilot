@@ -1,0 +1,140 @@
+{
+ "id": "QD-205",
+ "board": "boards/queue/QD-205.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T11:30:00Z",
+ "rendered": "2026-10-26T19:58:11.228233+00:00",
+ "channel": "clips",
+ "title": "Big Science #1: GPT-6.1 Terra: every big change explained 🤖",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 10,
+  "extra_photos": 9,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "pulsar",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 34.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 168.5,
+   "contrast": 0.37,
+   "face_area": 0.0,
+   "text_area": 0.019,
+   "caption_contrast": 1.36,
+   "by_frame": {
+    "sharpness": [
+     151.9,
+     170.2,
+     172.2,
+     179.5
+    ],
+    "contrast": [
+     0.37,
+     0.373,
+     0.369,
+     0.367
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0193,
+     0.0192,
+     0.0196,
+     0.0179
+    ],
+    "caption_contrast": [
+     1.36,
+     1.36,
+     1.35,
+     1.37
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.3,
+   "none",
+   3
+  ],
+  [
+   6.3,
+   11.71,
+   "none",
+   4
+  ],
+  [
+   11.71,
+   18.15,
+   "none",
+   4
+  ],
+  [
+   18.15,
+   23.78,
+   "none",
+   4
+  ],
+  [
+   23.78,
+   28.49,
+   "none",
+   3
+  ],
+  [
+   28.49,
+   34.58,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "14214",
+   "q": "code scrolling screen",
+   "t0": 0.0,
+   "t1": 34.58
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T20:10:49Z",
+ "video": "i4dChQWJOvk",
+ "url": "https://youtube.com/shorts/i4dChQWJOvk",
+ "publish_at": "2026-10-27T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T11:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

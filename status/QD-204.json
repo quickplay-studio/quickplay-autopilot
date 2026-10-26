@@ -1,0 +1,153 @@
+{
+ "id": "QD-204",
+ "board": "boards/queue/QD-204.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T15:30:00Z",
+ "rendered": "2026-10-26T19:43:02.852514+00:00",
+ "channel": "gaming",
+ "title": "Game Lore #2: Sonic the Hedgehog free RPGs 🎲",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "good-energy",
+ "look": {
+  "captions": "low",
+  "voice": "george_dramatic",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 36.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 346.1,
+   "contrast": 0.24,
+   "face_area": 0.0,
+   "text_area": 0.1053,
+   "caption_contrast": 10.21,
+   "by_frame": {
+    "sharpness": [
+     362.1,
+     359.5,
+     340.3,
+     322.4
+    ],
+    "contrast": [
+     0.241,
+     0.241,
+     0.239,
+     0.239
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1334,
+     0.1195,
+     0.0362,
+     0.1321
+    ],
+    "caption_contrast": [
+     13.61,
+     13.58,
+     6.85,
+     4.4
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   7.08,
+   "none",
+   4
+  ],
+  [
+   7.08,
+   13.0,
+   "none",
+   4
+  ],
+  [
+   13.0,
+   18.46,
+   "none",
+   4
+  ],
+  [
+   18.46,
+   23.8,
+   "none",
+   4
+  ],
+  [
+   23.8,
+   28.61,
+   "none",
+   3
+  ],
+  [
+   28.61,
+   32.93,
+   "none",
+   3
+  ],
+  [
+   32.93,
+   36.7,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "132",
+   "q": "tabletop game pieces",
+   "t0": 0.0,
+   "t1": 18.65
+  },
+  {
+   "p": "pixabay",
+   "id": "2818",
+   "q": "retro arcade lights",
+   "t0": 18.05,
+   "t1": 36.7
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T20:10:46Z",
+ "video": "x1gt7K20H7k",
+ "url": "https://youtube.com/shorts/x1gt7K20H7k",
+ "publish_at": "2026-10-27T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T15:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

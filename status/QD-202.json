@@ -1,0 +1,162 @@
+{
+ "id": "QD-202",
+ "board": "boards/queue/QD-202.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T11:00:00Z",
+ "rendered": "2026-10-26T19:43:05.005828+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1023"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Song Secrets #3: Beyonce solo debut hits number one in Billboard",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 4,
+  "planned_real": 4,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "dance-with-you",
+ "social_music": "upbeat-motivational-dance-pop-227623",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 31.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 22.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1375.4,
+   "contrast": 0.151,
+   "face_area": 0.0346,
+   "text_area": 0.0704,
+   "caption_contrast": 11.78,
+   "by_frame": {
+    "sharpness": [
+     1348.5,
+     1407.1,
+     1381.3,
+     1364.7
+    ],
+    "contrast": [
+     0.152,
+     0.153,
+     0.151,
+     0.15
+    ],
+    "face_area": [
+     0.0295,
+     0.0367,
+     0.0361,
+     0.0361
+    ],
+    "text_area": [
+     0.052,
+     0.077,
+     0.0795,
+     0.0731
+    ],
+    "caption_contrast": [
+     12.07,
+     11.91,
+     11.64,
+     11.54
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   9.63,
+   "none",
+   5
+  ],
+  [
+   9.63,
+   18.09,
+   "none",
+   6
+  ],
+  [
+   18.09,
+   24.27,
+   "none",
+   4
+  ],
+  [
+   24.27,
+   31.72,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "11720",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 10.97
+  },
+  {
+   "p": "pixabay",
+   "id": "7382",
+   "q": "dj mixer lights",
+   "t0": 10.37,
+   "t1": 21.34
+  },
+  {
+   "p": "pixabay",
+   "id": "221132",
+   "q": "crowd concert night",
+   "t0": 20.74,
+   "t1": 31.72
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T20:10:42Z",
+ "video": "OYNQGnJzq3s",
+ "url": "https://youtube.com/shorts/OYNQGnJzq3s",
+ "publish_at": "2026-10-27T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-202"
+}

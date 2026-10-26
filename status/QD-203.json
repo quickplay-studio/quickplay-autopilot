@@ -1,0 +1,159 @@
+{
+ "id": "QD-203",
+ "board": "boards/queue/QD-203.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T13:00:00Z",
+ "rendered": "2026-10-26T19:42:47.717652+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GPT-6.1 Terra: OpenAI upgrades ChatGPT",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:OpenAI headquarters: no Commons image named 'OpenAI headquarters')"
+ ],
+ "media": {
+  "real_shots": 4,
+  "planned_real": 4,
+  "extra_photos": 4,
+  "pic_found_share": 0.75,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "pulsar",
+ "social_music": "creative-technology-showreel-241274",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 21.2,
+  "wps": 2.94,
+  "weak_beats": [],
+  "size_mb": 8.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 207.7,
+   "contrast": 0.37,
+   "face_area": 0.0,
+   "text_area": 0.0282,
+   "caption_contrast": 1.47,
+   "by_frame": {
+    "sharpness": [
+     192.2,
+     209.9,
+     214.2,
+     214.5
+    ],
+    "contrast": [
+     0.369,
+     0.373,
+     0.37,
+     0.368
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0282,
+     0.0286,
+     0.0279,
+     0.0278
+    ],
+    "caption_contrast": [
+     1.47,
+     1.46,
+     1.47,
+     1.47
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.3,
+   "none",
+   3
+  ],
+  [
+   6.3,
+   13.35,
+   "none",
+   5
+  ],
+  [
+   13.35,
+   17.82,
+   "none",
+   3
+  ],
+  [
+   17.82,
+   21.14,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "100218",
+   "q": "digital code matrix",
+   "t0": 0.0,
+   "t1": 10.87
+  },
+  {
+   "p": "pixabay",
+   "id": "47220",
+   "q": "circuit board closeup",
+   "t0": 10.27,
+   "t1": 21.14
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T20:10:43Z",
+ "video": "rzEH4i2ko6Y",
+ "url": "https://youtube.com/shorts/rzEH4i2ko6Y",
+ "publish_at": "2026-10-27T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-203"
+}

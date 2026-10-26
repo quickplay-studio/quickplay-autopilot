@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 09:08): 16 of 1,000 subscribers · 10,012 of 10 million Shorts views in 90 days · 4,284 views in the last 24 hours (about 111,000 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 09:49): 16 of 1,000 subscribers · 10,021 of 10 million Shorts views in 90 days · 4,334 views in the last 24 hours (about 111,000 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Mon 26 Oct 9:08 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Mon 26 Oct | 1 public, 5 scheduled | 4 | 1 | ⏳ 1 of 15 so far, 5 more scheduled |
+| Mon 26 Oct | 2 public, 4 scheduled | 4 | 1 | ⏳ 2 of 15 so far, 4 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -78,6 +78,14 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-183** Music Explained #1: Eurovision: the rule changing in 2027 (rendering next)
+- **QD-184** Arkane Lyon faces closure by November 🚨 (rendering next)
+- **QD-185** GTA 6: digital only at $79.99 🎮 (rendering next)
+- **QD-186** Game Facts #2: Exoplanet Arcade Cabinet | a short story (rendering next)
+- **QD-187** Tech Explained #1: Why Your Phone Buzzes In Your Pocket (rendering next)
+
 ## On the channel (latest first)
 
 ### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
@@ -101,7 +109,7 @@ scheduled · 37 s · music: paradigm · [script](../boards/done/QD-182.json) · 
 ![QD-182](QD-182.jpg)
 
 ### Mon 26 Oct 9:30 · Halloween: The Game: the country that said no 🎃
-scheduled · 37 s · music: paradigm · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
+private · 37 s · music: paradigm · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
 
 ![QD-181](QD-181.jpg)
 

@@ -1,19 +1,19 @@
 {
  "date": "2026-10-26",
- "built": "2026-10-26T09:08+00:00",
+ "built": "2026-10-26T11:27+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "morning",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 7,
+   "n": 8,
    "topic": "GTA 6",
    "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
    "category": "Gaming",
    "what_is_new": "Nothing changed in the last two days.",
    "hooks": [
-    "Grand Theft Auto VI launches on 19 November 2026 for PlayStation 5 and Xbox Series X/S!"
+    "GTA 6 launches on November 19, 2026!"
    ],
    "sources": [
     [
@@ -48,63 +48,43 @@
      }
     },
     {
-     "claim": "GTA 6 is scheduled to launch on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
+     "claim": "GTA 6 is scheduled to be released on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
      "sources": [
       1,
       3
      ],
      "evidence": {
       "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "Stephen Root plays the character Brian Heder.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Who has been confirmed, whether Rockstar and any likely NDAs like it or not, is Stephen Root, who said he will be seen playing drug",
-      "3": "Other characters include: Cal Hampton, Jason's paranoid friend; Boobie Ike, who runs a business empire in Vice City; Dre'Quan Priest, owner of the record label"
+      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Manni L. Perez reached a peak of more than 2,100 viewers during her 12 minute livestream.",
+     "claim": "Actress Manni L. Perez livestreamed, dodging a swarm of GTA 6 comments.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Reaching a peak of more than 2,100 viewers on a six-month-old Instagram account with just nine posts, Perez spent her 12-minute livestream just talking about"
+      "1": "Manni L. Perez, the actress long rumored to be playing Lucia in GTA 6, has gone viral after dodging a swarm of comments from Grand"
      }
     },
     {
-     "claim": "Manni L. Perez played a blackjack dealer in Grand Theft Auto Online.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Funnily enough, she also played a blackjack dealer in Grand Theft Auto Online."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI will include a social media app named Snapmatic.",
+     "claim": "The story follows a criminal duo, Jason Duval and Lucia Caminos.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "Grand Theft Auto VI will feature a fully integrated social media app called Snapmatic, returning from Grand Theft Auto V.[14][15]"
+      "3": "the fictional us state of leonida based on florida the story follows the criminal duo of jason duval and lucia caminos"
      }
     },
     {
-     "claim": "Rockstar Games grew from 2,441 staff in 2018 to 4,711 employees across 12 offices during development.",
+     "claim": "The game’s map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
+      "3": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
      }
     }
    ],
@@ -113,80 +93,36 @@
    ]
   },
   {
-   "n": 26,
-   "topic": "LYON vs. GEN",
-   "signal": "YouTube GB 258,921/h",
+   "n": 10,
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
    "category": "Gaming",
    "what_is_new": "",
-   "hooks": [
-    "Dishonored studio Arkane Lyon faces closure by November."
-   ],
+   "hooks": [],
    "sources": [
     [
-     "As devastating Xbox \"reset\" continues, Dishonored studio Arkane Lyon reportedly only has until November to find a new buyer before it's clos",
-     "https://www.eurogamer.net/xbox-layoffs-marvels-blade-arkane-lyon-closure",
-     "Eurogamer",
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
      "2026-10-23"
-    ],
-    [
-     "LYON vs. GEN",
-     "https://en.wikipedia.org/wiki/Enid_Lyons",
-     "Wikipedia",
-     ""
     ]
    ],
    "verified": [],
-   "one_source": [
-    {
-     "claim": "Arkane Lyon must find a buyer by 13th November or face closure.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "the deadline to find a buyer for the studio is imminent, ending on 13th November."
-     }
-    },
-    {
-     "claim": "If Arkane Lyon closes, 217 workers could lose their jobs.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "If the closure occurs, 217 workers could lose their jobs."
-     }
-    },
-    {
-     "claim": "Enid Lyons was the first woman to be elected to the Australian House of Representatives.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "She was notable as being the first woman to be elected to the House of Representatives"
-     }
-    },
-    {
-     "claim": "Enid Lyons served as Vice‑President of the Executive Council from 1949 to 1951, becoming the first woman in cabinet.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "served as Vice‑President of the Executive Council in the Menzies Government from 1949 to 1951 – the first woman in cabinet."
-     }
-    }
-   ],
+   "one_source": [],
    "images": [
-    "commons:File:Enid_Lyons_1950.jpg"
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
    ]
   },
   {
-   "n": 29,
+   "n": 30,
    "topic": "FC BARCELONA 1",
-   "signal": "YouTube GB-sport 792,940/h",
+   "signal": "YouTube GB-sport 727,121/h",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "Real Madrid defeated Barcelona 2-1 in El Clasico on 25 October 2026, ending Barcelona's nine-game winning streak in the league.",
    "hooks": [
-    "Kylian Mbappe stunned Barcelona with a late winner in El Clasico!",
-    "Real Madrid claimed a dramatic 2-1 victory at the Camp Nou!"
+    "Kylian Mbappé scores twice to silence the Camp Nou in El Clasico!",
+    "Real Madrid ends Barcelona's perfect nine-game winning streak in La Liga.",
+    "A late 87th-minute winner secures Real Madrid's first victory in Barcelona since 2023."
    ],
    "sources": [
     [
@@ -202,21 +138,412 @@
      "2026-10-25"
     ],
     [
-     "Here’s Where to Watch FC Barcelona vs. Real Madrid Match Live Online",
-     "https://www.billboard.com/culture/product-recommendations/barcelona-real-madrid-2026-laliga-soccer-watch-online-free-1236365640/",
-     "Billboard",
-     "2026-10-25"
-    ],
-    [
      "FC BARCELONA 1",
      "https://en.wikipedia.org/wiki/FC_Barcelona_1-1_Atl%C3%A9tico_Madrid_(2014)",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [],
-   "one_source": [],
+   "verified": [
+    {
+     "claim": "Raphinha scored the only goal for Barcelona during the match at the Spotify Camp Nou.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "They had drawn level after Mbappé’s opener, Raphinha scoring, but could not do it again.",
+      "2": "Barcelona equalised through Raphinha after Mbappe deflected in opener but Jude Bellingham brilliance set Real away to grab three LaLiga points"
+     }
+    },
+    {
+     "claim": "Kylian Mbappé scored the winning goal in the 87th minute of the match.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "With just three minutes and the final reserves of energy remaining, a wonderful moment of skill from Jude Bellingham found Eduardo Camavinga and set them",
+      "2": "It was the 87th minute when Mbappe tucked in from Eduardo Camavinga's cutback following some sublime skill from Jude Bellingham."
+     }
+    },
+    {
+     "claim": "Barcelona had won nine consecutive league games before this defeat.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Not only was this the first time Barcelona failed to win in the league this season, their record-equalling run halted at nine",
+      "2": "We won nine in a row. It happens, defeats are a part of the game."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Kylian Mbappé has now scored 10 goals against Barcelona.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "This was the Frenchman’s 10th goal against Barcelona but none felt quite like this."
+     }
+    },
+    {
+     "claim": "Real Madrid had not won a match in Barcelona for three years prior to this victory.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "This loss will sting far more - it's Real's first win in Barcelona in three years."
+     }
+    },
+    {
+     "claim": "Barcelona's 11-game winning streak at the start of the season was recently halted by Paris St-Germain.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "It's been a bad week for Hansi Flick's side, whose 11-game winning streak at the start of this season was halted with defeat in the"
+     }
+    },
+    {
+     "claim": "Barcelona manager Hansi Flick noted that his team lacked freshness during the match.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "You could see today we missed also the freshness."
+     }
+    }
+   ],
    "images": []
+  },
+  {
+   "n": 6,
+   "topic": "Halloween 2026",
+   "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
+   "category": "Entertainment",
+   "what_is_new": "Buffy the Vampire Slayer season 3 was highlighted today as a recommended spooky binge 27 years after its release.",
+   "hooks": [
+    "The Demon Star Algol will wink at us this October.",
+    "A new Halloween video game was released on 8 September 2026.",
+    "Look for Halloween fireballs streaking from the constellation Taurus this month."
+   ],
+   "sources": [
+    [
+     "27 Years Ago, 'Buffy the Vampire' Unleashed an Impossibly Good Season, and Broke the Fandom",
+     "https://www.polygon.com/buffy-season-3-best-season-mayor-faith/",
+     "Polygon",
+     "2026-10-26"
+    ],
+    [
+     "Scott Walker’s The Drift will get under your skin",
+     "https://www.theverge.com/entertainment/1018300/scott-walker-the-drift-music-album-review",
+     "The Verge",
+     "2026-10-25"
+    ],
+    [
+     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
+     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
+     "Space.com",
+     "2026-10-24"
+    ],
+    [
+     "Jackson Boxer’s vegetarian recipe for brown butter pumpkin soup",
+     "https://www.theguardian.com/food/2026/oct/24/vegetarian-brown-butter-pumpkin-soup-recipe-jackson-boxer",
+     "Guardian",
+     "2026-10-24"
+    ],
+    [
+     "Halloween 2026",
+     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Halloween The Game was released on 8 September 2026 for PlayStation 5, Windows and Xbox Series X and Series S.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "halloween the game is a multiplayer survival horror game developed by illfonic and published by illfonic and gun interactive 2 3 it is based on the 1978 film halloween and was released on september 8 2026 for playstation 5 windows"
+     }
+    },
+    {
+     "claim": "The video game Halloween The Game is a multiplayer survival horror title developed by IllFonic.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "Halloween: The Game is a multiplayer survival horror game developed by IllFonic and published by IllFonic and Gun Interactive."
+     }
+    },
+    {
+     "claim": "The Pleiades star cluster is a collection of six or seven bright stars visible to the naked eye.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The Pleiades appears as a tight collection of six or seven bright twinkling stars to the naked eye, while a pair of binoculars will reveal"
+     }
+    },
+    {
+     "claim": "The binary star system Algol represents an eye of the Gorgon Medusa in the constellation Perseus.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Next we turn our gaze to the \"Demon Star\" Algol — a beautiful binary system that represents an eye of the monstrous Gorgon Medusa, whose"
+     }
+    },
+    {
+     "claim": "The binary star Algol appears to dim every 2.867 days as one star eclipses the other.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The demonic eye appears to \"wink\" at us every 2.867 days, as one of a pair of co-orbiting stars eclipses the other, making Algol appear"
+     }
+    },
+    {
+     "claim": "The constellation Cetus is also known as the sea monster or the whale.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The constellation Cetus — also known as the sea monster, or the whale — can be found shining in the southeastern sky after sunset in"
+     }
+    },
+    {
+     "claim": "Taurid meteors are often called Halloween fireballs because they coincide with the annual celebration.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Taurids are known for producing bright \"fireball\" meteors, which are often called \"Halloween fireballs\" because they tend to coincide with the annual celebration."
+     }
+    },
+    {
+     "claim": "Scott Walker released the unsettling album The Drift in 2006.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Walker’s 2006 album is unsettling, bizarre, and the perfect way to kill a party."
+     }
+    },
+    {
+     "claim": "The album The Drift features the sound of a percussionist punching a pig carcass.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "You can feel the low-bitrate MP3 noise that opens “Clara” in your jaw, which also allegedly features the sound of his percussionist punching a pig"
+     }
+    },
+    {
+     "claim": "Eliza Dushku was harassed on the street by fans who were upset by her character Faith.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In fact, it was such an effective plotline that Dushku started getting harassed on the street by Buffy fans."
+     }
+    },
+    {
+     "claim": "Jackson Boxer is the chef and owner of Brunswick House, Vesper and Dove in London.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "- Jackson Boxer is chef/owner of Brunswick House, Vesper and Dove, all in London, and culinary director of Cowley Manor near Cheltenham and the Henrietta"
+     }
+    },
+    {
+     "claim": "A hotfix removed a minigame from Halloween The Game that allowed civilians to have sexual intercourse for buffs.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "In the first published version, the game had a minigame where civilians could have sexual intercourse for buffs. The minigame was removed in a hotfix"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 36,
+   "topic": "Love Island Australia",
+   "signal": "TVmaze web: season premiere tonight, 18:00",
+   "category": "Entertainment",
+   "what_is_new": "Season 8 of Love Island Australia is scheduled to be first released on 26 October 2026.",
+   "hooks": [
+    "Love Island Australia season 8 is officially here!",
+    "The new season of Love Island Australia starts today in Fiji.",
+    "Will the new islanders find love and win 50,000 dollars?"
+   ],
+   "sources": [
+    [
+     "‘I always think my head will fall off when Traitors turn on each other’: the inside story of the world’s biggest TV show",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/23/traitors-bbc-making-of-inside-story-worlds-biggest-tv-show",
+     "Guardian",
+     "2026-10-23"
+    ],
+    [
+     "Love Island Australia",
+     "https://en.wikipedia.org/wiki/Love_Island_Australia",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Love Island Australia season 8 is scheduled for release on 26 October 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "8 | TBA | TBA | Fiji | TBA | 26 October 2026 (2026-10-26) | TBA | TBA | TBA | —N/a"
+     }
+    },
+    {
+     "claim": "The eighth season of Love Island Australia is set in Fiji.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "8 | TBA | TBA | Fiji | TBA | 26 October 2026 (2026-10-26) | TBA | TBA | TBA | —N/a"
+     }
+    },
+    {
+     "claim": "Kye Lambert and Yana Marks were the winners of season 7.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "7 | 24 | 25 | 29 | 27 October 2025 (2025-10-27) | 15 December 2025 (2025-12-15) | Kye Lambert & Yana Marks | Jaide"
+     }
+    },
+    {
+     "claim": "The winning couple of the series takes home 50,000 dollars.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "During the final week, the public vote for which couple they want to win the series and therefore take home $50,000."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "epic games",
+   "signal": "Google Trends GB 200+",
+   "category": "Gaming",
+   "what_is_new": "Epic Games boss Tim Sweeney spent the weekend defending his severe criticism of Valve and calling Steam's AI content disclosure a political act.",
+   "hooks": [
+    "Did you know Epic Games was founded in 1991?",
+    "Tencent acquired a massive stake in Epic Games back in 2012.",
+    "Unreal Engine was named the most successful videogame engine in 2014!"
+   ],
+   "sources": [
+    [
+     "Epic Games Boss Tim Sweeney Doubles Down on Valve Criticism, Says Steam's AI Content Disclosure Is a 'Political Act'",
+     "https://www.ign.com/articles/epic-games-boss-tim-sweeney-doubles-down-on-valve-criticism-says-steams-ai-content-disclosure-is-a-political-act",
+     "IGN",
+     "2026-10-26"
+    ],
+    [
+     "The 10 Best SNES Games to Play on Nintendo Switch Online",
+     "https://www.polygon.com/best-snes-games-nintendo-switch-online-classics/",
+     "Polygon",
+     "2026-10-26"
+    ],
+    [
+     "Ouattara rescues point for Brentford as Hull maintain unbeaten home record",
+     "https://www.theguardian.com/football/2026/oct/25/hull-brentford-premier-league-match-report",
+     "Guardian",
+     "2026-10-25"
+    ],
+    [
+     "Jordan Thomas, director of BioShock 2, played Path of Exile for over 7,000 hours while working on co-op horror game The Blackout Club: 'I wa",
+     "https://www.pcgamer.com/gaming-industry/jordan-thomas-director-of-bioshock-2-played-path-of-exile-for-over-7-000-hours-while-working-on-co-op-horror-game-the-blackout-club-i-was-essentially-awake-all-the-time/",
+     "PC Gamer",
+     "2026-10-25"
+    ],
+    [
+     "epic games",
+     "https://en.wikipedia.org/wiki/Epic_Games",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Epic Games was founded by Tim Sweeney as Potomac Computer Systems in 1991.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "The company was founded by Tim Sweeney as Potomac Computer Systems in 1991, originally located in his parents' house in Potomac, Maryland."
+     }
+    },
+    {
+     "claim": "In 2014, Unreal Engine was named the most successful videogame engine by Guinness World Records.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "the unreal gears of war and infinity blade series in 2014 unreal engine was named the most successful videogame engine by guinness world records 9 epic games owns the"
+     }
+    },
+    {
+     "claim": "Tencent acquired a 48.4 percent outstanding stake in Epic Games in 2012.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "Tencent acquired a 48.4% outstanding stake, equating to 40% of total Epic, in the company in 2012, as part of an agreement aimed at moving"
+     }
+    },
+    {
+     "claim": "As of April 2022, Epic Games has a US$32 billion equity valuation.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "As of April 2022, the company has a US$32 billion equity valuation."
+     }
+    },
+    {
+     "claim": "Earlier this month, Steam broke its all-time record for concurrent users with 43.5 million people logged in at the same time.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Meanwhile, earlier this month Steam broke its all-time record for concurrent users yet again, with 43.5 million people logged in at the same time."
+     }
+    },
+    {
+     "claim": "The 2026 Epic AI MegaJam begins November 12.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Epic AI MegaJam begins Nov 12: https://t.co/aAXEqj7zmE https://t.co/h3Kgs9Y5zH"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Epic_Games_office.jpg"
+   ]
   }
  ]
 }

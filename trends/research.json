@@ -53,22 +53,22 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
    "articles": [
     {
+     "outlet": "BBC Sport",
+     "title": "Will anyone end Spain's domination of women's Ballon d'Or?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cq5ynp680jm1o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
+    },
+    {
      "outlet": "Sky Sports",
-     "title": "Kane favourite to win 2026 Ballon d'Or - who should win men's award tonight?",
+     "title": "Kane, Mbappe and Lamine Yamal - who should win men's 2026 Ballon d'Or?",
      "url": "https://www.skysports.com/football/news/12040/13601847/ballon-dor-2026-harry-kane-kylian-mbappe-and-lamine-yamal-in-race-for-mens-award-stats-and-pundits-opinions",
      "published": "2026-10-26"
     },
     {
      "outlet": "BBC",
-     "title": "Who should win the men's Ballon d'Or? BBC Sport pundits have their say",
+     "title": "Kane, Yamal or Kvaratskhelia? BBC Sport pundits on who should win the men's Ballon d'Or",
      "url": "https://www.bbc.co.uk/sport/football/articles/cqjdmn0ndxjxo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Weir would swap Ballon d'Or nominations for World Cup",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cjvgx1xw7z9xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
     },
     {
      "outlet": "Guardian",
@@ -85,9 +85,9 @@
    "articles": [
     {
      "outlet": "New York Times",
-     "title": "How to win the Ballon d’Or: What factors are important to lift trophy?",
-     "url": "https://www.nytimes.com/athletic/7716556/2026/10/26/how-to-win-the-ballon-dor/",
-     "published": "2026-10-25"
+     "title": "Ballon d’Or 2026 live updates: Start time, news and ranking all today’s contenders",
+     "url": "https://www.nytimes.com/athletic/live-blogs/ballon-dor-2026-live-updates-results-time/sND0BDpI7kfj/",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -96,6 +96,12 @@
    "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
    "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "27 Years Ago, 'Buffy the Vampire' Unleashed an Impossibly Good Season, and Broke the Fandom",
+     "url": "https://www.polygon.com/buffy-season-3-best-season-mayor-faith/",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "The Verge",
      "title": "Scott Walker’s The Drift will get under your skin",
@@ -113,6 +119,19 @@
      "title": "Jackson Boxer’s vegetarian recipe for brown butter pumpkin soup",
      "url": "https://www.theguardian.com/food/2026/oct/24/vegetarian-brown-butter-pumpkin-soup-recipe-jackson-boxer",
      "published": "2026-10-24"
+    }
+   ]
+  },
+  {
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Google’s top Halloween costumes for 2026 include ‘Obsession’",
+     "url": "https://www.usatoday.com/story/money/2026/10/14/google-trending-halloween-costumes/92254505007/",
+     "published": "2026-10-14"
     }
    ]
   },
@@ -153,16 +172,41 @@
      "published": "2026-10-23"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
-     "url": "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
-     "published": "2026-10-15"
+     "outlet": "Polygon",
+     "title": "GTA 6 anticipation is sending PS5 Pro prices through the roof",
+     "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+     "published": "2026-09-01"
     },
     {
      "outlet": "IGN",
      "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
      "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
      "published": "2026-06-25"
+    },
+    {
+     "outlet": "Variety",
+     "title": "‘GTA 6’ Price Still Not Revealed, but Take-Two Chief Says Rockstar on Track to Begin Marketing This Summer",
+     "url": "https://variety.com/2026/gaming/news/gta-5-no-delay-price-marketing-summer-1236755303/",
+     "published": "2026-05-21"
+    }
+   ]
+  },
+  {
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Xbox Wire",
+     "title": "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "url": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6’s Extended Look Trailer Seemingly Paid Off For Netflix With Massive Viewership",
+     "url": "https://www.gamespot.com/articles/gta-6s-extended-look-trailer-seemingly-paid-off-for-netflix-with-massive-viewership/",
+     "published": "2026-09-01"
     }
    ]
   },
@@ -186,154 +230,104 @@
    ]
   },
   {
-   "topic": "fabian hürzeler",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Fabian_H%C3%BCrzeler",
-   "articles": [
-    {
-     "outlet": "ESPN",
-     "title": "Arsenal boss Mikel Arteta on Fabian Hürzeler falling out: 'That's all in the past'",
-     "url": "https://www.espn.co.uk/football/story/_/id/49971397/arsenal-boss-mikel-arteta-fabian-hurzeler-falling-thats-all-premier-league",
-     "published": "2026-09-18"
-    }
-   ]
-  },
-  {
-   "topic": "pension fund",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Pension_fund",
-   "articles": [
-    {
-     "outlet": "Reuters",
-     "title": "German pension commission proposes shift to Swedish-style fund",
-     "url": "https://www.reuters.com/sports/german-pension-commission-proposes-shift-swedish-style-fund-2026-06-23/",
-     "published": "2026-06-23"
-    }
-   ]
-  },
-  {
-   "topic": "organ donation",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Organ_donation",
-   "articles": [
-    {
-     "outlet": "CBS News",
-     "title": "Rockland County's Lauren Shields honored with proposed federal legislation designed to expand organ donations",
-     "url": "https://www.cbsnews.com/newyork/news/lauren-shields-organ-donation-bill-mike-lawler-josh-gottheimer/",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "generation x",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Generation_X",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Australia’s Rebecca Henderson claims historic race walk world record",
-     "url": "https://www.theguardian.com/sport/2026/oct/26/australian-rebecca-henderson-breaks-athletics-world-record-race-walk-marathon-japan",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Engadget",
-     "title": "Don't throw away your old, unsupported Nest gadgets — Do this instead",
-     "url": "https://www.engadget.com/2294122/dont-throw-away-your-old-unsupported-nest-gadgets/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Rolling Stone",
-     "title": "How Argentina’s Folk Sounds Are Shaping a Generation’s Politics and National Pride",
-     "url": "https://www.rollingstone.com/music/music-latin/argentina-folk-music-controversy-milo-j-cazzu-1235647735/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "This Week In Space podcast: Episode 233 — The Artemis Generation",
-     "url": "https://www.space.com/entertainment/space-movies-shows/this-week-in-space-podcast-episode-233-the-artemis-generation",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "vacation",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Vacation",
-   "articles": [
-    {
-     "outlet": "Washington Post",
-     "title": "How to get the most days off with your vacation time in 2024",
-     "url": "https://www.washingtonpost.com/travel/tips/pto-hack-maximize-2024/",
-     "published": "2024-01-04"
-    }
-   ]
-  },
-  {
-   "topic": "chad green",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Chad_Greenway",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "We’ve made Oxford Street traffic-free – and that’s just the start. Soon there’ll be green spaces for arts and music too | Sadiq Khan",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/26/oxford-street-car-traffic-ban-new-plans-2027-sadiq-khan",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Board of Deputies of British Jews declares Greens to be racist party",
-     "url": "https://www.bbc.co.uk/news/articles/ckx2qyd17eqvo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "TechCrunch Mobility: Blue-green is the color of autonomy",
-     "url": "https://techcrunch.com/2026/10/25/techcrunch-mobility-blue-green-is-the-color-of-autonomy/",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "winter storm forecast",
-   "signal": "Google Trends US 500+",
+   "topic": "the cure by Olivia Rodrigo",
+   "signal": "Apple Music US: new in the top 25",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "When will the weather settle after Storm Boelo?",
-     "url": "https://www.bbc.co.uk/news/videos/cmrlyeekzldpo?at_medium=RSS&at_campaign=rss",
+     "outlet": "Variety",
+     "title": "Olivia Rodrigo Exhibit Coming to Grammy Museum, With Launch Including an On-Stage Cameron Crowe Q&A (EXCLUSIVE)",
+     "url": "https://variety.com/2026/music/news/olivia-rodrigo-grammy-museum-exhibit-cure-cameron-crowe-1236844906/",
+     "published": "2026-08-27"
+    }
+   ]
+  },
+  {
+   "topic": "epic games",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Epic_Games",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Epic Games Boss Tim Sweeney Doubles Down on Valve Criticism, Says Steam's AI Content Disclosure Is a 'Political Act'",
+     "url": "https://www.ign.com/articles/epic-games-boss-tim-sweeney-doubles-down-on-valve-criticism-says-steams-ai-content-disclosure-is-a-political-act",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "The 10 Best SNES Games to Play on Nintendo Switch Online",
+     "url": "https://www.polygon.com/best-snes-games-nintendo-switch-online-classics/",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Ouattara rescues point for Brentford as Hull maintain unbeaten home record",
+     "url": "https://www.theguardian.com/football/2026/oct/25/hull-brentford-premier-league-match-report",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Jordan Thomas, director of BioShock 2, played Path of Exile for over 7,000 hours while working on co-op horror game The Blackout Club: 'I wa",
+     "url": "https://www.pcgamer.com/gaming-industry/jordan-thomas-director-of-bioshock-2-played-path-of-exile-for-over-7-000-hours-while-working-on-co-op-horror-game-the-blackout-club-i-was-essentially-awake-all-the-time/",
      "published": "2026-10-25"
     }
    ]
   },
   {
-   "topic": "black friday",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
+   "topic": "uk budget personal allowance pensioners",
+   "signal": "Google Trends GB 10000+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "AI cloud computing companies face ‘guppy-level death’, Elon Musk warns, as funding dries up – business live",
-     "url": "https://www.theguardian.com/business/live/2026/oct/26/ai-cloud-computing-companies-guppy-level-death-elon-musk-stock-markets-dollar-oil-bond-yieds-latest-news-updates",
-     "published": "2026-10-26"
-    },
+     "outlet": "Sky News",
+     "title": "Budget speculation: Personal allowance to rise - and capital gains pain on way?",
+     "url": "https://news.sky.com/story/rumour-swirls-that-stagnant-personal-allowance-could-get-boost-worth-thousands-and-save-state-pensions-from-tax-13590719",
+     "published": "2026-09-23"
+    }
+   ]
+  },
+  {
+   "topic": "balon de oro",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Bal%C3%B3n_de_Oro_(Mexico)",
+   "articles": [
     {
-     "outlet": "Variety",
-     "title": "‘Saiyaara’ Star Ahaan Panday and Sharvari’s Ali Abbas Zafar Romantic Action-Drama for Yash Raj Films Unveils Title (EXCLUSIVE)",
-     "url": "https://variety.com/2026/film/news/saiyaara-star-ahaan-panday-sharvari-ali-abbas-zafar-film-title-1236930643/",
-     "published": "2026-10-26"
-    },
+     "outlet": "CNN",
+     "title": "\"Todos quieren ganar el Balón de Oro\": Kylian Mbappé habló de todo en entrevista con CNN",
+     "url": "https://cnnespanol.cnn.com/2026/09/22/deportes/kylian-mbappe-balon-de-oro-entrevista-trax",
+     "published": "2026-09-22"
+    }
+   ]
+  },
+  {
+   "topic": "packers roughing the passer penalties",
+   "signal": "Google Trends US 10000+",
+   "wikipedia": null,
+   "articles": [
     {
-     "outlet": "Deadline",
-     "title": "Donald Trump Posts 1,300+ Word Sunday Night Diatribe About “Complete And Total Loser” Bill Maher, Nine Days After Praising Their “Great Dinn",
-     "url": "https://deadline.com/2026/10/trump-bill-maher-loser-truth-social-post-1237172835/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Man Arrested for Brandishing Knife at Crew on the Set of Miami Vice ‘85",
-     "url": "https://www.ign.com/articles/man-arrested-for-brandishing-knife-at-crew-on-the-set-of-miami-vice-85",
+     "outlet": "USA Today",
+     "title": "Micah Parsons calls out NFL over roughing the passer call criticized by Tom Brady",
+     "url": "https://www.usatoday.com/story/sports/nfl/packers/2026/10/25/micah-parsons-calls-out-packers-lions-refs/92437060007/",
      "published": "2026-10-25"
+    },
+    {
+     "outlet": "ESPN",
+     "title": "Packers rip officiating after roughing penalties prove costly in loss",
+     "url": "https://www.espn.com/nfl/story/_/id/50284205/packers-rip-officiating-roughing-penalties-prove-costly-loss",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "amber nova",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Amber_Nova",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Two men killed by falling trees as Storm Boelo leaves 90,000 properties without power",
+     "url": "https://www.bbc.co.uk/news/articles/cxdd8gr1vje0o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -357,6 +351,25 @@
    ]
   },
   {
+   "topic": "Elizabeth Holmes",
+   "signal": "Wikipedia 193,621 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Who is Sunny Balwani, Elizabeth Holmes' ex-boyfriend and Theranos COO?",
+     "url": "https://www.usatoday.com/story/entertainment/movies/2026/10/23/sunny-balwani-elizabeth-holmes-documentary/92381223007/",
+     "published": "2026-10-23"
+    },
+    {
+     "outlet": "Washington Post",
+     "title": "Celebritology: Why is Gen Z turning Elizabeth Holmes into a meme icon?",
+     "url": "https://www.washingtonpost.com/wp-creator/2026/10/23/celebritology-why-is-gen-z-turning-elizabeth-holmes-into-meme-icon/",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
    "topic": ".xxx",
    "signal": "Wikipedia 175,999 views",
    "wikipedia": "https://en.wikipedia.org/wiki/.xxx",
@@ -374,6 +387,12 @@
    "signal": "Wikipedia 159,715 views",
    "wikipedia": "https://en.wikipedia.org/wiki/You_Can_See_Everything",
    "articles": [
+    {
+     "outlet": "NME",
+     "title": "‘You Can See Everything’ hype intensifies after big second weekend at US box office",
+     "url": "https://www.nme.com/news/film/you-can-see-everything-hype-nathan-fielder-elizabeth-holmes-3974220?utm_source=rss&utm_medium=rss&utm_campaign=you-can-see-everything-hype-nathan-fielder-elizabeth-holmes",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "Guardian",
      "title": "‘We built this land’: descendants of enslaved people are reclaiming their history across South Africa’s vineyards",
@@ -435,7 +454,7 @@
   },
   {
    "topic": "LISA",
-   "signal": "YouTube GB 753,564/h",
+   "signal": "YouTube GB 733,680/h",
    "wikipedia": "https://en.wikipedia.org/wiki/LISA",
    "articles": [
     {
@@ -454,7 +473,7 @@
   },
   {
    "topic": "Avengers: Doomsday",
-   "signal": "YouTube GB 362,932/h",
+   "signal": "YouTube GB 342,567/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
    "articles": [
     {
@@ -473,9 +492,15 @@
   },
   {
    "topic": "LYON vs. GEN",
-   "signal": "YouTube GB 258,921/h",
+   "signal": "YouTube GB 199,234/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Enid_Lyons",
    "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Xbox Seeks Partner to Support Arkane Lyon as It Finishes Marvel's Blade, Extends Search for Buyer",
+     "url": "https://www.ign.com/articles/xbox-looks-for-development-partner-to-finish-marvels-blade",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "Eurogamer",
      "title": "As devastating Xbox \"reset\" continues, Dishonored studio Arkane Lyon reportedly only has until November to find a new buyer before it's clos",
@@ -492,7 +517,7 @@
   },
   {
    "topic": "Blizzard WISHES they made this..",
-   "signal": "YouTube GB-gaming 60,426/h",
+   "signal": "YouTube GB-gaming 54,907/h",
    "wikipedia": null,
    "articles": [
     {
@@ -505,7 +530,7 @@
   },
   {
    "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 86,723/h",
+   "signal": "YouTube GB-music 86,013/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
    "articles": [
     {
@@ -518,9 +543,15 @@
   },
   {
    "topic": "FC BARCELONA 1",
-   "signal": "YouTube GB-sport 792,940/h",
+   "signal": "YouTube GB-sport 727,121/h",
    "wikipedia": "https://en.wikipedia.org/wiki/FC_Barcelona_1-1_Atl%C3%A9tico_Madrid_(2014)",
    "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Late Mbappe goal earns Real win at Barca in dramatic Clasico",
+     "url": "https://www.bbc.co.uk/sport/football/videos/crje5zewk52no?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "Guardian",
      "title": "Mbappé double secures Real Madrid late victory at Barcelona after Raphinha leveller",
@@ -532,43 +563,6 @@
      "title": "Mbappe's late strike earns Mourinho and Real Clasico glory at Barca",
      "url": "https://www.skysports.com/football/barcelona-vs-real-madrid/report/563017",
      "published": "2026-10-25"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Here’s Where to Watch FC Barcelona vs. Real Madrid Match Live Online",
-     "url": "https://www.billboard.com/culture/product-recommendations/barcelona-real-madrid-2026-laliga-soccer-watch-online-free-1236365640/",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "brain training.. 🧠",
-   "signal": "YouTube GB-sport 127,358/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Brain_training",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Higher training costs for older workers risks plan to tackle youth jobs crisis, employers say",
-     "url": "https://www.theguardian.com/education/2026/oct/26/training-costs-apprenticeships-older-workers-youth-jobs-crisis-neet",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Marchant recalled by Borthwick for England training camp",
-     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmq5nyywq8n1o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Spurs boss Ho wants 'more support and training' for WSL referees",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cmd7q47dd0e7o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "Xbox Wire",
-     "title": "Call of Duty: Modern Warfare 4 – Kill Block is Must-Play Multiplayer at Launch",
-     "url": "https://news.xbox.com/en-us/2026/10/23/call-of-duty-modern-warfare-4-kill-block-must-play-multiplayer/",
-     "published": "2026-10-23"
     }
    ]
   },
@@ -583,7 +577,14 @@
    "topic": "Minimum Wage",
    "signal": "TVmaze web: series premiere tonight",
    "wikipedia": "https://en.wikipedia.org/wiki/Minimum_Wage",
-   "articles": [],
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "‘Minimum Wage,’ and 6 More Shows to Watch on TV This Week",
+     "url": "https://www.nytimes.com/2026/10/26/arts/television/minimum-wage-and-6-more-shows-to-watch-on-tv-this-week.html",
+     "published": "2026-10-25"
+    }
+   ],
    "source": "TVmaze"
   },
   {
@@ -593,15 +594,9 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models",
-     "url": "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "NME",
-     "title": "Elvis Presley rightsholders sue AI company Anthropic over alleged copyright infringement of 274 songs",
-     "url": "https://www.nme.com/news/music/elvis-presley-rightsholders-sue-anthropic-copyright-infringement-274-songs-3974178?utm_source=rss&utm_medium=rss&utm_campaign=elvis-presley-rightsholders-sue-anthropic-copyright-infringement-274-songs",
-     "published": "2026-10-25"
+     "title": "Anthropic’s Claude AI model accessed Georgia voter data in US",
+     "url": "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us",
+     "published": "2026-10-26"
     }
    ],
    "source": "App Store"
@@ -641,32 +636,6 @@
    "source": "TVmaze"
   },
   {
-   "topic": "EA shuts down BioWare",
-   "signal": "Bluesky trending, 10,337 posts",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Mass Effect Leaks Reveal Canceled BioWare Game's Story Would Have Accounted for 'All' Choices From Previous Games",
-     "url": "https://www.ign.com/articles/mass-effect-leaks-reveal-canceled-bioware-games-story-would-have-accounted-for-all-choices-from-previous-games",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "BioWare's incredible legacy will continue as long as there are RPGs",
-     "url": "https://www.pcgamer.com/games/rpg/biowares-incredible-legacy-will-continue-as-long-as-there-are-rpgs/",
-     "published": "2026-10-24"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "The Next Mass Effect Sounded Like John Wick In Space",
-     "url": "https://www.gamespot.com/articles/the-next-mass-effect-sounded-like-john-wick-in-space/",
-     "published": "2026-10-23"
-    }
-   ],
-   "source": "Bluesky"
-  },
-  {
    "topic": "Love Island Australia",
    "signal": "TVmaze web: season premiere tonight, 18:00",
    "wikipedia": "https://en.wikipedia.org/wiki/Love_Island_Australia",
@@ -681,65 +650,65 @@
    "source": "TVmaze"
   },
   {
-   "topic": "Playing Deadlock",
-   "signal": "Bluesky trending, 9,004 posts",
-   "wikipedia": null,
+   "topic": "Lingo",
+   "signal": "TVmaze GB: season premiere tonight, 15:00",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lingo",
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Deadlock’s Magical Setting Carries On A Storied, And Welcome, Tradition",
-     "url": "https://www.gamespot.com/articles/deadlocks-magical-setting-carries-on-a-storied-and-welcome-tradition/1100-6538537/",
-     "published": "2026-03-03"
+     "outlet": "TechCrunch",
+     "title": "Lingo.dev is an app localization engine for developers",
+     "url": "https://techcrunch.com/2025/02/18/lingo-dev-is-an-app-localization-engine-for-developers/",
+     "published": "2025-02-18"
     }
    ],
-   "source": "Bluesky"
+   "source": "TVmaze"
   },
   {
-   "topic": "alexandra eala",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Alexandra_Eala",
+   "topic": "gregg wallace",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Gregg_Wallace",
    "articles": []
   },
   {
-   "topic": "cheesecake factory",
+   "topic": "lancs.live",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Cheesecake_Factory",
+   "wikipedia": "https://en.wikipedia.org/wiki/Lancs.live",
    "articles": []
   },
   {
-   "topic": "mein schiff 3",
+   "topic": "burglary",
    "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Mein_Schiff_3",
+   "wikipedia": "https://en.wikipedia.org/wiki/Burglary",
    "articles": []
   },
   {
-   "topic": "paula badosa",
+   "topic": "delia smith",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Delia_Smith",
+   "articles": []
+  },
+  {
+   "topic": "polar vortex",
    "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Paula_Badosa",
+   "wikipedia": "https://en.wikipedia.org/wiki/Polar_vortex",
    "articles": []
   },
   {
-   "topic": "han shi",
+   "topic": "amc theatres",
    "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Han_Shizhong",
-   "articles": []
-  },
-  {
-   "topic": "troy aikman",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Troy_Aikman",
-   "articles": []
-  },
-  {
-   "topic": "Elizabeth Holmes",
-   "signal": "Wikipedia 193,621 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elizabeth_Holmes",
+   "wikipedia": "https://en.wikipedia.org/wiki/AMC_Theatres",
    "articles": []
   },
   {
    "topic": "Jailer 2",
    "signal": "Wikipedia 186,875 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Jailer_2",
+   "articles": []
+  },
+  {
+   "topic": "Wildwood (film)",
+   "signal": "Wikipedia 118,435 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wildwood_(film)",
    "articles": []
   }
  ]

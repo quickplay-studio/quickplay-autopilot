@@ -1,4 +1,6 @@
 # installed after torch==2.6.0 / torchaudio==2.6.0 (CPU wheels) and before chatterbox-tts==0.1.7 --no-deps
+# 26 October: transformers 5.10.0, diffusers 0.38.0 and safetensors 0.8.0 close six high Dependabot alerts; chatterbox-tts 0.1.7
+# declares 5.2.0, 0.29.0 and 0.5.3 but renders the same on these (TEST-D1026, docs/NEXT.md). Move them together.
 numpy>=2.0
 scipy
 soundfile
@@ -7,12 +9,12 @@ requests
 playwright
 librosa==0.11.0
 s3tokenizer
-transformers==5.2.0
-diffusers==0.29.0
+transformers==5.10.0
+diffusers==0.38.0
 resemble-perth
 setuptools<81
 conformer==0.3.2
-safetensors==0.5.3
+safetensors==0.8.0
 pyloudnorm
 omegaconf
 spacy-pkuseg

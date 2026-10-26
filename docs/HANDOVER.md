@@ -1,5 +1,8 @@
 # Quickplay handover (Monday 26 October 2026, 15:45 UK)
 
+> The short version. The full handover (state table, channels, the learning model, open items, rules) is handover.md at
+> the repo root.
+
 Read CLAUDE.md, then run `python pipeline/digest.py`. Everything runs on GitHub; a Claude session is only for changes Charlie
 asks for. Hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html
 

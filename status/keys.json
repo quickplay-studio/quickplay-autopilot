@@ -1,6 +1,6 @@
 {
- "checked": "2026-10-26T19:07+00:00",
- "audit": "2026-10-26T19:07:34+00:00",
+ "checked": "2026-10-26T21:51+00:00",
+ "audit": "2026-10-26T21:51:00+00:00",
  "counts": {
   "ok": 14,
   "expiring": 0,
@@ -14,7 +14,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": true,
    "fix": [
@@ -32,7 +32,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -50,7 +50,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -68,7 +68,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -86,7 +86,7 @@
    "group": "Instagram",
    "status": "ok",
    "expires": "2026-12-22",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "answers as @quickplaydaily",
    "needed": false,
    "fix": [
@@ -103,7 +103,7 @@
    "group": "Instagram",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "answers as @quickplaydaily; Meta has not given an end date yet (the weekly refresh records it)",
    "needed": false,
    "fix": [
@@ -119,7 +119,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -132,7 +132,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -145,7 +145,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -158,7 +158,7 @@
    "group": "Facebook",
    "status": "ok",
    "expires": "2027-01-17",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "answers as the Page Quickplay Daily; the key never ends; Meta's data access ends Sunday 17 January",
    "needed": false,
    "fix": [
@@ -174,7 +174,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -187,7 +187,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -200,7 +200,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -213,7 +213,7 @@
    "group": "TikTok",
    "status": "ok",
    "expires": "2027-10-17",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the refresh token ends Sunday 17 October 2027",
    "needed": false,
    "fix": [
@@ -228,7 +228,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "Google accepts the key",
    "needed": true,
    "fix": [
@@ -243,7 +243,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "Groq accepts the key",
    "needed": false,
    "fix": [
@@ -258,7 +258,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -273,7 +273,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "OpenRouter accepts the key",
    "needed": false,
    "fix": [
@@ -288,7 +288,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -303,7 +303,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -318,7 +318,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -333,7 +333,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -348,7 +348,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -363,7 +363,7 @@
    "group": "Claude",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-26T19:07+00:00",
+   "checked": "2026-10-26T21:51+00:00",
    "detail": "the secret is set (only its presence is checked, so no allowance is used); the writer's last call: ok at 2026-10-26T15:06+00:00",
    "needed": false,
    "fix": [
@@ -378,8 +378,8 @@
    "group": "Campaign sites",
    "status": "ok",
    "expires": "2026-11-21",
-   "checked": "2026-10-26T19:07+00:00",
-   "detail": "saved 3 days ago, 19 cookies; last submission Sunday 25 October",
+   "checked": "2026-10-26T21:51+00:00",
+   "detail": "saved 4 days ago, 19 cookies; last submission Sunday 25 October",
    "needed": false,
    "fix": [
     "In Chrome on the Mac, signed in to https://contentrewards.com/ as the studio account, press the \"Get cookies.txt LOCALLY\" extension, then Export (current site).",
@@ -393,8 +393,8 @@
    "group": "Campaign sites",
    "status": "ok",
    "expires": "2027-10-22",
-   "checked": "2026-10-26T19:07+00:00",
-   "detail": "saved 3 days ago, 9 cookies; no submission seen yet",
+   "checked": "2026-10-26T21:51+00:00",
+   "detail": "saved 4 days ago, 9 cookies; no submission seen yet",
    "needed": false,
    "fix": [
     "In Chrome on the Mac, signed in to https://app.vyro.com/campaigns as the studio account, press the \"Get cookies.txt LOCALLY\" extension, then Export (current site).",

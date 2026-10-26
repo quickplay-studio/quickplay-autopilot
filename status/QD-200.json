@@ -1,0 +1,179 @@
+{
+ "id": "QD-200",
+ "board": "boards/queue/QD-200.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T12:00:00Z",
+ "rendered": "2026-10-26T21:51:56.833231+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1023"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GTA 6 launch trailer: 24 days to go 🎮",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7,
+  "extra_photos": 4,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 38.9,
+  "wps": 3.09,
+  "weak_beats": [],
+  "size_mb": 16.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 657.3,
+   "contrast": 0.184,
+   "face_area": 0.0,
+   "text_area": 0.0234,
+   "caption_contrast": 4.25,
+   "by_frame": {
+    "sharpness": [
+     637.2,
+     663.3,
+     672.4,
+     656.3
+    ],
+    "contrast": [
+     0.183,
+     0.183,
+     0.184,
+     0.184
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0282,
+     0.0179,
+     0.0283,
+     0.0193
+    ],
+    "caption_contrast": [
+     4.25,
+     4.19,
+     4.24,
+     4.3
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.02,
+   "none",
+   2
+  ],
+  [
+   5.02,
+   11.04,
+   "none",
+   4
+  ],
+  [
+   11.04,
+   16.84,
+   "none",
+   4
+  ],
+  [
+   16.84,
+   23.17,
+   "none",
+   4
+  ],
+  [
+   23.17,
+   28.38,
+   "none",
+   4
+  ],
+  [
+   28.38,
+   32.89,
+   "none",
+   1
+  ],
+  [
+   32.89,
+   38.86,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "310569",
+   "q": "neon city street night",
+   "t0": 0.0,
+   "t1": 13.35
+  },
+  {
+   "p": "pixabay",
+   "id": "223806",
+   "q": "palm trees sunset beach",
+   "t0": 12.75,
+   "t1": 26.11
+  },
+  {
+   "p": "pixabay",
+   "id": "111281",
+   "q": "gaming room dark lights",
+   "t0": 25.51,
+   "t1": 38.86
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T22:05:21Z",
+ "video": "04SNsgEZX5M",
+ "url": "https://youtube.com/shorts/04SNsgEZX5M",
+ "publish_at": "2026-10-27T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-200"
+}

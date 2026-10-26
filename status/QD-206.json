@@ -1,0 +1,138 @@
+{
+ "id": "QD-206",
+ "board": "boards/queue/QD-206.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T19:30:00Z",
+ "rendered": "2026-10-26T21:52:13.960260+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Screen Time #3: Wildwood: the record breaking runtime you missed",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 26.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 478.9,
+   "contrast": 0.164,
+   "face_area": 0.0871,
+   "text_area": 0.0537,
+   "caption_contrast": 17.11,
+   "by_frame": {
+    "sharpness": [
+     431.4,
+     490.2,
+     503.0,
+     491.1
+    ],
+    "contrast": [
+     0.162,
+     0.164,
+     0.164,
+     0.164
+    ],
+    "face_area": [
+     0.0075,
+     0.0084,
+     0.1534,
+     0.1792
+    ],
+    "text_area": [
+     0.0551,
+     0.0551,
+     0.0523,
+     0.0523
+    ],
+    "caption_contrast": [
+     17.11,
+     17.11,
+     17.11,
+     17.11
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.57,
+   "none",
+   0
+  ],
+  [
+   5.57,
+   12.28,
+   "none",
+   2
+  ],
+  [
+   12.28,
+   20.35,
+   "none",
+   1
+  ],
+  [
+   20.35,
+   26.4,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T22:05:24Z",
+ "video": "14uXgxxBVUs",
+ "url": "https://youtube.com/shorts/14uXgxxBVUs",
+ "publish_at": "2026-10-27T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

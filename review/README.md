@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Tue 27 Oct | 0 public, 15 scheduled | 0 | 0 | ⏳ 15 of 15 scheduled |
+| Tue 27 Oct | 0 public, 17 scheduled | 0 | 0 | ⏳ 17 of 15 scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⏳ 12 of 15 so far |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -80,9 +80,7 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## In the queue
 
-- **QD-200** GTA 6 launch trailer: 24 days to go 🎮 (rendering next)
 - **QD-201** Film Facts #1: Wildwood runtime sets a stop-motion record 🎬 (rendering next)
-- **QD-206** Screen Time #3: Wildwood: the record breaking runtime you missed (rendering next)
 
 ## On the channel (latest first)
 

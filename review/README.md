@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 04:41): 16 of 1,000 subscribers · 9,858 of 10 million Shorts views in 90 days · 4,678 views in the last 24 hours (about 111,002 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 05:41): 16 of 1,000 subscribers · 9,863 of 10 million Shorts views in 90 days · 4,652 views in the last 24 hours (about 111,002 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
@@ -45,13 +45,13 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing voice: British male, 3.15 words a second (3 of 8 Shorts measured)
 - Testing energy: camera motion 0.9, punch-ins 0.03 (0 of 8 Shorts measured)
 - Testing grade: contrast(0.96) saturate(1.0) sepia(0.0) brightness(1.0), vignette 0.0 (2 of 8 Shorts measured)
-- Testing opening: the picture alone for 1 word, then the hook's card (8 of 8 Shorts measured)
+- Testing opening: the picture alone for 3 words, then the hook's card (0 of 8 Shorts measured)
+- 2026-10-26: opening kept lab-opening-1019: the picture alone for 1 word, then the hook's card (1.14x against 1.06x for graphic_first over 8 Shorts)
 - 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
 - 2026-10-25: energy retired lab-energy-1019 (1.07x against 1.29x for steady over 15 Shorts)
 - 2026-10-25: captions retired minimal (1.05x against 1.26x for lab-captions-1019 over 18 Shorts)
 - 2026-10-24: captions kept lab-captions-1019: 68px weight 600 at 1290px, 4 words at a time, spoken word #FFFFFF, no panel (1.08x against 1.06x for clean over 25 Shorts)
 - 2026-10-23: opening retired graphic_first (1.22x against 1.88x for image_first over 35 Shorts)
-- 2026-10-23: grade retired lab-grade-1019 (0.37x against 1.92x for natural over 12 Shorts)
 
 ## Needs a look
 

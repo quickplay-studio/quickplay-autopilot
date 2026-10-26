@@ -4,7 +4,7 @@
 
 YouTube checked Mon 26 Oct 15:14 (UK): 6 scheduled, 143 public, 20 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 11:13).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 15:36).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public, 8 scheduled | 0 | 0 | ⏳ 8 of 15 scheduled |
-| Mon 26 Oct | 7 public, 3 scheduled | 6 | 1 | ⏳ 7 of 15 so far, 3 more scheduled |
+| Mon 26 Oct | 8 public, 2 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 2 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -106,7 +106,7 @@ scheduled · 43 s · music: circuit-rush · [script](../boards/done/QD-187.json)
 ![QD-187](QD-187.jpg)
 
 ### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
-scheduled · 31 s · music: stake-out · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
+private · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
 
 ![QD-180](QD-180.jpg)
 
@@ -151,7 +151,7 @@ public · 8 views · 35 s · music: duty-calls · on Instagram · on Facebook ·
 ![QD-176](QD-176.jpg)
 
 ### Sun 25 Oct 22:00 · saints vs steelers: the Paris milestone explained
-public · 120 views · 38 s · music: duty-calls · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
+public · 120 views · 38 s · music: duty-calls · on Instagram · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
 
 ![QD-175](QD-175.jpg)
 

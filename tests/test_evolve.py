@@ -293,7 +293,7 @@ print("3f over max_adopted the oldest is retested ok")
 
 # 4. sources and retests
 fresh()
-both = {**CFG, "evolve": {**EVC, "width": 3, "max_changes_per_run": 1, "neighbour_factors": ["hook_type"]}}
+both = {**CFG, "evolve": {**EVC, "width": 3, "max_changes_per_run": 1, "neighbour_factors": ["hook_type"], "focus": []}}   # the draw alone
 use(claude=lambda l, p: {"genes": [{"label": "n", "text": "Open with the place name before anything else in the facts."}]})
 picks = collections.Counter()
 for strong in ("gene", "neighbour"):

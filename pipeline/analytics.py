@@ -836,6 +836,7 @@ def main():
         row["_drops"] = dr
         av, ev = a.get("views"), a.get("engagedViews")
         row["yt_engaged_pct"] = round(100 * ev / av) if av and ev is not None else ""             # stayed past the first seconds
+        row["yt_an_views"] = av if av is not None else ""         # the views the engaged share is of (drivers.engaged_pair, 26 October)
         total = sum(int(row[k]) for k in ("yt_views", "ig_views", "fb_views") if str(row[k]).strip() not in ("", "None"))
         row["all_views"] = total
         row["views_per_hour"] = round(row["yt_views"] / hours, 1) if hours else ""
@@ -983,7 +984,8 @@ def main():
         except Exception as e: print("channel drivers:", str(e)[:150])
         try:        # the round's adjusted verdicts (drivers.round_verdicts): winner, even, no clear difference or running
             rf, r_start, r_per, r_name = round_factors()
-            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name, starts=round_starts()), DRV.ROUND_FIELDS)
+            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name, starts=round_starts(),
+                                                                 metrics=round_metrics()), DRV.ROUND_FIELDS)
             else: (OUT / "round.csv").unlink(missing_ok=True)
         except Exception as e: print("round verdicts:", str(e)[:150])
         sub_table, sub_sum = [], {}
@@ -1172,6 +1174,12 @@ def round_starts():
     return {f: str(d) for f, d in (EV.live_round(CFG).get("starts") or {}).items() if d}
 
 
+def round_metrics():
+    """{factor: "engaged"} for the live opening genes (evolve.py, 26 October): drivers.round_verdicts judges them on the
+    engaged share, like the opening factors (drivers.OPENING)."""
+    return EV.round_metrics(CFG)
+
+
 def test_progress(rows, table, today=None):
     """The factorial round's progress (round_factors, writer.test_plan), every channel (26 October): for each factor and
     arm, the Shorts measured so far (posted since the round began, 24-hour views in, counted on the arm as assigned), how
@@ -1187,7 +1195,8 @@ def test_progress(rows, table, today=None):
     import drivers as DRV
     today = today or NOW.astimezone(UK).date()
     verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
-    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name, starts=starts)}
+    metrics = round_metrics()
+    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name, starts=starts, metrics=metrics)}
     except Exception as e: rv = {}; print("round verdicts:", str(e)[:150])
     counts = {f: {a: 0 for a in arms} for f, arms in factors.items()}
     followed = {f: [0, 0] for f in counts}            # (Shorts whose arm was used as assigned, Shorts with a used value)
@@ -1200,6 +1209,7 @@ def test_progress(rows, table, today=None):
         for f, arms in counts.items():
             a = DRV.assigned(r, f)
             if a not in arms or day < starts.get(f, start): continue          # a contest counts from its own start (evolve.py)
+            if (rv.get(f) or {}).get("metric") == "engaged" and not DRV.engaged_pair(r): continue     # the opening counts once its engaged views are in
             arms[a] += 1
             # what the Short actually did, against the arm it was given: the look (fx_used: "lab" is the lab's option of
             # the day), the hook as written (drivers.hook_type), the length it ran to (content review, 24 October)
@@ -1222,7 +1232,8 @@ def test_progress(rows, table, today=None):
         label = EV.gene_label(f) if EV.is_gene(f) else FACTOR_LABELS.get(f, f.replace("_", " "))
         out["factors"][f] = {"arms": {a: {"n": n, "needs": max(0, per - n), "verdict": verdict.get((f, a), "")} for a, n in arms.items()},
                              "settled": settled, "days_left": 0 if settled else math.ceil(need / rate), "label": label,
-                             **{k: v.get(k, "") for k in ("verdict", "effect", "low", "high", "halves", "winner", "leaning", "why")}}
+                             **{k: v.get(k, "") for k in ("verdict", "effect", "low", "high", "halves", "winner", "leaning", "why",
+                                                          "metric", "views_effect")}}
         if followed[f][1]: out["factors"][f]["followed_pct"] = round(100 * followed[f][0] / followed[f][1])
         a_, b_ = (list(arms) + ["", ""])[:2]
         res = v.get("verdict", "")
@@ -1233,13 +1244,17 @@ def test_progress(rows, table, today=None):
         elif res == "running": said = (f"running ({b_} against {a_}: {ci}" + (f"; leaning {v['leaning']}" if v.get("leaning") else "") + ")"
                                        + f"; about {math.ceil(need / rate)} more days at most")
         else: said = f"too few to tell; about {math.ceil(need / rate)} more days at most"
+        if v.get("metric") == "engaged": said += (", judged on the engaged share (views that stayed)"
+                                                  + (f"; views {v['views_effect']}x" if v.get("views_effect") not in ("", None) else ""))
         lines.append(f"- {label}: " + ", ".join(f"{a} {n}" for a, n in arms.items()) + f"; {said}")
     p.write_text(json.dumps(out, indent=1))
     if today < dt.date.fromisoformat(start): return []
     return [f"Tests being run ({name}, from {start}, every channel: every Short takes an arm of each, 50/50 and independent, so "
             "each verdict is adjusted for the channel, the exploration Shorts and every other arm; a winner needs a clear 90% "
             f"interval, 15% or more, 10 Shorts a side and both halves of the data agreeing; a factor that is even, or level at {per} "
-            "a side, leaves the round for the next one). Shorts measured so far:"] + lines
+            "a side, leaves the round for the next one. The opening (hook, first frame, opening effect, opening genes) is judged "
+            "on the engaged share instead, the views that stayed past the first seconds and that the Partner Programme counts: "
+            "10% or more, and never a winner that clearly costs views). Shorts measured so far:"] + lines
 
 
 def volume_days(today=None):

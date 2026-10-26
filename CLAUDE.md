@@ -3,6 +3,12 @@
 GitHub does everything; a Claude session is only for changes Charlie asks for. Nothing waits for a person (approval
 "none" in config.json).
 
+## The goal (Charlie, 26 October: every change serves it)
+Reach the YouTube Partner Programme, or find a clipping strategy that makes real views and money. YPP counts engaged
+views (viewers who stay past the opening): the expanded tier is 500 subscribers and 3M Shorts views in 90 days; from
+1 February 2027 full YPP needs 1,000 subscribers and 20M (the Shorts pool 10M). Say in each change which of the two it
+helps and which number it should move; the ledger target (changes.py) is that number.
+
 ## Token budget (Charlie, 24 October: his allowance is shared with other projects)
 Read this file, then `python pipeline/digest.py` (one screen); `tail -n 40 docs/NEXT.md` only when history matters. Never
 open a data file whole (analytics/*.csv, clips/*.csv, status/*.json, boards/): `head -1`, `tail`, `grep` or a one-line
@@ -42,6 +48,10 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   arm, a retest, a "gene": a writing instruction, or a refinement of an adopted one) and adopts a winning gene into the recipe.
   The proposals are its one complex step: one Claude call a run (opus), free models only if it returns nothing. config.json
   "evolve" holds the limits ("on": false restores the fixed test_round); analytics/evolve.md is the summary.
+  Opening first (26 October, hooks): hook_type, first_frame, fx_opening and "opening" genes are judged on the engaged
+  share (drivers.OPENING, round.csv metric "engaged", a win needs 10% and the views guard withholds one whose clear views loss cancels the gain or reaches 15%;
+  engaged views lag about 3 days); evolve.focus_first reopens an absent opening factor before anything else, every
+  opening_gene_every-th new gene is an opening gene (one live at a time), and their ledger target is engaged_share.
 - Freshness gate (pipeline/freshness.py): a time-sensitive Short goes out after its day only with evidence its story is
   alive, else boards/expired; a clip or submission over 30 hours late needs heat or views (analytics/late_uploads.csv).
 - Watchlist (config.json "watchlist", watch.py): dated events get places in their build-up and launch week, at most

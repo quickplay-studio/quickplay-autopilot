@@ -286,6 +286,7 @@ METRICS = {
     "watch_hours_day": ("long-video watch hours a day", "higher", "{:.1f}", per_day(longform_hours_per_day, yt_views_start, Data.shorts_end)),
     "avg_viewed_pct": ("average viewed %", "higher", "{:.0f}%", m_field("yt_avg_viewed_pct")),
     "held_3s": ("still watching at 3 seconds", "higher", "{:.0f}%", m_field("yt_held_3s_pct")),
+    "engaged_share": ("share of views that stayed (engaged views, what YPP counts)", "higher", "{:.0f}%", m_field("yt_engaged_pct")),
     "subs_per_1k": ("subscribers per 1,000 views", "higher", "{:.2f}", m_subs),
     "category_mix": ("categories in the mix (effective number)", "higher", "{:.1f}", m_mix),
     "ig_views": ("Instagram views per Reel", "higher", "{:,.0f}", m_field("ig_views")),

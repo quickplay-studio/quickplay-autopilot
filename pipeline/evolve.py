@@ -15,7 +15,11 @@ Claude session edited the config. This keeps the round full by itself:
 - a gene is a short writing instruction. Its contest is the factor "gene:<id>", arms "a" and "b": a fresh gene tests its text
   ("b") against no instruction ("a", empty), a mutation tests the child ("b") against the adopted parent ("a"). A winning gene
   is adopted into the recipe (writer.style_note adds it to every Short), a losing one is rejected, and when more than
-  max_adopted are adopted the oldest is tested against no instruction again.
+  max_adopted are adopted the oldest is tested against no instruction again;
+- the opening comes first (Charlie, 26 October: only about a third of views stay past it, and engaged views are what the
+  Partner Programme counts): the focus factors (hook_type, first_frame, fx_opening) are reopened before any draw, every
+  opening_gene_every-th new gene is about the first two seconds, and both are judged on the engaged share (round_metrics,
+  drivers.OPENING) with a views guard.
 Everything the writer, analytics and the hub need is a helper below that reads analytics/evolve.json (missing or broken: the
 config's test_round stands). Standard library at import; factpack (Claude for the proposals, the free model door behind it),
 validate and changes load when used. Writes analytics/evolve.json (the state), evolve_log.csv (every action) and evolve.md (a
@@ -33,9 +37,14 @@ SETTLED = ("even", "no clear difference")
 GENE = "gene:"
 DEFAULTS = {"on": False, "model": "opus", "claude_calls_per_run": 1, "width": 11, "max_changes_per_run": 3, "max_genes": 3, "max_new_genes_per_run": 1, "max_adopted": 6,
             "retest_days": 28, "neighbour_factors": ["hook_type", "length", "ending", "title_search", "first_frame", "fx_energy",
-                                                      "fx_grade", "fx_opening", "fx_slot"]}
+                                                      "fx_grade", "fx_opening", "fx_slot"],
+            # Charlie, 26 October: the hook decides whether a view becomes an engaged view (what YPP counts; about a third do).
+            # The opening factors go first among neighbour and retest contests, and every other new gene is an opening gene
+            # (the first two seconds), judged on the engaged share like the opening factors (drivers.OPENING).
+            "focus": ["hook_type", "first_frame", "fx_opening"], "opening_gene_every": 2}
 LOG_FIELDS = ["date", "action", "factor", "arms", "source", "verdict", "effect", "note"]
 LEDGER_TARGET, LEDGER_GUARDS = "yt_rel", "dead_share;avg_viewed_pct"      # the 24 hour views against typical; changes.py metrics
+LEDGER_TARGET_OPENING, LEDGER_GUARDS_OPENING = "engaged_share", "yt_rel;dead_share"   # an opening contest's own target
 
 # A gene (a writing instruction) must pass check_gene before it is tested: the channel's own rules (CLAUDE.md), so a model
 # cannot propose its way past them.
@@ -116,6 +125,21 @@ def live_round(cfg):
         r = read_state().get("round")
         if isinstance(r, dict) and isinstance(r.get("factors"), dict): return r
     return (cfg or {}).get("test_round") or {}
+
+
+def round_metrics(cfg):
+    """{gene factor: "engaged"} for the live round's opening genes (a gene with "metric": "engaged"): drivers.round_verdicts
+    judges them on the engaged share, as it does the opening factors. {} when evolve is off or none is live."""
+    if not on(cfg): return {}
+    gs = read_state().get("genes") or {}
+    return {f: "engaged" for f in (live_round(cfg).get("factors") or {})
+            if is_gene(f) and (gs.get(gene_id(f)) or {}).get("metric") == "engaged"}
+
+
+def is_opening(st, f):
+    """Whether contest f is about the opening: an opening factor (drivers.OPENING) or an opening gene."""
+    if is_gene(f): return ((st.get("genes") or {}).get(gene_id(f)) or {}).get("metric") == "engaged"
+    return f in ("hook_type", "first_frame", "fx_opening")
 
 
 def champions():
@@ -309,8 +333,11 @@ def settle(run, results):
         if src in st["sources"]:
             st["sources"][src]["contests"] += 1
             st["sources"][src]["wins"] += int(beat)
+        op = is_opening(st, f)
+        lifts = "lifts the share of views that stay past the opening (engaged views)" if op else "lifts a Short's views against the Shorts around it"
         hist = {"factor": f, "arms": arms, "source": src, "start": start, "end": run.today, "verdict": v, "winner": w,
                 "effect": eff, "low": low, "high": high, "retest_after": "" if is_gene(f) else run.days(run.S["retest_days"])}
+        if op: hist["metric"] = "engaged"
         st["history"].append(hist)
         if not is_gene(f):
             if v == "winner":
@@ -319,7 +346,7 @@ def settle(run, results):
                 run.note("champion" if prev != w else "defended", f, arms, src, v, eff, f"{w} wins ({low} to {high})")
                 if prev != w:
                     run.ledger.append({"change": f"Evolve: {f} now runs {w} as its champion (won against {arms[0] if w == arms[1] else arms[1]})",
-                                       "hypothesis": f"{w} lifts a Short's views against the Shorts around it ({eff}x for arm b, 90% interval {low} to {high})"})
+                                       "hypothesis": f"{w} {lifts} ({eff}x for arm b, 90% interval {low} to {high})", "opening": op})
             else:
                 run.note("retire", f, arms, src, v, eff, f"retest after {hist['retest_after']}")
             continue
@@ -342,7 +369,7 @@ def settle(run, results):
             if kind == "mutate" and parent: parent["status"] = "retired"
             run.note("adopt", f, arms, src, v, eff, f"{g['label']}: {g['text']}")
             run.ledger.append({"change": f"Evolve: writing instruction {gene_id(f)} adopted into the recipe: {g['text']}",
-                               "hypothesis": f"Writing to this instruction lifts views against the Shorts around them ({eff}x, 90% interval {low} to {high})"})
+                               "hypothesis": f"Writing to this instruction {lifts} ({eff}x, 90% interval {low} to {high})", "opening": op})
         else:
             g["status"] = "rejected"
             run.note("reject", f, arms, src, v, eff, f"{g['label']}: " + ("the control won" if v == "winner" else "no difference")
@@ -447,6 +474,8 @@ def make_gene(run, kind, prop=None, parent=None):
     else:
         g = {"label": nodash(prop.get("label") or prop["text"])[:40].strip(), "text": prop["text"], "b_text": prop["text"],
              "a_text": par["text"] if kind == "mutate" else "", "why": nodash(prop.get("why") or ""), "by": prop.get("by") or ""}
+    metric = (par or {}).get("metric") if kind in ("retest", "mutate") else (prop or {}).get("metric")
+    if metric == "engaged": g["metric"] = "engaged"           # an opening gene: judged on the engaged share (round_metrics)
     gs[gid] = {**g, "parent": parent or "", "lineage": lin, "born": run.today, "status": "live", "effect": "", "kind": kind}
     return gid
 
@@ -478,15 +507,16 @@ RULES_FOR_GENES = ("The channel's rules, which every instruction must respect: a
                    "viewers to subscribe (that is tested on its own).")
 
 
-def recent_shorts(today, days=14, n=8):
-    """(best n, weakest n) Shorts posted in the last `days` days as (views against typical, row), from analytics/shorts.csv."""
+def recent_shorts(today, days=14, n=8, key="views"):
+    """(best n, weakest n) Shorts posted in the last `days` days as (views against typical, row), from analytics/shorts.csv;
+    key "engaged": as (the share of views that stayed, row), Shorts with engaged data only."""
     try: rows = list(csv.DictReader(open(ROOT / "analytics" / "shorts.csv")))
     except Exception: return [], []
     cut, ok = str(dt.date.fromisoformat(str(today)) - dt.timedelta(days=days)), []
     for r in rows:
         if str(r.get("posted_day") or "") < cut: continue
         if not str(r.get("short") or "").startswith("QD-") or not r.get("hook"): continue      # our own written Shorts only, never clips
-        try: ok.append((float(r.get("views_vs_typical") or r.get("rel") or ""), r))
+        try: ok.append((float(r.get("yt_engaged_pct") or "") / 100 if key == "engaged" else float(r.get("views_vs_typical") or r.get("rel") or ""), r))
         except ValueError: continue
     ok.sort(key=lambda x: -x[0])
     top = ok[:n]
@@ -498,13 +528,15 @@ def breakouts(n=5):
     except Exception: return []
 
 
-def short_line(rel, r):
-    return (f'- "{nodash(r.get("title", ""))}" ({r.get("category", "")}, {rel:.2f}x typical). Opening line: '
+def short_line(rel, r, key="views"):
+    how = f"{100 * rel:.0f}% of views stayed" if key == "engaged" else f"{rel:.2f}x typical"
+    return (f'- "{nodash(r.get("title", ""))}" ({r.get("category", "")}, {how}). Opening line: '
             f'{nodash(str(r.get("hook", ""))[:110])}')
 
 
-def build_prompt(run, kind, parent=None, n=3):
-    """The prompt for `n` new genes (kind "gene") or `n` refinements of the adopted gene `parent` (kind "mutate")."""
+def build_prompt(run, kind, parent=None, n=3, opening=False):
+    """The prompt for `n` new genes (kind "gene") or `n` refinements of the adopted gene `parent` (kind "mutate"). opening: an
+    opening gene (the first two seconds, judged on the engaged share), which may shape the opening but never its form."""
     st = run.st
     recipe = [f"- {f}: {a}" + (f" ({run.texts[f][a]})" if run.texts.get(f, {}).get(a) else "") for f, a in sorted(st["champions"].items())]
     recipe += [f"- adopted instruction {gid}: {st['genes'][gid]['text']}" for gid in sorted(st["adopted"].values()) if gid in st["genes"]]
@@ -512,8 +544,18 @@ def build_prompt(run, kind, parent=None, n=3):
             + (f", {g['effect']}x" if g.get("effect") not in ("", None) else "") + ")" for gid, g in sorted(st["genes"].items())[-40:]]
     under = [f"- {f}: " + "; ".join(f"{a}: {run.texts[f][a]}" for a in arms if run.texts.get(f, {}).get(a))
              for f, arms in sorted(st["round"]["factors"].items()) if not is_gene(f) and any(run.texts.get(f, {}).get(a) for a in arms)]
-    top, bottom = recent_shorts(run.today)
+    key = "engaged" if opening else "views"
+    top, bottom = recent_shorts(run.today, key=key)
     brk = breakouts()
+    aim = ("must not choose the form of the opening line (statement, question, number, superlative or twist: the hook test "
+           "covers that) and must not be about the length or the ending. It is about the first two seconds whatever the hook's "
+           "form: how fast the subject is named, how short and plain the first sentence is, no preamble, the tension it sets "
+           "up, the promise the payoff keeps." if opening else
+           "must not be about the same thing (so never about the form of the opening line, the length or the ending, which these "
+           "cover). Aim at what nothing here covers: the middle beats, the order of the facts, the payoff, word choice, pacing, "
+           "how the source is named, how a number is made vivid.")
+    rank = ("the share of views that stayed past the opening (engaged views, what YouTube pays and judges the Partner Programme "
+            "on; about a third today)" if opening else "views against typical Shorts, 1.0 is typical")
     lines = ["You help a fully automated YouTube Shorts channel (Quickplay Daily) improve how its script writer works. The writer "
              "is given a list of writing instructions on top of its fixed rules; each instruction is tested against none on real "
              "Shorts and kept only if it wins.", RULES_FOR_GENES,
@@ -521,11 +563,9 @@ def build_prompt(run, kind, parent=None, n=3):
              "Instructions already tried, with their verdicts (never repeat or rephrase one):\n" + ("\n".join(past) or "- none yet"),
              "Already under test: every Short is "
              "given one arm of each factor below, at random. A new instruction must work alongside ANY of these arms, must not "
-             "contradict one and must not be about the same thing (so never about the form of the opening line, the length or "
-             "the ending, which these cover). Aim at what nothing here covers: the middle beats, the order of the facts, the "
-             "payoff, word choice, pacing, how the source is named, how a number is made vivid.\n" + ("\n".join(under) or "- nothing"),
-             "The best Shorts of the last 14 days (views against typical Shorts, 1.0 is typical):\n" + ("\n".join(short_line(*x) for x in top) or "- no data yet"),
-             "The weakest Shorts of the last 14 days:\n" + ("\n".join(short_line(*x) for x in bottom) or "- no data yet")]
+             "contradict one and " + aim + "\n" + ("\n".join(under) or "- nothing"),
+             f"The best Shorts of the last 14 days ({rank}):\n" + ("\n".join(short_line(*x, key=key) for x in top) or "- no data yet"),
+             "The weakest Shorts of the last 14 days:\n" + ("\n".join(short_line(*x, key=key) for x in bottom) or "- no data yet")]
     if brk:
         lines.append("Recent breakouts (far above typical):\n" + "\n".join(
             f'- "{nodash(b.get("title", ""))}" ({b.get("category", "")}, {b.get("times_typical", "")}x typical)' for b in brk))
@@ -534,6 +574,11 @@ def build_prompt(run, kind, parent=None, n=3):
         lines.append(f"The instruction to refine was adopted after beating no instruction ({g.get('effect', '')}x): \"{g['text']}\"")
         lines.append(f"Propose {n} refinements of it. Each keeps its idea but is sharper, more concrete or better aimed, and each "
                      "differs clearly from the original and from the others.")
+    elif opening:
+        lines.append(f"Propose {n} new instructions for the first two seconds: what makes a viewer who sees the opening stay "
+                     "rather than swipe away. Only about one view in three stays today. Look at what the Shorts most viewers stayed "
+                     "with share and the weakest lack. Each must suit every hook form above, is concrete enough to follow and to "
+                     "check, and differs clearly from everything above.")
     else:
         lines.append(f"Propose {n} new instructions. Look at what the best Shorts share and the weakest lack: how they open, which "
                      "name comes first, the pacing, the payoff, the ending. Each is concrete enough to follow and to check, and "
@@ -568,14 +613,32 @@ def pick_proposal(props, st, texts=None):
     return None, ", ".join(why) or "none returned"
 
 
+def opening_turn(st, S):
+    """Whether the next new gene is an opening gene: every `opening_gene_every`th new gene is (2: every other), and at most one
+    opening gene is live at a time, so two instructions about the first two seconds never pull against each other."""
+    every = int(S.get("opening_gene_every") or 0)
+    gs = st.get("genes") or {}
+    if every <= 0: return False
+    if any(is_opening(st, f) for f in st["round"]["factors"] if is_gene(f)): return False
+    since = 0
+    for gid in sorted((k for k, g in gs.items() if g.get("kind") == "new"), key=lambda k: (gs[k].get("born") or "", k), reverse=True):
+        if gs[gid].get("metric") == "engaged": return since >= every - 1
+        since += 1
+    return True
+
+
 def launch_gene(run, kind, parent=None):
     """Asks Claude (the free models if it returns nothing) for genes, or refinements of the adopted `parent`, and opens a
-    contest for the first usable one, recording which model proposed it (the gene's "by")."""
+    contest for the first usable one, recording which model proposed it (the gene's "by"). An opening gene (opening_turn, or a
+    refinement of one) is asked for the first two seconds and judged on the engaged share."""
+    opening = (opening_turn(run.st, run.S) if kind == "gene" else
+               kind == "mutate" and (run.st["genes"].get(parent) or {}).get("metric") == "engaged")
+    tag = " (an opening gene, judged on the engaged share)" if opening else ""
     if run.dry:
-        run.note("plan", source=kind, note="a dry run does not ask a model")
+        run.note("plan", source=kind, note="a dry run does not ask a model" + tag)
         run.new_genes += 1
         return True
-    try: ans, who = ask(run, build_prompt(run, kind, parent))
+    try: ans, who = ask(run, build_prompt(run, kind, parent, opening=opening))
     except Exception as e:
         run.note("skip", source=kind, note=f"no proposal: {str(e)[:120]}")
         return False
@@ -583,11 +646,38 @@ def launch_gene(run, kind, parent=None):
     if not pick:
         run.note("skip", source=kind, note=f"no usable proposal ({why})")
         return False
-    gid = make_gene(run, kind, {**pick, "by": who}, parent)
+    gid = make_gene(run, kind, {**pick, "by": who, **({"metric": "engaged"} if opening else {})}, parent)
     open_contest(run, GENE + gid, ["a", "b"], kind)
     run.new_genes += 1
-    run.note("open", GENE + gid, ["a", "b"], kind, note=f"{run.st['genes'][gid]['label']}: {pick['text']} (by {who})")
+    run.note("open", GENE + gid, ["a", "b"], kind, note=f"{run.st['genes'][gid]['label']}: {pick['text']} (by {who}){tag}")
     return True
+
+
+def open_retest(run, c):
+    """Opens a retest candidate (retest_candidates): a settled factor tried again, or an adopted gene against none."""
+    if "gene" in c: return launch_retest_gene(run, c["gene"])
+    open_contest(run, c["factor"], c["arms"], "retest")
+    for h in run.st["history"]:
+        if h.get("factor") == c["factor"]: h["retest_after"] = ""
+    run.note("open", c["factor"], c["arms"], "retest", note="a settled factor tried again")
+
+
+def focus_first(run):
+    """Charlie, 26 October: the opening decides whether a view becomes an engaged view, so each focus factor (hook_type,
+    first_frame, fx_opening) that is not in the round is reopened before anything else is drawn: its next arm never tried
+    against the champion (hook_type: question, superlative, twist), else a retest that is due."""
+    st, S = run.st, run.S
+    for f in S.get("focus") or []:
+        if len(st["round"]["factors"]) >= S["width"] or run.added >= S["max_changes_per_run"]: return
+        if f in st["round"]["factors"]: continue
+        nb = [arms for g, arms in neighbour_candidates(run) if g == f]
+        rt = [c for c in retest_candidates(run) if c.get("factor") == f]
+        if nb:
+            open_contest(run, f, nb[0], "neighbour")
+            run.note("open", f, nb[0], "neighbour", note="an opening factor (focus): an arm never tried against the champion")
+        elif rt: open_retest(run, rt[0])
+        else: continue
+        run.added += 1
 
 
 def fill(run):
@@ -596,6 +686,7 @@ def fill(run):
     attempt so a run repeats; a source that cannot deliver (no model answer) is left out for the rest of the run."""
     st, S = run.st, run.S
     launch_prune(run)
+    focus_first(run)
     failed, i = set(), 0
     while len(st["round"]["factors"]) < S["width"] and run.added < S["max_changes_per_run"] and i < 12:
         i += 1
@@ -617,13 +708,7 @@ def fill(run):
             run.note("open", f, arms, "neighbour", note="an arm never tried against the champion")
             ok = True
         elif src == "retest":
-            c = rng.choice(cands["retest"])
-            if "gene" in c: launch_retest_gene(run, c["gene"])
-            else:
-                open_contest(run, c["factor"], c["arms"], "retest")
-                for h in st["history"]:
-                    if h.get("factor") == c["factor"]: h["retest_after"] = ""
-                run.note("open", c["factor"], c["arms"], "retest", note="a settled factor tried again")
+            open_retest(run, rng.choice(cands["retest"]))
             ok = True
         elif src == "gene": ok = launch_gene(run, "gene")
         else:
@@ -660,10 +745,13 @@ def render_md(st, S):
          f"Updated {st.get('updated') or 'not yet'}. pipeline/evolve.py runs daily (evolve.yml): it retires settled contests, keeps "
          "winners as champions, opens new contests from four sources, adopts winning writing instructions (genes) into the recipe "
          "and prunes them. Settings: config.json evolve.", "",
+         "Opening contests (hook_type, first_frame, fx_opening and the opening genes, marked below) are judged on the engaged "
+         "share, the share of views that stay past the opening (what YouTube counts for the Partner Programme), and are reopened "
+         "first when they settle; a win there that costs views is withheld.", "",
          f"## Live round ({len(rnd['factors'])} of {S['width']})", "", "| factor | arms | origin | started |", "|---|---|---|---|"]
     for f, arms in rnd["factors"].items():
         g = gs.get(gene_id(f)) if is_gene(f) else None
-        name = f"writing instruction {gene_id(f)}: {g.get('label', '')}" if g else f
+        name = (f"writing instruction {gene_id(f)}: {g.get('label', '')}" if g else f) + (" (opening)" if is_opening(st, f) else "")
         L.append(f"| {name} | {' vs '.join(arms)} | {rnd['origin'].get(f, '')} | {rnd['starts'].get(f, '')} |")
     L += ["", "## Champions", ""] + ([f"- {f}: {a}" for f, a in sorted(st["champions"].items())] or ["- none yet"])
     adopted = [(lin, gid) for lin, gid in sorted(st["adopted"].items()) if gid in gs]
@@ -671,7 +759,7 @@ def render_md(st, S):
     L += [f"- {gid} ({gs[gid].get('label', '')}): {gs[gid].get('text', '')} Effect {gs[gid].get('effect', '')}x, adopted {gs[gid].get('adopted', '')}, proposed by {gs[gid].get('by') or 'unknown'}."
           for lin, gid in adopted] or ["- none yet"]
     live = [gid for f in rnd["factors"] if is_gene(f) for gid in [gene_id(f)] if gid in gs]
-    L += ["", "## Genes under test", ""] + ([f"- {gid} ({gs[gid].get('kind', '')}): {gs[gid].get('label', '')}" for gid in live] or ["- none"])
+    L += ["", "## Genes under test", ""] + ([f"- {gid} ({gs[gid].get('kind', '')}{', opening, judged on the engaged share' if gs[gid].get('metric') == 'engaged' else ''}): {gs[gid].get('label', '')}" for gid in live] or ["- none"])
     n_rej = sum(g.get("status") == "rejected" for g in gs.values())
     L += ["", f"Rejected so far: {n_rej}. Retired: {sum(g.get('status') == 'retired' for g in gs.values())}.", "",
           "## Where contests come from", "", "| source | contests settled | wins | win rate |", "|---|---|---|---|"]
@@ -694,7 +782,8 @@ def record_ledger(entries, today):
         print("evolve: ledger unavailable:", str(e)[:100]); return out
     for e in entries:
         try:
-            r = C.add("learning", e["change"], e["hypothesis"], LEDGER_TARGET, LEDGER_GUARDS, date=today, by="evolve (GitHub)")
+            tg, gd = (LEDGER_TARGET_OPENING, LEDGER_GUARDS_OPENING) if e.get("opening") else (LEDGER_TARGET, LEDGER_GUARDS)
+            r = C.add("learning", e["change"], e["hypothesis"], tg, gd, date=today, by="evolve (GitHub)")
             out.append(r["id"])
         except Exception as ex:
             print("evolve: ledger row failed:", str(ex)[:120])

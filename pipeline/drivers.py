@@ -437,9 +437,38 @@ def channel_table(rows, table):
 # posting time) pointing the same way. "even" settles a factor whose interval sits inside +/-15% with 20 an arm; "no clear
 # difference" settles one whose arms both reach per_arm. A settled factor leaves the round (writer.settled); a winner is
 # used on every Short and still challenged 1 in writer.RETEST.
+# The opening (Charlie, 26 October: "more emphasis on hook testing"; the Partner Programme counts engaged views, about a third
+# of the views): a factor that changes the first seconds (OPENING, or an evolve.py gene aimed at them) is judged on the share
+# of views that stayed (engaged views / views, YouTube Analytics), the thing a hook moves, not on views, which the feed
+# decides mostly before anyone has seen the hook. Its winner needs 10% (EVEN_ENG) and must not clearly cost views: the views
+# fit's 90% interval below 1 for the winning arm withholds it when the loss cancels the share gain (fewer engaged views a
+# Short) or is 15% or more (EVEN: the feed is showing it to clearly fewer people); views_effect shows that fit.
 ROUND_FIELDS = ["round", "factor", "arm_a", "arm_b", "n_a", "n_b", "effect", "low", "high", "halves", "verdict", "winner",
-                "leaning", "why"]
+                "leaning", "why", "metric", "views_effect"]
 EVEN, WIN_N, EVEN_N = 0.14, 10, 20
+OPENING = ("hook_type", "first_frame", "fx_opening")
+EVEN_ENG, ENG_K = 0.095, 10.0       # 10% on the engaged share; ENG_K views of shrinkage toward the group's share
+
+
+def metric_of(f, metrics=None):
+    """What a round factor is judged on: "engaged" (the engaged share) for the opening, else "views"; `metrics` ({factor:
+    metric}, analytics.round_metrics: the opening genes) overrides."""
+    m = (metrics or {}).get(f)
+    return m if m in ("engaged", "views") else "engaged" if f in OPENING else "views"
+
+
+def engaged_pair(r):
+    """(engaged views, YouTube Analytics views) of one Short, or None without them. Rows from before yt_an_views (26 October)
+    rebuild the views from yt_engaged_pct."""
+    try: ev = float(r.get("yt_engaged_views"))
+    except (TypeError, ValueError): return None
+    try: av = float(r.get("yt_an_views"))
+    except (TypeError, ValueError):
+        try:
+            pct = float(r.get("yt_engaged_pct")); av = 100 * ev / pct if pct > 0 else None
+        except (TypeError, ValueError): av = None
+    if not av or av <= 0 or ev < 0: return None
+    return min(ev, av), av
 
 
 def assigned(r, f):
@@ -471,9 +500,9 @@ def _resid(y, basis):
     return y
 
 
-def _slope(rows, f, arm_b, others):
-    """(beta, se, df) of log rel on the arm-B indicator, controlling for the channel, exploration and `others` ({factor:
-    arms}: an arm-B and a missing indicator each); None when the arm is fully explained by the controls or df < 2."""
+def _slope(rows, f, arm_b, others, yf=None):
+    """(beta, se, df) of log rel (or yf(row)) on the arm-B indicator, controlling for the channel, exploration and `others`
+    ({factor: arms}: an arm-B and a missing indicator each); None when the arm is fully explained by the controls or df < 2."""
     n = len(rows)
     cols = [[1.0] * n]
     for ch in sorted({channel_of(r) for r in rows}): cols.append([1.0 if channel_of(r) == ch else 0.0 for r in rows])
@@ -482,7 +511,7 @@ def _slope(rows, f, arm_b, others):
         cols.append([1.0 if assigned(r, g) == gb else 0.0 for r in rows])
         cols.append([0.0 if assigned(r, g) in (ga, gb) else 1.0 for r in rows])
     basis = _gs(cols)
-    y = [_logrel(r) for r in rows]
+    y = [(yf or _logrel)(r) for r in rows]
     d = [1.0 if assigned(r, f) == arm_b else 0.0 for r in rows]
     ed, ey = _resid(d, basis), _resid(y, basis)
     sdd = sum(a * a for a in ed)
@@ -493,36 +522,64 @@ def _slope(rows, f, arm_b, others):
     return beta, math.sqrt(sse / df / sdd), df
 
 
-def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None):
+def _fit(grp, f, b, factors, yf=None):
+    others = {g: tuple(x) for g, x in factors.items() if g != f and len(x) == 2}
+    fit = _slope(grp, f, b, others, yf)
+    if fit and fit[2] < 20: fit = _slope(grp, f, b, {}, yf)        # too few Shorts for every control: channel and exploration only
+    return fit
+
+
+def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, metrics=None):
     """Rows for analytics/round.csv, one per round factor ({factor: [arm_a, arm_b]}): the Shorts posted from `start` (a UK
-    date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above). `starts`
-    ({factor: UK date}, evolve.py, 26 October): a contest that began later than the round judges only the Shorts from its
-    own start, so a new contest never inherits the Shorts of the one it replaced."""
+    date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above), or for an
+    opening factor (metric_of) arm B's engaged share against arm A's, on the Shorts with engaged views in. `starts` ({factor:
+    UK date}, evolve.py, 26 October): a contest that began later than the round judges only the Shorts from its own start,
+    so a new contest never inherits the Shorts of the one it replaced. With no engaged views in `rows` at all, every factor
+    is judged on views."""
     pool = [r for r in rows if r.get("rel") not in (None, "") and uk_day(r) >= str(start)]
+    has_eng = any(engaged_pair(r) for r in rows)        # the data has engaged views at all (else views, as before them)
     out = []
     for f, arms_ in factors.items():
         if len(arms_) != 2: continue
         a, b = arms_
         own = max(str(start), str((starts or {}).get(f) or start))
         grp = [r for r in pool if assigned(r, f) in (a, b) and (own == str(start) or uk_day(r) >= own)]
+        metric = metric_of(f, metrics) if has_eng else "views"
+        vgrp, yf, even = grp, None, EVEN
+        if metric == "engaged":
+            grp = [r for r in grp if engaged_pair(r)]
+            pairs = [engaged_pair(r) for r in grp]
+            p0 = max(0.01, sum(e for e, _ in pairs) / sum(v for _, v in pairs)) if pairs else 0.3
+            yf = lambda r, p0=p0: (lambda e, v: math.log((e + ENG_K * p0) / (v + ENG_K)))(*engaged_pair(r))
+            even = EVEN_ENG
         na, nb = sum(assigned(r, f) == a for r in grp), sum(assigned(r, f) == b for r in grp)
         row = {"round": name, "factor": f, "arm_a": a, "arm_b": b, "n_a": na, "n_b": nb, "effect": "", "low": "", "high": "",
-               "halves": "", "verdict": "too few to tell", "winner": "", "leaning": "", "why": ""}
+               "halves": "", "verdict": "too few to tell", "winner": "", "leaning": "", "why": "", "metric": metric,
+               "views_effect": ""}
         out.append(row)
-        if min(na, nb) < 3: continue
-        others = {g: tuple(x) for g, x in factors.items() if g != f and len(x) == 2}
-        fit = _slope(grp, f, b, others)
-        if fit and fit[2] < 20: fit = _slope(grp, f, b, {})          # too few Shorts for every control: channel and exploration only
+        if min(na, nb) < 3:
+            if metric == "engaged": row["why"] = "engaged views arrive about 3 days after a Short is posted"
+            continue
+        fit = _fit(grp, f, b, factors, yf)
         if not fit: row["why"] = "the arm cannot be told apart from the controls yet"; continue
         beta, se, df = fit
         h = t90(df) * se
         row.update(effect=round(math.exp(beta), 2), low=round(math.exp(beta - h), 2), high=round(math.exp(beta + h), 2))
+        costs_views = False
+        if metric == "engaged":         # the guard: a better opening that the feed shows to clearly fewer people is no win
+            vf = _fit(vgrp, f, b, factors)
+            if vf:
+                vb, vh = vf[0], t90(vf[2]) * vf[1]
+                row["views_effect"] = round(math.exp(vb), 2)
+                fewer = (vb + vh < 0) if beta > 0 else (vb - vh > 0)        # the winning arm clearly gets fewer views
+                net = abs(beta) + (vb if beta > 0 else -vb)                 # log engaged views a Short, winner over loser
+                costs_views = fewer and (net <= 0 or abs(vb) >= EVEN)
         cut = split_time(grp)
-        halves = [_slope([r for r in grp if (str(r.get("posted")) < cut) == first], f, b, {}) for first in (True, False)]
+        halves = [_slope([r for r in grp if (str(r.get("posted")) < cut) == first], f, b, {}, yf) for first in (True, False)]
         agree = all(halves) and all(abs(x[0]) > 1e-9 for x in halves) and (halves[0][0] > 0) == (halves[1][0] > 0) == (beta > 0)
         row["halves"] = "agree" if agree else "too few" if not all(halves) else "disagree"
-        clear, small = beta - h > 0 or beta + h < 0, -EVEN < beta - h and beta + h < EVEN
-        if clear and min(na, nb) >= WIN_N and abs(beta) >= EVEN and agree:
+        clear, small = beta - h > 0 or beta + h < 0, -even < beta - h and beta + h < even
+        if clear and min(na, nb) >= WIN_N and abs(beta) >= even and agree and not costs_views:
             row.update(verdict="winner", winner=b if beta > 0 else a)
         elif small and min(na, nb) >= EVEN_N:
             row["verdict"] = "even"
@@ -534,8 +591,9 @@ def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None):
             why = []
             if not clear: why.append("the 90% interval includes no difference")
             if min(na, nb) < WIN_N: why.append(f"{WIN_N - min(na, nb)} more Shorts on the smaller arm")
-            if clear and abs(beta) < EVEN: why.append("clear but under 15%")
+            if clear and abs(beta) < even: why.append(f"clear but under {round(100 * (math.exp(even) - 1))}%")
             if clear and not agree: why.append("the two halves of the data " + ("disagree" if row["halves"] == "disagree" else "are too small"))
+            if clear and costs_views: why.append("wins on engaged share but costs views")
             row["why"] = "; ".join(why)
     return out
 

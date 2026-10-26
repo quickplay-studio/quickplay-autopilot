@@ -63,11 +63,10 @@ def verdicts():
 
 
 def followed(r, v):
-    """Whether a Short's choices follow the data: at least one "push" choice and no "cut back" or "stop" one."""
-    import drivers
-    feats = drivers.features(r)
-    vs = [v.get(k, {}).get(val) for k, val in feats.items() if val]
-    return ("push" in vs) and not any(x in ("cut back", "stop", "pause") for x in vs)
+    """Whether a Short's choices follow the data: at least one "push" choice and no "cut back" or "stop" one (trend.followed,
+    the same measure insights.md counts every day since 26 October)."""
+    import trend
+    return trend.followed(r, v)
 
 
 def built(start, end):

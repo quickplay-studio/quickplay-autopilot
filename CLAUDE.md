@@ -29,6 +29,8 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   analytics/drivers.csv gives a verdict only with proof (5 Shorts over 2 UK days, a 90% interval clear of typical, both
   halves agreeing); a choice with little to no views a week on is paused 14 days, then retested. 1 Short in 5 explores,
   every category keeps a floor, no writer model passes 35% before 10 measured Shorts. A dead Short is never remade.
+  trend.py (26 October) watches the absolute numbers week on week and how many Shorts followed the rulings (insights.md "Is
+  the channel getting better"); alerts.py opens an issue when retention falls or the recipe stops refreshing.
 - Freshness gate (pipeline/freshness.py): a time-sensitive Short goes out after its day only with evidence its story is
   alive, else boards/expired; a clip or submission over 30 hours late needs heat or views (analytics/late_uploads.csv).
 - Watchlist (config.json "watchlist", watch.py): dated events get places in their build-up and launch week, at most

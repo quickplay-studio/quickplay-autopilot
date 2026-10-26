@@ -1,4 +1,4 @@
-# Quickplay review (Wednesdays and Sundays, 17:50 UK)
+# Quickplay review (the weekly Claude task, Mondays 10:13 UK; docs/WEEKLY_REVIEW.md)
 
 Charlie has given full discretion: change anything the numbers support (what we cover, formats, hooks, titles, length,
 posting times, captions, voice and its speed, camera energy, colour, music, graphics, Instagram and Facebook volume) to

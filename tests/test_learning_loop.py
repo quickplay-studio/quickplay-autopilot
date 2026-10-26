@@ -29,7 +29,9 @@ for i in range(60):
 table, _ = D.analyse(rows, {}, "2026-10-24")
 v = {t["value"]: t for t in table if t["feature"] == "category"}
 assert v["Music"]["verdict"] == "push" and v["Film"]["verdict"] in ("cut back", "early sign", "about typical"), v
-one_day = [row(i, 30 + i % 5, 3.0, category="Sport") for i in range(8)] + [row(100 + i, 30 + i * 6, 1.0, category="Film") for i in range(30)]
+noon = (now - dt.timedelta(hours=30)).replace(hour=12, minute=0)       # one UK day whatever the hour this runs (30 to 34 hours ago straddled midnight UK in the morning)
+one_day = [row(i, 30, 3.0, category="Sport", posted=(noon + dt.timedelta(minutes=i)).isoformat(timespec="minutes"), posted_day=str(noon.date())) for i in range(8)] \
+    + [row(100 + i, 30 + i * 6, 1.0, category="Film") for i in range(30)]
 t1, _ = D.analyse(one_day, {}, "2026-10-24")
 s = next(t for t in t1 if t["feature"] == "category" and t["value"] == "Sport")
 assert s["verdict"] == "early sign" and "UK day" in s["why"], s

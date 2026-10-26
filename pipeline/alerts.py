@@ -3,7 +3,8 @@ and nothing otherwise. Run by .github/workflows/alerts.yml:
 - after a main job fails (a runner starts only for failures since 24 October): two failures in a row open an issue for
   that job; every 2 hours recovered() closes it once the job's latest run has succeeded;
 - each evening (21:30 UTC): an issue if under 70% of the day's Shorts went public on YouTube, and one if the Facebook
-  key runs out within 14 days; each closes again once things are fine.
+  key runs out within 14 days; each closes again once things are fine;
+- retention falling (trend_alert, 26 October) and a recipe that has not refreshed (recipe_stale_check, also 2-hourly).
 Issues carry the label "alert", one per problem, updated rather than repeated.
   python pipeline/alerts.py         (EVENT=workflow_run with RUN_NAME, RUN_CONCLUSION and RUN_URL, or the evening check)
 """
@@ -291,11 +292,61 @@ def reach_alert():
                 "channel posting many clips at once; fewer clips spread through the day is the change to test.")
 
 
+RECIPE_STALE_HOURS = 16     # the full analytics run comes with the three trends runs a day (08:10, 12:47, 18:23 UTC)
+
+
+def recipe_stale_check():
+    """The recipe (analytics/insights.md, drivers.csv, looks.json: the full analytics run inside trends.yml) has not refreshed
+    for RECIPE_STALE_HOURS. trends.yml carries on when analytics.py fails ("analytics failed" in its log), so the writer would
+    keep following yesterday's data with no other sign. One issue, closed once a full run lands (summary.json full_updated)."""
+    title = f"⚠️ The recipe has not refreshed for over {RECIPE_STALE_HOURS} hours (the full analytics run inside trends)"
+    try: s = json.loads((ROOT / "analytics" / "summary.json").read_text())
+    except Exception: return
+    at = s.get("full_updated") or s.get("updated")
+    try: when = dt.datetime.fromisoformat(str(at).replace("Z", "+00:00"))
+    except (TypeError, ValueError): return
+    if when.tzinfo is None: when = when.replace(tzinfo=dt.timezone.utc)
+    age = (NOW - when).total_seconds() / 3600
+    if age > RECIPE_STALE_HOURS:
+        raise_issue(title, f"analytics/summary.json says the last full analytics run was {at} ({age:.0f} hours ago). The trends "
+                           "workflow runs `python pipeline/analytics.py` three times a day and carries on when it fails, so read the "
+                           "analytics step in the latest trends run's log. Until a full run lands, the writer follows the last recipe it had.")
+    else: clear(title, f"A full analytics run landed at {at}.")
+
+
+def trend_alert():
+    """Retention falling (26 October): the drivers judge each choice against the Shorts around it, so a change that sinks every
+    Short alike (a render or voice change on every Short, a YouTube shift) never shows there. trend.falling compares the last
+    3 days' Shorts with the 7 days before them on the share viewed and engaged views; a fall of 15% or more opens one issue
+    with the numbers and the ledger's changes of the last 10 days as the suspects, for the weekly review and Charlie's phone.
+    Nothing is reverted by itself (a topic lull can look the same for a day or two); the issue closes when retention recovers."""
+    import trend
+    title = "📉 Retention is falling: viewers leave the Shorts sooner than last week"
+    fell = trend.falling(trend.load_rows(), NOW)
+    if not fell: clear(title, "Retention is back level with the week before."); return
+    lines = [f"- {label}: {a} over the last {n} Shorts ({trend.RECENT_DAYS} days), {b} over the {m} Shorts of the 7 days before"
+             for label, a, b, n, m in fell]
+    sus = trend.recent_changes(now=NOW)
+    body = ("From analytics/shorts.csv (Shorts public 24 hours or more):\n" + "\n".join(lines)
+            + "\n\nChanges of the last 10 days (analytics/changes.csv), the suspects:\n"
+            + ("\n".join(f"- {r.get('id')} {r.get('date')} {r.get('area')}: {str(r.get('change'))[:140]}" for r in sus) if sus else "- none recorded")
+            + "\n\nWhat happens next: the weekly review compares the Shorts since each change with the ones before and reverts what "
+              "hurt (REVIEW.md step 2). A fall that lasts needs that look; one that closes by itself was the topics of the day.")
+    raise_issue(title, body, howto="")
+
+
 if __name__ == "__main__":
     if os.environ.get("EVENT") == "workflow_run": after_run()
-    elif os.environ.get("SCHEDULE") == RECOVERY_CRON: recovered()
+    elif os.environ.get("SCHEDULE") == RECOVERY_CRON:
+        recovered()
+        try: recipe_stale_check()
+        except Exception as e: print("recipe:", str(e)[:160])
     else:
         evening()
+        try: trend_alert()
+        except Exception as e: print("trend:", str(e)[:160])
+        try: recipe_stale_check()
+        except Exception as e: print("recipe:", str(e)[:160])
         try: funnel_check()
         except Exception as e: print("funnel:", str(e)[:160])
         try: stale_check()

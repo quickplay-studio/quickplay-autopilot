@@ -1416,6 +1416,12 @@ def insights(rows, s, table=None, recipe=None, aud=None, subs=None):
               + (f" ({t['why']})" if t["why"] else "") for t in sorted(strong, key=lambda t: -abs(math.log(t["lift"])))]
         L += [f"- Early sign: {t['feature_label'].lower()} \"{t['value']}\" {t['lift']}x over {t['n']} Shorts" for t in early[:6]]
         L += [""]
+    try:        # is the channel getting better (trend.py, 26 October): the absolute numbers week on week, which the drivers
+        import trend as TR     # cannot see, and what following the rulings was worth
+        vd = {}
+        for t in (table or []): vd.setdefault(t.get("feature"), {})[t.get("value")] = t.get("verdict")
+        L += TR.lines(TR.trend(rows, NOW, vd))
+    except Exception as e: print("trend section:", str(e)[:120])
     L += subs or []
     L += ["## When people watch"] + timing_lines() + [""]
     L += ["## Where viewers are and how they find us"] + audience_lines(aud) + [""]
@@ -1441,15 +1447,18 @@ def insights(rows, s, table=None, recipe=None, aud=None, subs=None):
             out.append(f"- {g}: {statistics.median(v):,.0f} median, {len(v)} Shorts")
         return out + [""]
     L += table("category", "category") + table("format", "format") + table("posting slot (UK)", "slot_uk")
-    held = [r for r in aged if r.get("yt_held_3s_pct") not in ("", None) and r.get("hook")]
+    # hooks ranked on engaged views (viewers who did not swipe away), not "still watching at 3 s": that measure counts replays
+    # and read 100% on 39 of 52 Shorts by 26 October, so it could not tell hooks apart (look_scores dropped it on 24 October)
+    held = [r for r in aged if r.get("yt_engaged_pct") not in ("", None) and r.get("hook")]
     if held:
-        by = sorted(held, key=lambda r: r["yt_held_3s_pct"], reverse=True)
-        line = lambda r: f"- {r['yt_held_3s_pct']}% still watching at 3s, {r.get('yt_held_end_pct', '?')}% at the end · \"{r['hook']}\" ({r['title']})"
+        by = sorted(held, key=lambda r: float(r["yt_engaged_pct"]), reverse=True)
+        line = lambda r: (f"- {r['yt_engaged_pct']}% engaged views" + (f", {r['yt_avg_viewed_pct']}% viewed" if r.get("yt_avg_viewed_pct") not in ("", None) else "")
+                          + f" · \"{r['hook']}\" ({r['title']})")
         if len(by) >= 7:
-            L += ["## Hooks that held viewers (share still watching 3 seconds in)"] + [line(r) for r in by[:4]]
+            L += ["## Hooks that held viewers (share of viewers who did not swipe away)"] + [line(r) for r in by[:4]]
             L += ["## Hooks that lost them"] + [line(r) for r in by[-3:]] + [""]
         else:
-            L += ["## Hooks, by share still watching 3 seconds in"] + [line(r) for r in by] + [""]
+            L += ["## Hooks, by share of viewers who did not swipe away"] + [line(r) for r in by] + [""]
     def med(rs, f):
         v = [float(r[f]) for r in rs if r.get(f) not in ("", None)]
         return f"{statistics.median(v):.0f}" if v else "?"

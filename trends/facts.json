@@ -1,26 +1,39 @@
 {
  "date": "2026-10-26",
- "built": "2026-10-26T16:38+00:00",
- "model": "gemini-3.5-flash-lite + gemini-3.6-flash",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-26T19:15+00:00",
+ "model": "gemini-3.5-flash-lite + groq:openai/gpt-oss-120b",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
   {
    "n": 6,
    "topic": "Halloween 2026",
    "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
-   "category": "Gaming",
-   "what_is_new": "Spirit Tasting was announced on 26 October 2026.",
+   "category": "Film",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Halloween: The Game launched on September 8, 2026?",
-    "Halloween: The Game has received mixed reviews on Metacritic."
+    "New horror game drops on Sep 8 for all major consoles",
+    "OOC offers seven free Halloween story chats from Oct 29 to Nov 8",
+    "Grim Fandango Remastered now just $2.24 on Steam and GOG"
    ],
    "sources": [
     [
-     "‘Spirit Tasting,’ New Film From ‘WNUF Halloween Special’ Creator Chris LaMartina, Revealed as Screening Roadshow Set (EXCLUSIVE)",
-     "https://variety.com/2026/film/news/spirit-tasting-movie-wnuf-halloween-special-creator-1236914595/",
-     "Variety",
+     "What to play this Halloween, plus last-minute costume ideas and spooky movie recommendations",
+     "https://www.pcgamer.com/games/horror/2026-halloween-horror-gaming-hub-recommendations/",
+     "PC Gamer",
+     "2026-10-26"
+    ],
+    [
+     "Stuck for a Halloween outfit? Set phasers to stunning with the best Star Trek costumes",
+     "https://www.space.com/entertainment/space-toys-lego/stuck-for-a-halloween-outfit-set-phasers-to-stunning-with-the-best-star-trek-costumes",
+     "Space.com",
+     "2026-10-26"
+    ],
+    [
+     "Interactive Storytelling App OOC Introduces Halloween Event with Special Rewards",
+     "https://www.ign.com/articles/interactive-storytelling-app-ooc-introduces-halloween-event-with-special-rewards",
+     "IGN",
      "2026-10-26"
     ],
     [
@@ -30,278 +43,323 @@
      "2026-10-26"
     ],
     [
-     "Horror Games Are Getting Big Discounts in the Lead-Up to Halloween",
-     "https://www.ign.com/articles/horror-game-sales-ahead-of-halloween-2026",
-     "IGN",
-     "2026-10-26"
-    ],
-    [
-     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
-     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
-     "Space.com",
-     "2026-10-24"
-    ],
-    [
      "Halloween 2026",
      "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Halloween: The Game received mixed reviews according to review aggregator Metacritic.",
+     "claim": "Halloween: The Game was released on September 8 2026 for PlayStation 5, Windows and Xbox Series X and Series S.",
      "sources": [
-      3,
       5
      ],
      "evidence": {
-      "3": "Those who enjoy a good asymmetrical online multiplayer game can pick up the brand-new Halloween: The Game for $34.99.",
-      "5": "Halloween: The Game received \"mixed\" reviews, according to review aggregator Metacritic.[25][26][27]"
+      "5": "on the 1978 film halloween and was released on september 8 2026 for playstation 5 windows and xbox series x and series s 3 4 the game received generally mixed reviews upon release with praise for"
      }
     },
     {
-     "claim": "Resident Evil Requiem is an all‑new entry in the Resident Evil series.",
+     "claim": "The OOC Halloween event gives players seven free story responses per eligible original between October 29 and November 8.",
      "sources": [
-      2,
       3
      ],
      "evidence": {
-      "2": "Resident Evil Requiem is, as much as anything, a celebration of the series as it turns 30.",
-      "3": "we’ve got several Resident Evil remakes (2 and 3 specifically), as well as this year’s all‑new entry Resident Evil Requiem on sale."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Halloween: The Game was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series S.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
+      "3": "So be sure to make the most of your seven free original chats during October 29‑November 8 in order to experience more stories."
      }
     },
     {
-     "claim": "Spirit Tasting was shot in four days for $40,000 to celebrate Chris LaMartina’s 40th birthday.",
+     "claim": "Grim Fandango Remastered is discounted to $2.24, an 85 percent off price, on Steam and GOG.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "In the spirit of B‑movie icons like Roger Corman, the film was shot in four days for $40,000 in order to celebrate Chris LaMartina’s 40th"
+      "1": "Grim Fandango Remastered | $2.24 (85% off) on Steam and GOG"
      }
     },
     {
-     "claim": "Halloween: The Game was refused classification by the Australian Classification Board on 10 August 2026 because it contains a controlled substance.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "2026 15 on august 10 2026 the official x account for halloween the game confirmed 16 that the game had been refused classification by the australian classification board and as a result will not be made available to players in"
-     }
-    },
-    {
-     "claim": "The Taurid meteor shower can produce bright “Halloween fireballs” in late October.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Taurids are known for producing bright “fireball” meteors, which are often called “Halloween fireballs” because they tend to coincide with the annual celebration."
-     }
-    },
-    {
-     "claim": "Ghost Town is a VR‑exclusive game set in 1983 London.",
+     "claim": "Star Trek costumes are universally recognised and can be reused for cosplay after Halloween.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "and plunging players into a brilliantly evocative recreation of 1983 london as protagonist and ghost hunter edith penrose hunts for her missing brother as the grimy streets of the capital make way for the craggy seclusion of the north sea"
+      "2": "star trek costumes are so universally recognized you can use them for cosplay purposes too or the next time someone throws a trek themed party or if you re not a fan of star trek check out our round up"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 21,
-   "topic": "new ipad mini 2026",
-   "signal": "Google Trends US 1000+",
-   "category": "Tech",
-   "what_is_new": "",
+   "n": 7,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Xbox Wire announced the official Grand Theft Auto VI launch trailer on October 23, 2026, highlighting the upcoming November 19 release date.",
    "hooks": [
-    "Apple just announced a brand new iPad mini with an OLED display!",
-    "The new iPad mini features an incredible 1,200 nits peak brightness.",
-    "You can pre-order the stunning new iPad mini starting October 28."
+    "GTA 6 arrives on November 19, 2026!",
+    "Explore the fictional state of Leonida in GTA 6!",
+    "Play as Jason and Lucia in Vice City!"
    ],
    "sources": [
     [
-     "Apple unveils new iPad mini with OLED display and faster A20 Pro chip",
-     "https://techcrunch.com/2026/10/26/apple-unveils-new-ipad-mini-with-oled-display-and-faster-a20-pro-chip/",
-     "TechCrunch",
-     "2026-10-26"
+     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
+     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
+     "Xbox Wire",
+     "2026-10-23"
     ],
     [
-     "Apple updates the iPad mini with an A20 processor and OLED display",
-     "https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/",
-     "Engadget",
-     "2026-10-26"
+     "First GTA 6 TV Commercial Strips Out Steamy Shower Scenes, but Shows More of Lucia's Fancy Hair Tech",
+     "https://www.ign.com/articles/gta-6-tv-commercial-strips-shower-scene-doesnt-mention-xbox",
+     "IGN",
+     "2026-10-22"
     ],
     [
-     "Apple updates the iPad Mini with a larger OLED display",
-     "https://www.theverge.com/tech/1017801/ipad-mini-oled-display-apple-announce",
-     "The Verge",
-     "2026-10-26"
-    ],
-    [
-     "Apple gives iPad mini its biggest update ever",
-     "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
-     "Apple Newsroom",
-     "2026-10-26"
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/GTA_6",
+     "Wikipedia",
+     ""
     ]
    ],
    "verified": [
     {
-     "claim": "The new iPad mini starts at $699 for the Wi-Fi model and $849 for the Wi-Fi and cellular model.",
+     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
      "sources": [
-      1,
       2,
       3
      ],
      "evidence": {
-      "1": "The new iPad mini starts at $699 for the Wi-Fi model and $849 for the Wi-Fi and cellular model.",
-      "2": "The new tablet starts at $699.",
-      "3": "The iPad Mini starts at $699 for the Wi-Fi-only model, and $849 for Wi-Fi and cellular."
+      "2": "The slightly stretched launch trailer scenes give us a longer plane shot and a marginally extended shot of Jason and Lucia playing around while leaning",
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
      }
     },
     {
-     "claim": "At 5.4 mm in thickness, the new iPad mini is thinner and lighter than its predecessor.",
+     "claim": "Players will be able to freely roam Leonida's open world, which features the Miami-inspired Vice City.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Miami is currently completely taken over by the game, which is set in a fictionalized Miami called Vice City, as well as the surrounding area.",
+      "3": "Players will be able to freely roam Leonida's open world, which features the Miami-inspired Vice City."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Rockstar's global development teams more than doubled since Red Dead Redemption 2.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Rockstar's global development teams more than doubled since Red Dead Redemption 2."
+     }
+    },
+    {
+     "claim": "Principal production began in 2020.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI won Most Wanted Game at the Golden Joystick Awards in 2024.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "2024 | Golden Joystick Awards | Most Wanted Game | Won"
+     }
+    }
+   ],
+   "images": [
+    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+   ]
+  },
+  {
+   "n": 10,
+   "topic": "gpt-6.1",
+   "signal": "Google Trends GB 200+",
+   "category": "Tech",
+   "what_is_new": "OpenAI has upgraded Terra from GPT-5.6 to GPT-6.1.",
+   "hooks": [
+    "OpenAI just released GPT-6.1 Terra!"
+   ],
+   "sources": [
+    [
+     "OpenAI upgrades ChatGPT and Codex with new GPT-6.1 Terra model",
+     "https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model/",
+     "9to5Mac",
+     "2026-10-25"
+    ],
+    [
+     "OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less",
+     "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
+     "TechCrunch",
+     "2026-09-29"
+    ],
+    [
+     "OpenAI says planned GPT-6.1 is too insecure to release",
+     "https://arstechnica.com/ai/2026/09/openai-says-planned-gpt-6-1-is-too-insecure-to-release/",
+     "Ars Technica",
+     "2026-09-29"
+    ],
+    [
+     "gpt-6.1",
+     "https://en.wikipedia.org/wiki/GPT-6.1",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "GPT-6.1 Terra was released on October 26, 2026.",
      "sources": [
       1,
-      3,
       4
      ],
      "evidence": {
-      "1": "The new iPad mini is 5.4 mm in thickness, and available in two colors.",
-      "3": "At 5.4mm thick, the iPad Mini is thinner and lighter than its predecessor.",
-      "4": "At 5.4 mm thin, the new iPad mini is more portable than ever, and is available in two gorgeous finishes: a new midnight and a"
+      "1": "Now OpenAI has upgraded Terra from GPT-5.6 to GPT-6.1, touting speed and computer use at a lower price.",
+      "4": "GPT-6.1 Terra was released on October 26, 2026."
      }
     },
     {
-     "claim": "The device delivers peak brightness of up to 1,200 nits, more than twice that of the previous-generation device.",
+     "claim": "GPT-6.1 Sol was presented at OpenAI’s DevDay event.",
      "sources": [
-      1,
       2,
-      3,
       4
      ],
      "evidence": {
-      "1": "The device delivers peak brightness of up to 1,200 nits, more than twice that of the previous-generation device, along with full screen brightness of 600",
-      "2": "According to Apple, it's capable of reaching a peak brightness of 1,200 nits, or twice as bright as the 2024 iPad mini.",
-      "3": "The iPad Mini offers a peak brightness of up to 1,200 nits, along with a 1-nit minimum brightness that could make it easier on the",
-      "4": "For an even better visual experience across a range of lighting conditions, iPad mini also features peak brightness of up to 1200 nits — more"
+      "2": "At OpenAI’s DevDay event on Tuesday, the company showed off GPT-6.1 Sol, a mere week after it launched GPT-6 Sol.",
+      "4": "GPT-6.1 Sol was released on September 29, 2026, during OpenAI's DevDay event."
      }
     },
     {
-     "claim": "Preorders for the new iPad mini start on October 28, with availability beginning November 6.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "The device can be preordered on October 28, with availability beginning November 6.",
-      "2": "Pre-orders for both variants open on October 28, with general availability to follow on November 6.",
-      "3": "Preorders for the new iPad Mini start on Wednesday, October 28th, with availability on November 6th.",
-      "4": "Customers can pre-order it along with the new Smart Folio starting Wednesday, October 28, with availability beginning Friday, November 6."
-     }
-    },
-    {
-     "claim": "The new iPad mini has a larger 8.5-inch OLED display.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "Apple on Monday announced a new iPad mini with a larger 8.5-inch OLED display.",
-      "2": "The new tablet has 8.5-inch OLED display, which Apple will allow customers to spec with its nano-texture coating.",
-      "3": "Apple announced a new iPad Mini with a larger, 8.5-inch OLED display.",
-      "4": "The larger 8.5-inch OLED display, also available with a nano-texture option, delivers higher contrast and more than 2x higher peak brightness than the previous-generation iPad"
-     }
-    },
-    {
-     "claim": "The new iPad mini features an Acoustic Display that Apple says enhances the audio experience.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "It also features an “Acoustic Display” that Apple says enhances the audio experience when gaming, watching videos, or editing content.",
-      "2": "In addition to a new OLED panel, the 2026 iPad mini has Apple's first-ever \"Acoustic Display.\"",
-      "3": "Additionally, Apple says the iPad Mini comes with a new “Acoustic Display,” which it describes as including “specially designed woofers” that are “paired through the",
-      "4": "The new iPad mini features an innovative Acoustic Display for an even better audio experience when gaming, watching videos, or editing content."
-     }
-    },
-    {
-     "claim": "The updated tablet now also features a 12-megapixel center stage front camera.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "The updated tablet now also features a 12-megapixel center stage front camera, faster wireless and cellular connectivity, and fast-charge support.",
-      "2": "Like all of its siblings, the new mini now offers a landscape-oriented 12-megapixel Center Stage camera for more natural-looking video calls.",
-      "3": "Some other updates include a 12MP front-facing camera that’s now on the long edge of the iPad Mini, making it easier for video calls in",
-      "4": "iPad mini now has a 12MP Center Stage front camera on the landscape edge that’s perfect for video calls, an innovative Acoustic Display for an"
-     }
-    },
-    {
-     "claim": "It has an IP67 rating for protection against water and dust.",
+     "claim": "OpenAI cancelled the release of GPT-6.1 Astra because of safety and alignment concerns.",
      "sources": [
       2,
       3,
       4
      ],
      "evidence": {
-      "2": "Apple has also sealed the enclosure; it's now iP67-rated against water and dust.",
-      "3": "It has an IP67 rating for protection against water and dust, in addition to Apple’s next-gen C2 cellular modem and in-house N1 networking chip.",
-      "4": "It also features an IP67 rating to protect against water and dust — ideal for a range of use cases, such as working outside on"
-     }
-    },
-    {
-     "claim": "The new screen is also slightly larger than the 8.3-inch display the iPad mini previously offered due to 24 percent thinner bezels.",
-     "sources": [
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "2": "Thanks to 24 percent thinner bezels, the new screen is also slightly larger than the 8.3-inch display the iPad mini previously offered.",
-      "3": "It also has bezels that are 24 percent slimmer.",
-      "4": "The new iPad mini comes with a stunning OLED display that delivers amazing front-of-screen performance and an even larger 8.5-inch size while maintaining the same"
+      "2": "Notably, the company is not launching GPT-6.1 Astra, as was originally expected. The Wall Street Journal reported this week that OpenAI scrapped the release over",
+      "3": "OpenAI says it has canceled plans to release its updated GPT-6.1 model next month as it continues to investigate what testing shows is a safety",
+      "4": "but the announcement was reportedly canceled due to alignment issues."
      }
     }
    ],
    "one_source": [],
    "images": [
-    "page:https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/"
+    "page:https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model/"
    ]
   },
   {
-   "n": 28,
+   "n": 11,
+   "topic": "beyoncé",
+   "signal": "Google Trends US 500+",
+   "category": "Music",
+   "what_is_new": "Beyonce discussed the success of her hair-care brand Cecred in a new interview published on Monday.",
+   "hooks": [
+    "Did you know Beyonce won a school talent show at age seven?",
+    "Discover how Beyonce's debut solo album dominated the charts!",
+    "See how Beyonce's hair-care brand Cecred became a blockbuster success."
+   ],
+   "sources": [
+    [
+     "Beyoncé Explains Why Even People Who ‘Can’t Stand’ Her Music Like Her Hair-Care Products",
+     "https://www.billboard.com/music/rb-hip-hop/beyonce-people-who-cant-stand-my-music-use-cecred-1236368006/",
+     "Billboard",
+     "2026-10-26"
+    ],
+    [
+     "beyoncé",
+     "https://en.wikipedia.org/wiki/Beyonc%C3%A9",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Beyonce Giselle Knowles-Carter was born on September 4 1981 in Houston Texas.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Beyoncé Giselle Knowles was born on September 4, 1981, in Houston, Texas.[2]"
+     }
+    },
+    {
+     "claim": "Beyonce won a school talent show at the age of seven by singing John Lennon's Imagine.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Beyoncé's interest in music and performing grew after she won a school talent show at the age of seven by singing John Lennon's \"Imagine\", winning"
+     }
+    },
+    {
+     "claim": "Beyonce's debut solo album Dangerously in Love debuted at number one on the Billboard 200 selling 317000 copies in its first week.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Released ten days later,[26] the album debuted at number one on the Billboard 200, selling 317,000 copies in its first week.[62]"
+     }
+    },
+    {
+     "claim": "Destiny's Child's third studio album Survivor debuted at number one on the Billboard 200 selling 663000 copies in its first week.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Destiny's Child's third studio album, Survivor, was released in May 2001; it debuted at number one on the Billboard 200, selling 663,000 copies in its"
+     }
+    },
+    {
+     "claim": "Beyonce's hair-care brand Cecred was introduced in February 2024.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Beyoncé’s Cécred has quickly become a blockbuster hair-care brand since its introduction in February 2024."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Beyoncé_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_(10_of_118)_(52946364598)_(best_crop).jpg"
+   ]
+  },
+  {
+   "n": 20,
    "topic": "Wildwood (film)",
    "signal": "Wikipedia 118,435 views",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know Wildwood is the longest stop-motion-animated film ever?",
-    "Wildwood premiered at the BFI London Film Festival in October 2026.",
-    "Find out how Wildwood became Laika's first PG-13 film."
+    "Discover how long the longest stop motion film really is.",
+    "Wildwood made history as Laika's very first PG 13 film.",
+    "Explore the epic fantasy behind Wildwood's world premiere."
    ],
    "sources": [
     [
@@ -314,7 +372,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Wildwood is a 2026 American stop-motion animated epic fantasy film directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
+     "claim": "Wildwood is a 2026 American stop-motion animated epic fantasy film directed by Travis Knight and written by Chris Butler.",
      "sources": [
       1
      ],
@@ -332,182 +390,112 @@
      }
     },
     {
-     "claim": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.",
+     "claim": "Wildwood had its world premiere at the BFI London Film Festival on October 11, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Wildwood had its world premiere at the BFI London Film Festival on October 11, 2026,[11] and was released in the United States by Fathom Entertainment"
+     }
+    },
+    {
+     "claim": "Wildwood is Laika's first film to receive a PG-13 rating from the Motion Picture Association.",
      "sources": [
       1
      ],
      "evidence": {
       "1": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.[12]"
      }
-    },
-    {
-     "claim": "Wildwood is a 2026 American stop motion animated epic fantasy film directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Wildwood is a 2026 American stop-motion animated epic fantasy film[7][8][9] directed by Travis Knight and written by Chris Butler, based on the 2011 novel by"
-     }
-    },
-    {
-     "claim": "Wildwood runs for 131 minutes, making it the longest stop motion animated film by runtime.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.[10]"
-     }
     }
    ],
    "images": []
   },
   {
-   "n": 12,
-   "topic": "toto wolff george russell mercedes f1",
-   "signal": "Google Trends GB 500+",
-   "category": "Sport",
+   "n": 38,
+   "topic": "Sonic the Hedgehog fan creations",
+   "signal": "Bluesky trending, 3,973 posts",
+   "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Toto Wolff hits back at brainless claims over Mercedes driver favouritism.",
-    "Kimi Antonelli leads George Russell by 84 points with seven races left."
+    "Discover two incredible free Sonic the Hedgehog fan made tabletop games!",
+    "Play as your own Sonic OC with these amazing fan creations.",
+    "Did you know fans made two free Sonic tabletop RPGs?"
    ],
    "sources": [
     [
-     "Mercedes boss Toto Wolff says people who think team favour Kimi Antonelli over George Russell are 'brainless' and should 'watch Teletubbies'",
-     "https://www.skysports.com/f1/news/13596711/mercedes-boss-toto-wolff-says-people-who-think-team-favour-kimi-antonelli-over-george-russell-are-brainless-and-should-watch-teletubbies",
-     "Sky Sports",
-     "2026-10-09"
+     "Play as your Sonic the Hedgehog OC with these fan made tabletop games",
+     "https://www.polygon.com/tabletop-games/501703/sonic-the-hedgehog-oc-fan-ttrpg-tag-team-heroes-rings-and-running-shoes/",
+     "Polygon",
+     "2024-12-23"
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "Mercedes boss Toto Wolff dismissed suggestions that the team have favoured Kimi Antonelli over George Russell.",
+     "claim": "Fans can play two free Sonic the Hedgehog inspired tabletop games called Rings and Running Shoes and Sonic Tag Team Heroes.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Toto Wolff has dismissed suggestions Mercedes have favoured championship leader Kimi Antonelli over his team-mate George Russell; watch the Singapore Sprint on Saturday at 10am"
+      "1": "Through some diligent dives, I've found two fan-made Sonic games, for two different kinds of players."
      }
     },
     {
-     "claim": "Kimi Antonelli has built an 84-point lead over George Russell at the top of the Drivers Championship.",
+     "claim": "Sonic Tag Team Heroes is a traditional tabletop game with grid based combat.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Antonelli has defied pre-season expectations to build an 84-point lead over Russell at the top of the Drivers' Championship with just seven races remaining, including"
+      "1": "Sonic Tag-Team Heroes is a more traditional tabletop game with crunchy, Dungeons & Dragons-inspired grid-based combat to play through heroic boss battles."
      }
     },
     {
-     "claim": "George Russell will start from the back of the grid in Singapore after an engine failure in Malaysia.",
+     "claim": "Rings and Running Shoes is a Powered by the Apocalypse game set in the world of anthropomorphic hedgehogs and echidnas.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Russell will start from the back of the grid in Singapore after an engine failure last weekend in Malaysia forced him into taking a penalty."
+      "1": "If you're looking to play in the world of Sonic, but want to focus more on story over combat, Rings and Running Shoes is a"
      }
     },
     {
-     "claim": "Mercedes hold a 151-point lead over Ferrari at the top of the standings.",
+     "claim": "There is no official Sonic the Hedgehog tabletop RPG (yet).",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Despite the problems, Mercedes are closing in on a first constructors' title since 2021, as they hold a 151-point lead over Ferrari at the top"
+      "1": "Surprisingly, there is no official Sonic the Hedgehog tabletop RPG (yet)."
+     }
+    },
+    {
+     "claim": "Two fan-made Sonic tabletop games, Rings and Running Shoes and Sonic Tag-Team Heroes, are both free.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Rings and Running Shoes and Sonic Tag-Team Heroes are on opposite ends of the tabletop gaming spectrum, but both will fill the ring-shaped hole in"
+     }
+    },
+    {
+     "claim": "Sonic Tag-Team Heroes uses dice pools comprised of d6s and d10s.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The game itself uses dice pools comprised on d6s and d10s, with a series of corresponding skills."
+     }
+    },
+    {
+     "claim": "In Sonic Tag-Team Heroes players choose one of four character types: Speed, Fly, Power or Technique.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Players choose from one of four types for their character that determines their attribute set: Speed, Fly, Power, and Technique — each following in the"
      }
     }
    ],
    "images": []
-  },
-  {
-   "n": 13,
-   "topic": "madagascar",
-   "signal": "Google Trends GB 200+",
-   "category": "Animals",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Madagascar split from Africa around 180 million years ago?"
-   ],
-   "sources": [
-    [
-     "Masoala peninsula: Madagascar’s last untouched rainforest",
-     "https://www.cnn.com/travel/article/masoala-peninsula-madagascar/",
-     "CNN",
-     "2018-11-27"
-    ],
-    [
-     "madagascar",
-     "https://en.wikipedia.org/wiki/Madagascar",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Madagascar split from Africa during the Early Jurassic period, around 180 million years ago.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Cut off from mainland Africa 160 million years ago, Madagascar has some of the world's rarest and most unusual flora and fauna.",
-      "2": "Following the prehistoric breakup of the supercontinent Gondwana, Madagascar split from Africa during the Early Jurassic period, around 180 million years ago, and from the"
-     }
-    },
-    {
-     "claim": "Madagascar lies in the Indian Ocean.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The thick forest has escaped the deforestation that tragically ravages the rest of this Indian Ocean island.",
-      "2": "Madagascar, officially the Republic of Madagascar,[a] is an island country in the Indian Ocean that includes the island of Madagascar and numerous smaller peripheral islands."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Madagascar is an island country that includes Madagascar and many smaller peripheral islands.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Madagascar, officially the Republic of Madagascar,[a] is an island country in the Indian Ocean that includes the island of Madagascar and numerous smaller peripheral islands."
-     }
-    },
-    {
-     "claim": "Antananarivo is the capital and largest city of Madagascar.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Its capital and largest city is Antananarivo."
-     }
-    },
-    {
-     "claim": "Madagascar is the fourth largest island in the world.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Lying off the southeastern coast of Africa, it is the world's fourth-largest island, the second-largest island country, and the 46th-largest country overall."
-     }
-    },
-    {
-     "claim": "More than 90% of the wildlife in Madagascar is endemic.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "As a result, Madagascar is a biodiversity hotspot and one of the world's 17 megadiverse countries, with over 90% of its wildlife being endemic."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Madagascar_(centered_orthographic_projection).svg"
-   ]
   }
  ]
 }

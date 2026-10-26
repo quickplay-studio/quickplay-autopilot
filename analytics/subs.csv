@@ -1,11 +1,11 @@
 feature,feature_label,value,n,days,views,subs,expected,subs_per_1k,typical_per_1k,lift,low,high,verdict,why
-subs:category,Subscribers: Category,Sport,21,6,3855,3,1.21,0.78,0.31,1.56,0.68,6.4,early sign,not proven: 90% interval 0.68x to 6.40x includes typical; the two halves of the data disagree
-subs:category,Subscribers: Category,Gaming,15,7,2263,2,0.95,0.88,0.42,1.36,0.38,6.66,early sign,not proven: 90% interval 0.38x to 6.66x includes typical
-subs:category,Subscribers: Category,Tech,6,4,321,1,0.29,3.12,0.91,1.31,0.18,16.21,early sign,not proven: 90% interval 0.18x to 16.21x includes typical; the two halves of the data disagree
-subs:category,Subscribers: Category,Film,21,8,4853,3,2.57,0.62,0.53,1.09,0.32,3.02,about typical,
-subs:category,Subscribers: Category,Science,5,3,449,0,0.16,0.0,0.36,0.93,0.0,18.74,about typical,
-subs:category,Subscribers: Category,Entertainment,7,5,559,0,0.29,0.0,0.51,0.87,0.0,10.43,about typical,
-subs:category,Subscribers: Category,Music,29,8,10718,3,8.02,0.28,0.75,0.5,0.1,0.97,early sign,not proven: the two halves of the data disagree
-subs:ending,Subscribers: Ending,follow line,3,2,182,0,0.07,0.0,0.41,0.96,0.0,40.24,about typical,3 Shorts over 2 UK day(s)
-subs:ending,Subscribers: Ending,loop,5,3,1281,0,0.42,0.0,0.33,0.83,0.0,7.18,about typical,
-subs:ending,Subscribers: Ending,question,4,3,1436,0,0.49,0.0,0.34,0.8,0.0,6.11,about typical,4 Shorts over 3 UK day(s)
+subs:category,Subscribers: Category,Sport,21,6,3856,3,1.35,0.78,0.35,1.49,0.6,5.73,early sign,not proven: 90% interval 0.60x to 5.73x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Film,23,8,6493,5,3.37,0.77,0.52,1.3,0.59,3.12,early sign,not proven: 90% interval 0.59x to 3.12x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Gaming,16,7,2287,2,1.1,0.87,0.48,1.29,0.32,5.74,early sign,not proven: 90% interval 0.32x to 5.74x includes typical
+subs:category,Subscribers: Category,Tech,6,4,322,1,0.36,3.11,1.11,1.27,0.14,13.26,early sign,not proven: 90% interval 0.14x to 13.26x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Science,5,3,449,0,0.16,0.0,0.36,0.93,0.0,18.75,about typical,
+subs:category,Subscribers: Category,Entertainment,7,5,558,0,0.32,0.0,0.57,0.86,0.0,9.42,about typical,
+subs:category,Subscribers: Category,Music,28,8,9793,3,9.05,0.31,0.92,0.45,0.09,0.86,cut back,
+subs:ending,Subscribers: Ending,follow line,3,2,182,0,0.07,0.0,0.41,0.96,0.0,40.3,about typical,3 Shorts over 2 UK day(s)
+subs:ending,Subscribers: Ending,loop,5,3,1283,0,0.53,0.0,0.42,0.79,0.0,5.6,early sign,not proven: 90% interval 0.00x to 5.60x includes typical; a half has under 2 Shorts
+subs:ending,Subscribers: Ending,question,4,3,1437,0,0.59,0.0,0.41,0.77,0.0,5.12,early sign,not proven: 4 Shorts over 3 UK day(s)

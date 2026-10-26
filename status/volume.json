@@ -7,41 +7,40 @@
   "test_days": 14,
   "judge_on": "2026-11-08",
   "before_days": [
-   "2026-10-19",
    "2026-10-21",
    "2026-10-22",
    "2026-10-23"
   ],
   "shorts_a_day": {
    "during": 16,
-   "before": 23.8
+   "before": 25.3
   },
   "daily_views": {
    "during": 4818,
-   "before": 3687,
-   "ratio": 1.31,
-   "lo": 0.98,
-   "hi": 1.88,
+   "before": 4005,
+   "ratio": 1.2,
+   "lo": 0.92,
+   "hi": 1.74,
    "days": [
     2,
-    4
+    3
    ]
   },
   "cohort_24h": {
    "during": 1937,
-   "before": 2709,
-   "ratio": 0.72,
-   "lo": 0.54,
-   "hi": 1.05,
+   "before": 2620,
+   "ratio": 0.74,
+   "lo": 0.53,
+   "hi": 1.21,
    "days": [
     1,
-    4
+    3
    ]
   },
   "median_24h_per_short": {
-   "during": 84.5,
-   "before": 27.0
+   "during": 75.0,
+   "before": 18.5
   }
  },
- "as_of": "2026-10-26T15:14+00:00"
+ "as_of": "2026-10-26T19:15+00:00"
 }

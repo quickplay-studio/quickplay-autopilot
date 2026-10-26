@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-26T15:18+00:00",
+ "updated": "2026-10-26T19:19+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 100,
+ "reels": 99,
  "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
@@ -35,9 +35,9 @@
   },
   {
    "category": "Music",
-   "median": 75.0,
-   "n": 25,
-   "score": 0.705,
+   "median": 63.5,
+   "n": 24,
+   "score": 0.616,
    "favoured": false
   },
   {
@@ -133,15 +133,15 @@
  "week": {
   "reels": 94,
   "median": 112.5,
-  "before_reels": 6,
-  "before_median": 128.0
+  "before_reels": 5,
+  "before_median": 123.0
  },
  "cover": {
-  "asked": 10,
-  "accepted": 10,
+  "asked": 12,
+  "accepted": 12,
   "refused": 0,
   "last": "accepted",
-  "last_at": "2026-10-26T13:58+00:00",
+  "last_at": "2026-10-26T15:39+00:00",
   "ok": true,
   "paused_until": null
  }

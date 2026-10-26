@@ -186,9 +186,8 @@
  },
  "engage": {
   "comment": "UgycNi-KRgl23v2p3O14AaABAg",
-  "playlist_error": "HttpError: <HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned \"The operation was aborted.\". Details: \"[{'domain': 'youtube.CoreErrorD",
-  "playlist_tries": 1,
   "series_playlist": "PLV3Jz5E66Dqk",
-  "series_description": "linked"
+  "series_description": "linked",
+  "playlist": "Quickplay Daily: Animals"
  }
 }

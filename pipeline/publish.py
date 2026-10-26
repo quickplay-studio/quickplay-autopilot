@@ -323,7 +323,7 @@ def main():
                 st["youtube"] = {"error": str(e)[:200]}
             # The release now only carries the TikTok and Instagram version (social.py posts it once the Short is public).
             for asset in ("video.mp4", "upload.json"): gh("release", "delete-asset", tag, asset, "-y", check=False)
-            if (tmp / "social.mp4").exists(): st["social_release"] = tag
+            if (tmp / "social.mp4").exists() and ch == "main": st["social_release"] = tag      # another channel's Shorts are not cross-posted (as record.py)
             else: gh("release", "delete", tag, "-y", check=False)
             st.pop("preview_release", None); st.pop("preview_url", None)
             save_status(st); move(board, "done")

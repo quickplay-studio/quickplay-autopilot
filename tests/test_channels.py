@@ -202,7 +202,7 @@ uploads.clear()
 def fake_gh(*a, check=True):
     if a[:2] == ("release", "download"):
         out = pathlib_Path(a[a.index("-D") + 1])
-        (out / "video.mp4").write_bytes(b"v")
+        (out / "video.mp4").write_bytes(b"v"); (out / "social.mp4").write_bytes(b"s")
         title = {"preview-QD-970": "main one", "preview-QD-971": "music one", "preview-QD-972": "music two", "preview-QD-973": "es one"}[a[2]]
         (out / "upload.json").write_text(json.dumps({"title": title, "description": "d", "tags": [], "category": "Music"}))
     return types.SimpleNamespace(returncode=0, stdout="", stderr="")
@@ -214,6 +214,7 @@ assert [(u[0], u[1]) for u in uploads] == [("main-client", "main one"), ("music-
 assert pst("QD-972")["state"] == "approved, waiting for YouTube's daily upload limit", pst("QD-972")      # the music channel's sixth Short today was the last
 assert pst("QD-971")["state"] in ("scheduled", "uploaded but not scheduled (check Studio)") and pst("QD-971")["video"] == "vid-music one"
 assert (PB.ROOT / "boards" / "done" / "QD-971.json").exists() and (PB.READY / "QD-972.json").exists()
+assert pst("QD-970").get("social_release") == "preview-QD-970" and not pst("QD-971").get("social_release"), pst("QD-971")   # only main is cross-posted
 # a Short of a channel that is not signed in waits as it is
 Y.connected = lambda ch: ch in ("main",)
 (PB.STATUS / "QD-974.json").write_text(json.dumps({"id": "QD-974", "state": U.LIMIT_WAIT, "approved": "x", "preview_release": "p", "channel": "music"}))

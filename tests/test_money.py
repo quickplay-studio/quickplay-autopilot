@@ -39,4 +39,10 @@ A.reach_alert()
 assert len(ISS) == 1 and "clips: 9 of 10 clips a day old have no views" in ISS[0][1] and "1 blocked" in ISS[0][1] and "gaming" not in ISS[0][1], ISS
 C.reach_check(rows[-1:]); A.reach_alert()
 assert CLR == [ISS[0][0]]
+# while clipping is paused the issue is closed, whatever the old stats say
+C.reach_check(rows); ISS.clear(); CLR.clear()
+(root / "config.json").write_text(json.dumps({"clips_paused": "2026-10-26"}))
+A.reach_alert()
+assert not ISS and CLR == ["📉 YouTube is showing the clips to almost nobody"], (ISS, CLR)
+(root / "config.json").unlink()
 print("reach ok")

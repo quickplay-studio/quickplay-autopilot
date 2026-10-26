@@ -49,6 +49,39 @@
   "issue": 35
  },
  {
+  "id": "clipping-paused",
+  "title": "Clipping is paused: keep it paused or restart it (review Sunday 8 November)",
+  "why": "26 October: the clips earned almost no views (issue #37: 34 clips, 11 views by 24 October), so clipping is paused (config.json clips_paused). Since then the three clip channels (gaming, irl, clips) spend their YouTube allowance on original Shorts like Quick Play Daily, 6 a day each, written to each channel's own lane. They have no Instagram or Facebook accounts of their own, so nothing is posted there for them. Nothing is needed to keep the pause; this is the date to decide.",
+  "steps": [
+   "To keep clipping paused: do nothing, or close this issue.",
+   "To restart: ask Claude, or set \"clips_paused\" to \"\" in config.json (link below) and commit.",
+   "If you restart, also clear \"youtube_off\" for the gaming and clips channels in clips/campaigns.json, or those two will keep clips off YouTube.",
+   "Optional, only if you want the clip channels on Instagram too: create an Instagram account for each in the studio Google account and tell Claude (a new public account, so it is your call)."
+  ],
+  "links": [
+   {
+    "label": "config.json",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/edit/main/config.json"
+   },
+   {
+    "label": "clips/campaigns.json",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/edit/main/clips/campaigns.json"
+   },
+   {
+    "label": "The hub",
+    "url": "https://quickplay-studio.github.io/quickplay-autopilot/hub.html"
+   },
+   {
+    "label": "Issue #37 (the clip numbers)",
+    "url": "https://github.com/quickplay-studio/quickplay-autopilot/issues/37"
+   }
+  ],
+  "added": "2026-10-26",
+  "due": "2026-11-08",
+  "done": false,
+  "short": "Clipping decision"
+ },
+ {
   "id": "cloudflare-key",
   "title": "Recommended, free: a Cloudflare Workers AI key (about 25 more scripts a day; no card)",
   "why": "26 October: the four channels now share the free writing models. By the afternoon run the strongest free models were out of their daily quota, the writer fell back to the weakest Lite model, and 3 of 8 scripts failed their checks. Free every day with no card (10,000 neurons a day). More free writers means fewer Shorts fall back to Claude, which spends your allowance. The code is ready and both secret names are already allowed.",
@@ -181,32 +214,6 @@
   "check": "secret_works:SAMBANOVA_API_KEY",
   "done": false,
   "note": "SAMBANOVA_API_KEY is not set yet"
- },
- {
-  "id": "facebook-clips-keys",
-  "title": "Optional: Facebook keys for the clips Pages (FB_CLIPS_PAGE_TOKEN, FB_CLIPS_PAGE_ID)",
-  "short": "Clips Facebook keys",
-  "why": "Tonight's batch posted 12 clips to Instagram but none to Facebook: the clips channels have no Facebook Page key in the repository secrets, so Facebook is skipped. Facebook is on a 1-a-day probe for the main channel and gets almost no plays, so this is optional until that probe shows reach.",
-  "steps": [
-   "Only if the Quickplay Clips Facebook Page exists under the studio account: in Meta's Graph API Explorer (signed in as the studio account), get a Page access token for that Page with pages_manage_posts and pages_read_engagement.",
-   "Save it as the repository secret FB_CLIPS_PAGE_TOKEN and the Page id as FB_CLIPS_PAGE_ID (both are already on the identity allowlist).",
-   "Nothing else: the next 19:00 UK batch posts the day's clips to the Page too (social_per_day 6)."
-  ],
-  "links": [
-   {
-    "label": "Graph API Explorer",
-    "url": "https://developers.facebook.com/tools/explorer/"
-   },
-   {
-    "label": "Repository secrets",
-    "url": "https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions"
-   }
-  ],
-  "added": "2026-10-24",
-  "due": "",
-  "done": false,
-  "check": "secret_works:FB_CLIPS_PAGE_TOKEN",
-  "note": "not set up"
  },
  {
   "id": "anthropic-api-key",

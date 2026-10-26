@@ -280,10 +280,13 @@ def reach_alert():
     """Clips that YouTube shows to nobody (clips/reach.json, from the nightly clip stats): one issue naming the channels where
     8 or more clips a day old have 70% with no views or under 5 views a clip, or where YouTube rejected, blocked or
     age-restricted clips,
-    with what to look at in Studio. Closed again once every channel is seen. (24 October: 34 clips, 11 views.)"""
+    with what to look at in Studio. Closed again once every channel is seen. (24 October: 34 clips, 11 views.) Closed while
+    clipping is paused: the clip stats stop, so the issue would stay open on old numbers."""
+    title = "📉 YouTube is showing the clips to almost nobody"
+    if clips_paused():
+        clear(title, f"Clipping is paused since {clips_paused()} (config.json clips_paused); the clip channels post original Shorts."); return
     try: r = json.loads((ROOT / "clips" / "reach.json").read_text())
     except Exception: return
-    title = "📉 YouTube is showing the clips to almost nobody"
     bad = {ch: c for ch, c in (r.get("channels") or {}).items()
            if c.get("unseen") or c.get("rejected") or c.get("blocked") or c.get("age_restricted") or c.get("for_kids")}
     if not bad: clear(title, f"Clips are being seen again ({r.get('as_of')})."); return

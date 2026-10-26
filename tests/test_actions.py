@@ -180,6 +180,8 @@ _ctx.keys[0].update(status="ok", detail="the Page accepts the key"); assert AC.s
 A = Stub(scan=[])
 get = getter({"mistral": R(200, {}), "sambanova": R(401, {})})
 vrows = [vrow("a"), vrow("b")]
+# the live items already carry their issues, so a live run makes only the new ones; here every item starts without one
+cap = AC.MAX_NEW; AC.MAX_NEW = max(cap, len([x for x in real if not x.get("check")]))
 r = AC.run(NOW, {"MISTRAL_API_KEY": "m", "SAMBANOVA_API_KEY": "s"}, get, A, work, True, vrows, cfg)
 after = {a["id"]: a for a in json.loads(work.read_text())}
 assert after["mistral-key"]["done"] is True and after["mistral-key"]["done_by"] == "check" and after["mistral-key"]["done_at"] == "2026-10-24T20:20+00:00", after["mistral-key"]
@@ -214,6 +216,11 @@ assert after["mistral-key"]["done"] is False and "done_at" not in after["mistral
 AC.run(NOW + DAY + dt.timedelta(hours=-8), {"MISTRAL_API_KEY": "m", "SAMBANOVA_API_KEY": "s"}, get2, A, work, True, [vrow("n1", at="2026-10-25 19:00")], cfg)
 after = {a["id"]: a for a in json.loads(work.read_text())}
 assert after["mac-vyro"]["done"] is False and "done_at" not in after["mac-vyro"], after["mac-vyro"]
+# the cap: one run makes at most MAX_NEW issues, the rest wait for the next run
+AC.MAX_NEW = 2; w2 = SCRATCH / "capped.json"; w2.write_text(json.dumps(real, indent=1, ensure_ascii=False) + "\n"); A2 = Stub(scan=[])
+AC.run(NOW, {"MISTRAL_API_KEY": "m", "SAMBANOVA_API_KEY": "s"}, get, A2, w2, True, vrows, cfg)
+assert len([x for x in A2.log if x[0] == "raise"]) == 2, A2.log
+AC.MAX_NEW = cap
 print("6 whole run ok")
 
 # 7. the file stays a list the hub reads: required fields, dates, no en or em dashes, ids unique; written the way it was

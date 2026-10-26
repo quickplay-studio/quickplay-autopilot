@@ -79,7 +79,8 @@
   "added": "2026-10-26",
   "due": "2026-11-08",
   "done": false,
-  "short": "Clipping decision"
+  "short": "Clipping decision",
+  "issue": 49
  },
  {
   "id": "cloudflare-key",

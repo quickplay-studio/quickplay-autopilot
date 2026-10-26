@@ -1,26 +1,6 @@
 {
- "date": "2026-10-25",
+ "date": "2026-10-26",
  "previous": {
-  "albums_gb": [
-   "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
-   "The Art of Loving by Olivia Dean",
-   "FUDGE by Michael Kiwanuka",
-   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys"
-  ],
-  "apps_gb": [
-   "Lloyds Mobile Banking",
-   "InPost UK",
-   "ChatGPT",
-   "Whatnot: Shop, Sell, Connect",
-   "ASDA",
-   "CrownCards - Trading Cards",
-   "Vinted: Shop & sell pre-loved",
-   "Claude by Anthropic",
-   "Uber: Rides, eats, and more"
-  ],
-  "albums_us": []
- },
- "lists": {
   "albums_gb": [
    "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
    "The Art of Loving by Olivia Dean",
@@ -39,6 +19,15 @@
    "Vinted: Shop & sell pre-loved",
    "CrownCards - Trading Cards",
    "StoryReel: Drama Shorts & TV"
+  ]
+ },
+ "lists": {
+  "albums_gb": [
+   "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
+   "The Art of Loving by Olivia Dean",
+   "To Fall Asleep To by Rain Sounds",
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
+   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys"
   ]
  }
 }

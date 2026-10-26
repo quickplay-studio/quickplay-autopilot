@@ -1,10 +1,6 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: 2 verified, 1 one-source, 4 pages
-GTA 6 price: 1 verified, 6 one-source, 4 pages
-GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
-The Hunger Games: Sunrise on the Reaping: 10 verified, 0 one-source, 3 pages
-UFC 333: 0 verified, 5 one-source, 1 pages
-mongolia: 1 verified, 0 one-source, 3 pages
-covered recently, no pack: Clayface (film); 2026 United States Grand Prix; Ballon d'Or 2026; blue planet 3 release date; Mortimer and Whitehouse: Gone Fishing
-6 packs, 14 verified facts, 12 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 7, "groq:openai/gpt-oss-120b": 4}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}
+Halloween 2026: 0 verified, 5 one-source, 4 pages
+FC BARCELONA 1: 2 verified, 5 one-source, 4 pages
+covered recently, no pack: GTA 6; Ballon d'Or 2026; Clayface (film); the cure by Olivia Rodrigo; LISA; 2026 United States Grand Prix; xbox fifty new games release; The Hunger Games: Sunrise on the Reaping
+2 packs, 2 verified facts, 10 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 3, "groq:openai/gpt-oss-120b": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}

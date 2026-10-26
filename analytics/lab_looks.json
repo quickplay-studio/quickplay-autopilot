@@ -89,9 +89,17 @@
    "lab-opening-1019": {
     "desc": "the picture alone for 1 word, then the hook's card",
     "reveal_word": 1,
-    "lab": true,
+    "lab": false,
     "parent": "graphic_first",
-    "born": "2026-10-19"
+    "born": "2026-10-19",
+    "kept": "2026-10-26"
+   },
+   "lab-opening-1026": {
+    "desc": "the picture alone for 3 words, then the hook's card",
+    "reveal_word": 3,
+    "lab": true,
+    "parent": "image_first",
+    "born": "2026-10-26"
    }
   }
  },
@@ -215,7 +223,19 @@
    "dimension": "grade",
    "change": "retired cinematic",
    "why": "1.02x against 1.30x for natural over 29 Shorts"
+  },
+  {
+   "day": "2026-10-26",
+   "dimension": "opening",
+   "change": "kept lab-opening-1019: the picture alone for 1 word, then the hook's card",
+   "why": "1.14x against 1.06x for graphic_first over 8 Shorts"
+  },
+  {
+   "day": "2026-10-26",
+   "dimension": "opening",
+   "change": "testing lab-opening-1026: the picture alone for 3 words, then the hook's card",
+   "why": "one or two settings changed from the best so far, image_first"
   }
  ],
- "day": "2026-10-25"
+ "day": "2026-10-26"
 }

@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Mon 26 Oct | 3 public, 6 scheduled | 4 | 1 | ⏳ 3 of 15 so far, 6 more scheduled |
+| Mon 26 Oct | 6 public, 3 scheduled | 4 | 1 | ⏳ 6 of 15 so far, 3 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -106,17 +106,17 @@ scheduled · 30 s · music: stake-out · [script](../boards/done/QD-179.json) ·
 ![QD-179](QD-179.jpg)
 
 ### Mon 26 Oct 13:00 · GTA 6: digital only at $79.99 🎮
-scheduled · 40 s · music: sixseven · [script](../boards/done/QD-185.json) · [YouTube](https://youtube.com/shorts/NDbDMJxPXQk)
+private · 40 s · music: sixseven · [script](../boards/done/QD-185.json) · [YouTube](https://youtube.com/shorts/NDbDMJxPXQk)
 
 ![QD-185](QD-185.jpg)
 
 ### Mon 26 Oct 12:30 · The Hunger Games: 2026 release date (Part 1)
-scheduled · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
+private · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
 
 ![QD-178](QD-178.jpg)
 
 ### Mon 26 Oct 12:00 · Arkane Lyon faces closure by November 🚨
-scheduled · 29 s · music: twin-lynches · [script](../boards/done/QD-184.json) · [YouTube](https://youtube.com/shorts/HnPSGTsa258)
+private · 29 s · music: twin-lynches · [script](../boards/done/QD-184.json) · [YouTube](https://youtube.com/shorts/HnPSGTsa258)
 
 ![QD-184](QD-184.jpg)
 

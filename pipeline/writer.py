@@ -727,12 +727,16 @@ def trend_share():
     return 0.5 if lift is None else min(0.75, max(0.25, 0.5 * lift))
 
 
-def evergreen_packs(kinds, seen, trending=(), cats=None):
+def evergreen_packs(kinds, seen, trending=(), cats=None, lane=""):
     """Fact packs for evergreen Shorts of the given kinds in the best categories, each from one Wikipedia article whose
     quotes are checked word for word (factpack.verify), like the news packs. `trending`: the day's trending subjects
     (topic names): a share of the ideas (trend_share) are top 10s and true stories that ride them. `cats`: the categories
-    to stay inside (another channel's lanes, extra_channel_boards); None picks the main channel's best ones."""
+    to stay inside (another channel's lanes, extra_channel_boards); None picks the main channel's best ones. `lane`: that
+    channel's brief (26 October: with no Gaming news the gaming channel was given "Highest Grossing Films" and the IRL channel
+    "Best-Selling Games", as the main channel's search terms pulled the ideas off the lane): the plan is told the lane, and an
+    idea whose category is outside `cats` is dropped."""
     up = boosts()
+    cats_given = [c for c in cats if c] if cats else None
     cats = [c for c in cats if c] if cats else [c for c in sorted(CATS, key=lambda c: -up.get(c, 0)) if up.get(c, 0) > STOP] or list(CATS)
     recent = "; ".join(t for t, _, _ in seen[-60:])[:1500]
     want = {k: kinds.count(k) for k in set(kinds)}
@@ -744,14 +748,20 @@ def evergreen_packs(kinds, seen, trending=(), cats=None):
     if terms: tr += SEARCH_ASK.format(terms="; ".join(terms))
     sh = category_shares()
     named = ", ".join(f"{c} (about {round(100 * sh[c])}% of the ideas)" if c in sh else c for c in cats)
-    ans, _ = factpack.gemini(EVERGREEN_PLAN.format(n=len(kinds) + 2, kinds=ask, cats=named, recent=recent, trending=tr), None,
-                             timeout=100, temperature=0.8)
+    cats_in = list(cats_given or []); lanes = bool(cats_in)
+    plan_text = EVERGREEN_PLAN.format(n=len(kinds) + (4 if lanes else 2), kinds=ask, cats=named, recent=recent, trending=tr)
+    if lanes:
+        plan_text += (f"\nThis is for a channel that covers only {', '.join(cats_in)}. {lane} Every idea must be about that subject "
+                      f"itself (a film list is not Gaming, a video game is not Entertainment), and its category one of: {', '.join(cats_in)}.")
+    ans, _ = factpack.gemini(plan_text, None, timeout=100, temperature=0.8)
     items = ans.get("items") if isinstance(ans, dict) else None
     packs = []
     for it in items or []:
         if not any(v > 0 for v in want.values()) or factpack.STATE.get("spent"): break
         kind = {v: k for k, v in names.items()}.get(str(it.get("kind") or "").lower().strip(), "")
         if want.get(kind, 0) <= 0: continue
+        if lanes and str(it.get("category") or "").strip() not in cats_in:
+            print(f"evergreen: off the lane ({it.get('category')}): {str(it.get('idea') or '')[:80]}"); continue
         q, title = str(it.get("idea") or it.get("question") or "").strip(), str(it.get("wikipedia") or "").strip()
         if not q or not title: continue
         url = "https://en.wikipedia.org/wiki/" + urllib.parse.quote(title.replace(" ", "_"))
@@ -1637,7 +1647,8 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             if covered(p, [about(b) for b in made]): continue
             write(p, "news")
         if not stop():                                            # the places the news left: evergreen Shorts in the channel's own subjects
-            try: ever = evergreen_packs(pick_kinds(want - len(made)), own + mine + [about(b) for b in made], cats=c["categories"])
+            try: ever = evergreen_packs(pick_kinds(want - len(made)), own + mine + [about(b) for b in made], cats=c["categories"],
+                                   lane=str(c.get("brief") or ""))
             except Exception as e: ever = []; print(f"channel {ch}: evergreen:", f"{type(e).__name__}: {e}"[:200])
             for p in ever:
                 if stop(): break

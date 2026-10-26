@@ -162,5 +162,17 @@
   "publish_at": "2026-10-26T15:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-180"
+ "social_release": "social-QD-180",
+ "instagram": {
+  "media": "18502264681096436",
+  "at": "2026-10-26T15:39:09+00:00",
+  "caption": "full",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "explore",
+  "hour": "any",
+  "favoured": false,
+  "hour_uk": 15
+ }
 }

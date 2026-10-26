@@ -109,5 +109,7 @@
    "views_an_hour": 0.1,
    "typical": 0.7
   }
- }
+ },
+ "instagram_skipped": "public over 48 hours before Instagram had room",
+ "facebook_skipped": "public over 48 hours before Facebook had room"
 }

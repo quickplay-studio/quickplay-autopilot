@@ -1,0 +1,67 @@
+name: evolve
+# The self-evolving test round (pipeline/evolve.py, 26 October): reads analytics/round.csv, retires settled contests (a winner
+# becomes a champion, a factor with no winner waits to be retested), opens new ones (an untried arm, a retest, a writing
+# instruction, a refinement of an adopted instruction) and adopts or rejects the writing instructions, so the round stays full
+# without a Claude session. The proposals are the complex step: one Claude call a run (config evolve.model, evolve.claude_calls_per_run;
+# the API with ANTHROPIC_API_KEY first, else the CLI with CLAUDE_CODE_OAUTH_TOKEN), the free models (factpack.gemini) only when
+# Claude returns nothing. Runs at 07:23 UTC, before the 08:10 trends run and the write run that follows it, on Run workflow, and
+# on a push of requests/evolve*. Turn it off with "evolve": {"on": false} in config.json.
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  push:
+    branches: [main]
+    paths: ['requests/evolve*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: evolve
+  cancel-in-progress: false
+
+jobs:
+  evolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.13' }
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests tzdata
+      - name: Claude Code CLI (used for the proposals, only with the CLAUDE_CODE_OAUTH_TOKEN secret)
+        env: { HAS_CLAUDE: "${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' && '1' || '' }}" }
+        run: |
+          [ "$HAS_CLAUDE" = "1" ] || { echo "no CLAUDE_CODE_OAUTH_TOKEN secret: Claude is left out of the chain"; exit 0; }
+          # pinned (24 October): the docs say --bare will become -p's default and ignores OAuth sign-ins, so an unpinned newest CLI could
+          # one day leave CLAUDE_CODE_OAUTH_TOKEN unused; 2.1.302 was published 16 October (over 7 days ago, the supply-chain rule)
+          npm install -g @anthropic-ai/claude-code@2.1.302 --before="$(date -u -d '7 days ago' +%Y-%m-%d)" >/dev/null 2>&1 && claude --version || echo "Claude CLI not installed"
+      - name: Evolve
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CEREBRAS_API_KEY: ${{ secrets.CEREBRAS_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # Charlie's monthly API credits: used before the CLI when set (factpack.claude_api)
+        run: python pipeline/evolve.py
+      - name: Save
+        run: |
+          git config user.name "Quickplay Studio"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
+          git add analytics/evolve.json 2>/dev/null || true
+          git add analytics/evolve_log.csv 2>/dev/null || true
+          git add analytics/evolve.md 2>/dev/null || true
+          git add analytics/changes.csv 2>/dev/null || true      # the ledger rows for an adoption or a new champion (pipeline/changes.py)
+          git add status/claude_usage.json 2>/dev/null || true      # the one Claude call's use (factpack.claude_note)
+          git commit -q -m "Evolve $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

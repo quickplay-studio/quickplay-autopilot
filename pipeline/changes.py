@@ -37,7 +37,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 UK = ZoneInfo("Europe/London")
 FIELDS = ["id", "date", "area", "change", "hypothesis", "target", "guardrails", "before_days", "after_days", "check_on",
           "status", "verdict", "result", "by"]
-AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data", "channels", "longform")
+AREAS = ("shorts", "clips", "instagram", "facebook", "tiktok", "writer", "models", "schedule", "quota", "data", "channels", "longform", "learning")
 STATUSES = ("live", "checked", "kept", "reverted")
 AUTO = "analytics (automatic)"
 MIN_N, MOVE, BREAK, GRACE = 5, 0.10, 0.15, 14        # per side; a 10% move counts; a guardrail 15% worse is broken; final after 14 days

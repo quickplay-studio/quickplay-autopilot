@@ -443,7 +443,13 @@ EVEN, WIN_N, EVEN_N = 0.14, 10, 20
 
 
 def assigned(r, f):
-    """The arm a Short was given for a round factor, as the board recorded it (an intention-to-treat comparison)."""
+    """The arm a Short was given for a round factor, as the board recorded it (an intention-to-treat comparison). A gene
+    factor ("gene:g001", pipeline/evolve.py) is read from the row's "genes" cell: "gene:g001=b;gene:g002=a"."""
+    if f.startswith("gene:"):
+        for part in str(r.get("genes") or "").split(";"):
+            k, _, v = part.partition("=")
+            if k.strip() == f: return v.strip()
+        return ""
     return (r.get("arm_hook_type") if f == "hook_type" else r.get("arm_length") if f == "length" else r.get(f)) or ""
 
 
@@ -487,15 +493,18 @@ def _slope(rows, f, arm_b, others):
     return beta, math.sqrt(sse / df / sdd), df
 
 
-def round_verdicts(rows, factors, start, per_arm=70, name="round"):
+def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None):
     """Rows for analytics/round.csv, one per round factor ({factor: [arm_a, arm_b]}): the Shorts posted from `start` (a UK
-    date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above)."""
+    date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above). `starts`
+    ({factor: UK date}, evolve.py, 26 October): a contest that began later than the round judges only the Shorts from its
+    own start, so a new contest never inherits the Shorts of the one it replaced."""
     pool = [r for r in rows if r.get("rel") not in (None, "") and uk_day(r) >= str(start)]
     out = []
     for f, arms_ in factors.items():
         if len(arms_) != 2: continue
         a, b = arms_
-        grp = [r for r in pool if assigned(r, f) in (a, b)]
+        own = max(str(start), str((starts or {}).get(f) or start))
+        grp = [r for r in pool if assigned(r, f) in (a, b) and (own == str(start) or uk_day(r) >= own)]
         na, nb = sum(assigned(r, f) == a for r in grp), sum(assigned(r, f) == b for r in grp)
         row = {"round": name, "factor": f, "arm_a": a, "arm_b": b, "n_a": na, "n_b": nb, "effect": "", "low": "", "high": "",
                "halves": "", "verdict": "too few to tell", "winner": "", "leaning": "", "why": ""}

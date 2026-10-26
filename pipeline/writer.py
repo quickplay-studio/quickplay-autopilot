@@ -16,6 +16,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
 import background as BG, factpack, validate
 import subscribe as SUB           # the subscriber push (25 October): the spoken-line arm and its note
+import evolve as EV               # the self-evolving round (26 October): live contests, champions, genes (standard library)
 
 CFG = json.loads((ROOT / "config.json").read_text())
 UK = ZoneInfo("Europe/London")
@@ -957,19 +958,27 @@ def _csv(name):
 
 
 def round_results():
-    """{factor: analytics/round.csv row}: the round's adjusted verdicts (drivers.round_verdicts), every channel pooled."""
-    return {r.get("factor"): r for r in _csv("round.csv") if r.get("factor")}
+    """{factor: analytics/round.csv row}: the round's adjusted verdicts (drivers.round_verdicts), every channel pooled. With
+    the self-evolving round on (evolve.py), a row for a live contest counts only when its arms are the contest's own: the
+    file lags a day behind a new contest, and the old contest's verdict must not close it."""
+    rows = {r.get("factor"): r for r in _csv("round.csv") if r.get("factor")}
+    if not EV.on(CFG): return rows
+    live = EV.live_round(CFG).get("factors") or {}
+    return {f: r for f, r in rows.items() if f not in live or [r.get("arm_a"), r.get("arm_b")] == list(live[f])}
 
 
 def settled():
     """The round's factors the data has closed without a winner ("even", or "no clear difference" at per_arm a side): they
-    leave the round and the open-test rotation, so the Shorts go to the factors still undecided (26 October)."""
-    return {f for f, r in round_results().items() if r.get("verdict") in ("even", "no clear difference")}
+    leave the round and the open-test rotation, so the Shorts go to the factors still undecided (26 October). With the
+    self-evolving round on, also the factors evolve.py has retired that way and not yet retested."""
+    out = {f for f, r in round_results().items() if r.get("verdict") in ("even", "no clear difference")}
+    return out | EV.settled_factors() if EV.on(CFG) else out
 
 
 def winners(channel=None):
-    """{test: arm} for each test where the data has a clear winner: drivers.csv's "push" above typical, then the round's
-    adjusted winner (round.csv), which is the stronger proof. One model for every channel (26 October): a `channel` takes
+    """{test: arm} for each test where the data has a clear winner: drivers.csv's "push" above typical, then the self-evolving
+    round's champions (analytics/evolve.json, when config evolve.on), then the round's adjusted winner (round.csv), which is
+    the stronger proof. One model for every channel (26 October): a `channel` takes
     the pooled winners, then its own exceptions (analytics/channel_drivers.csv, 10 or more of its own Shorts and its own
     proof): "push here" makes that arm its winner, "cut back here" drops a winner that is the cut choice."""
     out = {}
@@ -978,6 +987,9 @@ def winners(channel=None):
         except ValueError: continue
         f, v = r.get("feature"), r.get("value")
         if f in TESTS and v in TESTS[f] and r.get("verdict") == "push" and lift > 1: out.setdefault(f, v)
+    if EV.on(CFG):
+        for f, a in EV.champions().items():
+            if f in TESTS and a in TESTS[f]: out[f] = a
     for f, r in round_results().items():
         if f in TESTS and r.get("verdict") == "winner" and r.get("winner") in TESTS[f]: out[f] = r["winner"]
     if channel and channel != "main":
@@ -998,7 +1010,9 @@ def channel_tests(tests, c):
 
 
 def arms(t):
-    """The arms of a test still worth making: a "stop" arm (drivers.py) is left out for good."""
+    """The arms of a test still worth making: a "stop" arm (drivers.py) is left out for good. A gene factor (evolve.py) has
+    the two arms "a" and "b"."""
+    if EV.is_gene(t): return ["a", "b"]
     return [a for a in TESTS[t] if a not in stopped().get(t, ())] or list(TESTS[t])
 
 
@@ -1007,12 +1021,16 @@ def test_round(today=None):
     before its start. Every Short in the round gets an arm of EVERY factor, each drawn 50/50 on its own (data report,
     24 October: one test in turn gave each arm well under a Short a day, so nothing settled; four independent 50/50
     factors give each arm about 7 a day at 15 Shorts, and a 2x difference shows at about 70 Shorts an arm)."""
-    r = CFG.get("test_round") or {}
+    r = EV.live_round(CFG)          # the self-evolving round when config evolve.on and analytics/evolve.json has one, else "test_round"
     today = today or NOW.astimezone(UK).date()
     try:
         if not r.get("factors") or today < dt.date.fromisoformat(str(r.get("start"))): return {}
     except ValueError: return {}
-    return {**r, "factors": {f: [a for a in arms_ if a in TESTS.get(f, {})] for f, arms_ in r["factors"].items() if f in TESTS}}
+    out = {f: [a for a in arms_ if a in TESTS.get(f, {})] for f, arms_ in r["factors"].items() if f in TESTS}
+    if EV.on(CFG):          # a live writing-instruction contest (a gene, evolve.py): arms "a" and "b", only while its record exists
+        known = EV.genes()
+        out.update({f: ["a", "b"] for f in r["factors"] if EV.is_gene(f) and EV.gene_id(f) in known})
+    return {**r, "factors": out}
 
 
 def test_plan(k, kind="news", explore=False, today=None, channel=None):
@@ -1021,22 +1039,29 @@ def test_plan(k, kind="news", explore=False, today=None, channel=None):
     winner's factor still challenged on every RETEST-th Short; a factor the round has settled even is left out); one
     other open test in turn; and the comment-replies test on alternate Shorts. An exploration Short (explore_due) draws
     every test's arm evenly instead, cut-back arms included, paused ones not, so a verdict can always be overturned.
-    Returns (the note for the prompt, {test: arm} recorded on the board for analytics, with "explore" and the round's
-    name)."""
+    With the self-evolving round on (config evolve.on, evolve.py, 26 October) every live contest is drawn 50/50 on every
+    Short, a champion's included (the champion is one of the contest's arms, so the RETEST skip does not apply), and a live
+    gene contest ("gene:g001": a writing instruction against none, or against its parent) rides on every kind of Short,
+    exploration Shorts too. Returns (the note for the prompt, {test: arm} recorded on the board for analytics, with
+    "explore" and the round's name)."""
     done = settled()
     dims = [t for t in TESTS if t not in NOT_FOR.get(kind, ())]
     if explore:
         rng = random.Random(f"explore-arms:{k}")
         picks = {t: rng.choice(arms(t)) for t in dims if t not in FX}
         picks.update(replies=rng.choice(["on", "off"]), explore="yes")
+        for f in test_round(today).get("factors", {}):
+            if EV.is_gene(f): picks[f] = random.Random(f"explore-gene:{f}:{k}").choice(["a", "b"])
         return style_note(picks), picks
     won = {t: a for t, a in winners(channel).items() if t in dims}
     rnd = test_round(today)
-    factors = {f: [a for a in arms_ if a in arms(f)] for f, arms_ in (rnd.get("factors") or {}).items() if f in dims and f not in done}
+    evolving = EV.on(CFG)
+    factors = {f: [a for a in arms_ if a in arms(f)] for f, arms_ in (rnd.get("factors") or {}).items()
+               if (f in dims or EV.is_gene(f)) and f not in done}
     factors = {f: a for f, a in factors.items() if len(a) >= 2}
     picks = dict(won)
     for f, options in factors.items():               # the round: every factor, 50/50, independent of the others
-        if f in won and k % RETEST: continue          # a settled factor keeps its winner, challenged 1 Short in RETEST
+        if f in won and k % RETEST and not evolving: continue     # a settled factor keeps its winner, challenged 1 Short in RETEST
         picks[f] = random.Random(f"{rnd.get('name', 'round')}:{f}:{k}").choice(options)
     still = [t for t in dims if t not in won and t not in factors and t not in done]
     others = [t for t in won if t not in factors]
@@ -1119,7 +1144,11 @@ def sub_note(p, kind, tests, note="", reserve=False):
 
 
 def style_note(picks):
-    note = " ".join(src[t][a] for t, a in picks.items() for src in (TESTS, TITLE_TESTS) if t in src and src[t].get(a))
+    """The style line for the prompt: each picked arm's text, then (evolve on) each picked gene arm's instruction and every
+    adopted gene's, the adopted one of a lineage under contest in these picks giving way to the arm's text (evolve.style_texts)."""
+    parts = [src[t][a] for t, a in picks.items() for src in (TESTS, TITLE_TESTS) if t in src and src[t].get(a)]
+    if EV.on(CFG): parts += EV.style_texts(picks)
+    note = " ".join(parts)
     return f"STYLE FOR THIS SHORT: {note}" if note else ""
 
 

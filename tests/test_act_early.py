@@ -56,7 +56,7 @@ assert ids == ["QD-030", "QD-002"], ids               # QD-002 is the first foll
 print("2 follow-up guards ok")
 
 # 3. the factorial round
-W.CFG = {**W.CFG, "test_round": {"name": "round 1", "start": "2026-10-25", "per_arm": 70,
+W.CFG = {**W.CFG, "evolve": {"on": False}, "test_round": {"name": "round 1", "start": "2026-10-25", "per_arm": 70,      # fixed round (evolve off, 26 October)
                                  "factors": {"hook_type": ["statement", "number"], "length": ["25 to 34 s", "35 to 44 s"],
                                              "title_search": ["search phrase", "curiosity"], "first_frame": ["cover", "photo"]}}}
 (A.OUT / "drivers.csv").write_text("feature,feature_label,value,n,lift,median_rel,verdict,why\n")

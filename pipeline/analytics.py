@@ -27,6 +27,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
+import evolve as EV            # the self-evolving round (26 October): the live round, gene labels, the genes column (standard library)
 OUT = ROOT / "analytics"
 CFG = json.loads((ROOT / "config.json").read_text())
 CACHE = OUT / "cache"          # the last full run's YouTube Analytics and Instagram insights, reused by fast runs
@@ -132,7 +133,7 @@ def our_shorts():
             # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
             **{k: ((b.get("test") or {}).get(t, "") if isinstance(b.get("test"), dict) else "")
                for k, t in (("arm_hook_type", "hook_type"), ("arm_length", "length"), ("title_answer", "title_answer"))},
-            "hook_named": hook_named(b), **opening_scores(st),
+            "hook_named": hook_named(b), "genes": EV.genes_column(b.get("test")), **opening_scores(st),
             "words": sum(len(bt.get("say", "").split()) for bt in beats), "seconds": (st.get("qa") or {}).get("duration"),
             "hashtags": len((b.get("meta") or {}).get("hashtags") or []),
             "instagram_media": (st.get("instagram") or {}).get("media"), "tiktok": bool(st.get("tiktok")), **ig_tests(st),
@@ -809,6 +810,7 @@ def main():
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
             "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
+            "genes": o.get("genes", ""),        # the live writing-instruction contests and the arm given: "gene:g001=b;gene:g002=a" (evolve.py)
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
             "yt_views": s.get("views", 0), "yt_likes": s.get("likes", 0), "yt_comments": s.get("comments", 0),
             "yt_engaged_views": a.get("engagedViews", ""), "yt_avg_viewed_pct": round(a["averageViewPercentage"], 1) if a.get("averageViewPercentage") is not None else "",
@@ -981,7 +983,7 @@ def main():
         except Exception as e: print("channel drivers:", str(e)[:150])
         try:        # the round's adjusted verdicts (drivers.round_verdicts): winner, even, no clear difference or running
             rf, r_start, r_per, r_name = round_factors()
-            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name), DRV.ROUND_FIELDS)
+            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name, starts=round_starts()), DRV.ROUND_FIELDS)
             else: (OUT / "round.csv").unlink(missing_ok=True)
         except Exception as e: print("round verdicts:", str(e)[:150])
         sub_table, sub_sum = [], {}
@@ -1154,7 +1156,7 @@ def round_factors():
     """What the round judges (26 October): config test_round's factors, the writer-model test, the title tests, the
     subscribe line and the comment replies, each a 50/50 arm on every Short of every channel. Returns ({factor: [arm_a,
     arm_b]}, start, per_arm, name), or ({}, "", 70, "") with no round."""
-    rnd = CFG.get("test_round") or {}
+    rnd = EV.live_round(CFG)          # the evolving round when config evolve.on and analytics/evolve.json has one (evolve.py), else config's
     if not rnd.get("factors") or not rnd.get("start"): return {}, "", 70, ""
     factors = {f: list(a) for f, a in rnd["factors"].items()}
     wt = CFG.get("writer_test") or {}
@@ -1162,6 +1164,12 @@ def round_factors():
     for f, arms_ in TITLE_FACTORS.items(): factors.setdefault(f, list(arms_))
     factors.setdefault("replies", ["on", "off"])
     return factors, str(rnd["start"]), int(rnd.get("per_arm", 70)), rnd.get("name", "round")
+
+
+def round_starts():
+    """{factor: UK date} the live contests began (evolve.py): drivers.round_verdicts judges each from its own start. {} with the
+    fixed config round."""
+    return {f: str(d) for f, d in (EV.live_round(CFG).get("starts") or {}).items() if d}
 
 
 def test_progress(rows, table, today=None):
@@ -1172,13 +1180,14 @@ def test_progress(rows, table, today=None):
     the side it leans to). A factor settles on any of the first three; a settled factor leaves the round (writer.settled).
     Writes analytics/tests.json for the hub; returns lines for insights.md."""
     factors, start, per, name = round_factors()
+    starts = round_starts()
     p = OUT / "tests.json"
     if not factors:
         p.unlink(missing_ok=True); return []
     import drivers as DRV
     today = today or NOW.astimezone(UK).date()
     verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
-    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name)}
+    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name, starts=starts)}
     except Exception as e: rv = {}; print("round verdicts:", str(e)[:150])
     counts = {f: {a: 0 for a in arms} for f, arms in factors.items()}
     followed = {f: [0, 0] for f in counts}            # (Shorts whose arm was used as assigned, Shorts with a used value)
@@ -1190,7 +1199,7 @@ def test_progress(rows, table, today=None):
         if r.get("views_24h") in ("", None): continue
         for f, arms in counts.items():
             a = DRV.assigned(r, f)
-            if a not in arms: continue
+            if a not in arms or day < starts.get(f, start): continue          # a contest counts from its own start (evolve.py)
             arms[a] += 1
             # what the Short actually did, against the arm it was given: the look (fx_used: "lab" is the lab's option of
             # the day), the hook as written (drivers.hook_type), the length it ran to (content review, 24 October)
@@ -1210,7 +1219,7 @@ def test_progress(rows, table, today=None):
         v = rv.get(f) or {}
         need = max(0, max(per - n for n in arms.values()))
         settled = v.get("verdict") in ("winner", "even", "no clear difference") or need == 0
-        label = FACTOR_LABELS.get(f, f.replace("_", " "))
+        label = EV.gene_label(f) if EV.is_gene(f) else FACTOR_LABELS.get(f, f.replace("_", " "))
         out["factors"][f] = {"arms": {a: {"n": n, "needs": max(0, per - n), "verdict": verdict.get((f, a), "")} for a, n in arms.items()},
                              "settled": settled, "days_left": 0 if settled else math.ceil(need / rate), "label": label,
                              **{k: v.get(k, "") for k in ("verdict", "effect", "low", "high", "halves", "winner", "leaning", "why")}}

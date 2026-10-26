@@ -51,11 +51,12 @@ def _gh(*args):
 
 def main(dry=False):
     now = dt.datetime.now(dt.timezone.utc)
-    started = 0
+    started, listed = 0, 0
     for wf in [*SLOTS, *GAPS]:
         if not (ROOT / ".github" / "workflows" / wf).exists(): continue
         p = _gh("run", "list", "-w", wf, "-L", "5", "--json", "createdAt,status")
         if p.returncode: print(f"{wf}: cannot list runs: {p.stderr.strip()[:150]}"); continue
+        listed += 1
         why = overdue(wf, now, json.loads(p.stdout or "[]"))
         if not why: print(f"{wf}: fine"); continue
         if dry: print(f"{wf}: would start ({why})"); continue
@@ -63,6 +64,7 @@ def main(dry=False):
         print(f"{wf}: started ({why})" if q.returncode == 0 else f"{wf}: could not start: {q.stderr.strip()[:150]}")
         started += q.returncode == 0
     print(f"watchdog: {started} started")
+    if not listed: raise SystemExit("watchdog: could not list any workflow's runs")     # fail the run, so it shows on GitHub
 
 
 if __name__ == "__main__":

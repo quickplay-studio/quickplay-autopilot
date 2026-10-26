@@ -60,6 +60,7 @@ print("2 channel table ok")
 # 3. the writer reads both
 import writer as W
 W.ROOT = SCRATCH
+W.CFG["evolve"] = {"on": False}      # 26 October: these assert the fixed round; tests/test_evolve.py covers the evolving one
 (SCRATCH / "analytics").mkdir()
 def put(name, fields, items):
     with (SCRATCH / "analytics" / name).open("w", newline="") as fh:

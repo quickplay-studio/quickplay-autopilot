@@ -37,6 +37,11 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   differ only with 10+ of its own Shorts proving it.
   trend.py (26 October) watches the absolute numbers week on week and how many Shorts followed the rulings (insights.md "Is
   the channel getting better"); alerts.py opens an issue when retention falls or the recipe stops refreshing.
+- evolve.yml (07:23 UTC, 26 October): pipeline/evolve.py keeps the test round full by itself. It retires settled contests (a
+  winner becomes a champion, analytics/evolve.json), opens new ones by Thompson sampling on each source's record (an untried
+  arm, a retest, a "gene": a writing instruction, or a refinement of an adopted one) and adopts a winning gene into the recipe.
+  The proposals are its one complex step: one Claude call a run (opus), free models only if it returns nothing. config.json
+  "evolve" holds the limits ("on": false restores the fixed test_round); analytics/evolve.md is the summary.
 - Freshness gate (pipeline/freshness.py): a time-sensitive Short goes out after its day only with evidence its story is
   alive, else boards/expired; a clip or submission over 30 hours late needs heat or views (analytics/late_uploads.csv).
 - Watchlist (config.json "watchlist", watch.py): dated events get places in their build-up and launch week, at most

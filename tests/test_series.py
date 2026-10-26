@@ -361,12 +361,13 @@ def fake(prompt, schema=None, timeout=100, temperature=0.1, lite=False, **kw):
 
 
 F.gemini = fake
-dd = json.loads(F.OUT.read_text()); dd["mode"] = "full"
-PACK = json.loads(json.dumps(dd["topics"][0])); dd["topics"] = []                   # no news: the search-led Shorts are the run
-PACK.setdefault("sources", [["Test source", "https://example.org/test", "A test page", "2026-10-25"]])     # the live pack can lack what the writer reads
-if len(PACK.get("verified") or []) + len(PACK.get("one_source") or []) < 2:          # the live pack can be thin: the writer wants 2 facts
-    PACK["verified"] = (PACK.get("verified") or []) + [{"claim": "Fact one for the test", "sources": [1]}, {"claim": "Fact two for the test", "sources": [1]}]
-F.OUT = SCRATCH / "facts_full.json"; F.OUT.write_text(json.dumps(dd))
+# a fixed fact pack, never the live trends/facts.json: its first pack's fact count decides whether a main term is written as one Short
+# or as two parts (3 facts a part), so 12b broke when the 26 October 15:18 data brought 7 facts where the run before had 1
+dd = {"mode": "full", "run": "", "topics": []}                                       # no news: the search-led Shorts are the run
+PACK = {"n": 1, "topic": "Test topic", "signal": "test", "category": "Gaming", "what_is_new": "", "hooks": ["A test hook"], "images": [],
+        "sources": [["Test source", "https://example.org/test", "A test page", "2026-10-25"]], "one_source": [],
+        "verified": [{"claim": "Fact one for the test", "sources": [1]}, {"claim": "Fact two for the test", "sources": [1]}]}
+F.OUT =SCRATCH / "facts_full.json"; F.OUT.write_text(json.dumps(dd))
 F.page_text = lambda url, wiki=False: (TEXT, "")
 S.own_terms = lambda root=None, n=12: [{"text": "why is minecraft so popular", "source": "our search traffic", "detail": "40 views"}]
 S.suggest = lambda q, gl="GB", get=None, timeout=6: (ASKED.append(q), [f"{q} for kids", "why is the sky blue"])[1]
@@ -375,6 +376,7 @@ W.recent = lambda days=14: []
 W.hot, W.weak = (lambda: []), (lambda: [])
 W.evergreen_packs = lambda *a, **k: []
 W.angles = lambda topic: []                  # the YouTube search for angles: never from a test
+W.suggestions = lambda topic: []             # Google's search suggestions (suggestqueries.google.com): never from a test
 FAKE_DAY = dt.date(2031, 3, 4)
 W.plan = lambda breaking=False, hint="": ("afternoon", FAKE_DAY, 6)
 first = {n: S.next_number(n) for n in ("Game Explained", "Science Explained")}

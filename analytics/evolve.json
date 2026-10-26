@@ -12,9 +12,9 @@
    "label": "Famous name as first words",
    "lineage": "g001",
    "parent": "",
-   "status": "live",
+   "status": "retired",
    "text": "Open with the full name of the best-known person, band, game or brand in the fact pack as the very first words of the script, before any number, question or setup.",
-   "why": "Every top Short starts with a recognisable name (The Beatles, Jenna Ortega, Taylor Swift), while flops open with vague teasers like 'You've seen her on screen' or generic topics like octopus blood."
+   "why": "Every top Short starts with a recognisable name (The Beatles, Jenna Ortega, Taylor Swift), while flops open with vague teasers like 'You've seen her on screen' or generic topics like octopus blood. Retired unused on 26 October: it is about the opening line, which the hook test covers."
   },
   "g002": {
    "a_text": "",
@@ -26,9 +26,9 @@
    "label": "Headline number in sentence one",
    "lineage": "g002",
    "parent": "",
-   "status": "live",
+   "status": "retired",
    "text": "Put the single most striking number from the fact pack (a time, size, age, rank or count) in the first sentence, attached to what it measures.",
-   "why": "Top Shorts open with a concrete figure like twelve hours, 27 GB, age 13 or number one, while weak openers such as the Moon and K/DA teasers bury or lack one."
+   "why": "Top Shorts open with a concrete figure like twelve hours, 27 GB, age 13 or number one, while weak openers such as the Moon and K/DA teasers bury or lack one. Retired unused on 26 October: it is about the opening line, which the hook test covers."
   }
  },
  "history": [],
@@ -66,14 +66,6 @@
     "06:00 to 12:00",
     "12:00 to 18:00"
    ],
-   "gene:g001": [
-    "a",
-    "b"
-   ],
-   "gene:g002": [
-    "a",
-    "b"
-   ],
    "hook_type": [
     "statement",
     "number"
@@ -97,8 +89,6 @@
    "fx_grade": "round 1",
    "fx_opening": "round 1",
    "fx_slot": "round 1",
-   "gene:g001": "gene",
-   "gene:g002": "gene",
    "hook_type": "round 1",
    "length": "round 1",
    "title_search": "round 1"
@@ -114,8 +104,6 @@
    "fx_grade": "2026-10-25",
    "fx_opening": "2026-10-25",
    "fx_slot": "2026-10-25",
-   "gene:g001": "2026-10-26",
-   "gene:g002": "2026-10-26",
    "hook_type": "2026-10-25",
    "length": "2026-10-25",
    "title_search": "2026-10-25"

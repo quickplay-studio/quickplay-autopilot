@@ -508,4 +508,12 @@ assert EV.main(["--dry"]) == 0 and not (AN / "evolve.json").exists() and not (AN
 (SCRATCH / "config.json").write_text(json.dumps({**CFG, "evolve": {**EVC, "on": False}}))
 assert EV.main([]) == 0 and not (AN / "evolve.json").exists()                                              # off: nothing happens
 print("7 analytics, ledger and main ok")
+# 8. a proposal that restates an arm under test is refused (26 October: Claude's first two restated the hook test)
+_st = {"genes": {}}
+_texts = {"hook_type": {"statement": "Open with a plain statement of the news, naming the best-known person, band or team first (the game or title when there is none)."}}
+_pick, _why = EV.pick_proposal([{"label": "x", "text": "Open with a plain statement of the news, naming the best-known person, band or team first.", "why": ""}], _st, _texts)
+assert _pick is None and _why, _why
+_pick, _ = EV.pick_proposal([{"label": "x", "text": "Name the source of each number in the same sentence as the number.", "why": ""}], _st, _texts)
+assert _pick and _pick["text"].startswith("Name the source")
+print("8 overlap with arms under test ok")
 print("evolve ok")

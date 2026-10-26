@@ -510,6 +510,8 @@ def build_prompt(run, kind, parent=None, n=3):
     recipe += [f"- adopted instruction {gid}: {st['genes'][gid]['text']}" for gid in sorted(st["adopted"].values()) if gid in st["genes"]]
     past = [f'- {gid} "{g.get("label", "")}": {g.get("text", "")} ({g.get("status", "")}'
             + (f", {g['effect']}x" if g.get("effect") not in ("", None) else "") + ")" for gid, g in sorted(st["genes"].items())[-40:]]
+    under = [f"- {f}: " + "; ".join(f"{a}: {run.texts[f][a]}" for a in arms if run.texts.get(f, {}).get(a))
+             for f, arms in sorted(st["round"]["factors"].items()) if not is_gene(f) and any(run.texts.get(f, {}).get(a) for a in arms)]
     top, bottom = recent_shorts(run.today)
     brk = breakouts()
     lines = ["You help a fully automated YouTube Shorts channel (Quickplay Daily) improve how its script writer works. The writer "
@@ -517,6 +519,11 @@ def build_prompt(run, kind, parent=None, n=3):
              "Shorts and kept only if it wins.", RULES_FOR_GENES,
              "The recipe in force now (do not repeat any of it):\n" + ("\n".join(recipe) or "- nothing adopted yet"),
              "Instructions already tried, with their verdicts (never repeat or rephrase one):\n" + ("\n".join(past) or "- none yet"),
+             "Already under test: every Short is "
+             "given one arm of each factor below, at random. A new instruction must work alongside ANY of these arms, must not "
+             "contradict one and must not be about the same thing (so never about the form of the opening line, the length or "
+             "the ending, which these cover). Aim at what nothing here covers: the middle beats, the order of the facts, the "
+             "payoff, word choice, pacing, how the source is named, how a number is made vivid.\n" + ("\n".join(under) or "- nothing"),
              "The best Shorts of the last 14 days (views against typical Shorts, 1.0 is typical):\n" + ("\n".join(short_line(*x) for x in top) or "- no data yet"),
              "The weakest Shorts of the last 14 days:\n" + ("\n".join(short_line(*x) for x in bottom) or "- no data yet")]
     if brk:
@@ -547,9 +554,11 @@ def proposals(ans):
     return out
 
 
-def pick_proposal(props, st):
-    """(the first proposal that passes check_gene and is no near duplicate of any gene text, "") or (None, the reasons)."""
+def pick_proposal(props, st, texts=None):
+    """(the first proposal that passes check_gene and is no near duplicate of any gene text or of the writer's arm texts in
+    `texts` ({factor: {arm: text}}), "") or (None, the reasons)."""
     others = [t for g in st["genes"].values() for t in (g.get("text"), g.get("a_text"), g.get("b_text")) if t]
+    others += [t for arms in (texts or {}).values() for t in arms.values() if t]
     why = []
     for p in props:
         text = clean_text(p.get("text"))
@@ -570,7 +579,7 @@ def launch_gene(run, kind, parent=None):
     except Exception as e:
         run.note("skip", source=kind, note=f"no proposal: {str(e)[:120]}")
         return False
-    pick, why = pick_proposal(proposals(ans), run.st)
+    pick, why = pick_proposal(proposals(ans), run.st, run.texts)
     if not pick:
         run.note("skip", source=kind, note=f"no usable proposal ({why})")
         return False

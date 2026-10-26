@@ -377,7 +377,7 @@ def fake_write_one(p, sid, day, head, extra="", kind="news", tests=None):
             "meta": {"title": f"{p['topic']} 🎵", "sources": p["sources"], "hashtags": [], "summary": "s"}}, "fake"
 W.write_one = fake_write_one
 ever_asked = []
-def no_evergreen(kinds, seen, trending=(), cats=None): ever_asked.append((list(kinds), cats)); return []
+def no_evergreen(kinds, seen, trending=(), cats=None, lane=""): ever_asked.append((list(kinds), cats)); return []
 W.evergreen_packs = no_evergreen                     # offline: the evergreen fill asks nothing until the check below
 day = dt.date(2026, 10, 27)
 W.DAY["boards"] = [{"id": "QD-40", "category": "Music", "meta": {"title": "Chart topper alpha explained", "sources": [["T", "https://example.com/Chart-topper-alpha"]]}}]
@@ -422,7 +422,7 @@ for name in ("Orchid anthem", "Velvet harbour", "Granite lullaby", "Copper skyli
     W.extra_channel_boards(day, "evening", [pack(name, "Music")], "HEAD", state, out)
 assert len(W.channel_boards("music", day)) == 6, len(W.channel_boards("music", day))
 # a day with no news in the channel's categories: evergreen packs of those categories fill the places, each in its own kind
-def some_evergreen(kinds, seen, trending=(), cats=None):
+def some_evergreen(kinds, seen, trending=(), cats=None, lane=""):
     ever_asked.append((list(kinds), cats))
     assert cats == ["Music"] and all(k in ("evergreen", "top list", "true story") for k in kinds) and kinds, (kinds, cats)
     assert any("Chart topper alpha" in t for t, _, _ in seen), "what the channel and the main channel covered is passed as seen"

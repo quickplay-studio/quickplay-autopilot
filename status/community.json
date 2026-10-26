@@ -1,22 +1,30 @@
 {
- "history": [],
+ "history": [
+  {
+   "date": "2026-10-25",
+   "short": "QD-164",
+   "kind": "reaction",
+   "posted": "",
+   "unavailable": ""
+  }
+ ],
  "paused_until": "",
- "date": "2026-10-25",
- "made": "2026-10-25T15:09Z",
- "short": "QD-164",
- "title": "GTA 6 price: the physical edition surprise 🎮",
- "url": "https://youtube.com/shorts/m4dcmkj0AhI",
- "views_3h": 203,
+ "date": "2026-10-26",
+ "made": "2026-10-26T14:08Z",
+ "short": "QD-177",
+ "title": "Animals Explained #1: How dogs became man's best friend 🐕",
+ "url": "https://youtube.com/shorts/Wvba1xTu2BM",
+ "views_3h": 14,
  "poll": {
-  "question": "How did you find today's most watched Short?",
+  "question": "Do you think your dog still acts like a wolf?",
   "options": [
-   "Loved it",
-   "Liked it",
-   "Not for me"
+   "Yes",
+   "No",
+   "Not sure"
   ],
-  "kind": "reaction"
+  "kind": "question"
  },
- "post": "Most watched Short today: GTA 6 price: the physical edition surprise 🎮 https://youtube.com/shorts/m4dcmkj0AhI",
+ "post": "Most watched Short today: Animals Explained #1: How dogs became man's best friend 🐕 https://youtube.com/shorts/Wvba1xTu2BM",
  "posted": "",
  "unavailable": ""
 }

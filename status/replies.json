@@ -1,14 +1,20 @@
 {
  "done": {
   "UgwVSAisa22cNfTVWjF4AaABAg": "2026-10-21",
-  "Ugyq3Juc1JqXgyg-R6p4AaABAg": "2026-10-24"
+  "Ugyq3Juc1JqXgyg-R6p4AaABAg": "2026-10-24",
+  "UgwjDJayDjQYUeCUXyd4AaABAg": "2026-10-26"
  },
  "per_video": {
   "2PEgNuzSy0Y": 1,
-  "bENhL4PxDDE": 1
+  "bENhL4PxDDE": 1,
+  "gPtD8qBcINI": 1
  },
  "days": {
   "2026-10-21": 1,
-  "2026-10-24": 1
+  "2026-10-24": 1,
+  "2026-10-26": 1
+ },
+ "invited": {
+  "UgwjDJayDjQYUeCUXyd4AaABAg": "2026-10-26"
  }
 }

@@ -1,0 +1,150 @@
+{
+ "id": "QD-181",
+ "board": "boards/queue/QD-181.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T09:30:00Z",
+ "rendered": "2026-10-26T08:30:35.417113+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Halloween: The Game: the country that said no 🎃",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "paradigm",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 37.1,
+  "wps": 2.99,
+  "weak_beats": [],
+  "size_mb": 14.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 588.9,
+   "contrast": 0.211,
+   "face_area": 0.0,
+   "text_area": 0.1943,
+   "caption_contrast": 17.03,
+   "by_frame": {
+    "sharpness": [
+     408.9,
+     592.4,
+     635.6,
+     718.7
+    ],
+    "contrast": [
+     0.204,
+     0.212,
+     0.213,
+     0.215
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1726,
+     0.203,
+     0.2008,
+     0.2009
+    ],
+    "caption_contrast": [
+     17.06,
+     17.03,
+     17.03,
+     17.03
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.62,
+   "title",
+   0
+  ],
+  [
+   3.62,
+   12.71,
+   "none",
+   2
+  ],
+  [
+   12.71,
+   19.95,
+   "none",
+   2
+  ],
+  [
+   19.95,
+   26.63,
+   "none",
+   1
+  ],
+  [
+   26.63,
+   33.74,
+   "none",
+   2
+  ],
+  [
+   33.74,
+   37.05,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "20837",
+   "q": "dark corridor dim",
+   "t0": 0.0,
+   "t1": 37.05
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T08:44:48Z",
+ "video": "ntA-j4u3hWY",
+ "url": "https://youtube.com/shorts/ntA-j4u3hWY",
+ "publish_at": "2026-10-26T09:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T09:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-181"
+}

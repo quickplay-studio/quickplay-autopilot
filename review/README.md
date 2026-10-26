@@ -4,7 +4,7 @@
 
 YouTube checked Mon 26 Oct 7:38 (UK): 3 scheduled, 146 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 7:29).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Mon 26 Oct 8:20).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Mon 26 Oct | 1 public, 3 scheduled | 4 | 1 | ⏳ 1 of 15 so far, 3 more scheduled |
+| Mon 26 Oct | 1 public, 5 scheduled | 4 | 1 | ⏳ 1 of 15 so far, 5 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |

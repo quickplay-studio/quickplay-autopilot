@@ -1,0 +1,175 @@
+{
+ "id": "QD-196",
+ "board": "boards/queue/QD-196.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T19:30:00Z",
+ "rendered": "2026-10-26T15:55:36.352743+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Level Up #1: Minecraft: 400 million copies sold 🎮",
+ "background_notes": [
+  "Pixabay 'digital grid pattern': 40 results, none at 720p or better",
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Minecraft sunset: no Commons image named 'Minecraft sunset')",
+  "beat 5 reused a nearby picture (commons-search:Minecraft world map: no Commons image named 'Minecraft world map')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 9,
+  "extra_photos": 9,
+  "pic_found_share": 0.75,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "treasure-hunt",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 39.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 19.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 439.7,
+   "contrast": 0.271,
+   "face_area": 0.0,
+   "text_area": 0.0367,
+   "caption_contrast": 3.89,
+   "by_frame": {
+    "sharpness": [
+     425.8,
+     447.4,
+     465.7,
+     420.1
+    ],
+    "contrast": [
+     0.271,
+     0.274,
+     0.271,
+     0.27
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0368,
+     0.0368,
+     0.0398,
+     0.0332
+    ],
+    "caption_contrast": [
+     3.82,
+     3.82,
+     3.95,
+     3.96
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.57,
+   "none",
+   3
+  ],
+  [
+   6.57,
+   12.06,
+   "none",
+   4
+  ],
+  [
+   12.06,
+   16.84,
+   "none",
+   3
+  ],
+  [
+   16.84,
+   22.14,
+   "none",
+   4
+  ],
+  [
+   22.14,
+   27.8,
+   "none",
+   4
+  ],
+  [
+   27.8,
+   32.22,
+   "none",
+   3
+  ],
+  [
+   32.22,
+   36.45,
+   "none",
+   3
+  ],
+  [
+   36.45,
+   39.8,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "240060",
+   "q": "green grass blocks",
+   "t0": 0.0,
+   "t1": 39.8
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T16:09:43Z",
+ "video": "vYyRSRsDE6U",
+ "url": "https://youtube.com/shorts/vYyRSRsDE6U",
+ "publish_at": "2026-10-26T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

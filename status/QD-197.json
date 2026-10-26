@@ -1,0 +1,173 @@
+{
+ "id": "QD-197",
+ "board": "boards/queue/QD-197.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T19:30:00Z",
+ "rendered": "2026-10-26T15:55:59.645897+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Wild World #1: Why do cats purr at 25 Hz 🐱",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7,
+  "extra_photos": 11,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "silk-sleeve",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 34.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 23.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1035.1,
+   "contrast": 0.211,
+   "face_area": 0.0,
+   "text_area": 0.0381,
+   "caption_contrast": 5.6,
+   "by_frame": {
+    "sharpness": [
+     1015.0,
+     1068.6,
+     1078.3,
+     978.6
+    ],
+    "contrast": [
+     0.211,
+     0.211,
+     0.211,
+     0.21
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0416,
+     0.0396,
+     0.0413,
+     0.0299
+    ],
+    "caption_contrast": [
+     6.17,
+     6.29,
+     4.97,
+     5.03
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.11,
+   "none",
+   2
+  ],
+  [
+   5.11,
+   9.63,
+   "none",
+   3
+  ],
+  [
+   9.63,
+   15.56,
+   "none",
+   4
+  ],
+  [
+   15.56,
+   21.39,
+   "none",
+   4
+  ],
+  [
+   21.39,
+   25.22,
+   "none",
+   3
+  ],
+  [
+   25.22,
+   34.27,
+   "none",
+   6
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "126924",
+   "q": "cozy living room interior",
+   "t0": 0.0,
+   "t1": 11.82
+  },
+  {
+   "p": "pixabay",
+   "id": "232827",
+   "q": "sunlit woodland trees",
+   "t0": 11.22,
+   "t1": 23.04
+  },
+  {
+   "p": "pixabay",
+   "id": "34301",
+   "q": "soft natural background",
+   "t0": 22.44,
+   "t1": 34.27
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T16:09:47Z",
+ "video": "glc1DUYnDYo",
+ "url": "https://youtube.com/shorts/glc1DUYnDYo",
+ "publish_at": "2026-10-26T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

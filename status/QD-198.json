@@ -1,0 +1,156 @@
+{
+ "id": "QD-198",
+ "board": "boards/queue/QD-198.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T07:30:00Z",
+ "rendered": "2026-10-26T15:56:09.561957+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1023"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Screen Time #2: Top 5 highest-grossing films of all time",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Titanic 1997 film poster: no Commons image named 'Titanic 1997 film poster')",
+  "beat 3 reused a nearby picture (commons-search:Avatar The Way of Water poster: no Commons image named 'Avatar The Way of Water poster')",
+  "beat 5 reused a nearby picture (commons-search:Avatar 2009 film poster: no Commons image named 'Avatar 2009 film poster')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 4,
+  "pic_found_share": 0.5,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "scale-the-mountain",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 40.0,
+  "wps": 2.37,
+  "weak_beats": [],
+  "size_mb": 17.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1162.8,
+   "contrast": 0.171,
+   "face_area": 0.0141,
+   "text_area": 0.2029,
+   "caption_contrast": 8.62,
+   "by_frame": {
+    "sharpness": [
+     1169.3,
+     1204.1,
+     1153.6,
+     1124.2
+    ],
+    "contrast": [
+     0.173,
+     0.171,
+     0.171,
+     0.17
+    ],
+    "face_area": [
+     0.0103,
+     0.01,
+     0.0256,
+     0.0103
+    ],
+    "text_area": [
+     0.2057,
+     0.1952,
+     0.204,
+     0.2069
+    ],
+    "caption_contrast": [
+     8.59,
+     8.65,
+     8.41,
+     8.64
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   9.16,
+   "none",
+   5
+  ],
+  [
+   9.16,
+   15.34,
+   "none",
+   4
+  ],
+  [
+   15.34,
+   21.36,
+   "none",
+   4
+  ],
+  [
+   21.36,
+   26.86,
+   "none",
+   4
+  ],
+  [
+   26.86,
+   31.84,
+   "none",
+   3
+  ],
+  [
+   31.84,
+   40.02,
+   "none",
+   6
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T16:09:50Z",
+ "video": "HCJUKXvyVtg",
+ "url": "https://youtube.com/shorts/HCJUKXvyVtg",
+ "publish_at": "2026-10-27T07:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T07:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

@@ -1,0 +1,158 @@
+{
+ "id": "QD-199",
+ "board": "boards/queue/QD-199.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T15:30:00Z",
+ "rendered": "2026-10-26T15:55:44.749236+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1023"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Match Day #1: Why do cats purr",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "silk-sleeve",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 24.4,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 15.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1045.0,
+   "contrast": 0.202,
+   "face_area": 0.0,
+   "text_area": 0.0908,
+   "caption_contrast": 15.25,
+   "by_frame": {
+    "sharpness": [
+     995.4,
+     1056.6,
+     1056.0,
+     1072.1
+    ],
+    "contrast": [
+     0.202,
+     0.202,
+     0.202,
+     0.203
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0899,
+     0.0889,
+     0.0889,
+     0.0954
+    ],
+    "caption_contrast": [
+     15.56,
+     15.16,
+     15.18,
+     15.33
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.54,
+   "none",
+   0
+  ],
+  [
+   4.54,
+   8.21,
+   "none",
+   1
+  ],
+  [
+   8.21,
+   13.14,
+   "none",
+   1
+  ],
+  [
+   13.14,
+   18.75,
+   "none",
+   1
+  ],
+  [
+   18.75,
+   24.34,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "12687",
+   "q": "forest trees sunlight",
+   "t0": 0.0,
+   "t1": 12.47
+  },
+  {
+   "p": "pixabay",
+   "id": "146585",
+   "q": "green grass meadow",
+   "t0": 11.87,
+   "t1": 24.33
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T16:09:54Z",
+ "video": "mL-18C8AZLY",
+ "url": "https://youtube.com/shorts/mL-18C8AZLY",
+ "publish_at": "2026-10-27T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T15:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

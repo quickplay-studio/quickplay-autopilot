@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 05:41): 16 of 1,000 subscribers · 9,863 of 10 million Shorts views in 90 days · 4,652 views in the last 24 hours (about 111,002 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 06:51): 16 of 1,000 subscribers · 9,888 of 10 million Shorts views in 90 days · 4,482 views in the last 24 hours (about 111,001 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Sun 25 Oct 18:59 (UK): 5 scheduled, 144 public, 19 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Mon 26 Oct | 0 public, 4 scheduled | 0 | 1 | ⏳ 0 of 15 so far, 4 more scheduled |
+| Mon 26 Oct | 1 public, 3 scheduled | 2 | 1 | ⏳ 1 of 15 so far, 3 more scheduled |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -109,7 +109,7 @@ public · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.
 ![QD-172](QD-172.jpg)
 
 ### Sun 25 Oct 15:30 · Sport Shocks #1: UFC 333: Volkanovski wins record ninth title
-public · 3 views · 39 s · music: rise-of-the-machines · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
+public · 3 views · 39 s · music: rise-of-the-machines · on Instagram · [script](../boards/done/QD-171.json) · [YouTube](https://youtube.com/shorts/KisKqgSnwHs)
 
 ![QD-171](QD-171.jpg)
 
@@ -144,7 +144,7 @@ public · 35 views · 27 s · music: hopping-trains · [script](../boards/done/Q
 ![QD-166](QD-166.jpg)
 
 ### Sun 25 Oct 7:00 · Ballon d'Or 2026 ceremony is moving to London
-public · 249 views · 38 s · music: the-bombs · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
+public · 249 views · 38 s · music: the-bombs · on Instagram · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
 
 ![QD-162](QD-162.jpg)
 

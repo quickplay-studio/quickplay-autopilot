@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Mon 26 Oct, 19:15): 16 of 1,000 subscribers · 10,420 of 10 million Shorts views in 90 days · 4,034 views in the last 24 hours (about 110,995 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Mon 26 Oct, 19:46): 17 of 1,000 subscribers · 10,457 of 10 million Shorts views in 90 days · 4,149 views in the last 24 hours (about 110,995 a day needed, 98 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Mon 26 Oct 19:15 (UK): 6 scheduled, 143 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Tue 27 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 15 scheduled |
-| Mon 26 Oct | 9 public, 3 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 3 more scheduled |
+| Mon 26 Oct | 12 public | 8 | 1 | ⏳ 12 of 15 so far |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
@@ -77,6 +77,16 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-200** GTA 6 launch trailer: 24 days to go 🎮 (rendering next)
+- **QD-201** Film Facts #1: Wildwood runtime sets a stop-motion record 🎬 (rendering next)
+- **QD-202** Song Secrets #3: Beyonce solo debut hits number one in Billboard (rendering next)
+- **QD-203** GPT-6.1 Terra: OpenAI upgrades ChatGPT (rendering next)
+- **QD-204** Game Lore #2: Sonic the Hedgehog free RPGs 🎲 (rendering next)
+- **QD-205** Big Science #1: GPT-6.1 Terra: every big change explained 🤖 (rendering next)
+- **QD-206** Screen Time #3: Wildwood: the record breaking runtime you missed (rendering next)
 
 ## On the channel (latest first)
 

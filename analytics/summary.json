@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-25T23:32+00:00",
+ "updated": "2026-10-26T01:00+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-25T18:59+00:00",
  "youtube": {
   "subscribers": 16,
   "public_shorts": 159,
-  "views_all_time": 29835,
+  "views_all_time": 30004,
   "views_last_90_days": 5793,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 9696,
+  "views_last_90_days_estimate": 9739,
   "analytics_last_day": "2026-10-22"
  },
  "instagram": {
@@ -27,7 +27,7 @@
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,
   "apply_before": "2027-02-01",
-  "days_left": 99,
+  "days_left": 98,
   "subscribers_pct": 1.6,
   "views_pct": 0.1,
   "views_needed_per_day": 111003,

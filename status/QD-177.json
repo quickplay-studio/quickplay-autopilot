@@ -171,5 +171,17 @@
   "publish_at": "2026-10-26T06:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-177"
+ "social_release": "social-QD-177",
+ "instagram": {
+  "media": "18419345509156350",
+  "at": "2026-10-26T07:30:36+00:00",
+  "caption": "short",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "category",
+  "hour": "morning",
+  "favoured": false,
+  "hour_uk": 7
+ }
 }

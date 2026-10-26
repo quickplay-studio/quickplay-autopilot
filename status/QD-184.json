@@ -1,0 +1,137 @@
+{
+ "id": "QD-184",
+ "board": "boards/queue/QD-184.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T12:00:00Z",
+ "rendered": "2026-10-26T10:46:53.875325+00:00",
+ "title": "Arkane Lyon faces closure by November 🚨",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 2 reused a nearby picture (page:https://www.eurogamer.net/xbox-layoffs-marvels-blade-arkane-lyon-closure: eurogamer.net is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 4,
+  "pic_found_share": 0.83,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "twin-lynches",
+ "social_music": "tension-documentary-519912",
+ "look": {
+  "captions": "low",
+  "voice": "george_dramatic",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 28.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 5.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 476.7,
+   "contrast": 0.06,
+   "face_area": 0.0,
+   "text_area": 0.0463,
+   "caption_contrast": 13.92,
+   "by_frame": {
+    "sharpness": [
+     457.6,
+     495.3,
+     500.5,
+     453.2
+    ],
+    "contrast": [
+     0.058,
+     0.061,
+     0.062,
+     0.057
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0494,
+     0.0475,
+     0.0475,
+     0.0407
+    ],
+    "caption_contrast": [
+     13.95,
+     13.79,
+     13.89,
+     13.97
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.64,
+   "none",
+   2
+  ],
+  [
+   3.64,
+   7.99,
+   "none",
+   3
+  ],
+  [
+   7.99,
+   12.97,
+   "none",
+   3
+  ],
+  [
+   12.97,
+   18.2,
+   "none",
+   4
+  ],
+  [
+   18.2,
+   24.22,
+   "none",
+   4
+  ],
+  [
+   24.22,
+   28.59,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T10:59:18Z",
+ "video": "HnPSGTsa258",
+ "url": "https://youtube.com/shorts/HnPSGTsa258",
+ "publish_at": "2026-10-26T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-184"
+}

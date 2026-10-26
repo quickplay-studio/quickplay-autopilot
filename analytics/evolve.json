@@ -29,6 +29,20 @@
    "status": "retired",
    "text": "Put the single most striking number from the fact pack (a time, size, age, rank or count) in the first sentence, attached to what it measures.",
    "why": "Top Shorts open with a concrete figure like twelve hours, 27 GB, age 13 or number one, while weak openers such as the Moon and K/DA teasers bury or lack one. Retired unused on 26 October: it is about the opening line, which the hook test covers."
+  },
+  "g003": {
+   "a_text": "",
+   "b_text": "Follow the first number in the script with a short everyday comparison that makes its scale vivid, such as a working day or a phone's storage, using only facts from the pack.",
+   "born": "2026-10-26",
+   "by": "claude:opus",
+   "effect": "",
+   "kind": "new",
+   "label": "Compare the number to something familiar",
+   "lineage": "g003",
+   "parent": "",
+   "status": "live",
+   "text": "Follow the first number in the script with a short everyday comparison that makes its scale vivid, such as a working day or a phone's storage, using only facts from the pack.",
+   "why": "Winners like 12 hours and 27 GB land because the number feels concrete, while weak Shorts leave figures abstract."
   }
  },
  "history": [],
@@ -66,6 +80,10 @@
     "06:00 to 12:00",
     "12:00 to 18:00"
    ],
+   "gene:g003": [
+    "a",
+    "b"
+   ],
    "hook_type": [
     "statement",
     "number"
@@ -89,6 +107,7 @@
    "fx_grade": "round 1",
    "fx_opening": "round 1",
    "fx_slot": "round 1",
+   "gene:g003": "gene",
    "hook_type": "round 1",
    "length": "round 1",
    "title_search": "round 1"
@@ -104,6 +123,7 @@
    "fx_grade": "2026-10-25",
    "fx_opening": "2026-10-25",
    "fx_slot": "2026-10-25",
+   "gene:g003": "2026-10-26",
    "hook_type": "2026-10-25",
    "length": "2026-10-25",
    "title_search": "2026-10-25"

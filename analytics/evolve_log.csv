@@ -4,3 +4,4 @@ date,action,factor,arms,source,verdict,effect,note
 2026-10-26,open,gene:g002,a vs b,gene,,,"Headline number in sentence one: Put the single most striking number from the fact pack (a time, size, age, rank or count) in the first sentence, attached to what it measures. (by claude:opus)"
 2026-10-26,drop,gene:g001,a vs b,gene,,,retired before any Short used it: it overlapped the hook test (Claude review)
 2026-10-26,drop,gene:g002,a vs b,gene,,,retired before any Short used it: it overlapped the hook test (Claude review)
+2026-10-26,open,gene:g003,a vs b,gene,,,"Compare the number to something familiar: Follow the first number in the script with a short everyday comparison that makes its scale vivid, such as a working day or a phone's storage, using only facts from the pack. (by claude:opus)"

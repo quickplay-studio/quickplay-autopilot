@@ -1,135 +1,512 @@
 {
  "date": "2026-10-26",
- "built": "2026-10-26T15:14+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "built": "2026-10-26T16:38+00:00",
+ "model": "gemini-3.5-flash-lite + gemini-3.6-flash",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 8,
-   "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "n": 6,
+   "topic": "Halloween 2026",
+   "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
    "category": "Gaming",
-   "what_is_new": "Nothing changed in the last two days.",
+   "what_is_new": "Spirit Tasting was announced on 26 October 2026.",
    "hooks": [
-    "GTA 6 is launching on November 19, 2026!",
-    "Rockstar Games developed Grand Theft Auto VI."
+    "Did you know Halloween: The Game launched on September 8, 2026?",
+    "Halloween: The Game has received mixed reviews on Metacritic."
    ],
    "sources": [
     [
-     "Rumored Lucia Actress Goes Viral After Dodging Swarm of GTA 6 Comments During Livestream",
-     "https://www.ign.com/articles/rumored-lucia-actress-goes-viral-after-dodging-swarm-of-gta-6-comments-during-livestream",
+     "‘Spirit Tasting,’ New Film From ‘WNUF Halloween Special’ Creator Chris LaMartina, Revealed as Screening Roadshow Set (EXCLUSIVE)",
+     "https://variety.com/2026/film/news/spirit-tasting-movie-wnuf-halloween-special-creator-1236914595/",
+     "Variety",
+     "2026-10-26"
+    ],
+    [
+     "The 13 scariest, spookiest video games you should play this Halloween",
+     "https://www.eurogamer.net/13-scariest-spookiest-video-games-this-halloween",
+     "Eurogamer",
+     "2026-10-26"
+    ],
+    [
+     "Horror Games Are Getting Big Discounts in the Lead-Up to Halloween",
+     "https://www.ign.com/articles/horror-game-sales-ahead-of-halloween-2026",
      "IGN",
-     "2026-10-25"
+     "2026-10-26"
     ],
     [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
-     "2026-10-23"
+     "Medusa's eye, Halloween fireballs and more: 5 skywatching targets to look out for this spooky season",
+     "https://www.space.com/stargazing/medusas-eye-halloween-fireballs-and-more-5-skywatching-targets-to-look-out-for-this-spooky-season",
+     "Space.com",
+     "2026-10-24"
     ],
     [
-     "GTA 6",
-     "https://en.wikipedia.org/wiki/GTA_6",
+     "Halloween 2026",
+     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "claim": "Halloween: The Game received mixed reviews according to review aggregator Metacritic.",
      "sources": [
-      1,
-      3
+      3,
+      5
      ],
      "evidence": {
-      "1": "Her place in Rockstar history may be given a bump when GTA 6 launches for PlayStation 5 and Xbox Series X/S next month, November 19.",
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "3": "Those who enjoy a good asymmetrical online multiplayer game can pick up the brand-new Halloween: The Game for $34.99.",
+      "5": "Halloween: The Game received \"mixed\" reviews, according to review aggregator Metacritic.[25][26][27]"
      }
     },
     {
-     "claim": "Actor Stephen Root will play the character of drug runner Brian Heder in the game.",
+     "claim": "Resident Evil Requiem is an all‑new entry in the Resident Evil series.",
      "sources": [
-      1,
+      2,
       3
      ],
      "evidence": {
-      "1": "Who has been confirmed, whether Rockstar and any likely NDAs like it or not, is Stephen Root, who said he will be seen playing drug",
-      "3": "and Brian Heder (Stephen Root),[27] a long-time drug runner in the Keys and Jason's landlord.[25]"
+      "2": "Resident Evil Requiem is, as much as anything, a celebration of the series as it turns 30.",
+      "3": "we’ve got several Resident Evil remakes (2 and 3 specifically), as well as this year’s all‑new entry Resident Evil Requiem on sale."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.",
+     "claim": "Halloween: The Game was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series S.",
      "sources": [
-      3
+      5
      ],
      "evidence": {
-      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+      "5": "It is based on the 1978 film Halloween and was released on September 8, 2026, for PlayStation 5, Windows, and Xbox Series X and Series"
      }
     },
     {
-     "claim": "Manni L Perez spent her twelve minute livestream talking about her life growing up in a small, rural, redneck-y town.",
+     "claim": "Spirit Tasting was shot in four days for $40,000 to celebrate Chris LaMartina’s 40th birthday.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Perez spent her 12-minute livestream just talking about her life growing up in a \"small, rural, redneck-y\" town."
+      "1": "In the spirit of B‑movie icons like Roger Corman, the film was shot in four days for $40,000 in order to celebrate Chris LaMartina’s 40th"
      }
     },
     {
-     "claim": "The livestream reached a peak of more than 2,100 viewers on an Instagram account that was six months old.",
+     "claim": "Halloween: The Game was refused classification by the Australian Classification Board on 10 August 2026 because it contains a controlled substance.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "2026 15 on august 10 2026 the official x account for halloween the game confirmed 16 that the game had been refused classification by the australian classification board and as a result will not be made available to players in"
+     }
+    },
+    {
+     "claim": "The Taurid meteor shower can produce bright “Halloween fireballs” in late October.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Taurids are known for producing bright “fireball” meteors, which are often called “Halloween fireballs” because they tend to coincide with the annual celebration."
+     }
+    },
+    {
+     "claim": "Ghost Town is a VR‑exclusive game set in 1983 London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "and plunging players into a brilliantly evocative recreation of 1983 london as protagonist and ghost hunter edith penrose hunts for her missing brother as the grimy streets of the capital make way for the craggy seclusion of the north sea"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 21,
+   "topic": "new ipad mini 2026",
+   "signal": "Google Trends US 1000+",
+   "category": "Tech",
+   "what_is_new": "",
+   "hooks": [
+    "Apple just announced a brand new iPad mini with an OLED display!",
+    "The new iPad mini features an incredible 1,200 nits peak brightness.",
+    "You can pre-order the stunning new iPad mini starting October 28."
+   ],
+   "sources": [
+    [
+     "Apple unveils new iPad mini with OLED display and faster A20 Pro chip",
+     "https://techcrunch.com/2026/10/26/apple-unveils-new-ipad-mini-with-oled-display-and-faster-a20-pro-chip/",
+     "TechCrunch",
+     "2026-10-26"
+    ],
+    [
+     "Apple updates the iPad mini with an A20 processor and OLED display",
+     "https://www.engadget.com/2296637/apple-updates-the-ipad-mini-with-an-a20-processor-and-oled-display/",
+     "Engadget",
+     "2026-10-26"
+    ],
+    [
+     "Apple updates the iPad Mini with a larger OLED display",
+     "https://www.theverge.com/tech/1017801/ipad-mini-oled-display-apple-announce",
+     "The Verge",
+     "2026-10-26"
+    ],
+    [
+     "Apple gives iPad mini its biggest update ever",
+     "https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/",
+     "Apple Newsroom",
+     "2026-10-26"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The new iPad mini starts at $699 for the Wi-Fi model and $849 for the Wi-Fi and cellular model.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "The new iPad mini starts at $699 for the Wi-Fi model and $849 for the Wi-Fi and cellular model.",
+      "2": "The new tablet starts at $699.",
+      "3": "The iPad Mini starts at $699 for the Wi-Fi-only model, and $849 for Wi-Fi and cellular."
+     }
+    },
+    {
+     "claim": "At 5.4 mm in thickness, the new iPad mini is thinner and lighter than its predecessor.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The new iPad mini is 5.4 mm in thickness, and available in two colors.",
+      "3": "At 5.4mm thick, the iPad Mini is thinner and lighter than its predecessor.",
+      "4": "At 5.4 mm thin, the new iPad mini is more portable than ever, and is available in two gorgeous finishes: a new midnight and a"
+     }
+    },
+    {
+     "claim": "The device delivers peak brightness of up to 1,200 nits, more than twice that of the previous-generation device.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The device delivers peak brightness of up to 1,200 nits, more than twice that of the previous-generation device, along with full screen brightness of 600",
+      "2": "According to Apple, it's capable of reaching a peak brightness of 1,200 nits, or twice as bright as the 2024 iPad mini.",
+      "3": "The iPad Mini offers a peak brightness of up to 1,200 nits, along with a 1-nit minimum brightness that could make it easier on the",
+      "4": "For an even better visual experience across a range of lighting conditions, iPad mini also features peak brightness of up to 1200 nits — more"
+     }
+    },
+    {
+     "claim": "Preorders for the new iPad mini start on October 28, with availability beginning November 6.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The device can be preordered on October 28, with availability beginning November 6.",
+      "2": "Pre-orders for both variants open on October 28, with general availability to follow on November 6.",
+      "3": "Preorders for the new iPad Mini start on Wednesday, October 28th, with availability on November 6th.",
+      "4": "Customers can pre-order it along with the new Smart Folio starting Wednesday, October 28, with availability beginning Friday, November 6."
+     }
+    },
+    {
+     "claim": "The new iPad mini has a larger 8.5-inch OLED display.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "Apple on Monday announced a new iPad mini with a larger 8.5-inch OLED display.",
+      "2": "The new tablet has 8.5-inch OLED display, which Apple will allow customers to spec with its nano-texture coating.",
+      "3": "Apple announced a new iPad Mini with a larger, 8.5-inch OLED display.",
+      "4": "The larger 8.5-inch OLED display, also available with a nano-texture option, delivers higher contrast and more than 2x higher peak brightness than the previous-generation iPad"
+     }
+    },
+    {
+     "claim": "The new iPad mini features an Acoustic Display that Apple says enhances the audio experience.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "It also features an “Acoustic Display” that Apple says enhances the audio experience when gaming, watching videos, or editing content.",
+      "2": "In addition to a new OLED panel, the 2026 iPad mini has Apple's first-ever \"Acoustic Display.\"",
+      "3": "Additionally, Apple says the iPad Mini comes with a new “Acoustic Display,” which it describes as including “specially designed woofers” that are “paired through the",
+      "4": "The new iPad mini features an innovative Acoustic Display for an even better audio experience when gaming, watching videos, or editing content."
+     }
+    },
+    {
+     "claim": "The updated tablet now also features a 12-megapixel center stage front camera.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The updated tablet now also features a 12-megapixel center stage front camera, faster wireless and cellular connectivity, and fast-charge support.",
+      "2": "Like all of its siblings, the new mini now offers a landscape-oriented 12-megapixel Center Stage camera for more natural-looking video calls.",
+      "3": "Some other updates include a 12MP front-facing camera that’s now on the long edge of the iPad Mini, making it easier for video calls in",
+      "4": "iPad mini now has a 12MP Center Stage front camera on the landscape edge that’s perfect for video calls, an innovative Acoustic Display for an"
+     }
+    },
+    {
+     "claim": "It has an IP67 rating for protection against water and dust.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "Apple has also sealed the enclosure; it's now iP67-rated against water and dust.",
+      "3": "It has an IP67 rating for protection against water and dust, in addition to Apple’s next-gen C2 cellular modem and in-house N1 networking chip.",
+      "4": "It also features an IP67 rating to protect against water and dust — ideal for a range of use cases, such as working outside on"
+     }
+    },
+    {
+     "claim": "The new screen is also slightly larger than the 8.3-inch display the iPad mini previously offered due to 24 percent thinner bezels.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "Thanks to 24 percent thinner bezels, the new screen is also slightly larger than the 8.3-inch display the iPad mini previously offered.",
+      "3": "It also has bezels that are 24 percent slimmer.",
+      "4": "The new iPad mini comes with a stunning OLED display that delivers amazing front-of-screen performance and an even larger 8.5-inch size while maintaining the same"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "page:https://www.apple.com/newsroom/2026/10/apple-gives-ipad-mini-its-biggest-update-ever/"
+   ]
+  },
+  {
+   "n": 28,
+   "topic": "Wildwood (film)",
+   "signal": "Wikipedia 118,435 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Wildwood is the longest stop-motion-animated film ever?",
+    "Wildwood premiered at the BFI London Film Festival in October 2026.",
+    "Find out how Wildwood became Laika's first PG-13 film."
+   ],
+   "sources": [
+    [
+     "Wildwood (film)",
+     "https://en.wikipedia.org/wiki/Wildwood_(film)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Wildwood is a 2026 American stop-motion animated epic fantasy film directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Reaching a peak of more than 2,100 viewers on a six-month-old Instagram account with just nine posts, Perez spent her 12-minute livestream just talking about"
+      "1": "Wildwood is a 2026 American stop-motion animated epic fantasy film[7][8][9] directed by Travis Knight and written by Chris Butler, based on the 2011 novel by"
      }
     },
     {
-     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida.",
+     "claim": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida; its map is reported to be three times larger"
+      "1": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.[10]"
      }
     },
     {
-     "claim": "The main story follows a criminal couple named Jason Duval and Lucia Caminos.",
+     "claim": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "The story follows a criminal couple: Jason Duval, who worked for local drug runners in the Leonida Keys after serving in the Army; and Lucia"
+      "1": "It is Laika's first film to receive a PG-13 rating from the Motion Picture Association.[12]"
+     }
+    },
+    {
+     "claim": "Wildwood is a 2026 American stop motion animated epic fantasy film directed by Travis Knight and written by Chris Butler, based on the 2011 novel by Colin Meloy and Carson Ellis.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Wildwood is a 2026 American stop-motion animated epic fantasy film[7][8][9] directed by Travis Knight and written by Chris Butler, based on the 2011 novel by"
+     }
+    },
+    {
+     "claim": "Wildwood runs for 131 minutes, making it the longest stop motion animated film by runtime.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "With a theatrical runtime of 131 minutes, Wildwood is the longest stop-motion-animated film by run-time.[10]"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "toto wolff george russell mercedes f1",
+   "signal": "Google Trends GB 500+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Toto Wolff hits back at brainless claims over Mercedes driver favouritism.",
+    "Kimi Antonelli leads George Russell by 84 points with seven races left."
+   ],
+   "sources": [
+    [
+     "Mercedes boss Toto Wolff says people who think team favour Kimi Antonelli over George Russell are 'brainless' and should 'watch Teletubbies'",
+     "https://www.skysports.com/f1/news/13596711/mercedes-boss-toto-wolff-says-people-who-think-team-favour-kimi-antonelli-over-george-russell-are-brainless-and-should-watch-teletubbies",
+     "Sky Sports",
+     "2026-10-09"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Mercedes boss Toto Wolff dismissed suggestions that the team have favoured Kimi Antonelli over George Russell.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Toto Wolff has dismissed suggestions Mercedes have favoured championship leader Kimi Antonelli over his team-mate George Russell; watch the Singapore Sprint on Saturday at 10am"
+     }
+    },
+    {
+     "claim": "Kimi Antonelli has built an 84-point lead over George Russell at the top of the Drivers Championship.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Antonelli has defied pre-season expectations to build an 84-point lead over Russell at the top of the Drivers' Championship with just seven races remaining, including"
+     }
+    },
+    {
+     "claim": "George Russell will start from the back of the grid in Singapore after an engine failure in Malaysia.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Russell will start from the back of the grid in Singapore after an engine failure last weekend in Malaysia forced him into taking a penalty."
+     }
+    },
+    {
+     "claim": "Mercedes hold a 151-point lead over Ferrari at the top of the standings.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Despite the problems, Mercedes are closing in on a first constructors' title since 2021, as they hold a 151-point lead over Ferrari at the top"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 13,
+   "topic": "madagascar",
+   "signal": "Google Trends GB 200+",
+   "category": "Animals",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Madagascar split from Africa around 180 million years ago?"
+   ],
+   "sources": [
+    [
+     "Masoala peninsula: Madagascar’s last untouched rainforest",
+     "https://www.cnn.com/travel/article/masoala-peninsula-madagascar/",
+     "CNN",
+     "2018-11-27"
+    ],
+    [
+     "madagascar",
+     "https://en.wikipedia.org/wiki/Madagascar",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Madagascar split from Africa during the Early Jurassic period, around 180 million years ago.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Cut off from mainland Africa 160 million years ago, Madagascar has some of the world's rarest and most unusual flora and fauna.",
+      "2": "Following the prehistoric breakup of the supercontinent Gondwana, Madagascar split from Africa during the Early Jurassic period, around 180 million years ago, and from the"
+     }
+    },
+    {
+     "claim": "Madagascar lies in the Indian Ocean.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The thick forest has escaped the deforestation that tragically ravages the rest of this Indian Ocean island.",
+      "2": "Madagascar, officially the Republic of Madagascar,[a] is an island country in the Indian Ocean that includes the island of Madagascar and numerous smaller peripheral islands."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Madagascar is an island country that includes Madagascar and many smaller peripheral islands.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Madagascar, officially the Republic of Madagascar,[a] is an island country in the Indian Ocean that includes the island of Madagascar and numerous smaller peripheral islands."
+     }
+    },
+    {
+     "claim": "Antananarivo is the capital and largest city of Madagascar.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Its capital and largest city is Antananarivo."
+     }
+    },
+    {
+     "claim": "Madagascar is the fourth largest island in the world.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Lying off the southeastern coast of Africa, it is the world's fourth-largest island, the second-largest island country, and the 46th-largest country overall."
+     }
+    },
+    {
+     "claim": "More than 90% of the wildlife in Madagascar is endemic.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "As a result, Madagascar is a biodiversity hotspot and one of the world's 17 megadiverse countries, with over 90% of its wildlife being endemic."
      }
     }
    ],
    "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
-   ]
-  },
-  {
-   "n": 10,
-   "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [],
-   "sources": [
-    [
-     "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "Xbox Wire",
-     "2026-10-23"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": [
-    "page:https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/"
+    "commons:File:Madagascar_(centered_orthographic_projection).svg"
    ]
   }
  ]

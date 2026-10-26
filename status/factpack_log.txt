@@ -1,6 +1,9 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: 2 verified, 5 one-source, 3 pages
-GTA 6 trailer views record: 0 verified, 0 one-source, 1 pages
-covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Clayface (film); You Can See Everything; Avengers: Doomsday; LYON vs. GEN; FC BARCELONA 1; 2026 United States Grand Prix; EA shuts down BioWare
-2 packs, 2 verified facts, 5 one-source
-gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "openrouter:nvidia/nemotron-3-super-120b-a12b:free": "daily limit", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20"}, "retired": [], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.5-flash-lite": 3, "gemini-3.5-flash": 1, "groq:openai/gpt-oss-120b": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}
+Halloween 2026: 2 verified, 5 one-source, 5 pages
+new ipad mini 2026: 9 verified, 0 one-source, 4 pages
+Wildwood (film): 0 verified, 5 one-source, 1 pages
+toto wolff george russell mercedes f1: 0 verified, 4 one-source, 1 pages
+madagascar: 2 verified, 4 one-source, 2 pages
+covered recently, no pack: GTA 6; GTA 6 price; the cure by Olivia Rodrigo; BABYMONSTER; Clayface (film); 2026 United States Grand Prix
+5 packs, 13 verified facts, 18 one-source
+gemini: {"out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "openrouter:nvidia/nemotron-3-super-120b-a12b:free": "daily limit", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6, "groq:openai/gpt-oss-120b": 2, "gemini-3.6-flash": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 3, "providers passed over": []}

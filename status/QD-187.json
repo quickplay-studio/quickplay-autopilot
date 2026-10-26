@@ -1,0 +1,151 @@
+{
+ "id": "QD-187",
+ "board": "boards/queue/QD-187.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T17:00:00Z",
+ "rendered": "2026-10-26T10:14:10.937952+00:00",
+ "title": "Tech Explained #1: Why Your Phone Buzzes In Your Pocket",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:pager device: no Commons image named 'pager device')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 8,
+  "extra_photos": 6,
+  "pic_found_share": 0.86,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "circuit-rush",
+ "social_music": "technology-tech-technology-499582",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 43.1,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 17.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 139.6,
+   "contrast": 0.172,
+   "face_area": 0.0,
+   "text_area": 0.0311,
+   "caption_contrast": 2.49,
+   "by_frame": {
+    "sharpness": [
+     138.3,
+     155.3,
+     157.8,
+     107.2
+    ],
+    "contrast": [
+     0.179,
+     0.179,
+     0.178,
+     0.152
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0336,
+     0.0327,
+     0.0327,
+     0.0255
+    ],
+    "caption_contrast": [
+     2.7,
+     2.49,
+     2.49,
+     2.02
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.51,
+   "none",
+   3
+  ],
+  [
+   5.51,
+   12.81,
+   "none",
+   5
+  ],
+  [
+   12.81,
+   20.27,
+   "none",
+   5
+  ],
+  [
+   20.27,
+   25.66,
+   "none",
+   4
+  ],
+  [
+   25.66,
+   32.33,
+   "none",
+   5
+  ],
+  [
+   32.33,
+   36.3,
+   "none",
+   3
+  ],
+  [
+   36.3,
+   43.07,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47222",
+   "q": "circuit board closeup",
+   "t0": 0.0,
+   "t1": 43.07
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T10:25:38Z",
+ "video": "nG0i9IOA_wI",
+ "url": "https://youtube.com/shorts/nG0i9IOA_wI",
+ "publish_at": "2026-10-26T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-187"
+}

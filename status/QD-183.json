@@ -1,0 +1,159 @@
+{
+ "id": "QD-183",
+ "board": "boards/queue/QD-183.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T06:00:00Z",
+ "rendered": "2026-10-26T10:03:51.567050+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Music Explained #1: Eurovision: the rule changing in 2027",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 10,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "f16",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 29.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 647.7,
+   "contrast": 0.233,
+   "face_area": 0.0,
+   "text_area": 0.4948,
+   "caption_contrast": 10.75,
+   "by_frame": {
+    "sharpness": [
+     615.9,
+     663.7,
+     679.8,
+     631.5
+    ],
+    "contrast": [
+     0.234,
+     0.233,
+     0.233,
+     0.233
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.5071,
+     0.4885,
+     0.4913,
+     0.4923
+    ],
+    "caption_contrast": [
+     9.34,
+     9.24,
+     12.71,
+     12.17
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.59,
+   "none",
+   2
+  ],
+  [
+   4.59,
+   9.59,
+   "none",
+   4
+  ],
+  [
+   9.59,
+   14.02,
+   "none",
+   4
+  ],
+  [
+   14.02,
+   16.89,
+   "none",
+   2
+  ],
+  [
+   16.89,
+   24.19,
+   "none",
+   6
+  ],
+  [
+   24.19,
+   29.59,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "221142",
+   "q": "festival crowd night",
+   "t0": 0.0,
+   "t1": 15.1
+  },
+  {
+   "p": "pixabay",
+   "id": "5713",
+   "q": "arena lights show",
+   "t0": 14.5,
+   "t1": 29.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T10:25:31Z",
+ "video": "d5pHQxFOgaM",
+ "url": "https://youtube.com/shorts/d5pHQxFOgaM",
+ "publish_at": "2026-10-27T06:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T06:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-183"
+}

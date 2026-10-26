@@ -1,0 +1,178 @@
+{
+ "id": "QD-185",
+ "board": "boards/queue/QD-185.json",
+ "mode": "schedule",
+ "slot": "2026-10-26T13:00:00Z",
+ "rendered": "2026-10-26T10:03:59.304792+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GTA 6: digital only at $79.99 🎮",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:video game price tag: no Commons image named 'video game price tag')",
+  "beat 5 reused a nearby picture (commons-search:calendar November 2026: no Commons image named 'calendar November 2026')",
+  "beat 6 reused a nearby picture (commons-search:digital ownership concept: no Commons image named 'digital ownership concept')",
+  "beat 7 reused a nearby picture (commons-search:gaming controller: no Commons image named 'gaming controller')"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 14,
+  "extra_photos": 9,
+  "pic_found_share": 0.43,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "sixseven",
+ "social_music": "sport-phonk-571905",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1023",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 39.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 482.3,
+   "contrast": 0.135,
+   "face_area": 0.0026,
+   "text_area": 0.1195,
+   "caption_contrast": 12.14,
+   "by_frame": {
+    "sharpness": [
+     461.6,
+     516.3,
+     500.7,
+     450.4
+    ],
+    "contrast": [
+     0.131,
+     0.132,
+     0.131,
+     0.146
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0103
+    ],
+    "text_area": [
+     0.1393,
+     0.1304,
+     0.135,
+     0.0731
+    ],
+    "caption_contrast": [
+     12.25,
+     12.24,
+     12.04,
+     10.5
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.79,
+   "none",
+   3
+  ],
+  [
+   5.79,
+   13.44,
+   "none",
+   5
+  ],
+  [
+   13.44,
+   18.84,
+   "none",
+   4
+  ],
+  [
+   18.84,
+   22.8,
+   "none",
+   3
+  ],
+  [
+   22.8,
+   28.0,
+   "none",
+   4
+  ],
+  [
+   28.0,
+   32.52,
+   "none",
+   3
+  ],
+  [
+   32.52,
+   39.69,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "211656",
+   "q": "neon city night",
+   "t0": 0.0,
+   "t1": 13.63
+  },
+  {
+   "p": "pixabay",
+   "id": "33237",
+   "q": "open world map",
+   "t0": 13.03,
+   "t1": 26.66
+  },
+  {
+   "p": "pixabay",
+   "id": "3161",
+   "q": "heist planning board",
+   "t0": 26.06,
+   "t1": 39.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T10:25:33Z",
+ "video": "NDbDMJxPXQk",
+ "url": "https://youtube.com/shorts/NDbDMJxPXQk",
+ "publish_at": "2026-10-26T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-26T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-185"
+}

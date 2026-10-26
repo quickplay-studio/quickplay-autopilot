@@ -1,0 +1,142 @@
+{
+ "id": "QD-186",
+ "board": "boards/queue/QD-186.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T07:00:00Z",
+ "rendered": "2026-10-26T10:04:44.565465+00:00",
+ "title": "Game Facts #2: Exoplanet Arcade Cabinet | a short story",
+ "background_notes": [
+  "Pixabay 'alien planet surface': 40 results, none at 720p or better",
+  "Pixabay 'cosmic starfield': 40 results, none at 720p or better",
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 0,
+  "planned_real": 0,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "defying-gravity",
+ "social_music": "space-ambient-cinematic-442834",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1023",
+  "opening": "lab-opening-1019",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 40.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 21.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 513.7,
+   "contrast": 0.134,
+   "face_area": 0.0,
+   "text_area": 0.1559,
+   "caption_contrast": 16.81,
+   "by_frame": {
+    "sharpness": [
+     429.1,
+     541.5,
+     542.3,
+     542.1
+    ],
+    "contrast": [
+     0.122,
+     0.138,
+     0.138,
+     0.138
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1134,
+     0.17,
+     0.17,
+     0.17
+    ],
+    "caption_contrast": [
+     16.64,
+     16.91,
+     16.91,
+     16.72
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.71,
+   "title",
+   1
+  ],
+  [
+   4.71,
+   10.43,
+   "none",
+   2
+  ],
+  [
+   10.43,
+   17.45,
+   "none",
+   2
+  ],
+  [
+   17.45,
+   24.31,
+   "none",
+   2
+  ],
+  [
+   24.31,
+   30.6,
+   "none",
+   2
+  ],
+  [
+   30.6,
+   37.02,
+   "none",
+   2
+  ],
+  [
+   37.02,
+   40.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-26T10:25:35Z",
+ "video": "Dd8fTVqyAz0",
+ "url": "https://youtube.com/shorts/Dd8fTVqyAz0",
+ "publish_at": "2026-10-27T07:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T07:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-186"
+}

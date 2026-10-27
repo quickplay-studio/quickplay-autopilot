@@ -1,18 +1,21 @@
-afternoon run for 2026-10-27: 1 to write from 9 fact packs
-category shares: {'Music': 0.29, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.11, 'Animals': 0.11, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
-category floors first: ['Sport']
+evening run for 2026-10-28: 4 to write from 4 fact packs
+category shares: {'Music': 0.26, 'Film': 0.16, 'Gaming': 0.15, 'Sport': 0.12, 'Animals': 0.1, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
+category floors first: ['Entertainment']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-How did Lord of the Rings make hobbits look small?: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-evergreen: Top 10 best-selling Grand Theft Auto games: only 1 checked facts
-wrote 1 of 1: QD-219 Film Explained #1: How Lord of the Rings Made Hobbits Small
-channel gaming: GTA 6 PC release: skipped: nothing new
-channel gaming: Tetris: The top 5 best-selling video games of all time: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-channel gaming: Minecraft: How many people still play it every month?: skipped: nothing new
-channel gaming: wrote 1 of 2: QD-220 Level Up #2: Top 5 best-selling games ever 🎮
-channel irl: Eric Bauza: gemini-3-flash-preview, 1 warnings (narration: 131 words, best between 100 and 125)
-channel irl: Walter Koenig: gemini-3-flash-preview, 0 warnings
-channel irl: wrote 2 of 2: QD-221 Did You Know #3: Eric Bauza: the voice legend we just lost 🎙️; QD-222 Did You Know #4: Walter Koenig: the Star Trek legend's final honour
-channel clips: Harry Potter HBO series: gemini-3-flash-preview, 1 warnings (narration: 104 words, best between 75 and 100)
-channel clips: mitchell lawrie luke littler netflix darts: gemini-3-flash-preview, 2 warnings (narration: 101 words, best between 75 and 100; meta.sources: one site only; name it in the narration for breaking news)
-channel clips: wrote 2 of 2: QD-223 Screen Time #4: Harry Potter: the character finally being cast; QD-224 Match Day #2: Mitchell Lawrie faces Luke Littler on Netflix 🎯
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash", "gemini:gemini-3.6-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "openrouter:nvidia/nemotron-3.5-lightning:free": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 2, "gemini-3.5-flash-lite": 23, "groq:openai/gpt-oss-120b": 1, "gemini-3.5-flash": 1, "gemini-3-flash-preview": 15, "gemma-4-26b-a4b-it": 1, "groq:openai/gpt-oss-20b": 1}, "empty answers": {"groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 2, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+How does gravity work?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Ballon d'Or 2026: still failing: narration: 47 words, needs 75 to 100 (20 to 45 seconds)
+Harry Potter HBO series: gemini-3.5-flash-lite, 1 warnings (narration: 72 words, best between 75 and 100)
+GTA 6: gemini-3.5-flash-lite, 0 warnings
+exploration Short: Entertainment: The One About Matthew Perry
+The One About Matthew Perry: gemini-3.5-flash-lite, 0 warnings
+evergreen: Top 10 highest-grossing films in the Hunger Games franchise: only 0 checked facts
+Why GTA 6 took over a decade to make: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+wrote 5 of 4: QD-225 Science Explained #2: How gravity works: science explained 🌌; QD-226 harry potter cast: Harry Gilby; QD-227 Game Facts #6: gta 6 install size officially revealed at 210 GB; QD-228 Star Stories #2: Matthew Perry Netflix documentary 📺; QD-229 Why GTA 6 took over a decade to make 🎮 (reserve)
+channel gaming: GTA 6: gemini-3.5-flash-lite, 1 warnings (narration: 96 words, best between 100 and 125)
+channel gaming: wrote 1 of 2: QD-230 Game Lore #3: GTA 6: the massive storage size revealed
+channel irl: The One About Matthew Perry: gemini-3.5-flash-lite, 0 warnings
+evergreen: Top 10 most popular dog breeds in the UK: only 0 checked facts
+channel irl: wrote 1 of 2: QD-231 Did You Know #5: Matthew Perry documentary: the cast secret
+channel clips: Ballon d'Or 2026: gemini-3.5-flash-lite, 0 warnings
+channel clips: wrote 1 of 2: QD-232 Match Day #3: Harry Kane wins Ballon d'Or 2026 ⚽
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash", "gemini:gemini-3.6-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "gemini-3.6-flash": "daily limit 20", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries", "gemini-3.7-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-3.7-flash": 1, "gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 50, "gemini-3.5-flash": 1, "gemini-3-flash-preview": 2, "groq:openai/gpt-oss-20b": 1, "groq:qwen/qwen3.8-27b": 2}, "empty answers": {"groq:openai/gpt-oss-120b": 1, "groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 1, "providers passed over": ["groq", "openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}

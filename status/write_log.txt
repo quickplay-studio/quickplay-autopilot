@@ -1,23 +1,8 @@
-evening run for 2026-10-27: 4 to write from 6 fact packs
+breaking run for 2026-10-27: 2 to write from 5 fact packs
 category shares: {'Music': 0.28, 'Film': 0.17, 'Gaming': 0.15, 'Sport': 0.14, 'Entertainment': 0.11, 'Science': 0.07, 'Tech': 0.07}
-category floors first: ['Film', 'Gaming', 'Music', 'Tech']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Why did Oasis split up?: still failing: negative framing of a real person (only in fiction): ['split up']
-Halloween 2026: skipped: nothing new
-GTA 6: skipped: niche
-GTA 6: gemini-3.5-flash-lite, 0 warnings
-exploration Short: Film: Wildwood (film)
-Wildwood (film): gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-beyoncé: gemini-3.5-flash-lite, 1 warnings (narration: 92 words, best between 100 and 125)
-gpt-6.1: gemini-3.5-flash-lite, 1 warnings (narration: 59 words, best between 75 and 100)
-wrote 4 of 4: QD-200 GTA 6 launch trailer: 24 days to go 🎮; QD-201 Film Facts #1: Wildwood runtime sets a stop-motion record 🎬; QD-202 Song Secrets #3: Beyonce solo debut hits number one in Billboard; QD-203 GPT-6.1 Terra: OpenAI upgrades ChatGPT
-channel gaming: Sonic the Hedgehog fan creations: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-channel gaming: GTA 6: still failing: facts: beat 7: Beat 7 names Wikipedia as a source, which is forbidden by the pack rules ('never name or cite it').
-channel gaming: wrote 1 of 2: QD-204 Game Lore #2: Sonic the Hedgehog free RPGs 🎲
-channel irl: no Entertainment/Animals/Food news packs; evergreen instead
-channel irl: wrote 0 of 2: 
-channel clips: Halloween 2026: still failing: UK date style: write '20 October', not ['November 8', 'October 29']
-channel clips: gpt-6.1: gemini-3.5-flash-lite, 0 warnings
-channel clips: Wildwood (film): gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-channel clips: wrote 2 of 2: QD-205 Big Science #1: GPT-6.1 Terra: every big change explained 🤖; QD-206 Screen Time #3: Wildwood: the record breaking runtime you missed
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "openrouter:nvidia/nemotron-3-super-120b-a12b:free": "daily limit", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1, "groq:openai/gpt-oss-20b": 2}, "answers": {"gemini-flash-latest": 1, "gemini-3.5-flash-lite": 49, "groq:openai/gpt-oss-120b": 1, "gemini-3.6-flash": 1, "gemini-3-flash-preview": 1, "groq:qwen/qwen3.8-27b": 5}, "empty answers": {"groq:openai/gpt-oss-20b": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 1, "providers passed over": ["groq", "openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+Halloween 2026: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (beat 0: name Halloween: The Game in the first five words, as the title does)
+GTA 6: gemini-3.6-flash, 0 warnings
+GTA 6: gemini-3.6-flash, 2 warnings (narration: 107 words, best between 75 and 100; meta.title: 51 characters: under 50, the searched name still first), edited by Claude
+wrote 3 of 2: QD-207 Game Facts #4: halloween 2026 game: the price drop you missed; QD-208 gta 6: arrives on 19 November (Part 1) 🎮; QD-209 GTA 6 hits consoles on 19 November 🎮
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {}, "retired": ["gemini-2.5-flash", "openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemini-flash-latest": 1, "gemini-3.8-flash": 1, "gemini-3.7-flash": 1, "groq:openai/gpt-oss-120b": 2}, "answers": {"gemini-3.6-flash": 4, "gemini-3.5-flash-lite": 10, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 4, "claude:sonnet": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 1, "second opinions": 0, "providers passed over": [], "late": false, "claude today": "1 of 4 edits, 0 of 0 writes"}

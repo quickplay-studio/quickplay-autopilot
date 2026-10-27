@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 14:53): 17 of 1,000 subscribers · 11,310 of 10 million Shorts views in 90 days · 4,672 views in the last 24 hours (about 110,985 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 15:50): 17 of 1,000 subscribers · 11,338 of 10 million Shorts views in 90 days · 4,320 views in the last 24 hours (about 110,985 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 13:43 (UK): 7 scheduled, 142 public, 22 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 14:22).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 15:21).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 15 scheduled |
-| Tue 27 Oct | 18 public, 9 scheduled | 6 | 1 | ✅ done |
+| Tue 27 Oct | 22 public, 5 scheduled | 6 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -110,7 +110,7 @@ scheduled · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json
 ![QD-209](QD-209.jpg)
 
 ### Tue 27 Oct 16:00 · Megan Thee Stallion's Thin Ice: the 1999 twist 🔥
-scheduled · 24 s · music: comin-wit-it · [script](../boards/done/QD-212.json) · [YouTube](https://youtube.com/shorts/uoxdTT_DOYM)
+private · 24 s · music: comin-wit-it · [script](../boards/done/QD-212.json) · [YouTube](https://youtube.com/shorts/uoxdTT_DOYM)
 
 ![QD-212](QD-212.jpg)
 

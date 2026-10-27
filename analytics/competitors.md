@@ -5,10 +5,10 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 50% | 33% |
-| A question | 35% | 8% |
-| With an emoji | 54% | 55% |
-| Length, seconds (median) | 25.0 | 28.3 |
+| With a number | 48% | 34% |
+| A question | 33% | 8% |
+| With an emoji | 56% | 55% |
+| Length, seconds (median) | 25.0 | 28.4 |
 
 ## Animals
 - The 3 Most Unbelievable Dangerous Places on Earth!🙄#city #facts #new #shorts #place #ytshorts (4,083,697 views, 128,039 an hour, 73 s, Unique Fact Official)
@@ -30,6 +30,12 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - He Lifted The Elevator And Crushed His Brother’s Car (257,450 views, 5,865 an hour, 26 s, Kamu Facts )
 - A challenge to win a Lakh taka 🤯🚘🚗 #shorts #car (106,909 views, 3,988 an hour, 22 s, Pantha Explain)
 - Why Did Cars Stop Using This Steering Knob? 😳🚗 (168,148 views, 3,548 an hour, 22 s, FACT ACT)
+
+## Dune: Part Three
+- Dune Part Three is Going to DESTROY US! | Final Trailer Reaction (1,073 views, 389 an hour, 59 s, Troy Cervantes)
+- Dune 3 final trailer is OUT my reaction #shorts (315 views, 99 an hour, 7 s, TrendSpice LB)
+- DUNESDAY: Can Avengers: Doomsday Break the Box Office Record? (1,432 views, 37 an hour, 58 s, Mythic Panels)
+- 3 Hours of Grinding for THIS Sandbike | Dune Awakening #shorts (555 views, 29 an hour, 45 s, Shaogunz)
 
 ## Entertainment
 - Celebrity Recipe EP 21: Ranveer Brar Reveals the History of Chai ☕🤯 #trending #ytshorts #shorts (48,569 views, 2,823 an hour, 45 s,  Varshuu's Delights🌸)

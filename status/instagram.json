@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-27T13:49+00:00",
+ "updated": "2026-10-27T19:13+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 102,
+ "reels": 107,
  "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
@@ -15,22 +15,22 @@
   {
    "category": "Gaming",
    "median": 125.0,
-   "n": 16,
-   "score": 1.073,
+   "n": 18,
+   "score": 1.075,
    "favoured": true
   },
   {
    "category": "Sport",
-   "median": 120.0,
-   "n": 25,
-   "score": 1.044,
+   "median": 119.0,
+   "n": 26,
+   "score": 1.037,
    "favoured": false
   },
   {
    "category": "Film",
-   "median": 119.0,
-   "n": 13,
-   "score": 1.031,
+   "median": 113.0,
+   "n": 14,
+   "score": 0.994,
    "favoured": false
   },
   {
@@ -42,9 +42,9 @@
   },
   {
    "category": "Music",
-   "median": 63.5,
-   "n": 24,
-   "score": 0.616,
+   "median": 75.0,
+   "n": 25,
+   "score": 0.705,
    "favoured": false
   },
   {
@@ -83,11 +83,11 @@
      "lift": ""
     },
     "no": {
-     "n": 7,
-     "median": 127.0,
+     "n": 11,
+     "median": 119.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.95"
+     "lift": "0.97"
     }
    },
    "paused": true
@@ -98,15 +98,15 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 4,
+     "n": 7,
      "median": 127.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.94"
+     "lift": "0.96"
     },
     "full": {
-     "n": 4,
-     "median": 126.5,
+     "n": 5,
+     "median": 119.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "1.01"
@@ -124,11 +124,11 @@
      "median": 121.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.95"
+     "lift": "0.97"
     },
     "any": {
-     "n": 4,
-     "median": 130.5,
+     "n": 8,
+     "median": 123.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "1.0"
@@ -138,17 +138,17 @@
   }
  },
  "week": {
-  "reels": 88,
+  "reels": 92,
   "median": 109.5,
-  "before_reels": 14,
-  "before_median": 126.0
+  "before_reels": 15,
+  "before_median": 123.0
  },
  "cover": {
-  "asked": 16,
-  "accepted": 16,
+  "asked": 20,
+  "accepted": 20,
   "refused": 0,
   "last": "accepted",
-  "last_at": "2026-10-27T08:18+00:00",
+  "last_at": "2026-10-27T16:22+00:00",
   "ok": true,
   "paused_until": null
  }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T16:30+00:00",
+ "updated": "2026-10-27T19:06+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -45,8 +45,8 @@
    "news_24h": 100,
    "news_usual": 100.0,
    "suggestions": [
-    "ballon d'or 2026 live",
     "ballon d'or 2026",
+    "ballon d'or 2026 live",
     "ballon d'or 2026 live official",
     "ballon d'or 2026 live stream",
     "ballon d'or 2026 live ceremony",
@@ -126,7 +126,7 @@
     11925,
     9491
    ],
-   "news_24h": 45,
+   "news_24h": 40,
    "news_usual": 60.0,
    "suggestions": [
     "the celebrity traitors",
@@ -199,9 +199,9 @@
    "news_usual": 56.0,
    "suggestions": [
     "halloween 2026",
+    "halloween 2026 countdown",
     "halloween 2026 trailer",
     "halloween 2026 house",
-    "halloween 2026 countdown",
     "halloween 2026 game",
     "halloween 2026 gameplay",
     "halloween 2026 game trailer",
@@ -291,8 +291,8 @@
    "name": "GTA 6",
    "days_to": 23,
    "phase": "build-up",
-   "level": "build-up",
-   "places": 2,
+   "level": "surging",
+   "places": 3,
    "momentum": 0.95,
    "views_yesterday": 17068,
    "views_usual": 17908,
@@ -328,7 +328,7 @@
     16864,
     17068
    ],
-   "news_24h": 87,
+   "news_24h": 100,
    "news_usual": 68.0,
    "suggestions": [
     "gta 6",
@@ -336,11 +336,13 @@
     "gta 6 gameplay",
     "gta 6 extended look",
     "gta 6 leaks",
-    "gta 6 launch trailer",
     "gta 6 launch trailer reaction",
+    "gta 6 launch trailer",
     "gta 6 reaction"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Gaming",
    "angles": [
     "GTA 6 price",
@@ -398,15 +400,15 @@
     13557,
     13501
    ],
-   "news_24h": 49,
+   "news_24h": 46,
    "news_usual": 21.0,
    "suggestions": [
     "the hunger games sunrise on the reaping",
     "the hunger games sunrise on the reaping interview",
     "the hunger games sunrise on the reaping trailer",
     "the hunger games sunrise on the reaping audiobook",
-    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping cast",
+    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping reaction",
     "the hunger games sunrise on the reaping official trailer"
    ],
@@ -538,7 +540,7 @@
     260,
     331
    ],
-   "news_24h": 5,
+   "news_24h": 3,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
@@ -605,9 +607,9 @@
    "news_24h": 16,
    "news_usual": 9.0,
    "suggestions": [
+    "the game awards 2024",
     "the game awards 2025",
     "the game awards",
-    "the game awards 2024",
     "the game awards 2025 reaction",
     "the game awards orchestra",
     "the game awards trailers",
@@ -668,7 +670,7 @@
     28036,
     23773
    ],
-   "news_24h": 81,
+   "news_24h": 100,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
@@ -700,8 +702,8 @@
    "name": "Dune: Part Three",
    "days_to": 52,
    "phase": "steady",
-   "level": "steady",
-   "places": 0,
+   "level": "surging",
+   "places": 3,
    "momentum": 1.08,
    "views_yesterday": 9018,
    "views_usual": 8388,
@@ -737,17 +739,17 @@
     8681,
     9018
    ],
-   "news_24h": 46,
+   "news_24h": 92,
    "news_usual": 24.0,
    "suggestions": [
     "dune part three",
     "dune part three trailer",
     "dune part three trailer reaction",
-    "dune part three final trailer",
+    "dune part three soundtrack",
     "dune part three official trailer",
-    "dune part three teaser",
-    "dune part three full movie",
-    "dune part three paul atreides vs. feyd-rautha"
+    "dune part three final trailer",
+    "dune part three new trailer",
+    "dune part three teaser"
    ],
    "in": [],
    "category": "Film",
@@ -804,7 +806,7 @@
     5885,
     4622
    ],
-   "news_24h": 19,
+   "news_24h": 26,
    "news_usual": 6.0,
    "suggestions": [
     "harry potter hbo series",
@@ -816,9 +818,7 @@
     "harry potter hbo series news",
     "harry potter hbo series update"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Film",
    "angles": [
     "Harry Potter HBO cast",
@@ -876,7 +876,7 @@
     1787,
     2283
    ],
-   "news_24h": 47,
+   "news_24h": 50,
    "news_usual": 35.0,
    "suggestions": [
     "christmas 2026",
@@ -946,7 +946,7 @@
     318,
     286
    ],
-   "news_24h": 9,
+   "news_24h": 13,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",

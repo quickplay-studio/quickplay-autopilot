@@ -1,9 +1,9 @@
 {
  "date": "2026-10-27",
- "built": "2026-10-27T16:33+00:00",
+ "built": "2026-10-27T19:08+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "evening",
  "errors": [],
  "topics": [
   {
@@ -11,12 +11,23 @@
    "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "Harry Kane won the Ballon d'Or on Monday night, becoming the first English player to win it for 25 years.",
+   "what_is_new": "",
    "hooks": [
-    "Harry Kane wins the Ballon d'Or!",
-    "England celebrates its first Ballon d'Or winner in 25 years!"
+    "Harry Kane wins the 2026 Ballon dOr!"
    ],
    "sources": [
+    [
+     "Ballon d'Or in London - the most chaotic ever?",
+     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-27"
+    ],
+    [
+     "Harry Kane triumphs with historic Ballon d’Or win - The Latest",
+     "https://www.theguardian.com/news/video/2026/oct/27/harry-kane-triumphs-with-historic-ballon-dor-win-the-latest",
+     "Guardian",
+     "2026-10-27"
+    ],
     [
      "'Everything about him is world class' - Neville hails Kane after Ballon d'Or win",
      "https://www.skysports.com/watch/video/13604421/harry-kane-wins-ballon-dor-gar-neville-describes-him-as-gold",
@@ -26,12 +37,6 @@
     [
      "How Kane's Ballon d'Or win could boost the Bundesliga",
      "https://www.bbc.co.uk/sport/football/articles/crgqwge88z84o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
-    ],
-    [
-     "Ballon d'Or in London - the most chaotic ever?",
-     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
      "BBC Sport",
      "2026-10-27"
     ],
@@ -44,52 +49,69 @@
    ],
    "verified": [
     {
-     "claim": "Harry Kane was crowned Ballon d'Or winner on Monday night.",
+     "claim": "Harry Kane is the mens Ballon dOr winner for 2026, the first Englishman to win the trophy in 25 years.",
      "sources": [
+      1,
       2,
-      3
+      4
      ],
      "evidence": {
-      "2": "Harry Kane on Monday night becoming the first player from the country to win it for 25 years.",
-      "3": "Despite the perfect homecoming for Harry Kane on Monday night, the rest of the event was not plain sailing."
+      "1": "Despite the perfect homecoming for Harry Kane on Monday night, the rest of the event was not plain sailing.",
+      "2": "Harry Kane is the men’s Ballon d’Or winner for 2026, the first Englishman to win the trophy in 25 years.",
+      "4": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player"
+     }
+    },
+    {
+     "claim": "Harry Kane won the men's Ballon d'Or 2026.",
+     "sources": [
+      1,
+      2,
+      4
+     ],
+     "evidence": {
+      "1": "After Kane and Alexia Putellas had been crowned the winners in the two main categories, they then spoke to the world's media in separate press",
+      "2": "Harry Kane is the men’s Ballon d’Or winner for 2026, the first Englishman to win the trophy in 25 years.",
+      "4": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player"
+     }
+    },
+    {
+     "claim": "Harry Kane is the first Englishman to win the Ballon d'Or in 25 years.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "Harry Kane is the men’s Ballon d’Or winner for 2026, the first Englishman to win the trophy in 25 years.",
+      "4": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Harry Kane wins Ballon d'or: Gary Neville describes English striker as gold",
+     "claim": "The ceremony lasted nearly two and a half hours.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Harry Kane wins Ballon d'or: Gary Neville describes English striker as 'gold'"
+      "1": "Once it did get under way, a rowdy and boisterous audience sat through a ceremony that lasted nearly two and a half hours."
      }
     },
     {
-     "claim": "Gary Neville described Harry Kane as 'gold'.",
+     "claim": "A Section 35 dispersal order was authorised at 19:49 GMT and remained until 04:00 on Tuesday 27 October.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Harry Kane wins Ballon d'Or: Gary Neville describes English striker as 'gold'"
+      "1": "\"A Section 35 dispersal order was authorised at 19:49 GMT and was in place until 04:00 on Tuesday, 27 October,\" a statement read."
      }
     },
     {
-     "claim": "Harry Kane became the first English player to win the Ballon d'Or in 25 years.",
+     "claim": "Two arrests were made, one for breaching the dispersal order and another for affray and violent disorder.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Harry Kane on Monday night becoming the first player from the country to win it for 25 years."
-     }
-    },
-    {
-     "claim": "The official Ballon d'Or website mistakenly published an article declaring Kane as the winner before the ceremony.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The confusion and chaos began hours before the ceremony had even started, after the official Ballon d'Or website published an article declaring Kane as the"
+      "1": "It added that two arrests were made - one for breaching the dispersal order and another for affray and violent disorder."
      }
     }
    ],
@@ -98,27 +120,34 @@
    ]
   },
   {
-   "n": 13,
+   "n": 12,
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
+   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
    "category": "Gaming",
-   "what_is_new": "Edge magazine announced its GTA 6 cover story will be released on 29 October 2026.",
+   "what_is_new": "",
    "hooks": [
-    "GTA 6 arrives on November 19, 2026!",
-    "Edge magazine goes inside Rockstar's headquarters for GTA 6!"
+    "Did you know GTA 6 will take up 210 GB of space?",
+    "GTA 6 is finally launching on November 19, 2026!",
+    "Get ready to preload GTA 6 starting on November 12."
    ],
    "sources": [
+    [
+     "GTA 6 Install Size Officially Revealed",
+     "https://www.polygon.com/gta-6-storage-size-install-ps5-xbox-series-x/",
+     "Polygon",
+     "2026-10-27"
+    ],
+    [
+     "GTA 6 Sparks Unlikely Cliff Richard Resurgence, but the 86-Year-Old Singer Still Doesn't Know What It Is",
+     "https://www.ign.com/articles/devil-woman-singer-cliff-richard-didnt-know-gta-6",
+     "IGN",
+     "2026-10-27"
+    ],
     [
      "Edge magazine went to Rockstar to see GTA 6, and will tell you all about it in lavish detail this Thursday, October 29",
      "https://www.pcgamer.com/games/grand-theft-auto/edge-magazine-went-to-rockstar-to-see-gta-6-and-will-tell-you-all-about-in-lavish-detail-this-thursday-october-29/",
      "PC Gamer",
      "2026-10-27"
-    ],
-    [
-     "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
-     "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
-     "IGN",
-     "2026-10-26"
     ],
     [
      "GTA 6",
@@ -129,56 +158,54 @@
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
      "sources": [
       1,
-      3
-     ],
-     "evidence": {
-      "1": "We are just three weeks out from the release of Grand Theft Auto 6, which you can tell because it has cleared the release calendar",
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "Francis Lawrence is directing a film adaptation of Red Rising.",
-     "sources": [
       2,
-      3
+      4
      ],
      "evidence": {
-      "2": "Lawrence is also gearing up to direct a film adaptation of Red Rising, a young adult book series written by author Peirce Brown.",
-      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto 6 is an upcoming game.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "We are just three weeks out from the release of Grand Theft Auto 6, which you can tell because it has cleared the release calendar",
-      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+      "1": "Grand Theft Auto 6 is coming to PlayStation 5 and Xbox Series X on Nov. 19.",
+      "2": "GTA 6 is scheduled for launch on November 19 for PS5 and Xbox Series consoles.",
+      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
+     "claim": "Grand Theft Auto 6 will weigh in at a whopping 210 GB at launch, according to PlayStation Game Size's data.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "1": "Grand Theft Auto 6 will weigh in at a whopping 210 GB at launch, according to PlayStation Game Size's data."
      }
     },
     {
-     "claim": "The game follows criminal duo Jason Duval and Lucia Caminos, the series' first non‑optional female protagonist.",
+     "claim": "Preloads for the game start on Nov. 12.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Preloads for the game start on Nov. 12."
+     }
+    },
+    {
+     "claim": "Since the Extended Look, Devil Woman has seen a 325% increase in daily streams.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Since the Extended Look, Devil Woman has seen a 325% increase in daily streams."
+     }
+    },
+    {
+     "claim": "The 16-page cover story coming in Edge #430, on sale October 29.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "The story follows a criminal couple: Jason Duval, who worked for local drug runners in the Leonida Keys after serving in the Army; and Lucia"
+      "3": "The result? The 16-page cover story coming in Edge #430, on sale October 29."
      }
     }
    ],
@@ -191,9 +218,9 @@
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Jasper Talbot and Hannah Chinn are confirmed as James and Lily Potter!",
-    "The first season of the Harry Potter TV show premieres on Dec. 25!",
-    "Harry Gilby has joined the cast as Charlie Weasley!"
+    "Jasper Talbot and Hannah Chinn are confirmed to play James and Lily Potter in the HBO series.",
+    "Harry Gilby has joined the cast as Charlie Weasley.",
+    "The first season of the Harry Potter TV show premieres on HBO on Dec. 25."
    ],
    "sources": [
     [
@@ -217,7 +244,7 @@
    ],
    "verified": [
     {
-     "claim": "Jasper Talbot and Hannah Chinn are confirmed to be the new James and Lily Potter in HBO's Harry Potter.",
+     "claim": "Jasper Talbot and Hannah Chinn are confirmed to play James and Lily Potter in the HBO series.",
      "sources": [
       1,
       2,
@@ -230,7 +257,7 @@
      }
     },
     {
-     "claim": "Harry Gilby has joined the cast as Charlie Weasley, the second-eldest son of Molly and Arthur Weasley and brother of Ron.",
+     "claim": "Harry Gilby has joined the cast as Charlie Weasley.",
      "sources": [
       1,
       2,
@@ -246,13 +273,33 @@
      "claim": "The first season of the Harry Potter TV show premieres on HBO on Dec. 25.",
      "sources": [
       1,
+      2
+     ],
+     "evidence": {
+      "1": "The series' first season, Harry Potter and the Philosopher's Stone, premieres on HBO and HBO Max on Dec. 25.",
+      "2": "The first season of the “Harry Potter” TV show premieres on HBO on Dec. 25."
+     }
+    },
+    {
+     "claim": "The first season of the show is titled Harry Potter and the Philosopher's Stone.",
+     "sources": [
       2,
       3
      ],
      "evidence": {
-      "1": "The series' first season, Harry Potter and the Philosopher's Stone, premieres on HBO and HBO Max on Dec. 25.",
-      "2": "The first season of the “Harry Potter” TV show premieres on HBO on Dec. 25.",
+      "2": "The actors will appear in Season 1 of the series, which is dubbed “Harry Potter and the Philosopher’s Stone.”",
       "3": "The first season, titled Harry Potter and the Philosopher's Stone and based on the novel of the same name, consists of eight episodes and is"
+     }
+    },
+    {
+     "claim": "Kit Harington will join Season 2 as Gilderoy Lockhart.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The second season of the show, Harry Potter and the Chamber of Secrets, is also coming together, with Kit Harington (Game of Thrones) playing Gilderoy",
+      "2": "“Game of Thrones” favorite Kit Harington will join Season 2 as Gilderoy Lockhart alongside Bonnie Hill as Ginny Weasley, Lenny Rush as Dobby, Billy Barratt"
      }
     },
     {
@@ -269,165 +316,132 @@
      }
     }
    ],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "Charlie Weasley is a minor character in the books and does not appear in the films.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Charlie Weasley is a minor character in the books and does not appear in the films, so the HBO series is straying from the movies"
+     }
+    },
+    {
+     "claim": "The second season is currently filming at Leavesden Studios outside London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The second season, based on the second book in J.K. Rowling’s beloved fantasy series, “Harry Potter and the Chamber of Secrets,” is currently filming at"
+     }
+    }
+   ],
    "images": [
     "commons:File:Harry_Potter_TV_series_logo.png"
    ]
   },
   {
-   "n": 23,
-   "topic": "mitchell starc",
-   "signal": "Google Trends GB 10000+",
-   "category": "Sport",
+   "n": 33,
+   "topic": "The One About Matthew Perry",
+   "signal": "TVmaze web: series premiere tonight",
+   "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Did you know Mitchell Starc is cricket's fastest ODI star?",
-    "Discover how Mitchell Starc made cricket history!",
-    "Unbelievable records held by cricket legend Mitchell Starc!"
+    "Did you know Matthew Perry was the final cast member hired for Friends?",
+    "None of the main Friends cast members participated in the new Netflix documentary.",
+    "Matthew Perry prayed to God to make him famous just weeks before getting cast in Friends."
    ],
    "sources": [
     [
-     "Starc strikes back as Australia dismiss South Africa for 329 on day one of third Test – as it happened",
-     "https://www.theguardian.com/sport/live/2026/oct/27/south-africa-v-australia-third-test-day-one-cricket-newlands-cape-town-live-updates",
+     "The One About Matthew Perry review – the star of one of TV’s biggest ever shows gets a loving tribute",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/27/the-one-about-matthew-perry-review-netflix-documentary-friends",
      "Guardian",
      "2026-10-27"
     ],
     [
-     "Lawrie, 15, eyes £501,000 live TV win over Littler",
-     "https://www.bbc.co.uk/sport/darts/articles/cq33xj8yyd5do?at_medium=RSS&at_campaign=rss",
-     "BBC",
+     "‘The One About Matthew Perry’ Reveals Emotional Way His ‘Friends’ Cast Said Goodbye at His Funeral",
+     "https://www.rollingstone.com/tv-movies/tv-movie-features/the-one-about-matthew-perry-netflix-death-1235628577/",
+     "Rolling Stone",
      "2026-10-27"
     ],
     [
-     "mitchell starc",
-     "https://en.wikipedia.org/wiki/Mitchell_Starc",
-     "Wikipedia",
-     ""
+     "Netflix Docuseries ‘The One About Matthew Perry’ Is a Tragic, Mournful Portrait of Addiction: TV Review",
+     "https://variety.com/2026/tv/tv-reviews/the-one-about-matthew-perry-review-netflix-1236931448/",
+     "Variety",
+     "2026-10-27"
     ]
    ],
-   "verified": [],
-   "one_source": [
+   "verified": [
     {
-     "claim": "Mitchell Aaron Starc was born on 30 January 1990.",
+     "claim": "The three part documentary titled The One About Matthew Perry is streaming on Netflix.",
      "sources": [
+      1,
+      2,
       3
      ],
      "evidence": {
-      "3": "Mitchell Aaron Starc (born 30 January 1990) is an Australian international cricketer who plays for the Australian national team and New South Wales in domestic"
+      "1": "The three-part, three-hour documentary – titled, perhaps inevitably, The One About Matthew Perry – charts the whole of the actor’s rise and fall.",
+      "2": "Now, in the new three-part Netflix docuseries The One About Matthew Perry, they’re sharing never-before-heard stories about knowing and loving Perry.",
+      "3": "All three episodes of “The One About Matthew Perry” are now streaming on Netflix."
      }
     },
     {
-     "claim": "Mitchell Starc is Australia's fourth highest wicket-taker in both Test and One Day International cricket.",
+     "claim": "None of the Friends cast members Jennifer Aniston, Lisa Kudrow, David Schwimmer, Matt LeBlanc, or Courteney Cox participated in the documentary.",
      "sources": [
+      2,
       3
      ],
      "evidence": {
-      "3": "A left-arm fast bowler and a lower order left-handed batsman, he is Australia's fourth highest wicket-taker in both Test and One Day International (ODI) cricket.[2][3]"
+      "2": "None of the Friends cast — Jennifer Aniston, Lisa Kudrow, David Schwimmer, Matt LeBlanc, or Courteney Cox — participated in the documentary",
+      "3": "None of the late actor’s “Friends” castmates sat for an interview for the three-part Netflix docuseries"
      }
     },
     {
-     "claim": "Mitchell Starc picked up 27 wickets at the 2019 Cricket World Cup, which is an all-time record for the most wickets taken in a single edition of the tournament.",
+     "claim": "Matthew Perry died in 2023 at the age of 54.",
      "sources": [
-      3
+      1,
+      2
      ],
      "evidence": {
-      "3": "At the 2019 Cricket World Cup, he picked up 27 wickets, which is an all-time record for the most wickets taken in a single edition"
+      "1": "who died after relapsing into drug addiction in 2023 at the age of just 54.",
+      "2": "Authorities later revealed that Perry, 54, drowned in his hot tub due to the “acute effects of ketamine” in his system."
      }
     },
     {
-     "claim": "Mitchell Starc is the fastest bowler in the history of ODI cricket to reach 150 and 200 wickets, taking 77 and 102 matches respectively.",
+     "claim": "Warren Littlefield is the former president of NBC Entertainment.",
      "sources": [
+      2,
       3
      ],
      "evidence": {
-      "3": "He is the fastest bowler in the history of ODI cricket to reach 150 and 200 wickets, taking 77 and 102 matches respectively to reach"
+      "2": "Warren Littlefield, former president of NBC Entertainment, explains in the docuseries that the rest of the cast",
+      "3": "“Friends” has a couple of representatives in Robertson’s cast of talking heads, namely writer Jeff Strauss and former NBC Entertainment president Warren Littlefield"
      }
     },
     {
-     "claim": "Mitchell Starc is the fastest bowler in the history of Cricket World Cups to reach 50 wickets, taking just 19 WC games.",
+     "claim": "Mia Perry Bowick is Matthew Perry's younger half-sister.",
      "sources": [
+      1,
       3
      ],
      "evidence": {
-      "3": "He is also the fastest bowler in the history of Cricket World Cups to reach 50 wickets, taking just 19 WC games to reach the"
-     }
-    },
-    {
-     "claim": "Mitchell Starc is one of five players who have managed to win an ICC trophy in all three formats of the game.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He is one of five players who have managed to win an ICC trophy in all three formats of the game."
-     }
-    },
-    {
-     "claim": "Mitchell Starc's fastest delivery has been measured at over 160.4 km/h.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Starc has been noted for his ability to bowl at great pace, with his fastest delivery being measured at over 160.4 km/h (the fastest ever"
-     }
-    },
-    {
-     "claim": "Mitchell Starc started playing cricket from a young age, at 9 years old for Northern Districts as a wicket keeper.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Starc started playing cricket from a young age, at 9 years old for Northern Districts as a wicket keeper.[4]"
-     }
-    },
-    {
-     "claim": "Mitchell Starc attended Homebush Boys High School, representing the school's 1st grade cricket team.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He was a representative cricketer of the Northern Districts Cricket Association and attended Homebush Boys High School, representing the school's 1st grade cricket team."
-     }
-    },
-    {
-     "claim": "Mitchell Starc is a former junior cricketer for the Berala Sports Cricket Club in Sydney.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He is also a former junior cricketer for the Berala Sports Cricket Club in Sydney, where he was known to wicket keep and bowl in"
-     }
-    },
-    {
-     "claim": "Mitchell Starc made his first-class debut in New South Wales' final match of the season on 5 March 2009 against Western Australia.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He made his first-class debut in New South Wales' final match of the season on 5 March 2009 against Western Australia.[7]"
-     }
-    },
-    {
-     "claim": "In 2014, Starc was signed by the Royal Challengers Bangalore to play in the 2014 IPL.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In 2014, Starc was signed by the Royal Challengers Bangalore to play in the 2014 IPL."
-     }
-    },
-    {
-     "claim": "In January 2018, Starc was bought by Kolkata Knight Riders for the equivalent of A$1.8 million.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In January 2018, Starc was bought by Kolkata Knight Riders for the equivalent of A$1.8 million, the second most of any Australian player bought in"
+      "1": "Mia was born to John and Matthew’s stepmother when Matthew was 16",
+      "3": "The unofficial protagonist of “The One About Matthew Perry” is Perry’s younger half-sister Mia Perry Bowick"
      }
     }
    ],
-   "images": [
-    "commons:File:Mitchell_Starc_2023.jpg"
-   ]
+   "one_source": [
+    {
+     "claim": "Matthew Perry had his first audition for Friends on a Wednesday and the entire cast had their first table read on Monday.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Perry had his first audition on a Wednesday. On Monday, the entire cast had their first table read."
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

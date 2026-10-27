@@ -1,8 +1,8 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026: 1 verified, 4 one-source, 4 pages
-GTA 6: 3 verified, 2 one-source, 3 pages
-Harry Potter HBO series: 4 verified, 0 one-source, 3 pages
-mitchell starc: 0 verified, 13 one-source, 3 pages
-covered recently, no pack: GTA 6 price; Dai Dai by Shakira & Burna Boy; Thin Ice by Megan Thee Stallion; 2026 United States Grand Prix; BABYMONSTER
-4 packs, 8 verified facts, 19 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 2}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 2, "providers passed over": []}
+Ballon d'Or 2026: 3 verified, 3 one-source, 5 pages
+GTA 6: 1 verified, 4 one-source, 4 pages
+Harry Potter HBO series: 6 verified, 2 one-source, 3 pages
+The One About Matthew Perry: 5 verified, 1 one-source, 3 pages
+covered recently, no pack: GTA 6 price; The Hunger Games: Sunrise on the Reaping; Dai Dai by Shakira & Burna Boy; Thin Ice by Megan Thee Stallion; KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys; 2026 United States Grand Prix
+4 packs, 15 verified facts, 10 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}

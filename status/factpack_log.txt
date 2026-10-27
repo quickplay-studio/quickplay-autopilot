@@ -1,9 +1,9 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: 2 verified, 8 one-source, 4 pages
-Halloween 2026: 0 verified, 3 one-source, 5 pages
-KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys: 3 verified, 4 one-source, 3 pages
-Thin Ice by Megan Thee Stallion: 0 verified, 12 one-source, 1 pages
-pokimane: 0 verified, 9 one-source, 2 pages
-covered recently, no pack: 🔴 BALLON D'OR 2026 LIVE / IS THE WINNER MBAPPE, YAMAL, KANE? / BALLON D’OR LIVE; Ballon d'Or 2026; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Clayface (film); EA shuts down BioWare
-5 packs, 5 verified facts, 36 one-source
-gemini: {"out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries"}, "retired": ["openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemini-3.8-flash": 1}, "answers": {"gemini-3.5-flash-lite": 6, "groq:openai/gpt-oss-120b": 1, "gemini-3.7-flash": 1, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 3, "providers passed over": []}
+GTA 6 PC release: 2 verified, 5 one-source, 2 pages
+Thin Ice by Megan Thee Stallion: 0 verified, 4 one-source, 1 pages
+alexander skarsgård: 0 verified, 4 one-source, 2 pages
+apple iphone duo: 5 verified, 2 one-source, 4 pages
+KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys: 2 verified, 2 one-source, 3 pages
+covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; GTA 6; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Halloween 2026; most popular Halloween costumes 2026; Dai Dai by Shakira & Burna Boy; Clayface (film); 2026 United States Grand Prix; BABYMONSTER; Tate McRae
+5 packs, 9 verified facts, 17 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 6, "groq:openai/gpt-oss-120b": 4}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 4, "providers passed over": []}

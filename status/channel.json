@@ -1,8 +1,8 @@
 {
- "checked": "2026-10-27T07:51Z",
+ "checked": "2026-10-27T08:49Z",
  "uploads_last_24h": 18,
- "scheduled": 6,
- "public": 143,
+ "scheduled": 5,
+ "public": 144,
  "flagged": [
   {
    "video": "ApvkxPKexGc",
@@ -15,6 +15,15 @@
   }
  ],
  "videos": [
+  {
+   "video": "pRQAsVMbuIA",
+   "title": "Kylian Mbappé: the 87th minute moment that changed everything ⚽",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-27T08:00:30Z",
+   "views": 10,
+   "flag": ""
+  },
   {
    "video": "Dd8fTVqyAz0",
    "title": "Game Facts #2: Exoplanet Arcade Cabinet | a short story",
@@ -30,7 +39,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T06:00:39Z",
-   "views": 4,
+   "views": 11,
    "flag": ""
   },
   {
@@ -138,7 +147,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T12:30:22Z",
-   "views": 49,
+   "views": 52,
    "flag": ""
   },
   {
@@ -148,15 +157,6 @@
    "publish_at": null,
    "uploaded": "2026-10-26T12:00:02Z",
    "views": 13,
-   "flag": ""
-  },
-  {
-   "video": "pRQAsVMbuIA",
-   "title": "Kylian Mbappé: the 87th minute moment that changed everything ⚽",
-   "privacy": "private",
-   "publish_at": "2026-10-27T08:00:00Z",
-   "uploaded": "2026-10-26T11:49:34Z",
-   "views": 0,
    "flag": ""
   },
   {
@@ -183,7 +183,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T06:30:17Z",
-   "views": 79,
+   "views": 80,
    "flag": ""
   },
   {
@@ -201,7 +201,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T22:00:21Z",
-   "views": 192,
+   "views": 191,
    "flag": ""
   },
   {
@@ -264,7 +264,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T13:00:24Z",
-   "views": 74,
+   "views": 75,
    "flag": ""
   },
   {
@@ -273,7 +273,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T12:30:12Z",
-   "views": 156,
+   "views": 157,
    "flag": ""
   },
   {
@@ -291,7 +291,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T11:00:12Z",
-   "views": 248,
+   "views": 251,
    "flag": ""
   },
   {
@@ -309,7 +309,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T07:00:04Z",
-   "views": 2123,
+   "views": 2140,
    "flag": ""
   },
   {
@@ -327,7 +327,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T04:00:25Z",
-   "views": 318,
+   "views": 319,
    "flag": ""
   },
   {
@@ -714,7 +714,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T16:00:04Z",
-   "views": 39,
+   "views": 40,
    "flag": ""
   },
   {
@@ -777,7 +777,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T10:30:08Z",
-   "views": 299,
+   "views": 301,
    "flag": ""
   },
   {
@@ -957,7 +957,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T16:30:40Z",
-   "views": 80,
+   "views": 81,
    "flag": ""
   },
   {
@@ -1029,7 +1029,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T12:30:36Z",
-   "views": 37,
+   "views": 36,
    "flag": ""
   },
   {
@@ -1056,7 +1056,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T09:30:08Z",
-   "views": 41,
+   "views": 46,
    "flag": ""
   },
   {

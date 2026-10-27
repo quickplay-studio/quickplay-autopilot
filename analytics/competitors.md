@@ -1,103 +1,110 @@
-# What wins on Shorts for everyone else (Monday 26 October UK)
+# What wins on Shorts for everyone else (Tuesday 27 October UK)
 
 The most-viewed English Shorts of the last 2 days per category (YouTube search), against our own titles. Angles to beat, never to copy.
 
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
-| Title words (median) | 10.0 | 8.0 |
-| With a number | 23% | 35% |
-| A question | 32% | 11% |
-| With an emoji | 68% | 95% |
-| Length, seconds (median) | 29.0 | 27.4 |
+| Title words (median) | 10.0 | 7.0 |
+| With a number | 48% | 30% |
+| A question | 36% | 8% |
+| With an emoji | 56% | 55% |
+| Length, seconds (median) | 25.0 | 28.3 |
 
 ## Animals
-- How Can a Snail Crawl Over a Razor Blade?! 😱 #shorts #facts #snail #sciencefacts #snailfacts #blade (66,545 views, 3,179 an hour, 25 s, Annu Facts 3D)
-- When Anglers Caught The Most Unbelievable River Monsters! #animals #facts #fishyfacts (79,258 views, 1,860 an hour, 71 s, ZooClave)
-- How Do Snakes Hatch, and Why Do Snakes Shed? | Animal Facts for Kids (38,975 views, 1,839 an hour, 85 s, Twin Twin)
-- Your Cat Experiences a Different Reality #shorts #cats #animalfacts (32,678 views, 891 an hour, 74 s, Wagbase)
-- Is this fox dangerous?#Foxes #FennecFox #RedFox #AnimalFacts #Shorts (32,581 views, 796 an hour, 27 s, Cenobio Gian)
+- The 3 Most Unbelievable Dangerous Places on Earth!🙄#city #facts #new #shorts #place #ytshorts (4,083,697 views, 128,039 an hour, 73 s, Unique Fact Official)
+- 5 Animals That Sleep in the STRANGEST Ways (541,665 views, 23,158 an hour, 61 s, informationfact)
+- No One Knows How an eel is Born... (96,679 views, 3,650 an hour, 37 s, TapanGuy)
+- He Tried to Pet a Tiger Through the Cage—and It Turned Tragic 😔🐅🎥video credit : @zackdfilms (94,486 views, 3,161 an hour, 28 s, বিনোদন টিভি 25)
+- How Can a Snail Crawl Over a Razor Blade?! 😱 #shorts #facts #snail #sciencefacts #snailfacts #blade (99,255 views, 2,224 an hour, 25 s, Annu Facts 3D)
 
 ## Ballon d'Or 2026
-- WHO WINS THE BALLON D’OR 2026?! | Yamal, Mbappé, Messi, Rodri, Kane, Haaland, Olise or Dembélé (1,056,765 views, 48,899 an hour, 59 s, Footrix)
-- Who Wins the Ballon d’Or? 👀🏆#eafc24 #fcmobile #fifamobile #shorts #vishyfc #viral (149,744 views, 7,267 an hour, 11 s, Vishy FC)
-- Who Wins the Ballon d'Or 2026? 🏆 Pick Before Tomorrow's Ceremony (96,792 views, 4,173 an hour, 49 s, Marble Dream League)
-- BALLON D’OR 2026 | IS HARRY KANE REALLY GOING TO WIN IT? (45,677 views, 1,714 an hour, 13 s, Sarcasm Football )
-- Ballon d’Or 2026 LEAKED?! Yamal Is In SHOCKED! 💀🏆 (43,489 views, 1,097 an hour, 29 s, Post Playmaker)
+- Harry Kane Is The 2026 Ballon d'or Winner🤫🥶 #shorts #ballondor #harrykane #shortsvideo (807,930 views, 92,792 an hour, 31 s, @xa07_Editx)
+- WHO IS YOUR 2026 BALLON D'OR WINNER? 👀  #football #soccer #shorts (942,299 views, 45,092 an hour, 15 s, GOAL's Front Three)
+- 🤔 Who is WINNING The 2026 Ballon d’Or? (261,268 views, 14,735 an hour, 16 s, Shark Ballers)
+- Who Wins the Ballon d’Or? 👀🏆#eafc24 #fcmobile #fifamobile #shorts #vishyfc #viral (265,663 views, 5,996 an hour, 11 s, Vishy FC)
+- Who Will Win the 2026 Ballon d’Or?🤯 (126,949 views, 5,844 an hour, 73 s, AthliX)
 
 ## Cars
-- This Mazda Car Can Blink Its Eyes! (343,380 views, 15,955 an hour, 25 s, Climax view)
-- He Lifted The Elevator And Crushed His Brother’s Car (142,750 views, 7,070 an hour, 26 s, Kamu Facts )
-- Why Are They TAPPING This Car? 😳 #shorts (60,823 views, 1,967 an hour, 24 s, Omni Byte)
+- This Mazda Car Can Blink Its Eyes! (1,289,128 views, 28,506 an hour, 25 s, Climax view)
+- This old man has the most unique car. #shorts #respect #ytshorts (227,198 views, 10,933 an hour, 15 s, Excessive Facts)
+- He Lifted The Elevator And Crushed His Brother’s Car (257,450 views, 5,865 an hour, 26 s, Kamu Facts )
+- A challenge to win a Lakh taka 🤯🚘🚗 #shorts #car (106,909 views, 3,988 an hour, 22 s, Pantha Explain)
+- Why Did Cars Stop Using This Steering Knob? 😳🚗 (168,148 views, 3,548 an hour, 22 s, FACT ACT)
 
 ## Entertainment
-- Celebrities Who Are Actually Doctors (23,199 views, 493 an hour, 69 s, Jescobar)
-- The 3 Most Famous People on Earth! 🤯 (16,556 views, 362 an hour, 40 s, Fact's Orizin)
-- Get Paid Every Time You Take a Photo With a Celebrity! 😱📸💰 #shorts #facts #kdrama #cdrama (14,488 views, 328 an hour, 134 s, E facts 01)
+- Celebrity Recipe EP 21: Ranveer Brar Reveals the History of Chai ☕🤯 #trending #ytshorts #shorts (48,569 views, 2,823 an hour, 45 s,  Varshuu's Delights🌸)
 
 ## Film
-- The Best Movie Moments That Were Never Scripted 😭 #FilmFacts #Shorts (349,891 views, 8,495 an hour, 77 s, TaleTwist TV)
-- When the Missing Girl Returns to Find Her Father #shorts #facts #kdrama #cdrama (84,316 views, 1,866 an hour, 135 s, Riyad Yt Shorts)
-- Johnny Lever Is an Underrated Dancer 😱🔥 | Bollywood Dance Facts #Shorts (41,109 views, 869 an hour, 69 s, Nick kold12)
+- The Paradise Movie Characters That Made ZERO Impact! 😱 #theparadise #shorts #ytshorts #shortvideo (158,754 views, 6,271 an hour, 48 s, MOVIE_STUDIO)
+- When Your Crush Becomes Your Brother Over Time! 😱💔 #shorts #facts #kdrama #cdrama (64,175 views, 2,386 an hour, 135 s, E facts 01)
+- This is how Final Destination Bloodlines was actually made! #shorts #behindthescenes (45,227 views, 1,124 an hour, 44 s, SimFlix)
+- Why The Director Refused To Cut These Scenes 💀 #behindthescenes #moviefacts (45,459 views, 1,112 an hour, 67 s, TaleTwist TV)
 
 ## Food
-- Did You Know? Okra Is Actually a Fruit! 😳🌿 #shorts (291,954 views, 6,838 an hour, 39 s, Satyah Unfiltered (నిజం))
-- When She Steals Your Food Without Asking! 🍟😭# #facts # #comedy # #utfacts #funny #shorts (52,310 views, 2,145 an hour, 20 s, Khushi's Gajab Fact)
-- Street Food Danger Or Taste In Tamil | Egg Frying Facts You Didn't Know #Shorts (76,137 views, 1,722 an hour, 41 s, Tamil Facts Factory )
-- Did Dairy Milk Made with Pig meat🤯🐷🥩||#shorts #facts #trending #viral #trending (53,679 views, 1,694 an hour, 17 s, World Facts..🌍)
-- 😱 4 Amazing Food Facts You Probably Never Knew! 🌰🍇🌿 #Shorts #factsinhindi #shorts #short (44,864 views, 1,412 an hour, 36 s, FACT TIPS )
+- The Hidden Nutrition Power Of One Simple Egg 🥚#trending #youtubeshorts #shorts #viral #viralvideo (74,213 views, 3,635 an hour, 6 s, RACHANA VLOGS 1619)
+- What $1 Buys in 5 Countries! 🌍💵 (India vs USA) | #shorts (135,950 views, 3,255 an hour, 28 s, FactFleet)
+- 5 Common Symptoms & Foods That May Help Your Body 🍯🍌 | Health Tips in Hindi #Shorts (124,442 views, 3,036 an hour, 31 s, SK DAILY FACTS)
 
 ## GTA 6
-- When you have 32GB of storage 💀🥀 #pcmemes #shorts #meme #gta6 #funny #fyp #pc (216,081 views, 5,738 an hour, 20 s, Butter 🧈)
-- Rockstar actually thought of this #fyp #viral #shorts #videogames #gaming #gta #gta6 #rockstargames (69,182 views, 1,859 an hour, 29 s, SIFUPLAYZ)
+- GTA Online Players on Their First Day 💀 #gtaonline #gta6 #shorts (137,616 views, 3,365 an hour, 8 s, ItsCronx)
+- 😳How did Rockstar get permission to use real cars to advertise GTA 6? #shorts #gtavi (70,232 views, 2,065 an hour, 32 s, SHANK)
 
 ## Gaming
-- The Most Useless Facts in ZZZ #zenlesszonezero #zzzero #hoyoverse #vivian (335,360 views, 11,682 an hour, 66 s, SoftWetBread)
-- I’m Going Read Your Mind 🧠 #shorts #challenge (368,916 views, 8,355 an hour, 38 s, Vishal With Vasu)
-- These 3 Random Facts About Archer Queen In Clash Of Clans #clashofclans #gaming #shorts #coc (54,855 views, 2,152 an hour, 31 s, XD17)
-- How Long Will This Take? #gaming #nintendo #shorts (48,253 views, 1,128 an hour, 37 s, Rob Laub Law)
-- What Is Your Gaming Power According to Your Birth Month? 🔥👑 (25,701 views, 550 an hour, 8 s, ITS SOHAIL 1M)
+- also the fact that the server player count is increased I think (417,277 views, 15,325 an hour, 26 s, SYZN)
+- This setting made your Xbox 360 quieter #shorts (108,977 views, 8,454 an hour, 6 s, Gamer Facts)
+- Game of Thrones' Most Unusual Episode... 🤫🎬 | Game of Thrones | Behind the Scenes #shorts #trending (42,280 views, 1,025 an hour, 7 s, Trendy Stars Secrets)
+- These Rich Kids Turned Paying the Bill Into a Game! 😂💸 #shorts #facts (28,560 views, 972 an hour, 20 s, facto vip)
+- The First Video Game Played in Space #shorts (16,124 views, 877 an hour, 27 s, ApetoEvo)
 
 ## Halloween 2026
-- Serving A Bite Of The Night For After-Hours Apetite!🍔 #shorts #spongebob #nickelodeon #halloween (483,353 views, 27,574 an hour, 33 s, cookingWITHfred)
-- MYERS With That MAIN CHARACTER Energy 😂 (272,107 views, 13,480 an hour, 38 s, TheLaconicG1 )
-- Ranking The BEST Halloween Makeup Look of 2026 🎃✨ (243,339 views, 12,051 an hour, 27 s, Ranknosaur)
-- Second version of this halloween deer make up….🌸: #shorts #short #Char_M (248,438 views, 8,162 an hour, 13 s, Char_Mz)
-- Why did the blanket fly into the ceiling? #halloween #shorts (136,236 views, 7,877 an hour, 22 s, Mamasoboliha)
+- Ranking The BEST Halloween Costume of 2026 Part 2 (1,391,300 views, 69,921 an hour, 30 s, Ranknosaur)
+- The BEST prank for HALLOWEEN! 🤣🤫🤭 #shorts #prank #halloween (921,397 views, 43,505 an hour, 25 s, Cadel and Mia)
+- Ranking The BEST Halloween Makeup Look of 2026 🎃✨ (908,858 views, 20,705 an hour, 27 s, Ranknosaur)
+- How do I TOP this Halloween look for this year??  Suggestions????  #ytshorts #shorts #halloween #yt (853,623 views, 20,136 an hour, 16 s, ColdEntry)
+- Serving A Bite Of The Night For After-Hours Apetite!🍔 #shorts #spongebob #nickelodeon #halloween (705,258 views, 17,105 an hour, 33 s, cookingWITHfred)
 
 ## History
-- The Invention Of The Rubber Bullet 🔫 #shorts #facts (456,105 views, 15,430 an hour, 58 s, Pure Logic)
-- Pakistan’s Most Famous Castes Revealed! 🇵🇰 | Are You On The List? #facts #pakistan #shorts (132,479 views, 6,903 an hour, 68 s, Real Eye )
-- France lost more than a building that night #story #history #historyfacts #shorts (100,800 views, 4,595 an hour, 19 s, Brushlight)
-- Dumb Lawsuits That Actually Happened in America #history #historyfacts #historyshorts #shorts #facts (69,234 views, 3,932 an hour, 91 s, Echoes of America)
-- Why Did Army Sergeants Pour Water on Soldiers' Feet? 😳🪖 #Shorts #ArmyFacts #MilitaryHistory #amazing (148,806 views, 3,330 an hour, 22 s, post_explain)
+- How Did Russia Sell Alaska for Just $7.2 Million?  #history  #didyouknow #facts (147,274 views, 5,562 an hour, 163 s, History Index)
+- Why France Disarmed Defeated Chinese Soldiers in 1949 (97,160 views, 4,884 an hour, 8 s, Shadows of WW2)
+- France lost more than a building that night #story #history #historyfacts #shorts (157,676 views, 3,455 an hour, 19 s, Brushlight)
+- Why Are Temple Idols ALWAYS Black? #shorts (61,931 views, 3,089 an hour, 56 s, Krishna.Bhakthi07)
+- The Dinosaur Photo That Turned Fatal #history #facts (60,495 views, 3,043 an hour, 8 s, ARCHIV | HUMAN HISTORY )
 
 ## Music
-- Why Was This Famous Indian Song Banned? 😱🔥 #shorts (25,894 views, 5,889 an hour, 25 s, FACT TARZAN)
-- The Fake English Song That Fooled Europe 🤯 (43,874 views, 2,121 an hour, 7 s, Compounders Logic)
-- How Your Love Story Ends! #shorts #fyp #lyrics #facts #music (40,911 views, 1,804 an hour, 8 s, PUTRANA STUDIO)
-- Johnny Lever Is an Underrated Dancer 😱🔥 | Bollywood Dance Facts #Shorts (41,109 views, 869 an hour, 69 s, Nick kold12)
-- Why Is Pakistan’s Coke Studio So Popular? 🤯🇵🇰 #shorts #explore #viralsong (14,303 views, 700 an hour, 49 s, TG LOFI )
+- What Are You Doing For $99,999,999? #shorts #facts #lyrics #music #fyp (71,185 views, 3,153 an hour, 6 s, BUDIARTI STUDIO)
+- Why Was This Famous Indian Song Banned? 😱🔥 #shorts (57,294 views, 2,039 an hour, 25 s, FACT TARZAN)
+- Who Will You Marry? #shorts #fyp #lyrics #music #facts (53,180 views, 1,356 an hour, 8 s, BUDIARTI STUDIO)
+- The Fake English Song That Fooled Europe 🤯 (54,222 views, 1,221 an hour, 7 s, Compounders Logic)
+- How Your Love Story Ends! #shorts #fyp #lyrics #facts #music (48,035 views, 1,036 an hour, 8 s, PUTRANA STUDIO)
 
 ## Science
-- How Fast Is Light Really 🤔🥶 #shorts #space #science #astronomy #speedoflight #universe #spacefacts (752,522 views, 19,461 an hour, 31 s, Decode Mind)
-- Why Metal Tools Don’t Instantly Fuse Together in Space! 🚀🤯 (76,367 views, 14,828 an hour, 4 s, Beyond Earth)
-- How Do Rocket Engines Work in Space? 🌌🔥 (72,214 views, 1,866 an hour, 6 s, Nooyumii)
-- Is That Earth Next To The Sun? #sun #earth #spaceedit (53,444 views, 1,374 an hour, 11 s, Huskyy 777)
-- This Is What a Plastic Piece Can Do at 15,000 MPH in Orbit💥🚀 (41,316 views, 946 an hour, 6 s, AstroSpidy)
+- Have You Ever Seen a Space Train Like This ? 🤯     #Starlink #SpaceX #SpaceFacts #Satellites #Shorts (216,836 views, 11,789 an hour, 8 s, Cosmic Thrust )
+- Why Metal Tools Don’t Instantly Fuse Together in Space! 🚀🤯 (250,274 views, 8,675 an hour, 4 s, Beyond Earth)
+- The Real Sound of a Pulsar Star! 🌌🔊 (103,262 views, 4,156 an hour, 5 s, Beyond Earth)
+- THE LAST 2 MONTHS OF 2026 WILL BE INSANE! 🤯🌌 #space #space #earth #moon (104,255 views, 2,297 an hour, 24 s, Dark Cosmic)
+- You've Seen India on Maps… But Not Like This! 🇮🇳🌍 #shorts #trending #viral (48,886 views, 2,026 an hour, 5 s, The Space Guide)
 
 ## Sport
-- Why Are Football Shin Guards So Small? (59,091 views, 3,262 an hour, 27 s, Fact Arena)
-- Why Goalkeeper GLOVES Are So Sticky? 🧤 😱 #shorts  #usashorts (22,701 views, 476 an hour, 27 s, MindBlown Daily)
+- Who Has The Most Goals without penalties? 💀🔥 #shorts #football #soccer (74,382 views, 2,332 an hour, 11 s, Aveiro)
+- Goalkeepers Can REFUSE to Wear Gloves?! 🧤😳 #shorts #football (33,790 views, 1,923 an hour, 34 s, Glee Spotlight)
+- Why Are Football Shin Guards So Small? (70,278 views, 1,681 an hour, 27 s, Fact Arena)
+- 🥇 You Can Buy a World Cup Trophy?! 😱 #facts #factgenius #worldcup (31,540 views, 1,475 an hour, 20 s, Fact Genius)
+- Why Football Corner Flags Had to Be Upgraded 😳⚽ (32,529 views, 932 an hour, 50 s, Inside_Football 13)
 
 ## Tech
-- What happens when you merge every PlayStation? 🤯#playstation #sony #shorts (70,525 views, 2,986 an hour, 4 s, RankKingdom)
-- Triple Decker Train in India! | Indian Railways Infra is Insane 😱 #shorts #facts #banglafacts (83,928 views, 1,888 an hour, 55 s, Bong Fact Tech)
-- The iPhone Duo Is ALREADY Breaking?! 💀 (41,512 views, 961 an hour, 23 s, MR WHAT)
-- Apple iPhone Duo 😳 Is It A failure? #Shorts (14,278 views, 619 an hour, 31 s, GADGETS ONE MALAYALAM TECH TIPS)
+- Secret settings in vivo and oppo phones #tech #technology #shorts (69,658 views, 3,257 an hour, 33 s, MSquare Tech)
+- A Computer With ZERO Wires?! 🤯 #nvidia #shorts (46,194 views, 2,479 an hour, 43 s, VisionX Lab)
+- What 10,000 Folds Did to the iPhone Duo #shorts (46,820 views, 1,226 an hour, 117 s, Tashi T. Films)
+- He Put Apple’s Foldable iPhone to the Ultimate Test! 😳🔥#shorts #youtubeshorts #tech #iphoneduo (14,033 views, 839 an hour, 32 s, Loko_tech7)
+- Apple iPhone Duo 😳 Is It A failure? #Shorts (21,233 views, 454 an hour, 31 s, GADGETS ONE MALAYALAM TECH TIPS)
+
+## The Celebrity Traitors
+- Arthur Hill wants to go on 'Traitors' and 'Strictly'🏰🪩 #shorts (942 views, 63 an hour, 38 s, Capital Buzz)
+- Celebrity Traitors fans spot 'fatal flaw' in Maya Jama, James Acaster and King Kenny's strategy (443 views, 11 an hour, 18 s, TheReelyNews)
 
 ## The Hunger Games: Sunrise on the Reaping
-- Mckenna Grace's Face Card Is INSANE At The Hunger Games New York Press Tour 😭🔥 #MckennaGrace (37,278 views, 1,695 an hour, 7 s, SwipeRadar)
-- How Haymitch Really Won 🔥 Sunrise on the Reaping #Shorts (659 views, 211 an hour, 39 s, Movie Momentum)
-- It’s just a book about the hunger games, how sad can it b- (2,163 views, 164 an hour, 8 s, Rabecca Reads)
-- The Haymitch tape Katniss watched was edited #shorts (2,435 views, 142 an hour, 58 s, Bookish Bestie)
-- “That started my head spinning and I guess its never quite stopped” #edit #sunriseonthereaping #fyp (2,270 views, 81 an hour, 11 s, The Games)
+- 68 more subs till 6k!! i love this theory!!#hungergames #thehungergames #sunriseonthereaping (181,181 views, 7,230 an hour, 20 s, 𝐞𝐤𝐤𝐨🐿️)
+- The OG Effie Takes Pics of Her Younger Self & Sister for Hunger Games! 🥲 #HungerGames (83,199 views, 3,982 an hour, 7 s, Drama Investigator)
+- It’s just a book about the hunger games, how sad can it b- (42,794 views, 1,160 an hour, 8 s, Rabecca Reads)
+- Mckenna Grace's Face Card Is INSANE At The Hunger Games New York Press Tour 😭🔥 #MckennaGrace (39,435 views, 863 an hour, 7 s, SwipeRadar)
+- Is that Lenore Dove scene what I think it is?? #thehungergames #movie (23,784 views, 774 an hour, 8 s, MZreads )

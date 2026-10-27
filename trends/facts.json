@@ -1,189 +1,189 @@
 {
  "date": "2026-10-27",
- "built": "2026-10-27T07:51+00:00",
+ "built": "2026-10-27T08:49+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 9,
-   "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
+   "n": 10,
+   "topic": "GTA 6 PC release",
+   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "A new report on 26 October revealed a 17% spike in time off requests for November 19.",
    "hooks": [
-    "Grand Theft Auto 6 launches on November 19 for PlayStation 5 and Xbox Series X.",
-    "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
-    "Grand Theft Auto VI is set within the fictional US state of Leonida."
+    "Will GTA 6 come to PC in early 2027?",
+    "GTA 6 releases on November 19 for consoles!"
    ],
    "sources": [
     [
-     "One day before launch, ARPG Emberville gets delayed until 2027",
-     "https://www.pcgamer.com/games/rpg/one-day-before-launch-arpg-emberville-gets-delayed-until-2027/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
-     "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
+     "GTA 6 Causes 17% Spike in Time Off Requests on Game's Release Date",
+     "https://www.ign.com/articles/gta-6-causes-17-spike-in-time-off-requests-on-games-release-date",
      "IGN",
      "2026-10-26"
     ],
     [
-     "GTA 6's Rumored Lucia Actor Breaks Silence With Rare Live Appearance",
-     "https://www.polygon.com/gta-6-manni-perez-lucia-caminos-actor-who-is-instagram-live-money/",
+     "GTA 6 sets PC release date, new report says",
+     "https://www.polygon.com/gta-6-pc-release-q1-2027-rumor/",
      "Polygon",
-     "2026-10-26"
-    ],
-    [
-     "GTA 6",
-     "https://en.wikipedia.org/wiki/GTA_6",
-     "Wikipedia",
-     ""
+     "2026-10-13"
     ]
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "claim": "A PC port is rumored for early 2027.",
      "sources": [
-      3,
-      4
+      1,
+      2
      ],
      "evidence": {
-      "3": "Grand Theft Auto 6 will be released on Nov. 19 for PlayStation 5 and Xbox Series X.",
-      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "1": "A PC port is also rumored for early 2027.",
+      "2": "Grand Theft Auto 6 will reportedly be released on Windows PC early next year, a new report claims."
      }
     },
     {
-     "claim": "Grand Theft Auto 6 launches for consoles on November 19.",
+     "claim": "A PC port is also rumored for early 2027.",
      "sources": [
       1,
-      3,
-      4
+      2
      ],
      "evidence": {
-      "1": "There's no overlooking the looming specter of Grand Theft Auto 6, which launches for consoles on November 19—an arrival that's caused no small amount of",
-      "3": "Grand Theft Auto 6 will be released on Nov. 19 for PlayStation 5 and Xbox Series X.",
-      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "1": "A PC port is also rumored for early 2027.",
+      "2": "6 will reportedly be released on windows pc early next year a new report claims on tuesday gamesbeat reported gta 6 will land on pc"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "claim": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "1": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S."
      }
     },
     {
-     "claim": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.",
+     "claim": "GTA 6's release has led to as much as a 17% increase in time off requests, according to a new report.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+      "1": "GTA 6's release has led to as much as a 17% increase in time-off requests, according to a new report."
      }
     },
     {
-     "claim": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "claim": "Rockstar has also been spending a ton of money to get the word out with extravagant marketing; it spent $975,000 to install a massive neon pink sign on top of the Miami Heat's arena, after all.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "1": "Rockstar has also been spending a ton of money to get the word out with extravagant marketing; it spent $975,000 to install a massive neon"
      }
     },
     {
-     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
+     "claim": "There will also be an unprecedented NBA game between the Miami Heat and the Milwaukee Bucks on November 18, which will turn the Heat into the Vice City Heat.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Grand Theft Auto VI was formally revealed in December 2023."
+      "1": "There will also be an unprecedented NBA game between the Miami Heat and the Milwaukee Bucks on November 18, which will turn the Heat into"
      }
     },
     {
-     "claim": "Rockstar confirmed in February 2022 that the game was in development.",
+     "claim": "Rockstar has not officially commented on its potential plans to bring GTA 6 to PC.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "Rockstar confirmed in February 2022 that the game was in development."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI will feature a fully integrated social media app called Snapmatic, returning from Grand Theft Auto V.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Grand Theft Auto VI will feature a fully integrated social media app called Snapmatic, returning from Grand Theft Auto V."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is a single-player, action-adventure game set within an open world that can be played from a third-person view as Jason Duval or Lucia Caminos.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Grand Theft Auto VI is a single-player, action-adventure game set within an open world that can be played from a third-person view as Jason Duval"
-     }
-    },
-    {
-     "claim": "Principal production began in 2020.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Principal production began in 2020."
+      "2": "Rockstar has not officially commented on its potential plans to bring GTA 6 to PC."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 7,
-   "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (surging, 4 days to go)",
-   "category": "Film",
+   "n": 13,
+   "topic": "Thin Ice by Megan Thee Stallion",
+   "signal": "Apple Music US: new in the top 25",
+   "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "A new horror game drops just before Halloween night",
-    "Chlöe Bailey turns Meg Griffin into Halloween fashion",
-    "Resident Evil Village slashes price for spooky savings"
+    "Megan Thee Stallion just released her new freestyle Thin Ice.",
+    "Did you know Thin Ice samples Limp Bizkit?",
+    "Megan Thee Stallion made her Victoria s Secret runway debut."
    ],
    "sources": [
     [
-     "Fritters and chocolate cake: Thomasina Miers’ recipes for cooking with pumpkin",
-     "https://www.theguardian.com/food/2026/oct/27/pumpkin-recipes-carrot-fritters-green-relish-chocolate-cake-thomasina-miers",
-     "Guardian",
-     "2026-10-27"
-    ],
-    [
-     "Chlöe Bailey Dresses Up as ‘Hot Meg Griffin’ From ‘Family Guy’ for Halloween & SZA Loves It",
-     "https://www.billboard.com/music/rb-hip-hop/chloe-bailey-hot-meg-griffin-family-guy-sza-reacts-1236368328/",
+     "Megan Thee Stallion Flexes Her Rapping Chops & Hip Muscles in Limp Bizkit-Sampling ‘Thin Ice’ Video",
+     "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-thin-ice-limp-bizkit-break-stuff-sample-1236363682/",
      "Billboard",
-     "2026-10-26"
+     "2026-10-20"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Megan Thee Stallion released Thin Ice on Tuesday October 20 as part of her Tina Tuesday Freestyle series.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It’s Tuesday (Oct. 20), which means Megan Thee Stallion has transformed into her Tina Snow alter ego and released another installment of her Tina Tuesday"
+     }
+    },
+    {
+     "claim": "Megan Thee Stallion released “Thin Ice” on Tuesday Oct. 20 as part of her Tina Tuesday Freestyle series.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It’s Tuesday (Oct. 20), which means Megan Thee Stallion has transformed into her Tina Snow alter ego and released another installment of her Tina Tuesday"
+     }
+    },
+    {
+     "claim": "The track “Thin Ice” samples Limp Bizkit’s “Break Stuff” from the 1999 album Significant Other.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "features a lift from a sample of Limp Bizkit’s “Break Stuff” off the band’s sophomore album, 1999’s Significant Other."
+     }
+    },
+    {
+     "claim": "The video shows Megan in a bodysuit bouncing around a barren warehouse with her signature platinum hair.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The spicy clip finds Meg stunting in her signature platinum hair and scantily clad black attire, but it’s the twerking‑approved bodysuit that steals the show"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 14,
+   "topic": "alexander skarsgård",
+   "signal": "Google Trends GB 200+",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Wicker’s wicker suit took a year and fifty artisans to create",
+    "Alexander Skarsgård, born 1976, now stars in award‑winning dramas",
+    "The new fantasy film Wicker opened in theatres this Friday"
+   ],
+   "sources": [
+    [
+     "Size Really Does Matter: How Alexander Skarsgard’s ‘Wicker’ Man and Member Came to Life",
+     "https://www.hollywoodreporter.com/movies/movie-news/inside-alexander-skarsgard-wicker-man-penis-creation-1236724891/",
+     "The Hollywood Reporter",
+     "2026-10-23"
     ],
     [
-     "What to play this Halloween, plus last-minute costume ideas and spooky movie recommendations",
-     "https://www.pcgamer.com/games/horror/2026-halloween-horror-gaming-hub-recommendations/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Stuck for a Halloween outfit? Set phasers to stunning with the best Star Trek costumes",
-     "https://www.space.com/entertainment/space-toys-lego/stuck-for-a-halloween-outfit-set-phasers-to-stunning-with-the-best-star-trek-costumes",
-     "Space.com",
-     "2026-10-26"
-    ],
-    [
-     "Halloween 2026",
-     "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
+     "alexander skarsgård",
+     "https://en.wikipedia.org/wiki/Alexander_Skarsg%C3%A5rd",
      "Wikipedia",
      ""
     ]
@@ -191,43 +191,174 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Halloween: The Game was released on September 8, 2026 for PlayStation 5, Windows and Xbox Series X and Series S.",
+     "claim": "The romantic fantasy film Wicker starring Alexander Skarsgård hit theaters on Friday.",
      "sources": [
-      5
+      1
      ],
      "evidence": {
-      "5": "it is based on the 1978 film halloween and was released on september 8 2026 for playstation 5 windows and xbox series x and series s"
+      "1": "The internet went feral over Alexander Skarsgård’s wicker penis in the highly anticipated romantic fantasy Wicker that hit theaters on Friday."
      }
     },
     {
-     "claim": "On August 10, 2026 the official X account confirmed the game was refused classification by the Australian Classification Board.",
+     "claim": "Wētā Workshop worked with 50 people for a year to build the upper half of Skarsgård’s wicker suit.",
      "sources": [
-      5
+      1
      ],
      "evidence": {
-      "5": "2026 15 on august 10 2026 the official x account for halloween the game confirmed 16 that the game had been refused classification by the australian classification board and as a result will not be made available to players in"
+      "1": "Wētā Workshop, which designs specialty costumes for film and television, worked with 50 people for a year to build the upper half of Skarsgård’s wicker"
      }
     },
     {
-     "claim": "Resident Evil Village was discounted to $9.99, a 75% off deal on Steam for Halloween.",
+     "claim": "Alexander Skarsgård was born on 25 August 1976.",
      "sources": [
-      3
+      2
      ],
      "evidence": {
-      "3": "Resident Evil Village | $9.99 (75% off) on Steam"
+      "2": "Alexander Johan Hjalmar Skarsgård[a][1] (born 25 August 1976) is a Swedish actor."
+     }
+    },
+    {
+     "claim": "He earned a Primetime Emmy Award and a Golden Globe Award for his role in Big Little Lies.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Skarsgård starred in the drama series Big Little Lies (2017–2019) as an abusive husband, which earned him a Primetime Emmy Award and a Golden Globe"
      }
     }
    ],
-   "images": []
+   "images": [
+    "commons:File:Alexander_Skarsgård_at_NYFF_2025_04_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "apple iphone duo",
+   "signal": "Google Trends US 500+",
+   "category": "Tech",
+   "what_is_new": "Apple announced on 27 Oct 2026 that it will replace iPhone Duo handsets with screen problems, offering replacements for affected users.",
+   "hooks": [
+    "Did you know the iPhone Duo was released on October 23, 2026?",
+    "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026.",
+    "The iPhone Duo features a massive 7.6-inch inner display."
+   ],
+   "sources": [
+    [
+     "Apple says it will replace iPhone Duo handsets with screen problems",
+     "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-27"
+    ],
+    [
+     "iPhone Lockdown Mode: The pros and cons of enabling Apple's security feature",
+     "https://www.engadget.com/2295333/iphone-lockdown-mode-pros-cons/",
+     "Engadget",
+     "2026-10-27"
+    ],
+    [
+     "T-Mobile Is Offering $1,000 Off the Latest Apple iPhone 18 Pro and Pro Max",
+     "https://www.ign.com/articles/t-mobile-apple-iphone-18-deal-explained",
+     "IGN",
+     "2026-10-27"
+    ],
+    [
+     "apple iphone duo",
+     "https://en.wikipedia.org/wiki/Apple_iPhone_Duo",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "John Ternus unveiled the iPhone Duo on September 9, 2026.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "The Duo marks Apple's first major iPhone redesign in almost two decades and was unveiled by new chief executive John Ternus, who took over from",
+      "4": "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026."
+     }
+    },
+    {
+     "claim": "The iPhone Duo has a 7.6-inch inner display.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "The Duo's 7.6-inch (19.3cm) inner display is held together by a central hinge - a complex piece of engineering that has resulted in similar flaws",
+      "4": "The Duo design features a 5.4-inch outer display and a 7.6-inch inner display when unfolded."
+     }
+    },
+    {
+     "claim": "The iPhone Duo uses the Apple A20 Pro system-on-chip.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "The Apple iPhone 18 Pro and Pro Max upgrades the APU to the new Apple A20 Pro processor built on a new 2-nanometer process technology.",
+      "4": "The iPhone Duo uses the Apple A20 Pro system-on-chip."
+     }
+    },
+    {
+     "claim": "John Ternus unveiled the iPhone Duo.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "in almost two decades and was unveiled by new chief executive john ternus who took over from tim cook in september",
+      "4": "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026."
+     }
+    },
+    {
+     "claim": "The iPhone Duo is Apple’s first foldable smartphone.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Photos posted on social media show lines that appeared on the screens of the technology giant's first ever foldable device",
+      "4": "The iPhone Duo is the first foldable smartphone by Apple."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The iPhone Duo features a titanium frame and a 5.4‑inch outer display plus a 7.6‑inch inner display.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The Duo design features a 5.4-inch outer display and a 7.6-inch inner display when unfolded."
+     }
+    },
+    {
+     "claim": "Apple will replace iPhone Duo handsets that develop screen problems, offering replacements to affected users.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Apple says it will replace iPhone Duo handsets that have developed problems with their screens just days after the highly-anticipated smartphone went on sale."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:IPhone_Duo_Folded_Vector.svg"
+   ]
   },
   {
    "n": 34,
    "topic": "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
    "signal": "Apple albums GB: new in the top 10",
-   "category": "Music",
+   "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Netflix is launching a KPop Demon Hunters global concert tour."
+    "Netflix announces a global concert tour for KPop Demon Hunters!",
+    "The hit movie soundtrack made Billboard Hot 100 history.",
+    "Golden became the first K-pop song to win a Grammy."
    ],
    "sources": [
     [
@@ -262,312 +393,38 @@
      }
     },
     {
-     "claim": "Golden won the Oscar for Best Original Song.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The track spent eight weeks atop the Billboard Hot 100 and 18 weeks at No. 1 on the Billboard Global 200, and made history as",
-      "3": "It also won the Academy Award for Best Original Song (also for \"Golden\") at the 98th Academy Awards."
-     }
-    },
-    {
-     "claim": "The singing voices of Huntr/x are performed by Ejae, Audrey Nuna and Rei Ami.",
+     "claim": "The KPop Demon Hunters concert tour is produced by Netflix in partnership with Los Angeles-based live entertainment company AEG Presents.",
      "sources": [
       1,
-      3
+      2
      ],
      "evidence": {
-      "1": "The voice cast includes Arden Cho as Rumi and Ejae as Rumi’s singing voice, May Hong as Mira and Audrey Nuna as her singing voice,",
-      "3": "It was performed by Ejae, Audrey Nuna, and Rei Ami as Huntrix.[4]"
+      "1": "The “KPop Demon Hunters” concert tour is produced by Netflix in partnership with Los Angeles-based live entertainment company AEG Presents.",
+      "2": "The streamer will put on the trek in partnership with AEG presents."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Golden became the first Grammy win for a K-pop song when it won Best Song Written for Visual Media.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It received five Grammy Award nominations, winning Best Song Written for Visual Media for \"Golden\", which was the first Grammy win for a K-pop song."
-     }
-    },
-    {
-     "claim": "The soundtrack became the first film soundtrack on the Billboard Hot 100 to have four of its songs in the top ten simultaneously.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It became the first film soundtrack on the Billboard Hot 100 to have four of its songs in the top ten simultaneously and was certified"
-     }
-    },
-    {
-     "claim": "Golden spent eight weeks atop the Billboard Hot 100 and 18 weeks at No. 1 on the Billboard Global 200.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The track spent eight weeks atop the Billboard Hot 100 and 18 weeks at No. 1 on the Billboard Global 200, and made history as"
-     }
-    },
-    {
-     "claim": "The soundtrack album was released on June 20, 2025, under the Republic Records label.",
+     "claim": "The soundtrack album was released on June 20, 2025, in conjunction with the film's release under the title KPop Demon Hunters (Soundtrack from the Netflix Film) under the Republic Records label.",
      "sources": [
       3
      ],
      "evidence": {
       "3": "The soundtrack album was released on June 20, 2025, in conjunction with the film's release under the title KPop Demon Hunters (Soundtrack from the Netflix"
      }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 13,
-   "topic": "Thin Ice by Megan Thee Stallion",
-   "signal": "Apple Music US: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Megan Thee Stallion just dropped her new Thin Ice freestyle!",
-    "Did you know Thin Ice samples Limp Bizkit?",
-    "Megan Thee Stallion made her runway debut on October 18!"
-   ],
-   "sources": [
-    [
-     "Megan Thee Stallion Flexes Her Rapping Chops & Hip Muscles in Limp Bizkit-Sampling ‘Thin Ice’ Video",
-     "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-thin-ice-limp-bizkit-break-stuff-sample-1236363682/",
-     "Billboard",
-     "2026-10-20"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Thin Ice was produced by Buddah Bless and features a sample of Limp Bizkit song Break Stuff.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Produced by Buddah Bless, Megan brought the sex appeal and ferocious raps to the table for “Thin Ice,” which features a lift from a sample"
-     }
     },
     {
-     "claim": "Megan Thee Stallion released her album Megan in 2024 which debuted at No 3 on the Billboard 200.",
+     "claim": "It received five Grammy Award nominations, winning Best Song Written for Visual Media for Golden, which was the first Grammy win for a K-pop song.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "The Grammy-winning rapper’s last album came with Megan in 2024, which debuted at No. 3 on the Billboard 200 with 64,000 total album-equivalent units, according"
-     }
-    },
-    {
-     "claim": "Megan Thee Stallion released Thin Ice as part of her Tina Tuesday Freestyle series on Tuesday (Oct. 20).",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It’s Tuesday (Oct. 20), which means Megan Thee Stallion has transformed into her Tina Snow alter ego and released another installment of her Tina Tuesday"
-     }
-    },
-    {
-     "claim": "The song Thin Ice is produced by Buddah Bless.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Produced by Buddah Bless, Megan brought the sex appeal and ferocious raps to the table for “Thin Ice,” which features a lift from a sample"
-     }
-    },
-    {
-     "claim": "The song opens with Fred Durst's slowed down vocals.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The song kicks off with Fred Durst’s slowed down vocals declaring, “I think you better quit talkin’ that s–t/ It’s all about the he says,"
-     }
-    },
-    {
-     "claim": "Megan raps B, h, they call me Tina Montana/ I come in the club it’s snowing.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "“B—h, they call me Tina Montana/ I come in the club it’s snowing,” she later raps."
-     }
-    },
-    {
-     "claim": "The video shows Megan in platinum hair and scantily clad black attire, twerking in a bodysuit in a barren warehouse.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The spicy clip finds Meg stunting in her signature platinum hair and scantily clad black attire, but it’s the twerking-approved bodysuit that steals the show"
-     }
-    },
-    {
-     "claim": "Kehlani, Juicy J, and Flo Milli commented on Megan's Instagram post.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Plenty of Megan’s peers — such as Kehlani, Juicy J and Flo Milli — showed love in her comments section on Instagram."
-     }
-    },
-    {
-     "claim": "Kehlani wrote YOU OUTTA CONTROL.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "“YOU OUTTA CONTROL,” the “Folded” singer proclaimed."
-     }
-    },
-    {
-     "claim": "Juicy J wrote Talk yo s, t verse killer!.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Three 6 Mafia rapper added: “Talk yo s–t verse killer!”"
-     }
-    },
-    {
-     "claim": "Megan released Is You Cool? earlier in October as part of the Tina Tuesday Freestyle series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Megan’s has kept things hot with her Tina Tuesday Freestyle series, as she rapped in a blizzard for the blistering “Is You Cool?” earlier in"
-     }
-    },
-    {
-     "claim": "Megan's last album Megan debuted at No. 3 on the Billboard 200 with 64,000 total album-equivalent units in 2024.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Grammy-winning rapper’s last album came with Megan in 2024, which debuted at No. 3 on the Billboard 200 with 64,000 total album-equivalent units, according"
+      "3": "It received five Grammy Award nominations, winning Best Song Written for Visual Media for \"Golden\", which was the first Grammy win for a K-pop song."
      }
     }
    ],
    "images": []
-  },
-  {
-   "n": 23,
-   "topic": "pokimane",
-   "signal": "Google Trends US 100+",
-   "category": "Tech",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Imane Anys was born in Morocco on 14 May 1996?",
-    "Pokimane dropped out of McMaster University to pursue streaming full-time.",
-    "In March 2020, Anys signed a multi-year exclusivity with Twitch."
-   ],
-   "sources": [
-    [
-     "Why Pokimane’s Vtubing Twitch stream has everyone talking",
-     "https://www.polygon.com/2020/9/14/21436437/pokimane-imane-anys-twitch-vtubing-vtuber-anime-livestream-mainstream-popularity/",
-     "Polygon",
-     "2020-09-13"
-    ],
-    [
-     "pokimane",
-     "https://en.wikipedia.org/wiki/Pokimane",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Imane Anys was born in Morocco on 14 May 1996.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Imane Anys was born in Morocco on 14 May 1996."
-     }
-    },
-    {
-     "claim": "Anys studied chemical engineering at McMaster University but later dropped out to pursue her streaming career full-time.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Anys studied chemical engineering at McMaster University but later dropped out to pursue her streaming career full-time."
-     }
-    },
-    {
-     "claim": "On 19 January 2020, Pokimane announced her own official Fortnite emote.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 19 January 2020, Pokimane announced her own official Fortnite emote."
-     }
-    },
-    {
-     "claim": "In March 2020, Anys signed a multi-year exclusivity with Twitch.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In March 2020, Anys signed a multi-year exclusivity with Twitch."
-     }
-    },
-    {
-     "claim": "In December 2021, Social Blade listed Anys as the 9th-most-followed user on Twitch, with over 8.5 million followers.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In December 2021, Social Blade listed Anys as the 9th-most-followed user on Twitch, with over 8.5 million followers."
-     }
-    },
-    {
-     "claim": "On 8 January 2022, Anys' Twitch account was suspended for 48 hours midway through an Avatar: The Last Airbender watch stream following a DMCA claim from ViacomCBS.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 8 January 2022, Anys' Twitch account was suspended for 48 hours midway through an Avatar: The Last Airbender watch stream following a DMCA claim"
-     }
-    },
-    {
-     "claim": "Later in February 2022, Anys re-signed with Twitch.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Later in February 2022, Anys re-signed with Twitch."
-     }
-    },
-    {
-     "claim": "On 30 January 2024, Anys announced that she would stop streaming on Twitch stating that she was done with Twitch's messy behavior, citing the changes that the company has made in recent years.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 30 January 2024, Anys announced that she would stop streaming on Twitch stating that she was \"done with Twitch's messy behavior\", citing the changes"
-     }
-    },
-    {
-     "claim": "On 19 May 2023, OfflineTV announced her departure from the group via a graduation video, though she stayed affiliated with the group after.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 19 May 2023, OfflineTV announced her departure from the group via a \"graduation\" video, though she stayed affiliated with the group after."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Pokimane_sig.svg"
-   ]
   }
  ]
 }

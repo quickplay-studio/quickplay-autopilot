@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 8 public, 10 scheduled | 4 | 1 | ⏳ 8 of 15 so far, 10 more scheduled |
+| Tue 27 Oct | 9 public, 11 scheduled | 4 | 1 | ⏳ 9 of 15 so far, 11 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -79,9 +79,7 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## In the queue
 
-- **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed (rendering next)
 - **QD-208** gta 6: arrives on 19 November (Part 1) 🎮 (rendering next)
-- **QD-209** GTA 6 hits consoles on 19 November 🎮 (rendering next)
 
 ## On the channel (latest first)
 
@@ -106,7 +104,7 @@ scheduled · 27 s · music: in-battery · [script](../boards/done/QD-201.json) �
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-scheduled · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+private · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 

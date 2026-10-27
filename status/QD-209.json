@@ -1,0 +1,161 @@
+{
+ "id": "QD-209",
+ "board": "boards/queue/QD-209.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T17:00:00Z",
+ "rendered": "2026-10-27T08:46:49.506612+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GTA 6 hits consoles on 19 November 🎮",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Lucia Caminos: no Commons image named 'Lucia Caminos')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 7,
+  "pic_found_share": 0.86,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "gta-type-beat",
+ "social_music": "speed-race-344521",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 37.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 622.7,
+   "contrast": 0.25,
+   "face_area": 0.0,
+   "text_area": 0.2459,
+   "caption_contrast": 14.21,
+   "by_frame": {
+    "sharpness": [
+     639.1,
+     646.2,
+     600.8,
+     604.5
+    ],
+    "contrast": [
+     0.251,
+     0.247,
+     0.249,
+     0.252
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2215,
+     0.2544,
+     0.2744,
+     0.2332
+    ],
+    "caption_contrast": [
+     14.28,
+     14.14,
+     14.0,
+     19.78
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.35,
+   "none",
+   1
+  ],
+  [
+   3.35,
+   8.6,
+   "none",
+   4
+  ],
+  [
+   8.6,
+   14.11,
+   "none",
+   4
+  ],
+  [
+   14.11,
+   19.17,
+   "none",
+   3
+  ],
+  [
+   19.17,
+   24.39,
+   "none",
+   4
+  ],
+  [
+   24.39,
+   32.79,
+   "none",
+   1
+  ],
+  [
+   32.79,
+   37.03,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T09:00:20Z",
+ "video": "GMcm2UzwGN0",
+ "url": "https://youtube.com/shorts/GMcm2UzwGN0",
+ "publish_at": "2026-10-27T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-209"
+}

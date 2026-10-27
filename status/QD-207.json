@@ -1,0 +1,161 @@
+{
+ "id": "QD-207",
+ "board": "boards/queue/QD-207.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T14:00:00Z",
+ "rendered": "2026-10-27T08:47:08.547729+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Game Facts #4: halloween 2026 game: the price drop you missed",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)",
+  "pixabay:36503 skipped: nearly black (brightness 0.01)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "house-on-the-hill",
+ "social_music": "mystery-suspect-199367",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 39.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 469.0,
+   "contrast": 0.25,
+   "face_area": 0.015,
+   "text_area": 0.0405,
+   "caption_contrast": 4.61,
+   "by_frame": {
+    "sharpness": [
+     443.8,
+     509.7,
+     519.3,
+     403.3
+    ],
+    "contrast": [
+     0.25,
+     0.251,
+     0.25,
+     0.25
+    ],
+    "face_area": [
+     0.0173,
+     0.0136,
+     0.0156,
+     0.0136
+    ],
+    "text_area": [
+     0.0434,
+     0.0428,
+     0.0444,
+     0.0315
+    ],
+    "caption_contrast": [
+     4.73,
+     4.83,
+     4.5,
+     4.36
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.48,
+   "none",
+   3
+  ],
+  [
+   6.48,
+   10.95,
+   "none",
+   3
+  ],
+  [
+   10.95,
+   26.2,
+   "none",
+   10
+  ],
+  [
+   26.2,
+   31.51,
+   "none",
+   4
+  ],
+  [
+   31.51,
+   39.5,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "67033",
+   "q": "scary horror atmosphere room",
+   "t0": 0.0,
+   "t1": 20.05
+  },
+  {
+   "p": "pixabay",
+   "id": "138504",
+   "q": "scary horror atmosphere room",
+   "t0": 19.45,
+   "t1": 39.5
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T09:00:18Z",
+ "video": "Ryp4jApiRtU",
+ "url": "https://youtube.com/shorts/Ryp4jApiRtU",
+ "publish_at": "2026-10-27T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-207"
+}

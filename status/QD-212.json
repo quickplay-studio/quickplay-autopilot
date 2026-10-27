@@ -1,0 +1,149 @@
+{
+ "id": "QD-212",
+ "board": "boards/queue/QD-212.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T16:00:00Z",
+ "rendered": "2026-10-27T09:53:35.601813+00:00",
+ "title": "Megan Thee Stallion's Thin Ice: the 1999 twist 🔥",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "comin-wit-it",
+ "social_music": "hip-hop-hip-hop-beat-547254",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa_note": "narration a little unclear in beat 4 (captions carry it)",
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 23.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 678.2,
+   "contrast": 0.192,
+   "face_area": 0.0,
+   "text_area": 0.0983,
+   "caption_contrast": 16.85,
+   "by_frame": {
+    "sharpness": [
+     623.8,
+     704.4,
+     687.1,
+     697.4
+    ],
+    "contrast": [
+     0.189,
+     0.194,
+     0.193,
+     0.194
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1033,
+     0.0955,
+     0.0944,
+     0.1
+    ],
+    "caption_contrast": [
+     16.81,
+     16.87,
+     16.84,
+     16.86
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.65,
+   "none",
+   0
+  ],
+  [
+   4.65,
+   7.82,
+   "none",
+   1
+  ],
+  [
+   7.82,
+   12.46,
+   "none",
+   1
+  ],
+  [
+   12.46,
+   16.25,
+   "none",
+   1
+  ],
+  [
+   16.25,
+   20.64,
+   "none",
+   1
+  ],
+  [
+   20.64,
+   23.59,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "378849",
+   "q": "stage lights dark",
+   "t0": 0.0,
+   "t1": 12.1
+  },
+  {
+   "p": "pixabay",
+   "id": "38392",
+   "q": "vinyl record spinning",
+   "t0": 11.5,
+   "t1": 23.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:19Z",
+ "video": "uoxdTT_DOYM",
+ "url": "https://youtube.com/shorts/uoxdTT_DOYM",
+ "publish_at": "2026-10-27T16:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T16:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-212"
+}

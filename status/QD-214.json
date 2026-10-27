@@ -1,0 +1,167 @@
+{
+ "id": "QD-214",
+ "board": "boards/queue/QD-214.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T22:00:00Z",
+ "rendered": "2026-10-27T09:54:19.758425+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "iPhone Duo screen problems: the replacement deal",
+ "background_notes": [
+  "Pixabay 'futuristic city night': 40 results, none at 720p or better",
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "glitcher",
+ "social_music": "save-as-115826",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 29.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 314.1,
+   "contrast": 0.254,
+   "face_area": 0.0023,
+   "text_area": 0.1356,
+   "caption_contrast": 9.64,
+   "by_frame": {
+    "sharpness": [
+     300.6,
+     324.4,
+     329.4,
+     301.8
+    ],
+    "contrast": [
+     0.254,
+     0.254,
+     0.254,
+     0.255
+    ],
+    "face_area": [
+     0.0,
+     0.0044,
+     0.0049,
+     0.0
+    ],
+    "text_area": [
+     0.1359,
+     0.1281,
+     0.1399,
+     0.1384
+    ],
+    "caption_contrast": [
+     12.56,
+     11.77,
+     4.88,
+     7.51
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.18,
+   "none",
+   2
+  ],
+  [
+   4.18,
+   8.1,
+   "none",
+   3
+  ],
+  [
+   8.1,
+   12.21,
+   "none",
+   3
+  ],
+  [
+   12.21,
+   16.27,
+   "none",
+   3
+  ],
+  [
+   16.27,
+   19.96,
+   "none",
+   3
+  ],
+  [
+   19.96,
+   26.5,
+   "none",
+   4
+  ],
+  [
+   26.5,
+   29.35,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "47214",
+   "q": "circuit board closeup",
+   "t0": 0.0,
+   "t1": 29.35
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:21Z",
+ "video": "GNv-lzw9EXk",
+ "url": "https://youtube.com/shorts/GNv-lzw9EXk",
+ "publish_at": "2026-10-27T22:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T22:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-214"
+}

@@ -1,0 +1,166 @@
+{
+ "id": "QD-208",
+ "board": "boards/queue/QD-208.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T12:30:00Z",
+ "rendered": "2026-10-27T09:52:36.125808+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "gta 6: arrives on 19 November (Part 1) 🎮",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)",
+  "pixabay:5624 skipped: nearly black (brightness 0.04)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7,
+  "extra_photos": 5,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "once-upon-a-time",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1019",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 28.4,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 10.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 692.7,
+   "contrast": 0.251,
+   "face_area": 0.0,
+   "text_area": 0.2417,
+   "caption_contrast": 16.69,
+   "by_frame": {
+    "sharpness": [
+     678.2,
+     753.2,
+     714.9,
+     624.6
+    ],
+    "contrast": [
+     0.251,
+     0.25,
+     0.252,
+     0.253
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2361,
+     0.2188,
+     0.2802,
+     0.2318
+    ],
+    "caption_contrast": [
+     14.28,
+     19.63,
+     13.78,
+     19.1
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.21,
+   "none",
+   2
+  ],
+  [
+   4.21,
+   9.82,
+   "none",
+   4
+  ],
+  [
+   9.82,
+   12.9,
+   "none",
+   2
+  ],
+  [
+   12.9,
+   17.14,
+   "none",
+   3
+  ],
+  [
+   17.14,
+   21.85,
+   "none",
+   3
+  ],
+  [
+   21.85,
+   25.35,
+   "none",
+   1
+  ],
+  [
+   25.35,
+   28.35,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "42489",
+   "q": "city skyline night",
+   "t0": 0.0,
+   "t1": 28.35
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:14Z",
+ "video": "YUI_nWZsC-Y",
+ "url": "https://youtube.com/shorts/YUI_nWZsC-Y",
+ "publish_at": "2026-10-27T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-208"
+}

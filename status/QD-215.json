@@ -1,0 +1,175 @@
+{
+ "id": "QD-215",
+ "board": "boards/queue/QD-215.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T07:00:00Z",
+ "rendered": "2026-10-27T09:53:32.390919+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"KPop Demon Hunters (Soundtrack from the Netflix Film)\" read 0 times yesterday, 0.0x its usual 0; 35 news articles on \"kpop demon hunters\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Film Facts #2: kpop demon hunters song: the soundtrack history",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (page:https://variety.com/2026/music/news/kpop-demon-hunters-global-concert-tour-netflix-aeg-1236747546/: variety.com is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 7 reused a nearby picture (page:https://variety.com/2026/music/news/kpop-demon-hunters-global-concert-tour-netflix-aeg-1236747546/: variety.com is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 10,
+  "pic_found_share": 0.71,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "purple-desire",
+ "social_music": "modern-reggaeton-pop-type-beat-cavia-210829",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 36.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 356.0,
+   "contrast": 0.217,
+   "face_area": 0.0,
+   "text_area": 0.0375,
+   "caption_contrast": 12.38,
+   "by_frame": {
+    "sharpness": [
+     333.4,
+     347.4,
+     370.1,
+     373.2
+    ],
+    "contrast": [
+     0.21,
+     0.214,
+     0.219,
+     0.224
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0374,
+     0.0374,
+     0.0376,
+     0.0376
+    ],
+    "caption_contrast": [
+     11.95,
+     12.11,
+     12.74,
+     12.64
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.85,
+   "none",
+   2
+  ],
+  [
+   4.85,
+   10.23,
+   "none",
+   4
+  ],
+  [
+   10.23,
+   16.09,
+   "none",
+   4
+  ],
+  [
+   16.09,
+   20.51,
+   "none",
+   3
+  ],
+  [
+   20.51,
+   25.48,
+   "none",
+   3
+  ],
+  [
+   25.48,
+   31.85,
+   "none",
+   4
+  ],
+  [
+   31.85,
+   36.68,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "272520",
+   "q": "stadium arena crowd",
+   "t0": 0.0,
+   "t1": 36.68
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:23Z",
+ "video": "hQWwgZnuEk4",
+ "url": "https://youtube.com/shorts/hQWwgZnuEk4",
+ "publish_at": "2026-10-28T07:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T07:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-215"
+}

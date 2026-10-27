@@ -1,0 +1,184 @@
+{
+ "id": "QD-210",
+ "board": "boards/queue/QD-210.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T06:00:00Z",
+ "rendered": "2026-10-27T09:52:43.875850+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Music Explained #2: Who was Johann Sebastian Bach?",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)",
+  "pixabay:24490 skipped: nearly black (brightness 0.03)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:St Michael's School Lüneburg: no Commons image named 'St Michael's School Lüneburg')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 10,
+  "extra_photos": 11,
+  "pic_found_share": 0.86,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "voice_note": "beat 5 read as two sentences",
+ "qa": {
+  "duration": 40.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 24.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 733.4,
+   "contrast": 0.205,
+   "face_area": 0.0212,
+   "text_area": 0.1292,
+   "caption_contrast": 3.22,
+   "by_frame": {
+    "sharpness": [
+     755.5,
+     784.5,
+     759.4,
+     634.3
+    ],
+    "contrast": [
+     0.206,
+     0.205,
+     0.205,
+     0.206
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.042,
+     0.0427
+    ],
+    "text_area": [
+     0.1369,
+     0.131,
+     0.1328,
+     0.1159
+    ],
+    "caption_contrast": [
+     3.71,
+     2.74,
+     3.82,
+     2.73
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.59,
+   "none",
+   2
+  ],
+  [
+   4.59,
+   9.93,
+   "none",
+   4
+  ],
+  [
+   9.93,
+   14.45,
+   "none",
+   4
+  ],
+  [
+   14.45,
+   18.67,
+   "none",
+   3
+  ],
+  [
+   18.67,
+   25.5,
+   "none",
+   5
+  ],
+  [
+   25.5,
+   33.86,
+   "none",
+   6
+  ],
+  [
+   33.86,
+   40.62,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "42472",
+   "q": "baroque church organ",
+   "t0": 0.0,
+   "t1": 13.94
+  },
+  {
+   "p": "pixabay",
+   "id": "1275",
+   "q": "concert stage lights",
+   "t0": 13.34,
+   "t1": 27.28
+  },
+  {
+   "p": "pixabay",
+   "id": "33279",
+   "q": "baroque church organ",
+   "t0": 26.68,
+   "t1": 40.62
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:17Z",
+ "video": "VZenbNfVEnY",
+ "url": "https://youtube.com/shorts/VZenbNfVEnY",
+ "publish_at": "2026-10-28T06:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T06:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-210"
+}

@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 9 public, 11 scheduled | 4 | 1 | ⏳ 9 of 15 so far, 11 more scheduled |
+| Wed 28 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 15 scheduled |
+| Tue 27 Oct | 10 public, 13 scheduled | 4 | 1 | ⏳ 10 of 15 so far, 13 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -79,14 +79,7 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## In the queue
 
-- **QD-208** gta 6: arrives on 19 November (Part 1) 🎮 (rendering next)
-- **QD-210** Music Explained #2: Who was Johann Sebastian Bach? (rendering next)
 - **QD-211** Game Facts #5: GTA 6: 17% spike in time off requests (rendering next)
-- **QD-212** Megan Thee Stallion's Thin Ice: the 1999 twist 🔥 (rendering next)
-- **QD-213** Alexander Skarsgård Wicker: the suit secret 🎬 (rendering next)
-- **QD-214** iPhone Duo screen problems: the replacement deal (rendering next)
-- **QD-215** Film Facts #2: kpop demon hunters song: the soundtrack history (rendering next)
-- **QD-216** Space Facts #1: The Signal on Planet 9 | a short story 🚀 (rendering next)
 
 ## On the channel (latest first)
 
@@ -106,7 +99,7 @@ scheduled · 32 s · music: dance-with-you · [script](../boards/done/QD-202.jso
 ![QD-202](QD-202.jpg)
 
 ### Tue 27 Oct 10:00 · Film Facts #1: Wildwood runtime sets a stop-motion record 🎬
-scheduled · 27 s · music: in-battery · [script](../boards/done/QD-201.json) · [YouTube](https://youtube.com/shorts/uDAbDV2tGw4)
+private · 27 s · music: in-battery · [script](../boards/done/QD-201.json) · [YouTube](https://youtube.com/shorts/uDAbDV2tGw4)
 
 ![QD-201](QD-201.jpg)
 

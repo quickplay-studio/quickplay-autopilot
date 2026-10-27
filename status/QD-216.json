@@ -1,0 +1,180 @@
+{
+ "id": "QD-216",
+ "board": "boards/queue/QD-216.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T12:30:00Z",
+ "rendered": "2026-10-27T10:01:24.140035+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Space Facts #1: The Signal on Planet 9 | a short story 🚀",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 0,
+  "planned_real": 0,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "false-vacuum-decay",
+ "social_music": "sci-fi-ambient-587603",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 32.0,
+  "wps": 3.01,
+  "weak_beats": [],
+  "size_mb": 25.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 223.6,
+   "contrast": 0.172,
+   "face_area": 0.0049,
+   "text_area": 0.0229,
+   "caption_contrast": 3.5,
+   "by_frame": {
+    "sharpness": [
+     176.8,
+     211.4,
+     235.5,
+     270.5
+    ],
+    "contrast": [
+     0.144,
+     0.159,
+     0.178,
+     0.208
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0196
+    ],
+    "text_area": [
+     0.0233,
+     0.0231,
+     0.0232,
+     0.022
+    ],
+    "caption_contrast": [
+     2.69,
+     3.33,
+     3.67,
+     6.86
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.95,
+   "none",
+   0
+  ],
+  [
+   3.95,
+   9.35,
+   "none",
+   1
+  ],
+  [
+   9.35,
+   13.31,
+   "none",
+   1
+  ],
+  [
+   13.31,
+   17.2,
+   "none",
+   1
+  ],
+  [
+   17.2,
+   20.48,
+   "none",
+   1
+  ],
+  [
+   20.48,
+   25.3,
+   "none",
+   1
+  ],
+  [
+   25.3,
+   31.92,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "37845",
+   "q": "parkour urban jump",
+   "t0": 0.0,
+   "t1": 11.04
+  },
+  {
+   "p": "pixabay",
+   "id": "12801",
+   "q": "first person running",
+   "t0": 10.44,
+   "t1": 21.48
+  },
+  {
+   "p": "pixabay",
+   "id": "55990",
+   "q": "galaxy stars space",
+   "t0": 20.88,
+   "t1": 31.92
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:33:26Z",
+ "video": "QKykXue3OuY",
+ "url": "https://youtube.com/shorts/QKykXue3OuY",
+ "publish_at": "2026-10-28T12:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T12:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-216"
+}

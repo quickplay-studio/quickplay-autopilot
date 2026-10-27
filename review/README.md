@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 28 Oct | 0 public, 12 scheduled | 0 | 0 | ⏳ 12 of 15 scheduled |
-| Tue 27 Oct | 25 public, 2 scheduled | 8 | 1 | ✅ done |
+| Wed 28 Oct | 0 public, 13 scheduled | 0 | 0 | ⏳ 13 of 15 scheduled |
+| Tue 27 Oct | 26 public, 1 scheduled | 8 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -78,10 +78,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
-## In the queue
-
-- **QD-230** Game Lore #3: GTA 6: the massive storage size revealed (rendering next)
-
 ## On the channel (latest first)
 
 ### Wed 28 Oct 12:30 · Space Facts #1: The Signal on Planet 9 | a short story 🚀
@@ -105,7 +101,7 @@ scheduled · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) �
 ![QD-219](QD-219.jpg)
 
 ### Tue 27 Oct 22:00 · iPhone Duo screen problems: the replacement deal
-scheduled · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
+private · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
 
 ![QD-214](QD-214.jpg)
 

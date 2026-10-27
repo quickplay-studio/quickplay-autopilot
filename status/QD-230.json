@@ -1,0 +1,133 @@
+{
+ "id": "QD-230",
+ "board": "boards/queue/QD-230.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T07:30:00Z",
+ "rendered": "2026-10-27T21:54:16.366357+00:00",
+ "channel": "gaming",
+ "title": "Game Lore #3: GTA 6: the massive storage size revealed",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "horizons",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 32.4,
+  "wps": 3.09,
+  "weak_beats": [],
+  "size_mb": 4.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 712.6,
+   "contrast": 0.225,
+   "face_area": 0.0,
+   "text_area": 0.2774,
+   "caption_contrast": 18.39,
+   "by_frame": {
+    "sharpness": [
+     687.1,
+     715.1,
+     740.7,
+     707.3
+    ],
+    "contrast": [
+     0.227,
+     0.224,
+     0.226,
+     0.225
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2492,
+     0.2769,
+     0.2782,
+     0.3053
+    ],
+    "caption_contrast": [
+     18.39,
+     18.39,
+     18.39,
+     18.34
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.27,
+   "none",
+   0
+  ],
+  [
+   4.27,
+   9.76,
+   "none",
+   1
+  ],
+  [
+   9.76,
+   16.12,
+   "none",
+   1
+  ],
+  [
+   16.12,
+   18.97,
+   "none",
+   1
+  ],
+  [
+   18.97,
+   24.69,
+   "none",
+   1
+  ],
+  [
+   24.69,
+   32.35,
+   "none",
+   1
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T22:03:06Z",
+ "video": "X2_LEPeQPOM",
+ "url": "https://youtube.com/shorts/X2_LEPeQPOM",
+ "publish_at": "2026-10-28T07:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T07:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

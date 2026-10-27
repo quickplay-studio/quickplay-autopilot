@@ -1,98 +1,211 @@
 {
  "date": "2026-10-27",
- "built": "2026-10-27T13:43+00:00",
+ "built": "2026-10-27T16:33+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 10,
-   "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
-   "category": "Gaming",
-   "what_is_new": "Nothing changed in the last two days.",
+   "n": 3,
+   "topic": "Ballon d'Or 2026",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "Harry Kane won the Ballon d'Or on Monday night, becoming the first English player to win it for 25 years.",
    "hooks": [
-    "GTA 6 is coming out on November 19 for consoles.",
-    "A PC port for GTA 6 is rumored for early 2027."
+    "Harry Kane wins the Ballon d'Or!",
+    "England celebrates its first Ballon d'Or winner in 25 years!"
    ],
    "sources": [
     [
-     "GTA 6 Causes 17% Spike in Time Off Requests on Game's Release Date",
-     "https://www.ign.com/articles/gta-6-causes-17-spike-in-time-off-requests-on-games-release-date",
-     "IGN",
-     "2026-10-26"
+     "'Everything about him is world class' - Neville hails Kane after Ballon d'Or win",
+     "https://www.skysports.com/watch/video/13604421/harry-kane-wins-ballon-dor-gar-neville-describes-him-as-gold",
+     "Sky Sports",
+     "2026-10-27"
+    ],
+    [
+     "How Kane's Ballon d'Or win could boost the Bundesliga",
+     "https://www.bbc.co.uk/sport/football/articles/crgqwge88z84o?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-27"
+    ],
+    [
+     "Ballon d'Or in London - the most chaotic ever?",
+     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-27"
+    ],
+    [
+     "Ballon d'Or 2026",
+     "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
+     "Wikipedia",
+     ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Harry Kane was crowned Ballon d'Or winner on Monday night.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Harry Kane on Monday night becoming the first player from the country to win it for 25 years.",
+      "3": "Despite the perfect homecoming for Harry Kane on Monday night, the rest of the event was not plain sailing."
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S.",
+     "claim": "Harry Kane wins Ballon d'or: Gary Neville describes English striker as gold",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S."
+      "1": "Harry Kane wins Ballon d'or: Gary Neville describes English striker as 'gold'"
      }
     },
     {
-     "claim": "GTA 6's release caused as much as a 17% increase in time off requests.",
+     "claim": "Gary Neville described Harry Kane as 'gold'.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "GTA 6's release has led to as much as a 17% increase in time-off requests, according to a new report."
+      "1": "Harry Kane wins Ballon d'Or: Gary Neville describes English striker as 'gold'"
      }
     },
     {
-     "claim": "Economists have estimated a $1 billion loss in productivity in the United States due to GTA 6's release.",
+     "claim": "Harry Kane became the first English player to win the Ballon d'Or in 25 years.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "Economists have estimated a $1 billion loss in productivity in the United States due to GTA 6's release."
+      "2": "Harry Kane on Monday night becoming the first player from the country to win it for 25 years."
      }
     },
     {
-     "claim": "Rockstar spent $975,000 to install a massive neon pink sign on top of the Miami Heat's arena.",
+     "claim": "The official Ballon d'Or website mistakenly published an article declaring Kane as the winner before the ceremony.",
      "sources": [
-      1
+      3
      ],
      "evidence": {
-      "1": "Rockstar has also been spending a ton of money to get the word out with extravagant marketing; it spent $975,000 to install a massive neon"
+      "3": "The confusion and chaos began hours before the ceremony had even started, after the official Ballon d'Or website published an article declaring Kane as the"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Lionel_Messi_-_Reus.jpg"
+   ]
+  },
+  {
+   "n": 13,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Edge magazine announced its GTA 6 cover story will be released on 29 October 2026.",
+   "hooks": [
+    "GTA 6 arrives on November 19, 2026!",
+    "Edge magazine goes inside Rockstar's headquarters for GTA 6!"
+   ],
+   "sources": [
+    [
+     "Edge magazine went to Rockstar to see GTA 6, and will tell you all about it in lavish detail this Thursday, October 29",
+     "https://www.pcgamer.com/games/grand-theft-auto/edge-magazine-went-to-rockstar-to-see-gta-6-and-will-tell-you-all-about-in-lavish-detail-this-thursday-october-29/",
+     "PC Gamer",
+     "2026-10-27"
+    ],
+    [
+     "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
+     "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
+     "IGN",
+     "2026-10-26"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/GTA_6",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "We are just three weeks out from the release of Grand Theft Auto 6, which you can tell because it has cleared the release calendar",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Francis Lawrence is directing a film adaptation of Red Rising.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Lawrence is also gearing up to direct a film adaptation of Red Rising, a young adult book series written by author Peirce Brown.",
+      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto 6 is an upcoming game.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "We are just three weeks out from the release of Grand Theft Auto 6, which you can tell because it has cleared the release calendar",
+      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The game follows criminal duo Jason Duval and Lucia Caminos, the series' first non‑optional female protagonist.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The story follows a criminal couple: Jason Duval, who worked for local drug runners in the Leonida Keys after serving in the Army; and Lucia"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 12,
+   "n": 17,
    "topic": "Harry Potter HBO series",
    "signal": "watchlist: Harry Potter HBO series (surging, 59 days to go)",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Did you know Charlie Weasley is finally making his screen debut in the HBO series?",
-    "Jasper Talbot and Hannah Chinn are officially playing James and Lily Potter!",
-    "The Harry Potter HBO series premieres on December 25!"
+    "Jasper Talbot and Hannah Chinn are confirmed as James and Lily Potter!",
+    "The first season of the Harry Potter TV show premieres on Dec. 25!",
+    "Harry Gilby has joined the cast as Charlie Weasley!"
    ],
    "sources": [
+    [
+     "HBO's Harry Potter series officially casts two key characters",
+     "https://www.polygon.com/hbo-harry-potter-tv-show-lily-james-potter-casting/",
+     "Polygon",
+     "2026-10-27"
+    ],
     [
      "‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character’s Screen Debut",
      "https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/",
      "Variety",
-     "2026-10-27"
-    ],
-    [
-     "HBO’s ‘Harry Potter and the Philosopher’s Stone’ Casts James and Lily Potter, Charlie Weasley",
-     "https://www.hollywoodreporter.com/tv/tv-news/hbo-harry-potter-philosophers-stone-cast-james-lily-potter-1236740639/",
-     "The Hollywood Reporter",
-     "2026-10-27"
-    ],
-    [
-     "‘Harry Potter’ Series Finds Its Lily & James Potter In Jasper Talbot & Hannah Chinn; Harry Gilby To Play Charlie Weasley",
-     "https://deadline.com/2026/10/harry-potter-series-lily-james-potter-charlie-weasley-1237205917/",
-     "Deadline",
      "2026-10-27"
     ],
     [
@@ -104,33 +217,29 @@
    ],
    "verified": [
     {
-     "claim": "Jasper Talbot and Hannah Chinn have joined the cast as James Potter and Lily Potter respectively for the Harry Potter HBO series.",
+     "claim": "Jasper Talbot and Hannah Chinn are confirmed to be the new James and Lily Potter in HBO's Harry Potter.",
      "sources": [
       1,
       2,
-      3,
-      4
+      3
      ],
      "evidence": {
-      "1": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
-      "2": "Jasper Talbot and Hannah Chinn will play the parents of the titular young wizard in HBO‘s upcoming TV adaptation of J.K. Rowling’s bestsellers.",
-      "3": "HBO‘s Harry Potter series has cast the roles of the titular wizard’s parents, James and Lily Potter, with Jasper Talbot and Hannah Chinn, respectively.",
-      "4": "Jasper Talbot as James Potter, Harry's deceased father.[14]"
+      "1": "Jasper Talbot (Broadchurch) and Hannah Chinn (The Conjuring: Last Rites) are confirmed to be the new James and Lily Potter in HBO's Harry Potter.",
+      "2": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
+      "3": "Jasper Talbot as James Potter, Harry's deceased father."
      }
     },
     {
-     "claim": "Harry Gilby has joined the cast of the Harry Potter HBO series to play Charlie Weasley.",
+     "claim": "Harry Gilby has joined the cast as Charlie Weasley, the second-eldest son of Molly and Arthur Weasley and brother of Ron.",
      "sources": [
       1,
       2,
-      3,
-      4
+      3
      ],
      "evidence": {
-      "1": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
-      "2": "Harry Gilby (Tolkien, The Last Kingdom) has also joined the cast as Charlie Weasley, the second-eldest son of Arthur (Rafe Spall) and Molly Weasley (Katherine",
-      "3": "Additionally, Harry Gilby joins as Charlie Weasley, the second eldest son of Molly and Arthur Weasley after Bill, whose siblings also include Percy, Fred, George,",
-      "4": "Harry Gilby as Charlie Weasley, Ron's older brother.[14]"
+      "1": "Additionally, Harry Gilby (The Last Kingdom) has joined the cast as Charlie Weasley, the second-eldest son of Molly and Arthur Weasley and brother of Ron.",
+      "2": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
+      "3": "Harry Gilby as Charlie Weasley, Ron's older brother."
      }
     },
     {
@@ -138,635 +247,60 @@
      "sources": [
       1,
       2,
-      4
+      3
      ],
      "evidence": {
-      "1": "The first season of the “Harry Potter” TV show premieres on HBO on Dec. 25.",
-      "2": "The series, arriving on our screens Dec. 25, stars Dominic McLaughlin as Harry Potter, Arabella Stanton as Hermione Granger, Alastair Stout as Ron Weasley, John",
-      "4": "The first season, titled Harry Potter and the Philosopher's Stone and based on the novel of the same name, consists of eight episodes and is"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Charlie Weasley is a minor character in the books and does not appear in the films.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Charlie Weasley is a minor character in the books and does not appear in the films, so the HBO series is straying from the movies"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Potter_TV_series_logo.png"
-   ]
-  },
-  {
-   "n": 15,
-   "topic": "mitchell lawrie luke littler netflix darts",
-   "signal": "Google Trends GB 2000+",
-   "category": "Sport",
-   "what_is_new": "Mitchell Lawrie is preparing to face Luke Littler in a Netflix live special on Friday.",
-   "hooks": [
-    "A 15 year old darts player could win £501,000 on Netflix!",
-    "Can teenager Mitchell Lawrie defeat world champion Luke Littler live?",
-    "Watch 24 amateur players take on darts star Luke Littler."
-   ],
-   "sources": [
-    [
-     "Lawrie, 15, eyes £501,000 live TV win over Littler",
-     "https://www.bbc.co.uk/sport/darts/articles/cq33xj8yyd5do?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Mitchell Lawrie is 15 years old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "At just 15 years old, Mitchell Lawrie has his sights on a Â£501,000 bullseye should he beat world darts champion Luke Littler in a potentially"
+      "1": "The series' first season, Harry Potter and the Philosopher's Stone, premieres on HBO and HBO Max on Dec. 25.",
+      "2": "The first season of the “Harry Potter” TV show premieres on HBO on Dec. 25.",
+      "3": "The first season, titled Harry Potter and the Philosopher's Stone and based on the novel of the same name, consists of eight episodes and is"
      }
     },
     {
-     "claim": "Mitchell Lawrie can win £501,000 if he beats Luke Littler.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "At just 15 years old, Mitchell Lawrie has his sights on a Â£501,000 bullseye should he beat world darts champion Luke Littler in a potentially"
-     }
-    },
-    {
-     "claim": "Luke Littler is a 19 year old two time world champion.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Each contestant has the chance to face Littler in a single leg of 501 but the first to beat the 19-year-old two-time world champion will"
-     }
-    },
-    {
-     "claim": "The Netflix live special is called Beat Luke Littler.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Renfrew teenager is one of 24 amateur players chosen to take part in Netflix's live special, Beat Luke Littler, which will be broadcast from"
-     }
-    },
-    {
-     "claim": "The event will be broadcast from the Manchester Central Convention Complex on Friday.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Renfrew teenager is one of 24 amateur players chosen to take part in Netflix's live special, Beat Luke Littler, which will be broadcast from"
-     }
-    },
-    {
-     "claim": "There are 24 amateur players chosen to take part in the show.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Renfrew teenager is one of 24 amateur players chosen to take part in Netflix's live special, Beat Luke Littler, which will be broadcast from"
-     }
-    },
-    {
-     "claim": "Mitchell Lawrie previously beat Luke Littler at the World Cup junior darts in Gibraltar in 2023.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It was at the World Cup junior darts in Gibraltar in 2023, Scotland against England and we beat the team that Luke Littler was in,"
-     }
-    },
-    {
-     "claim": "Mitchell Lawrie was crowned WDF Open Youth World Champion last year.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Indeed, Lawrie was crowned WDF Open Youth World Champion last year before being described as \"the future of darts\" by Jimmy van Schie after the"
-     }
-    },
-    {
-     "claim": "Mitchell Lawrie has been playing darts since his grandfather mounted a board on a chair when he was two years old.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Lawrie, whose inspiration is former world number one Gary Anderson, twice winner of the more prestigious PDC World Darts Championship, says he has been playing"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 17,
-   "topic": "jasper talbot",
-   "signal": "Google Trends GB 200+",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Jasper Talbot joins the Harry Potter HBO series as James Potter!",
-    "Find out which agency represents Harry Potter casting star Jasper Talbot."
-   ],
-   "sources": [
-    [
-     "‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character’s Screen Debut",
-     "https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/",
-     "Variety",
-     "2026-10-27"
-    ],
-    [
-     "‘Harry Potter’ Series Finds Its Lily & James Potter In Jasper Talbot & Hannah Chinn; Harry Gilby To Play Charlie Weasley",
-     "https://deadline.com/2026/10/harry-potter-series-lily-james-potter-charlie-weasley-1237205917/",
-     "Deadline",
-     "2026-10-27"
-    ],
-    [
-     "jasper talbot",
-     "https://en.wikipedia.org/wiki/Jasper_Talbert",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Jasper Talbot has joined the cast of the Harry Potter HBO series as James Potter.",
+     "claim": "Dominic McLaughlin plays Harry Potter, Arabella Stanton plays Hermione Granger, and Alastair Stout plays Ron Weasley.",
      "sources": [
       1,
-      2
+      2,
+      3
      ],
      "evidence": {
-      "1": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
-      "2": "HBO‘s Harry Potter series has cast the roles of the titular wizard’s parents, James and Lily Potter, with Jasper Talbot and Hannah Chinn, respectively."
-     }
-    },
-    {
-     "claim": "Jasper Talbot is represented by United Agents.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Talbot is represented by United Agents.",
-      "2": "Talbot is represented by United Agents."
-     }
-    },
-    {
-     "claim": "Jasper Talbot has been cast as James Potter in HBO’s Harry Potter series.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Harry Gilby, Jasper Talbot and Hannah Chinn have joined the cast as Charlie Weasley, James Potter and Lily Potter, respectively.",
-      "2": "HBO‘s Harry Potter series has cast the roles of the titular wizard’s parents, James and Lily Potter, with Jasper Talbot and Hannah Chinn, respectively."
-     }
-    },
-    {
-     "claim": "Jasper Talbot will appear in Season 1 of the series, dubbed “Harry Potter and the Philosopher’s Stone”.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The actors will appear in Season 1 of the series, which is dubbed “Harry Potter and the Philosopher’s Stone.”",
-      "2": "In the upcoming Harry Potter and the Philosopher’s Stone, viewers will be introduced to Harry (Dominic McLaughlin), who has nothing special about him- or so"
+      "1": "The new Harry Potter series will be full of fresh faces, including new lead actors Dominic McLaughlin as Harry Potter, Arabella Stanton as Hermione Granger,",
+      "2": "“Harry Potter” stars Dominic McLaughlin as Harry Potter, Arabella Stanton as Hermione Granger, Alastair Stout as Ron Weasley, John Lithgow as Albus Dumbledore, Janet McTeer",
+      "3": "Produced by HBO, Warner Bros. Television, Brontë Film & TV, and Heyday Films, the series stars Dominic McLaughlin as the title character, with Alastair Stout"
      }
     }
    ],
    "one_source": [],
    "images": [
-    "commons:File:William_Jasper_Talbert.jpg"
+    "commons:File:Harry_Potter_TV_series_logo.png"
    ]
   },
   {
-   "n": 22,
-   "topic": "Eric Bauza",
-   "signal": "Wikipedia 511,715 views",
-   "category": "Entertainment",
-   "what_is_new": "Eric Bauza passed away suddenly at the age of 46 from hypertensive cardiovascular disease.",
+   "n": 23,
+   "topic": "mitchell starc",
+   "signal": "Google Trends GB 10000+",
+   "category": "Sport",
+   "what_is_new": "",
    "hooks": [
-    "Did you know Canadian voice actor Eric Bauza won three Emmy awards?",
-    "Eric Bauza brought iconic characters like Bugs Bunny and Daffy Duck to life!"
+    "Did you know Mitchell Starc is cricket's fastest ODI star?",
+    "Discover how Mitchell Starc made cricket history!",
+    "Unbelievable records held by cricket legend Mitchell Starc!"
    ],
    "sources": [
     [
-     "Eric Bauza, voice of Bugs Bunny and Daffy Duck, dies aged 46",
-     "https://www.bbc.co.uk/news/articles/cwzd6q630vjeo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-26"
-    ],
-    [
-     "Eric Bauza",
-     "https://en.wikipedia.org/wiki/Eric_Bauza",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Eric Bauza was a Canadian voice actor and animator who was born in Ontario and was of Filipino descent.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Bauza had voiced a number of characters in this summer's animated hit Coyote vs. Acme, and appeared in the recent release Forgotten Island.",
-      "2": "Eric Bauza (December 7, 1979 – October 25, 2026) was a Canadian voice actor and animator."
-     }
-    },
-    {
-     "claim": "He won three Emmy awards for outstanding voice performance in a number of television series between 2022 and 2025.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Between 2022 and 2025, he won three Emmy awards for outstanding voice performance in a number of TV series.",
-      "2": "He voiced various Looney Tunes characters, and won three Emmy Awards for his performances in Looney Tunes Cartoons (2020–2024), Bugs Bunny Builders (2022–2025), and Teen"
-     }
-    },
-    {
-     "claim": "He voiced characters including Bugs Bunny, Daffy Duck, and Porky Pig.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Eric Bauza, the voice artist behind Looney Tunes characters including Bugs Bunny, Daffy Duck and Porky Pig, has died aged 46.",
-      "2": "Bauza voiced characters including Bugs Bunny, Daffy Duck, Porky Pig, Tweety, Marvin the Martian, and Woody Woodpecker."
-     }
-    },
-    {
-     "claim": "Voice artist Eric Bauza has died aged 46.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Eric Bauza, the voice artist behind Looney Tunes characters including Bugs Bunny, Daffy Duck and Porky Pig, has died aged 46.",
-      "2": "Eric Bauza (December 7, 1979 – October 25, 2026) was a Canadian voice actor and animator."
-     }
-    },
-    {
-     "claim": "Eric Bauza was of Filipino descent.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In a 2021 interview with NBC News, Bauza, who was born in Ontario and was of Filipino descent, said he grew up a huge fan",
-      "2": "Eric Bauza was born on December 7, 1979, in the Toronto suburban district of Scarborough,[1][2] and was of Filipino descent.[3][4]"
-     }
-    },
-    {
-     "claim": "Eric Bauza won three Emmy awards for his voice performances.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Between 2022 and 2025, he won three Emmy awards for outstanding voice performance in a number of TV series.",
-      "2": "He voiced various Looney Tunes characters, and won three Emmy Awards for his performances in Looney Tunes Cartoons (2020–2024), Bugs Bunny Builders (2022–2025), and Teen"
-     }
-    },
-    {
-     "claim": "Eric Bauza voiced characters including Bugs Bunny, Daffy Duck, Porky Pig and Marvin the Martian.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Eric Bauza, the voice artist behind Looney Tunes characters including Bugs Bunny, Daffy Duck and Porky Pig, has died aged 46.",
-      "2": "Bauza voiced characters including Bugs Bunny, Daffy Duck, Porky Pig, Tweety, Marvin the Martian, and Woody Woodpecker."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Eric Bauza was born on 7 December 1979.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Eric Bauza was born on December 7, 1979, in the Toronto suburban district of Scarborough,[1][2] and was of Filipino descent.[3][4]"
-     }
-    },
-    {
-     "claim": "Eric Bauza attended Cardinal Newman Catholic High School in Scarborough from 1993 to 1996.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He attended Cardinal Newman Catholic High School (now St. John Henry Newman) in Scarborough from 1993 to 1996."
-     }
-    },
-    {
-     "claim": "Eric Bauza graduated from Centennial College in 2000.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He graduated from Centennial College in 2000, being in the Radio, Television, and Film Program.[7][8][9]"
-     }
-    },
-    {
-     "claim": "Eric Bauza voiced Toad General in The Super Mario Bros Movie.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He also played the part of Toad General in 2023's The Super Mario Bros. Movie and its sequel The Super Mario Galaxy Movie, the fifth"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Eric_Bauza_by_Gage_Skidmore_2.jpg"
-   ]
-  },
-  {
-   "n": 24,
-   "topic": "Walter Koenig",
-   "signal": "Wikipedia 276,569 views",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away at the age of 90 on October 25, 2026.",
-   "hooks": [
-    "Star Trek legend Walter Koenig has passed away at the age of 90.",
-    "Did you know Walter Koenig was one of only two actors to audition for Pavel Chekov?",
-    "George Takei revealed that Walter Koenig served as the best man at his wedding."
-   ],
-   "sources": [
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "George Takei Honors ‘Star Trek’ Co-Star Walter Koenig: ‘Keep Navigating a Steady Course’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/star-trek-walter-koenig-george-takei-tribute-1235648207/",
-     "Rolling Stone",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig died on Sunday, October 25, 2026, at the age of 90 in his North Hollywood home.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
-      "2": "Koenig, who portrayed Ensign Pavel Chekov, died Sunday at the age of 90.",
-      "3": "Variety says Koenig died of natural causes. He was 90.",
-      "4": "They confirmed he had died \"of old age at home in North Hollywood\" on Sunday night, \"surrounded by his daughter and niece\".",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
-     "sources": [
-      1,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "4": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Koenig was cast as Ensign Pavel Chekov in the second season of the original Star Trek television series.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "TV guest spots in the early '60s on \"Mr. Novak\" and \"Ben Casey\" led Koenig to join the intrepid crew of the U.S.S. Enterprise for",
-      "2": "After landing his first TV roles in the early Sixties, including the pilot episode of the hit soap General Hospital, Koenig was cast as Chekov",
-      "3": "Koenig's big break in show biz came in 1967, when he was cast as Chekhov in the second season of the original Star Trek series.",
-      "4": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
-      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
-     }
-    },
-    {
-     "claim": "George Takei and Walter Koenig met on the bridge of the Enterprise in the 1960s and stayed friends for nearly six decades.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "“Walter and I met on the bridge of the Enterprise in the 1960s, and we stayed friends for nearly six decades.”",
-      "3": "walter and i met on the bridge of the enterprise in the 1960s and we stayed friends for nearly six decades when brad and i married in 2008 walter"
-     }
-    },
-    {
-     "claim": "Walter Koenig served as the best man at George Takei's wedding in 2008.",
-     "sources": [
-      2,
-      3,
-      5
-     ],
-     "evidence": {
-      "2": "when brad and i married in 2008 walter stood beside us as our best man",
-      "3": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "5": "Koenig served as best man at Takei's wedding in 2008.[15]"
-     }
-    },
-    {
-     "claim": "Koenig wrote a first-season screenplay for Star Trek: The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "3": "he wrote the script for an animated series episode called The Infinite Vulcan, making him the first member of the cast to write an episode",
-      "4": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan."
-     }
-    },
-    {
-     "claim": "Koenig portrayed the Psi Corps commander Alfred Bester in Babylon 5 starting in the 1990s.",
-     "sources": [
-      1,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "3": "But Koenig also played very much against type in at least one memorable role: Alfred Bester, a powerful Psi Corps officer in Babylon 5.",
-      "4": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
-     }
-    },
-    {
-     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
-     "sources": [
-      1,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "4": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Koenig was one of only two actors to audition for the role of Chekov.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because of his resemblance to British actor and singer Davy"
-     }
-    },
-    {
-     "claim": "Koenig won the Platinum Award for best actor at the 2026 Independent Shorts Awards for his performance in the short film Mr Fleischmann.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Earlier this year, his performance in the short film Mr Fleischmann saw him collect the Platinum Award for best actor at the 2026 Independent Shorts"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 33,
-   "topic": "The One About Matthew Perry",
-   "signal": "TVmaze web: series premiere tonight",
-   "category": "Film",
-   "what_is_new": "The three-part Netflix documentary 'The One About Matthew Perry' debuted on Oct. 27.",
-   "hooks": [
-    "Did Friends production really pause in 2001?",
-    "What secrets does the new Netflix documentary reveal?",
-    "Why did the Friends cast hold hands at the casket?"
-   ],
-   "sources": [
-    [
-     "South Africa v Australia: third men’s cricket Test, day one – live",
+     "Starc strikes back as Australia dismiss South Africa for 329 on day one of third Test – as it happened",
      "https://www.theguardian.com/sport/live/2026/oct/27/south-africa-v-australia-third-test-day-one-cricket-newlands-cape-town-live-updates",
      "Guardian",
      "2026-10-27"
     ],
     [
-     "‘Friends’ Cast Entered Matthew Perry’s Funeral Holding Hands and Cried Around the Casket, Netflix Documentary Reveals",
-     "https://variety.com/2026/tv/news/friends-cast-matthew-perry-funeral-casket-1236931479/",
-     "Variety",
+     "Lawrie, 15, eyes £501,000 live TV win over Littler",
+     "https://www.bbc.co.uk/sport/darts/articles/cq33xj8yyd5do?at_medium=RSS&at_campaign=rss",
+     "BBC",
      "2026-10-27"
     ],
     [
-     "‘The One About Matthew Perry’ Review: Netflix’s Intimate and Sincere but Overly Padded Docuseries",
-     "https://www.hollywoodreporter.com/tv/tv-reviews/the-one-about-matthew-perry-review-netflix-documentary-1236740422/",
-     "The Hollywood Reporter",
-     "2026-10-27"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "In Mary Robertson’s three-part Netflix documentary, which debuted on Oct. 27, one of Perry’s best friends, Roger Costillo, says production paused on Friends in 2001 while Perry entered rehab.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In Mary Robertson’s three-part Netflix documentary, which debuted on Oct. 27, one of Perry’s best friends, Roger Costillo, says production paused on ”Friends” in 2001"
-     }
-    },
-    {
-     "claim": "Directed by Mary Robertson, The One About Matthew Perry is not a salacious documentary about Perry’s death and the subsequent criminal investigations.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Directed by Mary Robertson (Quiet on Set: The Dark Side of Kids TV), The One About Matthew Perry is not a salacious documentary about Perry’s"
-     }
-    },
-    {
-     "claim": "Literally none of Perry’s Friends co-stars appear in the documentary.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Literally none of Perry’s Friends co-stars appear in the documentary — nope, not even Janice or Gunther — nor do any of the key creative"
-     }
-    },
-    {
-     "claim": "Matthew Perry was 14 when Mia Perry Bowick was born.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Matthew Perry was 14 when she was born, and she did much of her growing up with an already famous sibling."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 36,
-   "topic": "Leipzig",
-   "signal": "On this day in 1726, 300 years ago (Wikipedia)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Leipzig is the most populous city in Saxony?",
-    "Discover the fascinating history of Leipzig and its famous landmarks.",
-    "Explore how Leipzig became a major cultural and trade hub."
-   ],
-   "sources": [
-    [
-     "Bayern and Luis Díaz warm up for Arsenal revenge mission with furious rout of Leipzig",
-     "https://www.theguardian.com/football/2026/oct/19/bayern-munich-luis-diaz-arsenal-revenge-mission-leipzig-bundesliga",
-     "Guardian",
-     "2026-10-19"
-    ],
-    [
-     "Leipzig",
-     "https://en.wikipedia.org/wiki/Leipzig",
+     "mitchell starc",
+     "https://en.wikipedia.org/wiki/Mitchell_Starc",
      "Wikipedia",
      ""
     ]
@@ -774,184 +308,126 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Leipzig is the most populous city in the German state of Saxony.",
+     "claim": "Mitchell Aaron Starc was born on 30 January 1990.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "Leipzig[a] is the most populous city in the German state of Saxony."
+      "3": "Mitchell Aaron Starc (born 30 January 1990) is an Australian international cricketer who plays for the Australian national team and New South Wales in domestic"
      }
     },
     {
-     "claim": "The city has a population of 633,592 residents as of 31 December 2025.",
+     "claim": "Mitchell Starc is Australia's fourth highest wicket-taker in both Test and One Day International cricket.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "The city has a population of 633,592 residents as of 31 December 2025.[8]"
+      "3": "A left-arm fast bowler and a lower order left-handed batsman, he is Australia's fourth highest wicket-taker in both Test and One Day International (ODI) cricket.[2][3]"
      }
     },
     {
-     "claim": "Leipzig Zoo is one of the most modern zoos in Europe and as of 2018 ranks first in Germany and second in Europe.",
+     "claim": "Mitchell Starc picked up 27 wickets at the 2019 Cricket World Cup, which is an all-time record for the most wickets taken in a single edition of the tournament.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "Leipzig Zoo is one of the most modern zoos in Europe and as of 2018 ranks first in Germany and second in Europe.[13]"
+      "3": "At the 2019 Cricket World Cup, he picked up 27 wickets, which is an all-time record for the most wickets taken in a single edition"
      }
     },
     {
-     "claim": "The Leipzig Trade Fair dates back to 1190.",
+     "claim": "Mitchell Starc is the fastest bowler in the history of ODI cricket to reach 150 and 200 wickets, taking 77 and 102 matches respectively.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "The Leipzig Trade Fair dates back to 1190."
+      "3": "He is the fastest bowler in the history of ODI cricket to reach 150 and 200 wickets, taking 77 and 102 matches respectively to reach"
      }
     },
     {
-     "claim": "The Thomanerchor, a boys choir, was founded in 1212.",
+     "claim": "Mitchell Starc is the fastest bowler in the history of Cricket World Cups to reach 50 wickets, taking just 19 WC games.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "The Thomanerchor (English: St. Thomas Choir of Leipzig), a boys' choir, was founded in 1212."
+      "3": "He is also the fastest bowler in the history of Cricket World Cups to reach 50 wickets, taking just 19 WC games to reach the"
+     }
+    },
+    {
+     "claim": "Mitchell Starc is one of five players who have managed to win an ICC trophy in all three formats of the game.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He is one of five players who have managed to win an ICC trophy in all three formats of the game."
+     }
+    },
+    {
+     "claim": "Mitchell Starc's fastest delivery has been measured at over 160.4 km/h.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Starc has been noted for his ability to bowl at great pace, with his fastest delivery being measured at over 160.4 km/h (the fastest ever"
+     }
+    },
+    {
+     "claim": "Mitchell Starc started playing cricket from a young age, at 9 years old for Northern Districts as a wicket keeper.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Starc started playing cricket from a young age, at 9 years old for Northern Districts as a wicket keeper.[4]"
+     }
+    },
+    {
+     "claim": "Mitchell Starc attended Homebush Boys High School, representing the school's 1st grade cricket team.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He was a representative cricketer of the Northern Districts Cricket Association and attended Homebush Boys High School, representing the school's 1st grade cricket team."
+     }
+    },
+    {
+     "claim": "Mitchell Starc is a former junior cricketer for the Berala Sports Cricket Club in Sydney.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He is also a former junior cricketer for the Berala Sports Cricket Club in Sydney, where he was known to wicket keep and bowl in"
+     }
+    },
+    {
+     "claim": "Mitchell Starc made his first-class debut in New South Wales' final match of the season on 5 March 2009 against Western Australia.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "He made his first-class debut in New South Wales' final match of the season on 5 March 2009 against Western Australia.[7]"
+     }
+    },
+    {
+     "claim": "In 2014, Starc was signed by the Royal Challengers Bangalore to play in the 2014 IPL.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In 2014, Starc was signed by the Royal Challengers Bangalore to play in the 2014 IPL."
+     }
+    },
+    {
+     "claim": "In January 2018, Starc was bought by Kolkata Knight Riders for the equivalent of A$1.8 million.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In January 2018, Starc was bought by Kolkata Knight Riders for the equivalent of A$1.8 million, the second most of any Australian player bought in"
      }
     }
    ],
    "images": [
-    "commons:File:Blick_vom_City-Hochhaus_Leipzig_05.jpg"
+    "commons:File:Mitchell_Starc_2023.jpg"
    ]
-  },
-  {
-   "n": 38,
-   "topic": "Anthropic files for IPO",
-   "signal": "Bluesky trending, 3,951 posts",
-   "category": "Tech",
-   "what_is_new": "",
-   "hooks": [
-    "Anthropic has officially filed for a massive stock market listing.",
-    "Anthropic reported losing $80bn in the first half of 2026.",
-    "Anthropic warned that advanced AI systems could pose catastrophic risks to humanity."
-   ],
-   "sources": [
-    [
-     "Anthropic's blockbuster share listing - 5 surprising things we now know",
-     "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-26"
-    ],
-    [
-     "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
-     "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
-     "TechCrunch",
-     "2026-10-26"
-    ],
-    [
-     "Anthropic files for potentially record-breaking stock market valuation in key test for AI industry",
-     "https://www.theguardian.com/technology/2026/oct/26/anthropic-files-listing-stock-market",
-     "Guardian",
-     "2026-10-26"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Anthropic publicly filed for a stock market listing on the US stock market.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Artificial intelligence (AI) firm Anthropic just released the required paperwork ahead of its long-anticipated debut on the US stock market.",
-      "3": "Anthropic has publicly filed for a stock market listing in what is slated to be one of the largest debuts in history."
-     }
-    },
-    {
-     "claim": "Anthropic reported a net loss of $80bn for the first half of 2026.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Anthropic lost $80.7bn (Â£60bn) in the first half of this year, double what it lost across 2025 altogether.",
-      "3": "Despite the increasing revenue, Anthropic disclosed a net loss of $80bn for the first half of 2026."
-     }
-    },
-    {
-     "claim": "Anthropic has about 250 customers spending $10 million or more annually.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "A large portion of its current business comes from just 250 major enterprise customers, which it says have paid it at least $10mn in the",
-      "2": "As of September 30, Anthropic recorded more than 11,900 customers spending at least $100,000; more than 1,900 customers spending upward of $1 million; and about",
-      "3": "As of 30 September, Anthropic said it had more than 14,000 enterprise customers – 11,900 of which had $100,000 or more of revenue, more than"
-     }
-    },
-    {
-     "claim": "Anthropic disclosed how the AI technology it is developing could pose catastrophic or existential risks to humanity.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "\"Sufficiently advanced AI systems could, if not developed, deployed, and operated with appropriate safeguards, oversight, and security measures, pose catastrophic or existential risks to humanity,\"",
-      "3": "\"We believe AI is one of the most consequential technologies in human history,\" the company's investor prospectus reads. Anthropic researchers and executives have trumpeted the"
-     }
-    },
-    {
-     "claim": "Anthropic disclosed that a hacking group believed to be sponsored by China manipulated Claude to successfully intrude on a number of institutions.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "It noted that less than a year ago, a hacking group Anthropic believed to be sponsored by China \"manipulated\" Claude to successfully intrude on a",
-      "3": "Anthropic \"detected and assessed with high confidence that a Chinese state-sponsored hacking group manipulated our Claude Code tool into attempting infiltration into roughly 30 global"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Anthropic will list under the symbol ANT.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The company, which will will list under the symbol ANT, confidentially filed with US financial regulators for an initial public offering in June."
-     }
-    },
-    {
-     "claim": "CEO Dario Amodei founded the company after quitting OpenAI.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "CEO Dario Amodei founded the company after quitting OpenAI, the maker of ChatGPT."
-     }
-    },
-    {
-     "claim": "Anthropic was founded in 2021.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Analysts and investors have valued the San Francisco-based company, founded in 2021, at more than $1.5tn."
-     }
-    },
-    {
-     "claim": "Anthropic disclosed that as of the end of June, it had raised $141.1bn.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The company disclosed that, as of the end of June, it had raised $141.1bn."
-     }
-    }
-   ],
-   "images": []
   }
  ]
 }

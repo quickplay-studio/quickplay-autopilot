@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T13:34+00:00",
+ "updated": "2026-10-27T16:30+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -60,19 +60,30 @@
    ],
    "category": "Sport",
    "angles": [
-    "Ballon d'Or 2026 nominees",
-    "Ballon d'Or 2026 winner",
-    "Ballon d'Or 2026 London ceremony",
-    "Ballon d'Or past winners",
-    "Kopa Trophy 2026"
+    "Ballon d'Or 2026",
+    "Ballon d'Or 2026 analysis",
+    "Ballon d'Or 2026 reaction",
+    "Ballon d'Or 2026 history and records",
+    "Ballon d'Or 2026 explained",
+    "Ballon d'Or 2026 facts"
    ],
-   "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly.",
+   "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly. A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
    "terms": [
     "Ballon d'Or 2026",
     "Ballon d'Or",
     "Ballon d'Or nominees",
     "Ballon d'Or winner"
-   ]
+   ],
+   "viral": true,
+   "viral_since": "2026-10-27",
+   "angle_map": {
+    "ballon d or 2026": "latest",
+    "ballon d or 2026 analysis": "why",
+    "ballon d or 2026 reaction": "reaction",
+    "ballon d or 2026 history and records": "records",
+    "ballon d or 2026 explained": "explained",
+    "ballon d or 2026 facts": "facts"
+   }
   },
   {
    "name": "The Celebrity Traitors",
@@ -115,7 +126,7 @@
     11925,
     9491
    ],
-   "news_24h": 50,
+   "news_24h": 45,
    "news_usual": 60.0,
    "suggestions": [
     "the celebrity traitors",
@@ -124,8 +135,8 @@
     "the celebrity traitors season 1",
     "the celebrity traitors season 2 episode 8",
     "the celebrity traitors uk",
-    "the celebrity traitors full episode",
-    "the celebrity traitors season 2 episode 1"
+    "the celebrity traitors episode 1",
+    "the celebrity traitors full episode"
    ],
    "in": [],
    "category": "Entertainment",
@@ -188,13 +199,13 @@
    "news_usual": 56.0,
    "suggestions": [
     "halloween 2026",
-    "halloween 2026 countdown",
     "halloween 2026 trailer",
+    "halloween 2026 house",
+    "halloween 2026 countdown",
     "halloween 2026 game",
     "halloween 2026 gameplay",
     "halloween 2026 game trailer",
-    "halloween 2026 animatronics",
-    "halloween 2026 leaks"
+    "halloween 2026 animatronics"
    ],
    "in": [],
    "category": "Entertainment",
@@ -317,7 +328,7 @@
     16864,
     17068
    ],
-   "news_24h": 79,
+   "news_24h": 87,
    "news_usual": 68.0,
    "suggestions": [
     "gta 6",
@@ -325,8 +336,8 @@
     "gta 6 gameplay",
     "gta 6 extended look",
     "gta 6 leaks",
-    "gta 6 launch trailer reaction",
     "gta 6 launch trailer",
+    "gta 6 launch trailer reaction",
     "gta 6 reaction"
    ],
    "in": [],
@@ -387,14 +398,14 @@
     13557,
     13501
    ],
-   "news_24h": 53,
+   "news_24h": 49,
    "news_usual": 21.0,
    "suggestions": [
     "the hunger games sunrise on the reaping",
     "the hunger games sunrise on the reaping interview",
     "the hunger games sunrise on the reaping trailer",
-    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping audiobook",
+    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping cast",
     "the hunger games sunrise on the reaping reaction",
     "the hunger games sunrise on the reaping official trailer"
@@ -457,7 +468,7 @@
     795,
     603
    ],
-   "news_24h": 6,
+   "news_24h": 7,
    "news_usual": 6.0,
    "suggestions": [
     "mama awards 2026",
@@ -465,9 +476,9 @@
     "mama awards 2026 jennie",
     "mama awards 2026 live",
     "mama awards 2026 enhypen",
-    "mama awards 2026 stray kids",
     "mama awards 2026 lineup",
-    "mama awards 2026 skz"
+    "mama awards 2026 skz",
+    "mama awards 2026 jennie performance"
    ],
    "in": [],
    "category": "Music",
@@ -591,17 +602,17 @@
     721,
     938
    ],
-   "news_24h": 15,
+   "news_24h": 16,
    "news_usual": 9.0,
    "suggestions": [
-    "the game awards 2026",
     "the game awards 2025",
     "the game awards",
     "the game awards 2024",
     "the game awards 2025 reaction",
     "the game awards orchestra",
     "the game awards trailers",
-    "the game awards reaction"
+    "the game awards reaction",
+    "the game awards 2023"
    ],
    "in": [],
    "category": "Gaming",
@@ -657,7 +668,7 @@
     28036,
     23773
    ],
-   "news_24h": 100,
+   "news_24h": 81,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
@@ -726,17 +737,17 @@
     8681,
     9018
    ],
-   "news_24h": 43,
+   "news_24h": 46,
    "news_usual": 24.0,
    "suggestions": [
     "dune part three",
     "dune part three trailer",
-    "dune part three soundtrack",
     "dune part three trailer reaction",
     "dune part three final trailer",
     "dune part three official trailer",
     "dune part three teaser",
-    "dune part three full movie"
+    "dune part three full movie",
+    "dune part three paul atreides vs. feyd-rautha"
    ],
    "in": [],
    "category": "Film",
@@ -793,7 +804,7 @@
     5885,
     4622
    ],
-   "news_24h": 18,
+   "news_24h": 19,
    "news_usual": 6.0,
    "suggestions": [
     "harry potter hbo series",
@@ -805,7 +816,9 @@
     "harry potter hbo series news",
     "harry potter hbo series update"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Film",
    "angles": [
     "Harry Potter HBO cast",
@@ -863,7 +876,7 @@
     1787,
     2283
    ],
-   "news_24h": 42,
+   "news_24h": 47,
    "news_usual": 35.0,
    "suggestions": [
     "christmas 2026",
@@ -933,7 +946,7 @@
     318,
     286
    ],
-   "news_24h": 5,
+   "news_24h": 9,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -1002,7 +1015,7 @@
     295,
     248
    ],
-   "news_24h": 8,
+   "news_24h": 7,
    "news_usual": 4.0,
    "suggestions": [
     "ces 2027"

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 19:08): 17 of 1,000 subscribers · 11,633 of 10 million Shorts views in 90 days · 3,195 views in the last 24 hours (about 110,982 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 19:45): 17 of 1,000 subscribers · 11,649 of 10 million Shorts views in 90 days · 3,248 views in the last 24 hours (about 110,982 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 19:08 (UK): 5 scheduled, 144 public, 20 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 15 scheduled |
-| Tue 27 Oct | 23 public, 4 scheduled | 8 | 1 | ✅ done |
+| Tue 27 Oct | 25 public, 2 scheduled | 8 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -77,6 +77,17 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-225** Science Explained #2: How gravity works: science explained 🌌 (rendering next)
+- **QD-226** harry potter cast: Harry Gilby (rendering next)
+- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB (rendering next)
+- **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺 (rendering next)
+- **QD-229** Why GTA 6 took over a decade to make 🎮 (rendering next)
+- **QD-230** Game Lore #3: GTA 6: the massive storage size revealed (rendering next)
+- **QD-231** Did You Know #5: Matthew Perry documentary: the cast secret (rendering next)
+- **QD-232** Match Day #3: Harry Kane wins Ballon d'Or 2026 ⚽ (rendering next)
 
 ## On the channel (latest first)
 

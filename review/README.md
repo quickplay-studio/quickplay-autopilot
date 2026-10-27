@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 10:44): 17 of 1,000 subscribers · 10,986 of 10 million Shorts views in 90 days · 4,073 views in the last 24 hours (about 110,989 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 11:42): 17 of 1,000 subscribers · 11,039 of 10 million Shorts views in 90 days · 4,197 views in the last 24 hours (about 110,988 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 11:23 (UK): 11 scheduled, 138 public, 25 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 15 scheduled |
-| Tue 27 Oct | 11 public, 13 scheduled | 4 | 1 | ⏳ 11 of 15 so far, 13 more scheduled |
+| Tue 27 Oct | 12 public, 12 scheduled | 4 | 1 | ⏳ 12 of 15 so far, 12 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -76,6 +76,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-217** Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇 (rendering next)
+- **QD-218** Song Secrets #4: Shakira & Burna Boy: 10 Weeks Atop Global Chart (rendering next)
 
 ## On the channel (latest first)
 

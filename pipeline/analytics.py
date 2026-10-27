@@ -5,7 +5,7 @@ Writes analytics/ (read by the daily writer and the reviews, and uploaded to the
                  YouTube average % viewed, engaged views and subscribers gained, views per hour since posting,
                  retention (share still watching 3 seconds in and at the end), views 1 to 72 hours after posting,
                  views against Shorts posted around the same time, top countries, how well the pictures fit their
-                 beats (pic_relevance, pic_found_share)
+                 beats (pic_relevance, pic_found_share; pic_low_share and pic_rescued, 27 October)
   daily.csv      one row per day and platform: views, followers, followers gained
   hourly.csv     views gained each hour (UK time), by platform and by category: when the audience watches
   curves/        each Short's views hour by hour for its first week (then every few hours to 30 days)
@@ -87,7 +87,7 @@ SERIES_COLUMNS = ("series_name", "series_no", "series_kind")
 
 # How well the pictures fit their beats (pictures.py, 24 October): the mean relevance (0 to 1) of the pictures used and the share
 # of beats where a picture was found. status/<id>.json keeps them in media; blank for a Short rendered before the ranker.
-PIC_COLUMNS = ("pic_relevance", "pic_found_share")
+PIC_COLUMNS = ("pic_relevance", "pic_found_share", "pic_low_share", "pic_rescued")
 
 
 def pic_fields(st):

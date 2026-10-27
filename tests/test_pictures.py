@@ -413,8 +413,9 @@ def fake_download(url, d, stem):
     DOWNLOADS.append(url)
     m = re.match(r"https://full/(\w+)-(\d+)\.jpg$", url)
     p = d / f"{stem}.png"; pic(m.group(1), int(m.group(2))).save(p) if m else pic("cat", 9).save(p); return p
-real = (FM.HERE, FM._get, FM.download)
+real = (FM.HERE, FM._get, FM.download, FM.rescue_cfg)
 FM.HERE = SCRATCH / "fm"; (FM.HERE / "media").mkdir(parents=True); FM._get, FM.download = fake_api, fake_download
+FM.rescue_cfg = lambda: dict(FM.RESCUE, on=False)          # the subject rescue has its own test (tests/test_pictures_rescue.py)
 os.environ["PIXABAY_API_KEY"] = "test"
 
 assert FM._words("pixabay", "video:crowd cheering") == "crowd cheering" and FM._words("nasa", "image:Apollo 11") == "Apollo 11"
@@ -474,16 +475,16 @@ assert FM.nasa("image", "steam deck", set())[0] == "https://images.example/a~lar
 assert FM.PICK.get("info") is None
 FM.PICK.clear(); assert FM._ranked([1, 2], ["a", "b"]) is None                                   # no beat text: nothing to rank by
 hush.__exit__(None, None, None)
-FM.HERE, FM._get, FM.download = real
+FM.HERE, FM._get, FM.download, FM.rescue_cfg = real
 print("5 fetch_media ok")
 
 
 # 6. analytics ---------------------------------------------------------------------------------------------------------------------
 sys.argv = ["analytics.py", "--fast"]
 import analytics as AN
-assert AN.PIC_COLUMNS == ("pic_relevance", "pic_found_share")
-assert AN.pic_fields({}) == {"pic_relevance": "", "pic_found_share": ""} == AN.pic_fields({"media": "x"})
-assert AN.pic_fields({"media": {"real_shots": 3, "pic_relevance": 0.81, "pic_found_share": 0.75}}) == {"pic_relevance": 0.81, "pic_found_share": 0.75}
+assert AN.PIC_COLUMNS == ("pic_relevance", "pic_found_share", "pic_low_share", "pic_rescued")
+assert AN.pic_fields({}) == {"pic_relevance": "", "pic_found_share": "", "pic_low_share": "", "pic_rescued": ""} == AN.pic_fields({"media": "x"})
+assert AN.pic_fields({"media": {"real_shots": 3, "pic_relevance": 0.81, "pic_found_share": 0.75}}) == {"pic_relevance": 0.81, "pic_found_share": 0.75, "pic_low_share": "", "pic_rescued": ""}
 root = SCRATCH / "an"; (root / "boards" / "done").mkdir(parents=True); (root / "status").mkdir(); (root / "analytics").mkdir()
 for sid, vid, media in (("T1", "vid1", {"real_shots": 1, "planned_real": 1, "pic_relevance": 0.812, "pic_found_share": 1.0}), ("T0", "vid0", {"real_shots": 1})):
     (root / "boards" / "done" / f"{sid}.json").write_text(json.dumps({"id": sid, "category": "Gaming", "meta": {"title": "t"}, "beats": [{"say": "Hook words", "shots": [{}]}]}))

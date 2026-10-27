@@ -61,6 +61,9 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   viral and viral_angle test the push and the angles.
 - Heat (27 October, heat.py): every verdict (drivers, round, evolve, changes, trend, alerts) separates a choice's effect from
   its topics' trend heat, so a Short riding (or missing) a trending story is not credited or blamed on the change.
+- Pictures (27 October, fetch_media.rescue): an off-topic or missing picture gets the beat's named subject's free Wikipedia
+  lead or Commons photo when it scores better; config.json "pictures"; columns pic_low_share, pic_rescued, drivers pic_band.
+  Never ceremony or broadcast footage (other creators' footage).
 
 ## Where to look
 - Claude Code on the Mac (25 October): docs/CLAUDE_CODE.md (setup, the three routine prompts, Sonnet and Haiku defaults in

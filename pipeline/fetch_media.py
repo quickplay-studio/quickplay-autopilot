@@ -28,6 +28,15 @@ label, the beat's "say" line, the board's subject), near-duplicates are dropped,
 the shot ("relevance", 0 to 1; shots from an explicit source such as commons:File: are scored too) and pictures_summary() hands
 status/<id>.json the mean and the share of beats where a picture was found. With no model (or any failure) every search keeps
 its own order, as it always did.
+
+Subject first (27 October, Charlie: "more relevant content within the Short", the winner with the trophy rather than generic
+stock): a shot from a search (commons-search:, pixabay:, openverse:) whose picture scores under config.json pictures.floor, or
+that found nothing, gets one more try with the beat's named subjects (subjects(): the shot's label, the capitalised names in
+the beat's line, the board's watch or viral topic). Their pictures are the free lead picture of each one's English Wikipedia
+article (wiki_leads: the subject itself, a trophy's own picture for "Ballon d'Or") and the best of their Commons photos,
+ranked against the same beat text; one is taken only when it scores pictures.margin above the picture it replaces (a stock
+video: video_margin). The shot is marked "rescued" and keeps the subject for extras(). Never broadcast or event footage: only
+freely licensed photos, credited like any other. pictures_summary adds pic_low_share and pic_rescued.
 usage: python fetch_media.py <board.json> <resolved.json>
 """
 import hashlib, html, json, os, pathlib, re, subprocess, sys, time, urllib.parse
@@ -378,9 +387,206 @@ def _relevance(f):
         return {}
 
 
+# ---- subject first (27 October) ----
+RESCUE = {"on": True, "floor": 0.25, "margin": 0.05, "video_margin": 0.10, "max_per_short": 6, "min_width": 1000}
+RESCUE_KINDS = ("commons-search", "pixabay", "openverse")
+VIDEO = {".mp4", ".mov", ".webm", ".m4v"}
+WIKI = "https://en.wikipedia.org/w/api.php"
+NOT_SUBJECT = re.compile(r"topics referred to|disambiguation|surname|given name|family name|list of", re.I)
+NOT_NAMES = frozenset("""a an the this that these those today tonight yesterday tomorrow now then here there day days week weeks
+month months year years ago i he she it we you they his her its our your their my me him us them who what when where why how
+which while and but or nor so if as at by for from in into of on to with without after before during since until about over
+under also just only even still yet every each all both most more many some any no not monday tuesday wednesday thursday
+friday saturday sunday january february march april may june july august september october november december follow
+subscribe comment breaking""".split())
+PARTICLES = frozenset("de di da del della van von der den le la du dos das bin al".split())
+_TOK = re.compile(r"[^\W\d_][\w'’\-]*|\d[\w'’.\-]*|[,;:()\"“”&.!?]")
+_POSS = re.compile(r"['’]s$")
+_LEADS = {}      # a name -> its Wikipedia article's free lead picture ("File:..") or None, kept for the run
+
+
+def rescue_cfg():
+    """config.json "pictures" over RESCUE's defaults."""
+    cfg = dict(RESCUE)
+    try:
+        got = json.loads((HERE.parent / "config.json").read_text()).get("pictures") or {}
+        cfg.update({k: got[k] for k in RESCUE if k in got})
+    except Exception as e:
+        print(f"  media: pictures settings not read: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+    return cfg
+
+
+def _capital(w):
+    return w[:1].isupper() or bool(re.match(r"[a-z]['’][A-Z]", w))      # "d'Or" belongs to "Ballon d'Or"
+
+
+def _names(text):
+    """[(name, lone_opener)]: the runs of capitalised words in `text` ("Alfredo Di Stéfano", "Ballon d'Or", "Virgil van Dijk"),
+    in order. A particle (de, van, d'..) joins a run only before another capital; a comma, bracket, quote or sentence end
+    breaks one, and so does a possessive ("Kane's"). Leading words such as The, Today or In are dropped. lone_opener: a single
+    word that opens a sentence ("Tied on two trophies are.."), which is usually not a name."""
+    toks = _TOK.findall(text or "")
+    found, run, st = [], [], {"start": True, "run_start": False}
+
+    def close(poss=False):
+        w, lead = list(run), st["run_start"]
+        run.clear()
+        while w and w[0].lower() in NOT_NAMES: w.pop(0); lead = False
+        while w and (w[-1].lower() in NOT_NAMES or w[-1].lower() in PARTICLES): w.pop()
+        if w:
+            w[-1] = _POSS.sub("", w[-1])
+            found.append((" ".join(w), lead and len(w) == 1 and not poss))
+
+    for i, t in enumerate(toks):
+        if t in ".!?":
+            if run: close()
+            st["start"] = True; continue
+        if t in ",;:()\"“”&":
+            if run: close()
+            continue
+        nxt = toks[i + 1] if i + 1 < len(toks) else ""
+        if not t[0].isdigit() and _capital(t):
+            if not run: st["run_start"] = st["start"]
+            run.append(t)
+            if _POSS.search(t): close(poss=True)
+        elif run and t.lower() in PARTICLES and nxt and not nxt[0].isdigit() and _capital(nxt):
+            run.append(t)
+        elif run: close()
+        st["start"] = False
+    if run: close()
+    return found
+
+
+def subjects(beat, shot, sb=None, cap=3):
+    """The beat's named subjects, most certain first: the shot's label, the capitalised name in its search words, the names in
+    the beat's line (several words before one), the board's watch or viral topic. Single words that are part of a longer name
+    are left out. At most `cap`."""
+    sb = sb or {}
+    lab = shot.get("label")
+    lab = lab.get("t") if isinstance(lab, dict) else lab
+    first = []
+    if isinstance(lab, str) and lab.strip():
+        lab = lab.strip()
+        first += [lab] if lab[:1].isupper() else [n for n, _ in _names(lab)]
+    kind, _, rest = str(shot.get("from") or shot.get("src") or "").partition(":")
+    if kind == "commons-search": first += [n for n, _ in _names(rest)]
+    found = _names(beat.get("say_en") or beat.get("say") or "")
+    multi = [n for n, _ in found if " " in n]
+    single = [n for n, lone in found if " " not in n and not lone]
+    topics = [sb[k].strip() for k in ("watch", "viral") if isinstance(sb.get(k), str) and sb[k].strip().lower() not in ("", "yes", "no")]
+    out, seen = [], []
+    for n in first + multi + topics + single:
+        f = _fold(n).strip()
+        if len(f) < 2 or f in seen or f in NOT_NAMES: continue
+        if " " not in f and any(f in o.split() for o in seen): continue
+        seen.append(f); out.append(n)
+    return out[:cap]
+
+
+def wiki_leads(names, min_width=1000):
+    """The free lead pictures of the names' English Wikipedia articles (one call for all the names, redirects followed), as
+    Commons candidates in commons_candidates' shape, with "_name". An article that is missing, has no free picture, is a
+    disambiguation, name or list page, or is political is left out, and so is a picture narrower than min_width. [] on any
+    failure."""
+    names = [n for n in names if n]
+    try:
+        need = [n for n in names if n not in _LEADS]
+        if need:
+            q = {"action": "query", "prop": "pageimages|description", "piprop": "name", "pilicense": "free", "redirects": 1,
+                 "formatversion": 2, "format": "json", "titles": "|".join(need)}
+            js = _get(WIKI, params=q).json().get("query") or {}
+            hop = {m["from"]: m["to"] for k in ("normalized", "redirects") for m in js.get(k) or []}
+            pages = {p.get("title"): p for p in js.get("pages") or []}
+            for n in need:
+                t = n
+                for _ in range(3): t = hop.get(t, t)
+                p = pages.get(t) or {}
+                img, desc = p.get("pageimage"), p.get("description") or ""
+                ok = img and not p.get("missing") and not NOT_SUBJECT.search(desc) and not any(POLITICAL.search(x or "") for x in (desc, img, t))
+                _LEADS[n] = "File:" + img.replace("_", " ") if ok else None
+        files = {}
+        for n in names:
+            if _LEADS.get(n): files.setdefault(_LEADS[n], n)
+        if not files: return []
+        q = {"action": "query", "titles": "|".join(files), "prop": "imageinfo", "iiprop": "size|url", "iiurlwidth": 330,
+             "formatversion": 2, "format": "json"}
+        js = _get(COMMONS, params=q).json().get("query") or {}
+        hop = {m["from"]: m["to"] for m in js.get("normalized") or []}
+        pages = {p.get("title"): p for p in js.get("pages") or []}
+        out = []
+        for f, n in files.items():
+            p = pages.get(hop.get(f, f)) or {}
+            if p.get("missing") or (p.get("imageinfo") or [{}])[0].get("width", 0) < min_width: continue
+            out.append({**p, "_name": n})
+        return out
+    except Exception as e:
+        print(f"  media: Wikipedia lead pictures failed: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+        return []
+
+
+def _title_of(source):
+    """"File:Some photo.jpg" for a Commons description page url, else None."""
+    m = re.search(r"/wiki/(File:[^?#]+)", str(source or ""))
+    return urllib.parse.unquote(m.group(1)).replace("_", " ") if m else None
+
+
+def rescue(shot, beat, sb, d, stem, used_titles, cfg):
+    """Give a shot whose picture is off the beat (relevance under cfg floor) or missing ("_failed") a picture of the beat's
+    named subject: their Wikipedia lead pictures first, then the top 3 Commons photos of each name, not already in the Short,
+    ranked against the beat's text (PICK["ctx"]). Taken only when it beats the current score by cfg margin (video_margin for a
+    stock video); a missing shot with no ranking takes the first (a lead picture). The shot gets the new src, credit, source,
+    relevance, "rescued" and "subject". True when it was replaced. Never raises: on any failure the shot stays as it was."""
+    try:
+        kind = str(shot.get("from") or "").partition(":")[0]
+        if not cfg.get("on") or kind not in RESCUE_KINDS: return False
+        failed = "_failed" in shot
+        cur = 0.0 if failed else shot.get("relevance")
+        if not isinstance(cur, (int, float)) or cur >= cfg["floor"]: return False
+        names = subjects(beat, shot, sb)
+        if not names: return False
+        pool, seen = [], set(used_titles)
+        for p in wiki_leads(names, cfg["min_width"]) + [dict(c, _name=n) for n in names for c in _safe_cands(n)[:3]]:
+            if p.get("title") and p["title"] not in seen:
+                seen.add(p["title"]); pool.append(p)
+        pool = pool[:PX.TOP_K]
+        if not pool: return False
+        order = _ranked(pool, [((p.get("imageinfo") or [{}])[0]).get("thumburl") for p in pool])
+        best, info = None, None
+        if order is not None:
+            best, info = next(((p, i) for p, i in order if i and not PX.is_taken(i.get("hash"))), (None, None))
+        if best is None:
+            if not failed: return False
+            best = pool[0]
+        elif info["rel"] < cur + (cfg["video_margin"] if pathlib.Path(str(shot.get("src", ""))).suffix.lower() in VIDEO and not failed else cfg["margin"]):
+            return False
+        url, credit, source = commons_file(best["title"])
+        f = download(url, d, stem + hashlib.sha1(url.encode()).hexdigest()[:8])
+        if not info:
+            try: info = PX.score_file(f, PICK.get("ctx"))
+            except Exception: info = None
+        old = shot.get("src")
+        for k in ("cuts", "start", "clip_end", "dark", "_failed", "relevance"): shot.pop(k, None)
+        shot.update(src=os.path.relpath(f, HERE), credit=credit, source=source, rescued=True, subject=best["_name"])
+        if info:
+            PX.commit(info); shot["relevance"] = info["rel"]
+        used_titles.add(best["title"])
+        print(f"  media: {old} ({'not found' if failed else f'relevance {cur:.2f}'}) -> {best['title']} ({best['_name']})", file=sys.stderr)
+        return True
+    except Exception as e:
+        print(f"  media: subject picture for {shot.get('from')} failed: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
+        return False
+
+
+def _safe_cands(name):
+    try: return commons_candidates(name)
+    except Exception as e:
+        print(f"  media: Commons photos of {name} failed: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr); return []
+
+
 def resolve(sb):
     sid = sb["id"]; d = HERE / "media" / sid; d.mkdir(parents=True, exist_ok=True)
     used, cache, n = set(), {}, 0
+    cfg, used_titles, fixes = rescue_cfg(), set(), 0          # subject first: the pictures settings, the Commons files in this Short, shots replaced
     _RANKED.clear()
     try: PX.begin(sb)                           # a new Short for the picture ranker: the board's subject and category, a clean slate
     except Exception as e: print(f"  media: picture ranking not started: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)
@@ -425,9 +631,14 @@ def resolve(sb):
                 res = {"src": os.path.relpath(f, HERE), "credit": credit, "source": source, **_relevance(f)}
                 if kind not in ("pixabay", "gameplay"): cache[src] = res   # same image reused on purpose; stock never repeats
                 shot.update(res)
+                if _title_of(source): used_titles.add(_title_of(source))
             except Exception as e:
                 print(f"  media: {src} failed: {e}", file=sys.stderr)
                 shot["_failed"] = str(e)
+            if kind in RESCUE_KINDS and fixes < cfg["max_per_short"] and rescue(shot, beat, sb, d, f"{n:02d}r_", used_titles, cfg):
+                fixes += 1; n += 1
+                if kind != "pixabay":
+                    cache[src] = {k: shot[k] for k in ("src", "credit", "source", "relevance", "rescued", "subject") if k in shot}
     # drop shots that could not be fetched. A beat left with none borrows the nearest beat's picture (with a different
     # move, so it doesn't look frozen) instead of failing the whole Short; run_board flags it so a person checks it.
     goods = [[s for s in beat.get("shots") or [] if "_failed" not in s] for beat in sb["beats"]]
@@ -446,7 +657,7 @@ def resolve(sb):
         for k in ("w", "at", "tin"):
             if k in mine: donor[k] = mine[k]
             else: donor.pop(k, None)
-        donor.pop("label", None); donor.pop("relevance", None)      # its score was for another beat's words
+        donor.pop("label", None); donor.pop("relevance", None); donor.pop("rescued", None)      # its score was for another beat's words
         if donor.get("start") is not None: donor["start"] = float(donor["start"]) + 2.0
         beat["shots"] = [donor]
         notes.append(f"beat {bi + 1} reused a nearby picture ({mine.get('src', '?')}: {mine.get('_failed', 'not found')[:80]})")
@@ -489,6 +700,7 @@ def extras(sb, per=2, cap=18, seconds=80):
         add = []
         for shot in list(bt.get("shots") or []):
             kind, _, words = str(shot.get("from", "")).partition(":")
+            if shot.get("rescued") and shot.get("subject"): kind, words = "commons-search", shot["subject"]   # more photos of the subject it was given
             if kind != "commons-search" or shot.get("extra") or added >= cap or time.time() > stop: continue
             try: cands = commons_candidates(words)
             except Exception as e:
@@ -517,14 +729,20 @@ def extras(sb, per=2, cap=18, seconds=80):
 def pictures_summary(sb):
     """What status/<id>.json keeps of the picture ranking (media.*, then shorts.csv by analytics.py): pic_relevance, the mean
     relevance (0 to 1) of the pictures used, extras included, and pic_found_share, the share of the beats that asked for a
-    picture where one was found; "" when there was nothing to score (no model, or no stills). Plus the ranker's own counts
-    (pictures.summary). Never raises: a Short is never held up by its own statistics."""
+    picture where one was found; "" when there was nothing to score (no model, or no stills). pic_low_share, the share of the
+    scored pictures still under config.json pictures.floor (off the beat), and pic_rescued, the shots given their subject's
+    picture (rescue). Plus the ranker's own counts (pictures.summary). Never raises: a Short is never held up by its own
+    statistics."""
     out = {}
     try:
         found = sb.pop("_pic_found", None)
         if found and found[1]: out["pic_found_share"] = round(found[0] / found[1], 2)
-        rel = [sh["relevance"] for bt in sb.get("beats") or [] for sh in bt.get("shots") or [] if isinstance(sh.get("relevance"), (int, float))]
-        if rel: out["pic_relevance"] = round(sum(rel) / len(rel), 3)
+        shots = [sh for bt in sb.get("beats") or [] for sh in bt.get("shots") or []]
+        rel = [sh["relevance"] for sh in shots if isinstance(sh.get("relevance"), (int, float))]
+        if rel:
+            out["pic_relevance"] = round(sum(rel) / len(rel), 3)
+            out["pic_low_share"] = round(sum(r < rescue_cfg()["floor"] for r in rel) / len(rel), 2)
+        out["pic_rescued"] = sum(1 for sh in shots if sh.get("rescued") and not sh.get("extra"))
         out.update(PX.summary())
     except Exception as e:
         print(f"  media: picture summary failed: {type(e).__name__}: {str(e)[:100]}", file=sys.stderr)

@@ -97,13 +97,14 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
             ("fx_energy", "Camera energy test"), ("fx_grade", "Colour grade test"), ("fx_opening", "Opening test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
             ("title_answer", "Title answer"), ("hook_named", "Hook names the lead"), ("sponsor", "Carries a campaign (sound or hashtag)"),
-            ("viral", "Viral topic push"), ("viral_angle", "Viral topic angle"), ("heat_band", "Topic heat")]
+            ("viral", "Viral topic push"), ("viral_angle", "Viral topic angle"), ("heat_band", "Topic heat"),
+            ("pic_band", "Picture relevance")]
 # Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor", "viral", "viral_angle", "heat_band"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor", "viral", "heat_band"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor", "viral", "viral_angle", "heat_band", "pic_band"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor", "viral", "heat_band", "pic_band"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
           "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor", "viral", "viral_angle")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
 # The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
@@ -194,6 +195,8 @@ def features(r):
     out["late"] = r.get("late") or ""          # "late" or "on time" (freshness.py): judged for the late-upload rule
     out["explore"] = r.get("explore") or ""    # "yes" for the day's exploration Shorts (writer.py), "no" for the rest
     out["heat_band"] = r.get("heat_band") or ""   # hot, warm or cold (heat.py, 27 October): how trending the topic was
+    pr = _f(r.get("pic_relevance"))                # how well the pictures fit their beats (fetch_media rescue, 27 October)
+    out["pic_band"] = "" if pr is None else "on topic" if pr >= 0.35 else "loose" if pr >= 0.2 else "off topic"
     return out
 
 

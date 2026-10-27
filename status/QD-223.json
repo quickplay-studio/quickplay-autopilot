@@ -1,0 +1,175 @@
+{
+ "id": "QD-223",
+ "board": "boards/queue/QD-223.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T23:30:00Z",
+ "rendered": "2026-10-27T14:08:41.666974+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Screen Time #4: Harry Potter: the character finally being cast",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (commons-search:Harry Gilby: no Commons image named 'Harry Gilby')",
+  "beat 6 reused a nearby picture (commons-search:Jasper Talbot: no Commons image named 'Jasper Talbot')",
+  "beat 7 reused a nearby picture (pixabay:video:magic wand sparks: no usable Pixabay video for 'magic wand sparks')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 6,
+  "pic_found_share": 0.62,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 36.1,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 370.3,
+   "contrast": 0.262,
+   "face_area": 0.0,
+   "text_area": 0.1113,
+   "caption_contrast": 14.32,
+   "by_frame": {
+    "sharpness": [
+     378.5,
+     385.5,
+     370.0,
+     347.3
+    ],
+    "contrast": [
+     0.262,
+     0.262,
+     0.262,
+     0.262
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1077,
+     0.116,
+     0.1131,
+     0.1082
+    ],
+    "caption_contrast": [
+     14.05,
+     19.76,
+     14.44,
+     14.19
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.91,
+   "none",
+   2
+  ],
+  [
+   4.91,
+   9.05,
+   "none",
+   3
+  ],
+  [
+   9.05,
+   12.2,
+   "none",
+   2
+  ],
+  [
+   12.2,
+   16.54,
+   "none",
+   3
+  ],
+  [
+   16.54,
+   20.57,
+   "none",
+   3
+  ],
+  [
+   20.57,
+   25.03,
+   "none",
+   3
+  ],
+  [
+   25.03,
+   29.72,
+   "none",
+   3
+  ],
+  [
+   29.72,
+   36.11,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "8852",
+   "q": "old library books",
+   "t0": 0.0,
+   "t1": 36.11
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T14:24:11Z",
+ "video": "--8jQ1spwnE",
+ "url": "https://youtube.com/shorts/--8jQ1spwnE",
+ "publish_at": "2026-10-27T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T23:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

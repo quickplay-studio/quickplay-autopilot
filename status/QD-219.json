@@ -1,0 +1,161 @@
+{
+ "id": "QD-219",
+ "board": "boards/queue/QD-219.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T01:30:00Z",
+ "rendered": "2026-10-27T14:08:19.211995+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Film Explained #1: How Lord of the Rings Made Hobbits Small",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Jim Rygiel: no Commons image named 'Jim Rygiel')"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 10,
+  "pic_found_share": 0.86,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 37.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 19.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 495.1,
+   "contrast": 0.246,
+   "face_area": 0.1824,
+   "text_area": 0.0466,
+   "caption_contrast": 4.11,
+   "by_frame": {
+    "sharpness": [
+     526.3,
+     575.5,
+     569.4,
+     309.4
+    ],
+    "contrast": [
+     0.248,
+     0.248,
+     0.248,
+     0.237
+    ],
+    "face_area": [
+     0.2147,
+     0.2055,
+     0.207,
+     0.1024
+    ],
+    "text_area": [
+     0.051,
+     0.0492,
+     0.0502,
+     0.0361
+    ],
+    "caption_contrast": [
+     4.08,
+     4.14,
+     3.76,
+     12.85
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.33,
+   "none",
+   2
+  ],
+  [
+   4.33,
+   8.85,
+   "none",
+   3
+  ],
+  [
+   8.85,
+   14.38,
+   "none",
+   4
+  ],
+  [
+   14.38,
+   18.89,
+   "none",
+   3
+  ],
+  [
+   18.89,
+   26.35,
+   "none",
+   5
+  ],
+  [
+   26.35,
+   32.05,
+   "none",
+   4
+  ],
+  [
+   32.05,
+   37.04,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T14:23:58Z",
+ "video": "RyIxr9lB7BM",
+ "url": "https://youtube.com/shorts/RyIxr9lB7BM",
+ "publish_at": "2026-10-28T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-219"
+}

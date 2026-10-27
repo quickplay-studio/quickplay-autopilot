@@ -1,0 +1,166 @@
+{
+ "id": "QD-221",
+ "board": "boards/queue/QD-221.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T19:30:00Z",
+ "rendered": "2026-10-27T14:08:08.681610+00:00",
+ "channel": "irl",
+ "title": "Did You Know #3: Eric Bauza: the voice legend we just lost 🎙️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "try-to-catch-me",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "isabella",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 45.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 22.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 748.6,
+   "contrast": 0.16,
+   "face_area": 0.2148,
+   "text_area": 0.1898,
+   "caption_contrast": 16.98,
+   "by_frame": {
+    "sharpness": [
+     556.8,
+     820.6,
+     812.3,
+     805.0
+    ],
+    "contrast": [
+     0.143,
+     0.165,
+     0.166,
+     0.165
+    ],
+    "face_area": [
+     0.2669,
+     0.0,
+     0.2988,
+     0.2934
+    ],
+    "text_area": [
+     0.1485,
+     0.2035,
+     0.2035,
+     0.2035
+    ],
+    "caption_contrast": [
+     16.97,
+     16.94,
+     16.99,
+     17.02
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.99,
+   "title",
+   0
+  ],
+  [
+   3.99,
+   8.84,
+   "none",
+   1
+  ],
+  [
+   8.84,
+   12.96,
+   "none",
+   2
+  ],
+  [
+   12.96,
+   18.41,
+   "none",
+   2
+  ],
+  [
+   18.41,
+   24.41,
+   "none",
+   1
+  ],
+  [
+   24.41,
+   30.98,
+   "none",
+   2
+  ],
+  [
+   30.98,
+   41.81,
+   "none",
+   2
+  ],
+  [
+   41.81,
+   45.13,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "27465",
+   "q": "microphone in studio",
+   "t0": 0.0,
+   "t1": 15.44
+  },
+  {
+   "p": "pixabay",
+   "id": "31904",
+   "q": "cartoon drawing animation",
+   "t0": 14.84,
+   "t1": 30.29
+  },
+  {
+   "p": "pixabay",
+   "id": "122743",
+   "q": "microphone in studio",
+   "t0": 29.69,
+   "t1": 45.13
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T14:24:04Z",
+ "video": "LPlF850wYnI",
+ "url": "https://youtube.com/shorts/LPlF850wYnI",
+ "publish_at": "2026-10-27T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

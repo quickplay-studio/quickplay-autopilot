@@ -1,0 +1,183 @@
+{
+ "id": "QD-222",
+ "board": "boards/queue/QD-222.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T15:30:00Z",
+ "rendered": "2026-10-27T14:09:11.148334+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Did You Know #4: Walter Koenig: the Star Trek legend's final honour",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)",
+  "pixabay:232169 skipped: nearly black (brightness 0.02)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (page:https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90: space.com is a news outlet: its pictures are licensed, not ours to use)",
+  "beat 3 reused a nearby picture (commons-search:Pavel Chekov: no Commons image named 'Pavel Chekov')",
+  "beat 7 reused a nearby picture (pixabay:video:galaxy stars nebula: no usable Pixabay video for 'galaxy stars nebula')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 7,
+  "extra_photos": 14,
+  "pic_found_share": 0.62,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "city-of-the-wolf",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 43.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 533.2,
+   "contrast": 0.221,
+   "face_area": 0.2158,
+   "text_area": 0.0442,
+   "caption_contrast": 4.67,
+   "by_frame": {
+    "sharpness": [
+     522.6,
+     574.3,
+     579.6,
+     456.3
+    ],
+    "contrast": [
+     0.222,
+     0.222,
+     0.221,
+     0.22
+    ],
+    "face_area": [
+     0.2193,
+     0.2147,
+     0.2162,
+     0.2131
+    ],
+    "text_area": [
+     0.0478,
+     0.0474,
+     0.0471,
+     0.0344
+    ],
+    "caption_contrast": [
+     4.54,
+     4.5,
+     4.79,
+     4.87
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.32,
+   "none",
+   2
+  ],
+  [
+   4.32,
+   10.24,
+   "none",
+   4
+  ],
+  [
+   10.24,
+   15.3,
+   "none",
+   3
+  ],
+  [
+   15.3,
+   21.48,
+   "none",
+   4
+  ],
+  [
+   21.48,
+   26.73,
+   "none",
+   4
+  ],
+  [
+   26.73,
+   31.86,
+   "none",
+   3
+  ],
+  [
+   31.86,
+   38.15,
+   "none",
+   4
+  ],
+  [
+   38.15,
+   43.13,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "35392",
+   "q": "city lights night",
+   "t0": 0.0,
+   "t1": 21.86
+  },
+  {
+   "p": "pixabay",
+   "id": "190486",
+   "q": "city lights night",
+   "t0": 21.26,
+   "t1": 43.13
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T14:24:07Z",
+ "video": "Qm_xoBEbEQc",
+ "url": "https://youtube.com/shorts/Qm_xoBEbEQc",
+ "publish_at": "2026-10-27T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T15:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

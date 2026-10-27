@@ -1,0 +1,150 @@
+{
+ "id": "QD-220",
+ "board": "boards/queue/QD-220.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T12:00:00Z",
+ "rendered": "2026-10-27T14:08:35.479668+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Level Up #2: Top 5 best-selling games ever 🎮",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "the-bombs",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "isabella",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 32.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 10.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 567.5,
+   "contrast": 0.138,
+   "face_area": 0.0,
+   "text_area": 0.1646,
+   "caption_contrast": 17.33,
+   "by_frame": {
+    "sharpness": [
+     489.3,
+     564.0,
+     564.2,
+     652.7
+    ],
+    "contrast": [
+     0.132,
+     0.139,
+     0.139,
+     0.143
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1179,
+     0.1778,
+     0.1794,
+     0.1832
+    ],
+    "caption_contrast": [
+     17.53,
+     17.23,
+     17.4,
+     17.25
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.22,
+   "title",
+   0
+  ],
+  [
+   4.22,
+   9.97,
+   "none",
+   1
+  ],
+  [
+   9.97,
+   13.85,
+   "none",
+   1
+  ],
+  [
+   13.85,
+   18.31,
+   "none",
+   1
+  ],
+  [
+   18.31,
+   23.74,
+   "none",
+   1
+  ],
+  [
+   23.74,
+   32.27,
+   "bars",
+   2
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T14:24:01Z",
+ "video": "dunUl0XOMVA",
+ "url": "https://youtube.com/shorts/dunUl0XOMVA",
+ "publish_at": "2026-10-28T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T12:00:00Z",
+  "upload_status": "uploaded"
+ }
+}

@@ -14,7 +14,7 @@
    "used": "06:00 to 12:00"
   }
  },
- "title": "Halloween: The Game: the country that said no 🎃",
+ "title": "Halloween: The Game: the ban you didn't expect 🎃",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -149,7 +149,14 @@
  "social_release": "social-QD-181",
  "engage": {
   "comment": "UgxmYiZW1mcyGjAGc214AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Halloween: The Game: the country that said no 🎃",
+   "to": "Halloween: The Game: the ban you didn't expect 🎃",
+   "at": "2026-10-27T10:24+00:00",
+   "views_an_hour": 0.2,
+   "typical": 0.6
+  }
  },
  "instagram": {
   "media": "18372929002245779",

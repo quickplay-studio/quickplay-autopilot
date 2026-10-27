@@ -41,26 +41,26 @@
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Quiz: Kane and who else? Name every men's Ballon d'Or winner",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
+     "title": "How 'anti-superstar' Kane defied doubters to become world's best",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Alexia Putellas a worthy Ballon d’Or winner but the limited shortlist illustrates flaws",
+     "url": "https://www.theguardian.com/football/2026/oct/27/alexia-putellas-ballon-dor-winner-awards-long-way-before-being-equal-moving-the-goalposts",
      "published": "2026-10-27"
     },
     {
      "outlet": "BBC Sport",
-     "title": "Kane's rise from childhood keeper to the best in the world",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cx2ln5n7yqdo?at_medium=RSS&at_campaign=rss",
+     "title": "Quiz: Kane and who else? Name every men's Ballon d'Or winner",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-27"
     },
     {
      "outlet": "Sky Sports",
      "title": "'This one's for all of us' - Kane thanks fans after Ballon d'Or win",
      "url": "https://www.skysports.com/watch/video/13604287/exclusive-harry-kane-talks-to-sky-sports-after-winning-ballondor",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Kane’s Ballon d’Or triumph a glorious riposte to celebrity fawning of ceremony | Barney Ronay",
-     "url": "https://www.theguardian.com/football/2026/oct/27/harry-kane-ballon-dor-triumph-ceremony-barney-ronay",
      "published": "2026-10-27"
     }
    ]
@@ -103,6 +103,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
    "articles": [
     {
+     "outlet": "PC Gamer",
+     "title": "Bassist plays Halloween gig wearing a Steam Frame: 'Interestingly, only one guy asked me about the Frame'",
+     "url": "https://www.pcgamer.com/hardware/vr-hardware/bassist-plays-halloween-gig-wearing-a-steam-frame-interestingly-only-one-guy-asked-me-about-the-frame/",
+     "published": "2026-10-27"
+    },
+    {
      "outlet": "Engadget",
      "title": "Slate teams up with Smarties to add candy colors to its EV trucks",
      "url": "https://www.engadget.com/2295050/slate-ev-smarties-candy-color-wraps/",
@@ -115,22 +121,29 @@
      "published": "2026-10-27"
     },
     {
-     "outlet": "Polygon",
-     "title": "9 Spooky 'Far Side' Comics That Are Perfect to Read Before Halloween",
-     "url": "https://www.polygon.com/best-far-side-halloween-classic-monsters/",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "What to play this Halloween, plus last-minute costume ideas and spooky movie recommendations",
-     "url": "https://www.pcgamer.com/games/horror/2026-halloween-horror-gaming-hub-recommendations/",
+     "outlet": "Space.com",
+     "title": "Stuck for a Halloween outfit? Set phasers to stunning with the best Star Trek costumes",
+     "url": "https://www.space.com/entertainment/space-toys-lego/stuck-for-a-halloween-outfit-set-phasers-to-stunning-with-the-best-star-trek-costumes",
      "published": "2026-10-26"
     }
    ]
   },
   {
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (surging, 4 days to go)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Google’s top Halloween costumes for 2026 include ‘Obsession’",
+     "url": "https://www.usatoday.com/story/money/2026/10/14/google-trending-halloween-costumes/92254505007/",
+     "published": "2026-10-14"
+    }
+   ]
+  },
+  {
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/GTA_6",
    "articles": [
     {
@@ -155,15 +168,9 @@
   },
   {
    "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Gas_Price",
    "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "HSBC profits surge 32%, sparking fresh calls for bank taxes in the budget – business live",
-     "url": "https://www.theguardian.com/business/live/2026/oct/27/hsbc-shareholders-profits-surge-32-percent-bank-tax-budget-stock-markets-cost-cutting-latest-news-updates",
-     "published": "2026-10-27"
-    },
     {
      "outlet": "The Hollywood Reporter",
      "title": "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
@@ -186,7 +193,7 @@
   },
   {
    "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
    "wikipedia": null,
    "articles": [
     {
@@ -223,6 +230,31 @@
    ]
   },
   {
+   "topic": "Harry Potter HBO series",
+   "signal": "watchlist: Harry Potter HBO series (surging, 59 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_(HBO_TV_series)",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character’s Screen Debut",
+     "url": "https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "HBO’s ‘Harry Potter and the Philosopher’s Stone’ Casts James and Lily Potter, Charlie Weasley",
+     "url": "https://www.hollywoodreporter.com/tv/tv-news/hbo-harry-potter-philosophers-stone-cast-james-lily-potter-1236740639/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "‘Harry Potter’ Series Finds Its Lily & James Potter In Jasper Talbot & Hannah Chinn; Harry Gilby To Play Charlie Weasley",
+     "url": "https://deadline.com/2026/10/harry-potter-series-lily-james-potter-charlie-weasley-1237205917/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
    "topic": "Thin Ice by Megan Thee Stallion",
    "signal": "Apple Music US: new in the top 25",
    "wikipedia": null,
@@ -236,104 +268,136 @@
    ]
   },
   {
-   "topic": "tarr steps",
+   "topic": "aaron danks",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tarr_Steps",
+   "wikipedia": "https://en.wikipedia.org/wiki/Aaron_Danks",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "How to make mushroom stroganoff – recipe | Felicity Cloake's Masterclass",
-     "url": "https://www.theguardian.com/food/2026/oct/25/how-to-make-mushroom-stroganoff-recipe",
-     "published": "2026-10-25"
+     "outlet": "The Hollywood Reporter",
+     "title": "Aaron Sorkin After ‘The Social Reckoning’: “I’m Very Worried That the Parts of Directing That I’m Not Good at Are Those Parts That You Can’t",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/aaron-sorkin-social-reckoning-directing-doubts-few-good-men-1236740233/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Nix's 62-yard touchdown & 'vintage Rodgers' - NFL best plays",
+     "url": "https://www.bbc.co.uk/sport/american-football/videos/crp3g25vv4qyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "venus williams",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Venus_Williams",
+   "topic": "mitchell lawrie luke littler netflix darts",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Lawrie, 15, eyes £501,000 live TV win over Littler",
+     "url": "https://www.bbc.co.uk/sport/darts/articles/cq33xj8yyd5do?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "john healey state pension budget",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "TV tonight: incredible photos of the ‘Black Is Beautiful’ movement",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/27/tv-tonight-incredible-photos-of-the-black-is-beautiful-movement",
+     "title": "Healey is expected to shield low-income pensioners from income tax – but how will it work?",
+     "url": "https://www.theguardian.com/money/2026/oct/26/healey-pensioners-low-income-tax-budget-how-will-it-work",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "topic": "jasper talbot",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jasper_Talbert",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character’s Screen Debut",
+     "url": "https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/",
      "published": "2026-10-27"
     },
     {
-     "outlet": "Sky Sports",
-     "title": "Thunder's Williams requires surgery for broken leg and dislocated ankle",
-     "url": "https://www.skysports.com/basketball/news/12040/13604207/jalen-williams-oklahoma-city-thunder-star-requires-surgery-for-broken-leg-and-dislocated-ankle",
-     "published": "2026-10-26"
+     "outlet": "Deadline",
+     "title": "‘Harry Potter’ Series Finds Its Lily & James Potter In Jasper Talbot & Hannah Chinn; Harry Gilby To Play Charlie Weasley",
+     "url": "https://deadline.com/2026/10/harry-potter-series-lily-james-potter-charlie-weasley-1237205917/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "uk budget first time buyers scheme",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "‘No one saves the planet if it hits their pocket’: UK heat pump installers fear planned subsidy cuts",
+     "url": "https://www.theguardian.com/environment/2026/oct/27/heat-pump-installers-fear-planned-subsidy-cuts-uk-budget",
+     "published": "2026-10-27"
     },
     {
      "outlet": "BBC",
-     "title": "Man Utd lacked intensity & fight - Alderweireld",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c6wyrg2vwjmgo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
+     "title": "Earnings limit of up to £140K for first-time buyers loan scheme",
+     "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o?amp;at_campaign=rss",
+     "published": "2026-10-23"
+    }
+   ]
+  },
+  {
+   "topic": "denaturalization",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Denaturalization",
+   "articles": [
+    {
+     "outlet": "CNN",
+     "title": "Why a Minnesota denaturalization case could have bigger implications",
+     "url": "https://www.cnn.com/2026/10/27/us/minnesota-denaturalization-salah-osman-ahmed",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "kathy ireland",
+   "signal": "Google Trends US 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Kathy_Ireland",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Ringrose set to miss Ireland's November games",
+     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/cmp3g274k6z5o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "‘The view from the Mournes was CS Lewis’s idea of Narnia’: how Northern Ireland inspired a magical kingdom",
+     "url": "https://www.theguardian.com/travel/2026/oct/27/cs-lewis-narnia-inspiration-northern-ireland-belfast",
+     "published": "2026-10-27"
     },
     {
      "outlet": "BBC Sport",
-     "title": "How Liverpool's attack impressed against Brighton",
-     "url": "https://www.bbc.co.uk/sport/football/videos/ckq6nvp2ldz5o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
+     "title": "England-Republic of Ireland U15 World Cup game ends over alleged racism",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cmn8wzldd7q0o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "richard hammond new home wales",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": null,
+   "topic": "ozzy osbourne",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Ozzy_Osbourne",
    "articles": [
     {
      "outlet": "BBC",
-     "title": "Richard Hammond to 'find a way' to share mansion with bats after renovation plans paused",
-     "url": "https://www.bbc.co.uk/news/articles/cj4j5zn5n75o",
-     "published": "2026-09-05"
-    }
-   ]
-  },
-  {
-   "topic": "black flag resynced",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Black_Flag_Resynced",
-   "articles": [
-    {
-     "outlet": "Eurogamer",
-     "title": "Assassin's Creed Black Flag Resynced's final major update adds long-awaited New Game Plus, new Nightmare difficulty and much more",
-     "url": "https://www.eurogamer.net/assassins-creed-black-flag-resynced-new-game-plus-final-update",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Assassin's Creed Black Flag Resynced Final Major Content Update Coming This Week",
-     "url": "https://www.ign.com/articles/assassins-creed-black-flag-resynced-final-major-content-update-coming-this-week",
+     "title": "Sharon Osbourne: 'I visit Ozzy's grave every day'",
+     "url": "https://www.bbc.co.uk/news/articles/c6g7xn8p2n0ro?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "daylight savings 2026 ends",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "When will daylight savings time 2026 end? Mississippi wants it all year",
-     "url": "https://www.usatoday.com/story/news/2026/10/26/daylight-savings-time-ends-soon-mississippi-fall-back-dst-time-change-clocks/92402182007/",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "elland road",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Elland_Road",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Behind the scenes as Leeds’ Elland Road rebuild ramps up",
-     "url": "https://www.nytimes.com/athletic/7543299/2026/08/29/leeds-united-elland-road-rebuild/",
-     "published": "2026-08-28"
     }
    ]
   },
@@ -363,8 +427,8 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘I’m still innocent,’ says Comey as Trump calls him a ‘dirty cop’ – US politics live",
-     "url": "https://www.theguardian.com/us-news/live/2026/oct/27/comey-trump-rubio-texas-vance-israel-midterms-politics-latest-news-updates",
+     "title": "Reader Q&A: After Lula’s sensational victory in Brazil’s presidential election, post your questions for the Guardian’s Latin America corresp",
+     "url": "https://www.theguardian.com/world/live/2026/oct/27/brazil-election-reader-questions-lula-bolsonaro",
      "published": "2026-10-27"
     }
    ]
@@ -374,6 +438,12 @@
    "signal": "Wikipedia 276,569 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": [
+    {
+     "outlet": "Space.com",
+     "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "published": "2026-10-27"
+    },
     {
      "outlet": "Rolling Stone",
      "title": "George Takei Honors ‘Star Trek’ Co-Star Walter Koenig: ‘Keep Navigating a Steady Course’",
@@ -419,12 +489,6 @@
      "published": "2026-10-27"
     },
     {
-     "outlet": "BBC",
-     "title": "Independent review announced into murder of student Henry Nowak",
-     "url": "https://www.bbc.co.uk/news/articles/cv70pnw784x7o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
      "outlet": "NASA",
      "title": "How a Johnson Mentor Shapes the Next Generation of NASA Talent",
      "url": "https://www.nasa.gov/general/how-a-johnson-mentor-shapes-the-next-generation-of-nasa-talent/",
@@ -437,12 +501,6 @@
    "signal": "Wikipedia 184,582 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
    "articles": [
-    {
-     "outlet": "Variety",
-     "title": "‘Ghosts: The Possession of Button House’ Scares Up U.K., Ireland Box Office Win",
-     "url": "https://variety.com/2026/film/box-office/ghosts-the-possession-of-button-house-uk-ireland-box-office-1236931821/",
-     "published": "2026-10-27"
-    },
     {
      "outlet": "The Hollywood Reporter",
      "title": "‘Clayface’ Director James Watkins on the Tragic Ending, Joker Easter Eggs and His Star’s Secret Injury",
@@ -477,8 +535,8 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘I’m still innocent,’ says Comey as Trump calls him a ‘dirty cop’ – US politics live",
-     "url": "https://www.theguardian.com/us-news/live/2026/oct/27/comey-trump-rubio-texas-vance-israel-midterms-politics-latest-news-updates",
+     "title": "These four elections could change the world in 10 days – Stateside with Kai and Carter",
+     "url": "https://www.theguardian.com/us-news/video/2026/oct/27/these-four-elections-could-change-the-world-in-10-days-stateside-with-kai-and-carter",
      "published": "2026-10-27"
     }
    ]
@@ -493,82 +551,6 @@
      "title": "‘I, The TrUssTER, will NeveR die’ – Liz Truss’s Bank Job, digested by John Crace",
      "url": "https://www.theguardian.com/books/2026/oct/26/liz-truss-bank-job-digested-by-john-crace",
      "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "🔴 BALLON D'OR 2026 LIVE / IS THE WINNER MBAPPE, YAMAL, KANE? / BALLON D’OR LIVE",
-   "signal": "YouTube GB 713,191/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Quiz: Kane and who else? Name every men's Ballon d'Or winner",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "'This one's for all of us' - Kane thanks fans after Ballon d'Or win",
-     "url": "https://www.skysports.com/watch/video/13604287/exclusive-harry-kane-talks-to-sky-sports-after-winning-ballondor",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Ballon d'Or winner Kane explains how his game has evolved",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cwg7xevnyrjpo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Harry Kane claims men’s Ballon d’Or to end England’s 25-year wait for winner",
-     "url": "https://www.theguardian.com/football/2026/oct/26/harry-kane-ends-englands-25-year-wait-for-a-mens-ballon-dor",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "Avengers: Doomsday",
-   "signal": "YouTube GB 246,280/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Elden Ring Movie Is Reportedly A $200 Million Gamble For A24",
-     "url": "https://www.gamespot.com/articles/elden-ring-movie-is-reportedly-a-200-million-gamble-for-a24/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
-     "url": "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "Harry Styles",
-   "signal": "YouTube GB 111,716/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Styles",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "City of Masks review – theatreland ghost story with female phantom of the opera out for revenge",
-     "url": "https://www.theguardian.com/film/2026/oct/27/city-of-masks-review-theatreland-ghost-story-with-female-phantom-of-the-opera-out-for-revenge",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Ramayana: Rise of a Legend",
-   "signal": "YouTube GB 97,865/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ramayana:_Rise_of_a_Legend",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Ramayana: Rise of a Legend Plans to Expand Beyond Two Films With Spin-Offs, Video Games, Theme Parks, and More, Says Producer Namit Malhotra",
-     "url": "https://in.ign.com/ramayana/275076/ramayana-rise-of-a-legend-plans-to-expand-beyond-two-films-with-spin-offs-video-games-theme-parks-an",
-     "published": "2026-10-21"
     }
    ]
   },
@@ -600,8 +582,8 @@
     },
     {
      "outlet": "Variety",
-     "title": "Netflix Docuseries ‘The One About Matthew Perry’ Is a Tragic, Mournful Portrait of Addiction: TV Review",
-     "url": "https://variety.com/2026/tv/reviews/the-one-about-matthew-perry-review-netflix-1236931448/",
+     "title": "‘Friends’ Cast Entered Matthew Perry’s Funeral Holding Hands and Cried Around the Casket, Netflix Documentary Reveals",
+     "url": "https://variety.com/2026/tv/news/friends-cast-matthew-perry-funeral-casket-1236931479/",
      "published": "2026-10-27"
     },
     {
@@ -614,24 +596,24 @@
    "source": "TVmaze"
   },
   {
-   "topic": "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
-   "signal": "Apple albums GB: new in the top 10",
-   "wikipedia": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters_(Soundtrack_from_the_Netflix_Film)",
+   "topic": "DAZN: Stream Live Sports",
+   "signal": "App Store US: new in the top 10 free apps",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "‘KPop Demon Hunters’ Global Concert Tour Set by Netflix and AEG Presents",
-     "url": "https://variety.com/2026/music/news/kpop-demon-hunters-global-concert-tour-netflix-aeg-1236747546/",
-     "published": "2026-05-13"
+     "outlet": "Rolling Stone",
+     "title": "What to Know About Tonight’s ‘Sports Equinox’ and How to Stream Every Game Online for Free",
+     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/october-26-sports-games-tv-schedule-watch-online-free-stream-1235648191/",
+     "published": "2026-10-26"
     },
     {
-     "outlet": "Billboard",
-     "title": "‘KPop Demon Hunters’ Is Going on a World Concert Tour",
-     "url": "https://www.billboard.com/music/music-news/kpop-demon-hunters-concert-tour-netflix-1236247605/",
-     "published": "2026-05-13"
+     "outlet": "Guardian",
+     "title": "NFL today: How to watch Cowboys v Eagles, TV channels & live stream Monday 26 October",
+     "url": "https://www.theguardian.com/sport/2026/oct/26/nfl-today-how-to-watch-cowboys-v-eagles-tv-channels-live-stream-monday-26-october",
+     "published": "2026-10-26"
     }
    ],
-   "source": "Apple albums"
+   "source": "App Store"
   },
   {
    "topic": "2026 United States Grand Prix",
@@ -653,6 +635,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Leipzig",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "Bayern and Luis Díaz warm up for Arsenal revenge mission with furious rout of Leipzig",
+     "url": "https://www.theguardian.com/football/2026/oct/19/bayern-munich-luis-diaz-arsenal-revenge-mission-leipzig-bundesliga",
+     "published": "2026-10-19"
+    },
+    {
      "outlet": "New York Times",
      "title": "RB Leipzig, a revamped academy and a club on a mission to develop their own",
      "url": "https://www.nytimes.com/athletic/6232674/2025/03/28/leipzig-academy-baum-ai/",
@@ -660,61 +648,82 @@
     },
     {
      "outlet": "ESPN",
-     "title": "Why RB Leipzig is the most hated soccer team in the Bundesliga",
-     "url": "https://www.espn.com/soccer/story/_/id/37580461/why-rb-leipzig-most-hated-soccer-team-bundesliga",
-     "published": "2020-01-14"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "The alternative city guide to Leipzig, Germany",
-     "url": "https://www.theguardian.com/travel/2015/aug/10/the-alternative-city-guide-to-leipzig-germany",
-     "published": "2015-08-10"
+     "title": "Leipzig's disastrous Champions League has Rose on the brink",
+     "url": "https://www.espn.com/soccer/story/_/id/42911034/rb-leipzig-disastrous-champions-league-marco-rose-brink",
+     "published": "2024-12-12"
     }
    ],
    "source": "On this day",
    "kind": "evergreen"
   },
   {
-   "topic": "The Boulet Brothers' Dragula",
-   "signal": "TVmaze web: season premiere tonight",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Boulet_Brothers%27_Dragula",
-   "articles": [],
-   "source": "TVmaze"
+   "topic": "Trump Accounts: Official App",
+   "signal": "App Store US: new in the top 10 free apps",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Trump Accounts aren't just for newborns. Is your child eligible?",
+     "url": "https://www.usatoday.com/story/money/personalfinance/2026/06/05/who-is-eligible-for-trump-accounts/90372763007/",
+     "published": "2026-06-05"
+    }
+   ],
+   "source": "App Store"
   },
   {
-   "topic": "nam vs ire",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Names_of_the_Greeks",
+   "topic": "Anthropic files for IPO",
+   "signal": "Bluesky trending, 3,951 posts",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Anthropic's blockbuster share listing - 5 surprising things we now know",
+     "url": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "TechCrunch",
+     "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+     "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Anthropic files for potentially record-breaking stock market valuation in key test for AI industry",
+     "url": "https://www.theguardian.com/technology/2026/oct/26/anthropic-files-listing-stock-market",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Sky News",
+     "title": "Anthropic reveals plans for blockbuster IPO",
+     "url": "https://news.sky.com/story/anthropic-reveals-loss-as-it-plans-to-sell-public-shares-for-first-time-13604009",
+     "published": "2026-10-26"
+    }
+   ],
+   "source": "Bluesky"
+  },
+  {
+   "topic": "tony bellew",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tony_Bellew",
    "articles": []
   },
   {
-   "topic": "tvn24",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/TVN24",
-   "articles": []
-  },
-  {
-   "topic": "tomas amaral",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Tomas_Morales",
-   "articles": []
-  },
-  {
-   "topic": "curfew",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Curfew",
-   "articles": []
-  },
-  {
-   "topic": "bernabeu",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bernabeu",
-   "articles": []
-  },
-  {
-   "topic": "ynet",
+   "topic": "tony shalhoub",
    "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ynet",
+   "wikipedia": "https://en.wikipedia.org/wiki/Tony_Shalhoub",
+   "articles": []
+  },
+  {
+   "topic": "petroleum",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Petroleum",
+   "articles": []
+  },
+  {
+   "topic": "downdetector",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Downdetector",
    "articles": []
   },
   {
@@ -725,8 +734,20 @@
   },
   {
    "topic": "TLAW vs. AL",
-   "signal": "YouTube GB 199,012/h",
+   "signal": "YouTube GB 167,949/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Tawasa_language",
+   "articles": []
+  },
+  {
+   "topic": "LISA",
+   "signal": "YouTube GB-music 580,698/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/LISA",
+   "articles": []
+  },
+  {
+   "topic": "BABYMONSTER",
+   "signal": "YouTube GB-music 483,633/h",
+   "wikipedia": "https://en.wikipedia.org/wiki/Babymonster",
    "articles": []
   }
  ]

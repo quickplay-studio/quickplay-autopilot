@@ -5,9 +5,9 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 48% | 30% |
-| A question | 36% | 8% |
-| With an emoji | 56% | 55% |
+| With a number | 50% | 33% |
+| A question | 35% | 8% |
+| With an emoji | 54% | 55% |
 | Length, seconds (median) | 25.0 | 28.3 |
 
 ## Animals
@@ -62,6 +62,11 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Ranking The BEST Halloween Makeup Look of 2026 🎃✨ (908,858 views, 20,705 an hour, 27 s, Ranknosaur)
 - How do I TOP this Halloween look for this year??  Suggestions????  #ytshorts #shorts #halloween #yt (853,623 views, 20,136 an hour, 16 s, ColdEntry)
 - Serving A Bite Of The Night For After-Hours Apetite!🍔 #shorts #spongebob #nickelodeon #halloween (705,258 views, 17,105 an hour, 33 s, cookingWITHfred)
+
+## Harry Potter HBO series
+- Harry Potter Old Cast vs New Cast 🪄⚡ | The Magic Lives On! #shorts #viral #harrypotter (61,126 views, 1,295 an hour, 25 s, Knowzaar_)
+- ‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Char #shorts (78 views, 49 an hour, 8 s, SATOR)
+- The Sorting Hat in Calgary sorted a Gryffindog 🪄 #shorts​ #doglover   #calgary #halloween2026 (251 views, 5 an hour, 37 s, strawberry in wonder- bark)
 
 ## History
 - How Did Russia Sell Alaska for Just $7.2 Million?  #history  #didyouknow #facts (147,274 views, 5,562 an hour, 163 s, History Index)

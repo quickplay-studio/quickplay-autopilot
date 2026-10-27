@@ -2,7 +2,7 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-27T08:49+00:00",
+ "as_of": "2026-10-27T13:43+00:00",
  "factors": {
   "angles": {
    "arms": {
@@ -12,8 +12,8 @@
      "verdict": "about typical"
     },
     "hidden": {
-     "n": 0,
-     "needs": 70,
+     "n": 2,
+     "needs": 68,
      "verdict": "about typical"
     }
    },
@@ -34,8 +34,8 @@
   "ending": {
    "arms": {
     "loop": {
-     "n": 2,
-     "needs": 68,
+     "n": 3,
+     "needs": 67,
      "verdict": "about typical"
     },
     "question": {
@@ -88,18 +88,18 @@
   "franchise": {
    "arms": {
     "named": {
-     "n": 4,
-     "needs": 66,
-     "verdict": "early sign"
+     "n": 5,
+     "needs": 65,
+     "verdict": "about typical"
     },
     "plain": {
-     "n": 3,
-     "needs": 67,
-     "verdict": "about typical"
+     "n": 5,
+     "needs": 65,
+     "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "named series",
    "verdict": "too few to tell",
    "effect": "",
@@ -115,8 +115,8 @@
   "fx_energy": {
    "arms": {
     "steady": {
-     "n": 6,
-     "needs": 64,
+     "n": 9,
+     "needs": 61,
      "verdict": "early sign"
     },
     "lab": {
@@ -197,13 +197,13 @@
   "fx_slot": {
    "arms": {
     "06:00 to 12:00": {
-     "n": 5,
-     "needs": 65,
-     "verdict": "early sign"
+     "n": 7,
+     "needs": 63,
+     "verdict": "about typical"
     },
     "12:00 to 18:00": {
-     "n": 5,
-     "needs": 65,
+     "n": 7,
+     "needs": 63,
      "verdict": "early sign"
     }
    },
@@ -220,7 +220,7 @@
    "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": "",
-   "followed_pct": 60
+   "followed_pct": 71
   },
   "gene:g003": {
    "arms": {
@@ -307,13 +307,13 @@
   "length": {
    "arms": {
     "25 to 34 s": {
-     "n": 7,
-     "needs": 63,
+     "n": 9,
+     "needs": 61,
      "verdict": "about typical"
     },
     "35 to 44 s": {
-     "n": 7,
-     "needs": 63,
+     "n": 10,
+     "needs": 60,
      "verdict": "early sign"
     }
    },
@@ -330,18 +330,18 @@
    "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": "",
-   "followed_pct": 93
+   "followed_pct": 95
   },
   "title_search": {
    "arms": {
     "search phrase": {
-     "n": 8,
-     "needs": 62,
+     "n": 11,
+     "needs": 59,
      "verdict": "about typical"
     },
     "curiosity": {
-     "n": 5,
-     "needs": 65,
+     "n": 7,
+     "needs": 63,
      "verdict": "early sign"
     }
    },
@@ -390,14 +390,14 @@
   "title_emoji": {
    "arms": {
     "emoji": {
+     "n": 12,
+     "needs": 58,
+     "verdict": "early sign"
+    },
+    "none": {
      "n": 9,
      "needs": 61,
      "verdict": "about typical"
-    },
-    "none": {
-     "n": 7,
-     "needs": 63,
-     "verdict": "early sign"
     }
    },
    "settled": false,
@@ -417,13 +417,13 @@
   "title_answer": {
    "arms": {
     "stated": {
-     "n": 7,
-     "needs": 63,
+     "n": 10,
+     "needs": 60,
      "verdict": "early sign"
     },
     "held back": {
-     "n": 8,
-     "needs": 62,
+     "n": 10,
+     "needs": 60,
      "verdict": "about typical"
     }
    },
@@ -444,14 +444,14 @@
   "sub_push": {
    "arms": {
     "spoken": {
-     "n": 1,
-     "needs": 69,
-     "verdict": ""
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
     },
     "none": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 3,
+     "needs": 67,
+     "verdict": "about typical"
     }
    },
    "settled": false,
@@ -471,13 +471,13 @@
   "replies": {
    "arms": {
     "on": {
-     "n": 10,
-     "needs": 60,
+     "n": 13,
+     "needs": 57,
      "verdict": "about typical"
     },
     "off": {
-     "n": 9,
-     "needs": 61,
+     "n": 11,
+     "needs": 59,
      "verdict": "about typical"
     }
    },
@@ -485,13 +485,13 @@
    "days_left": 7,
    "label": "comment replies",
    "verdict": "running",
-   "effect": 0.51,
-   "low": 0.14,
-   "high": 1.83,
-   "halves": "disagree",
+   "effect": 0.34,
+   "low": 0.11,
+   "high": 1.13,
+   "halves": "agree",
    "winner": "",
    "leaning": "on",
-   "why": "the 90% interval includes no difference; 1 more Shorts on the smaller arm",
+   "why": "the 90% interval includes no difference",
    "metric": "views",
    "views_effect": ""
   }

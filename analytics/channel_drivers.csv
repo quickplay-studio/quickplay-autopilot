@@ -1,151 +1,156 @@
 channel,feature,feature_label,value,n,lift,own_lift,pooled_lift,pooled_verdict,verdict,exception,why
-gaming,title_style,Title,statement,3,0.95,0.86,1.14,about typical,about typical,,3 Shorts over 1 UK day(s)
-gaming,title_style,Title,number in title,2,0.67,0.81,0.81,about typical,too few to tell,,
-main,angles,Angle research,hidden,5,1.18,1.1,1.1,about typical,about typical,,
+gaming,title_style,Title,statement,3,0.97,0.86,1.16,about typical,about typical,,3 Shorts over 1 UK day(s)
+gaming,title_style,Title,number in title,2,0.66,0.81,0.79,early sign,too few to tell,,
 main,angles,Angle research,shown,9,0.97,0.98,0.98,about typical,about typical,,
-main,appeal,Appeal,everyone,58,0.82,0.84,0.84,about typical,about typical,,
+main,angles,Angle research,hidden,7,0.94,0.96,0.96,about typical,about typical,,
+main,appeal,Appeal,everyone,64,0.84,0.86,0.86,about typical,about typical,,
 main,appeal,Appeal,fans,2,0.74,0.85,0.85,too few to tell,too few to tell,,
-main,category,Category,Music,32,1.75,1.55,1.55,push,push,,
-main,category,Category,Film,24,1.21,1.15,1.15,about typical,about typical,,
-main,category,Category,Sport,28,1.06,1.05,1.05,about typical,about typical,,
-main,category,Category,Gaming,22,0.75,0.81,0.81,about typical,about typical,,
-main,category,Category,Entertainment,15,0.72,0.8,0.8,early sign,early sign,,90% interval 0.29x to 1.52x includes typical
-main,category,Category,Tech,10,0.51,0.65,0.65,cut back,cut back,,
+main,category,Category,Music,32,2.07,1.77,1.77,push,push,,
+main,category,Category,Film,25,1.24,1.18,1.18,about typical,about typical,,
+main,category,Category,Sport,29,1.11,1.08,1.08,about typical,about typical,,
+main,category,Category,Entertainment,15,0.73,0.8,0.8,about typical,about typical,,
+main,category,Category,Gaming,26,0.64,0.71,0.71,cut back,cut back,,
 main,category,Category,Science,9,0.51,0.65,0.65,early sign,early sign,,90% interval 0.12x to 1.17x includes typical; a half has under 2 Shorts
-main,ending,Ending,question,6,1.49,1.27,1.27,early sign,early sign,,90% interval 0.62x to 6.82x includes typical
-main,ending,Ending,loop,9,1.29,1.18,1.18,about typical,about typical,,
+main,category,Category,Tech,10,0.5,0.64,0.64,cut back,cut back,,
+main,ending,Ending,question,6,1.52,1.29,1.29,early sign,early sign,,90% interval 0.64x to 7.01x includes typical
+main,ending,Ending,loop,11,1.18,1.12,1.12,about typical,about typical,,
 main,ending,Ending,follow line,8,1.05,1.03,1.03,about typical,about typical,,
-main,explore,Exploration Short,yes,3,0.95,0.97,0.97,about typical,about typical,,3 Shorts over 1 UK day(s)
-main,explore,Exploration Short,no,13,0.57,0.69,0.69,early sign,early sign,,a half has under 2 Shorts
-main,first_frame,First frame,photo,15,0.72,0.8,0.8,early sign,early sign,,90% interval 0.27x to 1.61x includes typical; a half has under 2 Shorts
-main,first_frame,First frame,cover,19,0.42,0.53,0.53,cut back,cut back,,
-main,format,Format,one_detail,36,1.25,1.2,1.2,about typical,about typical,,
-main,format,Format,timeline,13,1.2,1.13,1.13,about typical,about typical,,
-main,format,Format,news_explained,27,0.99,0.99,0.99,about typical,about typical,,
-main,format,Format,story,20,0.94,0.96,0.96,about typical,about typical,,
+main,explore,Exploration Short,yes,4,0.86,0.92,0.92,about typical,about typical,,4 Shorts over 2 UK day(s)
+main,explore,Exploration Short,no,17,0.63,0.72,0.72,early sign,early sign,,90% interval 0.27x to 1.21x includes typical; a half has under 2 Shorts
+main,first_frame,First frame,photo,18,0.73,0.8,0.8,early sign,early sign,,90% interval 0.29x to 1.60x includes typical; a half has under 2 Shorts
+main,first_frame,First frame,cover,21,0.45,0.55,0.55,cut back,cut back,,
+main,format,Format,one_detail,38,1.32,1.25,1.25,about typical,about typical,,
+main,format,Format,timeline,13,1.23,1.15,1.15,about typical,about typical,,
+main,format,Format,news_explained,29,1.1,1.08,1.08,about typical,about typical,,
+main,format,Format,story,22,0.87,0.9,0.9,about typical,about typical,,
 main,format,Format,three_details,18,0.82,0.87,0.87,about typical,about typical,,
-main,format,Format,legacy,11,0.82,0.88,0.88,about typical,about typical,,
-main,format,Format,real_reason,12,0.76,0.83,0.83,about typical,about typical,,
+main,format,Format,legacy,11,0.79,0.86,0.86,about typical,about typical,,
+main,format,Format,real_reason,12,0.75,0.83,0.83,about typical,about typical,,
 main,format,Format,countdown,4,0.63,0.77,0.77,early sign,early sign,,4 Shorts over 3 UK day(s)
-main,franchise,Named series,plain,3,0.73,0.84,0.84,about typical,about typical,,3 Shorts over 1 UK day(s)
-main,franchise,Named series,named,5,0.6,0.74,0.74,early sign,early sign,,90% interval 0.04x to 3.09x includes typical; a half has under 2 Shorts
-main,fx_energy,Camera energy test,lab-energy-1019,4,0.6,0.75,0.75,early sign,early sign,,4 Shorts over 1 UK day(s)
-main,fx_energy,Camera energy test,steady,6,0.5,0.66,0.66,early sign,early sign,,a half has under 2 Shorts
-main,fx_slot,Posting quarter test,12:00 to 18:00,5,0.56,0.71,0.71,early sign,early sign,,5 Shorts over 1 UK day(s)
-main,fx_slot,Posting quarter test,06:00 to 12:00,5,0.53,0.69,0.69,early sign,early sign,,90% interval 0.08x to 1.07x includes typical; a half has under 2 Shorts
-main,hook_len,Hook length,13 words or more,33,1.28,1.22,1.22,about typical,about typical,,
-main,hook_len,Hook length,8 words or fewer,6,1.25,1.14,1.14,about typical,about typical,,
-main,hook_len,Hook length,9 to 12 words,91,0.86,0.87,0.87,about typical,about typical,,
-main,hook_named,Hook names the lead,yes,56,1.4,1.33,1.33,early sign,early sign,,90% interval 0.99x to 2.02x includes typical
-main,hook_named,Hook names the lead,no,23,1.0,1.0,1.0,about typical,about typical,,
-main,hook_type,Hook style,superlative,17,1.24,1.16,1.16,about typical,about typical,,
-main,hook_type,Hook style,statement,76,1.09,1.08,1.08,about typical,about typical,,
-main,hook_type,Hook style,twist,6,1.02,1.01,1.01,about typical,about typical,,
-main,hook_type,Hook style,you,7,0.86,0.91,0.91,about typical,about typical,,
-main,hook_type,Hook style,number,14,0.75,0.82,0.82,about typical,about typical,,
-main,hook_type,Hook style,question,10,0.61,0.72,0.72,early sign,early sign,,90% interval 0.20x to 1.19x includes typical
-main,kind,Kind of Short,news,58,1.23,1.2,1.2,about typical,about typical,,
-main,kind,Kind of Short,breaking,12,1.14,1.09,1.09,about typical,about typical,,
-main,kind,Kind of Short,follow-up,15,0.93,0.95,0.95,about typical,about typical,,
+main,franchise,Named series,named,6,0.87,0.92,0.92,about typical,about typical,,
+main,franchise,Named series,plain,5,0.52,0.68,0.68,early sign,early sign,,a half has under 2 Shorts
+main,fx_energy,Camera energy test,lab-energy-1019,5,0.66,0.78,0.78,early sign,early sign,,90% interval 0.13x to 1.47x includes typical; a half has under 2 Shorts
+main,fx_energy,Camera energy test,steady,9,0.55,0.69,0.69,early sign,early sign,,90% interval 0.11x to 1.53x includes typical; a half has under 2 Shorts
+main,fx_slot,Posting quarter test,06:00 to 12:00,7,0.73,0.82,0.82,about typical,about typical,,
+main,fx_slot,Posting quarter test,12:00 to 18:00,7,0.49,0.64,0.64,early sign,early sign,,a half has under 2 Shorts
+main,hook_len,Hook length,13 words or more,36,1.38,1.29,1.29,early sign,early sign,,90% interval 0.92x to 2.16x includes typical
+main,hook_len,Hook length,8 words or fewer,6,1.27,1.15,1.15,about typical,about typical,,
+main,hook_len,Hook length,9 to 12 words,94,0.86,0.88,0.88,about typical,about typical,,
+main,hook_named,Hook names the lead,yes,59,1.42,1.35,1.35,push,push,,
+main,hook_named,Hook names the lead,no,23,1.03,1.02,1.02,about typical,about typical,,
+main,hook_type,Hook style,superlative,18,1.17,1.12,1.12,about typical,about typical,,
+main,hook_type,Hook style,statement,78,1.14,1.12,1.12,about typical,about typical,,
+main,hook_type,Hook style,twist,6,1.0,1.0,1.0,about typical,about typical,,
+main,hook_type,Hook style,you,8,0.89,0.93,0.93,about typical,about typical,,
+main,hook_type,Hook style,number,16,0.82,0.87,0.87,about typical,about typical,,
+main,hook_type,Hook style,question,10,0.62,0.73,0.73,early sign,early sign,,90% interval 0.21x to 1.23x includes typical
+main,kind,Kind of Short,news,61,1.21,1.18,1.18,about typical,about typical,,
+main,kind,Kind of Short,breaking,12,1.15,1.1,1.1,about typical,about typical,,
+main,kind,Kind of Short,follow-up,18,0.95,0.96,0.96,about typical,about typical,,
 main,kind,Kind of Short,top list,2,0.84,0.91,0.91,too few to tell,too few to tell,,
 main,kind,Kind of Short,true story,14,0.79,0.85,0.85,about typical,about typical,,
-main,kind,Kind of Short,evergreen,12,0.71,0.8,0.8,early sign,early sign,,90% interval 0.29x to 1.43x includes typical; a half has under 2 Shorts
-main,late,Posted late,late,2,1.84,1.39,1.39,too few to tell,too few to tell,,
-main,late,Posted late,on time,106,1.06,1.05,1.05,about typical,about typical,,
-main,length,Length,25 to 34 s,76,1.05,1.04,1.04,about typical,about typical,,
-main,length,Length,under 25 s,34,1.04,1.03,1.03,about typical,about typical,,
-main,length,Length,35 to 44 s,20,0.71,0.78,0.78,early sign,early sign,,90% interval 0.37x to 1.24x includes typical
-main,look_captions,Captions,pop,5,1.37,1.2,1.2,about typical,about typical,,
-main,look_captions,Captions,low,8,1.34,1.2,1.2,about typical,about typical,,8 Shorts over 1 UK day(s)
-main,look_captions,Captions,lab-captions-1019,50,1.2,1.16,1.16,about typical,about typical,,
-main,look_captions,Captions,clean,34,1.01,1.01,1.01,about typical,about typical,,
-main,look_captions,Captions,minimal,21,0.84,0.88,0.88,about typical,about typical,,
-main,look_captions,Captions,boxed,3,0.62,0.77,0.77,early sign,early sign,,3 Shorts over 2 UK day(s)
-main,look_captions,Captions,lab-captions-1024,8,0.52,0.66,0.66,early sign,early sign,,a half has under 2 Shorts
-main,look_energy,Camera energy,lab-energy-1019,23,1.28,1.2,1.2,about typical,about typical,,
-main,look_energy,Camera energy,steady,72,1.14,1.12,1.12,about typical,about typical,,
-main,look_energy,Camera energy,lab-energy-1025,2,0.99,0.99,0.99,too few to tell,too few to tell,,
-main,look_energy,Camera energy,punchy,6,0.64,0.76,0.76,early sign,early sign,,6 Shorts over 1 UK day(s)
-main,look_energy,Camera energy,calm,27,0.63,0.7,0.7,early sign,early sign,,a half has under 2 Shorts
-main,look_grade,Colour grade,natural,50,1.12,1.1,1.1,about typical,about typical,,
+main,kind,Kind of Short,evergreen,12,0.76,0.83,0.83,about typical,about typical,,
+main,late,Posted late,late,2,1.94,1.43,1.43,too few to tell,too few to tell,,
+main,late,Posted late,on time,112,1.08,1.07,1.07,about typical,about typical,,
+main,length,Length,25 to 34 s,78,1.13,1.11,1.11,about typical,about typical,,
+main,length,Length,under 25 s,35,1.02,1.01,1.01,about typical,about typical,,
+main,length,Length,35 to 44 s,23,0.7,0.77,0.77,early sign,early sign,,90% interval 0.36x to 1.26x includes typical
+main,look_captions,Captions,pop,6,1.41,1.23,1.23,about typical,about typical,,
+main,look_captions,Captions,lab-captions-1019,51,1.24,1.2,1.2,about typical,about typical,,
+main,look_captions,Captions,low,11,1.22,1.14,1.14,about typical,about typical,,
+main,look_captions,Captions,clean,33,1.07,1.06,1.06,about typical,about typical,,
+main,look_captions,Captions,minimal,21,0.82,0.87,0.87,about typical,about typical,,
+main,look_captions,Captions,punch,2,0.77,0.87,0.87,too few to tell,too few to tell,,
+main,look_captions,Captions,boxed,3,0.61,0.76,0.76,early sign,early sign,,3 Shorts over 2 UK day(s)
+main,look_captions,Captions,lab-captions-1024,9,0.54,0.67,0.67,early sign,early sign,,a half has under 2 Shorts
+main,look_closing,Closing chip,chip,4,1.36,1.19,1.19,about typical,about typical,,4 Shorts over 1 UK day(s)
+main,look_closing,Closing chip,none,2,0.59,0.75,0.75,too few to tell,too few to tell,,
+main,look_energy,Camera energy,lab-energy-1019,23,1.31,1.22,1.22,about typical,about typical,,
+main,look_energy,Camera energy,steady,76,1.18,1.16,1.16,about typical,about typical,,
+main,look_energy,Camera energy,lab-energy-1025,3,0.88,0.93,0.93,about typical,about typical,,3 Shorts over 2 UK day(s)
+main,look_energy,Camera energy,punchy,8,0.77,0.85,0.85,about typical,about typical,,8 Shorts over 1 UK day(s)
+main,look_energy,Camera energy,calm,26,0.61,0.68,0.68,early sign,early sign,,a half has under 2 Shorts
+main,look_grade,Colour grade,natural,52,1.31,1.25,1.25,early sign,early sign,,90% interval 0.91x to 1.92x includes typical
 main,look_grade,Colour grade,lab-grade-1019,34,1.09,1.07,1.07,about typical,about typical,,
 main,look_grade,Colour grade,cinematic,29,1.0,1.0,1.0,about typical,about typical,,
-main,look_grade,Colour grade,vivid,2,0.75,0.86,0.86,too few to tell,too few to tell,,
-main,look_grade,Colour grade,lab-grade-1023,15,0.58,0.69,0.69,early sign,early sign,,90% interval 0.23x to 1.15x includes typical; a half has under 2 Shorts
-main,look_opening,Opening,graphic_first,45,1.22,1.18,1.18,about typical,about typical,,
-main,look_opening,Opening,image_first,69,0.91,0.92,0.92,about typical,about typical,,
-main,look_opening,Opening,lab-opening-1019,16,0.76,0.82,0.82,about typical,about typical,,
-main,look_style,Style (text and pace),minimal,8,1.34,1.2,1.2,about typical,about typical,,8 Shorts over 1 UK day(s)
-main,look_style,Style (text and pace),standard,8,0.34,0.51,0.51,early sign,early sign,,a half has under 2 Shorts
-main,look_voice,Voice,lab-voice-1019,10,1.43,1.26,1.26,early sign,early sign,,90% interval 0.58x to 4.78x includes typical
-main,look_voice,Voice,george,34,1.41,1.32,1.32,early sign,early sign,,90% interval 0.94x to 2.24x includes typical
-main,look_voice,Voice,george_quick,4,1.39,1.21,1.21,about typical,about typical,,4 Shorts over 3 UK day(s)
-main,look_voice,Voice,isabella,2,1.29,1.15,1.15,too few to tell,too few to tell,,
+main,look_grade,Colour grade,vivid,3,0.89,0.94,0.94,about typical,about typical,,3 Shorts over 1 UK day(s)
+main,look_grade,Colour grade,lab-grade-1023,18,0.48,0.59,0.59,early sign,early sign,,a half has under 2 Shorts
+main,look_opening,Opening,graphic_first,46,1.21,1.17,1.17,about typical,about typical,,
+main,look_opening,Opening,image_first,73,0.92,0.93,0.93,about typical,about typical,,
+main,look_opening,Opening,lab-opening-1019,17,0.92,0.94,0.94,about typical,about typical,,
+main,look_style,Style (text and pace),minimal,11,1.22,1.14,1.14,about typical,about typical,,
+main,look_style,Style (text and pace),standard,10,0.38,0.54,0.54,early sign,early sign,,a half has under 2 Shorts
+main,look_voice,Voice,george,36,1.37,1.28,1.28,early sign,early sign,,90% interval 0.88x to 2.21x includes typical
+main,look_voice,Voice,george_quick,4,1.35,1.19,1.19,about typical,about typical,,4 Shorts over 3 UK day(s)
+main,look_voice,Voice,lab-voice-1019,11,1.34,1.21,1.21,about typical,about typical,,
+main,look_voice,Voice,isabella,2,1.32,1.16,1.16,too few to tell,too few to tell,,
 main,look_voice,Voice,heart,4,0.99,0.99,0.99,about typical,about typical,,4 Shorts over 2 UK day(s)
-main,look_voice,Voice,lily,6,0.94,0.96,0.96,about typical,about typical,,
-main,look_voice,Voice,lewis,8,0.92,0.95,0.95,about typical,about typical,,
-main,look_voice,Voice,daniel,7,0.9,0.94,0.94,about typical,about typical,,
-main,look_voice,Voice,emma,29,0.85,0.88,0.88,about typical,about typical,,
-main,look_voice,Voice,george_dramatic,12,0.69,0.78,0.78,early sign,early sign,,90% interval 0.29x to 1.32x includes typical; a half has under 2 Shorts
-main,look_voice,Voice,michael,14,0.52,0.64,0.64,cut back,cut back,,
-main,mood,Music mood,chill,2,1.63,1.3,1.3,too few to tell,too few to tell,,
-main,mood,Music mood,pop,27,1.41,1.3,1.3,early sign,early sign,,90% interval 0.77x to 2.80x includes typical
-main,mood,Music mood,retro,13,1.33,1.21,1.21,about typical,about typical,,
-main,mood,Music mood,rock,3,1.25,1.13,1.13,about typical,about typical,,3 Shorts over 3 UK day(s)
+main,look_voice,Voice,lewis,9,0.98,0.99,0.99,about typical,about typical,,
+main,look_voice,Voice,emma,28,0.94,0.95,0.95,about typical,about typical,,
+main,look_voice,Voice,lily,7,0.93,0.96,0.96,about typical,about typical,,
+main,look_voice,Voice,daniel,7,0.92,0.95,0.95,about typical,about typical,,
+main,look_voice,Voice,george_dramatic,14,0.73,0.81,0.81,about typical,about typical,,
+main,look_voice,Voice,michael,14,0.55,0.66,0.66,cut back,cut back,,
+main,mood,Music mood,chill,2,1.68,1.32,1.32,too few to tell,too few to tell,,
+main,mood,Music mood,pop,26,1.58,1.42,1.42,early sign,early sign,,90% interval 0.88x to 3.14x includes typical
+main,mood,Music mood,retro,13,1.29,1.19,1.19,about typical,about typical,,
+main,mood,Music mood,rock,3,1.21,1.11,1.11,about typical,about typical,,3 Shorts over 3 UK day(s)
 main,mood,Music mood,hiphop,2,1.17,1.09,1.09,too few to tell,too few to tell,,
-main,mood,Music mood,tense,10,1.09,1.06,1.06,about typical,about typical,,
-main,mood,Music mood,action,23,1.02,1.01,1.01,about typical,about typical,,
-main,mood,Music mood,country,2,0.84,0.91,0.91,too few to tell,too few to tell,,
-main,mood,Music mood,space,9,0.77,0.85,0.85,about typical,about typical,,
-main,mood,Music mood,epic,15,0.73,0.8,0.8,about typical,about typical,,
-main,mood,Music mood,inspiring,9,0.71,0.8,0.8,about typical,about typical,,
+main,mood,Music mood,action,29,1.12,1.09,1.09,about typical,about typical,,
+main,mood,Music mood,tense,11,1.0,1.0,1.0,about typical,about typical,,
+main,mood,Music mood,country,2,0.86,0.92,0.92,too few to tell,too few to tell,,
+main,mood,Music mood,space,9,0.78,0.86,0.86,about typical,about typical,,
 main,mood,Music mood,playful,7,0.71,0.81,0.81,about typical,about typical,,
-main,mood,Music mood,tech,6,0.55,0.7,0.7,early sign,early sign,,90% interval 0.11x to 1.14x includes typical
-main,pictures,Pictures,mostly stock footage,5,1.14,1.08,1.08,about typical,about typical,,
-main,pictures,Pictures,mostly real pictures,125,0.97,0.97,0.97,about typical,about typical,,
-main,replies,Comment replies,on,57,1.18,1.15,1.15,about typical,about typical,,
-main,replies,Comment replies,off,56,0.88,0.9,0.9,about typical,about typical,,
-main,series,Series,single,12,1.33,1.21,1.21,about typical,about typical,,
+main,mood,Music mood,epic,14,0.71,0.79,0.79,early sign,early sign,,90% interval 0.36x to 1.16x includes typical
+main,mood,Music mood,inspiring,9,0.69,0.79,0.79,early sign,early sign,,90% interval 0.25x to 1.29x includes typical
+main,mood,Music mood,tech,7,0.57,0.71,0.71,early sign,early sign,,90% interval 0.15x to 1.06x includes typical
+main,pictures,Pictures,mostly stock footage,5,1.07,1.04,1.04,about typical,about typical,,
+main,pictures,Pictures,mostly real pictures,131,1.0,1.0,1.0,about typical,about typical,,
+main,replies,Comment replies,on,60,1.25,1.21,1.21,about typical,about typical,,
+main,replies,Comment replies,off,59,0.85,0.87,0.87,about typical,about typical,,
+main,series,Series,single,13,1.25,1.16,1.16,about typical,about typical,,
 main,series,Series,two parts,4,0.81,0.89,0.89,about typical,about typical,,4 Shorts over 1 UK day(s)
-main,slot,Posting time (UK),08:00 to 10:59,17,1.73,1.47,1.47,push,push,,
-main,slot,Posting time (UK),other times,41,1.51,1.4,1.4,early sign,push,push here,
-main,slot,Posting time (UK),11:00 to 13:59,25,1.49,1.35,1.35,push,push,,
-main,slot,Posting time (UK),17:00 to 19:59,19,0.71,0.78,0.78,early sign,early sign,,90% interval 0.36x to 1.23x includes typical
-main,slot,Posting time (UK),14:00 to 16:59,27,0.45,0.54,0.54,cut back,cut back,,
-main,slot,Posting time (UK),20:00 to 22:59,12,0.41,0.55,0.55,cut back,cut back,,
+main,slot,Posting time (UK),08:00 to 10:59,20,1.66,1.45,1.45,push,push,,
+main,slot,Posting time (UK),other times,42,1.55,1.43,1.43,push,push,,
+main,slot,Posting time (UK),11:00 to 13:59,29,1.39,1.29,1.29,early sign,early sign,,90% interval 0.94x to 2.18x includes typical
+main,slot,Posting time (UK),17:00 to 19:59,19,0.7,0.77,0.77,early sign,early sign,,90% interval 0.36x to 1.22x includes typical
+main,slot,Posting time (UK),14:00 to 16:59,25,0.46,0.56,0.56,cut back,cut back,,
+main,slot,Posting time (UK),20:00 to 22:59,12,0.4,0.54,0.54,cut back,cut back,,
 main,source,Topic source,YouTube music,7,2.32,1.68,1.68,push,push,,
-main,source,Topic source,Google Trends,26,1.52,1.38,1.38,push,push,,
-main,source,Topic source,YouTube,16,1.13,1.09,1.09,about typical,about typical,,
+main,source,Topic source,Google Trends,26,1.59,1.42,1.42,push,push,,
+main,source,Topic source,YouTube,17,1.08,1.06,1.06,about typical,about typical,,
 main,source,Topic source,Evergreen,18,0.94,0.96,0.96,about typical,about typical,,
-main,source,Topic source,Follow-up,12,0.89,0.93,0.93,about typical,about typical,,
-main,source,Topic source,Watchlist,8,0.72,0.82,0.82,about typical,about typical,,
+main,source,Topic source,Follow-up,15,0.9,0.93,0.93,about typical,about typical,,
+main,source,Topic source,Wikipedia,10,0.73,0.82,0.82,about typical,about typical,,
 main,source,Topic source,On this day,2,0.72,0.84,0.84,too few to tell,too few to tell,,
-main,source,Topic source,Wikipedia,10,0.7,0.79,0.79,early sign,early sign,,90% interval 0.20x to 1.83x includes typical
-main,source,Topic source,Trend-tied,9,0.5,0.64,0.64,cut back,early sign,,a half has under 2 Shorts
-main,title_answer,Title answer,held back,8,0.71,0.81,0.81,about typical,about typical,,8 Shorts over 1 UK day(s)
-main,title_answer,Title answer,stated,7,0.64,0.76,0.76,early sign,early sign,,7 Shorts over 1 UK day(s)
-main,title_emoji,Title emoji,emoji,9,0.72,0.81,0.81,about typical,about typical,,
-main,title_emoji,Title emoji,none,7,0.63,0.75,0.75,early sign,early sign,,7 Shorts over 1 UK day(s)
-main,title_search,Title wording,search phrase,11,0.95,0.97,0.97,about typical,about typical,,
-main,title_search,Title wording,curiosity,9,0.4,0.56,0.56,early sign,early sign,,a half has under 2 Shorts
-main,title_style,Title,statement,80,1.19,1.17,1.14,about typical,about typical,,
-main,title_style,Title,number in title,44,0.81,0.85,0.81,about typical,about typical,,
-main,title_style,Title,question,17,0.58,0.68,0.68,early sign,early sign,,90% interval 0.26x to 1.06x includes typical
+main,source,Topic source,Watchlist,10,0.71,0.8,0.8,early sign,early sign,,90% interval 0.28x to 1.35x includes typical; a half has under 2 Shorts
+main,source,Topic source,Trend-tied,9,0.5,0.64,0.64,cut back,cut back,,
+main,sub_push,Subscribe line,none,3,1.27,1.14,1.14,about typical,about typical,,3 Shorts over 1 UK day(s)
+main,sub_push,Subscribe line,spoken,2,0.75,0.86,0.86,too few to tell,too few to tell,,
+main,title_answer,Title answer,held back,10,0.82,0.88,0.88,about typical,about typical,,
+main,title_answer,Title answer,stated,10,0.54,0.67,0.67,early sign,early sign,,90% interval 0.15x to 1.12x includes typical; a half has under 2 Shorts
+main,title_emoji,Title emoji,none,9,0.88,0.92,0.92,about typical,about typical,,
+main,title_emoji,Title emoji,emoji,12,0.57,0.69,0.69,early sign,early sign,,90% interval 0.20x to 1.10x includes typical; a half has under 2 Shorts
+main,title_search,Title wording,search phrase,14,0.93,0.95,0.95,about typical,about typical,,
+main,title_search,Title wording,curiosity,11,0.41,0.56,0.56,early sign,early sign,,a half has under 2 Shorts
+main,title_style,Title,statement,84,1.22,1.2,1.16,about typical,about typical,,
+main,title_style,Title,number in title,47,0.78,0.82,0.79,early sign,about typical,,
+main,title_style,Title,question,16,0.66,0.75,0.75,early sign,early sign,,90% interval 0.30x to 1.22x includes typical; a half has under 2 Shorts
 main,weekday,Day posted,Wednesday,28,1.35,1.26,1.26,early sign,early sign,,28 Shorts over 1 UK day(s)
 main,weekday,Day posted,Friday,19,1.23,1.16,1.16,about typical,about typical,,19 Shorts over 1 UK day(s)
 main,weekday,Day posted,Thursday,29,1.02,1.01,1.01,about typical,about typical,,29 Shorts over 1 UK day(s)
+main,weekday,Day posted,Saturday,15,0.94,0.96,0.96,about typical,about typical,,
 main,weekday,Day posted,Tuesday,7,0.88,0.93,0.93,about typical,about typical,,7 Shorts over 1 UK day(s)
-main,weekday,Day posted,Saturday,14,0.84,0.89,0.89,about typical,about typical,,
-main,weekday,Day posted,Monday,18,0.76,0.82,0.82,about typical,about typical,,
+main,weekday,Day posted,Monday,23,0.84,0.88,0.88,about typical,about typical,,
 main,weekday,Day posted,Sunday,26,0.71,0.77,0.77,early sign,early sign,,90% interval 0.43x to 1.10x includes typical
-main,writer,Writer model,groq:openai/gpt-oss-120b,14,1.37,1.24,1.24,about typical,about typical,,
+main,writer,Writer model,groq:openai/gpt-oss-120b,15,1.35,1.23,1.23,about typical,about typical,,
+main,writer,Writer model,gemini:gemini-3.6-flash,11,1.26,1.16,1.16,about typical,about typical,,
 main,writer,Writer model,gemini:gemini-3.5-flash-lite,24,1.24,1.18,1.18,about typical,about typical,,
-main,writer,Writer model,gemini:gemini-3.6-flash,9,1.16,1.1,1.1,about typical,about typical,,
-main,writer,Writer model,claude:sonnet,3,0.92,0.95,0.95,about typical,about typical,,3 Shorts over 1 UK day(s)
+main,writer,Writer model,claude:sonnet,3,0.99,0.99,0.99,about typical,about typical,,3 Shorts over 1 UK day(s)
 main,writer,Writer model,gemini:gemini-3.5-flash,4,0.86,0.92,0.92,about typical,about typical,,4 Shorts over 3 UK day(s)
 main,writer,Writer model,gemini:gemini-flash-latest,11,0.84,0.89,0.89,about typical,about typical,,
-main,writer,Writer model,gemini:gemini-3.7-flash,9,0.72,0.81,0.81,about typical,about typical,,
-main,writer,Writer model,gemini:gemini-3-flash-preview,11,0.7,0.79,0.79,early sign,early sign,,90% interval 0.24x to 1.53x includes typical
+main,writer,Writer model,gemini:gemini-3-flash-preview,12,0.79,0.86,0.86,about typical,about typical,,
+main,writer,Writer model,gemini:gemini-3.7-flash,9,0.76,0.84,0.84,about typical,about typical,,
 main,writer,Writer model,gemini:gemini-3.1-flash-lite,5,0.7,0.81,0.81,about typical,about typical,,
-main,writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,10,0.69,0.79,0.79,early sign,early sign,,90% interval 0.25x to 1.38x includes typical; a half has under 2 Shorts
+main,writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,12,0.57,0.69,0.69,early sign,early sign,,90% interval 0.22x to 1.06x includes typical; a half has under 2 Shorts
 main,writer_arm,Writer model test,gemini flash,5,1.03,1.02,1.02,about typical,about typical,,5 Shorts over 1 UK day(s)

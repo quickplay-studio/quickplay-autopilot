@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-27T08:53+00:00",
+ "updated": "2026-10-27T13:49+00:00",
  "followers": 1,
  "followers_week_ago": 0,
  "reels": 102,
- "median_views": 114.5,
+ "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
@@ -16,42 +16,42 @@
    "category": "Gaming",
    "median": 125.0,
    "n": 16,
-   "score": 1.069,
+   "score": 1.073,
    "favoured": true
   },
   {
    "category": "Sport",
-   "median": 119.0,
-   "n": 24,
-   "score": 1.032,
+   "median": 120.0,
+   "n": 25,
+   "score": 1.044,
    "favoured": false
   },
   {
    "category": "Film",
    "median": 119.0,
    "n": 13,
-   "score": 1.028,
+   "score": 1.031,
    "favoured": false
   },
   {
    "category": "Animals",
    "median": 43.0,
    "n": 1,
-   "score": 0.849,
+   "score": 0.85,
    "favoured": false
   },
   {
    "category": "Music",
-   "median": 75.0,
-   "n": 25,
-   "score": 0.703,
+   "median": 63.5,
+   "n": 24,
+   "score": 0.616,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 35.0,
    "n": 9,
-   "score": 0.467,
+   "score": 0.468,
    "favoured": false
   },
   {
@@ -65,7 +65,7 @@
    "category": "Tech",
    "median": 11.0,
    "n": 7,
-   "score": 0.255,
+   "score": 0.256,
    "favoured": false
   }
  ],
@@ -84,7 +84,7 @@
     },
     "no": {
      "n": 7,
-     "median": 126.0,
+     "median": 127.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.95"
@@ -99,14 +99,14 @@
    "arms": {
     "short": {
      "n": 4,
-     "median": 126.5,
+     "median": 127.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.94"
     },
     "full": {
      "n": 4,
-     "median": 126.0,
+     "median": 126.5,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "1.01"
@@ -121,7 +121,7 @@
    "arms": {
     "morning": {
      "n": 4,
-     "median": 120.5,
+     "median": 121.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.95"
@@ -138,10 +138,10 @@
   }
  },
  "week": {
-  "reels": 92,
+  "reels": 88,
   "median": 109.5,
-  "before_reels": 10,
-  "before_median": 135.0
+  "before_reels": 14,
+  "before_median": 126.0
  },
  "cover": {
   "asked": 16,

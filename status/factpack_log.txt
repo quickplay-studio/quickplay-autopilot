@@ -1,6 +1,13 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-richard hammond new home wales: 0 verified, 7 one-source, 1 pages
-black flag resynced: 3 verified, 2 one-source, 3 pages
-covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; GTA 6; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Thin Ice by Megan Thee Stallion; 🔴 BALLON D'OR 2026 LIVE / IS THE WINNER MBAPPE, YAMAL, KANE? / BALLON D’OR LIVE; Avengers: Doomsday; KPop Demon Hunters (Soundtrack from the Netflix Film) by KP
-2 packs, 3 verified facts, 9 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 3, "groq:openai/gpt-oss-120b": 1}, "empty answers": {}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 1, "providers passed over": []}
+GTA 6 PC release: 0 verified, 4 one-source, 1 pages
+Harry Potter HBO series: 3 verified, 1 one-source, 4 pages
+mitchell lawrie luke littler netflix darts: 0 verified, 9 one-source, 1 pages
+jasper talbot: 4 verified, 0 one-source, 3 pages
+Eric Bauza: 7 verified, 4 one-source, 2 pages
+Walter Koenig: 8 verified, 2 one-source, 5 pages
+The One About Matthew Perry: 0 verified, 4 one-source, 3 pages
+Leipzig: 0 verified, 5 one-source, 2 pages
+Anthropic files for IPO: 5 verified, 4 one-source, 3 pages
+covered recently, no pack: Ballon d'Or 2026; Ballon d'Or 2026 nominees; Halloween 2026; GTA 6; GTA 6 price; The Hunger Games: Sunrise on the Reaping; Thin Ice by Megan Thee Stallion; Clayface (film); 2026 United States Grand Prix; LISA; BABYMONSTER
+9 packs, 27 verified facts, 33 one-source
+gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20"}, "retired": [], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.5-flash-lite": 10, "groq:openai/gpt-oss-120b": 2, "gemini-3.6-flash": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter"], "local": false, "claude calls": 0, "second opinions": 3, "providers passed over": []}

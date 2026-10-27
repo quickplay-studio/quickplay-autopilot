@@ -1,8 +1,8 @@
 {
- "checked": "2026-10-27T11:23Z",
- "uploads_last_24h": 25,
- "scheduled": 11,
- "public": 138,
+ "checked": "2026-10-27T13:43Z",
+ "uploads_last_24h": 22,
+ "scheduled": 7,
+ "public": 142,
  "flagged": [
   {
    "video": "ApvkxPKexGc",
@@ -16,21 +16,48 @@
  ],
  "videos": [
   {
+   "video": "kaI4B_oT77A",
+   "title": "Game Facts #5: GTA 6: 17% spike in time off requests",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-27T13:30:15Z",
+   "views": 0,
+   "flag": ""
+  },
+  {
+   "video": "rzEH4i2ko6Y",
+   "title": "GPT-6.1 Terra: OpenAI upgrades ChatGPT",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-27T13:00:26Z",
+   "views": 4,
+   "flag": ""
+  },
+  {
+   "video": "YUI_nWZsC-Y",
+   "title": "gta 6: arrives on 19 November (Part 1) 🎮",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-27T12:30:39Z",
+   "views": 1,
+   "flag": ""
+  },
+  {
+   "video": "04SNsgEZX5M",
+   "title": "GTA 6 launch trailer: 24 days to go 🎮",
+   "privacy": "public",
+   "publish_at": null,
+   "uploaded": "2026-10-27T12:00:29Z",
+   "views": 29,
+   "flag": ""
+  },
+  {
    "video": "OYNQGnJzq3s",
    "title": "Song Secrets #3: Beyonce solo debut hits number one in Billboard",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T11:00:15Z",
-   "views": 13,
-   "flag": ""
-  },
-  {
-   "video": "kaI4B_oT77A",
-   "title": "Game Facts #5: GTA 6: 17% spike in time off requests",
-   "privacy": "private",
-   "publish_at": "2026-10-27T13:30:00Z",
-   "uploaded": "2026-10-27T10:45:58Z",
-   "views": 0,
+   "views": 136,
    "flag": ""
   },
   {
@@ -79,15 +106,6 @@
    "flag": ""
   },
   {
-   "video": "YUI_nWZsC-Y",
-   "title": "gta 6: arrives on 19 November (Part 1) 🎮",
-   "privacy": "private",
-   "publish_at": "2026-10-27T12:30:00Z",
-   "uploaded": "2026-10-27T10:33:12Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
    "video": "uDAbDV2tGw4",
    "title": "Film Facts #1: Wildwood runtime sets a stop-motion record 🎬",
    "privacy": "public",
@@ -102,7 +120,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T09:00:37Z",
-   "views": 11,
+   "views": 153,
    "flag": ""
   },
   {
@@ -129,7 +147,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T08:00:30Z",
-   "views": 20,
+   "views": 36,
    "flag": ""
   },
   {
@@ -138,7 +156,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T07:00:21Z",
-   "views": 1,
+   "views": 5,
    "flag": ""
   },
   {
@@ -147,7 +165,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T06:00:39Z",
-   "views": 68,
+   "views": 77,
    "flag": ""
   },
   {
@@ -156,7 +174,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T02:30:02Z",
-   "views": 5,
+   "views": 8,
    "flag": ""
   },
   {
@@ -165,25 +183,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-27T01:30:21Z",
-   "views": 7,
-   "flag": ""
-  },
-  {
-   "video": "04SNsgEZX5M",
-   "title": "GTA 6 launch trailer: 24 days to go 🎮",
-   "privacy": "private",
-   "publish_at": "2026-10-27T12:00:00Z",
-   "uploaded": "2026-10-26T22:05:19Z",
-   "views": 0,
-   "flag": ""
-  },
-  {
-   "video": "rzEH4i2ko6Y",
-   "title": "GPT-6.1 Terra: OpenAI upgrades ChatGPT",
-   "privacy": "private",
-   "publish_at": "2026-10-27T13:00:00Z",
-   "uploaded": "2026-10-26T20:10:42Z",
-   "views": 0,
+   "views": 8,
    "flag": ""
   },
   {
@@ -201,7 +201,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T15:30:29Z",
-   "views": 265,
+   "views": 363,
    "flag": ""
   },
   {
@@ -210,12 +210,12 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T14:00:36Z",
-   "views": 122,
+   "views": 123,
    "flag": ""
   },
   {
    "video": "NDbDMJxPXQk",
-   "title": "GTA 6: digital only at $79.99 🎮",
+   "title": "GTA 6: why the eighty dollar digital launch matters 🎮",
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T13:00:19Z",
@@ -228,7 +228,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T12:30:22Z",
-   "views": 50,
+   "views": 58,
    "flag": ""
   },
   {
@@ -255,7 +255,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T09:30:05Z",
-   "views": 6,
+   "views": 8,
    "flag": ""
   },
   {
@@ -264,7 +264,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-26T06:30:17Z",
-   "views": 80,
+   "views": 81,
    "flag": ""
   },
   {
@@ -318,7 +318,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T17:00:14Z",
-   "views": 139,
+   "views": 148,
    "flag": ""
   },
   {
@@ -336,7 +336,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T14:00:39Z",
-   "views": 7,
+   "views": 8,
    "flag": ""
   },
   {
@@ -354,7 +354,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T12:30:12Z",
-   "views": 157,
+   "views": 160,
    "flag": ""
   },
   {
@@ -363,7 +363,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T12:00:30Z",
-   "views": 995,
+   "views": 1003,
    "flag": ""
   },
   {
@@ -372,7 +372,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T11:00:12Z",
-   "views": 254,
+   "views": 271,
    "flag": ""
   },
   {
@@ -390,7 +390,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T07:00:04Z",
-   "views": 2139,
+   "views": 2158,
    "flag": ""
   },
   {
@@ -408,7 +408,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-25T04:00:25Z",
-   "views": 319,
+   "views": 321,
    "flag": ""
   },
   {
@@ -435,7 +435,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T23:30:18Z",
-   "views": 130,
+   "views": 131,
    "flag": ""
   },
   {
@@ -480,7 +480,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T11:00:34Z",
-   "views": 62,
+   "views": 63,
    "flag": ""
   },
   {
@@ -489,7 +489,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-24T10:00:11Z",
-   "views": 194,
+   "views": 196,
    "flag": ""
   },
   {
@@ -597,7 +597,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T16:00:07Z",
-   "views": 1169,
+   "views": 1179,
    "flag": ""
   },
   {
@@ -678,7 +678,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T11:30:14Z",
-   "views": 316,
+   "views": 317,
    "flag": ""
   },
   {
@@ -696,7 +696,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-23T09:30:10Z",
-   "views": 64,
+   "views": 65,
    "flag": ""
   },
   {
@@ -858,7 +858,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-22T10:30:08Z",
-   "views": 301,
+   "views": 302,
    "flag": ""
   },
   {
@@ -1038,7 +1038,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T16:30:40Z",
-   "views": 80,
+   "views": 81,
    "flag": ""
   },
   {
@@ -1092,7 +1092,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T13:30:20Z",
-   "views": 7,
+   "views": 8,
    "flag": ""
   },
   {
@@ -1110,7 +1110,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T12:30:36Z",
-   "views": 36,
+   "views": 37,
    "flag": ""
   },
   {
@@ -1191,7 +1191,7 @@
    "privacy": "public",
    "publish_at": null,
    "uploaded": "2026-10-21T06:30:23Z",
-   "views": 570,
+   "views": 571,
    "flag": ""
   },
   {

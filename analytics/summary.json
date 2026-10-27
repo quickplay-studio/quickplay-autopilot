@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-27T12:49+00:00",
- "mode": "hourly",
+ "updated": "2026-10-27T13:43+00:00",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-27T08:49+00:00",
+ "full_updated": "2026-10-27T13:43+00:00",
  "youtube": {
   "subscribers": 17,
-  "public_shorts": 176,
-  "views_all_time": 34054,
+  "public_shorts": 178,
+  "views_all_time": 34306,
   "views_last_90_days": 8725,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 11103,
+  "views_last_90_days_estimate": 11185,
   "analytics_last_day": "2026-10-24"
  },
  "instagram": {
@@ -30,19 +30,16 @@
   "days_left": 97,
   "subscribers_pct": 1.7,
   "views_pct": 0.11,
-  "views_needed_per_day": 110988,
+  "views_needed_per_day": 110987,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two).",
   "from_2027": {
    "shorts_views_needed_90_days": 20000000,
    "views_pct": 0.06,
-   "views_needed_per_day": 222099,
+   "views_needed_per_day": 222098,
    "watch_hours_needed_365_days": 8000,
    "watch_hours_365d": 0.0
   }
  },
- "audience_errors": [
-  "countries: HttpError: <HttpError 500 when requesting https://youtubeanalytics.googleapis.com/v2/reports?ids=channel%3D%3DMINE&startDate=2026-0"
- ],
  "channels": {
   "clips": {
    "subscribers": 0,

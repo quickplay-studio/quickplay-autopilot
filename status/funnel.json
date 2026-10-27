@@ -1,16 +1,16 @@
 {
- "day": "2026-10-26",
- "updated": "2026-10-26T21:57+00:00",
+ "day": "2026-10-27",
+ "updated": "2026-10-27T21:59+00:00",
  "stages": {
-  "day": "2026-10-26",
-  "packs": 6,
+  "day": "2026-10-27",
+  "packs": 4,
   "written": 23,
-  "rendered": 23,
-  "render_failed": 0,
-  "uploaded": 23,
-  "public": 12,
+  "rendered": 25,
+  "render_failed": 1,
+  "uploaded": 22,
+  "public": 27,
   "target": 15,
-  "clips_planned": 12,
+  "clips_planned": 0,
   "clips_made": 0,
   "clips_uploaded": 0,
   "clips_refused": 0,
@@ -20,5 +20,7 @@
   "stuck": ""
  },
  "stuck": [],
- "lost": {}
+ "lost": {
+  "RuntimeError: checks failed: unclear narration in beats [N]": 1
+ }
 }

@@ -170,5 +170,17 @@
    "views_an_hour": 0.1,
    "typical": 0.6
   }
+ },
+ "instagram": {
+  "media": "17927003013438929",
+  "at": "2026-10-27T16:22:15+00:00",
+  "caption": "short",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "explore",
+  "hour": "any",
+  "favoured": false,
+  "hour_uk": 16
  }
 }

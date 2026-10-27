@@ -266,6 +266,7 @@ print("8 series_for, prepare and name_board ok")
 import watch as WT
 (SCRATCH / "w").mkdir()
 WT.STATE, WT.HIST = SCRATCH / "w" / "watch.json", SCRATCH / "w" / "watch.csv"
+WT.LATEST = SCRATCH / "w" / "latest.json"    # no viral topics here (tests/test_viral.py)
 WT.CFG = {"watchlist": [{**ITEM, "terms": ["Ballon d'Or"], "angles": ITEM["angles"] + ["Ballon d'Or 2026 explained", "Ballon d'Or 2026 trophy", "Ballon d'Or 2026 ceremony"]},
                         {"name": "Dune: Part Three", "terms": ["Dune Part Three"], "date": "2026-12-01", "category": "Film",
                          "angles": ["Dune Part Three cast", "Dune Part Three trailer", "Dune Part Three book"]}]}

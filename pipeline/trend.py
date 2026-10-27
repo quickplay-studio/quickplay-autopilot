@@ -7,6 +7,10 @@ recipe that has narrowed too far. This module watches the absolute numbers week 
 the Short viewed, engaged views, subscribers per 1,000 views), counts the Shorts that followed the data's rulings and what
 that was worth, and flags a fall in retention, for insights.md ("Is the channel getting better") and alerts.py
 (trend_alert). Pure functions over shorts.csv rows with the clock passed in, so the tests read no live file.
+Topic heat (27 October, Charlie: "content may be performing well because its trending, so any bad performance may not be
+because of changes made"): each window's Shorts carry their topics' heat (heat.py, shorts.csv "heat"); when one week's topics
+ran hotter or colder than the other's, the section and the retention issue say so, with what a point of heat has been worth
+in views, so a rise or fall is not read as the changes' doing when the topics explain it.
   python pipeline/trend.py        prints the section for the live analytics/shorts.csv
   python pipeline/trend.py --history    writes analytics/improvement.json (the hub's improvement line; analytics.py does it every run)
 """
@@ -21,6 +25,7 @@ MIN_WEEK, MIN_RECENT = 10, 8     # Shorts needed in the earlier window, and in t
 METRICS = (("views_24h", "Views at 24 hours", "median"), ("yt_avg_viewed_pct", "Share of the Short viewed (%)", "median"),
            ("yt_engaged_pct", "Engaged views (% of views)", "median"), ("subs_per_1k", "Subscribers per 1,000 views", "rate"))
 RETENTION = METRICS[1:3]     # the two a change in the Shorts themselves moves first
+HEAT_SHIFT = 0.3             # a change in the windows' mean topic heat this big is named beside the numbers
 
 
 def _f(x):
@@ -90,10 +95,55 @@ def followed(r, verdicts):
     return ("push" in vs) and not any(x in ("cut back", "stop", "pause") for x in vs)
 
 
+def _heat():
+    try:
+        import heat
+        return heat
+    except Exception:
+        return None
+
+
+def _logviews(r):
+    import math
+    v = _f(r.get("views_24h"))
+    return None if v is None else math.log(max(0.05, v))
+
+
+def heat_shift(rows_a, rows_b, every=None):
+    """How much hotter (+) or colder (-) rows_b's topics ran than rows_a's: {"shift", "per_point"} or None. "per_point" is what one
+    point of heat has been worth in 24-hour views against the same day's other Shorts (fitted on `every`, all the Shorts), only
+    when that is clear; None without 3 covered Shorts a side or with a shift under HEAT_SHIFT."""
+    H = _heat()
+    if H is None: return None
+    try:
+        d = H.shift(rows_a, rows_b)
+        if d is None or abs(d) < HEAT_SHIFT: return None
+        out = {"shift": round(d, 2)}
+        eff = H.effect(every if every is not None else list(rows_a) + list(rows_b), _logviews)
+        if eff and eff["clear"]:
+            import math
+            out["per_point"] = round(math.exp(eff["b"]) - 1, 2)
+        return out
+    except Exception:
+        return None
+
+
+def heat_words(h, who="the later Shorts'"):
+    """One clause on a heat shift for the insights and the retention issue."""
+    if not h: return ""
+    hot = h["shift"] > 0
+    s = (f"{who} topics ran {'hotter' if hot else 'colder'} (by {abs(h['shift']):.1f} heat on the trend sources)")
+    if h.get("per_point") is not None:
+        s += f", and each point of heat has come with {100 * h['per_point']:+.0f}% views against the same day's other Shorts"
+    return s + (f", so part of any {'rise' if hot else 'fall'} may be the topics rather than the changes")
+
+
 def trend(rows, now, verdicts=None):
     """This week against the week before: {this, last, change: {metric: ratio}, followed: {n, of, lift}, flags: [text]}."""
     this, last = window(rows, now), window(rows, now, offset=WEEK)
     t = {"this": medians(this), "last": medians(last), "change": {}, "flags": []}
+    h = heat_shift(last, this, every=[r for _t, r in aged(rows, now)])
+    if h: t["heat"] = h
     for k, _label, _kind in METRICS:
         a, b = t["this"].get(k), t["last"].get(k)
         if a is not None and b: t["change"][k] = round(a / b, 2)
@@ -123,6 +173,12 @@ def falling(rows, now):
             if a.get(k) is not None and b.get(k) and a[k] / b[k] <= FALL]
 
 
+def falling_heat(rows, now):
+    """The heat shift between the windows falling() compares (the 7 days before, then the last RECENT_DAYS days), or None."""
+    recent, before = window(rows, now, days=RECENT_DAYS), window(rows, now, days=WEEK, offset=RECENT_DAYS)
+    return heat_shift(before, recent, every=[r for _t, r in aged(rows, now)])
+
+
 def recent_changes(days=10, now=None, path=None):
     """The ledger's changes (analytics/changes.csv) of the last `days` days: the suspects when retention falls."""
     now = now or dt.datetime.now(dt.timezone.utc)
@@ -145,6 +201,8 @@ def lines(t):
     if f and f.get("of"):
         L.append(f"- Shorts that followed the data's rulings: {f['n']} of {f['of']}"
                  + (f", {f['lift']}x the 24-hour views of the rest." if f.get("lift") else "."))
+    if t.get("heat"):
+        L.append("- Topic heat: " + heat_words(t["heat"], who="this week's") + ".")
     for x in t["flags"]:
         L.append(f"- Watch: {x}. The drivers cannot see a fall that hits every Short alike; the review checks the changes of the "
                  f"last 10 days (analytics/changes.csv) and reverts what hurt.")

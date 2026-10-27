@@ -36,7 +36,7 @@ CATEGORY_ES = {"Gaming": "Videojuegos", "Film": "Cine", "Music": "Música", "Spo
 FOLDERS = ("queue", "ready", "done", "failed", "reserve", "rejected", "expired", "hold")
 # what the mirror does not carry over: the English look, the series names, the schedule and the cross-posting picks
 DROP = ("look", "publish_at", "flag", "tiktok", "franchise", "series", "follows", "editor", "reserve", "social", "channel_series")
-KEEP_TEST = ("length", "title_emoji", "hook_type")             # the arms the Spanish board is written (and validated) to
+KEEP_TEST = ("length", "title_emoji", "hook_type", "viral_angle")             # the arms the Spanish board is written (and validated) to
 VISUAL_TEXT = ("kicker", "label", "sub", "caption", "text", "by", "mid", "month", "weekday", "stamp", "t", "s", "value", "prefix", "suffix")
 SKIP_NAMES = set("""january february march april may june july august september october november december monday tuesday wednesday thursday
 friday saturday sunday british english american spanish french german italian japanese korean mexican canadian christmas easter

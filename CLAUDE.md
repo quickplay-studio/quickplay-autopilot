@@ -56,6 +56,11 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   alive, else boards/expired; a clip or submission over 30 hours late needs heat or views (analytics/late_uploads.csv).
 - Watchlist (config.json "watchlist", watch.py): dated events get places in their build-up and launch week, at most
   watch_share_max (a third) of the day together.
+- Viral topics (27 October, config.json "viral", watch.viral_items): a topic on 3+ free trend sources and rising gets extra
+  places for up to a week, one angle a Short (latest, why, reaction, records, explained, facts), never event footage; columns
+  viral and viral_angle test the push and the angles.
+- Heat (27 October, heat.py): every verdict (drivers, round, evolve, changes, trend, alerts) separates a choice's effect from
+  its topics' trend heat, so a Short riding (or missing) a trending story is not credited or blamed on the change.
 
 ## Where to look
 - Claude Code on the Mac (25 October): docs/CLAUDE_CODE.md (setup, the three routine prompts, Sonnet and Haiku defaults in

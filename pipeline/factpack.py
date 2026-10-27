@@ -837,6 +837,12 @@ def build():
     limit, start = int(os.environ.get("FACTPACK_TOPICS") or CFG.get("factpack_topics", 20)), time.time()
     packs, model, errors = [], None, []
     topics = research.get("topics") or []
+    def _viral(t):
+        """A viral topic's angle (watch.viral_items): its angles share articles on purpose; the writer keeps them apart."""
+        try:
+            import watch
+            return bool(watch.viral_key(t))
+        except Exception: return False
     try:                                              # topics a recent Short covered get no pack: the writer would skip them
         import writer as W
         seen, done_before = W.recent(), W.covered
@@ -846,7 +852,7 @@ def build():
     for i, cat in triage(topics, limit * 2):          # spares, so covered topics don't leave places empty
         t = topics[i - 1]
         if len(packs) >= limit or time.time() - start > 22 * 60 or STATE.get("spent"): break
-        if done_before and t.get("signal") != "Charlie's request" and done_before(
+        if done_before and t.get("signal") != "Charlie's request" and not _viral(t) and done_before(
                 {"topic": t["topic"], "signal": t.get("signal", ""),
                  "sources": [[a.get("title", ""), a.get("url", "")] for a in t.get("articles") or []]}, seen):
             skipped.append(t["topic"]); continue

@@ -10,6 +10,7 @@ sys.path.insert(0, REPO_DIR + "/pipeline")
 import watch as W
 
 W.STATE, W.HIST = SCRATCH / "watch.json", SCRATCH / "watch.csv"
+W.LATEST = SCRATCH / "latest.json"           # no viral topics here (tests/test_viral.py)
 W.CFG = {"watchlist": [{"name": "GTA 6", "terms": ["GTA 6", "GTA VI"], "wikipedia": "Grand Theft Auto VI", "date": "2026-11-19",
                         "category": "Gaming", "angles": ["GTA 6 price", "GTA 6 map", "GTA 6 soundtrack"], "rules": "no violence"}]}
 VIEWS, NEWS = [10000] * 29 + [10000], 4

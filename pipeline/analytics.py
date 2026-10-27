@@ -66,6 +66,16 @@ def late_label(st, b):
     if FR.kind_of(b) not in FR.TIMELY or b.get("reserve"): return ""
     return "late" if st.get("late") else "on time"
 
+
+def subject_fields(b):
+    """{"_wiki", "_phrase"}: the subject heat.py scores (freshness.subject_of: the board's Wikipedia article, its topic)."""
+    if not b: return {"_wiki": "", "_phrase": ""}
+    try:
+        import freshness as FR
+        w, ph = FR.subject_of(b)
+        return {"_wiki": w or "", "_phrase": ph or ""}
+    except Exception: return {"_wiki": "", "_phrase": ""}
+
 # What round 1 (from 25 October) adds to each Short's row in shorts.csv, scored as assigned by drivers.features: the board's
 # hook and length arms, its title answer arm, and whether the hook names the lead the title names
 ARM_COLUMNS = ("arm_hook_type", "arm_length", "title_answer", "hook_named")
@@ -128,6 +138,12 @@ def our_shorts():
             "category": b.get("category", ""), "format": b.get("format", ""),
             "mood": (b.get("music") or {}).get("mood", ""), "hook": hook, "hook_words": len(hook.split()), "follow_line": (b.get("test") or {}).get("follow_line", ""), **{k: (b.get(k, "") if k in ("kind", "source", "appeal") else (b.get("test") or {}).get(k, "")) for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "appeal", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "writer_arm_used", "sponsor", "sub_push")}, "writer": b.get("writer", ""), "editor": b.get("editor", ""),
             "late": late_label(st, b),
+            # the watchlist event or viral topic a Short served and the viral angle it took (27 October), and the subject
+            # heat.py scores (the board's Wikipedia article and topic phrase; "_" fields never reach shorts.csv)
+            # (a board from 27 October with no viral mark is a "no", so the push is compared with the Shorts beside it)
+            "watch": b.get("watch") or "", "viral": b.get("viral") or ("no" if str(b.get("created") or "") >= "2026-10-27" else ""),
+            "viral_angle": (b.get("test") or {}).get("viral_angle", "") if isinstance(b.get("test"), dict) else "",
+            **subject_fields(b),
             # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
             **{k: b.get(k, "") for k in SERIES_COLUMNS},
             # round 1 (from 25 October) is scored as assigned (content review, 24 October): ARM_COLUMNS
@@ -808,7 +824,7 @@ def main():
             "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "watch", "viral", "viral_angle", "_wiki", "_phrase", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "genes": o.get("genes", ""),        # the live writing-instruction contests and the arm given: "gene:g001=b;gene:g002=a" (evolve.py)
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
@@ -898,6 +914,12 @@ def main():
     fields = ["day", "source", "yt_followers", "yt_views_total", "ig_followers", "ig_views_total", "fb_followers",
               "fb_views_total", "yt_views_day", "yt_engaged_views_day", "yt_subs_gained_day"]
     write_csv(hist_p, hist, fields)
+    # topic heat (heat.py, 27 October): how hot each Short's subject was the day it went out, so every verdict below can
+    # ask whether a hot or a cold topic, not the change, moved the number. The quick run reads the cache only.
+    try:
+        import heat as HEAT
+        HEAT.attach(all_rows, fetch=not FAST)
+    except Exception as e: print("topic heat:", str(e)[:150])
     every = sorted(all_rows, key=lambda r: r["posted"], reverse=True)       # every channel's Shorts, with the channel column
     write_csv(OUT / "shorts.csv", every, [k for k in every[0] if not k.startswith("_") and k != "rel"] if every else ["short", "title"])
 
@@ -1010,8 +1032,10 @@ def main():
             except Exception as e: print("regions:", str(e)[:120])
         try: sub_recipe = DRV.subs_recipe(sub_table, table)
         except Exception as e: sub_recipe = []; print("subscriber recipe:", str(e)[:150])
+        try: hl = heat_lines(all_rows)
+        except Exception as e: hl = []; print("heat section:", str(e)[:150])
         (OUT / "insights.md").write_text(insights(rows, summary, table, follow + DRV.recipe(table, rows) + sub_recipe + tests_lines + audience_recipe(aud), aud,
-                                                  subs_section(sub_table, sub_sum, summary)))
+                                                  subs_section(sub_table, sub_sum, summary), heat=hl))
         try: import social; social.ig_report()       # status/instagram.json and insights.md's Instagram section (social.py, 25 October)
         except Exception as e: print("instagram section:", str(e)[:150])
     print(json.dumps({"mode": summary["mode"], "shorts": len(rows), "errors": errors}, indent=1))
@@ -1479,10 +1503,36 @@ def audience_recipe(aud):
     except Exception: pass
     return out
 
-def insights(rows, s, table=None, recipe=None, aud=None, subs=None):
+def heat_lines(rows, now=None):
+    """The insights' "Topic heat" section (heat.py, 27 October): how much a hot topic moved views against the same day's
+    other Shorts, and how many of the last week's Shorts rode one, so a reader never credits the recipe with a topic's luck."""
+    import heat as HEAT
+    now = now or NOW
+    def lv(r):
+        try: return math.log(max(1.0, float(r.get("views_24h"))))
+        except (TypeError, ValueError): return None
+    eff = HEAT.effect(rows, lv)
+    L = ["## Topic heat (is it the change, or was the topic trending?)"]
+    n = HEAT.note(eff)
+    L.append(f"- {n[:1].upper() + n[1:]}." if eff else f"- Too few measured Shorts yet to size the effect (it needs {HEAT.MIN_N} sharing a day with another).")
+    cut = (now - dt.timedelta(days=7)).isoformat()
+    week = [r for r in rows if str(r.get("posted") or "") >= cut and r.get("heat_band")]
+    if week:
+        hot = sum(r["heat_band"] == "hot" for r in week); warm = sum(r["heat_band"] == "warm" for r in week)
+        L.append(f"- Last 7 days: {hot} of {len(week)} Shorts on a hot topic, {warm} warm, {len(week) - hot - warm} cold.")
+    viral = [r for r in rows if r.get("viral") == "yes" and str(r.get("posted") or "") >= cut]
+    if viral:
+        L.append(f"- Viral topic pushes in the last 7 days: {len(viral)} Short{'s' if len(viral) != 1 else ''} ("
+                 + ", ".join(sorted({r.get('viral_angle') or 'no angle' for r in viral})) + ").")
+    L += ["- Every verdict above allows for it: a push or cut back that only held because its Shorts had hotter (or colder) "
+          "topics than the day's others is held back as not proven, and no choice is paused for a cold topic's views.", ""]
+    return L
+
+
+def insights(rows, s, table=None, recipe=None, aud=None, subs=None, heat=None):
     """A short read for the daily writer and the reviews: the recipe from the data, what drives views, the subscribers
     section (subs_section: the subscriber push, 25 October), when and where people watch, then the best and worst Shorts and
-    the finer detail."""
+    the finer detail. `heat`: heat_lines, after the week on week section."""
     L = [f"# What's working (updated {s['updated'][:16].replace('T', ' ')} UTC)", ""]
     y, p = s["youtube"], s["ypp"]
     L += [f"YouTube Partner Program: {y['subscribers'] or 0:,} of 1,000 subscribers, about {y.get('views_last_90_days_estimate', y['views_last_90_days']):,} "
@@ -1505,6 +1555,7 @@ def insights(rows, s, table=None, recipe=None, aud=None, subs=None):
         for t in (table or []): vd.setdefault(t.get("feature"), {})[t.get("value")] = t.get("verdict")
         L += TR.lines(TR.trend(rows, NOW, vd))
     except Exception as e: print("trend section:", str(e)[:120])
+    L += heat or []
     L += subs or []
     L += ["## When people watch"] + timing_lines() + [""]
     L += ["## Where viewers are and how they find us"] + audience_lines(aud) + [""]

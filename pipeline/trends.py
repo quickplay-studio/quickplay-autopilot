@@ -382,7 +382,13 @@ def research(data):
             outlets.add(it["outlet"]); arts.append(it)
             if len(arts) == 4: break
         urls = {a["url"] for a in arts}
-        for t in topics:                      # the same story under a longer name (a trailer title, say): skip it
+        viral = False
+        if vetted and signal.startswith("watchlist: "):   # a viral topic's angles share articles on purpose (watch.viral_items)
+            try:
+                import watch as _W
+                viral = bool(_W.viral_key({"topic": q, "signal": signal}))
+            except Exception: pass
+        for t in ([] if viral else topics):   # the same story under a longer name (a trailer title, say): skip it
             if urls and urls <= {a["url"] for a in t["articles"]} and len(set(ws) & set(_words(t["topic"]))) >= 2: return
         wiki = wiki or _wiki_url(q)
         if arts or wiki:

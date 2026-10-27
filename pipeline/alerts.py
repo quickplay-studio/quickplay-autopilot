@@ -331,15 +331,21 @@ def trend_alert():
     Short alike (a render or voice change on every Short, a YouTube shift) never shows there. trend.falling compares the last
     3 days' Shorts with the 7 days before them on the share viewed and engaged views; a fall of 15% or more opens one issue
     with the numbers and the ledger's changes of the last 10 days as the suspects, for the weekly review and Charlie's phone.
-    Nothing is reverted by itself (a topic lull can look the same for a day or two); the issue closes when retention recovers."""
+    Nothing is reverted by itself (a topic lull can look the same for a day or two); the issue closes when retention recovers.
+    Topic heat (27 October): when the last 3 days' topics ran colder on the trend sources than the week before's, the issue says
+    so, so the review does not revert a change for what was the topics' doing."""
     import trend
     title = "📉 Retention is falling: viewers leave the Shorts sooner than last week"
-    fell = trend.falling(trend.load_rows(), NOW)
+    rows = trend.load_rows()
+    fell = trend.falling(rows, NOW)
     if not fell: clear(title, "Retention is back level with the week before."); return
     lines = [f"- {label}: {a} over the last {n} Shorts ({trend.RECENT_DAYS} days), {b} over the {m} Shorts of the 7 days before"
              for label, a, b, n, m in fell]
     sus = trend.recent_changes(now=NOW)
+    try: hw = trend.heat_words(trend.falling_heat(rows, NOW), who="the last 3 days'")
+    except Exception: hw = ""
     body = ("From analytics/shorts.csv (Shorts public 24 hours or more):\n" + "\n".join(lines)
+            + (f"\n\nTopic heat: {hw}. Check that before reverting a change." if hw else "")
             + "\n\nChanges of the last 10 days (analytics/changes.csv), the suspects:\n"
             + ("\n".join(f"- {r.get('id')} {r.get('date')} {r.get('area')}: {str(r.get('change'))[:140]}" for r in sus) if sus else "- none recorded")
             + "\n\nWhat happens next: the weekly review compares the Shorts since each change with the ones before and reverts what "

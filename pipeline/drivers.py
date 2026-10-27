@@ -31,6 +31,8 @@ A dead Short (under the floor a week on) is never followed up or remade (dead())
 """
 import datetime as dt, json, math, pathlib, re, statistics
 from zoneinfo import ZoneInfo
+try: import heat as HEAT                # topic heat (heat.py, 27 October): was the topic trending, not the choice?
+except Exception: HEAT = None
 
 UK = ZoneInfo("Europe/London")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -47,7 +49,8 @@ PAUSES = ROOT / "analytics" / "cache" / "pauses.json"
 NOW = dt.datetime.now(dt.timezone.utc)
 PAUSED = ("pause", "stop")              # "stop" is the old name, still read wherever a verdict is read
 METHOD = ("same-UK-day peers, shrink 12, push or cut back only when the 90% interval clears typical and both halves "
-          "of the data agree, 14-day pause and retest instead of a permanent stop (24 October)")
+          "of the data agree, 14-day pause and retest instead of a permanent stop (24 October); when topic heat clearly moves "
+          "views, a verdict must also hold with each Short's heat allowed for, and nothing is paused for a cold topic (27 October)")
 
 
 def age_days(r):
@@ -93,15 +96,16 @@ FEATURES = [("category", "Category"), ("format", "Format"), ("hook_type", "Hook 
             ("first_frame", "First frame"), ("angles", "Angle research"), ("replies", "Comment replies"), ("kind", "Kind of Short"), ("source", "Topic source"), ("series", "Series"), ("franchise", "Named series"), ("writer", "Writer model"),
             ("appeal", "Appeal"), ("late", "Posted late"), ("explore", "Exploration Short"), ("title_emoji", "Title emoji"),
             ("fx_energy", "Camera energy test"), ("fx_grade", "Colour grade test"), ("fx_opening", "Opening test"), ("fx_slot", "Posting quarter test"), ("writer_arm", "Writer model test"),
-            ("title_answer", "Title answer"), ("hook_named", "Hook names the lead"), ("sponsor", "Carries a campaign (sound or hashtag)")]
+            ("title_answer", "Title answer"), ("hook_named", "Hook names the lead"), ("sponsor", "Carries a campaign (sound or hashtag)"),
+            ("viral", "Viral topic push"), ("viral_angle", "Viral topic angle"), ("heat_band", "Topic heat")]
 # Instagram's own tests (social.py, 24 October) and the categories on Instagram: scored against Instagram views
 # (analyse_instagram), not YouTube's, and decided by social.py (ig_share), never put to the writer
 IG_FEATURES = [("ig_trial", "Instagram trial reel"), ("ig_caption", "Instagram caption"), ("ig_hour", "Instagram posting hour"),
                ("ig_pick", "Instagram pick"), ("ig_category", "Category on Instagram")]
-PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
-NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
+PIPELINE_ONLY = {"late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "look_style", "look_closing", "sub_push", "sponsor", "viral", "viral_angle", "heat_band"} | {f for f, _ in IG_FEATURES}     # measured like the rest, decided by the pipeline, never put to the writer (look_style: looks.py draws it, 2 in 3 minimal; sponsor: sponsor.pick draws it by board id)
+NEVER_PAUSED = {"weekday", "late", "explore", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "hook_named", "title_answer", "look_style", "look_closing", "sub_push", "sponsor", "viral", "heat_band"} | {f for f, _ in IG_FEATURES}       # nothing the writer could leave out (a test's arms settle by their verdicts)
 TESTED = ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "title_emoji",
-          "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
+          "fx_energy", "fx_grade", "fx_opening", "fx_slot", "writer_arm", "title_answer", "sub_push", "sponsor", "viral", "viral_angle")     # recorded on the board by the writer (writer.py tests); fx_*, writer_arm and title_answer as assigned (an intention-to-treat comparison); sponsor: the campaign id or "none" (sponsor.py)
 # The writer's arms as the board records them (writer.TESTS "hook_type" and "length"): only these count as an assigned arm
 # in features(); anything else a board carries (length "as written", when a long arm came back at a normal length) is
 # scored on what the Short did
@@ -189,6 +193,7 @@ def features(r):
     for k in TESTED: out[k] = r.get(k) or ""
     out["late"] = r.get("late") or ""          # "late" or "on time" (freshness.py): judged for the late-upload rule
     out["explore"] = r.get("explore") or ""    # "yes" for the day's exploration Shorts (writer.py), "no" for the rest
+    out["heat_band"] = r.get("heat_band") or ""   # hot, warm or cold (heat.py, 27 October): how trending the topic was
     return out
 
 
@@ -298,10 +303,11 @@ def floor_of(floor, r):
     return floor.get(channel_of(r)) if isinstance(floor, dict) else floor
 
 
-def pause_state(key, grp, floor, pauses, today):
+def pause_state(key, grp, floor, pauses, today, new=True):
     """("pause" | "retest" | None, why) for one choice, updating `pauses` (module docstring). With floors per channel
     (a dict) each row's views are scaled to the main channel's floor before the median, so a choice is paused on how its
-    Shorts do against their own channel's typical Short, whichever channels they are on."""
+    Shorts do against their own channel's typical Short, whichever channels they are on. new=False: a pause already made
+    runs its course, but no new one starts (analyse: the choice's Shorts had colder topics than the day's others)."""
     ref = (floor.get("main") or next((f for f in floor.values() if f), None)) if isinstance(floor, dict) else floor
     week = [r for r in grp if age_days(r) >= 7 and r.get("yt_views") not in (None, "") and floor_of(floor, r)]
     views = lambda rs: statistics.median((_f(r["yt_views"]) or 0) * ref / floor_of(floor, r) for r in rs)
@@ -320,7 +326,7 @@ def pause_state(key, grp, floor, pauses, today):
             if med >= floor:
                 pauses.pop(key, None); return None, ""          # the retest beat the floor: the pause is lifted
         return "retest", f"back on a small share after a pause ({st.get('since')} to {until}); {len(new)} retest Shorts a week old so far"
-    if floor is None: return None, ""
+    if floor is None or not new: return None, ""
     days = {uk_day(r) for r in week}
     if len(week) >= PAUSE_N and len(days) >= PAUSE_DAYS:
         med = views(week)
@@ -331,6 +337,44 @@ def pause_state(key, grp, floor, pauses, today):
             pauses[key] = {"since": today, "until": until, "why": why, "times": 1}
             return "pause", f"paused {today} to {until}: {why}"
     return None, ""
+
+
+# ---------------- topic heat (27 October) ----------------
+# Charlie, 27 October: "content may be performing well because its trending, so any bad performance may not be because of
+# changes made". heat.py scores how hot each Short's subject was the day it went out. rel already compares a Short with its
+# channel's other Shorts that UK day, so a hot news day lifts every Short alike and cancels; what is left is one Short's
+# topic being hotter or colder than its neighbours'. heat.effect measures that within each day. When it clearly moves
+# views, a push or cut back on a choice the writer makes (a hook, a length, a look) must also pass the gate with each
+# Short's rel divided by its heat's share (the lift on equally hot topics), and no new pause starts on a choice whose Shorts
+# rode colder topics than the day's others. Heat only ever withholds a verdict; it never makes one. Choices that pick the
+# topic (SELECTION: the source, kind, category, a viral push) are not adjusted, because riding a hot topic is their point;
+# their rows say how much hotter their topics were.
+SELECTION = {"source", "kind", "category", "late", "franchise", "series", "appeal", "heat_band", "viral"}
+HEAT_NOTE, HEAT_COLD = 0.3, -0.5        # annotate a choice whose topics averaged 0.3 hotter or colder; no new pause at -0.5
+
+
+def heat_context(scored):
+    """(effect, {id(row): centred heat}) for analyse and channel_table: heat.effect on log rel within channel and UK day
+    (None until heat.MIN_N Shorts share a day) and each row's heat less its day's mean ({} without heat.py)."""
+    if HEAT is None: return None, {}
+    try: return HEAT.effect(scored, _logrel), HEAT.centred(scored)
+    except Exception: return None, {}
+
+
+def heat_check(grp, verdict, gwhy, eff, cen, cut, feat):
+    """A push or cut back that does not survive allowing for topic heat becomes an early sign (module comment above):
+    returns (verdict, gwhy)."""
+    if verdict not in ("push", "cut back") or not eff or not eff.get("clear") or feat in SELECTION or not cen: return verdict, gwhy
+    adj = [dict(r, rel=float(r["rel"]) / math.exp(eff["b"] * cen.get(id(r), 0.0))) for r in grp]
+    alift = math.exp(sum(_logrel(r) for r in adj) / (len(adj) + SHRINK))
+    if gate(adj, alift, cut)[0] == verdict: return verdict, gwhy
+    return "early sign", f"once topic heat is allowed for, the lift is {alift:.2f}x on equally hot topics"
+
+
+def heat_of(grp, cen):
+    """The mean centred heat of a group's Shorts (how much hotter their topics were than their days' others), or None."""
+    v = [cen[id(r)] for r in grp if id(r) in cen and HEAT is not None and HEAT.value(r) is not None]
+    return statistics.mean(v) if len(v) >= 3 else None
 
 
 def contrast(groups):
@@ -358,6 +402,7 @@ def analyse(rows, pauses=None, today=None):
     floors = {ch: dead_floor([r for r in rows if channel_of(r) == ch]) for ch in dict.fromkeys(channel_of(r) for r in rows)}
     floor = floors if len(floors) > 1 else next(iter(floors.values()), None)
     cut = split_time(scored)
+    eff, cen = heat_context(scored)
     table = []
     for feat, label in FEATURES:
         groups = {}
@@ -370,11 +415,17 @@ def analyse(rows, pauses=None, today=None):
             logs = [_logrel(r) for r in grp]
             n = len(logs); lift = math.exp(sum(logs) / (n + SHRINK))
             verdict, gwhy = gate(grp, lift, cut)
-            pv, pwhy = (None, "") if feat in NEVER_PAUSED else pause_state(f"{feat}|{v}", grp, floor, pauses, today)
+            verdict, gwhy = heat_check(grp, verdict, gwhy, eff, cen, cut, feat)
+            hc = heat_of(grp, cen)
+            cold = hc is not None and hc <= HEAT_COLD and (eff is None or eff["b"] > 0)
+            pv, pwhy = (None, "") if feat in NEVER_PAUSED else pause_state(f"{feat}|{v}", grp, floor, pauses, today, new=not cold)
             if pv: verdict = pv
             sup = _support(grp)
             why = pwhy if pv else (_why(sup, base, lift >= 1) if n >= 3 and abs(math.log(lift)) >= math.log(1.1) else "")
             if gwhy and verdict == "early sign": why = "; ".join(x for x in (why, f"not proven: {gwhy}") if x)
+            if hc is not None and abs(hc) >= HEAT_NOTE:
+                why = "; ".join(x for x in (why, f"its topics ran {'hotter' if hc > 0 else 'colder'} than the day's other Shorts "
+                                                 f"({hc:+.1f} heat)" + (", so it is not paused for its views" if cold and not pv else "")) if x)
             table.append({"feature": feat, "feature_label": label, "value": v, "n": n, "lift": round(lift, 2),
                           "median_rel": round(statistics.median(float(r["rel"]) for r in grp), 2), "verdict": verdict,
                           "held_3s_pct": round(sup["yt_held_3s_pct"]) if sup["yt_held_3s_pct"] is not None else "",
@@ -407,6 +458,7 @@ def channel_table(rows, table):
     for ch in dict.fromkeys(channel_of(r) for r, _ in feats):
         mine = [(r, f) for r, f in feats if channel_of(r) == ch]
         cut = split_time([r for r, _ in mine])
+        eff, cen = heat_context([r for r, _ in mine])
         for feat, label in FEATURES:
             groups = {}
             for r, f in mine:
@@ -419,6 +471,7 @@ def channel_table(rows, table):
                 pl = float(p.get("lift") or 1.0); pv = p.get("verdict") or ""
                 own = math.exp(sum(logs) / (n + SHRINK))
                 verdict, gwhy = gate(grp, own, cut)
+                verdict, gwhy = heat_check(grp, verdict, gwhy, eff, cen, cut, feat)
                 exc = verdict + " here" if n >= EXC_N and verdict in ("push", "cut back") and verdict != pv else ""
                 out.append({"channel": ch, "feature": feat, "feature_label": label, "value": v, "n": n,
                             "lift": round(math.exp((sum(logs) + SHRINK * math.log(pl)) / (n + SHRINK)), 2),
@@ -501,12 +554,19 @@ def _resid(y, basis):
 
 
 def _slope(rows, f, arm_b, others, yf=None):
-    """(beta, se, df) of log rel (or yf(row)) on the arm-B indicator, controlling for the channel, exploration and `others`
-    ({factor: arms}: an arm-B and a missing indicator each); None when the arm is fully explained by the controls or df < 2."""
+    """(beta, se, df) of log rel (or yf(row)) on the arm-B indicator, controlling for the channel, exploration, topic heat
+    (27 October: each Short's heat less its day's others', when 3+ Shorts have one and it varies) and `others` ({factor:
+    arms}: an arm-B and a missing indicator each); None when the arm is fully explained by the controls or df < 2."""
     n = len(rows)
     cols = [[1.0] * n]
     for ch in sorted({channel_of(r) for r in rows}): cols.append([1.0 if channel_of(r) == ch else 0.0 for r in rows])
     cols.append([1.0 if r.get("explore") == "yes" else 0.0 for r in rows])
+    if HEAT is not None:
+        try:
+            cen = HEAT.centred(rows)
+            hc = [cen.get(id(r), 0.0) for r in rows]
+            if sum(1 for r in rows if HEAT.value(r) is not None) >= 3 and max(hc) - min(hc) > 1e-6: cols.append(hc)
+        except Exception: pass
     for g, (ga, gb) in others.items():
         cols.append([1.0 if assigned(r, g) == gb else 0.0 for r in rows])
         cols.append([0.0 if assigned(r, g) in (ga, gb) else 1.0 for r in rows])

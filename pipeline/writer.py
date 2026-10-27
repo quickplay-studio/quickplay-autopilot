@@ -149,20 +149,31 @@ def recent(days=14):
     return out
 
 
-def covered(p, seen, watch=None):
+def covered(p, seen, watch=None, urls_only=False):
     """Covered: a recent board cites one of the pack's articles (Wikipedia pages don't count: many stories share one), or
     its title shares two of the topic's longer words. A watchlist topic (watch: True, or a "watchlist" signal) is judged
     more loosely, because a big event's news all cites the same few articles: covered only when one recent board cites at
     least half of its articles (and two or more), or its title shares two of the topic's longer words. (24 October: one GTA
-    6 Short made every GTA 6 and Avengers angle "covered", so the watchlist's places a day could never be filled.)"""
+    6 Short made every GTA 6 and Avengers angle "covered", so the watchlist's places a day could never be filled.)
+    An angle of a watch item ("Ballon d'Or 2026 reaction" under "watchlist: Ballon d'Or 2026 (...)") is covered by a title
+    only when it names the item and the angle's own words, not by any title naming the item (27 October). urls_only: the
+    articles rule alone (a viral topic's angles, which watch.angle_due keeps from repeating)."""
     if watch is None: watch = str(p.get("signal", "")).startswith("watchlist")
     words = {w for w in re.findall(r"[a-z0-9]+", p["topic"].lower()) if len(w) > 3}
     urls = {s[1] for s in p.get("sources") or [] if len(s) > 1 and "wikipedia.org" not in str(s[1])}
     need_urls = max(2, -(-len(urls) // 2)) if watch else 1
     need_words = 2 if watch else min(2, len(words))
+    sig = str(p.get("signal", ""))
+    name = sig[len("watchlist: "):sig.rfind(" (")] if watch and sig.startswith("watchlist: ") and " (" in sig else ""
+    nw = {w for w in re.findall(r"[a-z0-9]+", name.lower()) if len(w) > 3}
+    distinct = words - nw
     for title, _, srcs in seen:
         if urls and len(urls & srcs) >= need_urls: return True
-        if words and len(words) >= need_words and len(words & set(re.findall(r"[a-z0-9]+", title.lower()))) >= need_words: return True
+        if urls_only: continue
+        tw = set(re.findall(r"[a-z0-9]+", title.lower()))
+        if nw and distinct:
+            if tw & nw and len(distinct & tw) >= min(2, len(distinct)): return True
+        elif words and len(words) >= need_words and len(words & tw) >= need_words: return True
     return False
 
 
@@ -223,7 +234,7 @@ def plan(breaking=False, hint=""):
 # news boards claimed to follow QD-037, four carried "watch": their own topic, three a franchise with no number), which
 # can count a breakout as followed up or fill a watchlist item's places, so the example never shows them and they are
 # stripped from whatever a model writes.
-BOOKKEEPING = ("watch", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
+BOOKKEEPING = ("watch", "viral", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
                "test", "mode", "appeal_note")
 BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of", "mirrored", "chip_label", "handle")       # set for the line's other channels (extra_channel_boards, mirror.py)
 
@@ -1791,6 +1802,9 @@ def main():
     # surging, then build-up, so the day's own news and every category keep their room
     WATCH_CAP = max(1, round(float(CFG.get("watch_share_max", 0.34)) * max(1, int(DAY.get("target") or quota.target()))))
     WATCH_RANK = {"launch": 0, "surging": 1, "build-up": 2}
+    # a viral topic (watch.viral_items, 27 October) has room beyond the cap: extra_share of the day's target more
+    try: VIRAL_EXTRA = round(float(watch.viral_cfg().get("extra_share", 0.2)) * max(1, int(DAY.get("target") or quota.target())))
+    except Exception: VIRAL_EXTRA = 0
     def watch_total():
         """Watch boards for the day so far, every item together (one pass over the boards)."""
         return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
@@ -1826,7 +1840,10 @@ def main():
         wn = watch_of(p)
         pb = bool(wn) and series_joins(p, "news")      # the day's playbook angle: its own place (one a day), still inside the day's watch cap
         if wn and watch_done(wn, pb) >= (1 if pb else int(WATCH[wn].get("places", 1))): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
-        if wn and watch_total() >= WATCH_CAP: print(f"watchlist: the day's {WATCH_CAP} watch places are filled:", p["topic"]); continue
+        vk = watch.viral_key(p, WATCH.values()) if wn and WATCH[wn].get("viral") else None   # a viral topic's angle
+        if wn and watch_total() >= WATCH_CAP + (VIRAL_EXTRA if WATCH[wn].get("viral") else 0):
+            print(f"watchlist: the day's {WATCH_CAP} watch places are filled:", p["topic"]); continue
+        if vk and not watch.angle_due(WATCH[wn], vk, day, written): print(f"viral {wn}: the {vk} angle is made already:", p["topic"]); continue
         if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
             p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end
         if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:
@@ -1834,14 +1851,26 @@ def main():
         if len(p.get("verified") or []) + len(p.get("one_source") or []) < 2:      # one fact makes a thin Short
             print("too few facts:", p["topic"]); continue
         fol = next((r for r in follow if covered(p, [r["_about"]])), None)
-        if not fol and covered(p, seen + [about(b) for b in written]): print("covered already:", p["topic"]); continue
+        if not fol and covered(p, seen + [about(b) for b in written], urls_only=bool(vk)): print("covered already:", p["topic"]); continue
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.") if fol else ""
         if wn:
             rules = f"WATCHLIST ({wn}, {WATCH[wn].get('level')}): {WATCH[wn].get('rules', '')}".strip()
+            if vk:                                   # the angle this Short takes, and the titles already made on the topic
+                brief = next((a.get("brief", "") for a in watch.viral_cfg()["angles"] if a["key"] == vk), "")
+                made = watch.viral_titles(WATCH[wn], written)
+                rules += f"\n\nTHIS SHORT'S ANGLE ({vk}): {brief}." + (
+                    " ALREADY MADE on this topic (do not repeat any of them): " + "; ".join(f'"{t}"' for t in made) if made else "")
             got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False)
-            if got: got["watch"] = wn; (out / f"{got['id']}.json").write_text(json.dumps(got, ensure_ascii=False, separators=(",", ":")))
+            if got:
+                got["watch"] = wn
+                if WATCH[wn].get("viral"):            # the push itself ("viral") and the angle (test.viral_angle) are measured
+                    got["viral"] = "yes"
+                    if vk:
+                        if not isinstance(got.get("test"), dict): got["test"] = {}
+                        got["test"]["viral_angle"] = vk
+                (out / f"{got['id']}.json").write_text(json.dumps(got, ensure_ascii=False, separators=(",", ":")))
         elif fol or breaking: got = emit(p, note, "follow-up" if fol else "breaking", fol=fol)
         elif explore_due():
             # an exploration Short: a category drawn evenly from the packs still open, its best pack; the pack this

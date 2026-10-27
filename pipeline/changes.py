@@ -15,12 +15,18 @@ Every metric is the main channel's, except for a change that adds a channel (are
 measured over the whole line's Shorts (analytics/shorts.csv has every channel, with a channel column), its guardrails stay
 the main channel's.
 Before and after is what happened, not proof: channel growth, news days and other changes move the numbers too.
+Topic heat (27 October, heat.py; Charlie: "content may be performing well because its trending, so any bad performance may
+not be because of changes made"): when hotter topics clearly bring more views (heat.effect on the target within each
+channel and UK day), a "better" or "worse" whose Shorts after had hotter or colder topics than the Shorts before is checked
+again on equally hot topics; one that does not hold becomes "unclear" and the result says how much the topics moved it.
+yt_rel compares each Short with its own day's, so a hot news day already cancels there.
 
 The writer's automatic recipe changes (analytics/decisions.csv, by "analytics (automatic)") are scored once each when
 their check_on day has passed, on whether the data's call held up out of sample: the chosen value's Shorts against the
 Shorts posted around them (views_vs_typical) in the week after, and how much the writer used the value before and after.
 "better" means the call was right (a pushed choice kept beating typical, a cut one kept trailing); "worse" means it faded
-or recovered, the automatic recipe chasing noise. These rows never count as overlapping (dozens move every day).
+or recovered, the automatic recipe chasing noise. These rows never count as overlapping (dozens move every day). A call whose Shorts had hotter or colder topics than the
+week's others is checked the same way on equally hot topics ("unclear" when it only held because of them).
 
   python pipeline/changes.py add --area shorts --change "..." --hypothesis "..." --target yt_views_24h \
          --guardrails "uploads_day;dead_share" [--date 2026-10-24] [--before 7] [--after 7] [--by "Claude (session)"]
@@ -371,6 +377,35 @@ def overlaps(r, rows):
     return out
 
 
+# ---------------- topic heat (27 October) ----------------
+HEAT_FIELD = {"yt_views_24h": "views_24h", "avg_viewed_pct": "yt_avg_viewed_pct", "held_3s": "yt_held_3s_pct",
+              "engaged_share": "yt_engaged_pct", "ig_views": "ig_views", "fb_views": "fb_views"}
+
+
+def _heat():
+    try:
+        import heat as HEAT
+        return HEAT
+    except Exception: return None
+
+
+def heat_factor(D, field, rows_a, rows_b, fn=None):
+    """How many times the rows_b side's figure the topic heat alone should make it against rows_a: exp(b x the heat
+    shift), b being heat.effect on log(field) over the Shorts measured (within channel and UK day), only when it is clear;
+    (factor, note) or (None, "")."""
+    HEAT = _heat()
+    if HEAT is None: return None, ""
+    def lg(r):
+        v = fn(r) if fn else num(r.get(field))
+        return math.log(max(0.05, v)) if v is not None and v > 0 else None
+    try:
+        eff = HEAT.effect(D.all_shorts, lg); d = HEAT.shift(rows_a, rows_b)
+    except Exception: return None, ""
+    if not eff or not eff.get("clear") or d is None or abs(d) < 0.05: return None, ""
+    f = math.exp(eff["b"] * d)
+    return f, f"topics {'hotter' if d > 0 else 'colder'} by {abs(d):.1f} heat, worth {f - 1:+.0%} on their own"
+
+
 def judge(r, D, rows):
     """Fill one system row's verdict, result and status from the data (rows past check_on only)."""
     if r.get("status") in ("kept", "reverted") or (r.get("status") == "checked" and r.get("verdict")): return r
@@ -399,6 +434,13 @@ def judge(r, D, rows):
         r.update(verdict="too early", result=res + f"; needs {MIN_N} a side", status="checked" if final else "live")
         return r
     verdict = "better" if imp >= MOVE else "worse" if imp <= -MOVE else "no change"
+    if verdict in ("better", "worse") and name in HEAT_FIELD:
+        hf, hnote = heat_factor(D, HEAT_FIELD[name], DT.shorts_in(*before), DT.shorts_in(*after))
+        if hf:
+            adj = improvement(vb, va / hf, better)
+            ok = adj is not None and (adj >= MOVE if verdict == "better" else adj <= -MOVE)
+            res += f"; topic heat: {hnote}, {raw_pct(vb, va / hf)} on equally hot topics"
+            if not ok: verdict = "unclear"
     if broken and verdict in ("better", "no change"): verdict = "trade-off"
     if other:
         res += f"; overlaps {', '.join(other)} (same target, same weeks: credited together)"
@@ -456,13 +498,19 @@ def judge_auto(r, D):
     x = vh / vo
     res = f"\"{value}\" Shorts after: {x:.2f}x the week's other Shorts (n {nh} against {no}); {usage}"
     ch = r.get("change", "")
-    if "Lean towards" in ch:
-        verdict, why = ("better", "held up") if x >= 1.1 else ("worse", "faded: the lift was noise") if x <= 0.9 else ("no change", "back near the rest")
-    elif "Use less" in ch or "Never again" in ch or "Stop" in ch:
-        verdict, why = ("better", "confirmed weak") if x <= 0.9 else ("worse", "recovered: the cut was wrong") if x >= 1.1 else ("no change", "back near the rest")
-    else:
+    def call(x):
+        if "Lean towards" in ch:
+            return ("better", "held up") if x >= 1.1 else ("worse", "faded: the lift was noise") if x <= 0.9 else ("no change", "back near the rest")
+        if "Use less" in ch or "Never again" in ch or "Stop" in ch:
+            return ("better", "confirmed weak") if x <= 0.9 else ("worse", "recovered: the cut was wrong") if x >= 1.1 else ("no change", "back near the rest")
         # back to normal: small weekly samples swing, so only a clear gap (a third or more either way) calls it premature
-        verdict, why = ("no change", "level with the rest, as expected") if 0.67 < x < 1.5 else ("worse", "still apart from the rest")
+        return ("no change", "level with the rest, as expected") if 0.67 < x < 1.5 else ("worse", "still apart from the rest")
+    verdict, why = call(x)
+    if verdict in ("better", "worse") and feat not in DRV.SELECTION:
+        hf, hnote = heat_factor(D, None, rest, hit, fn=rel24)
+        if hf:
+            res += f"; topic heat: {hnote}, {x / hf:.2f}x on equally hot topics"
+            if call(x / hf)[0] != verdict: verdict, why = "unclear", "only held because of its topics' heat"
     r.update(verdict=verdict, result=f"{why}: {res}", status="checked")
     return r
 

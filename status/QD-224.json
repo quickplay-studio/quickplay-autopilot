@@ -1,0 +1,186 @@
+{
+ "id": "QD-224",
+ "board": "boards/queue/QD-224.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T03:30:00Z",
+ "rendered": "2026-10-27T16:06:34.681717+00:00",
+ "channel": "clips",
+ "late": {
+  "alive": true,
+  "evidence": "\"mitchell lawrie\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Match Day #2: Mitchell Lawrie faces Luke Littler on Netflix 🎯",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Mitchell Lawrie: no Commons image named 'Mitchell Lawrie')",
+  "beat 5 reused a nearby picture (commons-search:Mitchell Lawrie: no Commons image named 'Mitchell Lawrie')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 7,
+  "pic_found_share": 0.71,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "risen",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "heart",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 33.5,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 12.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 556.0,
+   "contrast": 0.229,
+   "face_area": 0.3194,
+   "text_area": 0.1117,
+   "caption_contrast": 17.29,
+   "by_frame": {
+    "sharpness": [
+     497.5,
+     570.4,
+     575.6,
+     580.4
+    ],
+    "contrast": [
+     0.227,
+     0.231,
+     0.23,
+     0.228
+    ],
+    "face_area": [
+     0.3025,
+     0.3136,
+     0.3211,
+     0.3403
+    ],
+    "text_area": [
+     0.1042,
+     0.1135,
+     0.1108,
+     0.1183
+    ],
+    "caption_contrast": [
+     17.41,
+     17.29,
+     17.11,
+     17.28
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.27,
+   "none",
+   0
+  ],
+  [
+   4.27,
+   8.75,
+   "none",
+   1
+  ],
+  [
+   8.75,
+   12.04,
+   "none",
+   1
+  ],
+  [
+   12.04,
+   16.65,
+   "none",
+   1
+  ],
+  [
+   16.65,
+   21.49,
+   "none",
+   1
+  ],
+  [
+   21.49,
+   30.82,
+   "none",
+   1
+  ],
+  [
+   30.82,
+   33.47,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "115074",
+   "q": "darts board game",
+   "t0": 0.0,
+   "t1": 11.56
+  },
+  {
+   "p": "pixabay",
+   "id": "11722",
+   "q": "stadium lights night",
+   "t0": 10.96,
+   "t1": 22.51
+  },
+  {
+   "p": "pixabay",
+   "id": "208387",
+   "q": "football stadium night",
+   "t0": 21.91,
+   "t1": 33.47
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T16:17:58Z",
+ "video": "l0KIjlFLyGM",
+ "url": "https://youtube.com/shorts/l0KIjlFLyGM",
+ "publish_at": "2026-10-28T03:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T03:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

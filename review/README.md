@@ -12,7 +12,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 28 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 15 scheduled |
+| Wed 28 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 15 scheduled |
 | Tue 27 Oct | 22 public, 5 scheduled | 6 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -77,10 +77,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-224** Match Day #2: Mitchell Lawrie faces Luke Littler on Netflix 🎯 (rendering next)
 
 ## On the channel (latest first)
 

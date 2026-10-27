@@ -143,6 +143,7 @@ def our_shorts():
             # (a board from 27 October with no viral mark is a "no", so the push is compared with the Shorts beside it)
             "watch": b.get("watch") or "", "viral": b.get("viral") or ("no" if str(b.get("created") or "") >= "2026-10-27" else ""),
             "viral_angle": (b.get("test") or {}).get("viral_angle", "") if isinstance(b.get("test"), dict) else "",
+            "mega": b.get("mega") or "",          # one of a mega trend's Shorts, on top of the day's number (27 October)
             **subject_fields(b),
             # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
             **{k: b.get(k, "") for k in SERIES_COLUMNS},
@@ -824,7 +825,7 @@ def main():
             "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "watch", "viral", "viral_angle", "_wiki", "_phrase", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "watch", "viral", "viral_angle", "mega", "_wiki", "_phrase", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "genes": o.get("genes", ""),        # the live writing-instruction contests and the arm given: "gene:g001=b;gene:g002=a" (evolve.py)
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
@@ -1288,9 +1289,11 @@ def test_progress(rows, table, today=None):
 def volume_days(today=None):
     """Per UK day: Shorts posted, YouTube views gained (hourly.csv, only days the hourly rows cover for 20 hours or more),
     the day's cohort (the 24-hour views of the Shorts posted that day, summed; scaled up when 80% or more of them are
-    measured) and their 24-hour views one by one. {day: {...}} from analytics/shorts.csv and hourly.csv."""
+    measured) and their 24-hour views one by one. {day: {...}} from analytics/shorts.csv and hourly.csv. A mega trend's
+    Shorts (column mega, 27 October) come on top of the day's number, so they stay out of the volume test: out of the day's
+    count and cohort, and their 24-hour views taken off the day's views (no daily figure while one is unmeasured)."""
     days = {}
-    new_day = lambda: {"views": 0.0, "hours": 0.0, "n": 0, "v24": [], "measured": 0}
+    new_day = lambda: {"views": 0.0, "hours": 0.0, "n": 0, "v24": [], "measured": 0, "mega": 0, "mega_v24": 0.0, "mega_open": 0}
     p = OUT / "hourly.csv"
     for r in (csv.DictReader(io.StringIO(p.read_text())) if p.exists() else []):
         if r.get("yt_gained") in ("", None) or not r.get("uk_day"): continue
@@ -1301,12 +1304,17 @@ def volume_days(today=None):
         t = utc(r.get("posted"))
         if not t or (r.get("channel") or "main") != "main": continue        # the main channel's volume test; other channels are counted apart
         d = days.setdefault(str(t.astimezone(UK).date()), new_day())
+        if r.get("mega") == "yes":
+            d["mega"] += 1
+            try: d["mega_v24"] += float(r.get("views_24h"))
+            except (TypeError, ValueError): d["mega_open"] += 1
+            continue
         d["n"] += 1
         try: v = float(r.get("views_24h"))
         except (TypeError, ValueError): continue
         d["v24"].append(v); d["measured"] += 1
     for d in days.values():
-        d["daily"] = d["views"] if d["hours"] >= 20 else None
+        d["daily"] = max(0.0, d["views"] - d["mega_v24"]) if d["hours"] >= 20 and not d["mega_open"] else None
         d["cohort"] = sum(d["v24"]) * d["n"] / d["measured"] if d["n"] and d["measured"] >= 0.8 * d["n"] else None
     return days
 

@@ -214,9 +214,18 @@ def uploads_left():
         except (ValueError, AttributeError): pass
     # the Daily line's other channels (config shorts_channels) once they are signed in: their per_day uploads draw on the
     # same 100-upload bucket, so what they still have to come is kept for them too (25 October)
-    more = sum(max(0, int(c.get("per_day") or 6) - done.get(ch, 0)) for ch, c in (CFG.get("shorts_channels") or {}).items()
+    # a mega trend's Shorts come on top of the day's number (watch.mega_boards, 27 October): room is kept for them too
+    try:
+        import watch
+        uk = dt.datetime.now(ZoneInfo("Europe/London"))
+        h, m = map(int, str(CFG.get("slot_first", "09:00")).split(":"))
+        day = (uk - dt.timedelta(hours=h, minutes=m)).date()           # the UK posting day runs from slot_first
+        mega = lambda ch: watch.mega_boards(day, ch)
+    except Exception: mega = lambda ch: 0
+    more = sum(max(0, int(c.get("per_day") or 6) + mega(ch) - done.get(ch, 0))
+               for ch, c in (CFG.get("shorts_channels") or {}).items()
                if isinstance(c, dict) and (ROOT / "tokens" / f"youtube_{ch}.enc").is_file())
-    return max(0, target() + 1 - done.get("main", 0)) + more
+    return max(0, target() + 1 + mega("main") - done.get("main", 0)) + more
 
 
 def allow(units, what="extra"):

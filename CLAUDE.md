@@ -59,6 +59,11 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
 - Viral topics (27 October, config.json "viral", watch.viral_items): a topic on 3+ free trend sources and rising gets extra
   places for up to a week, one angle a Short (latest, why, reaction, records, explained, facts), never event footage; columns
   viral and viral_angle test the push and the angles.
+  Mega trends (27 October, viral.mega, watch.mega_places/mega_level): 20, 50 or 90 times usual searches (or 500k Wikipedia
+  views on a jump) give 5, 8 or 10 Shorts a day on momentum alone, ON TOP of quota.target() (own slots: plan.with_mega;
+  upload room: quota.uploads_left); a fitting channel adds up to 3 angles; a breaking check writes 4 at once; a daily angle
+  may run twice. It tapers to half its peak off the tiers and ends under 3x or after 7 days. Column mega; the volume test
+  and the reserve leave mega Shorts out.
 - Heat (27 October, heat.py): every verdict (drivers, round, evolve, changes, trend, alerts) separates a choice's effect from
   its topics' trend heat, so a Short riding (or missing) a trending story is not credited or blamed on the change.
 - Pictures (27 October, fetch_media.rescue): an off-topic or missing picture gets the beat's named subject's free Wikipedia

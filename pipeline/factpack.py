@@ -837,6 +837,14 @@ def build():
     limit, start = int(os.environ.get("FACTPACK_TOPICS") or CFG.get("factpack_topics", 20)), time.time()
     packs, model, errors = [], None, []
     topics = research.get("topics") or []
+    megas = {}                                        # a mega trend's angles (watch.mega_item): packs on top of the usual,
+    try:                                              # every one picked, right after Charlie's requests
+        import watch
+        megas = {i: watch.mega_item(t) for i, t in enumerate(topics, 1) if watch.mega_item(t)}
+        if megas:
+            bw = int(watch.viral_cfg()["mega"].get("breaking_writes", 4))
+            limit += min(len(megas), bw + 2 if os.environ.get("BREAKING") else 12)
+    except Exception as e: print("mega trends not read:", str(e)[:100])
     def _viral(t):
         """A viral topic's angle (watch.viral_items): its angles share articles on purpose; the writer keeps them apart."""
         try:
@@ -849,7 +857,13 @@ def build():
     except Exception as e:
         seen, done_before = [], None; print("recent Shorts not read:", str(e)[:100])
     skipped = []
-    for i, cat in triage(topics, limit * 2):          # spares, so covered topics don't leave places empty
+    picks = triage(topics, limit * 2)
+    if megas:
+        cats = dict(picks)
+        req = [p for p in picks if topics[p[0] - 1].get("signal") == "Charlie's request"]
+        picks = req + [(i, cats.get(i) or it.get("category", "")) for i, it in megas.items()] + \
+            [p for p in picks if p not in req and p[0] not in megas]
+    for i, cat in picks:                              # spares, so covered topics don't leave places empty
         t = topics[i - 1]
         if len(packs) >= limit or time.time() - start > 22 * 60 or STATE.get("spent"): break
         if done_before and t.get("signal") != "Charlie's request" and not _viral(t) and done_before(

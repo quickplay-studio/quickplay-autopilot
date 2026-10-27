@@ -219,7 +219,8 @@ def plan(breaking=False, hint=""):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == str(day) and not b.get("reserve") and main_board(b): made += 1
+            # a mega trend's Shorts come on top of the day's number (watch.mega_level), so they never use its places
+            if b.get("created") == str(day) and not b.get("reserve") and not b.get("mega") and main_board(b): made += 1
     import quota
     limit = quota.target() - (1 if day.weekday() == 6 else 0)
     runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
@@ -235,7 +236,7 @@ def plan(breaking=False, hint=""):
 # can count a breakout as followed up or fill a watchlist item's places, so the example never shows them and they are
 # stripped from whatever a model writes.
 BOOKKEEPING = ("watch", "viral", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
-               "test", "mode", "appeal_note")
+               "test", "mode", "appeal_note", "mega")
 BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of", "mirrored", "chip_label", "handle")       # set for the line's other channels (extra_channel_boards, mirror.py)
 
 
@@ -426,13 +427,38 @@ DAY = {"boards": [], "target": 0}         # the target day's boards so far (earl
 
 
 def day_boards(day):
-    """The target day's boards so far, from every folder, without the reserve and dry runs."""
+    """The target day's boards so far, from every folder, without the reserve, dry runs and a mega trend's Shorts (they come
+    on top of the day, so the explore share, the category floors and the writer caps are kept on the day's own mix)."""
     out = []
     for d in ("queue", "ready", "done", "failed"):
         for f in (ROOT / "boards" / d).glob("QD-*.json"):
             b = board(f)
-            if b.get("created") == str(day) and not b.get("reserve") and b.get("mode") != "dry" and main_board(b): out.append(b)
+            if b.get("created") == str(day) and not b.get("reserve") and b.get("mode") != "dry" and not b.get("mega") \
+                    and main_board(b): out.append(b)
     return out
+
+
+def mega_share(items, day, run, breaking):
+    """This run's Shorts for mega trends (watch.mega_level; Charlie, 27 October: "there should like 5-10 different shorts
+    about it"), on top of the day's number: each mega item's places left for the day (its boards so far, the playbook angle
+    apart). A breaking check writes only for a surge still at a tier, at most mega.breaking_writes together; the evening run
+    (the next day's first) writes half the places, so the morning writes the rest from the day's freshest packs."""
+    try:
+        import watch
+        mc = watch.viral_cfg()["mega"]
+    except Exception: return 0
+    total = 0
+    for it in items:
+        if not it.get("mega"): continue
+        places = int(it.get("places") or 0)
+        done = sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
+                   if board(f).get("watch") == it.get("name") and board(f).get("created") == str(day)
+                   and board(f).get("series_kind") != "playbook" and main_board(board(f)))
+        left = max(0, places - done)
+        if breaking and not watch.mega_places(it.get("momentum"), it.get("views_yesterday")): continue
+        if run == "evening" and not breaking: left = min(left, -(-places // 2))
+        total += left
+    return min(total, int(mc.get("breaking_writes", 4))) if breaking else total
 
 
 def explore_due(boards=None):
@@ -1600,23 +1626,35 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
     exceptions (winners(channel)); 1 in 5 of the channel's day is an exploration Short. Left out: the series and franchise
     tests (a channel's Shorts are always in its own series) and, on a channel posting on the Americas grid, the hour. It is
     validated, fact-checked and shaped like any other, then tagged "channel": <name> and written to the queue; the id is the
-    next free number. Returns the boards written."""
+    next free number. A mega trend (watch.py, 27 October) in one of the channel's categories gets up to mega.channel_angles
+    Shorts of its own on the channel a day, on top of per_day (half in the evening run, the rest in the morning), each a
+    different angle from the channel's other ones and, first, the angles the main channel has made least today. Returns the
+    boards written."""
+    try:                                     # a mega trend's items today (watch.py)
+        import watch
+        MEGA, mc = [i for i in (watch.state().get("items") or []) if i.get("mega")], watch.viral_cfg()["mega"]
+        watch._MADE.clear()                  # read again: the main channel's Shorts of this run are in the folders now
+    except Exception: MEGA, mc = [], {}
     wrote = []
     for ch, c in line_channels().items():
         per_day = int(c.get("per_day") or 6)
-        have = channel_boards(ch, day)
+        allb = channel_boards(ch, day)
+        have = [b for b in allb if not b.get("mega")]          # a mega trend's Shorts come on top of per_day
         runs = {k: int(v) for k, v in (CFG.get("runs") or {}).items() if str(v).isdigit()}
         per_run = max(1, -(-per_day * runs.get(run, 6) // max(1, sum(runs.values()))))
-        want = min(per_run, per_day - len(have))
-        if want <= 0: print(f"channel {ch}: {len(have)} of {per_day} for {day} already"); continue
+        want = max(0, min(per_run, per_day - len(have)))
+        fits = [it for it in MEGA if it.get("category") in c["categories"]]
+        if want <= 0: print(f"channel {ch}: {len(have)} of {per_day} for {day} already")
+        if want <= 0 and not fits: continue
         own, mine = [about(b) for b in channel_boards(ch, days=14)], [about(b) for b in DAY["boards"]]
-        made = []
+        made, mega_made = [], []
         stop = lambda: len(made) >= want or factpack.STATE.get("spent") or late()
 
-        def write(p, kind):
-            """One board of the channel from pack `p`, of `kind`; None when the writer gave nothing usable."""
+        def write(p, kind, note="", tag=None):
+            """One board of the channel from pack `p`, of `kind`; None when the writer gave nothing usable. note: more for the
+            writer; tag: fields for the board (a mega trend's: it goes to mega_made, outside the channel's day)."""
             sid = f"QD-{state['n']:03d}"
-            exp = explore_due(have + made)                       # 1 in 5 of the channel's own day
+            exp = not tag and explore_due(have + made)           # 1 in 5 of the channel's own day (a mega trend's never)
             style, tests = test_plan(state["n"], kind, explore=exp, channel=ch)
             tests = channel_tests(tests, c)
             tests = with_title_test(tests, state["n"], kind)
@@ -1626,7 +1664,7 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             series = pick_series(c, p, day, len(have) + len(made))
             n = 1 + channel_series_count(ch, series) if series else 0
             extra = [KIND_NOTE.get(kind, ""), style_note(tests), channel_note(ch, c, series, n), OVERLAP_NOTE if covered(p, mine) else "",
-                     SUB.note(tests.get("sub_push", ""), series or "", str(p.get("category") or ""))]
+                     SUB.note(tests.get("sub_push", ""), series or "", str(p.get("category") or "")), note]
             try:
                 b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests)
             except Exception as e:
@@ -1645,12 +1683,40 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
                 b["channel_series"] = f"{series} #{n}"
             tr = translations(b)
             if tr: b["meta"]["translations"] = tr
+            if tag:
+                b.update({k: v for k, v in tag.items() if k != "test"})
+                b["test"] = {**(b.get("test") or {}), **(tag.get("test") or {})}
             (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
-            made.append(b); state["n"] += 1
+            (mega_made if b.get("mega") else made).append(b); state["n"] += 1
             return b
 
+        for it in fits:                                          # a mega trend's own angles on this channel, first (they date fastest)
+            n_all = max(0, int(mc.get("channel_angles", 3)))
+            theirs = [b for b in allb if b.get("mega") and b.get("watch") == it["name"]]
+            left = n_all - len(theirs)
+            if run == "evening": left = min(left, -(-n_all // 2))    # the evening writes the next day's first half
+            if left <= 0: continue
+            done = {(b.get("test") or {}).get("viral_angle") for b in theirs}
+            mp = []
+            for p in packs:
+                if watch.mega_item(p, MEGA) is not it or len(p.get("verified") or []) + len(p.get("one_source") or []) < 2: continue
+                vk = watch.viral_key(p, MEGA)
+                if vk and vk not in done: mp.append((watch.angle_count(it, vk, day, DAY["boards"]), vk, p))
+            mp.sort(key=lambda x: x[0])                          # the angles the main channel made least today first
+            got = 0
+            for _, vk, p in mp:
+                if got >= left or factpack.STATE.get("spent") or late(): break
+                if vk in done or covered(p, [about(b) for b in theirs + mega_made], urls_only=True): continue
+                brief = next((a.get("brief", "") for a in watch.all_angles() if a["key"] == vk), "")
+                made_t = watch.viral_titles(it, DAY["boards"] + mega_made)
+                note = (f"MEGA TREND ({it['name']}): {it.get('rules', '')}".strip() + f"\n\nTHIS SHORT'S ANGLE ({vk}): {brief}."
+                        + (" ALREADY MADE on this topic (do not repeat any of them): " + "; ".join(f'"{t}"' for t in made_t) if made_t else ""))
+                b = write(p, "news", note, {"watch": it["name"], "viral": "yes", "mega": "yes", "test": {"viral_angle": vk}})
+                if b: got += 1; done.add(vk)
+            print(f"channel {ch}: mega {it['name']}: wrote {got} of {left}")
+
         pool = [p for p in packs if p.get("category") in c["categories"] and len(p.get("verified") or []) + len(p.get("one_source") or []) >= 2
-                and not covered(p, own)]
+                and not covered(p, own) and not (MEGA and watch.mega_item(p, MEGA))]
         pool.sort(key=lambda p: covered(p, mine))                 # stable: the main channel's untouched subjects first, best first
         if not pool: print(f"channel {ch}: no {'/'.join(c['categories'])} news packs; evergreen instead")
         for p in pool:
@@ -1664,8 +1730,8 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             for p in ever:
                 if stop(): break
                 write(p, p.get("kind") or "evergreen")
-        print(f"channel {ch}: wrote {len(made)} of {want}: " + "; ".join(f"{b['id']} {b['meta']['title']}" for b in made))
-        wrote += made
+        print(f"channel {ch}: wrote {len(made)} of {want}: " + "; ".join(f"{b['id']} {b['meta']['title']}" for b in made + mega_made))
+        wrote += made + mega_made
     return wrote
 
 
@@ -1675,8 +1741,14 @@ def main():
     d = json.loads(facts.read_text())
     breaking = d.get("mode") == "breaking"          # a check between the main runs: only what is spiking
     run, day, cap = plan(breaking, d.get("run", ""))
-    print(f"{run} run for {day}: {cap} to write from {len(d.get('topics') or [])} fact packs")
-    if cap <= 0 and (breaking or reserve_count() >= 6): return
+    try:                                                     # the watchlist (pipeline/watch.py): its own places today
+        import watch
+        WATCH = {i["name"]: i for i in (watch.state().get("items") or [])}
+    except Exception: WATCH = {}
+    mega_cap = mega_share(WATCH.values(), day, run, breaking)      # a mega trend's Shorts, on top of cap
+    print(f"{run} run for {day}: {cap} to write" + (f" and {mega_cap} for a mega trend" if mega_cap else "")
+          + f" from {len(d.get('topics') or [])} fact packs")
+    if cap <= 0 and mega_cap <= 0 and (breaking or reserve_count() >= 6): return
     DAY["boards"] = day_boards(day)                # the day so far: exploration share, category floors, writer cap
     try:
         import quota
@@ -1751,10 +1823,11 @@ def main():
         if not reserve: DAY["boards"].append(b)
         return b
 
-    def emit_kind(p, kind, reserve=False, note="", fol=None, explore=None):
+    def emit_kind(p, kind, reserve=False, note="", fol=None, explore=None, single=False):
         """A Short of any kind, or two or three parts with a cliffhanger between them when its series test says so and the
         pack has 3 facts or more a part (never from the reserve, which could release them out of order, and never a
-        follow-up or breaking news). `explore`: an exploration Short (None: when explore_due says so; never the reserve)."""
+        follow-up or breaking news). `explore`: an exploration Short (None: when explore_due says so; never the reserve).
+        `single`: always one Short (a mega trend's angles, each a whole Short of its own)."""
         if explore is None: explore = not reserve and explore_due()
         style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # one arm for every part of a series
@@ -1762,7 +1835,7 @@ def main():
         base ="\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
         facts = len(p.get("verified") or []) + len(p.get("one_source") or [])
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
-        if parts < 2 or reserve or fol or series_joins(p, kind):       # a numbered series Short is one Short (series.py)
+        if parts < 2 or reserve or fol or single or series_joins(p, kind):       # a numbered series Short is one Short (series.py)
             if "series" in tests: tests["series"] = "single"
             return emit(p, base, kind, reserve, fol=fol, tests=tests)
         first, made = f"QD-{state['n']:03d}", []
@@ -1778,24 +1851,28 @@ def main():
             (out / f"{b['id']}.json").unlink(missing_ok=True); written.remove(b); used.pop()
         return emit(p, base, kind, tests={**tests, "series": "single"})
 
-    topics = list(enumerate(d.get("topics") or []))[:4 if breaking else None]   # best first; favoured categories and breakouts move up
+    topics = list(enumerate(d.get("topics") or []))   # best first; favoured categories and breakouts move up
+    if breaking:          # a check between the runs writes from its 4 best packs, and every mega trend pack it has
+        topics = topics[:4] + [kp for kp in topics[4:] if watch.mega_item(kp[1], WATCH.values())] if WATCH else topics[:4]
+    base = lambda: [b for b in written if not b.get("mega")]       # the day's own Shorts (cap) ...
+    mega_n = lambda: sum(1 for b in written if b.get("mega"))      # ... and a mega trend's, on top (mega_cap)
     rank = lambda kp: (kp[0] - (200 - 20 * {"launch": 0, "surging": 1, "build-up": 2}.get((WATCH.get(watch_of(kp[1])) or {}).get("level"), 3) if watch_of(kp[1]) else 0)
                        - up.get(kp[1].get("category"), 0) - src_up.get(source_of(kp[1].get("signal")), 0)
                        - (100 if any(covered(kp[1], [r["_about"]]) for r in follow) else 0))
     # the day's playbook angle (series.py) ranks one level step above the rest of its level, so the mini-series is written first
     rank_base = rank
     rank = lambda kp: rank_base(kp) - (20 if str(kp[1].get("signal", "")).startswith("watchlist") and series_joins(kp[1], "news") else 0)
-    try:                                                     # the watchlist (pipeline/watch.py): its own places today
-        import watch
-        WATCH = {i["name"]: i for i in (watch.state().get("items") or [])}
-    except Exception: WATCH = {}
+    # a mega trend's packs go first of all, so the time limit never leaves its places empty (they have their own count)
+    rank_watch = rank
+    rank = lambda kp: rank_watch(kp) - (300 if WATCH and watch.mega_item(kp[1], WATCH.values()) else 0)
     def watch_of(p):
         s = str(p.get("signal", ""))
         return next((n for n in WATCH if s.startswith(f"watchlist: {n} ")), None) if s.startswith("watchlist") else None
     def watch_done(name, playbook=False):
         """Watch boards of an item today; a playbook angle (series.py) has its one place a day apart from the item's places."""
         return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
-                   if (board(f).get("watch") == name and board(f).get("created") == str(day) and (board(f).get("series_kind") == "playbook") == playbook)
+                   if (board(f).get("watch") == name and board(f).get("created") == str(day) and main_board(board(f))
+                       and (board(f).get("series_kind") == "playbook") == playbook)
                    ) + sum(1 for b in written if b.get("watch") == name and (b.get("series_kind") == "playbook") == playbook)
     # one cap across the watchlist (24 October: the calendar of big dates would ask for 22 places a day in GTA 6 week, more
     # than the day's Shorts): at most watch_share_max of the day's target goes to watch items, launch items first, then
@@ -1806,9 +1883,10 @@ def main():
     try: VIRAL_EXTRA = round(float(watch.viral_cfg().get("extra_share", 0.2)) * max(1, int(DAY.get("target") or quota.target())))
     except Exception: VIRAL_EXTRA = 0
     def watch_total():
-        """Watch boards for the day so far, every item together (one pass over the boards)."""
+        """Watch boards for the day so far, every item together (one pass over the boards), without a mega trend's (on top)."""
         return sum(1 for d in ("queue", "ready", "done", "failed") for f in (ROOT / "boards" / d).glob("QD-*.json")
-                   if board(f).get("watch") and board(f).get("created") == str(day)) + sum(1 for b in written if b.get("watch"))
+                   if board(f).get("watch") and not board(f).get("mega") and board(f).get("created") == str(day)
+                   and main_board(board(f))) + sum(1 for b in written if b.get("watch") and not b.get("mega"))
     shares, later = category_shares(), []
     if shares: print("category shares:", {c: round(v, 2) for c, v in sorted(shares.items(), key=lambda x: -x[1])})
     def eligible(q):
@@ -1832,19 +1910,21 @@ def main():
     if not breaking and not late():
         turn = day.toordinal() * 3 + {"evening": 0, "morning": 1, "afternoon": 2}.get(run, 1)
         for p in search_led_run(day, run, cap, seen + [about(b) for b in written], turn):
-            if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+            if len(base()) >= cap or factpack.STATE.get("spent") or late(): break
             emit_kind(p, "evergreen", explore=False)
     for k, (_, p) in enumerate(order):
-        if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        if (len(base()) >= cap and mega_n() >= mega_cap) or factpack.STATE.get("spent") or late(): break
         if p.get("_done"): continue                 # written already as an exploration Short
         wn = watch_of(p)
         pb = bool(wn) and series_joins(p, "news")      # the day's playbook angle: its own place (one a day), still inside the day's watch cap
+        mg = bool(wn) and not pb and bool(WATCH[wn].get("mega"))     # a mega trend's Short: its own places, on top of the day
+        if (mega_n() >= mega_cap) if mg else (len(base()) >= cap): continue
         if wn and watch_done(wn, pb) >= (1 if pb else int(WATCH[wn].get("places", 1))): print(f"watchlist {wn}: today's places are filled:", p["topic"]); continue
         vk = watch.viral_key(p, WATCH.values()) if wn and WATCH[wn].get("viral") else None   # a viral topic's angle
-        if wn and watch_total() >= WATCH_CAP + (VIRAL_EXTRA if WATCH[wn].get("viral") else 0):
+        if wn and not mg and watch_total() >= WATCH_CAP + (VIRAL_EXTRA if WATCH[wn].get("viral") else 0):
             print(f"watchlist: the day's {WATCH_CAP} watch places are filled:", p["topic"]); continue
         if vk and not watch.angle_due(WATCH[wn], vk, day, written): print(f"viral {wn}: the {vk} angle is made already:", p["topic"]); continue
-        if not wn and p.get("_later") is None and over_share(p.get("category"), written, cap, shares):
+        if not wn and p.get("_later") is None and over_share(p.get("category"), base(), cap, shares):
             p["_later"] = True; order.append((0, p)); continue     # its category has its share: only if places are left at the end
         if up.get(p.get("category"), 0) <= STOP or src_up.get(source_of(p.get("signal")), 0) <= STOP:
             print("stopped choice, skipped:", p["topic"], p.get("category")); continue
@@ -1858,13 +1938,19 @@ def main():
         if wn:
             rules = f"WATCHLIST ({wn}, {WATCH[wn].get('level')}): {WATCH[wn].get('rules', '')}".strip()
             if vk:                                   # the angle this Short takes, and the titles already made on the topic
-                brief = next((a.get("brief", "") for a in watch.viral_cfg()["angles"] if a["key"] == vk), "")
+                brief = next((a.get("brief", "") for a in watch.all_angles() if a["key"] == vk), "")
                 made = watch.viral_titles(WATCH[wn], written)
                 rules += f"\n\nTHIS SHORT'S ANGLE ({vk}): {brief}." + (
                     " ALREADY MADE on this topic (do not repeat any of them): " + "; ".join(f'"{t}"' for t in made) if made else "")
-            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False)
+            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False, single=mg)
+            if not got and mg and not late() and not factpack.STATE.get("spent"):     # a mega place is worth a second try
+                print(f"mega {wn}: trying again:", p["topic"])
+                got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False, single=True)
             if got:
                 got["watch"] = wn
+                if mg:                                # on top of the day: kept out of its explore share, floors and writer caps
+                    got["mega"] = "yes"
+                    DAY["boards"] = [x for x in DAY["boards"] if x is not got]
                 if WATCH[wn].get("viral"):            # the push itself ("viral") and the angle (test.viral_angle) are measured
                     got["viral"] = "yes"
                     if vk:
@@ -1883,14 +1969,14 @@ def main():
         else: got = emit_kind(p, "news", explore=False)
         if got and fol: follow.remove(fol)
     for fol in follow[:1]:                                    # the strongest breakout with no pack today: one from its own pages
-        if len(written) >= cap or factpack.STATE.get("spent") or late(): break
+        if len(base()) >= cap or factpack.STATE.get("spent") or late(): break
         p = followup_pack(fol, seen)
         if not p: print("follow-up: no pack for", fol.get("short")); continue
         note = (f'FOLLOW-UP: our Short "{fol.get("title")}" is getting {float(fol["times_typical"]):.0f} times our usual '
                 "views. Write a follow-up on the same subject: a new angle or the next chapter from this pack, never a "
                 "repeat, with a title tied to the original.")
         if emit(p, note, "follow-up", fol=fol): follow.remove(fol)
-    if run == "morning" and len(written) < cap and not factpack.STATE.get("spent") and not late():   # one remake a day
+    if run == "morning" and len(base()) < cap and not factpack.STATE.get("spent") and not late():   # one remake a day
         for w in weak():
             p = next((p for _, p in sorted(topics, key=rank) if covered(p, [w["_about"]])), None)      # still trending
             if not p or len(p.get("verified") or []) + len(p.get("one_source") or []) < 2: continue
@@ -1898,7 +1984,7 @@ def main():
             if b: b["remakes"] = w["short"]; (out / f"{b['id']}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
             break
     if not breaking and not factpack.STATE.get("spent"):    # evergreen kinds fill spare places and stock the reserve
-        spare = max(0, cap - len(written))
+        spare = max(0, cap - len(base()))
         if run == "morning":                                  # the fiction test: a few original stories a day, as the data allows
             for _ in range(min(spare, share("fiction", 1, 3))):
                 if late(): break
@@ -1917,7 +2003,8 @@ def main():
                 before = len(written)
                 emit_kind(p, p.get("kind", "evergreen"), reserve=spare <= 0)
                 if spare > 0: spare = max(0, spare - (len(written) - before))
-    print(f"wrote {len(written)} of {cap}: " + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else "")
+    print(f"wrote {len(base())} of {cap}" + (f" and {mega_n()} of {mega_cap} for a mega trend" if mega_cap or mega_n() else "") + ": "
+          + "; ".join(f"{b['id']} {b['meta']['title']}" + (" (reserve)" if b.get("reserve") else " (mega)" if b.get("mega") else "")
                                                for b in written))
     if not breaking and not factpack.STATE.get("spent"):         # the line's other channels, after the main channel's day (once signed in)
         try: extra_channel_boards(day, run, [p for _, p in topics], head, state, out, late)

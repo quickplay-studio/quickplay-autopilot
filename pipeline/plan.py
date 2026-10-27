@@ -103,7 +103,26 @@ def channel_slots(day, channel):
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
     step = dt.timedelta(minutes=1440 // n)
-    return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
+    return with_mega([(first + step * i).astimezone(dt.timezone.utc) for i in range(n)], day, channel)
+
+
+def with_mega(times, day, channel="main"):
+    """The day's slots plus one for each Short of a mega trend written for it (watch.mega_boards: they come on top of the
+    day's number, Charlie 27 October), each at the middle of the day's widest gap, so the push goes out that day instead of
+    spilling into the next."""
+    try:
+        import watch
+        extra = watch.mega_boards(day, channel)
+    except Exception: extra = 0
+    times = sorted(times)
+    if not extra or not times: return times
+    end = times[0] + dt.timedelta(days=1)                 # the gap after the day's last slot runs to the next day's first
+    for _ in range(extra):
+        gaps = [(b - a, a, b) for a, b in zip(times, times[1:] + [end])]
+        g, a, b = max(gaps, key=lambda x: (x[0], -x[1].timestamp()))
+        mid = a + g / 2
+        times = sorted(times + [mid.replace(minute=mid.minute - mid.minute % 5, second=0, microsecond=0)])
+    return times
 
 
 def day_slots(day, channel="main"):
@@ -112,13 +131,13 @@ def day_slots(day, channel="main"):
         max(int(CFG.get("slots_per_day", 10)), quota.daily_limit())       # a slot for every Short, at the day's best times
     times = learned_slots(n)
     if times:
-        return [dt.datetime(day.year, day.month, day.day, *map(int, t.split(":")), tzinfo=UK).astimezone(dt.timezone.utc)
-                for t in times]
+        return with_mega([dt.datetime(day.year, day.month, day.day, *map(int, t.split(":")), tzinfo=UK)
+                          .astimezone(dt.timezone.utc) for t in times], day)
     h, m = map(int, CFG.get("slot_first", "09:00").split(":"))
     first = dt.datetime(day.year, day.month, day.day, h, m, tzinfo=UK)
     every = min(int(CFG.get("slot_every_minutes", 90)), max(8, 1440 // n))     # the day's slots cover all 24 hours from slot_first
     step = dt.timedelta(minutes=every)
-    return [(first + step * i).astimezone(dt.timezone.utc) for i in range(n)]
+    return with_mega([(first + step * i).astimezone(dt.timezone.utc) for i in range(n)], day)
 
 def schedule_state(now, yt=None, channel="main"):
     """(taken slots, uploads in the last 24 hours, YouTube reachable). Our uploads come from status files (exact upload

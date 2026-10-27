@@ -120,7 +120,7 @@ def measure(w, today=None):
     return {"name": w["name"], "days_to": days, "phase": ph, "level": level, "places": places,
             "momentum": momentum, "views_yesterday": pv[-1] if pv else None, "views_usual": round(base) if base else None,
             "views_30d": pv, "news_24h": news, "news_usual": usual_news, "suggestions": sug[:8], "in": where, "category": w.get("category", ""),
-            "angles": w.get("angles") or [], "rules": w.get("rules", ""), "terms": terms}
+            "angles": w.get("angles") or [], "rules": w.get("rules", ""), "terms": terms, "wikipedia": w.get("wikipedia") or ""}
 
 
 def news_usual(name, today):
@@ -165,6 +165,8 @@ def topics_today(today=None):
         if it.get("viral"):                   # a viral item: its due angles (a daily angle once a day, the others once), then its own
             amap = it.get("angle_map") or {}
             due = [(a, sig) for a in angles if norm(a) in amap and norm(a) != norm(it["name"]) and angle_due(it, amap[norm(a)], today)]
+            if it.get("mega"):                # a mega trend: the angles with the fewest Shorts today go first
+                due.sort(key=lambda x: angle_count(it, amap[norm(x[0])], today))
             own = [(a, sig) for a in angles if norm(a) not in amap]
             out += due[:int(it.get("places", 1)) + 2] + own[:max(0, int(it.get("places", 1)) - len(due))]
             continue
@@ -204,6 +206,28 @@ VIRAL_DEFAULTS = {
          "brief": "what it is and how it works, for someone who has only just heard of it"},
         {"key": "facts", "topic": "{name} facts", "repeat": "daily", "brief": "the most surprising facts in the sources"},
     ],
+    # a mega trend (Charlie, 27 October: "the ballon d'or has 92.84 momentum ... there should like 5-10 different shorts about
+    # it ... real time adaption to large trends was part of the original goal"): yesterday's Wikipedia views at least 20 times
+    # their usual give 5 places a day, 50 times 8, 90 times (or 500,000 views on a jump) 10. Momentum alone qualifies it (no
+    # 3 sources needed). The places come on top of the day's number; a fitting channel (its categories) adds 1 to 3 angles of
+    # its own; a breaking check that sees one writes up to 4 at once. It follows the current tier while the surge holds,
+    # keeps half its peak while momentum is still over end_below, and ends under it or "days" after it began.
+    "mega": {"tiers": [[20, 5], [50, 8], [90, 10]], "views": 500000, "end_below": 3, "breaking_writes": 4,
+             "channel_angles": 3, "repeat": 2},
+    "mega_angles": [
+        {"key": "people", "topic": "{name} star", "repeat": "daily",
+         "brief": "the person at the centre of it (the winner, the star or the maker): their story as the sources tell it"},
+        {"key": "rankings", "topic": "{name} rankings", "repeat": "daily",
+         "brief": "the full list or ranking (the top three to five) in order, exactly as the sources give it"},
+        {"key": "numbers", "topic": "{name} by the numbers", "repeat": "daily",
+         "brief": "the numbers: votes, scores, figures and records, as the sources give them"},
+        {"key": "moments", "topic": "{name} best moments", "repeat": "daily",
+         "brief": "the standout moments, told from the sources in words and permitted pictures (no footage)"},
+        {"key": "next", "topic": "{name} what happens next", "repeat": "daily",
+         "brief": "what comes next, the dates and plans the sources state (never predictions)"},
+        {"key": "past", "topic": "{name} past winners", "repeat": "once",
+         "brief": "the earlier editions or the ones that came before, and how this one compares"},
+    ],
 }
 VIRAL_STATE = None                  # status/viral.json next to STATE (viral_path); a test may set its own
 LATEST = ROOT / "trends" / "latest.json"
@@ -219,7 +243,51 @@ PAREN_CAT = [(r"film", "Film"), (r"video game|game", "Gaming"), (r"song|album|si
 
 
 def viral_cfg():
-    c = dict(VIRAL_DEFAULTS); c.update(CFG.get("viral") or {}); return c
+    c = dict(VIRAL_DEFAULTS); c.update(CFG.get("viral") or {})
+    c["mega"] = dict(VIRAL_DEFAULTS["mega"], **(c.get("mega") or {}))
+    return c
+
+
+def all_angles(cfg=None):
+    """Every angle: the viral ones, then the mega trend ones."""
+    cfg = cfg or viral_cfg()
+    return list(cfg.get("angles") or []) + list(cfg.get("mega_angles") or [])
+
+
+def mega_places(momentum, views=None, cfg=None):
+    """A mega trend's places a day from yesterday's Wikipedia momentum (its tiers) or views (the top tier, on a jump: a
+    momentum of at least the viral one, or a page too new for one); 0 when it is not one."""
+    cfg = cfg or viral_cfg()
+    mc = cfg["mega"]
+    tiers = sorted((float(t), int(n)) for t, n in mc.get("tiers") or [])
+    if not tiers: return 0
+    best = 0
+    for t, n in tiers:
+        if momentum is not None and float(momentum) >= t: best = max(best, n)
+    try: v = float(views or 0)
+    except (TypeError, ValueError): v = 0
+    if v >= float(mc.get("views") or 1e12) and (momentum is None or float(momentum) >= float(cfg["momentum"])):
+        best = max(best, tiers[-1][1])
+    return best
+
+
+def mega_level(s, momentum, views, today, cfg=None):
+    """Today's mega places for a viral topic's state s (updated in place): the current tier while the surge holds, half its
+    peak (at least 2) while momentum is still at end_below or more, else 0; never more than "days" after it began."""
+    cfg = cfg or viral_cfg()
+    mc = cfg["mega"]
+    since = s.get("mega_since")
+    try: age = (today - dt.date.fromisoformat(since)).days if since else 0
+    except ValueError: age, since = 0, None
+    if since and age >= int(cfg["days"]): return 0
+    tier = mega_places(momentum, views, cfg)
+    if tier:
+        if not since: s["mega_since"] = str(today)
+        s["mega_peak"] = max(int(s.get("mega_peak") or 0), tier)
+        return tier
+    if since and momentum is not None and float(momentum) >= float(mc.get("end_below") or 3):
+        return max(2, -(-int(s.get("mega_peak") or 0) // 2))
+    return 0
 
 
 def norm(s):
@@ -281,11 +349,11 @@ def _verdicts():
     except Exception: return {}
 
 
-def angle_order(cfg, first_seen, today):
+def angle_order(cfg, first_seen, today, mega=False):
     """The angles to offer, best first: a "push" verdict first, a "cut back" one last, a paused one left out (unless all
-    are); the rest rotate a step a day so a different angle leads each day."""
+    are); the rest rotate a step a day so a different angle leads each day. mega: the mega trend angles too."""
     v = _verdicts()
-    keys = [a["key"] for a in cfg["angles"]]
+    keys = [a["key"] for a in (all_angles(cfg) if mega else cfg["angles"])]
     if not keys: return []
     k = max(0, (today - first_seen).days) % len(keys)
     keys = keys[k:] + keys[:k]
@@ -341,7 +409,12 @@ def viral_items(today, got, latest=None, pv=None):
         if SKIP.search(c["title"]) or UNSAFE.search(c["title"]) or UNSAFE.search(c["page"] or "") or META.search(c["title"]): continue
         hits = [x for x in texts if f" {key} " in x[3]]
         fams = sorted({x[0] for x in hits} | ({"Wikipedia top pages"} if c["page"] else set()))
-        if len(fams) < int(cfg["min_sources"]): continue
+        pm = None                                 # the page's momentum, when read
+        if len(fams) < int(cfg["min_sources"]):   # too few sources: only a mega trend (momentum alone) goes on
+            if wname: mega = mega_places(watch.get(wname, {}).get("momentum"), watch.get(wname, {}).get("views_yesterday"), cfg)
+            elif c["page"]: pm = _momentum(pv(c["page"])); mega = mega_places(pm, c["top"], cfg)
+            else: mega = 0
+            if not mega: continue
         heads = [x[1] for x in hits]
         bad = sum(1 for h in heads if SKIP.search(h) or (not wname and NEGATIVE.search(h)))
         grim = sum(1 for h in heads if GRIM.search(h))
@@ -355,13 +428,18 @@ def viral_items(today, got, latest=None, pv=None):
         if any(sum(1 for h in heads if f" {k} " in f" {norm(h)} ") * 2 >= max(1, len(heads)) for _, k in chosen): continue   # part of a story already picked
         cats = [x[2] for x in hits if x[2]] + [cat for pat, cat in PAREN_CAT if c["paren"] and re.search(pat, c["paren"])][:1] * 2
         if not cats: continue                     # no category: politics, world news or a person with no story of ours
+        m = None
         if c["page"]:
-            m = _momentum(pv(c["page"]))
+            m = pm if pm is not None else _momentum(pv(c["page"]))
             if m is not None and m < float(cfg["momentum"]): continue
         if sum(1 for n, _ in chosen if n not in watch) >= int(cfg["max_items"]): continue
         name = re.sub(r"\s+", " ", c["title"]).strip()
         chosen.append((name, key))
-        autos.append({"name": name, "category": max(set(cats), key=cats.count), "terms": [name], "wiki": c["page"], "in": fams})
+        autos.append({"name": name, "category": max(set(cats), key=cats.count), "terms": [name], "wiki": c["page"], "in": fams,
+                      "momentum": m, "views": c["top"] or None})
+    for g in got:                                 # a watch item surging that hard is a mega trend whatever the sources say
+        if not any(n == g["name"] for n, _ in chosen) and mega_places(g.get("momentum"), g.get("views_yesterday"), cfg):
+            chosen.append((g["name"], bare(g["name"])))
     # the rolling state: a topic stays while it was hot yesterday or today, for up to "days" days from its first day
     for name, key in chosen:
         s = st.get(name) or {}
@@ -370,7 +448,7 @@ def viral_items(today, got, latest=None, pv=None):
         if gap > 3: s = {"first_seen": str(today)}
         s.update(last_hot=str(today), key=key, watch=name in watch)
         a = next((x for x in autos if x["name"] == name), None)
-        if a: s.update(category=a["category"], terms=a["terms"], wiki=a["wiki"], **{"in": a["in"]})
+        if a: s.update(category=a["category"], terms=a["terms"], wiki=a["wiki"], momentum=a["momentum"], views=a["views"], **{"in": a["in"]})
         st[name] = s
     live = {}
     for name, s in st.items():
@@ -378,30 +456,33 @@ def viral_items(today, got, latest=None, pv=None):
         except (KeyError, ValueError): continue
         if hot <= 1 and age < int(cfg["days"]): live[name] = s
     st = {n: s for n, s in st.items() if s.get("last_hot", "") >= str(today - dt.timedelta(days=30))}
-    try: viral_path().parent.mkdir(exist_ok=True); viral_path().write_text(json.dumps(st, indent=1, ensure_ascii=False))
-    except Exception as e: print("viral state:", str(e)[:120])
     out = []
     for name, s in live.items():
         first = dt.date.fromisoformat(s["first_seen"])
-        keys = angle_order(cfg, first, today)
-        topics = {k: next(a for a in cfg["angles"] if a["key"] == k)["topic"].format(name=name) for k in keys}
-        amap = {norm(t): k for k, t in topics.items()}
         g = watch.get(name)
         if g is None and s.get("watch"): continue            # a watch item taken off the list
+        m = g.get("momentum") if g is not None and g.get("momentum") is not None else s.get("momentum")
+        mega = mega_level(s, m, (g or {}).get("views_yesterday") or s.get("views"), today, cfg)
+        keys = angle_order(cfg, first, today, mega=bool(mega))
+        topics = {k: next(a for a in all_angles(cfg) if a["key"] == k)["topic"].format(name=name) for k in keys}
+        amap = {norm(t): k for k, t in topics.items()}
         if g is None:
-            g = {"name": name, "auto": True, "days_to": None, "phase": "viral", "momentum": None, "views_yesterday": None,
+            g = {"name": name, "auto": True, "days_to": None, "phase": "viral", "momentum": m, "views_yesterday": s.get("views"),
                  "views_usual": None, "views_30d": [], "news_24h": None, "news_usual": None, "suggestions": [],
                  "in": s.get("in") or [], "category": s.get("category", ""), "terms": s.get("terms") or [name], "angles": [],
                  "rules": cfg["rules"], "wikipedia": s.get("wiki")}
             out.append(g)
         else:
             g["rules"] = (str(g.get("rules") or "") + " " + cfg["rules"]).strip()
-        g.update(viral=True, viral_since=s["first_seen"], angle_map=amap,
+        g.update(viral=True, viral_since=s["first_seen"], angle_map=amap, mega=mega,
                  level=g.get("level") if g.get("level") == "launch" else "surging",
-                 places=max(int(g.get("places") or 0), int(cfg["places"])))
+                 places=max(int(g.get("places") or 0), int(cfg["places"]), mega))
+        if mega: g.update(mega_since=s.get("mega_since"), mega_peak=s.get("mega_peak"))
         mine = list(topics.values())
         own = [a for a in g.get("angles") or [] if norm(a) not in amap]
         g["angles"] = mine + (own if (g.get("days_to") is None or g["days_to"] > 0) else [])
+    try: viral_path().parent.mkdir(exist_ok=True); viral_path().write_text(json.dumps(st, indent=1, ensure_ascii=False))
+    except Exception as e: print("viral state:", str(e)[:120])
     return out
 
 
@@ -415,11 +496,54 @@ def viral_key(p, items=None):
     return None
 
 
+def mega_item(p, items=None):
+    """The watch item of a mega trend a topic belongs to (its signal names an item with mega places today), or None."""
+    s = str(p.get("signal", ""))
+    if not s.startswith("watchlist: "): return None
+    for it in (items if items is not None else (state().get("items") or [])):
+        if it.get("mega") and s.startswith(f"watchlist: {it['name']} ("): return it
+    return None
+
+
 _MADE = {}
 
 
-def viral_made(name):
-    """[(created, angle, title)] of the viral Shorts already made about an item (every board folder), oldest first."""
+def board_title(b):
+    """A board's title: boards keep it in meta.title (a top-level "title" only on older or hand-made ones)."""
+    return str(b.get("title") or (b.get("meta") or {}).get("title") or "") if isinstance(b, dict) else ""
+
+
+_MEGA_N = None
+
+
+def mega_boards(day, channel="main", fresh=False):
+    """How many Shorts of a mega trend a channel's day (the boards' "created" date) holds, in every board folder but
+    expired: the Shorts written on top of the day's number (writer.py), so plan.py adds a slot for each and quota.py keeps
+    room for them, and they go out that day. The folders are read once a process (`fresh` reads them again)."""
+    global _MEGA_N
+    if _MEGA_N is None or fresh:
+        _MEGA_N = {}
+        for d in ("queue", "ready", "done", "failed"):
+            for f in (BOARDS / d).glob("QD-*.json"):
+                try:
+                    txt = f.read_text()
+                    if '"mega"' not in txt: continue
+                    b = json.loads(txt)
+                except Exception: continue
+                if b.get("mega"):
+                    k = (str(b.get("created") or "")[:10], b.get("channel") or "main")
+                    _MEGA_N[k] = _MEGA_N.get(k, 0) + 1
+    return _MEGA_N.get((str(day)[:10], channel), 0)
+
+
+def _made_key(name, channel="main"):
+    """viral_made's key: the item's name for the main channel, "<channel>:<name>" for another (a fitting channel's own angles
+    of a mega trend never use the main channel's)."""
+    return name if (channel or "main") == "main" else f"{channel}:{name}"
+
+
+def viral_made(name, channel="main"):
+    """[(created, angle, title)] of the viral Shorts a channel already made about an item (every board folder), oldest first."""
     if not _MADE:
         _MADE[None] = True
         for d in ("queue", "ready", "done", "failed", "expired"):
@@ -431,29 +555,42 @@ def viral_made(name):
                 except Exception: continue
                 k = (b.get("test") or {}).get("viral_angle") if isinstance(b.get("test"), dict) else None
                 if k and b.get("watch") and not b.get("mirror_of"):      # a Spanish mirror is the same Short
-                    _MADE.setdefault(b["watch"], []).append((str(b.get("created") or ""), k, str(b.get("title") or "")))
+                    _MADE.setdefault(_made_key(b["watch"], b.get("channel")), []).append((str(b.get("created") or ""), k, board_title(b)))
         for v in _MADE.values():
             if isinstance(v, list): v.sort()
-    return list(_MADE.get(name) or [])
+    return list(_MADE.get(_made_key(name, channel)) or [])
+
+
+def angle_count(item, key, today=None, extra=(), channel="main"):
+    """How many Shorts an angle already has where it counts: today for a daily angle, since the push began for a once one.
+    extra: boards written in this run, not yet in the folders. channel: whose Shorts (each channel has its own count)."""
+    today = str(today or dt.date.today())
+    rep = next((a.get("repeat", "daily") for a in all_angles() if a["key"] == key), "daily")
+    made = [(c, k) for c, k, _ in viral_made(item["name"], channel)]
+    made += [(str(b.get("created") or ""), (b.get("test") or {}).get("viral_angle")) for b in extra
+             if b.get("watch") == item["name"] and isinstance(b.get("test"), dict) and (b.get("channel") or "main") == channel
+             and not b.get("mirror_of")]
+    if rep == "once": return sum(1 for c, k in made if k == key and c >= str(item.get("viral_since") or ""))
+    return sum(1 for c, k in made if k == key and c == today)
 
 
 def angle_due(item, key, today=None, extra=()):
     """Whether an angle is due: a daily one when none was made for today, a once one when none since the item went viral.
-    extra: boards written in this run, not yet in the folders."""
-    today = str(today or dt.date.today())
-    rep = next((a.get("repeat", "daily") for a in viral_cfg()["angles"] if a["key"] == key), "daily")
-    made = [(c, k) for c, k, _ in viral_made(item["name"])]
-    made += [(str(b.get("created") or ""), (b.get("test") or {}).get("viral_angle")) for b in extra
-             if b.get("watch") == item["name"] and isinstance(b.get("test"), dict)]
-    if rep == "once": return not any(k == key and c >= str(item.get("viral_since") or "") for c, k in made)
-    return not any(k == key and c == today for c, k in made)
+    A mega trend's daily angle may run mega.repeat times a day (each from different sources: the writer's covered check)."""
+    rep = next((a.get("repeat", "daily") for a in all_angles() if a["key"] == key), "daily")
+    n = angle_count(item, key, today, extra)
+    if rep == "once": return n == 0
+    return n < (max(1, int(viral_cfg()["mega"].get("repeat", 1))) if item.get("mega") else 1)
 
 
 def viral_titles(item, extra=(), n=8):
-    """The latest titles already made about a viral item since it went viral (the writer's "do not repeat" list)."""
+    """The latest titles already made about a viral item since it went viral, on every channel (the writer's "do not repeat"
+    list)."""
     since = str(item.get("viral_since") or "")
-    got = [(c, t) for c, _, t in viral_made(item["name"]) if c >= since]
-    got += [(str(b.get("created") or ""), str(b.get("title") or "")) for b in extra if b.get("watch") == item["name"]]
+    viral_made(item["name"])                                                  # fills _MADE
+    keys = [k for k in _MADE if isinstance(k, str) and (k == item["name"] or k.endswith(":" + item["name"]))]
+    got = [(c, t) for k in keys for c, _, t in _MADE[k] if c >= since]
+    got += [(str(b.get("created") or ""), board_title(b)) for b in extra if b.get("watch") == item["name"]]
     return [t for _, t in sorted(got) if t][-n:]
 
 
@@ -485,7 +622,8 @@ def run(today=None):
         wr = csv.DictWriter(f, fieldnames=fields); wr.writeheader(); wr.writerows(rows[-2000:])
     for g in got:
         if g.get("viral"): print(f"viral: {g['name']} ({'auto, ' if g.get('auto') else ''}{g.get('category')}) since {g.get('viral_since')}: "
-                                 f"{g['places']} places, angles " + ", ".join((g.get('angle_map') or {}).values()))
+                                 f"{g['places']} places" + (f" (MEGA trend, peak {g.get('mega_peak')} since {g.get('mega_since')})" if g.get('mega') else "")
+                                 + ", angles " + ", ".join((g.get('angle_map') or {}).values()))
         print(f"watch: {g['name']}: {g['level']}, {g['days_to']} day(s) to go, momentum {g['momentum']}, "
               f"{g['views_yesterday']} Wikipedia views (usual {g['views_usual']}), {g['news_24h']} articles in 24 h, in {g['in'] or 'nothing'}")
         if g["level"] in ("surging", "launch") and (prev.get(g["name"]) or {}).get("level") not in ("surging", "launch") and not g.get("auto"):

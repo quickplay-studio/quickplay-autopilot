@@ -153,7 +153,8 @@ def reserve_step(lines):
         for p in (ROOT / "boards" / d).glob("QD-*.json"):
             try: b = json.loads(p.read_text())
             except Exception: continue
-            if b.get("created") == today and not b.get("reserve") and (b.get("channel") or "main") == "main": made += 1
+            if b.get("created") == today and not b.get("reserve") and not b.get("mega") and (b.get("channel") or "main") == "main":
+                made += 1                                    # a mega trend's Shorts come on top of the day's number
     used = sum(1 for d in ("ready", "done") for p in (ROOT / "boards" / d).glob("QD-*.json") if load_status(p.stem).get("from_reserve") == today)
     want = quota.target() - (1 if uk.weekday() == 6 else 0)     # Sundays keep one for the weekly video
     gap = min(int(plan.CFG.get("reserve_per_day", 3)) - used, want - made - used)

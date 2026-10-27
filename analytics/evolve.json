@@ -43,6 +43,21 @@
    "status": "live",
    "text": "Follow the first number in the script with a short everyday comparison that makes its scale vivid, such as a working day or a phone's storage, using only facts from the pack.",
    "why": "Winners like 12 hours and 27 GB land because the number feels concrete, while weak Shorts leave figures abstract."
+  },
+  "g004": {
+   "a_text": "",
+   "b_text": "Keep the first sentence to 12 words or fewer and cut any background clause about when, where or what something is, unless that detail is itself the surprise.",
+   "born": "2026-10-27",
+   "by": "claude:opus",
+   "effect": "",
+   "kind": "new",
+   "label": "First sentence 12 words, no background",
+   "lineage": "g004",
+   "metric": "engaged",
+   "parent": "",
+   "status": "live",
+   "text": "Keep the first sentence to 12 words or fewer and cut any background clause about when, where or what something is, unless that detail is itself the surprise.",
+   "why": "The weakest openings spend their first seconds on textbook setup like release dates and 'occurs annually', while the strongest get straight to the surprising fact."
   }
  },
  "history": [],
@@ -84,6 +99,10 @@
     "a",
     "b"
    ],
+   "gene:g004": [
+    "a",
+    "b"
+   ],
    "hook_type": [
     "statement",
     "number"
@@ -108,6 +127,7 @@
    "fx_opening": "round 1",
    "fx_slot": "round 1",
    "gene:g003": "gene",
+   "gene:g004": "gene",
    "hook_type": "round 1",
    "length": "round 1",
    "title_search": "round 1"
@@ -124,6 +144,7 @@
    "fx_opening": "2026-10-25",
    "fx_slot": "2026-10-25",
    "gene:g003": "2026-10-26",
+   "gene:g004": "2026-10-27",
    "hook_type": "2026-10-25",
    "length": "2026-10-25",
    "title_search": "2026-10-25"
@@ -147,5 +168,5 @@
    "wins": 0
   }
  },
- "updated": "2026-10-26"
+ "updated": "2026-10-27"
 }

@@ -5,3 +5,4 @@ date,action,factor,arms,source,verdict,effect,note
 2026-10-26,drop,gene:g001,a vs b,gene,,,retired before any Short used it: it overlapped the hook test (Claude review)
 2026-10-26,drop,gene:g002,a vs b,gene,,,retired before any Short used it: it overlapped the hook test (Claude review)
 2026-10-26,open,gene:g003,a vs b,gene,,,"Compare the number to something familiar: Follow the first number in the script with a short everyday comparison that makes its scale vivid, such as a working day or a phone's storage, using only facts from the pack. (by claude:opus)"
+2026-10-27,open,gene:g004,a vs b,gene,,,"First sentence 12 words, no background: Keep the first sentence to 12 words or fewer and cut any background clause about when, where or what something is, unless that detail is itself the surprise. (by claude:opus) (an opening gene, judged on the engaged share)"

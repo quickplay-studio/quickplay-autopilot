@@ -1,0 +1,159 @@
+{
+ "id": "QD-211",
+ "board": "boards/queue/QD-211.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T13:30:00Z",
+ "rendered": "2026-10-27T10:37:01.886009+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Game Facts #5: GTA 6: 17% spike in time off requests",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "death-duel",
+ "social_music": "cool-powerful-hard-rock-243776",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 28.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 670.3,
+   "contrast": 0.251,
+   "face_area": 0.0,
+   "text_area": 0.2364,
+   "caption_contrast": 14.19,
+   "by_frame": {
+    "sharpness": [
+     648.9,
+     716.0,
+     713.6,
+     602.9
+    ],
+    "contrast": [
+     0.249,
+     0.248,
+     0.252,
+     0.253
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2377,
+     0.2337,
+     0.2431,
+     0.2311
+    ],
+    "caption_contrast": [
+     14.2,
+     14.18,
+     19.71,
+     14.0
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.02,
+   "none",
+   2
+  ],
+  [
+   4.02,
+   9.37,
+   "none",
+   4
+  ],
+  [
+   9.37,
+   14.7,
+   "none",
+   4
+  ],
+  [
+   14.7,
+   19.34,
+   "none",
+   3
+  ],
+  [
+   19.34,
+   23.87,
+   "none",
+   3
+  ],
+  [
+   23.87,
+   28.59,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "89547",
+   "q": "neon city night",
+   "t0": 0.0,
+   "t1": 28.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T10:46:01Z",
+ "video": "kaI4B_oT77A",
+ "url": "https://youtube.com/shorts/kaI4B_oT77A",
+ "publish_at": "2026-10-27T13:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T13:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-211"
+}

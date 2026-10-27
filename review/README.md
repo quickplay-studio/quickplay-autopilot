@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 2 public, 15 scheduled | 0 | 1 | ⏳ 2 of 15 so far, 15 more scheduled |
+| Tue 27 Oct | 2 public, 16 scheduled | 0 | 1 | ⏳ 2 of 15 so far, 16 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -77,10 +77,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-201** Film Facts #1: Wildwood runtime sets a stop-motion record 🎬 (rendering next)
 
 ## On the channel (latest first)
 

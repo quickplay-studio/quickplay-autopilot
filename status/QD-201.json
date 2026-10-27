@@ -1,0 +1,135 @@
+{
+ "id": "QD-201",
+ "board": "boards/queue/QD-201.json",
+ "mode": "schedule",
+ "slot": "2026-10-27T10:00:00Z",
+ "rendered": "2026-10-27T03:55:18.291803+00:00",
+ "title": "Film Facts #1: Wildwood runtime sets a stop-motion record 🎬",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 27.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 354.9,
+   "contrast": 0.183,
+   "face_area": 0.2589,
+   "text_area": 0.0382,
+   "caption_contrast": 3.56,
+   "by_frame": {
+    "sharpness": [
+     340.8,
+     344.8,
+     373.7,
+     360.2
+    ],
+    "contrast": [
+     0.182,
+     0.183,
+     0.183,
+     0.183
+    ],
+    "face_area": [
+     0.2618,
+     0.25,
+     0.2533,
+     0.2704
+    ],
+    "text_area": [
+     0.0393,
+     0.0392,
+     0.0392,
+     0.0353
+    ],
+    "caption_contrast": [
+     2.98,
+     2.96,
+     4.14,
+     4.16
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.72,
+   "none",
+   3
+  ],
+  [
+   5.72,
+   11.42,
+   "none",
+   4
+  ],
+  [
+   11.42,
+   16.55,
+   "none",
+   3
+  ],
+  [
+   16.55,
+   20.64,
+   "none",
+   3
+  ],
+  [
+   20.64,
+   27.16,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1630",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 27.16
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T04:04:47Z",
+ "video": "uDAbDV2tGw4",
+ "url": "https://youtube.com/shorts/uDAbDV2tGw4",
+ "publish_at": "2026-10-27T10:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-27T10:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-201"
+}

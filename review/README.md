@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 15:50): 17 of 1,000 subscribers · 11,338 of 10 million Shorts views in 90 days · 4,320 views in the last 24 hours (about 110,985 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 16:52): 17 of 1,000 subscribers · 11,353 of 10 million Shorts views in 90 days · 4,169 views in the last 24 hours (about 110,985 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 16:33 (UK): 6 scheduled, 143 public, 21 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 15 scheduled |
-| Tue 27 Oct | 22 public, 5 scheduled | 8 | 1 | ✅ done |
+| Tue 27 Oct | 23 public, 4 scheduled | 8 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -106,7 +106,7 @@ scheduled · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · 
 ![QD-214](QD-214.jpg)
 
 ### Tue 27 Oct 17:00 · GTA 6 hits consoles on 19 November 🎮
-scheduled · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json) · [YouTube](https://youtube.com/shorts/GMcm2UzwGN0)
+private · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json) · [YouTube](https://youtube.com/shorts/GMcm2UzwGN0)
 
 ![QD-209](QD-209.jpg)
 

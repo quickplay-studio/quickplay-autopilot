@@ -1,0 +1,174 @@
+{
+ "id": "QD-225",
+ "board": "boards/queue/QD-225.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T13:30:00Z",
+ "rendered": "2026-10-27T19:32:20.666889+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Science Explained #2: How gravity works: science explained 🌌",
+ "background_notes": [
+  "NASA 'earth from orbit': nothing usable (40 results, 7 news or captioned)",
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "event-horizon",
+ "social_music": "space-ambient-cinematic-442834",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 42.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 23.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 695.0,
+   "contrast": 0.243,
+   "face_area": 0.1976,
+   "text_area": 0.0442,
+   "caption_contrast": 10.26,
+   "by_frame": {
+    "sharpness": [
+     785.0,
+     857.8,
+     818.9,
+     318.2
+    ],
+    "contrast": [
+     0.239,
+     0.243,
+     0.246,
+     0.245
+    ],
+    "face_area": [
+     0.224,
+     0.2209,
+     0.232,
+     0.1133
+    ],
+    "text_area": [
+     0.048,
+     0.0478,
+     0.048,
+     0.0331
+    ],
+    "caption_contrast": [
+     10.39,
+     10.28,
+     10.24,
+     5.93
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.23,
+   "none",
+   2
+  ],
+  [
+   4.23,
+   11.87,
+   "none",
+   5
+  ],
+  [
+   11.87,
+   17.82,
+   "none",
+   4
+  ],
+  [
+   17.82,
+   22.91,
+   "none",
+   3
+  ],
+  [
+   22.91,
+   26.65,
+   "none",
+   3
+  ],
+  [
+   26.65,
+   30.69,
+   "none",
+   1
+  ],
+  [
+   30.69,
+   39.05,
+   "none",
+   6
+  ],
+  [
+   39.05,
+   42.13,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "204738",
+   "q": "galaxy stars space",
+   "t0": 0.0,
+   "t1": 42.13
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T19:56:49Z",
+ "video": "JX9L5J_0LFY",
+ "url": "https://youtube.com/shorts/JX9L5J_0LFY",
+ "publish_at": "2026-10-28T13:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T13:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-225"
+}

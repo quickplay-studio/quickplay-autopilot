@@ -1,0 +1,146 @@
+{
+ "id": "QD-231",
+ "board": "boards/queue/QD-231.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T07:30:00Z",
+ "rendered": "2026-10-27T19:43:57.159585+00:00",
+ "channel": "irl",
+ "title": "Did You Know #5: Matthew Perry documentary: the cast secret",
+ "background_notes": [
+  "picked pixabay 1 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "flight-is-aight",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 35.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 16.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1034.8,
+   "contrast": 0.167,
+   "face_area": 0.0459,
+   "text_area": 0.1918,
+   "caption_contrast": 17.76,
+   "by_frame": {
+    "sharpness": [
+     840.2,
+     1096.9,
+     1102.9,
+     1099.2
+    ],
+    "contrast": [
+     0.148,
+     0.173,
+     0.173,
+     0.173
+    ],
+    "face_area": [
+     0.0448,
+     0.0455,
+     0.0462,
+     0.0469
+    ],
+    "text_area": [
+     0.1769,
+     0.2021,
+     0.1984,
+     0.1895
+    ],
+    "caption_contrast": [
+     17.79,
+     17.73,
+     17.6,
+     17.79
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.33,
+   "title",
+   0
+  ],
+  [
+   4.33,
+   9.85,
+   "none",
+   1
+  ],
+  [
+   9.85,
+   15.59,
+   "none",
+   1
+  ],
+  [
+   15.59,
+   22.14,
+   "none",
+   1
+  ],
+  [
+   22.14,
+   26.65,
+   "none",
+   1
+  ],
+  [
+   26.65,
+   31.79,
+   "none",
+   1
+  ],
+  [
+   31.79,
+   35.36,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "190484",
+   "q": "city lights night",
+   "t0": 0.0,
+   "t1": 35.36
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T19:57:00Z",
+ "video": "9LsDzPk4TGI",
+ "url": "https://youtube.com/shorts/9LsDzPk4TGI",
+ "publish_at": "2026-10-28T07:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T07:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

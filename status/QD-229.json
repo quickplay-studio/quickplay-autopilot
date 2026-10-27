@@ -1,0 +1,152 @@
+{
+ "id": "QD-229",
+ "board": "boards/queue/QD-229.json",
+ "mode": "schedule",
+ "slot": "",
+ "rendered": "2026-10-27T19:32:02.160034+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": ""
+  }
+ },
+ "title": "Why GTA 6 took over a decade to make 🎮",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media_notes": [
+  "beat 5 reused a nearby picture (commons-search:Lucia Caminos: no Commons image named 'Lucia Caminos')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 11,
+  "pic_found_share": 0.83,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1019",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 34.5,
+  "wps": 3.13,
+  "weak_beats": [],
+  "size_mb": 17.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 598.8,
+   "contrast": 0.251,
+   "face_area": 0.0523,
+   "text_area": 0.0708,
+   "caption_contrast": 9.89,
+   "by_frame": {
+    "sharpness": [
+     610.0,
+     626.2,
+     575.6,
+     583.3
+    ],
+    "contrast": [
+     0.251,
+     0.252,
+     0.25,
+     0.25
+    ],
+    "face_area": [
+     0.0529,
+     0.0499,
+     0.0537,
+     0.0529
+    ],
+    "text_area": [
+     0.0729,
+     0.0753,
+     0.0697,
+     0.0654
+    ],
+    "caption_contrast": [
+     9.98,
+     9.8,
+     8.88,
+     12.72
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.5,
+   "none",
+   3
+  ],
+  [
+   6.5,
+   12.46,
+   "none",
+   4
+  ],
+  [
+   12.46,
+   17.73,
+   "none",
+   4
+  ],
+  [
+   17.73,
+   24.53,
+   "none",
+   5
+  ],
+  [
+   24.53,
+   30.16,
+   "none",
+   4
+  ],
+  [
+   30.16,
+   34.47,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "awaiting approval",
+ "flags": [
+  "reserve: waits in boards/reserve to fill slots the day's writer runs leave empty",
+  "check: meta.sources: one site only; name it in the narration for breaking news"
+ ],
+ "preview_release": "preview-QD-229",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-101832210741b65f65cc"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "QD-227",
+ "board": "boards/queue/QD-227.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T16:00:00Z",
+ "rendered": "2026-10-27T19:32:23.842338+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Game Facts #6: gta 6 install size officially revealed at 210 GB",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "ego-chall",
+ "social_music": "sport-mortals-566578",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 36.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 539.3,
+   "contrast": 0.257,
+   "face_area": 0.0,
+   "text_area": 0.2334,
+   "caption_contrast": 15.36,
+   "by_frame": {
+    "sharpness": [
+     588.1,
+     585.5,
+     570.3,
+     413.3
+    ],
+    "contrast": [
+     0.248,
+     0.248,
+     0.252,
+     0.279
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2241,
+     0.266,
+     0.2257,
+     0.218
+    ],
+    "caption_contrast": [
+     16.17,
+     15.13,
+     14.04,
+     15.59
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.36,
+   "none",
+   3
+  ],
+  [
+   5.36,
+   11.59,
+   "none",
+   4
+  ],
+  [
+   11.59,
+   15.27,
+   "none",
+   3
+  ],
+  [
+   15.27,
+   21.53,
+   "none",
+   4
+  ],
+  [
+   21.53,
+   26.78,
+   "none",
+   4
+  ],
+  [
+   26.78,
+   31.3,
+   "none",
+   1
+  ],
+  [
+   31.3,
+   36.02,
+   "none",
+   3
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T19:56:53Z",
+ "video": "MOHuQDZpHZg",
+ "url": "https://youtube.com/shorts/MOHuQDZpHZg",
+ "publish_at": "2026-10-28T16:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T16:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-227"
+}

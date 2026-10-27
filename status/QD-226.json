@@ -1,0 +1,172 @@
+{
+ "id": "QD-226",
+ "board": "boards/queue/QD-226.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T08:00:00Z",
+ "rendered": "2026-10-27T19:32:32.255551+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "harry potter cast: Harry Gilby",
+ "background_notes": [
+  "picked pixabay 2 (+0 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons-search:Harry Gilby: no Commons image named 'Harry Gilby')",
+  "beat 2 reused a nearby picture (commons-search:Harry Potter HBO series: no Commons image named 'Harry Potter HBO series')",
+  "beat 6 reused a nearby picture (commons-search:Harry Gilby: no Commons image named 'Harry Gilby')"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 3,
+  "pic_found_share": 0.5,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "epic-orchestral-inspiration-572059",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 24.6,
+  "wps": 3.08,
+  "weak_beats": [],
+  "size_mb": 10.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 201.3,
+   "contrast": 0.151,
+   "face_area": 0.0,
+   "text_area": 0.1443,
+   "caption_contrast": 4.29,
+   "by_frame": {
+    "sharpness": [
+     186.8,
+     197.1,
+     205.4,
+     215.9
+    ],
+    "contrast": [
+     0.158,
+     0.153,
+     0.147,
+     0.145
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1479,
+     0.141,
+     0.1433,
+     0.1449
+    ],
+    "caption_contrast": [
+     4.26,
+     4.16,
+     4.33,
+     4.71
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.56,
+   "none",
+   2
+  ],
+  [
+   4.56,
+   8.82,
+   "none",
+   3
+  ],
+  [
+   8.82,
+   11.54,
+   "none",
+   2
+  ],
+  [
+   11.54,
+   15.27,
+   "none",
+   3
+  ],
+  [
+   15.27,
+   21.09,
+   "none",
+   4
+  ],
+  [
+   21.09,
+   24.62,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "296780",
+   "q": "movie theatre seats",
+   "t0": 0.0,
+   "t1": 12.61
+  },
+  {
+   "p": "pixabay",
+   "id": "4050",
+   "q": "film projector light",
+   "t0": 12.01,
+   "t1": 24.62
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-27T19:56:51Z",
+ "video": "ac1e8cuVq7Y",
+ "url": "https://youtube.com/shorts/ac1e8cuVq7Y",
+ "publish_at": "2026-10-28T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-226"
+}

@@ -82,7 +82,16 @@
     "vignette": 0.0,
     "lab": true,
     "parent": "natural",
-    "born": "2026-10-23"
+    "born": "2026-10-23",
+    "retired": "2026-10-27: 0.89x against 1.38x for natural over 14 Shorts"
+   },
+   "lab-grade-1027": {
+    "desc": "contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0",
+    "filter": "contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0)",
+    "vignette": 0.0,
+    "lab": true,
+    "parent": "natural",
+    "born": "2026-10-27"
    }
   },
   "opening": {
@@ -109,7 +118,8 @@
    "minimal": "2026-10-25: 1.05x against 1.26x for lab-captions-1019 over 18 Shorts"
   },
   "voice": {
-   "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts"
+   "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts",
+   "emma": "2026-10-27: 0.84x against 1.32x for michael over 16 Shorts"
   },
   "energy": {
    "calm": "2026-10-23: 0.57x against 1.65x for steady over 17 Shorts"
@@ -235,7 +245,25 @@
    "dimension": "opening",
    "change": "testing lab-opening-1026: the picture alone for 3 words, then the hook's card",
    "why": "one or two settings changed from the best so far, image_first"
+  },
+  {
+   "day": "2026-10-27",
+   "dimension": "voice",
+   "change": "retired emma",
+   "why": "0.84x against 1.32x for michael over 16 Shorts"
+  },
+  {
+   "day": "2026-10-27",
+   "dimension": "grade",
+   "change": "retired lab-grade-1023",
+   "why": "0.89x against 1.38x for natural over 14 Shorts"
+  },
+  {
+   "day": "2026-10-27",
+   "dimension": "grade",
+   "change": "testing lab-grade-1027: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0",
+   "why": "one or two settings changed from the best so far, natural"
   }
  ],
- "day": "2026-10-26"
+ "day": "2026-10-27"
 }

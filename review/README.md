@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 08:49): 17 of 1,000 subscribers · 10,850 of 10 million Shorts views in 90 days · 3,968 views in the last 24 hours (about 110,991 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 09:46): 17 of 1,000 subscribers · 10,400 of 10 million Shorts views in 90 days · 3,999 views in the last 24 hours (about 110,996 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 8:49 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 8:16).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 9:15).
 
 ## Posts by day
 
@@ -80,6 +80,13 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-208** gta 6: arrives on 19 November (Part 1) 🎮 (rendering next)
+- **QD-210** Music Explained #2: Who was Johann Sebastian Bach? (rendering next)
+- **QD-211** Game Facts #5: GTA 6: 17% spike in time off requests (rendering next)
+- **QD-212** Megan Thee Stallion's Thin Ice: the 1999 twist 🔥 (rendering next)
+- **QD-213** Alexander Skarsgård Wicker: the suit secret 🎬 (rendering next)
+- **QD-214** iPhone Duo screen problems: the replacement deal (rendering next)
+- **QD-215** Film Facts #2: kpop demon hunters song: the soundtrack history (rendering next)
+- **QD-216** Space Facts #1: The Signal on Planet 9 | a short story 🚀 (rendering next)
 
 ## On the channel (latest first)
 

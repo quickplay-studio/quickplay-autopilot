@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 13:43): 17 of 1,000 subscribers · 11,185 of 10 million Shorts views in 90 days · 4,385 views in the last 24 hours (about 110,987 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 13:55): 17 of 1,000 subscribers · 11,203 of 10 million Shorts views in 90 days · 4,440 views in the last 24 hours (about 110,987 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 13:43 (UK): 7 scheduled, 142 public, 22 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 15 scheduled |
-| Tue 27 Oct | 17 public, 7 scheduled | 4 | 1 | ✅ done |
+| Tue 27 Oct | 18 public, 6 scheduled | 4 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -78,6 +78,15 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-219** Film Explained #1: How Lord of the Rings Made Hobbits Small (rendering next)
+- **QD-220** Level Up #2: Top 5 best-selling games ever 🎮 (rendering next)
+- **QD-221** Did You Know #3: Eric Bauza: the voice legend we just lost 🎙️ (rendering next)
+- **QD-222** Did You Know #4: Walter Koenig: the Star Trek legend's final honour (rendering next)
+- **QD-223** Screen Time #4: Harry Potter: the character finally being cast (rendering next)
+- **QD-224** Match Day #2: Mitchell Lawrie faces Luke Littler on Netflix 🎯 (rendering next)
+
 ## On the channel (latest first)
 
 ### Wed 28 Oct 12:30 · Space Facts #1: The Signal on Planet 9 | a short story 🚀
@@ -111,7 +120,7 @@ scheduled · 24 s · music: comin-wit-it · [script](../boards/done/QD-212.json)
 ![QD-212](QD-212.jpg)
 
 ### Tue 27 Oct 14:00 · Game Facts #4: halloween 2026 game: the price drop you missed
-scheduled · 40 s · music: house-on-the-hill · [script](../boards/done/QD-207.json) · [YouTube](https://youtube.com/shorts/Ryp4jApiRtU)
+private · 40 s · music: house-on-the-hill · [script](../boards/done/QD-207.json) · [YouTube](https://youtube.com/shorts/Ryp4jApiRtU)
 
 ![QD-207](QD-207.jpg)
 

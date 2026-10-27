@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 06:47): 17 of 1,000 subscribers · 10,814 of 10 million Shorts views in 90 days · 4,133 views in the last 24 hours (about 110,991 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 07:51): 17 of 1,000 subscribers · 10,830 of 10 million Shorts views in 90 days · 4,114 views in the last 24 hours (about 110,991 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 7:51 (UK): 6 scheduled, 143 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 7 public, 11 scheduled | 2 | 1 | ⏳ 7 of 15 so far, 11 more scheduled |
+| Tue 27 Oct | 8 public, 10 scheduled | 2 | 1 | ⏳ 8 of 15 so far, 10 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -105,7 +105,7 @@ scheduled · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.js
 ![QD-190](QD-190.jpg)
 
 ### Tue 27 Oct 8:00 · Kylian Mbappé: the 87th minute moment that changed everything ⚽
-scheduled · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
+private · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
 
 ![QD-189](QD-189.jpg)
 

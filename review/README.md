@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 00:51): 17 of 1,000 subscribers · 10,742 of 10 million Shorts views in 90 days · 4,286 views in the last 24 hours (about 110,992 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 01:48): 17 of 1,000 subscribers · 10,747 of 10 million Shorts views in 90 days · 4,303 views in the last 24 hours (about 110,992 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Mon 26 Oct 19:15 (UK): 6 scheduled, 143 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 0 public, 17 scheduled | 0 | 0 | ⏳ 0 of 15 so far, 17 more scheduled |
+| Tue 27 Oct | 1 public, 16 scheduled | 0 | 0 | ⏳ 1 of 15 so far, 16 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -110,7 +110,7 @@ scheduled · 33 s · music: ten · [script](../boards/done/QD-195.json) · [YouT
 ![QD-195](QD-195.jpg)
 
 ### Tue 27 Oct 1:30 · Algol the Medusa star: why it winks 🌌
-scheduled · 37 s · music: majestic-12 · [script](../boards/done/QD-188.json) · [YouTube](https://youtube.com/shorts/wEznV2CypzI)
+private · 37 s · music: majestic-12 · [script](../boards/done/QD-188.json) · [YouTube](https://youtube.com/shorts/wEznV2CypzI)
 
 ![QD-188](QD-188.jpg)
 

@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 13:55): 17 of 1,000 subscribers · 11,203 of 10 million Shorts views in 90 days · 4,440 views in the last 24 hours (about 110,987 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 14:53): 17 of 1,000 subscribers · 11,310 of 10 million Shorts views in 90 days · 4,672 views in the last 24 hours (about 110,985 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 13:43 (UK): 7 scheduled, 142 public, 22 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 11:12).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 14:22).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 15 scheduled |
-| Tue 27 Oct | 18 public, 9 scheduled | 4 | 1 | ✅ done |
+| Tue 27 Oct | 18 public, 9 scheduled | 6 | 1 | ✅ done |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -130,12 +130,12 @@ public · 4 views · 21 s · music: pulsar · [script](../boards/done/QD-203.jso
 ![QD-203](QD-203.jpg)
 
 ### Tue 27 Oct 12:30 · gta 6: arrives on 19 November (Part 1) 🎮
-public · 1 views · 28 s · music: once-upon-a-time · [script](../boards/done/QD-208.json) · [YouTube](https://youtube.com/shorts/YUI_nWZsC-Y)
+public · 1 views · 28 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-208.json) · [YouTube](https://youtube.com/shorts/YUI_nWZsC-Y)
 
 ![QD-208](QD-208.jpg)
 
 ### Tue 27 Oct 12:00 · GTA 6 launch trailer: 24 days to go 🎮
-public · 29 views · 39 s · music: across-seas-and-lands · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
+public · 29 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
 
 ![QD-200](QD-200.jpg)
 

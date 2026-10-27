@@ -1,27 +1,6 @@
 {
- "date": "2026-10-26",
+ "date": "2026-10-27",
  "previous": {
-  "albums_gb": [
-   "THIS MUSIC MAY CONTAIN HOPE. by RAYE",
-   "The Art of Loving by Olivia Dean",
-   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
-   "FUDGE by Michael Kiwanuka",
-   "To Fall Asleep To by Rain Sounds"
-  ],
-  "albums_us": [],
-  "apps_gb": [
-   "ASDA",
-   "Lloyds Mobile Banking",
-   "ChatGPT",
-   "VibeShort: AI Short Dramas",
-   "Whatnot: Shop, Sell, Connect",
-   "InPost UK",
-   "Vinted: Shop & sell pre-loved",
-   "CrownCards - Trading Cards",
-   "StoryReel: Drama Shorts & TV"
-  ]
- },
- "lists": {
   "albums_gb": [
    "To Fall Asleep To by Rain Sounds",
    "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
@@ -54,6 +33,39 @@
   ],
   "albums_us": [
    "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy"
+  ]
+ },
+ "lists": {
+  "albums_gb": [
+   "The Art of Loving by Olivia Dean",
+   "To Fall Asleep To by Rain Sounds",
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
+   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
+   "THIS MUSIC MAY CONTAIN HOPE. by RAYE"
+  ],
+  "apps_gb": [
+   "DAZN: Stream Live Sports",
+   "ASDA",
+   "ChatGPT",
+   "Lloyds Mobile Banking",
+   "InPost UK",
+   "StoryReel: Drama Shorts & TV",
+   "Whatnot: Shop, Sell, Connect",
+   "Claude by Anthropic",
+   "Vinted: Shop & sell pre-loved"
+  ],
+  "albums_us": [],
+  "apps_us": [
+   "TikTok Pro - Events",
+   "Vinted: Pre-loved marketplace",
+   "Muse from Meta",
+   "ChatGPT",
+   "Capital One Mobile",
+   "DAZN: Stream Live Sports",
+   "Trump Accounts: Official App",
+   "Claude by Anthropic",
+   "Kalshi: Trade Sports & Events",
+   "PineDrama - Short Dramas"
   ]
  }
 }

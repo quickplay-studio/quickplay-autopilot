@@ -1,5 +1,5 @@
 {
- "date": "2026-10-26",
+ "date": "2026-10-27",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
@@ -53,27 +53,27 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Ballon_d%27Or_2010",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Ballon d’Or 2026: updates from 70th edition in London – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/26/ballon-dor-2026-updates-from-70th-edition-in-london-live",
-     "published": "2026-10-26"
-    },
-    {
      "outlet": "BBC",
-     "title": "Kane prematurely announced as Ballon d'Or winner - but he wasn't only one",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cmly0g2y7q2zo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
+     "title": "'A dream come true' - Harry Kane on his Ballon d'Or win",
+     "url": "https://www.bbc.co.uk/news/videos/cm9wznvx1l17o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
     },
     {
      "outlet": "Sky Sports",
-     "title": "Kane, Mbappe and Lamine Yamal - who should win men's 2026 Ballon d'Or?",
-     "url": "https://www.skysports.com/football/news/12040/13601847/ballon-dor-2026-harry-kane-kylian-mbappe-and-lamine-yamal-in-race-for-mens-award-stats-and-pundits-opinions",
+     "title": "Winning MOMENT! Harry Kane claims 2026 Ballon d'Or award!",
+     "url": "https://www.skysports.com/watch/video/13604240/moment-harry-kane-claims-2026-ballon-dor-award",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "Ranking England's Ballon d'Or winners - how does Kane compare?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ckx2qdxgzzz7o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Harry Kane claims men’s Ballon d’Or to end England’s 25-year wait for winner",
+     "url": "https://www.theguardian.com/football/2026/oct/26/harry-kane-ends-englands-25-year-wait-for-a-mens-ballon-dor",
      "published": "2026-10-26"
     }
    ]
@@ -85,23 +85,42 @@
    "articles": [
     {
      "outlet": "New York Times",
-     "title": "Ballon d’Or 2026 live updates: List of today’s winners but were results revealed by accident?",
+     "title": "Harry Kane, Alexia Putellas lift 2026 Ballon d’Or trophies: Live updates and full results",
      "url": "https://www.nytimes.com/athletic/live-blogs/ballon-dor-2026-live-updates-results-time/sND0BDpI7kfj/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Ballon d'Or 2026 live updates: Winners, results and award ceremony",
-     "url": "https://www.usatoday.com/story/sports/soccer/2026/10/26/ballon-dor-2026-live-winners-results-updates--live/92442487007/",
      "published": "2026-10-26"
     }
    ]
   },
   {
+   "topic": "The Celebrity Traitors",
+   "signal": "watchlist: The Celebrity Traitors (launch, 3 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "Disney+ & Channel 4 Strike Landmark Deal In UK",
+     "url": "https://deadline.com/2026/10/disney-plus-channel-4-strike-uk-content-deal-maya-celeb-sas-1237173234/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
    "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (surging, 5 days to go)",
+   "signal": "watchlist: Halloween 2026 (surging, 4 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween_(2026_video_game)",
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Fritters and chocolate cake: Thomasina Miers’ recipes for cooking with pumpkin",
+     "url": "https://www.theguardian.com/food/2026/oct/27/pumpkin-recipes-carrot-fritters-green-relish-chocolate-cake-thomasina-miers",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "Chlöe Bailey Dresses Up as ‘Hot Meg Griffin’ From ‘Family Guy’ for Halloween & SZA Loves It",
+     "url": "https://www.billboard.com/music/rb-hip-hop/chloe-bailey-hot-meg-griffin-family-guy-sza-reacts-1236368328/",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "PC Gamer",
      "title": "What to play this Halloween, plus last-minute costume ideas and spooky movie recommendations",
@@ -113,49 +132,56 @@
      "title": "Stuck for a Halloween outfit? Set phasers to stunning with the best Star Trek costumes",
      "url": "https://www.space.com/entertainment/space-toys-lego/stuck-for-a-halloween-outfit-set-phasers-to-stunning-with-the-best-star-trek-costumes",
      "published": "2026-10-26"
-    },
+    }
+   ]
+  },
+  {
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (surging, 4 days to go)",
+   "wikipedia": null,
+   "articles": [
     {
-     "outlet": "IGN",
-     "title": "Interactive Storytelling App OOC Introduces Halloween Event with Special Rewards",
-     "url": "https://www.ign.com/articles/interactive-storytelling-app-ooc-introduces-halloween-event-with-special-rewards",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "The 13 scariest, spookiest video games you should play this Halloween",
-     "url": "https://www.eurogamer.net/13-scariest-spookiest-video-games-this-halloween",
-     "published": "2026-10-26"
+     "outlet": "USA Today",
+     "title": "Google’s top Halloween costumes for 2026 include ‘Obsession’",
+     "url": "https://www.usatoday.com/story/money/2026/10/14/google-trending-halloween-costumes/92254505007/",
+     "published": "2026-10-14"
     }
    ]
   },
   {
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/GTA_6",
    "articles": [
+    {
+     "outlet": "PC Gamer",
+     "title": "One day before launch, ARPG Emberville gets delayed until 2027",
+     "url": "https://www.pcgamer.com/games/rpg/one-day-before-launch-arpg-emberville-gets-delayed-until-2027/",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
+     "url": "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "GTA 6's Rumored Lucia Actor Breaks Silence With Rare Live Appearance",
+     "url": "https://www.polygon.com/gta-6-manni-perez-lucia-caminos-actor-who-is-instagram-live-money/",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "GameSpot",
      "title": "GTA 6 Coffee Is Here To Keep You Warm Until The Game Releases",
      "url": "https://www.gamespot.com/articles/gta-6-coffee-is-here-to-keep-you-warm-until-the-game-releases/",
      "published": "2026-10-26"
-    },
-    {
-     "outlet": "Xbox Wire",
-     "title": "Watch the Official Grand Theft Auto VI Launch Trailer – Explore Leonida Before the Game Arrives November 19",
-     "url": "https://news.xbox.com/en-us/2026/10/23/watch-the-official-grand-theft-auto-vi-launch-trailer-explore-leonida-before-the-game-arrives-november-19/",
-     "published": "2026-10-23"
-    },
-    {
-     "outlet": "IGN",
-     "title": "First GTA 6 TV Commercial Strips Out Steamy Shower Scenes, but Shows More of Lucia's Fancy Hair Tech",
-     "url": "https://www.ign.com/articles/gta-6-tv-commercial-strips-shower-scene-doesnt-mention-xbox",
-     "published": "2026-10-22"
     }
    ]
   },
   {
    "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (build-up, 24 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Gas_Price",
    "articles": [
     {
@@ -175,14 +201,39 @@
      "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
      "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
      "published": "2026-06-25"
+    },
+    {
+     "outlet": "Variety",
+     "title": "‘GTA 6’ Price Still Not Revealed, but Take-Two Chief Says Rockstar on Track to Begin Marketing This Summer",
+     "url": "https://variety.com/2026/gaming/news/gta-5-no-delay-price-marketing-summer-1236755303/",
+     "published": "2026-05-21"
+    }
+   ]
+  },
+  {
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 23 days to go)",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6’s Extended Look Trailer Seemingly Paid Off For Netflix With Massive Viewership",
+     "url": "https://www.gamespot.com/articles/gta-6s-extended-look-trailer-seemingly-paid-off-for-netflix-with-massive-viewership/",
+     "published": "2026-09-01"
     }
    ]
   },
   {
    "topic": "The Hunger Games: Sunrise on the Reaping",
-   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 25 days to go)",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 24 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games:_Sunrise_on_the_Reaping",
    "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Hunger Games Director Hopes You Aren't Too Distracted With GTA 6 to See Sunrise on the Reaping",
+     "url": "https://www.ign.com/articles/hunger-games-director-hopes-you-arent-too-distracted-with-gta-6-to-see-sunrise-on-the-reaping",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "Deadline",
      "title": "‘The Hunger Games: Sunrise On The Reaping’ Red Carpet Photos: All Of Joseph Zada & Mckenna Grace’s Looks From Press Tour",
@@ -192,110 +243,219 @@
    ]
   },
   {
-   "topic": "gpt-6.1",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/GPT-6.1",
+   "topic": "Thin Ice by Megan Thee Stallion",
+   "signal": "Apple Music US: new in the top 25",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "9to5Mac",
-     "title": "OpenAI upgrades ChatGPT and Codex with new GPT-6.1 Terra model",
-     "url": "https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model/",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "OpenAI launches GPT-6.1 Sol, says it nearly matches GPT-6 Astra and costs less",
-     "url": "https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/",
-     "published": "2026-09-29"
-    },
-    {
-     "outlet": "Ars Technica",
-     "title": "OpenAI says planned GPT-6.1 is too insecure to release",
-     "url": "https://arstechnica.com/ai/2026/09/openai-says-planned-gpt-6-1-is-too-insecure-to-release/",
-     "published": "2026-09-29"
+     "outlet": "Billboard",
+     "title": "Megan Thee Stallion Flexes Her Rapping Chops & Hip Muscles in Limp Bizkit-Sampling ‘Thin Ice’ Video",
+     "url": "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-thin-ice-limp-bizkit-break-stuff-sample-1236363682/",
+     "published": "2026-10-20"
     }
    ]
   },
   {
-   "topic": "beyoncé",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Beyonc%C3%A9",
+   "topic": "wealth tax",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wealth_tax",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Beyoncé Explains Why Even People Who ‘Can’t Stand’ Her Music Like Her Hair-Care Products",
-     "url": "https://www.billboard.com/music/rb-hip-hop/beyonce-people-who-cant-stand-my-music-use-cecred-1236368006/",
+     "outlet": "Guardian",
+     "title": "Country diary: Our tiny island is awash with waxcaps | Tim Earl",
+     "url": "https://www.theguardian.com/environment/2026/oct/27/country-diary-our-tiny-island-is-awash-with-waxcaps",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "noah wyle",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Noah_Wyle",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "Ryan Gosling & Zach Shields Duo Dead Man’s Bones Returns With New Song Plus Music Video Starring Rain Spencer And Noah Jupe",
+     "url": "https://deadline.com/2026/10/ryan-gosling-dead-mans-bones-new-song-music-video-1237194091/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Noah Wyle Departs Verve After Two Years",
+     "url": "https://www.hollywoodreporter.com/business/business-news/noah-wyle-leaves-verve-1236671224/",
+     "published": "2026-08-11"
+    }
+   ]
+  },
+  {
+   "topic": "cricket",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Cricket",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "TNT Sports close to securing live UK rights for England white-ball cricket tour of Australia",
+     "url": "https://www.theguardian.com/sport/2026/oct/26/tnt-sports-close-to-securing-live-uk-rights-england-white-ball-limited-overs-tour-australia-cricket",
      "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "st. louis blues",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/St._Louis_Blues",
+   "topic": "m6 traffic",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/M93_Raffica",
    "articles": [
     {
-     "outlet": "New York Times",
-     "title": "St. Louis Blues projections: Why 2026-27 will be another season in mushy middle",
-     "url": "https://www.nytimes.com/athletic/7602819/2026/09/21/st-louis-blues-2026-27-preview-playoff-chances/",
+     "outlet": "Guardian",
+     "title": "‘It’s a better experience’: shoppers praise Oxford Street pedestrianisation",
+     "url": "https://www.theguardian.com/cities/2026/oct/27/shoppers-praise-oxford-street-pedestrianisation",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Cyberpunk 2077 Hits Its Biggest Steam Player Peak Since Phantom Liberty, And You Can Guess Why",
+     "url": "https://www.gamespot.com/articles/cyberpunk-2077-hits-its-biggest-steam-player-peak-since-phantom-liberty-and-you-can-guess-why/",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "topic": "barry keoghan",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Barry_Keoghan",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "How Irish Indie ‘Lemonade’ Landed Barry Keoghan in Between Beatles Shoots and Gave Him ‘Closure’ About Care System (EXCLUSIVE)",
+     "url": "https://variety.com/2026/film/news/barry-keoughan-irish-film-lemonade-between-beatles-shoots-1236854561/",
+     "published": "2026-09-10"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "Barry Keoghan Signs With CAA",
+     "url": "https://deadline.com/2026/08/barry-keoghan-signs-caa-1237040472/",
+     "published": "2026-08-14"
+    }
+   ]
+  },
+  {
+   "topic": "rockstar games",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Rockstar_Games",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "GTA 6 Coffee Is Here To Keep You Warm Until The Game Releases",
+     "url": "https://www.gamespot.com/articles/gta-6-coffee-is-here-to-keep-you-warm-until-the-game-releases/",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Rockstar Games' New Modding Policy Crushes Influencers' Dreams for Monetized GTA 6 RP Servers",
+     "url": "https://www.ign.com/articles/rockstar-games-new-modding-policy-crushes-influencers-dreams-for-monetized-gta-6-rp-servers",
      "published": "2026-09-21"
     }
    ]
   },
   {
-   "topic": "psg - lyon",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Psyonix",
+   "topic": "leylah fernandez",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Leylah_Fernandez",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Late own goal gives Liverpool point against London City Lionesses",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cmp3g9ee4e1lo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "aliaksandra sasnovich",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Aliaksandra_Sasnovich",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "How to Watch Aliaksandra Sasnovich vs. Ann Li at the 2025 Mutua Madrid Open: Live Stream, TV Channel",
+     "url": "https://ftw.usatoday.com/story/sports/2025/04/22/aliaksandra-sasnovich-ann-li-mutua-madrid-open-tennis-how-to-watch-online-live-stream-free-23-2025/83216605007/",
+     "published": "2025-04-22"
+    }
+   ]
+  },
+  {
+   "topic": "venus williams",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Venus_Williams",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "TV tonight: incredible photos of the ‘Black Is Beautiful’ movement",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/27/tv-tonight-incredible-photos-of-the-black-is-beautiful-movement",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Thunder's Williams requires surgery for broken leg and dislocated ankle",
+     "url": "https://www.skysports.com/basketball/news/12040/13604207/jalen-williams-oklahoma-city-thunder-star-requires-surgery-for-broken-leg-and-dislocated-ankle",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Man Utd lacked intensity & fight - Alderweireld",
+     "url": "https://www.bbc.co.uk/sport/football/videos/c6wyrg2vwjmgo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "How Liverpool's attack impressed against Brighton",
+     "url": "https://www.bbc.co.uk/sport/football/videos/ckq6nvp2ldz5o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-25"
+    }
+   ]
+  },
+  {
+   "topic": "pokimane",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Pokimane",
    "articles": [
     {
      "outlet": "Polygon",
-     "title": "Xbox Studio On Brink of Closure Gets More Time To Find a Home and Finish Marvel's Blade",
-     "url": "https://www.polygon.com/arkane-lyon-shutdown-delayed-dishonored-blade/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "As beloved Dishonored studio faces closure, Xbox agrees union request to extend negotiations deadline in hope of saving 217 jobs",
-     "url": "https://www.eurogamer.net/arkane-lyon-consultation-period-extended-december",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Arkane Lyon Gets Another Chance To Find A New Home And Finish Marvel’s Blade",
-     "url": "https://www.gamespot.com/articles/arkane-lyon-gets-another-chance-to-find-a-new-home-and-finish-marvels-blade/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Xbox Seeks Partner to Support Arkane Lyon as It Finishes Marvel's Blade, Extends Search for Buyer",
-     "url": "https://www.ign.com/articles/xbox-looks-for-development-partner-to-finish-marvels-blade",
-     "published": "2026-10-26"
+     "title": "Why Pokimane’s Vtubing Twitch stream has everyone talking",
+     "url": "https://www.polygon.com/2020/9/14/21436437/pokimane-imane-anys-twitch-vtubing-vtuber-anime-livestream-mainstream-popularity/",
+     "published": "2020-09-13"
     }
    ]
   },
   {
-   "topic": "state farm arena",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/State_Farm_Arena",
+   "topic": "superbad",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Superbad",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "The WNBA finals are a basketball wonderland – unless you’re part of the Maga machine",
-     "url": "https://www.theguardian.com/sport/2026/oct/25/the-wnba-finals-are-a-basketball-wonderland-unless-youre-part-of-the-maga-machine",
-     "published": "2026-10-25"
+     "outlet": "Deadline",
+     "title": "‘Superbad’ Wisconsin Dem Fundraiser Reunion Adds Emma Stone – Update",
+     "url": "https://deadline.com/2020/10/superbad-cast-reunites-jonah-hill-seth-rogen-for-wisconsin-democrats-1234602818/",
+     "published": "2020-10-26"
     }
    ]
   },
   {
-   "topic": "bird flu",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bird_flu",
+   "topic": "Clayface (film)",
+   "signal": "Wikipedia 207,969 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Bird flu outbreak at Utah mink farm sparks concerns about government response",
-     "url": "https://www.theguardian.com/us-news/2026/oct/25/bird-flu-utah-mink-farm-trump-administration",
-     "published": "2026-10-25"
+     "outlet": "Variety",
+     "title": "‘Ghosts: The Possession of Button House’ Scares Up U.K., Ireland Box Office Win",
+     "url": "https://variety.com/2026/film/box-office/ghosts-the-possession-of-button-house-uk-ireland-box-office-1236931821/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘Clayface’ Director James Watkins on the Tragic Ending, Joker Easter Eggs and His Star’s Secret Injury",
+     "url": "https://www.hollywoodreporter.com/movies/movie-features/clayface-director-tragic-ending-joker-easter-eggs-1236740387/",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -312,9 +472,9 @@
     },
     {
      "outlet": "USA Today",
-     "title": "Who is Sunny Balwani, Elizabeth Holmes' ex-boyfriend and Theranos COO?",
-     "url": "https://www.usatoday.com/story/entertainment/movies/2026/10/23/sunny-balwani-elizabeth-holmes-documentary/92381223007/",
-     "published": "2026-10-23"
+     "title": "Why it feels like we're being played by Elizabeth Holmes' documentary",
+     "url": "https://www.usatoday.com/story/entertainment/movies/2026/10/26/elizabeth-holmes-documentary-you-can-see-everything-real/92405470007/",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -357,241 +517,51 @@
    ]
   },
   {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 124,466 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
+   "topic": "🔴 BALLON D'OR 2026 LIVE / IS THE WINNER MBAPPE, YAMAL, KANE? / BALLON D’OR LIVE",
+   "signal": "YouTube GB 1,097,065/h",
+   "wikipedia": null,
    "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Winning MOMENT! Harry Kane claims 2026 Ballon d'Or award!",
+     "url": "https://www.skysports.com/watch/video/13604240/moment-harry-kane-claims-2026-ballon-dor-award",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Kane prematurely announced as Ballon d'Or winner - but he wasn't only one",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cmly0g2y7q2zo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
+    },
     {
      "outlet": "Guardian",
-     "title": "Lights out: the island that goes dark to save young seabirds – in pictures",
-     "url": "https://www.theguardian.com/environment/2026/oct/25/corvo-azores-corys-shearwaters-switch-off-saving-seabirds-aoe",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "Reuters",
-     "title": "US CDC confirms two measles-related deaths in 2026",
-     "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-cdc-confirms-two-measles-related-deaths-2026-2026-09-29/",
-     "published": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "topic": "Wildwood (film)",
-   "signal": "Wikipedia 118,435 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wildwood_(film)",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Is PG-13 'Wildwood' OK for little kids? A parent's guide",
-     "url": "https://www.usatoday.com/story/entertainment/movies/reviews/2026/10/22/wildwood-movie-2026-parents-guide-age-rating/92276297007/",
-     "published": "2026-10-22"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "‘Wildwood’ Review: A Magical, Stop-Motion Adventure",
-     "url": "https://www.nytimes.com/2026/10/22/movies/wildwood-review.html",
-     "published": "2026-10-22"
-    }
-   ]
-  },
-  {
-   "topic": "Ainsley Earhardt",
-   "signal": "Wikipedia 108,195 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ainsley_Earhardt",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "SC native Ainsley Earhardt marries Sean Hannity in Florida wedding",
-     "url": "https://www.usatoday.com/story/entertainment/2026/10/26/sean-hannity-ainsley-earhardt-marry-was-trump-at-wedding-who-attended/92440736007/",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "LISA",
-   "signal": "YouTube GB 681,440/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/LISA",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Lisa Ling Signs With CAA",
-     "url": "https://variety.com/2026/tv/news/lisa-ling-caa-1236931385/",
+     "title": "Harry Kane claims men’s Ballon d’Or to end England’s 25-year wait for winner",
+     "url": "https://www.theguardian.com/football/2026/oct/26/harry-kane-ends-englands-25-year-wait-for-a-mens-ballon-dor",
      "published": "2026-10-26"
     },
     {
-     "outlet": "Billboard",
-     "title": "LISA, Miley, Kacey Musgraves & John Mayer: New Music Friday Guide",
-     "url": "https://www.billboard.com/music/music-news/lisa-miley-kacey-musgraves-new-music-friday-guide-1236366499/",
-     "published": "2026-10-22"
+     "outlet": "BBC Sport",
+     "title": "Ballon d'Or winner Kane's best Bundesliga goals",
+     "url": "https://www.bbc.co.uk/sport/football/videos/cmd93gqn8119o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-26"
     }
    ]
   },
   {
    "topic": "Avengers: Doomsday",
-   "signal": "YouTube GB 304,225/h",
+   "signal": "YouTube GB 258,526/h",
    "wikipedia": "https://en.wikipedia.org/wiki/Avengers:_Doomsday",
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Elden Ring Movie Is Reportedly A $200 Million Gamble For A24",
-     "url": "https://www.gamespot.com/articles/elden-ring-movie-is-reportedly-a-200-million-gamble-for-a24/",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "LYON vs. GEN",
-   "signal": "YouTube GB 117,291/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Enid_Lyons",
-   "articles": [
-    {
      "outlet": "Polygon",
-     "title": "Xbox Studio On Brink of Closure Gets More Time To Find a Home and Finish Marvel's Blade",
-     "url": "https://www.polygon.com/arkane-lyon-shutdown-delayed-dishonored-blade/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "As beloved Dishonored studio faces closure, Xbox agrees union request to extend negotiations deadline in hope of saving 217 jobs",
-     "url": "https://www.eurogamer.net/arkane-lyon-consultation-period-extended-december",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Arkane Lyon Gets Another Chance To Find A New Home And Finish Marvel’s Blade",
-     "url": "https://www.gamespot.com/articles/arkane-lyon-gets-another-chance-to-find-a-new-home-and-finish-marvels-blade/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Xbox Seeks Partner to Support Arkane Lyon as It Finishes Marvel's Blade, Extends Search for Buyer",
-     "url": "https://www.ign.com/articles/xbox-looks-for-development-partner-to-finish-marvels-blade",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "Olivia Rodrigo",
-   "signal": "YouTube GB-music 84,223/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Olivia_Rodrigo",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "Tate McRae Beats Taylor Swift, Olivia Rodrigo in Billboard Hot 100 Race for … Number Two",
-     "url": "https://www.rollingstone.com/music/music-news/tate-mcrae-billboard-hot-100-number-two-olivia-rodrigo-1235645932/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Billboard Hot 100 Top 10 Countdown for Oct. 31, 2026 | Billboard News",
-     "url": "https://www.billboard.com/video/billboard-hot-100-top-10-countdown-october-31-2026/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "NME",
-     "title": "Billy Corgan on his respect for Olivia Rodrigo: “She’s not afraid”",
-     "url": "https://www.nme.com/news/music/billy-corgan-on-his-respect-for-olivia-rodrigo-shes-not-afraid-3974291?utm_source=rss&utm_medium=rss&utm_campaign=billy-corgan-on-his-respect-for-olivia-rodrigo-shes-not-afraid",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "FC BARCELONA 1",
-   "signal": "YouTube GB-sport 541,000/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/FC_Barcelona_1-1_Atl%C3%A9tico_Madrid_(2014)",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Late Mbappe goal earns Real win at Barca in dramatic Clasico",
-     "url": "https://www.bbc.co.uk/sport/football/videos/crje5zewk52no?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Mbappé double secures Real Madrid late victory at Barcelona after Raphinha leveller",
-     "url": "https://www.theguardian.com/football/2026/oct/25/barcelona-real-madrid-el-clasico-la-liga-match-report",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "brain training.. 🧠",
-   "signal": "YouTube GB-sport 104,460/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/Brain_training",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "England fret over Fin Smith’s fitness for looming Australia match",
-     "url": "https://www.theguardian.com/sport/2026/oct/26/england-fin-smith-fitness-australia-nations-championship-rugby-union",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Variety",
-     "title": "Sharjah Film Festival Partners With UAE’s Media Authority in Push to Assist Emerging Filmmakers",
-     "url": "https://variety.com/2026/film/global/sharjah-film-festival-uae-national-media-authority-fann-1236931290/",
-     "published": "2026-10-26"
+     "title": "Marvel's Forgotten Mass Effect Clone Couldn't Escape the Avengers' Failure",
+     "url": "https://www.polygon.com/marvel-guardians-galaxy-underrated-superhero-game/",
+     "published": "2026-10-27"
     },
     {
      "outlet": "GameSpot",
      "title": "Elden Ring Movie Is Reportedly A $200 Million Gamble For A24",
      "url": "https://www.gamespot.com/articles/elden-ring-movie-is-reportedly-a-200-million-gamble-for-a24/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Spurs boss Ho wants 'more support and training' for WSL referees",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cmd7q47dd0e7o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "He literally has his life in his hands💀💔",
-   "signal": "YouTube GB-entertainment 618,540/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Call Of Duty: Modern Warfare 4’s First DLC Is Out Now,  Honors A Real Soldier Who Sustained Gruesome Injuries",
-     "url": "https://www.gamespot.com/articles/call-of-duty-modern-warfare-4s-first-dlc-is-out-now-honors-a-real-soldier-who-sustained-gruesome-injuries/",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "Самый неудачный iPhone в истории",
-   "signal": "YouTube GB-tech 251,804/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Engadget",
-     "title": "Apple responds to reports of the iPhone Duo's inner display cracking",
-     "url": "https://www.engadget.com/2297433/apple-responds-to-reports-of-the-iphone-duo-inner-display-cracking/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "iPhone Duo now supports Apple Pencil with iOS 27.2",
-     "url": "https://www.theverge.com/tech/1018827/ios-27-2-iphone-duo-apple-pencil",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "iPhone Duo Vs iPhone 18",
-   "signal": "YouTube GB-tech 100,278/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Engadget",
-     "title": "Apple responds to reports of the iPhone Duo's inner display cracking",
-     "url": "https://www.engadget.com/2297433/apple-responds-to-reports-of-the-iphone-duo-inner-display-cracking/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "iPhone Duo now supports Apple Pencil with iOS 27.2",
-     "url": "https://www.theverge.com/tech/1018827/ios-27-2-iphone-duo-apple-pencil",
      "published": "2026-10-26"
     }
    ]
@@ -604,52 +574,68 @@
    "source": "Wikipedia In the news"
   },
   {
-   "topic": "Minimum Wage",
+   "topic": "Johann Sebastian Bach",
+   "signal": "On this day in 1726, 300 years ago (Wikipedia)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+   "articles": [],
+   "source": "On this day",
+   "kind": "evergreen"
+  },
+  {
+   "topic": "The One About Matthew Perry",
    "signal": "TVmaze web: series premiere tonight",
-   "wikipedia": "https://en.wikipedia.org/wiki/Minimum_Wage",
+   "wikipedia": null,
    "articles": [
     {
      "outlet": "Variety",
-     "title": "Actors on the Verge of Losing SAG-AFTRA Health Insurance Find Support via ‘One Job Away’ Instagram Campaign: ‘The System Is Not Working’",
-     "url": "https://variety.com/2026/film/columns/actors-losing-sag-aftra-health-insurance-one-job-away-instagram-campaign-cheyenne-jackson-1236931317/",
-     "published": "2026-10-26"
+     "title": "Netflix Docuseries ‘The One About Matthew Perry’ Is a Tragic, Mournful Portrait of Addiction: TV Review",
+     "url": "https://variety.com/2026/tv/reviews/the-one-about-matthew-perry-review-netflix-1236931448/",
+     "published": "2026-10-27"
     },
     {
      "outlet": "The Hollywood Reporter",
-     "title": "‘Minimum Wage’ Review: Netflix’s Format-Breaking Hangout Series Makes Good on the Promise of Short Episode Running Times",
-     "url": "https://www.hollywoodreporter.com/tv/tv-reviews/minimum-wage-review-netflix-american-high-randall-park-1236739455/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "‘Minimum Wage,’ and 6 More Shows to Watch on TV This Week",
-     "url": "https://www.nytimes.com/2026/10/26/arts/television/minimum-wage-and-6-more-shows-to-watch-on-tv-this-week.html",
-     "published": "2026-10-25"
+     "title": "‘The One About Matthew Perry’ Review: Netflix’s Intimate and Sincere but Overly Padded Docuseries",
+     "url": "https://www.hollywoodreporter.com/tv/tv-reviews/the-one-about-matthew-perry-review-netflix-documentary-1236740422/",
+     "published": "2026-10-27"
     }
    ],
    "source": "TVmaze"
   },
   {
-   "topic": "Claude by Anthropic",
-   "signal": "App Store GB: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Claude_Anthropic",
+   "topic": "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
+   "signal": "Apple albums GB: new in the top 10",
+   "wikipedia": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters_(Soundtrack_from_the_Netflix_Film)",
    "articles": [
     {
-     "outlet": "TechCrunch",
-     "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
-     "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+     "outlet": "Variety",
+     "title": "‘KPop Demon Hunters’ Global Concert Tour Set by Netflix and AEG Presents",
+     "url": "https://variety.com/2026/music/news/kpop-demon-hunters-global-concert-tour-netflix-aeg-1236747546/",
+     "published": "2026-05-13"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "‘KPop Demon Hunters’ Is Going on a World Concert Tour",
+     "url": "https://www.billboard.com/music/music-news/kpop-demon-hunters-concert-tour-netflix-1236247605/",
+     "published": "2026-05-13"
+    }
+   ],
+   "source": "Apple albums"
+  },
+  {
+   "topic": "DAZN: Stream Live Sports",
+   "signal": "App Store GB: new in the top 10 free apps",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "What to Know About Tonight’s ‘Sports Equinox’ and How to Stream Every Game Online for Free",
+     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/october-26-sports-games-tv-schedule-watch-online-free-stream-1235648191/",
      "published": "2026-10-26"
     },
     {
      "outlet": "Guardian",
-     "title": "Anthropic reveals rapid revenue gains and larger losses in stock market filing",
-     "url": "https://www.theguardian.com/technology/2026/oct/26/anthropic-files-listing-stock-market",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "Anthropic reveals plans for blockbuster IPO",
-     "url": "https://news.sky.com/story/anthropic-reveals-loss-as-it-plans-to-sell-public-shares-for-first-time-13604009",
+     "title": "NFL today: How to watch Cowboys v Eagles, TV channels & live stream Monday 26 October",
+     "url": "https://www.theguardian.com/sport/2026/oct/26/nfl-today-how-to-watch-cowboys-v-eagles-tv-channels-live-stream-monday-26-october",
      "published": "2026-10-26"
     }
    ],
@@ -661,31 +647,44 @@
    "wikipedia": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
    "articles": [
     {
-     "outlet": "Sky Sports",
-     "title": "F1 2026 team-mate head-to-heads after United States GP",
-     "url": "https://www.skysports.com/f1/news/12040/13516662/f1-team-mate-2026-head-to-head-qualifying-race-sprint-latest-scores-results-from-formula-1-season",
-     "published": "2026-10-26"
+     "outlet": "BBC",
+     "title": "How much of Antonelli's success is down to his ability? - F1 Q&A",
+     "url": "https://www.bbc.co.uk/sport/formula1/articles/cmde8xjl3xpwo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
     }
    ],
    "source": "Formula 1"
   },
   {
-   "topic": "The Mob",
-   "signal": "TVmaze web: series premiere tonight",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Mob",
+   "topic": "Leipzig",
+   "signal": "On this day in 1726, 300 years ago (Wikipedia)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Leipzig",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Football Daily | United’s cycle of hope followed by failure claims another patsy in Carrick",
-     "url": "https://www.theguardian.com/football/2026/oct/26/manchester-united-michael-carrick-football-daily",
-     "published": "2026-10-26"
+     "title": "Bayern and Luis Díaz warm up for Arsenal revenge mission with furious rout of Leipzig",
+     "url": "https://www.theguardian.com/football/2026/oct/19/bayern-munich-luis-diaz-arsenal-revenge-mission-leipzig-bundesliga",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "RB Leipzig, a revamped academy and a club on a mission to develop their own",
+     "url": "https://www.nytimes.com/athletic/6232674/2025/03/28/leipzig-academy-baum-ai/",
+     "published": "2025-03-27"
+    },
+    {
+     "outlet": "ESPN",
+     "title": "Leipzig's disastrous Champions League has Rose on the brink",
+     "url": "https://www.espn.com/soccer/story/_/id/42911034/rb-leipzig-disastrous-champions-league-marco-rose-brink",
+     "published": "2024-12-12"
     }
    ],
-   "source": "TVmaze"
+   "source": "On this day",
+   "kind": "evergreen"
   },
   {
    "topic": "EA shuts down BioWare",
-   "signal": "Bluesky trending, 10,747 posts",
+   "signal": "Bluesky trending, 11,488 posts",
    "wikipedia": null,
    "articles": [
     {
@@ -704,66 +703,45 @@
    "source": "Bluesky"
   },
   {
-   "topic": "Love Island Australia",
-   "signal": "TVmaze web: season premiere tonight, 18:00",
-   "wikipedia": "https://en.wikipedia.org/wiki/Love_Island_Australia",
-   "articles": [],
-   "source": "TVmaze"
-  },
-  {
-   "topic": "Sonic the Hedgehog fan creations",
-   "signal": "Bluesky trending, 3,973 posts",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Polygon",
-     "title": "Play as your Sonic the Hedgehog OC with these fan made tabletop games",
-     "url": "https://www.polygon.com/tabletop-games/501703/sonic-the-hedgehog-oc-fan-ttrpg-tag-team-heroes-rings-and-running-shoes/",
-     "published": "2024-12-23"
-    }
-   ],
-   "source": "Bluesky"
-  },
-  {
-   "topic": "psg vs ol",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/PSG_College_of_Technology",
+   "topic": "strands hint",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Strand_Historic_District",
    "articles": []
   },
   {
-   "topic": "chrishell stause",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Chrishell_Stause",
-   "articles": []
-  },
-  {
-   "topic": "alexis warr",
-   "signal": "Google Trends GB 10000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Alexis_Warr",
-   "articles": []
-  },
-  {
-   "topic": "jack skille",
+   "topic": "clima",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jack_Skille",
+   "wikipedia": "https://en.wikipedia.org/wiki/Clima",
    "articles": []
   },
   {
-   "topic": "jacob morley",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Marley",
+   "topic": "sally nugent",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sally_Nugent",
    "articles": []
   },
   {
-   "topic": "ina garten",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Ina_Garten",
+   "topic": "nz vs ind",
+   "signal": "Google Trends US 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/NZ_Independent_Coalition",
    "articles": []
   },
   {
-   "topic": "Clayface (film)",
-   "signal": "Wikipedia 207,969 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Clayface_(film)",
+   "topic": "katie volynets",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Katie_Volynets",
+   "articles": []
+  },
+  {
+   "topic": "sadie sink",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sadie_Sink",
+   "articles": []
+  },
+  {
+   "topic": "naomi osaka",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Naomi_Osaka",
    "articles": []
   },
   {

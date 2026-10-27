@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 05:39): 17 of 1,000 subscribers · 10,800 of 10 million Shorts views in 90 days · 4,108 views in the last 24 hours (about 110,991 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Tue 27 Oct, 06:47): 17 of 1,000 subscribers · 10,814 of 10 million Shorts views in 90 days · 4,133 views in the last 24 hours (about 110,991 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Mon 26 Oct 19:15 (UK): 6 scheduled, 143 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Tue 27 Oct | 2 public, 16 scheduled | 0 | 1 | ⏳ 2 of 15 so far, 16 more scheduled |
+| Tue 27 Oct | 4 public, 14 scheduled | 0 | 1 | ⏳ 4 of 15 so far, 14 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -90,12 +90,12 @@ scheduled · 38 s · music: risen · [script](../boards/done/QD-189.json) · [Yo
 ![QD-189](QD-189.jpg)
 
 ### Tue 27 Oct 7:00 · Game Facts #2: Exoplanet Arcade Cabinet | a short story
-scheduled · 40 s · music: defying-gravity · [script](../boards/done/QD-186.json) · [YouTube](https://youtube.com/shorts/Dd8fTVqyAz0)
+private · 40 s · music: defying-gravity · [script](../boards/done/QD-186.json) · [YouTube](https://youtube.com/shorts/Dd8fTVqyAz0)
 
 ![QD-186](QD-186.jpg)
 
 ### Tue 27 Oct 6:00 · Music Explained #1: Eurovision: the rule changing in 2027
-scheduled · 30 s · music: f16 · [script](../boards/done/QD-183.json) · [YouTube](https://youtube.com/shorts/d5pHQxFOgaM)
+private · 30 s · music: f16 · [script](../boards/done/QD-183.json) · [YouTube](https://youtube.com/shorts/d5pHQxFOgaM)
 
 ![QD-183](QD-183.jpg)
 

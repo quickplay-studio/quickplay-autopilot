@@ -1,21 +1,9 @@
-morning run for 2026-10-27: 7 to write from 5 fact packs
+breaking run for 2026-10-27: 2 to write from 2 fact packs
 category shares: {'Music': 0.27, 'Gaming': 0.15, 'Film': 0.15, 'Sport': 0.12, 'Animals': 0.11, 'Entertainment': 0.07, 'Tech': 0.07, 'Science': 0.07}
+category floors first: ['Entertainment']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Who was Johann Sebastian Bach?: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-GTA 6 PC release: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings
-exploration Short: Music: Thin Ice by Megan Thee Stallion
-Thin Ice by Megan Thee Stallion: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), edited by Claude
-exploration Short: Film: alexander skarsgård
-alexander skarsgård: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings
-apple iphone duo: gemini-3.6-flash, 0 warnings, edited by Claude
-KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys: gemini-3.6-flash, 0 warnings, editor: kept the original (beat 1: Beat 1 states the soundtrack 'just landed five Grammy nominations', but source 3 indicates the album received fi)
-follow-up: no pack for QD-182
-An astronaut exploring a distant exoplanet discovers a mysterious radio signal playing an 80s synth-pop track, only to realize the broadcast is coming from his own spacesuit's future voicemail.: gemini-3.6-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Why do cats purr?: still failing: facts: beat 2: The beat compares purring speed to cinema frames, which is not supported by the pack.; facts: beat 6: The pack states the snow leopard has an 'incompletely ossified hyoid', not a 'flexible hyoid bone'.
-wrote 7 of 7: QD-210 Music Explained #2: Who was Johann Sebastian Bach?; QD-211 Game Facts #5: GTA 6: 17% spike in time off requests; QD-212 Megan Thee Stallion's Thin Ice: the 1999 twist 🔥; QD-213 Alexander Skarsgård Wicker: the suit secret 🎬; QD-214 iPhone Duo screen problems: the replacement deal; QD-215 Film Facts #2: kpop demon hunters song: the soundtrack history; QD-216 Space Facts #1: The Signal on Planet 9 | a short story 🚀
-channel gaming: GTA 6 PC release: still failing: facts: beat 7: Beat 7 states PC gamers wait 'another year' for early 2027, but the pack only says a PC port is rumored for early 2027 without specifying a full year wait from November 2026.
-channel gaming: wrote 0 of 3: 
-channel irl: no Entertainment/Animals/Food news packs; evergreen instead
-channel irl: wrote 0 of 3: 
-channel clips: wrote 0 of 3: 
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "openrouter:nvidia/nemotron-3-super-120b-a12b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash"], "out of quota": {"gemini-omni-1.1-flash": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash", "openrouter:nvidia/nemotron-3-super-120b-a12b:free"], "timeouts": {"gemini-flash-latest": 2, "gemini-3.8-flash": 2, "gemini-3.7-flash": 1, "groq:openai/gpt-oss-120b": 2, "groq:openai/gpt-oss-20b": 2, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 11, "gemini-3.5-flash-lite": 30, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 6, "groq:qwen/qwen3.8-27b": 1, "claude:sonnet": 3, "gemini-3.5-flash": 1, "gemini-3.7-flash": 1, "gemini-3-flash-preview": 3}, "empty answers": {"groq:openai/gpt-oss-120b": 2, "groq:openai/gpt-oss-20b": 2}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 3, "second opinions": 0, "providers passed over": ["openrouter"], "late": true, "claude today": "4 of 4 edits, 0 of 0 writes"}
+richard hammond new home wales: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 2 warnings (meta.sources: one site only; name it in the narration for breaking news; check these words are fine in context: ['court'])
+black flag resynced: skipped: nothing new
+Song Secrets #2: Song secrets: Shakira's chart record: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 2 warnings (narration: 135 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
+wrote 2 of 2: QD-217 Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇; QD-218 Song Secrets #4: Shakira & Burna Boy: 10 Weeks Atop Global Chart
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash", "gemini:gemini-3.6-flash"], "out of quota": {"gemini-omni-1.1-flash": "daily limit", "gemini-3.8-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"groq:openai/gpt-oss-120b": 2, "gemini-flash-latest": 1, "gemini-3.7-flash": 1}, "answers": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 4, "gemini-3.5-flash-lite": 7, "gemini-3.6-flash": 1, "gemini-3-flash-preview": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 0, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}

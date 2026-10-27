@@ -1,0 +1,175 @@
+{
+ "id": "QD-217",
+ "board": "boards/queue/QD-217.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T01:30:00Z",
+ "rendered": "2026-10-27T11:55:07.791869+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "15 news articles on \"richard hammond house\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Georgian mansion Wales: no Commons image named 'Georgian mansion Wales')",
+  "beat 6 reused a nearby picture (commons-search:Vintage car collection: no Commons image named 'Vintage car collection')"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 11,
+  "pic_found_share": 0.71,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "sneaky-spelunking",
+ "social_music": "alexrockbeat-playful-560960",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 28.7,
+  "wps": 3.37,
+  "weak_beats": [
+   0
+  ],
+  "size_mb": 15.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 404.1,
+   "contrast": 0.223,
+   "face_area": 0.3313,
+   "text_area": 0.0412,
+   "caption_contrast": 7.91,
+   "by_frame": {
+    "sharpness": [
+     316.0,
+     386.8,
+     497.7,
+     415.8
+    ],
+    "contrast": [
+     0.221,
+     0.223,
+     0.223,
+     0.223
+    ],
+    "face_area": [
+     0.354,
+     0.3155,
+     0.3306,
+     0.3249
+    ],
+    "text_area": [
+     0.037,
+     0.0359,
+     0.0505,
+     0.0416
+    ],
+    "caption_contrast": [
+     8.77,
+     8.82,
+     6.9,
+     7.04
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.93,
+   "none",
+   1
+  ],
+  [
+   2.93,
+   6.89,
+   "none",
+   3
+  ],
+  [
+   6.89,
+   11.11,
+   "none",
+   3
+  ],
+  [
+   11.11,
+   15.26,
+   "none",
+   3
+  ],
+  [
+   15.26,
+   18.58,
+   "none",
+   2
+  ],
+  [
+   18.58,
+   22.27,
+   "none",
+   3
+  ],
+  [
+   22.27,
+   28.64,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "372997",
+   "q": "bat habitat night",
+   "t0": 0.0,
+   "t1": 14.62
+  },
+  {
+   "p": "pixabay",
+   "id": "164339",
+   "q": "city lights night",
+   "t0": 14.02,
+   "t1": 28.64
+  }
+ ],
+ "state": "failed",
+ "error": "RuntimeError: checks failed: unclear narration in beats [0]"
+}

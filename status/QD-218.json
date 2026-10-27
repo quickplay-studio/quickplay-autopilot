@@ -1,0 +1,13 @@
+{
+ "id": "QD-218",
+ "board": "boards/queue/QD-218.json",
+ "mode": "reject",
+ "slot": "",
+ "rendered": "2026-10-27T11:52:45.870624+00:00",
+ "late": {
+  "alive": false,
+  "evidence": "8 news articles on \"shakira burna boy dai dai\" in 24 hours",
+  "days_late": 1
+ },
+ "state": "expired: 8 news articles on \"shakira burna boy dai dai\" in 24 hours"
+}

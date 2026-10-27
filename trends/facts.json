@@ -1,426 +1,179 @@
 {
  "date": "2026-10-27",
- "built": "2026-10-27T08:49+00:00",
+ "built": "2026-10-27T11:23+00:00",
  "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "morning",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 10,
-   "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (surging, 23 days to go)",
-   "category": "Gaming",
-   "what_is_new": "A new report on 26 October revealed a 17% spike in time off requests for November 19.",
+   "n": 14,
+   "topic": "richard hammond new home wales",
+   "signal": "Google Trends GB 1000+",
+   "category": "Entertainment",
+   "what_is_new": "",
    "hooks": [
-    "Will GTA 6 come to PC in early 2027?",
-    "GTA 6 releases on November 19 for consoles!"
+    "Richard Hammond must share his new mansion with bats!",
+    "Why rare bats have paused Richard Hammond's home renovations."
    ],
    "sources": [
     [
-     "GTA 6 Causes 17% Spike in Time Off Requests on Game's Release Date",
-     "https://www.ign.com/articles/gta-6-causes-17-spike-in-time-off-requests-on-games-release-date",
+     "Richard Hammond to 'find a way' to share mansion with bats after renovation plans paused",
+     "https://www.bbc.co.uk/news/articles/cj4j5zn5n75o",
+     "BBC",
+     "2026-09-05"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Richard Hammond bought a 19th Century Georgian mansion in Llanwenarth near Abergavenny in November 2025.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 56-year-old bought the 19th Century Georgian mansion in Llanwenarth, near Abergavenny, in November 2025."
+     }
+    },
+    {
+     "claim": "Renovations including a padel court and car garage were paused after a survey found rare bats on the grounds.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Work to add a padel court and luxury car garage hit the brakes after a survey found several species of bat, including the common pipistrelle"
+     }
+    },
+    {
+     "claim": "Richard Hammond stated he will find a way of sharing his new home with the bats.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Former Top Gear star Richard Hammond has said he will \"find a way\" of sharing his new Â£2m home with rare bats that have paused"
+     }
+    },
+    {
+     "claim": "Richard Hammond bought the 19th Century Georgian mansion in Llanwenarth near Abergavenny in November 2025.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 56-year-old bought the 19th Century Georgian mansion in Llanwenarth, near Abergavenny, in November 2025."
+     }
+    },
+    {
+     "claim": "His new home is valued at £2m.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "former top gear star richard hammond has said he will find a way of sharing his new 2m home with rare bats that have paused his renovation plans work to add a"
+     }
+    },
+    {
+     "claim": "Renovation work was paused after a survey found several bat species including the common pipistrelle and soprano pipistrelles.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Work to add a padel court and luxury car garage hit the brakes after a survey found several species of bat, including the common pipistrelle"
+     }
+    },
+    {
+     "claim": "A new garage is planned to store Hammond's collection of historic and specialist vehicles.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "the documents stated the applications were for alterations and repairs new extensions reversal of modern alterations replacement windows and forming new doorways a critical element of the proposals would be a garage that would store hammond s collection of historic"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "black flag resynced",
+   "signal": "Google Trends GB 1000+",
+   "category": "Gaming",
+   "what_is_new": "Nothing changed in the last two days.",
+   "hooks": [
+    "Discover what is coming in the final major update for Black Flag Resynced!",
+    "Can you survive the brutal new Nightmare difficulty setting?"
+   ],
+   "sources": [
+    [
+     "Assassin's Creed Black Flag Resynced's final major update adds long-awaited New Game Plus, new Nightmare difficulty and much more",
+     "https://www.eurogamer.net/assassins-creed-black-flag-resynced-new-game-plus-final-update",
+     "Eurogamer",
+     "2026-10-27"
+    ],
+    [
+     "Assassin's Creed Black Flag Resynced Final Major Content Update Coming This Week",
+     "https://www.ign.com/articles/assassins-creed-black-flag-resynced-final-major-content-update-coming-this-week",
      "IGN",
      "2026-10-26"
     ],
     [
-     "GTA 6 sets PC release date, new report says",
-     "https://www.polygon.com/gta-6-pc-release-q1-2027-rumor/",
-     "Polygon",
-     "2026-10-13"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "A PC port is rumored for early 2027.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "A PC port is also rumored for early 2027.",
-      "2": "Grand Theft Auto 6 will reportedly be released on Windows PC early next year, a new report claims."
-     }
-    },
-    {
-     "claim": "A PC port is also rumored for early 2027.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "A PC port is also rumored for early 2027.",
-      "2": "6 will reportedly be released on windows pc early next year a new report claims on tuesday gamesbeat reported gta 6 will land on pc"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "GTA 6 will release on November 19 for PS5 and Xbox Series X|S."
-     }
-    },
-    {
-     "claim": "GTA 6's release has led to as much as a 17% increase in time off requests, according to a new report.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "GTA 6's release has led to as much as a 17% increase in time-off requests, according to a new report."
-     }
-    },
-    {
-     "claim": "Rockstar has also been spending a ton of money to get the word out with extravagant marketing; it spent $975,000 to install a massive neon pink sign on top of the Miami Heat's arena, after all.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Rockstar has also been spending a ton of money to get the word out with extravagant marketing; it spent $975,000 to install a massive neon"
-     }
-    },
-    {
-     "claim": "There will also be an unprecedented NBA game between the Miami Heat and the Milwaukee Bucks on November 18, which will turn the Heat into the Vice City Heat.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "There will also be an unprecedented NBA game between the Miami Heat and the Milwaukee Bucks on November 18, which will turn the Heat into"
-     }
-    },
-    {
-     "claim": "Rockstar has not officially commented on its potential plans to bring GTA 6 to PC.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Rockstar has not officially commented on its potential plans to bring GTA 6 to PC."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 13,
-   "topic": "Thin Ice by Megan Thee Stallion",
-   "signal": "Apple Music US: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Megan Thee Stallion just released her new freestyle Thin Ice.",
-    "Did you know Thin Ice samples Limp Bizkit?",
-    "Megan Thee Stallion made her Victoria s Secret runway debut."
-   ],
-   "sources": [
-    [
-     "Megan Thee Stallion Flexes Her Rapping Chops & Hip Muscles in Limp Bizkit-Sampling ‘Thin Ice’ Video",
-     "https://www.billboard.com/music/rb-hip-hop/megan-thee-stallion-thin-ice-limp-bizkit-break-stuff-sample-1236363682/",
-     "Billboard",
-     "2026-10-20"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Megan Thee Stallion released Thin Ice on Tuesday October 20 as part of her Tina Tuesday Freestyle series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It’s Tuesday (Oct. 20), which means Megan Thee Stallion has transformed into her Tina Snow alter ego and released another installment of her Tina Tuesday"
-     }
-    },
-    {
-     "claim": "Megan Thee Stallion released “Thin Ice” on Tuesday Oct. 20 as part of her Tina Tuesday Freestyle series.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It’s Tuesday (Oct. 20), which means Megan Thee Stallion has transformed into her Tina Snow alter ego and released another installment of her Tina Tuesday"
-     }
-    },
-    {
-     "claim": "The track “Thin Ice” samples Limp Bizkit’s “Break Stuff” from the 1999 album Significant Other.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "features a lift from a sample of Limp Bizkit’s “Break Stuff” off the band’s sophomore album, 1999’s Significant Other."
-     }
-    },
-    {
-     "claim": "The video shows Megan in a bodysuit bouncing around a barren warehouse with her signature platinum hair.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The spicy clip finds Meg stunting in her signature platinum hair and scantily clad black attire, but it’s the twerking‑approved bodysuit that steals the show"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 14,
-   "topic": "alexander skarsgård",
-   "signal": "Google Trends GB 200+",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Wicker’s wicker suit took a year and fifty artisans to create",
-    "Alexander Skarsgård, born 1976, now stars in award‑winning dramas",
-    "The new fantasy film Wicker opened in theatres this Friday"
-   ],
-   "sources": [
-    [
-     "Size Really Does Matter: How Alexander Skarsgard’s ‘Wicker’ Man and Member Came to Life",
-     "https://www.hollywoodreporter.com/movies/movie-news/inside-alexander-skarsgard-wicker-man-penis-creation-1236724891/",
-     "The Hollywood Reporter",
-     "2026-10-23"
-    ],
-    [
-     "alexander skarsgård",
-     "https://en.wikipedia.org/wiki/Alexander_Skarsg%C3%A5rd",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The romantic fantasy film Wicker starring Alexander Skarsgård hit theaters on Friday.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The internet went feral over Alexander Skarsgård’s wicker penis in the highly anticipated romantic fantasy Wicker that hit theaters on Friday."
-     }
-    },
-    {
-     "claim": "Wētā Workshop worked with 50 people for a year to build the upper half of Skarsgård’s wicker suit.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Wētā Workshop, which designs specialty costumes for film and television, worked with 50 people for a year to build the upper half of Skarsgård’s wicker"
-     }
-    },
-    {
-     "claim": "Alexander Skarsgård was born on 25 August 1976.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Alexander Johan Hjalmar Skarsgård[a][1] (born 25 August 1976) is a Swedish actor."
-     }
-    },
-    {
-     "claim": "He earned a Primetime Emmy Award and a Golden Globe Award for his role in Big Little Lies.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Skarsgård starred in the drama series Big Little Lies (2017–2019) as an abusive husband, which earned him a Primetime Emmy Award and a Golden Globe"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Alexander_Skarsgård_at_NYFF_2025_04_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 21,
-   "topic": "apple iphone duo",
-   "signal": "Google Trends US 500+",
-   "category": "Tech",
-   "what_is_new": "Apple announced on 27 Oct 2026 that it will replace iPhone Duo handsets with screen problems, offering replacements for affected users.",
-   "hooks": [
-    "Did you know the iPhone Duo was released on October 23, 2026?",
-    "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026.",
-    "The iPhone Duo features a massive 7.6-inch inner display."
-   ],
-   "sources": [
-    [
-     "Apple says it will replace iPhone Duo handsets with screen problems",
-     "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
-    ],
-    [
-     "iPhone Lockdown Mode: The pros and cons of enabling Apple's security feature",
-     "https://www.engadget.com/2295333/iphone-lockdown-mode-pros-cons/",
-     "Engadget",
-     "2026-10-27"
-    ],
-    [
-     "T-Mobile Is Offering $1,000 Off the Latest Apple iPhone 18 Pro and Pro Max",
-     "https://www.ign.com/articles/t-mobile-apple-iphone-18-deal-explained",
-     "IGN",
-     "2026-10-27"
-    ],
-    [
-     "apple iphone duo",
-     "https://en.wikipedia.org/wiki/Apple_iPhone_Duo",
+     "black flag resynced",
+     "https://en.wikipedia.org/wiki/Black_Flag_Resynced",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "John Ternus unveiled the iPhone Duo on September 9, 2026.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "The Duo marks Apple's first major iPhone redesign in almost two decades and was unveiled by new chief executive John Ternus, who took over from",
-      "4": "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026."
-     }
-    },
-    {
-     "claim": "The iPhone Duo has a 7.6-inch inner display.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "The Duo's 7.6-inch (19.3cm) inner display is held together by a central hinge - a complex piece of engineering that has resulted in similar flaws",
-      "4": "The Duo design features a 5.4-inch outer display and a 7.6-inch inner display when unfolded."
-     }
-    },
-    {
-     "claim": "The iPhone Duo uses the Apple A20 Pro system-on-chip.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "The Apple iPhone 18 Pro and Pro Max upgrades the APU to the new Apple A20 Pro processor built on a new 2-nanometer process technology.",
-      "4": "The iPhone Duo uses the Apple A20 Pro system-on-chip."
-     }
-    },
-    {
-     "claim": "John Ternus unveiled the iPhone Duo.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "in almost two decades and was unveiled by new chief executive john ternus who took over from tim cook in september",
-      "4": "Apple CEO John Ternus unveiled the iPhone Duo on September 9, 2026."
-     }
-    },
-    {
-     "claim": "The iPhone Duo is Apple’s first foldable smartphone.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Photos posted on social media show lines that appeared on the screens of the technology giant's first ever foldable device",
-      "4": "The iPhone Duo is the first foldable smartphone by Apple."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The iPhone Duo features a titanium frame and a 5.4‑inch outer display plus a 7.6‑inch inner display.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The Duo design features a 5.4-inch outer display and a 7.6-inch inner display when unfolded."
-     }
-    },
-    {
-     "claim": "Apple will replace iPhone Duo handsets that develop screen problems, offering replacements to affected users.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Apple says it will replace iPhone Duo handsets that have developed problems with their screens just days after the highly-anticipated smartphone went on sale."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:IPhone_Duo_Folded_Vector.svg"
-   ]
-  },
-  {
-   "n": 34,
-   "topic": "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
-   "signal": "Apple albums GB: new in the top 10",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Netflix announces a global concert tour for KPop Demon Hunters!",
-    "The hit movie soundtrack made Billboard Hot 100 history.",
-    "Golden became the first K-pop song to win a Grammy."
-   ],
-   "sources": [
-    [
-     "‘KPop Demon Hunters’ Global Concert Tour Set by Netflix and AEG Presents",
-     "https://variety.com/2026/music/news/kpop-demon-hunters-global-concert-tour-netflix-aeg-1236747546/",
-     "Variety",
-     "2026-05-13"
-    ],
-    [
-     "‘KPop Demon Hunters’ Is Going on a World Concert Tour",
-     "https://www.billboard.com/music/music-news/kpop-demon-hunters-concert-tour-netflix-1236247605/",
-     "Billboard",
-     "2026-05-13"
-    ],
-    [
-     "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
-     "https://en.wikipedia.org/wiki/KPop_Demon_Hunters_(Soundtrack_from_the_Netflix_Film)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Netflix is launching a KPop Demon Hunters global concert tour.",
+     "claim": "Patch 1.0.8 adds a brutal Nightmare difficulty mode featuring tighter parry timings and increased enemy damage.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Netflix is launching a “KPop Demon Hunters” global concert tour.",
-      "2": "Netflix announced Wednesday (May 13) that it will continue building on the unprecedented success of its record-shattering animated feature by turning it into “a live"
+      "1": "Patch 1.0.8 also introduces Nightmare Mode, a new brutal difficulty setting.",
+      "2": "If running it back through the West Indies isn't enough of a challenge, there's Nightmare difficulty."
      }
     },
     {
-     "claim": "The KPop Demon Hunters concert tour is produced by Netflix in partnership with Los Angeles-based live entertainment company AEG Presents.",
+     "claim": "Update 1.0.8 launches on PC, PS5 and Xbox Series X/S on 27th October.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "The “KPop Demon Hunters” concert tour is produced by Netflix in partnership with Los Angeles-based live entertainment company AEG Presents.",
-      "2": "The streamer will put on the trek in partnership with AEG presents."
+      "1": "Update 1.0.8 goes live on PC, PS5 and Xbox Series X/S today (27th October) at 7am PT, 10am ET, 2pm UK.",
+      "2": "It's one last push that's set to drop tomorrow, October 27, to keep players plundering before Edward Kenway sails off into the sunset yet again."
+     }
+    },
+    {
+     "claim": "Assassin's Creed Black Flag Resynced launched for PC, PlayStation 5, and Xbox Series X/S on July 9, 2026.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Assassin's Creed Black Flag Resynced launched for PC, PlayStation 5, and Xbox Series X/S July 9, 2026.",
+      "3": "A remake of the 2013 game Assassin's Creed IV: Black Flag, originally developed by Ubisoft Montreal, it was released for PlayStation 5, Windows, and Xbox"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "The soundtrack album was released on June 20, 2025, in conjunction with the film's release under the title KPop Demon Hunters (Soundtrack from the Netflix Film) under the Republic Records label.",
+     "claim": "IGN gave Assassin's Creed Black Flag Resynced a 9/10 review score.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "IGN gave it a 9/10 review, saying, \"More than just a shinier version of the same game you remember, Assassin’s Creed Black Flag Resynced brings"
+     }
+    },
+    {
+     "claim": "Assassin's Creed Black Flag Resynced is developed primarily by Ubisoft Singapore.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "The soundtrack album was released on June 20, 2025, in conjunction with the film's release under the title KPop Demon Hunters (Soundtrack from the Netflix"
-     }
-    },
-    {
-     "claim": "It received five Grammy Award nominations, winning Best Song Written for Visual Media for Golden, which was the first Grammy win for a K-pop song.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It received five Grammy Award nominations, winning Best Song Written for Visual Media for \"Golden\", which was the first Grammy win for a K-pop song."
+      "3": "Assassin's Creed Black Flag Resynced is a 2026 action-adventure game developed primarily by Ubisoft Singapore[a] and published by Ubisoft."
      }
     }
    ],

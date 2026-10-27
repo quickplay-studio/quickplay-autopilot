@@ -2,9 +2,9 @@
 
 **Progress** (Tue 27 Oct, 10:44): 17 of 1,000 subscribers · 10,986 of 10 million Shorts views in 90 days · 4,073 views in the last 24 hours (about 110,989 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Tue 27 Oct 8:49 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
+YouTube checked Tue 27 Oct 11:23 (UK): 11 scheduled, 138 public, 25 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 9:15).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Tue 27 Oct 11:12).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Wed 28 Oct | 0 public, 3 scheduled | 0 | 0 | ⏳ 3 of 15 scheduled |
-| Tue 27 Oct | 10 public, 14 scheduled | 4 | 1 | ⏳ 10 of 15 so far, 14 more scheduled |
+| Tue 27 Oct | 11 public, 13 scheduled | 4 | 1 | ⏳ 11 of 15 so far, 13 more scheduled |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
@@ -79,10 +79,55 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Wed 28 Oct 12:30 · Space Facts #1: The Signal on Planet 9 | a short story 🚀
+scheduled · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216.json) · [YouTube](https://youtube.com/shorts/QKykXue3OuY)
+
+![QD-216](QD-216.jpg)
+
+### Wed 28 Oct 7:00 · Film Facts #2: kpop demon hunters song: the soundtrack history
+scheduled · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
+
+![QD-215](QD-215.jpg)
+
+### Wed 28 Oct 6:00 · Music Explained #2: Who was Johann Sebastian Bach?
+scheduled · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-210.json) · [YouTube](https://youtube.com/shorts/VZenbNfVEnY)
+
+![QD-210](QD-210.jpg)
+
+### Tue 27 Oct 22:00 · iPhone Duo screen problems: the replacement deal
+scheduled · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
+
+![QD-214](QD-214.jpg)
+
+### Tue 27 Oct 17:00 · GTA 6 hits consoles on 19 November 🎮
+scheduled · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json) · [YouTube](https://youtube.com/shorts/GMcm2UzwGN0)
+
+![QD-209](QD-209.jpg)
+
+### Tue 27 Oct 16:00 · Megan Thee Stallion's Thin Ice: the 1999 twist 🔥
+scheduled · 24 s · music: comin-wit-it · [script](../boards/done/QD-212.json) · [YouTube](https://youtube.com/shorts/uoxdTT_DOYM)
+
+![QD-212](QD-212.jpg)
+
+### Tue 27 Oct 14:00 · Game Facts #4: halloween 2026 game: the price drop you missed
+scheduled · 40 s · music: house-on-the-hill · [script](../boards/done/QD-207.json) · [YouTube](https://youtube.com/shorts/Ryp4jApiRtU)
+
+![QD-207](QD-207.jpg)
+
+### Tue 27 Oct 13:30 · Game Facts #5: GTA 6: 17% spike in time off requests
+scheduled · 29 s · music: death-duel · [script](../boards/done/QD-211.json) · [YouTube](https://youtube.com/shorts/kaI4B_oT77A)
+
+![QD-211](QD-211.jpg)
+
 ### Tue 27 Oct 13:00 · GPT-6.1 Terra: OpenAI upgrades ChatGPT
 scheduled · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
 
 ![QD-203](QD-203.jpg)
+
+### Tue 27 Oct 12:30 · gta 6: arrives on 19 November (Part 1) 🎮
+scheduled · 28 s · music: once-upon-a-time · [script](../boards/done/QD-208.json) · [YouTube](https://youtube.com/shorts/YUI_nWZsC-Y)
+
+![QD-208](QD-208.jpg)
 
 ### Tue 27 Oct 12:00 · GTA 6 launch trailer: 24 days to go 🎮
 scheduled · 39 s · music: across-seas-and-lands · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
@@ -90,22 +135,22 @@ scheduled · 39 s · music: across-seas-and-lands · [script](../boards/done/QD-
 ![QD-200](QD-200.jpg)
 
 ### Tue 27 Oct 11:00 · Song Secrets #3: Beyonce solo debut hits number one in Billboard
-scheduled · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
+public · 13 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
 
 ![QD-202](QD-202.jpg)
 
 ### Tue 27 Oct 10:00 · Film Facts #1: Wildwood runtime sets a stop-motion record 🎬
-private · 27 s · music: in-battery · [script](../boards/done/QD-201.json) · [YouTube](https://youtube.com/shorts/uDAbDV2tGw4)
+public · 3 views · 27 s · music: in-battery · [script](../boards/done/QD-201.json) · [YouTube](https://youtube.com/shorts/uDAbDV2tGw4)
 
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-private · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+public · 11 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 
 ### Tue 27 Oct 8:00 · Kylian Mbappé: the 87th minute moment that changed everything ⚽
-public · 10 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
+public · 20 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
 
 ![QD-189](QD-189.jpg)
 
@@ -115,7 +160,7 @@ public · 1 views · 40 s · music: defying-gravity · [script](../boards/done/Q
 ![QD-186](QD-186.jpg)
 
 ### Tue 27 Oct 6:00 · Music Explained #1: Eurovision: the rule changing in 2027
-public · 11 views · 30 s · music: f16 · [script](../boards/done/QD-183.json) · [YouTube](https://youtube.com/shorts/d5pHQxFOgaM)
+public · 68 views · 30 s · music: f16 · [script](../boards/done/QD-183.json) · [YouTube](https://youtube.com/shorts/d5pHQxFOgaM)
 
 ![QD-183](QD-183.jpg)
 
@@ -135,12 +180,12 @@ public · 7 views · 43 s · music: circuit-rush · [script](../boards/done/QD-1
 ![QD-187](QD-187.jpg)
 
 ### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
-public · 194 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
+public · 265 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
 
 ![QD-180](QD-180.jpg)
 
 ### Mon 26 Oct 14:00 · Ralph Fiennes joins Hunger Games cast (Part 2)
-public · 120 views · 30 s · music: stake-out · [script](../boards/done/QD-179.json) · [YouTube](https://youtube.com/shorts/o9QuOBxSUIo)
+public · 122 views · 30 s · music: stake-out · [script](../boards/done/QD-179.json) · [YouTube](https://youtube.com/shorts/o9QuOBxSUIo)
 
 ![QD-179](QD-179.jpg)
 
@@ -150,7 +195,7 @@ public · 1 views · 40 s · music: sixseven · on Instagram · [script](../boar
 ![QD-185](QD-185.jpg)
 
 ### Mon 26 Oct 12:30 · The Hunger Games: 2026 release date (Part 1)
-public · 52 views · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
+public · 50 views · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
 
 ![QD-178](QD-178.jpg)
 
@@ -164,7 +209,7 @@ public · 884 views · 37 s · music: paradigm · [script](../boards/done/QD-182
 
 ![QD-182](QD-182.jpg)
 
-### Mon 26 Oct 9:30 · Halloween: The Game: the country that said no 🎃
+### Mon 26 Oct 9:30 · Halloween: The Game: the ban you didn't expect 🎃
 public · 6 views · 37 s · music: paradigm · on Instagram · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
 
 ![QD-181](QD-181.jpg)
@@ -180,7 +225,7 @@ public · 20 views · 35 s · music: duty-calls · on Instagram · on Facebook �
 ![QD-176](QD-176.jpg)
 
 ### Sun 25 Oct 22:00 · saints vs steelers: the Paris milestone explained
-public · 191 views · 38 s · music: duty-calls · on Instagram · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
+public · 198 views · 38 s · music: duty-calls · on Instagram · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
 
 ![QD-175](QD-175.jpg)
 
@@ -223,56 +268,11 @@ public · 157 views · 28 s · music: rise-of-the-machines · on Instagram · [s
 ![QD-168](QD-168.jpg)
 
 ### Sun 25 Oct 12:00 · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆
-public · 977 views · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
+public · 995 views · 27 s · music: paradise · [script](../boards/done/QD-165.json) · [YouTube](https://youtube.com/shorts/edZ6QEq7tGM)
 
 ![QD-165](QD-165.jpg)
 
 ### Sun 25 Oct 11:00 · Tech Truths #1: Windows XP arrived in shops (Part 1) 💻
-public · 251 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
+public · 254 views · 39 s · music: after-sunset · [script](../boards/done/QD-169.json) · [YouTube](https://youtube.com/shorts/ycIgW6dE9lc)
 
 ![QD-169](QD-169.jpg)
-
-### Sun 25 Oct 9:00 · Halloween: The Game secret you might have missed
-public · 49 views · 27 s · music: hopping-trains · [script](../boards/done/QD-166.json) · [YouTube](https://youtube.com/shorts/cyrwyp0Kldk)
-
-![QD-166](QD-166.jpg)
-
-### Sun 25 Oct 7:00 · Ballon d'Or 2026 ceremony is moving to London
-public · 2,140 views · 38 s · music: the-bombs · on Instagram · [script](../boards/done/QD-162.json) · [YouTube](https://youtube.com/shorts/6YlbgON866U)
-
-![QD-162](QD-162.jpg)
-
-### Sun 25 Oct 5:00 · GTA 6 price: the physical edition surprise 🎮
-public · 274 views · 27 s · music: the-bombs · on Instagram · [script](../boards/done/QD-164.json) · [YouTube](https://youtube.com/shorts/m4dcmkj0AhI)
-
-![QD-164](QD-164.jpg)
-
-### Sun 25 Oct 4:00 · Richard E Grant admits betrayal to Joe Lycett
-public · 319 views · 25 s · music: the-bombs · [script](../boards/done/QD-163.json) · [YouTube](https://youtube.com/shorts/MpzJ9obgR3M)
-
-![QD-163](QD-163.jpg)
-
-### Sun 25 Oct 2:30 · Raye is 28 and Where Is My Husband just hit a billion streams 🎉
-public · 401 views · 27 s · music: mirror-mirror · [script](../boards/done/QD-161.json) · [YouTube](https://youtube.com/shorts/Y3nAUT-nrQc)
-
-![QD-161](QD-161.jpg)
-
-### Sun 25 Oct 1:30 · Free Steam games you can play right now (Part 2) 🎮
-public · 328 views · 27 s · music: try-to-catch-me · on Instagram · on Facebook · [script](../boards/done/QD-159.json) · [YouTube](https://youtube.com/shorts/UXaR-4xKM8Q)
-
-![QD-159](QD-159.jpg)
-
-### Sun 25 Oct 0:30 · Free Steam games to grab before time runs out (Part 1) 🎮
-public · 130 views · 27 s · music: death-duel · on Instagram · [script](../boards/done/QD-158.json) · [YouTube](https://youtube.com/shorts/ver1S5QH3yo)
-
-![QD-158](QD-158.jpg)
-
-### Sat 24 Oct 16:30 · Kimi Antonelli: F1's youngest world champion? 🏎️
-public · 45 views · 32 s · music: death-duel · [script](../boards/done/QD-157.json) · [YouTube](https://youtube.com/shorts/gIS6da6LTVE)
-
-![QD-157](QD-157.jpg)
-
-### Sat 24 Oct 15:30 · Kristen Wiig's Palm Royale is over after just two seasons 📺
-public · 12 views · 26 s · music: purple-desire · [script](../boards/done/QD-156.json) · [YouTube](https://youtube.com/shorts/EcMJ6WpHiy0)
-
-![QD-156](QD-156.jpg)

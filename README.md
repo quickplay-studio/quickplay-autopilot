@@ -1,6 +1,6 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 12:59 UK.
+Updated Wednesday 28 October, 13:18 UK.
 
 **18 subscribers, 12,434 engaged Shorts views in 90 days (0.41% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
@@ -81,7 +81,7 @@ Waiting for a verdict (check day): CH-154 (Wed 4 Nov), CH-153 (Wed 4 Nov), CH-13
 
 ## Keys
 
-**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 19 not set up; checked Wed 28 Oct, 10:05 UK.
+**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 19 not set up; checked Wed 28 Oct, 13:18 UK.
 
 | Key | State | Ends | Fix |
 |---|---|---|---|

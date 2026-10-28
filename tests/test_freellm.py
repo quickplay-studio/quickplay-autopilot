@@ -159,6 +159,20 @@ ans, label = F.gemini("p", writing=True)
 assert label == "freellm:ovh/gpt-oss-120b", label
 print("6 auto label ok")
 
+# 6b. a busy router model is spent at once (no wait, no provider refusal), so freellm:auto still gets its turn
+reset(); slept = []
+F.time.sleep = lambda s: slept.append(s)
+busy = R(429, {"error": {"message": "All models exhausted"}}, {"Retry-After": "30"})
+for m in ("freellm:gpt-oss-120b", "freellm:kimi-k2-instruct", "freellm:deepseek-v3.1"):
+    REPLY["chat"] = busy
+    ans, why = F.openai_chat(m, BASE, "k", m.split(":", 1)[1], "p", 5, 0.1)
+    assert ans is None and m in F.STATE["spent_models"], (m, why)
+assert slept == [] and not F.STATE.get("provider_refusals") and not F.provider_skipped("freellm:auto"), (slept, F.STATE.get("provider_refusals"))
+REPLY["chat"] = chat(via="kilo/some-model")
+assert F.others("p", only="freellm:auto")[1] == "freellm:kilo/some-model", "the catch-all answers after three busy models"
+F.time.sleep = lambda s: None
+print("6b busy router ok")
+
 # 7. the writer test and the writer's first choice
 assert F.writer_arm_of("groq:openai/gpt-oss-120b") == "gpt-oss-120b" and F.writer_arm_of("freellm:gpt-oss-120b") == "other"
 assert F.writer_arm_of("freellm:ovh/gpt-oss-120b") == "other" and F.writer_arm_of("gemini:gemini-flash-latest") == "gemini flash"

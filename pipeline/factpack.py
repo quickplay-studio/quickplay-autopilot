@@ -573,6 +573,11 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
         except requests.exceptions.RequestException as e:
             slow[label] = slow.get(label, 0) + 1; refused(label); return None, f"{label}: {type(e).__name__}"
         t = r.text.lower() if not r.ok else ""
+        if r.status_code == 429 and label.startswith("freellm:"):
+            # the router has already tried its own fallbacks and waited: no second wait here, and a busy named model must not cost
+            # the catch-all its turn (27 October: three busy models made the provider "refuse" 3 times and freellm:auto was skipped)
+            spent.add(label); notes[label] = "router: no free capacity now"
+            return None, f"{label}: the router has no free capacity for it now"
         if r.status_code == 429:
             ra = r.headers.get("retry-after") or ""
             ra = float(ra) if re.fullmatch(r"\d+(\.\d+)?", ra) else None

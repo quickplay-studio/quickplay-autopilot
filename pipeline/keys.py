@@ -374,13 +374,13 @@ def router_row(st, t):
     only after ROUTER_FAILS starts in a row; before that the row is "quiet": on the hub, no issue."""
     base = dict(id="freellm", what=ROUTER_WHAT, group="AI models", t=t, needed=False)
     steps = ["Nothing is lost while it is down: the writers and fact packs use the other free models, as before it existed.",
-             f"Open the newest run of trends or write ({WORKFLOWS}/write.yml) and read the step called FreeLLMAPI router: it prints the reason.",
+             f"Press Run workflow on {WORKFLOWS}/freellm.yml to try it again (about 2 minutes): it saves the reason, and what the container said, in status/freellm.json.",
              "If the reason is \"image digest changed\": read the release notes at https://github.com/tashfeenahmed/freellmapi/releases, then ask "
              "Claude (your pinned Quickplay page) to set freellm.digest in config.json.",
              "To switch it off for good, set \"on\": false under \"freellm\" in config.json."]
     if not st:
         r = make(status="missing", detail="it has not run yet: it starts with the next trends, write or evolve run",
-                 fix=[f"Nothing to do: it starts by itself. To start one now press Run workflow on {WORKFLOWS}/trends.yml."], **base)
+                 fix=[f"Nothing to do: it starts by itself. To try it now press Run workflow on {WORKFLOWS}/freellm.yml (about 2 minutes)."], **base)
         r["for"] = "freellm"
         return r
     started = when(st.get("started"))

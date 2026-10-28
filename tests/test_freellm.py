@@ -48,7 +48,8 @@ assert FL.digest_check("sha256:" + "a" * 64, "sha256:" + "a" * 64)[0]
 ok, why = FL.digest_check("sha256:" + "a" * 64, "sha256:" + "b" * 64)
 assert not ok and "changed" in why, (ok, why)
 assert not FL.digest_check("sha256:" + "a" * 64, "")[0], "no digest, no start"
-cfg_text = _p.Path("config.json").read_text()
+import re as _re
+cfg_text = _re.sub(r'("freellm"\s*:\s*\{[^{}]*?"digest"\s*:\s*)"[^"]*"', r'\1""', _p.Path("config.json").read_text(), count=1)       # as first written: no digest yet
 pinned = FL.pin_text(cfg_text, "sha256:" + "c" * 64)
 assert pinned and json.loads(pinned)["freellm"]["digest"] == "sha256:" + "c" * 64 and json.loads(pinned)["viral"] == json.loads(cfg_text)["viral"]
 assert pinned.replace("sha256:" + "c" * 64, "") == cfg_text, "only the digest changed: the hand-made layout stays"
@@ -322,14 +323,37 @@ st = FL.stats({"FREELLM_KEY": "freellmapi-run-key", "FREELLM_BASE": BASE})
 assert st["calls"] == {"ovh": 3, "parallel": 2} and st["calls_total"] == 5 and st["ok"] and json.loads(FL.STATUS.read_text())["calls"]["ovh"] == 3
 print("10b start ok")
 
+# 10c. a failed start says why, without a key: the container's state, whether it answers inside, the end of its log
+def sh_report(cmd, **kw):
+    if cmd[1] == "inspect" and "Running" in cmd[3]: return sp.CompletedProcess(cmd, 0, "false\n", "")
+    if cmd[1] == "inspect": return sp.CompletedProcess(cmd, 0, "state=exited exit=1 oom=false error=\n", "")
+    if cmd[1] == "exec": return sp.CompletedProcess(cmd, 0, "", "Error: No such container")
+    return sp.CompletedProcess(cmd, 0, "boot ok\nInvalid ENCRYPTION_KEY abc123SECRETVALUE\n", "")
+rep = FL.report(sh_report, ["abc123SECRETVALUE"])
+assert "state=exited exit=1" in rep and "Invalid ENCRYPTION_KEY ***" in rep and "SECRETVALUE" not in rep and len(rep) <= 1500, rep
+assert FL.running(sh_report) is False
+assert FL.running(lambda *a, **k: (_ for _ in ()).throw(OSError("no docker"))) is True, "unknown is not 'stopped'"
+# probe: one chat and one search, kept in the status file; nothing without the router
+FL.save_status({"ok": True})
+assert FL.probe({}) is None
+def fake_http(method, path, key=None, body=None, base=None, timeout=15):
+    if path == "/v1/chat/completions": return 200, {"choices": []}, {"X-Routed-Via": "ovh/gpt-oss-120b"}
+    return 200, {"provider": "parallel", "engine": "parallel-search", "results": [{"url": "u"}]}, {}
+FL.http = fake_http
+pr = FL.probe({"FREELLM_KEY": "k", "FREELLM_BASE": BASE})
+assert pr == {"chat": "200 via ovh/gpt-oss-120b", "search": "200 via parallel/parallel-search, 1 results"} and json.loads(FL.STATUS.read_text())["probe"]["chat"] == pr["chat"], pr
+print("10c report and probe ok")
+
 # 11. the files themselves: no em or en dash, and the workflows pass the optional secrets only
-for f in ("pipeline/freellm.py", "pipeline/keys.py", "pipeline/factpack.py", "tests/test_freellm.py", ".github/actions/freellm/action.yml"):
+for f in ("pipeline/freellm.py", "pipeline/keys.py", "pipeline/factpack.py", "tests/test_freellm.py", ".github/actions/freellm/action.yml", ".github/workflows/freellm.yml"):
     s = _p.Path(f).read_text()
     assert EM not in s and EN not in s, f + " has an em or en dash"
 act = _p.Path(".github/actions/freellm/action.yml").read_text()
 act = act[act.index("inputs:"):]            # past the description, which names the keys it never takes
 for bad in ("GEMINI", "GROQ", "OPENROUTER", "MISTRAL", "CF_", "SAMBANOVA", "CLAUDE", "ANTHROPIC", "CEREBRAS"):
     assert bad not in act, bad
+chk = _p.Path(".github/workflows/freellm.yml").read_text()
+assert chk.count("uses: ./.github/actions/freellm") == 3 and "mode: probe" in chk and "mode: stats" in chk and "requests/freellm*" in chk
 for wf in ("trends", "write", "evolve"):
     t = _p.Path(f".github/workflows/{wf}.yml").read_text()
     assert t.count("uses: ./.github/actions/freellm") == 2 and "mode: stats" in t, wf

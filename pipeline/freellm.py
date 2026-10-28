@@ -7,6 +7,7 @@ the job: no state, no server, no cost. factpack.py talks to it as one more keyed
 FREELLM_BASE) and as a source finder (factpack.search).
 
   python pipeline/freellm.py start    the composite action .github/actions/freellm: pull (pinned), start, wait, export
+  python pipeline/freellm.py probe    the freellm.yml check: one chat and one search through the router, written to the status file
   python pipeline/freellm.py stats    at the end of the job: calls served per platform, then stop the container
   python pipeline/freellm.py show     status/freellm.json in one line
 
@@ -24,7 +25,7 @@ The image is pinned: config.json "freellm" holds the tag (v0.16.6, the newest re
 written, the supply-chain rule) and its digest. The first pull records the digest when it is empty; a later pull with another
 digest refuses to start. Nothing secret is ever written to status/freellm.json: names, platforms, counts and times only.
 """
-import datetime as dt, json, os, pathlib, re, secrets, shutil, sqlite3, subprocess, sys, tempfile, time, urllib.error, urllib.request
+import datetime as dt, json, os, pathlib, re, secrets, shutil, sqlite3, subprocess, sys, tempfile, time, urllib.error, urllib.parse, urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config.json"
@@ -288,9 +289,10 @@ def start(env=None, sh=subprocess.run):
                  capture_output=True, text=True, env=denv, timeout=120)
         if run.returncode: raise RuntimeError("docker run failed: " + redact((run.stderr or "").strip()[-100:], secrets_in_play))
         up = False
-        for _ in range(int(c["wait_s"]) // 2):
+        for n in range(int(c["wait_s"]) // 2):
             code, _, _ = http("GET", "/api/ping")
             if code == 200: up = True; break
+            if n % 3 == 2 and not running(sh): raise RuntimeError("the router container stopped before it answered")
             time.sleep(2)
         if not up: raise RuntimeError("the router did not answer within " + str(c["wait_s"]) + " seconds")
         key = read_key(folder, sh, (email, pw))
@@ -308,13 +310,39 @@ def start(env=None, sh=subprocess.run):
     except Exception as e:
         st["reason"] = redact(f"{type(e).__name__}: {e}" if not isinstance(e, RuntimeError) else str(e), secrets_in_play)[:200]
         log("freellm: not started (the pipeline runs as before):", st["reason"])
-        logs = subprocess.run(["docker", "logs", "--tail", "25", NAME], capture_output=True, text=True) if shutil.which("docker") else None
-        if logs and (logs.stdout or logs.stderr):
-            log(redact((logs.stdout + logs.stderr)[-1500:], secrets_in_play + list(given_keys(env).values())))
+        st["detail"] = report(sh, secrets_in_play + list(given_keys(env).values()))      # what the container said, for status/freellm.json and the hub
+        if st["detail"]: log(st["detail"])
         cleanup()
     st["history"] = record(st, prev.get("history"))
     save_status(st)
     return st
+
+
+def running(sh=subprocess.run):
+    """The container is still running (False when it is gone or has exited)."""
+    try:
+        r = sh(["docker", "inspect", "--format", "{{.State.Running}}", NAME], capture_output=True, text=True, timeout=30)
+        return (r.stdout or "").strip() == "true"
+    except Exception: return True
+
+
+def report(sh=subprocess.run, values=()):
+    """Why a start failed, in at most 1,500 characters: the container's state and exit code, whether the server answers from inside
+    it, and the end of its log; every key and password this run made, and every key it was given, replaced by ***."""
+    if not shutil.which("docker"): return ""
+    out = []
+    try:
+        r = sh(["docker", "inspect", "--format", "state={{.State.Status}} exit={{.State.ExitCode}} oom={{.State.OOMKilled}} error={{.State.Error}}", NAME],
+               capture_output=True, text=True, timeout=30)
+        out.append((r.stdout or r.stderr or "").strip())
+        r = sh(["docker", "exec", NAME, "node", "-e", "fetch('http://127.0.0.1:' + (process.env.PORT || 3001) + '/api/ping')"
+                ".then(r => console.log('inside: ping ' + r.status)).catch(e => console.log('inside: ' + e.message))"],
+               capture_output=True, text=True, timeout=30)
+        out.append((r.stdout or r.stderr or "").strip()[-200:])
+        r = sh(["docker", "logs", "--tail", "30", NAME], capture_output=True, text=True, timeout=30)
+        out.append("log: " + " | ".join(x.strip() for x in ((r.stdout or "") + (r.stderr or "")).strip().splitlines()[-30:])[-1000:])
+    except Exception as e: out.append(f"report failed: {type(e).__name__}")
+    return redact(" ; ".join(x for x in out if x), list(values))[:1500]
 
 
 def redact(text, values):
@@ -343,6 +371,27 @@ def stats(env=None):
     return st
 
 
+def probe(env=None):
+    """The check workflow's proof that the router works end to end: one tiny chat (which model answered, from X-Routed-Via) and
+    one news search (which engine answered), written to status/freellm.json. Nothing is written when the router is not up."""
+    env = os.environ if env is None else env
+    key, base = (env.get("FREELLM_KEY") or "").strip(), (env.get("FREELLM_BASE") or "").strip()
+    if not key or not base: return None
+    root = base.removesuffix("/v1")
+    out = {}
+    code, j, hdr = http("POST", "/v1/chat/completions", key=key, base=root, timeout=120,
+                        body={"model": "auto", "max_tokens": 16, "messages": [{"role": "user", "content": "Reply with the word OK."}]})
+    via = {k.lower(): v for k, v in (hdr or {}).items()}.get("x-routed-via", "")
+    out["chat"] = f"{code} via {urllib.parse.unquote(via)}"[:120] if code == 200 else f"failed ({code})"
+    code, j, _ = http("POST", "/v1/search", key=key, base=root, timeout=60, body={"query": "BBC News today", "max_results": 2, "topic": "news"})
+    out["search"] = f"{code} via {(j or {}).get('provider')}/{(j or {}).get('engine')}, {len((j or {}).get('results') or [])} results" if code == 200 else f"failed ({code})"
+    st = load_status()
+    st["probe"] = dict(out, at=stamp())
+    save_status(st)
+    log("freellm: probe", json.dumps(out))
+    return out
+
+
 def show():
     st = load_status()
     if not st: print("no status/freellm.json yet: the first job with the router writes it"); return
@@ -355,6 +404,7 @@ if __name__ == "__main__":
     a = sys.argv[1] if len(sys.argv) > 1 else "show"
     try:
         if a == "start": start()
+        elif a == "probe": probe()
         elif a == "stats": stats()
         else: show()
     except Exception as e:

@@ -1,0 +1,55 @@
+name: freellm
+# A quick check of the FreeLLMAPI router (pipeline/freellm.py, .github/actions/freellm): starts it as the trends, write and evolve
+# jobs do, sends one tiny chat and one news search through it, stops it and saves status/freellm.json (the hub's Accounts tab shows
+# it, with the reason and what the container said when it could not start). About 2 minutes, no model quota worth counting.
+# Runs on Run workflow and on a push of requests/freellm*.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['requests/freellm*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: freellm
+  cancel-in-progress: false
+
+jobs:
+  freellm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main }
+      - name: FreeLLMAPI router (fails open, pipeline/freellm.py)
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with:
+          tavily: ${{ secrets.TAVILY_API_KEY }}
+          exa: ${{ secrets.EXA_API_KEY }}
+          firecrawl: ${{ secrets.FIRECRAWL_API_KEY }}
+          linkup: ${{ secrets.LINKUP_API_KEY }}
+          ollama: ${{ secrets.OLLAMA_API_KEY }}
+          llm7: ${{ secrets.LLM7_API_KEY }}
+      - name: One chat and one search through the router
+        if: ${{ always() }}
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with: { mode: probe }
+      - name: FreeLLMAPI router stats (then stop it)
+        if: ${{ always() }}
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with: { mode: stats }
+      - name: Save
+        if: ${{ always() }}
+        run: |
+          git config user.name "quickplay-bot"
+          git config user.email "quickplay-studio@users.noreply.github.com"
+          git add status/freellm.json config.json 2>/dev/null || true      # config.json only changes when the image digest is first recorded
+          git commit -q -m "FreeLLMAPI router check $(date -u '+%F %H:%M')" || exit 0
+          git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"
+          for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done
+          exit 1

@@ -1,13 +1,13 @@
 name: FreeLLMAPI router
 description: >
   Starts the FreeLLMAPI router (github.com/tashfeenahmed/freellmapi, MIT) in Docker on the runner and hands FREELLM_KEY and
-  FREELLM_BASE to the later steps, or, with mode stats, records the calls it served and stops it. Fails open: any problem
+  FREELLM_BASE to the later steps, or, with mode probe, tries one chat and one search through it, or, with mode stats, records the calls it served and stops it. Fails open: any problem
   leaves FREELLM_KEY unset and the job runs as it did before (pipeline/freellm.py). Only the keys for platforms Quickplay does
   not already call directly are passed in; never a Gemini, Groq, Mistral, OpenRouter, Cloudflare, SambaNova, Claude or
   Anthropic key.
 inputs:
   mode:
-    description: start (default) or stats
+    description: start (default), probe or stats
     required: false
     default: start
   tavily:

@@ -2,7 +2,7 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-27T19:08+00:00",
+ "as_of": "2026-10-28T09:15+00:00",
  "factors": {
   "angles": {
    "arms": {
@@ -12,13 +12,13 @@
      "verdict": "about typical"
     },
     "hidden": {
-     "n": 2,
-     "needs": 68,
+     "n": 4,
+     "needs": 66,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "angles shown to the writer",
    "verdict": "too few to tell",
    "effect": "",
@@ -27,25 +27,25 @@
    "halves": "",
    "winner": "",
    "leaning": "",
-   "why": "",
+   "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": ""
   },
   "ending": {
    "arms": {
     "loop": {
-     "n": 4,
-     "needs": 66,
+     "n": 8,
+     "needs": 62,
      "verdict": "about typical"
     },
     "question": {
-     "n": 1,
-     "needs": 69,
-     "verdict": "early sign"
+     "n": 8,
+     "needs": 62,
+     "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 6,
    "label": "ending",
    "verdict": "too few to tell",
    "effect": "",
@@ -54,7 +54,7 @@
    "halves": "",
    "winner": "",
    "leaning": "",
-   "why": "",
+   "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": ""
   },
@@ -88,9 +88,9 @@
   "franchise": {
    "arms": {
     "named": {
-     "n": 5,
-     "needs": 65,
-     "verdict": "about typical"
+     "n": 7,
+     "needs": 63,
+     "verdict": "early sign"
     },
     "plain": {
      "n": 5,
@@ -115,18 +115,18 @@
   "fx_energy": {
    "arms": {
     "steady": {
-     "n": 9,
-     "needs": 61,
+     "n": 15,
+     "needs": 55,
      "verdict": "early sign"
     },
     "lab": {
-     "n": 0,
-     "needs": 70,
+     "n": 2,
+     "needs": 68,
      "verdict": ""
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "camera energy",
    "verdict": "too few to tell",
    "effect": "",
@@ -143,18 +143,18 @@
   "fx_grade": {
    "arms": {
     "natural": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 3,
+     "needs": 67,
+     "verdict": "too few to tell"
     },
     "lab": {
-     "n": 0,
-     "needs": 70,
-     "verdict": ""
+     "n": 2,
+     "needs": 68,
+     "verdict": "too few to tell"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "colour grade",
    "verdict": "too few to tell",
    "effect": "",
@@ -165,23 +165,24 @@
    "leaning": "",
    "why": "",
    "metric": "views",
-   "views_effect": ""
+   "views_effect": "",
+   "followed_pct": 100
   },
   "fx_opening": {
    "arms": {
     "image_first": {
      "n": 0,
      "needs": 70,
-     "verdict": ""
+     "verdict": "too few to tell"
     },
     "lab": {
      "n": 0,
      "needs": 70,
-     "verdict": ""
+     "verdict": "too few to tell"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "opening",
    "verdict": "too few to tell",
    "effect": "",
@@ -197,18 +198,18 @@
   "fx_slot": {
    "arms": {
     "06:00 to 12:00": {
-     "n": 7,
-     "needs": 63,
-     "verdict": "early sign"
+     "n": 14,
+     "needs": 56,
+     "verdict": "about typical"
     },
     "12:00 to 18:00": {
-     "n": 9,
-     "needs": 61,
+     "n": 10,
+     "needs": 60,
      "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "posting quarter (UK)",
    "verdict": "too few to tell",
    "effect": "",
@@ -220,23 +221,23 @@
    "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": "",
-   "followed_pct": 75
+   "followed_pct": 67
   },
   "gene:g003": {
    "arms": {
     "a": {
-     "n": 0,
-     "needs": 70,
+     "n": 2,
+     "needs": 68,
      "verdict": ""
     },
     "b": {
-     "n": 0,
-     "needs": 70,
+     "n": 2,
+     "needs": 68,
      "verdict": ""
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "writing instruction g003: Compare the number to something familiar",
    "verdict": "too few to tell",
    "effect": "",
@@ -263,7 +264,7 @@
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "writing instruction g004: First sentence 12 words, no background",
    "verdict": "too few to tell",
    "effect": "",
@@ -286,7 +287,7 @@
     "number": {
      "n": 5,
      "needs": 65,
-     "verdict": "early sign"
+     "verdict": "about typical"
     }
    },
    "settled": false,
@@ -307,18 +308,18 @@
   "length": {
    "arms": {
     "25 to 34 s": {
-     "n": 11,
-     "needs": 59,
+     "n": 15,
+     "needs": 55,
      "verdict": "about typical"
     },
     "35 to 44 s": {
-     "n": 11,
-     "needs": 59,
-     "verdict": "early sign"
+     "n": 19,
+     "needs": 51,
+     "verdict": "cut back"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "length",
    "verdict": "too few to tell",
    "effect": "",
@@ -330,23 +331,23 @@
    "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": "",
-   "followed_pct": 95
+   "followed_pct": 91
   },
   "title_search": {
    "arms": {
     "search phrase": {
-     "n": 11,
-     "needs": 59,
+     "n": 14,
+     "needs": 56,
      "verdict": "about typical"
     },
     "curiosity": {
-     "n": 9,
-     "needs": 61,
+     "n": 10,
+     "needs": 60,
      "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "title opening",
    "verdict": "too few to tell",
    "effect": "",
@@ -367,13 +368,13 @@
      "verdict": "too few to tell"
     },
     "gemini flash": {
-     "n": 5,
-     "needs": 65,
+     "n": 7,
+     "needs": 63,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 7,
    "label": "writer model",
    "verdict": "too few to tell",
    "effect": "",
@@ -385,23 +386,23 @@
    "why": "",
    "metric": "views",
    "views_effect": "",
-   "followed_pct": 67
+   "followed_pct": 50
   },
   "title_emoji": {
    "arms": {
     "emoji": {
-     "n": 12,
-     "needs": 58,
+     "n": 17,
+     "needs": 53,
      "verdict": "early sign"
     },
     "none": {
-     "n": 12,
-     "needs": 58,
+     "n": 19,
+     "needs": 51,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 5,
    "label": "title emoji",
    "verdict": "too few to tell",
    "effect": "",
@@ -417,18 +418,18 @@
   "title_answer": {
    "arms": {
     "stated": {
-     "n": 12,
-     "needs": 58,
+     "n": 14,
+     "needs": 56,
      "verdict": "early sign"
     },
     "held back": {
-     "n": 10,
-     "needs": 60,
+     "n": 12,
+     "needs": 58,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "title answer (stated or held back)",
    "verdict": "too few to tell",
    "effect": "",
@@ -444,18 +445,18 @@
   "sub_push": {
    "arms": {
     "spoken": {
-     "n": 2,
-     "needs": 68,
-     "verdict": "too few to tell"
+     "n": 6,
+     "needs": 64,
+     "verdict": "about typical"
     },
     "none": {
-     "n": 5,
-     "needs": 65,
-     "verdict": "about typical"
+     "n": 9,
+     "needs": 61,
+     "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 8,
+   "days_left": 6,
    "label": "subscribe line (spoken or none)",
    "verdict": "too few to tell",
    "effect": "",
@@ -464,30 +465,30 @@
    "halves": "",
    "winner": "",
    "leaning": "",
-   "why": "",
+   "why": "the arm cannot be told apart from the controls yet",
    "metric": "views",
    "views_effect": ""
   },
   "replies": {
    "arms": {
     "on": {
-     "n": 16,
-     "needs": 54,
+     "n": 22,
+     "needs": 48,
      "verdict": "about typical"
     },
     "off": {
-     "n": 11,
-     "needs": 59,
+     "n": 17,
+     "needs": 53,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 5,
    "label": "comment replies",
    "verdict": "running",
-   "effect": 0.38,
-   "low": 0.13,
-   "high": 1.17,
+   "effect": 0.47,
+   "low": 0.18,
+   "high": 1.19,
    "halves": "agree",
    "winner": "",
    "leaning": "on",

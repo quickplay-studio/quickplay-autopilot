@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-27T19:13+00:00",
+ "updated": "2026-10-28T09:20+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 107,
- "median_views": 114.0,
+ "reels": 112,
+ "median_views": 114.5,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
@@ -14,44 +14,44 @@
  "categories": [
   {
    "category": "Gaming",
-   "median": 125.0,
-   "n": 18,
-   "score": 1.075,
+   "median": 123.0,
+   "n": 21,
+   "score": 1.06,
    "favoured": true
   },
   {
    "category": "Sport",
    "median": 119.0,
    "n": 26,
-   "score": 1.037,
+   "score": 1.033,
    "favoured": false
   },
   {
    "category": "Film",
-   "median": 113.0,
-   "n": 14,
-   "score": 0.994,
+   "median": 119.0,
+   "n": 15,
+   "score": 1.029,
    "favoured": false
   },
   {
    "category": "Animals",
    "median": 43.0,
    "n": 1,
-   "score": 0.85,
+   "score": 0.849,
    "favoured": false
   },
   {
    "category": "Music",
    "median": 75.0,
    "n": 25,
-   "score": 0.705,
+   "score": 0.703,
    "favoured": false
   },
   {
    "category": "Science",
-   "median": 35.0,
-   "n": 9,
-   "score": 0.468,
+   "median": 38.0,
+   "n": 10,
+   "score": 0.479,
    "favoured": false
   },
   {
@@ -65,7 +65,7 @@
    "category": "Tech",
    "median": 11.0,
    "n": 7,
-   "score": 0.256,
+   "score": 0.255,
    "favoured": false
   }
  ],
@@ -83,11 +83,11 @@
      "lift": ""
     },
     "no": {
-     "n": 11,
-     "median": 119.0,
+     "n": 15,
+     "median": 122.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.97"
+     "lift": "0.96"
     }
    },
    "paused": true
@@ -98,18 +98,18 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 7,
-     "median": 127.0,
+     "n": 10,
+     "median": 125.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.96"
+     "lift": "0.98"
     },
     "full": {
-     "n": 5,
-     "median": 119.0,
+     "n": 6,
+     "median": 117.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "1.01"
+     "lift": "0.98"
     }
    },
    "paused": false
@@ -120,11 +120,11 @@
    "on": true,
    "arms": {
     "morning": {
-     "n": 4,
-     "median": 121.0,
+     "n": 8,
+     "median": 122.5,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.97"
+     "lift": "0.95"
     },
     "any": {
      "n": 8,
@@ -138,10 +138,10 @@
   }
  },
  "week": {
-  "reels": 92,
-  "median": 109.5,
-  "before_reels": 15,
-  "before_median": 123.0
+  "reels": 86,
+  "median": 115.0,
+  "before_reels": 26,
+  "before_median": 103.0
  },
  "cover": {
   "asked": 20,

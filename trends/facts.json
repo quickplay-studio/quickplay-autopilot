@@ -1,9 +1,9 @@
 {
  "date": "2026-10-28",
- "built": "2026-10-28T08:11+00:00",
- "model": "gemini-3.5-flash-lite + gemini-3.7-flash",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-28T09:15+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
@@ -13,8 +13,9 @@
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane just won the Ballon d or for the first time!",
-    "The 2026 Ballon d or ceremony took place at the London Palladium in London."
+    "Harry Kane just won his first Ballon d'Or!",
+    "Alexia Putellas makes history with her third Ballon d'Or Féminin win!",
+    "The 2026 Ballon d'Or in London faced massive chaos!"
    ],
    "sources": [
     [
@@ -38,25 +39,36 @@
    ],
    "verified": [
     {
-     "claim": "Harry Kane won the Ballon d or for the first time.",
+     "claim": "Harry Kane won the Ballon d'Or for the first time.",
      "sources": [
       1,
       3
      ],
      "evidence": {
-      "1": "Then, reaction to Harry Kane winning the Ballon d’Or - the first Englishman since Michael Owen in 2001.",
+      "1": "Then, reaction to Harry Kane winning the Ballon d'Or - the first Englishman since Michael Owen in 2001.",
       "3": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
      }
     },
     {
-     "claim": "The ceremony took place at the London Palladium in London.",
+     "claim": "Alexia Putellas won the Ballon d'Or Féminin for a third time after her move to the WSL.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Finally, London City Lionesses CEO Martin Semmens on Alexia Putellas winning the Ballon d'Or Féminin for a third time after her move to the WSL.",
+      "2": "After Kane and Alexia Putellas had been crowned the winners in the two main categories, they then spoke to the world's media in separate press"
+     }
+    },
+    {
+     "claim": "It was the first time the Ballon d'Or had been held in London in its 70-year history.",
      "sources": [
       2,
       3
      ],
      "evidence": {
       "2": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "3": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+      "3": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4] This also marked the first time the ceremony was organised outside"
      }
     }
    ],
@@ -70,10 +82,10 @@
    "topic": "Ballon d'Or 2026 winner",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "Harry Kane was announced as the Ballon d'Or winner at a ceremony on Monday night.",
+   "what_is_new": "",
    "hooks": [
-    "Harry Kane has just made history as the 2026 Ballon d'Or winner!",
-    "Find out how Harry Kane clinched the prestigious 2026 Ballon d'Or award!"
+    "Did Harry Kane just make history as England's first Ballon d'Or winner in 25 years?",
+    "Harry Kane claimed the prestigious Ballon d'Or at the London Palladium!"
    ],
    "sources": [
     [
@@ -97,55 +109,7 @@
    ],
    "verified": [
     {
-     "claim": "Harry Kane won the Ballon d'Or for the first time.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "The prime minister’s spokesperson said Andy Burnham sent praise and congratulations to the England captain, who was announced as the men’s winner of football’s most",
-      "2": "After Kane was announced as the Ballon d'Or winner, large images from the Bundesliga were projected on to landmarks across London such as The Strand",
-      "3": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
-     }
-    },
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Kane received the award at a ceremony at the London Palladium on Monday night, beating Kylian Mbappé of Real Madrid and Barcelona’s Lamine Yamal.",
-      "3": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Harry Kane won the Ballon d'Or.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "The PM would like to congratulate Harry Kane on winning the Ballon d’Or,",
-      "2": "Winning the Ballon d'Or is a tremendous recognition of Harry Kane's extraordinary performances - and also a great success for Bayern and the Bundesliga.",
-      "3": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
-     }
-    },
-    {
-     "claim": "Harry Kane is the first player from England to win the Ballon d'Or in 25 years.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "To be the first Englishman to win it in 25 years is an extraordinary achievement, and what a moment to do it here at home.",
-      "2": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player"
-     }
-    },
-    {
-     "claim": "The Ballon d'Or ceremony took place at the London Palladium.",
+     "claim": "Harry Kane won the Ballon d'Or at a ceremony at the London Palladium on Monday night.",
      "sources": [
       1,
       3
@@ -154,36 +118,77 @@
       "1": "Kane received the award at a ceremony at the London Palladium on Monday night, beating Kylian Mbappé of Real Madrid and Barcelona’s Lamine Yamal.",
       "3": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Michael Owen won the award in 2001.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Bayern Munich player is the first Englishman to win the award since Michael Owen in 2001."
-     }
     },
     {
-     "claim": "Matthias Sammer won the Ballon d'Or in 1996.",
+     "claim": "Harry Kane is the first Englishman to win the award since Michael Owen in 2001.",
      "sources": [
+      1,
       2
      ],
      "evidence": {
-      "2": "The last to do so was Matthias Sammer back in 1996 after he had captained Borussia Dortmund to two successive Bundesliga titles."
+      "1": "The Bayern Munich player is the first Englishman to win the award since Michael Owen in 2001.",
+      "2": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player"
      }
     },
     {
-     "claim": "The 2026 Ballon d'Or was the 70th annual ceremony of the award.",
+     "claim": "Harry Kane won the Ballon d'Or",
      "sources": [
+      1,
+      2,
       3
      ],
      "evidence": {
-      "3": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
+      "1": "The England captain’s “extraordinary achievement” as the first English winner of the Ballon d’Or in 25 years",
+      "2": "England has had to wait a long time for another winner of the Ballon d'Or, with Harry Kane on Monday night becoming the first player",
+      "3": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time"
      }
     },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Kane received the award at a ceremony at the London Palladium on Monday night",
+      "3": "The ceremony took place on 26 October 2026 at the London Palladium in London"
+     }
+    },
+    {
+     "claim": "Harry Kane plays for Bayern Munich",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The Bayern Munich player",
+      "2": "Bayern Munich striker ending their even longer run without a player from the Bundesliga lifting the coveted trophy"
+     }
+    },
+    {
+     "claim": "Kylian Mbappé was a runner-up",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "beating Kylian Mbappé of Real Madrid",
+      "3": "2 | Kylian Mbappé | France | Forward | Real Madrid"
+     }
+    },
+    {
+     "claim": "Lamine Yamal was a runner-up",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "and Barcelona’s Lamine Yamal",
+      "3": "3 | Lamine Yamal | Spain | Forward | Barcelona"
+     }
+    }
+   ],
+   "one_source": [
     {
      "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
      "sources": [
@@ -191,6 +196,15 @@
      ],
      "evidence": {
       "3": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    },
+    {
+     "claim": "The Ballon d'Or is the 70th annual ceremony",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or"
      }
     }
    ],
@@ -200,17 +214,141 @@
   },
   {
    "n": 5,
-   "topic": "Ballon d'Or 2026 reaction",
+   "topic": "Ballon d'Or 2026 history and records",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane wins the 2026 Ballon d'Or!",
-    "Thirty players were nominated for the prestigious award."
+    "Harry Kane made history at the London Palladium!",
+    "Discover the latest records from the Ballon d'Or!"
    ],
    "sources": [
     [
-     "Ballon d'Or 2026 reaction",
+     "Ballon d'Or in London - the most chaotic ever?",
+     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-27"
+    ],
+    [
+     "Ballon d'Or 2026 history and records",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as the venue.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "After Kane and Alexia Putellas had been crowned the winners in the two main categories, they then spoke to the world's media in separate press",
+      "2": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
+     }
+    },
+    {
+     "claim": "Harry Kane won the Ballon d'Or for the first time",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "the perfect homecoming for Harry Kane on Monday night",
+      "2": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time"
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the women's Ballon d'Or",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Kane and Alexia Putellas had been crowned the winners",
+      "2": "1 | Alexia Putellas | Spain | Midfielder | Barcelona"
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "the first time the ballon d or had been held in london in its 70 year history with organisers choosing the iconic london palladium as the venue despite the perfect homecoming for harry kane on monday night the rest of",
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The Ballon d'Or official website published an article declaring Kane as the winner before the ceremony",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The confusion and chaos began hours before the ceremony had even started, after the official Ballon d'Or website published an article declaring Kane as the"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Thirty players were nominated for the 2026 Men's Ballon d'Or"
+     }
+    },
+    {
+     "claim": "The ceremony was delayed by 45 minutes due to traffic and large crowds",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "the start had to be pushed back by 45 minutes"
+     }
+    },
+    {
+     "claim": "The Ballon d'Or team apologised for only selecting men to ask Kane questions at the press conference",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Ballon d'Or team has since apologised"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
+   ]
+  },
+  {
+   "n": 6,
+   "topic": "Ballon d'Or 2026 explained",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Harry Kane won the Ballon d'Or for the first time!",
+    "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+    "The 2026 Ballon d'Or ceremony took place at the London Palladium."
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 explained",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -253,6 +391,60 @@
      "evidence": {
       "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
      }
+    },
+    {
+     "claim": "Ten players were nominated for the 2026 Men's Kopa Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Ten players were nominated for the 2026 Men's Kopa Trophy.[5]"
+     }
+    },
+    {
+     "claim": "Five players were nominated for the 2026 Women's Kopa Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Five players were nominated for the 2026 Women's Kopa Trophy.[6]"
+     }
+    },
+    {
+     "claim": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy."
+     }
+    },
+    {
+     "claim": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy."
+     }
+    },
+    {
+     "claim": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.[7]"
+     }
+    },
+    {
+     "claim": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy.[8]"
+     }
     }
    ],
    "images": [
@@ -260,24 +452,23 @@
    ]
   },
   {
-   "n": 6,
-   "topic": "Ballon d'Or 2026 history and records",
+   "n": 7,
+   "topic": "Ballon d'Or 2026 facts",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "The Ballon d'Or ceremony took place at the London Palladium on Monday night, with Harry Kane and Alexia Putellas crowned winners.",
+   "what_is_new": "Caroline Weir was ranked the 25th best women footballer in the world and joined a shortlist for the Scottish Women's Football Awards 2026.",
    "hooks": [
-    "Discover how the Ballon d'Or made history in London!",
-    "Harry Kane won the prestigious Ballon d'Or for the first time!"
+    "Did you know Caroline Weir ranked 25th in the Ballon d'Or?"
    ],
    "sources": [
     [
-     "Ballon d'Or in London - the most chaotic ever?",
-     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
+     "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
+     "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-26"
     ],
     [
-     "Ballon d'Or 2026 history and records",
+     "Ballon d'Or 2026 facts",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -285,62 +476,27 @@
    ],
    "verified": [
     {
-     "claim": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as the venue.",
+     "claim": "Caroline Weir has been ranked the 25th best women footballer in the world.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "After Kane and Alexia Putellas had been crowned the winners in the two main categories, they then spoke to the world's media in separate press",
-      "2": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
-     }
-    },
-    {
-     "claim": "The ceremony took place at the London Palladium in London.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
-     }
-    },
-    {
-     "claim": "Harry Kane and Alexia Putellas were crowned the winners of the awards.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "After Kane and Alexia Putellas had been crowned the winners in the two main categories, they then spoke to the world's media in separate press",
-      "2": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
-     }
-    },
-    {
-     "claim": "Kate Scott and Thierry Henry hosted the ceremony.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "On a number of occasions, hosts Kate Scott and Thierry Henry had to briefly pause proceedings while people shouted the names of players in the",
-      "2": "↑ \"De CBS au Ballon d'Or : Thierry Henry sera maître de cérémonie au côté de Kate Scott\" (in French)."
+      "1": "Caroline Weir has been ranked the 25th best women footballer in the world on the day she also joined fellow Scotland midfielder Erin Cuthbert and",
+      "2": "25 | Caroline Weir | Scotland | Midfielder | Real Madrid"
      }
     }
    ],
    "one_source": [
+    {
+     "claim": "Harry Kane won the Ballon d'Or for the first time.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time, and was"
+     }
+    },
     {
      "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
      "sources": [
@@ -351,18 +507,1635 @@
      }
     },
     {
-     "claim": "Kylian Mbappé finished second in the men's award ranking.",
+     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "2 | Kylian Mbappé | France | Forward | Real Madrid"
+      "2": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
     }
    ],
    "images": [
     "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
    ]
+  },
+  {
+   "n": 8,
+   "topic": "Ballon d'Or 2026 star",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "Harry Kane won the Ballon d'Or for the first time on 26 October 2026.",
+   "hooks": [
+    "Caroline Weir was ranked the 25th best women footballer in the world."
+   ],
+   "sources": [
+    [
+     "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
+     "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-26"
+    ],
+    [
+     "Ballon d'Or 2026 star",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Caroline Weir has been ranked the 25th best women footballer in the world.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Caroline Weir has been ranked the 25th best women footballer in the world on the day she also joined fellow Scotland midfielder Erin Cuthbert and",
+      "2": "25 | Caroline Weir | Scotland | Midfielder | Real Madrid"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the Ballon d'Or.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "Ballon d'Or 2026 by the numbers",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "Bayern Munich forward Harry Kane won the 2026 Ballon d'Or at the ceremony on 26 October 2026.",
+   "hooks": [
+    "Did you know Harry Kane won his first Ballon d'Or in 2026?",
+    "The 2026 Ballon d'Or marked the 70th annual ceremony of the prestigious award.",
+    "Thirty players were nominated for the 2026 Mens Ballon dOr."
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 by the numbers",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Mens Ballon dOr.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Ballon dOr Feminin.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or was the 70th annual ceremony of the award.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "This ceremony marked the first time the event was organised outside France or Switzerland.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
+   ]
+  },
+  {
+   "n": 19,
+   "topic": "Walter Koenig",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
+   "hooks": [
+    "Star Trek actor Walter Koenig passed away aged 90.",
+    "Walter Koenig brought heart and humour as Pavel Chekov.",
+    "Star Trek icon Walter Koenig died at home in North Hollywood."
+   ],
+   "sources": [
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
+     "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
+     "Deadline",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek television series and reprised his role in the original cast films.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "2": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
+      "3": "The actor who originated the role of Ensign Pavel Chekov in the sci-fi series died at 90, and his former co-star, who played Captain Kirk,",
+      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
+      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "Walter Koenig died at the age of 90 on Sunday, October 25, 2026, at his home in North Hollywood.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "They confirmed he had died \"of old age at home in North Hollywood\" on Sunday night, \"surrounded by his daughter and niece\".",
+      "2": "Koenig died on Sunday at the age of 90.",
+      "3": "The actor who originated the role of Ensign Pavel Chekov in the sci-fi series died at 90, and his former co-star, who played Captain Kirk,",
+      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936, to Jewish immigrant parents whose family had lived in Lithuania.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan, Christopher Lloyd and Dabney Coleman.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig played the telepath Alfred Bester in the science fiction series Babylon 5 during the 1990s.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
+      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote a 1973 episode of Star Trek: The Animated Series titled The Infinite Vulcan.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
+     }
+    },
+    {
+     "claim": "George Takei and William Shatner paid public tributes to Walter Koenig following his death.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "His Star Trek co-star George Takei led the tributes, external on social media on Monday, writing: \"Walter was more than Chekov. He was a writer,",
+      "2": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
+      "3": "William Shatner today paid tribute to his Star Trek co-star Walter Koenig after news of the latter’s recent death."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 20,
+   "topic": "Walter Koenig reaction",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Walter Koenig passed away on October 25, 2026.",
+    "Walter Koenig served as best man at George Takei's wedding.",
+    "Walter Koenig won the Platinum Award for Best Actor in 2026."
+   ],
+   "sources": [
+    [
+     "Walter Koenig, Chekov on ‘Star Trek,’ Remembered by George Takei: ‘Keep Navigating a Steady Course’",
+     "https://variety.com/2026/film/news/walter-koenig-tributes-george-takei-1236931414/",
+     "Variety",
+     "2026-10-26"
+    ],
+    [
+     "Walter Koenig reaction",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig died Sunday in Los Angeles.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Koenig died Sunday in Los Angeles.",
+      "2": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "When Brad and I married in 2008, Walter stood beside us as our best man.",
+      "2": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Just last month, on Sept. 14, he turned 90, on the same day Brad and I celebrated our 18th wedding anniversary.",
+      "2": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Walter Koenig won the Platinum Award for Best Actor at the 2026 Independent Shorts Awards for his performance in the short film Mr Fleischmann.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "most recently with his performance in the short film ‘Mr. Fleischmann,’ for which he received the Platinum Award for Best Actor at the 2026 Independent"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "Walter Koenig facts",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away aged 90.",
+   "hooks": [
+    "Star Trek actor Walter Koenig has died aged 90.",
+    "Walter Koenig played Pavel Chekov in the original Star Trek series.",
+    "George Takei and William Shatner paid tribute to Walter Koenig."
+   ],
+   "sources": [
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
+     "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
+     "Deadline",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig facts",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek TV series from season two in 1967 until it ended in 1969.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
+      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig attended the Neighborhood Playhouse School of the Theatre in New York alongside James Caan, Christopher Lloyd and Dabney Coleman.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "George Takei said that Walter Koenig was more than Chekov, describing him as a writer, a teacher, a thoughtful man, and a loyal friend.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "His Star Trek co-star George Takei led the tributes, external on social media on Monday, writing: \"Walter was more than Chekov. He was a writer,",
+      "2": "Beyond his role as Chekov, Takei celebrated Koenig as “a writer, a teacher, a thoughtful man, and a loyal friend,” adding, “To the fans who",
+      "3": "“Walter was more than Chekov. He was a writer, a teacher, a thoughtful man, and a loyal friend."
+     }
+    },
+    {
+     "claim": "William Shatner paid tribute to Walter Koenig by describing him as a man who genuinely loved the Star Trek community.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Shatner said, external he was \"deeply saddened\" to learn of Koenig's death, describing him as a man \"who genuinely loved the Star Trek community\".",
+      "2": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday",
+      "3": "William Shatner today paid tribute to his Star Trek co-star Walter Koenig after news of the latter’s recent death."
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote an episode of the animated Star Trek series titled The Infinite Vulcan in 1973.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
+     }
+    },
+    {
+     "claim": "In the mid-late 1990s, Walter Koenig portrayed the ruthless Psi Corps telepath Alfred Bester in Babylon 5.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
+      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where"
+     }
+    },
+    {
+     "claim": "Walter Koenig is survived by his daughter, the actress and screenwriter Danielle Koenig.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
+      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
+     }
+    },
+    {
+     "claim": "Walter Koenig said his character's Russian accent was inspired by his father.",
+     "sources": [
+      4,
+      5
+     ],
+     "evidence": {
+      "4": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
+      "5": "Roddenberry asked him to \"ham up\" a Russian accent to add a note of comic relief to the series. Koenig said the accent was inspired"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Walter Koenig was one of only two actors to audition for the role of Pavel Chekov.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 22,
+   "topic": "Walter Koenig star",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Star Trek star Walter Koenig passes away at 90!",
+    "How a young actor became the beloved Pavel Chekov.",
+    "Decades of friendship on the Enterprise bridge."
+   ],
+   "sources": [
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
+     "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
+     "Deadline",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig star",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig was born in Chicago on September 14 1936.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig died on Sunday at the age of 90 in his North Hollywood home.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "They confirmed he had died \"of old age at home in North Hollywood\" on Sunday night, \"surrounded by his daughter and niece\".",
+      "2": "Koenig died on Sunday at the age of 90.",
+      "3": "The actor who originated the role of Ensign Pavel Chekov in the sci-fi series died at 90, and his former co-star, who played Captain Kirk,",
+      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek TV series.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "2": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
+      "3": "The actor who originated the role of Ensign Pavel Chekov in the sci-fi series died at 90, and his former co-star, who played Captain Kirk,",
+      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
+      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "George Takei and Walter Koenig stayed friends for nearly six decades after meeting on the bridge of the Enterprise in the 1960s.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "“Walter and I met on the bridge of the Enterprise in the 1960s, and we stayed friends for nearly six decades,” said Takei.",
+      "3": "“Walter and I met on the bridge of the Enterprise in the 1960s, and we stayed friends for nearly six decades,” wrote Takei."
+     }
+    },
+    {
+     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Walter Koenig was one of only two actors to audition for the role of Chekov.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 39,
+   "topic": "Ballon d'Or 2026 analysis",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "On 26 October 2026, Harry Kane won the 2026 Ballon d'Or for the first time in his career.",
+   "hooks": [
+    "Harry Kane wins the 2026 Ballon d'Or!",
+    "Discover the results of the 70th Ballon d'Or ceremony."
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 analysis",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    },
+    {
+     "claim": "Harry Kane won the Ballon d'Or for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the Ballon d'Or.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
+   ]
+  },
+  {
+   "n": 40,
+   "topic": "Ballon d'Or 2026 rankings",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "Harry Kane won the Ballon d'Or at the ceremony held on 26 October 2026.",
+   "hooks": [
+    "Harry Kane has won the 2026 Ballon d'Or!",
+    "Discover the results of the 2026 Ballon d'Or rankings."
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 rankings",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Ballon d'Or for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the award.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Panama_27_June_26-141.jpg"
+   ]
+  },
+  {
+   "n": 43,
+   "topic": "Walter Koenig analysis",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Marvin Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Did you know Walter Koenig was only one of two actors to audition for Chekov?",
+    "Walter Koenig attended acting school with Christopher Lloyd and James Caan.",
+    "Walter Koenig served as the best man at George Takei's wedding."
+   ],
+   "sources": [
+    [
+     "Walter Koenig analysis",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Marvin Koenig died on October 25, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "He attended Grinnell College in Grinnell, Iowa, with a pre-med major before transferring to UCLA to receive a Bachelor of Arts in psychology.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He attended Grinnell College in Grinnell, Iowa, with a pre-med major. He transferred to UCLA and received a Bachelor of Arts in psychology."
+     }
+    },
+    {
+     "claim": "He attended the Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney Coleman, Christopher Lloyd, and James Caan.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Koenig was one of only two actors to audition for the role of Ensign Pavel Chekov in Star Trek.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "He served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 44,
+   "topic": "Walter Koenig history and records",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Did you know Walter Koenig was born in Chicago?",
+    "Walter Koenig passed away on October 25, 2026."
+   ],
+   "sources": [
+    [
+     "Walter Koenig history and records",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Marvin Koenig died on October 25, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig passed away on 25 October 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago Illinois on 14 September 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Koenig portrayed Ensign Pavel Chekov in the original Star Trek television series.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 45,
+   "topic": "Walter Koenig explained",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Did you know Walter Koenig was one of only two actors to audition for Chekov?",
+    "Walter Koenig was born in Chicago on September 14, 1936.",
+    "Did you know Walter Koenig served as best man at George Takei's wedding?"
+   ],
+   "sources": [
+    [
+     "Walter Koenig explained",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Koenig was one of only two actors to audition for the role of Ensign Pavel Chekov.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    },
+    {
+     "claim": "Walter Koenig received a Bachelor of Arts in psychology from UCLA.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He transferred to UCLA and received a Bachelor of Arts in psychology."
+     }
+    },
+    {
+     "claim": "Walter Koenig began playing Ensign Pavel Chekov in the second season of the original Star Trek television series.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 46,
+   "topic": "Walter Koenig rankings",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Walter Koenig was cast as Chekov after being one of only two people to audition.",
+    "Did you know Walter Koenig served as best man at George Takei's wedding in 2008?"
+   ],
+   "sources": [
+    [
+     "Walter Koenig rankings",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Koenig began playing Ensign Pavel Chekov in the original Star Trek television series in the second season.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
+     }
+    },
+    {
+     "claim": "He was cast as Chekov almost immediately after being one of only two actors to audition.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 13,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "GTA 6 is launching on November 19, 2026!",
+    "Rockstar workers face a historic union vote right as GTA 6 releases.",
+    "GTA 6 is set in the fictional US state of Leonida."
+   ],
+   "sources": [
+    [
+     "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
+     "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
+     "PC Gamer",
+     "2026-10-27"
+    ],
+    [
+     "Rockstar workers in the UK will hold a union vote just as GTA 6 is released",
+     "https://www.engadget.com/2298907/rockstar-workers-in-uk-hold-union-vote-as-gta-6-release/",
+     "Engadget",
+     "2026-10-27"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The vote to recognize the union will run November 12-26, the week leading up, and then the week after, GTA 6's November 19 launch on consoles.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The vote to recognize the union will run November 12-26, the week leading up, and then the week after, GTA 6's November 19 launch on",
+      "2": "According to a social media post from Bloomberg's Jason Schreier, workers at Rockstar's UK offices are reportedly scheduled to vote on recognizing their branch of"
+     }
+    },
+    {
+     "claim": "If the vote carries in favor of the union, the IWGB Rockstar Game Workers Union will become the biggest game industry union in the UK.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "If the vote carries in favor of the union, the IWGB Rockstar Game Workers Union will become the biggest game industry union in the UK,",
+      "2": "If the employee vote is a success, the Rockstar Game Workers Union would become the largest recognized union in the UK's game industry."
+     }
+    },
+    {
+     "claim": "Rockstar head of publishing Jennifer Kolbe indicated that the studio won't fight a union.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Rockstar hasn't commented on the looming vote, but Rockstar head of publishing Jennifer Kolbe indicated in Bloomberg's recent look at the making of GTA that",
+      "2": "\"We go where the team goes,\" Jennifer Kolbe, head of publishing at Rockstar, told Schreier. \"So if they want a union, they will have a"
+     }
+    },
+    {
+     "claim": "Rockstar alleged that fired employees were leaking GTA 6 information in a public Discord.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Rockstar alleged that the fired employees were leaking GTA 6 information in a public Discord; the matter is now before an employment tribunal in Scotland.",
+      "2": "The company claimed the employees were let go due to misconduct related to sharing confidential information."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is due to be the eighth main entry in the Grand Theft Auto series, following 2013's Grand Theft Auto V, and the sixteenth entry overall.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It is due to be the eighth main entry in the Grand Theft Auto series, following 2013's Grand Theft Auto V, and the sixteenth entry"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft Auto VI.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 14,
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "GTA 6 launches on November 19, 2026.",
+    "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19."
+   ],
+   "sources": [
+    [
+     "GTA 6 anticipation is sending PS5 Pro prices through the roof",
+     "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+     "Polygon",
+     "2026-09-01"
+    ],
+    [
+     "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+     "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+     "IGN",
+     "2026-06-25"
+    ],
+    [
+     "GTA 6 price",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto 6 is scheduled for release on 19 November 2026.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X.",
+      "2": "GTA 6 launches on November 19, 2026.",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "GTA 6 will feature Vice City.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "Rockstar's 26-minute extended look showed off Jason and Lucia's latest adventures in Vice City",
+      "2": "We also have official GTA 6 cover art, and a fresh look at Vice City.",
+      "3": "Players will be able to freely roam Leonida's open world, which features the Miami-inspired Vice City."
+     }
+    },
+    {
+     "claim": "The protagonists of GTA 6 are Jason and Lucia.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Rockstar's 26-minute extended look showed off Jason and Lucia's latest adventures in Vice City",
+      "3": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Grand Theft Auto 6 is officially scheduled to launch on Nov. 19, for PlayStation 5 and Xbox Series X."
+     }
+    },
+    {
+     "claim": "GTA 6 launches on November 19, 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "GTA 6 launches on November 19, 2026."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI was formally revealed in December 2023."
+     }
+    },
+    {
+     "claim": "GTA 6 will cost 79.99 dollars on PlayStation 5 and Xbox Series X and S.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Rockstar said GTA 6 costs $79.99 across PlayStation 5 and Xbox Series X and S, confirming a $10 jump from the standard $70 we’ve seen"
+     }
+    },
+    {
+     "claim": "Physical copies of GTA 6 will not include a disc.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "GTA 6 physical copies do not include a disc, Rockstar has confirmed."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 26,
+   "topic": "m2",
+   "signal": "Google Trends GB 500+",
+   "category": "Cars",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know the Apple M2 is a central processing unit in the Apple M series?"
+   ],
+   "sources": [
+    [
+     "M2 iPad Air vs iPad 10: Is the base model best for most users?",
+     "https://9to5mac.com/2024/05/13/m2-ipad-air-vs-ipad-10/",
+     "9to5Mac",
+     "2024-05-13"
+    ],
+    [
+     "Testing the 2024 BMW M2—maybe the last M car with a manual transmission",
+     "https://arstechnica.com/cars/2024/03/testing-the-2024-bmw-m2-maybe-the-last-m-car-with-a-manual-transmission/",
+     "Ars Technica",
+     "2024-03-22"
+    ],
+    [
+     "m2",
+     "https://en.wikipedia.org/wiki/M2",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The BMW M2 is a variant of the BMW 2 Series.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "It’s hard to mistake it for a base 2 Series.",
+      "3": "BMW M2, a variant of the BMW 2 Series"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The Apple M2 is a central processing unit in the Apple M series.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Apple M2, a central processing unit in the Apple M series"
+     }
+    },
+    {
+     "claim": "The 2024 iPad Air uses the M2 chip.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2024 iPad Air uses the M2 chip."
+     }
+    },
+    {
+     "claim": "Apple says the M2 is 3x faster than the A14 chip.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Apple says the M2 is 3x faster than the A14 chip."
+     }
+    },
+    {
+     "claim": "The M2 iPad Air features a 13 inch model.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "However, a new tempting option with the M2 iPad Air is a 13″ model – meaning you can get Apple’s biggest tablet size without jumping"
+     }
+    },
+    {
+     "claim": "The 2024 BMW M2 features a six speed manual transmission.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In the middle of this intersection is the 2024 BMW M2 six-speed manual, hanging its tail out in a massive controlled drift around the edges,"
+     }
+    }
+   ],
+   "images": [
+    "page:https://9to5mac.com/2024/05/13/m2-ipad-air-vs-ipad-10/"
+   ]
+  },
+  {
+   "n": 29,
+   "topic": "perseverance",
+   "signal": "Google Trends US 100+",
+   "category": "Science",
+   "what_is_new": "",
+   "hooks": [
+    "On Oct 11 Perseverance passed 2810 miles driven on Mars",
+    "Perseverance has driven farther than any vehicle ever has on another world",
+    "Opportunity took roughly 14 years to drive this far"
+   ],
+   "sources": [
+    [
+     "Mars rover tracks from a historic drive | Space photo of the day for Oct. 27, 2026",
+     "https://www.space.com/space-exploration/mars-rovers/mars-rover-tracks-from-a-historic-drive-space-photo-of-the-day-for-oct-27-2026",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "NASA’s Perseverance Sets Off-World Record for Total Distance Driven",
+     "https://www.jpl.nasa.gov/news/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+     "NASA",
+     "2026-10-12"
+    ],
+    [
+     "Perseverance rover will uncover mysterious Martian history after a monthslong challenging trek",
+     "https://www.cnn.com/2024/12/12/science/perseverance-rover-crater-rim/",
+     "CNN",
+     "2024-12-12"
+    ],
+    [
+     "perseverance",
+     "https://en.wikipedia.org/wiki/Perseverance",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "On Oct. 11, Perseverance passed 28.10 miles (45.22 kilometers) driven on Mars.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "On Oct. 11, Perseverance passed 28.10 miles (45.22 kilometers) driven on Mars.",
+      "2": "On Oct. 11, the rover’s odometer reached 28.10 miles (45.22 kilometers), eclipsing the record of 28.06 miles (45.16 kilometers) set by NASA’s Opportunity rover, which"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Perseverance reached the mark on the 2,006th Martian day, or sol, of its mission.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Perseverance reached the mark on the 2,006th Martian day, or sol, of its mission, covering in five and a half years a distance that took"
+     }
+    },
+    {
+     "claim": "Perseverance has collected 29 rock and regolith samples spanning the crater floor, a delta fan formed by a long-gone river, and now the crater rim.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Perseverance has collected 29 rock and regolith samples spanning the crater floor, a delta fan formed by a long-gone river, and now the crater rim."
+     }
+    },
+    {
+     "claim": "The microwave-oven-size Sojourner rover covered about 330 feet (100 meters) during its 83-sol mission in 1997.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The microwave-oven-size Sojourner rover covered about 330 feet (100 meters) during its 83-sol mission in 1997."
+     }
+    },
+    {
+     "claim": "Spirit logged 4.8 miles (7.7 kilometers) before succumbing to the Martian winter in 2010.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Spirit logged 4.8 miles (7.7 kilometers) before succumbing to the Martian winter in 2010."
+     }
+    },
+    {
+     "claim": "Opportunity kept rolling for 5,111 sols, completing the first extraterrestrial marathon in 2015 and setting the record Perseverance has now surpassed.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Opportunity kept rolling for 5,111 sols, completing the first extraterrestrial marathon in 2015 and setting the record Perseverance has now surpassed."
+     }
+    },
+    {
+     "claim": "The agency’s Curiosity rover, which landed in Gale Crater in 2012 and remains hard at work, has logged more than 23.65 miles (38.07 kilometers).",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The agency’s Curiosity rover, which landed in Gale Crater in 2012 and remains hard at work, has logged more than 23.65 miles (38.07 kilometers)."
+     }
+    },
+    {
+     "claim": "NASA's Perseverance Mars rover left a mark on the Martian landscape when it passed a historic milestone driving across the Red Planet.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "NASA's Perseverance Mars rover left a mark on the Martian landscape when it passed a historic milestone driving across the Red Planet."
+     }
+    },
+    {
+     "claim": "Previously, this record was set by NASA's Opportunity rover, and it took Opportunity roughly 14 years to drive this far.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Previously, this record was set by NASA's Opportunity rover, and it took Opportunity roughly 14 years to drive this far."
+     }
+    },
+    {
+     "claim": "Perseverance traversed this distance in just over 5 years.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Perseverance traversed this distance in just over 5 years."
+     }
+    },
+    {
+     "claim": "Since landing on Mars back in 2021, Perseverance has observed, sampled and studied a wide variety of rocks, boulder fields, Martian slopes and more.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Since landing on Mars back in 2021, Perseverance has observed, sampled and studied a wide variety of rocks, boulder fields, Martian slopes and more."
+     }
+    },
+    {
+     "claim": "Recently, observations made using Perseverance provided the strongest evidence yet of possible biosignatures on the planet.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Recently, observations made using Perseverance provided the strongest evidence yet of possible biosignatures on the planet."
+     }
+    },
+    {
+     "claim": "NASA’s Perseverance Mars rover has driven farther than any vehicle ever has on the surface of another world.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "NASA’s Perseverance Mars rover has driven farther than any vehicle ever has on the surface of another world."
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

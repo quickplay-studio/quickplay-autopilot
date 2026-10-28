@@ -8,6 +8,12 @@
    "wikipedia": null,
    "articles": [
     {
+     "outlet": "New York Times",
+     "title": "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
+     "url": "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
+     "published": "2026-10-13"
+    },
+    {
      "outlet": "UEFA",
      "title": "Champions League Matchday 2: Galatasaray vs Barcelona facts",
      "url": "https://www.uefa.com/uefachampionsleague/news/02aa-21c33951d185-194d579eaa15-1000--champions-league-matchday-2-galatasaray-vs-barcelona-facts/",
@@ -79,19 +85,6 @@
    ]
   },
   {
-   "topic": "Ballon d'Or 2026 reaction",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "ESPN",
-     "title": "REACTION to Harry Kane winning his first Ballon d’Or | ESPN FC",
-     "url": "https://www.espn.com/video/clip/_/id/50291615",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
    "topic": "Ballon d'Or 2026 history and records",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
@@ -152,6 +145,25 @@
      "title": "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
      "url": "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "topic": "Ballon d'Or 2026 by the numbers",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "Steam Next Fest Was Flooded With Slop. These 50 Demos Cut Through The Noise",
+     "url": "https://www.gamespot.com/articles/steam-next-fest-was-flooded-with-slop-these-50-demos-cut-through-the-noise/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "New York Times",
+     "title": "Ballon d’Or: How did we do? Comparing The Athletic’s votes to the official results",
+     "url": "https://www.nytimes.com/athletic/7729374/2026/10/27/ballon-dor-vote-kane-mbappe-yamal/",
+     "published": "2026-10-27"
     }
    ]
   },
@@ -249,6 +261,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
    "articles": [
     {
+     "outlet": "Polygon",
+     "title": "GTA 6 anticipation is sending PS5 Pro prices through the roof",
+     "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+     "published": "2026-09-01"
+    },
+    {
      "outlet": "IGN",
      "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
      "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
@@ -301,10 +319,60 @@
    ]
   },
   {
+   "topic": "New Year's Eve 2026",
+   "signal": "watchlist: New Year's Eve 2026 (surging, 64 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/New_Year%27s_Eve",
+   "articles": [
+    {
+     "outlet": "PlayStation Blog",
+     "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
+     "url": "https://blog.playstation.com/2026/10/27/20261028-sale/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Steam Next Fest Was Flooded With Slop. These 50 Demos Cut Through The Noise",
+     "url": "https://www.gamespot.com/articles/steam-next-fest-was-flooded-with-slop-these-50-demos-cut-through-the-noise/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Nintendo is hosting a new Indie World showcase tomorrow, featuring games for Switch and Switch 2, and it'll be 15 minutes long",
+     "url": "https://www.eurogamer.net/nintendo-new-indie-world-showcase-october-28",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Eight great new indie horror games for Halloween",
+     "url": "https://www.theguardian.com/games/2026/oct/27/new-indie-horror-games-halloween",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "first country to celebrate New Year",
+   "signal": "watchlist: New Year's Eve 2026 (surging, 64 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/New_Year%27s_Eve",
+   "articles": [
+    {
+     "outlet": "PlayStation Blog",
+     "title": "Celebrate Helldivers 2 Liberty Day 2026 with in-game gifts today",
+     "url": "https://blog.playstation.com/2026/10/26/celebrate-helldivers-2-liberty-day-2026-with-in-game-gifts-today/",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
    "topic": "Walter Koenig",
    "signal": "watchlist: Walter Koenig (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-28"
+    },
     {
      "outlet": "Rolling Stone",
      "title": "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
@@ -322,12 +390,6 @@
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "published": "2026-10-26"
     }
    ]
   },
@@ -350,6 +412,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": [
     {
+     "outlet": "BBC",
+     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-28"
+    },
+    {
      "outlet": "Rolling Stone",
      "title": "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
      "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
@@ -366,12 +434,6 @@
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "published": "2026-10-26"
     }
    ]
   },
@@ -381,6 +443,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": [
     {
+     "outlet": "BBC",
+     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-28"
+    },
+    {
      "outlet": "Rolling Stone",
      "title": "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
      "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
@@ -397,82 +465,12 @@
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "gas standing charge",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Standing Charges, Dating, New Builds",
-     "url": "https://www.bbc.co.uk/sounds/play/curation/m001bm45/m0033dtt",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "sam fender tickets",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Sam Fender tells fans high ticket prices for Proper Massive tour are ‘getting changed’",
-     "url": "https://www.theguardian.com/music/2026/oct/24/sam-fender-fans-high-ticket-prices-proper-massive-tour-getting-changed",
-     "published": "2026-10-24"
-    }
-   ]
-  },
-  {
-   "topic": "spaceplane",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Spaceplane",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Regular spaceplane flights planned in project",
-     "url": "https://www.bbc.co.uk/news/articles/cmdxwzz7x4pno?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Ars Technica",
-     "title": "China’s top-secret spaceplane can’t hide in low-Earth orbit",
-     "url": "https://arstechnica.com/space/2026/10/chinas-top-secret-spaceplane-cant-hide-in-low-earth-orbit/",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "neil young",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Neil_Young",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "‘It’s the gay Titanic!’ Inside La Bola Negra, the maximalist queer spectacular bound for Oscars glory",
-     "url": "https://www.theguardian.com/film/2026/oct/28/gay-titanic-la-bola-negra-queer-oscars-penelope-cruz-glenn-close",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Neil Young sues Trump campaign again for playing Rockin' in the Free World at rally",
-     "url": "https://www.bbc.co.uk/news/articles/cqr7y3d0dvm5o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "when is black friday 2026",
-   "signal": "Google Trends GB 200+",
+   "topic": "when is black friday",
+   "signal": "Google Trends GB 2000+",
    "wikipedia": null,
    "articles": [
     {
@@ -482,42 +480,29 @@
      "published": "2026-10-28"
     },
     {
-     "outlet": "The Independent",
-     "title": "When is Black Friday 2026? Plus early deals to shop now",
-     "url": "https://www.independent.co.uk/extras/indybest/black-friday/black-friday-2026-b3071540.html",
-     "published": "2026-10-23"
-    }
-   ]
-  },
-  {
-   "topic": "g flip",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/G_Flip",
-   "articles": [
-    {
-     "outlet": "Rolling Stone",
-     "title": "G Flip and Chrishell Stause Split: A Timeline of Their Relationship",
-     "url": "https://www.rollingstone.com/music/music-features/g-flip-and-chrishell-stause-relationship-timeline-breakup-1235648498/",
+     "outlet": "Eurogamer",
+     "title": "Fan favourite map Shipment arrives today in Modern Warfare 4, just four days after launch - a new record for Call of Duty",
+     "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-shipment-map-date",
      "published": "2026-10-27"
     },
     {
-     "outlet": "Billboard",
-     "title": "G Flip Splits From Chrishell Stause After 3 Years of Marriage: ‘My Head & Heart Are Feeling Very Heavy’",
-     "url": "https://www.billboard.com/music/music-news/g-flip-chrishell-stause-break-up-years-marriage-1236368371/",
-     "published": "2026-10-26"
+     "outlet": "Guardian",
+     "title": "The Breakdown | England need to unearth World Cup core despite derby friction and injury chaos",
+     "url": "https://www.theguardian.com/sport/2026/oct/27/england-world-cup-core-nations-championship-rugby-union",
+     "published": "2026-10-27"
     }
    ]
   },
   {
-   "topic": "coach",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Coach",
+   "topic": "michael douglas",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Michael_Douglas",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Kurtley Beale earns shock recall to Wallabies squad five years after last Test",
-     "url": "https://www.theguardian.com/sport/2026/oct/28/kurtley-beale-shock-recall-wallabies-squad-rugby-world-cup-australia",
-     "published": "2026-10-28"
+     "title": "An unmanageable club? Carrick the latest to suffer in Manchester United’s faded grandeur",
+     "url": "https://www.theguardian.com/football/2026/oct/27/manchester-united-michael-carrick-faded-grandeur",
+     "published": "2026-10-27"
     },
     {
      "outlet": "BBC",
@@ -527,72 +512,159 @@
     },
     {
      "outlet": "BBC Sport",
-     "title": "Milne out for season as Hearts' injury woes continue",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c6gr8zzewz5ko?at_medium=RSS&at_campaign=rss",
+     "title": "Carrick to stay in charge of Man Utd for Chelsea game",
+     "url": "https://www.bbc.co.uk/sport/football/articles/crlykgeqzypyo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-27"
     }
    ]
   },
   {
-   "topic": "king tides flooding",
-   "signal": "Google Trends US 500+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "California coastal flooding worsens as king tides hit this week",
-     "url": "https://titanswire.usatoday.com/story/weather/2026/10/26/flood-prone-california-coastlines-face-more-high-tide-impacts/92449599007/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "CBS News",
-     "title": "King tides, rain and gusty winds bring coastal flooding threat from Fort Lauderdale to Miami",
-     "url": "https://www.cbsnews.com/miami/news/south-florida-weather-forecast-king-tide-flooding-miami-fort-lauderdale-miami-dade-broward-october-26-2026/",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "la",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/La",
+   "topic": "wind farm",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Wind_farm",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘It’s the gay Titanic!’ Inside La Bola Negra, the maximalist queer spectacular bound for Oscars glory",
-     "url": "https://www.theguardian.com/film/2026/oct/28/gay-titanic-la-bola-negra-queer-oscars-penelope-cruz-glenn-close",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Billboard",
-     "title": "Ella Langley & Sienna Spiro, But No ADÉLA: A Closer Look at the 2027 Best New Artist Grammy Race",
-     "url": "https://www.billboard.com/media/podcasts/2027-best-new-artist-grammy-race-discussion-pop-shop-podcast-1236369387/",
+     "title": "Lise Klaveness: ‘Certainly there are people that can challenge Infantino’",
+     "url": "https://www.theguardian.com/football/2026/oct/28/lise-klaveness-certainly-there-are-people-that-can-challenge-infantino",
      "published": "2026-10-28"
     },
     {
      "outlet": "GameSpot",
-     "title": "Xbox Game Pass Is Now Included With A Phone Plan",
-     "url": "https://www.gamespot.com/articles/xbox-game-pass-is-now-included-with-a-phone-plan/",
+     "title": "WoW: Forever Just Got Another Major Racial Ability Shakeup Before Launch",
+     "url": "https://www.gamespot.com/articles/wow-forever-just-got-a-major-racial-ability-shakeup-just-before-launch/",
      "published": "2026-10-26"
     },
     {
      "outlet": "BBC",
-     "title": "A late goal and a knee slide - how Mourinho returned to haunt Barca",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cr3wvz20pglqo?at_medium=RSS&at_campaign=rss",
+     "title": "Storm Boelo clears but more wind and rain bear down on UK",
+     "url": "https://www.bbc.co.uk/weather/articles/cqwy7w8dryrxo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "paula badosa",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Paula_Badosa",
+   "topic": "m2",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/M2",
    "articles": [
     {
-     "outlet": "NBC News",
-     "title": "Naomi Osaka tears up after first-round French Open loss to Paula Badosa",
-     "url": "https://www.nbcnews.com/sports/tennis/naomi-osaka-tears-first-french-open-loss-paula-badosa-rcna209091",
-     "published": "2025-05-26"
+     "outlet": "9to5Mac",
+     "title": "M2 iPad Air vs iPad 10: Is the base model best for most users?",
+     "url": "https://9to5mac.com/2024/05/13/m2-ipad-air-vs-ipad-10/",
+     "published": "2024-05-13"
+    },
+    {
+     "outlet": "Ars Technica",
+     "title": "Testing the 2024 BMW M2—maybe the last M car with a manual transmission",
+     "url": "https://arstechnica.com/cars/2024/03/testing-the-2024-bmw-m2-maybe-the-last-m-car-with-a-manual-transmission/",
+     "published": "2024-03-22"
+    }
+   ]
+  },
+  {
+   "topic": "japan open",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Japan_Open_(tennis)",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Taiwan-Japan Film Fund Daily Capital Launches at Tokyo Market, Backs Period Romance ‘Love Ends in Bloom’",
+     "url": "https://variety.com/2026/film/markets-festivals/taiwan-japan-film-fund-daily-capital-launches-tiffcom-1236932939/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "Amazon MGM Studios Japan To Double Investment In Original Content; ‘One Piece’ & ‘Kingdom’ Producers Talk IP Strategies – TIFFCOM",
+     "url": "https://deadline.com/2026/10/one-piece-amazon-mgm-studios-japan-kingdom-tiffcom-1237206872/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Resident Evil Executive Producer Says the Series' Story Could End 'In the Next 10 Years'",
+     "url": "https://www.ign.com/articles/resident-evil-executive-producer-says-the-series-story-could-end-in-the-next-10-years",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Little Angel makes big impact on return to Japan",
+     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ck1l377n0r6mo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "black friday",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Erin Patterson to learn fate in appeal against mushroom murders convictions",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/28/erin-patterson-to-learn-fate-appeal-mushroom-murders-convictions-ntwnfb",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "IGN",
+     "title": "The 2026 55\" LG Evo C6 4K OLED TV Drops to Black Friday Pricing Plus Get a Free Xbox Controller",
+     "url": "https://www.ign.com/articles/lg-evo-c6-4k-oled-tv-deal-free-xbox-controller-october-2026",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "Here’s why the iPhone Duo’s hinge could be cracking the screen",
+     "url": "https://www.theverge.com/tech/1020145/iphone-duo-crackgate-broken-screen-hinge",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Fan favourite map Shipment arrives today in Modern Warfare 4, just four days after launch - a new record for Call of Duty",
+     "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-shipment-map-date",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "perseverance",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Perseverance",
+   "articles": [
+    {
+     "outlet": "Space.com",
+     "title": "Mars rover tracks from a historic drive | Space photo of the day for Oct. 27, 2026",
+     "url": "https://www.space.com/space-exploration/mars-rovers/mars-rover-tracks-from-a-historic-drive-space-photo-of-the-day-for-oct-27-2026",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "NASA",
+     "title": "NASA’s Perseverance Sets Off-World Record for Total Distance Driven",
+     "url": "https://www.jpl.nasa.gov/news/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
+     "published": "2026-10-12"
+    },
+    {
+     "outlet": "CNN",
+     "title": "Perseverance rover will uncover mysterious Martian history after a monthslong challenging trek",
+     "url": "https://www.cnn.com/2024/12/12/science/perseverance-rover-crater-rim/",
+     "published": "2024-12-12"
+    }
+   ]
+  },
+  {
+   "topic": "pink",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Pink",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Cycling in the wild heart of the Netherlands: an autumnal break in the Veluwe",
+     "url": "https://www.theguardian.com/travel/2026/oct/28/cycling-nature-holiday-veluwe-netherlands",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Check Out 46 Seconds Of New Final Fantasy 7 Revelation Gameplay (And A Pink Chocobo)",
+     "url": "https://www.gamespot.com/articles/check-out-46-seconds-of-new-final-fantasy-7-revelation-gameplay-and-a-pink-chocobo/",
+     "published": "2026-10-27"
     }
    ]
   },
@@ -638,54 +710,86 @@
    "source": "Steam"
   },
   {
+   "topic": "Kalshi: Trade Sports & Events",
+   "signal": "App Store US: new in the top 10 free apps",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Kalshi Promo Code SBWIRE55 | $55 Bonus for NBA, World Series & NFL Week 8",
+     "url": "https://mmajunkie.usatoday.com/story/sports/2026/10/27/kalshi-promo-code-sbwire55-october-27-verified/91302609007/",
+     "published": "2026-10-27"
+    }
+   ],
+   "source": "App Store"
+  },
+  {
    "topic": "First Dates",
    "signal": "TVmaze GB: season premiere tonight, 22:00",
    "wikipedia": "https://en.wikipedia.org/wiki/First_Dates",
    "articles": [
     {
-     "outlet": "BBC",
-     "title": "What to expect from this year's Budget",
-     "url": "https://www.bbc.co.uk/news/videos/c6p9gv5vd70lo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "McInnes' Tynecastle return, Goodwin's entertainers & Reedijk eyes first win",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm9qz52e32v8o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
      "outlet": "Guardian",
-     "title": "Jess Cartner-Morley on fashion: to nail this year’s British heritage look, just study Rivals",
-     "url": "https://www.theguardian.com/fashion/2026/oct/28/jess-cartner-morley-on-fashion-british-heritage-look-rivals",
+     "title": "South Africa v Australia: third men’s cricket Test, day two – live",
+     "url": "https://www.theguardian.com/sport/live/2026/oct/28/south-africa-v-australia-third-test-day-two-cricket-newlands-cape-town-live-updates",
      "published": "2026-10-28"
     },
     {
      "outlet": "Variety",
-     "title": "Thai Forest Spirit Horror ‘Cher,’ First Thai Winner at Frontières, Joins Tokyo Gap-Financing Market",
-     "url": "https://variety.com/2026/film/markets-festivals/thai-forest-spirit-horror-cher-tokyo-gap-financing-market-1236932683/",
+     "title": "Taiwan-Japan Film Fund Daily Capital Launches at Tokyo Market, Backs Period Romance ‘Love Ends in Bloom’",
+     "url": "https://variety.com/2026/film/markets-festivals/taiwan-japan-film-fund-daily-capital-launches-tiffcom-1236932939/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "NME",
+     "title": "DIIV – ‘ZIRP!’ review: pop meets politics on their most adventurous record yet",
+     "url": "https://www.nme.com/reviews/album/diiv-zirp-review-3974219?utm_source=rss&utm_medium=rss&utm_campaign=diiv-zirp-review",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Reigning champions Knicks beat Pistons for first win of the season",
+     "url": "https://www.skysports.com/basketball/news/12040/13604679/new-york-knicks-111-97-detroit-pistons-reigning-champions-knicks-beat-pistons-for-first-win-of-the-season",
      "published": "2026-10-28"
     }
    ],
    "source": "TVmaze"
   },
   {
-   "topic": "Playing Deadlock",
-   "signal": "Bluesky trending, 9,978 posts",
-   "wikipedia": null,
+   "topic": "Google Gemini",
+   "signal": "App Store US: new in the top 10 free apps",
+   "wikipedia": "https://en.wikipedia.org/wiki/Google_Gemini",
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "Deadlock’s Magical Setting Carries On A Storied, And Welcome, Tradition",
-     "url": "https://www.gamespot.com/articles/deadlocks-magical-setting-carries-on-a-storied-and-welcome-tradition/1100-6538537/",
-     "published": "2026-03-03"
+     "outlet": "Engadget",
+     "title": "Discord public server messages may be soon searchable on Google, but you can opt out",
+     "url": "https://www.engadget.com/2299126/discord-server-messages-google-searchable-opt-out/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Discord Messages in Discoverable Servers Will Soon Be Searchable on Google",
+     "url": "https://www.ign.com/articles/discord-messages-in-discoverable-servers-will-soon-be-searchable-on-google",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "TechCrunch",
+     "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
+     "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "AI fan wikis riddled with errors are muddying the waters of an already contested part of games culture",
+     "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
+     "published": "2026-10-27"
     }
    ],
-   "source": "Bluesky"
+   "source": "App Store"
   },
   {
    "topic": "Local fights over AI data centers",
-   "signal": "Bluesky trending, 1,859 posts",
+   "signal": "Bluesky trending, 1,878 posts",
    "wikipedia": null,
    "articles": [
     {
@@ -704,50 +808,36 @@
    "source": "Bluesky"
   },
   {
-   "topic": "Discord messages to appear on Google",
-   "signal": "Bluesky trending, 541 posts",
-   "wikipedia": null,
+   "topic": "Threads",
+   "signal": "App Store US: new in the top 10 free apps",
+   "wikipedia": "https://en.wikipedia.org/wiki/Threads",
    "articles": [
     {
-     "outlet": "Engadget",
-     "title": "Discord public server messages may be soon searchable on Google, but you can opt out",
-     "url": "https://www.engadget.com/2299126/discord-server-messages-google-searchable-opt-out/",
-     "published": "2026-10-27"
+     "outlet": "Wired",
+     "title": "Black Twitter Is Thriving—on Threads",
+     "url": "https://www.wired.com/story/threads-is-black-twitters-unlikely-spiritual-successor/",
+     "published": "2026-09-29"
     },
     {
-     "outlet": "PC Gamer",
-     "title": "Messages in certain large public Discord servers will be searchable on the web after December",
-     "url": "https://www.pcgamer.com/software/platforms/messages-in-certain-large-public-discord-servers-will-be-searchable-on-the-web-after-december/",
-     "published": "2026-10-27"
+     "outlet": "TechCrunch",
+     "title": "Threads users can now chat with Meta AI in their DMs",
+     "url": "https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/",
+     "published": "2026-07-27"
     },
     {
-     "outlet": "IGN",
-     "title": "Discord Messages in Discoverable Servers Will Soon Be Searchable on Google",
-     "url": "https://www.ign.com/articles/discord-messages-in-discoverable-servers-will-soon-be-searchable-on-google",
-     "published": "2026-10-27"
-    }
-   ],
-   "source": "Bluesky"
-  },
-  {
-   "topic": "Alexander brothers sentencing",
-   "signal": "Bluesky trending, 314 posts",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Alexander Brothers Sentenced to 30 Years Each in Prison",
-     "url": "https://www.nytimes.com/2026/10/27/nyregion/alexander-brothers-sentencing-sex-trafficking.html",
-     "published": "2026-10-27"
+     "outlet": "9to5Mac",
+     "title": "Threads is testing long-form posts with support for formatted text [U: Launched]",
+     "url": "https://9to5mac.com/2025/09/04/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
+     "published": "2025-09-04"
     },
     {
      "outlet": "CNN",
-     "title": "Alexander brothers each sentenced to 30 years in federal prison for sex trafficking",
-     "url": "https://www.cnn.com/2026/10/27/us/alexander-brothers-sentencing-sex-trafficking",
-     "published": "2026-10-27"
+     "title": "Threads now has ‘tens of millions’ of daily users. But its honeymoon phase may be over",
+     "url": "https://www.cnn.com/2023/07/19/tech/threads-meta-growth-plan",
+     "published": "2023-07-19"
     }
    ],
-   "source": "Bluesky"
+   "source": "App Store"
   },
   {
    "topic": "Ballon d'Or 2026 analysis",

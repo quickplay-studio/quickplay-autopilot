@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 08:56): 17 of 1,000 subscribers · 12,360 of 10 million Shorts views in 90 days · 3,126 views in the last 24 hours (about 110,974 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 09:15): 18 of 1,000 subscribers · 12,482 of 10 million Shorts views in 90 days · 3,456 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Wed 28 Oct 8:11 (UK): 4 scheduled, 145 public, 20 uploads in the last 24 hours.
+YouTube checked Wed 28 Oct 9:15 (UK): 4 scheduled, 145 public, 19 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 7:58).
 
@@ -28,8 +28,8 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 - daniel (British male, brisk): 1.63 x typical, 43% stayed past the first seconds, 5 Shorts
 - michael (American male, friendly): 1.30 x typical, 30% stayed past the first seconds, 9 Shorts
 - lily (British female, bright): 0.96 x typical, 22% stayed past the first seconds, 5 Shorts
-- george_quick (British male, clear and quicker): 0.90 x typical, 26% stayed past the first seconds, 4 Shorts
 - lewis (British male, deeper and calm): 0.88 x typical, 24% stayed past the first seconds, 4 Shorts
+- george_quick (British male, clear and quicker): 0.88 x typical, 26% stayed past the first seconds, 4 Shorts
 - isabella (British female, warm): 1.35 x typical, 32% stayed past the first seconds, 2 Shorts
 - heart (American female, expressive): 0.79 x typical, 25% stayed past the first seconds, 2 Shorts
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
@@ -41,9 +41,9 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 
 - Testing captions: 68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel (0 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
-- Testing energy: camera motion 0.9, punch-ins 0.03 (4 of 8 Shorts measured)
+- Testing energy: camera motion 0.9, punch-ins 0.03 (5 of 8 Shorts measured)
 - Testing grade: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
-- Testing opening: the picture alone for 3 words, then the hook's card (1 of 8 Shorts measured)
+- Testing opening: the picture alone for 3 words, then the hook's card (5 of 8 Shorts measured)
 - 2026-10-28: voice retired george_dramatic (making room for a new test (1.03x over 9 Shorts))
 - 2026-10-28: voice retired lab-voice-1019 (0.88x against 1.04x for george over 8 Shorts)
 - 2026-10-28: captions retired lab-captions-1024 (0.90x against 1.20x for lab-captions-1019 over 9 Shorts)
@@ -135,7 +135,9 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## In the queue
 
+- **QD-245** Harry Kane Ballon d'Or: chaotic London ceremony ⚽ (rendering next)
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-247** Lord of the Rings: the 438 day filming secret (rendering next)
 
 ## On the channel (latest first)
 
@@ -158,12 +160,12 @@ scheduled · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216
 ![QD-216](QD-216.jpg)
 
 ### Wed 28 Oct 8:00 · harry potter cast: Harry Gilby
-public · 6 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
+public · 33 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
 
 ![QD-226](QD-226.jpg)
 
 ### Wed 28 Oct 7:00 · Film Facts #2: kpop demon hunters song: the soundtrack history
-public · 4 views · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
+public · 329 views · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
 
 ![QD-215](QD-215.jpg)
 
@@ -178,12 +180,12 @@ public · 32 views · 25 s · music: flight-is-aight · on Facebook · [script](
 ![QD-228](QD-228.jpg)
 
 ### Wed 28 Oct 1:30 · Film Explained #1: How Lord of the Rings Made Hobbits Small
-public · 584 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
+public · 718 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
 
 ![QD-219](QD-219.jpg)
 
 ### Tue 27 Oct 22:00 · iPhone Duo screen problems: the replacement deal
-public · 2 views · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
+public · 5 views · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
 
 ![QD-214](QD-214.jpg)
 
@@ -233,7 +235,7 @@ public · 14 views · 27 s · music: in-battery · [script](../boards/done/QD-20
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-public · 362 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+public · 363 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 
@@ -268,12 +270,12 @@ public · 7 views · 43 s · music: circuit-rush · [script](../boards/done/QD-1
 ![QD-187](QD-187.jpg)
 
 ### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
-public · 622 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
+public · 629 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
 
 ![QD-180](QD-180.jpg)
 
 ### Mon 26 Oct 14:00 · Ralph Fiennes joins Hunger Games cast (Part 2)
-public · 127 views · 30 s · music: stake-out · [script](../boards/done/QD-179.json) · [YouTube](https://youtube.com/shorts/o9QuOBxSUIo)
+public · 128 views · 30 s · music: stake-out · [script](../boards/done/QD-179.json) · [YouTube](https://youtube.com/shorts/o9QuOBxSUIo)
 
 ![QD-179](QD-179.jpg)
 
@@ -283,7 +285,7 @@ public · 1 views · 40 s · music: sixseven · on Instagram · [script](../boar
 ![QD-185](QD-185.jpg)
 
 ### Mon 26 Oct 12:30 · The Hunger Games: 2026 release date (Part 1)
-public · 98 views · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
+public · 101 views · 32 s · music: stake-out · [script](../boards/done/QD-178.json) · [YouTube](https://youtube.com/shorts/AV8b-2E-z6s)
 
 ![QD-178](QD-178.jpg)
 
@@ -298,7 +300,7 @@ public · 882 views · 37 s · music: paradigm · [script](../boards/done/QD-182
 ![QD-182](QD-182.jpg)
 
 ### Mon 26 Oct 9:30 · Halloween: The Game: the ban you didn't expect 🎃
-public · 11 views · 37 s · music: paradigm · on Instagram · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
+public · 12 views · 37 s · music: paradigm · on Instagram · [script](../boards/done/QD-181.json) · [YouTube](https://youtube.com/shorts/ntA-j4u3hWY)
 
 ![QD-181](QD-181.jpg)
 
@@ -326,7 +328,7 @@ public · 2 views · 30 s · music: horizons · on Instagram · [script](../boar
 public · 4 views · [YouTube](https://youtube.com/shorts/ajlYdYeu-CY)
 
 ### Sun 25 Oct 19:00 · barbara palvin 13 years old: the church choice 💒
-public · 18 views · 32 s · music: level · [script](../boards/done/QD-173.json) · [YouTube](https://youtube.com/shorts/LENtoDiGI8E)
+public · 20 views · 32 s · music: level · [script](../boards/done/QD-173.json) · [YouTube](https://youtube.com/shorts/LENtoDiGI8E)
 
 ![QD-173](QD-173.jpg)
 

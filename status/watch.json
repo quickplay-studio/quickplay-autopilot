@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T07:42+00:00",
+ "updated": "2026-10-28T08:55+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -56,6 +56,7 @@
    ],
    "in": [
     "YouTube charts",
+    "Google Trends",
     "Wikipedia top pages"
    ],
    "category": "Sport",
@@ -142,7 +143,7 @@
     9491,
     7709
    ],
-   "news_24h": 49,
+   "news_24h": 48,
    "news_usual": 50.0,
    "suggestions": [
     "the celebrity traitors",
@@ -425,7 +426,7 @@
     13501,
     12200
    ],
-   "news_24h": 31,
+   "news_24h": 32,
    "news_usual": 30.0,
    "suggestions": [
     "the hunger games sunrise on the reaping",
@@ -504,9 +505,9 @@
     "mama awards 2026 jennie",
     "mama awards 2026 live",
     "mama awards 2026 enhypen",
+    "mama awards 2026 stray kids",
     "mama awards 2026 lineup",
-    "mama awards 2026 skz",
-    "mama awards 2026 jennie performance"
+    "mama awards 2026 skz"
    ],
    "in": [],
    "category": "Music",
@@ -634,7 +635,7 @@
     938,
     928
    ],
-   "news_24h": 16,
+   "news_24h": 15,
    "news_usual": 9.5,
    "suggestions": [
     "the game awards",
@@ -701,7 +702,7 @@
     23773,
     20939
    ],
-   "news_24h": 80,
+   "news_24h": 100,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
@@ -783,7 +784,9 @@
     "dune part three full movie",
     "dune part three trailer breakdown"
    ],
-   "in": [],
+   "in": [
+    "YouTube charts"
+   ],
    "category": "Film",
    "angles": [
     "Dune Part Three cast",
@@ -839,7 +842,7 @@
     4622,
     5903
    ],
-   "news_24h": 32,
+   "news_24h": 33,
    "news_usual": 6.5,
    "suggestions": [
     "harry potter hbo series",
@@ -910,7 +913,7 @@
     2283,
     2229
    ],
-   "news_24h": 49,
+   "news_24h": 64,
    "news_usual": 37.0,
    "suggestions": [
     "christmas 2026",
@@ -944,8 +947,8 @@
    "name": "New Year's Eve 2026",
    "days_to": 64,
    "phase": "steady",
-   "level": "steady",
-   "places": 0,
+   "level": "surging",
+   "places": 2,
    "momentum": 1.09,
    "views_yesterday": 322,
    "views_usual": 296,
@@ -981,7 +984,7 @@
     286,
     322
    ],
-   "news_24h": 13,
+   "news_24h": 15,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",

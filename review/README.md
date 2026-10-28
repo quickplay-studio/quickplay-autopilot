@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 16:16): 19 of 1,000 subscribers · 12,538 of 10 million Shorts views in 90 days · 4,037 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 16:56): 19 of 1,000 subscribers · 12,541 of 10 million Shorts views in 90 days · 4,089 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 16:55 (UK): 13 scheduled, 137 public, 25 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 15 scheduled |
-| Wed 28 Oct | 20 public, 8 scheduled | 0 | 1 | ✅ done |
+| Wed 28 Oct | 21 public, 7 scheduled | 0 | 1 | ✅ done |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -61,7 +61,8 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}
-- **QD-209** GTA 6 hits consoles on 19 November 🎮: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872221167410'}
+- **QD-209** GTA 6 hits consoles on 19 November 🎮: instagram 2026-10-28 16:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936893038167410'}
+- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 16:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936893155167410'}
 - **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 09:49 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768706167410'}
 
 ## Waiting for your approval
@@ -137,6 +138,8 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-270** Star Stories #6: Walter Koenig Chekov casting: the look that won it (rendering next)
+- **QD-271** walter koenig: the career numbers you missed (rendering next)
 
 ## On the channel (latest first)
 
@@ -199,7 +202,7 @@ scheduled · 45 s · music: duty-calls · [script](../boards/done/QD-249.json) �
 ![QD-249](QD-249.jpg)
 
 ### Wed 28 Oct 17:00 · Lord of the Rings: the 438 day filming secret
-scheduled · 44 s · music: once-upon-a-time · [script](../boards/done/QD-247.json) · [YouTube](https://youtube.com/shorts/u2uM8uaZDVo)
+private · 44 s · music: once-upon-a-time · [script](../boards/done/QD-247.json) · [YouTube](https://youtube.com/shorts/u2uM8uaZDVo)
 
 ![QD-247](QD-247.jpg)
 

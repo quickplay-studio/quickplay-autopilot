@@ -1,18 +1,18 @@
 scope,age,gender,viewer_pct
 channel,13 to 17,female,4.8
-channel,13 to 17,male,5.9
+channel,13 to 17,male,6.1
 channel,18 to 24,female,3.4
-channel,18 to 24,male,6.0
-channel,25 to 34,female,8.2
-channel,25 to 34,male,15.1
-channel,35 to 44,female,7.1
-channel,35 to 44,male,13.2
+channel,18 to 24,male,6.2
+channel,25 to 34,female,8.4
+channel,25 to 34,male,15.3
+channel,35 to 44,female,7.6
+channel,35 to 44,male,13.1
 channel,45 to 54,female,4.0
-channel,45 to 54,male,9.8
-channel,55 to 64,female,2.9
-channel,55 to 64,male,7.5
-channel,65 to ,female,4.3
-channel,65 to ,male,7.6
+channel,45 to 54,male,9.5
+channel,55 to 64,female,3.0
+channel,55 to 64,male,7.2
+channel,65 to ,female,4.2
+channel,65 to ,male,7.3
 category: Entertainment,18 to 24,female,12.4
 category: Entertainment,25 to 34,female,31.5
 category: Entertainment,35 to 44,female,17.3

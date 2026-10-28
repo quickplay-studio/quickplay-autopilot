@@ -1,70 +1,71 @@
 scope,country,views,share_pct
-channel,US,8489,38.7
-channel,GB,3168,14.5
-channel,IN,1944,8.9
-channel,DE,873,4.0
-channel,CA,869,4.0
-channel,PH,717,3.3
-channel,ID,702,3.2
-channel,AU,660,3.0
-channel,ZA,458,2.1
-channel,ES,448,2.0
-channel,NL,434,2.0
-channel,MY,429,2.0
-channel,JP,423,1.9
-channel,IE,311,1.4
-channel,SE,269,1.2
-channel,MX,240,1.1
-channel,BR,225,1.0
-channel,FR,217,1.0
-channel,PL,188,0.9
-channel,KR,174,0.8
-channel,IT,168,0.8
-channel,BD,161,0.7
-channel,NZ,150,0.7
-channel,NG,109,0.5
-channel,RO,92,0.4
-category: Entertainment,US,719,66.0
-category: Entertainment,GB,230,21.1
-category: Entertainment,IN,73,6.7
-category: Entertainment,CA,25,2.3
-category: Entertainment,DE,23,2.1
-category: Entertainment,PH,19,1.7
-category: Film,US,1559,51.1
-category: Film,IN,612,20.1
-category: Film,GB,380,12.5
-category: Film,CA,139,4.6
-category: Film,AU,106,3.5
-category: Film,DE,80,2.6
-category: Film,ZA,54,1.8
+channel,US,8960,37.6
+channel,GB,3717,15.6
+channel,IN,2115,8.9
+channel,DE,962,4.0
+channel,CA,928,3.9
+channel,PH,717,3.0
+channel,AU,706,3.0
+channel,ID,702,2.9
+channel,ZA,521,2.2
+channel,NL,490,2.1
+channel,ES,448,1.9
+channel,MY,429,1.8
+channel,JP,423,1.8
+channel,BD,376,1.6
+channel,IE,344,1.4
+channel,SE,269,1.1
+channel,MX,240,1.0
+channel,BR,225,0.9
+channel,FR,217,0.9
+channel,UZ,211,0.9
+channel,PL,188,0.8
+channel,KR,174,0.7
+channel,NG,172,0.7
+channel,IT,168,0.7
+channel,NZ,150,0.6
+category: Animals,US,66,100.0
+category: Entertainment,US,719,58.3
+category: Entertainment,GB,375,30.4
+category: Entertainment,IN,73,5.9
+category: Entertainment,CA,25,2.0
+category: Entertainment,DE,23,1.9
+category: Entertainment,PH,19,1.5
+category: Film,US,1626,51.7
+category: Film,IN,612,19.5
+category: Film,GB,405,12.9
+category: Film,CA,139,4.4
+category: Film,AU,106,3.4
+category: Film,DE,80,2.5
+category: Film,ZA,54,1.7
 category: Film,MY,50,1.6
-category: Film,NL,39,1.3
-category: Film,MX,33,1.1
+category: Film,NL,39,1.2
+category: Film,MX,33,1.0
 category: Gaming,US,791,88.6
 category: Gaming,GB,63,7.1
 category: Gaming,IN,39,4.4
 category: Gaming,JP,0,0.0
 category: Gaming,KR,0,0.0
-category: Music,US,2351,69.4
-category: Music,GB,316,9.3
-category: Music,ES,143,4.2
-category: Music,KR,121,3.6
-category: Music,DE,112,3.3
-category: Music,IN,85,2.5
-category: Music,JP,78,2.3
-category: Music,NG,70,2.1
-category: Music,CA,60,1.8
-category: Music,ZA,53,1.6
+category: Music,US,2351,66.9
+category: Music,GB,316,9.0
+category: Music,UZ,177,5.0
+category: Music,ES,143,4.1
+category: Music,KR,121,3.4
+category: Music,DE,112,3.2
+category: Music,IN,85,2.4
+category: Music,JP,78,2.2
+category: Music,NG,70,2.0
+category: Music,CA,60,1.7
 category: Science,US,225,100.0
-category: Sport,GB,635,37.7
-category: Sport,US,537,31.9
-category: Sport,IN,243,14.4
-category: Sport,BD,120,7.1
-category: Sport,ZA,54,3.2
-category: Sport,KE,30,1.8
-category: Sport,NP,28,1.7
-category: Sport,PK,22,1.3
-category: Sport,PH,16,0.9
-category: Sport,AU,0,0.0
+category: Sport,GB,865,33.3
+category: Sport,US,654,25.2
+category: Sport,IN,374,14.4
+category: Sport,BD,326,12.6
+category: Sport,PK,79,3.0
+category: Sport,ZA,78,3.0
+category: Sport,NP,75,2.9
+category: Sport,NG,59,2.3
+category: Sport,KE,54,2.1
+category: Sport,SL,33,1.3
 category: Tech,US,52,100.0
 category: Tech,IE,0,0.0

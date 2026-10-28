@@ -1,97 +1,97 @@
 {
- "updated": "2026-10-28T16:16+00:00",
+ "updated": "2026-10-28T19:39+00:00",
  "writers": {
   "claude:sonnet": {
    "n": 3,
    "shorts": 3,
-   "score": 1.055,
+   "score": 1.064,
    "views_vs_typical": 1.73
   },
   "gemini:gemini-3-flash-preview": {
    "n": 16,
-   "shorts": 18,
-   "score": 0.789,
+   "shorts": 20,
+   "score": 1.101,
    "views_vs_typical": 0.72
   },
   "gemini:gemini-3.1-flash-lite": {
    "n": 5,
    "shorts": 5,
-   "score": 0.8,
+   "score": 1.023,
    "views_vs_typical": 0.87
   },
   "gemini:gemini-3.5-flash": {
    "n": 4,
    "shorts": 5,
-   "score": 1.098,
+   "score": 1.1,
    "views_vs_typical": 0.98
   },
   "gemini:gemini-3.5-flash-lite": {
    "n": 24,
    "shorts": 27,
-   "score": 0.978,
+   "score": 0.966,
    "views_vs_typical": 0.9
   },
   "gemini:gemini-3.6-flash": {
-   "n": 13,
-   "shorts": 17,
-   "score": 1.097,
-   "views_vs_typical": 1.39
+   "n": 14,
+   "shorts": 18,
+   "score": 0.946,
+   "views_vs_typical": 1.34
   },
   "gemini:gemini-3.7-flash": {
    "n": 9,
    "shorts": 9,
-   "score": 1.172,
+   "score": 1.153,
    "views_vs_typical": 0.61
   },
   "gemini:gemini-3.8-flash": {
    "n": 1,
    "shorts": 1,
-   "score": 0.99,
+   "score": 0.991,
    "views_vs_typical": 0.37
   },
   "gemini:gemini-flash-latest": {
    "n": 11,
    "shorts": 11,
-   "score": 1.163,
+   "score": 1.152,
    "views_vs_typical": 0.98
   },
   "gemini:gemma-4-31b-it": {
    "n": 1,
    "shorts": 1,
-   "score": 1.252,
+   "score": 1.248,
    "views_vs_typical": 20.64
   },
   "groq:openai/gpt-oss-120b": {
    "n": 15,
    "shorts": 15,
-   "score": 1.36,
+   "score": 1.328,
    "views_vs_typical": 1.47
   },
   "groq:qwen/qwen3.8-27b": {
    "n": 3,
    "shorts": 3,
-   "score": 1.542,
+   "score": 1.554,
    "views_vs_typical": 7.56
   },
   "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": {
    "n": 16,
    "shorts": 18,
-   "score": 0.685,
-   "views_vs_typical": 0.61
+   "score": 0.721,
+   "views_vs_typical": 0.83
   }
  },
  "how": "Each Short against the Shorts posted the same UK day (1.0 = typical): 40% engaged views as a share of views, 40% average % viewed, 20% views an hour. A writer's score is exp(sum of log scores / (n + 5)): shrunk towards typical, so one breakout can't crown a model (24 October: 20.9 from 2 Shorts, one at 27.7x, gave a model 41% of the day's boards).",
  "editors": {
   "claude": {
-   "n": 13,
+   "n": 14,
    "shorts": 15,
-   "score": 0.951,
-   "views_vs_typical": 0.77
+   "score": 0.857,
+   "views_vs_typical": 0.74
   },
   "none": {
    "n": 105,
-   "shorts": 115,
-   "score": 1.029,
+   "shorts": 118,
+   "score": 1.114,
    "views_vs_typical": 1.0
   }
  },
@@ -99,108 +99,110 @@
   "claude:sonnet + no edit": {
    "n": 3,
    "shorts": 3,
-   "score": 1.055,
+   "score": 1.064,
    "views_vs_typical": 1.73
   },
   "gemini:gemini-3-flash-preview + claude": {
    "n": 1,
    "shorts": 1,
-   "score": 0.778,
-   "views_vs_typical": 0.2
+   "score": 0.983,
+   "views_vs_typical": 0.33
   },
   "gemini:gemini-3-flash-preview + no edit": {
    "n": 15,
-   "shorts": 17,
-   "score": 0.841,
+   "shorts": 19,
+   "score": 1.112,
    "views_vs_typical": 1.0
   },
   "gemini:gemini-3.1-flash-lite + no edit": {
    "n": 5,
    "shorts": 5,
-   "score": 0.8,
+   "score": 1.023,
    "views_vs_typical": 0.87
   },
   "gemini:gemini-3.5-flash + no edit": {
    "n": 4,
    "shorts": 5,
-   "score": 1.098,
+   "score": 1.1,
    "views_vs_typical": 0.98
   },
   "gemini:gemini-3.5-flash-lite + no edit": {
    "n": 24,
    "shorts": 27,
-   "score": 0.978,
+   "score": 0.966,
    "views_vs_typical": 0.9
   },
   "gemini:gemini-3.6-flash + claude": {
-   "n": 0,
-   "shorts": 2
+   "n": 1,
+   "shorts": 2,
+   "score": 0.732,
+   "views_vs_typical": 0.25
   },
   "gemini:gemini-3.6-flash + no edit": {
    "n": 13,
-   "shorts": 15,
-   "score": 1.097,
+   "shorts": 16,
+   "score": 1.046,
    "views_vs_typical": 1.39
   },
   "gemini:gemini-3.7-flash + claude": {
    "n": 4,
    "shorts": 4,
-   "score": 0.953,
+   "score": 0.94,
    "views_vs_typical": 0.31
   },
   "gemini:gemini-3.7-flash + no edit": {
    "n": 5,
    "shorts": 5,
-   "score": 1.305,
+   "score": 1.29,
    "views_vs_typical": 0.87
   },
   "gemini:gemini-3.8-flash + no edit": {
    "n": 1,
    "shorts": 1,
-   "score": 0.99,
+   "score": 0.991,
    "views_vs_typical": 0.37
   },
   "gemini:gemini-flash-latest + no edit": {
    "n": 11,
    "shorts": 11,
-   "score": 1.163,
+   "score": 1.152,
    "views_vs_typical": 0.98
   },
   "gemini:gemma-4-31b-it + no edit": {
    "n": 1,
    "shorts": 1,
-   "score": 1.252,
+   "score": 1.248,
    "views_vs_typical": 20.64
   },
   "groq:openai/gpt-oss-120b + claude": {
    "n": 4,
    "shorts": 4,
-   "score": 1.085,
+   "score": 1.072,
    "views_vs_typical": 1.0
   },
   "groq:openai/gpt-oss-120b + no edit": {
    "n": 11,
    "shorts": 11,
-   "score": 1.403,
+   "score": 1.372,
    "views_vs_typical": 2.0
   },
   "groq:qwen/qwen3.8-27b + no edit": {
    "n": 3,
    "shorts": 3,
-   "score": 1.542,
+   "score": 1.554,
    "views_vs_typical": 7.56
   },
   "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free + claude": {
    "n": 4,
    "shorts": 4,
-   "score": 1.033,
+   "score": 0.892,
    "views_vs_typical": 1.89
   },
   "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free + no edit": {
    "n": 12,
    "shorts": 14,
-   "score": 0.616,
-   "views_vs_typical": 0.42
+   "score": 0.709,
+   "views_vs_typical": 0.47
   }
  }
 }

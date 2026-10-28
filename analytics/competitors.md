@@ -5,10 +5,10 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 37% | 36% |
-| A question | 33% | 8% |
+| With a number | 33% | 38% |
+| A question | 30% | 7% |
 | With an emoji | 63% | 54% |
-| Length, seconds (median) | 25.0 | 28.6 |
+| Length, seconds (median) | 25.0 | 28.9 |
 
 ## Animals
 - 5 Animals That Sleep in the STRANGEST Ways (1,149,894 views, 24,039 an hour, 61 s, informationfact)
@@ -124,6 +124,13 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Andrew Garfield is a busy man keeping up with all of these ICONIC shows 💅 (1,758 views, 91 an hour, 79 s, MTV ASIA)
 - Charlotte And Louis Are OBSESSED — William's Family TV Confession! #Shorts (990 views, 63 an hour, 39 s, RoyalPalaceLight)
 - Arthur Hill wants to go on 'Traitors' and 'Strictly'🏰🪩 #shorts (1,001 views, 25 an hour, 38 s, Capital Buzz)
+
+## The Hunger Games: Sunrise on the Reaping
+- Mckenna Grace CHANNELS Rue's Hunger Games Look For The Today Show! 🥹💚 #HungerGames (7,139 views, 3,058 an hour, 6 s, SwipeRadar)
+- Haymitch Abernathy | Everybody Wants to Rule the World #sotr #hungergamestiktok (523 views, 523 an hour, 21 s, sɯɐǝɹp ɥɐǝꓶ)
+- Petition to see the four hour cut of The Hunger Games: Sunrise on the Reaping ✨ (8,679 views, 382 an hour, 9 s, MTV UK)
+- Mckenna Grace pranking the Sunrise on the Reaping cast is unhinged (1,187 views, 108 an hour, 26 s, ReplayZone)
+- How a Beautiful Meadow Set Helped Actors Feel Every Emotion #shorts (1,753 views, 63 an hour, 79 s, Big Gold Belt Media)
 
 ## Walter Koenig
 - Star Trek's Chekov Dies at 90 - Only Kirk and Sulu Are Left #shorts #news (2,293 views, 61 an hour, 33 s, Drift Theory)

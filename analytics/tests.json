@@ -2,18 +2,18 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-28T16:16+00:00",
+ "as_of": "2026-10-28T19:39+00:00",
  "factors": {
   "angles": {
    "arms": {
     "shown": {
-     "n": 6,
-     "needs": 64,
+     "n": 7,
+     "needs": 63,
      "verdict": "about typical"
     },
     "hidden": {
-     "n": 11,
-     "needs": 59,
+     "n": 14,
+     "needs": 56,
      "verdict": "about typical"
     }
    },
@@ -38,14 +38,14 @@
   "ending": {
    "arms": {
     "loop": {
-     "n": 16,
-     "needs": 54,
+     "n": 19,
+     "needs": 51,
      "verdict": "about typical"
     },
     "question": {
-     "n": 12,
-     "needs": 58,
-     "verdict": "about typical"
+     "n": 13,
+     "needs": 57,
+     "verdict": "early sign"
     }
    },
    "settled": false,
@@ -69,18 +69,18 @@
   "first_frame": {
    "arms": {
     "cover": {
-     "n": 8,
-     "needs": 62,
+     "n": 15,
+     "needs": 55,
      "verdict": "early sign"
     },
     "photo": {
-     "n": 5,
-     "needs": 65,
+     "n": 9,
+     "needs": 61,
      "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "first frame",
    "verdict": "too few to tell",
    "effect": "",
@@ -102,11 +102,11 @@
     "named": {
      "n": 11,
      "needs": 59,
-     "verdict": "early sign"
+     "verdict": "about typical"
     },
     "plain": {
-     "n": 8,
-     "needs": 62,
+     "n": 10,
+     "needs": 60,
      "verdict": "early sign"
     }
    },
@@ -131,9 +131,9 @@
   "fx_energy": {
    "arms": {
     "steady": {
-     "n": 21,
-     "needs": 49,
-     "verdict": "early sign"
+     "n": 23,
+     "needs": 47,
+     "verdict": "about typical"
     },
     "lab": {
      "n": 5,
@@ -163,8 +163,8 @@
   "fx_grade": {
    "arms": {
     "natural": {
-     "n": 7,
-     "needs": 63,
+     "n": 9,
+     "needs": 61,
      "verdict": "about typical"
     },
     "lab": {
@@ -200,8 +200,8 @@
      "verdict": "about typical"
     },
     "lab": {
-     "n": 0,
-     "needs": 70,
+     "n": 1,
+     "needs": 69,
      "verdict": "about typical"
     }
    },
@@ -221,7 +221,8 @@
    "p": "",
    "q": "",
    "luck": "",
-   "confirm": ""
+   "confirm": "",
+   "followed_pct": 100
   },
   "fx_slot": {
    "arms": {
@@ -231,9 +232,9 @@
      "verdict": "about typical"
     },
     "12:00 to 18:00": {
-     "n": 18,
-     "needs": 52,
-     "verdict": "early sign"
+     "n": 20,
+     "needs": 50,
+     "verdict": "about typical"
     }
    },
    "settled": false,
@@ -253,13 +254,13 @@
    "q": "",
    "luck": "",
    "confirm": "",
-   "followed_pct": 76
+   "followed_pct": 74
   },
   "gene:g003": {
    "arms": {
     "a": {
-     "n": 10,
-     "needs": 60,
+     "n": 14,
+     "needs": 56,
      "verdict": ""
     },
     "b": {
@@ -320,18 +321,18 @@
   "hook_type": {
    "arms": {
     "statement": {
-     "n": 10,
-     "needs": 60,
+     "n": 15,
+     "needs": 55,
      "verdict": "about typical"
     },
     "number": {
-     "n": 5,
-     "needs": 65,
+     "n": 10,
+     "needs": 60,
      "verdict": "about typical"
     }
    },
    "settled": false,
-   "days_left": 7,
+   "days_left": 6,
    "label": "hook",
    "verdict": "too few to tell",
    "effect": "",
@@ -347,18 +348,18 @@
    "q": "",
    "luck": "",
    "confirm": "",
-   "followed_pct": 93
+   "followed_pct": 96
   },
   "length": {
    "arms": {
     "25 to 34 s": {
-     "n": 20,
-     "needs": 50,
+     "n": 22,
+     "needs": 48,
      "verdict": "about typical"
     },
     "35 to 44 s": {
-     "n": 26,
-     "needs": 44,
+     "n": 27,
+     "needs": 43,
      "verdict": "early sign"
     }
    },
@@ -366,36 +367,36 @@
    "days_left": 5,
    "label": "length",
    "verdict": "running",
-   "effect": 0.64,
-   "low": 0.23,
-   "high": 1.73,
+   "effect": 0.69,
+   "low": 0.25,
+   "high": 1.89,
    "halves": "disagree",
    "winner": "",
    "leaning": "25 to 34 s",
    "why": "the 90% interval includes no difference",
    "metric": "views",
    "views_effect": "",
-   "p": 0.4568,
-   "q": 0.571,
+   "p": 0.539,
+   "q": 0.539,
    "luck": "",
    "confirm": "",
-   "followed_pct": 85
+   "followed_pct": 82
   },
   "title_search": {
    "arms": {
     "search phrase": {
-     "n": 19,
-     "needs": 51,
+     "n": 22,
+     "needs": 48,
      "verdict": "about typical"
     },
     "curiosity": {
-     "n": 15,
-     "needs": 55,
+     "n": 16,
+     "needs": 54,
      "verdict": "early sign"
     }
    },
    "settled": false,
-   "days_left": 6,
+   "days_left": 5,
    "label": "title opening",
    "verdict": "too few to tell",
    "effect": "",
@@ -447,13 +448,13 @@
   "title_emoji": {
    "arms": {
     "emoji": {
-     "n": 23,
-     "needs": 47,
+     "n": 26,
+     "needs": 44,
      "verdict": "early sign"
     },
     "none": {
-     "n": 25,
-     "needs": 45,
+     "n": 26,
+     "needs": 44,
      "verdict": "about typical"
     }
    },
@@ -461,30 +462,30 @@
    "days_left": 5,
    "label": "title emoji",
    "verdict": "running",
-   "effect": 1.38,
-   "low": 0.54,
-   "high": 3.53,
-   "halves": "agree",
+   "effect": 1.52,
+   "low": 0.6,
+   "high": 3.87,
+   "halves": "disagree",
    "winner": "",
    "leaning": "none",
    "why": "the 90% interval includes no difference",
    "metric": "views",
    "views_effect": "",
-   "p": 0.5706,
-   "q": 0.571,
+   "p": 0.454,
+   "q": 0.539,
    "luck": "",
    "confirm": ""
   },
   "title_answer": {
    "arms": {
     "stated": {
-     "n": 20,
-     "needs": 50,
+     "n": 21,
+     "needs": 49,
      "verdict": "about typical"
     },
     "held back": {
-     "n": 16,
-     "needs": 54,
+     "n": 19,
+     "needs": 51,
      "verdict": "about typical"
     }
    },
@@ -509,14 +510,14 @@
   "sub_push": {
    "arms": {
     "spoken": {
-     "n": 9,
-     "needs": 61,
+     "n": 11,
+     "needs": 59,
      "verdict": "about typical"
     },
     "none": {
      "n": 15,
      "needs": 55,
-     "verdict": "about typical"
+     "verdict": "early sign"
     }
    },
    "settled": false,
@@ -540,13 +541,13 @@
   "replies": {
    "arms": {
     "on": {
-     "n": 26,
-     "needs": 44,
+     "n": 29,
+     "needs": 41,
      "verdict": "about typical"
     },
     "off": {
-     "n": 25,
-     "needs": 45,
+     "n": 26,
+     "needs": 44,
      "verdict": "about typical"
     }
    },
@@ -554,17 +555,17 @@
    "days_left": 5,
    "label": "comment replies",
    "verdict": "running",
-   "effect": 0.48,
-   "low": 0.21,
-   "high": 1.11,
+   "effect": 0.54,
+   "low": 0.23,
+   "high": 1.26,
    "halves": "agree",
    "winner": "",
    "leaning": "on",
    "why": "the 90% interval includes no difference",
    "metric": "views",
    "views_effect": "",
-   "p": 0.1531,
-   "q": 0.459,
+   "p": 0.2318,
+   "q": 0.539,
    "luck": "",
    "confirm": ""
   }

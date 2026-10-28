@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-28T16:20+00:00",
+ "updated": "2026-10-28T19:43+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 110,
- "median_views": 114.5,
+ "reels": 112,
+ "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
@@ -14,8 +14,8 @@
  "categories": [
   {
    "category": "Gaming",
-   "median": 123.0,
-   "n": 23,
+   "median": 122.5,
+   "n": 24,
    "score": 1.061,
    "favoured": true
   },
@@ -23,49 +23,49 @@
    "category": "Sport",
    "median": 120.0,
    "n": 25,
-   "score": 1.04,
+   "score": 1.044,
    "favoured": false
   },
   {
    "category": "Film",
    "median": 119.0,
    "n": 15,
-   "score": 1.029,
+   "score": 1.033,
    "favoured": false
   },
   {
    "category": "Animals",
    "median": 43.0,
    "n": 1,
-   "score": 0.849,
+   "score": 0.85,
    "favoured": false
   },
   {
    "category": "Music",
    "median": 63.5,
    "n": 24,
-   "score": 0.614,
+   "score": 0.616,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 38.0,
    "n": 10,
-   "score": 0.479,
+   "score": 0.481,
    "favoured": false
   },
   {
    "category": "Entertainment",
-   "median": 12.5,
-   "n": 6,
-   "score": 0.299,
+   "median": 15.0,
+   "n": 7,
+   "score": 0.306,
    "favoured": false
   },
   {
    "category": "Tech",
    "median": 8.5,
    "n": 6,
-   "score": 0.242,
+   "score": 0.243,
    "favoured": false
   }
  ],
@@ -83,11 +83,11 @@
      "lift": ""
     },
     "no": {
-     "n": 17,
-     "median": 119.0,
+     "n": 19,
+     "median": 115.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.93"
+     "lift": "0.9"
     }
    },
    "paused": true
@@ -98,18 +98,18 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 11,
-     "median": 123.0,
+     "n": 13,
+     "median": 122.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.98"
+     "lift": "0.93"
     },
     "full": {
      "n": 7,
      "median": 115.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.91"
+     "lift": "0.94"
     }
    },
    "paused": false
@@ -124,21 +124,21 @@
      "median": 122.5,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.97"
+     "lift": "1.02"
     },
     "any": {
-     "n": 10,
-     "median": 116.5,
+     "n": 12,
+     "median": 111.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.93"
+     "lift": "0.86"
     }
    },
    "paused": false
   }
  },
  "week": {
-  "reels": 84,
+  "reels": 86,
   "median": 115.0,
   "before_reels": 26,
   "before_median": 103.0

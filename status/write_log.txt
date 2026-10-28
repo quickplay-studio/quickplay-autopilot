@@ -1,10 +1,63 @@
-breaking run for 2026-10-28: 2 to write and 4 for a mega trend from 4 fact packs
-category shares: {'Music': 0.26, 'Film': 0.16, 'Gaming': 0.15, 'Sport': 0.12, 'Animals': 0.1, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
+morning run for 2026-10-28: 6 to write and 12 for a mega trend from 21 fact packs
+category shares: {'Music': 0.28, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.11, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
+category floors first: ['Cars']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026 winner: still failing: meta.facts: source numbers run from 1 to 3 (Harry Kane won the Ballon d'Or for the f); meta.facts: source numbers run from 1 to 3 (The ceremony took place on 26 October 20); meta.facts: source numbers run from 1 to 3 (Harry Kane is the first player from Engl); meta.facts: source numbers run from 1 t
-Ballon d'Or 2026: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings
-Ballon d'Or 2026 reaction: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 history and records
-Film Explained #1: How Lord of the Rings Made Hobbits Small: gemini-3.6-flash, 2 warnings (narration: 126 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
-wrote 1 of 2 and 2 of 4 for a mega trend: QD-245 Harry Kane Ballon d'Or: chaotic London ceremony ⚽ (mega); QD-246 Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (mega); QD-247 Lord of the Rings: the 438 day filming secret
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:qwen3.5-397b": "router: no free capacity now"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1, "gemini-3.8-flash": 1, "gemini-3.7-flash": 1, "gemma-4-31b-it": 1}, "answers": {"groq:openai/gpt-oss-120b": 2, "gemini-3.6-flash": 6, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 2, "gemini-3.5-flash-lite": 11, "gemini-3.5-flash": 1}, "empty answers": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1, "openrouter:dots-studio/dots-3-note-preview:free": 1}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 0, "router searches": 0, "router sources added": 0, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+Why does Star Wars start with Episode 4?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Ballon d'Or 2026 winner: gemini-3-flash-preview, 1 warnings (narration: 131 words, best between 100 and 125)
+viral Ballon d'Or 2026: the latest angle is made already: Ballon d'Or 2026
+Ballon d'Or 2026 history and records: gemini-3-flash-preview, 0 warnings
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 explained
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 facts
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 star
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 by the numbers
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 analysis
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 rankings
+Walter Koenig: gemini-3-flash-preview, 0 warnings
+Walter Koenig reaction: gemini-3-flash-preview, 1 warnings (narration: 132 words, best between 100 and 125)
+covered already: Walter Koenig facts
+covered already: Walter Koenig star
+Walter Koenig analysis: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Walter Koenig history and records: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Walter Koenig explained: gemini-3-flash-preview, 2 warnings (narration: 109 words, best between 75 and 100; meta.sources: one site only; name it in the narration for breaking news)
+watchlist Walter Koenig: today's places are filled: Walter Koenig rankings
+watchlist: the day's 5 watch places are filled: GTA 6 price
+watchlist: the day's 5 watch places are filled: GTA 6
+exploration Short: Cars: m2
+QD-256: about 60 s needs 9 facts, the pack has 6: 35 to 44 s instead
+m2: groq:qwen/qwen3.8-27b, 0 warnings
+QD-257: about 60 s needs 9 facts, the pack has 6: 35 to 44 s instead
+m2: skipped: niche
+QD-257: about 60 s needs 9 facts, the pack has 6: 35 to 44 s instead
+m2: skipped: nothing new
+perseverance: still failing: facts: beat 2: Beat 2 states the distance is roughly the length of 50 football pitches, but the pack contains no information about football pitches.
+Film Facts #2: kpop demon hunters song: the soundtrack history: skipped: nothing new
+evergreen: Top 10 best-selling Grand Theft Auto games: only 0 checked facts
+evergreen: Top 5 best-selling Beatles albums of all time: only 0 checked facts
+wrote 2 of 6 and 6 of 12 for a mega trend: QD-248 Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀; QD-249 Ballon d'Or #2: Winner harry kane wins 🏆; QD-250 Sport Shocks #3: history of ballon d'or: Harry Kane wins (mega); QD-251 Star Stories #3: Walter Koenig: Star Trek actor dies aged 90 (mega); QD-252 Walter Koenig: the co-star tribute you must see 🖖 (mega); QD-253 Walter Koenig: the audition secret you missed 🖖 (mega); QD-254 Star Stories #5: Walter Koenig: the record the Star Trek legend set (mega); QD-255 Star Stories #7: Walter Koenig: the audition secret you never knew (mega)
+channel gaming: GTA 6: gemini-3.5-flash-lite, 2 warnings (narration: 74 words, best between 75 and 100; check these words are fine in context: ['vote'])
+channel gaming: GTA 6 price: still failing: facts: beat 1: Beat 1 states it is 132 days away, but the pack says 22 days to go (trend signal: watchlist: GTA 6 (build-up, 22 days to go)).; facts: beat 2: Beat 2 states 'That's about as far as a weekend away', which contradicts the release timing.
+channel gaming: Why did Minecraft remove the Herobrine removal message?: still failing: facts: beat 2: The script states Mojang removed the Herobrine removal message from update notes, but this fact is not supported by the pack.
+channel gaming: The impossible 11-minute World 1-1 Super Mario Bros speedrun record: still failing: beat 5: needs at least one shot or a graphic
+channel gaming: wrote 1 of 3: QD-257 Level Up #3: GTA 6 Union Vote: Rockstar's historic moment ⚙️🗳️
+channel irl: Walter Koenig facts: freellm:ovh/Mistral-Nemo-Instruct-2407, 1 warnings (narration: 114 words, best between 75 and 100)
+channel irl: Walter Koenig rankings: freellm:ovh/Qwen2.5-VL-72B-Instruct, 2 warnings (narration: 57 words, best between 75 and 100; meta.sources: one site only; name it in the narration for breaking news)
+channel irl: Walter Koenig reaction: gemini-3.5-flash-lite, 3 warnings (beat 0: lead with the person and the result, not the date; narration: 82 words, best between 100 and 125; meta.title: 54 characters: under 50, the searched name still first)
+channel irl: mega Walter Koenig: wrote 3 of 3
+channel irl: no Entertainment/Animals/Food news packs; evergreen instead
+evergreen: Top 10 most popular dog breeds in the UK: only 0 checked facts
+evergreen: Top 10 most consumed fruits in the world: only 0 checked facts
+channel irl: Why do cats headbutt people?: still failing: facts: beat 2: The pack contains no information about headbutting lasting around 8 seconds or taking the time to read a short text message.; facts: beat 3: The pack states Mildred Moelk studied cat sounds and vocalizations, not headbutting behavior.
+channel irl: Bob the cat: the stray that inspired a worldwide bestseller: still failing: facts: beat 4: The script introduces 'Munich' as a separate cat from Bob, but the pack establishes that Bob is the cat who received the two Dover soles and whose nickname was Munich Mouser.; facts: beat 5: The script states that Munich was found dead in 1943, conflating Munich with Bob; the pack sta
+channel irl: wrote 0 of 3: QD-258 Did You Know #6: Walter Koenig: Star Trek actor dies aged 90; QD-259 Did You Know #7: Walter Koenig: two actors auditioned for Chekov; QD-260 Did You Know: Walter Koenig tribute: George Takei's touching words 🖖
+channel clips: Ballon d'Or 2026 explained: freellm:ovh/Qwen2.5-VL-72B-Instruct, 2 warnings (narration: 70 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
+channel clips: Ballon d'Or 2026 facts: still failing: beat 6: needs at least one shot or a graphic
+channel clips: Ballon d'Or 2026 star: still failing: meta.title: 1 to 70 characters; meta.summary: 1 to 2 sentences; meta.hashtags: 0 given, needs 8 to 15 (most relevant first; #Shorts is added for YouTube); meta.sources: at least 1 source (the exact page); meta.facts: list every factual claim as [claim, [source numbers]]
+channel clips: Ballon d'Or 2026 by the numbers: still failing: facts: beat 5: The script states the ceremony was held on Tuesday 26 October, but the fact pack only states 26 October 2026 without mentioning the day of the week.
+channel clips: Ballon d'Or 2026 analysis: still failing: facts: beat 3: The pack does not mention the BBC or that the ceremony was called the most chaotic ever.; facts: beat 4: The pack does not mention Variety or that Kane's win was overshadowed.; facts: beat 5: The pack does not mention the BBC or that it was the most chaotic ceremony ever.; facts: beat
+channel clips: Ballon d'Or 2026 rankings: still failing: facts: beat 1: Beat 1 mentions Rod Stewart owning MTV's first day, which is completely unsupported by the pack.; facts: beat 2: Beat 2 mentions Kylian Mbappé being at number 5 and scoring 59 goals for Paris Saint-Germain, which is not supported by the fact pack.; facts: beat 3: Beat 3 mentions Rober
+channel clips: Ballon d'Or 2026 history and records: still failing: facts: beat 0: Title states Harry Kane won 16 Ballon d'Or records, but the pack says he won the Ballon d'Or for the first time.; facts: beat 2: Beat 2 states Harry Kane won the Ballon d'Or for the 16th time, but the pack says he won it for the first time.; facts: beat 3: Beat 3 mentions '16 times', 
+channel clips: Ballon d'Or 2026: still failing: beat 6: needs at least one shot or a graphic
+channel clips: mega Ballon d'Or 2026: wrote 1 of 3
+channel clips: perseverance: still failing: facts: beat 2: Beat 2 states Perseverance passed 2810 miles, but the pack says 28.10 miles (45.22 kilometers).
+channel clips: wrote 0 of 3: QD-261 Match Day #4: Harry Kane Ballon d'Or: the historic detail 🏆
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "freellm:gpt-oss-120b": "router: no free capacity now", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3.5-lightning:free": "daily limit", "gemini-omni-flash-preview": "daily limit", "gemini-3-flash-preview": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1, "groq:openai/gpt-oss-20b": 2}, "answers": {"gemini-3-flash-preview": 18, "gemini-3.5-flash-lite": 77, "groq:openai/gpt-oss-120b": 1, "gemma-4-31b-it": 1, "groq:qwen/qwen3.8-27b": 7, "groq:openai/gpt-oss-20b": 2, "freellm:ovh/Mistral-Nemo-Instruct-2407": 33, "freellm:ovh/Qwen2.5-VL-72B-Instruct": 18, "freellm:ovh/Meta-Llama-3_3-70B-Instruct": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1, "groq:openai/gpt-oss-20b": 2}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 2, "router searches": 0, "router sources added": 0, "providers passed over": ["groq", "openrouter"], "late": true, "claude today": "4 of 4 edits, 0 of 0 writes"}

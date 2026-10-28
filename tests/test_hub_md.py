@@ -8,7 +8,7 @@ REPO_DIR = str(pathlib.Path(__file__).resolve().parent.parent)
 os.chdir(REPO_DIR); sys.path.insert(0, REPO_DIR + "/pipeline")
 import hub_md as H
 
-EM, EN = "—", "–"
+EM, EN = "\u2014", "\u2013"
 FAKE = "sk-FAKEKEYVALUE1234567890abcdefXYZ"          # a key that must never reach the page
 FAKE2 = "0123456789abcdef0123456789abcdef01234567"    # a long token-shaped string
 NOW = dt.datetime(2026, 10, 28, 11, 40, tzinfo=dt.timezone.utc)      # 28 October is GMT in London (BST ended on the 25th)

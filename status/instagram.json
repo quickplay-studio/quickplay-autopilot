@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-28T09:20+00:00",
+ "updated": "2026-10-28T14:11+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 112,
- "median_views": 114.5,
+ "reels": 107,
+ "median_views": 115.0,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
@@ -16,21 +16,21 @@
    "category": "Gaming",
    "median": 123.0,
    "n": 21,
-   "score": 1.06,
+   "score": 1.056,
    "favoured": true
   },
   {
    "category": "Sport",
-   "median": 119.0,
-   "n": 26,
-   "score": 1.033,
+   "median": 120.0,
+   "n": 25,
+   "score": 1.036,
    "favoured": false
   },
   {
    "category": "Film",
    "median": 119.0,
-   "n": 15,
-   "score": 1.029,
+   "n": 14,
+   "score": 1.026,
    "favoured": false
   },
   {
@@ -43,29 +43,29 @@
   {
    "category": "Music",
    "median": 75.0,
-   "n": 25,
-   "score": 0.703,
+   "n": 23,
+   "score": 0.704,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 38.0,
    "n": 10,
-   "score": 0.479,
+   "score": 0.478,
    "favoured": false
   },
   {
    "category": "Entertainment",
    "median": 15.0,
    "n": 7,
-   "score": 0.306,
+   "score": 0.305,
    "favoured": false
   },
   {
    "category": "Tech",
-   "median": 11.0,
-   "n": 7,
-   "score": 0.255,
+   "median": 8.5,
+   "n": 6,
+   "score": 0.242,
    "favoured": false
   }
  ],
@@ -138,10 +138,10 @@
   }
  },
  "week": {
-  "reels": 86,
+  "reels": 82,
   "median": 115.0,
-  "before_reels": 26,
-  "before_median": 103.0
+  "before_reels": 25,
+  "before_median": 105.0
  },
  "cover": {
   "asked": 20,

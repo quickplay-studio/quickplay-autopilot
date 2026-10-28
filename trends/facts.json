@@ -1,8 +1,8 @@
 {
  "date": "2026-10-28",
- "built": "2026-10-28T11:33+00:00",
- "model": "gemini-3.5-flash-lite + freellm:llama-3.3-70b",
- "mode": "breaking",
+ "built": "2026-10-28T14:06+00:00",
+ "model": "gemini-3.5-flash-lite + groq:qwen/qwen3.8-27b",
+ "mode": "full",
  "run": "",
  "errors": [],
  "topics": [
@@ -11,13 +11,19 @@
    "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "Harry Kane defended his Ballon d'Or victory while Thierry Henry and Kylian Mbappé addressed separate controversies from the ceremony.",
    "hooks": [
-    "Did you know Harry Kane is just the fifth Englishman to win the Ballon d'Or?",
-    "Alexia Putellas has made history by winning her third Ballon d'Or!",
-    "For the first time ever, the Ballon d'Or ceremony was held outside France or Switzerland!"
+    "Harry Kane makes history as the new Ballon d'Or winner!",
+    "Alexia Putellas claims her third Women's Ballon d'Or title!",
+    "London hosts the Ballon d'Or ceremony for the very first time!"
    ],
    "sources": [
+    [
+     "'Relax, I love Kane and Lamine Yamal' - Henry defends his Ballon d'Or hosting",
+     "https://www.bbc.co.uk/sport/football/articles/cm369r0n0zk5o?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
     [
      "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains",
      "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
@@ -31,12 +37,6 @@
      "2026-10-27"
     ],
     [
-     "Ballon d'Or in London - the most chaotic ever?",
-     "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
-    ],
-    [
      "Ballon d'Or 2026",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
@@ -45,156 +45,71 @@
    ],
    "verified": [
     {
-     "claim": "Harry Kane won the Mens Ballon dOr for the first time in his career.",
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
      "sources": [
-      2,
+      3,
       4
      ],
      "evidence": {
-      "2": "Then, reaction to Harry Kane winning the Ballon d’Or - the first Englishman since Michael Owen in 2001.",
+      "3": "Then, reaction to Harry Kane winning the Ballon d'Or - the first Englishman since Michael Owen in 2001.",
       "4": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
      }
     },
     {
-     "claim": "Alexia Putellas won the Womens Ballon dOr for the third time in her career.",
+     "claim": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
      "sources": [
-      2,
+      3,
       4
      ],
      "evidence": {
-      "2": "Finally, London City Lionesses CEO Martin Semmens on Alexia Putellas winning the Ballon d’Or Féminin for a third time after her move to the WSL.",
+      "3": "Then, reaction to Harry Kane winning the Ballon d'Or - the first Englishman since Michael Owen in 2001.",
+      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "Finally, London City Lionesses CEO Martin Semmens on Alexia Putellas winning the Ballon d'Or Féminin for a third time after her move to the WSL.",
       "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "Harry Kane became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "Then, reaction to Harry Kane winning the Ballon d’Or - the first Englishman since Michael Owen in 2001.",
-      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
-     }
-    },
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "4": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
-     }
-    },
-    {
-     "claim": "This marked the first time the ceremony was organised outside France or Switzerland.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "4": "This also marked the first time the ceremony was organised outside France or Switzerland."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d Or was the 70th annual ceremony of the Ballon d Or.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "It was the first time the Ballon d'Or had been held in London in its 70-year history, with organisers choosing the iconic London Palladium as",
-      "4": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
      }
     }
    ],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "This also marked the first time the ceremony was organised outside France or Switzerland.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    }
+   ],
    "images": [
     "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
    ]
   },
   {
    "n": 4,
-   "topic": "Ballon d'Or 2026 explained",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Harry Kane just won the Men's Ballon d'Or!",
-    "Alexia Putellas makes history with her third Ballon d'Or win!",
-    "Discover how Harry Kane claimed his first Ballon d'Or!"
-   ],
-   "sources": [
-    [
-     "Ballon d'Or 2026 explained",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Harry Kane became the fifth Englishman to win the award.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 5,
    "topic": "Ballon d'Or 2026 facts",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know Caroline Weir is ranked the 25th best women footballer?"
+    "Discover where Caroline Weir ranked in the Ballon d'Or!"
    ],
    "sources": [
     [
@@ -225,30 +140,39 @@
    ],
    "one_source": [
     {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the Women's Ballon d'Or.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
       2
      ],
      "evidence": {
       "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "It was the first time the ceremony was organised outside France or Switzerland.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     }
    ],
@@ -257,13 +181,13 @@
    ]
   },
   {
-   "n": 6,
+   "n": 5,
    "topic": "Ballon d'Or 2026 star",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "The winners of the 2026 Ballon d'Or were announced on 26 October 2026.",
    "hooks": [
-    "Discover who won the Ballon d'Or!"
+    "Did you know Caroline Weir ranked 25th in the world?"
    ],
    "sources": [
     [
@@ -279,15 +203,142 @@
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Caroline Weir has been ranked the 25th best women footballer in the world.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Caroline Weir has been ranked the 25th best women footballer in the world on the day she also joined fellow Scotland midfielder Erin Cuthbert and",
+      "2": "25 | Caroline Weir | Scotland | Midfielder | Real Madrid"
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "The 2026 ceremony was held on 26 October 2026 at the London Palladium, the first time outside France or Switzerland.",
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "2026 2 the ceremony took place on 26 october 2026 at the london palladium in london 3 4 this also marked the first time the ceremony was organised outside france or switzerland bayern munich forward harry kane won the men"
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "This was the first time the Ballon d'Or ceremony was organised outside France or Switzerland.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 6,
+   "topic": "Ballon d'Or 2026 rankings",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Harry Kane wins the 2026 Mens Ballon dOr!",
+    "Alexia Putellas claims her third Womens Ballon dOr!"
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 rankings",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Harry Kane won the Mens Ballon dOr for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Womens Ballon dOr for the third time in her career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "The 2026 ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "It was the first time the ceremony was organised outside France or Switzerland.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     }
    ],
@@ -297,17 +348,18 @@
   },
   {
    "n": 7,
-   "topic": "Ballon d'Or 2026 rankings",
+   "topic": "Ballon d'Or 2026 by the numbers",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did Harry Kane win the Men's Ballon d'Or?",
-    "How many times did Alexia Putellas win?"
+    "Harry Kane just won his very first Ballon d'Or!",
+    "Alexia Putellas makes history with her third Ballon d'Or win!",
+    "London hosted the Ballon d'Or ceremony for the first time ever!"
    ],
    "sources": [
     [
-     "Ballon d'Or 2026 rankings",
+     "Ballon d'Or 2026 by the numbers",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -339,34 +391,16 @@
       1
      ],
      "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
     },
     {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "The ceremony was the first time the Ballon d'Or was organised outside France or Switzerland.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This also marked the first time the ceremony was organised outside France or Switzerland."
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
      }
     }
    ],
@@ -376,165 +410,13 @@
   },
   {
    "n": 8,
-   "topic": "Ballon d'Or 2026 by the numbers",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "Harry Kane and Alexia Putellas won the Men's and Women's Ballon d'Or awards on 26 October 2026",
-   "hooks": [
-    "Harry Kane has won the prestigious Men's Ballon d'Or!",
-    "Alexia Putellas claims her third Women's Ballon d'Or victory."
-   ],
-   "sources": [
-    [
-     "Ballon d'Or 2026 by the numbers",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "Harry Kane won the Men's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career"
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career"
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London"
-     }
-    },
-    {
-     "claim": "The ceremony was organised outside France or Switzerland for the first time",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This also marked the first time the ceremony was organised outside France or Switzerland"
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025-26 season",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season"
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or"
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin"
-     }
-    },
-    {
-     "claim": "Harry Kane is the fifth Englishman to win the Men's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001"
-     }
-    },
-    {
-     "claim": "Alexia Putellas is the sixth consecutive Spaniard to win the Women's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025"
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or covers the period from 3 August 2025 to 19 July 2026",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This is the period from 3 August 2025 to 19 July 2026"
-     }
-    },
-    {
-     "claim": "Kylian Mbappé finished second in the Men's Ballon d'Or voting",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting"
-     }
-    },
-    {
-     "claim": "Ewa Pajor finished second in the Women's Ballon d'Or voting",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She finished ahead of Ewa Pajor and Khadija Shaw in the voting"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 9,
    "topic": "Ballon d'Or 2026 best moments",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane wins the Men's Ballon d'Or!",
-    "Alexia Putellas takes the Women's Ballon d'Or!",
-    "Discover the best moments of the 2026 Ballon d'Or!"
+    "Did Harry Kane just win the Ballon d'Or?",
+    "Alexia Putellas makes history once again!"
    ],
    "sources": [
     [
@@ -547,6 +429,712 @@
    "verified": [],
    "one_source": [
     {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "Ballon d'Or 2026 what happens next",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Harry Kane just won the 2026 Men's Ballon d'Or!",
+    "Alexia Putellas claimed the women's award for the third time!",
+    "Discover who topped the 2026 Ballon d'Or rankings!"
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 what happens next",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 20,
+   "topic": "Walter Koenig",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Star Trek legend Walter Koenig once had a severe stutter?",
+    "Walter Koenig landed his iconic Star Trek role because he looked like Davy Jones.",
+    "Star Trek star Walter Koenig passed away at the age of 90."
+   ],
+   "sources": [
+    [
+     "Walter Koenig obituary",
+     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig died at the age of 90.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "The American actor Walter Koenig, who has died aged 90, was unimpressed when, as a TV viewer, he caught a glimpse of Star Trek on",
+      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday",
+      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age"
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg), who worked as a flautist, nightclub",
+      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig played Ensign Pavel Chekov in the original Star Trek television series.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
+      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
+      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
+      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "Walter Koenig trained at the Neighborhood Playhouse School of the Theatre in New York alongside fellow students such as James Caan.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
+      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig portrayed Alfred Bester in the sci-fi space series Babylon 5.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
+      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
+      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994). He also acted in several"
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote a script titled The Infinite Vulcan for Star Trek: The Animated Series.",
+     "sources": [
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
+      "5": "Star Trek: The Animated Series | —N/a | Writer; Episode: \"The Infinite Vulcan\""
+     }
+    },
+    {
+     "claim": "Walter Koenig was survived by his daughter Danielle Koenig.",
+     "sources": [
+      1,
+      2,
+      4
+     ],
+     "evidence": {
+      "1": "Koenig is survived by their daughter, Danielle.",
+      "2": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
+      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote an autobiography titled Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
+      "4": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
+     }
+    },
+    {
+     "claim": "Walter Koenig married actor Judy Levitt in 1965.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
+      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965."
+     }
+    },
+    {
+     "claim": "Walter Koenig was cast as Chekov in Star Trek because he resembled singer Davy Jones of the Monkees.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Walter Koenig had a stutter when he was young until he took the lead in a school play.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "“I had a stutter until I took the lead in the school play and that killed the stutter,” he revealed."
+     }
+    },
+    {
+     "claim": "Walter Koenig won the Platinum Award for best actor at the 2026 Independent Shorts Awards for his performance in the short film Mr Fleischmann.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Earlier this year, his performance in the short film Mr Fleischmann saw him collect the Platinum Award for best actor at the 2026 Independent Shorts"
+     }
+    },
+    {
+     "claim": "William Shatner paid tribute to Walter Koenig by describing him as a man who genuinely loved the Star Trek community.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday"
+     }
+    },
+    {
+     "claim": "Walter Koenig was born on September 14, 1936.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "Walter Koenig facts",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
+   "hooks": [
+    "Walter Koenig played Pavel Chekov in Star Trek.",
+    "Walter Koenig was born in Chicago in 1936.",
+    "Walter Koenig portrayed Alfred Bester in Babylon 5."
+   ],
+   "sources": [
+    [
+     "Walter Koenig obituary",
+     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig facts",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek television series from 1967 to 1969.",
+     "sources": [
+      1,
+      2,
+      5
+     ],
+     "evidence": {
+      "1": "Koenig appeared in 36 episodes throughout Star Trek’s second and third series (1967-69) before the programme was axed",
+      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg)",
+      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig trained at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
+      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote a first season episode of Star Star Trek The Animated Series titled The Infinite Vulcan.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
+     }
+    },
+    {
+     "claim": "Walter Koenig portrayed Alfred Bester in the science fiction series Babylon 5.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
+      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
+      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994). He also acted in several"
+     }
+    },
+    {
+     "claim": "Walter Koenig married the actor Judy Levitt in 1965.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
+      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965."
+     }
+    },
+    {
+     "claim": "Walter Koenig was survived by his daughter Danielle Koenig.",
+     "sources": [
+      1,
+      2,
+      4
+     ],
+     "evidence": {
+      "1": "Koenig is survived by their daughter, Danielle.",
+      "2": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
+      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
+     }
+    },
+    {
+     "claim": "Walter Koenig was cast as Pavel Chekov because he resembled Davy Jones of the Monkees.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 22,
+   "topic": "Walter Koenig star",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away aged 90 on Sunday, October 25, 2026, leading to widespread tributes.",
+   "hooks": [
+    "Did you know Walter Koenig nearly missed out on Star Trek?",
+    "How did Walter Koenig create his famous Star Trek accent?",
+    "Discover the incredible sci-fi career of Walter Koenig!"
+   ],
+   "sources": [
+    [
+     "Walter Koenig obituary",
+     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
+     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
+     "Rolling Stone",
+     "2026-10-28"
+    ],
+    [
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig star",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig passed away at the age of 90 on Sunday, October 25, 2026.",
+     "sources": [
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig",
+      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Walter Koenig joined Star Trek as Ensign Pavel Chekov in the second season in 1967.",
+     "sources": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
+      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
+      "3": "After landing his first TV roles in the early Sixties, including the pilot episode of the hit soap General Hospital, Koenig was cast as Chekov",
+      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
+      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season"
+     }
+    },
+    {
+     "claim": "Walter Koenig appeared in all six original cast Star Trek feature films from 1979 to 1991.",
+     "sources": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "Koenig also appeared in all six feature films (1979-91) spun off from the series, plus Star Trek: Generations (1994)",
+      "2": "later reprising his role in the six original cast movies from 1979 through to 1991.",
+      "3": "He remained a series regular through its third and final season, and would regularly reprise the role of Chekov, featuring in 1979’s Star Trek: The",
+      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994)."
+     }
+    },
+    {
+     "claim": "Walter Koenig portrayed Alfred Bester in the sci-fi series Babylon 5 during the 1990s.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
+      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
+      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
+     }
+    },
+    {
+     "claim": "Gene Roddenberry sought a character with the boyish looks of Monkees singer Davy Jones to appeal to young viewers.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "Walter Koenig stated that his character's Russian accent was inspired by his father.",
+     "sources": [
+      1,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "Koenig said the accent was inspired by his father. “My dad inverted the Vs and the Ws,” he explained.",
+      "4": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
+      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound."
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote an autobiography titled Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998)",
+      "4": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
+     }
+    },
+    {
+     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre alongside James Caan and Christopher Lloyd.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
+      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig married actor Judy Levitt in 1965.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
+      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965. And they"
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote an episode for Star Trek: The Animated Series titled The Infinite Vulcan.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 39,
+   "topic": "Ballon d'Or 2026 analysis",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Harry Kane has won the prestigious Men's Ballon d'Or!",
+    "Alexia Putellas claims the Women's Ballon d'Or once again."
+   ],
+   "sources": [
+    [
+     "Ballon d'Or 2026 analysis",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
      "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
      "sources": [
       1
@@ -565,21 +1153,30 @@
      }
     },
     {
-     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London, the first time the ceremony was organised outside France or Switzerland.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4] This also marked the first time the ceremony was organised outside"
      }
     },
     {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
+     "claim": "He became the fifth Englishman to win the award, the latest before him being Michael Owen in 2001.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     }
    ],
@@ -588,637 +1185,20 @@
    ]
   },
   {
-   "n": 21,
-   "topic": "Walter Koenig",
+   "n": 43,
+   "topic": "Walter Koenig rankings",
    "signal": "watchlist: Walter Koenig (surging)",
    "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
    "hooks": [
-    "Star Trek actor Walter Koenig passed away at the age of 90.",
-    "Walter Koenig was best known for playing Pavel Chekov on Star Trek.",
-    "Walter Koenig also portrayed the villain Alfred Bester in Babylon 5."
+    "Did you know Walter Koenig was only one of two actors to audition for Chekov?",
+    "Walter Koenig served as the best man at George Takei's wedding in 2008.",
+    "Budgetary reasons kept Walter Koenig off the animated Star Trek series."
    ],
    "sources": [
     [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig",
+     "Walter Koenig rankings",
      "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek series and subsequent films.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "2": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
-      "3": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "4": "A Variety report says that Walter Koenig, known to the world as Star Trek's Russian hothead Pavel Chekhov, has died.",
-      "5": "in 1964 koenig portrayed a new york city juvenile gang leader in an adaptation of harlan ellison s memos from purgatory for the alfred hitchcock hour 8 koenig began playing ensign pavel chekov navigator on the uss enterprise in the"
-     }
-    },
-    {
-     "claim": "Walter Koenig died at the age of 90.",
-     "sources": [
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "2": "Koenig died on Sunday at the age of 90.",
-      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
-      "4": "Variety says Koenig died of natural causes. He was 90."
-     }
-    },
-    {
-     "claim": "Walter Koenig was born on September 14, 1936.",
-     "sources": [
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "4": "\"Just last month, on Sept. 14, he turned 90, on the same day Brad and I celebrated our 18th wedding anniversary.",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York.",
-     "sources": [
-      1,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "3": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote a script for an animated series episode called The Infinite Vulcan.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "4": "ironically, while the character of Chekhov was not included in the Star Trek animated series that ran for two seasons after the live-action show was"
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed Alfred Bester in Babylon 5.",
-     "sources": [
-      1,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "3": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "4": "But Koenig also played very much against type in at least one memorable role: Alfred Bester, a powerful Psi Corps officer in Babylon 5.",
-      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
-     }
-    },
-    {
-     "claim": "George Takei stated that he and Walter Koenig stayed friends for nearly six decades after meeting on the bridge of the Enterprise.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "a series regular through its third and final season and would regularly reprise the role of chekov featuring in 1979 s star trek the motion picture and the next seven films in the franchise concluding with 1994 s star trek",
-      "4": "walter koenig our ensign pavel chekov passed away early today walter and i met on the bridge of the enterprise in the 1960s and we stayed friends for nearly six decades when brad and i married in 2008 walter"
-     }
-    },
-    {
-     "claim": "George Takei mentioned that Walter Koenig served as his best man when he married in 2008.",
-     "sources": [
-      4,
-      5
-     ],
-     "evidence": {
-      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "5": "Koenig served as best man at Takei's wedding in 2008."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 22,
-   "topic": "Walter Koenig facts",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away aged 90 on Sunday, October 25, 2026.",
-   "hooks": [
-    "Did you know Star Trek icon Walter Koenig was unfamiliar with sci-fi before joining?",
-    "Walter Koenig passed away at 90, leaving an unforgettable legacy in sci-fi.",
-    "Why was Walter Koenig cast as Chekov instantly? Find out here!"
-   ],
-   "sources": [
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig facts",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig played Pavel Chekov in the original Star Trek TV series.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "2": "william shatner paid tribute to walter koenig the actor best known for playing pavel chekov on the original star trek series koenig died on sunday at the age of 90 shatner",
-      "3": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "4": "A Variety report says that Walter Koenig, known to the world as Star Trek's Russian hothead Pavel Chekhov, has died.",
-      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
-     }
-    },
-    {
-     "claim": "Walter Koenig died at the age of 90.",
-     "sources": [
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "2": "Koenig died on Sunday at the age of 90.",
-      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
-      "4": "Variety says Koenig died of natural causes. He was 90.",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig was born in Chicago, Illinois.",
-     "sources": [
-      1,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Walter Koenig attended the Neighborhood Playhouse School of the Theatre in New York.",
-     "sources": [
-      1,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "3": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an episode of Star Trek: The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "4": "He turned to screenwriting through the 1970s; ironically, while the character of Chekhov was not included in the Star Trek animated series that ran for"
-     }
-    },
-    {
-     "claim": "Walter Koenig played Alfred Bester in Babylon 5.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "3": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "4": "But Koenig also played very much against type in at least one memorable role: Alfred Bester, a powerful Psi Corps officer in Babylon 5."
-     }
-    },
-    {
-     "claim": "George Takei was Koenig's best man at his wedding in 2008.",
-     "sources": [
-      4,
-      5
-     ],
-     "evidence": {
-      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "5": "Koenig served as best man at Takei's wedding in 2008.[15]"
-     }
-    },
-    {
-     "claim": "Walter Koenig passed away at his home in North Hollywood.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "They confirmed he had died \"of old age at home in North Hollywood\" on Sunday night, \"surrounded by his daughter and niece\".",
-      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age"
-     }
-    },
-    {
-     "claim": "Walter Koenig was born on September 14, 1936.",
-     "sources": [
-      3,
-      5
-     ],
-     "evidence": {
-      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "George Takei and Walter Koenig met on the bridge of the Enterprise in the 1960s and remained friends for nearly six decades.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "His longtime friend George Takei, who played Lt. Hikaru Sulu on the original Star Trek series, also remembered Koenig in a tribute post. \"Walter and",
-      "4": "Walter and I met on the bridge of the Enterprise in the 1960s, and we stayed friends for nearly six decades."
-     }
-    },
-    {
-     "claim": "Walter Koenig was cast as Chekov primarily because he resembled Davy Jones of the Monkees.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "The character was introduced to appeal to younger audiences, with his Beatles/Monkees-style mop-top haircut.",
-      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    },
-    {
-     "claim": "Walter Koenig's daughter is the actress and screenwriter Danielle Koenig.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
-      "3": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Walter Koenig was unfamiliar with science fiction before being cast on Star Trek.",
-     "sources": [
-      5
-     ],
-     "evidence": {
-      "5": "Koenig was unfamiliar with science fiction before being cast on Star Trek.[9]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 23,
-   "topic": "Walter Koenig star",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "",
-   "hooks": [
-    "Star Trek actor Walter Koenig has died aged 90.",
-    "Did you know Walter Koenig wrote an episode of Star Trek: The Animated Series?",
-    "George Takei served as best man at Walter Koenig's wedding."
-   ],
-   "sources": [
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
-     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
-     "PC Gamer",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig star",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig played Pavel Chekov in Star Trek starting from season two in 1967.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
-      "2": "Koenig was cast as Chekov ahead of Star Trek’s second season.",
-      "3": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "4": "Koenig's big break in show biz came in 1967, when he was cast as Chekhov in the second season of the original Star Trek series.",
-      "5": "in 1964 koenig portrayed a new york city juvenile gang leader in an adaptation of harlan ellison s memos from purgatory for the alfred hitchcock hour 8 koenig began playing ensign pavel chekov navigator on the uss enterprise in the"
-     }
-    },
-    {
-     "claim": "Walter Koenig passed away at the age of 90.",
-     "sources": [
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "2": "Koenig died on Sunday at the age of 90.",
-      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
-      "4": "Variety says Koenig died of natural causes. He was 90.",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed Alfred Bester in the science fiction series Babylon 5.",
-     "sources": [
-      1,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "3": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "4": "But Koenig also played very much against type in at least one memorable role: Alfred Bester, a powerful Psi Corps officer in Babylon 5.",
-      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an episode of Star Trek: The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      1,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "4": "ironically, while the character of Chekhov was not included in the Star Trek animated series that ran for two seasons after the live-action show was",
-      "5": "The character of Chekov did not appear in the animated Star Trek series."
-     }
-    },
-    {
-     "claim": "George Takei served as best man at Walter Koenig's wedding.",
-     "sources": [
-      4,
-      5
-     ],
-     "evidence": {
-      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "5": "Koenig served as best man at Takei's wedding in 2008."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 24,
-   "topic": "Walter Koenig reaction",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
-   "hooks": [
-    "Did you know Walter Koenig was one of only two actors to audition for Chekov?",
-    "Walter Koenig served as the best man at George Takei's 2008 wedding.",
-    "Walter Koenig passed away at the age of 90."
-   ],
-   "sources": [
-    [
-     "Walter Koenig, Chekov on ‘Star Trek,’ Remembered by George Takei: ‘Keep Navigating a Steady Course’",
-     "https://variety.com/2026/film/news/walter-koenig-tributes-george-takei-1236931414/",
-     "Variety",
-     "2026-10-26"
-    ],
-    [
-     "Walter Koenig reaction",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig played Ensign Pavel Chekov in the original Star Trek television series.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Best known for his iconic role as Pavel Chekov in ‘Star Trek: The Original Series,’ Walter helped inspire audiences with his optimism, humor, and adventurous",
-      "2": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
-     }
-    },
-    {
-     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "2": "Koenig served as best man at Takei's wedding in 2008."
-     }
-    },
-    {
-     "claim": "Walter Koenig was born on September 14, 1936.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Just last month, on Sept. 14, he turned 90, on the same day Brad and I celebrated our 18th wedding anniversary.",
-      "2": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig played Ensign Pavel Chekov in Star Trek",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Walter Koenig‘s “Star Trek” colleagues are remembering the actor who played Chekov in the original “Star Trek” series",
-      "2": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series"
-     }
-    },
-    {
-     "claim": "George Takei was friends with Walter Koenig",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "“Walter and I met on the bridge of the Enterprise in the 1960s, and we stayed friends for nearly six decades,”",
-      "2": "When the early episodes for season two of Star Trek were filmed, George Takei was initially jealous of Koenig's more prominent role in the series,"
-     }
-    },
-    {
-     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "When Brad and I married in 2008, Walter stood beside us as our best man.",
-      "2": "Koenig served as best man at Takei's wedding in 2008"
-     }
-    },
-    {
-     "claim": "Walter Koenig was born on September 14, 1936",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Just last month, on Sept. 14, he turned 90, on the same day Brad and I celebrated our 18th wedding anniversary.",
-      "2": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026)"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Walter Koenig received the Platinum Award for Best Actor at the 2026 Independent Shorts Awards",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "for which he received the Platinum Award for Best Actor at the 2026 Independent Shorts Awards — a fitting recognition of a lifetime devoted to"
-     }
-    },
-    {
-     "claim": "Walter Koenig played in several Star Trek films",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994)."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 39,
-   "topic": "Ballon d'Or 2026 analysis",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "Harry Kane won the Men's Ballon d'Or on 26 October 2026",
-   "hooks": [
-    "Harry Kane won the Mens Ballon dOr!",
-    "Alexia Putellas claimed the Womens Ballon dOr award.",
-    "The 2026 Ballon dOr was held in London."
-   ],
-   "sources": [
-    [
-     "Ballon d'Or 2026 analysis",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
     ]
@@ -1226,126 +1206,1016 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Bayern Munich forward Harry Kane won the Mens Ballon dOr for the first time in his career.",
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
      }
     },
     {
-     "claim": "Barcelona midfielder Alexia Putellas won the Womens Ballon dOr for the third time in her career.",
+     "claim": "Walter Koenig was one of only two actors to audition for the role of Pavel Chekov.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
      }
     },
     {
-     "claim": "The 2026 Ballon dOr ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+      "1": "Koenig served as best man at Takei's wedding in 2008."
      }
     },
     {
-     "claim": "Harry Kane won the Men's Ballon d'Or",
+     "claim": "The character of Chekov did not appear in the animated Star Trek series because producers declined to hire Koenig for budgetary reasons.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025-26 season",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
-     }
-    },
-    {
-     "claim": "The ceremony was organised outside France or Switzerland for the first time",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "This also marked the first time the ceremony was organised outside France or Switzerland."
-     }
-    },
-    {
-     "claim": "Harry Kane became the fifth Englishman to win the Men's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
-     }
-    },
-    {
-     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the Women's Ballon d'Or",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025."
-     }
-    },
-    {
-     "claim": "The 2026 Ballon d'Or was the 70th annual ceremony",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
+      "1": "The character of Chekov did not appear in the animated Star Trek series. The show's producers had declined to hire Koenig for budgetary reasons and"
      }
     }
    ],
    "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
    ]
+  },
+  {
+   "n": 44,
+   "topic": "Walter Koenig by the numbers",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Walter Koenig was born on September 14, 1936?",
+    "Walter Koenig served as best man at a famous wedding in 2008!",
+    "Discover how Walter Koenig earned his degree in psychology."
+   ],
+   "sources": [
+    [
+     "Walter Koenig by the numbers",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008.[15]"
+     }
+    },
+    {
+     "claim": "He received a Bachelor of Arts in psychology after transferring to UCLA.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He transferred to UCLA and received a Bachelor of Arts in psychology."
+     }
+    },
+    {
+     "claim": "Walter Koenig died on October 25 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "He reprised his role as Chekov in all six original‑cast Star Trek films and in Star Trek Generations (1994).",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He went on to reprise this role in all six original‑cast Star Trek films and in Star Trek: Generations (1994)."
+     }
+    },
+    {
+     "claim": "His parents were Russian Jewish immigrants from the Soviet Union who had lived in Lithuania and shortened their surname from Königsberg to Koenig.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig's parents were Russian Jewish immigrants from the Soviet Union; his family had been living in Lithuania when they emigrated, and they shortened their surname"
+     }
+    },
+    {
+     "claim": "He was one of only two actors to audition for Chekov and was cast almost immediately because he resembled Davy Jones of the Monkees.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 45,
+   "topic": "Walter Koenig best moments",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Marvin Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Did you know Walter Koenig was one of only two actors to audition for Chekov?",
+    "Walter Koenig served as the best man at George Takei's wedding!",
+    "Discover how Walter Koenig landed his iconic Star Trek role."
+   ],
+   "sources": [
+    [
+     "Walter Koenig best moments",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Koenig was cast as Ensign Pavel Chekov in Star Trek after being one of only two actors to audition.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    },
+    {
+     "claim": "Walter Koenig attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney Coleman, Christopher Lloyd, and James Caan.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 46,
+   "topic": "Walter Koenig what happens next",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "hooks": [
+    "Discover how Walter Koenig became a sci-fi legend!",
+    "Did you know Walter Koenig was born in Chicago?",
+    "Find out about Walter Koenig's incredible acting career!"
+   ],
+   "sources": [
+    [
+     "Walter Koenig what happens next",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    },
+    {
+     "claim": "Walter Marvin Koenig died on October 25, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig died on 25 October 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig was cast as Pavel Chekov because he looked like Davy Jones from the Monkees.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "The actor wore a hairpiece during his early Star Trek appearances because his hair was receding.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "As the 30-year-old's hair was already receding, costume designers fashioned a Davy Jones-style \"moptop\" hairpiece for him."
+     }
+    },
+    {
+     "claim": "Walter Koenig was the best man at George Takei's wedding in 2008.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig served as best man at Takei's wedding in 2008."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 10,
+   "topic": "The Celebrity Traitors",
+   "signal": "watchlist: The Celebrity Traitors (launch, 2 days to go)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know The Celebrity Traitors is a spin off of the hit show?"
+   ],
+   "sources": [
+    [
+     "“Don’t Get Me Wrong, I’m Not Without Ego!”: How Nick Mohammed Earned His Rep as the Nicest Man in British Film and TV",
+     "https://www.hollywoodreporter.com/tv/tv-features/nick-mohammed-interview-war-celebrity-traitors-ted-lasso-tv-1236740663/",
+     "The Hollywood Reporter",
+     "2026-10-28"
+    ],
+    [
+     "Celebrity Traitors' Joe Lycett's tribute to viral TikTok nan",
+     "https://www.bbc.co.uk/news/articles/c6x2qggrdxqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "Kane’s Ballon d’Or triumph a glorious riposte to celebrity fawning of ceremony | Barney Ronay",
+     "https://www.theguardian.com/football/2026/oct/27/harry-kane-ballon-dor-triumph-ceremony-barney-ronay",
+     "Guardian",
+     "2026-10-27"
+    ],
+    [
+     "The Celebrity Traitors",
+     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Alan Carr won the first series of The Celebrity Traitors as a traitor.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "s not normal slow horses and last one laughing uk the entire country effectively shouted oh fuck along with mohammed when alan carr declared himself a traitor in the final of last year s yet to be topped celebrity traitors",
+      "4": "Alan Carr winning was dubbed the \"TV moment of the year\" by The i Paper"
+     }
+    },
+    {
+     "claim": "Joe Lycett was banished from the show for being too keen to be a traitor.",
+     "sources": [
+      2,
+      4
+     ],
+     "evidence": {
+      "2": "Lycett, who was banished from Celebrity Traitors for being too keen to be a traitor, said on Instagram",
+      "4": "The person with the most votes is immediately banished, and reveals their identity before leaving."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The Celebrity Traitors is a spin off of the British version of the reality television series The Traitors.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The Celebrity Traitors (also known as The Celebrity Traitors UK) is a spin-off of the British version of the reality television series The Traitors."
+     }
+    },
+    {
+     "claim": "The second series of The Celebrity Traitors began broadcasting on 1 October 2026.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "A second series began broadcasting on the 1 October 2026"
+     }
+    },
+    {
+     "claim": "The Celebrity Traitors is filmed at Ardross Castle in Scotland.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "set in and around Ardross Castle in Scotland."
+     }
+    },
+    {
+     "claim": "The first series of the show was presented by Claudia Winkleman.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Claudia Winkleman presented the series."
+     }
+    },
+    {
+     "claim": "The first series of The Celebrity Traitors consisted of 9 episodes.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "consisting of 9 episodes aired over four weeks from 8 October to 6 November 2025."
+     }
+    },
+    {
+     "claim": "The prize fund for the show can reach a total of \u0010100,000.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "the remaining faithful players only discover who has been murdered at breakfast the next morning each day the group participates in missions to win money for the prize fund which can reach 100000 by the end of the game during"
+     }
+    },
+    {
+     "claim": "The second series of the show features 21 contestants.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "2 | 21 | 10 | 1 October 2026 (2026-10-01) | present"
+     }
+    },
+    {
+     "claim": "The series finale of the first series was the most watched UK television broadcast of 2025.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "the series finale was the most watched UK television broadcast of 2025."
+     }
+    },
+    {
+     "claim": "A wax figure of Alan Carr as a Traitor was put on display at Madame Tussauds in London.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "a wax figure of Alan Carr as a Traitor (with a green cloak and lantern) was put on display at Madame Tussauds in London."
+     }
+    },
+    {
+     "claim": "The BBC has a deal to keep the show in production until 2030.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "In March 2026, BBC announced a three-year deal that will keep The Celebrity Traitors and The Traitors in production until 2030."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "most popular Halloween costumes 2026",
+   "signal": "watchlist: Halloween 2026 (launch, 3 days to go)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Halloween is observed on 31 October in many countries.",
+    "The name Halloween means Saints' eve(ning).",
+    "Halloween traditions were influenced by Celtic harvest festivals."
+   ],
+   "sources": [
+    [
+     "most popular Halloween costumes 2026",
+     "https://en.wikipedia.org/wiki/Halloween",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Halloween is a celebration observed in many countries on 31 October.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Halloween,[a] also known as All Hallows' Eve[9] or All Saints' Eve,[10] is a celebration observed in many countries on 31 October"
+     }
+    },
+    {
+     "claim": "The name Halloween originates in Christianity and means Saints' eve(ning).",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thus, the name originates in Christianity,[44][45] and means \"Saints' eve(ning)\".[46]"
+     }
+    },
+    {
+     "claim": "Halloween is at the beginning of the observance of Allhallowtide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It is at the beginning of the observance of Allhallowtide,[11] the time in the Christian liturgical year dedicated to remembering the dead"
+     }
+    },
+    {
+     "claim": "Popular Halloween activities include trick-or-treating and attending Halloween costume parties.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Popular Halloween activities include trick-or-treating (or the related guising and souling), attending Halloween costume parties, carving pumpkins or turnips into jack-o'-lanterns"
+     }
+    },
+    {
+     "claim": "One theory holds that many Halloween traditions were influenced by Celtic harvest festivals.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "One theory holds that many Halloween traditions were influenced by Celtic harvest festivals, particularly the Gaelic festival Samhain"
+     }
+    },
+    {
+     "claim": "Irish and Scottish immigrants brought many Halloween customs to North America in the 19th century.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Irish and Scottish immigrants brought many Halloween customs to North America in the 19th century,[24][25]"
+     }
+    },
+    {
+     "claim": "The word Halloween comes from the Lowland Scots form of All Hallows' Eve.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The word Halloween or Hallowe'en comes from the Lowland Scots form of All Hallows' Eve (the evening before All Hallows' Day)"
+     }
+    },
+    {
+     "claim": "In 835, the Frankish Empire officially adopted 1 November as the date of All Saints' Day.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 835, the Frankish Empire officially adopted 1 November as the date of All Saints' Day, which was endorsed by Pope Gregory IV."
+     }
+    },
+    {
+     "claim": "All Souls' Day became widespread in the 12th century.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "All Souls' Day, a feast commemorating all deceased Christians, became widespread in the 12th century.[64]"
+     }
+    },
+    {
+     "claim": "The custom of souling dates back at least as far as the 15th century.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Called \"souling\", the custom dates back at least as far as the 15th century[68] and was found in parts of England"
+     }
+    },
+    {
+     "claim": "In parts of the British Isles, soulers carried lanterns made of hollowed-out turnips.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In parts of the British Isles, \"soulers\" carried lanterns made of hollowed-out turnips, which might have originally represented souls in purgatory"
+     }
+    },
+    {
+     "claim": "After 1605, Allhallowtide in England was eclipsed by Guy Fawkes Night.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "After 1605, Allhallowtide in England was eclipsed by Guy Fawkes Night (5 November), which appropriated some of its customs."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Jack-o'-Lantern_2003-10-31.jpg"
+   ]
+  },
+  {
+   "n": 13,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know GTA 6 launches right alongside a historic union vote?",
+    "Rockstar's massive new game is releasing this November!",
+    "Get ready for Grand Theft Auto VI coming to consoles!"
+   ],
+   "sources": [
+    [
+     "Cliff Richard doesn’t know what ‘GTA 6’ is – despite ‘Devil Woman’ sync resurgence",
+     "https://www.nme.com/news/gaming-news/cliff-richard-gta-6-interview-devil-woman-resurgence-soundtrack-3974444?utm_source=rss&utm_medium=rss&utm_campaign=cliff-richard-gta-6-interview-devil-woman-resurgence-soundtrack",
+     "NME",
+     "2026-10-28"
+    ],
+    [
+     "Rockstar Games Staff Set for 'Historic' Union Vote at the Same Time GTA 6 Comes Out",
+     "https://www.ign.com/articles/rockstar-games-staff-set-for-historic-union-vote-at-the-same-time-gta-6-comes-out",
+     "IGN",
+     "2026-10-28"
+    ],
+    [
+     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "https://www.eurogamer.net/rockstar-union-vote-november",
+     "Eurogamer",
+     "2026-10-28"
+    ],
+    [
+     "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
+     "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
+     "PC Gamer",
+     "2026-10-27"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Recognition of the IWGB Union at Rockstar will be put to an employee vote from November 12-26, which coincides with the release of GTA 6 on November 19.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "Recognition of the IWGB Union at Rockstar will be put to an employee vote from November 12-26, which just so happens to coincide with the",
+      "3": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally",
+      "4": "The vote to recognize the union will run November 12-26, the week leading up, and then the week after, GTA 6's November 19 launch on"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      4,
+      5
+     ],
+     "evidence": {
+      "4": "GTA 6's November 19 launch on consoles.",
+      "5": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Rockstar head of publishing Jennifer Kolbe stated that they go where the team goes and if employees want a union they will have a union.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "Rockstar Head of Publishing Jennifer Kolbe recently told Bloomberg: “We go where the team goes. So if they want a union, they will have a",
+      "3": "Rockstar's head of publishing Jennifer Kolbe told Bloomberg: \"we go where the team goes. So if they want a union, they will have a union.\"",
+      "4": "Rockstar head of publishing Jennifer Kolbe indicated in Bloomberg's recent look at the making of GTA that the studio won't fight it: \"We go where"
+     }
+    },
+    {
+     "claim": "If the IWGB Rockstar Game Workers Union wins the vote, it will become the biggest recognised union in the UK games industry.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "If the IWGB Rockstar Game Workers Union wins the vote, it will become the biggest recognised union in the UK games industry",
+      "3": "If successful, it will become the largest recognised union across the entirety of the UK video games industry.",
+      "4": "If the vote carries in favor of the union, the IWGB Rockstar Game Workers Union will become the biggest game industry union in the UK"
+     }
+    },
+    {
+     "claim": "Rockstar fired 31 workers for allegedly leaking company secrets in October last year, which led to an ongoing employment tribunal.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "clashed over the firing of 31 workers for allegedly leaking company secrets in October last year. The IWGB has alleged the workers were unlawfully fired,",
+      "3": "the legal battle between Rockstar and the Independent Workers of Great Britain union over the alleged unfair firing of over 30 employees.",
+      "4": "The process came under intense scrutiny in October 2025 when the studio fired 31 employees in what the IWGB claimed was \"the most brazen act"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "Set within the fictional US state of Leonida, based on Florida"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 14,
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "GTA 6 arrives on November 19, 2026!",
+    "Will you buy the $99.99 Ultimate Edition?",
+    "Preloading for GTA 6 begins on November 12."
+   ],
+   "sources": [
+    [
+     "Get GTA 6 Ultimate Edition on PS5 for Just $85 Using This Trick – Today Only",
+     "https://www.ign.com/articles/get-gta-6-ultimate-edition-on-ps5-for-just-85-using-this-trick-today-only",
+     "IGN",
+     "2026-10-28"
+    ],
+    [
+     "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
+     "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
+     "The Hollywood Reporter",
+     "2026-10-15"
+    ],
+    [
+     "GTA 6 price",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Grand Theft Auto VI is set to (finally) be released on Nov. 19, 2026, which is likely to be the biggest called-out-sick day in the",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Players will be able to begin preloading Grand Theft Auto VI on November 12.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "While you can’t play the game until it comes out on November 19, you’ll be able to pre-load it onto your PS5 starting on November",
+      "2": "(Players will be able to begin the lengthy process of preloading the giant game on Nov. 12; there will be no physical version of GTA"
+     }
+    },
+    {
+     "claim": "There will be no physical version of Grand Theft Auto VI as all physical copies only contain a download code in a box.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "a physical copy that s cool but i don t expect any deals or discounts to be available anywhere on physical copies it s also worth noting that grand theft auto 6 is only available in digital form while rockstar",
+      "2": "(Players will be able to begin the lengthy process of preloading the giant game on Nov. 12; there will be no physical version of GTA"
+     }
+    },
+    {
+     "claim": "The Ultimate Edition of Grand Theft Auto VI includes an exclusive collection of premium vehicles, weapons, apparel, and action threaded across the story of Jason and Lucia.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "To quote Rockstar, it includes “an exclusive collection of premium vehicles, weapons, apparel, and action threaded across all aspects of Jason and Lucia’s story.”",
+      "2": "Grand Theft Auto VI: Ultimate Edition ”amplifies the experience” of the base game with “an exclusive collection of premium vehicles, weapons, apparel and action threaded"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI will be available in two versions with the base game costing $79.99 and the Ultimate version costing $99.99.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "There will be two versions available: the base game will run you $79.99 and the “Ultimate” version $99.99."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "GTA 6 PC release",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Rockstar employees locked in a union vote scheduled for next month to decide on formal recognition.",
+   "hooks": [
+    "Rockstar's historic union vote takes place right around the GTA 6 console launch!",
+    "Find out why November is a massive month for Rockstar Games and its employees.",
+    "Will Rockstar developers secure the UK's biggest game industry union next month?"
+   ],
+   "sources": [
+    [
+     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "https://www.eurogamer.net/rockstar-union-vote-november",
+     "Eurogamer",
+     "2026-10-28"
+    ],
+    [
+     "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
+     "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
+     "PC Gamer",
+     "2026-10-27"
+    ],
+    [
+     "GTA 6 PC release",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The vote to recognize the union will run November 12-26, the week leading up, and then the week after, GTA 6's November 19 launch on consoles.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally",
+      "2": "The vote to recognize the union will run November 12-26, the week leading up, and then the week after, GTA 6's November 19 launch on"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "GTA 6's November 19 launch on consoles.",
+      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "If successful, it will become the largest recognised union across the entirety of the UK video games industry.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "If successful, it will become the largest recognised union across the entirety of the UK video games industry.",
+      "2": "If the vote carries in favor of the union, the IWGB Rockstar Game Workers Union will become the biggest game industry union in the UK"
+     }
+    },
+    {
+     "claim": "Rockstar's head of publishing Jennifer Kolbe told Bloomberg: we go where the team goes. So if they want a union, they will have a union.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Rockstar's head of publishing Jennifer Kolbe told Bloomberg: \"we go where the team goes. So if they want a union, they will have a union.\"",
+      "2": "Rockstar head of publishing Jennifer Kolbe indicated in Bloomberg's recent look at the making of GTA that the studio won't fight it: \"We go where"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 24,
+   "topic": "odeon",
+   "signal": "Google Trends GB 1000+",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Odeon is Europe's largest cinema chain.",
+    "Odeon and IMAX are adding nine new cinemas.",
+    "Odeon operates nearly 2,500 screens in Europe."
+   ],
+   "sources": [
+    [
+     "Odeon, IMAX Expand Partnership in Key European Markets (EXCLUSIVE)",
+     "https://variety.com/2022/film/global/odeon-imax-europe-cinemas-1235298214/",
+     "Variety",
+     "2022-06-19"
+    ],
+    [
+     "odeon",
+     "https://en.wikipedia.org/wiki/Odeon",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Odeon Cinemas Group is Europe's largest exhibitor with nearly 2,500 screens.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Odeon Cinemas Group is Europe’s largest exhibitor with nearly 2,500 screens across the U.K. and Ireland, Finland, Germany, Italy, Norway, Portugal, Spain and Sweden",
+      "2": "Odeon Cinemas, a cinema brand name in the UK, Ireland and Norway"
+     }
+    },
+    {
+     "claim": "Odeon Cinemas Group is the U.K.-based European subsidiary of AMC Theatres.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Odeon Cinemas Group, the U.K.-based European subsidiary of AMC Theatres",
+      "2": "Odeon Cinemas Group"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Odeon is currently IMAX's largest partner in Europe with 34 theaters in operation.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Odeon is currently IMAX’s largest partner in Europe, with 34 theaters currently in operation"
+     }
+    },
+    {
+     "claim": "Odeon and IMAX have set locations for nine new movie theaters across Europe.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In addition, Odeon and IMAX have set locations for nine new movie theaters across Europe"
+     }
+    },
+    {
+     "claim": "The new IMAX locations include four cinemas in Spain and two in Italy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "including four new cinemas in Spain, two in Italy, and one each in Germany, Sweden and the U.K."
+     }
+    },
+    {
+     "claim": "All new IMAX locations at Odeon will be installed by 2025.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "All new locations will be installed by 2025."
+     }
+    },
+    {
+     "claim": "Odeon Cinemas Group will upgrade six IMAX theaters in the U.K. with laser systems.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "the pact will see Odeon Cinemas Group, the U.K.-based European subsidiary of AMC Theatres, upgrade six IMAX theaters across the U.K. with laser systems"
+     }
+    },
+    {
+     "claim": "The partnership between Odeon and IMAX was formed nearly 15 years ago.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Since forming a partnership nearly 15 years ago, the two companies signed an agreement to launch 25 IMAX theaters in 2017."
+     }
+    },
+    {
+     "claim": "Odeon cinemas are delivering four of IMAX's top five highest grossing locations in Europe.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Odeon cinemas are delivering four of IMAX’s top five highest grossing locations in Europe."
+     }
+    },
+    {
+     "claim": "The term Odeon originally refers to ancient Greek and Roman buildings for singing and music.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Odeon (building), ancient Greek and Roman buildings built for singing exercises, musical shows and poetry competitions"
+     }
+    },
+    {
+     "claim": "The Hammersmith Odeon in London is now known as the Hammersmith Apollo.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Hammersmith Odeon, now the Hammersmith Apollo, in London, England"
+     }
+    },
+    {
+     "claim": "Cineplex Odeon is a cinema theatre brand of Cineplex Entertainment.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Cineplex Odeon, a cinema theatre brand of Cineplex Entertainment"
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

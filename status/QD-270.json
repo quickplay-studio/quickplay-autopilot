@@ -1,0 +1,169 @@
+{
+ "id": "QD-270",
+ "board": "boards/queue/QD-270.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T16:38:36.385283+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Star Stories #6: Walter Koenig Chekov casting: the look that won it",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 3,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "scale-the-mountain",
+ "social_music": "motivational-530632",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "none"
+ },
+ "look_note": "voice DN was less clear, used george",
+ "qa": {
+  "duration": 27.5,
+  "wps": 3.03,
+  "weak_beats": [],
+  "size_mb": 17.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 736.2,
+   "contrast": 0.219,
+   "face_area": 0.1988,
+   "text_area": 0.0958,
+   "caption_contrast": 15.52,
+   "by_frame": {
+    "sharpness": [
+     669.1,
+     758.7,
+     760.5,
+     756.4
+    ],
+    "contrast": [
+     0.218,
+     0.22,
+     0.22,
+     0.22
+    ],
+    "face_area": [
+     0.2085,
+     0.1892,
+     0.1936,
+     0.204
+    ],
+    "text_area": [
+     0.0961,
+     0.0955,
+     0.0959,
+     0.0959
+    ],
+    "caption_contrast": [
+     15.61,
+     15.63,
+     15.43,
+     15.39
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.12,
+   "none",
+   0
+  ],
+  [
+   4.12,
+   7.81,
+   "none",
+   1
+  ],
+  [
+   7.81,
+   11.99,
+   "none",
+   1
+  ],
+  [
+   11.99,
+   14.62,
+   "none",
+   1
+  ],
+  [
+   14.62,
+   19.75,
+   "none",
+   1
+  ],
+  [
+   19.75,
+   23.29,
+   "none",
+   1
+  ],
+  [
+   23.29,
+   27.44,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "29483",
+   "q": "retro tv screen",
+   "t0": 0.0,
+   "t1": 14.02
+  },
+  {
+   "p": "pixabay",
+   "id": "3134",
+   "q": "city lights night",
+   "t0": 13.42,
+   "t1": 27.44
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-270",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-22efe870abb33e11a7bd"
+}

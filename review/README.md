@@ -129,6 +129,18 @@ awaiting approval · 29 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-244](QD-244.jpg)
 
+### QD-270 · Star Stories #6: Walter Koenig Chekov casting: the look that won it
+awaiting approval · 28 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-22efe870abb33e11a7bd)
+- dry run: always waits for approval, never uploaded
+
+![QD-270](QD-270.jpg)
+
+### QD-271 · walter koenig: the career numbers you missed
+awaiting approval · 28 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-ed799da8d03143ce15fc)
+- dry run: always waits for approval, never uploaded
+
+![QD-271](QD-271.jpg)
+
 ### TEST-L1024 · Free Steam games to grab before time runs out 🎮
 awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc)
 - dry run: always waits for approval, never uploaded
@@ -138,8 +150,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
-- **QD-270** Star Stories #6: Walter Koenig Chekov casting: the look that won it (rendering next)
-- **QD-271** walter koenig: the career numbers you missed (rendering next)
 
 ## On the channel (latest first)
 

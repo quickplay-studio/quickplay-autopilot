@@ -1,13 +1,16 @@
 {
- "started": "2026-10-28T01:10:44+00:00",
+ "started": "2026-10-28T01:13:25+00:00",
  "job": "freellm",
- "ok": false,
- "reason": "the router container stopped before it answered",
+ "ok": true,
+ "reason": "",
  "image": "ghcr.io/tashfeenahmed/freellmapi:v0.16.6",
  "digest": "sha256:9b11990847dc2cba7b7041a7fe9bd2246cfae49993f00e86371333082e9a2b49",
- "chat_platforms": [],
+ "chat_platforms": [
+  "kilo",
+  "ovh"
+ ],
  "search_engines": [],
- "models": 0,
+ "models": 7,
  "keys_given": [],
  "keys_missing": [
   "TAVILY_API_KEY",
@@ -17,8 +20,10 @@
   "OLLAMA_API_KEY",
   "LLM7_API_KEY"
  ],
+ "dropped": [
+  "keenable"
+ ],
  "calls": {},
- "detail": "state=exited exit=1 oom=false error= ; Error response from daemon: container 9a9c88d82311edefe8b6ee2c0b81f14c5714368ae6a9c6d7f04d74fe5df41191 is not running ; log: ◇ injected env (0) from .env // tip: ⌁ auth for agents [www.vestauth.com] | [db] leaving permissions on /data as they are: it is not a directory this server created. The WAL sidecars written there inherit whatever it already grants. Set FREEAPI_DB_DIR_HARDENING=1 if it belongs to this account alone. | Database initialized at /data/freellmapi.db | Seeded 25 models and fallback config |  | A unified API key was generated. Open the dashboard and retrieve it from the Keys page. | The key is intentionally not printed to logs. |  | Created Default profile |  | [server] Failed to start: | unknown provider platform: keenable",
  "history": [
   {
    "t": "2026-10-28T00:10:56+00:00",
@@ -31,6 +36,20 @@
    "job": "freellm",
    "ok": false,
    "reason": "the router container stopped before it answered"
+  },
+  {
+   "t": "2026-10-28T01:13:25+00:00",
+   "job": "freellm",
+   "ok": true,
+   "reason": ""
   }
- ]
+ ],
+ "probe": {
+  "chat": "failed (404)",
+  "search": "failed (503)",
+  "at": "2026-10-28T01:13:59+00:00"
+ },
+ "calls_total": 0,
+ "tokens": 0,
+ "finished": "2026-10-28T01:13:59+00:00"
 }

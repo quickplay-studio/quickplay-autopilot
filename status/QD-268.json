@@ -1,0 +1,165 @@
+{
+ "id": "QD-268",
+ "board": "boards/queue/QD-268.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T17:30:00Z",
+ "rendered": "2026-10-28T15:38:13.417103+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Match Day #5: Caroline Weir Ballon d'Or: the elite rank 🏆",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 26.5,
+  "wps": 3.23,
+  "weak_beats": [],
+  "size_mb": 12.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 360.8,
+   "contrast": 0.194,
+   "face_area": 0.0058,
+   "text_area": 0.0494,
+   "caption_contrast": 6.11,
+   "by_frame": {
+    "sharpness": [
+     303.8,
+     354.5,
+     344.6,
+     440.4
+    ],
+    "contrast": [
+     0.197,
+     0.197,
+     0.197,
+     0.187
+    ],
+    "face_area": [
+     0.0032,
+     0.004,
+     0.0,
+     0.016
+    ],
+    "text_area": [
+     0.0567,
+     0.0531,
+     0.0533,
+     0.0346
+    ],
+    "caption_contrast": [
+     6.06,
+     6.16,
+     4.38,
+     11.07
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.78,
+   "none",
+   2
+  ],
+  [
+   3.78,
+   6.9,
+   "none",
+   2
+  ],
+  [
+   6.9,
+   11.4,
+   "none",
+   3
+  ],
+  [
+   11.4,
+   14.31,
+   "none",
+   2
+  ],
+  [
+   14.31,
+   17.56,
+   "none",
+   2
+  ],
+  [
+   17.56,
+   20.9,
+   "none",
+   2
+  ],
+  [
+   20.9,
+   26.46,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "143809",
+   "q": "london city night",
+   "t0": 0.0,
+   "t1": 26.46
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T16:03:19Z",
+ "video": "5QgsDLgjq6Y",
+ "url": "https://youtube.com/shorts/5QgsDLgjq6Y",
+ "publish_at": "2026-10-28T17:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T17:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

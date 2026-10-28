@@ -1,0 +1,172 @@
+{
+ "id": "QD-267",
+ "board": "boards/queue/QD-267.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T12:00:00Z",
+ "rendered": "2026-10-28T15:38:01.948167+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Player One #1: Minecraft: 400 million copies sold",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 10,
+  "planned_real": 10,
+  "extra_photos": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "horizons",
+ "look": {
+  "captions": "low",
+  "voice": "george_quick",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 29.6,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 11.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 554.5,
+   "contrast": 0.146,
+   "face_area": 0.0436,
+   "text_area": 0.0524,
+   "caption_contrast": 7.35,
+   "by_frame": {
+    "sharpness": [
+     526.9,
+     588.8,
+     564.3,
+     538.0
+    ],
+    "contrast": [
+     0.147,
+     0.147,
+     0.145,
+     0.145
+    ],
+    "face_area": [
+     0.0427,
+     0.0393,
+     0.0455,
+     0.0469
+    ],
+    "text_area": [
+     0.053,
+     0.0527,
+     0.0531,
+     0.0506
+    ],
+    "caption_contrast": [
+     7.15,
+     7.56,
+     5.24,
+     12.42
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.8,
+   "none",
+   1
+  ],
+  [
+   2.8,
+   7.34,
+   "none",
+   4
+  ],
+  [
+   7.34,
+   11.97,
+   "none",
+   3
+  ],
+  [
+   11.97,
+   16.0,
+   "none",
+   4
+  ],
+  [
+   16.0,
+   19.37,
+   "none",
+   2
+  ],
+  [
+   19.37,
+   22.89,
+   "none",
+   2
+  ],
+  [
+   22.89,
+   29.54,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "291004",
+   "q": "green pixelated forest",
+   "t0": 0.0,
+   "t1": 15.07
+  },
+  {
+   "p": "pixabay",
+   "id": "205519",
+   "q": "computer screen glow",
+   "t0": 14.47,
+   "t1": 29.54
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T16:03:16Z",
+ "video": "wAuJVK_VVrU",
+ "url": "https://youtube.com/shorts/wAuJVK_VVrU",
+ "publish_at": "2026-10-29T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T12:00:00Z",
+  "upload_status": "uploaded"
+ }
+}

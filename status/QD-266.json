@@ -1,0 +1,160 @@
+{
+ "id": "QD-266",
+ "board": "boards/queue/QD-266.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T18:30:00Z",
+ "rendered": "2026-10-28T15:37:51.454796+00:00",
+ "title": "Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 3,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1019",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 27.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 20.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 586.0,
+   "contrast": 0.199,
+   "face_area": 0.0454,
+   "text_area": 0.0396,
+   "caption_contrast": 5.14,
+   "by_frame": {
+    "sharpness": [
+     508.9,
+     562.7,
+     558.9,
+     713.3
+    ],
+    "contrast": [
+     0.196,
+     0.194,
+     0.194,
+     0.211
+    ],
+    "face_area": [
+     0.0625,
+     0.0568,
+     0.0592,
+     0.003
+    ],
+    "text_area": [
+     0.0423,
+     0.0419,
+     0.0421,
+     0.0322
+    ],
+    "caption_contrast": [
+     5.38,
+     5.29,
+     4.98,
+     2.51
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.89,
+   "none",
+   2
+  ],
+  [
+   3.89,
+   6.85,
+   "none",
+   2
+  ],
+  [
+   6.85,
+   8.82,
+   "none",
+   1
+  ],
+  [
+   8.82,
+   11.42,
+   "none",
+   2
+  ],
+  [
+   11.42,
+   14.7,
+   "none",
+   2
+  ],
+  [
+   14.7,
+   17.04,
+   "none",
+   2
+  ],
+  [
+   17.04,
+   20.02,
+   "none",
+   2
+  ],
+  [
+   20.02,
+   23.66,
+   "none",
+   3
+  ],
+  [
+   23.66,
+   27.89,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "10783",
+   "q": "football pitch grass",
+   "t0": 0.0,
+   "t1": 27.89
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T16:03:13Z",
+ "video": "sCd5ulaxtyM",
+ "url": "https://youtube.com/shorts/sCd5ulaxtyM",
+ "publish_at": "2026-10-29T18:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T18:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-266"
+}

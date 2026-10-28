@@ -1,0 +1,172 @@
+{
+ "id": "QD-269",
+ "board": "boards/queue/QD-269.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T19:30:00Z",
+ "rendered": "2026-10-28T15:42:32.827123+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Match Day #6: Caroline Weir Ballon d'Or: rank 25 revealed ⚽",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 4,
+  "pic_found_share": 1.0,
+  "pic_rescued": 6,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 21.8,
+  "wps": 3.14,
+  "weak_beats": [],
+  "size_mb": 7.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 204.9,
+   "contrast": 0.194,
+   "face_area": 0.3085,
+   "text_area": 0.0335,
+   "caption_contrast": 5.35,
+   "by_frame": {
+    "sharpness": [
+     182.9,
+     212.6,
+     207.2,
+     216.8
+    ],
+    "contrast": [
+     0.192,
+     0.194,
+     0.194,
+     0.194
+    ],
+    "face_area": [
+     0.3192,
+     0.3062,
+     0.3007,
+     0.308
+    ],
+    "text_area": [
+     0.034,
+     0.034,
+     0.0327,
+     0.0334
+    ],
+    "caption_contrast": [
+     6.16,
+     6.04,
+     4.39,
+     4.66
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.43,
+   "none",
+   1
+  ],
+  [
+   3.43,
+   6.5,
+   "none",
+   2
+  ],
+  [
+   6.5,
+   10.04,
+   "none",
+   2
+  ],
+  [
+   10.04,
+   12.5,
+   "none",
+   2
+  ],
+  [
+   12.5,
+   15.46,
+   "none",
+   2
+  ],
+  [
+   15.46,
+   18.77,
+   "none",
+   2
+  ],
+  [
+   18.77,
+   21.77,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "66810",
+   "q": "green pitch grass",
+   "t0": 0.0,
+   "t1": 11.19
+  },
+  {
+   "p": "pixabay",
+   "id": "21531",
+   "q": "stadium lights glow",
+   "t0": 10.59,
+   "t1": 21.77
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T16:03:22Z",
+ "video": "LmqctBz_a2M",
+ "url": "https://youtube.com/shorts/LmqctBz_a2M",
+ "publish_at": "2026-10-28T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

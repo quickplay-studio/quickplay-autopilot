@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 14:58): 18 of 1,000 subscribers · 12,543 of 10 million Shorts views in 90 days · 4,209 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 15:56): 19 of 1,000 subscribers · 12,577 of 10 million Shorts views in 90 days · 4,081 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 14:41 (UK): 13 scheduled, 137 public, 24 uploads in the last 24 hours.
 
@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 29 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Wed 28 Oct | 17 public, 9 scheduled | 0 | 1 | ✅ done |
+| Thu 29 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 15 scheduled |
+| Wed 28 Oct | 20 public, 8 scheduled | 0 | 1 | ✅ done |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -59,9 +59,9 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-217** Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
-- **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 14:55 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936851905167410'}
+- **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}
-- **QD-209** GTA 6 hits consoles on 19 November 🎮: instagram 2026-10-28 14:55 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936852028167410'}
+- **QD-209** GTA 6 hits consoles on 19 November 🎮: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872221167410'}
 - **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 09:49 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768706167410'}
 
 ## Waiting for your approval
@@ -137,6 +137,7 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-265** KPop Demon Hunters: 4 songs in top ten 🎵 (rendering next)
 
 ## On the channel (latest first)
 
@@ -194,12 +195,12 @@ scheduled · 44 s · music: once-upon-a-time · [script](../boards/done/QD-247.j
 ![QD-247](QD-247.jpg)
 
 ### Wed 28 Oct 16:00 · Game Facts #6: gta 6 install size officially revealed at 210 GB
-scheduled · 36 s · music: ego-chall · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
+private · 36 s · music: ego-chall · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
 
 ![QD-227](QD-227.jpg)
 
 ### Wed 28 Oct 15:30 · Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀
-scheduled · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
+private · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
 
 ![QD-248](QD-248.jpg)
 

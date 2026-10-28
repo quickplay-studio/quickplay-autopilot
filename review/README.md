@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 09:53): 18 of 1,000 subscribers · 12,517 of 10 million Shorts views in 90 days · 4,013 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 10:51): 18 of 1,000 subscribers · 12,632 of 10 million Shorts views in 90 days · 4,326 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 9:15 (UK): 4 scheduled, 145 public, 19 uploads in the last 24 hours.
 
@@ -136,6 +136,19 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-248** Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀 (rendering next)
+- **QD-249** Ballon d'Or #2: Winner harry kane wins 🏆 (rendering next)
+- **QD-250** Sport Shocks #3: history of ballon d'or: Harry Kane wins (rendering next)
+- **QD-251** Star Stories #3: Walter Koenig: Star Trek actor dies aged 90 (rendering next)
+- **QD-252** Walter Koenig: the co-star tribute you must see 🖖 (rendering next)
+- **QD-253** Walter Koenig: the audition secret you missed 🖖 (rendering next)
+- **QD-254** Star Stories #5: Walter Koenig: the record the Star Trek legend set (rendering next)
+- **QD-255** Star Stories #7: Walter Koenig: the audition secret you never knew (rendering next)
+- **QD-257** Level Up #3: GTA 6 Union Vote: Rockstar's historic moment ⚙️🗳️ (rendering next)
+- **QD-258** Did You Know #6: Walter Koenig: Star Trek actor dies aged 90 (rendering next)
+- **QD-259** Did You Know #7: Walter Koenig: two actors auditioned for Chekov (rendering next)
+- **QD-260** Did You Know: Walter Koenig tribute: George Takei's touching words 🖖 (rendering next)
+- **QD-261** Match Day #4: Harry Kane Ballon d'Or: the historic detail 🏆 (rendering next)
 
 ## On the channel (latest first)
 

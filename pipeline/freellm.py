@@ -85,14 +85,28 @@ def given_keys(env):
     return {s: (env.get(s) or "").strip() for s in KEYS if (env.get(s) or "").strip()}
 
 
-def config_json(env, email, password):
+def config_json(env, email, password, skip=()):
     """The router's FREEAPI_CONFIG_JSON: an admin (random per run, which also closes its first-run sign-up window), the
-    keyless free tiers, a disabled row for AI Horde, and a key row for each mapped secret that is set. Nothing else."""
+    keyless free tiers, a disabled row for AI Horde, and a key row for each mapped secret that is set. Nothing else. skip:
+    platforms the pinned image does not know (it refuses to start on one): left out."""
     keys = [{"platform": p, "label": LABEL} for p in KEYLESS_CHAT + KEYLESS_SEARCH]
     keys += [{"platform": p, "enabled": False, "label": LABEL} for p in NEVER_ON]
     got = given_keys(env)
     keys += [{"platform": KEYS[s][0], "key": got[s], "label": LABEL} for s in KEYS if s in got]
-    return {"admin": {"email": email, "password": password}, "keys": keys}
+    return {"admin": {"email": email, "password": password}, "keys": [k for k in keys if k["platform"] not in skip]}
+
+
+UNKNOWN = re.compile(r"unknown provider platform:\s*([A-Za-z0-9_-]+)")
+
+
+def unknown_platform(sh=subprocess.run):
+    """The platform the router refused to start on ("unknown provider platform: keenable": the pinned release predates it), read
+    from the end of its log; None when the log says something else."""
+    try:
+        r = sh(["docker", "logs", "--tail", "40", NAME], capture_output=True, text=True, timeout=30)
+        m = UNKNOWN.search((r.stdout or "") + (r.stderr or ""))
+        return m.group(1) if m else None
+    except Exception: return None
 
 
 def missing_keys(env):
@@ -257,7 +271,7 @@ def start(env=None, sh=subprocess.run):
     c = settings()
     st = {"started": stamp(), "job": env.get("GITHUB_WORKFLOW", ""), "ok": False, "reason": "", "image": f"{c['image']}:{c['tag']}",
           "digest": "", "chat_platforms": [], "search_engines": [], "models": 0,
-          "keys_given": sorted(given_keys(env)), "keys_missing": missing_keys(env), "calls": {}}
+          "keys_given": sorted(given_keys(env)), "keys_missing": missing_keys(env), "dropped": [], "calls": {}}
     prev = load_status()
     secrets_in_play = []
     try:
@@ -276,25 +290,32 @@ def start(env=None, sh=subprocess.run):
         if not ok: raise RuntimeError(why)
         if not c["digest"]: pin(digest)
         runner_tmp = env.get("RUNNER_TEMP") or tempfile.gettempdir()
-        folder = tempfile.mkdtemp(prefix="freellm-data-", dir=runner_tmp)
-        os.chmod(folder, 0o777)                     # the container's entrypoint hands it to its own user
         enc, email, pw = secrets.token_hex(32), f"run-{secrets.token_hex(6)}@example.com", secrets.token_urlsafe(24)
         secrets_in_play = [enc, pw]
         for s in secrets_in_play: print(f"::add-mask::{s}", flush=True)
-        cfg_json = json.dumps(config_json(env, email, pw))
-        denv = dict(os.environ, ENCRYPTION_KEY=enc, FREEAPI_CONFIG_JSON=cfg_json)       # values stay off the command line
-        run = sh(["docker", "run", "-d", "--name", NAME, "-p", f"127.0.0.1:{PORT}:{PORT}", "-v", f"{folder}:{IN_BOX}",
-                  "-e", "NODE_ENV=production", "-e", f"PORT={PORT}", "-e", f"FREEAPI_DB_PATH={IN_BOX}/{DB_FILE}",
-                  "-e", "FREELLMAPI_UPDATE_CHECK=off", "-e", "FREEAPI_DB_DIR_HARDENING=0", "-e", "ENCRYPTION_KEY", "-e", "FREEAPI_CONFIG_JSON", image_id or st["image"]],
-                 capture_output=True, text=True, env=denv, timeout=120)
-        if run.returncode: raise RuntimeError("docker run failed: " + redact((run.stderr or "").strip()[-100:], secrets_in_play))
-        up = False
-        for n in range(int(c["wait_s"]) // 2):
-            code, _, _ = http("GET", "/api/ping")
-            if code == 200: up = True; break
-            if n % 3 == 2 and not running(sh): raise RuntimeError("the router container stopped before it answered")
-            time.sleep(2)
-        if not up: raise RuntimeError("the router did not answer within " + str(c["wait_s"]) + " seconds")
+        dropped = []                                # platforms the pinned release does not know yet: left out, and the router started again
+        for attempt in range(4):
+            folder = tempfile.mkdtemp(prefix="freellm-data-", dir=runner_tmp)
+            os.chmod(folder, 0o777)                 # the container's entrypoint hands it to its own user
+            cfg_json = json.dumps(config_json(env, email, pw, dropped))
+            denv = dict(os.environ, ENCRYPTION_KEY=enc, FREEAPI_CONFIG_JSON=cfg_json)       # values stay off the command line
+            run = sh(["docker", "run", "-d", "--name", NAME, "-p", f"127.0.0.1:{PORT}:{PORT}", "-v", f"{folder}:{IN_BOX}",
+                      "-e", "NODE_ENV=production", "-e", f"PORT={PORT}", "-e", f"FREEAPI_DB_PATH={IN_BOX}/{DB_FILE}",
+                      "-e", "FREELLMAPI_UPDATE_CHECK=off", "-e", "FREEAPI_DB_DIR_HARDENING=0", "-e", "ENCRYPTION_KEY", "-e", "FREEAPI_CONFIG_JSON", image_id or st["image"]],
+                     capture_output=True, text=True, env=denv, timeout=120)
+            if run.returncode: raise RuntimeError("docker run failed: " + redact((run.stderr or "").strip()[-100:], secrets_in_play))
+            up, stopped = False, False
+            for n in range(int(c["wait_s"]) // 2):
+                code, _, _ = http("GET", "/api/ping")
+                if code == 200: up = True; break
+                if n % 2 == 1 and not running(sh): stopped = True; break
+                time.sleep(2)
+            if up: break
+            bad = unknown_platform(sh) if stopped else None
+            if bad and bad not in dropped and attempt < 3:
+                dropped.append(bad); st["dropped"] = list(dropped); log(f"freellm: this release does not know {bad}: starting again without it"); cleanup(); continue
+            raise RuntimeError("the router container stopped before it answered" if stopped else f"the router did not answer within {c['wait_s']} seconds")
+        st["dropped"] = dropped
         key = read_key(folder, sh, (email, pw))
         if not key: raise RuntimeError("the router's key could not be read")
         secrets_in_play.append(key)

@@ -390,7 +390,8 @@ def router_row(st, t):
         r = make(status="ok", checked=stamp(started) if started else None, fix=steps, **base,
                  detail=f"started {nice(started, t) if started else '?'} ({st.get('job') or 'a job'}): {st.get('models', 0)} chat models on "
                         f"{', '.join(st.get('chat_platforms') or []) or 'its free tiers'}; search on {engines}"
-                        + (f"; served {sum(calls.values())} calls last run" if calls else ""))
+                        + (f"; served {sum(calls.values())} calls last run" if calls else "")
+                        + (f"; this release does not know {', '.join(st['dropped'])}, so it is left out" if st.get("dropped") else ""))
     else:
         hist, run = [h for h in st.get("history") or [] if isinstance(h, dict)], 0
         for h in reversed(hist):

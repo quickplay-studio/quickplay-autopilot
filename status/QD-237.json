@@ -1,0 +1,179 @@
+{
+ "id": "QD-237",
+ "board": "boards/queue/QD-237.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T02:19:23.784447+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": ""
+  }
+ },
+ "title": "Science Explained #3: How does gravity work? 🌌",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked nasa 1, pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 4 reused a nearby picture (nasa:video:moon tides: no NASA video for 'moon tides')",
+  "beat 5 reused a nearby picture (nasa:video:spacetime curvature: no NASA video for 'spacetime curvature')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 6,
+  "pic_found_share": 0.75,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "majestic-12",
+ "social_music": "ambient-space-background-350710",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 36.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 19.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 818.4,
+   "contrast": 0.243,
+   "face_area": 0.2194,
+   "text_area": 0.043,
+   "caption_contrast": 10.29,
+   "by_frame": {
+    "sharpness": [
+     791.8,
+     883.1,
+     842.8,
+     755.9
+    ],
+    "contrast": [
+     0.239,
+     0.242,
+     0.245,
+     0.247
+    ],
+    "face_area": [
+     0.2304,
+     0.2101,
+     0.2193,
+     0.2178
+    ],
+    "text_area": [
+     0.0458,
+     0.0455,
+     0.0455,
+     0.0352
+    ],
+    "caption_contrast": [
+     10.47,
+     10.34,
+     10.24,
+     10.24
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.81,
+   "none",
+   3
+  ],
+  [
+   5.81,
+   10.7,
+   "none",
+   3
+  ],
+  [
+   10.7,
+   14.78,
+   "none",
+   1
+  ],
+  [
+   14.78,
+   18.93,
+   "none",
+   1
+  ],
+  [
+   18.93,
+   23.58,
+   "none",
+   1
+  ],
+  [
+   23.58,
+   28.23,
+   "none",
+   1
+  ],
+  [
+   28.23,
+   32.59,
+   "none",
+   1
+  ],
+  [
+   32.59,
+   36.8,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "nasa",
+   "id": "GSFC_20150420_Orbit_m11858_2014",
+   "q": "earth from orbit",
+   "t0": 0.0,
+   "t1": 18.7
+  },
+  {
+   "p": "pixabay",
+   "id": "16160",
+   "q": "ocean waves night",
+   "t0": 18.1,
+   "t1": 36.8
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-237",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-70c9eb3dc6b5ca390831"
+}

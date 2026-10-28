@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 01:01): 17 of 1,000 subscribers · 12,009 of 10 million Shorts views in 90 days · 2,492 views in the last 24 hours (about 110,978 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 01:59): 17 of 1,000 subscribers · 12,056 of 10 million Shorts views in 90 days · 2,634 views in the last 24 hours (about 110,977 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 19:08 (UK): 5 scheduled, 144 public, 20 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Wed 28 Oct | 0 public, 13 scheduled | 0 | 0 | ⏳ 0 of 15 so far, 13 more scheduled |
+| Wed 28 Oct | 2 public, 11 scheduled | 0 | 0 | ⏳ 2 of 15 so far, 11 more scheduled |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -84,6 +84,24 @@ awaiting approval · 37 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-236](QD-236.jpg)
 
+### QD-237 · Science Explained #3: How does gravity work? 🌌
+awaiting approval · 37 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-70c9eb3dc6b5ca390831)
+- dry run: always waits for approval, never uploaded
+
+![QD-237](QD-237.jpg)
+
+### QD-238 · Harry Kane's Ballon d'Or: the historic detail
+awaiting approval · 37 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-be1abdd6a83fed70977e)
+- dry run: always waits for approval, never uploaded
+
+![QD-238](QD-238.jpg)
+
+### QD-239 · Level Up #3: Minecraft: Why the logo and textures changed
+awaiting approval · 36 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-9744bd94a18c7de4f045)
+- dry run: always waits for approval, never uploaded
+
+![QD-239](QD-239.jpg)
+
 ### TEST-L1024 · Free Steam games to grab before time runs out 🎮
 awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc)
 - dry run: always waits for approval, never uploaded
@@ -112,7 +130,7 @@ scheduled · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-2
 ![QD-210](QD-210.jpg)
 
 ### Wed 28 Oct 1:30 · Film Explained #1: How Lord of the Rings Made Hobbits Small
-scheduled · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
+private · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
 
 ![QD-219](QD-219.jpg)
 

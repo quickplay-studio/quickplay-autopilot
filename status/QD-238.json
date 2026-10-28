@@ -1,0 +1,175 @@
+{
+ "id": "QD-238",
+ "board": "boards/queue/QD-238.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T02:17:55.943371+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Harry Kane's Ballon d'Or: the historic detail",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 14,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 36.9,
+  "wps": 3.38,
+  "weak_beats": [],
+  "size_mb": 26.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 974.0,
+   "contrast": 0.193,
+   "face_area": 0.1998,
+   "text_area": 0.0527,
+   "caption_contrast": 6.68,
+   "by_frame": {
+    "sharpness": [
+     804.9,
+     886.5,
+     869.2,
+     1335.3
+    ],
+    "contrast": [
+     0.188,
+     0.188,
+     0.189,
+     0.208
+    ],
+    "face_area": [
+     0.2739,
+     0.2401,
+     0.2687,
+     0.0165
+    ],
+    "text_area": [
+     0.0678,
+     0.0635,
+     0.0506,
+     0.029
+    ],
+    "caption_contrast": [
+     6.29,
+     6.23,
+     8.52,
+     7.07
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.76,
+   "none",
+   2
+  ],
+  [
+   3.76,
+   9.16,
+   "none",
+   4
+  ],
+  [
+   9.16,
+   14.65,
+   "none",
+   4
+  ],
+  [
+   14.65,
+   19.07,
+   "none",
+   3
+  ],
+  [
+   19.07,
+   24.32,
+   "none",
+   4
+  ],
+  [
+   24.32,
+   31.46,
+   "none",
+   5
+  ],
+  [
+   31.46,
+   36.85,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "239973",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 12.68
+  },
+  {
+   "p": "pixabay",
+   "id": "293782",
+   "q": "gold trophy glitter",
+   "t0": 12.08,
+   "t1": 24.76
+  },
+  {
+   "p": "pixabay",
+   "id": "1643",
+   "q": "crowd cheering",
+   "t0": 24.16,
+   "t1": 36.85
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-238",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-be1abdd6a83fed70977e"
+}

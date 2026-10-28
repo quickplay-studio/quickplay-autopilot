@@ -1,0 +1,169 @@
+{
+ "id": "QD-239",
+ "board": "boards/queue/QD-239.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T02:17:57.945183+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Level Up #3: Minecraft: Why the logo and textures changed",
+ "background_notes": [
+  "picked pixabay 3 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "mas-cafe",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 36.1,
+  "wps": 3.13,
+  "weak_beats": [],
+  "size_mb": 13.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 588.6,
+   "contrast": 0.231,
+   "face_area": 0.0,
+   "text_area": 0.0571,
+   "caption_contrast": 3.42,
+   "by_frame": {
+    "sharpness": [
+     591.7,
+     622.3,
+     606.8,
+     533.4
+    ],
+    "contrast": [
+     0.232,
+     0.234,
+     0.234,
+     0.224
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0342,
+     0.034,
+     0.0337,
+     0.1266
+    ],
+    "caption_contrast": [
+     3.97,
+     4.01,
+     2.87,
+     2.44
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.22,
+   "none",
+   3
+  ],
+  [
+   5.22,
+   14.14,
+   "none",
+   6
+  ],
+  [
+   14.14,
+   20.78,
+   "none",
+   4
+  ],
+  [
+   20.78,
+   26.05,
+   "none",
+   4
+  ],
+  [
+   26.05,
+   32.53,
+   "none",
+   4
+  ],
+  [
+   32.53,
+   36.07,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "14966",
+   "q": "pixelated block landscape",
+   "t0": 0.0,
+   "t1": 12.42
+  },
+  {
+   "p": "pixabay",
+   "id": "1058",
+   "q": "computer screen glow",
+   "t0": 11.82,
+   "t1": 24.24
+  },
+  {
+   "p": "pixabay",
+   "id": "4936",
+   "q": "keyboard rgb glow",
+   "t0": 23.64,
+   "t1": 36.07
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-239",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-9744bd94a18c7de4f045"
+}

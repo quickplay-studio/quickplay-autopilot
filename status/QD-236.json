@@ -1,0 +1,162 @@
+{
+ "id": "QD-236",
+ "board": "boards/queue/QD-236.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T01:07:53.328620+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": ""
+  }
+ },
+ "title": "Big Science #2: James Webb Space Telescope 🔭",
+ "background_notes": [
+  "Pixabay 'nebula space clouds': 40 results, none at 720p or better",
+  "picked pixabay 2 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "defying-gravity",
+ "look": {
+  "captions": "lab-captions-1024",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 36.9,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 871.8,
+   "contrast": 0.192,
+   "face_area": 0.2744,
+   "text_area": 0.2188,
+   "caption_contrast": 17.14,
+   "by_frame": {
+    "sharpness": [
+     667.0,
+     935.6,
+     917.2,
+     967.4
+    ],
+    "contrast": [
+     0.178,
+     0.197,
+     0.196,
+     0.198
+    ],
+    "face_area": [
+     0.2669,
+     0.2809,
+     0.2601,
+     0.2898
+    ],
+    "text_area": [
+     0.1726,
+     0.2308,
+     0.2344,
+     0.2375
+    ],
+    "caption_contrast": [
+     17.15,
+     17.14,
+     17.14,
+     17.15
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.47,
+   "title",
+   0
+  ],
+  [
+   6.47,
+   12.17,
+   "none",
+   1
+  ],
+  [
+   12.17,
+   18.15,
+   "none",
+   1
+  ],
+  [
+   18.15,
+   23.8,
+   "none",
+   1
+  ],
+  [
+   23.8,
+   29.42,
+   "none",
+   1
+  ],
+  [
+   29.42,
+   36.91,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "4504",
+   "q": "server room lights",
+   "t0": 0.0,
+   "t1": 18.76
+  },
+  {
+   "p": "pixabay",
+   "id": "732",
+   "q": "nasa earth from orbit",
+   "t0": 18.16,
+   "t1": 36.91
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-236",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-781c10b33a6b853aae08"
+}

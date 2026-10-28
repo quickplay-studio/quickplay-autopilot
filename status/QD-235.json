@@ -1,0 +1,161 @@
+{
+ "id": "QD-235",
+ "board": "boards/queue/QD-235.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T01:07:16.449873+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": ""
+  }
+ },
+ "title": "Screen Time #5: Godzilla Minus One: the Oscar detail you missed",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "scale-the-mountain",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 29.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 598.1,
+   "contrast": 0.179,
+   "face_area": 0.0338,
+   "text_area": 0.0515,
+   "caption_contrast": 16.88,
+   "by_frame": {
+    "sharpness": [
+     600.3,
+     596.6,
+     599.1,
+     596.4
+    ],
+    "contrast": [
+     0.178,
+     0.179,
+     0.179,
+     0.18
+    ],
+    "face_area": [
+     0.1067,
+     0.0093,
+     0.0103,
+     0.0087
+    ],
+    "text_area": [
+     0.0504,
+     0.052,
+     0.0515,
+     0.052
+    ],
+    "caption_contrast": [
+     16.9,
+     16.87,
+     16.9,
+     16.87
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.96,
+   "none",
+   0
+  ],
+  [
+   4.96,
+   9.95,
+   "none",
+   1
+  ],
+  [
+   9.95,
+   14.77,
+   "none",
+   1
+  ],
+  [
+   14.77,
+   19.11,
+   "none",
+   1
+  ],
+  [
+   19.11,
+   23.6,
+   "none",
+   1
+  ],
+  [
+   23.6,
+   28.93,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "213804",
+   "q": "galaxy stars nebula",
+   "t0": 0.0,
+   "t1": 14.76
+  },
+  {
+   "p": "pixabay",
+   "id": "380219",
+   "q": "concert stage lights",
+   "t0": 14.16,
+   "t1": 28.93
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-235",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-170659f512152c5cec1c"
+}

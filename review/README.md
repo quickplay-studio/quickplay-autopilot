@@ -72,6 +72,18 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-144](QD-144.jpg)
 
+### QD-235 · Screen Time #5: Godzilla Minus One: the Oscar detail you missed
+awaiting approval · 29 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-170659f512152c5cec1c)
+- dry run: always waits for approval, never uploaded
+
+![QD-235](QD-235.jpg)
+
+### QD-236 · Big Science #2: James Webb Space Telescope 🔭
+awaiting approval · 37 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-781c10b33a6b853aae08)
+- dry run: always waits for approval, never uploaded
+
+![QD-236](QD-236.jpg)
+
 ### TEST-L1024 · Free Steam games to grab before time runs out 🎮
 awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc)
 - dry run: always waits for approval, never uploaded
@@ -81,8 +93,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-233** Beyonce's 2003 album sold 317k in week one 🎤 (rendering next)
-- **QD-235** Screen Time #5: Godzilla Minus One: the Oscar detail you missed (rendering next)
-- **QD-236** Big Science #2: James Webb Space Telescope 🔭 (rendering next)
 
 ## On the channel (latest first)
 

@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 11:46 UK.
+Updated Wednesday 28 October, 11:47 UK.
 
-**18 subscribers, 12,632 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**18 subscribers, 12,422 engaged Shorts views in 90 days (0.41% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,19 +26,19 @@ Updated Wednesday 28 October, 11:46 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 18 of 500 (3.60%) | 12,632 of 3,000,000 (0.42%) | 33,193 |
-| Full, from 1 February 2027 | 18 of 1,000 (1.80%) | 12,632 of 10,000,000 (0.13%) | 110,971 |
+| Expanded, open now | 18 of 500 (3.60%) | 12,422 of 3,000,000 (0.41%) | 33,196 |
+| Full, from 1 February 2027 | 18 of 1,000 (1.80%) | 12,422 of 10,000,000 (0.12%) | 110,974 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,702 (to Sun 25 Oct) | 4,326 | 19 | 96 |
+| 8,702 (to Sun 25 Oct) | 4,313 | 18 | 96 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
 Engaged views a day, 7-day average: **1,243**, up from 505 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 31% a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 30.5% a week earlier.
 
 ```mermaid
 xychart-beta
@@ -109,9 +109,9 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 - **Quickplay Daily**: 6 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
-- **Quickplay Gaming Clips**: 1 of 6 posted today, sign-in ok
-- **Quickplay IRL Clips**: 1 of 6 posted today, sign-in ok
-- **Quickplay Clips**: 2 of 6 posted today, sign-in ok
+- **Quickplay Gaming Clips**: 2 of 6 posted today, sign-in ok
+- **Quickplay IRL Clips**: 2 of 6 posted today, sign-in ok
+- **Quickplay Clips**: 3 of 6 posted today, sign-in ok
 - **Quickplay Diario**: 0 of 6 posted today, sign-in ok
 - Clipping paused since Mon 26 Oct: the clip channels post original Shorts.
 

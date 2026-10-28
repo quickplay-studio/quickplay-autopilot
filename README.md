@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 19:09 UK.
+Updated Wednesday 28 October, 19:52 UK.
 
-**19 subscribers, 12,589 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**19 subscribers, 12,431 engaged Shorts views in 90 days (0.41% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,30 +26,30 @@ Updated Wednesday 28 October, 19:09 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 19 of 500 (3.80%) | 12,589 of 3,000,000 (0.42%) | 33,194 |
-| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 12,589 of 10,000,000 (0.13%) | 110,972 |
+| Expanded, open now | 19 of 500 (3.80%) | 12,431 of 3,000,000 (0.41%) | 33,196 |
+| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 12,431 of 10,000,000 (0.12%) | 110,973 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,702 (to Sun 25 Oct) | 4,035 | 25 | 96 |
+| 8,658 (to Mon 26 Oct) | 3,926 | 24 | 96 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
-Engaged views a day, 7-day average: **1,243**, up from 505 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 31% a week earlier.
+Engaged views a day, 7-day average: **1,237**, up from 658 a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 31.5% a week earlier.
 Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
 Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Wed 28 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
 xychart-beta
     title "Engaged views a day, Quickplay Daily"
-    x-axis ["16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct"]
+    x-axis ["16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct"]
     y-axis "Views" 0 --> 2000
-    line [225, 596, 694, 1118, 1482, 1310, 367, 1995, 942, 1488]
+    line [225, 596, 694, 1118, 1482, 1310, 367, 1995, 942, 1488, 1074]
 ```
-Days YouTube has reported, to Sun 25 Oct. More: [analytics/insights.md](analytics/insights.md).
+Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytics/insights.md).
 
 ## Tests and changes
 
@@ -57,14 +57,14 @@ Days YouTube has reported, to Sun 25 Oct. More: [analytics/insights.md](analytic
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| length | 25 to 34 s 20, 35 to 44 s 26 | running, leaning 25 to 34 s | 5 |
-| title emoji | emoji 23, none 25 | running, leaning none | 5 |
-| comment replies | on 26, off 25 | running, leaning on | 5 |
-| title answer (stated or held back) | stated 20, held back 16 | too few to tell | 5 |
-| angles shown to the writer | shown 6, hidden 11 | too few to tell | 6 |
-| ending | loop 16, question 12 | too few to tell | 6 |
-| named series | named 11, plain 8 | too few to tell | 6 |
-| colour grade | natural 7, lab 7 | too few to tell | 6 |
+| length | 25 to 34 s 22, 35 to 44 s 27 | running, leaning 25 to 34 s | 5 |
+| title emoji | emoji 26, none 26 | running, leaning none | 5 |
+| comment replies | on 29, off 26 | running, leaning on | 5 |
+| title opening | search phrase 22, curiosity 16 | too few to tell | 5 |
+| title answer (stated or held back) | stated 21, held back 19 | too few to tell | 5 |
+| angles shown to the writer | shown 7, hidden 14 | too few to tell | 6 |
+| ending | loop 19, question 13 | too few to tell | 6 |
+| first frame | cover 15, photo 9 | too few to tell | 6 |
 
 **Change ledger:** 159 changes, 106 live; verdicts so far: 23 no change, 17 worse, 12 better, 9 too early, 1 overlapped.
 
@@ -109,11 +109,11 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 12 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 13 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 3 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 4 of 6 posted today, sign-in ok
-- **Quickplay Clips**: 4 of 6 posted today, sign-in ok
+- **Quickplay Clips**: 5 of 6 posted today, sign-in ok
 - **Quickplay Diario**: 0 of 6 posted today, sign-in ok
 - Clipping paused since Mon 26 Oct: the clip channels post original Shorts.
 

@@ -71,7 +71,13 @@ category x replies,Sport: off,1.007,0.971,1.046,10,views,interaction,0.7483,0.88
 category x replies,Sport: on,0.993,0.956,1.03,15,views,interaction,0.7483,0.889
 category x replies,Tech: off,0.987,0.958,1.017,6,views,interaction,0.5292,0.867
 category x replies,Tech: on,1.013,0.983,1.044,3,views,interaction,0.5292,0.867
-first_frame,cover,1.094,0.884,1.435,18,engaged,main,0.5405,0.541
-first_frame,photo,0.914,0.697,1.131,14,engaged,main,0.5405,0.541
-hook_type,statement,0.87,0.733,1.074,10,engaged,main,0.2421,0.484
-hook_type,number,1.149,0.931,1.364,8,engaged,main,0.2421,0.484
+first_frame,cover,1.189,0.948,1.441,25,engaged,main,0.1896,0.372
+first_frame,photo,0.841,0.694,1.055,18,engaged,main,0.1896,0.372
+hook_type,statement,0.897,0.756,1.117,15,engaged,main,0.3723,0.372
+hook_type,number,1.115,0.895,1.322,13,engaged,main,0.3723,0.372
+category x first_frame,Film: photo,1.092,0.982,1.189,6,engaged,interaction,0.153,0.459
+category x first_frame,Film: cover,0.915,0.841,1.019,4,engaged,interaction,0.153,0.459
+category x first_frame,Gaming: photo,1.052,0.959,1.137,5,engaged,interaction,0.3276,0.491
+category x first_frame,Gaming: cover,0.951,0.88,1.043,3,engaged,interaction,0.3276,0.491
+category x first_frame,Music: photo,0.964,0.891,1.073,3,engaged,interaction,0.518,0.518
+category x first_frame,Music: cover,1.037,0.932,1.122,3,engaged,interaction,0.518,0.518

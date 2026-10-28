@@ -1,9 +1,9 @@
 {
  "date": "2026-10-28",
- "built": "2026-10-28T14:41+00:00",
+ "built": "2026-10-28T16:55+00:00",
  "model": "gemini-3.5-flash-lite + groq:qwen/qwen3.8-27b",
- "mode": "full",
- "run": "afternoon",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
@@ -11,11 +11,11 @@
    "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "Harry Kane defended his Ballon d'Or victory while Thierry Henry and Kylian Mbappé addressed separate controversies.",
+   "what_is_new": "Thierry Henry defended his Ballon d'Or hosting on Wednesday following criticism over his remarks.",
    "hooks": [
-    "Harry Kane is the first Englishman to win the Ballon d'Or since 2001!",
-    "Thierry Henry defends his Ballon d'Or hosting after heavy backlash.",
-    "Alexia Putellas makes history winning her third Ballon d'Or Féminin."
+    "Harry Kane wins the 2026 Ballon d'Or in London!",
+    "Alexia Putellas claims her third Women's Ballon d'Or!",
+    "Thierry Henry defends his Ballon d'Or hosting duties!"
    ],
    "sources": [
     [
@@ -56,17 +56,6 @@
      }
     },
     {
-     "claim": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Then, reaction to Harry Kane winning the Ballon d'Or - the first Englishman since Michael Owen in 2001.",
-      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
-     }
-    },
-    {
      "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
      "sources": [
       3,
@@ -76,36 +65,20 @@
       "3": "Finally, London City Lionesses CEO Martin Semmens on Alexia Putellas winning the Ballon d'Or Féminin for a third time after her move to the WSL.",
       "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
+    },
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "Then, reaction to Harry Kane winning the Ballon d'Or - the first Englishman since Michael Owen in 2001.",
+      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
+     }
     }
    ],
    "one_source": [
-    {
-     "claim": "Thierry Henry has defended himself after criticism over the way he hosted Monday's Ballon d'Or ceremony.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thierry Henry has defended himself after criticism over the way he hosted Monday's Ballon d'Or ceremony."
-     }
-    },
-    {
-     "claim": "Arsenal forward Bukayo Saka won the Socrates Award for his humanitarian and charity work.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Arsenal forward Bukayo Saka won the Socrates Award for his humanitarian and charity work."
-     }
-    },
-    {
-     "claim": "On Tuesday Mbappé apologised, My comment was ill-judged, and I now understand that it hurt many people in China, as did La Liga",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "mbapp found himself condemned online before being unceremoniously dropped by brands then held responsible for state television suspending the entire top spanish league from its schedule on tuesday mbapp apologised my comment was ill judged and i now understand that"
-     }
-    },
     {
      "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
@@ -113,6 +86,87 @@
      ],
      "evidence": {
       "4": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "This also marked the first time the ceremony was organised outside France or Switzerland.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "This also marked the first time the ceremony was organised outside France or Switzerland."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
+     }
+    },
+    {
+     "claim": "Ten players were nominated for the 2026 Men's Kopa Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Ten players were nominated for the 2026 Men's Kopa Trophy."
+     }
+    },
+    {
+     "claim": "Five players were nominated for the 2026 Women's Kopa Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Five players were nominated for the 2026 Women's Kopa Trophy."
+     }
+    },
+    {
+     "claim": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy."
+     }
+    },
+    {
+     "claim": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy."
+     }
+    },
+    {
+     "claim": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy."
+     }
+    },
+    {
+     "claim": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy."
      }
     }
    ],
@@ -125,9 +179,9 @@
    "topic": "Ballon d'Or 2026 facts",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "Caroline Weir was ranked 25th in the Ballon d'Or and joined the shortlist for the Scottish Women's Football Awards.",
    "hooks": [
-    "Caroline Weir ranked 25th best women footballer in the world."
+    "Discover why Caroline Weir was ranked 25th in the Ballon d'Or!"
    ],
    "sources": [
     [
@@ -138,72 +192,6 @@
     ],
     [
      "Ballon d'Or 2026 facts",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "This also marked the first time the ceremony was organised outside France or Switzerland.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "This also marked the first time the ceremony was organised outside France or Switzerland."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 5,
-   "topic": "Ballon d'Or 2026 star",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Caroline Weir ranked 25th in the Ballon d'Or?"
-   ],
-   "sources": [
-    [
-     "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
-     "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-26"
-    ],
-    [
-     "Ballon d'Or 2026 star",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -224,16 +212,7 @@
    ],
    "one_source": [
     {
-     "claim": "The 2026 Ballon d’Or ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Bayern Munich forward Harry Kane won the Men’s Ballon d’Or, receiving the award for the first time in his career.",
+     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
      "sources": [
       2
      ],
@@ -242,21 +221,21 @@
      }
     },
     {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women’s Ballon d’Or for the third time in her career.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time.",
      "sources": [
       2
      ],
      "evidence": {
       "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
      }
     },
     {
@@ -267,9 +246,51 @@
      "evidence": {
       "2": "This also marked the first time the ceremony was organised outside France or Switzerland."
      }
-    },
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "Ballon d'Or 2026 star",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "category": "Sport",
+   "what_is_new": "Harry Kane and Alexia Putellas won the Men's and Women's Ballon d'Or awards on 26 October 2026",
+   "hooks": [
+    "Caroline Weir ranked 25th in the Ballon d'Or!"
+   ],
+   "sources": [
+    [
+     "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
+     "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-26"
+    ],
+    [
+     "Ballon d'Or 2026 star",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
     {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "claim": "Caroline Weir was ranked 25th in the Ballon d'Or",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Caroline Weir has been ranked the 25th best women footballer in the world",
+      "2": "25 | Caroline Weir | Scotland | Midfielder | Real Madrid"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Harry Kane won the Men's Ballon d'Or",
      "sources": [
       2
      ],
@@ -278,12 +299,84 @@
      }
     },
     {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or",
      "sources": [
       2
      ],
      "evidence": {
       "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "The ceremony was held at the London Palladium",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "The winners of the Scottish Women's Football Awards will be announced on 28 November",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The winners will be announced at Hampden Park on 28 November."
+     }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    },
+    {
+     "claim": "Alexia Putellas finished ahead of Ewa Pajor and Khadija Shaw in the voting",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career. She finished ahead of Ewa Pajor"
+     }
+    },
+    {
+     "claim": "Caroline Weir was a Ballon d'Or nominee for the second year in a row",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It was the second year in a row that 31-year-old Weir, who left Real Madrid for Lyon this summer, has been a Ballon d'Or nominee"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
      }
     }
    ],
@@ -296,14 +389,14 @@
    "topic": "Ballon d'Or 2026 rankings",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "Harry Kane and Alexia Putellas won the Men's and Women's Ballon d'Or awards on 26 October 2026.",
+   "what_is_new": "Harry Kane and Alexia Putellas won the Men's and Women's Ballon d'Or awards on 26 October 2026",
    "hooks": [
-    "Harry Kane has won the 2026 Men's Ballon d'Or!",
-    "Alexia Putellas claims the Women's Ballon d'Or for 2026!"
+    "Harry Kane wins the 2026 Men's Ballon d'Or!",
+    "Alexia Putellas claims her third Women's Ballon d'Or award."
    ],
    "sources": [
     [
-     "Ballon d'Or 2026 by the numbers",
+     "Ballon d'Or 2026 rankings",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -330,39 +423,111 @@
      }
     },
     {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
      "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Harry Kane won the Men's Ballon d'Or",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or"
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Women's Ballon d'Or",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or"
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or ceremony took place on 26 October 2026",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London"
+     }
+    },
+    {
+     "claim": "The ceremony was held at the London Palladium in London",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London"
+     }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals for club and country during the 2025-26 season",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season"
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the award for the third time in her career",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or"
+     }
+    },
+    {
+     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin"
+     }
+    },
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the award",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001"
+     }
+    },
+    {
+     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the award",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025"
+     }
+    },
+    {
+     "claim": "The 2026 Ballon d'Or was the 70th annual ceremony",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or"
      }
     }
    ],
@@ -377,9 +542,9 @@
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane just won the Men's Ballon d'Or!",
-    "Alexia Putellas won her third Women's Ballon d'Or!",
-    "London hosted the historic 2026 Ballon d'Or ceremony!"
+    "Did you know Harry Kane won the 2026 Men's Ballon d'Or?",
+    "Alexia Putellas claimed the Women's Ballon d'Or for the third time!",
+    "The 2026 Ballon d'Or ceremony was held in London."
    ],
    "sources": [
     [
@@ -392,721 +557,6 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 9,
-   "topic": "Ballon d'Or 2026 what happens next",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Harry Kane just won the 2026 Men's Ballon d'Or!",
-    "Alexia Putellas claimed the women's award for the third time!",
-    "Discover who topped the 2026 Ballon d'Or rankings!"
-   ],
-   "sources": [
-    [
-     "Ballon d'Or 2026 what happens next",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
-     }
-    },
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London."
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 20,
-   "topic": "Walter Koenig",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Star Trek legend Walter Koenig once had a severe stutter?",
-    "Walter Koenig landed his iconic Star Trek role because he looked like Davy Jones.",
-    "Star Trek star Walter Koenig passed away at the age of 90."
-   ],
-   "sources": [
-    [
-     "Walter Koenig obituary",
-     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig died at the age of 90.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "The American actor Walter Koenig, who has died aged 90, was unimpressed when, as a TV viewer, he caught a glimpse of Star Trek on",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday",
-      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age"
-     }
-    },
-    {
-     "claim": "Walter Koenig was born in Chicago, Illinois.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg), who worked as a flautist, nightclub",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Walter Koenig played Ensign Pavel Chekov in the original Star Trek television series.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
-      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
-     }
-    },
-    {
-     "claim": "Walter Koenig trained at the Neighborhood Playhouse School of the Theatre in New York alongside fellow students such as James Caan.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
-      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed Alfred Bester in the sci-fi space series Babylon 5.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
-      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994). He also acted in several"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote a script titled The Infinite Vulcan for Star Trek: The Animated Series.",
-     "sources": [
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "5": "Star Trek: The Animated Series | —N/a | Writer; Episode: \"The Infinite Vulcan\""
-     }
-    },
-    {
-     "claim": "Walter Koenig was survived by his daughter Danielle Koenig.",
-     "sources": [
-      1,
-      2,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig is survived by their daughter, Danielle.",
-      "2": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
-      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an autobiography titled Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
-      "4": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
-     }
-    },
-    {
-     "claim": "Walter Koenig married actor Judy Levitt in 1965.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
-      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965."
-     }
-    },
-    {
-     "claim": "Walter Koenig was cast as Chekov in Star Trek because he resembled singer Davy Jones of the Monkees.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
-      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Walter Koenig had a stutter when he was young until he took the lead in a school play.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "“I had a stutter until I took the lead in the school play and that killed the stutter,” he revealed."
-     }
-    },
-    {
-     "claim": "Walter Koenig won the Platinum Award for best actor at the 2026 Independent Shorts Awards for his performance in the short film Mr Fleischmann.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Earlier this year, his performance in the short film Mr Fleischmann saw him collect the Platinum Award for best actor at the 2026 Independent Shorts"
-     }
-    },
-    {
-     "claim": "William Shatner paid tribute to Walter Koenig by describing him as a man who genuinely loved the Star Trek community.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday"
-     }
-    },
-    {
-     "claim": "Walter Koenig was born on September 14, 1936.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 21,
-   "topic": "Walter Koenig facts",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
-   "hooks": [
-    "Walter Koenig played Pavel Chekov in Star Trek.",
-    "Walter Koenig was born in Chicago in 1936.",
-    "Walter Koenig portrayed Alfred Bester in Babylon 5."
-   ],
-   "sources": [
-    [
-     "Walter Koenig obituary",
-     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig facts",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek television series from 1967 to 1969.",
-     "sources": [
-      1,
-      2,
-      5
-     ],
-     "evidence": {
-      "1": "Koenig appeared in 36 episodes throughout Star Trek’s second and third series (1967-69) before the programme was axed",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
-     }
-    },
-    {
-     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg)",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Walter Koenig trained at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
-      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote a first season episode of Star Star Trek The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed Alfred Bester in the science fiction series Babylon 5.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
-      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994). He also acted in several"
-     }
-    },
-    {
-     "claim": "Walter Koenig married the actor Judy Levitt in 1965.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
-      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965."
-     }
-    },
-    {
-     "claim": "Walter Koenig was survived by his daughter Danielle Koenig.",
-     "sources": [
-      1,
-      2,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig is survived by their daughter, Danielle.",
-      "2": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
-      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
-     }
-    },
-    {
-     "claim": "Walter Koenig was cast as Pavel Chekov because he resembled Davy Jones of the Monkees.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
-      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 22,
-   "topic": "Walter Koenig star",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away aged 90 on Sunday, October 25, 2026, leading to widespread tributes.",
-   "hooks": [
-    "Did you know Walter Koenig nearly missed out on Star Trek?",
-    "How did Walter Koenig create his famous Star Trek accent?",
-    "Discover the incredible sci-fi career of Walter Koenig!"
-   ],
-   "sources": [
-    [
-     "Walter Koenig obituary",
-     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig star",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig passed away at the age of 90 on Sunday, October 25, 2026.",
-     "sources": [
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
-     }
-    },
-    {
-     "claim": "Walter Koenig joined Star Trek as Ensign Pavel Chekov in the second season in 1967.",
-     "sources": [
-      1,
-      2,
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
-      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
-      "3": "After landing his first TV roles in the early Sixties, including the pilot episode of the hit soap General Hospital, Koenig was cast as Chekov",
-      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season"
-     }
-    },
-    {
-     "claim": "Walter Koenig appeared in all six original cast Star Trek feature films from 1979 to 1991.",
-     "sources": [
-      1,
-      2,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "Koenig also appeared in all six feature films (1979-91) spun off from the series, plus Star Trek: Generations (1994)",
-      "2": "later reprising his role in the six original cast movies from 1979 through to 1991.",
-      "3": "He remained a series regular through its third and final season, and would regularly reprise the role of Chekov, featuring in 1979’s Star Trek: The",
-      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994)."
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed Alfred Bester in the sci-fi series Babylon 5 during the 1990s.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
-      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
-     }
-    },
-    {
-     "claim": "Gene Roddenberry sought a character with the boyish looks of Monkees singer Davy Jones to appeal to young viewers.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
-      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    },
-    {
-     "claim": "Walter Koenig stated that his character's Russian accent was inspired by his father.",
-     "sources": [
-      1,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Koenig said the accent was inspired by his father. “My dad inverted the Vs and the Ws,” he explained.",
-      "4": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
-      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound."
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an autobiography titled Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998)",
-      "4": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
-     }
-    },
-    {
-     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre alongside James Caan and Christopher Lloyd.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
-      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig married actor Judy Levitt in 1965.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
-      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965. And they"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an episode for Star Trek: The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      2,
-      4
-     ],
-     "evidence": {
-      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 39,
-   "topic": "Ballon d'Or 2026 analysis",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Harry Kane has won the prestigious Men's Ballon d'Or!",
-    "Alexia Putellas claims the Women's Ballon d'Or once again."
-   ],
-   "sources": [
-    [
-     "Ballon d'Or 2026 analysis",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
      "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
      "sources": [
       1
@@ -1116,30 +566,30 @@
      }
     },
     {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London, the first time the ceremony was organised outside France or Switzerland.",
+     "claim": "The 2026 ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4] This also marked the first time the ceremony was organised outside"
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
     },
     {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "claim": "Harry Kane became the fifth Englishman to win the award.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
      }
     },
     {
-     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin.",
+     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the award.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
+      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025.[7]"
      }
     }
    ],
@@ -1154,9 +604,9 @@
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane won the Men's Ballon d'Or!",
-    "Alexia Putellas claimed the Women's Ballon d'Or.",
-    "The 2026 ceremony took place in London."
+    "Harry Kane wins the 2026 Men's Ballon d'Or!",
+    "Alexia Putellas claims her third Women's Ballon d'Or!",
+    "London hosts the historic 2026 Ballon d'Or ceremony!"
    ],
    "sources": [
     [
@@ -1169,7 +619,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or for the first time in his career.",
      "sources": [
       1
      ],
@@ -1178,7 +628,7 @@
      }
     },
     {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
      "sources": [
       1
      ],
@@ -1216,9 +666,8 @@
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know Harry Kane won the Men's Ballon d'Or for the first time?",
-    "Alexia Putellas just won the Women's Ballon d'Or for the third time!",
-    "Thirty top players were nominated for the 2026 Men's Ballon d'Or."
+    "Did you know Harry Kane won the Mens Ballon dOr?",
+    "Alexia Putellas claimed the Womens Ballon dOr for a third time."
    ],
    "sources": [
     [
@@ -1237,7 +686,7 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "claim": "Bayern Munich forward Harry Kane won the Mens Ballon dOr, receiving the award for the first time in his career.",
      "sources": [
       2
      ],
@@ -1246,7 +695,7 @@
      }
     },
     {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "claim": "Barcelona midfielder Alexia Putellas won the Womens Ballon dOr, receiving the award for the third time in her career.",
      "sources": [
       2
      ],
@@ -1255,75 +704,21 @@
      }
     },
     {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
+     "claim": "Harry Kane won the Men's Ballon d'Or",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
+      "2": "England's Kane wins Ballon d'Or, Putellas claims women's award"
      }
     },
     {
-     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Féminin.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
-     }
-    },
-    {
-     "claim": "Ten players were nominated for the 2026 Men's Kopa Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Ten players were nominated for the 2026 Men's Kopa Trophy.[8]"
-     }
-    },
-    {
-     "claim": "Five players were nominated for the 2026 Women's Kopa Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Five players were nominated for the 2026 Women's Kopa Trophy.[9]"
-     }
-    },
-    {
-     "claim": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy."
-     }
-    },
-    {
-     "claim": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Five goalkeepers were nominated for the 2026 Women's Yashin Trophy."
-     }
-    },
-    {
-     "claim": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.[10]"
-     }
-    },
-    {
-     "claim": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Five coaches were nominated for the 2026 Women's Johan Cruyff Trophy.[11]"
+      "2": "Ballon d'Or Feminin: Alexia Putellas wins award for record-equalling third time"
      }
     }
    ],
@@ -1332,15 +727,15 @@
    ]
   },
   {
-   "n": 20,
+   "n": 21,
    "topic": "Walter Koenig",
    "signal": "watchlist: Walter Koenig (surging)",
    "category": "Entertainment",
-   "what_is_new": "",
+   "what_is_new": "Walter Koenig passed away aged 90 in his North Hollywood home on Sunday, October 25, 2026.",
    "hooks": [
-    "Did you know Star Trek icon Walter Koenig was initially unimpressed by the show?",
-    "Walter Koenig faked his famous Russian accent on Star Trek based on his dad.",
-    "Walter Koenig played unforgettable sci-fi roles from Star Trek to Babylon 5."
+    "Did you know Walter Koenig based his iconic Star Trek accent on his father?",
+    "How did a simple resemblance to a pop star land Walter Koenig his most famous role?",
+    "From Star Trek navigator to Babylon 5 villain, discover Walter Koenig's sci-fi legacy."
    ],
    "sources": [
     [
@@ -1356,16 +751,16 @@
      "2026-10-28"
     ],
     [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
      "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "Space.com",
      "2026-10-27"
+    ],
+    [
+     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
+     "PC Gamer",
+     "2026-10-26"
     ],
     [
      "Walter Koenig",
@@ -1376,268 +771,105 @@
    ],
    "verified": [
     {
-     "claim": "Walter Koenig died aged 90.",
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+     }
+    },
+    {
+     "claim": "He studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
      "sources": [
       1,
       2,
       3,
-      4
-     ],
-     "evidence": {
-      "1": "The American actor Walter Koenig, who has died aged 90, was unimpressed when, as a TV viewer, he caught a glimpse of Star Trek on",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday",
-      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age"
-     }
-    },
-    {
-     "claim": "Walter Koenig was born in Chicago, Illinois.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg), who worked as a flautist, nightclub",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Walter Koenig attended the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and other actors.",
-     "sources": [
-      1,
-      2,
-      4,
       5
      ],
      "evidence": {
       "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
       "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "3": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
       "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
      }
     },
     {
-     "claim": "Walter Koenig played Ensign Pavel Chekov in Star Trek.",
+     "claim": "Koenig joined Star Trek as Ensign Pavel Chekov in the second season in 1967.",
      "sources": [
       1,
       2,
-      3,
       4,
       5
      ],
      "evidence": {
       "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
-      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
+      "4": "Koenig's big break in show biz came in 1967, when he was cast as Chekhov in the second season of the original Star Trek series.",
+      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
      }
     },
     {
-     "claim": "Gene Roddenberry sought a character to appeal to young viewers with the good looks of Monkees singer Davy Jones.",
+     "claim": "He based his character's Russian accent on the way his father pronounced certain words.",
      "sources": [
       1,
-      2,
-      5
-     ],
-     "evidence": {
-      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
-      "2": "The character was introduced to appeal to younger audiences, with his Beatles/Monkees-style mop-top haircut.",
-      "5": "Show creator Gene Roddenberry hoped that Koenig would increase the show's appeal to young people."
-     }
-    },
-    {
-     "claim": "Walter Koenig derived Chekov's accent from his father's speech.",
-     "sources": [
-      1,
-      4,
+      3,
       5
      ],
      "evidence": {
       "1": "Koenig said the accent was inspired by his father. “My dad inverted the Vs and the Ws,” he explained.",
-      "4": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
-      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound.[6]"
+      "3": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
+      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound."
      }
     },
     {
-     "claim": "Walter Koenig appeared in all six original cast Star Trek feature films plus Star Trek Generations.",
+     "claim": "He appeared in 36 episodes of Star Trek across its second and third series.",
      "sources": [
       1,
-      2,
-      3,
-      4,
+      3
+     ],
+     "evidence": {
+      "1": "Koenig appeared in 36 episodes throughout Star Trek’s second and third series (1967-69) before the programme was axed, having failed to attract a large enough",
+      "3": "He co-starred in 36 of the 50 installments airing on the NBC Network in 1967-68 and 1968-69, premiering in famed sci-fi author Theodore Sturgeon's excellent"
+     }
+    },
+    {
+     "claim": "Koenig reprised his role as Chekov in all six original cast feature films and Star Trek: Generations in 1994.",
+     "sources": [
+      1,
       5
      ],
      "evidence": {
       "1": "Koenig also appeared in all six feature films (1979-91) spun off from the series, plus Star Trek: Generations (1994), a “passing of the torch” story",
-      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
-      "3": "He remained a series regular through its third and final season, and would regularly reprise the role of Chekov, featuring in 1979’s Star Trek: The",
-      "4": "The popular American actor continued in that role for Paramount's first seven \"Star Trek\" films, which began in 1979's \"Star Trek: The Motion Picture\" and",
       "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994)."
      }
     },
     {
-     "claim": "Walter Koenig played Alfred Bester in Babylon 5.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
-      "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
-      "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote a screenplay for Star Trek The Animated Series titled The Infinite Vulcan.",
+     "claim": "He wrote a first season episode of Star Trek: The Animated Series titled The Infinite Vulcan.",
      "sources": [
       2,
-      4
+      3
      ],
      "evidence": {
       "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
+      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
      }
     },
     {
-     "claim": "Walter Koenig married actor Judy Levitt in 1965 and she died in 2022.",
+     "claim": "He published his autobiography, Warped Factors: A Neurotic’s Guide to the Universe, in 1998.",
      "sources": [
       1,
-      2
+      3
      ],
      "evidence": {
-      "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
-      "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965. And they"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 21,
-   "topic": "Walter Koenig facts",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away at the age of 90 on Sunday, October 25, 2026, with news and tributes emerging over the following days.",
-   "hooks": [
-    "Did you know Star Trek icon Walter Koenig originally thought the show looked totally phony?",
-    "Walter Koenig got his famous Star Trek role because he looked like a member of the Monkees.",
-    "Before playing Pavel Chekov, Walter Koenig overcame a childhood stutter through school acting."
-   ],
-   "sources": [
-    [
-     "Walter Koenig obituary",
-     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
-     "2026-10-28"
-    ],
-    [
-     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "Space.com",
-     "2026-10-27"
-    ],
-    [
-     "Walter Koenig facts",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Walter Koenig appeared in all six feature films spun off from the original series plus Star Trek Generations in 1994.",
-     "sources": [
-      1,
-      2,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "Koenig also appeared in all six feature films (1979-91) spun off from the series, plus Star Trek: Generations (1994), a “passing of the torch” story",
-      "2": "later reprising his role in the six original cast movies from 1979 through to 1991.",
-      "3": "He remained a series regular through its third and final season, and would regularly reprise the role of Chekov, featuring in 1979’s Star Trek: The",
-      "5": "to prominence for his supporting role as ensign pavel chekov in star trek 1967 1969 he went on to reprise this role in all six original cast star trek films and in star trek generations 1994 he also acted in"
+      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
+      "3": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
      }
     },
     {
-     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg)",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
-     }
-    },
-    {
-     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside fellow students such as James Caan.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
-      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
-      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote a script for Star Trek: The Animated Series titled The Infinite Vulcan in 1973.",
-     "sources": [
-      1,
-      2,
-      4
-     ],
-     "evidence": {
-      "1": "and wrote for a handful of series, including Land of the Lost (1974) and The Powers of Matthew Star (1982), as well as an episode",
-      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote his autobiography titled Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998)",
-      "4": "His bestselling 1998 autobiography,"
-     }
-    },
-    {
-     "claim": "Walter Koenig married actor Judy Levitt in 1965, and she passed away in 2022.",
+     "claim": "He married actor Judy Levitt in 1965, and she passed away in 2022.",
      "sources": [
       1,
       2
@@ -1648,20 +880,18 @@
      }
     },
     {
-     "claim": "Walter Koenig is survived by his daughter, Danielle Koenig.",
+     "claim": "George Takei served as best man at Koenig's wedding.",
      "sources": [
-      1,
-      2,
-      4
+      4,
+      5
      ],
      "evidence": {
-      "1": "Koenig is survived by their daughter, Danielle.",
-      "2": "Koenig is survived by their daughter, the actress and screenwriter Danielle Koenig, who worked on the animated series Star vs. the Forces of Evil.",
-      "4": "Koenig is survived by his sole daughter, screenwriter and actress Danielle Koenig."
+      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
+      "5": "Koenig served as best man at Takei's wedding in 2008."
      }
     },
     {
-     "claim": "Walter Koenig was cast as Pavel Chekov partly because he resembled Monkees singer Davy Jones.",
+     "claim": "Koenig was cast as Chekov primarily because creator Gene Roddenberry thought he resembled singer Davy Jones.",
      "sources": [
       1,
       5
@@ -1669,39 +899,6 @@
      "evidence": {
       "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
       "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    },
-    {
-     "claim": "Walter Koenig based Chekov's accent on his father, who inverted Vs and Ws.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "“My dad inverted the Vs and the Ws,” he explained.",
-      "4": "was often utilized as comic relief his thick accent where he pronounced his vs as ws was derived from hearing his russian jewish father s particular manner of speech koenig s undeniable contributions to the legacy of"
-     }
-    },
-    {
-     "claim": "Walter Koenig played United States Marine Corps Sergeant John Delwyn in a 1964 episode of The Lieutenant.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "He also appeared in a 1964 episode of The Lieutenant, one of Roddenberry’s early creations, playing a US Marine Corps sergeant recommended for officer candidates",
-      "5": "In Gene Roddenberry's first television production, the 1963–64 NBC series The Lieutenant, Koenig played a significant role as United States Marine Corps Sgt. John Delwyn,"
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed a New York City juvenile gang leader in a 1964 adaptation for The Alfred Hitchcock Hour.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "a teenage street-gang leader in The Alfred Hitchcock Hour (in 1964)",
-      "5": "In 1964, Koenig portrayed a New York City juvenile gang leader in an adaptation of Harlan Ellison's Memos from Purgatory for The Alfred Hitchcock Hour."
      }
     }
    ],
@@ -1712,14 +909,14 @@
   },
   {
    "n": 22,
-   "topic": "Walter Koenig star",
+   "topic": "Walter Koenig facts",
    "signal": "watchlist: Walter Koenig (surging)",
    "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
+   "what_is_new": "Walter Koenig passed away aged 90 on October 25, 2026.",
    "hooks": [
-    "Star Trek legend Walter Koenig passed away at the age of 90.",
-    "Find out how Walter Koenig landed his iconic role as Pavel Chekov.",
-    "From Star Trek to Babylon 5, discover the incredible sci-fi legacy of Walter Koenig."
+    "Did you know Star Trek icon Walter Koenig originally thought the show looked phony?",
+    "How did Walter Koenig create Chekov's famous Russian accent?",
+    "Discover the surprising facts about Star Trek legend Walter Koenig."
    ],
    "sources": [
     [
@@ -1735,9 +932,166 @@
      "2026-10-28"
     ],
     [
-     "William Shatner Pays Tribute to Walter Koenig: ‘A Man Who Genuinely Loved the Star Trek Community’",
-     "https://www.rollingstone.com/tv-movies/tv-movie-news/william-shatner-tribute-walter-koenig-1235649117/",
-     "Rolling Stone",
+     "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
+     "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "Space.com",
+     "2026-10-27"
+    ],
+    [
+     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
+     "PC Gamer",
+     "2026-10-26"
+    ],
+    [
+     "Walter Koenig facts",
+     "https://en.wikipedia.org/wiki/Walter_Koenig",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Walter Koenig passed away at the age of 90 on Sunday, October 25, 2026.",
+     "sources": [
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
+      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+     }
+    },
+    {
+     "claim": "Walter Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
+     "sources": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
+      "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
+      "3": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
+     }
+    },
+    {
+     "claim": "Walter Koenig joined Star Trek in its second season in 1967 as Ensign Pavel Chekov.",
+     "sources": [
+      1,
+      2,
+      4,
+      5
+     ],
+     "evidence": {
+      "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
+      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
+      "4": "Koenig's big break in show biz came in 1967, when he was cast as Chekhov in the second season of the original Star Trek series.",
+      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
+     }
+    },
+    {
+     "claim": "Gene Roddenberry cast Walter Koenig as Chekov to appeal to young viewers because he looked like Davy Jones of the Monkees.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "This followed a search by Star Trek’s creator, Gene Roddenberry, for a character to appeal to young viewers, someone with the boyish, pop-star good looks",
+      "5": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+     }
+    },
+    {
+     "claim": "Walter Koenig based Chekov's Russian accent on the way his father pronounced English words by inverting Vs and Ws.",
+     "sources": [
+      1,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "Koenig said the accent was inspired by his father. “My dad inverted the Vs and the Ws,” he explained.",
+      "3": "His thick accent, where he pronounced his “Vs” as “Ws,” was derived from hearing his Russian-Jewish father's particular manner of speech.",
+      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound.[6]"
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote a first season episode of Star Trek: The Animated Series titled The Infinite Vulcan in 1973.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
+      "4": "he wrote the script for an animated series episode called The Infinite Vulcan, making him the first member of the cast to write an episode"
+     }
+    },
+    {
+     "claim": "Walter Koenig published his autobiography Warped Factors: A Neurotic’s Guide to the Universe in 1998.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
+      "3": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
+     }
+    },
+    {
+     "claim": "George Takei served as best man at Walter Koenig's co-star wedding in 2008.",
+     "sources": [
+      4,
+      5
+     ],
+     "evidence": {
+      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
+      "5": "Koenig served as best man at Takei's wedding in 2008.[15]"
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Walter_Koenig_Star_Trek.JPG"
+   ]
+  },
+  {
+   "n": 23,
+   "topic": "Walter Koenig star",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Walter Koenig passed away on October 25, 2026, at the age of 90.",
+   "hooks": [
+    "Did you know Star Trek icon Walter Koenig was initially unimpressed by the show?",
+    "Walter Koenig went from faking a Russian accent to sci-fi stardom.",
+    "How did Walter Koenig inspire a generation of sci-fi fans?"
+   ],
+   "sources": [
+    [
+     "Walter Koenig obituary",
+     "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
+     "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
+     "BBC",
      "2026-10-28"
     ],
     [
@@ -1745,6 +1099,12 @@
      "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "Space.com",
      "2026-10-27"
+    ],
+    [
+     "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
+     "PC Gamer",
+     "2026-10-26"
     ],
     [
      "Walter Koenig star",
@@ -1755,7 +1115,7 @@
    ],
    "verified": [
     {
-     "claim": "The American actor Walter Koenig died at the age of 90.",
+     "claim": "Walter Koenig passed away at the age of 90.",
      "sources": [
       1,
       2,
@@ -1766,13 +1126,28 @@
      "evidence": {
       "1": "The American actor Walter Koenig, who has died aged 90, was unimpressed when, as a TV viewer, he caught a glimpse of Star Trek on",
       "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series. Koenig died on Sunday",
-      "4": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "3": "The \"Star Trek\" community lost one of its most beloved icons on Sunday, October 25, with the sad passing of Walter Koenig at the age",
+      "4": "Variety says Koenig died of natural causes. He was 90.",
       "5": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
      }
     },
     {
-     "claim": "Walter Koenig played the navigator Pavel Chekov in the original Star Trek series.",
+     "claim": "Walter Koenig was born in Chicago, Illinois on September 14, 1936.",
+     "sources": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg), who worked as a flautist, nightclub",
+      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
+      "3": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
+      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
+     }
+    },
+    {
+     "claim": "Walter Koenig played Ensign Pavel Chekov in Star Trek starting in the second season.",
      "sources": [
       1,
       2,
@@ -1782,14 +1157,53 @@
      ],
      "evidence": {
       "1": "A year later, he was cast in the programme as Ensign Pavel Chekov, the baby-faced navigator of Russian parentage on the bridge of the starship",
-      "2": "Walter Koenig, who played the spirited Russian crewman Pavel Chekov in the original Star Trek TV series, has died aged 90.",
-      "3": "William Shatner paid tribute to Walter Koenig, the actor best known for playing Pavel Chekov on the original Star Trek series.",
-      "4": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
-      "5": "He began acting professionally in the mid-1960s and quickly rose to prominence for his supporting role as Ensign Pavel Chekov in Star Trek (1967–1969)."
+      "2": "The US actor was a mainstay on the show as the eager and earnest navigator of the Starship Enterprise, from season two in 1967 until",
+      "3": "Koenig was best known as the U.S.S. Enterprise's Russian navigator Pavel Andreievich Chekov for two seasons on \"Star Trek: The Original Series.\"",
+      "4": "Koenig's big break in show biz came in 1967, when he was cast as Chekhov in the second season of the original Star Trek series.",
+      "5": "Koenig began playing Ensign Pavel Chekov, navigator on the USS Enterprise, in the original Star Trek television series in the second season, and continued in"
      }
     },
     {
-     "claim": "Walter Koenig appeared in all six feature films spun off from the original Star Trek series, plus Star Trek Generations.",
+     "claim": "Gene Roddenberry asked Walter Koenig to ham up a Russian accent for comic relief.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "Roddenberry suggested he ham up the accent to add a touch of comic relief, which meant Chekov would be seen looking at his monitor and",
+      "5": "Roddenberry asked him to \"ham up\" a Russian accent to add a note of comic relief to the series."
+     }
+    },
+    {
+     "claim": "Walter Koenig stated that his character's accent was inspired by his father.",
+     "sources": [
+      1,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "Koenig said the accent was inspired by his father. “My dad inverted the Vs and the Ws,” he explained.",
+      "3": "was often utilized as comic relief his thick accent where he pronounced his vs as ws was derived from hearing his russian jewish father s particular manner of speech koenig s undeniable contributions to the legacy of",
+      "5": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound.[6]"
+     }
+    },
+    {
+     "claim": "Walter Koenig wrote an episode of Star Trek: The Animated Series titled The Infinite Vulcan.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "He also popped up in other TV programmes in character roles and wrote for a handful of series, including Land of the Lost (1974) and",
+      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
+      "3": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
+      "4": "ironically, while the character of Chekhov was not included in the Star Trek animated series that ran for two seasons after the live-action show was"
+     }
+    },
+    {
+     "claim": "Walter Koenig played Alfred Bester in the sci-fi series Babylon 5.",
      "sources": [
       1,
       2,
@@ -1798,82 +1212,26 @@
       5
      ],
      "evidence": {
-      "1": "Koenig also appeared in all six feature films (1979-91) spun off from the series, plus Star Trek: Generations (1994), a “passing of the torch” story",
-      "2": "later reprising his role in the six original cast movies from 1979 through to 1991.",
-      "3": "He remained a series regular through its third and final season, and would regularly reprise the role of Chekov, featuring in 1979’s Star Trek: The",
-      "4": "The popular American actor continued in that role for Paramount's first seven \"Star Trek\" films, which began in 1979's \"Star Trek: The Motion Picture\" and",
-      "5": "He went on to reprise this role in all six original-cast Star Trek films and in Star Trek: Generations (1994)."
-     }
-    },
-    {
-     "claim": "Walter Koenig portrayed the telepath Alfred Bester in the sci-fi series Babylon 5.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
       "1": "While he continued to land guest roles on TV, Koenig reached a sci-fi audience again in all five series of the 23rd-century “space opera” Babylon",
       "2": "In the mid-late 1990s, Koenig portrayed a very different character, the ruthless Psi Corps telepath Alfred Bester, in another sci-fi space series, Babylon 5.",
-      "4": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "3": "Following his work in the \"Star Trek\" movies, Koenig scored an ongoing TV role on creator J. Michael Straczynski's \"Babylon 5\" starting in 1993, where",
+      "4": "But Koenig also played very much against type in at least one memorable role: Alfred Bester, a powerful Psi Corps officer in Babylon 5.",
       "5": "He also acted in several other series and films including Goodbye, Raggedy Ann (1971), The Questor Tapes (1974), and Babylon 5 (1993)."
      }
     },
     {
-     "claim": "Walter Koenig was born in Chicago, Illinois.",
+     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre alongside James Caan and Christopher Lloyd.",
      "sources": [
       1,
       2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "Born in Chicago, Illinois, Walter was the son of Sarah (nee Strauss) and Irving Koenig (born Isadore Naum Koenigsberg), who worked as a flautist, nightclub",
-      "2": "Born in Chicago and raised in Manhattan, Koenig was the son of Soviet Jewish immigrants whose family had lived in Lithuania.",
-      "4": "A native of Chicago, Illinois, Marvin Walter Koenig was born on Sept. 14, 1936, to Lithuanian immigrant parents and spent his formative years in New",
-      "5": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss).[1][2]"
-     }
-    },
-    {
-     "claim": "Walter Koenig studied at the Neighborhood Playhouse School of the Theatre in New York alongside James Caan and Christopher Lloyd.",
-     "sources": [
-      1,
-      2,
-      4,
+      3,
       5
      ],
      "evidence": {
       "1": "After graduating in psychology from UCLA (the University of California Los Angeles), where a professor encouraged him to act, from 1958 he trained at the",
       "2": "He studied at the famous Neighborhood Playhouse School of the Theatre in New York, alongside the likes of James Caan, Christopher Lloyd and Dabney Coleman.",
-      "4": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
+      "3": "After a short college stint at UCLA in California, Koenig was accepted into the prestigious Neighborhood Playhouse School of the Theatre in New York in",
       "5": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an autobiography titled Warped Factors: A Neurotic’s Guide to the Universe.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
-      "4": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
-     }
-    },
-    {
-     "claim": "Walter Koenig wrote an episode of Star Star Trek: The Animated Series titled The Infinite Vulcan.",
-     "sources": [
-      1,
-      2,
-      4,
-      5
-     ],
-     "evidence": {
-      "1": "and wrote for a handful of series, including Land of the Lost (1974) and The Powers of Matthew Star (1982), as well as an episode",
-      "2": "He also wrote an episode of the original show's animated series spin-off, in 1973, titled The Infinite Vulcan.",
-      "4": "Although Koenig's Ensign Chekov character was not resurrected for the 1973-74 Saturday morning cartoon spinoff, \"Star Trek: The Animated Series,\" due to budget issues, he",
-      "5": "Star Trek: The Animated Series | —N/a | Writer; Episode:"
      }
     },
     {
@@ -1886,6 +1244,28 @@
       "1": "In 1965, Koenig married the actor Judy Levitt, who appeared in three Star Trek films; she died in 2022.",
       "2": "He married Judy Levitt, who appeared with him in three Star Trek movies and Michael Straczynski's futuristic space opera Babylon 5, in 1965."
      }
+    },
+    {
+     "claim": "Walter Koenig published his autobiography Warped Factors A Neurotic s Guide to the Universe in 1998.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Koenig wrote an autobiography, Warped Factors: A Neurotic’s Guide to the Universe (1998), and a sci-fi novel, Buck Alice and the Actor-Robot (1988), a post-apocalyptic",
+      "3": "His bestselling 1998 autobiography, \"Warped Factors: A Neurotic’s Guide to the Universe,\" was later followed by a detailed memoir titled \"Beaming Up and Getting Off,\""
+     }
+    },
+    {
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
+     "sources": [
+      4,
+      5
+     ],
+     "evidence": {
+      "4": "When Brad and I married in 2008, Walter stood beside us as our best man.",
+      "5": "Koenig served as best man at Takei's wedding in 2008.[15]"
+     }
     }
    ],
    "one_source": [],
@@ -1894,14 +1274,15 @@
    ]
   },
   {
-   "n": 39,
+   "n": 37,
    "topic": "Ballon d'Or 2026 analysis",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "category": "Sport",
-   "what_is_new": "The 2026 Ballon d'Or ceremony took place on 26 October 2026, awarding Harry Kane and Alexia Putellas the top prizes.",
+   "what_is_new": "The 2026 Ballon d'Or ceremony took place two days ago on 26 October 2026 at the London Palladium.",
    "hooks": [
-    "Harry Kane wins the 2026 Men's Ballon d'Or!",
-    "Alexia Putellas claims her third Women's Ballon d'Or!"
+    "Harry Kane won the Men's Ballon d'Or!",
+    "Alexia Putellas claimed her third Ballon d'Or!",
+    "London hosted the historic 2026 Ballon d'Or ceremony!"
    ],
    "sources": [
     [
@@ -1919,7 +1300,7 @@
       1
      ],
      "evidence": {
-      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+      "1": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
      }
     },
     {
@@ -1928,7 +1309,7 @@
       1
      ],
      "evidence": {
-      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
+      "1": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     },
     {
@@ -1959,21 +1340,12 @@
      }
     },
     {
-     "claim": "Harry Kane finished ahead of Kylian Mbappé and Lamine Yamal in the voting.",
+     "claim": "The 2026 Ballon d'Or ceremony was held on 26 October 2026 at the London Palladium in London.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Alexia Putellas finished ahead of Ewa Pajor and Khadija Shaw in the voting.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "She finished ahead of Ewa Pajor and Khadija Shaw in the voting."
+      "1": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
     },
     {
@@ -1986,21 +1358,21 @@
      }
     },
     {
-     "claim": "Harry Kane became the fifth Englishman to win the award.",
+     "claim": "Harry Kane is the fifth Englishman to win the award.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
+      "1": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
      }
     },
     {
-     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the award.",
+     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the Women's Ballon d'Or.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025."
+      "1": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025.[7]"
      }
     },
     {
@@ -2013,154 +1385,73 @@
      }
     },
     {
-     "claim": "The award was given based on the results of the season for the fifth time in history.",
+     "claim": "The award was based on results from the period of 3 August 2025 to 19 July 2026.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "For the fifth time in the history of the award, it was given based on the results of the season instead of the calendar year."
+      "1": "This is the period from 3 August 2025 to 19 July 2026.[2]"
      }
     },
     {
-     "claim": "This was the first time the ceremony was organised outside France or Switzerland.",
+     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "This also marked the first time the ceremony was organised outside France or Switzerland."
+      "1": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
      }
     },
     {
-     "claim": "Harry Kane helped Bayern win the Bundesliga and reach the semi-finals of the UEFA Champions League.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Kane helped Bayern win the Bundesliga and reach the semi-finals of the UEFA Champions League, while also captaining England to third place at the 2026"
-     }
-    },
-    {
-     "claim": "Harry Kane captained England to third place at the 2026 FIFA World Cup.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Kane helped Bayern win the Bundesliga and reach the semi-finals of the UEFA Champions League, while also captaining England to third place at the 2026"
-     }
-    },
-    {
-     "claim": "Harry Kane is the fourth Bayern Munich player to achieve this honour.",
+     "claim": "Harry Kane is the 4th Bayern Munich player to win the Ballon d'Or.",
      "sources": [
       1
      ],
      "evidence": {
       "1": "Kane is the 4th Bayern Munich player to achieve this honour."
      }
-    }
-   ],
-   "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
-   ]
-  },
-  {
-   "n": 43,
-   "topic": "Walter Koenig rankings",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
-   "hooks": [
-    "Did you know Walter Koenig was cast because he looked like Davy Jones?",
-    "Walter Koenig was one of only two actors to audition for Chekov.",
-    "Walter Koenig served as best man at George Takei's wedding."
-   ],
-   "sources": [
-    [
-     "Walter Koenig rankings",
-     "https://en.wikipedia.org/wiki/Walter_Koenig",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
+    },
     {
-     "claim": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936.",
+     "claim": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Walter Marvin Koenig was born in Chicago, Illinois, on September 14, 1936, the son of businessman Isadore Koenig and his wife Sarah (née Strauss)."
+      "1": "Ten goalkeepers were nominated for the 2026 Men's Yashin Trophy."
      }
     },
     {
-     "claim": "Walter Marvin Koenig lived from September 14, 1936 to October 25, 2026.",
+     "claim": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+      "1": "Five coaches were nominated for the 2026 Men's Johan Cruyff Trophy.[10]"
      }
     },
     {
-     "claim": "Koenig attended Grinnell College in Grinnell, Iowa, with a pre-med major before transferring to UCLA to receive a Bachelor of Arts in psychology.",
+     "claim": "Kylian Mbappé and Lamine Yamal finished second and third respectively in the men's voting.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Koenig attended Grinnell College in Grinnell, Iowa, with a pre-med major. He transferred to UCLA and received a Bachelor of Arts in psychology."
-     }
-    },
-    {
-     "claim": "Koenig attended the Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney Coleman, Christopher Lloyd, and James Caan.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "After a professor encouraged Koenig to become an actor, he attended Neighborhood Playhouse School of the Theatre in New York City with fellow students Dabney"
-     }
-    },
-    {
-     "claim": "Koenig was one of only two actors to audition and was cast as Chekov almost immediately because he resembled British actor and singer Davy Jones of the Monkees.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "One of only two actors to audition, he was cast as Chekov almost immediately, primarily because he resembled British actor and singer Davy Jones of"
-     }
-    },
-    {
-     "claim": "Costume designers fashioned a Davy Jones style moptop hairpiece for Koenig because his hair was already receding at age 30.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "As the 30-year-old's hair was already receding, costume designers fashioned a Davy Jones-style \"moptop\" hairpiece for him."
-     }
-    },
-    {
-     "claim": "Koenig served as best man at George Takei's wedding in 2008.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Koenig served as best man at Takei's wedding in 2008."
+      "1": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
      }
     }
    ],
    "images": [
-    "commons:File:Walter_Koenig_Star_Trek.JPG"
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
    ]
   },
   {
-   "n": 44,
+   "n": 39,
    "topic": "Walter Koenig by the numbers",
    "signal": "watchlist: Walter Koenig (surging)",
    "category": "Entertainment",
-   "what_is_new": "Walter Koenig passed away on October 25, 2026.",
+   "what_is_new": "Walter Koenig died on October 25, 2026, three days before the current date.",
    "hooks": [
-    "Discover surprising facts about Walter Koenig!",
-    "When was Walter Koenig born?",
-    "Learn about Walter Koenig's life and career."
+    "Did you know Walter Koenig was born in Chicago on September 14, 1936?",
+    "Walter Koenig served as best man at George Takei's 2008 wedding!"
    ],
    "sources": [
     [
@@ -2182,12 +1473,12 @@
      }
     },
     {
-     "claim": "Walter Marvin Koenig lived from September 14, 1936 to October 25, 2026.",
+     "claim": "Walter Koenig served as best man at George Takei's wedding in 2008.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Walter Marvin Koenig (//; September 14, 1936 – October 25, 2026) was an American actor and screenwriter."
+      "1": "Koenig served as best man at Takei's wedding in 2008.[15]"
      }
     },
     {
@@ -2218,7 +1509,7 @@
      }
     },
     {
-     "claim": "Koenig was cast as Chekov because he resembled Davy Jones of the Monkees.",
+     "claim": "Koenig was cast as Chekov primarily because he resembled Davy Jones of the Monkees.",
      "sources": [
       1
      ],
@@ -2263,34 +1554,16 @@
      }
     },
     {
-     "claim": "Koenig was unfamiliar with science fiction before being cast on Star Trek.",
+     "claim": "The studio falsely attributed Chekov's inclusion to an article in Pravda.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Koenig was unfamiliar with science fiction before being cast on Star Trek."
+      "1": "The studio's publicity department, however, falsely attributed Chekov's inclusion to an article in Pravda that complained about the lack of Russians in Star Trek."
      }
     },
     {
-     "claim": "Costume designers fashioned a Davy Jones-style moptop hairpiece for Koenig because his hair was receding.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "As the 30-year-old's hair was already receding, costume designers fashioned a Davy Jones-style \"moptop\" hairpiece for him."
-     }
-    },
-    {
-     "claim": "Koenig's Russian accent was inspired by his father's difficulty with the v sound.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Koenig said the accent was inspired by his father, who had the same difficulty with the \"v\" sound."
-     }
-    },
-    {
-     "claim": "Koenig was not included in the animated Star Trek series due to budgetary reasons.",
+     "claim": "Koenig was not included in the animated Star Trek series for budgetary reasons.",
      "sources": [
       1
      ],
@@ -2305,6 +1578,24 @@
      ],
      "evidence": {
       "1": "2015 | Star Trek: Renegades | Admiral Chekov | Fan film"
+     }
+    },
+    {
+     "claim": "Koenig played Admiral Harlan Sobol in the 2016 fan film Star Trek: Captain Pike.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "2016 | Star Trek: Captain Pike | Admiral Harlan Sobol | Fan film"
+     }
+    },
+    {
+     "claim": "Koenig's father was a communist investigated by the FBI during the McCarthy era.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Koenig's father was a communist who was investigated by the FBI during the McCarthy era."
      }
     }
    ],

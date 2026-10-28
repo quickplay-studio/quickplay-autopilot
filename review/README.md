@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 15:56): 19 of 1,000 subscribers · 12,577 of 10 million Shorts views in 90 days · 4,081 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 16:16): 19 of 1,000 subscribers · 12,538 of 10 million Shorts views in 90 days · 4,037 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Wed 28 Oct 14:41 (UK): 13 scheduled, 137 public, 24 uploads in the last 24 hours.
+YouTube checked Wed 28 Oct 16:55 (UK): 13 scheduled, 137 public, 25 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 14:54).
 
@@ -28,10 +28,10 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 - daniel (British male, brisk): 1.63 x typical, 43% stayed past the first seconds, 5 Shorts
 - michael (American male, friendly): 1.30 x typical, 30% stayed past the first seconds, 9 Shorts
 - lily (British female, bright): 0.96 x typical, 22% stayed past the first seconds, 5 Shorts
-- lewis (British male, deeper and calm): 0.88 x typical, 24% stayed past the first seconds, 4 Shorts
+- george_quick (British male, clear and quicker): 0.94 x typical, 27% stayed past the first seconds, 3 Shorts
+- lewis (British male, deeper and calm): 0.89 x typical, 24% stayed past the first seconds, 4 Shorts
 - isabella (British female, warm): 1.35 x typical, 32% stayed past the first seconds, 2 Shorts
-- george_quick (British male, clear and quicker): 1.01 x typical, 28% stayed past the first seconds, 2 Shorts
-- heart (American female, expressive): 0.48 x typical, 15% stayed past the first seconds, 1 Short
+- heart (American female, expressive): 0.81 x typical, 25% stayed past the first seconds, 2 Shorts
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
 - lab-voice-1028 (British male, 3.15 words a second): 0 Shorts measured so far
 
@@ -140,6 +140,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Thu 29 Oct 18:30 · Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
+scheduled · 28 s · music: across-seas-and-lands · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
+
+![QD-266](QD-266.jpg)
+
 ### Thu 29 Oct 8:00 · ballon d'or 2026 explained: the historic numbers
 scheduled · 30 s · music: risen · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
 
@@ -149,6 +154,11 @@ scheduled · 30 s · music: risen · [script](../boards/done/QD-262.json) · [Yo
 scheduled · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
 
 ![QD-254](QD-254.jpg)
+
+### Thu 29 Oct 3:30 · walter koenig: passed away aged 90 🖖
+scheduled · 30 s · music: f16 · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
+
+![QD-264](QD-264.jpg)
 
 ### Thu 29 Oct 2:00 · Walter Koenig: the co-star bond you never knew
 scheduled · 35 s · music: cued-for-liftoff · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
@@ -194,32 +204,32 @@ scheduled · 44 s · music: once-upon-a-time · [script](../boards/done/QD-247.j
 ![QD-247](QD-247.jpg)
 
 ### Wed 28 Oct 16:00 · Game Facts #6: gta 6 install size officially revealed at 210 GB
-private · 36 s · music: ego-chall · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
+public · 1 views · 36 s · music: ego-chall · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
 
 ![QD-227](QD-227.jpg)
 
 ### Wed 28 Oct 15:30 · Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀
-private · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
+public · 1 views · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
 
 ![QD-248](QD-248.jpg)
 
 ### Wed 28 Oct 13:30 · Science Explained #2: How gravity works: science explained 🌌
-public · 42 s · music: event-horizon · [script](../boards/done/QD-225.json) · [YouTube](https://youtube.com/shorts/JX9L5J_0LFY)
+public · 16 views · 42 s · music: event-horizon · [script](../boards/done/QD-225.json) · [YouTube](https://youtube.com/shorts/JX9L5J_0LFY)
 
 ![QD-225](QD-225.jpg)
 
 ### Wed 28 Oct 12:30 · Space Facts #1: The Signal on Planet 9 | a short story 🚀
-public · 4 views · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216.json) · [YouTube](https://youtube.com/shorts/QKykXue3OuY)
+public · 8 views · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216.json) · [YouTube](https://youtube.com/shorts/QKykXue3OuY)
 
 ![QD-216](QD-216.jpg)
 
 ### Wed 28 Oct 10:00 · Harry Kane Ballon d'Or: chaotic London ceremony ⚽
-public · 122 views · 31 s · music: once-upon-a-time · [script](../boards/done/QD-245.json) · [YouTube](https://youtube.com/shorts/rjO3XWFiBk0)
+public · 147 views · 31 s · music: once-upon-a-time · [script](../boards/done/QD-245.json) · [YouTube](https://youtube.com/shorts/rjO3XWFiBk0)
 
 ![QD-245](QD-245.jpg)
 
 ### Wed 28 Oct 8:00 · harry potter cast: Harry Gilby
-public · 75 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
+public · 132 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
 
 ![QD-226](QD-226.jpg)
 
@@ -234,12 +244,12 @@ public · 9 views · 41 s · music: impossible-sacrifice · [script](../boards/d
 ![QD-210](QD-210.jpg)
 
 ### Wed 28 Oct 2:30 · Star Stories #2: Matthew Perry Netflix documentary 📺
-public · 51 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
+public · 62 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
 
 ![QD-228](QD-228.jpg)
 
 ### Wed 28 Oct 1:30 · Film Explained #1: How Lord of the Rings Made Hobbits Small
-public · 960 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
+public · 987 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
 
 ![QD-219](QD-219.jpg)
 
@@ -264,12 +274,12 @@ public · 24 views · 40 s · music: house-on-the-hill · [script](../boards/don
 ![QD-207](QD-207.jpg)
 
 ### Tue 27 Oct 13:30 · GTA 6 PC rumored 2027 as consoles drive leave spike
-public · 24 views · 29 s · music: death-duel · [script](../boards/done/QD-211.json) · [YouTube](https://youtube.com/shorts/kaI4B_oT77A)
+public · 33 views · 29 s · music: death-duel · [script](../boards/done/QD-211.json) · [YouTube](https://youtube.com/shorts/kaI4B_oT77A)
 
 ![QD-211](QD-211.jpg)
 
 ### Tue 27 Oct 13:00 · GPT-6.1 Terra: OpenAI upgrades ChatGPT
-public · 66 views · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
+public · 67 views · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
 
 ![QD-203](QD-203.jpg)
 
@@ -279,12 +289,12 @@ public · 97 views · 28 s · music: once-upon-a-time · on Instagram · [script
 ![QD-208](QD-208.jpg)
 
 ### Tue 27 Oct 12:00 · GTA 6 launch trailer: 24 days to go 🎮
-public · 40 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
+public · 41 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
 
 ![QD-200](QD-200.jpg)
 
 ### Tue 27 Oct 11:00 · Song Secrets #3: Beyonce solo debut hits number one in Billboard
-public · 416 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
+public · 421 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
 
 ![QD-202](QD-202.jpg)
 
@@ -294,12 +304,12 @@ public · 14 views · 27 s · music: in-battery · [script](../boards/done/QD-20
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-public · 399 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+public · 418 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 
 ### Tue 27 Oct 8:00 · Kylian Mbappé: the 87th minute moment that changed everything ⚽
-public · 58 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
+public · 59 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
 
 ![QD-189](QD-189.jpg)
 
@@ -327,13 +337,3 @@ public · 11 views · 37 s · music: majestic-12 · on Instagram · [script](../
 public · 9 views · 43 s · music: circuit-rush · [script](../boards/done/QD-187.json) · [YouTube](https://youtube.com/shorts/nG0i9IOA_wI)
 
 ![QD-187](QD-187.jpg)
-
-### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
-public · 650 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
-
-![QD-180](QD-180.jpg)
-
-### Mon 26 Oct 14:00 · Ralph Fiennes joins Hunger Games cast (Part 2)
-public · 131 views · 30 s · music: stake-out · [script](../boards/done/QD-179.json) · [YouTube](https://youtube.com/shorts/o9QuOBxSUIo)
-
-![QD-179](QD-179.jpg)

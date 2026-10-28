@@ -1,0 +1,185 @@
+{
+ "id": "QD-263",
+ "board": "boards/queue/QD-263.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T02:00:00Z",
+ "rendered": "2026-10-28T11:48:10.505380+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"Walter Koenig\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Walter Koenig: the co-star bond you never knew",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p",
+  "pixabay:232169 skipped: nearly black (brightness 0.02)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 1.0,
+  "pic_rescued": 3,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "cued-for-liftoff",
+ "social_music": "uplifting-friend-605770",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george_quick",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 35.4,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 14.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 874.3,
+   "contrast": 0.19,
+   "face_area": 0.0488,
+   "text_area": 0.1829,
+   "caption_contrast": 16.35,
+   "by_frame": {
+    "sharpness": [
+     525.5,
+     875.2,
+     1050.9,
+     1045.7
+    ],
+    "contrast": [
+     0.163,
+     0.194,
+     0.202,
+     0.202
+    ],
+    "face_area": [
+     0.1951,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1299,
+     0.1856,
+     0.208,
+     0.208
+    ],
+    "caption_contrast": [
+     16.27,
+     16.27,
+     16.42,
+     16.44
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.76,
+   "title",
+   0
+  ],
+  [
+   3.76,
+   8.66,
+   "none",
+   1
+  ],
+  [
+   8.66,
+   14.36,
+   "none",
+   2
+  ],
+  [
+   14.36,
+   18.21,
+   "none",
+   1
+  ],
+  [
+   18.21,
+   23.32,
+   "none",
+   1
+  ],
+  [
+   23.32,
+   26.9,
+   "none",
+   1
+  ],
+  [
+   26.9,
+   32.04,
+   "none",
+   1
+  ],
+  [
+   32.04,
+   35.39,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "26307",
+   "q": "city lights night",
+   "t0": 0.0,
+   "t1": 17.99
+  },
+  {
+   "p": "pixabay",
+   "id": "190487",
+   "q": "city lights night",
+   "t0": 17.39,
+   "t1": 35.39
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T12:14:02Z",
+ "video": "9VH6SdkGHkc",
+ "url": "https://youtube.com/shorts/9VH6SdkGHkc",
+ "publish_at": "2026-10-29T02:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T02:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-263"
+}

@@ -1,0 +1,166 @@
+{
+ "id": "QD-262",
+ "board": "boards/queue/QD-262.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T08:00:00Z",
+ "rendered": "2026-10-28T11:47:49.045480+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"2026 Ballon d'Or\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "ballon d'or 2026 explained: the historic numbers",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)",
+  "pixabay:143809 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2022/12/22/1438",
+  "pixabay:287386 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2025/06/23/2873"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 11,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "risen",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "low",
+  "voice": "michael",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 30.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 18.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 442.9,
+   "contrast": 0.19,
+   "face_area": 0.1907,
+   "text_area": 0.0357,
+   "caption_contrast": 2.46,
+   "by_frame": {
+    "sharpness": [
+     435.8,
+     473.9,
+     471.2,
+     390.7
+    ],
+    "contrast": [
+     0.191,
+     0.192,
+     0.19,
+     0.188
+    ],
+    "face_area": [
+     0.1892,
+     0.182,
+     0.1965,
+     0.1951
+    ],
+    "text_area": [
+     0.0386,
+     0.0377,
+     0.0376,
+     0.0288
+    ],
+    "caption_contrast": [
+     2.43,
+     2.43,
+     2.54,
+     2.5
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.31,
+   "none",
+   2
+  ],
+  [
+   4.31,
+   9.31,
+   "none",
+   3
+  ],
+  [
+   9.31,
+   14.13,
+   "none",
+   3
+  ],
+  [
+   14.13,
+   17.91,
+   "none",
+   3
+  ],
+  [
+   17.91,
+   22.71,
+   "none",
+   3
+  ],
+  [
+   22.71,
+   27.23,
+   "none",
+   3
+  ],
+  [
+   27.23,
+   30.37,
+   "none",
+   2
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T12:14:01Z",
+ "video": "5doZBlCyBTM",
+ "url": "https://youtube.com/shorts/5doZBlCyBTM",
+ "publish_at": "2026-10-29T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-262"
+}

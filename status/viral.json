@@ -1,8 +1,29 @@
 {
  "Ballon d'Or 2026": {
   "first_seen": "2026-10-27",
-  "last_hot": "2026-10-27",
+  "last_hot": "2026-10-28",
   "key": "ballon d or",
-  "watch": true
+  "watch": true,
+  "mega_since": "2026-10-28",
+  "mega_peak": 5
+ },
+ "Walter Koenig": {
+  "first_seen": "2026-10-28",
+  "last_hot": "2026-10-28",
+  "key": "walter koenig",
+  "watch": false,
+  "category": "Entertainment",
+  "terms": [
+   "Walter Koenig"
+  ],
+  "wiki": "Walter Koenig",
+  "momentum": 211.78,
+  "views": 276569,
+  "in": [
+   "UK news",
+   "Wikipedia top pages"
+  ],
+  "mega_since": "2026-10-28",
+  "mega_peak": 10
  }
 }

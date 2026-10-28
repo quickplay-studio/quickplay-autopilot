@@ -1,41 +1,6 @@
 {
- "date": "2026-10-27",
+ "date": "2026-10-28",
  "previous": {
-  "albums_gb": [
-   "To Fall Asleep To by Rain Sounds",
-   "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
-   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
-   "The Art of Loving by Olivia Dean",
-   "THIS MUSIC MAY CONTAIN HOPE. by RAYE"
-  ],
-  "apps_gb": [
-   "ASDA",
-   "StoryReel: Drama Shorts & TV",
-   "Lloyds Mobile Banking",
-   "ChatGPT",
-   "InPost UK",
-   "Whatnot: Shop, Sell, Connect",
-   "VibeShort: AI Short Dramas",
-   "Claude by Anthropic",
-   "Vinted: Shop & sell pre-loved"
-  ],
-  "apps_us": [
-   "Vinted: Pre-loved marketplace",
-   "Muse from Meta",
-   "TikTok Pro - Events",
-   "ChatGPT",
-   "Capital One Mobile",
-   "Kalshi: Trade Sports & Events",
-   "Claude by Anthropic",
-   "PineDrama - Short Dramas",
-   "Threads",
-   "McDonald's"
-  ],
-  "albums_us": [
-   "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy"
-  ]
- },
- "lists": {
   "albums_gb": [
    "The Art of Loving by Olivia Dean",
    "To Fall Asleep To by Rain Sounds",
@@ -67,5 +32,26 @@
    "Trump Accounts: Official App",
    "PineDrama - Short Dramas"
   ]
+ },
+ "lists": {
+  "albums_gb": [
+   "To Fall Asleep To by Rain Sounds",
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
+   "The Art of Loving by Olivia Dean",
+   "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
+   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys"
+  ],
+  "apps_gb": [
+   "ASDA",
+   "DAZN: Stream Live Sports",
+   "ChatGPT",
+   "Lloyds Mobile Banking",
+   "InPost UK",
+   "StoryReel: Drama Shorts & TV",
+   "Claude by Anthropic",
+   "Whatnot: Shop, Sell, Connect",
+   "Vinted: Shop & sell pre-loved"
+  ],
+  "albums_us": []
  }
 }

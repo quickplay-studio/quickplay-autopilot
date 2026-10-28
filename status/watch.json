@@ -1,17 +1,16 @@
 {
- "updated": "2026-10-27T19:06+00:00",
+ "updated": "2026-10-28T07:42+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
-   "days_to": -1,
+   "days_to": -2,
    "phase": "launch",
    "level": "launch",
-   "places": 4,
-   "momentum": 92.84,
-   "views_yesterday": 452394,
-   "views_usual": 4873,
+   "places": 5,
+   "momentum": 39.47,
+   "views_yesterday": 237598,
+   "views_usual": 6019,
    "views_30d": [
-    4073,
     4225,
     4097,
     3338,
@@ -40,19 +39,20 @@
     11673,
     12065,
     21279,
-    452394
+    452394,
+    237598
    ],
    "news_24h": 100,
    "news_usual": 100.0,
    "suggestions": [
     "ballon d'or 2026",
     "ballon d'or 2026 live",
-    "ballon d'or 2026 live official",
     "ballon d'or 2026 live stream",
-    "ballon d'or 2026 live ceremony",
+    "ballon d'or 2026 live official",
     "ballon d'or 2026 dazn",
-    "ballon d'or 2026 live english",
-    "ballon d'or 2026 live dazn"
+    "ballon d'or 2026 reaction",
+    "ballon d'or 2026 winner",
+    "ballon d'or 2026 live ceremony"
    ],
    "in": [
     "YouTube charts",
@@ -60,12 +60,18 @@
    ],
    "category": "Sport",
    "angles": [
-    "Ballon d'Or 2026",
     "Ballon d'Or 2026 analysis",
     "Ballon d'Or 2026 reaction",
     "Ballon d'Or 2026 history and records",
     "Ballon d'Or 2026 explained",
-    "Ballon d'Or 2026 facts"
+    "Ballon d'Or 2026 facts",
+    "Ballon d'Or 2026 star",
+    "Ballon d'Or 2026 rankings",
+    "Ballon d'Or 2026 by the numbers",
+    "Ballon d'Or 2026 best moments",
+    "Ballon d'Or 2026 what happens next",
+    "Ballon d'Or 2026 past winners",
+    "Ballon d'Or 2026"
    ],
    "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly. A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
    "terms": [
@@ -74,28 +80,37 @@
     "Ballon d'Or nominees",
     "Ballon d'Or winner"
    ],
+   "wikipedia": "2026 Ballon d'Or",
    "viral": true,
    "viral_since": "2026-10-27",
    "angle_map": {
-    "ballon d or 2026": "latest",
     "ballon d or 2026 analysis": "why",
     "ballon d or 2026 reaction": "reaction",
     "ballon d or 2026 history and records": "records",
     "ballon d or 2026 explained": "explained",
-    "ballon d or 2026 facts": "facts"
-   }
+    "ballon d or 2026 facts": "facts",
+    "ballon d or 2026 star": "people",
+    "ballon d or 2026 rankings": "rankings",
+    "ballon d or 2026 by the numbers": "numbers",
+    "ballon d or 2026 best moments": "moments",
+    "ballon d or 2026 what happens next": "next",
+    "ballon d or 2026 past winners": "past",
+    "ballon d or 2026": "latest"
+   },
+   "mega": 5,
+   "mega_since": "2026-10-28",
+   "mega_peak": 5
   },
   {
    "name": "The Celebrity Traitors",
-   "days_to": 3,
+   "days_to": 2,
    "phase": "launch",
    "level": "launch",
    "places": 2,
-   "momentum": 0.82,
-   "views_yesterday": 9491,
+   "momentum": 0.67,
+   "views_yesterday": 7709,
    "views_usual": 11544,
    "views_30d": [
-    3014,
     2754,
     2978,
     3444,
@@ -124,19 +139,20 @@
     21833,
     16637,
     11925,
-    9491
+    9491,
+    7709
    ],
-   "news_24h": 40,
-   "news_usual": 60.0,
+   "news_24h": 49,
+   "news_usual": 50.0,
    "suggestions": [
     "the celebrity traitors",
-    "the celebrity traitors uncloaked uk",
     "the celebrity traitors season 2",
     "the celebrity traitors season 1",
     "the celebrity traitors season 2 episode 8",
+    "the celebrity traitors full episode",
     "the celebrity traitors uk",
-    "the celebrity traitors episode 1",
-    "the celebrity traitors full episode"
+    "the celebrity traitors uncloaked uk",
+    "the celebrity traitors finale"
    ],
    "in": [],
    "category": "Entertainment",
@@ -152,19 +168,19 @@
     "Celebrity Traitors",
     "Celebrity Traitors final",
     "Celebrity Traitors 2026"
-   ]
+   ],
+   "wikipedia": "The Celebrity Traitors"
   },
   {
    "name": "Halloween 2026",
-   "days_to": 4,
-   "phase": "build-up",
-   "level": "surging",
+   "days_to": 3,
+   "phase": "launch",
+   "level": "launch",
    "places": 2,
-   "momentum": 1.95,
-   "views_yesterday": 25068,
-   "views_usual": 12868,
+   "momentum": 1.92,
+   "views_yesterday": 26503,
+   "views_usual": 13782,
    "views_30d": [
-    4906,
     5552,
     5669,
     6444,
@@ -193,19 +209,20 @@
     16393,
     16039,
     18880,
-    25068
+    25068,
+    26503
    ],
    "news_24h": 100,
-   "news_usual": 56.0,
+   "news_usual": 78.0,
    "suggestions": [
     "halloween 2026",
+    "halloween 2026 mix",
+    "halloween 2026 theory",
+    "halloween 2026 playlist",
+    "halloween 2026 uk",
     "halloween 2026 countdown",
     "halloween 2026 trailer",
-    "halloween 2026 house",
-    "halloween 2026 game",
-    "halloween 2026 gameplay",
-    "halloween 2026 game trailer",
-    "halloween 2026 animatronics"
+    "halloween 2026 game"
    ],
    "in": [],
    "category": "Entertainment",
@@ -222,19 +239,19 @@
     "Halloween costumes 2026",
     "Halloween costume ideas",
     "Halloween traditions"
-   ]
+   ],
+   "wikipedia": "Halloween"
   },
   {
    "name": "Grammy nominations 2027",
-   "days_to": 20,
+   "days_to": 19,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.84,
-   "views_yesterday": 873,
-   "views_usual": 1043,
+   "momentum": 0.77,
+   "views_yesterday": 762,
+   "views_usual": 992,
    "views_30d": [
-    944,
     1448,
     827,
     726,
@@ -263,12 +280,20 @@
     886,
     816,
     770,
-    873
+    873,
+    762
    ],
    "news_24h": 9,
-   "news_usual": 8.0,
+   "news_usual": 8.5,
    "suggestions": [
-    "grammy nominations 2027"
+    "grammy nominations 2027",
+    "grammy nominations 2027 predictions",
+    "grammy nominations 2027 rap",
+    "grammy nominations 2027 best new artist",
+    "grammy nominations 2027 katseye",
+    "grammy nominees 2027",
+    "grammy awards 2027",
+    "grammy awards 2027 predictions"
    ],
    "in": [],
    "category": "Music",
@@ -285,19 +310,19 @@
     "Grammy nominations",
     "Grammys 2027",
     "2027 Grammys"
-   ]
+   ],
+   "wikipedia": "69th Annual Grammy Awards"
   },
   {
    "name": "GTA 6",
-   "days_to": 23,
+   "days_to": 22,
    "phase": "build-up",
-   "level": "surging",
-   "places": 3,
-   "momentum": 0.95,
-   "views_yesterday": 17068,
+   "level": "build-up",
+   "places": 2,
+   "momentum": 1.02,
+   "views_yesterday": 18261,
    "views_usual": 17908,
    "views_30d": [
-    9837,
     9984,
     9757,
     10301,
@@ -326,23 +351,22 @@
     16054,
     15460,
     16864,
-    17068
+    17068,
+    18261
    ],
    "news_24h": 100,
-   "news_usual": 68.0,
+   "news_usual": 80.0,
    "suggestions": [
     "gta 6",
     "gta 6 trailer",
     "gta 6 gameplay",
     "gta 6 extended look",
-    "gta 6 leaks",
-    "gta 6 launch trailer reaction",
     "gta 6 launch trailer",
+    "gta 6 launch trailer reaction",
+    "gta 6 leaks",
     "gta 6 reaction"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Gaming",
    "angles": [
     "GTA 6 price",
@@ -357,19 +381,19 @@
     "GTA 6",
     "GTA VI",
     "Grand Theft Auto VI"
-   ]
+   ],
+   "wikipedia": "Grand Theft Auto VI"
   },
   {
    "name": "The Hunger Games: Sunrise on the Reaping",
-   "days_to": 24,
+   "days_to": 23,
    "phase": "steady",
-   "level": "surging",
-   "places": 3,
-   "momentum": 1.52,
-   "views_yesterday": 13501,
-   "views_usual": 8888,
+   "level": "steady",
+   "places": 0,
+   "momentum": 1.34,
+   "views_yesterday": 12200,
+   "views_usual": 9104,
    "views_30d": [
-    6855,
     6035,
     5515,
     5804,
@@ -398,17 +422,18 @@
     8427,
     10157,
     13557,
-    13501
+    13501,
+    12200
    ],
-   "news_24h": 46,
-   "news_usual": 21.0,
+   "news_24h": 31,
+   "news_usual": 30.0,
    "suggestions": [
     "the hunger games sunrise on the reaping",
-    "the hunger games sunrise on the reaping interview",
     "the hunger games sunrise on the reaping trailer",
-    "the hunger games sunrise on the reaping audiobook",
-    "the hunger games sunrise on the reaping cast",
+    "the hunger games sunrise on the reaping interview",
     "the hunger games sunrise on the reaping trailer reaction",
+    "the hunger games sunrise on the reaping cast",
+    "the hunger games sunrise on the reaping audiobook",
     "the hunger games sunrise on the reaping reaction",
     "the hunger games sunrise on the reaping official trailer"
    ],
@@ -427,19 +452,19 @@
     "Sunrise on the Reaping",
     "Hunger Games Sunrise on the Reaping",
     "Hunger Games 2026"
-   ]
+   ],
+   "wikipedia": "The Hunger Games: Sunrise on the Reaping"
   },
   {
    "name": "MAMA Awards 2026",
-   "days_to": 24,
+   "days_to": 23,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.58,
-   "views_yesterday": 603,
-   "views_usual": 1044,
+   "momentum": 0.53,
+   "views_yesterday": 526,
+   "views_usual": 1000,
    "views_30d": [
-    21,
     24,
     21,
     26,
@@ -468,10 +493,11 @@
     961,
     846,
     795,
-    603
+    603,
+    526
    ],
-   "news_24h": 7,
-   "news_usual": 6.0,
+   "news_24h": 10,
+   "news_usual": 6.5,
    "suggestions": [
     "mama awards 2026",
     "mama awards 2026 nominations",
@@ -497,19 +523,19 @@
     "MAMA Awards",
     "2026 MAMA Awards",
     "MAMA 2026"
-   ]
+   ],
+   "wikipedia": "2026 MAMA Awards"
   },
   {
    "name": "Spotify Wrapped 2026",
-   "days_to": 36,
+   "days_to": 35,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.41,
-   "views_yesterday": 331,
-   "views_usual": 235,
+   "momentum": 1.21,
+   "views_yesterday": 297,
+   "views_usual": 245,
    "views_30d": [
-    162,
     186,
     189,
     198,
@@ -538,14 +564,17 @@
     279,
     209,
     260,
-    331
+    331,
+    297
    ],
-   "news_24h": 3,
+   "news_24h": 5,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
-    "how to see spotify wrapped 2026",
-    "how to check spotify wrapped 2026"
+    "spotify wrapped 2026 how to check",
+    "spotify wrapped 2026 thailand",
+    "how to find spotify wrapped 2026",
+    "katseye spotify wrapped 2026"
    ],
    "in": [],
    "category": "Music",
@@ -561,19 +590,19 @@
     "Spotify Wrapped",
     "Spotify most streamed 2026",
     "Spotify top artists 2026"
-   ]
+   ],
+   "wikipedia": "Spotify Wrapped"
   },
   {
    "name": "The Game Awards",
-   "days_to": 44,
+   "days_to": 43,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.13,
-   "views_yesterday": 938,
-   "views_usual": 832,
+   "momentum": 1.11,
+   "views_yesterday": 928,
+   "views_usual": 840,
    "views_30d": [
-    607,
     836,
     658,
     758,
@@ -602,14 +631,15 @@
     836,
     638,
     721,
-    938
+    938,
+    928
    ],
    "news_24h": 16,
-   "news_usual": 9.0,
+   "news_usual": 9.5,
    "suggestions": [
-    "the game awards 2024",
-    "the game awards 2025",
     "the game awards",
+    "the game awards 2025",
+    "the game awards 2024",
     "the game awards 2025 reaction",
     "the game awards orchestra",
     "the game awards trailers",
@@ -627,19 +657,19 @@
    "terms": [
     "The Game Awards",
     "Game Awards 2026"
-   ]
+   ],
+   "wikipedia": "The Game Awards"
   },
   {
    "name": "Avengers: Doomsday",
-   "days_to": 52,
+   "days_to": 51,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.21,
-   "views_yesterday": 23773,
+   "momentum": 1.06,
+   "views_yesterday": 20939,
    "views_usual": 19712,
    "views_30d": [
-    38475,
     37439,
     32708,
     28251,
@@ -668,19 +698,20 @@
     20813,
     27237,
     28036,
-    23773
+    23773,
+    20939
    ],
-   "news_24h": 100,
+   "news_24h": 80,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
     "avengers doomsday",
     "avengers doomsday trailer reaction",
-    "avengers doomsday teaser",
     "avengers doomsday trailer 2",
     "avengers doomsday special look",
+    "avengers doomsday teaser",
     "avengers doomsday leaks",
-    "avengers doomsday trailer official"
+    "avengers doomsday special look reaction"
    ],
    "in": [
     "YouTube charts"
@@ -696,19 +727,19 @@
    "terms": [
     "Avengers: Doomsday",
     "Avengers Doomsday"
-   ]
+   ],
+   "wikipedia": "Avengers: Doomsday"
   },
   {
    "name": "Dune: Part Three",
-   "days_to": 52,
+   "days_to": 51,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 1.08,
-   "views_yesterday": 9018,
-   "views_usual": 8388,
+   "momentum": 2.68,
+   "views_yesterday": 23026,
+   "views_usual": 8576,
    "views_30d": [
-    7440,
     7316,
     6721,
     6752,
@@ -737,19 +768,20 @@
     8831,
     8683,
     8681,
-    9018
+    9018,
+    23026
    ],
-   "news_24h": 92,
-   "news_usual": 24.0,
+   "news_24h": 100,
+   "news_usual": 25.0,
    "suggestions": [
     "dune part three",
     "dune part three trailer",
     "dune part three trailer reaction",
-    "dune part three soundtrack",
-    "dune part three official trailer",
+    "dune part three final trailer reaction",
     "dune part three final trailer",
-    "dune part three new trailer",
-    "dune part three teaser"
+    "dune part three reaction",
+    "dune part three full movie",
+    "dune part three trailer breakdown"
    ],
    "in": [],
    "category": "Film",
@@ -763,19 +795,19 @@
     "Dune: Part Three",
     "Dune Part Three",
     "Dune 3"
-   ]
+   ],
+   "wikipedia": "Dune: Part Three"
   },
   {
    "name": "Harry Potter HBO series",
-   "days_to": 59,
+   "days_to": 58,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 0.97,
-   "views_yesterday": 4622,
-   "views_usual": 4758,
+   "momentum": 1.25,
+   "views_yesterday": 5903,
+   "views_usual": 4726,
    "views_30d": [
-    5845,
     4616,
     4839,
     4899,
@@ -804,10 +836,11 @@
     4782,
     5257,
     5885,
-    4622
+    4622,
+    5903
    ],
-   "news_24h": 26,
-   "news_usual": 6.0,
+   "news_24h": 32,
+   "news_usual": 6.5,
    "suggestions": [
     "harry potter hbo series",
     "harry potter hbo series trailer",
@@ -833,19 +866,19 @@
     "Harry Potter HBO",
     "Harry Potter TV series",
     "Harry Potter series"
-   ]
+   ],
+   "wikipedia": "Harry Potter (TV series)"
   },
   {
    "name": "Christmas 2026",
-   "days_to": 59,
+   "days_to": 58,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.24,
-   "views_yesterday": 2283,
-   "views_usual": 1842,
+   "momentum": 1.17,
+   "views_yesterday": 2229,
+   "views_usual": 1906,
    "views_30d": [
-    1400,
     1629,
     1700,
     1661,
@@ -874,16 +907,17 @@
     1954,
     1642,
     1787,
-    2283
+    2283,
+    2229
    ],
-   "news_24h": 50,
-   "news_usual": 35.0,
+   "news_24h": 49,
+   "news_usual": 37.0,
    "suggestions": [
     "christmas 2026",
     "christmas 2026 uk",
-    "christmas 2026 countdown",
     "christmas 2026 decor",
-    "christmas 2026 song",
+    "christmas 2026 songs",
+    "christmas 2026 countdown",
     "christmas 2026 remix",
     "christmas 2026 new songs",
     "christmas 2026 live"
@@ -903,19 +937,19 @@
     "Christmas number one 2026",
     "Christmas adverts 2026",
     "NORAD Santa tracker"
-   ]
+   ],
+   "wikipedia": "Christmas"
   },
   {
    "name": "New Year's Eve 2026",
-   "days_to": 65,
+   "days_to": 64,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.96,
-   "views_yesterday": 286,
+   "momentum": 1.09,
+   "views_yesterday": 322,
    "views_usual": 296,
    "views_30d": [
-    237,
     277,
     288,
     313,
@@ -944,7 +978,8 @@
     344,
     303,
     318,
-    286
+    286,
+    322
    ],
    "news_24h": 13,
    "news_usual": 7.0,
@@ -972,19 +1007,19 @@
     "New Year 2027",
     "New Year's Eve fireworks",
     "New Year fireworks 2027"
-   ]
+   ],
+   "wikipedia": "New Year's Eve"
   },
   {
    "name": "CES 2027",
-   "days_to": 71,
+   "days_to": 70,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.01,
-   "views_yesterday": 248,
-   "views_usual": 245,
+   "momentum": 0.65,
+   "views_yesterday": 153,
+   "views_usual": 237,
    "views_30d": [
-    265,
     378,
     394,
     443,
@@ -1013,12 +1048,15 @@
     359,
     288,
     295,
-    248
+    248,
+    153
    ],
-   "news_24h": 7,
-   "news_usual": 4.0,
+   "news_24h": 6,
+   "news_usual": 5.5,
    "suggestions": [
-    "ces 2027"
+    "ces 2027",
+    "sony ces 2027",
+    "ces las vegas 2027"
    ],
    "in": [],
    "category": "Tech",
@@ -1034,7 +1072,66 @@
     "CES 2027",
     "CES Las Vegas 2027",
     "Consumer Electronics Show 2027"
-   ]
+   ],
+   "wikipedia": "Consumer Electronics Show"
+  },
+  {
+   "name": "Walter Koenig",
+   "auto": true,
+   "days_to": null,
+   "phase": "viral",
+   "momentum": 211.78,
+   "views_yesterday": 276569,
+   "views_usual": null,
+   "views_30d": [],
+   "news_24h": null,
+   "news_usual": null,
+   "suggestions": [],
+   "in": [
+    "UK news",
+    "Wikipedia top pages"
+   ],
+   "category": "Entertainment",
+   "terms": [
+    "Walter Koenig"
+   ],
+   "angles": [
+    "Walter Koenig",
+    "Walter Koenig analysis",
+    "Walter Koenig reaction",
+    "Walter Koenig history and records",
+    "Walter Koenig explained",
+    "Walter Koenig facts",
+    "Walter Koenig star",
+    "Walter Koenig rankings",
+    "Walter Koenig by the numbers",
+    "Walter Koenig best moments",
+    "Walter Koenig what happens next",
+    "Walter Koenig past winners"
+   ],
+   "rules": "A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
+   "wikipedia": "Walter Koenig",
+   "viral": true,
+   "viral_since": "2026-10-28",
+   "angle_map": {
+    "walter koenig": "latest",
+    "walter koenig analysis": "why",
+    "walter koenig reaction": "reaction",
+    "walter koenig history and records": "records",
+    "walter koenig explained": "explained",
+    "walter koenig facts": "facts",
+    "walter koenig star": "people",
+    "walter koenig rankings": "rankings",
+    "walter koenig by the numbers": "numbers",
+    "walter koenig best moments": "moments",
+    "walter koenig what happens next": "next",
+    "walter koenig past winners": "past"
+   },
+   "mega": 10,
+   "level": "surging",
+   "places": 10,
+   "mega_since": "2026-10-28",
+   "mega_peak": 10
   }
  ]
 }

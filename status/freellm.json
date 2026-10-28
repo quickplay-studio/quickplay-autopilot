@@ -1,5 +1,5 @@
 {
- "started": "2026-10-28T01:22:01+00:00",
+ "started": "2026-10-28T01:25:07+00:00",
  "job": "freellm",
  "ok": true,
  "reason": "",
@@ -27,6 +27,12 @@
   "kilo": 1
  },
  "search_switched_on": [],
+ "search_rows": [
+  "tavily/tavily-search keys 0",
+  "exa/exa-search keys 0",
+  "firecrawl/firecrawl-search keys 0",
+  "linkup/linkup-search keys 0"
+ ],
  "history": [
   {
    "t": "2026-10-28T00:10:56+00:00",
@@ -57,10 +63,16 @@
    "job": "freellm",
    "ok": true,
    "reason": ""
+  },
+  {
+   "t": "2026-10-28T01:25:07+00:00",
+   "job": "freellm",
+   "ok": true,
+   "reason": ""
   }
  ],
  "probe": {
-  "chat": "200 via kilo/kilo-auto/free",
+  "chat": "200 via kilo/dots-studio/dots-3-note-preview:free",
   "search": "failed (503): search error: No search key configured. Enable Parallel (no key needed) or add a Tavily, Exa, Firecrawl or Linkup key on the Keys page.",
   "engines": [
    "tavily/tavily-search (no key)",
@@ -69,9 +81,9 @@
    "linkup/linkup-search (no key)"
   ],
   "models": "28 available of 283 listed",
-  "at": "2026-10-28T01:23:51+00:00"
+  "at": "2026-10-28T01:25:59+00:00"
  },
  "calls_total": 1,
- "tokens": 67,
- "finished": "2026-10-28T01:23:51+00:00"
+ "tokens": 35,
+ "finished": "2026-10-28T01:25:59+00:00"
 }

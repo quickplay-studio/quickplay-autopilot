@@ -137,7 +137,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
-- **QD-265** KPop Demon Hunters: 4 songs in top ten 🎵 (rendering next)
 
 ## On the channel (latest first)
 

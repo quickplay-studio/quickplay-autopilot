@@ -1,4 +1,4 @@
-afternoon run for 2026-10-28: 4 to write and 4 for a mega trend from 18 fact packs
+afternoon run for 2026-10-28: 2 to write and 3 for a mega trend from 18 fact packs
 category shares: {'Music': 0.27, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.12, 'Entertainment': 0.08, 'Science': 0.07, 'Tech': 0.07}
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 facts
@@ -17,30 +17,23 @@ covered already: Walter Koenig
 covered already: Walter Koenig facts
 covered already: Walter Koenig star
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Walter Koenig rankings: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Walter Koenig by the numbers: error: 'str' object has no attribute 'get'
-mega Walter Koenig: trying again: Walter Koenig by the numbers
-Walter Koenig by the numbers: skipped: one source is Wikipedia
-Film Facts #2: kpop demon hunters song: the soundtrack history: groq:qwen/qwen3.8-27b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-evergreen: Top 10 best-selling Grand Theft Auto games: only 0 checked facts
-QD-266: about 2 min needs 16 facts, the pack has 12: 35 to 44 s instead
-How Dune became the greatest sci-fi epic ever written: skipped: niche
-QD-266: about 2 min needs 16 facts, the pack has 12: 35 to 44 s instead
-How Dune became the greatest sci-fi epic ever written: still failing: narration: 139 words, needs 100 to 125 (20 to 45 seconds)
-QD-266: about 2 min needs 16 facts, the pack has 5: 35 to 44 s instead
-How do footballers actually win the Ballon d'Or?: groq:qwen/qwen3.8-27b, 2 warnings (narration: 79 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
-Top 10 scariest Halloween films of all time: skipped: niche
-wrote 2 of 4 and 1 of 4 for a mega trend: QD-264 walter koenig: passed away aged 90 🖖 (mega); QD-265 KPop Demon Hunters: 4 songs in top ten 🎵; QD-266 Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
+Walter Koenig rankings: skipped: niche
+mega Walter Koenig: trying again: Walter Koenig rankings
+Walter Koenig rankings: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), sameness 0.25 with QD-264
+Walter Koenig by the numbers: gemini-3.5-flash-lite, 2 warnings (narration: 81 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news), sameness 0.21 after a rewrite (the first draft was 0.30 with QD-263)
+Song Secrets #3: Beyonce solo debut hits number one in Billboard: still failing: meta.facts: each one [claim, [source numbers]]; meta.facts: each one [claim, [source numbers]]; meta.facts: each one [claim, [source numbers]]; meta.facts: each one [claim, [source numbers]]; meta.facts: each one [claim, [source numbers]]; meta.facts: each one [claim, [source numbers]]
+wrote 0 of 2 and 2 of 3 for a mega trend: QD-270 Star Stories #6: Walter Koenig Chekov casting: the look that won it (mega); QD-271 walter koenig: the career numbers you missed (mega)
 channel gaming: no Gaming news packs; evergreen instead
-channel gaming: Minecraft: how the indie game built by one person became a global phenomenon: groq:qwen/qwen3.8-27b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-channel gaming: wrote 1 of 2: QD-267 Player One #1: Minecraft: 400 million copies sold
+evergreen: Top 5 most expensive video games ever developed: only 3 checked facts
+channel gaming: How Tetris survived the Cold War to become a global hit: still failing: beat 8: needs at least one shot or a graphic; narration: 146 words, needs 100 to 125 (20 to 45 seconds)
+channel gaming: wrote 0 of 2: 
 channel irl: no Entertainment/Animals/Food news packs; evergreen instead
+evergreen: Boma and Sulu: the remarkable true story of the famous London Zoo gorillas: only 3 checked facts
+channel irl: Top 10 most intelligent dog breeds ranked by working intelligence: still failing: beat 9: needs at least one shot or a graphic; beat 10: needs at least one shot or a graphic
 channel irl: wrote 0 of 2: 
-channel clips: Ballon d'Or 2026 facts: groq:qwen/qwen3.8-27b, 0 warnings
-channel clips: Ballon d'Or 2026 star: groq:qwen/qwen3.8-27b, 1 warnings (narration: 64 words, best between 75 and 100)
-channel clips: mega Ballon d'Or 2026: wrote 2 of 2
 channel clips: no Film/Tech/Science/Sport/Cars/History news packs; evergreen instead
-channel clips: Back to the Future: the near-disastrous casting mix-up before Eric Stoltz was replaced: skipped: niche
-channel clips: Top 5 fastest-accelerating production cars in the world with official 0-60 times: skipped: niche
-channel clips: wrote 0 of 2: QD-268 Match Day #5: Caroline Weir Ballon d'Or: the elite rank 🏆; QD-269 Match Day #6: Caroline Weir Ballon d'Or: rank 25 revealed ⚽
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-flash-latest": "daily limit 20"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1, "gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 36, "gemini-3.5-flash": 2, "gemini-3-flash-preview": 1, "gemma-4-31b-it": 1, "groq:qwen/qwen3.8-27b": 20}, "empty answers": {"groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 1, "router searches": 0, "router sources added": 0, "providers passed over": ["openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+channel clips: The impossible Ferrari comeback at Le Mans: still failing: beat 7: needs at least one shot or a graphic
+channel clips: wrote 0 of 2: 
+sameness: main channel score 0.0625 over 181 boards, commonest recipe 4% (format one_detail, hook statement, look clean); this run 2 boards checked, highest 0.23, mean 0.22; 1 rewritten, 0 dropped, 0 recipe caps (limits: pair 0.3, recipe 0.35)
+control: 0 of 2 boards written with the frozen recipe
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemma-4-31b-it": "per-minute limit, 3 tries 16000", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1, "groq:openai/gpt-oss-20b": 2}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 23, "gemini-3-flash-preview": 3, "groq:qwen/qwen3.8-27b": 1, "freellm:ovh/Mistral-Nemo-Instruct-2407": 14}, "empty answers": {"groq:openai/gpt-oss-20b": 2}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 1, "router searches": 0, "router sources added": 0, "providers passed over": ["groq", "openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}

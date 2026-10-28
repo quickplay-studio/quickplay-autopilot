@@ -1,5 +1,5 @@
 {
- "started": "2026-10-28T14:48:02+00:00",
+ "started": "2026-10-28T15:56:16+00:00",
  "job": "write",
  "ok": true,
  "reason": "",
@@ -23,7 +23,9 @@
  "dropped": [
   "keenable"
  ],
- "calls": {},
+ "calls": {
+  "ovh": 14
+ },
  "search_switched_on": [],
  "search_rows": [
   "tavily/tavily-search keys 0",
@@ -32,12 +34,6 @@
   "linkup/linkup-search keys 0"
  ],
  "history": [
-  {
-   "t": "2026-10-28T07:41:06+00:00",
-   "job": "trends",
-   "ok": true,
-   "reason": ""
-  },
   {
    "t": "2026-10-28T08:12:36+00:00",
    "job": "write",
@@ -79,9 +75,15 @@
    "job": "write",
    "ok": true,
    "reason": ""
+  },
+  {
+   "t": "2026-10-28T15:56:16+00:00",
+   "job": "write",
+   "ok": true,
+   "reason": ""
   }
  ],
- "calls_total": 0,
- "tokens": 0,
- "finished": "2026-10-28T15:32:59+00:00"
+ "calls_total": 14,
+ "tokens": 89463,
+ "finished": "2026-10-28T16:31:54+00:00"
 }

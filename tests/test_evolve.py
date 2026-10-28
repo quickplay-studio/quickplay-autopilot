@@ -481,7 +481,7 @@ fresh()
 ids = EV.record_ledger([{"change": "Evolve: gene g001 adopted", "hypothesis": "lifts views"}, {"change": "no hypothesis"}], "2026-11-10")
 assert ids == ["CH-001"] and C.ROOT == SCRATCH
 row = next(csv.DictReader((AN / "changes.csv").open()))
-assert row["area"] == "learning" and row["target"] == "yt_rel" and row["guardrails"] == "dead_share;avg_viewed_pct" and row["by"] == "evolve (GitHub)", row
+assert row["area"] == "learning" and row["target"] == "yt_rel" and row["guardrails"] == "dead_share;avg_viewed_pct;sameness" and row["by"] == "evolve (GitHub)", row
 assert "learning" in C.AREAS and all(m in C.METRICS for m in (EV.LEDGER_TARGET, *EV.LEDGER_GUARDS.split(";")))
 
 fresh()

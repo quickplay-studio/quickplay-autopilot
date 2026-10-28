@@ -719,5 +719,10 @@
   "The Traitors",
   "The Celebrity Traitors"
  ],
- "game_shows_note": "25 October: for a Short about one of these shows, the game's vocabulary (traitor, faithful, betray, murder, banish) passes the excluded-word and negative-framing checks (validate.py); other negative words about real people are still rejected."
+ "game_shows_note": "25 October: for a Short about one of these shows, the game's vocabulary (traitor, faithful, betray, murder, banish) passes the excluded-word and negative-framing checks (validate.py); other negative words about real people are still rejected.",
+ "sameness": {"on": true, "window_days": 14, "max_pair": 0.30, "recipe_share_max": 0.35, "alert": 0.20, "alert_days": 2,
+  "weights": {"narration": 0.4, "title": 0.25, "opening": 0.2, "look": 0.05, "structure": 0.1}},
+ "sameness_note": "28 October (pipeline/sameness.py, YouTube's inauthentic-content policy refuses channels whose videos feel interchangeable): a draft over max_pair against any Short of its channel in the last window_days days is rewritten once, then dropped; a recipe (format + hook type + look + series) holding recipe_share_max of the window makes the next Short take another format (mega trends and the reserve exempt); alert = a channel's mean pairwise score over this two days running opens an issue. max_pair is the 97th percentile of the highest similarity each of the 178 main-channel boards had to the boards before it (0.295); the 97th percentile of all pairs (0.18) would flag 65% of boards, because a board is compared with 200 or more.",
+ "control": {"on": true, "share": 0.1, "frozen": "2026-10-28", "min_n": 8},
+ "control_note": "28 October (pipeline/control.py): board number k is a control Short with probability share (random.Random(f'control:{k}'), only normal quota Shorts of the main channel); written with analytics/control_recipe.json, the recipe as frozen on that day, no round arm, gene or exploration; left out of every verdict; trend.py compares the loop's Shorts with them (needs min_n control Shorts)."
 }

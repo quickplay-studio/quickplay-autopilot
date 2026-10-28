@@ -150,8 +150,8 @@ ids = EV.record_ledger([{"change": "Evolve: hook_type now runs question as its c
                         {"change": "Evolve: ending now runs loop as its champion", "hypothesis": "loop lifts views", "opening": False}], "2026-11-10")
 assert len(ids) == 2, ids
 led = list(csv.DictReader((AN / "changes.csv").open()))
-assert led[0]["target"] == "engaged_share" and led[0]["guardrails"] == "yt_rel;dead_share", led[0]
-assert led[1]["target"] == "yt_rel" and led[1]["guardrails"] == "dead_share;avg_viewed_pct", led[1]
+assert led[0]["target"] == "engaged_share" and led[0]["guardrails"] == "yt_rel;dead_share;sameness", led[0]
+assert led[1]["target"] == "yt_rel" and led[1]["guardrails"] == "dead_share;avg_viewed_pct;sameness", led[1]
 import changes as C
 assert "engaged_share" in C.METRICS and C.METRICS["engaged_share"][1] == "higher"
 assert all(m in C.METRICS for m in (EV.LEDGER_TARGET_OPENING, *EV.LEDGER_GUARDS_OPENING.split(";")))

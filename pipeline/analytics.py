@@ -144,6 +144,10 @@ def our_shorts():
             "watch": b.get("watch") or "", "viral": b.get("viral") or ("no" if str(b.get("created") or "") >= "2026-10-27" else ""),
             "viral_angle": (b.get("test") or {}).get("viral_angle", "") if isinstance(b.get("test"), dict) else "",
             "mega": b.get("mega") or "",          # one of a mega trend's Shorts, on top of the day's number (27 October)
+            # the frozen control group (control.py, 28 October: "1" for a Short written with the frozen recipe, left out of every
+            # verdict) and the sameness guard's numbers (sameness.py: the highest similarity to the channel's last 14 days of Shorts,
+            # and the share of that window following its recipe)
+            "control_arm": "1" if b.get("control") else "", "sameness": b.get("sameness", ""), "sameness_recipe_share": b.get("sameness_recipe_share", ""),
             **subject_fields(b),
             # the named, numbered series a Short belongs to (series.py, 25 October): the test field "series" is the cliffhanger arm
             **{k: b.get(k, "") for k in SERIES_COLUMNS},
@@ -825,7 +829,7 @@ def main():
             "short": o.get("id", ""), "channel": ch, "title": v["title"], "posted": posted.isoformat(timespec="minutes") if posted else "",
             "posted_day": posted.strftime("%Y-%m-%d") if posted else "", "slot_uk": uk.strftime("%H:%M") if uk else "",
             "category": o.get("category", ""), "format": o.get("format", ""), "mood": o.get("mood", ""),
-            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "watch", "viral", "viral_angle", "mega", "_wiki", "_phrase", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
+            "hook": o.get("hook", ""), "hook_words": o.get("hook_words", ""), "seconds": o.get("seconds", ""), "follow_line": o.get("follow_line", ""), **{k: o.get(k, "") for k in ("ending", "title_search", "first_frame", "angles", "replies", "kind", "source", "series", "franchise", "writer", "editor", "appeal", "late", "explore", "title_emoji", "fx_energy", "fx_grade", "fx_opening", "fx_slot", "sponsor", "sub_push", "writer_arm", "watch", "viral", "viral_angle", "mega", "control_arm", "sameness", "sameness_recipe_share", "_wiki", "_phrase", "writer_arm_used") + ARM_COLUMNS + tuple(OPENING_COLUMNS) + SERIES_COLUMNS},
             # the posting quarter actually used, beside the round's arm (fx_slot, 24 October): an intention-to-treat comparison
             "genes": o.get("genes", ""),        # the live writing-instruction contests and the arm given: "gene:g001=b;gene:g002=a" (evolve.py)
             "fx_slot_used": (("00:00 to 06:00", "06:00 to 12:00", "12:00 to 18:00", "18:00 to 24:00")[uk.hour // 6] if uk and o.get("fx_slot") else ""),
@@ -992,6 +996,8 @@ def main():
         slot_scores(rows)
         try: volume_test()
         except Exception as e: print("volume test:", str(e)[:150])
+        try: import sameness as SM; SM.write_outputs()      # analytics/sameness.csv and .md (the sameness guard, 28 October)
+        except Exception as e: print("sameness:", str(e)[:150])
         write_audience(aud)
         if "_region_rows" not in aud: reg_rows, aud["_regions"] = regions(rows, aud)
         else: reg_rows = aud["_region_rows"]
@@ -1078,7 +1084,7 @@ def look_scores(rows):
         lk = look_by_id.get(r["short"]) or {}
         for d in dims: r[f"look_{d}"] = lk.get(d, "")
         r["look_score"] = ""
-    aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
+    aged = [r for r in rows if r["posted"] and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600 and not r.get("control_arm")]     # a control Short never teaches
     def rel(r, field, min_views=0):
         v = r.get(field)
         if v in ("", None) or float(r.get("yt_views") or 0) < min_views: return None
@@ -1149,7 +1155,7 @@ def slot_scores(rows):
     try:
         if json.loads(p.read_text()).get("day") == today: return
     except Exception: pass
-    aged = [r for r in rows if r["posted"] and r.get("slot_uk") and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600]
+    aged = [r for r in rows if r["posted"] and r.get("slot_uk") and (NOW - utc(r["posted"])).total_seconds() >= 24 * 3600 and not r.get("control_arm")]
     by = {}
     for r in aged:
         t = utc(r["posted"])

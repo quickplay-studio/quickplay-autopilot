@@ -1,0 +1,61 @@
+{
+ "frozen": "2026-10-28",
+ "note": "The recipe the loop had learned on this day, copied once. Control Shorts (config.json control) are written with exactly this and nothing the loop learns later; trend.py compares the loop's Shorts with them.",
+ "winners": {},
+ "paused": {},
+ "genes": {},
+ "champions": {},
+ "recipe": "(Where a STYLE FOR THIS SHORT line below differs from these, follow the style line: it is a test.)\n- Hook style: use less question (0.67x, 9 Shorts).\n- Length: use less 35 to 44 s (0.68x, 29 Shorts).\n- Hook length: lean towards 13 words or more (1.36x, 42 Shorts).\n- Title: use less question (0.65x, 16 Shorts).\n- Music mood: use less tech (0.7x, 9 Shorts).\n- US viewers are 39% (UK 14%): pick stories that matter in both, explain UK-only references in a few words, and keep UK spelling.\n- India is 9% of views and watches Film 3.1x more than the rest: keep Film open to stories from there (family friendly, names and titles as the sources write them).",
+ "dropoff": [
+  "Beat 2 loses the most viewers after the hook (7.9% a second): keep it short and get to the point."
+ ],
+ "title": {
+  "title_emoji": "emoji",
+  "title_answer": "stated"
+ },
+ "sub_push": "none",
+ "looks": {
+  "captions": {
+   "lab-captions-1019": 0.117,
+   "lab-captions-1024": 0.1,
+   "lab-captions-1028": 0.05,
+   "low": 0.733
+  },
+  "voice": {
+   "daniel": 0.333,
+   "george": 0.15,
+   "george_dramatic": 0.017,
+   "george_quick": 0.017,
+   "heart": 0.1,
+   "isabella": 0.15,
+   "lab-voice-1019": 0.033,
+   "lab-voice-1028": 0.05,
+   "lewis": 0.033,
+   "lily": 0.017,
+   "michael": 0.1
+  },
+  "energy": {
+   "lab-energy-1025": 0.517,
+   "steady": 0.483
+  },
+  "grade": {
+   "lab-grade-1023": 0.067,
+   "lab-grade-1027": 0.367,
+   "natural": 0.567
+  },
+  "opening": {
+   "image_first": 0.417,
+   "lab-opening-1019": 0.05,
+   "lab-opening-1026": 0.533
+  },
+  "style": {
+   "minimal": 0.733,
+   "standard": 0.267
+  },
+  "closing": {
+   "chip": 0.583,
+   "none": 0.417
+  }
+ },
+ "slot": "first free slot (the learned best hour is not used)"
+}

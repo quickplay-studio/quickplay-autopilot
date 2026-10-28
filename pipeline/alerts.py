@@ -353,6 +353,39 @@ def trend_alert():
     raise_issue(title, body, howto="")
 
 
+def sameness_alert(rows=None, cfg=None):
+    """The Shorts look alike (28 October): YouTube's inauthentic-content policy refuses monetisation to channels whose videos feel
+    interchangeable. analytics/sameness.csv holds each channel's mean pairwise similarity over 14 days, one row a UK day
+    (pipeline/sameness.py); one issue (not needs-charlie: the writer already rewrites, drops and varies the format) opens when a
+    channel's score is over config sameness.alert on each of the last sameness.alert_days days running, with the numbers and the
+    commonest recipe; it closes when no channel is. Returns the channels over."""
+    import csv, sameness
+    c = sameness.conf(cfg)
+    title = "🔁 Sameness: a channel's Shorts look too alike"
+    if rows is None:
+        try: rows = list(csv.DictReader((ROOT / "analytics" / "sameness.csv").open()))
+        except OSError: rows = []
+    over = []
+    for ch in sorted({r.get("channel") for r in rows if r.get("channel")}):
+        mine = sorted((r for r in rows if r.get("channel") == ch), key=lambda r: r["day"])
+        tail = mine[-int(c["alert_days"]):]
+        try: days = [dt.date.fromisoformat(r["day"]) for r in tail]
+        except ValueError: continue
+        run = len(tail) == int(c["alert_days"]) and all((b - a).days == 1 for a, b in zip(days, days[1:]))
+        if run and all(float(r["score"]) > float(c["alert"]) for r in tail): over.append((ch, tail))
+    if not over:
+        clear(title, "No channel's sameness score is over its alert level two days running now."); return []
+    lines = [f"- {ch}: " + ", ".join(f"{r['day']} {float(r['score']):.2f}" for r in tail) + f" (alert level {c['alert']}); commonest recipe "
+             f"{round(100 * float(tail[-1]['share']))}% of the window: {sameness.recipe_label(tail[-1]['top_recipe'])}" for ch, tail in over]
+    raise_issue(title, "Mean pairwise similarity (0 to 1) of the channel's Shorts over the last 14 days, from analytics/sameness.csv "
+                       "(pipeline/sameness.py: narration, title pattern, opening, look, format and series):\n" + "\n".join(lines)
+                + "\n\nWhat the writer already does: a draft over sameness.max_pair against a recent Short is rewritten once and then "
+                  "dropped, and a recipe holding over recipe_share_max of the window makes the next Short take another format. "
+                  "analytics/sameness.md lists the most alike pairs. If the score stays up, read the pairs and the Recipe lines "
+                  "(analytics/insights.md): the loop may be narrowing the channel to one winning shape.", howto="")
+    return [ch for ch, _ in over]
+
+
 if __name__ == "__main__":
     if os.environ.get("EVENT") == "workflow_run": after_run()
     elif os.environ.get("SCHEDULE") == RECOVERY_CRON:
@@ -363,6 +396,8 @@ if __name__ == "__main__":
         evening()
         try: trend_alert()
         except Exception as e: print("trend:", str(e)[:160])
+        try: sameness_alert()
+        except Exception as e: print("sameness:", str(e)[:160])
         try: recipe_stale_check()
         except Exception as e: print("recipe:", str(e)[:160])
         try: funnel_check()

@@ -392,9 +392,16 @@ def contrast(groups):
     return {v: g for v, g in out.items() if g}
 
 
+def learn(rows):
+    """The rows the verdicts learn from: a control Short (control.py, shorts.csv control_arm "1") is written with the recipe frozen on
+    28 October and is the loop's yardstick (trend.py), so it never counts in a verdict, a pause or a contest."""
+    return [r for r in rows if str(r.get("control_arm") or "") != "1"]
+
+
 def analyse(rows, pauses=None, today=None):
     """rows: shorts.csv rows with 'rel' set (or None). Returns (table rows for drivers.csv, base support measures).
     `pauses`: the pause record (load_pauses()), updated in place; the caller saves it."""
+    rows = learn(rows)
     pauses = {} if pauses is None else pauses
     today = today or NOW.astimezone(UK).date().isoformat()
     # 26 October: every channel's Shorts feed one set of verdicts (Charlie: "all of them contributing to the same learning
@@ -456,6 +463,7 @@ def channel_table(rows, table):
     with 2 or more Shorts: lift (the channel's Shorts shrunk towards the pooled lift), own_lift (shrunk towards typical,
     as the pooled table is), the pooled lift and verdict, the channel's own gate() verdict and any exception."""
     pooled = {(t["feature"], t["value"]): t for t in table}
+    rows = learn(rows)
     feats = [(r, features(r)) for r in rows if r.get("rel") not in (None, "")]
     out = []
     for ch in dict.fromkeys(channel_of(r) for r, _ in feats):
@@ -599,6 +607,7 @@ def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, 
     UK date}, evolve.py, 26 October): a contest that began later than the round judges only the Shorts from its own start,
     so a new contest never inherits the Shorts of the one it replaced. With no engaged views in `rows` at all, every factor
     is judged on views."""
+    rows = learn(rows)
     pool = [r for r in rows if r.get("rel") not in (None, "") and uk_day(r) >= str(start)]
     has_eng = any(engaged_pair(r) for r in rows)        # the data has engaged views at all (else views, as before them)
     out = []
@@ -697,7 +706,7 @@ def analyse_instagram(rows, now=None):
     each against Instagram views (ig_rel_rows), as drivers.csv rows. The same shrinkage and proof gate as analyse(); never
     paused, never put to the writer (PIPELINE_ONLY): social.ig_share reads the verdicts (a proven arm gets 80% of Reels,
     never all, so the test keeps measuring)."""
-    pseudo = ig_rel_rows(rows, now)
+    pseudo = ig_rel_rows(learn(rows), now)
     if not pseudo: return []
     cut, table = split_time(pseudo), []
     for feat, label in IG_FEATURES:
@@ -828,7 +837,7 @@ def analyse_subscribers(rows, now=None):
     subscribers gained, the subscribers expected at the same-day peers' rate, subscribers per 1,000 views against the typical
     rate for those Shorts, the shrunk lift and the proof rule's verdict. Never paused, never put to the writer through the
     views recipe (subs_recipe is its own line)."""
-    pts = [p for p in subs_points(rows, now) if p["exp"] is not None]
+    pts = [p for p in subs_points(learn(rows), now) if p["exp"] is not None]
     if not pts: return []
     cut, table = split_time([p["r"] for p in pts]), []
     for feat, label in SUB_FEATURES:
@@ -853,7 +862,7 @@ def analyse_subscribers(rows, now=None):
 def subs_summary(rows, now=None):
     """Overall subscribers per 1,000 views over the Shorts that count (subs_points) and the best Short for subscribers (most
     gained, then the higher rate): {"shorts", "views", "subs", "per_1k", "best": {"id", "title", "subs", "views", "per_1k"} or None}."""
-    pts = subs_points(rows, now)
+    pts = subs_points(learn(rows), now)
     views, subs = sum(p["views"] for p in pts), sum(p["subs"] for p in pts)
     top = max(pts, key=lambda p: (p["subs"], p["subs"] / p["views"]), default=None)
     best = ({"id": top["r"].get("short") or "", "title": top["r"].get("title") or "", "subs": int(top["subs"]), "views": int(top["views"]),

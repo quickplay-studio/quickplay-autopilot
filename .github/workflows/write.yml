@@ -97,6 +97,7 @@ jobs:
           git add status/claude_usage.json 2>/dev/null || true
           git add status/freellm.json config.json 2>/dev/null || true      # the FreeLLMAPI router's status; config.json only when its image digest was just recorded
           git add analytics/mirror_log.csv 2>/dev/null || true      # the Spanish mirror's attempts (pipeline/mirror.py)
+          git add analytics/sameness.csv analytics/sameness.md 2>/dev/null || true      # the sameness guard's scores for the run (pipeline/sameness.py)
           new=$(git diff --cached --name-only -- boards/queue | wc -l)
           git commit -q -m "Gemini boards $(date -u '+%F %H:%M')" || exit 0
           pushed=""

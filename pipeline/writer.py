@@ -17,6 +17,8 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 import background as BG, factpack, validate
 import subscribe as SUB           # the subscriber push (25 October): the spoken-line arm and its note
 import evolve as EV               # the self-evolving round (26 October): live contests, champions, genes (standard library)
+import sameness as SM             # the sameness guard (28 October): how alike the channel's Shorts are (standard library)
+import control as CT              # the frozen control group (28 October): a share of Shorts written with the frozen recipe
 
 CFG = json.loads((ROOT / "config.json").read_text())
 UK = ZoneInfo("Europe/London")
@@ -238,6 +240,7 @@ def plan(breaking=False, hint=""):
 BOOKKEEPING = ("watch", "viral", "follows", "remakes", "franchise", "series", "reserve", "kind", "source", "editor", "writer",
                "test", "mode", "appeal_note", "mega")
 BOOKKEEPING += ("channel", "channel_series", "language", "mirror_of", "mirrored", "chip_label", "handle")       # set for the line's other channels (extra_channel_boards, mirror.py)
+BOOKKEEPING += ("control", "sameness", "sameness_with", "sameness_recipe_share")      # set by the pipeline (control.py, sameness.py), never by a model
 
 
 def example():
@@ -497,7 +500,8 @@ def explore_format(k, avoid=""):
     for its prompt."""
     try: ids = [x["id"] for x in json.loads((ROOT / "templates" / "formats.json").read_text()).get("formats", []) if not x.get("retired")]
     except Exception: return ""
-    ids = [i for i in ids if i not in stopped().get("format", set()) and i != avoid] or ids
+    gone = {avoid} if isinstance(avoid, str) else set(avoid)         # the day's last format, and the format a recipe cap leaves out
+    ids = [i for i in ids if i not in stopped().get("format", set()) and i not in gone] or ids
     if not ids: return ""
     f = random.Random(f"explore-format:{k}").choice(ids)
     return (f"EXPLORATION SHORT (1 in 5 a day, so the data keeps measuring every option): use the {f} format if the pack "
@@ -1144,7 +1148,8 @@ TITLE_BITS = {"title_emoji": 2, "title_answer": 4}           # the arm is (k // 
 TITLE_NOT_FOR = {"title_answer": {"evergreen", "top list", "true story", "fiction"}}
 
 
-def title_arm(k, test="title_emoji"):
+def title_winner(test):
+    """The title test's arm the data has proven (drivers.csv "push", then the round's adjusted winner), or None."""
     won = None
     try:
         for r in csv.DictReader((ROOT / "analytics" / "drivers.csv").open()):
@@ -1153,6 +1158,11 @@ def title_arm(k, test="title_emoji"):
     except Exception: pass
     rr = round_results().get(test) or {}
     if rr.get("verdict") == "winner": won = rr.get("winner")        # the round's adjusted winner (26 October) is the stronger proof
+    return won
+
+
+def title_arm(k, test="title_emoji"):
+    won = title_winner(test)
     arms_ = list(TITLE_TESTS[test])
     if won in arms_: return won if k % RETEST else next(a for a in arms_ if a != won)
     return arms_[(k // TITLE_BITS.get(test, 2)) % 2]
@@ -1190,11 +1200,13 @@ def sub_note(p, kind, tests, note="", reserve=False):
     return (note + "\n\n" if note else "") + SUB.note(a, name, cat)
 
 
-def style_note(picks):
+def style_note(picks, control=False):
     """The style line for the prompt: each picked arm's text, then (evolve on) each picked gene arm's instruction and every
-    adopted gene's, the adopted one of a lineage under contest in these picks giving way to the arm's text (evolve.style_texts)."""
+    adopted gene's, the adopted one of a lineage under contest in these picks giving way to the arm's text (evolve.style_texts).
+    A control Short (control.py) gets the instructions adopted on the freeze day instead, whatever has been adopted since."""
     parts = [src[t][a] for t, a in picks.items() for src in (TESTS, TITLE_TESTS) if t in src and src[t].get(a)]
-    if EV.on(CFG): parts += EV.style_texts(picks)
+    if control: parts += [EV.sentence(t) for t in (CT.load().get("genes") or {}).values() if str(t).strip()]
+    elif EV.on(CFG): parts += EV.style_texts(picks)
     note = " ".join(parts)
     return f"STYLE FOR THIS SHORT: {note}" if note else ""
 
@@ -1478,24 +1490,160 @@ def claude_edit(b, p, kind, note):
     return new, note + ", edited by Claude" + (f" ({', '.join(skipped)} kept as written)" if skipped else "")
 
 
-def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None):
-    """One board, then (when it passed every check) Claude's edit."""
+# ---------------- the sameness guard and the frozen control group (28 October) ----------------
+# sameness.py scores how alike a channel's Shorts are (YouTube refuses monetisation to channels whose videos "feel interchangeable"):
+# a draft over sameness.max_pair against any Short of the channel in the last window_days days is rewritten once by the same
+# model with the overlap named, then dropped; a recipe (format + hook type + look + series) holding sameness.recipe_share_max of
+# the window makes the next Short of the channel take another format (the mega trends' Shorts and the reserve are exempt from that
+# cap, never from the pair check). control.py: board number k is a control Short by its own seeded draw and is written with the
+# recipe frozen in analytics/control_recipe.json (its tests, style line, Recipe lines and look), never with what the loop learns.
+SAME = {"by": {}, "cfg": None, "rewrites": 0, "drops": 0, "caps": 0, "checked": []}
+CONTROL_IDS = set()          # the ids of this run's control Shorts (write_board gives them no model-test arm and no Claude board)
+_HEADS = {}
+
+
+def same_init(day):
+    """The channels' recent Shorts (their profiles) for the pair check and the recipe cap, read once per run."""
+    SAME.update(by={}, cfg=SM.conf(CFG), rewrites=0, drops=0, caps=0, checked=[])
+    CONTROL_IDS.clear(); _HEADS.clear()
+    if SM.on(CFG):
+        try: SAME["by"] = SM.load_profiles(ROOT, day, SAME["cfg"]["window_days"] + 1)
+        except Exception as e: print("sameness: recent Shorts not read:", f"{type(e).__name__}: {e}"[:160])
+
+
+def same_window(ch="main"):
+    return SAME["by"].get(ch, [])
+
+
+def same_record(b, ch="main", skip=()):
+    """Set the board's sameness fields (sameness: its highest similarity to the channel's recent Shorts, sameness_with: which,
+    sameness_recipe_share: the share of the window following its recipe) and add it to the window for the Shorts after it."""
+    if not SM.on(CFG): return
+    try:
+        pr = SM.profile(b); pr["channel"] = ch
+        win = [q for q in same_window(ch) if q["id"] not in skip]
+        res = SM.check(pr, win, CFG)
+        b["sameness"] = res["max"]; b["sameness_recipe_share"] = round(SM.share_of(pr, win), 3)
+        if res["with"]: b["sameness_with"] = res["with"]
+        SAME["by"].setdefault(ch, []).append(pr); SAME["checked"].append(res["max"])
+    except Exception as e: print("sameness: not recorded:", f"{type(e).__name__}: {e}"[:160])
+
+
+def recipe_cap(k, ch="main"):
+    """(the capped format, a note for the prompt) while one recipe holds recipe_share_max of the channel's window: the note names
+    another format, the one the window used least (ties drawn on a seed of k). ("", "") when no recipe is over."""
+    if not SM.on(CFG): return "", ""
+    over = SM.over_recipe(same_window(ch), CFG)
+    capped = over[0].split("|")[0] if over else ""
+    if not capped: return "", ""
+    try: ids = [x["id"] for x in json.loads((ROOT / "templates" / "formats.json").read_text()).get("formats", []) if not x.get("retired")]
+    except Exception: return capped, ""
+    ids = [i for i in ids if i != capped and i not in stopped().get("format", set())]
+    if not ids: return capped, ""
+    count = {}
+    for q in same_window(ch): count[q["format"]] = count.get(q["format"], 0) + 1
+    low = min(count.get(i, 0) for i in ids)
+    pick = random.Random(f"recipe-cap:{k}").choice([i for i in ids if count.get(i, 0) == low])
+    SAME["caps"] += 1
+    return capped, (f"RECIPE CAP: {round(100 * over[1])}% of this channel's Shorts in the last {SAME['cfg']['window_days']} days follow one "
+                    f"recipe ({SM.recipe_label(over[0])}), and a channel whose Shorts look alike is not paid. Use the {pick} format for "
+                    "this Short if the pack suits it at all, and open it differently from that recipe.")
+
+
+def recipe_cap_for(k, reserve=False, mega=False, control=False, ch="main"):
+    """recipe_cap for a Short, with the exemptions: a mega trend's Short, the reserve and a control Short (written with the frozen
+    recipe) take no cap. None of them is exempt from the pair check (sameness_gate)."""
+    return ("", "") if (reserve or mega or control) else recipe_cap(k, ch)
+
+
+def sameness_gate(b, p, sid, day, prompt_head, extra, kind, tests, note, ch="main", skip=()):
+    """The pair check on a drafted board: its highest similarity to the channel's recent Shorts must not pass sameness.max_pair.
+    Over it, the same model is asked once to write it again with the overlap named (the matching Short's title and what matched);
+    still over, or no usable rewrite, the board is dropped and the reason goes to the log. Returns (board, note)."""
+    if not SM.on(CFG) or not b or not b.get("beats"): return b, note
+    c = SAME["cfg"] or SM.conf(CFG)
+    win = [q for q in same_window(ch) if q["id"] not in skip]
+    pr = SM.profile(b); pr["channel"] = ch
+    res = SM.check(pr, win, CFG)
+    if res["max"] <= c["max_pair"]: return b, note + f", sameness {res['max']:.2f}" + (f" with {res['with']}" if res["with"] else "")
+    SAME["rewrites"] += 1
+    first = " | ".join(str(x.get("say", "")) for x in b["beats"] if isinstance(x, dict))
+    why = (f"SAMENESS CHECK: your first draft is too like our recent Short {res['with']} \"{res['title']}\" (similarity "
+           f"{res['max']:.2f}, the limit is {c['max_pair']:.2f}). What matched: {res['matched']}. Write this Short again from the same "
+           "pack with a different hook, a different title pattern and a different way in, in other words than the first draft and "
+           "than that Short; keep every fact true and sourced. "
+           f"YOUR FIRST DRAFT (do not repeat its title, hook or sentences): \"{(b.get('meta') or {}).get('title', '')}\": {first}")
+    try: b2, note2 = write_board(p, sid, day, prompt_head, (extra + "\n\n" if extra else "") + why, kind, tests, force=b.get("writer"))
+    except Exception as e: b2, note2 = None, f"error: {type(e).__name__}"
+    if b2 and b2.get("beats"):
+        pr2 = SM.profile(b2); pr2["channel"] = ch
+        r2 = SM.check(pr2, win, CFG)
+        if r2["max"] <= c["max_pair"]:
+            return b2, note2 + f", sameness {r2['max']:.2f} after a rewrite (the first draft was {res['max']:.2f} with {res['with']})"
+        res = r2
+    SAME["drops"] += 1
+    return None, (f"dropped for sameness: {res['max']:.2f} against {res['with']} \"{str(res['title'])[:50]}\" (limit {c['max_pair']:.2f}; "
+                  f"{res['matched'][:150]}), after one rewrite")
+
+
+def build_head(recipe_text, notes):
+    """The prompt every board of a run starts with: the rules, the formats, the Recipe lines, the drop-off notes, an example."""
+    return (RULES % {"moods": list(CFG.get("music_moods") or [])} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe_text
+            + ("\n\nWHERE VIEWERS SWIPE AWAY (from the data)\n- " + "\n- ".join(notes) if notes else "")
+            + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + example())
+
+
+def control_head():
+    """The same prompt with the Recipe lines and drop-off notes frozen on the control's freeze day."""
+    if "control" not in _HEADS:
+        snap = CT.load()
+        _HEADS["control"] = build_head(snap.get("recipe") or "", snap.get("dropoff") or [])
+    return _HEADS["control"]
+
+
+def same_finish(written):
+    """After the run: analytics/sameness.csv and .md, and the log lines the dry run is checked by."""
+    if SM.on(CFG):
+        try:
+            rows = SM.write_outputs(ROOT, NOW.astimezone(UK).date(), CFG)
+            last = [r for r in rows if r["channel"] == "main"][-1:]
+            ch = SAME["checked"]
+            print("sameness: " + (f"main channel score {last[0]['score']} over {last[0]['boards']} boards, commonest recipe "
+                                  f"{round(100 * float(last[0]['share']))}% ({SM.recipe_label(last[0]['top_recipe'])}); " if last else "")
+                  + (f"this run {len(ch)} boards checked, highest {max(ch):.2f}, mean {sum(ch) / len(ch):.2f}; " if ch else "no board checked; ")
+                  + f"{SAME['rewrites']} rewritten, {SAME['drops']} dropped, {SAME['caps']} recipe caps (limits: pair {SAME['cfg']['max_pair']}, "
+                  f"recipe {SAME['cfg']['recipe_share_max']})")
+        except Exception as e: print("sameness: outputs not written:", f"{type(e).__name__}: {e}"[:160])
+    if CT.on(CFG):
+        ctl = [b for b in written if b.get("control")]
+        print(f"control: {len(ctl)} of {len(written)} boards written with the frozen recipe" + (f" ({', '.join(b['id'] for b in ctl)})" if ctl else "")
+              + ("" if CT.load() else " (no frozen recipe yet: analytics/control_recipe.json)"))
+
+
+def write_one(p, sid, day, prompt_head, extra="", kind="news", tests=None, channel="main", skip=()):
+    """One board, then the sameness check (a rewrite, then a drop: sameness_gate), then (when it passed every check) Claude's
+    edit (never for a control Short). `skip`: ids of the Shorts it may not be compared with (the earlier parts of its series)."""
     b, note = write_board(p, sid, day, prompt_head, extra, kind, tests)
     if b and str(b.get("writer", "")).startswith("claude:"): used("writes")
     if b:
+        try: b, note = sameness_gate(b, p, sid, day, prompt_head, extra, kind, tests, note, channel, skip)
+        except Exception as e: note += f", sameness: not checked ({type(e).__name__}: {str(e)[:80]})"     # never loses a board
+    if b and sid not in CONTROL_IDS:
         try: b, note = claude_edit(b, p, kind, note)
         except Exception as e: note += f", editor: kept the original ({str(e)[:80]})"     # the board is never lost to the edit
     return b, note
 
 
-def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None):
+def write_board(p, sid, day, prompt_head, extra="", kind="news", tests=None, force=None):
+    """One board. `force`: the writer label to try first (the sameness rewrite asks the same model again)."""
+    ctl = sid in CONTROL_IDS         # a control Short (control.py) takes no writer-model test arm and no Claude board
     prompt = prompt_head + (f"\n\n{extra}" if extra else "") + "\n\nTHE PACK\n" + pack_text(p)
     # the writer-model test (factpack.writer_test, data report item 7): the board's arm decides the first model, unless
     # Claude's own arm has it or the 35% cap says no (the arm is still recorded: an intention-to-treat comparison)
-    arm, arm_model = factpack.writer_test(int(re.sub(r"\D", "", str(sid)) or 0), day if isinstance(day, dt.date) else None)
-    claude = claude_arm(sid)
+    arm, arm_model = (None, None) if ctl else factpack.writer_test(int(re.sub(r"\D", "", str(sid)) or 0), day if isinstance(day, dt.date) else None)
+    claude = None if ctl else claude_arm(sid)
     test_pick = arm_model if arm_model and not claude and not writer_capped(arm_model) else None
-    pick = claude or test_pick or choose_writer(sid)
+    pick = force or claude or test_pick or choose_writer(sid)
     ans, model = factpack.gemini(prompt, None, timeout=150, temperature=0.6, writing=True, **({"prefer": pick} if pick else {}))
     if not isinstance(ans, dict) or ans.get("skip"): return None, f"skipped: {ans.get('skip') if isinstance(ans, dict) else 'no board'}"
     best = None             # the first board with no errors, kept in case fixing its warnings breaks it
@@ -1667,7 +1815,7 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             extra = [KIND_NOTE.get(kind, ""), style_note(tests), channel_note(ch, c, series, n), OVERLAP_NOTE if covered(p, mine) else "",
                      SUB.note(tests.get("sub_push", ""), series or "", str(p.get("category") or "")), note]
             try:
-                b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests)
+                b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests, channel=ch)
             except Exception as e:
                 b, why = None, f"error: {e}"[:200]
             print(f"channel {ch}: {p['topic']}: {why}")
@@ -1687,6 +1835,7 @@ def extra_channel_boards(day, run, packs, head, state, out, late=lambda: False):
             if tag:
                 b.update({k: v for k, v in tag.items() if k != "test"})
                 b["test"] = {**(b.get("test") or {}), **(tag.get("test") or {})}
+            same_record(b, ch)                                      # its sameness fields, and into the channel's window
             (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
             (mega_made if b.get("mega") else made).append(b); state["n"] += 1
             return b
@@ -1757,17 +1906,17 @@ def main():
     except Exception: DAY["target"] = len(DAY["boards"]) + cap
     seen, used, follow, up, src_up = recent(), day_formats(day), hot(), boosts(), boosts("source")
     moods, notes = list(CFG.get("music_moods") or []), dropoff_notes()
-    head = (RULES % {"moods": moods} + "\n\nFORMATS\n" + formats() + "\n\nWHAT THE DATA SAYS WORKS\n" + recipe()
-            + ("\n\nWHERE VIEWERS SWIPE AWAY (from the data)\n- " + "\n- ".join(notes) if notes else "")
-            + "\n\nEXAMPLE BOARD (shape only, a different story)\n" + example())
+    head = build_head(recipe(), notes)
+    same_init(day)                                  # the channels' recent Shorts: the pair check and the recipe cap (sameness.py)
     out, written = ROOT / "boards" / "queue", []
     deadline = time.time() + 60 * float(os.environ.get("WRITE_MINUTES") or 55)   # the job stops at 90: save what is written
     late = lambda: time.time() > deadline
     state = {"n": next_id(), "angles": int(CFG.get("angle_searches_per_run", 2))}
     out.mkdir(parents=True, exist_ok=True)
 
-    def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None, explore=False):
+    def emit(p, note="", kind="news", reserve=False, fol=None, tests=None, series=None, explore=False, mega=False, control=False):
         sid = f"QD-{state['n']:03d}"
+        if control: CONTROL_IDS.add(sid)              # written with the frozen recipe (control.py)
         if tests is None: style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # the title emoji and title answer tests ride on every Short
         tests = with_sub_test(tests, state["n"], kind)        # so does the subscribe line (not an exploration Short)
@@ -1777,10 +1926,11 @@ def main():
         if tests.get("length") in LONG_NEEDS and facts < LONG_NEEDS[tests["length"]]:      # a long Short needs the facts for it
             print(f"{sid}: {tests['length']} needs {LONG_NEEDS[tests['length']]} facts, the pack has {facts}: 35 to 44 s instead")
             tests = {**tests, "length": "35 to 44 s"}
-        style = style_note(tests)
+        style = style_note(tests, control=control)
+        capped, capnote = recipe_cap_for(state["n"], reserve, mega, control)      # a recipe over its share of the window (sameness.py)
         extra = [(f"Formats already used for this day, oldest first: {', '.join(used)}. Use a different format from the "
-                  f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, note]
-        if tests.get("explore") == "yes": extra.append(explore_format(state["n"], used[-1] if used else ""))
+                  f"last one ({used[-1]}), and prefer the ones used least.") if used else "", style, capnote, note]
+        if tests.get("explore") == "yes": extra.append(explore_format(state["n"], {x for x in (capped, used[-1] if used else "") if x}))
         try:                                       # what other channels' Shorts are winning with this week (competitors.py)
             import competitors
             wins = competitors.top_titles(p.get("category") or "")
@@ -1796,7 +1946,9 @@ def main():
             if ang: extra.append("SHORTS ALREADY GETTING VIEWS ON THIS SUBJECT (learn which angle or question works, then "
                                  "find a fresher or better one; never copy their wording, footage or script): " + "; ".join(ang))
         try:
-            b, why = write_one(p, sid, day, head, "\n\n".join(x for x in extra if x), kind, tests)
+            n0 = int(re.sub(r"\D", "", series["id"]) or 0) if series else 0           # the earlier parts of a series are no repeat of it
+            b, why = write_one(p, sid, day, control_head() if control else head, "\n\n".join(x for x in extra if x), kind, tests,
+                               skip={f"QD-{i:03d}" for i in range(n0, state["n"])} if series else ())
         except Exception as e:
             b, why = None, f"error: {e}"[:200]
         print(f"{p['topic']}: {why}")
@@ -1805,6 +1957,10 @@ def main():
         shape(b, tests)
         if validate.check(b)[0]: b = json.loads(before)
         b.update(kind=kind, test={**tests, **(b.get("test") or {})}, source=source_of(p.get("signal")))
+        if control:                                   # marked on the board; its look is drawn from the spread frozen with the recipe
+            b["control"] = 1
+            lk = CT.look(state["n"])
+            if lk: b["look"] = lk
         sponsor_board(b, series)         # a live daily campaign: this Short's arm (test.sponsor); the board is left alone without one
         if tests.get("franchise") == "named":
             name = FRANCHISE.get(b.get("category") or p.get("category") or "", "Quickplay Facts")
@@ -1819,17 +1975,27 @@ def main():
         tr = translations(b)                          # from the plain title: the series name and number are added in English only
         if tr: b["meta"]["translations"] = tr
         series_name(b, p, written, reserve)         # the numbered series: series_name, series_no and the titles (series.py)
+        same_record(b, "main", {f"QD-{i:03d}" for i in range(n0, state["n"])} if series else ())     # its sameness fields, and into the window
         (out / f"{sid}.json").write_text(json.dumps(b, ensure_ascii=False, separators=(",", ":")))
         written.append(b); used.append(b.get("format", "")); state["n"] += 1
         if not reserve: DAY["boards"].append(b)
         return b
 
-    def emit_kind(p, kind, reserve=False, note="", fol=None, explore=None, single=False):
+    def emit_kind(p, kind, reserve=False, note="", fol=None, explore=None, single=False, control_ok=True):
         """A Short of any kind, or two or three parts with a cliffhanger between them when its series test says so and the
         pack has 3 facts or more a part (never from the reserve, which could release them out of order, and never a
         follow-up or breaking news). `explore`: an exploration Short (None: when explore_due says so; never the reserve).
-        `single`: always one Short (a mega trend's angles, each a whole Short of its own)."""
-        if explore is None: explore = not reserve and explore_due()
+        `single`: always one Short (a mega trend's angles, each a whole Short of its own). A normal quota Short can be a control
+        Short by its own seeded draw (control.py: written with the frozen recipe; never a mega trend's, the reserve, a follow-up or
+        breaking Short, an exploration Short or a viral topic's: `control_ok`)."""
+        ctl = explore is not True and control_ok and CT.is_control(state["n"], kind, CFG, reserve=reserve, mega=single,
+                                                                   follow=bool(fol) or breaking)
+        if explore is None: explore = not reserve and not ctl and explore_due()
+        if ctl:
+            base = "\n\n".join(x for x in (KIND_NOTE.get(kind, ""), note) if x)
+            return emit(p, base, kind, reserve, fol=fol, control=True,
+                        tests=CT.tests(state["n"], [t for t in TESTS if t not in NOT_FOR.get(kind, ())],
+                                       no_title=[t for t in TITLE_TESTS if kind in TITLE_NOT_FOR.get(t, ())]))
         style, tests = test_plan(state["n"], kind, explore) if explore else test_plan(state["n"], kind)
         tests = with_title_test(tests, state["n"], kind)      # one arm for every part of a series
         tests = with_sub_test(tests, state["n"], kind)        # (the subscribe-line arm too)
@@ -1838,7 +2004,7 @@ def main():
         parts = min({"two parts": 2, "three parts": 3}.get(tests.get("series") or "", 1), facts // 3)   # 3 facts a part at least
         if parts < 2 or reserve or fol or single or series_joins(p, kind):       # a numbered series Short is one Short (series.py)
             if "series" in tests: tests["series"] = "single"
-            return emit(p, base, kind, reserve, fol=fol, tests=tests)
+            return emit(p, base, kind, reserve, fol=fol, tests=tests, mega=single)
         first, made = f"QD-{state['n']:03d}", []
         for n in range(1, parts + 1):
             prev = made[-1] if made else None
@@ -1850,6 +2016,7 @@ def main():
         if len(made) == parts: return made[0]
         for b in made:                                             # a part missing: no cliffhangers either
             (out / f"{b['id']}.json").unlink(missing_ok=True); written.remove(b); used.pop()
+            SAME["by"]["main"] = [q for q in same_window("main") if q["id"] != b["id"]]      # a removed part is no repeat to compare with
         return emit(p, base, kind, tests={**tests, "series": "single"})
 
     topics = list(enumerate(d.get("topics") or []))   # best first; favoured categories and breakouts move up
@@ -1943,7 +2110,7 @@ def main():
                 made = watch.viral_titles(WATCH[wn], written)
                 rules += f"\n\nTHIS SHORT'S ANGLE ({vk}): {brief}." + (
                     " ALREADY MADE on this topic (do not repeat any of them): " + "; ".join(f'"{t}"' for t in made) if made else "")
-            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False, single=mg)
+            got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False, single=mg, control_ok=not WATCH[wn].get("viral"))
             if not got and mg and not late() and not factpack.STATE.get("spent"):     # a mega place is worth a second try
                 print(f"mega {wn}: trying again:", p["topic"])
                 got = emit_kind(p, "news", note=(note + "\n\n" + rules).strip(), explore=False, single=True)
@@ -2012,6 +2179,7 @@ def main():
         except Exception as e: print("extra channels:", f"{type(e).__name__}: {e}"[:200])
         try: import mirror; mirror.mirror_boards(day, run, late)       # the Spanish mirror of the day's main boards (pipeline/mirror.py; dormant until the es sign-in exists)
         except Exception as e: print("mirror:", f"{type(e).__name__}: {e}"[:200])
+    same_finish(written)
     try: order = factpack.writing_order()[:6]
     except Exception: order = factpack.STATE.get("models", [])[:6]
     u = usage()

@@ -14,7 +14,7 @@ in views, so a rise or fall is not read as the changes' doing when the topics ex
   python pipeline/trend.py        prints the section for the live analytics/shorts.csv
   python pipeline/trend.py --history    writes analytics/improvement.json (the hub's improvement line; analytics.py does it every run)
 """
-import csv, datetime as dt, json, pathlib, statistics, sys
+import csv, datetime as dt, json, math, pathlib, random, statistics, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
@@ -138,6 +138,166 @@ def heat_words(h, who="the later Shorts'"):
     return s + (f", so part of any {'rise' if hot else 'fall'} may be the topics rather than the changes")
 
 
+# ---------------- the loop against the frozen control (28 October) ----------------
+# "Is the learning loop improving things?" read apart from trends, the volume test and mega pushes: the control Shorts (control.py,
+# shorts.csv control_arm 1) are written with the recipe frozen on 28 October, the loop's Shorts with whatever it has learned since.
+# Same channel, same UK day: for each day that has both, the loop's mean log metric less the control's (a ratio once back from
+# the log), averaged over the days with weights nl*nc/(nl+nc), the 90% interval from resampling the days 2,000 times. Views and
+# the engaged share are heat-adjusted as the other verdicts are (heat.py: when topic heat clearly moves the number within a
+# channel and day, each day's difference is moved to equally hot topics; a difference that is clear raw and not once heat is
+# allowed for is called unclear). Subscribers per 1,000 views is the pooled rate of the loop's Shorts over the control's, not
+# adjusted (a handful of subscribers a day has no heat to fit). The loop's Shorts here are the normal ones: no control, mega
+# or viral-topic Short, news or evergreen like the control's.
+CONTROL_MIN_N, CONTROL_MIN_DAYS, BOOT, LO_Q, HI_Q = 8, 3, 2000, 0.05, 0.95
+CONTROL_METRICS = (("views_24h", "views at 24 hours", "log"), ("yt_engaged_pct", "engaged share of views", "log"),
+                   ("subs_per_1k", "subscribers per 1,000 views", "rate"))
+
+
+def _control_min():
+    try:
+        import control
+        return int(control.settings().get("min_n", CONTROL_MIN_N))
+    except Exception: return CONTROL_MIN_N
+
+
+def _is_control(r): return str(r.get("control_arm") or "") == "1"
+
+
+def _is_loop(r):
+    """A normal Short the loop wrote: not a control, mega or viral-topic Short, of a kind a control Short can be."""
+    return (not _is_control(r) and r.get("mega") != "yes" and r.get("viral") != "yes" and r.get("kind") in ("news", "evergreen")
+            and (r.get("channel") or "main") == "main")
+
+
+def _cluster_interval(groups, stat, seed):
+    """(low, high) of stat over resamples of the groups (the days) with replacement; (None, None) when most resamples have none."""
+    rng, n, vals = random.Random(seed), len(groups), []
+    for _ in range(BOOT):
+        v = stat([groups[rng.randrange(n)] for _ in range(n)])
+        if v is not None: vals.append(v)
+    if len(vals) < BOOT // 2: return None, None
+    vals.sort()
+    return vals[int(LO_Q * len(vals))], vals[min(len(vals) - 1, int(HI_Q * len(vals)))]
+
+
+def _log_est(groups):
+    """exp of the weighted mean difference over (weight, difference) groups; None without weight."""
+    w = sum(g[0] for g in groups)
+    return math.exp(sum(g[0] * g[1] for g in groups) / w) if w > 0 else None
+
+
+def _rate_est(groups):
+    """The loop's pooled rate over the control's over (subs_l, views_l, subs_c, views_c) groups; None when a pool is empty."""
+    sl, vl, sc, vc = (sum(g[i] for g in groups) for i in range(4))
+    return (sl / vl) / (sc / vc) if vl > 0 and vc > 0 and sc > 0 else None
+
+
+def _verdict(lo, hi):
+    if lo is None or hi is None: return "no interval"
+    return "loop ahead" if lo > 1 else "control ahead" if hi < 1 else "no clear difference"
+
+
+def _log_groups(loop, ctrl, col, slope=None):
+    """[(weight, difference)] for the days having both kinds of Short measured on `col`: the loop's mean log less the control's,
+    each moved to equally hot topics by `slope` (log per heat point) when given and both sides have heat. Also how many days were
+    adjusted."""
+    H = _heat()
+    def lg(r):
+        v = _f(r.get(col))
+        return None if v is None else math.log(max(0.05, v))
+    by = {}
+    for side, rs in ((0, loop), (1, ctrl)):
+        for t, r in rs:
+            y = lg(r)
+            if y is None: continue
+            h = H.value(r) if (H is not None and slope is not None) else None
+            by.setdefault((r.get("channel") or "main", _uk_day(t)), ([], []))[side].append((y, h))
+    out, adj = [], 0
+    for (_ch, _d), (a, b) in sorted(by.items()):
+        if not a or not b: continue
+        d = statistics.mean(y for y, _ in a) - statistics.mean(y for y, _ in b)
+        ha, hb = [h for _, h in a if h is not None], [h for _, h in b if h is not None]
+        if slope is not None and ha and hb:
+            d -= slope * (statistics.mean(ha) - statistics.mean(hb)); adj += 1
+        out.append((len(a) * len(b) / (len(a) + len(b)), d))
+    return out, adj
+
+
+def _rate_groups(loop, ctrl):
+    by = {}
+    for side, rs in ((0, loop), (1, ctrl)):
+        for t, r in rs:
+            v, sg = _f(r.get("yt_views")), _f(r.get("yt_subs_gained"))
+            if v is None or sg is None: continue
+            g = by.setdefault((r.get("channel") or "main", _uk_day(t)), [0.0, 0.0, 0.0, 0.0])
+            g[2 * side] += sg; g[2 * side + 1] += v
+    return [tuple(g) for g in by.values() if g[1] > 0 and g[3] > 0]
+
+
+def loop_vs_control(rows, now, min_n=None):
+    """The loop's Shorts against the control's (module comment): {"verdict", "n_control", "n_loop", "days", "min_n", "metrics":
+    {col: {"label", "ratio", "lo", "hi", "adjusted", "raw": {ratio, lo, hi}, "verdict", "days"}}, "summary"}. With fewer than
+    min_n control Shorts measured at 24 hours (or 3 days having both kinds) the verdict is "too few to tell (n)"."""
+    min_n = _control_min() if min_n is None else min_n
+    main = [(t, r) for t, r in aged(rows, now) if (r.get("channel") or "main") == "main"]
+    ctrl = [(t, r) for t, r in main if _is_control(r) and _f(r.get("views_24h")) is not None]
+    loop = [(t, r) for t, r in main if _is_loop(r) and _f(r.get("views_24h")) is not None]
+    out = {"n_control": len(ctrl), "n_loop": len(loop), "min_n": min_n, "metrics": {}, "days": 0}
+    days = {_uk_day(t) for t, _ in ctrl} & {_uk_day(t) for t, _ in loop}
+    out["days"] = len(days)
+    if len(ctrl) < min_n or len(days) < CONTROL_MIN_DAYS:
+        out["verdict"] = f"too few to tell ({len(ctrl)})"
+        out["summary"] = (f"too few to tell ({len(ctrl)}): {len(ctrl)} control Shorts public 24 hours or more, {min_n} needed over "
+                          f"{CONTROL_MIN_DAYS} days or more that also have the loop's Shorts ({len(days)} so far)")
+        return out
+    H, every = _heat(), [r for _t, r in main]
+    bits, verdicts = [], {}
+    for col, label, kind in CONTROL_METRICS:
+        if kind == "rate":
+            groups = _rate_groups(loop, ctrl)
+            est = _rate_est(groups)
+            if est is None or len(groups) < CONTROL_MIN_DAYS:
+                out["metrics"][col] = {"label": label, "verdict": "too few to tell", "days": len(groups)}
+                bits.append(f"{label} too few to tell (the control gained {int(sum(g[2] for g in groups))} subscribers)")
+                continue
+            lo, hi = _cluster_interval(groups, _rate_est, f"control:{col}")
+            m = {"label": label, "ratio": round(est, 2), "lo": None if lo is None else round(lo, 2), "hi": None if hi is None else round(hi, 2),
+                 "adjusted": False, "verdict": _verdict(lo, hi), "days": len(groups)}
+        else:
+            lg = lambda r, c=col: math.log(max(0.05, _f(r.get(c)))) if _f(r.get(c)) is not None else None
+            eff = None
+            if H is not None:
+                try: eff = H.effect(every, lg)
+                except Exception: eff = None
+            slope = eff["b"] if eff and eff["clear"] else None
+            raw, _ = _log_groups(loop, ctrl, col)
+            groups, adj = _log_groups(loop, ctrl, col, slope)
+            if len(raw) < CONTROL_MIN_DAYS:
+                out["metrics"][col] = {"label": label, "verdict": "too few to tell", "days": len(raw)}
+                bits.append(f"{label} too few to tell"); continue
+            r_est = _log_est(raw); rlo, rhi = _cluster_interval(raw, _log_est, f"control:{col}")
+            est = _log_est(groups); lo, hi = (rlo, rhi) if slope is None else _cluster_interval(groups, _log_est, f"control:{col}:adj")
+            v = _verdict(lo, hi)
+            if slope is not None and _verdict(rlo, rhi) != "no clear difference" and v == "no clear difference":
+                v = "unclear once topic heat is allowed for"
+            m = {"label": label, "ratio": round(est, 2), "lo": None if lo is None else round(lo, 2), "hi": None if hi is None else round(hi, 2),
+                 "adjusted": slope is not None and adj > 0, "verdict": v, "days": len(raw),
+                 "raw": {"ratio": round(r_est, 2), "lo": None if rlo is None else round(rlo, 2), "hi": None if rhi is None else round(rhi, 2)}}
+        out["metrics"][col] = m
+        verdicts[col] = m["verdict"]
+        bits.append(f"{label} {m['ratio']:.2f}x ({m['lo']} to {m['hi']})" + (", heat allowed for" if m["adjusted"] else "")
+                    + ("" if m["verdict"] == "no clear difference" else f", {m['verdict']}"))
+    ahead = [CONTROL_LABELS.get(c, c) for c, v in verdicts.items() if v == "loop ahead"]
+    behind = [CONTROL_LABELS.get(c, c) for c, v in verdicts.items() if v == "control ahead"]
+    out["verdict"] = ("loop behind control on " + ", ".join(behind) if behind else "loop ahead on " + ", ".join(ahead) if ahead
+                      else "no clear difference yet")
+    out["summary"] = (f"the loop's Shorts against control, as a ratio with a 90% interval: " + "; ".join(bits) + f". {len(loop)} loop and "
+                      f"{len(ctrl)} control Shorts over {len(days)} days with both. Verdict: {out['verdict']}")
+    return out
+
+
+CONTROL_LABELS = {c: lab for c, lab, _k in CONTROL_METRICS}
+
 def trend(rows, now, verdicts=None):
     """This week against the week before: {this, last, change: {metric: ratio}, followed: {n, of, lift}, flags: [text]}."""
     this, last = window(rows, now), window(rows, now, offset=WEEK)
@@ -159,6 +319,8 @@ def trend(rows, now, verdicts=None):
             if c is not None and c <= FALL:
                 t["flags"].append(f"{label} down {round(100 * (1 - c))}% on the week before ({t['this'][k]} against {t['last'][k]} "
                                   f"over {t['this']['n']} and {t['last']['n']} Shorts)")
+    try: t["control"] = loop_vs_control(rows, now)          # the loop against the frozen control group (28 October)
+    except Exception: pass
     return t
 
 
@@ -191,7 +353,9 @@ def lines(t):
     """The insights.md section, for the writer's reviewers and the weekly review."""
     L = ["## Is the channel getting better (this week against the week before; Shorts public 24 hours or more)"]
     if t["this"]["n"] < 3 or t["last"]["n"] < 3:
-        return L + [f"- Too early to say: {t['this']['n']} Shorts this week, {t['last']['n']} the week before.", ""]
+        L.append(f"- Too early to say: {t['this']['n']} Shorts this week, {t['last']['n']} the week before.")
+        if t.get("control"): L.append("- Loop vs frozen control: " + t["control"]["summary"] + ".")      # its own window, not the week's
+        return L + [""]
     for k, label, _kind in METRICS:
         a, b, c = t["this"].get(k), t["last"].get(k), t["change"].get(k)
         if a is None and b is None: continue
@@ -206,6 +370,8 @@ def lines(t):
     for x in t["flags"]:
         L.append(f"- Watch: {x}. The drivers cannot see a fall that hits every Short alike; the review checks the changes of the "
                  f"last 10 days (analytics/changes.csv) and reverts what hurt.")
+    if t.get("control"):
+        L.append("- Loop vs frozen control: " + t["control"]["summary"] + ".")
     L.append(f"- Shorts measured: {t['this']['n']} this week, {t['last']['n']} the week before.")
     return L + [""]
 
@@ -348,6 +514,8 @@ def write_history(now=None, out=None, src=None):
     a = pathlib.Path(src or ROOT / "analytics")
     h = history(load_rows(a / "shorts.csv"), now, load_rows(a / "daily.csv"), load_rows(a / "changes.csv"),
                 load_rows(a / "decisions.csv"))
+    try: h["control"] = loop_vs_control(load_rows(a / "shorts.csv"), now)       # "Loop vs frozen control" (the hub's line, insights.md)
+    except Exception as e: h["control"] = {"verdict": "not computed", "summary": str(e)[:100]}
     p = pathlib.Path(out or a / "improvement.json")
     p.write_text(json.dumps(h, separators=(",", ":"), ensure_ascii=False))
     return p

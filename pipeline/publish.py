@@ -285,7 +285,7 @@ def main():
                     else: taken.add(t)
                 tst = b.get("test") or {}             # an exploration Short's hour is drawn evenly; else the round's quarter arm
                 slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=tst.get("explore") == "yes",
-                                        arm=None if tst.get("explore") == "yes" else tst.get("fx_slot"))
+                                        arm=None if tst.get("explore") == "yes" else tst.get("fx_slot"), plain=bool(b.get("control")))
                 slot = slot_t.isoformat().replace("+00:00", "Z")
                 # a Short that waited for approval past its day goes out only while its story is alive (freshness.py)
                 late = FR.safe_check(b, slot_t, where="publish")

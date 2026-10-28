@@ -121,7 +121,10 @@ class Data:
         d = copy.copy(self); d.shorts = self.all_shorts
         return d
 
-    def shorts_in(self, a, b): return [r for r in self.shorts if r["_day"] and a <= r["_day"] < b]
+    def shorts_in(self, a, b):
+        """The main channel's Shorts posted in [a, b), a control Short (control.py: written with the frozen recipe) left out: a change
+        is judged on the Shorts it could have changed. Uploads a day still count them (shorts_per_day)."""
+        return [r for r in self.shorts if r["_day"] and a <= r["_day"] < b and r.get("control_arm") != "1"]
     def clips_in(self, a, b): return [r for r in self.cstats if r["_day"] and a <= r["_day"] < b and r.get("privacy") == "public"]
 
     def days(self, a, b, start, end=None):
@@ -295,6 +298,7 @@ METRICS = {
     "engaged_share": ("share of views that stayed (engaged views, what YPP counts)", "higher", "{:.0f}%", m_field("yt_engaged_pct")),
     "subs_per_1k": ("subscribers per 1,000 views", "higher", "{:.2f}", m_subs),
     "category_mix": ("categories in the mix (effective number)", "higher", "{:.1f}", m_mix),
+    "sameness": ("sameness (a Short's highest similarity to the channel's last 14 days of Shorts, 0 to 1)", "lower", "{:.2f}", m_field("sameness")),
     "ig_views": ("Instagram views per Reel", "higher", "{:,.0f}", m_field("ig_views")),
     "fb_views": ("Facebook plays per Reel", "higher", "{:,.0f}", m_field("fb_views")),
     "clips_day": ("clips public a day", "higher", "{:.0f}", per_day(clips_per_day, submit_start, Data.clips_end)),
@@ -343,6 +347,7 @@ def add(area, change, hypothesis, target, guardrails="", date=None, before=7, af
     """A new ledger row (live until its check_on day). Returns the row; saves unless `rows` is given."""
     if area not in AREAS: raise ValueError(f"area must be one of {', '.join(AREAS)}")
     guards = [g.strip() for g in re.split(r"[;,]", guardrails or "") if g.strip()]
+    if target != "sameness" and "sameness" not in guards: guards.append("sameness")      # every change must leave the Shorts as varied (28 October, sameness.py)
     for m in [target] + guards:
         if m not in METRICS: raise ValueError(f"unknown metric {m!r}: python pipeline/changes.py metrics")
     d = dt.date.fromisoformat(date) if date else dt.datetime.now(UK).date()

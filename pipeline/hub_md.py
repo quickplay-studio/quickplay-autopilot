@@ -152,11 +152,29 @@ def sec_ypp(root, now, facts):
     return out
 
 
+def better_extra(root, im):
+    """Two lines for "Is it getting better" (28 October): the loop against the frozen control group (trend.loop_vs_control, in
+    improvement.json) and the channel's sameness score with its alert level (analytics/sameness.csv, config.json sameness)."""
+    out = []
+    ctl = im.get("control") or {}
+    if ctl.get("summary"):
+        out.append("Loop vs frozen control: " + clean(ctl["summary"]) + ".")
+    cfg = jd(root, "config.json").get("sameness") or {}
+    mine = [r for r in rows(root, "analytics/sameness.csv") if (r.get("channel") or "main") == "main" and num(r.get("score")) is not None]
+    if mine:
+        r = sorted(mine, key=lambda r: r.get("day") or "")[-1]
+        sc, share = num(r.get("score")), num(r.get("share"))
+        out.append(f"Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **{sc:.2f}** over {cfg.get('window_days', 14)} days to {day(r['day'])}, "
+                   f"alert at {cfg.get('alert', 0.2):g}" + (f"; the commonest recipe is {100 * share:.0f}% of them (limit {100 * cfg.get('recipe_share_max', 0.35):.0f}%)." if share is not None else "."))
+    return out
+
+
 def sec_better(root):
     im = jd(root, "analytics/improvement.json")
+    extra = better_extra(root, im)
     c = im.get("channel") or {}
     pts = [(d, v) for d, v in list(zip(im.get("days") or [], c.get("engaged_day") or []))[-14:] if v is not None]
-    if not pts: return None
+    if not pts: return extra or None
     out = []
     cur, prev, _ = last_value(c.get("engaged_day_7d"))
     if cur is not None:
@@ -164,6 +182,7 @@ def sec_better(root):
     cur, prev, _ = last_value((((im.get("shorts") or {}).get("main") or {}).get("engaged_pct") or {}).get("week"))
     if cur is not None:
         out.append(f"Engaged share (Shorts that hold viewers past the opening, 7-day median): **{cur:g}%**" + (f", was {prev:g}% a week earlier." if prev is not None else "."))
+    out += extra
     if out: out.append("")
     if len(pts) < 2: return out + ["Too few reported days for a line yet."]
     top = max(v for _, v in pts); step = 10 ** max(int(math.log10(top)) - 1, 0) if top > 0 else 1
@@ -288,7 +307,8 @@ def build(root=ROOT, now=None, issues=None):
     if "keys_bad" in facts: bits.append(f"{facts['keys_bad']} keys need fixing")
     if bits: head += ["", "**" + ", ".join(bits) + ".**"]
     foot = ["---", " \u00b7 ".join([link("How it works", "docs/HOW_IT_WORKS.md"), link("Actions", GH + "/actions"), link("Issues", GH + "/issues"),
-                              link("Insights", "analytics/insights.md"), link("Weekly review", "analytics/weekly.md")])]
+                              link("Insights", "analytics/insights.md"), link("Weekly review", "analytics/weekly.md")]
+                             + [link(n, f"analytics/{f}") for n, f in (("Sameness", "sameness.md"), ("Joint", "joint.md")) if (root / "analytics" / f).is_file()])]
     text = "\n".join(["# Quickplay hub", ""] + head + [""] + parts + foot) + "\n"
     return dashes(scrub(text))
 

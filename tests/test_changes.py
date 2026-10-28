@@ -118,7 +118,7 @@ world([(D(10, 3), D(10, 9), 1, {})]); C.save([])
 C.main(["add", "--area", "clips", "--change", "Spoken take", "--hypothesis", "shown more", "--target", "clip_views",
         "--guardrails", "clips_day;submissions_day", "--date", "2026-10-20"])
 r = C.load()[0]
-assert r["id"] == "CH-001" and r["check_on"] == "2026-10-27" and r["guardrails"] == "clips_day;submissions_day" and r["status"] == "live", r
+assert r["id"] == "CH-001" and r["check_on"] == "2026-10-27" and r["guardrails"] == "clips_day;submissions_day;sameness" and r["status"] == "live", r
 for bad in (["add", "--area", "clips", "--change", "x", "--hypothesis", "y", "--target", "nonsense"],
             ["add", "--area", "moon", "--change", "x", "--hypothesis", "y", "--target", "clip_views"]):
     try: C.main(bad); raise AssertionError(bad)

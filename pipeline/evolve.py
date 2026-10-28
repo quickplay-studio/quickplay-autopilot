@@ -510,7 +510,7 @@ RULES_FOR_GENES = ("The channel's rules, which every instruction must respect: a
 def recent_shorts(today, days=14, n=8, key="views"):
     """(best n, weakest n) Shorts posted in the last `days` days as (views against typical, row), from analytics/shorts.csv;
     key "engaged": as (the share of views that stayed, row), Shorts with engaged data only."""
-    try: rows = list(csv.DictReader(open(ROOT / "analytics" / "shorts.csv")))
+    try: rows = [r for r in csv.DictReader(open(ROOT / "analytics" / "shorts.csv")) if r.get("control_arm") != "1"]     # a control Short never teaches (control.py)
     except Exception: return [], []
     cut, ok = str(dt.date.fromisoformat(str(today)) - dt.timedelta(days=days)), []
     for r in rows:

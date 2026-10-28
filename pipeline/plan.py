@@ -242,7 +242,7 @@ def slot_picker(now, taken, channel="main"):
             day += dt.timedelta(days=1)
             if dt.datetime(day.year, day.month, day.day, tzinfo=UK).astimezone(dt.timezone.utc) > end: return None
 
-    def next_slot(created=None, category=None, kind=None, sid="", explore=False, arm=None):
+    def next_slot(created=None, category=None, kind=None, sid="", explore=False, arm=None, plain=False):
         """The first free slot at least lead_hours away, on or after the board's "created" day (UK); when the data shows
         the board's category does clearly better in another quarter of the day (band_scores, at least 15% better), the
         first free slot in that quarter within the next 18 hours (6 for news). 1 board in 5 keeps the first slot so
@@ -250,7 +250,8 @@ def slot_picker(now, taken, channel="main"):
         (writer.py, test "explore") takes a quarter of the day drawn evenly from those within the window instead.
         `arm`: the board's posting-quarter arm in the factorial round (test "fx_slot", 24 October): it replaces the
         category's best quarter (the same 1 board in 5 still keeps the first slot), as long as the quarter is reachable
-        on the board's own day; otherwise the usual pick. analytics records the quarter actually used (fx_slot_used)."""
+        on the board's own day; otherwise the usual pick. analytics records the quarter actually used (fx_slot_used).
+        `plain` (a control Short, control.py): the first free slot, not the learned best quarter."""
         import random
         first = next(free(created), None)
         if first is None: raise RuntimeError("no free slot in the next 60 days")
@@ -272,7 +273,7 @@ def slot_picker(now, taken, channel="main"):
             pick = arm_slot(created, kind, arm, first, window) or first
         elif arm in ARM_BANDS:
             pass                                      # the first slot already sits in the arm's quarter, or 1 in 5 keeps it
-        elif sc and not keep_first:
+        elif sc and not keep_first and not plain:
             cands = within()
             best = max(cands, key=lambda t: (sc[band(t)], -t.timestamp()))
             if sc[band(best)] >= 1.15 * sc[band(first)]: pick = best
@@ -369,7 +370,8 @@ def main():
                 t = dt.datetime.strptime(b["publish_at"], "%Y-%m-%d %H:%M").replace(tzinfo=UK).astimezone(dt.timezone.utc)
                 if t < now + dt.timedelta(minutes=45): t = None
                 else: taken.add(t)
-            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=explore, arm=fx.get("fx_slot"))
+            slot_t = t or next_slot(b.get("created"), b.get("category"), b.get("kind"), b.get("id", ""), explore=explore, arm=fx.get("fx_slot"),
+                                                                                  plain=bool(b.get("control")))
             slot = slot_t.isoformat().replace("+00:00", "Z")
         # Charlie (24 October): a news Short that would go public after its day needs the data to say its story is still
         # alive, or it expires (freshness.py: boards/expired, analytics/late_uploads.csv)

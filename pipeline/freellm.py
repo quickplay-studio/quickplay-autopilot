@@ -14,7 +14,9 @@ FREELLM_BASE) and as a source finder (factpack.search).
 Fails open: any problem leaves FREELLM_KEY unset and the pipeline runs exactly as before. Exit status is always 0.
 
 What the router is given (config_json): only keys for platforms Quickplay does not already call directly (KEYS below), plus
-the keyless free tiers (Kilo and OVHcloud for chat, Parallel and Keenable for search). Never GEMINI, GROQ, OPENROUTER,
+the keyless free tiers (Kilo and OVHcloud for chat; Parallel and Keenable for search, which release v0.16.6 does not know yet:
+it stops on "unknown provider platform", so start() leaves a platform out and starts again, and web search then needs a Tavily,
+Exa, Firecrawl or Linkup key). Never GEMINI, GROQ, OPENROUTER,
 MISTRAL, CF, SAMBANOVA, CEREBRAS, CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY (FORBIDDEN): those stay on the direct path so
 nothing already measured changes, and no Claude token ever reaches a third party. AI Horde (volunteer commons), Cohere (terms
 forbid it) and NVIDIA (evaluation-only terms) are never switched on; AI Horde, which the router would otherwise treat as

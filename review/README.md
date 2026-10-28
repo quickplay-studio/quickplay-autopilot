@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 05:48): 17 of 1,000 subscribers · 12,226 of 10 million Shorts views in 90 days · 2,825 views in the last 24 hours (about 110,975 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 06:58): 17 of 1,000 subscribers · 12,272 of 10 million Shorts views in 90 days · 2,917 views in the last 24 hours (about 110,975 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 19:08 (UK): 5 scheduled, 144 public, 20 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Wed 28 Oct | 3 public, 10 scheduled | 0 | 1 | ⏳ 3 of 15 so far, 10 more scheduled |
+| Wed 28 Oct | 5 public, 8 scheduled | 0 | 1 | ⏳ 5 of 15 so far, 8 more scheduled |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -137,12 +137,12 @@ scheduled · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216
 ![QD-216](QD-216.jpg)
 
 ### Wed 28 Oct 7:00 · Film Facts #2: kpop demon hunters song: the soundtrack history
-scheduled · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
+private · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
 
 ![QD-215](QD-215.jpg)
 
 ### Wed 28 Oct 6:00 · Music Explained #2: Who was Johann Sebastian Bach?
-scheduled · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-210.json) · [YouTube](https://youtube.com/shorts/VZenbNfVEnY)
+private · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-210.json) · [YouTube](https://youtube.com/shorts/VZenbNfVEnY)
 
 ![QD-210](QD-210.jpg)
 

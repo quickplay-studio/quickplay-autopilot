@@ -17,10 +17,10 @@ Opening contests (hook_type, first_frame, fx_opening and the opening genes, mark
 | fx_opening (opening) | image_first vs lab | round 1 | 2026-10-25 |
 | fx_slot | 06:00 to 12:00 vs 12:00 to 18:00 | round 1 | 2026-10-25 |
 | writing instruction g003: Compare the number to something familiar | a vs b | gene | 2026-10-26 |
+| writing instruction g004: First sentence 12 words, no background (opening) | a vs b | gene | 2026-10-27 |
 | hook_type (opening) | statement vs number | round 1 | 2026-10-25 |
 | length | 25 to 34 s vs 35 to 44 s | round 1 | 2026-10-25 |
 | title_search | search phrase vs curiosity | round 1 | 2026-10-25 |
-| writing instruction g004: First sentence 12 words, no background (opening) | a vs b | gene | 2026-10-27 |
 
 ## Champions
 

@@ -4,7 +4,7 @@
  "mode": "schedule",
  "slot": "2026-10-27T07:00:00Z",
  "rendered": "2026-10-26T10:04:44.565465+00:00",
- "title": "Game Facts #2: Exoplanet Arcade Cabinet | a short story",
+ "title": "The Exoplanet Level Up | a short story",
  "background_notes": [
   "Pixabay 'alien planet surface': 40 results, none at 720p or better",
   "Pixabay 'cosmic starfield': 40 results, none at 720p or better",
@@ -141,7 +141,14 @@
  "social_release": "social-QD-186",
  "engage": {
   "comment": "UgwCW47W7zn8iSK9EUx4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Game Facts #2: Exoplanet Arcade Cabinet | a short story",
+   "to": "The Exoplanet Level Up | a short story",
+   "at": "2026-10-28T07:42+00:00",
+   "views_an_hour": 0.2,
+   "typical": 0.5
+  }
  },
  "instagram": {
   "media": "18117476723022918",

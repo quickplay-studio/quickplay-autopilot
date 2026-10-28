@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T08:55+00:00",
+ "updated": "2026-10-28T11:24+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -56,7 +56,6 @@
    ],
    "in": [
     "YouTube charts",
-    "Google Trends",
     "Wikipedia top pages"
    ],
    "category": "Sport",
@@ -143,7 +142,7 @@
     9491,
     7709
    ],
-   "news_24h": 48,
+   "news_24h": 49,
    "news_usual": 50.0,
    "suggestions": [
     "the celebrity traitors",
@@ -225,7 +224,9 @@
     "halloween 2026 trailer",
     "halloween 2026 game"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Entertainment",
    "angles": [
     "most popular Halloween costumes 2026",
@@ -284,7 +285,7 @@
     873,
     762
    ],
-   "news_24h": 9,
+   "news_24h": 8,
    "news_usual": 8.5,
    "suggestions": [
     "grammy nominations 2027",
@@ -426,7 +427,7 @@
     13501,
     12200
    ],
-   "news_24h": 32,
+   "news_24h": 30,
    "news_usual": 30.0,
    "suggestions": [
     "the hunger games sunrise on the reaping",
@@ -568,7 +569,7 @@
     331,
     297
    ],
-   "news_24h": 5,
+   "news_24h": 3,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
@@ -635,7 +636,7 @@
     938,
     928
    ],
-   "news_24h": 15,
+   "news_24h": 12,
    "news_usual": 9.5,
    "suggestions": [
     "the game awards",
@@ -842,7 +843,7 @@
     4622,
     5903
    ],
-   "news_24h": 33,
+   "news_24h": 32,
    "news_usual": 6.5,
    "suggestions": [
     "harry potter hbo series",
@@ -913,7 +914,7 @@
     2283,
     2229
    ],
-   "news_24h": 64,
+   "news_24h": 55,
    "news_usual": 37.0,
    "suggestions": [
     "christmas 2026",
@@ -984,7 +985,7 @@
     286,
     322
    ],
-   "news_24h": 15,
+   "news_24h": 16,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",

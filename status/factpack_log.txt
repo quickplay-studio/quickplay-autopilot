@@ -1,25 +1,15 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026: 3 verified, 0 one-source, 3 pages
-Ballon d'Or 2026 winner: 7 verified, 2 one-source, 3 pages
-Ballon d'Or 2026 history and records: 5 verified, 4 one-source, 2 pages
-Ballon d'Or 2026 explained: 0 verified, 10 one-source, 1 pages
-Ballon d'Or 2026 facts: 1 verified, 4 one-source, 2 pages
-Ballon d'Or 2026 star: 1 verified, 3 one-source, 2 pages
-Ballon d'Or 2026 by the numbers: 0 verified, 6 one-source, 1 pages
-Walter Koenig: 7 verified, 0 one-source, 5 pages
-Walter Koenig reaction: 3 verified, 1 one-source, 2 pages
-Walter Koenig facts: 9 verified, 1 one-source, 5 pages
-Walter Koenig star: 5 verified, 1 one-source, 5 pages
-Ballon d'Or 2026 analysis: 0 verified, 7 one-source, 1 pages
-Ballon d'Or 2026 rankings: 0 verified, 5 one-source, 1 pages
-Walter Koenig analysis: 0 verified, 6 one-source, 1 pages
-Walter Koenig history and records: 0 verified, 6 one-source, 1 pages
-Walter Koenig explained: 0 verified, 5 one-source, 1 pages
-Walter Koenig rankings: 0 verified, 4 one-source, 1 pages
-GTA 6: 4 verified, 4 one-source, 3 pages
-GTA 6 price: 3 verified, 5 one-source, 3 pages
-m2: 1 verified, 5 one-source, 3 pages
-perseverance: 1 verified, 12 one-source, 4 pages
-covered recently, no pack: Harry Potter HBO series
-21 packs, 50 verified facts, 91 one-source
-gemini: {"out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-flash-latest": "daily limit 20"}, "retired": [], "timeouts": {"gemini-3.8-flash": 1, "gemini-3.7-flash": 1}, "answers": {"gemini-3.5-flash-lite": 22, "groq:openai/gpt-oss-120b": 1, "freellm:llama-3.3-70b": 2, "gemini-3.6-flash": 9}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 11, "router searches": 13, "router sources added": 0, "providers passed over": []}
+Ballon d'Or 2026: 6 verified, 0 one-source, 4 pages
+Ballon d'Or 2026 explained: 0 verified, 5 one-source, 1 pages
+Ballon d'Or 2026 facts: 1 verified, 3 one-source, 2 pages
+Ballon d'Or 2026 star: 0 verified, 1 one-source, 2 pages
+Ballon d'Or 2026 rankings: 0 verified, 6 one-source, 1 pages
+Ballon d'Or 2026 by the numbers: 0 verified, 14 one-source, 1 pages
+Ballon d'Or 2026 best moments: 0 verified, 4 one-source, 1 pages
+Walter Koenig: 8 verified, 0 one-source, 5 pages
+Walter Koenig facts: 12 verified, 1 one-source, 5 pages
+Walter Koenig star: 5 verified, 0 one-source, 5 pages
+Walter Koenig reaction: 7 verified, 2 one-source, 2 pages
+Ballon d'Or 2026 analysis: 0 verified, 13 one-source, 1 pages
+12 packs, 39 verified facts, 49 one-source
+gemini: {"out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 13, "groq:openai/gpt-oss-120b": 3, "freellm:llama-3.3-70b": 3}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 6, "router searches": 9, "router sources added": 0, "providers passed over": []}

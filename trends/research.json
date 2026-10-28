@@ -40,55 +40,17 @@
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains",
+     "url": "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
+     "published": "2026-10-28"
+    },
+    {
      "outlet": "BBC Sport",
      "title": "Carrick stays at Man Utd & Kane wins Ballon d’Or",
      "url": "https://www.bbc.co.uk/sounds/play/p0pjy46g?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-27"
     },
-    {
-     "outlet": "BBC",
-     "title": "Ballon d'Or in London - the most chaotic ever?",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c6y8lgg21l89o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Harry Kane wins the Ballon d’Or and an EFL round-up | Football Weekly – video",
-     "url": "https://www.theguardian.com/football/video/2026/oct/27/harry-kane-wins-the-ballon-dor-and-an-efl-round-up-football-weekly-video",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 winner",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Arise, Sir Harry? Downing Street hints at Kane knighthood after Ballon d’Or win",
-     "url": "https://www.theguardian.com/football/2026/oct/27/harry-kane-andy-burnham-knighthood-ballon-dor-win",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "How Kane's Ballon d'Or win could boost the Bundesliga",
-     "url": "https://www.bbc.co.uk/sport/football/articles/crgqwge88z84o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Quiz: Kane and who else? Name every men's Ballon d'Or winner",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cn5q170dnwlo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 history and records",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
     {
      "outlet": "BBC",
      "title": "Ballon d'Or in London - the most chaotic ever?",
@@ -149,6 +111,25 @@
    ]
   },
   {
+   "topic": "Ballon d'Or 2026 rankings",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Ballon d'Or 2026 results: Full rankings, all award winners",
+     "url": "https://www.espn.com/soccer/story/_/id/50289067/ballon-dor-2026-results-full-rankings-all-award-winners",
+     "published": "2026-10-26"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Ballon d'Or 2026: Harry Kane and Alexia Putellas take home night's biggest prizes",
+     "url": "https://www.usatoday.com/story/sports/soccer/2026/10/26/ballon-dor-2026-live-winners-results-updates--live/92442487007/",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
    "topic": "Ballon d'Or 2026 by the numbers",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
@@ -163,6 +144,31 @@
      "outlet": "New York Times",
      "title": "Ballon d’Or: How did we do? Comparing The Athletic’s votes to the official results",
      "url": "https://www.nytimes.com/athletic/7729374/2026/10/27/ballon-dor-vote-kane-mbappe-yamal/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "Ballon d'Or 2026 best moments",
+   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "And the Ballon d’Or winner in 2027 is …",
+     "url": "https://www.nytimes.com/athletic/7730417/2026/10/28/ballon-dor-2027-predictions/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Star Trek Enters Magic: The Gathering’s Secret Lair Next Month, Here Are The Cards",
+     "url": "https://www.gamespot.com/articles/star-trek-enters-magic-the-gatherings-secret-lair-next-month-here-are-the-cards/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "ESPN",
+     "title": "Sir Harry Kane? Downing Street praise Ballon d'Or winner",
+     "url": "https://www.espn.com/soccer/story/_/id/50295037/harry-kane-ballon-dor-deserved-prince-william",
      "published": "2026-10-27"
     }
    ]
@@ -192,12 +198,6 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween",
    "articles": [
     {
-     "outlet": "Deadline",
-     "title": "‘Dancing With The Stars’ Recap: 2 Couples Are Sent Packing On Horror Movie Night After Routines Inspired By ‘Sinners,’ ‘The Omen’ & More",
-     "url": "https://deadline.com/2026/10/dancing-with-the-stars-recap-season-35-horror-halloween-1237206671/",
-     "published": "2026-10-28"
-    },
-    {
      "outlet": "The Hollywood Reporter",
      "title": "‘Dancing With the Stars’ Gets Spooky for Horror Movie Night With the First Perfect Score and a Double Celeb Exit: See the Scores, Who Went H",
      "url": "https://www.hollywoodreporter.com/tv/tv-news/dwts-season-35-horror-movie-week-7-recap-scores-elimination-1236741201/",
@@ -213,6 +213,12 @@
      "outlet": "PC Gamer",
      "title": "Bassist plays Halloween gig wearing a Steam Frame: 'Interestingly, only one guy asked me about the Frame'",
      "url": "https://www.pcgamer.com/hardware/vr-hardware/bassist-plays-halloween-gig-wearing-a-steam-frame-interestingly-only-one-guy-asked-me-about-the-frame/",
+     "published": "2026-10-27"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Eight great new indie horror games for Halloween",
+     "url": "https://www.theguardian.com/games/2026/oct/27/new-indie-horror-games-halloween",
      "published": "2026-10-27"
     }
    ]
@@ -236,6 +242,18 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
    "articles": [
     {
+     "outlet": "IGN",
+     "title": "Rockstar Games Staff Set for 'Historic' Union Vote at the Same Time GTA 6 Comes Out",
+     "url": "https://www.ign.com/articles/rockstar-games-staff-set-for-historic-union-vote-at-the-same-time-gta-6-comes-out",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "url": "https://www.eurogamer.net/rockstar-union-vote-november",
+     "published": "2026-10-28"
+    },
+    {
      "outlet": "PC Gamer",
      "title": "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
      "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
@@ -245,6 +263,44 @@
      "outlet": "Engadget",
      "title": "Rockstar workers in the UK will hold a union vote just as GTA 6 is released",
      "url": "https://www.engadget.com/2298907/rockstar-workers-in-uk-hold-union-vote-as-gta-6-release/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "GTA 6 price",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
+     "url": "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
+     "published": "2026-10-15"
+    },
+    {
+     "outlet": "IGN",
+     "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
+     "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
+     "published": "2026-06-25"
+    }
+   ]
+  },
+  {
+   "topic": "GTA 6 PC release",
+   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+   "articles": [
+    {
+     "outlet": "Eurogamer",
+     "title": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "url": "https://www.eurogamer.net/rockstar-union-vote-november",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
      "published": "2026-10-27"
     },
     {
@@ -256,57 +312,51 @@
    ]
   },
   {
-   "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (build-up, 22 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-   "articles": [
-    {
-     "outlet": "Polygon",
-     "title": "GTA 6 anticipation is sending PS5 Pro prices through the roof",
-     "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
-     "published": "2026-09-01"
-    },
-    {
-     "outlet": "IGN",
-     "title": "GTA 6 Price Finally Confirmed, Features a 'Single-Player Experience' at Launch",
-     "url": "https://www.ign.com/articles/gta-6-price-finally-confirmed-features-a-single-player-experience-at-launch",
-     "published": "2026-06-25"
-    }
-   ]
-  },
-  {
    "topic": "Dune: Part Three",
    "signal": "watchlist: Dune: Part Three (surging, 51 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Dune%3A_Part_Three",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "Russell Brand gives evidence in rape and sexual assault trial – latest updates",
+     "url": "https://www.theguardian.com/uk-news/live/2026/oct/28/russell-brand-evidence-trial-latest-news-updates",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Serrano to have final fight against Falzon with three-minute rounds",
+     "url": "https://www.skysports.com/boxing/news/12040/13604461/amanda-serrano-to-face-skye-falzon-in-final-fight-with-12-three-minute-rounds-in-puerto-rico-homecoming",
+     "published": "2026-10-28"
+    },
+    {
      "outlet": "BBC",
-     "title": "Goodbye to Wawrinka - an everyman who gatecrashed the greats",
-     "url": "https://www.bbc.co.uk/sport/tennis/articles/crlykgp51ej4o?at_medium=RSS&at_campaign=rss",
+     "title": "Wawrinka retires in front of home crowd after defeat to Lehecka",
+     "url": "https://www.bbc.co.uk/sport/tennis/videos/c6zxj9d4rzd8o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-28"
     },
     {
      "outlet": "BBC Sport",
-     "title": "McInnes' Tynecastle return, Goodwin's entertainers & Reedijk eyes first win",
+     "title": "McInnes set for frosty Tynecastle return - and will Goodwin's entertainers shock Celtic?",
      "url": "https://www.bbc.co.uk/sport/football/articles/cm9qz52e32v8o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Trump is in a corner and likely to lash out at Iran again. Here’s how to avert that disaster | Simon Tisdall",
-     "url": "https://www.theguardian.com/commentisfree/2026/oct/28/donald-trump-iran-midterms-politics-diplomacy",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "UK set for calmer weather - but 'dense' fog may cause disruption",
-     "url": "https://news.sky.com/story/uk-weather-a-calmer-forecast-after-successive-storms-but-dense-fog-may-cause-disruption-13604648",
      "published": "2026-10-28"
     }
    ]
   },
   {
    "topic": "Harry Potter HBO series",
+   "signal": "watchlist: Harry Potter HBO series (surging, 58 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
+   "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "HBO's Harry Potter series officially casts two key characters",
+     "url": "https://www.polygon.com/hbo-harry-potter-tv-show-lily-james-potter-casting/",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "Harry Potter HBO cast",
    "signal": "watchlist: Harry Potter HBO series (surging, 58 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
    "articles": [
@@ -380,28 +430,15 @@
      "published": "2026-10-28"
     },
     {
-     "outlet": "Deadline",
-     "title": "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
-     "url": "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
-     "published": "2026-10-28"
-    },
-    {
      "outlet": "Space.com",
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Walter Koenig reaction",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": [
+    },
     {
-     "outlet": "Variety",
-     "title": "Walter Koenig, Chekov on ‘Star Trek,’ Remembered by George Takei: ‘Keep Navigating a Steady Course’",
-     "url": "https://variety.com/2026/film/news/walter-koenig-tributes-george-takei-1236931414/",
+     "outlet": "PC Gamer",
+     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
      "published": "2026-10-26"
     }
    ]
@@ -424,16 +461,16 @@
      "published": "2026-10-28"
     },
     {
-     "outlet": "Deadline",
-     "title": "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
-     "url": "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
-     "published": "2026-10-28"
-    },
-    {
      "outlet": "Space.com",
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -455,215 +492,154 @@
      "published": "2026-10-28"
     },
     {
-     "outlet": "Deadline",
-     "title": "William Shatner Remembers ‘Star Trek’ Co-Star Walter Koenig",
-     "url": "https://deadline.com/2026/10/william-shatner-walter-koenig-death-star-trek-1237206821/",
-     "published": "2026-10-28"
-    },
-    {
      "outlet": "Space.com",
      "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
      "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
      "published": "2026-10-27"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Walter Koenig, Star Trek's Pavel Chekhov, has died",
+     "url": "https://www.pcgamer.com/movies-tv/walter-koenig-star-treks-pavel-chekhov-has-died/",
+     "published": "2026-10-26"
     }
    ]
   },
   {
-   "topic": "when is black friday",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": null,
+   "topic": "Walter Koenig reaction",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": [
     {
-     "outlet": "IGN",
-     "title": "The 2026 55\" LG Evo C6 4K OLED TV Drops to Black Friday Pricing Plus Get a Free Xbox Controller",
-     "url": "https://www.ign.com/articles/lg-evo-c6-4k-oled-tv-deal-free-xbox-controller-october-2026",
+     "outlet": "Variety",
+     "title": "Walter Koenig, Chekov on ‘Star Trek,’ Remembered by George Takei: ‘Keep Navigating a Steady Course’",
+     "url": "https://variety.com/2026/film/news/walter-koenig-tributes-george-takei-1236931414/",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "topic": "house",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/House",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Four investigations Democrats could launch if they win Congress",
+     "url": "https://www.bbc.co.uk/news/articles/cvglwg033027o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-28"
     },
     {
-     "outlet": "Eurogamer",
-     "title": "Fan favourite map Shipment arrives today in Modern Warfare 4, just four days after launch - a new record for Call of Duty",
-     "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-shipment-map-date",
-     "published": "2026-10-27"
+     "outlet": "Guardian",
+     "title": "Airbnb feels like a soulless rip-off – and its hosts are revolting | Arwa Mahdawi",
+     "url": "https://www.theguardian.com/commentisfree/2026/oct/28/airbnb-feels-like-a-soulless-rip-off-and-its-hosts-are-revolting",
+     "published": "2026-10-28"
     },
     {
-     "outlet": "Guardian",
-     "title": "The Breakdown | England need to unearth World Cup core despite derby friction and injury chaos",
-     "url": "https://www.theguardian.com/sport/2026/oct/27/england-world-cup-core-nations-championship-rugby-union",
+     "outlet": "Variety",
+     "title": "Camila Mendes, Leslie Bibb Shooting ‘Upgraded 2’ in Venice, Where Biennale Art Show Is Part of Rom-Com’s Storyline",
+     "url": "https://variety.com/2026/film/global/camila-mendes-leslie-bibb-upgraded-2-venice-1236931945/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "TechCrunch",
+     "title": "Ford Fathom will be the cheapest American EV capable of powering a house",
+     "url": "https://techcrunch.com/2026/10/27/ford-fathom-will-be-the-cheapest-american-ev-capable-of-powering-a-house/",
      "published": "2026-10-27"
     }
    ]
   },
   {
-   "topic": "michael douglas",
-   "signal": "Google Trends GB 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Michael_Douglas",
+   "topic": "cod mw4 multiplayer",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "An unmanageable club? Carrick the latest to suffer in Manchester United’s faded grandeur",
-     "url": "https://www.theguardian.com/football/2026/oct/27/manchester-united-michael-carrick-faded-grandeur",
+     "outlet": "GameSpot",
+     "title": "Call Of Duty Lifetime Revenue Surges Past $40 Billion, Microsoft Confirms",
+     "url": "https://www.gamespot.com/articles/call-of-duty-lifetime-revenue-surges-past-40-billion-microsoft-confirms/",
      "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "dirk kuyt",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Dirk_Kuyt",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Kuyt named Fenerbahce interim boss before Liverpool tie",
+     "url": "https://www.bbc.co.uk/sport/football/articles/c5398300x0nyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "topic": "game",
+   "signal": "Google Trends GB 2000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Game",
+   "articles": [
+    {
+     "outlet": "Polygon",
+     "title": "BioWare Was Asked to Remove LGBTQ Flag from Canceled Mass Effect Game, Report Says",
+     "url": "https://www.polygon.com/mass-effect-universe-bioware-ea-remove-lgbtq-flag/",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Budget 2026 live: gas standing charges to be scrapped for millions as chancellor prepares to deliver budget",
+     "url": "https://www.theguardian.com/uk-news/live/2026/oct/28/budget-2026-latest-updates-john-healey-andy-burnham-labour-uk-politics",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Phantom Blade Zero Looks Like a Hit Before It's Even Come Out, With an Estimated 1 Million Prelaunch Copies Sold",
+     "url": "https://www.ign.com/articles/phantom-blade-zero-looks-like-a-hit-before-its-even-come-out-with-an-estimated-1-million-prelaunch-copies-sold",
+     "published": "2026-10-28"
     },
     {
      "outlet": "BBC",
-     "title": "Man Utd stick with Carrick - inside a turbulent 48 hours at Old Trafford",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cwz0vgj35k7mo?at_medium=RSS&at_campaign=rss",
+     "title": "Can clubs stop team news leaking out through FPL picks?",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cwly0myd08reo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "topic": "simon harmer",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Simon_Harmer",
+   "articles": [
+    {
+     "outlet": "AP",
+     "title": "Australia 90-2 at lunch against South Africa after Harmer’s double strike",
+     "url": "https://apnews.com/article/cricket-australia-southafrica-test-harmer-53887f84e9d7675f72240fd06680d471",
+     "published": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "topic": "harry",
+   "signal": "Google Trends GB 1000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Harry Kane wins the Ballon d’Or and an EFL round-up | Football Weekly – video",
+     "url": "https://www.theguardian.com/football/video/2026/oct/27/harry-kane-wins-the-ballon-dor-and-an-efl-round-up-football-weekly-video",
      "published": "2026-10-27"
     },
     {
      "outlet": "BBC Sport",
-     "title": "Carrick to stay in charge of Man Utd for Chelsea game",
-     "url": "https://www.bbc.co.uk/sport/football/articles/crlykgeqzypyo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "wind farm",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Wind_farm",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Lise Klaveness: ‘Certainly there are people that can challenge Infantino’",
-     "url": "https://www.theguardian.com/football/2026/oct/28/lise-klaveness-certainly-there-are-people-that-can-challenge-infantino",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever Just Got Another Major Racial Ability Shakeup Before Launch",
-     "url": "https://www.gamespot.com/articles/wow-forever-just-got-a-major-racial-ability-shakeup-just-before-launch/",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Storm Boelo clears but more wind and rain bear down on UK",
-     "url": "https://www.bbc.co.uk/weather/articles/cqwy7w8dryrxo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "m2",
-   "signal": "Google Trends GB 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/M2",
-   "articles": [
-    {
-     "outlet": "9to5Mac",
-     "title": "M2 iPad Air vs iPad 10: Is the base model best for most users?",
-     "url": "https://9to5mac.com/2024/05/13/m2-ipad-air-vs-ipad-10/",
-     "published": "2024-05-13"
-    },
-    {
-     "outlet": "Ars Technica",
-     "title": "Testing the 2024 BMW M2—maybe the last M car with a manual transmission",
-     "url": "https://arstechnica.com/cars/2024/03/testing-the-2024-bmw-m2-maybe-the-last-m-car-with-a-manual-transmission/",
-     "published": "2024-03-22"
-    }
-   ]
-  },
-  {
-   "topic": "japan open",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Japan_Open_(tennis)",
-   "articles": [
-    {
-     "outlet": "Variety",
-     "title": "Taiwan-Japan Film Fund Daily Capital Launches at Tokyo Market, Backs Period Romance ‘Love Ends in Bloom’",
-     "url": "https://variety.com/2026/film/markets-festivals/taiwan-japan-film-fund-daily-capital-launches-tiffcom-1236932939/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Deadline",
-     "title": "Amazon MGM Studios Japan To Double Investment In Original Content; ‘One Piece’ & ‘Kingdom’ Producers Talk IP Strategies – TIFFCOM",
-     "url": "https://deadline.com/2026/10/one-piece-amazon-mgm-studios-japan-kingdom-tiffcom-1237206872/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Resident Evil Executive Producer Says the Series' Story Could End 'In the Next 10 Years'",
-     "url": "https://www.ign.com/articles/resident-evil-executive-producer-says-the-series-story-could-end-in-the-next-10-years",
+     "title": "How Kane's Ballon d'Or win could boost the Bundesliga",
+     "url": "https://www.bbc.co.uk/sport/football/articles/crgqwge88z84o?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-27"
     },
     {
      "outlet": "BBC",
-     "title": "Little Angel makes big impact on return to Japan",
-     "url": "https://www.bbc.co.uk/sport/rugby-union/articles/ck1l377n0r6mo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "black friday",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Black_friday",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Erin Patterson to learn fate in appeal against mushroom murders convictions",
-     "url": "https://www.theguardian.com/australia-news/2026/oct/28/erin-patterson-to-learn-fate-appeal-mushroom-murders-convictions-ntwnfb",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "IGN",
-     "title": "The 2026 55\" LG Evo C6 4K OLED TV Drops to Black Friday Pricing Plus Get a Free Xbox Controller",
-     "url": "https://www.ign.com/articles/lg-evo-c6-4k-oled-tv-deal-free-xbox-controller-october-2026",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "The Verge",
-     "title": "Here’s why the iPhone Duo’s hinge could be cracking the screen",
-     "url": "https://www.theverge.com/tech/1020145/iphone-duo-crackgate-broken-screen-hinge",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Fan favourite map Shipment arrives today in Modern Warfare 4, just four days after launch - a new record for Call of Duty",
-     "url": "https://www.eurogamer.net/call-of-duty-modern-warfare-4-shipment-map-date",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "perseverance",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Perseverance",
-   "articles": [
-    {
-     "outlet": "Space.com",
-     "title": "Mars rover tracks from a historic drive | Space photo of the day for Oct. 27, 2026",
-     "url": "https://www.space.com/space-exploration/mars-rovers/mars-rover-tracks-from-a-historic-drive-space-photo-of-the-day-for-oct-27-2026",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "NASA",
-     "title": "NASA’s Perseverance Sets Off-World Record for Total Distance Driven",
-     "url": "https://www.jpl.nasa.gov/news/nasas-perseverance-sets-off-world-record-for-total-distance-driven/",
-     "published": "2026-10-12"
-    },
-    {
-     "outlet": "CNN",
-     "title": "Perseverance rover will uncover mysterious Martian history after a monthslong challenging trek",
-     "url": "https://www.cnn.com/2024/12/12/science/perseverance-rover-crater-rim/",
-     "published": "2024-12-12"
-    }
-   ]
-  },
-  {
-   "topic": "pink",
-   "signal": "Google Trends US 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Pink",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Cycling in the wild heart of the Netherlands: an autumnal break in the Veluwe",
-     "url": "https://www.theguardian.com/travel/2026/oct/28/cycling-nature-holiday-veluwe-netherlands",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "Check Out 46 Seconds Of New Final Fantasy 7 Revelation Gameplay (And A Pink Chocobo)",
-     "url": "https://www.gamespot.com/articles/check-out-46-seconds-of-new-final-fantasy-7-revelation-gameplay-and-a-pink-chocobo/",
+     "title": "How 'anti-superstar' Kane defied doubters to become world's best",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-27"
     }
    ]
@@ -696,9 +672,9 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "We, the Hated review – standing up to be abused: behind the scenes with Just Stop Oil",
-     "url": "https://www.theguardian.com/film/2026/oct/27/we-the-hated-review-standing-up-to-be-abused-behind-the-scenes-with-just-stop-oil",
-     "published": "2026-10-27"
+     "title": "A Sugababe reveals her hardcore system for dating: best podcasts of the week",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/26/a-sugababe-reveals-her-hardcore-system-for-dating-best-podcasts-of-the-week",
+     "published": "2026-10-26"
     },
     {
      "outlet": "IGN",
@@ -710,14 +686,14 @@
    "source": "Steam"
   },
   {
-   "topic": "Kalshi: Trade Sports & Events",
-   "signal": "App Store US: new in the top 10 free apps",
-   "wikipedia": null,
+   "topic": "Amazon Shopping",
+   "signal": "App Store GB: new in the top 10 free apps",
+   "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Shopping",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "Kalshi Promo Code SBWIRE55 | $55 Bonus for NBA, World Series & NFL Week 8",
-     "url": "https://mmajunkie.usatoday.com/story/sports/2026/10/27/kalshi-promo-code-sbwire55-october-27-verified/91302609007/",
+     "outlet": "Rolling Stone",
+     "title": "The Best Christmas Gifts for Athletes, According to a Shopping Writer Who Works Out",
+     "url": "https://www.rollingstone.com/product-recommendations/lifestyle/best-christmas-gifts-for-athletes-2026-1235648426/",
      "published": "2026-10-27"
     }
    ],
@@ -730,26 +706,26 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "South Africa v Australia: third men’s cricket Test, day two – live",
-     "url": "https://www.theguardian.com/sport/live/2026/oct/28/south-africa-v-australia-third-test-day-two-cricket-newlands-cape-town-live-updates",
+     "title": "Budget 2026 live: gas standing charges to be scrapped for millions as chancellor prepares to deliver budget",
+     "url": "https://www.theguardian.com/uk-news/live/2026/oct/28/budget-2026-latest-updates-john-healey-andy-burnham-labour-uk-politics",
      "published": "2026-10-28"
     },
     {
-     "outlet": "Variety",
-     "title": "Taiwan-Japan Film Fund Daily Capital Launches at Tokyo Market, Backs Period Romance ‘Love Ends in Bloom’",
-     "url": "https://variety.com/2026/film/markets-festivals/taiwan-japan-film-fund-daily-capital-launches-tiffcom-1236932939/",
+     "outlet": "Polygon",
+     "title": "25 Years Later, Nintendo’s Spookiest Game Is a Must-Play On Switch 2",
+     "url": "https://www.polygon.com/luigis-mansion-gamecube-retrospective-switch-online/",
      "published": "2026-10-28"
     },
     {
      "outlet": "NME",
-     "title": "DIIV – ‘ZIRP!’ review: pop meets politics on their most adventurous record yet",
-     "url": "https://www.nme.com/reviews/album/diiv-zirp-review-3974219?utm_source=rss&utm_medium=rss&utm_campaign=diiv-zirp-review",
+     "title": "Jack Antonoff to Ed Sheeran: “We all live in a world where billionaires are constantly telling us what to do – so stand the fuck up”",
+     "url": "https://www.nme.com/news/music/jack-antonoff-criticises-ed-sheeran-amid-macklemore-controversy-stand-the-fuck-up-3974423?utm_source=rss&utm_medium=rss&utm_campaign=jack-antonoff-criticises-ed-sheeran-amid-macklemore-controversy-stand-the-fuck-up",
      "published": "2026-10-28"
     },
     {
-     "outlet": "Sky Sports",
-     "title": "Reigning champions Knicks beat Pistons for first win of the season",
-     "url": "https://www.skysports.com/basketball/news/12040/13604679/new-york-knicks-111-97-detroit-pistons-reigning-champions-knicks-beat-pistons-for-first-win-of-the-season",
+     "outlet": "Variety",
+     "title": "Russell Brand Takes the Stand in Rape Trial and Reveals No One Agreed to Testify on His Behalf: ‘My Entire Life Has Been Consumed by These A",
+     "url": "https://variety.com/2026/tv/global/russell-brand-takes-stand-rape-trial-no-one-else-testifying-1236933186/",
      "published": "2026-10-28"
     }
    ],
@@ -767,12 +743,6 @@
      "published": "2026-10-27"
     },
     {
-     "outlet": "IGN",
-     "title": "Discord Messages in Discoverable Servers Will Soon Be Searchable on Google",
-     "url": "https://www.ign.com/articles/discord-messages-in-discoverable-servers-will-soon-be-searchable-on-google",
-     "published": "2026-10-27"
-    },
-    {
      "outlet": "TechCrunch",
      "title": "Google’s Genie 4 world model adds audio, more realistic worlds, and real-time steering",
      "url": "https://techcrunch.com/2026/10/27/googles-genie-4-world-model-adds-audio-more-realistic-worlds-and-real-time-steering/",
@@ -783,70 +753,52 @@
      "title": "AI fan wikis riddled with errors are muddying the waters of an already contested part of games culture",
      "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
      "published": "2026-10-27"
+    },
+    {
+     "outlet": "GameSpot",
+     "title": "Xbox Game Pass Is Now Included With A Phone Plan",
+     "url": "https://www.gamespot.com/articles/xbox-game-pass-is-now-included-with-a-phone-plan/",
+     "published": "2026-10-26"
     }
    ],
    "source": "App Store"
   },
   {
-   "topic": "Local fights over AI data centers",
-   "signal": "Bluesky trending, 1,878 posts",
+   "topic": "Brewers vs. Rays, Game 4",
+   "signal": "Bluesky trending, 6,033 posts",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Space.com",
-     "title": "Cowboy Space unveils 'Big Iron' rocket to launch 20,000 AI data centers",
-     "url": "https://www.space.com/space-exploration/launches-spacecraft/cowboy-space-unveils-big-iron-rocket-to-launch-20-000-ai-data-centers",
-     "published": "2026-10-27"
+     "outlet": "Guardian",
+     "title": "Rays battle from brink in 12th inning to stun Brewers and stave off World Series sweep",
+     "url": "https://www.theguardian.com/sport/2026/oct/28/rays-brewers-world-series-game-four-12th-inning-rally",
+     "published": "2026-10-28"
     },
     {
-     "outlet": "GameSpot",
-     "title": "Xbox Workers Are Eligible For Buyouts As Part Of Huge Shakeup At Microsoft",
-     "url": "https://www.gamespot.com/articles/xbox-workers-are-eligible-for-buyouts-as-part-of-huge-shakeup-at-microsoft/",
-     "published": "2026-10-27"
+     "outlet": "Billboard",
+     "title": "Watch NE-YO Perform National Anthem at Game 4 of 2026 World Series in Tampa Bay",
+     "url": "https://www.billboard.com/music/rb-hip-hop/ne-yo-national-anthem-game-4-2026-world-series-1236369312/",
+     "published": "2026-10-28"
     }
    ],
    "source": "Bluesky"
   },
   {
-   "topic": "Threads",
+   "topic": "Kalshi: Trade Sports & Events",
    "signal": "App Store US: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Threads",
+   "wikipedia": null,
    "articles": [
     {
-     "outlet": "Wired",
-     "title": "Black Twitter Is Thriving—on Threads",
-     "url": "https://www.wired.com/story/threads-is-black-twitters-unlikely-spiritual-successor/",
-     "published": "2026-09-29"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "Threads users can now chat with Meta AI in their DMs",
-     "url": "https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/",
-     "published": "2026-07-27"
-    },
-    {
-     "outlet": "9to5Mac",
-     "title": "Threads is testing long-form posts with support for formatted text [U: Launched]",
-     "url": "https://9to5mac.com/2025/09/04/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
-     "published": "2025-09-04"
-    },
-    {
-     "outlet": "CNN",
-     "title": "Threads now has ‘tens of millions’ of daily users. But its honeymoon phase may be over",
-     "url": "https://www.cnn.com/2023/07/19/tech/threads-meta-growth-plan",
-     "published": "2023-07-19"
+     "outlet": "USA Today",
+     "title": "Kalshi Promo Code SBWIRE55 | $55 Bonus for NBA, World Series & NFL Week 8",
+     "url": "https://mmajunkie.usatoday.com/story/sports/2026/10/27/kalshi-promo-code-sbwire55-october-27-verified/91302609007/",
+     "published": "2026-10-27"
     }
    ],
    "source": "App Store"
   },
   {
    "topic": "Ballon d'Or 2026 analysis",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": []
-  },
-  {
-   "topic": "Ballon d'Or 2026 rankings",
    "signal": "watchlist: Ballon d'Or 2026 (launch)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": []
@@ -864,25 +816,31 @@
    "articles": []
   },
   {
-   "topic": "Walter Koenig analysis",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": []
-  },
-  {
-   "topic": "Walter Koenig history and records",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": []
-  },
-  {
-   "topic": "Walter Koenig explained",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": []
-  },
-  {
    "topic": "Walter Koenig rankings",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "articles": []
+  },
+  {
+   "topic": "Walter Koenig by the numbers",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "articles": []
+  },
+  {
+   "topic": "Walter Koenig best moments",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "articles": []
+  },
+  {
+   "topic": "Walter Koenig what happens next",
+   "signal": "watchlist: Walter Koenig (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "articles": []
+  },
+  {
+   "topic": "Walter Koenig past winners",
    "signal": "watchlist: Walter Koenig (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
    "articles": []

@@ -2,7 +2,7 @@
 
 **Progress** (Wed 28 Oct, 10:51): 18 of 1,000 subscribers · 12,632 of 10 million Shorts views in 90 days · 4,326 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Wed 28 Oct 9:15 (UK): 4 scheduled, 145 public, 19 uploads in the last 24 hours.
+YouTube checked Wed 28 Oct 11:33 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 7:58).
 
@@ -155,6 +155,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ### Wed 28 Oct 19:00 · Harry Kane Ballon d'Or, Dai Dai Record, Northumbria Mysteries
 scheduled · [YouTube](https://youtube.com/shorts/Tul1oIPN8-Q)
 
+### Wed 28 Oct 17:00 · Lord of the Rings: the 438 day filming secret
+scheduled · 44 s · music: once-upon-a-time · [script](../boards/done/QD-247.json) · [YouTube](https://youtube.com/shorts/u2uM8uaZDVo)
+
+![QD-247](QD-247.jpg)
+
 ### Wed 28 Oct 16:00 · Game Facts #6: gta 6 install size officially revealed at 210 GB
 scheduled · 36 s · music: ego-chall · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
 
@@ -170,13 +175,18 @@ scheduled · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216
 
 ![QD-216](QD-216.jpg)
 
+### Wed 28 Oct 10:00 · Harry Kane Ballon d'Or: chaotic London ceremony ⚽
+public · 46 views · 31 s · music: once-upon-a-time · [script](../boards/done/QD-245.json) · [YouTube](https://youtube.com/shorts/rjO3XWFiBk0)
+
+![QD-245](QD-245.jpg)
+
 ### Wed 28 Oct 8:00 · harry potter cast: Harry Gilby
-public · 33 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
+public · 34 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
 
 ![QD-226](QD-226.jpg)
 
 ### Wed 28 Oct 7:00 · Film Facts #2: kpop demon hunters song: the soundtrack history
-public · 329 views · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
+public · 685 views · 37 s · music: purple-desire · [script](../boards/done/QD-215.json) · [YouTube](https://youtube.com/shorts/hQWwgZnuEk4)
 
 ![QD-215](QD-215.jpg)
 
@@ -186,12 +196,12 @@ public · 4 views · 41 s · music: impossible-sacrifice · [script](../boards/d
 ![QD-210](QD-210.jpg)
 
 ### Wed 28 Oct 2:30 · Star Stories #2: Matthew Perry Netflix documentary 📺
-public · 32 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
+public · 36 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
 
 ![QD-228](QD-228.jpg)
 
 ### Wed 28 Oct 1:30 · Film Explained #1: How Lord of the Rings Made Hobbits Small
-public · 718 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
+public · 957 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
 
 ![QD-219](QD-219.jpg)
 
@@ -236,7 +246,7 @@ public · 39 views · 39 s · music: across-seas-and-lands · on Instagram · [s
 ![QD-200](QD-200.jpg)
 
 ### Tue 27 Oct 11:00 · Song Secrets #3: Beyonce solo debut hits number one in Billboard
-public · 401 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
+public · 407 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
 
 ![QD-202](QD-202.jpg)
 
@@ -246,12 +256,12 @@ public · 14 views · 27 s · music: in-battery · [script](../boards/done/QD-20
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-public · 363 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+public · 362 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 
 ### Tue 27 Oct 8:00 · Kylian Mbappé: the 87th minute moment that changed everything ⚽
-public · 58 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
+public · 57 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
 
 ![QD-189](QD-189.jpg)
 
@@ -281,7 +291,7 @@ public · 7 views · 43 s · music: circuit-rush · [script](../boards/done/QD-1
 ![QD-187](QD-187.jpg)
 
 ### Mon 26 Oct 15:30 · Hunger Games: cast complete (Part 3)
-public · 629 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
+public · 635 views · 31 s · music: stake-out · on Instagram · [script](../boards/done/QD-180.json) · [YouTube](https://youtube.com/shorts/VblVWSJqX6E)
 
 ![QD-180](QD-180.jpg)
 
@@ -326,7 +336,7 @@ public · 21 views · 35 s · music: duty-calls · on Instagram · on Facebook �
 ![QD-176](QD-176.jpg)
 
 ### Sun 25 Oct 22:00 · saints vs steelers: the Paris milestone explained
-public · 214 views · 38 s · music: duty-calls · on Instagram · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
+public · 213 views · 38 s · music: duty-calls · on Instagram · [script](../boards/done/QD-175.json) · [YouTube](https://youtube.com/shorts/Z7f5Da-Nd8Y)
 
 ![QD-175](QD-175.jpg)
 
@@ -337,13 +347,3 @@ public · 2 views · 30 s · music: horizons · on Instagram · [script](../boar
 
 ### Sun 25 Oct 19:00 · This Week in Trends: Queen, Barbara Palvin and Jenna Ortega
 public · 4 views · [YouTube](https://youtube.com/shorts/ajlYdYeu-CY)
-
-### Sun 25 Oct 19:00 · barbara palvin 13 years old: the church choice 💒
-public · 20 views · 32 s · music: level · [script](../boards/done/QD-173.json) · [YouTube](https://youtube.com/shorts/LENtoDiGI8E)
-
-![QD-173](QD-173.jpg)
-
-### Sun 25 Oct 17:00 · Mortimer and Whitehouse: Ted's last trip 🐾
-public · 166 views · 38 s · music: rise-of-the-machines · [script](../boards/done/QD-172.json) · [YouTube](https://youtube.com/shorts/8NBbhUrLjGU)
-
-![QD-172](QD-172.jpg)

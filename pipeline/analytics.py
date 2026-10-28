@@ -246,6 +246,19 @@ def youtube(ours=None):
     return {"subs": subs, "videos": vids, "stats": stats, "analytics": per_video, "daily": daily, "retention": retention,
             "audience": aud, "cached_at": NOW.isoformat(timespec="minutes"), "sources": sources}
 
+def channel_daily(ya, today, days=120):
+    """[{day, views, engagedViews, subscribersGained, subscribersLost}] for the signed-in channel, one YouTube Analytics query
+    (it costs no Data API units); [] when the read fails. The main channel's same read is youtube()'s "daily"."""
+    for m in ("views,engagedViews,subscribersGained,subscribersLost", "views,subscribersGained,subscribersLost"):
+        try:
+            r = ya.reports().query(ids="channel==MINE", startDate=str(today - dt.timedelta(days=days)), endDate=str(today), metrics=m,
+                                   dimensions="day", sort="day").execute()
+        except Exception: continue
+        cols = [c["name"] for c in r.get("columnHeaders", [])]
+        return [dict(zip(cols, row)) for row in r.get("rows", []) or []]
+    return []
+
+
 def extra_youtube(ours=None):
     """The Daily line's other channels (config shorts_channels), each once it is signed in: its videos, live view, like and
     comment counts and subscriber total, read with the channel's own sign-in (a unit per 50 videos), and, in a full run, one
@@ -254,7 +267,7 @@ def extra_youtube(ours=None):
     channel only. {"videos": {id: video}, "stats": {id: {views, likes, comments}}, "analytics": {id: {...}},
     "channel_of": {id: channel}, "subs": {channel: n}, "errors": {channel: why}}; empty while no extra channel is signed in."""
     import youtube as Y
-    out = {"videos": {}, "stats": {}, "analytics": {}, "channel_of": {}, "subs": {}, "errors": {}}
+    out = {"videos": {}, "stats": {}, "analytics": {}, "channel_of": {}, "subs": {}, "errors": {}, "daily": {}}
     for ch in (CFG.get("shorts_channels") or {}):
         if not Y.connected(ch): continue
         try:
@@ -271,7 +284,9 @@ def extra_youtube(ours=None):
             out["videos"].update(vids); out["stats"].update(stats); out["channel_of"].update({vid: ch for vid in vids})
             cache_p = CACHE / f"youtube_{ch}.json"
             if FAST:        # YouTube Analytics only moves once or twice a day: the last full run's answers
-                out["analytics"].update((load_json(cache_p, {}) or {}).get("analytics") or {})
+                c = load_json(cache_p, {}) or {}
+                out["analytics"].update(c.get("analytics") or {})
+                if c.get("daily"): out["daily"][ch] = c["daily"]
                 continue
             try:
                 from googleapiclient.discovery import build
@@ -288,8 +303,10 @@ def extra_youtube(ours=None):
                     cols = [c["name"] for c in r.get("columnHeaders", [])]
                     got = {row[cols.index("video")]: dict(zip(cols, row)) for row in r.get("rows", []) or []}
                     out["analytics"].update(got)
+                    daily = channel_daily(ya, TODAY)       # the channel's own days (subs_daily.py, 28 October): an Analytics query, no Data API units
+                    if daily: out["daily"][ch] = daily
                     CACHE.mkdir(parents=True, exist_ok=True)
-                    cache_p.write_text(json.dumps({"at": NOW.isoformat(timespec="minutes"), "analytics": got}, ensure_ascii=False))
+                    cache_p.write_text(json.dumps({"at": NOW.isoformat(timespec="minutes"), "analytics": got, "daily": daily}, ensure_ascii=False))
                     break
             except Exception as e:
                 out["errors"][f"{ch}_analytics"] = f"{type(e).__name__}: {e}"[:200]
@@ -459,6 +476,7 @@ def rkey(r):
 
 # ---------------- timing: each Short's views hour by hour, and the channel's views each hour ----------------
 VEL_HOURS = (1, 3, 6, 12, 24, 48, 72)
+VIEWS_LATER = (("views_7d", 168), ("views_28d", 672))      # views_72h was the last; these read the same hourly curves (6-hourly after 7 days) further on
 
 def update_curves(rows):
     """analytics/curves/<day posted>.json: {short: {video, posted, points: [[hours since posting, YouTube, Instagram,
@@ -793,7 +811,7 @@ def main():
     yt = ig = fb = None
     try: yt = youtube(ours)
     except Exception as e: errors["youtube"] = f"{type(e).__name__}: {e}"[:300]
-    xt = {"videos": {}, "stats": {}, "channel_of": {}, "subs": {}, "errors": {}}      # the line's other channels, once signed in
+    xt = {"videos": {}, "stats": {}, "channel_of": {}, "subs": {}, "errors": {}, "daily": {}}      # the line's other channels, once signed in
     try: xt = extra_youtube(ours)
     except Exception as e: errors["extra_channels"] = f"{type(e).__name__}: {e}"[:300]
     errors.update({f"youtube_{ch}": why for ch, why in xt["errors"].items()})
@@ -883,6 +901,8 @@ def main():
         c = curves.get(rkey(r))
         for h in VEL_HOURS:
             v = views_at(c, h); r[f"views_{h}h"] = "" if v is None else v
+        for col, h in VIEWS_LATER:      # 7 and 28 days: the same curves, no extra YouTube call (28 October)
+            v = views_at(c, h); r[col] = "" if v is None else v
     for pool in [rows] + [[r for r in xrows if r["channel"] == ch] for ch in sorted({r["channel"] for r in xrows})]:
         relative(pool, "views_24h", "_rel24")
         relative(pool, "views_per_hour", "_relvph")
@@ -1010,17 +1030,20 @@ def main():
         try: table += DRV.analyse_instagram(rows)        # Instagram's own tests and categories, against Instagram views
         except Exception as e: print("instagram drivers:", str(e)[:150])
         write_csv(OUT / "drivers.csv", table, ["feature", "feature_label", "value", "n", "lift", "median_rel", "verdict",
-                                               "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why"])
+                                               "held_3s_pct", "avg_viewed_pct", "subs_per_1k", "shares_per_1k", "why", "feed_pct", "p", "q"])
         log_decisions(table, DRV.METHOD)
         try:        # 26 October: one pooled model, read per channel (each channel's own lift, pulled to the pooled one; an exception at 10+ Shorts)
             write_csv(OUT / "channel_drivers.csv", DRV.channel_table(all_rows, table), DRV.CHANNEL_FIELDS)
         except Exception as e: print("channel drivers:", str(e)[:150])
         try:        # the round's adjusted verdicts (drivers.round_verdicts): winner, even, no clear difference or running
             rf, r_start, r_per, r_name = round_factors()
-            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name, starts=round_starts(),
-                                                                 metrics=round_metrics()), DRV.ROUND_FIELDS)
+            if rf: write_csv(OUT / "round.csv", DRV.round_verdicts(all_rows, rf, r_start, r_per, r_name, **round_kw()), DRV.ROUND_FIELDS)
             else: (OUT / "round.csv").unlink(missing_ok=True)
         except Exception as e: print("round verdicts:", str(e)[:150])
+        try:        # 28 October: the channel-day subscriber model (advisory), analytics/subs_daily.csv and subs_model.md
+            import subs_daily as SD
+            SD.write(OUT, all_rows, {"main": (yt or {}).get("daily") or [], **(xt.get("daily") or {})}, round_factors()[0], str(TODAY))
+        except Exception as e: print("subscriber days:", str(e)[:150])
         sub_table, sub_sum = [], {}
         try:        # subscribers per 1,000 views: the subscriber push's own judgement, apart from views (analytics/subs.csv)
             sub_table, sub_sum = DRV.analyse_subscribers(all_rows), DRV.subs_summary(rows)      # verdicts pool every channel; the headline is the main channel's
@@ -1215,6 +1238,15 @@ def round_metrics():
     return EV.round_metrics(CFG)
 
 
+def round_kw():
+    """What drivers.round_verdicts is given besides the data (28 October): each contest's own start, the opening genes' metric,
+    the adopted winners still being confirmed (evolve.confirming), the contests about one category (evolve.round_scopes) and
+    the joint model's last reading (drivers.load_joint, joint.py), which withholds a winner it puts on the losing side."""
+    import drivers as DRV
+    return {"starts": round_starts(), "metrics": round_metrics(), "confirming": EV.confirming(CFG), "scopes": EV.round_scopes(CFG),
+            "joint": DRV.load_joint()}
+
+
 def test_progress(rows, table, today=None):
     """The factorial round's progress (round_factors, writer.test_plan), every channel (26 October): for each factor and
     arm, the Shorts measured so far (posted since the round began, 24-hour views in, counted on the arm as assigned), how
@@ -1231,7 +1263,7 @@ def test_progress(rows, table, today=None):
     today = today or NOW.astimezone(UK).date()
     verdict = {(t.get("feature"), t.get("value")): t.get("verdict", "") for t in table or []}
     metrics = round_metrics()
-    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name, starts=starts, metrics=metrics)}
+    try: rv = {x["factor"]: x for x in DRV.round_verdicts(rows, factors, start, per, name, **round_kw())}
     except Exception as e: rv = {}; print("round verdicts:", str(e)[:150])
     counts = {f: {a: 0 for a in arms} for f, arms in factors.items()}
     followed = {f: [0, 0] for f in counts}            # (Shorts whose arm was used as assigned, Shorts with a used value)
@@ -1268,7 +1300,7 @@ def test_progress(rows, table, today=None):
         out["factors"][f] = {"arms": {a: {"n": n, "needs": max(0, per - n), "verdict": verdict.get((f, a), "")} for a, n in arms.items()},
                              "settled": settled, "days_left": 0 if settled else math.ceil(need / rate), "label": label,
                              **{k: v.get(k, "") for k in ("verdict", "effect", "low", "high", "halves", "winner", "leaning", "why",
-                                                          "metric", "views_effect")}}
+                                                          "metric", "views_effect", "p", "q", "luck", "confirm")}}
         if followed[f][1]: out["factors"][f]["followed_pct"] = round(100 * followed[f][0] / followed[f][1])
         a_, b_ = (list(arms) + ["", ""])[:2]
         res = v.get("verdict", "")
@@ -1276,8 +1308,11 @@ def test_progress(rows, table, today=None):
         if res == "winner": said = f"winner {v['winner']} ({b_} against {a_}: {ci}); kept, still challenged 1 Short in 5"
         elif res == "even": said = f"even ({ci}): settled, out of the round"
         elif res == "no clear difference": said = f"no clear difference at {per} a side: settled, out of the round"
-        elif res == "running": said = (f"running ({b_} against {a_}: {ci}" + (f"; leaning {v['leaning']}" if v.get("leaning") else "") + ")"
+        elif res == "running": said = (f"running{' (luck check)' if v.get('luck') == 'yes' else ''} ({b_} against {a_}: {ci}" + (f"; leaning {v['leaning']}" if v.get("leaning") else "") + ")"
+                                       + (f"; q {v['q']} is over the luck check's level" if v.get("luck") == "yes" else "")
                                        + f"; about {math.ceil(need / rate)} more days at most")
+        elif res in ("confirming", "confirmed", "reverted"):
+            said = f"{res}: {v.get('confirm')} ({b_} against {a_}: {ci}) {v.get('why')}"
         else: said = f"too few to tell; about {math.ceil(need / rate)} more days at most"
         if v.get("metric") == "engaged": said += (", judged on the engaged share (views that stayed)"
                                                   + (f"; views {v['views_effect']}x" if v.get("views_effect") not in ("", None) else ""))

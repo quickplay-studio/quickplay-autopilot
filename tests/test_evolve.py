@@ -30,7 +30,7 @@ EVC = {"on": True, "width": 3, "max_changes_per_run": 3, "max_genes": 3, "max_ne
        "retest_days": 28, "neighbour_factors": ["hook_type"]}
 ROUND = {"name": "round 1", "start": "2026-10-25", "per_arm": 70,
          "factors": {"hook_type": ["statement", "number"], "ending": ["loop", "question"], "first_frame": ["cover", "photo"]}}
-CFG = {"evolve": EVC, "test_round": ROUND}
+CFG = {"evolve": EVC, "test_round": ROUND, "analysis": {"confirm_n": 0}}      # 28 October: a winner is locked in at once here; tests/test_confirm.py covers the confirming trial
 TESTS = {"hook_type": ["statement", "question", "number", "superlative", "twist"],
          "length": ["under 25 s", "25 to 34 s", "35 to 44 s", "about 60 s", "about 2 min"],
          "ending": ["loop", "question"], "first_frame": ["cover", "photo"]}

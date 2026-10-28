@@ -1113,7 +1113,7 @@ def test_plan(k, kind="news", explore=False, today=None, channel=None):
     picks = dict(won)
     for f, options in factors.items():               # the round: every factor, 50/50, independent of the others
         if f in won and k % RETEST and not evolving: continue     # a settled factor keeps its winner, challenged 1 Short in RETEST
-        picks[f] = random.Random(f"{rnd.get('name', 'round')}:{f}:{k}").choice(options)
+        picks[f] = EV.draw(f, options, random.Random(f"{rnd.get('name', 'round')}:{f}:{k}"), CFG)      # 50/50, an adopted winner on trial 80/20 (evolve.draw)
     still = [t for t in dims if t not in won and t not in factors and t not in done]
     others = [t for t in won if t not in factors]
     if others and k % RETEST == 0:

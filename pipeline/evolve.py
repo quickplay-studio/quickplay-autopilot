@@ -26,13 +26,22 @@ validate and changes load when used. Writes analytics/evolve.json (the state), e
 summary), and a ledger row (area "learning") for each adoption and new champion. The proposals are the complex step, so they go
 to Claude first (config evolve.model, "opus"; evolve.claude_calls_per_run, 1, a call returns every proposal); everything else
 is plain code, and each gene records which model proposed it ("by").
+28 October (Charlie approved, serving the Partner Programme): a winner is no longer locked in on its first win. A new champion or
+an adopted gene stays in the round as a "confirming" contest: most Shorts (1 - analysis.confirm_share, 0.8) take it, the
+rest keep the previous choice (draw), until analysis.confirm_n (20) Shorts a side are measured; round.csv then says confirmed
+(not worse than the previous choice beyond the even band) and it is locked in, or reverted and the previous champion or no
+instruction returns, with a row in analytics/decisions.csv. The win itself already passed the luck check (fdr.py: a
+Benjamini-Hochberg q at analysis.fdr_q) and the joint model's veto (joint.py) in drivers.round_verdicts. A fifth source,
+"joint", turns a category interaction the joint model finds clear into a writing instruction for that category, at most one
+live at a time.
 """
 import csv, datetime as dt, difflib, json, math, os, pathlib, random, re, sys
 
 ROOT = pathlib.Path(os.environ.get("EVOLVE_ROOT") or pathlib.Path(__file__).resolve().parent.parent)
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import fdr as FDR           # the analysis settings (fdr_q, confirm_share, confirm_n) and the luck check's p-values
 
-SOURCES = ("neighbour", "retest", "gene", "mutate")
+SOURCES = ("neighbour", "retest", "gene", "mutate", "joint")
 SETTLED = ("even", "no clear difference")
 GENE = "gene:"
 DEFAULTS = {"on": False, "model": "opus", "claude_calls_per_run": 1, "width": 11, "max_changes_per_run": 3, "max_genes": 3, "max_new_genes_per_run": 1, "max_adopted": 6,
@@ -98,7 +107,8 @@ def uk_today():
 
 
 def settings(cfg):
-    return {**DEFAULTS, **((cfg or {}).get("evolve") or {})}
+    a = FDR.settings(cfg or {})
+    return {**DEFAULTS, **((cfg or {}).get("evolve") or {}), "fdr_q": a["fdr_q"], "confirm_share": a["confirm_share"], "confirm_n": a["confirm_n"]}
 
 
 def on(cfg):
@@ -134,6 +144,36 @@ def round_metrics(cfg):
     gs = read_state().get("genes") or {}
     return {f: "engaged" for f in (live_round(cfg).get("factors") or {})
             if is_gene(f) and (gs.get(gene_id(f)) or {}).get("metric") == "engaged"}
+
+
+def round_scopes(cfg):
+    """{gene factor: category} for the live contests about one category (a "joint" gene, scope.category): drivers.round_verdicts
+    judges only that category's Shorts. {} when evolve is off or none is live."""
+    if not on(cfg): return {}
+    gs = read_state().get("genes") or {}
+    return {f: (gs.get(gene_id(f)) or {})["scope"]["category"] for f in (live_round(cfg).get("factors") or {})
+            if is_gene(f) and isinstance((gs.get(gene_id(f)) or {}).get("scope"), dict) and (gs[gene_id(f)]["scope"] or {}).get("category")}
+
+
+def confirming(cfg=None):
+    """{factor: {"arm", "prev", "n", "share", "since", ...}} the adopted winners still on trial (analytics/evolve.json
+    "confirming"): each is also a live contest in the round, drawn 1 - share for the new arm and share for the previous choice
+    (draw); drivers.round_verdicts judges it "confirming", then "confirmed" or "reverted". {} when evolve is off (cfg given)."""
+    if cfg is not None and not on(cfg): return {}
+    st = read_state()
+    live = (st.get("round") or {}).get("factors") or {}
+    c = st.get("confirming")
+    return {f: v for f, v in c.items() if isinstance(v, dict) and f in live and v.get("arm") and v.get("prev")} if isinstance(c, dict) else {}
+
+
+def draw(f, options, rng, cfg=None):
+    """The arm factor f takes on one Short (writer.test_plan): 50/50 as ever, except an adopted winner still being confirmed,
+    which keeps its previous choice on `share` of the Shorts (analysis.confirm_share, 0.2) and takes the new arm on the rest.
+    `rng` is the Short's own seeded random.Random, so the draw repeats."""
+    c = confirming(cfg).get(f)
+    if c and len(options) == 2 and c["arm"] in options and c["prev"] in options and c["arm"] != c["prev"]:
+        return c["prev"] if rng.random() < float(c.get("share", 0.2)) else c["arm"]
+    return rng.choice(options)
 
 
 def is_opening(st, f):
@@ -221,7 +261,7 @@ def skeleton(cfg):
     start = str(r.get("start") or "")
     return {"round": {"name": r.get("name", "round 1"), "start": start, "per_arm": int(r.get("per_arm", 70)), "factors": factors,
                       "starts": {f: start for f in factors}, "origin": {f: "round 1" for f in factors}},
-            "champions": {}, "genes": {}, "adopted": {}, "history": [],
+            "champions": {}, "genes": {}, "adopted": {}, "confirming": {}, "history": [],
             "sources": {s: {"contests": 0, "wins": 0} for s in SOURCES}, "updated": ""}
 
 
@@ -234,7 +274,7 @@ def load_state(cfg):
     for f in st["round"]["factors"]:
         st["round"]["starts"].setdefault(f, st["round"].get("start") or "")
         st["round"]["origin"].setdefault(f, "round 1")
-    for k in ("champions", "genes", "adopted"):
+    for k in ("champions", "genes", "adopted", "confirming"):
         if not isinstance(st.get(k), dict): st[k] = {}
     if not isinstance(st.get("history"), list): st["history"] = []
     if not isinstance(st.get("sources"), dict): st["sources"] = {}
@@ -282,6 +322,7 @@ class Run:
         self.tests, self.texts, self.exclude, self.dry = tests, texts or {}, set(exclude), dry
         self.rows = rows if rows is not None else {}
         self.log, self.ledger, self.new_genes, self.added, self.claude_calls = [], [], 0, 0, 0
+        self.decisions = []             # rows for analytics/decisions.csv (a reverted trial)
 
     def note(self, action, factor="", arms=(), source="", verdict="", effect="", note=""):
         self.log.append({"date": self.today, "action": action, "factor": factor, "arms": " vs ".join(str(a) for a in arms),
@@ -310,6 +351,61 @@ def read_results():
     except Exception: return {}
 
 
+def confirm_text(S):
+    return f"{round(100 * (1 - S['confirm_share']))}% of Shorts until {S['confirm_n']} a side are measured"
+
+
+def begin_trial(run, f, arms, w, src, op, prev_champion):
+    """An adopted winner starts its confirmation (28 October): it stays a live contest (settle keeps it in the round with a fresh
+    start), drawn for the winner on 1 - confirm_share of the Shorts and for the previous choice on the rest (draw), until
+    confirm_n Shorts a side are in. prev_champion: the champion before it (None: there was none, and a revert returns to that)."""
+    S = run.S
+    run.st["confirming"][f] = {"arm": w, "prev": arms[0] if w == arms[1] else arms[1], "since": run.today, "n": int(S["confirm_n"]),
+                               "share": float(S["confirm_share"]), "source": src, "opening": bool(op), "prev_champion": prev_champion}
+
+
+def settle_confirm(run, f, arms, row):
+    """Step 3b: a trial's verdict in round.csv is "confirming" (nothing to do), "confirmed" (locked in: the contest leaves the
+    round, the retest clock restarts) or "reverted" (the adopted winner was worse than the previous choice beyond the even band:
+    the previous champion, or no champion or no instruction, returns, with a row in decisions.csv). A row from before the trial
+    began (its start is not the trial's) is ignored."""
+    st, S = run.st, run.S
+    rnd, gs, conf = st["round"], st["genes"], st["confirming"][f]
+    v = row.get("verdict")
+    if v not in ("confirmed", "reverted") or str(row.get("start") or "") != str(rnd["starts"].get(f) or ""): return
+    eff, low, high = num(row.get("effect")), num(row.get("low")), num(row.get("high"))
+    champ, prev = conf.get("arm"), conf.get("prev")
+    for k in ("factors", "starts", "origin"): rnd[k].pop(f, None)
+    st["confirming"].pop(f, None)
+    retest_after = "" if is_gene(f) else run.days(S["retest_days"])
+    hist = {"factor": f, "arms": arms, "source": "confirm", "start": conf.get("since"), "end": run.today, "verdict": v,
+            "winner": champ if v == "confirmed" else prev, "effect": eff, "low": low, "high": high, "retest_after": retest_after}
+    if conf.get("opening"): hist["metric"] = "engaged"
+    st["history"].append(hist)
+    if v == "confirmed":
+        if is_gene(f): (gs.get(gene_id(f)) or {})["retest_after"] = run.days(S["retest_days"])
+        run.note("lock-in", f, arms, "confirm", v, eff, f"{champ} holds up against {prev} ({low} to {high}); locked in")
+        return
+    if is_gene(f):
+        g = gs.get(gene_id(f)) or {}
+        parent = gs.get(g.get("parent") or "")
+        g["status"], g["effect"] = "rejected", eff
+        st["adopted"].pop(g.get("lineage"), None)
+        if g.get("kind") == "mutate" and parent and parent.get("text"):         # the parent it replaced returns
+            parent["status"] = "adopted"; st["adopted"][g["lineage"]] = g.get("parent")
+        what = f"writing instruction {gene_id(f)} ({g.get('label', '')}) dropped"
+    else:
+        old = conf.get("prev_champion")
+        if old: st["champions"][f] = old
+        else: st["champions"].pop(f, None)
+        what = f"{f} back to {old or 'no champion'}"
+    run.note("revert", f, arms, "confirm", v, eff, f"{champ} was worse than {prev} in confirmation ({low} to {high}); {what}")
+    run.decisions.append({"date": run.today, "area": "Confirmation", "change": nodash(f"Revert {f}: {what}"),
+                          "why": nodash(f"{champ} won its contest but was worse than {prev} over {conf.get('n')}+ Shorts a side ({eff}x for arm b, 90% interval {low} to {high})"),
+                          "evidence": f"round.csv: {f} reverted, trial from {conf.get('since')}, {conf.get('n')} Shorts a side", "check_on": run.days(S["retest_days"]),
+                          "by": "evolve (confirmation)"})
+
+
 def settle(run, results):
     """Step 3: each live factor whose round.csv row is trusted (the factor is live and the row's arms are the live arms) and
     has a verdict of winner, even or no clear difference leaves the round, with its consequences."""
@@ -323,12 +419,20 @@ def settle(run, results):
             continue
         row = results.get(f)
         if not row or [row.get("arm_a"), row.get("arm_b")] != arms: continue
+        if f in st["confirming"]:                                     # an adopted winner on trial: only its confirmation counts
+            settle_confirm(run, f, arms, row)
+            continue
         v = row.get("verdict")
         if v != "winner" and v not in SETTLED: continue
         w = row.get("winner") or ""
         eff, low, high = num(row.get("effect")), num(row.get("low")), num(row.get("high"))
         start, src = rnd["starts"].get(f, rnd.get("start", "")), rnd["origin"].get(f, "")
-        for k in ("factors", "starts", "origin"): rnd[k].pop(f, None)
+        g0 = gs.get(gene_id(f)) if is_gene(f) else None
+        trial = bool(S["confirm_n"] > 0 and v == "winner" and (g0 is None and st["champions"].get(f) != w
+                                                                or g0 is not None and w == "b" and g0.get("kind", "new") in ("new", "mutate", "joint")))
+        if trial: rnd["starts"][f], rnd["origin"][f] = run.today, "confirm"      # stays in the round, drawn mostly for the winner
+        else:
+            for k in ("factors", "starts", "origin"): rnd[k].pop(f, None)
         beat = v == "winner" and w == arms[1]                         # the challenger (arm b) won
         if src in st["sources"]:
             st["sources"][src]["contests"] += 1
@@ -343,7 +447,8 @@ def settle(run, results):
             if v == "winner":
                 prev = st["champions"].get(f)
                 st["champions"][f] = w
-                run.note("champion" if prev != w else "defended", f, arms, src, v, eff, f"{w} wins ({low} to {high})")
+                if trial: begin_trial(run, f, arms, w, src, op, prev)
+                run.note("champion" if prev != w else "defended", f, arms, src, v, eff, f"{w} wins ({low} to {high})" + (f"; confirming on {confirm_text(S)}" if trial else ""))
                 if prev != w:
                     run.ledger.append({"change": f"Evolve: {f} now runs {w} as its champion (won against {arms[0] if w == arms[1] else arms[1]})",
                                        "hypothesis": f"{w} {lifts} ({eff}x for arm b, 90% interval {low} to {high})", "opening": op})
@@ -367,7 +472,8 @@ def settle(run, results):
             g["status"], g["adopted"], g["retest_after"] = "adopted", run.today, run.days(S["retest_days"])
             st["adopted"][g["lineage"]] = gene_id(f)
             if kind == "mutate" and parent: parent["status"] = "retired"
-            run.note("adopt", f, arms, src, v, eff, f"{g['label']}: {g['text']}")
+            if trial: begin_trial(run, f, arms, "b", src, op, None)
+            run.note("adopt", f, arms, src, v, eff, f"{g['label']}: {g['text']}" + (f"; confirming on {confirm_text(S)}" if trial else ""))
             run.ledger.append({"change": f"Evolve: writing instruction {gene_id(f)} adopted into the recipe: {g['text']}",
                                "hypothesis": f"Writing to this instruction {lifts} ({eff}x, 90% interval {low} to {high})", "opening": op})
         else:
@@ -476,7 +582,9 @@ def make_gene(run, kind, prop=None, parent=None):
              "a_text": par["text"] if kind == "mutate" else "", "why": nodash(prop.get("why") or ""), "by": prop.get("by") or ""}
     metric = (par or {}).get("metric") if kind in ("retest", "mutate") else (prop or {}).get("metric")
     if metric == "engaged": g["metric"] = "engaged"           # an opening gene: judged on the engaged share (round_metrics)
-    gs[gid] = {**g, "parent": parent or "", "lineage": lin, "born": run.today, "status": "live", "effect": "", "kind": kind}
+    scope = (prop or {}).get("scope") or ((par or {}).get("scope") if kind in ("retest", "mutate") else None)      # a category contest stays one
+    gs[gid] = {**g, "parent": parent or "", "lineage": lin, "born": run.today, "status": "live", "effect": "", "kind": kind,
+               **({"scope": scope, "joint_key": (prop or {}).get("joint_key", "")} if scope else {})}
     return gid
 
 
@@ -498,6 +606,76 @@ def launch_prune(run):
     if old:
         run.note("prune", GENE + old[0][1], source="retest", note=f"{len(st['adopted'])} adopted, over {run.S['max_adopted']}: the oldest is retested")
         launch_retest_gene(run, old[0][1]); run.added += 1
+
+
+# ---------------- the joint model's interactions (28 October) ----------------
+JOINT_CSV = "joint.csv"
+JOINT_MIN_N = 15
+
+
+def joint_rows():
+    """The joint model's category interactions (analytics/joint.csv, joint.py, kind "interaction") as dicts with the category,
+    factor and arm split out: effect, low and high are the arm's multiple in that category beyond what it does everywhere
+    else. [] when the file is missing."""
+    out = []
+    try:
+        for r in csv.DictReader(open(ROOT / "analytics" / JOINT_CSV)):
+            fac, lvl = str(r.get("factor") or ""), str(r.get("level") or "")
+            if r.get("kind") != "interaction" or not fac.startswith("category x ") or ": " not in lvl: continue
+            cat, _, arm = lvl.partition(": ")
+            try: out.append({"category": cat, "factor": fac[len("category x "):], "arm": arm, "effect": float(r["effect"]),
+                             "low": float(r["low"]), "high": float(r["high"]), "n": int(float(r.get("n") or 0)), "outcome": r.get("outcome") or "views",
+                             "q": float(r["q"]) if r.get("q") not in (None, "") else 1.0})
+            except (KeyError, TypeError, ValueError): continue
+    except Exception: return []
+    return out
+
+
+def joint_text(category, arm_text):
+    """The writing instruction for a category-specific arm: the arm's own text, for that category's Shorts only."""
+    t = " ".join(str(arm_text or "").split())
+    return f"For {category} Shorts, {t[:1].lower()}{t[1:]}" if t else ""
+
+
+def joint_room(run):
+    """At most one joint contest is live, and the round keeps its gene room."""
+    gs = run.st["genes"]
+    live = [f for f in run.live_genes() if (gs.get(gene_id(f)) or {}).get("kind") == "joint"]
+    return not live and len(run.live_genes()) < run.S["max_genes"]
+
+
+def joint_candidates(run):
+    """[{"category", "factor", "arm", "text", "key", "low"}] for category interactions the joint model finds clear (its 90%
+    interval above no difference and a Benjamini-Hochberg q at or under analysis.fdr_q, 15+ Shorts behind it) whose arm has a writing instruction (run.texts) and whose factor is
+    not itself under contest or confirmation (the instruction would pull against the drawn arm), never tried before
+    (a gene's joint_key), best first. Needs no model: the arm's own text is the instruction."""
+    st, out = run.st, []
+    tried = {g.get("joint_key") for g in st["genes"].values() if g.get("joint_key")}
+    others = [t for g in st["genes"].values() for t in (g.get("text"), g.get("a_text"), g.get("b_text")) if t]
+    for r in joint_rows():
+        f, arm = r["factor"], r["arm"]
+        key = f"{r['category']}|{f}|{arm}"
+        text = joint_text(r["category"], (run.texts.get(f) or {}).get(arm))
+        if (r["low"] <= 1.0 or r["q"] > run.S["fdr_q"] or r["n"] < JOINT_MIN_N or not text or key in tried or f in st["round"]["factors"] or f in st["confirming"]
+                or check_gene(text, others)): continue
+        out.append({**r, "text": text, "key": key})
+    return sorted(out, key=lambda c: (-c["low"], c["key"]))
+
+
+def launch_joint(run):
+    """Opens a contest for the best joint candidate: a writing instruction scoped to its category (round.csv judges only that
+    category's Shorts, drivers.round_verdicts scopes), arm b the instruction and arm a none. True when one opened."""
+    cands = joint_candidates(run)
+    if not cands: return False
+    c = cands[0]
+    label = f"{c['category']}: {c['factor']} {c['arm']}"
+    why = f"the joint model finds {c['arm']} on {c['factor']} does {c['effect']:.2f}x better for {c['category']} than elsewhere (90% interval from {c['low']:.2f}x, {c['n']} Shorts)"
+    gid = make_gene(run, "joint", {"label": label, "text": c["text"], "why": why, "by": "joint model", "scope": {"category": c["category"]},
+                                   "joint_key": c["key"], **({"metric": "engaged"} if c["outcome"] == "engaged" else {})})
+    open_contest(run, GENE + gid, ["a", "b"], "joint")
+    run.new_genes += 1
+    run.note("open", GENE + gid, ["a", "b"], "joint", note=f"{label}: {c['text']} (a category interaction from the joint model)")
+    return True
 
 
 # ---------------- the model's proposals ----------------
@@ -692,7 +870,7 @@ def fill(run):
         i += 1
         cands = {"neighbour": neighbour_candidates(run), "retest": retest_candidates(run)}
         have = {"neighbour": bool(cands["neighbour"]), "retest": bool(cands["retest"]), "gene": llm_room(run),
-                "mutate": llm_room(run) and bool(adoptable(run))}
+                "mutate": llm_room(run) and bool(adoptable(run)), "joint": joint_room(run) and bool(joint_candidates(run))}
         avail = [s for s in SOURCES if have[s] and s not in failed]
         if not avail: break
         rng = random.Random(f"evolve:{run.today}:{i}")
@@ -711,6 +889,7 @@ def fill(run):
             open_retest(run, rng.choice(cands["retest"]))
             ok = True
         elif src == "gene": ok = launch_gene(run, "gene")
+        elif src == "joint": ok = launch_joint(run)
         else:
             lin, gid = rng.choice(adoptable(run))
             ok = launch_gene(run, "mutate", gid)
@@ -733,6 +912,21 @@ def append_log(rows):
         w.writerows([{k: r.get(k, "") for k in LOG_FIELDS} for r in rows])
 
 
+DEC_FIELDS = ["date", "area", "change", "why", "evidence", "check_on", "by"]
+
+
+def append_decisions(rows):
+    """Rows for analytics/decisions.csv (the Recipe's changes; a reverted trial is one), header written when the file is new."""
+    if not rows: return
+    p = ROOT / "analytics" / "decisions.csv"
+    new = not p.exists()
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with p.open("a", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=DEC_FIELDS, extrasaction="ignore", lineterminator="\n")
+        if new: w.writeheader()
+        w.writerows([{k: r.get(k, "") for k in DEC_FIELDS} for r in rows])
+
+
 def log_tail(n=10):
     try: return list(csv.DictReader(open(log_path())))[-n:]
     except Exception: return []
@@ -753,13 +947,22 @@ def render_md(st, S):
         g = gs.get(gene_id(f)) if is_gene(f) else None
         name = (f"writing instruction {gene_id(f)}: {g.get('label', '')}" if g else f) + (" (opening)" if is_opening(st, f) else "")
         L.append(f"| {name} | {' vs '.join(arms)} | {rnd['origin'].get(f, '')} | {rnd['starts'].get(f, '')} |")
-    L += ["", "## Champions", ""] + ([f"- {f}: {a}" for f, a in sorted(st["champions"].items())] or ["- none yet"])
+    res = read_results()
+    trial = st.get("confirming") or {}
+    L += ["", f"## Confirming ({len(trial)})", "",
+          f"A new champion or adopted gene is kept for {round(100 * (1 - S['confirm_share']))}% of Shorts while the previous choice keeps "
+          f"{round(100 * S['confirm_share'])}%, until {S['confirm_n']} Shorts a side are measured: then it is locked in (not worse than "
+          "the previous choice beyond the even band) or reverted.", ""]
+    L += [f"- {f}: {c.get('arm')} against the previous {c.get('prev')}, since {c.get('since')}; "
+          f"{(res.get(f) or {}).get('n_a', '?')} and {(res.get(f) or {}).get('n_b', '?')} Shorts so far of {c.get('n')} a side, "
+          f"{(res.get(f) or {}).get('verdict') or 'no reading yet'}" for f, c in sorted(trial.items())] or ["- none"]
+    L += ["", "## Champions", ""] + ([f"- {f}: {a}" + (" (confirming)" if f in trial else "") for f, a in sorted(st["champions"].items())] or ["- none yet"])
     adopted = [(lin, gid) for lin, gid in sorted(st["adopted"].items()) if gid in gs]
     L += ["", f"## Adopted genes ({len(adopted)} of at most {S['max_adopted']})", ""]
     L += [f"- {gid} ({gs[gid].get('label', '')}): {gs[gid].get('text', '')} Effect {gs[gid].get('effect', '')}x, adopted {gs[gid].get('adopted', '')}, proposed by {gs[gid].get('by') or 'unknown'}."
           for lin, gid in adopted] or ["- none yet"]
     live = [gid for f in rnd["factors"] if is_gene(f) for gid in [gene_id(f)] if gid in gs]
-    L += ["", "## Genes under test", ""] + ([f"- {gid} ({gs[gid].get('kind', '')}{', opening, judged on the engaged share' if gs[gid].get('metric') == 'engaged' else ''}): {gs[gid].get('label', '')}" for gid in live] or ["- none"])
+    L += ["", "## Genes under test", ""] + ([f"- {gid} ({gs[gid].get('kind', '')}{', opening, judged on the engaged share' if gs[gid].get('metric') == 'engaged' else ''}{', ' + gs[gid]['scope']['category'] + ' Shorts only' if (gs[gid].get('scope') or {}).get('category') else ''}): {gs[gid].get('label', '')}" for gid in live] or ["- none"])
     n_rej = sum(g.get("status") == "rejected" for g in gs.values())
     L += ["", f"Rejected so far: {n_rej}. Retired: {sum(g.get('status') == 'retired' for g in gs.values())}.", "",
           "## Where contests come from", "", "| source | contests settled | wins | win rate |", "|---|---|---|---|"]
@@ -822,6 +1025,7 @@ def main(argv=None):
         return 0
     if run.log or not state_path().exists(): run.st["updated"] = today
     record_ledger(run.ledger, today)
+    append_decisions(run.decisions)
     state_path().parent.mkdir(parents=True, exist_ok=True)
     state_path().write_text(dump(run.st))
     if run.log: append_log(run.log)

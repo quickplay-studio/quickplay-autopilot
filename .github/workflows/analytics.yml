@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: '12 * * * *'
   workflow_dispatch:
+    inputs:
+      full:
+        description: 'Run the slower full read (verdicts, round, subscriber days) instead of the hourly one'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -24,8 +29,9 @@ jobs:
         with: { ref: main }
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
-      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography tzdata google-api-python-client==2.* google-auth==2.*
+      - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography tzdata numpy==2.5.3 google-api-python-client==2.* google-auth==2.*      # numpy: pipeline/joint.py (28 October)
       - env:
+          FULL: ${{ inputs.full && '1' || '' }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
@@ -35,8 +41,13 @@ jobs:
           FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: |
-          python pipeline/analytics.py --fast
+          if [ -n "$FULL" ]; then python pipeline/analytics.py; else python pipeline/analytics.py --fast; fi
           python pipeline/dropoff.py || echo "drop-off analysis failed"
+      # the joint model (pipeline/joint.py, 28 October): every test factor in one regularised regression, after the numbers and the
+      # verdicts; analytics/joint.csv and joint.md. A failure never blocks the commit below.
+      - name: Joint model
+        continue-on-error: true
+        run: python pipeline/joint.py
       - run: python pipeline/lab.py || echo "look lab failed"     # new looks to test, once a day
       # the change ledger (analytics/changes.csv): before and after for every change past its check day, guardrails
       # included; a trade-off opens an issue (pipeline/changes.py)

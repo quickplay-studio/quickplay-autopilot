@@ -186,6 +186,36 @@ def m_subs(D, a, b):
     return (1000 * sum(s for s, _ in pairs) / views, len(pairs)) if views else (None, len(pairs))
 
 
+def m_feed_share(D, a, b):
+    """Views-weighted share of YouTube views that came from the Shorts feed (28 October): each Short's yt_feed_pct (YouTube
+    Analytics traffic sources, whole life so far) weighted by its first 7 days' views (views_7d), over the Shorts posted in
+    the window that are a week old with a reading. The feed picking a Short up is what the 3M and 20M view targets need."""
+    pairs = [(num(r.get("yt_feed_pct")), num(r.get("views_7d"))) for r in D.shorts_in(a, b)]
+    pairs = [(f, v) for f, v in pairs if f is not None and v is not None and v > 0]
+    views = sum(v for _, v in pairs)
+    return (sum(f * v for f, v in pairs) / views, len(pairs)) if views else (None, len(pairs))
+
+
+def subs_day_counter(D):
+    """{UK day: subscribers the main channel gained that day} from analytics/subs_daily.csv (subs_daily.py), the days YouTube
+    Analytics has finished (the newest two are left out: they are still being counted)."""
+    if not hasattr(D, "_subs_day"):
+        out = {}
+        for r in rows_of("analytics/subs_daily.csv"):
+            d, s = day_of(r.get("day")), num(r.get("subs_gained"))
+            if (r.get("channel") or "main") == "main" and d and s is not None: out[d] = s
+        if out:
+            last = max(out)
+            out = {d: v for d, v in out.items() if d <= last - dt.timedelta(days=2)}
+        D._subs_day = out
+    return D._subs_day
+
+
+def subs_day_start(D):
+    v = subs_day_counter(D)
+    return min(v) if v else None
+
+
 def m_mix(D, a, b):
     """The effective number of categories posted: exp of the entropy of the category mix (4 equal categories: 4.0)."""
     cats = [r.get("category") for r in D.shorts_in(a, b) if r.get("category")]
@@ -297,6 +327,10 @@ METRICS = {
     "held_3s": ("still watching at 3 seconds", "higher", "{:.0f}%", m_field("yt_held_3s_pct")),
     "engaged_share": ("share of views that stayed (engaged views, what YPP counts)", "higher", "{:.0f}%", m_field("yt_engaged_pct")),
     "subs_per_1k": ("subscribers per 1,000 views", "higher", "{:.2f}", m_subs),
+    "feed_share": ("views-weighted share of views from the Shorts feed (7-day views)", "higher", "{:.0f}%", m_feed_share),
+    "views_7d_median": ("YouTube views per Short at 7 days", "higher", "{:,.0f}", m_field("views_7d")),
+    "subs_day": ("subscribers gained a day (main channel, YouTube Analytics)", "higher", "{:.1f}",
+                 per_day(subs_day_counter, subs_day_start, lambda D: None, zero_fill=False)),
     "category_mix": ("categories in the mix (effective number)", "higher", "{:.1f}", m_mix),
     "sameness": ("sameness (a Short's highest similarity to the channel's last 14 days of Shorts, 0 to 1)", "lower", "{:.2f}", m_field("sameness")),
     "ig_views": ("Instagram views per Reel", "higher", "{:,.0f}", m_field("ig_views")),
@@ -383,7 +417,7 @@ def overlaps(r, rows):
 
 
 # ---------------- topic heat (27 October) ----------------
-HEAT_FIELD = {"yt_views_24h": "views_24h", "avg_viewed_pct": "yt_avg_viewed_pct", "held_3s": "yt_held_3s_pct",
+HEAT_FIELD = {"yt_views_24h": "views_24h", "views_7d_median": "views_7d", "avg_viewed_pct": "yt_avg_viewed_pct", "held_3s": "yt_held_3s_pct",
               "engaged_share": "yt_engaged_pct", "ig_views": "ig_views", "fb_views": "fb_views"}
 
 

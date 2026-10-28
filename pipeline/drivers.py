@@ -28,11 +28,15 @@ Verdicts (24 October repair). On that day's 105 measured Shorts:
   judged only on the Shorts made after the pause. A median under the floor pauses it again; one over the floor lifts it.
   Weekday, the late flag and exploration are measured but never paused (nothing to leave out).
 A dead Short (under the floor a week on) is never followed up or remade (dead()).
+- Luck check (28 October, fdr.py): a push or cut back also needs its Benjamini-Hochberg q-value (the p of the same t test its
+  interval makes, adjusted across every group of the pass) at or under config analysis.fdr_q (0.10); otherwise "early sign" with
+  the reason. drivers.csv, channel_drivers.csv and round.csv carry p and q.
 """
 import datetime as dt, json, math, pathlib, re, statistics
 from zoneinfo import ZoneInfo
 try: import heat as HEAT                # topic heat (heat.py, 27 October): was the topic trending, not the choice?
 except Exception: HEAT = None
+import fdr as FDR                       # p-values and Benjamini-Hochberg (fdr.py, 28 October): a push or winner must also pass the luck check
 
 UK = ZoneInfo("Europe/London")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -222,6 +226,7 @@ def _support(rows):
     out["subs_per_1k"] = _per_k(rows, "yt_subs_gained")
     out["shares_per_1k"] = _per_k(rows, "yt_shares")
     out["likes_per_1k"] = _per_k(rows, "yt_likes")
+    out["yt_feed_pct"] = _med(_f(r.get("yt_feed_pct")) for r in rows)       # the share of views from the Shorts feed (28 October: an outcome of its own)
     return out
 
 
@@ -398,9 +403,29 @@ def learn(rows):
     return [r for r in rows if str(r.get("control_arm") or "") != "1"]
 
 
-def analyse(rows, pauses=None, today=None):
+def luck_check(table, fdr_q=None):
+    """The luck check on a pass's rows (dicts with "p", "verdict", "why"): Benjamini-Hochberg across every row with a p, the
+    q-value written back, and a "push" or "cut back" whose q is over fdr_q (analysis.fdr_q, 0.10) becomes an "early sign" with
+    the reason. p and q are rounded for the CSV last."""
+    level = FDR.settings()["fdr_q"] if fdr_q is None else float(fdr_q)
+    qs = FDR.bh([t.get("p") for t in table])
+    m = sum(1 for t in table if t.get("p") is not None)
+    for t, q in zip(table, qs):
+        if q is None: continue
+        t["q"] = q
+        if t.get("verdict") in ("push", "cut back") and q > level:
+            t["verdict"] = "early sign"
+            t["why"] = "; ".join(x for x in (t.get("why"), "not proven: " + FDR.luck_note(t["p"], q, m, level)) if x)
+    for t in table:
+        t["p"] = "" if t.get("p") is None else round(t["p"], 4)
+        t["q"] = "" if t.get("q") is None else round(t["q"], 3)
+    return table
+
+
+def analyse(rows, pauses=None, today=None, fdr_q=None):
     """rows: shorts.csv rows with 'rel' set (or None). Returns (table rows for drivers.csv, base support measures).
-    `pauses`: the pause record (load_pauses()), updated in place; the caller saves it."""
+    `pauses`: the pause record (load_pauses()), updated in place; the caller saves it. `fdr_q`: the luck check's level
+    (default config analysis.fdr_q)."""
     rows = learn(rows)
     pauses = {} if pauses is None else pauses
     today = today or NOW.astimezone(UK).date().isoformat()
@@ -426,6 +451,7 @@ def analyse(rows, pauses=None, today=None):
             n = len(logs); lift = math.exp(sum(logs) / (n + SHRINK))
             verdict, gwhy = gate(grp, lift, cut)
             verdict, gwhy = heat_check(grp, verdict, gwhy, eff, cen, cut, feat)
+            p = FDR.mean_p(logs) if n >= MIN_N and len({uk_day(r) for r in grp}) >= MIN_DAYS else None      # the interval's own t test
             hc = heat_of(grp, cen)
             cold = hc is not None and hc <= HEAT_COLD and (eff is None or eff["b"] > 0)
             pv, pwhy = (None, "") if feat in NEVER_PAUSED else pause_state(f"{feat}|{v}", grp, floor, pauses, today, new=not cold)
@@ -442,7 +468,9 @@ def analyse(rows, pauses=None, today=None):
                           "avg_viewed_pct": round(sup["yt_avg_viewed_pct"]) if sup["yt_avg_viewed_pct"] is not None else "",
                           "subs_per_1k": round(sup["subs_per_1k"], 1) if sup["subs_per_1k"] is not None else "",
                           "shares_per_1k": round(sup["shares_per_1k"], 1) if sup["shares_per_1k"] is not None else "",
-                          "why": why})
+                          "feed_pct": round(sup["yt_feed_pct"]) if sup.get("yt_feed_pct") is not None else "",
+                          "why": why, "p": p, "q": None})
+    luck_check(table, fdr_q)
     table.sort(key=lambda t: (t["feature"], -t["lift"]))
     return table, base
 
@@ -454,14 +482,15 @@ def analyse(rows, pauses=None, today=None):
 # itself). A channel only departs from the pooled verdict ("push here", "cut back here") when its own Shorts pass the same
 # proof gate on their own, disagree with the pool, and number EXC_N or more; writer.winners(channel) applies it.
 CHANNEL_FIELDS = ["channel", "feature", "feature_label", "value", "n", "lift", "own_lift", "pooled_lift", "pooled_verdict",
-                  "verdict", "exception", "why"]
+                  "verdict", "exception", "why", "p", "q"]
 EXC_N = 10
 
 
-def channel_table(rows, table):
+def channel_table(rows, table, fdr_q=None):
     """Rows for analytics/channel_drivers.csv: per channel, per choice with 2 or more values on that channel, per value
     with 2 or more Shorts: lift (the channel's Shorts shrunk towards the pooled lift), own_lift (shrunk towards typical,
-    as the pooled table is), the pooled lift and verdict, the channel's own gate() verdict and any exception."""
+    as the pooled table is), the pooled lift and verdict, the channel's own gate() verdict and any exception. The luck check
+    (luck_check) runs across every channel's groups of the pass, before the exceptions are read off the verdicts."""
     pooled = {(t["feature"], t["value"]): t for t in table}
     rows = learn(rows)
     feats = [(r, features(r)) for r in rows if r.get("rel") not in (None, "")]
@@ -483,11 +512,14 @@ def channel_table(rows, table):
                 own = math.exp(sum(logs) / (n + SHRINK))
                 verdict, gwhy = gate(grp, own, cut)
                 verdict, gwhy = heat_check(grp, verdict, gwhy, eff, cen, cut, feat)
-                exc = verdict + " here" if n >= EXC_N and verdict in ("push", "cut back") and verdict != pv else ""
+                p = FDR.mean_p(logs) if n >= MIN_N and len({uk_day(r) for r in grp}) >= MIN_DAYS else None
                 out.append({"channel": ch, "feature": feat, "feature_label": label, "value": v, "n": n,
                             "lift": round(math.exp((sum(logs) + SHRINK * math.log(pl)) / (n + SHRINK)), 2),
                             "own_lift": round(own, 2), "pooled_lift": round(pl, 2), "pooled_verdict": pv, "verdict": verdict,
-                            "exception": exc, "why": gwhy})
+                            "exception": "", "why": gwhy, "p": p, "q": None})
+    luck_check(out, fdr_q)
+    for t in out:
+        if t["n"] >= EXC_N and t["verdict"] in ("push", "cut back") and t["verdict"] != t["pooled_verdict"]: t["exception"] = t["verdict"] + " here"
     out.sort(key=lambda t: (t["channel"], t["feature"], -t["lift"]))
     return out
 
@@ -508,7 +540,7 @@ def channel_table(rows, table):
 # fit's 90% interval below 1 for the winning arm withholds it when the loss cancels the share gain (fewer engaged views a
 # Short) or is 15% or more (EVEN: the feed is showing it to clearly fewer people); views_effect shows that fit.
 ROUND_FIELDS = ["round", "factor", "arm_a", "arm_b", "n_a", "n_b", "effect", "low", "high", "halves", "verdict", "winner",
-                "leaning", "why", "metric", "views_effect"]
+                "leaning", "why", "metric", "views_effect", "p", "q", "luck", "start", "confirm"]
 EVEN, WIN_N, EVEN_N = 0.14, 10, 20
 OPENING = ("hook_type", "first_frame", "fx_opening")
 EVEN_ENG, ENG_K = 0.095, 10.0       # 10% on the engaged share; ENG_K views of shrinkage toward the group's share
@@ -600,22 +632,57 @@ def _fit(grp, f, b, factors, yf=None):
     return fit
 
 
-def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, metrics=None):
+JOINT_CSV = ROOT / "analytics" / "joint.csv"
+
+
+def load_joint(path=None):
+    """{(factor, level, outcome): (effect, low, high)} for the joint model's main effects (analytics/joint.csv, joint.py): an
+    arm's effect against the factor's other arm, as a ratio, with its 90% bootstrap interval. {} when the file is missing."""
+    import csv
+    out = {}
+    try:
+        for r in csv.DictReader(open(path or JOINT_CSV)):
+            if (r.get("kind") or "main") != "main": continue
+            try: out[(r["factor"], r["level"], r.get("outcome") or "views")] = (float(r["effect"]), float(r["low"]), float(r["high"]))
+            except (KeyError, TypeError, ValueError): continue
+    except Exception: return {}
+    return out
+
+
+def joint_against(joint, f, arm, metric):
+    """Whether the joint model's interval for arm `arm` of factor f sits wholly on the losing side (its high end under no
+    difference), so the pairwise winner is withheld (joint.py, 28 October). False without a reading."""
+    t = (joint or {}).get((f, arm, metric))
+    return bool(t and t[2] < 1.0)
+
+
+def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, metrics=None, confirming=None, scopes=None,
+                   joint=None, fdr_q=None):
     """Rows for analytics/round.csv, one per round factor ({factor: [arm_a, arm_b]}): the Shorts posted from `start` (a UK
     date) with 24-hour views, every channel; effect = how many times arm B's views arm A's, adjusted (above), or for an
     opening factor (metric_of) arm B's engaged share against arm A's, on the Shorts with engaged views in. `starts` ({factor:
     UK date}, evolve.py, 26 October): a contest that began later than the round judges only the Shorts from its own start,
     so a new contest never inherits the Shorts of the one it replaced. With no engaged views in `rows` at all, every factor
-    is judged on views."""
+    is judged on views.
+    28 October: p is the slope's own t test (the interval's), q its Benjamini-Hochberg value across every comparison of the
+    pass (fdr_q, default config analysis.fdr_q 0.10); a winner needs q at or under it, and one that would have won without it
+    stays "running" with luck "yes" (or "no clear difference" at per_arm). `confirming` ({factor: {"arm", "n"}}, evolve.py):
+    an adopted winner still being confirmed is judged "confirming" until n Shorts a side are in, then "confirmed" (not worse
+    than the previous choice beyond the even band) or "reverted"; it is no discovery, so it stays out of the family. `scopes`
+    ({factor: category}): a contest about one category judges only that category's Shorts. `joint` ({(factor, arm, metric):
+    (effect, low, high)}, load_joint): a winner whose arm the joint model clearly puts on the losing side is withheld."""
+    fdr_q = FDR.settings()["fdr_q"] if fdr_q is None else float(fdr_q)
+    confirming, scopes = confirming or {}, scopes or {}
     rows = learn(rows)
     pool = [r for r in rows if r.get("rel") not in (None, "") and uk_day(r) >= str(start)]
     has_eng = any(engaged_pair(r) for r in rows)        # the data has engaged views at all (else views, as before them)
-    out = []
+    out, recs = [], []
     for f, arms_ in factors.items():
         if len(arms_) != 2: continue
         a, b = arms_
         own = max(str(start), str((starts or {}).get(f) or start))
         grp = [r for r in pool if assigned(r, f) in (a, b) and (own == str(start) or uk_day(r) >= own)]
+        if f in scopes: grp = [r for r in grp if r.get("category") == scopes[f]]
         metric = metric_of(f, metrics) if has_eng else "views"
         vgrp, yf, even = grp, None, EVEN
         if metric == "engaged":
@@ -627,7 +694,7 @@ def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, 
         na, nb = sum(assigned(r, f) == a for r in grp), sum(assigned(r, f) == b for r in grp)
         row = {"round": name, "factor": f, "arm_a": a, "arm_b": b, "n_a": na, "n_b": nb, "effect": "", "low": "", "high": "",
                "halves": "", "verdict": "too few to tell", "winner": "", "leaning": "", "why": "", "metric": metric,
-               "views_effect": ""}
+               "views_effect": "", "p": "", "q": "", "luck": "", "start": own, "confirm": (confirming.get(f) or {}).get("arm", "")}
         out.append(row)
         if min(na, nb) < 3:
             if metric == "engaged": row["why"] = "engaged views arrive about 3 days after a Short is posted"
@@ -650,13 +717,39 @@ def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, 
         halves = [_slope([r for r in grp if (str(r.get("posted")) < cut) == first], f, b, {}, yf) for first in (True, False)]
         agree = all(halves) and all(abs(x[0]) > 1e-9 for x in halves) and (halves[0][0] > 0) == (halves[1][0] > 0) == (beta > 0)
         row["halves"] = "agree" if agree else "too few" if not all(halves) else "disagree"
+        p = FDR.t_p(beta / se, df) if se > 1e-12 else None
+        row["p"] = "" if p is None else round(p, 4)
+        recs.append({"row": row, "a": a, "b": b, "na": na, "nb": nb, "beta": beta, "h": h, "even": even, "agree": agree,
+                     "costs_views": costs_views, "metric": metric, "p": p, "q": None, "conf": confirming.get(f)})
+    fam = [rc for rc in recs if not rc["conf"]]
+    for rc, q in zip(fam, FDR.bh([rc["p"] for rc in fam])):
+        rc["q"] = q
+        rc["row"]["q"] = "" if q is None else round(q, 3)
+    for rc in recs:
+        row, a, b, na, nb, beta, h, even, agree = rc["row"], rc["a"], rc["b"], rc["na"], rc["nb"], rc["beta"], rc["h"], rc["even"], rc["agree"]
+        if rc["conf"]:          # an adopted winner on trial (evolve.py): used on most Shorts, the previous choice on the rest
+            champ, need = rc["conf"].get("arm"), int(rc["conf"].get("n") or 20)
+            adv = beta if champ == b else -beta         # the adopted arm over the previous choice, log
+            if min(na, nb) < need:
+                row.update(verdict="confirming", why=f"{min(na, nb)} of {need} Shorts on the smaller arm; {champ} runs on most Shorts, the previous choice on the rest")
+            elif adv >= -even:
+                row.update(verdict="confirmed", winner=champ, why=f"{champ} is not worse than the previous choice beyond {round(100 * (math.exp(even) - 1))}%")
+            else:
+                row.update(verdict="reverted", why=f"{champ} is worse than the previous choice by more than {round(100 * (math.exp(even) - 1))}% over {min(na, nb)}+ Shorts a side")
+            continue
         clear, small = beta - h > 0 or beta + h < 0, -even < beta - h and beta + h < even
-        if clear and min(na, nb) >= WIN_N and abs(beta) >= even and agree and not costs_views:
-            row.update(verdict="winner", winner=b if beta > 0 else a)
+        cand = clear and min(na, nb) >= WIN_N and abs(beta) >= even and agree and not rc["costs_views"]
+        lucky = bool(cand and rc["q"] is not None and rc["q"] > fdr_q)
+        winner_arm = b if beta > 0 else a
+        vetoed = bool(cand and not lucky and joint_against(joint, row["factor"], winner_arm, rc["metric"]))
+        if lucky: row["luck"] = "yes"
+        if cand and not lucky and not vetoed:
+            row.update(verdict="winner", winner=winner_arm)
         elif small and min(na, nb) >= EVEN_N:
             row["verdict"] = "even"
         elif min(na, nb) >= per_arm:
             row["verdict"] = "no clear difference"
+            if lucky: row["why"] = FDR.luck_note(rc["p"], rc["q"], len(fam), fdr_q)
         else:
             row["verdict"] = "running"
             if abs(beta) >= 0.05: row["leaning"] = b if beta > 0 else a
@@ -665,8 +758,11 @@ def round_verdicts(rows, factors, start, per_arm=70, name="round", starts=None, 
             if min(na, nb) < WIN_N: why.append(f"{WIN_N - min(na, nb)} more Shorts on the smaller arm")
             if clear and abs(beta) < even: why.append(f"clear but under {round(100 * (math.exp(even) - 1))}%")
             if clear and not agree: why.append("the two halves of the data " + ("disagree" if row["halves"] == "disagree" else "are too small"))
-            if clear and costs_views: why.append("wins on engaged share but costs views")
+            if clear and rc["costs_views"]: why.append("wins on engaged share but costs views")
+            if lucky: why.append(FDR.luck_note(rc["p"], rc["q"], len(fam), fdr_q))
+            if vetoed: why.append("the joint model puts the same arm on the losing side")
             row["why"] = "; ".join(why)
+        if vetoed and row["verdict"] != "running": row["why"] = "the joint model puts the same arm on the losing side"
     return out
 
 

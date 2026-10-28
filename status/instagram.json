@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-28T14:46+00:00",
+ "updated": "2026-10-28T16:20+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 109,
- "median_views": 115.0,
+ "reels": 110,
+ "median_views": 114.5,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
@@ -16,21 +16,21 @@
    "category": "Gaming",
    "median": 123.0,
    "n": 23,
-   "score": 1.057,
+   "score": 1.061,
    "favoured": true
   },
   {
    "category": "Sport",
    "median": 120.0,
    "n": 25,
-   "score": 1.036,
+   "score": 1.04,
    "favoured": false
   },
   {
    "category": "Film",
    "median": 119.0,
-   "n": 14,
-   "score": 1.026,
+   "n": 15,
+   "score": 1.029,
    "favoured": false
   },
   {
@@ -42,23 +42,23 @@
   },
   {
    "category": "Music",
-   "median": 75.0,
-   "n": 23,
-   "score": 0.704,
+   "median": 63.5,
+   "n": 24,
+   "score": 0.614,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 38.0,
    "n": 10,
-   "score": 0.478,
+   "score": 0.479,
    "favoured": false
   },
   {
    "category": "Entertainment",
-   "median": 15.0,
-   "n": 7,
-   "score": 0.305,
+   "median": 12.5,
+   "n": 6,
+   "score": 0.299,
    "favoured": false
   },
   {
@@ -140,8 +140,8 @@
  "week": {
   "reels": 84,
   "median": 115.0,
-  "before_reels": 25,
-  "before_median": 105.0
+  "before_reels": 26,
+  "before_median": 103.0
  },
  "cover": {
   "asked": 20,

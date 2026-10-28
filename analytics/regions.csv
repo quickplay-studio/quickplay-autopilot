@@ -1,159 +1,159 @@
 kind,country,views,share_pct,avg_viewed_pct,subs_gained,shorts_seen,best_category,best_format,best_hook,best_length,top_short,dimension,value,shorts,views_per_short,lift
 fit,US,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,US,821,,,,,,,,,,Category,Entertainment,17,48.3,1.3
-fit,US,1510,,,,,,,,,,Category,Film,31,48.7,1.34
-fit,US,857,,,,,,,,,,Category,Gaming,35,24.5,0.71
-fit,US,2258,,,,,,,,,,Category,Music,38,59.4,1.62
-fit,US,225,,,,,,,,,,Category,Science,12,18.8,0.62
+fit,US,719,,,,,,,,,,Category,Entertainment,16,44.9,1.23
+fit,US,1559,,,,,,,,,,Category,Film,32,48.7,1.35
+fit,US,791,,,,,,,,,,Category,Gaming,34,23.3,0.69
+fit,US,2351,,,,,,,,,,Category,Music,40,58.8,1.62
+fit,US,225,,,,,,,,,,Category,Science,12,18.8,0.63
 fit,US,537,,,,,,,,,,Category,Sport,30,17.9,0.55
 fit,US,52,,,,,,,,,,Category,Tech,12,4.3,0.3
 fit,US,0,,,,,,,,,,Format,countdown,4,0.0,0.43
-fit,US,1038,,,,,,,,,,Format,news_explained,34,30.5,0.87
-fit,US,1504,,,,,,,,,,Format,one_detail,43,35.0,0.98
-fit,US,300,,,,,,,,,,Format,real_reason,12,25.0,0.76
-fit,US,313,,,,,,,,,,Format,story,22,14.2,0.47
-fit,US,567,,,,,,,,,,Format,three_details,20,28.4,0.82
-fit,US,1757,,,,,,,,,,Format,timeline,14,125.5,3.08
+fit,US,1038,,,,,,,,,,Format,news_explained,34,30.5,0.88
+fit,US,1495,,,,,,,,,,Format,one_detail,43,34.8,0.99
+fit,US,300,,,,,,,,,,Format,real_reason,12,25.0,0.77
+fit,US,362,,,,,,,,,,Format,story,23,15.7,0.51
+fit,US,567,,,,,,,,,,Format,three_details,20,28.4,0.83
+fit,US,1757,,,,,,,,,,Format,timeline,15,117.1,2.94
 fit,US,169,,,,,,,,,,Hook,number,23,7.3,0.3
 fit,US,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,US,4285,,,,,,,,,,Hook,statement,86,49.8,1.39
-fit,US,351,,,,,,,,,,Hook,superlative,13,27.0,0.8
+fit,US,4427,,,,,,,,,,Hook,statement,89,49.7,1.4
+fit,US,249,,,,,,,,,,Hook,superlative,12,20.8,0.67
 fit,US,81,,,,,,,,,,Hook,twist,7,11.6,0.53
-fit,US,593,,,,,,,,,,Hook,you,10,59.3,1.51
-fit,US,932,,,,,,,,,,Length,30 to 40 s,49,19.0,0.56
+fit,US,593,,,,,,,,,,Hook,you,10,59.3,1.53
+fit,US,923,,,,,,,,,,Length,30 to 40 s,49,18.8,0.56
 fit,US,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,US,4547,,,,,,,,,,Length,under 30 s,97,46.9,1.31
-country,US,8489,38.7,62.1,,47,"Music (1.6x, 38 Shorts)","timeline (3.1x, 14 Shorts)","you (1.5x, 10 Shorts)","under 30 s (1.3x, 97 Shorts)",How Barbara Palvin was discovered at age 13 ✨ (696 views),,,,,
+fit,US,4596,,,,,,,,,,Length,under 30 s,99,46.4,1.31
+country,US,8489,38.7,62.1,,47,"Music (1.6x, 40 Shorts)","timeline (2.9x, 15 Shorts)","you (1.5x, 10 Shorts)","under 30 s (1.3x, 99 Shorts)",How Barbara Palvin was discovered at age 13 ✨ (696 views),,,,,
 fit,GB,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,GB,230,,,,,,,,,,Category,Entertainment,17,13.5,1.4
-fit,GB,380,,,,,,,,,,Category,Film,31,12.3,1.3
-fit,GB,63,,,,,,,,,,Category,Gaming,35,1.8,0.26
-fit,GB,316,,,,,,,,,,Category,Music,38,8.3,0.91
+fit,GB,230,,,,,,,,,,Category,Entertainment,16,14.4,1.48
+fit,GB,380,,,,,,,,,,Category,Film,32,11.9,1.27
+fit,GB,63,,,,,,,,,,Category,Gaming,34,1.9,0.27
+fit,GB,316,,,,,,,,,,Category,Music,40,7.9,0.87
 fit,GB,0,,,,,,,,,,Category,Science,12,0.0,0.2
-fit,GB,635,,,,,,,,,,Category,Sport,30,21.2,2.18
+fit,GB,635,,,,,,,,,,Category,Sport,30,21.2,2.19
 fit,GB,0,,,,,,,,,,Category,Tech,12,0.0,0.2
 fit,GB,0,,,,,,,,,,Format,countdown,4,0.0,0.43
-fit,GB,304,,,,,,,,,,Format,news_explained,34,8.9,0.97
-fit,GB,492,,,,,,,,,,Format,one_detail,43,11.4,1.22
-fit,GB,198,,,,,,,,,,Format,real_reason,12,16.5,1.63
-fit,GB,186,,,,,,,,,,Format,story,22,8.5,0.93
-fit,GB,191,,,,,,,,,,Format,three_details,20,9.6,1.03
-fit,GB,131,,,,,,,,,,Format,timeline,14,9.4,1.01
+fit,GB,304,,,,,,,,,,Format,news_explained,34,8.9,0.98
+fit,GB,492,,,,,,,,,,Format,one_detail,43,11.4,1.23
+fit,GB,198,,,,,,,,,,Format,real_reason,12,16.5,1.64
+fit,GB,186,,,,,,,,,,Format,story,23,8.1,0.9
+fit,GB,191,,,,,,,,,,Format,three_details,20,9.6,1.04
+fit,GB,131,,,,,,,,,,Format,timeline,15,8.7,0.96
 fit,GB,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,GB,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,GB,1218,,,,,,,,,,Hook,statement,86,14.2,1.52
-fit,GB,60,,,,,,,,,,Hook,superlative,13,4.6,0.59
+fit,GB,1218,,,,,,,,,,Hook,statement,89,13.7,1.48
+fit,GB,60,,,,,,,,,,Hook,superlative,12,5.0,0.64
 fit,GB,0,,,,,,,,,,Hook,twist,7,0.0,0.3
-fit,GB,224,,,,,,,,,,Hook,you,10,22.4,2.1
+fit,GB,224,,,,,,,,,,Hook,you,10,22.4,2.11
 fit,GB,337,,,,,,,,,,Length,30 to 40 s,49,6.9,0.76
 fit,GB,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,GB,1165,,,,,,,,,,Length,under 30 s,97,12.0,1.29
-country,GB,3168,14.5,61.9,0,23,"Sport (2.2x, 30 Shorts)","real_reason (1.6x, 12 Shorts)","you (2.1x, 10 Shorts)","under 30 s (1.3x, 97 Shorts)",Mark Allen knocked out of Northern Ireland Open 🎱 (198 views),,,,,
+fit,GB,1165,,,,,,,,,,Length,under 30 s,99,11.8,1.27
+country,GB,3168,14.5,61.9,0,23,"Sport (2.2x, 30 Shorts)","real_reason (1.6x, 12 Shorts)","you (2.1x, 10 Shorts)","under 30 s (1.3x, 99 Shorts)",Mark Allen knocked out of Northern Ireland Open 🎱 (198 views),,,,,
 fit,IN,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,IN,73,,,,,,,,,,Category,Entertainment,17,4.3,0.76
-fit,IN,612,,,,,,,,,,Category,Film,31,19.7,3.1
-fit,IN,39,,,,,,,,,,Category,Gaming,35,1.1,0.25
-fit,IN,85,,,,,,,,,,Category,Music,38,2.2,0.42
+fit,IN,73,,,,,,,,,,Category,Entertainment,16,4.6,0.8
+fit,IN,612,,,,,,,,,,Category,Film,32,19.1,3.03
+fit,IN,39,,,,,,,,,,Category,Gaming,34,1.1,0.26
+fit,IN,85,,,,,,,,,,Category,Music,40,2.1,0.4
 fit,IN,0,,,,,,,,,,Category,Science,12,0.0,0.2
-fit,IN,243,,,,,,,,,,Category,Sport,30,8.1,1.32
+fit,IN,243,,,,,,,,,,Category,Sport,30,8.1,1.33
 fit,IN,0,,,,,,,,,,Category,Tech,12,0.0,0.2
 fit,IN,0,,,,,,,,,,Format,countdown,4,0.0,0.43
-fit,IN,310,,,,,,,,,,Format,news_explained,34,9.1,1.48
-fit,IN,473,,,,,,,,,,Format,one_detail,43,11.0,1.79
+fit,IN,310,,,,,,,,,,Format,news_explained,34,9.1,1.49
+fit,IN,473,,,,,,,,,,Format,one_detail,43,11.0,1.8
 fit,IN,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,IN,0,,,,,,,,,,Format,story,22,0.0,0.12
+fit,IN,0,,,,,,,,,,Format,story,23,0.0,0.12
 fit,IN,38,,,,,,,,,,Format,three_details,20,1.9,0.41
-fit,IN,73,,,,,,,,,,Format,timeline,14,5.2,0.89
+fit,IN,73,,,,,,,,,,Format,timeline,15,4.9,0.85
 fit,IN,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,IN,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,IN,770,,,,,,,,,,Hook,statement,86,9.0,1.48
-fit,IN,39,,,,,,,,,,Hook,superlative,13,3.0,0.6
+fit,IN,770,,,,,,,,,,Hook,statement,89,8.7,1.44
+fit,IN,39,,,,,,,,,,Hook,superlative,12,3.2,0.64
 fit,IN,47,,,,,,,,,,Hook,twist,7,6.7,1.09
 fit,IN,38,,,,,,,,,,Hook,you,10,3.8,0.72
 fit,IN,196,,,,,,,,,,Length,30 to 40 s,49,4.0,0.69
 fit,IN,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,IN,698,,,,,,,,,,Length,under 30 s,97,7.2,1.2
-country,IN,1944,8.9,46.8,0,10,"Film (3.1x, 31 Shorts)","one_detail (1.8x, 43 Shorts)","statement (1.5x, 86 Shorts)","under 30 s (1.2x, 97 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (426 views),,,,,
+fit,IN,698,,,,,,,,,,Length,under 30 s,99,7.1,1.18
+country,IN,1944,8.9,46.8,0,10,"Film (3.0x, 32 Shorts)","one_detail (1.8x, 43 Shorts)","statement (1.4x, 89 Shorts)","under 30 s (1.2x, 99 Shorts)",Jailer 2's cameos: Hrithik Roshan and more 🎬 (426 views),,,,,
 fit,DE,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,DE,23,,,,,,,,,,Category,Entertainment,17,1.4,1.09
-fit,DE,80,,,,,,,,,,Category,Film,31,2.6,2.01
-fit,DE,0,,,,,,,,,,Category,Gaming,35,0.0,0.08
-fit,DE,112,,,,,,,,,,Category,Music,38,2.9,2.31
+fit,DE,23,,,,,,,,,,Category,Entertainment,16,1.4,1.15
+fit,DE,80,,,,,,,,,,Category,Film,32,2.5,1.97
+fit,DE,0,,,,,,,,,,Category,Gaming,34,0.0,0.08
+fit,DE,112,,,,,,,,,,Category,Music,40,2.8,2.21
 fit,DE,0,,,,,,,,,,Category,Science,12,0.0,0.2
 fit,DE,0,,,,,,,,,,Category,Sport,30,0.0,0.09
 fit,DE,0,,,,,,,,,,Category,Tech,12,0.0,0.2
 fit,DE,0,,,,,,,,,,Format,countdown,4,0.0,0.43
-fit,DE,80,,,,,,,,,,Format,news_explained,34,2.4,1.85
+fit,DE,80,,,,,,,,,,Format,news_explained,34,2.4,1.86
 fit,DE,0,,,,,,,,,,Format,one_detail,43,0.0,0.07
 fit,DE,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,DE,36,,,,,,,,,,Format,story,22,1.6,1.3
-fit,DE,76,,,,,,,,,,Format,three_details,20,3.8,2.84
-fit,DE,23,,,,,,,,,,Format,timeline,14,1.6,1.28
+fit,DE,36,,,,,,,,,,Format,story,23,1.6,1.26
+fit,DE,76,,,,,,,,,,Format,three_details,20,3.8,2.85
+fit,DE,23,,,,,,,,,,Format,timeline,15,1.5,1.22
 fit,DE,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,DE,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,DE,179,,,,,,,,,,Hook,statement,86,2.1,1.68
-fit,DE,36,,,,,,,,,,Hook,superlative,13,2.8,2.03
+fit,DE,179,,,,,,,,,,Hook,statement,89,2.0,1.63
+fit,DE,36,,,,,,,,,,Hook,superlative,12,3.0,2.18
 fit,DE,0,,,,,,,,,,Hook,twist,7,0.0,0.3
 fit,DE,0,,,,,,,,,,Hook,you,10,0.0,0.23
 fit,DE,0,,,,,,,,,,Length,30 to 40 s,49,0.0,0.06
 fit,DE,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,DE,215,,,,,,,,,,Length,under 30 s,97,2.2,1.79
-country,DE,873,4.0,45.3,0,4,"Music (2.3x, 38 Shorts)","three_details (2.8x, 20 Shorts)","superlative (2.0x, 13 Shorts)","under 30 s (1.8x, 97 Shorts)",Jenna Ortega: stepping away from television 📺 (80 views),,,,,
+fit,DE,215,,,,,,,,,,Length,under 30 s,99,2.2,1.76
+country,DE,873,4.0,45.3,0,4,"Music (2.2x, 40 Shorts)","three_details (2.9x, 20 Shorts)","superlative (2.2x, 12 Shorts)","under 30 s (1.8x, 99 Shorts)",Jenna Ortega: stepping away from television 📺 (80 views),,,,,
 fit,CA,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,CA,25,,,,,,,,,,Category,Entertainment,17,1.5,1.13
-fit,CA,139,,,,,,,,,,Category,Film,31,4.5,3.3
-fit,CA,0,,,,,,,,,,Category,Gaming,35,0.0,0.08
-fit,CA,60,,,,,,,,,,Category,Music,38,1.6,1.22
+fit,CA,25,,,,,,,,,,Category,Entertainment,16,1.6,1.2
+fit,CA,139,,,,,,,,,,Category,Film,32,4.3,3.22
+fit,CA,0,,,,,,,,,,Category,Gaming,34,0.0,0.08
+fit,CA,60,,,,,,,,,,Category,Music,40,1.5,1.17
 fit,CA,0,,,,,,,,,,Category,Science,12,0.0,0.2
 fit,CA,0,,,,,,,,,,Category,Sport,30,0.0,0.09
 fit,CA,0,,,,,,,,,,Category,Tech,12,0.0,0.2
 fit,CA,0,,,,,,,,,,Format,countdown,4,0.0,0.43
-fit,CA,33,,,,,,,,,,Format,news_explained,34,1.0,0.78
-fit,CA,67,,,,,,,,,,Format,one_detail,43,1.6,1.21
+fit,CA,33,,,,,,,,,,Format,news_explained,34,1.0,0.79
+fit,CA,67,,,,,,,,,,Format,one_detail,43,1.6,1.22
 fit,CA,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,CA,77,,,,,,,,,,Format,story,22,3.5,2.54
-fit,CA,22,,,,,,,,,,Format,three_details,20,1.1,0.88
-fit,CA,25,,,,,,,,,,Format,timeline,14,1.8,1.33
+fit,CA,77,,,,,,,,,,Format,story,23,3.3,2.46
+fit,CA,22,,,,,,,,,,Format,three_details,20,1.1,0.89
+fit,CA,25,,,,,,,,,,Format,timeline,15,1.7,1.26
 fit,CA,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,CA,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,CA,147,,,,,,,,,,Hook,statement,86,1.7,1.33
-fit,CA,0,,,,,,,,,,Hook,superlative,13,0.0,0.19
+fit,CA,147,,,,,,,,,,Hook,statement,89,1.7,1.3
+fit,CA,0,,,,,,,,,,Hook,superlative,12,0.0,0.2
 fit,CA,0,,,,,,,,,,Hook,twist,7,0.0,0.3
-fit,CA,77,,,,,,,,,,Hook,you,10,7.7,4.88
+fit,CA,77,,,,,,,,,,Hook,you,10,7.7,4.91
 fit,CA,0,,,,,,,,,,Length,30 to 40 s,49,0.0,0.06
 fit,CA,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,CA,224,,,,,,,,,,Length,under 30 s,97,2.3,1.79
-country,CA,869,4.0,53.6,0,6,"Film (3.3x, 31 Shorts)","story (2.5x, 22 Shorts)","you (4.9x, 10 Shorts)","under 30 s (1.8x, 97 Shorts)",The Northumbria Mysteries: New BBC Detective Drama 🎬 (77 views),,,,,
+fit,CA,224,,,,,,,,,,Length,under 30 s,99,2.3,1.76
+country,CA,869,4.0,53.6,0,6,"Film (3.2x, 32 Shorts)","story (2.5x, 23 Shorts)","you (4.9x, 10 Shorts)","under 30 s (1.8x, 99 Shorts)",The Northumbria Mysteries: New BBC Detective Drama 🎬 (77 views),,,,,
 fit,PH,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,PH,19,,,,,,,,,,Category,Entertainment,17,1.1,1.73
-fit,PH,23,,,,,,,,,,Category,Film,31,0.7,1.21
-fit,PH,0,,,,,,,,,,Category,Gaming,35,0.0,0.08
-fit,PH,48,,,,,,,,,,Category,Music,38,1.3,2.02
+fit,PH,19,,,,,,,,,,Category,Entertainment,16,1.2,1.83
+fit,PH,23,,,,,,,,,,Category,Film,32,0.7,1.18
+fit,PH,0,,,,,,,,,,Category,Gaming,34,0.0,0.08
+fit,PH,48,,,,,,,,,,Category,Music,40,1.2,1.93
 fit,PH,0,,,,,,,,,,Category,Science,12,0.0,0.2
 fit,PH,16,,,,,,,,,,Category,Sport,30,0.5,0.9
 fit,PH,0,,,,,,,,,,Category,Tech,12,0.0,0.2
 fit,PH,0,,,,,,,,,,Format,countdown,4,0.0,0.43
 fit,PH,0,,,,,,,,,,Format,news_explained,34,0.0,0.08
-fit,PH,39,,,,,,,,,,Format,one_detail,43,0.9,1.47
+fit,PH,39,,,,,,,,,,Format,one_detail,43,0.9,1.48
 fit,PH,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,PH,0,,,,,,,,,,Format,story,22,0.0,0.12
+fit,PH,0,,,,,,,,,,Format,story,23,0.0,0.12
 fit,PH,0,,,,,,,,,,Format,three_details,20,0.0,0.13
-fit,PH,44,,,,,,,,,,Format,timeline,14,3.1,4.47
+fit,PH,44,,,,,,,,,,Format,timeline,15,2.9,4.25
 fit,PH,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,PH,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,PH,60,,,,,,,,,,Hook,statement,86,0.7,1.15
-fit,PH,0,,,,,,,,,,Hook,superlative,13,0.0,0.19
-fit,PH,23,,,,,,,,,,Hook,twist,7,3.3,4.12
+fit,PH,60,,,,,,,,,,Hook,statement,89,0.7,1.12
+fit,PH,0,,,,,,,,,,Hook,superlative,12,0.0,0.2
+fit,PH,23,,,,,,,,,,Hook,twist,7,3.3,4.14
 fit,PH,0,,,,,,,,,,Hook,you,10,0.0,0.23
-fit,PH,39,,,,,,,,,,Length,30 to 40 s,49,0.8,1.3
+fit,PH,39,,,,,,,,,,Length,30 to 40 s,49,0.8,1.31
 fit,PH,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,PH,44,,,,,,,,,,Length,under 30 s,97,0.5,0.76
-country,PH,717,3.3,58.0,,5,"Music (2.0x, 38 Shorts)","timeline (4.5x, 14 Shorts)","twist (4.1x, 7 Shorts)","30 to 40 s (1.3x, 49 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (25 views),,,,,
+fit,PH,44,,,,,,,,,,Length,under 30 s,99,0.4,0.75
+country,PH,717,3.3,58.0,,5,"Music (1.9x, 40 Shorts)","timeline (4.2x, 15 Shorts)","twist (4.1x, 7 Shorts)","30 to 40 s (1.3x, 49 Shorts)",Bohemian Rhapsody: too long for radio? 🎸 (25 views),,,,,
 fit,ID,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,ID,0,,,,,,,,,,Category,Entertainment,17,0.0,0.15
-fit,ID,0,,,,,,,,,,Category,Film,31,0.0,0.09
-fit,ID,0,,,,,,,,,,Category,Gaming,35,0.0,0.08
-fit,ID,37,,,,,,,,,,Category,Music,38,1.0,4.37
+fit,ID,0,,,,,,,,,,Category,Entertainment,16,0.0,0.16
+fit,ID,0,,,,,,,,,,Category,Film,32,0.0,0.09
+fit,ID,0,,,,,,,,,,Category,Gaming,34,0.0,0.08
+fit,ID,37,,,,,,,,,,Category,Music,40,0.9,4.19
 fit,ID,0,,,,,,,,,,Category,Science,12,0.0,0.2
 fit,ID,0,,,,,,,,,,Category,Sport,30,0.0,0.09
 fit,ID,0,,,,,,,,,,Category,Tech,12,0.0,0.2
@@ -161,24 +161,24 @@ fit,ID,0,,,,,,,,,,Format,countdown,4,0.0,0.43
 fit,ID,0,,,,,,,,,,Format,news_explained,34,0.0,0.08
 fit,ID,0,,,,,,,,,,Format,one_detail,43,0.0,0.07
 fit,ID,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,ID,0,,,,,,,,,,Format,story,22,0.0,0.12
+fit,ID,0,,,,,,,,,,Format,story,23,0.0,0.12
 fit,ID,0,,,,,,,,,,Format,three_details,20,0.0,0.13
-fit,ID,0,,,,,,,,,,Format,timeline,14,0.0,0.18
+fit,ID,0,,,,,,,,,,Format,timeline,15,0.0,0.17
 fit,ID,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,ID,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,ID,0,,,,,,,,,,Hook,statement,86,0.0,0.03
-fit,ID,0,,,,,,,,,,Hook,superlative,13,0.0,0.19
+fit,ID,0,,,,,,,,,,Hook,statement,89,0.0,0.03
+fit,ID,0,,,,,,,,,,Hook,superlative,12,0.0,0.2
 fit,ID,0,,,,,,,,,,Hook,twist,7,0.0,0.3
 fit,ID,0,,,,,,,,,,Hook,you,10,0.0,0.23
 fit,ID,0,,,,,,,,,,Length,30 to 40 s,49,0.0,0.06
 fit,ID,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,ID,0,,,,,,,,,,Length,under 30 s,97,0.0,0.03
-country,ID,702,3.2,56.5,0,1,"Music (4.4x, 38 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
+fit,ID,0,,,,,,,,,,Length,under 30 s,99,0.0,0.03
+country,ID,702,3.2,56.5,0,1,"Music (4.2x, 40 Shorts)",,,,The K-pop group from BLACKPINK's producer 🎤 (37 views),,,,,
 fit,AU,0,,,,,,,,,,Category,Animals,1,0.0,0.75
-fit,AU,0,,,,,,,,,,Category,Entertainment,17,0.0,0.15
-fit,AU,106,,,,,,,,,,Category,Film,31,3.4,4.28
-fit,AU,0,,,,,,,,,,Category,Gaming,35,0.0,0.08
-fit,AU,25,,,,,,,,,,Category,Music,38,0.7,0.89
+fit,AU,0,,,,,,,,,,Category,Entertainment,16,0.0,0.16
+fit,AU,106,,,,,,,,,,Category,Film,32,3.3,4.18
+fit,AU,0,,,,,,,,,,Category,Gaming,34,0.0,0.08
+fit,AU,25,,,,,,,,,,Category,Music,40,0.6,0.86
 fit,AU,0,,,,,,,,,,Category,Science,12,0.0,0.2
 fit,AU,0,,,,,,,,,,Category,Sport,30,0.0,0.09
 fit,AU,0,,,,,,,,,,Category,Tech,12,0.0,0.2
@@ -186,16 +186,16 @@ fit,AU,0,,,,,,,,,,Format,countdown,4,0.0,0.43
 fit,AU,0,,,,,,,,,,Format,news_explained,34,0.0,0.08
 fit,AU,0,,,,,,,,,,Format,one_detail,43,0.0,0.07
 fit,AU,0,,,,,,,,,,Format,real_reason,12,0.0,0.2
-fit,AU,106,,,,,,,,,,Format,story,22,4.8,5.82
-fit,AU,25,,,,,,,,,,Format,three_details,20,1.2,1.59
-fit,AU,0,,,,,,,,,,Format,timeline,14,0.0,0.18
+fit,AU,106,,,,,,,,,,Format,story,23,4.6,5.62
+fit,AU,25,,,,,,,,,,Format,three_details,20,1.2,1.6
+fit,AU,0,,,,,,,,,,Format,timeline,15,0.0,0.17
 fit,AU,0,,,,,,,,,,Hook,number,23,0.0,0.12
 fit,AU,0,,,,,,,,,,Hook,question,10,0.0,0.23
-fit,AU,0,,,,,,,,,,Hook,statement,86,0.0,0.03
-fit,AU,25,,,,,,,,,,Hook,superlative,13,1.9,2.29
+fit,AU,0,,,,,,,,,,Hook,statement,89,0.0,0.03
+fit,AU,25,,,,,,,,,,Hook,superlative,12,2.1,2.45
 fit,AU,0,,,,,,,,,,Hook,twist,7,0.0,0.3
-fit,AU,106,,,,,,,,,,Hook,you,10,10.6,11.19
+fit,AU,106,,,,,,,,,,Hook,you,10,10.6,11.25
 fit,AU,0,,,,,,,,,,Length,30 to 40 s,49,0.0,0.06
 fit,AU,0,,,,,,,,,,Length,over 40 s,3,0.0,0.5
-fit,AU,131,,,,,,,,,,Length,under 30 s,97,1.4,1.79
-country,AU,660,3.0,57.7,0,2,"Film (4.3x, 31 Shorts)","story (5.8x, 22 Shorts)","you (11.2x, 10 Shorts)","under 30 s (1.8x, 97 Shorts)",The Northumbria Mysteries: New BBC Detective Drama 🎬 (106 views),,,,,
+fit,AU,131,,,,,,,,,,Length,under 30 s,99,1.3,1.76
+country,AU,660,3.0,57.7,0,2,"Film (4.2x, 32 Shorts)","story (5.6x, 23 Shorts)","you (11.2x, 10 Shorts)","under 30 s (1.8x, 99 Shorts)",The Northumbria Mysteries: New BBC Detective Drama 🎬 (106 views),,,,,

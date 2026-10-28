@@ -1,11 +1,11 @@
 feature,feature_label,value,n,days,views,subs,expected,subs_per_1k,typical_per_1k,lift,low,high,verdict,why
-subs:category,Subscribers: Category,Film,25,10,7215,8,4.04,1.11,0.56,1.66,0.99,3.57,early sign,not proven: 90% interval 0.99x to 3.57x includes typical
-subs:category,Subscribers: Category,Gaming,20,9,3101,2,1.33,0.64,0.43,1.2,0.27,4.74,about typical,
-subs:category,Subscribers: Category,Tech,6,5,579,1,0.51,1.73,0.89,1.19,0.1,9.23,about typical,
-subs:category,Subscribers: Category,Science,5,3,451,0,0.04,0.0,0.08,0.98,0.0,83.01,about typical,
+subs:category,Subscribers: Category,Film,26,10,7291,8,4.1,1.1,0.56,1.64,0.97,3.52,early sign,not proven: 90% interval 0.97x to 3.52x includes typical
+subs:category,Subscribers: Category,Gaming,19,8,2823,2,0.74,0.71,0.26,1.46,0.48,8.52,early sign,not proven: 90% interval 0.48x to 8.52x includes typical
+subs:category,Subscribers: Category,Tech,6,5,579,1,0.55,1.73,0.95,1.18,0.09,8.63,about typical,
+subs:category,Subscribers: Category,Science,5,3,451,0,0.04,0.0,0.08,0.98,0.0,82.98,about typical,
 subs:category,Subscribers: Category,Sport,25,8,6335,3,3.55,0.47,0.56,0.9,0.23,2.18,about typical,
-subs:category,Subscribers: Category,Entertainment,11,7,2340,0,1.42,0.0,0.61,0.58,0.0,2.11,early sign,not proven: 90% interval 0.00x to 2.11x includes typical
-subs:category,Subscribers: Category,Music,33,10,11686,5,10.49,0.43,0.9,0.56,0.19,1.0,early sign,not proven: 90% interval 0.19x to 1.00x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Entertainment,10,7,2183,0,1.43,0.0,0.66,0.58,0.0,2.09,early sign,not proven: 90% interval 0.00x to 2.09x includes typical
+subs:category,Subscribers: Category,Music,34,10,11884,5,11.6,0.42,0.98,0.51,0.17,0.91,early sign,not proven: the two halves of the data disagree
 subs:ending,Subscribers: Ending,follow line,4,2,1373,3,0.21,2.18,0.16,2.26,3.81,36.14,early sign,not proven: 4 Shorts over 2 UK day(s)
 subs:ending,Subscribers: Ending,loop,9,5,2267,1,1.29,0.44,0.57,0.91,0.04,3.68,about typical,
 subs:ending,Subscribers: Ending,question,5,4,1530,0,0.88,0.0,0.58,0.69,0.0,3.4,early sign,not proven: 90% interval 0.00x to 3.40x includes typical; the two halves of the data disagree

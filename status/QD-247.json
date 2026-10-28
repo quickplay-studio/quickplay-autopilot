@@ -1,0 +1,179 @@
+{
+ "id": "QD-247",
+ "board": "boards/queue/QD-247.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T17:00:00Z",
+ "rendered": "2026-10-28T08:56:02.640021+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Lord of the Rings: the 438 day filming secret",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "once-upon-a-time",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 43.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 23.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 387.6,
+   "contrast": 0.202,
+   "face_area": 0.2582,
+   "text_area": 0.0344,
+   "caption_contrast": 4.41,
+   "by_frame": {
+    "sharpness": [
+     391.2,
+     425.9,
+     434.6,
+     298.9
+    ],
+    "contrast": [
+     0.186,
+     0.184,
+     0.18,
+     0.258
+    ],
+    "face_area": [
+     0.3192,
+     0.3461,
+     0.3249,
+     0.0427
+    ],
+    "text_area": [
+     0.0358,
+     0.0344,
+     0.0355,
+     0.0318
+    ],
+    "caption_contrast": [
+     3.67,
+     3.84,
+     4.98,
+     17.01
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.28,
+   "none",
+   3
+  ],
+  [
+   5.28,
+   9.48,
+   "none",
+   3
+  ],
+  [
+   9.48,
+   16.25,
+   "none",
+   5
+  ],
+  [
+   16.25,
+   21.48,
+   "none",
+   4
+  ],
+  [
+   21.48,
+   26.26,
+   "none",
+   3
+  ],
+  [
+   26.26,
+   31.21,
+   "none",
+   3
+  ],
+  [
+   31.21,
+   38.13,
+   "none",
+   5
+  ],
+  [
+   38.13,
+   43.47,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "62821",
+   "q": "movie theatre seats",
+   "t0": 0.0,
+   "t1": 22.04
+  },
+  {
+   "p": "pixabay",
+   "id": "9597",
+   "q": "film projector light",
+   "t0": 21.44,
+   "t1": 43.47
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T09:17:24Z",
+ "video": "u2uM8uaZDVo",
+ "url": "https://youtube.com/shorts/u2uM8uaZDVo",
+ "publish_at": "2026-10-28T17:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T17:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-247"
+}

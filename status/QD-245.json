@@ -1,0 +1,173 @@
+{
+ "id": "QD-245",
+ "board": "boards/queue/QD-245.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T10:00:00Z",
+ "rendered": "2026-10-28T08:53:58.339508+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Harry Kane Ballon d'Or: chaotic London ceremony ⚽",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "once-upon-a-time",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "low",
+  "voice": "lily",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 31.4,
+  "wps": 3.04,
+  "weak_beats": [],
+  "size_mb": 23.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 865.5,
+   "contrast": 0.189,
+   "face_area": 0.2553,
+   "text_area": 0.069,
+   "caption_contrast": 6.42,
+   "by_frame": {
+    "sharpness": [
+     839.3,
+     900.4,
+     895.4,
+     827.0
+    ],
+    "contrast": [
+     0.188,
+     0.188,
+     0.189,
+     0.189
+    ],
+    "face_area": [
+     0.2774,
+     0.182,
+     0.2862,
+     0.2756
+    ],
+    "text_area": [
+     0.0717,
+     0.0705,
+     0.0544,
+     0.0795
+    ],
+    "caption_contrast": [
+     6.36,
+     6.5,
+     6.48,
+     6.3
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.56,
+   "none",
+   2
+  ],
+  [
+   4.56,
+   9.28,
+   "none",
+   3
+  ],
+  [
+   9.28,
+   12.37,
+   "none",
+   2
+  ],
+  [
+   12.37,
+   15.19,
+   "none",
+   2
+  ],
+  [
+   15.19,
+   18.38,
+   "none",
+   2
+  ],
+  [
+   18.38,
+   22.89,
+   "none",
+   3
+  ],
+  [
+   22.89,
+   31.34,
+   "none",
+   6
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "239964",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 15.97
+  },
+  {
+   "p": "pixabay",
+   "id": "145582",
+   "q": "london city night",
+   "t0": 15.37,
+   "t1": 31.34
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T09:17:22Z",
+ "video": "rjO3XWFiBk0",
+ "url": "https://youtube.com/shorts/rjO3XWFiBk0",
+ "publish_at": "2026-10-28T10:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T10:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-245"
+}

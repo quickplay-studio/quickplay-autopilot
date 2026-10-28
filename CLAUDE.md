@@ -42,6 +42,7 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   11 factors, "lab" = the newest lab look); analytics/round.csv gives verdicts adjusted for channel and the other arms,
   a settled factor (even or no clear difference) leaves the round, and analytics/channel_drivers.csv lets a channel
   differ only with 10+ of its own Shorts proving it.
+  Sameness and control (28 October): sameness.py keeps each Short unlike the channel's last 14 days (pair check, rewrite then drop, a 35% recipe cap; analytics/sameness.md) and 1 normal Short in 10 is a control Short written with the recipe frozen in analytics/control_recipe.json, left out of every verdict and compared by trend.py ("Loop vs frozen control").
   trend.py (26 October) watches the absolute numbers week on week and how many Shorts followed the rulings (insights.md "Is
   the channel getting better"); alerts.py opens an issue when retention falls or the recipe stops refreshing.
 - evolve.yml (07:23 UTC, 26 October): pipeline/evolve.py keeps the test round full by itself. It retires settled contests (a

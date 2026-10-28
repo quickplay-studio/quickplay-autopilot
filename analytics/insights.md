@@ -1,10 +1,10 @@
-# What's working (updated 2026-10-28 14:06 UTC)
+# What's working (updated 2026-10-28 14:41 UTC)
 
-YouTube Partner Program: 18 of 1,000 subscribers, about 12,503 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (96 days): after that new channels need 20M. Needed from now: about 110,972 views a day.
+YouTube Partner Program: 18 of 1,000 subscribers, about 12,512 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (96 days): after that new channels need 20M. Needed from now: about 110,972 views a day.
 
 ## Recipe from the data (the writer follows this; Charlie's requests and breaking news still come first)
 - Follow up QD-215 ("Film Facts #2: kpop demon hunters song: the soundtrack history"): 682 views in its first 3 hours, 227.3x the median Short at 3 hours (the top fifth). Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
-- Follow up QD-219 ("Film Explained #1: How Lord of the Rings Made Hobbits Small"): 278 views in its first 3 hours, 111.2x the median Short at 3 hours (the top fifth). Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
+- Follow up QD-219 ("Film Explained #1: How Lord of the Rings Made Hobbits Small"): 278 views in its first 3 hours, 92.7x the median Short at 3 hours (the top fifth). Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
 - Category mix for the day (from the data, every category at least 5% and none over 35%, and 1 Short in 5 an exploration Short in any category): Music 32%, Film 15%, Gaming 15%, Sport 15%, Entertainment 9%, Science 7%, Tech 7%.
 - Hook style: use less question (0.67x, 9 Shorts).
 - Hook length: lean towards 13 words or more (1.36x, 42 Shorts).
@@ -29,13 +29,13 @@ YouTube Partner Program: 18 of 1,000 subscribers, about 12,503 of 10,000,000 Sho
 - - writing instruction g003: Compare the number to something familiar: a 7, b 5; too few to tell; about 7 more days at most
 - - writing instruction g004: First sentence 12 words, no background: a 0, b 0; too few to tell; about 7 more days at most, judged on the engaged share (views that stayed)
 - - hook: statement 10, number 5; too few to tell; about 7 more days at most, judged on the engaged share (views that stayed)
-- - length: 25 to 34 s 19, 35 to 44 s 24; running (35 to 44 s against 25 to 34 s: 0.67x, 90% interval 0.25 to 1.77; leaning 25 to 34 s); about 5 more days at most
+- - length: 25 to 34 s 19, 35 to 44 s 24; running (35 to 44 s against 25 to 34 s: 0.65x, 90% interval 0.25 to 1.73; leaning 25 to 34 s); about 5 more days at most
 - - title opening: search phrase 19, curiosity 13; too few to tell; about 6 more days at most
 - - writer model: gpt-oss-120b 2, gemini flash 7; too few to tell; about 7 more days at most
-- - title emoji: emoji 22, none 23; running (none against emoji: 1.45x, 90% interval 0.58 to 3.64; leaning none); about 5 more days at most
+- - title emoji: emoji 22, none 23; running (none against emoji: 1.47x, 90% interval 0.59 to 3.67; leaning none); about 5 more days at most
 - - title answer (stated or held back): stated 20, held back 14; too few to tell; about 6 more days at most
 - - subscribe line (spoken or none): spoken 9, none 13; too few to tell; about 6 more days at most
-- - comment replies: on 25, off 23; winner on (off against on: 0.4x, 90% interval 0.18 to 0.92); kept, still challenged 1 Short in 5
+- - comment replies: on 25, off 23; winner on (off against on: 0.41x, 90% interval 0.18 to 0.93); kept, still challenged 1 Short in 5
 - US viewers are 39% (UK 14%): pick stories that matter in both, explain UK-only references in a few words, and keep UK spelling.
 - India is 9% of views and watches Film 3.1x more than the rest: keep Film open to stories from there (family friendly, names and titles as the sources write them).
 
@@ -53,17 +53,17 @@ YouTube Partner Program: 18 of 1,000 subscribers, about 12,503 of 10,000,000 Sho
 - Push: posting time (uk) "08:00 to 10:59" 1.52x over 23 Shorts (average viewed 53% vs 49% typical)
 - Cut back: first frame "cover" 0.66x over 32 Shorts (average viewed 40% vs 49% typical)
 - Cut back: hook style "question" 0.67x over 9 Shorts (engaged views 25% vs 29% typical; its topics ran colder than the day's other Shorts (-0.4 heat))
-- Cut back: category "Gaming" 0.68x over 33 Shorts
 - Cut back: length "35 to 44 s" 0.68x over 29 Shorts (average viewed 43% vs 49% typical)
 - Cut back: posting time (uk) "17:00 to 19:59" 0.68x over 26 Shorts (average viewed 43% vs 49% typical)
-- Cut back: category on instagram "Science" 0.68x over 10 Shorts (against Instagram views)
+- Cut back: category "Gaming" 0.69x over 33 Shorts
+- Cut back: category on instagram "Science" 0.69x over 10 Shorts (against Instagram views)
 - Cut back: music mood "tech" 0.7x over 9 Shorts
 - Cut back: kind of short "true story" 0.71x over 12 Shorts (engaged views 24% vs 29% typical)
 - Cut back: day posted "Sunday" 0.71x over 31 Shorts (average viewed 40% vs 49% typical)
 - Cut back: voice "heart" 0.72x over 6 Shorts (engaged views 24% vs 29% typical)
-- Push: category on instagram "Gaming" 1.37x over 21 Shorts (against Instagram views)
 - Push: hook length "13 words or more" 1.36x over 42 Shorts
 - Cut back: topic heat "cold" 0.77x over 86 Shorts (its topics ran colder than the day's other Shorts (-0.7 heat), so it is not paused for its views)
+- Push: category on instagram "Gaming" 1.29x over 23 Shorts (against Instagram views)
 - Early sign: category "Science" 0.73x over 11 Shorts
 - Early sign: exploration short "yes" 0.61x over 8 Shorts
 - Early sign: first frame "photo" 0.72x over 21 Shorts
@@ -72,16 +72,17 @@ YouTube Partner Program: 18 of 1,000 subscribers, about 12,503 of 10,000,000 Sho
 - Early sign: format "story" 0.76x over 22 Shorts
 
 ## Is the channel getting better (this week against the week before; Shorts public 24 hours or more)
-- Views at 24 hours: 30.0 this week, 70.0 the week before (down).
-- Share of the Short viewed (%): 46.9 this week, 49.8 the week before (level).
-- Engaged views (% of views): 28.0 this week, 31.0 the week before (down).
-- Subscribers per 1,000 views: 0.45 this week, 0.65 the week before (down).
-- Shorts that followed the data's rulings: 12 of 111, 5.47x the 24-hour views of the rest.
-- Shorts measured: 111 this week, 65 the week before.
+- Views at 24 hours: 30.5 this week, 66.5 the week before (down).
+- Share of the Short viewed (%): 46.9 this week, 50.2 the week before (level).
+- Engaged views (% of views): 28.0 this week, 30.5 the week before (level).
+- Subscribers per 1,000 views: 0.45 this week, 0.64 the week before (down).
+- Shorts that followed the data's rulings: 12 of 110, 5.07x the 24-hour views of the rest.
+- Topic heat: this week's topics ran hotter (by 0.3 heat on the trend sources), so part of any rise may be the topics rather than the changes.
+- Shorts measured: 110 this week, 66 the week before.
 
 ## Topic heat (is it the change, or was the topic trending?)
 - Each point of topic heat came with +4% views against the same day's other Shorts (180 Shorts, not clear).
-- Last 7 days: 35 of 253 Shorts on a hot topic, 42 warm, 176 cold.
+- Last 7 days: 35 of 252 Shorts on a hot topic, 43 warm, 174 cold.
 - Viral topic pushes in the last 7 days: 4 Shorts (explained, facts, latest, rankings).
 - Every verdict above allows for it: a push or cut back that only held because its Shorts had hotter (or colder) topics than the day's others is held back as not proven, and no choice is paused for a cold topic's views.
 
@@ -95,8 +96,8 @@ YouTube Partner Program: 18 of 1,000 subscribers, about 12,503 of 10,000,000 Sho
 - Best Short for subscribers: QD-165 "Song Secrets #1: Dai Dai Shakira: the global chart record 🏆" gained 3 from 1,003 views (2.99 per 1,000).
 
 ## When people watch
-Most views an hour (UK, last 11 days): 17:00 (301/h), 15:00 (230/h), 14:00 (223/h), 12:00 (212/h). Quietest: 00:00 (88/h), 08:00 (100/h), 06:00 (108/h).
-By weekday (views gained): Wed 8,845, Mon 6,858, Tue 6,331, Sun 4,861, Sat 4,792, Fri 4,081, Thu 2,125.
+Most views an hour (UK, last 11 days): 17:00 (301/h), 15:00 (230/h), 14:00 (216/h), 12:00 (212/h). Quietest: 00:00 (88/h), 08:00 (100/h), 06:00 (108/h).
+By weekday (views gained): Wed 8,869, Mon 6,858, Tue 6,331, Sun 4,861, Sat 4,792, Fri 4,081, Thu 2,125.
 
 ## Where viewers are and how they find us
 Countries (YouTube views): US 39%, GB 14%, IN 9%, DE 4%, CA 4%, PH 3%.
@@ -121,13 +122,13 @@ Biggest groups: 25-34 male 15%, 35-44 male 13%, 45-54 male 10%.
 - AU: 3% of views, 57.7% watched on average, 0 subscribers. Does best with category Film (4.3x, 31 Shorts); format story (5.8x, 22 Shorts); hook you (11.2x, 10 Shorts). Top Short: The Northumbria Mysteries: New BBC Detective Drama 🎬 (106 views).
 
 ## Best Shorts (public 24 hours or more)
-- 2,175 views (27.5/h), 42.9% viewed · Ballon d'Or 2026 ceremony is moving to London [Sport, news_explained, 07:00] · hook: "The Ballon d'Or ceremony is moving to London this Monday."
-- 1,260 views (10.7/h), 127.3% viewed, +3 subs · The Northumbria Mysteries: New BBC Detective Drama 🎬 [Film, story, 17:00] · hook: "23 October brings a brand‑new BBC detective drama to your screen."
+- 2,175 views (27.3/h), 42.9% viewed · Ballon d'Or 2026 ceremony is moving to London [Sport, news_explained, 07:00] · hook: "The Ballon d'Or ceremony is moving to London this Monday."
+- 1,260 views (10.6/h), 127.3% viewed, +3 subs · The Northumbria Mysteries: New BBC Detective Drama 🎬 [Film, story, 17:00] · hook: "23 October brings a brand‑new BBC detective drama to your screen."
 - 1,237 views (6.6/h), 139.2% viewed · Bohemian Rhapsody: too long for radio? 🎸 [Music, timeline, 20:50] · hook: "Queen's own label said this song was too long for radio."
-- 1,207 views (11.4/h), 53.6% viewed · How Barbara Palvin was discovered at age 13 ✨ [Entertainment, timeline, 05:00] · hook: "Barbara Palvin was discovered walking in Budapest at just age 13."
+- 1,207 views (11.3/h), 53.6% viewed · How Barbara Palvin was discovered at age 13 ✨ [Entertainment, timeline, 05:00] · hook: "Barbara Palvin was discovered walking in Budapest at just age 13."
 - 1,178 views (4.4/h), 58.8% viewed · The K-pop group from BLACKPINK's producer 🎤 [Music, legacy, 13:30]
 - 1,101 views (8.8/h), 52.8% viewed · Jenna Ortega: stepping away from television 📺 [Film, news_explained, 10:00] · hook: "Jenna Ortega plans to step away from television after Wednesday ends."
-- 1,003 views (13.5/h), 45.1% viewed, +3 subs · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆 [Music, timeline, 12:00] · hook: "Shakira and Burna Boy just scored a record tenth week at number one."
+- 1,003 views (13.4/h), 45.1% viewed, +3 subs · Song Secrets #1: Dai Dai Shakira: the global chart record 🏆 [Music, timeline, 12:00] · hook: "Shakira and Burna Boy just scored a record tenth week at number one."
 - 985 views (8.1/h), 53.2% viewed, +1 subs · BABYMONSTER: The massive world tour expansion 🎤 [Music, one_detail, 13:30] · hook: "You might think rookie pop groups stay local, but BABYMONSTER just went global."
 
 ## Weakest
@@ -166,7 +167,7 @@ Biggest groups: 25-34 male 15%, 35-44 male 13%, 45-54 male 10%.
 - 12:50: 417 median, 1 Shorts
 - 09:00: 399 median, 3 Shorts
 - 08:10: 380 median, 3 Shorts
-- 11:00: 342 median, 4 Shorts
+- 11:00: 347 median, 4 Shorts
 - 10:10: 328 median, 2 Shorts
 - 07:30: 322 median, 2 Shorts
 - 04:00: 318 median, 3 Shorts
@@ -236,9 +237,9 @@ Mostly real images of the subject (143 Shorts): 100% still watching at 3s, 50% v
 - versus: 0.97 (10 beats)
 - timeline: 1.03 (5 beats)
 - bars: 1.38 (3 beats)
-- footage: 2.19 (311 beats)
-- date: 2.36 (28 beats)
-- stat: 2.75 (29 beats)
+- footage: 2.19 (314 beats)
+- date: 2.48 (29 beats)
+- stat: 2.88 (30 beats)
 - cards: 3.23 (14 beats)
 - title: 4.69 (44 beats)
 - quote: 6.57 (2 beats)
@@ -248,7 +249,7 @@ GitHub picks each Short's look and leans towards the winners by itself.
 - captions: pop 1.49 (6), lab-captions-1019 1.19 (52), clean 1.13 (32), minimal 1.05 (20), low 1.00 (25), boxed 0.98 (3), lab-captions-1024 0.90 (9), punch 0.53 (2)
 - voice (on viewers not swiping away): daniel 1.63 (5), isabella 1.35 (2), michael 1.30 (9), george 1.05 (29), george_dramatic 1.03 (9), george_quick 1.01 (2), lily 0.96 (5), lewis 0.88 (4), emma 0.88 (17), lab-voice-1019 0.78 (7), heart 0.48 (1)
 - energy: steady 1.18 (83), punchy 1.09 (8), lab-energy-1019 1.08 (23), calm 1.06 (27), lab-energy-1025 0.82 (8)
-- grade: natural 1.31 (61), vivid 1.15 (3), cinematic 1.10 (26), lab-grade-1019 1.10 (33), lab-grade-1023 0.90 (25), lab-grade-1027 0.33 (1)
+- grade: natural 1.30 (61), vivid 1.15 (3), cinematic 1.10 (26), lab-grade-1019 1.10 (33), lab-grade-1023 0.90 (25), lab-grade-1027 0.67 (1)
 - opening: lab-opening-1019 1.20 (19), image_first 1.12 (79), graphic_first 1.06 (42), lab-opening-1026 1.00 (9)
 - style: minimal 1.00 (25), standard 0.82 (12)
 - closing: none 1.00 (11), chip 0.67 (11)
@@ -258,7 +259,7 @@ Engaged views (stayed past the first seconds): median 30% of views.
 Hooks of 10 words or fewer: 80 median views (50); longer hooks: 64 (116).
 
 ## Instagram (its own numbers, never shown to the writer)
-- Category medians, Instagram views per Reel a day old or more (107 Reels, typical 115): Gaming 123 (21), Sport 120 (25), Film 119 (14), Music 75 (23), Animals 43 (1), Science 38 (10), Entertainment 15 (7), Tech 8 (6). Posted first, as soon as they are public: Gaming (Instagram's own medians; a weight of 1.05 or more).
-- Tests, every Reel takes an arm of each (Reels measured, median views, the share of new Reels each arm gets): trial reel yes 0 against no 15 at 122 views (50/50), paused after Meta refused one; caption short 10 at 125 views against full 6 at 117 views (50/50); posting hour morning 8 at 122 views against any 8 at 123 views (50/50).
-- Followers: 1 (0 a week ago). Last 7 days: 82 Reels measured, median 115 views; the 7 days before: 25, median 105.
+- Category medians, Instagram views per Reel a day old or more (109 Reels, typical 115): Gaming 123 (23), Sport 120 (25), Film 119 (14), Music 75 (23), Animals 43 (1), Science 38 (10), Entertainment 15 (7), Tech 8 (6). Posted first, as soon as they are public: Gaming (Instagram's own medians; a weight of 1.05 or more).
+- Tests, every Reel takes an arm of each (Reels measured, median views, the share of new Reels each arm gets): trial reel yes 0 against no 17 at 119 views (50/50), paused after Meta refused one; caption short 11 at 123 views against full 7 at 115 views (50/50); posting hour morning 8 at 122 views against any 10 at 116 views (50/50).
+- Followers: 1 (0 a week ago). Last 7 days: 84 Reels measured, median 115 views; the 7 days before: 25, median 105.
 - Cover frame at the hook: accepted on 20 of 20 Reels asked in 14 days.

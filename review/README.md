@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 14:06): 18 of 1,000 subscribers · 12,503 of 10 million Shorts views in 90 days · 4,085 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 14:41): 18 of 1,000 subscribers · 12,512 of 10 million Shorts views in 90 days · 4,109 views in the last 24 hours (about 110,972 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Wed 28 Oct 14:06 (UK): 13 scheduled, 137 public, 24 uploads in the last 24 hours.
+YouTube checked Wed 28 Oct 14:41 (UK): 13 scheduled, 137 public, 24 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 11:42).
 
@@ -202,7 +202,7 @@ scheduled · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) �
 ![QD-248](QD-248.jpg)
 
 ### Wed 28 Oct 13:30 · Science Explained #2: How gravity works: science explained 🌌
-public · 1 views · 42 s · music: event-horizon · [script](../boards/done/QD-225.json) · [YouTube](https://youtube.com/shorts/JX9L5J_0LFY)
+public · 42 s · music: event-horizon · [script](../boards/done/QD-225.json) · [YouTube](https://youtube.com/shorts/JX9L5J_0LFY)
 
 ![QD-225](QD-225.jpg)
 
@@ -227,27 +227,27 @@ public · 1,022 views · 37 s · music: purple-desire · [script](../boards/done
 ![QD-215](QD-215.jpg)
 
 ### Wed 28 Oct 6:00 · Music Explained #2: Who was Johann Sebastian Bach?
-public · 8 views · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-210.json) · [YouTube](https://youtube.com/shorts/VZenbNfVEnY)
+public · 9 views · 41 s · music: impossible-sacrifice · [script](../boards/done/QD-210.json) · [YouTube](https://youtube.com/shorts/VZenbNfVEnY)
 
 ![QD-210](QD-210.jpg)
 
 ### Wed 28 Oct 2:30 · Star Stories #2: Matthew Perry Netflix documentary 📺
-public · 61 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
+public · 51 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
 
 ![QD-228](QD-228.jpg)
 
 ### Wed 28 Oct 1:30 · Film Explained #1: How Lord of the Rings Made Hobbits Small
-public · 962 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
+public · 960 views · 37 s · music: duty-calls · [script](../boards/done/QD-219.json) · [YouTube](https://youtube.com/shorts/RyIxr9lB7BM)
 
 ![QD-219](QD-219.jpg)
 
 ### Tue 27 Oct 22:00 · iPhone Duo screen problems: the replacement deal
-public · 6 views · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
+public · 7 views · 29 s · music: glitcher · [script](../boards/done/QD-214.json) · [YouTube](https://youtube.com/shorts/GNv-lzw9EXk)
 
 ![QD-214](QD-214.jpg)
 
 ### Tue 27 Oct 17:00 · GTA 6 hits consoles on 19 November 🎮
-public · 5 views · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json) · [YouTube](https://youtube.com/shorts/GMcm2UzwGN0)
+public · 6 views · 37 s · music: gta-type-beat · [script](../boards/done/QD-209.json) · [YouTube](https://youtube.com/shorts/GMcm2UzwGN0)
 
 ![QD-209](QD-209.jpg)
 
@@ -257,17 +257,17 @@ public · 16 views · 24 s · music: comin-wit-it · [script](../boards/done/QD-
 ![QD-212](QD-212.jpg)
 
 ### Tue 27 Oct 14:00 · Game Facts #4: halloween 2026 game: the price drop you missed
-public · 23 views · 40 s · music: house-on-the-hill · [script](../boards/done/QD-207.json) · [YouTube](https://youtube.com/shorts/Ryp4jApiRtU)
+public · 24 views · 40 s · music: house-on-the-hill · [script](../boards/done/QD-207.json) · [YouTube](https://youtube.com/shorts/Ryp4jApiRtU)
 
 ![QD-207](QD-207.jpg)
 
 ### Tue 27 Oct 13:30 · GTA 6 PC rumored 2027 as consoles drive leave spike
-public · 12 views · 29 s · music: death-duel · [script](../boards/done/QD-211.json) · [YouTube](https://youtube.com/shorts/kaI4B_oT77A)
+public · 24 views · 29 s · music: death-duel · [script](../boards/done/QD-211.json) · [YouTube](https://youtube.com/shorts/kaI4B_oT77A)
 
 ![QD-211](QD-211.jpg)
 
 ### Tue 27 Oct 13:00 · GPT-6.1 Terra: OpenAI upgrades ChatGPT
-public · 63 views · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
+public · 66 views · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
 
 ![QD-203](QD-203.jpg)
 
@@ -277,12 +277,12 @@ public · 97 views · 28 s · music: once-upon-a-time · on Instagram · [script
 ![QD-208](QD-208.jpg)
 
 ### Tue 27 Oct 12:00 · GTA 6 launch trailer: 24 days to go 🎮
-public · 41 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
+public · 40 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
 
 ![QD-200](QD-200.jpg)
 
 ### Tue 27 Oct 11:00 · Song Secrets #3: Beyonce solo debut hits number one in Billboard
-public · 415 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
+public · 416 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
 
 ![QD-202](QD-202.jpg)
 
@@ -292,7 +292,7 @@ public · 14 views · 27 s · music: in-battery · [script](../boards/done/QD-20
 ![QD-201](QD-201.jpg)
 
 ### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-public · 398 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
+public · 399 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
 
 ![QD-190](QD-190.jpg)
 

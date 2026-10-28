@@ -1,5 +1,5 @@
 {
- "started": "2026-10-28T13:39:06+00:00",
+ "started": "2026-10-28T14:12:19+00:00",
  "job": "trends",
  "ok": true,
  "reason": "",
@@ -23,9 +23,7 @@
  "dropped": [
   "keenable"
  ],
- "calls": {
-  "ovh": 2
- },
+ "calls": {},
  "search_switched_on": [],
  "search_rows": [
   "tavily/tavily-search keys 0",
@@ -77,13 +75,13 @@
    "reason": ""
   },
   {
-   "t": "2026-10-28T13:39:06+00:00",
+   "t": "2026-10-28T14:12:19+00:00",
    "job": "trends",
    "ok": true,
    "reason": ""
   }
  ],
- "calls_total": 2,
- "tokens": 7237,
- "finished": "2026-10-28T14:11:45+00:00"
+ "calls_total": 0,
+ "tokens": 0,
+ "finished": "2026-10-28T14:46:23+00:00"
 }

@@ -2,7 +2,7 @@
  "round": "round 1",
  "start": "2026-10-25",
  "per_arm": 70,
- "as_of": "2026-10-28T14:06+00:00",
+ "as_of": "2026-10-28T14:41+00:00",
  "factors": {
   "angles": {
    "arms": {
@@ -322,9 +322,9 @@
    "days_left": 5,
    "label": "length",
    "verdict": "running",
-   "effect": 0.67,
+   "effect": 0.65,
    "low": 0.25,
-   "high": 1.77,
+   "high": 1.73,
    "halves": "disagree",
    "winner": "",
    "leaning": "25 to 34 s",
@@ -405,9 +405,9 @@
    "days_left": 5,
    "label": "title emoji",
    "verdict": "running",
-   "effect": 1.45,
-   "low": 0.58,
-   "high": 3.64,
+   "effect": 1.47,
+   "low": 0.59,
+   "high": 3.67,
    "halves": "agree",
    "winner": "",
    "leaning": "none",
@@ -420,7 +420,7 @@
     "stated": {
      "n": 20,
      "needs": 50,
-     "verdict": "early sign"
+     "verdict": "about typical"
     },
     "held back": {
      "n": 14,
@@ -486,9 +486,9 @@
    "days_left": 0,
    "label": "comment replies",
    "verdict": "winner",
-   "effect": 0.4,
+   "effect": 0.41,
    "low": 0.18,
-   "high": 0.92,
+   "high": 0.93,
    "halves": "agree",
    "winner": "on",
    "leaning": "",

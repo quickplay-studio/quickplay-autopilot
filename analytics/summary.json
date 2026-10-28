@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-27T23:38+00:00",
+ "updated": "2026-10-28T01:01+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-27T19:08+00:00",
  "youtube": {
   "subscribers": 17,
   "public_shorts": 184,
-  "views_all_time": 36126,
+  "views_all_time": 36204,
   "views_last_90_days": 10213,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 11978,
+  "views_last_90_days_estimate": 12009,
   "analytics_last_day": "2026-10-25"
  },
  "instagram": {
@@ -27,7 +27,7 @@
   "subscribers_needed": 1000,
   "shorts_views_needed_90_days": 10000000,
   "apply_before": "2027-02-01",
-  "days_left": 97,
+  "days_left": 96,
   "subscribers_pct": 1.7,
   "views_pct": 0.12,
   "views_needed_per_day": 110978,
@@ -49,7 +49,7 @@
   "gaming": {
    "subscribers": 0,
    "public_shorts": 25,
-   "views_all_time": 192
+   "views_all_time": 194
   },
   "irl": {
    "subscribers": 0,

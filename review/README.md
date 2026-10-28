@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 08:02): 17 of 1,000 subscribers · 12,319 of 10 million Shorts views in 90 days · 2,959 views in the last 24 hours (about 110,974 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 08:56): 17 of 1,000 subscribers · 12,360 of 10 million Shorts views in 90 days · 3,126 views in the last 24 hours (about 110,974 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 8:11 (UK): 4 scheduled, 145 public, 20 uploads in the last 24 hours.
 
@@ -59,8 +59,8 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-217** Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
-- **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 07:59 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936729601167410'}
-- **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 07:59 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936729796167410'}
+- **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 08:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936748840167410'}
+- **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 08:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936749188167410'}
 - [raphinha birth date in Porto Alegre ⚽](https://youtube.com/shorts/ApvkxPKexGc): private and not scheduled
 
 ## Waiting for your approval
@@ -132,6 +132,12 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-245** Harry Kane Ballon d'Or: chaotic London ceremony ⚽ (rendering next)
+- **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-247** Lord of the Rings: the 438 day filming secret (rendering next)
 
 ## On the channel (latest first)
 

@@ -214,14 +214,15 @@ def live_chat_platforms(tok):
 
 
 def enable_keyless_search(tok):
-    """The keyless search engines (Parallel) exist as engine rows but start switched off ("Enable Parallel (no key needed)"):
-    switch them on through the admin API. Returns the platforms switched on."""
+    """The keyless search engines (Parallel) may start switched off ("Enable Parallel (no key needed)"): switch them on through
+    the admin API. Returns (the platforms switched on, every engine row the release has, for the status file)."""
     code, j, _ = http("GET", "/api/search/engines", key=tok)
+    rows = [e for e in (j if code == 200 and isinstance(j, list) else []) if isinstance(e, dict)]
     done = []
-    for e in (j if code == 200 and isinstance(j, list) else []):
-        if isinstance(e, dict) and e.get("platform") in KEYLESS_SEARCH and not e.get("enabled") and e.get("id"):
+    for e in rows:
+        if e.get("platform") in KEYLESS_SEARCH and not e.get("enabled") and e.get("id"):
             if http("PATCH", f"/api/search/engines/{int(e['id'])}", key=tok, body={"enabled": True})[0] == 200: done.append(e["platform"])
-    return sorted(set(done))
+    return sorted(set(done)), [f"{e.get('platform')}/{e.get('engineId')}{'' if e.get('enabled') else ' off'} keys {e.get('keyCount', 0)}" for e in rows][:16]
 
 
 def live_search(key):
@@ -337,7 +338,7 @@ def start(env=None, sh=subprocess.run):
         code, j, _ = http("POST", "/api/auth/login", body={"email": email, "password": pw})
         tok = (j or {}).get("token") if code == 200 else None
         st["chat_platforms"] = live_chat_platforms(tok) if tok else []
-        st["search_switched_on"] = enable_keyless_search(tok) if tok else []
+        st["search_switched_on"], st["search_rows"] = enable_keyless_search(tok) if tok else ([], [])
         st["search_engines"] = live_search(key)
         st["models"] = len(ids)
         st["ok"] = True

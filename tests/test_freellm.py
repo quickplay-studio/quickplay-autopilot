@@ -308,6 +308,7 @@ FL.wait_models = lambda key, seconds, **kw: FL.chat_models(LISTING)
 RAN.clear(); st = FL.start(START_ENV, fake_sh())
 assert st["ok"] and st["digest"] == "sha256:" + "a" * 64 and st["models"] == 10 and st["chat_platforms"] == ["kilo", "ovh"], st
 assert st["search_switched_on"] == ["parallel"], "the keyless engine is switched on (and a keyed one is not touched)"
+assert st["search_rows"] == ["parallel/None off keys 0", "tavily/None off keys 0", "exa/None keys 0"], st["search_rows"]
 assert st["search_engines"] == ["parallel"] and st["keys_given"] == ["TAVILY_API_KEY"] and "EXA_API_KEY" in st["keys_missing"], st
 assert "FREELLM_KEY=freellmapi-run-key" in GH_ENV.read_text() and f"FREELLM_BASE={BASE}" in GH_ENV.read_text()
 run = next(c for c in RAN if c[0][:2] == ["docker", "run"])

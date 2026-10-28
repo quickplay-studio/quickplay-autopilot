@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 14:04 UK.
+Updated Wednesday 28 October, 14:59 UK.
 
-**18 subscribers, 12,533 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**18 subscribers, 12,543 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,12 +26,12 @@ Updated Wednesday 28 October, 14:04 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 18 of 500 (3.60%) | 12,533 of 3,000,000 (0.42%) | 33,195 |
-| Full, from 1 February 2027 | 18 of 1,000 (1.80%) | 12,533 of 10,000,000 (0.13%) | 110,972 |
+| Expanded, open now | 18 of 500 (3.60%) | 12,543 of 3,000,000 (0.42%) | 33,194 |
+| Full, from 1 February 2027 | 18 of 1,000 (1.80%) | 12,543 of 10,000,000 (0.13%) | 110,972 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,702 (to Sun 25 Oct) | 4,093 | 18 | 96 |
+| 8,702 (to Sun 25 Oct) | 4,209 | 24 | 96 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -51,18 +51,18 @@ Days YouTube has reported, to Sun 25 Oct. More: [analytics/insights.md](analytic
 
 ## Tests and changes
 
-**18 contests live, 1 with a lean or a verdict.** Evolve has 0 champions, 0 adopted genes and has tried 4 genes ([summary](analytics/evolve.md)).
+**18 contests live, 3 with a lean or a verdict.** Evolve has 0 champions, 0 adopted genes and has tried 4 genes ([summary](analytics/evolve.md)).
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| comment replies | on 22, off 17 | running, leaning on | 5 |
-| title emoji | emoji 17, none 19 | too few to tell | 5 |
-| ending | loop 8, question 8 | too few to tell | 6 |
-| posting quarter (UK) | 06:00 to 12:00 14, 12:00 to 18:00 10 | too few to tell | 6 |
-| length | 25 to 34 s 15, 35 to 44 s 19 | too few to tell | 6 |
-| title opening | search phrase 14, curiosity 10 | too few to tell | 6 |
-| title answer (stated or held back) | stated 14, held back 12 | too few to tell | 6 |
-| subscribe line (spoken or none) | spoken 6, none 9 | too few to tell | 6 |
+| comment replies | on 25, off 23 | winner, winner on | 0 |
+| length | 25 to 34 s 19, 35 to 44 s 24 | running, leaning 25 to 34 s | 5 |
+| title emoji | emoji 22, none 23 | running, leaning none | 5 |
+| ending | loop 14, question 11 | too few to tell | 6 |
+| named series | named 11, plain 8 | too few to tell | 6 |
+| posting quarter (UK) | 06:00 to 12:00 15, 12:00 to 18:00 16 | too few to tell | 6 |
+| title opening | search phrase 19, curiosity 13 | too few to tell | 6 |
+| title answer (stated or held back) | stated 20, held back 14 | too few to tell | 6 |
 
 **Change ledger:** 154 changes, 101 live; verdicts so far: 23 no change, 17 worse, 12 better, 9 too early, 1 overlapped.
 

@@ -1,0 +1,29 @@
+{
+ "started": "2026-10-28T00:10:56+00:00",
+ "job": "write",
+ "ok": false,
+ "reason": "the router did not answer within 90 seconds",
+ "image": "ghcr.io/tashfeenahmed/freellmapi:v0.16.6",
+ "digest": "sha256:9b11990847dc2cba7b7041a7fe9bd2246cfae49993f00e86371333082e9a2b49",
+ "chat_platforms": [],
+ "search_engines": [],
+ "models": 0,
+ "keys_given": [],
+ "keys_missing": [
+  "TAVILY_API_KEY",
+  "EXA_API_KEY",
+  "FIRECRAWL_API_KEY",
+  "LINKUP_API_KEY",
+  "OLLAMA_API_KEY",
+  "LLM7_API_KEY"
+ ],
+ "calls": {},
+ "history": [
+  {
+   "t": "2026-10-28T00:10:56+00:00",
+   "job": "write",
+   "ok": false,
+   "reason": "the router did not answer within 90 seconds"
+  }
+ ]
+}

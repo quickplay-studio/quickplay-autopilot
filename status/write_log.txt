@@ -1,21 +1,26 @@
-evening run for 2026-10-28: 4 to write from 4 fact packs
+evening run for 2026-10-28: 2 to write from 4 fact packs
 category shares: {'Music': 0.26, 'Film': 0.16, 'Gaming': 0.15, 'Sport': 0.12, 'Animals': 0.1, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
-category floors first: ['Entertainment']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-How does gravity work?: gemini-3-flash-preview, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-Ballon d'Or 2026: still failing: narration: 47 words, needs 75 to 100 (20 to 45 seconds)
-Harry Potter HBO series: gemini-3.5-flash-lite, 1 warnings (narration: 72 words, best between 75 and 100)
-GTA 6: gemini-3.5-flash-lite, 0 warnings
-exploration Short: Entertainment: The One About Matthew Perry
-The One About Matthew Perry: gemini-3.5-flash-lite, 0 warnings
-evergreen: Top 10 highest-grossing films in the Hunger Games franchise: only 0 checked facts
-Why GTA 6 took over a decade to make: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
-wrote 5 of 4: QD-225 Science Explained #2: How gravity works: science explained 🌌; QD-226 harry potter cast: Harry Gilby; QD-227 Game Facts #6: gta 6 install size officially revealed at 210 GB; QD-228 Star Stories #2: Matthew Perry Netflix documentary 📺; QD-229 Why GTA 6 took over a decade to make 🎮 (reserve)
-channel gaming: GTA 6: gemini-3.5-flash-lite, 1 warnings (narration: 96 words, best between 100 and 125)
-channel gaming: wrote 1 of 2: QD-230 Game Lore #3: GTA 6: the massive storage size revealed
-channel irl: The One About Matthew Perry: gemini-3.5-flash-lite, 0 warnings
-evergreen: Top 10 most popular dog breeds in the UK: only 0 checked facts
-channel irl: wrote 1 of 2: QD-231 Did You Know #5: Matthew Perry documentary: the cast secret
-channel clips: Ballon d'Or 2026: gemini-3.5-flash-lite, 0 warnings
-channel clips: wrote 1 of 2: QD-232 Match Day #3: Harry Kane wins Ballon d'Or 2026 ⚽
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash", "gemini:gemini-3.6-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "gemini-3.6-flash": "daily limit 20", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries", "gemini-3.7-flash": "daily limit 20"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-3.7-flash": 1, "gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 50, "gemini-3.5-flash": 1, "gemini-3-flash-preview": 2, "groq:openai/gpt-oss-20b": 1, "groq:qwen/qwen3.8-27b": 2}, "empty answers": {"groq:openai/gpt-oss-120b": 1, "groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 0, "second opinions": 1, "providers passed over": ["groq", "openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+How does gravity work?: still failing: facts: beat 6: Beat 6 states Einstein proved it is not a force at all, but the pack states Einstein described it as the curvature of spacetime and Brahmagupta/Newton described it as an attractive force, without stating it 'is not a force at all'.
+Ballon d'Or 2026: skipped: niche
+covered already: Harry Potter HBO series
+covered already: GTA 6
+covered already: The One About Matthew Perry
+Song Secrets #3: Beyonce solo debut hits number one in Billboard: groq:qwen/qwen3.8-27b, 2 warnings (narration: 88 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
+The day The Beatles' rooftop concert stopped London traffic: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 2 warnings (meta.sources: one site only; name it in the narration for breaking news; check these words are fine in context: ['police'])
+The day The Beatles' rooftop concert stopped London traffic: skipped: nothing new
+The day The Beatles' rooftop concert stopped London traffic: still failing: facts: beat 1: The script calls it a 'police raid', but the pack states the police arrived and told them to reduce the volume / shut it down due to noise and traffic complaints, which is not a raid.
+Why is the Super Bowl exactly 60 minutes long?: skipped: why
+wrote 1 of 2: QD-233 Beyonce's 2003 album sold 317k in week one 🎤
+channel gaming: no Gaming news packs; evergreen instead
+channel gaming: Tetris: The unlikely story of how it was smuggled out of the Soviet Union: still failing: negative framing of a real person (only in fiction): ['floppy']
+channel gaming: wrote 0 of 2: 
+channel irl: no Entertainment/Animals/Food news packs; evergreen instead
+channel irl: Why do cats headbutt you to show affection?: skipped: niche
+channel irl: wrote 0 of 2: 
+channel clips: no Film/Tech/Science/Sport/Cars/History news packs; evergreen instead
+evergreen: Why do electric cars actually lose so much range in winter?: only 0 checked facts
+channel clips: Godzilla Minus One: how a tiny crew won an Oscar on a micro budget: gemini-3.5-flash-lite, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), edited by Claude
+channel clips: How does the James Webb Space Telescope actually see through time?: gemini-3.5-flash-lite, 2 warnings (beat 0: name James E Webb in the first five words, as the title does; meta.sources: one site only; name it in the narration for breaking news)
+channel clips: wrote 2 of 2: QD-235 Screen Time #5: Godzilla Minus One: the Oscar detail you missed; QD-236 Big Science #2: James Webb Space Telescope 🔭
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "gemini:gemini-flash-latest", "gemini:gemini-3.8-flash", "gemini:gemini-3.7-flash", "gemini:gemini-3.6-flash"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 36, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 11, "groq:qwen/qwen3.8-27b": 5, "gemini-3-flash-preview": 3, "claude:sonnet": 1}, "empty answers": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "providers": ["groq", "openrouter"], "local": true, "claude calls": 1, "second opinions": 2, "router searches": 0, "router sources added": 0, "providers passed over": ["groq", "openrouter"], "late": false, "claude today": "1 of 4 edits, 0 of 0 writes"}

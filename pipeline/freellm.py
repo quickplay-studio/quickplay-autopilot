@@ -213,6 +213,17 @@ def live_chat_platforms(tok):
                    and k.get("platform") not in SEARCH_PLATFORMS and k.get("platform") not in NEVER_ON})
 
 
+def enable_keyless_search(tok):
+    """The keyless search engines (Parallel) exist as engine rows but start switched off ("Enable Parallel (no key needed)"):
+    switch them on through the admin API. Returns the platforms switched on."""
+    code, j, _ = http("GET", "/api/search/engines", key=tok)
+    done = []
+    for e in (j if code == 200 and isinstance(j, list) else []):
+        if isinstance(e, dict) and e.get("platform") in KEYLESS_SEARCH and not e.get("enabled") and e.get("id"):
+            if http("PATCH", f"/api/search/engines/{int(e['id'])}", key=tok, body={"enabled": True})[0] == 200: done.append(e["platform"])
+    return sorted(set(done))
+
+
 def live_search(key):
     code, j, _ = http("GET", "/v1/search/engines", key=key)
     return sorted({e.get("provider") for e in (j or {}).get("data") or [] if isinstance(e, dict) and e.get("available")}) if code == 200 else []
@@ -324,7 +335,9 @@ def start(env=None, sh=subprocess.run):
         ids = wait_models(key, int(c["wait_s"]))
         if not ids: raise RuntimeError("the router listed no chat models within " + str(c["wait_s"]) + " seconds")
         code, j, _ = http("POST", "/api/auth/login", body={"email": email, "password": pw})
-        st["chat_platforms"] = live_chat_platforms((j or {}).get("token")) if code == 200 else []
+        tok = (j or {}).get("token") if code == 200 else None
+        st["chat_platforms"] = live_chat_platforms(tok) if tok else []
+        st["search_switched_on"] = enable_keyless_search(tok) if tok else []
         st["search_engines"] = live_search(key)
         st["models"] = len(ids)
         st["ok"] = True

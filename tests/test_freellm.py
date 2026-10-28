@@ -87,7 +87,7 @@ GETS, POSTS, REPLY = [], [], {}
 
 def get(url, **kw):
     GETS.append(url)
-    if url == BASE + "/models": return R(200, LISTING)
+    if url == BASE + "/models?available=true": return R(200, LISTING)
     return R(500, {})
 
 
@@ -119,7 +119,7 @@ os.environ["FREELLM_BASE"] = BASE + "/"
 reset()
 got = F.provider_models("freellm")
 assert got == ["freellm:gpt-oss-120b", "freellm:kimi-k2-instruct", "freellm:deepseek-v3.1", "freellm:qwen3-235b-a22b", "freellm:glm-4.6", "freellm:llama-3.3-70b"], got
-assert F.quality("freellm:llama-3.3-70b") == 4 and F.quality("freellm:gpt-oss-120b") == 5 and BASE + "/models" in GETS
+assert F.quality("freellm:llama-3.3-70b") == 4 and F.quality("freellm:gpt-oss-120b") == 5 and BASE + "/models?available=true" in GETS
 assert F.catch_all() == ["freellm:auto"] and F.chain()[-1] == "freellm:auto" and F.chain()[:6] == got, F.chain()
 order = F.writing_order()
 i_auto, i_lite = order.index("freellm:auto"), order.index("gemini:gemini-3.5-flash-lite")
@@ -300,11 +300,14 @@ FL.http = lambda method, path, key=None, body=None, base=None, timeout=15: {
     "/api/ping": (200, {"ok": True}, {}), "/v1/models?available=true": (200, LISTING, {}), "/api/auth/login": (200, {"token": "tok"}, {}),
     "/api/keys": (200, [{"platform": "kilo", "enabled": True, "status": "unknown"}, {"platform": "ovh", "enabled": True, "status": "healthy"},
                         {"platform": "tavily", "enabled": True, "status": "unknown"}, {"platform": "aihorde", "enabled": False, "status": "unknown"}], {}),
+    "/api/search/engines": (200, [{"id": 7, "platform": "parallel", "enabled": False}, {"id": 8, "platform": "tavily", "enabled": False}, {"id": 9, "platform": "exa", "enabled": True}], {}),
+    "/api/search/engines/7": (200, {}, {}),
     "/v1/search/engines": (200, {"data": [{"provider": "parallel", "available": True}, {"provider": "keenable", "available": False}]}, {})}[path]
 FL.read_key = lambda folder, sh=None, login=None: "freellmapi-run-key"
 FL.wait_models = lambda key, seconds, **kw: FL.chat_models(LISTING)
 RAN.clear(); st = FL.start(START_ENV, fake_sh())
 assert st["ok"] and st["digest"] == "sha256:" + "a" * 64 and st["models"] == 10 and st["chat_platforms"] == ["kilo", "ovh"], st
+assert st["search_switched_on"] == ["parallel"], "the keyless engine is switched on (and a keyed one is not touched)"
 assert st["search_engines"] == ["parallel"] and st["keys_given"] == ["TAVILY_API_KEY"] and "EXA_API_KEY" in st["keys_missing"], st
 assert "FREELLM_KEY=freellmapi-run-key" in GH_ENV.read_text() and f"FREELLM_BASE={BASE}" in GH_ENV.read_text()
 run = next(c for c in RAN if c[0][:2] == ["docker", "run"])
@@ -362,7 +365,8 @@ def sh_old_release(cmd, **kw):
     return sp.CompletedProcess(cmd, 0, "", "")
 FL.http = lambda method, path, key=None, body=None, base=None, timeout=15: (0, None, {}) if path == "/api/ping" and len(RUNS) == 1 else {
     "/api/ping": (200, {}, {}), "/v1/models?available=true": (200, LISTING, {}), "/api/auth/login": (200, {"token": "tok"}, {}),
-    "/api/keys": (200, [{"platform": "kilo", "enabled": True, "status": "unknown"}], {}), "/v1/search/engines": (200, {"data": []}, {})}[path]
+    "/api/keys": (200, [{"platform": "kilo", "enabled": True, "status": "unknown"}], {}), "/api/search/engines": (200, [], {}),
+    "/v1/search/engines": (200, {"data": []}, {})}[path]
 GH_ENV.write_text("")
 st = FL.start(START_ENV, sh_old_release)
 assert st["ok"] and st["dropped"] == ["keenable"] and len(RUNS) == 2, (st, len(RUNS))

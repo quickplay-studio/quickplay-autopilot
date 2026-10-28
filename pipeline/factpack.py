@@ -476,7 +476,8 @@ def provider_models(name):
             import requests
             ids, meta = [], {}
             try:
-                r = requests.get(base + "/models", headers={"Authorization": f"Bearer {key}", "Accept": "application/json"}, timeout=30)
+                r = requests.get(base + "/models" + ("?available=true" if name == "freellm" else ""),      # the router lists its whole catalog (283 rows) unless asked
+                                 headers={"Authorization": f"Bearer {key}", "Accept": "application/json"}, timeout=30)
                 data = r.json() if r.ok else []
                 for m in (data if isinstance(data, list) else data.get("data") or []):
                     if not isinstance(m, dict) or not m.get("id") or NOT_TEXT.search(m["id"]): continue

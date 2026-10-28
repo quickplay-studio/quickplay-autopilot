@@ -32,7 +32,24 @@
     },
     "lab": true,
     "parent": "lab-captions-1019",
-    "born": "2026-10-24"
+    "born": "2026-10-24",
+    "retired": "2026-10-28: 0.90x against 1.20x for lab-captions-1019 over 9 Shorts"
+   },
+   "lab-captions-1028": {
+    "desc": "68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel",
+    "class": "lab",
+    "group": 3,
+    "cap": {
+     "size": "68px",
+     "top": "1290px",
+     "weight": "600",
+     "on": "#FFFFFF",
+     "box": "transparent",
+     "pad": "0"
+    },
+    "lab": true,
+    "parent": "lab-captions-1019",
+    "born": "2026-10-28"
    }
   },
   "voice": {
@@ -42,7 +59,16 @@
     "wps": 3.15,
     "lab": true,
     "parent": "george",
-    "born": "2026-10-19"
+    "born": "2026-10-19",
+    "retired": "2026-10-28: 0.88x against 1.04x for george over 8 Shorts"
+   },
+   "lab-voice-1028": {
+    "desc": "British male, 3.15 words a second",
+    "voice": "DN",
+    "wps": 3.15,
+    "lab": true,
+    "parent": "daniel",
+    "born": "2026-10-28"
    }
   },
   "energy": {
@@ -119,7 +145,8 @@
   },
   "voice": {
    "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts",
-   "emma": "2026-10-27: 0.84x against 1.32x for michael over 16 Shorts"
+   "emma": "2026-10-27: 0.84x against 1.32x for michael over 16 Shorts",
+   "george_dramatic": "2026-10-28: making room for a new test (1.03x over 9 Shorts)"
   },
   "energy": {
    "calm": "2026-10-23: 0.57x against 1.65x for steady over 17 Shorts"
@@ -263,7 +290,37 @@
    "dimension": "grade",
    "change": "testing lab-grade-1027: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0",
    "why": "one or two settings changed from the best so far, natural"
+  },
+  {
+   "day": "2026-10-28",
+   "dimension": "captions",
+   "change": "retired lab-captions-1024",
+   "why": "0.90x against 1.20x for lab-captions-1019 over 9 Shorts"
+  },
+  {
+   "day": "2026-10-28",
+   "dimension": "captions",
+   "change": "testing lab-captions-1028: 68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel",
+   "why": "one or two settings changed from the best so far, lab-captions-1019"
+  },
+  {
+   "day": "2026-10-28",
+   "dimension": "voice",
+   "change": "retired lab-voice-1019",
+   "why": "0.88x against 1.04x for george over 8 Shorts"
+  },
+  {
+   "day": "2026-10-28",
+   "dimension": "voice",
+   "change": "retired george_dramatic",
+   "why": "making room for a new test (1.03x over 9 Shorts)"
+  },
+  {
+   "day": "2026-10-28",
+   "dimension": "voice",
+   "change": "testing lab-voice-1028: British male, 3.15 words a second",
+   "why": "one or two settings changed from the best so far, daniel"
   }
  ],
- "day": "2026-10-27"
+ "day": "2026-10-28"
 }

@@ -62,11 +62,14 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python pipeline/hub_md.py
-      - run: |
+      - env:
+          FULL: ${{ inputs.full && '1' || '' }}
+        run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           git add -A analytics; git add status/volume.json 2>/dev/null || true; git add README.md 2>/dev/null || true
+          [ -z "$FULL" ] || git add -A trends status review         # the full run (as in trends.yml) also writes there; unstaged files stop the rebase below
           git commit -q -m "Hourly numbers $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

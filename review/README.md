@@ -102,6 +102,24 @@ awaiting approval · 36 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-239](QD-239.jpg)
 
+### QD-242 · Player One #1: Tetris: the Moscow secret behind 520 million
+awaiting approval · 30 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-51e279b6b60fa0641f33)
+- dry run: always waits for approval, never uploaded
+
+![QD-242](QD-242.jpg)
+
+### QD-243 · On the Road #1: Bugatti Chiron: Why 10 Radiators?
+awaiting approval · 40 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-ceeb119aa0a6231c1087)
+- dry run: always waits for approval, never uploaded
+
+![QD-243](QD-243.jpg)
+
+### QD-244 · Time Machine #1: Apollo 13: the pencil detail they held back 🚀
+awaiting approval · 29 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-0b1dde92a13db838c964)
+- dry run: always waits for approval, never uploaded
+
+![QD-244](QD-244.jpg)
+
 ### TEST-L1024 · Free Steam games to grab before time runs out 🎮
 awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-963c381ac97f3f823bcc)
 - dry run: always waits for approval, never uploaded

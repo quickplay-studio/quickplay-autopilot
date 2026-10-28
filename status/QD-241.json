@@ -1,0 +1,29 @@
+{
+ "id": "QD-241",
+ "board": "boards/queue/QD-241.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T03:11:03.075941+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Level Up #3: Minecraft has no final update: here's why 🎮",
+ "state": "failed",
+ "error": "RuntimeError: no usable media for any beat"
+}

@@ -1,0 +1,167 @@
+{
+ "id": "QD-242",
+ "board": "boards/queue/QD-242.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T03:10:28.902823+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Player One #1: Tetris: the Moscow secret behind 520 million",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (commons-search:Alexey Pajitnov: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 3 reused a nearby picture (commons-search:Alexey Pajitnov: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 4 reused a nearby picture (commons-search:Moscow: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 5 reused a nearby picture (commons-search:Nintendo Game Boy: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 0.33,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "after-sunset",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 29.5,
+  "wps": 3.12,
+  "weak_beats": [],
+  "size_mb": 4.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 322.3,
+   "contrast": 0.18,
+   "face_area": 0.0,
+   "text_area": 0.0336,
+   "caption_contrast": 10.12,
+   "by_frame": {
+    "sharpness": [
+     301.1,
+     304.2,
+     315.9,
+     367.9
+    ],
+    "contrast": [
+     0.176,
+     0.179,
+     0.183,
+     0.18
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0335,
+     0.0329,
+     0.0329,
+     0.0352
+    ],
+    "caption_contrast": [
+     10.18,
+     9.95,
+     10.05,
+     10.22
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.69,
+   "none",
+   3
+  ],
+  [
+   5.69,
+   9.9,
+   "none",
+   3
+  ],
+  [
+   9.9,
+   14.16,
+   "none",
+   3
+  ],
+  [
+   14.16,
+   18.36,
+   "none",
+   3
+  ],
+  [
+   18.36,
+   23.25,
+   "none",
+   3
+  ],
+  [
+   23.25,
+   29.47,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "107138",
+   "q": "retro arcade machines",
+   "t0": 0.0,
+   "t1": 15.04
+  },
+  {
+   "p": "pixabay",
+   "id": "34329",
+   "q": "classic video games",
+   "t0": 14.44,
+   "t1": 29.47
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-242",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-51e279b6b60fa0641f33"
+}

@@ -1,0 +1,192 @@
+{
+ "id": "QD-243",
+ "board": "boards/queue/QD-243.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T03:10:29.888145+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": ""
+  }
+ },
+ "title": "On the Road #1: Bugatti Chiron: Why 10 Radiators?",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:Bugatti_Chiron_1.jpg: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 2 reused a nearby picture (commons:File:Bugatti_Chiron_1.jpg: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 3 reused a nearby picture (commons:File:Bugatti_Chiron_1.jpg: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)",
+  "beat 4 reused a nearby picture (commons:File:Bugatti_Chiron_1.jpg: 503 Server Error: Service Unavailable for url: https://commons.wikimedia.org/w/a)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 0.56,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "rise-of-the-machines",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 39.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 423.4,
+   "contrast": 0.21,
+   "face_area": 0.0,
+   "text_area": 0.0315,
+   "caption_contrast": 7.58,
+   "by_frame": {
+    "sharpness": [
+     395.3,
+     412.8,
+     426.0,
+     459.3
+    ],
+    "contrast": [
+     0.217,
+     0.215,
+     0.206,
+     0.2
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0333,
+     0.0303,
+     0.0318,
+     0.0304
+    ],
+    "caption_contrast": [
+     7.39,
+     7.46,
+     7.71,
+     14.03
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.82,
+   "none",
+   2
+  ],
+  [
+   4.82,
+   8.12,
+   "none",
+   2
+  ],
+  [
+   8.12,
+   13.52,
+   "none",
+   4
+  ],
+  [
+   13.52,
+   17.17,
+   "none",
+   3
+  ],
+  [
+   17.17,
+   21.11,
+   "none",
+   3
+  ],
+  [
+   21.11,
+   26.55,
+   "none",
+   4
+  ],
+  [
+   26.55,
+   31.18,
+   "none",
+   3
+  ],
+  [
+   31.18,
+   34.25,
+   "none",
+   2
+  ],
+  [
+   34.25,
+   39.56,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "18083",
+   "q": "highway speed motion",
+   "t0": 0.0,
+   "t1": 13.59
+  },
+  {
+   "p": "pixabay",
+   "id": "7087",
+   "q": "engine exhaust heat",
+   "t0": 12.99,
+   "t1": 26.57
+  },
+  {
+   "p": "pixabay",
+   "id": "21985",
+   "q": "sports car night road",
+   "t0": 25.97,
+   "t1": 39.56
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-243",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-ceeb119aa0a6231c1087"
+}

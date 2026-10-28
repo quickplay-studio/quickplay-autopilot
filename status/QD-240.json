@@ -1,0 +1,28 @@
+{
+ "id": "QD-240",
+ "board": "boards/queue/QD-240.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T03:10:31.857994+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Song Secrets #4: Beyoncé Crazy in Love: three milestones in one year 🎵",
+ "state": "failed",
+ "error": "RuntimeError: no usable media for any beat"
+}

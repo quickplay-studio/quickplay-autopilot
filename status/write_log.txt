@@ -1,18 +1,46 @@
-breaking run for 2026-10-28: 2 to write and 4 for a mega trend from 12 fact packs
-category shares: {'Music': 0.28, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.11, 'Entertainment': 0.07, 'Science': 0.07, 'Tech': 0.07}
-viral Ballon d'Or 2026: the latest angle is made already: Ballon d'Or 2026
-Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026 explained: gemini-3.8-flash, 2 warnings (beat 0: name Ballon d'Or in the first five words, as the title does; meta.sources: one site only; name it in the narration for breaking news)
+afternoon run for 2026-10-28: 4 to write and 4 for a mega trend from 18 fact packs
+category shares: {'Music': 0.27, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.12, 'Entertainment': 0.08, 'Science': 0.07, 'Tech': 0.07}
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 facts
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 star
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 rankings
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 by the numbers
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 what happens next
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 analysis
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 best moments
+watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 what happens next
 watchlist Ballon d'Or 2026: today's places are filled: Ballon d'Or 2026 analysis
 covered already: Walter Koenig
 covered already: Walter Koenig facts
 covered already: Walter Koenig star
-Walter Koenig reaction: gemini-3-flash-preview, 0 warnings
-Film Facts #2: kpop demon hunters song: the soundtrack history: skipped: niche
-wrote 0 of 2 and 2 of 4 for a mega trend: QD-262 ballon d'or 2026 explained: the historic numbers (mega); QD-263 Walter Koenig: the co-star bond you never knew (mega)
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"gemini-flash-latest": "daily limit 20", "groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {}, "answers": {"freellm:llama-3.3-70b": 2, "gemini-3.5-flash-lite": 7, "gemini-3.8-flash": 1, "gemini-3-flash-preview": 2, "groq:qwen/qwen3.8-27b": 1}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 0, "router searches": 0, "router sources added": 0, "providers passed over": [], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}
+covered already: Walter Koenig
+covered already: Walter Koenig facts
+covered already: Walter Koenig star
+Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
+Walter Koenig rankings: gemini-3.5-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+Walter Koenig by the numbers: error: 'str' object has no attribute 'get'
+mega Walter Koenig: trying again: Walter Koenig by the numbers
+Walter Koenig by the numbers: skipped: one source is Wikipedia
+Film Facts #2: kpop demon hunters song: the soundtrack history: groq:qwen/qwen3.8-27b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+evergreen: Top 10 best-selling Grand Theft Auto games: only 0 checked facts
+QD-266: about 2 min needs 16 facts, the pack has 12: 35 to 44 s instead
+How Dune became the greatest sci-fi epic ever written: skipped: niche
+QD-266: about 2 min needs 16 facts, the pack has 12: 35 to 44 s instead
+How Dune became the greatest sci-fi epic ever written: still failing: narration: 139 words, needs 100 to 125 (20 to 45 seconds)
+QD-266: about 2 min needs 16 facts, the pack has 5: 35 to 44 s instead
+How do footballers actually win the Ballon d'Or?: groq:qwen/qwen3.8-27b, 2 warnings (narration: 79 words, best between 100 and 125; meta.sources: one site only; name it in the narration for breaking news)
+Top 10 scariest Halloween films of all time: skipped: niche
+wrote 2 of 4 and 1 of 4 for a mega trend: QD-264 walter koenig: passed away aged 90 🖖 (mega); QD-265 KPop Demon Hunters: 4 songs in top ten 🎵; QD-266 Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
+channel gaming: no Gaming news packs; evergreen instead
+channel gaming: Minecraft: how the indie game built by one person became a global phenomenon: groq:qwen/qwen3.8-27b, 1 warnings (meta.sources: one site only; name it in the narration for breaking news)
+channel gaming: wrote 1 of 2: QD-267 Player One #1: Minecraft: 400 million copies sold
+channel irl: no Entertainment/Animals/Food news packs; evergreen instead
+channel irl: wrote 0 of 2: 
+channel clips: Ballon d'Or 2026 facts: groq:qwen/qwen3.8-27b, 0 warnings
+channel clips: Ballon d'Or 2026 star: groq:qwen/qwen3.8-27b, 1 warnings (narration: 64 words, best between 75 and 100)
+channel clips: mega Ballon d'Or 2026: wrote 2 of 2
+channel clips: no Film/Tech/Science/Sport/Cars/History news packs; evergreen instead
+channel clips: Back to the Future: the near-disastrous casting mix-up before Eric Stoltz was replaced: skipped: niche
+channel clips: Top 5 fastest-accelerating production cars in the world with official 0-60 times: skipped: niche
+channel clips: wrote 0 of 2: QD-268 Match Day #5: Caroline Weir Ballon d'Or: the elite rank 🏆; QD-269 Match Day #6: Caroline Weir Ballon d'Or: rank 25 revealed ⚽
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "gemini-flash-latest": "daily limit 20"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1, "gemma-4-31b-it": 1, "gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 36, "gemini-3.5-flash": 2, "gemini-3-flash-preview": 1, "gemma-4-31b-it": 1, "groq:qwen/qwen3.8-27b": 20}, "empty answers": {"groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 1, "router searches": 0, "router sources added": 0, "providers passed over": ["openrouter"], "late": false, "claude today": "4 of 4 edits, 0 of 0 writes"}

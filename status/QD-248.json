@@ -1,0 +1,179 @@
+{
+ "id": "QD-248",
+ "board": "boards/queue/QD-248.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T15:30:00Z",
+ "rendered": "2026-10-28T10:25:25.549472+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 39.2,
+  "wps": 3.1,
+  "weak_beats": [],
+  "size_mb": 17.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 494.7,
+   "contrast": 0.228,
+   "face_area": 0.0,
+   "text_area": 0.0667,
+   "caption_contrast": 16.88,
+   "by_frame": {
+    "sharpness": [
+     480.6,
+     512.5,
+     522.8,
+     462.9
+    ],
+    "contrast": [
+     0.227,
+     0.228,
+     0.228,
+     0.228
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0752,
+     0.0759,
+     0.0511,
+     0.0648
+    ],
+    "caption_contrast": [
+     14.32,
+     14.55,
+     19.2,
+     19.54
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.56,
+   "none",
+   2
+  ],
+  [
+   4.56,
+   8.9,
+   "none",
+   3
+  ],
+  [
+   8.9,
+   13.84,
+   "none",
+   3
+  ],
+  [
+   13.84,
+   18.15,
+   "none",
+   3
+  ],
+  [
+   18.15,
+   23.63,
+   "none",
+   4
+  ],
+  [
+   23.63,
+   29.54,
+   "none",
+   4
+  ],
+  [
+   29.54,
+   34.35,
+   "none",
+   3
+  ],
+  [
+   34.35,
+   39.21,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "265236",
+   "q": "gaming setup",
+   "t0": 0.0,
+   "t1": 19.91
+  },
+  {
+   "p": "pixabay",
+   "id": "62825",
+   "q": "movie theatre seats",
+   "t0": 19.31,
+   "t1": 39.21
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:06Z",
+ "video": "cgI2Hw6ect0",
+ "url": "https://youtube.com/shorts/cgI2Hw6ect0",
+ "publish_at": "2026-10-28T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-248"
+}

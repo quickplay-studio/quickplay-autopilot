@@ -1,0 +1,166 @@
+{
+ "id": "QD-258",
+ "board": "boards/queue/QD-258.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T11:30:00Z",
+ "rendered": "2026-10-28T10:47:07.039955+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Did You Know #6: Walter Koenig: Star Trek actor dies aged 90",
+ "background_notes": [
+  "Pixabay 'space nebula': 40 results, none at 720p or better",
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "dead-wrong",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 38.9,
+  "wps": 3.03,
+  "weak_beats": [],
+  "size_mb": 10.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 564.6,
+   "contrast": 0.212,
+   "face_area": 0.2026,
+   "text_area": 0.0486,
+   "caption_contrast": 15.73,
+   "by_frame": {
+    "sharpness": [
+     555.7,
+     558.7,
+     560.4,
+     583.7
+    ],
+    "contrast": [
+     0.214,
+     0.211,
+     0.211,
+     0.212
+    ],
+    "face_area": [
+     0.2131,
+     0.2025,
+     0.198,
+     0.1965
+    ],
+    "text_area": [
+     0.049,
+     0.0488,
+     0.0488,
+     0.0479
+    ],
+    "caption_contrast": [
+     15.69,
+     15.77,
+     15.36,
+     15.84
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.75,
+   "none",
+   0
+  ],
+  [
+   5.75,
+   14.1,
+   "none",
+   1
+  ],
+  [
+   14.1,
+   19.55,
+   "none",
+   1
+  ],
+  [
+   19.55,
+   27.21,
+   "none",
+   1
+  ],
+  [
+   27.21,
+   32.74,
+   "none",
+   1
+  ],
+  [
+   32.74,
+   38.87,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "257265",
+   "q": "red carpet event",
+   "t0": 0.0,
+   "t1": 19.74
+  },
+  {
+   "p": "pixabay",
+   "id": "28766",
+   "q": "city lights night",
+   "t0": 19.14,
+   "t1": 38.87
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:40Z",
+ "video": "R-Wm0tTId48",
+ "url": "https://youtube.com/shorts/R-Wm0tTId48",
+ "publish_at": "2026-10-28T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T11:42:38Z",
+  "upload_status": "uploaded"
+ }
+}

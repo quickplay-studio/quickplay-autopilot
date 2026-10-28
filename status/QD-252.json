@@ -1,0 +1,173 @@
+{
+ "id": "QD-252",
+ "board": "boards/queue/QD-252.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T22:00:00Z",
+ "rendered": "2026-10-28T10:23:40.582859+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Walter Koenig: the co-star tribute you must see 🖖",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 11,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "social_music": "uplifting-uplifting-music-513147",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 43.4,
+  "wps": 3.14,
+  "weak_beats": [],
+  "size_mb": 21.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 520.2,
+   "contrast": 0.221,
+   "face_area": 0.2144,
+   "text_area": 0.0423,
+   "caption_contrast": 4.57,
+   "by_frame": {
+    "sharpness": [
+     513.1,
+     557.4,
+     561.5,
+     448.7
+    ],
+    "contrast": [
+     0.222,
+     0.222,
+     0.221,
+     0.22
+    ],
+    "face_area": [
+     0.2272,
+     0.2085,
+     0.1995,
+     0.2225
+    ],
+    "text_area": [
+     0.0453,
+     0.0456,
+     0.0451,
+     0.0331
+    ],
+    "caption_contrast": [
+     4.47,
+     4.49,
+     4.65,
+     4.81
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.55,
+   "none",
+   3
+  ],
+  [
+   5.55,
+   11.2,
+   "none",
+   4
+  ],
+  [
+   11.2,
+   16.14,
+   "none",
+   3
+  ],
+  [
+   16.14,
+   21.37,
+   "none",
+   4
+  ],
+  [
+   21.37,
+   27.15,
+   "none",
+   3
+  ],
+  [
+   27.15,
+   32.84,
+   "none",
+   3
+  ],
+  [
+   32.84,
+   43.4,
+   "none",
+   8
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "204326",
+   "q": "city skyline night",
+   "t0": 0.0,
+   "t1": 22.0
+  },
+  {
+   "p": "pixabay",
+   "id": "16224",
+   "q": "city lights night",
+   "t0": 21.4,
+   "t1": 43.4
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:21Z",
+ "video": "7Y3RXzLhrvQ",
+ "url": "https://youtube.com/shorts/7Y3RXzLhrvQ",
+ "publish_at": "2026-10-28T22:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T22:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-252"
+}

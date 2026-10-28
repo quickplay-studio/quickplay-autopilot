@@ -1,0 +1,152 @@
+{
+ "id": "QD-259",
+ "board": "boards/queue/QD-259.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T13:30:00Z",
+ "rendered": "2026-10-28T10:51:16.671870+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Did You Know #7: Walter Koenig: two actors auditioned for Chekov",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 17.9,
+  "wps": 3.44,
+  "weak_beats": [],
+  "size_mb": 10.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 864.8,
+   "contrast": 0.208,
+   "face_area": 0.1877,
+   "text_area": 0.044,
+   "caption_contrast": 5.34,
+   "by_frame": {
+    "sharpness": [
+     464.6,
+     515.3,
+     566.7,
+     1912.6
+    ],
+    "contrast": [
+     0.221,
+     0.221,
+     0.221,
+     0.171
+    ],
+    "face_area": [
+     0.2162,
+     0.2193,
+     0.224,
+     0.091
+    ],
+    "text_area": [
+     0.0389,
+     0.0385,
+     0.0474,
+     0.0514
+    ],
+    "caption_contrast": [
+     4.55,
+     6.05,
+     4.77,
+     5.91
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.46,
+   "none",
+   1
+  ],
+  [
+   2.46,
+   5.12,
+   "none",
+   2
+  ],
+  [
+   5.12,
+   8.26,
+   "none",
+   2
+  ],
+  [
+   8.26,
+   11.14,
+   "none",
+   2
+  ],
+  [
+   11.14,
+   14.82,
+   "none",
+   3
+  ],
+  [
+   14.82,
+   17.85,
+   "none",
+   2
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:44Z",
+ "video": "w48HvZQT95Y",
+ "url": "https://youtube.com/shorts/w48HvZQT95Y",
+ "publish_at": "2026-10-28T13:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T13:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

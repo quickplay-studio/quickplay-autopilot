@@ -1,0 +1,179 @@
+{
+ "id": "QD-255",
+ "board": "boards/queue/QD-255.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T00:30:00Z",
+ "rendered": "2026-10-28T10:45:53.838117+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"Walter Koenig\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Star Stories #7: Walter Koenig: the audition secret you never knew",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 37.6,
+  "wps": 3.01,
+  "weak_beats": [],
+  "size_mb": 17.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 477.4,
+   "contrast": 0.22,
+   "face_area": 0.2144,
+   "text_area": 0.0359,
+   "caption_contrast": 5.4,
+   "by_frame": {
+    "sharpness": [
+     457.6,
+     506.2,
+     513.4,
+     432.5
+    ],
+    "contrast": [
+     0.221,
+     0.221,
+     0.22,
+     0.219
+    ],
+    "face_area": [
+     0.2272,
+     0.2025,
+     0.2101,
+     0.2178
+    ],
+    "text_area": [
+     0.0382,
+     0.0384,
+     0.0384,
+     0.0285
+    ],
+    "caption_contrast": [
+     4.61,
+     4.55,
+     6.2,
+     6.48
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.61,
+   "none",
+   2
+  ],
+  [
+   4.61,
+   8.68,
+   "none",
+   1
+  ],
+  [
+   8.68,
+   14.24,
+   "none",
+   4
+  ],
+  [
+   14.24,
+   19.91,
+   "none",
+   4
+  ],
+  [
+   19.91,
+   26.05,
+   "none",
+   4
+  ],
+  [
+   26.05,
+   34.47,
+   "none",
+   6
+  ],
+  [
+   34.47,
+   37.61,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "4935",
+   "q": "classic television set",
+   "t0": 0.0,
+   "t1": 19.11
+  },
+  {
+   "p": "pixabay",
+   "id": "137357",
+   "q": "city lights night",
+   "t0": 18.51,
+   "t1": 37.61
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:32Z",
+ "video": "RAG2c_Lbf5k",
+ "url": "https://youtube.com/shorts/RAG2c_Lbf5k",
+ "publish_at": "2026-10-29T00:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T00:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-255"
+}

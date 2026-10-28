@@ -1,0 +1,160 @@
+{
+ "id": "QD-260",
+ "board": "boards/queue/QD-260.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T15:30:00Z",
+ "rendered": "2026-10-28T11:03:28.741152+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Did You Know: Walter Koenig tribute: George Takei's touching words 🖖",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_rescued": 3,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "paradise",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1028",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "voice_note": "beat 1 read as two sentences",
+ "qa": {
+  "duration": 27.9,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 16.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 434.3,
+   "contrast": 0.22,
+   "face_area": 0.2193,
+   "text_area": 0.0289,
+   "caption_contrast": 5.57,
+   "by_frame": {
+    "sharpness": [
+     423.9,
+     420.0,
+     412.6,
+     480.6
+    ],
+    "contrast": [
+     0.221,
+     0.22,
+     0.219,
+     0.22
+    ],
+    "face_area": [
+     0.2209,
+     0.2147,
+     0.2209,
+     0.2209
+    ],
+    "text_area": [
+     0.0267,
+     0.026,
+     0.0264,
+     0.0363
+    ],
+    "caption_contrast": [
+     6.32,
+     6.22,
+     4.51,
+     4.92
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.33,
+   "none",
+   2
+  ],
+  [
+   4.33,
+   9.06,
+   "none",
+   3
+  ],
+  [
+   9.06,
+   14.01,
+   "none",
+   3
+  ],
+  [
+   14.01,
+   20.02,
+   "none",
+   4
+  ],
+  [
+   20.02,
+   24.64,
+   "none",
+   3
+  ],
+  [
+   24.64,
+   27.88,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "22555",
+   "q": "star trek spaceship night",
+   "t0": 0.0,
+   "t1": 27.88
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:47Z",
+ "video": "FAtdP5O1u0A",
+ "url": "https://youtube.com/shorts/FAtdP5O1u0A",
+ "publish_at": "2026-10-28T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T15:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

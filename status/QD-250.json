@@ -1,0 +1,177 @@
+{
+ "id": "QD-250",
+ "board": "boards/queue/QD-250.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T19:30:00Z",
+ "rendered": "2026-10-28T10:23:01.522321+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Sport Shocks #3: history of ballon d'or: Harry Kane wins",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "daniel",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 29.2,
+  "wps": 3.33,
+  "weak_beats": [],
+  "size_mb": 20.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 653.2,
+   "contrast": 0.197,
+   "face_area": 0.2011,
+   "text_area": 0.0948,
+   "caption_contrast": 16.63,
+   "by_frame": {
+    "sharpness": [
+     613.3,
+     676.8,
+     662.5,
+     660.3
+    ],
+    "contrast": [
+     0.195,
+     0.197,
+     0.197,
+     0.198
+    ],
+    "face_area": [
+     0.0069,
+     0.2352,
+     0.2687,
+     0.2934
+    ],
+    "text_area": [
+     0.1192,
+     0.097,
+     0.0919,
+     0.071
+    ],
+    "caption_contrast": [
+     16.61,
+     16.64,
+     16.69,
+     16.57
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.12,
+   "none",
+   0
+  ],
+  [
+   2.12,
+   5.69,
+   "none",
+   1
+  ],
+  [
+   5.69,
+   8.49,
+   "none",
+   1
+  ],
+  [
+   8.49,
+   12.71,
+   "none",
+   1
+  ],
+  [
+   12.71,
+   14.59,
+   "none",
+   1
+  ],
+  [
+   14.59,
+   18.94,
+   "none",
+   1
+  ],
+  [
+   18.94,
+   22.87,
+   "none",
+   1
+  ],
+  [
+   22.87,
+   26.5,
+   "none",
+   1
+  ],
+  [
+   26.5,
+   29.23,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "24365",
+   "q": "london city night",
+   "t0": 0.0,
+   "t1": 29.23
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:14Z",
+ "video": "tlVEDrEN0jI",
+ "url": "https://youtube.com/shorts/tlVEDrEN0jI",
+ "publish_at": "2026-10-28T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T19:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-250"
+}

@@ -1,0 +1,166 @@
+{
+ "id": "QD-261",
+ "board": "boards/queue/QD-261.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T11:30:00Z",
+ "rendered": "2026-10-28T11:04:19.588335+00:00",
+ "channel": "clips",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Match Day #4: Harry Kane Ballon d'Or: the historic detail 🏆",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 14,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice DN was less clear, used george",
+ "qa": {
+  "duration": 24.0,
+  "wps": 3.09,
+  "weak_beats": [],
+  "size_mb": 19.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 891.7,
+   "contrast": 0.189,
+   "face_area": 0.2872,
+   "text_area": 0.0671,
+   "caption_contrast": 6.41,
+   "by_frame": {
+    "sharpness": [
+     859.4,
+     937.1,
+     911.7,
+     858.4
+    ],
+    "contrast": [
+     0.188,
+     0.188,
+     0.189,
+     0.189
+    ],
+    "face_area": [
+     0.2584,
+     0.3422,
+     0.288,
+     0.2601
+    ],
+    "text_area": [
+     0.071,
+     0.0713,
+     0.0575,
+     0.0686
+    ],
+    "caption_contrast": [
+     6.44,
+     6.39,
+     6.33,
+     6.69
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.04,
+   "none",
+   1
+  ],
+  [
+   3.04,
+   6.31,
+   "none",
+   2
+  ],
+  [
+   6.31,
+   9.09,
+   "none",
+   2
+  ],
+  [
+   9.09,
+   14.04,
+   "none",
+   3
+  ],
+  [
+   14.04,
+   17.57,
+   "none",
+   2
+  ],
+  [
+   17.57,
+   20.58,
+   "none",
+   2
+  ],
+  [
+   20.58,
+   24.0,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "110936",
+   "q": "london city night",
+   "t0": 0.0,
+   "t1": 24.0
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:52Z",
+ "video": "U6T95hiQO04",
+ "url": "https://youtube.com/shorts/U6T95hiQO04",
+ "publish_at": "2026-10-28T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T11:42:49Z",
+  "upload_status": "uploaded"
+ }
+}

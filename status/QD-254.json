@@ -1,0 +1,184 @@
+{
+ "id": "QD-254",
+ "board": "boards/queue/QD-254.json",
+ "mode": "schedule",
+ "slot": "2026-10-29T06:30:00Z",
+ "rendered": "2026-10-28T10:45:48.227758+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"Walter Koenig\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Star Stories #5: Walter Koenig: the record the Star Trek legend set",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 39.9,
+  "wps": 3.05,
+  "weak_beats": [],
+  "size_mb": 18.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 875.5,
+   "contrast": 0.208,
+   "face_area": 0.1873,
+   "text_area": 0.0449,
+   "caption_contrast": 4.85,
+   "by_frame": {
+    "sharpness": [
+     499.2,
+     545.1,
+     535.4,
+     1922.3
+    ],
+    "contrast": [
+     0.222,
+     0.221,
+     0.22,
+     0.17
+    ],
+    "face_area": [
+     0.2225,
+     0.2178,
+     0.2256,
+     0.0831
+    ],
+    "text_area": [
+     0.0444,
+     0.0444,
+     0.0424,
+     0.0486
+    ],
+    "caption_contrast": [
+     4.57,
+     4.62,
+     5.08,
+     5.75
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.94,
+   "none",
+   1
+  ],
+  [
+   2.94,
+   8.12,
+   "none",
+   1
+  ],
+  [
+   8.12,
+   11.9,
+   "none",
+   3
+  ],
+  [
+   11.9,
+   15.38,
+   "none",
+   2
+  ],
+  [
+   15.38,
+   19.22,
+   "none",
+   3
+  ],
+  [
+   19.22,
+   24.56,
+   "none",
+   4
+  ],
+  [
+   24.56,
+   28.61,
+   "none",
+   3
+  ],
+  [
+   28.61,
+   39.88,
+   "none",
+   8
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "110931",
+   "q": "chicago city night",
+   "t0": 0.0,
+   "t1": 20.24
+  },
+  {
+   "p": "pixabay",
+   "id": "172350",
+   "q": "city lights night",
+   "t0": 19.64,
+   "t1": 39.88
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:29Z",
+ "video": "nP6-GKOXTAQ",
+ "url": "https://youtube.com/shorts/nP6-GKOXTAQ",
+ "publish_at": "2026-10-29T06:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-29T06:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-254"
+}

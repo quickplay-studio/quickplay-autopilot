@@ -1,0 +1,165 @@
+{
+ "id": "QD-257",
+ "board": "boards/queue/QD-257.json",
+ "mode": "schedule",
+ "slot": "2026-10-28T11:30:00Z",
+ "rendered": "2026-10-28T10:46:36.600951+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Level Up #3: GTA 6 Union Vote: Rockstar's historic moment ⚙️🗳️",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "duty-calls",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1028",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 24.8,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 9.5,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 894.5,
+   "contrast": 0.185,
+   "face_area": 0.0,
+   "text_area": 0.3072,
+   "caption_contrast": 18.67,
+   "by_frame": {
+    "sharpness": [
+     554.5,
+     910.8,
+     911.7,
+     1201.0
+    ],
+    "contrast": [
+     0.169,
+     0.184,
+     0.185,
+     0.2
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.296,
+     0.3065,
+     0.3088,
+     0.3173
+    ],
+    "caption_contrast": [
+     19.42,
+     18.67,
+     18.59,
+     18.67
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.38,
+   "title",
+   0
+  ],
+  [
+   3.38,
+   8.24,
+   "none",
+   1
+  ],
+  [
+   8.24,
+   13.99,
+   "none",
+   1
+  ],
+  [
+   13.99,
+   17.21,
+   "none",
+   1
+  ],
+  [
+   17.21,
+   21.55,
+   "none",
+   1
+  ],
+  [
+   21.55,
+   24.75,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1405",
+   "q": "video game development studio",
+   "t0": 0.0,
+   "t1": 12.67
+  },
+  {
+   "p": "pixabay",
+   "id": "26619",
+   "q": "game console launch event",
+   "t0": 12.07,
+   "t1": 24.75
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-28T11:42:36Z",
+ "video": "MiH1H54Azyw",
+ "url": "https://youtube.com/shorts/MiH1H54Azyw",
+ "publish_at": "2026-10-28T11:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T11:42:34Z",
+  "upload_status": "uploaded"
+ }
+}

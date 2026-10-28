@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 17:52): 19 of 1,000 subscribers · 12,567 of 10 million Shorts views in 90 days · 4,088 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 18:54): 19 of 1,000 subscribers · 12,589 of 10 million Shorts views in 90 days · 4,035 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 16:55 (UK): 13 scheduled, 137 public, 25 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 14:54).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 18:47).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 15 scheduled |
-| Wed 28 Oct | 22 public, 6 scheduled | 0 | 1 | ✅ done |
+| Wed 28 Oct | 23 public, 5 scheduled | 0 | 1 | ✅ done |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -61,8 +61,8 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}
-- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 17:45 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936907807167410'}
-- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 17:46 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936907873167410'}
+- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 18:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936921715167410'}
+- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 18:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936921754167410'}
 - **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 09:49 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768706167410'}
 
 ## Waiting for your approval
@@ -204,10 +204,10 @@ scheduled · 29 s · music: duty-calls · [script](../boards/done/QD-250.json) �
 ![QD-250](QD-250.jpg)
 
 ### Wed 28 Oct 19:00 · Harry Kane Ballon d'Or, Dai Dai Record, Northumbria Mysteries
-scheduled · [YouTube](https://youtube.com/shorts/Tul1oIPN8-Q)
+private · [YouTube](https://youtube.com/shorts/Tul1oIPN8-Q)
 
 ### Wed 28 Oct 18:30 · Ballon d'Or #2: Winner harry kane wins 🏆
-scheduled · 45 s · music: duty-calls · [script](../boards/done/QD-249.json) · [YouTube](https://youtube.com/shorts/PUuRZ0O2_n4)
+private · 45 s · music: duty-calls · [script](../boards/done/QD-249.json) · [YouTube](https://youtube.com/shorts/PUuRZ0O2_n4)
 
 ![QD-249](QD-249.jpg)
 

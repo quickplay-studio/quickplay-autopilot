@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 19:39): 19 of 1,000 subscribers · 12,424 of 10 million Shorts views in 90 days · 3,896 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 19:51): 19 of 1,000 subscribers · 12,431 of 10 million Shorts views in 90 days · 3,926 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 19:39 (UK): 9 scheduled, 141 public, 24 uploads in the last 24 hours.
 
@@ -61,8 +61,8 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}
-- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 18:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936921715167410'}
-- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 18:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936921754167410'}
+- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 19:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936934588167410'}
+- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 19:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936934630167410'}
 - **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 09:49 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768706167410'}
 
 ## Waiting for your approval

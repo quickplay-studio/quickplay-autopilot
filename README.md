@@ -1,6 +1,6 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 11:47 UK.
+Updated Wednesday 28 October, 11:49 UK.
 
 **18 subscribers, 12,422 engaged Shorts views in 90 days (0.41% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 

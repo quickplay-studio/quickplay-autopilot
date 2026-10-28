@@ -1,0 +1,58 @@
+{
+ "kind": "explainer",
+ "title": "Harry Kane Ballon d'Or, Dai Dai Record, Northumbria Mysteries",
+ "subjects": [
+  "Ballon Dor",
+  "Dai Dai",
+  "The Northumbria Mysteries"
+ ],
+ "shorts": [
+  "QD-162",
+  "QD-168",
+  "QD-153",
+  "QD-165",
+  "QD-182",
+  "QD-140"
+ ],
+ "chapters": [
+  [
+   "0:00",
+   "Opening surprise"
+  ],
+  [
+   "0:32",
+   "Ballon d'Or story"
+  ],
+  [
+   "2:12",
+   "Dai Dai record"
+  ],
+  [
+   "3:55",
+   "Northumbria Mysteries overview"
+  ],
+  [
+   "5:34",
+   "Connecting the milestones"
+  ],
+  [
+   "6:04",
+   "Closing note"
+  ]
+ ],
+ "seconds": 403,
+ "words": 1072,
+ "model": "gemini-flash-latest",
+ "fact_check": "gemini-3.5-flash-lite: passed",
+ "pictures": 28,
+ "at": "2026-10-28T07:46+00:00",
+ "state": "scheduled",
+ "video": "Tul1oIPN8-Q",
+ "publish_at": "2026-10-28T19:00+00:00",
+ "url": "https://youtu.be/Tul1oIPN8-Q",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-28T19:00:00Z",
+  "upload_status": "uploaded"
+ }
+}

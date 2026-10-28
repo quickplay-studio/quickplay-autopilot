@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Wed 28 Oct | 5 public, 8 scheduled | 0 | 1 | ⏳ 5 of 15 so far, 8 more scheduled |
+| Wed 28 Oct | 8 public, 5 scheduled | 0 | 1 | ⏳ 8 of 15 so far, 5 more scheduled |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -71,6 +71,12 @@ awaiting approval · 25 s · [watch preview](https://github.com/quickplay-studio
 
 ![QD-144](QD-144.jpg)
 
+### QD-233 · Beyonce's 2003 album sold 317k in week one 🎤
+awaiting approval · 31 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-39e898c890f9b5e0d19b)
+- dry run: always waits for approval, never uploaded
+
+![QD-233](QD-233.jpg)
+
 ### QD-235 · Screen Time #5: Godzilla Minus One: the Oscar detail you missed
 awaiting approval · 29 s · [watch preview](https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-170659f512152c5cec1c)
 - dry run: always waits for approval, never uploaded
@@ -124,10 +130,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-233** Beyonce's 2003 album sold 317k in week one 🎤 (rendering next)
 
 ## On the channel (latest first)
 

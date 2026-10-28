@@ -1,0 +1,178 @@
+{
+ "id": "QD-233",
+ "board": "boards/queue/QD-233.json",
+ "mode": "dry",
+ "slot": "",
+ "rendered": "2026-10-28T07:21:44.264751+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": ""
+  }
+ },
+ "title": "Beyonce's 2003 album sold 317k in week one 🎤",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail_unscaled: 'imageinfo')",
+  "beat 7 reused a nearby picture (commons:File:Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail_unscaled: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 6,
+  "pic_found_share": 0.71,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "mirror-mirror",
+ "social_music": "dance-upbeat-pop-611603",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "michael",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1026",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 30.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 16.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 823.8,
+   "contrast": 0.177,
+   "face_area": 0.0,
+   "text_area": 0.1766,
+   "caption_contrast": 16.55,
+   "by_frame": {
+    "sharpness": [
+     556.4,
+     912.9,
+     911.6,
+     914.5
+    ],
+    "contrast": [
+     0.134,
+     0.191,
+     0.191,
+     0.191
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.116,
+     0.1968,
+     0.1975,
+     0.1962
+    ],
+    "caption_contrast": [
+     16.72,
+     16.43,
+     16.51,
+     16.59
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.59,
+   "title",
+   0
+  ],
+  [
+   4.59,
+   10.13,
+   "none",
+   1
+  ],
+  [
+   10.13,
+   14.09,
+   "none",
+   1
+  ],
+  [
+   14.09,
+   17.57,
+   "none",
+   1
+  ],
+  [
+   17.57,
+   21.34,
+   "none",
+   1
+  ],
+  [
+   21.34,
+   25.4,
+   "none",
+   1
+  ],
+  [
+   25.4,
+   30.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "172",
+   "q": "concert stage lights",
+   "t0": 0.0,
+   "t1": 10.63
+  },
+  {
+   "p": "pixabay",
+   "id": "38388",
+   "q": "vinyl record player",
+   "t0": 10.03,
+   "t1": 20.66
+  },
+  {
+   "p": "pixabay",
+   "id": "3627",
+   "q": "crowd cheering",
+   "t0": 20.06,
+   "t1": 30.69
+  }
+ ],
+ "state": "awaiting approval",
+ "flags": [
+  "dry run: always waits for approval, never uploaded"
+ ],
+ "preview_release": "preview-QD-233",
+ "preview_url": "https://github.com/quickplay-studio/quickplay-autopilot/releases/tag/untagged-39e898c890f9b5e0d19b"
+}

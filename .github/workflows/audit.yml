@@ -90,6 +90,12 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # Charlie's monthly API credits: used before the CLI when set (factpack.claude_api)
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}      # the optional FreeLLMAPI router keys: only whether each is set is read (keys.router_key_rows)
+          EXA_API_KEY: ${{ secrets.EXA_API_KEY }}
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          LINKUP_API_KEY: ${{ secrets.LINKUP_API_KEY }}
+          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
+          LLM7_API_KEY: ${{ secrets.LLM7_API_KEY }}
         run: python pipeline/keys.py || true
       - name: Action list
         # status/actions.json: each item's check run (a pasted key proven by one call, the Pages setting, the Mac's Vyro run) and each item's issue read

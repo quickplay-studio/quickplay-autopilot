@@ -575,7 +575,7 @@ function keysCard(){
   const needs = r => r.status === "failing" || r.status === "expiring" || (r.status === "missing" && r.needed);
   const rank = r => r.status === "failing" ? 0 : r.status === "expiring" ? 1 : 2;
   const problems = k.keys.map((r, i) => ({r, i})).filter(x => needs(x.r)).sort((a, b) => rank(a.r) - rank(b.r) || a.i - b.i).map(x => x.r);
-  const working = k.keys.filter(r => r.status === "ok"), notSet = k.keys.filter(r => r.status === "missing" && !needs(r));
+  const working = k.keys.filter(r => r.status === "ok"), notSet = k.keys.filter(r => r.status === "missing" && !needs(r) && r.for !== "freellm");      // the router's optional keys are listed with their steps in freellmCard
   const ends = r => !r.expires ? "" : dayName(r.expires) + (r.expires.slice(0, 4) !== today.slice(0, 4) ? " " + r.expires.slice(0, 4) : "");
   const fix = r => !(r.fix || []).length ? "" :
     `<details${r.status === "missing" ? "" : " open"}><summary>How to fix</summary><ol>${r.fix.map(s => `<li>${linkify(s)}</li>`).join("")}</ol>${
@@ -588,6 +588,21 @@ function keysCard(){
     ${problems.length ? `<div class="card">${problems.map(block).join("")}</div>` : `<p>${pill("good", "✓", "No key needs fixing")}</p>`}
     ${working.length ? table([{h: "Working", f: r => `<b>${esc(r.what)}</b><br><span class="muted" style="font-size:12px">${esc(r.detail || "")}</span>`}, {h: "Ends", nw: 1, f: r => ends(r) ? esc(ends(r)) : '<span class="muted">no end date</span>'}], working) : ""}
     ${notSet.length ? `<p class="sub">Not set up (optional): ${notSet.map(r => esc(r.what)).join("; ")}.</p>` : ""}`;
+}
+
+// FreeLLMAPI router (27 October): status/freellm.json, written by the trends, write and evolve jobs (pipeline/freellm.py), and the
+// optional keys it can use (rows of status/keys.json marked for "freellm"), each with the free sign-up link and the exact secret to add.
+function freellmCard(){
+  const s = D.freellm, keyRows = ((D.keys || {}).keys || []).filter(r => r.for === "freellm" && r.id !== "freellm");
+  const state = !s ? pill("", "·", "Not run yet") : s.ok ? pill("good", "✓", "Running in the jobs") : pill("bad", "✕", "Last start failed");
+  const calls = s && s.calls ? Object.entries(s.calls).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${esc(k)} ${fmt(v)}`).join(", ") : "";
+  const key = r => `<div class="action"><div class="ah"><b>${esc(r.what)}</b>${r.status === "ok" ? pill("good", "✓", "set") : r.status === "missing" ? pill("", "·", "add it (optional)") : pill("bad", "✕", "check it")}</div>
+    <p class="sub" style="margin:4px 0 6px">${esc(r.detail || "")}</p>${r.status === "ok" || !(r.fix || []).length ? "" :
+      `<details><summary>How to add it</summary><ol>${r.fix.map(x => `<li>${linkify(x)}</li>`).join("")}</ol></details>`}</div>`;
+  return `<h2>FreeLLMAPI router</h2>
+    <p class="sub">A free-model router that starts on GitHub for each trends, write and evolve job and stops with it (nothing to host): more free chat models for the writers, fact packs and the learning loop, and web search that finds extra sources. It works with no key at all (Kilo and OVHcloud for chat, Parallel and Keenable for search); any key below adds more. It fails open: if it cannot start, the jobs run as before. Your Gemini, Groq, Mistral, Claude and other main keys never go to it.</p>
+    <p>${state} ${s ? `<span class="muted">${s.ok ? `${fmt(s.models)} chat models on ${esc((s.chat_platforms || []).join(", ") || "its free tiers")}; search on ${esc((s.search_engines || []).join(", ") || "none")}${calls ? "; calls last run: " + calls : ""}` : esc(s.reason || "")}, ${esc(ukTime(s.started))} (${esc(s.job || "a job")})</span>` : ""}</p>
+    ${keyRows.length ? `<div class="card">${keyRows.map(key).join("")}</div>` : ""}`;
 }
 
 function clipMoney(campaigns, stats){
@@ -622,8 +637,9 @@ async function load(force){
   D = {summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, watchNow, traffic, rivals,
        drivers, geo, regions, changes, late, hourly, actions, keys, igs};
   D.outreach = await get("clips/outreach.csv", "csv");      // the creator scout's list (clips tab)
-  [D.subs, D.improve] = await Promise.all([get("analytics/subs.csv", "csv"),  // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
-    get("analytics/improvement.json", "json")]);                              // the improvement line (trend.history, 26 October)
+  [D.subs, D.improve, D.freellm] = await Promise.all([get("analytics/subs.csv", "csv"),  // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
+    get("analytics/improvement.json", "json"),                                // the improvement line (trend.history, 26 October)
+    get("status/freellm.json", "json")]);                                     // the FreeLLMAPI router (pipeline/freellm.py, 27 October)
   FX = fxNow;
   render();
   $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
@@ -1082,6 +1098,7 @@ function render(){
   const logLines = logPart.split(/\n(?=- )/).map(x => x.trim()).filter(x => x.startsWith("- ")).slice(-8).reverse();
   $("accounts").innerHTML = `
     ${keysCard()}
+    ${freellmCard()}
     <h2>Account check</h2>
     <p class="sub">Every 3 hours GitHub signs in with every key it holds and checks each one is the studio's own Quickplay account. Anything else stops all posting and opens an issue.</p>
     <p>${id.checked ? (id.ok ? pill("good", "✓", `Clean: ${checks.length} checks, ${ukTime(id.checked)}`) : pill("bad", "✕", `${(id.problems || []).length} problem(s), ${ukTime(id.checked)}`)) : pill("wait", "…", "No audit yet")}</p>
@@ -1120,6 +1137,7 @@ const EXPORT = [
   ["Late uploads (freshness decisions)", "analytics/late_uploads.csv", "tail", 40],
   ["Charlie's actions (the Overview's to-do list)", "status/actions.json", "text", 0],
   ["Key health (every sign-in and key: state, end date, fix steps)", "status/keys.json", "text", 0],
+  ["FreeLLMAPI router (status, platforms, calls served)", "status/freellm.json", "text", 0],
   ["Writers and editors", "analytics/models.json", "text", 0],
   ["Posting times and quarters of the day", "analytics/slots.json", "text", 0],
   ["Regions", "analytics/regions.csv", "text", 0],

@@ -8,6 +8,11 @@ was refused, Instagram's and Facebook's answers and end dates, TikTok's refresh 
 cheap call only for the keys the audit does not use (Gemini, Groq, Cerebras, OpenRouter, Cloudflare, Mistral, SambaNova),
 reads whether CLAUDE_CODE_OAUTH_TOKEN is set (never what it is), and weighs the campaign-site logins by their age and the last
 submission found in clips/submit.csv.
+The FreeLLMAPI router (27 October, pipeline/freellm.py): one row for the router itself, read from status/freellm.json (ok, or
+failing with the reason; it opens an issue only after 3 failed starts in a row, and never more than one), and one optional
+row per key it can use (Tavily, Exa, Firecrawl, Linkup, Ollama Cloud, LLM7) with the free sign-up link and the exact secret
+to add. A missing optional key is "not set up" and never opens an issue; no call is made for them (the router's own status
+says whether the platform is live).
 A row that is failing, or ends within 14 days, becomes one needs-charlie issue with the exact steps, closed again once the
 key is fixed. A key whose issue Charlie closed without fixing it is raised again after a week, not every 3 hours. A call that
 could not be made (the network, a rate limit) leaves the row as it was.
@@ -22,9 +27,11 @@ from zoneinfo import ZoneInfo
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "pipeline"))
+import freellm as FL
 UK = ZoneInfo("Europe/London")
 OUT = ROOT / "status" / "keys.json"
 IDENTITY = ROOT / "status" / "identity.json"
+FREELLM = FL.STATUS
 REPO = "quickplay-studio/quickplay-autopilot"
 SECRETS = f"https://github.com/{REPO}/settings/secrets/actions"
 AUDIT = f"https://github.com/{REPO}/actions/workflows/audit.yml"
@@ -355,6 +362,71 @@ def claude_row(env, t):
                 + (f"; the writer's last call: {last} at {at}" if last and at else ""), fix, None, False, t)
 
 
+# ---------- the FreeLLMAPI router: its own row and one optional row per key it can use ----------
+ROUTER_FAILS = 3            # failed starts in a row before the router row opens its one issue
+ROUTER_WHAT = "FreeLLMAPI router (more free models and web search for the writers and fact packs)"
+WORKFLOWS = f"https://github.com/{REPO}/actions/workflows"
+NAME_OF = {"tavily": "Tavily", "exa": "Exa", "firecrawl": "Firecrawl", "linkup": "Linkup", "ollama": "Ollama Cloud", "llm7": "LLM7"}
+
+
+def router_row(st, t):
+    """The router itself, from status/freellm.json: ok (what it serves), failing (why), or not run yet. Failing opens an issue
+    only after ROUTER_FAILS starts in a row; before that the row is "quiet": on the hub, no issue."""
+    base = dict(id="freellm", what=ROUTER_WHAT, group="AI models", t=t, needed=False)
+    steps = ["Nothing is lost while it is down: the writers and fact packs use the other free models, as before it existed.",
+             f"Open the newest run of trends or write ({WORKFLOWS}/write.yml) and read the step called FreeLLMAPI router: it prints the reason.",
+             "If the reason is \"image digest changed\": read the release notes at https://github.com/tashfeenahmed/freellmapi/releases, then ask "
+             "Claude (your pinned Quickplay page) to set freellm.digest in config.json.",
+             "To switch it off for good, set \"on\": false under \"freellm\" in config.json."]
+    if not st:
+        r = make(status="missing", detail="it has not run yet: it starts with the next trends, write or evolve run",
+                 fix=[f"Nothing to do: it starts by itself. To start one now press Run workflow on {WORKFLOWS}/trends.yml."], **base)
+        r["for"] = "freellm"
+        return r
+    started = when(st.get("started"))
+    if st.get("ok"):
+        engines = ", ".join(st.get("search_engines") or []) or "none"
+        calls = st.get("calls") or {}
+        r = make(status="ok", checked=stamp(started) if started else None, fix=steps, **base,
+                 detail=f"started {nice(started, t) if started else '?'} ({st.get('job') or 'a job'}): {st.get('models', 0)} chat models on "
+                        f"{', '.join(st.get('chat_platforms') or []) or 'its free tiers'}; search on {engines}"
+                        + (f"; served {sum(calls.values())} calls last run" if calls else ""))
+    else:
+        hist, run = [h for h in st.get("history") or [] if isinstance(h, dict)], 0
+        for h in reversed(hist):
+            if h.get("ok"): break
+            run += 1
+        r = make(status="failing", checked=stamp(started) if started else None, fix=steps, **base,
+                 detail=f"the last start failed ({st.get('reason') or 'no reason recorded'}); {max(run, 1)} in a row")
+        r["quiet"] = max(run, 1) < ROUTER_FAILS
+    r["for"] = "freellm"
+    return r
+
+
+def router_key_rows(env, st, t):
+    """One optional row per key the router can use. Set: ok, or (when the router started and did not list the platform) failing
+    but quiet. Not set: "not set up", with the free sign-up page and the exact secret to add."""
+    live = set((st or {}).get("chat_platforms") or []) | set((st or {}).get("search_engines") or [])
+    rows = []
+    for secret, (platform, what, signup, how) in FL.KEYS.items():
+        name = f"{NAME_OF.get(platform, platform)} key ({what}, for the FreeLLMAPI router)"
+        if (env.get(secret) or "").strip():
+            lost = bool((st or {}).get("ok")) and platform not in live
+            r = make(secret, name, "AI models", "failing" if lost else "ok", t=t,
+                     detail=(f"the secret is set but the router did not list {platform} as live at its last start: check the key"
+                             if lost else "the secret is set and goes to the router only" + (f"; the router lists {platform} as live" if platform in live else "")),
+                     fix=[f"Open {signup} and {how}.", f"Paste the new key into the GitHub secret {secret} (Update secret): {SECRETS}/{secret}", AFTER[0].upper() + AFTER[1:] + "."])
+            r["quiet"] = True
+        else:
+            r = make(secret, name, "AI models", "missing", f"optional, not set: adds {what} to the free router", t=t,
+                     fix=[f"Open {signup} (free) and {how}.",
+                          f"Create the GitHub secret named exactly {secret}, paste the key as its value and press Add secret: {SECRETS}/new",
+                          "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."])
+        r["for"] = "freellm"
+        rows.append(r)
+    return rows
+
+
 def missing_row(id, group, t, what=None, needed=False, fix=()):
     if id in YT: steps = fix_youtube(YT[id][0], YT[id][1])
     elif id in IG or id in FB: steps = [f"Add it as the GitHub secret {'IG_TOKEN' if id == 'instagram' else id}: {SECRETS}/new"]
@@ -365,7 +437,7 @@ def missing_row(id, group, t, what=None, needed=False, fix=()):
 
 
 # ---------- putting the table together ----------
-RANK = {id: i for i, id in enumerate(list(YT) + list(IG) + list(FB) + ["tiktok"] + list(PROBES) + ["CLAUDE_CODE_OAUTH_TOKEN"] + list(LOGINS_OF))}
+RANK = {id: i for i, id in enumerate(list(YT) + list(IG) + list(FB) + ["tiktok"] + list(PROBES) + ["freellm"] + list(FL.KEYS) + ["CLAUDE_CODE_OAUTH_TOKEN"] + list(LOGINS_OF))}
 
 
 def build(identity, env, prev, t, get=None, rows=None, camps=None):
@@ -414,6 +486,11 @@ def build(identity, env, prev, t, get=None, rows=None, camps=None):
                 out.append(missing_row(name, "AI models", t, spec["what"], spec.get("needed", False), secret_steps(name, spec["where"], spec["how"])))
             else: out.append(probe_row(name, res, t))
         except Exception as e: log(f"keys: {name}: {type(e).__name__}: {str(e)[:100]}"); keep(name, "the check failed")
+    try:
+        st = load(FREELLM, {}) or {}
+        out.append(router_row(st, t))
+        out.extend(router_key_rows(env, st, t))
+    except Exception as e: log(f"keys: freellm: {type(e).__name__}: {str(e)[:100]}")
     out.append(claude_row(env, t))
     order = {g: i for i, g in enumerate(GROUPS)}
     return sorted(out, key=lambda r: (order.get(r.get("group"), 99), RANK.get(r["id"], 99), r["id"]))
@@ -423,7 +500,10 @@ def build(identity, env, prev, t, get=None, rows=None, camps=None):
 def issue_title(r): return TITLES.get(r["id"]) or f"🔑 Fix needed: {r['what']}"
 
 
-def problem(r): return r["status"] in ("failing", "expiring") or (r["status"] == "missing" and r.get("needed"))
+def problem(r):
+    """A row that needs an issue. A quiet row (the optional router rows, the router before its 3rd failed start) is shown on
+    the hub but never raises one."""
+    return not r.get("quiet") and (r["status"] in ("failing", "expiring") or (r["status"] == "missing" and r.get("needed")))
 
 
 def issue_body(r, t):

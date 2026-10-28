@@ -25,6 +25,7 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   boards/queue. Models, one door (factpack.gemini): the strongest keyed free models, Gemini Flash, Gemma, the rest
   (Groq, Mistral, SambaNova, Cloudflare, OpenRouter, only with secrets), llama.cpp, Claude last (CLAUDE_CODE_OAUTH_TOKEN is
   Charlie's allowance: 4 edits a day, no test boards, at most 3 calls a run; config claude_*).
+  FreeLLMAPI (27 October, pipeline/freellm.py, .github/actions/freellm in trends, write and evolve): a free-model router on the runner, fails open, offers its top models and freellm:auto through the same door, and its web search adds sources; status/freellm.json, the hub's Accounts tab.
 - render.yml renders, checks and uploads each board (its upload job) in slots round the clock: the day's number is
   quota.target() (status/volume.json, 15 in the volume test), the ceiling is learned (status/upload_limit.json). quota.py
   guards the YouTube allowance: 10,000 units, plus 100 uploads and 100 searches a day in their own buckets, shared by the

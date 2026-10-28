@@ -38,6 +38,16 @@ jobs:
           # pinned (24 October): the docs say --bare will become -p's default and ignores OAuth sign-ins, so an unpinned newest CLI could
           # one day leave CLAUDE_CODE_OAUTH_TOKEN unused; 2.1.302 was published 16 October (over 7 days ago, the supply-chain rule)
           npm install -g @anthropic-ai/claude-code@2.1.302 --before="$(date -u -d '7 days ago' +%Y-%m-%d)" >/dev/null 2>&1 && claude --version || echo "Claude CLI not installed"
+      - name: FreeLLMAPI router (more free models and web search; fails open, pipeline/freellm.py)
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with:
+          tavily: ${{ secrets.TAVILY_API_KEY }}
+          exa: ${{ secrets.EXA_API_KEY }}
+          firecrawl: ${{ secrets.FIRECRAWL_API_KEY }}
+          linkup: ${{ secrets.LINKUP_API_KEY }}
+          ollama: ${{ secrets.OLLAMA_API_KEY }}
+          llm7: ${{ secrets.LLM7_API_KEY }}
       - name: Evolve
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -51,6 +61,11 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # Charlie's monthly API credits: used before the CLI when set (factpack.claude_api)
         run: python pipeline/evolve.py
+      - name: FreeLLMAPI router stats (calls served per platform, then stop it)
+        if: ${{ always() }}
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with: { mode: stats }
       - name: Save
         run: |
           git config user.name "Quickplay Studio"
@@ -61,6 +76,7 @@ jobs:
           git add analytics/evolve.md 2>/dev/null || true
           git add analytics/changes.csv 2>/dev/null || true      # the ledger rows for an adoption or a new champion (pipeline/changes.py)
           git add status/claude_usage.json 2>/dev/null || true      # the one Claude call's use (factpack.claude_note)
+          git add status/freellm.json config.json 2>/dev/null || true      # the FreeLLMAPI router's status; config.json only when its image digest was just recorded
           git commit -q -m "Evolve $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

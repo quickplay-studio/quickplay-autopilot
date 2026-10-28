@@ -1351,7 +1351,8 @@ def choose_writer(sid):
     try: order = factpack.writing_order()
     except Exception: order = []
     cands = [m for m in order if m.split(":", 1)[-1] not in spent and m not in spent and slow.get(m.split(":", 1)[-1], 0) < 2
-             and slow.get(m, 0) < 2 and not m.startswith(("claude:", "local:")) and "lite" not in m]
+             and slow.get(m, 0) < 2 and not m.startswith(("claude:", "local:")) and "lite" not in m
+             and m != "freellm:auto"]         # the router's catch-all is never a first choice: it records the model that answered
     cands = [m for m in cands if not writer_capped(m, stats)]
     if len(cands) < 2: return cands[0] if cands else None
     rng, best, top = random.Random(f"writer:{sid}"), None, -1e9

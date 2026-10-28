@@ -44,6 +44,16 @@ jobs:
           # pinned (24 October): the docs say --bare will become -p's default and ignores OAuth sign-ins, so an unpinned newest CLI could
           # one day leave CLAUDE_CODE_OAUTH_TOKEN unused; 2.1.302 was published 16 October (over 7 days ago, the supply-chain rule)
           npm install -g @anthropic-ai/claude-code@2.1.302 --before="$(date -u -d '7 days ago' +%Y-%m-%d)" >/dev/null 2>&1 && claude --version || echo "Claude CLI not installed"
+      - name: FreeLLMAPI router (more free models and web search; fails open, pipeline/freellm.py)
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with:
+          tavily: ${{ secrets.TAVILY_API_KEY }}
+          exa: ${{ secrets.EXA_API_KEY }}
+          firecrawl: ${{ secrets.FIRECRAWL_API_KEY }}
+          linkup: ${{ secrets.LINKUP_API_KEY }}
+          ollama: ${{ secrets.OLLAMA_API_KEY }}
+          llm7: ${{ secrets.LLM7_API_KEY }}
       - name: Write
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -69,6 +79,11 @@ jobs:
           for r in morning afternoon evening; do case " $req " in *" $r "*|*" $r"*|"$r "*) export WRITE_RUN=$r;; esac; done   # "afternoon 8": today's slots
           set -o pipefail
           python pipeline/writer.py 2>&1 | tee status/write_log.txt
+      - name: FreeLLMAPI router stats (calls served per platform, then stop it)
+        if: ${{ always() }}
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with: { mode: stats }
       - name: Save and render
         if: ${{ always() }}
         env: { GH_TOKEN: '${{ github.token }}' }
@@ -80,6 +95,7 @@ jobs:
           git add status/write_log.txt 2>/dev/null || true
           git add status/quota 2>/dev/null || true
           git add status/claude_usage.json 2>/dev/null || true
+          git add status/freellm.json config.json 2>/dev/null || true      # the FreeLLMAPI router's status; config.json only when its image digest was just recorded
           git add analytics/mirror_log.csv 2>/dev/null || true      # the Spanish mirror's attempts (pipeline/mirror.py)
           new=$(git diff --cached --name-only -- boards/queue | wc -l)
           git commit -q -m "Gemini boards $(date -u '+%F %H:%M')" || exit 0

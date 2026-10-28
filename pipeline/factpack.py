@@ -330,6 +330,11 @@ PROVIDERS = {
     # Meta-Llama-3.3-70B-Instruct get 20 requests a minute and 20 a day each (docs.sambanova.ai, rate limits). Only those
     # are tried (FREE_ONLY), whatever else its /models lists. Dormant until Charlie adds SAMBANOVA_API_KEY.
     "sambanova": ("SAMBANOVA_API_KEY", "https://api.sambanova.ai/v1", ["DeepSeek-V3.1", "gpt-oss-120b", "Meta-Llama-3.3-70B-Instruct"]),
+    # FreeLLMAPI (27 October, pipeline/freellm.py, the composite action .github/actions/freellm): a self-hosted OpenAI-style router
+    # over many free tiers, started on the runner for the job. FREELLM_KEY and FREELLM_BASE (http://127.0.0.1:3001/v1) are set
+    # only when it started, so this stays dormant (no models, no calls) in every other run. Its /models list decides what is
+    # offered; "freellm:auto" (catch_all) lets the router pick when those are spent.
+    "freellm": ("FREELLM_KEY", "", []),
 }
 FREE_ONLY = {"sambanova"}      # providers whose free tier covers only the models listed above
 
@@ -337,6 +342,7 @@ FREE_ONLY = {"sambanova"}      # providers whose free tier covers only the model
 def provider_base(name):
     """A provider's API base, with the Cloudflare account id filled in; None when a needed id is missing."""
     base = PROVIDERS[name][1]
+    if name == "freellm": return os.environ.get("FREELLM_BASE", "").strip().rstrip("/") or None
     if "{CF_ACCOUNT_ID}" in base:
         acct = os.environ.get("CF_ACCOUNT_ID", "").strip()
         return base.replace("{CF_ACCOUNT_ID}", acct) if acct else None
@@ -369,6 +375,18 @@ def quality(label):
     return 2 if size else 3
 
 
+def freellm_on():
+    """The FreeLLMAPI router is up in this job: its key and base are set."""
+    return bool(os.environ.get("FREELLM_KEY", "").strip() and provider_base("freellm"))
+
+
+def catch_all():
+    """The router's own pick, tried after every named keyed model and before Gemini Lite (27 October): it walks all the free
+    tiers it holds, so a script is not lost to a spent model. The label that is recorded is the model that answered
+    (routed_label), never "auto"."""
+    return ["freellm:auto"] if freellm_on() else []
+
+
 def writing_order():
     """The models a Short's script is written by, best writer first: the strongest keyed free models (quality 4 or 5),
     Gemini Flash, Gemma, the weaker keyed models, then only when all else failed Gemini Lite, the runner's model and
@@ -380,14 +398,15 @@ def writing_order():
     gemma = [f"gemini:{m}" for m in gem if m.startswith("gemma")]
     lite = [f"gemini:{m}" for m in gem if "lite" in m and not m.startswith("gemma")]
     rest = [m for m in chain() if m.startswith(("local:", "claude:"))]
-    return [m for m in keyed if quality(m) >= 4] + flash + gemma + [m for m in keyed if quality(m) < 4] + lite + rest
+    return [m for m in keyed if quality(m) >= 4] + flash + gemma + [m for m in keyed if quality(m) < 4] + catch_all() + lite + rest
 
 
 # The writer-model test (24 October, data report item 7): groq gpt-oss-120b (2.61x day-adjusted, n 7) against Gemini Flash
 # (41% of a day's boards on 2 measured Shorts), randomised by board number for the writing step only, so the comparison
 # is fair (each board's arm decided before anything about it is known). config "writer_test": {start, until, share,
 # arms}; a board outside the share, or written while either arm has no model left this run, is not in the test.
-WRITER_ARMS = {"gpt-oss-120b": lambda l: "gpt-oss-120b" in l.lower(),
+# 27 October: models served through the FreeLLMAPI router (freellm:) are never an arm, so the live test stays clean.
+WRITER_ARMS = {"gpt-oss-120b": lambda l: "gpt-oss-120b" in l.lower() and not l.startswith("freellm:"),
                "gemini flash": lambda l: l.startswith("gemini:") and "flash" in l.lower() and "lite" not in l.lower()}
 
 
@@ -433,6 +452,14 @@ def writer_test(k, today=None, order=None):
     return arm, labels[arm]
 
 
+def freellm_usable(m):
+    """A text model in the router's /models answer that can be called now: its own entries (auto, fusion, auto:<chain>) and
+    models with no key or no quota left are left out (NOT_TEXT has already dropped voices, pictures and embeddings)."""
+    i = str(m.get("id") or "")
+    return i not in ("auto", "fusion") and not i.startswith("auto:") and m.get("available") is not False \
+        and m.get("execution_status") not in ("needsKey", "exhausted")
+
+
 def provider_models(name):
     """The models of one keyed provider to try, in order: configured ones, else the best writers it lists today (quality,
     its preferences breaking ties; OpenRouter's ":free" ones only)."""
@@ -453,9 +480,12 @@ def provider_models(name):
                 data = r.json() if r.ok else []
                 for m in (data if isinstance(data, list) else data.get("data") or []):
                     if not isinstance(m, dict) or not m.get("id") or NOT_TEXT.search(m["id"]): continue
+                    if name == "freellm" and not freellm_usable(m): continue
                     ids.append(m["id"]); meta[m["id"]] = m
             except Exception: pass
-            if name == "openrouter":
+            if name == "freellm":       # the router lists its smartest first; quality() decides, its order breaks ties
+                got = sorted(ids, key=lambda i: -quality(i))[:int((CFG.get("freellm") or {}).get("top_models", 6))]
+            elif name == "openrouter":
                 free = [i for i in ids if i.endswith(":free")]
                 got = sorted(free, key=lambda i: (-quality(i), -int(meta[i].get("context_length") or 0)))[:4]
             else:
@@ -468,7 +498,7 @@ def provider_models(name):
 
 def chain():
     """Every model after the Gemini API ones, in the order they are tried."""
-    out = [m for n in PROVIDERS for m in provider_models(n)]
+    out = [m for n in PROVIDERS for m in provider_models(n)] + catch_all()
     if os.environ.get("LLAMA_SERVER"): out.append("local:" + local_name())
     if os.environ.get("CLAUDE_CODE_OAUTH_TOKEN", "").strip(): out.append("claude:" + CFG.get("claude_model", "sonnet"))
     return out
@@ -508,6 +538,19 @@ def local_start():
         print("local model:", str(e)[:200])
     print("local model ready" if STATE["local_ok"] else "local model: not running")
     return STATE["local_ok"]
+
+
+def routed_label(label, headers):
+    """freellm:auto is answered by whichever free model the router picked; its X-Routed-Via header (platform/model, percent-
+    encoded when not plain ASCII) names it. The label recorded is then freellm:<platform>/<model>, so the learning (writer
+    column, analytics/models.json) never sees an opaque "auto" and each real model builds its own record. Any other label is
+    returned unchanged. The answer's real label is kept for others() to return."""
+    if label != "freellm:auto": return label
+    via = urllib.parse.unquote(str((headers or {}).get("X-Routed-Via") or "")).strip()
+    via = re.sub(r"[^\w./:@+\-]", "", via)[:90]
+    if not via: return label
+    STATE.setdefault("routed", {})[label] = f"freellm:{via}"
+    return f"freellm:{via}"
 
 
 def openai_chat(label, base, key, model, prompt, timeout, temperature):
@@ -565,7 +608,7 @@ def openai_chat(label, base, key, model, prompt, timeout, temperature):
         try:
             ch0 = (r.json().get("choices") or [{}])[0] or {}
             msg = (ch0.get("message") or {}).get("content") or ""
-            ans = loads_loose(msg); count(label); return ans, None
+            ans = loads_loose(msg); count(routed_label(label, r.headers)); return ans, None
         except ValueError as e:
             if "empty" in str(e):                          # nothing came back: the next model, not this one three times
                 empty_answer(label)
@@ -716,7 +759,7 @@ def others(prompt, timeout=100, temperature=0.1, lite=False, only=None, slow_cap
         elif prov == "claude":
             ans, why = claude_call(label, prompt, timeout)
         else: continue
-        if ans is not None: return ans, label
+        if ans is not None: return ans, (STATE.get("routed") or {}).pop(label, label)
         STATE["last_other"] = why
     if not only and all(m in spent for m in chain()): STATE["others_spent"] = True
     return None
@@ -729,9 +772,45 @@ def gemini_state():
             "timeouts": STATE.get("slow_models") or {}, "answers": STATE.get("calls") or {}, "empty answers": STATE.get("empty") or {},
             "providers": [n for n in PROVIDERS if os.environ.get(PROVIDERS[n][0], "").strip()],
             "local": bool(os.environ.get("LLAMA_SERVER")), "claude calls": STATE.get("claude_calls", 0),
-            "second opinions": STATE.get("second_opinions", 0),
+            "second opinions": STATE.get("second_opinions", 0), "router searches": STATE.get("searches", 0),
+            "router sources added": STATE.get("search_sources", 0),
             "providers passed over": sorted(k for k, v in (STATE.get("provider_refusals") or {}).items()
                                             if v >= int(CFG.get("provider_refusals_before_skip", 3)))}
+
+
+def search(query, n=5):
+    """Web search through the FreeLLMAPI router (POST FREELLM_BASE/search), only while the router is up (FREELLM_KEY set), at
+    most config freellm.search_per_run (20) a run: [{"title", "url", "content"}], newest news first; [] on any failure or
+    without the router. It only finds pages: whatever is built on them is fetched with page_text and every fact still has
+    to pass verify() against the fetched text."""
+    if not freellm_on(): return []
+    if STATE.get("searches", 0) >= int((CFG.get("freellm") or {}).get("search_per_run", 20)): return []
+    STATE["searches"] = STATE.get("searches", 0) + 1            # a failed search counts too: the cap bounds the calls
+    import requests
+    try:
+        r = requests.post(provider_base("freellm") + "/search", json={"query": query, "max_results": n, "topic": "news"},
+                          headers={"Authorization": "Bearer " + os.environ["FREELLM_KEY"].strip(), "Content-Type": "application/json"}, timeout=40)
+        hits = r.json().get("results") if r.ok else []
+    except Exception: return []
+    return [{"title": str(h.get("title") or ""), "url": str(h.get("url") or ""), "content": str(h.get("content") or "")}
+            for h in hits or [] if isinstance(h, dict) and h.get("url")][:n]
+
+
+def search_sources(topic, have):
+    """Extra article sources for a topic with fewer than 3 pages: the search results from outlets on trends.REPUTABLE (the
+    same list the trend finder keeps, real outlet links only), one a outlet, not a page already used, headlines passing
+    trends.SKIP. have: the URLs and outlets already in use. Each comes back like a trends.py article, undated."""
+    try: import trends
+    except Exception: return []
+    out, seen = [], set(have)
+    for h in search(topic):
+        title = h["title"].strip()
+        host = urllib.parse.urlparse(h["url"]).netloc.lower().removeprefix("www.")
+        outlet = next((v for k, v in trends.REPUTABLE.items() if host == k or host.endswith("." + k)), None)
+        if not outlet or h["url"] in seen or outlet in seen or trends.SKIP.search(title): continue
+        seen.update((h["url"], outlet))
+        out.append({"outlet": outlet, "title": title[:140], "url": h["url"], "published": "", "kind": "article"})
+    return out
 
 
 def triage(topics, limit):
@@ -876,6 +955,11 @@ def build():
         for s in srcs:
             txt, img = page_text(s["url"], wiki=s["kind"] == "wikipedia")
             if len(txt) >= 400: got.append((s, txt, img))
+        if len(got) < 3:                              # thin topic: the router's web search may find more outlets (verify() still decides)
+            for s in search_sources(t["topic"], {x["url"] for x in srcs} | {x["outlet"] for x in srcs}):
+                if len(got) >= 4: break
+                txt, img = page_text(s["url"])
+                if len(txt) >= 400: got.append((s, txt, img)); STATE["search_sources"] = STATE.get("search_sources", 0) + 1
         images = image_ideas(got)
         got = [(s, txt) for s, txt, img in got]
         if not got: continue                          # one page will do: a one-source fact is used with its source named

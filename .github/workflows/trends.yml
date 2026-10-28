@@ -32,6 +32,16 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
       - run: python -m pip install -q pip==26.2.1 && python -m pip install -q --uploaded-prior-to P7D requests cryptography tzdata trafilatura google-api-python-client==2.* google-auth==2.*
+      - name: FreeLLMAPI router (more free models and web search; fails open, pipeline/freellm.py)
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with:
+          tavily: ${{ secrets.TAVILY_API_KEY }}
+          exa: ${{ secrets.EXA_API_KEY }}
+          firecrawl: ${{ secrets.FIRECRAWL_API_KEY }}
+          linkup: ${{ secrets.LINKUP_API_KEY }}
+          ollama: ${{ secrets.OLLAMA_API_KEY }}
+          llm7: ${{ secrets.LLM7_API_KEY }}
       - env:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
@@ -62,11 +72,17 @@ jobs:
           [ -n "$BREAKING" ] || python pipeline/analytics.py || echo "analytics failed"
           [ -n "$BREAKING" ] || python pipeline/competitors.py || echo "competitors failed"
           python pipeline/review_page.py || echo "review page failed"
+      - name: FreeLLMAPI router stats (calls served per platform, then stop it)
+        if: ${{ always() }}
+        uses: ./.github/actions/freellm
+        continue-on-error: true
+        with: { mode: stats }
       - run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
           git add -A trends status review analytics
+          git add config.json 2>/dev/null || true      # only changed when the FreeLLMAPI image digest was just recorded (pipeline/freellm.py)
           git commit -q -m "Trends and channel report $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5 6; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 15)); done

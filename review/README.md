@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Tue 27 Oct, 23:38): 17 of 1,000 subscribers · 11,978 of 10 million Shorts views in 90 days · 2,656 views in the last 24 hours (about 110,978 a day needed, 97 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 01:01): 17 of 1,000 subscribers · 12,009 of 10 million Shorts views in 90 days · 2,492 views in the last 24 hours (about 110,978 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 19:08 (UK): 5 scheduled, 144 public, 20 uploads in the last 24 hours.
 
@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Wed 28 Oct | 0 public, 13 scheduled | 0 | 0 | ⏳ 13 of 15 scheduled |
-| Tue 27 Oct | 27 public | 8 | 1 | ✅ done |
+| Thu 29 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
+| Wed 28 Oct | 0 public, 13 scheduled | 0 | 0 | ⏳ 0 of 15 so far, 13 more scheduled |
+| Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 | Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
 | Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
-| Wed 21 Oct | 29 public | 14 | 14 | ⚠️ 29 of 40 |
 
 ## Voice test
 
@@ -77,6 +77,12 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-233** Beyonce's 2003 album sold 317k in week one 🎤 (rendering next)
+- **QD-235** Screen Time #5: Godzilla Minus One: the Oscar detail you missed (rendering next)
+- **QD-236** Big Science #2: James Webb Space Telescope 🔭 (rendering next)
 
 ## On the channel (latest first)
 

@@ -9,7 +9,7 @@ on:
 
 permissions:
   contents: write
-  issues: write      # the change ledger's trade-off issue (pipeline/changes.py)
+  issues: write      # the change ledger's trade-off issue (pipeline/changes.py); also lets hub_md.py read the needs-charlie issues
 
 concurrency:
   group: analytics
@@ -44,11 +44,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python pipeline/changes.py check || echo "change ledger failed"
+      # the hub inside GitHub (pipeline/hub_md.py, 28 October): README.md, the repo front page, rebuilt from the files just written;
+      # it joins the commit below, so no extra commit or push is added. gh reads the open needs-charlie issues (GH_TOKEN).
+      - name: Hub front page
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python pipeline/hub_md.py
       - run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
           git config merge.directoryRenames false      # an emptied boards/queue is not a renamed folder (a board was lost that way, 22 October)
-          git add -A analytics; git add status/volume.json 2>/dev/null || true
+          git add -A analytics; git add status/volume.json 2>/dev/null || true; git add README.md 2>/dev/null || true
           git commit -q -m "Hourly numbers $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv and hourly.csv merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

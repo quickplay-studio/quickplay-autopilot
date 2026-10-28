@@ -74,7 +74,11 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
 ## Where to look
 - Claude Code on the Mac (25 October): docs/CLAUDE_CODE.md (setup, the three routine prompts, Sonnet and Haiku defaults in
   .claude/settings.json). A new project starts from templates/claude-code-project/.
-- The hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
+- The hub inside GitHub (28 October): the repo front page, README.md, a Markdown hub GitHub renders natively, written by
+  pipeline/hub_md.py from the files docs/hub.html reads (actions, YPP table, a mermaid line of engaged views, contests and ledger
+  verdicts, keys with fix links, channels; every section fails soft, no key value is ever printed) and rebuilt hourly in the
+  analytics.yml commit and after the audit's key check; the old README is docs/HOW_IT_WORKS.md. The browser hub:
+  https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
   rebuild). The repo is private (28 October): pipeline/pages_sync.py (pages.yml) copies docs/*.html and their static assets
   only, never data, to the public repo quickplay-studio/quickplay-studio.github.io (folder quickplay-autopilot/, secret
   HUB_PUSH_TOKEN), and the hub reads this repo in the browser with a read-only token saved there (localStorage qp_hub_token,

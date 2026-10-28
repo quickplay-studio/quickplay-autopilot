@@ -111,12 +111,19 @@ jobs:
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
         run: python pipeline/actions.py || true
+      - name: Hub front page
+        # README.md (pipeline/hub_md.py) shows the fresh keys and actions at once; it fails soft and joins the commit below
+        if: ${{ always() }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python pipeline/hub_md.py
       - name: Save
         if: ${{ always() }}
         run: |
           git config user.name "quickplay-bot"
           git config user.email "quickplay-studio@users.noreply.github.com"
-          for f in status/identity.json status/identity_log.txt status/keys.json status/actions.json tokens/instagram_*.enc; do git add $f 2>/dev/null || true; done      # tokens/instagram_<channel>.enc: the channels' Instagram keys, refreshed weekly (social.refresh_meta_keys)
+          for f in status/identity.json status/identity_log.txt status/keys.json status/actions.json README.md tokens/instagram_*.enc; do git add $f 2>/dev/null || true; done      # tokens/instagram_<channel>.enc: the channels' Instagram keys, refreshed weekly (social.refresh_meta_keys)
           git commit -q -m "Audit, keys and actions $(date -u '+%F %H:%M')" || exit 0
           git config merge.qp.driver "python3 pipeline/merge_driver.py %O %A %B %P"      # status, submit.csv, hourly.csv and actions.json merge by key (pipeline/merge_driver.py)
           for i in 1 2 3 4 5; do { git pull -q --rebase -X theirs || git rebase --abort; } && git push -q && exit 0; sleep $((5 + RANDOM % 10)); done

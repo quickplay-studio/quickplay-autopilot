@@ -218,10 +218,12 @@ def live_search(key):
     return sorted({e.get("provider") for e in (j or {}).get("data") or [] if isinstance(e, dict) and e.get("available")}) if code == 200 else []
 
 
-def wait_models(key, seconds, sleep=time.sleep, clock=time.time):
-    """Poll /v1/models until it lists chat models and the count has settled (the signed catalog loads a little after the
-    seeded models), at most `seconds`. Returns the ids; an empty list when none came."""
-    end, last, same = clock() + seconds, None, 0
+def wait_models(key, seconds, sleep=time.sleep, clock=time.time, settle=20):
+    """Poll /v1/models until it lists chat models and the count has settled, at most `seconds`. The signed catalog loads about
+    10 seconds after the router starts and adds the catalog-only rows, so the count is not trusted before `settle` seconds
+    have passed. Returns the ids; an empty list when none came."""
+    began = clock()
+    end, last, same = began + seconds, None, 0
     ids = []
     while True:
         code, j, _ = http("GET", "/v1/models?available=true", key=key)
@@ -229,7 +231,7 @@ def wait_models(key, seconds, sleep=time.sleep, clock=time.time):
         if ids:
             same = same + 1 if len(ids) == last else 0
             last = len(ids)
-            if same >= 2: return ids
+            if same >= 2 and clock() - began >= settle: return ids
         if clock() >= end: return ids
         sleep(4)
 
@@ -392,9 +394,16 @@ def stats(env=None):
     return st
 
 
+def said(j):
+    """The router's own error message from an answer body, short."""
+    e = (j or {}).get("error") if isinstance(j, dict) else None
+    return (str(e.get("message") if isinstance(e, dict) else e or ""))[:150]
+
+
 def probe(env=None):
     """The check workflow's proof that the router works end to end: one tiny chat (which model answered, from X-Routed-Via) and
-    one news search (which engine answered), written to status/freellm.json. Nothing is written when the router is not up."""
+    one news search (which engine answered), what the router lists, written to status/freellm.json. A failure keeps the router's
+    own message. Nothing is written when the router is not up."""
     env = os.environ if env is None else env
     key, base = (env.get("FREELLM_KEY") or "").strip(), (env.get("FREELLM_BASE") or "").strip()
     if not key or not base: return None
@@ -403,9 +412,14 @@ def probe(env=None):
     code, j, hdr = http("POST", "/v1/chat/completions", key=key, base=root, timeout=120,
                         body={"model": "auto", "max_tokens": 16, "messages": [{"role": "user", "content": "Reply with the word OK."}]})
     via = {k.lower(): v for k, v in (hdr or {}).items()}.get("x-routed-via", "")
-    out["chat"] = f"{code} via {urllib.parse.unquote(via)}"[:120] if code == 200 else f"failed ({code})"
+    out["chat"] = f"{code} via {urllib.parse.unquote(via)}"[:120] if code == 200 else f"failed ({code}): {said(j)}"
     code, j, _ = http("POST", "/v1/search", key=key, base=root, timeout=60, body={"query": "BBC News today", "max_results": 2, "topic": "news"})
-    out["search"] = f"{code} via {(j or {}).get('provider')}/{(j or {}).get('engine')}, {len((j or {}).get('results') or [])} results" if code == 200 else f"failed ({code})"
+    out["search"] = f"{code} via {(j or {}).get('provider')}/{(j or {}).get('engine')}, {len((j or {}).get('results') or [])} results" if code == 200 else f"failed ({code}): {said(j)}"
+    code, j, _ = http("GET", "/v1/search/engines", key=key, base=root)
+    out["engines"] = [f"{e.get('provider')}/{e.get('id')}{'' if e.get('available') else ' (no key)'}" for e in (j or {}).get("data") or [] if isinstance(e, dict)][:12] if code == 200 else f"failed ({code})"
+    code, j, _ = http("GET", "/v1/models", key=key, base=root)
+    rows = [m for m in (j or {}).get("data") or [] if isinstance(m, dict)] if code == 200 else []
+    out["models"] = f"{sum(1 for m in rows if m.get('available'))} available of {len(rows)} listed"
     st = load_status()
     st["probe"] = dict(out, at=stamp())
     save_status(st)

@@ -338,10 +338,17 @@ FL.save_status({"ok": True})
 assert FL.probe({}) is None
 def fake_http(method, path, key=None, body=None, base=None, timeout=15):
     if path == "/v1/chat/completions": return 200, {"choices": []}, {"X-Routed-Via": "ovh/gpt-oss-120b"}
+    if path == "/v1/search/engines": return 200, {"data": [{"provider": "parallel", "id": "parallel-search", "available": True}, {"provider": "tavily", "id": "tavily-search", "available": False}]}, {}
+    if path == "/v1/models": return 200, {"data": [{"id": "a", "available": True}, {"id": "b", "available": False}]}, {}
     return 200, {"provider": "parallel", "engine": "parallel-search", "results": [{"url": "u"}]}, {}
 FL.http = fake_http
 pr = FL.probe({"FREELLM_KEY": "k", "FREELLM_BASE": BASE})
-assert pr == {"chat": "200 via ovh/gpt-oss-120b", "search": "200 via parallel/parallel-search, 1 results"} and json.loads(FL.STATUS.read_text())["probe"]["chat"] == pr["chat"], pr
+assert pr["chat"] == "200 via ovh/gpt-oss-120b" and pr["search"] == "200 via parallel/parallel-search, 1 results", pr
+assert pr["engines"] == ["parallel/parallel-search", "tavily/tavily-search (no key)"] and pr["models"] == "1 available of 2 listed", pr
+assert json.loads(FL.STATUS.read_text())["probe"]["chat"] == pr["chat"]
+FL.http = lambda method, path, key=None, body=None, base=None, timeout=15: (404, {"error": {"message": "Model 'auto' is not in the catalog."}}, {}) if path == "/v1/chat/completions" else (503, {"error": {"message": "No search key configured."}}, {})
+bad = FL.probe({"FREELLM_KEY": "k", "FREELLM_BASE": BASE})
+assert bad["chat"] == "failed (404): Model 'auto' is not in the catalog." and bad["search"] == "failed (503): No search key configured.", bad
 print("10c report and probe ok")
 
 # 10d. a release that does not know a platform (v0.16.6 had no Keenable) stops with "unknown provider platform": start again without it

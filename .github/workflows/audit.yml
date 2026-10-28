@@ -96,6 +96,7 @@ jobs:
           LINKUP_API_KEY: ${{ secrets.LINKUP_API_KEY }}
           OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
           LLM7_API_KEY: ${{ secrets.LLM7_API_KEY }}
+          HUB_PUSH_TOKEN: ${{ secrets.HUB_PUSH_TOKEN }}      # copies the hub to the public site repo (pages.yml): one cheap call reads when it ends
         run: python pipeline/keys.py || true
       - name: Action list
         # status/actions.json: each item's check run (a pasted key proven by one call, the Pages setting, the Mac's Vyro run) and each item's issue read

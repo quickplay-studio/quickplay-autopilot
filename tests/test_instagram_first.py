@@ -327,16 +327,17 @@ REPO = _p.Path(REPO_DIR)
 time.sleep = REAL_SLEEP
 def run_hub(override):
     def raw(route):
-        rel = route.request.url.split("/main/", 1)[-1].split("?")[0]
+        if "/contents/" not in route.request.url: route.fulfill(status=200, content_type="application/json", body="[]"); return
+        rel = route.request.url.split("/contents/", 1)[-1].split("?")[0]
         if rel in override: route.fulfill(status=200, body=override[rel]); return
         f = REPO / rel
         if rel != "status/instagram.json" and f.is_file(): route.fulfill(status=200, body=f.read_bytes())
         else: route.fulfill(status=404, body="")
     with sync_playwright() as pw:
-        b = pw.chromium.launch(); p = b.new_context(viewport={"width": 390, "height": 844}).new_page(); errs = []
+        b = pw.chromium.launch(); ctx = b.new_context(viewport={"width": 390, "height": 844}); p = ctx.new_page(); errs = []
+        ctx.add_init_script("try { localStorage.setItem('qp_hub_token', 'github_pat_test'); } catch (e) {}")      # the read-only token (28 October)
         p.on("pageerror", lambda e: errs.append(str(e)))
-        p.route("https://raw.githubusercontent.com/**", raw)
-        p.route("https://api.github.com/**", lambda r: r.fulfill(status=200, content_type="application/json", body="[]"))
+        p.route("https://api.github.com/**", raw)
         for pat in ("https://fonts.**", "https://api.frankfurter.app/**", "https://open.er-api.com/**", "https://cdnjs.cloudflare.com/**"):
             p.route(pat, lambda r: r.abort())
         p.goto((REPO / "docs" / "hub.html").as_uri()); p.wait_for_timeout(2500)

@@ -109,6 +109,13 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
 .imhead .v{font-size:28px;font-weight:650;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .imhead .d{color:var(--text-secondary);font-size:13.5px}
 .imgoal{color:var(--text-secondary);font-size:13.5px;margin:-4px 0 8px}
+.auth{border:1px solid var(--warning);border-radius:12px;background:var(--surface-1);padding:10px 14px;margin:0 0 16px}
+.auth p{margin:4px 0} .auth .sub{margin:4px 0 8px}
+.auth form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.auth input[type=password]{flex:1 1 220px;min-width:0}
+.auth input{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--text-primary);border-radius:8px;padding:5px 8px}
+.auth label{display:inline-flex;gap:6px;align-items:center;margin:0;font-size:13px;color:var(--text-secondary)}
+.foot{margin:28px 0 0;font-size:12px;color:var(--text-muted)}
 </style>
 </head>
 <body>
@@ -130,6 +137,7 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
   </nav>
 </header>
 <main>
+  <div id="auth" hidden></div>
   <section id="overview" role="tabpanel"></section>
   <section id="insights" role="tabpanel" hidden></section>
   <section id="shorts" role="tabpanel" hidden></section>
@@ -143,11 +151,31 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
     <p><button type="button" id="export-btn">Download the data file</button> <span class="sub" id="export-state"></span></p>
     <details><summary>What goes in it</summary><ul class="sub" id="export-list"></ul></details>
   </section>
+  <p class="foot" id="forget-line" hidden>The hub reads the private repository with the read-only token saved in this browser. <a href="#" id="forget">Forget token</a></p>
 </main>
 <script>
-const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/";
 const REPO = "https://github.com/quickplay-studio/quickplay-autopilot";
 const API = "https://api.github.com/repos/quickplay-studio/quickplay-autopilot";
+// The repository is private (28 October 2026), so every read goes through GitHub's API with a read-only token that Charlie
+// pastes into this page once; it is kept only in this browser (localStorage "qp_hub_token"), never in the repository.
+const lsGet = k => { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } };
+const lsDel = k => { try { localStorage.removeItem(k); } catch (e) {} };
+let TOKEN = lsGet("qp_hub_token").trim();
+const ghHeaders = accept => ({"Accept": accept, "Authorization": "Bearer " + TOKEN});
+// What GitHub said about the token this load: any answer that worked, a refusal (401, or 403 that is not a rate limit), files not found
+let AUTH = {ok: false, refused: 0, missing: 0, exp: null};
+const rateLimited = r => r.status === 429 || (r.status === 403 && (r.headers.get("x-ratelimit-remaining") === "0" || r.headers.get("retry-after") !== null));
+function seen(r){
+  if (r.ok) {
+    AUTH.ok = true;
+    if (!AUTH.exp) {         // a token with an end date says so in this header (browsers see it only where GitHub exposes it to pages)
+      const d = new Date(String(r.headers.get("github-authentication-token-expiration") || "").replace(" UTC", "Z").replace(" ", "T"));
+      if (!isNaN(d)) AUTH.exp = d;
+    }
+  } else if (r.status === 401 || (r.status === 403 && !rateLimited(r))) AUTH.refused = r.status;
+  else if (r.status === 404) AUTH.missing++;
+}
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const num = x => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return isFinite(v) ? v : 0; };
@@ -186,21 +214,23 @@ function csv(text){
   return rows.filter(r => r.length > 1 || r[0]).map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
 }
 async function get(path, kind){
+  if (!TOKEN) return null;          // nothing is asked without a token; the panel at the top says what to do
   try {
-    const r = await fetch(RAW + path + "?t=" + Math.floor(Date.now() / 60000), {cache: "no-store"});
+    const r = await fetch(`${API}/contents/${path}?ref=main`, {cache: "no-store", headers: ghHeaders("application/vnd.github.raw")});
+    seen(r);
     if (!r.ok) return null;
     const t = await r.text();
     return kind === "json" ? JSON.parse(t) : kind === "csv" ? csv(t) : t;
   } catch (e) { return null; }
 }
-// GitHub's API without a key allows 60 calls an hour per connection, and a mobile network shares one connection among
-// many people (24 October). So each answer is kept 10 minutes in this browser and shared by every tab and reload, only
+// GitHub's API without a key allowed 60 calls an hour per connection (24 October); with the token it is 5,000, but each answer is kept 10 minutes in this browser and shared by every tab and reload, only
 // the fields the page shows are kept, nothing is asked while the page is hidden, and once GitHub says the hour's calls
 // are used up nothing is asked until its reset time (the last answer stays on screen with a note). Refresh asks again.
 const API_TTL = 10 * 60 * 1000;
 let API_NOTE = "";
 const apiReset = () => { try { return Number(localStorage.getItem("qp-api-reset") || 0); } catch (e) { return 0; } };
 async function api(path, pick, force){
+  if (!TOKEN) return null;
   const key = "qp-api:" + path, now = Date.now();
   let cached = null;
   try { cached = JSON.parse(localStorage.getItem(key) || "null"); } catch (e) {}
@@ -213,8 +243,9 @@ async function api(path, pick, force){
     return keep();
   }
   try {
-    const r = await fetch(API + path, {headers: {"Accept": "application/vnd.github+json"}});
-    if (r.status === 403 || r.status === 429) {
+    const r = await fetch(API + path, {headers: ghHeaders("application/vnd.github+json")});
+    seen(r);
+    if (rateLimited(r)) {
       const at = Number(r.headers.get("x-ratelimit-reset") || 0) * 1000 || now + 15 * 60 * 1000;
       try { localStorage.setItem("qp-api-reset", String(at)); } catch (e) {}
       API_NOTE = `GitHub's hourly allowance for this connection is used up; the live lists come back at ${new Date(at).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"})} UK.`;
@@ -624,10 +655,61 @@ function clipMoney(campaigns, stats){
   return by;
 }
 
+// The token panel (28 October): shown with no token, with a token GitHub refuses (401, 403, or every file "not found") and
+// in the last 14 days before the token ends. The end date is read from GitHub's response header when the browser can see it,
+// else from the date typed in when the token was saved (a new token is made for 1 year).
+const TOKEN_PAGE = "https://github.com/settings/personal-access-tokens/new";
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+function saveToken(ev){
+  ev.preventDefault();
+  const f = ev.target, err = f.querySelector(".autherr"), tok = f.elements.token.value.replace(/\s+/g, "");
+  if (!tok) { err.textContent = "Paste the token first."; return; }
+  if (!lsSet("qp_hub_token", tok)) { err.textContent = "This browser would not keep it (a private window?). Try a normal window."; return; }
+  const ends = f.elements.ends ? f.elements.ends.value : "";
+  if (DATE_RE.test(ends)) lsSet("qp_hub_token_ends", ends); else lsDel("qp_hub_token_ends");
+  lsDel("qp-api-reset");
+  location.reload();
+}
+function forgetToken(ev){
+  if (ev) ev.preventDefault();
+  lsDel("qp_hub_token"); lsDel("qp_hub_token_ends");
+  try { Object.keys(localStorage).filter(k => k.startsWith("qp-api")).forEach(k => localStorage.removeItem(k)); } catch (e) {}     // the lists kept from the private repository go too
+  location.reload();
+}
+function authPanel(){
+  const el = $("auth"); if (!el) return;
+  $("forget-line").hidden = !TOKEN;
+  const refused = AUTH.refused || (AUTH.missing > 0 && !AUTH.ok);
+  const saved = lsGet("qp_hub_token_ends");
+  const ends = AUTH.exp || (DATE_RE.test(saved) ? new Date(saved + "T23:59:59Z") : null);
+  const days = ends ? Math.floor((ends - Date.now()) / 86400000) : null;
+  let lead = "";
+  if (!TOKEN) lead = "The hub needs a read-only GitHub token to read the private repository.";
+  else if (refused) lead = AUTH.refused ? `GitHub did not accept the saved token (HTTP ${AUTH.refused}); it may have ended or lack a permission. Make a new read-only one.`
+    : "GitHub cannot find the repository with the saved token; it may have ended or lack access. Make a new read-only one.";
+  else if (days !== null && days <= 14) lead = days < 0 ? "The hub's read-only token has ended. Make a new one."
+    : `The hub's read-only token ends on ${ends.toLocaleDateString("en-GB", {weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Europe/London"})} (${days < 1 ? "within a day" : "in " + days + " day" + (days === 1 ? "" : "s")}). Make a new one before then.`;
+  if (el.dataset.lead === lead) return;          // the same note: leave a half-typed token alone
+  el.dataset.lead = lead; el.hidden = !lead;
+  if (!lead) { el.innerHTML = ""; return; }
+  const nextYear = new Date(Date.now() + 364 * 86400000).toISOString().slice(0, 10);
+  el.className = "auth";
+  el.innerHTML = `<p><b>${esc(lead)}</b></p>
+    <p class="sub">Make it at <a href="${TOKEN_PAGE}" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a> as the studio account:
+      Resource owner <b>quickplay-studio</b>, Repository access <b>Only select repositories</b> then <b>quickplay-autopilot</b>,
+      Repository permissions <b>Contents</b>, <b>Issues</b> and <b>Actions</b> each <b>Read-only</b>, Expiration <b>1 year</b>.
+      Copy the token (GitHub shows it once) and paste it here. It stays in this browser only.</p>
+    <form><input type="password" name="token" placeholder="github_pat_..." autocomplete="off" spellcheck="false" aria-label="Read-only GitHub token">
+      <label>Ends on <input type="date" name="ends" value="${nextYear}"></label>
+      <button type="submit">Save</button> <span class="autherr err" role="alert"></span></form>`;
+  el.querySelector("form").onsubmit = saveToken;
+}
+
 let D = {};
 let LAST_LOAD = 0;
 async function load(force){
   LAST_LOAD = Date.now(); force = force === true;
+  AUTH = {ok: false, refused: 0, missing: 0, exp: null};
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
          drivers, geo, regions, changes, late, hourly, actions, keys, igs] = await Promise.all([
@@ -645,7 +727,8 @@ async function load(force){
     get("status/freellm.json", "json")]);                                     // the FreeLLMAPI router (pipeline/freellm.py, 27 October)
   FX = fxNow;
   render();
-  $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+  authPanel();
+  $("when").textContent = !TOKEN ? "Needs a token" : "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
 }
 
 // Live job status from GitHub (refreshes with the page every 10 minutes, or press Refresh)
@@ -1189,6 +1272,7 @@ document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
 (() => { let t = location.hash.slice(1); try { t = t || localStorage.getItem("qp-hub-tab") || ""; } catch (e) {}
   const b = document.querySelector(`#tabs [data-tab="${t}"]`); if (b) b.click(); })();
 $("refresh").onclick = () => load(true);
+$("forget").onclick = forgetToken;
 $("export-btn").onclick = exportAll; exportList();
 load();
 setInterval(() => { if (document.visibilityState !== "hidden") load(); }, 10 * 60 * 1000);

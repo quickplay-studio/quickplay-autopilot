@@ -696,7 +696,8 @@
    "FIRECRAWL_API_KEY",
    "LINKUP_API_KEY",
    "OLLAMA_API_KEY",
-   "LLM7_API_KEY"
+   "LLM7_API_KEY",
+   "HUB_PUSH_TOKEN"
   ],
   "secrets_note": "Every secret a workflow may read. A new one is added here on purpose, by hand; the audit flags any other."
  },

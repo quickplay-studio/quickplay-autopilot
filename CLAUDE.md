@@ -75,8 +75,11 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
 - Claude Code on the Mac (25 October): docs/CLAUDE_CODE.md (setup, the three routine prompts, Sonnet and Haiku defaults in
   .claude/settings.json). A new project starts from templates/claude-code-project/.
 - The hub: https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
-  rebuild). Its Overview opens with "Your actions this week": status/actions.json plus issues labelled needs-charlie
-  (alerts.raise_issue(..., labels=["needs-charlie"])). actions.py keeps that list true (below), so add an item there
+  rebuild). The repo is private (28 October): pipeline/pages_sync.py (pages.yml) copies docs/*.html and their static assets
+  only, never data, to the public repo quickplay-studio/quickplay-studio.github.io (folder quickplay-autopilot/, secret
+  HUB_PUSH_TOKEN), and the hub reads this repo in the browser with a read-only token saved there (localStorage qp_hub_token,
+  never in the repo; its top panel says how to make one). Its Overview opens with "Your actions this week":
+  status/actions.json plus issues labelled needs-charlie (alerts.raise_issue(..., labels=["needs-charlie"])). actions.py keeps that list true (below), so add an item there
   with a "check" (secret_works:NAME, pages_workflow, vyro_today, or a new one in actions.CHECKS) whenever one can prove it.
 - `python pipeline/health.py`; status/write_log.txt and status/factpack_log.txt (tail only); status/<id>.json: one Short.
 - docs/NEXT.md (what was built and why, newest at the bottom), docs/CLIPS.md (clips), analytics/insights.md (the

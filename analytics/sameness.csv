@@ -1,10 +1,10 @@
 channel,day,score,top_recipe,share,boards
 clips,2026-10-26,0.0721,one_detail|number|minimal+low|Screen Time,0.333,3
 clips,2026-10-27,0.096,one_detail|statement|standard+lab-captions-1019|Match Day,0.286,7
-clips,2026-10-28,0.1119,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
+clips,2026-10-28,0.1174,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
 gaming,2026-10-26,0.0509,countdown|twist|standard+lab-captions-1024|Game Lore,0.5,2
 gaming,2026-10-27,0.1144,countdown|twist|standard+lab-captions-1024|Game Lore,0.25,4
-gaming,2026-10-28,0.1072,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
+gaming,2026-10-28,0.1094,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
 irl,2026-10-26,0.0997,one_detail|twist|standard+lab-captions-1024|Did You Know,0.333,3
 irl,2026-10-27,0.118,one_detail|twist|standard+lab-captions-1024|Did You Know,0.2,5
 irl,2026-10-28,0.14,one_detail|number|minimal+low|Did You Know,0.222,9
@@ -18,4 +18,4 @@ main,2026-10-24,0.0662,one_detail|statement|clean|,0.068,117
 main,2026-10-25,0.0656,one_detail|statement|clean|,0.061,132
 main,2026-10-26,0.0647,one_detail|statement|clean|,0.054,147
 main,2026-10-27,0.0635,one_detail|statement|clean|,0.05,161
-main,2026-10-28,0.0625,one_detail|statement|clean|,0.044,181
+main,2026-10-28,0.0628,one_detail|statement|clean|,0.044,180

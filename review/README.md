@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 04:50): 17 of 1,000 subscribers · 12,197 of 10 million Shorts views in 90 days · 2,751 views in the last 24 hours (about 110,976 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 05:48): 17 of 1,000 subscribers · 12,226 of 10 million Shorts views in 90 days · 2,825 views in the last 24 hours (about 110,975 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Tue 27 Oct 19:08 (UK): 5 scheduled, 144 public, 20 uploads in the last 24 hours.
 
@@ -27,30 +27,29 @@ Each narrator is tried on real Shorts and judged on viewers not swiping away (1.
 
 - daniel (British male, brisk): 1.63 x typical, 43% stayed past the first seconds, 5 Shorts
 - michael (American male, friendly): 1.30 x typical, 30% stayed past the first seconds, 9 Shorts
-- george_dramatic (British male, more dramatic delivery): 1.03 x typical, 28% stayed past the first seconds, 9 Shorts
 - lily (British female, bright): 0.96 x typical, 22% stayed past the first seconds, 5 Shorts
 - george_quick (British male, clear and quicker): 0.90 x typical, 26% stayed past the first seconds, 4 Shorts
 - lewis (British male, deeper and calm): 0.88 x typical, 24% stayed past the first seconds, 4 Shorts
-- lab-voice-1019 (British male, 3.15 words a second): 0.88 x typical, 28% stayed past the first seconds, 8 Shorts
 - isabella (British female, warm): 1.35 x typical, 32% stayed past the first seconds, 2 Shorts
 - heart (American female, expressive): 0.79 x typical, 25% stayed past the first seconds, 2 Shorts
 - george_turbo (British male, the george voice on Chatterbox-Turbo (350M, one-step decoder, no exaggeration or cfg), same pace): 0 Shorts measured so far
+- lab-voice-1028 (British male, 3.15 words a second): 0 Shorts measured so far
 
 ## Look lab
 
 New versions of the captions, voice pace, camera, colour and opening are tried on real Shorts. A version that beats the one it came from stays, and the next change builds on it.
 
-- Testing captions: 68px weight 600 at 1290px, 4 words at a time, spoken word var(--accent), no panel (9 of 8 Shorts measured)
-- Testing voice: British male, 3.15 words a second (8 of 8 Shorts measured)
+- Testing captions: 68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel (0 of 8 Shorts measured)
+- Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
 - Testing energy: camera motion 0.9, punch-ins 0.03 (4 of 8 Shorts measured)
 - Testing grade: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 3 words, then the hook's card (1 of 8 Shorts measured)
+- 2026-10-28: voice retired george_dramatic (making room for a new test (1.03x over 9 Shorts))
+- 2026-10-28: voice retired lab-voice-1019 (0.88x against 1.04x for george over 8 Shorts)
+- 2026-10-28: captions retired lab-captions-1024 (0.90x against 1.20x for lab-captions-1019 over 9 Shorts)
 - 2026-10-27: grade retired lab-grade-1023 (0.89x against 1.38x for natural over 14 Shorts)
 - 2026-10-27: voice retired emma (0.84x against 1.32x for michael over 16 Shorts)
 - 2026-10-26: opening kept lab-opening-1019: the picture alone for 1 word, then the hook's card (1.14x against 1.06x for graphic_first over 8 Shorts)
-- 2026-10-25: grade retired cinematic (1.02x against 1.30x for natural over 29 Shorts)
-- 2026-10-25: energy retired lab-energy-1019 (1.07x against 1.29x for steady over 15 Shorts)
-- 2026-10-25: captions retired minimal (1.05x against 1.26x for lab-captions-1019 over 18 Shorts)
 
 ## Needs a look
 

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 10:51): 18 of 1,000 subscribers · 12,632 of 10 million Shorts views in 90 days · 4,326 views in the last 24 hours (about 110,971 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 11:48): 18 of 1,000 subscribers · 12,422 of 10 million Shorts views in 90 days · 4,313 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 11:33 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
@@ -136,6 +136,8 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-262** ballon d'or 2026 explained: the historic numbers (rendering next)
+- **QD-263** Walter Koenig: the co-star bond you never knew (rendering next)
 
 ## On the channel (latest first)
 

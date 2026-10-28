@@ -22,7 +22,7 @@
    "used": "12:00 to 18:00"
   }
  },
- "title": "Game Facts #5: GTA 6: 17% spike in time off requests",
+ "title": "GTA 6 PC rumored 2027 as consoles drive leave spike",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -158,6 +158,13 @@
  "social_release": "social-QD-211",
  "engage": {
   "comment": "UgzlWWB4l_Qp0r_Wz3B4AaABAg",
-  "playlist": "Quickplay Daily: Gaming"
+  "playlist": "Quickplay Daily: Gaming",
+  "title": {
+   "swapped_from": "Game Facts #5: GTA 6: 17% spike in time off requests",
+   "to": "GTA 6 PC rumored 2027 as consoles drive leave spike",
+   "at": "2026-10-28T13:41+00:00",
+   "views_an_hour": 0.0,
+   "typical": 0.5
+  }
  }
 }

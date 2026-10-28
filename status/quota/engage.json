@@ -1,9 +1,11 @@
 {
  "day": "2026-10-28",
- "units": 1110,
+ "units": 1465,
  "by": {
-  "engagement": 1010,
-  "series playlist add": 100
+  "engagement": 1215,
+  "series playlist add": 150,
+  "series playlist": 50,
+  "series description": 50
  },
  "calls": {}
 }

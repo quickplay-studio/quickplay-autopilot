@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 11:48): 18 of 1,000 subscribers · 12,422 of 10 million Shorts views in 90 days · 4,313 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Wed 28 Oct, 12:58): 18 of 1,000 subscribers · 12,434 of 10 million Shorts views in 90 days · 4,304 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 11:33 (UK): 5 scheduled, 144 public, 18 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Thu 29 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Wed 28 Oct | 14 public, 12 scheduled | 0 | 1 | ⏳ 14 of 15 so far, 12 more scheduled |
+| Wed 28 Oct | 15 public, 11 scheduled | 0 | 1 | ✅ done |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
@@ -158,7 +158,7 @@ scheduled · 42 s · music: event-horizon · [script](../boards/done/QD-225.json
 ![QD-225](QD-225.jpg)
 
 ### Wed 28 Oct 12:30 · Space Facts #1: The Signal on Planet 9 | a short story 🚀
-scheduled · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216.json) · [YouTube](https://youtube.com/shorts/QKykXue3OuY)
+private · 32 s · music: false-vacuum-decay · [script](../boards/done/QD-216.json) · [YouTube](https://youtube.com/shorts/QKykXue3OuY)
 
 ![QD-216](QD-216.jpg)
 

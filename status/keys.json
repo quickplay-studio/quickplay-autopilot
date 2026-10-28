@@ -1,11 +1,11 @@
 {
- "checked": "2026-10-27T21:52+00:00",
- "audit": "2026-10-27T21:52:16+00:00",
+ "checked": "2026-10-28T01:21+00:00",
+ "audit": "2026-10-28T01:21:14+00:00",
  "counts": {
-  "ok": 14,
+  "ok": 15,
   "expiring": 0,
   "failing": 0,
-  "missing": 12
+  "missing": 18
  },
  "keys": [
   {
@@ -14,7 +14,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": true,
    "fix": [
@@ -32,7 +32,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -50,7 +50,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -68,7 +68,7 @@
    "group": "YouTube",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the refresh works; Google set no 7-day Testing limit on it",
    "needed": false,
    "fix": [
@@ -86,7 +86,7 @@
    "group": "Instagram",
    "status": "ok",
    "expires": "2026-12-22",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "answers as @quickplaydaily",
    "needed": false,
    "fix": [
@@ -103,7 +103,7 @@
    "group": "Instagram",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "answers as @quickplaydaily; Meta has not given an end date yet (the weekly refresh records it)",
    "needed": false,
    "fix": [
@@ -119,7 +119,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -132,7 +132,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -145,7 +145,7 @@
    "group": "Instagram",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -158,7 +158,7 @@
    "group": "Facebook",
    "status": "ok",
    "expires": "2027-01-17",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "answers as the Page Quickplay Daily; the key never ends; Meta's data access ends Sunday 17 January",
    "needed": false,
    "fix": [
@@ -174,7 +174,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -187,7 +187,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -200,7 +200,7 @@
    "group": "Facebook",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "not set up",
    "needed": false,
    "fix": [
@@ -213,7 +213,7 @@
    "group": "TikTok",
    "status": "ok",
    "expires": "2027-10-17",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the refresh token ends Sunday 17 October 2027",
    "needed": false,
    "fix": [
@@ -228,7 +228,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "Google accepts the key",
    "needed": true,
    "fix": [
@@ -243,7 +243,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "Groq accepts the key",
    "needed": false,
    "fix": [
@@ -258,7 +258,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -273,7 +273,7 @@
    "group": "AI models",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "OpenRouter accepts the key",
    "needed": false,
    "fix": [
@@ -288,7 +288,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -303,7 +303,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -318,7 +318,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -333,7 +333,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -348,7 +348,7 @@
    "group": "AI models",
    "status": "missing",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "the secret is not set",
    "needed": false,
    "fix": [
@@ -358,13 +358,126 @@
    ]
   },
   {
+   "id": "freellm",
+   "what": "FreeLLMAPI router (more free models and web search for the writers and fact packs)",
+   "group": "AI models",
+   "status": "ok",
+   "expires": "",
+   "checked": "2026-10-28T01:16+00:00",
+   "detail": "started Wednesday 28 October (freellm): 26 chat models on kilo, ovh; search on none; served 1 calls last run; this release does not know keenable, so it is left out",
+   "needed": false,
+   "fix": [
+    "Nothing is lost while it is down: the writers and fact packs use the other free models, as before it existed.",
+    "Press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/freellm.yml to try it again (about 2 minutes): it saves the reason, and what the container said, in status/freellm.json.",
+    "If the reason is \"image digest changed\": read the release notes at https://github.com/tashfeenahmed/freellmapi/releases, then ask Claude (your pinned Quickplay page) to set freellm.digest in config.json.",
+    "To switch it off for good, set \"on\": false under \"freellm\" in config.json."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "TAVILY_API_KEY",
+   "what": "Tavily key (web search, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds web search to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://app.tavily.com/home (free) and copy the API key from the home page (free plan, 1,000 searches a month, no card).",
+    "Create the GitHub secret named exactly TAVILY_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "EXA_API_KEY",
+   "what": "Exa key (web search, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds web search to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://dashboard.exa.ai/api-keys (free) and create an API key (free monthly search credits, no card).",
+    "Create the GitHub secret named exactly EXA_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "FIRECRAWL_API_KEY",
+   "what": "Firecrawl key (web search, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds web search to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://www.firecrawl.dev/app/api-keys (free) and copy the API key (free plan, 1,000 credits a month, no card).",
+    "Create the GitHub secret named exactly FIRECRAWL_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "LINKUP_API_KEY",
+   "what": "Linkup key (web search, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds web search to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://app.linkup.so/api-keys (free) and create an API key (free monthly credits, no card).",
+    "Create the GitHub secret named exactly LINKUP_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "OLLAMA_API_KEY",
+   "what": "Ollama Cloud key (chat models, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds chat models to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://ollama.com/settings/keys (free) and create an API key (Ollama Cloud, free plan, no card).",
+    "Create the GitHub secret named exactly OLLAMA_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
+   "id": "LLM7_API_KEY",
+   "what": "LLM7 key (chat models, for the FreeLLMAPI router)",
+   "group": "AI models",
+   "status": "missing",
+   "expires": "",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "optional, not set: adds chat models to the free router",
+   "needed": false,
+   "fix": [
+    "Open https://llm7.io (free) and get a free token (100 requests an hour, no card).",
+    "Create the GitHub secret named exactly LLM7_API_KEY, paste the key as its value and press Add secret: https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new",
+    "The next trends, write or evolve run starts the router with it; this row turns green at the next key check (within 3 hours)."
+   ],
+   "for": "freellm"
+  },
+  {
    "id": "CLAUDE_CODE_OAUTH_TOKEN",
    "what": "Claude token (the writer's last resort, your allowance)",
    "group": "Claude",
    "status": "ok",
    "expires": "",
-   "checked": "2026-10-27T21:52+00:00",
-   "detail": "the secret is set (only its presence is checked, so no allowance is used); the writer's last call: ok at 2026-10-27T09:39+00:00",
+   "checked": "2026-10-28T01:21+00:00",
+   "detail": "the secret is set (only its presence is checked, so no allowance is used); the writer's last call: ok at 2026-10-28T01:03+00:00",
    "needed": false,
    "fix": [
     "On the Mac, open Terminal and run: claude setup-token (signed in to Claude with your subscription).",
@@ -378,7 +491,7 @@
    "group": "Campaign sites",
    "status": "ok",
    "expires": "2026-11-21",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "saved 5 days ago, 19 cookies; last submission Sunday 25 October",
    "needed": false,
    "fix": [
@@ -393,7 +506,7 @@
    "group": "Campaign sites",
    "status": "ok",
    "expires": "2027-10-22",
-   "checked": "2026-10-27T21:52+00:00",
+   "checked": "2026-10-28T01:21+00:00",
    "detail": "saved 5 days ago, 9 cookies; no submission seen yet",
    "needed": false,
    "fix": [

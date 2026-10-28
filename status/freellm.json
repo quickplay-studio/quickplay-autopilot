@@ -1,6 +1,6 @@
 {
- "started": "2026-10-28T01:25:07+00:00",
- "job": "freellm",
+ "started": "2026-10-28T01:25:22+00:00",
+ "job": "write",
  "ok": true,
  "reason": "",
  "image": "ghcr.io/tashfeenahmed/freellmapi:v0.16.6",
@@ -23,9 +23,7 @@
  "dropped": [
   "keenable"
  ],
- "calls": {
-  "kilo": 1
- },
+ "calls": {},
  "search_switched_on": [],
  "search_rows": [
   "tavily/tavily-search keys 0",
@@ -65,25 +63,13 @@
    "reason": ""
   },
   {
-   "t": "2026-10-28T01:25:07+00:00",
-   "job": "freellm",
+   "t": "2026-10-28T01:25:22+00:00",
+   "job": "write",
    "ok": true,
    "reason": ""
   }
  ],
- "probe": {
-  "chat": "200 via kilo/dots-studio/dots-3-note-preview:free",
-  "search": "failed (503): search error: No search key configured. Enable Parallel (no key needed) or add a Tavily, Exa, Firecrawl or Linkup key on the Keys page.",
-  "engines": [
-   "tavily/tavily-search (no key)",
-   "exa/exa-search (no key)",
-   "firecrawl/firecrawl-search (no key)",
-   "linkup/linkup-search (no key)"
-  ],
-  "models": "28 available of 283 listed",
-  "at": "2026-10-28T01:25:59+00:00"
- },
- "calls_total": 1,
- "tokens": 35,
- "finished": "2026-10-28T01:25:59+00:00"
+ "calls_total": 0,
+ "tokens": 0,
+ "finished": "2026-10-28T02:13:30+00:00"
 }

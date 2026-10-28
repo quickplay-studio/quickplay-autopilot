@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 14:59 UK.
+Updated Wednesday 28 October, 15:57 UK.
 
-**18 subscribers, 12,543 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**19 subscribers, 12,577 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,12 +26,12 @@ Updated Wednesday 28 October, 14:59 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 18 of 500 (3.60%) | 12,543 of 3,000,000 (0.42%) | 33,194 |
-| Full, from 1 February 2027 | 18 of 1,000 (1.80%) | 12,543 of 10,000,000 (0.13%) | 110,972 |
+| Expanded, open now | 19 of 500 (3.80%) | 12,577 of 3,000,000 (0.42%) | 33,194 |
+| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 12,577 of 10,000,000 (0.13%) | 110,972 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,702 (to Sun 25 Oct) | 4,209 | 24 | 96 |
+| 8,702 (to Sun 25 Oct) | 4,081 | 24 | 96 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -39,6 +39,8 @@ The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged 
 
 Engaged views a day, 7-day average: **1,243**, up from 505 a week earlier.
 Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 31% a week earlier.
+Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
+Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Wed 28 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
 xychart-beta
@@ -64,7 +66,7 @@ Days YouTube has reported, to Sun 25 Oct. More: [analytics/insights.md](analytic
 | title opening | search phrase 19, curiosity 13 | too few to tell | 6 |
 | title answer (stated or held back) | stated 20, held back 14 | too few to tell | 6 |
 
-**Change ledger:** 154 changes, 101 live; verdicts so far: 23 no change, 17 worse, 12 better, 9 too early, 1 overlapped.
+**Change ledger:** 156 changes, 103 live; verdicts so far: 23 no change, 17 worse, 12 better, 9 too early, 1 overlapped.
 
 | Change | Date | What | Target | Verdict |
 |---|---|---|---|---|
@@ -77,7 +79,7 @@ Days YouTube has reported, to Sun 25 Oct. More: [analytics/insights.md](analytic
 | CH-146 | Wed 21 Oct | Recipe: Back to normal for title "question" | yt_rel | worse |
 | CH-145 | Wed 21 Oct | Recipe: Back to normal for pictures "mostly real pictures" | yt_rel | too early |
 
-Waiting for a verdict (check day): CH-154 (Wed 4 Nov), CH-153 (Wed 4 Nov), CH-132 (Tue 3 Nov), CH-131 (Tue 3 Nov), CH-130 (Tue 3 Nov), CH-129 (Tue 3 Nov). All of them: [analytics/changes.csv](analytics/changes.csv).
+Waiting for a verdict (check day): CH-156 (Wed 4 Nov), CH-155 (Wed 4 Nov), CH-154 (Wed 4 Nov), CH-153 (Wed 4 Nov), CH-132 (Tue 3 Nov), CH-131 (Tue 3 Nov). All of them: [analytics/changes.csv](analytics/changes.csv).
 
 ## Keys
 
@@ -107,13 +109,13 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 8 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 9 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 3 of 6 posted today, sign-in ok
-- **Quickplay IRL Clips**: 3 of 6 posted today, sign-in ok
+- **Quickplay IRL Clips**: 4 of 6 posted today, sign-in ok
 - **Quickplay Clips**: 3 of 6 posted today, sign-in ok
 - **Quickplay Diario**: 0 of 6 posted today, sign-in ok
 - Clipping paused since Mon 26 Oct: the clip channels post original Shorts.
 
 ---
-[How it works](docs/HOW_IT_WORKS.md) · [Actions](https://github.com/quickplay-studio/quickplay-autopilot/actions) · [Issues](https://github.com/quickplay-studio/quickplay-autopilot/issues) · [Insights](analytics/insights.md) · [Weekly review](analytics/weekly.md)
+[How it works](docs/HOW_IT_WORKS.md) · [Actions](https://github.com/quickplay-studio/quickplay-autopilot/actions) · [Issues](https://github.com/quickplay-studio/quickplay-autopilot/issues) · [Insights](analytics/insights.md) · [Weekly review](analytics/weekly.md) · [Sameness](analytics/sameness.md)

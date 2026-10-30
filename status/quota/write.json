@@ -1,10 +1,10 @@
 {
  "day": "2026-10-30",
- "units": 2,
+ "units": 4,
  "by": {
-  "angle search": 2
+  "angle search": 4
  },
  "calls": {
-  "search": 2
+  "search": 4
  }
 }

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 15:00): 23 of 1,000 subscribers · 15,022 of 10 million Shorts views in 90 days · 6,725 views in the last 24 hours (about 110,944 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 15:55): 23 of 1,000 subscribers · 15,119 of 10 million Shorts views in 90 days · 7,004 views in the last 24 hours (about 110,943 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 14:20 (UK): 5 scheduled, 145 public, 14 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 15 scheduled |
-| Fri 30 Oct | 8 public, 2 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 2 more scheduled |
+| Fri 30 Oct | 9 public, 1 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 1 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -170,7 +170,7 @@ scheduled · 29 s · music: once-upon-a-time · [script](../boards/done/QD-282.j
 ![QD-282](QD-282.jpg)
 
 ### Fri 30 Oct 15:30 · England vs PNG: the 68-point twist
-scheduled · 37 s · music: once-upon-a-time · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
+private · 37 s · music: once-upon-a-time · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
 
 ![QD-279](QD-279.jpg)
 

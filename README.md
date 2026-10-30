@@ -1,13 +1,13 @@
 # Quickplay hub
 
-Updated Wednesday 28 October, 20:50 UK.
+Updated Friday 30 October, 00:53 UK.
 
-**19 subscribers, 12,469 engaged Shorts views in 90 days (0.42% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**19 subscribers, 13,644 engaged Shorts views in 90 days (0.45% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
 - [ ] **Check the Quickplay Facebook Page for a restriction** (overdue, was due Tue 27 Oct): [issue #34](https://github.com/quickplay-studio/quickplay-autopilot/issues/34)
-- [ ] **Find out why TikTok restricted the account on 19 October** (due Wed 28 Oct): [issue #35](https://github.com/quickplay-studio/quickplay-autopilot/issues/35)
+- [ ] **Find out why TikTok restricted the account on 19 October** (overdue, was due Wed 28 Oct): [issue #35](https://github.com/quickplay-studio/quickplay-autopilot/issues/35)
 - [ ] **Recommended, free: a Mistral key (the biggest free writing allowance; phone check, no...** (due Fri 30 Oct): [open](https://console.mistral.ai/)
 - [ ] **Take the pipeline's Claude calls off your chat allowance: claim the Max API credits...** (due Sat 31 Oct): [open](https://claude.ai/settings/billing)
 
@@ -26,28 +26,28 @@ Updated Wednesday 28 October, 20:50 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 19 of 500 (3.80%) | 12,469 of 3,000,000 (0.42%) | 33,195 |
-| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 12,469 of 10,000,000 (0.12%) | 110,973 |
+| Expanded, open now | 19 of 500 (3.80%) | 13,644 of 3,000,000 (0.45%) | 33,182 |
+| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 13,644 of 10,000,000 (0.14%) | 110,960 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,658 (to Mon 26 Oct) | 3,986 | 24 | 96 |
+| 8,658 (to Mon 26 Oct) | 3,586 | 24 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
 Engaged views a day, 7-day average: **1,237**, up from 658 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 31.5% a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **28.5%**, was 29.5% a week earlier.
 Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
 Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Wed 28 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
 xychart-beta
     title "Engaged views a day, Quickplay Daily"
-    x-axis ["16 Oct", "17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct"]
+    x-axis ["17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct"]
     y-axis "Views" 0 --> 2000
-    line [225, 596, 694, 1118, 1482, 1310, 367, 1995, 942, 1488, 1074]
+    line [596, 694, 1118, 1482, 1310, 367, 1995, 942, 1488, 1074]
 ```
 Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytics/insights.md).
 
@@ -66,18 +66,18 @@ Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytic
 | ending | loop 19, question 13 | too few to tell | 6 |
 | first frame | cover 15, photo 9 | too few to tell | 6 |
 
-**Change ledger:** 159 changes, 106 live; verdicts so far: 23 no change, 17 worse, 12 better, 9 too early, 1 overlapped.
+**Change ledger:** 263 changes, 117 live; verdicts so far: 55 worse, 48 no change, 37 better, 25 too early, 6 overlapped.
 
 | Change | Date | What | Target | Verdict |
 |---|---|---|---|---|
-| CH-152 | Wed 21 Oct | Recipe: Use less music mood "pop" | yt_rel | worse |
-| CH-151 | Wed 21 Oct | Recipe: Back to normal for opening "image_first" | yt_rel | no change |
-| CH-150 | Wed 21 Oct | Recipe: Back to normal for colour grade "natural" | yt_rel | no change |
-| CH-149 | Wed 21 Oct | Recipe: Back to normal for camera energy "steady" | yt_rel | no change |
-| CH-148 | Wed 21 Oct | Recipe: Back to normal for hook style "number" | yt_rel | no change |
-| CH-147 | Wed 21 Oct | Recipe: Use less category "Gaming" | yt_rel | better |
-| CH-146 | Wed 21 Oct | Recipe: Back to normal for title "question" | yt_rel | worse |
-| CH-145 | Wed 21 Oct | Recipe: Back to normal for pictures "mostly real pictures" | yt_rel | too early |
+| CH-210 | Fri 23 Oct | Recipe: Use less writer model "gemini:gemini-3-flash-preview" | yt_rel | no change |
+| CH-209 | Fri 23 Oct | Recipe: Use less posting time (uk) "17:00 to 19:59" | yt_rel | better |
+| CH-208 | Fri 23 Oct | Recipe: Back to normal for posting time (uk) "other times" | yt_rel | worse |
+| CH-207 | Fri 23 Oct | Recipe: Back to normal for comment replies "on" | yt_rel | no change |
+| CH-206 | Fri 23 Oct | Recipe: Back to normal for pictures "mostly real pictures" | yt_rel | too early |
+| CH-205 | Fri 23 Oct | Recipe: Use less music mood "tech" | yt_rel | better |
+| CH-204 | Fri 23 Oct | Recipe: Use less music mood "space" | yt_rel | better |
+| CH-203 | Fri 23 Oct | Recipe: Use less music mood "inspiring" | yt_rel | too early |
 
 Waiting for a verdict (check day): CH-159 (Wed 4 Nov), CH-158 (Wed 4 Nov), CH-157 (Wed 4 Nov), CH-156 (Wed 4 Nov), CH-155 (Wed 4 Nov), CH-154 (Wed 4 Nov). All of them: [analytics/changes.csv](analytics/changes.csv).
 
@@ -109,11 +109,11 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 14 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 0 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
-- **Quickplay Gaming Clips**: 3 of 6 posted today, sign-in ok
-- **Quickplay IRL Clips**: 4 of 6 posted today, sign-in ok
-- **Quickplay Clips**: 5 of 6 posted today, sign-in ok
+- **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
+- **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok
+- **Quickplay Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay Diario**: 0 of 6 posted today, sign-in ok
 - Clipping paused since Mon 26 Oct: the clip channels post original Shorts.
 

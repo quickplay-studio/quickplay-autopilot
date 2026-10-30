@@ -1,0 +1,189 @@
+{
+ "id": "QD-285",
+ "board": "boards/queue/QD-285.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T04:00:00Z",
+ "rendered": "2026-10-30T14:59:51.560912+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"emily mcgonagle\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Emily McGonagle: the secret career change 🎙️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 2 reused a nearby picture (page:https://www.theguardian.com/tv-and-radio/2026/oct/30/essex-woman-voice-netflix-spike-emily-mcgonagle: theguardian.com is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 8,
+  "pic_found_share": 0.86,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "rubberband",
+ "social_music": "playful-days-291189",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 32.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 22.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 587.7,
+   "contrast": 0.212,
+   "face_area": 0.0,
+   "text_area": 0.0447,
+   "caption_contrast": 3.19,
+   "by_frame": {
+    "sharpness": [
+     569.4,
+     626.1,
+     614.1,
+     541.3
+    ],
+    "contrast": [
+     0.211,
+     0.212,
+     0.214,
+     0.214
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0474,
+     0.0472,
+     0.0472,
+     0.0371
+    ],
+    "caption_contrast": [
+     3.19,
+     3.19,
+     4.16,
+     3.15
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.55,
+   "none",
+   2
+  ],
+  [
+   4.55,
+   8.73,
+   "none",
+   3
+  ],
+  [
+   8.73,
+   12.33,
+   "none",
+   2
+  ],
+  [
+   12.33,
+   15.97,
+   "none",
+   1
+  ],
+  [
+   15.97,
+   21.46,
+   "none",
+   4
+  ],
+  [
+   21.46,
+   26.64,
+   "none",
+   1
+  ],
+  [
+   26.64,
+   32.71,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "201676",
+   "q": "animation studio desk",
+   "t0": 0.0,
+   "t1": 11.3
+  },
+  {
+   "p": "pixabay",
+   "id": "28525",
+   "q": "recording booth microphone",
+   "t0": 10.7,
+   "t1": 22.0
+  },
+  {
+   "p": "pixabay",
+   "id": "31094",
+   "q": "suburban house exterior",
+   "t0": 21.4,
+   "t1": 32.71
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T15:21:54Z",
+ "video": "YXfaK7pdxJg",
+ "url": "https://youtube.com/shorts/YXfaK7pdxJg",
+ "publish_at": "2026-10-31T04:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T04:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-285"
+}

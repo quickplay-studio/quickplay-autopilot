@@ -1,0 +1,169 @@
+{
+ "id": "QD-289",
+ "board": "boards/queue/QD-289.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T19:30:00Z",
+ "rendered": "2026-10-30T15:01:42.254435+00:00",
+ "channel": "irl",
+ "title": "Did You Know #9: Emily McGonagle: 8 voices in one show 🎙️",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 5 reused a nearby picture (page:https://www.theguardian.com/tv-and-radio/2026/oct/30/essex-woman-voice-netflix-spike-emily-mcgonagle: theguardian.com is a news outlet: its pictures are licensed, not ours to use)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 8,
+  "extra_photos": 11,
+  "pic_found_share": 0.89,
+  "pic_rescued": 4,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "rubberband",
+ "look": {
+  "captions": "low",
+  "voice": "lab-voice-1028",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 23.4,
+  "wps": 3.21,
+  "weak_beats": [],
+  "size_mb": 13.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 574.2,
+   "contrast": 0.201,
+   "face_area": 0.0,
+   "text_area": 0.057,
+   "caption_contrast": 12.0,
+   "by_frame": {
+    "sharpness": [
+     562.6,
+     619.1,
+     629.5,
+     485.7
+    ],
+    "contrast": [
+     0.199,
+     0.2,
+     0.201,
+     0.205
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0723,
+     0.0587,
+     0.0501,
+     0.0467
+    ],
+    "caption_contrast": [
+     11.83,
+     12.17,
+     14.59,
+     6.06
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.87,
+   "none",
+   1
+  ],
+  [
+   2.87,
+   5.07,
+   "none",
+   2
+  ],
+  [
+   5.07,
+   7.12,
+   "none",
+   2
+  ],
+  [
+   7.12,
+   9.47,
+   "none",
+   1
+  ],
+  [
+   9.47,
+   11.83,
+   "none",
+   1
+  ],
+  [
+   11.83,
+   14.4,
+   "none",
+   2
+  ],
+  [
+   14.4,
+   16.94,
+   "none",
+   2
+  ],
+  [
+   16.94,
+   20.76,
+   "none",
+   3
+  ],
+  [
+   20.76,
+   23.39,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "42305",
+   "q": "home office desk",
+   "t0": 0.0,
+   "t1": 11.99
+  },
+  {
+   "p": "pixabay",
+   "id": "281347",
+   "q": "animated dragon cartoon",
+   "t0": 11.39,
+   "t1": 23.38
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T15:22:05Z",
+ "video": "jJj7SypMdqg",
+ "url": "https://youtube.com/shorts/jJj7SypMdqg",
+ "publish_at": "2026-10-30T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

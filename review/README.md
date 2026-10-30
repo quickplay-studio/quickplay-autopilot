@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sat 31 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 15 scheduled |
-| Fri 30 Oct | 5 public, 4 scheduled | 8 | 1 | ⏳ 5 of 15 so far, 4 more scheduled |
+| Sat 31 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
+| Fri 30 Oct | 6 public, 3 scheduled | 8 | 1 | ⏳ 6 of 15 so far, 3 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -174,7 +174,7 @@ scheduled · 26 s · music: stake-out · [script](../boards/done/QD-277.json) ·
 ![QD-277](QD-277.jpg)
 
 ### Fri 30 Oct 12:00 · Game Explained #1: Switch cartridge taste: the real reason 👅
-scheduled · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
+private · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
 
 ![QD-276](QD-276.jpg)
 

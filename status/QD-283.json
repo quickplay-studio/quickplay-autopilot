@@ -1,0 +1,185 @@
+{
+ "id": "QD-283",
+ "board": "boards/queue/QD-283.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T01:30:00Z",
+ "rendered": "2026-10-30T12:35:54.544048+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"The Celebrity Traitors\" read 16,847 times yesterday, 1.5x its usual 11,163",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Claudia Winkleman leads Celebrity Traitors series two",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "twin-lynches",
+ "social_music": "soulsweeper-252499",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 38.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 23.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 330.4,
+   "contrast": 0.236,
+   "face_area": 0.1226,
+   "text_area": 0.0837,
+   "caption_contrast": 13.03,
+   "by_frame": {
+    "sharpness": [
+     305.4,
+     348.6,
+     325.5,
+     342.0
+    ],
+    "contrast": [
+     0.232,
+     0.238,
+     0.236,
+     0.239
+    ],
+    "face_area": [
+     0.1248,
+     0.1167,
+     0.119,
+     0.1296
+    ],
+    "text_area": [
+     0.0511,
+     0.0949,
+     0.097,
+     0.0918
+    ],
+    "caption_contrast": [
+     13.02,
+     13.44,
+     12.75,
+     13.04
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.31,
+   "none",
+   1
+  ],
+  [
+   3.31,
+   7.35,
+   "none",
+   3
+  ],
+  [
+   7.35,
+   13.34,
+   "none",
+   4
+  ],
+  [
+   13.34,
+   18.53,
+   "none",
+   4
+  ],
+  [
+   18.53,
+   23.49,
+   "none",
+   3
+  ],
+  [
+   23.49,
+   28.9,
+   "none",
+   4
+  ],
+  [
+   28.9,
+   38.03,
+   "none",
+   6
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "95562",
+   "q": "foggy castle exterior",
+   "t0": 0.0,
+   "t1": 13.08
+  },
+  {
+   "p": "pixabay",
+   "id": "15153",
+   "q": "dramatic stage lighting",
+   "t0": 12.48,
+   "t1": 25.55
+  },
+  {
+   "p": "pixabay",
+   "id": "62823",
+   "q": "movie theatre seats",
+   "t0": 24.95,
+   "t1": 38.03
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T12:55:20Z",
+ "video": "cJIA6wBfhMg",
+ "url": "https://youtube.com/shorts/cJIA6wBfhMg",
+ "publish_at": "2026-10-31T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-283"
+}

@@ -3,14 +3,14 @@
 Updated 2026-10-30. pipeline/joint.py: one ridge regression of log(24-hour views / the same-UK-day channel median) on every factor of the round at once, with channel, exploration, topic heat and weekday held fixed, plus category-by-factor interactions shrunk harder. Opening factors are fitted again on the engaged share. Intervals are 90% bootstrap intervals (seeded). An effect is the multiple an arm gets against the factor's other arm; a main effect whose interval sits wholly on the losing side withholds a pairwise winner (drivers.round_verdicts), and a clear interaction is offered to evolve.py as a category-specific writing instruction (source joint).
 
 - views: 193 Shorts, 95 columns, residual spread 1.553, effective parameters 18.7
-- engaged: 173 Shorts, 66 columns, residual spread 0.306, effective parameters 37.2
+- engaged: 186 Shorts, 88 columns, residual spread 0.324, effective parameters 42.4
 
 ## Top main effects (the better arm of each factor)
 
 | factor | arm | outcome | effect | 90% interval | Shorts | clear |
 |---|---|---|---|---|---|---|
 | fx_opening | lab | views | 1.323x | 1.011x to 1.538x | 12 | yes |
-| fx_opening | image_first | engaged | 1.223x | 0.94x to 1.634x | 7 | no |
+| gene:g004 | b | engaged | 1.273x | 0.91x to 1.575x | 5 | no |
 | fx_grade | natural | views | 1.2x | 0.906x to 1.491x | 17 | no |
 | title_emoji | none | views | 1.179x | 0.889x to 1.49x | 34 | no |
 | sub_push | none | views | 1.177x | 0.898x to 1.4x | 23 | no |
@@ -20,11 +20,11 @@ Updated 2026-10-30. pipeline/joint.py: one ridge regression of log(24-hour views
 | fx_slot | 06:00 to 12:00 | views | 1.135x | 0.88x to 1.462x | 24 | no |
 | replies | on | views | 1.13x | 0.85x to 1.437x | 84 | no |
 | length | 25 to 34 s | views | 1.119x | 0.822x to 1.457x | 31 | no |
-| first_frame | cover | engaged | 1.107x | 0.924x to 1.367x | 35 | no |
+| ending | loop | views | 1.087x | 0.822x to 1.346x | 33 | no |
 
 ## Interactions whose interval clears no difference
 
-14 of 102 interaction rows. With this many cells some clear a 90% interval by luck, so only those with q at or under 0.1 (Benjamini-Hochberg) are offered to evolve.py.
+14 of 108 interaction rows. With this many cells some clear a 90% interval by luck, so only those with q at or under 0.1 (Benjamini-Hochberg) are offered to evolve.py.
 
 - Entertainment: off on replies (views): 0.95x beyond its usual effect, 90% interval 0.918x to 0.998x, 9 Shorts; q 0.349, fails the luck check
 - Entertainment: on on replies (views): 1.052x beyond its usual effect, 90% interval 1.002x to 1.089x, 10 Shorts; q 0.349, fails the luck check

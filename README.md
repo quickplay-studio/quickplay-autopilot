@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 19:05 UK.
+Updated Friday 30 October, 19:51 UK.
 
-**24 subscribers, 15,312 engaged Shorts views in 90 days (0.51% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**24 subscribers, 15,430 engaged Shorts views in 90 days (0.51% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,45 +27,45 @@ Updated Friday 30 October, 19:05 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 24 of 500 (4.80%) | 15,312 of 3,000,000 (0.51%) | 33,164 |
-| Full, from 1 February 2027 | 24 of 1,000 (2.40%) | 15,312 of 10,000,000 (0.15%) | 110,941 |
+| Expanded, open now | 24 of 500 (4.80%) | 15,430 of 3,000,000 (0.51%) | 33,162 |
+| Full, from 1 February 2027 | 24 of 1,000 (2.40%) | 15,430 of 10,000,000 (0.15%) | 110,940 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,155 (to Tue 27 Oct) | 7,678 | 17 | 94 |
+| 8,147 (to Wed 28 Oct) | 8,082 | 16 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
-Engaged views a day, 7-day average: **1,165**, up from 823 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **28%**, was 29% a week earlier.
+Engaged views a day, 7-day average: **1,164**, up from 904 a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **29%**, was 29% a week earlier.
 Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
 Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Fri 30 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
 xychart-beta
     title "Engaged views a day, Quickplay Daily"
-    x-axis ["17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct"]
+    x-axis ["17 Oct", "18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct"]
     y-axis "Views" 0 --> 2000
-    line [596, 694, 1118, 1482, 1310, 367, 1990, 942, 1488, 1074, 984]
+    line [596, 694, 1118, 1482, 1310, 367, 1990, 942, 1488, 1074, 984, 1302]
 ```
-Days YouTube has reported, to Tue 27 Oct. More: [analytics/insights.md](analytics/insights.md).
+Days YouTube has reported, to Wed 28 Oct. More: [analytics/insights.md](analytics/insights.md).
 
 ## Tests and changes
 
-**18 contests live, 14 with a lean or a verdict.** Evolve has 0 champions, 0 adopted genes and has tried 4 genes ([summary](analytics/evolve.md)).
+**18 contests live, 15 with a lean or a verdict.** Evolve has 0 champions, 0 adopted genes and has tried 4 genes ([summary](analytics/evolve.md)).
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| length | 25 to 34 s 40, 35 to 44 s 41 | running, leaning 25 to 34 s | 3 |
-| title emoji | emoji 40, none 44 | running, leaning emoji | 3 |
-| comment replies | on 45, off 42 | running, leaning off | 3 |
-| title answer (stated or held back) | stated 31, held back 34 | running, leaning held back | 4 |
+| length | 25 to 34 s 40, 35 to 44 s 43 | running, leaning 25 to 34 s | 3 |
+| title emoji | emoji 41, none 45 | running, leaning emoji | 3 |
+| comment replies | on 47, off 42 | running, leaning off | 3 |
+| ending | loop 36, question 30 | running, leaning loop | 4 |
+| posting quarter (UK) | 06:00 to 12:00 30, 12:00 to 18:00 34 | running, leaning 06:00 to 12:00 | 4 |
+| title answer (stated or held back) | stated 31, held back 35 | running, leaning stated | 4 |
 | angles shown to the writer | shown 23, hidden 24 | running, leaning hidden | 5 |
-| ending | loop 35, question 29 | running, leaning loop | 5 |
-| camera energy | steady 32, lab 24 | running, leaning lab | 5 |
-| colour grade | natural 23, lab 22 | running, leaning natural | 5 |
+| first frame | cover 37, photo 25 | running, leaning cover | 5 |
 
 **Change ledger:** 264 changes, 116 live; verdicts so far: 55 worse, 49 no change, 37 better, 24 too early, 6 overlapped.
 
@@ -112,7 +112,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 - **Quickplay Daily**: 9 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
-- **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok
+- **Quickplay IRL Clips**: 1 of 6 posted today, sign-in ok
 - **Quickplay Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay Diario**: 0 of 6 posted today, sign-in ok
 - Clipping paused since Mon 26 Oct: the clip channels post original Shorts.

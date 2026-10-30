@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 14:04 UK.
+Updated Friday 30 October, 15:00 UK.
 
-**22 subscribers, 14,957 engaged Shorts views in 90 days (0.50% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**23 subscribers, 15,022 engaged Shorts views in 90 days (0.50% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,12 +27,12 @@ Updated Friday 30 October, 14:04 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 22 of 500 (4.40%) | 14,957 of 3,000,000 (0.50%) | 33,168 |
-| Full, from 1 February 2027 | 22 of 1,000 (2.20%) | 14,957 of 10,000,000 (0.15%) | 110,945 |
+| Expanded, open now | 23 of 500 (4.60%) | 15,022 of 3,000,000 (0.50%) | 33,167 |
+| Full, from 1 February 2027 | 23 of 1,000 (2.30%) | 15,022 of 10,000,000 (0.15%) | 110,945 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,155 (to Tue 27 Oct) | 6,289 | 12 | 94 |
+| 8,155 (to Tue 27 Oct) | 6,725 | 14 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -58,14 +58,14 @@ Days YouTube has reported, to Tue 27 Oct. More: [analytics/insights.md](analytic
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| length | 25 to 34 s 40, 35 to 44 s 40 | running, leaning 25 to 34 s | 3 |
-| title emoji | emoji 40, none 43 | running, leaning emoji | 3 |
-| comment replies | on 45, off 41 | running, leaning off | 3 |
-| ending | loop 35, question 30 | running, leaning loop | 4 |
-| posting quarter (UK) | 06:00 to 12:00 28, 12:00 to 18:00 34 | running, leaning 06:00 to 12:00 | 4 |
-| title opening | search phrase 35, curiosity 28 | running, leaning curiosity | 4 |
+| length | 25 to 34 s 40, 35 to 44 s 41 | running, leaning 25 to 34 s | 3 |
+| title emoji | emoji 40, none 44 | running, leaning emoji | 3 |
+| comment replies | on 45, off 42 | running, leaning off | 3 |
+| title answer (stated or held back) | stated 31, held back 34 | running, leaning held back | 4 |
 | angles shown to the writer | shown 23, hidden 24 | running, leaning hidden | 5 |
-| named series | named 18, plain 17 | running, leaning named | 5 |
+| ending | loop 35, question 29 | running, leaning loop | 5 |
+| camera energy | steady 32, lab 24 | running, leaning lab | 5 |
+| colour grade | natural 23, lab 22 | running, leaning natural | 5 |
 
 **Change ledger:** 264 changes, 116 live; verdicts so far: 55 worse, 49 no change, 37 better, 24 too early, 6 overlapped.
 

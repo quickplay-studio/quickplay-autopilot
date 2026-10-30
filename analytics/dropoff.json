@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-30T14:04+00:00",
- "shorts": 93,
+ "updated": "2026-10-30T15:00+00:00",
+ "shorts": 95,
  "lost_per_second": {
-  "graphic cards": 4.41,
+  "graphic cards": 4.33,
   "photos": 4.77,
-  "first 3 seconds": 3.14,
+  "first 3 seconds": 3.0,
   "after 3 seconds": 3.16,
   "beat 1": 3.63,
   "beat 2": 7.81,
@@ -12,7 +12,7 @@
   "beat 4": 3.84,
   "beat 5": 3.34,
   "beat 6": 3.53,
-  "beat 7": 4.52,
+  "beat 7": 4.51,
   "beat 8": 5.71
  },
  "guidance": [

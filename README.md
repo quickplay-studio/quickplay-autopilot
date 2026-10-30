@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 07:20 UK.
+Updated Friday 30 October, 08:06 UK.
 
-**21 subscribers, 14,403 engaged Shorts views in 90 days (0.48% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**21 subscribers, 14,474 engaged Shorts views in 90 days (0.48% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,12 +26,12 @@ Updated Friday 30 October, 07:20 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 21 of 500 (4.20%) | 14,403 of 3,000,000 (0.48%) | 33,174 |
-| Full, from 1 February 2027 | 21 of 1,000 (2.10%) | 14,403 of 10,000,000 (0.14%) | 110,952 |
+| Expanded, open now | 21 of 500 (4.20%) | 14,474 of 3,000,000 (0.48%) | 33,173 |
+| Full, from 1 February 2027 | 21 of 1,000 (2.10%) | 14,474 of 10,000,000 (0.14%) | 110,951 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,658 (to Mon 26 Oct) | 4,829 | 24 | 94 |
+| 8,658 (to Mon 26 Oct) | 5,049 | 5 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -66,7 +66,7 @@ Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytic
 | ending | loop 19, question 13 | too few to tell | 6 |
 | first frame | cover 15, photo 9 | too few to tell | 6 |
 
-**Change ledger:** 264 changes, 117 live; verdicts so far: 55 worse, 48 no change, 37 better, 25 too early, 6 overlapped.
+**Change ledger:** 264 changes, 116 live; verdicts so far: 55 worse, 49 no change, 37 better, 24 too early, 6 overlapped.
 
 | Change | Date | What | Target | Verdict |
 |---|---|---|---|---|
@@ -108,7 +108,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 2 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 3 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok

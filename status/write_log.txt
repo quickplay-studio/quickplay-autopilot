@@ -1,33 +1,10 @@
-evening run for 2026-10-29: 4 to write and 8 for a mega trend from 14 fact packs
+breaking run for 2026-10-30: 2 to write from 4 fact packs
 category shares: {'Music': 0.27, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.11, 'Science': 0.07, 'Entertainment': 0.07, 'Tech': 0.07}
+category floors first: ['Film']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Why are The Simpsons yellow?: skipped: nothing new
-Ballon d'Or 2026: groq:qwen/qwen3.8-27b, 1 warnings (narration: 79 words, best between 100 and 125), sameness 0.28 after a rewrite (the first draft was 0.31 with QD-250)
-Ballon d'Or 2026 facts: still failing: facts: beat 3: The pack contains no information about Premier League winners since 2015.; facts: beat 4: The pack states the ceremony took place at Hampden Park (source 1) on 26 October 2026 (source 2), not in London for the first time outside France or Switzerland.
-mega Ballon d'Or 2026: trying again: Ballon d'Or 2026 facts
-Ballon d'Or 2026 facts: still failing: facts: beat 5: Beat 5 states this is the first time the event is held in Scotland, but the pack does not support this.
-Ballon d'Or 2026 star: still failing: facts: beat 3: The script states this was the first time the ceremony left France or Switzerland, which is not supported by the pack.; facts: beat 5: The script states Kane joins an elite club with legends like Platini and Cruyff, which is not supported by the pack.
-mega Ballon d'Or 2026: trying again: Ballon d'Or 2026 star
-Ballon d'Or 2026 star: still failing: facts: beat 5: Beat 5 states the ceremony was held in London for the first time, but the pack does not support this claim.
-Ballon d'Or 2026 rankings: freellm:ovh/Mistral-Small-3.2-24B-Instruct-2506, 3 warnings (narration: 80 words, best between 100 and 125; meta.title: 51 characters: under 50, the searched name still first; meta.sources: one site only; name it in the narration for breaking news), sameness 0.27 with QD-162
-Ballon d'Or 2026 by the numbers: still failing: facts: beat 2: The beat states Harry Kane is the first England player to win it since Steven Gerrard in 2005, which is not supported by the pack.
-mega Ballon d'Or 2026: trying again: Ballon d'Or 2026 by the numbers
-Ballon d'Or 2026 by the numbers: still failing: facts: beat 2: The script names Variety and makes a claim about the award's history not supported by the pack (pack just says it's his first time).; facts: beat 3: The script names the BBC, which is not in the sources (source 1 is Wikipedia).; facts: beat 4: The script states the ceremony took place
-Ballon d'Or 2026 best moments: still failing: facts: beat 2: Variety reports he beat stars like Mbappé and Messi is not supported by the pack.; facts: beat 4: According to the BBC, it was the first time the event was held outside France or Switzerland is not supported by the pack.; facts: beat 5: Joining legends like Platini and Cruyff is not s
-mega Ballon d'Or 2026: trying again: Ballon d'Or 2026 best moments
-Ballon d'Or 2026 best moments: dropped for sameness: 0.34 against QD-272 "Harry Kane Ballon d'Or: first win in London 🏆" (limit 0.30; narration (shared phrases: 'a new sport', 'at the london', 'day subscribe so'); the same format (one_detail); opening (the first line, 'Harry Kane won), after one rewrite
-Ballon d'Or 2026 what happens next: still failing: facts: beat 2: Beat 2 states "the first time the event left France or Switzerland", which is not supported by the pack.
-mega Ballon d'Or 2026: trying again: Ballon d'Or 2026 what happens next
-Ballon d'Or 2026 what happens next: still failing: facts: beat 6: Beat 6 states that this is the first time the event left France or Switzerland, which is not supported by the pack.
-wrote 0 of 4 and 2 of 8 for a mega trend: QD-272 Harry Kane Ballon d'Or: first win in London 🏆 (mega); QD-273 Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆 (mega)
-channel gaming: no Gaming news packs; evergreen instead
-channel gaming: wrote 0 of 2: 
-channel irl: mega Walter Koenig: wrote 0 of 2
-channel irl: no Entertainment/Animals/Food news packs; evergreen instead
-channel irl: wrote 0 of 2: 
-channel clips: mega Ballon d'Or 2026: wrote 0 of 2
-channel clips: no Film/Tech/Science/Sport/Cars/History news packs; evergreen instead
-channel clips: wrote 0 of 2: 
-sameness: main channel score 0.0628 over 180 boards, commonest recipe 4% (format one_detail, hook statement, look clean); this run 2 boards checked, highest 0.28, mean 0.27; 2 rewritten, 1 dropped, 0 recipe caps (limits: pair 0.3, recipe 0.35)
+Dune Part Three trailer: gemini-flash-latest, 0 warnings, sameness 0.20 with QD-099
+Ballon d'Or 2026 facts: gemini-flash-latest, 0 warnings, sameness 0.26 with QD-272, edited by Claude
+wrote 2 of 2: QD-274 Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives; QD-275 Harry Kane wins the Ballon d'Or after 25 years
+sameness: main channel score 0.0632 over 184 boards, commonest recipe 4% (format one_detail, hook statement, look clean); this run 2 boards checked, highest 0.23, mean 0.19; 0 rewritten, 0 dropped, 0 recipe caps (limits: pair 0.3, recipe 0.35)
 control: 0 of 2 boards written with the frozen recipe
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"gemini-flash-latest": "daily limit 20", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "groq:openai/gpt-oss-120b": "daily limit", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "openrouter:dots-studio/dots-3-note-preview:free": "daily limit", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1, "gemma-4-31b-it": 1, "groq:openai/gpt-oss-20b": 2}, "answers": {"gemini-3.6-flash": 1, "gemini-3.5-flash-lite": 38, "groq:openai/gpt-oss-120b": 1, "freellm:gpt-oss-120b": 1, "freellm:llama-3.3-70b": 1, "gemini-3-flash-preview": 2, "groq:qwen/qwen3.8-27b": 2, "freellm:ovh/Mistral-Nemo-Instruct-2407": 12, "freellm:ovh/Mistral-Small-3.2-24B-Instruct-2506": 23}, "empty answers": {"groq:openai/gpt-oss-20b": 2}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 0, "second opinions": 1, "router searches": 0, "router sources added": 0, "providers passed over": ["groq", "openrouter"], "late": true, "claude today": "4 of 4 edits, 0 of 0 writes"}
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now"}, "retired": [], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-flash-latest": 4, "gemini-3.5-flash-lite": 8, "gemini-3.8-flash": 1, "claude:sonnet": 1}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 1, "second opinions": 0, "router searches": 0, "router sources added": 0, "providers passed over": ["openrouter"], "late": false, "claude today": "1 of 4 edits, 0 of 0 writes"}

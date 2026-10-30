@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 06:59): 21 of 1,000 subscribers · 14,403 of 10 million Shorts views in 90 days · 4,829 views in the last 24 hours (about 110,951 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 08:05): 21 of 1,000 subscribers · 14,474 of 10 million Shorts views in 90 days · 5,049 views in the last 24 hours (about 110,950 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 7:49 (UK): 1 scheduled, 149 public, 5 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 4:46).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 7:59).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 2 public, 1 scheduled | 6 | 1 | ⏳ 2 of 15 so far, 1 more scheduled |
+| Fri 30 Oct | 3 public | 8 | 1 | ⏳ 3 of 15 so far |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -145,10 +145,15 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-274** Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives (rendering next)
+- **QD-275** Harry Kane wins the Ballon d'Or after 25 years (rendering next)
+
 ## On the channel (latest first)
 
 ### Fri 30 Oct 8:00 · Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆
-scheduled · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
+private · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
 
 ![QD-273](QD-273.jpg)
 
@@ -168,7 +173,7 @@ public · 850 views · 28 s · music: across-seas-and-lands · on Instagram · o
 ![QD-266](QD-266.jpg)
 
 ### Thu 29 Oct 8:00 · ballon d'or 2026 explained: the historic numbers
-public · 176 views · 30 s · music: risen · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
+public · 176 views · 30 s · music: risen · on Instagram · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
 
 ![QD-262](QD-262.jpg)
 
@@ -216,7 +221,7 @@ public · 105 views · 29 s · music: duty-calls · [script](../boards/done/QD-2
 public · 4 views · [YouTube](https://youtube.com/shorts/Tul1oIPN8-Q)
 
 ### Wed 28 Oct 18:30 · Ballon d'Or #2: Harry Kane wins the 2026 Ballon d'Or 🏆
-public · 2 views · 45 s · music: duty-calls · [script](../boards/done/QD-249.json) · [YouTube](https://youtube.com/shorts/PUuRZ0O2_n4)
+public · 2 views · 45 s · music: duty-calls · on Instagram · [script](../boards/done/QD-249.json) · [YouTube](https://youtube.com/shorts/PUuRZ0O2_n4)
 
 ![QD-249](QD-249.jpg)
 

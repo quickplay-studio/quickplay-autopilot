@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 09:18): 21 of 1,000 subscribers · 14,348 of 10 million Shorts views in 90 days · 5,174 views in the last 24 hours (about 110,952 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 09:56): 21 of 1,000 subscribers · 14,386 of 10 million Shorts views in 90 days · 5,385 views in the last 24 hours (about 110,951 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 9:18 (UK): 2 scheduled, 148 public, 6 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 3 public, 2 scheduled | 8 | 1 | ⏳ 3 of 15 so far, 2 more scheduled |
+| Fri 30 Oct | 4 public, 1 scheduled | 8 | 1 | ⏳ 4 of 15 so far, 1 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -153,7 +153,7 @@ scheduled · 37 s · music: in-battery · [script](../boards/done/QD-275.json) �
 ![QD-275](QD-275.jpg)
 
 ### Fri 30 Oct 9:30 · Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives
-scheduled · 39 s · music: in-battery · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
+private · 39 s · music: in-battery · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
 
 ![QD-274](QD-274.jpg)
 

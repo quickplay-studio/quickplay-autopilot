@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 09:56): 21 of 1,000 subscribers · 14,386 of 10 million Shorts views in 90 days · 5,385 views in the last 24 hours (about 110,951 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 10:51): 22 of 1,000 subscribers · 14,735 of 10 million Shorts views in 90 days · 5,585 views in the last 24 hours (about 110,947 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 9:18 (UK): 2 scheduled, 148 public, 6 uploads in the last 24 hours.
 

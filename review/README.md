@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Wed 28 Oct, 19:51): 19 of 1,000 subscribers · 12,431 of 10 million Shorts views in 90 days · 3,926 views in the last 24 hours (about 110,973 a day needed, 96 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 01:01): 19 of 1,000 subscribers · 13,646 of 10 million Shorts views in 90 days · 3,607 views in the last 24 hours (about 110,959 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 19:39 (UK): 9 scheduled, 141 public, 24 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Wed 28 Oct 18:47).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 0:52).
 
 ## Posts by day
 
@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Thu 29 Oct | 0 public, 7 scheduled | 0 | 0 | ⏳ 7 of 15 scheduled |
-| Wed 28 Oct | 25 public, 3 scheduled | 0 | 1 | ✅ done |
+| Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
+| Fri 30 Oct | 0 public | 2 | 1 | ⏳ 0 of 15 so far |
+| Thu 29 Oct | 7 public | 0 | 0 | no target then |
+| Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
 | Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
-| Fri 23 Oct | 19 public | 22 | 5 | ⚠️ 19 of 40 |
-| Thu 22 Oct | 29 public | 18 | 16 | ⚠️ 29 of 40 |
 
 ## Voice test
 
@@ -61,8 +61,8 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}
-- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 19:47 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936934588167410'}
-- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 19:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936934630167410'}
+- **QD-209** GTA 6 launch makes Emberville delay to 2027 🎮: instagram 2026-10-28 20:42 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936944932167410'}
+- **QD-227** Game Facts #6: gta 6 install size officially revealed at 210 GB: instagram 2026-10-28 20:42 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936944965167410'}
 - **QD-228** Star Stories #2: Matthew Perry Netflix documentary 📺: instagram 2026-10-28 09:49 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768706167410'}
 
 ## Waiting for your approval
@@ -150,51 +150,53 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 ## In the queue
 
 - **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
+- **QD-272** Harry Kane Ballon d'Or: first win in London 🏆 (rendering next)
+- **QD-273** Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆 (rendering next)
 
 ## On the channel (latest first)
 
 ### Thu 29 Oct 18:30 · Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
-scheduled · 28 s · music: across-seas-and-lands · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
+private · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
 
 ![QD-266](QD-266.jpg)
 
 ### Thu 29 Oct 8:00 · ballon d'or 2026 explained: the historic numbers
-scheduled · 30 s · music: risen · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
+private · 30 s · music: risen · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
 
 ![QD-262](QD-262.jpg)
 
 ### Thu 29 Oct 6:30 · Star Stories #5: Walter Koenig: the record the Star Trek legend set
-scheduled · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
+private · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
 
 ![QD-254](QD-254.jpg)
 
 ### Thu 29 Oct 3:30 · walter koenig: passed away aged 90 🖖
-scheduled · 30 s · music: f16 · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
+private · 30 s · music: f16 · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
 
 ![QD-264](QD-264.jpg)
 
 ### Thu 29 Oct 2:00 · Walter Koenig: the co-star bond you never knew
-scheduled · 35 s · music: cued-for-liftoff · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
+private · 35 s · music: cued-for-liftoff · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
 
 ![QD-263](QD-263.jpg)
 
 ### Thu 29 Oct 0:30 · Star Stories #7: Walter Koenig: the audition secret you never knew
-scheduled · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
+private · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
 
 ![QD-255](QD-255.jpg)
 
 ### Wed 28 Oct 23:15 · Walter Koenig: the audition secret you missed 🖖
-scheduled · 32 s · music: impossible-sacrifice · [script](../boards/done/QD-253.json) · [YouTube](https://youtube.com/shorts/GaOPYVvhV0A)
+private · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-253.json) · [YouTube](https://youtube.com/shorts/GaOPYVvhV0A)
 
 ![QD-253](QD-253.jpg)
 
 ### Wed 28 Oct 22:00 · Walter Koenig: the co-star tribute you must see 🖖
-scheduled · 43 s · music: level · [script](../boards/done/QD-252.json) · [YouTube](https://youtube.com/shorts/7Y3RXzLhrvQ)
+private · 43 s · music: level · [script](../boards/done/QD-252.json) · [YouTube](https://youtube.com/shorts/7Y3RXzLhrvQ)
 
 ![QD-252](QD-252.jpg)
 
 ### Wed 28 Oct 20:30 · Star Stories #3: Walter Koenig: Star Trek actor dies aged 90
-scheduled · 34 s · music: impossible-sacrifice · [script](../boards/done/QD-251.json) · [YouTube](https://youtube.com/shorts/FtaSBIjPChM)
+private · 34 s · music: impossible-sacrifice · [script](../boards/done/QD-251.json) · [YouTube](https://youtube.com/shorts/FtaSBIjPChM)
 
 ![QD-251](QD-251.jpg)
 

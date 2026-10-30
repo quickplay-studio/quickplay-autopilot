@@ -89,7 +89,17 @@
     "beat_punches": false,
     "lab": true,
     "parent": "steady",
-    "born": "2026-10-25"
+    "born": "2026-10-25",
+    "retired": "2026-10-30: 0.99x against 1.17x for steady over 8 Shorts"
+   },
+   "lab-energy-1030": {
+    "desc": "camera motion 0.7, punch-ins 0.03",
+    "motion": 0.7,
+    "punch": 0.03,
+    "beat_punches": false,
+    "lab": true,
+    "parent": "steady",
+    "born": "2026-10-30"
    }
   },
   "grade": {
@@ -134,7 +144,15 @@
     "reveal_word": 3,
     "lab": true,
     "parent": "image_first",
-    "born": "2026-10-26"
+    "born": "2026-10-26",
+    "retired": "2026-10-30: 1.10x against 1.13x for image_first over 10 Shorts"
+   },
+   "lab-opening-1030": {
+    "desc": "the picture alone for 3 words, then the hook's card",
+    "reveal_word": 3,
+    "lab": true,
+    "parent": "image_first",
+    "born": "2026-10-30"
    }
   }
  },
@@ -146,7 +164,8 @@
   "voice": {
    "george": "2026-10-23: 0.97x against 1.80x for emma over 12 Shorts",
    "emma": "2026-10-27: 0.84x against 1.32x for michael over 16 Shorts",
-   "george_dramatic": "2026-10-28: making room for a new test (1.03x over 9 Shorts)"
+   "george_dramatic": "2026-10-28: making room for a new test (1.03x over 9 Shorts)",
+   "michael": "2026-10-30: 1.19x against 1.57x for daniel over 11 Shorts"
   },
   "energy": {
    "calm": "2026-10-23: 0.57x against 1.65x for steady over 17 Shorts"
@@ -320,7 +339,37 @@
    "dimension": "voice",
    "change": "testing lab-voice-1028: British male, 3.15 words a second",
    "why": "one or two settings changed from the best so far, daniel"
+  },
+  {
+   "day": "2026-10-30",
+   "dimension": "voice",
+   "change": "retired michael",
+   "why": "1.19x against 1.57x for daniel over 11 Shorts"
+  },
+  {
+   "day": "2026-10-30",
+   "dimension": "energy",
+   "change": "retired lab-energy-1025",
+   "why": "0.99x against 1.17x for steady over 8 Shorts"
+  },
+  {
+   "day": "2026-10-30",
+   "dimension": "energy",
+   "change": "testing lab-energy-1030: camera motion 0.7, punch-ins 0.03",
+   "why": "one or two settings changed from the best so far, steady"
+  },
+  {
+   "day": "2026-10-30",
+   "dimension": "opening",
+   "change": "retired lab-opening-1026",
+   "why": "1.10x against 1.13x for image_first over 10 Shorts"
+  },
+  {
+   "day": "2026-10-30",
+   "dimension": "opening",
+   "change": "testing lab-opening-1030: the picture alone for 3 words, then the hook's card",
+   "why": "one or two settings changed from the best so far, image_first"
   }
  ],
- "day": "2026-10-28"
+ "day": "2026-10-30"
 }

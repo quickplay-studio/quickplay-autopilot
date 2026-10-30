@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 04:52): 20 of 1,000 subscribers · 14,267 of 10 million Shorts views in 90 days · 4,396 views in the last 24 hours (about 110,953 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 05:51): 20 of 1,000 subscribers · 14,336 of 10 million Shorts views in 90 days · 4,616 views in the last 24 hours (about 110,952 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 19:39 (UK): 9 scheduled, 141 public, 24 uploads in the last 24 hours.
 
@@ -26,7 +26,6 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
 - daniel (British male, brisk): 1.57 x typical, 40% stayed past the first seconds, 5 Shorts
-- michael (American male, friendly): 1.19 x typical, 29% stayed past the first seconds, 11 Shorts
 - lewis (British male, deeper and calm): 1.00 x typical, 24% stayed past the first seconds, 5 Shorts
 - lily (British female, bright): 0.96 x typical, 23% stayed past the first seconds, 5 Shorts
 - george_quick (British male, clear and quicker): 0.94 x typical, 27% stayed past the first seconds, 3 Shorts
@@ -41,15 +40,15 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 
 - Testing captions: 68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel (0 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
-- Testing energy: camera motion 0.9, punch-ins 0.03 (8 of 8 Shorts measured)
+- Testing energy: camera motion 0.7, punch-ins 0.03 (0 of 8 Shorts measured)
 - Testing grade: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0 (1 of 8 Shorts measured)
-- Testing opening: the picture alone for 3 words, then the hook's card (10 of 8 Shorts measured)
+- Testing opening: the picture alone for 3 words, then the hook's card (0 of 8 Shorts measured)
+- 2026-10-30: opening retired lab-opening-1026 (1.10x against 1.13x for image_first over 10 Shorts)
+- 2026-10-30: energy retired lab-energy-1025 (0.99x against 1.17x for steady over 8 Shorts)
+- 2026-10-30: voice retired michael (1.19x against 1.57x for daniel over 11 Shorts)
 - 2026-10-28: voice retired george_dramatic (making room for a new test (1.03x over 9 Shorts))
 - 2026-10-28: voice retired lab-voice-1019 (0.88x against 1.04x for george over 8 Shorts)
 - 2026-10-28: captions retired lab-captions-1024 (0.90x against 1.20x for lab-captions-1019 over 9 Shorts)
-- 2026-10-27: grade retired lab-grade-1023 (0.89x against 1.38x for natural over 14 Shorts)
-- 2026-10-27: voice retired emma (0.84x against 1.32x for michael over 16 Shorts)
-- 2026-10-26: opening kept lab-opening-1019: the picture alone for 1 word, then the hook's card (1.14x against 1.06x for graphic_first over 8 Shorts)
 
 ## Needs a look
 

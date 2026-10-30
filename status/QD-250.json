@@ -22,7 +22,7 @@
    "used": "18:00 to 24:00"
   }
  },
- "title": "Sport Shocks #3: history of ballon d'or: Harry Kane wins",
+ "title": "Ballon d'Or: Harry Kane's historic win",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -176,6 +176,13 @@
  "social_release": "social-QD-250",
  "engage": {
   "comment": "UgyeTScAkkppsbW7FN54AaABAg",
-  "playlist": "Quickplay Daily: Sport"
+  "playlist": "Quickplay Daily: Sport",
+  "title": {
+   "swapped_from": "Sport Shocks #3: history of ballon d'or: Harry Kane wins",
+   "to": "Ballon d'Or: Harry Kane's historic win",
+   "at": "2026-10-30T01:43+00:00",
+   "views_an_hour": 0.0,
+   "typical": 0.4
+  }
  }
 }

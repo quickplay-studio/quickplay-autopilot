@@ -22,7 +22,7 @@
    "used": "18:00 to 24:00"
   }
  },
- "title": "Ballon d'Or #2: Winner harry kane wins 🏆",
+ "title": "Ballon d'Or #2: Harry Kane wins the 2026 Ballon d'Or 🏆",
  "background_notes": [
   "picked pixabay 1 (+1 spares)"
  ],
@@ -168,6 +168,13 @@
   "comment": "UgyW3GUp4eXGbTzUeHt4AaABAg",
   "playlist": "Quickplay Daily: Sport",
   "series_playlist": "PLXJfdV7g0TPE",
-  "series_description": "linked"
+  "series_description": "linked",
+  "title": {
+   "swapped_from": "Ballon d'Or #2: Winner harry kane wins 🏆",
+   "to": "Ballon d'Or #2: Harry Kane wins the 2026 Ballon d'Or 🏆",
+   "at": "2026-10-30T01:43+00:00",
+   "views_an_hour": 0.0,
+   "typical": 0.4
+  }
  }
 }

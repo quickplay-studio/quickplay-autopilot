@@ -1,9 +1,9 @@
 {
  "date": "2026-10-30",
- "built": "2026-10-30T13:59+00:00",
+ "built": "2026-10-30T14:20+00:00",
  "model": "gemini-3.5-flash-lite",
  "mode": "full",
- "run": "",
+ "run": "afternoon",
  "errors": [],
  "topics": [
   {
@@ -14,8 +14,8 @@
    "what_is_new": "",
    "hooks": [
     "GTA 6 launches on 19 November 2026!",
-    "Measure Jason and Lucia's closeness in GTA 6!",
-    "Explore the fictional US state of Leonida in GTA 6!"
+    "Measure Jason and Lucia's closeness on a four point scale in GTA 6!",
+    "GTA 6 is set in the fictional US state of Leonida!"
    ],
    "sources": [
     [
@@ -56,320 +56,59 @@
       3
      ],
      "evidence": {
-      "1": "show all of Leonida just how capable and fearsome my skills are at cultivating a healthy and strong relationship.",
-      "3": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida; its map is reported to be three times larger"
+      "1": "show all of Leonida just how capable and fearsome my skills are",
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
      }
-    },
+    }
+   ],
+   "one_source": [
     {
-     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "claim": "Principal production on Grand Theft Auto VI began in 2020.",
      "sources": [
-      1,
       3
      ],
      "evidence": {
-      "1": "The recent mega piece by Edge has revealed that GTA 6 players will be able to measure Jason and Lucia's closeness in a four-point scale",
-      "3": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "3": "and principal production began in 2020."
      }
-    }
-   ],
-   "one_source": [
+    },
     {
-     "claim": "Activities like taking long romantic walks on the beach, working out at the gym together, and driving around so your other half can doomscroll will all work towards boosting your score.",
+     "claim": "Rockstar confirmed in February 2022 that the game was in development.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Rockstar confirmed in February 2022 that the game was in development."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Grand Theft Auto VI was formally revealed in December 2023."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI players will be able to measure Jason and Lucia's closeness in a four-point scale.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Activities like taking long romantic walks on the beach, working out at the gym together, and driving around so your other half can doomscroll will"
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI has a marketing deal with Sony and the PlayStation 5.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "So we know that GTA 6 has a marketing deal with Sony and the PlayStation 5"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 11,
-   "topic": "Avengers Doomsday cast",
-   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Avengers: Doomsday is releasing on December 18?"
-   ],
-   "sources": [
-    [
-     "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
-     "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
-     "Deadline",
-     "2026-10-24"
-    ],
-    [
-     "Avengers Doomsday cast",
-     "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Avengers: Doomsday is scheduled to be released in theaters on Dec. 18.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
-      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
-     }
-    },
-    {
-     "claim": "Avengers: Doomsday features Robert Downey Jr. as the villain Doctor Doom.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
-      "2": "The return of the Russo brothers as directors and McFeely as co-writer, the casting of Downey as new villain Doctor Doom, and the new subtitle"
-     }
-    },
-    {
-     "claim": "Pedro Pascal appears in the cast as Mister Fantastic, while Joseph Quinn plays the Human Torch.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
-      "2": "Pedro Pascal as Reed Richards / Mister Fantastic: A highly intelligent scientist and the leader of the Fantastic Four who can stretch any part of"
-     }
-    },
-    {
-     "claim": "The cast includes Chris Evans as Steve Rogers and Anthony Mackie as Captain America.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
-      "2": "The former leader of the Avengers, a super soldier, and World War II veteran who was the first person to carry the Captain America mantle."
-     }
-    },
-    {
-     "claim": "Paul Rudd portrays Ant-Man in the film.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
-      "2": "Paul Rudd as Scott Lang / Ant-Man: An Avenger and former petty criminal with a suit that allows him to shrink or grow in scale"
-     }
-    },
-    {
-     "claim": "Chris Hemsworth portrays Thor in the production.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Chris Hemsworth as Thor: The Asgardian god of thunder and a founding Avenger, based on the Norse mythological deity of the same name."
-     }
-    },
-    {
-     "claim": "Simu Liu portrays Shang-Chi and Letitia Wright plays Black Panther.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Simu Liu as Xu Shang-Chi: A highly skilled martial artist and the wielder of the mystical Ten Rings who was trained to be an assassin"
-     }
-    },
-    {
-     "claim": "Patrick Stewart portrays Professor X and Ian McKellen portrays Magneto.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Ian McKellen as Erik Lehnsherr / Magneto: A powerful mutant who can generate and control magnetic fields"
-     }
-    },
-    {
-     "claim": "Kelsey Grammer features as Beast and Alan Cumming portrays Nightcrawler.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Kelsey Grammer as Hank McCoy / Beast: A highly intelligent mutant and member of the X-Men with animalistic physical characteristics, including blue fur, pointed ears,"
-     }
-    },
-    {
-     "claim": "Rebecca Romijn plays Mystique and James Marsden appears as Cyclops.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "James Marsden as Scott Summers / Cyclops: A mutant and the leader of the X-Men who can emit powerful optic energy beams, controlled by a"
-     }
-    },
-    {
-     "claim": "Danny Ramirez portrays Falcon and Winston Duke plays M'Baku.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Danny Ramirez as Joaquin Torres / Falcon: An Avenger and first lieutenant in the U.S. Air Force who uses a wing pack similar to Wilson's"
-     }
-    },
-    {
-     "claim": "Channing Tatum is cast as Gambit.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "Channing Tatum as Remy LeBeau / Gambit: A mutant with the ability to charge objects with kinetic energy, causing them to explode on impact."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Doomsday marks the final on screen performance of Patrick Stewart following his death in October 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Doomsday marks Stewart's final on-screen performance following his death in October 2026."
-     }
-    },
-    {
-     "claim": "Filming for the movie took place from April to September 2025 at Pinewood Studios in England with location filming in England and Bahrain.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain."
-     }
-    },
-    {
-     "claim": "Alan Cumming stated that his make up process was reduced to an hour and a half for Doomsday from up to five hours on X2.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Cumming said the make-up process was reduced to an hour-and-a-half for Doomsday from the four-and-a-half to five hours it took on the 20th Century Fox"
+      "1": "The recent mega piece by Edge has revealed that GTA 6 players will be able to measure Jason and Lucia's closeness in a four-point scale"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 20,
-   "topic": "luke littler netflix",
-   "signal": "Google Trends GB 500+",
-   "category": "Entertainment",
-   "what_is_new": "Netflix announced a new darts show featuring contestants playing against Luke Littler for a huge jackpot.",
-   "hooks": [
-    "Could a bin man win a huge jackpot against Luke Littler on Netflix?",
-    "Meet the 15-year-old world youth champion taking on Luke Littler!",
-    "Netflix is bringing an epic new darts show to Manchester!"
-   ],
-   "sources": [
-    [
-     "World youth champion to bin men: 'Beat Luke Littler' contestants in full for Netflix darts show",
-     "https://www.standard.co.uk/sport/beat-luke-littler-contestants-in-full-lawrie-walker-sherrock-b1302929.html",
-     "Evening Standard",
-     "2026-10-30"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Taylon Forrester is a bin man by trade, and has said that he would treat his family to a trip to Jamaica, where, he says, he has relatives that they have not met.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Taylon Forrester, 'The Trash Man' Bedford’s Forrester is a bin man by trade, and has said that he would treat his family to a trip"
-     }
-    },
-    {
-     "claim": "Mitchell Lawrie is the 15-year-old current world youth champion from Renfrew in Scotland.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Hailing from Renfrew in Scotland, the 15-year-old is the current world youth champion."
-     }
-    },
-    {
-     "claim": "Jayden Walker is a 14-year-old from Christchurch in Dorset.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "14-year-old Walker, from Christchurch in Dorset, was hailed by world No2 Luke Humphries as “the best 12-year-old I’ve ever seen”, when he averaged 102 against"
-     }
-    },
-    {
-     "claim": "The Netflix darts show “Beat Luke Littler” offers a £501,000 jackpot for contestants who beat Littler.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The contestants will battle it out to beat Littler in their one-leg affair, and should they do it, they could claim the huge £501,000 jackpot"
-     }
-    },
-    {
-     "claim": "The live event is held at Manchester Central Convention Complex and is presented by Gary Lineker with support from Richard Osman and Lee Mack.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The live event taking place at the Manchester Central Convention Complex and presented by former Match of the Day frontman Gary Lineker, with support from"
-     }
-    },
-    {
-     "claim": "Fifteen‑year‑old Mitchell Lawrie of Renfrew, Scotland, is the current world youth champion and says he expects to defeat two‑time world champion Luke Littler.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Hailing from Renfrew in Scotland, the 15-year-old is the current world youth champion."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 15,
+   "n": 14,
    "topic": "Homewrecker by sombr",
    "signal": "Apple Music GB: new in the top 25",
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Did you know Sombr made it rain at the AMAs?",
-    "Sombr released Homewrecker on February 5, 2026!",
-    "How did Homewrecker perform on the Billboard charts?"
+    "Did you know Sombr made it rain at the American Music Awards?"
    ],
    "sources": [
     [
@@ -385,10 +124,22 @@
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Homewrecker was released on February 5, 2026",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The song, released back in February",
+      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026,"
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Sombr performed his hit Homewrecker at the American Music Awards in Las Vegas with an onstage downpour.",
+     "claim": "Sombr performed his song Homewrecker at the American Music Awards with an onstage downpour.",
      "sources": [
       1
      ],
@@ -397,16 +148,16 @@
      }
     },
     {
-     "claim": "Homewrecker is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB.",
+     "claim": "Sombr performed Homewrecker at the American Music Awards",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB."
+      "1": "Sombr paid inadvertent tribute on Monday night to his hometown of New York City — which was drenched with rain for most of Memorial Day"
      }
     },
     {
-     "claim": "Sombr wrote the song entirely himself and co-produced it with Tony Berg.",
+     "claim": "Sombr wrote Homewrecker entirely himself",
      "sources": [
       2
      ],
@@ -415,7 +166,7 @@
      }
     },
     {
-     "claim": "Homewrecker peaked at number 15 on the Billboard Hot 100.",
+     "claim": "Homewrecker peaked at number 15 on the Billboard Hot 100",
      "sources": [
       2
      ],
@@ -424,34 +175,243 @@
      }
     },
     {
-     "claim": "Outside of the United States, Homewrecker peaked within the top ten of the charts in several countries, including in Australia, Ireland, Latvia, New Zealand, and the United Kingdom.",
+     "claim": "Sombr is 20 years old",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Outside of the United States, \"Homewrecker\" peaked within the top ten of the charts in several countries, including in Australia, Ireland, Latvia, New Zealand, and"
+      "1": "Sombr, age 20, told Variety in an episode of Behind the Song last year."
      }
     },
     {
-     "claim": "On February 4, 2026, Sombr posted a snippet of the song on his Instagram, captioned homewrecker drops Thursday at 3 p.m. PST, alongside Milo Manheim and Quenlin Blackwell.",
+     "claim": "Homewrecker was performed at the BRIT Awards",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "On February 4, 2026, Sombr posted a snippet of the song on his Instagram, captioned \"homewrecker drops Thursday at 3 p.m. PST\", alongside Milo Manheim"
+      "1": "The singer, clad in leather bell-bottoms and a loose black button-down shirt (different from the outfit he wore to accept his Best Alternative/Rock Song award"
      }
     },
     {
-     "claim": "The song marked his first release of 2026, following his 2025 singles 12 to 12 and Undressed.",
+     "claim": "The music video for Homewrecker was directed by Gus Black",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "The song marked his first release of 2026, following his 2025 singles \"12 to 12\" and \"Undressed\"."
+      "2": "The accompanying music video was released alongside the song on February 5, 2026, and was directed by Gus Black."
+     }
+    },
+    {
+     "claim": "Homewrecker debuted at number 31 on the Billboard Hot 100",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "On the Billboard Hot 100, the song debuted at number 31,"
+     }
+    },
+    {
+     "claim": "Homewrecker marked Sombr's fifth entry on the Billboard Global 200",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "\"Homewrecker\" marked Sombr's fifth entry on the Billboard Global 200,"
      }
     }
    ],
    "images": []
+  },
+  {
+   "n": 17,
+   "topic": "lawyer becomes voice actor emily mcgonagle",
+   "signal": "Google Trends GB 100+",
+   "category": "Entertainment",
+   "what_is_new": "Emily McGonagle was featured in a Guardian article published on 30 October 2026 detailing her journey from Essex lawyer to the voice of characters in the Netflix animated series Spike.",
+   "hooks": [
+    "Meet the Essex lawyer who became the voice of Netflix hit Spike.",
+    "How watching Peppa Pig helped an Essex lawyer start a new career.",
+    "From legal jobs to voicing eight characters in a hit Netflix show."
+   ],
+   "sources": [
+    [
+     "‘It’s been a whirlwind’: the Essex lawyer who quit her job and became voice of Netflix’s hit show Spike",
+     "https://www.theguardian.com/tv-and-radio/2026/oct/30/essex-woman-voice-netflix-spike-emily-mcgonagle",
+     "Guardian",
+     "2026-10-30"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Emily McGonagle plays eight characters in an animated series called Spike about a young dragon and his friends.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "McGonagle plays eight characters in an animated series called Spike about a young dragon and his friends."
+     }
+    },
+    {
+     "claim": "The programme Spike launched on the streaming network on 12 October.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "When the programme launched on the streaming network on 12 October it quickly became the seventh-most-watched programme globally in any genre."
+     }
+    },
+    {
+     "claim": "Emily McGonagle converts a large wardrobe into a soundproofed vocal booth with the support of her husband Ciarán.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "With the support of her husband, Ciarán, she converted a large wardrobe into a soundproofed vocal booth and began auditioning for voiceover jobs that were"
+     }
+    },
+    {
+     "claim": "Emily McGonagle provides the voices for 20 characters in the video game Game of Thrones Kingsroad.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "a challenge says mcgonagle she provides the voices for 20 in the video game game of thrones kingsroad and that was a lot how does she keep them distinctive i write a bio for my characters and"
+     }
+    },
+    {
+     "claim": "Emily McGonagle's sons Finn and Jack are now 11 and nine.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "McGonagle’s sons, Finn and Jack, are now 11 and nine, and far too old for preschool dragons."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 22,
+   "topic": "Patrick Stewart",
+   "signal": "Wikipedia 2,356,552 views",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Sir Patrick Stewart passed away at the age of 86.",
+    "Discover Sir Patrick Stewart's final film role.",
+    "How Sir Patrick Stewart's childhood shaped his legacy."
+   ],
+   "sources": [
+    [
+     "‘His honesty gave courage to survivors’: domestic abuse charities praise Patrick Stewart’s legacy",
+     "https://www.theguardian.com/culture/2026/oct/30/domestic-abuse-charities-patrick-stewart-amnesty-international-refuge",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart's Final Movie Is a Surprisingly Perfect Sendoff For His Greatest Role",
+     "https://www.polygon.com/patrick-stewart-final-movie-avenger-doomsday-professor-x/",
+     "Polygon",
+     "2026-10-30"
+    ],
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart fans remember his many video game roles: “Such an iconic voice”",
+     "https://www.nme.com/news/gaming-news/patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice-3974633?utm_source=rss&utm_medium=rss&utm_campaign=patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice",
+     "NME",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sir Patrick Stewart died at the age of 86 on October 28, 2026.",
+     "sources": [
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "3": "Sir Ian McKellen has led tributes to Sir Patrick Stewart following his death at the age of 86, calling him \"the most respected and beloved",
+      "4": "Gaming fans have been paying tribute to acting great Patrick Stewart, who has died at the age of 86.",
+      "5": "Sir Patrick Hewes Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      3,
+      4,
+      5
+     ],
+     "evidence": {
+      "3": "When Sir Patrick was knighted by Queen Elizabeth II in 2010, he said he owed \"literally everything\" to his former English teacher who first encouraged",
+      "4": "Meanwhile, acting colleagues including Ian McKellen, Hugh Jackman, William Shatner, George Takei and Rebecca Romijn are also paying tribute to Stewart, who was knighted in",
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart's final film appearance will be as Professor X in the upcoming Avengers: Doomsday film.",
+     "sources": [
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "2": "In Stewart's case, there appears to only be one — Avengers: Doomsday.",
+      "3": "Sir Ian noted that Sir Patrick's final film appearance will be as Professor X in the upcoming Avengers: Doomsday film.",
+      "5": "On film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart became an ambassador for the charity Refuge in 2007.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "In 2007, Stewart became an ambassador for the charity Refuge, a role he continued in for the rest of his life.",
+      "3": "The actor became a campaigner on domestic violence in later life, including becoming an ambassador for domestic abuse charity Refuge in 2007, after witnessing his"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was born in 1940.",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "Born in the town of Mirfield in 1940, Sir Patrick's love of drama began at school where he was introduced to Shakespeare and his first",
+      "5": "Sir Patrick Hewes Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart became a member of the Royal Shakespeare Company in 1966.",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "His first foray into professional acting was when he joined the RSC in 1966, going on to play King John, Oberon in A Midsummer Night's",
+      "5": "In 1966, Stewart became a member of the Royal Shakespeare Company (RSC)."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
   }
  ]
 }

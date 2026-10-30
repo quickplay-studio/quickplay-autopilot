@@ -1,8 +1,8 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 13:59): 22 of 1,000 subscribers · 14,948 of 10 million Shorts views in 90 days · 6,260 views in the last 24 hours (about 110,945 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 14:20): 23 of 1,000 subscribers · 14,973 of 10 million Shorts views in 90 days · 6,338 views in the last 24 hours (about 110,945 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Fri 30 Oct 13:59 (UK): 6 scheduled, 144 public, 14 uploads in the last 24 hours.
+YouTube checked Fri 30 Oct 14:20 (UK): 5 scheduled, 145 public, 14 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 11:39).
 
@@ -174,7 +174,7 @@ scheduled · 37 s · music: once-upon-a-time · [script](../boards/done/QD-279.j
 ![QD-279](QD-279.jpg)
 
 ### Fri 30 Oct 14:00 · Ballon d'Or #4: Harry Kane Ballon d'Or: the 73 goal detail
-private · 40 s · music: once-upon-a-time · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
+public · 2 views · 40 s · music: once-upon-a-time · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
 
 ![QD-278](QD-278.jpg)
 
@@ -184,12 +184,12 @@ public · 16 views · 26 s · music: stake-out · [script](../boards/done/QD-277
 ![QD-277](QD-277.jpg)
 
 ### Fri 30 Oct 12:00 · Game Explained #1: Switch cartridge taste: the real reason 👅
-public · 4 views · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
+public · 3 views · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
 
 ![QD-276](QD-276.jpg)
 
 ### Fri 30 Oct 11:00 · Harry Kane wins the Ballon d'Or after 25 years
-public · 64 views · 37 s · music: in-battery · [script](../boards/done/QD-275.json) · [YouTube](https://youtube.com/shorts/vKutbd0tO_s)
+public · 80 views · 37 s · music: in-battery · [script](../boards/done/QD-275.json) · [YouTube](https://youtube.com/shorts/vKutbd0tO_s)
 
 ![QD-275](QD-275.jpg)
 
@@ -199,22 +199,22 @@ public · 12 views · 39 s · music: in-battery · [script](../boards/done/QD-27
 ![QD-274](QD-274.jpg)
 
 ### Fri 30 Oct 8:00 · Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆
-public · 108 views · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
+public · 76 views · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
 
 ![QD-273](QD-273.jpg)
 
 ### Fri 30 Oct 6:30 · Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed
-public · 124 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
+public · 156 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
 
 ![QD-246](QD-246.jpg)
 
 ### Fri 30 Oct 3:30 · Harry Kane Ballon d'Or: first win in London 🏆
-public · 503 views · 25 s · music: fire-in-the-sky · [script](../boards/done/QD-272.json) · [YouTube](https://youtube.com/shorts/U_eHPDhew8M)
+public · 529 views · 25 s · music: fire-in-the-sky · [script](../boards/done/QD-272.json) · [YouTube](https://youtube.com/shorts/U_eHPDhew8M)
 
 ![QD-272](QD-272.jpg)
 
 ### Thu 29 Oct 18:30 · Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
-public · 953 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
+public · 952 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
 
 ![QD-266](QD-266.jpg)
 
@@ -239,12 +239,12 @@ public · 151 views · 35 s · music: cued-for-liftoff · on Instagram · [scrip
 ![QD-263](QD-263.jpg)
 
 ### Thu 29 Oct 0:30 · Star Stories #7: Walter Koenig: the audition secret you never knew
-public · 1,475 views · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
+public · 1,479 views · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
 
 ![QD-255](QD-255.jpg)
 
 ### Wed 28 Oct 23:15 · Walter Koenig: why he won the Chekov role 🖖
-public · 60 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-253.json) · [YouTube](https://youtube.com/shorts/GaOPYVvhV0A)
+public · 62 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-253.json) · [YouTube](https://youtube.com/shorts/GaOPYVvhV0A)
 
 ![QD-253](QD-253.jpg)
 
@@ -259,7 +259,7 @@ public · 34 views · 34 s · music: impossible-sacrifice · [script](../boards/
 ![QD-251](QD-251.jpg)
 
 ### Wed 28 Oct 19:30 · Ballon d'Or: Harry Kane's historic win
-public · 132 views · 29 s · music: duty-calls · [script](../boards/done/QD-250.json) · [YouTube](https://youtube.com/shorts/tlVEDrEN0jI)
+public · 137 views · 29 s · music: duty-calls · [script](../boards/done/QD-250.json) · [YouTube](https://youtube.com/shorts/tlVEDrEN0jI)
 
 ![QD-250](QD-250.jpg)
 
@@ -277,12 +277,12 @@ public · 4 views · 44 s · music: once-upon-a-time · [script](../boards/done/
 ![QD-247](QD-247.jpg)
 
 ### Wed 28 Oct 16:00 · Game Facts #6: gta 6 install size officially revealed at 210 GB
-public · 44 views · 36 s · music: ego-chall · on Instagram · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
+public · 43 views · 36 s · music: ego-chall · on Instagram · [script](../boards/done/QD-227.json) · [YouTube](https://youtube.com/shorts/MOHuQDZpHZg)
 
 ![QD-227](QD-227.jpg)
 
 ### Wed 28 Oct 15:30 · Film Explained #2: Star Wars Episode 4: why the saga starts there 🚀
-public · 102 views · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
+public · 100 views · 39 s · music: duty-calls · [script](../boards/done/QD-248.json) · [YouTube](https://youtube.com/shorts/cgI2Hw6ect0)
 
 ![QD-248](QD-248.jpg)
 

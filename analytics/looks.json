@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T13:59+00:00",
+ "updated": "2026-10-30T14:20+00:00",
  "dimensions": {
   "captions": {
    "punch": {
@@ -32,14 +32,14 @@
    },
    "minimal": {
     "n": 22,
-    "score": 1.059,
+    "score": 1.052,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 53.5,
     "stayed_pct": 26.5
    },
    "low": {
     "n": 42,
-    "score": 1.099,
+    "score": 1.083,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 42.1,
     "stayed_pct": 33.0
@@ -60,7 +60,7 @@
    },
    "lab-captions-1028": {
     "n": 2,
-    "score": 1.236
+    "score": 1.2
    }
   },
   "voice": {
@@ -226,7 +226,7 @@
    },
    "lab-grade-1027": {
     "n": 12,
-    "score": 0.641,
+    "score": 0.613,
     "avg_viewed_pct": 11.3,
     "stayed_pct": 12.0
    }
@@ -255,7 +255,7 @@
    },
    "lab-opening-1026": {
     "n": 15,
-    "score": 1.118,
+    "score": 1.086,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 35.6,
     "stayed_pct": 34.0
@@ -267,7 +267,7 @@
   "style": {
    "minimal": {
     "n": 42,
-    "score": 1.099,
+    "score": 1.083,
     "held_3s_pct": 100.0,
     "avg_viewed_pct": 42.1,
     "stayed_pct": 33.0

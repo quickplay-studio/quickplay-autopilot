@@ -5,7 +5,7 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 23% | 39% |
+| With a number | 23% | 40% |
 | A question | 13% | 7% |
 | With an emoji | 57% | 54% |
 | Length, seconds (median) | 25.5 | 29.0 |
@@ -32,7 +32,7 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Marcelo on Harry Kane winning the Ballon d'Or #shorts #marcelo #harrykane #uk (175,225 views, 3,872 an hour, 7 s, GOALIFY)
 
 ## CES 2027
-- 2027 Silverado: The Premium Seats That Aren’t Leather #shorts (1,025 views, 60 an hour, 103 s, GT: Garage Talk)
+- 2027 Silverado: The Premium Seats That Aren’t Leather #shorts (1,025 views, 59 an hour, 103 s, GT: Garage Talk)
 
 ## Cars
 - Required High Car Driving To Get Licence On Slippery Road #shorts #facts #car (379,406 views, 12,773 an hour, 22 s, AK Creative Knowledge)

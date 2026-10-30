@@ -1,10 +1,10 @@
-# What's working (updated 2026-10-30 13:59 UTC)
+# What's working (updated 2026-10-30 14:20 UTC)
 
-YouTube Partner Program: 22 of 1,000 subscribers, about 14,948 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (94 days): after that new channels need 20M. Needed from now: about 110,945 views a day.
+YouTube Partner Program: 23 of 1,000 subscribers, about 14,973 of 10,000,000 Shorts engaged views in the last 90 days. Apply before 2027-02-01 (94 days): after that new channels need 20M. Needed from now: about 110,945 views a day.
 
 ## Recipe from the data (the writer follows this; Charlie's requests and breaking news still come first)
-- Follow up QD-255 ("Star Stories #7: Walter Koenig: the audition secret you never knew"): 23.8x the views recent Shorts had 37.5 hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
-- Follow up QD-266 ("Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo"): 21.2x the views recent Shorts had 19.5 hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
+- Follow up QD-255 ("Star Stories #7: Walter Koenig: the audition secret you never knew"): 23.3x the views recent Shorts had 37.8 hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
+- Follow up QD-266 ("Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo"): 19.9x the views recent Shorts had 19.8 hours in. Write one follow-up in the next run (a new angle, the next chapter, or the answer to its top comment), title tied to it.
 - Category mix for the day (from the data, every category at least 5% and none over 35%, and 1 Short in 5 an exploration Short in any category): Music 35%, Film 20%, Gaming 15%, Sport 12%, Entertainment 10%, Tech 7%, Science 0%.
 - Paused for 14 days (a week on, little to no views), then retested: category "Science"; hook style "question"; opening "lab-opening-1019"; music mood "tech".
 - Tests being run (round 1, from 2026-10-25, every channel: every Short takes an arm of each, 50/50 and independent, so each verdict is adjusted for the channel, the exploration Shorts and every other arm; a winner needs a clear 90% interval, 15% or more, 10 Shorts a side and both halves of the data agreeing; a factor that is even, or level at 70 a side, leaves the round for the next one. The opening (hook, first frame, opening effect, opening genes) is judged on the engaged share instead, the views that stayed past the first seconds and that the Partner Programme counts: 10% or more, and never a winner that clearly costs views). Shorts measured so far:
@@ -41,34 +41,34 @@ YouTube Partner Program: 22 of 1,000 subscribers, about 14,948 of 10,000,000 Sho
 - Early sign: first frame "cover" 0.73x over 44 Shorts
 
 ## Is the channel getting better (this week against the week before; Shorts public 24 hours or more)
-- Views at 24 hours: 57.0 this week, 42.0 the week before (up).
-- Share of the Short viewed (%): 45.8 this week, 49.8 the week before (level).
+- Views at 24 hours: 57.0 this week, 41.0 the week before (up).
+- Share of the Short viewed (%): 45.4 this week, 49.8 the week before (level).
 - Engaged views (% of views): 28.0 this week, 29.0 the week before (level).
-- Subscribers per 1,000 views: 0.44 this week, 0.52 the week before (down).
-- Shorts that followed the data's rulings: 0 of 84.
+- Subscribers per 1,000 views: 0.44 this week, 0.54 the week before (down).
+- Shorts that followed the data's rulings: 0 of 83.
 - Topic heat: this week's topics ran hotter (by 0.3 heat on the trend sources), so part of any rise may be the topics rather than the changes.
 - Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
-- Shorts measured: 84 this week, 117 the week before.
+- Shorts measured: 83 this week, 117 the week before.
 
 ## Topic heat (is it the change, or was the topic trending?)
 - Each point of topic heat came with -7% views against the same day's other Shorts (224 Shorts, not clear).
-- Last 7 days: 40 of 206 Shorts on a hot topic, 33 warm, 133 cold.
-- Viral topic pushes in the last 7 days: 21 Shorts (explained, facts, latest, no angle, people, rankings, reaction, records, why).
+- Last 7 days: 41 of 206 Shorts on a hot topic, 33 warm, 132 cold.
+- Viral topic pushes in the last 7 days: 22 Shorts (explained, facts, latest, no angle, people, rankings, reaction, records, why).
 - Every verdict above allows for it: a push or cut back that only held because its Shorts had hotter (or colder) topics than the day's others is held back as not proven, and no choice is paused for a cold topic's views.
 
 ## Subscribers (subscribers gained per 1,000 views, against Shorts posted the same UK day; Shorts public 3 days or more)
-- The channel has 22 of the 1,000 subscribers the Partner Programme needs.
-- Overall: 0.6 subscribers per 1,000 views (22 from 36,952 views over 148 Shorts).
-- Subscribe line: none 0.0 per 1,000 (0 from 2,611 views, 8 Shorts, 1.0x typical, about typical); spoken 0.0 per 1,000 (0 from 774 views, 5 Shorts, 1.0x typical, about typical).
-- Closing chip: none 0.0 per 1,000 (0 from 1,601 views, 7 Shorts, 1.0x typical, about typical); chip 0.0 per 1,000 (0 from 1,784 views, 6 Shorts, 1.0x typical, about typical).
-- Ending: follow line 2.01 per 1,000 (6 Shorts, early sign); loop 0.34 per 1,000 (13 Shorts, about typical); question 0.0 per 1,000 (9 Shorts, early sign).
-- Series: no series 0.61 per 1,000 (149 Shorts, about typical).
-- Category: Film 0.95 per 1,000 (29 Shorts, early sign); Tech 1.47 per 1,000 (8 Shorts, about typical); Sport 0.74 per 1,000 (28 Shorts, about typical); Gaming 0.6 per 1,000 (24 Shorts, about typical).
+- The channel has 23 of the 1,000 subscribers the Partner Programme needs.
+- Overall: 0.59 subscribers per 1,000 views (22 from 36,980 views over 149 Shorts).
+- Subscribe line: none 0.0 per 1,000 (0 from 2,639 views, 9 Shorts, 1.0x typical, about typical); spoken 0.0 per 1,000 (0 from 774 views, 5 Shorts, 1.0x typical, about typical).
+- Closing chip: chip 0.0 per 1,000 (0 from 1,812 views, 7 Shorts, 1.0x typical, about typical); none 0.0 per 1,000 (0 from 1,601 views, 7 Shorts, 1.0x typical, about typical).
+- Ending: follow line 2.01 per 1,000 (6 Shorts, early sign); loop 0.34 per 1,000 (14 Shorts, about typical); question 0.0 per 1,000 (9 Shorts, early sign).
+- Series: no series 0.61 per 1,000 (150 Shorts, about typical).
+- Category: Film 0.95 per 1,000 (29 Shorts, early sign); Tech 1.47 per 1,000 (8 Shorts, about typical); Sport 0.74 per 1,000 (28 Shorts, about typical); Gaming 0.6 per 1,000 (25 Shorts, about typical).
 - Best Short for subscribers: QD-165 "Song Secrets #1: Dai Dai Shakira: the global chart record 🏆" gained 3 from 1,003 views (2.99 per 1,000).
 
 ## When people watch
-Most views an hour (UK, last 12 days): 17:00 (279/h), 14:00 (218/h), 15:00 (218/h), 12:00 (212/h). Quietest: 00:00 (93/h), 08:00 (106/h), 06:00 (115/h).
-By weekday (views gained): Fri 10,341, Wed 9,484, Mon 6,858, Tue 6,331, Sun 4,861, Sat 4,792, Thu 2,125.
+Most views an hour (UK, last 12 days): 17:00 (279/h), 14:00 (219/h), 15:00 (218/h), 12:00 (212/h). Quietest: 00:00 (93/h), 08:00 (106/h), 06:00 (115/h).
+By weekday (views gained): Fri 10,419, Wed 9,484, Mon 6,858, Tue 6,331, Sun 4,861, Sat 4,792, Thu 2,125.
 
 ## Where viewers are and how they find us
 Countries (YouTube views): US 39%, GB 15%, IN 8%, DE 4%, CA 4%, AU 3%.
@@ -78,7 +78,7 @@ Countries (YouTube views): US 39%, GB 15%, IN 8%, DE 4%, CA 4%, AU 3%.
 - Gaming (37 Shorts): US 89%, GB 7%, IN 4%, JP 0%.
 - Music (42 Shorts): US 69%, GB 9%, UZ 4%, ES 3%.
 - Science (13 Shorts): US 100%, JP 0%.
-- Sport (40 Shorts): GB 33%, US 27%, IN 14%, BD 12%.
+- Sport (41 Shorts): GB 33%, US 27%, IN 14%, BD 12%.
 - Tech (14 Shorts): US 100%, IE 0%.
 How viewers found us: Shorts feed 67%, YouTube search 31%, Other YouTube pages 1%, Subscribers 0%.
 Biggest groups: 25-34 male 15%, 35-44 male 13%, 45-54 male 10%.
@@ -95,11 +95,11 @@ Biggest groups: 25-34 male 15%, 35-44 male 13%, 45-54 male 10%.
 
 ## Best Shorts (public 24 hours or more)
 - 2,177 views (17.1/h), 47.4% viewed, +1 subs · Ballon d'Or 2026 ceremony is moving to London [Sport, news_explained, 07:00] · hook: "The Ballon d'Or ceremony is moving to London this Monday."
-- 1,475 views (39.3/h) · Star Stories #7: Walter Koenig: the audition secret you never knew [Entertainment, one_detail, 00:30] · hook: "Two actors: Walter Koenig was one of only two people to audition for Chekov."
+- 1,479 views (39.1/h) · Star Stories #7: Walter Koenig: the audition secret you never knew [Entertainment, one_detail, 00:30] · hook: "Two actors: Walter Koenig was one of only two people to audition for Chekov."
 - 1,386 views (8.3/h), 120.4% viewed, +3 subs · The Northumbria Mysteries: New BBC Detective Drama 🎬 [Film, story, 17:00] · hook: "23 October brings a brand‑new BBC detective drama to your screen."
 - 1,237 views (5.3/h), 139.2% viewed · Bohemian Rhapsody: too long for radio? 🎸 [Music, timeline, 20:50] · hook: "Queen's own label said this song was too long for radio."
 - 1,207 views (7.8/h), 53.9% viewed · How Barbara Palvin was discovered at age 13 ✨ [Entertainment, timeline, 05:00] · hook: "Barbara Palvin was discovered walking in Budapest at just age 13."
-- 1,205 views (19.9/h), 52.8% viewed · Film Explained #1: How Lord of the Rings Made Hobbits Small [Film, one_detail, 01:30] · hook: "Elijah Wood played Frodo Baggins across three massive fantasy films."
+- 1,205 views (19.8/h), 52.8% viewed · Film Explained #1: How Lord of the Rings Made Hobbits Small [Film, one_detail, 01:30] · hook: "Elijah Wood played Frodo Baggins across three massive fantasy films."
 - 1,178 views (3.8/h), 58.8% viewed · The K-pop group from BLACKPINK's producer 🎤 [Music, legacy, 13:30]
 - 1,101 views (6.4/h), 52.5% viewed · Jenna Ortega: stepping away from television 📺 [Film, news_explained, 10:00] · hook: "Jenna Ortega plans to step away from television after Wednesday ends."
 
@@ -166,17 +166,17 @@ Biggest groups: 25-34 male 15%, 35-44 male 13%, 45-54 male 10%.
 - 17:30: 94 median, 4 Shorts
 - 03:18: 93 median, 1 Shorts
 - 06:30: 90 median, 3 Shorts
-- 02:00: 86 median, 2 Shorts
+- 02:00: 87 median, 2 Shorts
 - 00:30: 81 median, 5 Shorts
 - 22:30: 81 median, 3 Shorts
 - 13:00: 79 median, 7 Shorts
 - 21:00: 79 median, 3 Shorts
 - 02:06: 77 median, 1 Shorts
-- 22:00: 75 median, 3 Shorts
+- 22:00: 76 median, 3 Shorts
 - 05:30: 75 median, 1 Shorts
 - 10:30: 71 median, 3 Shorts
 - 12:00: 63 median, 10 Shorts
-- 23:15: 60 median, 1 Shorts
+- 23:15: 62 median, 1 Shorts
 - 21:30: 55 median, 3 Shorts
 - 09:54: 53 median, 1 Shorts
 - 01:00: 50 median, 1 Shorts
@@ -223,12 +223,12 @@ Mostly real images of the subject (169 Shorts): 100% still watching at 3s, 50% v
 
 ## Looks (1.00 = typical for Shorts posted around the same time; Shorts measured in brackets)
 GitHub picks each Short's look and leans towards the winners by itself.
-- captions: pop 1.49 (6), lab-captions-1028 1.24 (2), lab-captions-1019 1.13 (54), clean 1.11 (34), low 1.10 (42), minimal 1.06 (22), boxed 0.93 (3), lab-captions-1024 0.86 (11), punch 0.52 (2)
+- captions: pop 1.49 (6), lab-captions-1028 1.20 (2), lab-captions-1019 1.13 (54), clean 1.11 (34), low 1.08 (42), minimal 1.05 (22), boxed 0.93 (3), lab-captions-1024 0.86 (11), punch 0.52 (2)
 - voice (on viewers not swiping away): isabella 1.38 (4), michael 1.19 (14), george_dramatic 1.03 (9), george 1.00 (31), lewis 1.00 (5), daniel 1.00 (7), lily 0.98 (5), lab-voice-1019 0.93 (10), george_quick 0.87 (4), emma 0.84 (18), heart 0.80 (2)
 - energy: steady 1.15 (95), punchy 1.08 (8), lab-energy-1019 1.07 (23), calm 1.00 (27), lab-energy-1025 0.98 (23)
-- grade: natural 1.20 (74), vivid 1.17 (3), cinematic 1.09 (30), lab-grade-1019 1.08 (34), lab-grade-1023 0.98 (23), lab-grade-1027 0.64 (12)
-- opening: lab-opening-1026 1.12 (15), lab-opening-1019 1.10 (21), image_first 1.08 (94), graphic_first 1.07 (46)
-- style: minimal 1.10 (42), standard 0.85 (17)
+- grade: natural 1.20 (74), vivid 1.17 (3), cinematic 1.09 (30), lab-grade-1019 1.08 (34), lab-grade-1023 0.98 (23), lab-grade-1027 0.61 (12)
+- opening: lab-opening-1019 1.10 (21), lab-opening-1026 1.09 (15), image_first 1.08 (94), graphic_first 1.07 (46)
+- style: minimal 1.08 (42), standard 0.85 (17)
 - closing: none 1.20 (21), chip 0.83 (23)
 
 Engaged views (stayed past the first seconds): median 29% of views.

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T14:06+00:00",
+ "updated": "2026-10-30T16:31+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -49,10 +49,10 @@
     "ballon d'or 2026 full ceremony",
     "ballon d'or 2026 reaction",
     "ballon d'or 2026 live",
-    "ballon d'or 2026 ceremony",
-    "ballon d'or 2026 lamine yamal",
     "ballon d'or 2026 boat",
-    "ballon d'or 2026 saka"
+    "ballon d'or 2026 lamine yamal",
+    "ballon d'or 2026 ceremony",
+    "ballon d'or 2026 live ceremony"
    ],
    "in": [],
    "category": "Sport",
@@ -131,13 +131,15 @@
     "the celebrity traitors",
     "the celebrity traitors uncloaked uk",
     "the celebrity traitors season 2",
-    "the celebrity traitors reveal",
     "the celebrity traitors james acaster",
+    "the celebrity traitors reveal",
     "the celebrity traitors uk",
     "the celebrity traitors reaction",
-    "the celebrity traitors season 2 episode 9"
+    "the celebrity traitors episode 9"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Entertainment",
    "angles": [
     "Celebrity Traitors 2026 cast",
@@ -203,11 +205,13 @@
     "halloween 2026 countdown",
     "halloween 2026 new york",
     "halloween 2026 tdx",
-    "halloween 2026 theory",
+    "halloween 2026 event",
     "halloween 2026 costumes",
     "halloween 2026 game"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Entertainment",
    "angles": [
     "most popular Halloween costumes 2026",
@@ -266,7 +270,7 @@
     728,
     672
    ],
-   "news_24h": 6,
+   "news_24h": 9,
    "news_usual": 9.0,
    "suggestions": [
     "grammy nominations 2027",
@@ -479,7 +483,7 @@
     675,
     904
    ],
-   "news_24h": 14,
+   "news_24h": 13,
    "news_usual": 7.0,
    "suggestions": [
     "mama awards 2026",
@@ -550,7 +554,7 @@
     249,
     243
    ],
-   "news_24h": 5,
+   "news_24h": 6,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
@@ -617,7 +621,7 @@
     795,
     855
    ],
-   "news_24h": 14,
+   "news_24h": 15,
    "news_usual": 9.0,
    "suggestions": [
     "the game awards",
@@ -752,7 +756,7 @@
     25412,
     17411
    ],
-   "news_24h": 77,
+   "news_24h": 64,
    "news_usual": 26.0,
    "suggestions": [
     "dune part three",
@@ -761,8 +765,8 @@
     "dune part three final trailer reaction",
     "dune part three final trailer",
     "dune part three trailer reaction mashup",
-    "dune part three reaction",
-    "dune part three trailer music"
+    "dune part three trailer music",
+    "dune part three reaction"
    ],
    "in": [
     "YouTube charts"
@@ -822,7 +826,7 @@
     5606,
     6909
    ],
-   "news_24h": 20,
+   "news_24h": 22,
    "news_usual": 7.0,
    "suggestions": [
     "harry potter hbo series",
@@ -893,17 +897,17 @@
     2191,
     2146
    ],
-   "news_24h": 66,
+   "news_24h": 65,
    "news_usual": 39.0,
    "suggestions": [
     "christmas 2026",
-    "christmas 2026 uk",
-    "christmas 2026 song",
     "christmas 2026 decor",
+    "christmas 2026 song",
     "christmas 2026 countdown",
     "christmas 2026 remix",
     "christmas 2026 new songs",
-    "christmas 2026 live"
+    "christmas 2026 live",
+    "christmas 2026 playlist"
    ],
    "in": [],
    "category": "Entertainment",
@@ -997,8 +1001,8 @@
    "name": "CES 2027",
    "days_to": 68,
    "phase": "steady",
-   "level": "surging",
-   "places": 2,
+   "level": "steady",
+   "places": 0,
    "momentum": 0.77,
    "views_yesterday": 170,
    "views_usual": 222,
@@ -1034,16 +1038,14 @@
     162,
     170
    ],
-   "news_24h": 11,
+   "news_24h": 10,
    "news_usual": 5.0,
    "suggestions": [
     "ces 2027",
     "sony ces 2027",
     "ces las vegas 2027"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Tech",
    "angles": [
     "CES 2027 biggest reveals",

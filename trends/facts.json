@@ -1,9 +1,9 @@
 {
  "date": "2026-10-30",
- "built": "2026-10-30T14:20+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "afternoon",
+ "built": "2026-10-30T16:44+00:00",
+ "model": "gemini-3.5-flash-lite + gemini-3-flash-preview",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
@@ -11,17 +11,22 @@
    "topic": "GTA 6",
    "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "The PC Gamer article on 30 Oct 2026 revealed details of the Criminal Profile morality scale.",
    "hooks": [
-    "GTA 6 launches on 19 November 2026!",
-    "Measure Jason and Lucia's closeness on a four point scale in GTA 6!",
-    "GTA 6 is set in the fictional US state of Leonida!"
+    "GTA 6 arrives on November 19 2026!",
+    "Track your crimes with the new Criminal Profile system!"
    ],
    "sources": [
     [
-     "You can relationship-max in GTA 6 as walking along the beach or working out at the gym together increases your couple rating on a four point",
-     "https://www.pcgamer.com/games/grand-theft-auto/you-can-relationship-max-in-gta-6-as-walking-along-the-beach-or-working-out-at-the-gym-together-increases-your-couple-rating-on-a-four-point-scale/",
+     "GTA 6's souped-up Red Dead Redemption 2-style morality system will scale from 'Professional' to 'Irredeemable' so players can decide what ki",
+     "https://www.pcgamer.com/games/grand-theft-auto/gta-6s-souped-up-red-dead-redemption-2-style-morality-system-will-scale-from-professional-to-irredeemable-so-players-can-decide-what-kind-of-criminal-they-want-to-be/",
      "PC Gamer",
+     "2026-10-30"
+    ],
+    [
+     "The Onion Is Ready For GTA 6: ‘You're Kind of a Dummy For Thinking This Is Gonna Change Everything\"",
+     "https://www.polygon.com/the-onion-gta-6-coverage/",
+     "Polygon",
      "2026-10-30"
     ],
     [
@@ -39,76 +44,307 @@
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
      "sources": [
-      2,
-      3
+      3,
+      4
      ],
      "evidence": {
-      "2": "ahead of its 19th November launch.",
-      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "3": "So we know that GTA 6 has a marketing deal with Sony and the PlayStation 5, and that Rockstar has been engaging with real-world locations",
+      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     },
     {
-     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos set within the fictional US state of Leonida, based on Florida.",
      "sources": [
       1,
-      3
+      4
      ],
      "evidence": {
-      "1": "show all of Leonida just how capable and fearsome my skills are",
-      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "1": "The Criminal Profile will track your actions as Lucia and Jason on a scale from \"Professional\" to \"Irredeemable\", represented by angel and devil icons.",
+      "4": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "ahead of its 19th November launch.",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The game’s story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "The Criminal Profile will track your actions as Lucia and Jason on a scale from \"Professional\" to \"Irredeemable\"",
+      "4": "The story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI includes a Criminal Profile rating system that tracks each character’s reputation.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "The Criminal Profile will track your actions as Lucia and Jason on a scale from \"Professional\" to \"Irredeemable\"",
+      "4": "The game will have a \"Criminal Profile\" rating system that tracks each player character's reputation based on their actions"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI will be released for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "GTA 6 has a marketing deal with Sony and the PlayStation 5",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Principal production on Grand Theft Auto VI began in 2020.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Rockstar confirmed in February 2022 that the game was in development.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Rockstar confirmed in February 2022 that the game was in development."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto VI was formally revealed in December 2023."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI players will be able to measure Jason and Lucia's closeness in a four-point scale.",
+     "claim": "Rob Nelson, Rockstar North's co‑studio head and head of development, discussed the Criminal Profile in an Edge magazine interview.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The recent mega piece by Edge has revealed that GTA 6 players will be able to measure Jason and Lucia's closeness in a four-point scale"
+      "1": "Rob Nelson, Rockstar North's co‑studio head and head of development went into greater detail about what GTA 6's \"Criminal Profile\" involves during an interview for"
+     }
+    },
+    {
+     "claim": "South Park aired a gameplay snippet showing a German Shepherd pooping on a beach, with players able to pick up and throw the dog poop.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It's a dog, taking a poop. And people can pick up the dog poop! You can throw things at the person with dog poop."
+     }
+    },
+    {
+     "claim": "The game’s map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
+     }
+    },
+    {
+     "claim": "Rockstar’s employee count grew from 2,441 in 2018 to 4,711 across 12 offices during GTA VI’s development.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 14,
+   "n": 9,
+   "topic": "Avengers Doomsday cast",
+   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Avengers Doomsday releases on December 18, 2026?",
+    "Anthony and Joe Russo are directing Avengers Doomsday!"
+   ],
+   "sources": [
+    [
+     "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
+     "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
+     "Deadline",
+     "2026-10-24"
+    ],
+    [
+     "Avengers Doomsday cast",
+     "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
+     }
+    },
+    {
+     "claim": "Anthony and Joe Russo are the directors of Avengers: Doomsday.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Directed by Anthony and Joe Russo, and written by Michael Waldron, Stephen McFeely, and the writing team of Chris McKenna and Erik Sommers, the film"
+     }
+    },
+    {
+     "claim": "Avengers: Doomsday is scheduled to be released on 18 December.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
+     }
+    },
+    {
+     "claim": "Robert Downey Jr. leads the cast as Doctor Doom.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "Directed by Anthony and Joe Russo, and written by Michael Waldron, Stephen McFeely, and the writing team of Chris McKenna and Erik Sommers, the film"
+     }
+    },
+    {
+     "claim": "Chris Evans returns to the Marvel Cinematic Universe as Steve Rogers.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "Chris Evans as Steve Rogers: The former leader of the Avengers, a super soldier, and World War II veteran who was the first person to"
+     }
+    },
+    {
+     "claim": "Anthony Mackie plays Sam Wilson who carries the Captain America shield.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "Anthony Mackie as Sam Wilson / Captain America: An Avenger and former pararescueman who was trained by the military in aerial combat using a specially"
+     }
+    },
+    {
+     "claim": "Pedro Pascal plays Mister Fantastic.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
+      "2": "Pedro Pascal as Reed Richards / Mister Fantastic: A highly intelligent scientist and the leader of the Fantastic Four who can stretch any part of"
+     }
+    },
+    {
+     "claim": "Joseph Quinn portrays Johnny Storm, also known as the Human Torch.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
+      "2": "Joseph Quinn as Johnny Storm / Human Torch: Sue's younger brother and a member of the Fantastic Four who can control fire and fly"
+     }
+    },
+    {
+     "claim": "Alan Cumming returns as Nightcrawler.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Alan Cumming as Kurt Wagner / Nightcrawler: A blue-skinned, demonic-looking mutant who can teleport."
+     }
+    },
+    {
+     "claim": "Rebecca Romijn features in the cast as Mystique.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Rebecca Romijn as Raven Darkhölme / Mystique: A blue-skinned, shapeshifting mutant."
+     }
+    },
+    {
+     "claim": "Kelsey Grammer plays the mutant Beast.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Kelsey Grammer as Hank McCoy / Beast: A highly intelligent mutant and member of the X-Men with animalistic physical characteristics, including blue fur, pointed ears,"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Patrick Stewart appeared as Professor X in what marks his final on-screen performance following his death in October 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Doomsday marks Stewart's final on-screen performance following his death in October 2026."
+     }
+    },
+    {
+     "claim": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain."
+     }
+    },
+    {
+     "claim": "Alan Cumming had his make-up process reduced to an hour and a half for Doomsday from up to five hours on X2.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Cumming said the make-up process was reduced to an hour-and-a-half for Doomsday from the four-and-a-half to five hours it took on the 20th Century Fox"
+     }
+    },
+    {
+     "claim": "The MLB and the MCU teamed up during Game 1 of the World Series for a preview broadcast on Fox and Fox One.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "With the Tampa Bay Rays taking on the Milwaukee Brewers in Game 1 of the World Series on Friday, the MLB teased “an exclusive preview"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
    "topic": "Homewrecker by sombr",
    "signal": "Apple Music GB: new in the top 25",
    "category": "Music",
    "what_is_new": "",
    "hooks": [
-    "Did you know Sombr made it rain at the American Music Awards?"
+    "Did you know Sombr released Homewrecker on February 5, 2026?"
    ],
    "sources": [
     [
@@ -126,29 +362,40 @@
    ],
    "verified": [
     {
-     "claim": "Homewrecker was released on February 5, 2026",
+     "claim": "The song Homewrecker was released on 5 February 2026.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "The song, released back in February",
-      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026,"
+      "1": "The song, released back in February and likely to be included on his sophomore album expected later in the year, is also nominated for the",
+      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB."
+     }
+    },
+    {
+     "claim": "The singles 12 to 12 and Undressed were released by Sombr in 2025.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Sombr is coming off a red-hot year that saw his singles “Undressed,” “Back to Friends” and “12 to 12” impact the charts.",
+      "2": "The song marked his first release of 2026, following his 2025 singles \"12 to 12\" and \"Undressed\"."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Sombr performed his song Homewrecker at the American Music Awards with an onstage downpour.",
+     "claim": "Homewrecker is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB.",
      "sources": [
-      1
+      2
      ],
      "evidence": {
-      "1": "The American Music Awards may have been taking place in Las Vegas, but Sombr paid inadvertent tribute on Monday night to his hometown of New"
+      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB."
      }
     },
     {
-     "claim": "Sombr performed Homewrecker at the American Music Awards",
+     "claim": "Sombr performed Homewrecker at the American Music Awards with an onstage downpour.",
      "sources": [
       1
      ],
@@ -157,16 +404,25 @@
      }
     },
     {
-     "claim": "Sombr wrote Homewrecker entirely himself",
+     "claim": "Homewrecker reached number four on the UK Singles Chart on 17 April 2026.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Sombr wrote the song entirely himself and co-produced it with Tony Berg."
+      "2": "\"Homewrecker\" later peaked at number four on the chart on April 17, 2026 — for the week ending April 23, 2026 — becoming Sombr's third"
      }
     },
     {
-     "claim": "Homewrecker peaked at number 15 on the Billboard Hot 100",
+     "claim": "The music video for Homewrecker features Quenlin Blackwell and Milo Manheim.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "by gus black 23 visually inspired by western films 24 the video reflects the song s themes and depicts the singer caught in a love triangle with characters portrayed by media personality and model quenlin blackwell and actor milo manheim"
+     }
+    },
+    {
+     "claim": "Homewrecker peaked at number 15 on the Billboard Hot 100.",
      "sources": [
       2
      ],
@@ -175,243 +431,174 @@
      }
     },
     {
-     "claim": "Sombr is 20 years old",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Sombr, age 20, told Variety in an episode of Behind the Song last year."
-     }
-    },
-    {
-     "claim": "Homewrecker was performed at the BRIT Awards",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The singer, clad in leather bell-bottoms and a loose black button-down shirt (different from the outfit he wore to accept his Best Alternative/Rock Song award"
-     }
-    },
-    {
-     "claim": "The music video for Homewrecker was directed by Gus Black",
+     "claim": "Sombr wrote Homewrecker entirely by himself and co-produced it with Tony Berg.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "The accompanying music video was released alongside the song on February 5, 2026, and was directed by Gus Black."
-     }
-    },
-    {
-     "claim": "Homewrecker debuted at number 31 on the Billboard Hot 100",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On the Billboard Hot 100, the song debuted at number 31,"
-     }
-    },
-    {
-     "claim": "Homewrecker marked Sombr's fifth entry on the Billboard Global 200",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "\"Homewrecker\" marked Sombr's fifth entry on the Billboard Global 200,"
+      "2": "Sombr wrote the song entirely himself and co-produced it with Tony Berg."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 17,
-   "topic": "lawyer becomes voice actor emily mcgonagle",
-   "signal": "Google Trends GB 100+",
-   "category": "Entertainment",
-   "what_is_new": "Emily McGonagle was featured in a Guardian article published on 30 October 2026 detailing her journey from Essex lawyer to the voice of characters in the Netflix animated series Spike.",
+   "n": 15,
+   "topic": "gruffalo illustrator",
+   "signal": "Google Trends GB 500+",
+   "category": "Tech",
+   "what_is_new": "Axel Scheffler announced he is seriously considering launching legal action against artificial intelligence firms for copyright breach.",
    "hooks": [
-    "Meet the Essex lawyer who became the voice of Netflix hit Spike.",
-    "How watching Peppa Pig helped an Essex lawyer start a new career.",
-    "From legal jobs to voicing eight characters in a hit Netflix show."
+    "Gruffalo illustrator considers suing AI firms!",
+    "Did AI steal the famous Gruffalo artwork?"
    ],
    "sources": [
     [
-     "‘It’s been a whirlwind’: the Essex lawyer who quit her job and became voice of Netflix’s hit show Spike",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/30/essex-woman-voice-netflix-spike-emily-mcgonagle",
-     "Guardian",
+     "Gruffalo illustrator considering legal action against AI firms",
+     "https://www.bbc.co.uk/news/articles/cj04032rp5wro?at_medium=RSS&at_campaign=rss",
+     "BBC",
      "2026-10-30"
     ]
    ],
    "verified": [],
    "one_source": [
     {
-     "claim": "Emily McGonagle plays eight characters in an animated series called Spike about a young dragon and his friends.",
+     "claim": "Axel Scheffler is the illustrator behind the popular children's book The Gruffalo.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "McGonagle plays eight characters in an animated series called Spike about a young dragon and his friends."
+      "1": "The illustrator behind the popular children's book The Gruffalo has told BBC London he is \"seriously considering\" launching legal action against artificial intelligence (AI) firms"
      }
     },
     {
-     "claim": "The programme Spike launched on the streaming network on 12 October.",
+     "claim": "The Gruffalo was written by London-born children's author Julia Donaldson.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "When the programme launched on the streaming network on 12 October it quickly became the seventh-most-watched programme globally in any genre."
+      "1": "The Gruffalo, written by London-born children's author Julia Donaldson, tells the story of a mouse who outsmarts a beast."
      }
     },
     {
-     "claim": "Emily McGonagle converts a large wardrobe into a soundproofed vocal booth with the support of her husband Ciarán.",
+     "claim": "Axel Scheffler's Gruffalo books have sold more than 18 million copies worldwide.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "With the support of her husband, Ciarán, she converted a large wardrobe into a soundproofed vocal booth and began auditioning for voiceover jobs that were"
+      "1": "For Scheffler, the issue goes beyond the work of an established illustrator whose Gruffalo books have sold more than 18 million copies worldwide."
      }
     },
     {
-     "claim": "Emily McGonagle provides the voices for 20 characters in the video game Game of Thrones Kingsroad.",
+     "claim": "Axel Scheffler is seriously considering launching legal action against artificial intelligence firms for breaching copyright.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "a challenge says mcgonagle she provides the voices for 20 in the video game game of thrones kingsroad and that was a lot how does she keep them distinctive i write a bio for my characters and"
+      "1": "The illustrator behind the popular children's book The Gruffalo has told BBC London he is \"seriously considering\" launching legal action against artificial intelligence (AI) firms"
      }
     },
     {
-     "claim": "Emily McGonagle's sons Finn and Jack are now 11 and nine.",
+     "claim": "The Gruffalo illustrator has already been in contact with a lawyer in Germany regarding the potential case.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "McGonagle’s sons, Finn and Jack, are now 11 and nine, and far too old for preschool dragons."
+      "1": "\"I've been in touch with a lawyer in Germany,\" Scheffler said."
+     }
+    },
+    {
+     "claim": "Axel Scheffler does not own a smartphone.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Scheffler, who does not own a smartphone, said he tried to ignore AI until someone showed him how his most famous creations had been digitally"
+     }
+    },
+    {
+     "claim": "The Gruffalo books have sold more than 18 million copies worldwide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "For Scheffler, the issue goes beyond the work of an established illustrator whose Gruffalo books have sold more than 18 million copies worldwide."
+     }
+    },
+    {
+     "claim": "Axel Scheffler is considering legal action in Germany because he believes the European Union is more creator friendly.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Scheffler is considering launching the legal action in Germany because he believes the European Union is more creator-friendly."
+     }
+    },
+    {
+     "claim": "The Munich Regional Court will decide if OpenAI breached copyright law in spring 2027.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Whether the AI company has breached copyright law will be decided by the Munich Regional Court in spring 2027."
+     }
+    },
+    {
+     "claim": "The Gruffalo was written by the London born children's author Julia Donaldson.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Gruffalo, written by London-born children's author Julia Donaldson, tells the story of a mouse who outsmarts a beast."
+     }
+    },
+    {
+     "claim": "Axel Scheffler has been captivating children with his illustrations since 1999.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Axel Scheffler, whose illustrations have captivated children since 1999, said he wanted AI companies to stop using artists' work without permission."
+     }
+    },
+    {
+     "claim": "OpenAI is currently being sued by the German publishing group Penguin Random House and illustrator Ingo Siegner.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "OpenAI, the company behind ChatGPT, is already being sued by German publishing group Penguin Random House, together with author and illustrator Ingo Siegner."
+     }
+    },
+    {
+     "claim": "The UK government announced 2bn pounds of investment in AI by 2030 last June.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Last June, the UK government announced Â£2bn of investment in AI by 2030 \"to harness the transformative potential\"."
+     }
+    },
+    {
+     "claim": "Axel Scheffler is based in south London.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The south London-based artist did not name a company his legal team would consider pursuing."
+     }
+    },
+    {
+     "claim": "The lawsuit against OpenAI alleges the company copied the character The Little Dragon Coconut.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The allegation is that OpenAI copied the children's book character The Little Dragon Coconut (Der kleine Drache Kokosnuss)"
      }
     }
    ],
    "images": []
-  },
-  {
-   "n": 22,
-   "topic": "Patrick Stewart",
-   "signal": "Wikipedia 2,356,552 views",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Sir Patrick Stewart passed away at the age of 86.",
-    "Discover Sir Patrick Stewart's final film role.",
-    "How Sir Patrick Stewart's childhood shaped his legacy."
-   ],
-   "sources": [
-    [
-     "‘His honesty gave courage to survivors’: domestic abuse charities praise Patrick Stewart’s legacy",
-     "https://www.theguardian.com/culture/2026/oct/30/domestic-abuse-charities-patrick-stewart-amnesty-international-refuge",
-     "Guardian",
-     "2026-10-30"
-    ],
-    [
-     "Patrick Stewart's Final Movie Is a Surprisingly Perfect Sendoff For His Greatest Role",
-     "https://www.polygon.com/patrick-stewart-final-movie-avenger-doomsday-professor-x/",
-     "Polygon",
-     "2026-10-30"
-    ],
-    [
-     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
-     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-30"
-    ],
-    [
-     "Patrick Stewart fans remember his many video game roles: “Such an iconic voice”",
-     "https://www.nme.com/news/gaming-news/patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice-3974633?utm_source=rss&utm_medium=rss&utm_campaign=patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice",
-     "NME",
-     "2026-10-30"
-    ],
-    [
-     "Patrick Stewart",
-     "https://en.wikipedia.org/wiki/Patrick_Stewart",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Sir Patrick Stewart died at the age of 86 on October 28, 2026.",
-     "sources": [
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "3": "Sir Ian McKellen has led tributes to Sir Patrick Stewart following his death at the age of 86, calling him \"the most respected and beloved",
-      "4": "Gaming fans have been paying tribute to acting great Patrick Stewart, who has died at the age of 86.",
-      "5": "Sir Patrick Hewes Stewart (13 July 1940 – 28 October 2026) was an English actor."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
-     "sources": [
-      3,
-      4,
-      5
-     ],
-     "evidence": {
-      "3": "When Sir Patrick was knighted by Queen Elizabeth II in 2010, he said he owed \"literally everything\" to his former English teacher who first encouraged",
-      "4": "Meanwhile, acting colleagues including Ian McKellen, Hugh Jackman, William Shatner, George Takei and Rebecca Romijn are also paying tribute to Stewart, who was knighted in",
-      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart's final film appearance will be as Professor X in the upcoming Avengers: Doomsday film.",
-     "sources": [
-      2,
-      3,
-      5
-     ],
-     "evidence": {
-      "2": "In Stewart's case, there appears to only be one — Avengers: Doomsday.",
-      "3": "Sir Ian noted that Sir Patrick's final film appearance will be as Professor X in the upcoming Avengers: Doomsday film.",
-      "5": "On film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart became an ambassador for the charity Refuge in 2007.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "In 2007, Stewart became an ambassador for the charity Refuge, a role he continued in for the rest of his life.",
-      "3": "The actor became a campaigner on domestic violence in later life, including becoming an ambassador for domestic abuse charity Refuge in 2007, after witnessing his"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was born in 1940.",
-     "sources": [
-      3,
-      5
-     ],
-     "evidence": {
-      "3": "Born in the town of Mirfield in 1940, Sir Patrick's love of drama began at school where he was introduced to Shakespeare and his first",
-      "5": "Sir Patrick Hewes Stewart (13 July 1940 – 28 October 2026) was an English actor."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart became a member of the Royal Shakespeare Company in 1966.",
-     "sources": [
-      3,
-      5
-     ],
-     "evidence": {
-      "3": "His first foray into professional acting was when he joined the RSC in 1966, going on to play King John, Oberon in A Midsummer Night's",
-      "5": "In 1966, Stewart became a member of the Royal Shakespeare Company (RSC)."
-     }
-    }
-   ],
-   "one_source": [],
-   "images": [
-    "commons:File:Patrick_Stewart_1999.jpg"
-   ]
   }
  ]
 }

@@ -1,10 +1,31 @@
-breaking run for 2026-10-30: 2 to write from 4 fact packs
-category shares: {'Music': 0.27, 'Gaming': 0.15, 'Film': 0.13, 'Sport': 0.12, 'Animals': 0.11, 'Science': 0.07, 'Entertainment': 0.07, 'Tech': 0.07}
-category floors first: ['Film']
+morning run for 2026-10-30: 7 to write from 15 fact packs
+category shares: {'Music': 0.28, 'Film': 0.18, 'Gaming': 0.15, 'Animals': 0.12, 'Sport': 0.11, 'Entertainment': 0.09, 'Tech': 0.07, 'Science': 0.0}
+category floors first: ['Music']
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Dune Part Three trailer: gemini-flash-latest, 0 warnings, sameness 0.20 with QD-099
-Ballon d'Or 2026 facts: gemini-flash-latest, 0 warnings, sameness 0.26 with QD-272, edited by Claude
-wrote 2 of 2: QD-274 Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives; QD-275 Harry Kane wins the Ballon d'Or after 25 years
-sameness: main channel score 0.0632 over 184 boards, commonest recipe 4% (format one_detail, hook statement, look clean); this run 2 boards checked, highest 0.23, mean 0.19; 0 rewritten, 0 dropped, 0 recipe caps (limits: pair 0.3, recipe 0.35)
-control: 0 of 2 boards written with the frozen recipe
-gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now"}, "retired": [], "timeouts": {}, "answers": {"groq:openai/gpt-oss-120b": 1, "gemini-flash-latest": 4, "gemini-3.5-flash-lite": 8, "gemini-3.8-flash": 1, "claude:sonnet": 1}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 1, "second opinions": 0, "router searches": 0, "router sources added": 0, "providers passed over": ["openrouter"], "late": false, "claude today": "1 of 4 edits, 0 of 0 writes"}
+Why do Nintendo Switch cartridges taste bad?: gemini-3.7-flash, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), sameness 0.19 with QD-253, edited by Claude
+Ballon d'Or 2026: still failing: beat 5: needs at least one shot or a graphic; meta.facts: source numbers run from 1 to 2 (Harry Kane won the Men's Ballon d'Or at ); meta.facts: source numbers run from 1 to 2 (Harry Kane became the fifth Englishman t); meta.facts: source numbers run from 1 to 2 (Harry Kane finished ahead of Kylian 
+Celebrity Traitors final: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, sameness 0.19 with QD-153
+Ballon d'Or past winners: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (check these words are fine in context: ['voting']), sameness 0.20 with QD-212, edited by Claude
+watchlist: the day's 5 watch places are filled: The Celebrity Traitors
+watchlist: the day's 5 watch places are filled: Hunger Games films in order
+watchlist: the day's 5 watch places are filled: GTA 6 trailer views record
+watchlist: the day's 5 watch places are filled: GTA 6
+watchlist: the day's 5 watch places are filled: GTA 6 PC release
+exploration Short: Sport: england vs papua new guinea
+QD-279: about 2 min needs 16 facts, the pack has 6: 35 to 44 s instead
+england vs papua new guinea: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 0 warnings, background: 3 from the category, sameness 0.17 with QD-119
+exploration Short: Music: Thriller by Michael Jackson
+QD-280: about 60 s needs 9 facts, the pack has 7: 35 to 44 s instead
+Thriller by Michael Jackson: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), sameness 0.20 with QD-165, edited by Claude
+QD-281: about 60 s needs 9 facts, the pack has 7: 35 to 44 s instead
+Thriller by Michael Jackson: gemini-3.6-flash, 2 warnings (meta.title: 65 characters: under 50, the searched name still first; meta.sources: one site only; name it in the narration for breaking news), sameness 0.19 with QD-072
+too few facts: This Is Halloween by The Citizens of Halloween
+new zealand breakers: skipped: nothing new
+William Contreras: openrouter:nvidia/nemotron-3-ultra-550b-a55b:free, 1 warnings (meta.sources: one site only; name it in the narration for breaking news), sameness 0.20 with QD-035
+wrote 7 of 7: QD-276 Game Explained #1: Switch cartridge taste: the real reason 👅; QD-277 Celebrity Traitors #2: Final: series two ends today 🏁; QD-278 Ballon d'Or #4: Harry Kane Ballon d'Or: the 73 goal detail; QD-279 England vs PNG: the 68-point twist; QD-280 Song Secrets #4: Michael Jackson's Thriller tops charts 37 weeks 🎵; QD-281 Song Secrets #6: Michael Jackson broke records by winning eight Grammys (Part 2) 🎵; QD-282 William Contreras: 7th catcher World Series MVP 🏆
+channel gaming: wrote 0 of 3: 
+channel irl: wrote 0 of 3: 
+channel clips: wrote 0 of 3: 
+sameness: main channel score 0.0614 over 191 boards, commonest recipe 4% (format one_detail, hook statement, look clean); this run 7 boards checked, highest 0.25, mean 0.18; 0 rewritten, 0 dropped, 0 recipe caps (limits: pair 0.3, recipe 0.35)
+control: 2 of 7 boards written with the frozen recipe (QD-277, QD-282)
+gemini: {"order": ["groq:openai/gpt-oss-120b", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free", "freellm:nemotron-3-ultra-550b", "freellm:qwen3.5-397b", "freellm:gpt-oss-120b", "freellm:llama-3.3-70b"], "out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "gemini-omni-1.1-flash": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now"}, "retired": ["freellm:claude-sonnet-4-5"], "timeouts": {"gemini-flash-latest": 1, "gemini-3.8-flash": 1}, "answers": {"gemini-3.7-flash": 4, "gemini-3.5-flash-lite": 24, "groq:openai/gpt-oss-120b": 4, "claude:sonnet": 3, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 10, "freellm:llama-3.3-70b": 1, "gemini-3.6-flash": 1, "gemini-3.5-flash": 2}, "empty answers": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "providers": ["groq", "openrouter", "freellm"], "local": true, "claude calls": 3, "second opinions": 1, "router searches": 0, "router sources added": 0, "providers passed over": ["groq"], "late": true, "claude today": "4 of 4 edits, 0 of 0 writes"}

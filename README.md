@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 19:51 UK.
+Updated Friday 30 October, 20:46 UK.
 
-**24 subscribers, 15,430 engaged Shorts views in 90 days (0.51% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**24 subscribers, 15,319 engaged Shorts views in 90 days (0.51% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,19 +27,19 @@ Updated Friday 30 October, 19:51 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 24 of 500 (4.80%) | 15,430 of 3,000,000 (0.51%) | 33,162 |
-| Full, from 1 February 2027 | 24 of 1,000 (2.40%) | 15,430 of 10,000,000 (0.15%) | 110,940 |
+| Expanded, open now | 24 of 500 (4.80%) | 15,319 of 3,000,000 (0.51%) | 33,164 |
+| Full, from 1 February 2027 | 24 of 1,000 (2.40%) | 15,319 of 10,000,000 (0.15%) | 110,941 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,147 (to Wed 28 Oct) | 8,082 | 16 | 94 |
+| 8,147 (to Wed 28 Oct) | 8,324 | 16 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
 Engaged views a day, 7-day average: **1,164**, up from 904 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **29%**, was 29% a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **30%**, was 29% a week earlier.
 Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
 Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Fri 30 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 

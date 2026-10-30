@@ -1,17 +1,8 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026: 2 verified, 1 one-source, 4 pages
-Ballon d'Or 2026 facts: 1 verified, 6 one-source, 2 pages
-Ballon d'Or 2026 star: 0 verified, 4 one-source, 2 pages
-Ballon d'Or 2026 rankings: 0 verified, 14 one-source, 1 pages
-Ballon d'Or 2026 by the numbers: 0 verified, 8 one-source, 1 pages
-Ballon d'Or 2026 best moments: 0 verified, 4 one-source, 1 pages
-Ballon d'Or 2026 what happens next: 0 verified, 4 one-source, 2 pages
-Walter Koenig: 9 verified, 4 one-source, 5 pages
-Walter Koenig facts: 9 verified, 2 one-source, 5 pages
-Walter Koenig star: 9 verified, 0 one-source, 5 pages
-Ballon d'Or 2026 analysis: 0 verified, 14 one-source, 1 pages
-Walter Koenig best moments: 0 verified, 15 one-source, 1 pages
-Walter Koenig what happens next: 0 verified, 15 one-source, 1 pages
-Walter Koenig past winners: 0 verified, 1 one-source, 1 pages
-14 packs, 30 verified facts, 92 one-source
-gemini: {"out of quota": {"groq:openai/gpt-oss-120b": "per-minute limit, 3 tries", "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "gemini-3.6-flash": "daily limit 20", "gemini-flash-latest": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit", "gemini-3-flash-preview": "daily limit 20", "gemini-omni-flash-preview": "daily limit", "openrouter:thinkingmachines/inkling:free": "key refused (403)", "groq:qwen/qwen3.8-27b": "per-minute limit, 3 tries"}, "retired": ["freellm:claude-opus-4-5", "freellm:claude-sonnet-4-5", "gemini-2.5-flash"], "timeouts": {"gemma-4-26b-a4b-it": 1}, "answers": {"gemini-3.5-flash-lite": 15, "groq:openai/gpt-oss-120b": 1, "freellm:llama-3.3-70b": 3, "gemini-3.5-flash": 1, "gemini-3-flash-preview": 1, "groq:qwen/qwen3.8-27b": 2, "groq:allam-2-7b": 1}, "empty answers": {"groq:openai/gpt-oss-20b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 8, "router searches": 12, "router sources added": 0, "providers passed over": ["openrouter"]}
+Ballon d'Or 2026 facts: 5 verified, 5 one-source, 3 pages
+GTA 6: 1 verified, 5 one-source, 3 pages
+Dune Part Three trailer: 2 verified, 2 one-source, 2 pages
+mike flanagan: 5 verified, 5 one-source, 2 pages
+covered recently, no pack: The Hunger Games: Sunrise on the Reaping; Harry Potter HBO series; Halloween 2026; andrea kimi antonelli
+4 packs, 13 verified facts, 17 one-source
+gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 1, "router searches": 2, "router sources added": 0, "providers passed over": []}

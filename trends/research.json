@@ -1,5 +1,5 @@
 {
- "date": "2026-10-28",
+ "date": "2026-10-30",
  "note": "Open these first; still check each claim on two of them (CLAUDE.md, Facts).",
  "topics": [
   {
@@ -36,77 +36,51 @@
   },
   {
    "topic": "Ballon d'Or 2026",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+   "articles": [
+    {
+     "outlet": "BBC Sport",
+     "title": "Euro Leagues",
+     "url": "https://www.bbc.co.uk/sounds/play/p0pkb7f8?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
+     "url": "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "Sky Sports",
+     "title": "Ronaldo celebrates 'Ballon d'Or of All Time' with hat-trick",
+     "url": "https://www.skysports.com/football/live-blog/12040/12507208/football-latest-news-gossip",
+     "published": "2026-10-28"
+    },
+    {
+     "outlet": "BBC",
+     "title": "How 'anti-superstar' Kane defied doubters to become world's best",
+     "url": "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "Ballon d'Or past winners",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Football Daily | Fleetwood go their own way to down Arsenal and live Carabao Cup dream",
-     "url": "https://www.theguardian.com/football/2026/oct/28/fleetwood-arsenal-carabao-cup-football-daily-newsletter",
+     "title": "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
+     "url": "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
      "published": "2026-10-28"
     },
     {
-     "outlet": "BBC Sport",
-     "title": "Ousmane Dembele, Winchester City and the Ballon d'Or",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c50mejwmry3vo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "'Relax, I love Kane and Lamine Yamal' - Henry defends his Ballon d'Or hosting",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cm369r0n0zk5o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 facts",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Ballon d'Or winner Kane's best Bundesliga goals",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cmd93gqn8119o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "Weir 25th in Ballon d'Or and joins Olid & Cuthbert in award shortlist",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ckd6dzv7w85go?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 star",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "BBC Sport",
-     "title": "Ousmane Dembele, Winchester City and the Ballon d'Or",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c50mejwmry3vo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Ballon d'Or winner Kane's best Bundesliga goals",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cmd93gqn8119o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 rankings",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "ESPN",
-     "title": "Ballon d'Or 2026 results: Full rankings, all award winners",
-     "url": "https://www.espn.com/soccer/story/_/id/50289067/ballon-dor-2026-results-full-rankings-all-award-winners",
-     "published": "2026-10-26"
+     "outlet": "New York Times",
+     "title": "Welcome to the Ballon d’Or 2026: Cue cards, a Game of Thrones actress and a levitating dancer",
+     "url": "https://www.nytimes.com/athletic/7728343/2026/10/27/ballon-dor-scott-henry-2026-review/",
+     "published": "2026-10-27"
     },
     {
      "outlet": "USA Today",
@@ -117,78 +91,34 @@
    ]
   },
   {
-   "topic": "Ballon d'Or 2026 by the numbers",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "topic": "Ballon d'Or 2026 facts",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": [
     {
-     "outlet": "GameSpot",
-     "title": "If GTA 6 Beats Football On Thanksgiving, That’s A Win, EA Founder Says",
-     "url": "https://www.gamespot.com/articles/if-gta-6-beats-football-on-thanksgiving-thats-a-win-ea-founder-says/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Ballon d’Or: How did we do? Comparing The Athletic’s votes to the official results",
-     "url": "https://www.nytimes.com/athletic/7729374/2026/10/27/ballon-dor-vote-kane-mbappe-yamal/",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 best moments",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Star Trek Enters Magic: The Gathering’s Secret Lair Next Month, Here Are The Cards",
-     "url": "https://www.gamespot.com/articles/star-trek-enters-magic-the-gatherings-secret-lair-next-month-here-are-the-cards/",
+     "outlet": "BBC",
+     "title": "'Anything is possible' - Harry Kane is first England player to win Ballon d'Or in 25 years",
+     "url": "https://www.bbc.co.uk/newsround/articles/c574p3jkdp8xo",
      "published": "2026-10-27"
     },
     {
-     "outlet": "ESPN",
-     "title": "Sir Harry Kane? Downing Street praise Ballon d'Or winner",
-     "url": "https://www.espn.com/soccer/story/_/id/50295037/harry-kane-ballon-dor-deserved-prince-william",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Welcome to the Ballon d’Or 2026: Cue cards, a Game of Thrones actress and a levitating dancer",
-     "url": "https://www.nytimes.com/athletic/7728343/2026/10/27/ballon-dor-scott-henry-2026-review/",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Ballon d'Or 2026 what happens next",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-   "articles": [
-    {
-     "outlet": "Eurogamer",
-     "title": "Dawn of War 4 may be the most generous RTS I've played",
-     "url": "https://www.eurogamer.net/dawn-of-war-4-preview-most-generous-rts",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Harry Kane, Alexia Putellas win top Ballon d’Or prizes: Full list of winners, results",
-     "url": "https://www.nytimes.com/athletic/live-blogs/ballon-dor-2026-live-updates-results-time/sND0BDpI7kfj/",
-     "published": "2026-10-27"
+     "outlet": "The Telegraph",
+     "title": "Harry Kane ends England’s 25-year wait for Ballon d’Or winner",
+     "url": "https://www.telegraph.co.uk/football/2026/10/26/ballon-dor-2026-live-latest-updates-kane-yamal-mbappe/?status=none",
+     "published": "2026-10-26"
     }
    ]
   },
   {
    "topic": "The Celebrity Traitors",
-   "signal": "watchlist: The Celebrity Traitors (launch, 2 days to go)",
+   "signal": "watchlist: The Celebrity Traitors (launch)",
    "wikipedia": "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Howe, Nagelsmann, Pochettino: can anyone end Manchester United’s doom loop?",
-     "url": "https://www.theguardian.com/football/2026/oct/28/howe-nagelsmann-pochettino-can-anyone-end-manchester-uniteds-doom-loop",
-     "published": "2026-10-28"
+     "title": "DIY socks, messy collars and cummerbunds: nine wardrobe updates from the catwalks",
+     "url": "https://www.theguardian.com/fashion/2026/oct/29/diy-socks-messy-collars-and-cummberbunds-nine-wardrobe-updates-from-the-catwalks",
+     "published": "2026-10-30"
     },
     {
      "outlet": "BBC",
@@ -200,190 +130,173 @@
   },
   {
    "topic": "Halloween 2026",
-   "signal": "watchlist: Halloween 2026 (launch, 3 days to go)",
+   "signal": "watchlist: Halloween 2026 (launch, 1 day to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Which Halloween Songs Are Leading the Early Streaming Race This Year?",
-     "url": "https://www.billboard.com/music/chart-beat/halloween-songs-leading-streaming-michael-jackson-thriller-1236369597/",
-     "published": "2026-10-28"
+     "outlet": "Guardian",
+     "title": "‘Expect goosebumps!’: to celebrate Halloween, readers choose the spookiest places in the UK",
+     "url": "https://www.theguardian.com/travel/2026/oct/30/readers-favourite-spooky-places-uk-halloween",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘South Park’ to Fight for Its Beef in Latest Episode",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/south-park-season-29-episode-4-guinea-pig-on-stick-1236741892/",
-     "published": "2026-10-28"
+     "outlet": "Deadline",
+     "title": "‘Ghosts’: Rebecca Wisocky Talks Hetty’s Good, Long Look In The Mirror In Two-Part Halloween Special",
+     "url": "https://deadline.com/2026/10/ghosts-rebecca-wisocky-hetty-sister-margaret-halloween-cbs-1237208538/",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "PC Gamer",
-     "title": "If you love horror but hate actually being scared, I've got the perfect Halloween game for you",
-     "url": "https://www.pcgamer.com/games/puzzle/if-you-love-horror-but-hate-actually-being-scared-ive-got-the-perfect-halloween-game-for-you/",
-     "published": "2026-10-28"
+     "outlet": "Variety",
+     "title": "What to Watch on Disney+ in November 2026",
+     "url": "https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/",
+     "published": "2026-10-30"
     },
     {
      "outlet": "IGN",
-     "title": "Tubi Hidden Horror Gems for Halloween 2026",
-     "url": "https://www.ign.com/articles/tubi-hidden-horror-gems-for-halloween-2026",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "most popular Halloween costumes 2026",
-   "signal": "watchlist: Halloween 2026 (launch, 3 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Halloween",
-   "articles": [
-    {
-     "outlet": "Billboard",
-     "title": "The Best 2026 Halloween Costumes, From Paris Hilton as Britney Spears to Kim Kardashian as North West",
-     "url": "https://www.billboard.com/lists/best-halloween-costumes-paris-hilton-kim-kardashian/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Most popular Florida Halloween costumes? See Google Frightgeist rankings",
-     "url": "https://www.usatoday.com/story/entertainment/2026/10/28/popular-halloween-costumes-this-year-kids-pets-duos-dolly-parton-florida-nikki-obsession-buddy/92477883007/",
-     "published": "2026-10-28"
+     "title": "Call of Duty: Modern Warfare 4 Adds 'Non MilSim Content' Disclaimer to Halloween Themed Content",
+     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-adds-non-milsim-content-disclaimer-to-halloween-themed-content",
+     "published": "2026-10-29"
     }
    ]
   },
   {
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (surging, 22 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
    "articles": [
     {
-     "outlet": "PC Gamer",
-     "title": "GTA 6's PS5 install size is so big you could store 3500 copies of Balatro inside",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6s-ps5-install-size-is-so-big-you-could-store-3500-copies-of-balatro-inside/",
-     "published": "2026-10-28"
+     "outlet": "GameSpot",
+     "title": "Artist With Music In GTA 6 Had No Idea About Any Of That",
+     "url": "https://www.gamespot.com/articles/artist-with-music-in-gta-6-had-no-idea-about-any-of-that/",
+     "published": "2026-10-29"
     },
+    {
+     "outlet": "PC Gamer",
+     "title": "I'm calling it: GTA 6 is officially an immersive sim, based on what you can do with NPCs",
+     "url": "https://www.pcgamer.com/games/grand-theft-auto/im-calling-it-gta-6-is-officially-an-immersive-sim-based-on-what-you-can-do-with-npcs/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Dog poo, anti-social behaviour, and Jason: Our latest look at GTA 6 gameplay comes from an episode of South Park",
+     "url": "https://www.eurogamer.net/dog-poo-anti-social-behaviour-and-jason-our-latest-look-at-gta-6-gameplay-comes-from-the-latest-episode-of-south-park",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+   "articles": [
     {
      "outlet": "GameSpot",
      "title": "If GTA 6 Beats Football On Thanksgiving, That’s A Win, EA Founder Says",
      "url": "https://www.gamespot.com/articles/if-gta-6-beats-football-on-thanksgiving-thats-a-win-ea-founder-says/",
      "published": "2026-10-28"
-    },
-    {
-     "outlet": "NME",
-     "title": "Cliff Richard doesn’t know what ‘GTA 6’ is – despite ‘Devil Woman’ sync resurgence",
-     "url": "https://www.nme.com/news/gaming-news/cliff-richard-gta-6-interview-devil-woman-resurgence-soundtrack-3974444?utm_source=rss&utm_medium=rss&utm_campaign=cliff-richard-gta-6-interview-devil-woman-resurgence-soundtrack",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
-     "url": "https://www.eurogamer.net/rockstar-union-vote-november",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "GTA 6 price",
-   "signal": "watchlist: GTA 6 (surging, 22 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-   "articles": [
-    {
-     "outlet": "IGN",
-     "title": "Get GTA 6 Ultimate Edition on PS5 for Just $85 Using This Trick – Today Only",
-     "url": "https://www.ign.com/articles/get-gta-6-ultimate-edition-on-ps5-for-just-85-using-this-trick-today-only",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "‘GTA 6’ Launch Trailer Justifies Game’s Big Price Tag",
-     "url": "https://www.hollywoodreporter.com/business/business-news/gta-6-trailer-rockstar-games-grant-theft-auto-vi-gameplay-1236730855/",
-     "published": "2026-10-15"
     }
    ]
   },
   {
    "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (surging, 22 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
    "articles": [
     {
      "outlet": "GameSpot",
-     "title": "Witchbrook Is Stardew Valley Meets Kiki’s Delivery Service, And It Finally Has A Release Date",
-     "url": "https://www.gamespot.com/articles/witchbrook-is-stardew-valley-meets-kikis-delivery-service-and-it-finally-has-a-release-date/",
-     "published": "2026-10-28"
+     "title": "GTA 6’s Cops Will Send Dogs To Get You",
+     "url": "https://www.gamespot.com/articles/gta-6s-cops-will-send-dogs-to-get-you/",
+     "published": "2026-10-29"
     },
     {
      "outlet": "Eurogamer",
      "title": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
      "url": "https://www.eurogamer.net/rockstar-union-vote-november",
      "published": "2026-10-28"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Rockstar will hold union vote right on top of Grand Theft Auto 6 release",
-     "url": "https://www.pcgamer.com/games/grand-theft-auto/rockstar-will-hold-union-vote-right-on-top-of-grand-theft-auto-6-release/",
-     "published": "2026-10-27"
     }
    ]
   },
   {
    "topic": "The Hunger Games: Sunrise on the Reaping",
-   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 23 days to go)",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 21 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
    "articles": [
     {
-     "outlet": "Rolling Stone",
-     "title": "‘Sunrise on the Reaping’ Reunites Jennifer Lawrence With Woody Harrelson: ‘So Emotional’",
-     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/jennifer-lawrence-reunion-josh-hutcherson-woody-harrelson-1235649193/",
-     "published": "2026-10-28"
+     "outlet": "Variety",
+     "title": "Original ‘Hunger Games’ Star Elizabeth Banks Praises ‘Sunrise on the Reaping’ as ‘Amazing’: Joseph Zada Is a ‘Perfect’ Haymitch",
+     "url": "https://variety.com/2026/scene/news/hunger-games-elizabeth-banks-sunrise-on-the-reaping-joseph-zada-1236934165/",
+     "published": "2026-10-29"
     },
     {
-     "outlet": "GameSpot",
-     "title": "New Hunger Games Movie Comes Out The Day After GTA 6, But Is The Director Scared?",
-     "url": "https://www.gamespot.com/articles/new-hunger-games-movie-comes-out-the-day-after-gta-6-but-is-the-director-scared/",
+     "outlet": "The Hollywood Reporter",
+     "title": "‘The Hunger Games: Sunrise on the Reaping’ First Reactions",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/hunger-games-sunrise-on-the-reaping-first-reactions-1236742404/",
      "published": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "topic": "Hunger Games films in order",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 21 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
+   "articles": [
+    {
+     "outlet": "GameSpot",
+     "title": "South Park Gives Us A First Look At GTA 6’s Most Disgusting Feature",
+     "url": "https://www.gamespot.com/articles/south-park-gives-us-another-look-at-gta-6-most-disgusting-feature/",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "MAMA Awards 2026 nominees",
+   "signal": "watchlist: MAMA Awards 2026 (surging, 21 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_MAMA_Awards",
+   "articles": [
+    {
+     "outlet": "Billboard",
+     "title": "BIGBANG, ENHYPEN, CORTIS & More Set to Perform at 2026 MAMA Awards: Full List",
+     "url": "https://www.billboard.com/music/awards/2026-mama-awards-performers-bigbang-enhypen-cortis-1236361558/",
+     "published": "2026-10-15"
     }
    ]
   },
   {
    "topic": "Dune: Part Three",
-   "signal": "watchlist: Dune: Part Three (surging, 51 days to go)",
+   "signal": "watchlist: Dune: Part Three (surging, 49 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Dune%3A_Part_Three",
    "articles": [
     {
+     "outlet": "Sky Sports",
+     "title": "Love leads Packers past Panthers in vital win",
+     "url": "https://www.skysports.com/nfl/news/12040/13605642/carolina-panthers-19-27-green-bay-packers-jordan-love-throws-three-touchdown-passes-in-vital-win",
+     "published": "2026-10-30"
+    },
+    {
      "outlet": "Guardian",
-     "title": "Arsenal v Benfica: Women’s Champions League – live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/28/arsenal-v-benfica-womens-champions-league-live",
-     "published": "2026-10-28"
+     "title": "Les Kiss backs Beale to ‘compete’ for Wallabies’ World Cup spot: ‘He’s in there to perform’",
+     "url": "https://www.theguardian.com/sport/2026/oct/30/australia-wallabies-les-kiss-kurtley-beale-rugby-world-cup",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "Rolling Stone",
-     "title": "How Far They’ve Come: Where to Buy Tickets to Matchbox Twenty’s 30th Anniversary Tour",
-     "url": "https://www.rollingstone.com/product-recommendations/tickets/where-to-buy-matchbox-twenty-30th-anniversary-tour-tickets-online-deals-discounts-1235648891/",
-     "published": "2026-10-28"
+     "outlet": "Sky News",
+     "title": "British student pilot among three killed in mid-air helicopter crash in US",
+     "url": "https://news.sky.com/story/uk-student-pilot-among-three-killed-in-mid-air-helicopter-collision-in-oregon-13605632",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "GameSpot",
-     "title": "LOTRO’s Latest Expansion Is Out Now, Nearly 20 Years After The Game Launched",
-     "url": "https://www.gamespot.com/articles/lotros-latest-expansion-is-out-now-nearly-20-years-after-the-game-launched/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Tax thresholds remain unchanged - here's what it means for your pay",
-     "url": "https://www.bbc.co.uk/news/articles/clydn7r5pn1o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
+     "outlet": "Variety",
+     "title": "Shabana Azmi, Marco Müller Set for Inaugural Kathmandu Film Festival",
+     "url": "https://variety.com/2026/film/festivals/shabana-azmi-marco-muller-inaugural-kathmandu-film-festival-1236934643/",
+     "published": "2026-10-30"
     }
    ]
   },
   {
-   "topic": "Dune Part Three cast",
-   "signal": "watchlist: Dune: Part Three (surging, 51 days to go)",
+   "topic": "Dune Part Three trailer",
+   "signal": "watchlist: Dune: Part Three (surging, 49 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Dune%3A_Part_Three",
    "articles": [
-    {
-     "outlet": "Variety",
-     "title": "‘Difficult People’ Creator Julie Klausner on Reuniting Billy Eichner and the Gang for a Live-Read of the Movie Script That Never Got Made",
-     "url": "https://variety.com/2026/tv/features/julie-klausner-difficult-people-billy-eichner-cast-town-hall-event-1236929950/",
-     "published": "2026-10-28"
-    },
     {
      "outlet": "Space.com",
      "title": "The final ‘Dune: Part Three’ trailer reignites war on Arrakis and leaves us with more questions than answers",
@@ -393,535 +306,455 @@
    ]
   },
   {
-   "topic": "Walter Koenig",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "topic": "Harry Potter HBO series",
+   "signal": "watchlist: Harry Potter HBO series (surging, 56 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
    "articles": [
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "William Shatner Pays Tribute to ‘Star Trek’ Co-Star Walter Koenig: “Deeply Saddened”",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/william-shatner-walter-koenig-death-star-trek-tribute-1236741798/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Walter Koenig obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
+     "outlet": "Polygon",
+     "title": "HBO's Harry Potter series officially casts two key characters",
+     "url": "https://www.polygon.com/hbo-harry-potter-tv-show-lily-james-potter-casting/",
      "published": "2026-10-27"
     }
    ]
   },
   {
-   "topic": "Walter Koenig facts",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "William Shatner Pays Tribute to ‘Star Trek’ Co-Star Walter Koenig: “Deeply Saddened”",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/william-shatner-walter-koenig-death-star-trek-tribute-1236741798/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Walter Koenig obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "Walter Koenig star",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "William Shatner Pays Tribute to ‘Star Trek’ Co-Star Walter Koenig: “Deeply Saddened”",
-     "url": "https://www.hollywoodreporter.com/tv/tv-news/william-shatner-walter-koenig-death-star-trek-tribute-1236741798/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Walter Koenig obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/28/walter-koenig-obituary",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Star Trek actor Walter Koenig, who played Pavel Chekov, dies aged 90",
-     "url": "https://www.bbc.co.uk/news/articles/cv0ldjzg9xppo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Space.com",
-     "title": "'Star Trek' legend and sci-fi luminary Walter Koenig dies at 90",
-     "url": "https://www.space.com/entertainment/star-trek-legend-and-sci-fi-luminary-walter-koenig-dies-at-90",
-     "published": "2026-10-27"
-    }
-   ]
-  },
-  {
-   "topic": "hearts vs rangers",
-   "signal": "Google Trends GB 1000+",
+   "topic": "This Is Halloween by The Citizens of Halloween",
+   "signal": "Apple Music US: new in the top 25",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "BBC Sport",
-     "title": "Rangers' Shankland set for December return - gossip",
-     "url": "https://www.bbc.co.uk/sport/football/articles/c65yn8wnr902o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "carlisle vs harrogate town",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Harrogate Town Scores & Fixtures",
-     "url": "https://www.bbc.com/sport/football/teams/harrogate-town/scores-fixtures",
-     "published": "2026-10-04"
-    }
-   ]
-  },
-  {
-   "topic": "aberdeen vs falkirk",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Aberdeen v Falkirk: Team news",
-     "url": "https://www.bbc.com/sport/articles/ck3r53qv373jo",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "sunderland vs brentford",
-   "signal": "Google Trends GB 5000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "The Telegraph",
-     "title": "Sunderland v Brentford: EFL Cup fourth round – predictions, tips and bet builder",
-     "url": "https://www.telegraph.co.uk/betting/football/sunderland-vs-brentford-efl-cup-prediction-tips-2026/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Ex-Magpie Wilson starts for Brentford at Sunderland LIVE!",
-     "url": "https://www.skysports.com/football/sunderland-vs-brentford/live/578613",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "fulham vs palace",
-   "signal": "Google Trends GB 2000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Fulham_Palace",
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Fulham latest: Ali Wahid says Boreham Wood perfect place for him to progress",
-     "url": "https://www.skysports.com/football/live-blog/12040/13279313/fulham-transfers-latest-news-rumours-and-gossip-live-updates-goals-and-highlights",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "The Telegraph",
-     "title": "Fulham vs Crystal Palace predictions: EFL Cup tips and odds",
-     "url": "https://www.telegraph.co.uk/betting/football/fulham-vs-crystal-palace-efl-cup-prediction-tips-2026/",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "shane williams",
-   "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Shane_Williams",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Man Utd lacked intensity & fight - Alderweireld",
-     "url": "https://www.bbc.co.uk/sport/football/videos/c6wyrg2vwjmgo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "How Liverpool's attack impressed against Brighton",
-     "url": "https://www.bbc.co.uk/sport/football/videos/ckq6nvp2ldz5o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "bournemouth vs aston villa",
-   "signal": "Google Trends US 2000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "The Telegraph",
-     "title": "Bournemouth vs Aston Villa predictions: EFL Cup tips and odds",
-     "url": "https://www.telegraph.co.uk/betting/football/bournemouth-vs-aston-villa-efl-cup-predictions-tips-2026/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Madjo and Goretzka start for Aston Villa at Bournemouth LIVE!",
-     "url": "https://www.skysports.com/football/bournemouth-vs-aston-villa/live/578607",
-     "published": "2026-10-26"
-    },
-    {
      "outlet": "Guardian",
-     "title": "Premier League: 10 talking points from the weekend’s action",
-     "url": "https://www.theguardian.com/football/2026/oct/26/premier-league-10-talking-points-from-the-weekends-action",
-     "published": "2026-10-26"
-    }
-   ]
-  },
-  {
-   "topic": "man city vs brighton",
-   "signal": "Google Trends US 20000+",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Sky Sports",
-     "title": "Man City change NINE to host Brighton LIVE!",
-     "url": "https://www.skysports.com/football/manchester-city-vs-brighton-and-hove-albion/live/578614",
-     "published": "2026-10-28"
+     "title": "‘Expect goosebumps!’: to celebrate Halloween, readers choose the spookiest places in the UK",
+     "url": "https://www.theguardian.com/travel/2026/oct/30/readers-favourite-spooky-places-uk-halloween",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "BBC Sport",
-     "title": "Blackpool beat Aston Villa and Port Vale thrash Man City in Trophy",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cmly0zyd15jqo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Premier League: 10 talking points from the weekend’s action",
-     "url": "https://www.theguardian.com/football/2026/oct/26/premier-league-10-talking-points-from-the-weekends-action",
-     "published": "2026-10-26"
-    },
-    {
-     "outlet": "BBC",
-     "title": "Man City's perfect start over after draw at rivals Man Utd",
-     "url": "https://www.bbc.co.uk/sport/football/videos/cj3vq1ggw247o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-25"
-    }
-   ]
-  },
-  {
-   "topic": "taylor fritz",
-   "signal": "Google Trends US 1000+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Taylor_Fritz",
-   "articles": [
-    {
-     "outlet": "The Hollywood Reporter",
-     "title": "How ‘Call of Duty: Modern Warfare 4’ Tees Up Taylor Sheridan’s Movie",
-     "url": "https://www.hollywoodreporter.com/business/business-news/call-of-duty-modern-warfare-4-sets-up-taylor-sheridan-movie-1236740828/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "NME",
-     "title": "Dave Grohl on poaching Taylor Hawkins from Alanis Morissette and the moment they became “best friends for the rest of our lives”",
-     "url": "https://www.nme.com/news/music/dave-grohl-on-poaching-taylor-hawkins-from-alanis-morissette-became-best-friends-for-rest-of-lives-3974468?utm_source=rss&utm_medium=rss&utm_campaign=dave-grohl-on-poaching-taylor-hawkins-from-alanis-morissette-became-best-friends-for-rest-of-lives",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "Peter Asher: Everywhere Man review – music-biz face from Beatles-buddy pop act to superstar producer",
-     "url": "https://www.theguardian.com/film/2026/oct/28/peter-asher-everywhere-man-review-from-singer-of-beatles-cast-offs-to-super-star-producer",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "Celebrity Race Across the World",
-   "signal": "TVmaze GB: season premiere tonight, 20:00",
-   "wikipedia": "https://en.wikipedia.org/wiki/Celebrity_Race_Across_the_World",
-   "articles": [
-    {
-     "outlet": "BBC",
-     "title": "Celebrity Race Across The World 2026 - Everything you need to know",
-     "url": "https://www.bbc.com/mediacentre/articles/2026/celebrity-race-across-the-world-everything-you-need-know",
-     "published": "2026-10-21"
-    }
-   ],
-   "source": "TVmaze"
-  },
-  {
-   "topic": "Don't Starve Together",
-   "signal": "Steam most played: #27, up 19 places, 68,022 players at peak",
-   "wikipedia": "https://en.wikipedia.org/wiki/Don%27t_Starve_Together",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Nintendo Indie World’s Weirdest Game Got Me To Relax",
-     "url": "https://www.gamespot.com/articles/nintendo-indie-worlds-weirdest-game-got-me-to-relax/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "A Sugababe reveals her hardcore system for dating: best podcasts of the week",
-     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/26/a-sugababe-reveals-her-hardcore-system-for-dating-best-podcasts-of-the-week",
-     "published": "2026-10-26"
+     "outlet": "Variety",
+     "title": "What to Watch on Disney+ in November 2026",
+     "url": "https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/",
+     "published": "2026-10-30"
     },
     {
      "outlet": "IGN",
-     "title": "Don't Starve Together: Pocket Edition",
-     "url": "https://in.ign.com/dont-starve-together-pocket-edition",
-     "published": "2026-10-10"
+     "title": "Call of Duty: Modern Warfare 4 Adds 'Non MilSim Content' Disclaimer to Halloween Themed Content",
+     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-adds-non-milsim-content-disclaimer-to-halloween-themed-content",
+     "published": "2026-10-29"
     }
-   ],
-   "source": "Steam"
+   ]
   },
   {
-   "topic": "Visitor (Deluxe) by SIENNA SPIRO",
-   "signal": "Apple albums GB: new in the top 10",
+   "topic": "adhd",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Adhd",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Patients in Australia can now be diagnosed with ADHD by a GP. What does this mean for treatment?",
+     "url": "https://www.theguardian.com/australia-news/2026/oct/28/patients-in-australia-can-now-be-diagnosed-with-adhd-by-a-gp-what-does-this-mean-for-treatment",
+     "published": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "topic": "andrea kimi antonelli",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Mexico City GP: UK schedule and how to watch on Sky Sports",
+     "url": "https://www.skysports.com/f1/news/12040/13603629/mexico-city-gp-2026-dates-schedule-weather-uk-start-time-and-how-to-watch-or-stream-f1-race-at-autodromo-hermanos-rodriguez-live-on-sky-sports",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "George Russell determined not to let disappointing F1 season define career",
+     "url": "https://www.theguardian.com/sport/2026/oct/29/george-russell-f1-formula-one-mexico-grand-prix",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Antonelli to miss Mexico media day with illness",
+     "url": "https://www.bbc.co.uk/sport/formula1/articles/cke8rlrrzpqyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "diet",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Diet",
+   "articles": [
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Hey, Biohackers: Bryan Johnson’s Longevity Diet Just Hit Meal Delivery",
+     "url": "https://www.hollywoodreporter.com/lifestyle/shopping/bryan-johnson-tovala-longevity-meal-delivery-line-blueprint-1236743115/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "We quit Diet Coke, soda cold turkey. Here's what happened.",
+     "url": "https://www.usatoday.com/story/life/health-wellness/2025/10/29/soda-health-side-effects-quitting-caffeine/86585472007/",
+     "published": "2025-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "rothbury estate",
+   "signal": "Google Trends GB 200+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Sienna Spiro’s ‘Visitor’ Album Makes Top 10 Debut on Three Charts",
-     "url": "https://www.billboard.com/music/chart-beat/sienna-spiro-visitor-album-top-10-chart-debut-1236296532/",
-     "published": "2026-07-15"
+     "outlet": "BBC",
+     "title": "Attenborough-backed appeal secures £30m estate",
+     "url": "https://www.bbc.co.uk/news/articles/ck79pj8zn3vwo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-30"
     },
     {
-     "outlet": "Variety",
-     "title": "Sienna Spiro’s ‘The Visitor’ Introduces an Electrifying Voice That’s Here to Stay: Album Review",
-     "url": "https://variety.com/2026/music/reviews/sienna-spiro-visitor-album-review-1236801598/",
-     "published": "2026-07-03"
+     "outlet": "Guardian",
+     "title": "Wildlife Trusts hit £30m target to buy and rewild huge Northumberland estate",
+     "url": "https://www.theguardian.com/environment/2026/oct/30/wildlife-trusts-northumberland-nature-recovery-rothbury-estate",
+     "published": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "topic": "esther rantzen",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Esther_Rantzen",
+   "articles": [
+    {
+     "outlet": "Evening Standard",
+     "title": "Esther Rantzen laid to rest in funeral as family share her emotional 'assisted dying' wish",
+     "url": "https://www.standard.co.uk/showbiz/esther-rantzen-funeral-death-b1301532.html",
+     "published": "2026-10-19"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "‘She asked me to lie on her feet while she did sit-ups’: your memories of Esther Rantzen",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/16/esther-rantzen-presenter-campaigner-tributes-guardian-readers",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "harriet dart",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harriet_Dart",
+   "articles": [
+    {
+     "outlet": "Sky Sports",
+     "title": "Jacob Fearnley retires hurt against Arthur Fery at Vienna Open as Harriet Dart extends winning run",
+     "url": "https://www.skysports.com/tennis/news/13604099/jacob-fearnley-retires-hurt-against-arthur-fery-at-vienna-open-as-harriet-dart-extends-winning-run",
+     "published": "2026-10-26"
+    }
+   ]
+  },
+  {
+   "topic": "faith evans",
+   "signal": "Google Trends US 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Faith_Evans",
+   "articles": [
+    {
+     "outlet": "Rolling Stone",
+     "title": "Faith Evans Must Pay $12.5 Million to the Notorious B.I.G.’s Former Manager",
+     "url": "https://www.rollingstone.com/music/music-news/faith-evans-notorious-big-manager-voletta-wallace-estate-1235650168/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "BBC",
+     "title": "George Michael's Faith guitar sells for £180k after auction row",
+     "url": "https://www.bbc.co.uk/news/articles/cmr4y51gd5yro?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "NME",
+     "title": "Family row breaks out over George Michael items up for auction – including iconic ‘Faith’ guitar",
+     "url": "https://www.nme.com/news/music/family-row-breaks-out-over-george-michael-items-up-for-auction-faith-guitar-3974573?utm_source=rss&utm_medium=rss&utm_campaign=family-row-breaks-out-over-george-michael-items-up-for-auction-faith-guitar",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "mike flanagan",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Mike_Flanagan_(filmmaker)",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "The Dark Tower TV Series Would Be 'Remarkably Faithful' to Stephen King's Books, Mike Flanagan Says",
+     "url": "https://www.ign.com/articles/the-dark-tower-tv-series-would-be-remarkably-faithful-to-stephen-kings-books-mike-flanagan-says",
+     "published": "2026-10-16"
+    }
+   ]
+  },
+  {
+   "topic": "Patrick Stewart",
+   "signal": "Wikipedia 2,356,552 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Patrick_Stewart",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Sir Patrick Stewart: Actor who moved effortlessly between Star Trek and Shakespeare",
+     "url": "https://www.bbc.co.uk/news/articles/cye0l23lx15o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "The Hollywood Reporter",
+     "title": "Patrick Stewart’s Career Was a Rare and Thrilling Marriage of the Prestigious and the Populist",
+     "url": "https://www.hollywoodreporter.com/movies/movie-reviews/patrick-stewart-critics-appreciation-1236743268/",
+     "published": "2026-10-30"
     },
     {
      "outlet": "Rolling Stone",
-     "title": "Sienna Spiro Makes a Hopeful But Hesitant Debut on ‘Visitor’",
-     "url": "https://www.rollingstone.com/music/music-album-reviews/sienna-spiro-visitor-album-review-1235586848/",
-     "published": "2026-07-03"
+     "title": "Ian McKellen Honors Close Friend Patrick Stewart: ‘A Man to Rely On, to Admire and In My Case, Love’",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/ian-mckellen-patrick-stewart-tribute-1235650247/",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Deadline",
+     "title": "Ian McKellen Pays Tribute To Patrick Stewart: “He Wore His Heart On His Sleeve”",
+     "url": "https://deadline.com/2026/10/ian-mckellen-pays-tribute-patrick-stewart-1237209210/",
+     "published": "2026-10-30"
     }
-   ],
-   "source": "Apple albums"
+   ]
   },
   {
-   "topic": "Google Maps",
-   "signal": "App Store GB: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Google_Maps",
+   "topic": ".xxx",
+   "signal": "Wikipedia 390,246 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/.xxx",
    "articles": [
     {
-     "outlet": "The Verge",
-     "title": "Surprise: The Google Xreal glasses debut at a Meta-beating $1,099",
-     "url": "https://www.theverge.com/tech/1020960/google-xreal-glasses-debut-meta-vr-glasses-price-release-date",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Discord's Massive New Change Will Shake Up The Entire Internet",
-     "url": "https://www.polygon.com/discord-google-reddit-search-messages-how-opt-turn-off/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
-     "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Proton's Black Friday sale is already live: ditch Google with up to 70% off its VPN and 50% off unlimited plan",
-     "url": "https://www.pcgamer.com/hardware/protons-black-friday-sale-is-already-live-ditch-google-with-up-to-70-percent-off-its-vpn-and-50-percent-off-unlimited-plan/",
-     "published": "2026-10-28"
+     "outlet": "IGN",
+     "title": "XXX: Return of Xander Cage Review",
+     "url": "https://www.ign.com/articles/2017/01/19/xxx-return-of-xander-cage-review",
+     "published": "2017-01-18"
     }
-   ],
-   "source": "App Store"
+   ]
   },
   {
-   "topic": "First Dates",
-   "signal": "TVmaze GB: season premiere tonight, 22:00",
-   "wikipedia": "https://en.wikipedia.org/wiki/First_Dates",
+   "topic": "Sunny Ozell",
+   "signal": "Wikipedia 346,682 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Sunny_Ozell",
    "articles": [
     {
-     "outlet": "Billboard",
-     "title": "Lawsuit Over Beatles’ ‘First Known’ Recording Heads to Trial After Judge’s Ruling",
-     "url": "https://www.billboard.com/pro/beatles-tape-lawsuit-judge-rules-universal-rare-recording/",
-     "published": "2026-10-28"
+     "outlet": "GameSpot",
+     "title": "Patrick Stewart Dies At 86",
+     "url": "https://www.gamespot.com/articles/patrick-stewart-dies-at-86/",
+     "published": "2026-10-29"
     },
     {
-     "outlet": "Variety",
-     "title": "After the Cast and Creator’s Comments, ‘Nobody Wants This’ Can No Longer Ignore Israel and Gaza",
-     "url": "https://variety.com/2026/tv/columns/nobody-wants-this-cant-ignore-israel-gaza-adam-brody-1236933496/",
+     "outlet": "Guardian",
+     "title": "Australia gain edge in Test decider after late Bavuma blow hurts South Africa",
+     "url": "https://www.theguardian.com/sport/2026/oct/29/south-africa-australia-third-test-day-three-match-report",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "William Contreras",
+   "signal": "Wikipedia 228,487 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/William_Contreras",
+   "articles": [
+    {
+     "outlet": "USA Today",
+     "title": "Brewers World Series MVP William Contreras feels he’s ‘best catcher in the world’ | Lori Nickel",
+     "url": "https://giantswire.usatoday.com/story/sports/mlb/brewers/2026/10/29/william-contreras-today-i-feel-like-i-am-the-best-catcher-in-the-world/92476356007/",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "Jacob Misiorowski",
+   "signal": "Wikipedia 212,900 views",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
+   "articles": [
+    {
+     "outlet": "New York Times",
+     "title": "Brewers’ Jacob Misiorowski digs deep for a gem to cap marvelous month, season for the ages",
+     "url": "https://www.nytimes.com/athletic/7733205/2026/10/29/jacob-misiorowski-brewers-world-series-championship-cy-young-award/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "USA Today",
+     "title": "Jacob Misiorowski to start World Series Game 5 after Brewers fail to sweep Rays",
+     "url": "https://sportsbookwire.usatoday.com/story/sports/mlb/brewers/2026/10/28/jacob-misiorowski-to-start-game-5-after-brewers-fail-to-sweep-rays/92459018007/",
      "published": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "topic": "2026 World Series",
+   "signal": "Wikipedia In the news",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_World_Series",
+   "articles": [
+    {
+     "outlet": "IGN",
+     "title": "Death Stranding Isolations Anime Gets First Trailer",
+     "url": "https://www.ign.com/articles/death-stranding-isolations-anime-gets-first-trailer",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "The Mosquito Bowl review – Netflix mixes football, war and cliches in slick by-the-numbers saga",
+     "url": "https://www.theguardian.com/film/2026/oct/29/the-mosquito-bowl-netflix-movie-review",
+     "published": "2026-10-29"
     },
     {
      "outlet": "GameSpot",
-     "title": "LOTRO’s Latest Expansion Is Out Now, Nearly 20 Years After The Game Launched",
-     "url": "https://www.gamespot.com/articles/lotros-latest-expansion-is-out-now-nearly-20-years-after-the-game-launched/",
-     "published": "2026-10-28"
+     "title": "Xbox Wants To Be More Profitable Than PlayStation And Nintendo By 2030",
+     "url": "https://www.gamespot.com/articles/xbox-wants-to-be-more-profitable-than-playstation-and-nintendo-by-2030/",
+     "published": "2026-10-29"
     },
     {
-     "outlet": "Sky Sports",
-     "title": "Norris, Verstappen among 10 F1 drivers to miss Mexico first practice",
-     "url": "https://www.skysports.com/f1/news/12040/13604824/mexico-city-gp-max-verstappen-george-russell-lando-norris-among-nine-f1-drivers-to-miss-first-practice",
-     "published": "2026-10-28"
+     "outlet": "Xbox Wire",
+     "title": "Weave Your Own Fate: Titan Quest II Is Now Available for Pre-Order on XBOX Series X|S",
+     "url": "https://news.xbox.com/en-us/2026/10/29/titan-quest-ii-pre-order/",
+     "published": "2026-10-29"
+    }
+   ],
+   "source": "Wikipedia In the news"
+  },
+  {
+   "topic": "Michael Jackson",
+   "signal": "On this day in 2001, 25 years ago (Wikipedia)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Michael_Jackson",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Premier League: 10 things to look out for this weekend",
+     "url": "https://www.theguardian.com/football/2026/oct/30/premier-league-10-things-to-look-out-for-this-weekend",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "BBC",
+     "title": "George Michael's Faith guitar sells for £180k after auction row",
+     "url": "https://www.bbc.co.uk/news/articles/cmr4y51gd5yro?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "NME",
+     "title": "Family row breaks out over George Michael items up for auction – including iconic ‘Faith’ guitar",
+     "url": "https://www.nme.com/news/music/family-row-breaks-out-over-george-michael-items-up-for-auction-faith-guitar-3974573?utm_source=rss&utm_medium=rss&utm_campaign=family-row-breaks-out-over-george-michael-items-up-for-auction-faith-guitar",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "BBC Sport",
+     "title": "'Fully committed' Fernandes to remain Man Utd captain",
+     "url": "https://www.bbc.co.uk/sport/football/articles/ckz7x8z1e9y9o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
+    }
+   ],
+   "source": "On this day",
+   "kind": "evergreen"
+  },
+  {
+   "topic": "The Patrick Star Show",
+   "signal": "TVmaze US: season premiere tonight, 18:00",
+   "wikipedia": "https://en.wikipedia.org/wiki/The_Patrick_Star_Show",
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Sir Patrick Stewart: Actor who moved effortlessly between Star Trek and Shakespeare",
+     "url": "https://www.bbc.co.uk/news/articles/cye0l23lx15o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Patrick Stewart brought gravitas and complexity to the screen, from Star Trek to X-Men",
+     "url": "https://www.theguardian.com/film/2026/oct/30/patrick-stewart-death-tribute-shakespearian-actor-superhero",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Space.com",
+     "title": "Patrick Stewart, renowned actor and ‘Star Trek’s’ Captain Picard, dies at 86",
+     "url": "https://www.space.com/entertainment/patrick-stewart-renowned-actor-and-star-treks-captain-picard-dies-at-86",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "Rolling Stone",
+     "title": "Kevin Feige, Hugh Jackman, Seth MacFarlane Remember Patrick Stewart: ‘This One Hurts’",
+     "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/patrick-stewart-celebrities-reacts-tributes-1235650051/",
+     "published": "2026-10-29"
     }
    ],
    "source": "TVmaze"
   },
   {
-   "topic": "Amazon Shopping",
-   "signal": "App Store GB: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Shopping",
+   "topic": "2026 Mexico City Grand Prix",
+   "signal": "Formula 1 race weekend, Sunday 1 November (Jolpica)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix",
    "articles": [
     {
-     "outlet": "Variety",
-     "title": "The Best Gifts for Men in 2026: From Criterion Collector’s Sets to Coffee Subscriptions and Photo Books",
-     "url": "https://variety.com/2026/shopping/news/best-gifts-for-men-2026-1236933361/",
-     "published": "2026-10-28"
+     "outlet": "BBC",
+     "title": "Antonelli to miss Mexico media day with illness",
+     "url": "https://www.bbc.co.uk/sport/formula1/articles/cke8rlrrzpqyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-29"
     },
     {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Breaks A Record, And It’s Not Even Out Yet",
-     "url": "https://www.gamespot.com/articles/gta-6-breaks-a-record-and-its-not-even-out-yet/",
-     "published": "2026-10-28"
+     "outlet": "Sky Sports",
+     "title": "Antonelli misses Mexico media day with viral illness",
+     "url": "https://www.skysports.com/f1/news/12040/13605421/kimi-antonelli-to-miss-mexico-city-gp-media-day-due-to-viral-illness-ahead-of-likely-world-championship-coronation",
+     "published": "2026-10-29"
     }
    ],
-   "source": "App Store"
+   "source": "Formula 1"
   },
   {
-   "topic": "Google Gemini",
-   "signal": "App Store US: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Google_Gemini",
-   "articles": [
-    {
-     "outlet": "The Verge",
-     "title": "Surprise: The Google Xreal glasses debut at a Meta-beating $1,099",
-     "url": "https://www.theverge.com/tech/1020960/google-xreal-glasses-debut-meta-vr-glasses-price-release-date",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "Polygon",
-     "title": "Discord's Massive New Change Will Shake Up The Entire Internet",
-     "url": "https://www.polygon.com/discord-google-reddit-search-messages-how-opt-turn-off/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "As AI agents reshape the web, Google opens Gemini and Search to more apps",
-     "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "PC Gamer",
-     "title": "Proton's Black Friday sale is already live: ditch Google with up to 70% off its VPN and 50% off unlimited plan",
-     "url": "https://www.pcgamer.com/hardware/protons-black-friday-sale-is-already-live-ditch-google-with-up-to-70-percent-off-its-vpn-and-50-percent-off-unlimited-plan/",
-     "published": "2026-10-28"
-    }
-   ],
-   "source": "App Store"
-  },
-  {
-   "topic": "Threads",
-   "signal": "App Store US: new in the top 10 free apps",
-   "wikipedia": "https://en.wikipedia.org/wiki/Threads",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Nintendo’s Indie World Presentation Was Pretty Packed For A Short Show",
-     "url": "https://www.gamespot.com/articles/nintendos-indie-world-presentation-was-pretty-packed-for-a-short-show/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "TechCrunch",
-     "title": "Threads users can now chat with Meta AI in their DMs",
-     "url": "https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/",
-     "published": "2026-07-27"
-    },
-    {
-     "outlet": "9to5Mac",
-     "title": "Threads is testing long-form posts with support for formatted text [U: Launched]",
-     "url": "https://9to5mac.com/2025/09/04/threads-is-testing-long-form-posts-with-support-for-formatted-text/",
-     "published": "2025-09-04"
-    },
-    {
-     "outlet": "CNN",
-     "title": "Threads now has ‘tens of millions’ of daily users. But its honeymoon phase may be over",
-     "url": "https://www.cnn.com/2023/07/19/tech/threads-meta-growth-plan",
-     "published": "2023-07-19"
-    }
-   ],
-   "source": "App Store"
+   "topic": "Chia Thye Poh",
+   "signal": "On this day in 1966, 60 years ago (Wikipedia)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Chia_Thye_Poh",
+   "articles": [],
+   "source": "On this day",
+   "kind": "evergreen"
   },
   {
    "topic": "Ballon d'Or 2026 analysis",
-   "signal": "watchlist: Ballon d'Or 2026 (launch)",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": []
   },
   {
-   "topic": "Celebrity Traitors 2026 cast",
-   "signal": "watchlist: The Celebrity Traitors (launch, 2 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+   "topic": "Ballon d'Or 2026 reaction",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
    "articles": []
   },
   {
-   "topic": "Walter Koenig best moments",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "topic": "why we carve pumpkins",
+   "signal": "watchlist: Halloween 2026 (launch, 1 day to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Halloween",
    "articles": []
   },
   {
-   "topic": "Walter Koenig what happens next",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "topic": "MAMA Awards 2026",
+   "signal": "watchlist: MAMA Awards 2026 (surging, 21 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/2026_MAMA_Awards",
    "articles": []
   },
   {
-   "topic": "Walter Koenig past winners",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "topic": "Avengers: Doomsday",
+   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
    "articles": []
   },
   {
-   "topic": "Walter Koenig by the numbers",
-   "signal": "watchlist: Walter Koenig (surging)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Walter_Koenig",
+   "topic": "Avengers Doomsday cast",
+   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
    "articles": []
   },
   {
-   "topic": "chris hemsworth",
-   "signal": "Google Trends GB 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Chris_Hemsworth",
+   "topic": "Harry Potter series trailer",
+   "signal": "watchlist: Harry Potter HBO series (surging, 56 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
    "articles": []
   },
   {
-   "topic": "inter",
-   "signal": "Google Trends US 500+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Inter",
+   "topic": "Thriller by Michael Jackson",
+   "signal": "Apple Music GB: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Thriller_(Michael_Jackson_album)",
    "articles": []
   }
  ]

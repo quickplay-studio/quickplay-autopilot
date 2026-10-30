@@ -1,39 +1,6 @@
 {
- "date": "2026-10-28",
+ "date": "2026-10-30",
  "previous": {
-  "albums_gb": [
-   "The Art of Loving by Olivia Dean",
-   "To Fall Asleep To by Rain Sounds",
-   "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
-   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
-   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys"
-  ],
-  "apps_gb": [
-   "DAZN: Stream Live Sports",
-   "ASDA",
-   "Lloyds Mobile Banking",
-   "InPost UK",
-   "ChatGPT",
-   "StoryReel: Drama Shorts & TV",
-   "Claude by Anthropic",
-   "Whatnot: Shop, Sell, Connect",
-   "Vinted: Shop & sell pre-loved"
-  ],
-  "albums_us": [],
-  "apps_us": [
-   "TikTok Pro - Events",
-   "Vinted: Pre-loved marketplace",
-   "Muse from Meta",
-   "ChatGPT",
-   "Capital One Mobile",
-   "Jumper VPN: Secure Proxy",
-   "Claude by Anthropic",
-   "DAZN: Stream Live Sports",
-   "Trump Accounts: Official App",
-   "PineDrama - Short Dramas"
-  ]
- },
- "lists": {
   "albums_gb": [
    "The Art of Loving by Olivia Dean",
    "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
@@ -63,6 +30,15 @@
    "PineDrama - Short Dramas",
    "Threads",
    "Kalshi: Trade Sports & Events"
+  ]
+ },
+ "lists": {
+  "albums_gb": [
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
+   "To Fall Asleep To by Rain Sounds",
+   "The Art of Loving by Olivia Dean",
+   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
+   "Visitor (Deluxe) by SIENNA SPIRO"
   ]
  }
 }

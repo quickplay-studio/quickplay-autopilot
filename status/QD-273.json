@@ -1,0 +1,184 @@
+{
+ "id": "QD-273",
+ "board": "boards/queue/QD-273.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T08:00:00Z",
+ "rendered": "2026-10-30T01:22:51.196688+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"2026 Ballon d'Or\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 15,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 27.0,
+  "wps": 3.13,
+  "weak_beats": [],
+  "size_mb": 20.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 876.6,
+   "contrast": 0.189,
+   "face_area": 0.2755,
+   "text_area": 0.0703,
+   "caption_contrast": 6.38,
+   "by_frame": {
+    "sharpness": [
+     851.3,
+     915.5,
+     897.5,
+     842.1
+    ],
+    "contrast": [
+     0.188,
+     0.188,
+     0.189,
+     0.189
+    ],
+    "face_area": [
+     0.2669,
+     0.25,
+     0.2601,
+     0.3249
+    ],
+    "text_area": [
+     0.0801,
+     0.056,
+     0.0685,
+     0.0768
+    ],
+    "caption_contrast": [
+     6.4,
+     6.33,
+     6.35,
+     6.42
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.87,
+   "none",
+   1
+  ],
+  [
+   2.87,
+   7.74,
+   "none",
+   3
+  ],
+  [
+   7.74,
+   10.95,
+   "none",
+   2
+  ],
+  [
+   10.95,
+   14.22,
+   "none",
+   2
+  ],
+  [
+   14.22,
+   18.84,
+   "none",
+   3
+  ],
+  [
+   18.84,
+   21.45,
+   "none",
+   2
+  ],
+  [
+   21.45,
+   24.3,
+   "none",
+   2
+  ],
+  [
+   24.3,
+   27.01,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "176408",
+   "q": "london city night",
+   "t0": 0.0,
+   "t1": 13.8
+  },
+  {
+   "p": "pixabay",
+   "id": "139356",
+   "q": "running track sunrise",
+   "t0": 13.2,
+   "t1": 27.01
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T01:47:51Z",
+ "video": "EYdrZlrjsDk",
+ "url": "https://youtube.com/shorts/EYdrZlrjsDk",
+ "publish_at": "2026-10-30T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-273"
+}

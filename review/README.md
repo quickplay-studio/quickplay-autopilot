@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 0 public | 2 | 1 | ⏳ 0 of 15 so far |
+| Fri 30 Oct | 0 public, 3 scheduled | 2 | 1 | ⏳ 0 of 15 so far, 3 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -146,12 +146,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-246** Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed (rendering next)
-- **QD-272** Harry Kane Ballon d'Or: first win in London 🏆 (rendering next)
-- **QD-273** Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆 (rendering next)
 
 ## On the channel (latest first)
 

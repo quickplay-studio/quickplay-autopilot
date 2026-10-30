@@ -1,0 +1,175 @@
+{
+ "id": "QD-272",
+ "board": "boards/queue/QD-272.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T03:30:00Z",
+ "rendered": "2026-10-30T01:22:40.851271+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"2026 Ballon d'Or\" is in today's trends",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Harry Kane Ballon d'Or: first win in London 🏆",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)",
+  "pixabay:287386 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2025/06/23/2873",
+  "pixabay:195 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2015/08/10/195-",
+  "pixabay:177871 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2023/08/26/1778",
+  "pixabay:23014 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2019/04/23/2301",
+  "pixabay:139362 skipped: 429 Client Error: Too Many Requests for url: https://cdn.pixabay.com/video/2022/11/16/1393"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 14,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1025",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 25.0,
+  "wps": 3.35,
+  "weak_beats": [],
+  "size_mb": 17.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 443.8,
+   "contrast": 0.184,
+   "face_area": 0.2263,
+   "text_area": 0.0372,
+   "caption_contrast": 2.46,
+   "by_frame": {
+    "sharpness": [
+     440.5,
+     474.0,
+     410.8,
+     450.0
+    ],
+    "contrast": [
+     0.191,
+     0.191,
+     0.188,
+     0.166
+    ],
+    "face_area": [
+     0.1936,
+     0.2025,
+     0.1936,
+     0.3155
+    ],
+    "text_area": [
+     0.0401,
+     0.0388,
+     0.0385,
+     0.0311
+    ],
+    "caption_contrast": [
+     2.45,
+     2.46,
+     2.45,
+     5.01
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.13,
+   "none",
+   1
+  ],
+  [
+   2.13,
+   4.3,
+   "none",
+   2
+  ],
+  [
+   4.3,
+   6.64,
+   "none",
+   2
+  ],
+  [
+   6.64,
+   10.41,
+   "none",
+   3
+  ],
+  [
+   10.41,
+   13.05,
+   "none",
+   2
+  ],
+  [
+   13.05,
+   16.19,
+   "none",
+   2
+  ],
+  [
+   16.19,
+   19.13,
+   "none",
+   2
+  ],
+  [
+   19.13,
+   25.03,
+   "none",
+   4
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T01:47:49Z",
+ "video": "U_eHPDhew8M",
+ "url": "https://youtube.com/shorts/U_eHPDhew8M",
+ "publish_at": "2026-10-30T03:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T03:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-272"
+}

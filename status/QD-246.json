@@ -1,0 +1,187 @@
+{
+ "id": "QD-246",
+ "board": "boards/queue/QD-246.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T06:30:00Z",
+ "rendered": "2026-10-30T01:23:58.466723+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"2026 Ballon d'Or\" is in today's trends",
+  "days_late": 2
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1025"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1026"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1025",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1026",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa_note": "narration a little unclear in beat 1 (captions carry it)",
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 35.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 22.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 406.8,
+   "contrast": 0.182,
+   "face_area": 0.0119,
+   "text_area": 0.0328,
+   "caption_contrast": 4.07,
+   "by_frame": {
+    "sharpness": [
+     411.7,
+     407.0,
+     407.9,
+     400.6
+    ],
+    "contrast": [
+     0.18,
+     0.181,
+     0.183,
+     0.185
+    ],
+    "face_area": [
+     0.0165,
+     0.0,
+     0.0235,
+     0.0078
+    ],
+    "text_area": [
+     0.0343,
+     0.0323,
+     0.0322,
+     0.0327
+    ],
+    "caption_contrast": [
+     4.14,
+     4.13,
+     4.0,
+     4.01
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.83,
+   "none",
+   1
+  ],
+  [
+   2.83,
+   7.53,
+   "none",
+   3
+  ],
+  [
+   7.53,
+   11.87,
+   "none",
+   3
+  ],
+  [
+   11.87,
+   16.49,
+   "none",
+   3
+  ],
+  [
+   16.49,
+   21.18,
+   "none",
+   3
+  ],
+  [
+   21.18,
+   26.11,
+   "none",
+   3
+  ],
+  [
+   26.11,
+   35.69,
+   "none",
+   6
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "10827",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 12.3
+  },
+  {
+   "p": "pixabay",
+   "id": "236098",
+   "q": "concert stage lights",
+   "t0": 11.7,
+   "t1": 23.99
+  },
+  {
+   "p": "pixabay",
+   "id": "139365",
+   "q": "running track sunrise",
+   "t0": 23.39,
+   "t1": 35.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T01:47:47Z",
+ "video": "rsTvuhXP5xw",
+ "url": "https://youtube.com/shorts/rsTvuhXP5xw",
+ "publish_at": "2026-10-30T06:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T06:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-246"
+}

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 11:46): 22 of 1,000 subscribers · 14,789 of 10 million Shorts views in 90 days · 5,766 views in the last 24 hours (about 110,947 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 12:59): 22 of 1,000 subscribers · 14,871 of 10 million Shorts views in 90 days · 6,028 views in the last 24 hours (about 110,946 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 11:34 (UK): 6 scheduled, 144 public, 12 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public, 4 scheduled | 0 | 0 | ⏳ 4 of 15 scheduled |
-| Fri 30 Oct | 6 public, 3 scheduled | 8 | 1 | ⏳ 6 of 15 so far, 3 more scheduled |
+| Fri 30 Oct | 7 public, 2 scheduled | 8 | 1 | ⏳ 7 of 15 so far, 2 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -169,7 +169,7 @@ scheduled · 40 s · music: once-upon-a-time · [script](../boards/done/QD-278.j
 ![QD-278](QD-278.jpg)
 
 ### Fri 30 Oct 13:00 · Celebrity Traitors #2: Final: series two ends today 🏁
-scheduled · 26 s · music: stake-out · [script](../boards/done/QD-277.json) · [YouTube](https://youtube.com/shorts/qSpSNwWEBDQ)
+private · 26 s · music: stake-out · [script](../boards/done/QD-277.json) · [YouTube](https://youtube.com/shorts/qSpSNwWEBDQ)
 
 ![QD-277](QD-277.jpg)
 

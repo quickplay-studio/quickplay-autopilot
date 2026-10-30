@@ -1,5 +1,5 @@
 {
- "started": "2026-10-30T16:30:14+00:00",
+ "started": "2026-10-30T19:10:25+00:00",
  "job": "trends",
  "ok": true,
  "reason": "",
@@ -23,7 +23,9 @@
  "dropped": [
   "keenable"
  ],
- "calls": {},
+ "calls": {
+  "ovh": 2
+ },
  "search_switched_on": [],
  "search_rows": [
   "tavily/tavily-search keys 0",
@@ -32,12 +34,6 @@
   "linkup/linkup-search keys 0"
  ],
  "history": [
-  {
-   "t": "2026-10-30T08:15:46+00:00",
-   "job": "evolve",
-   "ok": true,
-   "reason": ""
-  },
   {
    "t": "2026-10-30T08:56:25+00:00",
    "job": "trends",
@@ -79,9 +75,15 @@
    "job": "trends",
    "ok": true,
    "reason": ""
+  },
+  {
+   "t": "2026-10-30T19:10:25+00:00",
+   "job": "trends",
+   "ok": true,
+   "reason": ""
   }
  ],
- "calls_total": 0,
- "tokens": 0,
- "finished": "2026-10-30T16:44:43+00:00"
+ "calls_total": 2,
+ "tokens": 6979,
+ "finished": "2026-10-30T19:25:00+00:00"
 }

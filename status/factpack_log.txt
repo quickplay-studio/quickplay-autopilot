@@ -1,8 +1,11 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-GTA 6: 6 verified, 4 one-source, 4 pages
-Avengers Doomsday cast: 11 verified, 4 one-source, 2 pages
-Homewrecker by sombr: 2 verified, 6 one-source, 2 pages
-gruffalo illustrator: 0 verified, 15 one-source, 1 pages
-covered recently, no pack: Harry Potter HBO series; Halloween 2026; 2026 Mexico City Grand Prix; ChatGPT
-4 packs, 19 verified facts, 29 one-source
-gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now", "gemini-3.8-flash": "daily limit 20", "gemini-3.7-flash": "daily limit 20", "groq:openai/gpt-oss-120b": "daily limit", "gemini-3.6-flash": "daily limit 20", "gemini-3.5-flash": "daily limit 20", "gemini-omni-1.1-flash": "daily limit"}, "retired": ["gemini-2.5-flash"], "timeouts": {"gemini-flash-latest": 1}, "answers": {"gemini-3.5-flash-lite": 5, "groq:openai/gpt-oss-120b": 1, "gemini-3.6-flash": 1, "gemini-3-flash-preview": 2}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 4, "router searches": 4, "router sources added": 0, "providers passed over": []}
+GTA 6: 1 verified, 3 one-source, 3 pages
+GTA 6 PC release: 0 verified, 6 one-source, 3 pages
+Avengers Doomsday cast: 7 verified, 7 one-source, 2 pages
+Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United: 0 verified, 5 one-source, 1 pages
+freddie slater: 0 verified, 8 one-source, 2 pages
+sam altman: 1 verified, 8 one-source, 4 pages
+bonfire night: 3 verified, 5 one-source, 3 pages
+covered recently, no pack: Harry Potter HBO series; Halloween 2026; The Celebrity Traitors; EA picked Star Wars over BioWare; 2026 Mexico City Grand Prix
+7 packs, 12 verified facts, 42 one-source
+gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "groq:openai/gpt-oss-120b": "daily limit"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 8, "groq:openai/gpt-oss-120b": 2, "freellm:llama-3.3-70b": 2}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 4, "router searches": 3, "router sources added": 0, "providers passed over": []}

@@ -1,26 +1,28 @@
 scope,age,gender,viewer_pct
-channel,13 to 17,female,4.9
-channel,13 to 17,male,6.0
+channel,13 to 17,female,4.7
+channel,13 to 17,male,5.8
 channel,18 to 24,female,3.4
-channel,18 to 24,male,6.2
-channel,25 to 34,female,8.5
-channel,25 to 34,male,15.4
-channel,35 to 44,female,7.5
-channel,35 to 44,male,13.2
+channel,18 to 24,male,5.9
+channel,25 to 34,female,8.7
+channel,25 to 34,male,15.0
+channel,35 to 44,female,7.6
+channel,35 to 44,male,13.0
 channel,45 to 54,female,4.0
-channel,45 to 54,male,9.5
-channel,55 to 64,female,3.0
-channel,55 to 64,male,7.2
-channel,65 to ,female,4.1
-channel,65 to ,male,7.1
-category: Entertainment,18 to 24,female,12.4
-category: Entertainment,25 to 34,female,31.5
-category: Entertainment,35 to 44,female,17.3
-category: Entertainment,35 to 44,male,4.6
-category: Entertainment,45 to 54,female,12.2
-category: Entertainment,55 to 64,female,11.0
-category: Entertainment,65 to ,female,6.8
-category: Entertainment,65 to ,male,4.4
+channel,45 to 54,male,9.4
+channel,55 to 64,female,3.1
+channel,55 to 64,male,7.7
+channel,65 to ,female,4.3
+channel,65 to ,male,7.6
+category: Entertainment,18 to 24,female,5.6
+category: Entertainment,25 to 34,female,14.1
+category: Entertainment,35 to 44,female,7.8
+category: Entertainment,35 to 44,male,2.1
+category: Entertainment,45 to 54,female,5.5
+category: Entertainment,45 to 54,male,6.6
+category: Entertainment,55 to 64,female,7.3
+category: Entertainment,55 to 64,male,17.6
+category: Entertainment,65 to ,female,8.7
+category: Entertainment,65 to ,male,24.7
 category: Film,13 to 17,female,6.6
 category: Film,13 to 17,male,8.2
 category: Film,35 to 44,female,5.5

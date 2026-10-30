@@ -8,9 +8,9 @@ Updated 2026-10-30. YouTube's inauthentic-content policy refuses monetisation to
 - gaming: score 0.1094 on 2026-10-30 over 7 boards (alert at 0.2); commonest recipe 14% of the window: format countdown, hook twist, look standard+lab-captions-1024, series Game Lore.
   - most alike this week: QD-267 "Player One #1: Minecraft: 400 million copies sold" and QD-196 "Level Up #1: Minecraft: 400 million copies sold 🎮" (0.35)
   - most alike this week: QD-257 "Level Up #3: GTA 6 Union Vote: Rockstar's historic moment ⚙️" and QD-196 "Level Up #1: Minecraft: 400 million copies sold 🎮" (0.20)
-- irl: score 0.1367 on 2026-10-30 over 10 boards (alert at 0.2); commonest recipe 20% of the window: format one_detail, hook number, look minimal+low, series Did You Know.
+- irl: score 0.1396 on 2026-10-30 over 10 boards (alert at 0.2); commonest recipe 30% of the window: format one_detail, hook number, look minimal+low, series Did You Know.
   - most alike this week: QD-258 "Did You Know #6: Walter Koenig: Star Trek actor dies aged 90" and QD-222 "Did You Know #4: Walter Koenig: the Star Trek legend's final" (0.21)
-  - most alike this week: QD-260 "Did You Know: Walter Koenig tribute: George Takei's touching" and QD-258 "Did You Know #6: Walter Koenig: Star Trek actor dies aged 90" (0.21)
-- main: score 0.0628 on 2026-10-30 over 196 boards (alert at 0.2); commonest recipe 4% of the window: format one_detail, hook statement, look clean.
+  - most alike this week: QD-289 "Did You Know #9: Emily McGonagle: 8 voices in one show 🎙️" and QD-260 "Did You Know: Walter Koenig tribute: George Takei's touching" (0.21)
+- main: score 0.0632 on 2026-10-30 over 195 boards (alert at 0.2); commonest recipe 4% of the window: format one_detail, hook statement, look clean.
   - most alike this week: QD-255 "Star Stories #7: Walter Koenig: the audition secret you neve" and QD-253 "Walter Koenig: the audition secret you missed 🖖" (0.35)
   - most alike this week: QD-209 "GTA 6 hits consoles on 19 November 🎮" and QD-195 "Game Facts #3: GTA 6 is arriving on 19 November 2026" (0.30)

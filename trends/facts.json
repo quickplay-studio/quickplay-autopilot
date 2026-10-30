@@ -1,21 +1,254 @@
 {
  "date": "2026-10-30",
- "built": "2026-10-30T09:18+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "full",
- "run": "morning",
+ "built": "2026-10-30T11:34+00:00",
+ "model": "gemini-3.5-flash-lite + gemini-flash-latest",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
+  {
+   "n": 6,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "category": "Gaming",
+   "what_is_new": "On 30 October 2026 PC Gamer revealed the four‑point relationship meter for Jason and Lucia.",
+   "hooks": [
+    "GTA 6 arrives on November 19, 2026!",
+    "Explore the fictional state of Leonida in GTA 6!"
+   ],
+   "sources": [
+    [
+     "You can relationship-max in GTA 6 as walking along the beach or working out at the gym together increases your couple rating on a four point",
+     "https://www.pcgamer.com/games/grand-theft-auto/you-can-relationship-max-in-gta-6-as-walking-along-the-beach-or-working-out-at-the-gym-together-increases-your-couple-rating-on-a-four-point-scale/",
+     "PC Gamer",
+     "2026-10-30"
+    ],
+    [
+     "Dog poo, anti-social behaviour, and Jason: Our latest look at GTA 6 gameplay comes from an episode of South Park",
+     "https://www.eurogamer.net/dog-poo-anti-social-behaviour-and-jason-our-latest-look-at-gta-6-gameplay-comes-from-the-latest-episode-of-south-park",
+     "Eurogamer",
+     "2026-10-29"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "ahead of its 19th November launch.",
+      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "show all of Leonida just how capable and fearsome my skills are at cultivating a healthy and strong relationship.",
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "GTA 6 is scheduled to be released on 19 November 2026.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "So we know that GTA 6 has a marketing deal with Sony and the PlayStation 5, and that Rockstar has been engaging with real‑world locations",
+      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The game follows the criminal duo Jason and Lucia.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "The recent mega piece by Edge has revealed that GTA 6 players will be able to measure Jason and Lucia's closeness in a four-point scale",
+      "3": "The story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Players can switch between the two protagonists in GTA 6.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It's confirmed that you can switch between characters in GTA 6 so you'll likely have to show up for your other half no matter who"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 8,
+   "topic": "GTA 6 PC release",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Rockstar Games employees locked in a union vote next month, running from the 12th to the 26th November.",
+   "hooks": [
+    "Grand Theft Auto VI releases on 19 November 2026!"
+   ],
+   "sources": [
+    [
+     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "https://www.eurogamer.net/rockstar-union-vote-november",
+     "Eurogamer",
+     "2026-10-28"
+    ],
+    [
+     "GTA 6 PC release",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft Auto VI.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
+     }
+    },
+    {
+     "claim": "The union vote runs from the 12th to the 26th November.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 4,
+   "topic": "The Celebrity Traitors",
+   "signal": "watchlist: The Celebrity Traitors (launch)",
+   "category": "Film",
+   "what_is_new": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
+   "hooks": [
+    "Did you know The Celebrity Traitors returned for series two on October 1 2026?",
+    "Find out how the celebrity contestants play the ultimate social deduction game at Ardross Castle!",
+    "Discover how players compete to win a grand prize for charity on The Celebrity Traitors!"
+   ],
+   "sources": [
+    [
+     "‘I saw the script and went: oooh!’ Olivia Colman and Alexander Skårsgard on their steamy folk-horror movie Wicker",
+     "https://www.theguardian.com/film/2026/oct/30/i-saw-the-script-and-went-oooh-olivia-colman-and-alexander-skarsgard-on-their-steamy-folk-horror-movie-wicker",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Ex-Traitors players talk tactics and celebrity final predictions",
+     "https://www.bbc.co.uk/news/articles/cr62yjvgql9go?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "The Celebrity Traitors",
+     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "A second series began broadcasting on 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October. [4]"
+     }
+    },
+    {
+     "claim": "The Celebrity Traitors was first broadcast on BBC One on 8 October 2025.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "It was first broadcast on BBC One on 8 October 2025.[2]"
+     }
+    },
+    {
+     "claim": "Claudia Winkleman presents the series.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Claudia Winkleman presents the series."
+     }
+    },
+    {
+     "claim": "The show features a group of celebrity contestants participating in a social deduction game similar to Mafia or Werewolf, set in and around Ardross Castle in Scotland.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "the show features a group of celebrity contestants participating in a social deduction game similar to Mafia or Werewolf, set in and around Ardross Castle"
+     }
+    },
+    {
+     "claim": "The grand prize is awarded to a charity of the winner's choice.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The grand prize is awarded to a charity of the winner's choice."
+     }
+    }
+   ],
+   "images": []
+  },
   {
    "n": 3,
    "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "Nothing changed in the last two days.",
    "hooks": [
-    "Harry Kane made history at the London Palladium!",
-    "How Harry Kane beat Kylian Mbappe to the Ballon d'Or!",
-    "Alexia Putellas claims her third Ballon d'Or crown!"
+    "Harry Kane just won his very first Ballon d'Or!",
+    "How did Harry Kane score 73 goals to win the Ballon d'Or?"
    ],
    "sources": [
     [
@@ -45,7 +278,42 @@
    ],
    "verified": [
     {
-     "claim": "Harry Kane won the Men's Ballon d'Or at the London Palladium on Monday.",
+     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "Harry Kane has taken the scenic route to the Ballon d'Or - a road littered with doubts and diversions, but one that eventually led to",
+      "4": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 to 26 season.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "He scored a remarkable 73 goals in 65 games for Bayern Munich and England during the 2025â26 season.",
+      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    },
+    {
+     "claim": "Harry Kane won the Ballon d'Or ahead of Kylian Mbappé and Lamine Yamal.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "And what has the continent made of Harry Kane's Ballon d'Or win? Are the Spanish annoyed that it didn't go to Lamine Yamal, and how",
+      "3": "This is the Kane of recent vintage, the world-class striker and complete footballer who beat Real Madrid and France striker Kylian Mbappe, as well as",
+      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    },
+    {
+     "claim": "The ceremony took place at the London Palladium.",
      "sources": [
       3,
       4
@@ -56,18 +324,7 @@
      }
     },
     {
-     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 26 season.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "This is the Kane of recent vintage, the world-class striker and complete footballer who beat Real Madrid and France striker Kylian Mbappe, as well as",
-      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Harry Kane became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
+     "claim": "Harry Kane became the fifth Englishman to win the award, with the previous winner being Michael Owen in 2001.",
      "sources": [
       3,
       4
@@ -76,1038 +333,60 @@
       "3": "Kane has put that right spectacularly at Bayern, winning the Bundesliga twice, the move propelling him to the level of global superstar, giving him the",
       "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
      }
+    },
+    {
+     "claim": "Harry Kane scored 73 goals during the 2025 to 26 season.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "He scored a remarkable 73 goals in 65 games for Bayern Munich and England during the 2025â26 season.",
+      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
     }
    ],
    "one_source": [
     {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
      "sources": [
       4
      ],
      "evidence": {
       "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
-    }
-   ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 4,
-   "topic": "Ballon d'Or past winners",
-   "signal": "watchlist: Ballon d'Or 2026 (surging)",
-   "category": "Sport",
-   "what_is_new": "Kylian Mbappe missed out on joining the elite roster of Ballon d'Or winners and finished second in voting behind Harry Kane.",
-   "hooks": [
-    "Did you know Harry Kane scored 73 goals before winning his first Ballon d'Or?",
-    "Harry Kane just made history as only the fifth Englishman to win the Ballon d'Or!"
-   ],
-   "sources": [
-    [
-     "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
-     "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "Ballon d'Or past winners",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
+    },
     {
-     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 26 season.",
+     "claim": "Athletic Bilbao's Unai Simon beat David Raya for the Yashin Trophy at the Ballon d'Or.",
      "sources": [
-      1,
-      2
+      1
      ],
      "evidence": {
-      "1": "The France forward missed out on joining the elite roster of Ballon d’Or winners and instead became the latest high-profile addition to a far less",
-      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Harry Kane won the Mens Ballon d Or, receiving the award for the first time in his career.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+      "1": "How did Athletic Bilbao's Unai Simon beat David Raya for the Yashin Trophy at the Ballon d'Or?"
      }
     },
     {
-     "claim": "Alexia Putellas won the Womens Ballon d Or, receiving the award for the third time in her career.",
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or for the third time in her career ahead of Ewa Pajor and Khadija Shaw.",
      "sources": [
-      2
+      4
      ],
      "evidence": {
-      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+      "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     },
     {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "claim": "Harry Kane is the 4th Bayern Munich player to achieve the Men's Ballon d'Or honour.",
      "sources": [
-      2
+      4
      ],
      "evidence": {
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+      "4": "Kane is the 4th Bayern Munich player to achieve this honour.[7]"
      }
     }
    ],
    "images": [
     "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
    ]
-  },
-  {
-   "n": 5,
-   "topic": "The Celebrity Traitors",
-   "signal": "watchlist: The Celebrity Traitors (launch)",
-   "category": "Entertainment",
-   "what_is_new": "Joe Lycett's banishment from Celebrity Traitors was reported on 28 October 2026.",
-   "hooks": [
-    "Joe Lycett got booted for being too traitorous.",
-    "Richard E Grant swapped doctor for a secret traitor role.",
-    "Celebrity Traitors pits stars like Alan Carr against each other."
-   ],
-   "sources": [
-    [
-     "‘I saw the script and went: oooh!’ Olivia Colman and Alexander Skårsgard on their steamy folk-horror movie Wicker",
-     "https://www.theguardian.com/film/2026/oct/30/i-saw-the-script-and-went-oooh-olivia-colman-and-alexander-skarsgard-on-their-steamy-folk-horror-movie-wicker",
-     "Guardian",
-     "2026-10-30"
-    ],
-    [
-     "Celebrity Traitors' Joe Lycett's tribute to viral TikTok nan",
-     "https://www.bbc.co.uk/news/articles/c6x2qggrdxqeo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "The Celebrity Traitors",
-     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The Celebrity Traitors features celebrity contestants.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Richard E Grant as a doctor who is even more inept at his job than Grant was as a Celebrity Traitor.",
-      "2": "celebrity traitors star and comedian joe lycett has paid colourful tribute to the welsh grandmother"
-     }
-    },
-    {
-     "claim": "Richard E Grant appeared as a contestant on The Celebrity Traitors.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Richard E Grant as a doctor who is even more inept at his job than Grant was as a Celebrity Traitor.",
-      "3": "2 21 10 1 october 2026 2026 10 01 present tba tba maya jamarichard e grantjames acaster from ep 2 hannah fry from ep 3 king kenny from ep"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Joe Lycett was banished from Celebrity Traitors for being too keen to be a traitor.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "the everything must go exhibition is lycett s first major solo art exhibition and is about things which are no longer with us lycett who was banished from celebrity traitors for being too keen to be a traitor said on"
-     }
-    },
-    {
-     "claim": "The second series of The Celebrity Traitors began broadcasting on 1 October 2026.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "to a charity of the winner s choice a second series began broadcasting on 1 october 2026 3 every thursday and friday night and will continue to until 30 october"
-     }
-    },
-    {
-     "claim": "In March 2026, the BBC announced a three-year deal that will keep The Celebrity Traitors in production until 2030.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In March 2026, BBC announced a three-year deal that will keep The Celebrity Traitors and The Traitors in production until 2030."
-     }
-    },
-    {
-     "claim": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK broadcast.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 6,
-   "topic": "Celebrity Traitors final",
-   "signal": "watchlist: The Celebrity Traitors (launch)",
-   "category": "Entertainment",
-   "what_is_new": "The second series of The Celebrity Traitors concludes today on 30 October 2026.",
-   "hooks": [
-    "The second series of The Celebrity Traitors concludes today!"
-   ],
-   "sources": [
-    [
-     "DIY socks, messy collars and cummerbunds: nine wardrobe updates from the catwalks",
-     "https://www.theguardian.com/fashion/2026/oct/29/diy-socks-messy-collars-and-cummberbunds-nine-wardrobe-updates-from-the-catwalks",
-     "Guardian",
-     "2026-10-30"
-    ],
-    [
-     "Celebrity Traitors' Joe Lycett's tribute to viral TikTok nan",
-     "https://www.bbc.co.uk/news/articles/c6x2qggrdxqeo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-28"
-    ],
-    [
-     "Celebrity Traitors final",
-     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "A second series began broadcasting on 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October. [4]"
-     }
-    },
-    {
-     "claim": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK broadcast on BBC One.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK"
-     }
-    },
-    {
-     "claim": "After the final Round Table, the remaining players, usually four, gather at the Fire of Truth to take part in the End Game.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "After the final Round Table, the remaining players (usually four) gather at the Fire of Truth and participate in the End Game."
-     }
-    },
-    {
-     "claim": "Joe Lycett was banished from Celebrity Traitors for being too keen to be a traitor.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Lycett, who was banished from Celebrity Traitors for being too keen to be a traitor, said on Instagram: \"My painting in tribute to the great"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 8,
-   "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
-   "category": "Gaming",
-   "what_is_new": "A snippet of GTA 6 gameplay was shown in the South Park episode that aired on 28 October.",
-   "hooks": [
-    "GTA 6 launches on 19 November 2026!",
-    "Play as Jason and Lucia in Leonida."
-   ],
-   "sources": [
-    [
-     "I'm calling it: GTA 6 is officially an immersive sim, based on what you can do with NPCs",
-     "https://www.pcgamer.com/games/grand-theft-auto/im-calling-it-gta-6-is-officially-an-immersive-sim-based-on-what-you-can-do-with-npcs/",
-     "PC Gamer",
-     "2026-10-29"
-    ],
-    [
-     "Dog poo, anti-social behaviour, and Jason: Our latest look at GTA 6 gameplay comes from an episode of South Park",
-     "https://www.eurogamer.net/dog-poo-anti-social-behaviour-and-jason-our-latest-look-at-gta-6-gameplay-comes-from-the-latest-episode-of-south-park",
-     "Eurogamer",
-     "2026-10-29"
-    ],
-    [
-     "GTA 6",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "ahead of its 19th November launch.",
-      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
-     }
-    },
-    {
-     "claim": "Its map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 9,
-   "topic": "GTA 6 trailer views record",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Grand Theft Auto VI was formally revealed in December 2023?"
-   ],
-   "sources": [
-    [
-     "GTA 6 trailer views record",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Grand Theft Auto VI was formally revealed in December 2023."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 10,
-   "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
-   "category": "Gaming",
-   "what_is_new": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window.",
-   "hooks": [
-    "Grand Theft Auto 6 arrives on November 19 2026!",
-    "Rockstar employees are voting on a union next month."
-   ],
-   "sources": [
-    [
-     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
-     "https://www.eurogamer.net/rockstar-union-vote-november",
-     "Eurogamer",
-     "2026-10-28"
-    ],
-    [
-     "GTA 6 PC release",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "The vote runs from the 12th to the 26th November.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
-     }
-    },
-    {
-     "claim": "Principal production began in 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "The game's map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 12,
-   "topic": "Hunger Games films in order",
-   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 21 days to go)",
-   "category": "Gaming",
-   "what_is_new": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026.",
-   "hooks": [
-    "The Hunger Games Sunrise on the Reaping premiered in London on October 28, 2026."
-   ],
-   "sources": [
-    [
-     "Hunger Games films in order",
-     "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The Hunger Games Sunrise on the Reaping premiered in London on October 28, 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on"
-     }
-    },
-    {
-     "claim": "The Hunger Games: Sunrise on the Reaping is a 2026 American dystopian film directed by Francis Lawrence.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Hunger Games: Sunrise on the Reaping is a 2026 American dystopian film directed by Francis Lawrence from a screenplay by Billy Ray and Michael"
-     }
-    },
-    {
-     "claim": "Jennifer Lawrence, Josh Hutcherson and Woody Harrelson are set to reprise their roles as Katniss Everdeen, Peeta Mellark and Haymitch Abernathy.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Additionally, Jennifer Lawrence, Josh Hutcherson and Woody Harrelson are set to reprise their roles as Katniss Everdeen, Peeta Mellark, and Haymitch Abernathy, respectively."
-     }
-    },
-    {
-     "claim": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on November 20.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on"
-     }
-    },
-    {
-     "claim": "The first trailer for the film was released on April 13, 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The first trailer was released on April 13, 2026."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 16,
-   "topic": "This Is Halloween by The Citizens of Halloween",
-   "signal": "Apple Music US: new in the top 25",
-   "category": "Music",
-   "what_is_new": "Call of Duty: Modern Warfare 4 added a new Halloween-themed multiplayer mode called Possession with a non-milsim content disclaimer.",
-   "hooks": [],
-   "sources": [
-    [
-     "‘Expect goosebumps!’: to celebrate Halloween, readers choose the spookiest places in the UK",
-     "https://www.theguardian.com/travel/2026/oct/30/readers-favourite-spooky-places-uk-halloween",
-     "Guardian",
-     "2026-10-30"
-    ],
-    [
-     "What to Watch on Disney+ in November 2026",
-     "https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/",
-     "Variety",
-     "2026-10-30"
-    ],
-    [
-     "Call of Duty: Modern Warfare 4 Adds 'Non MilSim Content' Disclaimer to Halloween Themed Content",
-     "https://www.ign.com/articles/call-of-duty-modern-warfare-4-adds-non-milsim-content-disclaimer-to-halloween-themed-content",
-     "IGN",
-     "2026-10-29"
-    ]
-   ],
-   "verified": [],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 19,
-   "topic": "england vs papua new guinea",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "England head coach Brian McDermott spoke to the media on Thursday ahead of their crucial match against Papua New Guinea.",
-   "hooks": [
-    "Can England pull off a miraculous 68 point swing against Papua New Guinea?",
-    "Brian McDermott issues a stark warning to his England squad!",
-    "England face a unique Rugby League World Cup survival task on Friday."
-   ],
-   "sources": [
-    [
-     "England out of Women's RL World Cup as Samoa reach semi-finals",
-     "https://www.bbc.co.uk/sport/rugby-league/live/cmrerrdqxl2rt",
-     "BBC",
-     "2026-10-29"
-    ],
-    [
-     "England urged to hold nerve as Rugby League World Cup hopes hang by a thread",
-     "https://www.theguardian.com/sport/2026/oct/29/england-rugby-league-world-cup-papua-new-guinea",
-     "Guardian",
-     "2026-10-29"
-    ],
-    [
-     "Rugby League World Cup: England's Brian McDermott admits side face 'unique task' to progress and can't get distracted",
-     "https://www.skysports.com/rugby-league/news/13605180/rugby-league-world-cup-englands-brian-mcdermott-admits-side-face-unique-task-to-progress-and-cant-get-distracted",
-     "Sky Sports",
-     "2026-10-29"
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "England face Papua New Guinea in Wollongong on Friday knowing they need a big win to keep semi-final hopes alive.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "They need to defeat Papua New Guinea in Wollongong and hope Tonga beat Samoa on Sunday, with a 68-point swing required in points difference between",
-      "3": "England face Papua New Guinea in their final pool fixture on Friday (9.05am kick-off), knowing they need a big win to keep semi-final hopes alive"
-     }
-    },
-    {
-     "claim": "Brian McDermott has warned his England side not to chase the points as they look to keep their slim Rugby League World Cup hopes alive.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The England head coach, Brian McDermott, has urged his side to keep their nerve as they attempt to hold up their end of the bargain",
-      "3": "Brian McDermott has warned his England side not to chase the points as they look to keep their slim Rugby League World Cup hopes alive"
-     }
-    },
-    {
-     "claim": "England defeated France 82-0 in their second game of the tournament.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "However, the margin of their 82-0 win against France last Saturday means qualification is still possible, albeit unlikely.",
-      "3": "mcdermott who saw his side beat france 82 0 in their second game has called for patience"
-     }
-    },
-    {
-     "claim": "England lost 30-12 to Tonga in their opening game.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Defeat by Tonga in their opening group game a fortnight ago appeared to all but consign England to an early exit",
-      "3": "England are up against it in their bid to make it through to the semi-finals after they lost 30-12 to Tonga in their opening game."
-     }
-    },
-    {
-     "claim": "England need to make up a 68-point deficit on Samoa.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "They need to defeat Papua New Guinea in Wollongong and hope Tonga beat Samoa on Sunday, with a 68-point swing required in points difference between",
-      "3": "upon whom England must also make up a 68-point deficit."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Papua New Guinea are well coached by Jason Demetriou.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "\"They're well coached by Jason Demetriou, who's got a chunk of players who are playing in the British game as well,\""
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 20,
-   "topic": "new zealand breakers",
-   "signal": "Google Trends US 100+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know the Breakers claimed a historic three-peat in the NBL?"
-   ],
-   "sources": [
-    [
-     "new zealand breakers",
-     "https://en.wikipedia.org/wiki/New_Zealand_Breakers",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history."
-     }
-    },
-    {
-     "claim": "The Breakers won their first NBL championship in 2011 and defended it in 2012 and 2013, achieving three consecutive championships.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history."
-     }
-    },
-    {
-     "claim": "Marc Mitchell, a Kiwi American businessman and attorney, acquired the Breakers in March 2025.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In March 2025, Kiwi-American businessman and attorney Marc Mitchell acquired the club."
-     }
-    },
-    {
-     "claim": "The Breakers are the only non Australian side currently competing in Australia’s National Basketball League.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The Breakers are the only non-Australian side currently competing in Australia's National Basketball League (NBL), and one of only two non-Australian sides to have done"
-     }
-    },
-    {
-     "claim": "In the 2022 to 23 season the Breakers finished second in the regular season with an eighteen to ten record and lost the NBL finals two to three to Sydney.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "2022–23 | 1 | NBL | 2nd | 28 | 18 | 10 | .643 | Won semifinals (Tasmania) 2–1Lost NBL finals (Sydney) 2–3"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 25,
-   "topic": "William Contreras",
-   "signal": "Wikipedia 228,487 views",
-   "category": "Sport",
-   "what_is_new": "He was named World Series MVP on 29 October 2026.",
-   "hooks": [
-    "Seventh catcher ever to win World Series MVP.",
-    "Brother duo become rare WBC‑World Series double winners.",
-    "From Braves to Brewers, a three‑team trade reshaped his career."
-   ],
-   "sources": [
-    [
-     "William Contreras",
-     "https://en.wikipedia.org/wiki/William_Contreras",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "He became the seventh‑ever catcher to be named World Series Most Valuable Player.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He became the seventh‑ever catcher to be named World Series Most Valuable Player.[40][41][42]"
-     }
-    },
-    {
-     "claim": "He and his brother Willson were the third, fourth and fifth people ever to win the WBC and a World Series in the same year.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Contreras — along with Brewers teammates and fellow Venezuelans Jackson Chourio and Antonio Senzatela — became the 3rd, 4th, and 5th people ever to win"
-     }
-    },
-    {
-     "claim": "He was traded to the Milwaukee Brewers on 12 December 2022 in a three‑team deal.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "On December 12, 2022, the Braves sent Contreras to the Milwaukee Brewers in a three‑team trade in which the Braves acquired Sean Murphy, the Brewers"
-     }
-    },
-    {
-     "claim": "He signed with Air Jordan in 2024, representing the brand through his cleats and catching gear.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2024, Contreras signed with Air Jordan, representing the brand through his cleats and catching gear.[48]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:William_Contreras_stands_at_home_plate,_Aug_05_2022_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 27,
-   "topic": "Bob Uecker",
-   "signal": "Wikipedia 205,548 views",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Bob Uecker never signed a written contract until 2021?",
-    "Bob Uecker won a World Series in 1964 with the Cardinals.",
-    "A massive 100 foot mural of Bob Uecker was unveiled in 2026."
-   ],
-   "sources": [
-    [
-     "Bob Uecker",
-     "https://en.wikipedia.org/wiki/Bob_Uecker",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Bob Uecker was born in Milwaukee on January 26, 1934.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Robert George Uecker (// YOO-kər; January 26, 1934 – January 16, 2025) was an American professional baseball catcher and sportscaster who served as the play-by-play"
-     }
-    },
-    {
-     "claim": "Uecker won a World Series with the St Louis Cardinals in 1964.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He won a World Series with the Cardinals in 1964."
-     }
-    },
-    {
-     "claim": "He was honored by the National Baseball Hall of Fame with its 2003 Ford C Frick Award.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Uecker was honored by the National Baseball Hall of Fame with its 2003 Ford C. Frick Award in recognition of his broadcasting career."
-     }
-    },
-    {
-     "claim": "A 100 foot tall mural honoring Uecker was unveiled in downtown Milwaukee in summer 2026.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "A 100-foot-tall mural honoring Uecker was unveiled in downtown Milwaukee in summer 2026, celebrating his legacy and ensuring his impact on the city will be"
-     }
-    },
-    {
-     "claim": "Uecker enlisted in the US Army in 1954 and achieved the rank of corporal.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Uecker enlisted in the US Army in 1954, ultimately achieving the rank of corporal."
-     }
-    },
-    {
-     "claim": "Prior to the 2021 season Uecker had never signed an official written contract with the Brewers.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Prior to the 2021 season, Uecker had never signed an official written contract with the Brewers to do the team's play-by-play, instead agreeing to do"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Bob_Uecker_-_St._Louis_Cardinals_-_1965.jpg"
-   ]
-  },
-  {
-   "n": 28,
-   "topic": "Milwaukee Brewers",
-   "signal": "Wikipedia 185,722 views",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know the Milwaukee Brewers just won their first ever World Series?",
-    "The low budget Milwaukee Brewers defied all odds to win the 2026 World Series!",
-    "How did the Milwaukee Brewers crush their 57 year title drought?"
-   ],
-   "sources": [
-    [
-     "The low-budget Brewers won the World Series – and exposed baseball’s biggest lie | Howard Bryant",
-     "https://www.theguardian.com/sport/2026/oct/29/milwaukee-brewers-world-series-title-mlb-salary-cap",
-     "Guardian",
-     "2026-10-29"
-    ],
-    [
-     "Milwaukee Brewers",
-     "https://en.wikipedia.org/wiki/Milwaukee_Brewers",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "The Milwaukee Brewers won the World Series for the first time in their 58-year history by defeating the Tampa Bay Rays in five games.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "They did so by winning the World Series for the first time in their 58-year history, and doing so resoundingly, destroying the Tampa Bay Rays",
-      "2": "In the World Series, the Brewers broke through and won their first championship in franchise history over the Tampa Bay Rays, with William Contreras winning"
-     }
-    },
-    {
-     "claim": "The final score of the World Series was 4-1.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "The final score was 4-1, ending a month that will be played and replayed in the minds and DVRs of Milwaukeeans.",
-      "2": "Won World Series vs. Tampa Bay Rays, 4-1"
-     }
-    },
-    {
-     "claim": "William Contreras was named the Series MVP.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Jake Bauers’ soul-snatching at-bats against the Dodgers offered a sign, the youthful charges of Series MVP catcher William Contreras, Jackson Chourio, and the too-young-to-care stardom",
-      "2": "In the World Series, the Brewers broke through and won their first championship in franchise history over the Tampa Bay Rays, with William Contreras winning"
-     }
-    },
-    {
-     "claim": "Jake Bauers won NLCS MVP.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "the prize do they got tougher jake bauers soul snatching at bats against the dodgers offered a sign the",
-      "2": "Bolstered by play from Jacob Misiorowski and Brice Turang, the 2026 Brewers won over 100 games for the first time in franchise history on their"
-     }
-    },
-    {
-     "claim": "Bud Selig purchased the team from the Seattle Pilots in bankruptcy court and moved them to Milwaukee.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "in their quest to increase franchise values their words speak an untruth brewers owner mark attanasio purchased the team from bud selig in 2005 for 223m and the team that supposedly cannot win but did has a valuation by forbes",
-      "2": "The Seattle Pilots played for one season in the American League West Division before being acquired in bankruptcy court by Bud Selig, who moved the"
-     }
-    },
-    {
-     "claim": "The 2026 Brewers won over 100 regular-season games for the first time in franchise history.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "baseball s owners at their persuasive best would have their paying customers believe that the brewers franchise record 103 regular season wins also were an illusion or worse the dreaded outlier even though milwaukee have",
-      "2": "Bolstered by play from Jacob Misiorowski and Brice Turang, the 2026 Brewers won over 100 games for the first time in franchise history on their"
-     }
-    },
-    {
-     "claim": "Since 2001, the Brewers have played their home games at American Family Field.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "the owners position remained unchanged the brewers to that point had not helped dispel the notion they had sputtered badly in recent postseasons giving life to the thought that maybe their summer wins really were empty only one thing could",
-      "2": "Since 2001, the Brewers have played their home games at American Family Field, which was named Miller Park through the 2020 season and has a"
-     }
-    }
-   ],
-   "one_source": [],
-   "images": []
-  },
-  {
-   "n": 44,
-   "topic": "Thriller by Michael Jackson",
-   "signal": "Apple Music GB: new in the top 25",
-   "category": "Music",
-   "what_is_new": "",
-   "hooks": [
-    "Discover how Michael Jackson created history with Thriller.",
-    "Did you know Thriller spent 37 weeks at number one?",
-    "Explore the incredible records broken by Michael Jackson."
-   ],
-   "sources": [
-    [
-     "Thriller by Michael Jackson",
-     "https://en.wikipedia.org/wiki/Thriller_(Michael_Jackson_album)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Thriller is the sixth studio album by the American singer Michael Jackson.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thriller is the sixth studio album by the American singer Michael Jackson."
-     }
-    },
-    {
-     "claim": "It was released on November 29, 1982, through Epic Records.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It was released on November 29, 1982, through Epic Records."
-     }
-    },
-    {
-     "claim": "It was produced by Quincy Jones, who produced Jackson's previous album, Off the Wall (1979).",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It was produced by Quincy Jones, who produced Jackson's previous album, Off the Wall (1979)."
-     }
-    },
-    {
-     "claim": "Paul McCartney appears as the first credited featured artist on a Jackson album.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Paul McCartney appears as the first credited featured artist on a Jackson album."
-     }
-    },
-    {
-     "claim": "Thriller was Jackson's first number-one album on the Billboard Top LPs & Tape chart and was at number one for a record 37 non-consecutive weeks.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Thriller was Jackson's first number-one album on the Billboard Top LPs & Tape chart and was at number one for a record 37 non-consecutive weeks."
-     }
-    },
-    {
-     "claim": "It won a record-breaking eight Grammy Awards, including Album of the Year and Record of the Year for Beat It, and earned Jackson a record-breaking eight American Music Awards.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "It won a record-breaking eight Grammy Awards, including Album of the Year and Record of the Year for \"Beat It\", and earned Jackson a record-breaking"
-     }
-    },
-    {
-     "claim": "In 2008, it was inducted into the Grammy Hall of Fame and added to the National Recording Registry of culturally, historically, or aesthetically significant recordings by the Library of Congress.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "In 2008, it was inducted into the Grammy Hall of Fame and added to the National Recording Registry of \"culturally, historically, or aesthetically significant recordings\""
-     }
-    }
-   ],
-   "images": []
   }
  ]
 }

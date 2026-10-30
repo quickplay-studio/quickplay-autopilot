@@ -2,7 +2,7 @@
 
 **Progress** (Fri 30 Oct, 10:51): 22 of 1,000 subscribers · 14,735 of 10 million Shorts views in 90 days · 5,585 views in the last 24 hours (about 110,947 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
-YouTube checked Fri 30 Oct 9:18 (UK): 2 scheduled, 148 public, 6 uploads in the last 24 hours.
+YouTube checked Fri 30 Oct 11:34 (UK): 6 scheduled, 144 public, 12 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 8:53).
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 15 scheduled |
-| Fri 30 Oct | 4 public, 5 scheduled | 8 | 1 | ⏳ 4 of 15 so far, 5 more scheduled |
+| Fri 30 Oct | 5 public, 4 scheduled | 8 | 1 | ⏳ 5 of 15 so far, 4 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -148,33 +148,63 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Sat 31 Oct 6:00 · Song Secrets #4: Michael Jackson's Thriller tops charts 37 weeks 🎵
+scheduled · 36 s · music: dance-with-you · [script](../boards/done/QD-280.json) · [YouTube](https://youtube.com/shorts/el4EkoNqHOk)
+
+![QD-280](QD-280.jpg)
+
+### Sat 31 Oct 0:30 · William Contreras: 7th catcher World Series MVP 🏆
+scheduled · 29 s · music: once-upon-a-time · [script](../boards/done/QD-282.json) · [YouTube](https://youtube.com/shorts/YnvZjFVmJuE)
+
+![QD-282](QD-282.jpg)
+
+### Fri 30 Oct 15:30 · England vs PNG: the 68-point twist
+scheduled · 37 s · music: once-upon-a-time · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
+
+![QD-279](QD-279.jpg)
+
+### Fri 30 Oct 14:00 · Ballon d'Or #4: Harry Kane Ballon d'Or: the 73 goal detail
+scheduled · 40 s · music: once-upon-a-time · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
+
+![QD-278](QD-278.jpg)
+
+### Fri 30 Oct 13:00 · Celebrity Traitors #2: Final: series two ends today 🏁
+scheduled · 26 s · music: stake-out · [script](../boards/done/QD-277.json) · [YouTube](https://youtube.com/shorts/qSpSNwWEBDQ)
+
+![QD-277](QD-277.jpg)
+
+### Fri 30 Oct 12:00 · Game Explained #1: Switch cartridge taste: the real reason 👅
+scheduled · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
+
+![QD-276](QD-276.jpg)
+
 ### Fri 30 Oct 11:00 · Harry Kane wins the Ballon d'Or after 25 years
-scheduled · 37 s · music: in-battery · [script](../boards/done/QD-275.json) · [YouTube](https://youtube.com/shorts/vKutbd0tO_s)
+public · 14 views · 37 s · music: in-battery · [script](../boards/done/QD-275.json) · [YouTube](https://youtube.com/shorts/vKutbd0tO_s)
 
 ![QD-275](QD-275.jpg)
 
 ### Fri 30 Oct 9:30 · Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives
-private · 39 s · music: in-battery · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
+public · 1 views · 39 s · music: in-battery · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
 
 ![QD-274](QD-274.jpg)
 
 ### Fri 30 Oct 8:00 · Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆
-public · 3 views · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
+public · 71 views · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
 
 ![QD-273](QD-273.jpg)
 
 ### Fri 30 Oct 6:30 · Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed
-public · 26 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
+public · 85 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
 
 ![QD-246](QD-246.jpg)
 
 ### Fri 30 Oct 3:30 · Harry Kane Ballon d'Or: first win in London 🏆
-public · 213 views · 25 s · music: fire-in-the-sky · [script](../boards/done/QD-272.json) · [YouTube](https://youtube.com/shorts/U_eHPDhew8M)
+public · 347 views · 25 s · music: fire-in-the-sky · [script](../boards/done/QD-272.json) · [YouTube](https://youtube.com/shorts/U_eHPDhew8M)
 
 ![QD-272](QD-272.jpg)
 
 ### Thu 29 Oct 18:30 · Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
-public · 896 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
+public · 915 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
 
 ![QD-266](QD-266.jpg)
 
@@ -184,22 +214,22 @@ public · 176 views · 30 s · music: risen · on Instagram · [script](../board
 ![QD-262](QD-262.jpg)
 
 ### Thu 29 Oct 6:30 · Star Stories #5: Walter Koenig: the record the Star Trek legend set
-public · 116 views · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
+public · 131 views · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
 
 ![QD-254](QD-254.jpg)
 
 ### Thu 29 Oct 3:30 · walter koenig: passed away aged 90 🖖
-public · 790 views · 30 s · music: f16 · on Instagram · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
+public · 822 views · 30 s · music: f16 · on Instagram · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
 
 ![QD-264](QD-264.jpg)
 
 ### Thu 29 Oct 2:00 · Walter Koenig: the co-star bond you never knew
-public · 129 views · 35 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
+public · 145 views · 35 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
 
 ![QD-263](QD-263.jpg)
 
 ### Thu 29 Oct 0:30 · Star Stories #7: Walter Koenig: the audition secret you never knew
-public · 1,407 views · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
+public · 1,432 views · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
 
 ![QD-255](QD-255.jpg)
 
@@ -209,7 +239,7 @@ public · 47 views · 32 s · music: impossible-sacrifice · on Instagram · [sc
 ![QD-253](QD-253.jpg)
 
 ### Wed 28 Oct 22:00 · Walter Koenig: George Takei's moving final message 🖖
-public · 50 views · 43 s · music: level · on Instagram · [script](../boards/done/QD-252.json) · [YouTube](https://youtube.com/shorts/7Y3RXzLhrvQ)
+public · 66 views · 43 s · music: level · on Instagram · [script](../boards/done/QD-252.json) · [YouTube](https://youtube.com/shorts/7Y3RXzLhrvQ)
 
 ![QD-252](QD-252.jpg)
 
@@ -257,12 +287,12 @@ public · 19 views · 32 s · music: false-vacuum-decay · [script](../boards/do
 ![QD-216](QD-216.jpg)
 
 ### Wed 28 Oct 10:00 · Harry Kane Ballon d'Or: chaotic London ceremony ⚽
-public · 160 views · 31 s · music: once-upon-a-time · [script](../boards/done/QD-245.json) · [YouTube](https://youtube.com/shorts/rjO3XWFiBk0)
+public · 161 views · 31 s · music: once-upon-a-time · [script](../boards/done/QD-245.json) · [YouTube](https://youtube.com/shorts/rjO3XWFiBk0)
 
 ![QD-245](QD-245.jpg)
 
 ### Wed 28 Oct 8:00 · harry potter cast: Harry Gilby
-public · 485 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
+public · 494 views · 25 s · music: across-seas-and-lands · [script](../boards/done/QD-226.json) · [YouTube](https://youtube.com/shorts/ac1e8cuVq7Y)
 
 ![QD-226](QD-226.jpg)
 
@@ -277,7 +307,7 @@ public · 19 views · 41 s · music: impossible-sacrifice · [script](../boards/
 ![QD-210](QD-210.jpg)
 
 ### Wed 28 Oct 2:30 · Star Stories #2: Matthew Perry Netflix documentary 📺
-public · 155 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
+public · 157 views · 25 s · music: flight-is-aight · on Facebook · [script](../boards/done/QD-228.json) · [YouTube](https://youtube.com/shorts/OWR4ir1VnSg)
 
 ![QD-228](QD-228.jpg)
 
@@ -315,33 +345,3 @@ public · 41 views · 29 s · music: death-duel · [script](../boards/done/QD-21
 public · 75 views · 21 s · music: pulsar · [script](../boards/done/QD-203.json) · [YouTube](https://youtube.com/shorts/rzEH4i2ko6Y)
 
 ![QD-203](QD-203.jpg)
-
-### Tue 27 Oct 12:30 · gta 6: arrives on 19 November (Part 1) 🎮
-public · 99 views · 28 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-208.json) · [YouTube](https://youtube.com/shorts/YUI_nWZsC-Y)
-
-![QD-208](QD-208.jpg)
-
-### Tue 27 Oct 12:00 · GTA 6 launch trailer: 24 days to go 🎮
-public · 45 views · 39 s · music: across-seas-and-lands · on Instagram · [script](../boards/done/QD-200.json) · [YouTube](https://youtube.com/shorts/04SNsgEZX5M)
-
-![QD-200](QD-200.jpg)
-
-### Tue 27 Oct 11:00 · Song Secrets #3: Beyonce solo debut hits number one in Billboard
-public · 474 views · 32 s · music: dance-with-you · [script](../boards/done/QD-202.json) · [YouTube](https://youtube.com/shorts/OYNQGnJzq3s)
-
-![QD-202](QD-202.jpg)
-
-### Tue 27 Oct 10:00 · Film Facts #1: Wildwood runtime sets a stop-motion record 🎬
-public · 16 views · 27 s · music: in-battery · [script](../boards/done/QD-201.json) · [YouTube](https://youtube.com/shorts/uDAbDV2tGw4)
-
-![QD-201](QD-201.jpg)
-
-### Tue 27 Oct 9:00 · Science Explained #1: Moon: why days were 5 hours long
-public · 533 views · 29 s · music: fire-in-the-sky · [script](../boards/done/QD-190.json) · [YouTube](https://youtube.com/shorts/Kl7Qb1Wbtuw)
-
-![QD-190](QD-190.jpg)
-
-### Tue 27 Oct 8:00 · Kylian Mbappé: the 87th minute moment that changed everything ⚽
-public · 66 views · 38 s · music: risen · [script](../boards/done/QD-189.json) · [YouTube](https://youtube.com/shorts/pRQAsVMbuIA)
-
-![QD-189](QD-189.jpg)

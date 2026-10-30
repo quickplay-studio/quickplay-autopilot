@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 3 public | 8 | 1 | ⏳ 3 of 15 so far |
+| Fri 30 Oct | 3 public, 2 scheduled | 8 | 1 | ⏳ 3 of 15 so far, 2 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -144,11 +144,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-274** Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives (rendering next)
-- **QD-275** Harry Kane wins the Ballon d'Or after 25 years (rendering next)
 
 ## On the channel (latest first)
 

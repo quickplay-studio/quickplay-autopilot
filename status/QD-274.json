@@ -1,0 +1,179 @@
+{
+ "id": "QD-274",
+ "board": "boards/queue/QD-274.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T09:30:00Z",
+ "rendered": "2026-10-30T08:10:01.441281+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 4,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 39.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 21.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 883.4,
+   "contrast": 0.21,
+   "face_area": 0.2986,
+   "text_area": 0.0841,
+   "caption_contrast": 14.64,
+   "by_frame": {
+    "sharpness": [
+     869.4,
+     924.8,
+     941.6,
+     797.8
+    ],
+    "contrast": [
+     0.212,
+     0.209,
+     0.211,
+     0.209
+    ],
+    "face_area": [
+     0.3192,
+     0.2774,
+     0.2898,
+     0.308
+    ],
+    "text_area": [
+     0.096,
+     0.0847,
+     0.0853,
+     0.0702
+    ],
+    "caption_contrast": [
+     14.61,
+     14.67,
+     15.0,
+     14.47
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.95,
+   "none",
+   0
+  ],
+  [
+   3.95,
+   9.57,
+   "none",
+   1
+  ],
+  [
+   9.57,
+   14.6,
+   "none",
+   1
+  ],
+  [
+   14.6,
+   21.57,
+   "none",
+   2
+  ],
+  [
+   21.57,
+   28.43,
+   "none",
+   1
+  ],
+  [
+   28.43,
+   32.34,
+   "none",
+   1
+  ],
+  [
+   32.34,
+   39.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "284568",
+   "q": "desert sand dunes wind",
+   "t0": 0.0,
+   "t1": 13.52
+  },
+  {
+   "p": "pixabay",
+   "id": "22055",
+   "q": "film studio cameras",
+   "t0": 12.92,
+   "t1": 26.45
+  },
+  {
+   "p": "pixabay",
+   "id": "62822",
+   "q": "movie theatre seats",
+   "t0": 25.85,
+   "t1": 39.37
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T08:26:50Z",
+ "video": "ybpJ2NLXQXg",
+ "url": "https://youtube.com/shorts/ybpJ2NLXQXg",
+ "publish_at": "2026-10-30T09:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T09:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-274"
+}

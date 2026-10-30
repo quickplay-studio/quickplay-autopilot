@@ -1,0 +1,192 @@
+{
+ "id": "QD-275",
+ "board": "boards/queue/QD-275.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T11:00:00Z",
+ "rendered": "2026-10-30T08:09:41.521061+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Harry Kane wins the Ballon d'Or after 25 years",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 12,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "low",
+  "voice": "daniel",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1027",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 37.4,
+  "wps": 3.16,
+  "weak_beats": [],
+  "size_mb": 20.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 438.5,
+   "contrast": 0.184,
+   "face_area": 0.2156,
+   "text_area": 0.0323,
+   "caption_contrast": 2.63,
+   "by_frame": {
+    "sharpness": [
+     409.7,
+     450.8,
+     446.9,
+     446.8
+    ],
+    "contrast": [
+     0.191,
+     0.192,
+     0.189,
+     0.162
+    ],
+    "face_area": [
+     0.1936,
+     0.1736,
+     0.1907,
+     0.3043
+    ],
+    "text_area": [
+     0.0333,
+     0.0324,
+     0.0326,
+     0.0307
+    ],
+    "caption_contrast": [
+     2.36,
+     2.39,
+     2.87,
+     5.0
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.64,
+   "none",
+   2
+  ],
+  [
+   3.64,
+   7.1,
+   "none",
+   2
+  ],
+  [
+   7.1,
+   11.72,
+   "none",
+   3
+  ],
+  [
+   11.72,
+   15.21,
+   "none",
+   2
+  ],
+  [
+   15.21,
+   20.12,
+   "none",
+   3
+  ],
+  [
+   20.12,
+   23.66,
+   "none",
+   2
+  ],
+  [
+   23.66,
+   28.21,
+   "none",
+   3
+  ],
+  [
+   28.21,
+   32.16,
+   "none",
+   3
+  ],
+  [
+   32.16,
+   37.34,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "238746",
+   "q": "football stadium night",
+   "t0": 0.0,
+   "t1": 12.85
+  },
+  {
+   "p": "pixabay",
+   "id": "240995",
+   "q": "theatre red stage curtain",
+   "t0": 12.25,
+   "t1": 25.09
+  },
+  {
+   "p": "pixabay",
+   "id": "383541",
+   "q": "golden awards stage lights",
+   "t0": 24.49,
+   "t1": 37.34
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T08:26:52Z",
+ "video": "vKutbd0tO_s",
+ "url": "https://youtube.com/shorts/vKutbd0tO_s",
+ "publish_at": "2026-10-30T11:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T11:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-275"
+}

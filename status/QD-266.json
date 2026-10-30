@@ -156,5 +156,20 @@
   "publish_at": "2026-10-29T18:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-266"
+ "instagram": {
+  "media": "17999081867830754",
+  "at": "2026-10-30T00:54:11+00:00",
+  "caption": "short",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "explore",
+  "hour": "any",
+  "favoured": false,
+  "hour_uk": 0
+ },
+ "facebook": {
+  "video": "3446021028915952",
+  "at": "2026-10-30T00:54:20+00:00"
+ }
 }

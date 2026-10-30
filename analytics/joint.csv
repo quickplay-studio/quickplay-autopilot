@@ -1,138 +1,138 @@
 factor,level,effect,low,high,n,outcome,kind,p,q
-angles,shown,0.984,0.742,1.252,20,views,main,0.9152,0.915
-angles,hidden,1.017,0.799,1.347,22,views,main,0.9152,0.915
-ending,loop,1.028,0.794,1.279,32,views,main,0.8555,0.906
-ending,question,0.973,0.782,1.26,24,views,main,0.8555,0.906
-first_frame,cover,0.956,0.716,1.237,43,views,main,0.7935,0.906
-first_frame,photo,1.046,0.808,1.396,37,views,main,0.7935,0.906
-franchise,named,1.135,0.888,1.389,19,views,main,0.3747,0.785
-franchise,plain,0.881,0.72,1.126,17,views,main,0.3747,0.785
-fx_energy,steady,0.815,0.667,1.097,25,views,main,0.1657,0.785
-fx_energy,lab,1.227,0.912,1.499,18,views,main,0.1657,0.785
-fx_grade,natural,1.185,0.898,1.426,17,views,main,0.2068,0.785
-fx_grade,lab,0.844,0.701,1.114,14,views,main,0.2068,0.785
-fx_opening,image_first,0.773,0.654,0.989,19,views,main,0.0462,0.496
-fx_opening,lab,1.294,1.012,1.53,12,views,main,0.0462,0.496
-fx_slot,06:00 to 12:00,1.176,0.903,1.487,24,views,main,0.2937,0.785
-fx_slot,12:00 to 18:00,0.85,0.672,1.107,26,views,main,0.2937,0.785
-gene:g003,a,1.037,0.82,1.292,19,views,main,0.8,0.906
-gene:g003,b,0.965,0.774,1.219,15,views,main,0.8,0.906
-gene:g004,a,0.972,0.791,1.168,17,views,main,0.8179,0.906
-gene:g004,b,1.028,0.856,1.264,8,views,main,0.8179,0.906
-hook_type,statement,0.929,0.737,1.202,26,views,main,0.6278,0.906
-hook_type,number,1.077,0.832,1.356,33,views,main,0.6278,0.906
-length,25 to 34 s,1.155,0.862,1.46,31,views,main,0.4038,0.785
-length,35 to 44 s,0.865,0.685,1.16,38,views,main,0.4038,0.785
-title_search,search phrase,1.049,0.792,1.352,30,views,main,0.7759,0.906
-title_search,curiosity,0.953,0.74,1.263,25,views,main,0.7759,0.906
-writer_arm,gpt-oss-120b,0.878,0.804,0.996,5,views,main,0.0552,0.496
-writer_arm,gemini flash,1.139,1.004,1.244,7,views,main,0.0552,0.496
-title_emoji,emoji,0.854,0.675,1.124,30,views,main,0.32,0.785
-title_emoji,none,1.17,0.89,1.482,33,views,main,0.32,0.785
-title_answer,stated,0.9,0.713,1.2,26,views,main,0.5033,0.824
-title_answer,held back,1.111,0.834,1.402,24,views,main,0.5033,0.824
-sub_push,spoken,0.849,0.697,1.087,18,views,main,0.2515,0.785
-sub_push,none,1.178,0.92,1.434,23,views,main,0.2515,0.785
-replies,on,1.13,0.857,1.484,83,views,main,0.436,0.785
-replies,off,0.885,0.674,1.167,77,views,main,0.436,0.785
-channel,gaming,1.221,0.979,1.541,8,views,control,0.1554,
-channel,main,0.819,0.649,1.022,184,views,control,0.1554,
-control,exploration Short,0.828,0.47,1.563,10,views,control,0.6225,
-control,topic heat (per point),0.927,0.768,1.13,188,views,control,0.5611,
-category x angles,Entertainment: hidden,1.024,1.003,1.039,3,views,interaction,0.0381,0.299
-category x angles,Entertainment: shown,0.977,0.962,0.997,5,views,interaction,0.0381,0.299
-category x ending,Entertainment: question,0.986,0.973,1.004,5,views,interaction,0.1238,0.374
-category x ending,Entertainment: loop,1.014,0.996,1.028,3,views,interaction,0.1238,0.374
-category x first_frame,Entertainment: photo,0.987,0.961,1.016,4,views,interaction,0.4555,0.714
-category x first_frame,Entertainment: cover,1.014,0.984,1.041,8,views,interaction,0.4555,0.714
-category x franchise,Entertainment: plain,0.99,0.972,1.009,3,views,interaction,0.3568,0.601
-category x franchise,Entertainment: named,1.01,0.991,1.028,4,views,interaction,0.3568,0.601
-category x fx_energy,Entertainment: lab,1.022,0.997,1.039,5,views,interaction,0.0912,0.374
-category x fx_energy,Entertainment: steady,0.978,0.963,1.003,3,views,interaction,0.0912,0.374
-category x fx_slot,Entertainment: 12:00 to 18:00,1.029,1.002,1.051,3,views,interaction,0.0515,0.346
-category x fx_slot,Entertainment: 06:00 to 12:00,0.971,0.951,0.998,6,views,interaction,0.0515,0.346
-category x hook_type,Entertainment: number,0.991,0.967,1.015,6,views,interaction,0.5443,0.775
-category x hook_type,Entertainment: statement,1.009,0.985,1.034,4,views,interaction,0.5443,0.775
-category x length,Entertainment: 35 to 44 s,1.005,0.98,1.03,3,views,interaction,0.7425,0.872
-category x length,Entertainment: 25 to 34 s,0.995,0.971,1.021,7,views,interaction,0.7425,0.872
-category x title_search,Entertainment: curiosity,0.989,0.966,1.016,7,views,interaction,0.4943,0.726
-category x title_search,Entertainment: search phrase,1.011,0.984,1.035,3,views,interaction,0.4943,0.726
-category x title_emoji,Entertainment: none,0.982,0.961,1.012,7,views,interaction,0.2619,0.474
-category x title_emoji,Entertainment: emoji,1.018,0.988,1.04,4,views,interaction,0.2619,0.474
-category x title_answer,Entertainment: held back,0.976,0.958,1.005,8,views,interaction,0.0969,0.374
-category x title_answer,Entertainment: stated,1.025,0.995,1.044,3,views,interaction,0.0969,0.374
-category x replies,Entertainment: off,0.949,0.913,0.988,9,views,interaction,0.0261,0.273
-category x replies,Entertainment: on,1.054,1.012,1.095,10,views,interaction,0.0261,0.273
-category x first_frame,Film: photo,1.035,0.989,1.068,10,views,interaction,0.1637,0.419
-category x first_frame,Film: cover,0.966,0.937,1.011,6,views,interaction,0.1637,0.419
-category x fx_slot,Film: 12:00 to 18:00,0.969,0.942,1.008,6,views,interaction,0.1183,0.374
-category x fx_slot,Film: 06:00 to 12:00,1.032,0.992,1.061,3,views,interaction,0.1183,0.374
-category x gene:g003,Film: b,0.976,0.952,1.011,3,views,interaction,0.1875,0.42
-category x gene:g003,Film: a,1.025,0.989,1.05,3,views,interaction,0.1875,0.42
-category x hook_type,Film: number,0.968,0.94,1.015,3,views,interaction,0.1462,0.404
-category x hook_type,Film: statement,1.033,0.985,1.064,7,views,interaction,0.1462,0.404
-category x length,Film: 35 to 44 s,0.996,0.97,1.024,6,views,interaction,0.8205,0.909
-category x length,Film: 25 to 34 s,1.004,0.976,1.031,5,views,interaction,0.8205,0.909
-category x title_search,Film: curiosity,0.976,0.95,1.01,6,views,interaction,0.2004,0.428
-category x title_search,Film: search phrase,1.025,0.99,1.052,4,views,interaction,0.2004,0.428
-category x title_answer,Film: held back,0.976,0.958,1.007,3,views,interaction,0.1198,0.374
-category x title_answer,Film: stated,1.024,0.993,1.044,5,views,interaction,0.1198,0.374
-category x replies,Film: off,0.994,0.948,1.047,11,views,interaction,0.8348,0.909
-category x replies,Film: on,1.006,0.955,1.055,15,views,interaction,0.8348,0.909
-category x ending,Gaming: question,1.02,0.993,1.04,4,views,interaction,0.1273,0.374
-category x ending,Gaming: loop,0.98,0.962,1.007,12,views,interaction,0.1273,0.374
-category x first_frame,Gaming: photo,1.016,0.984,1.058,9,views,interaction,0.4535,0.714
-category x first_frame,Gaming: cover,0.984,0.945,1.016,10,views,interaction,0.4535,0.714
-category x franchise,Gaming: plain,1.009,0.986,1.026,5,views,interaction,0.4793,0.726
-category x franchise,Gaming: named,0.991,0.975,1.014,5,views,interaction,0.4793,0.726
-category x fx_energy,Gaming: lab,1.03,1.004,1.048,4,views,interaction,0.0184,0.273
-category x fx_energy,Gaming: steady,0.971,0.955,0.996,8,views,interaction,0.0184,0.273
-category x fx_grade,Gaming: lab,1.002,0.988,1.016,4,views,interaction,0.7868,0.902
-category x fx_grade,Gaming: natural,0.998,0.984,1.012,6,views,interaction,0.7868,0.902
-category x fx_slot,Gaming: 12:00 to 18:00,0.986,0.968,1.009,10,views,interaction,0.2575,0.474
-category x fx_slot,Gaming: 06:00 to 12:00,1.015,0.991,1.033,3,views,interaction,0.2575,0.474
-category x gene:g003,Gaming: b,0.996,0.98,1.013,3,views,interaction,0.7017,0.847
-category x gene:g003,Gaming: a,1.004,0.988,1.021,8,views,interaction,0.7017,0.847
-category x hook_type,Gaming: number,0.983,0.965,1.011,8,views,interaction,0.2484,0.474
-category x hook_type,Gaming: statement,1.017,0.989,1.037,6,views,interaction,0.2484,0.474
-category x length,Gaming: 35 to 44 s,0.997,0.97,1.026,9,views,interaction,0.8681,0.909
-category x length,Gaming: 25 to 34 s,1.003,0.975,1.031,8,views,interaction,0.8681,0.909
-category x title_search,Gaming: curiosity,1.003,0.97,1.026,5,views,interaction,0.8704,0.909
-category x title_search,Gaming: search phrase,0.997,0.975,1.031,10,views,interaction,0.8704,0.909
-category x title_emoji,Gaming: none,1.005,0.983,1.028,5,views,interaction,0.7028,0.847
-category x title_emoji,Gaming: emoji,0.995,0.973,1.017,12,views,interaction,0.7028,0.847
-category x title_answer,Gaming: held back,1.033,1.005,1.053,4,views,interaction,0.0291,0.273
-category x title_answer,Gaming: stated,0.968,0.949,0.995,9,views,interaction,0.0291,0.273
-category x sub_push,Gaming: none,0.993,0.976,1.017,5,views,interaction,0.6,0.806
-category x sub_push,Gaming: spoken,1.007,0.983,1.025,7,views,interaction,0.6,0.806
-category x replies,Gaming: off,0.962,0.926,1.004,14,views,interaction,0.11,0.374
-category x replies,Gaming: on,1.039,0.996,1.079,19,views,interaction,0.11,0.374
-category x first_frame,Music: photo,0.964,0.938,1.0,5,views,interaction,0.0689,0.374
-category x first_frame,Music: cover,1.038,1.0,1.066,4,views,interaction,0.0689,0.374
-category x replies,Music: off,1.054,0.996,1.111,18,views,interaction,0.1078,0.374
-category x replies,Music: on,0.948,0.9,1.004,11,views,interaction,0.1078,0.374
-category x replies,Science: off,1.01,0.977,1.041,5,views,interaction,0.6193,0.808
-category x replies,Science: on,0.99,0.961,1.024,6,views,interaction,0.6193,0.808
-category x angles,Sport: hidden,0.98,0.956,1.008,3,views,interaction,0.2232,0.456
-category x angles,Sport: shown,1.021,0.992,1.046,5,views,interaction,0.2232,0.456
-category x ending,Sport: question,1.024,0.993,1.051,6,views,interaction,0.1711,0.419
-category x ending,Sport: loop,0.977,0.952,1.007,5,views,interaction,0.1711,0.419
-category x first_frame,Sport: photo,1.001,0.973,1.035,5,views,interaction,0.9704,0.97
-category x first_frame,Sport: cover,0.999,0.966,1.027,6,views,interaction,0.9704,0.97
-category x fx_slot,Sport: 12:00 to 18:00,1.023,0.99,1.043,3,views,interaction,0.1782,0.419
-category x fx_slot,Sport: 06:00 to 12:00,0.978,0.959,1.01,5,views,interaction,0.1782,0.419
-category x hook_type,Sport: number,1.048,1.009,1.068,6,views,interaction,0.0066,0.273
-category x hook_type,Sport: statement,0.954,0.936,0.991,4,views,interaction,0.0066,0.273
-category x length,Sport: 35 to 44 s,0.99,0.96,1.022,9,views,interaction,0.584,0.806
-category x length,Sport: 25 to 34 s,1.01,0.979,1.041,4,views,interaction,0.584,0.806
-category x title_emoji,Sport: none,0.983,0.957,1.015,5,views,interaction,0.3581,0.601
-category x title_emoji,Sport: emoji,1.017,0.985,1.045,4,views,interaction,0.3581,0.601
-category x title_answer,Sport: held back,1.039,1.004,1.059,4,views,interaction,0.0193,0.273
-category x title_answer,Sport: stated,0.962,0.944,0.996,5,views,interaction,0.0193,0.273
-category x replies,Sport: off,1.01,0.967,1.043,12,views,interaction,0.6801,0.847
-category x replies,Sport: on,0.99,0.958,1.034,18,views,interaction,0.6801,0.847
-category x replies,Tech: off,0.999,0.968,1.031,7,views,interaction,0.9407,0.961
-category x replies,Tech: on,1.001,0.97,1.033,4,views,interaction,0.9407,0.961
+angles,shown,0.974,0.781,1.205,20,views,main,0.8505,0.901
+angles,hidden,1.026,0.83,1.28,22,views,main,0.8505,0.901
+ending,loop,1.087,0.822,1.346,33,views,main,0.5856,0.841
+ending,question,0.92,0.743,1.217,24,views,main,0.5856,0.841
+first_frame,cover,0.946,0.698,1.197,43,views,main,0.7471,0.841
+first_frame,photo,1.057,0.836,1.433,38,views,main,0.7471,0.841
+franchise,named,1.14,0.87,1.475,19,views,main,0.4151,0.841
+franchise,plain,0.877,0.678,1.15,17,views,main,0.4151,0.841
+fx_energy,steady,0.876,0.715,1.121,25,views,main,0.3444,0.841
+fx_energy,lab,1.141,0.892,1.399,18,views,main,0.3444,0.841
+fx_grade,natural,1.2,0.906,1.491,17,views,main,0.2113,0.841
+fx_grade,lab,0.833,0.67,1.104,14,views,main,0.2113,0.841
+fx_opening,image_first,0.756,0.65,0.989,19,views,main,0.0327,0.588
+fx_opening,lab,1.323,1.011,1.538,12,views,main,0.0327,0.588
+fx_slot,06:00 to 12:00,1.135,0.88,1.462,24,views,main,0.4402,0.841
+fx_slot,12:00 to 18:00,0.881,0.684,1.136,26,views,main,0.4402,0.841
+gene:g003,a,1.057,0.82,1.376,19,views,main,0.7156,0.841
+gene:g003,b,0.946,0.727,1.22,16,views,main,0.7156,0.841
+gene:g004,a,0.998,0.806,1.178,18,views,main,0.9893,0.989
+gene:g004,b,1.002,0.849,1.241,8,views,main,0.9893,0.989
+hook_type,statement,0.941,0.761,1.192,26,views,main,0.6795,0.841
+hook_type,number,1.062,0.839,1.314,33,views,main,0.6795,0.841
+length,25 to 34 s,1.119,0.822,1.457,31,views,main,0.501,0.841
+length,35 to 44 s,0.894,0.686,1.217,39,views,main,0.501,0.841
+title_search,search phrase,1.065,0.822,1.443,30,views,main,0.7147,0.841
+title_search,curiosity,0.939,0.693,1.217,25,views,main,0.7147,0.841
+writer_arm,gpt-oss-120b,0.88,0.791,0.999,5,views,main,0.0767,0.691
+writer_arm,gemini flash,1.137,1.001,1.264,7,views,main,0.0767,0.691
+title_emoji,emoji,0.848,0.671,1.125,30,views,main,0.2617,0.841
+title_emoji,none,1.179,0.889,1.49,34,views,main,0.2617,0.841
+title_answer,stated,0.929,0.725,1.257,26,views,main,0.6473,0.841
+title_answer,held back,1.077,0.796,1.38,24,views,main,0.6473,0.841
+sub_push,spoken,0.85,0.714,1.114,18,views,main,0.227,0.841
+sub_push,none,1.177,0.898,1.4,23,views,main,0.227,0.841
+replies,on,1.13,0.85,1.437,84,views,main,0.4584,0.841
+replies,off,0.885,0.696,1.177,77,views,main,0.4584,0.841
+channel,gaming,1.242,1.017,1.545,8,views,control,0.0917,
+channel,main,0.805,0.647,0.984,185,views,control,0.0917,
+control,exploration Short,0.931,0.475,1.649,11,views,control,0.8494,
+control,topic heat (per point),0.939,0.755,1.127,189,views,control,0.6227,
+category x angles,Entertainment: hidden,1.028,1.008,1.048,3,views,interaction,0.0187,0.225
+category x angles,Entertainment: shown,0.973,0.954,0.992,5,views,interaction,0.0187,0.225
+category x ending,Entertainment: question,0.982,0.969,1.001,5,views,interaction,0.0749,0.391
+category x ending,Entertainment: loop,1.019,0.999,1.032,3,views,interaction,0.0749,0.391
+category x first_frame,Entertainment: photo,0.986,0.957,1.017,4,views,interaction,0.4257,0.667
+category x first_frame,Entertainment: cover,1.014,0.983,1.045,8,views,interaction,0.4257,0.667
+category x franchise,Entertainment: plain,0.99,0.974,1.008,3,views,interaction,0.3276,0.616
+category x franchise,Entertainment: named,1.01,0.992,1.026,4,views,interaction,0.3276,0.616
+category x fx_energy,Entertainment: lab,1.011,0.988,1.035,5,views,interaction,0.4482,0.68
+category x fx_energy,Entertainment: steady,0.989,0.966,1.012,3,views,interaction,0.4482,0.68
+category x fx_slot,Entertainment: 12:00 to 18:00,1.035,1.006,1.058,3,views,interaction,0.0211,0.225
+category x fx_slot,Entertainment: 06:00 to 12:00,0.967,0.945,0.994,6,views,interaction,0.0211,0.225
+category x hook_type,Entertainment: number,0.987,0.966,1.016,6,views,interaction,0.3933,0.66
+category x hook_type,Entertainment: statement,1.013,0.985,1.036,4,views,interaction,0.3933,0.66
+category x length,Entertainment: 35 to 44 s,1.004,0.977,1.031,3,views,interaction,0.8138,0.92
+category x length,Entertainment: 25 to 34 s,0.996,0.97,1.024,7,views,interaction,0.8138,0.92
+category x title_search,Entertainment: curiosity,0.985,0.962,1.009,7,views,interaction,0.2898,0.568
+category x title_search,Entertainment: search phrase,1.015,0.991,1.04,3,views,interaction,0.2898,0.568
+category x title_emoji,Entertainment: none,0.978,0.958,1.005,7,views,interaction,0.1446,0.423
+category x title_emoji,Entertainment: emoji,1.022,0.995,1.044,4,views,interaction,0.1446,0.423
+category x title_answer,Entertainment: held back,0.971,0.954,0.995,8,views,interaction,0.0279,0.225
+category x title_answer,Entertainment: stated,1.03,1.005,1.048,3,views,interaction,0.0279,0.225
+category x replies,Entertainment: off,0.95,0.918,0.998,9,views,interaction,0.0594,0.349
+category x replies,Entertainment: on,1.052,1.002,1.089,10,views,interaction,0.0594,0.349
+category x first_frame,Film: photo,1.035,0.983,1.078,10,views,interaction,0.2383,0.499
+category x first_frame,Film: cover,0.966,0.928,1.017,6,views,interaction,0.2383,0.499
+category x fx_slot,Film: 12:00 to 18:00,0.969,0.938,1.009,6,views,interaction,0.1515,0.423
+category x fx_slot,Film: 06:00 to 12:00,1.032,0.992,1.066,3,views,interaction,0.1515,0.423
+category x gene:g003,Film: b,0.976,0.947,1.015,3,views,interaction,0.2364,0.499
+category x gene:g003,Film: a,1.024,0.985,1.056,3,views,interaction,0.2364,0.499
+category x hook_type,Film: number,0.969,0.94,1.016,3,views,interaction,0.1603,0.423
+category x hook_type,Film: statement,1.032,0.985,1.064,7,views,interaction,0.1603,0.423
+category x length,Film: 35 to 44 s,0.998,0.97,1.032,6,views,interaction,0.9002,0.92
+category x length,Film: 25 to 34 s,1.002,0.969,1.031,5,views,interaction,0.9002,0.92
+category x title_search,Film: curiosity,0.976,0.949,1.009,6,views,interaction,0.2077,0.488
+category x title_search,Film: search phrase,1.025,0.991,1.054,4,views,interaction,0.2077,0.488
+category x title_answer,Film: held back,0.978,0.956,1.007,3,views,interaction,0.1712,0.423
+category x title_answer,Film: stated,1.023,0.993,1.046,5,views,interaction,0.1712,0.423
+category x replies,Film: off,0.995,0.951,1.051,11,views,interaction,0.88,0.92
+category x replies,Film: on,1.005,0.951,1.051,15,views,interaction,0.88,0.92
+category x ending,Gaming: question,1.019,0.996,1.039,4,views,interaction,0.1648,0.423
+category x ending,Gaming: loop,0.981,0.962,1.004,12,views,interaction,0.1648,0.423
+category x first_frame,Gaming: photo,1.016,0.982,1.058,9,views,interaction,0.4653,0.683
+category x first_frame,Gaming: cover,0.984,0.946,1.018,10,views,interaction,0.4653,0.683
+category x franchise,Gaming: plain,1.008,0.985,1.028,5,views,interaction,0.5345,0.761
+category x franchise,Gaming: named,0.992,0.972,1.016,5,views,interaction,0.5345,0.761
+category x fx_energy,Gaming: lab,1.03,1.004,1.048,4,views,interaction,0.0335,0.225
+category x fx_energy,Gaming: steady,0.971,0.954,0.996,8,views,interaction,0.0335,0.225
+category x fx_grade,Gaming: lab,1.003,0.987,1.019,4,views,interaction,0.7489,0.916
+category x fx_grade,Gaming: natural,0.997,0.981,1.014,6,views,interaction,0.7489,0.916
+category x fx_slot,Gaming: 12:00 to 18:00,0.986,0.97,1.006,10,views,interaction,0.2442,0.499
+category x fx_slot,Gaming: 06:00 to 12:00,1.014,0.994,1.031,3,views,interaction,0.2442,0.499
+category x gene:g003,Gaming: b,0.996,0.982,1.017,3,views,interaction,0.7373,0.916
+category x gene:g003,Gaming: a,1.004,0.983,1.019,8,views,interaction,0.7373,0.916
+category x hook_type,Gaming: number,0.985,0.961,1.012,8,views,interaction,0.3453,0.621
+category x hook_type,Gaming: statement,1.015,0.988,1.041,6,views,interaction,0.3453,0.621
+category x length,Gaming: 35 to 44 s,0.996,0.969,1.027,9,views,interaction,0.8401,0.92
+category x length,Gaming: 25 to 34 s,1.004,0.973,1.032,8,views,interaction,0.8401,0.92
+category x title_search,Gaming: curiosity,1.003,0.974,1.031,5,views,interaction,0.8852,0.92
+category x title_search,Gaming: search phrase,0.997,0.97,1.026,10,views,interaction,0.8852,0.92
+category x title_emoji,Gaming: none,1.005,0.982,1.029,5,views,interaction,0.7429,0.916
+category x title_emoji,Gaming: emoji,0.995,0.972,1.018,12,views,interaction,0.7429,0.916
+category x title_answer,Gaming: held back,1.032,0.999,1.049,4,views,interaction,0.0326,0.225
+category x title_answer,Gaming: stated,0.969,0.953,1.001,9,views,interaction,0.0326,0.225
+category x sub_push,Gaming: none,0.993,0.977,1.014,5,views,interaction,0.5824,0.805
+category x sub_push,Gaming: spoken,1.007,0.986,1.024,7,views,interaction,0.5824,0.805
+category x replies,Gaming: off,0.963,0.928,1.003,14,views,interaction,0.1425,0.423
+category x replies,Gaming: on,1.038,0.997,1.078,19,views,interaction,0.1425,0.423
+category x first_frame,Music: photo,0.965,0.936,1.002,5,views,interaction,0.0914,0.413
+category x first_frame,Music: cover,1.037,0.998,1.068,4,views,interaction,0.0914,0.413
+category x replies,Music: off,1.054,0.996,1.106,18,views,interaction,0.1007,0.413
+category x replies,Music: on,0.949,0.904,1.004,11,views,interaction,0.1007,0.413
+category x replies,Science: off,1.008,0.971,1.042,5,views,interaction,0.692,0.916
+category x replies,Science: on,0.992,0.959,1.03,6,views,interaction,0.692,0.916
+category x angles,Sport: hidden,0.977,0.956,1.004,3,views,interaction,0.1056,0.413
+category x angles,Sport: shown,1.024,0.996,1.046,5,views,interaction,0.1056,0.413
+category x ending,Sport: question,1.016,0.985,1.044,6,views,interaction,0.3568,0.621
+category x ending,Sport: loop,0.984,0.958,1.015,6,views,interaction,0.3568,0.621
+category x first_frame,Sport: photo,1.003,0.974,1.038,6,views,interaction,0.8897,0.92
+category x first_frame,Sport: cover,0.997,0.964,1.026,6,views,interaction,0.8897,0.92
+category x fx_slot,Sport: 12:00 to 18:00,1.024,0.99,1.045,3,views,interaction,0.1704,0.423
+category x fx_slot,Sport: 06:00 to 12:00,0.977,0.957,1.01,5,views,interaction,0.1704,0.423
+category x hook_type,Sport: number,1.046,1.006,1.072,6,views,interaction,0.0128,0.225
+category x hook_type,Sport: statement,0.956,0.933,0.994,4,views,interaction,0.0128,0.225
+category x length,Sport: 35 to 44 s,0.998,0.968,1.027,10,views,interaction,0.8963,0.92
+category x length,Sport: 25 to 34 s,1.002,0.973,1.033,4,views,interaction,0.8963,0.92
+category x title_emoji,Sport: none,0.984,0.953,1.016,6,views,interaction,0.4088,0.662
+category x title_emoji,Sport: emoji,1.016,0.984,1.05,4,views,interaction,0.4088,0.662
+category x title_answer,Sport: held back,1.038,1.004,1.062,4,views,interaction,0.0268,0.225
+category x title_answer,Sport: stated,0.964,0.942,0.996,5,views,interaction,0.0268,0.225
+category x replies,Sport: off,1.008,0.967,1.051,12,views,interaction,0.76,0.916
+category x replies,Sport: on,0.992,0.952,1.034,19,views,interaction,0.76,0.916
+category x replies,Tech: off,0.999,0.966,1.038,7,views,interaction,0.9505,0.95
+category x replies,Tech: on,1.001,0.963,1.035,4,views,interaction,0.9505,0.95
 first_frame,cover,1.107,0.924,1.367,35,engaged,main,0.3919,0.392
 first_frame,photo,0.903,0.731,1.082,26,engaged,main,0.3919,0.392
 fx_opening,image_first,1.223,0.94,1.634,7,engaged,main,0.2144,0.392

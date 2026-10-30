@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 14:20): 23 of 1,000 subscribers · 14,973 of 10 million Shorts views in 90 days · 6,338 views in the last 24 hours (about 110,945 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 15:00): 23 of 1,000 subscribers · 15,022 of 10 million Shorts views in 90 days · 6,725 views in the last 24 hours (about 110,944 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 14:20 (UK): 5 scheduled, 145 public, 14 uploads in the last 24 hours.
 
@@ -145,6 +145,14 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-285** Emily McGonagle: the secret career change 🎙️ (rendering next)
+- **QD-286** Sir Patrick Stewart has passed away at 86 🎭 (rendering next)
+- **QD-287** Messi vs Ronaldo: the record one of them missed (rendering next)
+- **QD-288** Sport Shocks #5: Super Bowl XLVII: the day the lights went out 💡 (rendering next)
+- **QD-289** Did You Know #9: Emily McGonagle: 8 voices in one show 🎙️ (rendering next)
 
 ## On the channel (latest first)
 

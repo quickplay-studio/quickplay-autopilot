@@ -1,137 +1,140 @@
-# What wins on Shorts for everyone else (Wednesday 28 October UK)
+# What wins on Shorts for everyone else (Friday 30 October UK)
 
 The most-viewed English Shorts of the last 2 days per category (YouTube search), against our own titles. Angles to beat, never to copy.
 
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 33% | 38% |
-| A question | 30% | 7% |
-| With an emoji | 63% | 54% |
-| Length, seconds (median) | 25.0 | 28.9 |
+| With a number | 24% | 39% |
+| A question | 14% | 7% |
+| With an emoji | 55% | 54% |
+| Length, seconds (median) | 25.0 | 29.0 |
 
 ## Animals
-- 5 Animals That Sleep in the STRANGEST Ways (1,149,894 views, 24,039 an hour, 61 s, informationfact)
-- The Ocean’s 4 Most Incredible Growing Creatures!🙄#city  #facts #sea #seacreatures #shorts (79,554 views, 9,542 an hour, 64 s, Unique Fact Official)
-- 🦘  Amazing Kangaroo Life Fact! A Kangaroo Amazing Life 😱 How Baby Kangaroos Are Born (139,430 views, 4,785 an hour, 45 s, AmtiazFishDealers)
-- This is MOUNTAIN GOAT #history #facts (91,691 views, 4,521 an hour, 7 s, MORGAR | Human History)
-- You would never want to pet this one 😳 (189,946 views, 4,190 an hour, 15 s, Fact With Px )
+- 😱 This Stick Can Save Their Lives! 😳 #Facts #TribalLife #AmazingFacts #Shorts (329,696 views, 7,157 an hour, 25 s, Fact Mingle )
+- This giant bat looks like a flying dog. #animals #shorts (205,086 views, 5,964 an hour, 9 s, Farzi_ST)
+- Top 3 Biggest Animals on Earth! 🐘🐋 #Shorts #facts (230,304 views, 5,250 an hour, 61 s, Lullu-Short's)
+- If You Were a Pufferfish. #shorts (152,830 views, 3,228 an hour, 34 s, TapanGuy)
+- Why a Tiger's Tongue is Dangerous! 😱 #Shorts#Tiger#AmazingFacts#animalfacts (40,305 views, 1,519 an hour, 29 s, Nk ruhan )
+
+## Avengers: Doomsday
+- Tony handled the worst team ever 😭 | Avengers doomsday new trailer | Marvel edits | #shorts #marvel (840,134 views, 18,182 an hour, 16 s, infinity rush)
+- Why Thanos is Man of Words and better than Doom? #thanos #avengersdoomsday #shorts (149,284 views, 5,430 an hour, 81 s, MysticVerse)
+- bro is too op for doomsday #shorts (151,752 views, 3,401 an hour, 20 s, Syzo90s)
+- Magneto can’t do a thing to me, I have iron deficiency #shorts (139,574 views, 3,145 an hour, 12 s, Marvel Rivals Insider)
+- What If Deadpool Pulled This Move on Dr Doom | Avengers Doomsday leaked scene #shorts #ytshortsvideo (44,427 views, 1,037 an hour, 9 s, vaibhav k meme)
 
 ## Ballon d'Or 2026
-- Harry Kane Is The 2026 Ballon d'or Winner🤫🥶 #shorts #ballondor #harrykane #shortsvideo (1,379,843 views, 41,622 an hour, 31 s, @xa07_Editx)
-- WHO IS YOUR 2026 BALLON D'OR WINNER? 👀  #football #soccer #shorts (1,431,120 views, 31,562 an hour, 15 s, GOAL's Front Three)
-- The Biggest Ballon D'or Robbery💔🥺 #shorts #ballondor #harrykane #shortsvideo (233,990 views, 11,820 an hour, 46 s, @xa07_Editx)
-- 🤔 Who is WINNING The 2026 Ballon d’Or? (302,254 views, 7,166 an hour, 16 s, Shark Ballers)
-- Jynxzi Reaction to Harry Kane Winning The 2026 Ballon d’Or! 😱🏆 (185,100 views, 5,660 an hour, 15 s, iboclips)
+- Crowd Reaction To Ronaldo In Ballon d'or 2026🥶🐐 #shorts #ronaldo #messi #ballondor #shortsvideo (765,484 views, 16,619 an hour, 36 s, @xa07_Editx)
+- Ronaldo Wins The Ballon d'or Of All Time🥶🐐 #shorts #ronaldo #ballondor #messi #shortsvideo (352,516 views, 15,974 an hour, 32 s, @xa07_Editx)
+- Mbappe Was Supposed To Win The Ballon d'or💔🥺 #shorts #mbappe #ballondor #harrykane #shortsvideo (414,697 views, 9,517 an hour, 34 s, @xa07_Editx)
+- 3 Players Who Got ROBBED in Ballon d’Or 2026 😱 (418,628 views, 8,757 an hour, 89 s, Sharma Football)
+- Marcelo on Harry Kane winning the Ballon d'Or #shorts #marcelo #harrykane #uk (175,225 views, 3,872 an hour, 7 s, GOALIFY)
 
 ## Cars
-- This old man has the most unique car. #shorts #respect #ytshorts (871,365 views, 19,267 an hour, 15 s, Excessive Facts)
-- How The Toyota Prius Finally Became Cool (42,137 views, 2,361 an hour, 20 s, CarTime)
-- Why Is This Racetrack So Sticky 🤯 (42,773 views, 2,333 an hour, 20 s, 𝐄𝐂𝐇𝐎𝐄𝐃)
-- She Risked Everything to Sign This Car! 😱 #car #cars #shorts (42,602 views, 2,147 an hour, 25 s, God fact 7m)
-- Trying to escape in a toddler's car... what could go wrong? #shorts #car (34,704 views, 1,366 an hour, 23 s, Xeno Shots )
+- Required High Car Driving To Get Licence On Slippery Road #shorts #facts #car (379,406 views, 12,773 an hour, 22 s, AK Creative Knowledge)
+- I can't go home unless I see a expensive car 🤑  #shorts (94,979 views, 3,468 an hour, 53 s, Cholo Try Kori)
+- How To Make Simply Car (82,586 views, 2,033 an hour, 29 s, HorribleAnimationYt)
+- How A Small Mistake Led To Tragedy In F1 🚘 #shorts (73,498 views, 1,995 an hour, 53 s, PureSports)
+
+## Christmas 2026
+- Jumanji: Open World - New Trailer - Hindi | Exclusively In Cinemas This Christmas (365,121 views, 74,784 an hour, 150 s, Sony Pictures India)
+- Comment “GRINCH” if this is your Christmas must have🤣🎄 #christmas2026 #grinchmas (36,431 views, 2,172 an hour, 10 s, Link in BlO!)
+- Christmas Decor in 1970 vs 2026: Pixel Curtain Lights for the Balcony #lightingmanufacturer (27,841 views, 965 an hour, 14 s, beginlighting)
+- The perfect Christmas gift for every Eyekon! 🎄💝 #katseye #eyekons #christmasgifts (29,119 views, 629 an hour, 32 s, AnimeVinyl 2026)
+- EBENEZER: A CHRISTMAS CAROL Featurette - "Bringing Ebenezer Scrooge To Life" (2026) 4K (24,358 views, 592 an hour, 211 s, JoBlo Behind-the-Scenes + Bloopers)
 
 ## Dune: Part Three
-- Timothée Chalamet YELLS GO CHECK IT OUT Twice While Promoting Dune 3 With Zendaya! 😭😂 #Dune3 (25,759 views, 1,793 an hour, 6 s, SwipeRadar)
-- Dune Part Three is Going to DESTROY US! | Final Trailer Reaction (4,048 views, 240 an hour, 59 s, Troy Cervantes)
-- xQc reacts to the final Dune: Part Three trailer and the 3-movie run 🔥 #shorts  #xqc  #dune (1,397 views, 138 an hour, 44 s, MrCowClips)
-- Avengers: Doomsday LOSES IMAX to Dune: Part Three — Can Infinity Vision Save Marvel? (702 views, 48 an hour, 72 s, Global Reports)
-- Dune 3 final trailer is OUT my reaction #shorts (650 views, 38 an hour, 7 s, TrendSpice LB)
+- What is the end of 2026 is going to feel like💀🔥 (30,620 views, 722 an hour, 10 s, Phonk Monk)
+- Dune 3 movie will be the cinematic spectator of this year? #dune3 #hanszimmer #hollywood #shorts (30,986 views, 719 an hour, 82 s, Cults)
+- Chani is going to KILL Paul Atreides?! 😱 #shorts (1,932 views, 90 an hour, 74 s, Comic Maafia)
+- Dune: Part Two's Giant Thopter Was REAL. They Spun It On A Rotisserie Rig (1,270 views, 40 an hour, 25 s, Flo Films)
+- He Solved the Mystery When Nobody Expected It 😱🧠 #Shorts ‎Dune: Part Three (1,475 views, 37 an hour, 181 s, The Silent Story USA ⭐)
 
 ## Entertainment
-- Celebrity Recipe EP 21: Ranveer Brar Reveals the History of Chai ☕🤯 #trending #ytshorts #shorts (202,865 views, 4,871 an hour, 45 s,  Varshuu's Delights🌸)
-- Who Is This Actress In Photo #2? (14,048 views, 450 an hour, 16 s, Guess The Star)
-- Orlando Bloom Came to Her Rescue on Stage#orlandobloom #dakota #celebrityfacts #shorts #viralvideo (10,529 views, 271 an hour, 8 s, Pictora )
+- Bigg Boss Hosts Remuneration Revealed! 💰 Who Earns the Most? | Telugu Facts #Shorts (44,781 views, 978 an hour, 6 s, Telugu Facts & business )
+- how Dhiraj ke vlogs are famous 😱 #facts #shorts (21,377 views, 478 an hour, 27 s, Ashik ka facts )
+- 4 Celebrities Who Got Banned For Life From Exclusive Places (10,888 views, 350 an hour, 66 s, Startrek 1124g)
 
 ## Film
-- WHY BUILD A THING SUIT IF HE’S CGI?🤯 #shorts (124,366 views, 7,732 an hour, 72 s, Mik)
-- Irumudi Movie What Happened to Gayatri After Her Father's Death? #tollywood #telugucinema #shorts (124,247 views, 6,652 an hour, 22 s, always sriman)
-- Secret of the Most expensive film of Korea. (101,880 views, 4,419 an hour, 48 s, Aarush Prashanth)
-- Fact and detail of BHAAG MILKHA BHAAG #shorts (93,234 views, 4,360 an hour, 70 s, UG pocket)
-- ''Koi Mill Gya'' is Cult Movie❗HOW❓ (81,963 views, 3,435 an hour, 34 s, Cliptuto)
+- Why Captain America Do This To Spider Man 😱 #shorts (170,249 views, 8,329 an hour, 72 s, RJ Explained 2)
+- 😱 This Stick Can Save Their Lives! 😳 #Facts #TribalLife #AmazingFacts #Shorts (329,696 views, 7,157 an hour, 25 s, Fact Mingle )
+- If You Were a Pufferfish. #shorts (152,830 views, 3,228 an hour, 34 s, TapanGuy)
+- Karishma and Karina Kapoor Skip Kajol's Durga Puja: Why? #shorts #viral #facts #new #bollywood (79,514 views, 1,799 an hour, 11 s, Sanju udate Billy)
+- Who is the best Lakshman: Karan Suchak vs Ravi Dubey 🔥​​ #shorts #ramayana (39,041 views, 877 an hour, 48 s, ScoopwithMe)
 
 ## Food
-- He Tried to Take Food for His Mom, But…  #shorts (2,338,371 views, 52,154 an hour, 25 s, FactQuiria )
-- What Sabji Do People Eat Daily in Rajasthan? 🤔 #Shorts (227,909 views, 11,204 an hour, 41 s, Crazy Facts Hindi)
-- You’ve Been Breaking Toblerone the Hard Way 🍫 #shorts #facts #didyouknow #chocolate (39,140 views, 3,785 an hour, 23 s, BrainFlash Daily)
-- How to make Bread in Oven tonir | Lavash Bread🫠 #shorts #shortvideo (46,756 views, 2,271 an hour, 33 s, Factifiedtube )
-- The Hidden Nutrition Power Of One Simple Egg 🥚#trending #youtubeshorts #shorts #viral #viralvideo (87,679 views, 1,954 an hour, 6 s, RACHANA VLOGS1619)
+- What Vegetables Do People Eat Daily in Punjab's Cities? (239,265 views, 5,447 an hour, 40 s, Crazy Facts Hindi)
+- He Tried to Eat This Giant Roti for FREE! 😱🔥 #Shorts#facts#viral#core (177,358 views, 3,865 an hour, 28 s, 𝔽𝔸ℂ𝕋𝕆 𝕣𝕖𝕔𝕙 999)
 
 ## GTA 6
-- POV: The Shoe Store Icon Appears On The Map (GTA 6) 😭 | #shorts #gta6 (200,513 views, 6,937 an hour, 11 s, VertyGoose)
-- This is what 12 years of GTA 6 waiting looks like 💀 #gta6 #memes #shorts (100,735 views, 2,219 an hour, 5 s, MemeCrave)
+- Sacrifices Have To Be Made For GTA 6 #shorts #meme (254,906 views, 24,651 an hour, 56 s, ClassicMan D)
+- No one thought of this 😭🙏 (393,009 views, 9,773 an hour, 7 s, Kapy)
+- This is how PC gamers survive the GTA 6 wait 😭🔥#meme #gta6 #funny (183,134 views, 4,535 an hour, 4 s, MemePulse)
+- Rockstar Had A Plan For GTA 6 Release Date 😭🎮 (143,989 views, 3,330 an hour, 6 s, Catvidia)
 
 ## Gaming
-- This setting made your Xbox 360 quieter #shorts (131,378 views, 3,519 an hour, 6 s, Gamer Facts)
-- Your PS2 couldn't save without a $35 card #shorts (24,678 views, 1,510 an hour, 6 s, Gamer Facts)
-- What If You Swallow a Live Fish? 😱🐟 | Human Body Facts #Shorts@zackdfilms (38,563 views, 1,230 an hour, 27 s, Mujahir Vlogs )
-- This Straw Baler Is a Game Changer! 🚜 #shorts #shortsfeed #farming #youtubeshorts #trending #facts (13,778 views, 723 an hour, 17 s, Mr Harry12)
-- HOW ONE KISS SAVED A GAME🤯 #shorts (23,101 views, 524 an hour, 58 s, Mik_Games)
+- Your PS5 has a secret you're meant to hoover #shorts (1,011,330 views, 27,051 an hour, 6 s, Gamer Facts)
+- The US Air Force built a supercomputer from PS3s #shorts (81,041 views, 2,582 an hour, 6 s, Gamer Facts)
+- This Guy Forgets Which LAMBORGHINI To Drive 😳 #facts #viral @MrBeast (28,436 views, 1,083 an hour, 31 s, Manifactarya)
+- Why Your PS4 Controller Light Was Never Meant for You (32,629 views, 710 an hour, 17 s, OddlyCoded)
+- This rich boy wanted to win the game 🎯 #shorts  #game (26,525 views, 568 an hour, 19 s, it's icon Facts)
 
 ## Halloween 2026
-- Ranking The BEST Halloween Costume of 2026 Part 2 (2,171,718 views, 48,975 an hour, 30 s, Ranknosaur)
-- The BEST prank for HALLOWEEN! 🤣🤫🤭 #shorts #prank #halloween (1,796,050 views, 39,366 an hour, 25 s, Cadel and Mia)
-- On Halloween 👻🎃 U get To Bcom Anything u want to be🧛🏻  | omggshorts #shorts #floatingpen #art (376,262 views, 12,715 an hour, 10 s, OMG Shorts😱)
-- How to draw a dog for HALLOWEEN! #shorts #usa #memes #funny #halloween (140,202 views, 11,960 an hour, 38 s, NEXLO)
-- THE HUNTER’S MOON IS HERE! 🌕💀 | October 26, 2026 #Shorts #huntersmoon #moonshoot #astronomy (117,750 views, 2,514 an hour, 24 s, Dark Cosmic)
+- Types of People on Halloween #shorts (567,846 views, 41,386 an hour, 11 s, Tyler Vitelli)
+- This Halloween Update Is Disappointing… #bloxfruits #bloxfruit #roblox #shorts (239,026 views, 8,420 an hour, 18 s, Robyx)
+- Ranking The BEST Halloween Costume of 2026 😭 (175,829 views, 7,856 an hour, 30 s, ClipItNow)
+- She did it better #viral #halloween #halloweencostume #shorts (175,666 views, 5,049 an hour, 15 s, Yoowii )
+- Top 10 Halloween Fails You Need To See 🎃😂 #shorts  #funny #halloween #diwali #relatable #viral #2026 (73,951 views, 3,718 an hour, 42 s, listavox)
 
 ## Harry Potter HBO series
-- ‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Char #shorts (264 views, 13 an hour, 8 s, SATOR)
+- Also can’t wait for Christmas! That’s when the show comes!! (1,208 views, 32 an hour, 18 s, David’s Franchise vault 774)
+- Why Did Harry Drop the Resurrection Stone? (1,106 views, 32 an hour, 25 s, Dear Hogwarts)
+- HBO Remakes Harry Potter — But the Original Never Made Sense #shorts #harrypotter #viral #shortvideo (438 views, 10 an hour, 66 s, RealityShiftNetwork )
+- Is Hogwarts Legacy 2 Connected to the HBO Series? #shorts (103 views, 3 an hour, 24 s, Legacy Of Wands)
 
 ## History
-- “Remorse? Never Heard of Him” 💀 | Dark History & Art #Shorts #History #Art #DarkHistory #usa (267,768 views, 12,813 an hour, 11 s, Old_History01)
-- How Was the Great Wall of China Built? (179,626 views, 8,483 an hour, 41 s, Prime Facts )
-- Celebrity Recipe EP 21: Ranveer Brar Reveals the History of Chai ☕🤯 #trending #ytshorts #shorts (202,865 views, 4,871 an hour, 45 s,  Varshuu's Delights🌸)
-- This is MOUNTAIN GOAT #history #facts (91,691 views, 4,521 an hour, 7 s, MORGAR | Human History)
-- How Did France Sell Half a Continent to America for Just $15 Million?  #history #didyouknow #facts (96,014 views, 3,568 an hour, 172 s, History Index)
+- Top 3 Most Dangerous And Powerful Lions In History 🤯😱 #shorts (155,738 views, 3,450 an hour, 58 s, The animal adventure in हिन्दी)
+- USA vs Britain: Who Would Win a War Today?  #history #didyouknow #facts (74,185 views, 2,170 an hour, 179 s, History Index)
+- The Journey of "Kohinoor" #facts #shorts (93,408 views, 2,154 an hour, 76 s, Remember This)
+- The Flaming Arrow That Lit Barcelona #history #facts (65,809 views, 2,033 an hour, 9 s, ARCHIV | HUMAN HISTORY )
+- The Folk Icon and Her Questionable Hobby #shorts #shortsvideo #facts #history #trivia (68,216 views, 1,984 an hour, 59 s, Cody Tucker)
 
 ## Music
-- What Are You Doing For $99,999,999? #shorts #facts #lyrics #music #fyp (86,628 views, 1,842 an hour, 6 s, BUDIARTI STUDIO)
-- Robert Johnson: The Blues Legend Who Died at 27 #Shorts (3,985 views, 164 an hour, 114 s, Past Rewind )
-- Sia Wrote This MASSIVE Hit in Just 14 Minutes?! 🤯🎶 #Shorts (4,818 views, 115 an hour, 15 s, Track Rush)
-- The Secret Sound in Nirvana’s "Drain You"#shorts (2,930 views, 79 an hour, 28 s, Meenteeng)
-- FACTS ABOUT PAY MONEY TO MY PAIN #faktamusik #music #shorts (1,530 views, 53 an hour, 88 s, Glass Of music)
-
-## New Year's Eve 2026
-- Minecraft 2011 vs 2026… This Evolution Is INSANE 🤯 #minecraft #shorts (28,474 views, 996 an hour, 20 s, JoyPlayzXP)
-- NYC's Subway Is 120 Years Old. Why? #shorts (1,879 views, 55 an hour, 52 s, AMERICAN BUILD FILES)
-- Griefers won t leave you alone even on new years in GTA 5 😔 #shorts #gta5 #gtav #gtaviral (1,331 views, 49 an hour, 10 s, MasKhanMusic)
-- A killer's code went unsolved for 51 years #shorts (495 views, 13 an hour, 55 s, truecrime)
-- The Vet Said Lymphoma, Then It Was New Year's Eve #petcancer #shorts (278 views, 13 an hour, 73 s, Fleur Hull | The Substack Bookstore)
+- He Fooled Everyone With This Clever Trick! 😱🏆 #shorts #facts (70,056 views, 2,706 an hour, 29 s, Facto Arh)
+- Prince Suddenly Appeared for a Secret Collaboration #music #musichistory #prince #shorts  #80smusic (97,503 views, 2,456 an hour, 114 s, Amazing Music Facts)
+- Who actually sang this viral tiktok song? #shorts #music (45,358 views, 1,097 an hour, 17 s, PopPulse)
+- People Needs To Run For Remove Flag From Wooden Rod #shorts #facts (27,414 views, 961 an hour, 26 s, Boss music )
+- The Angry Accident That Created Radiohead’s "Creep" #radiohead #creep #musicfacts #shorts (31,727 views, 872 an hour, 10 s, The Spoilers Club)
 
 ## Science
-- Have You Ever Seen a Space Train Like This ? 🤯     #Starlink #SpaceX #SpaceFacts #Satellites #Shorts (274,514 views, 6,408 an hour, 8 s, Cosmic Thrust )
-- Jupiter Appears to Move Backward… But Why? 😱 #space #viral #shorts (55,826 views, 1,973 an hour, 11 s, Space phoenix)
-- These 3 Stars Are WAY Bigger Than You Think! #shorts (67,099 views, 1,530 an hour, 56 s, Galaxora Mystery)
-- This Object Touches the Moon Without a Massive Impact! 🌕😱 #shorts #trending #viral (30,342 views, 1,529 an hour, 11 s, The Space Guide)
-- Why Astronauts Struggle to Walk After Returning From Space! 👨‍🚀 (38,295 views, 1,297 an hour, 9 s, Infinity_Space 🌍)
+- This story will change the way you think. #facts #factshorts #shorts (671,582 views, 29,998 an hour, 67 s, Mahesh Malle)
+- What If an Indestructible Water Ball Launched You Into Space? 🚀😱🎥video credit : @zackdfilms (265,787 views, 9,150 an hour, 32 s, বিনোদন টিভি 25)
+- NOVEMBER’S FIRST WEEK IS FULL OF MOON MEETUPS! 💀🌕 #moon  #Shorts #astronomy #space #november (195,300 views, 4,256 an hour, 24 s, Dark Cosmic)
+- Space Is Scarier Than You Think...💀😱 #shorts #space #universe #science #astronomy #cosmos #NASA (63,108 views, 3,021 an hour, 32 s, Science Of Infinity)
+- Things I want to know before I DIE💀🤯 #shorts #space #edit (95,875 views, 2,502 an hour, 6 s, The Knowledge Quest)
 
 ## Sport
-- Is This The GREATEST Era Of Football? 🐐🔥 #shorts #football #soccer (344,235 views, 9,099 an hour, 15 s, Aveiro)
-- Goalkeepers Can REFUSE to Wear Gloves?! 🧤😳 #shorts #football (73,340 views, 1,746 an hour, 34 s, Glee Spotlight)
-- 🐐 CAN YOU FIT HURRICANE? 😈⚽ 99.9% WILL FAIL! 💀🔥 #Shorts #Football #foryou #reels (42,643 views, 1,589 an hour, 6 s, Glorylore )
-- 🥇 You Can Buy a World Cup Trophy?! 😱 #facts #factgenius #worldcup (32,979 views, 720 an hour, 20 s, Fact Genius)
-- Why Do Football Players Put Sticky Stuff on Their Hands? 🤯 (28,497 views, 654 an hour, 16 s, Geosnaps)
+- The Most Important Thing For Football Players ⚽ (200,515 views, 8,138 an hour, 19 s, The FactoPlus)
+- Ranking The Best AURA Moments in Football 🥶🔥 #shorts (135,120 views, 3,044 an hour, 44 s, Prime Footy Ranks)
+- Why Referees Drop the Ball on Wet Pitches!#Football #FootballFacts #FootballShorts #Soccer (52,860 views, 2,504 an hour, 28 s,  sportsnaps)
+- Oldest Football Players to Finish Top 5 in Ballon d’Or 🏆 | Messi, Ronaldo & Buffon #shorts (57,166 views, 1,222 an hour, 6 s, OP ANIRUDH BHI)
 
 ## Tech
-- 🚨 Instagram Takes on YouTube! 😱 90-Minute Videos Are Here! #Shorts (45,464 views, 2,213 an hour, 6 s, InfoBuzzNB)
-- Secret settings in vivo and oppo phones #tech #technology #shorts (84,242 views, 1,838 an hour, 33 s, MSquare Tech)
-- 4 Laptop Settings that you should immediately turn on #tech #technology #shorts (33,886 views, 1,517 an hour, 54 s, MSquare Tech)
-- He Put Apple’s Foldable iPhone to the Ultimate Test! 😳🔥#shorts #youtubeshorts #tech #iphoneduo (18,393 views, 447 an hour, 32 s, Loko_tech7)
-- The ultimate gaming beast is here: OnePlus 15! 🎮#oneplus15 #shorts #viral #trend #tech #technews (6,475 views, 288 an hour, 40 s, creative tech mind )
+- Nano Texture On A Samsung...? #Shorts (444,329 views, 12,520 an hour, 26 s, Phone Repair Guru)
+- iPhone Duo Wallpaper on a MacBook? 😳📱 #techshorts #tech #youtubeshorts #shorts (29,022 views, 1,701 an hour, 23 s, Loko_tech7)
+- The $1,999 iPhone Duo Is "Dust-Tight." Then Came the Sand #shorts (36,818 views, 1,024 an hour, 108 s, Tashi T. Films)
+- Why This $5,000 Phone Is a Total Scam! #smartphone #tech #luxury #luxurytech  #techreview #techtok (15,951 views, 348 an hour, 36 s, CostToCore)
 
 ## The Celebrity Traitors
-- Andrew Garfield is a busy man keeping up with all of these ICONIC shows 💅 (1,758 views, 91 an hour, 79 s, MTV ASIA)
-- Charlotte And Louis Are OBSESSED — William's Family TV Confession! #Shorts (990 views, 63 an hour, 39 s, RoyalPalaceLight)
-- Arthur Hill wants to go on 'Traitors' and 'Strictly'🏰🪩 #shorts (1,001 views, 25 an hour, 38 s, Capital Buzz)
+- JID Exposes the Traitors on Surround Sound 🔥 #Shorts (1,038 views, 44 an hour, 31 s, celebstruckmedia)
+- The Celebrity Traitors: Episode Nine builds to dramatic finale with faithfuls gifting power to tr... (176 views, 13 an hour, 18 s, TheReelyNews)
+- Celebrity Traitors Set for Shock Twist in Tonight's Penultimate Episode (178 views, 7 an hour, 17 s, TheReelyNews)
+- Celebrity Traitors Ratings Are Record-Breaking — So Why Does It Feel Flat? #Shorts (15 views, 1 an hour, 51 s, NextTrailers   • 348k Views •  24 hours ago...)
 
 ## The Hunger Games: Sunrise on the Reaping
-- Mckenna Grace CHANNELS Rue's Hunger Games Look For The Today Show! 🥹💚 #HungerGames (7,139 views, 3,058 an hour, 6 s, SwipeRadar)
-- Haymitch Abernathy | Everybody Wants to Rule the World #sotr #hungergamestiktok (523 views, 523 an hour, 21 s, sɯɐǝɹp ɥɐǝꓶ)
-- Petition to see the four hour cut of The Hunger Games: Sunrise on the Reaping ✨ (8,679 views, 382 an hour, 9 s, MTV UK)
-- Mckenna Grace pranking the Sunrise on the Reaping cast is unhinged (1,187 views, 108 an hour, 26 s, ReplayZone)
-- How a Beautiful Meadow Set Helped Actors Feel Every Emotion #shorts (1,753 views, 63 an hour, 79 s, Big Gold Belt Media)
-
-## Walter Koenig
-- Star Trek's Chekov Dies at 90 - Only Kirk and Sulu Are Left #shorts #news (2,293 views, 61 an hour, 33 s, Drift Theory)
-- My Favourite Chekov Scene and Remembering Walter Koenig. #shorts #startrek (1,439 views, 42 an hour, 60 s, Yelling About Star Trek)
+- Mckenna Grace TELLS Hunger Games Fans Bring Tissues To The Cinema! 😭💔 #HungerGames (310,740 views, 9,414 an hour, 6 s, SwipeRadar)
+- Nobody is safe when Whitney serves a look like this 💅 #shorts (38,725 views, 2,517 an hour, 9 s, Capital Buzz)
+- Mckenna Grace CHANNELS Rue's Hunger Games Look For The Today Show! 🥹💚 #HungerGames (98,414 views, 2,461 an hour, 6 s, SwipeRadar)
+- Which 'Hunger Games' Characters Are the Cast Most Like (25,389 views, 1,555 an hour, 86 s, Entertainment Weekly)
+- McKenna Grace IS the Hunger Games! #mckennagrace (24,820 views, 689 an hour, 6 s, CelebRush)

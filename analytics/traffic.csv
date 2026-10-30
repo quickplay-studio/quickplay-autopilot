@@ -1,71 +1,74 @@
 scope,source,views,share_pct
-channel,Shorts feed,22833,66.4
-channel,YouTube search,10925,31.8
-channel,Other YouTube pages,352,1.0
-channel,Subscribers,107,0.3
-channel,Channel page,92,0.3
-channel,Outside YouTube,62,0.2
-channel,Direct or unknown,19,0.1
-channel,Hashtag pages,4,0.0
+channel,Shorts feed,25078,67.3
+channel,YouTube search,11472,30.8
+channel,Other YouTube pages,387,1.0
+channel,Subscribers,127,0.3
+channel,Channel page,92,0.2
+channel,Outside YouTube,73,0.2
+channel,Direct or unknown,20,0.1
+channel,Hashtag pages,6,0.0
 channel,Suggested videos,2,0.0
 channel,Playlists,2,0.0
 channel,Sound pages,1,0.0
-category: Animals,Shorts feed,75,91.5
-category: Animals,YouTube search,7,8.5
+category: Animals,Shorts feed,75,87.2
+category: Animals,YouTube search,11,12.8
 category: Animals,Direct or unknown,0,0.0
-category: Entertainment,Shorts feed,1666,71.0
-category: Entertainment,YouTube search,619,26.4
-category: Entertainment,Subscribers,18,0.8
-category: Entertainment,Other YouTube pages,18,0.8
-category: Entertainment,Outside YouTube,13,0.6
-category: Entertainment,Channel page,9,0.4
+category: Entertainment,Shorts feed,1878,71.9
+category: Entertainment,YouTube search,670,25.7
+category: Entertainment,Other YouTube pages,21,0.8
+category: Entertainment,Subscribers,18,0.7
+category: Entertainment,Outside YouTube,13,0.5
+category: Entertainment,Channel page,9,0.3
 category: Entertainment,Direct or unknown,2,0.1
-category: Film,Shorts feed,4038,53.5
-category: Film,YouTube search,3329,44.1
-category: Film,Other YouTube pages,88,1.2
-category: Film,Outside YouTube,28,0.4
-category: Film,Subscribers,21,0.3
-category: Film,Channel page,20,0.3
-category: Film,Direct or unknown,12,0.2
+category: Entertainment,Hashtag pages,1,0.0
+category: Film,Shorts feed,5145,58.4
+category: Film,YouTube search,3458,39.3
+category: Film,Other YouTube pages,101,1.1
+category: Film,Outside YouTube,36,0.4
+category: Film,Subscribers,28,0.3
+category: Film,Channel page,20,0.2
+category: Film,Direct or unknown,12,0.1
 category: Film,Hashtag pages,2,0.0
 category: Film,Suggested videos,1,0.0
 category: Film,Playlists,1,0.0
 category: Film,Sound pages,1,0.0
-category: Gaming,Shorts feed,1843,63.7
-category: Gaming,YouTube search,951,32.9
-category: Gaming,Other YouTube pages,77,2.7
-category: Gaming,Channel page,16,0.6
+category: Gaming,Shorts feed,2233,66.1
+category: Gaming,YouTube search,1037,30.7
+category: Gaming,Other YouTube pages,84,2.5
+category: Gaming,Channel page,16,0.5
+category: Gaming,Subscribers,3,0.1
 category: Gaming,Outside YouTube,3,0.1
-category: Gaming,Subscribers,2,0.1
+category: Gaming,Hashtag pages,1,0.0
 category: Gaming,Direct or unknown,0,0.0
-category: Music,Shorts feed,10399,81.9
-category: Music,YouTube search,2148,16.9
-category: Music,Other YouTube pages,93,0.7
-category: Music,Channel page,24,0.2
-category: Music,Subscribers,21,0.2
-category: Music,Outside YouTube,11,0.1
-category: Music,Direct or unknown,4,0.0
+category: Music,Shorts feed,10753,81.5
+category: Music,YouTube search,2268,17.2
+category: Music,Other YouTube pages,109,0.8
+category: Music,Channel page,25,0.2
+category: Music,Subscribers,22,0.2
+category: Music,Outside YouTube,12,0.1
+category: Music,Direct or unknown,5,0.0
 category: Music,Hashtag pages,2,0.0
 category: Music,Playlists,1,0.0
 category: Music,Suggested videos,0,0.0
-category: Science,Shorts feed,350,72.8
-category: Science,YouTube search,124,25.8
-category: Science,Subscribers,4,0.8
-category: Science,Other YouTube pages,2,0.4
-category: Science,Outside YouTube,1,0.2
+category: Science,Shorts feed,699,82.2
+category: Science,YouTube search,137,16.1
+category: Science,Other YouTube pages,8,0.9
+category: Science,Subscribers,5,0.6
+category: Science,Outside YouTube,1,0.1
 category: Science,Direct or unknown,0,0.0
 category: Science,Channel page,0,0.0
-category: Sport,YouTube search,3495,53.9
-category: Sport,Shorts feed,2878,44.4
-category: Sport,Other YouTube pages,48,0.7
-category: Sport,Subscribers,38,0.6
+category: Sport,YouTube search,3579,53.2
+category: Sport,Shorts feed,3023,44.9
+category: Sport,Other YouTube pages,51,0.8
+category: Sport,Subscribers,49,0.7
 category: Sport,Channel page,19,0.3
-category: Sport,Outside YouTube,6,0.1
+category: Sport,Outside YouTube,7,0.1
 category: Sport,Direct or unknown,1,0.0
-category: Tech,Shorts feed,355,61.5
-category: Tech,YouTube search,205,35.5
-category: Tech,Other YouTube pages,12,2.1
+category: Tech,Shorts feed,394,56.2
+category: Tech,YouTube search,288,41.1
+category: Tech,Other YouTube pages,13,1.9
 category: Tech,Subscribers,2,0.3
 category: Tech,Channel page,2,0.3
-category: Tech,Suggested videos,1,0.2
+category: Tech,Suggested videos,1,0.1
+category: Tech,Outside YouTube,1,0.1
 category: Tech,Direct or unknown,0,0.0

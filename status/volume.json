@@ -1,9 +1,9 @@
 {
  "per_day": 15,
  "verdict": null,
- "why": "collecting: day 4 of 14, judged from Sunday 08 November",
+ "why": "collecting: day 6 of 14, judged from Sunday 08 November",
  "reading": {
-  "test_days_in": 4,
+  "test_days_in": 6,
   "test_days": 14,
   "judge_on": "2026-11-08",
   "before_days": [
@@ -13,8 +13,8 @@
    "2026-10-23"
   ],
   "shorts_a_day": {
-   "during": 14.2,
-   "before": 22.8
+   "during": 11.2,
+   "before": 23.8
   },
   "daily_views": {
    "during": 4084,
@@ -28,20 +28,20 @@
    ]
   },
   "cohort_24h": {
-   "during": 2075,
-   "before": 2478,
-   "ratio": 0.84,
-   "lo": 0.51,
-   "hi": 1.49,
+   "during": 1987,
+   "before": 2709,
+   "ratio": 0.73,
+   "lo": 0.42,
+   "hi": 1.27,
    "days": [
-    4,
+    5,
     4
    ]
   },
   "median_24h_per_short": {
-   "during": 56.0,
-   "before": 25.0
+   "during": 54.5,
+   "before": 27.0
   }
  },
- "as_of": "2026-10-28T19:39+00:00"
+ "as_of": "2026-10-30T09:18+00:00"
 }

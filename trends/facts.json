@@ -1,37 +1,43 @@
 {
  "date": "2026-10-30",
- "built": "2026-10-30T07:49+00:00",
- "model": "gemini-3.5-flash-lite + openrouter:nvidia/nemotron-3-ultra-550b-a55b:free",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-30T09:18+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 5,
-   "topic": "Ballon d'Or 2026 facts",
+   "n": 3,
+   "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Harry Kane wins Ballon d'Or as England's 25 year wait ends!",
-    "Alexia Putellas wins the Women's Ballon d'Or for the third time!",
-    "London Palladium hosts the Ballon d'Or ceremony for the first time!"
+    "Harry Kane made history at the London Palladium!",
+    "How Harry Kane beat Kylian Mbappe to the Ballon d'Or!",
+    "Alexia Putellas claims her third Ballon d'Or crown!"
    ],
    "sources": [
     [
-     "'Anything is possible' - Harry Kane is first England player to win Ballon d'Or in 25 years",
-     "https://www.bbc.co.uk/newsround/articles/c574p3jkdp8xo",
+     "Euro Leagues",
+     "https://www.bbc.co.uk/sounds/play/p0pkb7f8?at_medium=RSS&at_campaign=rss",
+     "BBC Sport",
+     "2026-10-29"
+    ],
+    [
+     "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
+     "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "How 'anti-superstar' Kane defied doubters to become world's best",
+     "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
      "BBC",
      "2026-10-27"
     ],
     [
-     "Harry Kane ends England’s 25-year wait for Ballon d’Or winner",
-     "https://www.telegraph.co.uk/football/2026/10/26/ballon-dor-2026-live-latest-updates-kane-yamal-mbappe/?status=none",
-     "The Telegraph",
-     "2026-10-26"
-    ],
-    [
-     "Ballon d'Or 2026 facts",
+     "Ballon d'Or 2026",
      "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
@@ -39,105 +45,47 @@
    ],
    "verified": [
     {
-     "claim": "Spanish midfielder Alexia Putellas won the Ballon d'Or Feminin for the third time.",
+     "claim": "Harry Kane won the Men's Ballon d'Or at the London Palladium on Monday.",
      "sources": [
-      1,
-      3
+      3,
+      4
      ],
      "evidence": {
-      "1": "Spanish midfielder Alexia Putellas won the Ballon d'Or Feminin for the third time.",
-      "3": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+      "3": "The 33-year-old's glory at the London Palladium on Monday is fitting reward for an exemplary career that has seen records fall at his feet for",
+      "4": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
      }
     },
     {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 26 season.",
      "sources": [
-      2,
-      3
+      3,
+      4
      ],
      "evidence": {
-      "2": "The 70th Ballon d’Or ceremony takes place at the London Palladium as England and Bayern Munich striker Harry Kane aims to become the first Englishman",
-      "3": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+      "3": "This is the Kane of recent vintage, the world-class striker and complete footballer who beat Real Madrid and France striker Kylian Mbappe, as well as",
+      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
      }
     },
     {
-     "claim": "This marks the first time the ceremony was organised outside France.",
+     "claim": "Harry Kane became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.",
      "sources": [
-      2,
-      3
+      3,
+      4
      ],
      "evidence": {
-      "2": "This also marks the first time the ceremony will be organised outside France.",
-      "3": "This also marked the first time the ceremony was organised outside France or Switzerland."
-     }
-    },
-    {
-     "claim": "Harry Kane became the fifth Englishman to win the Ballon d'Or.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "He is now the fifth Englishman to win, following Stanley Matthews, Bobby Charlton and double winner Kevin Keegan.",
-      "3": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
-     }
-    },
-    {
-     "claim": "The awards take into account achievements from August 3, 2025, to July 19, 2026.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The awards take into account achievements from August 3, 2025, to July 19, 2026 (August 16 for the women).",
-      "3": "This is the period from 3 August 2025 to 19 July 2026.[2]"
+      "3": "Kane has put that right spectacularly at Bayern, winning the Bundesliga twice, the move propelling him to the level of global superstar, giving him the",
+      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Harry Kane is the first England player to win the Ballon d'Or in 25 years.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
      "sources": [
-      1
+      4
      ],
      "evidence": {
-      "1": "England's Harry Kane has ended a 25-year wait to win the Ballon d'Or trophy."
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Men's Ballon d'Or.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Thirty players were nominated for the 2026 Men's Ballon d'Or."
-     }
-    },
-    {
-     "claim": "Thirty players were nominated for the 2026 Ballon d'Or Feminin.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Thirty players were nominated for the 2026 Ballon d'Or Féminin."
-     }
-    },
-    {
-     "claim": "Ten players were nominated for the 2026 Men's Kopa Trophy.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Ten players were nominated for the 2026 Men's Kopa Trophy.[9]"
-     }
-    },
-    {
-     "claim": "Five players were nominated for the 2026 Women's Kopa Trophy.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Five players were nominated for the 2026 Women's Kopa Trophy.[10]"
+      "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     }
    ],
@@ -146,15 +94,249 @@
    ]
   },
   {
+   "n": 4,
+   "topic": "Ballon d'Or past winners",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "category": "Sport",
+   "what_is_new": "Kylian Mbappe missed out on joining the elite roster of Ballon d'Or winners and finished second in voting behind Harry Kane.",
+   "hooks": [
+    "Did you know Harry Kane scored 73 goals before winning his first Ballon d'Or?",
+    "Harry Kane just made history as only the fifth Englishman to win the Ballon d'Or!"
+   ],
+   "sources": [
+    [
+     "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
+     "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
+     "Guardian",
+     "2026-10-28"
+    ],
+    [
+     "Ballon d'Or past winners",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 26 season.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The France forward missed out on joining the elite roster of Ballon d’Or winners and instead became the latest high-profile addition to a far less",
+      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Harry Kane won the Mens Ballon d Or, receiving the award for the first time in his career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Womens Ballon d Or, receiving the award for the third time in her career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 5,
+   "topic": "The Celebrity Traitors",
+   "signal": "watchlist: The Celebrity Traitors (launch)",
+   "category": "Entertainment",
+   "what_is_new": "Joe Lycett's banishment from Celebrity Traitors was reported on 28 October 2026.",
+   "hooks": [
+    "Joe Lycett got booted for being too traitorous.",
+    "Richard E Grant swapped doctor for a secret traitor role.",
+    "Celebrity Traitors pits stars like Alan Carr against each other."
+   ],
+   "sources": [
+    [
+     "‘I saw the script and went: oooh!’ Olivia Colman and Alexander Skårsgard on their steamy folk-horror movie Wicker",
+     "https://www.theguardian.com/film/2026/oct/30/i-saw-the-script-and-went-oooh-olivia-colman-and-alexander-skarsgard-on-their-steamy-folk-horror-movie-wicker",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Celebrity Traitors' Joe Lycett's tribute to viral TikTok nan",
+     "https://www.bbc.co.uk/news/articles/c6x2qggrdxqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "The Celebrity Traitors",
+     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "The Celebrity Traitors features celebrity contestants.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Richard E Grant as a doctor who is even more inept at his job than Grant was as a Celebrity Traitor.",
+      "2": "celebrity traitors star and comedian joe lycett has paid colourful tribute to the welsh grandmother"
+     }
+    },
+    {
+     "claim": "Richard E Grant appeared as a contestant on The Celebrity Traitors.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Richard E Grant as a doctor who is even more inept at his job than Grant was as a Celebrity Traitor.",
+      "3": "2 21 10 1 october 2026 2026 10 01 present tba tba maya jamarichard e grantjames acaster from ep 2 hannah fry from ep 3 king kenny from ep"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Joe Lycett was banished from Celebrity Traitors for being too keen to be a traitor.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "the everything must go exhibition is lycett s first major solo art exhibition and is about things which are no longer with us lycett who was banished from celebrity traitors for being too keen to be a traitor said on"
+     }
+    },
+    {
+     "claim": "The second series of The Celebrity Traitors began broadcasting on 1 October 2026.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "to a charity of the winner s choice a second series began broadcasting on 1 october 2026 3 every thursday and friday night and will continue to until 30 october"
+     }
+    },
+    {
+     "claim": "In March 2026, the BBC announced a three-year deal that will keep The Celebrity Traitors in production until 2030.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "In March 2026, BBC announced a three-year deal that will keep The Celebrity Traitors and The Traitors in production until 2030."
+     }
+    },
+    {
+     "claim": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK broadcast.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 6,
+   "topic": "Celebrity Traitors final",
+   "signal": "watchlist: The Celebrity Traitors (launch)",
+   "category": "Entertainment",
+   "what_is_new": "The second series of The Celebrity Traitors concludes today on 30 October 2026.",
+   "hooks": [
+    "The second series of The Celebrity Traitors concludes today!"
+   ],
+   "sources": [
+    [
+     "DIY socks, messy collars and cummerbunds: nine wardrobe updates from the catwalks",
+     "https://www.theguardian.com/fashion/2026/oct/29/diy-socks-messy-collars-and-cummberbunds-nine-wardrobe-updates-from-the-catwalks",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Celebrity Traitors' Joe Lycett's tribute to viral TikTok nan",
+     "https://www.bbc.co.uk/news/articles/c6x2qggrdxqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-28"
+    ],
+    [
+     "Celebrity Traitors final",
+     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "A second series began broadcasting on 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October. [4]"
+     }
+    },
+    {
+     "claim": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK broadcast on BBC One.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The first series finale was mistakenly released early on the Crave and ThreeNow streaming services in Canada and New Zealand, 24 hours before its UK"
+     }
+    },
+    {
+     "claim": "After the final Round Table, the remaining players, usually four, gather at the Fire of Truth to take part in the End Game.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "After the final Round Table, the remaining players (usually four) gather at the Fire of Truth and participate in the End Game."
+     }
+    },
+    {
+     "claim": "Joe Lycett was banished from Celebrity Traitors for being too keen to be a traitor.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Lycett, who was banished from Celebrity Traitors for being too keen to be a traitor, said on Instagram: \"My painting in tribute to the great"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
    "n": 8,
    "topic": "GTA 6",
    "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "A snippet of GTA 6 gameplay was shown in the South Park episode that aired on 28 October.",
    "hooks": [
-    "Did you know GTA 6 launches on 19 November 2026?",
-    "GTA 6 is set in the fictional state of Leonida!",
-    "The story of GTA 6 follows Jason and Lucia."
+    "GTA 6 launches on 19 November 2026!",
+    "Play as Jason and Lucia in Leonida."
    ],
    "sources": [
     [
@@ -209,101 +391,383 @@
      }
     },
     {
-     "claim": "Principal production on the game began in 2020.",
+     "claim": "Its map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto VI was formally revealed in December 2023."
-     }
-    },
-    {
-     "claim": "The game will feature a fully integrated social media app called Snapmatic.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto VI will feature a fully integrated social media app called Snapmatic, returning from Grand Theft Auto V."
+      "3": "Its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
      }
     }
    ],
    "images": []
   },
   {
-   "n": 15,
-   "topic": "Dune Part Three trailer",
-   "signal": "watchlist: Dune: Part Three (surging, 49 days to go)",
-   "category": "Film",
+   "n": 9,
+   "topic": "GTA 6 trailer views record",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Dune Part Three hits cinemas on December 18, 2026.",
-    "Timothée Chalamet returns as the ruthless Emperor Paul Atreides.",
-    "Principal photography for the epic threequel wrapped in November 2025."
+    "Did you know Grand Theft Auto VI was formally revealed in December 2023?"
    ],
    "sources": [
     [
-     "The final ‘Dune: Part Three’ trailer reignites war on Arrakis and leaves us with more questions than answers",
-     "https://www.space.com/entertainment/space-movies-shows/the-final-dune-part-three-trailer-reignites-war-on-arrakis-and-leaves-us-with-more-questions-than-answers",
-     "Space.com",
-     "2026-10-28"
-    ],
-    [
-     "Dune Part Three trailer",
-     "https://en.wikipedia.org/wiki/Dune%3A_Part_Three",
+     "GTA 6 trailer views record",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
      "Wikipedia",
      ""
     ]
    ],
-   "verified": [
+   "verified": [],
+   "one_source": [
     {
-     "claim": "Dune: Part Three is scheduled for release in the United States on December 18, 2026.",
+     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
      "sources": [
-      1,
+      1
+     ],
+     "evidence": {
+      "1": "Grand Theft Auto VI was formally revealed in December 2023."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 10,
+   "topic": "GTA 6 PC release",
+   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "category": "Gaming",
+   "what_is_new": "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window.",
+   "hooks": [
+    "Grand Theft Auto 6 arrives on November 19 2026!",
+    "Rockstar employees are voting on a union next month."
+   ],
+   "sources": [
+    [
+     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
+     "https://www.eurogamer.net/rockstar-union-vote-november",
+     "Eurogamer",
+     "2026-10-28"
+    ],
+    [
+     "GTA 6 PC release",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
       2
      ],
      "evidence": {
-      "1": "Dune: Part Three emerges from the sand of Arrakis on December 18, 2026, only in cinemas.",
-      "2": "Dune: Part Three is scheduled for release in the United States on December 18, 2026."
+      "2": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
      }
     },
     {
-     "claim": "Timothée Chalamet leads the cast as Paul Atreides, a despotic emperor forced to contend with the fallout of his ascent to the throne, including threats of an insurgency and visions of widespread pandemonium.",
+     "claim": "The vote runs from the 12th to the 26th November.",
      "sources": [
-      1,
+      1
+     ],
+     "evidence": {
+      "1": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
+     }
+    },
+    {
+     "claim": "Principal production began in 2020.",
+     "sources": [
       2
      ],
      "evidence": {
-      "1": "So, it comes as no surprise that his take on Messiah is looking to bring Herbert's concluding thoughts on Paul Atreides (Timothée Chalamet) to life",
-      "2": "Timothée Chalamet leads the cast as Paul Atreides, a despotic emperor forced to contend with the fallout of his ascent to the throne, including threats"
+      "2": "Principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "The game's map is reported to be three times larger than the playable area of Red Dead Redemption 2.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "its map is reported to be three times larger than the playable area of Red Dead Redemption 2."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 12,
+   "topic": "Hunger Games films in order",
+   "signal": "watchlist: The Hunger Games: Sunrise on the Reaping (surging, 21 days to go)",
+   "category": "Gaming",
+   "what_is_new": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026.",
+   "hooks": [
+    "The Hunger Games Sunrise on the Reaping premiered in London on October 28, 2026."
+   ],
+   "sources": [
+    [
+     "Hunger Games films in order",
+     "https://en.wikipedia.org/wiki/The_Hunger_Games%3A_Sunrise_on_the_Reaping",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "The Hunger Games Sunrise on the Reaping premiered in London on October 28, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on"
+     }
+    },
+    {
+     "claim": "The Hunger Games: Sunrise on the Reaping is a 2026 American dystopian film directed by Francis Lawrence.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping is a 2026 American dystopian film directed by Francis Lawrence from a screenplay by Billy Ray and Michael"
+     }
+    },
+    {
+     "claim": "Jennifer Lawrence, Josh Hutcherson and Woody Harrelson are set to reprise their roles as Katniss Everdeen, Peeta Mellark and Haymitch Abernathy.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Additionally, Jennifer Lawrence, Josh Hutcherson and Woody Harrelson are set to reprise their roles as Katniss Everdeen, Peeta Mellark, and Haymitch Abernathy, respectively."
+     }
+    },
+    {
+     "claim": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on November 20.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Hunger Games: Sunrise on the Reaping premiered in London on October 28, 2026, and is scheduled to be released in the United States on"
+     }
+    },
+    {
+     "claim": "The first trailer for the film was released on April 13, 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The first trailer was released on April 13, 2026."
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 16,
+   "topic": "This Is Halloween by The Citizens of Halloween",
+   "signal": "Apple Music US: new in the top 25",
+   "category": "Music",
+   "what_is_new": "Call of Duty: Modern Warfare 4 added a new Halloween-themed multiplayer mode called Possession with a non-milsim content disclaimer.",
+   "hooks": [],
+   "sources": [
+    [
+     "‘Expect goosebumps!’: to celebrate Halloween, readers choose the spookiest places in the UK",
+     "https://www.theguardian.com/travel/2026/oct/30/readers-favourite-spooky-places-uk-halloween",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "What to Watch on Disney+ in November 2026",
+     "https://variety.com/feature/whats-on-disney-plus-new-shows-movies-1203517920/",
+     "Variety",
+     "2026-10-30"
+    ],
+    [
+     "Call of Duty: Modern Warfare 4 Adds 'Non MilSim Content' Disclaimer to Halloween Themed Content",
+     "https://www.ign.com/articles/call-of-duty-modern-warfare-4-adds-non-milsim-content-disclaimer-to-halloween-themed-content",
+     "IGN",
+     "2026-10-29"
+    ]
+   ],
+   "verified": [],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 19,
+   "topic": "england vs papua new guinea",
+   "signal": "Google Trends GB 200+",
+   "category": "Sport",
+   "what_is_new": "England head coach Brian McDermott spoke to the media on Thursday ahead of their crucial match against Papua New Guinea.",
+   "hooks": [
+    "Can England pull off a miraculous 68 point swing against Papua New Guinea?",
+    "Brian McDermott issues a stark warning to his England squad!",
+    "England face a unique Rugby League World Cup survival task on Friday."
+   ],
+   "sources": [
+    [
+     "England out of Women's RL World Cup as Samoa reach semi-finals",
+     "https://www.bbc.co.uk/sport/rugby-league/live/cmrerrdqxl2rt",
+     "BBC",
+     "2026-10-29"
+    ],
+    [
+     "England urged to hold nerve as Rugby League World Cup hopes hang by a thread",
+     "https://www.theguardian.com/sport/2026/oct/29/england-rugby-league-world-cup-papua-new-guinea",
+     "Guardian",
+     "2026-10-29"
+    ],
+    [
+     "Rugby League World Cup: England's Brian McDermott admits side face 'unique task' to progress and can't get distracted",
+     "https://www.skysports.com/rugby-league/news/13605180/rugby-league-world-cup-englands-brian-mcdermott-admits-side-face-unique-task-to-progress-and-cant-get-distracted",
+     "Sky Sports",
+     "2026-10-29"
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "England face Papua New Guinea in Wollongong on Friday knowing they need a big win to keep semi-final hopes alive.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "They need to defeat Papua New Guinea in Wollongong and hope Tonga beat Samoa on Sunday, with a 68-point swing required in points difference between",
+      "3": "England face Papua New Guinea in their final pool fixture on Friday (9.05am kick-off), knowing they need a big win to keep semi-final hopes alive"
+     }
+    },
+    {
+     "claim": "Brian McDermott has warned his England side not to chase the points as they look to keep their slim Rugby League World Cup hopes alive.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The England head coach, Brian McDermott, has urged his side to keep their nerve as they attempt to hold up their end of the bargain",
+      "3": "Brian McDermott has warned his England side not to chase the points as they look to keep their slim Rugby League World Cup hopes alive"
+     }
+    },
+    {
+     "claim": "England defeated France 82-0 in their second game of the tournament.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "However, the margin of their 82-0 win against France last Saturday means qualification is still possible, albeit unlikely.",
+      "3": "mcdermott who saw his side beat france 82 0 in their second game has called for patience"
+     }
+    },
+    {
+     "claim": "England lost 30-12 to Tonga in their opening game.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Defeat by Tonga in their opening group game a fortnight ago appeared to all but consign England to an early exit",
+      "3": "England are up against it in their bid to make it through to the semi-finals after they lost 30-12 to Tonga in their opening game."
+     }
+    },
+    {
+     "claim": "England need to make up a 68-point deficit on Samoa.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "They need to defeat Papua New Guinea in Wollongong and hope Tonga beat Samoa on Sunday, with a 68-point swing required in points difference between",
+      "3": "upon whom England must also make up a 68-point deficit."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Principal photography started in July 2025 and wrapped that November, taking place in Hungary and the United Arab Emirates.",
+     "claim": "Papua New Guinea are well coached by Jason Demetriou.",
      "sources": [
-      2
+      3
      ],
      "evidence": {
-      "2": "Principal photography started in July 2025 and wrapped that November, taking place in Hungary and the United Arab Emirates."
+      "3": "\"They're well coached by Jason Demetriou, who's got a chunk of players who are playing in the British game as well,\""
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 20,
+   "topic": "new zealand breakers",
+   "signal": "Google Trends US 100+",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know the Breakers claimed a historic three-peat in the NBL?"
+   ],
+   "sources": [
+    [
+     "new zealand breakers",
+     "https://en.wikipedia.org/wiki/New_Zealand_Breakers",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history."
      }
     },
     {
-     "claim": "Denis Villeneuve directed the film from a screenplay he wrote with Brian K. Vaughan.",
+     "claim": "The Breakers won their first NBL championship in 2011 and defended it in 2012 and 2013, achieving three consecutive championships.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Dune: Part Three is an upcoming American epic space opera film directed by Denis Villeneuve, from a screenplay he wrote with Brian K. Vaughan."
+      "1": "In 2011, the Breakers won their first NBL championship and successfully defended it in 2012 and 2013, claiming the second three-peat in NBL history."
+     }
+    },
+    {
+     "claim": "Marc Mitchell, a Kiwi American businessman and attorney, acquired the Breakers in March 2025.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In March 2025, Kiwi-American businessman and attorney Marc Mitchell acquired the club."
+     }
+    },
+    {
+     "claim": "The Breakers are the only non Australian side currently competing in Australia’s National Basketball League.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The Breakers are the only non-Australian side currently competing in Australia's National Basketball League (NBL), and one of only two non-Australian sides to have done"
+     }
+    },
+    {
+     "claim": "In the 2022 to 23 season the Breakers finished second in the regular season with an eighteen to ten record and lost the NBL finals two to three to Sydney.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "2022–23 | 1 | NBL | 2nd | 28 | 18 | 10 | .643 | Won semifinals (Tasmania) 2–1Lost NBL finals (Sydney) 2–3"
      }
     }
    ],
@@ -311,134 +775,339 @@
   },
   {
    "n": 25,
-   "topic": "mike flanagan",
-   "signal": "Google Trends US 200+",
-   "category": "Film",
-   "what_is_new": "",
+   "topic": "William Contreras",
+   "signal": "Wikipedia 228,487 views",
+   "category": "Sport",
+   "what_is_new": "He was named World Series MVP on 29 October 2026.",
    "hooks": [
-    "Did you know Mike Flanagan was born in Salem, Massachusetts?"
+    "Seventh catcher ever to win World Series MVP.",
+    "Brother duo become rare WBC‑World Series double winners.",
+    "From Braves to Brewers, a three‑team trade reshaped his career."
    ],
    "sources": [
     [
-     "The Dark Tower TV Series Would Be 'Remarkably Faithful' to Stephen King's Books, Mike Flanagan Says",
-     "https://www.ign.com/articles/the-dark-tower-tv-series-would-be-remarkably-faithful-to-stephen-kings-books-mike-flanagan-says",
-     "IGN",
-     "2026-10-16"
+     "William Contreras",
+     "https://en.wikipedia.org/wiki/William_Contreras",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "He became the seventh‑ever catcher to be named World Series Most Valuable Player.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He became the seventh‑ever catcher to be named World Series Most Valuable Player.[40][41][42]"
+     }
+    },
+    {
+     "claim": "He and his brother Willson were the third, fourth and fifth people ever to win the WBC and a World Series in the same year.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Contreras — along with Brewers teammates and fellow Venezuelans Jackson Chourio and Antonio Senzatela — became the 3rd, 4th, and 5th people ever to win"
+     }
+    },
+    {
+     "claim": "He was traded to the Milwaukee Brewers on 12 December 2022 in a three‑team deal.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "On December 12, 2022, the Braves sent Contreras to the Milwaukee Brewers in a three‑team trade in which the Braves acquired Sean Murphy, the Brewers"
+     }
+    },
+    {
+     "claim": "He signed with Air Jordan in 2024, representing the brand through his cleats and catching gear.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 2024, Contreras signed with Air Jordan, representing the brand through his cleats and catching gear.[48]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:William_Contreras_stands_at_home_plate,_Aug_05_2022_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 27,
+   "topic": "Bob Uecker",
+   "signal": "Wikipedia 205,548 views",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Bob Uecker never signed a written contract until 2021?",
+    "Bob Uecker won a World Series in 1964 with the Cardinals.",
+    "A massive 100 foot mural of Bob Uecker was unveiled in 2026."
+   ],
+   "sources": [
+    [
+     "Bob Uecker",
+     "https://en.wikipedia.org/wiki/Bob_Uecker",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Bob Uecker was born in Milwaukee on January 26, 1934.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Robert George Uecker (// YOO-kər; January 26, 1934 – January 16, 2025) was an American professional baseball catcher and sportscaster who served as the play-by-play"
+     }
+    },
+    {
+     "claim": "Uecker won a World Series with the St Louis Cardinals in 1964.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He won a World Series with the Cardinals in 1964."
+     }
+    },
+    {
+     "claim": "He was honored by the National Baseball Hall of Fame with its 2003 Ford C Frick Award.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Uecker was honored by the National Baseball Hall of Fame with its 2003 Ford C. Frick Award in recognition of his broadcasting career."
+     }
+    },
+    {
+     "claim": "A 100 foot tall mural honoring Uecker was unveiled in downtown Milwaukee in summer 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "A 100-foot-tall mural honoring Uecker was unveiled in downtown Milwaukee in summer 2026, celebrating his legacy and ensuring his impact on the city will be"
+     }
+    },
+    {
+     "claim": "Uecker enlisted in the US Army in 1954 and achieved the rank of corporal.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Uecker enlisted in the US Army in 1954, ultimately achieving the rank of corporal."
+     }
+    },
+    {
+     "claim": "Prior to the 2021 season Uecker had never signed an official written contract with the Brewers.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Prior to the 2021 season, Uecker had never signed an official written contract with the Brewers to do the team's play-by-play, instead agreeing to do"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Bob_Uecker_-_St._Louis_Cardinals_-_1965.jpg"
+   ]
+  },
+  {
+   "n": 28,
+   "topic": "Milwaukee Brewers",
+   "signal": "Wikipedia 185,722 views",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know the Milwaukee Brewers just won their first ever World Series?",
+    "The low budget Milwaukee Brewers defied all odds to win the 2026 World Series!",
+    "How did the Milwaukee Brewers crush their 57 year title drought?"
+   ],
+   "sources": [
+    [
+     "The low-budget Brewers won the World Series – and exposed baseball’s biggest lie | Howard Bryant",
+     "https://www.theguardian.com/sport/2026/oct/29/milwaukee-brewers-world-series-title-mlb-salary-cap",
+     "Guardian",
+     "2026-10-29"
     ],
     [
-     "mike flanagan",
-     "https://en.wikipedia.org/wiki/Mike_Flanagan_(filmmaker)",
+     "Milwaukee Brewers",
+     "https://en.wikipedia.org/wiki/Milwaukee_Brewers",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Mike Flanagan created the Netflix horror series The Haunting of Hill House.",
+     "claim": "The Milwaukee Brewers won the World Series for the first time in their 58-year history by defeating the Tampa Bay Rays in five games.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Flanagan, famous for Netflix horror shows The Haunting of Hill House, The Haunting of Bly Manor, and, most recently, Amazon's Carrie",
-      "2": "He created, wrote, produced, and served as showrunner on the Netflix horror series The Haunting of Hill House (2018)"
+      "1": "They did so by winning the World Series for the first time in their 58-year history, and doing so resoundingly, destroying the Tampa Bay Rays",
+      "2": "In the World Series, the Brewers broke through and won their first championship in franchise history over the Tampa Bay Rays, with William Contreras winning"
      }
     },
     {
-     "claim": "Mike Flanagan created the Netflix horror series The Haunting of Bly Manor.",
+     "claim": "The final score of the World Series was 4-1.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Flanagan, famous for Netflix horror shows The Haunting of Hill House, The Haunting of Bly Manor, and, most recently, Amazon's Carrie",
-      "2": "He created, wrote, produced, and served as showrunner on the Netflix horror series The Haunting of Hill House (2018), The Haunting of Bly Manor (2020)"
+      "1": "The final score was 4-1, ending a month that will be played and replayed in the minds and DVRs of Milwaukeeans.",
+      "2": "Won World Series vs. Tampa Bay Rays, 4-1"
      }
     },
     {
-     "claim": "Mike Flanagan created the Amazon Prime Video series Carrie.",
+     "claim": "William Contreras was named the Series MVP.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Flanagan, famous for Netflix horror shows The Haunting of Hill House, The Haunting of Bly Manor, and, most recently, Amazon's Carrie",
-      "2": "and the Amazon Prime Video series Carrie (2026)"
+      "1": "Jake Bauers’ soul-snatching at-bats against the Dodgers offered a sign, the youthful charges of Series MVP catcher William Contreras, Jackson Chourio, and the too-young-to-care stardom",
+      "2": "In the World Series, the Brewers broke through and won their first championship in franchise history over the Tampa Bay Rays, with William Contreras winning"
      }
     },
     {
-     "claim": "Mike Flanagan collaborates frequently with Stephen King.",
+     "claim": "Jake Bauers won NLCS MVP.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "despite the fact the script for Season 1 has King's seal of approval",
-      "2": "Other frequent collaborators include Samantha Sloyan, Carla Gugino, Rahul Kohli, Karen Gillan, Bruce Greenwood, Michael Trucco, Annalise Basso, Matthew Lillard, Henry Thomas, Stephen King, and"
+      "1": "the prize do they got tougher jake bauers soul snatching at bats against the dodgers offered a sign the",
+      "2": "Bolstered by play from Jacob Misiorowski and Brice Turang, the 2026 Brewers won over 100 games for the first time in franchise history on their"
      }
     },
     {
-     "claim": "Mike Flanagan is best known for his horror work.",
+     "claim": "Bud Selig purchased the team from the Seattle Pilots in bankruptcy court and moved them to Milwaukee.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Flanagan, famous for Netflix horror shows The Haunting of Hill House, The Haunting of Bly Manor, and, most recently, Amazon's Carrie",
-      "2": "Mike Flanagan (born May 20, 1978) is an American filmmaker, best known for his horror work."
+      "1": "in their quest to increase franchise values their words speak an untruth brewers owner mark attanasio purchased the team from bud selig in 2005 for 223m and the team that supposedly cannot win but did has a valuation by forbes",
+      "2": "The Seattle Pilots played for one season in the American League West Division before being acquired in bankruptcy court by Bud Selig, who moved the"
+     }
+    },
+    {
+     "claim": "The 2026 Brewers won over 100 regular-season games for the first time in franchise history.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "baseball s owners at their persuasive best would have their paying customers believe that the brewers franchise record 103 regular season wins also were an illusion or worse the dreaded outlier even though milwaukee have",
+      "2": "Bolstered by play from Jacob Misiorowski and Brice Turang, the 2026 Brewers won over 100 games for the first time in franchise history on their"
+     }
+    },
+    {
+     "claim": "Since 2001, the Brewers have played their home games at American Family Field.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "the owners position remained unchanged the brewers to that point had not helped dispel the notion they had sputtered badly in recent postseasons giving life to the thought that maybe their summer wins really were empty only one thing could",
+      "2": "Since 2001, the Brewers have played their home games at American Family Field, which was named Miller Park through the 2020 season and has a"
      }
     }
    ],
+   "one_source": [],
+   "images": []
+  },
+  {
+   "n": 44,
+   "topic": "Thriller by Michael Jackson",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Discover how Michael Jackson created history with Thriller.",
+    "Did you know Thriller spent 37 weeks at number one?",
+    "Explore the incredible records broken by Michael Jackson."
+   ],
+   "sources": [
+    [
+     "Thriller by Michael Jackson",
+     "https://en.wikipedia.org/wiki/Thriller_(Michael_Jackson_album)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
    "one_source": [
     {
-     "claim": "Mike Flanagan was born in Salem, Massachusetts, on May 20, 1978, from parents Timothy and Laura Flanagan.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Mike Flanagan (born May 20, 1978) is an American filmmaker, best known for his horror work."
-     }
-    },
-    {
-     "claim": "Flanagan's plan for The Dark Tower is five seasons followed by two standalone movies.",
+     "claim": "Thriller is the sixth studio album by the American singer Michael Jackson.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "The big idea, Flanagan has said, is for five seasons of The Dark Tower followed by two standalone movies."
+      "1": "Thriller is the sixth studio album by the American singer Michael Jackson."
      }
     },
     {
-     "claim": "Flanagan's next project is an Amazon TV show adaptation of Warhammer 40,000.",
+     "claim": "It was released on November 29, 1982, through Epic Records.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Next up for the horror specialist is an Amazon TV show adaptation of Warhammer 40,000, which he's said is much harder to adapt than The"
+      "1": "It was released on November 29, 1982, through Epic Records."
      }
     },
     {
-     "claim": "Mike Flanagan was born in Salem, Massachusetts, on May 20, 1978.",
+     "claim": "It was produced by Quincy Jones, who produced Jackson's previous album, Off the Wall (1979).",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Mike Flanagan was born in Salem, Massachusetts, on May 20, 1978, from parents Timothy and Laura Flanagan."
+      "1": "It was produced by Quincy Jones, who produced Jackson's previous album, Off the Wall (1979)."
      }
     },
     {
-     "claim": "Flanagan made his 2006 short film Oculus: Chapter 3, The Man with the Plan for $1,500.",
+     "claim": "Paul McCartney appears as the first credited featured artist on a Jackson album.",
      "sources": [
-      2
+      1
      ],
      "evidence": {
-      "2": "Graham would go on to star in Flanagan's 2006 short film, Oculus: Chapter 3 – The Man with the Plan, which he made for $1,500."
+      "1": "Paul McCartney appears as the first credited featured artist on a Jackson album."
+     }
+    },
+    {
+     "claim": "Thriller was Jackson's first number-one album on the Billboard Top LPs & Tape chart and was at number one for a record 37 non-consecutive weeks.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Thriller was Jackson's first number-one album on the Billboard Top LPs & Tape chart and was at number one for a record 37 non-consecutive weeks."
+     }
+    },
+    {
+     "claim": "It won a record-breaking eight Grammy Awards, including Album of the Year and Record of the Year for Beat It, and earned Jackson a record-breaking eight American Music Awards.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "It won a record-breaking eight Grammy Awards, including Album of the Year and Record of the Year for \"Beat It\", and earned Jackson a record-breaking"
+     }
+    },
+    {
+     "claim": "In 2008, it was inducted into the Grammy Hall of Fame and added to the National Recording Registry of culturally, historically, or aesthetically significant recordings by the Library of Congress.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 2008, it was inducted into the Grammy Hall of Fame and added to the National Recording Registry of \"culturally, historically, or aesthetically significant recordings\""
      }
     }
    ],
-   "images": [
-    "commons:File:2026_Toronto_International_Film_Festival_-_\"Carrie\"_Premiere_14_(cropped).jpg"
-   ]
+   "images": []
   }
  ]
 }

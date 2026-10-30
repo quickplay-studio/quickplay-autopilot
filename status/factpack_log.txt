@@ -1,8 +1,19 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Ballon d'Or 2026 facts: 5 verified, 5 one-source, 3 pages
-GTA 6: 1 verified, 5 one-source, 3 pages
-Dune Part Three trailer: 2 verified, 2 one-source, 2 pages
-mike flanagan: 5 verified, 5 one-source, 2 pages
-covered recently, no pack: The Hunger Games: Sunrise on the Reaping; Harry Potter HBO series; Halloween 2026; andrea kimi antonelli
-4 packs, 13 verified facts, 17 one-source
-gemini: {"out of quota": {}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 5, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 1, "router searches": 2, "router sources added": 0, "providers passed over": []}
+Ballon d'Or 2026: 3 verified, 1 one-source, 4 pages
+Ballon d'Or past winners: 1 verified, 3 one-source, 2 pages
+The Celebrity Traitors: 2 verified, 4 one-source, 3 pages
+Celebrity Traitors final: 0 verified, 4 one-source, 3 pages
+GTA 6: 1 verified, 3 one-source, 3 pages
+GTA 6 trailer views record: 0 verified, 1 one-source, 1 pages
+GTA 6 PC release: 0 verified, 5 one-source, 2 pages
+Hunger Games films in order: 0 verified, 5 one-source, 1 pages
+This Is Halloween by The Citizens of Halloween: 0 verified, 0 one-source, 3 pages
+england vs papua new guinea: 5 verified, 1 one-source, 3 pages
+new zealand breakers: 0 verified, 5 one-source, 1 pages
+William Contreras: 0 verified, 4 one-source, 1 pages
+Bob Uecker: 0 verified, 6 one-source, 1 pages
+Milwaukee Brewers: 7 verified, 0 one-source, 2 pages
+Thriller by Michael Jackson: 0 verified, 7 one-source, 1 pages
+covered recently, no pack: Halloween 2026; The Hunger Games: Sunrise on the Reaping; Harry Potter HBO series; 2026 World Series; 2026 Mexico City Grand Prix
+15 packs, 19 verified facts, 49 one-source
+gemini: {"out of quota": {"freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "freellm:llama-3.3-70b": "router: no free capacity now"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 16, "groq:openai/gpt-oss-120b": 8, "gemini-flash-latest": 1}, "empty answers": {"groq:openai/gpt-oss-120b": 1}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 7, "router searches": 11, "router sources added": 0, "providers passed over": []}

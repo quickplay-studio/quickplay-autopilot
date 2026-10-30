@@ -1,1 +1,26 @@
-{}
+{
+ "category|Science": {
+  "since": "2026-10-30",
+  "times": 1,
+  "until": "2026-11-13",
+  "why": "9 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20"
+ },
+ "hook_type|question": {
+  "since": "2026-10-30",
+  "times": 1,
+  "until": "2026-11-13",
+  "why": "8 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20"
+ },
+ "look_opening|lab-opening-1019": {
+  "since": "2026-10-30",
+  "times": 1,
+  "until": "2026-11-13",
+  "why": "5 Shorts a week old over 2 UK days with a median of 9 views, under three quarters of the floor of 20"
+ },
+ "mood|tech": {
+  "since": "2026-10-30",
+  "times": 1,
+  "until": "2026-11-13",
+  "why": "5 Shorts a week old over 2 UK days with a median of 12 views, under three quarters of the floor of 20"
+ }
+}

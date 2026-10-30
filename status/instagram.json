@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-28T19:43+00:00",
+ "updated": "2026-10-30T09:23+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 112,
+ "reels": 115,
  "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
@@ -14,15 +14,15 @@
  "categories": [
   {
    "category": "Gaming",
-   "median": 122.5,
-   "n": 24,
-   "score": 1.061,
+   "median": 123.0,
+   "n": 23,
+   "score": 1.064,
    "favoured": true
   },
   {
    "category": "Sport",
    "median": 120.0,
-   "n": 25,
+   "n": 26,
    "score": 1.044,
    "favoured": false
   },
@@ -42,9 +42,9 @@
   },
   {
    "category": "Music",
-   "median": 63.5,
-   "n": 24,
-   "score": 0.616,
+   "median": 75.0,
+   "n": 25,
+   "score": 0.705,
    "favoured": false
   },
   {
@@ -56,16 +56,16 @@
   },
   {
    "category": "Entertainment",
-   "median": 15.0,
-   "n": 7,
-   "score": 0.306,
+   "median": 18.5,
+   "n": 8,
+   "score": 0.327,
    "favoured": false
   },
   {
    "category": "Tech",
-   "median": 8.5,
-   "n": 6,
-   "score": 0.243,
+   "median": 11.0,
+   "n": 7,
+   "score": 0.256,
    "favoured": false
   }
  ],
@@ -83,8 +83,8 @@
      "lift": ""
     },
     "no": {
-     "n": 19,
-     "median": 115.0,
+     "n": 18,
+     "median": 117.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.9"
@@ -98,8 +98,8 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 13,
-     "median": 122.0,
+     "n": 12,
+     "median": 122.5,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.93"
@@ -127,8 +127,8 @@
      "lift": "1.02"
     },
     "any": {
-     "n": 12,
-     "median": 111.0,
+     "n": 11,
+     "median": 114.0,
      "share": 0.5,
      "verdict": "about typical",
      "lift": "0.86"
@@ -138,17 +138,17 @@
   }
  },
  "week": {
-  "reels": 86,
-  "median": 115.0,
-  "before_reels": 26,
-  "before_median": 103.0
+  "reels": 53,
+  "median": 118.0,
+  "before_reels": 62,
+  "before_median": 88.0
  },
  "cover": {
-  "asked": 20,
-  "accepted": 20,
+  "asked": 28,
+  "accepted": 28,
   "refused": 0,
   "last": "accepted",
-  "last_at": "2026-10-27T16:22+00:00",
+  "last_at": "2026-10-30T08:00+00:00",
   "ok": true,
   "paused_until": null
  }

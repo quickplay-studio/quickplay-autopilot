@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 05:51): 20 of 1,000 subscribers · 14,336 of 10 million Shorts views in 90 days · 4,616 views in the last 24 hours (about 110,952 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 06:59): 21 of 1,000 subscribers · 14,403 of 10 million Shorts views in 90 days · 4,829 views in the last 24 hours (about 110,951 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 19:39 (UK): 9 scheduled, 141 public, 24 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 1 public, 2 scheduled | 4 | 1 | ⏳ 1 of 15 so far, 2 more scheduled |
+| Fri 30 Oct | 2 public, 1 scheduled | 6 | 1 | ⏳ 2 of 15 so far, 1 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -163,12 +163,12 @@ private · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · 
 ![QD-254](QD-254.jpg)
 
 ### Thu 29 Oct 3:30 · walter koenig: passed away aged 90 🖖
-private · 30 s · music: f16 · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
+private · 30 s · music: f16 · on Instagram · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
 
 ![QD-264](QD-264.jpg)
 
 ### Thu 29 Oct 2:00 · Walter Koenig: the co-star bond you never knew
-private · 35 s · music: cued-for-liftoff · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
+private · 35 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
 
 ![QD-263](QD-263.jpg)
 

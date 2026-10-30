@@ -1,6 +1,7 @@
 {
  "adopted": {},
  "champions": {},
+ "confirming": {},
  "genes": {
   "g001": {
    "a_text": "",
@@ -152,6 +153,10 @@
  },
  "sources": {
   "gene": {
+   "contests": 0,
+   "wins": 0
+  },
+  "joint": {
    "contests": 0,
    "wins": 0
   },

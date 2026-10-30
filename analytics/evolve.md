@@ -22,6 +22,12 @@ Opening contests (hook_type, first_frame, fx_opening and the opening genes, mark
 | length | 25 to 34 s vs 35 to 44 s | round 1 | 2026-10-25 |
 | title_search | search phrase vs curiosity | round 1 | 2026-10-25 |
 
+## Confirming (0)
+
+A new champion or adopted gene is kept for 80% of Shorts while the previous choice keeps 20%, until 20 Shorts a side are measured: then it is locked in (not worse than the previous choice beyond the even band) or reverted.
+
+- none
+
 ## Champions
 
 - none yet
@@ -45,6 +51,7 @@ Rejected so far: 0. Retired: 2.
 | retest | 0 | 0 | no contests yet |
 | gene | 0 | 0 | no contests yet |
 | mutate | 0 | 0 | no contests yet |
+| joint | 0 | 0 | no contests yet |
 
 A win is a challenger (arm b, the new arm) that beat the incumbent.
 

@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-30T12:59+00:00",
+ "updated": "2026-10-30T14:04+00:00",
  "mode": "hourly",
  "errors": {},
  "full_updated": "2026-10-30T09:18+00:00",
  "youtube": {
   "subscribers": 22,
-  "public_shorts": 210,
-  "views_all_time": 45229,
+  "public_shorts": 212,
+  "views_all_time": 45490,
   "views_last_90_days": 12270,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 14871,
+  "views_last_90_days_estimate": 14957,
   "analytics_last_day": "2026-10-27"
  },
  "instagram": {
@@ -30,12 +30,12 @@
   "days_left": 94,
   "subscribers_pct": 2.2,
   "views_pct": 0.15,
-  "views_needed_per_day": 110946,
+  "views_needed_per_day": 110945,
   "note": "Engaged views: YouTube's Analytics through its last day, plus live views since then at the recent engaged share (YouTube's own figure lags a day or two).",
   "from_2027": {
    "shorts_views_needed_90_days": 20000000,
    "views_pct": 0.07,
-   "views_needed_per_day": 222057,
+   "views_needed_per_day": 222056,
    "watch_hours_needed_365_days": 8000,
    "watch_hours_365d": 0.0
   }
@@ -44,7 +44,7 @@
   "clips": {
    "subscribers": 0,
    "public_shorts": 73,
-   "views_all_time": 36
+   "views_all_time": 38
   },
   "gaming": {
    "subscribers": 0,

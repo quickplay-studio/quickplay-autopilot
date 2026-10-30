@@ -1,0 +1,184 @@
+{
+ "id": "QD-291",
+ "board": "boards/queue/QD-291.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T12:00:00Z",
+ "rendered": "2026-10-30T20:17:39.079408+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GTA 6's morality scale tops out at Irredeemable",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "risen",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 29.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 3.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 631.7,
+   "contrast": 0.25,
+   "face_area": 0.0,
+   "text_area": 0.2241,
+   "caption_contrast": 14.07,
+   "by_frame": {
+    "sharpness": [
+     626.8,
+     639.1,
+     648.0,
+     612.9
+    ],
+    "contrast": [
+     0.25,
+     0.248,
+     0.251,
+     0.253
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2208,
+     0.2063,
+     0.2321,
+     0.2374
+    ],
+    "caption_contrast": [
+     14.14,
+     14.0,
+     18.53,
+     14.0
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.44,
+   "none",
+   2
+  ],
+  [
+   4.44,
+   7.32,
+   "none",
+   2
+  ],
+  [
+   7.32,
+   9.65,
+   "none",
+   2
+  ],
+  [
+   9.65,
+   12.68,
+   "none",
+   2
+  ],
+  [
+   12.68,
+   15.27,
+   "none",
+   2
+  ],
+  [
+   15.27,
+   17.98,
+   "none",
+   2
+  ],
+  [
+   17.98,
+   21.48,
+   "none",
+   2
+  ],
+  [
+   21.48,
+   24.03,
+   "none",
+   2
+  ],
+  [
+   24.03,
+   29.23,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "23258",
+   "q": "city streets night",
+   "t0": 0.0,
+   "t1": 14.91
+  },
+  {
+   "p": "pixabay",
+   "id": "380218",
+   "q": "concert stage lights",
+   "t0": 14.31,
+   "t1": 29.23
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T20:33:56Z",
+ "video": "-693GWV2F9w",
+ "url": "https://youtube.com/shorts/-693GWV2F9w",
+ "publish_at": "2026-10-31T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-291"
+}

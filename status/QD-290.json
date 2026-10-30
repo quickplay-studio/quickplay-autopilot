@@ -1,0 +1,187 @@
+{
+ "id": "QD-290",
+ "board": "boards/queue/QD-290.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T09:00:00Z",
+ "rendered": "2026-10-30T20:17:46.214159+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1027"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Culture Explained #1: Doctor Who: why the Doctor regenerates",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "risen",
+ "social_music": "cinematic-cinematic-music-491630",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 35.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 17.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1163.9,
+   "contrast": 0.177,
+   "face_area": 0.0092,
+   "text_area": 0.0473,
+   "caption_contrast": 4.42,
+   "by_frame": {
+    "sharpness": [
+     1128.8,
+     1201.1,
+     1201.2,
+     1124.4
+    ],
+    "contrast": [
+     0.177,
+     0.178,
+     0.178,
+     0.176
+    ],
+    "face_area": [
+     0.0103,
+     0.0075,
+     0.0075,
+     0.0114
+    ],
+    "text_area": [
+     0.0502,
+     0.051,
+     0.05,
+     0.038
+    ],
+    "caption_contrast": [
+     4.39,
+     4.33,
+     4.44,
+     4.53
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.24,
+   "none",
+   2
+  ],
+  [
+   4.24,
+   8.33,
+   "none",
+   3
+  ],
+  [
+   8.33,
+   12.69,
+   "none",
+   3
+  ],
+  [
+   12.69,
+   17.33,
+   "none",
+   1
+  ],
+  [
+   17.33,
+   22.47,
+   "none",
+   3
+  ],
+  [
+   22.47,
+   26.58,
+   "none",
+   3
+  ],
+  [
+   26.58,
+   31.5,
+   "none",
+   3
+  ],
+  [
+   31.5,
+   35.79,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "2775",
+   "q": "blue police box",
+   "t0": 0.0,
+   "t1": 12.33
+  },
+  {
+   "p": "pixabay",
+   "id": "136740",
+   "q": "clockwork gears turning",
+   "t0": 11.73,
+   "t1": 24.06
+  },
+  {
+   "p": "pixabay",
+   "id": "3282",
+   "q": "blue police box",
+   "t0": 23.46,
+   "t1": 35.79
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T20:33:54Z",
+ "video": "npZfLkjWHbM",
+ "url": "https://youtube.com/shorts/npZfLkjWHbM",
+ "publish_at": "2026-10-31T09:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T09:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-290"
+}

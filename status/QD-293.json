@@ -1,0 +1,145 @@
+{
+ "id": "QD-293",
+ "board": "boards/queue/QD-293.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T05:00:00Z",
+ "rendered": "2026-10-30T20:17:45.232637+00:00",
+ "title": "Food Facts #1: Bonfire Night: the treat you must try 🍎",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:175579 skipped: nearly black (brightness 0.02)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "treasure-hunt",
+ "social_music": "gentle-bluegrass-country-folk-daisy-203460",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 17.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 9.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 586.4,
+   "contrast": 0.244,
+   "face_area": 0.0,
+   "text_area": 0.0343,
+   "caption_contrast": 13.93,
+   "by_frame": {
+    "sharpness": [
+     566.7,
+     583.9,
+     598.5,
+     596.4
+    ],
+    "contrast": [
+     0.243,
+     0.242,
+     0.245,
+     0.246
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0342,
+     0.034,
+     0.0339,
+     0.0349
+    ],
+    "caption_contrast": [
+     13.97,
+     13.83,
+     13.96,
+     13.91
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.77,
+   "none",
+   1
+  ],
+  [
+   2.77,
+   6.08,
+   "none",
+   2
+  ],
+  [
+   6.08,
+   7.93,
+   "none",
+   1
+  ],
+  [
+   7.93,
+   11.21,
+   "none",
+   2
+  ],
+  [
+   11.21,
+   17.83,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "1346",
+   "q": "bonfire night sky",
+   "t0": 0.0,
+   "t1": 9.21
+  },
+  {
+   "p": "pixabay",
+   "id": "11661",
+   "q": "traditional english treats",
+   "t0": 8.61,
+   "t1": 17.83
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T20:33:58Z",
+ "video": "Gv2YB6R4NoQ",
+ "url": "https://youtube.com/shorts/Gv2YB6R4NoQ",
+ "publish_at": "2026-10-31T05:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T05:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-293"
+}

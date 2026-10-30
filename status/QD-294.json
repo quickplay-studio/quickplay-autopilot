@@ -1,0 +1,159 @@
+{
+ "id": "QD-294",
+ "board": "boards/queue/QD-294.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T15:30:00Z",
+ "rendered": "2026-10-30T20:17:25.120417+00:00",
+ "channel": "irl",
+ "title": "Wild World #2: Sea otters hold hands while sleeping",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "silk-sleeve",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "lab-voice-1028",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1027",
+  "opening": "lab-opening-1019",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 25.2,
+  "wps": 3.2,
+  "weak_beats": [],
+  "size_mb": 13.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 1241.9,
+   "contrast": 0.218,
+   "face_area": 0.0,
+   "text_area": 0.0565,
+   "caption_contrast": 17.5,
+   "by_frame": {
+    "sharpness": [
+     1203.8,
+     1226.9,
+     1282.4,
+     1254.6
+    ],
+    "contrast": [
+     0.217,
+     0.216,
+     0.219,
+     0.219
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0524,
+     0.052,
+     0.0608,
+     0.0608
+    ],
+    "caption_contrast": [
+     17.4,
+     17.69,
+     17.37,
+     17.6
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.83,
+   "none",
+   0
+  ],
+  [
+   2.83,
+   5.39,
+   "none",
+   1
+  ],
+  [
+   5.39,
+   9.97,
+   "none",
+   1
+  ],
+  [
+   9.97,
+   12.36,
+   "none",
+   1
+  ],
+  [
+   12.36,
+   14.71,
+   "none",
+   1
+  ],
+  [
+   14.71,
+   17.57,
+   "none",
+   1
+  ],
+  [
+   17.57,
+   20.4,
+   "none",
+   1
+  ],
+  [
+   20.4,
+   25.18,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "134511",
+   "q": "ocean waves at night",
+   "t0": 0.0,
+   "t1": 12.89
+  },
+  {
+   "p": "pixabay",
+   "id": "3342",
+   "q": "sea otters swimming",
+   "t0": 12.29,
+   "t1": 25.18
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T20:34:01Z",
+ "video": "7Y0hOMRPCz8",
+ "url": "https://youtube.com/shorts/7Y0hOMRPCz8",
+ "publish_at": "2026-10-31T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T15:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

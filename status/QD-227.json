@@ -163,5 +163,16 @@
    "kept": "1.2 views an hour against a typical 0.4"
   }
  },
- "instagram_error": "2026-10-28 20:42 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936944965167410'}"
+ "instagram": {
+  "media": "18115441988032444",
+  "at": "2026-10-30T01:56:46+00:00",
+  "caption": "short",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "explore",
+  "hour": "any",
+  "favoured": true,
+  "hour_uk": 1
+ }
 }

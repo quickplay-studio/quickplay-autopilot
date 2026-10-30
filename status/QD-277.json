@@ -1,0 +1,154 @@
+{
+ "id": "QD-277",
+ "board": "boards/queue/QD-277.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T13:00:00Z",
+ "rendered": "2026-10-30T10:25:30.689876+00:00",
+ "title": "Celebrity Traitors #2: Final: series two ends today 🏁",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "stake-out",
+ "social_music": "dark-suspense-trailer-488322",
+ "look": {
+  "captions": "low",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 25.7,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 818.5,
+   "contrast": 0.322,
+   "face_area": 0.0,
+   "text_area": 0.1072,
+   "caption_contrast": 8.67,
+   "by_frame": {
+    "sharpness": [
+     756.5,
+     862.1,
+     841.4,
+     813.8
+    ],
+    "contrast": [
+     0.322,
+     0.322,
+     0.322,
+     0.322
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.085,
+     0.1163,
+     0.1209,
+     0.1067
+    ],
+    "caption_contrast": [
+     8.79,
+     8.77,
+     8.57,
+     8.49
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.62,
+   "none",
+   0
+  ],
+  [
+   3.62,
+   9.01,
+   "none",
+   1
+  ],
+  [
+   9.01,
+   12.31,
+   "none",
+   1
+  ],
+  [
+   12.31,
+   14.86,
+   "none",
+   1
+  ],
+  [
+   14.86,
+   19.32,
+   "none",
+   1
+  ],
+  [
+   19.32,
+   23.28,
+   "none",
+   1
+  ],
+  [
+   23.28,
+   25.69,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "113561",
+   "q": "game show set",
+   "t0": 0.0,
+   "t1": 13.14
+  },
+  {
+   "p": "pixabay",
+   "id": "26531",
+   "q": "tv studio lights",
+   "t0": 12.54,
+   "t1": 25.69
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T10:43:15Z",
+ "video": "qSpSNwWEBDQ",
+ "url": "https://youtube.com/shorts/qSpSNwWEBDQ",
+ "publish_at": "2026-10-30T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-277"
+}

@@ -1,0 +1,172 @@
+{
+ "id": "QD-276",
+ "board": "boards/queue/QD-276.json",
+ "mode": "schedule",
+ "slot": "2026-10-30T12:00:00Z",
+ "rendered": "2026-10-30T10:25:34.501957+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Game Explained #1: Switch cartridge taste: the real reason 👅",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "hopping-trains",
+ "social_music": "playful-jazz-swing-580495",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1028",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 37.3,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 13.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 547.9,
+   "contrast": 0.313,
+   "face_area": 0.0,
+   "text_area": 0.2902,
+   "caption_contrast": 16.81,
+   "by_frame": {
+    "sharpness": [
+     438.8,
+     535.2,
+     538.4,
+     679.3
+    ],
+    "contrast": [
+     0.315,
+     0.311,
+     0.312,
+     0.315
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.3066,
+     0.3051,
+     0.3072,
+     0.2419
+    ],
+    "caption_contrast": [
+     16.33,
+     17.21,
+     17.1,
+     16.52
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.51,
+   "none",
+   0
+  ],
+  [
+   4.51,
+   9.46,
+   "none",
+   1
+  ],
+  [
+   9.46,
+   15.37,
+   "none",
+   1
+  ],
+  [
+   15.37,
+   21.04,
+   "none",
+   1
+  ],
+  [
+   21.04,
+   25.76,
+   "none",
+   1
+  ],
+  [
+   25.76,
+   31.72,
+   "none",
+   1
+  ],
+  [
+   31.72,
+   37.24,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "20269",
+   "q": "living room gaming",
+   "t0": 0.0,
+   "t1": 18.92
+  },
+  {
+   "p": "pixabay",
+   "id": "9038",
+   "q": "retro arcade lights",
+   "t0": 18.32,
+   "t1": 37.24
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T10:43:13Z",
+ "video": "CoVkFUukloo",
+ "url": "https://youtube.com/shorts/CoVkFUukloo",
+ "publish_at": "2026-10-30T12:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-30T12:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-276"
+}

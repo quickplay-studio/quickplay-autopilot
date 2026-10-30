@@ -1,0 +1,155 @@
+{
+ "id": "QD-282",
+ "board": "boards/queue/QD-282.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T00:30:00Z",
+ "rendered": "2026-10-30T10:26:07.471300+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "\"William Contreras\" is in today's trends",
+  "days_late": 1
+ },
+ "title": "William Contreras: 7th catcher World Series MVP 🏆",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "once-upon-a-time",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice LY was less clear, used george",
+ "qa": {
+  "duration": 29.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 23.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 680.1,
+   "contrast": 0.203,
+   "face_area": 0.1089,
+   "text_area": 0.0448,
+   "caption_contrast": 4.76,
+   "by_frame": {
+    "sharpness": [
+     638.1,
+     717.3,
+     738.9,
+     626.2
+    ],
+    "contrast": [
+     0.204,
+     0.203,
+     0.203,
+     0.202
+    ],
+    "face_area": [
+     0.1078,
+     0.1035,
+     0.1133,
+     0.1111
+    ],
+    "text_area": [
+     0.0484,
+     0.0479,
+     0.048,
+     0.0351
+    ],
+    "caption_contrast": [
+     4.92,
+     4.98,
+     4.56,
+     4.6
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.01,
+   "none",
+   2
+  ],
+  [
+   5.01,
+   8.71,
+   "none",
+   3
+  ],
+  [
+   8.71,
+   11.44,
+   "none",
+   2
+  ],
+  [
+   11.44,
+   16.03,
+   "none",
+   3
+  ],
+  [
+   16.03,
+   21.23,
+   "none",
+   4
+  ],
+  [
+   21.23,
+   28.93,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "133206",
+   "q": "baseball stadium lights",
+   "t0": 0.0,
+   "t1": 14.77
+  },
+  {
+   "p": "pixabay",
+   "id": "139360",
+   "q": "running track sunrise",
+   "t0": 14.17,
+   "t1": 28.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T10:43:24Z",
+ "video": "YnvZjFVmJuE",
+ "url": "https://youtube.com/shorts/YnvZjFVmJuE",
+ "publish_at": "2026-10-31T00:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T00:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-282"
+}

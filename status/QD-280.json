@@ -1,0 +1,176 @@
+{
+ "id": "QD-280",
+ "board": "boards/queue/QD-280.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T06:00:00Z",
+ "rendered": "2026-10-30T10:26:06.983886+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"Thriller (Michael Jackson album)\" read 108 times yesterday, 1.0x its usual 109; 10 news articles on \"michael jackson thriller album\" in 24 hours",
+  "days_late": 1
+ },
+ "title": "Song Secrets #4: Michael Jackson's Thriller tops charts 37 weeks 🎵",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media_notes": [
+  "beat 3 reused a nearby picture (commons-search:Epic Records: no Commons image named 'Epic Records')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 0.88,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "dance-with-you",
+ "social_music": "summer-500586",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 35.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 17.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 840.4,
+   "contrast": 0.19,
+   "face_area": 0.0107,
+   "text_area": 0.1862,
+   "caption_contrast": 18.53,
+   "by_frame": {
+    "sharpness": [
+     726.1,
+     911.1,
+     913.8,
+     810.6
+    ],
+    "contrast": [
+     0.18,
+     0.195,
+     0.195,
+     0.19
+    ],
+    "face_area": [
+     0.01,
+     0.0107,
+     0.0107,
+     0.0114
+    ],
+    "text_area": [
+     0.1502,
+     0.2056,
+     0.2016,
+     0.1877
+    ],
+    "caption_contrast": [
+     18.44,
+     18.53,
+     18.53,
+     18.53
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.23,
+   "title",
+   0
+  ],
+  [
+   4.23,
+   7.45,
+   "none",
+   1
+  ],
+  [
+   7.45,
+   12.79,
+   "none",
+   1
+  ],
+  [
+   12.79,
+   16.82,
+   "none",
+   1
+  ],
+  [
+   16.82,
+   20.62,
+   "none",
+   1
+  ],
+  [
+   20.62,
+   25.27,
+   "none",
+   1
+  ],
+  [
+   25.27,
+   29.33,
+   "none",
+   1
+  ],
+  [
+   29.33,
+   35.8,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "2662",
+   "q": "music studio recording",
+   "t0": 0.0,
+   "t1": 12.33
+  },
+  {
+   "p": "pixabay",
+   "id": "380220",
+   "q": "concert stage lights",
+   "t0": 11.73,
+   "t1": 24.07
+  },
+  {
+   "p": "pixabay",
+   "id": "65390",
+   "q": "vinyl record spinning",
+   "t0": 23.47,
+   "t1": 35.8
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-30T10:43:22Z",
+ "video": "el4EkoNqHOk",
+ "url": "https://youtube.com/shorts/el4EkoNqHOk",
+ "publish_at": "2026-10-31T06:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T06:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-280"
+}

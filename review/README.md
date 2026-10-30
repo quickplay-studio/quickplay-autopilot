@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sat 31 Oct | 0 public | 0 | 0 | ⏳ 0 of 15 scheduled |
-| Fri 30 Oct | 4 public, 1 scheduled | 8 | 1 | ⏳ 4 of 15 so far, 1 more scheduled |
+| Sat 31 Oct | 0 public, 2 scheduled | 0 | 0 | ⏳ 2 of 15 scheduled |
+| Fri 30 Oct | 4 public, 5 scheduled | 8 | 1 | ⏳ 4 of 15 so far, 5 more scheduled |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
@@ -57,6 +57,7 @@ Nothing here needs approving (approval is off): a failed Short is skipped and th
 - **QD-086** What is the fastest land animal in the world? 🐆: failed. RuntimeError: checks failed: unclear narration in beats [2, 5]
 - **QD-126** JADE hits US charts years after debut 🎶: failed. RuntimeError: checks failed: unclear narration in beats [0]
 - **QD-217** Star Stories #1: Richard Hammond house tour: bats pause £2m 🦇: failed. RuntimeError: checks failed: unclear narration in beats [0]
+- **QD-281** : failed (board rejected). meta.title: 1 to 70 characters
 - **QD-129** Clayface: The dark new body horror film in cinemas 🎬: facebook 2026-10-23 09:37 facebook publish: 400 {'error': {'message': 'We limit how often you can post, comment or do other things in a given amount of time in order to help protect the community from spam. You can try again later. Learn More', 'type': 'OAuthException', 'code': 368, 'err
 - **QD-189** Kylian Mbappé: the 87th minute moment that changed everything ⚽: instagram 2026-10-28 15:52 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936872164167410'}
 - **QD-207** Game Facts #4: halloween 2026 game: the price drop you missed: instagram 2026-10-28 09:48 instagram processing: {'status_code': 'ERROR', 'status': 'ERROR', 'id': '17936768628167410'}

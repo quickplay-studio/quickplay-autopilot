@@ -1,0 +1,9 @@
+{
+ "id": "QD-281",
+ "board": "boards/queue/QD-281.json",
+ "mode": "reject",
+ "slot": "",
+ "rendered": "2026-10-30T10:23:19.829994+00:00",
+ "state": "failed (board rejected)",
+ "error": "meta.title: 1 to 70 characters"
+}

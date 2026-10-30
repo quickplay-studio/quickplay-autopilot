@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 03:52): 20 of 1,000 subscribers · 14,191 of 10 million Shorts views in 90 days · 4,158 views in the last 24 hours (about 110,953 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Fri 30 Oct, 04:52): 20 of 1,000 subscribers · 14,267 of 10 million Shorts views in 90 days · 4,396 views in the last 24 hours (about 110,953 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Wed 28 Oct 19:39 (UK): 9 scheduled, 141 public, 24 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 2:47).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 4:46).
 
 ## Posts by day
 

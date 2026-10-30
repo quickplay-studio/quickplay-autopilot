@@ -1,8 +1,8 @@
 {
  "date": "2026-10-30",
- "built": "2026-10-30T11:34+00:00",
- "model": "gemini-3.5-flash-lite + gemini-flash-latest",
- "mode": "breaking",
+ "built": "2026-10-30T13:59+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
  "run": "",
  "errors": [],
  "topics": [
@@ -11,10 +11,11 @@
    "topic": "GTA 6",
    "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
    "category": "Gaming",
-   "what_is_new": "On 30 October 2026 PC Gamer revealed the four‑point relationship meter for Jason and Lucia.",
+   "what_is_new": "",
    "hooks": [
-    "GTA 6 arrives on November 19, 2026!",
-    "Explore the fictional state of Leonida in GTA 6!"
+    "GTA 6 launches on 19 November 2026!",
+    "Measure Jason and Lucia's closeness in GTA 6!",
+    "Explore the fictional US state of Leonida in GTA 6!"
    ],
    "sources": [
     [
@@ -56,337 +57,401 @@
      ],
      "evidence": {
       "1": "show all of Leonida just how capable and fearsome my skills are at cultivating a healthy and strong relationship.",
-      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "3": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida; its map is reported to be three times larger"
      }
     },
     {
-     "claim": "GTA 6 is scheduled to be released on 19 November 2026.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "So we know that GTA 6 has a marketing deal with Sony and the PlayStation 5, and that Rockstar has been engaging with real‑world locations",
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "The game follows the criminal duo Jason and Lucia.",
+     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
      "sources": [
       1,
       3
      ],
      "evidence": {
       "1": "The recent mega piece by Edge has revealed that GTA 6 players will be able to measure Jason and Lucia's closeness in a four-point scale",
-      "3": "The story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "3": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Players can switch between the two protagonists in GTA 6.",
+     "claim": "Activities like taking long romantic walks on the beach, working out at the gym together, and driving around so your other half can doomscroll will all work towards boosting your score.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "It's confirmed that you can switch between characters in GTA 6 so you'll likely have to show up for your other half no matter who"
+      "1": "Activities like taking long romantic walks on the beach, working out at the gym together, and driving around so your other half can doomscroll will"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI has a marketing deal with Sony and the PlayStation 5.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "So we know that GTA 6 has a marketing deal with Sony and the PlayStation 5"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 8,
-   "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
-   "category": "Gaming",
-   "what_is_new": "Rockstar Games employees locked in a union vote next month, running from the 12th to the 26th November.",
-   "hooks": [
-    "Grand Theft Auto VI releases on 19 November 2026!"
-   ],
-   "sources": [
-    [
-     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
-     "https://www.eurogamer.net/rockstar-union-vote-november",
-     "Eurogamer",
-     "2026-10-28"
-    ],
-    [
-     "GTA 6 PC release",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "Early development began after Red Dead Redemption 2's release in 2018, and principal production began in 2020.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft Auto VI.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
-     }
-    },
-    {
-     "claim": "The union vote runs from the 12th to the 26th November.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 4,
-   "topic": "The Celebrity Traitors",
-   "signal": "watchlist: The Celebrity Traitors (launch)",
+   "n": 11,
+   "topic": "Avengers Doomsday cast",
+   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
    "category": "Film",
-   "what_is_new": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
+   "what_is_new": "",
    "hooks": [
-    "Did you know The Celebrity Traitors returned for series two on October 1 2026?",
-    "Find out how the celebrity contestants play the ultimate social deduction game at Ardross Castle!",
-    "Discover how players compete to win a grand prize for charity on The Celebrity Traitors!"
+    "Did you know Avengers: Doomsday is releasing on December 18?"
    ],
    "sources": [
     [
-     "‘I saw the script and went: oooh!’ Olivia Colman and Alexander Skårsgard on their steamy folk-horror movie Wicker",
-     "https://www.theguardian.com/film/2026/oct/30/i-saw-the-script-and-went-oooh-olivia-colman-and-alexander-skarsgard-on-their-steamy-folk-horror-movie-wicker",
-     "Guardian",
-     "2026-10-30"
+     "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
+     "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
+     "Deadline",
+     "2026-10-24"
     ],
     [
-     "Ex-Traitors players talk tactics and celebrity final predictions",
-     "https://www.bbc.co.uk/news/articles/cr62yjvgql9go?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-30"
-    ],
-    [
-     "The Celebrity Traitors",
-     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and will continue to until 30 October.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "A second series began broadcasting on 1 October 2026[3], every Thursday and Friday night, and will continue to until 30 October. [4]"
-     }
-    },
-    {
-     "claim": "The Celebrity Traitors was first broadcast on BBC One on 8 October 2025.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "It was first broadcast on BBC One on 8 October 2025.[2]"
-     }
-    },
-    {
-     "claim": "Claudia Winkleman presents the series.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Claudia Winkleman presents the series."
-     }
-    },
-    {
-     "claim": "The show features a group of celebrity contestants participating in a social deduction game similar to Mafia or Werewolf, set in and around Ardross Castle in Scotland.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "the show features a group of celebrity contestants participating in a social deduction game similar to Mafia or Werewolf, set in and around Ardross Castle"
-     }
-    },
-    {
-     "claim": "The grand prize is awarded to a charity of the winner's choice.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "The grand prize is awarded to a charity of the winner's choice."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 3,
-   "topic": "Ballon d'Or 2026",
-   "signal": "watchlist: Ballon d'Or 2026 (surging)",
-   "category": "Sport",
-   "what_is_new": "Nothing changed in the last two days.",
-   "hooks": [
-    "Harry Kane just won his very first Ballon d'Or!",
-    "How did Harry Kane score 73 goals to win the Ballon d'Or?"
-   ],
-   "sources": [
-    [
-     "Euro Leagues",
-     "https://www.bbc.co.uk/sounds/play/p0pkb7f8?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-29"
-    ],
-    [
-     "Kylian Mbappé’s China crisis shows how sensitive Mao’s legacy remains | Rebecca Bailey",
-     "https://www.theguardian.com/football/2026/oct/28/kylian-mbappe-china-crisis-shows-how-sensitive-maos-legacy-remains",
-     "Guardian",
-     "2026-10-28"
-    ],
-    [
-     "How 'anti-superstar' Kane defied doubters to become world's best",
-     "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
-     "BBC",
-     "2026-10-27"
-    ],
-    [
-     "Ballon d'Or 2026",
-     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Avengers Doomsday cast",
+     "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Harry Kane won the Men's Ballon d'Or for the first time in his career.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "Harry Kane has taken the scenic route to the Ballon d'Or - a road littered with doubts and diversions, but one that eventually led to",
-      "4": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Harry Kane finished ahead of Kylian Mbappe and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025 to 26 season.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "He scored a remarkable 73 goals in 65 games for Bayern Munich and England during the 2025â26 season.",
-      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
-     }
-    },
-    {
-     "claim": "Harry Kane won the Ballon d'Or ahead of Kylian Mbappé and Lamine Yamal.",
+     "claim": "Avengers: Doomsday is scheduled to be released in theaters on Dec. 18.",
      "sources": [
       1,
-      3,
-      4
+      2
      ],
      "evidence": {
-      "1": "And what has the continent made of Harry Kane's Ballon d'Or win? Are the Spanish annoyed that it didn't go to Lamine Yamal, and how",
-      "3": "This is the Kane of recent vintage, the world-class striker and complete footballer who beat Real Madrid and France striker Kylian Mbappe, as well as",
-      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
      }
     },
     {
-     "claim": "The ceremony took place at the London Palladium.",
+     "claim": "Avengers: Doomsday features Robert Downey Jr. as the villain Doctor Doom.",
      "sources": [
-      3,
-      4
+      1,
+      2
      ],
      "evidence": {
-      "3": "The 33-year-old's glory at the London Palladium on Monday is fitting reward for an exemplary career that has seen records fall at his feet for",
-      "4": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "The return of the Russo brothers as directors and McFeely as co-writer, the casting of Downey as new villain Doctor Doom, and the new subtitle"
      }
     },
     {
-     "claim": "Harry Kane became the fifth Englishman to win the award, with the previous winner being Michael Owen in 2001.",
+     "claim": "Pedro Pascal appears in the cast as Mister Fantastic, while Joseph Quinn plays the Human Torch.",
      "sources": [
-      3,
-      4
+      1,
+      2
      ],
      "evidence": {
-      "3": "Kane has put that right spectacularly at Bayern, winning the Bundesliga twice, the move propelling him to the level of global superstar, giving him the",
-      "4": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
+      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
+      "2": "Pedro Pascal as Reed Richards / Mister Fantastic: A highly intelligent scientist and the leader of the Fantastic Four who can stretch any part of"
      }
     },
     {
-     "claim": "Harry Kane scored 73 goals during the 2025 to 26 season.",
+     "claim": "The cast includes Chris Evans as Steve Rogers and Anthony Mackie as Captain America.",
      "sources": [
-      3,
-      4
+      1,
+      2
      ],
      "evidence": {
-      "3": "He scored a remarkable 73 goals in 65 games for Bayern Munich and England during the 2025â26 season.",
-      "4": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "The former leader of the Avengers, a super soldier, and World War II veteran who was the first person to carry the Captain America mantle."
+     }
+    },
+    {
+     "claim": "Paul Rudd portrays Ant-Man in the film.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "Paul Rudd as Scott Lang / Ant-Man: An Avenger and former petty criminal with a suit that allows him to shrink or grow in scale"
+     }
+    },
+    {
+     "claim": "Chris Hemsworth portrays Thor in the production.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Chris Hemsworth as Thor: The Asgardian god of thunder and a founding Avenger, based on the Norse mythological deity of the same name."
+     }
+    },
+    {
+     "claim": "Simu Liu portrays Shang-Chi and Letitia Wright plays Black Panther.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Simu Liu as Xu Shang-Chi: A highly skilled martial artist and the wielder of the mystical Ten Rings who was trained to be an assassin"
+     }
+    },
+    {
+     "claim": "Patrick Stewart portrays Professor X and Ian McKellen portrays Magneto.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Ian McKellen as Erik Lehnsherr / Magneto: A powerful mutant who can generate and control magnetic fields"
+     }
+    },
+    {
+     "claim": "Kelsey Grammer features as Beast and Alan Cumming portrays Nightcrawler.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Kelsey Grammer as Hank McCoy / Beast: A highly intelligent mutant and member of the X-Men with animalistic physical characteristics, including blue fur, pointed ears,"
+     }
+    },
+    {
+     "claim": "Rebecca Romijn plays Mystique and James Marsden appears as Cyclops.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "James Marsden as Scott Summers / Cyclops: A mutant and the leader of the X-Men who can emit powerful optic energy beams, controlled by a"
+     }
+    },
+    {
+     "claim": "Danny Ramirez portrays Falcon and Winston Duke plays M'Baku.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Danny Ramirez as Joaquin Torres / Falcon: An Avenger and first lieutenant in the U.S. Air Force who uses a wing pack similar to Wilson's"
+     }
+    },
+    {
+     "claim": "Channing Tatum is cast as Gambit.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Channing Tatum as Remy LeBeau / Gambit: A mutant with the ability to charge objects with kinetic energy, causing them to explode on impact."
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
+     "claim": "Doomsday marks the final on screen performance of Patrick Stewart following his death in October 2026.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+      "2": "Doomsday marks Stewart's final on-screen performance following his death in October 2026."
      }
     },
     {
-     "claim": "Athletic Bilbao's Unai Simon beat David Raya for the Yashin Trophy at the Ballon d'Or.",
+     "claim": "Filming for the movie took place from April to September 2025 at Pinewood Studios in England with location filming in England and Bahrain.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain."
+     }
+    },
+    {
+     "claim": "Alan Cumming stated that his make up process was reduced to an hour and a half for Doomsday from up to five hours on X2.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Cumming said the make-up process was reduced to an hour-and-a-half for Doomsday from the four-and-a-half to five hours it took on the 20th Century Fox"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 20,
+   "topic": "luke littler netflix",
+   "signal": "Google Trends GB 500+",
+   "category": "Entertainment",
+   "what_is_new": "Netflix announced a new darts show featuring contestants playing against Luke Littler for a huge jackpot.",
+   "hooks": [
+    "Could a bin man win a huge jackpot against Luke Littler on Netflix?",
+    "Meet the 15-year-old world youth champion taking on Luke Littler!",
+    "Netflix is bringing an epic new darts show to Manchester!"
+   ],
+   "sources": [
+    [
+     "World youth champion to bin men: 'Beat Luke Littler' contestants in full for Netflix darts show",
+     "https://www.standard.co.uk/sport/beat-luke-littler-contestants-in-full-lawrie-walker-sherrock-b1302929.html",
+     "Evening Standard",
+     "2026-10-30"
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Taylon Forrester is a bin man by trade, and has said that he would treat his family to a trip to Jamaica, where, he says, he has relatives that they have not met.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "How did Athletic Bilbao's Unai Simon beat David Raya for the Yashin Trophy at the Ballon d'Or?"
+      "1": "Taylon Forrester, 'The Trash Man' Bedford’s Forrester is a bin man by trade, and has said that he would treat his family to a trip"
      }
     },
     {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or for the third time in her career ahead of Ewa Pajor and Khadija Shaw.",
+     "claim": "Mitchell Lawrie is the 15-year-old current world youth champion from Renfrew in Scotland.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+      "1": "Hailing from Renfrew in Scotland, the 15-year-old is the current world youth champion."
      }
     },
     {
-     "claim": "Harry Kane is the 4th Bayern Munich player to achieve the Men's Ballon d'Or honour.",
+     "claim": "Jayden Walker is a 14-year-old from Christchurch in Dorset.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Kane is the 4th Bayern Munich player to achieve this honour.[7]"
+      "1": "14-year-old Walker, from Christchurch in Dorset, was hailed by world No2 Luke Humphries as “the best 12-year-old I’ve ever seen”, when he averaged 102 against"
+     }
+    },
+    {
+     "claim": "The Netflix darts show “Beat Luke Littler” offers a £501,000 jackpot for contestants who beat Littler.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The contestants will battle it out to beat Littler in their one-leg affair, and should they do it, they could claim the huge £501,000 jackpot"
+     }
+    },
+    {
+     "claim": "The live event is held at Manchester Central Convention Complex and is presented by Gary Lineker with support from Richard Osman and Lee Mack.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The live event taking place at the Manchester Central Convention Complex and presented by former Match of the Day frontman Gary Lineker, with support from"
+     }
+    },
+    {
+     "claim": "Fifteen‑year‑old Mitchell Lawrie of Renfrew, Scotland, is the current world youth champion and says he expects to defeat two‑time world champion Luke Littler.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Hailing from Renfrew in Scotland, the 15-year-old is the current world youth champion."
      }
     }
    ],
-   "images": [
-    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
-   ]
+   "images": []
+  },
+  {
+   "n": 15,
+   "topic": "Homewrecker by sombr",
+   "signal": "Apple Music GB: new in the top 25",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sombr made it rain at the AMAs?",
+    "Sombr released Homewrecker on February 5, 2026!",
+    "How did Homewrecker perform on the Billboard charts?"
+   ],
+   "sources": [
+    [
+     "Sombr Makes It Rain at the American Music Awards With Splashy Version of ‘Homewrecker’",
+     "https://variety.com/2026/music/news/sombr-rain-american-music-awards-homewrecker-1236758459/?bcmt=1",
+     "Variety",
+     "2026-05-25"
+    ],
+    [
+     "Homewrecker by sombr",
+     "https://en.wikipedia.org/wiki/Homewrecker_(Sombr_song)",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sombr performed his hit Homewrecker at the American Music Awards in Las Vegas with an onstage downpour.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "The American Music Awards may have been taking place in Las Vegas, but Sombr paid inadvertent tribute on Monday night to his hometown of New"
+     }
+    },
+    {
+     "claim": "Homewrecker is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "“Homewrecker” is a song by American singer-songwriter Sombr, released on February 5, 2026, under Warner Records and his own label, SMB."
+     }
+    },
+    {
+     "claim": "Sombr wrote the song entirely himself and co-produced it with Tony Berg.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sombr wrote the song entirely himself and co-produced it with Tony Berg."
+     }
+    },
+    {
+     "claim": "Homewrecker peaked at number 15 on the Billboard Hot 100.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "\"Homewrecker\" peaked at number 15 on the Billboard Hot 100."
+     }
+    },
+    {
+     "claim": "Outside of the United States, Homewrecker peaked within the top ten of the charts in several countries, including in Australia, Ireland, Latvia, New Zealand, and the United Kingdom.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Outside of the United States, \"Homewrecker\" peaked within the top ten of the charts in several countries, including in Australia, Ireland, Latvia, New Zealand, and"
+     }
+    },
+    {
+     "claim": "On February 4, 2026, Sombr posted a snippet of the song on his Instagram, captioned homewrecker drops Thursday at 3 p.m. PST, alongside Milo Manheim and Quenlin Blackwell.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "On February 4, 2026, Sombr posted a snippet of the song on his Instagram, captioned \"homewrecker drops Thursday at 3 p.m. PST\", alongside Milo Manheim"
+     }
+    },
+    {
+     "claim": "The song marked his first release of 2026, following his 2025 singles 12 to 12 and Undressed.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The song marked his first release of 2026, following his 2025 singles \"12 to 12\" and \"Undressed\"."
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T11:20+00:00",
+ "updated": "2026-10-30T13:43+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -132,8 +132,8 @@
     "the celebrity traitors uncloaked uk",
     "the celebrity traitors season 2",
     "the celebrity traitors reveal",
-    "the celebrity traitors uk",
     "the celebrity traitors james acaster",
+    "the celebrity traitors uk",
     "the celebrity traitors reaction",
     "the celebrity traitors season 2 episode 9"
    ],
@@ -266,7 +266,7 @@
     728,
     672
    ],
-   "news_24h": 8,
+   "news_24h": 6,
    "news_usual": 9.0,
    "suggestions": [
     "grammy nominations 2027",
@@ -442,8 +442,8 @@
    "name": "MAMA Awards 2026",
    "days_to": 21,
    "phase": "steady",
-   "level": "surging",
-   "places": 3,
+   "level": "steady",
+   "places": 0,
    "momentum": 0.98,
    "views_yesterday": 904,
    "views_usual": 924,
@@ -479,7 +479,7 @@
     675,
     904
    ],
-   "news_24h": 15,
+   "news_24h": 14,
    "news_usual": 7.0,
    "suggestions": [
     "mama awards 2026",
@@ -617,7 +617,7 @@
     795,
     855
    ],
-   "news_24h": 17,
+   "news_24h": 14,
    "news_usual": 9.0,
    "suggestions": [
     "the game awards",
@@ -752,7 +752,7 @@
     25412,
     17411
    ],
-   "news_24h": 91,
+   "news_24h": 78,
    "news_usual": 26.0,
    "suggestions": [
     "dune part three",
@@ -761,8 +761,8 @@
     "dune part three final trailer reaction",
     "dune part three final trailer",
     "dune part three trailer reaction mashup",
-    "dune part three official trailer reaction",
-    "dune part three reaction"
+    "dune part three reaction",
+    "dune part three trailer music"
    ],
    "in": [
     "YouTube charts"
@@ -893,7 +893,7 @@
     2191,
     2146
    ],
-   "news_24h": 67,
+   "news_24h": 62,
    "news_usual": 39.0,
    "suggestions": [
     "christmas 2026",
@@ -964,7 +964,7 @@
     279,
     258
    ],
-   "news_24h": 7,
+   "news_24h": 9,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -997,8 +997,8 @@
    "name": "CES 2027",
    "days_to": 68,
    "phase": "steady",
-   "level": "steady",
-   "places": 0,
+   "level": "surging",
+   "places": 2,
    "momentum": 0.77,
    "views_yesterday": 170,
    "views_usual": 222,
@@ -1034,14 +1034,16 @@
     162,
     170
    ],
-   "news_24h": 6,
+   "news_24h": 8,
    "news_usual": 5.0,
    "suggestions": [
     "ces 2027",
     "sony ces 2027",
     "ces las vegas 2027"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Tech",
    "angles": [
     "CES 2027 biggest reveals",

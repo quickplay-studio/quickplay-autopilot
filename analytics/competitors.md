@@ -5,10 +5,10 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
 | Title words (median) | 10.0 | 7.0 |
-| With a number | 24% | 39% |
-| A question | 14% | 7% |
-| With an emoji | 55% | 54% |
-| Length, seconds (median) | 25.0 | 29.0 |
+| With a number | 23% | 39% |
+| A question | 13% | 7% |
+| With an emoji | 57% | 54% |
+| Length, seconds (median) | 25.5 | 29.0 |
 
 ## Animals
 - 😱 This Stick Can Save Their Lives! 😳 #Facts #TribalLife #AmazingFacts #Shorts (329,696 views, 7,157 an hour, 25 s, Fact Mingle )
@@ -30,6 +30,9 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Mbappe Was Supposed To Win The Ballon d'or💔🥺 #shorts #mbappe #ballondor #harrykane #shortsvideo (414,697 views, 9,517 an hour, 34 s, @xa07_Editx)
 - 3 Players Who Got ROBBED in Ballon d’Or 2026 😱 (418,628 views, 8,757 an hour, 89 s, Sharma Football)
 - Marcelo on Harry Kane winning the Ballon d'Or #shorts #marcelo #harrykane #uk (175,225 views, 3,872 an hour, 7 s, GOALIFY)
+
+## CES 2027
+- 2027 Silverado: The Premium Seats That Aren’t Leather #shorts (1,025 views, 60 an hour, 103 s, GT: Garage Talk)
 
 ## Cars
 - Required High Car Driving To Get Licence On Slippery Road #shorts #facts #car (379,406 views, 12,773 an hour, 22 s, AK Creative Knowledge)

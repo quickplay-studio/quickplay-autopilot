@@ -52,10 +52,10 @@
      "published": "2026-10-28"
     },
     {
-     "outlet": "BBC",
-     "title": "How 'anti-superstar' Kane defied doubters to become world's best",
-     "url": "https://www.bbc.co.uk/sport/football/articles/cqvg01jyy84xo?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-27"
+     "outlet": "USA Today",
+     "title": "2026 Women’s Ballon d'Or nominees: Full list of 30 finalists",
+     "url": "https://www.usatoday.com/story/sports/soccer/2026/10/26/womens-ballon-dor-2026-nominees-full-list/92398765007/",
+     "published": "2026-10-26"
     }
    ]
   },
@@ -66,8 +66,14 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "‘I saw the script and went: oooh!’ Olivia Colman and Alexander Skårsgard on their steamy folk-horror movie Wicker",
-     "url": "https://www.theguardian.com/film/2026/oct/30/i-saw-the-script-and-went-oooh-olivia-colman-and-alexander-skarsgard-on-their-steamy-folk-horror-movie-wicker",
+     "title": "Burnham says he wants to ‘draw a line’ under relationship with devolved powers – UK politics live",
+     "url": "https://www.theguardian.com/politics/live/2026/oct/30/andy-burnham-labour-conservatives-devolution-scotland-wales-latest-news-updates",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Billboard",
+     "title": "The DNA Kits Behind Viral Celebrity Family Reveals Are 65% Off Right Now: Shop Ancestry.com Deals Here",
+     "url": "https://www.billboard.com/culture/product-recommendations/ancestry-dna-kit-membership-sales-christmas-2026-buy-online-1236369456/",
      "published": "2026-10-30"
     },
     {
@@ -84,6 +90,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Halloween",
    "articles": [
     {
+     "outlet": "Guardian",
+     "title": "Raccoons at the ready! 20 Halloween costumes for 2026 – from Erling Haaland to Kate in Widow’s Bay",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/raccoons-at-the-ready-20-halloween-costumes-for-2026-from-count-binface-to-kate-in-widows-bay",
+     "published": "2026-10-30"
+    },
+    {
      "outlet": "IGN",
      "title": "Families Who Lost Loved Ones in Seoul Halloween Crowd Crush Call on Activision to Pull Real Footage From Call of Duty: Modern Warfare 4",
      "url": "https://www.ign.com/articles/families-who-lost-loved-ones-in-seoul-halloween-crowd-crush-call-on-activision-to-pull-real-footage-from-call-of-duty-modern-warfare-4",
@@ -93,12 +105,6 @@
      "outlet": "Space.com",
      "title": "Think Halloween is scary? This scorched alien world is a real-life cosmic horror story",
      "url": "https://www.space.com/astronomy/exoplanets/think-halloween-is-scary-this-scorched-alien-world-is-a-real-life-cosmic-horror-story",
-     "published": "2026-10-30"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "‘I left shellshocked’: writers on their scariest non-horror movies",
-     "url": "https://www.theguardian.com/film/2026/oct/30/scariest-non-horror-movies",
      "published": "2026-10-30"
     },
     {
@@ -193,32 +199,45 @@
    ]
   },
   {
+   "topic": "Avengers Doomsday cast",
+   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
+   "articles": [
+    {
+     "outlet": "Deadline",
+     "title": "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
+     "url": "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
+     "published": "2026-10-24"
+    }
+   ]
+  },
+  {
    "topic": "Dune: Part Three",
    "signal": "watchlist: Dune: Part Three (surging, 49 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Dune%3A_Part_Three",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Philippa Gregory: ‘I read 100 of the best 18th century novels – the perfect author’s apprenticeship’",
-     "url": "https://www.theguardian.com/books/2026/oct/30/philippa-gregory-i-read-100-of-the-best-18th-century-novels-the-perfect-authors-apprenticeship",
-     "published": "2026-10-30"
-    },
-    {
-     "outlet": "Sky Sports",
-     "title": "Love leads Packers past Panthers in vital win",
-     "url": "https://www.skysports.com/nfl/news/12040/13605642/carolina-panthers-19-27-green-bay-packers-jordan-love-throws-three-touchdown-passes-in-vital-win",
-     "published": "2026-10-30"
-    },
-    {
-     "outlet": "Sky News",
-     "title": "British student pilot among three killed in mid-air helicopter crash in US",
-     "url": "https://news.sky.com/story/uk-student-pilot-among-three-killed-in-mid-air-helicopter-collision-in-oregon-13605632",
-     "published": "2026-10-30"
-    },
-    {
      "outlet": "Variety",
-     "title": "Shabana Azmi, Marco Müller Set for Inaugural Kathmandu Film Festival",
-     "url": "https://variety.com/2026/film/festivals/shabana-azmi-marco-muller-inaugural-kathmandu-film-festival-1236934643/",
+     "title": "How ‘Up Again’ Director Captured the Rise of a Teenage Figure Skating Champion: ‘The Technical Conditions Were Extremely Challenging’",
+     "url": "https://variety.com/2026/film/global/teenage-skater-up-again-jihlava-1236934423/",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "The Verge",
+     "title": "The HomeView and Echo Show 16 could be the family computers I’ve been asking for",
+     "url": "https://www.theverge.com/tech/1022592/apple-homeview-amazon-echo-show-16-smart-display-family-computer",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "The best recent translated fiction – review roundup",
+     "url": "https://www.theguardian.com/books/2026/oct/30/the-best-recent-translated-fiction-review-roundup",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Prominent Russian newspaper shuts down under pressure from authorities",
+     "url": "https://www.bbc.co.uk/news/articles/cmewepdr109do?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-30"
     }
    ]
@@ -229,6 +248,12 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
    "articles": [
     {
+     "outlet": "Polygon",
+     "title": "HBO's Harry Potter series officially casts two key characters",
+     "url": "https://www.polygon.com/hbo-harry-potter-tv-show-lily-james-potter-casting/",
+     "published": "2026-10-27"
+    },
+    {
      "outlet": "Variety",
      "title": "‘Harry Potter’ HBO Series Casts James Potter and Lily Potter, Plus Charlie Weasley in Character’s Screen Debut",
      "url": "https://variety.com/2026/tv/news/harry-potter-hbo-series-casts-charlie-weasley-james-potter-1236931849/",
@@ -237,96 +262,185 @@
    ]
   },
   {
-   "topic": "This Is Halloween by The Citizens of Halloween",
-   "signal": "Apple Music US: new in the top 25",
-   "wikipedia": null,
+   "topic": "CES 2027",
+   "signal": "watchlist: CES 2027 (surging, 68 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Consumer_Electronics_Show",
    "articles": [
     {
-     "outlet": "Space.com",
-     "title": "Think Halloween is scary? This scorched alien world is a real-life cosmic horror story",
-     "url": "https://www.space.com/astronomy/exoplanets/think-halloween-is-scary-this-scorched-alien-world-is-a-real-life-cosmic-horror-story",
+     "outlet": "Billboard",
+     "title": "Blink-182, Korn, MGK, Alice in Chains, The Offspring to Play 2027 Welcome to Rockville Festival",
+     "url": "https://www.billboard.com/music/concerts/2027-welcome-to-rockville-festival-lineup-blink-182-korn-mgk-1236370913/",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "NME",
+     "title": "Sam Fender adds extra dates to 2027 UK and Ireland ‘Proper Massive’ stadium tour due to phenomenal demand",
+     "url": "https://www.nme.com/news/music/sam-fender-adds-extra-dates-to-2027-uk-and-ireland-proper-massive-stadium-tour-due-to-phenomenal-demand-3974608?utm_source=rss&utm_medium=rss&utm_campaign=sam-fender-adds-extra-dates-to-2027-uk-and-ireland-proper-massive-stadium-tour-due-to-phenomenal-demand",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Polygon",
+     "title": "Hideo Kojima's Death Stranding Anime Looks Impressive in First Official Trailer",
+     "url": "https://www.polygon.com/hideo-kojima-death-stranding-isolations-anime-first-trailer/",
      "published": "2026-10-30"
     },
     {
      "outlet": "Guardian",
-     "title": "‘I left shellshocked’: writers on their scariest non-horror movies",
-     "url": "https://www.theguardian.com/film/2026/oct/30/scariest-non-horror-movies",
+     "title": "Fifa to miss equal Women’s World Cup prize money ambition set by Infantino",
+     "url": "https://www.theguardian.com/football/2026/oct/30/fifa-miss-equal-womens-world-cup-prize-money-ambition-gianni-infantino",
      "published": "2026-10-30"
-    },
-    {
-     "outlet": "IGN",
-     "title": "Call of Duty: Modern Warfare 4 Adds 'Non MilSim Content' Disclaimer to Halloween Themed Content",
-     "url": "https://www.ign.com/articles/call-of-duty-modern-warfare-4-adds-non-milsim-content-disclaimer-to-halloween-themed-content",
-     "published": "2026-10-29"
     }
    ]
   },
   {
-   "topic": "f1 news",
+   "topic": "Homewrecker by sombr",
+   "signal": "Apple Music GB: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Homewrecker_(Sombr_song)",
+   "articles": [
+    {
+     "outlet": "Variety",
+     "title": "Sombr Makes It Rain at the American Music Awards With Splashy Version of ‘Homewrecker’",
+     "url": "https://variety.com/2026/music/news/sombr-rain-american-music-awards-homewrecker-1236758459/?bcmt=1",
+     "published": "2026-05-25"
+    }
+   ]
+  },
+  {
+   "topic": "abha vs al-ittihad",
    "signal": "Google Trends GB 200+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Fox_News",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "ESPN",
+     "title": "Abha vs. Al Ittihad (Oct 30, 2026) Live Score - ESPN",
+     "url": "https://www.espn.com/soccer/match/_/gameId/401900885/al-ittihad-abha",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "andy haldane",
+   "signal": "Google Trends GB 10000+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Andy_Haldane",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Afcon reverts to being held every two years, Premier League news, Carabao Cup and WCL reaction – football live",
-     "url": "https://www.theguardian.com/football/live/2026/oct/30/premier-league-news-carabao-cup-and-wcl-reaction-and-more-football-live",
+     "title": "Covid inquiry report shows why culture of care workers being undervalued must end, says Andy Burnham – as it happened",
+     "url": "https://www.theguardian.com/politics/live/2026/oct/20/kemi-badenoch-john-healey-capital-gains-tax-budget-covid-inquiry-care-homes-uk-politics-latest-news",
+     "published": "2026-10-20"
+    },
+    {
+     "outlet": "BBC",
+     "title": "Andy Haldane: Burnham's former adviser gives the Budget 4 out of 10",
+     "url": "https://www.bbc.co.uk/sounds/play/m0033qvw",
+     "published": "2025-10-30"
+    }
+   ]
+  },
+  {
+   "topic": "gateshead f.c.",
+   "signal": "Google Trends GB 100+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Gateshead_F.C.",
+   "articles": [
+    {
+     "outlet": "BBC Sport",
+     "title": "Prospective Gateshead takeover close to collapse",
+     "url": "https://www.bbc.co.uk/sport/football/articles/crz657qv7nv4o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-30"
+    }
+   ]
+  },
+  {
+   "topic": "call of duty seoul backlash",
+   "signal": "Google Trends GB 500+",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "BBC",
+     "title": "Footage of Seoul crush to be removed from Call of Duty after backlash",
+     "url": "https://www.bbc.co.uk/news/articles/cr1ex26lgqlqo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-30"
     },
     {
-     "outlet": "Sky News",
-     "title": "Crypto industry suffers 'largest bank heist in human history'",
-     "url": "https://news.sky.com/story/crypto-worth-billions-frozen-over-potential-security-issue-13605627",
-     "published": "2026-10-29"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "WoW: Forever Won’t Have Dead Servers",
-     "url": "https://www.gamespot.com/articles/wow-forever-wont-have-dead-servers/",
-     "published": "2026-10-29"
-    },
-    {
-     "outlet": "Eurogamer",
-     "title": "Phantom Blade Zero is asking players to free up 300GB of space for pre-loading, double its actual 145GB file size",
-     "url": "https://www.eurogamer.net/phantom-blade-zero-300gb-pre-load-space",
-     "published": "2026-10-27"
+     "outlet": "Guardian",
+     "title": "Outcry after Call of Duty maker uses real footage of deadly Seoul crowd crush in new video game",
+     "url": "https://www.theguardian.com/world/2026/oct/29/call-of-duty-seoul-crowd-crush-video-footage",
+     "published": "2026-10-28"
     }
    ]
   },
   {
-   "topic": "bryce harper",
-   "signal": "Google Trends US 100+",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bryce_Harper",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Six degrees of Bryce Harper: Why all your favorite MLB players have known each other since they were kids",
-     "url": "https://www.nytimes.com/athletic/7641427/2026/09/29/bryce-harper-mlb-travel-ball-youth-baseball/",
-     "published": "2026-09-29"
-    }
-   ]
-  },
-  {
-   "topic": "red sox offseason trade rumors",
-   "signal": "Google Trends US 2000+",
+   "topic": "luke littler netflix",
+   "signal": "Google Trends GB 500+",
    "wikipedia": null,
    "articles": [
     {
-     "outlet": "New York Times",
-     "title": "Red Sox offseason mailbag part 2: Jarren Duran’s trade value, Curtis Mead’s role",
-     "url": "https://www.nytimes.com/athletic/7718311/2026/10/27/red-sox-jarren-duran-trade-curtis-mead/",
-     "published": "2026-10-27"
+     "outlet": "Evening Standard",
+     "title": "World youth champion to bin men: 'Beat Luke Littler' contestants in full for Netflix darts show",
+     "url": "https://www.standard.co.uk/sport/beat-luke-littler-contestants-in-full-lawrie-walker-sherrock-b1302929.html",
+     "published": "2026-10-30"
     }
    ]
   },
   {
-   "topic": "nyc marathon 2026",
-   "signal": "Google Trends US 1000+",
+   "topic": "spy",
+   "signal": "Google Trends US 500+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Spy",
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Black Doves to Stick: the seven best shows to stream this week",
+     "url": "https://www.theguardian.com/tv-and-radio/2026/oct/30/black-doves-to-stick-the-seven-best-shows-to-stream-this-week",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Engadget",
+     "title": "NVIDIA CEO Jensen Huang may have been the target of a Chinese government spy",
+     "url": "https://www.engadget.com/2301447/nvidia-ceo-jensen-huang-may-have-been-the-target-of-a-chinese-government-spy/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "PC Gamer",
+     "title": "Nvidia CEO reportedly targeted by Chinese spy previously under suspicion for AI chip smuggling",
+     "url": "https://www.pcgamer.com/software/ai/nvidia-ceo-reportedly-targeted-by-chinese-spy-previously-under-suspicion-for-ai-chip-smuggling/",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "TechCrunch",
+     "title": "US investigated Chinese spy plot aimed at Nvidia CEO",
+     "url": "https://techcrunch.com/2026/10/29/u-s-investigated-chinese-spy-plot-aimed-at-nvidia-ceo/",
+     "published": "2026-10-29"
+    }
+   ]
+  },
+  {
+   "topic": "florida highway patrol",
+   "signal": "Google Trends US 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Florida_Highway_Patrol",
+   "articles": [
+    {
+     "outlet": "CBS News",
+     "title": "Driver killed in Pompano Beach I-95 crash after pickup overturns, Florida Highway Patrol says",
+     "url": "https://www.cbsnews.com/miami/news/pompano-beach-i-95-crash-fatal-pickup-overturns-fhp/",
+     "published": "2026-10-05"
+    }
+   ]
+  },
+  {
+   "topic": "today show halloween 2026",
+   "signal": "Google Trends US 5000+",
    "wikipedia": null,
    "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "Raccoons at the ready! 20 Halloween costumes for 2026 – from Erling Haaland to Kate in Widow’s Bay",
+     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/raccoons-at-the-ready-20-halloween-costumes-for-2026-from-count-binface-to-kate-in-widows-bay",
+     "published": "2026-10-30"
+    },
     {
      "outlet": "USA Today",
-     "title": "NYC Marathon 2026: See the celebrities running",
-     "url": "https://www.usatoday.com/story/entertainment/celebrities/2026/10/29/nyc-marathon-2026-celebrity-runners/92502546007/",
+     "title": "See the 'Today' show, Kelly and Mark and more TV hosts' 2026 Halloween costumes",
+     "url": "https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/30/today-show-kelly-and-mark-tv-hosts-halloween-costumes-2026/92368469007/",
      "published": "2026-10-29"
     }
    ]
@@ -338,8 +452,8 @@
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Sir Patrick Stewart obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/30/sir-patrick-stewart-obituary",
+     "title": "Burnham says he wants to ‘draw a line’ under relationship with devolved powers – UK politics live",
+     "url": "https://www.theguardian.com/politics/live/2026/oct/30/andy-burnham-labour-conservatives-devolution-scotland-wales-latest-news-updates",
      "published": "2026-10-30"
     },
     {
@@ -350,14 +464,14 @@
     },
     {
      "outlet": "NME",
-     "title": "Ian McKellen, Hugh Jackman, William Shatner and more pay tribute to Patrick Stewart: “A man to admire and love”",
-     "url": "https://www.nme.com/news/film/ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love-3974606?utm_source=rss&utm_medium=rss&utm_campaign=ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love",
+     "title": "Patrick Stewart fans remember his many video game roles: “Such an iconic voice”",
+     "url": "https://www.nme.com/news/gaming-news/patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice-3974633?utm_source=rss&utm_medium=rss&utm_campaign=patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice",
      "published": "2026-10-30"
     },
     {
-     "outlet": "The Hollywood Reporter",
-     "title": "Patrick Stewart’s Career Was a Rare and Thrilling Marriage of the Prestigious and the Populist",
-     "url": "https://www.hollywoodreporter.com/movies/movie-reviews/patrick-stewart-critics-appreciation-1236743268/",
+     "outlet": "Sky Sports",
+     "title": "Allen vs Lamar: Two NFL greats knocking at the Super Bowl door",
+     "url": "https://www.skysports.com/nfl/news/12040/13604718/josh-allen-vs-lamar-jackson-buffalo-bills-and-baltimore-ravens-resume-rivalry-as-nfl-greats-knock-at-super-bowl-door-again-nfl-gameday-guide",
      "published": "2026-10-30"
     }
    ]
@@ -408,39 +522,20 @@
    ]
   },
   {
-   "topic": "Jacob Misiorowski",
-   "signal": "Wikipedia 212,900 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Jacob_Misiorowski",
-   "articles": [
-    {
-     "outlet": "New York Times",
-     "title": "Brewers’ Jacob Misiorowski digs deep for a gem to cap marvelous month, season for the ages",
-     "url": "https://www.nytimes.com/athletic/7733205/2026/10/29/jacob-misiorowski-brewers-world-series-championship-cy-young-award/",
-     "published": "2026-10-29"
-    },
-    {
-     "outlet": "USA Today",
-     "title": "Jacob Misiorowski to start World Series Game 5 after Brewers fail to sweep Rays",
-     "url": "https://sportsbookwire.usatoday.com/story/sports/mlb/brewers/2026/10/28/jacob-misiorowski-to-start-game-5-after-brewers-fail-to-sweep-rays/92459018007/",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
    "topic": "Patrick Stewart on stage and screen",
    "signal": "Wikipedia 212,550 views",
    "wikipedia": "https://en.wikipedia.org/wiki/Patrick_Stewart_on_stage_and_screen",
    "articles": [
     {
      "outlet": "Guardian",
-     "title": "Sir Patrick Stewart obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/30/sir-patrick-stewart-obituary",
+     "title": "Burnham says he wants to ‘draw a line’ under relationship with devolved powers – UK politics live",
+     "url": "https://www.theguardian.com/politics/live/2026/oct/30/andy-burnham-labour-conservatives-devolution-scotland-wales-latest-news-updates",
      "published": "2026-10-30"
     },
     {
      "outlet": "NME",
-     "title": "Ian McKellen, Hugh Jackman, William Shatner and more pay tribute to Patrick Stewart: “A man to admire and love”",
-     "url": "https://www.nme.com/news/film/ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love-3974606?utm_source=rss&utm_medium=rss&utm_campaign=ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love",
+     "title": "Patrick Stewart fans remember his many video game roles: “Such an iconic voice”",
+     "url": "https://www.nme.com/news/gaming-news/patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice-3974633?utm_source=rss&utm_medium=rss&utm_campaign=patrick-stewart-fans-remember-his-many-video-game-roles-such-an-iconic-voice",
      "published": "2026-10-30"
     },
     {
@@ -454,25 +549,6 @@
      "title": "Ian McKellen Honors Close Friend Patrick Stewart: ‘A Man to Rely On, to Admire and In My Case, Love’",
      "url": "https://www.rollingstone.com/tv-movies/tv-movie-news/ian-mckellen-patrick-stewart-tribute-1235650247/",
      "published": "2026-10-30"
-    }
-   ]
-  },
-  {
-   "topic": "Bob Uecker",
-   "signal": "Wikipedia 205,548 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Bob_Uecker",
-   "articles": [
-    {
-     "outlet": "USA Today",
-     "title": "Watch emotional Bob Uecker tribute after Brewers win World Series",
-     "url": "https://www.usatoday.com/story/sports/mlb/playoffs/2026/10/29/bob-uecker-tribute-brewers-win-world-series-fox/92491931007/",
-     "published": "2026-10-28"
-    },
-    {
-     "outlet": "New York Times",
-     "title": "Bob Uecker’s spirit hangs over a bittersweet Brewers World Series",
-     "url": "https://www.nytimes.com/athletic/7721570/2026/10/25/bob-uecker-brewers-mlb-world-series/",
-     "published": "2026-10-25"
     }
    ]
   },
@@ -495,68 +571,10 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Barbara_Barrie",
    "articles": [
     {
-     "outlet": "USA Today",
-     "title": "Oscar-nominated Barbara Barrie dead at 95. How did she die?",
-     "url": "https://www.usatoday.com/story/entertainment/people/2026/10/29/actress-barbara-barrie-oscar-dies-suicide-breaking-away-suddenly-susan/92493453007/",
-     "published": "2026-10-29"
-    }
-   ]
-  },
-  {
-   "topic": "Deaths in 2026",
-   "signal": "Wikipedia 174,215 views",
-   "wikipedia": "https://en.wikipedia.org/wiki/Deaths_in_2026",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "Severe rainfall and flood warnings issued for central Greece and western Turkey",
-     "url": "https://www.theguardian.com/environment/2026/oct/30/severe-rainfall-flood-warnings-greece-turkey",
+     "outlet": "Variety",
+     "title": "Double Oscar Winner Barbara Kopple Talks ‘Union Town’ and People Who Fight for ‘Dignity and Fairness’: ‘They Are My Heroes’",
+     "url": "https://variety.com/2026/film/global/barbara-kopple-union-town-labor-rights-1236934012/",
      "published": "2026-10-30"
-    }
-   ]
-  },
-  {
-   "topic": "my brother died",
-   "signal": "YouTube GB 82,022/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/My_Brother_the_Devil",
-   "articles": [
-    {
-     "outlet": "GameSpot",
-     "title": "Nintendo’s Indie World Presentation Was Pretty Packed For A Short Show",
-     "url": "https://www.gamespot.com/articles/nintendos-indie-world-presentation-was-pretty-packed-for-a-short-show/",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "In This Card Game... Everyone Cheats",
-   "signal": "YouTube GB-gaming 62,186/h",
-   "wikipedia": null,
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "My sister-in-law is nearly 40 but cannot handle losing at board games. What can I do? | Leading questions",
-     "url": "https://www.theguardian.com/lifeandstyle/2026/oct/30/how-to-deal-with-board-games-bad-loser-advice",
-     "published": "2026-10-29"
-    },
-    {
-     "outlet": "GameSpot",
-     "title": "GTA 6 Online Could Be Released In Early 2027, Bank Says",
-     "url": "https://www.gamespot.com/articles/gta-6-online-could-be-released-in-early-2027-bank-says/",
-     "published": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "topic": "K/DA",
-   "signal": "YouTube GB-music 125,861/h",
-   "wikipedia": "https://en.wikipedia.org/wiki/K/DA",
-   "articles": [
-    {
-     "outlet": "Guardian",
-     "title": "England’s Ivan Toney to stand trial during Euro 2028 after denying assault charge",
-     "url": "https://www.theguardian.com/football/2026/oct/29/ivan-toney-trial-during-euro-2028-denies-assault-charge",
-     "published": "2026-10-29"
     }
    ]
   },
@@ -598,28 +616,28 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Michael_Jackson",
    "articles": [
     {
+     "outlet": "BBC",
+     "title": "Driver guilty of hitting cyclist and dragging him to death under car",
+     "url": "https://www.bbc.co.uk/news/articles/c6e3xg5we9eyo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Guardian",
+     "title": "Man who ran over cyclist and dragged him under car for a mile convicted of murder",
+     "url": "https://www.theguardian.com/uk-news/2026/oct/30/cyclist-murder-manchester-simon-richardson-michael-mullins",
+     "published": "2026-10-30"
+    },
+    {
      "outlet": "NME",
      "title": "Queens Of The Stone Age: “The goal of music for us is to be able to play things that are difficult to say”",
      "url": "https://www.nme.com/features/music-interviews/queens-of-the-stone-age-interview-perfecth-josh-homme-mikey-shoes-iggy-pop-future-3974189?utm_source=rss&utm_medium=rss&utm_campaign=queens-of-the-stone-age-interview-perfecth-josh-homme-mikey-shoes-iggy-pop-future",
      "published": "2026-10-30"
     },
     {
-     "outlet": "BBC",
+     "outlet": "BBC Sport",
      "title": "Carrick says there are 'no issues' with captain Fernandes",
      "url": "https://www.bbc.co.uk/sport/football/videos/cqj34pjxp7xdo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-30"
-    },
-    {
-     "outlet": "Guardian",
-     "title": "‘I left shellshocked’: writers on their scariest non-horror movies",
-     "url": "https://www.theguardian.com/film/2026/oct/30/scariest-non-horror-movies",
-     "published": "2026-10-30"
-    },
-    {
-     "outlet": "BBC Sport",
-     "title": "'Fully committed' Fernandes to remain Man Utd captain",
-     "url": "https://www.bbc.co.uk/sport/football/articles/ckz7x8z1e9y9o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-10-29"
     }
    ],
    "source": "On this day",
@@ -631,28 +649,28 @@
    "wikipedia": "https://en.wikipedia.org/wiki/The_Patrick_Star_Show",
    "articles": [
     {
-     "outlet": "Guardian",
-     "title": "Sir Patrick Stewart obituary",
-     "url": "https://www.theguardian.com/culture/2026/oct/30/sir-patrick-stewart-obituary",
-     "published": "2026-10-30"
-    },
-    {
-     "outlet": "NME",
-     "title": "Ian McKellen, Hugh Jackman, William Shatner and more pay tribute to Patrick Stewart: “A man to admire and love”",
-     "url": "https://www.nme.com/news/film/ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love-3974606?utm_source=rss&utm_medium=rss&utm_campaign=ian-mckellen-hugh-jackman-william-shatner-and-more-pay-tribute-to-patrick-stewart-a-man-to-admire-and-love",
-     "published": "2026-10-30"
-    },
-    {
      "outlet": "BBC",
-     "title": "Sir Patrick Stewart: Actor who moved effortlessly between Star Trek and Shakespeare",
-     "url": "https://www.bbc.co.uk/news/articles/cye0l23lx15o?at_medium=RSS&at_campaign=rss",
+     "title": "The acting legend defined by Yorkshire who 'loved it to the end'",
+     "url": "https://www.bbc.co.uk/news/articles/cm0qk2e9deqeo?at_medium=RSS&at_campaign=rss",
      "published": "2026-10-30"
     },
     {
-     "outlet": "Space.com",
-     "title": "Patrick Stewart, renowned actor and ‘Star Trek’s’ Captain Picard, dies at 86",
-     "url": "https://www.space.com/entertainment/patrick-stewart-renowned-actor-and-star-treks-captain-picard-dies-at-86",
-     "published": "2026-10-29"
+     "outlet": "Guardian",
+     "title": "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "url": "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "Eurogamer",
+     "title": "Games industry honours beloved actor Sir Patrick Stewart, as the legendary Star Trek and X-Men actor passes away",
+     "url": "https://www.eurogamer.net/patrick-stewart-dies-oblivion-uriel-septim-castlevania",
+     "published": "2026-10-30"
+    },
+    {
+     "outlet": "IGN",
+     "title": "Star Trek Online Players Form Galaxy Class Honor Guard to Pay Tribute to Captain Picard Actor Sir Patrick Stewart",
+     "url": "https://www.ign.com/articles/star-trek-online-players-form-galaxy-class-honor-guard-to-pay-tribute-to-captain-picard-actor-sir-patrick-stewart",
+     "published": "2026-10-30"
     }
    ],
    "source": "TVmaze"
@@ -663,10 +681,10 @@
    "wikipedia": "https://en.wikipedia.org/wiki/Instagram",
    "articles": [
     {
-     "outlet": "The Verge",
-     "title": "Patrick Stewart has died at age 86",
-     "url": "https://www.theverge.com/news/1022626/patrick-stewart-star-trek-death",
-     "published": "2026-10-29"
+     "outlet": "Eurogamer",
+     "title": "Games industry honours beloved actor Sir Patrick Stewart, as the legendary Star Trek and X-Men actor passes away",
+     "url": "https://www.eurogamer.net/patrick-stewart-dies-oblivion-uriel-septim-castlevania",
+     "published": "2026-10-30"
     },
     {
      "outlet": "GameSpot",
@@ -702,8 +720,8 @@
     },
     {
      "outlet": "AP",
-     "title": "F1 leader Kimi Antonelli has viral illness ahead of Mexico City Grand Prix",
-     "url": "https://apnews.com/article/kimi-antonelli-mercedes-illness-mexico-city-7adbee4f89cd79eed186d10893b39fe5",
+     "title": "Formula 1: How to watch the Mexico City Grand Prix on TV and what to know",
+     "url": "https://apnews.com/article/f1-guide-mexico-grand-prix-antonelli-75a1caa63f3305098c01432bd774ec24",
      "published": "2026-10-29"
     }
    ],
@@ -725,6 +743,32 @@
    "source": "App Store"
   },
   {
+   "topic": "Brewers win World Series",
+   "signal": "Bluesky trending, 32,025 posts",
+   "wikipedia": null,
+   "articles": [
+    {
+     "outlet": "Guardian",
+     "title": "The low-budget Brewers won the World Series – and exposed baseball’s biggest lie | Howard Bryant",
+     "url": "https://www.theguardian.com/sport/2026/oct/29/milwaukee-brewers-world-series-title-mlb-salary-cap",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "AP",
+     "title": "Milwaukee Brewers celebrate after World Series win",
+     "url": "https://apnews.com/video/milwaukee-brewers-celebrate-after-world-series-win-69a3c0ebf70f4784b44d3ce592dda636",
+     "published": "2026-10-29"
+    },
+    {
+     "outlet": "CBS News",
+     "title": "Milwaukee Brewers beat Tampa Bay Rays in 5 games to win first World Series in franchise history",
+     "url": "https://www.cbsnews.com/news/world-series-milwaukee-brewers-defeat-tampa-bay-rays/",
+     "published": "2026-10-29"
+    }
+   ],
+   "source": "Bluesky"
+  },
+  {
    "topic": "Ballon d'Or 2026 analysis",
    "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "wikipedia": "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
@@ -743,25 +787,7 @@
    "articles": []
   },
   {
-   "topic": "MAMA Awards 2026",
-   "signal": "watchlist: MAMA Awards 2026 (surging, 21 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_MAMA_Awards",
-   "articles": []
-  },
-  {
-   "topic": "MAMA Awards 2026 nominees",
-   "signal": "watchlist: MAMA Awards 2026 (surging, 21 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/2026_MAMA_Awards",
-   "articles": []
-  },
-  {
    "topic": "Avengers: Doomsday",
-   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
-   "wikipedia": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-   "articles": []
-  },
-  {
-   "topic": "Avengers Doomsday cast",
    "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
    "articles": []
@@ -770,6 +796,24 @@
    "topic": "Harry Potter series trailer",
    "signal": "watchlist: Harry Potter HBO series (surging, 56 days to go)",
    "wikipedia": "https://en.wikipedia.org/wiki/Harry_Potter_%28TV_series%29",
+   "articles": []
+  },
+  {
+   "topic": "CES 2027 biggest reveals",
+   "signal": "watchlist: CES 2027 (surging, 68 days to go)",
+   "wikipedia": "https://en.wikipedia.org/wiki/Consumer_Electronics_Show",
+   "articles": []
+  },
+  {
+   "topic": "Thriller by Michael Jackson",
+   "signal": "Apple Music GB: new in the top 25",
+   "wikipedia": "https://en.wikipedia.org/wiki/Thriller_(Michael_Jackson_album)",
+   "articles": []
+  },
+  {
+   "topic": "jockey",
+   "signal": "Google Trends GB 200+",
+   "wikipedia": "https://en.wikipedia.org/wiki/Jockey",
    "articles": []
   }
  ]

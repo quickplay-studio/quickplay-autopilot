@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-30T09:23+00:00",
+ "updated": "2026-10-30T14:04+00:00",
  "followers": 1,
  "followers_week_ago": 0,
- "reels": 115,
+ "reels": 114,
  "median_views": 114.0,
  "own_medians": true,
  "min_reels": 15,
@@ -14,9 +14,9 @@
  "categories": [
   {
    "category": "Gaming",
-   "median": 123.0,
+   "median": 122.0,
    "n": 23,
-   "score": 1.064,
+   "score": 1.057,
    "favoured": true
   },
   {
@@ -49,9 +49,9 @@
   },
   {
    "category": "Science",
-   "median": 38.0,
-   "n": 10,
-   "score": 0.481,
+   "median": 35.0,
+   "n": 9,
+   "score": 0.468,
    "favoured": false
   },
   {
@@ -83,11 +83,11 @@
      "lift": ""
     },
     "no": {
-     "n": 18,
-     "median": 117.0,
+     "n": 17,
+     "median": 115.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.9"
+     "lift": "0.95"
     }
    },
    "paused": true
@@ -99,17 +99,17 @@
    "arms": {
     "short": {
      "n": 12,
-     "median": 122.5,
+     "median": 118.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.93"
+     "lift": "0.97"
     },
     "full": {
-     "n": 7,
-     "median": 115.0,
+     "n": 6,
+     "median": 117.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.94"
+     "lift": "0.96"
     }
    },
    "paused": false
@@ -120,28 +120,28 @@
    "on": true,
    "arms": {
     "morning": {
-     "n": 8,
-     "median": 122.5,
+     "n": 6,
+     "median": 124.5,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "1.02"
+     "lift": "1.05"
     },
     "any": {
-     "n": 11,
-     "median": 114.0,
+     "n": 12,
+     "median": 111.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.86"
+     "lift": "0.91"
     }
    },
    "paused": false
   }
  },
  "week": {
-  "reels": 53,
-  "median": 118.0,
-  "before_reels": 62,
-  "before_median": 88.0
+  "reels": 44,
+  "median": 119.0,
+  "before_reels": 70,
+  "before_median": 80.5
  },
  "cover": {
   "asked": 28,

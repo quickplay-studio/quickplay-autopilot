@@ -1,6 +1,6 @@
 # Quickplay hub
 
-Updated Friday 30 October, 01:01 UK.
+Updated Friday 30 October, 01:22 UK.
 
 **19 subscribers, 13,646 engaged Shorts views in 90 days (0.45% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
@@ -66,7 +66,7 @@ Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytic
 | ending | loop 19, question 13 | too few to tell | 6 |
 | first frame | cover 15, photo 9 | too few to tell | 6 |
 
-**Change ledger:** 263 changes, 117 live; verdicts so far: 55 worse, 48 no change, 37 better, 25 too early, 6 overlapped.
+**Change ledger:** 264 changes, 117 live; verdicts so far: 55 worse, 48 no change, 37 better, 25 too early, 6 overlapped.
 
 | Change | Date | What | Target | Verdict |
 |---|---|---|---|---|
@@ -79,11 +79,11 @@ Days YouTube has reported, to Mon 26 Oct. More: [analytics/insights.md](analytic
 | CH-204 | Fri 23 Oct | Recipe: Use less music mood "space" | yt_rel | better |
 | CH-203 | Fri 23 Oct | Recipe: Use less music mood "inspiring" | yt_rel | too early |
 
-Waiting for a verdict (check day): CH-159 (Wed 4 Nov), CH-158 (Wed 4 Nov), CH-157 (Wed 4 Nov), CH-156 (Wed 4 Nov), CH-155 (Wed 4 Nov), CH-154 (Wed 4 Nov). All of them: [analytics/changes.csv](analytics/changes.csv).
+Waiting for a verdict (check day): CH-264 (Fri 6 Nov), CH-159 (Wed 4 Nov), CH-158 (Wed 4 Nov), CH-157 (Wed 4 Nov), CH-156 (Wed 4 Nov), CH-155 (Wed 4 Nov). All of them: [analytics/changes.csv](analytics/changes.csv).
 
 ## Keys
 
-**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 19 not set up; checked Wed 28 Oct, 19:09 UK.
+**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 18 not set up; checked Fri 30 Oct, 01:22 UK.
 
 | Key | State | Ends | Fix |
 |---|---|---|---|

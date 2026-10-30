@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 08:06 UK.
+Updated Friday 30 October, 08:58 UK.
 
-**21 subscribers, 14,474 engaged Shorts views in 90 days (0.48% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**21 subscribers, 14,263 engaged Shorts views in 90 days (0.48% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,21 +26,21 @@ Updated Friday 30 October, 08:06 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 21 of 500 (4.20%) | 14,474 of 3,000,000 (0.48%) | 33,173 |
-| Full, from 1 February 2027 | 21 of 1,000 (2.10%) | 14,474 of 10,000,000 (0.14%) | 110,951 |
+| Expanded, open now | 21 of 500 (4.20%) | 14,263 of 3,000,000 (0.48%) | 33,175 |
+| Full, from 1 February 2027 | 21 of 1,000 (2.10%) | 14,263 of 10,000,000 (0.14%) | 110,953 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,658 (to Mon 26 Oct) | 5,049 | 5 | 94 |
+| 8,658 (to Mon 26 Oct) | 5,145 | 5 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
 ## Is it getting better
 
 Engaged views a day, 7-day average: **1,237**, up from 658 a week earlier.
-Engaged share (Shorts that hold viewers past the opening, 7-day median): **28.5%**, was 29% a week earlier.
+Engaged share (Shorts that hold viewers past the opening, 7-day median): **29%**, was 29% a week earlier.
 Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
-Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Wed 28 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
+Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Fri 30 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
 xychart-beta

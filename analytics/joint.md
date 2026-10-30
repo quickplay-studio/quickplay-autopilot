@@ -2,44 +2,46 @@
 
 Updated 2026-10-30. pipeline/joint.py: one ridge regression of log(24-hour views / the same-UK-day channel median) on every factor of the round at once, with channel, exploration, topic heat and weekday held fixed, plus category-by-factor interactions shrunk harder. Opening factors are fitted again on the engaged share. Intervals are 90% bootstrap intervals (seeded). An effect is the multiple an arm gets against the factor's other arm; a main effect whose interval sits wholly on the losing side withholds a pairwise winner (drivers.round_verdicts), and a clear interaction is offered to evolve.py as a category-specific writing instruction (source joint).
 
-- views: 191 Shorts, 94 columns, residual spread 1.555, effective parameters 18.5
-- engaged: 155 Shorts, 48 columns, residual spread 0.301, effective parameters 30.0
+- views: 190 Shorts, 93 columns, residual spread 1.543, effective parameters 18.5
+- engaged: 154 Shorts, 44 columns, residual spread 0.296, effective parameters 29.5
 
 ## Top main effects (the better arm of each factor)
 
 | factor | arm | outcome | effect | 90% interval | Shorts | clear |
 |---|---|---|---|---|---|---|
-| fx_opening | lab | views | 1.296x | 0.966x to 1.515x | 12 | no |
-| fx_energy | lab | views | 1.229x | 0.947x to 1.545x | 17 | no |
-| fx_grade | natural | views | 1.201x | 0.928x to 1.493x | 17 | no |
-| first_frame | cover | engaged | 1.186x | 0.953x to 1.482x | 25 | no |
-| sub_push | none | views | 1.181x | 0.938x to 1.477x | 23 | no |
-| fx_slot | 06:00 to 12:00 | views | 1.174x | 0.871x to 1.469x | 24 | no |
-| title_emoji | none | views | 1.169x | 0.883x to 1.485x | 33 | no |
-| length | 25 to 34 s | views | 1.148x | 0.86x to 1.47x | 31 | no |
-| writer_arm | gemini flash | views | 1.123x | 0.97x to 1.286x | 8 | no |
-| franchise | named | views | 1.121x | 0.865x to 1.398x | 20 | no |
-| title_answer | held back | views | 1.12x | 0.821x to 1.429x | 24 | no |
-| replies | on | views | 1.119x | 0.847x to 1.42x | 82 | no |
+| fx_opening | lab | views | 1.29x | 0.97x to 1.524x | 12 | no |
+| fx_energy | lab | views | 1.252x | 0.978x to 1.567x | 17 | no |
+| hook_type | number | engaged | 1.231x | 0.994x to 1.459x | 11 | no |
+| fx_grade | natural | views | 1.214x | 0.948x to 1.533x | 17 | no |
+| length | 25 to 34 s | views | 1.173x | 0.849x to 1.462x | 31 | no |
+| fx_slot | 06:00 to 12:00 | views | 1.164x | 0.862x to 1.51x | 22 | no |
+| sub_push | none | views | 1.163x | 0.898x to 1.444x | 21 | no |
+| writer_arm | gemini flash | views | 1.135x | 0.997x to 1.251x | 8 | no |
+| title_answer | held back | views | 1.1x | 0.859x to 1.426x | 22 | no |
+| replies | on | views | 1.089x | 0.809x to 1.392x | 82 | no |
+| title_emoji | none | views | 1.086x | 0.867x to 1.333x | 32 | no |
+| first_frame | cover | engaged | 1.076x | 0.897x to 1.334x | 24 | no |
 
 ## Interactions whose interval clears no difference
 
-12 of 98 interaction rows. With this many cells some clear a 90% interval by luck, so only those with q at or under 0.1 (Benjamini-Hochberg) are offered to evolve.py.
+14 of 92 interaction rows. With this many cells some clear a 90% interval by luck, so only those with q at or under 0.1 (Benjamini-Hochberg) are offered to evolve.py.
 
-- Sport: statement on hook_type (views): 0.954x beyond its usual effect, 90% interval 0.933x to 0.99x, 4 Shorts; q 0.175, fails the luck check
-- Sport: number on hook_type (views): 1.048x beyond its usual effect, 90% interval 1.01x to 1.072x, 6 Shorts; q 0.175, fails the luck check
-- Entertainment: off on replies (views): 0.956x beyond its usual effect, 90% interval 0.922x to 0.996x, 9 Shorts; q 0.352, fails the luck check
-- Entertainment: on on replies (views): 1.045x beyond its usual effect, 90% interval 1.004x to 1.084x, 9 Shorts; q 0.352, fails the luck check
-- Sport: held back on title_answer (views): 1.04x beyond its usual effect, 90% interval 1.004x to 1.065x, 4 Shorts; q 0.31, fails the luck check
-- Sport: stated on title_answer (views): 0.962x beyond its usual effect, 90% interval 0.939x to 0.996x, 5 Shorts; q 0.31, fails the luck check
-- Gaming: steady on fx_energy (views): 0.968x beyond its usual effect, 90% interval 0.955x to 0.993x, 9 Shorts; q 0.175, fails the luck check
-- Gaming: stated on title_answer (views): 0.968x beyond its usual effect, 90% interval 0.954x to 0.995x, 10 Shorts; q 0.175, fails the luck check
-- Gaming: lab on fx_energy (views): 1.033x beyond its usual effect, 90% interval 1.007x to 1.047x, 3 Shorts; q 0.175, fails the luck check
-- Gaming: held back on title_answer (views): 1.033x beyond its usual effect, 90% interval 1.005x to 1.048x, 4 Shorts; q 0.175, fails the luck check
-- Entertainment: shown on angles (views): 0.976x beyond its usual effect, 90% interval 0.959x to 0.997x, 5 Shorts; q 0.352, fails the luck check
-- Entertainment: hidden on angles (views): 1.024x beyond its usual effect, 90% interval 1.003x to 1.043x, 3 Shorts; q 0.352, fails the luck check
+- Music: off on replies (views): 1.068x beyond its usual effect, 90% interval 1.001x to 1.118x, 18 Shorts; q 0.269, fails the luck check
+- Music: on on replies (views): 0.937x beyond its usual effect, 90% interval 0.895x to 0.999x, 10 Shorts; q 0.269, fails the luck check
+- Entertainment: on on replies (views): 1.056x beyond its usual effect, 90% interval 1.007x to 1.1x, 10 Shorts; q 0.269, fails the luck check
+- Entertainment: off on replies (views): 0.947x beyond its usual effect, 90% interval 0.909x to 0.993x, 9 Shorts; q 0.269, fails the luck check
+- Music: photo on first_frame (views): 0.951x beyond its usual effect, 90% interval 0.932x to 0.993x, 4 Shorts; q 0.223, fails the luck check
+- Music: cover on first_frame (views): 1.051x beyond its usual effect, 90% interval 1.007x to 1.073x, 4 Shorts; q 0.223, fails the luck check
+- Sport: statement on hook_type (views): 0.954x beyond its usual effect, 90% interval 0.93x to 0.988x, 4 Shorts; q 0.223, fails the luck check
+- Sport: number on hook_type (views): 1.048x beyond its usual effect, 90% interval 1.012x to 1.075x, 6 Shorts; q 0.223, fails the luck check
+- Gaming: stated on title_answer (views): 0.959x beyond its usual effect, 90% interval 0.946x to 0.985x, 10 Shorts; q 0.019, passes the luck check
+- Gaming: held back on title_answer (views): 1.042x beyond its usual effect, 90% interval 1.015x to 1.057x, 3 Shorts; q 0.019, passes the luck check
+- Sport: stated on title_answer (views): 0.962x beyond its usual effect, 90% interval 0.942x to 0.992x, 5 Shorts; q 0.223, fails the luck check
+- Sport: held back on title_answer (views): 1.039x beyond its usual effect, 90% interval 1.008x to 1.062x, 4 Shorts; q 0.223, fails the luck check
+- Entertainment: shown on angles (views): 0.976x beyond its usual effect, 90% interval 0.962x to 0.998x, 5 Shorts; q 0.269, fails the luck check
+- Entertainment: hidden on angles (views): 1.024x beyond its usual effect, 90% interval 1.002x to 1.04x, 3 Shorts; q 0.269, fails the luck check
 
 ## Controls
 
-- exploration Short: 0.841x (0.444x to 1.555x)
-- topic heat (per point): 0.954x (0.77x to 1.153x)
+- exploration Short: 0.832x (0.469x to 1.627x)
+- topic heat (per point): 0.954x (0.787x to 1.157x)

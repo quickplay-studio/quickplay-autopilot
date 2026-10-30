@@ -183,12 +183,10 @@
   ],
   "added": "2026-10-24",
   "due": "",
-  "done": true,
+  "done": false,
   "short": "Hub rebuild setting",
   "check": "pages_workflow",
-  "done_at": "2026-10-24",
-  "done_by": "check",
-  "note": "GitHub Pages builds from GitHub Actions"
+  "note": "GitHub Pages still builds from a branch (main, /docs)"
  },
  {
   "id": "sambanova-key",

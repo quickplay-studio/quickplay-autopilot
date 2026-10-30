@@ -1,6 +1,6 @@
 # Quickplay hub
 
-Updated Friday 30 October, 12:59 UK.
+Updated Friday 30 October, 13:16 UK.
 
 **22 subscribers, 14,871 engaged Shorts views in 90 days (0.50% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
@@ -11,11 +11,12 @@ Updated Friday 30 October, 12:59 UK.
 - [ ] **Recommended, free: a Mistral key (the biggest free writing allowance; phone check, no...** (due Fri 30 Oct): [open](https://console.mistral.ai/)
 - [ ] **Take the pipeline's Claude calls off your chat allowance: claim the Max API credits...** (due Sat 31 Oct): [open](https://claude.ai/settings/billing)
 
-<details><summary>Coming up and optional (6)</summary>
+<details><summary>Coming up and optional (7)</summary>
 
 - [ ] **Clipping is paused: keep it paused or restart it (review Sunday 8 November)** (due Sun 8 Nov): [issue #49](https://github.com/quickplay-studio/quickplay-autopilot/issues/49)
 - [ ] **Renew the Instagram seed key (IG_TOKEN) before it runs out** (due Thu 10 Dec): [issue #36](https://github.com/quickplay-studio/quickplay-autopilot/issues/36)
 - [ ] **Recommended, free: a Cloudflare Workers AI key (about 25 more scripts a day; no card)** (optional): [open](https://dash.cloudflare.com/sign-up)
+- [ ] **Optional: let the hub's page rebuild only when the page itself changes (one setting)** (optional): [open](https://github.com/quickplay-studio/quickplay-autopilot/settings/pages)
 - [ ] **Optional, free: a SambaNova key (a small extra writing allowance; no card)** (optional): [open](https://cloud.sambanova.ai/)
 - [ ] **Create the Quickplay Music channel in YouTube Studio and connect it** (optional): [issue #42](https://github.com/quickplay-studio/quickplay-autopilot/issues/42)
 - [ ] **Create the Quickplay Diario channel in YouTube Studio and connect it** (optional): [issue #43](https://github.com/quickplay-studio/quickplay-autopilot/issues/43)
@@ -83,7 +84,7 @@ Waiting for a verdict (check day): CH-264 (Fri 6 Nov), CH-159 (Wed 4 Nov), CH-15
 
 ## Keys
 
-**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 18 not set up; checked Fri 30 Oct, 10:08 UK.
+**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 18 not set up; checked Fri 30 Oct, 13:16 UK.
 
 | Key | State | Ends | Fix |
 |---|---|---|---|

@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 10:51 UK.
+Updated Friday 30 October, 11:47 UK.
 
-**22 subscribers, 14,735 engaged Shorts views in 90 days (0.49% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**22 subscribers, 14,789 engaged Shorts views in 90 days (0.49% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,12 +26,12 @@ Updated Friday 30 October, 10:51 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 22 of 500 (4.40%) | 14,735 of 3,000,000 (0.49%) | 33,170 |
-| Full, from 1 February 2027 | 22 of 1,000 (2.20%) | 14,735 of 10,000,000 (0.15%) | 110,948 |
+| Expanded, open now | 22 of 500 (4.40%) | 14,789 of 3,000,000 (0.49%) | 33,170 |
+| Full, from 1 February 2027 | 22 of 1,000 (2.20%) | 14,789 of 10,000,000 (0.15%) | 110,947 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,155 (to Tue 27 Oct) | 5,585 | 6 | 94 |
+| 8,155 (to Tue 27 Oct) | 5,766 | 12 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -108,7 +108,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 4 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 5 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok

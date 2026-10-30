@@ -88,11 +88,7 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 </main>
 
 <script>
-// The repository is private (28 October 2026): its files are read through GitHub's API with the hub's read-only token, which is
-// saved in this browser from the hub page (localStorage "qp_hub_token"; this page shares the hub's address, so it finds it).
-const API = "https://api.github.com/repos/quickplay-studio/quickplay-autopilot/contents/";
-let TOKEN = ""; try { TOKEN = (localStorage.getItem("qp_hub_token") || "").trim(); } catch (e) {}
-const rd = path => TOKEN ? fetch(API + path + "?ref=main", {cache: "no-store", headers: {"Accept": "application/vnd.github.raw", "Authorization": "Bearer " + TOKEN}}) : Promise.resolve({ok: false, status: 401});
+const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/";
 const VYRO_ADD = "https://app.vyro.com/campaigns/add-clips";
 const HANDLES = {clips: "quickplayclips-x9b", gaming: "quickplaygamingclips-z1b", irl: "quickplayirlclips"};
 const $ = id => document.getElementById(id);
@@ -153,9 +149,10 @@ function card(r, site, camp){
 async function load(){
   $("summary").textContent = "Loading the clip links...";
   try {
+    const t = Date.now();
     const [sub, cfg] = await Promise.all([
-      rd("clips/submit.csv").then(r => r.ok ? r.text() : Promise.reject(r.status === 401 || r.status === 403 || r.status === 404 ? "auth" : "HTTP " + r.status)),
-      rd("clips/campaigns.json").then(r => r.ok ? r.json() : {}).catch(() => ({}))]);
+      fetch(RAW + "clips/submit.csv?t=" + t, {cache: "no-store"}).then(r => r.ok ? r.text() : Promise.reject("HTTP " + r.status)),
+      fetch(RAW + "clips/campaigns.json?t=" + t, {cache: "no-store"}).then(r => r.ok ? r.json() : {}).catch(() => ({}))]);
     const camps = (cfg && cfg.campaigns) || {};
     const rows = csv(sub);
     const since = Date.now() - 3 * 86400000, now = Date.now();
@@ -174,8 +171,7 @@ async function load(){
     $("summary").textContent = left ? `${left} link${left === 1 ? "" : "s"} to submit. Updated ${new Date().toLocaleTimeString("en-GB", {hour: "2-digit", minute: "2-digit"})}.`
       : `All done for now. Updated ${new Date().toLocaleTimeString("en-GB", {hour: "2-digit", minute: "2-digit"})}.`;
   } catch (e) {
-    if (e === "auth") $("summary").innerHTML = `The private repository needs the hub's read-only token: <a href="hub.html">open the hub</a>, save the token there, then press Refresh.`;
-    else $("summary").textContent = "Couldn't load the links (" + e + "). Check your connection and press Refresh.";
+    $("summary").textContent = "Couldn't load the links (" + e + "). Check your connection and press Refresh.";
   }
 }
 

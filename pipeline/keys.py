@@ -5,8 +5,7 @@ day it runs out when that is known, when it was last checked, and the steps to f
 Run by .github/workflows/audit.yml every 3 hours, straight after the identity audit, whose calls it reuses instead of making
 them again: status/identity.json carries, under each check's "key", what that one call showed (the YouTube refresh worked or
 was refused, Instagram's and Facebook's answers and end dates, TikTok's refresh end, the saved logins' age). It makes one
-cheap call only for the keys the audit does not use (Gemini, Groq, Cerebras, OpenRouter, Cloudflare, Mistral, SambaNova, and
-HUB_PUSH_TOKEN, 28 October: one GET on the public site repo, reading GitHub's token end-date header; missing is shown, no issue),
+cheap call only for the keys the audit does not use (Gemini, Groq, Cerebras, OpenRouter, Cloudflare, Mistral, SambaNova),
 reads whether CLAUDE_CODE_OAUTH_TOKEN is set (never what it is), and weighs the campaign-site logins by their age and the last
 submission found in clips/submit.csv.
 The FreeLLMAPI router (27 October, pipeline/freellm.py): one row for the router itself, read from status/freellm.json (ok, or
@@ -39,11 +38,10 @@ AUDIT = f"https://github.com/{REPO}/actions/workflows/audit.yml"
 SOCIAL = f"https://github.com/{REPO}/actions/workflows/social.yml"
 LOGINS = f"https://github.com/{REPO}/actions/workflows/logins.yml"
 CALLBACK = "https://quickplay-studio.github.io/quickplay-autopilot/youtube-callback.html"
-SITE_REPO = "quickplay-studio/quickplay-studio.github.io"       # the public repo the hub pages are copied to (pages.yml)
 WARN_DAYS = 14          # a key that ends within this many days is "expiring"
 REMIND_DAYS = 7         # an issue Charlie closed without fixing the key is raised again after this long
 NEEDS = "needs-charlie"
-GROUPS = ["YouTube", "Instagram", "Facebook", "TikTok", "AI models", "Claude", "Hub", "Campaign sites"]
+GROUPS = ["YouTube", "Instagram", "Facebook", "TikTok", "AI models", "Claude", "Campaign sites"]
 # The combined issues the audit raised before there was one per key (identity.expired_note, social.KEY_ISSUE): closed here.
 LEGACY = ("🔑 A sign-in has expired: reconnect it", "🔑 An Instagram or Facebook key needs renewing")
 # Keys that already had an issue of their own: the same title, so the old and the new path make one issue, not two.
@@ -285,27 +283,10 @@ PROBES = {
                               where="https://cloud.sambanova.ai/apis", how="create an API key"),
     "APIFY_TOKEN": dict(what="Apify token (the morning trend feed)", url="https://api.apify.com/v2/users/me", headers=bearer, vendor="Apify",
                         where="https://console.apify.com/settings/integrations", how="copy the personal API token (free plan, $5 monthly credit)"),
-    # 28 October: the hub's pages are copied to a public repo by pages.yml with this token (Contents read and write on that repo
-    # only); one GET on that repo proves it works and carries its end date in a header. Missing is shown, never an issue.
-    "HUB_PUSH_TOKEN": dict(what="Hub publishing token (copies the hub pages to the public site repo)", url=f"https://api.github.com/repos/{SITE_REPO}",
-                           headers=lambda k: {**bearer(k), "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"},
-                           vendor="GitHub", group="Hub", bad404=True,
-                           where="https://github.com/settings/personal-access-tokens/new", how="",
-                           steps=["Open https://github.com/settings/personal-access-tokens/new signed in as the studio GitHub account (quickplay-studio).",
-                                  f"Resource owner quickplay-studio, expiration 1 year, only select repositories: {SITE_REPO} (public, Pages from main).",
-                                  "Repository permissions: Contents, Read and write. Generate the token and copy it.",
-                                  f"Paste it into the GitHub secret HUB_PUSH_TOKEN (Update secret): {SECRETS}/HUB_PUSH_TOKEN",
-                                  AFTER[0].upper() + AFTER[1:] + "."]),
     "ANTHROPIC_API_KEY": dict(what="Anthropic API key (Claude edits on the monthly API credits)", url="https://api.anthropic.com/v1/models?limit=1",
                               headers=lambda k: {"x-api-key": k, "anthropic-version": "2023-06-01"}, vendor="Anthropic",
                               where="https://platform.claude.com/settings/keys", how="claim the Max API credits in claude.ai Billing, then create a key"),
 }
-
-
-def gh_expiry(value):
-    """GitHub's github-authentication-token-expiration header ("2026-11-20 10:00:00 UTC") as an aware time; None for nothing."""
-    if not value: return None
-    return when(re.sub(r"\s*UTC$", "+00:00", str(value).strip()))
 
 
 def probe(name, env=None, get=None):
@@ -324,11 +305,7 @@ def probe(name, env=None, get=None):
     if 200 <= code < 300:
         try: ends = when(((r.json() or {}).get("data") or {}).get("expires_at"))      # OpenRouter keys can carry an end date
         except Exception: ends = None
-        try: ends = ends or gh_expiry(r.headers.get("github-authentication-token-expiration"))      # a GitHub token with an end date says so in a header
-        except Exception: pass
         return {"status": "ok", "detail": f"{spec['vendor']} accepts the key", "ends": ends}
-    if code == 404 and spec.get("bad404"):          # a fine-grained token that cannot see the repo gets "not found"
-        return {"status": "failing", "detail": f"{spec['vendor']} cannot find the repo with this token (HTTP 404): the repo is missing or the token has no access to it", "ends": None}
     if code in (401, 403) or (code == 400 and spec.get("bad400") and re.search(r"API_KEY_INVALID|API key not valid|expired", text, re.I)):
         return {"status": "failing", "detail": f"{spec['vendor']} refuses the key (HTTP {code})", "ends": None}
     return {"status": "unverified", "detail": f"{spec['vendor']} answered HTTP {code}", "ends": None}
@@ -359,10 +336,10 @@ def probe_cloudflare(token, env, get):
 
 def probe_row(name, res, t):
     spec = PROBES[name]
-    fix = list(spec["steps"]) if spec.get("steps") else secret_steps(name, spec["where"], spec["how"])
+    fix = secret_steps(name, spec["where"], spec["how"])
     if name == "CF_API_TOKEN":
         fix.append(f"Also check the secret CF_ACCOUNT_ID holds the Account ID (the long code in the dashboard address): {SECRETS}/CF_ACCOUNT_ID")
-    return make(name, spec["what"], spec.get("group", "AI models"), res["status"], res["detail"], fix, res.get("ends"), spec.get("needed", False), t)
+    return make(name, spec["what"], "AI models", res["status"], res["detail"], fix, res.get("ends"), spec.get("needed", False), t)
 
 
 AUTH_FAIL = re.compile(r"invalid api key|please run /login|oauth|authenticat|unauthori[sz]ed|\b401\b|token.{0,20}(expired|revoked|invalid)", re.I)
@@ -507,8 +484,7 @@ def build(identity, env, prev, t, get=None, rows=None, camps=None):
             if res["status"] == "unverified": keep(name, res["detail"])
             elif res["status"] == "missing":
                 spec = PROBES[name]
-                out.append(missing_row(name, spec.get("group", "AI models"), t, spec["what"], spec.get("needed", False),
-                                       spec.get("steps") or secret_steps(name, spec["where"], spec["how"])))
+                out.append(missing_row(name, "AI models", t, spec["what"], spec.get("needed", False), secret_steps(name, spec["where"], spec["how"])))
             else: out.append(probe_row(name, res, t))
         except Exception as e: log(f"keys: {name}: {type(e).__name__}: {str(e)[:100]}"); keep(name, "the check failed")
     try:

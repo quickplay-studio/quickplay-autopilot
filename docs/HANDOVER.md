@@ -1,4 +1,4 @@
-# Quickplay handover (Thursday 29 October 2026, 18:30 UK)
+# Quickplay handover (Friday 30 October 2026)
 
 > The short version. The full handover (state table, what was built, the learning model, open items, rules) is
 > handover.md at the repo root.
@@ -9,11 +9,12 @@ asks for. Hub: the repo front page, https://github.com/quickplay-studio/quickpla
 Goal: the YouTube Partner Programme (expanded tier 500 subscribers and 3M Shorts views in 90 days; from 1 February 2027,
 1,000 and 20M, Shorts pool 10M), or a clipping strategy that makes real views and money.
 
-## Stopped
-GitHub Actions has not run since 28 October, 20:58 UTC: the repo is private, GitHub Free gives an organisation 2,000
-private Actions minutes a month, and the pipeline uses about 2,500 a day. Public repos run free. Charlie's call: make the
-repo public again (recommended, free) at https://github.com/quickplay-studio/quickplay-autopilot/settings, or pay
-(against the free-only rule). Nothing posts until then.
+## Resumed
+GitHub Actions stopped on 28 October, 20:58 UTC: the repo was private, GitHub Free gives an organisation 2,000 private
+Actions minutes a month, and the pipeline uses about 2,500 a day. Charlie made the repo public again on 30 October, so Actions
+run free and resumed. The outage window (28 October 20:58 UTC until the restart) must be left out of the verdicts. The browser
+hub reads raw files with no token again; Pages was unpublished while private and needs switching on at
+https://github.com/quickplay-studio/quickplay-autopilot/settings/pages (Deploy from a branch, main, /docs).
 
 ## State (data stops 28 October, 20:50 UTC)
 - 19 subscribers; engaged views 1,243 a day (7-day average), up from 505 a week earlier; about 33,200 a day needed.
@@ -24,16 +25,16 @@ repo public again (recommended, free) at https://github.com/quickplay-studio/qui
 
 ## Built 27 and 28 October
 - CH-132 FreeLLMAPI router (Kilo and OVH models, fails open; search needs a key).
-- CH-153 private-repo page sync (dormant), CH-154 README hub.
+- CH-153 private-repo page sync (undone 30 October: the hub is public and token-free again), CH-154 README hub.
 - CH-155 sameness guard, CH-156 frozen control (1 in 10).
 - CH-157 luck check (Benjamini-Hochberg) and re-test before lock-in, CH-158 views_7d, subscribers by day, feed share,
   CH-159 joint model.
 
 ## Open
-- Restart checks after Actions is back; the outage inside the volume test and ledger windows; near-duplicate mega
+- Restart checks now Actions has resumed; the outage inside the volume test and ledger windows; near-duplicate mega
   titles (QD-253, QD-255); render "Upload to YouTube" failures (20 of 30 before the outage); Instagram failures
   QD-189, QD-209, QD-227; known failing tests (soundfile, series, channels, quota_buckets, volume; watch depends on the date).
-- For Charlie: Actions (above); Facebook (#34) and TikTok (#35), both overdue; Mistral, Cloudflare and Tavily keys;
+- For Charlie: switch Pages on again (above); Facebook (#34) and TikTok (#35), both overdue; Mistral, Cloudflare and Tavily keys;
   clipping decision by 8 November (#49); IG_TOKEN by 10 December (#36); optional Music and Diario (#42, #43).
 
 ## Rules

@@ -1,20 +1,15 @@
 name: pages
-# The hub and its public pages (docs/*.html) on GitHub Pages, now from a public repo (28 October 2026). This repository is
-# private and GitHub's free plan serves Pages only from public repositories, so pipeline/pages_sync.py copies an explicit
-# allowlist (docs/*.html and the static files those pages reference, never a Markdown, JSON, CSV or data file) into
-# quickplay-studio/quickplay-studio.github.io, folder quickplay-autopilot/, which serves at the same addresses as before
-# (https://quickplay-studio.github.io/quickplay-autopilot/hub.html). The hub reads its data from this private repository in
-# the browser with a read-only token that only Charlie holds.
-# Runs when docs/ changes, once a day (pushes made by the workflows' own token start no workflow, so a docs file a
-# workflow wrote reaches the site with the next daily run) and from Run workflow. HUB_PUSH_TOKEN is a fine-grained token with
-# Contents read and write on the public repo only. Without it, or before that repo exists, the run prints one line and
-# passes: nothing else depends on it.
+# The hub (docs/) on GitHub Pages, deployed only when docs/ changes (audit P4, 24 October). Until then Pages builds from
+# the branch after every commit, about 160 a day, over GitHub's soft limit of 10 builds an hour, although the hub reads its
+# numbers live and only its own files ever need a rebuild.
+# Harmless until Charlie switches Settings, Pages, Source to "GitHub Actions" (status/actions.json): while Pages still
+# builds from the branch, the check job finds that and the deploy job is skipped (no deployment is made).
+# (Pushes made by the workflows' own token start no workflow, so docs written by a workflow reach Pages with the next
+# push from a session or a Run workflow; the hub's data comes from the repository directly, so nothing waits on that.)
 on:
   push:
     branches: [main]
-    paths: ['docs/**', 'pipeline/pages_sync.py', '.github/workflows/pages.yml']
-  schedule:
-    - cron: '37 5 * * *'       # every day, 05:37 UTC
+    paths: ['docs/**']
   workflow_dispatch:
 
 permissions:
@@ -22,21 +17,42 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  sync:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: read
+    outputs:
+      deploy: ${{ steps.mode.outputs.deploy }}
+    steps:
+      - name: Is Pages set to deploy from Actions?
+        id: mode
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          t=$(gh api "repos/${{ github.repository }}/pages" --jq .build_type 2>/dev/null || echo unknown)
+          echo "Pages build type: $t"
+          if [ "$t" = "workflow" ]; then echo "deploy=yes" >> "$GITHUB_OUTPUT"
+          else echo "deploy=no" >> "$GITHUB_OUTPUT"; echo "Pages still builds from the branch: nothing to do here"; fi
+
+  deploy:
+    needs: check
+    if: ${{ needs.check.outputs.deploy == 'yes' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
-          sparse-checkout: |
-            /docs/
-            /pipeline/pages_sync.py
-          sparse-checkout-cone-mode: false
-      - name: Copy the allowlisted pages to the public site repo
-        env:
-          HUB_PUSH_TOKEN: ${{ secrets.HUB_PUSH_TOKEN }}
-        run: python3 pipeline/pages_sync.py
+        with: { ref: main, sparse-checkout: docs }
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: docs }
+      - id: d
+        uses: actions/deploy-pages@v4

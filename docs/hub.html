@@ -109,13 +109,6 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
 .imhead .v{font-size:28px;font-weight:650;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
 .imhead .d{color:var(--text-secondary);font-size:13.5px}
 .imgoal{color:var(--text-secondary);font-size:13.5px;margin:-4px 0 8px}
-.auth{border:1px solid var(--warning);border-radius:12px;background:var(--surface-1);padding:10px 14px;margin:0 0 16px}
-.auth p{margin:4px 0} .auth .sub{margin:4px 0 8px}
-.auth form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.auth input[type=password]{flex:1 1 220px;min-width:0}
-.auth input{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--bg);color:var(--text-primary);border-radius:8px;padding:5px 8px}
-.auth label{display:inline-flex;gap:6px;align-items:center;margin:0;font-size:13px;color:var(--text-secondary)}
-.foot{margin:28px 0 0;font-size:12px;color:var(--text-muted)}
 </style>
 </head>
 <body>
@@ -137,7 +130,6 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
   </nav>
 </header>
 <main>
-  <div id="auth" hidden></div>
   <section id="overview" role="tabpanel"></section>
   <section id="insights" role="tabpanel" hidden></section>
   <section id="shorts" role="tabpanel" hidden></section>
@@ -151,31 +143,16 @@ select{font:inherit;font-size:14px;border:1px solid var(--line);background:var(-
     <p><button type="button" id="export-btn">Download the data file</button> <span class="sub" id="export-state"></span></p>
     <details><summary>What goes in it</summary><ul class="sub" id="export-list"></ul></details>
   </section>
-  <p class="foot" id="forget-line" hidden>The hub reads the private repository with the read-only token saved in this browser. <a href="#" id="forget">Forget token</a></p>
 </main>
 <script>
 const REPO = "https://github.com/quickplay-studio/quickplay-autopilot";
 const API = "https://api.github.com/repos/quickplay-studio/quickplay-autopilot";
-// The repository is private (28 October 2026), so every read goes through GitHub's API with a read-only token that Charlie
-// pastes into this page once; it is kept only in this browser (localStorage "qp_hub_token"), never in the repository.
-const lsGet = k => { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } };
-const lsSet = (k, v) => { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } };
-const lsDel = k => { try { localStorage.removeItem(k); } catch (e) {} };
-let TOKEN = lsGet("qp_hub_token").trim();
-const ghHeaders = accept => ({"Accept": accept, "Authorization": "Bearer " + TOKEN});
-// What GitHub said about the token this load: any answer that worked, a refusal (401, or 403 that is not a rate limit), files not found
-let AUTH = {ok: false, refused: 0, missing: 0, exp: null};
-const rateLimited = r => r.status === 429 || (r.status === 403 && (r.headers.get("x-ratelimit-remaining") === "0" || r.headers.get("retry-after") !== null));
-function seen(r){
-  if (r.ok) {
-    AUTH.ok = true;
-    if (!AUTH.exp) {         // a token with an end date says so in this header (browsers see it only where GitHub exposes it to pages)
-      const d = new Date(String(r.headers.get("github-authentication-token-expiration") || "").replace(" UTC", "Z").replace(" ", "T"));
-      if (!isNaN(d)) AUTH.exp = d;
-    }
-  } else if (r.status === 401 || (r.status === 403 && !rateLimited(r))) AUTH.refused = r.status;
-  else if (r.status === 404) AUTH.missing++;
-}
+// The repository is public again (30 October 2026): every file is read from raw.githubusercontent.com and GitHub's API is asked
+// without a key, so the page opens from a bookmark with nothing to set up. A token is OPTIONAL: if localStorage "qp_hub_token"
+// holds one it is sent to api.github.com only (never to the raw files), to lift the 60-an-hour limit; a token GitHub refuses is dropped.
+const RAW = "https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/";
+let TOKEN = ""; try { TOKEN = (localStorage.getItem("qp_hub_token") || "").trim(); } catch (e) {}
+const apiHeaders = accept => TOKEN ? {"Accept": accept, "Authorization": "Bearer " + TOKEN} : {"Accept": accept};
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const num = x => { const v = parseFloat(String(x ?? "").replace(/,/g, "")); return isFinite(v) ? v : 0; };
@@ -214,23 +191,21 @@ function csv(text){
   return rows.filter(r => r.length > 1 || r[0]).map(r => Object.fromEntries(head.map((h, i) => [h, r[i] ?? ""])));
 }
 async function get(path, kind){
-  if (!TOKEN) return null;          // nothing is asked without a token; the panel at the top says what to do
   try {
-    const r = await fetch(`${API}/contents/${path}?ref=main`, {cache: "no-store", headers: ghHeaders("application/vnd.github.raw")});
-    seen(r);
+    const r = await fetch(RAW + path + "?t=" + Math.floor(Date.now() / 60000), {cache: "no-store"});
     if (!r.ok) return null;
     const t = await r.text();
     return kind === "json" ? JSON.parse(t) : kind === "csv" ? csv(t) : t;
   } catch (e) { return null; }
 }
-// GitHub's API without a key allowed 60 calls an hour per connection (24 October); with the token it is 5,000, but each answer is kept 10 minutes in this browser and shared by every tab and reload, only
+// GitHub's API without a key allows 60 calls an hour per connection, and a mobile network shares one connection among
+// many people (24 October). So each answer is kept 10 minutes in this browser and shared by every tab and reload, only
 // the fields the page shows are kept, nothing is asked while the page is hidden, and once GitHub says the hour's calls
 // are used up nothing is asked until its reset time (the last answer stays on screen with a note). Refresh asks again.
 const API_TTL = 10 * 60 * 1000;
 let API_NOTE = "";
 const apiReset = () => { try { return Number(localStorage.getItem("qp-api-reset") || 0); } catch (e) { return 0; } };
 async function api(path, pick, force){
-  if (!TOKEN) return null;
   const key = "qp-api:" + path, now = Date.now();
   let cached = null;
   try { cached = JSON.parse(localStorage.getItem(key) || "null"); } catch (e) {}
@@ -243,9 +218,9 @@ async function api(path, pick, force){
     return keep();
   }
   try {
-    const r = await fetch(API + path, {headers: ghHeaders("application/vnd.github+json")});
-    seen(r);
-    if (rateLimited(r)) {
+    let r = await fetch(API + path, {headers: apiHeaders("application/vnd.github+json")});
+    if (r.status === 401 && TOKEN) { TOKEN = ""; r = await fetch(API + path, {headers: apiHeaders("application/vnd.github+json")}); }   // a token GitHub refuses is dropped for this load
+    if (r.status === 403 || r.status === 429) {
       const at = Number(r.headers.get("x-ratelimit-reset") || 0) * 1000 || now + 15 * 60 * 1000;
       try { localStorage.setItem("qp-api-reset", String(at)); } catch (e) {}
       API_NOTE = `GitHub's hourly allowance for this connection is used up; the live lists come back at ${new Date(at).toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"})} UK.`;
@@ -655,61 +630,10 @@ function clipMoney(campaigns, stats){
   return by;
 }
 
-// The token panel (28 October): shown with no token, with a token GitHub refuses (401, 403, or every file "not found") and
-// in the last 14 days before the token ends. The end date is read from GitHub's response header when the browser can see it,
-// else from the date typed in when the token was saved (a new token is made for 1 year).
-const TOKEN_PAGE = "https://github.com/settings/personal-access-tokens/new";
-const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-function saveToken(ev){
-  ev.preventDefault();
-  const f = ev.target, err = f.querySelector(".autherr"), tok = f.elements.token.value.replace(/\s+/g, "");
-  if (!tok) { err.textContent = "Paste the token first."; return; }
-  if (!lsSet("qp_hub_token", tok)) { err.textContent = "This browser would not keep it (a private window?). Try a normal window."; return; }
-  const ends = f.elements.ends ? f.elements.ends.value : "";
-  if (DATE_RE.test(ends)) lsSet("qp_hub_token_ends", ends); else lsDel("qp_hub_token_ends");
-  lsDel("qp-api-reset");
-  location.reload();
-}
-function forgetToken(ev){
-  if (ev) ev.preventDefault();
-  lsDel("qp_hub_token"); lsDel("qp_hub_token_ends");
-  try { Object.keys(localStorage).filter(k => k.startsWith("qp-api")).forEach(k => localStorage.removeItem(k)); } catch (e) {}     // the lists kept from the private repository go too
-  location.reload();
-}
-function authPanel(){
-  const el = $("auth"); if (!el) return;
-  $("forget-line").hidden = !TOKEN;
-  const refused = AUTH.refused || (AUTH.missing > 0 && !AUTH.ok);
-  const saved = lsGet("qp_hub_token_ends");
-  const ends = AUTH.exp || (DATE_RE.test(saved) ? new Date(saved + "T23:59:59Z") : null);
-  const days = ends ? Math.floor((ends - Date.now()) / 86400000) : null;
-  let lead = "";
-  if (!TOKEN) lead = "The hub needs a read-only GitHub token to read the private repository.";
-  else if (refused) lead = AUTH.refused ? `GitHub did not accept the saved token (HTTP ${AUTH.refused}); it may have ended or lack a permission. Make a new read-only one.`
-    : "GitHub cannot find the repository with the saved token; it may have ended or lack access. Make a new read-only one.";
-  else if (days !== null && days <= 14) lead = days < 0 ? "The hub's read-only token has ended. Make a new one."
-    : `The hub's read-only token ends on ${ends.toLocaleDateString("en-GB", {weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Europe/London"})} (${days < 1 ? "within a day" : "in " + days + " day" + (days === 1 ? "" : "s")}). Make a new one before then.`;
-  if (el.dataset.lead === lead) return;          // the same note: leave a half-typed token alone
-  el.dataset.lead = lead; el.hidden = !lead;
-  if (!lead) { el.innerHTML = ""; return; }
-  const nextYear = new Date(Date.now() + 364 * 86400000).toISOString().slice(0, 10);
-  el.className = "auth";
-  el.innerHTML = `<p><b>${esc(lead)}</b></p>
-    <p class="sub">Make it at <a href="${TOKEN_PAGE}" target="_blank" rel="noopener">github.com/settings/personal-access-tokens/new</a> as the studio account:
-      Resource owner <b>quickplay-studio</b>, Repository access <b>Only select repositories</b> then <b>quickplay-autopilot</b>,
-      Repository permissions <b>Contents</b>, <b>Issues</b> and <b>Actions</b> each <b>Read-only</b>, Expiration <b>1 year</b>.
-      Copy the token (GitHub shows it once) and paste it here. It stays in this browser only.</p>
-    <form><input type="password" name="token" placeholder="github_pat_..." autocomplete="off" spellcheck="false" aria-label="Read-only GitHub token">
-      <label>Ends on <input type="date" name="ends" value="${nextYear}"></label>
-      <button type="submit">Save</button> <span class="autherr err" role="alert"></span></form>`;
-  el.querySelector("form").onsubmit = saveToken;
-}
-
 let D = {};
 let LAST_LOAD = 0;
 async function load(force){
   LAST_LOAD = Date.now(); force = force === true;
-  AUTH = {ok: false, refused: 0, missing: 0, exp: null};
   $("when").textContent = "Loading";
   const [summary, progress, daily, shorts, decisions, insights, weekly, camps, stats, submit, scout, streamers, identity, social, channel, jobs, iss, review, models, claude, slots, funnel, liveRuns, fxNow, watchNow, traffic, rivals,
          drivers, geo, regions, changes, late, hourly, actions, keys, igs] = await Promise.all([
@@ -725,10 +649,12 @@ async function load(force){
   [D.subs, D.improve, D.freellm] = await Promise.all([get("analytics/subs.csv", "csv"),  // subscribers per 1,000 views by arm (drivers.analyse_subscribers, 25 October)
     get("analytics/improvement.json", "json"),                                // the improvement line (trend.history, 26 October)
     get("status/freellm.json", "json")]);                                     // the FreeLLMAPI router (pipeline/freellm.py, 27 October)
+  // 28 to 30 October: the sameness guard, the joint model, the daily subscriber table and model, and config.json (the alert level and the recipe cap)
+  [D.sameness, D.joint, D.subsDaily, D.subsModel, D.cfg] = await Promise.all([get("analytics/sameness.csv", "csv"), get("analytics/joint.csv", "csv"),
+    get("analytics/subs_daily.csv", "csv"), get("analytics/subs_model.md"), get("config.json", "json")]);
   FX = fxNow;
   render();
-  authPanel();
-  $("when").textContent = !TOKEN ? "Needs a token" : "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
+  $("when").textContent = "Updated " + new Date().toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"Europe/London"}) + " UK";
 }
 
 // Live job status from GitHub (refreshes with the page every 10 minutes, or press Refresh)
@@ -819,21 +745,121 @@ function categoryPlatforms(){
   return {base, rows, n: recent.length};
 }
 
+// Loop vs frozen control, sameness, the joint model and the daily subscribers (28 to 30 October). Each panel reads one repository file and
+// says "Not available yet" when it is missing, so a late or absent file never breaks its tab.
+const mdLink = path => `<a href="${REPO}/blob/main/${path}" target="_blank" rel="noopener">${path}</a>`;
+const notYet = what => `<p class="muted">Not available yet: ${esc(what)}</p>`;
+const FDR_Q = () => num((((D.cfg || {}).analysis) || {}).fdr_q) || 0.10;       // config.json analysis.fdr_q, the luck check's level
+const chanName = c => IM_GROUPS[c] || c;
+
+// analytics/improvement.json "control" (pipeline/trend.py loop_vs_control, every analytics run): the Shorts the learning loop wrote against
+// the control Shorts written with the recipe frozen on 28 October, same channel and UK day, as a ratio with a 90% interval.
+function controlCard(){
+  const c = (D.improve || {}).control;
+  if (!c) return notYet("the loop against the frozen control appears after the next analytics run (hourly).");
+  const v = String(c.verdict || "not computed"), kind = /^loop ahead/.test(v) ? "good" : /^loop behind/.test(v) ? "bad" : "wait";
+  const ms = Object.values(c.metrics || {});
+  const ratio = m => has(m.ratio) ? `<b>${num(m.ratio).toFixed(2)}x</b>${has(m.lo) && has(m.hi) ? ` <span class="sub">(${num(m.lo).toFixed(2)} to ${num(m.hi).toFixed(2)})</span>` : ""}${m.adjusted ? ` <span class="sub">topic heat allowed for</span>` : ""}` : `<span class="muted">·</span>`;
+  return `<p>${pill(kind, kind === "good" ? "▲" : kind === "bad" ? "▼" : "…", v)} <span class="sub">${fmt(c.n_loop)} loop Shorts against ${fmt(c.n_control)} control Shorts (${fmt(c.min_n)} needed), ${fmt(c.days)} day${num(c.days) === 1 ? "" : "s"} with both</span></p>
+    ${ms.length ? table([{h:"Number", f:m => esc(m.label || "")}, {h:"Loop against control", f:ratio}, {h:"Result", f:m => esc(m.verdict || "")}, {h:"Days", n:1, f:m => fmt(m.days)}], ms)
+      : `<p class="sub">${esc(c.summary || "")}</p>`}
+    <p class="chartnote">About one normal Short in ten is a control Short, written with the Recipe as it was on 28 October and left out of every verdict. A ratio over 1 means the loop's Shorts did better than the frozen recipe's on the same days; the loop has earned its keep only when the whole interval sits above 1.</p>`;
+}
+
+// analytics/sameness.csv (pipeline/sameness.py): mean pairwise similarity of a channel's Shorts over 14 days, 0 to 1, one row a channel
+// a day. An issue opens when a channel is over config sameness.alert two days running; one recipe may hold recipe_share_max of the window.
+function samenessCard(){
+  const S = D.sameness;
+  if (!S || !S.length) return notYet("the sameness score appears after the next analytics run (hourly).");
+  const sc = (D.cfg || {}).sameness || {}, alert = num(sc.alert) || 0.2, cap = num(sc.recipe_share_max) || 0.35, days = num(sc.alert_days) || 2;
+  const by = {};
+  for (const r of S) (by[r.channel] = by[r.channel] || []).push(r);
+  const order = Object.keys(IM_GROUPS), rows = Object.entries(by).map(([ch, rs]) => { rs.sort((a, b) => (a.day || "").localeCompare(b.day || ""));
+    const last = rs[rs.length - 1], run = rs.slice(-days); return {ch, last, over: num(last.score) > alert, alerting: run.length >= days && run.every(r => num(r.score) > alert)}; })
+    .sort((a, b) => order.indexOf(a.ch) - order.indexOf(b.ch));
+  const recipe = t => String(t || "").split("|").filter(Boolean).map(x => x.replace(/_/g, " ")).join(", ");
+  return table([{h:"Channel", f:r => esc(chanName(r.ch))},
+    {h:`Score (alert at ${alert.toFixed(2)})`, n:1, f:r => `<span class="minibar" aria-hidden="true"><span style="width:${Math.min(100, num(r.last.score) / alert * 100).toFixed(0)}%"></span></span>${num(r.last.score).toFixed(3)}`},
+    {h:"State", f:r => r.alerting ? pill("bad", "✕", "alert") : r.over ? pill("wait", "!", "over once") : pill("good", "✓", "ok")},
+    {h:`Commonest recipe (cap ${Math.round(cap * 100)}%)`, f:r => `${num(r.last.share) > cap ? pill("bad", "!", "over the cap") + " " : ""}${(num(r.last.share) * 100).toFixed(1)}% <span class="sub">${esc(recipe(r.last.top_recipe))}</span>`},
+    {h:"Boards in the window", n:1, f:r => fmt(r.last.boards)}, {h:"Day", nw:1, f:r => esc(dayName(r.last.day))}], rows)
+    + `<p class="chartnote">Does the channel look interchangeable? YouTube's inauthentic-content policy refuses monetisation to channels whose videos feel template-made. The writer rewrites, then drops, a draft too like a recent Short, and picks another format when one recipe fills more than ${Math.round(cap * 100)}% of the window. An issue opens when a channel is over ${alert.toFixed(2)} ${days} days running. Detail and the most alike pairs: ${mdLink("analytics/sameness.md")}.</p>`;
+}
+
+// analytics/joint.csv (pipeline/joint.py): one regression of every test factor at once. kind main = the multiple an arm gets against the
+// factor's other arm; interaction = the extra multiple in one category. A clear interaction is acted on only when its q is at or under the luck check's level.
+function jointCard(){
+  const J = D.joint;
+  if (!J || !J.length) return notYet("the joint model appears after the next analytics run (hourly).");
+  const clear = r => has(r.low) && has(r.high) && (num(r.low) > 1 || num(r.high) < 1);
+  const best = {};
+  for (const r of J) if (r.kind === "main") { const k = r.factor + "|" + r.outcome; if (!best[k] || num(r.effect) > num(best[k].effect)) best[k] = r; }
+  const top = Object.values(best).sort((a, b) => num(b.effect) - num(a.effect)).slice(0, 8);
+  const ints = J.filter(r => r.kind === "interaction"), clr = ints.filter(clear).sort((a, b) => num(a.q) - num(b.q)), q = FDR_Q();
+  const outcome = o => o === "engaged" ? "engaged share" : "views";
+  const ci = r => `${num(r.low).toFixed(2)}x to ${num(r.high).toFixed(2)}x`;
+  return table([{h:"Test", f:r => esc(String(r.factor).replace(/_/g, " "))}, {h:"Better arm", f:r => `<b>${esc(r.level)}</b>`}, {h:"On", f:r => esc(outcome(r.outcome))},
+      {h:"Effect", n:1, f:r => num(r.effect).toFixed(2) + "x"}, {h:"90% interval", n:1, f:ci}, {h:"Shorts", n:1, f:r => fmt(r.n)},
+      {h:"Clear?", f:r => clear(r) ? pill("good", "★", "clear") : pill("", "·", "not clear")}], top, "No effects yet.")
+    + (clr.length ? `<p class="sub" style="margin:12px 0 6px"><b>Interactions that clear no difference</b> (${fmt(clr.length)} of ${fmt(ints.length)} category cells; with this many cells some clear a 90% interval by luck)</p>`
+      + table([{h:"Category and test", f:r => `${esc(r.level)} <span class="sub">on ${esc(String(r.factor).replace(/^category x /, "").replace(/_/g, " "))}</span>`}, {h:"On", f:r => esc(outcome(r.outcome))},
+          {h:"Beyond its usual effect", n:1, f:r => `${num(r.effect).toFixed(2)}x <span class="sub">(${ci(r)})</span>`}, {h:"Shorts", n:1, f:r => fmt(r.n)},
+          {h:"Luck check", f:r => has(r.q) && num(r.q) <= q ? pill("good", "✓", `q ${num(r.q).toFixed(2)}, passes`) : pill("wait", "…", `q ${has(r.q) ? num(r.q).toFixed(2) : "?"}, fails`)}], clr)
+      : `<p class="sub" style="margin:12px 0 0">No category interaction clears a 90% interval (${fmt(ints.length)} cells checked).</p>`)
+    + `<p class="chartnote">Every factor fitted together, with channel, exploration Shorts, topic heat and weekday held fixed. A main effect whose interval sits wholly on the losing side withholds a pairwise winner in the tests above. Full text: ${mdLink("analytics/joint.md")}.</p>`;
+}
+
+// analytics/subs_daily.csv (pipeline/subs_daily.py): subscribers gained and lost per channel per day (YouTube's days are Pacific time),
+// and analytics/subs_model.md, the advisory model of what lifts subscribers per 1,000 views (needs 20 channel-days).
+function subsDailyCard(){
+  const S = D.subsDaily, mm = D.subsModel;
+  if (!S || !S.length) return notYet("the daily subscriber table appears after the next analytics run (hourly).");
+  const last = S.map(r => r.day).sort().pop(), from = new Date(Date.parse(last + "T12:00:00Z") - 13 * 864e5).toISOString().slice(0, 10);
+  const days = Array.from({length: 14}, (_, i) => new Date(Date.parse(from + "T12:00:00Z") + i * 864e5).toISOString().slice(0, 10));
+  const rows = S.filter(r => r.day >= from && r.day <= last), chans = Object.keys(IM_GROUPS).filter(c => c !== "all" && rows.some(r => r.channel === c));
+  const cell = (c, d) => rows.find(r => r.channel === c && r.day === d), gain = (c, d) => { const r = cell(c, d); return r ? num(r.subs_gained) : null; };
+  const max = Math.max(1, ...chans.flatMap(c => days.map(d => gain(c, d) || 0)));
+  const tot = (c, k) => rows.filter(r => r.channel === c).reduce((a, r) => a + num(r[k]), 0);
+  const spark = c => `<svg width="${days.length * 9}" height="30" viewBox="0 0 ${days.length * 9} 30" role="img" aria-label="Subscribers gained a day, ${esc(chanName(c))}">${days.map((d, i) => { const g = gain(c, d), h = g == null ? 0 : Math.max(g ? 2 : 0, g / max * 28);
+      return `<rect x="${i * 9}" y="${30 - h}" width="7" height="${h}" rx="1.5" fill="var(--accent)"><title>${esc(dayName(d))}: ${g == null ? "no row" : g + " gained, " + num((cell(c, d) || {}).subs_lost) + " lost"}</title></rect>`; }).join("")}</svg>`;
+  const gained = chans.reduce((a, c) => a + tot(c, "subs_gained"), 0), lost = chans.reduce((a, c) => a + tot(c, "subs_lost"), 0);
+  const used = (String(mm || "").match(/Channel-days used:\s*(\d+)/) || [])[1], need = (String(mm || "").match(/needs (\d+) channel-days/) || [])[1] || "20";
+  const model = mm == null ? "Not available yet: the subscriber model appears after the next analytics run (hourly)."
+    : /Not enough yet/i.test(mm) ? `Needs ${need} channel-days with 100 or more views and a spread in the day's mix; has ${used == null ? "fewer" : used}.`
+    : String(mm).split("\n").filter(l => l.trim() && !l.startsWith("#")).slice(0, 4).join(" ");
+  return `<div class="tiles" style="margin-top:0">
+      ${tile("Subscribers gained", fmt(gained), `${fmt(lost)} lost, ${dayName(days[0])} to ${dayName(last)}, all channels`)}
+      ${tile("Net", (gained - lost >= 0 ? "+" : "") + fmt(gained - lost), "YouTube's day (Pacific time)")}
+      ${tile("Subscriber model", mm == null ? "·" : /Not enough yet/i.test(mm) ? "waiting" : "fitted", mm == null ? "not available yet" : /Not enough yet/i.test(mm) ? `needs ${need} channel-days, has ${used == null ? "fewer" : used}` : "advisory only")}
+    </div>
+    ${table([{h:"Channel", f:c => esc(chanName(c))}, {h:"Gained a day, last 14 days", f:spark}, {h:"Gained", n:1, f:c => fmt(tot(c, "subs_gained"))}, {h:"Lost", n:1, f:c => fmt(tot(c, "subs_lost"))},
+      {h:"Views", n:1, f:c => compact(tot(c, "views"))}], chans)}
+    <details><summary>Show as a table</summary>${table([{h:"Day", nw:1, f:d => esc(dayName(d))}].concat(chans.map(c => ({h:chanName(c), n:1, f:d => { const r = cell(c, d); return r ? `${fmt(r.subs_gained)}${num(r.subs_lost) ? ` <span class="sub">(-${fmt(r.subs_lost)})</span>` : ""}` : `<span class="muted">·</span>`; }}))), days.slice().reverse())}</details>
+    <p class="chartnote">Subscriber model (advisory; nothing reads it yet): ${esc(model)} Detail: ${mdLink("analytics/subs_model.md")}; the day-by-day shares of each choice are in ${mdLink("analytics/subs_daily.csv")}.</p>`;
+}
+
 // The factorial round (analytics/tests.json, from config test_round): how many measured Shorts each arm has and still needs
 async function fillTests(){
   const T = await get("analytics/tests.json", "json"), el = $("tests-card");
   if (!el) return;
   if (!T || !T.factors){ el.innerHTML = `<p class="sub">No factorial round running yet: it shows here after the next full analytics run.</p>`; return; }
   const rows = Object.entries(T.factors).map(([f, x]) => ({f, x}));
-  el.innerHTML = `<p class="sub">${esc(T.round)}, from ${esc(T.start)}: every Short on every channel takes an arm of each test, 50/50, and each result is adjusted for the channel and every other test. A test settles on a clear winner (15% or more, both halves of the data agreeing), an even result, or ${fmt(T.per_arm)} measured Shorts a side; a settled test makes room for a new one. Opening tests (the hook, the first frame, the opening effect and opening writing instructions) are judged on the engaged share, the share of views that stay past the opening (what the Partner Programme counts): a winner there needs 10% and must not clearly cost views (a loss that cancels the gain or reaches 15%), and engaged views arrive about 3 days after posting.</p>`
+  el.innerHTML = `<p class="sub">${esc(T.round)}, from ${esc(T.start)}: every Short on every channel takes an arm of each test, 50/50, and each result is adjusted for the channel and every other test. A test settles on a clear winner (15% or more, both halves of the data agreeing), an even result, or ${fmt(T.per_arm)} measured Shorts a side; a settled test makes room for a new one. Opening tests (the hook, the first frame, the opening effect and opening writing instructions) are judged on the engaged share, the share of views that stay past the opening (what the Partner Programme counts): a winner there needs 10% and must not clearly cost views (a loss that cancels the gain or reaches 15%), and engaged views arrive about 3 days after posting. Luck check (28 October): with this many comparisons one looks clear by luck most days, so a would-be winner must also have q (p adjusted across every comparison) at or under ${FDR_Q().toFixed(2)}; one that does not stays "running (luck check)". A winner adopted into the Recipe is "confirming" (most Shorts use it, the rest keep the previous choice) until enough Shorts are in on each side, then confirmed or reverted. Settled and adopted tests: <a href="${REPO}/blob/main/analytics/round.csv" target="_blank" rel="noopener">analytics/round.csv</a>.</p>`
     + table([{h:"Test", f:r => esc(r.x.label || r.f.replace(/_/g, " "))},
       {h:"Arms (measured so far)", f:r => Object.entries(r.x.arms).map(([a, v]) => `${esc(a)} <b>${fmt(v.n)}</b>` + (v.needs ? ` <span class="sub">needs ${fmt(v.needs)} more</span>` : "") + (v.verdict && v.verdict !== "too few to tell" ? ` ${pill(v.verdict === "push" ? "good" : v.verdict === "cut back" ? "bad" : "", "·", v.verdict)}` : "")).join("<br>")},
       // the round's adjusted verdict (analytics/round.csv, 26 October): how many times the second arm's views the first's
       // 26 October: an opening test's effect is on the engaged share, with its views effect beside it (the guard)
-      {h:"Result so far", f:r => { const on = r.x.metric === "engaged" ? " engaged share" : "", ve = on && r.x.views_effect !== "" && r.x.views_effect != null ? `, views ${esc(String(r.x.views_effect))}x` : "";
-        return (on ? `<span class="sub">on the engaged share</span><br>` : "") + (r.x.verdict === "winner" ? pill("good", "★", `${r.x.winner} wins`) + ` <span class="sub">${esc(String(r.x.effect))}x${on} (${esc(String(r.x.low))} to ${esc(String(r.x.high))})${ve}</span>`
-        : r.x.effect !== "" && r.x.effect != null ? `<span class="sub">${esc(r.x.verdict)}: ${esc(String(r.x.effect))}x${on} (${esc(String(r.x.low))} to ${esc(String(r.x.high))})${r.x.leaning ? ", leaning " + esc(r.x.leaning) : ""}${ve}</span>`
-        : `<span class="sub">${esc(r.x.verdict || "too few to tell")}${r.x.why ? ": " + esc(r.x.why) : ""}</span>`); }},
+      {h:"Result so far", f:r => { const x = r.x, on = r.x.metric === "engaged" ? " engaged share" : "", ve = on && x.views_effect !== "" && x.views_effect != null ? `, views ${esc(String(x.views_effect))}x` : "";
+        const v = x.verdict || "too few to tell", lucky = v === "running" && x.luck === "yes", lab = lucky ? "running (luck check)" : v;      // 28 October: a would-be winner held back by the luck check
+        const ci = x.effect !== "" && x.effect != null ? `${esc(String(x.effect))}x${on} (${esc(String(x.low))} to ${esc(String(x.high))})` : "";
+        const pq = has(x.p) ? `<br><span class="sub">p ${esc(String(x.p))}${has(x.q) ? `, q ${esc(String(x.q))}` : ""}${lucky ? ": q is over the luck check's level, so it cannot win yet" : ""}</span>` : "";
+        const body = v === "winner" ? pill("good", "★", `${x.winner} wins`) + ` <span class="sub">${ci}${ve}</span>`
+          : v === "confirming" ? pill("wait", "…", `confirming ${x.confirm || x.winner || ""}`) + `<br><span class="sub">${esc(x.why || "")}${ci ? " " + ci : ""}${ve}</span>`
+          : v === "confirmed" ? pill("good", "✓", `confirmed ${x.confirm || x.winner || ""}`) + `<br><span class="sub">${esc(x.why || "")}${ci ? " " + ci : ""}</span>`
+          : v === "reverted" ? pill("bad", "✕", "reverted to the previous choice") + `<br><span class="sub">${esc(x.why || "")}</span>`
+          : ci ? `<span class="sub">${esc(lab)}: ${ci}${x.leaning ? ", leaning " + esc(x.leaning) : ""}${ve}</span>`
+          : `<span class="sub">${esc(lab)}${x.why ? ": " + esc(x.why) : ""}</span>`;
+        return (on ? `<span class="sub">on the engaged share</span><br>` : "") + body + pq; }},
       {h:"When", f:r => r.x.settled ? pill("good", "✓", "settled") : `about ${fmt(r.x.days_left)} days`}], rows, "No tests yet.");
 }
 
@@ -896,7 +922,7 @@ function insightsTab(){
     (r.verdict === "push" ? a.push : (r.verdict === "stop" || r.verdict === "pause") ? a.stop : r.verdict === "retest" ? a.retest : a.cut).push(r);
   }
   for (const a of areas) { a.push.sort((x, y) => num(y.lift) - num(x.lift)); a.cut.sort((x, y) => num(x.lift) - num(y.lift)); }
-  const choice = list => list.length ? list.map(r => `${esc(r.value)} <span class="sub" style="white-space:nowrap">${num(r.lift).toFixed(2)}x, ${fmt(r.n)}</span>`).join("<br>") : `<span class="muted">·</span>`;
+  const choice = list => list.length ? list.map(r => `${esc(r.value)} <span class="sub" style="white-space:nowrap">${num(r.lift).toFixed(2)}x, ${fmt(r.n)}${has(r.feed_pct) ? `, feed ${fmt(r.feed_pct)}%` : ""}</span>`).join("<br>") : `<span class="muted">·</span>`;
   const count = k => (D.drivers || []).filter(r => r.verdict === k).length;
 
   // where the viewers are
@@ -942,16 +968,21 @@ function insightsTab(){
       ${flagged.map(r => `<p><b>${esc(r.id)}</b> ${esc(r.change)}: ${verdictPill(r.verdict)} ${esc(r.result)}</p>`).join("")}</div>` : ""}
 
     <h2>What the numbers say works</h2>
-    <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma). A verdict needs 5 Shorts over 2 UK days, a 90% interval clear of typical and both halves of the data agreeing (25 October). The writer follows these, but 1 Short in 5 still explores; a paused choice rests 14 days and is then retested on a small share.</p>
+    <p class="sub">Each Short against Shorts posted around the same time (1.00x = typical; Shorts measured after the comma; "feed" is the share of that choice's views that came from the Shorts feed). A verdict needs 5 Shorts over 2 UK days, a 90% interval clear of typical and both halves of the data agreeing (25 October). The writer follows these, but 1 Short in 5 still explores; a paused choice rests 14 days and is then retested on a small share.</p>
     ${table([{h:"Choice", f:a => esc(a.name)}, {h:"Lean towards", f:a => choice(a.push)}, {h:"Use less", f:a => choice(a.cut)}]
       .concat(areas.some(a => a.stop.length) ? [{h:"Paused", f:a => choice(a.stop)}] : []).concat(areas.some(a => a.retest.length) ? [{h:"Retesting", f:a => choice(a.retest)}] : []), areas, "No verdicts yet: they need 5 measured Shorts a choice.")}
 
     <h2>Subscribers</h2>
     <p class="sub">Subscribers gained per 1,000 views, against the Shorts posted the same UK day (Shorts with 20 views, public 3 days). Two arms run on every Short but an exploration Short, each 50/50 and apart from the others: a spoken reason to subscribe at the end, and a small subscribe line in the last 1.5 seconds. Every Short also asks in its comment, its description and (on Instagram) its caption. A verdict needs the same proof as views (5 Shorts over 2 UK days, a 90% interval clear of typical, both halves agreeing), and an arm that costs views never wins.</p>
     ${subscribersCard()}
+    <h3 style="font-size:15px;margin:22px 0 6px">Subscribers a day, by channel</h3>
+    ${subsDailyCard()}
 
     <h2>Tests being run</h2>
     <div id="tests-card"><p class="sub">Loading the factorial round.</p></div>
+    <h3 style="font-size:15px;margin:22px 0 6px">Joint model</h3>
+    <p class="sub">Every test factor fitted together, so one test's effect is not another's. The better arm of each factor, then any category where a choice works differently.</p>
+    ${jointCard()}
 
     <h2>Where the viewers are</h2>
     <p class="sub">YouTube's own split of the channel's views by country (it only names countries with enough viewers). "Watched" is the average share of each Short seen there; "best" is the category that does best for that country.</p>
@@ -1034,6 +1065,11 @@ function render(){
     <h2>Getting better? The improvement line</h2>
     <p class="sub">Each number by day (up to 120 days), with the days a change went live marked under it. Pick a number: the Partner Programme counts first, then what each Short does.</p>
     <div class="card" id="improve-card">${improveCard()}</div>
+    <h3 style="font-size:15px;margin:22px 0 6px">Loop vs frozen control</h3>
+    <p class="sub">Is the learning loop beating the recipe as it stood on 28 October? The honest test of whether the changes help, apart from trends and mega pushes.</p>
+    <div class="card" id="control-card">${controlCard()}</div>
+    <h3 style="font-size:15px;margin:22px 0 6px">Sameness: does each channel look interchangeable?</h3>
+    <div class="card" id="sameness-card">${samenessCard()}</div>
     <div class="tiles">
       ${tile("Views in the last 24 hours", compact(prog.views_last_24h), "Quickplay Daily, YouTube")}
       ${tile("Public Shorts", fmt(prog.public_shorts || y.public_shorts), D.channel ? `${fmt(D.channel.scheduled)} scheduled` : "")}
@@ -1078,6 +1114,7 @@ function render(){
       {h:"Kind", f:r => esc([r.category, r.format].filter(Boolean).join(", "))},
       {h:"Views", n:1, f:r => fmt(r.all_views || r.yt_views)},
       {h:"Per hour", n:1, f:r => num(r.views_per_hour).toFixed(1)},
+      {h:"7 days", n:1, f:r => has(r.views_7d) ? fmt(r.views_7d) : ""},
       {h:"Held at 3 s", n:1, f:r => r.yt_held_3s_pct ? num(r.yt_held_3s_pct).toFixed(0) + "%" : ""},
       {h:"Watched", n:1, f:r => r.yt_avg_viewed_pct ? num(r.yt_avg_viewed_pct).toFixed(0) + "%" : ""},
       {h:"From the feed", n:1, f:r => r.yt_feed_pct !== "" && r.yt_feed_pct != null ? num(r.yt_feed_pct).toFixed(0) + "%" : ""},
@@ -1217,6 +1254,10 @@ const EXPORT = [
   ["What drives views (every tested choice)", "analytics/drivers.csv", "text", 0],
   ["Subscribers per 1,000 views (the subscriber push and what it is tested on)", "analytics/subs.csv", "text", 0],
   ["The Recipe the writer follows", "analytics/insights.md", "text", 0],
+  ["Test round verdicts (luck check, confirming winners)", "analytics/round.csv", "text", 0],
+  ["Joint model (every test factor at once)", "analytics/joint.md", "text", 0],
+  ["Sameness (does a channel look interchangeable)", "analytics/sameness.md", "text", 0],
+  ["Subscribers a day and the subscriber model", "analytics/subs_model.md", "text", 0],
   ["The Monday report", "analytics/weekly.md", "text", 0],
   ["Changes made from the data (newest first)", "analytics/decisions.csv", "head", 60],
   ["Change ledger (hypothesis, target, guardrails, verdict)", "analytics/changes.csv", "text", 0],
@@ -1272,7 +1313,6 @@ document.querySelectorAll("#tabs [role=tab]").forEach(b => b.onclick = () => {
 (() => { let t = location.hash.slice(1); try { t = t || localStorage.getItem("qp-hub-tab") || ""; } catch (e) {}
   const b = document.querySelector(`#tabs [data-tab="${t}"]`); if (b) b.click(); })();
 $("refresh").onclick = () => load(true);
-$("forget").onclick = forgetToken;
 $("export-btn").onclick = exportAll; exportList();
 load();
 setInterval(() => { if (document.visibilityState !== "hidden") load(); }, 10 * 60 * 1000);

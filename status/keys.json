@@ -5,7 +5,7 @@
   "ok": 15,
   "expiring": 0,
   "failing": 0,
-  "missing": 19
+  "missing": 18
  },
  "keys": [
   {
@@ -483,23 +483,6 @@
     "On the Mac, open Terminal and run: claude setup-token (signed in to Claude with your subscription).",
     "Copy the token it prints and paste it into the GitHub secret CLAUDE_CODE_OAUTH_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/CLAUDE_CODE_OAUTH_TOKEN",
     "This turns green after the writer next calls Claude (a few times a day); it does not use your allowance to check."
-   ]
-  },
-  {
-   "id": "HUB_PUSH_TOKEN",
-   "what": "Hub publishing token (copies the hub pages to the public site repo)",
-   "group": "Hub",
-   "status": "missing",
-   "expires": "",
-   "checked": "2026-10-28T19:09+00:00",
-   "detail": "the secret is not set",
-   "needed": false,
-   "fix": [
-    "Open https://github.com/settings/personal-access-tokens/new signed in as the studio GitHub account (quickplay-studio).",
-    "Resource owner quickplay-studio, expiration 1 year, only select repositories: quickplay-studio/quickplay-studio.github.io (public, Pages from main).",
-    "Repository permissions: Contents, Read and write. Generate the token and copy it.",
-    "Paste it into the GitHub secret HUB_PUSH_TOKEN (Update secret): https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/HUB_PUSH_TOKEN",
-    "The next key check (within 3 hours) closes this issue; to see it at once press Run workflow on https://github.com/quickplay-studio/quickplay-autopilot/actions/workflows/audit.yml."
    ]
   },
   {

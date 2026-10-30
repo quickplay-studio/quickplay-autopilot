@@ -1,29 +1,26 @@
-# Quickplay handover (Thursday 29 October 2026, 18:30 UK)
+# Quickplay handover (Friday 30 October 2026)
 
 Read this first, then CLAUDE.md (the rules and the index), then run `python pipeline/digest.py`. This is the full
 handover; docs/HANDOVER.md is the short version.
 
-## STOPPED: GitHub Actions has not run since 28 October, 20:58 UTC
-- Every workflow since then ends "failure" with 0 steps. The annotation reads: "The job was not started because recent
-  account payments have failed or your spending limit needs to be increased."
-- Cause: the repo was made private on 27 or 28 October. GitHub Free for organisations includes 2,000 Actions minutes a
-  month for private repos; Actions on public repos are free. The pipeline uses roughly 2,500 or more minutes a day
-  (about 389 runs between 27 October 18:00 and 28 October 21:00 UTC), so the month's allowance went in under a day.
-  The FreeLLMAPI step and three 50-minute dry write runs on 28 October added to it.
-- Effect: no uploads, posts, analytics, trends, writing or audits since then; the last data commit is "Hourly numbers
-  2026-10-28 20:50". Digest shows 0 of 40 YouTube uploads in 24 hours.
-- Fix (Charlie's call; a session cannot change repo visibility or billing):
-  - Recommended, free: make the repo public again at https://github.com/quickplay-studio/quickplay-autopilot/settings
-    (Danger Zone, Change visibility, Public). Then check https://github.com/quickplay-studio/quickplay-autopilot/settings/pages
-    is "Deploy from a branch", main, /docs, so the browser hub comes back too.
-  - Staying private means a card and a spending limit (against the free-only rule) at
-    https://github.com/organizations/quickplay-studio/settings/billing. Not recommended.
-- Once runs start again: check the next runs succeed, uploads resume, README.md rebuilds hourly and the key check runs.
-  Stale time-sensitive boards scheduled for 28 and 29 October will expire through the freshness gate (expected).
-- If the repo goes public: docs/hub.html now reads through the contents API with a token. Unauthenticated, the API
-  allows 60 requests an hour per address, so either paste a read-only token in the hub or switch its reads back to
-  raw.githubusercontent.com (a small job). The private-hub sync (pages.yml, pages_sync.py, HUB_PUSH_TOKEN) is then
-  optional; it does nothing until the secret and the public org-site repo exist.
+## RESUMED: GitHub Actions stopped 28 October, 20:58 UTC; the repo is public again (30 October)
+- From 28 October, 20:58 UTC every workflow ended "failure" with 0 steps: "The job was not started because recent account
+  payments have failed or your spending limit needs to be increased."
+- Cause: the repo had been made private. GitHub Free for organisations includes 2,000 Actions minutes a month for private
+  repos; Actions on public repos are free. The pipeline uses roughly 2,500 or more minutes a day (about 389 runs between
+  27 October 18:00 and 28 October 21:00 UTC), so the month's allowance went in under a day.
+- Fix (done by Charlie, 30 October): the repo is public again, so Actions run free and resumed. The last data commit before
+  the gap is "Hourly numbers 2026-10-28 20:50"; nothing was written, uploaded or posted between then and the restart.
+- The outage window (28 October 20:58 UTC until the restart) must be left out of the verdicts: the volume test, the ledger
+  windows (analytics/changes.csv) and the frozen-control comparison.
+- Still to check once runs are going: the next runs succeed, uploads resume, README.md rebuilds hourly and the key check
+  runs. Stale time-sensitive boards scheduled for 28 and 29 October expire through the freshness gate (expected).
+- The browser hub (30 October): docs/hub.html, clips.html and submit.html read raw.githubusercontent.com again with no token
+  (the private-repo token panel, pipeline/pages_sync.py and HUB_PUSH_TOKEN are gone; pages.yml is back to publishing docs/
+  only). GitHub Pages was unpublished while private: Charlie switches it on at
+  https://github.com/quickplay-studio/quickplay-autopilot/settings/pages (Deploy from a branch, main, /docs; or Source
+  "GitHub Actions", when pages.yml deploys docs/ after a push). An optional token (localStorage qp_hub_token) goes on
+  api.github.com calls only, to lift the 60-an-hour limit.
 
 ## In short
 Quickplay is a fully automated YouTube Shorts studio on the studio Google account (studiosocialmedia123@gmail.com).
@@ -42,7 +39,7 @@ Sunday 8 November at 19:37 UK reads them and builds the two queued changes (belo
 
 Links:
 - Hub inside GitHub (README.md, rebuilt hourly when Actions runs): https://github.com/quickplay-studio/quickplay-autopilot
-- Browser hub (offline while the repo is private): https://quickplay-studio.github.io/quickplay-autopilot/hub.html
+- Browser hub (reads the files with no token; Pages must be switched on, see the top): https://quickplay-studio.github.io/quickplay-autopilot/hub.html
 - Latest changes: CH-132 and CH-153 to CH-159, 27 and 28 October (below)
 
 ## State (data stops at 28 October, 20:50 UTC)
@@ -95,9 +92,11 @@ Links:
   - Never passed to the router: Gemini, Groq, OpenRouter, Mistral, Cloudflare, SambaNova, Cerebras, Claude keys.
   - Not enabled: Cohere (terms forbid), NVIDIA (evaluation only), AI Horde (volunteer commons). GitHub Models retired.
   - status/freellm.json; freellm.yml is a 2-minute check (push requests/freellm.txt). Test: tests/test_freellm.py.
-- **CH-153, private-repo hub** (pages.yml, pipeline/pages_sync.py): copies docs/*.html and their assets only, never data,
-  to the public repo quickplay-studio/quickplay-studio.github.io (folder quickplay-autopilot/) with HUB_PUSH_TOKEN; the
-  hub reads the repo with a read-only token in the browser. Dormant: Charlie has not made the org-site repo or the secret.
+- **CH-153, private-repo hub (undone 30 October):** pages.yml and pipeline/pages_sync.py copied docs/*.html to a public
+  org-site repo and the hub read the private repo with a browser token. With the repo public again the hub, clips.html and
+  submit.html read raw.githubusercontent.com with no token (an optional one goes on api.github.com calls only), pages.yml
+  is back to publishing docs/ only, and HUB_PUSH_TOKEN is gone. The hub now also shows loop vs frozen control, sameness,
+  the test round's luck check and confirming winners, the joint model, subscribers a day, views at 7 days and feed share.
 - **CH-154, the hub inside GitHub:** README.md is the hub (pipeline/hub_md.py), rebuilt in the analytics.yml commit and
   after the audit's key check. The old README is docs/HOW_IT_WORKS.md. Test: tests/test_hub_md.py.
 - **CH-155, sameness guard** (pipeline/sameness.py): each board is scored against the channel's last 14 days (narration,
@@ -139,7 +138,7 @@ Links:
 
 ## Open items
 For the next Claude session:
-1. After Actions is back: confirm the next runs succeed, uploads resume, README.md rebuilds and the key check runs.
+1. Actions resumed after the repo went public on 30 October: confirm the next runs succeed, uploads resume, README.md rebuilds and the key check runs, and that Pages is switched on again (see the top).
 2. The outage (28 October 20:58 UTC until restart) sits inside the volume test, the ledger windows and the control
    comparison. Make sure they leave it out, or say so; the 8 November task should account for it.
 3. Mega pushes: near-identical titles on one story (QD-253 and QD-255). Check the sameness pair check on mega Shorts
@@ -164,7 +163,7 @@ Queued (one-off scheduled task, Sunday 8 November, 19:37 UK, Opus deciding, Sonn
   analytics/ypp_readiness.md, a needs-charlie issue only if the channel would likely fail.
 
 For Charlie:
-1. Now: get Actions running again (see the top). Making the repo public is free.
+1. Now: switch GitHub Pages on again so the browser hub opens (see the top); Actions already run since the repo went public.
 2. Overdue: check the Facebook Page for a restriction: https://github.com/quickplay-studio/quickplay-autopilot/issues/34
 3. Overdue (was due 28 October): find out why TikTok restricted the account:
    https://github.com/quickplay-studio/quickplay-autopilot/issues/35

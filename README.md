@@ -96,12 +96,11 @@ Waiting for a verdict (check day): CH-159 (Wed 4 Nov), CH-158 (Wed 4 Nov), CH-15
 
 Also ok (9): youtube, youtube_clips, youtube_gaming, youtube_irl, IG_TOKEN, GEMINI_API_KEY, GROQ_API_KEY, OPENROUTER_API_KEY, CLAUDE_CODE_OAUTH_TOKEN.
 
-<details><summary>Optional keys not set up (19)</summary>
+<details><summary>Optional keys not set up (18)</summary>
 
 - **Instagram:** IG_CLIPS_TOKEN, IG_GAMING_TOKEN, IG_IRL_TOKEN
 - **Facebook:** FB_CLIPS_PAGE_TOKEN, FB_GAMING_PAGE_TOKEN, FB_IRL_PAGE_TOKEN
 - **AI models:** CEREBRAS_API_KEY ([sign up](https://cloud.cerebras.ai/)), CF_API_TOKEN ([sign up](https://dash.cloudflare.com/profile/api-tokens)), MISTRAL_API_KEY ([sign up](https://console.mistral.ai/api-keys)), SAMBANOVA_API_KEY ([sign up](https://cloud.sambanova.ai/apis)), APIFY_TOKEN ([sign up](https://console.apify.com/settings/integrations)), ANTHROPIC_API_KEY ([sign up](https://platform.claude.com/settings/keys)), TAVILY_API_KEY ([sign up](https://app.tavily.com/home)), EXA_API_KEY ([sign up](https://dashboard.exa.ai/api-keys)), FIRECRAWL_API_KEY ([sign up](https://www.firecrawl.dev/app/api-keys)), LINKUP_API_KEY ([sign up](https://app.linkup.so/api-keys)), OLLAMA_API_KEY ([sign up](https://ollama.com/settings/keys)), LLM7_API_KEY ([sign up](https://llm7.io))
-- **Hub:** HUB_PUSH_TOKEN ([sign up](https://github.com/settings/personal-access-tokens/new))
 
 Add any of them as an Actions secret: [new secret](https://github.com/quickplay-studio/quickplay-autopilot/settings/secrets/actions/new).
 

@@ -31,12 +31,7 @@ a{color:#8ab4f8;text-decoration:none}#status{color:#9ab}
 <h2>Every clip</h2>
 <div class="wrap"><table id="clips"><thead><tr><th>Clip</th><th>Campaign</th><th class="n">Hours</th><th class="n">Views</th><th class="n">Likes</th><th>Form</th><th>Submitted</th></tr></thead><tbody></tbody></table></div>
 <script>
-// The repository is private (28 October 2026): its files are read through GitHub's API with the hub's read-only token, which is
-// saved in this browser from the hub page (localStorage "qp_hub_token"; this page shares the hub's address, so it finds it).
-const API="https://api.github.com/repos/quickplay-studio/quickplay-autopilot/contents/clips/";
-let TOKEN=""; try{TOKEN=(localStorage.getItem("qp_hub_token")||"").trim();}catch(e){}
-const rd=name=>TOKEN?fetch(API+name+"?ref=main",{cache:"no-store",headers:{"Accept":"application/vnd.github.raw","Authorization":"Bearer "+TOKEN}}):Promise.resolve({ok:false,status:401});
-const chk=r=>{ if(r.status===401||r.status===403||r.status===404) throw new Error("auth"); return r; };
+const BASE="https://raw.githubusercontent.com/quickplay-studio/quickplay-autopilot/main/clips/", T="?t="+Date.now();
 function parse(text){
   const rows=[];let row=[],cell="",q=false;
   for(let i=0;i<text.length;i++){const ch=text[i];
@@ -51,7 +46,7 @@ let FX=null;   // campaigns pay in US dollars: pounds at today's rate (European 
 const fxNow=()=>fetch("https://api.frankfurter.app/latest?from=USD&to=GBP").then(r=>r.json()).then(d=>d.rates.GBP)
   .catch(()=>fetch("https://open.er-api.com/v6/latest/USD").then(r=>r.json()).then(d=>d.rates.GBP)).catch(()=>null);
 const med=a=>{a=a.slice().sort((x,y)=>x-y);return a.length?a[Math.floor(a.length/2)]:null};
-Promise.all([rd("stats.csv").then(chk).then(r=>r.text()),rd("campaigns.json").then(chk).then(r=>r.json()),rd("submit.csv").then(r=>r.ok?r.text():""),fxNow()]).then(([st,cj,sb,fx])=>{
+Promise.all([fetch(BASE+"stats.csv"+T).then(r=>r.text()),fetch(BASE+"campaigns.json"+T).then(r=>r.json()),fetch(BASE+"submit.csv"+T).then(r=>r.ok?r.text():""),fxNow()]).then(([st,cj,sb,fx])=>{
   FX=(fx>0.3&&fx<2)?fx:null;
   const stats=parse(st), subs=parse(sb), C=cj.campaigns||{};
   const pub=stats.filter(r=>r.privacy==="public");
@@ -96,7 +91,7 @@ Promise.all([rd("stats.csv").then(chk).then(r=>r.text()),rd("campaigns.json").th
     const sub=["youtube","instagram","facebook"].filter(p=>bySub[r.clip+"|"+p]).join(", ")||"not yet";
     tb.insertAdjacentHTML("beforeend",`<tr><td><a href="https://youtube.com/shorts/${r.video}" target="_blank" rel="noopener">${r.clip}</a></td><td>${(C[r.campaign]||{}).subject||r.campaign}</td><td class="n">${Math.round(num(r.hours_public))}</td><td class="n">${fmt(num(r.views))}</td><td class="n">${fmt(num(r.likes))}</td><td>${form}</td><td>${sub}</td></tr>`);
   }
-}).catch(e=>{const s=document.getElementById("status"); if(e&&e.message==="auth") s.innerHTML='The private repository needs the hub\'s read-only token: <a href="hub.html">open the hub</a>, save the token there, then reload this page.'; else s.textContent="Could not load the data ("+e+").";});
+}).catch(e=>{document.getElementById("status").textContent="Could not load the data ("+e+").";});
 </script>
 </body>
 </html>

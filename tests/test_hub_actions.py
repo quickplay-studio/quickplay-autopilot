@@ -45,7 +45,7 @@ OVERRIDE = {"status/actions.json": json.dumps(ACTIONS), "status/keys.json": json
 
 
 def raw(route):
-    rel = route.request.url.split("/contents/", 1)[-1].split("?")[0]
+    rel = route.request.url.split("/main/", 1)[-1].split("?")[0]
     if rel in OVERRIDE: route.fulfill(status=200, body=OVERRIDE[rel]); return
     f = REPO / rel
     if f.is_file(): route.fulfill(status=200, body=f.read_bytes())
@@ -53,15 +53,14 @@ def raw(route):
 
 
 def api(route):
-    if "/contents/" in route.request.url: raw(route); return
     if "/actions/runs" in route.request.url: route.fulfill(status=200, content_type="application/json", body=json.dumps({"workflow_runs": []}))
     else: route.fulfill(status=200, content_type="application/json", body=json.dumps(ISSUES))
 
 
 with sync_playwright() as pw:
-    b = pw.chromium.launch(); ctx = b.new_context(viewport={"width": 390, "height": 844}); p = ctx.new_page(); errs = []
-    ctx.add_init_script("try { localStorage.setItem('qp_hub_token', 'github_pat_test'); } catch (e) {}")      # the read-only token (28 October)
+    b = pw.chromium.launch(); p = b.new_context(viewport={"width": 390, "height": 844}).new_page(); errs = []
     p.on("pageerror", lambda e: errs.append(str(e)))
+    p.route("https://raw.githubusercontent.com/**", raw)
     p.route("https://api.github.com/**", api)
     for pat in ("https://fonts.**", "https://api.frankfurter.app/**", "https://open.er-api.com/**", "https://cdnjs.cloudflare.com/**"):
         p.route(pat, lambda r: r.abort())
@@ -91,7 +90,7 @@ with sync_playwright() as pw:
     assert p.locator('#accounts a[href$="/issues/50"]').count() == 1
     assert "Every 3 hours GitHub signs in" in acc
     stored = p.evaluate("() => Object.keys(localStorage)")
-    assert all(k.startswith(("qp-api:", "qp-hub-", "qp-api-reset", "qp_hub_token")) for k in stored), stored      # caches, the token and the remembered tab and theme only
+    assert all(k.startswith(("qp-api:", "qp-hub-", "qp-api-reset")) for k in stored), stored      # caches and the remembered tab and theme only
     assert not errs, errs
     # nothing to do and nothing done: the empty states read well
     OVERRIDE["status/actions.json"] = json.dumps([item("x", done=True, done_at=iso(now - dt.timedelta(days=30)), done_by="check")]); OVERRIDE["status/keys.json"] = "null"

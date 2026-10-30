@@ -80,11 +80,15 @@ when the context itself is the brief. The scheduled tasks (Mac Chrome jobs every
   pipeline/hub_md.py from the files docs/hub.html reads (actions, YPP table, a mermaid line of engaged views, contests and ledger
   verdicts, keys with fix links, channels; every section fails soft, no key value is ever printed) and rebuilt hourly in the
   analytics.yml commit and after the audit's key check; the old README is docs/HOW_IT_WORKS.md. The browser hub:
-  https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no
-  rebuild). The repo is private (28 October): pipeline/pages_sync.py (pages.yml) copies docs/*.html and their static assets
-  only, never data, to the public repo quickplay-studio/quickplay-studio.github.io (folder quickplay-autopilot/, secret
-  HUB_PUSH_TOKEN), and the hub reads this repo in the browser with a read-only token saved there (localStorage qp_hub_token,
-  never in the repo; its top panel says how to make one). Its Overview opens with "Your actions this week":
+  https://quickplay-studio.github.io/quickplay-autopilot/hub.html (docs/hub.html reads the live files; no rebuild). The repo is
+  public again (30 October: private repos ran out of free Actions minutes, so Actions had stopped), GitHub Pages serves docs/
+  as before (Settings, Pages: Deploy from a branch, main, /docs; or Source "GitHub Actions", when pages.yml deploys only docs/,
+  never data; Pages was unpublished while private and must be switched on again), and the browser
+  hub, clips.html and submit.html read the files from raw.githubusercontent.com and GitHub's API with no token, opened from a
+  bookmark. A token is optional: if localStorage qp_hub_token holds one it goes on api.github.com calls only, to lift the
+  60-an-hour limit (a refused one is dropped; a rate limit shows one line, never a panel). pipeline/pages_sync.py and the
+  HUB_PUSH_TOKEN secret are gone. The hub also shows loop vs frozen control, sameness, the test round's luck check and
+  confirming winners, the joint model, subscribers a day, views at 7 days and the feed share. Its Overview opens with "Your actions this week":
   status/actions.json plus issues labelled needs-charlie (alerts.raise_issue(..., labels=["needs-charlie"])). actions.py keeps that list true (below), so add an item there
   with a "check" (secret_works:NAME, pages_workflow, vyro_today, or a new one in actions.CHECKS) whenever one can prove it.
 - `python pipeline/health.py`; status/write_log.txt and status/factpack_log.txt (tail only); status/<id>.json: one Short.

@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Friday 30 October, 00:53 UK.
+Updated Friday 30 October, 01:01 UK.
 
-**19 subscribers, 13,644 engaged Shorts views in 90 days (0.45% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**19 subscribers, 13,646 engaged Shorts views in 90 days (0.45% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -26,12 +26,12 @@ Updated Friday 30 October, 00:53 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 19 of 500 (3.80%) | 13,644 of 3,000,000 (0.45%) | 33,182 |
-| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 13,644 of 10,000,000 (0.14%) | 110,960 |
+| Expanded, open now | 19 of 500 (3.80%) | 13,646 of 3,000,000 (0.45%) | 33,182 |
+| Full, from 1 February 2027 | 19 of 1,000 (1.90%) | 13,646 of 10,000,000 (0.14%) | 110,960 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,658 (to Mon 26 Oct) | 3,586 | 24 | 94 |
+| 8,658 (to Mon 26 Oct) | 3,607 | 24 | 94 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 

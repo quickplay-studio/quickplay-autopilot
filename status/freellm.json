@@ -1,6 +1,6 @@
 {
- "started": "2026-10-31T16:16:59+00:00",
- "job": "trends",
+ "started": "2026-10-31T16:27:20+00:00",
+ "job": "write",
  "ok": true,
  "reason": "",
  "image": "ghcr.io/tashfeenahmed/freellmapi:v0.16.6",
@@ -24,7 +24,7 @@
   "keenable"
  ],
  "calls": {
-  "ovh": 4
+  "ovh": 2
  },
  "search_switched_on": [],
  "search_rows": [
@@ -34,12 +34,6 @@
   "linkup/linkup-search keys 0"
  ],
  "history": [
-  {
-   "t": "2026-10-31T07:40:57+00:00",
-   "job": "write",
-   "ok": true,
-   "reason": ""
-  },
   {
    "t": "2026-10-31T08:46:53+00:00",
    "job": "trends",
@@ -81,9 +75,15 @@
    "job": "trends",
    "ok": true,
    "reason": ""
+  },
+  {
+   "t": "2026-10-31T16:27:20+00:00",
+   "job": "write",
+   "ok": true,
+   "reason": ""
   }
  ],
- "calls_total": 4,
- "tokens": 18565,
- "finished": "2026-10-31T16:26:51+00:00"
+ "calls_total": 2,
+ "tokens": 13080,
+ "finished": "2026-10-31T16:40:05+00:00"
 }

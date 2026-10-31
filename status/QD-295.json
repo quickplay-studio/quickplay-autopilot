@@ -1,0 +1,174 @@
+{
+ "id": "QD-295",
+ "board": "boards/queue/QD-295.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T13:00:00Z",
+ "rendered": "2026-10-31T08:43:47.971875+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Harry Kane Ballon d'Or: the detail behind the win",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa_note": "narration a little unclear in beat 4 (captions carry it)",
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 28.0,
+  "wps": 2.89,
+  "weak_beats": [],
+  "size_mb": 15.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 840.7,
+   "contrast": 0.184,
+   "face_area": 0.0,
+   "text_area": 0.1965,
+   "caption_contrast": 16.29,
+   "by_frame": {
+    "sharpness": [
+     519.7,
+     959.9,
+     959.0,
+     924.0
+    ],
+    "contrast": [
+     0.139,
+     0.199,
+     0.199,
+     0.198
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1586,
+     0.2131,
+     0.2126,
+     0.2015
+    ],
+    "caption_contrast": [
+     16.28,
+     16.3,
+     16.0,
+     16.35
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   1.97,
+   "title",
+   0
+  ],
+  [
+   1.97,
+   5.98,
+   "none",
+   1
+  ],
+  [
+   5.98,
+   10.32,
+   "none",
+   1
+  ],
+  [
+   10.32,
+   15.66,
+   "none",
+   1
+  ],
+  [
+   15.66,
+   18.36,
+   "none",
+   1
+  ],
+  [
+   18.36,
+   22.85,
+   "none",
+   1
+  ],
+  [
+   22.85,
+   28.01,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "177871",
+   "q": "london city night",
+   "t0": 0.0,
+   "t1": 14.31
+  },
+  {
+   "p": "pixabay",
+   "id": "195",
+   "q": "running track sunrise",
+   "t0": 13.71,
+   "t1": 28.01
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T09:14:35Z",
+ "video": "jwRA2EI0M0w",
+ "url": "https://youtube.com/shorts/jwRA2EI0M0w",
+ "publish_at": "2026-10-31T13:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T13:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-295"
+}

@@ -1,0 +1,168 @@
+{
+ "id": "QD-296",
+ "board": "boards/queue/QD-296.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T14:00:00Z",
+ "rendered": "2026-10-31T08:43:12.425546+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "GTA 6: dog poop weapon 🚮",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11,
+  "extra_photos": 10,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "across-seas-and-lands",
+ "social_music": "experimental-cinematic-hip-hop-315904",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice DN was less clear, used george",
+ "qa": {
+  "duration": 27.0,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 9.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 432.4,
+   "contrast": 0.146,
+   "face_area": 0.0039,
+   "text_area": 0.1318,
+   "caption_contrast": 13.4,
+   "by_frame": {
+    "sharpness": [
+     368.2,
+     402.8,
+     325.3,
+     633.1
+    ],
+    "contrast": [
+     0.132,
+     0.132,
+     0.13,
+     0.189
+    ],
+    "face_area": [
+     0.0,
+     0.0049,
+     0.0,
+     0.0107
+    ],
+    "text_area": [
+     0.1209,
+     0.1164,
+     0.1179,
+     0.1719
+    ],
+    "caption_contrast": [
+     15.27,
+     13.82,
+     12.97,
+     11.08
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.05,
+   "none",
+   1
+  ],
+  [
+   2.05,
+   5.73,
+   "none",
+   2
+  ],
+  [
+   5.73,
+   12.06,
+   "none",
+   4
+  ],
+  [
+   12.06,
+   19.05,
+   "none",
+   4
+  ],
+  [
+   19.05,
+   23.02,
+   "none",
+   3
+  ],
+  [
+   23.02,
+   26.98,
+   "none",
+   3
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "154829",
+   "q": "console games store",
+   "t0": 0.0,
+   "t1": 13.79
+  },
+  {
+   "p": "pixabay",
+   "id": "24603",
+   "q": "neon city streets",
+   "t0": 13.19,
+   "t1": 26.98
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T09:14:37Z",
+ "video": "3CoOwKWcjmw",
+ "url": "https://youtube.com/shorts/3CoOwKWcjmw",
+ "publish_at": "2026-10-31T14:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T14:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-296"
+}

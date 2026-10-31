@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 8 public, 3 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 3 more scheduled |
+| Sat 31 Oct | 9 public, 4 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 4 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -146,11 +146,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
-## In the queue
-
-- **QD-295** Harry Kane Ballon d'Or: the detail behind the win (rendering next)
-- **QD-296** GTA 6: dog poop weapon 🚮 (rendering next)
-
 ## On the channel (latest first)
 
 ### Sat 31 Oct 12:00 · GTA 6's morality scale tops out at Irredeemable
@@ -159,7 +154,7 @@ scheduled · 29 s · music: risen · [script](../boards/done/QD-291.json) · [Yo
 ![QD-291](QD-291.jpg)
 
 ### Sat 31 Oct 9:00 · Culture Explained #1: Doctor Who: why the Doctor regenerates
-scheduled · 36 s · music: risen · [script](../boards/done/QD-290.json) · [YouTube](https://youtube.com/shorts/npZfLkjWHbM)
+private · 36 s · music: risen · [script](../boards/done/QD-290.json) · [YouTube](https://youtube.com/shorts/npZfLkjWHbM)
 
 ![QD-290](QD-290.jpg)
 

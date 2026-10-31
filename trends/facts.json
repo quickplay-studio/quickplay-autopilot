@@ -1,26 +1,32 @@
 {
- "date": "2026-10-30",
- "built": "2026-10-30T19:19+00:00",
- "model": "gemini-3.5-flash-lite + freellm:llama-3.3-70b",
- "mode": "full",
- "run": "evening",
+ "date": "2026-10-31",
+ "built": "2026-10-31T07:40+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "breaking",
+ "run": "",
  "errors": [],
  "topics": [
   {
-   "n": 7,
+   "n": 9,
    "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
+   "signal": "watchlist: GTA 6 (build-up, 19 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "A snippet of GTA 6 gameplay featuring dog poop was shown in a South Park episode on 28 October 2026.",
    "hooks": [
-    "GTA 6 launches on 19 November 2026!",
-    "Discover the new Criminal Profile system in GTA 6.",
-    "Explore Vice City in Grand Theft Auto VI."
+    "Grand Theft Auto 6 launches on 19 November 2026!",
+    "Play as Jason and Lucia in the fictional state of Leonida.",
+    "Rockstar's development teams more than doubled for this game."
    ],
    "sources": [
     [
-     "GTA 6's souped-up Red Dead Redemption 2-style morality system will scale from 'Professional' to 'Irredeemable' so players can decide what ki",
-     "https://www.pcgamer.com/games/grand-theft-auto/gta-6s-souped-up-red-dead-redemption-2-style-morality-system-will-scale-from-professional-to-irredeemable-so-players-can-decide-what-kind-of-criminal-they-want-to-be/",
+     "5 Must-Play New Xbox Games Coming in November, Including GTA 6",
+     "https://www.polygon.com/new-xbox-games-november-2026/",
+     "Polygon",
+     "2026-10-31"
+    ],
+    [
+     "New games in 2027: Fable, Final Fantasy 7, and (maybe) GTA 6 on PC",
+     "https://www.pcgamer.com/games/new-pc-games-2027/",
      "PC Gamer",
      "2026-10-30"
     ],
@@ -39,725 +45,363 @@
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "We’ll find out together when the gates to Vice City finally open on Nov. 19.",
+      "3": "and that Rockstar has been engaging with real-world locations to get the word about its latest sandbox game out into the world ahead of its",
+      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "And despite the fact that so much about it has leaked, it still feels like we know next to nothing about the Bonnie and Clyde-inspired",
+      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Rockstar's worldwide development teams more than doubled since Red Dead Redemption 2's release.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Rockstar’s open-world crime game promises to be a massive, boundary-pushing experience full of Florida flair.",
+      "4": "Rockstar's global development teams more than doubled since Red Dead Redemption 2."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto 6 will be released on 19 November 2026.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "Release date: Nov. 19",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S"
+     }
+    },
+    {
+     "claim": "A PC version of Grand Theft Auto 6 has no confirmed release date yet.",
      "sources": [
       2,
       3
      ],
      "evidence": {
-      "2": "ahead of its 19th November launch.",
-      "3": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+      "2": "Grand Theft Auto 6 (PC) Site | PC date TBD",
+      "3": "whispers of a PC version arriving in Q1 2027"
+     }
+    },
+    {
+     "claim": "Grand Theft Auto 6 will be available on Xbox Series X/S.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "If you only took a quick glance at November’s release date calendar, you might walk away with the idea that Xbox players are only getting",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "claim": "The game is set in a fictional state based on Florida and includes Vice City.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+      "1": "Rockstar’s open-world crime game promises to be a massive, boundary-pushing experience full of Florida flair."
      }
     },
     {
-     "claim": "The map includes Vice City, Grassrivers, and the Leonida Keys.",
+     "claim": "The story follows the criminal duo Jason Duval and Lucia Caminos.",
      "sources": [
-      3
+      4
      ],
      "evidence": {
-      "3": "The map includes Vice City,[a] Grassrivers, and the Leonida Keys (inspired by Miami, the Everglades, and the Florida Keys, respectively)."
+      "4": "the fictional us state of leonida based on florida the story follows the criminal duo of jason duval and lucia caminos"
      }
     },
     {
-     "claim": "The story follows a criminal couple: Jason Duval and Lucia Caminos.",
+     "claim": "Players can pick up dog poop and use it as a weapon.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "The story follows a criminal couple: Jason Duval, who worked for local drug runners in the Leonida Keys after serving in the Army; and Lucia"
+      "3": "dog taking a poop and people can pick up the dog poop you can throw things at the person with dog poop and if they choose to fight back you can pick up the dog poop and actually attack them"
+     }
+    },
+    {
+     "claim": "Early development started after Red Dead Redemption 2’s 2018 release and principal production began in 2020.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Rockstar’s staff grew from 2,441 to 4,711 employees across 12 offices during development.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
      }
     }
    ],
    "images": []
   },
   {
-   "n": 8,
-   "topic": "GTA 6 PC release",
-   "signal": "watchlist: GTA 6 (build-up, 20 days to go)",
-   "category": "Gaming",
-   "what_is_new": "",
-   "hooks": [
-    "Grand Theft Auto VI launches on 19 November 2026!",
-    "Rockstar union vote dates overlap with the GTA 6 release window.",
-    "Principal production on Grand Theft Auto VI officially began in 2020."
-   ],
-   "sources": [
-    [
-     "Next Week on XBOX: New Games for November 2 to 6",
-     "https://news.xbox.com/en-us/2026/10/30/next-week-on-xbox-new-games-for-november-2-to-6/",
-     "Xbox Wire",
-     "2026-10-30"
-    ],
-    [
-     "Rockstar Games employees have locked in a union vote next month, and it'll take place over Grand Theft Auto 6's release window",
-     "https://www.eurogamer.net/rockstar-union-vote-november",
-     "Eurogamer",
-     "2026-10-28"
-    ],
-    [
-     "GTA 6 PC release",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "The vote for Rockstar Games employees to decide on their developer union runs from the 12th to the 26th November.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
-     }
-    },
-    {
-     "claim": "Principal production on Grand Theft Auto VI began in 2020.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Principal production began in 2020."
-     }
-    },
-    {
-     "claim": "The union vote at Rockstar Games runs from the 12th to the 26th November.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The vote, which runs from the 12th to the 26th November, will give workers at Rockstar Games a chance to decide whether Rockstar will formally"
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "Rockstar's worldwide development teams more than doubled, growing from 2,441 employees to 4,711 across 12 offices during Grand Theft Auto VI's development.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
-     }
-    },
-    {
-     "claim": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Grand Theft Auto VI is an upcoming action-adventure game developed and published by Rockstar Games."
-     }
-    }
-   ],
-   "images": [
-    "page:https://news.xbox.com/en-us/2026/10/30/next-week-on-xbox-new-games-for-november-2-to-6/"
-   ]
-  },
-  {
-   "n": 11,
-   "topic": "Avengers Doomsday cast",
-   "signal": "watchlist: Avengers: Doomsday (surging, 49 days to go)",
-   "category": "Film",
-   "what_is_new": "",
-   "hooks": [
-    "Avengers Doomsday releases on December 18, 2026!",
-    "Robert Downey Jr returns as Doctor Doom in Avengers Doomsday!",
-    "Patrick Stewart makes his final on screen performance in Avengers Doomsday!"
-   ],
-   "sources": [
-    [
-     "‘Avengers: Doomsday’ World Series Sneak Peek Sees Mister Fantastic Throw Out First Pitch",
-     "https://deadline.com/2026/10/avengers-doomsday-world-series-sneak-peek-1237172207/",
-     "Deadline",
-     "2026-10-24"
-    ],
-    [
-     "Avengers Doomsday cast",
-     "https://en.wikipedia.org/wiki/Avengers%3A_Doomsday",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
-      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
-     }
-    },
-    {
-     "claim": "Robert Downey Jr. stars as Doctor Doom in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
-      "2": "The film features an ensemble cast led by Robert Downey Jr. as Doctor Doom."
-     }
-    },
-    {
-     "claim": "Chris Evans returns as Steve Rogers in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "to joseph quinn s human torch the preview also featured some familiar faces including chris evans steve rogers which causes paul rudd s ant man confusion over who to refer to as captain america with anthony mackie s sam wilson",
-      "2": "Chris Evans as Steve Rogers"
-     }
-    },
-    {
-     "claim": "Chris Hemsworth returns as Thor in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "the cast also includes chris hemsworth as thor",
-      "2": "Chris Hemsworth as Thor"
-     }
-    },
-    {
-     "claim": "Pedro Pascal plays Reed Richards or Mister Fantastic in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
-      "2": "Pedro Pascal as Reed Richards / Mister Fantastic: A highly intelligent scientist and the leader of the Fantastic Four who can stretch any part of"
-     }
-    },
-    {
-     "claim": "Paul Rudd plays Scott Lang or Ant-Man in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "to joseph quinn s human torch the preview also featured some familiar faces including chris evans steve rogers which causes paul rudd s ant man confusion over who to refer to as captain america with anthony mackie s sam wilson",
-      "2": "Paul Rudd as Scott Lang / Ant-Man: An Avenger and former petty criminal with a suit that allows him to shrink or grow in scale"
-     }
-    },
-    {
-     "claim": "Anthony Mackie plays Sam Wilson or Captain America in Avengers: Doomsday.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "with anthony mackie s sam wilson now carrying the shield with the",
-      "2": "Anthony Mackie as Sam Wilson / Captain America: An Avenger and former pararescueman who was trained by the military in aerial combat using a specially"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Anthony and Joe Russo are the directors of Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Directed by Anthony and Joe Russo, and written by Michael Waldron, Stephen McFeely, and the writing team of Chris McKenna and Erik Sommers, the film"
-     }
-    },
-    {
-     "claim": "Simu Liu plays Xu Shang-Chi in Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Simu Liu as Xu Shang-Chi: A highly skilled martial artist and the wielder of the mystical Ten Rings who was trained to be an assassin"
-     }
-    },
-    {
-     "claim": "Letitia Wright plays Shuri or Black Panther in Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Letitia Wright as Shuri / Black Panther: The former princess of Wakanda who gained superhuman abilities by ingesting the heart-shaped herb."
-     }
-    },
-    {
-     "claim": "Kelsey Grammer plays Hank McCoy or Beast in Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Kelsey Grammer as Hank McCoy / Beast: A highly intelligent mutant and member of the X-Men with animalistic physical characteristics, including blue fur, pointed ears,"
-     }
-    },
-    {
-     "claim": "Danny Ramirez plays Joaquin Torres or Falcon in Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Danny Ramirez as Joaquin Torres / Falcon: An Avenger and first lieutenant in the U.S. Air Force who uses a wing pack similar to Wilson's"
-     }
-    },
-    {
-     "claim": "Winston Duke plays M'Baku in Avengers: Doomsday.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Winston Duke as M'Baku: A powerful warrior and the king of Wakanda"
-     }
-    },
-    {
-     "claim": "Patrick Stewart marks his final on-screen performance in Avengers: Doomsday following his death in October 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Doomsday marks Stewart's final on-screen performance following his death in October 2026."
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 1,
-   "topic": "Galatasaray vs Barcelona, and Atletico Madrid vs Manchester United",
-   "signal": "Charlie's request",
+   "n": 3,
+   "topic": "Ballon d'Or 2026",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "category": "Sport",
-   "what_is_new": "",
+   "what_is_new": "Suspicious betting activity surrounding the Ballon d'Or results is currently under investigation by event organisers France Football.",
    "hooks": [
-    "Manchester United lost 2-0 away to Atletico Madrid in the Champions League."
+    "Harry Kane wins the 2026 Ballon d'Or!",
+    "Alexia Putellas claims her third Ballon d'Or award!"
    ],
    "sources": [
     [
-     "How ten-man Manchester United's Champions League defeat to Atletico sparked Lisandro Martinez outburst",
-     "https://www.nytimes.com/athletic/live-blogs/atletico-madrid-vs-manchester-united-live-updates-champions-league-score-result/oehRSNzvL7m5/",
-     "New York Times",
-     "2026-10-13"
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Manchester United lost 2-0 away to Atletico Madrid in the Champions League.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Manchester United are without a win in five games after losing 2-0 away to Atletico Madrid in the Champions League."
-     }
-    },
-    {
-     "claim": "Manchester United are without a win in five games after losing 2-0 away to Atletico Madrid in the Champions League.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Manchester United are without a win in five games after losing 2-0 away to Atletico Madrid in the Champions League."
-     }
-    },
-    {
-     "claim": "Atletico Madrid won 2-0 thanks to goals from Pablo Barrios and Ademola Lookman.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "A 2-0 win for Atletico thanks to goals from Pablo Barrios and Ademola Lookman means United, who were reduced to 10 men late on when"
-     }
-    },
-    {
-     "claim": "Leny Yoro was sent off, reducing United to ten men late in the match.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "A 2-0 win for Atletico thanks to goals from Pablo Barrios and Ademola Lookman means United, who were reduced to 10 men late on when"
-     }
-    },
-    {
-     "claim": "Lisandro Martinez criticised the team's performance and said “I expect more from our technical director” in a post‑match interview.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "He heavily criticised the team's performance before saying “I expect more from our technical director” in an outburst about the lack of ambition shown by"
-     }
-    }
-   ],
-   "images": []
-  },
-  {
-   "n": 16,
-   "topic": "freddie slater",
-   "signal": "Google Trends GB 200+",
-   "category": "Sport",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Freddie Slater was born on 9 August 2008?"
-   ],
-   "sources": [
-    [
-     "Freddie Slater to drive for Audi in first practice in Mexico City and Sao Paulo Grands Prix",
-     "https://www.bbc.co.uk/sport/formula1/articles/cqr7ymxn5ezyo",
-     "BBC",
-     "2026-10-22"
-    ],
-    [
-     "freddie slater",
-     "https://en.wikipedia.org/wiki/Freddie_Slater_(racing_driver)",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Freddie Slater was born on 9 August 2008 in Stratford-upon-Avon, Warwickshire, England.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Freddie Slater (//; born 9 August 2008) is a British racing driver who is set to compete in the FIA Formula 2 Championship for Invicta"
-     }
-    },
-    {
-     "claim": "Freddie Slater was born on 9 August 2008",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Freddie Slater (//; born 9 August 2008) is a British racing driver"
-     }
-    },
-    {
-     "claim": "Freddie Slater will have a second outing a week later at the Sao Paulo Grand Prix",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "The 18-year-old will have a second outing a week later at the Sao Paulo Grand Prix"
-     }
-    },
-    {
-     "claim": "Freddie Slater finished second on his debut in the Formula 3 championship this season",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Slater finished second on his debut in the Formula 3 championship this season"
-     }
-    },
-    {
-     "claim": "Freddie Slater is moving up to Formula 2 in 2027 with the front-running Invicta team",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Slater finished second on his debut in the Formula 3 championship this season and is moving up to Formula 2 in 2027 with the front-running"
-     }
-    },
-    {
-     "claim": "Freddie Slater won the 2020 Junior World Karting Championship",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Most notably, Slater won the 2020 Junior World Karting Championship, beating the likes of Arvid Lindblad and Ugo Ugochukwu to the title"
-     }
-    },
-    {
-     "claim": "Freddie Slater won the 2021 FIA Karting European Championship by over 30 points",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "and the 2021 FIA Karting European Championship by over 30 points"
-     }
-    },
-    {
-     "claim": "Freddie Slater was announced to be making his GB3 debut at Donington Park with Rodin Motorsport",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "In September 2024, Slater was announced to be making his GB3 debut at Donington Park with Rodin Motorsport"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Freddie_Slater_Macau_2025_(cropped).jpg"
-   ]
-  },
-  {
-   "n": 17,
-   "topic": "sam altman",
-   "signal": "Google Trends GB 200+",
-   "category": "Tech",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know OpenAI CEO Sam Altman thinks your PC memory is terrible?",
-    "Why does OpenAI boss Sam Altman want your computer RAM in the cloud?",
-    "Sam Altman believes having DRAM in your own computer is terrible."
-   ],
-   "sources": [
-    [
-     "Sam Altman argues that it's bad you want DRAM in your computer and not a data center, actually",
-     "https://www.pcgamer.com/software/ai/sam-altman-argues-that-its-bad-you-want-dram-in-your-computer-and-not-a-data-center-actually/",
-     "PC Gamer",
-     "2026-10-30"
-    ],
-    [
-     "OpenAI Billionaire: PCs Are 'Terrible' When Data Centers Need More Memory",
-     "https://www.polygon.com/chatgpt-open-ai-sam-altman-youtube-interview-vram-supply-cost-data/",
-     "Polygon",
-     "2026-10-30"
-    ],
-    [
-     "OpenAI CEO Sam Altman Thinks It's 'Terrible' for You to Have RAM in Your Gaming PC",
-     "https://www.ign.com/articles/openai-ceo-sam-altman-thinks-its-terrible-for-you-to-have-ram-in-your-gaming-pc",
-     "IGN",
-     "2026-10-30"
-    ],
-    [
-     "sam altman",
-     "https://en.wikipedia.org/wiki/Sam_Altman",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Sam Altman appeared on an episode of the Cheeky Pint podcast to discuss compute supply problems.",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "Appearing on a recent episode of the Cheeky Pint podcast, Altman argued, \"From a global allocation perspective, actually it’s quite terrible to have everyone have",
-      "2": "In a casual interview with YouTube channel Cheeky Pint, Altman explained that the world is already limited in its silicon-producing capacity.",
-      "3": "In an interview with YouTuber Cheeky Pint, Altman talked about the global compute supply problems facing the AI industry right now."
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Samuel Harris Altman was born on April 22, 1985.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Samuel Harris Altman (born April 22, 1985) is an American entrepreneur and investor who has been the chief executive officer (CEO) of the artificial intelligence"
-     }
-    },
-    {
-     "claim": "Loopt was acquired by Green Dot Corporation for $43.4 million in March 2012.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Loopt was acquired by Green Dot Corporation for $43.4 million in March 2012.[1]"
-     }
-    },
-    {
-     "claim": "Sam Altman served as the president of Y Combinator from 2014 to 2019.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In 2011, Altman joined Y Combinator, a technology startup accelerator and venture capital firm, and was the company's president from 2014 to 2019.[2]"
-     }
-    },
-    {
-     "claim": "Sam Altman co-founded OpenAI in 2015 and became its CEO in 2019.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Altman co-founded OpenAI in 2015 and became its CEO in 2019, a role that made him a prominent figure of the AI boom."
-     }
-    },
-    {
-     "claim": "Sam Altman supervised the launch of ChatGPT in November 2022.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "He supervised the launch of ChatGPT in November 2022."
-     }
-    },
-    {
-     "claim": "In 2023, Sam Altman was ousted by the organization board of directors and reinstated five days later.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In 2023, he was ousted by the organization's board of directors for not being \"consistently candid\".[3][4] The move was met with significant backlash from employees"
-     }
-    },
-    {
-     "claim": "At the age of 19 in 2005, Sam Altman co-founded Loopt.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "In 2005, at the age of 19,[16] Altman co-founded Loopt,[17] a location-based social networking mobile application."
-     }
-    },
-    {
-     "claim": "For eight days in 2014, Sam Altman was the CEO of Reddit.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "For eight days in 2014, Altman was the CEO of Reddit, a social media company, after CEO Yishan Wong resigned.[44][45]"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Meeting_with_Masayoshi_Son_and_Sam_Altman_(February_3,_2025)_(3x4_cropped_on_Altman).jpg"
-   ]
-  },
-  {
-   "n": 21,
-   "topic": "bonfire night",
-   "signal": "Google Trends GB 200+",
-   "category": "Food",
-   "what_is_new": "",
-   "hooks": [
-    "Did you know Bonfire Night celebrates the failure of Guy Fawkes?",
-    "Discover the traditional foods eaten on Bonfire Night in England."
-   ],
-   "sources": [
-    [
-     "Helen Goh’s recipe for toffee apple hand pies | The sweet spot",
-     "https://www.theguardian.com/food/2026/oct/30/bonfire-night-miso-toffee-apple-hand-pies-recipe-helen-goh",
+     "Suspicious bets returning £149,000 for predicting Ballon d’Or under investigation",
+     "https://www.theguardian.com/football/2026/oct/30/ballon-dor-betting-suspicious-cryptocurrency-investigation",
      "Guardian",
      "2026-10-30"
     ],
     [
-     "Extra police out for Halloween and Bonfire Night",
-     "https://www.bbc.com/news/articles/cq8ezjp4r2yjo",
-     "BBC",
-     "2026-10-29"
+     "Ballon d'Or 2026",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi."
+     }
+    },
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 19,
+   "topic": "my chemical romance",
+   "signal": "Google Trends US 200+",
+   "category": "Music",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Hideo Kojima has a surprise voice cameo in a My Chemical Romance short film?",
+    "Billie Eilish and Phoebe Bridgers star in the new animated short film Prelude To The End.",
+    "Live Nation defended My Chemical Romance against a lawsuit over cheerleaders."
+   ],
+   "sources": [
+    [
+     "Live Nation Defends My Chemical Romance’s Dallas Cowboys Cheerleaders Lookalikes: It Was ‘Parody’",
+     "https://www.rollingstone.com/music/music-news/live-nation-my-chemical-romance-dallas-cowboys-cheerleaders-1235650825/",
+     "Rolling Stone",
+     "2026-10-31"
     ],
     [
-     "bonfire night",
-     "https://en.wikipedia.org/wiki/Bonfire_Night",
+     "Hideo Kojima Makes Surprise Cameo in New My Chemical Romance Animated Short",
+     "https://www.ign.com/articles/hideo-kojima-makes-surprise-cameo-in-new-my-chemical-romance-animated-short",
+     "IGN",
+     "2026-10-30"
+    ],
+    [
+     "Billie Eilish, Phoebe Bridgers and more star in My Chemical Romance’s short film ‘Prelude To The End’",
+     "https://www.nme.com/news/music/billie-eilish-phoebe-bridgers-my-chemical-romances-short-film-prelude-to-the-end-3974702?utm_source=rss&utm_medium=rss&utm_campaign=billie-eilish-phoebe-bridgers-my-chemical-romances-short-film-prelude-to-the-end",
+     "NME",
+     "2026-10-30"
+    ],
+    [
+     "my chemical romance",
+     "https://en.wikipedia.org/wiki/My_Chemical_Romance",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Bonfire Night is on 5 November",
+     "claim": "Billie Eilish and Phoebe Bridgers contributed voice roles to the animated short film Prelude To The End.",
      "sources": [
       2,
       3
      ],
      "evidence": {
-      "2": "the two dates, 31 October and 5 November, were among the busiest times of the years for officers",
-      "3": "The British festival is, therefore, on 5 November, although some commercially driven events are held at a weekend near to the correct date, to maximise"
+      "2": "Also featured in the list of Astrid's missed voicemails are Lost Weekend songwriter Phoebe Bridgers and Hit Me Hard and Soft hitmaker Billie Eilish.",
+      "3": "My Chemical Romance have released a new animated short film, ‘Prelude To The End’, featuring voice contributions from Billie Eilish, Phoebe Bridgers and others –"
      }
     },
     {
-     "claim": "Bonfire Night is associated with Guy Fawkes",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Halloween and Bonfire Night",
-      "3": "Bonfire Night is a name given to various yearly events marked by bonfires and fireworks.[1] These include Guy Fawkes Night (5 November) in Great Britain;"
-     }
-    },
-    {
-     "claim": "Toffee apples are traditionally eaten on Bonfire Night",
+     "claim": "Live Nation defended the use of Dallas Cowboys Cheerleaders lookalike uniforms at three My Chemical Romance shows as a parody.",
      "sources": [
       1,
       3
      ],
      "evidence": {
-      "1": "Bonfire Night: warming, portable and, wrapped in a napkin and held in one hand, easy to eat outdoors. Filled with gently spiced, toffee-glossed apples",
-      "3": "There are many food items that are associated with Bonfire Night. Toffee apples, treacle toffee, black peas and parkin, hog roast, and even the jacket"
+      "1": "Live Nation is defending the use of lookalike Dallas Cowboys Cheerleader uniforms at a trio of My Chemical Romance shows at the Hollywood Bowl last",
+      "3": "The performances have made headlines after the company behind the Dallas Cowboys Cheerleaders launched legal action against the band over the use of lookalike uniforms"
+     }
+    },
+    {
+     "claim": "Hideo Kojima made a surprise voice cameo as The Teacher in the animated short film Prelude To The End.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "Death Stranding creator Hideo Kojima showed up for a cameo role in a new animated short from legendary rock outfit My Chemical Romance.",
+      "3": "Japanese video game designer Hideo Kojima plays a character known as The Teacher, while Scrubs actor John C. McGinley voices The Dean."
+     }
+    },
+    {
+     "claim": "Lauren Tsai directed the animated short film Prelude To The End in collaboration with her independent studio UNREAL INC.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "The seven-and-a-half-minute project, which arrived as a surprise drop yesterday evening, is a stop-motion, dark fairytale based on director Lauren Tsai's The Dying World.",
+      "3": "The film was made in collaboration with visual artist Lauren Tsai and arrives as the band continue celebrating the 20th anniversary of their landmark 2006"
+     }
+    },
+    {
+     "claim": "My Chemical Romance released an expanded 20th anniversary edition of The Black Parade featuring six bonus tracks.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "He then celebrated his involvement in the video with another post on X/Twitter.",
+      "3": "Meanwhile, MCR released an expanded 20th anniversary edition of ‘The Black Parade’ last Friday (October 23), featuring six bonus tracks, including previously unreleased recordings from"
+     }
+    },
+    {
+     "claim": "Prelude To The End was scheduled to be screened ahead of My Chemical Romance's final two Hollywood Bowl concerts.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Live Nation is defending the use of lookalike Dallas Cowboys Cheerleader uniforms at a trio of My Chemical Romance shows at the Hollywood Bowl last",
+      "3": "‘Prelude To The End’ will also be screened ahead of My Chemical Romance’s final two Hollywood Bowl concerts tonight (October 30) and tomorrow (October 31)."
+     }
+    },
+    {
+     "claim": "The Dallas Cowboys Cheerleaders parent company Pro Silver Star filed a lawsuit against My Chemical Romance and Live Nation.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "The iconic cheer squad sued the band and Live Nation last week, claiming that knockoff versions of its signature blue-and-white uniforms were worn by dancers",
+      "3": "The performances have made headlines after the company behind the Dallas Cowboys Cheerleaders launched legal action against the band over the use of lookalike uniforms"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Bonfire Night is a name given to various yearly events marked by bonfires and fireworks.",
+     "claim": "Mikey Way suggested the name My Chemical Romance after being struck by Irvine Welsh's book Ecstasy Three Tales of Chemical Romance.",
      "sources": [
-      3
+      4
      ],
      "evidence": {
-      "3": "Bonfire Night is a name given to various yearly events marked by bonfires and fireworks."
-     }
-    },
-    {
-     "claim": "In Great Britain, Bonfire Night is associated with the tradition of celebrating the failure of Guy Fawkes actions on 5 November 1605.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "In Great Britain, Bonfire Night is associated with the tradition of celebrating the failure of Guy Fawkes' actions on 5 November 1605."
-     }
-    },
-    {
-     "claim": "Toffee apples, treacle toffee, black peas and parkin, hog roast, and even the jacket potato, are traditionally eaten around Bonfire Night in parts of England.",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "Toffee apples, treacle toffee, black peas and parkin, hog roast, and even the jacket potato, are traditionally eaten around Bonfire Night in parts of England."
-     }
-    },
-    {
-     "claim": "Extra police will be on the streets for Halloween and Bonfire Night",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Extra police will be on the streets of West Yorkshire for Halloween and Bonfire Night, the county's force has said."
-     }
-    },
-    {
-     "claim": "Bonfire Night can be a challenging time for pet owners",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "As fireworks and loud noises can be frightening for cats and dogs, Bonfire Night can be a challenging time for pet owners."
+      "4": "The name of the band was suggested by bass guitarist Mikey Way, younger brother of Gerard, who was working in a Barnes & Noble when"
      }
     }
    ],
    "images": [
-    "commons:File:Bonfire_on_Mississippi_River_levee_St._James_Parish_Louisiana.jpg"
+    "commons:File:MCR820_(cropped).jpg"
    ]
+  },
+  {
+   "n": 33,
+   "topic": "Final Fantasy Resonance",
+   "signal": "Bluesky trending, 2,481 posts",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Final Fantasy Resonance is co-developed by Square Enix and Lancarse?"
+   ],
+   "sources": [
+    [
+     "How to open the Nameless Ruins chest in Final Fantasy Resonance",
+     "https://www.polygon.com/final-fantasy-resonance-nameless-ruins-chest-how-to-open/",
+     "Polygon",
+     "2026-10-28"
+    ],
+    [
+     "Things Final Fantasy Resonance Doesn't Tell You",
+     "https://www.ign.com/wikis/final-fantasy-resonance/Things_Final_Fantasy_Resonance_Doesn%27t_Tell_You",
+     "IGN",
+     "2026-10-26"
+    ],
+    [
+     "Final Fantasy Resonance",
+     "https://en.wikipedia.org/wiki/Final_Fantasy_Resonance",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Final Fantasy Resonance is a 2026 role-playing video game co-developed by Square Enix and Lancarse and published by Square Enix.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Final Fantasy Resonance is a 2026 role-playing video game co-developed by Square Enix and Lancarse and published by Square Enix."
+     }
+    }
+   ],
+   "images": []
   }
  ]
 }

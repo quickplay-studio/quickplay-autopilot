@@ -1,17 +1,16 @@
 {
- "updated": "2026-10-30T19:11+00:00",
+ "updated": "2026-10-31T07:37+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
-   "days_to": -4,
+   "days_to": -5,
    "phase": "steady",
    "level": "surging",
    "places": 4,
-   "momentum": 2.56,
-   "views_yesterday": 21831,
-   "views_usual": 8532,
+   "momentum": 1.55,
+   "views_yesterday": 16754,
+   "views_usual": 10812,
    "views_30d": [
-    3338,
     2868,
     2631,
     3222,
@@ -40,29 +39,30 @@
     452394,
     237598,
     42912,
-    21831
+    21831,
+    16754
    ],
    "news_24h": 100,
    "news_usual": 100.0,
    "suggestions": [
     "ballon d'or 2026",
-    "ballon d'or 2026 full ceremony",
     "ballon d'or 2026 reaction",
-    "ballon d'or 2026 live",
     "ballon d'or 2026 boat",
-    "ballon d'or 2026 lamine yamal",
+    "ballon d'or 2026 full ceremony",
+    "ballon d'or 2026 live ceremony",
+    "ballon d'or 2026 live",
     "ballon d'or 2026 ai",
-    "ballon d'or 2026 live ceremony"
+    "ballon d'or 2026 jorja smith"
    ],
    "in": [],
    "category": "Sport",
    "angles": [
-    "Ballon d'Or 2026 history and records",
     "Ballon d'Or 2026 explained",
     "Ballon d'Or 2026 facts",
     "Ballon d'Or 2026",
     "Ballon d'Or 2026 analysis",
-    "Ballon d'Or 2026 reaction"
+    "Ballon d'Or 2026 reaction",
+    "Ballon d'Or 2026 history and records"
    ],
    "rules": "Cover it as football news: the nominees, the winners, the ceremony in London on Monday 26 October, records and past winners, all as the sources state them. Never present predictions, odds or leaks as facts; family friendly. A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
    "terms": [
@@ -75,26 +75,25 @@
    "viral": true,
    "viral_since": "2026-10-27",
    "angle_map": {
-    "ballon d or 2026 history and records": "records",
     "ballon d or 2026 explained": "explained",
     "ballon d or 2026 facts": "facts",
     "ballon d or 2026": "latest",
     "ballon d or 2026 analysis": "why",
-    "ballon d or 2026 reaction": "reaction"
+    "ballon d or 2026 reaction": "reaction",
+    "ballon d or 2026 history and records": "records"
    },
    "mega": 0
   },
   {
    "name": "The Celebrity Traitors",
-   "days_to": 0,
+   "days_to": -1,
    "phase": "launch",
    "level": "launch",
    "places": 2,
-   "momentum": 1.46,
-   "views_yesterday": 16847,
+   "momentum": 2.63,
+   "views_yesterday": 30361,
    "views_usual": 11544,
    "views_30d": [
-    3444,
     26144,
     34809,
     24483,
@@ -123,10 +122,11 @@
     9491,
     7709,
     7639,
-    16847
+    16847,
+    30361
    ],
    "news_24h": 100,
-   "news_usual": 60.0,
+   "news_usual": 64.0,
    "suggestions": [
     "the celebrity traitors",
     "the celebrity traitors uncloaked uk",
@@ -134,8 +134,8 @@
     "the celebrity traitors james acaster",
     "the celebrity traitors reveal",
     "the celebrity traitors reaction",
-    "the celebrity traitors uk",
-    "the celebrity traitors uncloaked uk joanne"
+    "the celebrity traitors finale",
+    "the celebrity traitors season 1"
    ],
    "in": [
     "Google Trends"
@@ -158,15 +158,14 @@
   },
   {
    "name": "Halloween 2026",
-   "days_to": 1,
+   "days_to": 0,
    "phase": "launch",
    "level": "launch",
    "places": 2,
-   "momentum": 2.82,
-   "views_yesterday": 42067,
-   "views_usual": 14906,
+   "momentum": 5.22,
+   "views_yesterday": 82673,
+   "views_usual": 15840,
    "views_30d": [
-    6444,
     9322,
     8793,
     7552,
@@ -195,7 +194,8 @@
     25068,
     26503,
     31396,
-    42067
+    42067,
+    82673
    ],
    "news_24h": 100,
    "news_usual": 100.0,
@@ -203,11 +203,11 @@
     "halloween 2026",
     "halloween 2026 countdown",
     "halloween 2026 playlist",
-    "halloween 2026 new york",
     "halloween 2026 theory",
-    "halloween 2026 tdx",
+    "halloween 2026 live",
+    "halloween 2026 music",
     "halloween 2026 song",
-    "halloween 2026 event"
+    "halloween 2026 costumes"
    ],
    "in": [
     "Google Trends"
@@ -231,15 +231,14 @@
   },
   {
    "name": "Grammy nominations 2027",
-   "days_to": 17,
+   "days_to": 16,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.72,
-   "views_yesterday": 672,
-   "views_usual": 932,
+   "momentum": 0.71,
+   "views_yesterday": 640,
+   "views_usual": 900,
    "views_30d": [
-    726,
     666,
     878,
     781,
@@ -268,7 +267,8 @@
     873,
     762,
     728,
-    672
+    672,
+    640
    ],
    "news_24h": 9,
    "news_usual": 9.0,
@@ -302,15 +302,14 @@
   },
   {
    "name": "GTA 6",
-   "days_to": 20,
+   "days_to": 19,
    "phase": "build-up",
    "level": "build-up",
    "places": 2,
-   "momentum": 1.21,
-   "views_yesterday": 21871,
+   "momentum": 1.07,
+   "views_yesterday": 19387,
    "views_usual": 18040,
    "views_30d": [
-    10301,
     10438,
     10694,
     10524,
@@ -339,10 +338,11 @@
     17068,
     18261,
     17894,
-    21871
+    21871,
+    19387
    ],
    "news_24h": 100,
-   "news_usual": 84.0,
+   "news_usual": 88.0,
    "suggestions": [
     "gta 6",
     "gta 6 trailer",
@@ -351,7 +351,7 @@
     "gta 6 extended look",
     "gta 6 leaks",
     "gta 6 soundtrack",
-    "gta 6 launch trailer"
+    "gta 6 song"
    ],
    "in": [],
    "category": "Gaming",
@@ -373,15 +373,14 @@
   },
   {
    "name": "The Hunger Games: Sunrise on the Reaping",
-   "days_to": 21,
+   "days_to": 20,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 3.84,
-   "views_yesterday": 36122,
-   "views_usual": 9406,
+   "momentum": 2.49,
+   "views_yesterday": 23843,
+   "views_usual": 9562,
    "views_30d": [
-    5804,
     5319,
     7068,
     7514,
@@ -410,19 +409,20 @@
     13501,
     12200,
     26669,
-    36122
+    36122,
+    23843
    ],
    "news_24h": 100,
-   "news_usual": 39.0,
+   "news_usual": 42.5,
    "suggestions": [
     "the hunger games sunrise on the reaping",
     "the hunger games sunrise on the reaping trailer",
-    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping interview",
+    "the hunger games sunrise on the reaping trailer reaction",
     "the hunger games sunrise on the reaping premiere",
-    "the hunger games sunrise on the reaping tv spot",
-    "the hunger games sunrise on the reaping audiobook",
-    "the hunger games sunrise on the reaping soundtrack"
+    "the hunger games sunrise on the reaping cast",
+    "the hunger games sunrise on the reaping soundtrack",
+    "the hunger games sunrise on the reaping audiobook"
    ],
    "in": [],
    "category": "Film",
@@ -444,15 +444,14 @@
   },
   {
    "name": "MAMA Awards 2026",
-   "days_to": 21,
+   "days_to": 20,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.98,
-   "views_yesterday": 904,
-   "views_usual": 924,
+   "momentum": 1.02,
+   "views_yesterday": 930,
+   "views_usual": 914,
    "views_30d": [
-    26,
     31,
     59,
     51,
@@ -481,14 +480,15 @@
     603,
     526,
     675,
-    904
+    904,
+    930
    ],
-   "news_24h": 13,
-   "news_usual": 7.0,
+   "news_24h": 7,
+   "news_usual": 7.5,
    "suggestions": [
     "mama awards 2026",
-    "mama awards 2026 jennie",
     "mama awards 2026 live",
+    "mama awards 2026 jennie",
     "mama awards 2026 nominations",
     "mama awards 2026 enhypen",
     "mama awards 2026 stray kids",
@@ -515,15 +515,14 @@
   },
   {
    "name": "Spotify Wrapped 2026",
-   "days_to": 33,
+   "days_to": 32,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.96,
-   "views_yesterday": 243,
+   "momentum": 0.92,
+   "views_yesterday": 233,
    "views_usual": 252,
    "views_30d": [
-    198,
     175,
     190,
     176,
@@ -552,7 +551,8 @@
     331,
     297,
     249,
-    243
+    243,
+    233
    ],
    "news_24h": 6,
    "news_usual": 3.0,
@@ -582,15 +582,14 @@
   },
   {
    "name": "The Game Awards",
-   "days_to": 41,
+   "days_to": 40,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.0,
-   "views_yesterday": 855,
-   "views_usual": 853,
+   "momentum": 0.95,
+   "views_yesterday": 805,
+   "views_usual": 849,
    "views_30d": [
-    758,
     650,
     624,
     565,
@@ -619,15 +618,16 @@
     938,
     928,
     795,
-    855
+    855,
+    805
    ],
-   "news_24h": 14,
-   "news_usual": 9.0,
+   "news_24h": 8,
+   "news_usual": 9.5,
    "suggestions": [
-    "the game awards",
-    "the game awards 2025",
     "the game awards 2026",
     "the game awards 2024",
+    "the game awards 2025",
+    "the game awards",
     "the game awards 2025 reaction",
     "the game awards orchestra",
     "the game awards trailers",
@@ -649,15 +649,14 @@
   },
   {
    "name": "Avengers: Doomsday",
-   "days_to": 49,
+   "days_to": 48,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 4.19,
-   "views_yesterday": 83193,
-   "views_usual": 19832,
+   "momentum": 3.82,
+   "views_yesterday": 78283,
+   "views_usual": 20468,
    "views_30d": [
-    28251,
     26672,
     24127,
     23739,
@@ -686,7 +685,8 @@
     23773,
     20939,
     22381,
-    83193
+    83193,
+    78283
    ],
    "news_24h": 100,
    "news_usual": 100.0,
@@ -695,10 +695,10 @@
     "avengers doomsday",
     "avengers doomsday trailer reaction",
     "avengers doomsday x men",
-    "avengers doomsday trailer x men",
-    "avengers doomsday patrick stewart",
     "avengers doomsday teaser",
-    "avengers doomsday final trailer"
+    "avengers doomsday final trailer",
+    "avengers doomsday trailer x men",
+    "avengers doomsday clock"
    ],
    "in": [],
    "category": "Film",
@@ -717,15 +717,14 @@
   },
   {
    "name": "Dune: Part Three",
-   "days_to": 49,
+   "days_to": 48,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 1.99,
-   "views_yesterday": 17411,
-   "views_usual": 8757,
+   "momentum": 1.57,
+   "views_yesterday": 14040,
+   "views_usual": 8924,
    "views_30d": [
-    6752,
     6692,
     7114,
     7262,
@@ -754,19 +753,20 @@
     9018,
     23026,
     25412,
-    17411
+    17411,
+    14040
    ],
-   "news_24h": 50,
-   "news_usual": 26.0,
+   "news_24h": 38,
+   "news_usual": 38.0,
    "suggestions": [
     "dune part three",
-    "dune part three trailer reaction",
     "dune part three trailer",
+    "dune part three trailer reaction",
     "dune part three final trailer reaction",
     "dune part three final trailer",
-    "dune part three trailer reaction mashup",
-    "dune part three official trailer reaction",
-    "dune part three trailer music"
+    "dune part three imax trailer",
+    "dune part three trailer breakdown",
+    "dune part three reaction"
    ],
    "in": [
     "YouTube charts"
@@ -787,15 +787,14 @@
   },
   {
    "name": "Harry Potter HBO series",
-   "days_to": 56,
+   "days_to": 55,
    "phase": "steady",
    "level": "surging",
    "places": 3,
-   "momentum": 1.46,
-   "views_yesterday": 6909,
-   "views_usual": 4726,
+   "momentum": 1.61,
+   "views_yesterday": 7664,
+   "views_usual": 4758,
    "views_30d": [
-    4899,
     4526,
     4901,
     5704,
@@ -824,10 +823,11 @@
     4622,
     5903,
     5606,
-    6909
+    6909,
+    7664
    ],
-   "news_24h": 30,
-   "news_usual": 7.0,
+   "news_24h": 21,
+   "news_usual": 10.0,
    "suggestions": [
     "harry potter hbo series",
     "harry potter hbo series trailer",
@@ -858,15 +858,14 @@
   },
   {
    "name": "Christmas 2026",
-   "days_to": 56,
+   "days_to": 55,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 1.11,
-   "views_yesterday": 2146,
-   "views_usual": 1932,
+   "momentum": 1.17,
+   "views_yesterday": 2283,
+   "views_usual": 1944,
    "views_30d": [
-    1661,
     1740,
     1560,
     1284,
@@ -895,14 +894,15 @@
     2283,
     2229,
     2191,
-    2146
+    2146,
+    2283
    ],
-   "news_24h": 56,
-   "news_usual": 39.0,
+   "news_24h": 49,
+   "news_usual": 44.5,
    "suggestions": [
     "christmas 2026",
     "christmas 2026 decor",
-    "christmas 2026 songs",
+    "christmas 2026 song",
     "christmas 2026 countdown",
     "christmas 2026 remix",
     "christmas 2026 new songs",
@@ -929,15 +929,14 @@
   },
   {
    "name": "New Year's Eve 2026",
-   "days_to": 62,
+   "days_to": 61,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.84,
-   "views_yesterday": 258,
+   "momentum": 0.98,
+   "views_yesterday": 300,
    "views_usual": 306,
    "views_30d": [
-    313,
     291,
     297,
     261,
@@ -966,9 +965,10 @@
     286,
     322,
     279,
-    258
+    258,
+    300
    ],
-   "news_24h": 8,
+   "news_24h": 6,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -999,15 +999,14 @@
   },
   {
    "name": "CES 2027",
-   "days_to": 68,
+   "days_to": 67,
    "phase": "steady",
    "level": "steady",
    "places": 0,
-   "momentum": 0.77,
-   "views_yesterday": 170,
+   "momentum": 0.78,
+   "views_yesterday": 172,
    "views_usual": 222,
    "views_30d": [
-    443,
     469,
     470,
     414,
@@ -1036,10 +1035,11 @@
     248,
     153,
     162,
-    170
+    170,
+    172
    ],
-   "news_24h": 8,
-   "news_usual": 5.0,
+   "news_24h": 6,
+   "news_usual": 6.0,
    "suggestions": [
     "ces 2027",
     "sony ces 2027",

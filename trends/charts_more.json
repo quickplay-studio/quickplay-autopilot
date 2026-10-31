@@ -1,38 +1,6 @@
 {
- "date": "2026-10-30",
+ "date": "2026-10-31",
  "previous": {
-  "albums_gb": [
-   "The Art of Loving by Olivia Dean",
-   "KPop Demon Hunters (Soundtrack from the Netflix Film) by KPop Demon Hunters Cast, HUNTR/X & Saja Boys",
-   "Visitor (Deluxe) by SIENNA SPIRO",
-   "To Fall Asleep To by Rain Sounds"
-  ],
-  "apps_gb": [
-   "InPost UK",
-   "Lloyds Mobile Banking",
-   "ChatGPT",
-   "ASDA",
-   "Claude by Anthropic",
-   "Whatnot: Shop, Sell, Connect",
-   "Google Maps",
-   "Amazon Shopping",
-   "StoryReel: Drama Shorts & TV"
-  ],
-  "albums_us": [],
-  "apps_us": [
-   "TikTok Pro - Events",
-   "Vinted: Pre-loved marketplace",
-   "Muse from Meta",
-   "ChatGPT",
-   "Capital One Mobile",
-   "Claude by Anthropic",
-   "Google Gemini",
-   "PineDrama - Short Dramas",
-   "Threads",
-   "Kalshi: Trade Sports & Events"
-  ]
- },
- "lists": {
   "albums_gb": [
    "To Fall Asleep To by Rain Sounds",
    "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy",
@@ -63,5 +31,35 @@
    "DramaWave - Dramas & Reels"
   ],
   "albums_us": []
+ },
+ "lists": {
+  "albums_gb": [
+   "To Fall Asleep To by Rain Sounds",
+   "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy"
+  ],
+  "apps_gb": [
+   "ChatGPT",
+   "InPost UK",
+   "Lloyds Mobile Banking",
+   "Uber: Rides, eats, and more",
+   "Claude by Anthropic",
+   "Google Maps",
+   "Whatnot: Shop, Sell, Connect",
+   "Amazon Shopping",
+   "Bolt: Request a Ride"
+  ],
+  "albums_us": [],
+  "apps_us": [
+   "TikTok Pro - Events",
+   "Muse from Meta",
+   "Vinted: Pre-loved marketplace",
+   "ChatGPT",
+   "Capital One Mobile",
+   "Claude by Anthropic",
+   "Kalshi: Trade Sports & Events",
+   "Uber - Rides, Eats, Hotels",
+   "PineDrama - Short Dramas",
+   "Partiful: Party Invite Maker"
+  ]
  }
 }

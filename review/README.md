@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 05:46): 26 of 1,000 subscribers · 16,257 of 10 million Shorts views in 90 days · 7,131 views in the last 24 hours (about 110,930 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 06:55): 26 of 1,000 subscribers · 16,352 of 10 million Shorts views in 90 days · 7,204 views in the last 24 hours (about 110,929 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 19:19 (UK): 7 scheduled, 143 public, 16 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 5 public, 6 scheduled | 4 | 1 | ⏳ 5 of 15 so far, 6 more scheduled |
+| Sat 31 Oct | 7 public, 4 scheduled | 4 | 1 | ⏳ 7 of 15 so far, 4 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -154,12 +154,12 @@ scheduled · 42 s · music: duty-calls · [script](../boards/done/QD-288.json) �
 ![QD-288](QD-288.jpg)
 
 ### Sat 31 Oct 7:00 · Messi vs Ronaldo: the record one of them missed
-scheduled · 30 s · music: duty-calls · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
+private · 30 s · music: duty-calls · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
 
 ![QD-287](QD-287.jpg)
 
 ### Sat 31 Oct 6:00 · Song Secrets #4: Michael Jackson's Thriller tops charts 37 weeks 🎵
-scheduled · 36 s · music: dance-with-you · [script](../boards/done/QD-280.json) · [YouTube](https://youtube.com/shorts/el4EkoNqHOk)
+private · 36 s · music: dance-with-you · [script](../boards/done/QD-280.json) · [YouTube](https://youtube.com/shorts/el4EkoNqHOk)
 
 ![QD-280](QD-280.jpg)
 

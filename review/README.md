@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 04:48): 26 of 1,000 subscribers · 16,240 of 10 million Shorts views in 90 days · 7,235 views in the last 24 hours (about 110,931 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 05:46): 26 of 1,000 subscribers · 16,257 of 10 million Shorts views in 90 days · 7,131 views in the last 24 hours (about 110,930 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 19:19 (UK): 7 scheduled, 143 public, 16 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 4 public, 7 scheduled | 4 | 1 | ⏳ 4 of 15 so far, 7 more scheduled |
+| Sat 31 Oct | 5 public, 6 scheduled | 4 | 1 | ⏳ 5 of 15 so far, 6 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -26,7 +26,6 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 Each narrator is tried on real Shorts and judged on viewers not swiping away (1.00 x = typical for Shorts posted around the same time). GitHub gives the winners more Shorts by itself.
 
 - isabella (British female, warm): 1.40 x typical, 34% stayed past the first seconds, 4 Shorts
-- daniel (British male, brisk): 1.00 x typical, 31% stayed past the first seconds, 15 Shorts
 - lily (British female, bright): 1.00 x typical, 26% stayed past the first seconds, 6 Shorts
 - lewis (British male, deeper and calm): 0.96 x typical, 23% stayed past the first seconds, 5 Shorts
 - george_quick (British male, clear and quicker): 0.82 x typical, 27% stayed past the first seconds, 5 Shorts
@@ -41,14 +40,14 @@ New versions of the captions, voice pace, camera, colour and opening are tried o
 - Testing captions: 68px weight 600 at 1290px, 3 words at a time, spoken word #FFFFFF, no panel (2 of 8 Shorts measured)
 - Testing voice: British male, 3.15 words a second (0 of 8 Shorts measured)
 - Testing energy: camera motion 0.7, punch-ins 0.03 (0 of 8 Shorts measured)
-- Testing grade: contrast(1.0) saturate(1.06) sepia(0.0) brightness(1.0), vignette 0.0 (13 of 8 Shorts measured)
+- Testing grade: contrast(1.0) saturate(1.0) sepia(0.05) brightness(1.0), vignette 0.0 (0 of 8 Shorts measured)
 - Testing opening: the picture alone for 3 words, then the hook's card (0 of 8 Shorts measured)
+- 2026-10-31: grade retired lab-grade-1027 (0.79x against 1.18x for natural over 13 Shorts)
+- 2026-10-31: voice retired daniel (1.00x against 1.40x for isabella over 15 Shorts)
 - 2026-10-30: opening retired lab-opening-1026 (1.10x against 1.13x for image_first over 10 Shorts)
 - 2026-10-30: energy retired lab-energy-1025 (0.99x against 1.17x for steady over 8 Shorts)
 - 2026-10-30: voice retired michael (1.19x against 1.57x for daniel over 11 Shorts)
 - 2026-10-28: voice retired george_dramatic (making room for a new test (1.03x over 9 Shorts))
-- 2026-10-28: voice retired lab-voice-1019 (0.88x against 1.04x for george over 8 Shorts)
-- 2026-10-28: captions retired lab-captions-1024 (0.90x against 1.20x for lab-captions-1019 over 9 Shorts)
 
 ## Needs a look
 

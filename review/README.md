@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 15:40): 31 of 1,000 subscribers · 16,691 of 10 million Shorts views in 90 days · 8,266 views in the last 24 hours (about 110,926 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 16:41): 31 of 1,000 subscribers · 17,547 of 10 million Shorts views in 90 days · 8,118 views in the last 24 hours (about 110,916 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 16:26 (UK): 15 scheduled, 135 public, 30 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 14 scheduled |
-| Sat 31 Oct | 16 public, 15 scheduled | 8 | 1 | ✅ done |
+| Sat 31 Oct | 17 public, 14 scheduled | 8 | 1 | ✅ done |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -146,6 +146,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-320** Star Stories #10: Ian McKellen 🎭 (rendering next)
+- **QD-321** Star Stories #12: Walter Koenig beat just one Chekov rival 🖖 (rendering next)
+
 ## On the channel (latest first)
 
 ### Sun 1 Nov 8:00 · Cars Explained #1: Carl Benz and the first modern motor car
@@ -219,7 +224,7 @@ scheduled · 28 s · music: level · [script](../boards/done/QD-305.json) · [Yo
 ![QD-305](QD-305.jpg)
 
 ### Sat 31 Oct 16:35 · Patrick Stewart: the number behind his legacy 🎬
-scheduled · 38 s · music: scale-the-mountain · [script](../boards/done/QD-300.json) · [YouTube](https://youtube.com/shorts/_isY2ryqXHA)
+private · 38 s · music: scale-the-mountain · [script](../boards/done/QD-300.json) · [YouTube](https://youtube.com/shorts/_isY2ryqXHA)
 
 ![QD-300](QD-300.jpg)
 

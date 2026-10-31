@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Saturday 31 October, 13:09 UK.
+Updated Saturday 31 October, 13:48 UK.
 
-**31 subscribers, 16,406 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**31 subscribers, 16,564 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,12 +27,12 @@ Updated Saturday 31 October, 13:09 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 31 of 500 (6.20%) | 16,406 of 3,000,000 (0.55%) | 33,152 |
-| Full, from 1 February 2027 | 31 of 1,000 (3.10%) | 16,406 of 10,000,000 (0.16%) | 110,929 |
+| Expanded, open now | 31 of 500 (6.20%) | 16,564 of 3,000,000 (0.55%) | 33,150 |
+| Full, from 1 February 2027 | 31 of 1,000 (3.10%) | 16,564 of 10,000,000 (0.17%) | 110,928 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,149 (to Wed 28 Oct) | 8,202 | 22 | 93 |
+| 8,149 (to Wed 28 Oct) | 8,418 | 22 | 93 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -40,7 +40,7 @@ The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged 
 
 Engaged views a day, 7-day average: **1,164**, up from 904 a week earlier.
 Engaged share (Shorts that hold viewers past the opening, 7-day median): **30%**, was 29% a week earlier.
-Loop vs frozen control: too few to tell (0): 0 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (0 so far).
+Loop vs frozen control: too few to tell (1): 1 control Shorts public 24 hours or more, 8 needed over 3 days or more that also have the loop's Shorts (1 so far).
 Sameness, how alike the channel's Shorts are (0 to 1, lower is better): **0.06** over 14 days to Sat 31 Oct, alert at 0.2; the commonest recipe is 4% of them (limit 35%).
 
 ```mermaid
@@ -109,7 +109,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 10 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 12 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok

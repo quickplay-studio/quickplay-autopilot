@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 11:41): 30 of 1,000 subscribers · 17,089 of 10 million Shorts views in 90 days · 8,167 views in the last 24 hours (about 110,921 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 12:52): 31 of 1,000 subscribers · 16,406 of 10 million Shorts views in 90 days · 8,202 views in the last 24 hours (about 110,929 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 11:25 (UK): 9 scheduled, 141 public, 22 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 9 public, 12 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 12 more scheduled |
+| Sat 31 Oct | 11 public, 10 scheduled | 8 | 1 | ⏳ 11 of 15 so far, 10 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -184,12 +184,12 @@ scheduled · 27 s · music: death-duel · [script](../boards/done/QD-297.json) �
 ![QD-297](QD-297.jpg)
 
 ### Sat 31 Oct 13:00 · Harry Kane Ballon d'Or: the detail behind the win
-scheduled · 28 s · music: across-seas-and-lands · [script](../boards/done/QD-295.json) · [YouTube](https://youtube.com/shorts/jwRA2EI0M0w)
+private · 28 s · music: across-seas-and-lands · [script](../boards/done/QD-295.json) · [YouTube](https://youtube.com/shorts/jwRA2EI0M0w)
 
 ![QD-295](QD-295.jpg)
 
 ### Sat 31 Oct 12:00 · GTA 6's morality scale tops out at Irredeemable
-scheduled · 29 s · music: risen · [script](../boards/done/QD-291.json) · [YouTube](https://youtube.com/shorts/-693GWV2F9w)
+private · 29 s · music: risen · [script](../boards/done/QD-291.json) · [YouTube](https://youtube.com/shorts/-693GWV2F9w)
 
 ![QD-291](QD-291.jpg)
 

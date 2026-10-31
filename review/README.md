@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Fri 30 Oct, 23:41): 25 of 1,000 subscribers · 15,538 of 10 million Shorts views in 90 days · 9,142 views in the last 24 hours (about 110,938 a day needed, 94 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 01:00): 26 of 1,000 subscribers · 15,611 of 10 million Shorts views in 90 days · 5,832 views in the last 24 hours (about 110,938 a day needed, 93 days left) · Instagram 1 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 19:19 (UK): 7 scheduled, 143 public, 16 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Fri 30 Oct 11:39).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 0:55).
 
 ## Posts by day
 
@@ -12,14 +12,14 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sat 31 Oct | 0 public, 11 scheduled | 0 | 0 | ⏳ 11 of 15 scheduled |
-| Fri 30 Oct | 10 public | 8 | 1 | ⏳ 10 of 15 so far |
+| Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
+| Sat 31 Oct | 1 public, 10 scheduled | 2 | 1 | ⏳ 1 of 15 so far, 10 more scheduled |
+| Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
 | Tue 27 Oct | 27 public | 8 | 1 | ✅ all out |
 | Mon 26 Oct | 12 public | 8 | 1 | ⚠️ 12 of 15 |
 | Sun 25 Oct | 18 public | 4 | 1 | ✅ all out |
-| Sat 24 Oct | 14 public | 26 | 3 | ⚠️ 14 of 15 |
 
 ## Voice test
 
@@ -180,7 +180,7 @@ scheduled · 38 s · music: twin-lynches · [script](../boards/done/QD-283.json)
 ![QD-283](QD-283.jpg)
 
 ### Sat 31 Oct 0:30 · William Contreras: 7th catcher World Series MVP 🏆
-scheduled · 29 s · music: once-upon-a-time · [script](../boards/done/QD-282.json) · [YouTube](https://youtube.com/shorts/YnvZjFVmJuE)
+private · 29 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-282.json) · [YouTube](https://youtube.com/shorts/YnvZjFVmJuE)
 
 ![QD-282](QD-282.jpg)
 
@@ -190,7 +190,7 @@ public · 28 views · 37 s · music: once-upon-a-time · [script](../boards/done
 ![QD-279](QD-279.jpg)
 
 ### Fri 30 Oct 14:00 · Ballon d'Or #4: Harry Kane Ballon d'Or: the 73 goal detail
-public · 45 views · 40 s · music: once-upon-a-time · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
+public · 45 views · 40 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
 
 ![QD-278](QD-278.jpg)
 

@@ -1,0 +1,191 @@
+{
+ "id": "QD-321",
+ "board": "boards/queue/QD-321.json",
+ "mode": "schedule",
+ "slot": "2026-11-01T02:30:00Z",
+ "rendered": "2026-10-31T16:43:23.321400+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"Walter Koenig\" read 61,127 times yesterday, 59.5x its usual 1,028",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Star Stories #12: Walter Koenig beat just one Chekov rival 🖖",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:232169 skipped: nearly black (brightness 0.02)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:960px-Walter_Koenig_Star_Trek.JPG?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail: 'imageinfo')",
+  "beat 4 reused a nearby picture (commons:File:960px-Walter_Koenig_Star_Trek.JPG?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail: 'imageinfo')",
+  "beat 7 reused a nearby picture (commons:File:960px-Walter_Koenig_Star_Trek.JPG?utm_source=en.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 11,
+  "pic_found_share": 0.57,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "after-sunset",
+ "social_music": "synthwave-emotions-580875",
+ "look": {
+  "captions": "low",
+  "voice": "heart",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 40.8,
+  "wps": 3.17,
+  "weak_beats": [],
+  "size_mb": 19.6,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 439.2,
+   "contrast": 0.224,
+   "face_area": 0.2634,
+   "text_area": 0.0352,
+   "caption_contrast": 4.65,
+   "by_frame": {
+    "sharpness": [
+     465.0,
+     470.1,
+     465.5,
+     356.2
+    ],
+    "contrast": [
+     0.224,
+     0.223,
+     0.224,
+     0.227
+    ],
+    "face_area": [
+     0.2417,
+     0.2417,
+     0.2567,
+     0.3136
+    ],
+    "text_area": [
+     0.0367,
+     0.0368,
+     0.0365,
+     0.031
+    ],
+    "caption_contrast": [
+     4.34,
+     4.65,
+     4.89,
+     4.65
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   5.8,
+   "none",
+   3
+  ],
+  [
+   5.8,
+   12.35,
+   "none",
+   4
+  ],
+  [
+   12.35,
+   17.9,
+   "none",
+   4
+  ],
+  [
+   17.9,
+   22.62,
+   "none",
+   3
+  ],
+  [
+   22.62,
+   28.09,
+   "none",
+   4
+  ],
+  [
+   28.09,
+   34.38,
+   "none",
+   4
+  ],
+  [
+   34.38,
+   40.74,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "29552",
+   "q": "retro television studio",
+   "t0": 0.0,
+   "t1": 13.98
+  },
+  {
+   "p": "pixabay",
+   "id": "5994",
+   "q": "concert stage lights",
+   "t0": 13.38,
+   "t1": 27.36
+  },
+  {
+   "p": "pixabay",
+   "id": "107140",
+   "q": "retro television studio",
+   "t0": 26.76,
+   "t1": 40.74
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T16:56:01Z",
+ "video": "KgW6cYULvCE",
+ "url": "https://youtube.com/shorts/KgW6cYULvCE",
+ "publish_at": "2026-11-01T02:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-11-01T02:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-321"
+}

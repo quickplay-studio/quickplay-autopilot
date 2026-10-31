@@ -1,0 +1,167 @@
+{
+ "id": "QD-320",
+ "board": "boards/queue/QD-320.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T23:55:00Z",
+ "rendered": "2026-10-31T16:43:24.108473+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Star Stories #10: Ian McKellen 🎭",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "once-upon-a-time",
+ "social_music": "heroic-epic-cinematic-421894",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1028",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 25.4,
+  "wps": 3.24,
+  "weak_beats": [],
+  "size_mb": 6.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 331.2,
+   "contrast": 0.241,
+   "face_area": 0.3179,
+   "text_area": 0.0704,
+   "caption_contrast": 14.92,
+   "by_frame": {
+    "sharpness": [
+     287.7,
+     347.9,
+     348.2,
+     341.0
+    ],
+    "contrast": [
+     0.237,
+     0.242,
+     0.242,
+     0.243
+    ],
+    "face_area": [
+     0.3345,
+     0.3099,
+     0.3155,
+     0.3117
+    ],
+    "text_area": [
+     0.07,
+     0.0712,
+     0.0709,
+     0.0697
+    ],
+    "caption_contrast": [
+     14.76,
+     15.29,
+     15.08,
+     14.41
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.42,
+   "none",
+   0
+  ],
+  [
+   3.42,
+   8.21,
+   "none",
+   2
+  ],
+  [
+   8.21,
+   14.51,
+   "none",
+   2
+  ],
+  [
+   14.51,
+   19.96,
+   "none",
+   2
+  ],
+  [
+   19.96,
+   23.44,
+   "none",
+   1
+  ],
+  [
+   23.44,
+   25.34,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "164215",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 12.97
+  },
+  {
+   "p": "pixabay",
+   "id": "164381",
+   "q": "movie camera setup",
+   "t0": 12.37,
+   "t1": 25.34
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T16:55:57Z",
+ "video": "J8hX9cLg30M",
+ "url": "https://youtube.com/shorts/J8hX9cLg30M",
+ "publish_at": "2026-10-31T23:55:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T23:55:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-320"
+}

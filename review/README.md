@@ -12,8 +12,8 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
-| Sun 1 Nov | 0 public, 5 scheduled | 0 | 0 | ⏳ 5 of 14 scheduled |
-| Sat 31 Oct | 17 public, 14 scheduled | 8 | 1 | ✅ done |
+| Sun 1 Nov | 0 public, 6 scheduled | 0 | 0 | ⏳ 6 of 14 scheduled |
+| Sat 31 Oct | 17 public, 15 scheduled | 8 | 1 | ✅ done |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -145,11 +145,6 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
-
-## In the queue
-
-- **QD-320** Star Stories #10: Ian McKellen 🎭 (rendering next)
-- **QD-321** Star Stories #12: Walter Koenig beat just one Chekov rival 🖖 (rendering next)
 
 ## On the channel (latest first)
 

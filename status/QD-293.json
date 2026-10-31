@@ -144,7 +144,6 @@
  "social_release": "social-QD-293",
  "engage": {
   "comment": "Ugyn4p3h6Q6Fyn3TsMN4AaABAg",
-  "playlist_error": "HttpError: <HttpError 409 when requesting https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&alt=json returned \"The operation was aborted.\". Details: \"[{'domain': 'youtube.CoreErrorD",
-  "playlist_tries": 1
+  "playlist": "Quickplay Daily: Food"
  }
 }

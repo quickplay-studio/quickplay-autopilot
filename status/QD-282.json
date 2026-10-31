@@ -151,5 +151,20 @@
   "publish_at": "2026-10-31T00:30:00Z",
   "upload_status": "uploaded"
  },
- "social_release": "social-QD-282"
+ "instagram": {
+  "media": "18096906191440919",
+  "at": "2026-10-31T00:57:43+00:00",
+  "caption": "full",
+  "trial": "no",
+  "thumb_ms": 1260,
+  "thumb": "accepted",
+  "pick": "category",
+  "hour": "any",
+  "favoured": true,
+  "hour_uk": 0
+ },
+ "facebook": {
+  "video": "1460054776223659",
+  "at": "2026-10-31T00:57:52+00:00"
+ }
 }

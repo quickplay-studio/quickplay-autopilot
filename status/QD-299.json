@@ -1,0 +1,179 @@
+{
+ "id": "QD-299",
+ "board": "boards/queue/QD-299.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T15:30:00Z",
+ "rendered": "2026-10-31T10:26:23.471197+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Film Facts #3: Patrick Stewart died on 28 October 2026",
+ "background_notes": [
+  "picked pixabay 1 (+0 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 31.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 526.1,
+   "contrast": 0.247,
+   "face_area": 0.3502,
+   "text_area": 0.0406,
+   "caption_contrast": 6.46,
+   "by_frame": {
+    "sharpness": [
+     509.4,
+     567.6,
+     560.6,
+     466.9
+    ],
+    "contrast": [
+     0.246,
+     0.248,
+     0.247,
+     0.245
+    ],
+    "face_area": [
+     0.362,
+     0.3306,
+     0.358,
+     0.3501
+    ],
+    "text_area": [
+     0.0435,
+     0.0432,
+     0.0431,
+     0.0325
+    ],
+    "caption_contrast": [
+     6.28,
+     6.48,
+     6.54,
+     6.44
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.57,
+   "none",
+   1
+  ],
+  [
+   3.57,
+   6.51,
+   "none",
+   2
+  ],
+  [
+   6.51,
+   10.46,
+   "none",
+   3
+  ],
+  [
+   10.46,
+   14.72,
+   "none",
+   3
+  ],
+  [
+   14.72,
+   18.33,
+   "none",
+   3
+  ],
+  [
+   18.33,
+   21.89,
+   "none",
+   2
+  ],
+  [
+   21.89,
+   26.01,
+   "none",
+   3
+  ],
+  [
+   26.01,
+   28.87,
+   "none",
+   2
+  ],
+  [
+   28.87,
+   31.24,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "380221",
+   "q": "theatre stage lights",
+   "t0": 0.0,
+   "t1": 31.24
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T10:50:15Z",
+ "video": "SzesUffWQxM",
+ "url": "https://youtube.com/shorts/SzesUffWQxM",
+ "publish_at": "2026-10-31T15:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T15:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-299"
+}

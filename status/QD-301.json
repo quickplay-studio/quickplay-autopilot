@@ -1,0 +1,165 @@
+{
+ "id": "QD-301",
+ "board": "boards/queue/QD-301.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T17:45:00Z",
+ "rendered": "2026-10-31T10:26:59.391796+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Film Facts #5: Patrick Stewart: a lifetime of theatre 🎭",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "george_quick",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 38.4,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 11.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 562.1,
+   "contrast": 0.16,
+   "face_area": 0.0,
+   "text_area": 0.0784,
+   "caption_contrast": 17.04,
+   "by_frame": {
+    "sharpness": [
+     435.4,
+     536.3,
+     629.8,
+     646.9
+    ],
+    "contrast": [
+     0.153,
+     0.159,
+     0.163,
+     0.165
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0761,
+     0.0737,
+     0.0808,
+     0.083
+    ],
+    "caption_contrast": [
+     17.12,
+     17.12,
+     16.82,
+     16.96
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.86,
+   "none",
+   0
+  ],
+  [
+   2.86,
+   9.12,
+   "none",
+   2
+  ],
+  [
+   9.12,
+   16.51,
+   "none",
+   2
+  ],
+  [
+   16.51,
+   23.19,
+   "none",
+   2
+  ],
+  [
+   23.19,
+   32.42,
+   "none",
+   2
+  ],
+  [
+   32.42,
+   35.61,
+   "none",
+   1
+  ],
+  [
+   35.61,
+   38.33,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "184133",
+   "q": "film camera rolling",
+   "t0": 0.0,
+   "t1": 38.33
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T10:50:19Z",
+ "video": "lpRMQY97GiY",
+ "url": "https://youtube.com/shorts/lpRMQY97GiY",
+ "publish_at": "2026-10-31T17:45:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T17:45:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-301"
+}

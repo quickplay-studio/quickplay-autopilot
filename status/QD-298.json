@@ -1,0 +1,180 @@
+{
+ "id": "QD-298",
+ "board": "boards/queue/QD-298.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T14:30:00Z",
+ "rendered": "2026-10-31T10:26:23.464832+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Patrick Stewart: Final Role Releases 18 December",
+ "background_notes": [
+  "picked pixabay 3 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 13,
+  "planned_real": 13,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 40.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 17.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 483.1,
+   "contrast": 0.159,
+   "face_area": 0.0112,
+   "text_area": 0.052,
+   "caption_contrast": 8.71,
+   "by_frame": {
+    "sharpness": [
+     422.7,
+     486.6,
+     464.8,
+     558.2
+    ],
+    "contrast": [
+     0.148,
+     0.149,
+     0.148,
+     0.192
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0448
+    ],
+    "text_area": [
+     0.0452,
+     0.0469,
+     0.0469,
+     0.0692
+    ],
+    "caption_contrast": [
+     8.65,
+     8.77,
+     8.64,
+     12.74
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.03,
+   "none",
+   2
+  ],
+  [
+   4.03,
+   10.23,
+   "none",
+   4
+  ],
+  [
+   10.23,
+   13.81,
+   "none",
+   2
+  ],
+  [
+   13.81,
+   19.18,
+   "none",
+   4
+  ],
+  [
+   19.18,
+   22.91,
+   "none",
+   2
+  ],
+  [
+   22.91,
+   28.06,
+   "none",
+   4
+  ],
+  [
+   28.06,
+   40.03,
+   "none",
+   8
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "26537",
+   "q": "cinema auditorium screen",
+   "t0": 0.0,
+   "t1": 13.74
+  },
+  {
+   "p": "pixabay",
+   "id": "62824",
+   "q": "movie theatre seats",
+   "t0": 13.14,
+   "t1": 26.89
+  },
+  {
+   "p": "pixabay",
+   "id": "28014",
+   "q": "film projector light",
+   "t0": 26.29,
+   "t1": 40.03
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T10:50:13Z",
+ "video": "NgG2Zi22cEg",
+ "url": "https://youtube.com/shorts/NgG2Zi22cEg",
+ "publish_at": "2026-10-31T14:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T14:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-298"
+}

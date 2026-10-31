@@ -1,0 +1,173 @@
+{
+ "id": "QD-300",
+ "board": "boards/queue/QD-300.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T16:35:00Z",
+ "rendered": "2026-10-31T10:26:30.688245+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Patrick Stewart: the number behind his legacy 🎬",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 11,
+  "planned_real": 11,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "scale-the-mountain",
+ "social_music": "epic-action-512484",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "heart",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 37.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 520.6,
+   "contrast": 0.159,
+   "face_area": 0.0,
+   "text_area": 0.075,
+   "caption_contrast": 17.19,
+   "by_frame": {
+    "sharpness": [
+     435.1,
+     534.8,
+     534.5,
+     578.0
+    ],
+    "contrast": [
+     0.153,
+     0.159,
+     0.159,
+     0.163
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0774,
+     0.0739,
+     0.072,
+     0.0769
+    ],
+    "caption_contrast": [
+     17.12,
+     17.12,
+     17.28,
+     17.27
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.31,
+   "none",
+   0
+  ],
+  [
+   2.31,
+   9.07,
+   "none",
+   2
+  ],
+  [
+   9.07,
+   15.97,
+   "none",
+   2
+  ],
+  [
+   15.97,
+   22.84,
+   "none",
+   2
+  ],
+  [
+   22.84,
+   28.08,
+   "none",
+   2
+  ],
+  [
+   28.08,
+   37.59,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "992",
+   "q": "film camera",
+   "t0": 0.0,
+   "t1": 12.93
+  },
+  {
+   "p": "pixabay",
+   "id": "1823",
+   "q": "movie theatre",
+   "t0": 12.33,
+   "t1": 25.26
+  },
+  {
+   "p": "pixabay",
+   "id": "16453",
+   "q": "red carpet",
+   "t0": 24.66,
+   "t1": 37.59
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T10:50:17Z",
+ "video": "_isY2ryqXHA",
+ "url": "https://youtube.com/shorts/_isY2ryqXHA",
+ "publish_at": "2026-10-31T16:35:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T16:35:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-300"
+}

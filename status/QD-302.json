@@ -1,0 +1,148 @@
+{
+ "id": "QD-302",
+ "board": "boards/queue/QD-302.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T18:50:00Z",
+ "rendered": "2026-10-31T10:27:07.952701+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Patrick Stewart: the legacy he leaves behind",
+ "background_notes": [
+  "picked nothing (+0 spares)"
+ ],
+ "background_note": "no background video (no clip found or downloaded): rendered with full-screen pictures",
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 4,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "impossible-sacrifice",
+ "social_music": "orchestral-discovery-score-572034",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 27.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.4,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 541.0,
+   "contrast": 0.246,
+   "face_area": 0.3506,
+   "text_area": 0.0429,
+   "caption_contrast": 6.45,
+   "by_frame": {
+    "sharpness": [
+     542.5,
+     577.7,
+     551.5,
+     492.4
+    ],
+    "contrast": [
+     0.246,
+     0.248,
+     0.246,
+     0.245
+    ],
+    "face_area": [
+     0.354,
+     0.3461,
+     0.352,
+     0.3501
+    ],
+    "text_area": [
+     0.0453,
+     0.0451,
+     0.046,
+     0.035
+    ],
+    "caption_contrast": [
+     6.38,
+     6.51,
+     6.76,
+     6.32
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.77,
+   "none",
+   1
+  ],
+  [
+   2.77,
+   6.83,
+   "none",
+   3
+  ],
+  [
+   6.83,
+   13.48,
+   "none",
+   4
+  ],
+  [
+   13.48,
+   18.35,
+   "none",
+   3
+  ],
+  [
+   18.35,
+   27.17,
+   "none",
+   6
+  ]
+ ],
+ "background": [],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T10:50:21Z",
+ "video": "AaQYePHIyoE",
+ "url": "https://youtube.com/shorts/AaQYePHIyoE",
+ "publish_at": "2026-10-31T18:50:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T18:50:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-302"
+}

@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Saturday 31 October, 08:49 UK.
+Updated Saturday 31 October, 09:45 UK.
 
-**28 subscribers, 16,592 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**29 subscribers, 16,504 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,12 +27,12 @@ Updated Saturday 31 October, 08:49 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 28 of 500 (5.60%) | 16,592 of 3,000,000 (0.55%) | 33,149 |
-| Full, from 1 February 2027 | 28 of 1,000 (2.80%) | 16,592 of 10,000,000 (0.17%) | 110,927 |
+| Expanded, open now | 29 of 500 (5.80%) | 16,504 of 3,000,000 (0.55%) | 33,150 |
+| Full, from 1 February 2027 | 29 of 1,000 (2.90%) | 16,504 of 10,000,000 (0.17%) | 110,928 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,147 (to Wed 28 Oct) | 7,726 | 17 | 93 |
+| 8,149 (to Wed 28 Oct) | 7,964 | 18 | 93 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -48,7 +48,7 @@ xychart-beta
     title "Engaged views a day, Quickplay Daily"
     x-axis ["18 Oct", "19 Oct", "20 Oct", "21 Oct", "22 Oct", "23 Oct", "24 Oct", "25 Oct", "26 Oct", "27 Oct", "28 Oct"]
     y-axis "Views" 0 --> 2000
-    line [694, 1118, 1482, 1310, 367, 1990, 942, 1488, 1074, 984, 1302]
+    line [694, 1118, 1482, 1310, 367, 1990, 942, 1490, 1074, 984, 1302]
 ```
 Days YouTube has reported, to Wed 28 Oct. More: [analytics/insights.md](analytics/insights.md).
 
@@ -58,14 +58,14 @@ Days YouTube has reported, to Wed 28 Oct. More: [analytics/insights.md](analytic
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| length | 25 to 34 s 40, 35 to 44 s 43 | running, leaning 25 to 34 s | 3 |
-| title emoji | emoji 41, none 45 | running, leaning emoji | 3 |
-| comment replies | on 47, off 42 | running, leaning off | 3 |
-| ending | loop 36, question 30 | running, leaning loop | 4 |
-| posting quarter (UK) | 06:00 to 12:00 30, 12:00 to 18:00 34 | running, leaning 06:00 to 12:00 | 4 |
-| title answer (stated or held back) | stated 31, held back 35 | running, leaning stated | 4 |
-| angles shown to the writer | shown 23, hidden 24 | running, leaning hidden | 5 |
-| first frame | cover 37, photo 25 | running, leaning cover | 5 |
+| title emoji | emoji 42, none 47 | running, leaning emoji | 7 |
+| comment replies | on 48, off 44 | running, leaning off | 7 |
+| length | 25 to 34 s 40, 35 to 44 s 46 | running, leaning 25 to 34 s | 8 |
+| ending | loop 37, question 32 | running, leaning loop | 10 |
+| posting quarter (UK) | 06:00 to 12:00 32, 12:00 to 18:00 35 | running, leaning 06:00 to 12:00 | 10 |
+| title answer (stated or held back) | stated 33, held back 36 | running, leaning stated | 10 |
+| camera energy | steady 33, lab 27 | running, leaning lab | 11 |
+| angles shown to the writer | shown 24, hidden 26 | running, leaning hidden | 12 |
 
 **Change ledger:** 280 changes, 93 live; verdicts so far: 56 worse, 53 no change, 40 better, 39 too early, 37 overlapped.
 
@@ -109,7 +109,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 8 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 9 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok

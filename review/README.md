@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 01:00): 26 of 1,000 subscribers · 15,611 of 10 million Shorts views in 90 days · 5,832 views in the last 24 hours (about 110,938 a day needed, 93 days left) · Instagram 1 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 02:51): 26 of 1,000 subscribers · 16,026 of 10 million Shorts views in 90 days · 7,128 views in the last 24 hours (about 110,933 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 19:19 (UK): 7 scheduled, 143 public, 16 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 0:55).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 1:55).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 1 public, 10 scheduled | 2 | 1 | ⏳ 1 of 15 so far, 10 more scheduled |
+| Sat 31 Oct | 3 public, 8 scheduled | 4 | 1 | ⏳ 3 of 15 so far, 8 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -170,12 +170,12 @@ scheduled · 33 s · music: rubberband · [script](../boards/done/QD-285.json) �
 ![QD-285](QD-285.jpg)
 
 ### Sat 31 Oct 3:00 · Walter Koenig: the hidden audition fact 🌟
-scheduled · 28 s · music: defying-gravity · [script](../boards/done/QD-284.json) · [YouTube](https://youtube.com/shorts/Tl5ullZxXYQ)
+private · 28 s · music: defying-gravity · [script](../boards/done/QD-284.json) · [YouTube](https://youtube.com/shorts/Tl5ullZxXYQ)
 
 ![QD-284](QD-284.jpg)
 
 ### Sat 31 Oct 1:30 · Claudia Winkleman leads Celebrity Traitors series two
-scheduled · 38 s · music: twin-lynches · [script](../boards/done/QD-283.json) · [YouTube](https://youtube.com/shorts/cJIA6wBfhMg)
+private · 38 s · music: twin-lynches · [script](../boards/done/QD-283.json) · [YouTube](https://youtube.com/shorts/cJIA6wBfhMg)
 
 ![QD-283](QD-283.jpg)
 
@@ -210,12 +210,12 @@ public · 244 views · 37 s · music: in-battery · [script](../boards/done/QD-2
 ![QD-275](QD-275.jpg)
 
 ### Fri 30 Oct 9:30 · Dune: Part Three #2: Timothée Chalamet: Dune 3 trailer arrives
-public · 24 views · 39 s · music: in-battery · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
+public · 24 views · 39 s · music: in-battery · on Instagram · [script](../boards/done/QD-274.json) · [YouTube](https://youtube.com/shorts/ybpJ2NLXQXg)
 
 ![QD-274](QD-274.jpg)
 
 ### Fri 30 Oct 8:00 · Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆
-public · 247 views · 27 s · music: fire-in-the-sky · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
+public · 247 views · 27 s · music: fire-in-the-sky · on Instagram · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
 
 ![QD-273](QD-273.jpg)
 

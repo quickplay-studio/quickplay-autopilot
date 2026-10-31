@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 02:51): 26 of 1,000 subscribers · 16,026 of 10 million Shorts views in 90 days · 7,128 views in the last 24 hours (about 110,933 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 03:48): 26 of 1,000 subscribers · 16,156 of 10 million Shorts views in 90 days · 7,170 views in the last 24 hours (about 110,932 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Fri 30 Oct 19:19 (UK): 7 scheduled, 143 public, 16 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 1:55).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 3:44).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 3 public, 8 scheduled | 4 | 1 | ⏳ 3 of 15 so far, 8 more scheduled |
+| Sat 31 Oct | 4 public, 7 scheduled | 4 | 1 | ⏳ 4 of 15 so far, 7 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -165,7 +165,7 @@ scheduled · 36 s · music: dance-with-you · [script](../boards/done/QD-280.jso
 ![QD-280](QD-280.jpg)
 
 ### Sat 31 Oct 4:00 · Emily McGonagle: the secret career change 🎙️
-scheduled · 33 s · music: rubberband · [script](../boards/done/QD-285.json) · [YouTube](https://youtube.com/shorts/YXfaK7pdxJg)
+private · 33 s · music: rubberband · [script](../boards/done/QD-285.json) · [YouTube](https://youtube.com/shorts/YXfaK7pdxJg)
 
 ![QD-285](QD-285.jpg)
 

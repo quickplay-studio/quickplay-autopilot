@@ -1,6 +1,6 @@
 {
- "started": "2026-10-31T11:15:29+00:00",
- "job": "trends",
+ "started": "2026-10-31T11:26:34+00:00",
+ "job": "write",
  "ok": true,
  "reason": "",
  "image": "ghcr.io/tashfeenahmed/freellmapi:v0.16.6",
@@ -34,12 +34,6 @@
   "linkup/linkup-search keys 0"
  ],
  "history": [
-  {
-   "t": "2026-10-30T16:30:14+00:00",
-   "job": "trends",
-   "ok": true,
-   "reason": ""
-  },
   {
    "t": "2026-10-30T19:10:25+00:00",
    "job": "trends",
@@ -81,9 +75,15 @@
    "job": "trends",
    "ok": true,
    "reason": ""
+  },
+  {
+   "t": "2026-10-31T11:26:34+00:00",
+   "job": "write",
+   "ok": true,
+   "reason": ""
   }
  ],
  "calls_total": 2,
- "tokens": 7898,
- "finished": "2026-10-31T11:25:49+00:00"
+ "tokens": 12926,
+ "finished": "2026-10-31T11:37:28+00:00"
 }

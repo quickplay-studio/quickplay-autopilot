@@ -11,6 +11,6 @@ Updated 2026-10-31. YouTube's inauthentic-content policy refuses monetisation to
 - irl: score 0.1269 on 2026-10-31 over 11 boards (alert at 0.2); commonest recipe 27% of the window: format one_detail, hook number, look minimal+low, series Did You Know.
   - most alike this week: QD-258 "Did You Know #6: Walter Koenig: Star Trek actor dies aged 90" and QD-222 "Did You Know #4: Walter Koenig: the Star Trek legend's final" (0.21)
   - most alike this week: QD-289 "Did You Know #9: Emily McGonagle: 8 voices in one show 🎙️" and QD-260 "Did You Know: Walter Koenig tribute: George Takei's touching" (0.21)
-- main: score 0.0631 on 2026-10-31 over 206 boards (alert at 0.2); commonest recipe 4% of the window: format one_detail, hook statement, look clean.
+- main: score 0.0637 on 2026-10-31 over 208 boards (alert at 0.2); commonest recipe 4% of the window: format one_detail, hook statement, look clean.
   - most alike this week: QD-255 "Star Stories #7: Walter Koenig: the audition secret you neve" and QD-253 "Walter Koenig: the audition secret you missed 🖖" (0.35)
   - most alike this week: QD-209 "GTA 6 hits consoles on 19 November 🎮" and QD-195 "Game Facts #3: GTA 6 is arriving on 19 November 2026" (0.30)

@@ -1,6 +1,6 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 13:48): 31 of 1,000 subscribers · 16,542 of 10 million Shorts views in 90 days · 8,352 views in the last 24 hours (about 110,927 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 14:41): 31 of 1,000 subscribers · 16,598 of 10 million Shorts views in 90 days · 8,290 views in the last 24 hours (about 110,927 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 13:48 (UK): 8 scheduled, 142 public, 22 uploads in the last 24 hours.
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 12 public, 9 scheduled | 8 | 1 | ⏳ 12 of 15 so far, 9 more scheduled |
+| Sat 31 Oct | 14 public, 7 scheduled | 8 | 1 | ⏳ 14 of 15 so far, 7 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -146,6 +146,24 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-305** Star Stories #6: Patrick Stewart was knighted for drama in 2010 👑 (rendering next)
+- **QD-306** Star Stories #8: Ian McKellen joins Marvel in Avengers Doomsday (rendering next)
+- **QD-307** Star Stories #10: Ian McKellen leads tributes to Sir Patrick Stewart (rendering next)
+- **QD-308** Star Stories #12: Ian McKellen: the history you missed 🎭 (rendering next)
+- **QD-309** Patrick Stewart: his final film role revealed 🎬 (rendering next)
+- **QD-310** Sport Shocks #6: Harry Kane: the 25 year wait ends (rendering next)
+- **QD-311** Final Fantasy Resonance: why critics love it (rendering next)
+- **QD-312** Sport Shocks #8: William Contreras: $10k to MVP 🧤 (rendering next)
+- **QD-313** Animals Explained #2: Golden Retrievers: The story of one puppy 🐾 (rendering next)
+- **QD-314** Cars Explained #1: Carl Benz and the first modern motor car (rendering next)
+- **QD-315** Game Lore #4: GTA 6 launches on 19 November 2026 with a twist (rendering next)
+- **QD-316** Level Up #4: GTA 6: the PC release date you're missing 💻 (rendering next)
+- **QD-317** Did You Know #10: Sir Patrick Stewart: the detail you missed 🎭 (rendering next)
+- **QD-318** Did You Know #11: Patrick Stewart was knighted in 2010 (rendering next)
+- **QD-319** Did You Know #12: Patrick Stewart: the secret to his success (rendering next)
+
 ## On the channel (latest first)
 
 ### Sat 31 Oct 21:05 · Patrick Stewart best moments: icon dies at 86 🎭
@@ -179,12 +197,12 @@ scheduled · 31 s · music: impossible-sacrifice · [script](../boards/done/QD-2
 ![QD-299](QD-299.jpg)
 
 ### Sat 31 Oct 14:30 · Patrick Stewart: Final Role Releases 18 December
-scheduled · 40 s · music: impossible-sacrifice · [script](../boards/done/QD-298.json) · [YouTube](https://youtube.com/shorts/NgG2Zi22cEg)
+private · 40 s · music: impossible-sacrifice · [script](../boards/done/QD-298.json) · [YouTube](https://youtube.com/shorts/NgG2Zi22cEg)
 
 ![QD-298](QD-298.jpg)
 
 ### Sat 31 Oct 14:00 · GTA 6: dog poop weapon 🚮
-scheduled · 27 s · music: across-seas-and-lands · [script](../boards/done/QD-296.json) · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
+private · 27 s · music: across-seas-and-lands · [script](../boards/done/QD-296.json) · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
 
 ![QD-296](QD-296.jpg)
 

@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 09:16): 28 of 1,000 subscribers · 16,458 of 10 million Shorts views in 90 days · 7,597 views in the last 24 hours (about 110,928 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 09:44): 29 of 1,000 subscribers · 16,504 of 10 million Shorts views in 90 days · 7,964 views in the last 24 hours (about 110,928 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 9:16 (UK): 3 scheduled, 147 public, 18 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 8:44).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 9:39).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 9 public, 2 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 2 more scheduled |
+| Sat 31 Oct | 9 public, 4 scheduled | 8 | 1 | ⏳ 9 of 15 so far, 4 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -146,18 +146,17 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
-## In the queue
-
-- **QD-295** Harry Kane Ballon d'Or: the detail behind the win (rendering next)
-- **QD-296** GTA 6: dog poop weapon 🚮 (rendering next)
-
 ## On the channel (latest first)
 
 ### Sat 31 Oct 14:00 · GTA 6: dog poop weapon 🚮
-scheduled · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
+scheduled · 27 s · music: across-seas-and-lands · [script](../boards/done/QD-296.json) · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
+
+![QD-296](QD-296.jpg)
 
 ### Sat 31 Oct 13:00 · Harry Kane Ballon d'Or: the detail behind the win
-scheduled · [YouTube](https://youtube.com/shorts/jwRA2EI0M0w)
+scheduled · 28 s · music: across-seas-and-lands · [script](../boards/done/QD-295.json) · [YouTube](https://youtube.com/shorts/jwRA2EI0M0w)
+
+![QD-295](QD-295.jpg)
 
 ### Sat 31 Oct 12:00 · GTA 6's morality scale tops out at Irredeemable
 scheduled · 29 s · music: risen · [script](../boards/done/QD-291.json) · [YouTube](https://youtube.com/shorts/-693GWV2F9w)

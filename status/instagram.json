@@ -1,71 +1,72 @@
 {
- "updated": "2026-10-30T19:25+00:00",
- "followers": 1,
- "followers_week_ago": 0,
- "reels": 115,
- "median_views": 114.0,
+ "updated": "2026-10-31T09:21+00:00",
+ "followers": 2,
+ "followers_week_ago": 1,
+ "reels": 121,
+ "median_views": 115.0,
  "own_medians": true,
  "min_reels": 15,
  "first": true,
  "favour_min": 1.05,
  "favoured": [
-  "Gaming"
+  "Gaming",
+  "Sport"
  ],
  "categories": [
   {
-   "category": "Gaming",
-   "median": 122.0,
-   "n": 23,
-   "score": 1.057,
+   "category": "Sport",
+   "median": 124.5,
+   "n": 28,
+   "score": 1.07,
    "favoured": true
   },
   {
-   "category": "Sport",
-   "median": 120.0,
-   "n": 26,
-   "score": 1.044,
-   "favoured": false
+   "category": "Gaming",
+   "median": 122.5,
+   "n": 24,
+   "score": 1.054,
+   "favoured": true
   },
   {
    "category": "Film",
    "median": 119.0,
-   "n": 15,
-   "score": 1.033,
+   "n": 14,
+   "score": 1.026,
    "favoured": false
   },
   {
    "category": "Animals",
    "median": 43.0,
    "n": 1,
-   "score": 0.85,
+   "score": 0.849,
+   "favoured": false
+  },
+  {
+   "category": "Entertainment",
+   "median": 82.5,
+   "n": 12,
+   "score": 0.791,
    "favoured": false
   },
   {
    "category": "Music",
    "median": 75.0,
    "n": 25,
-   "score": 0.705,
+   "score": 0.7,
    "favoured": false
   },
   {
    "category": "Science",
    "median": 38.0,
    "n": 10,
-   "score": 0.481,
-   "favoured": false
-  },
-  {
-   "category": "Entertainment",
-   "median": 18.5,
-   "n": 8,
-   "score": 0.327,
+   "score": 0.478,
    "favoured": false
   },
   {
    "category": "Tech",
    "median": 11.0,
    "n": 7,
-   "score": 0.256,
+   "score": 0.254,
    "favoured": false
   }
  ],
@@ -83,11 +84,11 @@
      "lift": ""
     },
     "no": {
-     "n": 18,
-     "median": 114.5,
+     "n": 26,
+     "median": 122.5,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.93"
+     "lift": "0.97"
     }
    },
    "paused": true
@@ -98,18 +99,18 @@
    "on": true,
    "arms": {
     "short": {
-     "n": 12,
-     "median": 118.0,
+     "n": 17,
+     "median": 123.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.95"
+     "lift": "0.92"
     },
     "full": {
-     "n": 7,
-     "median": 115.0,
+     "n": 10,
+     "median": 126.5,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.95"
+     "lift": "1.06"
     }
    },
    "paused": false
@@ -120,35 +121,35 @@
    "on": true,
    "arms": {
     "morning": {
-     "n": 7,
-     "median": 122.0,
+     "n": 12,
+     "median": 135.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "1.03"
+     "lift": "1.07"
     },
     "any": {
-     "n": 12,
-     "median": 111.0,
+     "n": 15,
+     "median": 114.0,
      "share": 0.5,
      "verdict": "about typical",
-     "lift": "0.89"
+     "lift": "0.9"
     }
    },
    "paused": false
   }
  },
  "week": {
-  "reels": 45,
-  "median": 119.0,
-  "before_reels": 70,
-  "before_median": 80.5
+  "reels": 35,
+  "median": 123.0,
+  "before_reels": 86,
+  "before_median": 105.0
  },
  "cover": {
-  "asked": 28,
-  "accepted": 28,
+  "asked": 36,
+  "accepted": 36,
   "refused": 0,
   "last": "accepted",
-  "last_at": "2026-10-30T08:00+00:00",
+  "last_at": "2026-10-31T08:45+00:00",
   "ok": true,
   "paused_until": null
  }

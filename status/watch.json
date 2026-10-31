@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T07:37+00:00",
+ "updated": "2026-10-31T08:47+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -138,7 +138,7 @@
     "the celebrity traitors season 1"
    ],
    "in": [
-    "Google Trends"
+    "Wikipedia top pages"
    ],
    "category": "Entertainment",
    "angles": [
@@ -209,9 +209,7 @@
     "halloween 2026 song",
     "halloween 2026 costumes"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Entertainment",
    "angles": [
     "most popular Halloween costumes 2026",
@@ -341,7 +339,7 @@
     21871,
     19387
    ],
-   "news_24h": 100,
+   "news_24h": 91,
    "news_usual": 88.0,
    "suggestions": [
     "gta 6",
@@ -483,7 +481,7 @@
     904,
     930
    ],
-   "news_24h": 7,
+   "news_24h": 8,
    "news_usual": 7.5,
    "suggestions": [
     "mama awards 2026",
@@ -756,7 +754,7 @@
     17411,
     14040
    ],
-   "news_24h": 38,
+   "news_24h": 29,
    "news_usual": 38.0,
    "suggestions": [
     "dune part three",
@@ -768,9 +766,7 @@
     "dune part three trailer breakdown",
     "dune part three reaction"
    ],
-   "in": [
-    "YouTube charts"
-   ],
+   "in": [],
    "category": "Film",
    "angles": [
     "Dune Part Three cast",
@@ -826,7 +822,7 @@
     6909,
     7664
    ],
-   "news_24h": 21,
+   "news_24h": 30,
    "news_usual": 10.0,
    "suggestions": [
     "harry potter hbo series",
@@ -897,7 +893,7 @@
     2146,
     2283
    ],
-   "news_24h": 49,
+   "news_24h": 57,
    "news_usual": 44.5,
    "suggestions": [
     "christmas 2026",
@@ -968,7 +964,7 @@
     258,
     300
    ],
-   "news_24h": 6,
+   "news_24h": 7,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -1038,7 +1034,7 @@
     170,
     172
    ],
-   "news_24h": 6,
+   "news_24h": 7,
    "news_usual": 6.0,
    "suggestions": [
     "ces 2027",
@@ -1061,6 +1057,64 @@
     "Consumer Electronics Show 2027"
    ],
    "wikipedia": "Consumer Electronics Show"
+  },
+  {
+   "name": "Patrick Stewart",
+   "auto": true,
+   "days_to": null,
+   "phase": "viral",
+   "momentum": 486.53,
+   "views_yesterday": 1882386,
+   "views_usual": null,
+   "views_30d": [],
+   "news_24h": null,
+   "news_usual": null,
+   "suggestions": [],
+   "in": [
+    "UK news",
+    "Wikipedia top pages"
+   ],
+   "category": "Entertainment",
+   "terms": [
+    "Patrick Stewart"
+   ],
+   "angles": [
+    "Patrick Stewart",
+    "Patrick Stewart analysis",
+    "Patrick Stewart reaction",
+    "Patrick Stewart history and records",
+    "Patrick Stewart explained",
+    "Patrick Stewart facts",
+    "Patrick Stewart star",
+    "Patrick Stewart rankings",
+    "Patrick Stewart by the numbers",
+    "Patrick Stewart best moments",
+    "Patrick Stewart what happens next",
+    "Patrick Stewart past winners"
+   ],
+   "rules": "A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
+   "wikipedia": "Patrick Stewart",
+   "viral": true,
+   "viral_since": "2026-10-31",
+   "angle_map": {
+    "patrick stewart": "latest",
+    "patrick stewart analysis": "why",
+    "patrick stewart reaction": "reaction",
+    "patrick stewart history and records": "records",
+    "patrick stewart explained": "explained",
+    "patrick stewart facts": "facts",
+    "patrick stewart star": "people",
+    "patrick stewart rankings": "rankings",
+    "patrick stewart by the numbers": "numbers",
+    "patrick stewart best moments": "moments",
+    "patrick stewart what happens next": "next",
+    "patrick stewart past winners": "past"
+   },
+   "mega": 10,
+   "level": "surging",
+   "places": 10,
+   "mega_since": "2026-10-31",
+   "mega_peak": 10
   }
  ]
 }

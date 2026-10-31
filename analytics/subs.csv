@@ -1,20 +1,21 @@
 feature,feature_label,value,n,days,views,subs,expected,subs_per_1k,typical_per_1k,lift,low,high,verdict,why
-subs:category,Subscribers: Category,Film,29,11,8408,8,4.57,0.95,0.54,1.52,0.87,3.16,early sign,not proven: 90% interval 0.87x to 3.16x includes typical
-subs:category,Subscribers: Category,Tech,8,6,682,1,0.62,1.47,0.91,1.15,0.08,7.67,about typical,
-subs:category,Subscribers: Category,Sport,28,9,6730,5,4.45,0.74,0.66,1.09,0.44,2.36,about typical,
-subs:category,Subscribers: Category,Gaming,25,10,3361,2,1.93,0.6,0.57,1.02,0.18,3.26,about typical,
+subs:category,Subscribers: Category,Film,31,12,10931,8,4.96,0.73,0.45,1.44,0.8,2.91,early sign,not proven: 90% interval 0.80x to 2.91x includes typical
+subs:category,Subscribers: Category,Tech,8,6,682,1,0.62,1.47,0.91,1.15,0.08,7.68,about typical,
+subs:category,Subscribers: Category,Gaming,24,9,3253,2,1.81,0.61,0.56,1.05,0.2,3.47,about typical,
 subs:category,Subscribers: Category,Animals,1,1,90,0,0.0,0.0,0.0,1.0,,,too few to tell,
-subs:category,Subscribers: Category,Science,6,4,988,0,0.18,0.0,0.18,0.92,0.0,16.81,about typical,
-subs:category,Subscribers: Category,Music,38,12,14172,7,11.25,0.49,0.79,0.68,0.29,1.17,early sign,not proven: 90% interval 0.29x to 1.17x includes typical; the two halves of the data disagree
-subs:category,Subscribers: Category,Entertainment,14,7,2576,0,1.83,0.0,0.71,0.52,0.0,1.64,early sign,not proven: 90% interval 0.00x to 1.64x includes typical
-subs:ending,Subscribers: Ending,follow line,6,3,1493,3,0.78,2.01,0.53,1.8,1.04,9.88,early sign,not proven: the two halves of the data disagree
-subs:ending,Subscribers: Ending,loop,14,6,2974,1,1.45,0.34,0.49,0.87,0.04,3.28,about typical,
-subs:ending,Subscribers: Ending,question,9,6,2381,0,1.12,0.0,0.47,0.64,0.0,2.68,early sign,not proven: 90% interval 0.00x to 2.68x includes typical
-subs:look_closing,Subscribers: Closing chip,chip,7,2,1812,0,0.0,0.0,0.0,1.0,,,about typical,
-subs:look_closing,Subscribers: Closing chip,none,7,2,1600,0,0.0,0.0,0.0,1.0,,,about typical,
+subs:category,Subscribers: Category,Sport,27,9,6109,4,4.06,0.65,0.66,0.99,0.34,2.26,about typical,
+subs:category,Subscribers: Category,Science,6,4,988,0,0.18,0.0,0.18,0.92,0.0,16.82,about typical,
+subs:category,Subscribers: Category,Music,40,13,14226,7,10.3,0.49,0.72,0.73,0.32,1.28,early sign,not proven: 90% interval 0.32x to 1.28x includes typical; the two halves of the data disagree
+subs:category,Subscribers: Category,Entertainment,15,8,2745,0,1.87,0.0,0.68,0.52,0.0,1.6,early sign,not proven: 90% interval 0.00x to 1.60x includes typical
+subs:ending,Subscribers: Ending,follow line,6,3,1493,3,0.78,2.01,0.52,1.8,1.04,9.9,early sign,not proven: the two halves of the data disagree
+subs:ending,Subscribers: Ending,loop,17,7,5842,2,2.41,0.34,0.41,0.91,0.15,2.61,about typical,
+subs:ending,Subscribers: Ending,question,11,7,2425,0,1.11,0.0,0.46,0.64,0.0,2.7,early sign,not proven: 90% interval 0.00x to 2.70x includes typical
+subs:look_closing,Subscribers: Closing chip,chip,10,3,3038,1,0.06,0.33,0.02,1.46,0.89,82.51,early sign,not proven: 90% interval 0.89x to 82.51x includes typical; a half has under 2 Shorts
+subs:look_closing,Subscribers: Closing chip,none,10,3,3321,0,0.94,0.0,0.28,0.68,0.0,3.17,early sign,not proven: 90% interval 0.00x to 3.17x includes typical; a half has under 2 Shorts
+subs:series,Subscribers: Series,Music Explained,2,2,164,0,0.01,0.0,0.04,1.0,0.0,446.06,too few to tell,
 subs:series,Subscribers: Series,Science Explained,1,1,533,0,0.0,0.0,0.0,1.0,,,too few to tell,
-subs:series,Subscribers: Series,Music Explained,1,1,144,0,0.0,0.0,0.0,1.0,,,too few to tell,
 subs:series,Subscribers: Series,Animals Explained,1,1,90,0,0.0,0.0,0.0,1.0,,,too few to tell,
-subs:series,Subscribers: Series,no series,150,12,36369,23,24.82,0.63,0.68,0.93,0.63,1.31,about typical,
-subs:sub_push,Subscribers: Subscribe line,none,9,2,2637,0,0.0,0.0,0.0,1.0,,,about typical,
-subs:sub_push,Subscribers: Subscribe line,spoken,5,2,775,0,0.0,0.0,0.0,1.0,,,about typical,
+subs:series,Subscribers: Series,no series,151,13,37097,22,23.05,0.59,0.62,0.96,0.65,1.36,about typical,
+subs:series,Subscribers: Series,Film Explained,1,1,1272,0,0.74,0.0,0.58,0.73,0.0,4.06,too few to tell,
+subs:sub_push,Subscribers: Subscribe line,none,12,3,4205,1,0.21,0.24,0.05,1.36,0.25,22.82,early sign,not proven: 90% interval 0.25x to 22.82x includes typical; a half has under 2 Shorts
+subs:sub_push,Subscribers: Subscribe line,spoken,6,3,1969,0,0.74,0.0,0.37,0.73,0.0,4.06,early sign,not proven: 90% interval 0.00x to 4.06x includes typical; a half has under 2 Shorts

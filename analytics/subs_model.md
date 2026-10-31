@@ -1,6 +1,6 @@
 # The channel-day subscriber model (advisory only)
 
-Updated 2026-10-30. pipeline/subs_daily.py: a ridge regression of subscribers gained per 1,000 views on the day's mix, within channel, weighted by views, over channel-days with 100 or more views. Nothing reads it yet. YouTube Analytics counts its days in Pacific time, the Shorts columns are UK days, so a day's subscribers can include the end of the day before.
+Updated 2026-10-31. pipeline/subs_daily.py: a ridge regression of subscribers gained per 1,000 views on the day's mix, within channel, weighted by views, over channel-days with 100 or more views. Nothing reads it yet. YouTube Analytics counts its days in Pacific time, the Shorts columns are UK days, so a day's subscribers can include the end of the day before.
 
 Channel-days used: 13.
 

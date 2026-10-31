@@ -1,176 +1,975 @@
 {
  "date": "2026-10-31",
- "built": "2026-10-31T07:40+00:00",
- "model": "gemini-3.5-flash-lite",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-31T09:16+00:00",
+ "model": "gemini-3.5-flash-lite + freellm:llama-3.3-70b",
+ "mode": "full",
+ "run": "morning",
  "errors": [],
  "topics": [
   {
-   "n": 9,
-   "topic": "GTA 6",
-   "signal": "watchlist: GTA 6 (build-up, 19 days to go)",
-   "category": "Gaming",
-   "what_is_new": "A snippet of GTA 6 gameplay featuring dog poop was shown in a South Park episode on 28 October 2026.",
+   "n": 14,
+   "topic": "Patrick Stewart",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "Sir Patrick Stewart passed away at the age of 86 on October 28, 2026, leading to widespread global tributes.",
    "hooks": [
-    "Grand Theft Auto 6 launches on 19 November 2026!",
-    "Play as Jason and Lucia in the fictional state of Leonida.",
-    "Rockstar's development teams more than doubled for this game."
+    "Did you know Sir Patrick Stewart was voted television's most bodacious man in 1992?",
+    "Sir Patrick Stewart began his career as a newspaper reporter before becoming a global icon."
    ],
    "sources": [
     [
-     "5 Must-Play New Xbox Games Coming in November, Including GTA 6",
-     "https://www.polygon.com/new-xbox-games-november-2026/",
-     "Polygon",
-     "2026-10-31"
+     "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
+     "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
+     "Space.com",
+     "2026-10-30"
     ],
     [
-     "New games in 2027: Fable, Final Fantasy 7, and (maybe) GTA 6 on PC",
-     "https://www.pcgamer.com/games/new-pc-games-2027/",
+     "Sir Patrick Stewart remembered as 'Mirfield's finest'",
+     "https://www.bbc.co.uk/news/articles/cm0qk2e9deqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
+     "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
      "PC Gamer",
      "2026-10-30"
     ],
     [
-     "Dog poo, anti-social behaviour, and Jason: Our latest look at GTA 6 gameplay comes from an episode of South Park",
-     "https://www.eurogamer.net/dog-poo-anti-social-behaviour-and-jason-our-latest-look-at-gta-6-gameplay-comes-from-the-latest-episode-of-south-park",
-     "Eurogamer",
-     "2026-10-29"
+     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "Guardian",
+     "2026-10-30"
     ],
     [
-     "GTA 6",
-     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Patrick Stewart",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
-     "sources": [
-      1,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "We’ll find out together when the gates to Vice City finally open on Nov. 19.",
-      "3": "and that Rockstar has been engaging with real-world locations to get the word about its latest sandbox game out into the world ahead of its",
-      "4": "Following two delays and further leaks, it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
-     }
-    },
-    {
-     "claim": "The story follows the criminal duo of Jason Duval and Lucia Caminos.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "And despite the fact that so much about it has leaked, it still feels like we know next to nothing about the Bonnie and Clyde-inspired",
-      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
-     }
-    },
-    {
-     "claim": "Rockstar's worldwide development teams more than doubled since Red Dead Redemption 2's release.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Rockstar’s open-world crime game promises to be a massive, boundary-pushing experience full of Florida flair.",
-      "4": "Rockstar's global development teams more than doubled since Red Dead Redemption 2."
-     }
-    },
-    {
-     "claim": "Grand Theft Auto 6 will be released on 19 November 2026.",
-     "sources": [
-      1,
-      4
-     ],
-     "evidence": {
-      "1": "Release date: Nov. 19",
-      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S"
-     }
-    },
-    {
-     "claim": "A PC version of Grand Theft Auto 6 has no confirmed release date yet.",
+     "claim": "Sir Patrick Stewart died at the age of 86 on Wednesday after suffering with Alzheimer's Disease and Lewy Body Dementia.",
      "sources": [
       2,
       3
      ],
      "evidence": {
-      "2": "Grand Theft Auto 6 (PC) Site | PC date TBD",
-      "3": "whispers of a PC version arriving in Q1 2027"
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "3": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief"
      }
     },
     {
-     "claim": "Grand Theft Auto 6 will be available on Xbox Series X/S.",
+     "claim": "Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to the end.",
      "sources": [
       1,
-      4
+      2
      ],
      "evidence": {
-      "1": "If you only took a quick glance at November’s release date calendar, you might walk away with the idea that Xbox players are only getting",
-      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S"
+      "1": "\"Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to",
+      "2": "He added: \"Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he"
+     }
+    },
+    {
+     "claim": "Stewart's final screen performance arrives on Dec. 18 with Avengers: Doomsday where he will present his Charles Xavier character once more.",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "His final screen performance arrives on Dec. 18 with \"Avengers: Doomsday\" where he’ll present his Charles Xavier character once more.",
+      "5": "He also acted in Hedda (1975), Excalibur (1981), Dune (1984), Robin Hood: Men in Tights (1993), Jeffrey (1995), Match (2014), Green Room (2015), and The"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died at the age of 86",
+     "sources": [
+      1,
+      2,
+      5
+     ],
+     "evidence": {
+      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was born in Mirfield in the West Riding of Yorkshire",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films",
+      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire"
+     }
+    },
+    {
+     "claim": "Patrick Stewart played Captain Jean-Luc Picard in Star Trek: The Next Generation",
+     "sources": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "on stage with the royal shakespeare company on tv as the dashing captain jean luc picard in star trek the next generation and in",
+      "2": "in a tv interview with fellow yorkshireman michael parkinson stewart said we did toy with using his regional accent when playing captain jean luc picard in the star trek franchise but he added it was incomprehensible to the",
+      "3": "his tenure as The Next Generation's Captain Jean-Luc Picard",
+      "5": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation"
+     }
+    },
+    {
+     "claim": "Patrick Stewart also played Professor Charles Xavier in the X-Men film series",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films",
+      "5": "in the starz sitcom blunt talk 2015 2016 in film stewart gained further stardom portraying professor charles xavier in the x men film series 2000 2017 reprising the"
+     }
+    },
+    {
+     "claim": "Ian McKellen was a friend and fellow actor of Patrick Stewart",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "of england which he loved to the end ian mckellen wrote on instagram of his x men co star and friend",
+      "2": "his beloved huddersfield town the club he followed from childhood stewart s friend and fellow legendary actor sir ian mckellen said stewart never forsook his origins"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "The game is set in a fictional state based on Florida and includes Vice City.",
+     "claim": "Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died on 28 October 2026",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 15,
+   "topic": "Patrick Stewart history and records",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Patrick Stewart started his career on stage before finding global fame?",
+    "Sir Patrick Stewart's legendary career spanned over seven decades.",
+    "From Shakespeare to Star Trek, Sir Patrick Stewart shaped sci-fi history."
+   ],
+   "sources": [
+    [
+     "Sir Patrick Stewart: A life in pictures",
+     "https://www.bbc.co.uk/news/articles/cj1dw9dynn2xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart history and records",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
+     }
+    },
+    {
+     "claim": "He was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    },
+    {
+     "claim": "He died at his home in Los Angeles on Thursday after a career that spanned more than seven decades.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Rockstar’s open-world crime game promises to be a massive, boundary-pushing experience full of Florida flair."
+      "1": "The star, who won acclaim on both stages and screens, died at his home in Los Angeles on Thursday after a career that spanned more"
      }
     },
     {
-     "claim": "The story follows the criminal duo Jason Duval and Lucia Caminos.",
+     "claim": "Sir Patrick Stewart died at his home in Los Angeles on 28 October 2026.",
      "sources": [
-      4
+      2
      ],
      "evidence": {
-      "4": "the fictional us state of leonida based on florida the story follows the criminal duo of jason duval and lucia caminos"
+      "2": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
      }
     },
     {
-     "claim": "Players can pick up dog poop and use it as a weapon.",
+     "claim": "He took on the role of Jean-Luc Picard on popular TV series Star Trek: The Next Generation in 1987.",
      "sources": [
-      3
+      1
      ],
      "evidence": {
-      "3": "dog taking a poop and people can pick up the dog poop you can throw things at the person with dog poop and if they choose to fight back you can pick up the dog poop and actually attack them"
+      "1": "In 1987, he took on the role of Jean-Luc Picard on popular TV series Star Trek: The Next Generation."
      }
     },
     {
-     "claim": "Early development started after Red Dead Redemption 2’s 2018 release and principal production began in 2020.",
+     "claim": "He reprised the role of Professor Charles Xavier in the Marvel Cinematic Universe, including in 2026 in Avengers: Doomsday.",
      "sources": [
-      4
+      1
      ],
      "evidence": {
-      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
-     }
-    },
-    {
-     "claim": "Rockstar’s staff grew from 2,441 to 4,711 employees across 12 offices during development.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "When Red Dead Redemption 2 released in 2018, Rockstar had 2,441 employees which grew to 4,711 across 12 offices during the development of Grand Theft"
+      "1": "He reprised the role multiple times over decades through the Marvel Cinematic Universe, including in 2026 in Avengers: Doomsday."
      }
     }
    ],
-   "images": []
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 16,
+   "topic": "Patrick Stewart facts",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Patrick Stewart died at the age of 86.",
+    "Patrick Stewart became chancellor of the University of Huddersfield in 2004.",
+    "In 1992 TV Guide readers voted Patrick Stewart television's most bodacious man."
+   ],
+   "sources": [
+    [
+     "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
+     "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
+     "Space.com",
+     "2026-10-30"
+    ],
+    [
+     "Sir Patrick Stewart remembered as 'Mirfield's finest'",
+     "https://www.bbc.co.uk/news/articles/cm0qk2e9deqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
+     "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
+     "PC Gamer",
+     "2026-10-30"
+    ],
+    [
+     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart facts",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Patrick Stewart died at the age of 86.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "3": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen wrote that Patrick Stewart was defined by being born and bred in Yorkshire.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "\"Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to",
+      "2": "his beloved huddersfield town the club he followed from childhood stewart s friend and fellow legendary actor sir ian mckellen said stewart never forsook his origins"
+     }
+    },
+    {
+     "claim": "Patrick Stewart left school at 15 and got a job as a reporter and obituary writer on the Dewsbury Reporter.",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "He left school at 15 and eventually got a job as a reporter and obituary writer on the Dewsbury Reporter.",
+      "5": "At the age of 15, he left school and increased his participation in local theatre. He supported himself by working as a newspaper reporter and"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was born on 13 July 1940 in Mirfield.",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "Born in Mirfield in 1940, Stewart attended Crowlees Church of England Junior and Infant School before moving onto Mirfield Secondary Modern School.",
+      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,"
+     }
+    },
+    {
+     "claim": "Patrick Stewart's mother Gladys was a textile worker who encouraged her three sons to take part in amateur dramatics.",
+     "sources": [
+      2,
+      5
+     ],
+     "evidence": {
+      "2": "His mother Gladys was a textile worker. She was active in amateur dramatics and encouraged her three sons to take part.",
+      "5": "and the sheep detectives 2026 early life and education patrick stewart was born on 13 july 1940 in mirfield in the west riding of yorkshire 1 2 3 to gladys n e barrowclough 4 a weaver and textile worker and"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Patrick Stewart became chancellor of the University of Huddersfield in 2004.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 2004 he became chancellor of the University of Huddersfield - a role he filled until 2015."
+     }
+    },
+    {
+     "claim": "In 1992 TV Guide readers voted Patrick Stewart television's most bodacious man.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Indeed, in 1992 TV Guide readers voted him television’s “most bodacious” man."
+     }
+    },
+    {
+     "claim": "Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    },
+    {
+     "claim": "Patrick Stewart joined the Royal Shakespeare Company in 1966.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966 and later acted in several productions with the Royal National Theatre."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 17,
+   "topic": "Patrick Stewart star",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "Global tributes poured in following the passing of Sir Patrick Stewart.",
+   "hooks": [
+    "Sir Patrick Stewart passed away at age 86.",
+    "He portrayed Professor Charles Xavier in the X Men films.",
+    "Readers voted him televisions most bodacious man in 1992."
+   ],
+   "sources": [
+    [
+     "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
+     "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
+     "Space.com",
+     "2026-10-30"
+    ],
+    [
+     "Sir Patrick Stewart remembered as 'Mirfield's finest'",
+     "https://www.bbc.co.uk/news/articles/cm0qk2e9deqeo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
+     "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
+     "PC Gamer",
+     "2026-10-30"
+    ],
+    [
+     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart star",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sir Patrick Stewart passed away at the age of 86.",
+     "sources": [
+      1,
+      2,
+      3,
+      5
+     ],
+     "evidence": {
+      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "3": "yesterday the world received the sad news that legendary stage and screen actor patrick stewart had died at the age of 86 following a brief and poignant journey with alzheimer s disease and lewy body dementia his passing has triggered",
+      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "He portrayed Professor Charles Xavier in the X Men film series.",
+     "sources": [
+      1,
+      2,
+      5
+     ],
+     "evidence": {
+      "1": "Whether on stage with the Royal Shakespeare Company, on TV as the dashing Captain Jean-Luc Picard in \"Star Trek: The Next Generation,\" and in Hollywood",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "5": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died at the age of 86",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was born in Yorkshire",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Before everything else, Patrick was defined by being born and bred in Yorkshire",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films"
+     }
+    },
+    {
+     "claim": "Patrick Stewart played Captain Jean-Luc Picard in Star Trek",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "on stage with the royal shakespeare company on tv as the dashing captain jean luc picard in star trek the next generation and in",
+      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films"
+     }
+    },
+    {
+     "claim": "Ian McKellen was a friend of Patrick Stewart",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "of england which he loved to the end ian mckellen wrote on instagram of his x men co star and friend",
+      "2": "his beloved huddersfield town the club he followed from childhood stewart s friend and fellow legendary actor sir ian mckellen said stewart never forsook his origins"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died after a brief journey with Alzheimer's Disease and Lewy Body Dementia",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "a flood of personal tributes are pouring in, reflecting this global treasure's wonderful life lived with a dignity and bravado that few mortals possess",
+      "3": "yesterday the world received the sad news that legendary stage and screen actor patrick stewart had died at the age of 86 following a brief and poignant journey with alzheimer s disease and lewy body dementia his passing has triggered"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Readers voted him televisions most bodacious man in 1992.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Indeed, in 1992 TV Guide readers voted him television’s “most bodacious” man."
+     }
+    },
+    {
+     "claim": "Patrick Stewart will appear in Avengers: Doomsday",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "he portrayed professor charles xavier stewart was always the consummate professional his final screen performance arrives on dec 18 with avengers doomsday where he ll present his charles xavier character once more"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 18,
+   "topic": "Patrick Stewart by the numbers",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Patrick Stewart was knighted in 2010?",
+    "Discover how Sir Patrick Stewart reached the age of 86.",
+    "Explore the incredible career of Star Trek star Sir Patrick Stewart."
+   ],
+   "sources": [
+    [
+     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Games industry honours beloved actor Sir Patrick Stewart, as the legendary Star Trek and X-Men actor passes away",
+     "https://www.eurogamer.net/patrick-stewart-dies-oblivion-uriel-septim-castlevania",
+     "Eurogamer",
+     "2026-10-30"
+    ],
+    [
+     "Sir Patrick Stewart: A life in pictures",
+     "https://www.bbc.co.uk/news/articles/cj1dw9dynn2xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart by the numbers",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sir Patrick Stewart was born in 1940.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "Born in 1940, his mother was a textile worker and his father was a former military officer whose experience during the wartime evacuation of Dunkirk",
+      "4": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart starred as Captain Jean-Luc Picard in Star Trek: The Next Generation.",
+     "sources": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "Nowhere was this more clear than during his stint on Star Trek: The Next Generation.",
+      "2": "Stewart, a poised and charming actor, was probably best known for his on-screen roles as Captain Jean-Luc Picard in Star Trek: The Next Generation, and",
+      "3": "In 1987, he took on the role of Jean-Luc Picard on popular TV series Star Trek: The Next Generation.",
+      "4": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994), a role he reprised"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart starred as Professor Charles Xavier in the X-Men film series.",
+     "sources": [
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "Stewart, a poised and charming actor, was probably best known for his on-screen roles as Captain Jean-Luc Picard in Star Trek: The Next Generation, and",
+      "3": "His scores of sci-fi fans reached new heights with his starring role as Professor Charles Xavier in the X-Men film series, which began in 2000.",
+      "4": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart appeared in the 1981 fantasy film Excalibur.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "In 1981, he was featured in 1981 fantasy film Excalibur, bringing him one step closer to his future sci-fi career.",
+      "4": "He also acted in Hedda (1975), Excalibur (1981), Dune (1984), Robin Hood: Men in Tights (1993), Jeffrey (1995), Match (2014), Green Room (2015), and The"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart appeared in the television series I, Claudius.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "His expertise in Shakespeare led to play a major role in the 1976 BBC television series I, Claudius.",
+      "4": "He acted in the television projects Fall of Eagles (1974), I, Claudius (1976), Tinker Tailor Soldier Spy (1979), Moby Dick (1998), A Christmas Carol (1999),"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart died at the age of 86.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "As I'm sure you're all now already aware, legendary British actor Sir Patrick Stewart has died, aged 86."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II in 2010.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 19,
+   "topic": "Patrick Stewart best moments",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "Sir Patrick Stewart passed away at the age of 86.",
+   "hooks": [
+    "Did you know Sir Patrick Stewart was knighted by Queen Elizabeth II in 2010?",
+    "Sir Patrick Stewart was born in Yorkshire on 13 July 1940.",
+    "Legendary actor Sir Patrick Stewart passed away at the age of 86."
+   ],
+   "sources": [
+    [
+     "Oh captain, our captain: Ars staff remembers Patrick Stewart",
+     "https://arstechnica.com/culture/2026/10/oh-captain-our-captain-ars-staff-remembers-patrick-stewart/",
+     "Ars Technica",
+     "2026-10-30"
+    ],
+    [
+     "From watching Star Trek to knighthood - Sir Patrick Stewart's memorable BBC moments",
+     "https://www.bbc.com/news/videos/c83vq2klqrd7o",
+     "BBC",
+     "2026-10-29"
+    ],
+    [
+     "Patrick Stewart best moments",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sir Patrick Stewart died at the age of 86 on 28 October 2026 at his home in Los Angeles.",
+     "sources": [
+      1,
+      2,
+      3
+     ],
+     "evidence": {
+      "1": "who died yesterday at the age of 86.",
+      "2": "The legendary actor, who has died aged 86, was best known for roles in Star Trek and X-Men, as well as his celebrated work with",
+      "3": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      1,
+      3
+     ],
+     "evidence": {
+      "1": "Born in Yorkshire, England, in 1940, the acting bug bit Stewart at the age of 12, when his English teacher handed out scripts for Shakespeare’s",
+      "3": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      2,
+      3
+     ],
+     "evidence": {
+      "2": "From watching Star Trek to knighthood - Sir Patrick Stewart's memorable BBC moments",
+      "3": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    }
+   ],
+   "one_source": [],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 20,
+   "topic": "Patrick Stewart what happens next",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Film",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Patrick Stewart was 86 years old when he passed away?",
+    "Patrick Stewart was voted television's most bodacious man in 1992!",
+    "How Patrick Stewart became an icon for bald men everywhere."
+   ],
+   "sources": [
+    [
+     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
+     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "Guardian",
+     "2026-10-30"
+    ],
+    [
+     "Patrick Stewart what happens next",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Sir Patrick Stewart died on 28 October 2026 at the age of 86.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "People were generally staggered to learn that he was 86 years old.",
+      "2": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Patrick Stewart played Captain Jean-Luc Picard in Star Trek: The Next Generation from 1987 to 1994.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "He was 47 years old when Star Trek: The Next Generation premiered in 1987, but he arguably looked a decade older than that.",
+      "2": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994), a role he reprised"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Patrick Stewart was born on 13 July 1940 in Mirfield.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3] to Gladys (née Barrowclough),[4] a weaver and textile worker,"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 42,
+   "topic": "Patrick Stewart analysis",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Discover how Patrick Stewart went from a troubled childhood to legendary status.",
+    "Did you know Patrick Stewart thought Star Trek would quickly fail?",
+    "Explore the remarkable 60-year career of the legendary Sir Patrick Stewart."
+   ],
+   "sources": [
+    [
+     "Patrick Stewart analysis",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
+     }
+    },
+    {
+     "claim": "He was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    },
+    {
+     "claim": "He made his Broadway debut in A Midsummer Night's Dream (1971).",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He made his Broadway debut in A Midsummer Night's Dream (1971)."
+     }
+    },
+    {
+     "claim": "He joined the Royal Shakespeare Company in 1966.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966 and later acted in several productions with the Royal National Theatre."
+     }
+    },
+    {
+     "claim": "His first professional stage appearance was on 19 May 1959 at the Theatre Royal, Bristol.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Stewart's first professional stage appearance was on 19 May 1959 at the Theatre Royal, Bristol (for the Bristol Old Vic Company), playing Cutpurse (a thief"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 43,
+   "topic": "Patrick Stewart reaction",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Discover the surprising life of legendary actor Sir Patrick Stewart."
+   ],
+   "sources": [
+    [
+     "Patrick Stewart reaction",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart died on 28 October 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "He was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    },
+    {
+     "claim": "He voiced CIA Deputy Director Avery Bullock in American Dad! from 2005 to 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "and the lion in winter 2003 he also took guest roles in the sitcoms frasier 2003 and extras 2005 and collaborated with seth macfarlane voicing cia deputy director avery bullock in the animated sitcom american dad 2005 2026 narrating the"
+     }
+    },
+    {
+     "claim": "His final film performance was in Avengers: Doomsday.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
   },
   {
    "n": 3,
    "topic": "Ballon d'Or 2026",
    "signal": "watchlist: Ballon d'Or 2026 (surging)",
    "category": "Sport",
-   "what_is_new": "Suspicious betting activity surrounding the Ballon d'Or results is currently under investigation by event organisers France Football.",
+   "what_is_new": "Suspicious betting activity surrounding the Ballon d'Or results has come under investigation.",
    "hooks": [
-    "Harry Kane wins the 2026 Ballon d'Or!",
-    "Alexia Putellas claims her third Ballon d'Or award!"
+    "Did Harry Kane really win the 2026 Ballon d'Or?",
+    "How did suspicious bets correctly predict the Ballon d'Or top five?",
+    "Alexia Putellas makes history with her third Ballon d'Or win!"
    ],
    "sources": [
     [
@@ -186,42 +985,56 @@
      ""
     ]
    ],
-   "verified": [],
+   "verified": [
+    {
+     "claim": "Harry Kane won the Men's Ballon d'Or at the ceremony at the London Palladium.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
+     }
+    },
+    {
+     "claim": "Harry Kane finished ahead of Kylian Mbappé and Lamine Yamal in the voting.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
+     }
+    }
+   ],
    "one_source": [
     {
-     "claim": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi."
-     }
-    },
-    {
-     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
-     }
-    },
-    {
-     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
-     }
-    },
-    {
-     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or.",
      "sources": [
       2
      ],
      "evidence": {
       "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "Suspicious bets that correctly predicted the exact top five finishing order of the Ballon d'Or are being investigated.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "A series of suspicious bets that correctly predicted the exact top-five finishing order of this year’s Ballon d’Or and generated almost $200,000 (£149,000) in winnings"
+     }
+    },
+    {
+     "claim": "The ceremony marked the first time the event was organised outside France or Switzerland.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "This also marked the first time the ceremony was organised outside France or Switzerland."
      }
     }
    ],
@@ -230,161 +1043,102 @@
    ]
   },
   {
-   "n": 19,
-   "topic": "my chemical romance",
-   "signal": "Google Trends US 200+",
-   "category": "Music",
+   "n": 4,
+   "topic": "Ballon d'Or 2026 facts",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "category": "Sport",
    "what_is_new": "",
    "hooks": [
-    "Did you know Hideo Kojima has a surprise voice cameo in a My Chemical Romance short film?",
-    "Billie Eilish and Phoebe Bridgers star in the new animated short film Prelude To The End.",
-    "Live Nation defended My Chemical Romance against a lawsuit over cheerleaders."
+    "Harry Kane has just won the Ballon d'Or!",
+    "Alexia Putellas has won the Ballon d'Or Feminin for the third time!"
    ],
    "sources": [
     [
-     "Live Nation Defends My Chemical Romance’s Dallas Cowboys Cheerleaders Lookalikes: It Was ‘Parody’",
-     "https://www.rollingstone.com/music/music-news/live-nation-my-chemical-romance-dallas-cowboys-cheerleaders-1235650825/",
-     "Rolling Stone",
-     "2026-10-31"
+     "'Anything is possible' - Harry Kane is first England player to win Ballon d'Or in 25 years",
+     "https://www.bbc.co.uk/newsround/articles/c574p3jkdp8xo",
+     "BBC",
+     "2026-10-27"
     ],
     [
-     "Hideo Kojima Makes Surprise Cameo in New My Chemical Romance Animated Short",
-     "https://www.ign.com/articles/hideo-kojima-makes-surprise-cameo-in-new-my-chemical-romance-animated-short",
-     "IGN",
-     "2026-10-30"
-    ],
-    [
-     "Billie Eilish, Phoebe Bridgers and more star in My Chemical Romance’s short film ‘Prelude To The End’",
-     "https://www.nme.com/news/music/billie-eilish-phoebe-bridgers-my-chemical-romances-short-film-prelude-to-the-end-3974702?utm_source=rss&utm_medium=rss&utm_campaign=billie-eilish-phoebe-bridgers-my-chemical-romances-short-film-prelude-to-the-end",
-     "NME",
-     "2026-10-30"
-    ],
-    [
-     "my chemical romance",
-     "https://en.wikipedia.org/wiki/My_Chemical_Romance",
+     "Ballon d'Or 2026 facts",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "Billie Eilish and Phoebe Bridgers contributed voice roles to the animated short film Prelude To The End.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Also featured in the list of Astrid's missed voicemails are Lost Weekend songwriter Phoebe Bridgers and Hit Me Hard and Soft hitmaker Billie Eilish.",
-      "3": "My Chemical Romance have released a new animated short film, ‘Prelude To The End’, featuring voice contributions from Billie Eilish, Phoebe Bridgers and others –"
-     }
-    },
-    {
-     "claim": "Live Nation defended the use of Dallas Cowboys Cheerleaders lookalike uniforms at three My Chemical Romance shows as a parody.",
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or for the first time in his career.",
      "sources": [
       1,
-      3
+      2
      ],
      "evidence": {
-      "1": "Live Nation is defending the use of lookalike Dallas Cowboys Cheerleader uniforms at a trio of My Chemical Romance shows at the Hollywood Bowl last",
-      "3": "The performances have made headlines after the company behind the Dallas Cowboys Cheerleaders launched legal action against the band over the use of lookalike uniforms"
+      "1": "England's Harry Kane has ended a 25-year wait to win the Ballon d'Or trophy.",
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
      }
     },
     {
-     "claim": "Hideo Kojima made a surprise voice cameo as The Teacher in the animated short film Prelude To The End.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "Death Stranding creator Hideo Kojima showed up for a cameo role in a new animated short from legendary rock outfit My Chemical Romance.",
-      "3": "Japanese video game designer Hideo Kojima plays a character known as The Teacher, while Scrubs actor John C. McGinley voices The Dean."
-     }
-    },
-    {
-     "claim": "Lauren Tsai directed the animated short film Prelude To The End in collaboration with her independent studio UNREAL INC.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "The seven-and-a-half-minute project, which arrived as a surprise drop yesterday evening, is a stop-motion, dark fairytale based on director Lauren Tsai's The Dying World.",
-      "3": "The film was made in collaboration with visual artist Lauren Tsai and arrives as the band continue celebrating the 20th anniversary of their landmark 2006"
-     }
-    },
-    {
-     "claim": "My Chemical Romance released an expanded 20th anniversary edition of The Black Parade featuring six bonus tracks.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "He then celebrated his involvement in the video with another post on X/Twitter.",
-      "3": "Meanwhile, MCR released an expanded 20th anniversary edition of ‘The Black Parade’ last Friday (October 23), featuring six bonus tracks, including previously unreleased recordings from"
-     }
-    },
-    {
-     "claim": "Prelude To The End was scheduled to be screened ahead of My Chemical Romance's final two Hollywood Bowl concerts.",
+     "claim": "Alexia Putellas won the Ballon d'Or Feminin for the third time.",
      "sources": [
       1,
-      3
+      2
      ],
      "evidence": {
-      "1": "Live Nation is defending the use of lookalike Dallas Cowboys Cheerleader uniforms at a trio of My Chemical Romance shows at the Hollywood Bowl last",
-      "3": "‘Prelude To The End’ will also be screened ahead of My Chemical Romance’s final two Hollywood Bowl concerts tonight (October 30) and tomorrow (October 31)."
+      "1": "Spanish midfielder Alexia Putellas won the Ballon d'Or Feminin for the third time.",
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     },
     {
-     "claim": "The Dallas Cowboys Cheerleaders parent company Pro Silver Star filed a lawsuit against My Chemical Romance and Live Nation.",
+     "claim": "Harry Kane became the fifth Englishman to win the award.",
      "sources": [
       1,
-      3
+      2
      ],
      "evidence": {
-      "1": "The iconic cheer squad sued the band and Live Nation last week, claiming that knockoff versions of its signature blue-and-white uniforms were worn by dancers",
-      "3": "The performances have made headlines after the company behind the Dallas Cowboys Cheerleaders launched legal action against the band over the use of lookalike uniforms"
+      "1": "He is now the fifth Englishman to win, following Stanley Matthews, Bobby Charlton and double winner Kevin Keegan.",
+      "2": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
      }
     }
    ],
-   "one_source": [
-    {
-     "claim": "Mikey Way suggested the name My Chemical Romance after being struck by Irvine Welsh's book Ecstasy Three Tales of Chemical Romance.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "The name of the band was suggested by bass guitarist Mikey Way, younger brother of Gerard, who was working in a Barnes & Noble when"
-     }
-    }
-   ],
+   "one_source": [],
    "images": [
-    "commons:File:MCR820_(cropped).jpg"
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
    ]
   },
   {
-   "n": 33,
-   "topic": "Final Fantasy Resonance",
-   "signal": "Bluesky trending, 2,481 posts",
+   "n": 7,
+   "topic": "Halloween around the world",
+   "signal": "watchlist: Halloween 2026 (launch)",
    "category": "Gaming",
    "what_is_new": "",
    "hooks": [
-    "Did you know Final Fantasy Resonance is co-developed by Square Enix and Lancarse?"
+    "Celebrate Halloween on a scorched alien world!",
+    "Mouthwashing is finally on consoles and Xbox Game Pass this Halloween.",
+    "Halloween is observed on 31 October around the world."
    ],
    "sources": [
     [
-     "How to open the Nameless Ruins chest in Final Fantasy Resonance",
-     "https://www.polygon.com/final-fantasy-resonance-nameless-ruins-chest-how-to-open/",
-     "Polygon",
-     "2026-10-28"
+     "Think Halloween is scary? This scorched alien world is a real-life cosmic horror story",
+     "https://www.space.com/astronomy/exoplanets/think-halloween-is-scary-this-scorched-alien-world-is-a-real-life-cosmic-horror-story",
+     "Space.com",
+     "2026-10-30"
     ],
     [
-     "Things Final Fantasy Resonance Doesn't Tell You",
-     "https://www.ign.com/wikis/final-fantasy-resonance/Things_Final_Fantasy_Resonance_Doesn%27t_Tell_You",
-     "IGN",
-     "2026-10-26"
+     "‘I left shellshocked’: writers on their scariest non-horror movies",
+     "https://www.theguardian.com/film/2026/oct/30/scariest-non-horror-movies",
+     "Guardian",
+     "2026-10-30"
     ],
     [
-     "Final Fantasy Resonance",
-     "https://en.wikipedia.org/wiki/Final_Fantasy_Resonance",
+     "Mouthwashing is finally on consoles and Xbox Game Pass, and it's a Halloween must for horror fans",
+     "https://www.eurogamer.net/mouthwashing-game-pass-ps5-ps4-switch-xbox-now-playing",
+     "Eurogamer",
+     "2026-10-29"
+    ],
+    [
+     "Halloween around the world",
+     "https://en.wikipedia.org/wiki/Halloween",
      "Wikipedia",
      ""
     ]
@@ -392,16 +1146,63 @@
    "verified": [],
    "one_source": [
     {
-     "claim": "Final Fantasy Resonance is a 2026 role-playing video game co-developed by Square Enix and Lancarse and published by Square Enix.",
+     "claim": "Halloween is observed in many countries on 31 October, the eve of Western Christianity's feast of All Hallows' Day.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Halloween,[a] also known as All Hallows' Eve[9] or All Saints' Eve,[10] is a celebration observed in many countries on 31 October, the eve of Western"
+     }
+    },
+    {
+     "claim": "Mouthwashing is developed by Wrong Organ and is available for consoles and Xbox Game Pass.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "Final Fantasy Resonance is a 2026 role-playing video game co-developed by Square Enix and Lancarse and published by Square Enix."
+      "3": "Developed by Wrong Organ, Mouthwashing rightly earned a lot of praise when it was released in 2024; it's an extraordinary first-person horror adventure game placing"
+     }
+    },
+    {
+     "claim": "Halloween is celebrated on 31 October",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Halloween,[a] also known as All Hallows' Eve[9] or All Saints' Eve,[10] is a celebration observed in many countries on 31 October"
+     }
+    },
+    {
+     "claim": "Halloween has Christian origins",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "halloween comes from all hallows eve being the night before all hallows day all saints day which is followed by all souls day on 2 november these three days are a part of allhallowtide a time when western christians honour"
+     }
+    },
+    {
+     "claim": "The word Halloween originates from Christianity",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The word Halloween or Hallowe'en comes from the Lowland Scots form of All Hallows' Eve (the evening before All Hallows' Day):"
+     }
+    },
+    {
+     "claim": "Trick-or-treating may have originated from the custom of souling",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "The All Souls' Day custom of baking and sharing soul cakes for all christened souls[49] has been suggested as the origin of trick-or-treating"
      }
     }
    ],
-   "images": []
+   "images": [
+    "commons:File:Jack-o'-Lantern_2003-10-31.jpg"
+   ]
   }
  ]
 }

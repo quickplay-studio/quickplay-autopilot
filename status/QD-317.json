@@ -1,0 +1,185 @@
+{
+ "id": "QD-317",
+ "board": "boards/queue/QD-317.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T17:30:00Z",
+ "rendered": "2026-10-31T15:20:02.927699+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Did You Know #10: Sir Patrick Stewart: the detail you missed 🎭",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 37.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 16.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 578.2,
+   "contrast": 0.244,
+   "face_area": 0.3501,
+   "text_area": 0.0439,
+   "caption_contrast": 6.57,
+   "by_frame": {
+    "sharpness": [
+     551.8,
+     617.6,
+     607.2,
+     536.0
+    ],
+    "contrast": [
+     0.244,
+     0.246,
+     0.244,
+     0.243
+    ],
+    "face_area": [
+     0.358,
+     0.3442,
+     0.3501,
+     0.3481
+    ],
+    "text_area": [
+     0.0468,
+     0.0463,
+     0.045,
+     0.0376
+    ],
+    "caption_contrast": [
+     6.3,
+     6.58,
+     6.56,
+     6.78
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.91,
+   "none",
+   1
+  ],
+  [
+   2.91,
+   8.44,
+   "none",
+   4
+  ],
+  [
+   8.44,
+   13.38,
+   "none",
+   3
+  ],
+  [
+   13.38,
+   18.76,
+   "none",
+   4
+  ],
+  [
+   18.76,
+   25.34,
+   "none",
+   4
+  ],
+  [
+   25.34,
+   28.18,
+   "none",
+   2
+  ],
+  [
+   28.18,
+   31.79,
+   "none",
+   3
+  ],
+  [
+   31.79,
+   37.44,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "3904",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 12.88
+  },
+  {
+   "p": "pixabay",
+   "id": "262635",
+   "q": "movie camera setup",
+   "t0": 12.28,
+   "t1": 25.16
+  },
+  {
+   "p": "pixabay",
+   "id": "132058",
+   "q": "city lights night",
+   "t0": 24.56,
+   "t1": 37.43
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:43:00Z",
+ "video": "eEP3BUqItNM",
+ "url": "https://youtube.com/shorts/eEP3BUqItNM",
+ "publish_at": "2026-10-31T17:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T17:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

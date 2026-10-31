@@ -1,0 +1,191 @@
+{
+ "id": "QD-308",
+ "board": "boards/queue/QD-308.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T22:15:00Z",
+ "rendered": "2026-10-31T14:53:56.255553+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Star Stories #12: Ian McKellen: the history you missed 🎭",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "lab-voice-1028",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 41.9,
+  "wps": 3.23,
+  "weak_beats": [],
+  "size_mb": 12.9,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 584.8,
+   "contrast": 0.17,
+   "face_area": 0.3457,
+   "text_area": 0.1709,
+   "caption_contrast": 16.63,
+   "by_frame": {
+    "sharpness": [
+     445.1,
+     623.8,
+     622.3,
+     648.0
+    ],
+    "contrast": [
+     0.157,
+     0.174,
+     0.174,
+     0.175
+    ],
+    "face_area": [
+     0.3501,
+     0.3364,
+     0.352,
+     0.3442
+    ],
+    "text_area": [
+     0.1344,
+     0.1805,
+     0.1787,
+     0.1899
+    ],
+    "caption_contrast": [
+     16.27,
+     17.12,
+     16.61,
+     16.66
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.0,
+   "title",
+   0
+  ],
+  [
+   4.0,
+   8.52,
+   "none",
+   1
+  ],
+  [
+   8.52,
+   13.98,
+   "none",
+   1
+  ],
+  [
+   13.98,
+   19.17,
+   "none",
+   1
+  ],
+  [
+   19.17,
+   24.62,
+   "none",
+   1
+  ],
+  [
+   24.62,
+   29.84,
+   "none",
+   1
+  ],
+  [
+   29.84,
+   34.43,
+   "none",
+   1
+  ],
+  [
+   34.43,
+   38.78,
+   "none",
+   1
+  ],
+  [
+   38.78,
+   41.84,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "186514",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 14.35
+  },
+  {
+   "p": "pixabay",
+   "id": "90933",
+   "q": "university campus grounds",
+   "t0": 13.75,
+   "t1": 28.09
+  },
+  {
+   "p": "pixabay",
+   "id": "220942",
+   "q": "city lights night",
+   "t0": 27.49,
+   "t1": 41.84
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:34Z",
+ "video": "fbhBe--2Ibg",
+ "url": "https://youtube.com/shorts/fbhBe--2Ibg",
+ "publish_at": "2026-10-31T22:15:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T22:15:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-308"
+}

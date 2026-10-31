@@ -1,0 +1,168 @@
+{
+ "id": "QD-305",
+ "board": "boards/queue/QD-305.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T17:10:00Z",
+ "rendered": "2026-10-31T14:53:52.103672+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "12:00 to 18:00"
+  }
+ },
+ "title": "Star Stories #6: Patrick Stewart was knighted for drama in 2010 👑",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)",
+  "pixabay:3742 skipped: only 960x540, needs 720p"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "social_music": "uplifting-uplifting-music-513147",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "none"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 27.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 689.7,
+   "contrast": 0.24,
+   "face_area": 0.1509,
+   "text_area": 0.0867,
+   "caption_contrast": 16.0,
+   "by_frame": {
+    "sharpness": [
+     627.3,
+     721.5,
+     711.3,
+     698.8
+    ],
+    "contrast": [
+     0.238,
+     0.24,
+     0.24,
+     0.24
+    ],
+    "face_area": [
+     0.3155,
+     0.0,
+     0.288,
+     0.0
+    ],
+    "text_area": [
+     0.0872,
+     0.0841,
+     0.0841,
+     0.0916
+    ],
+    "caption_contrast": [
+     15.98,
+     16.02,
+     15.96,
+     16.02
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.14,
+   "none",
+   0
+  ],
+  [
+   4.14,
+   8.78,
+   "none",
+   2
+  ],
+  [
+   8.78,
+   13.26,
+   "none",
+   1
+  ],
+  [
+   13.26,
+   20.3,
+   "stat",
+   1
+  ],
+  [
+   20.3,
+   24.5,
+   "none",
+   1
+  ],
+  [
+   24.5,
+   27.6,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "233983",
+   "q": "city lights night",
+   "t0": 0.0,
+   "t1": 14.1
+  },
+  {
+   "p": "pixabay",
+   "id": "28860",
+   "q": "red carpet lights",
+   "t0": 13.5,
+   "t1": 27.6
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:25Z",
+ "video": "wWsYuR07DXk",
+ "url": "https://youtube.com/shorts/wWsYuR07DXk",
+ "publish_at": "2026-10-31T17:10:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T17:10:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-305"
+}

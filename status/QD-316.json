@@ -1,0 +1,177 @@
+{
+ "id": "QD-316",
+ "board": "boards/queue/QD-316.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T23:30:00Z",
+ "rendered": "2026-10-31T15:20:14.805479+00:00",
+ "channel": "gaming",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Level Up #4: GTA 6: the PC release date you're missing 💻",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "paradigm",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "heart",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 38.8,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 8.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 438.7,
+   "contrast": 0.13,
+   "face_area": 0.0042,
+   "text_area": 0.0525,
+   "caption_contrast": 16.53,
+   "by_frame": {
+    "sharpness": [
+     411.4,
+     424.1,
+     425.3,
+     494.0
+    ],
+    "contrast": [
+     0.13,
+     0.13,
+     0.129,
+     0.131
+    ],
+    "face_area": [
+     0.0044,
+     0.0,
+     0.0061,
+     0.0064
+    ],
+    "text_area": [
+     0.0498,
+     0.0494,
+     0.0494,
+     0.0612
+    ],
+    "caption_contrast": [
+     16.5,
+     17.03,
+     16.42,
+     16.55
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.95,
+   "none",
+   0
+  ],
+  [
+   2.95,
+   8.68,
+   "none",
+   1
+  ],
+  [
+   8.68,
+   13.21,
+   "none",
+   1
+  ],
+  [
+   13.21,
+   18.61,
+   "none",
+   1
+  ],
+  [
+   18.61,
+   23.61,
+   "none",
+   1
+  ],
+  [
+   23.61,
+   28.52,
+   "none",
+   1
+  ],
+  [
+   28.52,
+   34.72,
+   "none",
+   1
+  ],
+  [
+   34.72,
+   38.8,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "99255",
+   "q": "video game controller",
+   "t0": 0.0,
+   "t1": 19.7
+  },
+  {
+   "p": "pixabay",
+   "id": "11317",
+   "q": "gaming screen",
+   "t0": 19.1,
+   "t1": 38.79
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:55Z",
+ "video": "iFZNr78hxWw",
+ "url": "https://youtube.com/shorts/iFZNr78hxWw",
+ "publish_at": "2026-10-31T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T23:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

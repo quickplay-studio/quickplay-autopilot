@@ -1,0 +1,166 @@
+{
+ "id": "QD-319",
+ "board": "boards/queue/QD-319.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T23:30:00Z",
+ "rendered": "2026-10-31T15:26:02.804872+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Did You Know #12: Patrick Stewart: the secret to his success",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 4,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "lab-grade-1031",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 26.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 11.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 540.9,
+   "contrast": 0.237,
+   "face_area": 0.2616,
+   "text_area": 0.0434,
+   "caption_contrast": 6.39,
+   "by_frame": {
+    "sharpness": [
+     561.3,
+     630.8,
+     610.7,
+     360.9
+    ],
+    "contrast": [
+     0.247,
+     0.248,
+     0.247,
+     0.208
+    ],
+    "face_area": [
+     0.352,
+     0.3442,
+     0.3501,
+     0.0
+    ],
+    "text_area": [
+     0.0455,
+     0.0465,
+     0.0464,
+     0.0355
+    ],
+    "caption_contrast": [
+     6.27,
+     6.51,
+     6.53,
+     4.53
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.6,
+   "none",
+   1
+  ],
+  [
+   2.6,
+   7.32,
+   "none",
+   3
+  ],
+  [
+   7.32,
+   12.26,
+   "none",
+   3
+  ],
+  [
+   12.26,
+   14.9,
+   "none",
+   2
+  ],
+  [
+   14.9,
+   19.49,
+   "none",
+   3
+  ],
+  [
+   19.49,
+   23.62,
+   "none",
+   3
+  ],
+  [
+   23.62,
+   26.35,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "65801",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 26.35
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:43:05Z",
+ "video": "TRLa5tTsPpY",
+ "url": "https://youtube.com/shorts/TRLa5tTsPpY",
+ "publish_at": "2026-10-31T23:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T23:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

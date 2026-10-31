@@ -1,0 +1,184 @@
+{
+ "id": "QD-309",
+ "board": "boards/queue/QD-309.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T23:20:00Z",
+ "rendered": "2026-10-31T14:53:52.309485+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Patrick Stewart: his final film role revealed 🎬",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 8,
+  "planned_real": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "lab-captions-1028",
+  "voice": "isabella",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 43.6,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 13.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 761.3,
+   "contrast": 0.19,
+   "face_area": 0.0074,
+   "text_area": 0.1705,
+   "caption_contrast": 16.89,
+   "by_frame": {
+    "sharpness": [
+     660.2,
+     844.2,
+     841.1,
+     699.8
+    ],
+    "contrast": [
+     0.186,
+     0.194,
+     0.194,
+     0.188
+    ],
+    "face_area": [
+     0.0295,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.1413,
+     0.1839,
+     0.1839,
+     0.1727
+    ],
+    "caption_contrast": [
+     16.86,
+     16.88,
+     16.9,
+     17.05
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.72,
+   "title",
+   0
+  ],
+  [
+   4.72,
+   9.97,
+   "none",
+   1
+  ],
+  [
+   9.97,
+   13.9,
+   "none",
+   1
+  ],
+  [
+   13.9,
+   17.96,
+   "none",
+   1
+  ],
+  [
+   17.96,
+   22.2,
+   "none",
+   1
+  ],
+  [
+   22.2,
+   25.8,
+   "none",
+   1
+  ],
+  [
+   25.8,
+   29.52,
+   "none",
+   1
+  ],
+  [
+   29.52,
+   34.48,
+   "none",
+   1
+  ],
+  [
+   34.48,
+   43.55,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "24496",
+   "q": "movie camera setup",
+   "t0": 0.0,
+   "t1": 22.08
+  },
+  {
+   "p": "pixabay",
+   "id": "23611",
+   "q": "city lights night",
+   "t0": 21.48,
+   "t1": 43.55
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:36Z",
+ "video": "lZAM8FBuEKo",
+ "url": "https://youtube.com/shorts/lZAM8FBuEKo",
+ "publish_at": "2026-10-31T23:20:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T23:20:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-309"
+}

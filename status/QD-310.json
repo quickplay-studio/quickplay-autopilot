@@ -1,0 +1,184 @@
+{
+ "id": "QD-310",
+ "board": "boards/queue/QD-310.json",
+ "mode": "schedule",
+ "slot": "2026-11-01T06:00:00Z",
+ "rendered": "2026-10-31T14:54:02.642008+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"2026 Ballon d'Or\" read 16,754 times yesterday, 1.4x its usual 11,673; 100 news articles on \"Harry Kane Ballon d'Or\" in 24 hours",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Sport Shocks #6: Harry Kane: the 25 year wait ends",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "social_music": "uplifting-uplifting-music-513147",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 29.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 12.2,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 369.0,
+   "contrast": 0.204,
+   "face_area": 0.1782,
+   "text_area": 0.0658,
+   "caption_contrast": 13.3,
+   "by_frame": {
+    "sharpness": [
+     341.8,
+     375.6,
+     382.3,
+     376.5
+    ],
+    "contrast": [
+     0.201,
+     0.205,
+     0.205,
+     0.204
+    ],
+    "face_area": [
+     0.1835,
+     0.1736,
+     0.1778,
+     0.1778
+    ],
+    "text_area": [
+     0.0659,
+     0.0655,
+     0.0667,
+     0.0651
+    ],
+    "caption_contrast": [
+     13.27,
+     13.33,
+     13.63,
+     13.1
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.83,
+   "none",
+   0
+  ],
+  [
+   3.83,
+   7.38,
+   "none",
+   1
+  ],
+  [
+   7.38,
+   10.32,
+   "none",
+   1
+  ],
+  [
+   10.32,
+   14.06,
+   "none",
+   1
+  ],
+  [
+   14.06,
+   17.32,
+   "none",
+   1
+  ],
+  [
+   17.32,
+   20.7,
+   "none",
+   1
+  ],
+  [
+   20.7,
+   24.6,
+   "none",
+   1
+  ],
+  [
+   24.6,
+   29.14,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "189018",
+   "q": "trophy close up",
+   "t0": 0.0,
+   "t1": 14.87
+  },
+  {
+   "p": "pixabay",
+   "id": "23014",
+   "q": "running track sunrise",
+   "t0": 14.27,
+   "t1": 29.14
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:39Z",
+ "video": "T53l15Ir52Y",
+ "url": "https://youtube.com/shorts/T53l15Ir52Y",
+ "publish_at": "2026-11-01T06:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-11-01T06:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-310"
+}

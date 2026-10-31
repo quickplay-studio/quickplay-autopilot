@@ -1,0 +1,154 @@
+{
+ "id": "QD-315",
+ "board": "boards/queue/QD-315.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T19:30:00Z",
+ "rendered": "2026-10-31T15:13:48.408534+00:00",
+ "channel": "gaming",
+ "title": "Game Lore #4: GTA 6 launches on 19 November 2026 with a twist",
+ "background_notes": [
+  "picked pixabay 2 (+1 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "extra_photos": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 4,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "paradigm",
+ "look": {
+  "captions": "low",
+  "voice": "george_quick",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1019",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 30.5,
+  "wps": 3.3,
+  "weak_beats": [],
+  "size_mb": 13.8,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 676.1,
+   "contrast": 0.251,
+   "face_area": 0.0,
+   "text_area": 0.2396,
+   "caption_contrast": 13.97,
+   "by_frame": {
+    "sharpness": [
+     668.8,
+     677.8,
+     695.7,
+     662.0
+    ],
+    "contrast": [
+     0.25,
+     0.248,
+     0.252,
+     0.253
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.2276,
+     0.2174,
+     0.2809,
+     0.2324
+    ],
+    "caption_contrast": [
+     14.14,
+     13.8,
+     19.46,
+     13.72
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.48,
+   "none",
+   2
+  ],
+  [
+   4.48,
+   12.27,
+   "none",
+   5
+  ],
+  [
+   12.27,
+   16.67,
+   "none",
+   3
+  ],
+  [
+   16.67,
+   19.97,
+   "none",
+   2
+  ],
+  [
+   19.97,
+   23.88,
+   "none",
+   3
+  ],
+  [
+   23.88,
+   27.0,
+   "none",
+   2
+  ],
+  [
+   27.0,
+   30.46,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "61755",
+   "q": "video game controller",
+   "t0": 0.0,
+   "t1": 15.53
+  },
+  {
+   "p": "pixabay",
+   "id": "180777",
+   "q": "console gaming room",
+   "t0": 14.93,
+   "t1": 30.46
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:53Z",
+ "video": "z63EMaqaGIY",
+ "url": "https://youtube.com/shorts/z63EMaqaGIY",
+ "publish_at": "2026-10-31T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "id": "QD-318",
+ "board": "boards/queue/QD-318.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T19:30:00Z",
+ "rendered": "2026-10-31T15:21:55.807593+00:00",
+ "channel": "irl",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Did You Know #11: Patrick Stewart was knighted in 2010",
+ "background_notes": [
+  "picked pixabay 2 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 5,
+  "planned_real": 5,
+  "extra_photos": 6,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "level",
+ "look": {
+  "captions": "low",
+  "voice": "isabella",
+  "energy": "steady",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 26.2,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.1,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 579.6,
+   "contrast": 0.246,
+   "face_area": 0.3496,
+   "text_area": 0.0444,
+   "caption_contrast": 6.39,
+   "by_frame": {
+    "sharpness": [
+     556.9,
+     622.7,
+     609.2,
+     529.5
+    ],
+    "contrast": [
+     0.246,
+     0.248,
+     0.247,
+     0.245
+    ],
+    "face_area": [
+     0.352,
+     0.3481,
+     0.3501,
+     0.3481
+    ],
+    "text_area": [
+     0.0455,
+     0.0457,
+     0.0451,
+     0.0412
+    ],
+    "caption_contrast": [
+     6.27,
+     6.5,
+     6.52,
+     6.14
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   2.8,
+   "none",
+   1
+  ],
+  [
+   2.8,
+   6.53,
+   "none",
+   3
+  ],
+  [
+   6.53,
+   13.71,
+   "none",
+   5
+  ],
+  [
+   13.71,
+   18.74,
+   "none",
+   3
+  ],
+  [
+   18.74,
+   26.17,
+   "none",
+   5
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "130439",
+   "q": "theatre stage",
+   "t0": 0.0,
+   "t1": 13.39
+  },
+  {
+   "p": "pixabay",
+   "id": "306155",
+   "q": "red carpet",
+   "t0": 12.79,
+   "t1": 26.17
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:43:02Z",
+ "video": "3SJeg_StoU8",
+ "url": "https://youtube.com/shorts/3SJeg_StoU8",
+ "publish_at": "2026-10-31T19:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T19:30:00Z",
+  "upload_status": "uploaded"
+ }
+}

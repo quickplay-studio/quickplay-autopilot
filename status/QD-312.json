@@ -1,0 +1,177 @@
+{
+ "id": "QD-312",
+ "board": "boards/queue/QD-312.json",
+ "mode": "schedule",
+ "slot": "2026-11-01T01:30:00Z",
+ "rendered": "2026-10-31T15:08:12.528819+00:00",
+ "late": {
+  "alive": true,
+  "evidence": "Wikipedia \"William Contreras\" read 36,554 times yesterday, 17.9x its usual 2,043",
+  "days_late": 1
+ },
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "12:00 to 18:00",
+   "used": "00:00 to 06:00"
+  }
+ },
+ "title": "Sport Shocks #8: William Contreras: $10k to MVP 🧤",
+ "background_notes": [
+  "picked pixabay 1 (+1 spares)"
+ ],
+ "media_notes": [
+  "beat 1 reused a nearby picture (commons:File:960px-William_Contreras_stands_at_home_plate%2C_Aug_05_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')",
+  "beat 3 reused a nearby picture (commons:File:960px-William_Contreras_stands_at_home_plate%2C_Aug_05_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')",
+  "beat 6 reused a nearby picture (commons:File:960px-William_Contreras_stands_at_home_plate%2C_Aug_05_2022_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail: 'imageinfo')"
+ ],
+ "media": {
+  "real_shots": 1,
+  "planned_real": 4,
+  "extra_photos": 2,
+  "pic_found_share": 0.57,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "in-battery",
+ "social_music": "cinematic-promo-571169",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 27.4,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 362.1,
+   "contrast": 0.173,
+   "face_area": 0.0,
+   "text_area": 0.0308,
+   "caption_contrast": 7.22,
+   "by_frame": {
+    "sharpness": [
+     362.9,
+     362.2,
+     376.1,
+     347.3
+    ],
+    "contrast": [
+     0.171,
+     0.174,
+     0.175,
+     0.173
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0319,
+     0.0309,
+     0.0306,
+     0.0298
+    ],
+    "caption_contrast": [
+     7.07,
+     7.41,
+     7.36,
+     6.91
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   4.45,
+   "none",
+   0
+  ],
+  [
+   4.45,
+   8.39,
+   "none",
+   1
+  ],
+  [
+   8.39,
+   12.38,
+   "none",
+   1
+  ],
+  [
+   12.38,
+   16.19,
+   "none",
+   3
+  ],
+  [
+   16.19,
+   20.02,
+   "none",
+   1
+  ],
+  [
+   20.02,
+   24.05,
+   "none",
+   1
+  ],
+  [
+   24.05,
+   27.37,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "326686",
+   "q": "baseball field green",
+   "t0": 0.0,
+   "t1": 27.37
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:45Z",
+ "video": "zwbUPvWUIH8",
+ "url": "https://youtube.com/shorts/zwbUPvWUIH8",
+ "publish_at": "2026-11-01T01:30:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-11-01T01:30:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-312"
+}

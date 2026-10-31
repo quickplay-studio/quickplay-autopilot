@@ -1,0 +1,178 @@
+{
+ "id": "QD-307",
+ "board": "boards/queue/QD-307.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T21:40:00Z",
+ "rendered": "2026-10-31T14:53:53.566689+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Star Stories #10: Ian McKellen leads tributes to Sir Patrick Stewart",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "city-of-the-wolf",
+ "social_music": "epic-orchestral-inspiration-572059",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lab-voice-1028",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "standard",
+  "closing": "none"
+ },
+ "qa": {
+  "duration": 30.0,
+  "wps": 3.15,
+  "weak_beats": [],
+  "size_mb": 12.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 462.9,
+   "contrast": 0.242,
+   "face_area": 0.316,
+   "text_area": 0.088,
+   "caption_contrast": 14.85,
+   "by_frame": {
+    "sharpness": [
+     421.0,
+     493.6,
+     491.1,
+     445.7
+    ],
+    "contrast": [
+     0.239,
+     0.244,
+     0.244,
+     0.243
+    ],
+    "face_area": [
+     0.3287,
+     0.3117,
+     0.3173,
+     0.3062
+    ],
+    "text_area": [
+     0.0866,
+     0.0899,
+     0.0895,
+     0.086
+    ],
+    "caption_contrast": [
+     14.57,
+     15.5,
+     15.13,
+     14.49
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.83,
+   "none",
+   0
+  ],
+  [
+   3.83,
+   9.0,
+   "none",
+   1
+  ],
+  [
+   9.0,
+   12.44,
+   "none",
+   1
+  ],
+  [
+   12.44,
+   16.05,
+   "none",
+   1
+  ],
+  [
+   16.05,
+   20.16,
+   "none",
+   1
+  ],
+  [
+   20.16,
+   23.98,
+   "none",
+   1
+  ],
+  [
+   23.98,
+   27.46,
+   "none",
+   1
+  ],
+  [
+   27.46,
+   30.03,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "3654",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 15.32
+  },
+  {
+   "p": "pixabay",
+   "id": "35402",
+   "q": "city lights night",
+   "t0": 14.72,
+   "t1": 30.03
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:31Z",
+ "video": "wArb7v2UJcI",
+ "url": "https://youtube.com/shorts/wArb7v2UJcI",
+ "publish_at": "2026-10-31T21:40:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T21:40:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-307"
+}

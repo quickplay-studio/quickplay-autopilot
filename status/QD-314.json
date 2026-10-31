@@ -1,0 +1,155 @@
+{
+ "id": "QD-314",
+ "board": "boards/queue/QD-314.json",
+ "mode": "schedule",
+ "slot": "2026-11-01T08:00:00Z",
+ "rendered": "2026-10-31T15:13:03.970861+00:00",
+ "title": "Cars Explained #1: Carl Benz and the first modern motor car",
+ "background_notes": [
+  "picked pixabay 2 (+3 spares)",
+  "pixabay:24388 skipped: nearly black (brightness 0.02)"
+ ],
+ "media": {
+  "real_shots": 7,
+  "planned_real": 7,
+  "pic_found_share": 1.0,
+  "pic_rescued": 1,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "circuit-rush",
+ "social_music": "technology-tech-technology-499582",
+ "look": {
+  "captions": "lab-captions-1019",
+  "voice": "lewis",
+  "energy": "steady",
+  "grade": "natural",
+  "opening": "image_first",
+  "style": "standard",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 32.5,
+  "wps": 2.95,
+  "weak_beats": [],
+  "size_mb": 13.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 627.2,
+   "contrast": 0.192,
+   "face_area": 0.0,
+   "text_area": 0.0964,
+   "caption_contrast": 18.5,
+   "by_frame": {
+    "sharpness": [
+     551.0,
+     652.9,
+     654.0,
+     651.0
+    ],
+    "contrast": [
+     0.185,
+     0.194,
+     0.194,
+     0.195
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0969,
+     0.0944,
+     0.0994,
+     0.095
+    ],
+    "caption_contrast": [
+     18.34,
+     18.67,
+     18.67,
+     18.34
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.38,
+   "none",
+   0
+  ],
+  [
+   3.38,
+   8.69,
+   "none",
+   1
+  ],
+  [
+   8.69,
+   13.24,
+   "none",
+   1
+  ],
+  [
+   13.24,
+   19.41,
+   "none",
+   1
+  ],
+  [
+   19.41,
+   24.55,
+   "none",
+   1
+  ],
+  [
+   24.55,
+   28.3,
+   "none",
+   1
+  ],
+  [
+   28.3,
+   32.5,
+   "none",
+   1
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "13596",
+   "q": "old timer car",
+   "t0": 0.0,
+   "t1": 16.55
+  },
+  {
+   "p": "pixabay",
+   "id": "254449",
+   "q": "car workshop lights",
+   "t0": 15.95,
+   "t1": 32.5
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:50Z",
+ "video": "bApCHvAsVU0",
+ "url": "https://youtube.com/shorts/bApCHvAsVU0",
+ "publish_at": "2026-11-01T08:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-11-01T08:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-314"
+}

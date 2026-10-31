@@ -1,0 +1,168 @@
+{
+ "id": "QD-313",
+ "board": "boards/queue/QD-313.json",
+ "mode": "schedule",
+ "slot": "2026-11-01T07:00:00Z",
+ "rendered": "2026-10-31T15:11:34.244395+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "lab",
+   "used": "lab-energy-1030"
+  },
+  "fx_grade": {
+   "assigned": "natural",
+   "used": "natural"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "06:00 to 12:00"
+  }
+ },
+ "title": "Animals Explained #2: Golden Retrievers: The story of one puppy 🐾",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 2,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "good-energy",
+ "social_music": "alexrockbeat-playful-560960",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "lab-energy-1030",
+  "grade": "natural",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "look_note": "voice IS was less clear, used george",
+ "qa": {
+  "duration": 27.3,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 15.0,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 446.9,
+   "contrast": 0.236,
+   "face_area": 0.0,
+   "text_area": 0.0419,
+   "caption_contrast": 6.68,
+   "by_frame": {
+    "sharpness": [
+     442.2,
+     502.3,
+     491.1,
+     352.0
+    ],
+    "contrast": [
+     0.237,
+     0.237,
+     0.235,
+     0.233
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "text_area": [
+     0.0445,
+     0.044,
+     0.0448,
+     0.0344
+    ],
+    "caption_contrast": [
+     5.9,
+     7.7,
+     7.47,
+     5.74
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   6.25,
+   "none",
+   3
+  ],
+  [
+   6.25,
+   11.44,
+   "none",
+   4
+  ],
+  [
+   11.44,
+   15.64,
+   "none",
+   3
+  ],
+  [
+   15.64,
+   20.18,
+   "none",
+   3
+  ],
+  [
+   20.18,
+   24.87,
+   "none",
+   3
+  ],
+  [
+   24.87,
+   27.27,
+   "none",
+   2
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "157990",
+   "q": "dog park grass sunny",
+   "t0": 0.0,
+   "t1": 13.93
+  },
+  {
+   "p": "pixabay",
+   "id": "120522",
+   "q": "golden retriever puppy playing",
+   "t0": 13.33,
+   "t1": 27.27
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T15:42:47Z",
+ "video": "8JeQF-_ZOHo",
+ "url": "https://youtube.com/shorts/8JeQF-_ZOHo",
+ "publish_at": "2026-11-01T07:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-11-01T07:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-313"
+}

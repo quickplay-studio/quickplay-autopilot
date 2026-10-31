@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 07:55): 26 of 1,000 subscribers · 16,519 of 10 million Shorts views in 90 days · 7,499 views in the last 24 hours (about 110,928 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 08:48): 28 of 1,000 subscribers · 16,592 of 10 million Shorts views in 90 days · 7,726 views in the last 24 hours (about 110,927 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 7:40 (UK): 3 scheduled, 147 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 7:51).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 8:44).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 8 public, 3 scheduled | 6 | 1 | ⏳ 8 of 15 so far, 3 more scheduled |
+| Sat 31 Oct | 8 public, 3 scheduled | 8 | 1 | ⏳ 8 of 15 so far, 3 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -146,6 +146,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ![TEST-L1024](TEST-L1024.jpg)
 
+## In the queue
+
+- **QD-295** Harry Kane Ballon d'Or: the detail behind the win (rendering next)
+- **QD-296** GTA 6: dog poop weapon 🚮 (rendering next)
+
 ## On the channel (latest first)
 
 ### Sat 31 Oct 12:00 · GTA 6's morality scale tops out at Irredeemable
@@ -159,7 +164,7 @@ scheduled · 36 s · music: risen · [script](../boards/done/QD-290.json) · [Yo
 ![QD-290](QD-290.jpg)
 
 ### Sat 31 Oct 8:00 · Sport Shocks #5: Super Bowl XLVII: the day the lights went out 💡
-private · 42 s · music: duty-calls · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
+private · 42 s · music: duty-calls · on Instagram · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
 
 ![QD-288](QD-288.jpg)
 
@@ -214,7 +219,7 @@ public · 298 views · 26 s · music: stake-out · [script](../boards/done/QD-27
 ![QD-277](QD-277.jpg)
 
 ### Fri 30 Oct 12:00 · Game Explained #1: Switch cartridge taste: the real reason 👅
-public · 109 views · 37 s · music: hopping-trains · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
+public · 109 views · 37 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
 
 ![QD-276](QD-276.jpg)
 

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T13:30+00:00",
+ "updated": "2026-10-31T16:17+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -47,14 +47,16 @@
    "suggestions": [
     "ballon d'or 2026",
     "ballon d'or 2026 full ceremony",
-    "ballon d'or 2026 reaction",
     "ballon d'or 2026 live",
+    "ballon d'or 2026 reaction",
     "ballon d'or 2026 boat",
     "ballon d'or 2026 ai",
-    "ballon d'or 2026 live ceremony",
-    "ballon d'or 2026 ai video"
+    "ballon d'or 2026 song",
+    "ballon d'or 2026 live ceremony"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Sport",
    "angles": [
     "Ballon d'Or 2026 explained",
@@ -138,8 +140,7 @@
     "the celebrity traitors season 2 episode 9"
    ],
    "in": [
-    "Wikipedia top pages",
-    "Google Trends"
+    "Wikipedia top pages"
    ],
    "category": "Entertainment",
    "angles": [
@@ -204,15 +205,13 @@
     "halloween 2026",
     "halloween 2026 countdown",
     "halloween 2026 playlist",
-    "halloween 2026 song",
     "halloween 2026 live",
-    "halloween 2026 mix",
-    "halloween 2026 movie",
-    "halloween 2026 music"
+    "halloween 2026 song",
+    "halloween 2026 theory",
+    "halloween 2026 costumes",
+    "halloween 2026 mix"
    ],
-   "in": [
-    "Google Trends"
-   ],
+   "in": [],
    "category": "Entertainment",
    "angles": [
     "most popular Halloween costumes 2026",
@@ -342,7 +341,7 @@
     21871,
     19387
    ],
-   "news_24h": 84,
+   "news_24h": 65,
    "news_usual": 88.0,
    "suggestions": [
     "gta 6",
@@ -420,10 +419,10 @@
     "the hunger games sunrise on the reaping trailer",
     "the hunger games sunrise on the reaping interview",
     "the hunger games sunrise on the reaping trailer reaction",
+    "the hunger games sunrise on the reaping tv spot",
     "the hunger games sunrise on the reaping cast",
     "the hunger games sunrise on the reaping premiere",
-    "the hunger games sunrise on the reaping soundtrack",
-    "the hunger games sunrise on the reaping audiobook"
+    "the hunger games sunrise on the reaping soundtrack"
    ],
    "in": [],
    "category": "Film",
@@ -555,7 +554,7 @@
     243,
     233
    ],
-   "news_24h": 6,
+   "news_24h": 5,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
@@ -689,7 +688,7 @@
     83193,
     78283
    ],
-   "news_24h": 86,
+   "news_24h": 77,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
@@ -698,8 +697,8 @@
     "avengers doomsday teaser",
     "avengers doomsday x men",
     "avengers doomsday trailer x men",
-    "avengers doomsday final trailer",
-    "avengers doomsday clock"
+    "avengers doomsday special look reaction",
+    "avengers doomsday final trailer"
    ],
    "in": [],
    "category": "Film",
@@ -757,7 +756,7 @@
     17411,
     14040
    ],
-   "news_24h": 32,
+   "news_24h": 28,
    "news_usual": 38.0,
    "suggestions": [
     "dune part three",
@@ -766,8 +765,8 @@
     "dune part three final trailer reaction",
     "dune part three final trailer",
     "dune part three imax trailer",
-    "dune part three trailer breakdown",
-    "dune part three reaction"
+    "dune part three reaction",
+    "dune part three imax final trailer"
    ],
    "in": [],
    "category": "Film",
@@ -825,7 +824,7 @@
     6909,
     7664
    ],
-   "news_24h": 20,
+   "news_24h": 17,
    "news_usual": 10.0,
    "suggestions": [
     "harry potter hbo series",
@@ -896,7 +895,7 @@
     2146,
     2283
    ],
-   "news_24h": 57,
+   "news_24h": 63,
    "news_usual": 44.5,
    "suggestions": [
     "christmas 2026",
@@ -967,7 +966,7 @@
     258,
     300
    ],
-   "news_24h": 6,
+   "news_24h": 5,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -1176,6 +1175,51 @@
    "places": 5,
    "mega_since": "2026-10-31",
    "mega_peak": 5
+  },
+  {
+   "name": "chelsea",
+   "auto": true,
+   "days_to": null,
+   "phase": "viral",
+   "momentum": null,
+   "views_yesterday": null,
+   "views_usual": null,
+   "views_30d": [],
+   "news_24h": null,
+   "news_usual": null,
+   "suggestions": [],
+   "in": [
+    "Google Trends",
+    "Google Trends abroad",
+    "UK news"
+   ],
+   "category": "Sport",
+   "terms": [
+    "chelsea"
+   ],
+   "angles": [
+    "chelsea",
+    "chelsea analysis",
+    "chelsea reaction",
+    "chelsea history and records",
+    "chelsea explained",
+    "chelsea facts"
+   ],
+   "rules": "A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
+   "wikipedia": null,
+   "viral": true,
+   "viral_since": "2026-10-31",
+   "angle_map": {
+    "chelsea": "latest",
+    "chelsea analysis": "why",
+    "chelsea reaction": "reaction",
+    "chelsea history and records": "records",
+    "chelsea explained": "explained",
+    "chelsea facts": "facts"
+   },
+   "mega": 0,
+   "level": "surging",
+   "places": 4
   }
  ]
 }

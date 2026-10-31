@@ -2,7 +2,7 @@
 
 **Progress** (Sat 31 Oct, 15:40): 31 of 1,000 subscribers · 16,691 of 10 million Shorts views in 90 days · 8,266 views in the last 24 hours (about 110,926 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
-YouTube checked Sat 31 Oct 13:48 (UK): 8 scheduled, 142 public, 22 uploads in the last 24 hours.
+YouTube checked Sat 31 Oct 16:26 (UK): 15 scheduled, 135 public, 30 uploads in the last 24 hours.
 
 Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 11:35).
 
@@ -148,6 +148,46 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 
 ## On the channel (latest first)
 
+### Sun 1 Nov 8:00 · Cars Explained #1: Carl Benz and the first modern motor car
+scheduled · 32 s · music: circuit-rush · [script](../boards/done/QD-314.json) · [YouTube](https://youtube.com/shorts/bApCHvAsVU0)
+
+![QD-314](QD-314.jpg)
+
+### Sun 1 Nov 7:00 · Animals Explained #2: Golden Retrievers: The story of one puppy 🐾
+scheduled · 27 s · music: good-energy · [script](../boards/done/QD-313.json) · [YouTube](https://youtube.com/shorts/8JeQF-_ZOHo)
+
+![QD-313](QD-313.jpg)
+
+### Sun 1 Nov 6:00 · Sport Shocks #6: Harry Kane: the 25 year wait ends
+scheduled · 29 s · music: level · [script](../boards/done/QD-310.json) · [YouTube](https://youtube.com/shorts/T53l15Ir52Y)
+
+![QD-310](QD-310.jpg)
+
+### Sun 1 Nov 1:30 · Sport Shocks #8: William Contreras: $10k to MVP 🧤
+scheduled · 27 s · music: in-battery · [script](../boards/done/QD-312.json) · [YouTube](https://youtube.com/shorts/zwbUPvWUIH8)
+
+![QD-312](QD-312.jpg)
+
+### Sun 1 Nov 0:30 · Final Fantasy Resonance: why critics love it
+scheduled · 32 s · music: in-battery · [script](../boards/done/QD-311.json) · [YouTube](https://youtube.com/shorts/4z9j0wvHIMA)
+
+![QD-311](QD-311.jpg)
+
+### Sat 31 Oct 23:20 · Patrick Stewart: his final film role revealed 🎬
+scheduled · 44 s · music: in-battery · [script](../boards/done/QD-309.json) · [YouTube](https://youtube.com/shorts/lZAM8FBuEKo)
+
+![QD-309](QD-309.jpg)
+
+### Sat 31 Oct 22:15 · Star Stories #12: Ian McKellen: the history you missed 🎭
+scheduled · 42 s · music: in-battery · [script](../boards/done/QD-308.json) · [YouTube](https://youtube.com/shorts/fbhBe--2Ibg)
+
+![QD-308](QD-308.jpg)
+
+### Sat 31 Oct 21:40 · Star Stories #10: Ian McKellen leads tributes to Sir Patrick Stewart
+scheduled · 30 s · music: city-of-the-wolf · [script](../boards/done/QD-307.json) · [YouTube](https://youtube.com/shorts/wArb7v2UJcI)
+
+![QD-307](QD-307.jpg)
+
 ### Sat 31 Oct 21:05 · Patrick Stewart best moments: icon dies at 86 🎭
 scheduled · 30 s · music: fire-in-the-sky · [script](../boards/done/QD-304.json) · [YouTube](https://youtube.com/shorts/2Rc_v63SxZI)
 
@@ -157,6 +197,11 @@ scheduled · 30 s · music: fire-in-the-sky · [script](../boards/done/QD-304.js
 scheduled · 22 s · music: fire-in-the-sky · [script](../boards/done/QD-303.json) · [YouTube](https://youtube.com/shorts/kIccY1HgYDU)
 
 ![QD-303](QD-303.jpg)
+
+### Sat 31 Oct 19:25 · Star Stories #8: Ian McKellen joins Marvel in Avengers Doomsday
+scheduled · 32 s · music: in-battery · [script](../boards/done/QD-306.json) · [YouTube](https://youtube.com/shorts/haDiT1o6Tw0)
+
+![QD-306](QD-306.jpg)
 
 ### Sat 31 Oct 18:50 · Patrick Stewart: the legacy he leaves behind
 scheduled · 27 s · music: impossible-sacrifice · [script](../boards/done/QD-302.json) · [YouTube](https://youtube.com/shorts/AaQYePHIyoE)
@@ -168,28 +213,33 @@ scheduled · 38 s · music: impossible-sacrifice · [script](../boards/done/QD-3
 
 ![QD-301](QD-301.jpg)
 
+### Sat 31 Oct 17:10 · Star Stories #6: Patrick Stewart was knighted for drama in 2010 👑
+scheduled · 28 s · music: level · [script](../boards/done/QD-305.json) · [YouTube](https://youtube.com/shorts/wWsYuR07DXk)
+
+![QD-305](QD-305.jpg)
+
 ### Sat 31 Oct 16:35 · Patrick Stewart: the number behind his legacy 🎬
 scheduled · 38 s · music: scale-the-mountain · [script](../boards/done/QD-300.json) · [YouTube](https://youtube.com/shorts/_isY2ryqXHA)
 
 ![QD-300](QD-300.jpg)
 
 ### Sat 31 Oct 15:30 · Film Facts #3: Patrick Stewart died on 28 October 2026
-private · 31 s · music: impossible-sacrifice · [script](../boards/done/QD-299.json) · [YouTube](https://youtube.com/shorts/SzesUffWQxM)
+public · 1 views · 31 s · music: impossible-sacrifice · [script](../boards/done/QD-299.json) · [YouTube](https://youtube.com/shorts/SzesUffWQxM)
 
 ![QD-299](QD-299.jpg)
 
 ### Sat 31 Oct 14:30 · Patrick Stewart: Final Role Releases 18 December
-private · 40 s · music: impossible-sacrifice · [script](../boards/done/QD-298.json) · [YouTube](https://youtube.com/shorts/NgG2Zi22cEg)
+public · 2 views · 40 s · music: impossible-sacrifice · [script](../boards/done/QD-298.json) · [YouTube](https://youtube.com/shorts/NgG2Zi22cEg)
 
 ![QD-298](QD-298.jpg)
 
 ### Sat 31 Oct 14:00 · GTA 6: dog poop weapon 🚮
-private · 27 s · music: across-seas-and-lands · [script](../boards/done/QD-296.json) · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
+public · 5 views · 27 s · music: across-seas-and-lands · [script](../boards/done/QD-296.json) · [YouTube](https://youtube.com/shorts/3CoOwKWcjmw)
 
 ![QD-296](QD-296.jpg)
 
 ### Sat 31 Oct 13:30 · Game Explained #2: Why Does Pokémon Have Two Versions? 🎮
-public · 27 s · music: death-duel · [script](../boards/done/QD-297.json) · [YouTube](https://youtube.com/shorts/X4-havfO9Ow)
+public · 1 views · 27 s · music: death-duel · [script](../boards/done/QD-297.json) · [YouTube](https://youtube.com/shorts/X4-havfO9Ow)
 
 ![QD-297](QD-297.jpg)
 
@@ -209,17 +259,17 @@ public · 56 views · 36 s · music: risen · [script](../boards/done/QD-290.jso
 ![QD-290](QD-290.jpg)
 
 ### Sat 31 Oct 8:00 · Sport Shocks #5: Super Bowl XLVII: the day the lights went out 💡
-public · 45 views · 42 s · music: duty-calls · on Instagram · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
+public · 74 views · 42 s · music: duty-calls · on Instagram · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
 
 ![QD-288](QD-288.jpg)
 
 ### Sat 31 Oct 7:00 · Messi vs Ronaldo: the record one of them missed
-public · 280 views · 30 s · music: duty-calls · on Instagram · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
+public · 362 views · 30 s · music: duty-calls · on Instagram · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
 
 ![QD-287](QD-287.jpg)
 
 ### Sat 31 Oct 6:00 · Song Secrets #4: Michael Jackson's Thriller tops charts 37 weeks 🎵
-public · 328 views · 36 s · music: dance-with-you · [script](../boards/done/QD-280.json) · [YouTube](https://youtube.com/shorts/el4EkoNqHOk)
+public · 463 views · 36 s · music: dance-with-you · [script](../boards/done/QD-280.json) · [YouTube](https://youtube.com/shorts/el4EkoNqHOk)
 
 ![QD-280](QD-280.jpg)
 
@@ -229,42 +279,42 @@ public · 13 views · 18 s · music: treasure-hunt · [script](../boards/done/QD
 ![QD-293](QD-293.jpg)
 
 ### Sat 31 Oct 4:00 · Emily McGonagle: the secret career change 🎙️
-public · 85 views · 33 s · music: rubberband · [script](../boards/done/QD-285.json) · [YouTube](https://youtube.com/shorts/YXfaK7pdxJg)
+public · 91 views · 33 s · music: rubberband · [script](../boards/done/QD-285.json) · [YouTube](https://youtube.com/shorts/YXfaK7pdxJg)
 
 ![QD-285](QD-285.jpg)
 
 ### Sat 31 Oct 3:00 · Walter Koenig: the hidden audition fact 🌟
-public · 468 views · 28 s · music: defying-gravity · [script](../boards/done/QD-284.json) · [YouTube](https://youtube.com/shorts/Tl5ullZxXYQ)
+public · 501 views · 28 s · music: defying-gravity · [script](../boards/done/QD-284.json) · [YouTube](https://youtube.com/shorts/Tl5ullZxXYQ)
 
 ![QD-284](QD-284.jpg)
 
 ### Sat 31 Oct 1:30 · Claudia Winkleman leads Celebrity Traitors series two
-public · 124 views · 38 s · music: twin-lynches · [script](../boards/done/QD-283.json) · [YouTube](https://youtube.com/shorts/cJIA6wBfhMg)
+public · 164 views · 38 s · music: twin-lynches · [script](../boards/done/QD-283.json) · [YouTube](https://youtube.com/shorts/cJIA6wBfhMg)
 
 ![QD-283](QD-283.jpg)
 
 ### Sat 31 Oct 0:30 · William Contreras: 7th catcher World Series MVP 🏆
-public · 1,097 views · 29 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-282.json) · [YouTube](https://youtube.com/shorts/YnvZjFVmJuE)
+public · 1,100 views · 29 s · music: once-upon-a-time · on Instagram · on Facebook · [script](../boards/done/QD-282.json) · [YouTube](https://youtube.com/shorts/YnvZjFVmJuE)
 
 ![QD-282](QD-282.jpg)
 
 ### Fri 30 Oct 15:30 · England vs PNG: the 68-point twist
-public · 152 views · 37 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
+public · 166 views · 37 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
 
 ![QD-279](QD-279.jpg)
 
 ### Fri 30 Oct 14:00 · Ballon d'Or #4: Harry Kane Ballon d'Or: the 73 goal detail
-public · 369 views · 40 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
+public · 405 views · 40 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-278.json) · [YouTube](https://youtube.com/shorts/3u12UL9te3w)
 
 ![QD-278](QD-278.jpg)
 
 ### Fri 30 Oct 13:00 · Celebrity Traitors #2: Final: series two ends today 🏁
-public · 333 views · 26 s · music: stake-out · [script](../boards/done/QD-277.json) · [YouTube](https://youtube.com/shorts/qSpSNwWEBDQ)
+public · 385 views · 26 s · music: stake-out · [script](../boards/done/QD-277.json) · [YouTube](https://youtube.com/shorts/qSpSNwWEBDQ)
 
 ![QD-277](QD-277.jpg)
 
 ### Fri 30 Oct 12:00 · Game Explained #1: Switch cartridge taste: the real reason 👅
-public · 132 views · 37 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
+public · 140 views · 37 s · music: hopping-trains · on Instagram · [script](../boards/done/QD-276.json) · [YouTube](https://youtube.com/shorts/CoVkFUukloo)
 
 ![QD-276](QD-276.jpg)
 
@@ -279,12 +329,12 @@ public · 65 views · 39 s · music: in-battery · on Instagram · [script](../b
 ![QD-274](QD-274.jpg)
 
 ### Fri 30 Oct 8:00 · Sport Shocks #4: Ballon d'Or 2026 rankings: Harry Kane's first win 🏆
-public · 796 views · 27 s · music: fire-in-the-sky · on Instagram · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
+public · 856 views · 27 s · music: fire-in-the-sky · on Instagram · [script](../boards/done/QD-273.json) · [YouTube](https://youtube.com/shorts/EYdrZlrjsDk)
 
 ![QD-273](QD-273.jpg)
 
 ### Fri 30 Oct 6:30 · Sport Shocks #2: ballon d'or 2026 reaction: the detail you missed
-public · 610 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
+public · 644 views · 36 s · music: fire-in-the-sky · [script](../boards/done/QD-246.json) · [YouTube](https://youtube.com/shorts/rsTvuhXP5xw)
 
 ![QD-246](QD-246.jpg)
 
@@ -294,54 +344,6 @@ public · 887 views · 25 s · music: fire-in-the-sky · [script](../boards/done
 ![QD-272](QD-272.jpg)
 
 ### Thu 29 Oct 18:30 · Sport Explained #1: Ballon d'Or records: Messi vs Ronaldo
-public · 1,159 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
+public · 1,174 views · 28 s · music: across-seas-and-lands · on Instagram · on Facebook · [script](../boards/done/QD-266.json) · [YouTube](https://youtube.com/shorts/sCd5ulaxtyM)
 
 ![QD-266](QD-266.jpg)
-
-### Thu 29 Oct 8:00 · ballon d'or 2026 explained: the historic numbers
-public · 189 views · 30 s · music: risen · on Instagram · [script](../boards/done/QD-262.json) · [YouTube](https://youtube.com/shorts/5doZBlCyBTM)
-
-![QD-262](QD-262.jpg)
-
-### Thu 29 Oct 6:30 · Star Stories #5: Walter Koenig: the record the Star Trek legend set
-public · 160 views · 40 s · music: duty-calls · [script](../boards/done/QD-254.json) · [YouTube](https://youtube.com/shorts/nP6-GKOXTAQ)
-
-![QD-254](QD-254.jpg)
-
-### Thu 29 Oct 3:30 · walter koenig: passed away aged 90 🖖
-public · 951 views · 30 s · music: f16 · on Instagram · [script](../boards/done/QD-264.json) · [YouTube](https://youtube.com/shorts/hms_0daQGUk)
-
-![QD-264](QD-264.jpg)
-
-### Thu 29 Oct 2:00 · Walter Koenig: the co-star bond you never knew
-public · 188 views · 35 s · music: cued-for-liftoff · on Instagram · [script](../boards/done/QD-263.json) · [YouTube](https://youtube.com/shorts/9VH6SdkGHkc)
-
-![QD-263](QD-263.jpg)
-
-### Thu 29 Oct 0:30 · Star Stories #7: Walter Koenig: the audition secret you never knew
-public · 2,003 views · 38 s · music: duty-calls · [script](../boards/done/QD-255.json) · [YouTube](https://youtube.com/shorts/RAG2c_Lbf5k)
-
-![QD-255](QD-255.jpg)
-
-### Wed 28 Oct 23:15 · Walter Koenig: why he won the Chekov role 🖖
-public · 105 views · 32 s · music: impossible-sacrifice · on Instagram · [script](../boards/done/QD-253.json) · [YouTube](https://youtube.com/shorts/GaOPYVvhV0A)
-
-![QD-253](QD-253.jpg)
-
-### Wed 28 Oct 22:00 · Walter Koenig: George Takei's moving final message 🖖
-public · 110 views · 43 s · music: level · on Instagram · [script](../boards/done/QD-252.json) · [YouTube](https://youtube.com/shorts/7Y3RXzLhrvQ)
-
-![QD-252](QD-252.jpg)
-
-### Wed 28 Oct 20:30 · Star Stories #3: Walter Koenig: Star Trek actor dies aged 90
-public · 40 views · 34 s · music: impossible-sacrifice · [script](../boards/done/QD-251.json) · [YouTube](https://youtube.com/shorts/FtaSBIjPChM)
-
-![QD-251](QD-251.jpg)
-
-### Wed 28 Oct 19:30 · Ballon d'Or: Harry Kane's historic win
-public · 168 views · 29 s · music: duty-calls · [script](../boards/done/QD-250.json) · [YouTube](https://youtube.com/shorts/tlVEDrEN0jI)
-
-![QD-250](QD-250.jpg)
-
-### Wed 28 Oct 19:00 · Harry Kane Ballon d'Or, Dai Dai Record, Northumbria Mysteries
-public · 7 views · [YouTube](https://youtube.com/shorts/Tul1oIPN8-Q)

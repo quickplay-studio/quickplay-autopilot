@@ -63,5 +63,23 @@
   ],
   "mega_since": "2026-10-31",
   "mega_peak": 5
+ },
+ "chelsea": {
+  "first_seen": "2026-10-31",
+  "last_hot": "2026-10-31",
+  "key": "chelsea",
+  "watch": false,
+  "category": "Sport",
+  "terms": [
+   "chelsea"
+  ],
+  "wiki": null,
+  "momentum": null,
+  "views": null,
+  "in": [
+   "Google Trends",
+   "Google Trends abroad",
+   "UK news"
+  ]
  }
 }

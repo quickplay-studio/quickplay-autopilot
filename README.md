@@ -1,6 +1,6 @@
 # Quickplay hub
 
-Updated Saturday 31 October, 01:00 UK.
+Updated Saturday 31 October, 01:21 UK.
 
 **26 subscribers, 15,611 engaged Shorts views in 90 days (0.52% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
@@ -84,11 +84,11 @@ Waiting for a verdict (check day): CH-264 (Fri 6 Nov), CH-159 (Wed 4 Nov), CH-15
 
 ## Keys
 
-**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 18 not set up; checked Fri 30 Oct, 21:54 UK.
+**Nothing needs fixing.** 15 ok, 0 ending soon, 0 failing, 18 not set up; checked Sat 31 Oct, 01:21 UK.
 
 | Key | State | Ends | Fix |
 |---|---|---|---|
-| Instagram key in use (Quickplay Daily) | ok | Tue 22 Dec 2026 |  |
+| Instagram key in use (Quickplay Daily) | ok | Wed 30 Dec 2026 |  |
 | Facebook Page key: Quickplay Daily (FB_PAGE_TOKEN) | ok | Sun 17 Jan 2027 |  |
 | TikTok sign-in (refresh token) | ok | Sun 17 Oct 2027 |  |
 | Content Rewards login (saved cookies) | ok | Sat 21 Nov 2026 |  |

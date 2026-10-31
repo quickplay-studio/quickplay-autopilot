@@ -1,208 +1,211 @@
 feature,feature_label,value,n,lift,median_rel,verdict,held_3s_pct,avg_viewed_pct,subs_per_1k,shares_per_1k,why,feed_pct,p,q
-angles,Angle research,hidden,24,1.06,1.0,about typical,100,46,0.0,0.0,,56,0.7865,0.984
-angles,Angle research,shown,22,0.82,0.84,about typical,100,45,0.0,0.0,,60,0.4408,0.866
-appeal,Appeal,everyone,104,0.93,1.0,about typical,100,47,0.0,0.0,,52,0.6399,0.904
+angles,Angle research,hidden,24,1.06,1.0,about typical,100,50,0.0,0.0,,54,0.7875,0.954
+angles,Angle research,shown,23,0.8,0.79,early sign,100,45,0.0,0.0,not proven: 90% interval 0.37x to 1.35x includes typical,60,0.3719,0.883
+appeal,Appeal,everyone,106,0.89,1.0,about typical,100,47,0.0,0.0,,50,0.4296,0.895
 appeal,Appeal,fans,2,0.85,1.02,too few to tell,94,20,0.0,0.0,,4,,
-category,Category,Music,37,1.7,1.89,early sign,100,51,0.0,0.0,"not proven: luck check: p 0.017, adjusted q 0.63 is over 0.10 among 159 comparisons",76,0.0165,0.629
-category,Category,Film,34,1.28,1.34,early sign,100,40,0.0,0.0,engaged views 34% vs 30% typical; not proven: 90% interval 0.83x to 2.33x includes typical,74,0.2889,0.811
+category,Category,Music,36,1.79,1.85,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.006, adjusted q 0.38 is over 0.10 among 159 comparisons",74,0.0057,0.384
+category,Category,Film,34,1.16,1.26,about typical,100,40,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.3 heat),72,0.5309,0.919
 category,Category,Animals,1,1.03,1.44,too few to tell,100,775,0.0,0.0,,86,,
-category,Category,Sport,37,0.98,1.0,about typical,100,54,0.0,0.0,,29,0.8792,0.984
-category,Category,Entertainment,21,0.81,0.58,about typical,100,53,0.0,0.0,,82,0.3549,0.851
-category,Category,Science,13,0.75,0.47,pause,100,38,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 9 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20; its topics ran colder than the day's other Shorts (-0.3 heat)",44,0.3037,0.811
-category,Category,Gaming,38,0.73,0.82,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.052, adjusted q 0.63 is over 0.10 among 159 comparisons",38,0.0522,0.629
-category,Category,Tech,13,0.64,0.39,early sign,100,53,0.0,0.0,"not proven: luck check: p 0.054, adjusted q 0.63 is over 0.10 among 159 comparisons",22,0.0539,0.629
-ending,Ending,loop,34,1.1,1.27,about typical,100,50,0.0,0.0,,78,0.6763,0.911
-ending,Ending,question,27,1.03,0.97,about typical,100,47,0.0,0.0,,57,0.88,0.984
-ending,Ending,follow line,8,1.03,1.66,about typical,100,49,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),51,0.9037,0.984
-explore,Exploration Short,no,56,0.98,1.0,about typical,100,44,0.0,0.0,,80,0.9144,0.984
-explore,Exploration Short,yes,13,0.73,0.82,early sign,100,36,0.0,0.0,average viewed 36% vs 48% typical; not proven: 90% interval 0.22x to 1.35x includes typical; a half has under 2 Shorts,69,0.2569,0.782
-first_frame,First frame,photo,41,0.84,0.86,about typical,100,44,0.0,0.0,average viewed 44% vs 48% typical,76,0.4412,0.866
-first_frame,First frame,cover,46,0.76,0.93,early sign,100,41,0.0,0.0,average viewed 41% vs 48% typical; not proven: 90% interval 0.47x to 1.09x includes typical,68,0.1871,0.78
-format,Format,one_detail,55,1.26,1.21,early sign,100,53,0.0,0.0,engaged views 34% vs 30% typical; average viewed 53% vs 48% typical; not proven: 90% interval 0.90x to 1.95x includes typical; a half has under 2 Shorts,76,0.2283,0.78
-format,Format,news_explained,40,1.02,1.0,about typical,100,53,0.0,0.0,,48,0.9319,0.984
-format,Format,timeline,18,0.98,0.88,about typical,100,51,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.4 heat),47,0.9213,0.984
-format,Format,real_reason,16,0.96,1.31,about typical,100,42,0.0,0.0,,31,0.8779,0.984
-format,Format,three_details,23,0.95,1.46,about typical,98,38,0.0,0.0,,68,0.84,0.984
-format,Format,legacy,11,0.88,0.78,about typical,,36,0.0,0.0,average viewed 36% vs 48% typical,71,0.3055,0.811
-format,Format,story,25,0.8,0.8,early sign,100,44,0.0,0.0,engaged views 25% vs 30% typical; not proven: 90% interval 0.41x to 1.24x includes typical,36,0.3097,0.811
-format,Format,countdown,6,0.7,0.49,early sign,100,57,0.0,0.0,engaged views 18% vs 30% typical; not proven: 90% interval 0.09x to 1.23x includes typical; a half has under 2 Shorts; its topics ran colder than the day's other Shorts (-0.6 heat),11,0.1523,0.78
-franchise,Named series,series,10,1.21,1.57,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical,84,0.5442,0.904
-franchise,Named series,named,22,0.96,0.86,about typical,100,36,0.0,0.0,,81,0.8597,0.984
-franchise,Named series,plain,17,0.77,0.55,early sign,100,52,0.0,0.0,not proven: 90% interval 0.34x to 1.20x includes typical; a half has under 2 Shorts,50,0.2384,0.78
-fx_energy,Camera energy test,lab,21,1.08,1.13,about typical,100,52,0.0,0.0,,96,0.7537,0.968
-fx_energy,Camera energy test,lab-energy-1019,7,0.91,1.0,about typical,100,44,0.0,0.0,,77,0.6747,0.911
-fx_energy,Camera energy test,steady,25,0.88,1.0,about typical,100,26,0.0,0.0,average viewed 26% vs 48% typical; engaged views 26% vs 30% typical,61,0.596,0.904
-fx_grade,Colour grade test,natural,17,1.36,1.46,early sign,100,44,0.0,0.0,engaged views 33% vs 30% typical; not proven: 90% interval 0.81x to 3.58x includes typical; a half has under 2 Shorts; its topics ran colder than the day's other Shorts (-0.3 heat),82,0.2367,0.78
-fx_grade,Colour grade test,lab,17,0.86,0.87,about typical,100,50,0.0,0.0,,88,0.478,0.882
-fx_opening,Opening test,lab,13,1.42,1.41,early sign,100,49,0.0,0.0,not proven: a half has under 2 Shorts,87,0.0495,0.629
-fx_opening,Opening test,image_first,21,0.88,0.54,about typical,100,46,0.0,0.0,,86,0.6342,0.904
-fx_slot,Posting quarter test,06:00 to 12:00,26,1.05,1.0,about typical,100,44,0.0,0.0,,86,0.8515,0.984
-fx_slot,Posting quarter test,12:00 to 18:00,27,0.86,1.0,about typical,100,38,0.0,0.0,average viewed 38% vs 48% typical,64,0.3873,0.851
-heat_band,Topic heat,warm,50,1.21,1.11,about typical,100,42,0.0,0.0,engaged views 33% vs 30% typical,50,0.3074,0.811
-heat_band,Topic heat,cold,100,0.9,1.0,about typical,100,50,0.0,0.0,its topics ran colder than the day's other Shorts (-0.7 heat),61,0.4477,0.866
-heat_band,Topic heat,hot,49,0.85,0.87,about typical,100,53,0.0,0.0,its topics ran hotter than the day's other Shorts (+1.2 heat),44,0.3873,0.851
-hook_len,Hook length,13 words or more,51,1.42,1.29,early sign,100,46,0.0,0.0,"not proven: luck check: p 0.065, adjusted q 0.63 is over 0.10 among 159 comparisons",78,0.0647,0.629
-hook_len,Hook length,8 words or fewer,11,1.01,1.46,about typical,100,53,0.0,0.0,,34,0.9581,0.984
-hook_len,Hook length,9 to 12 words,121,0.83,0.8,about typical,100,53,0.0,0.0,,44,0.1788,0.78
-hook_named,Hook names the lead,yes,76,1.23,1.21,about typical,100,51,0.0,0.0,engaged views 33% vs 30% typical,64,0.1949,0.78
-hook_named,Hook names the lead,no,26,1.01,1.13,about typical,92,44,0.0,0.0,,14,0.9653,0.984
-hook_type,Hook style,superlative,20,1.09,0.99,about typical,100,54,0.0,0.0,,50,0.7074,0.941
-hook_type,Hook style,statement,95,1.05,1.0,about typical,100,50,0.0,0.0,,65,0.7408,0.965
-hook_type,Hook style,number,39,1.04,1.22,about typical,100,47,0.0,0.0,,56,0.8422,0.984
-hook_type,Hook style,you,7,0.91,0.79,about typical,88,53,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.7 heat),29,0.5986,0.904
-hook_type,Hook style,twist,11,0.83,1.09,about typical,100,43,0.0,0.0,engaged views 26% vs 30% typical; average viewed 43% vs 48% typical,75,0.5185,0.904
-hook_type,Hook style,question,11,0.77,0.53,pause,100,47,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 8 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20",14,0.2546,0.782
-kind,Kind of Short,breaking,13,1.14,1.0,about typical,100,44,0.0,0.0,engaged views 34% vs 30% typical,54,0.4988,0.901
-kind,Kind of Short,news,93,1.12,1.09,about typical,100,52,0.0,0.0,,57,0.4573,0.866
-kind,Kind of Short,evergreen,21,1.06,1.13,about typical,100,52,0.0,0.0,,80,0.8064,0.984
-kind,Kind of Short,true story,15,0.87,0.87,about typical,100,50,0.0,0.0,,22,0.5318,0.904
-kind,Kind of Short,fiction,2,0.87,0.37,too few to tell,,20,0.0,0.0,,62,,
-kind,Kind of Short,follow-up,18,0.86,0.8,about typical,98,45,0.0,0.0,its topics ran colder than the day's other Shorts (-0.3 heat),22,0.5752,0.904
-kind,Kind of Short,top list,4,0.8,0.8,about typical,100,57,0.0,0.0,engaged views 27% vs 30% typical; its topics ran colder than the day's other Shorts (-0.5 heat),36,,
-late,Posted late,late,14,1.28,1.23,early sign,100,47,0.0,0.0,engaged views 36% vs 30% typical; not proven: 90% interval 0.79x to 3.20x includes typical; a half has under 2 Shorts,92,0.2656,0.782
-late,Posted late,on time,130,1.02,1.0,about typical,100,48,0.0,0.0,,53,0.8749,0.984
-length,Length,25 to 34 s,100,1.1,1.24,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,48,0.4824,0.882
-length,Length,under 25 s,35,1.03,0.94,about typical,100,54,0.0,0.0,,65,0.8786,0.984
-length,Length,35 to 44 s,48,0.78,0.87,early sign,100,44,0.0,0.0,average viewed 44% vs 48% typical; not proven: 90% interval 0.48x to 1.15x includes typical,50,0.2534,0.782
-look_captions,Captions,low,45,1.28,1.29,early sign,100,44,0.0,0.0,engaged views 33% vs 30% typical; not proven: 90% interval 0.90x to 2.05x includes typical; a half has under 2 Shorts,84,0.2138,0.78
-look_captions,Captions,pop,5,1.2,2.38,about typical,100,91,0.0,0.0,average viewed 91% vs 48% typical; engaged views 32% vs 30% typical,85,0.1594,0.78
-look_captions,Captions,lab-captions-1019,54,1.12,1.0,about typical,100,51,0.0,0.0,,32,0.5661,0.904
-look_captions,Captions,clean,34,1.01,0.92,about typical,100,53,0.0,0.0,,48,0.9656,0.984
-look_captions,Captions,minimal,21,0.88,0.98,about typical,100,54,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.3 heat),18,0.5779,0.904
-look_captions,Captions,punch,1,0.79,0.0,too few to tell,,,,,,0,,
-look_captions,Captions,lab-captions-1028,2,0.77,0.28,too few to tell,,0,0.0,0.0,,0,,
-look_captions,Captions,boxed,3,0.77,0.2,early sign,100,48,0.0,0.0,not proven: 3 Shorts over 2 UK day(s); its topics ran colder than the day's other Shorts (-0.8 heat),65,,
-look_captions,Captions,lab-captions-1024,11,0.68,0.6,early sign,100,52,0.0,0.0,engaged views 25% vs 30% typical; not proven: a half has under 2 Shorts,14,0.061,0.629
-look_closing,Closing chip,chip,25,1.12,1.0,about typical,100,42,0.0,0.0,,82,0.6046,0.904
-look_closing,Closing chip,none,22,0.99,0.9,about typical,100,44,0.0,0.0,,69,0.9642,0.984
-look_energy,Camera energy,lab-energy-1019,23,1.2,1.39,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical; its topics ran colder than the day's other Shorts (-0.3 heat),26,0.3429,0.839
-look_energy,Camera energy,steady,95,1.14,1.0,about typical,100,50,0.0,0.0,,50,0.4173,0.851
-look_energy,Camera energy,lab-energy-1025,25,0.98,0.87,about typical,100,46,0.0,0.0,,87,0.9448,0.984
-look_energy,Camera energy,punchy,6,0.76,0.92,early sign,100,48,0.0,0.0,not proven: 6 Shorts over 1 UK day(s); its topics ran colder than the day's other Shorts (-0.4 heat),22,,
-look_energy,Camera energy,calm,27,0.7,0.55,early sign,100,51,0.0,0.0,not proven: a half has under 2 Shorts,10,0.0575,0.629
-look_grade,Colour grade,natural,71,1.25,1.26,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,54,0.2057,0.78
-look_grade,Colour grade,lab-grade-1019,34,1.07,1.02,about typical,98,50,0.0,0.0,,11,0.7162,0.941
-look_grade,Colour grade,cinematic,29,1.0,0.85,about typical,100,54,0.0,0.0,,67,0.9977,0.998
-look_grade,Colour grade,vivid,2,0.86,1.15,too few to tell,100,48,0.0,0.0,,47,,
-look_grade,Colour grade,lab-grade-1027,15,0.77,0.86,early sign,100,48,0.0,0.0,engaged views 23% vs 30% typical; not proven: 90% interval 0.35x to 1.14x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.3 heat),88,0.1926,0.78
-look_grade,Colour grade,lab-grade-1023,25,0.73,0.6,early sign,100,42,0.0,0.0,average viewed 42% vs 48% typical; not proven: 90% interval 0.34x to 1.18x includes typical; a half has under 2 Shorts,67,0.224,0.78
-look_opening,Opening,lab-opening-1026,15,1.4,2.29,early sign,100,42,0.0,0.0,engaged views 32% vs 30% typical; not proven: 90% interval 1.00x to 3.42x includes typical; a half has under 2 Shorts,75,0.1038,0.744
-look_opening,Opening,graphic_first,45,1.18,1.03,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical,53,0.4007,0.851
-look_opening,Opening,lab-opening-1019,22,0.96,1.04,pause,100,46,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 5 Shorts a week old over 2 UK days with a median of 9 views, under three quarters of the floor of 20",67,0.8538,0.984
-look_opening,Opening,image_first,94,0.86,1.0,about typical,100,52,0.0,0.0,,38,0.3366,0.836
-look_style,Style (text and pace),minimal,45,1.28,1.29,early sign,100,44,0.0,0.0,engaged views 33% vs 30% typical; not proven: 90% interval 0.90x to 2.05x includes typical; a half has under 2 Shorts,84,0.2138,0.78
-look_style,Style (text and pace),standard,17,0.51,0.29,early sign,100,38,0.0,0.0,average viewed 38% vs 48% typical; not proven: a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.4 heat),67,0.0042,0.624
-look_voice,Voice,george,45,1.24,1.64,about typical,100,49,0.0,0.0,engaged views 33% vs 30% typical,44,0.2752,0.796
-look_voice,Voice,isabella,6,1.23,1.57,about typical,90,52,0.0,0.0,average viewed 52% vs 48% typical,85,0.3993,0.851
-look_voice,Voice,lab-voice-1019,12,1.2,1.2,about typical,100,48,0.0,0.0,,84,0.5098,0.904
-look_voice,Voice,lily,7,1.05,0.87,about typical,100,58,0.0,0.0,,54,0.8467,0.984
-look_voice,Voice,george_quick,6,1.04,0.93,about typical,100,51,0.0,0.0,,91,0.8085,0.984
-look_voice,Voice,michael,20,0.97,1.02,about typical,100,44,0.0,0.0,,31,0.9086,0.984
-look_voice,Voice,lewis,9,0.95,1.0,about typical,98,51,0.0,0.0,,15,0.8205,0.984
-look_voice,Voice,daniel,21,0.91,1.22,about typical,100,50,0.0,0.0,,82,0.652,0.904
-look_voice,Voice,emma,29,0.88,1.0,about typical,100,52,0.0,0.0,,26,0.6196,0.904
-look_voice,Voice,heart,8,0.84,0.58,about typical,100,39,0.0,0.0,average viewed 39% vs 48% typical,28,0.4098,0.851
-look_voice,Voice,george_dramatic,13,0.75,0.58,early sign,100,56,0.0,0.0,not proven: 90% interval 0.28x to 1.17x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.5 heat),44,0.187,0.78
-mood,Music mood,pop,30,1.57,2.2,early sign,100,44,0.0,0.0,"not proven: luck check: p 0.099, adjusted q 0.74 is over 0.10 among 159 comparisons",76,0.0987,0.744
-mood,Music mood,chill,3,1.37,2.6,early sign,92,53,0.0,0.0,engaged views 35% vs 30% typical; average viewed 53% vs 48% typical; not proven: 3 Shorts over 3 UK day(s); its topics ran hotter than the day's other Shorts (+1.0 heat),82,,
-mood,Music mood,retro,14,1.22,1.62,about typical,100,55,0.0,0.0,average viewed 55% vs 48% typical,74,0.4778,0.882
-mood,Music mood,orchestral,4,1.18,4.58,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,84,,
-mood,Music mood,rock,3,1.13,1.64,about typical,100,62,0.0,0.0,average viewed 62% vs 48% typical; engaged views 32% vs 30% typical,23,,
-mood,Music mood,hiphop,3,1.08,1.09,about typical,76,44,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),10,,
-mood,Music mood,tense,12,1.01,0.99,about typical,100,60,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.6 heat),21,0.9745,0.987
-mood,Music mood,action,34,1.0,1.11,about typical,100,47,0.0,0.0,,63,0.9811,0.987
-mood,Music mood,country,2,0.91,0.69,too few to tell,,53,0.0,0.0,,2,,
-mood,Music mood,playful,9,0.9,1.0,about typical,100,50,0.0,0.0,engaged views 26% vs 30% typical,17,0.7131,0.941
-mood,Music mood,space,14,0.89,0.74,about typical,100,38,0.0,0.0,average viewed 38% vs 48% typical,74,0.6227,0.904
-mood,Music mood,epic,33,0.79,0.87,early sign,100,50,0.0,0.0,not proven: 90% interval 0.46x to 1.14x includes typical,50,0.2395,0.78
-mood,Music mood,inspiring,11,0.78,0.87,early sign,100,62,0.0,0.0,not proven: 90% interval 0.30x to 1.18x includes typical,18,0.1998,0.78
-mood,Music mood,tech,10,0.61,0.25,pause,100,54,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 5 Shorts a week old over 2 UK days with a median of 12 views, under three quarters of the floor of 20",11,0.0512,0.629
-pic_band,Picture relevance,loose,5,0.85,1.0,about typical,96,32,0.0,0.0,average viewed 32% vs 48% typical; engaged views 27% vs 30% typical; its topics ran hotter than the day's other Shorts (+1.0 heat),79,0.5707,0.904
+category,Category,Sport,39,1.02,1.0,about typical,100,54,0.0,0.0,,30,0.9175,0.966
+category,Category,Entertainment,20,0.79,0.53,early sign,100,53,0.0,0.0,not proven: 90% interval 0.36x to 1.31x includes typical,79,0.3301,0.84
+category,Category,Science,13,0.75,0.47,pause,100,38,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 9 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20",44,0.2963,0.825
+category,Category,Gaming,40,0.72,0.78,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.046, adjusted q 0.65 is over 0.10 among 159 comparisons",42,0.0463,0.651
+category,Category,Tech,13,0.62,0.33,early sign,100,53,0.0,0.0,"not proven: luck check: p 0.037, adjusted q 0.65 is over 0.10 among 159 comparisons",22,0.0367,0.651
+ending,Ending,loop,33,1.05,1.22,about typical,100,51,0.0,0.0,,72,0.8421,0.954
+ending,Ending,follow line,8,1.03,1.66,about typical,100,49,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),50,0.9037,0.964
+ending,Ending,question,30,0.93,0.87,about typical,100,47,0.0,0.0,,56,0.6962,0.954
+explore,Exploration Short,no,58,0.91,1.08,about typical,100,44,0.0,0.0,,80,0.6098,0.925
+explore,Exploration Short,yes,12,0.67,0.41,early sign,100,39,0.0,0.0,average viewed 39% vs 48% typical; not proven: 90% interval 0.17x to 1.13x includes typical; a half has under 2 Shorts,63,0.1504,0.786
+first_frame,First frame,photo,43,0.78,0.67,early sign,100,43,0.0,0.0,average viewed 43% vs 48% typical; not proven: 90% interval 0.46x to 1.16x includes typical; a half has under 2 Shorts,72,0.2643,0.825
+first_frame,First frame,cover,45,0.73,1.0,early sign,100,41,0.0,0.0,average viewed 41% vs 48% typical; not proven: 90% interval 0.44x to 1.02x includes typical,67,0.1162,0.786
+format,Format,one_detail,55,1.17,1.23,about typical,100,53,0.0,0.0,engaged views 34% vs 29% typical; average viewed 53% vs 48% typical,76,0.3949,0.884
+format,Format,news_explained,41,1.09,1.03,about typical,100,53,0.0,0.0,,48,0.6072,0.925
+format,Format,timeline,18,0.97,0.64,about typical,100,51,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.4 heat),47,0.8872,0.954
+format,Format,three_details,21,0.94,1.46,about typical,100,41,0.0,0.0,,67,0.8176,0.954
+format,Format,real_reason,17,0.91,1.0,about typical,100,42,0.0,0.0,,31,0.7029,0.954
+format,Format,legacy,11,0.86,0.78,about typical,,36,0.0,0.0,average viewed 36% vs 48% typical,71,0.2317,0.825
+format,Format,story,27,0.83,0.8,about typical,100,44,0.0,0.0,engaged views 24% vs 29% typical,44,0.3842,0.883
+format,Format,countdown,6,0.7,0.49,early sign,100,57,0.0,0.0,engaged views 18% vs 29% typical; not proven: 90% interval 0.09x to 1.23x includes typical; a half has under 2 Shorts; its topics ran colder than the day's other Shorts (-0.6 heat),11,0.1523,0.786
+franchise,Named series,named,20,0.95,0.88,about typical,100,42,0.0,0.0,,74,0.8587,0.954
+franchise,Named series,series,11,0.89,1.44,about typical,100,56,0.0,0.0,,82,0.6715,0.954
+franchise,Named series,plain,19,0.8,0.67,early sign,100,51,0.0,0.0,not proven: 90% interval 0.38x to 1.28x includes typical; a half has under 2 Shorts,54,0.3161,0.825
+fx_energy,Camera energy test,lab,21,1.04,1.23,about typical,100,53,0.0,0.0,,96,0.8719,0.954
+fx_energy,Camera energy test,lab-energy-1019,7,0.91,1.0,about typical,100,44,0.0,0.0,,77,0.6747,0.954
+fx_energy,Camera energy test,steady,27,0.81,0.71,about typical,100,28,0.0,0.0,average viewed 28% vs 48% typical; engaged views 26% vs 29% typical,60,0.3724,0.883
+fx_grade,Colour grade test,natural,18,1.2,1.35,about typical,100,42,0.0,0.0,engaged views 33% vs 29% typical; its topics ran colder than the day's other Shorts (-0.4 heat),82,0.4606,0.895
+fx_grade,Colour grade test,lab,18,0.85,1.08,about typical,100,52,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.3 heat),87,0.4595,0.895
+fx_opening,Opening test,lab,14,1.45,1.48,early sign,100,48,0.0,0.0,not proven: a half has under 2 Shorts,87,0.0433,0.651
+fx_opening,Opening test,image_first,22,0.77,0.7,early sign,100,46,0.0,0.0,not proven: 90% interval 0.36x to 1.24x includes typical; a half has under 2 Shorts,81,0.2763,0.825
+fx_slot,Posting quarter test,06:00 to 12:00,26,0.96,1.0,about typical,100,43,0.0,0.0,,86,0.8694,0.954
+fx_slot,Posting quarter test,12:00 to 18:00,29,0.83,1.0,about typical,100,40,0.0,0.0,average viewed 40% vs 48% typical,64,0.3345,0.84
+heat_band,Topic heat,warm,50,1.11,1.02,about typical,100,42,0.0,0.0,engaged views 33% vs 29% typical,50,0.565,0.925
+heat_band,Topic heat,cold,102,0.91,1.0,about typical,100,50,0.0,0.0,its topics ran colder than the day's other Shorts (-0.7 heat),62,0.506,0.919
+heat_band,Topic heat,hot,49,0.87,0.87,about typical,100,54,0.0,0.0,its topics ran hotter than the day's other Shorts (+1.2 heat),35,0.4474,0.895
+hook_len,Hook length,13 words or more,51,1.38,1.23,early sign,100,47,0.0,0.0,"not proven: luck check: p 0.089, adjusted q 0.65 is over 0.10 among 159 comparisons",76,0.0885,0.651
+hook_len,Hook length,8 words or fewer,11,1.03,1.57,about typical,100,53,0.0,0.0,,34,0.8646,0.954
+hook_len,Hook length,9 to 12 words,123,0.83,0.79,about typical,100,53,0.0,0.0,,44,0.1574,0.786
+hook_named,Hook names the lead,yes,80,1.17,1.2,about typical,100,51,0.0,0.0,engaged views 32% vs 29% typical,60,0.3094,0.825
+hook_named,Hook names the lead,no,25,1.0,1.0,about typical,93,45,0.0,0.0,,12,0.9968,0.997
+hook_type,Hook style,statement,95,1.08,1.0,about typical,100,50,0.0,0.0,,65,0.5858,0.925
+hook_type,Hook style,superlative,20,1.06,0.95,about typical,100,54,0.0,0.0,,50,0.7858,0.954
+hook_type,Hook style,number,41,0.97,1.19,about typical,100,47,0.0,0.0,,50,0.885,0.954
+hook_type,Hook style,you,8,0.93,0.75,about typical,88,53,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.7 heat),40,0.6461,0.951
+hook_type,Hook style,twist,11,0.81,1.0,about typical,100,43,0.0,0.0,average viewed 43% vs 48% typical; engaged views 26% vs 29% typical,75,0.4675,0.895
+hook_type,Hook style,question,10,0.73,0.5,pause,100,50,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 8 Shorts a week old over 3 UK days with a median of 11 views, under three quarters of the floor of 20; its topics ran colder than the day's other Shorts (-0.4 heat)",12,0.1916,0.825
+kind,Kind of Short,breaking,13,1.13,1.0,about typical,100,44,0.0,0.0,engaged views 34% vs 29% typical,54,0.5139,0.919
+kind,Kind of Short,news,94,1.12,1.18,about typical,100,52,0.0,0.0,,55,0.4797,0.897
+kind,Kind of Short,evergreen,21,0.93,1.03,about typical,100,51,0.0,0.0,,76,0.7314,0.954
+kind,Kind of Short,true story,15,0.87,0.87,about typical,100,50,0.0,0.0,,22,0.5318,0.919
+kind,Kind of Short,fiction,2,0.87,0.42,too few to tell,,20,0.0,0.0,,62,,
+kind,Kind of Short,follow-up,19,0.86,0.7,about typical,98,45,0.0,0.0,,27,0.5819,0.925
+kind,Kind of Short,top list,4,0.8,0.8,about typical,100,57,0.0,0.0,its topics ran colder than the day's other Shorts (-0.5 heat),36,,
+late,Posted late,late,14,1.29,1.38,early sign,100,47,0.0,0.0,engaged views 36% vs 29% typical; not proven: 90% interval 0.76x to 3.42x includes typical; a half has under 2 Shorts,92,0.2863,0.825
+late,Posted late,on time,132,1.03,1.11,about typical,100,48,0.0,0.0,,50,0.7998,0.954
+length,Length,25 to 34 s,99,1.16,1.39,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,44,0.2829,0.825
+length,Length,under 25 s,36,1.0,0.79,about typical,100,54,0.0,0.0,,62,0.9817,0.997
+length,Length,35 to 44 s,50,0.71,0.93,early sign,100,44,0.0,0.0,"average viewed 44% vs 48% typical; not proven: luck check: p 0.090, adjusted q 0.65 is over 0.10 among 159 comparisons",48,0.0901,0.651
+look_captions,Captions,low,45,1.23,1.29,about typical,100,44,0.0,0.0,engaged views 32% vs 29% typical,82,0.2661,0.825
+look_captions,Captions,pop,6,1.23,2.0,about typical,100,80,0.0,0.0,average viewed 80% vs 48% typical; engaged views 33% vs 29% typical,90,0.1558,0.786
+look_captions,Captions,lab-captions-1019,55,1.11,1.0,about typical,100,51,0.0,0.0,,32,0.5882,0.925
+look_captions,Captions,clean,33,1.06,0.85,about typical,100,53,0.0,0.0,,44,0.7575,0.954
+look_captions,Captions,minimal,21,0.87,0.7,about typical,100,54,0.0,0.0,,18,0.5263,0.919
+look_captions,Captions,punch,2,0.87,1.35,too few to tell,100,55,2.3,0.0,,44,,
+look_captions,Captions,boxed,3,0.76,0.2,early sign,100,48,0.0,0.0,not proven: 3 Shorts over 2 UK day(s); its topics ran colder than the day's other Shorts (-0.7 heat),65,,
+look_captions,Captions,lab-captions-1028,3,0.69,0.1,early sign,,0,0.0,0.0,engaged views 0% vs 29% typical; average viewed 0% vs 48% typical; not proven: 3 Shorts over 2 UK day(s); its topics ran hotter than the day's other Shorts (+1.4 heat),0,,
+look_captions,Captions,lab-captions-1024,10,0.64,0.61,early sign,100,53,0.0,0.0,not proven: a half has under 2 Shorts,12,0.0317,0.651
+look_closing,Closing chip,chip,26,0.98,1.08,about typical,100,42,0.0,0.0,,83,0.9299,0.973
+look_closing,Closing chip,none,22,0.93,0.88,about typical,100,43,0.0,0.0,,60,0.7594,0.954
+look_energy,Camera energy,lab-energy-1019,23,1.22,1.39,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical; its topics ran colder than the day's other Shorts (-0.3 heat),26,0.3008,0.825
+look_energy,Camera energy,steady,96,1.12,1.0,about typical,100,50,0.0,0.0,,47,0.4728,0.895
+look_energy,Camera energy,lab-energy-1030,1,1.01,1.19,too few to tell,,,,,,,,
+look_energy,Camera energy,lab-energy-1025,24,0.92,1.08,about typical,100,44,0.0,0.0,,83,0.7129,0.954
+look_energy,Camera energy,punchy,8,0.85,1.25,about typical,100,55,0.0,0.0,,51,,
+look_energy,Camera energy,calm,26,0.68,0.46,early sign,100,53,0.0,0.0,not proven: a half has under 2 Shorts,10,0.047,0.651
+look_grade,Colour grade,natural,72,1.23,1.18,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,52,0.2107,0.825
+look_grade,Colour grade,lab-grade-1019,34,1.07,1.02,about typical,98,50,0.0,0.0,,11,0.7162,0.954
+look_grade,Colour grade,cinematic,29,1.0,0.85,about typical,100,54,0.0,0.0,,67,0.9907,0.997
+look_grade,Colour grade,vivid,3,0.94,1.82,about typical,100,52,0.8,0.0,its topics ran colder than the day's other Shorts (-0.6 heat),94,,
+look_grade,Colour grade,lab-grade-1027,15,0.77,1.0,early sign,100,62,0.0,0.0,not proven: 90% interval 0.33x to 1.18x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.4 heat),88,0.2113,0.825
+look_grade,Colour grade,lab-grade-1023,25,0.69,0.6,early sign,100,42,0.0,0.0,average viewed 42% vs 48% typical; not proven: 90% interval 0.31x to 1.05x includes typical; a half has under 2 Shorts,67,0.1309,0.786
+look_opening,Opening,lab-opening-1026,15,1.35,1.62,early sign,100,42,0.0,0.0,engaged views 32% vs 29% typical; not proven: 90% interval 0.90x to 3.25x includes typical; a half has under 2 Shorts,75,0.1632,0.786
+look_opening,Opening,graphic_first,46,1.17,1.06,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical,56,0.4107,0.895
+look_opening,Opening,lab-opening-1019,22,0.95,1.04,pause,100,46,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 5 Shorts a week old over 2 UK days with a median of 9 views, under three quarters of the floor of 20",67,0.7857,0.954
+look_opening,Opening,image_first,95,0.86,0.98,about typical,100,53,0.0,0.0,,34,0.3163,0.825
+look_style,Style (text and pace),minimal,45,1.23,1.29,about typical,100,44,0.0,0.0,engaged views 32% vs 29% typical,82,0.2661,0.825
+look_style,Style (text and pace),standard,18,0.44,0.22,early sign,100,41,0.0,0.0,average viewed 41% vs 48% typical; not proven: a half has under 2 Shorts,42,0.0003,0.055
+look_voice,Voice,lab-voice-1019,13,1.26,1.44,early sign,100,43,0.0,0.0,not proven: 90% interval 0.65x to 3.70x includes typical,83,0.3889,0.883
+look_voice,Voice,george,45,1.21,1.64,about typical,100,52,0.0,0.0,engaged views 32% vs 29% typical,44,0.338,0.84
+look_voice,Voice,lily,8,1.06,0.79,about typical,100,59,0.0,0.0,,52,0.8165,0.954
+look_voice,Voice,george_quick,6,1.01,0.83,about typical,100,51,0.0,0.0,,91,0.9538,0.985
+look_voice,Voice,lewis,9,0.97,1.0,about typical,98,51,0.0,0.0,,15,0.8882,0.954
+look_voice,Voice,michael,20,0.95,1.13,about typical,100,44,0.0,0.0,,31,0.8476,0.954
+look_voice,Voice,emma,28,0.95,1.0,about typical,100,52,0.0,0.0,,23,0.8481,0.954
+look_voice,Voice,daniel,21,0.94,1.23,about typical,100,51,0.0,0.0,,82,0.7818,0.954
+look_voice,Voice,isabella,5,0.94,1.0,about typical,81,53,0.0,0.0,,43,0.7606,0.954
+look_voice,Voice,lab-voice-1028,1,0.9,0.24,too few to tell,,,,,,,,
+look_voice,Voice,heart,8,0.8,0.56,about typical,100,39,0.0,0.0,average viewed 39% vs 48% typical,28,0.2932,0.825
+look_voice,Voice,george_dramatic,14,0.79,0.62,early sign,100,56,0.0,0.0,not proven: 90% interval 0.32x to 1.30x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.4 heat),50,0.2968,0.825
+mood,Music mood,pop,29,1.69,2.57,early sign,100,43,0.0,0.0,"not proven: luck check: p 0.050, adjusted q 0.65 is over 0.10 among 159 comparisons",76,0.0499,0.651
+mood,Music mood,chill,2,1.32,12.95,too few to tell,90,53,0.0,0.5,,50,,
+mood,Music mood,orchestral,4,1.26,5.17,early sign,100,53,0.0,0.0,average viewed 53% vs 48% typical; not proven: 4 Shorts over 2 UK day(s),84,,
+mood,Music mood,retro,14,1.2,1.54,about typical,100,55,0.0,0.0,average viewed 55% vs 48% typical,74,0.5158,0.919
+mood,Music mood,rock,3,1.11,1.64,about typical,100,62,0.0,0.0,average viewed 62% vs 48% typical; engaged views 32% vs 29% typical,23,,
+mood,Music mood,action,35,1.08,1.29,about typical,100,49,0.0,0.0,,69,0.6494,0.951
+mood,Music mood,hiphop,3,1.05,1.09,about typical,76,44,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),10,,
+mood,Music mood,tense,12,0.98,0.99,about typical,100,60,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.6 heat),21,0.9163,0.966
+mood,Music mood,country,2,0.92,0.71,too few to tell,,53,0.0,0.0,,2,,
+mood,Music mood,space,14,0.88,0.83,about typical,100,38,0.0,0.0,average viewed 38% vs 48% typical,74,0.6056,0.925
+mood,Music mood,playful,10,0.85,0.69,about typical,100,50,0.0,0.0,engaged views 26% vs 29% typical,17,0.5526,0.925
+mood,Music mood,inspiring,11,0.76,0.79,early sign,100,62,0.0,0.0,not proven: 90% interval 0.29x to 1.12x includes typical,18,0.1622,0.786
+mood,Music mood,epic,34,0.72,0.92,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.088, adjusted q 0.65 is over 0.10 among 159 comparisons",48,0.0882,0.651
+mood,Music mood,tech,11,0.6,0.32,pause,100,54,0.0,0.0,"paused 2026-10-30 to 2026-11-13: 5 Shorts a week old over 2 UK days with a median of 12 views, under three quarters of the floor of 20",16,0.0312,0.651
+pic_band,Picture relevance,loose,5,0.85,1.0,about typical,96,32,0.0,0.0,average viewed 32% vs 48% typical; its topics ran hotter than the day's other Shorts (+1.0 heat),79,0.5707,0.925
 pic_band,Picture relevance,on topic,4,0.81,0.57,about typical,100,38,0.0,0.0,average viewed 38% vs 48% typical,72,,
-pic_band,Picture relevance,off topic,6,0.75,0.83,early sign,100,49,0.0,0.0,engaged views 27% vs 30% typical; not proven: 90% interval 0.12x to 1.45x includes typical; a half has under 2 Shorts,56,0.2181,0.78
-pictures,Pictures,mostly real pictures,169,1.01,1.0,about typical,100,50,0.0,0.0,,50,0.9322,0.984
-pictures,Pictures,mostly stock footage,7,0.96,0.58,about typical,100,70,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),80,0.835,0.984
-replies,Comment replies,on,86,1.11,1.0,about typical,100,51,0.0,0.0,,53,0.4568,0.866
-replies,Comment replies,off,80,0.92,1.0,about typical,100,48,0.0,0.0,,40,0.6507,0.904
+pic_band,Picture relevance,off topic,6,0.75,0.83,early sign,100,49,0.0,0.0,not proven: 90% interval 0.12x to 1.45x includes typical; a half has under 2 Shorts,56,0.2181,0.825
+pictures,Pictures,mostly real pictures,171,1.0,1.0,about typical,100,50,0.0,0.0,,48,0.9887,0.997
+pictures,Pictures,mostly stock footage,7,0.93,0.64,about typical,100,70,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),80,0.6802,0.954
+replies,Comment replies,on,88,1.08,1.0,about typical,100,51,0.0,0.0,,53,0.6112,0.925
+replies,Comment replies,off,80,0.91,1.0,about typical,100,48,0.0,0.0,,33,0.5637,0.925
 series,Series,three parts,3,1.21,2.24,about typical,100,41,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.8 heat),79,,
-series,Series,single,21,1.11,0.94,about typical,100,48,0.0,0.0,,72,0.6542,0.904
-series,Series,two parts,5,0.84,0.79,about typical,100,42,0.0,0.0,average viewed 42% vs 48% typical,11,0.4337,0.866
-slot,Posting time (UK),08:00 to 10:59,25,1.54,1.78,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.050, adjusted q 0.63 is over 0.10 among 159 comparisons",76,0.0497,0.629
-slot,Posting time (UK),11:00 to 13:59,38,1.33,1.44,early sign,100,42,0.0,0.0,"not proven: luck check: p 0.075, adjusted q 0.63 is over 0.10 among 159 comparisons",78,0.0751,0.629
-slot,Posting time (UK),other times,57,1.3,1.44,early sign,100,53,0.0,0.0,average viewed 53% vs 48% typical; not proven: 90% interval 0.95x to 1.98x includes typical,72,0.1575,0.78
-slot,Posting time (UK),14:00 to 16:59,34,0.67,0.69,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.041, adjusted q 0.63 is over 0.10 among 159 comparisons",23,0.0406,0.629
-slot,Posting time (UK),17:00 to 19:59,31,0.57,0.53,early sign,100,42,0.0,0.0,"average viewed 42% vs 48% typical; not proven: luck check: p 0.012, adjusted q 0.62 is over 0.10 among 159 comparisons",16,0.0118,0.624
-slot,Posting time (UK),20:00 to 22:59,14,0.55,0.34,early sign,100,35,0.0,0.0,"average viewed 35% vs 48% typical; not proven: luck check: p 0.008, adjusted q 0.62 is over 0.10 among 159 comparisons",38,0.0085,0.624
-source,Topic source,YouTube music,7,1.68,2.96,early sign,100,47,0.0,0.0,"not proven: luck check: p 0.066, adjusted q 0.63 is over 0.10 among 159 comparisons",93,0.0662,0.629
-source,Topic source,Google Trends,29,1.47,1.72,early sign,98,53,0.0,0.0,"engaged views 34% vs 30% typical; average viewed 53% vs 48% typical; not proven: luck check: p 0.041, adjusted q 0.63 is over 0.10 among 159 comparisons",17,0.0408,0.629
-source,Topic source,Search-led,6,1.34,1.57,early sign,100,58,0.0,0.0,average viewed 58% vs 48% typical; not proven: 90% interval 0.64x to 9.25x includes typical; a half has under 2 Shorts; its topics ran colder than the day's other Shorts (-0.5 heat),84,0.2403,0.78
-source,Topic source,Apple albums,1,1.3,30.87,too few to tell,100,42,1.0,0.0,,98,,
+series,Series,single,20,1.06,0.83,about typical,100,50,0.0,0.0,,69,0.8173,0.954
+series,Series,two parts,6,0.9,1.22,about typical,100,41,0.0,0.0,average viewed 41% vs 48% typical; engaged views 26% vs 29% typical,26,0.6519,0.951
+slot,Posting time (UK),08:00 to 10:59,28,1.48,1.64,early sign,100,51,0.0,0.0,"not proven: luck check: p 0.067, adjusted q 0.65 is over 0.10 among 159 comparisons",80,0.0674,0.651
+slot,Posting time (UK),11:00 to 13:59,40,1.32,1.47,early sign,100,42,0.0,0.0,"not proven: luck check: p 0.074, adjusted q 0.65 is over 0.10 among 159 comparisons",78,0.0741,0.651
+slot,Posting time (UK),other times,56,1.22,1.26,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,70,0.2697,0.825
+slot,Posting time (UK),14:00 to 16:59,32,0.69,0.61,early sign,100,50,0.0,0.0,"not proven: luck check: p 0.064, adjusted q 0.65 is over 0.10 among 159 comparisons",21,0.0636,0.651
+slot,Posting time (UK),17:00 to 19:59,31,0.56,0.47,early sign,100,42,0.0,0.0,"average viewed 42% vs 48% typical; not proven: luck check: p 0.010, adjusted q 0.41 is over 0.10 among 159 comparisons",16,0.0102,0.405
+slot,Posting time (UK),20:00 to 22:59,14,0.54,0.32,early sign,100,35,0.0,0.0,"average viewed 35% vs 48% typical; not proven: luck check: p 0.007, adjusted q 0.38 is over 0.10 among 159 comparisons",38,0.0072,0.384
+source,Topic source,YouTube music,7,1.68,2.96,early sign,100,47,0.0,0.0,"not proven: luck check: p 0.066, adjusted q 0.65 is over 0.10 among 159 comparisons",93,0.0662,0.651
+source,Topic source,Google Trends,29,1.48,1.78,early sign,98,53,0.0,0.0,"engaged views 34% vs 29% typical; average viewed 53% vs 48% typical; not proven: luck check: p 0.035, adjusted q 0.65 is over 0.10 among 159 comparisons",17,0.0353,0.651
+source,Topic source,Apple albums,1,1.34,44.0,too few to tell,100,42,1.0,0.0,,98,,
 source,Topic source,Rocket launches,1,1.24,15.76,too few to tell,100,58,0.0,0.0,,94,,
-source,Topic source,Apple Music,2,1.15,4.41,too few to tell,100,49,1.5,0.0,,50,,
-source,Topic source,YouTube,18,1.07,1.0,about typical,100,53,0.0,0.0,,36,0.7548,0.968
-source,Topic source,TVmaze,2,1.03,1.6,too few to tell,96,41,0.0,0.0,,49,,
+source,Topic source,Apple Music,2,1.13,4.28,too few to tell,100,49,1.5,0.0,,50,,
+source,Topic source,Search-led,6,1.07,1.53,about typical,100,59,0.0,0.0,its topics ran colder than the day's other Shorts (-0.6 heat),82,0.6898,0.954
+source,Topic source,YouTube,18,1.07,1.0,about typical,100,53,0.0,0.0,,36,0.769,0.954
 source,Topic source,Bluesky,2,0.99,3.07,too few to tell,92,65,0.0,0.0,,0,,
-source,Topic source,Evergreen,24,0.94,0.98,about typical,100,49,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),34,0.7948,0.984
-source,Topic source,Other,2,0.87,0.37,too few to tell,,20,0.0,0.0,,62,,
+source,Topic source,TVmaze,1,0.96,0.6,too few to tell,100,51,0.0,0.0,,16,,
+source,Topic source,Evergreen,24,0.93,0.98,about typical,100,49,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),34,0.7605,0.954
+source,Topic source,Other,2,0.87,0.42,too few to tell,,20,0.0,0.0,,62,,
 source,Topic source,On this day,2,0.84,0.85,too few to tell,100,39,0.0,0.0,,42,,
-source,Topic source,Follow-up,15,0.83,0.6,about typical,100,45,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),16,0.5351,0.904
-source,Topic source,Wikipedia,11,0.8,0.79,early sign,98,41,0.0,0.0,engaged views 24% vs 30% typical; average viewed 41% vs 48% typical; not proven: 90% interval 0.23x to 1.68x includes typical; its topics ran hotter than the day's other Shorts (+1.9 heat),20,0.4039,0.851
-source,Topic source,Watchlist,34,0.76,0.93,early sign,100,47,0.0,0.0,not proven: 90% interval 0.46x to 1.03x includes typical; a half has under 2 Shorts,82,0.1267,0.78
-source,Topic source,Trend-tied,10,0.68,0.67,early sign,96,50,0.0,0.0,"engaged views 18% vs 30% typical; not proven: luck check: p 0.060, adjusted q 0.63 is over 0.10 among 159 comparisons",0,0.0605,0.629
-sub_push,Subscribe line,none,24,1.29,1.21,early sign,100,36,0.0,0.0,not proven: 90% interval 0.83x to 2.60x includes typical; a half has under 2 Shorts,80,0.2618,0.782
-sub_push,Subscribe line,spoken,20,0.96,1.07,about typical,100,48,0.0,0.0,,84,0.8631,0.984
-title_answer,Title answer,held back,26,0.88,0.73,about typical,100,44,0.0,0.0,average viewed 44% vs 48% typical,78,0.5899,0.904
-title_answer,Title answer,stated,28,0.83,1.0,about typical,100,42,0.0,0.0,average viewed 42% vs 48% typical; its topics ran hotter than the day's other Shorts (+0.4 heat),73,0.4119,0.851
-title_emoji,Title emoji,none,38,0.97,0.93,about typical,100,42,0.0,0.0,,81,0.9146,0.984
-title_emoji,Title emoji,emoji,31,0.83,1.0,about typical,100,45,0.0,0.0,,72,0.321,0.811
-title_search,Title wording,search phrase,33,0.9,0.94,about typical,100,46,0.0,0.0,,46,0.6162,0.904
-title_search,Title wording,curiosity,26,0.75,0.5,early sign,100,42,0.0,0.0,average viewed 42% vs 48% typical; not proven: 90% interval 0.37x to 1.18x includes typical; its topics ran hotter than the day's other Shorts (+0.5 heat),78,0.2377,0.78
-title_style,Title,statement,105,1.14,1.13,about typical,100,51,0.0,0.0,engaged views 33% vs 30% typical,56,0.3701,0.851
-title_style,Title,number in title,76,0.86,1.0,about typical,100,43,0.0,0.0,average viewed 43% vs 48% typical,47,0.3197,0.811
-title_style,Title,question,18,0.66,0.45,early sign,100,54,0.0,0.0,"not proven: luck check: p 0.098, adjusted q 0.74 is over 0.10 among 159 comparisons",74,0.0984,0.744
-viral,Viral topic push,no,20,1.33,1.27,early sign,100,42,0.0,0.0,engaged views 33% vs 30% typical; not proven: 90% interval 0.84x to 3.00x includes typical; a half has under 2 Shorts,82,0.2282,0.78
-viral,Viral topic push,yes,12,0.74,0.7,early sign,100,63,0.0,0.0,not proven: 90% interval 0.26x to 1.17x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.5 heat),97,0.185,0.78
-viral_angle,Viral topic angle,latest,3,1.09,1.46,about typical,100,42,0.0,0.0,its topics ran hotter than the day's other Shorts (+1.2 heat),44,,
-viral_angle,Viral topic angle,rankings,2,1.03,1.29,too few to tell,100,62,0.0,0.0,,97,,
+source,Topic source,Follow-up,16,0.83,0.65,about typical,100,45,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),17,0.5059,0.919
+source,Topic source,Wikipedia,11,0.8,0.58,about typical,98,41,0.0,0.0,engaged views 24% vs 29% typical; average viewed 41% vs 48% typical; its topics ran hotter than the day's other Shorts (+1.9 heat),20,0.4398,0.895
+source,Topic source,Watchlist,36,0.77,1.0,early sign,100,47,0.0,0.0,not proven: 90% interval 0.47x to 1.07x includes typical; a half has under 2 Shorts,82,0.1707,0.798
+source,Topic source,Trend-tied,10,0.68,0.67,early sign,96,50,0.0,0.0,"engaged views 18% vs 29% typical; not proven: luck check: p 0.060, adjusted q 0.65 is over 0.10 among 159 comparisons",0,0.0605,0.651
+sub_push,Subscribe line,none,23,1.33,1.16,early sign,100,38,0.0,0.0,not proven: 90% interval 0.85x to 2.77x includes typical; a half has under 2 Shorts,80,0.2321,0.825
+sub_push,Subscribe line,spoken,23,0.82,1.19,about typical,100,44,0.0,0.0,average viewed 44% vs 48% typical,84,0.3575,0.874
+title_answer,Title answer,held back,25,0.83,0.6,about typical,100,45,0.0,0.0,,75,0.4688,0.895
+title_answer,Title answer,stated,30,0.82,1.18,about typical,100,42,0.0,0.0,average viewed 42% vs 48% typical; its topics ran hotter than the day's other Shorts (+0.4 heat),73,0.3851,0.883
+title_emoji,Title emoji,none,38,0.87,1.0,about typical,100,42,0.0,0.0,average viewed 42% vs 48% typical,80,0.5489,0.925
+title_emoji,Title emoji,emoji,32,0.81,1.08,about typical,100,45,0.0,0.0,,72,0.2657,0.825
+title_search,Title wording,search phrase,35,0.91,1.0,about typical,100,46,0.0,0.0,,52,0.6706,0.954
+title_search,Title wording,curiosity,25,0.69,0.43,early sign,100,42,0.0,0.0,average viewed 42% vs 48% typical; not proven: 90% interval 0.32x to 1.06x includes typical; its topics ran hotter than the day's other Shorts (+0.5 heat),76,0.1401,0.786
+title_style,Title,statement,105,1.09,1.13,about typical,100,51,0.0,0.0,,54,0.5444,0.925
+title_style,Title,number in title,79,0.85,1.0,about typical,100,44,0.0,0.0,average viewed 44% vs 48% typical,48,0.2898,0.825
+title_style,Title,question,17,0.73,0.49,early sign,100,54,0.0,0.0,not proven: 90% interval 0.31x to 1.13x includes typical; its topics ran colder than the day's other Shorts (-0.3 heat),72,0.1806,0.82
+viral,Viral topic push,no,20,1.1,1.12,about typical,100,42,0.0,0.0,,80,0.7021,0.954
+viral,Viral topic push,yes,13,0.79,1.0,early sign,100,63,0.0,0.0,not proven: 90% interval 0.31x to 1.32x includes typical; a half has under 2 Shorts; its topics ran hotter than the day's other Shorts (+0.6 heat),97,0.2977,0.825
+viral_angle,Viral topic angle,latest,3,1.15,1.7,about typical,100,42,0.0,0.0,its topics ran hotter than the day's other Shorts (+1.3 heat),44,,
+viral_angle,Viral topic angle,rankings,2,1.04,1.38,too few to tell,100,62,0.0,0.0,,97,,
+viral_angle,Viral topic angle,facts,1,1.01,1.19,too few to tell,,,,,,,,
 viral_angle,Viral topic angle,explained,2,1.01,1.66,too few to tell,100,109,0.0,0.0,,97,,
-viral_angle,Viral topic angle,reaction,2,0.89,0.54,too few to tell,100,64,0.0,0.0,,98,,
-viral_angle,Viral topic angle,records,2,0.73,0.14,too few to tell,,44,0.0,0.0,,50,,
-weekday,Day posted,Friday,22,1.15,1.0,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,16,0.5656,0.904
-weekday,Day posted,Wednesday,45,1.13,1.0,about typical,100,53,0.0,0.0,average viewed 53% vs 48% typical,75,0.5724,0.904
-weekday,Day posted,Tuesday,24,1.13,1.0,about typical,100,45,0.0,0.0,engaged views 33% vs 30% typical,66,0.5485,0.904
-weekday,Day posted,Thursday,36,0.99,1.07,about typical,100,50,0.0,0.0,,25,0.952,0.984
-weekday,Day posted,Saturday,14,0.89,0.81,about typical,96,53,0.0,0.0,,40,0.5863,0.904
-weekday,Day posted,Monday,27,0.81,1.0,about typical,100,46,0.0,0.0,,76,0.3212,0.811
-weekday,Day posted,Sunday,31,0.71,1.0,early sign,100,41,0.0,0.0,"average viewed 41% vs 48% typical; not proven: luck check: p 0.075, adjusted q 0.63 is over 0.10 among 159 comparisons",69,0.0752,0.629
-writer,Writer model,groq:qwen/qwen3.8-27b,6,1.44,1.92,early sign,100,47,0.0,0.0,not proven: a half has under 2 Shorts,96,0.0734,0.629
-writer,Writer model,gemini:gemini-3.5-flash-lite,35,1.31,1.0,early sign,100,50,0.0,0.0,not proven: 90% interval 0.91x to 2.27x includes typical,72,0.1895,0.78
+viral_angle,Viral topic angle,reaction,2,0.9,0.61,too few to tell,100,64,0.0,0.0,,98,,
+viral_angle,Viral topic angle,records,2,0.73,0.15,too few to tell,,44,0.0,0.0,,50,,
+weekday,Day posted,Wednesday,43,1.12,1.0,about typical,100,54,0.0,0.0,average viewed 54% vs 48% typical,60,0.6296,0.944
+weekday,Day posted,Friday,25,1.05,1.0,about typical,100,53,0.0,0.0,,16,0.8468,0.954
+weekday,Day posted,Tuesday,24,1.05,1.0,about typical,100,45,0.0,0.0,,66,0.8019,0.954
+weekday,Day posted,Thursday,36,0.99,1.07,about typical,100,50,0.0,0.0,,25,0.952,0.985
+weekday,Day posted,Saturday,15,0.96,0.77,about typical,96,53,0.0,0.0,,48,0.8501,0.954
+weekday,Day posted,Monday,27,0.85,1.0,about typical,100,48,0.0,0.0,,76,0.4444,0.895
+weekday,Day posted,Sunday,31,0.71,1.0,early sign,100,41,0.0,0.0,"average viewed 41% vs 48% typical; not proven: luck check: p 0.075, adjusted q 0.65 is over 0.10 among 159 comparisons",69,0.0752,0.651
+writer,Writer model,groq:qwen/qwen3.8-27b,6,1.4,2.04,early sign,100,47,0.0,0.0,not proven: a half has under 2 Shorts,96,0.0823,0.651
+writer,Writer model,gemini:gemini-3.5-flash-lite,34,1.27,1.07,early sign,100,50,0.0,0.0,not proven: 90% interval 0.87x to 2.21x includes typical,70,0.2479,0.825
 writer,Writer model,gemini:gemma-4-31b-it,1,1.26,20.64,too few to tell,100,47,0.0,0.0,,94,,
-writer,Writer model,groq:openai/gpt-oss-120b,14,1.24,1.73,about typical,94,41,0.0,0.0,engaged views 38% vs 30% typical,23,0.414,0.851
-writer,Writer model,gemini:gemini-3.5-flash,7,1.14,1.0,about typical,98,52,0.0,0.0,engaged views 36% vs 30% typical; average viewed 52% vs 48% typical; its topics ran hotter than the day's other Shorts (+0.4 heat),46,0.6444,0.904
-writer,Writer model,freellm:ovh/Mistral-Small-3.2-24B-Instruct-2506,1,1.0,1.0,too few to tell,,,,,,,,
-writer,Writer model,gemini:gemini-3.6-flash,17,0.97,0.47,about typical,100,45,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),44,0.9014,0.984
-writer,Writer model,claude:sonnet,3,0.95,1.41,about typical,81,54,0.0,0.0,,14,,
-writer,Writer model,gemini:gemini-flash-latest,11,0.89,0.85,about typical,96,49,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.5 heat),10,0.6597,0.904
+writer,Writer model,groq:openai/gpt-oss-120b,15,1.23,1.47,about typical,94,42,0.0,0.0,engaged views 37% vs 29% typical,29,0.4077,0.895
+writer,Writer model,freellm:ovh/Mistral-Small-3.2-24B-Instruct-2506,1,1.01,1.16,too few to tell,,,,,,,,
+writer,Writer model,gemini:gemini-3.6-flash,18,1.01,0.96,about typical,100,44,0.0,0.0,its topics ran colder than the day's other Shorts (-0.4 heat),47,0.9831,0.997
+writer,Writer model,claude:sonnet,3,0.99,1.73,about typical,81,54,0.0,0.0,,14,,
+writer,Writer model,gemini:gemini-3.5-flash,6,0.95,1.0,about typical,95,53,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.6 heat),9,0.8119,0.954
 writer,Writer model,gemini:gemini-3.8-flash,2,0.86,0.36,too few to tell,80,35,0.0,0.0,,2,,
-writer,Writer model,gemini:gemini-3.7-flash,9,0.81,0.5,about typical,100,53,0.0,0.0,engaged views 26% vs 30% typical,42,0.386,0.851
-writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,18,0.77,1.04,early sign,100,40,0.0,0.0,average viewed 40% vs 48% typical; not proven: 90% interval 0.35x to 1.20x includes typical; a half has under 2 Shorts,56,0.2389,0.78
-writer,Writer model,gemini:gemini-3-flash-preview,25,0.71,0.54,early sign,100,46,0.0,0.0,not proven: 90% interval 0.36x to 1.01x includes typical,61,0.1077,0.744
-writer,Writer model,gemini:gemini-3.1-flash-lite,6,0.7,0.5,early sign,100,52,0.0,0.0,not proven: 90% interval 0.10x to 1.18x includes typical; a half has under 2 Shorts,20,0.1402,0.78
-writer_arm,Writer model test,gemini flash,8,1.08,1.11,about typical,100,47,0.0,0.0,,68,0.645,0.904
-writer_arm,Writer model test,gpt-oss-120b,5,0.88,1.13,about typical,96,56,0.0,0.0,its topics ran colder than the day's other Shorts (-0.5 heat),82,0.4081,0.851
-ig_caption,Instagram caption,full,10,1.06,1.02,about typical,,,,,against Instagram views,,,
-ig_caption,Instagram caption,short,17,0.92,0.97,about typical,,,,,against Instagram views,,,
-ig_category,Category on Instagram,Gaming,24,1.3,1.32,push,,,,,against Instagram views,,,
-ig_category,Category on Instagram,Sport,28,1.23,1.06,about typical,,,,,against Instagram views,,,
-ig_category,Category on Instagram,Film,14,1.07,1.03,about typical,,,,,against Instagram views,,,
+writer,Writer model,gemini:gemini-flash-latest,13,0.83,0.85,about typical,96,49,0.0,0.0,its topics ran hotter than the day's other Shorts (+0.5 heat),10,0.4503,0.895
+writer,Writer model,gemini:gemini-3.7-flash,10,0.79,0.49,early sign,100,53,0.0,0.0,engaged views 26% vs 29% typical; not proven: 90% interval 0.25x to 1.42x includes typical; a half has under 2 Shorts,42,0.3054,0.825
+writer,Writer model,openrouter:nvidia/nemotron-3-ultra-550b-a55b:free,17,0.79,1.0,early sign,100,42,0.0,0.0,average viewed 42% vs 48% typical; not proven: 90% interval 0.35x to 1.27x includes typical; a half has under 2 Shorts,54,0.2903,0.825
+writer,Writer model,gemini:gemini-3-flash-preview,25,0.72,0.77,early sign,100,46,0.0,0.0,not proven: 90% interval 0.36x to 1.04x includes typical,60,0.1307,0.786
+writer,Writer model,gemini:gemini-3.1-flash-lite,6,0.7,0.5,early sign,100,52,0.0,0.0,not proven: 90% interval 0.10x to 1.18x includes typical; a half has under 2 Shorts,20,0.1402,0.786
+writer_arm,Writer model test,gemini flash,9,0.97,0.71,about typical,100,47,0.0,0.0,,68,0.8531,0.954
+writer_arm,Writer model test,gpt-oss-120b,5,0.9,1.0,about typical,96,56,0.0,0.0,its topics ran colder than the day's other Shorts (-0.5 heat),82,0.4679,0.895
+ig_caption,Instagram caption,full,10,1.05,1.02,about typical,,,,,against Instagram views,,,
+ig_caption,Instagram caption,short,18,0.9,0.98,about typical,,,,,against Instagram views,,,
+ig_category,Category on Instagram,Gaming,25,1.26,1.3,push,,,,,against Instagram views,,,
+ig_category,Category on Instagram,Sport,29,1.23,1.07,about typical,,,,,against Instagram views,,,
+ig_category,Category on Instagram,Film,14,1.03,1.0,about typical,,,,,against Instagram views,,,
 ig_category,Category on Instagram,Animals,1,0.93,0.38,too few to tell,,,,,against Instagram views,,,
-ig_category,Category on Instagram,Music,25,0.88,0.96,about typical,,,,,against Instagram views,,,
-ig_category,Category on Instagram,Entertainment,12,0.7,0.62,early sign,,,,,against Instagram views; not proven: 90% interval 0.23x to 1.06x includes typical,,,
-ig_category,Category on Instagram,Science,10,0.7,0.86,cut back,,,,,against Instagram views,,,
+ig_category,Category on Instagram,Music,24,0.88,0.99,about typical,,,,,against Instagram views,,,
+ig_category,Category on Instagram,Entertainment,12,0.7,0.62,early sign,,,,,against Instagram views; not proven: 90% interval 0.23x to 1.05x includes typical,,,
+ig_category,Category on Instagram,Science,10,0.7,0.84,cut back,,,,,against Instagram views,,,
 ig_category,Category on Instagram,Tech,7,0.59,0.23,cut back,,,,,against Instagram views,,,
-ig_hour,Instagram posting hour,morning,12,1.07,1.07,about typical,,,,,against Instagram views,,,
-ig_hour,Instagram posting hour,any,15,0.9,0.94,about typical,,,,,against Instagram views,,,
-ig_pick,Instagram pick,explore,14,1.01,1.0,about typical,,,,,against Instagram views,,,
-ig_pick,Instagram pick,category,13,0.95,1.03,about typical,,,,,against Instagram views,,,
+ig_hour,Instagram posting hour,morning,12,1.04,1.07,about typical,,,,,against Instagram views,,,
+ig_hour,Instagram posting hour,any,16,0.9,0.96,about typical,,,,,against Instagram views,,,
+ig_pick,Instagram pick,explore,14,0.99,0.98,about typical,,,,,against Instagram views,,,
+ig_pick,Instagram pick,category,14,0.93,1.05,about typical,,,,,against Instagram views,,,
 ig_trial,Instagram trial reel,refused,1,1.0,1.07,too few to tell,,,,,against Instagram views,,,
-ig_trial,Instagram trial reel,no,26,0.97,1.0,about typical,,,,,against Instagram views,,,
+ig_trial,Instagram trial reel,no,27,0.94,1.0,about typical,,,,,against Instagram views,,,

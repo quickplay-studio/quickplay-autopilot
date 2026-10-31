@@ -4,11 +4,11 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 
 | | Top Shorts (top quarter) | Ours (last 14 days) |
 |---|---|---|
-| Title words (median) | 10.5 | 7.0 |
-| With a number | 33% | 40% |
-| A question | 10% | 7% |
-| With an emoji | 60% | 53% |
-| Length, seconds (median) | 26.5 | 29.2 |
+| Title words (median) | 11.0 | 7.0 |
+| With a number | 34% | 40% |
+| A question | 9% | 7% |
+| With an emoji | 59% | 53% |
+| Length, seconds (median) | 28.0 | 29.0 |
 
 ## Animals
 - Wait for end..THE MOST INCREDIBLE ANIMAL COMEBACK!😨 | #ytshorts #shorts #wildanimals #facts #science (126,622 views, 5,449 an hour, 109 s, Gyan Buffet)
@@ -88,6 +88,13 @@ The most-viewed English Shorts of the last 2 days per category (YouTube search),
 - Companies That Made Billions From a Deal Everyone Mocked#history #historyfacts #historyshorts#shorts (50,978 views, 1,821 an hour, 81 s, Echoes of America)
 - The SHARK That Attacked Only ONE Diver (72,923 views, 1,576 an hour, 8 s, VESTIGIA | HUMAN HISTORI4)
 - Top 3 Most Dangerous Fielders in Cricket History, #shorts #facts#shaileshunfilterd (62,789 views, 1,537 an hour, 47 s, shailesh unfiltered )
+
+## Ian McKellen
+- Forever a mutant and Picard #patrickstewart #professorx #marvel #xmen #startrek #shorts #viral (13,026 views, 347 an hour, 10 s, HuffyPuff)
+- Ian McKellen speaks out for the first time following Patrick’s death#shorts #patrick #rip (8,599 views, 321 an hour, 69 s, Secretsipsxo)
+- Why Ian McKellen help being affectionate with Patrick Stewart before he passed away #patrickstewart (1,296 views, 126 an hour, 76 s, PopPaparazzi )
+- PATRICK STEWART AND IAN MCKELLEN ARE BEST FRIENDS!!! #shorts (4,176 views, 102 an hour, 34 s, Bertiesolitary )
+- The X-Men Are CRASHING Avengers Doomsday #shorts (1,851 views, 81 an hour, 20 s, commantaryX)
 
 ## Music
 - She Chose the Boy With the Biggest Car! 😂🚗 #shorts #facts (44,021 views, 1,703 an hour, 26 s, Facto Arh)

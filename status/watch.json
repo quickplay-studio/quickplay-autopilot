@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T11:16+00:00",
+ "updated": "2026-10-31T13:30+00:00",
  "items": [
   {
    "name": "Ballon d'Or 2026",
@@ -48,11 +48,11 @@
     "ballon d'or 2026",
     "ballon d'or 2026 full ceremony",
     "ballon d'or 2026 reaction",
-    "ballon d'or 2026 boat",
     "ballon d'or 2026 live",
+    "ballon d'or 2026 boat",
+    "ballon d'or 2026 ai",
     "ballon d'or 2026 live ceremony",
-    "ballon d'or 2026 ai video",
-    "ballon d'or 2026 ai"
+    "ballon d'or 2026 ai video"
    ],
    "in": [],
    "category": "Sport",
@@ -132,13 +132,14 @@
     "the celebrity traitors uncloaked uk",
     "the celebrity traitors season 2",
     "the celebrity traitors james acaster",
-    "the celebrity traitors reveal",
     "the celebrity traitors finale",
     "the celebrity traitors reaction",
-    "the celebrity traitors season 1"
+    "the celebrity traitors season 1",
+    "the celebrity traitors season 2 episode 9"
    ],
    "in": [
-    "Wikipedia top pages"
+    "Wikipedia top pages",
+    "Google Trends"
    ],
    "category": "Entertainment",
    "angles": [
@@ -203,13 +204,15 @@
     "halloween 2026",
     "halloween 2026 countdown",
     "halloween 2026 playlist",
-    "halloween 2026 theory",
     "halloween 2026 song",
     "halloween 2026 live",
-    "halloween 2026 music",
-    "halloween 2026 costumes"
+    "halloween 2026 mix",
+    "halloween 2026 movie",
+    "halloween 2026 music"
    ],
-   "in": [],
+   "in": [
+    "Google Trends"
+   ],
    "category": "Entertainment",
    "angles": [
     "most popular Halloween costumes 2026",
@@ -339,7 +342,7 @@
     21871,
     19387
    ],
-   "news_24h": 94,
+   "news_24h": 84,
    "news_usual": 88.0,
    "suggestions": [
     "gta 6",
@@ -552,7 +555,7 @@
     243,
     233
    ],
-   "news_24h": 5,
+   "news_24h": 6,
    "news_usual": 3.0,
    "suggestions": [
     "spotify wrapped 2026",
@@ -686,16 +689,16 @@
     83193,
     78283
    ],
-   "news_24h": 100,
+   "news_24h": 86,
    "news_usual": 100.0,
    "suggestions": [
     "avengers doomsday trailer",
     "avengers doomsday",
     "avengers doomsday trailer reaction",
-    "avengers doomsday x men",
     "avengers doomsday teaser",
-    "avengers doomsday final trailer",
+    "avengers doomsday x men",
     "avengers doomsday trailer x men",
+    "avengers doomsday final trailer",
     "avengers doomsday clock"
    ],
    "in": [],
@@ -754,7 +757,7 @@
     17411,
     14040
    ],
-   "news_24h": 33,
+   "news_24h": 32,
    "news_usual": 38.0,
    "suggestions": [
     "dune part three",
@@ -893,7 +896,7 @@
     2146,
     2283
    ],
-   "news_24h": 53,
+   "news_24h": 57,
    "news_usual": 44.5,
    "suggestions": [
     "christmas 2026",
@@ -964,7 +967,7 @@
     258,
     300
    ],
-   "news_24h": 7,
+   "news_24h": 6,
    "news_usual": 7.0,
    "suggestions": [
     "new year's eve 2026",
@@ -1115,6 +1118,64 @@
    "places": 10,
    "mega_since": "2026-10-31",
    "mega_peak": 10
+  },
+  {
+   "name": "Ian McKellen",
+   "auto": true,
+   "days_to": null,
+   "phase": "viral",
+   "momentum": 37.48,
+   "views_yesterday": 213817,
+   "views_usual": null,
+   "views_30d": [],
+   "news_24h": null,
+   "news_usual": null,
+   "suggestions": [],
+   "in": [
+    "UK news",
+    "Wikipedia top pages"
+   ],
+   "category": "Entertainment",
+   "terms": [
+    "Ian McKellen"
+   ],
+   "angles": [
+    "Ian McKellen",
+    "Ian McKellen analysis",
+    "Ian McKellen reaction",
+    "Ian McKellen history and records",
+    "Ian McKellen explained",
+    "Ian McKellen facts",
+    "Ian McKellen star",
+    "Ian McKellen rankings",
+    "Ian McKellen by the numbers",
+    "Ian McKellen best moments",
+    "Ian McKellen what happens next",
+    "Ian McKellen past winners"
+   ],
+   "rules": "A viral topic: family-friendly news about it exactly as the sources state it, a fresh angle each time. No event or broadcast footage (permitted pictures and narration only); never predictions, odds or leaks as facts; never negative about a real person; never about views, popularity or why it is trending; UK English.",
+   "wikipedia": "Ian McKellen",
+   "viral": true,
+   "viral_since": "2026-10-31",
+   "angle_map": {
+    "ian mckellen": "latest",
+    "ian mckellen analysis": "why",
+    "ian mckellen reaction": "reaction",
+    "ian mckellen history and records": "records",
+    "ian mckellen explained": "explained",
+    "ian mckellen facts": "facts",
+    "ian mckellen star": "people",
+    "ian mckellen rankings": "rankings",
+    "ian mckellen by the numbers": "numbers",
+    "ian mckellen best moments": "moments",
+    "ian mckellen what happens next": "next",
+    "ian mckellen past winners": "past"
+   },
+   "mega": 5,
+   "level": "surging",
+   "places": 5,
+   "mega_since": "2026-10-31",
+   "mega_peak": 5
   }
  ]
 }

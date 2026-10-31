@@ -1,23 +1,28 @@
 {
  "date": "2026-10-31",
- "built": "2026-10-31T11:25+00:00",
- "model": "gemini-3.5-flash-lite + freellm:llama-3.3-70b",
- "mode": "breaking",
- "run": "",
+ "built": "2026-10-31T13:48+00:00",
+ "model": "gemini-3.5-flash-lite",
+ "mode": "full",
+ "run": "afternoon",
  "errors": [],
  "topics": [
   {
-   "n": 14,
+   "n": 15,
    "topic": "Patrick Stewart",
    "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
-   "what_is_new": "Patrick Stewart passed away at the age of 86, prompting a worldwide wave of tributes from fans and colleagues.",
+   "category": "Entertainment",
+   "what_is_new": "Marina Sirtis published a heartfelt tribute recounting her memories and working relationship with Patrick Stewart.",
    "hooks": [
-    "Patrick Stewart passed away at age 86.",
-    "Star Trek lost its legendary captain.",
-    "Fans worldwide mourn the iconic actor."
+    "Did you know Patrick Stewart passed away at the age of 86?",
+    "Ian McKellen shared that Patrick Stewart was defined by his Yorkshire roots."
    ],
    "sources": [
+    [
+     "‘We freed Patrick Stewart!’ Star Trek’s Marina Sirtis on breaking in her beloved but very serious co-star",
+     "https://www.theguardian.com/culture/2026/oct/31/patrick-stewart-star-trek-marina-sirtis-picard-shakespearean",
+     "Guardian",
+     "2026-10-31"
+    ],
     [
      "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
      "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
@@ -34,12 +39,6 @@
      "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
      "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
      "PC Gamer",
-     "2026-10-30"
-    ],
-    [
-     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
-     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
-     "Guardian",
      "2026-10-30"
     ],
     [
@@ -51,144 +50,104 @@
    ],
    "verified": [
     {
-     "claim": "Patrick Stewart died at the age of 86 following Alzheimers Disease and Lewy Body Dementia.",
+     "claim": "Patrick Stewart died at the age of 86.",
      "sources": [
-      1,
+      2,
+      3,
+      4
+     ],
+     "evidence": {
+      "2": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "4": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief"
+     }
+    },
+    {
+     "claim": "Ian McKellen stated that Patrick Stewart was born and bred in Yorkshire.",
+     "sources": [
       2,
       3
      ],
      "evidence": {
-      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
-      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
-      "3": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief"
+      "2": "\"Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to",
+      "3": "Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to"
      }
     },
     {
-     "claim": "Patrick Stewart was born in Mirfield, West Riding of Yorkshire on 13 July 1940.",
+     "claim": "Patrick Stewart was born in Mirfield, West Yorkshire.",
      "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films,",
+      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,"
+     }
+    },
+    {
+     "claim": "Patrick Stewart played the role of Captain Jean-Luc Picard in Star Trek: The Next Generation.",
+     "sources": [
+      1,
       2,
       5
      ],
      "evidence": {
-      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X‑Men films, died at the age of 86 at his home in",
-      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire"
+      "1": "We had been cast together on Star Trek: The Next Generation",
+      "2": "Captain Picard stood for the best of us, and so did the man who played him.",
+      "5": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994),"
      }
     },
     {
-     "claim": "He portrayed Captain Jean‑Luc Picard in Star Trek: The Next Generation from 1987 to 1994.",
+     "claim": "Patrick Stewart was a member of the Royal Shakespeare Company.",
      "sources": [
       1,
       5
      ],
      "evidence": {
-      "1": "on stage with the royal shakespeare company on tv as the dashing captain jean luc picard in star trek the next generation and in",
-      "5": "portrayal of Captain Jean‑Luc Picard in the sci‑fi series Star Trek: The Next Generation (1987–1994)"
+      "1": "I’d been warned about Patrick by friends who’d worked with him at the Royal Shakespeare Company.",
+      "5": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966"
      }
     },
     {
-     "claim": "He played Professor Charles Xavier in the X‑Men film series from 2000 to 2017.",
+     "claim": "Patrick Stewart supported Huddersfield Town football club.",
      "sources": [
       1,
-      5
+      3
      ],
      "evidence": {
-      "1": "the many x men movies in which he portrayed professor charles xavier stewart was always the",
-      "5": "portraying Professor Charles Xavier in the X‑Men film series (2000–2017)"
+      "1": "The fact that he supported Huddersfield Town shows you who he is – he didn’t go for Leeds or one of the glamour clubs.",
+      "3": "A lifelong Huddersfield Town supporter, Stewart attended games when his schedule allowed"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died after a brief journey with Alzheimer's Disease and Lewy Body Dementia.",
+     "sources": [
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "4": "yesterday the world received the sad news that legendary stage and screen actor patrick stewart had died at the age of 86 following a brief and poignant journey with alzheimer s disease and lewy body dementia his passing has triggered"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "In 1992 TV Guide readers voted him televisions most bodacious man.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Indeed, in 1992 TV Guide readers voted him television’s “most bodacious” man."
-     }
-    },
-    {
-     "claim": "He became a member of the Royal Shakespeare Company in 1966.",
+     "claim": "Patrick Stewart was knighted by Queen Elizabeth II for his services to drama.",
      "sources": [
       5
      ],
      "evidence": {
-      "5": "in 2010 stewart became a member of the royal shakespeare company rsc in 1966 and later acted in several productions with the royal national theatre on the west end stage he earned two laurence olivier awards for best actor in"
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
      }
     },
     {
-     "claim": "He was a lifelong Huddersfield Town supporter and celebrated the club’s promotion to the Premier League in 2017.",
+     "claim": "Patrick Stewart's final film performance will be in Avengers: Doomsday.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "he was incredibly kind and he will be greatly missed a lifelong huddersfield town supporter stewart attended games when his schedule allowed and celebrated the terriers promotion to the premier league at wembley in 2017 the club s chief operating"
-     }
-    },
-    {
-     "claim": "He lost his hair in his teens and was voted TV Guide’s most bodacious man in 1992 with 54% of the vote.",
-     "sources": [
-      4
-     ],
-     "evidence": {
-      "4": "Indeed, in 1992 TV Guide readers voted him television’s “most bodacious” man. Stewart received 54% of the vote, putting him ahead of much hairier contenders"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Patrick_Stewart_1999.jpg"
-   ]
-  },
-  {
-   "n": 15,
-   "topic": "Patrick Stewart explained",
-   "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Entertainment",
-   "what_is_new": "Sir Patrick Stewart passed away on 28 October 2026.",
-   "hooks": [
-    "Discover the life and career of the legendary Sir Patrick Stewart."
-   ],
-   "sources": [
-    [
-     "Stewart caught in Swansea rules limbo - gossip",
-     "https://www.bbc.co.uk/sport/football/articles/cq4g17m1dzjdo?at_medium=RSS&at_campaign=rss",
-     "BBC Sport",
-     "2026-10-31"
-    ],
-    [
-     "Patrick Stewart explained",
-     "https://en.wikipedia.org/wiki/Patrick_Stewart",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [],
-   "one_source": [
-    {
-     "claim": "Sir Patrick Stewart was born on 13 July 1940 and died on 28 October 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
-     }
-    },
-    {
-     "claim": "On 18 November 2012, Stewart appeared on stage at St Martin's Theatre in the West End for a 60th anniversary performance of Agatha Christie's The Mousetrap, the world's longest-running play.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "On 18 November 2012, Stewart appeared on stage at St Martin's Theatre in the West End for a 60th anniversary performance of Agatha Christie's The"
+      "2": "he portrayed professor charles xavier stewart was always the consummate professional his final screen performance arrives on dec 18 with avengers doomsday where he ll present his charles xavier character once more"
      }
     }
    ],
@@ -200,13 +159,20 @@
    "n": 16,
    "topic": "Patrick Stewart facts",
    "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
-   "what_is_new": "",
+   "category": "Entertainment",
+   "what_is_new": "Sir Patrick Stewart sadly passed away at the age of 86.",
    "hooks": [
-    "Patrick Stewart died at the age of 86.",
-    "Sir Ian McKellen stated that Patrick Stewart was born and bred in Yorkshire."
+    "Sir Patrick Stewart passed away at age 86.",
+    "Remembering the legendary Star Trek actor.",
+    "His remarkable life on stage and screen."
    ],
    "sources": [
+    [
+     "‘We freed Patrick Stewart!’ Star Trek’s Marina Sirtis on breaking in her beloved but very serious co-star",
+     "https://www.theguardian.com/culture/2026/oct/31/patrick-stewart-star-trek-marina-sirtis-picard-shakespearean",
+     "Guardian",
+     "2026-10-31"
+    ],
     [
      "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
      "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
@@ -223,12 +189,6 @@
      "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
      "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
      "PC Gamer",
-     "2026-10-30"
-    ],
-    [
-     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
-     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
-     "Guardian",
      "2026-10-30"
     ],
     [
@@ -240,51 +200,84 @@
    ],
    "verified": [
     {
-     "claim": "Patrick Stewart died at the age of 86.",
+     "claim": "Sir Patrick Stewart died at the age of 86.",
      "sources": [
-      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "4": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief"
+     }
+    },
+    {
+     "claim": "Patrick Stewart died at the age of 86",
+     "sources": [
       2,
       3,
       5
      ],
      "evidence": {
-      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
-      "2": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
-      "3": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief",
-      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+      "2": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86",
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor"
      }
     },
     {
-     "claim": "Sir Ian McKellen stated that Patrick Stewart was born and bred in Yorkshire.",
+     "claim": "Patrick Stewart was born in Mirfield, West Yorkshire",
      "sources": [
-      1,
-      2
+      3,
+      5
      ],
      "evidence": {
-      "1": "\"Before everything else, Patrick was defined by being born and bred in Yorkshire, the proud county in the north of England which he loved to",
-      "2": "stewart s friend and fellow legendary actor sir ian mckellen said stewart never forsook his origins he added before everything else patrick was defined by being born and"
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films",
+      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire"
      }
     },
     {
-     "claim": "Brian Blessed first met Patrick Stewart as young lads on a drama course in Calder Valley.",
+     "claim": "Patrick Stewart played Captain Jean-Luc Picard in Star Trek: The Next Generation",
      "sources": [
+      1,
       2,
       5
      ],
      "evidence": {
-      "2": "South Yorkshire-born actor Brian Blessed also paid tribute to Stewart who he first met as \"young lads in Yorkshire, on a drama course in Calder",
-      "5": "Around the same time, he met and befriended fellow actor Brian Blessed during a drama course in Mytholmroyd."
+      "1": "We had been cast together on Star Trek: The Next Generation",
+      "2": "a friend a colleague and a magnificent actor shatner posted on facebook from the stage to the bridge of the enterprise he brought intelligence grace and a deep sense of humanity to everything he did captain picard stood for the",
+      "5": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was a member of the Royal Shakespeare Company",
+     "sources": [
+      1,
+      5
+     ],
+     "evidence": {
+      "1": "I’d been warned about Patrick by friends who’d worked with him at the Royal Shakespeare Company",
+      "5": "Stewart became a member of the Royal Shakespeare Company in 1966"
+     }
+    },
+    {
+     "claim": "Patrick Stewart was knighted by Queen Elizabeth II",
+     "sources": [
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "to the end referencing a trait often associated with people from the region mckellen said stewart told you what he thought and felt prime minister andy burnham said he was very sad to hear about stewart s death describing him",
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Patrick Stewart became chancellor of the University of Huddersfield in 2004.",
+     "claim": "Patrick Stewart's final film performance will be in Avengers: Doomsday",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "In 2004 he became chancellor of the University of Huddersfield - a role he filled until 2015."
+      "2": "he portrayed professor charles xavier stewart was always the consummate professional his final screen performance arrives on dec 18 with avengers doomsday where he ll present his charles xavier character once more"
      }
     }
    ],
@@ -296,14 +289,19 @@
    "n": 17,
    "topic": "Patrick Stewart star",
    "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
-   "what_is_new": "Global tributes and virtual vigils have been pouring in following the passing of Patrick Stewart.",
+   "category": "Entertainment",
+   "what_is_new": "",
    "hooks": [
-    "Fans hold virtual vigils following the death of Patrick Stewart.",
-    "Sir Patrick Stewart leaves behind a legendary career spanning six decades.",
-    "Remembering the iconic life and career of Sir Patrick Stewart."
+    "Did you know Sir Patrick Stewart was knighted by Queen Elizabeth II?",
+    "Sir Patrick Stewart passed away at the age of 86."
    ],
    "sources": [
+    [
+     "‘We freed Patrick Stewart!’ Star Trek’s Marina Sirtis on breaking in her beloved but very serious co-star",
+     "https://www.theguardian.com/culture/2026/oct/31/patrick-stewart-star-trek-marina-sirtis-picard-shakespearean",
+     "Guardian",
+     "2026-10-31"
+    ],
     [
      "The world mourns the passing of 'Star Trek's' Patrick Stewart with a galaxy of tearful tributes",
      "https://www.space.com/entertainment/the-world-mourns-the-passing-of-star-treks-patrick-stewart-with-a-galaxy-of-tearful-tributes",
@@ -320,12 +318,6 @@
      "Star Trek Online players are holding public vigils to mourn Patrick Stewart",
      "https://www.pcgamer.com/games/mmo/star-trek-online-players-are-holding-public-vigils-to-mourn-patrick-stewart/",
      "PC Gamer",
-     "2026-10-30"
-    ],
-    [
-     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
-     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
-     "Guardian",
      "2026-10-30"
     ],
     [
@@ -339,61 +331,52 @@
     {
      "claim": "Sir Patrick Stewart died at the age of 86 on 28 October 2026.",
      "sources": [
-      1,
-      2,
-      3,
-      5
-     ],
-     "evidence": {
-      "1": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86",
-      "2": "died at the age of 86 at his home in Los Angeles on Wednesday after suffering with Alzheimer's Disease and Lewy Body Dementia.",
-      "3": "Patrick Stewart had died at the age of 86 following a \"brief and poignant journey with Alzheimer's Disease and Lewy Body Dementia.\"",
-      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
-     }
-    },
-    {
-     "claim": "He starred as Captain Jean-Luc Picard in Star Trek: The Next Generation.",
-     "sources": [
-      1,
       2,
       3,
       4,
       5
      ],
      "evidence": {
-      "1": "on TV as the dashing Captain Jean-Luc Picard in \"Star Trek: The Next Generation,\"",
-      "2": "playing Captain Jean-Luc Picard in the Star Trek franchise.",
-      "3": "his tenure as The Next Generation's Captain Jean-Luc Picard.",
-      "4": "Nowhere was this more clear than during his stint on Star Trek: The Next Generation.",
-      "5": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994)"
+      "2": "As we all begin to absorb the bitter news of Patrick Stewart's death at the age of 86, a flood of personal tributes are pouring",
+      "3": "The Mirfield-born actor, best known for his roles in Star Trek and the X-Men films, died at the age of 86 at his home in",
+      "4": "Yesterday, the world received the sad news that legendary stage and screen actor Patrick Stewart had died at the age of 86 following a \"brief",
+      "5": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
      }
     },
     {
-     "claim": "He portrayed Professor Charles Xavier in the X-Men film series.",
+     "claim": "Patrick Stewart was born on 13 July 1940 in Mirfield.",
      "sources": [
-      1,
+      3,
+      5
+     ],
+     "evidence": {
+      "3": "Born in Mirfield in 1940, Stewart attended Crowlees Church of England Junior and Infant School before moving onto Mirfield Secondary Modern School.",
+      "5": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3] to Gladys (née Barrowclough),[4] a weaver and textile worker,"
+     }
+    },
+    {
+     "claim": "Stewart's final screen performance arrives on Dec. 18 with Avengers: Doomsday where he will present his Charles Xavier character once more.",
+     "sources": [
       2,
       5
      ],
      "evidence": {
-      "1": "and the many \"X-Men\" movies in which he portrayed Professor Charles Xavier, Stewart was always the consummate professional.",
-      "2": "best known for his roles in Star Trek and the X-Men films",
-      "5": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017)"
-     }
-    },
-    {
-     "claim": "Avengers: Doomsday serves as his final film performance.",
-     "sources": [
-      1,
-      5
-     ],
-     "evidence": {
-      "1": "His final screen performance arrives on Dec. 18 with \"Avengers: Doomsday\" where he’ll present his Charles Xavier character once more.",
-      "5": "with Avengers: Doomsday being his final film performance."
+      "2": "His final screen performance arrives on Dec. 18 with \"Avengers: Doomsday\" where he’ll present his Charles Xavier character once more.",
+      "5": "He also acted in Hedda (1975), Excalibur (1981), Dune (1984), Robin Hood: Men in Tights (1993), Jeffrey (1995), Match (2014), Green Room (2015), and The"
      }
     }
    ],
-   "one_source": [],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      5
+     ],
+     "evidence": {
+      "5": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    }
+   ],
    "images": [
     "commons:File:Patrick_Stewart_1999.jpg"
    ]
@@ -402,19 +385,19 @@
    "n": 18,
    "topic": "Patrick Stewart by the numbers",
    "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
-   "what_is_new": "",
+   "category": "Entertainment",
+   "what_is_new": "Sir Patrick Stewart passed away at his home in Los Angeles at the age of 86.",
    "hooks": [
-    "Discover the numbers behind the legendary career of Sir Patrick Stewart!",
-    "From Star Trek to X-Men, explore the incredible life of Patrick Stewart.",
-    "Remembering the iconic actor Sir Patrick Stewart and his amazing legacy."
+    "Sir Patrick Stewart died at the age of 86.",
+    "Sir Patrick Stewart was born on 13 July 1940.",
+    "Sir Patrick Stewart joined the Royal Shakespeare Company in 1966."
    ],
    "sources": [
     [
-     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
-     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "‘We freed Patrick Stewart!’ Star Trek’s Marina Sirtis on breaking in her beloved but very serious co-star",
+     "https://www.theguardian.com/culture/2026/oct/31/patrick-stewart-star-trek-marina-sirtis-picard-shakespearean",
      "Guardian",
-     "2026-10-30"
+     "2026-10-31"
     ],
     [
      "Games industry honours beloved actor Sir Patrick Stewart, as the legendary Star Trek and X-Men actor passes away",
@@ -437,86 +420,65 @@
    ],
    "verified": [
     {
-     "claim": "Sir Patrick Stewart died at his home in Los Angeles.",
+     "claim": "Sir Ian McKellen recalled cautioning Sir Patrick Stewart about taking the lead role in Star Trek because of the effect it would have on his stage career.",
      "sources": [
       2,
-      3
+      4
      ],
      "evidence": {
-      "2": "His Instagram account announced the news yesterday, saying he died at home in Los Angeles surrounded by friends and family, following \"a brief and poignant",
-      "3": "The star, who won acclaim on both stages and screens, died at his home in Los Angeles on Thursday after a career that spanned more"
+      "2": "And Sir Ian McKellen, the Magneto actor who was considered one of Stewart's best friends, gave an overview of the many years the two had",
+      "4": "Regardless, Stewart's trusted colleague, Ian McKellen, was particularly vocal in advising Stewart not to throw away his theatrical career for this foray into television, which"
      }
     },
     {
-     "claim": "Sir Patrick Stewart was born in 1940.",
+     "claim": "Sir Patrick Stewart took on the role of Jean-Luc Picard on popular TV series Star Trek: The Next Generation in 1987.",
      "sources": [
       3,
       4
      ],
      "evidence": {
-      "3": "Born in 1940, his mother was a textile worker and his father was a former military officer whose experience during the wartime evacuation of Dunkirk",
-      "4": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart starred as Captain Jean-Luc Picard in Star Trek: The Next Generation.",
-     "sources": [
-      1,
-      2,
-      3,
-      4
-     ],
-     "evidence": {
-      "1": "Nowhere was this more clear than during his stint on Star Trek: The Next Generation.",
-      "2": "Stewart, a poised and charming actor, was probably best known for his on-screen roles as Captain Jean-Luc Picard in Star Trek: The Next Generation, and",
       "3": "In 1987, he took on the role of Jean-Luc Picard on popular TV series Star Trek: The Next Generation.",
-      "4": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994), a role he reprised"
+      "4": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994)"
      }
     },
     {
-     "claim": "Sir Patrick Stewart starred as Professor Charles Xavier in the X-Men film series.",
+     "claim": "Sir Patrick Stewart starred as Professor Charles Xavier in the X-Men film series, which began in 2000.",
      "sources": [
-      2,
       3,
       4
      ],
      "evidence": {
-      "2": "Stewart, a poised and charming actor, was probably best known for his on-screen roles as Captain Jean-Luc Picard in Star Trek: The Next Generation, and",
       "3": "His scores of sci-fi fans reached new heights with his starring role as Professor Charles Xavier in the X-Men film series, which began in 2000.",
-      "4": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart appeared in the 1981 fantasy film Excalibur.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "In 1981, he was featured in 1981 fantasy film Excalibur, bringing him one step closer to his future sci-fi career.",
-      "4": "He also acted in Hedda (1975), Excalibur (1981), Dune (1984), Robin Hood: Men in Tights (1993), Jeffrey (1995), Match (2014), Green Room (2015), and The"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart appeared in the 1976 BBC television series I, Claudius.",
-     "sources": [
-      3,
-      4
-     ],
-     "evidence": {
-      "3": "His expertise in Shakespeare led to play a major role in the 1976 BBC television series I, Claudius.",
-      "4": "He acted in the television projects Fall of Eagles (1974), I, Claudius (1976), Tinker Tailor Soldier Spy (1979), Moby Dick (1998), A Christmas Carol (1999),"
+      "4": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017)"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Sir Patrick Stewart died at the age of 86.",
+     "claim": "Sir Patrick Stewart died at the age of 86 following a brief journey with Alzheimers Disease and Lewy Body Dementia.",
      "sources": [
       2
      ],
      "evidence": {
       "2": "As I'm sure you're all now already aware, legendary British actor Sir Patrick Stewart has died, aged 86."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart died at his home in Los Angeles on Thursday after a career that spanned more than seven decades.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The star, who won acclaim on both stages and screens, died at his home in Los Angeles on Thursday after a career that spanned more"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
      }
     },
     {
@@ -527,6 +489,69 @@
      "evidence": {
       "4": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
      }
+    },
+    {
+     "claim": "Sir Patrick Stewart became a member of the Royal Shakespeare Company in 1966.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966 and later acted in several productions with the Royal National Theatre."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart appeared in Bethesda's fourth Elder Scrolls game, Oblivion, as Emperor Uriel Septim 7th.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Stewart appeared in games, too, most notably in Bethesda's fourth Elder Scrolls game, Oblivion, as Emperor Uriel Septim 7th."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart won numerous awards, including a Grammy and two Laurence Olivier Awards.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Sir Patrick has won numerous awards, including a Grammy and two Laurence Olivier Awards."
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart's first professional stage appearance was on 19 May 1959 at the Theatre Royal, Bristol, playing Cutpurse in Cyrano de Bergerac.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Stewart's first professional stage appearance was on 19 May 1959 at the Theatre Royal, Bristol (for the Bristol Old Vic Company), playing Cutpurse (a thief"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart appeared on stage at St Martin's Theatre in the West End for a 60th anniversary performance of Agatha Christie's The Mousetrap on 18 November 2012.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "On 18 November 2012, Stewart appeared on stage at St Martin's Theatre in the West End for a 60th anniversary performance of Agatha Christie's The"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart voiced the narrator in both of MercurySteam's Castlevania: Lord of Shadows games.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Stewart also notably voiced the narrator in both of MercurySteam's Castlevania: Lord of Shadows games"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart starred in the 1975 BBC adaptation of Elizabeth Gaskell's North and South.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "He took the romantic male lead in the 1975 BBC adaptation of Elizabeth Gaskell's North and South."
+     }
     }
    ],
    "images": [
@@ -535,151 +560,21 @@
   },
   {
    "n": 19,
-   "topic": "Patrick Stewart best moments",
-   "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
-   "what_is_new": "Sir Patrick Stewart died at the age of 86 on 28 October 2026",
-   "hooks": [
-    "Did you know Sir Patrick Stewart started his career playing a marooned pirate?",
-    "Sir Patrick Stewart was knighted by Queen Elizabeth II in 2010.",
-    "Remembering the legendary Star Trek and X-Men star Sir Patrick Stewart."
-   ],
-   "sources": [
-    [
-     "Oh captain, our captain: Ars staff remembers Patrick Stewart",
-     "https://arstechnica.com/culture/2026/10/oh-captain-our-captain-ars-staff-remembers-patrick-stewart/",
-     "Ars Technica",
-     "2026-10-30"
-    ],
-    [
-     "From watching Star Trek to knighthood - Sir Patrick Stewart's memorable BBC moments",
-     "https://www.bbc.co.uk/news/videos/c83vq2klqrd7o",
-     "BBC",
-     "2026-10-29"
-    ],
-    [
-     "Patrick Stewart best moments",
-     "https://en.wikipedia.org/wiki/Patrick_Stewart",
-     "Wikipedia",
-     ""
-    ]
-   ],
-   "verified": [
-    {
-     "claim": "Sir Patrick Stewart was best known for his roles as Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in the X-Men franchise.",
-     "sources": [
-      1,
-      2
-     ],
-     "evidence": {
-      "1": "Along with the rest of the world, we at Ars are mourning Sir Patrick Stewart—the beloved award-winning actor best known as Captain Jean-Luc Picard in",
-      "2": "The legendary actor, who has died aged 86, was best known for roles in Star Trek and X-Men, as well as his celebrated work with"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was born in Yorkshire, England, on 13 July 1940.",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Born in Yorkshire, England, in 1940, the acting bug bit Stewart at the age of 12, when his English teacher handed out scripts for Shakespeare’s",
-      "3": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3] to Gladys (née Barrowclough),[4] a weaver and textile worker,"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II for his services to drama in 2010.",
-     "sources": [
-      2,
-      3
-     ],
-     "evidence": {
-      "2": "From watching Star Trek to knighthood - Sir Patrick Stewart's memorable BBC moments",
-      "3": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart died at the age of 86 on 28 October 2026",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "We at Ars are mourning Sir Patrick Stewart—the beloved award-winning actor best known as Captain Jean-Luc Picard in Star Trek: The Next Generation and Professor",
-      "2": "The legendary actor, who has died aged 86, was best known for roles in Star Trek and X-Men, as well as his celebrated work with",
-      "3": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart was born on 13 July 1940",
-     "sources": [
-      1,
-      3
-     ],
-     "evidence": {
-      "1": "Born in Yorkshire, England, in 1940, the acting bug bit Stewart at the age of 12",
-      "3": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart played Captain Jean-Luc Picard in Star Trek: The Next Generation",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "best known as Captain Jean-Luc Picard in Star Trek: The Next Generation",
-      "2": "was best known for roles in Star Trek and X-Men, as well as his celebrated work with the Royal Shakespeare Company",
-      "3": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994)"
-     }
-    },
-    {
-     "claim": "Sir Patrick Stewart played Professor Charles Xavier in the X-Men film series",
-     "sources": [
-      1,
-      2,
-      3
-     ],
-     "evidence": {
-      "1": "and Professor Charles Xavier in the X-Men franchise",
-      "2": "was best known for roles in Star Trek and X-Men, as well as his celebrated work with the Royal Shakespeare Company",
-      "3": "in the starz sitcom blunt talk 2015 2016 in film stewart gained further stardom portraying professor charles xavier in the x men film series 2000 2017 reprising the"
-     }
-    }
-   ],
-   "one_source": [
-    {
-     "claim": "Sir Patrick Stewart was knighted by Queen Elizabeth II in 2010",
-     "sources": [
-      3
-     ],
-     "evidence": {
-      "3": "He was knighted by Queen Elizabeth II for his services to drama in 2010"
-     }
-    }
-   ],
-   "images": [
-    "commons:File:Patrick_Stewart_1999.jpg"
-   ]
-  },
-  {
-   "n": 20,
    "topic": "Patrick Stewart what happens next",
    "signal": "watchlist: Patrick Stewart (surging)",
-   "category": "Film",
+   "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Did you know Sir Patrick Stewart was born in 1940?",
-    "How Patrick Stewart became an icon for bald men everywhere."
+    "Did you know Patrick Stewart was once called an unknown Shakespearean actor?",
+    "Discover how Patrick Stewart became Captain Jean-Luc Picard.",
+    "Why did Patrick Stewart tell his castmates they were not there to have fun?"
    ],
    "sources": [
     [
-     "To baldly go: Patrick Stewart was an icon for bald men everywhere",
-     "https://www.theguardian.com/culture/2026/oct/30/patrick-stewart-icon-bald-men-shatner-kirk-star-trek",
+     "‘We freed Patrick Stewart!’ Star Trek’s Marina Sirtis on breaking in her beloved but very serious co-star",
+     "https://www.theguardian.com/culture/2026/oct/31/patrick-stewart-star-trek-marina-sirtis-picard-shakespearean",
      "Guardian",
-     "2026-10-30"
+     "2026-10-31"
     ],
     [
      "Patrick Stewart what happens next",
@@ -690,14 +585,25 @@
    ],
    "verified": [
     {
-     "claim": "Patrick Stewart died in October 2026 at the age of 86.",
+     "claim": "Early on Patrick told us all that we weren’t there to have fun.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "People were generally staggered to learn that he was 86 years old.",
-      "2": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+      "1": "Early on Patrick told us all that we weren’t there to have fun, and you should have seen the looks he got.",
+      "2": "In interviews, he recalled with embarrassment a time when he scolded the main cast for being unprofessional in his opinion, by saying, \"We're not here"
+     }
+    },
+    {
+     "claim": "When Stewart was picked for the role of Captain Jean-Luc Picard in Star Trek: The Next Generation, the Los Angeles Times called him an unknown British Shakespearean actor.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Early on, a review in a paper described him as an “unknown Shakespearean actor” and we blew it up and stuck it on his trailer",
+      "2": "When Stewart was picked for the role of Captain Jean-Luc Picard in Star Trek: The Next Generation (1987–1994), the Los Angeles Times called him an"
      }
     }
    ],
@@ -708,7 +614,25 @@
       2
      ],
      "evidence": {
-      "2": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+      "2": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
+     }
+    },
+    {
+     "claim": "Stewart became a member of the Royal Shakespeare Company in 1966.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966 and later acted in several productions with the Royal National Theatre."
+     }
+    },
+    {
+     "claim": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He gained international stardom for his portrayal of Captain Jean-Luc Picard in the sci-fi series Star Trek: The Next Generation (1987–1994), a role he reprised"
      }
     },
     {
@@ -719,33 +643,6 @@
      "evidence": {
       "2": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
      }
-    },
-    {
-     "claim": "In 1992 TV Guide readers voted him television’s most bodacious man.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "Indeed, in 1992 TV Guide readers voted him television’s “most bodacious” man."
-     }
-    },
-    {
-     "claim": "Stewart lost his hair in his teens.",
-     "sources": [
-      1
-     ],
-     "evidence": {
-      "1": "stewart lost his hair in his teens and was open about the effect this had on his psyche telling rolling stone that he was so worried about how baldness might affect his"
-     }
-    },
-    {
-     "claim": "He voiced CIA Deputy Director Avery Bullock in American Dad! from 2005 to 2026.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "and the lion in winter 2003 he also took guest roles in the sitcoms frasier 2003 and extras 2005 and collaborated with seth macfarlane voicing cia deputy director avery bullock in the animated sitcom american dad 2005 2026 narrating the"
-     }
     }
    ],
    "images": [
@@ -753,15 +650,580 @@
    ]
   },
   {
-   "n": 40,
+   "n": 20,
+   "topic": "Ian McKellen",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Discover the deep bond between X Men stars Sir Ian McKellen and Sir Patrick Stewart.",
+    "See how Sir Ian McKellen once warned Sir Patrick Stewart against taking a famous role.",
+    "Find out about the final film appearance uniting Sir Ian McKellen and Sir Patrick Stewart."
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen Pays Tribute to Patrick Stewart: “A Man to Rely on, Admire and in My Case, Love”",
+     "https://www.hollywoodreporter.com/movies/movie-news/patrick-stewart-ian-mckellen-tribute-1236743258/",
+     "The Hollywood Reporter",
+     "2026-10-29"
+    ],
+    [
+     "Ian McKellen",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen and Sir Patrick Stewart led the original X Men franchise for 20th Century Fox, portraying Magneto and Professor Charles Xavier.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen and Stewart led the original X-Men franchise for 20th Century Fox, portraying Magneto/Erik Lehnsherr and Professor Charles Xavier, respectively."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen and Sir Patrick Stewart will reprise their X Men roles in Marvels upcoming Avengers Doomsday this December.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The two will reprise their X-Men roles in Marvel’s upcoming Avengers: Doomsday this December."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen officiated Sir Patrick Stewarts wedding in 2013.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Sir Ian, a longtime friend of his X-Men co-star, who officiated his wedding in 2013, said Sir Patrick was \"defined by being born and bred"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen appeared with Sir Patrick Stewart in a 2009 theatre production of Waiting for Godot.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "\"He took the risk and thank goodness for us all that he did,\" said Sir Ian, who appeared with Sir Patrick in a 2009 theatre"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 21,
+   "topic": "Ian McKellen analysis",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Ian McKellen starred in Avengers Doomsday?",
+    "Discover how Sir Ian McKellen earned his knighthood in 1991.",
+    "Explore the remarkable career of British icon Sir Ian McKellen."
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen analysis",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen starred in the Marvel Cinematic Universe film Avengers Doomsday in 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Magneto in the X-Men film series (2000-2014) and the Marvel Cinematic Universe film Avengers: Doomsday (2026), Cogsworth in Beauty and the Beast (2017) and Gandalf"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen made his Broadway debut in The Promise in 1965.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen made his Broadway debut in The Promise (1965)."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen won the Tony Award for Best Actor in a Play for his role as Antonio Salieri in Amadeus in 1980.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He went on to receive the Tony Award for Best Actor in a Play for his role as Antonio Salieri in Amadeus (1980)."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen came out as gay in 1988.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen came out as gay in 1988, and has since championed LGBT social movements worldwide."
+     }
+    },
+    {
+     "claim": "Sir Ian Murray McKellen was born on 25 May 1939 in Burnley, Lancashire.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ian Murray McKellen was born on 25 May 1939 in Burnley, Lancashire,[1][2][3] the son of Margery Lois (née Sutcliffe) and Denis Murray McKellen."
+     }
+    },
+    {
+     "claim": "In 1958, Sir Ian McKellen won a scholarship to the University of Cambridge at the age of 18.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 1958, McKellen, at the age of 18, won a scholarship to the University of Cambridge, where he studied English literature as an undergraduate student"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen made his first professional appearance in 1961 at the Belgrade Theatre in Coventry as Roper in A Man for All Seasons.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen made his first professional appearance in 1961 at the Belgrade Theatre in Coventry, as Roper in A Man for All Seasons, although an audio"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 22,
+   "topic": "Ian McKellen reaction",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "Sir Patrick Stewart died on 30 October 2026, prompting Ian McKellen to lead tributes.",
+   "hooks": [
+    "Did you know Sir Ian McKellen was knighted in 1991?"
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen reaction",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Ian McKellen performed with Patrick Stewart in a production of Waiting for Godot.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "sir ian who appeared with sir patrick in a 2009 theatre production of waiting for godot he added that while the us had become sir patrick",
+      "2": "Waiting for Godot (2013), the latter two being a joint production with Patrick Stewart."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 23,
+   "topic": "Ian McKellen history and records",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Ian McKellen was knighted by Queen Elizabeth II in 1991?",
+    "Ian McKellen made his stage debut back in 1961 at the Belgrade Theatre.",
+    "Discover how Ian McKellen started his legendary career at Cambridge!"
+   ],
+   "sources": [
+    [
+     "Ian McKellen history and records",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian Murray McKellen was born on 25 May 1939 in Burnley, Lancashire.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Sir Ian Murray McKellen (born 25 May 1939) is an English actor."
+     }
+    },
+    {
+     "claim": "He was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    },
+    {
+     "claim": "Ian McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company, and in 1965 made his first West"
+     }
+    },
+    {
+     "claim": "He came out as gay in 1988, and has since championed LGBT social movements worldwide.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "McKellen came out as gay in 1988, and has since championed LGBT social movements worldwide."
+     }
+    },
+    {
+     "claim": "In 1958, McKellen, at the age of 18, won a scholarship to the University of Cambridge.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In 1958, McKellen, at the age of 18, won a scholarship to the University of Cambridge, where he studied English literature as an undergraduate student"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 24,
+   "topic": "Ian McKellen facts",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Ian McKellen played Magneto?",
+    "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+    "Discover how Ian McKellen started his acting career in 1961."
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen facts",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen starred as Magneto in the X-Men film series from 2000 to 2014 and the Marvel Cinematic Universe film Avengers: Doomsday in 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Magneto in the X-Men film series (2000-2014) and the Marvel Cinematic Universe film Avengers: Doomsday (2026)"
+     }
+    },
+    {
+     "claim": "Sir Ian Murray McKellen was born on 25 May 1939 in Burnley, Lancashire.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sir Ian Murray McKellen (born 25 May 1939) is an English actor."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company, and in 1965 made his first West"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen came out as gay in 1988.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen came out as gay in 1988, and has since championed LGBT social movements worldwide."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen is a cofounder of Stonewall, an LGBT rights lobby group in the United Kingdom.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen is a cofounder of Stonewall, an LGBT rights lobby group in the United Kingdom, named after the Stonewall riots."
+     }
+    },
+    {
+     "claim": "In 1958, Sir Ian McKellen won a scholarship to the University of Cambridge at the age of 18.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "In 1958, McKellen, at the age of 18, won a scholarship to the University of Cambridge, where he studied English literature as an undergraduate student"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen received the Tony Award for Best Actor in a Play for his role as Antonio Salieri in Amadeus in 1980.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He went on to receive the Tony Award for Best Actor in a Play for his role as Antonio Salieri in Amadeus (1980)."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen played Gandalf in The Lord of the Rings trilogy from 2001 to 2003 and The Hobbit trilogy from 2012 to 2014.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "and Gandalf in The Lord of the Rings (2001–2003) and The Hobbit (2012–2014) trilogies."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen portrayed Cogsworth in Beauty and the Beast in 2017.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Cogsworth in Beauty and the Beast (2017)"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 25,
+   "topic": "Ian McKellen star",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Ian McKellen was knighted in 1991?",
+    "Discover when Sir Ian McKellen made his iconic stage debut.",
+    "Learn about the legendary career of Sir Ian McKellen."
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen star",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company, and in 1965 made his first West"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen came out as gay in 1988.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen came out as gay in 1988, and has since championed LGBT social movements worldwide."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen was born on 25 May 1939 in Burnley, Lancashire.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Ian Murray McKellen was born on 25 May 1939 in Burnley, Lancashire,[1][2][3] the son of Margery Lois (née Sutcliffe) and Denis Murray McKellen."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 26,
+   "topic": "Ian McKellen rankings",
+   "signal": "watchlist: Ian McKellen (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Ian McKellen was knighted back in 1991?",
+    "Sir Ian McKellen was born on May 25, 1939 in Burnley.",
+    "Sir Ian McKellen made his stage debut way back in 1961."
+   ],
+   "sources": [
+    [
+     "Sir Ian McKellen leads tributes to 'beloved actor' Sir Patrick Stewart after his death at 86",
+     "https://www.bbc.co.uk/news/articles/cm20v3029p5xo?at_medium=RSS&at_campaign=rss",
+     "BBC",
+     "2026-10-30"
+    ],
+    [
+     "Ian McKellen rankings",
+     "https://en.wikipedia.org/wiki/Ian_McKellen",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Ian McKellen was knighted by Queen Elizabeth II in 1991.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "He is regarded as a British cultural icon and was knighted by Queen Elizabeth II in 1991."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen was born on 25 May 1939 in Burnley, Lancashire.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Sir Ian Murray McKellen (born 25 May 1939) is an English actor."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen made his stage debut in 1961 at the Belgrade Theatre as a member of its repertory company, and in 1965 made his first West"
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen came out as gay in 1988.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "McKellen came out as gay in 1988, and has since championed LGBT social movements worldwide."
+     }
+    },
+    {
+     "claim": "Sir Ian McKellen appeared with Sir Patrick Stewart in a 2009 theatre production of Waiting for Godot.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "\"He took the risk and thank goodness for us all that he did,\" said Sir Ian, who appeared with Sir Patrick in a 2009 theatre"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:SDCC13_-_Ian_McKellen.jpg"
+   ]
+  },
+  {
+   "n": 44,
    "topic": "Patrick Stewart analysis",
    "signal": "watchlist: Patrick Stewart (surging)",
    "category": "Entertainment",
    "what_is_new": "",
    "hooks": [
-    "Did you know Sir Patrick Stewart was knighted in 2010?",
-    "Discover how Patrick Stewart became a Star Trek legend.",
-    "Explore the remarkable career of Sir Patrick Stewart."
+    "Did you know Sir Patrick Stewart was born in 1940?"
    ],
    "sources": [
     [
@@ -779,7 +1241,69 @@
       1
      ],
      "evidence": {
-      "1": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire"
+      "1": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
+     }
+    },
+    {
+     "claim": "Sir Patrick Stewart died on 28 October 2026.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "Avengers: Doomsday, part of the Marvel Cinematic Universe from 2022 to 2026, was his final film performance.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "In film, Stewart gained further stardom portraying Professor Charles Xavier in the X-Men film series (2000–2017), reprising the role in the Marvel Cinematic Universe (2022–2026),"
+     }
+    },
+    {
+     "claim": "He was knighted by Queen Elizabeth II for his services to drama in 2010.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "He was knighted by Queen Elizabeth II for his services to drama in 2010."
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Patrick_Stewart_1999.jpg"
+   ]
+  },
+  {
+   "n": 45,
+   "topic": "Patrick Stewart reaction",
+   "signal": "watchlist: Patrick Stewart (surging)",
+   "category": "Entertainment",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know Sir Patrick Stewart was knighted in 2010?",
+    "Discover how Patrick Stewart became a legendary actor.",
+    "Patrick Stewart was born in Mirfield on July 13 1940."
+   ],
+   "sources": [
+    [
+     "Patrick Stewart reaction",
+     "https://en.wikipedia.org/wiki/Patrick_Stewart",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Sir Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "Patrick Stewart was born on 13 July 1940 in Mirfield in the West Riding of Yorkshire,[1][2][3]"
      }
     },
     {
@@ -792,7 +1316,7 @@
      }
     },
     {
-     "claim": "Stewart made his Broadway debut in A Midsummer Night's Dream (1971).",
+     "claim": "He made his Broadway debut in A Midsummer Night's Dream in 1971.",
      "sources": [
       1
      ],
@@ -801,12 +1325,21 @@
      }
     },
     {
-     "claim": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966.",
+     "claim": "Sir Patrick Stewart died on 28 October 2026.",
      "sources": [
       1
      ],
      "evidence": {
-      "1": "Stewart became a member of the Royal Shakespeare Company (RSC) in 1966"
+      "1": "Sir Patrick Stewart (13 July 1940 – 28 October 2026) was an English actor."
+     }
+    },
+    {
+     "claim": "He became a member of the Royal Shakespeare Company in 1966.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "in 2010 stewart became a member of the royal shakespeare company rsc in 1966 and later acted in several productions with the royal"
      }
     }
    ],
@@ -815,112 +1348,356 @@
    ]
   },
   {
-   "n": 6,
-   "topic": "Celebrity Traitors viewing figures",
-   "signal": "watchlist: The Celebrity Traitors (launch)",
-   "category": "Entertainment",
-   "what_is_new": "",
+   "n": 3,
+   "topic": "Ballon d'Or 2026",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "category": "Sport",
+   "what_is_new": "Suspicious betting patterns predicting the exact top five finishing order of the Ballon d'Or are under investigation by France Football.",
    "hooks": [
-    "Did you know the second series concluded on 30 October 2026?"
+    "Did you know Harry Kane won the 2026 Ballon d'Or?",
+    "Alexia Putellas made history with her third Ballon d'Or win!"
    ],
    "sources": [
     [
-     "The Celebrity Traitors final review – more muted but still thrilling to the last",
-     "https://www.theguardian.com/tv-and-radio/2026/oct/30/the-celebrity-traitors-final-review-more-muted-but-still-thrilling-to-the-last",
+     "Suspicious bets returning £149,000 for predicting Ballon d’Or under investigation",
+     "https://www.theguardian.com/football/2026/oct/30/ballon-dor-betting-suspicious-cryptocurrency-investigation",
      "Guardian",
      "2026-10-30"
     ],
     [
-     "Celebrity Traitors viewing figures",
-     "https://en.wikipedia.org/wiki/The_Celebrity_Traitors",
+     "Ballon d'Or 2026",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
      "Wikipedia",
      ""
     ]
    ],
    "verified": [
     {
-     "claim": "A second series began broadcasting on 1 October 2026, every Thursday and Friday night, and it concluded on 30 October.",
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "As if that were not unexpected excitement enough at the end of a five-week, 10-show run whose record-breaking viewing figures have somewhat belied its comparatively",
-      "2": "A second series began broadcasting on 1 October 2026[3], every Thursday and Friday night, and it concluded on 30 October."
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London."
      }
     },
     {
-     "claim": "The Celebrity Traitors series attracted record-breaking viewing figures.",
+     "claim": "Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "As if that were not unexpected excitement enough at the end of a five-week, 10-show run whose record-breaking viewing figures have somewhat belied its comparatively",
-      "2": "The series was the most watched show of the year on UK television,"
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Harry Kane won the award ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi at the ceremony held at the London Palladium.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Harry Kane was crowned the winner at the ceremony at the London Palladium, finishing ahead of Kylian Mbappé, Lamine Yamal, Rodri and Lionel Messi.",
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "France Football presents the Ballon d'Or award.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Upside passed its findings to France Football, which Groupe Amaury owns and which has organised the awards since 1956.",
+      "2": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "The series finale was the most watched UK television broadcast of 2025.",
+     "claim": "Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "the series finale was the most watched UK television broadcast of 2025.[33]"
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     },
     {
-     "claim": "Episode 8 attracted 14.10 million UK viewers.",
+     "claim": "Harry Kane became the fifth Englishman to win the Ballon d'Or, following Michael Owen in 2001.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "8 | 8 | \"Episode 8\" | 30 October 2025 (2025-10-30) | 14.10"
+      "2": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
      }
     },
     {
-     "claim": "Episode 9 (Finale) attracted 14.94 million UK viewers.",
+     "claim": "Harry Kane scored 73 goals for club and country during the 2025 to 26 season.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "9 | 9 | \"Finale\" | 6 November 2025 (2025-11-06) | 14.94"
+      "2": "He finished ahead of Kylian Mbappé and Lamine Yamal in the voting after scoring 73 goals for club and country during the 2025–26 season."
      }
     },
     {
-     "claim": "Episode 1 attracted 12.46 million UK viewers.",
+     "claim": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or for the third time in her career.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "1 | 1 | \"Episode 1\" | 8 October 2025 (2025-10-08) | 12.46"
-     }
-    },
-    {
-     "claim": "Episode 6 attracted 13.61 million UK viewers.",
-     "sources": [
-      2
-     ],
-     "evidence": {
-      "2": "6 | 6 | \"Episode 6\" | 23 October 2025 (2025-10-23) | 13.61"
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
      }
     }
    ],
    "images": [
-    "commons:File:The_Celebrity_Traitors_logo.webp"
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
    ]
+  },
+  {
+   "n": 4,
+   "topic": "Ballon d'Or 2026 facts",
+   "signal": "watchlist: Ballon d'Or 2026 (surging)",
+   "category": "Sport",
+   "what_is_new": "",
+   "hooks": [
+    "Harry Kane is the first England player to win the Ballon d'Or in 25 years!",
+    "Alexia Putellas won the Women's Ballon d'Or for the third time!",
+    "Harry Kane made history by winning the Men's Ballon d'Or!"
+   ],
+   "sources": [
+    [
+     "'Anything is possible' - Harry Kane is first England player to win Ballon d'Or in 25 years",
+     "https://www.bbc.co.uk/newsround/articles/c574p3jkdp8xo",
+     "BBC",
+     "2026-10-27"
+    ],
+    [
+     "Ballon d'Or 2026 facts",
+     "https://en.wikipedia.org/wiki/2026_Ballon_d%27Or",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or for the first time in his career.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "England's Harry Kane has ended a 25-year wait to win the Ballon d'Or trophy.",
+      "2": "Bayern Munich forward Harry Kane won the Men's Ballon d'Or, receiving the award for the first time in his career."
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the Ballon d'Or Feminin for the third time.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Spanish midfielder Alexia Putellas won the Ballon d'Or Feminin for the third time.",
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "Harry Kane became the fifth Englishman to win the award.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "He is now the fifth Englishman to win, following Stanley Matthews, Bobby Charlton and double winner Kevin Keegan.",
+      "2": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001."
+     }
+    },
+    {
+     "claim": "Harry Kane has become the fifth Englishman to win the award.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "He is now the fifth Englishman to win, following Stanley Matthews, Bobby Charlton and double winner Kevin Keegan.",
+      "2": "He became the fifth Englishman to win the award, with the latest before him being Michael Owen in 2001.[5][6]"
+     }
+    },
+    {
+     "claim": "Alexia Putellas won the award for the third time in her career.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "Spanish midfielder Alexia Putellas won the Ballon d'Or Feminin for the third time.",
+      "2": "Barcelona midfielder Alexia Putellas won the Women's Ballon d'Or, receiving the award for the third time in her career."
+     }
+    },
+    {
+     "claim": "This ceremony marked the Ballon d'Or's 70th year.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "This is the Ballon d'Or's 70th year, and players from the United Kingdom have won the award seven times in total - including Kane.",
+      "2": "The 2026 Ballon d'Or (lit. '2026 Golden Ball') was the 70th annual ceremony of the Ballon d'Or, presented by France Football, recognising the best footballers"
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "The ceremony took place on 26 October 2026 at the London Palladium in London.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "The ceremony took place on 26 October 2026 at the London Palladium in London.[3][4]"
+     }
+    },
+    {
+     "claim": "Harry Kane is the 4th Bayern Munich player to achieve this honour.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Kane is the 4th Bayern Munich player to achieve this honour.[7]"
+     }
+    },
+    {
+     "claim": "Alexia Putellas became the sixth consecutive Spaniard to win the award.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "She became the sixth consecutive Spaniard to win the award, with the latest before her being Aitana Bonmati in 2025.[8]"
+     }
+    }
+   ],
+   "images": [
+    "commons:File:Harry_Kane_England_v_Ghana_23_June_2026-024_(cropped).jpg"
+   ]
+  },
+  {
+   "n": 9,
+   "topic": "GTA 6",
+   "signal": "watchlist: GTA 6 (build-up, 19 days to go)",
+   "category": "Gaming",
+   "what_is_new": "",
+   "hooks": [
+    "Did you know GTA 6 launches on November 19, 2026?",
+    "GTA 6 follows a criminal couple named Jason and Lucia in Leonida.",
+    "Principal production for GTA 6 officially began back in 2020."
+   ],
+   "sources": [
+    [
+     "5 PS5 Games Releasing in November 2026 You Cannot Miss",
+     "https://www.polygon.com/new-ps5-games-november-2026/",
+     "Polygon",
+     "2026-10-31"
+    ],
+    [
+     "I'm 100% here for a more grounded, realistic GTA 6, one I believe won't come at the expense of its usual haphazard chaos",
+     "https://www.pcgamer.com/games/grand-theft-auto/im-100-percent-here-for-a-more-grounded-realistic-gta-6-one-i-believe-wont-come-at-the-expense-of-its-usual-haphazard-chaos/",
+     "PC Gamer",
+     "2026-10-31"
+    ],
+    [
+     "Dog poo, anti-social behaviour, and Jason: Our latest look at GTA 6 gameplay comes from an episode of South Park",
+     "https://www.eurogamer.net/dog-poo-anti-social-behaviour-and-jason-our-latest-look-at-gta-6-gameplay-comes-from-the-latest-episode-of-south-park",
+     "Eurogamer",
+     "2026-10-29"
+    ],
+    [
+     "GTA 6",
+     "https://en.wikipedia.org/wiki/Grand_Theft_Auto_VI",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [
+    {
+     "claim": "Grand Theft Auto 6 is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S.",
+     "sources": [
+      1,
+      3,
+      4
+     ],
+     "evidence": {
+      "1": "Release date: Nov. 19",
+      "3": "ahead of its 19th November launch.",
+      "4": "it is scheduled to be released on 19 November 2026 for the PlayStation 5 and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "The story follows a criminal couple named Jason Duval and Lucia Caminos.",
+     "sources": [
+      1,
+      4
+     ],
+     "evidence": {
+      "1": "But it also looks like it might be a surprisingly sensitive Bonnie-and-Clyde love story.",
+      "4": "the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    }
+   ],
+   "one_source": [
+    {
+     "claim": "Grand Theft Auto VI is set within the fictional US state of Leonida, based on Florida.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Principal production began in 2020 after early development started following Red Dead Redemption 2's release in 2018.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Rockstar confirmed in February 2022 that the game was in development.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Following years of speculation and anticipation, Rockstar confirmed in February 2022 that the game was in development."
+     }
+    },
+    {
+     "claim": "Grand Theft Auto VI was formally revealed in December 2023.",
+     "sources": [
+      4
+     ],
+     "evidence": {
+      "4": "Grand Theft Auto VI was formally revealed in December 2023."
+     }
+    }
+   ],
+   "images": []
   },
   {
    "n": 10,
    "topic": "GTA 6 PC release",
    "signal": "watchlist: GTA 6 (build-up, 19 days to go)",
    "category": "Gaming",
-   "what_is_new": "",
+   "what_is_new": "Nothing changed in the last two days.",
    "hooks": [
-    "When is Grand Theft Auto 6 coming to PC?",
-    "Discover the latest news on the GTA 6 PC release."
+    "When is GTA 6 coming to PC?",
+    "GTA 6 is launching on consoles this year!",
+    "Everything we know about GTA 6 on PC."
    ],
    "sources": [
     [
@@ -972,12 +1749,48 @@
      }
     },
     {
-     "claim": "Principal production began in 2020.",
+     "claim": "It is due to be the eighth main entry in the Grand Theft Auto series, following 2013's Grand Theft Auto V, and the sixteenth entry overall.",
      "sources": [
       3
      ],
      "evidence": {
-      "3": "Principal production began in 2020."
+      "3": "It is due to be the eighth main entry in the Grand Theft Auto series, following 2013's Grand Theft Auto V, and the sixteenth entry"
+     }
+    },
+    {
+     "claim": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Set within the fictional US state of Leonida, based on Florida, the story follows the criminal duo of Jason Duval and Lucia Caminos."
+     }
+    },
+    {
+     "claim": "Players will be able to freely roam Leonida's open world, which features the Miami-inspired Vice City.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Players will be able to freely roam Leonida's open world, which features the Miami-inspired Vice City."
+     }
+    },
+    {
+     "claim": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Early development began after Red Dead Redemption 2's release in 2018, following years of preliminary work, and principal production began in 2020."
+     }
+    },
+    {
+     "claim": "Rockstar confirmed in February 2022 that the game was in development.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Rockstar confirmed in February 2022 that the game was in development."
      }
     },
     {
@@ -995,14 +1808,14 @@
    ]
   },
   {
-   "n": 11,
+   "n": 12,
    "topic": "Avengers Doomsday cast",
    "signal": "watchlist: Avengers: Doomsday (surging, 48 days to go)",
    "category": "Film",
    "what_is_new": "",
    "hooks": [
-    "Avengers Doomsday releases on December 18, 2026!",
-    "Chris Hemsworth returns as Thor in Avengers Doomsday!"
+    "Avengers Doomsday hits theaters on December 18, 2026!",
+    "Patrick Stewart returns as Professor X in Avengers Doomsday."
    ],
    "sources": [
     [
@@ -1020,69 +1833,262 @@
    ],
    "verified": [
     {
-     "claim": "Avengers Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU.",
+     "claim": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "As the World Series got underway, MCU fans were treated to a new sneak peek at Avengers: Doomsday, premiering Dec. 18.",
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
       "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026, as part of Phase Six of the MCU."
      }
     },
     {
-     "claim": "The cast includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, and Danny Ramirez as Falcon.",
+     "claim": "Patrick Stewart plays Charles Xavier or Professor X.",
      "sources": [
       1,
       2
      ],
      "evidence": {
       "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
-      "2": "The ensemble cast includes actors reprising roles from previous MCU media and 20th Century Fox's X-Men film series."
+      "2": "- Patrick Stewart as Charles Xavier / Professor X:"
      }
     },
     {
-     "claim": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026",
+     "claim": "Avengers: Doomsday features an ensemble cast led by Robert Downey Jr. as Doctor Doom.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse",
-      "2": "Avengers: Doomsday is scheduled to be released in the United States on December 18, 2026"
+      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr).",
+      "2": "Directed by Anthony and Joe Russo, and written by Michael Waldron, Stephen McFeely, and the writing team of Chris McKenna and Erik Sommers, the film"
      }
     },
     {
-     "claim": "Robert Downey Jr plays Doctor Doom in Avengers: Doomsday",
+     "claim": "Chris Evans returns as Steve Rogers alongside Anthony Mackie as Captain America.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "Premiering Dec. 18 in theaters, Avengers: Doomsday sees the multiverse collapse, forcing heroes from multiple Earths to unite against Doctor Doom (Robert Downey Jr)",
-      "2": "the sequel to avengers endgame 2019 and the 39th film in the marvel cinematic universe mcu directed by anthony and joe russo and written by michael waldron stephen mcfeely chris mckenna and erik sommers the film features an ensemble cast"
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "The former leader of the Avengers, a super soldier, and World War II veteran who was the first person to carry the Captain America mantle."
      }
     },
     {
-     "claim": "The film features an ensemble cast including Chris Evans, Chris Hemsworth and Anthony Mackie",
+     "claim": "Pedro Pascal stars as Reed Richards, also known as Mister Fantastic.",
      "sources": [
       1,
       2
      ],
      "evidence": {
-      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers",
-      "2": "The ensemble cast includes actors reprising roles from previous MCU media and 20th Century Fox's X-Men film series"
+      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
+      "2": "Pedro Pascal as Reed Richards / Mister Fantastic: A highly intelligent scientist and the leader of the Fantastic Four who can stretch any part of"
+     }
+    },
+    {
+     "claim": "Joseph Quinn appears in the film as Johnny Storm, the Human Torch.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "During Friday’s Game 1, the MLB and the MCU teamed up for a special preview of the upcoming movie, in which Pedro Pascal’s Mister Fantastic",
+      "2": "Joseph Quinn as Johnny Storm / Human Torch: Sue's younger brother and a member of the Fantastic Four who can control fire and fly[19]"
+     }
+    },
+    {
+     "claim": "Paul Rudd portrays Scott Lang, the hero known as Ant-Man.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The preview also featured some familiar faces, including Chris Evans’ Steve Rogers, which causes Paul Rudd’s Ant-Man confusion over who to refer to as Captain",
+      "2": "Paul Rudd as Scott Lang / Ant-Man: An Avenger and former petty criminal with a suit that allows him to shrink or grow in scale"
+     }
+    },
+    {
+     "claim": "Chris Hemsworth portrays the Asgardian god Thor.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Chris Hemsworth as Thor: The Asgardian god of thunder and a founding Avenger, based on the Norse mythological deity of the same name.[17]"
+     }
+    },
+    {
+     "claim": "Simu Liu plays Xu Shang-Chi.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Simu Liu as Xu Shang-Chi: A highly skilled martial artist and the wielder of the mystical Ten Rings who was trained to be an assassin"
+     }
+    },
+    {
+     "claim": "Letitia Wright appears as the Black Panther.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Letitia Wright as Shuri / Black Panther: The former princess of Wakanda who gained superhuman abilities by ingesting the heart-shaped herb.[17]"
+     }
+    },
+    {
+     "claim": "Kelsey Grammer portrays the X-Men member Beast.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Kelsey Grammer as Hank McCoy / Beast: A highly intelligent mutant and member of the X-Men with animalistic physical characteristics, including blue fur, pointed ears,"
+     }
+    },
+    {
+     "claim": "Ian McKellen plays the mutant Magneto.",
+     "sources": [
+      1,
+      2
+     ],
+     "evidence": {
+      "1": "The cast also includes Chris Hemsworth as Thor, Anthony Mackie as Captain America, Chris Evans as Steve Rogers, Paul Rudd as Ant-Man, Tenoch Huerta as",
+      "2": "Ian McKellen as Erik Lehnsherr / Magneto: A powerful mutant who can generate and control magnetic fields[17]"
      }
     }
    ],
    "one_source": [
     {
-     "claim": "Filming took place from April to September 2025 at Pinewood Studios in England",
+     "claim": "Directors Anthony and Joe Russo said Doom was one of the most complex comic book characters.",
      "sources": [
       2
      ],
      "evidence": {
-      "2": "Filming took place from April to September 2025 at Pinewood Studios in England, with location shooting in England and Bahrain"
+      "2": "Directors Anthony and Joe Russo said Doom was one of the most complex comic book characters, and they thought Downey—who previously starred as Tony Stark"
+     }
+    },
+    {
+     "claim": "Doomsday marks Patrick Stewart's final on-screen performance following his death in October 2026.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Doomsday marks Stewart's final on-screen performance following his death in October 2026.[26]"
+     }
+    },
+    {
+     "claim": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Filming took place from April to September 2025 at Pinewood Studios in England, with location filming in England and Bahrain."
+     }
+    },
+    {
+     "claim": "Alan Cumming stated the make-up process for Nightcrawler was reduced to an hour-and-a-half for Doomsday.",
+     "sources": [
+      2
+     ],
+     "evidence": {
+      "2": "Cumming said the make-up process was reduced to an hour-and-a-half for Doomsday from the four-and-a-half to five hours it took on the 20th Century Fox"
+     }
+    },
+    {
+     "claim": "A sneak peek was broadcast during Game 1 of the World Series between the Tampa Bay Rays and the Milwaukee Brewers.",
+     "sources": [
+      1
+     ],
+     "evidence": {
+      "1": "With the Tampa Bay Rays taking on the Milwaukee Brewers in Game 1 of the World Series on Friday, the MLB teased “an exclusive preview"
+     }
+    }
+   ],
+   "images": []
+  },
+  {
+   "n": 35,
+   "topic": "Final Fantasy Resonance",
+   "signal": "Bluesky trending, 2,527 posts",
+   "category": "Gaming",
+   "what_is_new": "The original soundtrack for Final Fantasy Resonance was released on 28 October 2026.",
+   "hooks": [
+    "Did you know Final Fantasy Resonance launched on October 22 2026?",
+    "Check out how OpenCritic found that 90 percent of critics recommend the game!"
+   ],
+   "sources": [
+    [
+     "How to open the Nameless Ruins chest in Final Fantasy Resonance",
+     "https://www.polygon.com/final-fantasy-resonance-nameless-ruins-chest-how-to-open/",
+     "Polygon",
+     "2026-10-28"
+    ],
+    [
+     "Things Final Fantasy Resonance Doesn't Tell You",
+     "https://www.ign.com/wikis/final-fantasy-resonance/Things_Final_Fantasy_Resonance_Doesn%27t_Tell_You",
+     "IGN",
+     "2026-10-26"
+    ],
+    [
+     "Final Fantasy Resonance",
+     "https://en.wikipedia.org/wiki/Final_Fantasy_Resonance",
+     "Wikipedia",
+     ""
+    ]
+   ],
+   "verified": [],
+   "one_source": [
+    {
+     "claim": "Final Fantasy Resonance is a role playing video game co developed by Square Enix and Lancarse and published by Square Enix.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "Final Fantasy Resonance is a 2026 role-playing video game co-developed by Square Enix and Lancarse and published by Square Enix."
+     }
+    },
+    {
+     "claim": "OpenCritic determined that 90 percent of critics recommended the game.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "OpenCritic determined that 90% of critics recommended the game."
+     }
+    },
+    {
+     "claim": "The game was released on 22 October 2026 for Nintendo Switch, Nintendo Switch 2, PlayStation 5, Windows, and Xbox Series X/S.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The game was released on 22 October 2026 for Nintendo Switch, Nintendo Switch 2, PlayStation 5, Windows, and Xbox Series X/S."
+     }
+    },
+    {
+     "claim": "A demo was released on 3 September 2026 that goes up until the end of chapter one.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "A demo was released on 3 September 2026 that goes up until the end of chapter one."
+     }
+    },
+    {
+     "claim": "The original soundtrack for Final Fantasy Resonance is set for release on 28 October 2026.",
+     "sources": [
+      3
+     ],
+     "evidence": {
+      "3": "The original soundtrack for Final Fantasy Resonance is set for release on 28 October 2026."
      }
     }
    ],

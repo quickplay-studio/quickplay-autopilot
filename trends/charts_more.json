@@ -35,18 +35,19 @@
  "lists": {
   "albums_gb": [
    "To Fall Asleep To by Rain Sounds",
+   "Brown Noise: Loops for Relaxation, Deep Sleep, Meditation, And Babies by SleepTherapy",
    "Baby Lullaby: Relaxing Piano Lullabies and Natural Sleep Aid for Baby Sleep Music by Baby Lullaby Academy"
   ],
   "apps_gb": [
    "ChatGPT",
    "InPost UK",
    "Lloyds Mobile Banking",
-   "Uber: Rides, eats, and more",
-   "Claude by Anthropic",
-   "Google Maps",
    "Whatnot: Shop, Sell, Connect",
+   "Google Maps",
+   "Claude by Anthropic",
+   "Uber: Rides, eats, and more",
    "Amazon Shopping",
-   "Bolt: Request a Ride"
+   "Instagram"
   ],
   "albums_us": [],
   "apps_us": [
@@ -56,10 +57,10 @@
    "ChatGPT",
    "Capital One Mobile",
    "Claude by Anthropic",
-   "Kalshi: Trade Sports & Events",
    "Uber - Rides, Eats, Hotels",
    "PineDrama - Short Dramas",
-   "Partiful: Party Invite Maker"
+   "Kalshi: Trade Sports & Events",
+   "Netflix Game Controller"
   ]
  }
 }

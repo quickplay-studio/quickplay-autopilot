@@ -1,15 +1,15 @@
 {
  "updated": "2026-10-31T13:48+00:00",
- "mode": "hourly",
+ "mode": "full",
  "errors": {},
- "full_updated": "2026-10-31T09:16+00:00",
+ "full_updated": "2026-10-31T13:48+00:00",
  "youtube": {
   "subscribers": 31,
   "public_shorts": 222,
-  "views_all_time": 50373,
+  "views_all_time": 50307,
   "views_last_90_days": 13574,
   "views_measure": "engaged views",
-  "views_last_90_days_estimate": 16564,
+  "views_last_90_days_estimate": 16542,
   "analytics_last_day": "2026-10-28"
  },
  "instagram": {

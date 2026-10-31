@@ -4,16 +4,19 @@ clips,2026-10-27,0.096,one_detail|statement|standard+lab-captions-1019|Match Day
 clips,2026-10-28,0.1174,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
 clips,2026-10-29,0.1174,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
 clips,2026-10-30,0.1174,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
+clips,2026-10-31,0.1174,one_detail|statement|standard+lab-captions-1019|Match Day,0.182,11
 gaming,2026-10-26,0.0509,countdown|twist|standard+lab-captions-1024|Game Lore,0.5,2
 gaming,2026-10-27,0.1144,countdown|twist|standard+lab-captions-1024|Game Lore,0.25,4
 gaming,2026-10-28,0.1094,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
 gaming,2026-10-29,0.1094,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
 gaming,2026-10-30,0.1094,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
+gaming,2026-10-31,0.1094,countdown|twist|standard+lab-captions-1024|Game Lore,0.143,7
 irl,2026-10-26,0.0997,one_detail|twist|standard+lab-captions-1024|Did You Know,0.333,3
 irl,2026-10-27,0.118,one_detail|twist|standard+lab-captions-1024|Did You Know,0.2,5
 irl,2026-10-28,0.14,one_detail|number|minimal+low|Did You Know,0.222,9
 irl,2026-10-29,0.14,one_detail|number|minimal+low|Did You Know,0.222,9
 irl,2026-10-30,0.1396,one_detail|number|minimal+low|Did You Know,0.3,10
+irl,2026-10-31,0.1269,one_detail|number|minimal+low|Did You Know,0.273,11
 main,2026-10-18,0.0383,real_reason|question|boxed|,0.2,5
 main,2026-10-19,0.0765,one_detail|statement|clean|,0.105,19
 main,2026-10-20,0.0747,one_detail|statement|clean|,0.129,31
@@ -27,3 +30,4 @@ main,2026-10-27,0.0635,one_detail|statement|clean|,0.05,161
 main,2026-10-28,0.0629,one_detail|statement|clean|,0.044,180
 main,2026-10-29,0.0633,one_detail|statement|clean|,0.044,182
 main,2026-10-30,0.0632,one_detail|statement|clean|,0.041,195
+main,2026-10-31,0.0631,one_detail|statement|clean|,0.04,200

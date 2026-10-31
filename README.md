@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Saturday 31 October, 10:41 UK.
+Updated Saturday 31 October, 11:41 UK.
 
-**30 subscribers, 16,628 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**30 subscribers, 17,089 engaged Shorts views in 90 days (0.57% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,12 +27,12 @@ Updated Saturday 31 October, 10:41 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 30 of 500 (6.00%) | 16,628 of 3,000,000 (0.55%) | 33,149 |
-| Full, from 1 February 2027 | 30 of 1,000 (3.00%) | 16,628 of 10,000,000 (0.17%) | 110,927 |
+| Expanded, open now | 30 of 500 (6.00%) | 17,089 of 3,000,000 (0.57%) | 33,144 |
+| Full, from 1 February 2027 | 30 of 1,000 (3.00%) | 17,089 of 10,000,000 (0.17%) | 110,922 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,149 (to Wed 28 Oct) | 8,102 | 18 | 93 |
+| 8,149 (to Wed 28 Oct) | 8,167 | 22 | 93 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -67,12 +67,12 @@ Days YouTube has reported, to Wed 28 Oct. More: [analytics/insights.md](analytic
 | camera energy | steady 33, lab 27 | running, leaning lab | 11 |
 | angles shown to the writer | shown 24, hidden 26 | running, leaning hidden | 12 |
 
-**Change ledger:** 280 changes, 93 live; verdicts so far: 56 worse, 53 no change, 40 better, 39 too early, 37 overlapped.
+**Change ledger:** 280 changes, 91 live; verdicts so far: 56 worse, 55 no change, 40 better, 37 too early, 37 overlapped.
 
 | Change | Date | What | Target | Verdict |
 |---|---|---|---|---|
 | CH-280 | Sat 24 Oct | Recipe: Back to normal for writer model "groq:openai/gpt-oss-120b" | yt_rel | no change |
-| CH-279 | Sat 24 Oct | Recipe: Lean towards day posted "Friday" | yt_rel | too early |
+| CH-279 | Sat 24 Oct | Recipe: Lean towards day posted "Friday" | yt_rel | no change |
 | CH-278 | Sat 24 Oct | Recipe: Lean towards colour grade "natural" | yt_rel | better |
 | CH-277 | Sat 24 Oct | Recipe: Lean towards captions "lab-captions-1019" | yt_rel | no change |
 | CH-276 | Sat 24 Oct | Recipe: Lean towards length "25 to 34 s" | yt_rel | better |

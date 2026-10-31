@@ -1,6 +1,5 @@
 {
- "checked": "2026-10-31T00:55:49+00:00",
- "instagram_checked": "2026-10-31T00:55:49+00:00",
+ "checked": "2026-10-31T01:55:17+00:00",
  "instagram": {
   "ok": true,
   "username": "quickplaydaily",
@@ -18,15 +17,16 @@
   ],
   "today_cap": 8,
   "cover": {
-   "asked": 28,
-   "accepted": 28,
+   "asked": 30,
+   "accepted": 30,
    "refused": 0,
    "last": "accepted",
-   "last_at": "2026-10-30T08:00+00:00",
+   "last_at": "2026-10-31T00:57+00:00",
    "ok": true,
    "paused_until": null
   }
  },
+ "instagram_checked": "2026-10-31T00:55:49+00:00",
  "facebook": {
   "ok": true,
   "page": "Quickplay Daily",

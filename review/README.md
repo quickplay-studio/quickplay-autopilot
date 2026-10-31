@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 10:41): 30 of 1,000 subscribers · 16,628 of 10 million Shorts views in 90 days · 8,102 views in the last 24 hours (about 110,926 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 11:41): 30 of 1,000 subscribers · 17,089 of 10 million Shorts views in 90 days · 8,167 views in the last 24 hours (about 110,921 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 11:25 (UK): 9 scheduled, 141 public, 22 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 9:39).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 11:35).
 
 ## Posts by day
 
@@ -145,6 +145,11 @@ awaiting approval · 27 s · [watch preview](https://github.com/quickplay-studio
 - dry run: always waits for approval, never uploaded
 
 ![TEST-L1024](TEST-L1024.jpg)
+
+## In the queue
+
+- **QD-303** Patrick Stewart: the detail you missed (rendering next)
+- **QD-304** Patrick Stewart best moments: icon dies at 86 🎭 (rendering next)
 
 ## On the channel (latest first)
 

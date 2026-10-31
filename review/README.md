@@ -1,10 +1,10 @@
 # Quickplay Daily review
 
-**Progress** (Sat 31 Oct, 06:55): 26 of 1,000 subscribers · 16,352 of 10 million Shorts views in 90 days · 7,204 views in the last 24 hours (about 110,929 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
+**Progress** (Sat 31 Oct, 07:55): 26 of 1,000 subscribers · 16,519 of 10 million Shorts views in 90 days · 7,499 views in the last 24 hours (about 110,928 a day needed, 93 days left) · Instagram 2 and Facebook 0 followers.
 
 YouTube checked Sat 31 Oct 7:40 (UK): 3 scheduled, 147 public, 17 uploads in the last 24 hours.
 
-Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 4:42).
+Instagram: connected as quickplaydaily · Facebook: connected to Quickplay Daily (checked Sat 31 Oct 7:51).
 
 ## Posts by day
 
@@ -13,7 +13,7 @@ YouTube counts Shorts by the day they go public. Instagram and Facebook build up
 | Day | YouTube | Instagram | Facebook | Target met? |
 |---|---|---|---|---|
 | Sun 1 Nov | 0 public | 0 | 0 | ⏳ 0 of 14 scheduled |
-| Sat 31 Oct | 7 public, 4 scheduled | 4 | 1 | ⏳ 7 of 15 so far, 4 more scheduled |
+| Sat 31 Oct | 8 public, 3 scheduled | 6 | 1 | ⏳ 8 of 15 so far, 3 more scheduled |
 | Fri 30 Oct | 10 public | 8 | 1 | ⚠️ 10 of 15 |
 | Thu 29 Oct | 7 public | 0 | 0 | no target then |
 | Wed 28 Oct | 28 public | 0 | 1 | ✅ all out |
@@ -159,12 +159,12 @@ scheduled · 36 s · music: risen · [script](../boards/done/QD-290.json) · [Yo
 ![QD-290](QD-290.jpg)
 
 ### Sat 31 Oct 8:00 · Sport Shocks #5: Super Bowl XLVII: the day the lights went out 💡
-scheduled · 42 s · music: duty-calls · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
+private · 42 s · music: duty-calls · [script](../boards/done/QD-288.json) · [YouTube](https://youtube.com/shorts/PVcJnH7wnLw)
 
 ![QD-288](QD-288.jpg)
 
 ### Sat 31 Oct 7:00 · Messi vs Ronaldo: the record one of them missed
-public · 4 views · 30 s · music: duty-calls · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
+public · 4 views · 30 s · music: duty-calls · on Instagram · [script](../boards/done/QD-287.json) · [YouTube](https://youtube.com/shorts/HSKp46wJ6TY)
 
 ![QD-287](QD-287.jpg)
 
@@ -199,7 +199,7 @@ public · 1,038 views · 29 s · music: once-upon-a-time · on Instagram · on F
 ![QD-282](QD-282.jpg)
 
 ### Fri 30 Oct 15:30 · England vs PNG: the 68-point twist
-public · 130 views · 37 s · music: once-upon-a-time · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
+public · 130 views · 37 s · music: once-upon-a-time · on Instagram · [script](../boards/done/QD-279.json) · [YouTube](https://youtube.com/shorts/TkoKydpcis4)
 
 ![QD-279](QD-279.jpg)
 

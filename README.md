@@ -1,8 +1,8 @@
 # Quickplay hub
 
-Updated Saturday 31 October, 13:48 UK.
+Updated Saturday 31 October, 14:41 UK.
 
-**31 subscribers, 16,564 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
+**31 subscribers, 16,598 engaged Shorts views in 90 days (0.55% of the 3M expanded tier), 4 to do, 0 keys need fixing.**
 
 ## Your actions
 
@@ -27,12 +27,12 @@ Updated Saturday 31 October, 13:48 UK.
 
 | Tier | Subscribers | Shorts views, 90 days | Views a day needed |
 |---|---|---|---|
-| Expanded, open now | 31 of 500 (6.20%) | 16,564 of 3,000,000 (0.55%) | 33,150 |
-| Full, from 1 February 2027 | 31 of 1,000 (3.10%) | 16,564 of 10,000,000 (0.17%) | 110,928 |
+| Expanded, open now | 31 of 500 (6.20%) | 16,598 of 3,000,000 (0.55%) | 33,149 |
+| Full, from 1 February 2027 | 31 of 1,000 (3.10%) | 16,598 of 10,000,000 (0.17%) | 110,927 |
 
 | Engaged views, last 7 reported days | Views, last 24 hours | Uploads, last 24 hours | Days to 1 Feb 2027 |
 |---|---|---|---|
-| 8,149 (to Wed 28 Oct) | 8,418 | 22 | 93 |
+| 8,149 (to Wed 28 Oct) | 8,290 | 22 | 93 |
 
 The full tier also accepts 20M Shorts views in 90 days. YouTube reports engaged views about 3 days late.
 
@@ -58,14 +58,14 @@ Days YouTube has reported, to Wed 28 Oct. More: [analytics/insights.md](analytic
 
 | Contest | Arms (Shorts so far) | Verdict | Days left |
 |---|---|---|---|
-| title emoji | emoji 42, none 47 | running, leaning emoji | 7 |
-| comment replies | on 48, off 44 | running, leaning off | 7 |
-| length | 25 to 34 s 40, 35 to 44 s 46 | running, leaning 25 to 34 s | 8 |
-| ending | loop 37, question 32 | running, leaning loop | 10 |
-| posting quarter (UK) | 06:00 to 12:00 32, 12:00 to 18:00 35 | running, leaning 06:00 to 12:00 | 10 |
-| title answer (stated or held back) | stated 33, held back 36 | running, leaning stated | 10 |
-| camera energy | steady 33, lab 27 | running, leaning lab | 11 |
-| angles shown to the writer | shown 24, hidden 26 | running, leaning hidden | 12 |
+| title emoji | emoji 44, none 47 | running, leaning emoji | 7 |
+| length | 25 to 34 s 39, 35 to 44 s 48 | running, leaning 25 to 34 s | 8 |
+| ending | loop 35, question 35 | running, leaning loop | 9 |
+| title answer (stated or held back) | stated 36, held back 35 | running, leaning stated | 9 |
+| posting quarter (UK) | 06:00 to 12:00 32, 12:00 to 18:00 37 | running, leaning 06:00 to 12:00 | 10 |
+| camera energy | steady 35, lab 27 | running, leaning lab | 11 |
+| writing instruction g003: Compare the... | a 31, b 26 | running, leaning a | 11 |
+| title opening | search phrase 40, curiosity 28 | running, leaning search phrase | 11 |
 
 **Change ledger:** 280 changes, 91 live; verdicts so far: 56 worse, 55 no change, 40 better, 37 too early, 37 overlapped.
 
@@ -109,7 +109,7 @@ Add any of them as an Actions secret: [new secret](https://github.com/quickplay-
 
 ## Channels
 
-- **Quickplay Daily**: 12 of 15 posted today, sign-in ok
+- **Quickplay Daily**: 14 of 15 posted today, sign-in ok
 - **Quickplay Music**: 0 of 6 posted today, no sign-in yet
 - **Quickplay Gaming Clips**: 0 of 6 posted today, sign-in ok
 - **Quickplay IRL Clips**: 0 of 6 posted today, sign-in ok

@@ -1,16 +1,15 @@
 Gemini models: ['gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash'] + 11
-Patrick Stewart: 8 verified, 2 one-source, 5 pages
-Patrick Stewart history and records: 0 verified, 6 one-source, 2 pages
-Patrick Stewart facts: 5 verified, 4 one-source, 5 pages
-Patrick Stewart star: 7 verified, 2 one-source, 5 pages
-Patrick Stewart by the numbers: 5 verified, 2 one-source, 4 pages
-Patrick Stewart best moments: 3 verified, 0 one-source, 3 pages
-Patrick Stewart what happens next: 2 verified, 2 one-source, 2 pages
-Patrick Stewart analysis: 0 verified, 5 one-source, 1 pages
-Patrick Stewart reaction: 0 verified, 5 one-source, 1 pages
-Ballon d'Or 2026: 2 verified, 3 one-source, 2 pages
-Ballon d'Or 2026 facts: 3 verified, 0 one-source, 2 pages
-Halloween around the world: 0 verified, 6 one-source, 4 pages
-covered recently, no pack: The Celebrity Traitors; Halloween 2026
-12 packs, 35 verified facts, 37 one-source
-gemini: {"out of quota": {"freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now", "groq:openai/gpt-oss-120b": "per-minute limit, 3 tries"}, "retired": [], "timeouts": {}, "answers": {"gemini-3.5-flash-lite": 13, "freellm:llama-3.3-70b": 3, "groq:openai/gpt-oss-120b": 2, "openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": 1}, "empty answers": {}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 4, "router searches": 8, "router sources added": 0, "providers passed over": ["groq"]}
+Patrick Stewart: 4 verified, 4 one-source, 5 pages
+Patrick Stewart explained: 0 verified, 3 one-source, 2 pages
+Patrick Stewart facts: 3 verified, 1 one-source, 5 pages
+Patrick Stewart star: 4 verified, 0 one-source, 5 pages
+Patrick Stewart by the numbers: 6 verified, 2 one-source, 4 pages
+Patrick Stewart best moments: 7 verified, 1 one-source, 3 pages
+Patrick Stewart what happens next: 1 verified, 5 one-source, 2 pages
+Patrick Stewart analysis: 0 verified, 4 one-source, 1 pages
+Celebrity Traitors viewing figures: 2 verified, 5 one-source, 2 pages
+GTA 6 PC release: 0 verified, 5 one-source, 3 pages
+Avengers Doomsday cast: 5 verified, 1 one-source, 2 pages
+covered recently, no pack: Ian McKellen; The Celebrity Traitors; GTA 6; Harry Potter HBO series; 2026 Mexico City Grand Prix; Halloween 2026; bbc radio 2
+11 packs, 32 verified facts, 31 one-source
+gemini: {"out of quota": {"openrouter:nvidia/nemotron-3-ultra-550b-a55b:free": "daily limit", "freellm:nemotron-3-ultra-550b": "router: no free capacity now", "freellm:qwen3.5-397b": "router: no free capacity now", "freellm:gpt-oss-120b": "router: no free capacity now"}, "retired": [], "timeouts": {"groq:openai/gpt-oss-120b": 2}, "answers": {"gemini-3.5-flash-lite": 12, "groq:openai/gpt-oss-120b": 4, "freellm:llama-3.3-70b": 2}, "empty answers": {"groq:openai/gpt-oss-120b": 2}, "providers": ["groq", "openrouter", "freellm"], "local": false, "claude calls": 0, "second opinions": 6, "router searches": 7, "router sources added": 0, "providers passed over": []}

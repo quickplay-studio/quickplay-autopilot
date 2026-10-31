@@ -1,0 +1,167 @@
+{
+ "id": "QD-304",
+ "board": "boards/queue/QD-304.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T21:05:00Z",
+ "rendered": "2026-10-31T11:41:18.218417+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "image_first",
+   "used": "image_first"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Patrick Stewart best moments: icon dies at 86 🎭",
+ "background_notes": [
+  "picked pixabay 3 (+2 spares)"
+ ],
+ "media": {
+  "real_shots": 6,
+  "planned_real": 6,
+  "extra_photos": 8,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "low",
+  "voice": "lily",
+  "energy": "steady",
+  "grade": "lab-grade-1031",
+  "opening": "image_first",
+  "style": "minimal",
+  "closing": "chip"
+ },
+ "qa": {
+  "duration": 30.0,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 16.3,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 512.8,
+   "contrast": 0.237,
+   "face_area": 0.264,
+   "text_area": 0.0444,
+   "caption_contrast": 6.35,
+   "by_frame": {
+    "sharpness": [
+     541.0,
+     592.9,
+     576.4,
+     340.8
+    ],
+    "contrast": [
+     0.246,
+     0.248,
+     0.246,
+     0.208
+    ],
+    "face_area": [
+     0.3501,
+     0.352,
+     0.354,
+     0.0
+    ],
+    "text_area": [
+     0.0484,
+     0.0482,
+     0.0482,
+     0.0328
+    ],
+    "caption_contrast": [
+     6.34,
+     6.39,
+     6.36,
+     4.82
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   3.95,
+   "none",
+   2
+  ],
+  [
+   3.95,
+   9.36,
+   "none",
+   4
+  ],
+  [
+   9.36,
+   14.2,
+   "none",
+   3
+  ],
+  [
+   14.2,
+   19.48,
+   "none",
+   4
+  ],
+  [
+   19.48,
+   24.33,
+   "none",
+   3
+  ],
+  [
+   24.33,
+   29.93,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "16459",
+   "q": "red carpet",
+   "t0": 0.0,
+   "t1": 15.26
+  },
+  {
+   "p": "pixabay",
+   "id": "154384",
+   "q": "movie camera setup",
+   "t0": 14.66,
+   "t1": 29.93
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T11:55:05Z",
+ "video": "2Rc_v63SxZI",
+ "url": "https://youtube.com/shorts/2Rc_v63SxZI",
+ "publish_at": "2026-10-31T21:05:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T21:05:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-304"
+}

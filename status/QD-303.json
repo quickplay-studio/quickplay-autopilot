@@ -1,0 +1,163 @@
+{
+ "id": "QD-303",
+ "board": "boards/queue/QD-303.json",
+ "mode": "schedule",
+ "slot": "2026-10-31T20:00:00Z",
+ "rendered": "2026-10-31T11:40:36.545031+00:00",
+ "fx": {
+  "fx_energy": {
+   "assigned": "steady",
+   "used": "steady"
+  },
+  "fx_grade": {
+   "assigned": "lab",
+   "used": "lab-grade-1031"
+  },
+  "fx_opening": {
+   "assigned": "lab",
+   "used": "lab-opening-1030"
+  },
+  "fx_slot": {
+   "assigned": "06:00 to 12:00",
+   "used": "18:00 to 24:00"
+  }
+ },
+ "title": "Patrick Stewart: the detail you missed",
+ "background_notes": [
+  "picked pixabay 3 (+3 spares)",
+  "pixabay:374828 skipped: nearly black (brightness 0.02)"
+ ],
+ "media": {
+  "real_shots": 9,
+  "planned_real": 9,
+  "extra_photos": 11,
+  "pic_found_share": 1.0,
+  "pic_rescued": 0,
+  "pic_model": "off: ImportError: \nAutoImageProcessor requires the Torchvision library but it was not found in your envir"
+ },
+ "music": "fire-in-the-sky",
+ "social_music": "epic-orchestral-opener-600515",
+ "look": {
+  "captions": "low",
+  "voice": "george",
+  "energy": "steady",
+  "grade": "lab-grade-1031",
+  "opening": "lab-opening-1030",
+  "style": "minimal",
+  "closing": "none"
+ },
+ "look_note": "voice T2 could not run (exit 1), used george",
+ "qa": {
+  "duration": 22.5,
+  "wps": 3.0,
+  "weak_beats": [],
+  "size_mb": 14.7,
+  "opening": {
+   "frames": 4,
+   "t": [
+    0.0,
+    0.4,
+    0.8,
+    1.2
+   ],
+   "faces": "haar",
+   "ocr": "rapidocr 3.10.0",
+   "sharpness": 477.0,
+   "contrast": 0.146,
+   "face_area": 0.0046,
+   "text_area": 0.0455,
+   "caption_contrast": 8.81,
+   "by_frame": {
+    "sharpness": [
+     473.7,
+     546.9,
+     520.6,
+     366.8
+    ],
+    "contrast": [
+     0.15,
+     0.151,
+     0.15,
+     0.134
+    ],
+    "face_area": [
+     0.0,
+     0.0,
+     0.0182,
+     0.0
+    ],
+    "text_area": [
+     0.0481,
+     0.0462,
+     0.0459,
+     0.042
+    ],
+    "caption_contrast": [
+     8.58,
+     11.71,
+     9.04,
+     8.3
+    ]
+   }
+  }
+ },
+ "timeline": [
+  [
+   0.06,
+   1.42,
+   "none",
+   0
+  ],
+  [
+   1.42,
+   7.44,
+   "none",
+   4
+  ],
+  [
+   7.44,
+   12.34,
+   "none",
+   4
+  ],
+  [
+   12.34,
+   16.43,
+   "none",
+   4
+  ],
+  [
+   16.43,
+   22.5,
+   "none",
+   4
+  ]
+ ],
+ "background": [
+  {
+   "p": "pixabay",
+   "id": "37735",
+   "q": "theatre stage",
+   "t0": 0.0,
+   "t1": 11.55
+  },
+  {
+   "p": "pixabay",
+   "id": "184146",
+   "q": "film camera",
+   "t0": 10.95,
+   "t1": 22.5
+  }
+ ],
+ "state": "scheduled",
+ "uploaded_at": "2026-10-31T11:55:03Z",
+ "video": "kIccY1HgYDU",
+ "url": "https://youtube.com/shorts/kIccY1HgYDU",
+ "publish_at": "2026-10-31T20:00:00Z",
+ "youtube": {
+  "privacy": "private",
+  "publish_at": "2026-10-31T20:00:00Z",
+  "upload_status": "uploaded"
+ },
+ "social_release": "social-QD-303"
+}
